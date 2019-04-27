@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755179"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server モニターの概要
   SQL Server モニターでは、監視機能を実行するのではなく、監視を行うモジュールをホストします。 SQL Server モニターのモジュールには、レプリケーション モニターやデータベース ミラーリング モニターが含まれます。  
@@ -55,13 +55,13 @@ ms.locfileid: "52640243"
   
 -   データベース ミラーリング  
   
--   のレプリケーション  
+-   レプリケーション  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](../database-mirroring/database-mirroring-sql-server.md)  
   
   

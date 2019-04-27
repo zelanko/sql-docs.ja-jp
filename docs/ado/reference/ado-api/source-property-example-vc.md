@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f0e0244df7adae2d0fd89e0c83f9b660a0ef0dd
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740319"
 ---
 # <a name="source-property-example-vc"></a>Source プロパティの例 (VC++)
 この例では、[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティを 3 つを開いて[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、さまざまなデータ ソースに基づきます。  
@@ -157,6 +157,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source プロパティ (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

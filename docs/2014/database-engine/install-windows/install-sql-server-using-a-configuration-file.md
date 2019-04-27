@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775285"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>構成ファイルを使用した SQL Server 2014 のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、システムの既定値および実行時入力に基づいて構成ファイルを生成する機能が用意されています。 構成ファイルを使用すると、同じ構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を企業全体に配置できます。 また、Setup.exe を起動するバッチ ファイルを作成して、企業全体で手動によるインストールを標準化することもできます。  
@@ -138,7 +138,7 @@ Setup.exe /ConfigurationFile=MyConfigurationFile.INI
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド プロンプトから SQL Server 2014 をインストールします。](install-sql-server-from-the-command-prompt.md)   
  [SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [SQL Server フェールオーバー クラスターのアップグレード](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  

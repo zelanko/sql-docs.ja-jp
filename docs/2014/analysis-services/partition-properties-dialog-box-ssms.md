@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743585"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>[パーティションのプロパティ] (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのキューブに対してパーティションのプロパティを設定できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "48113202"
   
  **[パーティションのプロパティ]** ダイアログ ボックスには、次のページがあります。  
   
-## <a name="pages"></a>ページ  
+## <a name="pages"></a>ページ数  
   
 |ページ|説明|  
 |----------|-----------------|  
@@ -36,8 +36,8 @@ ms.locfileid: "48113202"
 |**プロアクティブ キャッシュ**|**[プロアクティブ キャッシュ]** ページを使用して、 **[選択項目]** ページで選択したパーティションのストレージとプロアクティブ キャッシュ設定の表示と変更を行います。 このページの詳細については、「[[プロアクティブ キャッシュ] &#40;[パーティションのプロパティ] ダイアログ ボックス&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)」を参照してください。|  
 |**エラーの構成**|**[エラーの構成]** ページを使用して、 **[選択項目]** ページで選択したパーティションを処理するためのエラー構成設定の表示と変更を行います。 このページの詳細については、「[キューブ、パーティション、およびディメンションに関する処理のエラー構成 &#40;SSAS - 多次元&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
- [パーティション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>関連項目  
+ [パーティション &#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [リモート パーティション](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

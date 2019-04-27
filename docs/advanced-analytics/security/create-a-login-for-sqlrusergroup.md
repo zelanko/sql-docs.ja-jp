@@ -9,20 +9,20 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 62dd1ddf61c3cc2e1340619566ad9f4dcce062b7
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642084"
 ---
-# <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup のログインを作成します。
+# <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup のログインｎ作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 作成、 [SQL Server のログイン](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)の[SQLRUserGroup](../concepts/security.md#sqlrusergroup)ときに、[ループバック接続をループ](../../advanced-analytics/concepts/security.md#implied-authentication)、スクリプトを指定します、*信頼関係接続*、オブジェクトの実行に使用される id に、コードが含まれている Windows ユーザー アカウントです。
 
 接続がある信頼された`Trusted_Connection=True`接続文字列にします。 SQL Server では、信頼関係接続を指定する要求を受信したときに、現在の Windows ユーザーの id が、ログインを持つかどうかをチェックします。 ワーカー アカウントとして実行すると、外部プロセス用 (から MSSQLSERVER01 など**SQLRUserGroup**)、それらのアカウントでは、既定では、ログインはありませんので、要求は失敗します。
 
-接続エラーを回避するには、ログインを作成して**SQLServerRUserGroup**します。 Id と外部プロセスの詳細については、[機能拡張フレームワークのセキュリティの概要](../concepts/security.md)を参照してください。
+接続エラーを回避するには、ログインを作成して**SQLServerRUserGroup**します。 Id と外部プロセスの詳細については、次を参照してください。[機能拡張フレームワークのセキュリティの概要](../concepts/security.md)します。
 
 > [!Note]
 > 必ず**SQLRUserGroup** 「ローカル ログオンを許可」権限します。 既定では、すべての新しいローカル ユーザーにこの権限が与えられますが、一部の組織の厳しいグループ ポリシーには、この権限が無効にする場合があります。

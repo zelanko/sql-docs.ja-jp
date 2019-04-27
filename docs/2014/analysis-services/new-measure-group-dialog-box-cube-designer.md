@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bb52bd24211d889a0ecdac915033bd2f702976f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743704"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>[新しいメジャー グループ] ダイアログ ボックス (キューブ デザイナー)
   **の** [新しいメジャー グループ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブ デザイナーでキューブに新しいメジャー グループを追加できます。 **[新しいメジャー グループ]** ダイアログ ボックスは次の方法で表示します。  
@@ -33,7 +33,7 @@ ms.locfileid: "48103712"
  **データ ソース ビューからテーブルを選択します。**  
  新しいメジャー グループのファクト テーブルを選択します。 テーブルは、同じキューブ内のファクト テーブルとして繰り返し使用することはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ構造&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

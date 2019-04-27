@@ -14,16 +14,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1278552f1bfe1ccfb7ab250f843e86c62e63440b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62651082"
 ---
 # <a name="assessment-report-accesstosql"></a>評価レポート (AccessToSQL)
 評価レポート ウィンドウには、データベース オブジェクトの変換の結果が表示されます。[!INCLUDE[tsql](../../includes/tsql-md.md)]構文、およびヘルプの複雑さと、移行プロジェクトのコストを見積もることができます。  
   
-ソースのメタデータ エクスプ ローラーで変換するオブジェクトの選択、評価レポートを作成するを右クリックして**データベース**、し、**レポートの作成**です。 スキーマに変換した後このレポートを自動的に表示することもできます。 ただし、レポート名は、変換レポートになります。 詳細については、[プロジェクトの設定 (GUI) (SSMA 一般的)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)を参照してください。  
+ソースのメタデータ エクスプ ローラーで変換するオブジェクトの選択、評価レポートを作成するを右クリックして**データベース**、し、**レポートの作成**です。 スキーマに変換した後このレポートを自動的に表示することもできます。 ただし、レポート名は、変換レポートになります。 詳細については、次を参照してください。[プロジェクトの設定 (GUI) (SSMA 一般的)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)します。  
   
 ## <a name="options"></a>および  
 **エクスプ ローラー ペイン**  

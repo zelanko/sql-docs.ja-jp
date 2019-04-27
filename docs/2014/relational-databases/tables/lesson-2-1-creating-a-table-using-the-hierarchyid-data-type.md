@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5af072e27ff1e1c70d6a3035ceb7eb2a1cc2493
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760909"
 ---
 # <a name="creating-a-table-using-the-hierarchyid-data-type"></a>hierarchyid データ型を使用したテーブルの作成
   EmployeeOrg という名前のテーブルを作成する例を次に示します。このテーブルには、従業員データと、それらの従業員のレポート階層が含まれています。 この例では、テーブルを [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに作成しますが、これは任意です。 例をわかりやすくするために、このテーブルには 5 つの列のみ含まれています。  

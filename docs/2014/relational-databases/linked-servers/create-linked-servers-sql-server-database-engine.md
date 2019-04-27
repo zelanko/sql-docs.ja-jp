@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743499"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
@@ -70,7 +70,7 @@ ms.locfileid: "58527846"
      **[プロバイダー文字列]**  
      データ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を入力します。 有効なプロバイダー文字列の例については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)からデータにアクセスする方法について説明します。  
   
-     **場所**  
+     **[場所]**  
      OLE DB プロバイダーで解釈されるデータベースの場所を入力します。  
   
      **Catalog**  
@@ -220,7 +220,7 @@ ms.locfileid: "58527846"
   
     ```  
   
-##  <a name="FollowUp"></a>補足情報: リンク サーバーの作成後に実行する手順  
+##  <a name="FollowUp"></a>補足情報: リンク サーバーの作成後に行う手順  
   
 #### <a name="to-test-the-linked-server"></a>リンク サーバーをテストするには  
   
@@ -246,7 +246,7 @@ ms.locfileid: "58527846"
   
      リンク サーバー ログインに対して NULL が返される場合は、リンク サーバー上にログインが存在しないことを示します。 リンク サーバーが別のセキュリティ コンテキストを渡すように構成されている場合、またはリンク サーバーが匿名接続を許可する場合を除き、これらのログインではリンク サーバーを使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンク サーバー &#40;データベース エンジン&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  

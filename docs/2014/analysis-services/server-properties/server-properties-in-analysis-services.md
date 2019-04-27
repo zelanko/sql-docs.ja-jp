@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a2f99dc4ba728fb97eac0ced00624fc8c8831e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746864"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Analysis Services のサーバーのプロパティの構成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理者は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス用に既定のサーバー構成プロパティを変更できます。 各インスタンスには、同じサーバーの他のインスタンスとは別に設定できる固有の構成プロパティがあります。  
@@ -41,7 +41,7 @@ ms.locfileid: "53369734"
  SQL Server Management Studio のプロパティ ページには、利用可能なプロパティのサブセットが含まれ、変更する可能性の高いプロパティのみが表示されます。 プロパティの完全なセットは msmdsrv.ini ファイルにあります。  
   
 > [!NOTE]  
->  このトピックには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の配置構成プロパティに関する情報は含まれていません。 展開構成の詳細については、[ソリューションの配置に関する構成設定を指定する](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)を参照してください。  
+>  このトピックには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の配置構成プロパティに関する情報は含まれていません。 展開構成の詳細については、次を参照してください。[ソリューションの配置に関する構成設定を指定する](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)します。  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Management Studio での構成プロパティの表示または設定  
   

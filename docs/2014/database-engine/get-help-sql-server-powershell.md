@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779104"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーおよびコマンドレットの使用方法に関していくつかの情報源が用意されています。 これには、Windows PowerShell 環境で参照できるヘルプが含まれます。  
@@ -122,7 +122,7 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [データベース エンジン コマンドレットの使用](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
   

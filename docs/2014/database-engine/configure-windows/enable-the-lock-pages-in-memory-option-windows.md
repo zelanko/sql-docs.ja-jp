@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782280"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory オプションの有効化 (Windows)
   この Windows ポリシーにより、プロセスを使用して物理メモリにデータを保持できるアカウントを指定し、ディスク上の仮想メモリへのデータのページングを防止します。  
@@ -47,7 +47,7 @@ ms.locfileid: "52640664"
   
 8.  この変更を有効にするには、ログアウトして、再びログインする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー メモリに関するサーバー構成オプション](server-memory-server-configuration-options.md)  
   
   

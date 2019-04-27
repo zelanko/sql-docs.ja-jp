@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 55fcb4e145481f98b0cba065ddab75e7cfa0a538
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641979"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio でカスタム レポートを使用して Machine Learning Services を監視する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "58510289"
 
 この記事では、インストールしてマシン leaerning を具体的には提供されているカスタム レポートを使用する方法について説明します。 
 
-Management Studio でレポートを一般的な概要については、[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)を参照してください。
+Management Studio でレポートを一般的な概要については、次を参照してください。 [Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)します。
 
 ## <a name="how-to-install-the-reports"></a>レポートのインストール方法
 

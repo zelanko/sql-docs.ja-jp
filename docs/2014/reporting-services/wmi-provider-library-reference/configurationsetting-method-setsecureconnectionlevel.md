@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d78cd09c03f6507bdb87cda4c47e8132f2e1f9b6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646368"
 ---
 # <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーのセキュリティで保護された接続レベルを設定します。  
@@ -61,7 +61,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

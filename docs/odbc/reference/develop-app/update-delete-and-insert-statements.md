@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632480"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、INSERT ステートメント
 SQL ベースのアプリケーションでは、テーブルに変更を加えるを実行して、 **UPDATE**、**削除**、および**挿入**ステートメント。 これらのステートメントでは、Minimum SQL 文法の準拠レベルの一部であるし、すべてのドライバーとデータ ソースでサポートする必要があります。  
@@ -51,4 +51,4 @@ SQL ベースのアプリケーションでは、テーブルに変更を加え�
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- この効率性のパラメーター値の配列を渡すことによって増やすことができます。 ステートメントのパラメーターとパラメーター値の配列の詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)を参照してください。
+ この効率性のパラメーター値の配列を渡すことによって増やすことができます。 ステートメントのパラメーターとパラメーター値の配列の詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。

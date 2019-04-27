@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749245"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot データ フィード
   データ フィードは、オンライン データ ソースからクライアント アプリケーションに要求時にデータのストリームを提供します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、データ フィードを使用して、Atom 対応の Web サービスまたは Excel ブックの PowerPivot データ ソースへのアプリケーションからデータを追加することができます。  

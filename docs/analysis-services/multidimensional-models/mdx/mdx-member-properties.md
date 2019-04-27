@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7876031fddb74115fd1fe412f4c8a9d9aacdb054
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53216041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740243"
 ---
 # <a name="mdx-member-properties"></a>MDX メンバー プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ SELECT [<axis_specification>
   
 -   ユーザー定義メンバー プロパティの前には、そのプロパティが存在しているレベルの名前を指定する必要があります。 ユーザー定義メンバー プロパティでの **PROPERTIES** キーワードの使用方法の詳細については、「[ユーザー定義メンバー プロパティ (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティ値の作成および使用 (MDX)](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)  
   
   

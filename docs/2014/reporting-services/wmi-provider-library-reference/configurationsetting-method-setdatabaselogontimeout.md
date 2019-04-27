@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bf1da1a02fabe1675533de13992ffd34350f4ab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646428"
 ---
 # <a name="setdatabaselogontimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseLogonTimeout メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベース接続の既定のタイムアウト値を指定します。  
@@ -54,7 +54,7 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786737"
 ---
 # <a name="collations-and-code-pages"></a>照合順序とコード ページ
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] には、メモリ最適化テーブルの (var)char 型の列のサポートされているコード ページと、インデックスおよびネイティブ コンパイル ストアド プロシージャで使用されるサポートされている照合順序に関して制限事項があります。  
@@ -142,7 +142,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

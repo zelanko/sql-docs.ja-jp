@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bed90099c42383ea45ba6ad17459c7e0f6048b8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638467"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services のデザイナーおよびダイアログ ボックス (テーブル)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のテーブル プロジェクト作成環境と、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のテーブル モデル管理ツールには、多くのダイアログ ボックス、プロパティ ページ、およびウィザード ページが含まれています。 詳細について調べるには、[ヘルプ] ボタンをクリックするか、F1 キーを押します。  

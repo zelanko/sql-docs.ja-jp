@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3e0cdae7e9f57a7bfd62a3a0e947c43ced0b8c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749453"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Windows PowerShell を使用した PowerPivot の構成
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールを構成するために使用できる Windows PowerShell コマンドレットが含まれています。 PowerShell によりインストールを完全に構成するには、SharePoint コマンドレットと PowerPivot for SharePoint コマンドレットの両方を使用する必要があります。 構成の大部分は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ツールのいずれかを使用して実行することができます。 ツールの詳細については、[PowerPivot 構成ツール](power-pivot-configuration-tools.md)を参照してください。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールを構成するために使用できる Windows PowerShell コマンドレットが含まれています。 PowerShell によりインストールを完全に構成するには、SharePoint コマンドレットと PowerPivot for SharePoint コマンドレットの両方を使用する必要があります。 構成の大部分は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ツールのいずれかを使用して実行することができます。 ツールの詳細については、次を参照してください。 [PowerPivot 構成ツール](power-pivot-configuration-tools.md)します。  
   
 > [!IMPORTANT]  
 >  SharePoint 2010 ファームの場合、PowerPivot for SharePoint または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] データベース サーバーを使用する SharePoint ファームを構成する前に、SharePoint 2010 SP1 をインストールする必要があります。 サービス パックをインストールしていない場合は、サーバーの構成を始める前にインストールしてください。  

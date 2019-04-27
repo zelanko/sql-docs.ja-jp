@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639521"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのアクセス許可の管理
 この記事では、要件および SQL Server PDW のデータベース アクセス許可を管理するためのオプションについて説明します。  
@@ -34,7 +34,7 @@ SQL Server PDW のデータベース エンジンの権限は、ログイン、�
 ログインは、データベースのデータベース ユーザーを作成して、そのデータベースのユーザーをログインにマッピングで、データベースへのアクセスが付与されます。 通常、データベース ユーザー名はログイン名と同じですが、同じにする必要はありません。 各データベース ユーザーは、単一のログインにマッピングされます。 ログインはデータベース内の 1 つのユーザーにのみマッピングできますが、異なる複数のデータベースにデータベース ユーザーとしてマッピングできます。  
   
 **固定データベース ロール**  
-固定データベース ロールでは、データベース レベルの権限の便利なグループを提供する事前構成済みのロールのセットです。 使用して固定データベース ロールには、データベース ユーザーおよびユーザー定義データベース ロールを追加することができます、 [sp_addrolemember](../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)プロシージャ。 固定データベース ロールの詳細については、[の固定データベース ロール](#fixed-database-roles)を参照してください。  
+固定データベース ロールでは、データベース レベルの権限の便利なグループを提供する事前構成済みのロールのセットです。 使用して固定データベース ロールには、データベース ユーザーおよびユーザー定義データベース ロールを追加することができます、 [sp_addrolemember](../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)プロシージャ。 固定データベース ロールの詳細については、次を参照してください。[の固定データベース ロール](#fixed-database-roles)します。  
   
 **ユーザー定義データベース ロール**  
 持つユーザー、 **CREATE ROLE**アクセス許可は、一般的な権限を持つユーザーのグループを表すための新しいユーザー定義データベース ロールを作成できます。 通常、権限の管理と監視を簡略化するために、権限はロール全体に対して付与または拒否されます。  

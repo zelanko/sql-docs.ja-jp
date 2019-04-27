@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c57ef0020031e944d1c482bf7ec9bc3928681a4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748564"
 ---
 # <a name="relational-query-designer-ssas"></a>リレーショナル クエリ デザイナー (SSAS)
   リレーショナル クエリ デザイナーを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データベース、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] リレーショナル データベース、および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]から取得するデータを指定するクエリを作成できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。  グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  

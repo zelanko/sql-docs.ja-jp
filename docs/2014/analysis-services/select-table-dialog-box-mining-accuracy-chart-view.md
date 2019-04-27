@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8baaed268e01c9335484bab411c87afb17b482b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747214"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>[テーブルの選択] ダイアログ ボックス ([マイニング精度チャート] ビュー)
   **[テーブルの選択]** ダイアログ ボックスを使用すると、選択されたマイニング構造に含まれているマイニング モデルの精度をテストするときに使用するテーブルを選択できます。  
@@ -32,9 +32,9 @@ ms.locfileid: "48140192"
  **テーブル/ビュー名**  
  現在選択されているデータ ソースで使用できるテーブルまたはビューを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
   

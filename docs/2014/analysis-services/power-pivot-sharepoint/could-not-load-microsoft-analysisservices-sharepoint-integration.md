@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49e2ce59b8662a8deaf47099c967355150dca201
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749576"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>ファイルまたはアセンブリを読み込めませんでした&#39;, バージョン 3.5.0.0、カルチャを = = neutral, PublicKeyToken = b77a5c561934e089&#39;またはその依存関係の 1 つ。 指定されたファイルが見つかりません。
   PowerPivot for SharePoint がある SharePoint 2010 環境では、データ フィードのエクスポートを実行しようとした場合に必要なバージョンの Microsoft ADO.NET Data Services がないと、このエラーが発生します。  
@@ -43,7 +43,7 @@ ms.locfileid: "53371514"
   
 3.  リンクをクリックし、サービスをインストールするセットアップ プログラムを実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint に PowerPivot ソリューションを配置します。](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

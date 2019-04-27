@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 414cdedb8f2bc3dee4edc792c11b6438306818c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754542"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>データベース ミラーリングの削除 (SQL Server)
   データベース所有者は、いずれのパートナーでもデータベース ミラーリング セッションをいつでも手動で停止できます。  
@@ -53,7 +53,7 @@ ms.locfileid: "48088023"
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリングの一時停止と再開 &#40;SQL Server&#41;](pausing-and-resuming-database-mirroring-sql-server.md)   

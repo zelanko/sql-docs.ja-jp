@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650376"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) イベント クラス
   Showplan Text (Unencoded) イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントが実行されたときに発生します。 このイベント クラスは、Showplan Text イベント クラスと同じです。ただし、イベント情報がバイナリ データとしてではなく、文字列としてフォーマットされます。  
@@ -61,7 +61,7 @@ ms.locfileid: "52801264"
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [プラン表示の論理操作と物理操作のリファレンス](../showplan-logical-and-physical-operators-reference.md)   
  [Showplan All イベント クラス](showplan-all-event-class.md)   

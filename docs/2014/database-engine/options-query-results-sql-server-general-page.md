@@ -18,11 +18,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775022"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>オプション (クエリ結果-SQL Server-[全般] ページ)
   このページを使用すると、クエリ結果ペインの既定の動作を設定できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[クエリ結果]** フォルダーを展開して、**[SQL Server]** を選択してから、**[全般]** をクリックします。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ ウィンドウで右クリックし、**[クエリ オプション]** をクリックします。  

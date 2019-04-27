@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 146d1cdbb62c54acd9669b803b9d85dddf259601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652851"
 ---
 # <a name="setup-dll-function-summary"></a>セットアップ DLL 関数の概要
-次の表では、セットアップ DLL 関数について説明します。 構文とセマンティクスの各関数の詳細については、[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)を参照してください。  
+次の表では、セットアップ DLL 関数について説明します。 構文とセマンティクスの各関数の詳細については、次を参照してください。[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)します。  
   
 |タスク|関数名|用途|  
 |----------|-------------------|-------------|  

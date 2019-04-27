@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a808cfe9e5cd48ba689eac0bc4cb63123c4ef13a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740132"
 ---
 # <a name="create-a-relational-mining-structure"></a>Create a Relational Mining Structure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "52543854"
   
      一意のレコードを識別する方法をアルゴリズムで認識できるように、各テーブルにキーを指定する必要があります。入れ子になったテーブルを追加した場合は、関連レコードも指定します。  
   
-     詳細については、「 [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)」をご覧ください。  
+     詳細については、「[マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)」をご覧ください。  
   
 5.  **トレーニング データの指定**:として選択したこのページで、*ケース テーブル*、これは最も重要なデータ分析を含むテーブルです。  
   
@@ -116,9 +116,9 @@ ms.locfileid: "52543854"
  なぜこれが役に立つのでしょうか。 たとえば、クラスター モデルの結果を表示し、特定のクラスターに配置された顧客を確認する必要がある場合、 ドリルスルーを使用すると、連絡先情報などの詳細を表示できます。  
   
 > [!WARNING]  
->  ドリルスルーを使用するには、マイニング構造の作成時にドリルスルーを有効にする必要があります。 モデルのドリルスルーはモデルのプロパティを設定することで後から有効にできますが、マイニング構造のこのオプションは最初に設定する必要があります。 詳細については、「 [ドリルスルー クエリ (データ マイニング)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
+>  ドリルスルーを使用するには、マイニング構造の作成時にドリルスルーを有効にする必要があります。 モデルのドリルスルーはモデルのプロパティを設定することで後から有効にできますが、マイニング構造のこのオプションは最初に設定する必要があります。 詳細については、「[ドリルスルー クエリ (データ マイニング)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md)   
  [データ マイニング ウィザード (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   

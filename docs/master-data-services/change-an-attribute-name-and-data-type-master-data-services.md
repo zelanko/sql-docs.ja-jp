@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: 6348cc9a2b64501f7a639d480a7112bf28923585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637630"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>属性名とデータ型を変更する (マスター データ サービス)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52785278"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の名前を変更できます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -59,7 +59,7 @@ ms.locfileid: "52785278"
   
 9. **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [属性を削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-master-data-services.md)   
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  

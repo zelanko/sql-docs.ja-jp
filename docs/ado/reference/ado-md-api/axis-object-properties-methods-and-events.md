@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e0dac54b808bac4b9928d2ab2a4e8fcd50f970d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743098"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Axis オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -32,10 +32,10 @@ ms.locfileid: "47760420"
  [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>メソッド  
- [なし] :  
+ なし。  
   
 ## <a name="events"></a>イベント  
- [なし] :  
+ なし。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Axis オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

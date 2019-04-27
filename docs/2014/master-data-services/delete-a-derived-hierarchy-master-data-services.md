@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6a4ae05aecf7d4a25a88efa61ec42fe098f1d63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765705"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>派生階層を削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になった派生階層を削除します。  
@@ -26,7 +26,7 @@ ms.locfileid: "52792962"
 > [!NOTE]  
 >  派生階層を削除しても、その階層が基づいている属性リレーションシップには影響しません。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -47,7 +47,7 @@ ms.locfileid: "52792962"
   
 6.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [派生階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   

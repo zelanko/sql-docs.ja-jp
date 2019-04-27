@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781028"
 ---
 # <a name="performing-transactions-odbc"></a>トランザクションの実行 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ODBC API トランザクションの管理関数がサポートされます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、個別のサーバーでのローカル トランザクションの完全なサポートを提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、これらの機能を使用してトランザクションを管理する ODBC API 関数をサポートします。  

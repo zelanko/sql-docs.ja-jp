@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769128"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  
@@ -94,7 +94,7 @@ ms.locfileid: "58391250"
   
  式の名前は大文字で表示されますが、大文字と小文字は区別されません。 たとえば、"null" は "NULL" を使用した場合と同様に機能します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)   
  [Integration Services 式の詳細の例](examples-of-advanced-integration-services-expressions.md)   
  [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md)  

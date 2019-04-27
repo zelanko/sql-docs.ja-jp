@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933a0e9c2eaca4fe55748938737fc8f30d965c5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749398"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>PowerPivot データ フィード ライブラリの削除
   データ フィード ライブラリを削除できるのはサイト所有者だけです。 ライブラリにアイテムが含まれている場合、それらもライブラリと共に削除されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "48154212"
   
 5.  [権限と管理] の **[このライブラリの削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerPivot データ フィード](power-pivot-data-feeds.md)  
   
   

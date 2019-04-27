@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770305"
 ---
 # <a name="transform-data-with-transformations"></a>変換を使用してデータを変換する
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが含まれています。  
@@ -58,7 +58,7 @@ ms.locfileid: "58382040"
   
 -   [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データ フロー タスク]](../../control-flow/data-flow-task.md)   
  [データ フロー](../data-flow.md)   
  [パスを使用してコンポーネントを連結する](../../connect-components-with-paths.md)   

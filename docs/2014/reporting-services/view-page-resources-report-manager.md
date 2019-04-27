@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647045"
 ---
 # <a name="view-page-resources-report-manager"></a>[表示] ページ、リソース (レポート マネージャー)
   リソースを表示するには、リソースの [表示] ページを使用します。 リソースはレポート サーバー上で格納および管理されるアイテムですが、レポート サーバー上で処理されるものではありません (レポート サーバーはレポートおよびモデルを処理します)。 リソースは、サーバーによって処理されない、任意のドキュメント、画像、その他のファイルを格納するために使用できます。 ほとんどの画像ファイル (JPG、GIF、PNG ファイルなど) は、レポート マネージャーの [表示] ページ内に表示できます。 その他のリソースは、別のアプリケーション ウィンドウで開かれます。  

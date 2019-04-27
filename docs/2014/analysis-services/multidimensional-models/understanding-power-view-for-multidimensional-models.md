@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f33492191deac22f416aa2f823ea501d72765b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741101"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
   この記事では、Power View では、Microsoft SQL Server 2014 では、多次元モデル機能について説明し、BI プロフェッショナルと管理者向けの多次元モデルでの Power View を実装するために重要な情報を提供します、組織。  
@@ -38,7 +38,7 @@ ms.locfileid: "53362984"
   
  **クライアントの要件**  
   
--   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)を参照してください。  
+-   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)します。  
   
 ## <a name="features"></a>機能  
  **Power View のネイティブ サポート**  

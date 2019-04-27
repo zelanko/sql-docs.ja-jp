@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45c66f4092304d804f5e5401aceba1fcefc135e9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632206"
 ---
 # <a name="use-my-subscriptions"></a>個人用サブスクリプションを使用する
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート マネージャーが含まれています、**マイ サブスクリプション**すべてのサブスクリプションを 1 か所に編成するページ。 [個人用サブスクリプション] を使用して、既存のサブスクリプションを表示、変更、および削除できます。 ただし、このページは、サブスクリプションの作成には使用できません。  

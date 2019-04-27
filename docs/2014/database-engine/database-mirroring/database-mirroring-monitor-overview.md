@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755026"
 ---
 # <a name="database-mirroring-monitor-overview"></a>データベース ミラーリング モニターの概要
   適切な権限を持つユーザーであれば、データベース ミラーリング モニターを使用することにより、サーバー インスタンス上のミラー化されたデータベースのサブセットを監視できます。 監視を行うことにより、データベース ミラーリング セッションで適切なデータ フローが保たれているかどうかを詳細に検証できます。 データベース ミラーリング モニターは、データ フローの停滞の原因をトラブルシューティングするときにも有効に使用できます。  
@@ -102,7 +102,7 @@ ms.locfileid: "54133882"
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

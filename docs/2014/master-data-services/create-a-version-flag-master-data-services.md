@@ -15,16 +15,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60fdd3e60cd7f9015950a16d02a3f4a9ff2f7fcf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765821"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>バージョン フラグを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンに割り当てるバージョン フラグを作成します。 フラグによって、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示すことができます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
@@ -53,7 +53,7 @@ ms.locfileid: "52755164"
   
 -   [バージョンにフラグを割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   
  [バージョン フラグ名を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   

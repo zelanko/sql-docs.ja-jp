@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7b9fb6be3970ea12ce3252e70f7773f1687dbe83
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775358"
 ---
 # <a name="install-sql-server-2014"></a>SQL Server 2014 のインストール
 ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[SQL Server 2014 Express をダウンロードします。](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -44,7 +44,7 @@ ms.locfileid: "57578355"
   
 ## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>インストールする方法 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-|タイトル|説明|  
+|[タイトル]|説明|  
 |-----------|-----------------|  
 |[インストール方法に関するトピック](../../sql-server/install/installation-how-to-topics.md)|インストール ウィザード、コマンド プロンプト、構成ファイル、および SysPrep を使用して [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールするための手順に関するトピックへのリンクが記載されています。|  
 |[Server Core への SQL Server 2014 のインストール](install-sql-server-on-server-core.md)|このトピックを参照して、Windows Server Core に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールします。|  
@@ -66,7 +66,7 @@ ms.locfileid: "57578355"
  [SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ドキュメントのこのセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールして構成する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)   
  [SQL Server 2014 へのアップグレード](upgrade-sql-server.md)   
  [SQL Server 2014 をアンインストールします。](../../sql-server/install/uninstall-sql-server.md)   

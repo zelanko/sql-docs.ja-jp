@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748374"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>[クエリ] ペイン ([マイニング モデル予測] ビュー)
   **[クエリ]** ペインには、予測クエリ ビルダーによって作成されたデータ マイニング式 (DMX) ステートメントが表示されます。 ステートメントを変更してから **[クエリ結果ビューに切り替え]** ボタンをクリックすると、結果が返されます。 **[デザイン]** ビューに戻ると、ステートメントに加えた変更がすべて失われます。  
   
- **詳細情報:** 「[データ マイニング拡張機能 &#40;DMX&#41; データ操作ステートメント](/sql/dmx/dmx-statements-data-manipulation)」、「[SQL Server Management Studio での DMX クエリの作成](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)」  
+ **詳細情報。**[データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](/sql/dmx/dmx-statements-data-manipulation)、 [SQL Server Management Studio で DMX クエリの作成](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>および  
  **クエリ結果ビューに切り替え**  
@@ -38,7 +38,7 @@ ms.locfileid: "48133233"
  **クエリ結果を更新します。**  
  予測クエリを再処理します。 この操作は **[結果]** ペインでのみ行えます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング クエリ インターフェイス](data-mining/data-mining-query-tools.md)   
  [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](/sql/dmx/data-mining-extensions-dmx-statements)   
  [予測クエリ ビルダー&#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)  

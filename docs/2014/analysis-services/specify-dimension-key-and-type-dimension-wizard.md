@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94e34c092b833f6740562e56c3ebbe713ffc2572
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746205"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>[ディメンションのキーおよび種類を指定] (ディメンション ウィザード)
   **[ディメンションのキーおよび種類を指定]** ページを使用すると、ディメンションのキー属性を定義でき、ディメンションが SCD (緩やかに変化するディメンション) であるかどうかを示すことができます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48179952"
  **これは、変化するディメンション**  
  ディメンションが緩やかに変化するディメンションであることを示します。 このオプションを選択すると、時間経過と共にディメンションの階層内でメンバーが移動するのを追跡するために使用できる追加の列および属性が作成されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

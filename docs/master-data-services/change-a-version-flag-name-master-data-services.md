@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b807f92b40a772762bf09edd83a129aabd91cad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638130"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>バージョン フラグ名を変更する (マスター データ サービス)
 
@@ -26,12 +26,12 @@ ms.locfileid: "52781824"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、バージョン フラグの名前を変更できます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   [バージョン管理] 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52781824"
   
 6.  Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)   
  [バージョンにフラグを割り当てる (マスター データ サービス)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

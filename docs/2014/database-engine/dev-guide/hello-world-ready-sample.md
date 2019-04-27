@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781173"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready サンプル
   Hello World Ready サンプルでは、国際化対応の、CLR (共通言語ランタイム) 統合ベースの単純なストアド プロシージャの作成、配置、およびテストにかかわる基本的な操作を示しています。 国際化対応コンポーネントは、コンポーネントのソース コードを変更することなく、世界中の市場に向けて、異なる言語へのローカライズを簡単に行うことができます。 また、このサンプルでは、ストアド プロシージャによって動的に構築されてクライアントに返されるレコードおよび出力パラメーターを使用してデータを返す方法についても示します。このサンプルは、Hello World サンプルとほぼ同じですが、このアプリケーションのローカライズをより簡単かつ安全に行うことができます。 ローカライズ済みテキストを変更するには、次の作業を実行する必要があります。  
@@ -30,7 +30,7 @@ ms.locfileid: "60156208"
   
  CLR ストアド プロシージャ自体のソース コードおよびアセンブリは変更されません。 リソース アセンブリのコンパイル方法とリンク方法を示す `build.cmd` スクリプトが用意されています。アプリケーションのソース コードによって、現在実行しているアセンブリに基づいたリソース マネージャーが作成されますが、ストアド プロシージャを含む DLL にカルチャ ニュートラル リソースを埋め込む必要はありません。 `System.Resources.NeutralResourcesLanguage attribute` によって、カルチャ ニュートラル リソースがサテライト DLL に存在することが許可されます。 この目的でそれぞれ別の DLL を使用すると、ローカライズ済みテキストの追加や変更が必要な場合でも、CLR ストアド プロシージャを含んでいるプライマリ DLL の変更が必要なくなるため非常に便利です。 これは、型の削除と再追加を困難にするような列やその他の依存関係を含んでいることのある、CLR ユーザー定義型には特に役立ちます。通常、サテライト DLL バージョンはメイン アセンブリ バージョンと同じである必要があります。 ただし、`SatelliteContractVersion` 属性を使用して、サテライト アセンブリを更新せずにメイン アセンブリの更新を許可することもできます。 詳細については、Microsoft .NET のドキュメントで `ResourceManager` クラスを参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このサンプルは、SQL Server 2005 以降のバージョンでのみ動作します。  
   
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
@@ -450,7 +450,7 @@ USE master;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

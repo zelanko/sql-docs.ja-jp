@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637995"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
   `xml`データ型は組み込みのデータ型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの他の組み込み型に少し似ていますが、`int`と`varchar`します。 他の組み込み型で使用できるように、`xml`変数の型、パラメーターの型、関数の戻り値の型、またはテーブルを作成するときに、データ型列の型として[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)します。  
@@ -66,7 +66,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`xml` 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例 :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`xml` 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 以下に例を示します。  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  

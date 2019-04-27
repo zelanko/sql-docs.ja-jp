@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b803b86c216d877c0e056dd4892931575ca91010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741938"
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "47838000"
 |user_object_reserved_page_count|**bigint**|データベース内のユーザー オブジェクトに対して単一エクステントから割り当てられるページの総数。 割り当て済みのエクステントの未使用ページは、この数に含まれません。<br /><br /> IAM ページは、常に混合エクステントから割り当てられるので、この数に含まれません。 PFS ページは、単一エクステントから割り当てられる場合はこの数に含まれます。<br /><br /> 内の total_pages 列を使用することができます、 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)カタログ ビューをユーザー オブジェクトの各アロケーション ユニットの予約済みページ数を返します。 ただし、total_pages 列には IAM ページの数が含まれることに注意してください。|  
 |internal_object_reserved_page_count|**bigint**|ファイル内の内部オブジェクトに対して割り当てられる単一エクステント内の総ページ数。 割り当て済みのエクステントの未使用ページは、この数に含まれません。<br /><br /> IAM ページは、常に混合エクステントから割り当てられるので、この数に含まれません。 PFS ページは、単一エクステントから割り当てられる場合はこの数に含まれます。<br /><br /> それぞれの内部オブジェクトのページ数を返すカタログ ビューや動的管理オブジェクトはありません。|  
 |mixed_extent_page_count|**bigint**|ファイルに含まれる混合エクステント内の、割り当て済みページと未割り当てページの総数。 混合エクステントには、異なるオブジェクトに割り当てられたページが含まれます。 この数には、ファイル内のすべての IAM ページが含まれます。|
-|modified_extent_page_count|**bigint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />変更されたページの合計数には、前回のデータベースの完全バックアップ以降、ファイルのエクステントが割り当てられます。 変更されたページ数は、差分バックアップが必要なかどうかを決定する最後の完全バックアップ以降、データベースの差分変更の量を追跡するために使用できます。|
+|modified_extent_page_count|**bigint**|**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />変更されたページの合計数には、前回のデータベースの完全バックアップ以降、ファイルのエクステントが割り当てられます。 変更されたページ数は、差分バックアップが必要なかどうかを決定する最後の完全バックアップ以降、データベースの差分変更の量を追跡するために使用できます。|
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
 |distribution_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 分布に関連付けられている一意の数値 id です。|  
   
 ## <a name="remarks"></a>コメント  
- ページ数は常にエクステント レベルのものです。 したがって、ページ数の値は常に 8 の倍数になります。 グローバル アロケーション マップ (GAM) と共有グローバル アロケーション マップ (SGAM) の割り当てページを含むエクステントは、割り当て済みの単一エクステントです。 これらは前で説明したページ数には含まれません。 ページとエクステントの詳細については、[ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md)を参照してください。 
+ ページ数は常にエクステント レベルのものです。 したがって、ページ数の値は常に 8 の倍数になります。 グローバル アロケーション マップ (GAM) と共有グローバル アロケーション マップ (SGAM) の割り当てページを含むエクステントは、割り当て済みの単一エクステントです。 これらは前で説明したページ数には含まれません。 ページとエクステントの詳細については、次を参照してください。[ページとエクステントのアーキテクチャ ガイド](../../relational-databases/pages-and-extents-architecture-guide.md)します。 
   
  現在のバージョン ストアの内容は[sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)します。 バージョン ストア ページはグローバル リソースなので、セッションおよびタスク レベルではなくファイル レベルで追跡されます。 セッションでバージョンを生成することもできますが、セッションが終了するときバージョンを削除することはできません。 バージョン ストア クリーンアップでは、特定バージョンへのアクセスを必要とする、実行時間が最も長いトランザクションを考慮する必要があります。 Elapsed_time_seconds 列を表示することによって、バージョン ストア クリーンアップに関連する最も長い実行中のトランザクションを検出できる[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)します。  
   

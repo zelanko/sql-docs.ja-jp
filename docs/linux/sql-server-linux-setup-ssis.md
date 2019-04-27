@@ -11,17 +11,17 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: c9d18e948a415a1d549c21a7c78e0117c6ab819c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634140"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux 上の SQL Server Integration Services (SSIS) のインストールします。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Integration Services をインストールするには、この記事の手順に従います (`mssql-server-is`) Linux 上。 Linux Integration Services のこのリリースでサポートされる機能については、、[リリース ノート](sql-server-linux-release-notes.md)を参照してください。
+SQL Server Integration Services をインストールするには、この記事の手順に従います (`mssql-server-is`) Linux 上。 Linux Integration Services のこのリリースでサポートされる機能については、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)します。
 
 お使いのプラットフォームには、SQL Server の統合サーバーをインストールします。
 
@@ -50,7 +50,7 @@ SQL Server Integration Services をインストールするには、この記事
    sudo apt-get install -y mssql-server-is
    ```
 
-4. Integration Services をインストールすると、実行`ssis-conf`します。 詳細については、[ssis conf を使った Linux 上の SSIS の構成](sql-server-linux-configure-ssis.md)を参照してください。
+4. Integration Services をインストールすると、実行`ssis-conf`します。 詳細については、次を参照してください。 [ssis conf を使った Linux 上の SSIS の構成](sql-server-linux-configure-ssis.md)します。
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -91,7 +91,7 @@ sudo apt-get remove mssql-server-is
    ```
 
 
-1. インストール後に、実行`ssis-conf`します。 詳細については、[ssis conf を使った Linux 上の SSIS の構成](sql-server-linux-configure-ssis.md)を参照してください。
+1. インストール後に、実行`ssis-conf`します。 詳細については、次を参照してください。 [ssis conf を使った Linux 上の SSIS の構成](sql-server-linux-configure-ssis.md)します。
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup

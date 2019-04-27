@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cb1e99b2959b41528152efc92daccfb793b2e280
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740562"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter オブジェクト (SQLXML マネージド クラス)
   SqlXmlParameter オブジェクトには、これらのプロパティがサポートされています。  
@@ -30,7 +30,7 @@ ms.locfileid: "52750294"
  パラメーターの名前。 コマンドをパラメーターとして渡すことができます。 SqlXmlCommand オブジェクトの CreateParameter メソッドを呼び出すと、パラメーター オブジェクトが作成されます。  
   
  値  
- パラメーターの値。 実際のサンプルでは、[SQL クエリの実行&#40;SQLXML マネージ クラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)を参照してください。  
+ パラメーターの値。 実際のサンプルでは、次を参照してください。 [SQL クエリの実行&#40;SQLXML マネージ クラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SqlXmlCommand オブジェクト&#40;SQLXML マネージ クラス&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   

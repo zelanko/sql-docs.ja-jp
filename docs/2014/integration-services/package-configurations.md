@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2cd70f20297e446971b46fa38bd2f3e8379192e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767124"
 ---
 # <a name="package-configurations"></a>[パッケージ構成]
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、プロパティの値を実行時に更新するためのパッケージ構成が用意されています。  

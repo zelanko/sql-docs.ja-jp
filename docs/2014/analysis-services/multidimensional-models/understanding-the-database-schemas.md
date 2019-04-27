@@ -19,16 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740754"
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
   スキーマ生成ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
   
-## <a name="validation"></a>検証  
+## <a name="validation"></a>［確認］  
  基になるリレーショナル スキーマの生成を開始する前に、スキーマ生成ウィザードによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションが検証されます。 ウィザードによってエラーが検出された場合には、ウィザードは停止し、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [タスク一覧] ウィンドウにエラー レポートが表示されます。 スキーマの生成を妨げるエラーには次のようなものがあります。  
   
 -   ディメンションに複数のキー属性がある。  
@@ -45,7 +45,7 @@ ms.locfileid: "48133432"
  各ディメンションに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるディメンション テーブルが生成されます。 ディメンション テーブルの構造は、基になるディメンションをデザイン中に行った選択によって異なります。  
   
  [列]  
- ウィザードは、ディメンション テーブルは、基になるバインドなど、ディメンション内の各属性に関連付けられているバインディングの 1 つの列を生成、 `KeyColumns`、 `NameColumn`、 `ValueColumn`、 `CustomRollupColumn`、 `CustomRollupPropertiesColumn`、および`UnaryOperatorColumn`の各属性のプロパティ。  
+ このウィザードでは、各属性の `KeyColumns`、`NameColumn`、`ValueColumn`、`CustomRollupColumn`、`CustomRollupPropertiesColumn`、および `UnaryOperatorColumn` プロパティのバインドなど、ディメンション テーブルの基になるディメンション内の各属性に関連付けられたバインド用に 1 つの列が生成されます。  
   
  リレーションシップ  
  このウィザードでは、各親属性の列とディメンション テーブルの主キーの間のリレーションシップが生成されます。  
@@ -65,7 +65,7 @@ ms.locfileid: "48133432"
  キューブ内の各メジャー グループに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるファクト テーブルが生成されます。 ファクト テーブルの構造は、基になるメジャー グループのデザイン中に行われた選択と、メジャー グループと含まれるディメンションの間のリレーションシップによって異なります。  
   
  [列]  
- ウィザードの各メジャーに使用するメジャー以外の 1 つの列の生成、`Count`集計関数。 これらのメジャーは、ファクト テーブルに対応する列を必要としません。  
+ このウィザードでは、`Count` 集計関数を使用するメジャー以外の各メジャーに 1 つずつ列が生成されます。 これらのメジャーは、ファクト テーブルに対応する列を必要としません。  
   
  さらに、必要に応じて、メジャー グループ上の標準のディメンション リレーションシップごとの各粒度属性列に 1 つの列が生成され、このテーブルの基になるメジャー グループへのファクト ディメンション リレーションシップがあるディメンションの各属性に関連付けられたバインドに 1 つまたは複数の列が生成されます。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48133432"
  このウィザードでは、翻訳列を必要とするメジャー グループのすべてのプロパティの翻訳済みの値を格納する個別のテーブルが生成されます。 また、必要な言語ごとに個別の列が作成されます。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>データ型変換と既定の長さ  
- スキーマ生成ウィザードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` データ型を使用する列以外のすべての場合に、データ型が無視されます。 `wchar`データ サイズに直接変換されます、`nvarchar`データ型。 ただし、`wchar` サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
+ スキーマ生成ウィザードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` データ型を使用する列以外のすべての場合に、データ型が無視されます。 `wchar` データ サイズは、`nvarchar` データ型に直接変換されます。 ただし、`wchar` サイズを使用している列の指定された長さが 4,000 バイトより長い場合には、スキーマ生成ウィザードではエラーが発生します。  
   
  属性のバインドなどのデータ アイテムに長さが指定されていない場合、次の表に示す既定の長さが列に使用されます。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "48133432"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [増分生成の理解](understanding-incremental-generation.md)   
  [データ ソース ビューおよびデータ ソースへの変更の管理](manage-changes-to-data-source-views-and-data-sources.md)  
   

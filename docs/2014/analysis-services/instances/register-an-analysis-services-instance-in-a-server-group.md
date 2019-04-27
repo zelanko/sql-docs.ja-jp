@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9552bd8fac2012ead7359f38776d368b85e0dbd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730112"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>サーバー グループへの Analysis Services インスタンスの登録
   多数の Analysis Services サーバー インスタンスがある場合、サーバー管理をより容易にするために Management Studio 内にサーバー グループを作成できます。 サーバー グループの目的は、管理ワークスペース内の関連するサーバーのグループで近接性を提供することです。 たとえば、10 個の独立した Analysis Services インスタンスを管理する必要があるとします。 サーバー モード、連続稼動条件、または部門や地域によってそれらをグループ化することで、同じ特徴を持つインスタンスをより簡単に表示および接続することができます。 サーバーがどのように使用されるかを思い出すために役立つ情報を追加することもできます。  

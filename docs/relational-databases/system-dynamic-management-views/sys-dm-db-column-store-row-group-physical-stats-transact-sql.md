@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742048"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "52510851"
 |**total_rows**|**bigint**|物理的な行の数が、行グループに格納されています。 圧縮された行グループの場合は、削除とマークされている行が含まれます。|  
 |**deleted_rows**|**bigint**|圧縮された行グループに物理的に保存、削除対象としてマークされた行の数。<br /><br /> デルタ ストア行グループは 0 です。|  
 |**size_in_bytes**|**bigint**|この行グループ内のすべてのページのバイト単位の合計サイズ。 このサイズでは、メタデータと共有辞書の格納に必要なサイズは含まれません。|  
-|**trim_reason**|**tinyint**|圧縮の行グループに付与をトリガーした理由が行の最大数未満です。<br /><br /> 0 ~ UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-一括読み込み<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-スピル オーバー|  
-|**trim_reason_desc**|**nvarchar(60)**|説明*trim_reason*します。<br /><br /> 0 ~ UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION:以前のバージョンからアップグレードするときに発生した[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。<br /><br /> 1-NO_TRIM:行グループは切り捨てられませんでした。 行グループは、1,048,476 行の最大値で圧縮されました。  行の数が小さくするデルタ行グループが閉じた後、subsset の行が削除された場合<br /><br /> 2-一括読み込み:一括読み込みのバッチ サイズには、行の数が制限されます。<br /><br /> 3-REORG:REORG コマンドの一部として圧縮を強制します。<br /><br /> 4-DICTIONARY_SIZE:ディクショナリのサイズが大きすぎて、すべての行を一緒に圧縮します。<br /><br /> 5-MEMORY_LIMITATION:すべての行の圧縮を一緒に使用可能なメモリが不足。<br /><br /> 6-RESIDUAL_ROW_GROUP:インデックス構築操作中に行 < 1 件の最後の行グループの一部として終了<br /><br /> STATS_MISMATCH:インメモリ テーブルで列ストアには。 統計は正しくないに示される場合は、> = 末尾での 100万行が少ないわかりました、圧縮された行グループが < 1, 000, 000 行<br /><br /> スピル オーバー:インメモリ テーブルで列ストアには。 カウントが 100 k と 100万の間にある場合に、最後のバッチ残りの行を圧縮する場合、> 1, 000, 000 行を末尾には、|  
-|**transition_to_compressed_state**|TINYINT|この行グループを列ストアに圧縮された状態に、デルタストアから移動した方法を示しています。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2-INDEX_BUILD<br /><br /> 3-TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6-一括読み込み<br /><br /> 7-マージ|  
+|**trim_reason**|**tinyint**|圧縮の行グループに付与をトリガーした理由が行の最大数未満です。<br /><br /> 0 - UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1-NO_TRIM<br /><br /> 2-一括読み込み<br /><br /> 3-REORG<br /><br /> 4-DICTIONARY_SIZE<br /><br /> 5-MEMORY_LIMITATION<br /><br /> 6-RESIDUAL_ROW_GROUP<br /><br /> 7-STATS_MISMATCH<br /><br /> 8-スピル オーバー|  
+|**trim_reason_desc**|**nvarchar(60)**|説明*trim_reason*します。<br /><br /> 0 - UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION:以前のバージョンからアップグレードするときに発生した[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。<br /><br /> 1-NO_TRIM:行グループは切り捨てられませんでした。 行グループは、1,048,476 行の最大値で圧縮されました。  行の数が小さくするデルタ行グループが閉じた後、subsset の行が削除された場合<br /><br /> 2-一括読み込み:一括読み込みのバッチ サイズには、行の数が制限されます。<br /><br /> 3-REORG:REORG コマンドの一部として圧縮を強制します。<br /><br /> 4-DICTIONARY_SIZE:ディクショナリのサイズが大きすぎて、すべての行を一緒に圧縮します。<br /><br /> 5-MEMORY_LIMITATION:すべての行の圧縮を一緒に使用可能なメモリが不足。<br /><br /> 6-RESIDUAL_ROW_GROUP:インデックス構築操作中に行 < 1 件の最後の行グループの一部として終了<br /><br /> STATS_MISMATCH:インメモリ テーブルで列ストアには。 統計は正しくないに示される場合は、> = 末尾での 100万行が少ないわかりました、圧縮された行グループが < 1, 000, 000 行<br /><br /> スピル オーバー:インメモリ テーブルで列ストアには。 カウントが 100 k と 100万の間にある場合に、最後のバッチ残りの行を圧縮する場合、> 1, 000, 000 行を末尾には、|  
+|**transition_to_compressed_state**|TINYINT|この行グループを列ストアに圧縮された状態に、デルタストアから移動した方法を示しています。<br /><br /> 1-NOT_APPLICABLE<br /><br /> 2 - INDEX_BUILD<br /><br /> 3 - TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5 - REORG_FORCED<br /><br /> 6-一括読み込み<br /><br /> 7-マージ|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE - 操作は、デルタストアには適用されません。 または、アップグレードする前に、行グループが圧縮された [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] この場合、履歴は保持されません。<br /><br /> INDEX_BUILD -、インデックスの作成またはインデックスの再構築は、行グループを圧縮します。<br /><br /> TUPLE_MOVER - バック グラウンドで実行されている組ムーバーにより、行グループが圧縮されます。 これは、行グループは、終了開くから状態を変更した後に発生します。<br /><br /> REORG_NORMAL -、ALTER INDEX の再構成操作しています.デルタストアから列ストアに CLOSED 行グループを移動伴わないを再編成します。 これには、前に、組ムーバーがある、行グループの移動にかかる時間が発生しました。<br /><br /> REORG_FORCED - この行グループがデルタストアに開かれていたし、完全行数がある前に、列ストアに強制されました。<br /><br /> 一括読み込み - 一括読み込み操作では、デルタストアを使用せずに直接、行グループが圧縮されています。<br /><br /> マージ - マージ操作でこの行グループに 1 つまたは複数の行グループを統合し、列ストア圧縮を実行します。|  
 |**has_vertipaq_optimization**|bit|Vertipaq の最適化では、高い圧縮率を実現するために、行グループ内の行の順序を並べ替えることで、列ストア圧縮が向上します。 ほとんどの場合は、この最適化が自動的に行われます。 Vertipaq の最適化は使用されませんが 2 つのケースがあります。<br/>  A. デルタ行グループが columnstore に移動し、列ストア インデックスの 1 つまたは複数の非クラスター化インデックスがあるときにここでは Vertipaq の最適化はスキップされますマッピング インデックスへの変更を最小限にするには<br/> B. メモリ最適化テーブルで列ストア インデックス。 <br /><br /> 0 = いいえ<br /><br /> 1 = はい|  
 |**生成**|BIGINT|この行グループに関連付けられている行グループの生成。|  
@@ -69,7 +69,7 @@ ms.locfileid: "52510851"
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-calculate-fragmentaton-to-decide-when-to-reorganize-or-rebuild-a-columnstore-index"></a>A. 再構成または列ストア インデックスを再構築するタイミングを決定する fragmentaton を計算します。  
- 列ストア インデックスでは、削除された行の割合は、行グループ内の断片化の効果的な手段です。 断片化が 20% 以上、削除された行を削除することをお勧めします。 場合です。  例については、[列ストア インデックスの最適化](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)を参照してください。  
+ 列ストア インデックスでは、削除された行の割合は、行グループ内の断片化の効果的な手段です。 断片化が 20% 以上、削除された行を削除することをお勧めします。 場合です。  例については、次を参照してください。[列ストア インデックスの最適化](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)します。  
   
  この例では結合**sys.dm_db_column_store_row_group_physical_stats**他のシステム テーブルし、計算、`Fragmentation`列として、現在のデータベース内の各の行グループの効率の推定値です。     コメントのハイフンの前後に 1 つのテーブルの削除に関する情報、**場所**句とテーブル名を指定します。  
   

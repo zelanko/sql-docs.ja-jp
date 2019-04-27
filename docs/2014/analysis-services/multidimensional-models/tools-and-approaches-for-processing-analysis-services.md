@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741918"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
   "処理" とは、Analysis Services がリレーショナル データ ソースにクエリを実行し、そのデータを使用して Analysis Services オブジェクトを設定する操作です。  
@@ -47,7 +47,7 @@ ms.locfileid: "50146307"
  処理は、柔軟に構成できる操作で、オブジェクト レベルで発生する完全処理や増分処理の一連の処理オプションを使用して制御します。 オプションとオブジェクトの処理に関する詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」および「[Analysis Services オブジェクトの処理](processing-analysis-services-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、[データベースの処理、テーブル、またはパーティション](../tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する&#40;SSAS 表形式&#41;](../process-data-ssas-tabular.md)を参照してください。  
+>  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション](../tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する&#40;SSAS 表形式&#41;](../process-data-ssas-tabular.md)します。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのオブジェクトの処理  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747126"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>[テーブルとビューの選択] (データ ソース ビュー ウィザード) (Analysis Services)
   **[テーブルとビューの選択]** ページを使用すると、データ ソース ビューに含めるテーブルまたはビューをデータ ソースから選択できます。  
@@ -34,12 +34,12 @@ ms.locfileid: "48104012"
   
  昇順または降順でリストを並べ替えるには、 **[名前]** または **[種類]** をクリックします。  
   
- **Assert**  
+ **[フィルター]**  
  **[使用できるオブジェクト]** にリストされるオブジェクトをフィルターします。 文字列を入力して **[フィルター]** ボタンをクリックすると、指定された文字列を含む名前のみが一覧表示されます。 正確な文字列を検索するには、文字列を二重引用符で囲みます。 大文字と小文字は区別されません。  
   
  次の表に一覧表示されているワイルドカード文字をフィルター文字列に含めることができます。  
   
-|ワイルドカード文字|値|  
+|ワイルドカード文字|[値]|  
 |------------------------|-----------|  
 |**\***|任意の文字列|  
 |**%**|任意の文字列|  
@@ -52,7 +52,7 @@ ms.locfileid: "48104012"
  **関連テーブルを追加します。**  
  **[含まれているオブジェクト]** の一覧に関連するすべてのテーブルを追加します。 このオプションではビューを追加することはできません。 ただし、パーティション テーブルは追加できます。 ウィザードの **[名前の一致]** ページで名前の一致条件を選択した場合、このオプションは選択された条件に従って、論理的な関連テーブルも含みます。 テーブルには、新しく追加された関連テーブルに関連している場合や、元のテーブルと同一の構造を持つ場合のテーブルも含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソース ビュー ウィザードの F1 ヘルプ&#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

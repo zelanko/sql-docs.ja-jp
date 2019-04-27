@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779409"
 ---
 # <a name="full-text-stoplist-properties"></a>[フルテキスト ストップリストのプロパティ]
   このダイアログ ボックスを使用すると、個々のストップワードの追加や削除、特定の言語のすべてのストップワードの削除、および現在のストップリストのクリアを実行できます。 ストップワードは、ストップリストで一般的に使用される単語です。 ストップリスト内のストップワードは、ストップリストを使用するテーブルのフルテキスト インデックスから省略されます。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../relational-databases/search/full-text-search.md)」を参照してください。  

@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643340"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server 間のデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -179,5 +179,5 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 

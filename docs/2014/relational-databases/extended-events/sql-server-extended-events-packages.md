@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638745"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
   パッケージは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "52767414"
   
 -   対象サーバー  
   
--   アクション  
+-   Actions  
   
 -   型  
   
@@ -96,7 +96,7 @@ where name = 'keyword_map'
 ### <a name="targets"></a>ターゲット  
  ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](../../database-engine/sql-server-extended-events-targets.md)」を参照してください。  
   
-### <a name="actions"></a>アクション  
+### <a name="actions"></a>Actions  
  アクションは、プログラムがイベントに呼応して実行する特定の (または一連の) 応答です。 アクションはイベントに関連付けられます。各イベントには、それぞれ異なる一連のアクションが関連付けられる場合もあります。  
   
 > [!NOTE]  
@@ -213,7 +213,7 @@ where name = 'lock_mode'
   
  たとえば、このテーブルに mode という名前の列があり、その値が 5 であると仮定します。 このテーブルによると、5 は X に対応しており、そこからロックの種類が Exclusive であることがわかります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 拡張イベント セッション](sql-server-extended-events-sessions.md)   
  [SQL Server 拡張イベント エンジン](sql-server-extended-events-engine.md)   
  [SQL Server 拡張イベント ターゲット](../../database-engine/sql-server-extended-events-targets.md)  

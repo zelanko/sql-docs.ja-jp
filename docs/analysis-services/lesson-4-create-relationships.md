@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753151"
 ---
 # <a name="lesson-4-create-relationships"></a>レッスン 4:[リレーションシップの作成]
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "52411299"
   
 このレッスンを完了するまでに時間を推定するには。**10 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 3:日付テーブルとしてマーク](../analysis-services/lesson-3-mark-as-date-table.md)します。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>既存のリレーションシップの確認と新しいリレーションシップの追加  
@@ -77,7 +77,7 @@ ms.locfileid: "52411299"
 
     間のアクティブなリレーションシップを作成したを示す実線が表示されます、 **OrderDate**内の列、 **Internet Sales**テーブルおよび**日付**列**日付**テーブル。 
   
-      ![-テーブル-lesson4-新規と](../analysis-services/media/as-tabular-lesson4-new.png) 
+      ![as-tabular-lesson4-new](../analysis-services/media/as-tabular-lesson4-new.png) 
   
     > [!NOTE]  
     > リレーションシップを作成するときに、主テーブルと関連する参照テーブルの間のカーディナリティとフィルターの方向が自動的に選択します。  
@@ -91,7 +91,7 @@ ms.locfileid: "52411299"
      ![として-テーブル-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>次の操作
-次のレッスンに移動します。[レッスン 5:計算列を作成](../analysis-services/lesson-5-create-calculated-columns.md)です。
+次のレッスンに移動します。[レッスン 5: 計算列を作成](../analysis-services/lesson-5-create-calculated-columns.md)です。
   
   
   

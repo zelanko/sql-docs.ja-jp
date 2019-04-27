@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749121"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブック内のデータ接続に関するデータを更新できません。 再試行するか、システム管理者に問い合わせてください。 次の接続の更新に失敗しました:[PowerPivot データ]
   PowerPivot データを含む Excel ブックで、Excel Services は、PowerPivot サーバーに送信した接続要求が失敗した場合にこのエラーを返します。  
@@ -33,9 +33,9 @@ ms.locfileid: "53371004"
 ## <a name="explanation-and-resolution"></a>説明および解決方法  
  Excel Services が PowerPivot データに接続できないか、PowerPivot データを読み込むことができません。 このエラーは、次のような状況で発生します。  
   
- **シナリオ 1:サービスが開始されていません。**  
+ **シナリオ 1: サービスが開始されていません。**  
   
- SQL Server Analysis Services (PowerPivot) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードを変更する方法についての詳細については、[PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)と[開始または PowerPivot を SharePoint サーバーの停止](start-or-stop-a-power-pivot-for-sharepoint-server.md)を参照してください。  
+ SQL Server Analysis Services (PowerPivot) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードを変更する方法についての詳細については、次を参照してください。 [PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)と[開始または PowerPivot を SharePoint サーバーの停止](start-or-stop-a-power-pivot-for-sharepoint-server.md)します。  
   
  **シナリオ 2 a:以前のバージョンのブック n、サーバーを開く**  
   

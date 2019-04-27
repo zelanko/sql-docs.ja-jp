@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 5d480b7cd24200b051fa2626fc41fa757703eaf8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642643"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server で R を使用した SSIS、SSRS のワークフローを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -208,4 +208,4 @@ R には、グラフの興味のある視覚化を作成できます、つまり
 
 ## <a name="next-steps"></a>次のステップ
 
-この記事では、SSIS、SSRS の例では、埋め込まれた R または Python スクリプトが含まれているストアド プロシージャの実行の 2 つのケースを示しています。 重要な習得事項は、ことが利用できる R または Python スクリプトを任意のアプリケーションまたはストアド プロシージャの実行要求を送信できるツールです。 SSIS 用の他の重要なは、自動化および操作のチェーンに含まれる R または Python のデータ サイエンス機能とさまざまなデータの取得、クレンジング、操作、およびなどの操作をスケジュールするパッケージを作成することができます。 詳細とアイデアは、[SQL Server Machine Learning Services でのストアド プロシージャを使用して運用化の R コード](operationalizing-your-r-code.md)を参照してください。
+この記事では、SSIS、SSRS の例では、埋め込まれた R または Python スクリプトが含まれているストアド プロシージャの実行の 2 つのケースを示しています。 重要な習得事項は、ことが利用できる R または Python スクリプトを任意のアプリケーションまたはストアド プロシージャの実行要求を送信できるツールです。 SSIS 用の他の重要なは、自動化および操作のチェーンに含まれる R または Python のデータ サイエンス機能とさまざまなデータの取得、クレンジング、操作、およびなどの操作をスケジュールするパッケージを作成することができます。 詳細とアイデアは、次を参照してください。 [SQL Server Machine Learning Services でのストアド プロシージャを使用して運用化の R コード](operationalizing-your-r-code.md)します。

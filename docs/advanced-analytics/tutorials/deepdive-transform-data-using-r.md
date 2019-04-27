@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 8a339d52b04b297227e28833ea490f615ed268f9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641105"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R (SQL Server と RevoScaleR チュートリアル) を使用してデータを変換します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "58510379"
         overwrite = TRUE)
     ```
 
-    各列に適用される変換を定義するときは、変換の実行に必要な追加の R パッケージも指定できます。  実行できる変換の種類の詳細については、[RevoScaleR を使用してデータを変換およびサブセット方法](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)を参照してください。
+    各列に適用される変換を定義するときは、変換の実行に必要な追加の R パッケージも指定できます。  実行できる変換の種類の詳細については、次を参照してください。 [RevoScaleR を使用してデータを変換およびサブセット方法](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)します。
   
 6. **rxGetVarInfo** を呼び出して、新しいデータ セットの変数の概要を表示します。
   

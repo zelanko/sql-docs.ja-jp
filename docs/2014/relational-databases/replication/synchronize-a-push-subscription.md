@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745882"
 ---
 # <a name="synchronize-a-push-subscription"></a>プッシュ サブスクリプションの同期
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [レプリケーション エージェント](agents/replication-agents-overview.md)、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを同期する方法について説明します。  
@@ -270,7 +270,7 @@ REM -- The following command must be supplied without line breaks.
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション管理オブジェクトの概念](concepts/replication-management-objects-concepts.md)   
  [データの同期](synchronize-data.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  

@@ -1,5 +1,5 @@
 ---
-title: 概要 :テーブルからデータをインポートする (マスター データ サービス) | Microsoft Docs
+title: 概要:テーブルからデータをインポートする (マスター データ サービス) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d4703d6a5e8438404ba282b09b6af6edf40ea71
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639487"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>概要 :テーブルからデータをインポートする (マスター データ サービス)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>概要:テーブルからデータをインポートする (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

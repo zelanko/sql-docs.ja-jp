@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d2f83b1b003e6be2fc5c47b8a0e12b440f537c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749424"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>サーバーの全体管理での SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションを接続します。
   PowerPivot サービス アプリケーションは、ファーム内の任意の数の SharePoint Web アプリケーションで使用できます。 PowerPivot サービス アプリケーションを使用できるようにするには、サービス関連付けリストに PowerPivot サービス アプリケーションを追加します。  
@@ -58,7 +58,7 @@ ms.locfileid: "48095802"
   
 6.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成します。](create-and-configure-power-pivot-service-application-in-ca.md)   
  [構成の初期&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   

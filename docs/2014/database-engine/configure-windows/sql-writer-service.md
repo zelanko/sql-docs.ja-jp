@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7204d2f20c7c299a2bcefcc66409182c8846affc
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755444"
 ---
 # <a name="sql-writer-service"></a>SQL ライター サービス
   SQL ライター サービスは、ボリューム シャドウ コピー サービス フレームワークを通じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元に関する追加機能を提供します。  

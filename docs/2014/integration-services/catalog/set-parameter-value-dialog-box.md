@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771638"
 ---
 # <a name="set-parameter-value-dialog-box"></a>[パラメーター値の設定] ダイアログ ボックス
   プロジェクトとパッケージのパラメーターと接続マネージャーのプロパティの値を設定するには、 **[パラメーター値の設定]** ダイアログ ボックスを使用します。  

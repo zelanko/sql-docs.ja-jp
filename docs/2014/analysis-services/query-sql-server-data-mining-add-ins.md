@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748476"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>クエリ (SQL Server データ マイニング アドイン)
   ![クエリ モデル ボタン、データ マイニング リボン](media/dmc-query.gif "モデルのクエリ ボタン、データ マイニング リボン")  
@@ -46,10 +46,10 @@ ms.locfileid: "52418463"
   
 4.  最後に、1 つまたは複数の予測を選択し、結果の保存先を指定します。  
   
- いつでもでもクリックできます **[詳細設定]** に切り替える、**データ マイニング詳細クエリ エディター**、DMX ステートメントの各部分をより詳細に制御ができます。 高度なクエリを編集ツールを使用する方法の詳細については、[高度なデータ マイニングのクエリ エディター](advanced-data-mining-query-editor.md)を参照してください。  
+ いつでもでもクリックできます **[詳細設定]** に切り替える、**データ マイニング詳細クエリ エディター**、DMX ステートメントの各部分をより詳細に制御ができます。 高度なクエリを編集ツールを使用する方法の詳細については、次を参照してください。[高度なデータ マイニングのクエリ エディター](advanced-data-mining-query-editor.md)します。  
   
 ### <a name="requirements"></a>必要条件  
- 使用する、**クエリ**ウィザードのインスタンスに接続する必要がある必要があります[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 また、サーバーに適切な種類のデータ マイニング モデルが少なくとも 1 つ保存されている必要があります。 使用できるモデルが 1 つもない場合は、Excel 用のデータ マイニング クライアントのウィザードを使用して作成できます。 ウィザードを使用して、新しいマイニング モデルを作成する方法については、[データ マイニング モデルを作成する](creating-a-data-mining-model.md)を参照してください。  
+ 使用する、**クエリ**ウィザードのインスタンスに接続する必要がある必要があります[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 また、サーバーに適切な種類のデータ マイニング モデルが少なくとも 1 つ保存されている必要があります。 使用できるモデルが 1 つもない場合は、Excel 用のデータ マイニング クライアントのウィザードを使用して作成できます。 ウィザードを使用して、新しいマイニング モデルを作成する方法については、次を参照してください。[データ マイニング モデルを作成する](creating-a-data-mining-model.md)します。  
   
 ## <a name="see-also"></a>参照  
  [展開して、マイニング モデルのスケーリング&#40;データ マイニング Excel 用アドイン&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   

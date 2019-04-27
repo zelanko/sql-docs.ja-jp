@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c856fc1731887dff6c1cea64fdb731a2da7e5775
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52952182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752733"
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>ユーザー定義階層内の属性リレーションシップの 4-6 で指定します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "52952182"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [不明なメンバーと NULL 処理のプロパティの定義](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [属性リレーションシップの定義](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [ユーザー階層プロパティ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

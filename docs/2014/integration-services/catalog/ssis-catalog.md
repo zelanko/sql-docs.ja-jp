@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771578"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   `SSISDB`カタログが操作するための中心点[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) プロジェクトを展開している、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -28,7 +28,7 @@ ms.locfileid: "58377483"
   
  `SSISDB`カタログと`SSISDB`データベースは Windows PowerShell をサポートします。 Windows PowerShell による SQL Server の使用の詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」をご覧ください。 Windows PowerShell を使用してプロジェクトの配置などのタスクを実行する方法の例については、blogs.msdn.com のブログ エントリ「 [SQL Server 2012 での SSIS と PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539)」をご覧ください。  
   
- オペレーション データを表示する方法についての詳細については、[パッケージの実行とその他の操作の監視を](../performance/monitor-running-packages-and-other-operations.md)を参照してください。  
+ オペレーション データを表示する方法についての詳細については、次を参照してください。[パッケージの実行とその他の操作の監視を](../performance/monitor-running-packages-and-other-operations.md)します。  
   
  アクセスする、`SSISDB`のカタログに[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に接続して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース エンジンとし、展開、 **Integration Services カタログ**オブジェクト エクスプ ローラーでノード。 アクセスする、`SSISDB`データベース[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラーでデータベース ノードを展開します。  
   

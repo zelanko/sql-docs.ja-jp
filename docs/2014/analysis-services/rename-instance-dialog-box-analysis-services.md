@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1434ae3750a76ecffc029d618ce32acea982b035
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748334"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>[インスタンス名の変更] ダイアログ ボックス (Analysis Services)
   **[インスタンス名の変更]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の既存のインスタンスの名前を変更できます。 **[インスタンス名の変更]** ダイアログ ボックスを表示するには、C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE から **インスタンス名の変更** ツール (asinstancerename.exe) を起動します。  
@@ -32,7 +32,7 @@ ms.locfileid: "48082642"
 |**ユーザー名**|サービスの開始時に使用されるアカウントが表示されます。 ユーザー名は変更できません。|  
 |**Password**|サービス アカウントのパスワードを入力します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

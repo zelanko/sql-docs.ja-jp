@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641069"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server での Python および R のチュートリアル: あやめのデモ データ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +152,7 @@ ms.locfileid: "58510099"
     SELECT COUNT(*) FROM iris_data;
     ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 次のクイック スタートでは、機械学習モデルを作成し、し、テーブルに保存から予測される結果を生成するモデルを使用します。
 

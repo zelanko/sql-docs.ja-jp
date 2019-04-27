@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbeef4b02c787baa9d29b16fe862af146033584d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646308"
 ---
 # <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>DatabaseServerName プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースがインストールされるサーバーの名前を指定します。 読み取りと書き込みが可能です。  
@@ -48,7 +48,7 @@ public string DatabaseServerName;
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

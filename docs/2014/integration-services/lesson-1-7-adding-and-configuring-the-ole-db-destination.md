@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767561"
 ---
-# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>手順 7:追加して、OLE DB 変換先の構成
+# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>手順 7:OLE DB 変換先の追加と構成
   前回までの実習で、フラット ファイル ソースからデータを抽出し、変換先との互換性のある形式にデータを変換できるパッケージを作成しました。 次は、変換したデータを実際に変換先に読み込みます。 データを読み込むには、データ フローに OLE DB 変換先を追加する必要があります。 OLE DB 変換先では、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込むことができます。  
   
  この操作では、以前に作成した OLE DB の接続マネージャーを使用できるように、OLE DB 変換先を追加、構成します。  
@@ -55,7 +55,7 @@ ms.locfileid: "58393090"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 8:レッスン 1 パッケージを理解しやすきます。](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[OLE DB 変換先]](data-flow/ole-db-destination.md)  
   
   

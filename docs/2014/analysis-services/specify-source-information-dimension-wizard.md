@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01ce74621f22da45807112a63f7f85d5849a620f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746166"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>[基になる情報の指定] (ディメンション ウィザード)
   **[メイン ディメンション テーブルの選択]** ページを使用すると、作成するディメンションのデータ ソース ビュー、メイン ディメンション テーブル、キー列、およびメンバー名列を選択できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "48087992"
  **[名前] 列**  
  **[メイン テーブル]** で指定したテーブルから、ディメンションのメンバー名を含んでいる列を選択します。 名前列は、複合キーを使用する場合に指定する必要があります。 複合キーの名前列を作成するには、指定されたキー列を連結する名前付き計算をデータ ソース ビューで作成することをお勧めします。 1 つのキーを使用する場合、名前列は省略可能です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

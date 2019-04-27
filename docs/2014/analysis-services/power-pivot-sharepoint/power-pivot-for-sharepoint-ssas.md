@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 733842d4119c83835feff7c71b63f28d419593ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749275"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint は、SharePoint モードで実行される [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーです。 PowerPivot for SharePoint は、SharePoint ファーム内の PowerPivot データのサーバー ホスティングを実現します。 PowerPivot データを使用して、次のいずれかをビルドする分析データ モデルです。  
@@ -25,7 +25,7 @@ ms.locfileid: "53365824"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 |[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
   
  そのデータをサーバーでホストするには、SharePoint、Excel Services、および PowerPivot for SharePoint のインストールが必要です。 PowerPivot for SharePoint インスタンスにデータが読み込まれます。このデータは、PowerPivot データ更新機能を使用してスケジュール設定された間隔で更新できます。Excel 2010 ブックの場合はこの更新機能がサーバーで実行され、Excel 2013 ブックの場合は SharePoint 2013 Excel Services で実行されます。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "53365824"
   
  [ライセンスのトポロジの例と SQL Server 2014 セルフ サービス ビジネス インテリジェンスのコスト](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerPivot の計画と展開](https://go.microsoft.com/fwlink/?linkID=220972)   
  [Powerpivot for SharePoint の災害復旧](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   

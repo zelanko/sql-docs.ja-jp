@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753375"
 ---
 # <a name="exception-message-box-programming"></a>例外メッセージ ボックスのプログラミング
   例外メッセージ ボックス プログラム インターフェイスと共にインストールされで使用されるは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]グラフィカルなコンポーネントです。 例外メッセージ ボックスは、サポートされるマネージド アセンブリです。アプリケーションで例外メッセージ ボックスを使用することで、メッセージ エクスペリエンスを高い柔軟性で制御し、ユーザーが後で参照できるようにエラー メッセージを保存したり、メッセージのヘルプを表示できるようにすることができます。 例外メッセージ ボックスのすべてのエディションでインストールされているため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を除く[!INCLUDE[ssEW](../../includes/ssew-md.md)]、コンピューターであれば追加構成なしで使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント コンポーネントがインストールされています。  

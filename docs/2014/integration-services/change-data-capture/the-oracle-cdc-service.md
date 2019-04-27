@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771078"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service は、プログラム xdbcdcsvc.exe を実行する Windows サービスです。 それぞれ異なる Windows サービス名を持つ複数の Windows サービスを、同じコンピューターで実行するように構成できます。 1 つのコンピューターで複数の Oracle CDC Windows サービスを作成する場合としては、サービス間の分離を強化したい場合や、各サービスでそれぞれ異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する必要がある場合などが一般的です。  
@@ -92,7 +92,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Oracle CDC Service を使用する](the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ローカルの CDC Service を管理する方法](how-to-manage-a-local-cdc-service.md)   
  [Oracle CDC Service の管理](manage-an-oracle-cdc-service.md)  
   

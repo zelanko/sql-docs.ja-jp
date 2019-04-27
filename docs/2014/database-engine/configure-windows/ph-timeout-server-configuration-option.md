@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25a89c00466cf4a702202f6a6fb4959f1d845c41
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781340"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>PH timeout サーバー構成オプション
   PH timeout オプションは、フルテキスト プロトコル ハンドラーが、データベースへの接続をタイムアウトするまで待機する時間を秒単位で指定します。既定値は 60 秒です。 一時的なネットワークの問題により接続試行がタイムアウトする場合は、ph timeout 値を大きくします。  
@@ -31,7 +31,7 @@ ms.locfileid: "52639420"
   
  データ行をフェッチすると、指定した時間内にプロトコル ハンドラーが SQL Server に接続できない場合、その行に対するタイムアウト エラーが報告されます。 その行のフェッチは、後でフルテキストの Gatherer により再試行されます。 フルテキストの Gatherer の詳細については、「 [フルテキスト インデックスの作成](../../relational-databases/indexes/indexes.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

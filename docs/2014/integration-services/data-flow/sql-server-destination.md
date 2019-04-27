@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770713"
 ---
 # <a name="sql-server-destination"></a>SQL Server 変換先
   SQL Server 変換先はローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはビューに一括で読み込みます。 SQL Server 変換先は、リモート サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアクセスするパッケージでは使用できません。 代わりに、このパッケージでは OLE DB 変換先を使用する必要があります。 詳細については、「 [OLE DB 変換先](ole-db-destination.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "58374980"
  SQL Server 変換先が含まれたパッケージを実行するユーザーには、"グローバル オブジェクトの作成" 権限が許可されている必要があります。 **[管理ツール]** のローカル セキュリティ ポリシー ツールを使用することにより、この権限をユーザーに許可できます。 SQL Server 変換先を使用するパッケージの実行時にエラー メッセージが表示された場合は、パッケージを実行しているアカウントに "グローバル オブジェクトの作成" 権限が許可されていることを確認してください。  
   
 ## <a name="bulk-inserts"></a>一括挿入  
- SQL Server 変換先を使用して、データをリモートの SQL Server データベースを一括読み込みしようとするには、次のようなエラー メッセージが表示されます。"OLE DB レコードは使用できます。 ソース:"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client"Hresult:0x80040E14 説明。"でしたので、一括読み込み SSIS ファイル マッピング オブジェクト 'global \dtsqlimport' を開くことができませんでした。 オペレーティング システム エラー コード 2 (指定されたファイルが見つかりません)。 Windows セキュリティ経由でローカル サーバーにアクセスしていることを確認してください。""  
+ SQL Server 変換先を使用してリモートの SQL Server データベースにデータを一括読み込みしようとすると、次のようなエラー メッセージが表示されることがあります。"OLE DB レコードを使用できます。 ソース:"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 説明: "SSIS ファイル マッピング オブジェクト 'Global\DTSQLIMPORT' を開けなかったので、一括読み込みできませんでした。 オペレーティング システム エラー コード 2 (指定されたファイルが見つかりません)。 Windows セキュリティ経由でローカル サーバーにアクセスしていることを確認してください。""  
   
  SQL Server 変換先で行われるのは、一括挿入タスクで行われるものと同じ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への高速なデータ挿入です。ただし、パッケージで SQL Server 変換先を使用することによって、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれる前に変換を列データに適用できます。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "58374980"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [SQL Server 変換先のカスタム プロパティ](sql-server-destination-custom-properties.md)  
   
@@ -123,7 +123,7 @@ ms.locfileid: "58374980"
   
 -   simple-talk.com の技術資料「 [SQL Server Integration Services を使用してデータの一括読み込みを行う](https://go.microsoft.com/fwlink/?LinkId=233701)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー](data-flow.md)  
   
   

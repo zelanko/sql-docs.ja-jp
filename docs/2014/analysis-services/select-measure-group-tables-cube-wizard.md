@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 126cc0aa341c386672f14651d18117cc5a95da77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747256"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>[メジャー グループ テーブルの選択] (キューブ ウィザード)
   **[メジャー グループ テーブルの選択]** ページを使用すると、データ ソース ビューを特定して、キューブに使用するメジャー グループ テーブルを選択できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "48195642"
  **メジャー グループ テーブル**  
  キューブ内のメジャー グループに使用するテーブルを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

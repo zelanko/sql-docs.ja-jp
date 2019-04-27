@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 828d299e47ecf582918ce5524e3b6c2bc2925d90
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770718"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換を使用して類似のデータ行を識別する
   あいまいグループ化変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -79,7 +79,7 @@ ms.locfileid: "58390100"
   
 20. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   

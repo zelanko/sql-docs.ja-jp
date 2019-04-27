@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4fde67fc6b38e81c7367ee1e298439810b0b35c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754558"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>[プリンシパル サーバー インスタンス] (データベース ミラーリング セキュリティ構成ウィザード)
   このページを使用すると、プリンシパル データベースのサーバー インスタンスに関する情報を指定できます。 プリンシパル データベースは、ミラーリング セッションを開始するデータベースのコピーです。 セッションが開始された後は、プリンシパル データベースは、ユーザーが変更できるデータベースのコピーになります。 フェールオーバーが発生するとプリンシパル ロールとミラーリング ロールが入れ替わるため、最初のプリンシパル データベースが途中でプリンシパル データベースでなくなる可能性があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "48188852"
   
  暗号化を無効にするには、チェック ボックスをオフにします。 暗号化を再度有効にするには、チェック ボックスをオンにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

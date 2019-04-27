@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764881"
 ---
 # <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
   リーフ権限は、エンティティのすべてのリーフ メンバーの属性値に適用されます。  
@@ -47,22 +47,22 @@ ms.locfileid: "52812104"
 |----------------|-----------------|  
 |**読み取り専用です。**|属性が表示されますが、ユーザーは属性の値を変更できません。|  
 |**Update**|属性が表示され、ユーザーは属性の値を変更できます。|  
-|**Deny**|属性が表示されません。<br /><br /> 注:Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
+|**Deny**|属性が表示されません。<br /><br /> 注:Name および Code 属性へのアクセスを明示的に拒否することはできません。|  
   
 ### <a name="example"></a>例  
  Product エンティティの場合、Subcategory 属性に **更新** 権限を割り当てます。 他のすべての属性に対しては権限を拒否します。  
   
 |名前|コード|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} マウンテン バイク|  
+|Mountain-100|BK-M201|{5} マウンテン バイク|  
   
  **[エクスプローラー]** では、Subcategory 列の属性値を更新できます。 属性に対する権限がない場合、その属性は表示されません。  
   
 > [!NOTE]  
 >  この例では、Subcategory は、SubcategoryList エンティティに基づくドメイン ベースの属性です。 Mountain-100 に対して別のサブカテゴリを選択することはできますが、SubcategoryList エンティティへのメンバーの追加または SubcategoryList エンティティからのメンバーの削除を行うことはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](assign-model-object-permissions-master-data-services.md)   
  [アクセス許可を統合&#40;マスター データ サービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)   
  [モデル オブジェクト権限 (マスター データ サービス)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   

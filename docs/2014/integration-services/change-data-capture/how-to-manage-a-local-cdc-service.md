@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27ec5fcac246c9907d38d8e0eff4e82befb0a04e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771308"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>ローカルの CDC Service を管理する方法
   この手順では、CDC Service 構成コンソールを使用して特定の CDC サービスを管理する方法について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "58380110"
   
          または、削除する CDC サービスを右クリックして **[削除]** を選択します。  
   
-         **注**:サービスを削除するときに、サービスが実行されている場合は、削除する前に、サービスが停止しました。  
+         **注意**:実行中のサービスを削除した場合、サービスは停止されてから削除されます。  
   
          Oracle CDC Windows Service の定義を削除するには、プログラムに、関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の MSXDBCDC データベースに対する更新アクセスが必要です。 **[OK]** をクリックしてサービスを削除すると、MSXDBCDC データベース内にある Oracle CDC Service 登録の削除が試みられます。 権限がないために削除できない場合、MSXDBCDC データベースに対する更新アクセスを持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを入力するためのダイアログ ボックスが表示されます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58380110"
   
          または、プロパティを編集する CDC サービスを右クリックして **[プロパティ]** を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Manage an Oracle CDC Service](manage-an-oracle-cdc-service.md)  
   
   

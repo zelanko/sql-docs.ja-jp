@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e0cded793f6017398641ffa055deec62010b2b3d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642464"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server での Python モジュール)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "58510610"
 + データ サイエンスの職務、拡張性の高い分散または並列処理
 + パフォーマンスを向上させる、Intel 数値演算ライブラリの使用を含む
 
-データ ソースと計算コンテキストで作成した**revoscalepy**機械学習アルゴリズムでも使用できます。 これらのアルゴリズムの概要については、[microsoftml Python モジュールは SQL Server で](ref-py-microsoftml.md)を参照してください。
+データ ソースと計算コンテキストで作成した**revoscalepy**機械学習アルゴリズムでも使用できます。 これらのアルゴリズムの概要については、次を参照してください。 [microsoftml Python モジュールは SQL Server で](ref-py-microsoftml.md)します。
 
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
@@ -50,11 +50,11 @@ ms.locfileid: "58510610"
 
 **revoscalepy**データ ソースの作成および、場所を設定するための関数が含まれますか*コンピューティング コンテキスト*の計算が実行されます。 SQL Server のシナリオに関連する関数は、次の表に一覧表示されます。
 
-SQL Server と Python は、場合によっては異なるデータ型を使用します。 SQL と Python のデータ型の間のマッピングの一覧は、[Python、SQL データ型](python-libraries-and-data-types.md)を参照してください。
+SQL Server と Python は、場合によっては異なるデータ型を使用します。 SQL と Python のデータ型の間のマッピングの一覧は、次を参照してください。 [Python、SQL データ型](python-libraries-and-data-types.md)します。
 
 | 関数| 説明|
 | ------- | ---------- |
-| [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  リモート インスタンスに計算をプッシュには、SQL Server 計算コンテキスト オブジェクトを作成します。 いくつか**revoscalepy**関数が引数としてコンピューティング コンテキストを受け取ります。 コンテキストの切り替えの例では、[revoscalepy を使用してモデル作成](../tutorials/use-python-revoscalepy-to-create-model.md)を参照してください。|
+| [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  リモート インスタンスに計算をプッシュには、SQL Server 計算コンテキスト オブジェクトを作成します。 いくつか**revoscalepy**関数が引数としてコンピューティング コンテキストを受け取ります。 コンテキストの切り替えの例では、次を参照してください。 [revoscalepy を使用してモデル作成](../tutorials/use-python-revoscalepy-to-create-model.md)です。|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | SQL Server のクエリまたはテーブルに基づくデータ オブジェクトを作成します。 |
 | [RxOdbcData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxodbcdata)| ODBC 接続に基づいてデータ ソースを作成します。 |
 | [RxXdfData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxxdfdata) | ローカル XDF ファイルに基づくデータ ソースを作成します。 XDF ファイルはディスクにデータをメモリ内の負荷を軽減するよく使用されます。 1 つのバッチ内のデータベースから転送できる以上のデータまたはメモリ内に収まるよりも多くのデータを扱うとき、XDF ファイルは役に立ちます。 たとえば、ローカル ワークステーションに、データベースから定期的に大量のデータを移動する場合クエリではなく R 操作ごとに繰り返しデータベースするとして使用できます XDF ファイルある種のキャッシュをローカル データを保存し、R ワークスペースで作業し。 |
@@ -103,7 +103,7 @@ SQL Server と Python は、場合によっては異なるデータ型を使用�
 
 Python スクリプト、ストアド プロシージャ内部でカプセル化する準備ができたら[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)入力と出力を明確に定義する 1 つの関数として、コードの書き直しをお勧めします。 
 
-入力と出力である必要があります**pandas**データ フレーム。 これが完了したら、T-SQL をサポートする任意のクライアントから、ストアド プロシージャを呼び出す、簡単に、入力として SQL クエリを渡すして SQL テーブルに結果を保存します。 例については、[SQL 開発者向けの in-database Python 分析について説明します](../tutorials/sqldev-in-database-python-for-sql-developers.md)を参照してください。
+入力と出力である必要があります**pandas**データ フレーム。 これが完了したら、T-SQL をサポートする任意のクライアントから、ストアド プロシージャを呼び出す、簡単に、入力として SQL クエリを渡すして SQL テーブルに結果を保存します。 例については、次を参照してください。 [SQL 開発者向けの in-database Python 分析について説明します](../tutorials/sqldev-in-database-python-for-sql-developers.md)します。
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Microsoftml で revoscalepy を使用します。
 

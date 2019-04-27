@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780725"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR (共通言語ランタイム) 統合の使用シナリオと例
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、サンプル アプリケーション、パッケージ サンプル、およびさまざまなコーディング サンプルが含まれています。これらのサンプルを使用することで、CLR (共通言語ランタイム) 統合のプログラミング機能について理解することができます。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2a280b02b8c8a4a918083c7d664d70db4ee533ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743448"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>[パースペクティブ] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[パースペクティブ]** タブを使用すると、選択されているキューブのパースペクティブを作成したり変更したりできます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48089952"
  **パースペクティブの詳細**  
  **パースペクティブの詳細** ペインを使用すると、選択されているキューブのパースペクティブを作成したり変更したりできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パースペクティブ](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
   
   

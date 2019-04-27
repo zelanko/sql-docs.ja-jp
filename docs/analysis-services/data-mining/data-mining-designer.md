@@ -1,5 +1,5 @@
 ---
-title: データ マイニング デザイナー |Microsoft ドキュメント
+title: データ マイニング デザイナー |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 25eea114d105ec445e91b5bebbbe74e1d0f846f3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650365"
 ---
-# <a name="data-mining-designer"></a>データ マイニング デザイナー
+# <a name="data-mining-designer"></a>Data Mining Designer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  データ マイニング デザイナーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のマイニング モデルを操作するための主要な環境です。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
+  データ マイニング デザイナーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のマイニング モデルを操作するための主要な環境です。 データ マイニング デザイナーにアクセスするには、既存のマイニング構造を選択するか、またはデータ マイニング ウィザードを使用して新しいマイニング構造とマイニング モデルを作成します。 データ マイニング デザイナーを使用すると、次の作業を実行できます。  
   
 -   最初にデータ マイニング ウィザードで作成したマイニング構造とマイニング モデルを変更する。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34014359"
 ## <a name="mining-structure-tab"></a>[マイニング構造] タブ  
  **[マイニング構造]** タブを使用すると、列を追加したり、既存のマイニング構造のプロパティを変更したりできます。 次のタスクおよびトピックでは、マイニング構造の操作の詳細について説明します。  
   
- [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [マイニング構造 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34014359"
   
  マイニング モデルの操作の詳細については、次のトピックを参照してください。  
   
- [マイニング モデルと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング モデル (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
@@ -62,9 +62,9 @@ ms.locfileid: "34014359"
   
  マイニング モデルのテストおよび検証の詳細については、次のトピックを参照してください。  
   
- [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
- [テストおよび検証タスクと操作方法 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [テストおよび検証タスク、および操作方法 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>[マイニング モデル予測] タブ  
  **[マイニング モデル予測]** タブには予測クエリ ビルダーがあり、これを使用してデータ マイニング拡張機能 (DMX) の予測クエリを作成できます。 このタブには、マイニング モデルと入力テーブルの指定、入力テーブル内の列へのマイニング モデル内の列のマッピング、クエリへの機能の追加、および各列の条件の指定を行うためのツールがあります。  
@@ -75,9 +75,9 @@ ms.locfileid: "34014359"
   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   
- [データ マイニング クエリ タスクと操作方法](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
+ [データ マイニングのクエリ タスクと操作方法](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

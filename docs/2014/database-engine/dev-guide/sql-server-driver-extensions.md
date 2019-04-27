@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780843"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server ドライバーの拡張機能
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、ODBC アプリケーションから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能にアクセスできるようにするための、ドライバー固有の関数を実装しています。  
@@ -28,7 +28,7 @@ ms.locfileid: "60155841"
   
 -   [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;リファレンス](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
   

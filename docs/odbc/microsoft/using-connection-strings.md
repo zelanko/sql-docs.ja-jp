@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77bc54f857e04f31ccb982ca40b3ed6334664870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633207"
 ---
 # <a name="using-connection-strings"></a>接続文字列の使用
 Visual FoxPro データ ソースに接続する接続文字列を使用することができます。  
@@ -31,6 +31,6 @@ Visual FoxPro データ ソースに接続する接続文字列を使用する�
 DSN=TasTrade;Exclusive=Yes  
 ```  
   
- 一連の属性のキーワードと値、接続文字列に含めることができます、[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)を参照してください。  
+ 一連の属性のキーワードと値、接続文字列に含めることができます、次を参照してください。 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)します。  
   
- 接続文字列の構文の詳細については、[SQLBrowseConnect](../../odbc/reference/syntax/sqlbrowseconnect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 接続文字列の構文の詳細については、次を参照してください。 [SQLBrowseConnect](../../odbc/reference/syntax/sqlbrowseconnect-function.md)で、 *ODBC プログラマ リファレンス*します。

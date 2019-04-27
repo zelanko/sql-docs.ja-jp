@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754311"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>データベース ミラーリングまたは AlwaysOn 可用性グループのログイン アカウントの設定 (SQL Server)
   2 つのサーバー インスタンスが互いにもう一方の [データベース ミラーリング エンドポイント](the-database-mirroring-endpoint-sql-server.md) であるポイントに接続するには、各インスタンスのログイン アカウントがもう一方のインスタンスにアクセスできる必要があります。 また、各ログイン アカウントには、他方のインスタンスのデータベース ミラーリング エンドポイントへの接続権限も必要です。  
@@ -60,7 +60,7 @@ ms.locfileid: "48178332"
   
 -   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [AlwaysOn 可用性グループの構成のトラブルシューティングを行う&#40;SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

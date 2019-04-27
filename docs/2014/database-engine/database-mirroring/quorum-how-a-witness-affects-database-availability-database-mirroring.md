@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754413"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム:ミラーリング監視サーバーがデータベースの可用性 (データベース ミラーリング) に与える影響
   データベース ミラーリング セッションにミラーリング監視サーバーが設定されている場合は必ず、 *クォーラム* が必要になります。 クォーラムとは、データベース ミラーリング セッションで複数のサーバー インスタンスが相互接続されているときに存在するリレーションシップです。 通常、クォーラムには 3 つの相互接続されたサーバー インスタンスが関係します。 ミラーリング監視サーバーが設定されている場合、データベースを使用可能にするために、クォーラムが必要になります。 クォーラムは、自動フェールオーバーを伴う高い安全性モードのために設計されています。クォーラムを使用することで、データベースを所有するパートナーが一度に 1 つのみになるように制限できます。  
@@ -101,7 +101,7 @@ ms.locfileid: "52525031"
   
  シナリオ 2 では、ミラーリング監視サーバーがクォーラムを失いますが、 **Partner_A** と **Partner_B**のパートナーが互いにクォーラムを保持し、データベースをオンライン状態に保ちます。 次に、両パートナーもクォーラムを失い、データベースがオフラインになります。 その後、プリンシパル サーバーである **Partner_A**がミラーリング監視サーバーに再接続し、クォーラムを取り戻します。 ミラーリング監視サーバーは、 **Partner_A** がまだプリンシパル ロールを保持していることを確認し、 **Partner_A** がデータベースをオンラインに戻します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングの動作モード](database-mirroring-operating-modes.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング監視サーバー](database-mirroring-witness.md)   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770998"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
@@ -98,7 +98,7 @@ ms.locfileid: "58384933"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [OLE DB カスタム プロパティ](ole-db-custom-properties.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "58384933"
 ## <a name="related-content"></a>関連コンテンツ  
  social.technet.microsoft.com の Wiki の記事「 [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670)(SSIS から Oracle への接続)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB 変換先](ole-db-destination.md)   
  [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
  [データ フロー](data-flow.md)  

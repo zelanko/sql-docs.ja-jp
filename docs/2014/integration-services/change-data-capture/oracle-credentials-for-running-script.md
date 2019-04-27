@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771113"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
   Oracle CDC デザイナー コンソールから Oracle の補足ログ スクリプトを実行するために、スクリプトを実行する Oracle ユーザーの資格情報の入力が求められます。 このスクリプトを実行するには、キャプチャするすべてのテーブルに対する ALTER TABLE 権限と、DBA_LOG_GROUPS ビューに対する SELECT 権限が Oracle ユーザーに必要です。  
@@ -29,9 +29,9 @@ ms.locfileid: "58388824"
   
 -   **[Windows 認証]**:現在の Windows ドメイン資格情報を使用する場合に選択します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。  
   
--   **[Oracle 認証]**:このオプションを選択する場合は入力、**ユーザー名**と**パスワード**ソース Oracle データベースに接続しているユーザー。  
+-   **[Oracle 認証]**:このオプションを選択する場合、接続先の Source Oracle データベースのユーザーの **[ユーザー名]** と **[パスワード]** を入力する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC インスタンスを管理する方法](manage-a-cdc-instance.md)   
  [補足ログ スクリプトの確認および生成](review-and-generate-supplemental-logging-scripts.md)  
   

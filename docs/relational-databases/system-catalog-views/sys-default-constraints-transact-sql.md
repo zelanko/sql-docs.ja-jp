@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c52f9b211c6cb6b7df8404ba462f51e898841911
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744114"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "56240776"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を参照してください。|  
+|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
 |**parent_column_id**|**int**|内の列の ID **parent_object_id**この既定値が属しています。|  
 |**definition**|**nvarchar(max)**|この既定値を定義する SQL 式。|  
 |**is_system_named**|**bit**|1 = 名前はシステムによって生成されました。<br /><br /> 0 = ユーザー指定の名前。|  

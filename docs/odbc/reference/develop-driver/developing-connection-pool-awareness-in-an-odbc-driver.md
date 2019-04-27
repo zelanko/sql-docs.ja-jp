@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636232"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC ドライバー対応接続プールの開発
 このトピックでは、ドライバーが接続プールのサービスを提供する方法に関する情報を含む ODBC ドライバーの開発の詳細について説明します。  
@@ -132,7 +132,7 @@ ms.locfileid: "52417373"
   
 |プールされた接続と要求の間の接続属性の比較|なしの参加/参加解除|余分な参加する必要は/参加解除|  
 |---------------------------------------------------------------------------------------|-----------------------------------|----------------------------------------------|  
-|カタログ (SQL_ATTR_CURRENT_CATALOG) が異なる|60|50|  
+|Catalog (SQL_ATTR_CURRENT_CATALOG) is different|60|50|  
 |いくつかの接続属性は異なりますが、カタログは、同じ|90|70|  
 |完全に一致するすべての接続属性|100|80|  
   
@@ -146,6 +146,6 @@ ms.locfileid: "52417373"
   
  ![状態図](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC サービス プロバイダー インターフェイス (SPI) リファレンス](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

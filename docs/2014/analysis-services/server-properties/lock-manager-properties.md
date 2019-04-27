@@ -17,18 +17,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f773eb7fb512b9b1ae14b14a13717ecc8f42599f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747244"
 ---
 # <a name="lock-manager-properties"></a>ロック マネージャーのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すロック マネージャー サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元サーバー モードおよびテーブル サーバー モード  
+ **適用対象:** 多次元および表形式サーバー モード  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  `DefaultLockTimeoutMS`  
  内部ロック要求の既定のロック タイムアウトをミリ秒単位で定義する、符号付き 32 ビット整数のプロパティです。  
   

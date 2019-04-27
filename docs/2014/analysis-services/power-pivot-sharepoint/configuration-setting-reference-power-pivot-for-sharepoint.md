@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743368"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>構成設定のリファレンス (PowerPivot for SharePoint)
   ここでは、SharePoint ファームの PowerPivot サービス アプリケーションで使用される構成設定に関するリファレンス ドキュメントを提供します。 PowerShell スクリプトを使用してサーバーを構成している場合や、特定の設定に関する情報を必要としている場合は、このトピックの詳細な説明を参照してください。  
@@ -37,7 +37,7 @@ ms.locfileid: "48147522"
   
  [使用状況データ収集](#UsageData)  
   
- PowerPivot サービス アプリケーションを作成する方法については、[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](create-and-configure-power-pivot-service-application-in-ca.md)を参照してください。  
+ PowerPivot サービス アプリケーションを作成する方法については、次を参照してください。[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](create-and-configure-power-pivot-service-application-in-ca.md)します。  
   
 ##  <a name="LoadingData"></a> データ読み込みのタイムアウト  
  PowerPivot データは、ファームの Analysis Services サーバー インスタンスによって取得され、読み込まれます。 いつどのようにデータに最後にアクセスしたかに応じて、コンテンツ ライブラリか、ローカル ファイル キャッシュから、データが読み込まれます。 データは、クエリ要求または処理要求を受け取るたびにメモリに読み込まれます。 サーバー全体の可用性を最大にするために、割り当てられた時間内にデータの読み込み要求を完了できない場合はその要求を停止するようにサーバーに指示するタイムアウト値を設定できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "48147522"
 |管理接続プールの最大サイズ|200|-1、0、または 1 ～ 10000<br /><br /> -1 を指定した場合、アイドル状態の接続数に制限はありません。|Analysis Services サーバー インスタンスへの PowerPivot サービス アプリケーション接続に対して作成されたすべての管理接続プールにおけるアイドル状態のサーバー接続の最大数。 サーバー接続は、データベースを読み込む場合や SharePoint データベースに変更を保存する場合の要求に使用されます。|  
   
 ##  <a name="AllocationScheme"></a> 負荷分散  
- PowerPivot サービスが実行する機能の 1 つは、使用可能な PowerPivot サービス インスタンスのうち、どこに Analysis Services データを読み込むかを決定することです。 `AllocationMethod`設定を対象となるサービス インスタンスが選択されている条件を指定します。  
+ PowerPivot サービスが実行する機能の 1 つは、使用可能な PowerPivot サービス インスタンスのうち、どこに Analysis Services データを読み込むかを決定することです。 `AllocationMethod` の設定は、どのサービス インスタンスが選択されるかに対する条件を指定します。  
   
 |名前|既定|有効な値|説明|  
 |----------|-------------|------------------|-----------------|  
@@ -77,9 +77,9 @@ ms.locfileid: "48147522"
 |----------|-------------|------------------|-----------------|  
 |[開始時刻]|午前 04 時 00 分|有効な範囲は、1 ～ 12 時の範囲の有効な整数です。<br /><br /> 型は Time です。|営業時間の範囲の下限を設定します。|  
 |[終了時刻]|午後 08 時 00 分|有効な範囲は、1 ～ 12 時の範囲の有効な整数です。<br /><br /> 型は Time です。|営業時間の範囲の上限を設定します。|  
-|PowerPivot 自動データ更新アカウント|なし|対象アプリケーション ID|このアカウントは、スケジュールの所有者に代わってデータ更新ジョブを実行するために使用します。<br /><br /> 自動データ更新アカウントをサービス アプリケーションの構成ページで参照するには、あらかじめ定義しておく必要があります。 詳細については、[PowerPivot 自動データ更新アカウントを構成する&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)を参照してください。|  
-|ユーザーによるカスタムの Windows 資格情報の入力を許可する|有効|ブール値|スケジュールの所有者が Windows ユーザー アカウントとパスワードを指定してデータ更新ジョブを実行できるようにするオプションを定期データ更新の構成ページに表示するかどうかを指定します。<br /><br /> このオプションを使用するには、Secure Store Service を有効にする必要があります。 詳細については、[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)を参照してください。|  
-|処理履歴の最大の長さ|365|1 ～ 5000 日|データ更新履歴を PowerPivot サービス アプリケーション データベースに保持しておく期間を指定します。 詳細については、[PowerPivot 使用状況データ収集](power-pivot-usage-data-collection.md)を参照してください。|  
+|PowerPivot 自動データ更新アカウント|なし|対象アプリケーション ID|このアカウントは、スケジュールの所有者に代わってデータ更新ジョブを実行するために使用します。<br /><br /> 自動データ更新アカウントをサービス アプリケーションの構成ページで参照するには、あらかじめ定義しておく必要があります。 詳細については、次を参照してください。 [PowerPivot 自動データ更新アカウントを構成する&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)します。|  
+|ユーザーによるカスタムの Windows 資格情報の入力を許可する|有効|ブール値|スケジュールの所有者が Windows ユーザー アカウントとパスワードを指定してデータ更新ジョブを実行できるようにするオプションを定期データ更新の構成ページに表示するかどうかを指定します。<br /><br /> このオプションを使用するには、Secure Store Service を有効にする必要があります。 詳細については、「[PowerPivot データ更新用の保存された資格情報の構成 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)」を参照してください。|  
+|処理履歴の最大の長さ|365|1 ～ 5000 日|データ更新履歴を PowerPivot サービス アプリケーション データベースに保持しておく期間を指定します。 詳細については、「 [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)」を参照してください。|  
   
 ##  <a name="UsageData"></a> 使用状況データ収集  
  PowerPivot 管理ダッシュボードに表示される使用状況レポートは、PowerPivot 対応のブックの使用方法に関する重要な情報を提供できます。 次の構成設定は、使用状況レポートに示される PowerPivot サーバー イベントの使用状況データ収集の各側面を制御します。  

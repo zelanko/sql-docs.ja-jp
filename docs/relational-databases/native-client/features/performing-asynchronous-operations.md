@@ -21,11 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc08bc82fa4a02b2e78479d3075357b8816874b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744308"
 ---
 # <a name="performing-asynchronous-operations"></a>非同期操作の実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47691767"
   
  その結果、**QueryInterface** を使用して複数の結果のインターフェイスをクエリすることで、**IDBAsynchStatus** および **ISSAsynchStatus** インターフェイスを取得できるようになります。  
   
- コマンドの実行が完了すると、**IMultipleResults** を通常どおり使用できます。ただし、非同期処理の場合は 1 つだけ例外があり、DB_S_ASYNCHRONOUS が返される可能性があります。この場合、**IDBAsynchStatus** または **ISSAsynchStatus** を使用して、操作が完了しているかどうかを確認できます。  
+ コマンドの実行が完了時に**IMultipleResults**同期操作のケースから 1 つの例外は、通常どおり使用できます。DB_S_ASYNCHRONOUS が返される、後者**IDBAsynchStatus**または**ISSAsynchStatus**操作が完了したかを判断するために使用できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、アプリケーションが非ブロッキング メソッドを呼び出し、いくつか他の処理を実行し、制御を戻して結果を処理します。 **ISSAsynchStatus::WaitForAsynchCompletion** は、非同期実行操作が完了するか、*dwMilisecTimeOut* により指定された時間が経過するまで、内部イベント オブジェクト上で待機します。  
@@ -188,7 +188,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [行セットのプロパティと動作](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  

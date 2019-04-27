@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 724ac86a4566bac4647e8e7358608c0f5e4ccd85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650713"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>[属性の特性] タブ (マイニング モデル ビューアー)
   Naïve Bayes モデルの結果と入力属性との関係を調べるには、**[属性の特性]** ペインを使用します。 対象となる属性の値を選択した後、結果に対する影響が最も大きい入力属性の一覧を確認できます。  
   
- **詳細:** [Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **詳細情報。**[Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -44,15 +44,15 @@ ms.locfileid: "48195612"
  **特性の\<予測可能な状態 >**  
  グラフには、入力属性の状態が、選択した予測可能な属性の状態とどのように関係するかを記述する次の列が含まれます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**変数**|マイニング モデルの入力属性を一覧表示します。|  
 |**値**|**[変数]** の入力属性の状態を一覧表示します。|  
 |**確率**|バーは、その行の属性と値が、予測可能な属性の選択した状態に関連付けられている確率を表します。 パーセントで表される確率を表示するには、バーの上にマウス ポインターを置きます。|  
   
-## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

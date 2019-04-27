@@ -1,5 +1,5 @@
 ---
-title: キューブの書き戻し (MDX) を使用して |Microsoft ドキュメント
+title: キューブの書き戻し (MDX) を使用して |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740125"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX データ変更のキューブの書き戻しの使用
+# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX データの変更 - キューブの書き戻しの使用
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  キューブを更新するには、[UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) ステートメントを使用します。 このステートメントを使用すると、特定の値で組を更新できます。 UPDATE CUBE ステートメントを使って効果的にキューブを更新するには、ステートメントの構文、発生し得るエラー条件、および更新操作がキューブに与える影響を理解しておく必要があります。  
+  キューブを更新するには、 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) ステートメントを使用します。 このステートメントを使用すると、特定の値で組を更新できます。 UPDATE CUBE ステートメントを使って効果的にキューブを更新するには、ステートメントの構文、発生し得るエラー条件、および更新操作がキューブに与える影響を理解しておく必要があります。  
   
 ## <a name="update-cube-statement-syntax"></a>UPDATE CUBE ステートメントの構文  
  UPDATE CUBE ステートメントの構文は、以下のとおりです。  
@@ -110,7 +110,7 @@ USE_EQUAL_ALLOCATION
   
 -   書き戻しに含まれるディメンションの粒度の変更。  
   
-## <a name="see-also"></a>参照  
- [データ & #40; を変更します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+## <a name="see-also"></a>関連項目  
+ [データの変更 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

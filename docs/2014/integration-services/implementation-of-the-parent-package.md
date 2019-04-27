@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06adb2034134b7cc49a8313fb501edc845244922
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768151"
 ---
 # <a name="implementation-of-the-parent-package"></a>親パッケージの実装
   さまざまなサーバー間で SSIS パッケージの負荷を分散する場合、子パッケージの作成と配置を行い、その子パッケージを実行するためのリモート SQL Server エージェント ジョブを作成したら、次のステップは親パッケージを作成することです。 親パッケージには、SQL Server エージェント ジョブの実行タスクが多数含まれます。各タスクは、子パッケージの 1 つを実行する個別の SQL Server エージェント ジョブを呼び出します。 親パッケージ内にある SQL Server エージェント ジョブの実行タスクは、各種の SQL Server エージェント ジョブを次々に実行します。 親パッケージ内の各タスクには、リモート サーバーへの接続方法やそのサーバーで実行するジョブなどの情報が含まれています。 詳しくは、「 [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md)」をご覧ください。  

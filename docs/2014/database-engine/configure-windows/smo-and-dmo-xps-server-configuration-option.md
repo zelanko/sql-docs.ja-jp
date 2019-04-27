@@ -1,8 +1,9 @@
 ---
 title: SMO and DMO XPs サーバー構成オプション | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/02/2017
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
@@ -11,13 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d55bd667909721a68d51bcd1db7128b809118843
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755279"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs サーバー構成オプション
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
   このサーバーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の拡張ストアド プロシージャを使用するには、SMO and DMO XPs オプションを使用します。  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]の DMO は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で削除されました。  
@@ -45,7 +48,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

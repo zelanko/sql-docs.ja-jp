@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768308"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ノードを使用すると、ソース ファイルの内容を表形式で表示できます。  
@@ -37,13 +37,13 @@ ms.locfileid: "58377150"
  **[スキップするデータ行数]**  
  フラット ファイルの冒頭でスキップする行数を指定します。  
   
- **[更新]**  
+ **更新**  
  **[最新の情報に更新]** をクリックすると、スキップする行数を変更した結果が表示されます。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
   
  **[プレビュー]**  
  フラット ファイル内のサンプル データを、選択したオプションに基づいて列と行に分割して表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作 | Microsoft Docs'
+title: 'レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753019"
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、カスタム テンプレートの作成およびソリューションとスクリプト プロジェクトの作成を実行できます。  

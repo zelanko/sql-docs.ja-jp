@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775224"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>サポートされるバージョンとエディションのアップグレード
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からアップグレードできます。 このトピックでは、これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンからのサポートされているアップグレード パスと、サポートされている [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]へのエディションのアップグレードを示します。  
@@ -43,7 +43,7 @@ ms.locfileid: "51018587"
   
 -   クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
   
--   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした後、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップを使用して機能を追加できます。 詳細については、[、インスタンスの SQL Server 2014 への機能の追加&#40;セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)を参照してください。  
+-   既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのアップグレード中は、新しい機能を追加できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした後、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップを使用して機能を追加できます。 詳細については、次を参照してください。 [、インスタンスの SQL Server 2014 への機能の追加&#40;セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)します。  
   
 -   フェールオーバー クラスターは、WOW モードでサポートされていません。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "51018587"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 ビット エディションは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 ビット サーバーにのみアップグレードできます。  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Edition から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードする場合は、"Enterprise Edition: コアベースのライセンス" または "Enterprise Edition" を選択してください。 これらの Enterprise Edition は、ライセンス モードとサポートされるコアの最大数のみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
+>  アップグレードすると[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の以前のバージョンから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition、Enterprise Edition を選択します。コア ベース ライセンスと Enterprise Edition。 これらの Enterprise Edition は、ライセンス モードとサポートされるコアの最大数のみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、次のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのアップグレードがサポートされます。  
   

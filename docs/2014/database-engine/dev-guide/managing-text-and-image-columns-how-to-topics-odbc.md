@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780987"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>text 列と image 列を管理する方法に関するトピック (ODBC)
   Microsoft® SQL Server™ ODBC ドライバーでは、text パラメーターと image パラメーターの使用、および結果セットの text 列、ntext 列、および image 列からのデータの取得がサポートされています。  
@@ -26,7 +26,7 @@ ms.locfileid: "60158208"
   
 -   [実行時データ列を使用して&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の使用法に関するトピック](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

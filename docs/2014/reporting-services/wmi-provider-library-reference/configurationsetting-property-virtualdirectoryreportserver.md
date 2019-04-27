@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb25607dc929e8309ba908f02fd973395add1b63
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646120"
 ---
 # <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportServer プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー アプリケーションの仮想ディレクトリを返します。 読み取り専用。  
@@ -42,7 +42,7 @@ public string VirtualDirectoryReportServer;
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 2df4fa2fd9ef52fe5edbca9440f73f351553f1ed
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642352"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server で R スクリプトのエラー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "58511529"
 
 1. スタート パッドが実行されているかどうかを確認します。
 
-2. メッセージは、入力データと出力データに互換性がないかサポートされていないデータ型の列が含まれているかどうかを確認します。 たとえば、SQL database でのクエリは Guid または RowGUIDs、どちらもサポートされていないを返す多くの場合。 詳細については、[R ライブラリとデータ型](r/r-libraries-and-data-types.md)を参照してください。
+2. メッセージは、入力データと出力データに互換性がないかサポートされていないデータ型の列が含まれているかどうかを確認します。 たとえば、SQL database でのクエリは Guid または RowGUIDs、どちらもサポートされていないを返す多くの場合。 詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
 
 3. SQL Server のコンピューティング コンテキストのすべてのパラメーターがサポートされているかどうかを判断する個々 の R 関数のヘルプ ページを確認します。 ScaleR のヘルプについては、R のインライン ヘルプのコマンドを使用して、または参照してください[パッケージ参照](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)します。
 
 R ランタイムが機能している、スクリプトがエラーを返す場合は、R Tools for Visual Studio など、専用の R 開発環境でスクリプトのデバッグを試してみることをお勧めします。
 
-私たちはまた、確認し、R とデータベース エンジンの間でデータを移動するときに生じる可能性のあるデータ型に関する問題を修正するスクリプトを少し修正することお勧めします。 詳細については、[R ライブラリとデータ型](r/r-libraries-and-data-types.md)を参照してください。
+私たちはまた、確認し、R とデータベース エンジンの間でデータを移動するときに生じる可能性のあるデータ型に関する問題を修正するスクリプトを少し修正することお勧めします。 詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
 
 さらに、ストアド プロシージャとしてより簡単に使用される形式で R スクリプトをバンドルするのに sqlrutils パッケージを使用することができます。 詳細については、以下をご覧ください。
 * [sqlrutils パッケージ](r/ref-r-sqlrutils.md)
@@ -46,7 +46,7 @@ R ランタイムが機能している、スクリプトがエラーを返す場
 
 R スクリプトは、いくつかの理由、SQL Server のコンテキストで異なる値を返すことができます。
 
-- 暗黙的な型変換は SQL Server と R. 間のデータが渡されるときに、自動的に一部のデータ型の実行します。詳細については、[R ライブラリとデータ型](r/r-libraries-and-data-types.md)を参照してください。
+- 暗黙的な型変換は SQL Server と R. 間のデータが渡されるときに、自動的に一部のデータ型の実行します。詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
 
 - ビットが要因であるかどうかを確認します。 たとえば、32 ビットおよび 64 ビットの浮動小数点ポイント ライブラリの算術演算の結果の違いは多くの場合。
 

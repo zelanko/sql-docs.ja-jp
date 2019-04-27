@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c7be80b40c80edf3811f996e8037cbdbc9fa4d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743410"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>BI セマンティック モデル接続のコンテンツ タイプのライブラリへの追加 (PowerPivot for SharePoint)
   BI セマンティック モデル接続は、SharePoint で作成され、ネットワーク サーバー上の PowerPivot ブックまたは Analysis Services テーブル モデル データベース内の Business Intelligence Semantic Model データへのリダイレクトを可能にします。 SharePoint で BI セマンティック モデル接続を作成する前に、.bism ファイルの作成を許可するようにドキュメント ライブラリを拡張する必要があります。 この手順はライブラリごとに 1 回だけ実行する必要があり、.bism ファイルを作成するすべてのライブラリに対してこの手順を繰り返す必要があります。 ベスト プラクティスとして、権限を 1 か所で管理できるように、.bism ファイルを格納する単一のライブラリを作成することをお勧めします。  
@@ -27,7 +27,7 @@ ms.locfileid: "48052972"
 ##  <a name="bkmk_addtype"></a> ドキュメント ライブラリへのコンテンツ タイプの追加  
  コンテンツ タイプを追加および構成するには、管理リスト権限以上の権限が必要です。 この権限は、デザイン権限レベル以上の権限に組み込まれています。  
   
- ドキュメント ライブラリがあるサイトでは、PowerPivot for SharePoint の機能のアクティブ化が必要です。 詳細については、[PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)を参照してください。  
+ ドキュメント ライブラリがあるサイトでは、PowerPivot for SharePoint の機能のアクティブ化が必要です。 詳細については、次を参照してください。 [PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)します。  
   
 1.  "BI セマンティック モデル接続" コンテンツ タイプを有効にする対象のドキュメント ライブラリを開きます。  
   

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743168"
 ---
 # <a name="control-transaction-durability"></a>トランザクションの持続性の制御
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] におけるトランザクションのコミットには、完全持続性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値、または遅延持続性 (低速コミットとも呼ばれます) が適用されます。  
@@ -203,7 +203,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="sql-server-shutdown-and-restart"></a>SQL Server のシャット ダウンと再起動  
  遅延持続性の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の予期しないシャットダウンと予期されたシャットダウン/再起動に違いはありません。 重大なイベントと同様に、データ損失に対する計画を立てる必要があります。 計画されたシャットダウン/再起動では、ディスクに書き込まれていない一部のトランザクションが最初にディスクに保存される場合がありますが、それを予期することはできません。 計画されているかどうかに関係なく、シャットダウン/再起動によって重大なイベントと同様にデータが失われるものとして計画してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション分離レベル](../../database-engine/transaction-isolation-levels.md)   
  [メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン](../in-memory-oltp/memory-optimized-tables.md)  
   

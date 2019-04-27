@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643317"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>主要な影響元の分析 (Excel 用のテーブル分析ツール)
   ![リボンの [分析の主要な影響元ボタン](media/tat-aki.gif "リボンの分析の主要な影響元] ボタン")  
@@ -109,7 +109,7 @@ ms.locfileid: "52415559"
 ### <a name="related-tools"></a>関連ツール  
  **データ マイニング**リボンには、データ マイニング モデルをカスタマイズする機能より高度なツールが用意されています  
   
- 使用してモデルを保存する場合、**分析の主要な影響元**ツール、モデルを参照し、関係を詳しく調べたり、データ マイニング クライアントを使用することができます。 詳しくは、[Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)を参照してください。 Microsoft Office Visio を使用し、関係をクラスターまたは依存関係ネットワークとして示すグラフおよびダイアグラムを作成することもできます。 詳細については、[Visio データ マイニング ダイアグラムをトラブルシューティング&#40;SQL Server データ マイニング アドイン&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)を参照してください。  
+ 使用してモデルを保存する場合、**分析の主要な影響元**ツール、モデルを参照し、関係を詳しく調べたり、データ マイニング クライアントを使用することができます。 詳しくは、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)します。 Microsoft Office Visio を使用し、関係をクラスターまたは依存関係ネットワークとして示すグラフおよびダイアグラムを作成することもできます。 詳細については、次を参照してください。 [Visio データ マイニング ダイアグラムをトラブルシューティング&#40;SQL Server データ マイニング アドイン&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)します。  
   
 > [!NOTE]  
 >  テーブル分析ツールを使用しているときに作成されたモデルは、ワークシートを閉じたとき、または、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーとの接続を終了したときに削除されます。 したがって、それらのモデルを参照できるのは、接続が開いている間だけです。 接続を閉じたりワークシートを閉じたりすると、モデルを Visio で表示することもできなくなります。  

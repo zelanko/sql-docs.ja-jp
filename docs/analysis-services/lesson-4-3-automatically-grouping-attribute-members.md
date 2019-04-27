@@ -1,5 +1,5 @@
 ---
-title: 属性メンバーを自動的にグループ化 |Microsoft ドキュメント
+title: 属性メンバーを自動的にグループ化 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b36977f4f55049c5e2c34f2f43f405194bac790e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737722"
 ---
 # <a name="lesson-4-3---automatically-grouping-attribute-members"></a>レッスン 4-3 - 属性メンバーの自動的にグループ化
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "34017719"
 **DiscretizationMethod** プロパティは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] にグループを作成させるかどうか、どのような種類のグループ化を実行するかを指定します。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] はグループ化を実行しません。 自動グループ化を有効にすると、属性の構造に基づいて、最適なグループ化の方法が [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって自動的に判断されます。また、次の一覧からいずれかのグループ化アルゴリズムを選択してグループ化の方法を指定することもできます。  
   
 **EqualAreas**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ディメンション メンバーの合計の母集団はグループ間で均等に分散されるように、グループの範囲を作成します。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ディメンション メンバーの母集団全体がすべてのグループに均等に分散するように、グループ範囲が作成されます。  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ガウス分布と K-means クラスタ リング手法を使用して、入力値を 1 次元クラスタ リングを実行してグループを作成します。 このオプションは、数値列でのみ使用できます。  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] K-Means クラスタリング法とガウス分布を使用し、入力値に対して 1 次元クラスタリングが実行されます。 このオプションは、数値列でのみ使用できます。  
   
-グループ化方法を指定したら、 **DiscretizationBucketCount** プロパティでグループの数を指定します。 詳細については、「[属性メンバーのグループ化 (分離)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
+グループ化方法を指定したら、 **DiscretizationBucketCount** プロパティでグループの数を指定します。 詳細については、「 [属性メンバーのグループ化 (分離)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
 このトピックの実習では、 **Customer** ディメンションの年収値、 **Employees** ディメンションの病気休暇時間、および **Employees** ディメンションの休暇時間でグループ化を行います。 その後、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを処理して表示し、メンバー グループの効果を確認します。 最後に、メンバー グループのプロパティを変更し、グループの種類を変更した場合の影響を確認します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34017719"
   
     次の図は、変更後の **Yearly Income**プロパティを示しています。  
   
-    ![変更されたプロパティの Yearly Income の](../analysis-services/media/l4-discretizationmethod-1.gif "Yearly Income のプロパティを変更しました。")  
+    ![変更されたプロパティの Yearly income](../analysis-services/media/l4-discretizationmethod-1.gif "Yearly Income のプロパティを変更")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Employee ディメンションにおける属性階層メンバーのグループ化  
   
@@ -124,10 +124,10 @@ ms.locfileid: "34017719"
     **Vacation Hours** 属性メンバーのグループが 3 つあります。各メンバーに製品の売上の値が含まれています (他の 7 つのグループには、売上データのあるメンバーが存在しません)。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[非表示にして、属性階層を無効化](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+[属性階層の非表示化と無効化](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>参照  
-[グループ メンバーの属性 (&) #40";"分離"&"#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+## <a name="see-also"></a>関連項目  
+[属性メンバーのグループ化 (分離)](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

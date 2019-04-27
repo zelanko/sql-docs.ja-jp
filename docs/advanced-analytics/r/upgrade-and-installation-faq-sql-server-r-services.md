@@ -9,11 +9,11 @@ ms.author: davidph
 author: dphansen
 manager: cgronlun
 ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642320"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning の R Server のアップグレードとインストールに関する FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "58510419"
 
 - 以前のバージョンの SQL Server 2016 R Services では、8dot3 表記が作業ディレクトリを含むドライブに必要でした。 リリース前のバージョンをインストールした場合は、SQL Server 2016 Service Pack 1 にアップグレードするとこの問題を解決する必要があります。 SP1 以降後は、この要件はリリースに適用されません。
 
-- 現時点では、インストールすることはできません[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]フェイル オーバー クラスター。 ただし、SQL Server 2019 プレビューは、テスト環境では、この機能を評価したい場合、フェールオーバーのサポートを提供しています。 詳細については、[新](../what-s-new-in-sql-server-machine-learning-services.md)を参照してください。
+- 現時点では、インストールすることはできません[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]フェイル オーバー クラスター。 ただし、SQL Server 2019 プレビューは、テスト環境では、この機能を評価したい場合、フェールオーバーのサポートを提供しています。 詳細については、次を参照してください。[新](../what-s-new-in-sql-server-machine-learning-services.md)します。
 
 - Azure VM では、追加の構成が必要にあります。 たとえば、リモート アクセスをサポートするファイアウォール例外を作成する必要があります。
 

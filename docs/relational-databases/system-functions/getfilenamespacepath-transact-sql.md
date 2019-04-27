@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9c94fc80bd516c0be5b414aac98e0e4435ec8b53
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628084"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,18 @@ ms.locfileid: "52396185"
  *column-name*  
  列名、varbinary (max) の**file_stream** FileTable 内の列。  
   
- *列名*値は有効な列名である必要があります。 別のデータ型の列から変換またはキャストされた値や、式は指定できません。  
+ *列名*値は有効な列名である必要があります。 値が別のデータ型の列からのキャストまたは変換や、式ができません。  
   
  *is_full_path*  
  相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*値は次のいずれかであることができます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|データベース レベルのディレクトリ内の相対パスを返します。<br /><br /> これは既定値です。|  
-|**1**|`\\computer_name` で始まる完全な UNC パスを返します。|  
+|**1**|以降では、完全な UNC パスを返します、`\\computer_name`します。|  
   
  *@option*  
- パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option* 次の値のいずれかを設定できます。  
+ パスのサーバー コンポーネントの書式設定を定義する整数式。 *@option* 次の値のいずれかを設定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "52396185"
 ## <a name="return-type"></a>戻り値の型  
  **nvarchar(max)**  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがフェールオーバー クラスターにクラスター化されている場合、このパスの一部として返されるコンピューター名は、クラスター化インスタンスの仮想ホスト名になります。  
+ 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このパスの一部として返されるコンピューター名はクラスター化されたインスタンスの仮想ホスト名、インスタンスが、フェールオーバー クラスターでクラスター化します。  
   
  データベースが Always On 可用性グループに属している場合、 **FileTableRootPath**関数は、コンピューター名の代わりに、仮想ネットワーク名 (VNN) を返します。  
   
@@ -102,7 +102,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

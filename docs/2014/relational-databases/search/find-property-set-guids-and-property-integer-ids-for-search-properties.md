@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631940"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
   このトピックでは、プロパティを検索プロパティ リストに追加してフルテキスト検索で検索できるようにするために事前に必要な値を取得する方法について説明します。 これらの値には、ドキュメント プロパティのプロパティ セット GUID およびプロパティ整数識別子が含まれます。  
@@ -43,7 +43,7 @@ ms.locfileid: "53372184"
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|特定のアイテムの作成者。|  
 |Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|アイテムに割り当てられる一連のキーワード (タグとも呼ばれます)。|  
 |型|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
-|タイトル|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
+|[タイトル]|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
   
  ファイル形式間で一貫性を保持するため、マイクロソフトでは、頻繁に使用される、優先度の高いドキュメントのプロパティのサブセットを、いくつかのドキュメントのカテゴリとして特定しています。 これらには、通信、連絡先、ドキュメント、音楽ファイル、画像、およびビデオがあります。 各カテゴリの上位のプロパティの詳細については、Windows サーチに関するドキュメントの「 [カスタム ファイル形式のシステム定義プロパティ](https://go.microsoft.com/fwlink/?LinkId=144336) 」を参照してください。  
   
@@ -101,7 +101,7 @@ GO
   
  検索プロパティ リストを作成し、フルテキスト インデックスに関連付ける方法については、「 [検索プロパティ リストを使用したドキュメント プロパティの検索](search-document-properties-with-search-property-lists.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [検索プロパティ リストを使用したドキュメント プロパティの検索](search-document-properties-with-search-property-lists.md)   
  [検索用フィルターの構成と管理](configure-and-manage-filters-for-search.md)  
   

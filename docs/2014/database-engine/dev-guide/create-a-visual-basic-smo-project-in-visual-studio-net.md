@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753347"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Visual Studio .NET での Visual Basic SMO プロジェクトの作成
   このセクションでは、簡単な SMO コンソール アプリケーションを構築する方法について説明します。  

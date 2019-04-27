@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8a9ae08fe6e13238e86b38e19c6df959b4840e3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636751"
 ---
 # <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: レベル 2  
+ ODBC API 準拠:レベル 2  
   
  SQL ステートメントのパラメーターの数を返します。 パラメーターの数が疑問符 (?) に渡された SQL ステートメント内の数と等しくなります[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)します。  
   
- SQL 文法の詳細については、[ODBC SQL 文法のサポートされている](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)を参照してください。 この関数の詳細については、[SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ SQL 文法の詳細については、次を参照してください。 [ODBC SQL 文法のサポートされている](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)します。 この関数の詳細については、次を参照してください。 [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md)で、 *ODBC プログラマ リファレンス*します。

@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a73e1cc51cade93183af1fe4e98e59c3c65d474
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738253"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -722,7 +722,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BLOB と OLE オブジェクト](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [大きな値の型の使用](../../relational-databases/native-client/features/using-large-value-types.md)  
   

@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774284"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>可用性グループのデータベースのためのログインとジョブの管理 (SQL Server)
   AlwaysOn 可用性グループのすべてのプライマリ データベースとその対応するセカンダリ データベース上で、ユーザー ログインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブの同じセットを定期的に管理する必要があります。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのインスタンス上でログインとジョブを再作成する必要があります。  
@@ -65,7 +65,7 @@ ms.locfileid: "57579222"
   
 -   [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [包含データベース](../relational-databases/databases/contained-databases.md)   
  [ジョブの作成](../ssms/agent/create-jobs.md)  

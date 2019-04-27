@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42f35641d8a346b5f4574953e4c5786618407620
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647619"
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
   SQL Server Reporting Services (SSRS) のレポート サーバーの URL アクセスにより、URL 要求を使用してレポート サーバーにコマンドを送信できます。 たとえば、ネイティブ モードのレポート サーバーや SharePoint ライブラリのレポートの表示をカスタマイズすることができます。 特定のレポート パラメーター値のセットを使用してレポートを表示したり、レポートの関心のある特定ページを表示することがあります。 この情報を、事前に定義された URL アクセス パラメーターを使用して URL にカプセル化することができます。 表示形式またはレポート ビューアーのルック アンド フィールのパラメーターを埋め込むことで、レポート サーバーによるレポートの処理方法をさらにカスタマイズできます。 その後、この URL を電子メールまたは Web ページに直接貼り付けて、他のユーザーがブラウザーから同じ方法でレポートにアクセスできるようにすることができます。  

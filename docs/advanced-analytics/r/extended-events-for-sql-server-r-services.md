@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 96b791d98aa7fee588e4f72b76a733f48917f77a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642370"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-拡張イベントの使用の詳細については、[拡張のイベント ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)を参照してください。
+拡張イベントの使用の詳細については、次を参照してください。[拡張のイベント ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)します。
 
 > [!TIP]
 > SQL Server によって生成される拡張イベントの新しいお試しください[SSMS XEvent profiler](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler)します。 Management Studio のこの新機能では、拡張のイベントのライブ ビューアーを表示しと同様の Profiler トレースよりも SQL Server に煩雑です。

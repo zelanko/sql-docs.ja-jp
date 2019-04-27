@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b4d05dd66aa795579172aba5472a0f38c5f320bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647056"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>BackupEncryptionKey メソッド (WMI MSReportServer_ConfigurationSetting)
   指定されたレポート サーバー インスタンスの暗号化キーをバックアップします。 暗号化キーは、パスワードを使用して暗号化されて格納されます。  
@@ -65,7 +65,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746275"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>[名前付け規則の指定] (スキーマ生成ウィザード) (Analysis Services - 多次元データ)
   **[名前付け規則の指定]** ページを使用すると、スキーマ オブジェクトの作成時にスキーマ生成ウィザードが使用する名前付けの規則を定義できます。  
   
 ## <a name="options"></a>および  
- **オプション**  
+ **Option**  
  ウィザードが使用する名前付けの規則を指定します。 次の表では、指定できるオプションを説明します。  
   
 |オプション|説明|  
@@ -40,7 +40,7 @@ ms.locfileid: "48226252"
  **[値]**  
  スキーマの生成時に使用する、 **[オプション]** で指定されたオプションの値を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スキーマ生成ウィザードの F1 ヘルプ&#40;Analysis Services - 多次元データ&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   

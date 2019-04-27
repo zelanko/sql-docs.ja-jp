@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779216"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン
   メモリ最適化テーブルにアクセスするトランザクションに発生するエラー条件にはさまざまなものがあります。  
@@ -125,7 +125,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルに対するトランザクションの概要](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  

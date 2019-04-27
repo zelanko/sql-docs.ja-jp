@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632549"
 ---
 # <a name="unicode"></a>Unicode
 Unicode では、多くの言語での文字のエンコードを定義します。  
   
- Unicode 規格の詳細については、[、Unicode Consortium](https://www.unicode.org)を参照してください。  
+ Unicode 規格の詳細については、次を参照してください。 [、Unicode Consortium](https://www.unicode.org)します。  
   
  Unicode では、ユニバーサル文字セットを定義します。 Windows の ANSI コード ページは、通常 1 つの言語の文字を含む、文字セットを定義します。 異なるコード ページを使用するために必要なアプリケーションを記述するより難しい場合があります。  
   

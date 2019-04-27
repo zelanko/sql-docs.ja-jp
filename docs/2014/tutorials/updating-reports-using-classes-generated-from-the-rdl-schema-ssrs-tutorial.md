@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746116"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>RDL スキーマから生成されたクラスを使ったレポートの更新 (SSRS チュートリアル)
   このチュートリアルで、およびレポート定義ファイル (.rdl、.rdlc) を逆シリアル化するための XML スキーマ定義ツール (Xsd.exe) クラスを生成するを使用する方法を示しています、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] <xref:System.Xml.Serialization.XmlSerializer>クラス。  
@@ -53,10 +53,10 @@ ms.locfileid: "56014043"
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] のインスタンスにインストールされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サンプル データベース。  
   
--   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales 2012 を使用します。 サンプル レポートの詳細については、[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)を参照してください。  
+-   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales 2012 を使用します。 サンプル レポートの詳細については、次を参照してください。 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)します。  
   
 > [!NOTE]  
->  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、[SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)を参照してください。  
+>  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、次を参照してください。 [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)します。  
   
  **このチュートリアルの推定所要時間:** 30 分  
   

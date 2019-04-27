@@ -1,5 +1,5 @@
 ---
-title: 名前付き MDX (MDX) のセットを構築 |Microsoft ドキュメント
+title: 名前付き MDX (MDX) のセットの構成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b893dcd86ffcfa68c55057796c431e694903c46a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740062"
 ---
-# <a name="mdx-named-sets---building-named-sets"></a>MDX の名前付きセットの名前付きセットの作成
+# <a name="mdx-named-sets---building-named-sets"></a>MDX 名前付きセット - 名前付きセットの構築
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   セット式は、長く複雑な宣言になることがあり、そのような場合は読みにくく、理解するのが難しい式になります。 また、同じセット式を頻繁に使用する場合に、その同じセットを繰り返し定義しなければならないのは面倒です。 長く複雑な式や頻繁に使用する式の取り扱いを簡略化するために、多次元式 (MDX) では、そのような式を *名前付きセット*として定義できるようになっています。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "34021279"
   
      CREATE SET ステートメントを使用してセッションでの名前付きセットを作成する方法の詳細については、「[セッション スコープの名前付きセットの作成 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [SELECT ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-manipulation-select.md)   
- [SET ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-set.md)   
- [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>関連項目  
+ [SELECT ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [CREATE SET ステートメント (MDX)](../../../mdx/mdx-data-definition-create-set.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

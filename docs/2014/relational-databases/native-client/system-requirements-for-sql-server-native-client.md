@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637832"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client のシステム要件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ アクセス機能 (MARS など) を使用するには、次のソフトウェアがインストールされている必要があります。  
@@ -29,7 +29,7 @@ ms.locfileid: "53365124"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス (サーバー)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client には、Windows インストーラー 3.0 が必要です。 Windows インストーラー 3.0 は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに既にインストールされています。 他のすべてのプラットフォームには、明示的にインストールする必要があります。 詳細については、[Windows Installer 3.0 Redistributable](https://go.microsoft.com/fwlink/?LinkId=46459)を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client には、Windows インストーラー 3.0 が必要です。 Windows インストーラー 3.0 は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに既にインストールされています。 他のすべてのプラットフォームには、明示的にインストールする必要があります。 詳細については、次を参照してください。 [Windows Installer 3.0 Redistributable](https://go.microsoft.com/fwlink/?LinkId=46459)します。  
   
 > [!NOTE]  
 >  このソフトウェアは、必ず管理者特権でログオンしてからインストールしてください。  

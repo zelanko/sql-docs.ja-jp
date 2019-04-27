@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633372"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>サポートされていない Visual FoxPro コマンドと関数 (Visual FoxPro ODBC ドライバー)
 次の表には、FoxPro コマンドとは、Visual FoxPro ODBC ドライバーではサポートされていませんが、Microsoft® Visual FoxPro® でサポートされている関数が一覧表示します。  
@@ -33,9 +33,9 @@ ms.locfileid: "47802700"
   
 ||||  
 |-|-|-|  
-|# #UNDEF の DEFINE ...&GT;|#IF... #ENDIF プリプロセッサ ディレクティブ|#IFDEF &AMP;#124; #IFNDEF|  
-|#INCLUDE プリプロセッサ ディレクティブ|: スコープ解決演算子|! コマンド (実行を参照してください&#124;!。 コマンドを使用)|  
-|? &#124; ?? コマンド|??? コマンド|\ &#124; \\\ コマンド|  
+|# #UNDEF の DEFINE ...&GT;|#IF... #ENDIF プリプロセッサ ディレクティブ|#IFDEF &#124; #IFNDEF|  
+|#INCLUDE プリプロセッサ ディレクティブ|::スコープ解決演算子|! コマンド (実行を参照してください&#124;!。 コマンドを使用)|  
+|? &#124; ?? コマンド|??? コマンド|\ &#124; \\\ Command|  
 |@ ...ボックス コマンド|@ ...クラスのコマンド|@ ...クリア コマンド|  
 |@ ...編集 - ボックスのコマンドを編集|@ ...コマンドを入力します。|@ ...GET|  
 |@ ...メニュー コマンド|@ ...コマンド プロンプト|@ ...コマンドを言う|  
@@ -56,7 +56,7 @@ ms.locfileid: "47802700"
   
 ||||  
 |-|-|-|  
-|() 関数バー|BARCOUNT () 関数|BARPROMPT () 関数|  
+|() 関数バー|BARCOUNT () 関数|BARPROMPT( ) Function|  
 |_BEAUTIFY システム メモリ変数|システム メモリ変数のボックス (_b)|コマンドを参照します。|  
 |_BROWSER システム メモリ変数|アプリのコマンドをビルドします。|ビルドの EXE コマンド|  
 |ビルド プロジェクト コマンド|_BUILDER システム メモリ変数||  
@@ -71,7 +71,7 @@ ms.locfileid: "47802700"
 |CHDIR コマンド|CHRSAW () 関数|メモを閉じるコマンド|  
 |CNTBAR () 関数|CNTPAD () 関数|COL () 関数|  
 |コマンドをコンパイルします。|データベース コマンドをコンパイルします。|フォームのコマンドをコンパイルします。|  
-|COMPOBJ () 関数|コンテナー オブジェクト|コントロール オブジェクト|  
+|COMPOBJ( ) Function|コンテナー オブジェクト|コントロール オブジェクト|  
 |ファイルのコマンドをコピーします。|メモのコマンドをコピーします。|クラスのコマンドを作成します。|  
 |CLASSLIB コマンドを作成します。|色の SET コマンドを作成します。|コマンドを作成します。|  
 |接続コマンドを作成します。|データベース コマンドを作成します。|フォームのコマンドを作成します。|  
@@ -138,7 +138,7 @@ ms.locfileid: "47802700"
   
 ||||  
 |-|-|-|  
-|IMESTATUS () 関数|IMPORT コマンド|入力コマンド|  
+|IMESTATUS( ) Function|IMPORT コマンド|入力コマンド|  
 |コマンドのインデックス|リンクキー () 関数|ISCOLOR () 関数|  
 |コマンドを挿入します。|INSMODE () 関数||  
 |ISMOUSE () 関数|システム メモリ変数の (_i)||  
@@ -210,10 +210,10 @@ ms.locfileid: "47802700"
 |_PLOFFSET システム メモリ変数|_PPITCH システム メモリ変数|_PQUALITY システム メモリ変数|  
 |_PRETEXT システム メモリ変数|_PSCODE システム メモリ変数|_PSPACING システム メモリ変数|  
 |_PWAIT システム メモリ変数|PACK データベース コマンド|パッド () 関数|  
-|PCOL () 関数|PEMSTATUS () 関数|再生マクロ コマンド|  
+|PCOL () 関数|PEMSTATUS( ) Function|再生マクロ コマンド|  
 |ポップアップ キー コマンド|ポップアップ メニュー コマンド|POP ポップアップ コマンド|  
 |ポップアップ () 関数|プリントしています.ENDPRINTJOB コマンド|PRINTSTATUS () 関数|  
-|PRMBAR () 関数|PRMPAD () 関数|プロンプト () 関数|  
+|PRMBAR () 関数|PRMPAD () 関数|PROMPT( ) Function|  
 |PROW () 関数|PRTINFO () 関数|プッシュの主要なコマンド|  
 |メニュー コマンドをプッシュします。|プッシュ ポップアップ コマンド|PUTFILE () 関数|  
   
@@ -264,7 +264,7 @@ ms.locfileid: "47802700"
 |SET KEYCOMP コマンド|SET LOGERRORS コマンド|SET MACDESKTOP コマンド|  
 |SET MACHELP コマンド|SET MACKEY コマンド|SET 余白コマンド|  
 |コマンドのセットがマーク|コマンドにマークを設定します。|SET MEMOWIDTH コマンド|  
-|メッセージの SET コマンド|マウスの SET コマンド|SET 走行距離計コマンド|  
+|メッセージの SET コマンド|マウスの SET コマンド|SET ODOMETER Command|  
 |Oleobject クラスの SET コマンド|SET パレット コマンド|SET PDSETUP コマンド|  
 |ポイントの設定コマンド|プリンターの SET コマンド|SET READBORDER コマンド|  
 |REFRESH コマンドのセット|リソースの SET コマンド|安全性の SET コマンド|  

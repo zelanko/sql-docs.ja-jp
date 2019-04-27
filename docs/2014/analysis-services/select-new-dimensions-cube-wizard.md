@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac4ccf95fb193f029fadc8e7d937bae8b85ffaeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747174"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>[新しいディメンションの選択] (キューブ ウィザード)
   **[新しいディメンションの選択]** ページを使用すると、作成する新しいディメンションを選択できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "48134282"
   
  ディメンションの名前を変更するには、ディメンション名をクリックし、新しい名前を入力します。 テーブルの名前を変更することはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

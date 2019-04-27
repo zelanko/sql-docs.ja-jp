@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748304"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>[テーブルと他のテーブルとの置換] ダイアログ ボックス
   **の** [テーブルと他のテーブルとの置換] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、データ ソース ビュー内の既存のテーブルを、まだデータ ソース ビューに含まれていない、基になるデータ ソース内のテーブルで置き換えることができます。 **[テーブルと他のテーブルとの置換]** ダイアログ ボックスを表示するには、 **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインまたは **[テーブル]** ペインでテーブル名を右クリックし、 **[テーブルの置換]** の **[他のテーブルを使用]** をクリックします。  
@@ -32,14 +32,14 @@ ms.locfileid: "48173762"
  **グリッド**  
  データ ソース ビューにまだ含まれていない、選択されたデータ ソースで使用できるオブジェクトとその種類を表示します。  
   
- **Assert**  
+ **[フィルター]**  
  **[グリッド]** に表示されるオブジェクトを限定するために使用するフィルターを入力した後、ボタンをクリックすると、表示されるテーブルがフィルター選択されます。  
   
  **システム オブジェクトを表示します。**  
  選択されたデータ ソースのシステム オブジェクトが **[グリッド]** に表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [データ ソース ビュー デザイナー &#40;Analysis Services - 多次元データ&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

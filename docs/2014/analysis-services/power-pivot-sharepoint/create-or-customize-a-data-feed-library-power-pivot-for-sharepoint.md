@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3586379cbd22dee4e288a032a9dd850355b2b674
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749536"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>データ フィード ライブラリの作成またはカスタマイズ (PowerPivot for SharePoint)
   *データ フィード ライブラリ* は、特殊な用途の SharePoint ライブラリです。このライブラリでは、Atom データ サービス ドキュメント (.atomsvc) を登録して共有できます。 これらのドキュメントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックまたは Atom データ フィード形式をサポートするその他のクライアント アプリケーションに XML データ フィードを提供します。 データ フィード ライブラリは、以下を実行できる点で他の SharePoint ライブラリとは異なります。  
@@ -41,7 +41,7 @@ ms.locfileid: "52543551"
  [任意のライブラリへのデータ フィード コンテンツ タイプの追加](#addtolib)  
   
 ##  <a name="prereq"></a> 前提条件  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能の統合を、データ フィード ライブラリを作成するサイトに対してアクティブ化する必要があります。 データ フィード ライブラリ テンプレート タイプが使用できない場合、この前提条件を満たしていないことが考えられます。 詳細については、[PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)を参照してください。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能の統合を、データ フィード ライブラリを作成するサイトに対してアクティブ化する必要があります。 データ フィード ライブラリ テンプレート タイプが使用できない場合、この前提条件を満たしていないことが考えられます。 詳細については、次を参照してください。 [PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](activate-power-pivot-integration-for-site-collections-in-ca.md)します。  
   
  ライブラリを作成するには、サイト所有者である必要があります。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52543551"
   
  データ フィード ライブラリへのリンクが、現在のサイトのナビゲーションのクイック起動ペインに表示されます。  
   
- ライブラリを作成した後、そのライブラリを使用してデータ サービス ドキュメントを作成できます。 詳細については、[データ フィードの使用&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)を参照してください。  
+ ライブラリを作成した後、そのライブラリを使用してデータ サービス ドキュメントを作成できます。 詳細については、次を参照してください。[データ フィードの使用&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)します。  
   
 ##  <a name="addtolib"></a> 任意のライブラリへのデータ フィード コンテンツ タイプの追加  
  専用のデータ フィード ライブラリは作成せずに、SharePoint サイトからデータ サービス ドキュメントを作成して管理する場合は、データ サービス ドキュメント (.atomsvc) ファイルの共有に使用する任意のライブラリ用にデータ サービス ドキュメント コンテンツ タイプを手動で追加して構成できます。  

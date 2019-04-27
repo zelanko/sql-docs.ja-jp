@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: c14f6c3c404cee8a4197672c851cf1358b9a8d9b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745473"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server マシンがインターネットにアクセスできないコンピューターでの R と Python の学習のインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -117,7 +117,7 @@ SQL Server 2016 RTM、SP 1、または SP 2 は、ターゲット コンピュ�
 
 3. 実行可能ファイルをダウンロードする累積的な最新の更新プログラムを選択します。
 
-4. R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)を参照してください。
+4. R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、次を参照してください。[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)します。
 
 5. すべてのファイル、実行可能ファイルと、オフラインのコンピューター上の同じフォルダーに、CAB ファイルを転送します。
 

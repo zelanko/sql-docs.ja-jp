@@ -27,11 +27,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 012b06d565862e15b1ccac6af0761f9791355088
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740548"
 ---
 # <a name="processing-statements-that-generate-messages"></a>メッセージを生成するステートメントの処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -150,7 +150,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  PRINT または RAISERROR ステートメントが SELECT ステートメントの場合) など、SQL ステートメントの後に続く場合、PRINT または RAISERROR に関する情報が返される[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)エラーを含む結果の位置に設定します。 **SQLMoreResults**メッセージの重大度に応じて、SQL_SUCCESS_WITH_INFO または SQL_ERROR を返します。 呼び出すことによってメッセージが取得される**SQLGetDiagRec** sql_no_data が返されるまでです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとメッセージの処理](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

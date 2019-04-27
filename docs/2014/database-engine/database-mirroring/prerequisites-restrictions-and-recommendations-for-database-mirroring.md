@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754600"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>データベース ミラーリングの前提条件、制限事項、および推奨事項
     
@@ -123,7 +123,7 @@ ms.locfileid: "48164792"
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングの設定 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

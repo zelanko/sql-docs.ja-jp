@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ed4ae6c15a16c3db009145f7daa995988ac04fbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753684"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services のアップグレードに関するその他の問題 (アップグレード アドバイザー)
   次のトピックについて説明します、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]へのアップグレードに影響を与える問題[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 トピックには、環境内でこれらの変更の影響を緩和するために行える操作について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48227502"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスを分析するには、アップグレード アドバイザーをレポート サーバーにインストールしておく必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はリモート分析をサポートしません。  
 >   
->  詳細については、[アップグレード アドバイザーのインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)を参照してください。  
+>  詳細については、次を参照してください。[アップグレード アドバイザーのインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831479"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
@@ -101,7 +101,7 @@ ms.locfileid: "58387490"
 ## <a name="related-tasks"></a>Related Tasks  
  これらのプロパティを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

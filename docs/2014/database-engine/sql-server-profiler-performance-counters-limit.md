@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 74ac3839567366c429c64e0139f8e86793aa942a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773445"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>[SQL Server Profiler] - [パフォーマンス カウンター制限ダイアログ]
   [パフォーマンス カウンター制限ダイアログ] ダイアログ ボックスを使用すると、システム モニターのパフォーマンス ログ ファイルと [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレースを相関させるときに、ファイルからの情報を制限できます。 このダイアログ ボックスで、相関のために表示して使用するカウンターを選択できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "48165222"
   
      パフォーマンス オブジェクトに対してすべてのカウンターを選択する場合は、パフォーマンス オブジェクトの横にあるボックスをオンにします。 コンピューターを示している最上位ノードをオンにすると、パフォーマンス ログ ファイル内のすべてのパフォーマンス オブジェクトおよびカウンターが選択されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレースと Windows パフォーマンス ログ データの関連付け &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)  
   
   

@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b58108b374f2a7ba1c1c4f8e82c8538e0ebb5bd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763951"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>ステージング処理中に発生したエラーの表示 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ステージング処理中に発生したエラーを表示できます。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースには、エラーを表示する 2 つのビューがあります。  
@@ -26,7 +26,7 @@ ms.locfileid: "53361684"
   
 -   stg.viw_name_RelationshipErrorDetails (階層のリレーションシップの更新用)。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでは、stg.viw_name_MemberErrorDetails ビューまたは stg.viw_name_RelationshipErrorDetails ビューのどちらかに対する SELECT 権限が必要です。  
@@ -48,7 +48,7 @@ ms.locfileid: "53361684"
 ## <a name="next-steps"></a>次の手順  
  エラー メッセージの詳細については、「[ステージング処理のエラー (マスター データ サービス)](../../2014/master-data-services/staging-process-errors-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [ステージング処理のトラブルシューティング (マスター データ サービス)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

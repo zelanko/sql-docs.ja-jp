@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628698"
 ---
 # <a name="dynamic-sql"></a>動的 SQL
 静的 SQL も多くの状況で動作しますが、クラスがあるアプリケーションをデータ アクセスを事前に決定することはできません。 たとえば、スプレッドシートでスプレッドシートは、DBMS にデータを取得する送信は、クエリを入力するユーザーができるようにします。 このクエリの内容をスプレッドシート プログラムが書き込まれるときに明らかに、プログラマが認識されることはできません。  

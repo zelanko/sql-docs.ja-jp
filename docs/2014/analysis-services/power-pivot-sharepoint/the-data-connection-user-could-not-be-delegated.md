@@ -1,5 +1,5 @@
 ---
-title: 'データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました: PowerPivot データ |Microsoft Docs'
+title: データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:PowerPivot データ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,23 +12,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4332e19287b551341bb9851cf488ccb0b34aa5a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749116"
 ---
-# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続は更新に失敗しました: PowerPivot データ
+# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:[PowerPivot データ]
   PowerPivot データを含む Excel ブックで、Excel Services は、SharePoint の PowerPivot サーバー インスタンスに接続できない場合にこのエラーを返します。  
   
 ## <a name="details"></a>詳細  
   
 |||  
 |-|-|  
-|適用対象|PowerPivot for SharePoint|  
+|対象|PowerPivot for SharePoint|  
 |製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|PowerPivot データ プロバイダーを使用しようとしたときに接続が失敗しました。|  
-|メッセージ テキスト|データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続は更新に失敗しました: PowerPivot データ|  
+|メッセージ テキスト|データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:[PowerPivot データ]|  
   
 ## <a name="explanation"></a>説明  
  このエラー メッセージには複数の原因があります。 それらの原因に共通する要因は、Excel Services が SharePoint のクレーム トークンから有効な Windows ユーザー ID を取得できないことです。 PowerPivot データを含む Excel ブックの場合、次のいずれかの条件に当てはまるときは、このエラーが発生します。  
@@ -60,7 +60,7 @@ ms.locfileid: "48154082"
   
     2.  Windows トークン サービスに対するクレームが実行されていない場合は開始します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)  
   
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626049"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
   ポリシー ベースの管理を許可するためのベスト プラクティスの監視、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベスト プラクティスのポリシーとしてインポートし、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価できる一連のポリシー ファイルを提供します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  

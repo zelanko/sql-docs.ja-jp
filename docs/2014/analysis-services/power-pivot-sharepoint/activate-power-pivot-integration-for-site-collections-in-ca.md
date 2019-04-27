@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e22c18ef92fbc82401bb9f8294e42971fcdb41c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743277"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>サイト コレクションを対象とした PowerPivot 機能の統合をサーバーの全体管理でアクティブ化する方法
   [既存のファーム] インストール オプションを使用して SQL Server PowerPivot for SharePoint をインストールした場合は、サイト コレクションごとに PowerPivot 機能の統合をアクティブ化する必要があります。 [新しいサーバー] インストール オプションを使用して PowerPivot for SharePoint をインストールした場合は、この作業は必要ありません。このオプションでは、SQL Server セットアップで配置を構成するときに、PowerPivot 機能の統合がルート サイト コレクションに対してアクティブ化されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "48141682"
   
  PowerPivot 統合は、PowerPivot クエリ処理をサポートするサイト コレクションごとにアクティブ化する必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  サイト コレクション管理者である必要があります。  
   
 ## <a name="activate-powerpivot-features"></a>PowerPivot 機能のアクティブ化  
@@ -44,7 +44,7 @@ ms.locfileid: "48141682"
   
 6.  他のサイト コレクションについても、各サイトを開き、 **[サイトの操作]** をクリックして手順を繰り返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーの全体管理で PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [構成の初期&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
  [PowerPivot for SharePoint 2010 のインストール](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

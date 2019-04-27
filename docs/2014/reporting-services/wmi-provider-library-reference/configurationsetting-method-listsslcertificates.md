@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adda71c5ee0a88eabd619280457421bbf5ec0a75
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646730"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー コンピューター上にある証明書の一覧を返します。  
@@ -61,7 +61,7 @@ public void ListSSLCertificates(out string[] CertificateHash,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   
