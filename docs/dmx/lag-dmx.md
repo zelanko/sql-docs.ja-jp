@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f984e50b2c6a800a66f689d88b21dfcb487e282
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503550"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  現在のケースの日付と学習セットの最後の日付の間の時間スライスを返します。  
+  現在のケースの日付とトレーニング セットの最後の日付間のタイム スライスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ Lag()
  場合、 **Lag**関数を使用して、KEY TIME 列が入れ子になったテーブル内にあるモデルでは、関数をステートメントの下位選択内にあるにある必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、最近 12 か月以内にデータがモデルの学習に使用されたケースを返します。  
+ 次の例では、モデルのトレーニングに使用されたデータの最後の 12 か月以内に含まれるケースを返します。  
   
 ```  
 SELECT * FROM [Forecasting].CASES  

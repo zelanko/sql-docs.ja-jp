@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523748"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップのログを削除する方法について説明します。  
@@ -80,7 +80,7 @@ ms.locfileid: "53377554"
     GO  
     ```  
   
- 詳細については、[sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)します。  
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `DeleteJobStepLogs` クラスの `Job` メソッドを使用します。 詳細については、「[SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

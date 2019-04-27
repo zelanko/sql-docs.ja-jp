@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b7e80f8a9dfb82f13350b94b310690a081fae1de
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503734"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- データ マイニングで使用されるケースをクエリする方法の詳細については、[SELECT FROM&#60;モデル&#62;を参照してください。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
+ データ マイニングで使用されるケースをクエリする方法の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM&#60;構造&#62;します。ケース](../dmx/select-from-structure-cases.md)します。  
   
 ## <a name="see-also"></a>参照  
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   

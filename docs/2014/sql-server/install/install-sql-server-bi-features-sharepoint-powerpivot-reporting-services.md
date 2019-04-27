@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1e391bc85bc74ac9bd7394161298b190426926ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473464"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>SharePoint を使用した SQL Server の BI 機能のインストール (PowerPivot と Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を Microsoft SharePoint ファームに統合することで、SharePoint のビジネス インテリジェンス (BI) 機能を有効にすることができます。 機能には、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が含まれます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、SharePoint ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスに使用されます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成され、SharePoint ライブラリからアクセスされるブック用のデータ エンジンです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを SharePoint に保存したら、それを [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートのデータ ソースとして使用できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "53362694"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- ![注](../../../2014/reporting-services/media/rs-fyinote.png "注")現在のリリース ノートについては、[SQL server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445)を参照してください。  
+ ![注](../../../2014/reporting-services/media/rs-fyinote.png "注")現在のリリース ノートについては、次を参照してください。 [SQL server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445)します。  
   
 ##  <a name="bkmk_top"></a> このトピックの内容  
   

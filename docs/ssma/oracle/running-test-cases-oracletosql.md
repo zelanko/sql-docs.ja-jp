@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625800"
 ---
 # <a name="running-test-cases-oracletosql"></a>テスト ケースの実行 (OracleToSQL)
 SSMA のテスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Oracle の間でオブジェクトの対応と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -44,27 +44,27 @@ SSMA のテスト担当者は、テストの実行を開始する前に、テス
 ||||  
 |-|-|-|  
 |名前|型|説明|  
-|USER_TABLE$ Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
+|USER_TABLE$Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
 |USER_TABLE$ AUD|テーブル|テーブルな行を削除し、上書きを保存する場所です。|  
 |USER_TABLE$ AUDID|テーブル|追加または変更された行が保存されているテーブル。|  
 |USER_TABLE|view|テーブルの変更の簡略化された表現。|  
 |USER_TABLE $ 新規|view|行の挿入と上書きの簡略化された表現。|  
-|USER_TABLE$ NEW_ID|view|挿入および変更された行の id です。|  
-|USER_TABLE$ 古い|view|行の削除と上書きの簡略化された表現。|  
+|USER_TABLE$NEW_ID|view|挿入および変更された行の id です。|  
+|USER_TABLE$OLD|view|行の削除と上書きの簡略化された表現。|  
   
 次のオブジェクトで検証済みのテーブルのスキーマに作成されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ||||  
 |-|-|-|  
 |名前|型|説明|  
-|USER_TABLE$ Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
+|USER_TABLE$Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
   
 次のオブジェクトを作成および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb データベースにします。  
   
 ||||  
 |-|-|-|  
 |名前|型|説明|  
-|USER_TABLE$ Aud|テーブル|テーブルな行を削除し、上書きを保存する場所です。|  
+|USER_TABLE$Aud|テーブル|テーブルな行を削除し、上書きを保存する場所です。|  
 |USER_TABLE$AudID|テーブル|追加または変更された行が保存されているテーブル。|  
 |USER_TABLE|view|テーブルの変更の簡略化された表現。|  
 |USER_TABLE$new|view|行の挿入と上書きの簡略化された表現。|  

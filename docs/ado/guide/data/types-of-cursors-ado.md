@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472314"
 ---
 # <a name="types-of-cursors-ado"></a>カーソルの種類 (ADO)
 一般的な規則として、アプリケーションに必要なデータ アクセスを提供する最も簡単なカーソルを使用する必要があります。 基本の (順方向専用、読み取り専用、static、スクロール、バッファリングされていない) 場合は、各追加カーソル特性には、クライアントのメモリ、ネットワークの負荷、またはパフォーマンスの価格 - があります。 多くの場合は、既定のカーソル オプションは、アプリケーションが実際に必要以上より複雑なカーソルを生成します。  

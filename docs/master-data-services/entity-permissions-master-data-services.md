@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4030351db122190636292ccc84c574af95df76fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517164"
 ---
 # <a name="entity-permissions-master-data-services"></a>エンティティ権限 (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52819014"
 > [!NOTE]  
 >  これらの権限は、ユーザー インターフェイスの **[エクスプローラー]** 機能領域にのみ適用されます。  
   
-|権限|[説明]|  
+|権限|説明|  
 |----------------|-----------------|  
 |**読み取り**|ユーザーは、メンバー、属性、階層メンバーシップ、コレクション メンバーシップを読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成し、作成時に属性値を割り当てることができます。|  

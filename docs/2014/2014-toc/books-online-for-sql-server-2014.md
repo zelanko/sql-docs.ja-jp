@@ -20,18 +20,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470472"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Books Online for SQL Server 2014
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® オンライン ブックへようこそ。 オンライン ブックには、タスクの説明とリファレンスのドキュメントが含まれており、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用してデータ管理およびビジネス インテリジェンスに関連する作業を行う方法が記載されています。  
   
  **お試しください:**  
- ![Azure Virtual Machine のアイコン](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、[SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)を参照してください。 
+ ![Azure Virtual Machine のアイコン](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。 
   
 ## <a name="sql-server-technologies"></a>SQL Server のテクノロジ  
 

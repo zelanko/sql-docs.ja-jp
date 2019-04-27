@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506210"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema でユーザー定義関数が許可されない
   アップグレード アドバイザーは、文書化されていないユーザーによって所有されているユーザー定義関数を検出しました。 **system_function_schema**します。 このユーザーを指定してユーザー定義のシステム関数を作成することはできません。 **System_function_schema**ユーザー名が存在しないため、この名前に関連付けられているユーザー ID (UID = 4) に予約されている、 **sys**スキーマと、内部使用のみに制限されます。  

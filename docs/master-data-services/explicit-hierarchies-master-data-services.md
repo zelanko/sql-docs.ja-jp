@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 845d69b539a0634c25f1402da503dd2f599ec442
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517115"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明示的階層 (Master Data Services)
 

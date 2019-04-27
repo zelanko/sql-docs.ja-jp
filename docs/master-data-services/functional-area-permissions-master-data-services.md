@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b16b70e4956caa7a2f5bffbdc484a725cfee937d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516993"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>機能領域権限 (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "52773824"
   
  機能領域に権限を割り当てると、UI のその領域がユーザーまたはグループに表示されます。  
   
- **[エクスプローラー]** 機能領域内でユーザーがアクセスできるデータは、モデル オブジェクトおよび階層メンバーに割り当てられた追加権限によって決定されます。 その他のすべての機能領域内でモデルを表示および操作するには、ユーザーはモデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+ **[エクスプローラー]** 機能領域内でユーザーがアクセスできるデータは、モデル オブジェクトおよび階層メンバーに割り当てられた追加権限によって決定されます。 その他のすべての機能領域内でモデルを表示および操作するには、ユーザーはモデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 > [!IMPORTANT]  
 >  スーパー ユーザー権限を持つユーザーは、実質的にすべてのモデルに対する管理者権限を持ち、その他のすべての機能権限を持ちます。  

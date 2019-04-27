@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505165"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  指定されたデータ マイニング オブジェクトを処理します。 マイニング モデルとマイニング構造の処理に関する詳細については、[処理の要件と考慮事項&#40;データ マイニング&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)を参照してください。  
+  指定されたデータ マイニング オブジェクトを処理します。 マイニング モデルとマイニング構造の処理に関する詳細については、次を参照してください。[処理の要件と考慮事項&#40;データ マイニング&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)します。  
   
  マイニング構造が指定された場合、ステートメントはマイニング構造とすべての関連するマイニング モデルを処理します。 マイニング モデルが指定された場合、ステートメントはマイニング モデルだけを処理します。  
   
@@ -91,7 +91,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   すべて[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]行セットを返すクエリ  
   
- データ ソースの種類の詳細については、[&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)を参照してください。  
+ データ ソースの種類の詳細については、次を参照してください。 [&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)します。  
   
 ## <a name="basic-example"></a>基本の例  
  次の例では**OPENQUERY**で対象となるマイニング データに基づいて Naive Bayes モデルのトレーニングに、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]データベース。  

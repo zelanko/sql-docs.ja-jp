@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a91a26f46b8722c4114c485a9924a83d5669edd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628195"
 ---
 # <a name="introduction-to-odbc"></a>ODBC の概要
 このセクションでは、構造化照会言語と、ODBC の簡単な歴史を示し、ODBC インターフェイスの概念に関する情報が含まれています。  
   
- このセクションのトピックは次のとおりです。  
+ このセクションでは、次のトピックについて説明します。  
   
 -   [ODBC の概要](../../odbc/reference/odbc-overview.md)  
   

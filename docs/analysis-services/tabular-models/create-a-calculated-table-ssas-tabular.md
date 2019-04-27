@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469374"
 ---
 # <a name="create-a-calculated-table"></a>計算テーブルを作成します。 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "53626261"
 =CROSSJOIN(DimProductCategory, DimCurrency)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services の Data Analysis Expressions (DAX)](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [表形式モデルで DAX を理解します。](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630726"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>イベント通知のダイアログ セキュリティの構成
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティを構成する必要があります。 ダイアログ セキュリティは、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログの完全セキュリティ モデルに従って手動で構成する必要があります。 完全セキュリティ モデルでは、リモート サーバーとの間で送受信するメッセージの暗号化および暗号化解除が可能です。 イベント通知は一方向に送信されますが、エラーなどのメッセージは逆方向にも返されます。  
@@ -45,7 +45,7 @@ ms.locfileid: "53359524"
 |送信先サーバーからアクセス可能なファイルに[証明書をバックアップ](/sql/t-sql/statements/backup-certificate-transact-sql) します。|送信元サーバーからアクセス可能なファイルに証明書をバックアップします。|  
 |送信先データベースのユーザーと WITHOUT LOGIN を指定して[ユーザーを作成](/sql/t-sql/statements/create-user-transact-sql)します。 このユーザーは、バックアップ ファイルから作成された送信先データベースの証明書を所有します。 このユーザーをログインにマッピングする必要はありません。なぜなら、このユーザーの唯一の目的は、後述の手順 3. で作成する送信先データベースの証明書を所有することだからです。|送信元データベースのユーザーと WITHOUT LOGIN を指定してユーザーを作成します。 このユーザーは、バックアップ ファイルから作成された送信元データベースの証明書を所有します。 このユーザーをログインにマッピングする必要はありません。なぜなら、このユーザーの唯一の目的は、後述の手順 3. で作成する送信元データベースの証明書を所有することだからです。|  
   
- **手順 3:証明書を共有し、データベース レベルの認証のアクセス許可を付与します。**  
+ **ステップ 3:証明書を共有し、データベース レベルの認証のアクセス許可を付与します。**  
   
  ソース サーバーとターゲット サーバーの両方で次の操作を実行します。  
   

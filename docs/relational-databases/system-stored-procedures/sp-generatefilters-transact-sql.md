@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 077adede972aa0873efc92b250a3f79f96774c70
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520690"
 ---
 # <a name="spgeneratefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したテーブルがレプリケートされるときに、外部キー テーブルにフィルターを作成します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  指定したテーブルがレプリケートされるときに、外部キー テーブルにフィルターを作成します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470359"
 ---
 # <a name="strong-passwords"></a>強力なパスワード
   パスワードは、サーバーのセキュリティ上で最も弱点になる可能性があります。 パスワードを選択するときは、常に最大限の注意が必要です。 強力なパスワードの特徴は次のとおりです。  
@@ -52,7 +52,7 @@ ms.locfileid: "48075732"
   
 -   $ または \@ で始まる  
   
- OLE DB または ODBC の接続文字列で使用する場合、ログインまたはパスワードに次の文字は含めないでください: [] {}() , ; ? * ! \@。 これらの文字は、接続の初期化や、接続の値を区切る場合に使用されています。  
+ OLE DB または ODBC の接続文字列で使用する場合、ログインまたはパスワードに次の文字は含めないでください: [] {}() , ; ? * ! \@ 。 これらの文字は、接続の初期化や、接続の値を区切る場合に使用されています。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [パスワード ポリシー](password-policy.md)  

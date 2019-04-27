@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465497"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>[ブラウザー] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ内のディメンション、メジャー、および KPI を探索するには、キューブ デザイナーの **[ブラウザー]** タブを使用します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ ブラウザーが MDX クエリ デザイナーに統合され、MDX クエリの作成、キューブのフィルター処理とスライス、階層のドリル ダウンをグラフィカル ユーザー インターフェイスによって行うことができます。  
   
- **[ブラウザー]** タブには、 **デザイン モード** と **クエリ モード**の 2 つのモードがあります。 どちらのモードも、 **[メタデータ]** ペインのオブジェクトを使用してキューブを探索することができ、 **[メタデータ]** ペインからクエリ領域にメンバーをドラッグすることによって、必要なデータを取得するための MDX クエリを構築することができます。  
+ **ブラウザー**タブには 2 つのモード。**デザイン モード**と**クエリ モード**します。 どちらのモードも、 **[メタデータ]** ペインのオブジェクトを使用してキューブを探索することができ、 **[メタデータ]** ペインからクエリ領域にメンバーをドラッグすることによって、必要なデータを取得するための MDX クエリを構築することができます。  
   
  **参照し、グラフィック デザイン モードを使用したクエリ**  
   

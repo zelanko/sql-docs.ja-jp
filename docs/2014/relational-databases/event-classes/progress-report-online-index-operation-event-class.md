@@ -1,5 +1,5 @@
 ---
-title: Progress Report:Online Index Operation イベント クラス |Microsoft Docs
+title: 'Progress Report: Online Index Operation イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520410"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Progress Report:Online Index Operation イベント クラス
+# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation イベント クラス
   Progress Report:Online Index Operation イベント クラスは、ビルド プロセスの実行中に、オンライン インデックス構築操作の進行状況を示します。  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report:Online Index Operation イベント クラスのデータ列  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
