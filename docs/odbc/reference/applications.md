@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc655740701822d8c6ff9595327b906ee9a67026
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734998"
 ---
 # <a name="applications"></a>[アプリケーション]
 *アプリケーション*はデータにアクセスする、ODBC API を呼び出すプログラムです。 さまざまな種類のアプリケーションのほとんどが、このガイドで説明する例として使用されている 3 つのカテゴリに分類されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "47834780"
   
      汎用アプリケーションの重要なサブカテゴリは、PowerBuilder、Microsoft® Visual Basic® などのアプリケーションの開発環境です。 これらの環境で構築されたアプリケーションは、おそらく 1 つの DBMS でのみ動作が環境自体は、複数の Dbms を使用する必要があります。  
   
-     どのような汎用のすべてのアプリケーションが共通は、Dbms の間で高度に同時には比較的一般的な方法で ODBC を使用して必要なです。 相互運用性に関する詳細については、[レベルの相互運用を選択する](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md)を参照してください。  
+     どのような汎用のすべてのアプリケーションが共通は、Dbms の間で高度に同時には比較的一般的な方法で ODBC を使用して必要なです。 相互運用性に関する詳細については、次を参照してください。[レベルの相互運用を選択する](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md)します。  
   
 -   **垂直アプリケーション**垂直方向のアプリケーションが注文エントリや、製造データの追跡などのタスクの 1 つの型を実行し、アプリケーションの開発者が制御するデータベース スキーマを使用します。 特定の顧客のアプリケーションは、1 つの DBMS では動作します。 たとえば、小規模なビジネス可能性がありますでアプリケーションを使用 dBase 中、大企業で Oracle を使用することが。  
   

@@ -44,11 +44,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871681"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure Virtual Machine の SQL Server データベースの配置
   **Windows Azure 仮想マシンに SQL Server データベースを配置** ウィザードを使用して、データベースを [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスから Windows Azure 仮想マシン (VM) の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に配置します。 このウィザードはデータベースの完全バックアップ操作を活用し、SQL Server のユーザー データベースから常にデータベース スキーマ全体とデータ全体をコピーします。 また、このウィザードは Azure のすべての仮想マシンを自動的に構成するため、仮想マシンの事前構成は必要ありません。  
@@ -89,9 +89,9 @@ ms.locfileid: "53357891"
   
  Windows Server オペレーティング システムを実行しているコンピューターでは、このウィザードを実行するために、次の構成設定を使用する必要があります。  
   
--   セキュリティ強化の構成をオフにする:サーバー マネージャーを使用して > Internet Explorer 強化セキュリティ構成 (ESC) に設定するローカル サーバー **OFF**します。  
+-   セキュリティ強化の構成をオフにします。サーバー マネージャーを使用して > Internet Explorer 強化セキュリティ構成 (ESC) に設定するローカル サーバー **OFF**します。  
   
--   JavaScript の有効化。Internet Explorer > [インターネット オプション] > [セキュリティ] > [レベルのカスタマイズ] > [スクリプト] > [アクティブ スクリプト]:**有効にする**します。  
+-   JavaScript を有効にします。Internet Explorer > インターネット オプション > セキュリティ > レベルのカスタマイズ > スクリプト > アクティブ スクリプトします。**有効にする**します。  
   
 ###  <a name="limitations"></a> 制限事項と制約事項  
  この操作に対応するデータベース サイズの上限は 1 TB です。  

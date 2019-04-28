@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ea7b0f79dac89188599854c73279ee8d8c2f5c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734859"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、分類アルゴリズム、Bayes の定理に基づくし、によって提供される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]予測モデリングで使用します。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。  
@@ -58,7 +58,7 @@ ms.locfileid: "52390879"
   
 -   **単一キー列** : それぞれのモデルには、各レコードを一意に識別する数値列またはテキスト列が 1 つ含まれている必要があります。 複合キーは使用できません。  
   
--   **入力列**: Naive Bayes のモデルでは、すべての列は不連続または分離されたいずれかにする必要があります列。 列の分離方法の詳細については、[分離メソッド&#40;データ マイニング&#41;](discretization-methods-data-mining.md)を参照してください。  
+-   **入力列**: Naive Bayes のモデルでは、すべての列は不連続または分離されたいずれかにする必要があります列。 列の分離方法の詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](discretization-methods-data-mining.md)します。  
   
      Naive Bayes モデルでは、入力属性を互いに独立させることも重要です。 これは、予測のためにモデルを使用する場合に特に重要です。  
   

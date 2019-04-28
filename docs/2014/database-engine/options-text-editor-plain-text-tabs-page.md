@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844288"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[タブ] ページ)
   特定の開発言語に関連付けられていないドキュメントを編集するときには、テキスト エディターが使用されます。このダイアログ ボックスを使用すると、テキスト エディターのタブの動作を変更できます。 この設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーを展開し、さらに **[テキスト形式]** を展開して、**[タブ]** をクリックします。  
@@ -27,7 +27,7 @@ ms.locfileid: "48074770"
  テキスト形式エディターのオプションは、**[すべての言語] の [全般]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用してテキスト形式エディターのオプションを設定し直す必要があります。  
   
 ## <a name="indenting"></a>インデント  
- **なし**  
+ **None**  
  Enter キーを押したときに作成される新しい行はインデントされません。 カーソルは、新しい行の 1 列目に置かれます。  
   
  **ブロック**  

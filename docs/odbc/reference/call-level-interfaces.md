@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735008"
 ---
 # <a name="call-level-interfaces"></a>コールレベル インターフェイス
 コールレベル インターフェイス (CLI) は、DBMS に SQL ステートメントを送信するための最終的な手法します。 コールレベル インターフェイスは、アプリケーション プログラムによって呼び出すことができる DBMS 関数のライブラリを提供します。 したがって、別のプログラミング言語と SQL をブレンドするのではなく呼び出しレベルのインターフェイスはプログラマのほとんどが文字列、I/O、または C. 注 embedded SQL をサポートするその Dbms での数値演算ライブラリなど、使用に慣れているが、日常的なライブラリに似ています呼び出し、プリコンパイラによって生成された、呼び出しレベルのインターフェイスが既にあります。 ただし、これらの呼び出しは、ドキュメント化されていない、予告なく変更される可能性が。  

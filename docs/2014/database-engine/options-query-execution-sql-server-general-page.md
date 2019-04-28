@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851438"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>オプション (クエリ実行 SQL サーバー-[全般] ページ)
   このページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリを実行するためのオプションを指定できます。 これらのオプションに加えられた変更は、新しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリだけに適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ] ウィンドウで右クリックし、**[クエリ オプション]** を選択します。  

@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5472e7d0c910c03f49425c263293fd721320eba9
-ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55484631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844351"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>オプション (テキスト エディター-Transact-SQL-IntelliSense)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターの IntelliSense の設定を変更できます。 この設定を変更するには、**[ツール]** メニューの **[オプション]** をクリックし、**[テキスト エディター]** フォルダー、**[Transact-SQL]** フォルダーの順に展開し、**[詳細設定]** をクリックします。  
@@ -30,13 +30,13 @@ ms.locfileid: "55484631"
  [!INCLUDE[ssDE](../includes/ssde-md.md)] クエリ エディターの IntelliSense のオプションを指定します。  
   
 ### <a name="enable-intellisense"></a>[IntelliSense を有効にする]  
- IntelliSense 機能を有効にします。 このボックスをオフにすると、特定の IntelliSense オプションを使用できなくなります。 既定では、このチェック ボックスはオンになっています。  
+ IntelliSense 機能を有効にします。 このボックスをオフにすると、特定の IntelliSense オプションを使用できなくなります。 既定では、このチェック ボックスはオンです。  
   
  **エラーに下線を引く**  
- クエリ ウィンドウで [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの構文エラーとセマンティック エラーを識別します。 すべてのエラーと警告が赤で表示されます。 エラーと警告は、IntelliSense が実装されている [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントについてのみサポートされます。 既定では、このチェック ボックスはオンになっています。  
+ クエリ ウィンドウで [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの構文エラーとセマンティック エラーを識別します。 すべてのエラーと警告が赤で表示されます。 エラーと警告は、IntelliSense が実装されている [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントについてのみサポートされます。 既定では、このチェック ボックスはオンです。  
   
  **ステートメントのアウトライン**  
- ファイルが開いているときにアウトライン機能を有効にします。 これにより、[!INCLUDE[tsql](../includes/tsql-md.md)] コードの折りたたみ可能なブロックが作成されます。 既定では、このチェック ボックスはオンになっています。  
+ ファイルが開いているときにアウトライン機能を有効にします。 これにより、[!INCLUDE[tsql](../includes/tsql-md.md)] コードの折りたたみ可能なブロックが作成されます。 既定では、このチェック ボックスはオンです。  
   
  **スクリプトの最大サイズ**  
  IntelliSense 機能が無効になるサイズを指定します。 スクリプトが指定したサイズを超えると、警告メッセージが出され、 そのエディター ウィンドウでコードの色分けを除くすべての IntelliSense 機能が無効になります。 十分な量のテキストが削除されて制限内までスクリプトのサイズが縮小されると、IntelliSense が再度有効になります。 サイズの大きいスクリプトに対して IntelliSense を有効にすると、速度の遅いコンピューターではパフォーマンスが低下することがあります。 指定できるサイズは、100 KB、500 KB、1 MB、2 MB、および無制限です。 既定値は 1 MB です。  

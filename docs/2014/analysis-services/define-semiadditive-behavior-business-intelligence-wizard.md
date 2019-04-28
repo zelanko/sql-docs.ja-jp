@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 436610a4c52d213a2d5b80c4277988b615f81449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732165"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>[準加法の動作の定義] (ビジネス インテリジェンス ウィザード)
   **[準加法の動作の定義]** ページを使用すると、メジャーに対する準加法の動作を有効または無効にできます。 準加法の動作によって、キューブに含まれるメジャーが時間ディメンションで集計される方法が決まります。  
@@ -31,7 +31,7 @@ ms.locfileid: "48168012"
  キューブに含まれるすべてのメジャーで準加法の動作を無効にします。  
   
  **ウィザードが検出された、\<ディメンション名 > 勘定科目ディメンションが準加法メンバーを含むです。サーバーは、各アカウントの種類に指定された準加法動作に従って、このディメンションのメンバーで集計されます。**  
- 準加法メンバーを含む勘定科目ディメンションの準加法の動作を有効にします。 勘定科目ディメンションを参照するメジャー グループ内のすべてのメジャーの集計関数を設定するこのオプションを選択する`ByAccount`します。  
+ 準加法メンバーを含む勘定科目ディメンションの準加法の動作を有効にします。 このオプションを選択して、`ByAccount` への勘定科目ディメンションを参照する、メジャー グループのすべてのメジャーの集計関数を設定します。  
   
  勘定科目ディメンションの詳細については、「 [親子型ディメンションの財務アカウントの作成](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)」を参照してください。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48168012"
 |**LastNonEmpty**|メジャーの最後の空でないメンバーを返すことによって時間ディメンションで集計されます。|  
 |`Max`|`Max` 関数を使用して集計されます。|  
 |`Min`|`Min` 関数を使用して集計されます。|  
-|**なし**|集計は実行されません。|  
+|**None**|集計は実行されません。|  
 |`Sum`|`Sum` 関数を使用して集計されます。|  
   
 > [!NOTE]  

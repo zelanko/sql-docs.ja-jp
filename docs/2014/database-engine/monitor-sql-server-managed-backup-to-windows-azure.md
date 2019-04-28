@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844616"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Windows Azure への SQL Server マネージド バックアップの監視
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、バックアップ プロセス中に問題やエラーを特定し、可能な限り修正措置によって解消するための方法が組み込まれています。  ただし、ユーザーの介入が必要になる場合もあります。 このトピックでは、バックアップの全体的な正常性状態を判定し、解決する必要があるエラーを特定するために使用できるツールについて説明します。  
@@ -57,7 +57,7 @@ GO
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     このクエリの出力には、イベント名、イベントが構成可能かどうか、およびイベントが現在有効になっているかどうかが表示されます。  詳細については、[smart_admin.fn_get_current_xevent_settings &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)を参照してください。  
+     このクエリの出力には、イベント名、イベントが構成可能かどうか、およびイベントが現在有効になっているかどうかが表示されます。  詳細については、次を参照してください。 [smart_admin.fn_get_current_xevent_settings &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-current-xevent-settings-transact-sql)します。  
   
 2.  デバッグ イベントを有効にするには、次のクエリを実行します。  
   
@@ -69,7 +69,7 @@ GO
   
     ```  
   
-     ストアド プロシージャの詳細については、[は smart_admin.sp_set_parameter &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)を参照してください。  
+     ストアド プロシージャの詳細については、次を参照してください。[は smart_admin.sp_set_parameter &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)します。  
   
 3.  ログに記録されたイベントを表示するには、次のクエリを実行します。  
   

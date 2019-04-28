@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735804"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>タスク 1:データ品質プロジェクトを作成する
   ここでは、このチュートリアルで既に作成した Suppliers ナレッジ ベースに対して Excel ファイルの仕入先データをクレンジングするためのデータ品質プロジェクトを作成します。  

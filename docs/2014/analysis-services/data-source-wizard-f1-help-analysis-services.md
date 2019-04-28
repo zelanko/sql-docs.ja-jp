@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8ed248a0ef05dbff3f0cc906adc946d6dd58e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732812"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>データ ソース ウィザードの F1 ヘルプ (Analysis Services)
   データ ソース ウィザードを使用して、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で次のビジネス インテリジェンス プロジェクトに使用するデータ ソースを作成します。  

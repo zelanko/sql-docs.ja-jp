@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732004"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>ゴール シーク シナリオ (Excel 用のテーブル分析ツール)
   ![テーブル分析ツールのゴール シーク ボタン](media/tat-goalseek.gif "テーブル分析ツールのゴール シーク ボタン")  
@@ -98,7 +98,7 @@ ms.locfileid: "52400465"
 >  推奨値の信頼度と予測の可否はアルゴリズムによってあらかじめ定義され、変更することはできません。  
   
 ## <a name="related-tools"></a>関連ツール  
- より高度なデータ マイニング機能を備えた別のアドインとして、Excel 用のデータ マイニング クライアントがあります。Excel 用のデータ マイニング クライアントには、行動を予測するデータ マイニング モデルを作成するためのウィザードが備わっています。 詳細については、[データ マイニング モデルを作成する](creating-a-data-mining-model.md)を参照してください。  
+ より高度なデータ マイニング機能を備えた別のアドインとして、Excel 用のデータ マイニング クライアントがあります。Excel 用のデータ マイニング クライアントには、行動を予測するデータ マイニング モデルを作成するためのウィザードが備わっています。 詳細については、次を参照してください。[データ マイニング モデルを作成する](creating-a-data-mining-model.md)します。  
   
  使用されるアルゴリズムの詳細については、**ゴール シーク**シナリオ ツールで、トピックの「Microsoft ロジスティック回帰アルゴリズム」を参照してください[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   

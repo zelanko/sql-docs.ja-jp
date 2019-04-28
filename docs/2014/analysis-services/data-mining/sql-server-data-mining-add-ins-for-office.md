@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3126726849b0f434eb0edb33c9f97cb227ca5b2e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732886"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office 用 SQL Server データ マイニング アドイン
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 用データ マイニング アドインは、予測、推奨設定、または検索の分析モデルを構築するために Excel のデータを使用できるようにする軽量な一連の予測分析用ツールです。  
@@ -82,7 +82,7 @@ ms.locfileid: "53357244"
   
 -   Standard  
   
- 接続先の SQL Server Analysis Services のエディションによっては、高度なアルゴリズムの一部を使用できない場合があります。 詳しくは、[機能は、SQL Server 2014 の各エディションでサポートされている](https://msdn.microsoft.com/library/cc645993.aspx)を参照してください。  
+ 接続先の SQL Server Analysis Services のエディションによっては、高度なアルゴリズムの一部を使用できない場合があります。 詳しくは、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](https://msdn.microsoft.com/library/cc645993.aspx)します。  
   
  インストールの詳細については、ダウンロード センターからこのページを参照してください。 [https://www.microsoft.com/download/details.aspx?id=29061](https://www.microsoft.com/download/details.aspx?id=29061)  
   

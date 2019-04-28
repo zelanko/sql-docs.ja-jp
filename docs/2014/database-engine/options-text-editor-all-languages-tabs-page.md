@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844193"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>[オプション] ([テキスト エディター]/[すべての言語] - [タブ] ページ)
   このダイアログ ボックスを使用すると、全部で 5 つある [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のすべてのエディターのタブの動作を設定できます。 これらのオプションを表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[テキスト エディター]** フォルダーを選択し、**[すべての言語]** フォルダーを展開して、**[タブ]** をクリックします。  
@@ -30,7 +30,7 @@ ms.locfileid: "51030142"
  特定のエディターに対して異なる設定が選択された場合、"個々のテキスト形式のインデントの設定が競合しています" または "個々のテキスト形式のタブの設定が競合しています" というメッセージが表示されます。 たとえば、**[テキスト形式]** では **[ブロック]** オプションが選択されているが、**[XML]** では **[なし]** が選択されている場合、このメッセージが表示されます。  
   
 ## <a name="indenting"></a>インデント  
- **なし**  
+ **None**  
  このオプションが選択されている場合、Enter キーを押したときに作成される新しい行は、インデントされません。 カーソルは、新しい行の 1 列目に置かれます。  
   
  **ブロック**  

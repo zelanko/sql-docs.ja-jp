@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735068"
 ---
 # <a name="transfer-octet-length"></a>転送オクテット長
 列の転送オクテット長は、その既定の C データ型にデータが転送されるときに、アプリケーションに返されるバイトの最大数です。 文字データの転送オクテット長に null 終端文字のための領域は含まれません。 列の転送オクテット長は、データ ソースにデータを格納するために必要なバイト数よりも異なる可能性があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "47601330"
 |SQL_TINYINT|1|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
-|SQL_BIGINT|文字セットが、ANSI の場合、このデータの文字表現を保持するために必要なバイト数と、既定でこのデータ型が文字列として返されるために、文字セットが、UNICODE の場合この番号 2 回。 文字の表現は、20 文字で構成されています: 19 桁の数字と記号、署名されている場合、または署名されていない場合、20 桁の数字です。 そのため、長さは 20 です。|  
+|SQL_BIGINT|文字セットが、ANSI の場合、このデータの文字表現を保持するために必要なバイト数と、既定でこのデータ型が文字列として返されるために、文字セットが、UNICODE の場合この番号 2 回。 文字の表現は、20 文字で構成されます。19 桁の数字、記号、署名されている場合、または署名されていない場合、20 桁の数字。 そのため、長さは 20 です。|  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  

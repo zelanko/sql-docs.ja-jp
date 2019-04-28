@@ -1,5 +1,5 @@
 ---
-title: チェックリスト:PowerShell を使用して、SharePoint の PowerPivot を確認する |Microsoft Docs
+title: 'チェック リスト: PowerShell を使用して、SharePoint の PowerPivot を確認する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729988"
 ---
-# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>チェックリスト:PowerShell を使用して、SharePoint の PowerPivot を確認するには
+# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する
   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] のインストール操作や復旧操作を完了するには、信頼性の高い検証テストに合格する必要があります。このテストでは、サービスとデータが操作可能であるかどうかが確認されます。 この記事では、Windows PowerShell を使用してこのテストの手順を実行する方法について説明します。 各手順は個別のセクションで説明されています。これにより、特定のタスクを直接参照することもできます。 たとえば、メンテナンスやバックアップでサービス アプリケーションとコンテンツ データベースの名前の確認をスケジュールする必要がある場合は、このトピックの「 [データベース](#bkmk_databases) 」セクションのスクリプトを実行し、これらの名前を確認することができます。  
   
 |||  
@@ -261,7 +261,7 @@ Online PowerPivot Setup Extension Timer Job                                     
 ```  
   
 ##  <a name="bkmk_health_rules"></a> 正常性ルール  
- SharePoint 2013 の配置では、ルールの数が少なくなっています。 各 SharePoint 環境におけるルールの完全な一覧と、ルールを使用する方法の詳細については、[PowerPivot の正常性ルール - 構成](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md)を参照してください。  
+ SharePoint 2013 の配置では、ルールの数が少なくなっています。 各 SharePoint 環境におけるルールの完全な一覧と、ルールを使用する方法の詳細については、次を参照してください。 [PowerPivot の正常性ルール - 構成](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md)します。  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
@@ -284,7 +284,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows と ULS のログ  
  **Windows イベント ログ**  
   
- 次のコマンドは、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに関連するイベントの Windows イベント ログを検索します。 イベントを無効にするか、イベント レベルの変更については、[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)を参照してください。  
+ 次のコマンドは、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに関連するイベントの Windows イベント ログを検索します。 イベントを無効にするか、イベント レベルの変更については、次を参照してください。[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)します。  
   
  **サービス名:** MSOLAP$POWERPIVOT  
   

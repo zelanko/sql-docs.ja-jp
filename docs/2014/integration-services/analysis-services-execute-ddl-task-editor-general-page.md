@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b7a01a2b49900653fb3acba85517315aa32579b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836757"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>[Analysis Services DDL 実行タスク エディター] ([全般] ページ)
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] DDL 実行タスクの名前と説明を入力できます。  

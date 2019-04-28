@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833711"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する
   フル キャッシュ モードおよびキャッシュ接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
@@ -61,7 +61,7 @@ ms.locfileid: "58384280"
   
 -   [シーケンス コンテナー](../control-flow/sequence-container.md)  
   
- キャッシュ接続マネージャーを使用してフル キャッシュ モードで参照変換を実装する方法について説明するビデオは、次を参照してください。[方法。フル キャッシュ モード (SQL Server ビデオ) で参照変換を実装](https://go.microsoft.com/fwlink/?LinkId=131031)します。  
+ キャッシュ接続マネージャーを使用してフル キャッシュ モードで参照変換を実装する方法のデモ ビデオについては、「[フル キャッシュ モードで参照変換を実装する方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=131031)」を参照してください。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>キャッシュ接続マネージャーおよびデータ フロー内のデータ ソースを使用して 1 つのパッケージでフル キャッシュ モードの参照変換を実装するには  
   

@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 154778d2c3a4056e1b16743ff629e4c4a5dae0a5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836570"
 ---
 # <a name="analysis-of-data-flow"></a>データ フローの分析
   使用することができます、 [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`データベース パッケージのデータ フローを分析するビュー。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
