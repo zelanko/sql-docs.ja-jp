@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58bfdace704ee1be0c5b902fd24007844fcc4e45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699792"
 ---
 # <a name="building-measures-in-mdx"></a>MDX 内でのメジャーの作成
   多次元式 (MDX) では、メジャーは、テーブル モデルで値を返す式を計算することで解決される名前付き DAX 式です。 これは一見なにげない定義ですが、非常に広範囲に影響を及ぼします。 MDX クエリでメジャーを作成して使用する機能によって、テーブル データの操作能力が大幅に向上します。  
@@ -44,8 +44,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>参照  
- [CREATE MEMBER ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [MDX 関数リファレンス&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [CREATE MEMBER ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cae79be898c326b395e781db741c87578edfe7ff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721284"
 ---
 # <a name="generate-filters"></a>[フィルターの生成]
   **[フィルターの生成]** ダイアログ ボックスでは、マージ パブリケーション内の 1 つのテーブルに対して行フィルターを定義できます。これを行うと、レプリケーションによって、外部キー リレーションシップを介して関連付けられる他のテーブルにそのフィルターが自動的に拡張されます。 たとえば、フランスの顧客データのみを含むように、フィルターを顧客テーブルに定義した場合、レプリケーションによってこのフィルターが拡張され、関連する受注テーブルや受注詳細テーブルには、フランスの顧客に関連する情報のみが含まれることになります。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690647"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC ドライバーのアーキテクチャ
 ドライバー開発者は、ドライバーのアーキテクチャは、アプリケーションは DBMS 固有の SQL を使用できるかどうかに影響は対応である必要があります。  
@@ -41,7 +41,7 @@ ms.locfileid: "47788150"
   
  さまざまなデータ ソースを使用するドライバーが必要な場合は、ミドルウェアとして使用できます。 異種結合エンジンのアーキテクチャでは、ドライバーをドライバー マネージャーとして表示を作成できます。 ドライバーは、一連のクライアントで共有できる、サーバーにもインストールできます。  
   
- ドライバーのアーキテクチャの詳細については、[ドライバー マネージャー](../../../odbc/reference/the-driver-manager.md)と[ドライバーのアーキテクチャ](../../../odbc/reference/driver-architecture.md)に関するセクションで[ODBC アーキテクチャ](../../../odbc/reference/odbc-architecture.md)を参照してください。  
+ ドライバーのアーキテクチャの詳細については、次を参照してください。[ドライバー マネージャー](../../../odbc/reference/the-driver-manager.md)と[ドライバーのアーキテクチャ](../../../odbc/reference/driver-architecture.md)に関するセクションで[ODBC アーキテクチャ](../../../odbc/reference/odbc-architecture.md)します。  
   
  ドライバーの問題の詳細については、次の表で説明されている場所で見つかります。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47788150"
 |-----------|-----------|--------------|  
 |アプリケーションおよびドライバーと互換性の問題|[アプリケーション/ドライバーの互換性](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[プログラミングに関する考慮事項](../../../odbc/reference/develop-app/programming-considerations.md)、ODBC プログラマ リファレンス|  
 |ODBC ドライバーの記述|[ODBC 3.x ドライバーの作成](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[プログラミングに関する考慮事項](../../../odbc/reference/develop-app/programming-considerations.md)、ODBC プログラマ リファレンス|  
-|旧バージョンとの互換性のためのドライバーのガイドライン|[旧バージョンとの互換性のためのドライバーのガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[付録 g: 旧バージョンとの互換性のためドライバー ガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)、ODBC プログラマ リファレンス|  
+|旧バージョンとの互換性のためのドライバーのガイドライン|[旧バージョンとの互換性のためのドライバーのガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[付録 g:旧バージョンとの互換性のためのドライバーのガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)、ODBC プログラマ リファレンス|  
 |ドライバーへの接続|[データ ソースまたはドライバーの選択](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[データ ソースまたはドライバー](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)、ODBC プログラマ リファレンス|  
 |ドライバーを識別します。|[ドライバーの表示](../../../odbc/admin/viewing-drivers.md)|[ドライバーの表示](../../../odbc/admin/viewing-drivers.md)、Microsoft ODBC データ ソース アドミニストレーターのオンライン ヘルプ|  
 |接続プールを有効にします。|[ODBC 接続プール](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[データ ソースまたはドライバー](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)、ODBC プログラマ リファレンス|  

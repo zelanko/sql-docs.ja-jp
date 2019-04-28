@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715179"
 ---
 # <a name="classified-columns-data-mining"></a>分類済みの列 (データ マイニング)
   分類済みの列を定義する場合は、マイニング構造内の現在の列と別の列の間でリレーションシップを作成します。 マイニング構造内で分類済みの列として指定した列のデータには、その構造内の別の列の値について説明した分類情報が含まれています。  
@@ -37,7 +37,7 @@ ms.locfileid: "48193752"
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているアルゴリズムでは、分類済みの列の使用がサポートされていません。この機能はカスタム アルゴリズムの作成用に提供されています。  
   
 ## <a name="defining-a-classified-column"></a>分類済みの列の定義  
- 分類済みの列のデータ型はいずれかである必要があります`Long`または`Double`します。  
+ 分類済みの列のデータ型は、`Long` または `Double` にする必要があります。  
   
  次の一覧では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で分類済みの列に対してサポートされているコンテンツの種類について説明します。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48193752"
  この列の値は、関連付けられている値の重み (ケース レプリケーション係数) です。  
   
 ## <a name="see-also"></a>参照  
- [コンテンツの種類&#40;データ マイニング&#41;](content-types-data-mining.md)   
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
- [データ型&#40;データ マイニング&#41;](data-types-data-mining.md)  
+ [コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
+ [データ型 (データ マイニング)](data-types-data-mining.md)  
   
   

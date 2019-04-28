@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184bda56568cfcedbc07183bd2be7fdde7a789e4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705031"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>一般にバックアップの更新が必要になるアクション
   定期的なログ バックアップを実行する場合は、レプリケーション関連の変更をログ バックアップでキャプチャする必要があります。 ログ バックアップを実行しない場合は、レプリケーション スキーマまたはトポロジを変更した後でパブリケーション、ディストリビューション、サブスクリプション、 **msdb**、および **master** の各データ ベースのバックアップを実行してください。  

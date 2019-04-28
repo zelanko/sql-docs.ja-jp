@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f817a74d71d12e02d4cb742a0d5423b9a8ac7807
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725470"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>MDX でのセル計算の作成 (MDX)
   多次元式 (MDX) では、計算されるメンバー、カスタム ロールアップ、およびカスタム メンバーなど、計算値を生成するための多数のツールを使用できます。 しかし、これらの機能を使用して特定のセル セットや、さらには単一セルに影響を与えるのは困難です。  
@@ -35,18 +35,18 @@ ms.locfileid: "48226022"
   
  計算されるセルは、作成の有効範囲の点で、名前付きセットと計算されるメンバーの両方に似ています。計算されるセルは、セッションまたは 1 回のクエリの有効期限に合わせて一時的に作成することも、キューブの一部としてグローバルに使用可能にすることもできます。  
   
--   **クエリ スコープ** MDX クエリの一部として定義する、計算されるセルを作成する場合 (つまり、スコープをそのクエリに限定する場合) は、WITH キーワードを使用します。 その計算されるセルは、MDX の SELECT ステートメントの中で使用できます。 このアプローチを使用して、計算されるセルを使用して作成、`WITH`キーワードは、SELECT ステートメントの影響を及ぼすことがなく変更できます。  
+-   **クエリ スコープ** MDX クエリの一部として定義する、計算されるセルを作成する場合 (つまり、スコープをそのクエリに限定する場合) は、WITH キーワードを使用します。 その計算されるセルは、MDX の SELECT ステートメントの中で使用できます。 この方法では、`WITH` キーワードを使用して作成した計算されるセルを、SELECT ステートメントを修正せずに変更できます。  
   
-     WITH キーワードを使用して計算されるメンバーを作成する方法の詳細については、「[クエリ スコープのセル計算の作成 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)」を参照してください。  
+     WITH キーワードを使用して計算されるメンバーを作成する方法の詳細については、「 [クエリ スコープのセル計算の作成 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)」を参照してください。  
   
 -   **セッション スコープ** クエリのコンテキストよりも広いスコープを設定して計算されるセルを作成する場合 (つまり、スコープを MDX セッションの有効期間全体とする場合) は、CREATE CELL CALCULATION または ALTER CUBE ステートメントのいずれかを使用します。  
   
      CREATE CELL CALCULATION または ALTER CUBE ステートメントを使用してセッションでの計算されるセルを作成する方法の詳細については、「 [セッション スコープの計算されるセルの作成](mdx-cell-calculations-session-scoped-calculated-cells.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ALTER CUBE ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
- [CREATE CELL CALCULATION ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
- [クエリ スコープのセル計算の作成&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [ALTER CUBE ステートメント (MDX)](/sql/mdx/mdx-data-definition-alter-cube)   
+ [CREATE CELL CALCULATION ステートメント (MDX)](/sql/mdx/mdx-data-definition-create-cell-calculation)   
+ [クエリ スコープのセル計算の作成 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

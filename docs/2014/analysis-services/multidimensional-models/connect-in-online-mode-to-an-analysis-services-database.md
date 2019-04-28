@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d87e8919f7a6173614f0da6a874d83e5da7a874
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702095"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Analysis Services データベースへのオンライン モードでの接続
   既存の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに直接接続すると、そのデータベース内のオブジェクトを直接変更できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに直接接続すると、オブジェクトに対する変更処理が直ちに行われ、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]内に作成されません。  
@@ -40,7 +40,7 @@ ms.locfileid: "48056682"
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のオブジェクトを直接編集できるようになりました。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services 操作プロジェクトおよびデータベースの開発フェーズ中に](work-with-analysis-services-projects-and-databases-in-development.md)   
- [マルチ ディメンションを作成する SQL Server データ ツールの使用をモデル化&#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [開発段階における Analysis Services プロジェクトおよびデータベースの操作](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

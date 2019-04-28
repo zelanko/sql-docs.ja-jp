@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6152b183e00ca429efb817b9b19cdc0a7a1f77c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689404"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>データ マイニング ビューアーで使用する色の変更
   データ マイニング ビューアーでデータ系列、ノード、またはクラスターを表示する際に使用する色を変更できます。 これを行うには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオプションを設定します。 設定を変更すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して表示するすべてのモデルに色の選択が適用されます。ただし、新しい色を表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を閉じて、ビューアーでモデルを再度開く必要があります。  

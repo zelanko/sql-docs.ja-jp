@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 350251b6813027455f8e1e9b83dcf2508371df70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680087"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>[Microsoft SQL Server Analysis Service への接続] (SSAS)
   このページで、**テーブルのインポート ウィザード**Microsoft SQL Server Analysis Services キューブまたは SharePoint でホストされている PowerPivot ブックからデータをインポートする設定を指定することができます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

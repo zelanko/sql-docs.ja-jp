@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700301"
 ---
 # <a name="create-a-report-data-source"></a>レポート データ ソースの作成
   Power View が多次元モデルに接続するためには、共有レポート データ ソース定義 (.rsds ファイル) を SharePoint ライブラリに作成する必要があります。 .rsds ファイルは、多次元モデルへの接続に使用する Analysis Services サーバー インスタンスの名前、接続の種類、接続文字列、および資格情報の名前を指定します。 ユーザーが .rsds ファイルをクリックすると、新しい空白の Power View レポート (.rdlx ファイル) がブラウザーで開きます。  
@@ -43,7 +43,7 @@ ms.locfileid: "52407979"
 2.  **［新しいドキュメント］** > **［レポート データ ソース］** をクリックします。  
   
     > [!NOTE]  
-    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)を参照してください。  
+    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
   
 3.  **[データ ソースのプロパティ]** ページの **[名前]** に、接続 .rsds ファイルの名前を入力します。  
   

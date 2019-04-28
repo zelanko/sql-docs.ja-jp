@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702135"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>エラーおよび警告の処理 (XMLA)
   XML for Analysis (XMLA) の場合は、エラー処理が必要な[Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)または[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッドの呼び出しは実行されませんが正常に実行しますが、エラーまたは警告を生成またはが正常に実行、結果が返されますエラーを含みます。  

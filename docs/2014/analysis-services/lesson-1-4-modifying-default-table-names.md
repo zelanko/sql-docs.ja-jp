@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82f448c652bfb36f0f09eba975e3fecd8915afab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729533"
 ---
 # <a name="modifying-default-table-names"></a>既定のテーブル名の変更
   データ ソース ビューのオブジェクトの **FriendlyName** プロパティ値を変更することで、オブジェクトをわかりやすく、また使いやすくすることができます。  
@@ -47,10 +47,10 @@ ms.locfileid: "48065412"
 7.  **[ファイル]** メニューまたは [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]のツール バーで、 **[すべてを保存]** をクリックして、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトに対するこの時点までの変更を保存します。 ここでチュートリアルを終了しても、後でこの続きから再開できます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: キューブの定義と配置](lesson-2-defining-and-deploying-a-cube.md)  
+ [レッスン 2:定義と、キューブの配置](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>参照  
  [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [データ ソース ビューでプロパティを変更&#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューのプロパティの変更 &#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b3cebc9bb82778390716212fd3b5ae1bf800d3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667936"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>SSMA for Sybase コンポーネントの削除 (SybaseToSQL)
 終了したらデータベースを移行してから Sybase Adaptive Server Enterprise (ASE) に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA コンポーネントをアンインストールしたい場合があります。 いつでも、クライアント コンポーネントをアンインストールすることができますから拡張機能パックをアンインストールしないでください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、移行されたデータベース内の関数を使用できなくする場合を除き、 **ssma_syb** のスキーマ**sysdb**データベース。  

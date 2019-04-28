@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 858789f7954d21c59db3d7221f23d1f429e1c5dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711713"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>一括インポートで最小ログ記録を行うための前提条件
   完全復旧モデルのデータベースの場合、一括インポート中に実行されるすべての行挿入操作が、トランザクション ログに完全に記録されます。 完全復旧モデルを使用する場合、大きなデータをインポートするとトランザクション ログがすぐにいっぱいになってしまいます。 これとは対照的に、単純復旧モデルまたは一括ログ復旧モデルでは、一括インポート操作の最小ログ記録を行うと、一括インポート操作によってログ領域がいっぱいになる可能性が少なくなります。 最小ログ記録は完全ログ記録よりも効率的です。  
@@ -70,7 +70,7 @@ ms.locfileid: "48072222"
   
 ## <a name="see-also"></a>参照  
  [復旧モデル &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)   
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

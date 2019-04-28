@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732198"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>[依存関係ネットワーク] タブ (マイニング モデル ビューアー)
   **[依存関係ネットワーク]** タブでは、マイニング モデルに含まれるすべての属性のグラフィカル ビューが表示され、属性がどのように関連しているかが示されます。  
@@ -65,8 +65,8 @@ ms.locfileid: "48226172"
  すべてのモデルに適用される一般的なルールとして、リンクが強ければ強いほど、2 つの属性間の予測関係も強くなります。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

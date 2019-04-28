@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8690c252ddb1b91cd939044ee4f0ccc3a6f4a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703625"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>表形式モードでの Analysis Services のインストール
   新しい表形式のモデリング機能を使用して Analysis Services をインストールする場合、この種類のモデルを使用できるサーバー モードで Analysis Services をインストールする必要があります。 そのサーバー モードは "表形式" であり、インストール時に構成されます。  
@@ -46,22 +46,22 @@ ms.locfileid: "48214652"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- `INSTANCENAME` 17 文字未満にする必要があります。  
+ `INSTANCENAME` は 17 文字未満にする必要があります。  
   
  プレースホルダー アカウント値はすべて、有効なアカウントおよびパスワードに置き換える必要があります。  
   
- SQL Server Management Studio や [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] などのツールは、提供されているコマンド ライン構文の例ではインストールされません。 機能の追加に関する詳細については、[コマンド プロンプトから SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を参照してください。  
+ SQL Server Management Studio や [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] などのツールは、提供されているコマンド ライン構文の例ではインストールされません。 機能の追加に関する詳細については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
- `ASSERVERMODE` 大文字小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、`ASSERVERMODE` の有効な値を示します。  
+ `ASSERVERMODE` では、大文字と小文字が区別されます。  値はすべて大文字で指定する必要があります。 次の表に、`ASSERVERMODE` の有効な値を示します。  
   
 |値|説明|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|これが既定値です。 設定しない場合`ASSERVERMODE`サーバーは多次元サーバー モードでインストールします。|  
-|POWERPIVOT|この値は省略可能です。 実際には、`ROLE` パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に PowerPivot の `ASSERVERMODE` が省略可能になります。 詳細については、[コマンド プロンプトから PowerPivot をインストール](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)を参照してください。|  
+|MULTIDIMENSIONAL|これが既定値です。 `ASSERVERMODE` を設定しない場合、サーバーは多次元サーバー モードでインストールされます。|  
+|POWERPIVOT|この値は省略可能です。 実際には、`ROLE` パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に PowerPivot の `ASSERVERMODE` が省略可能になります。 詳細については、次を参照してください。[コマンド プロンプトから PowerPivot をインストール](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)します。|  
 |TABULAR|コマンド ライン セットアップを使用して Analysis Services を表形式モードでインストールする場合、この値は必須です。|  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services インスタンスのサーバー モードを決定します。](../determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Analysis Services インスタンスのサーバー モードの決定](../determine-the-server-mode-of-an-analysis-services-instance.md)   
  [メモリ内またはテーブル モデル データベース用 DirectQuery アクセスを構成します。](../../tabular-models/enable-directquery-mode-in-ssms.md)   
  [テーブル モデリング&#40;SSAS 表形式&#41;](../../tabular-models/tabular-models-ssas.md)  
   

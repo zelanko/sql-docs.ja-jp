@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 213768938a4fb9497fcbebad15f1dc4b84e1dba9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722424"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)
   データに基づくモデル フィルターは、マイニング構造内のデータのサブセットを使用するマイニング モデルを作成するのに役立ちます。 フィルターを使用すると、包括的なデータ ソース ビューに基づいて 1 つのマイニング構造を作成できるため、マイニング構造とデータ ソースを柔軟に設計できます。 つまり、さまざまなモデルのトレーニングとテストを行う場合に、データの各サブセットに対して個別の構造と関連モデルを作成する代わりに、データの一部だけを使用するためのフィルターを作成することができます。  
@@ -123,6 +123,6 @@ ms.locfileid: "52395945"
   
 ## <a name="see-also"></a>参照  
  [モデル フィルターの構文と例 (Analysis Services - データ マイニング)](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
   
   

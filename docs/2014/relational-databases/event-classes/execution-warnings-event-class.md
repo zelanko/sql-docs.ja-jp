@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662415"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings イベント クラス
   Execution Warnings イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントまたはストアド プロシージャの実行中にメモリ許可警告が発生したことを示します。 このイベント クラスを監視すると、クエリが処理を続行する前にメモリを 1 秒以上待機する必要があったかどうかや、メモリを取得するための最初の試行が失敗したかどうかを調べることができます。 クエリの待機時間に関する情報は、システムのパフォーマンスに影響を与える競合問題の特定に役立ちます。  

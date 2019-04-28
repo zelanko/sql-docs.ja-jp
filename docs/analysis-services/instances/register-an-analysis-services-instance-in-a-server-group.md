@@ -1,5 +1,5 @@
 ---
-title: サーバー グループ内の Analysis Services インスタンスの登録 |Microsoft ドキュメント
+title: サーバー グループ内の Analysis Services インスタンスの登録 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 45edecf23d0db4580aad134780ee31ea938e887c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62708996"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>サーバー グループへの Analysis Services インスタンスの登録
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

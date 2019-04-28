@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657672"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>[処理オプション] プロパティ ページ (レポート マネージャー)
   現在選択されているレポートのレポート実行プロパティを設定するには、[処理オプション] プロパティ ページを使用します。 これらのオプションでは、レポートのデータ処理を行うタイミングを決定します。 これらのオプションを設定して、オフピーク時間中にレポート データを取得できます。 また、頻繁にアクセスされるレポートがある場合に、複数のユーザーが同時に同じレポートにアクセスしたときの待ち時間をなくすために、そのコピーを一時的にキャッシュすることができます。  

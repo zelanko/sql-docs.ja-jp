@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6108a35d3f1c51f4d3dedbcf673be1d837091b71
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692071"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text イベント クラス
   Showplan Text イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントを実行したときに発生します。 含まれる情報は、Showplan All、Showplan XML Statistics Profile、または Showplan XML イベント クラスで利用できる情報のサブセットです。  

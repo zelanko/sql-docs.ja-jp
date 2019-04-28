@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 449cf64468f7dcb3925b09af08fd0661f23b1cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695745"
 ---
 # <a name="create-a-master-data-services-database"></a>マスター データ サービス データベースの作成
 
@@ -24,7 +24,7 @@ ms.locfileid: "47818590"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションと [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web サービスをサポートする新しいデータベースが必要な場合は、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
   
 -   データベースをホストするコンピューターの要件の詳細については、「[データベース要件 &#40;マスター データ サービス&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)」を参照してください。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "47818590"
   
 4.  データベースを作成および構成する**データベースの作成** ウィザードを完了します。 ウィザードのユーザー インターフェイス (UI) オプションの詳細については、「[データベースの作成ウィザード &#40;マスター データ サービス構成マネージャー&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
   
 -   データベースと Web アプリケーションのシステム設定を構成します。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   

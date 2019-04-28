@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703323"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>PowerPivot for SharePoint インストールの確認
   SharePoint ファームにインストールした PowerPivot for SharePoint インスタンスは、SharePoint サーバーの全体管理から管理されます。 PowerPivot のサーバー コンポーネントと機能が使用可能になっているかどうかは、少なくとも、サーバーの全体管理および SharePoint サイトのページを調べれば確認できます。 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる PowerPivot ブックが必要になります。 テストの際には、既に PowerPivot データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
@@ -55,7 +55,7 @@ ms.locfileid: "53355083"
   
 8.  クリックして**Default PowerPivot Service Application**をこのアプリケーションの PowerPivot 管理ダッシュ ボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
-     代わりに、横に空白部分をクリックして**Default PowerPivot Service Application** 、行を選択して **プロパティ**このサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)を参照してください。  
+     代わりに、横に空白部分をクリックして**Default PowerPivot Service Application** 、行を選択して **プロパティ**このサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、次を参照してください。[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](../../power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)します。  
   
 ## <a name="verify-integration-at-the-site-level"></a>サイト レベルでの統合の確認  
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  

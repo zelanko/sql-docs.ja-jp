@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6df31a3de47ca9e8e792258a7123c8b20e7a35ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710028"
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog プロパティの例 (VC++)
 次のコードを使用する方法を示します、 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)カタログにテーブルを追加する前に、プロバイダー固有のプロパティにアクセスするプロパティ。 プロパティが**AutoIncrement**、Microsoft Jet データベースを [自動増分] フィールドを作成します。  

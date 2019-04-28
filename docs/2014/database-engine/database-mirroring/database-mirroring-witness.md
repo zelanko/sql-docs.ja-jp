@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807631"
 ---
 # <a name="database-mirroring-witness"></a>データベース ミラーリング監視サーバー
   自動フェールオーバーをサポートするには、データベース ミラーリング セッションが高い安全性モードで構成されている必要があります。また、このセッションに *監視サーバー*と呼ばれる 3 番目のサーバー インスタンスを配置する必要もあります。 ミラーリング監視サーバーは、必要に応じて配置できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスです。ミラーリング監視サーバーを使用することにより、高い安全性モードのセッションのミラー サーバーが、自動フェールオーバーを開始するかどうかを決定できるようになります。 2 つのパートナーとは異なり、ミラーリング監視サーバーではデータベースの操作は行いません。 ミラーリング監視サーバーの唯一の役割は、自動フェールオーバーをサポートすることです。  
@@ -51,7 +51,7 @@ ms.locfileid: "48183832"
 ##  <a name="SwHwRecommendations"></a> ソフトウェアとハードウェアの推奨事項  
  ミラーリング監視サーバーは、パートナーとは別のコンピューターに常駐させることを強くお勧めします。 データベース ミラーリング パートナーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition でのみサポートされます。 一方、ミラーリング監視サーバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express でもサポートされます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からアップグレードしている間を除き、ミラーリング セッション内のすべてのサーバー インスタンスでは、同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行している必要があります。 たとえば、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ミラーリング監視サーバーは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ミラーリング構成からアップグレードする場合にサポートされますが、既存または新規の [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 以降のミラーリング構成には追加できません。  
   
- ミラーリング監視サーバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこれらのエディションのいずれかをサポートする任意の信頼性の高いコンピューター システムで実行できます。 ただし、実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Standard バージョンに必要な最小構成のサーバー インスタンスをミラーリング監視サーバーとして使用することをお勧めします。 これらの要件の詳細については、[Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)を参照してください。  
+ ミラーリング監視サーバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこれらのエディションのいずれかをサポートする任意の信頼性の高いコンピューター システムで実行できます。 ただし、実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Standard バージョンに必要な最小構成のサーバー インスタンスをミラーリング監視サーバーとして使用することをお勧めします。 これらの要件の詳細については、次を参照してください。 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)します。  
   
 ##  <a name="InAutoFo"></a> 自動フェールオーバーでのミラーリング監視サーバーの役割  
  データベース ミラーリング セッションの間は、すべてのサーバー インスタンスが接続の状態を監視します。 パートナー間の相互接続が失われると、各パートナーはミラーリング監視サーバーを使用して、少なくとも 1 つのパートナーが現在データベースとして機能していることを確認します。 同期ミラー サーバーからプリンシパル サーバーへの接続が失われても、ミラーリング監視サーバーとの接続が失われていなければ、ミラー サーバーはミラーリング監視サーバーにアクセスして、ミラーリング監視サーバーとプリンシパル サーバーとの接続が失われたかどうかを判断します。  
@@ -62,7 +62,7 @@ ms.locfileid: "48183832"
   
 -   ミラー サーバーからミラーリング監視サーバーおよびプリンシパル サーバーへの接続がどちらも失われた場合、プリンシパル サーバーがどのような状態であっても、自動フェールオーバーは行えません。  
   
- この少なくとも 2 つのサーバー インスタンスが接続されていなければならない要件を、 *クォーラム*と呼びます。 クォーラムでは、複数のパートナーが同時にデータベースとして機能することはないことが保証されます。 クォーラムの動作およびセッションに対するクォーラムの影響については、「 [クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)と呼ばれる 3 番目のサーバー インスタンスを配置する必要もあります。  
+ この少なくとも 2 つのサーバー インスタンスが接続されていなければならない要件を、 *クォーラム*と呼びます。 クォーラムでは、複数のパートナーが同時にデータベースとして機能することはないことが保証されます。 セッションのクォーラムのしくみとその影響については、次を参照してください。[クォーラム。データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 ##  <a name="AddRemoveWitness"></a> ミラーリング監視サーバーを追加または削除するには  
  **ミラーリング監視サーバーを追加するには**  
@@ -78,7 +78,7 @@ ms.locfileid: "48183832"
 ## <a name="see-also"></a>参照  
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリングの動作モード](database-mirroring-operating-modes.md)   
- [クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;データベース ミラーリング&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [クォーラム:ミラーリング監視サーバーがデータベースの可用性に与える影響&#40;データベース ミラーリング&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
  [データベース ミラーリング中に発生する可能性のあるエラー](possible-failures-during-database-mirroring.md)   
  [ミラーリング状態 &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

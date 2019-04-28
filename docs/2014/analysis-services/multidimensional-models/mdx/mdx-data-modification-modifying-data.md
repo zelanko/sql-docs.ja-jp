@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9e83cd72f972107b83bb6efea27d28857053e200
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699674"
 ---
 # <a name="modifying-data-mdx"></a>データの変更 (MDX)
   多次元式 (MDX) は、ディメンションやキューブのデータの取得や操作を行うためだけでなく、ディメンションやキューブのデータの更新、つまり*書き戻し*を行うためにも使用できます。 これらの更新は、推測分析または "what-if" 分析の場合のように一時的なものであることも、データ分析に基づいて変更を加える必要がある場合のように永続的なものになることもあります。  
@@ -37,6 +37,6 @@ ms.locfileid: "48177602"
  詳細については、「[キューブの書き戻しの使用 (MDX)](mdx-data-modification-using-cube-writebacks.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

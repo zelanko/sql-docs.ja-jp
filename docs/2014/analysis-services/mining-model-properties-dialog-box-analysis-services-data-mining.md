@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d7c4a8d59a150e159a5eab99fbedd777a241b58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703264"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>[マイニング モデルのプロパティ] ダイアログ ボックス (Analysis Services - データ マイニング)
   **の** [マイニング モデルのプロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのマイニング モデルのプロパティを設定できます。 **[マイニング モデルのプロパティ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** でマイニング モデルを右クリックして **[プロパティ]** をクリックします。  
@@ -34,7 +34,7 @@ ms.locfileid: "48179931"
 |**[説明]**|マイニング モデルの説明を表示します。|  
 |**[タイムスタンプの作成]**|マイニング モデルが作成された日時を表示します。|  
 |**[スキーマの最終更新]**|マイニング モデルのメタデータが最後に更新された日時を表示します。|  
-|**State**|マイニング モデルの処理状態を表示します。 このプロパティの値の詳細については、<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>を参照してください。|  
+|**State**|マイニング モデルの処理状態を表示します。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>」を参照してください。|  
 |**最後に処理されました。**|マイニング モデルが最後に処理された日時を表示します。|  
   
 ## <a name="see-also"></a>参照  

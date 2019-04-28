@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7605f4e5fd2fd6601cf1d132b438187edeeb29fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792042"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>可用性グループへのセカンダリ レプリカの追加 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、既存の AlwaysOn 可用性グループにセカンダリ レプリカを追加する方法について説明します。  
@@ -121,7 +121,7 @@ ms.locfileid: "52525850"
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> フォローしてください：セカンダリ レプリカを追加した後  
+##  <a name="FollowUp"></a> 補足情報:セカンダリ レプリカを追加した後  
  既存の可用性グループのレプリカを追加するには、次の手順を実行する必要があります。  
   
 1.  新しいセカンダリ レプリカをホストする予定のサーバー インスタンスに接続します。  

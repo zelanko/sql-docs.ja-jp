@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c54e545bdbd1ae137c24f79c71b53502480cbca9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690533"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>非同期関数の完了の通知
 Windows 8 SDK とでは、ODBC は、非同期操作が完了したら、完了時に通知する"として参照するアプリケーションに通知するためのメカニズムを追加します。 (を参照してください[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)詳細についてはします)。このトピックでは、ドライバー開発者向けの問題の一部を説明します。  

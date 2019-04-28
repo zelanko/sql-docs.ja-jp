@@ -1,9 +1,8 @@
 ---
 title: XSL 変換の適用 (SQLXML マネージ クラス) |マイクロソフトのドキュメント
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -13,19 +12,17 @@ helpviewer_keywords:
 - SQLXML Managed Classes, applying XSL transformations
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-author: MightyPen
-ms.author: genemi
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff7b05cf91351973fc7c7f0efbc9af0dfa901dea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720699"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 変換の適用 (SQLXML マネージド クラス)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   この例では、AdventureWorks データベースに対して SQL クエリを実行します。 クエリ結果には XSL 変換が適用され、従業員の名前と姓を示す 2 列のテーブルが生成されます。  
   
  SqlXmlCommand オブジェクトの XslPath プロパティは、XSL ファイルとディレクトリ パスを指定に使用されます。  

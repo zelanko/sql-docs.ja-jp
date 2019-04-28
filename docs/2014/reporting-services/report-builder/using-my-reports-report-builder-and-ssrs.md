@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 29e7003beeb5daa331a16c572994b4bb1a6ec6d4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697884"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>個人用レポートの使用 (レポート ビルダーおよび SSRS)
   [個人用レポート] フォルダーは、ネイティブ モードで構成されたレポート サーバーにおいて、所有しているレポートを保存したり、操作することができる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 一方、[個人用レポート] フォルダーは、ユーザーが管理する作業領域です。 個々のユーザーが独自の設定を基にレポートやフォルダーの追加や削除を行い、リンク レポートを保存することができます。  

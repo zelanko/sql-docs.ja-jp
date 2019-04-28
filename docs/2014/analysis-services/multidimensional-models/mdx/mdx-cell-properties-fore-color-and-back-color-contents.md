@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17b4bf37eef74824c51a81b97f8b2e5b204df3c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725426"
 ---
 # <a name="forecolor-and-backcolor-contents-mdx"></a>FORE_COLOR および BACK_COLOR の内容 (MDX)
   セル プロパティ `FORE_COLOR` および `BACK_COLOR` は、セルのテキストの色および背景色についての情報を Microsoft Windows オペレーティング システムの赤緑青 (RGB) 形式で格納します。  
@@ -32,6 +32,6 @@ ms.locfileid: "48051072"
  通常の RGB 色の有効範囲は 0 ～ 16,777,215 (&H00FFFFFF) です。 この範囲の高位バイトは常に 0 で、最も低いバイトから意味を成すバイトまでの下位 3 バイトによって、赤、緑、および青それぞれの量が決まります。 赤、緑、および青のコンポーネントは、それぞれ 0 ～ 255 (&HFF) までの数値で表されます。  
   
 ## <a name="see-also"></a>参照  
- [セルのプロパティを使用して&#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)  
+ [セル プロパティの使用 &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)  
   
   

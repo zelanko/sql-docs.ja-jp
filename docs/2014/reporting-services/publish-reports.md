@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657582"
 ---
 # <a name="publish-reports"></a>レポートのパブリッシュ
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]から、プロジェクトを配置してレポート サーバーにレポート サーバー プロジェクト内のすべてのレポートおよび共有データ ソースをパブリッシュしたり、単一のレポートをパブリッシュしたりできます。 レポートをパブリッシュする前に、ターゲット レポート サーバーの URL を指定する必要があります。 詳細については、「[配置プロパティを設定する (Reporting Services)](tools/set-deployment-properties-reporting-services.md)」を参照してください。  

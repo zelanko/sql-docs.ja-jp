@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffa01b53544d0af2ea12b146a122ff51e58cfcad
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657878"
 ---
 # <a name="relational-query-designer-user-interface"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のレポート デザイナーにはグラフィカル クエリ デザイナーとテキストベースのクエリ デザイナーが用意されており、レポート データセット用に [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] から取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  

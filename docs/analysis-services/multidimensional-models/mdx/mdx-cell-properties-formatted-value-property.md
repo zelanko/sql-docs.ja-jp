@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE と FORMAT_STRING FORMATTED_VALUE の |Microsoft ドキュメント
+title: LANGUAGE と FORMAT_STRING FORMATTED_VALUE の |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ad2038e28afb455dd1ad239a2bf02cab99ed4d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807566"
 ---
-# <a name="mdx-cell-properties---formattedvalue-property"></a>MDX のセルのプロパティ - FORMATTED_VALUE プロパティ
+# <a name="mdx-cell-properties---formattedvalue-property"></a>MDX セル プロパティ - FORMATTED_VALUE プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および LANGUAGE の各プロパティの相互作用に基づいて構築されます。 このトピックではそのしくみについて説明します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34026959"
 ## <a name="formattedvalue-constructed"></a>FORMATTED_VALUE の構築  
  FORMATTED_VALUE プロパティは、FORMAT_STRING プロパティで指定されている書式設定テンプレートを VALUE プロパティの値に適用することによって構築されます。 また、書式設定値が **名前付き書式設定リテラル** の場合は、LANGUAGE プロパティで指定されている言語の用法に従って FORMAT_STRING の出力が変更されます。 名前付き書式設定リテラルはすべてローカライズできるように定義されています。 たとえば `"General Date"` はローカライズ可能な指定ですが、 `"YYYY-MM-DD hh:nn:ss",` は、言語の指定に関係なくこの定義のとおりに日付を表示するように指定するテンプレートです。  
   
- FORMAT_STRING のテンプレートと LANGUAGE の指定が競合している場合は、FORMAT_STRING のテンプレートが LANGUAGE の指定よりも優先されます。 たとえば、FORMAT_STRING="$ #0"、LANGUAGE=1034 (スペイン)、VALUE=123.456 の場合、書式設定テンプレートの値が言語の指定よりも優先されるため、FORMATTED_VALUE="€ 123" (予想される書式) ではなく FORMATTED_VALUE="$ 123" になります。  
+ FORMAT_STRING のテンプレートと LANGUAGE の指定が競合している場合は、FORMAT_STRING のテンプレートが LANGUAGE の指定をオーバーライドします。 たとえば、FORMAT_STRING="$ #0"、LANGUAGE=1034 (スペイン)、VALUE=123.456 の場合、書式設定テンプレートの値が言語の指定よりもオーバーライドされるため、FORMATTED_VALUE="€ 123" (予想される書式) ではなく FORMATTED_VALUE="$ 123" になります。  
   
 ### <a name="examples"></a>使用例  
  以下の例は、LANGUAGE と FORMAT_STRING を組み合わせて使用した場合に得られる出力を示しています。  
@@ -76,11 +76,11 @@ ms.locfileid: "34026959"
   
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
   
-|メンバー|FORMATTED_VALUE|説明|  
+|Member|FORMATTED_VALUE|説明|  
 |------------|----------------------|-----------------|  
 |A|$5,040.00|FORMAT_STRING が `Currency` に設定され、LANGUAGE が `1033`に設定されています (システム ロケール値から継承)。|  
 |B|€5.040,00|FORMAT_STRING が `Currency` に設定され (A から継承)、LANGUAGE が明示的に `1034` (スペイン) に設定されています。したがって、ユーロ記号が使用され、小数点と桁の区切り文字も変わっています。|  
-|C|$5.040,00|FORMAT_STRING が `$#,##0.00` に設定されて、A から継承された Currency が優先されています。LANGUAGE は明示的に `1034` (スペイン) に設定されています。 FORMAT_STRING プロパティで通貨記号が明示的に $ に設定されているため、FORMATTED_VALUE には $ 記号が付いています。 一方、 `.` (ドット) と `,` (コンマ) はそれぞれ小数点区切り文字と桁区切り文字のプレースホルダーであるため、言語の指定の影響を受けます。したがって、小数点と桁の区切り文字がローカライズされた出力が生成されています。|  
+|c|$5.040,00|FORMAT_STRING が `$#,##0.00` に設定されて、A から継承された Currency がオーバーライドされています。LANGUAGE は明示的に `1034` (スペイン) に設定されています。 FORMAT_STRING プロパティで通貨記号が明示的に $ に設定されているため、FORMATTED_VALUE には $ 記号が付いています。 一方、 `.` (ドット) と `,` (コンマ) はそれぞれ小数点区切り文字と桁区切り文字のプレースホルダーであるため、言語の指定の影響を受けます。したがって、小数点と桁の区切り文字がローカライズされた出力が生成されています。|  
 |D|5.04E+03|FORMAT_STRING が `Scientific` に設定され、LANGUAGE が `1033`に設定されています (システム ロケール値から継承)。したがって、小数点区切り文字が `.` (ドット) になっています。|  
 |E|5,04E+03|FORMAT_STRING が `Scientific` に設定され、LANGUAGE が明示的に `1034,` に設定されています。したがって、小数点区切り文字が `,` (コンマ) になっています。|  
 |F|50.40%|FORMAT_STRING が `Percent` に設定され、LANGUAGE が `1033`に設定されています (システム ロケール値から継承)。したがって、小数点区切り文字が `.` (ドット) になっています。<br /><br /> VALUE が 5040 から 0.5040 に変更されたことに注意してください。|  
@@ -126,11 +126,11 @@ ms.locfileid: "34026959"
   
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を使用して上の MDX クエリをロケール 1033 のサーバーとクライアントで実行すると、結果 (置き換え後) は次のようになります。  
   
-|メンバー|FORMATTED_VALUE|説明|  
+|Member|FORMATTED_VALUE|説明|  
 |------------|----------------------|-----------------|  
 |A|3/12/1959 6:30:00 AM|FORMAT_STRING が CDate() 式によって暗黙的に `General Date` に設定され、LANGUAGE が `1033` (英語) に設定されています (システム ロケール値から継承)。|  
 |B|Thursday, March 12, 1959|FORMAT_STRING が明示的に `Long Date` に設定され、LANGUAGE が `1033` (英語) に設定されています (システム ロケール値から継承)。|  
-|C|12/03/1959 6:30:00|FORMAT_STRING が明示的に `General Date` に設定され、LANGUAGE が明示的に `1034` (スペイン語) に設定されています。<br /><br /> 月と日の位置が米国の書式スタイルとは逆になっていることに注意してください。|  
+|c|12/03/1959 6:30:00|FORMAT_STRING が明示的に `General Date` に設定され、LANGUAGE が明示的に `1034` (スペイン語) に設定されています。<br /><br /> 月と日の位置が米国の書式スタイルとは逆になっていることに注意してください。|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING が明示的に `Long Date` に設定され、LANGUAGE が明示的に `1034` (スペイン語) に設定されています。<br /><br /> 月と曜日がスペイン語になっていることに注意してください。|  
 |E|1959/03/12 6:30:00|FORMAT_STRING が明示的に `General Date` に設定され、LANGUAGE が明示的に `1041` (日本語) に設定されています。<br /><br /> 日付の書式が "年/月/日 時:分:秒" になったことに注意してください。|  
 |F|1959年3月12日|FORMAT_STRING が明示的に `Long Date` に設定され、LANGUAGE が明示的に `1041` (日本語) に設定されています。|  
@@ -142,9 +142,9 @@ ms.locfileid: "34026959"
 |L|06:30|FORMAT_STRING が明示的に `Short Time` に設定され、LANGUAGE が明示的に `1041` (日本語) に設定されています。|  
   
 ## <a name="see-also"></a>参照  
- [FORMAT_STRING の内容と #40 です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [セルのプロパティ & #40; を使用します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [作成とプロパティの値 & #40; を使用MDX と #41 です。](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [FORMAT_STRING の内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [セル プロパティの使用 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [プロパティ値の作成および使用&#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

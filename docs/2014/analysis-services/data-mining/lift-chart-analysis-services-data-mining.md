@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722288"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>リフト チャート (Analysis Services - データ マイニング)
   A**リフト チャート**グラフィカルにマイニング モデルと比較した場合は、ランダムな推測に対する改善し、の観点で変化を測定する*リフト*スコア。 データ セットのさまざまな部分とさまざまなモデルのリフト スコアを比較すると、どのモデルが最適で、データ セット内のケースのどの割合が、モデルの予測を適用するメリットを確認できます。  
@@ -118,6 +118,6 @@ ms.locfileid: "52398016"
  [トップに戻る](#bkmk_Top)  
   
 ## <a name="see-also"></a>参照  
- [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
   
   

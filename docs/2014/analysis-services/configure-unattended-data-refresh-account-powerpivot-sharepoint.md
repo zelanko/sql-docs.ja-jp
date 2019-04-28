@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680562"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>PowerPivot 自動データ更新アカウントの構成 (PowerPivot for SharePoint)
-  PowerPivot 自動データ更新アカウントは、SharePoint ファームで PowerPivot データ更新ジョブを実行するために指定されたアカウントです。 これを構成して有効にすると、**データ更新アカウントの管理者によって構成を使用**オプション、データ更新スケジュール ページ (下記参照)。 データ更新をスケジュールするブックの作成者は、データ更新ジョブの実行に PowerPivot 自動データ更新アカウントを使用したい場合に、このオプションを選択できます。 データ更新スケジュールで、資格情報オプションを表示する方法の詳細については、[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)を参照してください。  
+  PowerPivot 自動データ更新アカウントは、SharePoint ファームで PowerPivot データ更新ジョブを実行するために指定されたアカウントです。 これを構成して有効にすると、**データ更新アカウントの管理者によって構成を使用**オプション、データ更新スケジュール ページ (下記参照)。 データ更新をスケジュールするブックの作成者は、データ更新ジョブの実行に PowerPivot 自動データ更新アカウントを使用したい場合に、このオプションを選択できます。 データ更新スケジュールで、資格情報オプションを表示する方法の詳細については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
@@ -37,7 +37,7 @@ ms.locfileid: "53366596"
   
  [手順 2:PowerPivot サーバー構成ページで自動アカウントを指定します。](#bkmk_specifyUA)  
   
- [手順 3:許可、アカウントへのアクセス許可を投稿します。](#bkmk_grant)  
+ [ステップ 3:許可、アカウントへのアクセス許可を投稿します。](#bkmk_grant)  
   
  [手順 4:読み取りデータの更新で使用される外部データ ソースにアクセスする権限の付与](#bkmk_dbread)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53366596"
   
 -   [データ更新の管理] スケジュール ページで、パブリッシュされた PowerPivot ブックのアカウントが使用できることを確認する。  
   
-###  <a name="bkmk_create"></a> 手順 1:ターゲット アプリケーションを作成し、資格情報の設定  
+###  <a name="bkmk_create"></a> ステップ 1:ターゲット アプリケーションを作成し、資格情報の設定  
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "53366596"
   
 16. **[OK]** をクリックします。  
   
-###  <a name="bkmk_specifyUA"></a> 手順 2:PowerPivot サーバー構成ページで自動アカウントを指定します。  
+###  <a name="bkmk_specifyUA"></a> ステップ 2:PowerPivot サーバー構成ページで自動アカウントを指定します。  
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "53366596"
   
 6.  **[OK]** をクリックします。  
   
-###  <a name="bkmk_grant"></a> 手順 3:許可、アカウントへのアクセス許可を投稿します。  
+###  <a name="bkmk_grant"></a> ステップ 3:許可、アカウントへのアクセス許可を投稿します。  
  PowerPivot 自動データ更新アカウントを使用する前に、使用する任意の PowerPivot ブックに対する投稿権限をこのアカウントに割り当てる必要があります。 この権限レベルは、ライブラリからブックを開き、データの更新後に再度ライブラリに保存するために必要です。  
   
  権限の割り当ては、サイト コレクションの管理者が実行する手順です。 SharePoint の権限は、ルート サイト コレクションで割り当てるか、ルート サイト コレクションより下位の任意のレベル (個々のドキュメントやアイテムを含む) で割り当てることができます。 権限の設定方法は、権限をどのくらい細かく設定する必要があるかによって異なります。 次の手順は、権限を付与する方法の一例を示しています。  
@@ -149,7 +149,7 @@ ms.locfileid: "53366596"
   
 ###  <a name="bkmk_verify"></a> 手順 5:データ更新構成ページでアカウントを使用できることを確認します。  
   
-1.  PowerPivot データが含まれているパブリッシュ済みのブックのデータ更新構成ページを開きます。 ページを開く方法の詳細については、[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)を参照してください。  
+1.  PowerPivot データが含まれているパブリッシュ済みのブックのデータ更新構成ページを開きます。 ページを開く方法の詳細については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。  
   
 2.  いることを確認、**データ更新アカウントの管理者によって構成を使用**データ更新構成ページでオプションを有効にします。  
   
@@ -159,14 +159,14 @@ ms.locfileid: "53366596"
   
  エラーが発生する場合はクリックして**スケジュールの構成**データ更新履歴 ページに別の資格情報をお試しください。 元のブックのデータ ソース接続情報を調べて、データ更新時に使用される接続文字列を表示することが必要な場合もあります。 接続文字列は、問題のトラブルシューティングに使用できるサーバーの場所とデータベースに関する情報を提供します。  
   
- トラブルシューティングの詳細については、[PowerPivot データ更新のトラブルシューティング](https://go.microsoft.com/fwlink/p/?LinkID=223279)、TechNet Wiki にを参照してください。  
+ トラブルシューティングの詳細については、次を参照してください。 [PowerPivot データ更新のトラブルシューティング](https://go.microsoft.com/fwlink/p/?LinkID=223279)、TechNet Wiki にします。  
   
 ##  <a name="bkmk_use"></a> PowerPivot 自動データ更新を使用するアカウント  
  PowerPivot データ更新スケジュール ページの 3 つの資格情報オプションのうち、自動データ更新アカウントに対応するのは最初のオプションだけです。 データ更新スケジュールを設定する場合は、必ずこのオプションを選択してください。  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
- PowerPivot 自動データ更新アカウントへのアクセスには第 3 の資格情報オプション (ターゲット アプリケーション ID の入力を必要とするオプション) を使用しないでください。 このオプションで実行される追加の権限借用チェックにより、このオプションを PowerPivot 自動データ更新アカウント (または、[個人] アカウントの種類に基づくターゲット アプリケーション) と共に使用しようとすると検証エラーが発生します。 3 番目のオプションを使用する方法の詳細については、[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)を参照してください。  
+ PowerPivot 自動データ更新アカウントへのアクセスには第 3 の資格情報オプション (ターゲット アプリケーション ID の入力を必要とするオプション) を使用しないでください。 このオプションで実行される追加の権限借用チェックにより、このオプションを PowerPivot 自動データ更新アカウント (または、[個人] アカウントの種類に基づくターゲット アプリケーション) と共に使用しようとすると検証エラーが発生します。 3 番目のオプションを使用する方法の詳細については、次を参照してください。[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)します。  
   
 ##  <a name="bkmk_editUA"></a> 既存の PowerPivot で使用される資格情報を更新する自動データ更新アカウント  
  セットアップまたは管理者によって自動データ更新アカウントが既に構成されている場合は、資格情報が保存されているターゲット アプリケーションを編集することで、ユーザー名またはパスワードを更新できます。 以前に PowerPivot 自動データ更新アカウントに関連付けられていた元の Windows ID は、Secure Store Service で資格情報を編集するときに表示されません。 期限切れのパスワードを更新するか、別のアカウントを指定するかにかかわらず、常に Secure Store Service でそのターゲット アプリケーションのユーザー名とパスワードの両方を再入力する必要があります。  
@@ -187,7 +187,7 @@ ms.locfileid: "53366596"
   
 8.  **[OK]** をクリックします。  
   
- パスワードだけでなく、アカウントのユーザー名も変更する場合、通常は外部データ ソースに対する読み取り権限や PowerPivot ブックを更新するための SharePoint 権限の付与などの追加の構成手順を実行する必要があります。 手順については、PowerPivot 自動データ更新アカウントの構成には、この手順を参照してください。[手順 3:許可、アカウントへのアクセス許可の貢献](#bkmk_grant)、し、アカウントが正しく構成されていることの確認の終端、残りのすべての手順を続行します。  
+ パスワードだけでなく、アカウントのユーザー名も変更する場合、通常は外部データ ソースに対する読み取り権限や PowerPivot ブックを更新するための SharePoint 権限の付与などの追加の構成手順を実行する必要があります。 手順については、PowerPivot 自動データ更新アカウントの構成には、この手順を参照してください。[ステップ 3:許可、アカウントへのアクセス許可の貢献](#bkmk_grant)、し、アカウントが正しく構成されていることの確認の終端、残りのすべての手順を続行します。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2010 で PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)   

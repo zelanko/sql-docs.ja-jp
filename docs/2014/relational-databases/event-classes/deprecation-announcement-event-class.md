@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16cb4a7d0ac1cec33f3f9907b1b49e5588f45247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663003"
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement イベント クラス
   **Deprecation Announcement** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次回メジャー リリースでは削除されないが、将来のバージョンで削除される予定の機能を使用すると発生します。 アプリケーションを長期にわたって使用する場合は、 **Deprecation Announcement** イベント クラスまたは **Deprecation Final Support** イベント クラスの原因になる機能を使用しないでください。  

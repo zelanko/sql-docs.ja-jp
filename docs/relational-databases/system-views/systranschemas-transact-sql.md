@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3339cf1731c712cdfee7145390d5cc955c748a98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693626"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "52760704"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**tabid**|**int**|スキーマ変更が発生するテーブル アーティクルを指定します。|  
+|**tabid**|**int**|スキーマの変更が発生したテーブル アーティクルを識別します。|  
 |**startlsn**|**[バイナリ]**|スキーマ変更開始時の LSN 値です。|  
-|**endlsn**|**[バイナリ]**|スキーマ変更終了時の LSN 値です。|  
+|**endlsn**|**[バイナリ]**|スキーマ変更の最後の LSN 値です。|  
 |**typeid**|**int**|スキーマ変更のタイプです。|  
   
 ## <a name="see-also"></a>参照  

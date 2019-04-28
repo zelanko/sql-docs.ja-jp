@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 614674d3ac7a14ec3a6143381ef249a215850bc0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703552"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 のインストール
   このトピックでは、SharePoint 配置モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのシングル サーバー インストールの手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint 2013 サーバーの全体管理を使用する構成タスクが含まれます。  
@@ -33,7 +33,7 @@ ms.locfileid: "53373974"
   
  [手順 2:基本的な Analysis Services の SharePoint 統合を構成します。](#bkmk_config)  
   
- [手順 3:統合を確認します。](#bkmk_verify)  
+ [ステップ 3:統合を確認します。](#bkmk_verify)  
   
  [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](#bkmk_firewall)  
   
@@ -69,13 +69,13 @@ ms.locfileid: "53373974"
 6.  リリース ノートを確認して[SQL Server 2012 Service Pack 1 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389)します。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
- ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、[SQL Server 2012 の各エディションでサポートされる機能 (https://go.microsoft.com/fwlink/?linkid=232473) ](https://go.microsoft.com/fwlink/?linkid=232473)と[エディションと SQL Server 2014 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)を参照してください。  
+ ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、次を参照してください。 [SQL Server 2012 の各エディションでサポートされる機能 (https://go.microsoft.com/fwlink/?linkid=232473) ](https://go.microsoft.com/fwlink/?linkid=232473)と[エディションと SQL Server 2014 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
  現在のリリース ノートをご覧[SQL Server 2012 SP1 リリース ノート](ttp://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389)します。  
   
  [Microsoft SQL Server 2012 リリース ノート (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893)します。  
   
-##  <a name="InstallSQL"></a> 手順 1:PowerPivot for SharePoint インストールします。  
+##  <a name="InstallSQL"></a> ステップ 1:PowerPivot for SharePoint インストールします。  
  この手順では、SQL Server セットアップを実行して、SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールします。 後の手順で、このサーバーをブックのデータ モデルで使用するように Excel Services を構成します。  
   
 1.  SQL Server インストール ウィザード (Setup.exe) を実行します。  
@@ -158,7 +158,7 @@ ms.locfileid: "53373974"
   
 3.  Analysis Services インスタンス (たとえば、 **[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
   
-##  <a name="bkmk_config"></a> 手順 2:基本的な Analysis Services の SharePoint 統合を構成する  
+##  <a name="bkmk_config"></a> ステップ 2:基本的な Analysis Services の SharePoint 統合を構成する  
  SharePoint ドキュメント ライブラリ内で Excel の高度なデータ モデルを操作できるようにするには、次の手順を実行して構成を変更する必要があります。 これらの手順は、SharePoint Server 2013 と SQL Server Analysis Services をインストールしてから実行します。  
   
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Excel Services への Analysis Services に対するサーバー管理権限の付与  
@@ -203,7 +203,7 @@ ms.locfileid: "53373974"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 手順 3:統合を確認する  
+##  <a name="bkmk_verify"></a> ステップ 3:統合を確認する  
  ここでは、Analysis Services 統合を確認するために、新しいブックを作成し、アップロードする手順を示します。 この手順を実行するには、SQL Server データベースが必要です。  
   
 1.  **注:** スライサーやフィルターが含まれた高度なブックが既にある場合は、そのブックを SharePoint ドキュメント ライブラリにアップロードし、[ドキュメント ライブラリ] ビューからスライサーとフィルターを操作できるかどうかを確認します。  

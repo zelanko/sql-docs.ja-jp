@@ -14,17 +14,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8e50253b7c7fb6c59b4303c528c1ef7267ccf644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706074"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE と SQL Server データ型とのマッピング (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースの型。 ASE データベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトを ASE からのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次のセクションで示すようにします。  
   
 ## <a name="default-mappings"></a>既定のマッピング  
-SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、[プロジェクト設定&#40;型マッピングの&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)を参照してください。  
+SSMA では、データ型マッピングの既定セットがあります。 既定のマッピングの一覧で、次を参照してください。[プロジェクト設定&#40;型マッピングの&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)します。  
   
 ## <a name="type-mapping-inheritance"></a>継承のマッピングの種類  
 プロジェクト レベル、オブジェクトのカテゴリ レベル (などすべてストアド プロシージャの場合)、またはオブジェクト レベルでは、型マッピングをカスタマイズすることができます。 設定は、下位のレベルでオーバーライドされない限りより高いレベルから継承されます。 たとえば、マップする**smallmoney**に**money**カテゴリ レベルのオブジェクトまたはオブジェクト レベルでマッピングをカスタマイズしない限り、このマッピング プロジェクト レベルでは、プロジェクト内のすべてのオブジェクトが使用されます。  

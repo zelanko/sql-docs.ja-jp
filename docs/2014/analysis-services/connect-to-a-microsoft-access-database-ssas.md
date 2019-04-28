@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36c3f4a6219e615fe2cf11e718bd1ef47869f85a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680137"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>[Microsoft Access データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、Microsoft Access データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

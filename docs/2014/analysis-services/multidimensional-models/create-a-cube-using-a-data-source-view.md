@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700117"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>データ ソース ビューを使用したキューブの作成
   既存のデータ ソース ビューを使用する場合、新しいキューブを構築するには、ここで説明する方法を使用します。 この方法では、データ ソース ビューを指定して、データ ソース ビューで使用するファクト テーブルとディメンション テーブルを選択します。 次に、キューブに含めるディメンションとメジャーを選択します。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b8412cf0465594c2546c18990be51510f8938c27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62707006"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- 詳細については、この構文を使用して、[SELECT FROM&#60;モデル&#62;を参照してください。コンテンツ&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)します。 マイニング モデル コンテンツ スキーマ行セットの詳細については、[DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)を参照してください。  
+ 詳細については、この構文を使用して、次を参照してください。 [SELECT FROM&#60;モデル&#62;します。コンテンツ&#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)します。 マイニング モデル コンテンツ スキーマ行セットの詳細については、次を参照してください。 [DMSCHEMA_MINING_MODEL_CONTENT 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)します。  
   
  場合、\<ノードのキャプション > が指定されていない、入力ケースが最も高いクラスターに属している確率を返します。 使用して、**クラスター**関数可能性が最も高いクラスターを返します。  
   

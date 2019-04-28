@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40a494f4cf157b85f13327f8367b90e8db2fcce7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693766"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52757035"
 |**sync_objid**|**int**|アーティクルの定義を表すテーブルまたはビューの ID です。|  
 |**type**|**tinyint**|アーティクルのタイプです。<br /><br /> **1**ログベースのアーティクルを = です。<br /><br /> **3** = 手動フィルター付きログベースのアーティクルです。<br /><br /> **5** = 手動ビュー付きログベースのアーティクルです。<br /><br /> **7** = 手動フィルターおよび手動ビュー付きログベースのアーティクルです。|  
 |**upd_cmd**|**nvarchar (255)**|UPDATE 時に実行するコマンド、またはログから作成するコマンドです。|  
-|**schema_option**|**[バイナリ]**|パブリッシュされたオブジェクトのどのプロパティをスナップショットにスクリプト作成するのかを示します。 サポートされるスキーマ オプションの一覧は、[sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を参照してください。|  
+|**schema_option**|**[バイナリ]**|パブリッシュされたオブジェクトのどのプロパティをスナップショットにスクリプト作成するのかを示します。 サポートされるスキーマ オプションの一覧は、次を参照してください。 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)します。|  
 |**dest_owner**|**nvarchar(128)**|目的のデータベースにおけるテーブルの所有者です。|  
 |**ins_scripting_proc**|**int**|INSERT ステートメントがレプリケートされるときに実行されるカスタム ストアド プロシージャまたはスクリプトのオブジェクト識別子です。|  
 |**del_scripting_proc**|**int**|DELETE ステートメントがレプリケートされるときに実行されるカスタム ストアド プロシージャまたはスクリプトのオブジェクト識別子です。|  

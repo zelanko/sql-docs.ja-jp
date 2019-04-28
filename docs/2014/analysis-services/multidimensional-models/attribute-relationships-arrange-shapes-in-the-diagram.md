@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 459afedd5d9e9e417410961d010c6b650eb0a01e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701389"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>属性リレーションシップ ダイアグラムでの図形の整列
   **のディメンション デザイナーでは、[ディメンション構造] ビューの** [属性リレーションシップ] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで図形の配置を変更できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48090532"
      **[図形の整列]** をクリックし、ディメンション デザイナーで使用される配置アルゴリズムに従ってすべての図形を自動的に整列することもできます。  
   
 ## <a name="see-also"></a>参照  
- [属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [のディメンション デザイナーでは、[ディメンション構造] ビューの](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [属性リレーションシップの定義](attribute-relationships-define.md)  
   
   

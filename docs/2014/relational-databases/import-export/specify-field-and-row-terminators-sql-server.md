@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712799"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
   文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ* を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。  
@@ -125,7 +125,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      次の表に示す修飾子を使用して、フォーマット ファイル内の個別のフィールドまたはデータ ファイル全体にターミネータを指定できます。  
   
-    |Qualifier|説明|  
+    |修飾子|説明|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='*`field_terminator`*'**|文字データ ファイルや Unicode 文字データ ファイルに使用されるフィールド ターミネータを指定します。<br /><br /> 既定値は \t (タブ文字) です。|  
     |ROWTERMINATOR **='*`row_terminator`*'**|文字データ ファイルや Unicode 文字データ ファイルに使用される行ターミネータを指定します。<br /><br /> 既定値は \n (改行記号) です。|  

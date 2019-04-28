@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704003"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>既存のマイニング構造へのマイニング モデルの追加
   初期モデルを追加した後、マイニング構造にマイニング モデルを追加できます。 各モデルには構造内に存在する列が含まれている必要がありますが、列の使用法はマイニング モデルごとにそれぞれ定義できます。 マイニング モデルの列を定義する方法の詳細については、「 [マイニング モデル列](mining-model-columns.md)」を参照してください。  

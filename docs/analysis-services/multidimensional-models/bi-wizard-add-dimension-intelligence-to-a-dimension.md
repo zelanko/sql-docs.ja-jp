@@ -1,5 +1,5 @@
 ---
-title: ディメンションにディメンション インテリジェンスの追加 |Microsoft ドキュメント
+title: ディメンションにディメンション インテリジェンスの追加 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad714bfefa8010664a8105eebf1f45d63799847c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717349"
 ---
-# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションにディメンション インテリジェンスを追加します。
+# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションへのディメンション インテリジェンスの追加
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   ディメンションに標準のビジネスの種類を指定するには、ディメンション インテリジェンス拡張機能をキューブまたはディメンションに追加します。 この拡張機能により、ディメンション属性に対応する型も指定されます。 クライアント アプリケーションでは、指定された種類をデータの分析時に使用できます。  
   
@@ -36,6 +36,6 @@ ms.locfileid: "34027209"
  たとえば、勘定科目ディメンションにディメンション インテリジェンスを追加するには、 **[ディメンションの種類]** で **[勘定科目]** を選択します。 次に、このディメンションに **[勘定科目の種類]** 属性と **[勘定科目の説明]** 属性がある場合は、 **[追加]** 列で、 **[勘定科目名]** と **[勘定科目の種類]** の、各勘定科目の種類に対応するチェック ボックスをオンにします。 さらに **[ディメンションの属性]** 列で、これらの勘定科目の種類をディメンションの **[勘定科目の説明]** 属性と **[勘定科目の種類]** 属性にそれぞれ関連付けます。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス インテリジェンス ウィザードを使用してタイム インテリジェンス計算の定義します。](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [ビジネス インテリジェンス ウィザードを使用したタイム インテリジェンス計算の定義](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722484"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>アソシエーション ルール モデルのルールのフィルター選択
   アソシエーション モデルでフィルターを使用して、結果を必要なアソシエーションだけに限定できます。 たとえば、ルールをフィルター選択して、特定の製品を含むルールだけを表示できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "48118632"
   
 5.  **[最小の重要度]** では、重要度の値を大きくすると表示されるルール数が減り、値を小さくすると表示されるルール数が増えます。  
   
-6.  **[表示]** では、 **[属性の名前と値を表示]**、 **[属性名のみ表示]**、 **[属性値のみ表示]** のいずれかのオプションを選択します。  
+6.  **表示**、次のオプションのいずれかを選択します。**属性の名前と値を表示する**、 **属性名のみ**、または**属性値のみを表示する**します。  
   
 7.  **[最大行数]** では、値を大きくすると指定した条件を満たすルールの総数が増え、値を小さくすると返されるルールの数が制限されます。 ルールは確率の順に並べられるので、確率または重要度に対して指定した条件を満たす余分なルールを除外できます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48118632"
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft アソシエーション ルール ビューアーを使用してモデルを参照します。](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Microsoft アソシエーション ルール ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [レッスン 3:マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

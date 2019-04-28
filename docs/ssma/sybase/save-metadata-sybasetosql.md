@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8bfe338c128ce301e98346d17ce00b973912ffd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667519"
 ---
 # <a name="save-metadata--sybasetosql"></a>メタデータの保存 (SybaseToSQL)
 **メタデータの保存** ダイアログ ボックスでは、SSMA プロジェクトにメタデータを保存する前にロードするように求められます。 これにより、オフラインで使用してテクニカル サポート担当者などの他のユーザーに送信する完全なプロジェクト ファイルがあります。  

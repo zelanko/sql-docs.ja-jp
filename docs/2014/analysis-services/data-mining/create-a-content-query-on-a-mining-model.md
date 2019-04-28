@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7ac547ffe8a4e102b4e3c4b0c29c6783e0c4857
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715239"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>マイニング モデルのコンテンツ クエリの作成
   AMO や XML/A を使用すると、プログラムでマイニング モデル コンテンツにクエリを実行できますが、DMX を使用してクエリを作成する方が簡単です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を確立し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって提供される DMV を使用してクエリを作成することにより、データ マイニング スキーマ行セットに対するクエリを作成することもできます。  
@@ -76,7 +76,7 @@ ms.locfileid: "50148037"
      結果ペインにモデルのコンテンツが表示されます。  
   
     > [!NOTE]  
-    >  現在のインスタンスでクエリを実行できるすべてのスキーマ行セットを一覧表示するには、 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS というクエリを使用します。 データ マイニング固有のスキーマ行セットの一覧については、「 [データ マイニング スキーマ行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)」を参照してください。  
+    >  を現在のインスタンスでクエリを実行できるすべてのスキーマ行セットの一覧を表示するには、このクエリを使用します。`SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS します。 データ マイニング固有のスキーマ行セットの一覧については、「 [データ マイニング スキーマ行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   

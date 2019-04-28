@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4a4431d3352ec0cd8135e2d7c44ad66cb4a88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680635"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>[ウィザードの完了] (スキーマ生成ウィザード) (Analysis Services - 多次元データ)
   **[ウィザードの完了]** ページを使用すると、指定した内容を確認して、新しいプロジェクトとデータ ソース ビューを作成できます。  
   
 ## <a name="options"></a>および  
- **概要**  
+ **まとめ**  
  設定したオプションが表示されます。  
   
 ## <a name="see-also"></a>参照  

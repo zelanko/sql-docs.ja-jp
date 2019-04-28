@@ -1,5 +1,5 @@
 ---
-title: bcp_readfmt |Microsoft Docs
+title: bcp_readfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688671"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   指定されたフォーマット ファイルからデータ ファイル形式の定義を読み取ります。  
@@ -55,7 +55,7 @@ szFormatFile
 ## <a name="remarks"></a>コメント  
  後`bcp_readfmt`形式の値を読み取り、適切な呼び出し[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)します。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
   
- フォーマット ファイルを保持するためには、呼び出す[bcp_writefmt](bcp-writefmt.md)します。 呼び出す`bcp_readfmt`保存形式を参照できます。 詳細については、[bcp_init](bcp-init.md)を参照してください。  
+ フォーマット ファイルを保持するためには、呼び出す[bcp_writefmt](bcp-writefmt.md)します。 呼び出す`bcp_readfmt`保存形式を参照できます。 詳細については、次を参照してください。 [bcp_init](bcp-init.md)します。  
   
  または、一括コピー ユーティリティ (**bcp**) で参照できるファイルにユーザー定義のデータ形式を保存できます`bcp_readfmt`します。 詳細については、 **bcp**ユーティリティと構造の**bcp**データ形式のファイルを参照してください[一括インポートとエクスポートのデータ&#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)します。  
   

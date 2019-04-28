@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657682"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>複数行セットの結果を生成するコマンド
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから複数の行セットを返すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメント。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  

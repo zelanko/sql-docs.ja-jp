@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4f5df8d27f39918cb8ddac4dd46dd8b3ca4449c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704465"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52399125"
 ## <a name="conversions"></a>コンバージョン  
  次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 Icommandwithparameters::setparameterinfo が呼び出され、型がで指定された場合、出力パラメーターの*して*サーバーによって実行される暗黙的な変換をサーバー上の実際の型と一致しません、と、クライアントに返される型の icommandwithparameters::setparameterinfo を通じて指定された型が一致します。 これは、サーバーの変換の規則がこのトピックで説明されているものとは異なると、予期しない変換結果につながることができます。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
   
-|変換先 -><br /><br /> From|[DATE]|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|-><br /><br /> From|[DATE]|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |date|1,7|[OK]|-|-|1|1,3|1,7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
 |Time|5,6,7|-|9|[OK]|6|3,6|5,6|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  

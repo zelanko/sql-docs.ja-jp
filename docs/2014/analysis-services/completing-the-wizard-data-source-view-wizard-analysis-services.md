@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 728643793aa43eb76e5a94a5d35e5e06acec5c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680645"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>[ウィザードの完了] (データ ソース ビュー ウィザード) (Analysis Services)
   ウィザードの **[ウィザードの完了]** ページを使用すると、データ ソース ビューの名前を指定し、ビューに含まれているテーブルおよびビューを確認することができます。 **[完了]** をクリックした後で、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でデータ ソース ビュー デザイナーを使用してビューのプロパティを変更できます。 データ ソース ビュー デザイナーの詳細については、「[データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](data-source-view-designer-analysis-services-multidimensional-data.md)」を参照してください。  

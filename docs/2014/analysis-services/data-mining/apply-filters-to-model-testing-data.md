@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689356"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>モデルのテスト データへのフィルターの適用
   モデルのテストに使用する外部データ ソースを指定する場合に、入力データを制限するフィルターを必要に応じて適用できます。 たとえば、特定の所得範囲の顧客に関する予測についてのみモデルをテストできます。  

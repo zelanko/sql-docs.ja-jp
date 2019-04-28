@@ -1,5 +1,5 @@
 ---
-title: 例:XML 製品モデル情報の取得 |Microsoft Docs
+title: 例:XML での製品モデル情報の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704717"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>例:XML での製品モデル情報の取得
   次の クエリでは、出力モデル情報が返されます。 `RAW` モードは、 `FOR XML` 句で指定します。  
@@ -52,7 +52,7 @@ FOR XML RAW, ELEMENTS;
 GO  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <row>  

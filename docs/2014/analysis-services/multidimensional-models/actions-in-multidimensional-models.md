@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701936"
 ---
 # <a name="actions-in-multidimensional-models"></a>多次元モデルのアクション
   アクションは、選択したキューブまたはキューブの一部でエンド ユーザーが行う操作です。 この操作では、選択されているアイテムをパラメーターとして設定してアプリケーションを起動したり、選択されているアイテムに関する情報を取得したりすることができます。 アクションの詳細については、「[アクション &#40;Analysis Services - 多次元データ&#41;](actions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "50146427"
   
 -   [属性メンバー]  
   
--   [セル]  
+-   セル  
   
 -   Cube  
   

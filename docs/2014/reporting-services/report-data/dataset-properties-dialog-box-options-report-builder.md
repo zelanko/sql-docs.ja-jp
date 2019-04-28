@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbf7814d51fd0f726a60d3b177af18fbeba223d2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696757"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>[オプション] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[データセットのプロパティ]** ダイアログ ボックスの **[オプション]** を選択すると、照合順序オプションや小計を詳細行として処理するオプションなど、クエリのデータ オプションを変更できます。 照合順序の詳細については、 [SQL Server オンライン ブック](../../relational-databases/collations/collation-and-unicode-support.md) の「 [照合順序と Unicode のサポート](https://go.microsoft.com/fwlink/?linkid=98335)」を参照してください。  

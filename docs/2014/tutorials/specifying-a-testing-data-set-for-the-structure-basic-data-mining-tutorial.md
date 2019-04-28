@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720101"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>構造のテスト データ セットの指定 (基本的なデータ マイニング チュートリアル)
   データ マイニング ウィザードの最後の数画面では、データをテスト セットとトレーニング セットに分割します。 次に、構造に名前を付けて、モデルのドリルスルーを有効にします。  
   
 ## <a name="specifying-a-testing-set"></a>テスト セットの指定  
- マイニング構造を作成する際にデータをトレーニング セットとテスト セットに分割すると、後で作成するマイニング モデルの精度を簡単に評価できるようになります。 テスト セットの詳細については、[トレーニングとテスト データ セット](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md)を参照してください。  
+ マイニング構造を作成する際にデータをトレーニング セットとテスト セットに分割すると、後で作成するマイニング モデルの精度を簡単に評価できるようになります。 テスト セットの詳細については、次を参照してください。[トレーニングとテスト データ セット](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md)します。  
   
 #### <a name="to-specify-the-testing-set"></a>テスト セットを指定するには  
   

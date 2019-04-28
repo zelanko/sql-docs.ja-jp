@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 029d4bdb21adfccbae5ad692669ab5d42964bfc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729159"
 ---
 # <a name="automatically-grouping-attribute-members"></a>属性メンバーの自動的なグループ化
   キューブを表示するとき、通常は、ある属性階層のメンバーと別の属性階層のメンバーとを多次元化します。 たとえば、都市別、製品別、または性別ごとに顧客の売上をグループ化して表示します。 このとき、属性の種類によっては、属性階層内のメンバー分布に基づいて、属性が自動的にグループ化されるように [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定しておくと便利です。 たとえば、顧客の年収に基づいてグループが作成されるように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定できます。 このようにグループ化した場合、属性階層を表示したときには、メンバーそのものではなく、グループの名前と値が表示されます。 ユーザーに提示されるレベル数が限定されるので、分析が容易になります。  
@@ -127,6 +127,6 @@ ms.locfileid: "48191352"
  [属性階層の非表示化と無効化](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>参照  
- [属性メンバーをグループ化&#40;分離&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+ [属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

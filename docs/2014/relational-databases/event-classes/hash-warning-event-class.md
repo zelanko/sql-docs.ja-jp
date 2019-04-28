@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662346"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning イベント クラス
   Hash Warning イベント クラスを使用して、ハッシュ演算中にハッシュの再帰、またはハッシュの中断 (ハッシュの保留) が発生する時点を監視できます。  

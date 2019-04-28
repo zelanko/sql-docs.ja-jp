@@ -19,23 +19,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d556a80e018a9d3707aa03de7fdefe8c45bcb611
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704152"
 ---
-# <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
+# <a name="ihpublishertables-transact-sql"></a>IHpublishertables (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishertables**システム テーブルは、パブリッシャー側で格納されているメタデータを表します。 このテーブルには、1 行から、SQL Server 以外のパブリッシャー、現在のディストリビューターを使用してパブリッシュされた各ソース テーブルのデータが含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **IHpublishertables**システム テーブルは、パブリッシャー側で格納されているメタデータを表します。 このテーブルには、1 行から、SQL Server 以外のパブリッシャー、現在のディストリビューターを使用してパブリッシュされた各ソース テーブルのデータが含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|パブリッシュされたテーブル名を識別します。|  
+|**table_id**|**int**|パブリッシュされたテーブルを識別します。|  
 |**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャーのテーブルのパブリッシュされるを識別します。|  
-|**name**|**sysname**|パブリッシュされたテーブルの名前です。|  
-|**所有者**|**sysname**|テーブルの所有者です。|  
+|**name**|**sysname**|パブリッシュされたテーブルの名前。|  
+|**所有者**|**sysname**|テーブルの所有者。|  
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca54a226097860e563fd439261e8ce1f2690cacd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680213"
 ---
 # <a name="connect-to-an-informix-database-ssas"></a>[Informix データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、Informix データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

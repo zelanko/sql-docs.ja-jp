@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679840"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>クロス検証 (SQL Server データ マイニング アドイン)
   ![クロス検証 ボタン、データ マイニング リボン](media/dmc-xvalid.gif "クロス検証 ボタン、データ マイニング リボン")  
@@ -68,7 +68,7 @@ ms.locfileid: "48171752"
     > [!NOTE]  
     >  Microsoft Excel は、モデルがパーティション分割されて各分割がテストされている間、一時的に応答しなくなることがあります。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  クロス検証レポートを作成するには、データ マイニング構造と関連モデルを作成しておく必要があります。 ウィザードでは、ダイアログ ボックスを使用して既存の構造およびモデルから選択できます。  
   
  複数のマイニング モデルをサポートするマイニング構造を選択した場合、それらのモデルで異なる予測可能な属性が使用されていると、クロス検証ウィザードでは、同一の予測可能な属性を共有するモデルのみがテストされます。  
@@ -96,12 +96,12 @@ ms.locfileid: "48171752"
   
 -   モデル内のすべてのパーティションを対象とした、特定メジャーの平均値に基づく偏差の平均。  
   
-#### <a name="classification-passfail"></a>分類 : 合格/不合格  
+#### <a name="classification-passfail"></a>分類:成功/失敗  
  このメジャーは、予測可能な属性に対象の値を指定していない場合に分類モデルで使用されます。 たとえば、複数の確率を予測するモデルを作成した場合、このメジャーは可能なすべての値の予測におけるモデルの精度を示します。  
   
  成功/失敗は、次の条件を満たすケースのカウントによって計算されます:**渡す**確率が最も高い予測された状態が入力状態と同じであり、確率が指定した値よりも大きいかどうか**状態のしきい値**、それ以外の**失敗**します。  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>分類 : 真陽性、偽陽性、真陰性、偽陰性  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>分類:真または偽陽性および偽陰性  
  このテストは、指定した対象を持つすべての分類モデルに対して使用されます。 このメジャーは、モデルで予測した対象と実際の結果に応じて、各ケースの分類方法を示します。  
   
 |[メジャー]|説明|  

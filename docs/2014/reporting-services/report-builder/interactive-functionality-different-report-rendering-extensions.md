@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688784"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>さまざまなレポート表示拡張機能の対話機能 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートを実行時に操作できるようにする対話的なレポート機能が用意されています。 すべてのレポート表示形式で、すべての対話機能をサポートしているわけではありません。 次の表を使用することで、それぞれの対話機能が特定の表示形式でどのように動作するのかを理解できます。  

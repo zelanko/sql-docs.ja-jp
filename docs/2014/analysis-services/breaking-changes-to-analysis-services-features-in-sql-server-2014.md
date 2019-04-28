@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 944385d23b39938a6cb4a28afa16c3d2d67dca23
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658144"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 の Analysis Services 機能における重大な変更
   このトピックでは、 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]における重大な変更について説明します。 これらの変更によって、以前のバージョンの SQL Server に基づくアプリケーション、スクリプト、機能が使用できなくなる場合があります。  
@@ -52,7 +52,7 @@ ms.locfileid: "52391995"
   
 |問題点|説明|  
 |-----------|-----------------|  
-|[!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] のインストール用のセットアップ コマンドが削除されました。|セットアップでは [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]がインストールされますが、構成されなくなりました。 構成操作に使用される値を収集するためのセットアップ コマンドが削除されました。 削除されたコマンドは、/FARMACCOUNT、/FARMPASSWORD、/PASSPHRASE、/FARMADMINPORT などです。<br /><br /> 自動セットアップ用のインストール スクリプトを作成していた場合、 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] をインストールするには、スクリプトを修正する必要があります。 代替手段として、自動モードでサーバーを構成する PowerShell コマンドレットを使用してください。 詳細については、[コマンド プロンプトから PowerPivot をインストール](../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)と[Windows PowerShell を使用して、PowerPivot 構成](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)を参照してください。|  
+|[!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] のインストール用のセットアップ コマンドが削除されました。|セットアップでは [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]がインストールされますが、構成されなくなりました。 構成操作に使用される値を収集するためのセットアップ コマンドが削除されました。 削除されたコマンドは、/FARMACCOUNT、/FARMPASSWORD、/PASSPHRASE、/FARMADMINPORT などです。<br /><br /> 自動セットアップ用のインストール スクリプトを作成していた場合、 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] をインストールするには、スクリプトを修正する必要があります。 代替手段として、自動モードでサーバーを構成する PowerShell コマンドレットを使用してください。 詳細については、次を参照してください。[コマンド プロンプトから PowerPivot をインストール](../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)と[Windows PowerShell を使用して、PowerPivot 構成](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)します。|  
   
 ##  <a name="bkmk_sql10"></a> における重大な変更 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
  このセクションでは、以前のリリースからの重大な変更について説明します。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]からアップグレードする場合は、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]における重大な変更の内容を確認してください。  

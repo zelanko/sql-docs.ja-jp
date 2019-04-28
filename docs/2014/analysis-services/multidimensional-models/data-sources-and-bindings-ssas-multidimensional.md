@@ -35,11 +35,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700067"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>データ ソースとバインド (SSAS 多次元)
   キューブ、ディメンション、その他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトはデータ ソースにバインドできます。 データ ソースとは次のいずれかのオブジェクトです。  
@@ -60,14 +60,14 @@ ms.locfileid: "52510544"
 |Analysis Services のデータ型|説明|  
 |---------------------------------|-----------------|  
 |BigInt|64 ビットの符号付き整数です。 このデータ型は、Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int64 データ型と、OLE DB の DBTYPE_I8 データ型にマップされます。|  
-|Bool|ブール値。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
+|Bool|ブール値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
 |通貨|通貨単位の 1 万分の 1 までの精度を持つ -263 (-922,337,203,685,477.5808) ～ 263-1 (+922,337,203,685,477.5807) の通貨の値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Decimal データ型と、OLE DB の DBTYPE_CY データ型にマップされます。|  
 |date|倍精度浮動小数点数として保存される日付データです。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の DateTime データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
 |Double|-1.79E +308 ～ 1.79E +308 の範囲の倍精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Double データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
 |Integer|32 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int32 データ型と、OLE DB の DBTYPE_I4 データ型にマップされます。|  
 |単一|-3.40E +38 ～ 3.40E +38 の範囲の単精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Single データ型と、OLE DB の DBTYPE_R4 データ型にマップされます。|  
 |SmallInt|16 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int16 データ型と、OLE DB の DBTYPE_I2 データ型にマップされます。|  
-|TinyInt|8 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の SByte データ型と、OLE DB の DBTYPE_I1 データ型にマップされます。<br /><br /> 注:データ ソースに tinyint データ型のフィールドが含まれ、AutoIncrement プロパティが True に設定されている場合、それらのフィールドはデータ ソース ビューで整数に変換されます。|  
+|TinyInt|8 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の SByte データ型と、OLE DB の DBTYPE_I1 データ型にマップされます。<br /><br /> 注:データ ソースに tinyint データ型と、AutoIncrement プロパティのフィールドが含まれている場合は、データ ソース ビューで整数に変換されますし、True に設定されます。|  
 |UnsignedBigInt|64 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt64 データ型と、OLE DB の DBTYPE_UI8 データ型にマップされます。|  
 |UnsignedInt|32 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt32 データ型と、OLE DB の DBTYPE_UI4 データ型にマップされます。|  
 |UnsignedSmallInt|16 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt16 データ型と、OLE DB の DBTYPE_UI2 データ型にマップされます。|  

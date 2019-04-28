@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00181ef49b8656065aea9382d21df0b16cff187a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703764"
 ---
 # <a name="remove-an-attribute-from-a-dimension"></a>ディメンションからの属性の削除
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でディメンションから属性を削除するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーの **[ディメンション構造]** タブにある **[属性]** ペインで属性を右クリックし、**[削除]** をクリックします。 **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。 これでディメンションから属性が削除されますが、ディメンションのデータ ソース ビューには影響を与えません。  

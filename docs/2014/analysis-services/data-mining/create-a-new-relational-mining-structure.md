@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b38ae218dbe1f5f2cc1f0f1090ed2d82e52a96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715369"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>新しいリレーショナル マイニング構造の作成
   データ マイニング ウィザードを使用すると、リレーショナル データベースなどのソースのデータを使用して新しいマイニング構造を作成し、その構造とすべての関連モデルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに保存できます。  

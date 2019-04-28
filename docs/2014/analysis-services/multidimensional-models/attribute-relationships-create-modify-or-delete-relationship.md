@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e67c33daecf94a9c903f3a2fb9a2d35d387a50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701283"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>属性リレーションシップの作成、変更、または削除
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーの **[属性リレーションシップ]** タブを使用すると、ディメンションの属性間の属性リレーションシップを作成、変更、または削除することができます。  
@@ -61,6 +61,6 @@ ms.locfileid: "48202792"
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [のディメンション デザイナーの](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de68556d6bbd7277324e6083d70f979fa1303fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725546"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>クエリ スコープの計算されるメンバーの作成 (MDX)
   1 つの多次元式 (MDX) クエリでのみ計算されるメンバーが必要な場合は、WITH キーワードを使用してその計算されるメンバーを定義できます。 WITH キーワードを使用して作成した計算されるメンバーは、そのクエリの実行が終了した時点で存在しなくなります。  
@@ -92,8 +92,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [計算されるメンバーをセッション スコープの作成&#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [セッション スコープの計算されるメンバーの作成 &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

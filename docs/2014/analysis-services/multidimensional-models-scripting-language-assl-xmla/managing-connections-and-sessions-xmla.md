@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701994"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
   *状態保持*は id およびコンテキストをメソッド呼び出しの間でのクライアントのサーバーを保持する条件です。 *状態を保持しない*は、サーバーは覚えていない id とクライアントのコンテキスト メソッドの呼び出しが完了したら条件です。  

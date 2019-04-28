@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657421"
 ---
 # <a name="troubleshoot-report-builder"></a>レポート ビルダーのトラブルシューティング
   レポート ビルダーは、さまざまな種類のデータ ソースからレポートを作成する場合や、レポート サーバーまたは SharePoint サイトにレポートをパブリッシュする場合に使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート作成ツールです。 Web ブラウザー、またはの一部として、レポート ビルダーで作成したレポートを表示できます、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows アプリケーションや SharePoint サイト。  

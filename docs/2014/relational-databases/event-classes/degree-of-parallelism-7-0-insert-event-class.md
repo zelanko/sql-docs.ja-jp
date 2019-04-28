@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a87741b104a49f98a3cba05dc65d911774774d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662901"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert) イベント クラス
   **Degree of Parallelism (7.0 Insert)** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SELECT、INSERT、UPDATE、または DELETE ステートメントが実行されるたびに発生します。  
@@ -31,7 +31,7 @@ ms.locfileid: "52786804"
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
-|**BinaryData**|**image**|次の値に基づいた、処理を完了するために使用される CPU の数。<br /><br /> 0x00000000:直列で実行される直列プランを示します。<br /><br /> 0x01000000 では、直列で実行される並列プランを示します。<br /><br /> > = 0x02000000:並列で実行されている並列プランを示します。|2|いいえ|  
+|**BinaryData**|**image**|次の値に基づいた、処理を完了するために使用される CPU の数。<br /><br /> 0x00000000:直列で実行される直列プランを示します。<br /><br /> 0x01000000 では、直列で実行される並列プランを示します。<br /><br /> >= 0x02000000:並列で実行されている並列プランを示します。|2|いいえ|  
 |**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
 |**DatabaseID**|**int**|USE database ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE database ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |**DatabaseName**|**nvarchar**|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  

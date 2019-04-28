@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680480"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>PowerPivot for SharePoint 2010 の構成または修復 (PowerPivot 構成ツール)
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 のインストールを構成または修復するには、PowerPivot 構成ツールを使用します。 構成ツールはまずシステムをスキャンし、インストールを完了または修復するために必要なアクションの一覧を返します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]セットアップ ウィザードは、SharePoint 2010 用 PowerPivot 構成ツールと SharePoint 2013 用 PowerPivot 構成ツールがインストールされます。 このトピックでは、SharePoint 2010 用 PowerPivot 構成ツールについて説明します。 SharePoint 2010 の詳細については、[構成または修復の PowerPivot for SharePoint 2013 &#40;PowerPivot 構成ツール&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)を参照してください。  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 のインストールを構成または修復するには、PowerPivot 構成ツールを使用します。 構成ツールはまずシステムをスキャンし、インストールを完了または修復するために必要なアクションの一覧を返します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]セットアップ ウィザードは、SharePoint 2010 用 PowerPivot 構成ツールと SharePoint 2013 用 PowerPivot 構成ツールがインストールされます。 このトピックでは、SharePoint 2010 用 PowerPivot 構成ツールについて説明します。 SharePoint 2010 の詳細については、次を参照してください。[構成または修復の PowerPivot for SharePoint 2013 &#40;PowerPivot 構成ツール&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)します。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
@@ -38,7 +38,7 @@ ms.locfileid: "53360344"
  このツールの最初のページには、SharePoint ファームの構成に使用する入力値の概要が示されます。 システムの構成には、ユーザーが指定する入力値のほか、既定値が使用されます。 サービス アプリケーション、サービス アプリケーション データベース、およびサービス アプリケーション プロパティには既定の名前が使用されます。  
   
 > [!TIP]  
->  PowerPivot 構成ツールがコンピューターをスキャンし、左ペインに空のタスク一覧が返された場合、機能や設定を構成する必要はありません。 SharePoint または PowerPivot の構成を変更するには、Windows PowerShell または SharePoint サーバーの全体管理の管理ページを使用します。 詳細については、[サーバーの全体管理で PowerPivot サーバーの管理と構成](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)を参照してください。  
+>  PowerPivot 構成ツールがコンピューターをスキャンし、左ペインに空のタスク一覧が返された場合、機能や設定を構成する必要はありません。 SharePoint または PowerPivot の構成を変更するには、Windows PowerShell または SharePoint サーバーの全体管理の管理ページを使用します。 詳細については、次を参照してください。[サーバーの全体管理で PowerPivot サーバーの管理と構成](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)します。  
   
  サービス アカウントの値は複数のサービスに利用されます。 たとえば、PowerPivot 構成ツールの最初のページの既定のアカウントがすべてのアプリケーション プール ID の設定に使用されます。 これらのアカウントは、サーバーの全体管理のサービス アプリケーション プロパティを変更することで、後から変更できます。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53360344"
 ||Web アプリケーション データベース サーバー|既定 (必要な場合)|アプリケーション データベースの格納先として既定のデータベース インスタンスがあらかじめ選択されていますが、このツールで別の SQL Server インスタンスを指定できます。|  
 ||Web アプリケーション データベース名|既定 (必要な場合)|データベース名は SharePoint のファイル名前付け規則に基づいていますが、別の名前を選択できます。|  
 |**Web アプリケーション ソリューションの配置**|[URL]|既定 (必要な場合)|既定の URL は、既定の Web アプリケーションから取得されます。|  
-||ファイルの最大サイズ (MB)|既定 (必要な場合)|既定の設定は 2047 です。 SharePoint ドキュメント ライブラリにも最大サイズがあり、PowerPivot の設定がドキュメント ライブラリの設定を超えないようにする必要があります。 詳細については、[構成ファイルの最大アップロード サイズ&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)を参照してください。|  
+||ファイルの最大サイズ (MB)|既定 (必要な場合)|既定の設定は 2047 です。 SharePoint ドキュメント ライブラリにも最大サイズがあり、PowerPivot の設定がドキュメント ライブラリの設定を超えないようにする必要があります。 詳細については、次を参照してください。[構成ファイルの最大アップロード サイズ&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)します。|  
 |**サイト コレクションの作成**|サイト管理者|既定 (必要な場合)|既定のアカウントが使用されます。 これは **[サイト コレクションの作成]** ページでオーバーライドできます。|  
 ||連絡先の電子メール|既定 (必要な場合)|サーバーに Microsoft Outlook が構成されている場合は、現在のユーザーの電子メール アドレスが使用されます。 それ以外の場合は、プレースホルダー値が使用されます。|  
 ||サイト URL|既定 (必要な場合)|SharePoint と同じ URL 名前付け規則を使用して、サイト URL が作成されます。|  
@@ -170,10 +170,10 @@ ms.locfileid: "53360344"
 3.  リンクをクリックし、サービスをインストールするセットアップ プログラムを実行します。  
   
 ### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>データ更新で使用するデータ プロバイダーのインストールとユーザー権限の確認  
- サーバー側のデータ更新により、ユーザーは更新されたデータをブックに自動モードで再インポートできます。 データ更新を正常に行うためには、最初にデータをインポートするために使用したものと同じデータ プロバイダーがサーバーに必要になります。 さらに、通常は、データ更新を実行するユーザー アカウントに外部データ ソースに対する読み取り権限が必要です。 データ更新を正常に実行できるように、データ更新の有効化と構成の要件をご確認ください。 詳細については、[SharePoint 2010 で PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)を参照してください。  
+ サーバー側のデータ更新により、ユーザーは更新されたデータをブックに自動モードで再インポートできます。 データ更新を正常に行うためには、最初にデータをインポートするために使用したものと同じデータ プロバイダーがサーバーに必要になります。 さらに、通常は、データ更新を実行するユーザー アカウントに外部データ ソースに対する読み取り権限が必要です。 データ更新を正常に実行できるように、データ更新の有効化と構成の要件をご確認ください。 詳細については、次を参照してください。 [SharePoint 2010 で PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)します。  
   
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>SharePoint のアプリケーション プールおよびサービス ID の変更  
- PowerPivot 構成ツールでは、ファーム機能、アプリケーション、およびサービスが 1 つのアカウントを使用して実行されるように準備されます。 これによりインストールは簡略化されますが、SharePoint ファームのセキュリティ要件を満たす配置にはなりません。 配置の堅牢性を高めるには、セットアップの完了後に、異なるアカウントで実行するためにアプリケーション プールおよびサービス ID を変更します。 詳細については、[PowerPivot サービス アカウントの構成](power-pivot-sharepoint/configure-power-pivot-service-accounts.md)を参照してください。  
+ PowerPivot 構成ツールでは、ファーム機能、アプリケーション、およびサービスが 1 つのアカウントを使用して実行されるように準備されます。 これによりインストールは簡略化されますが、SharePoint ファームのセキュリティ要件を満たす配置にはなりません。 配置の堅牢性を高めるには、セットアップの完了後に、異なるアカウントで実行するためにアプリケーション プールおよびサービス ID を変更します。 詳細については、次を参照してください。 [PowerPivot サービス アカウントの構成](power-pivot-sharepoint/configure-power-pivot-service-accounts.md)します。  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>Excel Services に追加の信頼できるサイトの作成  
  Excel Services に信頼できるサイトを追加して、Excel ブックおよび PowerPivot のデータを提供するサイトの権限および構成設定を変更できます。 詳細については、「 [サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  

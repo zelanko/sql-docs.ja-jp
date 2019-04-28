@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b33bf47f77d65679bc079b526d480841af71c0c4
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714439"
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "58072296"
   
   構成設定を指定すると、メモリが解放されるしきい値を制御することができます。 たとえば、 **HardMemoryLimit** 設定では、メモリ不足の条件を自分で指定します (既定では、このしきい値は有効ではありません)。ここでは、新しい要求は追加のリソースが有効になるまで完全に拒否されます。
 
-エディションの SQL Server Analysis Services インスタンスごとに使用される最大メモリの詳細については、[エディションと SQL Server のサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)を参照してください。
+エディションの SQL Server Analysis Services インスタンスごとに使用される最大メモリの詳細については、次を参照してください。[エディションと SQL Server のサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)します。
   
  次の設定は、それ以外の場合に記載されていない場合に、表形式と多次元の両方のサーバーに適用されます。  
  

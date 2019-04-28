@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41ddab5d08673ea71cefb7cf44169e8da6777292
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727261"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>SQL Server データ ツール (SSDT) を使用した多次元モデルの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの作成、配置、管理を行うために [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]という 2 つの環境が提供されています。 この 2 つの環境には、プロジェクト システムが実装されています。 Visual Studio プロジェクトの詳細については、MSDN ライブラリの「 [コンテナーとしてのプロジェクト](https://go.microsoft.com/fwlink/?LinkId=63960) 」を参照してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "53368794"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、ビジネス インテリジェンス プロジェクトというプロジェクトの種類の下に次のプロジェクトが含まれています。  
   
-|プロジェクト|説明|  
+|Project|説明|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト|1 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのオブジェクト定義が含まれています。 作成する方法について、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトを参照してください[Analysis Services プロジェクトの作成&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)します。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2008 データベースのインポート|既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースからオブジェクト定義をインポートして、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを作成するためのウィザードを提供します。|  
@@ -47,7 +47,7 @@ ms.locfileid: "53368794"
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、次の表に示すように、さまざまなクエリやスクリプトに的を絞ったプロジェクトの種類もいくつか含まれています。  
   
-|プロジェクト|説明|  
+|Project|説明|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の DMX スクリプト、MDX スクリプト、XMLA スクリプトと、これらのスクリプトを実行できる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続が含まれています。 詳細については、「 [SQL Server Management Studio での Analysis Services スクリプト プロジェクトの設定](../instances/analysis-services-scripts-project-in-sql-server-management-studio.md)」を参照してください。|  
 |SQL Server Compact スクリプト|SQL Server Compact 用の SQL スクリプトと、これらのスクリプトを実行できる SQL Server Compact インスタンスへの接続が含まれています。|  

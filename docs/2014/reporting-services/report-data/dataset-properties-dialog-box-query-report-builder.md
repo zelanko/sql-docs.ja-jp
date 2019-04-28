@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a74bac81874eaeeecd9b9abcdcbfee27e07909c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696575"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>「クエリ」 (「データセットのプロパティ」 ダイアログ ボックス) (レポート ビルダー)
   **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ]** を選択すると、レポート サーバーから共有データセットを選択したり、埋め込みデータセットを作成したりできます。 埋め込みデータセットを作成するには、データ ソースを選択し、クエリを構築する必要があります。  

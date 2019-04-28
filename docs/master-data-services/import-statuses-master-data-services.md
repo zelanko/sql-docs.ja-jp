@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cc1a94e0677f0c9356f4fba43b7b6230759c9458
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696296"
 ---
 # <a name="import-statuses-master-data-services"></a>インポート状態 (マスター データ サービス)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52819284"
 
   **[ステージング バッチ]** ページの **[統合管理]** 機能領域に表示される状態は次のとおりです。  
   
-|状態|[説明]|Status_ID|  
+|状態|説明|Status_ID|  
 |------------|-----------------|----------------|  
 |実行用のキューに登録済み|バッチ処理が開始されていません。|1|  
 |実行中|バッチ処理中です。|2|  

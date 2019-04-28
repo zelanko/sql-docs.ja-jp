@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703288"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
   Analysis Services インスタンスは、サーバーの通知、エラー、および警告を msmdsrv.log ファイルをインストールするインスタンスごとに 1 つにログインがします。 管理者は、ルーチンのイベントと異常なイベントのどちらの情報を得る場合でも、このログを参照します。 最近のリリースにおいては、ログ記録が機能拡張され、さらに多くの情報が含まれるようになりました。 ログ レコードには、製品のバージョンおよびエディション情報だけでなく、プロセッサ、メモリ、接続、およびブロック イベントも含まれるようになりました。 [ログ記録の機能強化](https://support.microsoft.com/kb/2965035)に関するページで、全体的な変更の一覧を確認できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "53363754"
 -   [ヒントとベスト プラクティス](#bkmk_tips)  
   
 > [!NOTE]  
->  ログ記録の情報をお探しの場合、処理およびクエリの実行パスを示す操作のトレースに関心を持たれるかもしれません。 アドホックかつ持続的なトレース(キューブ アクセスの監査など) のためのトレース オブジェクト、および Flight Recorder、SQL Server Profiler、および xEvents を最適に使用する方法に関する推奨事項は、このページのリンクから確認できます。[Analysis Services インスタンスの監視](monitor-an-analysis-services-instance.md)します。  
+>  ログ記録の情報をお探しの場合、処理およびクエリの実行パスを示す操作のトレースに関心を持たれるかもしれません。 トレース オブジェクト (キューブ アクセスの監査) などのアドホックかつ持続的なトレースとどのように最適に使用する Flight Recorder、SQL Server Profiler、xEvents の裁量で確認できますリンクからこのページに関する推奨事項:[Analysis Services インスタンスの監視](monitor-an-analysis-services-instance.md)します。  
   
 ##  <a name="bkmk_location"></a> ログの場所と種類  
  Analysis Services では、次に示すログが提供されています。  
@@ -49,7 +49,7 @@ ms.locfileid: "53363754"
 |リレーショナル データベースの OlapQueryLog テーブル|クエリ ログ|[使用法の最適化] ウィザードでの入力の収集|いいえ|  
 |SQLDmp\<guid > .mdmp ファイル|クラッシュと例外|高度なトラブルシューティング|いいえ|  
   
- このトピックで説明されていない追加の情報リソースには、次のリンクを強くお勧めします。[Microsoft サポートからのデータ収集のヒントの初期](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)します。  
+ このトピックで記載されていない追加の情報リソースには、次のリンクを強くお勧めします。[Microsoft サポートからのデータ収集のヒントの初期](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)します。  
   
 ##  <a name="bkmk_general"></a> ログ ファイルの構成設定に関する一般情報  
  各ログのセクションは msmdsrv.ini サーバー構成ファイル内にあります。このファイルは \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config フォルダーにあります。 参照してください[Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)手順については、ファイルを編集します。  
@@ -149,7 +149,7 @@ ms.locfileid: "53363754"
   
  **クラッシュ レポートの構成**  
   
- 特に Microsoft サポートから指示がない限り、ほとんどの管理者は既定の設定を使用します。 このサポート技術情報は古いものですが、ダンプ ファイルの構成手順として今も使用されています。[メモリ ダンプ ファイルを生成する Analysis Services を構成する方法](https://support.microsoft.com/kb/919711)します。  
+ 特に Microsoft サポートから指示がない限り、ほとんどの管理者は既定の設定を使用します。 この以前のサポート技術情報の記事では、ダンプ ファイルを構成する方法を説明が使用されます。[メモリ ダンプ ファイルを生成する Analysis Services を構成する方法](https://support.microsoft.com/kb/919711)します。  
   
  最も変更される可能性が高い構成設定は、メモリ ダンプ ファイルを生成するかどうかの指定に使用する `CreateAndSendCrashReports` の設定です。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "53363754"
   
 -   msmdsrv log ファイルのサイズと数を制御するには、msmdsrv.log ファイルを構成します。 既定では設定が無効になっているため、必ずインストール後の手順として設定を追加してください。 このトピックの [MSMDSRV サービス ログ ファイル](#bkmk_msmdsrv) を参照してください。  
   
--   サーバーの操作に関する情報の取得に使用するリソースについて知るには、マイクロソフト カスタマー サポートからこのブログの投稿を確認します。[初期データの収集](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   サーバーの操作に関する情報の取得に使用するリソースについては、マイクロソフト カスタマー サポートからこのブログの投稿を確認してください。[初期データの収集](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   キューブのクエリを実行している人を確認するには、クエリ ログではなく ASTrace2012 を使用します。 通常、クエリ ログは、[使用法に基づく最適化] ウィザードへの入力に使用され、クエリ ログでキャプチャしたデータは読み取りや解釈が簡単ではありません。 ASTrace2012 は、クエリ操作のキャプチャに広く使われているコミュニティ ツールです。 参照してください[Microsoft SQL Server コミュニティ サンプル。Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)します。  
   

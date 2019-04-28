@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725587"
 ---
 # <a name="cube-space"></a>キューブ空間
   キューブ空間は、そのキューブのメジャーを伴った、キューブの属性階層のメンバーから構成されます。 したがって、キューブ空間はキューブ内のすべての属性階層のメンバーとキューブのメジャーの組み合わせによって決まり、キューブの最大サイズを定義します。 重要なのは、この空間には属性階層メンバーで考えられるすべての組み合わせが含まれるということです。現実世界において不可能と考えられるような組み合わせ (たとえば、都市を Paris、国を England、Spain、Japan、India などに指定する) も含まれます。  
@@ -130,12 +130,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>計算コンテキスト  
   
 ## <a name="see-also"></a>参照  
- [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [タプル](tuples.md)   
+ [MDX の主な概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
+ [組](tuples.md)   
  [Autoexists](autoexists.md)   
- [メンバー、組、およびセットの操作&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [メンバー、組、およびセットの操作 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [表示部分の合計と非表示部分の合計](visual-totals-and-non-visual-totals.md)   
- [MDX 言語リファレンス&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多次元式&#40;MDX&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [MDX 言語リファレンス &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [多次元式 &#40;MDX&#41; リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

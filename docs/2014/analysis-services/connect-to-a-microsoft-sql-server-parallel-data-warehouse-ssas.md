@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680097"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>[Microsoft SQL Server 並列データ ウェアハウスへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、Microsoft SQL Server 並列データ ウェアハウス (PDW) に接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

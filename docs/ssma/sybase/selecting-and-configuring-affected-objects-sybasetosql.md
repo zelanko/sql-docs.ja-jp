@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667509"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>影響を受けるオブジェクトの選択と構成 (SybaseToSQL)
 このページでは、テーブルを選択することができ、SSMA 前の手順で選択したオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズできます。  
@@ -40,7 +40,7 @@ SSMA のテスト担当者は、これらのオブジェクトのいずれかを
   
 -   Rule  
   
--   既定値  
+-   既定  
   
 -   同一。  
   
@@ -49,7 +49,7 @@ SSMA のテスト担当者は、これらのオブジェクトのいずれかを
 ## <a name="sql"></a>Sql  
 SQL タブには、「テーブル作成」にはが含まれています。 SQL のテーブルを選択します。  
   
-## <a name="data"></a>データ  
+## <a name="data"></a>data  
 [データ] タブには、選択したテーブル内のデータが表示されます。  
   
 ## <a name="properties"></a>プロパティ  

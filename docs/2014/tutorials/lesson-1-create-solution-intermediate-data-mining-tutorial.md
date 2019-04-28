@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678481"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>レッスン 1:中級者向けデータ マイニング ソリューション (中級者向けデータ マイニング チュートリアル) を作成します。
   「基本的なデータ マイニング チュートリアル」では、新しい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに基づく単純なデータ マイニング ソリューションを含む [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] プロジェクトを作成しました。  

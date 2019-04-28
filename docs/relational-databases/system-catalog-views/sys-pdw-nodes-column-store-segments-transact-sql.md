@@ -14,36 +14,36 @@ ms.author: elbutter
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b7bb600d4eda0f91be025baee7c6ecd35f99c9da
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715869"
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-列ストア インデックスに各列の行を格納します。  
+1 行、列ストア インデックス内の各列のデータが含まれています。  
 
 | 列名                 | データ型  | 説明                                                  |
 | --------------------------- | ---------- | ------------------------------------------------------------ |
 | **partition_id**            | **bigint** | パーティション ID を示します。 データベース内で一意です。     |
 | **hobt_id**                 | **bigint** | この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。 |
-| **column_id**               | **int**    | 列ストアの列の ID。                                |
+| **column_id**               | **int**    | 列ストア列の ID。                                |
 | **segment_id**              | **int**    | 列セグメントの ID。 旧バージョンと互換性のため、列名が行グループ ID です。 この場合でも、segment_id を呼び出せる続けます < Hobt_id で、partition_id、column_id > を使用してセグメントを一意に識別できます < segment_id >。 |
-| **version**                 | **int**    | 列セグメント形式のバージョン。                        |
+| **version**                 | **int**    | 列セグメント形式のバージョンです。                        |
 | **encoding_type**           | **int**    | そのセグメントを使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (内部のいくつかのバリエーションを 4 に似ています)<br /><br /> 2 = VALUE_HASH_BASED - の一般的な値がディクショナリ内の文字列/バイナリ列<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列/バイナリ列<br /><br /> 4 = STORE_BY_VALUE_BASED - non-string/binary with no dictionary<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - string/binary with no dictionary<br /><br /> すべてのエンコーディングでは、可能な場合のエンコード ビット パッキングと実行の長さの活用します。 |
 | **row_count**               | **int**    | 行グループ内の行の数。                             |
-| **has_nulls**               | **int**    | 列セグメントに NULL 値がある場合は 1。                     |
-| **base_id**                 | **bigint** | エンコードの種類 1 が使用されている場合は、ベース値 ID。  エンコードの種類 1 が、使用されていない場合、base_id は 1 に設定します。 |
-| **magnitude**               | **float**  | エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が、使用されていない場合は、絶対値が 1 に設定されます。 |
+| **has_nulls**               | **int**    | 列セグメントに null 値がある場合は 1。                     |
+| **base_id**                 | **bigint** | エンコードの種類 1 が使用されている場合は、ベース値 ID。  エンコードの種類 1 が使用されていない場合、base_id は 1 に設定されます。 |
+| **magnitude**               | **float**  | エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が使用されていない場合、magnitude は 1 に設定されます。 |
 | **primary__dictionary_id**  | **int**    | プライマリ辞書の ID。 0 以外の値は、この列に現在のセグメント (つまり行グループ) のローカルのディクショナリを指します。 値-1 は、このセグメントのローカルのディクショナリがないことを示します。 |
 | **secondary_dictionary_id** | **int**    | セカンダリ辞書の ID。 0 以外の値は、この列に現在のセグメント (つまり行グループ) のローカルのディクショナリを指します。 値-1 は、このセグメントのローカルのディクショナリがないことを示します。 |
 | **min_data_id**             | **bigint** | 列セグメントの最小データ ID。                       |
 | **max_data_id**             | **bigint** | 列セグメントの最大データ ID。                       |
 | **null_value**              | **bigint** | NULL を表すために使用される値。                               |
-| **on_disk_size**            | **bigint** | セグメントのサイズ (バイト単位)。                                    |
-| **pdw_node_id**             | **int**    | 一意の識別子、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ノードです。 |
+| **on_disk_size**            | **bigint** | (バイト単位) セグメントのサイズ。                                    |
+| **pdw_node_id**             | **int**    | 一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。 |
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 

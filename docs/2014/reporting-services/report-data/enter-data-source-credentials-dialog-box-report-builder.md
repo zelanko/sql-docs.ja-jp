@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 015548ce55df25d3e0751b697fe046783d084ec5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695638"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>[データ ソースの資格情報の入力] ダイアログ ボックス (レポート ビルダー)
   **[データ ソースの資格情報の入力]** ダイアログ ボックスを使用すると、データ ソースからデータを取得するための資格情報を指定できます。  

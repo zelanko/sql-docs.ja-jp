@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703278"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services インスタンスの監視
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] またはパフォーマンス モニター ( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **とも呼ばれるアプリケーション) を使用して、** のパフォーマンスを監視できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] レースを作成および管理し、トレースの結果を分析および再生できます。 パフォーマンス モニターでは、特定のカウンターでインデックスを付けたサーバーの状態が報告されます。これについては、次のセクションで説明します。  

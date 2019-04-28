@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689524"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   ファイルと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間の一括コピーに使用するさまざまな制御パラメーターの既定の設定を変更します。  
@@ -63,7 +63,7 @@ iValue
   
  呼び出す場合もシーケンス エラーが発生`bcp_control(hdbc,`BCPDELAYREADFMT`, (void *)FALSE)`呼び出した後`bcp_control(hdbc,`BCPDELAYREADFMT`, (void *)TRUE)` bcp_writefmt とします。  
   
- 詳細については、[メタデータ検出](../native-client/features/metadata-discovery.md)を参照してください。  
+ 詳細については、次を参照してください。[メタデータ検出](../native-client/features/metadata-discovery.md)します。  
   
  BCPFILECP  
  *iValue*データ ファイルのコード ページの数が含まれています。 1252 や 850 などのコード ページ番号を指定するか、次のいずれかの値を指定できます。  
@@ -96,7 +96,7 @@ iValue
 >  XML フォーマット ファイルがサポートされるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールした場合だけです。  
   
  BCPHINTS  
- *iValue* SQLTCHAR 文字列ポインターが含まれています。 ポインターが指す文字列には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピー処理ヒント、または結果セットを返す Transact-SQL ステートメントを指定します。 複数の結果セットを返す Transact-SQL ステートメントを指定すると、1 つ目以外の結果セットはすべて無視されます。 一括コピー処理ヒントの詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)を参照してください。  
+ *iValue* SQLTCHAR 文字列ポインターが含まれています。 ポインターが指す文字列には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピー処理ヒント、または結果セットを返す Transact-SQL ステートメントを指定します。 複数の結果セットを返す Transact-SQL ステートメントを指定すると、1 つ目以外の結果セットはすべて無視されます。 一括コピー処理ヒントの詳細については、次を参照してください。 [bcp ユーティリティ](../../tools/bcp-utility.md)します。  
   
  BCPKEEPIDENTITY  
  ときに*iValue* TRUE は、一括コピー関数が指定されているデータ値を挿入することを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を id 制約で定義されている列。 入力ファイルには ID 列の値を指定する必要があります。 このオプションを設定しないと、挿入される行に対して新しい ID 値が生成されます。 ファイル内に存在する ID 列用のデータはすべて無視されます。  
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  TRUE の場合、指定する**datetime**と**smalldatetime**文字形式で保存される値は、ODBC タイムスタンプ エスケープ シーケンスのプレフィックスとサフィックスが使用されます。 BCPODBC オプションは、BCP_OUT にのみ適用されます。  
   
- FALSE の場合、 **datetime** 1997 年 1 月 1 日を表す値が文字の文字列に変換されます。1997-01-01 00:00:00.000 します。 TRUE の場合、同じ**datetime**として表される値: {ts ' 1997-01-01 00:00:00.000'}。  
+ FALSE の場合、 **datetime** 1997 年 1 月 1 日を表す値が文字の文字列に変換されます。1997-01-01 00:00:00.000. TRUE の場合、同じ**datetime**として表される値: {ts ' 1997-01-01 00:00:00.000'}。  
   
  BCPROWCOUNT  
  現在 (または最後) の BCP 操作で処理された行数を返します。  

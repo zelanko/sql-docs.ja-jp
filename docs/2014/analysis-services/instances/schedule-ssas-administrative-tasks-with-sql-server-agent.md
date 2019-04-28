@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729777"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う
   SQL Server エージェント サービスを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理タスクのスケジュールを設定して、必要なときに必要な順序で実行できます。 定期タスクは、一定の周期または指定した周期で実行されるプロセスを自動化するのに役立ちます。 キューブ処理などの管理タスクは、ビジネス活動が盛んでない時間帯に実行されるようにスケジュールできます。 また、SQL Server エージェント ジョブでジョブ ステップを作成することにより、タスクの実行順序を指定できます。 たとえば、キューブを処理した後でバックアップを実行できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "53350869"
 ## <a name="prerequisites"></a>前提条件  
  SQL Server エージェント サービスがインストールされている必要があります。  
   
- 既定では、ジョブはサービス アカウントで実行されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server エージェントの既定のアカウントは NT service \sqlagent$\<instancename > です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)を参照してください。  
+ 既定では、ジョブはサービス アカウントで実行されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、SQL Server エージェントの既定のアカウントは NT service \sqlagent$\<instancename > です。 バックアップまたは処理タスクを実行するには、このアカウントが Analysis Services インスタンスのシステム管理者である必要があります。 詳細については、次を参照してください。[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)します。  
   
  操作対象のテスト データベースも必要です。 AdventureWorks 多次元サンプル データベースまたはプロジェクトを Analysis Services 多次元チュートリアルから配置して、このチュートリアルで使用できます。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)」を参照してください。  
   

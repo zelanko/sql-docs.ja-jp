@@ -1,5 +1,5 @@
 ---
-title: Microsoft ニューラル ネットワーク アルゴリズム |Microsoft ドキュメント
+title: Microsoft ニューラル ネットワーク アルゴリズム |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54896093b887985fc658e823f7d277347a70f0ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724996"
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Microsoft ニューラル ネットワーク アルゴリズム
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムは、Machine Learning の一般的で適応性のあるニューラル ネットワーク アーキテクチャの実装です。  このアルゴリズムでは、入力属性の考えられる各状態が、予測可能属性の考えられる各状態に対してテストし、トレーニング データに基づいて各組み合わせの確率を計算することによって動作します。 これらの確率は、分類や回帰のタスクで使用することも、入力属性に基づいて結果を予測するために使用することもできます。 ニューラル ネットワークは、アソシエーション分析にも使用できます。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "34015549"
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムは、最大 3 層のノード (*ニューロン* と呼ばれることもあります) で構成されるネットワークを作成します。 これらの層は、 *入力層*、 *非表示層*、および *出力層*です。  
   
- **入力層:** 入力ノードは、データ マイニング モデルのすべての入力属性値、およびそれらの確率を定義します。  
+ **入力層:** 入力ノードは、データ マイニング モデル、およびそれらの確率のすべての入力属性値を定義します。  
   
- **非表示層:** 非表示ノードは入力ノードから入力を受け取り、出力ノードに出力を渡します。 非表示層では、入力のさまざまな確率に重みが割り当てられます。 重みは、非表示ノードに対する特定の入力の関連性または重要性を表します。 入力に割り当てられている重みが大きいほど、その入力の値の重要性が増加します。 重みには負の値も使用できます。これは、その入力によって特定の結果が優先されるのではなく、抑制されることを意味します。  
+ **非表示層:** 隠しノードは、入力ノードから入力を受信し、出力ノードに出力を提供します。 非表示層では、入力のさまざまな確率に重みが割り当てられます。 重みは、非表示ノードに対する特定の入力の関連性または重要性を表します。 入力に割り当てられている重みが大きいほど、その入力の値の重要性が増加します。 重みには負の値も使用できます。これは、その入力によって特定の結果が優先されるのではなく、抑制されることを意味します。  
   
- **出力層:** 出力ノードは、データ マイニング モデルの予測可能属性値を表します。  
+ **出力層:** 出力ノードは、データ マイニング モデルの予測可能な属性の値を表します。  
   
  入力層、非表示層、および出力層の作成方法およびスコア計算方法の詳細については、「 [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)」を参照してください。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34015549"
   
  データ マイニング モデルに対するクエリの作成方法については、「 [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 -   ドリル スルーまたはデータ マイニング ディメンションはサポートされていません。 これは、マイニング モデルのノードの構造がその基になるデータと必ずしも直接対応しているわけではないからです。  
   
@@ -76,8 +76,8 @@ ms.locfileid: "34015549"
 -   データ マイニング ディメンションの作成はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [ニューラル ネットワーク モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [ニューラル ネットワーク モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ニューラル ネットワーク モデルのクエリ例](../../analysis-services/data-mining/neural-network-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)  
   

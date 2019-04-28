@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676875"
 ---
 # <a name="add-or-edit-filter"></a>フィルターの追加または編集
   **[フィルターの追加]** ダイアログ ボックスと **[フィルターの編集]** ダイアログ ボックスを使用すると、静的行フィルターおよびパラメーター化された行フィルターを追加したり編集したりできます。  

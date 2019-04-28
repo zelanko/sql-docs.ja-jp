@@ -1,5 +1,5 @@
 ---
-title: ディメンションに勘定科目インテリジェンスを追加 |Microsoft ドキュメント
+title: ディメンションに勘定科目インテリジェンスの追加 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5021d10832028f46d1d0b1a8f33dc01a75df5985
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717569"
 ---
-# <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションに勘定科目インテリジェンスを追加します。
+# <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI ウィザード - ディメンションへの勘定科目インテリジェンスの追加
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  勘定科目インテリジェンス拡張機能をキューブまたはディメンションに追加して、収益や費用などの標準の勘定科目の分類を勘定科目属性のメンバーに割り当てます。 この拡張機能により、勘定科目の種類 (資産や負債など) の特定および各勘定科目の種類への適切な集計の割り当ても行われます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]時間の経過と共に勘定科目が集計を分類を使用することができます。  
+  勘定科目インテリジェンス拡張機能をキューブまたはディメンションに追加して、収益や費用などの標準の勘定科目の分類を勘定科目属性のメンバーに割り当てます。 この拡張機能により、勘定科目の種類 (資産や負債など) の特定および各勘定科目の種類への適切な集計の割り当ても行われます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分類を使用することによって、一定の期間にわたって勘定科目を集計できます。  
   
 > [!NOTE]  
 >  勘定科目インテリジェンスは、既存のデータ ソースに基づくディメンションにのみ使用できます。 データ ソースを使用せずに作成されたディメンションに対しては、勘定科目インテリジェンスを追加する前に、スキーマ生成ウィザードを使用してデータ ソース ビューを作成する必要があります。  
@@ -40,9 +40,9 @@ ms.locfileid: "34023469"
   
 -   **[ビルトイン勘定科目の種類]** 列は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が認識できる、対応する勘定科目の種類を示します。 次の表に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が認識できる勘定科目の種類と、これらの各種類の既定の集計を一覧表示します。 ディメンション テーブルで、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が使用するものと同じ勘定科目の種類名を使用している場合、選択は自動的に行われます。  
   
-    |サーバーの勘定科目の種類|[集計]|Description|  
+    |サーバーの勘定科目の種類|[集計]|説明|  
     |-------------------------|-----------------|-----------------|  
-    |**統計**|**なし**|一定の期間に集計されない、計算される比率または数。 この種類の勘定科目では、変換規則を使用した通貨の換算は行われません。|  
+    |**統計**|**None**|一定の期間に集計されない、計算される比率または数。 この種類の勘定科目では、変換規則を使用した通貨の換算は行われません。|  
     |**[Liability]**|**LastNonEmpty**|特定の時期に負っている負債の金額または値。 この勘定科目の種類は時間の経過と共に累積しないので、自動的に集計されることはありません。 たとえば、年の値は、データを含む最後の月の値になります。 この種類の勘定科目では、期末レートを使用して通貨が換算されます。|  
     |**[Asset]**|**LastNonEmpty**|特定の時期に保持しているものの金額または値。 この勘定科目の種類は時間の経過と共に累積するので、自然に集計されることはありません。 たとえば、年の値は、データを含む最後の月の値になります。 この種類の勘定科目では、期末レートを使用して通貨が換算されます。|  
     |**バランス**|**LastNonEmpty**|指定された時期におけるものの数。 この勘定科目の種類は累積されますが、自然に集計されることはありません。 たとえば、年の値は、データを含む最後の月の値になります。|  

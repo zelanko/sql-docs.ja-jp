@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700324"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>データ ソース ビューを使用しないテンプレートからのキューブの作成
   キューブ ウィザードの最初のページで **[データ ソースを使用せずにキューブを構築する]** を選択すると、データ ソース ビューを使用せずにキューブを作成できます。 後で、スキーマ生成ウィザードを使用して、キューブ (および場合によっては他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト) の構造に基づいて、データ ソース ビューのリレーショナル スキーマを作成できます。 スキーマ生成の詳細については、「[スキーマ生成ウィザード (Analysis Services)](schema-generation-wizard-analysis-services.md)」を参照してください。  

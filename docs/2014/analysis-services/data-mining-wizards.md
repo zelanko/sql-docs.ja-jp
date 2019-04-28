@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e74e63268a79915413955e33fdb2ed9f714f8a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689493"
 ---
 # <a name="data-mining-wizards"></a>データ マイニング ウィザード
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用するためのウィザードを提供[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]と[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。  
@@ -42,7 +42,7 @@ ms.locfileid: "48099232"
  [データ マイニング ツール](data-mining/data-mining-tools.md)   
  [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [OLAP マイニング構造を作成します。](data-mining/create-an-olap-mining-structure.md)   
- [リレーショナル マイニング構造を作成します。](data-mining/create-a-relational-mining-structure.md)   
+ [リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)   
  [新しいリレーショナル マイニング構造を作成します。](data-mining/create-a-new-relational-mining-structure.md)   
  [新規の OLAP マイニング構造の作成](data-mining/create-a-new-olap-mining-structure.md)  
   

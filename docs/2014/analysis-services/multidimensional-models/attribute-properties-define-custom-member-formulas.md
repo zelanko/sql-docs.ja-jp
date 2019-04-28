@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701679"
 ---
 # <a name="define-custom-member-formulas"></a>カスタム メンバー式の定義
   カスタム メンバー式と呼ばれる多次元式 (MDX) を定義すると、指定した属性のメンバーに値を指定できます。 データ ソース ビューからのテーブルの列は、属性のメンバーごとに、そのメンバーの値の指定に使用される式を提供します。  
@@ -37,25 +37,25 @@ ms.locfileid: "48186022"
   
  カスタム メンバー式は、メジャーに関連付けられている集計関数をオーバーライドします。 たとえば、カスタム メンバー式を指定する前に、時間ディメンションの以下のメンバーについて、`Sum` 集計関数を使用するメジャーが次の値であるとします。  
   
--   2003: 2100  
+-   2003:2100  
   
-    -   Quarter 1: 700  
+    -   第 1 四半期700  
   
-    -   Quarter 2: 500  
+    -   第 2 四半期500  
   
-    -   Quarter 3: 100  
+    -   第 3 四半期100  
   
-    -   Quarter 4: 800  
+    -   第 4 四半期800  
   
--   2004: 1500  
+-   2004:1500  
   
-    -   Quarter 1: 600  
+    -   第 1 四半期600  
   
-    -   Quarter 2: 200  
+    -   第 2 四半期200  
   
-    -   Quarter 3: 300  
+    -   第 3 四半期300  
   
-    -   Quarter 4: 400  
+    -   第 4 四半期400  
   
  カスタム メンバー式を使用すると、メンバーの値は代わりにカスタム ロールアップ式によって指定されます。 たとえば、次のカスタム メンバー式を使用すると、時間ディメンションの 2004 メンバーの Quarter 4 子メンバーの値を 450 に指定できます。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48186022"
 Time.[Quarter 3] * 1.5  
 ```  
   
- カスタム メンバー式は、ディメンション テーブルの列に格納されます。 カスタム ロールアップ式を有効に設定して、`CustomRollupColumn`属性のプロパティ。  
+ カスタム メンバー式は、ディメンション テーブルの列に格納されます。 属性の `CustomRollupColumn` プロパティを設定して、カスタム ロールアップ式を有効にします。  
   
  1 つの MDX 式を属性のすべてのメンバーに適用するには、MDX 式をリテラル文字列として返すディメンション テーブルで名前付き計算を作成します。 次に、名前付き計算を、構成する属性の `CustomRollupColumn` プロパティ設定で指定します。 名前付き計算は、SQL 式によって定義される行の値を返す、データ ソース ビュー テーブルの列です。 名前付き計算の構築方法については、「[データ ソース ビューでの名前付き計算の定義 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)」を参照してください。  
   

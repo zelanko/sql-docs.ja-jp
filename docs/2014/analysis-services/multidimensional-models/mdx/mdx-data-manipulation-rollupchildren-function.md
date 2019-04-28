@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699763"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>RollupChildren 関数の操作 (MDX)
   多次元式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [検索と置換用スクリプト] 関数は、それぞれの子に異なる単項演算子を適用するメンバーの子のロールアップし、数値としてこのプログラムのロールアップの値を返します。 単項演算子は、子メンバーに関連付けられたメンバー プロパティによって提供されるか、関数に直接指定される文字列式の場合もあります。  
@@ -74,6 +74,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  MDX ステートメントは、子メンバーの単項演算子を調べます。 単項演算子が減算 (この例では、国内と国外の返品のメンバーの場合) のために使用されている場合、`IIf` 関数はその代わりにティルダ (~) 単項演算子を使用します。 それ以外の場合、`IIf` 関数は子メンバーの単項演算子を使用します。 最後に、返されたロールアップ合計に 1.1 が乗算され、国内と国外の総売上の予測値が得られます。  
   
 ## <a name="see-also"></a>参照  
- [データを操作する&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [データの操作 (MDX)](mdx-data-manipulation-manipulating-data.md)  
   
   

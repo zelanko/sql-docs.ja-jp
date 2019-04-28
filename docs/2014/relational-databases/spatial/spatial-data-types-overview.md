@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715037"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
   空間データには 2 つの型があります。 `geometry` データ型は平面 (ユークリッド (平面地球)) データをサポートしています。 `geometry` データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 および SQL MM (ISO 標準) の両方に準拠しています。  

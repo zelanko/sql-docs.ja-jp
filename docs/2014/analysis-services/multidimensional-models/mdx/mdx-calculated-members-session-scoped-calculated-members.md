@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53d6cc069e316bc399235aafbf59c7586bbdc6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725396"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>セッション スコープの計算されるメンバーの作成 (MDX)
   多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、[CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
@@ -53,6 +53,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>参照  
- [計算されるメンバーのクエリ スコープを作成する&#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [クエリ スコープの計算されるメンバーの作成 (MDX)](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

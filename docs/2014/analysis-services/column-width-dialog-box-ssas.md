@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 097b29ca68b03d6711265c9194c318397fd03381
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680605"
 ---
 # <a name="column-width-dialog-box-ssas"></a>[列幅] ダイアログ ボックス (SSAS)
   **[列幅]** ダイアログ ボックスでは、モデル デザイナー内の列幅を指定できます。 このダイアログ ボックスにアクセスするには、列を右クリックし、 **[列幅]** をクリックします。 列の右端のグリッド線をダブルクリックして、列を内容に合わせたサイズに自動調整することもできます。  

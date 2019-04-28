@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657449"
 ---
 # <a name="query-designers-report-builder"></a>クエリ デザイナー (レポート ビルダー)
   レポート ビルダーにはグラフィカルおよびテキスト ベースのクエリ デザイナーが用意されており、レポートのクエリの作成に使用できます。 データ ソースの種類ごとにクエリ デザイナーが関連付けられています。 一部のデータ ソースでは、クエリを対話形式で作成できるグラフィカル デザイナーがサポートされています。 その他のデータ ソースでは、テキスト ベースのクエリ デザイナーを使用します。 SQL Server データ ソースでは、グラフィカルとテキスト ベースの両方のクエリ デザイナーがサポートされます。  
