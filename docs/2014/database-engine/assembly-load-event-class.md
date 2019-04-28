@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a57ec9e8d1cb6b2559622af339b9e8a6a3d7b29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792151"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load イベント クラス
   **Assembly Load** イベント クラスは、アセンブリの読み込み要求が実行されるときに発生します。  
@@ -52,7 +52,7 @@ ms.locfileid: "48152988"
 |**成功**|**int**|アセンブリの読み込みの成功 (1) または失敗 (0) を示します。|23|はい|  
 |**TextData**|**ntext**|読み込みが成功した場合は "アセンブリの読み込み成功" が、それ以外の場合は "アセンブリの読み込み失敗"。|1|はい|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張イベント](../relational-databases/extended-events/extended-events.md)   
  [アセンブリ &#40;データベース エンジン&#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
   

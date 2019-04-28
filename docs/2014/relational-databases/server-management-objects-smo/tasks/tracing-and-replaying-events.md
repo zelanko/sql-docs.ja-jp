@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724792"
 ---
 # <a name="tracing-and-replaying-events"></a>イベントのトレースおよび再生
   SMO で、[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの監視に使用する [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 機能にプログラムでアクセスするには、<xref:Microsoft.SqlServer.Management.Trace> 名前空間の `Trace` オブジェクトおよび `Replay` オブジェクトを使用します。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、実稼動環境を監視して、どのプロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。  

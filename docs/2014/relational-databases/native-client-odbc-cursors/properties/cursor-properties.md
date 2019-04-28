@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711467"
 ---
 # <a name="cursor-properties"></a>カーソルのプロパティ
   ODBC 形式のカーソルの種類または SQL-92/ISO 形式のカーソルの動作のいずれかを設定することで、カーソルの全体的な特性が決まります。 以下のトピックでは、カーソルの動作に影響を与える追加のステートメントと接続属性について説明しています。  

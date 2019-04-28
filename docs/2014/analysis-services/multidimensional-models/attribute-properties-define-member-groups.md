@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 389439143ddd5f56d565cdebff42a91e241e16fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727096"
 ---
 # <a name="define-member-groups"></a>メンバー グループを定義する
   特定の属性に多数のメンバーが存在する場合は、そのメンバーをバケットにグループ化すると、階層内のデータを参照するときに表示されるメンバーの数を減らすことができます。 メンバーをグループ化するバケットの数を指定したり、バケットの名前付けスキーマを設定したりできます。 詳細については、[「属性メンバーのグループ化 (分離)](attribute-properties-group-attribute-members.md)」を参照してください。  
   
  メンバーをグループ化するには、**DiscretizationMethod** プロパティを設定します。このプロパティには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の **[プロパティ]** ウィンドウからアクセスできます。  
   
- メンバー グループを作成した場合、ディメンションを処理するまで他のユーザーは変更内容を利用できません。 詳細については、[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)を参照してください。  
+ メンバー グループを作成した場合、ディメンションを処理するまで他のユーザーは変更内容を利用できません。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
   
 ### <a name="to-create-member-groups"></a>メンバー グループを作成するには  
   

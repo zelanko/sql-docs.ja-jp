@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf9296a798135a8fb7fac8f3919cfca20385004c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720879"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>レポート ビルダーのレポート パーツおよびデータセット
   レポート ビルダーでレポートにデータを含める最も簡単な方法は、レポート パーツ ギャラリーからレポート パーツを追加することです。 レポート パーツには、そのレポート パーツが依存するデータセットが含まれており、 *依存データセット*と呼ばれます。 依存データセットは共有データ ソースに基づいており、埋め込みデータセットまたは共有データセットのどちらかにすることができます。  

@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722004"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、さまざまなツリー作成手法が組み込まれた複合アルゴリズムであり、回帰、分類、アソシエーションなど、複数の分析タスクをサポートしています。 Microsoft デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方のモデリングをサポートしています。  
@@ -61,7 +61,7 @@ ms.locfileid: "53365404"
  方法についてのように処理するかについて[!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムが不連続の予測可能列を参照してください[ベイジアン ネットワークの学習。知識と統計データの組み合わせ](https://go.microsoft.com/fwlink/?LinkId=45963)します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが、連続する予測可能列をどのように処理するかについては、「 [時系列分析の自動回帰ツリー モデル](https://go.microsoft.com/fwlink/?LinkId=45966)」の付録を参照してください。  
   
 ### <a name="scoring-methods-and-feature-selection"></a>スコアリング方法と機能の選択  
- Microsoft デシジョン ツリー アルゴリズムには、情報利得のスコアを計算する式が 3 つ用意されています。Shannon のエントロピー、K2 事前分布を指定したベイジアン ネットワーク、および均一なディリクレ事前分布を指定したベイジアン ネットワークです。 データ マイニング フィールドには、3 つの方法すべてが準備されています。 最適な結果を得るには、複数のパラメーターとスコアリング方法を試してみることをお勧めします。 これらのスコアリング方法の詳細については、「 [機能の選択](../../sql-server/install/feature-selection.md)」を参照してください。  
+ Microsoft デシジョン ツリー アルゴリズムには、情報利得のスコア付けの式が 3 つが用意されています。Shannon のエントロピー、k2、ベイジアン ネットワークおよびベイジアン事前分布の均一なディリクレ事前分布ネットワーク。 データ マイニング フィールドには、3 つの方法すべてが準備されています。 最適な結果を得るには、複数のパラメーターとスコアリング方法を試してみることをお勧めします。 これらのスコアリング方法の詳細については、「 [機能の選択](../../sql-server/install/feature-selection.md)」を参照してください。  
   
  すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング アルゴリズムでは、分析の向上と処理負荷の削減のため、機能の選択が自動的に使用されます。 機能の選択に使用される方法は、モデルの作成に使用したアルゴリズムによって異なります。 デシジョン ツリー モデルに対する機能の選択を制御するアルゴリズム パラメーターは、MAXIMUM_INPUT_ATTRIBUTES と MAXIMUM_OUTPUT です。  
   

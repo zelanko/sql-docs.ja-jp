@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702062"
 ---
 # <a name="performing-batch-operations-xmla"></a>バッチ操作の実行 (XMLA)
   使用することができます、[バッチ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)XML for Analysis (XMLA) 単一の XMLA を使用して複数の XMLA コマンドを実行するコマンド[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッド。 `Batch` コマンドに含まれる複数のコマンドは、単一のトランザクションとして実行することも、あるいはコマンドごとに別個のトランザクションとして直列または並列で実行することもできます。 アウトオブ ライン バインドおよびその他のプロパティを指定することも、`Batch`の複数の処理コマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  

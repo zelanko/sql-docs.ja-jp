@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e3015f589f40dfc8bafc30da3a30316004f086a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680183"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>[Microsoft SQL Server データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、Microsoft SQL Server データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

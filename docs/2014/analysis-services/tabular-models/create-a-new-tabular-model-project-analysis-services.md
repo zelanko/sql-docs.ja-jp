@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f89e4b5e6d209efeb3fd37661a5f4b925aaeb63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795409"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>新しいテーブル モデル プロジェクトの作成 (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、新しい空白のテーブル モデル プロジェクトを作成する方法について説明します。 新しいモデル プロジェクトを作成した後は、データ ソースからデータをインポートすることによって、モデル プロジェクトの作成を開始できます。  
@@ -29,10 +29,10 @@ ms.locfileid: "48171542"
   
 3.  **[名前]** でプロジェクトの名前を入力し、場所とソリューション名を指定してから **[OK]** をクリックします。  
   
- 新しいプロジェクトを作成した後、プロジェクトとモデルのプロパティを設定することが重要です。 詳細については、[プロジェクト プロパティ&#40;SSAS 表形式&#41;](properties-ssas-tabular.md)と[モデル プロパティ&#40;SSAS 表形式&#41;](model-properties-ssas-tabular.md)を参照してください。  
+ 新しいプロジェクトを作成した後、プロジェクトとモデルのプロパティを設定することが重要です。 詳細については、「 [プロジェクトのプロパティ (SSAS テーブル)](properties-ssas-tabular.md) 」および「 [モデルのプロパティ (SSAS テーブル)](model-properties-ssas-tabular.md)で、新しい空白のテーブル モデル プロジェクトを作成する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [プロジェクト プロパティ&#40;SSAS 表形式&#41;](properties-ssas-tabular.md)   
- [モデル プロパティの&#40;SSAS 表形式&#41;](model-properties-ssas-tabular.md)  
+ [プロジェクトのプロパティ (SSAS テーブル)](properties-ssas-tabular.md)   
+ [モデルのプロパティ (SSAS テーブル)](model-properties-ssas-tabular.md)  
   
   

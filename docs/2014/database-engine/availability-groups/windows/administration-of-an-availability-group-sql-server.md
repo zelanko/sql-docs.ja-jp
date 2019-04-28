@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791896"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>可用性グループの管理 (SQL Server)
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の既存の AlwaysOn 可用性グループの管理には、次のタスクが 1 つ以上含まれます。  
@@ -123,7 +123,7 @@ ms.locfileid: "53355362"
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1:次世代の高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 1:次世代高可用性ソリューションの概要](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server コードネーム"Denali"AlwaysOn シリーズ パート 2:AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
@@ -144,7 +144,7 @@ ms.locfileid: "53355362"
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性グループの運用上の問題の AlwaysOn ポリシー &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループ:相互運用性&#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
+ [AlwaysOn 可用性グループ:相互運用性 &#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
  [AlwaysOn 可用性グループの TRANSACT-SQL ステートメントの概要&#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [AlwaysOn 可用性グループの PowerShell コマンドレットの概要&#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

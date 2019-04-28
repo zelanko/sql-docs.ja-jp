@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795384"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>階層の作成および管理 (SSAS テーブル)
   階層の作成と管理はダイアグラム ビューのモデル デザイナーで行うことができます。 モデル デザイナーをダイアグラム ビューに表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732327"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>[時間間隔の定義] (データ ソース) (ディメンション ウィザード)
   **[時間間隔の定義]** ページを使用すると、 **[ディメンションの種類の選択]** ページで指定されたテーブル内の列を使用して、時間ディメンション内の期間を表す属性を指定できます。  

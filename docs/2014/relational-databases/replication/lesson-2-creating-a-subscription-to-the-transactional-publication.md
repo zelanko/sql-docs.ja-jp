@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: トランザクション パブリケーションに対するサブスクリプションを作成する |Microsoft Docs'
+title: レッスン 2:トランザクション パブリケーションに対するサブスクリプションを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721076"
 ---
-# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>レッスン 2: トランザクション パブリケーションに対するサブスクリプションを作成します。
+# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>レッスン 2:トランザクション パブリケーションに対するサブスクリプションを作成します。
   このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してサブスクリプションを作成します。 このレッスンでは、前のレッスンを完了している必要があります[レッスン 1。トランザクション レプリケーションを使用してデータのパブリッシュ](lesson-1-publishing-data-using-transactional-replication.md)します。  
   
 ### <a name="to-create-the-subscription"></a>サブスクリプションを作成するには  
@@ -65,7 +65,7 @@ ms.locfileid: "54129392"
 3.  **[AdvWorksProductTrans]** の下にサブスクリプションが表示されない場合は、F5 キーを押して一覧を更新します。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、トランザクション パブリケーションへのサブスクリプションを作成しました。 このサブスクリプションのディストリビューション エージェントは常時動作しているので、サブスクリプションの作成時に初期化も行われます。 次は、トレーサー トークンを使って、変更内容がサブスクライバーにレプリケートされているかどうかを確認し、待機時間を決定します。 参照してください[レッスン 3。サブスクリプションの検証と待機時間の計測](lesson-3-validating-the-subscription-and-measuring-latency.md)します。  
+ ここでは、トランザクション パブリケーションへのサブスクリプションを作成しました。 このサブスクリプションのディストリビューション エージェントは常時動作しているので、サブスクリプションの作成時に初期化も行われます。 次は、トレーサー トークンを使って、変更内容がサブスクライバーにレプリケートされているかどうかを確認し、待機時間を決定します。 「[レッスン 3:サブスクリプションの検証と待機時間の計測](lesson-3-validating-the-subscription-and-measuring-latency.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Initialize a Subscription with a Snapshot (スナップショットを使用したサブスクリプションの初期化)](initialize-a-subscription-with-a-snapshot.md)   

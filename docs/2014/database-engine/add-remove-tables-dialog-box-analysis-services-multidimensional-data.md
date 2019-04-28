@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792141"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>テーブル ダイアログ ボックス (Analysis Services - 多次元データ) の追加と削除
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の **[テーブルの追加と削除]** ダイアログ ボックスを使用すると、データ ソース ビューに対してデータ ソース内のテーブルを追加または削除できます。 **[テーブルの追加と削除]** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -38,7 +38,7 @@ ms.locfileid: "48200422"
   
  **[>>]** をクリックすると、**[使用できるオブジェクト]** に一覧表示されたすべてのオブジェクトを **[含まれているオブジェクト]** に移行でき、1 つまたは複数のオブジェクトを選択して **[>]** をクリックすると、選択したオブジェクトを **[含まれているオブジェクト]** に移行できます。  
   
- **Assert**  
+ **[フィルター]**  
  **[使用できるオブジェクト]** に一覧表示されたオブジェクトの制限に使用するフィルターを入力し、ボタンをクリックして一覧表示されているオブジェクトをフィルターします。  
   
  **システム オブジェクトを表示します。**  
@@ -54,6 +54,6 @@ ms.locfileid: "48200422"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [データ ソース ビュー デザイナー &#40;Analysis Services - 多次元データ&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

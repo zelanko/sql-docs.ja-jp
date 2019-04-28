@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9531b22e8154796f4f36a5b5bca04d510877d0ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725478"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>パス順序と解決順序の概要 (MDX)
   MDX スクリプトの結果としてキューブが計算される場合、計算に関連するさまざまな機能の使われ方によっては、キューブは多数の計算段階をたどることがあります。 それらの各段階は、計算パスと呼ばれます。  

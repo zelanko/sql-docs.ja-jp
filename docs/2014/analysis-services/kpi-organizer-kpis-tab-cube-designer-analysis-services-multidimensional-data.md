@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729641"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>[KPI オーガナイザー] (キューブ デザイナーの [KPIs] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブにある **[KPI オーガナイザー]** ペインを使用すると、指定したキューブに含まれる主要業績評価指標 (KPI) へのアクセスと並べ替えを行うことができます。  
@@ -38,8 +38,8 @@ ms.locfileid: "48136798"
 |オプション|定義|  
 |------------|----------------|  
 |**新しい KPI**|**KPI フォーム エディター** を表示し、新しい KPI を作成します。 詳細については、 **KPI フォーム エディター**を参照してください[KPI フォーム エディター &#40;[Kpi] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)します。|  
-|**[上へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で上へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注: 選択した KPI がそれ以上移動できない場合、このオプションは無効です。|  
-|**[下へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で下へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注: 選択した KPI がそれ以上移動できない場合、このオプションは無効です。|  
+|**[上へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で上へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注:さらに、選択した KPI を移動できない場合は、このオプションが無効です。|  
+|**[下へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で下へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注:さらに、選択した KPI を移動できない場合は、このオプションが無効です。|  
 |**削除**|選択した KPI を削除します。|  
   
 ## <a name="see-also"></a>参照  

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2101277aecd3ca9c844fb447f5ab772847d77020
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721108"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>トランザクション サブスクリプションのバックアップからの初期化 (レプリケーション Transact-SQL プログラミング)
   トランザクション パブリケーションのサブスクリプションは通常、スナップショットを使用して初期化されますが、レプリケーション ストアド プロシージャを使用して、バックアップからサブスクリプションを初期化することもできます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
@@ -65,7 +65,7 @@ ms.locfileid: "52776554"
   
     -   (テープ デバイスの場合は省略可) **@unload** - 復元が完了した後にテープをドライブからアンロードする場合は **1** (既定値) を、テープをアンロードしない場合は **0** を指定します。  
   
-6.  (省略可能) プル サブスクリプションの場合は、サブスクライバーのサブスクリプション データベースで [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) と [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) を実行します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
+6.  (省略可能) プル サブスクリプションの場合は、サブスクライバーのサブスクリプション データベースで [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) と [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) を実行します。 詳細については、「 [Create a Pull Subscription](create-a-pull-subscription.md)」を参照してください。  
   
 7.  (省略可) ディストリビューション エージェントを起動します。 詳細については、「 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 」または「 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)」を参照してください。  
   

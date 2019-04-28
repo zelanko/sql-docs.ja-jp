@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36584cce341bdbe0e13b917cbe1bcc47469d0deb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729162"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>親子階層の親属性プロパティの定義
   親子階層とは、2 つのテーブル列に基づいたディメンション内の階層です。 この 2 つのテーブル列により、ディメンションのメンバー間の階層リレーションシップが定義されます。 一方の列は *メンバー キー列*と呼ばれ、各ディメンション メンバーを識別します。 もう一方の列は *親列*と呼ばれ、各ディメンション メンバーの親を識別します。 親属性の **NamingTemplate** プロパティは、親子階層の各レベルの名前を指定します。 **MembersWithData** プロパティは、親メンバーのデータを表示するかどうかを指定します。  

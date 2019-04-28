@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722371"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
   ここでは、マージ レプリケーション用に Web 同期を構成する 2 番目の手順を説明します。 この手順は、Web 同期用にパブリケーションを有効にした後に実行します。 構成プロセスの概要については、「 [[Web 同期の構成]](configure-web-synchronization.md)」を参照してください。 ここでの手順を完了したら、続いて、Web 同期が使用されるようにサブスクリプションを構成する 3 番目の手順を実行してください。 3 番目の手順については、次のトピックで説明します。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[操作方法：Web 同期を使用するサブスクリプションを構成する\(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期を使用するサブスクリプションを構成する\(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   レプリケーション[!INCLUDE[tsql](../../includes/tsql-md.md)]プログラミングします。[操作方法：Web 同期 (レプリケーション TRANSACT-SQL プログラミング) を使用するサブスクリプションを構成します。](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   レプリケーション [!INCLUDE[tsql](../../includes/tsql-md.md)] プログラミング: [方法:Web 同期 (レプリケーション TRANSACT-SQL プログラミング) を使用するサブスクリプションを構成します。](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO:[操作方法：Web 同期 (RMO プログラミング) を使用するサブスクリプションを構成します。](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO:[方法: Web 同期 (RMO プログラミング) を使用するサブスクリプションを構成します。](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同期では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行するコンピューターを使用して、プル サブスクリプションをマージ パブリケーションに同期します。 IIS バージョン 5.0、IIS バージョン 6.0、および IIS バージョン 7.0 がサポートされます。 IIS 7.0 では、Web 同期の構成ウィザードはサポートされていません。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53372754"
   
 1.  IIS を実行しているコンピューターに管理者としてログオンします。  
   
-2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] インストール ディスクから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを起動します。 詳細については、このウィザードを使用して、[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
+2.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] インストール ディスクから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを起動します。 詳細については、このウィザードを使用して、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)します。  
   
 3.  **[機能の選択]** ページで、 **[クライアント ツール接続]** を選択します。  
   

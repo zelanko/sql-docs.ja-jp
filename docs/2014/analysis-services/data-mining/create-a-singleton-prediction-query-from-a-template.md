@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715099"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>テンプレートからの単一予測クエリの作成
   単一クエリは、外部入力データ セットにマップしたり一括予測を行う必要はありませんが、使用、予測に使用するモデルがある場合に便利です。 単一クエリでは、モデルに 1 つまたは複数の値を提供し、予測される値を即時に参照できます。  

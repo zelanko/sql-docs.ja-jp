@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721094"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>レッスン 1:トランザクション レプリケーションを使用してデータのパブリッシュ
   このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してトランザクション パブリケーションを作成し、 **サンプル データベースの** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルからフィルター選択したサブセットをパブリッシュします。 また、ディストリビューション エージェントにより使用される SQL Server ログインをパブリケーション アクセス リスト (PAL) に追加します。 このチュートリアルを行うには、前のチュートリアル「 [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)」を完了している必要があります。  
@@ -79,7 +79,7 @@ ms.locfileid: "54125972"
 4.  **[パブリケーション アクセスの追加]** ダイアログ ボックスで、_<コンピューター名>_**\repl_distribution** を選択して **[OK]** をクリックし、 **[OK]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、トランザクション パブリケーションを作成しました。 次は、このパブリケーションをサブスクライブします。 参照してください[レッスン 2。トランザクション パブリケーションに対するサブスクリプションを作成する](lesson-2-creating-a-subscription-to-the-transactional-publication.md)します。  
+ ここでは、トランザクション パブリケーションを作成しました。 次は、このパブリケーションをサブスクライブします。 「[レッスン 2:トランザクション パブリケーションに対するサブスクリプションを作成する](lesson-2-creating-a-subscription-to-the-transactional-publication.md)します。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシュされたデータのフィルター処理](publish/filter-published-data.md)   

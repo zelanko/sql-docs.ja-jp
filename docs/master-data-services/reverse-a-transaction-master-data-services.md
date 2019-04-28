@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7a23e955452408c5c1b57adcaf8de6ece84aa2fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704413"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>トランザクションを破棄する (Master Data Services)
 
@@ -26,11 +26,11 @@ ms.locfileid: "52751855"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、管理者は、アクションを元に戻す必要があるときにトランザクションを破棄できます。 トランザクションの例としては、属性値の変更、階層の移動、メンバーの削除などがあります。 このページには、トランザクション ログの種類が "属性" であるエンティティのトランザクションのみを表示します。 エクスプローラー ページに移動して、トランザクション ログの種類が "メンバー" であるエンティティの履歴を表示します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-reverse-a-transaction"></a>トランザクションを破棄するには  
   

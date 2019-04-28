@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f6f6f0f1140b4cd46ecdea496ecb593bea7a0eb9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666852"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([軸のタイトルのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[軸のタイトルのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、軸のタイトルを定義できます。 軸のタイトルは X 軸の下または Y 軸の横に表示されます。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01060e5161071a06a0fb2c269af5f5a3e14c31b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795300"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>列の削除 (SSAS テーブル)
   このトピックでは、テーブル モデルのテーブルから列を削除する方法について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "48178482"
 ## <a name="delete-a-model-table-column"></a>モデル テーブルの列の削除  
   
 > [!NOTE]  
->  モデル テーブルから列を削除しても、列はパーティションのクエリ定義からは削除されません。 削除する列がパーティションの一部である場合、パーティションのクエリ定義から手動で列を削除する必要があります。 パーティションのクエリ定義から列を削除しない場合、列にクエリが実行されてデータが返されますが、モデル テーブルには処理操作時に値が設定されません。 詳細については、「[パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  
+>  モデル テーブルから列を削除しても、列はパーティションのクエリ定義からは削除されません。 削除する列がパーティションの一部である場合、パーティションのクエリ定義から手動で列を削除する必要があります。 パーティションのクエリ定義から列を削除しない場合、列にクエリが実行されてデータが返されますが、モデル テーブルには処理操作時に値が設定されません。 詳細については、「 [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  
   
 #### <a name="to-delete-a-model-table-column"></a>モデル テーブルの列を削除するには  
   
@@ -39,7 +39,7 @@ ms.locfileid: "48178482"
 3.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、削除する列をオフにしてから、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [テーブルに列を追加&#40;SSAS 表形式&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [パーティション&#40;SSAS 表形式&#41;](partitions-ssas-tabular.md)  
+ [列のテーブルへの追加 (SSAS テーブル)](add-columns-to-a-table-ssas-tabular.md)   
+ [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)  
   
   

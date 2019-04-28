@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717759"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   XML 一括読み込みの処理、`sql:mapped`予想こととして、XSD スキーマで注釈は、マッピング スキーマが指定されている場合`sql:mapped="false"`の任意の要素または属性を使用して、XML 一括読み込みを試行しません、対応する列に関連付けられているデータを格納します。  

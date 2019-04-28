@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e5bfe2673b599a1da90c940015e5be84b361eb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726836"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>データ ソース ビューのプロパティの変更 (Analysis Services)
   データ ソース ビュー ウィザードを使用してデータ ソース ビューを定義し、テーブル、ビュー、名前付き計算、および名前付きクエリをデータ ソース ビューに追加した後、以下の項目に関するプロパティを変更できます。  
@@ -81,7 +81,7 @@ ms.locfileid: "48153032"
 |名前|基になる列の名前、または名前付き計算の名前を指定します。 **Name** プロパティは、名前付き計算を基にして属性を定義するときに、OLAP およびデータ マイニング オブジェクトによって使用されます。 このプロパティは、名前付き計算に対してのみ編集できます。|  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
- [データ ソース ビュー デザイナーのダイアグラムの使用&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [多次元モデル内のデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
+ [データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

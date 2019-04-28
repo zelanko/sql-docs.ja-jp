@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 328170d487d3de11b9370825bc89e6bb5b799cd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710293"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale プロパティ (ADOX)
 列の数値の小数点以下桁数を示します。  
@@ -42,5 +42,5 @@ ms.locfileid: "47734041"
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>参照  
- [ADOX のコード例: NumericScale および Precision プロパティの例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [ADOX のコード例:NumericScale および Precision プロパティの例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type プロパティ (列) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721889"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft クラスタリング アルゴリズム テクニカル リファレンス
   ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  

@@ -14,26 +14,26 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715839"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  インデックスを返します [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]です。  
+  インデックスを返します[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|このインデックスが属しているオブジェクトの id です。||  
+|object_id|**int**|このインデックスが所属するオブジェクトの id。||  
 |NAME|**sysname**|インデックスの名前です。 名前は、オブジェクト内でのみ一意です。 NULL = ヒープ||  
-|index_id|**int**|インデックスの id です。 index_id は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス||  
-|type|**tinyint**|インデックスの種類です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = の非クラスター化<br /><br /> 5 = クラスター化 xVelocity メモリ最適化列ストア インデックス|  
+|index_id|**int**|インデックスの id。 index_id は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス||  
+|type|**tinyint**|インデックスの種類です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = 非クラスター化<br /><br /> 5 = クラスター化 xVelocity メモリ最適化列ストア インデックス|  
 |type_desc|**nvarchar(60)**|インデックスの種類の説明。<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> クラスター化列ストア||  
 |is_unique|**bit**|0 = インデックスは一意ではありません。|常に 0 です。|  
-|data_space_id|**int**|このインデックスのデータ領域の id です。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = object_id には、テーブル値関数です。||  
+|data_space_id|**int**|このインデックスのデータ領域の id。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = object_id にはテーブル値関数。||  
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY はオフです。|常に 0 です。|  
 |is_primary_key|**bit**|1 = インデックスは PRIMARY KEY 制約の一部です。|常に 0 です。|  
 |is_unique_constraint|**bit**|1 = インデックスは UNIQUE 制約の一部です。|常に 0 です。|  
@@ -45,7 +45,7 @@ ms.locfileid: "56012383"
 |allow_page_locks|**bit**|1 = インデックスはページ ロックを許可します。|常に 1 です。|  
 |has_filter|**bit**|0 = インデックスにフィルターはありません。|常に 0 です。|  
 |filter_definition|**nvarchar(max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。|常に NULL になります。|  
-|pdw_node_id|**int**|一意の識別子、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ノードです。|NOT NULL|  
+|pdw_node_id|**int**|一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|NOT NULL|  
   
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  

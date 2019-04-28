@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722024"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動での予測クエリの編集
   予測クエリ ビルダーでクエリのデザインを終えたら、データ マイニング デザイナーの **[マイニング モデル予測]** タブにあるクエリ テキスト ビューに切り替えて、クエリを変更できます。 画面の下部に、クエリ ビルダーによって作成されたクエリを含んでいるテキスト エディターが表示されます。  
@@ -45,7 +45,7 @@ ms.locfileid: "48065542"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ](data-mining-queries.md)   
- [予測クエリ ビルダー&#40;データ マイニング&#41;](../prediction-query-builder-data-mining.md)   
- [レッスン 6: を作成して、予測の操作&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [予測クエリ ビルダー &#40;データ マイニング&#41;](../prediction-query-builder-data-mining.md)   
+ [レッスン 6:予測の作成と操作&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

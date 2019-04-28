@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680107"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>[レポートまたはデータ フィードへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、データ フィードに接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

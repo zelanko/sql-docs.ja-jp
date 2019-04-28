@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80f77e780f881c6c403b9cd27c3e378b3f9049a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727456"
 ---
 # <a name="configure-attribute-relationship-properties"></a>属性リレーションシップのプロパティの構成
   次の表で、属性リレーションシップのプロパティの一覧およびその説明を示します。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ed7750ac0f09fd90ffd846fa4257eb5aae25546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722514"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>マイニング モデルからケース データへのドリルスルー
   モデル ケースへのドリルスルーを許可するようにマイニング モデルが構成されている場合は、モデルの参照時に、モデルの作成に使用されたケースに関する詳細情報を取得できます。 さらに、基になるマイニング構造が、構造ケースへのドリルスルーを許可するように構成されており、ユーザーが適切な権限を持っている場合は、マイニング構造から情報を返すことができます。 これには、マイニング モデルに含まれていない列を含めることもできます。  
@@ -58,6 +58,6 @@ ms.locfileid: "48062626"
 6.  データをクリップボードにコピーするには、テーブル内の任意の行を右クリックして **[すべてコピー]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー クエリ&#40;データ マイニング&#41;](drillthrough-queries-data-mining.md)  
+ [ドリルスルー クエリ &#40;データ マイニング&#41;](drillthrough-queries-data-mining.md)  
   
   

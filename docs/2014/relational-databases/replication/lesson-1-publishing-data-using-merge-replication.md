@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721180"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>レッスン 1:マージ レプリケーションを使用してデータのパブリッシュ
   このレッスンでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してマージ パブリケーションを作成し、 **サンプル データベースの**Employee **テーブル、** SalesOrderHeader **テーブル、および** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルのサブセットをパブリッシュします。 ここでは、パラメーター化された行フィルターを使ってこれらのテーブルをフィルター処理し、サブスクリプションごとに一意のデータ部分が含まれるようにします。 また、マージ エージェントにより使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインをパブリケーション アクセス リスト (PAL) に追加します。 このチュートリアルを学習するには、前のチュートリアル「 [レプリケーションに備えたサーバーの準備](tutorial-preparing-the-server-for-replication.md)」を完了している必要があります。  
@@ -110,7 +110,7 @@ ms.locfileid: "54131064"
 4.  [パブリケーション アクセスの追加] ダイアログ ボックスで、_<コンピューター名>_**\repl_merge** を選択して **[OK]** をクリックします。 **[OK]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、マージ パブリケーションを作成しました。 次は、このパブリケーションをサブスクライブします。 参照してください[レッスン 2。マージ パブリケーションに対するサブスクリプションを作成する](lesson-2-creating-a-subscription-to-the-merge-publication.md)します。  
+ ここでは、マージ パブリケーションを作成しました。 次は、このパブリケーションをサブスクライブします。 「[レッスン 2:マージ パブリケーションに対するサブスクリプションを作成する](lesson-2-creating-a-subscription-to-the-merge-publication.md)します。  
   
 ## <a name="see-also"></a>参照  
  [パブリッシュされたデータのフィルター処理](publish/filter-published-data.md)   

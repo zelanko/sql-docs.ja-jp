@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718137"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>リフト チャート、利益チャート、または分類マトリックスの作成
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング モデルの精度チャートを作成するには、次の 5 つの基本手順に従います。  

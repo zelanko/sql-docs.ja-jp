@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699828"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>クエリ スコープのセル計算の作成 (MDX)
-  計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の `WITH` キーワードを使用します。 `WITH`キーワードには、次の構文。  
+  計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の `WITH` キーワードを使用します。 `WITH` キーワードの構文は、以下のとおりです。  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -55,6 +55,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  一方、計算式は、計算されるセルの定義に含まれるセルを伴うキューブに対して MDX クエリが実行されるたびに MDX によって処理されます。 この処理は、作成スコープに関係なく行われます。  
   
 ## <a name="see-also"></a>参照  
- [CREATE CELL CALCULATION ステートメント&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION ステートメント (MDX)](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

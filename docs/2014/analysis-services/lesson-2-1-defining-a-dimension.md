@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7976ba0779553824e78856d212933272b3cd452e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729547"
 ---
 # <a name="defining-a-dimension"></a>ディメンションの定義
   この実習では、ディメンション ウィザードを使用して Date ディメンションを構築します。  

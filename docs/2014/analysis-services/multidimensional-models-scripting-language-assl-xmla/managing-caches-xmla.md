@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727588"
 ---
 # <a name="managing-caches-xmla"></a>キャッシュの管理 (XMLA)
   使用することができます、 [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) XML for Analysis (XMLA)、指定したディメンションまたはパーティションのキャッシュをクリアするコマンド。 キャッシュの力をクリアする[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]そのオブジェクトのキャッシュを再構築します。  

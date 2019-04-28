@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6a908fb7d309b9e41b7392f35efb25dadef04c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727868"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>[マイニング構造のプロパティ] ダイアログ (Analysis Services - データ マイニング)
   **SQL Server Management Studio** の **[マイニング構造のプロパティ]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのマイニング構造のプロパティを設定できます。 **[マイニング構造のプロパティ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** でマイニング構造を右クリックし、コンテキスト メニューの **[プロパティ]** を選択します。  
   
  **[マイニング構造のプロパティ]** ダイアログ ボックスには、次のページがあります。  
   
-## <a name="pages"></a>ページ  
+## <a name="pages"></a>ページ数  
   
 |ページ|説明|  
 |----------|-----------------|  
@@ -35,6 +35,6 @@ ms.locfileid: "48177542"
 |**エラーの構成**|**[エラーの構成]** ページを使用して、マイニング構造のエラー構成設定の表示と変更を行えます。 このページの詳細については、「[[エラーの構成] ([マイニング構造] ダイアログ ボックス) (Analysis Services - 多次元データ)](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [マイニング構造 (Analysis Services - データ マイニング)](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

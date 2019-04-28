@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700920"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>ディメンションおよびパーティションの文字列ストレージの構成
   文字列ストレージは、ディメンション属性またはパーティションの非常に大きな文字列 (文字列ストアの 4 GB のファイル サイズ制限を超えるもの) に対応するように再構成できます。 このサイズの文字列ストアがディメンションまたはパーティションに含まれている場合、ディメンション レベルまたはパーティション レベルで **[StringStoresCompatibilityLevel]** プロパティを変更することによって、ファイル サイズの制約を回避できます。これは、ローカル オブジェクトとリンクされている (ローカルまたはリモート) オブジェクトの両方に適用されます。  
@@ -39,9 +39,9 @@ ms.locfileid: "48060392"
   
 -   [前提条件](#bkmk_prereq)  
   
--   [手順 1: SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定する](#bkmk_step1)  
+-   [ステップ 1: SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定します。](#bkmk_step1)  
   
--   [手順 2: オブジェクトを処理する](#bkmk_step2)  
+-   [手順 2:オブジェクトを処理します。](#bkmk_step2)  
   
 ##  <a name="bkmk_background"></a> 文字列ストアについて  
  文字列ストレージの構成はオプションです。つまり、作成した新規データベースでも、既定の文字列ストア アーキテクチャが使用され、最大ファイル サイズが 4 GB に制限されます。 大きな文字列ストレージ アーキテクチャを使用すると、パフォーマンスにわずかながら明白な影響が生じます。 文字列ストレージ ファイルが最大 4 GB の制限に達しているか、それに近い場合にだけ使用してください。  
@@ -60,9 +60,9 @@ ms.locfileid: "48060392"
   
  ディメンションとパーティションは MOLAP ストレージを使用する必要があります。  
   
- データベース互換性レベルを 1100 に設定する必要があります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用してデータベースを作成または配置した場合、データベース互換性レベルはあらかじめ 1100 に設定されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の以前のバージョンで作成したデータベースを ssSQL11 以上に移動した場合、互換性レベルを更新する必要があります。 再配置ではなく、移動するデータベースには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して互換性レベルを設定できます。 詳細については、[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)を参照してください。  
+ データベース互換性レベルを 1100 に設定する必要があります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用してデータベースを作成または配置した場合、データベース互換性レベルはあらかじめ 1100 に設定されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の以前のバージョンで作成したデータベースを ssSQL11 以上に移動した場合、互換性レベルを更新する必要があります。 再配置ではなく、移動するデータベースには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して互換性レベルを設定できます。 詳細については、次を参照してください。[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)します。  
   
-##  <a name="bkmk_step1"></a> 手順 1: SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定する  
+##  <a name="bkmk_step1"></a> ステップ 1:SQL Server Data Tools で StringStoreCompatiblityLevel プロパティを設定します。  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して、変更するディメンションまたはパーティションが含まれているプロジェクトを開きます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48060392"
   
 8.  ファイルを保存します。  
   
-##  <a name="bkmk_step2"></a> 手順 2: オブジェクトを処理する  
+##  <a name="bkmk_step2"></a> ステップ 2:オブジェクトを処理します。  
  オブジェクトを処理した後は、新しいストレージ アーキテクチャが使用されます。 オブジェクトを処理することで、以前は文字列ストアのオーバーフロー状態を報告していたエラーが発生しなくなるため、ストレージの制約の問題が正常に解決されたことも確認できます。  
   
 -   ソリューション エクスプローラーで、変更したディメンションを右クリックし、 **[処理]** をクリックします。  
@@ -88,9 +88,9 @@ ms.locfileid: "48060392"
  新しい文字列ストア アーキテクチャを使用している各オブジェクトに、完全処理オプションを使用する必要があります。 処理の前に、ディメンションに対する影響分析を必ず実行して、依存オブジェクトも再処理が必要かどうかを確認してください。  
   
 ## <a name="see-also"></a>参照  
- [ツールと処理のためのアプローチ&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [処理オプションと設定&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [パーティションのストレージ モードと処理](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [処理するためのツールと方法 &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
+ [パーティションのストレージ モードおよび処理](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [ディメンションのストレージ](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

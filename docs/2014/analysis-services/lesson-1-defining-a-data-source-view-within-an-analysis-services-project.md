@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729606"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>レッスン 1:Services プロジェクト内での分析データ ソース ビューの定義
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>レッスン 1:Analysis Services プロジェクト内でのデータ ソース ビューの定義
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でビジネス インテリジェンス アプリケーションを設計するには、まず、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成します。 このプロジェクト内で、ソリューションに必要なすべての要素を定義します。最初に定義するのはデータ ソース ビューです。  
   
  このレッスンの内容は次のとおりです。  

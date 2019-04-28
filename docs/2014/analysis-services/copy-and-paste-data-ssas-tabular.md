@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680127"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>データのコピーと貼り付け (SSAS テーブル)
   テーブルのデータを外部アプリケーションからコピーし、モデル デザイナーの新規または既存のテーブルに貼り付けることができます。 Excel や Word からコピーされたデータなど、クリップボードから貼り付けるデータは HTML 形式である必要があります。 モデル デザイナーは自動的にデータ型を検出し、貼り付けられたデータにその型を適用します。 手動でデータ型を変更することも、列の書式を表示することもできます。  
@@ -87,8 +87,8 @@ ms.locfileid: "48129302"
  クリップボードの内容のサンプルが表示されます。 貼り付け先のテーブル内の既存のデータは削除され、テーブルに新しい行が挿入されます。  
   
 ## <a name="see-also"></a>参照  
- [データをインポート&#40;SSAS 表形式&#41;](import-data-ssas-tabular.md)   
- [サポートされるデータ ソース&#40;SSAS 表形式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [列のデータ型を設定&#40;SSAS 表形式&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [データのインポート &#40;SSAS テーブル&#41;](import-data-ssas-tabular.md)   
+ [サポートされているデータ ソース (SSAS テーブル)](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [列のデータ型の設定 (SSAS テーブル)](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

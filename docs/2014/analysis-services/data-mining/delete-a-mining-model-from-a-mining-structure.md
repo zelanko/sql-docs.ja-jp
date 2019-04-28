@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b09560d26d201ced8160bf171a92dbb618a1c94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722574"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>マイニング構造からのマイニング モデルの削除
   データ マイニング デザイナー、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または DMX ステートメントを使用すると、マイニング モデルを削除することができます。  
@@ -48,7 +48,7 @@ ms.locfileid: "48180372"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>DMX を使用したマイニング モデルの削除  
   
--   [マイニング モデルのドロップ&AMP;#40;DMX&AMP;#41;](/sql/dmx/drop-mining-model-dmx)  
+-   [DROP MINING MODEL &#40;DMX&#41;](/sql/dmx/drop-mining-model-dmx)  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)  

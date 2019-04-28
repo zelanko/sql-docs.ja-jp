@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 418fdb56792c9d8e3ca15128ad8f93fed2ae9c47
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722404"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>マイニング モデルからの列の除外
   新しいマイニング モデルを作成するとき、基となるマイニング構造に存在するすべての列を使用しないことがあります。 たとえば、ドリルスルー、顧客名列を追加した可能性がありますが、モデリングに使用する必要はありません。 または、列の複数のコピーをそれぞれ異なる分離で作成して、各モデルで 1 つのコピーのみ使用し、残りは無視する場合があります。 複数の異なるモデルで入力列を選択的に追加して、追加した変数が出力列に与える影響を確認することもできます。  

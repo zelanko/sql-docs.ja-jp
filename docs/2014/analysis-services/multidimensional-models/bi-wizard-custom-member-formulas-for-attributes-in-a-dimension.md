@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8850ce0f77b69be681bf99bcdcaeddc5234656c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700992"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>ディメンションの属性に対するカスタム メンバー式の設定
-  キューブまたはディメンションにカスタム メンバー式の拡張機能を追加して、多次元式 (MDX) の式の結果を持つディメンション メンバーに関連付けられている既定の集計を置換します  (この拡張機能により、ディメンションの指定した属性で `CustomRollupColumn` プロパティが設定されます)。  
+  キューブまたはディメンションにカスタム メンバー式の拡張機能を追加して、多次元式 (MDX) の式の結果を持つディメンション メンバーに関連付けられている既定の集計を置換します (この拡張機能により、ディメンションの指定した属性で `CustomRollupColumn` プロパティが設定されます)。  
   
 > [!NOTE]  
 >  カスタム メンバー式は、既存のデータ ソースを基にしたディメンションのみに使用できます。 データ ソースを使用せずに作成されたディメンションに対しては、スキーマ生成ウィザードを実行し、データ ソース ビューを作成してからカスタム メンバー式を追加する必要があります。  

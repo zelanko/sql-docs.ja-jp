@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 320ce5a2e09904abe0b2217f257ce008955b8607
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732628"
 ---
 # <a name="data-source-credentials-ssas"></a>[データ ソースの資格情報] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、選択した既存のデータ ソース接続のユーザー名とパスワードを入力できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

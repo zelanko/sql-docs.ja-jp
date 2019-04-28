@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711447"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
   次の各表に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントで定義される各種オブジェクトの最大サイズと最大数を示します。 各 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テクノロジの表に移動するには、それぞれのリンクをクリックしてください。  
@@ -77,7 +77,7 @@ ms.locfileid: "52771774"
 |メモリ最適化データに対応するデータ ファイルごとのデルタ ファイル|サポートされていません|1|  
 |テーブルごとの外部キー テーブル参照数<br /><br /> 注:テーブルは、無制限の数の FOREIGN KEY 制約を含めることができます、253 は推奨される最大値です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をホストするハードウェア構成によっては、追加の FOREIGN KEY 制約を指定するとクエリ オプティマイザーの処理が遅くなる可能性があります。|253|253|  
 |識別子長 (文字数)|128|128|  
-|コンピューターごとのインスタンス数|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションでは、スタンドアロン サーバー上に 50 個のインスタンス。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 25 個のインスタンスで、フェールオーバー クラスター インストールのストレージ オプションとして共有クラスター ディスクを使用する場合のクラスター サポート[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]クラスターのインストールのストレージ オプションとして SMB を選択する場合、フェールオーバーで 50 個のインスタンスがクラスターのサポートのファイル共有詳細については、[Hardware and Software Requirements for Installing SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md)を参照してください。|スタンドアロン サーバー上に 50 個のインスタンス。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、クラスター インストールのストレージ オプションとして共有クラスター ディスクを使用する場合、フェールオーバー クラスター上に 25 個のインスタンスがサポートされます。クラスター インストールのストレージ オプションとして SMB ファイル共有を選択する場合は、フェールオーバー クラスター上に 50 個のインスタンスがサポートされます。|  
+|コンピューターごとのインスタンス数|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションでは、スタンドアロン サーバー上に 50 個のインスタンス。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 25 個のインスタンスで、フェールオーバー クラスター インストールのストレージ オプションとして共有クラスター ディスクを使用する場合のクラスター サポート[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]クラスターのインストールのストレージ オプションとして SMB を選択する場合、フェールオーバーで 50 個のインスタンスがクラスターのサポートのファイル共有詳細については、次を参照してください。 [Hardware and Software Requirements for Installing SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md)します。|スタンドアロン サーバー上に 50 個のインスタンス。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、クラスター インストールのストレージ オプションとして共有クラスター ディスクを使用する場合、フェールオーバー クラスター上に 25 個のインスタンスがサポートされます。クラスター インストールのストレージ オプションとして SMB ファイル共有を選択する場合は、フェールオーバー クラスター上に 50 個のインスタンスがサポートされます。|  
 |メモリ最適化テーブルごとのインデックス|サポートされていません|8|  
 |SQL ステートメントが含まれた文字列の長さ (バッチ サイズ)<br /><br /> 注:ネットワーク パケット サイズとは、アプリケーションとリレーショナル [!INCLUDE[ssDE](../includes/ssde-md.md)]の間の通信に使用される表形式データ ストリーム (TDS) パケットのサイズです。 既定のパケット サイズは 4 KB であり、network packet size 構成オプションによって制御されます。|65,536 * ネットワーク パケット サイズ|65,536 * ネットワーク パケット サイズ|  
 |接続ごとのロック数|サーバーごとの最大ロック数|サーバーごとの最大ロック数|  
@@ -86,7 +86,7 @@ ms.locfileid: "52771774"
 |入れ子にしたサブクエリの数|32|32|  
 |トリガーの入れ子レベル数|32|32|  
 |テーブルごとの非クラスター化インデックス数|999|999|  
-|GROUP BY 句、次のいずれかが存在する場合に個別の式の数:CUBE、ROLLUP、GROUPING SETS、CUBE、WITH ROLLUP で|32|32|  
+|次のいずれかが存在する場合の、GROUP BY 句に含まれる個別の式の数:CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP|32|32|  
 |GROUP BY 句内の演算子によって生成されるグループ化セットの数|4,096|4,096|  
 |ストアド プロシージャごとのパラメーター数|2,100|2,100|  
 |ユーザー定義関数ごとのパラメーター数|2,100|2,100|  

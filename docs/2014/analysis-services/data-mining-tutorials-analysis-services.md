@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689593"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>データ マイニングのチュートリアル (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 高度なデータ マイニング ソリューションの作成が容易になります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のツールを使用すると、リレーショナル データまたはキューブ データを使用するデータ マイニング モデルを設計、作成、および管理することができます。 データ マイニング モデルへのクライアント アクセスを管理したり、複数のクライアントから予測クエリを作成したりできます。  
@@ -47,7 +47,7 @@ ms.locfileid: "53358924"
   
      これらのレッスンで説明する高度な概念には、入れ子になったテーブル、クロス予測、カスタム データ ソース ビューとカスタム名前付きクエリ、およびデータ マイニング クエリのフィルター処理があります。 また、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に付属する予測クエリ ツールの使用方法についても説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  

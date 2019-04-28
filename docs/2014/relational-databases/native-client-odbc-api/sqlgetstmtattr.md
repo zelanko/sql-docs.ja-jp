@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657811"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはドライバー固有のステートメント属性を公開する SQLGetStmtAttr を拡張します。  
@@ -45,9 +45,9 @@ ms.locfileid: "53359925"
  クエリ通知要求のメッセージ テキストを返します。  
   
 ## <a name="sqlgetstmtattr-and-table-valued-parameters"></a>SQLGetStmtAttr とテーブル値パラメーター  
- SQLGetStmtAttr を呼び出すテーブル値パラメーターを使用する場合は、アプリケーション パラメーター記述子 (APD) の SQL_SOPT_SS_PARAM_FOCUS の値を取得することができます。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、[SQLSetStmtAttr](sqlsetstmtattr.md)を参照してください。  
+ SQLGetStmtAttr を呼び出すテーブル値パラメーターを使用する場合は、アプリケーション パラメーター記述子 (APD) の SQL_SOPT_SS_PARAM_FOCUS の値を取得することができます。 SQL_SOPT_SS_PARAM_FOCUS の詳細については、次を参照してください。 [SQLSetStmtAttr](sqlsetstmtattr.md)します。  
   
- テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLSetStmtAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59370)   

@@ -1,5 +1,5 @@
 ---
-title: ディメンションへのカスタム集計の追加 |Microsoft ドキュメント
+title: ディメンションへのカスタム集計の追加 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717379"
 ---
-# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI ウィザード - カスタム集計をディメンションに追加します。
+# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI ウィザード - ディメンションへのカスタム集計の追加
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   カスタム集計拡張機能をキューブまたはディメンションに追加して、ディメンション メンバーに関連付けられている既定の集計を、別の単項演算子に置き換えます。 この拡張機能では、親子階層内のメンバーのロールアップを定義する単項演算子列がディメンション テーブルに指定されます。 単項演算子は、親子階層内の親属性に適用されます。  
   

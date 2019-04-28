@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3a4ec824c5681cdb5d76310ec67cd1b37ba6898
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704696"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>PowerPivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ファームでの [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] データ アクセスを提供するアプリケーション サーバー コンポーネントとバックエンド サービスのコレクションです。 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerpivot.msi**) は、アプリケーション サーバー コンポーネントのインストールに使用されるインストーラー パッケージです。  
   
 -   このアドインは、SharePoint 2010 の配置に必須ではありません。  
   
--   このアドインは、SharePoint 2013 と SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が含まれるシングル サーバー配置では必須ではありません。 アドインによってインストールされたコンポーネントは、SharePoint モードで [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールするときに含まれます。 アドインを使用した配置例の図は、[SharePoint での SQL Server BI 機能の配置トポロジ](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)を参照してください。  
+-   このアドインは、SharePoint 2013 と SharePoint モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が含まれるシングル サーバー配置では必須ではありません。 アドインによってインストールされたコンポーネントは、SharePoint モードで [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーをインストールするときに含まれます。 アドインを使用した配置例の図は、次を参照してください。 [SharePoint での SQL Server BI 機能の配置トポロジ](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)します。  
   
  **注:** このトピックでは、インストールについて説明します、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]ソリューション ファイルと[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2013 構成ツール。 インストール後、構成ツールと追加の機能には、次のトピックを参照してください。 [PowerPivot の構成とソリューションの配置&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)します。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53350404"
   
 -   PowerPivot モードの [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] サーバー。 Excel Services では、PowerPivot サーバーとして SQL Server Analysis Services インスタンスを使用します。 Analysis Services は、ローカル コンピューターでもリモート コンピューターでも実行できます。  
   
--   **アクセス許可:**[!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
+-   **権限:**[!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
   
 -   詳細については[!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]要件と前提条件を参照してください。 [Hardware and Software Requirements の SharePoint モードで Analysis Services サーバー &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)します。  
   

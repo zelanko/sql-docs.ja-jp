@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e17fe8627164132568be0b7447656cc02a221ea6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678017"
 ---
 # <a name="create-a-collection-master-data-services"></a>コレクションを作成する (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52753518"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーまたは統合メンバーの一覧表示を作成する必要があるときは、コレクションを作成します。 コレクションは、エンティティのすべてのメンバーを含む必要はありません。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -54,7 +54,7 @@ ms.locfileid: "52753518"
   
 9. **[OK]** をクリックします。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
   
 -   [コレクションにメンバーを追加する (マスター データ サービス)](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   

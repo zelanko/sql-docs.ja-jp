@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722221"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>データ マイニング ソリューションおよびオブジェクトの管理
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、既存のマイニング構造とマイニング モデルの管理に使用できるクライアント ツールがあります。 ここでは、それぞれの環境を使用して実行できる管理操作について説明します。  
@@ -80,14 +80,14 @@ ms.locfileid: "50147577"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **制限事項:** なし。  
+ **制限:**[なし] :  
   
 ### <a name="data-mining-extensions-dmx"></a>データ マイニング拡張機能 (DMX)  
  データ マイニング拡張機能 (DMX) は、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] や ADOMD.Net などの他のコマンド インターフェイスと組み合わせて、マイニング構造とマイニング モデルを作成、削除、およびクエリできます。  
   
 -   [データ マイニング拡張機能 (DMX) データ定義ステートメント](/sql/dmx/dmx-statements-data-definition)  
   
- **制限事項:** DMX を使用した場合、一部のプロパティを変更できません。  
+ **制限:** DMX を使用して、いくつかのプロパティを変更できません。  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) は、すべての Analysis Services 用のデータ定義言語です。 XMLA を使用して、ほとんどのデータ マイニング オブジェクトとサーバーの動作を制御できます。 XMLA を使用すると、クライアントとサーバーの間で行うすべての管理操作を実行できます。 便宜上、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) を使用して XML をラップできます。  

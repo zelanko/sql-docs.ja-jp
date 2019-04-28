@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1413171abde49f8ae35ef55664135ba924cee5f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715059"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>データ マイニング デザイナーでの単一クエリの作成
   単一クエリは、1 つのケースに関する予測を作成する場合に便利です。 単一クエリの詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
@@ -81,6 +81,6 @@ AS [t]
      新しい画面が開き、クエリの結果が表示されます。 作成した DMX ステートメントを表示するには、 **[SQL]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [予測クエリ&#40;データ マイニング&#41;](prediction-queries-data-mining.md)  
+ [予測クエリ (データ マイニング)](prediction-queries-data-mining.md)  
   
   

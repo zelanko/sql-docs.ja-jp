@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92630f90d7b18ad668dcffc02feeb65990cf3c84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689994"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio 用のデータ マイニング図形
   Visio 用データ マイニング図形は、データ マイニング モデルを表示するためにカスタマイズされたテンプレートです。 これらのテンプレートを使用すると、作成したモデルに接続し、インタラクティブなプレゼンテーションを作成してデータ マイニングの結果を示すことができます。  
@@ -66,7 +66,7 @@ ms.locfileid: "52512631"
   
      ウィザードに従って、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーを選択し、マイニング モデルが格納されているデータベースを指定します。  
   
-     接続を作成する方法については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
+     接続を作成する方法については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
   
 -   テーブル分析ツールを使用している場合、モデルを保存する確認、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバー、および一時的なモデルを使用しないでください。  
   

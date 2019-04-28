@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f350fed895d039a0d5298832e2cd0437748a0a92
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695768"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)
   グラフ内に空の値または NULL 値を持つフィールドを表示しようとすると、予期したとおりにグラフが表示されない場合があります。 グラフでは、指定したグラフの種類によって空の値の処理方法が異なります。  

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cde44399dcee1492ab56fb2f32b2fd1da060c1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726907"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>属性リレーションシップの種類の定義
   属性リレーションシップのリレーションシップの種類を定義するには、ディメンション デザイナーの **[属性リレーションシップ]** タブを使用します。ディメンション デザイナーには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からアクセスできます。  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791991"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn パブリケーション データベースのメンテナンス (SQL Server)
   このトピックでは、AlwaysOn 可用性グループを使用するときのパブリケーション データベースのメンテナンスについての特別な考慮事項について説明します。  
@@ -106,7 +106,7 @@ ms.locfileid: "54126985"
   
 -   [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [レプリケーションの管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

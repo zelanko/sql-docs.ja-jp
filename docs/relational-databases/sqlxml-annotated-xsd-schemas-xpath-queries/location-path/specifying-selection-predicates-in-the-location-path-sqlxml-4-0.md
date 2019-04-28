@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720033"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>ロケーション パスでの選択述語の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "56015237"
  XPath では、位置に基づくフィルター選択を行うこともできます。 数値として評価される述語式を使用すると、その序数に対応するノードが選択されます。 たとえば、ロケーション パス `Customer[3]` では、3 番目の顧客が返されますが、 このような数値述語はサポートされていません。 サポートされているのは、ブール値の結果を返す述語式のみです。  
   
 > [!NOTE]  
->  XPath の場合は、この XPath 実装の制限についての情報とそのと W3C 仕様の違いは、[を使用して XPath クエリの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)を参照してください。  
+>  XPath の場合は、この XPath 実装の制限についての情報とそのと W3C 仕様の違いは、次を参照してください。[を使用して XPath クエリの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)します。  
   
 ## <a name="selection-predicate-example-1"></a>選択述語。例 1  
  すべての現在のコンテキスト ノードから次の XPath 式 (ロケーション パス) を選択、 **\<顧客 >** 子要素が、 **CustomerID** ALFKI の値を持つ属性。  

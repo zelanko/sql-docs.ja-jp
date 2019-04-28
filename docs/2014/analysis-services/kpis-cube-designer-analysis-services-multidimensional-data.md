@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f3d99bf2af18b393275b68e7e56153fa1f49c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729657"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>[KPI] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブを使用すると、選択したキューブの主要業績評価指標 (KPI) を表示したり編集したりできます。  
@@ -46,7 +46,7 @@ ms.locfileid: "48089932"
   
 ## <a name="see-also"></a>参照  
  [主要業績評価指標&#40;Kpi&#41;多次元モデル](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
- [MDX スクリプティングの基礎&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

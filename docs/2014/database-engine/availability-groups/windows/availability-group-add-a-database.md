@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69d148f9ef780e28300a6d3e233f2b680f0d37d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791986"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>可用性グループへのデータベースの追加 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループにデータベースを追加する方法について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "48157852"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件と制限  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48157852"
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (`cd`) します。  
   
-2.  使用して、`Add-SqlAvailabilityDatabase`コマンドレット。  
+2.  `Add-SqlAvailabilityDatabase` コマンドレットを使用します。  
   
      たとえば、次のコマンドは、そのプライマリ レプリカが `MyDd` によってホストされるセカンダリ データベース `MyAG` を `PrimaryServer\InstanceName`可用性グループに追加します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48157852"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 3.  可用性グループにデータベースを追加した後、セカンダリ データベースをホストする各サーバー インスタンスで、対応するセカンダリ データベースを構成する必要があります。 詳細については、「[AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   

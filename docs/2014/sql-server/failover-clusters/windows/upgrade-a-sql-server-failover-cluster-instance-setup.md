@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680376"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>SQL Server フェールオーバー クラスター インスタンスのアップグレード (セットアップ)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] フェールオーバー クラスターにアップグレードするには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド プロンプトを使用します。  
   
- フェールオーバー クラスターのアップグレードにおけるダウンタイムは、フェールオーバー時間およびアップグレード スクリプトの実行に必要な時間のみです。 フェールオーバー クラスターのローリング アップグレード プロセスに従えば、ダウンタイムを最小に抑えられます。 必須コンポーネントがフェールオーバー クラスター ノードにすべて揃っていない場合、必須コンポーネントのインストールに追加のダウンタイムが必要になります。 アップグレード中にダウンタイムを最小限に抑える方法の詳細については、、[ベスト プラクティスのフェールオーバー クラスターのアップグレード前](#BestPractices)このページの「を参照してください。  
+ フェールオーバー クラスターのアップグレードにおけるダウンタイムは、フェールオーバー時間およびアップグレード スクリプトの実行に必要な時間のみです。 フェールオーバー クラスターのローリング アップグレード プロセスに従えば、ダウンタイムを最小に抑えられます。 必須コンポーネントがフェールオーバー クラスター ノードにすべて揃っていない場合、必須コンポーネントのインストールに追加のダウンタイムが必要になります。 アップグレード中にダウンタイムを最小限に抑える方法の詳細については、次を参照してください。、[ベスト プラクティスのフェールオーバー クラスターのアップグレード前](#BestPractices)このページの「します。  
   
- アップグレードする方法の詳細については、[Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)と[SQL Server 2014 にアップグレード](../../../database-engine/install-windows/upgrade-sql-server.md)を参照してください。  
+ アップグレードする方法の詳細については、次を参照してください。 [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)と[SQL Server 2014 にアップグレード](../../../database-engine/install-windows/upgrade-sql-server.md)します。  
   
- コマンド プロンプトを使用するためのサンプル構文の詳細については、[コマンド プロンプトから SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を参照してください。  
+ コマンド プロンプトを使用するためのサンプル構文の詳細については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
 ## <a name="prerequisites"></a>前提条件  
  作業を開始する前に、次の重要な情報を確認してください。  
@@ -114,7 +114,7 @@ ms.locfileid: "53363714"
   
 5.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  [プロダクト キー] ページで、以前の製品バージョンのエディションに一致する新しいバージョンのエディション用の PID キーを入力します。 たとえば、エンタープライズ フェールオーバー クラスターをアップグレードするには、 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]用の PID キーを入力する必要があります。 **[次へ]** をクリックして次に進みます。 フェールオーバー クラスターのアップグレードに使用する PID キーは、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス内のすべてのフェールオーバー クラスター ノードで一貫している必要があります。 詳細については、[エディションと SQL Server 2014 のコンポーネント](../../editions-and-components-of-sql-server-2016.md)と[Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)を参照してください。  
+6.  [プロダクト キー] ページで、以前の製品バージョンのエディションに一致する新しいバージョンのエディション用の PID キーを入力します。 たとえば、エンタープライズ フェールオーバー クラスターをアップグレードするには、 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]用の PID キーを入力する必要があります。 **[次へ]** をクリックして次に進みます。 フェールオーバー クラスターのアップグレードに使用する PID キーは、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス内のすべてのフェールオーバー クラスター ノードで一貫している必要があります。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネント](../../editions-and-components-of-sql-server-2016.md)と[Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)します。  
   
 7.  [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../../includes/msconame-md.md)]に送信することもできます。 **[次へ]** をクリックして次に進みます。 セットアップを終了するには、 **[キャンセル]** をクリックします。  
   

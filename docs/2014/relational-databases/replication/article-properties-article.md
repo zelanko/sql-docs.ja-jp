@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721784"
 ---
 # <a name="article-properties---ltarticlegt"></a>アーティクルのプロパティ - &lt;Article&gt;
   **[アーティクルのプロパティ]** ダイアログ ボックスは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ]** ダイアログ ボックスから開くことができます。 このダイアログ ボックスでは、すべての種類のアーティクルのプロパティを表示し、設定できます。 パブリケーションを作成するときにのみ設定できるプロパティや、パブリケーションにアクティブなサブスクリプションがない場合にのみ設定できるプロパティがあります。 設定できないプロパティは読み取り専用として表示されます。  
@@ -88,7 +88,7 @@ ms.locfileid: "54124992"
  このオプションは、ストアド プロシージャにのみ適用されます。 ストアド プロシージャの定義 (CREATE PROCEDURE ステートメント) またはその実行をレプリケートするかどうかを指定します。 プロシージャの実行をレプリケートする場合、サブスクリプションが開始されたときにプロシージャの定義がサブスクライバーにレプリケートされます。プロシージャがパブリッシャー上で実行されると、サブスクライバー上の対応するプロシージャが実行されます。 これにより、大規模なバッチ操作を実行する場合のパフォーマンスが大幅に向上します。 詳細については、「 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」を参照してください。  
   
 ## <a name="options-for-merge-publications"></a>マージ パブリケーションのオプション  
- **アーティクルのプロパティ**マージ パブリケーションのダイアログ ボックスが 2 つのタブには。**プロパティ**と**リゾルバー**します。  
+ マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。**[プロパティ]** と **[競合回避モジュール]** です。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[同期の方向]**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124992"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] の提供する COM ベース競合回避モジュールはすべて署名済みです。 このオプションを選択すると、同期の際に競合回避モジュールが有効かどうか確認されます。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle パブリケーションのオプション  
- **アーティクルのプロパティ**Oracle パブリケーションのダイアログ ボックスが 2 つのタブには。**プロパティ**と**データ マッピング**します。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
+ Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。**[プロパティ]** と **[データのマッピング ]** です。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[INSERT、UPDATE、DELETE ストアド プロシージャのコピー]**  

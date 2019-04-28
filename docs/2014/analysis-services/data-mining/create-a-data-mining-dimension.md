@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: feff90d769016492f10c3699ebd563aac13a84b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715169"
 ---
 # <a name="create-a-data-mining-dimension"></a>データ マイニング ディメンションの作成
   マイニング構造が OLAP キューブに基づいている場合は、マイニング モデルのコンテンツが含まれているディメンションを作成できます。 作成したディメンションは、ソース キューブに戻すことができます。  

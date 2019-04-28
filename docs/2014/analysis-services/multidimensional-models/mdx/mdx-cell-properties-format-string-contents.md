@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7035fb90d9cc84743fc484e020efd6a19a217a4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725416"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING の内容 (MDX)
   `FORMAT_STRING` セル プロパティは、`VALUE` セル プロパティを書式設定して、`FORMATTED_VALUE` セル プロパティの値を作成します。 `FORMAT_STRING` セル プロパティは文字列と数値列の値を処理し、その値にフォーマット式を適用して、`FORMATTED_VALUE` セル プロパティ用に書式設定した値を返します。 次の表は、文字列および数値の処理に使用する構文および書式文字の詳細を示しています。  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d87af32662b9b971d3ba983d38f3df39b5a3202c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795349"
 ---
 # <a name="model-properties-ssas-tabular"></a>モデルのプロパティ (SSAS テーブル)
   このトピックでは、テーブル モデル プロパティについて説明します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の各テーブル モデル プロジェクトには、作成中のモデルの構築とバックアップの方法やワークスペース データベースの保存方法に影響するモデルのプロパティが含まれています。 ここで説明するモデルのプロパティは、既に配置されているモデルには適用されません。  
@@ -49,7 +49,7 @@ ms.locfileid: "52502570"
 |プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  
 |**照合順序**|Visual Studio がインストールされているコンピューターの既定の照合順序。|モデルの照合順序指定子。|  
-|**互換性レベル**|既定またはプロジェクト作成時に選択した他のレベル|SQL Server 2012 Analysis Services SP1 以降に適用されます。 このモデルで利用できる機能と設定を指定します。 詳細については、[互換性レベル&#40;SSAS テーブル SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)を参照してください。|  
+|**互換性レベル**|既定またはプロジェクト作成時に選択した他のレベル|SQL Server 2012 Analysis Services SP1 以降に適用されます。 このモデルで利用できる機能と設定を指定します。 詳細については、次を参照してください。[互換性レベル&#40;SSAS テーブル SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)します。|  
 |**データ バックアップ**|ディスクにバックアップしない|モデル データのバックアップをバックアップ ファイルに保存するかどうかを指定します。 分析サーバーの設定 ダイアログ ボックスで オプション で データ モデリング ページで、このプロパティの既定の設定を変更できることに注意してください。 このプロパティの設定には、以下のオプションがあります。<br /><br /> **ディスクにバックアップする** - モデル データのバックアップをディスク上に保持するように指定します。 モデルを保存すると、バックアップ (ABF) ファイルにもデータが保存されます。 このオプションを選択すると、モデルの保存と読み込みが低速化する可能性があります。<br /><br /> **ディスクにバックアップしない** - モデル データのバックアップをディスク上に保持しないように指定します。 保存時間とモデルの読み込み時間が最小限で済みます。|  
 |**DirectQuery モード**|Off|このモデルを DirectQuery モードで動作させるかどうかを指定します。 詳しくは、「[DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)」をご覧ください。|  
 |**[ファイル名]**|Model.bim|.bim ファイルの名前を指定します。 このファイル名は変更しないでください。|  

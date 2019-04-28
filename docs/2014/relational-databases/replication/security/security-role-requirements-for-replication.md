@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676900"
 ---
 # <a name="security-role-requirements-for-replication"></a>レプリケーションのセキュリティ ロール要件
   レプリケーションでは、ユーザーのログインがマップされているロールに基づいて、ユーザーが実行できる操作が制限されます。 レプリケーションでは、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、およびパブリケーション アクセス リスト (PAL) 内のログインに、特定の権限が許可されています。  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729680"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>[キー列] ダイアログ ボックス (Analysis Services - 多次元データ)
   属性の **KeyColumns** プロパティを変更するには、**[キー列]** ダイアログ ボックスを使用します。 詳細については、「 [属性の KeyColumn プロパティの変更](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)」を参照してください。  

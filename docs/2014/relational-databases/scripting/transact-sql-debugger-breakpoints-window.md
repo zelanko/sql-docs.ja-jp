@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f0d333cde04e41f7f640a93cd68108af334d71d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718019"
 ---
 # <a name="breakpoints-window"></a>[ブレークポイント] ウィンドウ
   **[ブレークポイント]** ウィンドウには、現在の[!INCLUDE[ssDE](../../includes/ssde-md.md)]のクエリ エディターで設定されているすべてのブレークポイントが表示されます。 ブレークポイントを管理するには、 **[ブレークポイント]** ウィンドウのツール バーを使用します。 ブレークポイントとは、デバッグ モードでコードの実行を一時停止する箇所で、デバッグ データを表示できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "53328492"
   
  **[列]** ボックスの一覧で次の列を選択して、それらの列を追加したり、削除したりできます。  
   
- **Assert**  
+ **[フィルター]**  
  **[(なし)]** が表示されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、ブレークポイント フィルターの設定をサポートしていません。  
   
  **[ヒット時]**  

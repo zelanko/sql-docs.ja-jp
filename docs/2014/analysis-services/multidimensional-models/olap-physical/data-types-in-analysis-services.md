@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725386"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services で使用するデータ型
   すべての<xref:Microsoft.AnalysisServices.DataItem>オブジェクト、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のサブセットをサポート`System.Data.OleDb.OleDbType`します。 を設定またはデータ型を読み取るには、使用[DataItem データ型&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)します。  

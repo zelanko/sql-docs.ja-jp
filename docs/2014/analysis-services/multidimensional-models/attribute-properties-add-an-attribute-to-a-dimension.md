@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c45184e5be13193dc8b77924bc05debdc1911361
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701926"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>ディメンションへの属性の追加
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、自動または手動で、属性をディメンションに追加できます。  

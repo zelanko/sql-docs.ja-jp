@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b9eb15a1f82f8b6d139f220a564582ef9699b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731798"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>[ディメンション構造] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[ディメンション構造]** ページを使用すると、選択したディメンションの属性、階層、およびレベルを変更できます。 **[ディメンション構造]** ページには、1 つのツール バーと 3 つのペインがあります。  

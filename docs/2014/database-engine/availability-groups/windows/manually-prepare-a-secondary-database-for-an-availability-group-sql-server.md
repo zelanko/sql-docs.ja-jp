@@ -19,17 +19,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792082"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>可用性グループに対するセカンダリ データベースの手動準備 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]で AlwaysOn 可用性グループのセカンダリ データベースを準備する方法について説明します。 セカンダリ データベースを準備するには、2 つの手順が必要です。(1)、プライマリ データベースの最新のデータベース バックアップとセカンダリ レプリカをホストする各サーバー インスタンスに後続のログ バックアップの復元、RESTORE WITH NORECOVERY を使用して、および (2)、復元されたデータベースを可用性グループに参加させます。  
   
 > [!TIP]  
->  既存のログ配布構成がある場合は、ログ配布プライマリ データベースとその 1 つ以上のセカンダリ データベースを、AlwaysOn プライマリ データベースと 1 つ以上の AlwaysOn セカンダリ データベースに変換できる場合があります。 詳細については、[移行の前提条件のログ配布から AlwaysOn 可用性グループに&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)を参照してください。  
+>  既存のログ配布構成がある場合は、ログ配布プライマリ データベースとその 1 つ以上のセカンダリ データベースを、AlwaysOn プライマリ データベースと 1 つ以上の AlwaysOn セカンダリ データベースに変換できる場合があります。 詳細については、次を参照してください。[移行の前提条件のログ配布から AlwaysOn 可用性グループに&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)します。  
   
 -   **作業を開始する準備:**  
   
@@ -277,7 +277,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> フォローしてください：セカンダリ データベースを準備した後  
+##  <a name="FollowUp"></a>補足情報: セカンダリ データベースを準備した後  
  セカンダリ データベースの構成を完了するには、新たに復元したデータベースを可用性グループに参加させる必要があります。 詳細については、「 [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
   
 ## <a name="see-also"></a>参照  

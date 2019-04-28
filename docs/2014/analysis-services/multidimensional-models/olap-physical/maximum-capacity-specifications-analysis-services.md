@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725496"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量仕様 (Analysis Services)
   次の各表に、さまざまなサーバー配置モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] コンポーネントで定義される各種オブジェクトの最大サイズと最大数を示します。  

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721944"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、レプリケーション トポロジでユーザーが構成可能なすべての機能に、システム ストアド プロシージャを使ってプログラムからアクセスできます。 ストアド プロシージャは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] や sqlcmd コマンド ライン ユーティリティを使って個別に実行することもできますが、一連のレプリケーション タスクを実行する [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプト ファイルを作成することで、その利点を最大限に活かすことができます。  

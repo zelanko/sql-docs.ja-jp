@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63d2958e8c0dec7213bfed0a054787cda5f0c853
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795329"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>列のテーブルへの追加 (SSAS テーブル)
   このトピックでは、既存のテーブルに列を追加する方法について説明します。  
@@ -63,7 +63,7 @@ ms.locfileid: "48184722"
 2.  一番上のセルをクリックし、名前を入力してから Enter キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [テーブルのプロパティ ダイアログ ボックスを編集&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [テーブル、列、または行のフィルターのマッピング変更&#40;SSAS 表形式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)](../edit-table-properties-dialog-box-ssas.md)   
+ [テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

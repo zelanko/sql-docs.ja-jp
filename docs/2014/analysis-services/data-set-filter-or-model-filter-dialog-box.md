@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732599"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>[データセット フィルター] または [モデル フィルター] ダイアログ ボックス
   このダイアログ ボックスを使用すると、データセットに適用できるフィルターを作成できます。  データセットとして、テスト用の外部データセット、またはマイニング モデルのケース データを使用できます。 フィルターの対象が外部データセットかマイニング モデルかによって、ダイアログ ボックスの名前が異なります。  
@@ -32,7 +32,7 @@ ms.locfileid: "52518971"
 > [!TIP]  
 >  元のトレーニング データのサブセットを使用して精度をテストするには、トレーニング セットを定義するときに使用したデータ ソース ビューを外部テスト データとして追加し、次に条件を **[データセット フィルター]** グリッドに追加します。  
   
- **詳細:**[テストおよび検証 &#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **詳細:**[テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>および  
  **条件**  

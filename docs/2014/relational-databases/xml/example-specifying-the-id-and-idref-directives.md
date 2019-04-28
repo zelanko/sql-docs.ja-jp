@@ -1,5 +1,5 @@
 ---
-title: 例:ID ディレクティブと IDREF ディレクティブの指定 |Microsoft Docs
+title: '例: ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704831"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>例:ID ディレクティブと IDREF ディレクティブの指定
   この例は、「 [ELEMENTXSINIL ディレクティブの指定](example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesPersonID** 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  

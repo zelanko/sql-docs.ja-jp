@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1509f9debebe1370c416bc780e4a367d3d88db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662827"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog イベント クラス
   ErrorLog イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログにメッセージが書き込まれたことを示します。  
@@ -44,7 +44,7 @@ ms.locfileid: "52785924"
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
-|Severity|`int`|例外の重大度レベル。|20|はい|  
+|重大度|`int`|例外の重大度レベル。|20|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`ntext`|エラー メッセージのテキスト。|1|はい|  

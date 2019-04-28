@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 775f3788946767b0a46ab4efd490cf2670d7ff76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695367"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多言語配置とグローバル配置 (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "47612310"
 ## <a name="how-languages-are-used"></a>言語の使用方法  
  次の表では、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] のコンポーネントとツールの言語サポートについて説明します。  
   
-|コンポーネントまたはツール|[説明]|  
+|コンポーネントまたはツール|説明|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] セットアップ|セットアップの言語とは異なる言語で [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを使用できるようにし、サポートされるようにする場合は、英語版のセットアップ プログラムを選択します。 詳細については、下記の [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の説明を参照してください。|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|セットアップの言語によって、 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] の言語が決まります。 たとえば、セットアップの言語としてドイツ語を選択した場合、そのコンピューターでは [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] をドイツ語で使用できます。|  

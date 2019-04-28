@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0e6d619a4922b58a99bc8cb45c952123bbae44d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712739"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>データの一括インポートの準備 (SQL Server)
   データ ファイルのみからデータを一括インポートするには、 **bcp** コマンド、BULK INSERT ステートメント、または OPENROWSET(BULK) 関数を使用します。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729794"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services インスタンスの SPN 登録
   クライアントとサービス ID の相互認証に Kerberos が使用されている場合、サービス プリンシパル名 (SPN) は、Active Directory ドメイン内のサービス インスタンスを一意に識別します。 SPN は、サービス インスタンスを実行するログオン アカウントに関連付けられます。  

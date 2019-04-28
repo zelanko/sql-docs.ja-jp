@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f667ff368ca54f2ccfaeab47716338c7d694c1da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792158"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>可用性グループへのセカンダリ レプリカの参加 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループにセカンダリ レプリカを参加させる方法について説明します。 AlwaysOn 可用性グループにセカンダリ レプリカを追加したら、セカンダリ レプリカを可用性グループに参加させる必要があります。 レプリカの参加操作は、セカンダリ レプリカをホストしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上で実行する必要があります。  
@@ -40,9 +40,9 @@ ms.locfileid: "48136222"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **補足情報:** [セカンダリ データベースの構成](#FollowUp)  
+-   **補足情報:**[セカンダリ データベースの構成](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48136222"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell プロバイダーで次の操作を行います。  
   
-1.  ディレクトリ変更コマンド (`cd`) セカンダリ レプリカをホストするサーバー インスタンスにします。  
+1.  ディレクトリ変更コマンド (`cd`) を使用して、セカンダリ レプリカをホストするサーバー インスタンスに移動します。  
   
 2.  **Join-SqlAvailabilityGroup** コマンドレットに可用性グループの名前を指定して実行し、セカンダリ レプリカを可用性グループに参加させます。  
   
@@ -111,13 +111,13 @@ ms.locfileid: "48136222"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報: セカンダリ データベースの構成  
+##  <a name="FollowUp"></a> 補足情報:セカンダリ データベースを構成します。  
  可用性グループ内のすべてのデータベースには、それぞれ対応するセカンダリ データベースが、セカンダリ レプリカをホストしているサーバー インスタンス上に存在している必要があります。 セカンダリ データベースの構成は、セカンダリ レプリカを可用性グループに参加させる前に行うことも、参加させた後に行うこともできます。  
   
 1.  各プライマリ データベースの最新のデータベースとログ バックアップを、セカンダリ レプリカをホストするサーバー インスタンスに復元します。すべての復元操作は RESTORE WITH NORECOVERY で行う必要があります。 詳細については、「 [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)、または PowerShell を使用して、AlwaysOn 可用性グループにセカンダリ データベースを参加させる方法について説明します。  

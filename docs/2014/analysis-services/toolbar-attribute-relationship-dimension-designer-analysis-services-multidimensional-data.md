@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0bc20265b2b880a650cc63a4f2d01f3b084483d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794577"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[属性リレーションシップ]** タブのツール バーを使用すると、次の手順を実行できます。  

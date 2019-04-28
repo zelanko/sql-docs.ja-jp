@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792062"
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のスペル チェックでは、ドメイン内の文字列値の構文、スペル、および文構造をチェックします。 スペル チェックは、サーバー側のエンジンと統合されないクライアント側のスタンドアロンの機能で、現在のフローや状態には影響しません。 スペル チェックで誤りの可能性がある文字列値が見つかると、対応する各ページでドメイン値に対するその他の手動の変更を行うときに、それらの文字列値が赤い下線で示されます。 対象となるページは次のとおりです。  

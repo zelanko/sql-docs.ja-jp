@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729198"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>レッスン 4:日付テーブルとしてマーク
   「レッスン 2。DimDate をという名前のディメンション テーブルをインポートしたデータを追加します。 レッスン 3 で、DimDate テーブルが変更されます。単純な Date に、列の名前を変更します。 このモデルでは、このテーブルは Date という名前になりましたが、実際は日付と時刻のデータが含まれた*日付テーブル*になります。  
@@ -39,6 +39,6 @@ ms.locfileid: "52417293"
 3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意の識別子として **[Date]** 列を選択します。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルを続行するには、次のレッスンに移動します。[レッスン 5:リレーションシップの作成](lesson-4-create-relationships.md)です。  
+ このチュートリアルを続行するには、次のレッスンに移動します。[レッスン 5: リレーションシップの作成](lesson-4-create-relationships.md)です。  
   
   

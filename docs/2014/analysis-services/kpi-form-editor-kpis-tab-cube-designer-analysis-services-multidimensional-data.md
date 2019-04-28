@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729652"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI フォーム エディター (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブの **KPI フォーム エディター** ペインを使用すると、選択した主要業績評価指標 (KPI) を変更したり作成したりできます。  
@@ -93,7 +93,7 @@ ms.locfileid: "52523475"
   
  表示フォルダー内のフォルダー名は円記号 (\\) を使用して区切り、複数の表示フォルダーはセミコロン (;) を使用して区切ります。 たとえば、「 `Category\Goal\Scientific;Category\Goal\Metric`」のように入力します。  
   
- **親 KPI**  
+ **Parent KPI**  
  クライアント アプリケーションで使用する KPI を分類するための、既存の KPI を選択します。  
   
 > [!NOTE]  

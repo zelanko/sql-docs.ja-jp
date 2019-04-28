@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8eb592c5921f2edc57fa1f77af4aea7e3793d896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732098"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>[計算範囲の定義] (ビジネス インテリジェンス ウィザード)
   **[計算範囲の定義]** ページを使用すると、新しい時間計算に個別のメジャーを関連付けることができます。  

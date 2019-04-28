@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727166"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>メンバーの挿入、更新、および削除 (XMLA)
   使用することができます、[挿入](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)、[更新](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)、および[ドロップ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)コマンドでは、XML for Analysis (XMLA) それぞれを挿入するには、更新、またはメンバーを書き込み許可ディメンションから削除します。 書き込み許可ディメンションの詳細については、次を参照してください。 [Write-Enabled ディメンション](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)します。  

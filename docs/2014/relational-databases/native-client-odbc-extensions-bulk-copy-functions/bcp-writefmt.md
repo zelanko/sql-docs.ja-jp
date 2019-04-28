@@ -1,5 +1,5 @@
 ---
-title: bcp_writefmt |Microsoft Docs
+title: bcp_writefmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689408"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   現在の一括コピー データ ファイルの形式に関する記述を含むフォーマット ファイルを作成します。  
@@ -53,7 +53,7 @@ szFormatFile
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>コメント  
- フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 呼び出す[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)データ ファイルの形式を定義します。 **bcp_writefmt**によって参照されるファイルのこの定義を保存します。 *szFormatFile*します。 詳細については、[bcp_init](bcp-init.md)を参照してください。  
+ フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 呼び出す[bcp_columns](bcp-columns.md)と[bcp_colfmt](bcp-colfmt.md)データ ファイルの形式を定義します。 **bcp_writefmt**によって参照されるファイルのこの定義を保存します。 *szFormatFile*します。 詳細については、次を参照してください。 [bcp_init](bcp-init.md)します。  
   
  構造の詳細については**bcp**データ形式のファイルを参照してください[インポートおよび bcp ユーティリティを使用した一括データのエクスポート&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)します。  
   

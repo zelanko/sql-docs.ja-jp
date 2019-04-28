@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729358"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>レッスン 3: メジャー、属性および階層の変更
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>レッスン 3: メジャー、属性、および階層の修正
   前のレッスンでは、最初のキューブを定義しました。次は、このキューブをさらに使いやすくしましょう。 そのためには、特定のメジャーに書式を適用し、計算やリレーションシップを定義して、さまざまなレベルでのナビゲーションと集計をサポートする階層を追加します。  
   
 > [!NOTE]  

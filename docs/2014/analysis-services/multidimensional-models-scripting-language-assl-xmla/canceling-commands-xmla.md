@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727466"
 ---
 # <a name="canceling-commands-xmla"></a>コマンドのキャンセル (XMLA)
   コマンドを発行したユーザーの管理アクセス許可に応じて、[キャンセル](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)Analysis (XMLA) は、コマンドをキャンセルして、セッション、セッション、接続、サーバー プロセス、または、関連付けられているセッションでの XML でコマンドまたは接続します。  

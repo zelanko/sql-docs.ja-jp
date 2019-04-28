@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729074"
 ---
 # <a name="monitoring-traces-xmla"></a>トレースの監視 (XMLA)
   使用することができます、[購読](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)XML for Analysis (XMLA) のインスタンスで定義されている既存のトレースを監視するためにコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 `Subscribe` コマンドは、トレースの結果を行セットとして返します。  

@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701783"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、特定の時点からデータベースとそのオブジェクトを復旧できるように、バックアップと復元機能が用意されています。 また、バックアップと復元は、アップグレードされたサーバーへのデータベースの移行、サーバー間でのデータベースの移動、実稼働サーバーへのデータベースの配置を行うための有効な方法でもあります。 バックアップ計画をまだ確立しておらず、重要なデータを保持している場合は、データ復旧のために、できるだけ早く計画を作成して実行してください。  

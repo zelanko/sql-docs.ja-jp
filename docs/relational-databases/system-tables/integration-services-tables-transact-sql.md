@@ -19,32 +19,32 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d622158b639c912028144ab5003faef91a2030f7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719426"
 ---
-# <a name="integration-services-tables-transact-sql"></a>Integration Services のテーブル (Transact-SQL)
+# <a name="integration-services-tables-transact-sql"></a>Integration Services のテーブル (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用される情報を格納する、msdb データベースのシステム テーブルについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [sysssislog](../../relational-databases/system-tables/sysssislog-transact-sql.md)  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージが実行時に生成するログ エントリごとに 1 行のデータを格納します。  
+ 各ログ エントリの 1 つの行が含まれている[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージが実行時に生成されます。  
   
  このテーブルは、パッケージで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログ プロバイダーが使用されている場合にのみ使用されます。  
   
  [sysssispackagefolders](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md)  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスでパッケージを整理するために使用される論理フォルダーごとに 1 行のデータを格納します。 列の値では、入れ子になったフォルダー間の親子リレーションシップが定義されます。  
+ 論理フォルダーごとに 1 行が含まれている[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス パッケージを整理するために使用します。 列の値は、入れ子になったフォルダー間の親/子リレーションシップを定義します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] サービスに接続した場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の階層ビューに、格納されているパッケージが表示されます。  
   
  [sysssispackages](../../relational-databases/system-tables/sysssispackages-transact-sql.md)  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージごとに 1 行のデータを格納します。  
+ ごとに 1 つの行を含む[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ。  
   
- このテーブルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にパッケージを格納した場合にのみ使用されます。  
+ パッケージを格納する場合にのみ、このテーブルが使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
   

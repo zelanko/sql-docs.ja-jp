@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792005"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で導入された[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]高可用性ディザスター リカバリー ソリューションには、Windows Server フェールオーバー クラスタリング (WSFC) が必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバー クラスタリングには依存しませんが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、フェールオーバー クラスタリング インスタンス (FCI) を使用して、可用性グループの可用性レプリカをホストすることもできます。 実際に [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境を設計する際は、それぞれのクラスタリング テクノロジの役割を知り、注意点を把握しておくことが大切です。  
@@ -120,7 +120,7 @@ ms.locfileid: "53352308"
   
 -   **ホワイト ペーパー:**  
   
-     [AlwaysOn アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループを使用して高可用性とディザスター リカバリー ソリューションを構築します。](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [AlwaysOn アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性およびディザスター リカバリー ソリューションの構築](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

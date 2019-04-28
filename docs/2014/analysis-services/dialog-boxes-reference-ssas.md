@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 931b1379a0138bc33000774d4ee9c19cf814b57f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731823"
 ---
 # <a name="dialog-boxes-reference-ssas"></a>ダイアログ ボックスのリファレンス (SSAS)
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]のダイアログ ボックスの詳細については、次の各トピックを参照してください。  
@@ -25,7 +25,7 @@ ms.locfileid: "48210142"
   
 -   [日付テーブル ダイアログ ボックスとしてマーク&#40;SSAS&#41;](mark-as-date-table-dialog-box-ssas.md)  
   
--   [テーブルのプロパティ ダイアログ ボックスを編集&#40;SSAS&#41;](edit-table-properties-dialog-box-ssas.md)  
+-   [[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)](edit-table-properties-dialog-box-ssas.md)  
   
 -   [ダイアログ ボックスに移動して&#40;SSAS&#41;](go-to-dialog-box-ssas.md)  
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3847d2cdf4158167a6c05e957183464a846c90f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722464"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>マイニング モデルのドリルスルーの有効化
   マイニング モデルのドリルスルーを有効にした場合は、モデルの参照時に、モデルの作成に使用されたケースに関する詳細情報を取得できます。 この情報を表示するには、必要な権限があり、構造が既に処理されている必要があります。  
@@ -35,7 +35,7 @@ ms.locfileid: "52512732"
 > [!NOTE]  
 >  トレーニング ケースがキャッシュされていない場合、ケース データを表示するには、 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> プロパティを **KeepTrainingCases** に変更してからモデルを再処理する必要があります。  
   
- 詳細については、「 [ドリルスルー クエリ (データ マイニング)](drillthrough-queries-data-mining.md)」をご覧ください。  
+ 詳細については、「[ドリルスルー クエリ (データ マイニング)](drillthrough-queries-data-mining.md)」をご覧ください。  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>マイニング モデルのドリルスルーを有効にするには  
   

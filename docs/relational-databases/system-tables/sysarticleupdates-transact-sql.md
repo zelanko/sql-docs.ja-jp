@@ -19,29 +19,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714179"
 ---
-# <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
+# <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  即時更新するサブスクリプションをサポートするアーティクルごとに、1 行のデータを格納します。 このテーブルは、レプリケートされたデータベースに保存されます。  
+  即時更新サブスクリプションをサポートするアーティクルごとに 1 つの行が含まれています。 このテーブルは、レプリケートされたデータベースに保存されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルの一意な ID 番号を示す ID 列。|  
 |**pubid**|**int**|そのアーティクルが属するパブリケーションの ID です。|  
 |**sync_ins_proc**|**int**|挿入同期トランザクションを処理するストアド プロシージャの ID。|  
-|**sync_upd_proc**|**int**|更新同期トランザクションを処理するストアド プロシージャの ID。|  
+|**sync_upd_proc**|**int**|更新プログラムの同期トランザクションを処理するストアド プロシージャの ID。|  
 |**sync_del_proc**|**int**|削除同期トランザクションを処理するストアド プロシージャの ID。|  
-|**autogen**|**bit**|ストアド プロシージャが自動的に生成されるかどうかを示します。<br /><br /> **0** = false、自動ではありません。<br /><br /> **1**自動 = true、します。|  
-|**sync_upd_trig**|**int**|アーティクル テーブルでの、自動バージョン トリガーの ID。|  
+|**autogen**|**bit**|ストアド プロシージャが自動的に生成されることを示します。<br /><br /> **0** = false、自動ではありません。<br /><br /> **1**自動 = true、します。|  
+|**sync_upd_trig**|**int**|アーティクル テーブルで、自動バージョン トリガーの ID。|  
 |**conflict_tableid**|**int**|競合テーブルの ID。|  
 |**ins_conflict_proc**|**int**|競合を書き込むために使用するプロシージャの ID、 **conflict_table**します。|  
-|**identity_support**|**bit**|キュー更新の使用時に、ID 範囲の自動処理が有効かどうかを示します。 **0**サポートの範囲は id がないことを意味します。|  
+|**identity_support**|**bit**|キュー更新を使用する場合、自動 id 範囲処理が有効にするかどうかを指定します。 **0**サポートの範囲は id がないことを意味します。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

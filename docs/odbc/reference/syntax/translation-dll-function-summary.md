@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40405d6bbdc4c1444a85ef77557346b9a35eb54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720310"
 ---
 # <a name="translation-dll-function-summary"></a>トランスレーター DLL 関数の概要
-次の表では、翻訳の DLL の関数について説明します。 構文とセマンティクスの各関数の詳細については、[DLL 関数の参照を翻訳](../../../odbc/reference/syntax/translation-dll-api-reference.md)を参照してください。  
+次の表では、翻訳の DLL の関数について説明します。 構文とセマンティクスの各関数の詳細については、次を参照してください。 [DLL 関数の参照を翻訳](../../../odbc/reference/syntax/translation-dll-api-reference.md)します。  
   
 |タスク|関数名|用途|  
 |----------|-------------------|-------------|  

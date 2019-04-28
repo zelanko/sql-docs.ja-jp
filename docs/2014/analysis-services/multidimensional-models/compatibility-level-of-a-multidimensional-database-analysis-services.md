@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701053"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>多次元データベースの互換性レベルの設定 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベース互換性レベル プロパティによって、データベースの機能レベルが決定されます。 互換性レベルは、各モデルの種類に固有です。 たとえば、互換性レベルの`1100`データベースが多次元か表形式かによって異なる意味を持ちます。  
   
- このトピックでは、多次元データベースの互換性レベルについてのみ説明します。 表形式ソリューションの詳細については、[互換性レベル&#40;SSAS テーブル SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)を参照してください。  
+ このトピックでは、多次元データベースの互換性レベルについてのみ説明します。 表形式ソリューションの詳細については、次を参照してください。[互換性レベル&#40;SSAS テーブル SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)します。  
   
 > [!NOTE]  
 >  表形式モデルには、多次元モデルに適用できないデータベース互換性レベルが存在します。 互換性レベル `1103` は、多次元モデルには存在しません。 参照してください[で SQL Server 2012 SP1 との互換性レベル表形式モデルの新](https://go.microsoft.com/fwlink/?LinkId=301727)の詳細については`1103`テーブル ソリューションの。  

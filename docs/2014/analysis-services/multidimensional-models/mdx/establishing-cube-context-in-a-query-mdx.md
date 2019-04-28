@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b877875c6a5c02b7d7715916d5515e93d95dbeb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725556"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>クエリ内のキューブ コンテキストの確立 (MDX)
   各 MDX クエリは、指定したキューブ コンテキスト内で実行されます。 このコンテキストは、クエリ内の式によって評価されるメンバーを定義します。  
@@ -60,6 +60,6 @@ FROM [Adventure Works]
  キューブ コンテキストの外部のキューブからデータを取得する場合は、MDX の [LookupCube](/sql/mdx/lookupcube-mdx) 関数を使用できます。 さらに、クエリの評価時にコンテキストを一時的に制限するために、 [Filter](/sql/mdx/filter-mdx) などの関数も用意されています。  
   
 ## <a name="see-also"></a>参照  
- [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

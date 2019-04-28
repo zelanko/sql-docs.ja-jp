@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b73227ae13d9534a98e4fc68030f5447f8db9cf7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720197"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>サブレポート (レポート ビルダーおよび SSRS)
   サブレポートは、メインのレポート本文内に別のレポートを表示するレポート アイテムです。 概念上、レポート内のサブレポートは Web ページ内のフレームとほぼ同じです。 これは、レポートをレポート内に埋め込むために使用されます。 サブレポートには、任意のレポートを使用できます。 サブレポートとして表示されるレポートは、レポート サーバー上に保存され、通常は親レポートと同じフォルダーに置かれます。 親レポートからサブレポートにパラメーターを渡すようにも設定できます。 パラメーターを使用してサブレポートの各インスタンスのデータをフィルター処理することにより、サブレポートをデータ領域内で繰り返し使用することができます。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd3d21c2371878c44accc4d7e9f501f47ce64646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732664"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[データ ソース ビュー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   **[データ ソース ビュー]** ペインを使用すると、選択されたキューブに関連付けられているデータ ソース ビューのテーブルおよび列を表示できます。 このペインを使用すると、 **[データ ソース ビュー]** ペインから **[メジャー]** ペインに列をドラッグすることで、メジャー グループおよびメジャーを作成できます。  

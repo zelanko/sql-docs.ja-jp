@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d98c06131029f804476fe1f3779352a34ccd81e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727026"
 ---
 # <a name="specifying-the-installation-target"></a>インストール先の指定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開ウィザードからインストール先の情報を読み取り、 \<*プロジェクト名*> >.deploymenttargets ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時にこのファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベースとで指定したサーバーを使用して、**展開**のページ、 *\<プロジェクト名 >* **プロパティ ページ**を作成するダイアログボックス\<*プロジェクト名*> .targets ファイル。  

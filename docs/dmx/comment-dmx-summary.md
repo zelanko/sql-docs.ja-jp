@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62707264"
 ---
 # <a name="---comment-dmx-summary"></a>-(コメント) (DMX) の概要
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "38031450"
   
  コメントの長さには制限がありません。  
   
- DMX でさまざまな種類のコメントを使用する方法の詳細については、[コメント&#40;DMX&#41;](../dmx/comments-dmx.md)を参照してください。  
+ DMX でさまざまな種類のコメントを使用する方法の詳細については、次を参照してください。[コメント&#40;DMX&#41;](../dmx/comments-dmx.md)します。  
   
 ## <a name="see-also"></a>参照  
  [スラッシュ アスタリスク&#40;コメント&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   

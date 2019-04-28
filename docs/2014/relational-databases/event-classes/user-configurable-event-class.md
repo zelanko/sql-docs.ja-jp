@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724831"
 ---
 # <a name="user-configurable-event-class"></a>User configurable イベント クラス
   ユーザー定義のイベントを監視するには、User configurable イベント カテゴリを使用します。 ユーザー定義のイベント クラスを作成して、他のイベント カテゴリにあるシステム提供のイベント クラスでは監視できないイベントを監視します。 たとえば、ユーザー定義のイベントを作成して、テスト中のアプリケーションの進行状況を監視できます。 アプリケーションを実行すると、あらかじめ定義したポイントでイベントが生成され、アプリケーションの現在の実行ポイントを特定できます。  

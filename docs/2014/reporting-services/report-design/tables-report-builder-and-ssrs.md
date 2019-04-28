@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7c5c384edbab7792f373b62417f7ad43832e1ff3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720733"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>テーブル (レポート ビルダーおよび SSRS)
   テーブルを使用すると、詳細データまたはグループ化されたデータ、あるいはその両方を組み合わせて表示できます。 データは、1 つのフィールドまたは複数のフィールドでグループ化することも、独自の式を記述してグループ化することもできます。 入れ子になったグループまたは独立した隣接するグループを作成できます。 グループ化されたデータの集計値を表示するには、合計をグループに追加します。 行と列を書式設定して、強調するデータを強調表示します。 最初は詳細データまたはグループ化されたデータを非表示にして、ユーザーが表示するデータを対話的に選択できるドリルダウンの切り替えを含めることもできます。  

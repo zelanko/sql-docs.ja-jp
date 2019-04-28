@@ -1,5 +1,5 @@
 ---
-title: 選択し、予測クエリの入力データをマップ |Microsoft ドキュメント
+title: 選択し、予測クエリの入力データのマップ |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724864"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>予測クエリの入力データの選択およびマップ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -115,6 +115,6 @@ ms.locfileid: "34015059"
      リレーションシップが既に存在する場合は、マイニング モデルの列が、入力テーブル内の同じ名前の列に自動的にマップされます。 入れ子になったテーブルとケース テーブル間のリレーションシップは、 **[結合の変更]** をクリックし、 **[リレーションシップの作成]** ダイアログ ボックスを開いて変更できます。  
   
 ## <a name="see-also"></a>参照  
- [予測クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [予測クエリ (データ マイニング)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

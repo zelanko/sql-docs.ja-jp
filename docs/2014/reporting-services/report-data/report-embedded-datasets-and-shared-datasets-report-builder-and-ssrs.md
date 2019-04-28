@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea3e991cc936aed41350347f095f8e69d5025450
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720892"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  

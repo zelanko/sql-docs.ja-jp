@@ -22,27 +22,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 335b536d3356f5bfefa6cf5efd71b34327c79708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706079"
 ---
-# <a name="sysassemblies-transact-sql"></a>sys.assemblies (Transact-SQL)
+# <a name="sysassemblies-transact-sql"></a>sys.assemblies (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  アセンブリごとに 1 行のデータを返します。  
+  アセンブリごとに行を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|アセンブリの名前。 データベース内で一意です。|  
 |**principal_id**|**int**|このアセンブリを所有するプリンシパルの ID。|  
 |**assembly_id**|**int**|アセンブリ識別番号。 データベース内で一意です。|  
-|**clr_name**|**nvarchar (4000)**|アセンブリの簡単な名前、バージョン番号、カルチャ、公開キー、およびアーキテクチャをエンコードする正規文字列。 この値は、共通言語ランタイム (CLR) 側でアセンブリを一意に識別する値です。|  
-|**permission_set**|**tinyint**|アセンブリに対する権限セットまたはセキュリティ レベル。<br /><br /> 1 = 安全なアクセス<br /><br /> 2 = 外部アクセス<br /><br /> 3 = 安全でないアクセス|  
+|**clr_name**|**nvarchar (4000)**|簡易名、バージョン番号、カルチャ、公開キー、およびアセンブリのアーキテクチャをエンコードする正規文字列。 この値は、共通言語ランタイム (CLR) 側でアセンブリを一意に識別します。|  
+|**permission_set**|**tinyint**|アクセス許可セット/セキュリティ レベル アセンブリ。<br /><br /> 1 = 安全なアクセス<br /><br /> 2 = 外部アクセス<br /><br /> 3 = 安全でないアクセス|  
 |**permission_set_desc**|**nvarchar(60)**|アセンブリに対する権限セットまたはセキュリティ レベルの説明。<br /><br /> SAFE_ACCESS<br /><br /> EXTERNAL_ACCESS<br /><br /> UNSAFE_ACCESS|  
-|**is_visible**|**bit**|1 = アセンブリは [!INCLUDE[tsql](../../includes/tsql-md.md)] エントリ ポイントを登録するため表示されます。<br /><br /> 0 = アセンブリは管理されている呼び出し元のみを対象にしています。 つまりアセンブリは、データベース内の他のアセンブリに対して内部実装を提供します。|  
-|**create_date**|**datetime**|アセンブリが作成または登録された日付。|  
+|**is_visible**|**bit**|1 = アセンブリは [!INCLUDE[tsql](../../includes/tsql-md.md)] エントリ ポイントを登録するため表示されます。<br /><br /> 0 = アセンブリは管理されている呼び出し元のみを対象にしています。 これは、アセンブリは、データベース内の他のアセンブリに対して内部実装を提供します。|  
+|**create_date**|**datetime**|アセンブリが作成または登録の日付。|  
 |**modify_date**|**datetime**|アセンブリが変更された日付。|  
 |**is_user_defined**|**bit**|アセンブリのソースを示します。<br /><br /> 0 = システム定義のアセンブリ (に対する Microsoft.SqlServer.Types など、 **hierarchyid**データ型)<br /><br /> 1 = ユーザー定義のアセンブリ|  
   

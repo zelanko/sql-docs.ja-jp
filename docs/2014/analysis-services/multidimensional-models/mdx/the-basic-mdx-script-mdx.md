@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e557807f2371b933896a7855c92ef0241ef3af37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725366"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本的な MDX スクリプト (MDX)
   多次元式 (MDX) スクリプトは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]におけるキューブの計算処理を定義します。 MDX スクリプトには、以下の 2 種類があります。  
@@ -53,18 +53,18 @@ ms.locfileid: "48164382"
  すべての MDX スクリプト ステートメント  
  MDX スクリプトにおいて、MDX スクリプト ステートメントは、計算のコンテキストと範囲を制御し、MDX スクリプト内の他のステートメントの動作を管理します。 このカテゴリには以下のステートメントが含まれます。  
   
--   [計算](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [固定](/sql/mdx/mdx-scripting-freeze)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
--   [スコープ](/sql/mdx/mdx-scripting-scope)  
+-   [SCOPE](/sql/mdx/mdx-scripting-scope)  
   
  MDX スクリプト ステートメントの詳細については、「[MDX スクリプト ステートメント &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)」を参照してください。  
   
- [メンバーを作成します。](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  CREATE MEMBER ステートメントは、計算されるメンバーを作成します。 計算されるメンバーの作成方法の詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
- [セットを作成します。](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  CREATE SET ステートメントは名前付きセットを作成します。 名前付きセットの作成方法の詳細については、「[MDX での名前付きセットの作成 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)」を参照してください。  
   
  条件ステートメント  
@@ -91,7 +91,7 @@ ms.locfileid: "48164382"
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 言語リファレンス&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [MDX スクリプティングの基礎&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 言語リファレンス &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

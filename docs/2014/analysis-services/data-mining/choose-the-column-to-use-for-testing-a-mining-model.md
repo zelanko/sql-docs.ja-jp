@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340080271318073983b29abebeab85122993b489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715219"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>マイニング モデルのテストに使用する列の選択
   マイニング モデルの精度を測定する前に、評価するのがどの結果なのかを決定する必要があります。 多くのデータ マイニング モデルでは、モデルの作成時に、予測可能な属性として使用する少なくとも 1 つの列を選択する必要があります。 そのため、モデルの精度をテストするときに、通常はその属性をテスト対象として選択する必要があります。  

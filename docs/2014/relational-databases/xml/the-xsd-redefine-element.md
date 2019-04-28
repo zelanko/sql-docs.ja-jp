@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e9fa3dedafc05406dcc521429130f98a215d294
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679972"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 要素
   W3C XSD の **redefine** 要素は、スキーマ コンポーネントの再定義をサポートします。 ただし、このディレクティブは、パフォーマンス コストがかかる可能性があるともする必要がありますをサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのインスタンスを再検証、`xml`再定義されたスキーマに関連付けられているデータ型。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの要素をサポートしません。 **\<xsd:redefine>** 要素を含む XML スキーマはサーバーに拒否されます。  

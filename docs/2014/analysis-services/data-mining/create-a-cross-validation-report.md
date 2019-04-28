@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ca341e5de77a1677e197b4263b554e99956fee9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715139"
 ---
 # <a name="create-a-cross-validation-report"></a>クロス検証レポートの作成
   このトピックでは、データ マイニング デザイナーの [精度チャート] タブを使用してクロス検証レポートを作成する方法を順を追って説明します。 クロス検証レポートの外観およびレポートに含まれる統計メジャーに関する一般的な情報については、「[相互検証 (Analysis Services - データ マイニング)](cross-validation-analysis-services-data-mining.md)」を参照してください。  

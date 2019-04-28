@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b7192fda17360ec473956332db03ed3b4feab5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717459"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>レコードの生成処理 (SQLXML 4.0)
   XML 一括読み込みでは、XML 入力データが処理され、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の適切なテーブルに格納するレコードが用意されます。 XML 一括読み込みのロジックでは、新しいレコードを生成するタイミングと、レコードのフィールドにコピーする子要素および属性値が決定され、完成したレコードを挿入のため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信するタイミングが判断されます。  

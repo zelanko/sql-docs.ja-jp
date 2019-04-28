@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741fb8ac694568911c1b2b5def7bd07a8c86e8ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662920"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph イベント クラス
   **Deadlock Graph** イベント クラスでは、デッドロックの XML 表記の説明が提供されます。 このクラスは **Lock:Deadlock** イベント クラスと同時に発生します。  

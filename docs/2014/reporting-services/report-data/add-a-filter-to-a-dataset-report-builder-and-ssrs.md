@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb2c717ca9d88d9c1ff1fe4f02fb89c46fe8f0e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697756"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)
   データが外部データ ソースから取得された後に、データセットにフィルターを追加してレポート内のデータを制限できます。 データセットにフィルターを追加すると、すべてのレポート パーツまたはデータ領域では、フィルター条件に一致するデータのみが使用されます。  

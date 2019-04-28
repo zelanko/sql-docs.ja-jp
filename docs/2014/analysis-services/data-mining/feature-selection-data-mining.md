@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722394"
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
   *機能の選択*はツールと処理と分析のために管理しやすいサイズに入力を減らすために使用できる手法を説明するデータ マイニングでよく使用する用語です。 機能の選択は意味だけでなく*カーディナリティの引き下げ*、つまり、モデルをも意味している属性の選択のビルド時に考慮できる属性の数に、任意または定義済みのカットオフを課すアナリストまたはモデリング ツールのいずれか積極的に、選択または分析のための有用性に基づく属性を破棄します。  

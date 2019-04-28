@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721734"
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを作成する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの詳細については、「[SQL Server 以外のサブスクライバーのサブスクリプションの作成](create-a-subscription-for-a-non-sql-server-subscriber.md)」を参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "54135542"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>パブリッシャーからプッシュ サブスクリプションを作成するには  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
@@ -263,7 +263,7 @@ ms.locfileid: "54135542"
  [Create a Publication](publish/create-a-publication.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [プッシュ サブスクリプションの同期](synchronize-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [パブリケーションのサブスクライブ](subscribe-to-publications.md)   
  [sqlcmd でのスクリプト変数の使用](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

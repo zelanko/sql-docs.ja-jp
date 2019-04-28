@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94a830bba0339262148a0a7f826f3bcb89371274
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680243"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Azure SQL データベースへの接続 (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、[!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] に接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

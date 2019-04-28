@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d396ac9bfd8f04a211e01c8e8384e62f0808d42b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725532"
 ---
 # <a name="calculation-context"></a>計算コンテキスト
   計算コンテキストとは、式が評価され、すべての座標が明示的に知られているか、または式から派生することができる、キューブの既知のサブ空間です。  
@@ -71,8 +71,8 @@ WHERE (Customer.Country.France,
 >  クエリのパフォーマンスを向上するには、解決プロセスのできるだけ早い段階でメンバーおよび組を削除してください。 こうすることで、最終的なメンバーのセットに対するクエリ時の複雑な計算を、最小限のセルに対して行うことができます。  
   
 ## <a name="see-also"></a>参照  
- [クエリ内のキューブ コンテキストの確立&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX での基本概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [クエリ内のキューブ コンテキストの確立 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

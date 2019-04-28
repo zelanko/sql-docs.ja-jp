@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710508"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>データベース ダイアグラムの保存 (Visual Database Tools)
   データベース ダイアグラムを保存すると、テーブルや列やその他のデータベース オブジェクトに加えた変更をすべて保存できます。  

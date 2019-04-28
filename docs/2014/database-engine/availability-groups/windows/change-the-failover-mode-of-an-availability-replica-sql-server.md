@@ -16,18 +16,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b2a481de3c100e65f780d28aa23650bd8fd4711
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791947"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>可用性レプリカのフェールオーバー モードの変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の AlwaysOn 可用性グループでの可用性レプリカのフェールオーバー モードを変更する方法について説明します。 フェールオーバー モードは、同期コミット可用性モードで実行されるレプリカのフェールオーバー モードを決定するレプリカ プロパティです。 詳細については、「[フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)」および「[可用性モード &#40;AlwaysOn 可用性グループ&#41;](availability-modes-always-on-availability-groups.md)」を参照してください。  
   
 
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件と制限  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48205602"
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (`cd`) します。  
   
-2.  使用して、`Set-SqlAvailabilityReplica`コマンドレットと、`FailoverMode`パラメーター。 レプリカに automatic フェールオーバーに設定するときは、使用する必要があります、`AvailabilityMode`レプリカを同期コミット可用性モードに変更するパラメーター。  
+2.  `Set-SqlAvailabilityReplica` パラメーターを指定して `FailoverMode` コマンドレットを使用します。 レプリカを自動フェールオーバーに設定するときは、`AvailabilityMode` パラメーターを使用して、レプリカを同期コミット可用性モードに変更しなければならない場合があります。  
   
      たとえば、次のコマンドは、可用性グループ `MyReplica` のレプリカ `MyAg` を、同期コミット可用性モードを使用し、自動フェールオーバーをサポートするように変更します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48205602"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   

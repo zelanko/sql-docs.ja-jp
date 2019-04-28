@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f5333d67e40d4abc10134f339e39a41c83fbcc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722794"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
   ここでは、 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] のインスタンスで作成されたデータ マイニング モデルまたはデータ マイニング構造を、SQL Server 2005 Analysis Services を使用するデータベースに配置しようとする際、または SQL Server 2005 で作成されたモデルを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに配置する際に発生する可能性のある、互換性に関する既知の問題について説明します。  

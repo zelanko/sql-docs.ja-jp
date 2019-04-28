@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b070366c278576dc976c32305ab542aa92d7708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729664"
 ---
 # <a name="defining-a-data-source"></a>データ ソースの定義
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを作成した後は、通常、そのプロジェクトで使用するデータ ソースを 1 つ以上定義します。 データ ソースを定義するときは、データ ソースへの接続に使用する接続文字列情報を定義します。 詳細については、「[データ ソースの作成 (SSAS 多次元)](multidimensional-models/create-a-data-source-ssas-multidimensional.md)」を参照してください。  
@@ -56,6 +56,6 @@ ms.locfileid: "48195892"
  [データ ソース ビューの定義](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>参照  
- [データ ソースを作成する&#40;SSAS 多次元&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [データ ソースの作成 &#40;SSAS 多次元&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

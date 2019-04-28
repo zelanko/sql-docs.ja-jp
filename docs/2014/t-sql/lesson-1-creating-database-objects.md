@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 45eabd88d5753721b081c79d3dab03b0a6134c78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704551"
 ---
 # <a name="lesson-1-creating-database-objects"></a>レッスン 1:データベース オブジェクトの作成
   このレッスンでは、データベースを作成する方法、データベースにテーブルを作成する方法、およびテーブル内のデータにアクセスして変更する方法を説明します。 これは [!INCLUDE[tsql](../includes/tsql-md.md)]の入門レッスンであるため、これらのステートメントの各種オプションは使用せず、その説明も含まれていません。  

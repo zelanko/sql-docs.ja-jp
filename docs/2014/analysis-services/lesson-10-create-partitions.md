@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729485"
 ---
 # <a name="lesson-11-create-partitions"></a>レッスン 11:パーティションの作成
   このレッスンでは、パーティションを作成して Internet Sales テーブルをより小さな論理部分に分割し、他のパーティションと分離して処理 (更新) できるようにします。 既定では、すべてのテーブル モデルに含めることは、すべてのテーブルの列と行が含まれる 1 つのパーティションを持っています。 Internet Sales テーブルの年間でデータを分割します。各テーブルの 5 年間の 1 つのパーティション。  これにより、各パーティションを個別に処理できるようにします。 詳細については、「[パーティション (SSAS テーブル)](tabular-models/partitions-ssas-tabular.md)」を参照してください。  

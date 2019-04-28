@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794607"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>テーブル モデル ソリューションの配置 (SSAS テーブル)
   テーブル モデル プロジェクトを作成した後、ユーザーがレポート クライアント アプリケーションを使用してモデルを参照できるように配置する必要があります。 このトピックでは、テーブル モデル ソリューションを環境に配置する際に使用できるさまざまなプロパティと方法について説明します。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722354"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services インポート ウィザードを使用したデータ マイニング プロジェクトのインポート
   このトピックでは、別のサーバーにある既存のデータ マイニング プロジェクトからメタデータをインポートすることによって新しいデータ マイニング プロジェクトを作成する方法を説明します。インポートには、 **の "** サーバーからインポート (多次元およびデータ マイニング) プロジェクト [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]" というテンプレートを使用します。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731786"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>ディメンション デザイナー (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用すると、ディメンションに含まれるデータを参照したり、既存のディメンションの属性、階層、レベル、属性リレーションシップ、および翻訳などの各種プロパティを変更したりできます。  

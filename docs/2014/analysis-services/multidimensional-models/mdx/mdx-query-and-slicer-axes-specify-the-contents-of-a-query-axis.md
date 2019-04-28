@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699551"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>クエリ軸の内容の指定 (MDX)
   クエリ軸は、多次元式 (MDX) の SELECT ステートメントから返されるセル セットの範囲を指定します。 セル セットの範囲を指定することで、返されるデータのうち、クライアントで表示するデータを限定できます。  

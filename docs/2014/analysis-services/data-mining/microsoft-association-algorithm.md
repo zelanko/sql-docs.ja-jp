@@ -32,14 +32,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722108"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft アソシエーション アルゴリズム
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で提供されているアソシエーション アルゴリズムであり、推奨エンジンで使用できます。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。 マーケット バスケット分析の例は、次を参照してください。[レッスン 3: マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)データ マイニング チュートリアル」。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で提供されているアソシエーション アルゴリズムであり、推奨エンジンで使用できます。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。 マーケット バスケット分析の例は、次を参照してください。[レッスン 3。マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)データ マイニング チュートリアル」でします。  
   
  アソシエーション モデルは、個々のケースの識別子とケース内のアイテムの識別子を含んでいるデータセットに基づいて作成されています。 ケース内のアイテムのグループは、 *アイテムセット*と呼ばれます。 アソシエーション モデルは、一連のアイテムセットと、ケース内でアイテムをグループ化する方法を示すルールで構成されています。 アルゴリズムによって識別されるルールは、顧客の買い物かごに既に存在する製品に基づいて、顧客の将来の購入を予測するために使用できます。 次の図は、アイテムセットの一連のルールを示しています。  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729318"
 ---
 # <a name="lesson-2-add-data"></a>レッスン 2:データを追加する
   このレッスンでは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] のテーブルのインポート ウィザードを使用して、AdventureWorksDW SQL データベースに接続し、データを選択し、プレビューして、データをフィルター処理した後、それらのデータをモデル ワークスペース内にインポートします。  

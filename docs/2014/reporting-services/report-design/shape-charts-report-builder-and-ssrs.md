@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720233"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>図形グラフ (レポート ビルダーおよび SSRS)
   図形グラフでは、全体に占める割合 (パーセント) として値データが表示されます。 図形グラフは、通常、セット内の異なる値間での相対的な比較を示すために使用されます。 カテゴリは、図形の個々のセグメントによって表されます。 セグメントのサイズは、値によって決まります。 図形グラフは円グラフに用途が似ていますが、カテゴリは大きい方から順に並べられます。  

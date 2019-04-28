@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807561"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする (Transact-SQL)
   このトピックでは、データベース ミラーリングの着信接続を認証する際に証明書を使用するようにサーバー インスタンスを構成する手順について説明します。 着信接続を設定する前に、各サーバー インスタンスで発信接続を構成する必要があります。 詳細については、「[データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)」を参照してください。  

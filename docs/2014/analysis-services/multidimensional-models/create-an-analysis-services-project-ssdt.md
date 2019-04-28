@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702238"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services プロジェクトの作成 (SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して定義できます。具体的には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト テンプレートを使用するか、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのインポート ウィザードを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのコンテンツを読み取ります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に読み込まれているソリューションがない場合は、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを作成すると自動的に新しいソリューションが作成されます。 それ以外の場合は、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトが既存のソリューションに追加されます。 ソリューション開発のベスト プラクティスでは、アプリケーション データの種類ごとにプロジェクトを個別に作成することが必要です。複数のプロジェクトが関係していても、使用するソリューションは 1 つです。 たとえば、Integration Services パッケージ、Analysis Services データベース、および Reporting Services レポートすべてを同じビジネス アプリケーションが使用し、これらのための独立した複数プロジェクトを含むソリューションが 1 つ存在する場合があります。  

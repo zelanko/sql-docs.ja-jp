@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732128"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>[デザイン] ペイン ([マイニング モデル予測] ビュー)
   **デザイン** ペインには、データ マイニング予測クエリ ビルダーがあり、これを利用してデータ マイニング予測クエリを作成できます。 データ ソース ビューから入力データのテーブルを使用する予測クエリを設計して一括予測を生成することも、個々の値を取得する単一予測クエリを作成することもできます。  
@@ -30,7 +30,7 @@ ms.locfileid: "48189768"
 > [!NOTE]  
 >  クエリに手動で何らかの変更を加えた場合、デザイン ビューに戻ると変更は失われます。 DMX クエリを保存するには、Windows クリップボードにクエリをコピーしてからテキスト ファイルに貼り付けます。  
   
- **詳細:** [データ マイニング クエリ](data-mining/data-mining-queries.md)  
+ **詳細情報。**[データ マイニング クエリ](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>および  
  **クエリ結果ビューに切り替え**  
@@ -83,10 +83,10 @@ ms.locfileid: "48189768"
  ソース テーブルから派生した列の一覧から列を選択します。 **[ソース]** で **[予測関数]** を選択した場合、ここには選択したマイニング モデルで利用できる予測関数が表示されます。  
   
  **[グループ]**  
- 式をグループ化するために **[ルールの適用条件]** 列と組み合わせて使用します。 たとえば、`(expr1 Or expr2) And expr3` のようにします。  
+ 式をグループ化するために **[ルールの適用条件]** 列と組み合わせて使用します。 たとえば、 `(expr1 Or expr2) And expr3`のようにします。  
   
  **[ルールの適用条件]**  
- 論理クエリを作成するために使用します。 たとえば、`(expr1 Or expr2) And expr3` のようにします。  
+ 論理クエリを作成するために使用します。 たとえば、 `(expr1 Or expr2) And expr3`のようにします。  
   
  **[条件と引数]**  
  列に適用する条件またはユーザー式を指定します。 マイニング モデルや入力テーブルを含むテーブルから列をドラッグして、セルに入力できます。  

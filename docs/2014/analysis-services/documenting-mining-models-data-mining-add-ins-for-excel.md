@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731736"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>マイニング モデルのドキュメント化とスケーリング (Excel 用データ マイニング アドイン)
   ![ドキュメント モデルのボタン、データ マイニング リボン](media/dmc-docmodel.gif "モデルのドキュメント化ボタン、データ マイニング リボン")  
@@ -36,7 +36,7 @@ ms.locfileid: "48118074"
   
 3.  **モデルの選択**ダイアログ ボックスは、レポート、モデルを選択しをクリックして**次**します。 実行する必要があります、**ドキュメント モデル**ウィザードを個別に各モデルを文書化します。  
   
-4.  **ドキュメントの詳細の選択** ダイアログ ボックスで、2 つのオプションのいずれかを選択:**情報**または**概要情報**します。  
+4.  **ドキュメントの詳細の選択** ダイアログ ボックスで、2 つのオプションのいずれかを選択します。**情報を入力**または**概要情報**します。  
   
 5.  **[完了]** をクリックします。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48118074"
 ||不連続列|合格数<br /><br /> 不合格数<br /><br /> ログ スコア<br /><br /> リフト|  
   
 > [!NOTE]  
->  ドキュメント化できるのは、SQL Server Analysis Services でサポートされている種類のモデルです。 したがって、この表に示されたモデルの中には、テーブル分析ツールまたはデータ マイニング クライアントのウィザードでは作成できない種類のモデルもあります。 ただし、すべての種類のモデルを使用して作成できます、**データ マイニングのクエリ エディターの高度な**します。 詳細については、[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)を参照してください。  
+>  ドキュメント化できるのは、SQL Server Analysis Services でサポートされている種類のモデルです。 したがって、この表に示されたモデルの中には、テーブル分析ツールまたはデータ マイニング クライアントのウィザードでは作成できない種類のモデルもあります。 ただし、すべての種類のモデルを使用して作成できます、**データ マイニングのクエリ エディターの高度な**します。 詳細については、次を参照してください。[クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)します。  
   
 ## <a name="see-also"></a>参照  
  [展開して、マイニング モデルのスケーリング&#40;データ マイニング Excel 用アドイン&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

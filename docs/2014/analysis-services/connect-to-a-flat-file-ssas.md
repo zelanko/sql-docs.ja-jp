@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680309"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>[フラット ファイルへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、フラット ファイル (.txt)、タブ区切りファイル (.tab)、またはコンマ区切りファイル (.csv) に接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

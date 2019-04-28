@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666907"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd ユーティリティの使用
   `sqlcmd` ユーティリティは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントおよびスクリプトを対話形式でアドホック実行したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト タスクを自動化したりするためのコマンドライン ユーティリティです。 `sqlcmd` を対話形式で使用したり、`sqlcmd` を使用して実行できるスクリプト ファイルを作成したりするには、ユーザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] を理解している必要があります。 `sqlcmd` ユーティリティは一般的に次のように使用されます。  

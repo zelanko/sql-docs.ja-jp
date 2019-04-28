@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795442"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>主要業績評価指標表現 (テーブル)
   KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスを測定に使用されます。  

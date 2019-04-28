@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8204913babd9b52caf2edcaa2de8feae76c70d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732305"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>[データベースのプロパティ] ダイアログ ボックス (SSAS - テーブル)
   このダイアログ ボックスは、タイムスタンプとその他の情報に加え、データベースがキャッシュされたデータを使用するかどうかを決定するカスタマイズ可能なプロパティを提供します。 他のカスタマイズ可能なプロパティには、データベース名の変更と権限借用オプションの指定が含まれます。  
@@ -34,7 +34,7 @@ ms.locfileid: "48105692"
 |**[スキーマの最終更新]**|データベースのメタデータが最後に更新されたときの日時が表示されます。|  
 |**最後の更新**|データベースのデータが最後に更新されたときの日時が表示されます。|  
 |**読み取り/書き込みモード**|これは読み取り専用プロパティですが、 **Detach** および **Attach** コマンドのシーケンスを使用して変更できます。このプロパティは、 **Attach** コマンドのパラメーターです。 詳細については、「[データベースの ReadWriteMode](multidimensional-models/database-readwritemodes.md)」を参照してください。|  
-|**DirectQueryMode**|データベースがインメモリ ストレージのみ (ディスク ストレージなし) を使用するか、ディスク ベース ストレージのみを使用するか、またはその 2 つの組み合わせを使用するかを指定します。 有効な値は、InMemory、DirectQuery、InMemoryWithDirectQuery (ほとんどはメモリ ベースで、一部がディスクへのページング)、または DirectQueryWithInMemory (ほとんどがディスク ベースで、一部がインメモリ ストレージ) です。 詳細については、[DirectQuery の配置シナリオ&#40;SSAS 表形式&#41;](directquery-deployment-scenarios-ssas-tabular.md)を参照してください。|  
+|**DirectQueryMode**|データベースがインメモリ ストレージのみ (ディスク ストレージなし) を使用するか、ディスク ベース ストレージのみを使用するか、またはその 2 つの組み合わせを使用するかを指定します。 有効な値は、InMemory、DirectQuery、InMemoryWithDirectQuery (ほとんどはメモリ ベースで、一部がディスクへのページング)、または DirectQueryWithInMemory (ほとんどがディスク ベースで、一部がインメモリ ストレージ) です。 詳細については、次を参照してください。 [DirectQuery の配置シナリオ&#40;SSAS 表形式&#41;](directquery-deployment-scenarios-ssas-tabular.md)します。|  
 |**データ ソース権限借用情報**|ローカルまたはリモート パーティション、リレーショナル データ ストア (DirectQuery による) に対して実行されるクエリ、不一致バインド、およびターゲットからソースへのデータベース同期で、データを処理または更新するときにデータベース接続で使用される権限借用アカウントを指定します。<br /><br /> 有効な値には、Analysis Services サービス アカウントまたは Windows 資格情報の特定のセットが含まれます。 **[現在のユーザーの資格情報を使用する]** を指定しないでください。 この資格情報オプションは、テーブル モデル データベースではサポートされません。|  
 |**最後に処理されました。**|データベースが最後に処理された日時が表示されます。|  
 |**推定サイズ**|データベースの推定サイズが表示されます。|  
