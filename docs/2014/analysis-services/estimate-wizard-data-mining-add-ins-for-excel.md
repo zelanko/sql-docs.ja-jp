@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04a5bf6b80e95df3b01ac73fd4580813c0709fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731481"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>推定ウィザード (Excel 用データ マイニング アドイン)
   ![データ マイニング リボンの推定ウィザード](media/dmc-estimate.gif "データ マイニング リボンの推定ウィザード")  
@@ -93,7 +93,7 @@ ms.locfileid: "48182462"
 ### <a name="requirements"></a>要件  
  データ推定ウィザードを使用するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続する必要があります。  
   
- 接続を作成する方法については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
+ 接続を作成する方法については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
   
  推定アルゴリズムを使用するには、予測しようとしている結果を、通貨、売上高、日付、時刻などの数値で表す必要があります。  
   

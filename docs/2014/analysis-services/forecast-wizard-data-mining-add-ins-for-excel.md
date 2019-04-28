@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731023"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>予測ウィザード (Excel 用データ マイニング アドイン)
   ![データ マイニング リボンの関連付けウィザード](media/dmc-forecast.gif "データ マイニング リボンのウィザードを関連付ける")  
@@ -54,13 +54,13 @@ ms.locfileid: "52543703"
   
     -   ARTXP と ARIMA の組み合わせ  
   
-     相違点については、[Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](data-mining/microsoft-time-series-algorithm-technical-reference.md)を参照してください。  
+     相違点については、次を参照してください。 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](data-mining/microsoft-time-series-algorithm-technical-reference.md)します。  
   
      また、モデルに対して周期性のヒントを追加し、スムージング オプションを指定して、回帰オプションをカスタマイズすることもできます。  
   
 5.  **完了**ページで、データ セットと、モデルのわかりやすい名前を指定し、完成したモデルを使用する方法を制御する次のオプションを設定します。  
   
-    -   **モデルの参照**します。 このオプションを選択すると、ウィザードとすぐ、モデルの処理が完了すると表示されます、**参照** ウィンドウに結果を検証してください。 ビューアーの内容は、構築したモデルの種類によって異なります。 詳細については、[予測モデルの参照](browsing-a-forecasting-model.md)を参照してください。  
+    -   **モデルの参照**します。 このオプションを選択すると、ウィザードとすぐ、モデルの処理が完了すると表示されます、**参照** ウィンドウに結果を検証してください。 ビューアーの内容は、構築したモデルの種類によって異なります。 詳細については、次を参照してください。[予測モデルの参照](browsing-a-forecasting-model.md)します。  
   
     -   **ドリルスルーを有効にする**します。 このチェック ボックスをオンにすると、完成したモデルから基になるデータを表示できます。 このオプションは、デシジョン ツリー モデルを構築する場合にのみ使用できます。  
   

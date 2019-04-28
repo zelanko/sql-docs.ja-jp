@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d419a09c34998165f13fbc9e43c9b561602b69aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730203"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Management Studio での Analysis Services スクリプトの作成
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、スクリプトの生成機能、テンプレート、および Analysis Services オブジェクトとタスクのスクリプトを作成するために使用できるエディターが含まれています。  
@@ -36,7 +36,7 @@ ms.locfileid: "48067198"
   
 2.  データベースを右クリックし、 **[バックアップ]** をクリックします。 [データベースのバックアップ] ダイアログ ボックスが開きます。 バックアップのファイル名を指定し、このバックアップに必要なオプションを選択します。  
   
-3.  ダイアログ ボックスの上部にある **[スクリプト]** をクリックします。 スクリプト機能は、Management Studio 内のすべてのタスク ベースのダイアログ ボックスに含まれています。 これには、次のオプションがあります。 **[スクリプト操作を新規クエリ ウィンドウに保存]** は、クエリ エディター ウィンドウを開き、 **[スクリプト操作をファイルに保存]** は、XMLA スクリプトをファイルに保存し、 **[スクリプト操作をクリップボードに保存]** は、XMLA スクリプトをクリップボードに保存します。  
+3.  ダイアログ ボックスの上部にある **[スクリプト]** をクリックします。 スクリプト機能は、Management Studio 内のすべてのタスク ベースのダイアログ ボックスに含まれています。 次のオプションがあります。**スクリプト アクションを新規クエリ ウィンドウに**クエリ エディター ウィンドウを開く**ファイルにスクリプト アクション**XMLA スクリプトをファイルに保存するまたは**スクリプト操作をクリップボードに**する XMLA スクリプトを保存する、クリップボード。  
   
      Management Studio でスクリプト オプションとして表示される **[スクリプト操作をジョブに保存]** オプションは、Analysis Services スクリプトではサポートされていないことに注意してください。  
   
@@ -60,13 +60,13 @@ ms.locfileid: "48067198"
   
 2.  オブジェクトの作成、変更、削除のいずれかを行うスクリプトを作成するオブジェクトを選択します。  
   
-3.  オブジェクトを右クリックし、 **[キューブをスクリプト化]** をポイントしてから、 **[CREATE]**、 **[ALTER]**、 **[DELETE]** のいずれかをポイントし、クエリ エディター ウィンドウを開くには **[新しいクエリ エディター ウィンドウ]** を、XMLA スクリプトをファイルに保存するには **[ファイル]** を、XMLA スクリプトをクリップボードに保存するには **[クリップボード]** をクリックします。  
+3.  オブジェクトを右クリックし、**キューブをスクリプト化**、 をポイント**Create**、 **Alter**、または**を削除する**のいずれかをクリックし、次のオプション:**新しいクエリ エディター ウィンドウ**クエリ エディター ウィンドウを開く**ファイル**XMLA スクリプトをファイルに保存するまたは**クリップボード**XMLA スクリプトをクリップボードに保存します。  
   
     > [!NOTE]  
     >  通常、複数の異なるバージョンのファイルを作成する場合は、 **[ファイル]** を選択します。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)   
- [XMLA クエリ エディター &#40;Analysis Services - 多次元データ&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [Analysis Services の管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)   
+ [XMLA クエリ エディター (Analysis Services - 多次元データ)](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

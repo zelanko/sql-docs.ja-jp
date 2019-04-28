@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a81a538e2cd15dd38a6c32993395cac20079b6f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866340"
 ---
 # <a name="task-6-setting-synonyms"></a>タスク 6:シノニムを設定する
   このタスクで 2 つのドメイン値を設定する**USA**と**米国**の**国**とのシノニムとして**米国**として、先頭の値。 **先頭の値を使用して**の作成時にオプションが選択された、**国**ドメイン任意**USA**の値を**国**ドメインとして出力する**米国**など、先頭の値を米国には)。 参照してください[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)の詳細。  

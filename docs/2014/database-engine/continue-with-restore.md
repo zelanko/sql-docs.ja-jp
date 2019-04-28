@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808254"
 ---
 # <a name="continue-with-restore"></a>[復元の続行]
   **[復元の続行]** ダイアログ ボックスを使用すると、次のバックアップ セットを復元するかどうかを指定できます。 テープを交換する場合など、復元操作を遅らせるには、続行する準備ができてから **[OK]** をクリックします。  

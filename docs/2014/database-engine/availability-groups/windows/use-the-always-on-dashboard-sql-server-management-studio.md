@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788729"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>AlwaysOn ダッシュボードの使用 (SQL Server Management Studio)
   データベース管理者は AlwaysOn ダッシュボードを使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースの正常性をひとめで確認できるビューを取得します。 AlwaysOn ダッシュボードの一般的な用途を次に示します。  
@@ -93,7 +93,7 @@ ms.locfileid: "49120369"
 -   **[手動]**。 自動フェールオーバー モードのレプリカがないことを示します。  
   
  **問題**  
- **[問題]** リンクをクリックすると、問題のトラブルシューティングのドキュメントが表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
+ **[問題]** リンクをクリックすると、問題のトラブルシューティングのドキュメントが表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
   
 > [!TIP]  
 >  列見出しをクリックすると、可用性グループの名前、プライマリ インスタンス、フェールオーバー モード、または問題で、可用性グループの情報を並べ替えることができます。  
@@ -148,7 +148,7 @@ ms.locfileid: "49120369"
 -   **NULL**。 不明な状態です。 この値は、ローカル サーバー インスタンスが WSFC フェールオーバー クラスターと通信できない (ローカル ノードが WSFC クォーラムの一部ではない) 場合に生じます。  
   
  **問題**  
- 問題の名前が一覧表示されます。 この値は既定で表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
+ 問題の名前が一覧表示されます。 この値は既定で表示されます。 AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
   
  **可用性モード**  
  各可用性レプリカのために個別に設定したレプリカ プロパティを示します。 この値は既定で非表示になります。 可能な値は次のとおりです。  
@@ -277,7 +277,7 @@ ms.locfileid: "49120369"
   
 -   **[重大]**。 クリックすると、重大な問題が表示されます。  
   
- AlwaysOn ポリシーのすべての問題の一覧は、[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)を参照してください。  
+ AlwaysOn ポリシーのすべての問題の一覧は、次を参照してください。[運用上の問題と AlwaysOn 可用性グループ (SQL Server) の AlwaysOn ポリシー](always-on-policies-for-operational-issues-always-on-availability.md)します。  
   
  **中断**  
  データベースが **[中断状態]** であるか **[再開]** されたかを示します。 この値は既定で非表示になります。  

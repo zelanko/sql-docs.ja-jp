@@ -31,11 +31,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872172"
 ---
 # <a name="database-lifecycle-management"></a>データベースのライフサイクル管理
   データベース ライフ サイクル管理 (DLM) は、データベースとデータ資産を管理するためのポリシー ベースのアプローチです。 DLM は製品ではなく、データベース アプリケーションのデータベース スキーマ、データ、およびメタデータを管理するための包括的なアプローチです。 DLM に対するよく考えられた積極的なアプローチにより、組織では、パフォーマンス、保護、可用性、およびコストの適切なレベルに応じてデータ リソースを管理できます。  

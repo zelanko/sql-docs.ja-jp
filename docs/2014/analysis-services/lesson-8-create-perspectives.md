@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 9: パースペクティブの作成 |Microsoft Docs'
+title: 'レッスン 9: パースペクティブを作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83d9b10af87926a26b2a671ff162163d3c8fa62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728078"
 ---
-# <a name="lesson-9-create-perspectives"></a>レッスン 9: パースペクティブの作成
+# <a name="lesson-9-create-perspectives"></a>レッスン 9: パースペクティブを作成する
   このレッスンでは、Internet Sales パースペクティブを作成します。 パースペクティブとは、モデルの一部を表示可能なサブセットとして定義するものです。これにより、ビジネス固有またはアプリケーション固有のビューポイントを的を絞って作成できます。 パースペクティブを使用してモデルに接続すると、そのパースペクティブ内に定義されたモデル オブジェクト (テーブル、列、メジャー、階層、および KPI) のみがフィールドとして表示されます。  
   
  このレッスンで作成する Internet Sales パースペクティブでは、Customer テーブル オブジェクトが除外されます。 特定のオブジェクトをビューから除外するパースペクティブを作成した場合、そのオブジェクトはモデル内に依然として存在しますが、レポート クライアントのフィールドの一覧には表示されなくなります。 計算列とメジャーは、パースペクティブに含まれているかどうかに関係なく、除外されたデータ オブジェクトに基づく計算を引き続き実行できます。  
@@ -27,10 +27,10 @@ ms.locfileid: "48163612"
   
  詳細については、「[パースペクティブ (SSAS テーブル)](tabular-models/perspectives-ssas-tabular.md)」を参照してください。  
   
- このレッスンの推定所要時間: **5 分**  
+ このレッスンを完了するまでに時間を推定するには。**5 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「[レッスン 8: 主要業績評価指標の作成](lesson-7-create-key-performance-indicators.md)」を完了している必要があります。  
+ このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 8: 主要業績評価指標の作成](lesson-7-create-key-performance-indicators.md)です。  
   
 ## <a name="create-perspectives"></a>パースペクティブを作成する  
   
@@ -49,6 +49,6 @@ ms.locfileid: "48163612"
 5.  選択内容を確認し、 **Customer** テーブルがオフになっていることを確認して、 **[OK]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルを続行するには、次のレッスン「[レッスン 10: 階層の作成](lesson-9-create-hierarchies.md)」に進んでください。  
+ このチュートリアルを続行するには、次のレッスンに移動します。[レッスン 10:階層を作成する](lesson-9-create-hierarchies.md)します。  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728169"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>[データベース ファイルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[データベース ファイルの検索]** ダイアログ ボックスには、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス用に定義されたログ フォルダーとデータ フォルダーで利用可能なファイルの一覧が表示されます。 一覧表示されたファイルを選択することも、必要に応じて異なるフォルダーとファイルを指定することもできます。 **[データベース ファイルの検索]** ダイアログ ボックスを表示するには、次の手順に従います。  

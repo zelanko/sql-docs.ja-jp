@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814025"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>可用性データベースの中断 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の可用性データベースを中断できます。 中断コマンドは、中断または再開するデータベースをホストするサーバー インスタンス上で実行する必要があります。  
@@ -55,7 +55,7 @@ ms.locfileid: "48108092"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **補足情報:** [トランザクション ログがいっぱいになった状態の回避](#FollowUp)  
+-   **フォローしてください：**[トランザクション ログがいっぱいの回避](#FollowUp)  
   
 -   [関連タスク](#RelatedTasks)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48108092"
  中断するデータベースをホストするサーバー インスタンスに接続している必要があります。 プライマリ データベースとそれに対応するセカンダリ データベースを中断するには、プライマリ レプリカをホストするサーバー インスタンスに接続します。 プライマリ データベースを使用可能な状態で維持したままセカンダリ データベースを中断するには、セカンダリ レプリカに接続します。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
- ボトルネックの発生中、1 つ以上のセカンダリ データベースを短時間中断すると、プライマリ レプリカのパフォーマンスが一時的に高まる効果が見込めます。 セカンダリ データベースが中断している間、対応するプライマリ データベースのトランザクション ログを切り捨てることはできません。 これにより、プライマリ データベースでログ レコードが蓄積されます。 そのため、中断したセカンダリ データベースをすぐに再開または削除することをお勧めします。 詳細については、このトピックの「 [補足情報: トランザクション ログがいっぱいになった状態の回避](#FollowUp)」を参照してください。  
+ ボトルネックの発生中、1 つ以上のセカンダリ データベースを短時間中断すると、プライマリ レプリカのパフォーマンスが一時的に高まる効果が見込めます。 セカンダリ データベースが中断している間、対応するプライマリ データベースのトランザクション ログを切り捨てることはできません。 これにより、プライマリ データベースでログ レコードが蓄積されます。 そのため、中断したセカンダリ データベースをすぐに再開または削除することをお勧めします。 詳細については、次を参照してください。[フォロー アップ。トランザクション ログがいっぱいの回避](#FollowUp)、このトピックで後述します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -107,9 +107,9 @@ ms.locfileid: "48108092"
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **データベースを中断するには**  
   
-1.  ディレクトリ変更コマンド (`cd`) を中断するデータベースのレプリカをホストするサーバー インスタンスにします。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
+1.  ディレクトリ (`cd`) を、中断するデータベースのレプリカをホストするサーバー インスタンスに変更します。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
   
-2.  使用して、`Suspend-SqlAvailabilityDatabase`コマンドレットを可用性グループを中断します。  
+2.  `Suspend-SqlAvailabilityDatabase` コマンドレットを使用して可用性グループを中断します。  
   
      たとえば、次のコマンドでは、 `MyDb3` という名前のサーバー インスタンス上の可用性グループ `MyAg` に含まれている可用性データベース `Computer\Instance`のデータの同期を中断します。  
   
@@ -119,13 +119,13 @@ ms.locfileid: "48108092"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>補足情報: トランザクション ログがいっぱいの回避  
  通常、データベースで自動チェックポイントが実行されている場合は、次のログ バックアップの後、そのチェックポイントまでトランザクション ログが切り捨てられます。 ただし、セカンダリ データベースを中断している間、現在のすべてのログ レコードは、プライマリ データベースでアクティブのままになります。 最大サイズに到達したか、サーバー インスタンスの領域が不足して、トランザクション ログがいっぱいになると、データベースではそれ以上の更新を実行できません。  
   
  この問題を回避するには、次のいずれかの操作を実行する必要があります。  

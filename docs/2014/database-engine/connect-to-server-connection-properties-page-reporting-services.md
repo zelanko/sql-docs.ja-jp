@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808663"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>[サーバーへの接続] ([接続プロパティ] ページ) Reporting Services
   このタブを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に接続するとき、または [!INCLUDE[ssRS](../includes/ssrs.md)] を**登録済みサーバー**に登録するときに、オプションを表示または指定できます。 接続時には、**[接続]** および **[オプション]** のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssRS](../includes/ssrs.md)]のみがこのダイアログ ボックスに表示されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "48066982"
  **登録済みサーバー**に設定を保存します。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Management Studio でレポート サーバーに接続する](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーでの認証](../reporting-services/security/authentication-with-the-report-server.md)  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854339"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,10 +41,10 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  *列定義リスト*  
  列定義のコンマ区切りのリストです。  
   
- *提示された maxpercent*  
+ *holdout-maxpercent*  
  テスト用に確保するデータの割合を示す 1 ～ 100 の整数です。  
   
- *提示された maxcases*  
+ *holdout-maxcases*  
  テストに使用するケースの最大数を示す整数です。  
   
  ケースの最大数に指定された値が入力ケース数を超える場合、すべての入力ケースがテストに使用され、警告が発生します。  
@@ -60,7 +60,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  パーティションを再現できるようにする必要がある場合は、シードを指定する必要があります。  
   
- 既定値 : REPEATABLE(0)  
+ 既定値:REPEATABLE (0)  
   
 ## <a name="remarks"></a>コメント  
  マイニング構造を定義するには、列リストを指定し、必要に応じて列間の階層リレーションシップを指定して、さらに必要に応じてマイニング構造をトレーニング データセットとテスト データセットにパーティション分割します。  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  データ型、コンテンツの種類、列の分布、および構造列の定義に使用できるモデリング フラグの一覧で、次のトピックを参照してください。  
   
--   [データ型&#40;データ マイニング&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [データ型 (データ マイニング)](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [コンテンツの種類&#40;データ マイニング&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [コンテンツの種類 (データ マイニング)](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列の分布 (データ マイニング)](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [モデリング フラグ&#40;データ マイニング&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [モデリング フラグ (データ マイニング)](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  列には複数のモデリング フラグ値を定義できます。 ただし、1 つの列に定義できるコンテンツの種類とデータ型はそれぞれ 1 つだけです。  
   
@@ -137,8 +137,8 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 ## <a name="examples"></a>使用例  
  次の例では、DMX を使用して、提示されたパラメーターによってマイニング構造を作成する方法について説明します。  
   
-### <a name="example-1-adding-a-structure-with-no-training-set"></a>例 1 : トレーニング セットを含まない構造を追加する  
- 次の例と呼ばれる新しいマイニング構造を作成する`New Mailing`および提示されたパラメーターを使用する必要とせず、関連するマイニング モデルを作成します。 構造にマイニング モデルを追加する方法については、[ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)を参照してください。  
+### <a name="example-1-adding-a-structure-with-no-training-set"></a>例 1 : トレーニングが設定されていない構造体を追加します。  
+ 次の例と呼ばれる新しいマイニング構造を作成する`New Mailing`および提示されたパラメーターを使用する必要とせず、関連するマイニング モデルを作成します。 構造にマイニング モデルを追加する方法については、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)します。  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -150,7 +150,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>例 2 : 提示された割合とシードを指定する  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>例 2:提示された割合とシードを指定します。  
  次の句を列定義リストの後に追加すると、マイニング構造に関連付けられているすべてのマイニング モデルをテストするためのデータセットを定義できます。 このステートメントでは、ケースの最大数を制限せずに、入力ケースの合計の 25% のテスト セットを作成します。 パーティションを作成するためのシードとして 5000 を使用します。 シードを指定した場合は、基になるデータに変更が生じない限り、マイニング構造を処理するたびに、テスト セットに対して同じケースが選択されます。  
   
 ```  
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>例 3 : 提示された割合とケースの最大数を指定する  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>例 3: 提示された割合とケースの最大数を指定します。  
  次の句では、入力ケースの合計の 25% または 2000 ケースのいずれか少ない方を含むテスト セットを作成します。 シードとして 0 が指定されているので、入力ケースのサンプリングの開始に使用されるシードを作成するためにマイニング構造の名前が使用されます。  
   
 ```  

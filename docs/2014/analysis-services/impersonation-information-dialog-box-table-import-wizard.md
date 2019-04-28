@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d271bbfdf31a24304961d71e4501ea7ae4579440
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730707"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>[権限借用情報] ダイアログ ボックス (テーブル インポート ウィザード)
-  **[権限借用情報]** ページを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がデータ ソースに接続する際に使用される資格情報を指定します。 権限借用の資格情報の詳細については、[偽装&#40;SSAS 表形式&#41;](tabular-models/impersonation-ssas-tabular.md)を参照してください。  
+  **[権限借用情報]** ページを使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がデータ ソースに接続する際に使用される資格情報を指定します。 権限借用の資格情報の詳細については、次を参照してください。[偽装&#40;SSAS 表形式&#41;](tabular-models/impersonation-ssas-tabular.md)します。  
   
 ## <a name="options"></a>および  
  **特定の Windows ユーザー名とパスワード**  
@@ -43,6 +43,6 @@ ms.locfileid: "48047563"
  このオプションを選択すると、モデルを管理する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サービスに関連付けられているセキュリティ資格情報が使用されます。  
   
 ## <a name="see-also"></a>参照  
- [権限借用&#40;SSAS 表形式&#41;](tabular-models/impersonation-ssas-tabular.md)  
+ [権限借用 (SSAS テーブル)](tabular-models/impersonation-ssas-tabular.md)  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861532"
 ---
 # <a name="procedure-parameters"></a>プロシージャのパラメーター
 プロシージャ呼び出しのパラメーター入力として使用できる、入力/出力、または出力パラメーター。 これは、すべての他の SQL ステートメントで、入力パラメーターでは常にパラメーターと異なります。  

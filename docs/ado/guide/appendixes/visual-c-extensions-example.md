@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802883"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 拡張機能の例
 このプログラムは、値のフィールドから取得および C と C++ の変数に変換する方法を示します。  
@@ -51,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Visual C 拡張によって実装されるため、**レコード セット**オブジェクト、スマート ポインター コンス トラクター`picRs`は、_`RecordsetPtr`ポインター、`pRs`します。 コンス トラクター呼び出し`QueryInterface`を使用して`pRs`を検索する、`IADORecordBinding`インターフェイス。  
+ ため、ビジュアルC++で拡張機能の実装、**レコード セット**オブジェクト、スマート ポインター コンス トラクター`picRs`は、_`RecordsetPtr`ポインター、 `pRs`。 コンス トラクター呼び出し`QueryInterface`を使用して`pRs`を検索する、`IADORecordBinding`インターフェイス。  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

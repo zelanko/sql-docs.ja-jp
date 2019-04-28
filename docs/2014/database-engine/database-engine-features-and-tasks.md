@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807437"
 ---
 # <a name="database-engine-features-and-tasks"></a>データベース エンジンの機能とタスク
   そのすべてのユーザー デザイナー、開発者、アナリスト、または管理者に情報を検索-ビルドに必要な[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベース。  
