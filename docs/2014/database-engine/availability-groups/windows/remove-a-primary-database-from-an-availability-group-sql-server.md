@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 593c065e9567c6b298e45d6130f944816325fbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814004"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>可用性グループからのプライマリ データベースの削除 (SQL Server)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからプライマリ データベースおよび対応するセカンダリ データベースの両方を削除する方法について説明します。  
@@ -41,9 +41,9 @@ ms.locfileid: "48098012"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **補足情報**  [可用性グループから可用性データベースを削除した後](#FollowUp)  
+-   **補足情報:**[可用性グループから可用性データベースを削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件と制限  
   
@@ -105,13 +105,13 @@ ms.locfileid: "48098012"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報: 可用性グループから可用性データベースを削除した後  
+##  <a name="FollowUp"></a> 補足情報:可用性グループから可用性データベースを削除した後  
  可用性グループから可用性データベースを削除すると、以前のプライマリ データベースおよび対応するセカンダリ データベース間のデータの同期が終了します。 以前のプライマリ データベースはオンラインのまま残ります。 すべての対応するセカンダリ データベースは RESTORING 状態になります。  
   
  この時点で、削除されたセカンダリ データベースを処理する別の方法は次のとおりです。  

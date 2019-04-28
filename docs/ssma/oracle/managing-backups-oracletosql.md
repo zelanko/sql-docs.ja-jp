@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816511"
 ---
 # <a name="managing-backups-oracletosql"></a>バックアップの管理 (OracleToSQL)
 Oracle のバックアップの管理は、バックアップと復元のテストの実行の前後にデータをテーブルことができます。 バックアップ コンテンツの管理 ダイアログで、バックアップ コンテンツを管理することもできます。  

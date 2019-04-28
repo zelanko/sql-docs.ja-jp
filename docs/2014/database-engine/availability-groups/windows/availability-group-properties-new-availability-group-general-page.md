@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815655"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>[可用性グループのプロパティ] と [新しい可用性グループ] ([全般] ページ)
   このトピックは、**[新しい可用性グループ]** ダイアログ ボックスと **[可用性グループのプロパティ]** ダイアログ ボックスの **[全般]** タブに該当します。  **[新しい可用性グループ]** ダイアログ ボックスでは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を使用せずに新しい可用性グループを作成できます。 **[可用性グループのプロパティ]** ダイアログ ボックスでは、既存の可用性グループの構成を表示、変更できます。  
@@ -65,7 +65,7 @@ ms.locfileid: "48105192"
  **[同期コミット]**  
  プライマリ レプリカは、セカンダリ レプリカがトランザクションをディスクに書き込むまで、特定のトランザクションのコミットを待機します。  
   
- 詳細については、[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)を参照してください。  
+ 詳細については、次を参照してください。[可用性モード (AlwaysOn 可用性グループ)](availability-modes-always-on-availability-groups.md)します。  
   
  **フェールオーバー モード**  
  レプリカのフェールオーバー モード。次のいずれかです。  

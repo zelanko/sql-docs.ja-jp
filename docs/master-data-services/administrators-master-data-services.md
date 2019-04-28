@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85ad4589ef25042498b132475af39cb36fd1b2bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817946"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "52783194"
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   
-|管理者の種類|[説明]|  
+|管理者の種類|説明|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] スーパー ユーザー|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] で割り当てられている権限は、管理者のアクセス権に影響を与えません。<br /><br /> 明示的に割り当てられている機能領域権限、またはグループから継承した権限に基づいてスーパー ユーザーになる場合があります。<br /><br /> すべてのモデルに対するあらゆる権限が自動的に付与されます。<br /><br /> すべての機能領域に対するアクセス権が自動的に付与されます。|  
 |モデル管理者|明示的に割り当てられている管理者権限、またはグループから継承した権限に基づいてモデル管理者になる場合があります。<br /><br /> アクセス権が付与された機能領域だけにアクセスできます。<br /><br /> 特定のモデルのすべてのオブジェクトおよびメンバーに対するあらゆる権限が自動的に付与されます。|  

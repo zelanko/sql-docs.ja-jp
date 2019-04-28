@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812596"
 ---
 # <a name="compare-files"></a>ファイルの比較
   ファイルを比較して、ファイルがどのような過程で現在の状態になったのかを確認できます。 たとえば、ソース ファイルのバージョンをチェックインした後に、コード プロジェクトのビルドで不具合を発見した場合、現在のファイル バージョンと以前のファイル バージョンを比較できます。 そうすれば、不具合を引き起こしたコードの位置を正確に検出できます。  

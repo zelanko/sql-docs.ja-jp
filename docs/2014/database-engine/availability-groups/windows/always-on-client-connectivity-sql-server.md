@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790661"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On クライアント接続 (SQL Server)
   このトピックでは、AlwaysOn 可用性グループへのクライアント接続に関して、クライアント構成および設定の前提条件、制限、推奨などの考慮事項について説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "53355762"
   
  次の表は、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のドライバー サポートをまとめたものです。  
   
-|Driver|マルチサブネット フェールオーバー|アプリケーションの目的|読み取り専用ルーティング|マルチサブネット フェールオーバー:より高速な単一サブネット エンドポイント フェールオーバー|マルチサブネット フェールオーバー:SQL クラスター インスタンスの名前付きインスタンスの解決|  
+|Driver|マルチサブネット フェールオーバー|アプリケーションの目的|読み取り専用ルーティング|マルチ サブネット フェールオーバー:高速の 1 つのサブネット エンドポイント フェールオーバー|マルチ サブネット フェールオーバー:クラスター化インスタンスの SQL の名前付きインスタンスの解決|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|はい|[はい]|[はい]|[はい]|はい|  
 |SQL Native Client 11.0 OLEDB|いいえ|はい|[はい]|いいえ|いいえ|  

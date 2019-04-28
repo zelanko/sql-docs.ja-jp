@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828051"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
@@ -143,7 +143,7 @@ ms.locfileid: "58392780"
   
  通常、緩やかに変化するディメンション変換の中で最も低速なコンポーネントは、一度に 1 行に対して UPDATE を実行する OLE DB コマンド変換です。 したがって、緩やかに変化するディメンション変換のパフォーマンスを向上させる最も効果的な方法は、OLE DB コマンド変換を置き換えることです。 この変換は、更新するすべての行をステージング テーブルに保存する変換先コンポーネントに置き換えることができます。 その後、同時にすべての行に対して単一セット ベースの Transact-SQL UPDATE を実行する SQL 実行タスクを追加できます。  
   
- 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 説明と、この方法の例のセクションでは、ホワイト ペーパーの「特有のディメンション シナリオ」を参照してください。[プロジェクト REAL:ビジネス インテリジェンス ETL のデザイン方法](https://go.microsoft.com/fwlink/?LinkId=96602)します。  
+ 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「[Project REAL: Business Intelligence ETL Design Practices (プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法)](https://go.microsoft.com/fwlink/?LinkId=96602)」の「Unique dimension scenario, (固有のディメンション シナリオ)」をご覧ください。  
   
 ### <a name="destinations"></a>変換先  
  変換先のパフォーマンスを向上させるには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先の使用と、変換先のパフォーマンスのテストを検討してください。  
@@ -166,9 +166,9 @@ ms.locfileid: "58392780"
 ## <a name="related-content"></a>関連コンテンツ  
  **記事とブログ投稿**  
   
--   技術記事「 [SQL Server 2005 Integration Services:パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)、technet.microsoft.com  
+-   technet.microsoft.com の技術記事、「[SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」  
   
--   技術記事「 [Integration Services:パフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)、technet.microsoft.com  
+-   technet.microsoft.com の技術記事、「[Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」  
   
 -   sqlcat.com の技術資料「 [同期変換を複数タスクに分割してパイプラインのスループットを向上](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)」  
   

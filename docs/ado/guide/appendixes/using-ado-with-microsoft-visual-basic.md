@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864518"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>アプリケーションの Microsoft Visual Basic および Visual Basic と ADO の併用
 ADO のプロジェクトを設定し、ADO コードの記述は似ていますアプリケーションの Visual Basic または Visual Basic を使用するかどうか。 このトピックでは、ADO を Visual Basic と Visual Basic の両方のアプリケーションを使用してアドレスし、相違点をメモします。
@@ -64,7 +64,7 @@ ADO のプロジェクトを設定し、ADO コードの記述は似ています
 4.  **[OK]** をクリックします。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Visual Basic での ADO オブジェクトの作成
- Automation 変数と、その変数のオブジェクトのインスタンスを作成するには、2 つのメソッドを使用することができます: **Dim**または**CreateObject**します。
+ Automation 変数とをその変数のオブジェクトのインスタンスを作成するには、2 つのメソッドを使用できます。**Dim**または**CreateObject**します。
 
 ### <a name="dim"></a>Dim
  使用することができます、**新規**キーワード**Dim**宣言し、1 つの手順で ADO オブジェクトのインスタンスを作成します。
@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  使用してオブジェクトをインスタンス化する、 **CreateObject**メソッドは、一般に使用するよりも低速、 **Dim**ステートメント。
 
 ## <a name="handling-events"></a>イベントの処理
- Microsoft Visual Basic での ADO イベントを処理するために、モジュール レベル変数を使用してを宣言する必要があります、 **WithEvents**キーワード。 変数は、クラス モジュールの一部としてのみ宣言することができます、モジュール レベルで宣言する必要があります。 ADO イベントの処理の詳細については、[ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)を参照してください。
+ Microsoft Visual Basic での ADO イベントを処理するために、モジュール レベル変数を使用してを宣言する必要があります、 **WithEvents**キーワード。 変数は、クラス モジュールの一部としてのみ宣言することができます、モジュール レベルで宣言する必要があります。 ADO イベントの処理の詳細については、次を参照してください。 [ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)します。
 
 ## <a name="visual-basic-examples"></a>Visual Basic の例
- 多くの Visual Basic の例は、ADO のドキュメントに含まれています。 詳細については、[ADO のコード例では、Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)を参照してください。
+ 多くの Visual Basic の例は、ADO のドキュメントに含まれています。 詳細については、次を参照してください。 [ADO のコード例では、Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)します。
 
 ## <a name="see-also"></a>関連項目
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Microsoft Visual C で ADO を使用して](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [ADO スクリプト言語を使用します。](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

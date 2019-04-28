@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807460"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
   データベース ミラーリング エンドポイントで Windows 認証を使用している場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してミラーリング監視サーバーを追加または置き換えることができます。 また、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でミラーリング監視サーバーを追加すると、動作モードが自動フェールオーバーを伴う高い安全性モードに変更されます。  

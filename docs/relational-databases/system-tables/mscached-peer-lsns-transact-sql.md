@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 406715f59a3a45184b9700d72331688911bc83e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817016"
 ---
-# <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
+# <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MScached_peer_lsns**テーブルはピア ツー ピア レプリケーションで任意のサブスクライバーに返されるコマンドを判断するために使用されるトランザクション ログに LSN 値を追跡するために使用します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MScached_peer_lsns**テーブルはピア ツー ピア レプリケーションで任意のサブスクライバーに返されるコマンドを判断するために使用されるトランザクション ログに LSN 値を追跡するために使用します。 このテーブルは、ディストリビューション データベースに格納されます。  
   
 ## <a name="definition"></a>定義  
   
@@ -36,13 +36,13 @@ ms.locfileid: "52810304"
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|ディストリビューション エージェントの ID。|  
 |**originator**|**sysname**|発信元のパブリッシャーの名前。|  
-|**originator_db**|**sysname**|発信元のパブリケーション データベースの名前。|  
-|**originator_publication_id**|**int**|発信元のパブリケーションの識別子。|  
+|**originator_db**|**sysname**|元のパブリケーション データベースの名前。|  
+|**originator_publication_id**|**int**|発生元パブリケーションを識別します。|  
 |**originator_db_version**|**int**|発信元のデータベースのバージョン番号識別子。|  
 |**originator_lsn**|**varbinary(16)**|発信元のトランザクションの LSN。|  
   
 ## <a name="remarks"></a>コメント  
- LSN 値は、挿入直後にのみ使用され、システムで永続的に有効にはなりません。  
+ LSN 値は、挿入後すぐにのみ使用して、システム内に永続的な意味があるないです。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

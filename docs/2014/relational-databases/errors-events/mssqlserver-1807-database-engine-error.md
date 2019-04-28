@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_1807 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 1807 (Database Engine error)
 ms.assetid: 13c1b240-098b-4d9e-89aa-21599548e074
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69acb74bd1c50900ae4852c41b3304da7ca7c00c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869465"
 ---
 # <a name="mssqlserver1807"></a>MSSQLSERVER_1807
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>詳細  
   
 |||  
@@ -33,9 +34,8 @@ ms.locfileid: "48092237"
 |メッセージ テキスト|データベース '%.*ls' を排他的にロックできませんでした。 後でこの操作を再試行してください。|  
   
 ## <a name="explanation"></a>説明  
- データベースに対して排他的なアクセスを必要とする操作で、排他ロックを獲得できませんでした。  
+データベースに対して排他的なアクセスを必要とする操作で、排他ロックを獲得できませんでした。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- このデータベースに対する接続をすべて切断するか、クエリを後で再試行します。  
-  
+このデータベースに対する接続をすべて切断するか、クエリを後で再試行します。  
   

@@ -1,5 +1,5 @@
 ---
-title: 多次元データベース (Analysis Services) の互換性レベル |Microsoft ドキュメント
+title: 多次元データベース (Analysis Services) の互換性レベル |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825893"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>多次元データベースの互換性レベル (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024229"
   
  多次元データベースの **CompatibilityLevel** プロパティの有効値を次に示します。  
   
-|設定|Description|  
+|設定|説明|  
 |-------------|-----------------|  
 |**1050**|この値はスクリプトやツールには表示されませんが、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で作成されたデータベースを表します。 **CompatibilityLevel** が明示的に設定されていないデータベースはすべて、暗黙的に **1050** レベルで実行されます。|  
 |**1100**|これは、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で作成した新しいデータベースの既定値です。 また、この値を以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で作成されたデータベースに指定すると、この互換性レベルでのみサポートされている機能 (つまり、文字列データを含むディメンション属性や個別のカウント メジャーの大きくなった文字列ストレージ) を使用できるようになります。<br /><br /> データベースの **CompatibilityLevel** を **1100** に設定すると、 **StringStoresCompatibilityLevel**プロパティが追加されます。このプロジェクトを使用すると、パーティションおよびディメンションの代替文字列ストレージを選択できます。|  

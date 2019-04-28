@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864432"
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding インターフェイス
@@ -55,7 +55,7 @@ ms.locfileid: "52544185"
 
 3.  派生したクラスのインスタンスを作成、アプリケーションで**CADORecordBinding**です。 取得、 **IADORecordBinding**からインターフェイス、 **Recordset**です。 まず、 **BindToRecordset**にバインドするメソッド、**Recordset**C と C++ の変数へのフィールドです。
 
- 詳細については、、 [C++ 拡張機能の例を Visual](../../../ado/guide/appendixes/visual-c-extensions-example.md)を参照してください。
+ 詳細については、次を参照してください。、 [C++ 拡張機能の例を Visual](../../../ado/guide/appendixes/visual-c-extensions-example.md)します。
 
 ## <a name="interface-methods"></a>インターフェイス メソッド
  **IADORecordBinding**インターフェイスが 3 つのメソッドには。**BindToRecordset**、 **AddNew**、および**Update**します。 各メソッドに唯一の引数から派生したクラスのインスタンスへのポインターは、 **CADORecordBinding**です。 したがって、 **AddNew**と**Update**メソッドは、ADO メソッド namesakes のパラメーターのいずれかを指定できません。
@@ -87,7 +87,7 @@ Update(CADORecordBinding *binding)
  詳細については、次を参照してください[付録 a:。データ型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)、OLE DB プログラマーズ リファレンスの。
 
 ### <a name="begin-binding-entries"></a>バインディング エントリを開始します。
- **BEGIN_ADO_BINDING**(*クラス*)
+ **BEGIN_ADO_BINDING**(*Class*)
 
 ### <a name="fixed-length-data"></a>固定長のデータ
  **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)

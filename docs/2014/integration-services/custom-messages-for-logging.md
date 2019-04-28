@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828777"
 ---
 # <a name="custom-messages-for-logging"></a>ログ記録用のカスタム メッセージ
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージや多くのタスクのログ エントリを書き込むための豊富なカスタム イベントが用意されています。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  
@@ -83,7 +83,7 @@ ms.locfileid: "58389500"
 |---------------|-----------------|  
 |`PackageStart`|パッケージの実行が開始されたことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |`PackageEnd`|パッケージが完了したことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
-|`Diagnostic`|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> `Diagnostic` ログ エントリに、外部データ プロバイダーの呼び出し前後のエントリも含まれています。 詳細については、「 [トラブルシューティング ツールのパッケージ接続](troubleshooting/troubleshooting-tools-for-package-connectivity.md)」を参照してください。|  
+|`Diagnostic`|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> `Diagnostic` ログ エントリに、外部データ プロバイダーの呼び出し前後のエントリも含まれています。 詳細については、「[トラブルシューティング ツールのパッケージ接続](troubleshooting/troubleshooting-tools-for-package-connectivity.md)」を参照してください。|  
   
 ###  <a name="BulkInsert"></a> 一括挿入タスク  
  次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。  
@@ -116,7 +116,7 @@ ms.locfileid: "58389500"
 |ログ エントリ|説明|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|タスクが DTS 2000 パッケージの実行を開始したことを示します。|  
-|`ExecuteDTS80PackageTaskEnd`|タスクが終了したことを示します。<br /><br /> 注:DTS 2000 パッケージは、タスク終了後も引き続き実行される場合があります。|  
+|`ExecuteDTS80PackageTaskEnd`|タスクが終了したことを示します。<br /><br /> 注:DTS 2000 パッケージは、タスク終了後に実行を続行できます。|  
 |`ExecuteDTS80PackageTaskTaskInfo`|タスクに関する説明情報を提供します。|  
 |`ExecuteDTS80PackageTaskTaskResult`|タスクで実行された DTS 2000 パッケージの実行結果を報告します。|  
   

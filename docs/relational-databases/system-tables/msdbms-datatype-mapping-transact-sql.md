@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d513da9588b8ae8fb4f20ece11390c29d71bcf9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817049"
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +33,13 @@ ms.locfileid: "52750097"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**datatype_mapping_id**|**int**|個々のデータ型マッピングを一意に識別します。|  
-|**map_id**|**int**|マッピング元のデータ型を識別します。|  
-|**dest_datatype_id**|**int**|マッピング先のデータ型を識別します。|  
+|**map_id**|**int**|ソースのデータ型を識別します。|  
+|**dest_datatype_id**|**int**|変換先のデータ型を識別します。|  
 |**dest_precision**|**bigint**|値が NULL の場合、有効桁数が使用されないことに、変換先のデータ型の有効桁数と値の定義 **-1**ソースのデータ型の有効桁数が使用されることを意味します。|  
 |**dest_scale**|**int**|NULL の値は、小数点以下桁数が使用されていない場合、変換先のデータ型の小数点以下桁数の値を定義します **-1**ソースのデータ型の小数点以下桁数が使用されていることを意味します。|  
 |**dest_length**|**bigint**|値が NULL の場合、長さが使用されないことに、変換先のデータ型の長さと値の定義 **-1**ソースのデータ型の長さを使用することを意味します。|  
-|**dest_nullable**|**bit**|マッピングのマップ先列で NULL 値が許容されるかどうかを示します。値 NULL はこの定義が必要ではないことを示します。|  
-|**dest_createparams**|**int**|各データ型に適用できる長さ、有効桁数、および小数点以下桁数の組み合わせを表すビットマップです。次のようになります。<br /><br /> **0x1** = 有効桁数。<br /><br /> **0x2**スケールを = です。<br /><br /> **0x4**長さを = です。|  
+|**dest_nullable**|**bit**|かどうか、変換先の列のマッピングで NULL 値が許容が値が NULL の場合、この定義が必要ないことを示します。|  
+|**dest_createparams**|**int**|長さ、精度、およびスケールの組み合わせを表すビットマップを含む各データ型の適用のとおりです。<br /><br /> **0x1** = 有効桁数。<br /><br /> **0x2**スケールを = です。<br /><br /> **0x4**長さを = です。|  
   
 ## <a name="see-also"></a>参照  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

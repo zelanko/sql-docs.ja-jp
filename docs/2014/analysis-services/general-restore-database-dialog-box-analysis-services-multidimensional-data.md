@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730408"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>[全般] ([データベースの復元] ダイアログ ボックス) (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[データベースの復元]** ダイアログ ボックスの **[全般]** ページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースの復元に使用するバックアップ ファイルおよび全般設定を指定できます。  
@@ -75,7 +75,7 @@ ms.locfileid: "48099312"
  バックアップ ファイルが暗号化されている場合は、バックアップ ファイルの暗号化に使用されたパスワードを入力します。  
   
 ## <a name="see-also"></a>参照  
- [データベースの復元 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [[データベースの復元] ダイアログ ボックス (Analysis Services - 多次元データ)](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [パーティション&#40;データベースの復元 ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services データベースのバックアップと復元](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aad4088e8a102ea3afbf2cd8e75e3fe605c268cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864157"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions プロパティの例 (VB)
 この例では、 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がすべての行または変更された行のみのサーバーに送信されます。  

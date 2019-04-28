@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 183acf0bf1e6e92483989545a710769501fa946d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814144"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ データベースの削除 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ データベースを削除する方法について説明します。  
@@ -40,9 +40,9 @@ ms.locfileid: "48089242"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **補足情報:**  [セカンダリ データベースを可用性グループから削除した後](#FollowUp)  
+-   **補足情報:**[セカンダリ データベースを可用性グループから削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a>   
 ###  <a name="Prerequisites"></a> 前提条件と制限  
@@ -94,7 +94,7 @@ ms.locfileid: "48089242"
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **セカンダリ データベースを可用性グループから削除するには**  
   
-1.  ディレクトリ変更コマンド (`cd`) セカンダリ レプリカをホストするサーバー インスタンスにします。  
+1.  ディレクトリ変更コマンド (`cd`) を使用して、セカンダリ レプリカをホストするサーバー インスタンスに移動します。  
   
 2.  可用性グループから削除する可用性データベース名を指定して、 **Remove-SqlAvailabilityDatabase** コマンドレットを使用します。 セカンダリ レプリカをホストするサーバー インスタンスに接続している場合は、ローカル セカンダリ データベースのみが可用性グループから削除されます。  
   
@@ -106,13 +106,13 @@ ms.locfileid: "48089242"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で `Get-Help` コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 補足情報: セカンダリ データベースを可用性グループから削除した後  
+##  <a name="FollowUp"></a> 補足情報:セカンダリ データベースを可用性グループから削除した後  
  セカンダリ データベースを削除すると、可用性グループに参加しなくなり、削除されたセカンダリ データベースに関するすべての情報が可用性グループによって破棄されます。 削除されたセカンダリ データベースは RESTORING 状態になります。  
   
 > [!TIP]  

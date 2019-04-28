@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863699"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords プロパティの例 (VC++)
 この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを開き、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で最も高価な 10 のタイトルを含む、***タイトル***テーブル。  
@@ -168,13 +168,13 @@ void PrintComError(_com_error &e) {
   
  **価格を先頭の 10 タイトル:**  
 **ですがユーザー フレンドリですか。---22.95**  
-**コンピューターの Phobic と非他者と個人: 動作のバリエーション---21.59**  
-**タマネギ、ニンニク、Leeks、: 地中海---20.95 のシークレットの料理**  
+**コンピューターの Phobic と非他者と個人:動作のバリエーション---21.59**  
+**タマネギ、Leeks とガーリック トースト:---20.95 地中海の料理のシークレット**  
 **シリコン バレー---20.00 のシークレット**  
 **少数のデータベース ガイド---19.99**  
 **コンピューター---19.99 話題の直線**  
 **シリコン バレー Gastronomic 扱います---19.99**  
-**長期にわたるデータ Deprivation: 4 つのケース スタディ---ある 19.99**  
+**長期にわたるデータ Deprivation:次の 4 つのケース スタディ---19.99**  
 **寿司、すべてのユーザーですか?---14.99**  
 **バッキンガム Palace 台所---11.95 50 年**   
 ## <a name="see-also"></a>参照  

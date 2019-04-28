@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791792"
 ---
 # <a name="add-projects-to-source-control"></a>ソース管理へのプロジェクトの追加
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ソリューションには、複数のスクリプト プロジェクトを含めることができます。 ソース管理にプロジェクトを追加する方法は、そのプロジェクトが属しているソリューションがソース管理の下にあるかどうかによって異なります。 ソリューションがソース管理の対象である場合は、ソリューションをチェックインすると、ソース管理にプロジェクトが自動的に追加されます。 ソリューションのチェックインの詳細については、[ファイルで確認](../../2014/database-engine/check-in-files.md)を参照してください。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ソリューションには、複数のスクリプト プロジェクトを含めることができます。 ソース管理にプロジェクトを追加する方法は、そのプロジェクトが属しているソリューションがソース管理の下にあるかどうかによって異なります。 ソリューションがソース管理の対象である場合は、ソリューションをチェックインすると、ソース管理にプロジェクトが自動的に追加されます。 ソリューションのチェックインの詳細については、次を参照してください。[ファイルで確認](../../2014/database-engine/check-in-files.md)します。  
   
- 対象のプロジェクトが属しているソリューションがソース管理の対象でない場合は、ソリューションをソース管理に追加すると、ソリューションのプロジェクトが自動的に追加されます。 ソース管理にソリューションを追加する方法の詳細については、[ソリューションをソース コントロールに追加](../../2014/database-engine/add-solutions-to-source-control.md)を参照してください。  
+ 対象のプロジェクトが属しているソリューションがソース管理の対象でない場合は、ソリューションをソース管理に追加すると、ソリューションのプロジェクトが自動的に追加されます。 ソース管理にソリューションを追加する方法の詳細については、次を参照してください。[ソリューションをソース コントロールに追加](../../2014/database-engine/add-solutions-to-source-control.md)します。  
   
  使用することができます、ソリューションをソース管理に追加したくない場合、**をソース管理に追加選択**プロジェクトを手動で追加するコマンド。  
   

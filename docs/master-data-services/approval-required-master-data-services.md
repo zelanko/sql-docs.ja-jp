@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee8a63632d54c727051e405dff2f237b58849c2d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817706"
 ---
 # <a name="approval-required-master-data-services"></a>承認が必要 (マスター データ サービス)
 
@@ -31,7 +31,7 @@ ms.locfileid: "52759181"
 >   
 >  ビジネス ルールによって行われた変更は、承認がバイパスされます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。  

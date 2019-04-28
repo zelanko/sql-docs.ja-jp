@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d04b79bb2d7cb70e2e36261547e462e1a7f2742
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817250"
 ---
-# <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
+# <a name="msarticles-transact-sql"></a>MSarticles (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSarticles**テーブルには、パブリッシャーによってレプリケートされる各アーティクルに対して 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSarticles**テーブルには、パブリッシャーによってレプリケートされる各アーティクルに対して 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -39,9 +39,9 @@ ms.locfileid: "52750065"
 |**article_id**|**int**|アーティクルの ID。|  
 |**destination_object**|**sysname**|サブスクライバーで作成されるテーブルの名前。|  
 |**source_owner**|**sysname**|パブリッシャー上の元のテーブルのスキーマの名前です。|  
-|**source_object**|**sysname**|追加するアーティクルのソース オブジェクトの名前です。|  
-|**description**|**nvarchar (255)**|アーティクルの説明です。|  
-|**destination_owner**|**sysname**|サブスクライバーで作成されるテーブルのスキーマの名前です。|  
+|**source_object**|**sysname**|追加するアーティクルのソース オブジェクトの名前。|  
+|**description**|**nvarchar (255)**|この記事の説明です。|  
+|**destination_owner**|**sysname**|サブスクライバーで作成されたテーブルのスキーマの名前。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

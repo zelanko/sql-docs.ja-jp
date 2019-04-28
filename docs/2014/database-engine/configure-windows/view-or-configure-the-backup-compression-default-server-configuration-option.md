@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed7b46308c7ffc39117accbb68dfd68b9847f721
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808751"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>backup compression default サーバー構成オプションの表示または構成
   このトピックでは、 **で** または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] backup compression default [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを確認または構成する方法について説明します。 **backup compression default** オプションは、圧縮されたバックアップを既定で作成するかどうかを決定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした場合、 **backup compression default** オプションはオフになっています。  
@@ -84,7 +84,7 @@ ms.locfileid: "58536604"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) カタログ ビューをクエリして、 `backup compression default`の値を判定しています。 値 0 はバックアップの圧縮がオフであることを示し、値 1 はバックアップの圧縮が有効であることを示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) カタログ ビューをクエリして、 `backup compression default`の値を判定しています。 値 0 はバックアップの圧縮がオフであることを示し、値 1 はバックアップの圧縮が有効であることを示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -102,7 +102,7 @@ GO
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) を使用して、圧縮されたバックアップが既定で作成されるようにサーバー インスタンスを構成する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) を使用して、圧縮されたバックアップが既定で作成されるようにサーバー インスタンスを構成する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012;  

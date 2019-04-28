@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77df7902f5dd1673736f4a993c4e29c50d7accc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814668"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 (SQLServer PowerShell)
   このトピックでは、PowerShell を使用して、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用するデータベース ミラーリング エンドポイントを作成する方法について説明します。  
   
  **このトピックの内容**  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **作業を開始する準備:**[セキュリティ](#Security)  
   
--   **データベース ミラーリング エンドポイントを作成するために使用するもの:**  [PowerShell](#PowerShellProcedure)  
+-   **データベース ミラーリング エンドポイントを作成するために使用するもの:** [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>はじめに  
   

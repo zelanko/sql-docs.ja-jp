@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831925"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   パッケージ配置の最初の手順は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの配置ユーティリティを作成することです。 配置ユーティリティは、別のサーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトのパッケージを配置する際に必要となるファイルを格納したフォルダーです。 配置ユーティリティは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが格納されているコンピューター上に作成されます。  

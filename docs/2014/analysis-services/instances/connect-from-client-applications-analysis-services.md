@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd6264834efbafe65bc323f0e7bd3f5eb7a0490e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730426"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
   Analysis Services を初めて使用する場合は、このトピックの情報を参照し、一般的なツールとアプリケーションを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスに接続します。 このトピックでは、テスト目的で異なるユーザー ID を使用して接続する方法についても説明します。  
@@ -56,7 +56,7 @@ ms.locfileid: "53370164"
   
 3.  認証方式は常に Windows 認証です。また、ユーザー ID として使用するユーザーは常に、Management Studio を介して接続する Windows ユーザーです。  
   
-     接続に成功するためには、サーバー (またはサーバー上のデータベース) にアクセスするための権限が必要です。 Management Studio で実行するほとんどのタスクには管理権限が必要です。 接続に使用するアカウントがサーバー管理者ロールのメンバーであることを確認します。 詳細については、[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)を参照してください。  
+     接続に成功するためには、サーバー (またはサーバー上のデータベース) にアクセスするための権限が必要です。 Management Studio で実行するほとんどのタスクには管理権限が必要です。 接続に使用するアカウントがサーバー管理者ロールのメンバーであることを確認します。 詳細については、次を参照してください。[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)します。  
   
 4.  **[接続プロパティ]** をクリックして、特定のデータベースを指定、タイムアウト値を設定、または暗号化のオプションを設定します。 省略可能な接続情報としては、現在の接続にしか使用されない接続プロパティがあります。  
   

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f1fc67db5d7d62c9257f6d66359b0166b6ed8c0b
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808883"
 ---
 # <a name="server-trigger-recursion-server-configuration-option"></a>server trigger recursion サーバー構成オプション
   サーバーレベルのトリガーを再帰的に起動できるようにするかどうかを指定するには、 **server trigger recursion** オプションを使用します。 このオプションを 1 (ON) に設定すると、サーバーレベルのトリガーを再帰的に起動できます。 このオプションを 0 (OFF) に設定すると、サーバーレベルのトリガーは再帰的に起動できません。 server trigger recursion オプションが 0 (OFF) の場合は、直接再帰のみが回避されます  (間接再帰を無効にするには、**nested triggers** オプションを 0 に設定します)。このオプションの既定値は 1 (ON) です。 この設定はすぐに適用されます。サーバーを再起動する必要はありません。  

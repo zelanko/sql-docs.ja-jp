@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8d556a199b608659a9ceaaeb3b7036155886d6c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827235"
 ---
 # <a name="excel-custom-properties"></a>Excel のカスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -47,11 +47,11 @@ ms.locfileid: "58391089"
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (列挙)|変換先が変換先となるデータベースにアクセスする方法を指定する値。<br /><br /> このプロパティの値は、次のいずれか 1 つです。<br /><br /> `OpenRowset` (0) のテーブルまたはビューの名前を指定します。<br /><br /> `OpenRowset from Variable` (1)-テーブルまたはビューの名前を格納する変数の名前を指定します。<br /><br /> `OpenRowset Using Fastload` (3)-テーブルまたはビューの名前を指定します。<br /><br /> `OpenRowset Using Fastload from Variable` (4)-テーブルまたはビューの名前を格納する変数の名前を指定します。<br /><br /> `SQL Command` (2)-SQL ステートメントを指定します。|  
-|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。<br /><br /> 注:このプロパティでは使用できません、 **Excel 変換先エディター**を使用して設定できますが、**高度なエディター**します。|  
+|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。<br /><br /> 注:このプロパティは、**[Excel 変換先エディター]** では使用できませんが、**[詳細エディター]** を使用して設定できます。|  
 |FastLoadKeepIdentity|ブール値|データが読み込まれるときに ID 値をコピーするかどうかを指定する値。 このプロパティは、高速読み取りオプションのいずれかを使用した場合のみ使用できます。 このプロパティの既定値は **False**です。|  
 |FastLoadKeepNulls|ブール値|データが読み込まれるときに NULL 値をコピーするかどうかを指定する値。 このプロパティは、高速読み取りオプションのいずれかを使用した場合のみ使用できます。 このプロパティの既定値は **False**です。|  
 |FastLoadMaxInsertCommitSize|Integer|高速読み込み操作の実行中に、Excel 変換先でコミットを試行するバッチ サイズを指定する値。 既定値は **2147483647**す。 値 **0** は、すべての行が処理された後で、コミット操作が 1 回行われることを示します。|  
-|FastLoadOptions|String|高速読み込みオプションのコレクション。 高速読み込みオプションには、テーブルのロックおよび制約のチェックが含まれています。 どちらか 1 つまたは両方を指定することも、どちらも指定しないこともできます。<br /><br /> 注:このプロパティの一部のオプションでは使用できません、 **Excel 変換先エディター**を使用して設定できますが、**高度なエディター**します。|  
+|FastLoadOptions|String|高速読み込みオプションのコレクション。 高速読み込みオプションには、テーブルのロックおよび制約のチェックが含まれています。 どちらか 1 つまたは両方を指定することも、どちらも指定しないこともできます。<br /><br /> 注:このプロパティの一部のオプションは、**[Excel 変換先エディター]** では使用できませんが、**[詳細エディター]** を使用して設定できます。|  
 |OpenRowset|String|AccessMode がいつ`OpenRowset`、テーブルまたは Excel 変換先にアクセスするビューの名前。|  
 |OpenRowsetVariable|String|AccessMode がいつ`OpenRowset from Variable`、テーブルまたは Excel 変換先にアクセスするビューの名前を格納する変数の名前。|  
 |SqlCommand|String|AccessMode がいつ`SQL Command`、Excel 変換先を使用して、データの変換先列を指定する TRANSACT-SQL ステートメント。|  
@@ -61,6 +61,6 @@ ms.locfileid: "58391089"
  詳細については、「 [Excel 変換先](excel-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809040"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>ソフト NUMA を使用するように SQL Server を構成する方法 (SQL Server)
 最新のプロセッサでは、1 つのソケットに対して複数のコアが与えられます。 各ソケットは、通常、1 つの NUMA ノードとして表示されます。 SQL Server データベース エンジンは、さまざまな内部構造を分割し、NUMA ノード単位でサービス スレッドを分割します。 1 ソケットにつき 10 個以上のコアを含む、ソフトウェアを使用するプロセッサを搭載したは、一般にハードウェア NUMA ノードに分割する NUMA (ソフト NUMA) は、スケーラビリティとパフォーマンスが向上します。   

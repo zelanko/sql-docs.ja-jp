@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fd8e84a443c87846b4c40c45152b1225e2bc7b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817088"
 ---
 # <a name="msagentparameterlist-transact-sql"></a>MSagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "52770584"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**agent_type**|**tinyint**|エージェントの種類。<br /><br /> **1** = スナップショット エージェント。<br /><br /> **2** = ログ リーダー エージェント。<br /><br /> **3** = ディストリビューション エージェント。<br /><br /> **4**マージ エージェントを = です。<br /><br /> **9** = キュー リーダー エージェント。|  
+|**agent_type**|**tinyint**|エージェントの種類:<br /><br /> **1** = スナップショット エージェント。<br /><br /> **2** = ログ リーダー エージェント。<br /><br /> **3** = ディストリビューション エージェント。<br /><br /> **4**マージ エージェントを = です。<br /><br /> **9** = キュー リーダー エージェント。|  
 |**parameter_name**|**sysname**|有効なエージェント パラメーターの名前です。|  
-|**default_value**|**nvarchar (4000)**|エージェント パラメーターの既定値です。NULL は既定値がないことを示します。|  
-|**min_value**|**int**|エージェント パラメーターの下限を設定します。NULL は下限がないことを示します。|  
+|**default_value**|**nvarchar (4000)**|NULL がこのような値が存在しないことを示す、エージェント パラメーターの既定値。|  
+|**min_value**|**int**|NULL に下限示しますなしに、エージェント パラメーターの下限の境界を設定します。|  
 |**max_value**|**int**|エージェント パラメーターの上限を設定します。NULL は上限がないことを示します。|  
   
 ## <a name="see-also"></a>参照  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808693"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words サーバー構成オプション
   使用して、`transform noise words`サーバー構成オプションをエラー メッセージを抑制するかどうかノイズ ワード、つまり[ストップ ワード](../../relational-databases/search/full-text-search.md)、ゼロ行を返すフルテキスト クエリのブール演算が発生します。 フルテキスト クエリに使用されている CONTAINS 述語に、ノイズ ワードを含んだブール演算または NEAR 演算が存在する場合、このオプションを使用すると便利です。 次の表に、このオプションで使用可能な値を示します。  

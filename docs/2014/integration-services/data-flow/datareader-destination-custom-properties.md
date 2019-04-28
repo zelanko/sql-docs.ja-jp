@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827606"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 変換先のカスタム プロパティ
   DataReader 変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -33,6 +33,6 @@ ms.locfileid: "58376650"
  詳細については、「 [DataReader 変換先](datareader-destination.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

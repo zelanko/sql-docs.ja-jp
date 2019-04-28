@@ -33,11 +33,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807364"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>ウィザードを使用した拡張イベント セッションの作成 (オブジェクト エクスプローラー)
   サーバー上の特定のイベントを選んでキャプチャできるように、拡張イベントには、一連の手順に従って拡張イベント セッションを作成できる新規セッション ウィザードが導入されました。 新しいセッション ウィザードでは、拡張イベントのほとんどの機能を使用できます。 [[新しいセッション] ダイアログ](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)では、データのキャプチャ、表示、および分析を行う拡張イベント セッションも定義できます。 [新しいセッション] ダイアログでは、拡張イベントのすべての機能を使用できます。  
@@ -64,7 +64,7 @@ ms.locfileid: "48067882"
   
 -   [セッション データ ストレージを指定します。](#BKMK_SpecifySessionDataOutput)  
   
--   [概要](#BKMK_Summary)  
+-   [まとめ](#BKMK_Summary)  
   
 -   [イベント セッションを作成します。](#BKMK_CreateEventSession)  
   

@@ -21,23 +21,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 280686087a0099fa374664eb0cbfe9d7c2b244ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856046"
 ---
 # <a name="sysservicecontractmessageusages-transact-sql"></a>sys.service_contract_message_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  コントラクトとメッセージ型の 1 つの組ごとに 1 行のデータを格納するカタログ ビューです。  
+  (コントラクト、メッセージの種類) ごとに 1 行を格納するカタログ ビューのペア。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**service_contract_id**|**int**|メッセージ型を使用するコントラクトの識別子。 Null を許容しません。|  
-|**message_type_id**|**int**|コントラクトで使用されるメッセージ型の識別子。 Null を許容しません。|  
-|**is_sent_by_initiator**|**bit**|メッセージ交換の発信側で送信できるメッセージ型。 Null を許容しません。|  
-|**is_sent_by_target**|**bit**|メッセージ交換の発信先で送信できるメッセージ型。 Null を許容しません。|  
+|**message_type_id**|**int**|コントラクトで使用されるメッセージの種類の識別子です。 Null を許容しません。|  
+|**is_sent_by_initiator**|**bit**|メッセージの種類は、メッセージ交換の発信側から送信できます。 Null を許容しません。|  
+|**is_sent_by_target**|**bit**|メッセージの種類は、交換の発信先で送信できます。 Null を許容しません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

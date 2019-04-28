@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814058"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のレプリケーション、変更データ キャプチャ (CDC)、および変更の追跡 (CT) がサポートされています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、高可用性と追加のデータベース復旧機能を提供します。  
@@ -205,7 +205,7 @@ ms.locfileid: "57579322"
 |||||  
 |-|-|-|-|  
 ||**パブリッシャー**|**ディストリビューター** <sup>3</sup>|**サブスクライバー (Subscriber)**|  
-|**トランザクション**|はい<sup>1</sup>|いいえ|はい<sup>2</sup>|  
+|**トランザクション**|可<sup>1</sup>|いいえ|はい<sup>2</sup>|  
 |**P2P**|いいえ|いいえ|いいえ|  
 |**Merge**|はい|いいえ|はい<sup>2</sup>|  
 |**スナップショット**|はい|いいえ|はい<sup>2</sup>|  

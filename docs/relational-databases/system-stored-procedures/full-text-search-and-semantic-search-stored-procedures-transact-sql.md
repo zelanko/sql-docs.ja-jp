@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4fb0eaa3e99687341307ae7ae2914aa65e717101
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62858731"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>フルテキスト検索およびセマンティック検索ストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47627640"
  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)、 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)、および[DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)代わりにします。  
   
  [sp_fulltext_column](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)  
- テーブルの特定の列を、フルテキスト インデックス作成の対象にするかどうかを指定します。  
+ テーブルの特定の列がフルテキスト インデックスに参加するかどうかを指定します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)代わりにします。  
   
@@ -50,16 +50,16 @@ ms.locfileid: "47627640"
  ドキュメント識別子の間のマッピングを返します (**DocId**s) とフルテキスト キー値。  
   
  [sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
- LCID に対応する更新された類義語辞典ファイルのデータを解析して読み込み、この類義語辞典を使用するフルテキスト クエリを再コンパイルします。  
+ 解析し、LCID に対応し、類義語辞典を使用して、フルテキスト クエリの再コンパイルする更新された類義語辞典ファイルからデータを読み込みます。  
   
  [sp_fulltext_pendingchanges](../../relational-databases/system-stored-procedures/sp-fulltext-pendingchanges-transact-sql.md)  
- 変更の追跡を使用している指定のテーブルについて、保留中の挿入、更新、削除など、未処理となっている変更に関する情報を返します。  
+ 保留中の挿入、更新、および削除の場合は、指定したテーブルを使用している変更の追跡など返しますが、変更にまだ処理されていません。  
   
  [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
- SQL Server のフルテキスト検索のサーバー プロパティを変更します。  
+ SQL Server のフルテキスト検索のサーバーのプロパティを変更します。  
   
  [sp_fulltext_table](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)  
- テーブルに対してフルテキスト インデックスの作成をアクティブにするかどうかを設定します。  
+ フルテキスト インデックスに対してテーブルをマークしたりマークします。  
   
  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 使用[CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)、 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)、および[DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md)代わりにします。  
   
@@ -69,12 +69,12 @@ ms.locfileid: "47627640"
  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
  [sp_help_fulltext_catalogs](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
- 指定したフルテキスト カタログの ID、名前、ルート ディレクトリ、ステータス、およびフルテキスト インデックスが作成されたテーブルの数を返します。  
+ ID、名、ルート ディレクトリ、ステータス、および指定したフルテキスト カタログのフルテキスト インデックス付きテーブルの数を返します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)カタログ ビューを代わりにします。  
   
  [sp_help_fulltext_catalogs_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)  
- カーソルを使用して、指定されたフルテキスト カタログの ID、名前、ルート ディレクトリ、ステータス、およびフルテキスト インデックスが作成されたテーブルの数を返します。  
+ カーソルを使用して、ID、名、ルート ディレクトリ、ステータス、および指定したフルテキスト カタログのフルテキスト インデックス付きテーブルの数を返します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)カタログ ビューを代わりにします。  
   
@@ -84,18 +84,18 @@ ms.locfileid: "47627640"
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)カタログ ビューを代わりにします。  
   
  [sp_help_fulltext_columns_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)  
- カーソルを使用して、フルテキスト インデックスの作成用に指定された列を返します。  
+ カーソルを使用して、フルテキスト インデックス作成用に指定された列を返します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)カタログ ビューを代わりにします。  
   
  [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
- 登録済みのワード ブレーカー、フィルター、プロトコル ハンドラーの情報を返します。また、指定したコンポーネントで使用された、データベースやフルテキスト カタログの識別子の一覧も返します。  
+ データベースと、指定されたコンポーネントを使用しているフルテキスト カタログの識別子の一覧に加え、登録済みのワード ブレーカー、フィルター、およびプロトコル ハンドラーの情報を返します。  
   
  [sp_help_fulltext_tables](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)  
- フルテキスト インデックス作成用に登録されたテーブルの一覧を返します。  
+ フルテキスト インデックス作成のために登録されているテーブルの一覧を返します。  
   
  [sp_help_fulltext_tables_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)  
- フルテキスト インデックス作成用に登録されたテーブルの一覧を返します。  
+ フルテキスト インデックス作成のために登録されているテーブルの一覧を返します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)カタログ ビューを代わりにします。  
   

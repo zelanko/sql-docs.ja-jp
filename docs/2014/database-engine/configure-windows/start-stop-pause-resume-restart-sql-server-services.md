@@ -41,11 +41,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808748"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動
   このトピックでは、開始、停止、一時停止、再開、または再起動する方法を説明します、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser サービスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンド プロンプトでコマンド[!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell。  

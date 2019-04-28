@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0fc2a9dffe5dc22c1dadfa075b91d8a6b26215de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863679"
 ---
 # <a name="mode-property-ado"></a>Mode プロパティ (ADO)
 データを変更する使用可能なアクセス許可を示します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、または[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  

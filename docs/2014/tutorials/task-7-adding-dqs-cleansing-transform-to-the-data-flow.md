@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866377"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>タスク 7:DQS クレンジング変換をデータ フローに追加する
   ここでは、DQS クレンジング変換をデータ フローに追加して、入力済みの仕入先データを DQS を使用してクレンジングします。 参照してください **[DQS クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)** 変換の詳細についてはします。  

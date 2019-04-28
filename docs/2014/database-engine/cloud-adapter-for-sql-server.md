@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812636"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server のクラウド アダプター
   クラウド アダプター サービスは、Windows Azure 仮想マシン上で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を準備する一環として作成されます。 クラウド アダプター サービスは、最初の実行時に自己署名 SSL 証明書を生成し、 **Local System** アカウントとして実行されます。 その際に、自身を構成するために使用される構成ファイルを生成します。 クラウド アダプターは、Windows ファイアウォール ルールを作成し、既定のポート 11435 で着信する TCP 接続を許可します。  
@@ -48,19 +48,19 @@ ms.locfileid: "52518258"
   
 -   **構成ファイルのパラメーター** -  
   
-    -   \<configuration >  
+    -   \<configuration>  
   
-        -   \<appSettings >  
+        -   \<appSettings>  
   
-            -   \<キーの追加"WebServicePort"の値を = =""/>  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<キーの追加"WebServiceCertificate"の値を = ="GUID"/>  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<キーの追加"ExposeExceptionDetails"の値を = ="true"/>  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \</appSettings >  
+        -   \</appSettings>  
   
-    -   \<設定 >  
+    -   \</configuration>  
   
 -   **証明書の詳細**-証明書が、次の値。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52518258"
   
  **構成ファイルの値**:  
   
-|設定|値|既定値|コメント|  
+|設定|値|既定|コメント|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|指定しない場合、11435 が使用されます。|  
 |WebServiceCertificate|Thumbprint|空|空の場合、新しい自己署名証明書が生成されます。|  
