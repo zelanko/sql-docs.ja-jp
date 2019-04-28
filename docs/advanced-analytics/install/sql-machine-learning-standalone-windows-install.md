@@ -10,11 +10,11 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747074"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Machine Learning Server (スタンドアロン) または SQL Server セットアップを使用して R Server (スタンドアロンを) インストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +90,7 @@ SQL server 2016 ののみ。SQL Server の前提条件としてインストー�
 
 6.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
 
-インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)を参照してください。
+インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、次を参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
@@ -125,7 +125,7 @@ SQL server 2016 ののみ。SQL Server の前提条件としてインストー�
 
 6.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
 
-インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)を参照してください。
+インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、次を参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
 ::: moniker-end
 
 ## <a name="set-environment-variables"></a>環境変数な設定
@@ -187,7 +187,7 @@ R と Python の開発では、同じコンピューター上の複数のバー�
 
 7. インターネット接続のないサーバー。
 
-   + R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)を参照してください。
+   + R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、次を参照してください。[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)します。
 
    + すべてのファイル、メイン実行可能ファイルと、オフラインのコンピューター上のフォルダーに、CAB ファイルを転送します。
 
@@ -202,11 +202,11 @@ R と Python の開発では、同じコンピューター上の複数のバー�
     }
     ```
 
-9. [管理者の CLI ユーティリティを実行して](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)web を再起動し、コンピューティング ノード。 手順と構文は、[モニター、開始、および web およびコンピューティング ノードを停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)を参照してください。
+9. [管理者の CLI ユーティリティを実行して](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)web を再起動し、コンピューティング ノード。 手順と構文は、次を参照してください。[モニター、開始、および web およびコンピューティング ノードを停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)します。
 
 ## <a name="development-tools"></a>開発ツール
 
-開発 IDE はセットアップの一部としてインストールされていません。 開発環境を構成する方法の詳細については、[R tools セットアップ](../r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](../python/setup-python-client-tools-sql.md)を参照してください。
+開発 IDE はセットアップの一部としてインストールされていません。 開発環境を構成する方法の詳細については、次を参照してください。 [R tools セットアップ](../r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](../python/setup-python-client-tools-sql.md)します。
 
 ## <a name="next-steps"></a>次のステップ
 

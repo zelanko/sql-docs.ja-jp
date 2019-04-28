@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672527"
 ---
 # <a name="attribute-conformance"></a>属性の適合性
 次の表では、これが適切に定義されている各 ODBC 環境属性の準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
@@ -37,7 +37,7 @@ ms.locfileid: "47818842"
   
  次の表では、これが適切に定義されている各 ODBC 接続属性の準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|コア|  
 |SQL_ATTR_ASYNC_ENABLE|レベル 1 またはレベル 2 の [1]|  
@@ -62,7 +62,7 @@ ms.locfileid: "47818842"
   
  次の表では、これが適切に定義されている各 ODBC ステートメント属性の準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|コア|  
 |SQL_ATTR_APP_ROW_DESC|コア|  

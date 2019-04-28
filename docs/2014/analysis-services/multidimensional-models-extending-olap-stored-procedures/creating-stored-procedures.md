@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703089"
 ---
 # <a name="creating-stored-procedures"></a>ストアド プロシージャの作成
   ストアド プロシージャを使用するには、これを共通言語ランタイム (CLR) クラスまたはコンポーネント オブジェクト モデル (COM) クラスに関連付ける必要があります。 クラスは、の形式では、通常のサーバーにインストールする必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® ダイナミック リンク ライブラリ (DLL)、およびサーバー上またはアセンブリとして登録されている、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。  

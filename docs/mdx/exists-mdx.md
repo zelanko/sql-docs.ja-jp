@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690858"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  1 番目に指定されている組のセットのうち、2 番目に指定されているセットの 1 つ以上の組と共存する組のセットを返します。 この関数は、autoexist によって自動的に実行される操作を手動で実行するために使用します。 自動の詳細については、次の存在を参照してください。 [MDX の主な概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)します。  
+  1 番目に指定されている組のセットのうち、2 番目に指定されているセットの 1 つ以上の組と共存する組のセットを返します。 この動作は手動でどのような自動の存在を自動的に実行します。 自動の詳細については、次の存在を参照してください。 [MDX の主な概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)します。  
   
  場合、省略可能な\<メジャー グループ名 > が指定されて、2 番目のセットと指定されたメジャー グループのファクト テーブル内の行に関連付けられている組の 1 つまたは複数の組と存在する組を返します。  
   
@@ -38,7 +38,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  セットを返す有効な多次元式 (MDX) です。  
   
  *MeasureGroupName*  
- メジャー グループ名を指定する有効な文字列式です。  
+ メジャー グループの名前を指定する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
   
@@ -47,7 +47,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
 2.  場合*MeasureGroupName*パラメーターを使用すると、結果は、参照されているメジャー グループに表示されるメジャーがあるかどうかは、参照されているメジャー グループに表示されるメジャーがないかどうかは、EXISTS は常に返しますに依存します。値に関係なく、空のセット*Set_Expression1*と*Set_Expression2*します。  
   
 ## <a name="examples"></a>使用例  
- カリフォルニア在住の顧客  
+ カリフォルニア州に住む顧客:  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON 0,  
@@ -59,7 +59,7 @@ FROM [Adventure Works]
   
 ```  
   
- 売上があったカリフォルニア在住の顧客  
+ 販売がカリフォルニア州に住む顧客:  
   
 ```  
 SELECT [Measures].[Internet Sales Amount] ON 0,  

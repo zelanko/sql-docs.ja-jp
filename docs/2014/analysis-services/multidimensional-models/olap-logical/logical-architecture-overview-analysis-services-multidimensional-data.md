@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699203"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
   Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータ マイニング モード**従来の OLAP およびデータ マイニングをサポートしています。 **表形式モード**表形式モデルをサポートしています。 **SharePoint 統合モード**の読み込みとブック内の Excel または PowerPivot のデータ モデルのクエリを使用して、SharePoint の PowerPivot としてインストールされた Analysis Services のインスタンスを参照します。  

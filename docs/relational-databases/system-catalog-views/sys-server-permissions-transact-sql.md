@@ -22,28 +22,28 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a1631532cb31813d8425fbf97ee4eec1936d9a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62683835"
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  サーバーレベルの権限ごとに 1 行のデータを返します。  
+  各サーバー レベルのアクセス許可の 1 つの行を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|権限が存在するリソースのクラスの識別子。<br /><br /> 100 = サーバー<br /><br /> 101 = サーバー プリンシパル<br /><br /> 105 = エンドポイント|  
-|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明。 次のいずれかの値です。<br /><br /> **サーバー**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|アクセス許可が存在するクラスの説明です。 次のいずれかの値です。<br /><br /> **サーバー**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|権限が存在するセキュリティ保護可能なリソースの ID。クラスに基づいて解釈されます。 ほとんどは、これは、クラスが表す内容に適用される ID の種類だけです。 標準以外のリソースに対する解釈は、次のようになります。<br /><br /> 100 = 常に 0|  
-|**minor_id**|**int**|権限が存在するリソースのセカンダリ ID。クラスに基づいて解釈されます。|  
-|**grantee_principal_id**|**int**|権限が許可されているサーバー プリンシパル ID。|  
-|**grantor_principal_id**|**int**|権限の許可者のサーバー プリンシパル ID。|  
-|**type**|**char(4)**|サーバー権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
+|**minor_id**|**int**|アクセス許可が存在するリソースのセカンダリ ID は、クラスに基づいて解釈されます。|  
+|**grantee_principal_id**|**int**|サーバー プリンシパル ID、アクセス許可を付与します。|  
+|**grantor_principal_id**|**int**|サーバー プリンシパル ID のこれらのアクセス許可の許可者。|  
+|**type**|**char(4)**|サーバー権限の種類。 アクセス許可の種類の一覧は、次の表を参照してください。|  
 |**permission_name**|**nvarchar(128)**|権限名。|  
-|**state**|**char(1)**|権限の状態。<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = Grant With Grant オプション|  
+|**state**|**char(1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = Grant With Grant オプション|  
 |**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |権限の種類|アクセス許可の名前|適用されるセキュリティ保護可能なリソース|  
@@ -77,18 +77,18 @@ ms.locfileid: "47836120"
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
 |VWSS|VIEW SERVER STATE|SERVER|  
-|XA|EXTERNAL ACCESS|SERVER|  
+|XA|外部アクセス|SERVER|  
   
 ## <a name="permissions"></a>アクセス許可  
- すべてのユーザーは自分の権限を参照できます。 他のログインの権限を参照するには、VIEW DEFINITION、ALTER ANY LOGIN、またはログインに対するすべての権限が必要です。 ユーザー定義のサーバー ロールを参照するには、ALTER ANY SERVER ROLE、またはロールのメンバーシップが必要です。  
+ すべてのユーザーは自分の権限を参照できます。 他のログインのアクセス許可を表示するには、VIEW DEFINITION、ALTER ANY LOGIN、またはログインに対する権限が必要です。 ユーザー定義サーバー ロールを参照する ALTER ANY SERVER ROLE をまたはロールのメンバーシップが必要です。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリは、サーバー プリンシパルに対して明示的に付与または拒否されている権限を一覧表示します。  
+ 次のクエリは、明示的に付与または拒否サーバー プリンシパル アクセス許可を一覧表示します。  
   
 > [!IMPORTANT]  
->  固定サーバー ロールの権限は、sys.server_permissions には表示されません。 したがって、サーバー プリンシパルには、ここに一覧表示されていない追加の権限がある可能性があります。  
+>  固定サーバー ロールの権限は、sys.server_permissions には表示されません。 そのため、サーバー プリンシパルには、この一覧にない追加のアクセス許可があります。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

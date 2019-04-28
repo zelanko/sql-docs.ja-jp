@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705952"
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  

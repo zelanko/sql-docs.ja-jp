@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648627"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>チュートリアル:自由形式のレポートの作成 (レポート ビルダー)
   このチュートリアルでは、フォーム レターのような SSRS 自由形式レポートを作成する方法を説明します。 レポート アイテムを配置して、テキスト ボックス、画像、その他のデータ領域が含まれるフォームを作成できます。  

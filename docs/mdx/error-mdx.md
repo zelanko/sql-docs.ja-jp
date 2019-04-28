@@ -1,5 +1,5 @@
 ---
-title: エラー (MDX) |Microsoft ドキュメント
+title: エラー (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6644318053321ae5189a70a2bd2c1f0e67d092fc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691332"
 ---
 # <a name="error-mdx"></a>Error (MDX)
 
 
-  エラーを発生させます。指定されたエラー メッセージを示すこともできます。  
+  必要に応じて指定したエラー メッセージを提供するエラーが発生します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,6 +44,6 @@ Error( [ Error_Text ] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

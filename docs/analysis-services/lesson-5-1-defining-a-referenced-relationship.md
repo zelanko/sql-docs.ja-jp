@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 032756aefd5b84e030435152cc759a0b86c2fa18
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752751"
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>レッスン 5-1-参照リレーションシップの定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "52507624"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [ファクト リレーションシップの定義](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [属性リレーションシップ](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
 [参照リレーションシップと参照リレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   

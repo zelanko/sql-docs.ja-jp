@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ea4643354990ad416ac3975467c5991842adacc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658261"
 ---
 # <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール
 ドライバー対応接続プールは、Windows 8 のドライバー マネージャーの新しい機能です。 ドライバー対応接続プールには、接続プールの ODBC ドライバーでの動作をカスタマイズするためにドライバー作成者が使用できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "52390575"
   
  **アプリケーションの基本設定のならず**一部のデータ ソースは効率的に新しい接続を開きます (いくつかの属性をリセットすると比較して) ため、アプリケーションが若干不一致を再利用しようとしています代わりに新しい接続を開きたい場合があります。プールとリセットのいくつかの値 (ただし低速接続プールの初期化のフレーズの中にはこのことがあります) から接続します。 一部のアプリケーションが、サーバーの負荷を小さく、正しい動作の不一致を修正する大きなコストがある可能性がありますが、接続の数を開きます。 ドライバー対応接続プールなしを指定できません 基本設定のこのような実際には、ドライバー マネージャーがすべてのドライバー固有の接続属性を認識しないため。 ドライバー対応接続プールと、ユーザーの設定に基づいて、プールからの接続を再利用のコストをより正確に見積もることできるように (SQLSetConnectAttr のドライバー固有の属性) を持つユーザーの設定を取得するためのドライバーができます。  
   
- ドライバー対応接続プールの詳細については、[ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)を参照してください。  
+ ドライバー対応接続プールの詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。  
   
 ## <a name="determining-driver-support"></a>ドライバーのサポートを決定します。  
  ドライバー対応接続プールは、省略可能な機能ドライバーがサポートされていない可能性があります。 ドライバーが、サポートしているかを判断する、SQL_DRIVER_AWARE_POOLING_SUPPORTED を使用して、*情報の種類*の[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)します。  

@@ -11,16 +11,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3eb075777b65a410f27e318e2d923f0b0882822d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765666"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] で、他のユーザーが確実に自分と同じデータを操作するようにするには、ショートカット クエリ ファイルをそのユーザーに電子メールで送信します。 ワークシートを保存して電子メールで送信するのではなく、クエリを共有する必要があります。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   Outlook 2010 以降がインストールされている必要があります。  
@@ -37,7 +37,7 @@ ms.locfileid: "52784264"
   
 -   ショートカット クエリ ファイルを開くには、電子メールの受信者は [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] をインストールしておく必要があります。 受信者は、ファイルをダブルクリックして開くことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670453"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>データ マイニング スキーマ行セット (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "50144288"
 ## <a name="examples"></a>使用例  
  次のセクションで、データ マイニング スキーマ行セットに対するクエリの例をいくつか示します。  
   
-### <a name="example-1-list-data-mining-services"></a>例 1: データ マイニング サービスの一覧表示  
+### <a name="example-1-list-data-mining-services"></a>例 1 : リストのデータ マイニング サービス  
  次のクエリでは、現在のサーバーで使用できるマイニング サービス、すなわち有効なアルゴリズムの一覧が返されます。 各マイニング サービスに対して指定される列には、各アルゴリズムで使用できるモデリング フラグとコンテンツの種類、各サービスの GUID、および各サービスに対して追加されている予測の制限が含まれます。  
   
 ```  
@@ -52,7 +52,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>例 2: データ マイニング モデル パラメーターの一覧表示  
+### <a name="example-2-list-mining-model-parameters"></a>例 2:マイニング モデル パラメーターの一覧  
  次の例では、特定のマイニング モデルの作成に使用されたパラメーターを返します。  
   
 ```  
@@ -61,7 +61,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>例 3: すべての行セットの一覧表示  
+### <a name="example-3-list-all-rowsets"></a>例 3: すべての行セットを一覧表示します。  
  次のクエリでは、現在のサーバーで使用できる行セットの詳細な一覧が返されます。  
   
 ```  

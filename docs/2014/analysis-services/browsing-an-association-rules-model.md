@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664409"
 ---
 # <a name="browsing-an-association-rules-model"></a>アソシエーション ルール モデルの参照
   使用してアソシエーション モデルを開く**参照**、アソシエーション ルール ビューアーに似た、対話型ビューアーでモデルが表示されます[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。  このビューアーを使用すると、相互に関連付けられたアイテムをひとめで確認できます。また、このビューアーには、予測または提案を行うために使用できるルールが表示されます。  
@@ -153,7 +153,7 @@ ms.locfileid: "52537185"
   
 -   **ルール:**[!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、確率値を使用して、生成されるルールの数を制限します。 ルールの数を制御するには、`MINIMUM_PROBABILITY` パラメーターまたは `MINIMUM _IMPORTANCE` パラメーターを設定します。  
   
- 高度なパラメーターを構成する方法の詳細については、[データ マイニング アルゴリズム&#40;SQL Server データ マイニング アドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)を参照してください。  
+ 高度なパラメーターを構成する方法の詳細については、次を参照してください。[データ マイニング アルゴリズム&#40;SQL Server データ マイニング アドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  

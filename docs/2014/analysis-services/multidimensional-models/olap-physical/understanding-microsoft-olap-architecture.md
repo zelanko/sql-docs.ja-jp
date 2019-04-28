@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81af61f5bc7af7b4b722067622918bd1c9cecd9b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698955"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP アーキテクチャについて
   以下のトピックを参照して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多次元データベースを十分に理解し、ビジネス インテリジェンス ソリューションに多次元データベースを実装する計画を立てます。  

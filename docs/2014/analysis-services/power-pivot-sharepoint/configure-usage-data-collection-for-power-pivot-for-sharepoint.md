@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749468"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は PowerPivot for SharePoint)
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 PowerPivot for SharePoint では、このシステムを使用および拡張して、PowerPivot のデータやサービスがどのように使用されているかを示すレポートが PowerPivot 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、PowerPivot 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
@@ -69,7 +69,7 @@ ms.locfileid: "52411279"
   
 6.  **[OK]** をクリックして変更を保存します。  
   
-7.  必要に応じて、すべてのメッセージをログに記録するか、エラーのみをログに記録するかを指定できます。 イベント メッセージのスロットルする方法の詳細については、[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)を参照してください。  
+7.  必要に応じて、すべてのメッセージをログに記録するか、エラーのみをログに記録するかを指定できます。 イベント メッセージのスロットルする方法の詳細については、次を参照してください。[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)します。  
   
 ##  <a name="configdb"></a> ログ ファイルの場所の設定  
  PowerPivot 使用状況データは、まずローカル サーバー上の使用状況ログ ファイルに格納され、その後 PowerPivot サービス アプリケーション データベースに定期的に移動されます。 ログ ファイルの場所は、サーバーの全体管理で設定します。 既定の場所は次のとおりです。  
@@ -126,7 +126,7 @@ ms.locfileid: "52411279"
   
 3.  **[OK]** をクリックします。  
   
- 使用状況データの収集および保存する方法の詳細については、[PowerPivot 使用状況データ収集](power-pivot-usage-data-collection.md)を参照してください。  
+ 使用状況データの収集および保存する方法の詳細については、次を参照してください。 [PowerPivot 使用状況データ収集](power-pivot-usage-data-collection.md)します。  
   
 ##  <a name="qrh"></a> レポート用の高速、中速、および低速のクエリ応答カテゴリの定義  
  クエリ応答のパフォーマンスは、定義済みのカテゴリに基づいて計測されます。このカテゴリでは、完了に要する時間に応じた要求と応答のサイクルが定義されています。 この定義済みのカテゴリの種類には、簡易応答、迅速な応答、想定される応答、長い応答、および超過応答があります。 PowerPivot サーバーへのすべての要求は、完了に要する時間に基づいて、いずれかのカテゴリに分類されます。  

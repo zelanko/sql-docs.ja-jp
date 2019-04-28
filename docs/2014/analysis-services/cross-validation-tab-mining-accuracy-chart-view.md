@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679750"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>[相互検証] タブ ([マイニング精度チャート] ビュー)
-  相互検証では、マイニング構造をセクションにパーティション分割し、それぞれのセクションに対してモデルのトレーニングとテストを反復的に実行できます。 データの分割先のフォールドをいくつか指定します。それぞれのフォールドは、順にテスト データとして使用されます。一方、残りのデータは、新しいモデルのトレーニングに使用されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 各モデルに対して標準的な精度の基準のセットが生成されます。 それぞれのセクションに対して生成されるモデルの基準を比較することで、データセット全体に対するマイニング モデルの信頼性を確認できます。  
+  相互検証では、マイニング構造をセクションにパーティション分割し、それぞれのセクションに対してモデルのトレーニングとテストを反復的に実行できます。 データの分割先のフォールドをいくつか指定します。それぞれのフォールドは、順にテスト データとして使用されます。一方、残りのデータは、新しいモデルのトレーニングに使用されます。 その後、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] により、それぞれのモデルに対して標準的な精度の基準のセットが生成されます。 それぞれのセクションに対して生成されるモデルの基準を比較することで、データセット全体に対するマイニング モデルの信頼性を確認できます。  
   
  詳細については、「[相互検証 (Analysis Services - データ マイニング)](data-mining/cross-validation-analysis-services-data-mining.md)」を参照してください。  
   
@@ -100,9 +100,9 @@ ms.locfileid: "48188212"
  ときに**ターゲット****しきい値**に設定されている`null`既定値は、各ケースの最も可能性の高い予測が正しいと見なされます。 前の例では、0.05、0.15、および 0.8 が、3 つの異なるケースの予測の確率です。 これらの値は大きく異なりますが、それぞれの予測はすべて正しいものと見なされます。なぜなら、それぞれのケースで生成された予測はそれぞれ 1 つであり、これらの予測はそのケースで最善の予測であるからです。  
   
 ## <a name="see-also"></a>参照  
- [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)   
- [クロス検証&#40;Analysis Services - データ マイニング&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [テストおよび検証 &#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [相互検証 &#40;Analysis Services - データ マイニング&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [クロス検証レポートのメジャー](data-mining/measures-in-the-cross-validation-report.md)   
- [データ マイニングのストアド プロシージャ&#40;Analysis Services - データ マイニング&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [データ マイニングのストアド プロシージャ (Analysis Services - データ マイニング)](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

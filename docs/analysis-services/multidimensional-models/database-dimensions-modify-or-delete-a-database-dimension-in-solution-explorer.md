@@ -1,5 +1,5 @@
 ---
-title: 変更またはソリューション エクスプ ローラーでデータベース ディメンションを削除する |Microsoft ドキュメント
+title: 変更またはソリューション エクスプ ローラーでデータベース ディメンションの削除 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c03cd9c54ca7315a9d6d8b7b9c99fe46f1be93a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714839"
 ---
-# <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>データベース ディメンションの変更またはソリューション エクスプ ローラーでデータベース ディメンションを削除します。
+# <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>データベース ディメンション - 変更またはソリューション エクスプ ローラーでデータベース ディメンションを削除します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション デザイナーを使用して、ディメンションを変更または削除することができます。 ディメンションを変更した場合、そのディメンションを処理するまでユーザーは変更内容を利用できません。 詳細については、「[多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   

@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa66d85d11c4c99094f554cb1be8c036329b8608
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655553"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>スパース列に対する列およびカタログ メタデータの表示 (OLE DB)
   このサンプルでは、スパース列、非スパース列、columnset 列の 3 つの列を持ったテーブルを作成します。 その後、非スパース列および columnset 列に対する列およびカタログ メタデータを示す OLE DB フラグを表示します。  
   
- このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、[SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)を参照してください。  
+ このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)します。  
   
 ## <a name="example"></a>例  
  INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  

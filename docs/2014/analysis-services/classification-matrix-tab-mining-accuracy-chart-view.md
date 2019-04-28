@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1879e9ec4f2a6decf4168e7c49a5e81d3a043d29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681731"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>[分類マトリックス] タブ ([マイニング精度チャート] ビュー)
   **[分類マトリックス]** タブには、 **[列マッピング]** タブのモデル グリッドで選択した各モデルの分類マトリックスが表示されます。分類マトリックスは、 **[列マッピング]** タブで選択した予測可能列が不連続である場合にのみ使用できます。 より詳細な説明については、**分類マトリックス** タブを参照してください[テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)します。  
   
 ## <a name="options"></a>および  
- **[コピー]**  
+ **コピー**  
  各分類マトリックスの内容をクリップボードにコピーします。  
   
  **カウントを\<モデル > で\<予測可能列 >**  
@@ -38,6 +38,6 @@ ms.locfileid: "48154712"
 ## <a name="see-also"></a>参照  
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
   
