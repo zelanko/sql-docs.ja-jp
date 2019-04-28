@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779876"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 で廃止されたデータベース エンジンの機能
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
@@ -56,13 +56,13 @@ ms.locfileid: "54132620"
 |カテゴリ|提供が中止された機能|代替|  
 |--------------|--------------------------|-----------------|  
 |バックアップと復元|**BACKUP {DATABASE&#124;ログ} WITH PASSWORD**と**バックアップ {データベース&#124;ログ} WITH MEDIAPASSWORD**は廃止されました。 **復元 {データベース&#124;ログ} [MEDIA] のパスワードを使用して**非推奨とされ続けます。|なし|  
-|バックアップと復元|**RESTORE {DATABASE&AMP;#124;ログ}.WITH DBO_ONLY**|**RESTORE {DATABASE&AMP;#124;ログ}....RESTRICTED_USER を**|  
+|バックアップと復元|**RESTORE { DATABASE &#124; LOG } ...WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ...RESTRICTED_USER を**|  
 |互換性レベル|互換性レベル 80|データベースを以上に設定する必要があります互換性レベル 90 です。|  
 |構成オプション|`sp_configure 'user instance timeout'` および `'user instances enabled'`|ローカル データベースの機能を使用します。 詳細については、次を参照してください[SqlLocalDB ユーティリティ。](../tools/sqllocaldb-utility.md)|  
 |接続プロトコル|VIA プロトコルのサポートは中止されました。|代わりに TCP を使用してください。|  
 |データベース オブジェクト|トリガーでの `WITH APPEND` 句の使用|トリガー全体を再作成してください。|  
 |データベース オプション|`sp_dboption`|`ALTER DATABASE`|  
-|メール|SQL Mail|データベース メールを使用してください。 詳細については、[データベース メール](../relational-databases/database-mail/database-mail.md)と[Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)を参照してください。|  
+|Mail|SQL Mail|データベース メールを使用してください。 詳細については、次を参照してください。[データベース メール](../relational-databases/database-mail/database-mail.md)と[Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)します。|  
 |メモリ管理|32 ビットの AWE (Address Windowing Extensions) と 32 ビットのホット アド メモリ サポート。|64 ビットのオペレーティング システムを使用します。|  
 |メタデータ|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |プログラミング|SQL Server 分散管理オブジェクト (SQL-DMO)。|SQL Server 管理オブジェクト (SMO)|  
@@ -76,7 +76,7 @@ ms.locfileid: "54132620"
 |Transact-SQL|`RAISERROR` という形式の `RAISERROR integer 'string'` は廃止されました。|現在使用してステートメントを書き直してください**raiserror (...)** 構文。|  
 |Transact-SQL 構文|`COMPUTE / COMPUTE BY`|`ROLLUP` を使用してください。|  
 |Transact-SQL 構文|使用**\* =** と **=&#42;**|ANSI 結合構文を使用してください。 詳細については、次を参照してください。 [(TRANSACT-SQL) から。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
-|XEvent|databases_data_file_size_changed、databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change、database_file_size_change で置換<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
+|XEvent|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change、database_file_size_change で置換<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **XEvent の追加変更します。**  
   

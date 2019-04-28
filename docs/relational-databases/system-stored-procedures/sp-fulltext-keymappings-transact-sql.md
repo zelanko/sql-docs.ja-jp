@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0e9f8894376712472c13479a32503954ad2694d7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657166"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,13 +44,13 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 #### <a name="parameters"></a>パラメーター  
  *table_id*  
- フルテキスト インデックスが設定されたテーブルのオブジェクト ID。 無効なを指定する場合*table_id*エラーが返されます。 テーブルのオブジェクト ID を取得する方法の詳細については、[OBJECT_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)を参照してください。  
+ フルテキスト インデックスが設定されたテーブルのオブジェクト ID。 無効なを指定する場合*table_id*エラーが返されます。 テーブルのオブジェクト ID を取得する方法の詳細については、次を参照してください。 [OBJECT_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)します。  
   
  *docid*  
  キー値に対応する内部ドキュメント識別子 (DocId)。 *docid* 値が無効な場合、結果は返されません。  
   
  *key*  
- 指定したテーブルからのフルテキスト キー値。 *key* 値が無効な場合、結果は返されません。 フルテキスト キー値については、[、フルテキスト インデックスの管理](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)を参照してください。  
+ 指定したテーブルからのフルテキスト キー値。 *key* 値が無効な場合、結果は返されません。 フルテキスト キー値については、次を参照してください。 [、フルテキスト インデックスの管理](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)します。  
   
 > [!IMPORTANT]  
 >  1 つ、2 つ、または 3 つのパラメーターを使用する方法の詳細については、後の「解説」を参照してください。  
@@ -75,7 +75,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |このパラメーター リストしています.|この結果には.|  
 |--------------------------|----------------------|  
-|*table_id*|のみ呼び出されると、 *table_id*パラメーター、sp_fulltext_keymappings で、各キーに対応する DocId とは、指定したベース テーブルからフルテキスト キー (キー) のすべての値が返されます。 これには削除保留中のキーが含まれます。<br /><br /> この機能は、さまざまな問題をトラブルシューティングする場合に便利です。 特に、選択したフルテキスト キーが整数データ型でないときに、フルテキスト インデックス コンテンツを確認する場合に役立ちます。 これは、結果を sp_fulltext_keymappings の結果を結合**sys.dm_fts_index_keywords_by_document**します。 詳細については、[sys.dm_fts_index_keywords_by_document &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)を参照してください。<br /><br /> ただし、通常は、可能であれば特定のフルテキスト キーまたは DocId を指定するパラメーターを指定して sp_fulltext_keymappings を実行することをお勧めします。 これは、キー マップ全体を返すよりもはるかに効率的です。特に、キー マップ全体を返すとパフォーマンスが大幅に低下する可能性がある、非常に大きなテーブルの場合に有効です。|  
+|*table_id*|のみ呼び出されると、 *table_id*パラメーター、sp_fulltext_keymappings で、各キーに対応する DocId とは、指定したベース テーブルからフルテキスト キー (キー) のすべての値が返されます。 これには削除保留中のキーが含まれます。<br /><br /> この機能は、さまざまな問題をトラブルシューティングする場合に便利です。 特に、選択したフルテキスト キーが整数データ型でないときに、フルテキスト インデックス コンテンツを確認する場合に役立ちます。 これは、結果を sp_fulltext_keymappings の結果を結合**sys.dm_fts_index_keywords_by_document**します。 詳細については、次を参照してください。 [sys.dm_fts_index_keywords_by_document &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)します。<br /><br /> ただし、通常は、可能であれば特定のフルテキスト キーまたは DocId を指定するパラメーターを指定して sp_fulltext_keymappings を実行することをお勧めします。 これは、キー マップ全体を返すよりもはるかに効率的です。特に、キー マップ全体を返すとパフォーマンスが大幅に低下する可能性がある、非常に大きなテーブルの場合に有効です。|  
 |*table_id*, *docid*|だけの場合、 *table_id*と*docid*が指定されて*docid* null 以外であるし、指定されたテーブルで有効な DocId を指定する必要があります。 この機能は、カスタム フルテキスト キーを、特定のフルテキスト インデックスの DocId に対応するベース テーブルから切り離す場合に役立ちます。|  
 |*table_id*, NULL,*キー*|2 番目のパラメーターが NULL の場合、3 つのパラメーターが存在する場合と*キー* null 以外であるし、指定したテーブルから有効なフルテキスト キー値を指定する必要があります。 この機能は、特定のフルテキスト キーに対応する DocId をベース テーブルから切り離す場合に役立ちます。|  
   

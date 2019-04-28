@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3322b71162b93204591dbb1c0bffb6bac4856454
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679949"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>[接続プロパティ] ダイアログ ボックス (SSAS - テーブル)
   このページを使用すると、SQL Server Management Studio で、テーブル モデル データベースによって使用されるデータ ソースの接続プロパティを表示または変更できます。  

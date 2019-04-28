@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664087"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Service Broker が破損したメッセージを受信すると、 **Broker:Corrupted Message** イベントが作成されます。  

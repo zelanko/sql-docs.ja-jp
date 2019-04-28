@@ -24,11 +24,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84e1a9a26d9fb19224f8e40d32cd98bc534d1b4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678680"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "47689100"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|型 : VT_BOOL<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : データを DBTYPE_VARIANT と DBTYPE_SQLVARIANT のどちらとしてフェッチするかを決定します。<br /><br /> VARIANT_TRUE: 列の型は DBTYPE_SQLVARIANT として返され、バッファーには SSVARIANT 構造体が保持されます。<br /><br /> VARIANT_FALSE: 列の型は DBTYPE_VARIANT として返され、バッファーには VARIANT 構造体が保持されます。|  
+|SSPROP_ALLOWNATIVEVARIANT|型:VT_BOOL<br /><br /> R/W[読み取り/書き込み]<br /><br /> 既定値:VARIANT_FALSE<br /><br /> 説明:フェッチされるデータを DBTYPE_VARIANT と dbtype_sqlvariant のどちらとしてかどうかを判断します。<br /><br /> VARIANT_TRUE:列の型は、SSVARIANT 構造体をバッファーが保持されます DBTYPE_SQLVARIANT として返されます。<br /><br /> VARIANT_FALSE:列の型は DBTYPE_VARIANT として返されます、バッファーは VARIANT 構造体に必要があります。|  
   
 ## <a name="see-also"></a>参照  
  [データ型&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  

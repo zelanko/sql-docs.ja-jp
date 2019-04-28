@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679800"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
   このトピックでは、選択的な XML インデックスを作成または変更するときに、インデックス設定用のインデックス ヒントと最適化ヒントへのノード パスを指定する方法について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "58528804"
  選択的 XML インデックスの詳細については、「 [選択的 XML インデックス &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
 ##  <a name="untyped"></a> 型指定されていない XML での XQuery 型と SQL Server 型について  
- 選択的 XML インデックスは、2 つの型システムをサポートします。XQuery 型と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型。 インデックスを設定するパスを使用して、XQuery 式、または XML データ型の value() メソッドの戻り値の型のいずれかと一致させることができます。  
+ 選択的 XML インデックスは、XQuery 型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型という 2 つの型システムをサポートします。 インデックスを設定するパスを使用して、XQuery 式、または XML データ型の value() メソッドの戻り値の型のいずれかと一致させることができます。  
   
 -   インデックスを設定するパスに注釈が設定されていない場合、または XQUERY キーワードを使用して注釈が設定されている場合、パスは XQuery 式と一致します。 XQUERY 注釈付きノード パスには 2 種類のバリエーションがあります。  
   
@@ -110,7 +110,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型は、value() メソッドの戻り値の型と一致します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型は、この最適化ヒントをサポートします。シングルトン。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型は、次の最適化ヒントをサポートします: SINGLETON。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型を返すパスでは、型を必ず指定する必要があります。 value() メソッドで使用するものと同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型を使用します。  
   
@@ -215,7 +215,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>インデックスを設定するノードの選択  
  次の 2 つの単純な原則を使用して、選択的 XML インデックスに追加する適切なノードのサブセットを識別できます。  
   
-1.  **原則 1**:特定の XQuery 式を評価するには、を確認する必要があるすべてのノードをインデックスします。  
+1.  **原則 1**: 特定の XQuery 式を評価するには、調べる必要があるすべてのノードにインデックスを設定します。  
   
     -   その存在または値が XQuery 式で使用されるすべてのノードにインデックスを設定します。  
   
@@ -234,7 +234,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   ノード `b`。述語が、XQuery 式の中でノード`b` に適用されるため。  
   
-2.  **原則 2**:最適なパフォーマンス、特定の XQuery 式の評価に必要なすべてのノードをインデックスします。 ノードの一部にのみインデックスを設定した場合、選択的 XML インデックスは、インデックス付きノードのみを含むサブ式の評価を向上させます。  
+2.  **原則 2**: 最大限のパフォーマンスを得るには、特定の XQuery 式を評価するために必要なすべてのノードにインデックスを設定します。 ノードの一部にのみインデックスを設定した場合、選択的 XML インデックスは、インデックス付きノードのみを含むサブ式の評価を向上させます。  
   
  上に示した SELECT ステートメントのパフォーマンスを向上させるには、次に示す選択的 XML インデックスを作成します。  
   
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  node() ヒントでインデックス設定されているノードの値がクエリで必要な場合、選択的 XML インデックスは使用できません。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 最適化ヒント  
- 適用対象XQuery または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型  
+ 適用対象XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型  
   
  SINGLETON 最適化ヒントは、ノードのカーディナリティを指定します。 このヒントは、ノードが親または先祖の中で最大で 1 回出現することを事前に通知するため、クエリのパフォーマンスが向上します。  
   

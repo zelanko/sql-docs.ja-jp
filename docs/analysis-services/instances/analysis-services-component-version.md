@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1da8384bb51360178e1735d13f6c6b706e8b7ff
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659060"
 ---
-# <a name="verify-analysis-services-cumulative-update-build-version"></a>Analysis Services 累積更新プログラムのビルド バージョンを確認します。
+# <a name="verify-analysis-services-cumulative-update-build-version"></a>Analysis Services 累積更新プログラムのビルド バージョンの確認
 
 SQL Server 2017 以降では、Analysis Services のビルド バージョン番号と SQL Server データベース エンジンのビルド バージョン番号が一致しません。 Analysis Services とデータベース エンジンの両方で同じインストーラーを使用して、ビルド システムごとの使用は区別されます。
 

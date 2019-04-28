@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 418266e22ef497c8eb36208e2a766080a156498a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635434"
 ---
 # <a name="set-report-server-properties-management-studio"></a>レポート サーバーのプロパティを設定する (Management Studio)
    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でレポート サーバー システム プロパティを設定することにより、機能を有効にしたりサーバーの既定値を設定したりできます。  
@@ -29,7 +29,7 @@ ms.locfileid: "59940009"
   
 2.  レポート サーバー ノードを右クリックして、 **[プロパティ]** をクリックします。 **[詳細設定]** をクリックすると、プロパティ ページが表示されます。 各プロパティの詳細については、「[[サーバーのプロパティ] &#40;[詳細設定] ページ&#41; - Reporting Services](server-properties-advanced-page-reporting-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーのシステム プロパティ](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

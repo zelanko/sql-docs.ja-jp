@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678520"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>レッスン 1:RDL スキーマ Visual Studio プロジェクトを作成します。
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>レッスン 1:RDL スキーマ Visual Studio プロジェクトの作成
   このチュートリアルでは、簡単なコンソール アプリケーションを作成します。 このチュートリアルで開発するいると想定[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]します。  
   
 > [!NOTE]  
@@ -67,7 +67,7 @@ ms.locfileid: "56018913"
   
      **参照の追加** ダイアログ ボックスで、 **.NET** タブで **System.Web.Services**、順にクリックします**OK**します。  
   
-     レポート サーバー Web サービスに接続する方法の詳細については、[Web サービスと .NET Framework を使用してアプリケーションの構築](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)を参照してください。  
+     レポート サーバー Web サービスに接続する方法の詳細については、次を参照してください。 [Web サービスと .NET Framework を使用してアプリケーションの構築](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)します。  
   
 10. ソリューション エクスプ ローラーでプロジェクト ノードを展開します。 プロジェクトには、Program.cs ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] の場合は Module1.vb) という既定の名前のコード ファイルが追加されていることがわかります。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "56018913"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、XML スキーマ定義ツール (Xsd.exe) を使用して RDL スキーマからクラスを生成し、プロジェクトに組み込みます。 参照してください[レッスン 2。Xsd ツールを使用して RDL スキーマからクラスを生成](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)します。  
+ 次のレッスンでは、XML スキーマ定義ツール (Xsd.exe) を使用して RDL スキーマからクラスを生成し、プロジェクトに組み込みます。 「[レッスン 2:Xsd ツールを使用して RDL スキーマからクラスを生成](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)します。  
   
 ## <a name="see-also"></a>参照  
  [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

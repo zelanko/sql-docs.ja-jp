@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671040"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>[計算プロパティ] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [計算プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、選択したキューブのキューブ デザイナーの **[計算]** タブで定義された計算に関する表示フォルダーや、その計算に関連付けられたメジャー グループのプロパティを表示したり編集したりできます。 キューブ デザイナーの **[計算]** タブの **[ツール バー]** ペインにある **[計算プロパティ]** をクリックして、 **[計算プロパティ]** ダイアログ ボックスを表示できます。  

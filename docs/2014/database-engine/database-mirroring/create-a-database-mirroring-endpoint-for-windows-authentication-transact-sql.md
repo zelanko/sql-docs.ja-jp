@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755292"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に、Windows 認証を使用するデータベース ミラーリング エンドポイントを [!INCLUDE[tsql](../../includes/tsql-md.md)]で作成する方法について説明します。 データベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] をサポートするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスにデータベース ミラーリング エンドポイントが必要となります。 サーバー インスタンスは、単一のポートを備えたデータベース ミラーリング エンドポイントを 1 つだけ持つことができます。 データベース ミラーリング エンドポイントは、作成される際に、ローカル システムで利用できる任意のポートを使用できます。 サーバー インスタンス上のすべてのデータベース ミラーリング セッションはそのポートでリッスンし、データベース ミラーリングに対するすべての着信接続はそのポートを使用します。  
@@ -31,11 +31,11 @@ ms.locfileid: "48213892"
   
  **このトピックの内容**  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **作業を開始する準備:**[セキュリティ](#Security)  
   
--   **以下を使用してデータベース ミラーリング エンドポイントを作成するには:** [Transact-SQL](#TsqlProcedure)  
+-   **データベース ミラーリング エンドポイントを作成するために使用するもの:** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
  サーバー インスタンスの認証方法と暗号化方法は、システム管理者が設定します。  
@@ -79,7 +79,7 @@ ms.locfileid: "48213892"
   
      ]  
   
-     **[,]** ENCRYPTION = **REQUIRED**  
+      **[,]** ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { \<*algorithm*> } ]  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48213892"
         > [!IMPORTANT]  
         >  各サーバー インスタンスには、一意のリスナー ポートが 1 つだけ必要です。  
   
-    -   Windows 認証の場合、エンドポイントで接続の認証に NTLM または Kerberos だけを使用する場合を除き、AUTHENTICATION オプションは省略可能です。 \<*authorizationMethod*> では、NTLM、KERBEROS、NEGOTIATE のいずれかで、接続の認証に使用する方法を指定します。 既定値の NEGOTIATE を使用すると、エンドポイントでは、使用する Windows ネゴシエーション プロトコルに NTLM または Kerberos のいずれかが選択されます。 ネゴシエーションでは、相手側のエンドポイントの認証レベルに応じて、認証ありまたは認証なしの接続が可能になります。  
+    -   Windows 認証の場合、エンドポイントで接続の認証に NTLM または Kerberos だけを使用する場合を除き、AUTHENTICATION オプションは省略可能です。 *\<authorizationMethod >* として、次のいずれかの接続を認証するために使用する方法を指定します。NTLM、KERBEROS、またはネゴシエートします。 既定値の NEGOTIATE を使用すると、エンドポイントでは、使用する Windows ネゴシエーション プロトコルに NTLM または Kerberos のいずれかが選択されます。 ネゴシエーションでは、相手側のエンドポイントの認証レベルに応じて、認証ありまたは認証なしの接続が可能になります。  
   
     -   既定では、ENCRYPTION は REQUIRED に設定されます。 これは、このエンドポイントへのすべての接続に暗号化を使用する必要があることを意味します。 ただし、エンドポイントで暗号化を無効にしたり、オプションにできます。 選択肢は次のとおりです。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48213892"
   
          あるエンドポイントで暗号化が必要な場合は、他のエンドポイントで ENCRYPTION が SUPPORTED または REQUIRED に設定されている必要があります。  
   
-    -   \<*algorithm*> には、エンドポイントの暗号化標準を指定するオプションが用意されています。 \<*algorithm*> の値は、RC4、AES、AES RC4、または RC4 AES の各アルゴリズムまたはそれらの組み合わせになります。  
+    -   \<*algorithm*> には、エンドポイントの暗号化標準を指定するオプションが用意されています。 値*\<アルゴリズム >* 1 つの各アルゴリズムまたはアルゴリズムの組み合わせにすることができます。RC4、AES、AES RC4、または RC4 AES の場合。  
   
          AES RC4 では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、AES アルゴリズムを優先することが示されます。 RC4 AES では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、RC4 アルゴリズムを優先することが示されます。 両方のエンドポイントで両方のアルゴリズムを異なる順序で指定した場合、接続を受け入れた方のエンドポイントが優先されます。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48213892"
     > [!NOTE]  
     >  既存のエンドポイントを変更するには、「 [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)で作成する方法について説明します。  
   
-###  <a name="TsqlExample"></a> 例: データベース ミラーリングをサポートするエンドポイントの作成 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 例: データベース ミラーリング (TRANSACT-SQL) をサポートするエンドポイントの作成  
  次の例では、3 台の異なるコンピューター システムに既定のサーバー インスタンスのデータベース ミラーリング エンドポイントを作成します。  
   
 |サーバー インスタンスの役割|ホスト コンピューター名|  
@@ -196,12 +196,12 @@ GO
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [例:Windows 認証を使用してデータベース ミラーリングのセットアップ&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

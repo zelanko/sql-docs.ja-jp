@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656439"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)
   レポート内のアイテムを書式設定すると、レポートの見栄えがよくなって読みやすくなります。 レポート デザイン モードでは、テキスト ボックスや、テキスト ボックスの個々のアイテム、画像、式、およびデータを書式設定できます。  

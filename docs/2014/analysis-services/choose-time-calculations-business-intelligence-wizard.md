@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe045f479d7c482da0a3eb3691479d0159bf978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681079"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>[対象となる階層と計算の選択] (ビジネス インテリジェンス ウィザード)
   **[対象となる階層と計算の選択]** ページを使用すると、既存の時間階層に対して作成された新しい時間計算の解決方法を定義できます。  

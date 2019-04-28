@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755366"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
   ここでは、データベース ミラーリング モニターと **sp_dbmmonitor** システム ストアド プロシージャ、およびデータベース ミラーリングの監視に伴う作業 ( **データベース ミラーリング モニターのジョブ**など) について説明し、データベース ミラーリング セッションについて監視できる情報の概要を示します。 さらに、事前に定義された一連のデータベース ミラーリング イベントに対する警告しきい値を定義する方法、および任意のデータベース ミラーリング イベントでの警告の設定についても説明します。  
@@ -329,7 +329,7 @@ ms.locfileid: "52542910"
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

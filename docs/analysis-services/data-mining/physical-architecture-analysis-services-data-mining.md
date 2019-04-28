@@ -1,5 +1,5 @@
 ---
-title: 物理アーキテクチャ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: 物理アーキテクチャ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99e2cf7386bdf395ac82f05cc0b94f3e2b5e3123
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668517"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>物理アーキテクチャ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ビジネス インテリジェンス アプリケーション用のデータ マイニング機能を提供するサーバーとクライアントの両方のコンポーネントを使用します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、サーバーとクライアントの両方のコンポーネントを使用して、ビジネス インテリジェンス アプリケーションにデータ マイニング機能を提供しています。  
   
 -   サーバー コンポーネントは、Microsoft Windows サービスとして実装されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは Windows サービスの別個のインスタンスとして実装されるため、同一のコンピューター上で複数のインスタンスがサポートされます。  
   
--   クライアントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] との通信に、コマンドの発行や応答の受信のための SOAP ベースのプロトコルで、Web サービスとして公開されているパブリック標準の XML for Analysis (XMLA) を使用します。 クライアント オブジェクト モデルも XMLA 経由で提供されます。クライアント オブジェクト モデルには、ADOMD.NET などのマネージ プロバイダーまたはネイティブ OLE DB プロバイダーを使用してアクセスできます。  
+-   クライアントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] との通信に、コマンドの発行や応答の受信のための SOAP ベースのプロトコルで、Web サービスとして公開されているパブリック標準の XML for Analysis (XMLA) を使用します。 クライアント オブジェクト モデルも XMLA 経由で提供されます。クライアント オブジェクト モデルには、ADOMD.NET などのマネージド プロバイダーまたはネイティブ OLE DB プロバイダーを使用してアクセスできます。  
   
 -   クエリ コマンドは、データ マイニング指向の業界標準クエリ言語であるデータ マイニング拡張機能 (DMX) を使用して発行できます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース オブジェクトの管理には、Analysis Services スクリプト言語 (ASSL) を使用することもできます。  
   
@@ -36,9 +36,9 @@ ms.locfileid: "34015749"
  この図は、XML for Analysis (XMLA) リスナーと、HTTP または TCP のいずれかを使用する以外に、インスタンスにアクセスする方法がないことも示しています。  
   
 > [!WARNING]  
->  DSO は推奨されていません。 ソリューションの開発に DSO を使用しないでください。  
+>  DSO は非推奨とされます。 ソリューションの開発に DSO を使用しないでください。  
   
- ![Analysis Services のシステム アーキテクチャ図](../../analysis-services/data-mining/media/analysisservicessystemarchitecture.gif "Analysis Services のシステム アーキテクチャ図")  
+ ![Analysis Services システムのアーキテクチャ ダイアグラム](../../analysis-services/data-mining/media/analysisservicessystemarchitecture.gif "Analysis Services システムのアーキテクチャ ダイアグラム")  
   
 ## <a name="server-configuration"></a>[サーバーの構成]  
  1 つのサーバー インスタンスで複数の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースをサポートできます。各データベースに、クライアント要求に応答してオブジェクトを処理する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスの固有のインスタンスがあります。  
@@ -48,6 +48,6 @@ ms.locfileid: "34015749"
  クライアントと Analysis Services サーバーの間のすべての通信には、プラットフォームや言語に依存しないプロトコルである XMLA が使用されます。 Analysis Services は、クライアントからの要求を受け取ると、その要求が OLAP に関連しているかデータ マイニングに関連しているかを判断して、適切にルーティングします。 サーバー コンポーネントの詳細については、「 [OLAP エンジンのサーバー コンポーネント](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [論理アーキテクチャと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [論理アーキテクチャ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

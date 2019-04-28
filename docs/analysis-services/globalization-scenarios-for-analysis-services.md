@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659697"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services のグローバリゼーションのシナリオ
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58658326"
   
 -   Analysis Services が実行される Windows サーバーに言語パックをインストールした場合、ログ ファイルには英語とローカライズされたメッセージが混在します。  
   
--   ドキュメントとツール ([!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] や [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] など) は、次の言語に翻訳されています。中国語 (簡体字)、中国語 (繁体字)、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語 (ブラジル)、ロシア語、およびスペイン語。 カルチャはインストール中に指定されます。  
+-   ドキュメントとツールなど[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]と[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]、これらの言語に変換されます。簡体字、繁体字、フランス語、ドイツ語、イタリア語、日本語、韓国語、ポルトガル語 (ブラジル)、ロシア語、およびスペイン語。 カルチャはインストール中に指定されます。  
   
  多次元モデルについては、Analysis Services で、言語、照合順序、および翻訳をオブジェクト階層全体で独立して設定できます。  表形式モデルについては、翻訳のみを追加できます。言語と照合順序は、ホスト オペレーティング システムによって継承されます。  
   

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691707"
 ---
 # <a name="results-detailed-view-dialog-box"></a>[結果の詳細ビュー] ダイアログ ボックス
   **[ポリシーの評価]** ダイアログ ボックスを使用してポリシーを実行し、 **[評価]** をクリックすると、このダイアログ ボックスにポリシーの評価結果が表示されます。 このダイアログ ボックスは読み取り専用で、プロパティ式のどの部分に問題があるかを把握するのに役立ちます。  

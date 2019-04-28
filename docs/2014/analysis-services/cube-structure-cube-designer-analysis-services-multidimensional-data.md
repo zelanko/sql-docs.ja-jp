@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ef8764f2fa5e0cf135c6e3b4156964e6f904f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679687"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>[キューブ構造] (キューブ デザイナー) (Analysis Services - 多次元データ)
   **で** キューブ デザイナー **の** [キューブ構造] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] タブを使用すると、メジャー グループやメジャーを作成、変更、キューブ ディメンションを追加、キューブに含まれているオブジェクトを関連するデータ ソース ビューから表示する操作ができます。  
@@ -35,7 +35,7 @@ ms.locfileid: "48160852"
 |**データ ソース ビュー**|**[データ ソース ビュー]** ペインを使用して、選択したキューブに関連付けられたデータ ソース ビューを表示、編集します。 このペインの詳細については、「[[データ ソース ビュー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)](data-source-view-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [論理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [メジャーのプロパティを構成します。](multidimensional-models/configure-measure-properties.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   

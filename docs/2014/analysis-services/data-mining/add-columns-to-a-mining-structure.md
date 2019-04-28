@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 954159ba298b47c1a10a5e7baef1cff523dcc4b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706041"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>マイニング構造への列の追加
   データ マイニング ウィザードで定義したマイニング構造に列を追加するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーを使用します。 マイニング構造の定義に使用したデータ ソース ビューに存在する列はどれでも追加できます。  

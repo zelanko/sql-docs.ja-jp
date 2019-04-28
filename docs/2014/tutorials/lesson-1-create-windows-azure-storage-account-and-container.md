@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8a1f8cef9f29c856ab0bc02480221e583a0078f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676195"
 ---
-# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>レッスン 1:Windows Azure ストレージ アカウントとコンテナーを作成します。
+# <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>レッスン 1:Windows Azure ストレージ アカウントとコンテナーを作成する
   Windows Azure ストレージへの SQL Server データ ファイルの格納を開始する前に、最初に Windows Azure ストレージ アカウント、BLOB コンテナー、および共有アクセス署名を作成する必要があります。 レッスン 1 では、Windows Azure 管理ポータルにログインし、ストレージ アカウント、BLOB コンテナー、および Shared Access Signature を作成する手順について説明します。  
   
  既定では、ストレージ アカウントの所有者だけがそのアカウント内の BLOB、テーブル、およびキューにアクセスすることができます。 この新しい SQL Server の機能強化を使用して、ストレージ アカウント アクセス キーを共有しないで、これらのリソースにアクセスするには、次の操作をする必要があります。  
@@ -28,7 +28,7 @@ ms.locfileid: "56039933"
   
 -   保存されたアクセス ポリシーを使用して、コンテナーまたは BLOB の Shared Access Signature を管理します。 保存されたアクセス ポリシーは、Shared Access Signatures をコントロールするもう 1 つの手段となり、それを取り消す直接的な手段にもなります。  
   
- 詳細については、[Windows Azure ストレージ リソースへのアクセスの管理](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)を参照してください。  
+ 詳細については、次を参照してください。 [Windows Azure ストレージ リソースへのアクセスの管理](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)します。  
   
 ## <a name="create-storage-account"></a>ストレージ アカウントの作成  
  Windows Azure 管理ポータルにストレージ アカウントを作成するには、次の手順を実行します。  
@@ -42,7 +42,7 @@ ms.locfileid: "56039933"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
 ## <a name="create-a-blob-container"></a>Blob コンテナーを作成します。  
- Windows Azure には、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 ストレージ アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。 ストレージ サイズの制限に関する最新情報については、[.NET で Windows Azure Blob ストレージ サービスを使用する方法](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)を参照してください。  
+ Windows Azure には、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 ストレージ アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。 ストレージ サイズの制限に関する最新情報については、次を参照してください。 [.NET で Windows Azure Blob ストレージ サービスを使用する方法](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)します。  
   
  Windows Azure でコンテナーを作成するには、次の手順を実行します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56039933"
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  コンテナーをプログラムで作成するために、REST API を使用することもできます。 詳細については、[コンテナーの作成](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)また[Windows Azure ストレージ サービス REST API リファレンス](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)を参照してください。  
+>  コンテナーをプログラムで作成するために、REST API を使用することもできます。 詳細については、次を参照してください。[コンテナーの作成](https://msdn.microsoft.com/library/windowsazure/dd179468.aspx)また[Windows Azure ストレージ サービス REST API リファレンス](https://msdn.microsoft.com/library/windowsazure/dd179355.aspx)します。  
   
  **次のレッスン:**  
   

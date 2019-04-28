@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ea300436c0be78936fde95f4fa8437185fa044f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669315"
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ HRESULT LocalDBUnShareInstance(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、[SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

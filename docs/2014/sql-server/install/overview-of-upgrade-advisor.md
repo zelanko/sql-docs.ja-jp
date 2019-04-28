@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676420"
 ---
 # <a name="overview-of-upgrade-advisor"></a>アップグレード アドバイザーの概要
   ここでは、アップグレード処理の概要を説明し、アップグレード アドバイザー分析ウィザードとアップグレード アドバイザー レポート ビューアーを理解して使用するために役立つ情報を提供します。  

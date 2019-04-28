@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680943"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>クラスター ダイアグラムのチュートリアル (データ マイニング アドイン)
   クラスタ リング モデルを作成した後を使用して Visio にインポートできる、**クラスター**図形、カスタマイズおよび強化、レイアウトに進みます。 **Visio 用データ マイニング図形**データ マイニング ダイアグラムを操作するため、次のカスタム コントロールが含まれます。  

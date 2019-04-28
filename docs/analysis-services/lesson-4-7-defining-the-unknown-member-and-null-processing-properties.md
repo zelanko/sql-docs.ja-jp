@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752596"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>レッスン 4-7-不明なメンバーと Null 処理のプロパティを定義します。
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -179,7 +179,7 @@ ms.locfileid: "52525920"
     ![アセンブリのコンポーネントを示す製品名レベル](../analysis-services/media/l4-assemblycomponents-1.gif "アセンブリ コンポーネントを示す製品名レベル")  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 5:ディメンションとメジャー グループ間のリレーションシップを定義します。](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[レッスン 5: ディメンションとメジャー グループ間のリレーションシップを定義します。](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654978"
 ---
 # <a name="ddl-triggers"></a>DDL トリガー
   DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに対応して起動されます。 これらのイベントは主に、CREATE、ALTER、DROP、GRANT、DENY、REVOKE、UPDATE STATISTICS のいずれかのキーワードで始まる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに対応します。 DDL と同様の操作を実行する特定のシステム ストアド プロシージャも DDL トリガーを起動できます。  

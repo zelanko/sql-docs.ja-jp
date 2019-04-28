@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0525a50b30036470336dafe10c78a42218486c63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686235"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "47774670"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの ID|  
+|**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの id。|  
 |**plan_name**|**sysname**|データベース メンテナンス プランの名前。|  
 |**date_created**|**datetime**|データベース メンテナンス プランが作成された日付。|  
-|**所有者**|**sysname**|データベース メンテナンス プランの所有者。|  
+|**所有者**|**sysname**|データベース メンテナンス プランの所有者です。|  
 |**max_history_rows**|**int**|システム テーブル内で、データベース メンテナンス プランの履歴の記録用に割り当てられる行数の最大値。|  
-|**remote_history_server**|**sysname**|履歴レポートがリモート サーバーに書き込まれる場合のサーバーの名前。|  
-|**max_remote_history_rows**|**int**|履歴レポートがリモート サーバーに書き込まれる場合の、サーバー上のシステム テーブル内で割り当てられる行数の最大値。|  
+|**remote_history_server**|**sysname**|履歴レポートが書き込まれる先のリモート サーバーの名前。|  
+|**max_remote_history_rows**|**int**|履歴レポートが書き込まれる先のリモート サーバー上のシステム テーブルに割り当てられる行数の最大数。|  
 |**user_defined_1**|**int**|既定値は NULL|  
 |**user_defined_2**|**nvarchar(100)**|既定値は NULL|  
 |**user_defined_3**|**datetime**|既定値は NULL|  

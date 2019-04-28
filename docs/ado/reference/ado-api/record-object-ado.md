@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661633"
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
 行を表す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータ プロバイダー、あるいはファイルやディレクトリなどの半構造化データ プロバイダーによって返されるオブジェクト。  
@@ -42,7 +42,7 @@ ms.locfileid: "52538775"
  データの変更とナビゲーション メソッド、**レコード**オブジェクトには、絶対 URL を使用してリソースを検索、相対 URL もそのまま使用または**接続**開始点として、オブジェクト コンテキスト。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
  A**接続**オブジェクトが互いに関連付けられている**レコード**オブジェクト。 そのため、**レコード**オブジェクトの操作を呼び出すことによって、トランザクションの一部をすることができます**接続**オブジェクトのトランザクション メソッドです。  
   

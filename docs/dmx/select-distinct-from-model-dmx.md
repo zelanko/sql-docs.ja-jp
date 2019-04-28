@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658894"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;モデル&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *n*  
  任意。 返される行の数を指定する整数。  
   
- *式リスト*  
+ *expression list*  
  関連する列識別子 (モデルより抽出) または式のコンマ区切りリストです。  
   
  *model*  
@@ -103,7 +103,7 @@ FROM [TM Decision Tree]
  次のコード サンプルは、列 `Yearly Income]` のアルゴリズムで作成された各バケットの中間点、最大値、および最小値を返します。 この例の結果を再現するには、`[Targeted Mailing]` と同じマイニング構造を新しく作成する必要があります。 ウィザードで、コンテンツの種類を変更する、`Yearly Income`から列**Continuous**に**Discretized**します。  
   
 > [!NOTE]  
->  また、「基本的なデータ マイニング チュートリアル」で作成したマイニング モデルを変更して、マイニング構造列 `Yearly Income]` を分離できます。 これを行う方法については、[マイニング モデル内の列の分離を変更](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)を参照してください。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
+>  また、「基本的なデータ マイニング チュートリアル」で作成したマイニング モデルを変更して、マイニング構造列 `Yearly Income]` を分離できます。 これを行う方法については、次を参照してください。[マイニング モデル内の列の分離を変更](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)します。 ただし、列の分離を変更した場合は、マイニング構造が強制的に再処理され、その構造を使用して作成した他のモデルの結果が変更されます。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   

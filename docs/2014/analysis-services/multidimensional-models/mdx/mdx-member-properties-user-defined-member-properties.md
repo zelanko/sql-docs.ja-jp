@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f7a61772b93c78173f3eca8ad38fca1ade671a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699745"
 ---
 # <a name="user-defined-member-properties-mdx"></a>ユーザー定義メンバー プロパティ (MDX)
-  属性リレーションシップとして、ディメンション内の指定されたレベルにユーザー定義メンバー プロパティを追加できます。 ユーザー定義メンバー プロパティに追加することはできません、`(All)`または階層そのものに、階層のレベル。  
+  属性リレーションシップとして、ディメンション内の指定されたレベルにユーザー定義メンバー プロパティを追加できます。 ユーザー定義メンバー プロパティは、階層の `(All)` レベル、または階層そのものには追加できません。  
   
 ## <a name="creating-user-defined-member-properties"></a>ユーザー定義メンバー プロパティの作成  
  以下のように、ユーザー インターフェイスを使用して、またはプログラムによって、サーバー ベースのディメンションまたはキューブにユーザー定義メンバー プロパティを追加できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "48114312"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES`セット式の軸仕様のキーワードが表示されます。 たとえば、次の MDX クエリ、`PROPERTIES`キーワードを取得、`List Price`と`Dealer Price`ユーザー定義メンバー プロパティと、1 月に販売された製品を示すセット式が表示されます。  
+ `PROPERTIES` キーワードは、軸を指定するセット式の後に指定します。 たとえば、次の MDX クエリの `PROPERTIES` キーワードは `List Price` および `Dealer Price` ユーザー定義メンバー プロパティを取得するもので、1 月に販売された製品を示すセット式の後に指定されています。  
   
 ```  
 SELECT   
@@ -53,7 +53,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>Properties 関数を使用したユーザー定義メンバー プロパティの取得  
- 別の方法として、`Properties` 関数を使ってカスタム メンバー プロパティにアクセスすることもできます。 たとえば、次の MDX クエリを使用して、`WITH`で構成される計算されるメンバーを作成するキーワード、`List Price`メンバーのプロパティ。  
+ 別の方法として、`Properties` 関数を使ってカスタム メンバー プロパティにアクセスすることもできます。 たとえば、次の MDX クエリでは、`WITH` キーワードを使用して、`List Price` メンバー プロパティで構成される計算されるメンバーを作成します。  
   
 ```  
 WITH   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
  計算されるメンバーの作成方法の詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [メンバー プロパティを使用して&#40;MDX&#41;](mdx-member-properties.md)   
- [プロパティ&#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [メンバー プロパティの使用 &#40;MDX&#41;](mdx-member-properties.md)   
+ [プロパティ &#40;MDX&#41;](/sql/mdx/properties-mdx)  
   
   

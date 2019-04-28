@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669450"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間データの sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で互換性レベルを変更した結果として無効になるインデックスと制約の一覧を表示します。 保存される計算列が含まれているインデックスまたは制約があり、計算式に空間 UDT が使用されている場合に、互換性レベルをアップグレードまたは変更すると、このインデックスまたは制約は無効になります。 この動的管理関数は、互換性レベルの変更の影響を調べる際に使用します。  
+  インデックスとの互換性レベルを変更した結果として無効になる制約一覧[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 アップグレードするか、互換性レベルを変更した後は、式を持つ空間 Udt を使用して、保存される計算列を格納するインデックスと制約を無効化されます。 この動的管理関数を使用して、互換性レベルでの変更の影響を判断します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,16 +50,16 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
-|**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスとヒープの場合は INDEX|  
-|**major_id**|**int**|制約の OBJECT ID <br /><br /> インデックスとヒープが含まれたテーブルの OBJECT ID|  
+|**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスのインデックスとヒープ|  
+|**major_id**|**int**|制約の OBJECT ID <br /><br /> インデックスとヒープを含んでいるテーブルのオブジェクト ID|  
 |**minor_id**|**int**|制約の場合は NULL<br /><br /> インデックスとヒープの場合は Index_id|  
-|**dependency**|**nvarchar(60)**|制約またはインデックスを無効にするような依存関係の説明。 アップグレード中に発生した警告にも同じ値が使用されます。 次の例に示します。<br /><br /> 組み込みの場合は "space"<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
+|**dependency**|**nvarchar(60)**|制約またはインデックスを無効にする原因となっている依存関係の説明です。 同じの値は、アップグレード中に発生した警告にも使用されます。 次の例に示します。<br /><br /> 組み込みの「領域」<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  互換性レベルを変更すると、一部の組み込み関数を使用している保存される計算列が無効になります。 データベースをアップグレードすると、Geometry メソッドまたは Geography メソッドを使用している保存される計算列も無効になります。  
   
-### <a name="which-functions-cause-persisted-computed-columns-to-be-disabled"></a>保存される計算列を無効にする関数   
- 保存される計算列の式で、次の関数を使用している場合、互換性レベルが 80 からを 90 に変更されたときに無効にするには、その列を参照するインデックスと制約をが。  
+### <a name="which-functions-cause-persisted-computed-columns-to-be-disabled"></a>どの関数保存される計算列を無効にするか。  
+ 保存される計算列の式で、次の関数を使用している場合、互換性レベルが 80 からを 90 に変更されたときに無効にする列を参照するインデックスと制約をが。  
   
 -   **IsNumeric**  
   
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>無効になったオブジェクトの動作  
  **[インデックス]**  
   
- クラスター化インデックスが無効になった場合、または非クラスター化インデックスが強制された場合は、エラーが発生し、"、クエリ プロセッサはプランを作成することは、インデックス ' % です。\*ls' テーブルまたはビュー ' % です。\*ls' が無効になっています"。 これらのオブジェクトを再度有効にするには、呼び出すことによってアップグレード後に、インデックスをリビルドします**ALTER INDEX ON しています.。REBUILD** を使用して変更するときに選択できます。  
+ クラスター化インデックスが無効になっている場合、または非クラスター化インデックスが強制された場合は、次のエラーが発生します。"、クエリ プロセッサはプランを作成することは、インデックス ' % です。\*ls' テーブルまたはビュー ' % です。\*ls' が無効になっています"。 これらのオブジェクトを再度有効にするには、呼び出すことによってアップグレード後に、インデックスをリビルドします**ALTER INDEX ON しています.。REBUILD** を使用して変更するときに選択できます。  
   
  **ヒープ**  
   
@@ -135,7 +135,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Check 制約と外部キー**  
   
- 無効になった CHECK 制約と外部キーを使用しても、エラーは発生しません。 ただし、行が変更されても、制約は適用されません。 これらのオブジェクトを再度有効にするには、呼び出すことによってアップグレードした後、制約を確認します**ALTER TABLE.。CHECK 制約**します。  
+ Check 制約を無効になっていると、外部キーにはエラーは発生しません。 ただし、行が変更されても、制約は適用されません。 これらのオブジェクトを再度有効にするには、呼び出すことによってアップグレードした後、制約を確認します**ALTER TABLE.。CHECK 制約**します。  
   
  **保存される計算列**  
   

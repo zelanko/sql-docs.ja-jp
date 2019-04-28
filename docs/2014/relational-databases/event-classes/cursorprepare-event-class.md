@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee6325c134070f60fa578709d2247c85dc3d5173
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663386"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare イベント クラス
   **CursorPrepare** イベント クラスでは、アプリケーション プログラミング インターフェイス (API) のカーソルで発生する、カーソル準備イベントを記述しています。 カーソル準備イベントは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、カーソルに関連付けられた SELECT ステートメントのコンパイルにより実行プランが作成され、カーソルの作成は行われなかったときに発生します。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658858"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
 >  サポートされている値の計算方法は異なります。つまり、クエリの対象となるモデルに応じてこの値の解釈は異なる場合があります。 任意の特定のモデル型のサポートを計算する方法の詳細については、各アルゴリズムの種類を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)します。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、単一クエリを使用して、個人が自転車購入者となるかどうかを予測します。また、TM Decision Tree マイニング モデルに基づいて、予測に対するサポートも判断します。  
+ 次の例では、単一クエリを使用して、個人が、自転車購入者になります。 また、TM Decision Tree マイニング モデルに基づく予測のサポートも判断するかどうかを予測します。  
   
 ```  
 SELECT  

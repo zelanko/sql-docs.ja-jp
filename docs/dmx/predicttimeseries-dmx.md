@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659181"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,12 +85,12 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   3 番目の例では、EXTEND_MODEL_CASES パラメーターを使用して、マイニング モデルを新しいデータで更新する方法を示します。  
   
- タイム シリーズ モデルの使用に関する詳細については、データ マイニング チュートリアル」を参照してください[レッスン 2: Building a Forecasting Scenario&#40;中級者向けデータ マイニング チュートリアル&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)と[タイム シリーズ予測の DMX。チュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)します。  
+ タイム シリーズ モデルの使用に関する詳細については、データ マイニング チュートリアル」を参照してください。[レッスン 2。予測シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2)と[タイム シリーズ予測の DMX のチュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)します。  
   
 > [!NOTE]  
 >  モデルの結果は異なる場合があります。次の例の結果は、結果の形式を説明することのみを目的としています。  
   
-### <a name="example-1-predicting-a-number-of-time-slices"></a>例 1: 特定の数のタイム スライスを予測する  
+### <a name="example-1-predicting-a-number-of-time-slices"></a>例 1 : タイム スライスの数を予測します。  
  次の例では、 **PredictTimeSeries**を次の予測を返す関数を 3 つの時間は、次の手順、および、ヨーロッパ地域および太平洋地域の M200 系列に結果を制限します。 この特定のモデル、予測可能な属性が Quantity で使用する必要がありますので`[Quantity]`PredictTimeSeries 関数の最初の引数として。  
   
 ```  
@@ -116,7 +116,7 @@ OR [Model Region] = 'M200 Pacific'
   
  この例では、結果を読みやすくするために FLATTENED キーワードが使用されています。  FLATTENED キーワードを使用せずに、階層的な行セットを返す場合、このクエリでは 2 つの列が返されます。 1 つ目の列には [ModelRegion] の値、2 つ目の列には入れ子になったテーブルが含まれます。入れ子になったテーブルには、予測されているタイム スライスを示す $TIME と予測された値を含む Quantity という 2 つの列が含まれています。  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>例 2: 新しいデータを追加して REPLACE_MODEL_CASES を使用する  
+### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>例 2:新しいデータを追加して REPLACE_MODEL_CASES を使用して  
  特定の地域のデータが正しくないことが判明したので、モデル内のパターンを使用しながら新しいデータに合わせて予測を調整するとします。 または、別の地域の傾向の方が信頼性が高いことが判明したので、最も信頼性が高いモデルを異なる地域のデータに適用するとします。  
   
  このようなシナリオでは、REPLACE_MODEL_CASES パラメーターを使用して、履歴データとして使用する新しいデータセットを指定できます。 これにより、予測は指定したモデル内のパターンに基づくが、新しいデータ ポイントの末尾からスムーズに継続するようになります。 このシナリオの完全なチュートリアルについてを参照してください。[高度な時系列予測&#40;中級者向けデータ マイニング チュートリアル&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)します。  
@@ -162,7 +162,7 @@ ON
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  
 |M200 Pacific|9/25/2008 12:00:00 AM|84|  
   
-### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>例 3: 新しいデータを追加して EXTEND_MODEL_CASES を使用する  
+### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>例 3: 新しいデータを追加して、EXTEND_MODEL_CASES を使用します。  
  例 3 の使用を示しています、 *EXTEND_MODEL_CASES*既存のデータ系列の末尾に追加される新しいデータを提供するオプション。 既存のデータ ポイントを置き換えるのではなく、新しいデータをモデルに追加します。  
   
  次の例では、NATURAL PREDICTION JOIN の後の SELECT ステートメントで新しいデータを指定します。 この構文では複数行の新しい入力を指定できますが、それぞれの新しい入力行のタイムスタンプが一意である必要があります。  
@@ -194,11 +194,11 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   新しく拡張されたモデルに基づく残りの 3 つのタイム スライスの新しい予測を返します。  
   
- 次の表は、例 2 のクエリの結果を示しています。 最初に返された M200 Europe の 2 つの値は、指定した新しい値とまったく同じです。 この動作は仕様であり、新しいデータの末尾から予測を開始するには、開始時刻と終了時刻のステップを指定する必要があります。 これを行う方法の例は、[レッスン 5: 時系列モデルを拡張する](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)を参照してください。  
+ 次の表は、例 2 のクエリの結果を示しています。 最初に返された M200 Europe の 2 つの値は、指定した新しい値とまったく同じです。 この動作は仕様であり、新しいデータの末尾から予測を開始するには、開始時刻と終了時刻のステップを指定する必要があります。 これを行う方法の例は、次を参照してください。[レッスン 5。タイム シリーズの拡張モデル](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)します。  
   
  また、太平洋地域については、新しいデータを指定していません。 したがって、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は、5 つすべてのタイム スライスの新しい予測を返します。  
   
- 数量: M200 Europe します。 EXTEND_MODEL_CASES:  
+ 数量。M200 Europe します。 EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -208,7 +208,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- 数量: M200 Pacific です。 EXTEND_MODEL_CASES:  
+ 数量。M200 Pacific です。 EXTEND_MODEL_CASES:  
   
 |$TIME|Quantity|  
 |-----------|--------------|  
@@ -218,7 +218,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|42|  
 |11/25/2008 0:00|38|  
   
-## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>例 4: 時系列予測の統計を返す  
+## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>例 4:時系列予測の統計を返す  
  **PredictTimeSeries**関数がサポートされていません*INCLUDE_STATISTICS*をパラメーターとして。 ただし、次のクエリを使用して、時系列のクエリに対する予測の統計を返すことができます。 この方法は、テーブル列を入れ子にしているモデルにも使用できます。  
   
  この特定のモデル、予測可能な属性が Quantity で使用する必要がありますので`[Quantity]`PredictTimeSeries 関数の最初の引数として。 モデルで別の予測可能な属性を使用する場合は、別の列名に置き換えることができます。  

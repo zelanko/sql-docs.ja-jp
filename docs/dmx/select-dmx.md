@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658759"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ WHERE < condition expression >
 SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>  
 ```  
   
- 予測クエリの作成の詳細については、[構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)を参照してください。  
+ 予測クエリの作成の詳細については、次を参照してください。[構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)します。  
   
 ## <a name="clause-syntax"></a>句の構文  
  使用した参照の複雑なのため、**選択**ステートメント、詳細な構文要素と引数は、句で示されます。 それぞれの句の詳細については、次のリストのトピックをクリックしてください。  

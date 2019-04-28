@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 870acddcd825c9c112274d294fa4c97848a85236
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669657"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB ヘッダーとバージョン情報
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "52507778"
 ## <a name="localdb-versioning"></a>LocalDB のバージョン管理  
  LocalDB インストールでは、主要な SQL Server バージョンごとの単一のバイナリ セットを使用します。 これらの LocalDB バージョンは維持され、個別にパッチが適用されます。 つまり、ユーザーはどの LocalDB ベースライン リリース (主要な SQL Server バージョン) を使用するのかを指定する必要があるということです。 バージョンは、.NET Framework で定義されている標準的なバージョンの形式で指定される**System.Version**クラス。  
   
- *major.minor[.build[.revision]*  
+ *major.minor[.build[.revision]]*  
   
- バージョン文字列の最初の 2 つの番号 (*メジャー*と*マイナー*) は必須です。 バージョン文字列の最後の 2 つの番号 (*ビルド*と*リビジョン*) オプションで、既定で 0 に、ユーザーがいる場合。つまり、ユーザーが LocalDB バージョン番号として "12.2" だけを指定した場合、"12.2.0.0" と指定したように扱われます。  
+ バージョン文字列の最初の 2 つの番号 (*メジャー*と*マイナー*) は必須です。 バージョン文字列の最後の 2 つの番号 (*ビルド*と*リビジョン*) オプションで、既定で 0 に、ユーザーがいる場合。つまり、ある場合は、ユーザーは、LocalDB バージョン番号として「12.2」だけを指定します、処理されます、ユーザーが"12.2.0.0 と"指定した場合。  
   
  LocalDB インストールのバージョンは、SQL Server インスタンス レジストリ キーの下の MSSQLServer\CurrentVersion レジストリ キーに定義されます。次に例を示します。  
   

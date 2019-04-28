@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a9febce34248bdab86fc2c7f8ae43f3cd41e2d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659545"
 ---
 # <a name="members-example-vbscript"></a>Members の例 (VBScript)
 このサンプルでは、MDX クエリ文字列を使用して OLAP データを取得し、結果のセル セットを複数の次元のセル セットの列にまたがる機能を使用して、HTML テーブル構造に書き込みます。  
@@ -293,7 +293,7 @@ For h=0 to intDC0
                   Marker = Marker + 1  
                Else  
                   If aryRows(Marker) = aryRows(Marker - intDC1) then  
-                     Response.Write "<TD> </TD>"  
+                     Response.Write "<TD> </TD>"  
                      Marker = Marker + 1  
                   Else  
                      Response.Write "<TD><B>"  

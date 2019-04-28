@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b06c909f8661bf1bec2d715a449e565295eb179b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664258"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>ビジネス インテリジェンス ウィザードの F1 ヘルプ
   ビジネス インテリジェンス ウィザードを使用すると、ビジネス インテリジェンス機能を定義し、キューブとディメンションの詳細なオプションを設定できます。 このウィザードでは、既存のオブジェクトのプロパティの設定、新しいオブジェクトの作成、さらにディメンション インテリジェンスや通貨換算などの機能を実現する多次元式 (MDX) スクリプトの生成を行えます。  

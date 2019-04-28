@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663174"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink イベント クラス
   **Data File Auto Shrink** イベント クラスは、データ ファイルが自動的に圧縮されたことを示します。 このイベントは、ALTER DATABASE ステートメントを明示的に使用してデータ ファイルを圧縮した場合には発生しません。 データ ファイルのサイズ変更を監視するトレースに、 **Data File Auto Shrink** イベント クラスを含めます。  

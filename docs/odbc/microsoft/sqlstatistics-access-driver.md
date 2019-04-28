@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc5a354aeaf186b4baeabd96e7424939fe463bfb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62687131"
 ---
 # <a name="sqlstatistics-access-driver"></a>SQLStatistics (Access ドライバー)
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "47777420"
 |SEQ_IN_INDEX|インデックスに依存します。|  
 |COLUMN_NAME|インデックスに依存します。|  
 |COLLATION|インデックスに依存します。|  
-|CARDINALITY|Microsoft access のみ返されます。|  
+|カーディナリティ|Microsoft access のみ返されます。|  
 |PAGES|NULL は常に返されます。|  
   
  一意性に基づくフィルター処理は、(、 *fUnique*引数)。 *FAccuracy*パラメーターは無視されます。

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648319"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)
   横棒グラフでは、カテゴリ データが水平方向に表示されます。 これは、次のようなことに役立ちます。  
@@ -349,7 +349,7 @@ ms.locfileid: "59938158"
 ## <a name="next-steps"></a>次の手順  
  これで、「レポートへの横棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)   
  [SQL Server 2014 のレポート ビルダー](report-builder/report-builder-in-sql-server-2016.md)  
   

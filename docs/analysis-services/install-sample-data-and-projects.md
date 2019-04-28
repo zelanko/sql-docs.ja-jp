@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659241"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>サンプル データおよび多次元プロジェクトをインストールします。 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
@@ -111,7 +111,7 @@ Analysis Services 多次元モデルでは、リレーショナル データベ�
 ## <a name="next-step"></a>次の手順  
 以上の操作で、チュートリアルを使用する準備が整いました。 開始方法の詳細については、「[多次元モデリング (Adventure Works チュートリアル)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663680"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill イベント クラス
   **Exchange Spill** イベント クラスは、並列クエリ プランの通信バッファーが一時的に **tempdb** データベースに書き込まれたことを示します。 これは、クエリ プランに複数の範囲スキャンがある場合に限り、まれに発生します。  

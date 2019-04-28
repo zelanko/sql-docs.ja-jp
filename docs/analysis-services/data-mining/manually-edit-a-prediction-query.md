@@ -1,5 +1,5 @@
 ---
-title: 予測クエリを手動で編集 |Microsoft ドキュメント
+title: 予測クエリを手動で編集 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aba181ab73ab730869eaa7930591cf21a947d20c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679418"
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動での予測クエリの編集
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34014839"
   
 ## <a name="see-also"></a>参照  
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
- [予測クエリ ビルダー (&) #40";"データ マイニング"&"#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
- [レッスン 6: の作成と操作の予測と #40 です。基本的なデータ マイニング チュートリアル & #41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
+ [予測クエリ ビルダー &#40;データ マイニング&#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
+ [レッスン 6:予測の作成と操作&#40;基本的なデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   

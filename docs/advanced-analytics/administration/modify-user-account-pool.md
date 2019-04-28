@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659513"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での外部スクリプトの同時実行のスケール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "53596813"
 
 Python または R スクリプトで使用できるリソースは、SQL Server によって管理されます。 SQL Server の DMV を使用してリソースの使用状況を監視するか、または関連する Windows ジョブ オブジェクトのパフォーマンス カウンターを見て、サーバー メモリの使用量を必要に応じて調整することをお勧めします。 SQL Server Enterprise Edition がある場合は、構成することで、外部スクリプトを実行するために使用されるリソースを割り当てることができます、[外部リソース プール](how-to-create-a-resource-pool.md)します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 容量を構成する方法の詳細については、次の記事を参照してください。
 

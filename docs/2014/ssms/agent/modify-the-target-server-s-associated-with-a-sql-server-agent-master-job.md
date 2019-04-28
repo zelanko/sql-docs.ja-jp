@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654063"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更する方法について説明します。  
@@ -56,7 +56,7 @@ ms.locfileid: "54129062"
   
 4.  ターゲット サーバーを変更するジョブを右クリックし、**[プロパティ]** を選択します。  
   
-5.  **ジョブのプロパティ -**_job_name_ダイアログ ボックスで、**ページの選択**、**ターゲット**。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;ページを対象と&#41;](job-properties-new-job-targets-page.md)します。  
+5.  **[ジョブのプロパティ - <_ジョブ名_>]** ダイアログ ボックスで、**[ページの選択]** の **[対象サーバー]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;ページを対象と&#41;](job-properties-new-job-targets-page.md)します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54129062"
     GO  
     ```  
   
- 詳細については、[sp_delete_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql)します。  
   
 #### <a name="to-associate-a-target-server-with-the-current-sql-server-agent-master-job"></a>現在の SQL Server エージェントのマスター ジョブにターゲット サーバーを関連付けるには  
   
@@ -105,6 +105,6 @@ ms.locfileid: "54129062"
     GO  
     ```  
   
- 詳細については、[sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)します。  
   
   

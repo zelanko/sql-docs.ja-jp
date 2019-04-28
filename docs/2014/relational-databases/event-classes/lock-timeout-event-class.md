@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67f9d89897ef36d297dbeabfffcc02906677cb29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663957"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout イベント クラス
   Lock:Timeout イベント クラスは、要求したリソースで別のトランザクションがブロッキング ロックを保持しているために、ページなどのリソースのロック要求がタイムアウトしたことを示します。 タイムアウトは @@LOCK_TIMEOUT システム関数で判定され、SET LOCK_TIMEOUT ステートメントで設定できます。  

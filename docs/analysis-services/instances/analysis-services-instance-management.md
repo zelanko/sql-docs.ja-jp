@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a93a7ddb0af87ae15f8d793f21a008d9a4bc25c
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659503"
 ---
 # <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services サーバーの管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
-Azure Analysis Services では、[Azure Analysis Services の管理](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage)を参照してください。
+Azure Analysis Services では、次を参照してください。 [Azure Analysis Services の管理](https://docs.microsoft.com/azure/analysis-services/analysis-services-manage)します。
 
 ## <a name="instances"></a>インスタンス
 

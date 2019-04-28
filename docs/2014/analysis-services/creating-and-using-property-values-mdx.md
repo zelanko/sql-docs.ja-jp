@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679740"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>プロパティ値の作成および使用 (MDX)
   多次元式 (MDX) では、ディメンション、レベル、メンバー、およびセルの固有プロパティとユーザー定義プロパティがサポートされています。 固有プロパティでは、一意な名前、キャプション、および書式やフォント サイズを、個別のセルに対して設定できます。 一方、ユーザー定義プロパティを使用すると、ほぼどんな属性でもメンバーに追加指定できます。  
@@ -39,6 +39,6 @@ ms.locfileid: "48196002"
  メンバー プロパティとその使用方法については、「[セル プロパティの使用 (MDX)](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [MDX クエリの基礎&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

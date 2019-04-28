@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab19949b3a05040285a11b6988614d34bf5f5ccf
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699168"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>多次元モデルのソリューションの配置
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの開発を完了したら、Analysis Services サーバーにデータベースを配置できます。 Analysis Services には、テスト サーバーまたは実稼働サーバーにデータベースを移動するために使用できる 6 つの配置方法が用意されています。 ここでは、それらの方法を効果の大きいものから、AMO オートメーション、XMLA、配置ウィザード、配置ユーティリティ、同期ウィザード、バックアップおよび復元の順に説明します。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの開発を完了したら、Analysis Services サーバーにデータベースを配置できます。 Analysis Services には、テスト サーバーまたは実稼働サーバーにデータベースを移動するために使用できる 6 つの配置方法が用意されています。 利点の順序にここで、メソッドの一覧します。AMO オートメーション、XMLA、配置ウィザード、配置ユーティリティは、ウィザード、バックアップと復元を同期します。  
   
  このトピックのセクションは次のとおりです。  
   
