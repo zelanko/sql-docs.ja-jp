@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732188"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Analysis Services OLE DB Provider (Analysis Services - 多次元データ)
   Analysis Services OLE DB プロバイダーはインターフェイスと対話するアプリケーションを[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 これを使用して、多次元データを扱うクライアント アプリケーションを構築します。 このプロバイダーは、多次元データとリレーショナル データのオンラインやオフラインでのデータ マイニング分析用のメソッドを提供しており、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に含まれています。 サードパーティのクライアント アプリケーションにより、再配布できます。  

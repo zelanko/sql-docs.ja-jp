@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732436"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>デシジョン ツリー ダイアグラムのチュートリアル (データ マイニング アドイン)
   デシジョン ツリー モデルを作成した場合、デシジョン ツリー図形または依存関係ネットワーク図形を使用して、カスタマイズしたダイアグラムを Visio で作成できます。 このトピックで説明を使用して実行できるカスタマイズ、**デシジョン ツリー**図形とこれらのコントロール。  

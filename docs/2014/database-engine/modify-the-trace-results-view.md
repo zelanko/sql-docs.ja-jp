@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845957"
 ---
 # <a name="modify-the-trace-results-view"></a>トレース結果の表示の変更
   このトピックでは、次のタスクを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の拡張イベント セッションのトレース結果ビューを変更する方法について説明します。  
@@ -149,7 +149,7 @@ ms.locfileid: "49120385"
 ##  <a name="AggregateResults"></a> 集計結果  
  拡張イベントは次の 5 つの集計関数をサポートします。  
   
--   SUM  
+-   Sum  
   
 -   Min  
   
