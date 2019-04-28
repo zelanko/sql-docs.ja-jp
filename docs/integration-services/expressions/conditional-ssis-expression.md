@@ -1,5 +1,5 @@
 ---
-title: '? : (条件) (SSIS 式) | Microsoft Docs'
+title: '? :(条件) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/20/2019
 ms.locfileid: "58272096"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (条件) (SSIS 式)
+# <a name="--conditional-ssis-expression"></a>? :(条件) (SSIS 式)
   ブール式の評価に基づいて 2 つの式のうちのいずれかの式を返します。 ブール式が TRUE に評価された場合、最初の式が評価対象となり、その結果が式の結果になります。 ブール式が FALSE に評価された場合、2 番目の式が評価対象となり、その結果が式の結果になります。  
   
 ## <a name="syntax"></a>構文  
