@@ -17,21 +17,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788325"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 (SQL Server Management Studio)
   このトピックでは、 **の** [オブジェクト エクスプローラーの詳細] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ペインを使用して、既存の AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視および管理する方法について説明します。  
   
 > [!NOTE]  
->  [オブジェクト エクスプローラーの詳細] ペインの使用方法の詳細については、「[[オブジェクト エクスプローラーの詳細] ペイン](../../../ssms/object/object-explorer-details-pane.md)」を参照してください。  
+>  [オブジェクト エクスプローラーの詳細] ペインの使用方法の詳細については、「 [[オブジェクト エクスプローラーの詳細] ペイン](../../../ssms/object/object-explorer-details-pane.md)」を参照してください。  
   
--   **作業を開始する準備:**  [前提条件](#Prerequisites)  
+-   **作業を開始する準備:**[前提条件](#Prerequisites)  
   
--   **可用性グループを監視するために使用するもの:**  [SQL Server Management Studio](#SSMSProcedure)  
+-   **可用性グループを監視するを使用します。**[SQL Server Management Studio](#SSMSProcedure)  
   
 -   **オブジェクト エクスプローラーの詳細:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48075132"
   
      [可用性データベースの詳細](#AvDbDetails)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
  プライマリ レプリカまたはセカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス (サーバー インスタンス) に接続されている必要があります。  
@@ -108,7 +108,7 @@ ms.locfileid: "48075132"
 |値|説明|  
 |-----------|-----------------|  
 |**[同期未実行]**|データベースが同期されていないか、可用性グループにまだ参加していません。|  
-|**同期済み**|データベースは、現在のプライマリ レプリカ上、または最後のプライマリ レプリカ上のプライマリ データベースと同期されています。<br /><br /> 注: パフォーマンス モードでは、データベースは同期済みの状態にはなりません。|  
+|**同期済み**|データベースは、現在のプライマリ レプリカ上、または最後のプライマリ レプリカ上のプライマリ データベースと同期されています。<br /><br /> 注:パフォーマンス モードでは、データベースは Synchronized 状態ではなくは。|  
 |**NULL**|不明な状態です。 この値は、ローカル サーバー インスタンスが WSFC フェールオーバー クラスターと通信できない (ローカル ノードが WSFC クォーラムの一部ではない) 場合に生じます。|  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "48075132"
   
 |値|説明|  
 |-----------|-----------------|  
-|[同期中]|セカンダリ データベースが、ディスクに書き込まれていないプライマリ データベースのトランザクション ログ レコードを受け取りました。<br /><br /> 注: 非同期コミット モードでは、同期の状態は常に **[同期中]** です。|  
+|[同期中]|セカンダリ データベースが、ディスクに書き込まれていないプライマリ データベースのトランザクション ログ レコードを受け取りました。<br /><br /> 注:非同期コミット モードでは、同期状態は常に**Synchronizing**します。|  
   
  **中断**  
  可用性データベースが現在オンラインであるかどうかを示します。 次のような値が考えられます。  

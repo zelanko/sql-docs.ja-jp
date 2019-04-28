@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f070b1494cb54d026d65f5a432c5faf834c38aa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719713"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 関数
 **準拠**  
@@ -46,7 +46,7 @@ BOOL SQLWritePrivateProfileString(
 ```  
   
 ## <a name="arguments"></a>引数  
- *大文字、小文字*  
+ *lpszSection*  
  [入力]文字列のコピー先となるセクションの名前を含む null で終わる文字列へのポインター。 セクションが存在しない場合は作成されます。 セクションの名前がケースに依存しません。文字列は、任意の大文字と小文字を使用できます。  
   
  *lpszEntry*  
@@ -55,7 +55,7 @@ BOOL SQLWritePrivateProfileString(
  *lpszString*  
  [入力]ファイルに書き込まれる null で終わる文字列へのポインター。 この引数が NULL の場合、キーが指す、 *lpszEntry*引数を削除します。  
   
- *場合*  
+ *lpszFilename*  
  [出力]初期化ファイルの名前を示す null で終わる文字列へのポインター。  
   
 ## <a name="returns"></a>戻り値  

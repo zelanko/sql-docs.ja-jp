@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788130"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure のレプリカ追加ウィザードの使用 (SQL Server)
   Azure のレプリカ追加ウィザードは、ハイブリッド IT 環境で新しい Windows Azure VM を作成し、新規または既存の AlwaysOn 可用性グループのセカンダリ レプリカとして構成する場合に使用します。  
@@ -28,9 +28,9 @@ ms.locfileid: "48095642"
   
      [Security](#Security)  
   
--   **レプリカを追加する方法:**  [Azure のレプリカ追加ウィザード (SQL Server Management Studio)](#SSMSProcedure)  
+-   **レプリカを追加するには (次を使用):**[Azure のレプリカ追加ウィザード (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  可用性グループにない可用性レプリカを追加した場合、「サーバー インスタンス」と「可用性グループとレプリカ」セクションを参照してください[前提条件、制限事項、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)します。  
   
 ###  <a name="Prerequisites"></a> 前提条件  

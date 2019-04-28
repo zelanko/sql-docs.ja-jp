@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794283"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>翻訳の詳細 (キューブ デザイナーの [翻訳] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[翻訳]** タブの **[翻訳の詳細]** ペインを使用すると、現在選択されているキューブを翻訳したり定義したりできます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48118752"
   
 -   [メジャー]  
   
-     `Caption` `DisplayFolder`プロパティ  
+     `Caption` プロパティと `DisplayFolder` プロパティ  
   
 -   [ディメンション]  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48118752"
   
 -   主要業績評価指標 (KPI)  
   
-     `Caption`、 `Description`、および`DisplayFolder`プロパティ  
+     `Caption`、`Description`、および `DisplayFolder` プロパティ  
   
 -   操作  
   

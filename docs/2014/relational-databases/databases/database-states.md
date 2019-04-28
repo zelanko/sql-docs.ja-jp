@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871698"
 ---
 # <a name="database-states"></a>データベースの状態
   データベースは、常に、ある特定の状態にあります。 たとえば、ONLINE、OFFLINE、SUSPECT などです。 データベースの現在の状態を確認するには、 **sys.databases** カタログ ビューで [state_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列を選択するか、 **DATABASEPROPERTYEX** 関数で [Status](/sql/t-sql/functions/databasepropertyex-transact-sql) プロパティを選択します。  

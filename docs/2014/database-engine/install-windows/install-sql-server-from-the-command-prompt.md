@@ -85,11 +85,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13f6cb50604047e7c5f2aaaa60c3e3b77cae5913
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781005"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server 2014 のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップを実行する前に、「[SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)」をご覧ください。  
@@ -462,7 +462,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 #### <a name="integrated-install-failover-cluster-parameters"></a>フェールオーバー クラスターの統合インストール パラメーター  
  次の表に示すパラメーターは、フェールオーバー クラスターのインストール用コマンド ライン スクリプトを作成する場合に使用します。  
   
- 統合インストールの詳細については、[AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)を参照してください。  
+ 統合インストールの詳細については、次を参照してください。 [AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)します。  
   
 > [!NOTE]  
 >  インストール後にノードを追加するには、[ノードの追加](#AddNode)操作を使用します。  
@@ -659,7 +659,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ```  
   
 #### <a name="upgrade-failover-cluster-parameters"></a>フェールオーバー クラスターのアップグレード パラメーター  
- 次の表に示すパラメーターは、フェールオーバー クラスターのアップグレード用コマンド ライン スクリプトを作成する場合に使用します。 詳細については、[SQL Server フェールオーバー クラスター インスタンスのアップグレード&#40;セットアップ&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)と[AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)を参照してください。  
+ 次の表に示すパラメーターは、フェールオーバー クラスターのアップグレード用コマンド ライン スクリプトを作成する場合に使用します。 詳細については、次を参照してください。 [SQL Server フェールオーバー クラスター インスタンスのアップグレード&#40;セットアップ&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)と[AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)します。  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
@@ -794,7 +794,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ||SDK|ソフトウェア開発キットをインストールします。|  
 ||LocalDB<sup>1</sup>|LocalDB (プログラムの開発者を対象とした [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] の実行モード) をインストールします。|  
   
- <sup>1</sup>の SKU をインストールするときに、LocalDB は、オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Express。 詳細については、[SQL Server 2014 Express LocalDB](../configure-windows/sql-server-2016-express-localdb.md)を参照してください。  
+ <sup>1</sup>の SKU をインストールするときに、LocalDB は、オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Express。 詳細については、次を参照してください。 [SQL Server 2014 Express LocalDB](../configure-windows/sql-server-2016-express-localdb.md)します。  
   
 ### <a name="feature-parameter-examples"></a>機能パラメーターの例:  
   
@@ -806,7 +806,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=BOL|ヘルプ コンテンツを表示および管理するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック コンポーネントをインストールします。|  
   
 ##  <a name="Role"></a> ロール パラメーター  
- セットアップ ロール パラメーター (/Role パラメーター) は、あらかじめ構成された機能の選択内容をインストールするために使用されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロールでは、既存の SharePoint ファームまたは新規の未構成ファームのどちらかに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスがインストールされます。 これらのシナリオをサポートするために、2 つのセットアップ ロールが用意されています。 インストールするために選択できるセットアップ ロールは一度に 1 つだけです。 セットアップ ロールを選択すると、そのロールに所属する機能とコンポーネントがセットアップによってインストールされます。 ロールに指定されている機能とコンポーネントは変更できません。 機能ロール パラメーターを使用する方法の詳細については、[コマンド プロンプトから PowerPivot をインストール](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)を参照してください。  
+ セットアップ ロール パラメーター (/Role パラメーター) は、あらかじめ構成された機能の選択内容をインストールするために使用されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のロールでは、既存の SharePoint ファームまたは新規の未構成ファームのどちらかに [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスがインストールされます。 これらのシナリオをサポートするために、2 つのセットアップ ロールが用意されています。 インストールするために選択できるセットアップ ロールは一度に 1 つだけです。 セットアップ ロールを選択すると、そのロールに所属する機能とコンポーネントがセットアップによってインストールされます。 ロールに指定されている機能とコンポーネントは変更できません。 機能ロール パラメーターを使用する方法の詳細については、次を参照してください。[コマンド プロンプトから PowerPivot をインストール](../../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md)します。  
   
  AllFeatures_WithDefaults ロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの既定の動作であり、このロールを指定した場合は、ユーザーに対して表示されるダイアログ ボックスの数が減少します。 このロールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] エディションをインストールするときに、コマンド ラインから指定できます。  
   

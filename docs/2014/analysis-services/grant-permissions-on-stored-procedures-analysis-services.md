@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730782"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>ストアド プロシージャに対する権限の付与 (Analysis Services)
   ストアド プロシージャ、またはアセンブリ、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で記述された、外部ルーチンは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET プログラミング言語の機能を拡張する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 アセンブリには、言語間の統合、例外処理、バージョン管理のサポート、展開のサポート、およびデバッグのサポートを利用する開発者が使用できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "48148552"
   
 -   **Unrestricted**無制限のアクセス許可セットでは、ストアド プロシージャは外部リソースにアクセス任意のコードを使用しています。 この権限セットが指定されている場合、ストアド プロシージャに対してセキュリティも信頼性も保証されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多次元モデルのアセンブリの管理](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

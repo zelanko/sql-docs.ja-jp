@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731320"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>[フィルター] ダイアログ ボックス (マイニング精度チャート)
   **[フィルター]** ダイアログ ボックスを使用すると、データセットに適用できる条件を作成できます。 データセットとして、テスト用の外部データセット、またはマイニング モデルのトレーニング用のケース データを使用できます。 このダイアログ ボックスで作成する条件は、 **[データセット フィルター]** ダイアログ ボックスまたは **[モデル フィルター]** ダイアログ ボックスで複雑なフィルター条件の一部として保存できます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48060178"
   
  フィルターを新しいデータセットに適用した場合、データセット内で条件を満たすケースのみを評価するために、既存のデータ マイニング モデルが使用されます。 ただし、フィルターをマイニング モデル自体に適用した場合、モデルの精度はマイニング モデル内で条件を満たすケースについてのみ評価されます。  
   
- **詳細情報:** [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
+ **詳細:**[テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>および  
  **条件**  

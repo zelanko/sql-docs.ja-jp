@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62796185"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|命令対象のオブジェクト。|  
 |**object_id**|**uniqueidentifier**|命令によって影響を受けるオブジェクトの識別番号 (**job_id**ジョブ オブジェクト、またはサーバー オブジェクトの場合は 0x00) に固有のデータ値、または、 **operation_code**します。|  
 |**target_server**|**nvarchar(30)**|命令をダウンロードするターゲット サーバー。|  
-|**error_message**|**nvarchar(1024)**|この命令の処理中に問題が発生した場合の、ターゲット サーバーからのエラー メッセージ (存在する場合)。<br /><br /> 注:エラー メッセージが送信されると、ターゲット サーバーではそれ以上ダウンロードが行われません。|  
+|**error_message**|**nvarchar(1024)**|この命令の処理中に問題が発生した場合の、ターゲット サーバーからのエラー メッセージ (存在する場合)。<br /><br /> 注:すべてのエラー メッセージ ブロックは、ターゲット サーバーによってさらにダウンロードします。|  
 |**date_posted**|**datetime**|命令をテーブルに記録した日付。|  
 |**date_downloaded**|**datetime**|ターゲット サーバーが命令をダウンロードした日付。|  
 |**status**|**tinyint**|ジョブのステータス。<br /><br /> **0** = 未ダウンロード<br /><br /> **1** = 正常にダウンロードします。|  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80f8108b894c2a20ef0f0ea7d8ffb1be22bacc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793691"
 ---
 # <a name="user-interface-reference-analysis-services"></a>ユーザー インターフェイス リファレンス (Analysis Services)
   ここでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のヘルプ トピックについて紹介します。 これらのトピックは、ウィザードのページ、デザイナー、およびダイアログ ボックスで、F1 キーを押すか、 **[ヘルプ]** をクリックすることにより、ユーザー インターフェイスから表示することもできます。  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731588"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>自動推論 (Excel 用のテーブル分析ツール)
   ![テーブル分析ツールで推論ボタン](media/tat-fillex.gif "テーブル分析ツールの例の全体適用ボタン")  
@@ -76,7 +76,7 @@ ms.locfileid: "48160904"
  元のデータ列に値が存在した場合、その値が、この新しい列にコピーされます。 ただし、元の列が空白セルであった場合、新しい列には、ウィザードによって予測された値が格納されます。  
   
 ## <a name="related-tools-and-information"></a>関連ツールと情報  
- 使用することも、[データの探索](explore-data-sql-server-data-mining-add-ins.md)ウィザード、Excel の列の値の分布を調べるの Excel 用データ マイニング クライアントで使用できます。 詳細については、[調査とデータのクリーニング](exploring-and-cleaning-data.md)を参照してください。  
+ 使用することも、[データの探索](explore-data-sql-server-data-mining-add-ins.md)ウィザード、Excel の列の値の分布を調べるの Excel 用データ マイニング クライアントで使用できます。 詳細については、次を参照してください。[調査とデータのクリーニング](exploring-and-cleaning-data.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

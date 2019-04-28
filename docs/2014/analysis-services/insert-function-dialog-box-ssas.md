@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729900"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>[関数の挿入] ダイアログ ボックス (SSAS)
   **[関数の挿入]** ダイアログ ボックスを使用すると、数式の作成時に使用できる関数の一覧から関数を選択できます。 モデル デザイナーからこのダイアログ ボックスにアクセスするには、各テーブルの上にある数式バーで、関数 (**[fx]**) ボタンをクリックします。 数式で使用する関数の選択の詳細については、「DAX の概要」と「数式の作成」を参照してください。  
@@ -51,6 +51,6 @@ ms.locfileid: "48125948"
  **[関数の挿入]** ダイアログ ボックスを使用できるのは、数式を作成するときだけです。 計算は、計算列、ピボットテーブル、またはピボットグラフで作成することができます。 ピボットテーブルで明示的に使用する数式は、 *メジャー*とも呼ばれます。 詳細については、「[ &#40;SSAS テーブル&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md)」と「[メジャーを作成および管理する &#40;SSAS テーブル&#41;](tabular-models/measures-ssas-tabular.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [計算&#40;SSAS 表形式&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [計算 &#40;SSAS テーブル&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

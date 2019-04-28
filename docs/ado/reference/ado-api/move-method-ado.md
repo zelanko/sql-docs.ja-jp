@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8306a7d8e3247e77579d0bebc9147c3f9a1cc56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863489"
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
 現在のレコードの位置を移動、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -38,7 +38,7 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  符号付き**長い**レコードの現在の位置を移動するレコードの数を指定する式。  
   
- *開始*  
+ *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
  任意。 A**文字列**値または**バリアント**ブックマークに評価されます。 使用することも、 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値。  
   
 ## <a name="remarks"></a>コメント  

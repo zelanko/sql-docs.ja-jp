@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727978"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[メジャー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   **[メジャー]** ペインを使用すると、キューブ デザイナーの **[キューブ構造]** タブでメジャー グループとメンバーを操作できます。  

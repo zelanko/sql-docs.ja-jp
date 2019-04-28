@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729026"
 ---
 # <a name="defining-named-sets"></a>名前付きセットの定義
   名前付きセットとは、ディメンション メンバーのセットを返す多次元式 (MDX) です。 名前付きセットを定義し、キューブ定義の一部として保存できます。さらに、名前付きセットをクライアント アプリケーションで作成することもできます。 名前付きセットは、キューブ データ、算術演算子、数値、関数を組み合わせることによって作成します。 名前付きセットは、クライアント アプリケーションの MDX クエリの中で使用できます。また、サブキューブのセットを定義するときも使用できます。 サブキューブは、クロス結合によるセットのコレクションであり、後続のステートメントに対して、キューブ空間を定義されたサブスペースに制限します。 制限されたキューブ領域の定義は MDX スクリプティングの基本概念です。  
@@ -133,7 +133,7 @@ ms.locfileid: "52507865"
      ![フィルター ペインの 2 つの名前を格納している設定](../../2014/tutorials/media/l6-named-set-05.gif "という名前の 2 つを含むフィルター ウィンドウの設定")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [レッスン 7:主要業績評価指標を定義する&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [レッスン 7: 主要業績評価指標を定義する&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>参照  
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0987dc64ae4e2fe750073c67cb38b73924708643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731374"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>データのフィルター処理と並べ替え (SSAS テーブル)
   テーブル モデルのテーブルで作業する場合は、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを行うことができます。 計算内にフィルターを作成して、データの列またはテーブルから使用されるデータを制御することもできます。 各種のフィルターは、対応するウィンドウ内でのみ機能します。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719754"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft のデータ シェイプの Service for OLE DB の概要
 > [!IMPORTANT]
@@ -59,7 +59,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  動的なプロパティ、**データ プロバイダー**、開かれていないでのみ設定できる**接続**オブジェクト。 接続が開いたら、**データ プロバイダー**プロパティは読み取り専用になります。
 
- データ シェイプの詳細については、[データ シェイプ](../../../ado/guide/data/data-shaping-overview.md)を参照してください。
+ データ シェイプの詳細については、次を参照してください。[データ シェイプ](../../../ado/guide/data/data-shaping-overview.md)します。
 
 ## <a name="see-also"></a>参照
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

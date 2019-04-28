@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702421"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>ディメンション (Analysis Services - 多次元データ)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションはキューブの基本的なコンポーネントです。 ディメンションは、顧客、店舗、従業員など、ユーザーが関心のある分野に関するデータを編成します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションには、ディメンション テーブルの列に対応する属性が含まれています。 これらの属性は属性階層として表現されます。またこれらの属性は、ユーザー定義階層に編成したり、基になるディメンション テーブルの列に基づいた親子階層として定義できます。 階層は、キューブに含まれるメジャーを編成するために使用されます。 次のトピックでは、ディメンション、属性、および階層の概要について説明します。  

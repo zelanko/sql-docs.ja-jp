@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731494"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)
   **[テーブルのプロパティの編集]** ダイアログ ボックスを使用すると、テーブルのインポート ウィザードを使用してモデル デザイナーにインポートされたテーブルのプロパティを表示して変更を加えることができます。 このダイアログ ボックスにアクセスするには、モデル デザイナーでテーブルを選択し、 **[テーブル]** メニュー、 **[テーブルのプロパティ]** の順にクリックします。  
@@ -100,6 +100,6 @@ ms.locfileid: "48229282"
  クリックすると、列の置換も含めて、加えたすべての変更が適用されます。  
   
 ## <a name="see-also"></a>参照  
- [テーブルと列&#40;SSAS 表形式&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [テーブルと列 &#40;SSAS テーブル&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

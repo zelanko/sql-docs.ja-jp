@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827149"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
   データ フロー コンポーネントが変換を列データに適用したり、変換元のデータを抽出したり、変換先にデータを読み込んだりするときに、エラーが発生する場合があります。 エラーが発生する原因の主なものは、予期しないデータ値です。 たとえば、数字ではなく文字列が列に含まれる場合、データ変換は失敗します。また、データは日付データであるが列のデータ型は数値の場合、データベース列への挿入は失敗します。あるいは、列の値が 0 の場合に数学的演算の結果が無効となり、それが原因で式の評価が失敗します。  
@@ -68,7 +68,7 @@ ms.locfileid: "58378569"
 ## <a name="adding-the-error-description"></a>エラーの説明の追加  
  既定では、エラー出力により数値エラー コードが提供され、通常、エラー出力にはエラーが発生した列の ID が含まれています。 スクリプト コンポーネントを使用して追加列にエラーの説明を含めることができます。この操作は、1 行のスクリプトを使用して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを呼び出して行います。  
   
- このスクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できますが、エラー行を出力先に書き込む直前の位置に配置するのが普通です。 これによりスクリプトは、書き込まれたエラー行についてのみ、説明を参照することができます。 たとえば、データ フロー内のエラー セグメントでエラーの一部が修正され、出力先にエラー行が書き込まれないこともあり得るからです。 詳細については、[スクリプト コンポーネントによるエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)を参照してください。  
+ このスクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できますが、エラー行を出力先に書き込む直前の位置に配置するのが普通です。 これによりスクリプトは、書き込まれたエラー行についてのみ、説明を参照することができます。 たとえば、データ フロー内のエラー セグメントでエラーの一部が修正され、出力先にエラー行が書き込まれないこともあり得るからです。 詳細については、次を参照してください。[スクリプト コンポーネントによるエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)します。  
   
 ### <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   

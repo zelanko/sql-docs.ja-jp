@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f66a0ce65a0d16099d7371c003a813b129b3859f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867876"
 ---
 # <a name="mssqlserver41396"></a>MSSQLSERVER_41396
     
@@ -40,7 +40,7 @@ ms.locfileid: "48055402"
 ## <a name="user-action"></a>ユーザーの操作  
  選択する行を減らすか、結合または集計関数を削除してクエリの複雑さを軽減してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

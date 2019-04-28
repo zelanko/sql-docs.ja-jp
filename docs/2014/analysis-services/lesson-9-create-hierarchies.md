@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 10: 階層の作成 |Microsoft Docs'
+title: 'レッスン 10: 階層を作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f8d7b6616f6f14621209561146916cb4b0acd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728118"
 ---
-# <a name="lesson-10-create-hierarchies"></a>レッスン 10: 階層の作成
+# <a name="lesson-10-create-hierarchies"></a>レッスン 10: 階層を作成する
   このレッスンでは、階層を作成します。 階層は、複数のレベルに分類された列のグループです。たとえば、Geography という階層に、Country、State、County、および City というサブレベルを含めることができます。 階層は、あるレポート クライアント アプリケーション フィールドの一覧の他の列とは分けて表示できるため、クライアントのユーザーは簡単に移動し、レポートに含めることができます。 詳細については、[「階層 (SSAS テーブル)」](tabular-models/hierarchies-ssas-tabular.md) を参照してください。  
   
  階層を作成するには、*ダイアグラム ビュー*のモデル デザイナーを使用します。 階層の作成と管理は、データ ビューのモデル デザイナーではサポートされていません。  
   
- このレッスンの推定所要時間: **20 分**  
+ このレッスンを完了するまでに時間を推定するには。**20 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン [「レッスン 9: パースペクティブの作成」](lesson-8-create-perspectives.md) を完了している必要があります。  
+ このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 9:パースペクティブを作成する](lesson-8-create-perspectives.md)します。  
   
 ## <a name="create-hierarchies"></a>階層を作成する  
   
@@ -89,6 +89,6 @@ ms.locfileid: "48187292"
     |Day Of Week|日|  
   
 ## <a name="next-steps"></a>次の手順  
- このチュートリアルを続行するには、次のレッスン [「レッスン 11: パーティションの作成」](lesson-10-create-partitions.md) に進んでください。  
+ このチュートリアルを続行するには、次のレッスンに移動します。[レッスン 11:パーティションの作成](lesson-10-create-partitions.md)です。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ドメイン管理:ドメイン リスト |Microsoft Docs
+title: ドメイン管理:ドメイン リスト | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a68300e15c1ae05bcd6ae83228565842a854234
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792749"
 ---
-# <a name="domain-management-domain-list"></a>ドメイン管理:ドメインの一覧
+# <a name="domain-management-domain-list"></a>ドメイン管理:ドメイン リスト
   このトピックでは、 **(DQS) の** [ドメイン管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ページの [ドメイン] リスト内のコントロールについて説明します。 このペインを使用して管理操作を実行するドメインを選択します。 これと同じペインが、 **[ドメイン管理]** ページのすべてのタブ ページで使用されています。  
   
 ## <a name="options"></a>および  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fb3dcd1729805c9458b7cc882e1d33f6be918e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730747"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>例外の強調表示 (Excel 用のテーブル分析ツール)
   ![リボンの [例外] ボタンを強調表示](media/tat-highlightex.gif "リボンの例外の強調表示 ボタン")  
@@ -75,7 +75,7 @@ ms.locfileid: "48149222"
  サマリー グラフには、例外のしきい値を超えたセルの数が列単位で表示されます。  
   
 ## <a name="related-tools"></a>関連ツール  
- データ マイニングに備えてデータを消去または確認する段階で、Excel 用のデータ マイニング クライアントのデータ探索機能を利用することもできます。 このアドインには、外れ値を検出したり、データのラベルを変更したり、データの分布を確認したりするための、より高度なツールが用意されています。 Excel 用データ マイニング クライアントでのデータ探索ツールの詳細については、[調査とデータのクリーニング](exploring-and-cleaning-data.md)を参照してください。  
+ データ マイニングに備えてデータを消去または確認する段階で、Excel 用のデータ マイニング クライアントのデータ探索機能を利用することもできます。 このアドインには、外れ値を検出したり、データのラベルを変更したり、データの分布を確認したりするための、より高度なツールが用意されています。 Excel 用データ マイニング クライアントでのデータ探索ツールの詳細については、次を参照してください。[調査とデータのクリーニング](exploring-and-cleaning-data.md)します。  
   
  **例外の強調表示**ツールの使用、[!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタ リング アルゴリズムです。 クラスター モデルにより、似た特性を共有する行グループが検出されます。 Excel 用データ マイニング クライアントの提供、**参照**クラスタ リングによって作成されたデータ マイニング モデルを調査できるように、グラフや特性プロファイルを使用するウィンドウ。 によって作成されたクラスタ リング モデルを参照する方法については、**例外の強調表示**ツールを参照してください[モデル (Excel 用データ用マイニング クライアント) を参照](highlight-exceptions-table-analysis-tools-for-excel.md)します。  
   

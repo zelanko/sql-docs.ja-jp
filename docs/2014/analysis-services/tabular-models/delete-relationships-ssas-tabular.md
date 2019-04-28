@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3be65edb0300b2ab47f22784cb7b109372062e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795459"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>リレーションシップの削除 (SSAS テーブル)
-  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップを使用する方法については、[リレーションシップ&#40;SSAS 表形式&#41;](relationships-ssas-tabular.md)を参照してください。  
+  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ &#40;SSAS テーブル&#41;](relationships-ssas-tabular.md)」を参照してください。  
   
 ## <a name="considerations-for-deleting-relationships"></a>リレーションシップの削除に関する注意事項  
  リレーションシップを削除するかどうかを判断する際には、以下の点に注意してください。  
@@ -53,7 +53,7 @@ ms.locfileid: "48130642"
 4.  **[リレーションシップの管理]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [リレーションシップ&#40;SSAS 表形式&#41;](relationships-ssas-tabular.md)   
- [2 つのテーブル間のリレーションシップを作成する&#40;SSAS 表形式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [リレーションシップ &#40;SSAS テーブル&#41;](relationships-ssas-tabular.md)   
+ [2 つのテーブル間のリレーションシップの作成 &#40;SSAS テーブル&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

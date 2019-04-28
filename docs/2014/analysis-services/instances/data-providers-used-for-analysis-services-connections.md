@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731130"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Analysis Services 接続に使用するデータ プロバイダー
   Analysis Services では、サーバーとデータにアクセスするために 3 種類のデータ プロバイダーを用意しています。 Analysis Services に接続するすべてのアプリケーションでは、これらのプロバイダーのいずれかを使用します。 これらのプロバイダーのうち、ADOMD.NET および Analysis Services 管理オブジェクト (AMO) の 2 つは、マネージド データ プロバイダーです。 Analysis Services OLE DB Provider (MSOLAP DLL) は、ネイティブ データ プロバイダーです。  
@@ -44,7 +44,7 @@ ms.locfileid: "53368514"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の初回リリースのメジャー ビルド番号は 12.0.2000.9 です。  
   
- バージョンおよびビルド情報の取得の詳細については、[バージョンとエディションの SQL Server とそのコンポーネントを確認する方法](https://support.microsoft.com/kb/321185)を参照してください。  
+ バージョンおよびビルド情報の取得の詳細については、次を参照してください。[バージョンとエディションの SQL Server とそのコンポーネントを確認する方法](https://support.microsoft.com/kb/321185)します。  
   
 ##  <a name="bkmk_LibUpdate"></a> Analysis Services データ プロバイダーのバージョンを確認する方法  
  データ プロバイダーは、Excel など、日常的に Analysis Services データベースに接続するクライアント アプリケーションによって、Analysis Services と共にインストールされます。  
@@ -67,7 +67,7 @@ ms.locfileid: "53368514"
   
      AMO の場合は、Microsoft.AnalysisServices を右クリックします。  
   
- リリース別のバージョンおよびビルド番号の詳細については、[blogspot の SQL Server ビルド](http://sqlserverbuilds.blogspot.com)を参照してください。  
+ リリース別のバージョンおよびビルド番号の詳細については、次を参照してください。 [blogspot の SQL Server ビルド](http://sqlserverbuilds.blogspot.com)します。  
   
 ##  <a name="bkmk_downloadsite"></a> 新しいバージョンのデータ プロバイダーを入手する方法  
  クライアント コンピューターにインストールされているバージョンは、データを提供しているサーバーのメジャー バージョンと一致する必要があります。 インストールされているサーバーが、ネットワーク内のワークステーションにインストールされているデータ プロバイダーより新しい場合は、新しいプロバイダーのインストールが必要になることがあります。  

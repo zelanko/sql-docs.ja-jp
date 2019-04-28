@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788259"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>一部の可用性レプリカでデータが同期されない
     
@@ -28,7 +28,7 @@ ms.locfileid: "53351483"
 |||  
 |-|-|  
 |**ポリシー名**|可用性レプリカのデータ同期状態|  
-|**問題点**|一部の可用性レプリカでデータが同期されません。|  
+|**問題**|一部の可用性レプリカでデータが同期されません。|  
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性グループ|  
   

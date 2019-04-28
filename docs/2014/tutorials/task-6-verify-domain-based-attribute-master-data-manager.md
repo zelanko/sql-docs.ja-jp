@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866178"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>タスク 6:マスター データ マネージャーを使用してドメイン ベースの属性が作成されていることを確認する
   ここでは、**State** エンティティが **MDS** で作成されたことと、**Supplier** エンティティの **State** 属性が **State** エンティティに依存するドメイン ベースの属性であることを、**マスター データ マネージャー**を使用して確認します。  
@@ -56,7 +56,7 @@ ms.locfileid: "56037733"
     |NY|New York|  
     |OH|Ohio|  
     |OK|Oklahoma|  
-    |OR|Oregon|  
+    |スイッチまたは|Oregon|  
     |PA|Pennsylvania|  
     |SC|South Carolina|  
     |KS|Kansas|  

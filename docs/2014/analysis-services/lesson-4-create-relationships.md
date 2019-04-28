@@ -1,5 +1,5 @@
 ---
-title: レッスン 5:[リレーションシップの作成] | Microsoft Docs
+title: 'レッスン 5: [リレーションシップの作成] | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728588"
 ---
-# <a name="lesson-5-create-relationships"></a>レッスン 5:[リレーションシップの作成]
+# <a name="lesson-5-create-relationships"></a>レッスン 5: [リレーションシップの作成]
   このレッスンでは、データをインポートした際に自動的に作成されたリレーションシップを確認し、異なるテーブル間に新しいリレーションシップを追加します。 リレーションシップとは、2 つのテーブル間を接続し、それらのテーブル内のデータをどのように関連付けるかを決定するものです。 たとえば、Product テーブルと Product Subcategory テーブルの間には、どの製品も特定のサブカテゴリに属しているという事実に基づいたリレーションシップが存在します。 詳細については、[「リレーションシップ (SSAS テーブル)」](tabular-models/relationships-ssas-tabular.md) を参照してください。  
   
  このレッスンを完了するまでに時間を推定するには。**10 分**  

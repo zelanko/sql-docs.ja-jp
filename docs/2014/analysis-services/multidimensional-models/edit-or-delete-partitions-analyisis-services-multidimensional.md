@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726100"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>パーティションの編集または削除 (Analysis Services - 多次元)
   キューブ パーティションを変更するには、[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] でキューブ デザイナーの **[パーティション]** タブを使用します。 **[パーティション]** タブには、キューブのすべてのメジャー グループのパーティションが一覧表示されます。 また、書き戻しが有効な書き戻しパーティションも表示されます。  
@@ -48,8 +48,8 @@ ms.locfileid: "48104913"
  ストレージは、キューブ内の各メジャー グループのパーティションごとに個別に構成できます。 キューブまたはメジャー グループの既定のストレージ設定を構成することもできます。 ストレージは、キューブ ウィザードの **[パーティション]** タブで構成します。  
   
 ## <a name="see-also"></a>参照  
- [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [集計のデザイン&#40;Analysis Services - 多次元&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Analysis Services でのパーティションをマージ&#40;SSAS - 多次元&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [ローカル パーティションの作成と管理 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [集計のデザイン &#40;Analysis Services - 多次元&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Analysis Services でのパーティションのマージ (SSAS - 多次元)](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

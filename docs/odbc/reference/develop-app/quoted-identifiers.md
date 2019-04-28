@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861647"
 ---
 # <a name="quoted-identifiers"></a>引用符で囲まれた識別子
 SQL ステートメント内で特殊文字または一致するキーワードを含む識別子を囲む必要が*識別子引用符文字*; このような文字で囲まれた識別子と呼ばれる*の識別子を引用符で囲まれた*(とも呼ばれます*区切られた識別子*sql-92 で)。 次に、Accounts Payable 識別子が引用符で囲まれたなど**選択**ステートメント。  

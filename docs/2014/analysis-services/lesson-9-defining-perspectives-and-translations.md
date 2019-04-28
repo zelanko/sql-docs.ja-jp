@@ -1,5 +1,5 @@
 ---
-title: レッスン 9:Defining Perspectives and Translations |Microsoft Docs
+title: 'レッスン 9: Defining Perspectives and Translations |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728098"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9:パースペクティブと翻訳の定義
+# <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9: パースペクティブと翻訳の定義
   このレッスンでは、パースペクティブと翻訳を定義する方法について学習します。 パースペクティブを定義すると、キューブの表示上の複雑さを軽減できます。翻訳を定義すると、ユーザーは希望する言語でキューブ メタデータを表示できます。  
   
 > [!NOTE]  

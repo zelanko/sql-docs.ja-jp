@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da10e8ab533c2fbfec76c89527fca0fd67082a6d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802444"
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX セル プロパティ - FORMAT_STRING コンテンツ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

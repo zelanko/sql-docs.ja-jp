@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0cdd72c352246c89983b560e40428c1f9f7fb7b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792496"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services の概要
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で提供されているデータ品質ソリューションを使用すると、データ スチュワードまたは IT プロフェッショナルは、データの品質を維持し、データをビジネス使用に適したものにすることができます。 DQS は、データ ソースの整合性と品質を管理する、コンピューター支援型のインタラクティブなナレッジ ドリブン ソリューションです。 DQS を利用すると、データについてのナレッジを発見し、構築して、管理できます。 その後、そのナレッジを使用して、データのクレンジング、マッチング、プロファイリングを実行できます。 また、DQS データ品質プロジェクトに含まれる参照データ プロバイダーのクラウド ベースのサービスを利用することもできます。  
@@ -44,7 +44,7 @@ ms.locfileid: "56027953"
   
 -   **監視:** データ品質活動の状態を追跡して特定します。 監視により、データ品質ソリューションが設計意図のとおりに動作していることを確認できます。 詳細については、「 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)」をご参照ください。  
   
--   **ナレッジ ベース:** Data Quality Services とは、DQS で構築されたナレッジに基づいてデータを分析するナレッジ ドリブン ソリューションです。 これにより、データについてのナレッジを継続的に拡充し、それによってデータの品質を継続的に向上させる、データ品質プロセスを作成できます。  
+-   **ナレッジ ベース:** Data Quality Services は、DQS で構築されたナレッジに基づいてデータを分析するナレッジ ドリブン ソリューションです。 これにより、データについてのナレッジを継続的に拡充し、それによってデータの品質を継続的に向上させる、データ品質プロセスを作成できます。  
   
  次の図は DQS のプロセスを示したものです。  
   

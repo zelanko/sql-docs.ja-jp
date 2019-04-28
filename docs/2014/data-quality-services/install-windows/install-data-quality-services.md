@@ -11,18 +11,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792615"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) には、 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** および **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** の 2 つのコンポーネントが含まれています。  
   
 |DQS コンポーネント|説明|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 上にインストールされている場合は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベース エンジンでは、3 つのデータベースが含まれています。DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA します。 DQS_MAIN には、DQS ストアド プロシージャ、DQS エンジン、パブリッシュ済みナレッジ ベースが含まれています。 DQS_PROJECTS には、データ品質プロジェクトの情報が含まれています。 DQS_STAGING_DATA は、ソース データをコピーし、DQS 操作を実行して処理後のデータをエクスポートするためのステージング領域です。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース エンジンの上にインストールされ、DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA の 3 つのデータベースを含んでいます。 DQS_MAIN には、DQS ストアド プロシージャ、DQS エンジン、パブリッシュ済みナレッジ ベースが含まれています。 DQS_PROJECTS には、データ品質プロジェクトの情報が含まれています。 DQS_STAGING_DATA は、ソース データをコピーし、DQS 操作を実行して処理後のデータをエクスポートするためのステージング領域です。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] は、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]に接続するスタンドアロン アプリケーションであり、高度に直感的なグラフィカル ユーザー インターフェイスを使用して、データ品質に関する操作、および DQS に関連するその他の管理タスクを実行できます。|  
   
 > [!IMPORTANT]
@@ -33,11 +33,11 @@ ms.locfileid: "56019640"
   
  DQS インストール プロセスは、3 つの部分から成ります。  
   
--   [事前インストール タスク](#PreInstallationTasks):DQS をインストールする前に、システム要件を確認します。  
+-   [インストール前の作業](#PreInstallationTasks):DQS をインストールする前に、システム要件を確認します。  
   
--   [Data Quality Services のインストール タスク](#DQSInstallation):DQS をインストールするには、SQL Server セットアップを使用します。  
+-   [Data Quality Services のインストールの作業](#DQSInstallation):SQL Server セットアップを使用して DQS をインストールします。  
   
--   [インストール後のタスク](#PostInstallationTasks):DQS のインストールを完了する SQL Server セットアップを終了した後、これらのタスクを実行します。  
+-   [インストール後の作業](#PostInstallationTasks):SQL Server セットアップを完了して DQS のインストールを終了した後、これらのタスクを実行します。  
   
 > [!NOTE]  
 >  コマンド ラインからのセットアップの実行の手順については、ここでは扱いません。 インストールするためのコマンド ライン オプションについて[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]とクライアントを参照してください[機能パラメーター](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature)で[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
@@ -47,7 +47,7 @@ ms.locfileid: "56019640"
   
 |DQS コンポーネント|最小システム要件|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|メモリ (RAM):<br />最小値:2 GB<br />-お勧めします。4 GB 以上<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース エンジン。 詳細については、[に関する SQL Server データベース エンジンの](../../database-engine/sql-server-database-engine-overview.md)を参照してください。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|メモリ (RAM):<br />最小値:2 GB<br />-お勧めします。4 GB 以上<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース エンジン。 詳細については、次を参照してください。[に関する SQL Server データベース エンジンの](../../database-engine/sql-server-database-engine-overview.md)します。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (インストールされていない場合は、 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] のインストール時にインストールされます)<br /><br /> Internet Explorer 6.0 SP1 以降|  
   
 > [!IMPORTANT]
@@ -75,7 +75,7 @@ ms.locfileid: "56019640"
 |データに対する DQS 操作を可能にする|ソース データにアクセスして DQS 操作を実行できることと、処理後のデータをデータベース内のテーブルにエクスポートできることを確認します。|[DQS 操作のためのデータへのアクセス](access-data-for-the-dqs-operations.md)|  
   
 ## <a name="see-also"></a>参照  
- [ビデオ:インストールして、DQS の構成](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [ビデオ: DQS のインストールと構成](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Data Quality Services のアップグレード](../../database-engine/install-windows/upgrade-data-quality-services.md)   

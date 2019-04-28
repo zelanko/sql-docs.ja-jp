@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3869a18e8b19062a0bc6eabfcf45b53d4220dab0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726320"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>データ ソース ビューの削除 (Analysis Services)
   OLAP プロジェクトでデータ ソース ビュー (DSV) を使用していない場合、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でプロジェクトから DSV を削除できます。  
@@ -35,6 +35,6 @@ ms.locfileid: "48197598"
   
 ## <a name="see-also"></a>参照  
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
- [データ ソース ビューでプロパティを変更&#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューのプロパティの変更 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

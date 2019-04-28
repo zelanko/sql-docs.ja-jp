@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730415"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>テキスト ファイルからのインポート (SSAS テーブル)
   テーブルのインポート ウィザードを使用すると、Microsoft Excel ファイルおよびテキスト ファイルのデータをインポートできます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48055779"
 3.  テーブルのインポート ウィザードの手順に従って操作します。 後続のページでは、 **[テーブルとビューの選択]** ページを使用することにより、特定のテーブルの選択やフィルターの適用を行うことができます。  
   
 ## <a name="see-also"></a>参照  
- [データをインポート&#40;SSAS 表形式&#41;](import-data-ssas-tabular.md)   
- [サポートされているデータ ソース &#40;SSAS テーブル&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [データのインポート (SSAS テーブル)](import-data-ssas-tabular.md)   
+ [サポートされているデータ ソース (SSAS テーブル)](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

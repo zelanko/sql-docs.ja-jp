@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc73bc6fbdbcbeb350bc32681bfd8dae3e01a642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731205"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>[テーブルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [テーブルの検索] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、ディメンション、キューブ、またはマイニング構造に関連付けられているデータ ソース ビュー内のテーブルを検索できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でこのダイアログ ボックスを表示するには、次の手順に従います。  
@@ -39,7 +39,7 @@ ms.locfileid: "48209492"
  **データ ソース ビューからテーブルを選択します。**  
  検索するテーブルを **[データ ソース ビュー]** ペインで選択します。 このオプションのグリッドには、 **[フィルター]** で設定したフィルターに一致する、現在のダイアグラムにまだ表示されていないオブジェクトとその種類が表示されます ( **[フィルター]** が設定されていない場合、すべてのテーブルが表示されます)。  
   
- **Assert**  
+ **[フィルター]**  
  表示するオブジェクトを限定するために使用するフィルターを入力した後、ボタンをクリックすると、 **[データ ソース ビューからテーブルを選択]** に表示されるテーブルがフィルター選択されます。  
   
 ## <a name="see-also"></a>参照  

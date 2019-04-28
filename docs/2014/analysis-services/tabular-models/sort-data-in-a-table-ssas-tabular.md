@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794372"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>テーブル内のデータの並べ替え (SSAS テーブル)
   データは、1 つ以上の列のテキスト (A から Z、または Z から A) または数値 (小さい数値から大きい数値、または大きい数値から小さい数値) の順で並べ替えることができます。  
@@ -48,8 +48,8 @@ ms.locfileid: "48081852"
     >  期待した結果が得られない場合、列の数値が数値ではなくテキストとして格納されている可能性があります。 たとえば、何らかの会計システムからインポートされた負の数値や、先頭にアポストロフィ (') が入力されている数値は、テキストとして格納されます。  
   
 ## <a name="see-also"></a>参照  
- [フィルター処理し、データの並べ替え&#40;SSAS 表形式&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [パースペクティブ&#40;SSAS 表形式&#41;](perspectives-ssas-tabular.md)   
- [ロール&#40;SSAS 表形式&#41;](roles-ssas-tabular.md)  
+ [データのフィルター処理と並べ替え (SSAS テーブル)](../filter-and-sort-data-ssas-tabular.md)   
+ [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)   
+ [ロール (SSAS テーブル)](roles-ssas-tabular.md)  
   
   

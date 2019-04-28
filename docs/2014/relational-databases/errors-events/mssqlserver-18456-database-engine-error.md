@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869597"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -33,7 +33,7 @@ ms.locfileid: "53355035"
 |メッセージ テキスト|ユーザー '%.*ls'.%.\*ls はログインできませんでした|  
   
 ## <a name="explanation"></a>説明  
- を不正なパスワードまたはユーザー名を含む認証の失敗によって接続試行が拒否された場合、次のようなメッセージがクライアントに返されます。"ユーザー '<user_name>' はログインできませんでした。 (Microsoft SQL Server、エラー。18456)"。  
+ を不正なパスワードまたはユーザー名を含む認証の失敗によって接続試行が拒否された場合、次のようなメッセージがクライアントに返されます。"ユーザー '<user_name>' はログインできませんでした。 (Microsoft SQL Server、エラー:18456)".  
   
  クライアントに返される追加情報には、次のようなものがあります。  
   
@@ -109,6 +109,6 @@ ms.locfileid: "53355035"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で包含データベースがサポートされる場合、包含データベース ユーザーへの移行後にそのログインが削除されていないことを確認してください。  
   
- ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、次を参照してください[How To:。ASP.NET のリソースにアクセスするネットワーク サービス アカウントを使用します。](https://msdn.microsoft.com/library/ff647402.aspx)  
+ ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、このトピックの「[方法: ASP.NET のリソースにアクセスするネットワーク サービス アカウントを使用します。](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

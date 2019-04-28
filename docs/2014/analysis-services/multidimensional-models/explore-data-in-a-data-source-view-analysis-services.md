@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f02ffda65cfd981f84a41f62ed310a06b8dfbd63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725976"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>データ ソース ビューでのデータの検索 (Analysis Services)
   **のデータ ソース ビュー デザイナーにある** [データの探索] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、テーブル、ビュー、または名前付きクエリのデータをデータ ソース ビュー (DSV) で参照できます。 データ ソース ビュー デザイナーでデータを探索すると、選択したテーブル、ビュー、または名前付きクエリの各データ列の内容を表示できます。 実際の内容を表示すると、すべての列が必要であるかどうか、使いやすさを向上させるために名前付き計算が必要であるかどうか、既存の名前付き計算または名前付きクエリによって予想値が返されるかどうかなどを判断できます。  
@@ -50,6 +50,6 @@ ms.locfileid: "48094908"
 6.  データのサンプルを再取得には、次のようにクリックします。**データの再取得**上、**探索\<オブジェクト名 > テーブル**ツールバー。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)  
+ [「多次元モデルのデータ ソース ビュー」](data-source-views-in-multidimensional-models.md)  
   
   

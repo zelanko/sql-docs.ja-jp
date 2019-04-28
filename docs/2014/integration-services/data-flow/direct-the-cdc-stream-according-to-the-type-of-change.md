@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827396"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>変更の種類に応じた CDC ストリームのダイレクト
   CDC スプリッター変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの CDC ソースが含まれている必要があります。  
@@ -36,11 +36,11 @@ ms.locfileid: "58377270"
   
 6.  以下の出力のいずれかを選択します。  
   
-    -   出力を削除します。DELETE 変更行の出力がリダイレクトされます。  
+    -   削除出力: DELETE 変更行のダイレクト先の出力。  
   
-    -   出力を挿入します。INSERT 変更行の出力がリダイレクトされます。  
+    -   挿入出力: INSERT 変更行のダイレクト先の出力。  
   
-    -   更新プログラムの出力:前に、/後の UPDATE 変更行と結合の変更が行の出力がリダイレクトされます。  
+    -   更新出力: 更新前および更新後の UPDATE 変更行と、Merge 変更行のダイレクト先の出力。  
   
 7.  必要に応じて、 **[詳細エディター]** ダイアログ ボックスを使用して、詳細なプロパティを構成できます。  
   

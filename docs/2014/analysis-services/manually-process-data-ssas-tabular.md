@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728338"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>データの手動処理 (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のワークスペースのデータを手動で処理する方法について説明します。  
@@ -74,7 +74,7 @@ ms.locfileid: "48189771"
  処理の操作を停止します。 このオプションは、操作に時間がかかりすぎる場合や、エラーが多すぎる場合に有効です。  
   
 ## <a name="see-also"></a>参照  
- [データ処理&#40;SSAS 表形式&#41;](process-data-ssas-tabular.md)   
- [データの処理のトラブルシューティングを行う&#40;SSAS 表形式&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [データの処理 (SSAS テーブル)](process-data-ssas-tabular.md)   
+ [データの処理のトラブルシューティング (SSAS テーブル)](troubleshoot-process-data-ssas-tabular.md)  
   
   

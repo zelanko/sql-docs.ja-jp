@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724047"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @cursor_return=] *cursor_variable_name*出力  
+ [ @cursor_return= ] *cursor_variable_name*OUTPUT  
  宣言されているカーソル変数の名前を指定します。 *cursor_variable_name*は**カーソル**、既定値はありません。 カーソルはスクロール可能、動的、読み取り専用カーソルのいずれかです。  
   
- [ @cursor_scope=] *cursor_scope*  
+ [ @cursor_scope= ] *cursor_scope*  
  レポートするカーソルのレベルを指定します。 *cursor_scope*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  
@@ -72,10 +72,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |コンカレンシー|**smallint**|1 = 読み取り専用<br /><br /> 2 = スクロール ロック<br /><br /> 3 = オプティミスティック|  
 |scrollable|**smallint**|0 = 順方向専用<br /><br /> 1 = スクロール可能|  
 |open_status|**smallint**|0 = 閉じた状態<br /><br /> 1 = 開いた状態|  
-|cursor_rows|**int**|結果セット内の条件を満たす行の数です。 詳細については、[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)を参照してください。|  
+|cursor_rows|**int**|結果セット内の条件を満たす行の数です。 詳細については、次を参照してください。 [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)します。|  
 |fetch_status|**smallint**|このカーソル上での最後のフェッチの状態です。 詳細については、次を参照してください[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):。<br /><br /> 0 = フェッチが成功しました。<br /><br /> -1 = フェッチが失敗したか、またはカーソルの境界を越えています。<br /><br /> -2 = 要求された行がありません。<br /><br /> -9 = カーソル上でフェッチは行われていません。|  
 |column_count|**smallint**|カーソル結果セットの列数です。|  
-|row_count|**smallint**|カーソルで実行された最後の操作で処理された行数です。 詳細については、[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)を参照してください。|  
+|row_count|**smallint**|カーソルで実行された最後の操作で処理された行数です。 詳細については、次を参照してください。 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)します。|  
 |last_operation|**smallint**|カーソル上で実行された最後の操作:<br /><br /> 0 = カーソル上で操作は実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE <br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーのスコープ内でカーソルを識別する一意の値です。|  
   

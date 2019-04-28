@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793236"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>What-If シナリオ (Excel 用のテーブル分析ツール)
   ![テーブル分析ツールには、どのようなシナリオの場合はボタン](media/tat-whatif.gif "テーブル分析ツールで What-if シナリオのボタンをクリックします。")  
@@ -84,14 +84,14 @@ ms.locfileid: "48140362"
   
  **'自転車を購入' = [はい]**  
   
- **信頼度: フェア**  
+ **信頼度:公正です**  
   
  この結果は、データ テーブルの既存の行に基づいて作成されています。つまり、特定の顧客について、他のすべての条件はそのままで、年齢だけを 25 歳に変更した場合、その顧客は自転車を購入する可能性が高いことを示しています。  
   
  予測を元のデータ テーブルに出力すると、その予測の実用性を判断しやすくなります。  
   
 ## <a name="related-tools"></a>関連ツール  
- より高度なデータ マイニング機能を備えた別のアドインとして、Excel 用のデータ マイニング クライアントがあります。Excel 用のデータ マイニング クライアントには、行動を予測するデータ マイニング モデルを作成するためのウィザードが備わっています。 詳細については、[データ マイニング モデルを作成する](creating-a-data-mining-model.md)を参照してください。  
+ より高度なデータ マイニング機能を備えた別のアドインとして、Excel 用のデータ マイニング クライアントがあります。Excel 用のデータ マイニング クライアントには、行動を予測するデータ マイニング モデルを作成するためのウィザードが備わっています。 詳細については、次を参照してください。[データ マイニング モデルを作成する](creating-a-data-mining-model.md)します。  
   
  使用されるアルゴリズムの詳細については、 **What-if**シナリオ ツールで、「Microsoft ロジスティック回帰アルゴリズム」SQL Server オンライン ブックのトピックを参照してください。  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6c4601553392a2e11bf6ab77063552c2a58e939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795449"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Power View レポート プロパティ (SSAS テーブル)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] は、データ アナリスト、意思決定者、インフォメーション ワーカーなどのビジネス ユーザーのための、直感的なアドホック レポートを提供します。 これを使用すると、PowerPivot ギャラリーで発行される PowerPivot ブックに基づくテーブル モデル、または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して作成されて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services インスタンスに配置されるテーブル モデルから、データのビューを簡単に作成して対話できます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] はブラウザー ベースの Silverlight アプリケーションであり、SharePoint Server 2010 以降から起動されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "48152792"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[Power View レポートのフィールド セットの既定構成&#40;SSAS 表形式&#41;](power-view-configure-default-field-set-for-reports.md)|既定のフィールド セットの構成方法を説明します。これは列とメジャーの定義済みリストであり、レポート フィールド リストでテーブルをクリックしたときに、自動的に [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポート キャンバスに追加されます。|  
-|[Power View レポートのテーブル動作プロパティを構成する&#40;SSAS 表形式&#41;](power-view-configure-table-behavior-properties-for-reports.md)|詳細行をより細かなレベルで公開するテーブル動作プロパティの構成方法を説明します。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびチャートのレイアウトを使用して、識別情報の適切な既定位置を設定できます。|  
+|[Power View レポートの既定のフィールド セットの構成 (SSAS テーブル)](power-view-configure-default-field-set-for-reports.md)|既定のフィールド セットの構成方法を説明します。これは列とメジャーの定義済みリストであり、レポート フィールド リストでテーブルをクリックしたときに、自動的に [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポート キャンバスに追加されます。|  
+|[Power View レポートのテーブル動作プロパティの構成 (SSAS テーブル)](power-view-configure-table-behavior-properties-for-reports.md)|詳細行をより細かなレベルで公開するテーブル動作プロパティの構成方法を説明します。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびチャートのレイアウトを使用して、識別情報の適切な既定位置を設定できます。|  
   
   

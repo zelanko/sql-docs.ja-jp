@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722907"
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
   データ マイニング プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの一部です。 デザイン プロセス時に、このプロジェクトで作成したオブジェクトをワークスペース データベースの一部としてテストおよびクエリに使用できます。 ユーザーがプロジェクト内のオブジェクトをクエリまたは参照できるようにするには、多次元モードで実行している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにプロジェクトを配置する必要があります。  
@@ -63,7 +63,7 @@ ms.locfileid: "53356404"
   
  たとえば、1 つのデータ マイニング プロジェクトに、それぞれが複数のデータ ソース ビューをサポートしている複数のデータ ソースへの参照を含めることができます。 さらに、各データ ソース ビューは、それぞれが多数のマイニング モデルに関連付けられている複数のマイニング構造をサポートできます。  
   
- また、プロジェクトには、プラグイン アルゴリズム、カスタム アセンブリ、またはカスタム ストアド プロシージャを含めることもできます。ただし、ここでは、これらのオブジェクトについて説明しません。 詳細については、[Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)を参照してください。  
+ また、プロジェクトには、プラグイン アルゴリズム、カスタム アセンブリ、またはカスタム ストアド プロシージャを含めることもできます。ただし、ここでは、これらのオブジェクトについて説明しません。 詳細については、次を参照してください。 [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)します。  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  

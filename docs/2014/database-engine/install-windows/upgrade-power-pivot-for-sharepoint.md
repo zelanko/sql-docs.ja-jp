@@ -11,18 +11,18 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775656"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint のアップグレード
   このトピックでは、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の配置を [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]にアップグレードするために必要な手順について説明します。 特定の手順は、環境が現在実行されている SharePoint のバージョンに依存および PowerPivot for SharePoint アドインは、(**spPowerPivot.msi**)。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- リリース ノートについては、[SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445)を参照してください。  
+ リリース ノートについては、次を参照してください。 [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445)します。  
   
 
   
@@ -32,7 +32,7 @@ ms.locfileid: "58434503"
   
 -   SharePoint 2010 ファーム内の PowerPivot System サービスおよび Analysis Services のインスタンスはすべて、同じバージョンである必要があります。 バージョンを確認する方法については、セクションをご覧ください。[バージョンの PowerPivot コンポーネントとサービスの確認](#bkmk_verify_versions)このトピックの「します。  
   
--   PowerPivot 構成ツールは SQL Server の共有機能の 1 つで、すべての共有機能は同時にアップグレードされます。 アップグレード プロセス中に、共有機能のアップグレードを必要とする他の SQL Server インスタンスまたは機能を選択すると、PowerPivot 構成ツールもアップグレードされます。 PowerPivot 構成ツールがアップグレードされても PowerPivot インスタンスがアップグレードされない場合は、問題が発生している可能性があります。 SQL Server の共有機能の詳細については、[インストール ウィザードを SQL Server 2014 を使用するアップグレード&#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)を参照してください。  
+-   PowerPivot 構成ツールは SQL Server の共有機能の 1 つで、すべての共有機能は同時にアップグレードされます。 アップグレード プロセス中に、共有機能のアップグレードを必要とする他の SQL Server インスタンスまたは機能を選択すると、PowerPivot 構成ツールもアップグレードされます。 PowerPivot 構成ツールがアップグレードされても PowerPivot インスタンスがアップグレードされない場合は、問題が発生している可能性があります。 SQL Server の共有機能の詳細については、次を参照してください。[インストール ウィザードを SQL Server 2014 を使用するアップグレード&#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)します。  
   
 -   PowerPivot for SharePoint アドイン (**spPowerPivot.msi**) 以前のバージョンとサイド バイ サイドでインストールされます。 たとえば [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] アドインは、 `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`フォルダーにインストールされます。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "58434503"
   
 2.  サーバーを再起動します。  
   
-3.  SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) を実行し、データ プロバイダーをインストールします。 データ プロバイダーもアップグレードする SQL Server セットアップ ウィザードを実行したサーバーは例外です。 詳細については、[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)を参照してください。  
+3.  SharePoint 2013 ファーム内の各サーバーで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint アドイン (**spPowerPivot.msi**) を実行し、データ プロバイダーをインストールします。 データ プロバイダーもアップグレードする SQL Server セットアップ ウィザードを実行したサーバーは例外です。 詳細については、次を参照してください。[インストールまたは PowerPivot を SharePoint アドインのアンインストール&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)します。  
   
 4.  **PowerPivot for SharePoint 2013 構成実行**アドインがインストールされている更新されたソリューション ファイルを SharePoint ファームを構成する SharePoint アプリケーション サーバーのいずれかのツール。 この手順に SharePoint サーバーの全体管理を使用することはできません。 詳細については、以下を参照してください。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "58434503"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **実行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]セットアップ**を実行する最初の SharePoint アプリケーション サーバー、 **SQL Server Analysis Services (PowerPivot)** POWERPIVOT インスタンスをアップグレードする Windows サービスです。 SQL Server セットアップ ウィザードの [インストール] ページで、アップグレード オプションを選択します。 詳細については、[インストール ウィザードを SQL Server 2014 を使用するアップグレード&#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)を参照してください。  
+5.  **実行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]セットアップ**を実行する最初の SharePoint アプリケーション サーバー、 **SQL Server Analysis Services (PowerPivot)** POWERPIVOT インスタンスをアップグレードする Windows サービスです。 SQL Server セットアップ ウィザードの [インストール] ページで、アップグレード オプションを選択します。 詳細については、次を参照してください。[インストール ウィザードを SQL Server 2014 を使用するアップグレード&#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)します。  
   
 6.  構成ツールを実行する前に**サーバーを再起動します** 。 これにより、SQLServer セットアップによってインストールされた更新プログラムや必須コンポーネントがシステムで完全に構成されます。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "58434503"
   
          ブックを新しいバージョンで上書きする場合は、 **[はい]** をクリックします。 それ以外の場合は、 **[いいえ]** をクリックしてホーム ページに戻ります。 ブックを別の場所に保存してコピーを作成します。続行する準備が整ったら、この手順に戻ります。  
   
-         ダッシュ ボードで使用するブックをカスタマイズする方法の詳細については、[PowerPivot 管理ダッシュ ボードのカスタマイズ](https://go.microsoft.com/fwlink/?linkID=229639)を参照してください。  
+         ダッシュ ボードで使用するブックをカスタマイズする方法の詳細については、次を参照してください。 [PowerPivot 管理ダッシュ ボードのカスタマイズ](https://go.microsoft.com/fwlink/?linkID=229639)します。  
   
     5.  タスク一覧内のアクションを確認し、ツールで実行しないアクションを除外します。 既定ではすべてのアクションが含まれています。 アクションを削除するには、タスク一覧でアクションを選択し、[パラメーター] ページの **[この操作をタスク一覧に含めます]** チェック ボックスをオンにします。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "58434503"
   
     4.  構成ツールで **[検証]** に続けて **[実行]** をクリックして、タスクを再試行します。  
   
-     他のエラーについては、ULS ログを確認します。 詳細については、[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)を参照してください。  
+     他のエラーについては、ULS ログを確認します。 詳細については、次を参照してください。[構成し、SharePoint ログ ファイルの表示、および診断ログ&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)します。  
   
 
   
@@ -348,9 +348,9 @@ Get-PowerPivotSystemService
 |データ更新が構成されているブックを選択して、データ更新をテストします。|データ更新をテストする最も簡単な方法は、データ更新スケジュールを変更することです。具体的には、 **[さらに、できるだけ早く更新を行います]** チェック ボックスをオンにして、データ更新がすぐに実行されるようにします。 この手順によって、データ更新が現在のブックに対して成功するかどうかが判明します。 他のよく使用されるブックにもこの手順を実行して、データ更新が機能することを確認します。 更新のデータをスケジュール設定の詳細についてを参照してください[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。|  
 |随時、PowerPivot 管理ダッシュボードのデータ更新レポートを監視して、データ更新エラーがないことを確認します。|[PowerPivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)|  
   
- PowerPivot の設定と機能を構成する方法の詳細については、[サーバーの全体管理で PowerPivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)を参照してください。  
+ PowerPivot の設定と機能を構成する方法の詳細については、次を参照してください。[サーバーの全体管理で PowerPivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)します。  
   
- インストール後の構成タスクのすべての手順については、[初期構成&#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)を参照してください。  
+ インストール後の構成タスクのすべての手順については、次を参照してください。[初期構成&#40;PowerPivot for SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)します。  
   
 
   

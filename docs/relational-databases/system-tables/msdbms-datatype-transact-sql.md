@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816945"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "52810544"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**datatype_id**|**int**|個々の一意なデータ型を識別します。|  
+|**datatype_id**|**int**|各一意のデータ型を識別します。|  
 |**dbms_id**|**int**|型が属する DBMS を識別します。|  
-|**type**|**sysname**|データ型の名前 (ネイティブ) です。|  
+|**type**|**sysname**|データ型の名前 (ネイティブ)。|  
 |**createparams**|**int**|各データ型に適用できる長さ、有効桁数、および小数点以下桁数の組み合わせを表すビットマップです。以下の要素が含まれます。<br /><br /> **0x1** = 有効桁数。<br /><br /> **0x2**スケールを = です。<br /><br /> **0x4**長さを = です。|  
   
 ## <a name="remarks"></a>コメント  

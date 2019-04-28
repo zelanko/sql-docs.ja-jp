@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871411"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
   非クラスター化インデックスを格納するために必要な領域を算出するには、次の手順に従います。  
@@ -118,7 +118,7 @@ ms.locfileid: "48146742"
     >  インデックス キー列の他に非キー列を含めることにより、非クラスター化インデックスを拡張できます。 このように追加された列は、非クラスター化インデックスのリーフ レベルにしか格納されません。 詳細については、「 [付加列インデックスの作成](../indexes/create-indexes-with-included-columns.md)」を参照してください。  
   
     > [!NOTE]  
-    >  組み合わせることができます`varchar`、 `nvarchar`、 `varbinary`、または`sql_variant`8,060 バイトを超える定義されているテーブルの合計幅となる列にします。 この場合も、`varchar`、`varbinary`、または `sql_variant` 列の場合は 8,000 バイト、`nvarchar` 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。 これは、既に付加列を含んでいる非クラスター化インデックスのリーフ行にも当てはまります。  
+    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える `varchar`、`nvarchar`、`varbinary`、または `sql_variant` 列の連結が可能です。 この場合も、`varchar`、`varbinary`、または `sql_variant` 列の場合は 8,000 バイト、`nvarchar` 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。 これは、既に付加列を含んでいる非クラスター化インデックスのリーフ行にも当てはまります。  
   
      非クラスター化インデックスに付加列が含まれていない場合は、手順 1.3. での変更を含め、手順 1. の値を使用します。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48146742"
   
 -   ラージ オブジェクト (LOB) の値  
   
-     LOB データ型を格納する領域の量を使用する正確に特定するアルゴリズム`varchar(max)`、 `varbinary(max)`、 `nvarchar(max)`、 `text`、 `ntext`、 `xml`、および`image`値は複雑です。 LOB データ型の値で使用される領域の計算は、想定される LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、非クラスター化インデックスの合計サイズに加算するだけで十分です。  
+     LOB データ型の `varchar(max)`、`varbinary(max)`、`nvarchar(max)`、`text`、`ntext`、`xml`、および `image` の値を格納するために使用される領域を正確に特定するのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、想定される LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、非クラスター化インデックスの合計サイズに加算するだけで十分です。  
   
 -   圧縮  
   

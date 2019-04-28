@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6b72e4872de2f1e744ac55a60c5abb34aea0f32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793458"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>[ユーザーの選択] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] および [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[ユーザーの選択]** ダイアログ ボックスを使用すると、使用法に基づく最適化ウィザードのクエリ ログに格納されたクエリをフィルタリングする、対象ユーザーを選択できます。  

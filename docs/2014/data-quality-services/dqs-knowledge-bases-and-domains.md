@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 30f720874a29d04e129733e771f3ee680c7ef93f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792997"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS のナレッジ ベースとドメイン
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でのナレッジ ベースについて説明します。 データをクレンジングするには、データについての知識 (ナレッジ) が必要です。 データ品質プロジェクト用のナレッジを準備するには、ナレッジ ベース (KB) を構築して保守します。DQS はこれを使用して、正しくないデータまたは無効なデータを識別できます。 DQS では、コンピューター支援型と対話型の両方のプロセスを使用して、ナレッジ ベースを作成、構築、および更新できます。 ナレッジ ベース内のナレッジはドメインに保持され、各ドメインはデータ フィールドに固有です。 ナレッジ ベースはデータに関するナレッジのリポジトリです。ナレッジ ベースを使用して、データを理解し、その整合性を維持できます。  

@@ -1,5 +1,5 @@
 ---
-title: 増分生成の理解 |Microsoft ドキュメント
+title: 増分生成の理解 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802706"
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  スキーマを初めて生成した後は、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用してキューブやディメンションの定義を変更し、その後スキーマ生成ウィザードを再実行できます。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
+  スキーマを初めて生成した後は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してキューブやディメンションの定義を変更し、その後スキーマ生成ウィザードを再実行できます。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
   
 -   ウィザードによってテーブルが以前に生成されている場合、そのテーブルは上書きされます。 ウィザードによって生成されたテーブルが上書きされないようにするには、データ ソース ビューのテーブルの **AllowChangesDuringGeneration** プロパティを **false**に変更します。 テーブルのコントロールを取得すると、テーブルはユーザー定義による他のテーブルと同じように取り扱われ、再生成中に影響を受けなくなります。 テーブルを生成から除外したら、後でデータ ソース ビューのテーブルの **AllowChangesDuringGeneration** プロパティを **true** に変更し、テーブルを再び開いて、ウィザードによる変更を反映させることができます。 詳細については、「[データ ソース ビューのプロパティの変更 (Analysis Services)](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34024349"
  一方、データ ソース接続文字列を以前の生成後に別のデータベースに変更した場合は、エラーは発生しません。 この場合は新しいデータベースが使用され、以前のデータベースには変更は行われません。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース ビューとデータ ソースへの変更を管理します。](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [スキーマ生成ウィザード & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [データ ソース ビューおよびデータ ソースへの変更の管理](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
+ [スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

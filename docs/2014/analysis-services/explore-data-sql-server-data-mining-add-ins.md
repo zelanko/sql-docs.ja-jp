@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae3ac89f40c67a8097db676ba0628a25d260fbeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731441"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>データの探索 (SQL Server データ マイニング アドイン)
   ![探索データ ウィザード](media/dmc-explore.gif "データの探索ウィザード")  
@@ -49,7 +49,7 @@ ms.locfileid: "48082672"
   
 5.  オプションで、新しい列をデータに追加したり、データを分割する方法を変更したり、グラフを Excel にコピーしたりできます。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  使用する、**データの探索**ウィザード、データは、Excel データ テーブルである必要があります。   
   
 ## <a name="see-also"></a>参照  

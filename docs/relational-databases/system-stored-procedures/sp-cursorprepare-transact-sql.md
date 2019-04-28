@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724137"
 ---
-# <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
+# <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  カーソル ステートメントまたはバッチをコンパイルして実行プランを作成します。カーソルは作成しません。 コンパイルされたステートメントは、後で sp_cursorexecute で使用できます。 、Sp_cursorexecute と組み合わせると、この手順では、sp_cursoropen と同じ機能しますが、2 つのフェーズに分割されます。 sp_cursorprepare は、ID を指定して呼び出される、表形式のデータ ストリーム (TDS) パケットで 3 を = です。  
+  カーソル ステートメントまたはバッチをコンパイルして実行プランを作成します。カーソルは作成しません。 コンパイルされたステートメントは、sp_cursorexecute で後で使用できます。 、Sp_cursorexecute と組み合わせると、この手順では、sp_cursoropen と同じ機能しますが、2 つのフェーズに分割されます。 sp_cursorprepare は、ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットで 3 を = です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 >  指定するための規則、 *stmt*値は、sp_cursoropen 例外の場合と同じを*stmt*文字列データ型である必要があります**ntext**します。  
   
  *options*  
- カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*、従う必要があります**int**値を入力します。  
+ カーソルの結果の説明を返すオプションのパラメーターは、列を設定します。 *オプション*、従う必要があります**int**値を入力します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -83,13 +83,13 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x10000|KEYSET_ACCEPTABLE|  
 |0x20000|DYNAMIC_ACCEPTABLE|  
 |0x40000|FORWARD_ONLY_ACCEPTABLE|  
-|0x80000|STATIC_ACCEPTABLE|  
+|これに対して、0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
  要求された値がによって定義されたカーソルに適していない可能性があるため*stmt*、このパラメーターは両方として機能入力し、出力します。 このような場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって適切な値が割り当てられます。  
   
  *ccopt*  
- コンカレンシー制御オプションです。 *ccopt* 、省略可能なパラメーターが、次のいずれかを必要な**int**値を入力します。  
+ 同時実行制御オプションです。 *ccopt* 、省略可能なパラメーターが、次のいずれかを必要な**int**値を入力します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -103,23 +103,23 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x10000|READ_ONLY_ACCEPTABLE|  
 |0x20000|SCROLL_LOCKS_ACCEPTABLE|  
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
-|0x80000|OPTIMISITC_ACCEPTABLE|  
+|これに対して、0x80000|OPTIMISITC_ACCEPTABLE|  
   
  同様*scrollpt*、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]要求されたものとは別の値を割り当てることができます。  
   
 ## <a name="remarks"></a>コメント  
- RPC 状態パラメーターは次のいずれかになります。  
+ RPC 状態パラメーターは、次のいずれか。  
   
 |値|Description|  
 |-----------|-----------------|  
 |0|成功|  
 |0x0001|失敗|  
-|1FF6|メタデータを返すことができませんでした。<br /><br /> 注:これは、ステートメントで結果セットが生成されないためです (INSERT ステートメントや DDL ステートメントなど)。|  
+|1FF6|メタデータを返しませんでした。<br /><br /> 注:この理由は、ステートメントが結果セットを生成できません。たとえば、INSERT または DDL ステートメントを勧めします。|  
   
 ## <a name="examples"></a>使用例  
  ときに*stmt*がパラメーター化と*scrollopt* PARAMETERIZED_STMT の値が ON に、文字列の形式は次のようには。  
   
- { *\<ローカル変数名 > * *\<データ型 >* } [,...*n* ]  
+ { *\<local variable name>**\<data type>* } [ ,...*n* ]  
   
 ## <a name="see-also"></a>参照  
  [sp_cursorexecute &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

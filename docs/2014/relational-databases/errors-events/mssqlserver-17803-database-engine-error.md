@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_17803 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 17803 (Database Engine error)
 ms.assetid: 28591a19-258d-4891-b78a-4686789bb2d7
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 683806941947a6da888264e4d0e4e3807200ef13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869547"
 ---
 # <a name="mssqlserver17803"></a>MSSQLSERVER_17803
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>詳細  
   
 |||  
@@ -33,9 +34,8 @@ ms.locfileid: "48160932"
 |メッセージ テキスト|接続の確立中にメモリの割り当てエラーが発生しました。 不要なメモリ負荷を減らすか、システム メモリを増やしてください。 接続が閉じられました。%.*ls|  
   
 ## <a name="explanation"></a>説明  
- サーバーのメモリが不足しています。  
+サーバーのメモリが不足しています。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- サーバーのメモリが不足している原因を特定してください。 一般的なメモリのトラブルシューティング手順を使用できます。  
-  
+サーバーのメモリが不足している原因を特定してください。 一般的なメモリのトラブルシューティング手順を使用できます。  
   

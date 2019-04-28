@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1143efc4d5a695dd00766d1f78132f7e69adc46
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815289"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性レプリカが参加していない
     
@@ -28,7 +28,7 @@ ms.locfileid: "54206258"
 |||  
 |-|-|  
 |**ポリシー名**|可用性レプリカの参加状態|  
-|**問題点**|可用性レプリカが参加していません。|  
+|**問題**|可用性レプリカが参加していません。|  
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性レプリカ|  
   

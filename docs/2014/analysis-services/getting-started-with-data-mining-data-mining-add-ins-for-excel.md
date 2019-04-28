@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730727"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>データ マイニングの概要 (Excel 用データ マイニング アドイン)
   データ マイニングとは、"データ内で有意なパターンを見つけるプロセス" を指しています。 データ マイニングは、従来の BI を使用してデータの探索と理解を深めるプロセスに対する、自然な補足手段です。 コンピューター アルゴリズムでは、大量のデータを処理し、その中に隠れたパターンや傾向を見つけ出すことができます。  

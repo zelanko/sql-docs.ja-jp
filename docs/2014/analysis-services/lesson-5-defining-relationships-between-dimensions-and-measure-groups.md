@@ -1,5 +1,5 @@
 ---
-title: レッスン 5:ディメンションとメジャー グループ間のリレーションシップを定義する |Microsoft Docs
+title: 'レッスン 5: ディメンションとメジャー グループ間のリレーションシップを定義する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728128"
 ---
-# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>レッスン 5:ディメンションとメジャー グループ間のリレーションシップを定義します。
+# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>レッスン 5: ディメンションおよびメジャー グループ間のリレーションシップの定義
   このチュートリアルの前のレッスンでは、キューブに追加したデータベース ディメンションを、1 つ以上のキューブ ディメンションの基準として使用できることを学習しました。 このレッスンでは、キューブ ディメンションとメジャー グループの間に各種のリレーションシップを定義し、これらのリレーションシップのプロパティを指定します。  
   
  詳細については、「 [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」を参照してください。  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ea5615fcc88e81be11fb833761bb67537b0acd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731464"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>[ディメンションの書き戻しの有効化] (ビジネス インテリジェンス ウィザード)
   **[ディメンションの書き戻しの有効化]** ページを使用すると、選択したディメンションの書き戻し機能を有効または無効にできます。  

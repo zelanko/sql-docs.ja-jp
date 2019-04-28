@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44d2e66f8f1975662d369ece28b51e82a2ecf392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730393"
 ---
 # <a name="go-to-dialog-box-ssas"></a>[ジャンプ] ダイアログ ボックス (SSAS)
   **[ジャンプ]** ダイアログ ボックスを使用すると、テーブル内の特定の列に移動できます。  

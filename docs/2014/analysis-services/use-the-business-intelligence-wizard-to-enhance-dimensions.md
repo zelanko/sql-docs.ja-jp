@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793361"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>ビジネス インテリジェンス ウィザードを使用したディメンションの拡張
   ビジネス インテリジェンス ウィザードを使用すると、ディメンション プロパティやディメンション オブジェクト プロパティの変更だけでなく、ディメンションの構成および拡張を行うことができます。  
@@ -35,10 +35,10 @@ ms.locfileid: "48173782"
   
 -   [ディメンションの書き戻しの有効化](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ディメンションを定義します。](multidimensional-models/define-database-dimensions.md)   
- [ディメンション属性のプロパティの参照](multidimensional-models/dimension-attribute-properties-reference.md)   
- [ユーザー定義階層を作成します。](multidimensional-models/user-defined-hierarchies-create.md)   
+ [ディメンションの属性のプロパティの参照](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)   
  [属性リレーションシップを定義します。](multidimensional-models/attribute-relationships-define.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

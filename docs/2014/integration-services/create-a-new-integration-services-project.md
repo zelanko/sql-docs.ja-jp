@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e08af39df21d7a1774e1d7eed5e0f7602fd3489
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832338"
 ---
 # <a name="create-a-new-integration-services-project"></a>新しい Integration Services プロジェクトを作成する
   この手順では、新しいプロジェクトと新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ソリューションを作成します。  

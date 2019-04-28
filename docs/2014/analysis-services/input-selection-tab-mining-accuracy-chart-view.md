@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729896"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>[入力の選択] タブ ([マイニング精度チャート] ビュー)
   **[マイニング精度チャート]** デザイナーの **[入力の選択]** タブを使用すると、モデルのテストや精度チャートの作成に使用するデータのソースを指定できます。  
   
- **詳細情報:** 「[テストおよび検証 &#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)」  
+ **詳細:**[テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>および  
  **[予測列と****値の同期]**  
@@ -36,7 +36,7 @@ ms.locfileid: "48120872"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[表示]**|グラフに表示するマイニング モデル内の各予測可能列の名前の横にあるボックスをオンにします。<br /><br /> グラフが複雑で見づらい場合は、1 つまたは複数の列の横にあるボックスをオフにすると、見やすくなります。<br /><br /> 注: 1 つ以上の列が選択されていないと精度チャートを作成できません。|  
+|**[表示]**|グラフに表示するマイニング モデル内の各予測可能列の名前の横にあるボックスをオンにします。<br /><br /> グラフが複雑で見づらい場合は、1 つまたは複数の列の横にあるボックスをオフにすると、見やすくなります。<br /><br /> 注:少なくとも 1 つの列が選択されていないと精度チャートを作成できません。|  
 |**[マイニング モデル]**|マイニング構造に含まれるマイニング モデルを一覧表示します。|  
 |**予測可能列名**|リフト チャートの作成に使用される、マイニング モデル内に含まれた予測可能列を選択します。|  
 |**値を予測します。**|予測可能列の値を選択します。 この値を空白にすると、リフト チャートは、予測可能列のすべての状態に対してモデルがどのように実行されるかを予測します。|  
@@ -72,6 +72,6 @@ ms.locfileid: "48120872"
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [マイニング モデルにフィルターを適用します。](data-mining/apply-a-filter-to-a-mining-model.md)   
- [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

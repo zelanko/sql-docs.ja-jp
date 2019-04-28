@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728028"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX ビルダー (Analysis Services - 多次元データ)
   **または** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [MDX ビルダー] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、多次元式 (MDX) を作成できます。 表示することができます、 **MDX ビルダー** ] ダイアログ ボックスをクリックして、 **MDX の編集**省略記号ボタン (**.**) の**キューブ コンテンツの読み取りを許可する**オプション、**臨時セルのセキュリティでセル コンテンツの読み取りを許可する**オプション、または**読み取りを許可して[キューブ コンテンツの書き込みが**オプションを**セル データ**のページ**ロール デザイナー**します。  

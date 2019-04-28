@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721396"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>SQL Server レプリケーション ディストリビューターのプロパティ
 このトピックでは、プロパティを説明します、**全般**、**パブリッシャー**、および**ディストリビューション データベース**内でページ、**ディストリビューターのプロパティ**ウィンドウ。 
@@ -90,7 +90,7 @@ ms.locfileid: "54135698"
 -   **[パブリッシャーのプロパティ]** ダイアログ ボックス。エージェントは、このダイアログ ボックスで指定された資格情報を使用してパブリッシャーに接続します。このダイアログ ボックスは、 **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページから開きます。    
 -   サブスクリプションの新規作成ウィザードの [ディストリビューション エージェント]。エージェントは、ここで指定された資格情報を使用してサブスクライバーに接続します。  
   
- 詳細については、\\ [Replication Agent Security Model](security/replication-agent-security-model.md)を参照してください。 
+ 詳細については、次を参照してください。 \\ [Replication Agent Security Model](security/replication-agent-security-model.md)します。 
 
   
 ## <a name="see-also"></a>参照  

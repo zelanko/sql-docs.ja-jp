@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794483"
 ---
 # <a name="translations-analysis-services"></a>翻訳 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多次元のみ  
@@ -54,7 +54,7 @@ ms.locfileid: "50145957"
   
  日付、時刻、通貨の形式は、翻訳を通じては実装されません。 クライアントのロケールに基づいてカルチャに固有の形式を動的に提供するには、通貨変換ウィザードと `FormatString` プロパティを使用します。 「[通貨換算 (Analysis Services)](currency-conversions-analysis-services.md)」および「[FormatString 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)」をご覧ください。  
   
- Analysis Services のチュートリアルの「[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 」では、翻訳を作成してテストする手順について説明しています。  
+ [レッスン 9:パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)Analysis Services チュートリアルでは手順については説明、作成すると、翻訳をテストします。  
   
 ## <a name="defining-translations"></a>翻訳の定義  
  翻訳を定義するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、ディメンション、またはキューブ オブジェクトの子として `Translation` オブジェクトを作成します。 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] を使用してソリューションを開き、翻訳を定義します。  
