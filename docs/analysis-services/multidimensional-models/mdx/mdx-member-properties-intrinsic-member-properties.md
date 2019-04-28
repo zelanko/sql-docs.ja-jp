@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740252"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX メンバー プロパティ - 固有メンバー プロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -131,7 +131,7 @@ ms.locfileid: "53206881"
 ### <a name="example"></a>例  
  固有プロパティを返す MDX クエリの例を次に示します。  
   
- **例 1:クエリで状況依存の固有プロパティを使用します。**  
+ **例 1: クエリで状況依存の固有プロパティを使用します。**  
   
  次の例では、各製品カテゴリの親 ID、キー、および名前が返されます。 プロパティがメジャーとしてどのように公開されているかを確認してください。 これにより、SSMS の [メンバーのプロパティ] ダイアログではなく、クエリの実行時にセル セットのプロパティを表示できます。 既に配置されているキューブからメンバー メタデータを取得する場合に、このようなクエリを実行することがあります。  
   
@@ -149,7 +149,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **例 2:非状況依存の固有プロパティ**  
+ **例 2: 非状況依存の固有プロパティ**  
   
  次の例は、非状況依存の固有プロパティの完全な一覧です。 SSMS でクエリを実行した後、個々のメンバーをクリックすると、[メンバーのプロパティ] ダイアログ ボックスにプロパティが表示されます。  
   
@@ -203,7 +203,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
  [Children &#40;MDX&#41;](../../../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   

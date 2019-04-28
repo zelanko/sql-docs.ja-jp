@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703196"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>[マッピングの変更] ダイアログ ボックス (マイニング精度チャート)
   **[マッピングの変更]** ダイアログ ボックスを使用すると、入力列をマイニング モデルの列と結合する方法を変更できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 列が列名とデータ型に基づいて自動的にマップされますが、このダイアログ ボックスを使用して列マッピングを変更することができます。 列マッピングを変更する場合は、外部データ ソースにある列のデータ型とコンテンツの種類が、テスト対象のマイニング モデルにある列のデータ型とコンテンツの種類と一致していることを確認する必要があります。  
@@ -33,6 +33,6 @@ ms.locfileid: "48106482"
 ## <a name="see-also"></a>参照  
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
   

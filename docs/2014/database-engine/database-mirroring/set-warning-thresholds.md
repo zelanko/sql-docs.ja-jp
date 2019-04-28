@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754140"
 ---
 # <a name="set-warning-thresholds"></a>[警告しきい値の設定]
   このダイアログ ボックスでは、 **[データベース ミラーリング モニター]** ダイアログ ボックスのナビゲーション ツリーで選択されているデータベースの警告しきい値を有効にしたり構成したりできます。  
@@ -41,7 +41,7 @@ ms.locfileid: "48195479"
 -   [**に接続**  *に接続*]  
   
     > [!NOTE]  
-    >  **sysadmin** 固定サーバー ロールのメンバーでない場合、ステータスは " **に接続** *に接続* **(制限された権限)**" になります。  
+    >   **sysadmin** 固定サーバー ロールのメンバーでない場合、ステータスは " **に接続** *に接続* **(制限された権限)**" になります。  
   
  パートナー サーバーの各インスタンスについて、その名前が *サーバー インスタンスと接続状態* を示すフィールドに表示されます。 一番上のフィールドには、モニターを開始した時点におけるプリンシパル サーバーが表示されます。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48195479"
   
  イベントがパフォーマンスのイベント ログに書き込まれるのは、状態テーブルの更新時に、該当する値がしきい値以上になった場合だけです。 状態が更新されるまでの間に、一時的にピーク値がしきい値に達した場合、そのピーク値は反映されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

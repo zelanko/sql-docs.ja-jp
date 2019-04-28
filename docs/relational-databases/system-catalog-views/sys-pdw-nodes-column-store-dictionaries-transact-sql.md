@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 53637fb3ae70cd73e1bbf1cb95a8a4ca3775b812
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666459"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "56010933"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|パーティション ID を示します。 データベース内で一意です。|  
 |**hobt_id**|**bigint**|この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。|  
-|**column_id**|**int**|列ストアの列の ID。|  
-|**dictionary_id**|**int**|ディクショナリの ID。|  
+|**column_id**|**int**|列ストア列の ID。|  
+|**dictionary_id**|**int**|辞書の id。|  
 |**version**|**int**|ディクショナリの形式のバージョン。|  
 |**type**|**int**|ディクショナリの種類:<br /><br /> 1-ハッシュ ディクショナリを格納している**int**値<br /><br /> 2-非使用<br /><br /> 3-ハッシュ ディクショナリの文字列値を含む<br /><br /> 4-ハッシュ ディクショナリを格納している**float**値|  
-|**last_id**|**int**|ディクショナリの最後のデータ ID。|  
+|**last_id**|**int**|ディクショナリ内の最後のデータ id。|  
 |**entry_count**|**bigint**|ディクショナリ内のエントリの数。|  
 |**on_disc_size**|**bigint**|ディクショナリのサイズ (バイト単位)。|  
-|**pdw_node_id**|**int**|一意の識別子、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ノードです。|  
+|**pdw_node_id**|**int**|一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|  
   
 ## <a name="permissions"></a>アクセス許可  
  VIEW SERVER STATE 権限が必要です。  

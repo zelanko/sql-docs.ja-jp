@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692090"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>マイニング モデルへのフィルターの適用
   入れ子になったテーブルがマイニング構造に含まれている場合は、ケース テーブル、入れ子になったテーブル、またはその両方にフィルターを適用できます。  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  **[値]** ボックスをクリックし、ボックスに値を入力します。  
   
-     たとえば、列に `Income` を選択して、"次の値より大きい" 演算子 (>) を選択し、「`30000`」と入力します。  
+     たとえば、選択`Income`選択、列と、大きい演算子 (>) と入力しより`30000`します。  
   
 9. グリッドの次の行をクリックします。  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 演算子を選択し、手順 7. と手順 8. に示したように値を入力します。  
   
-     たとえば、列に再度 `Income` を選択して、"次の値より小さい" 演算子 (<) を選択し、「`40000`」と入力します。  
+     たとえば、 `Income` 、もう一度列として小なり演算子 (<) を選択し、入力`40000`します。  
   
 12. グリッドの次の行をクリックします。  
   

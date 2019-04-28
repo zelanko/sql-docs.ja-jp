@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691958"
 ---
 # <a name="sparse-columns-support-odbc"></a>スパース列のサポート (ODBC)
-  このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC でのスパース列のサポートについて説明します。 スパース列に対する ODBC サポートを示すサンプルについては、[スパース列を含むテーブルに対して SQLColumns を呼び出す](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)を参照してください。 スパース列の詳細については、[SQL Server Native Client におけるスパース列のサポート](../features/sparse-columns-support-in-sql-server-native-client.md)を参照してください。  
+  このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC でのスパース列のサポートについて説明します。 スパース列に対する ODBC サポートを示すサンプルについては、次を参照してください。[スパース列を含むテーブルに対して SQLColumns を呼び出す](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)します。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../features/sparse-columns-support-in-sql-server-native-client.md)します。  
   
 ## <a name="statement-metadata"></a>ステートメント メタデータ  
- アプリケーション パラメーター記述子 (APD) の記述子フィールドと SQL_SOPT_SS_NAME_SCOPE ステートメント属性は、追加の値 SQL_SS_NAME_SCOPE_EXTENDED および SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET を受け入れます。 これらの値がによって返される結果セットに含まれる列を指定[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)します。 SQL_SOPT_SS_NAME_SCOPE の詳細については、[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)を参照してください。  
+ アプリケーション パラメーター記述子 (APD) の記述子フィールドと SQL_SOPT_SS_NAME_SCOPE ステートメント属性は、追加の値 SQL_SS_NAME_SCOPE_EXTENDED および SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET を受け入れます。 これらの値がによって返される結果セットに含まれる列を指定[SQLColumns](../../native-client-odbc-api/sqlcolumns.md)します。 SQL_SOPT_SS_NAME_SCOPE の詳細については、次を参照してください。 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)します。  
   
  新しい実装行記述子 (IRD) の、SQL_CA_SS_IS_COLUMN_SET という名前の読み取り専用 SQLSMALLINT フィールドを使用して、列が XML `column_set` 値かどうかを確認できます。 SQL_CA_SS_IS_COLUMN_SET は、値 SQL_TRUE および SQL_FALSE を受け取ります。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48124332"
   
 -   [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
   
   

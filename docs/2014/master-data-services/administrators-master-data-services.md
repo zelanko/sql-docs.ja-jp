@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765935"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、モデル管理者と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] システム管理者の 2 種類の管理者があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "52778244"
   
 -   追加、削除、およびすべてのモデルのすべてのマスター データを更新、**エクスプ ローラー**機能領域。  
   
-  システム管理者として割り当てられているユーザーを変更できます。 詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
+  システム管理者として割り当てられているユーザーを変更できます。 詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
 ## <a name="comparing-administrator-types"></a>管理者の種類の比較  
   

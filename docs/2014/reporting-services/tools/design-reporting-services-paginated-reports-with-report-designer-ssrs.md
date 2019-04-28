@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691683"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用してレポートをデザインする (SSRS)
   レポート デザイナーを使用すると、フル機能の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートおよびレポート ソリューションを作成できます。 レポート デザイナーには、データ ソース、データセット、およびクエリ、データ領域とフィールドのレポート レイアウトの配置、連携するパラメーターとレポートのセットなどの対話機能を定義できるグラフィカル インターフェイスが用意されています。  

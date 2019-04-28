@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699144"
 ---
 # <a name="subselects-in-queries"></a>クエリのサブセレクト
   サブセレクト式とは、入れ子になった SELECT 式です。この式は、外側にある外部の SELECT が評価されているキューブ空間を制限するために使用されます。 サブセレクトにより、すべての計算が評価される新しい空間を定義できます。  
@@ -203,7 +203,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$29,358,677.22|$80,450,596.98|  
-|United States|$9,389,789.51|$80,450,596.98|  
+|米国|$9,389,789.51|$80,450,596.98|  
 |Oregon|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
 |Washington|$2,467,248.34|$80,450,596.98|  
@@ -258,7 +258,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||All Products|Accessory|Components|Mountain|Road|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
-|United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
+|米国|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -283,7 +283,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||All Products|Accessory|Components|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|米国|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   

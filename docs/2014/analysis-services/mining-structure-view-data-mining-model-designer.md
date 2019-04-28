@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25de20d08a477eb4a1bcb1d98f17ad7c179f356d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702932"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>[マイニング構造] ビュー (データ マイニング モデル デザイナー)
   **[マイニング構造]** ビューを使用すると、マイニング構造を変更したり、マイニング構造および関連付けられているすべてのマイニング モデルを処理したりできます。  
@@ -33,7 +33,7 @@ ms.locfileid: "48144582"
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [予測クエリ ビルダー&#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)  
   

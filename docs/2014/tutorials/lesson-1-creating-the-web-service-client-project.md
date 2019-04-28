@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676062"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>レッスン 1:Web サービス クライアント プロジェクトの作成
   このチュートリアルでは、レポート サーバー Web サービスにアクセスする簡単なコンソール アプリケーションを作成します。 ここでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で開発することを前提としています。  

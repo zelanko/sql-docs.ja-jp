@@ -29,11 +29,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699135"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>メンバー、組、およびセットの操作 (MDX)
   MDX には、1 つ以上のメンバー、組、またはセットを返す操作や、メンバー、組、またはセットに対する操作を行うための関数が各種用意されています。  
@@ -49,7 +49,7 @@ FROM [Adventure Works]
   
 ```  
   
- 使用することも、`FirstChild`関数を次の例のように、同じメンバーを返します。  
+ または、次の例のように、`FirstChild` 関数を使用して同じメンバーを返すこともできます。  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -57,7 +57,7 @@ FROM [Adventure Works]
   
 ```  
   
- MDX メンバー関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)」をご覧ください。  
+ MDX メンバー関数の詳細については、「 [MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)」をご覧ください。  
   
 ## <a name="tuple-functions"></a>組関数  
  MDX には、組を返す関数がいくつかあります。これらの関数は、組を使用できる任意の箇所で使用できます。 たとえば、[Item &#40;組&#41; &#40;MDX&#41;](/sql/mdx/item-tuple-mdx) 関数はセットから最初の組を抽出するために使用できます。これは、セットに含まれているのが単一の組であるとわかっており、組を 1 つ必要とする関数にその組を渡す場合に非常に便利です。  
@@ -127,8 +127,8 @@ FROM [Adventure Works]
  文字列関数は、MDX 式に対して操作を実行して文字列を返します。 たとえば、[UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx) 関数は、ディメンション、階層、レベル、メンバーの一意の名前を格納した文字列値を返します。 文字列関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX 関数リファレンス&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX の主な概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

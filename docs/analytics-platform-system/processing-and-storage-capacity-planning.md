@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678552"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System での処理とストレージの容量
 お客様のビジネス要件は、データのスケール ユニットの数と、Analytics Platform System (APS) アプライアンスで必要なコンピューティング ノードのディスクのサイズを決定します。 これらの処理およびストレージの計算を使用して購入および計画の決定、容量を進めます。  
@@ -50,7 +50,7 @@ ms.locfileid: "54361572"
   
 説明:  
   
--   **データのスケール ユニット**アプライアンスごと。 データのスケール ユニットの詳細については、[分析プラットフォーム システムのハードウェア コンポーネント](hardware-components.md)を参照してください。  
+-   **データのスケール ユニット**アプライアンスごと。 データのスケール ユニットの詳細については、次を参照してください。[分析プラットフォーム システムのハードウェア コンポーネント](hardware-components.md)します。  
   
 -   **コンピューティング ノード**アプライアンスごと。  
   

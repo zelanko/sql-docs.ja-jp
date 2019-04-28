@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e061269ebf864a93d6dde50455627cf8e2ea780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659215"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  この関数は、入力ケースが既存のモデル内に収まる確率を返します。 クラスター モデルでのみ使用されます。  
+  この関数は、既存のモデル内に入力したケースが収まる確率値を返します。 クラスター モデルでのみ使用されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,30 +32,30 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  NORMALIZED  
  戻り値は、モデル内のケースの確率をモデルのないケースの確率で除算した結果を格納します。  
   
- NONNORMALIZED  
+ 正規化  
  戻り値は、ケースの未加工の確率、つまりケース属性の確率の積を格納します。  
   
 ## <a name="applies-to"></a>適用対象  
  使用して作成されたモデルの[!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタ リングと[!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター アルゴリズムです。  
   
 ## <a name="return-type"></a>戻り値の型  
- 0 ～ 1 の範囲の倍精度浮動小数点値です。 値が 1 に近いほど、このモデルでケースが発生する確率が高くなります。 値が 0 に近いほど、このモデルでケースが発生する確率が低くなります。  
+ 0 ~ 1 の間、浮動小数点数を倍精度。 値が 1 に近い場合にこのモデルで発生する可能性が高くを示します。 値が 0 に近いほど、このモデルでケースが発生する確率が低くなります。  
   
 ## <a name="remarks"></a>コメント  
  既定の結果、 **PredictCaseLikelihood**関数を正規化します。 通常、正規化された値は、ケース内の属性の数が増え、任意の 2 つのケースの未加工の確率の差が小さくなるほど、有用性が増します。  
   
- x と y を指定した、次の式を使用して、正規化された値を計算します。  
+ 次の式は、指定した x および y は、正規化された値の計算に使用されます。  
   
 -   x = クラスタリング モデルに基づいたケースの確率値  
   
--   y = トレーニング ケースの数に基づいたケースの対数尤度として計算された、周辺確率の値  
+-   y = トレーニング ケースの数に基づいたケースの対数尤度として計算周辺確率値の大文字と小文字  
   
--   Z = Exp (log(x) - Log(Y))  
+-   Z = Exp( log(x) - Log(Y))  
   
  正規化された = (z/(1 + z))  
   
 ## <a name="examples"></a>使用例  
- 次の例は、指定したケースが [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW データベースに基づいたクラスター モデル内に発生する確率値を返します。  
+ 次の例は、指定したケースがクラスター モデルに基づく内で発生する可能性を返します、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW データベース。  
   
 ```  
 SELECT  

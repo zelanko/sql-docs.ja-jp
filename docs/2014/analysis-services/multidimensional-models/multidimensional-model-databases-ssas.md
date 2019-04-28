@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699232"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多次元モデル データベース (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースは、データ ソース、データ ソース ビュー、キューブ、ディメンション、およびロールのコレクションです。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースには、データ マイニング用の構造、およびユーザー定義の関数をデータベースに追加するために使用されるカスタム アセンブリをオプションで含めることができます。  
@@ -50,19 +50,19 @@ ms.locfileid: "48082802"
   
  [Analysis Services データベースの移動](move-an-analysis-services-database.md)  
   
- [多次元データベースの名前変更&#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [多次元データベース名の変更 (Analysis Services)](rename-a-multidimensional-database-analysis-services.md)  
   
  [互換性レベルの多次元データベースの設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [多次元データベースのプロパティ設定&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [多次元データベースのプロパティ設定 (Analysis Services)](set-multidimensional-database-properties-analysis-services.md)  
   
  [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)  
   
  [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services データベースへのオンライン モードでの接続します。](connect-in-online-mode-to-an-analysis-services-database.md)   
- [Analysis Services プロジェクトの作成&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+ [Analysis Services データベースへのオンライン モードでの接続](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Analysis Services プロジェクトの作成 (SSDT)](create-an-analysis-services-project-ssdt.md)   
  [MDX による多次元データのクエリ](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

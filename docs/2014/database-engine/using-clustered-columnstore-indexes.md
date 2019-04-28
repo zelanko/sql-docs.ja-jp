@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773741"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>クラスター化列ストア インデックスの使用
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラスター化 columnstore インデックスを使用するタスクです。  
   
- 列ストア インデックスの概要については、[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)を参照してください。  
+ 列ストア インデックスの概要については、次を参照してください。[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)します。  
   
- クラスター化列ストア インデックスについては、[クラスター化列ストア インデックスを使用して](../relational-databases/indexes/indexes.md)を参照してください。  
+ クラスター化列ストア インデックスについては、次を参照してください。[クラスター化列ストア インデックスを使用して](../relational-databases/indexes/indexes.md)します。  
   
 ## <a name="contents"></a>目次  
   
@@ -84,8 +84,8 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 行グループのサイズ:145,000|0|  
-|1,048,577|1,048,576<br /><br /> 行グループのサイズ:1,048, 576 です。|1|  
-|2,252,152|2,252,152<br /><br /> 行グループのサイズ:1,048, 576、1,048, 576、155,000 できます。|0|  
+|1,048,577|1,048,576<br /><br /> 行グループのサイズ:1,048,576|1|  
+|2,252,152|2,252,152<br /><br /> 行グループのサイズ:1,048,576、1,048,576、155,000|0|  
   
  次の例は、1,048,577 個の行をパーティションに読み込んだ結果を示しています。 この結果では、列ストアに 1 つの圧縮された行グループ (圧縮された列セグメントとして)、およびデルタストアに 1 行があります。  
   

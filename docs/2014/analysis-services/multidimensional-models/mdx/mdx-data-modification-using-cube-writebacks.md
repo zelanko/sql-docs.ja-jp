@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699757"
 ---
 # <a name="using-cube-writebacks-mdx"></a>キューブの書き戻しの使用 (MDX)
   キューブを更新するには、[UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) ステートメントを使用します。 このステートメントを使用すると、特定の値で組を更新できます。 UPDATE CUBE ステートメントを使って効果的にキューブを更新するには、ステートメントの構文、発生し得るエラー条件、および更新操作がキューブに与える影響を理解しておく必要があります。  
@@ -118,6 +118,6 @@ USE_EQUAL_ALLOCATION
 -   書き戻しに含まれるディメンションの粒度の変更。  
   
 ## <a name="see-also"></a>参照  
- [データの変更&#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [データの変更 &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

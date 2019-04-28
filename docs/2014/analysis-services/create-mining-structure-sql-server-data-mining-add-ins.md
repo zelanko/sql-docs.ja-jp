@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679906"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>マイニング構造の作成 (SQL Server データ マイニング アドイン)
   ![マイニング構造の作成 ボタン、データ マイニング リボン](media/dmc-createstruct.gif "Create Mining Structure ボタン、データ マイニング リボン")  
@@ -113,7 +113,7 @@ ms.locfileid: "52542968"
 -   すべてのアルゴリズムが必要です、**キー**列。 Key 列の値は一意でなければなりません。 A **Key Time**列が予測のみに必要またはタイム シリーズ モデル。 .  
   
 ### <a name="requirements"></a>必要条件  
- データ マイニング構造を作成するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続する必要があります。 一時的な構造を操作する場合も同様です。 作成または接続を変更する方法の詳細については、[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)を参照してください。  
+ データ マイニング構造を作成するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続する必要があります。 一時的な構造を操作する場合も同様です。 作成または接続を変更する方法の詳細については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング モデルの作成](creating-a-data-mining-model.md)  

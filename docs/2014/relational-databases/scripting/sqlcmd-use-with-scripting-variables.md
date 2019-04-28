@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666779"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>sqlcmd でのスクリプト変数の使用
   スクリプトで使用される変数は、スクリプト変数と呼ばれます。 スクリプト変数を使用すると、1 つのスクリプトを複数のシナリオで使用できます。 たとえば、1 つのスクリプトを複数のサーバーに対して実行する場合、各サーバー用にスクリプトを変更するのではなく、サーバー名にスクリプト変数を使用することができます。 サーバー名をスクリプト変数で指定することで、同じスクリプトを複数のサーバーで実行することができるようになります。  
@@ -115,7 +115,7 @@ ms.locfileid: "48113782"
 |SQLCMDHEADERS|-H|R/W|"0"|  
 |SQLCMDCOLSEP|-S|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 無制限|  
@@ -341,7 +341,7 @@ ms.locfileid: "48113782"
   
  `>2 GO`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティの使用](sqlcmd-use-the-utility.md)   
  [-b](../../tools/sqlcmd-utility.md)   
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  

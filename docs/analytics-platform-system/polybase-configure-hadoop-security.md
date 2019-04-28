@@ -10,15 +10,15 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c916fef2b70333c2d5bc89fec5c86d61482cdba7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678610"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase の構成と Hadoop 用のセキュリティ
 
-この記事から Hadoop への AP PolyBase 接続性に影響するさまざまな構成設定の参照を提供します。 チュートリアルについては、PolyBase は、[PolyBase は](configure-polybase-connectivity-to-external-data.md)を参照してください。
+この記事から Hadoop への AP PolyBase 接続性に影響するさまざまな構成設定の参照を提供します。 チュートリアルについては、PolyBase は、次を参照してください。 [PolyBase は](configure-polybase-connectivity-to-external-data.md)します。
 
 > [!NOTE]
 > AP のすべてのコンピューティング ノードと制御ノードでの XML ファイルに変更が必要です。

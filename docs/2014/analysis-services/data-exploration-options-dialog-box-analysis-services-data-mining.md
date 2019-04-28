@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd497b6c4adae9a89ad0907985591675633a9c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679539"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>[データ探索オプション] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [データ探索オプション] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[データの探索]** ダイアログ ボックスのサンプリングおよびグラフ作成オプションを設定できます。 **[データ探索オプション]** ダイアログ ボックスを表示するには、 **[データの探索]** ダイアログ ボックスの **[サンプリング オプション]** をクリックします。  

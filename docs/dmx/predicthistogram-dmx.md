@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659176"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,13 +29,13 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- スカラー列参照またはクラスター列参照です。 除くすべての種類のアルゴリズムで使用できる、[!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション アルゴリズムです。  
+ スカラー列参照またはクラスター列参照。 除くすべての種類のアルゴリズムで使用できる、[!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション アルゴリズムです。  
   
 ## <a name="return-type"></a>戻り値の型  
  テーブルです。  
   
 ## <a name="remarks"></a>コメント  
- ヒストグラムは統計情報列を生成します。 返されたヒストグラムの列構造で使用される列参照の種類によって異なります、 **PredictHistogram**関数。  
+ ヒストグラムには、統計の列が生成されます。 返されたヒストグラムの列構造で使用される列参照の種類によって異なります、 **PredictHistogram**関数。  
   
 ## <a name="scalar-columns"></a>スカラー列  
  \<スカラー列参照 >、ヒストグラムを**PredictHistogram**関数の戻り値は、次の列で構成されます。  
@@ -68,7 +68,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>使用例  
- 次の例は、単一クエリに対して Bike Buyer 列の予測された状態を返します。 クエリを使用して取得される調整済みの確率に基づいて、Bike Buyer 属性の上位 2 つの最も可能性の高い状態も返されます、 **PredictHistogram**関数。  
+ 次の例では、単一クエリで、Bike Buyer 列の予測された状態を返します。 クエリを使用して取得される調整済みの確率に基づいて、Bike Buyer 属性の上位 2 つの最も可能性の高い状態も返されます、 **PredictHistogram**関数。  
   
 ```  
 SELECT  
@@ -92,7 +92,7 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

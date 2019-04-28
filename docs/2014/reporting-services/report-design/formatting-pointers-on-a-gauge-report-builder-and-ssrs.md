@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654469"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)
   ゲージ ポインターは、ゲージの現在の値を示します。 既定では、フィールドが追加されると、フィールドに格納されている各値が 1 つの値に集計され、この値がゲージのポインターで示されます。 複数のポインターをゲージに追加して同じスケール上の複数の値を示したり、複数のスケールを追加し、追加したスケールごとにポインターを追加したりすることもできます。 フィールドをゲージに追加した後は、ポインターの値にコンテキストを指定するため、対応するスケール上で最大値と最小値を設定する必要があります。 また、スケールの重要な領域を示すため、範囲の最小値と最大値を設定するオプションもあります。  

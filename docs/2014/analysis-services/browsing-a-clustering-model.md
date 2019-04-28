@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660094"
 ---
 # <a name="browsing-a-clustering-model"></a>クラスター モデルの参照
   使用してクラスタ リング モデルを開くときに**参照**、クラスタ リングのビューアーに似た、対話型ビューアーでモデルが表示されます[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 ビューアーは、作成されたクラスターを調査して、クラスターの特性を把握するのに役立ちます。 また、個々のセグメントを他のセグメントや母集団と比較対照することもできます。  
@@ -182,7 +182,7 @@ ms.locfileid: "52535721"
   
 -   65 経由でクラスターの顧客の主な特性は、製品を購入しないことに注意してください。 この理由を知るには、クラスターを参照してグループを比較します。または、デシジョン ツリー モデルや Naïve Bayes モデルなど、因果関係の調査に適したアルゴリズムを使用して関連モデルを作成します。  
   
--   このクラスター (またはすべてのクラスター) の属性と確率の完全な一覧を取得するには、クエリを作成します。 クラスター モデルに対するクエリの例については、[クラスタ リング モデルのクエリ例](data-mining/clustering-model-query-examples.md)を参照してください。  
+-   このクラスター (またはすべてのクラスター) の属性と確率の完全な一覧を取得するには、クエリを作成します。 クラスター モデルに対するクエリの例については、次を参照してください。[クラスタ リング モデルのクエリ例](data-mining/clustering-model-query-examples.md)します。  
   
  [ページのトップへ](#BKMK_Tabs)  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52535721"
   
      ビューアーで画像の作成に使用された基になる統計は、テーブルとして Excel に保存されるため、フィルターと並べ替え、実際の確率値の表示ができます。  
   
-     Excel の使用に加えて、Visio 用のクラスター ビューアーを試すことをお勧めします。データ ポイントを表示できる他に、グラフを全面的に変更し強化することもできます。 詳細については、[クラスター ダイアグラムのチュートリアル&#40;データ マイニング アドインで&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md)を参照してください。  
+     Excel の使用に加えて、Visio 用のクラスター ビューアーを試すことをお勧めします。データ ポイントを表示できる他に、グラフを全面的に変更し強化することもできます。 詳細については、次を参照してください。[クラスター ダイアグラムのチュートリアル&#40;データ マイニング アドインで&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md)します。  
   
  **ヒント**  
   

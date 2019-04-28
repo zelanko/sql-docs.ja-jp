@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767554"
 ---
 # <a name="lesson-2-adding-looping"></a>レッスン 2:ループの追加
   「[レッスン 1: プロジェクトと基本パッケージ作成](lesson-1-create-a-project-and-basic-package-with-ssis.md)、単一のフラット ファイル ソースからデータを抽出、変換された、参照変換を使用してデータおよびにデータが最後に読み込まれているパッケージを作成し、 **FactCurrency**ファクト テーブルの**AdventureWorksDW2012**サンプル データベース。  
@@ -56,14 +56,14 @@ ms.locfileid: "58385300"
   
 -   [手順 2:追加して、Foreach ループ コンテナーの構成](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [ステップ 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [手順 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 -   [手順 4:レッスン 2 のチュートリアル パッケージのテスト](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
  [ステップ 1: レッスン 1 パッケージのコピー](lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [For ループ コンテナー](control-flow/for-loop-container.md)  
   
   

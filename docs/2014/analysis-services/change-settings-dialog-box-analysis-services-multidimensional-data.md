@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681169"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)
   **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [設定の変更] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[処理]** ダイアログ ボックスに示されているオブジェクトの処理を制御する設定を変更できます。 **[設定の変更]** ダイアログ ボックスを表示するには、 **[処理]** ダイアログ ボックスの **[設定の変更]** をクリックします。  

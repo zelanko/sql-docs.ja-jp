@@ -11,18 +11,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467909"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
   加え、 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、インメモリ OLTP を使用するための要件を次に示します。  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の 64 ビット Enterprise Edition、Developer Edition、または Evaluation Edition。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、メモリ最適化テーブルおよびインデックスでデータを保持するために十分なメモリが必要です。 行バージョンも保持するためには、メモリ最適化テーブルおよびインデックスの予想サイズの 2 倍となるメモリ量を用意する必要があります。 ただし、必要なメモリの実際の容量はワークロードによって異なります。 メモリの使用量を監視し、必要に応じて調整を加える必要があります。 メモリ最適化テーブル データのサイズは、プールの容量のうち、許可されたパーセンテージを超えないようにする必要があります。 メモリ最適化テーブルのサイズを検出するには、[sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、メモリ最適化テーブルおよびインデックスでデータを保持するために十分なメモリが必要です。 行バージョンも保持するためには、メモリ最適化テーブルおよびインデックスの予想サイズの 2 倍となるメモリ量を用意する必要があります。 ただし、必要なメモリの実際の容量はワークロードによって異なります。 メモリの使用量を監視し、必要に応じて調整を加える必要があります。 メモリ最適化テーブル データのサイズは、プールの容量のうち、許可されたパーセンテージを超えないようにする必要があります。 メモリ最適化テーブルのサイズを検出するには、次を参照してください。 [sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)します。  
   
      データベースにディスク ベース テーブルがある場合、それらのテーブルのバッファー プールとクエリ処理に十分なメモリを提供する必要があります。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "53352421"
   
 -   インメモリ OLTP をインストールするには、 **のインストール時に** [データベース エンジン サービス] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を選択します。  
   
-     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-高度な**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
+     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-高度な**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a> [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
--   データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)を参照してください。  
+-   データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、次を参照してください。[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)します。  
   
 -   このリリースの [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] は、2 または 4 ソケットおよび 60 未満のコアを備えたシステムで適切に機能するように設定されています。  
   

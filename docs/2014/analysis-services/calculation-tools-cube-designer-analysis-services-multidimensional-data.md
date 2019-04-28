@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61aed2ac785c628d7a67df39af13aaf0a7c74914
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681118"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>計算ツール (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブの **[計算ツール]** ペインを使用すると、計算に使用するメタデータ、関数、およびテンプレートを検索できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "48104907"
 ## <a name="context-menu"></a>コンテキスト メニュー  
  **[計算ツール]** ペインで要素を右クリックして表示されるショートカット メニューでは、次のオプションを使用できます。  
   
- **[コピー]**  
+ **コピー**  
  **[メタデータ]** または **[関数]** で選択した要素をクリップボードにコピーします。  
   
 > [!NOTE]  

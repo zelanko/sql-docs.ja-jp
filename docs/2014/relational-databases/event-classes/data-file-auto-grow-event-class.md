@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d08322000a92c3870f410652b728de0fc844104
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663184"
 ---
 # <a name="data-file-auto-grow-event-class"></a>Data File Auto Grow イベント クラス
   **Data File Auto Grow** イベント クラスは、データ ファイルが自動的に拡張されたことを示します。 データ ファイルが ALTER DATABASE ステートメントを使用して明示的に拡張された場合は、このイベントは発生しません。  

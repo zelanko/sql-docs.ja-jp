@@ -1,5 +1,5 @@
 ---
-title: カスタム メンバー式の定義 |Microsoft ドキュメント
+title: カスタム メンバー式の定義 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666590"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>属性のプロパティ - カスタム メンバー式の定義
+# <a name="attribute-properties---define-custom-member-formulas"></a>属性のプロパティ - カスタム メンバー式を定義する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   カスタム メンバー式と呼ばれる多次元式 (MDX) を定義すると、指定した属性のメンバーに値を指定できます。 データ ソース ビューからのテーブルの列は、属性のメンバーごとに、そのメンバーの値の指定に使用される式を提供します。  
   
- カスタム メンバー式により、メンバーに関連付けられたセル値が判別され、メジャーの集計関数が上書きされます。 カスタム メンバー式は、MDX で記述します。 各カスタム メンバー式は、1 つのメンバーに適用されます。 カスタム メンバー式は、ディメンション テーブルまたはディメンション テーブルとの外部キー リレーションシップを持つ別のテーブルに格納されます。  
+ カスタム メンバー式により、メンバーに関連付けられたセル値が判別され、メジャーの集計関数がオーバーライドされます。 カスタム メンバー式は、MDX で記述します。 各カスタム メンバー式は、1 つのメンバーに適用されます。 カスタム メンバー式は、ディメンション テーブルまたはディメンション テーブルとの外部キー リレーションシップを持つ別のテーブルに格納されます。  
   
  属性の **CustomRollupColumn** プロパティは、属性のメンバーのカスタム メンバー式が含まれている列を指定します。 列の行が空の場合は、メンバーのセル値は通常どおり返されます。 列の式が有効でない場合は、メンバーを使用するセル値が取得されるたびに実行時エラーが発生します。  
   
@@ -29,27 +29,27 @@ ms.locfileid: "34021669"
 ## <a name="evaluating-custom-member-formulas"></a>カスタム メンバー式の評価  
  カスタム メンバー式は、計算されるメンバーとは異なります。 カスタム メンバー式は、ディメンション テーブルに存在しているメンバーに適用され、メンバーの値のみを提供します。 これに対して、計算されるメンバーはディメンション テーブルに格納されず、ディメンションまたは階層に含まれている他のメンバーのデータとメタデータの両方を定義します。  
   
- カスタム メンバー式は、メジャーに関連付けられている集計関数より優先されます。 たとえば、カスタム メンバー式を指定する前に、時間ディメンションの以下のメンバーについて、 **Sum** 集計関数を使用するメジャーが次の値であるとします。  
+ カスタム メンバー式は、メジャーに関連付けられている集計関数をオーバーライドします。 たとえば、カスタム メンバー式を指定する前に、時間ディメンションの以下のメンバーについて、 **Sum** 集計関数を使用するメジャーが次の値であるとします。  
   
--   2003: 2100  
+-   2003:2100  
   
-    -   Quarter 1: 700  
+    -   第 1 四半期700  
   
-    -   Quarter 2: 500  
+    -   第 2 四半期500  
   
-    -   Quarter 3: 100  
+    -   第 3 四半期100  
   
-    -   Quarter 4: 800  
+    -   第 4 四半期800  
   
--   2004: 1500  
+-   2004:1500  
   
-    -   Quarter 1: 600  
+    -   第 1 四半期600  
   
-    -   Quarter 2: 200  
+    -   第 2 四半期200  
   
-    -   Quarter 3: 300  
+    -   第 3 四半期300  
   
-    -   Quarter 4: 400  
+    -   第 4 四半期400  
   
  カスタム メンバー式を使用すると、メンバーの値は代わりにカスタム ロールアップ式によって指定されます。 たとえば、次のカスタム メンバー式を使用すると、時間ディメンションの 2004 メンバーの Quarter 4 子メンバーの値を 450 に指定できます。  
   
@@ -68,6 +68,6 @@ Time.[Quarter 3] * 1.5
   
 ## <a name="see-also"></a>参照  
  [属性と属性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [ディメンションの属性に対するカスタム メンバー式を設定します。](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
+ [ディメンションの属性に対するカスタム メンバー式の設定](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

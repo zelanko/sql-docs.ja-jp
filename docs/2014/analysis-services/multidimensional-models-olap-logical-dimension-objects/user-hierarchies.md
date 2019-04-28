@@ -26,11 +26,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702483"
 ---
 # <a name="user-hierarchies"></a>ユーザー階層
   ユーザー定義の階層は、ユーザー定義階層で使用される属性の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ディメンションのメンバーを階層構造に整理し、キューブ内のナビゲーション パスを提供します。 たとえば、次のテーブルでは、時間ディメンションにディメンション テーブルを定義します。 ディメンション テーブルは、年、四半期、月という 3 つの属性をサポートしています。  

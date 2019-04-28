@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679697"
 ---
 # <a name="creating-a-data-mining-model"></a>データ マイニング モデルの作成
   データ モデリングは、適用することでパターンや傾向を作成する場所のデータ マイニング手順*アルゴリズム*データにします。 その後、それらのデータを使って追加の分析を行ったり、予測を立てたりすることができます。  

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681099"
 ---
 # <a name="choosing-a-model"></a>モデルの選択
   **マイニング アルゴリズム:** データ マイニング*アルゴリズム*はデータからパターンを作成するメカニズムです。 このアルゴリズムでは、データのカウント方法、リレーションシップの派生方法、およびパターンの格納方法が定義されます。 アルゴリズムの選択は、分析するデータの種類によっても異なります。 たとえば、アルゴリズムによっては、連続する数値のみを操作できるものもあれば、個々の値の数が制限されている場合に最も効果を発揮するものもあります。  
@@ -110,11 +110,11 @@ ms.locfileid: "52400515"
 |Microsoft アソシエーション ルール|トランザクション中に同時に出現する傾向が強いアイテムを記述するルールを作成します。|[アソシエーション ウィザード&#40;Excel 用データ マイニング クライアント&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [買い物かご分析&#40;Excel 用のテーブル分析ツール&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft クラスタリング|一般レベルの観察では論理的に推論できないデータセット内の関係を識別します。 このアルゴリズムは、反復的な手法を使用して、類似の特性を持つクラスターにレコードをグループ化します。|[カテゴリの検出&#40;Excel 用テーブル分析ツール&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [クラスター ウィザード&#40;データ マイニング Excel 用アドイン&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  
 |Microsoft デシジョン ツリー|データセット内の列の間のリレーションシップに基づいて予測を行い、そのリレーションシップを特定の値におけるツリーに似た一覧の分割としてモデル化します。<br /><br /> 不連続属性と連続属性の両方の予測がサポートされます。|[分類ウィザード&#40;データ マイニング Excel 用アドイン&#41;](classify-wizard-data-mining-add-ins-for-excel.md)<br /><br /> [推定ウィザード&#40;データ マイニング Excel 用アドイン&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)|  
-|Microsoft 線形回帰|ターゲットの変数と検査対象の変数との間に線形の依存関係がある場合に、ターゲットとその入力の間の最も効率的なリレーションシップを検出します。<br /><br /> 連続属性の予測がサポートされます。|このアルゴリズムは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用できます。 Office 用データ マイニング アドインでこのアルゴリズムを使用するモデルを作成するには、構造を作成し、手動でモデルを追加します。<br /><br /> 詳細については、[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)を参照してください。|  
+|Microsoft 線形回帰|ターゲットの変数と検査対象の変数との間に線形の依存関係がある場合に、ターゲットとその入力の間の最も効率的なリレーションシップを検出します。<br /><br /> 連続属性の予測がサポートされます。|このアルゴリズムは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用できます。 Office 用データ マイニング アドインでこのアルゴリズムを使用するモデルを作成するには、構造を作成し、手動でモデルを追加します。<br /><br /> 詳細については、次を参照してください。[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)します。|  
 |Microsoft ロジスティック回帰|結果に影響を与える要因を分析します。この場合、結果は 2 つの値 (通常は、イベントが発生する/発生しない) に制限されます。<br /><br /> 不連続属性と連続属性の両方の予測がサポートされます。|[自動推論&#40;Excel 用テーブル分析ツール&#41;](fill-from-example-table-analysis-tools-for-excel.md)<br /><br /> [ゴール シーク シナリオ&#40;Excel 用テーブル分析ツール&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)<br /><br /> [What If シナリオ&#40;Excel 用テーブル分析ツール&#41;](what-if-scenario-table-analysis-tools-for-excel.md)<br /><br /> [予測計算&#40;Excel 用テーブル分析ツール&#41;](prediction-calculator-table-analysis-tools-for-excel.md)|  
 |Microsoft Naïve Bayes|すべての入力および予測可能列の間のリレーションシップの確率を求めます。 このアルゴリズムは、リレーションシップを検出するためのマイニング モデルをすばやく生成する場合に便利です。<br /><br /> 不連続 (離散) 属性のみを使用できます。<br /><br /> すべての入力属性は独立属性として扱われます。|[主要な影響元の分析&#40;Excel 用テーブル分析ツール&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)|  
-|Microsoft ニューラル ネットワーク|複雑な入力データや、大量のトレーニング データを利用できるが、他のアルゴリズムではルールを簡単に導出できない業務上の問題を分析します。<br /><br /> 複数の属性を予測できます。<br /><br /> 不連続属性の分類、および連続属性の回帰分析を行えます。|このアルゴリズムは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用できます。 Office 用データ マイニング アドインでこのアルゴリズムを使用するモデルを作成するには、構造を作成し、手動でモデルを追加します。<br /><br /> 詳細については、[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)を参照してください。|  
-|Microsoft シーケンス クラスタリング|シーケンス内で同じ順序で発生しているイベントのクラスターを識別します。<br /><br /> シーケンス分析とクラスタリングを組み合わせたアルゴリズムです。|このアルゴリズムは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でのみ使用できます。 ただし、Office 用データ マイニング アドインでこのアルゴリズムを使用するモデルを作成するには、構造を作成し、手動でモデルを追加します。<br /><br /> 詳細については、[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)を参照してください。|  
+|Microsoft ニューラル ネットワーク|複雑な入力データや、大量のトレーニング データを利用できるが、他のアルゴリズムではルールを簡単に導出できない業務上の問題を分析します。<br /><br /> 複数の属性を予測できます。<br /><br /> 不連続属性の分類、および連続属性の回帰分析を行えます。|このアルゴリズムは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用できます。 Office 用データ マイニング アドインでこのアルゴリズムを使用するモデルを作成するには、構造を作成し、手動でモデルを追加します。<br /><br /> 詳細については、次を参照してください。[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)します。|  
+|Microsoft シーケンス クラスタリング|シーケンス内で同じ順序で発生しているイベントのクラスターを識別します。<br /><br /> シーケンス分析とクラスタリングを組み合わせたアルゴリズムです。|このアルゴリズムは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でのみ使用できます。 ただし、Office 用データ マイニング アドインでこのアルゴリズムを使用するモデルを作成するには、構造を作成し、手動でモデルを追加します。<br /><br /> 詳細については、次を参照してください。[高度なモデリング&#40;Excel 用データ マイニング アドインで&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)します。|  
 |Microsoft タイム シリーズ|線形デシジョン ツリーを使用して時間に関連するデータを分析します。<br /><br /> パターンを使用して、時系列における将来の値を予測できます。|[予測&#40;Excel 用テーブル分析ツール&#41;](forecast-table-analysis-tools-for-excel.md)<br /><br /> [予測ウィザード&#40;データ マイニング Excel 用アドイン&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)|  
   
 ## <a name="see-also"></a>参照  

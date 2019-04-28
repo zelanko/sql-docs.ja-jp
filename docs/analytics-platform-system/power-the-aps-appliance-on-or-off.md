@@ -10,16 +10,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678630"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System の電源をオンまたはオフのアプライアンス
 このトピックでは、どの電源オフ、Analytics Platform Systemappliance 電源またはを実行している Parallel Data Warehouse について説明します。 使用して、このトピックで Analytics Platform System appliance が移動したとき、または電源にアプライアンスで致命的な電源障害が発生しました。  
   
-アプライアンスの電源オンとオフは、開始と停止のアプライアンスのサービスと同じではありません。 そのサブジェクトについては、[PDW のサービス状態&#40;Analytics Platform System&#41;](pdw-services-status.md)を参照してください。 電源をオンまたはオフ、SQL Server 2008 Parallel Data Warehouse については、SQL Server 2008 Parallel Data Warehouse のヘルプ ファイルを参照してください。 電源をオンまたはオフ、SQL Server 2012 AU1 または AU2 Parallel Data Warehouse については、これらのバージョンのヘルプ ファイルを参照してください。  
+アプライアンスの電源オンとオフは、開始と停止のアプライアンスのサービスと同じではありません。 そのサブジェクトについては、次を参照してください。 [PDW のサービス状態&#40;Analytics Platform System&#41;](pdw-services-status.md)します。 電源をオンまたはオフ、SQL Server 2008 Parallel Data Warehouse については、SQL Server 2008 Parallel Data Warehouse のヘルプ ファイルを参照してください。 電源をオンまたはオフ、SQL Server 2012 AU1 または AU2 Parallel Data Warehouse については、これらのバージョンのヘルプ ファイルを参照してください。  
   
 接続は、ローカル接続されているデバイス (KVM) を使用してこれらの手順では、SQL Server PDW ノードへの接続を指定するときに、またはリモート デスクトップを使用したリモート接続します。 いくつかの操作が (オン、電源スイッチ)、物理マシンとシャット ダウン) などの一部にする必要がありますは物理または Windows を使用してコマンドします。  
   
@@ -105,7 +105,7 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
 11. **Configuration Manager**の**並列データ ウェアハウスのトポロジ** メニューのをクリックして、**サービス状態**タブをクリックし、をクリックして**開始リージョン**PDW サービスを開始します。  
   
 ### <a name="to-verify-the-appliance-health"></a>アプライアンスの正常性を確認するには  
-アプライアンスが開始すると、開く、**管理コンソール**エラー状態を示す可能性がある警告の正常性ページを確認します。 詳細については、[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)を参照してください。  
+アプライアンスが開始すると、開く、**管理コンソール**エラー状態を示す可能性がある警告の正常性ページを確認します。 詳細については、次を参照してください。[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)します。  
   
 ## <a name="see-also"></a>参照  
 [アプライアンスの管理タスク&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  

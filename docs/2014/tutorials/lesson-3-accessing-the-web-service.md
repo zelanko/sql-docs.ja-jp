@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653785"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>レッスン 3: Web サービスにアクセスします。
+# <a name="lesson-3-accessing-the-web-service"></a>レッスン 3: Web サービスへのアクセス
   レポート サーバー Web サービスへの参照をプロジェクトに追加したら、次は、Web サービスのプロキシ クラスのインスタンスを作成します。 その後、このプロキシ クラスのメソッドを呼び出すことによって、Web サービスのメソッドにアクセスできます。 アプリケーションから Web サービスのメソッドが呼び出されると、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] によって生成されたプロキシ クラスのコードにより、アプリケーションと Web サービス間の通信が処理されます。  
   
  まず、Web サービスのプロキシ クラス <xref:ReportService2010.ReportingService2010> のインスタンスを作成します。 次に、このプロキシ クラスを使用して Web サービスの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを呼び出します。 この呼び出しを使用して、サンプル レポート Company Sales の名前と記述を取得します。  

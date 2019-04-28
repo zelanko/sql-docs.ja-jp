@@ -1,5 +1,5 @@
 ---
-title: 入れ子になったテーブル (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: 入れ子になったテーブル (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 35444ae17ac4a11bd0321e70631f45d84273e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472419"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>入れ子になったテーブル (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、データを、ケース テーブル内の一連のケースとしてデータ マイニング アルゴリズムに入力する必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用してこのような場合を処理するための独自の方法を提供*入れ子になったテーブル*です。 次の図は、入れ子になったテーブルの概念を示しています。  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データを、ケース テーブル内の一連のケースとしてデータ マイニング アルゴリズムに入力する必要があります。 しかし、1 行のデータですべてのケースを表すことはできません。 たとえば、1 つのテーブルに顧客情報、別のテーブルに顧客の購入記録が含まれている 2 つのテーブルから、ケースが派生している場合があります。 顧客情報テーブルの 1 人の顧客が顧客購入記録テーブルに複数の項目を持っている場合、1 行でデータを表すことが難しくなります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、 *入れ子になったテーブル*を使用して、このようなケースを扱うための独自の方法が用意されています。 次の図は、入れ子になったテーブルの概念を示しています。  
   
- ![入れ子になったテーブルを使用して 2 つのテーブルが結合された](../../analysis-services/data-mining/media/nested-tables.gif "入れ子になったテーブルを使用して、2 つのテーブルの結合")  
+ ![入れ子になったテーブルを使用して 2 つのテーブルが結合](../../analysis-services/data-mining/media/nested-tables.gif "入れ子になったテーブルを使用して 2 つのテーブルの結合")  
   
  この図では、親テーブルである最初のテーブルに顧客に関する情報が含まれ、各顧客の一意の識別子が付けられています。 子テーブルである 2 番目のテーブルには、各顧客の購入記録が含まれています。 子テーブルの購入記録は、一意の識別子である **CustomerKey** 列によって親テーブルに関連付けられています。 図の 3 番目のテーブルは、2 つのテーブルが結合されていることを示します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34018119"
  たとえば入れ子になったテーブルに、**Product**、**ProductQuantity****ProductPrice** の各列が含まれていて、入れ子になったテーブルのキーとして **Product** を選択した場合に、**ProductQuantity** をマイニング構造に追加して入力として使用することができます。  
   
 ## <a name="filtering-nested-table-data"></a>入れ子になったテーブルのデータのフィルター処理  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データ マイニング モデルのトレーニング用やテスト用のデータに対するフィルターを作成できます。 モデルの構成に影響する、またはケースのサブセットでモデルをテストする、フィルターを使用できます。 入れ子になったテーブルにフィルターを適用することもできます。 ただし、入れ子になったテーブルで使用できる構文には制限があります。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データ マイニング モデルのトレーニング用やテスト用のデータに対するフィルターを作成できます。 フィルターは、モデルの構成に影響を与えるまたはケースのサブセットでモデルのテストに使用できます。 入れ子になったテーブルにフィルターを適用することもできます。 ただし、入れ子になったテーブルで使用できる構文には制限があります。  
   
  入れ子になったテーブルでは、属性の存在の有無をテストするためによくフィルターが使用されます。 たとえば、フィルターを適用することにより、モデルで使用するケースを、入れ子になったテーブルに指定した値を持つケースのみに制限したり、 特定の品目を購入したことがない顧客のみに制限したりすることができます。  
   

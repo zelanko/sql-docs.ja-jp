@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 98fffc189aab674f46030086a8277395e84f7f4d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678597"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Analytics Platform System で証明書のプロビジョニング
 **PDW 証明書のプロビジョニング**Analytics Platform System のページ**Configuration Manager**をインポートまたは PDW で使用される証明書を削除します。 
@@ -48,7 +48,7 @@ Analytics Platform System を使用して、**Configuration Manager**を追加�
 ### <a name="to-import-the-certificate"></a>証明書をインポートするには  
   
 1.  起動、 **Configuration Manager**します。  
-詳細については、[Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)を参照してください。  
+詳細については、次を参照してください。 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)します。  
 
 2.  左側のウィンドウで、 **Configuration Manager**、展開**並列データ ウェアハウスのトポロジ**、 をクリックし、**証明書**します。  
   

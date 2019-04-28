@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660782"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,12 +157,12 @@ sp_help_job { [ @job_id = ] job_id
 |**on_success_step_id**|**int**|場合**on_success_action**は**4**を実行する次の手順を示します。|  
 |**on_fail_action**|**nvarchar (4000)**|ステップが失敗した場合に実行する動作。 値は同じである**on_success_action**します。|  
 |**on_fail_step_id**|**int**|場合**on_fail_action**は**4**を実行する次の手順を示します。|  
-|**server**|**sysname**|予約されています。|  
+|**server**|**sysname**|予約済み。|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)]手順、これは、データベース コマンドを実行します。|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
 |**retry_attempts**|**int**|ステップを正常に実行できない場合、コマンドを再試行する最大回数。この回数に達すると、ステップが失敗したと判断されます。|  
 |**retry_interval**|**int**|再試行の間隔 (分単位) をいずれかです。|  
-|**os_run_priority**|**varchar(4000)**|予約されています。|  
+|**os_run_priority**|**varchar(4000)**|予約済み。|  
 |**output_file_name**|**varchar(200)**|コマンド出力を書き込むファイル ([!INCLUDE[tsql](../../includes/tsql-md.md)]と**CmdExec**ステップのみ)。|  
 |**last_run_outcome**|**int**|最後に実行したときのステップの結果。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **3** = キャンセル<br /><br /> **5** = unknown|  
 |**last_run_duration**|**int**|最後に実行したときのステップの経過時間 (秒単位)。|  

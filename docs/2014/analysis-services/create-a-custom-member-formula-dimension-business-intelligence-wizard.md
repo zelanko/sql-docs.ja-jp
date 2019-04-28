@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679929"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>[カスタム メンバー式の作成] ([ディメンション]) (ビジネス インテリジェンス ウィザード)
   使用して、**カスタム メンバー式の作成**先、ビジネス インテリジェンス ウィザードで属性と関連付けるカスタム メンバー式列の列を含む多次元式 (MDX) でディメンションを選択するページその属性のメンバーの値を定義するステートメント。  

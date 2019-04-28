@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6feff1bdcd1e53aeb6af45be3edea9c80d50c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703026"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET サーバー プログラミング
   ADOMD.NET の ADOMD.NET サーバー コンポーネントは、(msmgdsrv.dll 内の) `Microsoft.AnalysisServices.AdomdServer` 名前空間内に存在します。 これらのサーバー コンポーネントを使用してカスタムの多次元式 (MDX) 関数およびのインスタンスで実行されるストアド プロシージャを作成する[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 サーバー オブジェクトによって、キューブとマイニング モデルをクエリする機能、および指定されたコンテキストで式を評価する機能が提供されます。 カスタム関数とストアド プロシージャを作成する利点としては、実行の高速化、配置の集中管理、メンテナンスのしやすさの向上などがあります。  

@@ -1,5 +1,5 @@
 ---
-title: PredictStdev (DMX) |Microsoft ドキュメント
+title: PredictStdev (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659008"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,13 +32,13 @@ PredictStdev(<scalar column reference>)
  スカラー列です。  
   
 ## <a name="return-type"></a>戻り値の型  
- 指定された型のスカラー値*\<スカラー列参照 >* です。  
+ 指定された型のスカラー値*\<スカラー列参照 >* します。  
   
 ## <a name="remarks"></a>コメント  
- 列参照が不連続で場合**PredictStdev**不連続の値から標準偏差を計算できないために、0 を返します。  
+ 列参照が不連続で場合**PredictStdev**不連続の値から標準偏差を計算できないため、0 を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、自然予測結合を使用して、個人が TM Decision Tree マイニング モデルに基づいた自転車購入者である可能性を判断します。また、予測の標準偏差も判断します。  
+ 次の例では、自然予測結合を使用して、個人が TM Decision Tree マイニング モデルに基づいた自転車購入者である可能性がかどうかを決定し、予測の標準偏差も判断します。  
   
 ```  
 SELECT  

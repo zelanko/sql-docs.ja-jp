@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691595"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)
 
@@ -29,7 +29,7 @@ ms.locfileid: "54131612"
 
 **サブスクリプションの新規作成ウィザード**の **[更新可能なサブスクリプション]** ページで、更新可能なサブスクリプションを構成します。 このページは、更新可能なサブスクリプションに対してトランザクション パブリケーションを有効にした場合にのみ使用できます。 更新可能なサブスクリプションを有効にする方法については、「[トランザクション パブリケーションの更新サブスクリプションを有効にする方法](enable-updating-subscriptions-for-transactional-publications.md)」を参照してください。   
   
-## <a name="configure-an-updatable-subscription-from-the-publisher"></a>パブリッシャーから更新可能なサブスクリプションを構成します。  
+## <a name="configure-an-updatable-subscription-from-the-publisher"></a>パブリッシャーから更新可能なサブスクリプションを構成する  
 
 1. Microsoft SQL Server Management Studio でパブリッシャーに接続し、サーバー ノードを展開します。
 2. **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。
@@ -52,7 +52,7 @@ ms.locfileid: "54131612"
 
 8. ウィザードを完了します。
 
-## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>サブスクライバーからの更新可能なサブスクリプションを構成します。
+## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>サブスクライバーから更新可能なサブスクリプションを構成する
 
 
 1. SQL Server Management Studio でサブスクライバ―に接続し、サーバー ノードを展開します。
@@ -79,7 +79,7 @@ ms.locfileid: "54131612"
 
 11. ウィザードを完了します。
 
-## <a name="create-an-immediate-updating-pull-subscription"></a>即時更新プル サブスクリプションを作成します。
+## <a name="create-an-immediate-updating-pull-subscription"></a>即時更新プル サブスクリプションを作成する
 
 1. パブリッシャーで、 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)を実行することにより、パブリケーションが即時更新サブスクリプションをサポートしていることを確認します。 
 
@@ -121,7 +121,7 @@ ms.locfileid: "54131612"
 これにより、パブリッシャーでプル サブスクリプションが登録されます。 
 
 
-## <a name="create-an-immediate-updating-push-subscription"></a>即時更新プッシュ サブスクリプションを作成します。 
+## <a name="create-an-immediate-updating-push-subscription"></a>即時更新プッシュ サブスクリプションを作成する 
 
 1. パブリッシャーで、 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)を実行することにより、パブリケーションが即時更新サブスクリプションをサポートしていることを確認します。 
 
@@ -159,7 +159,7 @@ ms.locfileid: "54131612"
      * `2` - [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)を使って作成された、既存のユーザー定義リンク サーバー ログインを使用します。
 
 
-## <a name="create-a-queued-updating-pull-subscription"></a>キュー更新プル サブスクリプションを作成します。 ##
+## <a name="create-a-queued-updating-pull-subscription"></a>キュー更新プル サブスクリプションを作成する ##
 
 1. パブリッシャーで、 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)を実行することにより、パブリケーションがキュー更新サブスクリプションをサポートしていることを確認します。 
 
@@ -200,7 +200,7 @@ ms.locfileid: "54131612"
 1. パブリッシャーで、 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)を実行することにより、パブリケーションがキュー更新サブスクリプションをサポートしていることを確認します。 
 
     * 結果セットの allow_queued_tran の値が 1 である場合、パブリケーションは即時更新サブスクリプションをサポートします。
-    * 結果セットの allow_queued_tran の値が 0 である場合は、キュー更新サブスクリプションを有効にしてパブリケーションを再作成する必要があります。 詳細については、次を参照してください。 方法。(レプリケーション TRANSACT-SQL プログラミング) のトランザクション パブリケーションに対するサブスクリプションの更新を有効にします。
+    * 結果セットの allow_queued_tran の値が 0 である場合は、キュー更新サブスクリプションを有効にしてパブリケーションを再作成する必要があります。 詳細については、トランザクション パブリケーションの更新可能なサブスクリプションを有効化する方法 (レプリケーション Transact-SQL プログラミング) に関する記事を参照してください。
 
 2. パブリッシャーで、 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)を実行することにより、パブリケーションがプッシュ サブスクリプションをサポートしていることを確認します。 
 

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679760"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>[属性リレーションシップの作成] ダイアログ ボックスと [属性リレーションシップの編集] ダイアログ ボックス ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[属性リレーションシップの作成]** ダイアログ ボックスを使用すると、新しい属性リレーションシップを定義できます。また、**[属性リレーションシップの編集]** ダイアログ ボックスを使用すると、属性リレーションシップを変更できます。 詳細については、「 [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)」を参照してください。  

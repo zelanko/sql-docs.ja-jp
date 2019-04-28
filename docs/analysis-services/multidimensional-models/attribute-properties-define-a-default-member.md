@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746634"
 ---
 # <a name="attribute-properties---define-a-default-member"></a>属性のプロパティ - 既定のメンバーを定義する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52516731"
   
  階層のレベルが自動的に集計される場合は、階層の他の属性に関係なく、階層のどの属性にも既定のメンバーを定義できます。 たとえば、国-地域-市の階層で、[市区町村] など、City の既定のメンバーを定義できます。[Montreal] 状態または Country の既定のメンバーを定義することがなく。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性階層の &#40;All&#41; レベルの構成](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

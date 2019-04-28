@@ -19,26 +19,26 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 155c88f9e23a706fe7124893a8dd0c5ac5f03173
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671793"
 ---
 # <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ポリシーが実行された時間、各実行の結果、およびエラーの詳細 (発生した場合) を表示します。 次の表では、syspolicy_policy_execution_history ビュー内の列について説明します。  
+  ポリシーが実行された時間の結果、各実行および存在する場合のエラーの詳細を表示が発生しました。 次の表では、syspolicy_policy_execution_history ビュー内の列について説明します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|history_id|**bigint**|このレコードの識別子。 各レコードは、1 つのポリシーを示し、そのポリシーが開始された 1 回分を表します。|  
+|history_id|**bigint**|このレコードの識別子。 各レコードは、ポリシーとそれが開始された 1 つの時刻を示します。|  
 |policy_id|**int**|ポリシーの識別子。|  
-|start_date|**datetime**|このポリシーの実行が試行された日時。|  
+|start_date|**datetime**|日付と時刻、このポリシーを実行しようとしました。|  
 |end_date|**datetime**|このポリシーの実行が終了した時刻。|  
-|result|**bit**|ポリシーの成功または失敗。 0 = 失敗、1 = 成功。|  
-|exception_message|**nvarchar(max)**|例外が発生した場合に、その例外によって生成されたメッセージ。|  
-|exception|**nvarchar(max)**|例外が発生した場合、その説明。|  
+|結果|**bit**|ポリシーの成功または失敗。 0 = 失敗、1 = 成功。|  
+|exception_message|**nvarchar(max)**|1 つの場合、例外によって生成されたメッセージが発生しました。|  
+|exception|**nvarchar(max)**|いずれかが発生した場合、例外の説明です。|  
   
 ## <a name="remarks"></a>コメント  
  [Syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)ビューには、ポリシーおよびテストされた条件式のターゲットについての関連する詳細が含まれています。  

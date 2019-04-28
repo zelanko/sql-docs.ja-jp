@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efc615e9aa873a322ef9a31b2c293e6c5c4793da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663528"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion イベント クラス
   **CursorImplicitConversion** イベント クラスは、アプリケーション プログラミング インターフェイス (API) または [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルで発生する暗黙的なカーソル変換イベントを表します。 暗黙的なカーソル変換イベントは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が、要求された種類のサーバー カーソルでサポートされていない Transact-SQL ステートメントを実行するときに発生します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はカーソルの種類が変更されたことを示すエラーを返します。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc79564bfd71ae46ef25092294c624f67b51e42c
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670402"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>ADO オブジェクトを使用するための ADO プログラマー ガイド
 このドキュメントでは、さまざまなデータ ソースからデータを操作する ADO オブジェクトを使用する方法の概要を示します。 最初に、導入は、新機能とインストール、使用、および ADO のコンポーネントを再配布の要件をまとめたものです。 次のセクションでは、ADO オブジェクトのさまざまな種類の使用について説明します。 最後に、付録について説明しますさまざまな Microsoft 提供のデータとサービス プロバイダー、エラー メッセージ、およびヒントについてのサンプルと、用語集だけでなく、複数のプログラミング言語で ADO を使用する方法。

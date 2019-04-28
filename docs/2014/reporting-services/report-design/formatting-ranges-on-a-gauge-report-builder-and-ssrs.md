@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654390"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)
   ゲージ範囲は、ゲージ上の値の重要なサブセクションを示す、ゲージ スケール上のゾーンまたは領域です。 ゲージ範囲を使用すると、ポインター値が特定の値範囲に入る時期を視覚的に示すことができます。 範囲は、開始値と終了値で定義されます。  

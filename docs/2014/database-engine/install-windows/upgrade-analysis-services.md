@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775033"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードします。 アップグレードに関する詳細情報の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SharePoint モードを参照してください。 [PowerPivot for SharePoint のアップグレード](upgrade-power-pivot-for-sharepoint.md)します。 既存の SQL Server のアップグレードの詳細については、インスタンスは、「[インストール ウィザードを SQL Server 2014 を使用するアップグレード&#40;セットアップ&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)します。  
@@ -67,7 +67,7 @@ ms.locfileid: "53363484"
  既存のインスタンスをアップグレードするには、セットアップを実行し、新しいインスタンスの名前として既存のインスタンス名を指定します。  
   
 ## <a name="upgrading-databases"></a>データベースのアップグレード  
- 以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で作成されたデータベースは、アップグレード後のサーバー上で、古いデータベース互換性レベル設定で実行されます。 次のバージョンで作成されたデータベースのデータベース互換性レベルは 105 になります。 新しいデータベースの互換性レベルを必要とする機能を使用する場合は、互換性レベルを変更できます。 それ以外の場合は、元の設定を使用して、アップグレード後のサーバー上でデータベースを実行できます。 詳細については、[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)を参照してください。  
+ 以前のバージョンの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で作成されたデータベースは、アップグレード後のサーバー上で、古いデータベース互換性レベル設定で実行されます。 次のバージョンで作成されたデータベースのデータベース互換性レベルは 105 になります。 新しいデータベースの互換性レベルを必要とする機能を使用する場合は、互換性レベルを変更できます。 それ以外の場合は、元の設定を使用して、アップグレード後のサーバー上でデータベースを実行できます。 詳細については、次を参照してください。[多次元データベースの互換性レベル設定&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)します。  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   

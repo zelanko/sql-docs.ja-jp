@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775345"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>SQL Server 2014 サービス更新プログラムのインストール
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の更新プログラムのインストールについて説明します。 このセクションでは、次の項目について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "58657846"
   
  SQL Server 更新プログラムは、サービス リリースの種類に応じて、Microsoft Update (MU)、Microsoft ダウンロード センター、またはサーバーのカスタマー サポート サービス修正プログラムを使用して使用できます。 SQL Server のセキュリティと重要な更新プログラムは、(では、Windows Update を通じて MU コントロール パネル にする必要があるこれらの更新プログラムを確認できるように) を Microsoft Update によって自動的に提供されます。 サービス パックは、ダウンロード センターおよびダウンロードが省略可能/重要 MU でご確認いただけます。 CU サポート技術情報の記事で提供される Microsoft の修正プログラムのダウンロード サーバーに累積的更新プログラムを利用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2014 インストール ウィザードからインストール&#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
  [コマンド プロンプトから更新プログラムのインストール](installing-updates-from-the-command-prompt.md) [、インスタンスの SQL Server 2014 への機能の追加&#40;セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [SQL Server 2014 のインストールの削除](repair-a-failed-sql-server-installation.md)  

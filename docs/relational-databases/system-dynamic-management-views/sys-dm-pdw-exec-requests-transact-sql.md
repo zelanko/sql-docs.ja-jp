@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691322"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (TRANSACT-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "59583320"
 |database_id|**int**|コンテキストの明示的な (使用 DB_X など) によって使用されるデータベースの識別子。|内の ID を参照してください。 [sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。|  
 |command|**nvarchar (4000)**|ユーザーによって送信されると、要求の完全なテキストを保持します。|有効なクエリまたは要求テキスト。 4,000 バイトより長いクエリは、切り捨てられます。|  
 |resource_class|**nvarchar(20)**|この要求のリソース クラスです。 関連する参照**concurrency_slots_used**で[sys.dm_pdw_resource_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)します。  リソース クラスの詳細については、次を参照してください[リソース クラスとワークロード管理。](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |静的リソース クラス</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>動的リソース クラス</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|重要度 (ワークロードの分類は、SQL Data Warehouse Gen2 のプレビューで使用できます。 ワークロード管理の分類と重要度のプレビューは 2019 年 4 月 9 日、またはそれ以降のリリース日でビルドです。  ユーザーは、ワークロード管理のテストの前にこの日付よりもビルドの使用を避ける必要があります。  ビルドがワークロードの管理ができるかどうかを決定、実行 select @@version SQL Data Warehouse インスタンスに接続されている場合)。|**nvarchar(32)**|要求を設定する重要度が送信されました。 重要度が低い要求は重要度の高い要求が送信された場合に、一時停止状態でキューに置かれます。  重要度の高い要求は、先に送信された下の重要度要求する前に実行されます。  重要度の詳細については、次を参照してください。[ワークロードの重要度](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)します。  |NULL</br>low</br>below_normal</br>標準 (既定値)</br>しなく</br>high|
+|重要度 (ワークロードの分類は、SQL Data Warehouse Gen2 のプレビューで使用できます。 ワークロード管理の分類および重要性のプレビューは、リリース日が 2019 年 4 月 9 日以降のビルドに対応しています。  ワークロード管理テストでは、この日付より前のビルドは使用しないでください。  ビルドがワークロードの管理ができるかどうかを決定、実行 select @@version SQL Data Warehouse インスタンスに接続されている場合)。|**nvarchar(32)**|要求を設定する重要度が送信されました。 重要度が低い要求は重要度の高い要求が送信された場合に、一時停止状態でキューに置かれます。  重要度の高い要求は、先に送信された下の重要度要求する前に実行されます。  重要度の詳細については、次を参照してください。[ワークロードの重要度](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)します。  |NULL</br>low</br>below_normal</br>標準 (既定値)</br>しなく</br>high|
   
  このビューで保持される最大行数は、詳細については、メタデータ」セクションを参照してください、[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)トピック。   
   

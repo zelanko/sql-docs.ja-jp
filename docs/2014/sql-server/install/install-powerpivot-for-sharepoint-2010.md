@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e02b80c1967059f91e3a97fb940a2715c6beebb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656770"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>PowerPivot for SharePoint 2010 をインストールする
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、SharePoint 2010 ファームでの PowerPivot データ アクセスを提供する中間層のバックエンド サービスのコレクションです。 組織で分析データを格納するブックの作成にクライアント アプリケーション [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 を使用する場合、サーバー環境でそのデータにアクセスするには [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] が必要です。 このトピックでは、基本的なインストール プロセスについて説明し、PowerPivot を構成するために役立つその他のトピックに関する情報も示します。  
@@ -43,15 +43,15 @@ ms.locfileid: "53356804"
   
 6.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インスタンスの名前を使用できる必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスが既に存在するコンピューターに、PowerPivot for SharePoint をインストールすることはできません。  
   
-7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インスタンスは、SQL Server フェールオーバー クラスターに含めることはできません。 SharePoint 製品の高可用性機能を使用します。 たとえば、Excel Services では PowerPivot for SharePoint サーバーの負荷分散が管理されます。 詳細については、[Excel Services の管理のデータ モデルの設定 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx)を参照してください。  
+7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] インスタンスは、SQL Server フェールオーバー クラスターに含めることはできません。 SharePoint 製品の高可用性機能を使用します。 たとえば、Excel Services では PowerPivot for SharePoint サーバーの負荷分散が管理されます。 詳細については、次を参照してください。 [Excel Services の管理のデータ モデルの設定 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx)します。  
   
-8.  既存のファームに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールする場合は、クラシック モード認証用に構成されている SharePoint Web アプリケーションが 1 つ以上必要です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスは、Web アプリケーションでクラシック モード認証がサポートされている場合にのみ機能します。 クラシック モードの要件の詳細については、[PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)を参照してください。  
+8.  既存のファームに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールする場合は、クラシック モード認証用に構成されている SharePoint Web アプリケーションが 1 つ以上必要です。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスは、Web アプリケーションでクラシック モード認証がサポートされている場合にのみ機能します。 クラシック モードの要件の詳細については、次を参照してください。 [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)します。  
   
 9. 次の追加トピックを確認し、システムとバージョンの要件を理解してください。  
   
     -   [SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイド](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
-##  <a name="InstallSQL"></a> 手順 1:PowerPivot for SharePoint インストールします。  
+##  <a name="InstallSQL"></a> ステップ 1:PowerPivot for SharePoint インストールします。  
  この手順では、SQL Server セットアップを実行して [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールします。 後続の手順では、サーバーをインストール後のタスクとして構成します。  
   
 1.  インストール メディアを挿入または SQL Server のセットアップ ファイルを格納するフォルダーを開き、ダブルクリック**setup.exe**します。  
@@ -116,7 +116,7 @@ ms.locfileid: "53356804"
 > [!TIP]  
 >  トラブルシューティングする必要がある場合は、SQL Server のインストールを参照してください[ビューと読み取り SQL Server セットアップ ログ ファイル](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)します。  
   
-##  <a name="bkmk_config"></a> 手順 2:サーバーを構成します。  
+##  <a name="bkmk_config"></a> ステップ 2:サーバーを構成します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] データベース サーバーを使用する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または SharePoint ファームを構成する前に、SharePoint 2010 SP2 をインストールする必要があります。 サービス パックをインストールしていない場合は、サーバーの構成を始める前にここでインストールしてください。  
@@ -131,7 +131,7 @@ ms.locfileid: "53356804"
   
  **データベース エンジンのインスタンスに接続します。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールしたときに、SQL Server セットアップで、データベース エンジンのインスタンスをインストールに追加することができました。 可能性がありますを追加した、データベース エンジンのインスタンスをインストールには新しいファームを設定して、データベース サーバーをファームの構成とコンテンツ データベースを実行する必要があります。 データベース エンジンを追加した場合は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスとしてインストールされています。 この形式でデータベース名を入力に注意してください (たとえば、ファーム構成ウィザードでファームを構成するウィザードを使用している場合)、このインスタンスへの接続を指定する必要がある場合: <`servername`> \PowerPivot します。  
   
-##  <a name="bkmk_redist"></a> 手順 3:Excel Services アプリケーション サーバーへの Analysis Services OLE DB プロバイダーのインストール  
+##  <a name="bkmk_redist"></a> ステップ 3:Excel Services アプリケーション サーバーへの Analysis Services OLE DB プロバイダーのインストール  
  個々のアプリケーション サーバーで Excel Calculation Services と [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を実行する場合は、追加のインストール手順が必要となります。 Excel Calculation Services を実行しているアプリケーション サーバーに、適切なバージョンの Analysis Services OLE DB (MSOLAP) プロバイダーをインストールします。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの MSOLAP は SQL Server セットアップに含まれているため、アプリケーション サーバーが PowerPivot アプリケーション サーバーではない場合にのみ、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの MSOLAP を明示的にインストールする必要があります。  
@@ -144,7 +144,7 @@ ms.locfileid: "53356804"
  検証の手順を含め、プロバイダーのインストールの詳細については、次を参照してください[SharePoint サーバーに、Analysis Services OLE DB プロバイダーをインストールする。](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
 ##  <a name="bkmk_verify"></a> 手順 4:インストールを確認します。  
- この最後の手順では、SharePoint 2010 と [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の両方が完全に機能することを確認します。 手順については、[for SharePoint のインストール Verify a PowerPivot](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)を参照してください。  
+ この最後の手順では、SharePoint 2010 と [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の両方が完全に機能することを確認します。 手順については、次を参照してください。 [for SharePoint のインストール Verify a PowerPivot](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md)します。  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot for SharePoint 2010 のインストール](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   

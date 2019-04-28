@@ -1,5 +1,5 @@
 ---
-title: 計算されるメンバーを定義する |Microsoft ドキュメント
+title: 計算されるメンバーを定義する |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523703"
 ---
-# <a name="lesson-6-1---defining-calculated-members"></a>レッスン 6-1-を定義する計算されるメンバー
+# <a name="lesson-6-1---defining-calculated-members"></a>レッスン 6-1: 定義の計算されるメンバー
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 計算されるメンバーとは、キューブ データ、算術演算子、数値、関数を組み合わせて定義した、ディメンション グループまたはメジャー グループのメンバーです。 たとえば、キューブ内の 2 つの物理的なメジャーの合計を計算する、計算されるメンバーを作成できます。 計算されるメンバーの定義はキューブ内に保存されますが、その値はクエリ時に計算されます。  
@@ -62,7 +62,7 @@ ms.locfileid: "34018789"
   
 7.  **[計算ツール]** ペインの **[メタデータ]** タブで **[Reseller Sales]** を展開します。次に、 **[Reseller Sales-Sales Amount]** を、 **計算式** ペインの **[式]** ボックスにあるプラス符号 (+) の後ろにドラッグします。  
   
-8.  **[書式設定文字列]** ボックスの一覧の **["Currency"]** を選択します。  
+8.   **[書式設定文字列]** ボックスの一覧の **["Currency"]** を選択します。  
   
 9. **[空以外の動作]** ボックスの一覧で、 **Internet Sales-Sales Amount** と **Reseller Sales-Sales Amount**のチェック ボックスをオンにして、 **[OK]** をクリックします。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "34018789"
   
     次の図は、上記の手順で指定した設定が入力された **計算式** ペインを示しています。  
   
-    ![Populated 計算式ペイン](../analysis-services/media/l6-calculatedmembers-03.gif "設定の計算式ペイン")  
+    ![計算式ペインの Populated](../analysis-services/media/l6-calculatedmembers-03.gif "設定の計算式ペイン")  
   
 10. **[計算]** タブのツール バーにある **[スクリプト ビュー]** をクリックし、 **計算式** ペインで計算スクリプトを確認します。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "34018789"
   
     次の図は、新しい 3 つの計算が表示されている **計算式** ペインを示しています。  
   
-    ![計算式ペインで新しい計算](../analysis-services/media/l6-calculatedmembers-05.gif "計算式ペインで新しい計算")  
+    ![計算式ペインで、新しい計算](../analysis-services/media/l6-calculatedmembers-05.gif "計算式ペインで、新しい計算")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>全体に対する比率の計算の定義  
   
@@ -288,9 +288,9 @@ ms.locfileid: "34018789"
     アクセサリの売上は毎年増加しているものの、合計売上に占める割合が非常に小さいことがわかります。 また、アクセサリの売上における総利益率は、自転車よりも高くなっています。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[名前付きセットを定義します。](../analysis-services/lesson-6-2-defining-named-sets.md)  
+[名前付きセットの定義](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [[新しい計算されるメンバー]](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [多次元モデルの計算](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
 [計算されるメンバーの作成](../analysis-services/multidimensional-models/create-calculated-members.md)  

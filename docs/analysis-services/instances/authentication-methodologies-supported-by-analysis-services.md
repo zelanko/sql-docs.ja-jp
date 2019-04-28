@@ -1,5 +1,5 @@
 ---
-title: Analysis Services でサポートされる認証方法 |Microsoft ドキュメント
+title: Analysis Services でサポートされる認証方法 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe2c4021792c3285165440fc0627aa7eab374882
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659221"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services でサポートされる認証方法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "34019139"
  [トランスポート セキュリティでの権限借用の使用](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Kerberos の制約付き委任のための Analysis Services の構成](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Analysis Services インスタンスに対する SPN の登録](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
+ [Analysis Services インスタンスの SPN 登録](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
