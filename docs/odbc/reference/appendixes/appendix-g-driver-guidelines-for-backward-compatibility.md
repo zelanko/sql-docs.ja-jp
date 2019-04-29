@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78de7b3bd1d91351a4159847d6605e30cc1353d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026633"
 ---
-# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>付録 G :旧バージョンとの互換性のためのドライバーのガイドライン
-この付録の内容は、ODBC 3 取り組んでドライバー作成者の情報を提供します。*x* ODBC 2 をサポートするために必要なドライバー *。x*アプリケーション。 旧バージョンと互換性の詳細については、[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。  
+# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>付録 G :ドライバーの下位互換性のガイドライン
+この付録の内容は、ODBC 3 取り組んでドライバー作成者の情報を提供します。*x* ODBC 2 をサポートするために必要なドライバー *。x*アプリケーション。 旧バージョンと互換性の詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

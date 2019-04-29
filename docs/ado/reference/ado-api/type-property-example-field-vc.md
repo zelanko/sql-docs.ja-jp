@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910442"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
 この例では、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、**型**すべてのプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、***従業員***テーブル。 FieldType 関数は、この手順を実行する必要があります。  
@@ -158,14 +158,14 @@ void PrintComError(_com_error &e) {
  **Name: emp_id**  
  **型: ファミリ**  
  **名前: fname**  
- **型: advarchar:**  
+ **Type: adVarChar**  
  **名前: minit**  
  **型: ファミリ**  
  **名前: lname**  
- **型: advarchar:**  
- **名前: job_id**  
+ **Type: adVarChar**  
+ **Name: job_id**  
  **Type: adSmallInt**  
- **名前: job_lvl**  
+ **Name: job_lvl**  
  **Type: adUnsignedTinyInt**  
  **名前: pub_id**  
  **型: ファミリ**  

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019298"
 ---
 # <a name="define-partitions-in-directquery-models"></a>パーティションと DirectQuery モデルの定義
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 表形式モデルでのパーティションに関する一般的な情報は、[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)を参照してください。  
+  ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 表形式モデルでのパーティションに関する一般的な情報は、次を参照してください。[パーティション](../../analysis-services/tabular-models/partitions-ssas-tabular.md)します。  
   
 > [!NOTE]  
 >  1 つのテーブルに対して複数のパーティションを設定することができますが、DirectQuery モードでは、クエリの実行に使用できるのはそのうちの 1 つのみです。 この単一のパーティションの要件は、すべての互換性レベルの DirectQuery モデルに適用されます。  

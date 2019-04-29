@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028139"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 検索、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を指定した条件を満たす行のできます。 必要に応じて、検索、開始行、および開始行からのオフセットの方向を指定することがあります。 現在の行位置が; 検出されたレコードの設定、条件が満たされた場合(先頭または末尾) に、位置を設定する場合は、 **Recordset**します。  
@@ -44,7 +44,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  省略可能な*します。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)検索の方向で使用可能な次の行または現在の行に検索を開始するかどうかを指定する値。 最後に停止する検索が失敗した、**レコード セット**値が場合**adSearchForward**します。 検索が失敗したの停止の開始時、**レコード セット**値が場合**adSearchBackward**します。  
   
- *開始*  
+ *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
  任意。 A**バリアント**検索の開始位置として機能するブックマーク。  
   
 ## <a name="remarks"></a>コメント  

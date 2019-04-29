@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c8f2eb4aa4cc3d31868ed74788d1e9f4e1ff9ab4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877232"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>コードの自動作成 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、Code 属性の数値または他の数値属性の数値を自動的に生成できます。 コードを自動生成するときは、コードに他の値を入力してもかまいません。正確には、初期値が自動的に設定されます。  
@@ -33,9 +33,9 @@ ms.locfileid: "52792004"
 ## <a name="deleting-automatically-generated-values"></a>自動的に生成される値の削除  
  管理者が Code 属性の値の自動生成を有効にした後、ユーザーが再利用するコード値を持っていたメンバーを誤って削除する場合があります。 「メンバー コードが削除されたメンバーを使用して既に」エラー メッセージが表示されます。 この解決方法には、次の 2 つが挙げられます。  
   
--   **バージョン管理**機能領域で、管理者は、メンバーが削除されたときに発生したトランザクションを取り消すことができます。 ただし、これはすべての以前のメンバーの属性と階層およびコレクションのメンバーシップが復元ことを意味します。 詳細については、[トランザクションを破棄する&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)を参照してください。  
+-   **バージョン管理**機能領域で、管理者は、メンバーが削除されたときに発生したトランザクションを取り消すことができます。 ただし、これはすべての以前のメンバーの属性と階層およびコレクションのメンバーシップが復元ことを意味します。 詳細については、次を参照してください。[トランザクションを破棄する&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)します。  
   
--   管理者は、ステージング処理を使用して、メンバーを完全に削除できます。 詳細については、[非アクティブ化またはステージング処理を使用してメンバーの削除&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)を参照してください。  
+-   管理者は、ステージング処理を使用して、メンバーを完全に削除できます。 詳細については、次を参照してください。[非アクティブ化またはステージング処理を使用してメンバーの削除&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

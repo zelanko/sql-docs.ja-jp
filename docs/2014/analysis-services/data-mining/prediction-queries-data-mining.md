@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733198"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   一般的なデータ マイニング プロジェクトの目標は、マイニング モデルを使用して予測を行うことです。 たとえば、あるサーバーの集まりのダウンタイムを予測したり、顧客区分が広告キャンペーンに反応するかどうかを示すスコアを生成したりする場合があります。 これらすべてを行うには、予測クエリを作成します。  

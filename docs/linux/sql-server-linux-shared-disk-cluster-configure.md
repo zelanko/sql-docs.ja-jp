@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: adfd7ad72fcc9f9e3e619c7798d68c536e4370e4
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635680"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>SQL Server Linux (RHEL) でのフェールオーバー クラスター インスタンスを構成します。
 
@@ -33,7 +33,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 
 この記事では、SQL Server の 2 つのノードの共有ディスク フェールオーバー クラスター インスタンス (FCI) を作成する方法について説明します。 この記事には Red Hat Enterprise Linux (RHEL) の手順とスクリプトの例が含まれています。 Ubuntu ディストリビューションは、スクリプトの例は、通常されます RHEL のような Ubuntu でも機能します。 
 
-概念については、[SQL Server フェールオーバー クラスター インスタンス (FCI) で Linux](sql-server-linux-shared-disk-cluster-concepts.md)を参照してください。
+概念については、次を参照してください。 [SQL Server フェールオーバー クラスター インスタンス (FCI) で Linux](sql-server-linux-shared-disk-cluster-concepts.md)します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -47,7 +47,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 
 ## <a name="install-and-configure-sql-server"></a>インストールして SQL Server の構成
 
-1. インストールし、両方のノードで、SQL Server を設定します。  詳細については、[Linux 上の SQL Server のインストール](sql-server-linux-setup.md)を参照してください。
+1. インストールし、両方のノードで、SQL Server を設定します。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)します。
 1. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。  
 1. セカンダリ ノードでSQL Server を停止し無効にします。
     次の例では、SQL Server を停止して無効にします。 

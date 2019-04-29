@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900902"
 ---
 # <a name="raw-file-custom-properties"></a>RAW ファイルのカスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -53,6 +53,6 @@ ms.locfileid: "58376270"
  詳細については、「 [RAW ファイル変換先](raw-file-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: '付録 B: ODBC の状態遷移テーブル |Microsoft Docs'
+title: 付録 B:ODBC の状態遷移テーブル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026883"
 ---
-# <a name="appendix-b-odbc-state-transition-tables"></a>付録 B: ODBC の状態遷移テーブル
+# <a name="appendix-b-odbc-state-transition-tables"></a>付録 B:ODBC の状態遷移テーブル
 この付録の内容の表では、ODBC 関数による環境、接続、ステートメント、および記述子の状態の遷移の発生を示しています。 通常、環境、接続、ステートメント、または記述子の状態は、ハンドル (環境、接続、ステートメント、または記述子) の対応する型を使用する関数を呼び出すことがときにによって決まります。 次の図に示すようにほぼ重複する環境、接続、ステートメント、および記述子の状態。 たとえば、接続の正確な重複を示す C5、C6、S1 S12 からされているデータ ソースに依存する、異なるデータ ソースの場合は、異なる時刻でトランザクションが開始し、記述子の状態 (暗黙的に割り当てられた記述子) D1i 依存ためにについてはステートメント記述子が関連付けられているステートメントの状態、状態 (明示的に割り当てられた記述子) D1e 中には任意のステートメントの状態の独立したです。 各状態の説明は、次を参照してください[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続の遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)、および[記述子の遷移。](../../../odbc/reference/appendixes/descriptor-transitions.md)、この付録で後述します。  
   
  環境と接続の状態は次のとおり重複します。  
@@ -75,7 +75,7 @@ ms.locfileid: "52541063"
 |r|結果。 または (場合によっては空) の結果セットを作成してステートメントです。|  
 |s|正常終了しました。 関数には、SQL_SUCCESS_WITH_INFO または SQL_SUCCESS が返されます。|  
 |v|有効な行です。 カーソルが結果セット内の行に配置されていると、行が正常に挿入されると、正常に更新または行に対する別の操作が正常に完了しました。 行の状態配列が存在する場合は、行の行の状態配列内の値は SQL_ROW_ADDED、SQL_ROW_SUCCESS、または SQL_ROW_UPDATED でした。 (行の状態配列を指していますし、SQL_ATTR_ROW_STATUS_PTR ステートメントの属性です。)|  
-|x|実行中。 関数には、SQL_STILL_EXECUTING が返されます。|  
+|○|実行中。 関数には、SQL_STILL_EXECUTING が返されます。|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
  この例では、環境の状態遷移の行の表の**SQLFreeHandle**とき*HandleType* sql_handle_env としては、次のようには、します。  

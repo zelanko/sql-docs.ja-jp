@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b196aaa30934e4206886b8b6290e402b6c28fce5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771318"
 ---
-# <a name="finish"></a>[完了]
+# <a name="finish"></a>完了
   **[完了]** ページには、ウィザードの処理がまとめて表示されます。 **[完了]** をクリックしてウィザードを閉じると、CDC インスタンスの作成ウィザードで定義したすべてのテーブルが生成されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 変更データベース インスタンスを作成する方法](how-to-create-the-sql-server-change-database-instance.md)   
  [新しいインスタンス ウィザードを使用する](use-the-new-instance-wizard.md)  
   

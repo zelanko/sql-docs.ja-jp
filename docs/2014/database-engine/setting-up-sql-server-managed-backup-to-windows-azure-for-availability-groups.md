@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a67b2331959dbc3087f6282be05de90b42443c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843568"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups"></a>可用性グループに対する Windows Azure への SQL Server マネージド バックアップの設定
   このトピックは、AlwaysOn 可用性グループに参加しているデータベースの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成に関するチュートリアルです。  
@@ -28,7 +28,7 @@ ms.locfileid: "52416833"
 -   ネットワーク帯域幅: これは、レプリカのどこ物理的に異なる場所のようなハイブリッド クラウド、またはクラウドのみの構成で別の Windows Azure リージョン間での実装に適用されます。 ネットワーク帯域幅は、セカンダリの待機時間に影響する可能性があります。セカンダリが同期レプリケーションに設定されている場合は、プライマリ ログの増加が引き起こされる可能性があります。 セカンダリ レプリカが同期レプリケーションに設定されている場合は、ネットワーク待機時間が原因でセカンダリは同期を維持できない可能性があり、その結果、セカンダリ レプリカへのフェールオーバー イベントが発生したときにデータが失われる可能性があります。  
   
 ### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>可用性データベースに対する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成  
- **アクセス許可:**  
+ **権限:**  
   
 -   メンバーシップが必要です**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および`EXECUTE`に対する**sp_delete_backuphistory**ストアド プロシージャ。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "52416833"
   
  次に、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]で AlwaysOn 可用性グループを設定する基本的な手順を説明します。 詳細手順のチュートリアルについては、このトピックの後半で説明します。  
   
-1.  可用性グループを作成したら、優先されるバックアップ レプリカを構成します。 可用性グループに対するこの設定は、バックアップに使用するレプリカを決定するために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]でも使用されます。 バックアップの設定を設定する方法についてステップ バイ ステップ手順については、[可用性レプリカでバックアップの構成&#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)を参照してください。  新しい AlwaysOn 可用性グループを作成する場合は、[AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)を参照してください。  
+1.  可用性グループを作成したら、優先されるバックアップ レプリカを構成します。 可用性グループに対するこの設定は、バックアップに使用するレプリカを決定するために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]でも使用されます。 バックアップの設定を設定する方法についてステップ バイ ステップ手順については、次を参照してください。[可用性レプリカでバックアップの構成&#40;SQL Server&#41;](availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)します。  新しい AlwaysOn 可用性グループを作成する場合は、次を参照してください。 [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)します。  
   
 2.  セカンダリ レプリカへの読み取り専用接続アクセスを構成します。 読み取り専用アクセスを構成する方法についてステップ バイ ステップの手順を参照してください[可用性レプリカの読み取り専用アクセスを構成する&#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -68,13 +68,13 @@ ms.locfileid: "52416833"
 #### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>可用性データベースに対する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の有効化と構成  
  このチュートリアルでは、有効にして構成する手順を説明します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node1 と Node2 コンピューター上のデータベース (AGTestDB)、続いて監視を有効にする手順、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]正常性状態。  
   
-1.  **Windows Azure ストレージ アカウントを作成します。** バックアップは、Microsoft Azure BLOB ストレージ サービスに格納されます。 Windows Azure ストレージ アカウントを持っていない場合は、最初にそのアカウントを作成する必要があります。 詳細については、[Windows Azure ストレージ アカウントを作成する](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)を参照してください。 ストレージ アカウントの名前、アクセス キー、および URL をメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、バックアップ操作中にストレージ アカウントへの認証を行うために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]によって使用されます。  
+1.  **Windows Azure ストレージ アカウントを作成します。** バックアップは、Microsoft Azure BLOB ストレージ サービスに格納されます。 Windows Azure ストレージ アカウントを持っていない場合は、最初にそのアカウントを作成する必要があります。 詳細については、次を参照してください。 [Windows Azure ストレージ アカウントを作成する](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)します。 ストレージ アカウントの名前、アクセス キー、および URL をメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、バックアップ操作中にストレージ アカウントへの認証を行うために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]によって使用されます。  
   
 2.  **SQL 資格情報を作成します。** Id、およびストレージ アクセス キーをパスワードとしてストレージ アカウントの名前を使用して SQL 資格情報を作成します。  
   
-3.  **SQL Server エージェント サービスが開始され実行されていることを確認します。** 現在実行されていない場合は、SQL Server エージェントを開始します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] でバックアップ操作を実行するには、SQL Server エージェントがインスタンスで実行されている必要があります。  バックアップ操作を定期的に実行できるように、SQL エージェントの自動的な実行を設定できます。  
+3.  **SQL Server エージェント サービスが開始され、実行されていることを確認する:** SQL Server エージェントを開始します (現在実行されていない場合)。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] でバックアップ操作を実行するには、SQL Server エージェントがインスタンスで実行されている必要があります。  バックアップ操作を定期的に実行できるように、SQL エージェントの自動的な実行を設定できます。  
   
-4.  **保有期間を決定します。** バックアップ ファイルに必要な保有期間を決定します。 保有期間は日数で指定し、その範囲は 1 ～ 30 になります。 保有期間は、データベースの回復性の期間を決定します。  
+4.  **保有期間を決定する:** バックアップ ファイルに必要な保有期間を決定します。 保有期間は日数で指定し、その範囲は 1 ～ 30 になります。 保有期間は、データベースの回復性の期間を決定します。  
   
 5.  **バックアップ中の暗号化を使用する証明書または非対称キーを作成します。** Node1 で、最初のノードで、証明書を作成しを使用してファイルにエクスポートして[BACKUP CERTIFICATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql). Node 2 で、Node 1 からエクスポートしたファイルを使用して証明書を作成します。 ファイルから証明書を作成する方法の詳細については、例を参照してください。[証明書の作成&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52416833"
   
     ```  
   
-     暗号化の証明書を作成する方法の詳細については、、**バックアップ証明書を作成する**ステップ[Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md)を参照してください。  
+     暗号化の証明書を作成する方法の詳細については、次を参照してください。、**バックアップ証明書を作成する**ステップ[Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md)します。  
   
 7.  **有効にして構成[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]Node2 で agtestdb に対しての。** SQL Server Management Studio を起動し、可用性データベースがインストールされている Node2 上のインスタンスに接続します。 要件に合わせて、データベース名、ストレージ URL、SQL 資格情報、および保有期間の値を変更した後、クエリ ウィンドウから次のステートメントを実行します。  
   
@@ -116,13 +116,13 @@ ms.locfileid: "52416833"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] は、指定したデータベースで有効になります。 データベースでのバックアップ操作の実行が開始されるまで最大 15 分かかる場合があります。 バックアップは、優先されるバックアップ レプリカに対して実行されます。  
   
-8.  **拡張イベントの既定の構成を確認します。** レプリカで次の TRANSACT-SQL ステートメントを実行して拡張イベントの構成を確認[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]はバックアップのスケジュールを使用しています。 これは、通常、データベースが属している可用性グループの優先されるバックアップ レプリカの設定です。  
+8.  **拡張イベントの既定の構成を確認する:** レプリカで次の TRANSACT-SQL ステートメントを実行して拡張イベントの構成を確認[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]はバックアップのスケジュールを使用しています。 これは、通常、データベースが属している可用性グループの優先されるバックアップ レプリカの設定です。  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
-     管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、これらのチャネルには、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。 詳細については、[モニター SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)を参照してください。  
+     管理、運用、および分析のチャネル イベントは既定で有効になっていて、無効にできないことに注意してください。 手動の介入を必要とするイベントを監視するには、これで十分です。  デバッグ イベントを有効にすることはできますが、これらのチャネルには、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が問題の検出および解決に使用する情報イベントとデバッグ イベントが含まれています。 詳細については、次を参照してください。[モニター SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)します。  
   
 9. **正常性状態の通知を有効化し、構成する:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] には、注意を要するエラーまたは警告の電子メール通知を送信するためにエージェント ジョブを作成するストアド プロシージャがあります。  このような通知を受信するには、SQL Server エージェント ジョブを作成するストアド プロシージャの実行を有効にする必要があります。 次の手順では、電子メール通知を有効にして構成するためのプロセスを示します。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "52416833"
   
     2.  データベース メールを使用するように SQL Server エージェント通知を構成します。 詳細については、「 [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)」を参照してください。  
   
-    3.  **バックアップ エラーおよび警告を受信する電子メール通知を有効にします。** クエリ ウィンドウから、次の Transact-SQL ステートメントを実行します。  
+    3.  **電子メール通知を有効にして、バックアップ エラーおよび警告を受け取る:** クエリ ウィンドウから、次の Transact-SQL ステートメントを実行します。  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -143,7 +143,7 @@ ms.locfileid: "52416833"
   
 10. **Windows Azure ストレージ アカウントでバックアップ ファイルを表示します。** SQL Server Management Studio または Azure 管理ポータルから、ストレージ アカウントに接続します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を使用するように構成したデータベースをホストする SQL Server インスタンスのコンテナーが表示されます。 また、データベースに対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]を有効にしてから 15 分以内のデータベースとログ バックアップも表示される場合があります。  
   
-11. **正常性状態を監視するには。** 以前は、構成した電子メール通知から監視または記録されたイベントを積極的に監視できます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
+11. **正常性状態を監視する:** 前の手順で構成した電子メール通知から監視するか、ログに記録されているイベントをアクティブに監視することができます。 イベントを表示するための Transact-SQL ステートメントのいくつかの例を示します。  
   
     ```  
     --  view all admin events  
@@ -190,7 +190,7 @@ ms.locfileid: "52416833"
   
     ```  
   
- このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更する**smart_admin.sp_set_db_backup**新しい値を指定します。 詳細については、[SQL Server Managed Backup to Windows Azure - 保有期間とストレージ設定](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)を参照してください。  
+ このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更する**smart_admin.sp_set_db_backup**新しい値を指定します。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure - 保有期間とストレージ設定](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)します。  
   
 ### <a name="considerations-when-removing-a-database-from-alwayson-availability-group-configuration"></a>AlwaysOn 可用性グループの構成からデータベースを削除する際の注意点  
  使用したバックアップの実行をお勧めデータベースが AlwaysOn 可用性グループの構成から削除されますが、スタンドアロンのデータベース場合[smart_admin.sp_backup_on_demand &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)します。 データベースのバックアップをこのように作成すると、新しいバックアップ チェーンが確立され、データベースが可用性グループに含まれていたときにバックアップが格納された可用性コンテナーではなく、インスタンス固有のコンテナーにファイルが配置されます。  

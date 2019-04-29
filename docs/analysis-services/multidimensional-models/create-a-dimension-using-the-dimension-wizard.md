@@ -1,5 +1,5 @@
 ---
-title: ディメンション ウィザードを使用してディメンションを作成 |Microsoft ドキュメント
+title: ディメンション ウィザードを使用して、ディメンションの作成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba906ab17169b2e2faf6bef54137fcc4e6210660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866885"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>ディメンション ウィザードを使用したディメンションの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して新しいディメンションを作成できます。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のディメンション ウィザードを使用して新しいディメンションを作成できます。  
   
 ### <a name="to-create-a-new-dimension"></a>新しいディメンションを作成するには  
   
@@ -70,6 +70,6 @@ ms.locfileid: "34023269"
     >  ディメンション ウィザードを完了した後、ディメンション デザイナーを使用して、ディメンションの属性と階層を追加、削除、および設定できます。  
   
 ## <a name="see-also"></a>参照  
- [既存のテーブルを使用して、ディメンションを作成します。](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
+ [既存のテーブルを使用したディメンションの作成](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

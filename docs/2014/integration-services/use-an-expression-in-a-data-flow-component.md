@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877928"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>データ フロー コンポーネントで式を使用する
   この手順では、条件分割変換または派生列変換に式を追加する方法について説明します。 条件分割変換では、式を使用して、変換出力にデータ行を出力する条件を定義します。また、派生列変換では、式を使用して、列に割り当てる値を定義します。  
@@ -69,7 +69,7 @@ ms.locfileid: "58378071"
  [Integration Services &#40;SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)   
  [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
  [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
- [データ フロー タスク](control-flow/data-flow-task.md)   
+ [[データ フロー タスク]](control-flow/data-flow-task.md)   
  [データ フロー](data-flow/data-flow.md)  
   
   

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842528"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server ユーティリティのトラブルシューティング
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのトラブルシューティングの項目としては、UCP を使用した SQL Server インスタンスの登録処理の失敗の解決、データ収集の失敗 (UCP のマネージド インスタンスのリスト ビューで灰色のアイコンが表示される) に対するトラブルシューティング、パフォーマンス ボトルネックの緩和、リソースの正常性に関する問題の解決などがあります。 識別されるリソース正常性の問題を緩和する方法の詳細について、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP を参照してください[のトラブルシューティングを行う SQL Server リソースの正常性&#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)します。  
@@ -25,7 +25,7 @@ ms.locfileid: "53371064"
   
  Transact-SQL ステートメントまたはバッチの実行中に例外が発生しました。 (Microsoft.SqlServer.ConnectionInfo)  
   
- 追加情報:Windows NT グループ/ユーザーに関する情報を取得できませんでした '\<DomainName\AccountName >'、エラー コード 0x5。 (Microsoft SQL Server、エラー。15404)  
+ 追加情報:Windows NT グループ/ユーザーに関する情報を取得できませんでした '\<DomainName\AccountName >'、エラー コード 0x5。 (Microsoft SQL Server、エラー:15404)  
   
  この問題は、次のようなシナリオで発生します。  
   
@@ -87,7 +87,7 @@ Get-WmiObject Win32_Volume -ErrorAction Stop | Out-Null
 Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null  
 ```  
   
- WMI のトラブルシューティングの詳細については、[WMI のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=178250)を参照してください。 SQL Server ユーティリティのこれらの操作におけるクエリはローカルで実行されるので、DCOM およびリモート トラブルシューティングの内容は適用されません。  
+ WMI のトラブルシューティングの詳細については、次を参照してください。 [WMI のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=178250)します。 SQL Server ユーティリティのこれらの操作におけるクエリはローカルで実行されるので、DCOM およびリモート トラブルシューティングの内容は適用されません。  
   
 ## <a name="failed-data-collection"></a>データ収集の失敗  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのデータ収集イベントが失敗した場合は、次の可能性を検討してください。  

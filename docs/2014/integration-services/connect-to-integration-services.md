@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02ab48e21ff7c0f881cb0d0b830ce03207666c7c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833884"
 ---
 # <a name="connect-to-integration-services"></a>Integration Services に接続する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスに接続する前に、管理者からこのサービスに対するアクセス権を付与してもらう必要があります。 詳細については、「 [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md)」を参照してください。  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bedea60c8bc356ff18b687123799977d83f308c5
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816757"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 機能は、データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューションです。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]で導入された [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] により、エンタープライズのユーザー データベースの可用性が最大限に高まります。 *可用性グループ* は、 *可用性データベース*として知られる、ひとまとまりでフェールオーバーされる個別のユーザー データベースのセットのためのフェールオーバー環境をサポートします。 可用性グループは、読み取り/書き込みプライマリ データベースのセットをサポートし、1 ～ 8 セットの対応するセカンダリ データベースをサポートします。 必要に応じて、セカンダリ データベースで読み取り専用アクセスまたはいくつかのバックアップ操作を利用できます。  
@@ -43,9 +43,9 @@ ms.locfileid: "57578752"
   
     -   *同期コミット モード*。 この可用性モードは、パフォーマンスよりも高可用性とデータ保護が重視され、トランザクションの遅延が増加するのが欠点です。 1 つの可用性グループで、現在のプライマリ レプリカを含む、最大 3 つの同期コミット可用性レプリカをサポートできます。  
   
-     詳細については、[可用性モードを参照してください。Always On 可用性グループです](availability-modes-always-on-availability-groups.md)。  
+     詳細については、次を参照してください。[可用性モードです。Always On 可用性グループです。](availability-modes-always-on-availability-groups.md).  
   
--   自動フェールオーバー、計画的な手動フェールオーバー (通常は単に "手動フェールオーバー" と呼ばれます)、および強制手動フェールオーバー (通常は単に "強制フェールオーバー" と呼ばれます) の複数の形式の可用性グループ フェールオーバーをサポートします。 詳細については、[フェールオーバーとフェールオーバー モードを参照してください。Always On 可用性グループです](failover-and-failover-modes-always-on-availability-groups.md)。  
+-   自動フェールオーバー、計画的な手動フェールオーバー (通常は単に "手動フェールオーバー" と呼ばれます)、および強制手動フェールオーバー (通常は単に "強制フェールオーバー" と呼ばれます) の複数の形式の可用性グループ フェールオーバーをサポートします。 詳細については、次を参照してください。[フェールオーバーとフェールオーバー モードです。Always On 可用性グループです。](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   次のアクティブ セカンダリ機能の一方または両方をサポートするように指定された可用性レプリカを構成できます。  
   
@@ -57,9 +57,9 @@ ms.locfileid: "57578752"
   
 -   可用性グループごとに 1 つの可用性グループ リスナーをサポートします。 *可用性グループ リスナー* は、AlwaysOn 可用性グループのプライマリ レプリカまたはセカンダリ レプリカ内のデータベースにアクセスするためにクライアントが接続できるサーバー名です。 可用性グループ リスナーは、プライマリ レプリカまたは読み取り専用セカンダリ レプリカに着信接続をダイレクトします。 リスナーは、可用性グループがフェールオーバーした後のアプリケーション フェールオーバーを高速化します。 詳細については、次を参照してください[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー。SQL Server;](../../listeners-client-connectivity-application-failover.md).  
   
--   可用性グループのフェールオーバーを細かく制御する柔軟なフェールオーバー ポリシーをサポートします。 詳細については、[フェールオーバーとフェールオーバー モードを参照してください。Always On 可用性グループです](failover-and-failover-modes-always-on-availability-groups.md)。  
+-   可用性グループのフェールオーバーを細かく制御する柔軟なフェールオーバー ポリシーをサポートします。 詳細については、次を参照してください。[フェールオーバーとフェールオーバー モードです。Always On 可用性グループです。](failover-and-failover-modes-always-on-availability-groups.md).  
   
--   ページ破損に対する保護機能を提供する自動ページ修復をサポートします。 詳細については、[ページの自動修復&#40;の可用性グループとデータベース ミラーリング;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)を参照してください。  
+-   ページ破損に対する保護機能を提供する自動ページ修復をサポートします。 詳細については、次を参照してください。[ページの自動修復&#40;の可用性グループとデータベース ミラーリング;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)します。  
   
 -   安全性とパフォーマンスに優れたトランスポートを実現する、暗号化機能と圧縮機能をサポートします。  
   
@@ -69,19 +69,19 @@ ms.locfileid: "57578752"
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ツール。  
   
-        -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] では、可用性グループの作成と構成を行います。 一部の環境では、このウィザードで、セカンダリ データベースを自動的に準備し、それらの各データベースに対するデータ同期を開始することもできます。 詳細については、次を参照してください。[新しい可用性グループ ダイアログ ボックス。SQL Server Management Studio](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)。  
+        -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] では、可用性グループの作成と構成を行います。 一部の環境では、このウィザードで、セカンダリ データベースを自動的に準備し、それらの各データベースに対するデータ同期を開始することもできます。 詳細については、次を参照してください。[新しい可用性グループ ダイアログ ボックス。SQL Server Management Studio。](use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
         -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]では、既存の可用性グループに 1 つ以上のプライマリ データベースを追加できます。 一部の環境では、このウィザードで、セカンダリ データベースを自動的に準備し、それらの各データベースに対するデータ同期を開始することもできます。 詳細については、「 [可用性グループへのデータベース追加ウィザードの使用 (SQLServer)](availability-group-add-database-to-group-wizard.md)」を参照してください。  
   
-        -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] では、既存の可用性グループに 1 つ以上のセカンダリ レプリカを追加できます。 一部の環境では、このウィザードで、セカンダリ データベースを自動的に準備し、それらの各データベースに対するデータ同期を開始することもできます。 詳細については、次を参照してください[使用して、可用性グループ ウィザード; へのレプリカの追加。SQL Server Management Studio](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)。  
+        -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] では、既存の可用性グループに 1 つ以上のセカンダリ レプリカを追加できます。 一部の環境では、このウィザードで、セカンダリ データベースを自動的に準備し、それらの各データベースに対するデータ同期を開始することもできます。 詳細については、次を参照してください[使用して、可用性グループ ウィザード; へのレプリカの追加。SQL Server Management Studio。](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
-        -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]では、可用性グループに対して手動のフェールオーバーを開始できます。 フェールオーバーのターゲットとして指定するセカンダリ レプリカの構成と状態によっては、このウィザードで計画的または強制的な手動フェールオーバーを実行することもできます。 詳細については、次を参照してください。[失敗経由で可用性グループ ウィザードを使用。SQL Server Management Studio](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)。  
+        -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]では、可用性グループに対して手動のフェールオーバーを開始できます。 フェールオーバーのターゲットとして指定するセカンダリ レプリカの構成と状態によっては、このウィザードで計画的または強制的な手動フェールオーバーを実行することもできます。 詳細については、次を参照してください。[失敗経由で可用性グループ ウィザードを使用。SQL Server Management Studio。](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視し、AlwaysOn ポリシーの結果を評価する [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 。 詳細については、次を参照してください[; の AlwaysOn ダッシュ ボードの使用。SQL Server Management Studio](use-the-always-on-dashboard-sql-server-management-studio.md)。  
+    -   AlwaysOn 可用性グループ、可用性レプリカ、および可用性データベースを監視し、AlwaysOn ポリシーの結果を評価する [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] 。 詳細については、次を参照してください[; の AlwaysOn ダッシュ ボードの使用。SQL Server Management Studio。](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-    -   既存の可用性グループに関する基本情報を表示する、[オブジェクト エクスプローラーの詳細] ペイン。 詳細については、次を参照してください[モニターの可用性グループにオブジェクト エクスプ ローラーの詳細を使用して、。SQL Server Management Studio](use-object-explorer-details-to-monitor-availability-groups.md)。  
+    -   既存の可用性グループに関する基本情報を表示する、[オブジェクト エクスプローラーの詳細] ペイン。 詳細については、次を参照してください[モニターの可用性グループにオブジェクト エクスプ ローラーの詳細を使用して、。SQL Server Management Studio。](use-object-explorer-details-to-monitor-availability-groups.md).  
   
-    -   PowerShell コマンドレット。 詳細については、次を参照してください[Always On 可用性グループの; PowerShell コマンドレットの概要。SQL サービスを提供します](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)。  
+    -   PowerShell コマンドレット。 詳細については、次を参照してください[Always On 可用性グループの; PowerShell コマンドレットの概要。SQL サービスを提供します。](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
  可用性グループ  
@@ -109,7 +109,7 @@ ms.locfileid: "57578752"
  Always On 可用性グループのプライマリ レプリカまたはセカンダリ レプリカ内のデータベースにアクセスするためにクライアントが接続できるサーバー名。 可用性グループ リスナーは、プライマリ レプリカまたは読み取り専用セカンダリ レプリカに着信接続をダイレクトします。  
   
 > [!NOTE]  
->  詳細については、次を参照してください。 [AlwaysOn 可用性グループの概要。SQL サービスを提供します](overview-of-always-on-availability-groups-sql-server.md)。  
+>  詳細については、次を参照してください。 [AlwaysOn 可用性グループの概要。SQL サービスを提供します。](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="Interoperability"></a> その他のデータベース エンジン機能との相互運用性と共存  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  

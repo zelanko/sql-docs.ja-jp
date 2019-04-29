@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894445"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>[フラット ファイル接続マネージャー エディター] ([列] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[列]** ページを使用すると、行および列情報を指定したり、ファイルをプレビューしたりできます。  
@@ -65,7 +65,7 @@ ms.locfileid: "58374650"
 |**[タブ {t}]**|列は、タブで区切られます。|  
 |**[縦棒 {&#124;}]**|列は、縦棒で区切られます。|  
   
- **[更新]**  
+ **更新**  
  スキップする区切り記号を変更したときの効果を表示するには、 **[最新の情報に更新]** をクリックします。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
   
  **[プレビュー]**  

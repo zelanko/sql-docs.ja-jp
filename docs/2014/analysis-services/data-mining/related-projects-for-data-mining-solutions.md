@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733081"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
   データ マイニング ソリューションに最低限必要なのは、データ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルを定義した、データ マイニング プロジェクトです。 ただし、データ マイニング モデルを日々の意志決定に使用する場合は、データ マイニングを予測分析ソリューションの他の部分と統合し、次のプロセスやコンポーネントを含めることが重要です。  
@@ -66,7 +66,7 @@ ms.locfileid: "52400656"
   
 -   [データ クレンジング](../../data-quality-services/data-cleansing.md)  
   
--   [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [データ プロファイル タスク](../../integration-services/control-flow/data-profiling-task.md)  
   

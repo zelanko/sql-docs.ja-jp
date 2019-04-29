@@ -1,5 +1,5 @@
 ---
-title: ロジスティック回帰モデルのクエリ例 |Microsoft ドキュメント
+title: ロジスティック回帰モデルのクエリ例 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 78a89577c35f1effe00fe35685640c229811860d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020607"
 ---
 # <a name="logistic-regression-model-query-examples"></a>ロジスティック回帰モデルのクエリ例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34019499"
   
  ここでは、Microsoft ロジスティック回帰アルゴリズムに基づいたモデルに対するクエリの作成方法について説明します。  
   
- **Content Queries**  
+ **コンテンツ クエリ**  
   
  [データ マイニング スキーマ行セットを使用してモデル パラメーターを取得する](#bkmk_Query1)  
   
@@ -35,9 +35,9 @@ ms.locfileid: "34019499"
  [不連続値の予測を作成する](#bkmk_Query4)  
   
 ##  <a name="bkmk_top"></a> ロジスティック回帰モデルに関する情報を取得する  
- ロジスティック回帰モデルは、Microsoft ニューラル ネットワーク アルゴリズムでパラメーターの特殊なセットを使用して作成されます。そのため、ロジスティック回帰モデルには、ニューラル ネットワーク モデルと同じ情報がいくつか含まれますが、ニューラル ネットワーク モデルほど複雑ではありません。 モデル コンテンツの構造および各種類のノードに格納されている情報の種類については、「[ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)」を参照してください。  
+ ロジスティック回帰モデルは、Microsoft ニューラル ネットワーク アルゴリズムでパラメーターの特殊なセットを使用して作成されます。そのため、ロジスティック回帰モデルには、ニューラル ネットワーク モデルと同じ情報がいくつか含まれますが、ニューラル ネットワーク モデルほど複雑ではありません。 モデル コンテンツの構造および各種類のノードに格納されている情報の種類については、「 [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)」を参照してください。  
   
- クエリ シナリオを理解するために、中級者向けデータ マイニング チュートリアル「[レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデルの作成 (中級者向けデータ マイニング チュートリアル)](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)」の説明に従ってロジスティック回帰モデルを作成できます。  
+ クエリのシナリオで作業を進めるには、中級者向けデータ マイニング チュートリアルの次のセクションで説明したロジスティック回帰モデルを作成できます。[レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルを構築&#40;中級者向けデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)します。  
   
  また、「 [基本的なデータ マイニング チュートリアル](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」のマイニング構造 Targeted Mailing を使用することもできます。  
   
@@ -61,7 +61,7 @@ Gender,
 USING Microsoft_Logistic_Regression  
 ```  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1: データ マイニング スキーマ行セットを使用してモデル パラメーターを取得する  
+###  <a name="bkmk_Query1"></a> サンプル クエリ 1:データ マイニング スキーマ行セットを使用してモデル パラメーターを取得する  
  データ マイニング スキーマ行セットに対してクエリを実行すると、モデルに関するメタデータを取得できます (作成された日時、最後に処理された日時、基になるマイニング構造の名前、予測可能な属性として使用されている列の名前など)。 次の例では、モデルが最初に作成されたときに使用されたパラメーター、モデルの名前と種類、およびモデルが作成された日付が返されます。  
   
 ```  
@@ -76,7 +76,7 @@ WHERE MODEL_NAME = 'Call Center_LR'
 |-----------------|-------------------|-------------------|------------------------|  
 |Call Center_LR|Microsoft_Logistic_Regression|04/07/2009 20:38:33|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, SAMPLE_SIZE=10000|  
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2: DMX を使用してモデルに関する追加の詳細情報を検索する  
+###  <a name="bkmk_Query2"></a> サンプル クエリ 2:DMX を使用してモデルに関する追加の詳細情報を検索する  
  次のクエリは、ロジスティック回帰モデルに関する基本的な情報を返します。 ロジスティック回帰モデルは、入力として使用される値を表すマージナル統計ノード (NODE_TYPE = 24) がある点など、多くの点でニューラル ネットワーク モデルに似ています。 このサンプル クエリでは、Targeted Mailing モデルを使用し、入れ子になったテーブル NODE_DISTRIBUTION から入力値を取得することにより、すべての入力値を取得します。  
   
 ```  
@@ -96,7 +96,7 @@ FROM [TM_Logistic Regression].CONTENT
 |Commute Distance|Missing|0|0|0|1|  
 |Commute Distance|5-10 Miles|3033|0.173472889|0|4|  
   
- 実際のクエリではさらに多くの行が返されますが、このサンプルでは、入力に関して提供される情報の種類の例を示しています。 不連続入力については、可能性のある各値を表に示しています。 Age などの連続値入力については、完全な一覧を示すことはできないので、入力を平均として分離しています。 マージナル統計ノードでの情報の使用方法の詳細については、「[ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)」を参照してください。  
+ 実際のクエリではさらに多くの行が返されますが、このサンプルでは、入力に関して提供される情報の種類の例を示しています。 不連続入力については、可能性のある各値を表に示しています。 Age などの連続値入力については、完全な一覧を示すことはできないので、入力を平均として分離しています。 マージナル統計ノードでの情報の使用方法の詳細については、「 [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)」を参照してください。  
   
 > [!NOTE]  
 >  結果は見やすくするためにフラット化されていますが、プロバイダーが階層的な行セットをサポートしている場合は、1 つの列で入れ子になったテーブルを返すことができます。  
@@ -104,7 +104,7 @@ FROM [TM_Logistic Regression].CONTENT
 ## <a name="prediction-queries-on-a-logistic-regression-model"></a>ロジスティック回帰モデルに対する予測クエリ  
  すべての種類のマイニング モデルで [Predict (DMX)](../../dmx/predict-dmx.md) 関数を使用して、モデルに新しいデータを提供し、新しい値に基づいて予測を作成できます。 また、予測が正しい確率など、予測に関する追加情報を返す関数も使用できます。 ここでは、ロジスティック回帰モデルでの予測クエリの例をいくつか紹介します。  
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3: 連続値の予測を作成する  
+###  <a name="bkmk_Query3"></a> サンプル クエリ 3:連続値の予測を作成する  
  ロジスティック回帰は入力と予測の両方について連続属性の使用をサポートしているため、データ内のさまざまな要素を相互に関連付けるモデルを簡単に作成できます。 予測クエリを使用して、これらの要素間のリレーションシップを調査できます。  
   
  次のサンプル クエリは、中級者向けチュートリアルの Call Center モデルに基づいており、金曜日の午前のシフトについてのサービス グレードを予測する単一クエリを作成します。 [PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md) 関数は入れ子になったテーブルを返します。このテーブルには、予測される値の有効性の理解に関連する統計が含まれます。  
@@ -127,9 +127,9 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 |||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- 入れ子になった NODE_DISTRIBUTION テーブルの確率、サポート、および標準偏差値の詳細については、「[ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)」を参照してください。  
+ 入れ子になった NODE_DISTRIBUTION テーブルの確率、サポート、および標準偏差値の詳細については、「 [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)」を参照してください。  
   
-###  <a name="bkmk_Query4"></a> サンプル クエリ 4: 不連続値の予測を作成する  
+###  <a name="bkmk_Query4"></a> サンプル クエリ 4:不連続値の予測を作成する  
  ロジスティック回帰は、バイナリ結果を構成する要素を分析するシナリオでよく使用されます。 チュートリアルで使用されているモデルは連続値 **ServiceGrade**を予測しますが、現実のシナリオでは、サービス グレードがいくつかの分離した目標値を満たすかどうかを予測するモデルを設定することが必要になります。 または、連続値を使用して予測を出力し、後で予測された出力を **Good**、 **Fair**、または **Poor**にグループ化することもできます。  
   
  次のサンプルは、予測可能な属性をグループ化する方法をどのように変更するかを示しています。 これを行うには、マイニング構造のコピーを作成し、目的の列の分離方法を変更して、値が連続的ではなく、グループ化されるようにします。  
@@ -187,13 +187,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |予測関数|使用方法|  
-|[IsDescendant (&) #40";"DMX"&"#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[PredictAdjustedProbability & #40";"DMX"&"#41;](../../dmx/predictadjustedprobability-dmx.md)|指定された状態の調整済みの確率を返します。|  
-|[PredictHistogram (&) #40";"DMX"&"#41;](../../dmx/predicthistogram-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
-|[PredictProbability & #40";"DMX"&"#41;](../../dmx/predictprobability-dmx.md)|指定された状態の確率を返します。|  
-|[PredictStdev & #40";"DMX"&"#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
-|[PredictSupport & #40";"DMX"&"#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
-|[PredictVariance & #40";"DMX"&"#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
+|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|指定された状態の調整済みの確率を返します。|  
+|[PredictHistogram (DMX)](../../dmx/predicthistogram-dmx.md)|指定された列に対して、予測された値、または値のセットを返します。|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|指定された状態の確率を返します。|  
+|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|予測された値の標準偏差を返します。|  
+|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|指定された状態に対するサポート値を返します。|  
+|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|指定された列の分散を返します。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](../../dmx/general-prediction-functions-dmx.md)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](../../dmx/data-mining-extensions-dmx-function-reference.md)」を参照してください。  
   
@@ -204,7 +204,7 @@ NATURAL PREDICTION JOIN
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [ロジスティック回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
- [レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル & #40; 中級者向けデータ マイニング チュートリアル & #41; の作成](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルを構築&#40;中級者向けデータ マイニング チュートリアル&#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

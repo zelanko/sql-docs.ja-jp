@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d2d2d034424ac4564a66b40b1479acb7dc683d7c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766552"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>マスター データ サービスのデータベースと Web サイトの設定
   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータベースと Web サイトを設定する (MDS)  
@@ -35,7 +35,7 @@ ms.locfileid: "56027183"
   
 3.  (省略可能) **の** [Web 構成] [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]ページで、Data Quality Services との統合を有効にします。  
   
-     詳細については、[Web 構成 ページ&#40;Master Data Services 構成マネージャー&#41; ](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)と[マスター データ サービスと Data Quality Services 統合を有効にする](install-windows/enable-data-quality-services-integration-with-master-data-services.md)を参照してください。  
+     詳細については、次を参照してください。 [Web 構成 ページ&#40;Master Data Services 構成マネージャー&#41; ](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)と[マスター データ サービスと Data Quality Services 統合を有効にする](install-windows/enable-data-quality-services-integration-with-master-data-services.md)します。  
   
  また、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使って、MDS データベースに関連付けられている Web アプリケーションとサービスの設定値を指定できます。 たとえば、データの読み込み頻度や検証メールの送信頻度を指定できます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../../2014/master-data-services/system-settings-master-data-services.md)」を参照してください。  
   

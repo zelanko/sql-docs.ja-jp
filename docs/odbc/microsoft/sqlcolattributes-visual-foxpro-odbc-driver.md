@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e34929315d3a3548799bc605dbb8f3c4a2f665d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928161"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  結果セット内の列の記述子の情報を返します。 記述子の情報は、文字列、32 ビットの記述子に依存する値、または整数値として返されます。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47820061"
   
 |*fDescType*|解説|  
 |-----------------|-------------|  
-|SQL_COLUMN_AUTO_INCREMENT|FALSE を返します。 Visual FoxPro にカウンター フィールドがありません。|  
+|SQL_COLUMN_AUTO_INCREMENT|FALSE を返します。Visual FoxPro には、カウンターのフィールドがありません。|  
 |SQL_COLUMN_CASE_SENSITIVE|常に列の型が文字である場合は、TRUE を返します。|  
 |SQL_COLUMN_LABEL|SQL_COLUMN_NAME によっても返される列名を返します。|  
 |SQL_COLUMN_MONEY|列の型が通貨 (Visual FoxPro 言語では"Y"で表されます) がかどうかは TRUE を返します。|  
@@ -46,4 +46,4 @@ ms.locfileid: "47820061"
 |SQL_COLUMN_SEARCHABLE|SQL_UNSEARCHABLE 全般; 型の列を返します。これらの列は、WHERE 句で使用できません。<br /><br /> 文字または NOCPTRANS とメモ型の列を返します SQL_SEARCHABLE 未設定。これらの列は、任意の比較演算子と共に WHERE 句で使用できます。<br /><br /> 返します SQL_ALL_EXCEPT_LIKE の他の列の型。これらの列は、似たを除くすべての比較演算子と共に WHERE 句で使用できます。|  
 |SQL_COLUMN_TABLE_NAME|常に空の文字列を返します。|  
   
- 詳細については、[SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md)で、 *ODBC プログラマ リファレンス*します。

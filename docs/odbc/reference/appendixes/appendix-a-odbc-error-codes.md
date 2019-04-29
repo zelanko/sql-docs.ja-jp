@@ -1,5 +1,5 @@
 ---
-title: '付録 a: ODBC エラー コード |Microsoft Docs'
+title: '付録 A: ODBC エラー コード |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026790"
 ---
-# <a name="appendix-a-odbc-error-codes"></a>付録 A : ODBC エラー コード
+# <a name="appendix-a-odbc-error-codes"></a>付録 A: ODBC エラー コード
 このトピックでは、ODBC 3 の SQLSTATE 値について説明します。*x*します。 ODBC 3 の詳細についてはします。*x* SQLSTATE の値を参照してください[SQLSTATE マッピング](../../../odbc/reference/develop-app/sqlstate-mappings.md)します。  
   
- **SQLGetDiagRec**または**SQLGetDiagField** Open Group によって定義されている SQLSTATE 値を返します*Data Management: Structured Query Language (SQL)、バージョン 2* (1995 年 3 月)。 SQLSTATE 値では、5 つの文字を含む文字列です。 次の表に、SQLSTATE 値を返すことができるドライバー **SQLGetDiagRec**します。  
+ **SQLGetDiagRec**または**SQLGetDiagField** Open Group によって定義されている SQLSTATE 値を返します*データ管理。クエリ言語 (SQL) バージョン 2 を構造化*(1995 年 3 月)。 SQLSTATE 値では、5 つの文字を含む文字列です。 次の表に、SQLSTATE 値を返すことができるドライバー **SQLGetDiagRec**します。  
   
  SQLSTATE で返される文字列は、続く 3 文字のサブクラス値 2 文字のクラスの値で構成されます。 クラスの値は「01」は、警告を示し、SQL_SUCCESS_WITH_INFO リターン コードが付いています。 「01」クラス"IM、"を除く以外のクラスの値は、エラーを示すし、SQL_ERROR の戻り値が付いています。 クラスは、"IM"は、ODBC 自体の実装から派生されたエラーおよび警告に固有です。 任意のクラスのサブクラス値「000」では、その SQLSTATE のサブクラスがないことを示します。 クラスとサブクラスの値の割り当ては、sql-92 で定義されます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47767740"
   
 |SQLSTATE|[エラー]|を返されることができます。|  
 |--------------|-----------|--------------------------|  
-|01000|一般的な警告|除くすべての ODBC 関数:<br /><br /> **Sqlerror 関数**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
+|01000|一般的な警告|除くすべての ODBC 関数:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |01001|カーソル操作の競合|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |01002|切断エラー|**SQLDisconnect**|  
 |01003|NULL 値は関数のセットで削除されました|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
@@ -95,8 +95,8 @@ ms.locfileid: "47767740"
 |42S21|列が既に存在します|**SQLExecDirect**<br /><br /> **SQLPrepare**|  
 |42S22|列が見つかりません|**SQLExecDirect**<br /><br /> **SQLPrepare**|  
 |44000|WITH CHECK OPTION 違反|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
-|HY000|一般的なエラー|除くすべての ODBC 関数:<br /><br /> **Sqlerror 関数**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
-|HY001|メモリの割り当てエラー|除くすべての ODBC 関数:<br /><br /> **Sqlerror 関数**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
+|HY000|一般的なエラー|除くすべての ODBC 関数:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
+|HY001|メモリの割り当てエラー|除くすべての ODBC 関数:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |HY003|無効なアプリケーション バッファーの種類|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLGetData**|  
 |HY004|無効な SQL データ型|**SQLBindParameter**<br /><br /> **SQLGetTypeInfo**|  
 |HY007|関連付けられているステートメントが準備されていません|**SQLCopyDesc**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**|  

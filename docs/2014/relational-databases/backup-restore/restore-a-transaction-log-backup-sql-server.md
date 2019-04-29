@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875670"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、トランザクション ログ バックアップを復元する方法について説明します。  
@@ -96,9 +96,9 @@ ms.locfileid: "58535034"
   
      次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-    |Header|値|  
+    |[ヘッダー]|値|  
     |------------|-----------|  
-    |**復元**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
+    |**[復元]**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前。|  
     |**コンポーネント**|バックアップされるコンポーネント:**データベース**、**ファイル**、または\<空白 > (トランザクション ログ用)。|  
     |**[データベース]**|バックアップ操作に関係するデータベース名。|  
@@ -128,7 +128,7 @@ ms.locfileid: "58535034"
   
          次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-        |Header|値|  
+        |[ヘッダー]|値|  
         |------------|-----------|  
         |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
         |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  

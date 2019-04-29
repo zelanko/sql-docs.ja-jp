@@ -1,5 +1,5 @@
 ---
-title: 付録 E :スカラー関数 |Microsoft Docs
+title: '付録 E: スカラー関数 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026682"
 ---
-# <a name="appendix-e-scalar-functions"></a>付録 E :スカラー関数
+# <a name="appendix-e-scalar-functions"></a>付録 E: スカラー関数
 ODBC では、この付録の対応するセクションで提供されるこれらの関数型のそれぞれについて詳しい情報のスカラー関数は、次の種類を指定します。 関数の説明には、関連する構文が含まれます。  
   
  この付録には、次のトピックが含まれています。  

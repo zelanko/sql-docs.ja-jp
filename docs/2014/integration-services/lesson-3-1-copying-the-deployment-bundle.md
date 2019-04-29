@@ -1,5 +1,5 @@
 ---
-title: 手順 1:配置バンドルのコピー |Microsoft Docs
+title: 手順 1:配置バンドルのコピー | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891711"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>手順 1:配置バンドルのコピー
   このタスクでは、配置先コンピューターに配置バンドルをコピーします。  

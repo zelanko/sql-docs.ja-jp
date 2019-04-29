@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898840"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>[SQL 実行タスク エディター] ([全般] タブ)
   **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、SQL 実行タスクを構成したり、タスクが実行する SQL ステートメントを指定したりできます。  
@@ -55,9 +55,9 @@ ms.locfileid: "58382278"
  **ConnectionType**  
  データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]**、 **[ODBC]**、 **[ADO]**、 **[ADO.NET]** 、および **[SQLMOBILE]** です。  
   
- **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、 [ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)、 [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、 [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)、 [SQL ServerCompact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、[ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)、[ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、[ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **[接続]**  
+ **Connection**  
  定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...**>] を選択します。  
   
  **[SQLSourceType]**  
@@ -110,7 +110,7 @@ ms.locfileid: "58382278"
  **[SourceVariable]**  
  既存の変数を選択するか、\<**新しい変数...**> をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   

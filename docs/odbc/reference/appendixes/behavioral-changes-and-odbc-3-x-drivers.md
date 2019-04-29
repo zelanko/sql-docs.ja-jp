@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e386aa60489fe3edb2caac3cb49ebad263ffdfac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026622"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>動作変更および ODBC 3.x ドライバー
 環境属性 ODBC 2 が発生する必要があるかどうか、ドライバーを SQL_ATTR_ODBC_VERSION を示します。*x*動作または ODBC 3 *.x*動作します。 SQL_ATTR_ODBC_VERSION 環境属性を設定する方法は、アプリケーションによって異なります。 ODBC 3 *.x*アプリケーションを呼び出す必要があります**SQLSetEnvAttr**を呼び出すことが後に、この属性を設定する**SQLAllocHandle**環境ハンドルの割り当てに呼び出しの前に、**SQLAllocHandle**接続ハンドルを割り当てられません。 これを行うよう、失敗した場合、ドライバー マネージャーは SQLSTATE HY010 を返します (関数のシーケンス エラーです)、後者の呼び出しで**SQLAllocHandle**します。  
   
 > [!NOTE]  
->  動作が変更されると、アプリケーションの機能の詳細については、[動作が変更される](../../../odbc/reference/develop-app/behavioral-changes.md)を参照してください。  
+>  動作が変更されると、アプリケーションの機能の詳細については、次を参照してください。[動作が変更される](../../../odbc/reference/develop-app/behavioral-changes.md)します。  
   
  ODBC 2。*x*アプリケーションや ODBC 2 *。x* ODBC 3 と再コンパイルされたアプリケーション *.x*ヘッダー ファイルは呼び出さないでください**SQLSetEnvAttr**します。 ただし、呼び出す**SQLAllocEnv**の代わりに**SQLAllocHandle**環境ハンドルを割り当てられません。 そのため、アプリケーションを呼び出すと**SQLAllocEnv**ドライバー マネージャーは、ドライバー マネージャーで、 **SQLAllocHandle**と**SQLSetEnvAttr**ドライバー。 したがって、ODBC 3 *.x*ドライバー常に信頼性のこの属性が設定されています。  
   

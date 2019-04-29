@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5471788d3e730c9694ea6394b7e3d1fc659eda96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855250"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>UDT を削除&#39;s という名前の予約済みの日付と時刻のデータ型の後
   アップグレード アドバイザーによって、`date` データ型または `time` データ型に予約されている語句に基づいて名前が付けられたユーザー定義型 (UDT) が検出されました。  

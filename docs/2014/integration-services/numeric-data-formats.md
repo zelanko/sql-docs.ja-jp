@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a89b37f2210b2a80d22747a816e4f937cbc54ee1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890619"
 ---
 # <a name="numeric-data-formats"></a>数値データ形式
   高速解析は、データを解析するための、高速で単純なロケール非依存型のルーチンのセットです。 高速解析でサポートされているデータ型は、整数データ型の限定された形式のセットのみです。  

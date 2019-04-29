@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23bbfd748bcb649e5f7d103683d20413764a62a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842504"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>[SQL Server Profiler] - [検索] ダイアログ ボックス
   **[検索]** ダイアログ ボックスを使用すると、トレース内で特定の文字や単語を検索できます。 検索の実行中に取り消すには、<localizedText>Esc</localizedText> キーを押します。  
@@ -48,7 +48,7 @@ ms.locfileid: "48078932"
   
 ## <a name="see-also"></a>参照  
  [値またはトレース中にデータ列の検索&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
- [トレースを作成する&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [トレースの作成 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

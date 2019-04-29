@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869690"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -59,7 +59,7 @@ ms.locfileid: "53359314"
   
 -   一意インデックスまたは一意制約の列を選択する場合は、NOT NULL と定義された列を選択します。 これにより、複数の行のキー値に NULL が含まれている場合に発生する一意性違反の可能性がなくなります。  
   
--   重複値の原因がデータ エントリのエラーである場合は、そのデータを手動で修正してから、インデックスまたは制約を作成します。 テーブル内の重複する行を削除する方法の詳細については、サポート技術情報の記事 139444「を参照してください。[SQL Server のテーブルから重複する行を削除する方法](https://support.microsoft.com/kb/139444)します。  
+-   重複値の原因がデータ エントリのエラーである場合は、そのデータを手動で修正してから、インデックスまたは制約を作成します。 テーブル内の重複行を削除する方法の詳細については、サポート技術情報の記事 139444「[テーブルから重複行を削除する方法](https://support.microsoft.com/kb/139444)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

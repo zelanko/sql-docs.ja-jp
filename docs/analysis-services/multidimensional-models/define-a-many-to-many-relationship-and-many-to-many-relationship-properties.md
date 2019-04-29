@@ -1,5 +1,5 @@
 ---
-title: 多対多リレーションシップと多対多リレーションシップのプロパティの定義 |Microsoft ドキュメント
+title: 多対多リレーションシップと多対多リレーションシップのプロパティの定義 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53b20b10aea985722f9c498079a3267a5ddb6969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825753"
 ---
-# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多リレーションシップと多対多リレーションシップのプロパティの定義
+# <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34026899"
   
  視覚的には、多対多ディメンションのリレーションシップはキューブ図では表示されません。 代わりに、[ディメンションの使用法] タブを使用して、モデル内にあるすべての多対多リレーションシップをすばやく識別することができます。 多対多リレーションシップは、次のアイコンによって示されます。  
   
- ![ディメンションの使用法の多対多アイコン](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
+ ![ディメンションの使用法での多対多アイコン](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
   
  ボタンをクリックすると、[リレーションシップの定義] ダイアログ ボックスが開き、リレーションシップの種類が多対多であることを確認し、リレーションシップ内で使用されている中間メジャー グループを表示することができます。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34026899"
  これ以降のセクションでは、多対多リレーションシップを設定する方法と、モデルの動作をテストする方法を学習します。 代わりに、追加情報を確認する場合や、チュートリアルを最初に試す場合は、この記事の最後にある「 **詳細情報** 」を参照してください。  
   
 ## <a name="create-a-many-to-many-dimension"></a>多対多ディメンションの作成  
- 単純な多対多リレーションシップには、多対多の基数を含む 2 つのディメンション、メンバー アソシエーションを格納するための中間メジャー グループ、総売上や銀行口座の残高の合計など測定可能なデータを含むファクト メジャー グループが含まれています。  
+ 単純な多対多リレーションシップには、多対多のカーディナリティを含む 2 つのディメンション、メンバー アソシエーションを格納するための中間メジャー グループ、総売上や銀行口座の残高の合計など測定可能なデータを含むファクト メジャー グループが含まれています。  
   
  多対多リレーションシップ内の各ディメンションには、DSV 内の対応テーブルが含まれている可能性があり、その場合は、モデル内の各ディメンションが、データ ソース内の既存のテーブルに基づいています。 逆に、モデル内のディメンションが、DSV 内の少数の物理テーブルや複数の物理テーブルから派生した可能性もあります。 Sales Reasons と Sales Orders を適切な例として使用して、Adventure Works のサンプル キューブはモデルのみのデータ構造として存在するディメンションを活用して多対多の関係を示しますが、DSV 内に物理的な同等の存在はありません。 Sales Order ディメンションは、基になるデータ ソース内のディメンション テーブルではなく、ファクト テーブルに基づいています。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34026899"
   
  多対多リレーションシップを作成する手順を示すために、Adventure Works のサンプル キューブ内にある多対多リレーションシップの 1 つを、この手順で作成し直します。 リレーショナル データベース エンジンのインスタンスにソース データ (つまり、Adventure Works サンプル データ ウェアハウス) を既にインストールしてある場合は、次の手順に従うことができます。  
   
-#### <a name="step-1-verify-dsv-relationships"></a>手順 1: DSV リレーションシップの確認  
+#### <a name="step-1-verify-dsv-relationships"></a>手順 1:DSV リレーションシップを確認します。  
   
 1.  SQL Server データ ツールの多次元プロジェクトで、SQL Server データベース エンジンのインスタンスでホストされている Adventure Works DW 2012 リレーショナル データ ウェアハウスに接続するデータ ソースを作成します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34026899"
   
      ![関連テーブルを示す DSV](../../analysis-services/multidimensional-models/media/ssas-m2m-dsvpkeys.PNG "関連テーブルを示す DSV")  
   
-#### <a name="step-2-create-dimensions-and-measure-groups"></a>手順 2: ディメンションとメジャー グループの作成  
+#### <a name="step-2-create-dimensions-and-measure-groups"></a>手順 2:ディメンションを作成し、メジャー グループ  
   
 1.  SQL Server データ ツールの多次元プロジェクトで、 **[ディメンション]** を右クリックし、 **[新しいディメンション]** をクリックします。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34026899"
   
 5.  ウィザードの次のページで、属性を選択します。 この例では、 **SalesOrderNumber**のみを選択できます。  
   
-     ![Sales order ディメンションを示す属性リスト](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "Sales order ディメンションを示す属性の一覧")  
+     ![ディメンションが表示された属性の一覧の販売注文](../../analysis-services/multidimensional-models/media/ssas-m2m-dimsalesorderattrib.PNG "Sales order ディメンションが表示された属性の一覧")  
   
 6.  そのディメンションを **Dim Sales Orders**という名前に変更します。その結果、ディメンションに関して、一貫性のある名前付け規約を使用できます。  
   
@@ -119,11 +119,11 @@ ms.locfileid: "34026899"
   
 11. キューブに名前を付け、 **[完了]** をクリックします。  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>手順 3: 多対多リレーションシップの定義  
+#### <a name="step-3-define-many-to-many-relationship"></a>手順 3:定義の多対多のリレーションシップ  
   
 1.  キューブ デザイナーで、[ディメンションの使用法] タブをクリックします。**Dim Sales Reason** と **Fact Internet Sales**の間に、既に多対多アイコンがあることに注意してください。 次のアイコンが、多対多リレーションシップを示していることに注意してください。  
   
-     ![ディメンションの使用法の多対多アイコン](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
+     ![ディメンションの使用法での多対多アイコン](../../analysis-services/multidimensional-models/media/ssas-m2m-icondimusage.png "多対多ディメンションの使用法のアイコン")  
   
 2.  **Dim Sales Reason** と **Fact Internet Sales**の交差セルをクリックし、ボタンをクリックして [リレーションシップの定義] ダイアログ ボックスを開きます。  
   
@@ -179,12 +179,12 @@ ms.locfileid: "34026899"
   
  [多対多の回転 2.0](http://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [チュートリアル : SQL Server Analysis Services を対象とする多対多ディメンションの例](http://go.microsoft.com/fwlink/?LinkId=324761)  
+ [チュートリアル: SQL Server Analysis Services の多対多ディメンションの例](http://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>参照  
- [ディメンションのリレーションシップ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 多次元モデリング チュートリアル用サンプル データとプロジェクトをインストールします。](../../analysis-services/install-sample-data-and-projects.md)   
- [Analysis Services プロジェクト & #40; を展開します。SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [ディメンション リレーションシップ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../../analysis-services/install-sample-data-and-projects.md)   
+ [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [多次元モデルのパースペクティブ](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

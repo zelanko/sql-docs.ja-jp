@@ -1,8 +1,9 @@
 ---
 title: CPU 使用率の監視 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
@@ -19,17 +20,18 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032106"
 ---
 # <a name="monitor-cpu-usage"></a>CPU 使用率の監視
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   CPU 使用率が通常の範囲内にあるかどうかを確認するため、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを定期的に監視する必要があります。 CPU 使用率が常に高い場合は、CPU のアップグレードまたは多重プロセッサの追加を検討する必要があります。 また、CPU 使用率が高い場合、アプリケーションのチューニングや設計に問題がある可能性もあります。 この場合は、アプリケーションを最適化することで CPU 使用率を下げることができます。  
   
  CPU 使用率を効率よく確認するには、システム モニターの **Processor:% Processor Time** カウンターを使用します。 このカウンターは、アイドル状態でないスレッドを実行するために CPU が費やす時間を監視します。 使用率が常に 80 ～ 90% である場合は、CPU のアップグレードまたはプロセッサの追加が必要です。 多重プロセッサ システムでは、各プロセッサについて、このカウンターを個別に監視します。 この値は、特定のプロセッサの処理時間の合計を表します。 すべてのプロセッサの平均値を調べるには、代わりに **System: %Total Processor Time** カウンターを使用します。  
@@ -47,7 +49,7 @@ ms.locfileid: "52747704"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのユーザー プロセスの実行にプロセッサが費やす時間比率を示します。  
   
--   **システムの場合:プロセッサ キューの長さ**  
+-   **System:Processor Queue Length**  
   
      プロセッサ時間を待っているスレッドの数を示します。 プロセスのスレッドが、使用できるよりも多くのプロセッサ サイクルを必要とする場合は、プロセッサのボトルネックが生じます。 複数のプロセスがプロセッサ時間を利用する場合、状況によっては、より高速なプロセッサのインストールが必要になります。 多重プロセッサ システムを使用している場合は、プロセッサの追加も可能です。  
   

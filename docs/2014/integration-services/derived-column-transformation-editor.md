@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898360"
 ---
 # <a name="derived-column-transformation-editor"></a>派生列変換エディター
   **[派生列変換エディター]** ダイアログ ボックスを使用すると、新しい列または置換列を作成する式を作成できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "58386680"
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **関連トピック**:[Integration Services &#40;SSIS&#41;式](expressions/integration-services-ssis-expressions.md)、[演算子&#40;Ssis&#41;](expressions/operators-ssis-expression.md)、および[関数&#40;SSIS 式&#41;](expressions/functions-ssis-expression.md)  
+ **関連トピック**: [Integration Services &#40;SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)、[演算子 &#40;SSIS 式&#41;](expressions/operators-ssis-expression.md)、[関数 &#40;SSIS 式&#41;](expressions/functions-ssis-expression.md)  
   
  **[データ型]**  
  新しい列にデータを追加すると、 **[派生列変換エディター]** ダイアログ ボックスによって自動的に式が評価され、データ型が適切に設定されます。 この列の値は読み取り専用です。 詳細については、「 [Integration Services Data Types](data-flow/integration-services-data-types.md)」を参照してください。  

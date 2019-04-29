@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903698"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistribution_history**テーブルは、ローカル ディストリビューターに関連付けられているディストリビューション エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSdistribution_history**テーブルは、ローカル ディストリビューターに関連付けられているディストリビューション エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに格納されます。  
   
 ## <a name="definition"></a>定義  
   
@@ -37,18 +37,18 @@ ms.locfileid: "52817324"
 |**agent_id**|**int**|ディストリビューション エージェントの ID。|  
 |**runstatus**|**int**|実行中の状態:<br /><br /> **1** = 開始します。<br /><br /> **2** = 成功します。<br /><br /> **3** = 実行中です。<br /><br /> **4** = アイドル状態です。<br /><br /> **5** = 再試行します。<br /><br /> **6** = 失敗します。|  
 |**start_time**|**datetime**|ジョブの実行開始時刻です。|  
-|**time**|**datetime**|メッセージが記録された時刻です。|  
+|**time**|**datetime**|メッセージが記録された時刻。|  
 |**duration**|**int**|メッセージ セッションの実行時間 (秒) です。|  
 |**comments**|**nvarchar (4000)**|メッセージ テキストです。|  
 |**xact_seqno**|**varbinary(16)**|最後に処理されたトランザクション シーケンス番号です。|  
-|**current_delivery_rate**|**float**|最後の履歴エントリ以降 1 秒あたりに配信されたコマンド数の平均です。|  
-|**current_delivery_latency**|**int**|最後の履歴エントリ以降で、コマンドがディストリビューション データベースに登録されてからサブスクライバーに適用されるまでの間隔です。 単位はミリ秒。|  
-|**delivered_transactions**|**int**|セッション中に配信されたトランザクションの総数です。|  
+|**current_delivery_rate**|**float**|最後の履歴エントリ以降 1 秒あたりに配信される平均コマンド数。|  
+|**current_delivery_latency**|**int**|コマンドがディストリビューション データベースから最後の履歴エントリ以降のサブスクライバーに適用されるまでの待機時間。 単位はミリ秒。|  
+|**delivered_transactions**|**int**|セッションに配信されたトランザクション数の合計。|  
 |**delivered_commands**|**int**|セッションに配信されたコマンド数の合計。|  
-|**average_commands**|**int**|セッション中に配信された平均コマンド数です。|  
-|**delivery_rate**|**float**|1 秒あたりの平均配信コマンド数です。|  
+|**average_commands**|**int**|セッションで配信される平均コマンド数。|  
+|**delivery_rate**|**float**|配信されたコマンドを 1 秒あたりの平均です。|  
 |**delivery_latency**|**int**|コマンドがディストリビューション データベースに登録されてからサブスクライバーに適用されるまでの待機時間です。 単位はミリ秒。|  
-|**total_delivered_commands**|**bigint**|サブスクリプションが作成されてから配信されたコマンドの総数です。|  
+|**total_delivered_commands**|**bigint**|サブスクリプションの作成後に配信されたコマンド数の合計。|  
 |**error_id**|**int**|内のエラーの ID、 **MSrepl_error**システム テーブル。|  
 |**updateable_row**|**bit**|設定**1**履歴行を上書きできる場合。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  

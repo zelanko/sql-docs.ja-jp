@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcba9515535e32557470b75267a0e99976a18595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033394"
 ---
 # <a name="refresh-method-ado"></a>Refresh メソッド (ADO)
 プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、特定のオブジェクトを更新します。  
@@ -51,7 +51,7 @@ collection.Refresh
 ### <a name="fields"></a>フィールド  
  使用して、**更新**メソッドを[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションが表示される影響を与えません。 基になるデータベース構造からの変更を取得する、いずれかを使用する必要があります、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドや、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、ブックマークをサポートしていません、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッド。  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
  使用して、**更新**メソッドを**プロパティ**一部のオブジェクトのコレクションが、プロバイダーを公開する動的プロパティのコレクションを設定します。 これらのプロパティは、ADO がサポートする組み込みのプロパティを超える、プロバイダーに固有の機能に関する情報を提供します。  
   
 ## <a name="applies-to"></a>適用対象  

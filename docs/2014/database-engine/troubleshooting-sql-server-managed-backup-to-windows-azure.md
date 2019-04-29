@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842579"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Windows Azure への SQL Server マネージド バックアップのトラブルシューティング
   このトピックでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の操作中に発生する可能性があるエラーのトラブルシューティングに使用できるツールとタスクについて説明します。  
@@ -25,7 +25,7 @@ ms.locfileid: "52522532"
   
  このような 1 つのケースの例は、ログの中断が生じるバックアップ ファイルの削除のチェーンに影響を与えるの回復性 -[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]ログ チェーンの中断が識別され、すぐに実行するバックアップをスケジュールします。 ただし、状態を監視して、手動による介入を必要とするエラーには対処することをお勧めします。  
   
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、システム ストアド プロシージャ、システム ビュー、および拡張イベントを使用して、イベントとエラーがログに記録されます。 システム ビューとストアド プロシージャでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成情報、バックアップの状態、定期的なバックアップ、さらに、拡張イベントによってキャプチャされたエラーが提供されます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、拡張イベントを使用して、トラブルシューティングに使用するエラーをキャプチャします。 SQL Server Smart Admin ポリシーは、イベントのログ記録に加え、正常性状態も提供します。正常性状態は、通知またはエラーや問題を示すために電子メール通知ジョブで使用されます。 詳細については、[モニター SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)を参照してください。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、システム ストアド プロシージャ、システム ビュー、および拡張イベントを使用して、イベントとエラーがログに記録されます。 システム ビューとストアド プロシージャでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成情報、バックアップの状態、定期的なバックアップ、さらに、拡張イベントによってキャプチャされたエラーが提供されます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、拡張イベントを使用して、トラブルシューティングに使用するエラーをキャプチャします。 SQL Server Smart Admin ポリシーは、イベントのログ記録に加え、正常性状態も提供します。正常性状態は、通知またはエラーや問題を示すために電子メール通知ジョブで使用されます。 詳細については、次を参照してください。[モニター SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)します。  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、Windows Azure ストレージの手動バックアップ (SQL Server Backup to URL) で使用されるものと同じログ記録が使用されます。 詳細については、Backup to URL 関連の問題は、トラブルシューティングのセクションを参照してください[SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング。](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "52522532"
   
 1.  電子メール通知を有効にして、エラーと警告に関する電子メールの受信を開始します。  
   
-     また、定期的に `smart_admin.fn_get_health_status` を実行して集計されたエラーおよび数を確認することもできます。 たとえば、`number_of_invalid_credential_errors` は、スマート バックアップでバックアップを試行して "無効な資格情報" エラーが発生した回数です。 `Number_of_backup_loops` と `number_of_retention_loops` はエラーではなく、バックアップ スレッドと保有期間スレッドがデータベースの一覧をスキャンした回数を示します。 通常、@begin_timeと@end_timeが指定されていない場合、関数が最後の 30 分からの情報を表示し、これら 2 つの列の値が 0 以外が通常表示します。 これらの値がゼロの場合は、システムがオーバーロードされたかシステムが応答していないことを意味します。 詳細については、**システムに関する問題のトラブルシューティング**このトピックで後述を参照してください。  
+     また、定期的に `smart_admin.fn_get_health_status` を実行して集計されたエラーおよび数を確認することもできます。 たとえば、`number_of_invalid_credential_errors` は、スマート バックアップでバックアップを試行して "無効な資格情報" エラーが発生した回数です。 `Number_of_backup_loops` と `number_of_retention_loops` はエラーではなく、バックアップ スレッドと保有期間スレッドがデータベースの一覧をスキャンした回数を示します。 通常、@begin_timeと@end_timeが指定されていない場合、関数が最後の 30 分からの情報を表示し、これら 2 つの列の値が 0 以外が通常表示します。 これらの値がゼロの場合は、システムがオーバーロードされたかシステムが応答していないことを意味します。 詳細については、次を参照してください。**システムに関する問題のトラブルシューティング**このトピックで後述します。  
   
 2.  拡張イベント ログを確認して、エラーと関連するその他のイベントの詳細を理解します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52522532"
   
 2.  **電子メール通知エラー:**  
   
-     エラー:「データベース メールが有効になっていません…」- 電子メールによる通知を有効にしたが、データベース メールがインスタンスで構成されていない場合、このエラーが表示されます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の正常性状態の通知を受信できるように、インスタンス上のデータベース メールを構成する必要があります。 データベース メールを有効にする方法については、[データベース メールの構成](../relational-databases/database-mail/configure-database-mail.md)を参照してください。 また、通知にデータベース メールを使用するには、SQL Server エージェントを有効にする必要があります。 詳細については、[開始する前に](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin)を参照してください。  
+     エラー:「データベース メールが有効になっていません…」- 電子メールによる通知を有効にしたが、データベース メールがインスタンスで構成されていない場合、このエラーが表示されます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の正常性状態の通知を受信できるように、インスタンス上のデータベース メールを構成する必要があります。 データベース メールを有効にする方法については、次を参照してください。[データベース メールの構成](../relational-databases/database-mail/configure-database-mail.md)します。 また、通知にデータベース メールを使用するには、SQL Server エージェントを有効にする必要があります。 詳細については、次を参照してください。[開始する前に](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin)します。  
   
      電子メール通知に関連するエラー番号を次に示します。  
   

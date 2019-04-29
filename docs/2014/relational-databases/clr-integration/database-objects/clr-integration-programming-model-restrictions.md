@@ -16,16 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873820"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 統合プログラミング モデルの制限事項
   マネージ ストアド プロシージャやその他のマネージ データベース オブジェクトを作成する際はコードのチェックが実行される特定の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が初めてデータベースに登録されたときに、マネージ コード アセンブリのチェックを実行を使用して、 `CREATE ASSEMBLY`ステートメント、および実行時にもします。 マネージド コードが実行時にもチェックされるのは、実行時に決して到達しないコード パスがアセンブリに含まれる場合があるためです。  このチェックにより、サード パーティ アセンブリを柔軟に登録できます。特に、クライアント環境での実行を目的に作成され、ホストされた CLR では実行されない "安全でない" コードを含むアセンブリをブロックしないようにすることができるため、サード パーティ アセンブリに柔軟に対応できます。 マネージ コードが満たす必要のある要件として、アセンブリが登録されているかどうかで異なります`SAFE`、 `EXTERNAL_ACCESS`、または`UNSAFE`、 `SAFE` 、厳密にされていると、以下に示します。  
   
- マネージド コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 `SAFE`、`EXTERNAL_ACCESS`、および `UNSAFE` の各アセンブリには、それぞれ異なる CAS 権限が付与されます。 詳細については、[CLR 統合のコード アクセス セキュリティ](../security/clr-integration-code-access-security.md)を参照してください。  
+ マネージド コード アセンブリには、制限事項に加えてコード セキュリティ権限も付与されます。 共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティ (CAS) というセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 `SAFE`、`EXTERNAL_ACCESS`、および `UNSAFE` の各アセンブリには、それぞれ異なる CAS 権限が付与されます。 詳細については、次を参照してください。 [CLR 統合のコード アクセス セキュリティ](../security/clr-integration-code-access-security.md)します。  
   
 ## <a name="create-assembly-checks"></a>CREATE ASSEMBLY チェック  
  `CREATE ASSEMBLY` ステートメントを実行する際には、セキュリティ レベルごとに次のチェックが実行されます。  いずれかのチェックが失敗した場合、`CREATE ASSEMBLY` が失敗し、エラー メッセージが表示されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "52509898"
   
 -   既にデータベースに登録されていること。  
   
--   サポートされているアセンブリの 1 つであること。 詳細については、[サポートされている .NET Framework ライブラリ](supported-net-framework-libraries.md)を参照してください。  
+-   サポートされているアセンブリの 1 つであること。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](supported-net-framework-libraries.md)します。  
   
 -   使用している`CREATE ASSEMBLY FROM` *\<場所 >、* で使用できるすべての参照アセンブリとその依存関係と*\<場所 >* します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "52509898"
   
 -   UI  
   
- Hpa とサポートされているアセンブリの許可されない型およびメンバーの一覧の詳細については、[ホスト保護属性と CLR 統合プログラミング](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)を参照してください。  
+ Hpa とサポートされているアセンブリの許可されない型およびメンバーの一覧の詳細については、次を参照してください。[ホスト保護属性と CLR 統合プログラミング](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)します。  
   
 ### <a name="safe"></a>SAFE  
  `EXTERNAL_ACCESS` の条件がすべてチェックされていること。  

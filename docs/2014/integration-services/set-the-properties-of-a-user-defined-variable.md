@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878217"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>ユーザー定義変数のプロパティを設定する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でユーザー定義変数のプロパティを設定するには、次の機能のいずれかを使用します。  
   
 -   [変数] ウィンドウ。  
   
--   [プロパティ] ウィンドウ。 **プロパティ**ウィンドウでは使用できない変数を構成するためのプロパティの一覧、**変数**ウィンドウ。Description、EvaluateAsExpression、式、ReadOnly、ValueType、および [includeindebugdump]。  
+-   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、**[変数]** ウィンドウでは使用できない変数を構成するための次のプロパティが一覧表示されています: Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、RaiseChangedEvent プロパティを除き、更新できないプロパティを持つ一連のシステム変数もあります。  

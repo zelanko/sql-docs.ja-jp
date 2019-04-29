@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023844"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released イベント クラス
   Lock:Released イベント クラスは、ページなどのリソースのロックが解放されたことを示します。  

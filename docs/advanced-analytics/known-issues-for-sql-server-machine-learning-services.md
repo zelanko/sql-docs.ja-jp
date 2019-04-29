@@ -8,20 +8,20 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650703"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning サービスの既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python](install/sql-machine-learning-services-windows-install.md)。
+この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python。](install/sql-machine-learning-services-windows-install.md).
 
 ## <a name="setup-and-configuration-issues"></a>セットアップと構成の問題
 
-プロセスの初期セットアップと構成に関連する一般的な質問については、[アップグレードとインストールに関する FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)を参照してください。 アップグレード、サイド バイ サイドでインストール、および新しい R または Python コンポーネントのインストールに関する情報が含まれています。
+プロセスの初期セットアップと構成に関連する一般的な質問については、次を参照してください。[アップグレードとインストールに関する FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)します。 アップグレード、サイド バイ サイドでインストール、および新しい R または Python コンポーネントのインストールに関する情報が含まれています。
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1.環境変数がないため、MKL 計算で矛盾した結果
 
@@ -29,7 +29,7 @@ ms.locfileid: "58510740"
 
 R_SERVER、Intel 数値演算ライブラリ (MKL) を使用します。 MKL を含んだ計算、矛盾した結果は、システムの環境変数がない場合に発生します。 
 
-環境変数を設定`'MKL_CBWR'=AUTO`R_SERVER で条件付きの数値再現性を確保します。 詳細については、[概要条件付き数値の再現性 (CNR) に](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)を参照してください。
+環境変数を設定`'MKL_CBWR'=AUTO`R_SERVER で条件付きの数値再現性を確保します。 詳細については、次を参照してください。[概要条件付き数値の再現性 (CNR) に](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)します。
 
 **回避策**
 
@@ -85,7 +85,7 @@ R スクリプトを実行するときに表示されます、エラーには、
 > 
 > *コンポーネントのエラー コード:0x80131509*
 
-サービスはドメイン コント ローラーで、machine learning の実行に必要なローカル アカウントは 20 個を作成することはできませんので、障害が発生します。 一般に、ドメイン コント ローラー上の SQL Server のインストールはお勧めしません。 詳細については、[サポート情報 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont)を参照してください。
+サービスはドメイン コント ローラーで、machine learning の実行に必要なローカル アカウントは 20 個を作成することはできませんので、障害が発生します。 一般に、ドメイン コント ローラー上の SQL Server のインストールはお勧めしません。 詳細については、次を参照してください。[サポート情報 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont)します。
 
 ### <a name="4-install-the-latest-service-release-to-ensure-compatibility-with-microsoft-r-client"></a>4.Microsoft R Client との互換性を確保する最新のサービス リリースをインストールします。
 
@@ -283,9 +283,9 @@ data <- RxSqlServerData(
 + 場合、モデルが合理化されているし、前の手順を使用してサイズを縮小を参照してください、 [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) SQL Server に渡す前に、モデルのサイズを小さく基本の r 関数を使用できます。 モデルが 2 GB の制限に近づいている場合は、このオプションをお勧めします。
 + 大規模なモデルは、SQL Server を使用できます[FileTable](../relational-databases/blob/filetables-sql-server.md) varbinary 列を使用するのではなく、モデルに保存する機能します。
 
-    Filetable を使用するには、Filetable に格納されたデータは、SQL Server での Filestream のファイル システム ドライバーによって管理され、既定のファイアウォール規則は、ネットワーク ファイルへのアクセスをブロックするため、ファイアウォールの例外を追加する必要があります。 詳細については、[FileTable の前提条件を有効にする](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)を参照してください。
+    Filetable を使用するには、Filetable に格納されたデータは、SQL Server での Filestream のファイル システム ドライバーによって管理され、既定のファイアウォール規則は、ネットワーク ファイルへのアクセスをブロックするため、ファイアウォールの例外を追加する必要があります。 詳細については、次を参照してください。 [FileTable の前提条件を有効にする](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)します。
 
-    FileTable を有効にした後、モデルを記述する FileTable の API を使用して SQL からのパスを取得し、コードからその場所に、モデルを作成します。 モデルを読み取る必要がある場合は、SQL からパスを取得して、スクリプトからのパスを使用して、モデルを呼び出します。 詳細については、[ファイル入出力 Api を使用した Filetable へのアクセス](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)を参照してください。
+    FileTable を有効にした後、モデルを記述する FileTable の API を使用して SQL からのパスを取得し、コードからその場所に、モデルを作成します。 モデルを読み取る必要がある場合は、SQL からパスを取得して、スクリプトからのパスを使用して、モデルを呼び出します。 詳細については、次を参照してください。[ファイル入出力 Api を使用した Filetable へのアクセス](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)します。
 
 ### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7.R コードを実行するときにワークスペースをオフにしないで、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算コンテキスト
 
@@ -316,7 +316,7 @@ R コードの実行中にオブジェクトのワークスペースをクリア
 
 絶対に必要としない文字列データ型の他の操作では、文字列値を数値 (整数) にマップする場合、データは、データ準備の一部が、パフォーマンスとスケールの観点からメリットとしてを入力します。
 
-この問題とその他のヒントの詳細については、[パフォーマンス R Services - データの最適化を](r/r-and-data-optimization-r-services.md)を参照してください。
+この問題とその他のヒントの詳細については、次を参照してください。[パフォーマンス R Services - データの最適化を](r/r-and-data-optimization-r-services.md)します。
 
 ### <a name="10-arguments-varstokeep-and-varstodrop-are-not-supported-for-sql-server-data-sources"></a>10.引数*varsToKeep*と*varsToDrop* SQL Server データ ソースはサポートされていません
 
@@ -326,7 +326,7 @@ R コードの実行中にオブジェクトのワークスペースをクリア
 
 SQL でサポートされているすべてのデータ型は R で使用できます。この問題を回避するには、sp にデータを渡す前に、サポートされているデータ型にサポートされていないデータ型をキャストを検討してください\_実行\_外部\_スクリプト。
 
-詳細については、[R ライブラリとデータ型](r/r-libraries-and-data-types.md)を参照してください。
+詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
 
 ### <a name="12-possible-string-corruption-using-unicode-strings-in-varchar-columns"></a>12.Varchar 列の unicode 文字列を使用可能な文字列の破損
 
@@ -338,7 +338,7 @@ ASCII 以外の文字列データを送信[!INCLUDE[ssNoVersion](../includes/ssn
 
 ときに、binary データ型 (R**生**データ型)、R から返される、出力データ フレームに値を送信する必要があります。
 
-データ型以外の**生**、OUTPUT キーワードを追加することで、ストアド プロシージャの結果と共にパラメーター値を返すことができます。 詳細については、[パラメーター](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)を参照してください。
+データ型以外の**生**、OUTPUT キーワードを追加することで、ストアド プロシージャの結果と共にパラメーター値を返すことができます。 詳細については、次を参照してください。[パラメーター](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters)します。
 
 型の値を含む複数の出力セットを使用する場合**生**1 つの考えられる回避策は、ストアド プロシージャの複数の呼び出しを行うか、結果を送信するセット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ODBC を使用しています。
 
@@ -346,7 +346,7 @@ ASCII 以外の文字列データを送信[!INCLUDE[ssNoVersion](../includes/ssn
 
 [!INCLUDE[tsql](../includes/tsql-md.md)]と R をサポートしてさまざまなデータ型、数値データ型の変換中に有効桁数の損失が低下することができます。
 
-暗黙的なデータ型変換の詳細については、[R ライブラリとデータ型](r/r-libraries-and-data-types.md)を参照してください。
+暗黙的なデータ型変換の詳細については、次を参照してください。 [R ライブラリとデータ型](r/r-libraries-and-data-types.md)します。
 
 ### <a name="15-variable-scoping-error-when-you-use-the-transformfunc-parameter"></a>15.変数のスコープ transformFunc パラメーターを使用するときにエラーが発生
 
@@ -408,7 +408,7 @@ R --max-ppsize=500000
 
 ## <a name="python-script-execution-issues"></a>Python スクリプトの実行に関する問題
 
-このセクションには、SQL Server、および、マイクロソフトによって発行された Python パッケージに関連する問題に Python を実行している固有の既知の問題が含まれていますなど[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package)。
+このセクションには、SQL Server、および、マイクロソフトによって発行された Python パッケージに関連する問題に Python を実行している固有の既知の問題が含まれていますなど[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
 
 ### <a name="1-call-to-pretrained-model-fails-if-path-to-model-is-too-long"></a>1.モデルへのパスが長すぎる場合、事前トレーニング済みモデルへの呼び出しが失敗します。
 

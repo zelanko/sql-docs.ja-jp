@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026771"
 ---
 # <a name="appendix-d-data-types"></a>付録 D:データ型
 ODBC では、2 つのデータ型のセットを定義します。SQL データ型と C データ型。 SQL データ型は、データ ソースに格納されているデータのデータ型を示します。 C データ型は、アプリケーションのバッファーに格納されたデータのデータ型を示します。  
@@ -59,4 +59,4 @@ ODBC では、2 つのデータ型のセットを定義します。SQL データ
   
 -   [C から SQL データ型へのデータ変換](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
- ODBC データ型の詳細については、[ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)を参照してください。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。
+ ODBC データ型の詳細については、次を参照してください。 [ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)します。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。

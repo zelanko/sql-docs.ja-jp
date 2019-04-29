@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 986c1bf7f604f531180a14a4456325ce01702b94
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855490"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Jet の概要
 For Microsoft Jet OLE DB Provider には、Microsoft Jet データベースにアクセスする ADO ができます。
@@ -72,7 +72,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB:Flush トランザクションのタイムアウト (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|非同期書き込みのためのキャッシュに格納されたデータが実際に書き込まれる前に待機する時間の割合をディスクにします。 この設定の値をオーバーライドする**Jet OLEDB: 共有非同期遅延**と**Jet OLEDB:Exclusive 非同期遅延**します。|
 |Jet OLEDB: グローバル一括トランザクション (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|SQL 一括トランザクションが処理されるかどうかを示します。|
 |Jet OLEDB: グローバルの部分的な一括操作 (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|データベースを開くために使用するパスワードを示します。|
-|Jet OLEDB: 暗黙的なコミットの同期 (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|内部の暗黙的なトランザクションで加えられた変更が同期または非同期モードで記述されたかどうかを示します。|
+|Jet OLEDB:Implicit Commit Sync (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|内部の暗黙的なトランザクションで加えられた変更が同期または非同期モードで記述されたかどうかを示します。|
 |Jet OLEDB:Lock 遅延 (DBPROP_JETOLEDB_LOCKDELAY)|前回の試みが失敗した後、ロックの取得を試みる前に待機するミリ秒数を示します。|
 |Jet OLEDB:Lock 再試行 (DBPROP_JETOLEDB_LOCKRETRY)|ロックされたページにアクセスしようが繰り返される回数を示します。|
 |Jet OLEDB:Max バッファー サイズ (DBPROP_JETOLEDB_MAXBUFFERSIZE)|最大容量を示しますメモリ、キロバイト単位で Jet を使用できるの変更をディスクにフラッシュする前にします。|
@@ -82,12 +82,12 @@ Microsoft.Jet.OLEDB.4.0
 |テーブル ロック (DBPROP_JETOLEDB_PAGELOCKSTOTABLELOCK) に jet OLEDB:Page をロックします。|ページ数は、Jet テーブル ロックにロックを昇格しようとする前に、トランザクション内でロック必要があることを示します。 この値が 0 の場合、ロックは昇格されません。|
 |Jet OLEDB:Page タイムアウト (DBPROP_JETOLEDB_PAGETIMEOUT)|Jet は、キャッシュがデータベース ファイルを使用して最新でないかどうかを確認する前に待機するミリ秒数を示します。|
 |Jet OLEDB:Recycle 時間の長い値を持つページ (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Jet は解放されるときに、BLOB のページを再利用する積極的に試みるかどうかを示します。|
-|Jet OLEDB:Registry パス (DBPROP_JETOLEDB_REGPATH)|Jet データベース エンジンの値を含む Windows レジストリ キーを示します。|
+|Jet OLEDB:Registry Path (DBPROP_JETOLEDB_REGPATH)|Jet データベース エンジンの値を含む Windows レジストリ キーを示します。|
 |Jet OLEDB:Reset ISAM Stats (DBPROP_JETOLEDB_RESETISAMSTATS)|示すかどうか、スキーマ**レコード セット**DBSCHEMA_JETOLEDB_ISAMSTATS はパフォーマンス情報が返された後、パフォーマンス カウンターをリセットする必要があります。|
 |Jet OLEDB: 非同期遅延 (DBPROP_JETOLEDB_SHAREDASYNCDELAY) を共有|最大容量を示します Jet の時間 (ミリ秒)、マルチ ユーザー モードでデータベースを開くときにディスクへの非同期書き込みを遅らせることができます。|
 |Jet OLEDB:System Database (DBPROP_JETOLEDB_SYSDBPATH)|ワークグループ情報ファイル (システム データベース) のパスとファイル名を示します。|
 |Jet OLEDB:Transaction コミット モード (DBPROP_JETOLEDB_TXNCOMMITMODE)|Jet が同期的にディスクにデータを書き込むかどうかまたは非同期的にトランザクションがコミットされたことを示します。|
-|Jet OLEDB:User コミット同期 (DBPROP_JETOLEDB_USERCOMMITSYNC)|同期または非同期モードでのトランザクションで加えられた変更を書き込むかどうかを示します。|
+|Jet OLEDB:User Commit Sync (DBPROP_JETOLEDB_USERCOMMITSYNC)|同期または非同期モードでのトランザクションで加えられた変更を書き込むかどうかを示します。|
 
 ## <a name="provider-specific-recordset-and-command-properties"></a>プロバイダー固有のレコード セットとコマンドのプロパティ
  Jet プロバイダーは、プロバイダーに固有のいくつかもサポートしています。 **Recordset**と**コマンド**プロパティ。 これらのプロパティにアクセスして、設定、**プロパティ**のコレクション、 **Recordset**または**コマンド**オブジェクト。 テーブルには、ADO のプロパティ名とかっこで囲まれた対応する OLE DB プロパティ名が一覧表示します。

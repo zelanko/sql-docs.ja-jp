@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900001"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
   レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、`Object` データ型の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
@@ -131,7 +131,7 @@ ms.locfileid: "58390478"
   
 2.  **[Foreach ループ エディター]** を開いて、次の設定を使用してコンテナーを構成します。  
   
-    1.  **コレクション** ページの**列挙子**を選択します**Foreach ADO 列挙子**、および**ADO オブジェクト ソース変数**を選択します`User::BonusRecordset`。  
+    1.  **コレクション** ページの**列挙子**を選択します**Foreach ADO 列挙子**、および**ADO オブジェクト ソース変数**を選択します。`User::BonusRecordset`.  
   
     2.  **変数のマッピング**ページで、マップ`User::EmailAddress`をインデックス 0、`User::FirstName`をインデックス 1、および`User::Bonus`インデックス 2 にします。  
   

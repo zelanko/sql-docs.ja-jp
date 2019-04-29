@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22de08e60bb8305337d0c251d59e8ddf2850715
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889258"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>[パッケージの選択] (SSIS パッケージ アップグレード ウィザード)
   **[パッケージの選択]** ページを使用すると、アップグレードするパッケージを選択できます。 このページには、ウィザードの **[ソースの場所を選択]** ページで指定した場所に格納されているパッケージが一覧表示されます。  

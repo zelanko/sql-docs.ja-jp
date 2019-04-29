@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab57e69118edfe4a647d6baeedf5a10ee8460247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026463"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "52796256"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**rowguid**|**uniqueidentifier**|行識別子 (ROWID) です。|  
+|**rowguid**|**uniqueidentifier**|行の識別子です。|  
 |**tablenick**|**int**|テーブルのニックネームです。|  
-|**type**|**tinyint**|削除のタイプです。<br /><br /> 1 = ユーザー削除です。<br /><br /> 5 = フィルター選択されたパーティションに既に行が属していません。<br /><br /> 6 = システム削除です。|  
+|**type**|**tinyint**|削除の種類:<br /><br /> 1 = ユーザー削除です。<br /><br /> 5 = フィルター選択されたパーティションに既に行が属していません。<br /><br /> 6 = システム削除です。|  
 |**系列**|**varbinary(249)**|削除されたレコードのバージョンと、削除されたときに認識された更新を示します。 これによって、あるサブスクライバーによって行が削除されているときに、別のサブスクライバーがこれを更新するという競合を、一貫して回避するための規則が定められます。|  
-|**生成**|**int**|行が削除されると、割り当てられます。 サブスクライバーが generation 値 N を要求する場合、generation 値 >= N を満たす廃棄標識だけが送信されます。|  
+|**生成**|**int**|行が削除されたときに割り当てられます。 サブスクライバーが generation 値 N、生成を満たす廃棄標識だけを要求する場合 > = N が送信されます。|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|削除された行が属する論理レコードを識別します。|  
-|**logical_record_lineage**|**varbinary(501)**|この行が属する論理レコードについて削除の履歴を管理するために使用するサブスクライバーのニックネームとバージョン番号のペアです。|  
+|**logical_record_lineage**|**Varbinary(501)**|サブスクライバーのニックネームとバージョン番号のペアのこの行が属する論理レコードの削除の履歴を維持するために使用されます。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

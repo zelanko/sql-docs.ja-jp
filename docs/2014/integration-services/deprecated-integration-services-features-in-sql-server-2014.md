@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 761d42ba234dceda7cd6689af89e6a3038b901eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898952"
 ---
 # <a name="deprecated-integration-services-features-in-sql-server-2014"></a>SQL Server 2014 の非推奨 Integration Services 機能
   このトピックでは非推奨とされる説明[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]機能の現在のリリースでは使用可能である[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  

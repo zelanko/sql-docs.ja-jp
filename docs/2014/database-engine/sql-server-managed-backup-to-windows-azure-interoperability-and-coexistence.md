@@ -1,5 +1,5 @@
 ---
-title: SQL Server を Windows Azure マネージ バックアップ:相互運用性と共存 |Microsoft Docs
+title: Windows Azure への SQL Server マネージド バックアップ:相互運用性と共存 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842909"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server を Windows Azure マネージ バックアップ:相互運用性と共存
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Windows Azure への SQL Server マネージド バックアップ:相互運用性と共存
   このトピックでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] のいくつかの機能との [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の相互運用性および共存について説明します。 使用できる機能には、次のようなものがあります。AlwaysOn 可用性グループ、データベース ミラーリング、バックアップ メンテナンス プラン、ログ配布、アドホック バックアップ、データベースのデタッチ、および Drop Database。  
   
 ### <a name="alwayson-availability-groups"></a>AlwaysOn 可用性グループ  

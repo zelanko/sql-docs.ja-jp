@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982182"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 関数
 **準拠**  
@@ -34,7 +34,7 @@ ms.locfileid: "52540815"
  **まとめ**  
  **SQLFetchScroll**結果セットからデータの指定した行セットをフェッチし、すべてのバインドされた列のデータを返します。 絶対または相対位置にまたはブックマークによる行セットを指定できます。  
   
- ドライバー マネージャーがマップには、この関数で odbc 2.x を使用する場合**SQLExtendedFetch**します。 詳細については、[アプリケーションの旧バージョンと互換性のマッピング置換関数](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)を参照してください。  
+ ドライバー マネージャーがマップには、この関数で odbc 2.x を使用する場合**SQLExtendedFetch**します。 詳細については、次を参照してください。[アプリケーションの旧バージョンと互換性のマッピング置換関数](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -113,7 +113,7 @@ SQLRETURN SQLFetchScroll(
 |HY106|フェッチの範囲外の型|DM) FetchOrientation 引数に指定された値が無効です。<br /><br /> (DM) 引数 FetchOrientation SQL_FETCH_BOOKMARK、あり SQL_ATTR_USE_BOOKMARKS ステートメント属性は、SQL_UB_OFF に設定されています。<br /><br /> SQL_ATTR_CURSOR_TYPE ステートメント属性の値は、SQL_CURSOR_FORWARD_ONLY、および FetchOrientation は SQL_FETCH_NEXT でした。 引数の値でした。<br /><br /> SQL_ATTR_CURSOR_SCROLLABLE ステートメント属性の値は、SQL_NONSCROLLABLE と FetchOrientation は SQL_FETCH_NEXT でした。 引数の値でした。|  
 |HY107|行の値が範囲外|SQL_ATTR_CURSOR_TYPE ステートメント属性で指定された値が、SQL_CURSOR_KEYSET_DRIVEN が SQL_ATTR_KEYSET_SIZE ステートメント属性で指定された値が 0 より大きいと、SQL_ATTR_ROW_ARRAY_ で指定された値よりも小さいサイズのステートメント属性です。|  
 |HY111|無効なブックマーク値|引数 FetchOrientation が SQL_FETCH_BOOKMARK、および、SQL_ATTR_FETCH_BOOKMARK_PTR ステートメント属性の値で示されるブックマークが無効かが null ポインター。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースの組み合わせで指定された変換をサポートしていません、 *TargetType*で**SQLBindCol**と対応する列の SQL データ型。|  
 |HYT00|タイムアウトが発生しました|クエリのタイムアウト期間は、要求された結果セットが返されるデータ ソースの前に有効期限が切れました。 SQLSetStmtAttr、SQL_ATTR_QUERY_TIMEOUT を通じて、タイムアウト期間が設定されています。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -124,7 +124,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="comments"></a>コメント  
  **SQLFetchScroll**結果セットから指定した行セットを返します。 絶対または相対位置またはブックマークによる行セットを指定できます。 **SQLFetchScroll**呼び出すだけで結果セットが存在します - 中には、結果セットを作成する呼び出しの後に、カーソルの前に結果セット全体が閉じられることができます。 すべての列がバインドされている場合は、これらの列にデータを返します。 アプリケーションには、行の状態配列をフェッチされた行の数を返すバッファーへのポインターが指定した場合**SQLFetchScroll**もこの情報を返します。 呼び出す**SQLFetchScroll**への呼び出しに組み込むことができます**SQLFetch**への呼び出しを混在させることはできませんが、 **SQLExtendedFetch**します。  
   
- 詳細については、[ブロック カーソルを使用して](../../../odbc/reference/develop-app/using-block-cursors.md)と[スクロール可能なカーソルを使用して](../../../odbc/reference/develop-app/using-scrollable-cursors.md)を参照してください。  
+ 詳細については、次を参照してください。[ブロック カーソルを使用して](../../../odbc/reference/develop-app/using-block-cursors.md)と[スクロール可能なカーソルを使用して](../../../odbc/reference/develop-app/using-scrollable-cursors.md)します。  
   
 ## <a name="positioning-the-cursor"></a>カーソルを配置します。  
  結果セットが作成されると、カーソルは結果セットの開始前にします。 **SQLFetchScroll**の値に基づいて、ブロック カーソルを配置、 *FetchOrientation*と*FetchOffset*引数を次の表に示すようにします。 新しい行セットの開始を決定するための正確な規則は、次のセクションに表示されます。  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
 |*開始する前に*|1|  
-|*CurrRowsetStart + 複合カーソル*[1]  *\<LastResultRow を =*|*CurrRowsetStart + 複合カーソル*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + 複合カーソル*[1]|  
 |*CurrRowsetStart + 複合カーソル*[1]*> LastResultRow*|*終了後*|  
 |*終了後*|*終了後*|  
   
@@ -178,7 +178,7 @@ SQLRETURN SQLFetchScroll(
 |*開始する前に*|*開始する前に*|  
 |*CurrRowsetStart = 1*|*開始する前に*|  
 |*1 < CurrRowsetStart < = 複合カーソル* <sup>[2]。</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > 複合カーソル* <sup>[2]</sup>|*CurrRowsetStart - 複合カーソル* <sup>[2]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*終了と LastResultRow 後 < 複合カーソル* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*終了と LastResultRow 後 > = 複合カーソル* <sup>[2]</sup>|*複合カーソルは + 1 - LastResultRow* <sup>[2]。</sup>|  
   
@@ -237,7 +237,7 @@ SQLRETURN SQLFetchScroll(
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
 |*複合カーソル* <sup>[1]</sup> < LastResultRow を =|*複合カーソルは + 1 - LastResultRow* <sup>[1]</sup>|  
-|*複合カーソル* <sup>[1]</sup> > LastResultRow|*1*|  
+|*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 行をフェッチする前に呼び出した後、行セット サイズが変わっている場合は、新しい行セット サイズになります。  
   
@@ -250,7 +250,7 @@ SQLRETURN SQLFetchScroll(
 |*1 < = BookmarkRow + FetchOffset \<LastResultRow を =*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*終了後*|  
   
- ブックマークの詳細については、[ブックマーク (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md)を参照してください。  
+ ブックマークの詳細については、次を参照してください。[ブックマーク (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md)します。  
   
 ## <a name="effect-of-deleted-added-and-error-rows-on-cursor-movement"></a>削除された、追加などの効果とカーソルの動きのエラー行  
  静的およびキーセット ドリブン カーソルは、結果に追加された行に設定し、結果セットから削除された行の削除を検出する場合があります。 呼び出して**SQLGetInfo** SQL_STATIC_CURSOR_ATTRIBUTES2 と SQL_KEYSET_CURSOR_ATTRIBUTES2 オプションし、SQL_CA2_SENSITIVITY_ADDITIONS、SQL_CA2_SENSITIVITY_DELETIONS、および SQL_CA2_SENSITIVITY_ を見る更新プログラムのビットマスクをアプリケーションでは、特定のドライバーによって実装されるカーソルがこれを行うかどうかを判断します。 削除された行を検出し、それらを削除するドライバーは、次の段落にこの動作の影響について説明します。 ドライバーは削除された行を検出できますが、削除できなくなるので、カーソルの動きに削除の影響がないと、次の段落は適用されません。  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894523"
 ---
 # <a name="file-system-task-editor-general-page"></a>[ファイル システム タスク エディター] \([全般] ページ)
   **[ファイル システム タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクで実行するファイル システム操作を構成できます。  
@@ -86,9 +86,9 @@ ms.locfileid: "58377280"
   
 ### <a name="isdestinationpathvariable--true"></a>[IsDestinationPathVariable] = [True]  
  **[DestinationVariable]**  
- 一覧から変数名を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
+ 一覧から変数名を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>[IsDestinationPathVariable] = [False]  
  `DestinationConnection`  
@@ -100,9 +100,9 @@ ms.locfileid: "58377280"
   
 ### <a name="issourcepathvariable--true"></a>[IsSourcePathVariable] = [True]  
  **[SourceVariable]**  
- 一覧から変数名を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
+ 一覧から変数名を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>[IsSourcePathVariable] = [False]  
  `SourceConnection`  

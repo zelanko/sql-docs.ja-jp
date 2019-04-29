@@ -40,11 +40,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872218"
 ---
 # <a name="configure-database-mail"></a>データベース メールを構成する
   このトピックでは、データベース メール構成ウィザードを使用してデータベース メールを有効化して構成する方法、およびテンプレートを使用してデータベース メール構成スクリプトを作成する方法について説明します。  
@@ -90,7 +90,7 @@ ms.locfileid: "54131492"
  ウィザードを使用するたびに、 **[構成タスクの選択]** ページを使用して、完了するタスクを指定します。 ウィザードを完了する前に変更が必要になった場合は、 **[戻る]** ボタンを使用してこのページに戻り、別のタスクを選択します。  
   
 > [!NOTE]  
->  データベース メールが有効になっていない場合、メッセージが表示されます。**データベース メール機能は使用できません。有効にしますか? " というメッセージが表示されます。** ここで **[はい]** をクリックすることは、 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) システム ストアド プロシージャの **Database Mail XPs オプション** を使用してデータベース メールを有効にすることと同じです。  
+>  データベース メール機能が有効になっていない場合は、**データベース メール機能は使用できません。有効にしますか? " というメッセージが表示されます。** ここで **[はい]** をクリックすることは、 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) システム ストアド プロシージャの **Database Mail XPs オプション** を使用してデータベース メールを有効にすることと同じです。  
   
  **[次のタスクを実行してデータベース メールをセットアップする]**  
  データベース メールを初めてセットアップするときに必要なタスクをすべて実行します。 このオプションには、他の 3 つのオプションがすべて含まれています。  

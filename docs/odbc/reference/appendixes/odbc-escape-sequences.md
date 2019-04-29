@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b809aff14e75f41089f01345607f63f8c2dd9166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018417"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC エスケープ シーケンス
 次のエスケープ シーケンスは、ODBC で使用されます。 このセクションでは、文法で定義されているいくつかの要素を使用して[要素は、SQL ステートメントで使用される](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)します。  

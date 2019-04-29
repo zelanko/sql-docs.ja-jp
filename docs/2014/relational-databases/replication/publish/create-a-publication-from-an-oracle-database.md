@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020868"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Oracle データベースからのパブリケーションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、Oracle データベースからパブリケーションを作成する方法について説明します。  
@@ -142,7 +142,7 @@ ms.locfileid: "52753694"
 6.  ディストリビューター側のディストリビューション データベースに対して、パブリケーションを作成する [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) を実行します。 手順 4. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@job_name** 」および「 **@password**を使用して、Oracle データベースからパブリケーションを作成する方法について説明します。 パブリッシャーへの接続時に Oracle 標準認証を使用するには、 **@security_mode** に **@publisher_security_mode** を指定し、 **@publisher_login** 」および「 **@publisher_password**を使用して、Oracle データベースからパブリケーションを作成する方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../non-sql/configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](../non-sql/configure-an-oracle-publisher.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish-data-and-database-objects.md)   
  [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](../non-sql/oracle-publishing-overview.md)   

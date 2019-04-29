@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733641"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」(マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
@@ -46,9 +46,9 @@ ms.locfileid: "49120039"
  モデルの名前。  
   
  ATTRIBUTE_NAME  
- **ルート ノード :** 空白。  
+ **ルート ノード:** 空白  
   
- **回帰ノード :** 予測可能な属性の名前。  
+ **回帰ノード:** 予測可能な属性の名前。  
   
  NODE_NAME  
  常に NODE_UNIQUE_NAME と同じです。  
@@ -66,16 +66,16 @@ ms.locfileid: "49120039"
  NODE_CAPTION  
  ノードに関連付けられたラベルまたはキャプション。 このプロパティは、主に表示を目的としています。  
   
- **ルート ノード :** 空白。  
+ **ルート ノード:** 空白  
   
- **回帰ノード :** すべて。  
+ **回帰ノード:** すべて。  
   
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
- **ルート ノード :** 回帰ノードの数を示します。 モデルの予測可能な属性ごとに 1 つの回帰ノードが作成されます。  
+ **ルート ノード:** 回帰ノードの数を示します。 モデルの予測可能な属性ごとに 1 つの回帰ノードが作成されます。  
   
- **回帰ノード :** 常に 0。  
+ **回帰ノード:** 常に 0 です。  
   
  PARENT_UNIQUE_NAME  
  ノードの親の一意な名前です。 ルート レベルのノードには NULL を返します。  
@@ -83,9 +83,9 @@ ms.locfileid: "49120039"
  NODE_DESCRIPTION  
  ノードの説明です。  
   
- **ルート ノード :** 空白。  
+ **ルート ノード:** 空白  
   
- **回帰ノード :** すべて。  
+ **回帰ノード:** すべて。  
   
  NODE_RULE  
  線形回帰モデルでは使用されません。  
@@ -96,23 +96,23 @@ ms.locfileid: "49120039"
  NODE_PROBABILITY  
  このノードに関連付けられている確率。  
   
- **ルート ノード :** 0  
+ **ルート ノード:** 0  
   
- **回帰ノード :** 1  
+ **回帰ノード:** 1  
   
  MARGINAL_PROBABILITY  
  親ノードからノードに到達する確率です。  
   
- **ルート ノード :** 0  
+ **ルート ノード:** 0  
   
- **回帰ノード :** 1  
+ **回帰ノード:** 1  
   
  NODE_DISTRIBUTION  
  ノード内の値に関する統計情報を提供する、入れ子になったテーブル。  
   
- **ルート ノード :** 0  
+ **ルート ノード:** 0  
   
- **回帰ノード :** 回帰式の作成に使用される要素を含むテーブル。 回帰ノードには、次の値型が含まれます。  
+ **回帰ノード:** 回帰式の作成に使用する要素を格納するテーブル。 回帰ノードには、次の値型が含まれます。  
   
 |VALUETYPE|  
 |---------------|  
@@ -126,9 +126,9 @@ ms.locfileid: "49120039"
  NODE_SUPPORT  
  このノードをサポートするケースの数。  
   
- **ルート ノード :** 0  
+ **ルート ノード:** 0  
   
- **回帰ノード :** トレーニング ケースの数。  
+ **回帰ノード:** トレーニング ケースの数。  
   
  MSOLAP_MODEL_COLUMN  
  予測可能な属性の名前。  

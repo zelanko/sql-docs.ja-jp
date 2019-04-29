@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027999"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared プロパティの例 (VC++)
 この例では、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを 2 つを開いて[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの準備、および準備されていません。  

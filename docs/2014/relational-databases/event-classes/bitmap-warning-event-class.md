@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023440"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning イベント クラス
   **Bitmap Warning** イベント クラスは、クエリにおけるビットマップ フィルターの使用状況を監視するときに使用できます。 イベント サブクラスを使用すると、クエリ内でビットマップ フィルターが無効化されたタイミングをレポートできます。  

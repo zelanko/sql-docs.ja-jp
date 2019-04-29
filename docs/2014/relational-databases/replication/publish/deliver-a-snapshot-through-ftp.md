@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1a8989492c9efb670b00bda00dbfa757c549fca
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960066"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP でのスナップショットの配信
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、FTP でスナップショットを配信する方法について説明します。  
@@ -51,7 +51,7 @@ ms.locfileid: "54130272"
      たとえば、FTP サーバーのルートが \\\ftpserver\home で、スナップショットを \\\ftpserver\home\snapshots に格納する場合は、**[FTP ルート フォルダーからのパス]** には「\snapshots\ftp」と指定します (レプリケーションでは、スナップショット ファイルが作成されるときにスナップショット フォルダーのパスに "ftp" が追加されます)。    
 3.  スナップショット エージェントが、手順 2. で指定したディレクトリにスナップショット ファイルを書き込むように指定します。 たとえば、スナップショット エージェントがスナップショット ファイルを \\\ftpserver\home\snapshots\ftp に書き込むようにするには、次のいずれかの場所に \\\ftpserver\home\snapshots というパスを指定する必要があります。    
     -   このパブリケーションに関連付けられているディストリビューターの既定のスナップショットの場所。    
-         既定のスナップショットの場所を指定する方法については、[、既定のスナップショットの場所を指定](../snapshot-options.md#snapshot-folder-locations)を参照してください。    
+         既定のスナップショットの場所を指定する方法については、次を参照してください。 [、既定のスナップショットの場所を指定](../snapshot-options.md#snapshot-folder-locations)します。    
     -   このパブリケーションの代替スナップショット フォルダーの場所。 スナップショットが圧縮されている場合、別の場所が必要です。    
          **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの [スナップショット] ページで、**[ファイルを次のフォルダーに保存する]** ボックスにパスを入力します。   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  

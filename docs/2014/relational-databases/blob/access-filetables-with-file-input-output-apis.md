@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876914"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>ファイル I/O API を使用した FileTable へのアクセス
   FileTable でファイル システム I/O が動作するしくみについて説明します。  
@@ -127,7 +127,7 @@ ms.locfileid: "48082209"
   
 ## <a name="see-also"></a>参照  
  [FileTable へのファイルの読み込み](load-files-into-filetables.md)   
- [FileTable 内のディレクトリとパスの操作](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Transact SQL を使用した FileTable へのアクセス](access-filetables-with-transact-sql.md)   
  [FileTable DDL、関数、ストアド プロシージャ、およびビュー](../views/views.md)  
   

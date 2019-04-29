@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65d346cb9394613a92f95f7466e429b10c54b1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027948"
 ---
 # <a name="getrows-method-ado"></a>GetRows メソッド (ADO)
 複数のレコードを取得、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを配列にします。  
@@ -41,7 +41,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *行数*  
  任意。 A [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)を取得するレコードの数を示す値。 既定値は**adGetRowsRest**します。  
   
- *開始*  
+ *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
  任意。 A**文字列**値または**バリアント**元となるレコードのブックマークに評価される、 **GetRows**の操作を開始する必要があります。 使用することも、 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値。  
   
  *Fields*  

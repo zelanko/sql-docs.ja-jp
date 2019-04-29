@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874766"
 ---
 # <a name="transaction-promotion"></a>トランザクションの昇格
   トランザクション*プロモーション*に応じてに完全な分散トランザクションに自動的に昇格したことができます、軽量のローカル トランザクションを説明します。 サーバー側で実行されているデータベース トランザクション内でマネージド ストアド プロシージャが呼び出されると、CLR (共通言語ランタイム) コードはローカル トランザクションのコンテキストで実行されます。  データベース トランザクション内でリモート サーバーへの接続が開かれると、リモート サーバーへの接続が分散トランザクションに参加し、ローカル トランザクションは自動的に分散トランザクションに昇格します。 トランザクションの昇格では、必要になるまで分散トランザクションの作成を遅延し、分散トランザクションのオーバーヘッドを最小限に抑えます。 トランザクションの昇格が `Enlist` キーワードを使用して有効になっている場合、トランザクションの昇格は自動的に行われるので、開発者の介入は必要ありません。 .NET Framework [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用データ プロバイダーでは、トランザクションの昇格がサポートされます。トランザクションの昇格は、.NET Framework の `System.Data.SqlClient` 名前空間のクラスによって行われます。  

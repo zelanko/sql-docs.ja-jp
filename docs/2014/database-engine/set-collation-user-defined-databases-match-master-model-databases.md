@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773315"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定
   このルールでは、ユーザー定義データベースの定義に使用されたデータベース照合順序と master または model の照合順序が一致しているかどうかを確認します。  
@@ -29,7 +29,7 @@ ms.locfileid: "53371084"
   
 -   データをユーザー データベースからエクスポートし、照合順序が master データベースおよび model データベースと同じ新しいテーブルにインポートします。  
   
--   ユーザー データベースの照合順序と一致する照合順序を使用するようにシステム データベースを再構築します。 システム データベースを再構築する方法の詳細については、[システム データベースの再構築](../relational-databases/databases/system-databases.md)を参照してください。  
+-   ユーザー データベースの照合順序と一致する照合順序を使用するようにシステム データベースを再構築します。 システム データベースを再構築する方法の詳細については、次を参照してください。[システム データベースの再構築](../relational-databases/databases/system-databases.md)します。  
   
 -   ユーザー テーブルを tempdb 内のテーブルに結合するストアド プロシージャを、ユーザー データベースの照合順序を使用して tempdb にテーブルを作成するように変更します。 これを行うには、次の例に示すように、一時テーブルの列定義に `COLLATE database_default` 句を追加します。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "53371084"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [マイクロソフト サポート技術情報の記事 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Microsoft Knowledge Base article 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [操作方法：コマンド プロンプトから SQL Server 2008 をインストールします。](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [方法: コマンド プロンプトから SQL Server 2008 をインストールします。](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

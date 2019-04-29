@@ -21,17 +21,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982174"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLSetDescRec**関数は、データ型に影響する複数の記述子フィールドを設定し、データの列またはパラメーターにバインドされたバッファー。  
   
 ## <a name="syntax"></a>構文  
@@ -102,7 +102,7 @@ SQLRETURN SQLSetDescRec(
 |HY016|実装行記述子は変更できません。|*DescriptorHandle*引数は、IRD に関連付けられていました。|  
 |HY021|不整合な記述子情報|*型*フィールド、または、記述子の SQL_DESC_TYPE フィールドに関連付けられているその他の任意のフィールドが無効であるか、一貫性のあります。<br /><br /> 整合性チェック中にチェック記述子の情報は、一貫性のあるでした。 ("整合性チェックをこのセクションの後半を参照してください)。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) ドライバーが、ODBC 2 *.x*ドライバー、記述子の ARD、 *ColumnNumber*引数が 0、および引数が指定された値に設定された*BufferLength*されました4 と等しくありません。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *DescriptorHandle*関数をサポートしていません。|  
   

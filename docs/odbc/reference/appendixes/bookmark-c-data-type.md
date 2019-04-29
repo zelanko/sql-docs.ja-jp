@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026948"
 ---
 # <a name="bookmark-c-data-type"></a>Bookmark C データ型
-ブックマークの C データ型では、ブックマークを取得するアプリケーション。 ブックマーク C 型は可変長; できるブックマークの値を取得する場合のみ使用されます。他のデータ型に変換する必要がありますされません。 アプリケーションの取得と設定のいずれかから結果の列 0 ブックマーク**SQLBulkOperations** SQL_ADD の操作)、(で**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**します。 詳細については、[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)を参照してください。  
+ブックマークの C データ型では、ブックマークを取得するアプリケーション。 ブックマーク C 型は可変長; できるブックマークの値を取得する場合のみ使用されます。他のデータ型に変換する必要がありますされません。 アプリケーションの取得と設定のいずれかから結果の列 0 ブックマーク**SQLBulkOperations** SQL_ADD の操作)、(で**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**します。 詳細については、次を参照してください。[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)します。  
   
  次の表の値*CType*ブックマーク C データ型では、ブックマーク C データ型、およびこのデータの定義を実装する ODBC C データ型を SQL から入力します。H.  
   
@@ -34,5 +34,5 @@ ms.locfileid: "53205291"
   
 |C 型識別子|ODBC C の typedef|C 型|  
 |-----------------------|--------------------|------------|  
-|SQL_C_BOOKMARK<br />(非推奨)|ブックマーク|符号なし long int|  
+|SQL_C_BOOKMARK<br />(非推奨)|ブックマーク|unsigned long int|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|

@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017848"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  バージョンを実行しているサーバーを含むレプリケーション トポロジでのみ使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より前のバージョン[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 1 **。sp_mergecleanupmetadata**内のメタデータをクリーンアップすることができます、 **MSmerge_genhistory**、 **MSmerge_contents**と**MSmerge_tombstone**システム テーブル。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  バージョンを実行しているサーバーを含むレプリケーション トポロジでのみ使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より前のバージョン[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Service Pack 1 **。sp_mergecleanupmetadata**内のメタデータをクリーンアップすることができます、 **MSmerge_genhistory**、 **MSmerge_contents**と**MSmerge_tombstone**システム テーブル。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,13 +63,13 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  推奨必須ではありませんが、パブリケーションおよびサブスクリプション データベースにすべての更新プログラムを停止すること。 更新を続行する場合、パブリケーションが再初期化が、データの収束は保持されます、前回のマージ以降にサブスクライバー側で行われた更新は失われます。  
   
-2.  マージ エージェントを実行してマージを実行します。 使用することをお勧め、 **-検証**マージ エージェントを実行すると、各サブスクライバーでエージェントのコマンド ライン オプション。 連続モードのマージを実行している場合は、*連続モードのマージに関する注意事項*このセクションで後述を参照してください。  
+2.  マージ エージェントを実行してマージを実行します。 使用することをお勧め、 **-検証**マージ エージェントを実行すると、各サブスクライバーでエージェントのコマンド ライン オプション。 連続モードのマージを実行している場合は、次を参照してください。*連続モードのマージに関する注意事項*このセクションで後述します。  
   
 3.  すべてのマージが完了すると、実行**sp_mergecleanupmetadata**します。  
   
 4.  実行**sp_reinitmergepullsubscription**名前付きまたは匿名プル サブスクリプションを使用してデータを収束させることを確認するすべてのサブスクライバーにします。  
   
-5.  連続モードのマージを実行している場合は、*連続モードのマージに関する注意事項*このセクションで後述を参照してください。  
+5.  連続モードのマージを実行している場合は、次を参照してください。*連続モードのマージに関する注意事項*このセクションで後述します。  
   
 6.  すべてのレベルで関係するすべてのマージ パブリケーションに対して、スナップショット ファイルを再生成します。 最初にスナップショットを再生成せずにマージしようとすると、スナップショットを再生成するように要求されます。  
   
@@ -79,11 +79,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  停止**すべて**パブリケーションおよびサブスクリプション データベースを更新します。  
   
-2.  マージ エージェントを実行してマージを実行します。 使用することをお勧め、 **-検証**マージ エージェントを実行すると、各サブスクライバーでエージェントのコマンド ライン オプション。 連続モードのマージを実行している場合は、*連続モードのマージに関する注意事項*このセクションで後述を参照してください。  
+2.  マージ エージェントを実行してマージを実行します。 使用することをお勧め、 **-検証**マージ エージェントを実行すると、各サブスクライバーでエージェントのコマンド ライン オプション。 連続モードのマージを実行している場合は、次を参照してください。*連続モードのマージに関する注意事項*このセクションで後述します。  
   
 3.  すべてのマージが完了すると、実行**sp_mergecleanupmetadata**します。  
   
-4.  連続モードのマージを実行している場合は、*連続モードのマージに関する注意事項*このセクションで後述を参照してください。  
+4.  連続モードのマージを実行している場合は、次を参照してください。*連続モードのマージに関する注意事項*このセクションで後述します。  
   
 5.  すべてのレベルで関係するすべてのマージ パブリケーションに対して、スナップショット ファイルを再生成します。 最初にスナップショットを再生成せずにマージしようとすると、スナップショットを再生成するように要求されます。  
   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 572c331cb5f9a88ee78cb26544772b126405c02c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732258"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>カテゴリの検出 (Excel 用のテーブル分析ツール)
   ![リボンの [Categories] ボタンを検出](media/tat-detectcat.gif "でリボン カテゴリの検出 ボタン")  
@@ -44,7 +44,7 @@ ms.locfileid: "52420233"
   
 6.  カテゴリとその特性の一覧が記載された "カテゴリのレポート" という名前の新規ワークシートが作成されます。  
   
- ツールのオプションを指定する方法の詳細については、[検出カテゴリ ダイアログ ボックス (Excel 用テーブル分析ツール)](detect-categories-table-analysis-tools-for-excel.md)を参照してください。  
+ ツールのオプションを指定する方法の詳細については、次を参照してください。[検出カテゴリ ダイアログ ボックス (Excel 用テーブル分析ツール)](detect-categories-table-analysis-tools-for-excel.md)します。  
   
 ## <a name="understanding-the-categories-report"></a>カテゴリのレポートについて  
  **カテゴリのレポート**、2 つのテーブルを含む**カテゴリ一覧**と**カテゴリの特性**、および**カテゴリ プロファイル**グラフ。  
@@ -81,9 +81,9 @@ ms.locfileid: "52420233"
 ## <a name="related-tools"></a>関連ツール  
  ときに、**カテゴリの検出**ツールは、データを分析しを使用してデータ マイニング構造とデータ マイニング モデルを作成、[!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタ リング アルゴリズムです。  
   
- 使用してデータ マイニング モデルを作成した後、**分析の主要な影響元**ツールで、モデルの参照し、関係を詳しく調べたりする Excel 用データ マイニング クライアントを使用することができます。 Excel 用のデータ マイニング クライアントは、より詳細なデータ マイニング機能を備えた独立したアドインです。 詳しくは、[Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)を参照してください。  
+ 使用してデータ マイニング モデルを作成した後、**分析の主要な影響元**ツールで、モデルの参照し、関係を詳しく調べたりする Excel 用データ マイニング クライアントを使用することができます。 Excel 用のデータ マイニング クライアントは、より詳細なデータ マイニング機能を備えた独立したアドインです。 詳しくは、次を参照してください。 [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)します。  
   
- 詳細については、データ モデリング、Excel 用データ マイニング クライアントでの機能を使用して、[データ マイニング モデルを作成する](creating-a-data-mining-model.md)を参照してください。  
+ 詳細については、データ モデリング、Excel 用データ マイニング クライアントでの機能を使用して、次を参照してください。[データ マイニング モデルを作成する](creating-a-data-mining-model.md)します。  
   
  使用されるアルゴリズムの詳細については、**カテゴリの検出**ツールで、トピックの「Microsoft クラスタ リング アルゴリズム」を参照してください[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   

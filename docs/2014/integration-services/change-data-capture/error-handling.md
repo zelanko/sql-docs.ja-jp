@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835652"
 ---
 # <a name="error-handling"></a>エラー処理
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  
@@ -41,7 +41,7 @@ ms.locfileid: "58657249"
 |RUNNING|1|0|CDC インスタンスが実行されていて、変更レコードが処理されています。 RUNNING 状態には、次の副状態コードがあります。<br /><br /> IDLE: すべての変更レコードが処理され、対象の制御 (**_CT**) テーブルに格納されました。 制御テーブルにアクティブなトランザクションはありません。<br /><br /> PROCESSING: 制御 (**_CT**) テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
 |STOPPED|0|0|CDC インスタンスが実行されていません。 STOP 副状態は、ACTIVE だった CDC インスタンスが適切に停止されたことを示します。|  
 |SUSPENDED|1|1|CDC インスタンスが実行されていますが、回復可能なエラーにより処理が中断されています。 SUSPENDED 状態には、次の副状態コードがあります。<br /><br /> DISCONNECTED: ソース Oracle データベースとの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> STORAGE: 記憶領域がいっぱいです。 記憶領域に空きができると処理が再開されます。 この状態は、状態テーブルを更新できないために表示されない場合があります。<br /><br /> LOGGER: ロガーは Oracle に接続されていますが、一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
-|DATAERROR|x|x|この状態コードは、 **xdbcdc_trace** テーブルにのみ使用されます。 **xdbcdc_state** テーブルには表示されません。 この状態のトレース レコードは、Oracle のログ レコードに問題があることを示します。 問題があるログ レコードは、**[data]** 列に BLOB として格納されます。 DATAERROR 状態には、次の副状態コードがあります。<br /><br /> BADRECORD: アタッチされたログ レコードを解析できませんでした。<br /><br /> CONVERT-ERROR: 一部の列のデータをキャプチャ テーブル内の対象の列に変換できませんでした。 この状態は、変換エラーについてのトレース レコードを生成するように構成で指定されている場合にのみ表示されます。|  
+|DATAERROR|○|○|この状態コードは、 **xdbcdc_trace** テーブルにのみ使用されます。 **xdbcdc_state** テーブルには表示されません。 この状態のトレース レコードは、Oracle のログ レコードに問題があることを示します。 問題があるログ レコードは、**[data]** 列に BLOB として格納されます。 DATAERROR 状態には、次の副状態コードがあります。<br /><br /> BADRECORD: アタッチされたログ レコードを解析できませんでした。<br /><br /> CONVERT-ERROR: 一部の列のデータをキャプチャ テーブル内の対象の列に変換できませんでした。 この状態は、変換エラーについてのトレース レコードを生成するように構成で指定されている場合にのみ表示されます。|  
   
  Oracle CDC Service の状態は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されるため、データベース内の状態の値にサービスの実際の状態が反映されていない場合もあります。 最も一般的なシナリオは、サービスと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間の接続が失われ、なんらかの理由で再開できない場合です。 この場合、 **cdc.xdbcdc_state** に最新の状態が格納されなくなります。 最終更新のタイムスタンプ (UTC) から 1 分以上経過していれば、古い状態を示していると考えられます。 この場合は、Windows イベント ビューアーを使用して、サービスの状態に関する詳しい情報を確認してください。  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910466"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 ときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くと、そのソースは、オープンの現在の行を指定できます[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、絶対 URL または相対 URL を開くと組み合わせて[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト.  
@@ -58,24 +58,24 @@ ms.locfileid: "52538048"
   
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
-|RESOURCE_PARSENAME|AdVarWChar|読み取り専用です。 リソースの URL を示します。|  
-|RESOURCE_PARENTNAME|AdVarWChar|読み取り専用です。 親レコードの絶対 URL を示します。|  
-|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|読み取り専用です。 PARENTNAME、PARSENAME を連結したものであると、リソースの絶対 URL を示します。|  
+|RESOURCE_PARSENAME|AdVarWChar|読み取り専用。 リソースの URL を示します。|  
+|RESOURCE_PARENTNAME|AdVarWChar|読み取り専用。 親レコードの絶対 URL を示します。|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|読み取り専用。 PARENTNAME、PARSENAME を連結したものであると、リソースの絶対 URL を示します。|  
 |RESOURCE_ISHIDDEN|adBoolean|リソースが非表示の場合は true。 行セットを明示的に作成するコマンドが RESOURCE_ISHIDDEN が True である行を選択しない限り、行は返されません。|  
 |RESOURCE_ISREADONLY|adBoolean|リソースが読み取り専用である場合は true。 開こうとして DBBINDFLAG_WRITE されのこのリソースは、DB_E_READONLY で失敗します。 読み取り専用リソースで開かれた場合でも、このプロパティを編集できます。|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|ドキュメントの使用方法を示します-たとえば、弁護士の簡単な。 これは、ドキュメントの作成に使用した Office テンプレートに対応可能性があります。|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|などの形式を示す、ドキュメントの MIME の種類を示す"`text/html`"。|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|コンテンツが格納されている言語を示します。|  
-|RESOURCE_CREATIONTIME|adFileTime|読み取り専用です。 リソースが作成された時刻を格納する FILETIME 構造体を示します。 時刻は世界協定時刻 (UTC) 形式で報告されます。|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|読み取り専用です。 リソースの最終アクセス時刻が含まれる FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは 0 です。|  
-|RESOURCE_LASTWRITETIME|AdFileTime|読み取り専用です。 リソースの最終書き込み時刻を表す FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは 0 です。|  
-|RESOURCE_STREAMSIZE|asUnsignedBigInt|読み取り専用です。 リソースの既定のストリームにバイト単位のサイズを示します。|  
-|RESOURCE_ISCOLLECTION|adBoolean|読み取り専用です。 True の場合、リソースがディレクトリなどのコレクション。 リソースが単純なファイルの場合は false です。|  
+|RESOURCE_CREATIONTIME|adFileTime|読み取り専用。 リソースが作成された時刻を格納する FILETIME 構造体を示します。 時刻は世界協定時刻 (UTC) 形式で報告されます。|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|読み取り専用。 リソースの最終アクセス時刻が含まれる FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは 0 です。|  
+|RESOURCE_LASTWRITETIME|AdFileTime|読み取り専用。 リソースの最終書き込み時刻を表す FILETIME 構造体を示します。 時刻は UTC 形式です。 プロバイダーがこの時間メンバーをサポートしていない場合、FILETIME メンバーは 0 です。|  
+|RESOURCE_STREAMSIZE|asUnsignedBigInt|読み取り専用。 リソースの既定のストリームにバイト単位のサイズを示します。|  
+|RESOURCE_ISCOLLECTION|adBoolean|読み取り専用。 True の場合、リソースがディレクトリなどのコレクション。 リソースが単純なファイルの場合は false です。|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|リソースが構造化ドキュメントの場合は true。 リソースは、構造化されたドキュメントではない場合は false。 コレクションまたは単純なファイルが考えられます。|  
-|DEFAULT_DOCUMENT|AdVarWChar|読み取り専用です。 このリソースに、フォルダーの既定の単純なドキュメントまたは構造化ドキュメントの URL が含まれていることを示します。 既定のストリームが、そのリソースから要求されたときに使用されます。 このプロパティは、単純なファイルの場合は空白です。|  
-|CHAPTERED_CHILDREN|adChapter|読み取り専用です。 任意。 リソースの子を含む行セットのチャプターを示します。 (、 *OLE DB Provider for Internet Publishing*この列は使用しません)。|  
-|RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用です。 リソースの表示名を示します。|  
-|RESOURCE_ISROOT|adBoolean|読み取り専用です。 リソース コレクションまたは構造化されたドキュメントのルートである場合は true。|  
+|DEFAULT_DOCUMENT|AdVarWChar|読み取り専用。 このリソースに、フォルダーの既定の単純なドキュメントまたは構造化ドキュメントの URL が含まれていることを示します。 既定のストリームが、そのリソースから要求されたときに使用されます。 このプロパティは、単純なファイルの場合は空白です。|  
+|CHAPTERED_CHILDREN|adChapter|読み取り専用。 任意。 リソースの子を含む行セットのチャプターを示します。 (、 *OLE DB Provider for Internet Publishing*この列は使用しません)。|  
+|RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用。 リソースの表示名を示します。|  
+|RESOURCE_ISROOT|adBoolean|読み取り専用。 リソース コレクションまたは構造化されたドキュメントのルートである場合は true。|  
   
 ## <a name="see-also"></a>参照  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   

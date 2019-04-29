@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 188f47efe73edde0ed2e534bd19787c8546e7c18
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990376"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセス
-  ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセスはサポートされていません。 代わりに、テーブル型およびテーブル変数を使用します。 例 :  
+  ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセスはサポートされていません。 代わりに、テーブル型およびテーブル変数を使用します。 以下に例を示します。  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

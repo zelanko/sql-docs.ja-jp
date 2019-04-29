@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29addb89a5713b32b98df374a673fff4d549d771
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853457"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB リモート処理のプロバイダーの概要
 Microsoft OLE DB リモート処理プロバイダーにより、リモート コンピューター上のデータ プロバイダーを呼び出すため、クライアント コンピューター上のローカル ユーザーです。 リモート コンピューター上のローカル ユーザーをした場合と同様に、リモート コンピューターのデータ プロバイダーのパラメーターを指定します。 次に、リモート コンピューターにアクセスするリモート処理のプロバイダーによって使用されるパラメーターを指定します。 ローカル ユーザーをした場合と、リモート コンピューターをアクセスできます。

@@ -18,17 +18,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c15f4be9d452580cebd6b530f0703f249af17b36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913297"
 ---
 # <a name="persisting-records-in-xml-format"></a>レコードを XML 形式で保持する
 Adtg 形式の形式のような**Recordset** XML 形式で永続化は、Microsoft OLE DB 永続化プロバイダーが実装されます。 このプロバイダーは、保存されている XML ファイルまたは ADO によって生成されるスキーマ情報を格納しているストリームから順方向専用、読み取り専用の行セットを生成します。 同様に、ADO をかかる**Recordset**、XML を生成し、ファイルまたは COM を実装する任意のオブジェクトに保存、 **IStream**インターフェイス。 (ファイルをサポートするオブジェクトのもう 1 つの例は、実際には、 **IStream**)。依存に XML を読み込むには Microsoft XML Parser (MSXML) バージョン 2.5 以降では、ADO、 **Recordset**; したがって行いますが必要です。  
   
 > [!NOTE]
->  階層を保存するときにいくつかの制限が適用**レコード セット**(データ図形) を XML 形式にします。 場合、XML に保存することはできません、階層**レコード セット**保留中の更新プログラムが含まれています。 パラメーター化されたを保存することはできませんと階層**レコード セット**します。 詳細については、[永続化、フィルター処理され、階層レコード セット](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)を参照してください。  
+>  階層を保存するときにいくつかの制限が適用**レコード セット**(データ図形) を XML 形式にします。 場合、XML に保存することはできません、階層**レコード セット**保留中の更新プログラムが含まれています。 パラメーター化されたを保存することはできませんと階層**レコード セット**します。 詳細については、次を参照してください。[永続化、フィルター処理され、階層レコード セット](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)します。  
   
  XML にデータを保持し、再び読み込む最も簡単な方法は、もう一度 ADO では、**保存**と**オープン**メソッドでは、それぞれします。 ADO のコード例を次に示します内のデータの保存、**タイトル**titles.sav がという名前のファイルにテーブルです。  
   

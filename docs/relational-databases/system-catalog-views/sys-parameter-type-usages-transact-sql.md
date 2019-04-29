@@ -21,23 +21,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 955dbe8aa7a69f82b6af3698e79b090594b97299
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998036"
 ---
 # <a name="sysparametertypeusages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザー定義データ型のパラメーターごとに 1 行のデータを返します。  
+  ユーザー定義型の各パラメーターの 1 つの行を返します。  
   
 > [!NOTE]  
 >  このビューは、番号付きプロシージャのパラメーターの行は返しません。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|パラメーターが属しているオブジェクトの ID。|  
+|**object_id**|**int**|このパラメーターが所属するオブジェクトの ID。|  
 |**parameter_id**|**int**|パラメーターの ID。 オブジェクト内で一意です。|  
 |**user_type_id**|**int**|ユーザー定義データ型の ID。<br /><br /> 型の名前を返すには、この列で [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログ ビューに結合します。|  
   

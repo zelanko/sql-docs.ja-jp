@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 36f91ea537b1ad2a5e52221400f41bf88dc544b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028039"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions インターフェイス
 SHAPE プロバイダーの基になる OLE DB データ ソース オブジェクトを取得します。  
@@ -41,8 +41,8 @@ public:
 |-|-|  
 |[GetDataProviderDSO メソッド](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Shape プロバイダーから基になる OLE DB データ ソース オブジェクトを取得します。|  
   
-## <a name="requirements"></a>要件  
- **バージョン:** ADO 2.0 以降  
+## <a name="requirements"></a>必要条件  
+ **バージョン：** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  
   

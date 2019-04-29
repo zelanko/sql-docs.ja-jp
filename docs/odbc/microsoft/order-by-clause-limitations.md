@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2835396a7b8266d812ca5a1049679c7d82549389
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024353"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 句の制限事項
 GROUP BY 句と ORDER BY 句が SELECT ステートメントが含まれる場合、ORDER BY 句は結果セット内の列のみまたは GROUP BY 句で式を含めることができます。

@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b7e029a4293dc9b543663d4486ef4971dbb93b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004747"
 ---
 # <a name="sysfulltextstoplists-transact-sql"></a>sys.fulltext_stoplists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "47681350"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|ストップリストの ID。データベースで一意の値です。|  
-|**name**|**sysname**|ストップリストの名前。|  
-|**create_date**|**datetime**|ストップリストが作成された日付。|  
-|**modify_date**|**datetime**|ALTER ステートメントを使用してストップリストが最後に変更された日付。|  
-|**Principal_id**|**int**|ストップリストを所有するデータベース プリンシパルの ID。|  
+|**name**|**sysname**|ストップ リストの名前。|  
+|**create_date**|**datetime**|日付をストップ リストが作成されました。|  
+|**modify_date**|**datetime**|日付を ALTER ステートメントを使用してストップ リストの最終更新します。|  
+|**Principal_id**|**int**|ストップ リストを所有するデータベース プリンシパルの ID。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

@@ -1,5 +1,5 @@
 ---
-title: 名前付きセットを作成 |Microsoft ドキュメント
+title: 名前付きセットの作成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4eb82cba133f572e996f460be04661bfe511492e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020061"
 ---
 # <a name="create-named-sets"></a>名前付きセットの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "34021579"
  **名前**  
  名前付きセットの名前を選択します。 この名前は、エンド ユーザーがキューブを参照したときに表示されます。  
   
- **式**  
+ **[式]**  
  名前付きセットを作成する式を指定します。 この式は、MDX で記述することもできます。 式には、次の要素を含めることができます。  
   
 -   ディメンション、レベル、メジャーなど、キューブのコンポーネントを表すデータ式  
@@ -39,9 +39,9 @@ ms.locfileid: "34021579"
  キューブ コンポーネントは、 **[計算ツール]** ペインの **[メタデータ]** タブから **名前付きセット フォーム エディター** ペインの **[式]** ボックスにコピーまたはドラッグできます。 関数は、 **[計算ツール]** ペインの **[関数]** タブから **名前付きセット フォーム エディター** ペインの **[式]** ボックスにコピーまたはドラッグできます。  
   
 > [!IMPORTANT]  
->  セット内のメンバーを明示的に指定することによって、セット式を作成する場合は、中かっこのペアでメンバーの一覧を囲みます ({})。  
+>  セット内のメンバーを明示的に名前付けして、セット式を作成する場合は、メンバーの一覧を囲む中かっこのペアで ({})。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルでの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
+ [多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

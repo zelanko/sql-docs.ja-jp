@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017186"
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
   **osql** ユーティリティを使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを入力できます。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
@@ -211,7 +211,7 @@ osql -E -q "select name, object_id from %table%"
 |GO|最後の GO の後に入力したすべてのステートメントを実行します。|  
 |RESET|入力したステートメントをすべて消去します。|  
 |QUIT または EXIT( )|**osql**を終了します。|  
-|Ctrl + C|クエリを終了しますが、 **osql**は終了しません。|  
+|CTRL キーを押しながら C|クエリを終了しますが、 **osql**は終了しません。|  
   
 > [!NOTE]  
 >  !! コマンド および ED コマンドは **osql**ではサポートされなくなりました。  

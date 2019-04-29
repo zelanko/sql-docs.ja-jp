@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 9: 階層の作成 |Microsoft Docs'
+title: 'レッスン 9: 階層を作成する |Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017262"
 ---
-# <a name="lesson-9-create-hierarchies"></a>レッスン 9: 階層を作成します。
+# <a name="lesson-9-create-hierarchies"></a>レッスン 9: 階層を作成する
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このレッスンでは、階層を作成します。 階層は、複数のレベルに分類された列のグループです。たとえば、Geography という階層に、Country、State、County、および City というサブレベルを含めることができます。 階層は、あるレポート クライアント アプリケーション フィールドの一覧の他の列とは分けて表示できるため、クライアントのユーザーは簡単に移動し、レポートに含めることができます。 詳細についてを参照してください。[階層](../analysis-services/tabular-models/hierarchies-ssas-tabular.md)します。  
   
 階層を作成するには、モデル デザイナーを使用します*ダイアグラム ビュー*します。 作成して、階層の管理は、データ ビューではサポートされていません。  
   
-このレッスンの推定所要時間: **20 分**  
+このレッスンを完了するまでに時間を推定するには。**20 分**  
   
-## <a name="prerequisites"></a>Prerequisites  
-このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に作成した前のレッスン:[レッスン 8: パースペクティブの作成」](../analysis-services/lesson-8-create-perspectives.md)します。  
+## <a name="prerequisites"></a>前提条件  
+このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 8: パースペクティブを作成する](../analysis-services/lesson-8-create-perspectives.md)します。  
   
 ## <a name="create-hierarchies"></a>階層を作成する  
   
@@ -45,7 +45,7 @@ ms.locfileid: "42791699"
   
 5.  右クリックし、 **ModelName**列 >**階層を追加する**、し、**カテゴリ**します。 同じ**EnglishProductName**します。 これらの列、階層内の名前を変更**モデル**と**製品**します。  
 
-    ![として表形式の lesson9-分類](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![as-tabular-lesson9-category](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>DimDate テーブルに階層を作成するには  
   
@@ -73,6 +73,6 @@ ms.locfileid: "42791699"
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>次の操作
-次のレッスンに移動:[レッスン 10: パーティションの作成](../analysis-services/lesson-10-create-partitions.md)です。 
+次のレッスンに移動します。[レッスン 10:パーティションの作成](../analysis-services/lesson-10-create-partitions.md)です。 
   
   

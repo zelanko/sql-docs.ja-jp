@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842753"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>障害がある方のためのユーザー補助機能
   [!INCLUDE[msCoName](../includes/msconame-md.md)] では、すべてのユーザーにとって使いやすい製品とサービスを提供するために努力しています。 このトピックでは、障害がある方に [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server ファミリを快適に使用していただくための機能、製品、サービスなどについて説明します。  

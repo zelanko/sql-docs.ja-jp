@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 722f7990076882f5f9c3db29fdeb165728f5fc48
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899905"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>[データ マイニング クエリ タスク エディター] ([マイニング モデル] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、使用するマイニング構造とマイニング モデルを指定できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "58387340"
  データ マイニング クエリ タスクの説明を入力します。  
   
 ## <a name="mining-model-tab-options"></a>[マイニング モデル] タブのオプション  
- **[接続]**  
+ **Connection**  
  既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  

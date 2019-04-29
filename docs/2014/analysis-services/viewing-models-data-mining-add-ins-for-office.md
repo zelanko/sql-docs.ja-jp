@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 265b3353d3b91f053a431da9929d010bc823fb2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756000"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>モデルの参照 (Office 用データ マイニング アドイン)
   Excel 用データ マイニング アドインでは、作成した分析モデルを次の方法で操作できます。  
@@ -38,7 +38,7 @@ ms.locfileid: "52410552"
   
      [マイニング モデルを文書化&#40;データ マイニング Excel 用アドイン&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

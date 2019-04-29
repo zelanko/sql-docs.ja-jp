@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fdab9e6e60311aca4ce0ae35f92e38c45fdf3702
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018477"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Interval データ型での既定の先頭有効桁数と秒小数部分のオーバーライド
 ARD の SQL_DESC_TYPE フィールド設定されている場合、datetime または間隔の C 型をいずれかを呼び出して**SQLBindCol**または**SQLSetDescField**、SQL_DESC_PRECISION フィールド (を含む間隔 (秒)有効桁数) は、次の既定値に設定されます。  

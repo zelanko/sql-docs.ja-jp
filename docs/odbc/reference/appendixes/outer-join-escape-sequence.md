@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018366"
 ---
 # <a name="outer-join-escape-sequence"></a>外部結合のエスケープ シーケンス
 ODBC では、外部結合のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
@@ -29,7 +29,7 @@ ODBC では、外部結合のエスケープ シーケンスを使用します�
 {oj outer-join}  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  BNF 表記では、構文がとおりです。  
   
  *ODBC の外部の結合のエスケープ*:: =  
@@ -40,9 +40,9 @@ ODBC では、外部結合のエスケープ シーケンスを使用します�
   
  外部結合 {*テーブル名*[*相関名*] &#124; *外部結合*} ON  
   
- *検索-*  
+ *search-*  
   
- *条件*  
+ *condition*  
   
  *相関名*:: =*ユーザー定義名*  
   

@@ -14,16 +14,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874789"
 ---
 # <a name="manage-filetables"></a>FileTable の管理
   FileTable を管理するための一般的な管理タスクについて説明します。  
   
-##  <a name="HowToEnumerate"></a> 操作方法：FileTable と関連オブジェクトの一覧を取得する  
+##  <a name="HowToEnumerate"></a> 操作方法：Filetable と関連オブジェクトの一覧を取得します。  
  FileTable の一覧を取得するには、次のいずれかのカタログ ビューに対してクエリを実行します。  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   FILESTREAM がインスタンス レベルで無効化された場合、そのインスタンスのデータベース レベルのディレクトリはすべて表示されません。  
   
-###  <a name="HowToDisable"></a> 操作方法：データベース レベルで非トランザクション アクセスを無効化および再有効化する  
+###  <a name="HowToDisable"></a> 操作方法：無効にして、データベース レベルで非トランザクション アクセスを再度有効にします。  
  詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
  **完全な非トランザクション アクセスを無効化するには**  
@@ -138,7 +138,7 @@ GO
   
 -   FileTable ディレクトリと、それに含まれているファイルおよびディレクトリは、ファイル システムに表示され、ファイル I/O アクセスに使用できるようになります。  
   
-###  <a name="HowToEnableNS"></a> 操作方法：テーブル レベルで FileTable 名前空間を無効化および再有効化する  
+###  <a name="HowToEnableNS"></a> 操作方法：無効にして、テーブル レベルで FileTable の Namespace を再度有効にします。  
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** オプションを指定して ALTER TABLE ステートメントを呼び出します。  
   
  **FileTable 名前空間を無効にするには**  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 操作方法：FileTable に関連付けられた開いているファイル ハンドルを終了する  
+###  <a name="HowToKill"></a> 操作方法：FileTable に関連付けられている開いているファイル ハンドルを強制終了します。  
  データベースまたは FileTable のすべての開いているファイル ハンドルを終了するか、特定のハンドルを終了するための適切な引数を指定して、[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles) ストアド プロシージャを呼び出します。  
   
 ```  

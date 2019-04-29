@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1454e6d0644b8eed74cf9328e2068d91e7c8e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733410"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>マイニング モデル ビューアーのタスクと操作方法
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーには、マイニング モデルの探索に使用できるいくつかのツールが含まれています。 次のトピックでは、デザイナーの **[マイニング モデル ビューアー]** タブを使用して特定のタスクを実行する手順について説明します。  
@@ -42,12 +42,12 @@ ms.locfileid: "48189675"
   
 -   [マイニング モデルからケース データにドリルスルーする](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [式の時系列表示モデル&#40;データ マイニング&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [タイム シリーズ モデルの式の表示 (データ マイニング)](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [データ マイニング ビューアーで使用する色の変更](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>参照  
  [基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](../mining-model-viewers-data-mining-model-designer.md)  
   
   

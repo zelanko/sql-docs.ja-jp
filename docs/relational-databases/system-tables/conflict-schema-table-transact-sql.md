@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471081"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict _&lt;スキーマ&gt;_&lt;テーブル&gt;(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52808904"
 |__$conflict_type|**int**|競合の種類。次の値のいずれかです。<br /><br /> 1:ローカル行が別の更新プログラムまたはことによって変更されたために失敗しました。 更新プログラムが削除され、後に再挿入します。<br /><br /> 2:ローカル行が既に削除されて、更新に失敗しました。<br /><br /> 3:ローカル行が別の更新プログラムまたはことによって変更されたために失敗しました。 削除が削除され、後に再挿入します。<br /><br /> 4:ローカル行が既に削除されたために、削除が失敗しました。<br /><br /> 5:ローカル行が既に挿入されているかが、挿入し、更新、挿入が失敗しました。|  
 |__$is_winner|**bit**|このテーブルの行が競合で優先されるかどうか (ローカル ノードに適用されるかどうか) を示します。|  
 |__$pre_version|**varbinary (32)**|競合する変更が発生したデータベースのバージョンです。|  
-|__$reason_code|**int**|競合の解決コード。 次のいずれかの値になります。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 詳細については、**_ _ $reason_text**を参照してください。|  
+|__$reason_code|**int**|競合の解決コード。 次のいずれかの値になります。<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 詳細については、次を参照してください。 **_ _ $reason_text**します。|  
 |__$reason_text|**nvarchar (720)**|競合の解決。 次のいずれかの値になります。<br /><br /> 解決 (1)<br /><br /> 未解決 (2)<br /><br /> 不明 (0)|  
 |__$update_bitmap|**varbinary (** *n* **)** します。 サイズはコンテンツにより異なります。|更新 - 更新の競合が発生した場合にどの列が更新されたかを示すビットマップです。|  
 |__$inserted_date|**datetime**|競合する行がこのテーブルに挿入された日時です。|  

@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835948"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
   CDC デザイナー コンソールは、Oracle CDC インスタンスを開発および管理するために使用されます。 CDC デザイナー コンソールは、次の要素を含む Microsoft 管理コンソール スナップインです。  
   
--   新しいインスタンス ウィザード:このウィザードでは、新しい Oracle CDC インスタンスを作成します。 新しいインスタンス ウィザードの使用の詳細については、「 [Use the New Instance Wizard](use-the-new-instance-wizard.md)」を参照してください。  
+-   新しいインスタンス ウィザード: このウィザードでは、新しい Oracle CDC インスタンスを作成します。 新しいインスタンス ウィザードの使用の詳細については、「 [Use the New Instance Wizard](use-the-new-instance-wizard.md)」を参照してください。  
   
--   CDC インスタンス プロパティ ビューアー:これは、状態と、選択した CDC インスタンスの構成を表示するドッキングされたビューです。 プロパティ ビューアーの詳細については、「 [CDC インスタンスを管理する方法](manage-a-cdc-instance.md)」を参照してください。  
+-   CDC インスタンス プロパティ ビューアー: 選択した CDC インスタンスの状態と構成を表示するステータスを表示するドッキングされたビューです。 プロパティ ビューアーの詳細については、「 [CDC インスタンスを管理する方法](manage-a-cdc-instance.md)」を参照してください。  
   
--   CDC インスタンス プロパティ エディター:このダイアログ ボックスは、任意の既存の Oracle CDC Service インスタンスの編集に使用されます。 CDC インスタンス プロパティの編集の詳細については、「 [Edit Instance Properties](edit-instance-properties.md)」を参照してください。  
+-   CDC インスタンス プロパティ エディター: このダイアログ ボックスを使用して、既存の Oracle CDC Service インスタンスを編集します。 CDC インスタンス プロパティの編集の詳細については、「 [Edit Instance Properties](edit-instance-properties.md)」を参照してください。  
   
 ## <a name="in-this-documentation"></a>このドキュメントの内容  
   

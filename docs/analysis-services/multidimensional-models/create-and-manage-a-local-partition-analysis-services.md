@@ -1,5 +1,5 @@
 ---
-title: 作成し、ローカル パーティション (Analysis Services) の管理 |Microsoft ドキュメント
+title: 作成し、管理、ローカル パーティション (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ac59377001eb6007f7f647d3817993c6121b74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866682"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>ローカル パーティションの作成と管理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34024699"
 |SQL クエリを使用してファクト データを分割する|パーティションのソースには SQL クエリを指定できます。 処理中に、SQL クエリによってデータが取得されます。 クエリの WHERE 句では、各パーティションにデータを分割するフィルターを指定します。 Analysis Services によってクエリが生成されますが、データを適切に分割するために WHERE 句を自分で入力する必要があります。<br /><br /> このアプローチの主な利点は、1 つのソース テーブルから簡単にデータをパーティション分割できることです。 すべてのソース データが大きなファクト テーブルから取得される場合、そのデータを個別のパーティションにフィルター処理するクエリを作成できます。データ ソース ビュー (DSV) で追加のデータ構造を作成する必要はありません。<br /><br /> 1 つの欠点として、クエリを使用すると、パーティションと DSV のバインドが機能しなくなることが挙げられます。 ファクト テーブルに列を追加するなど、後で Analysis Services プロジェクトで DSV を更新する場合は、新しい列を含めるように各パーティションのクエリを手動で編集する必要があります。 次に説明する 2 番目のアプローチにはこの欠点はありません。|  
 |DSV 内のテーブルを使用してファクト データを分割する|DSV 内のテーブル、名前付きクエリ、またはビューにパーティションをバインドできます。 パーティションの基盤として、この 3 つすべては機能的に等価です。 テーブル全体、名前付きクエリ、またはビューで、すべてのデータが 1 つのパーティションに提供されます。<br /><br /> テーブル、ビュー、または名前付きクエリを使用すると、DSV にデータ選択ロジック全体が配置され、長期にわたる管理とメンテナンスがより簡単になります。 このアプローチの重要な利点は、テーブルのバインドが保持されることです。 ソース テーブルを後で更新する場合に、そのソース テーブルを使用するパーティションを変更する必要はありません。 もう 1 つの利点として、すべてのテーブル、名前付きクエリ、およびビューが共通のワークスペースに存在するため、更新がより簡単になり、パーティションのクエリを個別に開いて編集する必要がありません。|  
   
-## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>オプション 1: 複数パーティション用のファクト テーブルをフィルター選択する  
+## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>オプション 1:複数のパーティションのファクト テーブルをフィルター処理します。  
  複数のパーティションを作成するには、最初に、既定のパーティションの **[ソース]** プロパティを変更します。 既定では、メジャー グループは、DSV 内の 1 つのテーブルにバインドされている 1 つのパーティションを使用して作成されます。 さらにパーティションを追加する前に、まず、ファクト データの一部だけが含まれるように元のパーティションを変更する必要があります。 その後、残りのデータを格納するための追加のパーティションを作成できます。  
   
  パーティション間でデータが重複しないように、フィルターを作成します。 パーティションのフィルターは、そのパーティションで使用されるファクト テーブル内のデータを指定します。 キューブに含まれるすべてのパーティションのフィルターが、ファクト テーブルから相互排他的なデータセットを取り出すことが重要です。 同一のファクト データは、複数のパーティションに存在すると二重カウントされることがあります。  
@@ -51,7 +51,7 @@ ms.locfileid: "34024699"
   
 3.  ソース 列で、参照ボタン (. .) をクリックして、パーティション ソース ダイアログ ボックスを開きます。  
   
-     ![[パーティション] ペイン内のソース列](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "[パーティション] ペイン内のソース列")  
+     ![[パーティション] ペイン内のソース列](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "パーティション ペイン内の基になる列")  
   
 4.  [バインドの種類] で **[クエリ バインド]** を選択します。 データを選択する SQL クエリが自動的に表示されます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34024699"
 > [!NOTE]  
 >  パーティション内のデータをフィルター選択する代わりに、同じクエリを使用して DSV で名前付きクエリを作成し、その名前付きクエリに基づいてパーティションを作成できます。  
   
-## <a name="option-2-use-tables-views-or-named-queries"></a>オプション 2: テーブル、ビュー、または名前付きクエリを使用する  
+## <a name="option-2-use-tables-views-or-named-queries"></a>オプション 2:テーブル、ビュー、または名前付きクエリを使用します。  
  DSV で既にファクトが個々のテーブル (年ごとや四半期ごとなど) に編成されている場合は、個々のテーブルに基づくパーティションを作成できます。各パーティションには独自のデータ ソース テーブルが用意されます。 基本的には、これがメジャー グループをパーティション分割する既定の方法となりますが、複数のパーティションの場合は、元のパーティションを複数のパーティションに分割し、新しい各パーティションを、データを提供するデータ ソース テーブルにマップします。  
   
  ビューおよび名前付きクエリはテーブルと機能的に同等です。これら 3 つのオブジェクトはすべて、DSV で定義され、[パーティション ソース] ダイアログ ボックスの [テーブル バインド] オプションを使用してパーティションにバインドされます。 ビューまたは名前付きクエリを作成して、各パーティションに必要なデータ セグメントを生成できます。 詳細については、「[データ ソース ビューでの名前付きクエリの定義 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)」を参照してください。  
@@ -118,8 +118,8 @@ ms.locfileid: "34024699"
  最後に、通常、テーブル自体に基づいた既定のパーティション (まだ存在する場合) は削除してください。そうしないと、クエリ パーティションに基づいたクエリが、完全なテーブルに基づいたクエリと重複することになります。  
   
 ## <a name="see-also"></a>参照  
- [パーティションと &#40; です。Analysis Services - 多次元データと &#41; です。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [パーティション &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [リモート パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Analysis Services & #40; 内のパーティションをマージします。SSAS - 多次元 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services でのパーティションのマージ &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

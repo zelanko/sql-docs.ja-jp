@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cb13b8e57b69c814f18c414dbc345e307d80085c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018697"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "47645250"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**error**|**int**|一意なエラー番号です。|  
-|**severity**|**tinyint**|そのエラーの重大度レベルです。|  
+|**error**|**int**|一意のエラーの数。|  
+|**severity**|**tinyint**|エラーの重大度レベル。|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**description**|**nvarchar (255)**|代入変数を含んだエラーの説明です。|  
 |**msglangid**|**smallint**|システム メッセージ グループ ID です。|  

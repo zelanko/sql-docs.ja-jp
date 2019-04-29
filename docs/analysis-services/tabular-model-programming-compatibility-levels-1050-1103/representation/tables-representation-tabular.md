@@ -1,5 +1,5 @@
 ---
-title: テーブル表現 (テーブル) |Microsoft ドキュメント
+title: テーブル表現 (テーブル) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f84aed71870e71416b108f0348840f4cce983cd5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019274"
 ---
 # <a name="tables-representation-tabular"></a>テーブル表現 (テーブル)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34043686"
   
  実際の操作手順では、他のオブジェクトを定義する前にデータ ソース ビューを作成する必要があります。 データ ソース ビュー オブジェクトには、データ ソース内のすべての該当オブジェクトのマッピングが含まれます。 リレーショナル モデルのマッピングは、.NET DataSet オブジェクトとしてデータ ソース ビューに埋め込まれ、DSV の Schema プロパティに格納されます。  
   
- 次のコード スニペットは、SQL クライアント接続文字列を表形式モデルとデータの名前を持つ newDataSourceViewName 変数で表現するリレーショナル モデル内のすべてのテーブルにマップされる Select ステートメントのディクショナリがある前提としています。ソース ビュー (通常は、リレーショナル データベースの名前)。  
+ 次のコード スニペットは、SQL クライアント接続文字列、表形式モデル、およびデータの名前を持つ newDataSourceViewName 変数で表現するリレーショナル モデルのすべてのテーブルにマップされる Select ステートメントのディクショナリがある前提としています。ソース ビュー (通常はリレーショナル データベースの名前)。  
   
 ```  
   

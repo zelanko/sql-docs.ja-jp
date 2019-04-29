@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 851106109d195ae6f5d6f66d3944e486d58504c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027840"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 保存先となる形式を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  

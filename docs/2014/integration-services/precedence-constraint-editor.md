@@ -16,21 +16,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889454"
 ---
 # <a name="precedence-constraint-editor"></a>優先順位制約エディター
   **[優先順位制約エディター]** ダイアログ ボックスを使用すると、優先順位制約を構成できます。  
   
 ## <a name="options"></a>および  
  **[評価操作]**  
- 優先順位制約で使用する評価操作を指定します。 操作は次のとおりです。**制約**、**式**、**式と制約**、および**式または制約**します。  
+ 優先順位制約で使用する評価操作を指定します。 操作は次のとおりです: **[制約]**、**[式]**、**[式と制約]**、**[式または制約]**。  
   
  **[値]**  
- 制約の値を指定します。**成功**、**エラー**、または**完了**します。  
+ 制約値として次の値を指定します: **[成功]**、**[失敗]**、**[完了]**。  
   
 > [!NOTE]  
 >  優先順位制約を表す線は、 **[成功]** の場合は緑色、 **[失敗]** の場合は強調表示、 **[完了]** の場合は青色です。  

@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f23c35833c121214c9d51d89f3ba8c2165b346c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027719"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Property オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  [Attributes プロパティ](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Name プロパティ](../../../ado/reference/ado-api/name-property-ado.md)  

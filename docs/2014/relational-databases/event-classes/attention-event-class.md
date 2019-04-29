@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 695214082f9d2d3c2655d2e1da00c5d1db9697a6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912320"
 ---
 # <a name="attention-event-class"></a>Attention イベント クラス
   **Attention** イベント クラスでは、キャンセル、クライアントからの割り込み要求、クライアント接続の破棄など、アテンション イベントが発生したことを示します。 操作のキャンセルも、データ アクセス ドライバーのタイムアウト実装の一部と考えることができます。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855177"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory サービス
 Active Directory サービス インターフェイス (ADSI) プロバイダーが ADSI による異種ディレクトリ サービスに接続するための ADO を許可します。 これにより、ADO アプリケーションは Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory services のすべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなくに読み取り専用アクセスできるようにします。 ADO アプリケーションがシームレスにアクセスできる、新しいプロバイダー アクセス権を付与する別のディレクトリがある場合、ADSI はプロバイダー モデルに基づきます。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  

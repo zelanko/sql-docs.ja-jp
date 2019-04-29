@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0e27df2328474f4123daa9488af88eb7903832be
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014173"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -116,7 +116,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 
 <a name="sqlcoptssbcp"></a>
 ## <a name="sqlcoptssbcp"></a>SQL_COPT_SS_BCP  
- SQL_COPT_SS_BCP 属性は、接続で一括コピー関数を有効にします。 詳細については、[一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)を参照してください。  
+ SQL_COPT_SS_BCP 属性は、接続で一括コピー関数を有効にします。 詳細については、次を参照してください。[一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -203,7 +203,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_MARS_ENABLED_NO|既定値です。 複数のアクティブな結果セット (MARS) を無効にします。|  
 |SQL_MARS_ENABLED_YES|MARS を有効にします。|  
   
- MARS の詳細については、[複数のアクティブな結果セットのを使用して&#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)を参照してください。  
+ MARS の詳細については、次を参照してください。[複数のアクティブな結果セットのを使用して&#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)します。  
 
 <a name="sqlcoptssmultisubnetfailover"></a>
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
@@ -224,7 +224,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptssoldpwd"></a>SQL_COPT_SS_OLDPWD  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、SQL Server 認証におけるパスワードの期限切れが導入されました。 クライアントから接続の古いパスワードと新しいパスワードの両方を提供できるようにするために、SQL_COPT_SS_OLDPWD 属性が追加されました。 この属性が設定されている場合、接続文字列には変更された "古いパスワード" が含まれているので、プロバイダーは最初の接続またはそれ以降の接続で接続プールを使用しません。  
   
- 詳細については、[プログラムでパスワードを変更する](../../relational-databases/native-client/features/changing-passwords-programmatically.md)を参照してください。  
+ 詳細については、次を参照してください。[プログラムでパスワードを変更する](../../relational-databases/native-client/features/changing-passwords-programmatically.md)します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -239,7 +239,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_PERF_START|ドライバーのパフォーマンス データのサンプリングを開始します。|  
 |SQL_PERF_STOP|パフォーマンス データのサンプリングのカウンターを停止します。|  
   
- 詳細については、[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)します。  
 
 <a name="sqlcoptssperfdatalog"></a>
 ## <a name="sqlcoptssperfdatalog"></a>SQL_COPT_SS_PERF_DATA_LOG  
@@ -258,7 +258,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_PERF_START|実行時間の長いクエリのログ記録を開始します。|  
 |SQL_PERF_STOP|実行時間の長いクエリのログ記録を停止します。|  
   
- 詳細については、[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)します。  
 
 <a name="sqlcoptssperfqueryinterval"></a>
 ## <a name="sqlcoptssperfqueryinterval"></a>SQL_COPT_SS_PERF_QUERY_INTERVAL  
@@ -314,7 +314,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |-----------|-----------------|  
 |SQL_TXN_SS_SNAPSHOT|あるトランザクションで行った変更内容を別のトランザクションから参照できないことを示します。この場合、クエリを再実行しても変更内容を参照することはできません。|  
   
- スナップショット分離の詳細については、[スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)を参照してください。  
+ スナップショット分離の詳細については、次を参照してください。[スナップショット分離を使用した作業](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)します。  
   
 ## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP
 
@@ -324,7 +324,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性は、ユーザー データのポインターを設定します。 ユーザー データとは、接続ごとに記録されているクライアントが所有するメモリのことです。  
   
- 詳細については、[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)します。  
 
 <a name="sqlcoptsswarnoncperror"></a>
 ## <a name="sqlcoptsswarnoncperror"></a>SQL_COPT_SS_WARN_ON_CP_ERROR  
@@ -339,13 +339,13 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
  新しい接続属性である SQL_COPT_SS_SERVER_SPN および SQL_COPT_SS_FAILOVER_PARTNER_SPN の値を設定するのには、SQLSetConnectAttr を使用できます。 接続が開いている場合、これらの属性を設定することはできません。接続が開いているときにこれらの属性を設定しようとすると、"現時点での操作は正しくありません。" というメッセージと共に、エラー HY011 が返されます (SQLSetConnectOption こともできますをこれらの値を設定します。)  
   
- Spn の詳細については、[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)を参照してください。  
+ Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)します。  
 
 <a name="sqlcoptssconnectiondead"></a>
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  これは読み取り専用属性です。  
   
- SQL_COPT_SS_CONNECTION_DEAD の詳細については、[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)と[データ ソースに接続する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)を参照してください。  
+ SQL_COPT_SS_CONNECTION_DEAD の詳細については、次を参照してください。 [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)と[データ ソースに接続する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/connecting-to-a-data-source-odbc.md)します。  
   
 ## <a name="example"></a>例
 

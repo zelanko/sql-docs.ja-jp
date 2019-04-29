@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65067452553f3a0c44259e12b294bc795baa9d12
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931405"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 返します&quot;未読の Stream&quot;エラー
 "Stream オブジェクト読み取れなかったため、現在の位置が、Stream の末尾か、空です。 空でないストリームで位置プロパティを使用して現在の位置を設定します。 調べるには、Stream が空のかどうか、Size プロパティを確認します。"  

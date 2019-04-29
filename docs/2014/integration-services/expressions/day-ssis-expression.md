@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47140db35618143522ad217f5eda2aa3d4b7507b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898415"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 式)
   ある日付の、日の日付要素を表す整数値を返します。  
@@ -43,7 +43,7 @@ DAY(date)
  日付リテラルは、日付データ型のいずれかに明示的にキャストされる必要があります。 詳細については、「 [Integration Services Data Types](../data-flow/integration-services-data-types.md)」を参照してください。  
   
 > [!NOTE]  
->  式は、リテラルの日付が日付データ型のいずれかに明示的にキャストするときに検証に失敗します。DT_DBTIMESTAMPOFFSET と DT_DBTIMESTAMP2 します。  
+>  日付リテラルが次のいずれかの日付データ型に明示的にキャストされると、式の検証は失敗します。DT_DBTIMESTAMPOFFSET および DT_DBTIMESTAMP2。  
   
  DAY 関数を使用すると、DATEPART("DAY", date) 関数を使用する場合と同じ結果を、より簡単に取得できます。  
   

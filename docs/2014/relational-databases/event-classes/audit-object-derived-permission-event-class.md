@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 123cc4cc977e52334b085691caa74e853d5f3fb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015932"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission イベント クラス
   **Audit Object Derived Permission** イベント クラスにより、指定されたオブジェクトに対して CREATE コマンド、ALTER コマンド、または DROP コマンドが実行された時点が記録されます。 このイベントは、オブジェクトに権限または直接関連付けられた所有者がない場合にのみ発生します。  

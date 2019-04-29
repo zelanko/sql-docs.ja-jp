@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ba661a0a00931f52aa7d38cc8d96730c685fa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913540"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>構成ファイルを使用した 分散再生のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、ユーザー入力およびシステムの既定値に基づいて構成ファイルを生成する機能が用意されています。 管理ツールをインストールするように指定すると、構成ファイルを使用して、3 つの 分散再生コンポーネント (管理ツール、分散再生コントローラー、および分散再生クライアント) を配置できます。 SQL Server セットアップでは、分散再生ユーティリティ コンポーネントのインストール、修復、およびアンインストールがサポートされています。  
@@ -27,7 +27,7 @@ ms.locfileid: "48078314"
   
 -   コマンド ライン値によって、構成ファイル内の値が上書きされます。  
   
- 構成ファイルを使用する方法の詳細については、[SQL Server 2014 を使用したインストール、構成ファイル](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)を参照してください。  
+ 構成ファイルを使用する方法の詳細については、次を参照してください。 [SQL Server 2014 を使用したインストール、構成ファイル](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)します。  
   
 > [!IMPORTANT]  
 >  分散再生をインストールした後、コントローラー コンピューターとクライアント コンピューターのファイアウォール ルールを作成し、ターゲット サーバー上で各クライアント コンピューターの権限を付与する必要があります。 詳細については、「 [インストール後の手順の実行](../../tools/distributed-replay/complete-the-post-installation-steps.md)」を参照してください。  
