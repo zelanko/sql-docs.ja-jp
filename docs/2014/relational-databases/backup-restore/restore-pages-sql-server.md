@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921037"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してページを復元する方法について説明します。 ページ復元の目的は、データベース全体を復元することなく 1 つ以上の損傷したページを復元することです。 通常、復元候補のページは、そのページにアクセスする際に発生したエラーによって、"問題あり" に設定されています。 問題ありに設定されているページは、 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) データベースの **suspect_pages** テーブルで特定できます。  
@@ -62,7 +62,7 @@ ms.locfileid: "58536394"
   
     -   [トランザクション ログ]  
   
-    -   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
+    -   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページ。  
   
     -   すべてのデータ ファイルのページ 0 (ファイルのブート ページ)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "58536394"
   
 3.  データベースを右クリックし、 **[タスク]**、 **[復元]** の順にポイントし、 **[ページ]** をクリックします。 **[ページの復元]** ダイアログ ボックスが開きます。  
   
-     **復元**  
+     **[復元]**  
      このセクションでは、 **[データベースの復元]\([全般] ページ)** の [[復元先]](../../integration-services/general-page-of-integration-services-designers-options.md)と同じ機能を実行します。  
   
      **[データベース]**  
@@ -130,10 +130,10 @@ ms.locfileid: "58536394"
      **バックアップ セット**  
      このセクションには、復元に関連するバックアップ セットが表示されます。  
   
-    |Header|値|  
+    |[ヘッダー]|値|  
     |------------|------------|  
     |**名前**|バックアップ セットの名前です。|  
-    |**コンポーネント**|バックアップされるコンポーネント:**[データベース]**、**[ファイル]**、または **[\<空白>]** (トランザクション ログ用)。|  
+    |**コンポーネント**|バックアップ コンポーネント:**[データベース]**、**[ファイル]**、または **[\<空白>]** (トランザクション ログ用)。|  
     |**型**|実行するバックアップの種類: **[完全]**、**[差分]**、**[トランザクション ログ]**。|  
     |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの名前。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  

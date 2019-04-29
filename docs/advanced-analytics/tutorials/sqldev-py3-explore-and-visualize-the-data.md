@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e9dd0a0884c96a8f5b17948c21b7f891a2e997ab
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
-ms.translationtype: MT
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860493"
 ---
 # <a name="explore-and-visualize-the-data"></a>探索し、データの視覚化
@@ -198,7 +198,7 @@ _Hack_license_列には、タクシー運転手のライセンスの数 (匿名�
 
 ## <a name="next-step"></a>次の手順
 
-[T-SQL を使用してデータ機能を作成します。](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[T-SQL を使用してデータ機能を作成する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>前の手順
 

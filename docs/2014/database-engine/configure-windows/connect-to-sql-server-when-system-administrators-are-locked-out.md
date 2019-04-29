@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782385"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>システム管理者がロックアウトされた場合の SQL Server への接続
   このトピックでは、システム管理者が [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] へのアクセスを復旧する方法について説明します。 システム管理者は、次のいずれかの理由で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスできなくなることがあります。  
@@ -61,7 +61,7 @@ ms.locfileid: "52641563"
 5.  **起動時のパラメーター**  タブで、**起動時のパラメーターを指定**ボックスに「`-m`順にクリックします`Add`します。 (入力文字はダッシュの後に小文字の m です)。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 [詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーター `;-m` を追加し、[`OK`] をクリックします  (入力文字はセミコロンの後に小文字の m です)。  
+    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーター `;-m` を追加し、[`OK`] をクリックします  (入力文字はセミコロンの後に小文字の m です)。  
   
 6.  クリックして`OK`とを再起動するメッセージが表示されたら、サーバー名を右クリックし、順にクリックします**再起動**します。  
   
@@ -109,13 +109,13 @@ ms.locfileid: "52641563"
 11. **起動時のパラメーター**  タブで、**既存のパラメーター**ボックスで、`-m`順にクリックします`Remove`します。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 [詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 削除、 `;-m` 、前に追加し、クリック`OK`します。  
+    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 削除、 `;-m` 、前に追加し、クリック`OK`します。  
   
 12. サーバー名を右クリックし、 **[再起動]** をクリックします。  
   
  現在のメンバーになっているアカウントのいずれかで正常に接続できるようになりましたの`sysadmin`固定サーバー ロール。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シングル ユーザー モードでの SQL Server の起動](start-sql-server-in-single-user-mode.md)   
  [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)  
   

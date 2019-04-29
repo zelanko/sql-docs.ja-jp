@@ -24,16 +24,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013388"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase で発生したを返します。 エラーは、ノードを計算します。  
+  PolyBase で発生したエラーを返しますはコンピューティング ノードです。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
@@ -42,10 +42,10 @@ ms.locfileid: "51663721"
 |type|**nvarchar (255)**|エラーの種類。||  
 |create_time|**datetime**|エラーの発生場所の時間||  
 |compute_node_id|**int**|特定のコンピューティング ノードの識別子|Compute_node_id を参照してください[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
-|rexecution_id|**nvarchar(36)**|PolyBase クエリでは、存在する場合の識別子です。||  
+|rexecution_id|**nvarchar(36)**|存在する場合、PolyBase クエリの識別子です。||  
 |spid|**int**|SQL Server セッションの識別子||  
 |thread_id|**int**|エラーが発生したスレッドの数値識別子。||  
-|詳細情報|nvarchar (4000)|エラーの詳細の詳細な説明。||  
+|詳細情報|nvarchar (4000)|エラーの詳細の完全な説明です。||  
   
 ## <a name="see-also"></a>参照  
  [PolyBase 動的管理ビューでのトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

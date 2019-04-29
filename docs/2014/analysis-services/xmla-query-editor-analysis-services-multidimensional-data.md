@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d324657c6a405d090913909a7e5aaa756970734
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755909"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA クエリ エディター (Analysis Services - 多次元データ)
   XMLA クエリ エディターを使用すると、多次元式 (XMLA) 言語で記述されたステートメントおよびスクリプトを作成したり実行したりできます。  
   
-## <a name="features"></a>[機能]  
+## <a name="features"></a>機能  
   
 -   XMLA クエリ エディターのクエリ エディター ペインに、スクリプトを入力します。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "48101542"
   
 |項目|定義|  
 |----------|----------------|  
-|**クエリ エディター ウィンドウ**|XMLA クエリ エディターで実行される XMLA ステートメントおよびスクリプトを入力します。<br /><br /> クエリ エディターのコンテキスト メニューには、次のオプションがあります。<br /><br /> **切り取り**: 現在の選択範囲をクリップボードにコピーし、クエリ エディター ウィンドウから選択範囲を削除します。<br />**[コピー]**: 現在選択している部分をクリップボードにコピーします。<br />**貼り付け**: 現在の選択項目のクリップボードの内容を貼り付けます。<br />**[接続]**: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を確立するための **[サーバーへの接続]** ダイアログ ボックスを開きます。<br />**切断**: 現在のクエリ エディターからの切断、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br />**すべてのクエリの切断**: すべての開いているクエリ エディターの接続解除します。<br />**接続を変更する**: 開きます、**サーバーへの接続**ダイアログ ボックスで、さまざまなへの接続を確立するために、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス。<br />**オブジェクト エクスプ ローラーでサーバーを開く**: 開きます、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスで、現在のクエリ エディターが接続されている**オブジェクト エクスプ ローラー**します。<br />**実行**: 選択したコードを実行するか、コードが選択されていない場合は、現在のクエリ エディターでコード全体を実行します。<br />**[プロパティ] ウィンドウ**: 表示、**プロパティ**ウィンドウ[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の現在のクエリ ウィンドウ。<br />**クエリ オプション**: 表示、**クエリ オプション** ダイアログ ボックス。|  
+|**クエリ エディター ウィンドウ**|XMLA クエリ エディターで実行される XMLA ステートメントおよびスクリプトを入力します。<br /><br /> クエリ エディターのコンテキスト メニューには、次のオプションがあります。<br /><br /> **[切り取り]**:現在選択している部分をクリップボードにコピーし、その部分をクエリ エディター ウィンドウから削除します。<br />**[コピー]**:現在選択している部分をクリップボードにコピーします。<br />**[貼り付け]**:クリップボードの内容を現在の選択位置に貼り付けます。<br />**[接続]**:**インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。<br />**[接続解除]**:現在のクエリ エディターと [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの接続を解除します。<br />**[すべてのクエリの切断]**:開いているクエリ エディターの接続をすべて解除します。<br />**[接続の変更]**:別の **インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。<br />**[オブジェクト エクスプローラーでサーバーを開く]**:[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクト エクスプローラー **で、現在のクエリ エディターの接続先の**インスタンスを開きます。<br />**[実行]**:選択されているコードを実行します。コードが選択されていない場合は、現在のクエリ エディター内のコード全体を実行します。<br />**[プロパティ]** ウィンドウ:現在のクエリ ウィンドウの **に** [プロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ウィンドウを表示します。<br />**[クエリ オプション]**:**[クエリ オプション]** ダイアログ ボックスを表示します。|  
 |**結果ウィンドウ**|XMLA ステートメントまたはスクリプトの結果がテキスト形式で表示されます。|  
 |**[メッセージ] ウィンドウ**|XMLA ステートメントまたはスクリプトの実行に関する情報が表示されます。 たとえば、実行中に発生したエラーや、実行後に取得されたセルの数などが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](dmx-query-editor-analysis-services-data-mining.md)   
  [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   

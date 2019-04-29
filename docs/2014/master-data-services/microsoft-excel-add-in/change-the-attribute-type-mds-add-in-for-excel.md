@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f86645a542e4c215a3675d7a0cbf9cfbd45cc2e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923938"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>属性の型の変更 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、許可される文字のデータ型または文字数が間違っている場合に、管理者が属性の型を変更することができます。  
@@ -36,7 +36,7 @@ ms.locfileid: "52783944"
   
 ### <a name="to-change-the-attribute-type"></a>属性の型を変更するには  
   
-1.  Excel で、変更する列 (属性) を含むエンティティを読み込みます。 詳細については、[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)を参照してください。  
+1.  Excel で、変更する列 (属性) を含むエンティティを読み込みます。 詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
   
 2.  変更する列の任意のセルをクリックします。  
   
