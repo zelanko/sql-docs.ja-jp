@@ -66,8 +66,8 @@ IS_MEMBER ( { 'group' | 'role' } )
   
 |戻り値|[説明]|  
 |------------------|-----------------|  
-|0||0|現在のユーザーがのメンバーではない *グループ* または *ロール*. ||  
-|1||1|現在のユーザーのメンバーである *グループ* または *ロール*. ||  
+|0|現在のユーザーがのメンバーではない *グループ* または *ロール*.|  
+|1|現在のユーザーのメンバーである *グループ* または *ロール*.|  
 |NULL|*group* または *role* のどちらかが無効です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインや、アプリケーション ロールを使用しているログインでクエリを実行した場合、Windows グループに対しては NULL が返されます。|  
   
  IS_MEMBER は、Windows によって作成されたアクセス トークンを調べることによって Windows グループ メンバーシップを決定します。 アクセス トークンは、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続した後に行われたグループ メンバーシップ内の変更を反映しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーション ロールで Windows グループのメンバーシップをクエリすることはできません。  
