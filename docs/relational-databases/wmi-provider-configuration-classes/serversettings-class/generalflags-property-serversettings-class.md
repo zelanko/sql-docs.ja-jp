@@ -19,15 +19,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5604ad8e59af9bd7cbcdec5fb2af5002ea00af47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660793"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags プロパティ (ServerSettings クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに関連付けられた一般的なフラグを取得します。  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに関連付けられた一般的なフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
   

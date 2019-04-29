@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 205c6a3e70e5edfa354681ce70b8a01d93476892
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722763"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>データ マイニング ウィザード (Analysis Services - データ マイニング)
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "52524202"
   
  各オプションの詳細のチュートリアルについては、以下のトピックを参照してください。  
   
- [リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)  
+ [Create a Relational Mining Structure](create-a-relational-mining-structure.md)  
  リレーショナル データ マイニング モデルを作成する場合の判断について説明します。  
   
  [Create an OLAP Mining Structure](create-an-olap-mining-structure.md)  

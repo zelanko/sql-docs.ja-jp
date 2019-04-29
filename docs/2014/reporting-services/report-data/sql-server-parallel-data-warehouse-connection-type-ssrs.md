@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c628f8c853879a4c601e1c9529f97fd7877551df
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720688"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] スケーラブルなデータ ウェアハウス アプライアンスで、高容量の並列処理によってパフォーマンスとスケーラビリティを提供します。 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 分散処理とデータ ストレージに [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] データベースを使用します。  

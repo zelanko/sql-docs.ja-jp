@@ -1,5 +1,5 @@
 ---
-title: SSIS による Analysis Services の管理タスクを自動化 |Microsoft ドキュメント
+title: SSIS による Analysis Services の管理タスクの自動化 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c750c0e8ee9f13c4b4751af872b02f4ed9ee419a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659595"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>SSIS による Analysis Services 管理タスクの自動化
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DDL スクリプト、キューブおよびマイニング モデルの処理タスク、およびデータ マイニング クエリ タスクの実行を自動化することができます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、制御フローおよびメンテナンス タスクの集合と考えることができ、これらをリンクしてシーケンシャルおよび並列のデータ処理ジョブを作成できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用すると、DDL スクリプト、キューブおよびマイニング モデルの処理タスク、データ マイニング クエリ タスクの実行を自動化できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、制御フローおよびメンテナンス タスクの集合と考えることができ、これらをリンクしてシーケンシャルおよび並列のデータ処理ジョブを作成できます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、データ処理タスク時のデータのクリーンアップと、異なるデータ ソースからのデータの統合を実行できるように設計されています。 キューブおよびマイニング モデルを使用して作業する場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、非数値データを数値データに変換し、データ値を期待される範囲内に収めることができます。したがって、ファクト テーブルとディメンションに設定するためのクリーンなデータを作成できます。  
   
 ## <a name="integration-services-tasks"></a>Integration Services タスク  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のタスクまたはジョブには、制御フロー要素とデータ フロー要素という 2 つの要素があります。 制御フロー要素では、優先順位制約を適用することによってジョブ進行の論理的な順序を定義します。 データ フロー要素は、コンポーネントの出力から後続コンポーネントの入力への接続と、その間でデータに対して行われるデータ変換に関係しています。 データの行き先に関する決定は、優先順位制約に含まれる論理によってどのコンポーネントが出力を受け取るかが指定されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タスクには、DDL 実行タスク、Analysis Services 処理タスク、およびデータ マイニング クエリ タスクがあります。 これらの各タスクでは、メール送信タスクを使用して、タスク結果を含む電子メール メッセージを管理者に送信できます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のタスクまたはジョブには、制御フロー要素とデータ フロー要素という 2 つの要素があります。 制御フロー要素では、優先順位制約を適用することによってジョブ進行の論理的な順序を定義します。 データ フロー要素は、コンポーネントの出力から後続コンポーネントの入力への接続と、その間でデータに対して行われるデータ変換に関係しています。 データの行き先に関する決定は、優先順位制約に含まれる論理によってどのコンポーネントが出力を受け取るかが指定されます。  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タスクには、DDL 実行タスク、Analysis Services 処理タスク、およびデータ マイニング クエリ タスクがあります。 これらの各タスクでは、メール送信タスクを使用して、タスク結果を含む電子メール メッセージを管理者に送信できます。  
   
 ## <a name="the-execute-ddl-task"></a>DDL 実行タスク  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の DDL 実行タスクを使用すると、DDL スクリプトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに直接送信して、自動的に実行できます。 これによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、バックアップ、復元、または同期の操作を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内から実行できます。 パッケージは、前に説明した制御フロー要素とデータ フロー要素で構成されています。これらの要素は、タスクに追加できる他の DDL ステートメントと同様に、すべて **定期的に実行**される必要があります。 ここで説明したタスクは夜間に実行される場合が多いため、任意のスケジューリング アプリケーションから簡単に実行できるパッケージを作成すると特に便利です。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェントを使用すると、パッケージを任意の時刻に実行するようにスケジュールできます。 このタスクの実装方法については、「 [Analysis Services DDL 実行タスク](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)」を参照してください。  

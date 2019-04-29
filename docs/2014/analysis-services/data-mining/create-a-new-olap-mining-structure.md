@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 603b1d22370a32808460aa3e725e5f26e0f62dc0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718209"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>新規の OLAP マイニング構造の作成
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードを使用して、多次元モデルのデータを使用するマイニング構造を作成できます。 OLAP キューブに基づくマイニング モデルでは、ファクト テーブルの列と値、ディメンション、およびメジャー グループを分析の属性として使用できます。  

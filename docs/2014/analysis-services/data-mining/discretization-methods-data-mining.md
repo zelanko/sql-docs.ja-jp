@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722724"
 ---
 # <a name="discretization-methods-data-mining"></a>分離メソッド (データ マイニング)
    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でデータ マイニング モデルを作成するための一部のアルゴリズムでは、正常に機能するために特定の種類のコンテンツが必要です。 たとえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムでは、連続列を入力として使用したり、連続する値を予測したりすることはできません。 また、一部の列に含まれている値が多すぎるため、データ マイニング モデルの作成元となるデータ内の対象パターンをアルゴリズムで容易に識別できない場合があります。  
@@ -39,7 +39,7 @@ ms.locfileid: "48187054"
   
  `Number of Buckets = sqrt(n)`  
   
- たくない場合[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]バケットの数を計算するには、使用することができます、<xref:Microsoft.AnalysisServices.DimensionAttribute.DiscretizationBucketCount%2A>プロパティを手動でバケットの数を指定します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でバケットの数を計算しない場合は、<xref:Microsoft.AnalysisServices.DimensionAttribute.DiscretizationBucketCount%2A> プロパティを使用して、バケットの数を手動で指定できます。  
   
  次の表では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でデータを分離するときに使用できるメソッドについて説明します。  
   
@@ -51,19 +51,19 @@ ms.locfileid: "48187054"
   
 ## <a name="remarks"></a>コメント  
   
--   使用することができます、`EQUAL_AREAS`メソッドは文字列を分離します。  
+-   `EQUAL_AREAS` メソッドを使用すると、文字列を分離できます。  
   
--   `CLUSTERS`メソッドでは、1000 個のレコードのランダムなサンプルを使用して、データを分離します。 アルゴリズムでデータをサンプリングしない場合は、`EQUAL_AREAS` メソッドを使用します。  
+-   `CLUSTERS` メソッドでは、ランダム サンプルとして 1,000 個のレコードを使用してデータの分離が行われます。 アルゴリズムでデータをサンプリングしない場合は、`EQUAL_AREAS` メソッドを使用します。  
   
--   ニューラル ネットワーク マイニング モデルのチュートリアルには、分離をカスタマイズする例が示されています。 詳細については、[レッスン 5: ニューラル ネットワークおよびロジスティック回帰モデル&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)を参照してください。  
+-   ニューラル ネットワーク マイニング モデルのチュートリアルには、分離をカスタマイズする例が示されています。 詳細については、次を参照してください。[レッスン 5。ニューラル ネットワーク モデルとロジスティック回帰モデルを構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)します。  
   
 ## <a name="see-also"></a>参照  
- [コンテンツの種類&#40;データ マイニング&#41;](content-types-data-mining.md)   
- [コンテンツの種類&#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
- [データ型&#40;データ マイニング&#41;](data-types-data-mining.md)   
+ [コンテンツの種類 &#40;です。 データ マイニング&#41;](content-types-data-mining.md)   
+ [コンテンツの種類 &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
+ [データ型 (データ マイニング)](data-types-data-mining.md)   
  [マイニング構造列](mining-structure-columns.md)   
- [列の分布&#40;データ マイニング&#41;](column-distributions-data-mining.md)  
+ [列の分布 (データ マイニング)](column-distributions-data-mining.md)  
   
   

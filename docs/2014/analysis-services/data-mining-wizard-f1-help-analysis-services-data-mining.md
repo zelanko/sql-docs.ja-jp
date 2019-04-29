@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689434"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>データ マイニング ウィザードの F1 ヘルプ (Analysis Services - データ マイニング)
   **データ マイニング ウィザード**を使用すると、新しいマイニング構造を作成し、必要に応じて関連するマイニング モデルを作成できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48087762"
   
 -   マイニング モデルを使用すると、マイニング構造のデータのパターンを分析して、そのパターンに基づいて予測できます。 1 つのマイニング構造に対して、異なるアルゴリズムに基づく多様なマイニング モデルを作成することができます。  
   
- 詳細については、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)を参照してください。  
+ 詳細については、次を参照してください。[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)します。  
   
  **データ マイニング ウィザード** では、次の操作を行います。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "48087762"
  マイニング構造および必要に応じてマイニング モデルを作成した後、 **データ マイニング デザイナー** を使用してそれらのプロパティを変更できます。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [データ マイニング デザイナー](data-mining/data-mining-designer.md)   
- [リレーショナル マイニング構造を作成します。](data-mining/create-a-relational-mining-structure.md)   
+ [データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Data Mining Designer](data-mining/data-mining-designer.md)   
+ [リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)   
  [定義方法の選択&#40;データ マイニング ウィザード&#41;](select-the-definition-method-data-mining-wizard.md)   
  [データ マイニング構造の作成&#40;データ マイニング ウィザード&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [データ ソース ビューを選択します&#40;データ マイニング ウィザード。&#41;](select-data-source-view-data-mining-wizard.md)   

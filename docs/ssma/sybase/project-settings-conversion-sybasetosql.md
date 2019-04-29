@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664664"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA を Sybase Adaptive Server Enterprise (ASE) の構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の構文。  
@@ -142,13 +142,13 @@ SSMA は、ASE のコードでの動的 SQL を見つけたときに出力また
 **フル モード:** NULL 値を検討してください。  
   
 **書式指定文字列**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure をサポートしていません、 *format_string* PRINT ステートメントおよび RAISERROR ステートメントの引数。 *Format_string*変数には、置き換え可能パラメーターを文字列に直接配置し、実行時にパラメーターがサポートされています。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字列リテラル、または変数を使用して構築された文字列を使用して完全な文字列が必要です。 詳細については、、"印刷 ( [!INCLUDE[tsql](../../includes/tsql-md.md)])」のトピック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure をサポートしていません、 *format_string* PRINT ステートメントおよび RAISERROR ステートメントの引数。 *Format_string*変数には、置き換え可能パラメーターを文字列に直接配置し、実行時にパラメーターがサポートされています。 代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字列リテラル、または変数を使用して構築された文字列を使用して完全な文字列が必要です。 詳細については、次を参照してください。、"印刷 ( [!INCLUDE[tsql](../../includes/tsql-md.md)])」のトピック[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 SSMA が検出した場合、 *format_string*引数、変数を使用してリテラル文字列を作成または新しい変数を作成してその変数を使用して文字列を作成します。  
   
 -   印刷と RAISERROR の関数の文字列リテラルを使用する**新しい文字列を作成する**します。  
   
-    このモードでのプレース ホルダーとローカル変数は、PRINT または RAISERROR ステートメントを使用しない場合、ステートメントは変更されません。 二重のパーセント記号 (%) は、文字列リテラルの印刷での 1 つのパーセント記号 % に変更されます。  
+    このモードでのプレース ホルダーとローカル変数は、PRINT または RAISERROR ステートメントを使用しない場合、ステートメントは変更されません。 二重のパーセント記号 (%)印刷の文字列リテラルで 1 つのパーセント記号 % に変更されます。  
   
     PRINT または RAISERROR ステートメントのプレース ホルダーと 1 つを使用している場合、または次の例に示すような複数のローカル変数。  
   
@@ -183,7 +183,7 @@ SSMA が検出した場合、 *format_string*引数、変数を使用してリ�
   
 -   SSMA 印刷と RAISERROR の各ステートメントに対して新しい変数を作成し、文字列値をその変数を使用には、次のように選択します。**を作成する新しい変数**します。  
   
-    このモードでプレース ホルダーとローカル変数は、PRINT または RAISERROR ステートメントを使用しない場合 SSMA 文字を置き換えますすべて二重パーセント (%) に準拠する 1 つのパーセント記号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure の構文。  
+    このモードでのプレース ホルダーとローカル変数は、PRINT または RAISERROR ステートメントを使用しない場合 SSMA 文字を置き換えますすべて二重パーセント (%)準拠する 1 つのパーセント記号と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure の構文。  
   
     PRINT または RAISERROR ステートメントのプレース ホルダーと 1 つを使用している場合、または次の例に示すような複数のローカル変数。  
   

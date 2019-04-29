@@ -1,5 +1,5 @@
 ---
-title: コンテンツの種類 (データ マイニング) |Microsoft ドキュメント
+title: コンテンツの種類 (データ マイニング) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0dcc5840467f039e78c0c4d4b75862bbf78a6a42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725186"
 ---
 # <a name="content-types-data-mining"></a>コンテンツの種類 (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
   
  *データ型* により、マイニング モデルを作成するときにその列に含まれるデータをアルゴリズムでどのように処理するかが決定されます。 列のデータ型を定義することで、列に含まれるデータの型に関する情報と、データの処理方法がアルゴリズムに通知されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各データ型では、データ マイニング向けに 1 つまたは複数のコンテンツの種類がサポートされます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34015739"
   
  連続する数値データが列に含まれ、そのデータがどのように分布するかがわかっている場合は、期待される値の分布を指定することで、分析の精度を高めることができます。 列の分布は、マイニング構造レベルで指定します。 このため、設定はその構造に基づくすべてのモデルに適用されます。詳細については、「[列の分布 (データ マイニング)](../../analysis-services/data-mining/column-distributions-data-mining.md)」を参照してください。  
   
- コンテンツの種類 **Continuous** は、**Date**、**Double**、および **Long** の各データ型によってサポートされています。  
+ **Continuous**コンテンツの種類が次のデータ型によってサポートされています。**日付**、**二重**、および**長い**します。  
   
 ## <a name="discretized"></a>Discretized  
  *分離* とは、連続した一連のデータの値をバケットに分割して、限定された数の可能な値を生成するプロセスです。 数値データだけを分離できます。  
@@ -49,9 +49,9 @@ ms.locfileid: "34015739"
   
  必要なバケットが得られるようにデータを手動で分離することも、SQL Server Analysis Services に用意されている分離メソッドを使用することもできます。 一部のアルゴリズムでは分離が自動的に実行されます。 詳細については、「 [マイニング モデルでの列の分離の変更](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)」を参照してください。  
   
- コンテンツの種類 **Discretized** は、 **Date**、 **Double**、 **Long**、および **Text**の各データ型によってサポートされています。  
+ **Discretized**コンテンツの種類が次のデータ型によってサポートされています。**日付**、**二重**、**長い**、および**テキスト**します。  
   
-## <a name="key"></a>Key  
+## <a name="key"></a>キー  
  コンテンツの種類 *key* は、この列が行を一意に識別することを表します。 ケース テーブルの場合、通常、キー列は数値またはテキストの識別子です。 コンテンツの種類を **key** に設定すると、分析には使用しない、レコードの追跡専用の列であることが示されます。  
   
  入れ子になったテーブルにもキーはありますが、入れ子になったテーブルのキーは使い方が多少異なります。 入れ子になったテーブルでコンテンツの種類を **key** に設定するのは、その列が分析する属性である場合です。 入れ子になったテーブルのキーの値は各ケースで一意である必要がありますが、ケースのセット全体では重複していてもかまいません。  
@@ -61,19 +61,19 @@ ms.locfileid: "34015739"
 > [!NOTE]  
 >  入れ子になったテーブルを使用できるのは、Analysis Services のデータ ソース ビューとして定義されている外部データ ソースのデータを使用する場合だけです。  
   
- このコンテンツの種類は、 **Date**、 **Double**、 **Long**、および **Text**の各データ型によってサポートされています。  
+ このコンテンツの種類は次のデータ型によってサポートされています。**日付**、**二重**、**長い**、および**テキスト**します。  
   
 ## <a name="key-sequence"></a>Key Sequence  
  コンテンツの種類 *key sequence* は、シーケンス クラスター モデルでのみ使用できます。 コンテンツの種類を **key sequence**に設定すると、一連のイベントを表す値を格納する列であることが示されます。 値は順序付けされていますが、互いに等間隔である必要はありません。  
   
- このコンテンツの種類は、 **Double**、 **Long**、 **Text**、および **Date**の各データ型によってサポートされています。  
+ このコンテンツの種類は次のデータ型によってサポートされています。**二重**、**長い**、**テキスト**、および**日付**します。  
   
 ## <a name="key-time"></a>[キー時刻]  
  コンテンツの種類 *key time* は、時系列モデルでのみ使用できます。 コンテンツの種類を **key time**に設定すると、値が順序付きであり時系列を表す値であることが示されます。  
   
- このコンテンツの種類は、 **Double**、 **Long**、および **Date**の各データ型によってサポートされています。  
+ このコンテンツの種類は次のデータ型によってサポートされています。**二重**、**長い**、および**日付**します。  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>テーブル  
  コンテンツの種類 *table* は、1 つ以上の列と 1 つ以上の行を持つ別のデータ テーブルが列に含まれることを示します。 ケース テーブルの特定の行では、この列に、すべて親ケース レコードに関係する複数の値を含めることができます。 たとえば、メインのケース テーブルに顧客の一覧が含まれている場合に、その顧客が過去に購入した製品の一覧から成る入れ子になったテーブルを含む **ProductsPurchased** 列や、顧客の関心の一覧から成る **Hobbies** 列など、入れ子になったテーブルを含む複数の列を使用できます。  
   
  この列のデータ型は常に **Table**です。  
@@ -96,9 +96,9 @@ ms.locfileid: "34015739"
  すべてのモデルで共通して使用される上記のコンテンツの種類の他にも、分類済みの列を使用して、一部のデータ型に対してコンテンツの種類を定義できます。 分類済みの列の詳細については、「[分類済みの列 (データ マイニング)](../../analysis-services/data-mining/classified-columns-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [コンテンツの種類 (&) #40";"DMX"&"#41;](../../dmx/content-types-dmx.md)   
- [データ型 (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [データ型 (&) #40";"DMX"&"#41;](../../dmx/data-types-dmx.md)   
+ [コンテンツの種類 (DMX)](../../dmx/content-types-dmx.md)   
+ [データ型 (データ マイニング)](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [データ型 &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [マイニング構造のプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md)  
   

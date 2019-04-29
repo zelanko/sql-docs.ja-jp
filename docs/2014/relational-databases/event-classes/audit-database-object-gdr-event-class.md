@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26c5b80fe5932906324d7131e967760a6a918aaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698916"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR イベント クラス
   **Audit Database Object GDR** イベント クラスは、アセンブリやスキーマなどのデータベース オブジェクトに対して GRANT、REVOKE、または DENY が実行された場合に発生します。  

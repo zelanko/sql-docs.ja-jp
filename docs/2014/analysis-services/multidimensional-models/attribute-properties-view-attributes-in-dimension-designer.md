@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727527"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>ディメンション デザイナーでの属性の表示
-  属性はディメンション オブジェクトで作成されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンション デザイナーを使用して、属性を表示したり構成したりできます。 ディメンション デザイナーの **[ディメンション構造]** タブの **[属性]** ペインには、ディメンションの属性が一覧表示されます。 このペインを使用して、属性の追加、削除、または構成を行います。 また、新しい階層でレベルとして使用する属性や、既存の階層にレベルとして追加する属性を選択できます。  
+  属性はディメンション オブジェクトで作成されます。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンション デザイナーを使用して、属性を表示したり構成したりできます。 ディメンション デザイナーの **[ディメンション構造]** タブの **[属性]** ペインには、ディメンションの属性が一覧表示されます。 このペインを使用して、属性の追加、削除、または構成を行います。 また、新しい階層でレベルとして使用する属性や、既存の階層にレベルとして追加する属性を選択できます。  
   
  ディメンションの属性を表示するには、そのディメンションのディメンション デザイナーを開きます。 ディメンション デザイナーの **[ディメンション構造]** タブの **[属性]**  ペインに、ディメンションの属性が表示されます。 ポイントして、リスト、ツリー、またはグリッド ビューを切り替えることができます**属性を表示**上、**ディメンション**のメニュー[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]次の表に示したコマンドのいずれかの をクリックします。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48180042"
 |アイコン|属性の使用法|  
 |----------|---------------------|  
 |![属性アイコン](../media/as-icon-attribute.gif "属性アイコン")|Regular または AccountType|  
-|![キー属性アイコン](../media/as-icon-key-attribute.gif "キー属性アイコン")|Key|  
+|![キー属性アイコン](../media/as-icon-key-attribute.gif "キー属性アイコン")|キー|  
 |![親属性アイコン](../media/as-icon-parent-attribute.gif "親属性アイコン")|Parent|  
   
 ## <a name="see-also"></a>参照  

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726609"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>ディメンション データへのカスタム アクセス権の付与 (Analysis Services)
   キューブに対する読み取りアクセスを有効にすると、ディメンション メンバー (キューブで使用されるすべてのメジャーを含むメジャー ディメンションのメジャーを含む) へのアクセスを明示的に許可または拒否する追加の権限を設定できます。 たとえば、再販業者のカテゴリが複数ある場合は、特定のビジネスの種類のデータを除外する権限を設定できます。 次の図は、Reseller ディメンションでウェアハウスのビジネスの種類へのアクセスを拒否した場合の、前後の影響を比較しています。  
@@ -51,7 +51,7 @@ ms.locfileid: "48091739"
   
 2.  `DefaultMeasure` を検索します。 キューブに対して 1 つと、パースペクティブごとに 1 つ見つかります。 ディメンション セキュリティを定義する際、既定のメジャーへのアクセスを制限しないようにしてください。  
   
-3.  次に、検索`MeasureExpression`します。 メジャー式は、計算に基づいたメジャーです。通常、この計算には他のメジャーが含まれます。 制限するメジャーが、式では使用されていないことを確認してください。 あるいは、アクセスを制限し、同時にそのメジャーに対するすべての参照をキューブ全体から必ず除外します。  
+3.  次に、`MeasureExpression` を検索します。 メジャー式は、計算に基づいたメジャーです。通常、この計算には他のメジャーが含まれます。 制限するメジャーが、式では使用されていないことを確認してください。 あるいは、アクセスを制限し、同時にそのメジャーに対するすべての参照をキューブ全体から必ず除外します。  
   
 4.  最後に、`DefaultMember` を検索します。 属性の既定のメンバーとして機能する属性をメモしておきます。 ディメンション セキュリティを設定する場合は、これらの属性に制限を設けないようにしてください。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48091739"
   
      ロールは、既にキューブへの読み込みアクセス権を持っている必要があります。 詳細については、「 [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) を参照してください。  
   
-2.  **[ディメンション データ]** | **[基本]** で、権限を設定するディメンションを選択します。  
+2.   **[ディメンション データ]** | **[基本]** で、権限を設定するディメンションを選択します。  
   
 3.  属性階層を選択します。 属性の一部は、利用できない場合があります。 **[AttributeHierarchyEnabled]** を持つ属性のみが、 **[属性階層]** の一覧に表示されます。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48091739"
     >  ディメンション メンバーを取り除く権限を適用する場合は、集計合計は自動的には再計算されません。 たとえば、`All`属性階層のメンバーがアクセス許可が適用される前に、200 の数を返します。 一部のメンバーへのアクセスを拒否する権限を適用した後に`All`ユーザーに表示されるメンバーの値がはるかに少ない場合でも、200 を返します。 キューブのコンシューマーが混乱を避けるためには、構成することができます、`All`属性階層のメンバーのすべての集計ではなく、どのロールのメンバーには、これらのメンバーの集計にメンバーがあります。 この動作を呼び出すことができます`Visual Totals`上、**詳細**タブ、ディメンション セキュリティを構成するときにします。 有効になると、集計値は事前計算された集計値から取得されるのではなく、クエリの実行時に計算されます。 これにより、クエリのパフォーマンスに大きな影響が出る可能性があるため、必要な場合にのみ使用してください。  
   
 ## <a name="hiding-measures"></a>メジャーの非表示  
- [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)」で、セル データだけでなく、メジャーのすべての表示部分を完全に非表示にするには、ディメンション メンバーに対する権限が必要であることが説明されています。 ここでは、メジャーのオブジェクト メタデータへのアクセスを拒否する方法について説明します。  
+  [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)」で、セル データだけでなく、メジャーのすべての表示部分を完全に非表示にするには、ディメンション メンバーに対する権限が必要であることが説明されています。 ここでは、メジャーのオブジェクト メタデータへのアクセスを拒否する方法について説明します。  
   
 1.  **ディメンション データ** | **基本的な**、キューブ ディメンションを選択するまでは、ディメンション一覧をスクロールして**メジャー ディメンション**します。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48091739"
 >  ロール セキュリティを解除できるメジャーを識別する方法については、前提条件を確認してください。  
   
 ## <a name="advanced-dimension-security"></a>強化されたディメンション セキュリティ  
- MDX の専門知識がある場合は、別の方法として、アクセスが許可または拒否されたメンバー用の条件を設定するための MDX 式を記述します。 **[ロールの作成]** | **[ディメンション データ]** | **[詳細設定]** の順にクリックして、スクリプトを指定します。  
+ MDX の専門知識がある場合は、別の方法として、アクセスが許可または拒否されたメンバー用の条件を設定するための MDX 式を記述します。  **[ロールの作成]** | **[ディメンション データ]** | **[詳細設定]** の順にクリックして、スクリプトを指定します。  
   
  MDX ビルダーを使用すると、MDX ステートメントを記述できます。 詳細については、「[MDX ビルダー &#40;Analysis Services - 多次元データ&#41;](../mdx-builder-analysis-services-multidimensional-data.md)」を参照してください。 **[詳細設定]** タブには次のオプションがあります。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "48091739"
   
 -   データベース ロールが属性の既定メンバーを定義していない場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では属性自体に定義されている既定メンバーを使用します。 属性の既定メンバーは、特別に指定していない限り、`All` のメンバーになります (属性が非集計として定義されている場合を除く)。  
   
- たとえば、データベース ロールを指定します`Male`の既定のメンバーとして、`Gender`属性。 クエリに、`Gender` 属性が明示的に含まれており、この属性に別のメンバーが指定されているのでない限り、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では男性顧客のみを含むデータセットを返します。 既定メンバーの設定の詳細については、「 [既定メンバーの定義](attribute-properties-define-a-default-member.md)」を参照してください。  
+ たとえば、データベース ロールで、`Male` を `Gender` 属性の既定のメンバーとして指定しているとします。 クエリに、`Gender` 属性が明示的に含まれており、この属性に別のメンバーが指定されているのでない限り、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では男性顧客のみを含むデータセットを返します。 既定メンバーの設定の詳細については、「 [既定メンバーの定義](attribute-properties-define-a-default-member.md)」を参照してください。  
   
  **[表示部分の合計を表示する]**  
  VisualTotals プロパティは、表示される集計セル値がすべてのセル値に基づいて計算されるか、データベース ロールが表示可能なセル値のみに基づいて計算されるかを示します。  
@@ -127,9 +127,9 @@ ms.locfileid: "48091739"
  このページに定義された MDX 構文をテストします。  
   
 ## <a name="see-also"></a>参照  
- [キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [データ マイニング構造およびモデルに対する権限の付与&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [データ ソース オブジェクトに対する権限の付与&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [データ マイニング構造およびデータ マイニング モデルに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

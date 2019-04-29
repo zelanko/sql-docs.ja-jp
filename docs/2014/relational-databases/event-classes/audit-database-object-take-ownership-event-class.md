@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14284d0c89037664000ded35e09e4256bfe6a544
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698973"
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Audit Database Object Take Ownership イベント クラス
   **Audit Database Object Take Ownership** イベント クラスは、データベース スコープ内でオブジェクトの所有者が変更された場合に発生します。  

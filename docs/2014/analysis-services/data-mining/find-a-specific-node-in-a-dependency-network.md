@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dffcb63d5f8b89f4d777f7bdb07bc972cf5bff58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722494"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークでの特定のノードの検索
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング モデルの依存関係ネットワークに含まれているノードの数が多すぎると、対象となるデータを見つけにくくなる場合があります。 データ マイニング デザイナーの **[依存関係ネットワーク]** タブでは、 **[ノードの検索]** ダイアログ ボックスを使用して特定のノードを検索できるので、この問題を解決することができます。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング モデルの依存関係ネットワークに含まれているノードの数が多すぎると、対象となるデータを見つけにくくなる場合があります。 データ マイニング デザイナーの **[依存関係ネットワーク]** タブでは、 **[ノードの検索]** ダイアログ ボックスを使用して特定のノードを検索できるので、この問題を解決することができます。  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークで特定のノードを検索するには  
   

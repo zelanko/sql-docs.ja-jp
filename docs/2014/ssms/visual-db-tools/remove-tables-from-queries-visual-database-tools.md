@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bda582c7b9171e89a43b6870b3b6c2df139b7b11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670465"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>クエリからのテーブルの削除 (Visual Database Tools)
   クエリからテーブルまたはテーブル値オブジェクトを削除できます。  
   
 > [!NOTE]  
->  テーブルまたはテーブル値オブジェクトを削除しても、現在のクエリから削除されるだけです。データベースからは何も削除されません。 データベースからテーブルを削除する方法の詳細については、[テーブルの削除&#40;データベース エンジン&#41;](../../relational-databases/tables/delete-tables-database-engine.md)を参照してください。  
+>  テーブルまたはテーブル値オブジェクトを削除しても、現在のクエリから削除されるだけです。データベースからは何も削除されません。 データベースからテーブルを削除する方法の詳細については、次を参照してください。[テーブルの削除&#40;データベース エンジン&#41;](../../relational-databases/tables/delete-tables-database-engine.md)します。  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>テーブルまたはテーブル構造オブジェクトを削除するには  
   

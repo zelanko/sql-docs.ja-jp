@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 927442d1fe46fc42998643d4f7de47b438cbaa49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732460"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>[勘定科目インテリジェンスの定義] (ディメンション ウィザード)
-  **[勘定科目インテリジェンスの定義]** ページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで定義された勘定科目の種類を、ディメンションの **[勘定科目の種類]** の属性の種類に関連付けられた、ディメンションの属性で定義された勘定科目の種類にマップできます。  
+   **[勘定科目インテリジェンスの定義]** ページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで定義された勘定科目の種類を、ディメンションの **[勘定科目の種類]** の属性の種類に関連付けられた、ディメンションの属性で定義された勘定科目の種類にマップできます。  
   
 > [!NOTE]  
 >  **[ディメンションの種類の選択]** ページの **[標準ディメンション]** を選択した場合、およびディメンションの属性を **[ディメンションの種類を指定]** ページの **[勘定科目の種類]** にマップした場合のみ、このページが表示されます。  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722895"
 ---
 # <a name="data-mining-services-and-data-sources"></a>データ マイニング サービスおよびデータ ソース
   データ マイニングでは、SQL Server Analysis Services のインスタンスへの接続が必要になります。 キューブからのデータは、データ マイニングには必須ではなく、リレーショナル ソースの使用をお勧めします。ただし、データ マイニングでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] エンジンによって提供されるコンポーネントが使用されます。  
@@ -71,7 +71,7 @@ ms.locfileid: "53367754"
 ## <a name="configuring-permissions-and-server-properties"></a>権限とサーバー プロパティの構成  
  データ マイニングには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対する追加の権限が必要です。 ほとんどのデータ マイニング プロパティは、[[分析サーバーのプロパティ] ダイアログ ボックス &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md) を使用して設定できます。  
   
- 構成できるプロパティの詳細については、[Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)を参照してください。  
+ 構成できるプロパティの詳細については、次を参照してください。 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md)します。  
   
  データ マイニングに関連するサーバー プロパティを以下に示します。  
   

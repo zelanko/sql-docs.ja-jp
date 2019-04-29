@@ -1,5 +1,5 @@
 ---
-title: Microsoft タイム シリーズ ビューアーを使用してモデルを参照 |Microsoft ドキュメント
+title: Microsoft タイム シリーズ ビューアーを使用してモデルの参照 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd57ae140adee0909c0f00647a334bd62f26c170
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671345"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft タイム シリーズ ビューアーを使用したモデルの参照
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ ビューアーには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムは回帰アルゴリズムであり、予測シナリオで製品売上などの連続列を予測するデータ マイニング モデルを作成します。 これらの時系列モデルには、次のようなアルゴリズムに基づく情報を含めることができます。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タイム シリーズ ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムは回帰アルゴリズムであり、予測シナリオで製品売上などの連続列を予測するデータ マイニング モデルを作成します。 これらの時系列モデルには、次のようなアルゴリズムに基づく情報を含めることができます。  
   
 -   ARTxp アルゴリズム。短期的な予測に適しています。  
   
@@ -79,8 +79,8 @@ ms.locfileid: "34015439"
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft タイム シリーズ アルゴリズム](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [タイム シリーズ モデルのクエリ例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Time Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

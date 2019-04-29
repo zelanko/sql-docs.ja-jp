@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787106"
 ---
 # <a name="client-network-configuration"></a>クライアント ネットワーク構成
   クライアント ソフトウェアを使用すると、クライアント コンピューターからネットワーク上の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できます。 "クライアント" は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]など、サーバーが提供するサービスを使用するフロント エンドのアプリケーションです。 こうしたアプリケーションを実行するコンピューターは、 *クライアント コンピューター*と呼ばれます。  
