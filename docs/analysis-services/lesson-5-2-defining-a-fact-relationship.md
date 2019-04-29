@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752697"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>レッスン 5-2-ファクト リレーションシップの定義
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "52518844"
   
 14.  **[属性]** ディメンションのディメンション デザイナーの **[属性]** ペインで **[Sales Order Number]** をクリックします。次に、[プロパティ] ウィンドウで、 **Name** プロパティを **Item Description**に変更します。  
   
-15. **NameColumn**プロパティ セルで、[参照] ボタンをクリックします **([...])。**.[名前列] ダイアログ ボックスの [基になるテーブル] ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
+15. **NameColumn**プロパティ セルで、[参照] ボタンをクリックします **([...])。**.**[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
   
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "52518844"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [多対多関係の定義](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ディメンション リレーションシップ](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

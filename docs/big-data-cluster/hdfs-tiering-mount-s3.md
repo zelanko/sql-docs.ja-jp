@@ -1,5 +1,5 @@
 ---
-title: HDFS の階層制御の S3 のマウント
+title: HDFS の階層制御のマウント S3
 titleSuffix: SQL Server big data clusters
 description: この記事では、HDFS の HDFS に SQL Server 2019 ビッグ データ クラスター (プレビュー) で外部の S3 ファイル システムをマウントする階層化を構成する方法について説明します。
 author: nelgson
@@ -10,18 +10,18 @@ ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd4a5fc600a937b5cc29ea4356a7cc2eb14966b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
+ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317121"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64330605"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>HDFS のビッグ データ クラスター内の階層制御の S3 をマウントする方法
 
 次のセクションでは、HDFS、S3 ストレージのデータ ソースに階層化を構成する方法の例を提供します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [デプロイされたビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -42,7 +42,7 @@ ms.locfileid: "63317121"
    ```
 
    > [!TIP]
-   > S3 を作成する方法の詳細については、アクセス キー (`<s3-access-key>`) を参照してください[S3 のアクセス キー](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)します。
+   > S3 のアクセス キーを作成する方法の詳細については、次を参照してください。 [S3 のアクセス キー](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)します。
 
 ## <a id="mount"></a> リモートの HDFS の記憶域をマウントします。
 
@@ -93,6 +93,6 @@ mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
 mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか。](big-data-cluster-overview.md)。
