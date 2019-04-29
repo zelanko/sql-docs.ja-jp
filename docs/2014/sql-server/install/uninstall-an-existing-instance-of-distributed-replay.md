@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e288434b771b46323950972ad301b78f8d05c5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988277"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>分散再生の既存のインスタンスのアンインストール
   分散再生コンポーネント (コントローラーまたはクライアント) をアンインストールすると、以下が削除されます。  

@@ -1,5 +1,5 @@
 ---
-title: 計算されるメジャー表現 (テーブル) |Microsoft ドキュメント
+title: 計算メジャー表現 (テーブル) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb14a3114edde51f55a0d540a9ab7c8aa7578de2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019285"
 ---
-# <a name="tables---calculated-measure-representation"></a>テーブルの計算されるメジャー表現
+# <a name="tables---calculated-measure-representation"></a>テーブル - 計算されるメジャー表現
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   計算されるメジャーとは、使用されるたびに評価される名前付き DAX 式です。  
   
 ## <a name="calculated-measure-representation"></a>計算されるメジャー表現  
   
 ### <a name="calculated-measure-in-amo"></a>AMO 内の計算されるメジャー  
- AMO を使用してテーブル モデルの計算されるメジャーを管理する場合、<xref:Microsoft.AnalysisServices.Command> オブジェクトの <xref:Microsoft.AnalysisServices.MdxScript> オブジェクトに定義されているメジャーと、論理的な計算されるメジャー オブジェクトが一対一で対応します。 各**計算されるメジャー**として定義されて、**メジャーの作成**内の式、<xref:Microsoft.AnalysisServices.Command>オブジェクトをセミコロンで区切って指定します。 コレクションに対応しているテーブル モデル内のメジャーを計算すべて**メジャーの作成**内で 1 つのコマンド オブジェクト内の文字列、<xref:Microsoft.AnalysisServices.MdxScript>オブジェクト。 また、計算される各メジャーは、<xref:Microsoft.AnalysisServices.CalculationProperty> と一対一でマップされます。  
+ AMO を使用してテーブル モデルの計算されるメジャーを管理する場合、<xref:Microsoft.AnalysisServices.Command> オブジェクトの <xref:Microsoft.AnalysisServices.MdxScript> オブジェクトに定義されているメジャーと、論理的な計算されるメジャー オブジェクトが一対一で対応します。 各**計算されるメジャー**として定義されます、**メジャーの作成**内の式を<xref:Microsoft.AnalysisServices.Command>オブジェクトし、をセミコロンで区切られます。 すべてコレクションに対応して表形式モデルにメジャーが計算される**CREATE MEASURE**で 1 つのコマンド オブジェクト内で文字列を<xref:Microsoft.AnalysisServices.MdxScript>オブジェクト。 また、計算される各メジャーは、<xref:Microsoft.AnalysisServices.CalculationProperty> と一対一でマップされます。  
   
  次のコード スニペットは、計算されるメジャーの作成方法を示しています。  
   

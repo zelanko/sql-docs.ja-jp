@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011643"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server サービスのインストールの概要
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サービス更新プログラムが適用された、インストール済みの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントに更新プログラムを適用できます。 既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントのバージョン レベルが更新のバージョン レベルより新しい場合、そのコンポーネントは、セットアップ プログラムによって自動的にアップデートから除外されます。 更新サービスを適用する方法の詳細についてを参照してください[SQL Server 2014 サービス更新プログラムのインストール](../../database-engine/install-windows/install-sql-server-servicing-updates.md)します。  
@@ -27,7 +27,7 @@ ms.locfileid: "53369064"
   
 -   既定では、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新のログ ファイルは %program Files % に保存されます\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでは、更新プログラムと元のメディアを統合して、元のメディアと更新プログラムを同時に実行できるようになりました。 詳細については、[SQL Server のインストールで新](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップでは、更新プログラムと元のメディアを統合して、元のメディアと更新プログラムを同時に実行できるようになりました。 詳細については、次を参照してください。 [SQL Server のインストールで新](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)します。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サービス更新プログラムを適用する前に、データのバックアップを検討することをお勧めします。  
   
@@ -88,9 +88,9 @@ ms.locfileid: "53369064"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムの開始  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムをインストールするには、自己解凍形式のパッケージ ファイルを実行します。  
   
- 累積更新プログラム パッケージ (CU):\<SQLServer2014 >-kbxxxxxx-*PPP*.exe  
+ 累積更新プログラム パッケージ (CU):\<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- サービス パック パッケージ (PCU):\<SQLServer2014 >\<SPx > - KBxxxxxx-PPP-LLL.exe  
+ サービス パック パッケージ (PCU):\<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x はサービス パックの番号を表します。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53369064"
   
 -   Lll の文字の省略形、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの言語。英語の場合は LLL は ENU です。  
   
- フェールオーバー クラスターに含まれる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントに更新プログラムを適用するには、フェールオーバー クラスターのインストールに関するセクションを参照してください。 無人モードで更新プログラムのインストールを実行する方法の詳細については、[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を参照してください。  
+ フェールオーバー クラスターに含まれる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントに更新プログラムを適用するには、フェールオーバー クラスターのインストールに関するセクションを参照してください。 無人モードで更新プログラムのインストールを実行する方法の詳細については、次を参照してください。[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
 ####  <a name="Slipstream"></a> 製品の更新プログラム[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インストール  
  製品の更新プログラムは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップの機能です。 セットアップでは、メインの製品と使用可能な更新プログラムが同時にインストールされるように、最新の製品の更新プログラムとメインの製品のインストールを統合できます。 製品の更新プログラムは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Update、Windows Server Update Services (WSUS)、ローカル フォルダー、またはネットワーク共有を検索して、適切な更新プログラムを探します。  セットアップで最新バージョンの適用可能な更新プログラムが検出されると、ダウンロードが実行されて、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ プロセスと統合されます。 製品の更新プログラムは、累積更新プログラム、サービス パック、またはサービス パックと累積更新プログラムに取り込むことができます。 製品の更新プログラム機能は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1 で提供されていたスリップストリーム機能を拡張したものです。  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 516e6a95ba98f1b8d66ddf9f417460ef2a6b7dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028029"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage イベント (ADO)
 **InfoMessage**中に警告が発生するたびにイベントが呼び出される、 **ConnectionEvent**操作。  

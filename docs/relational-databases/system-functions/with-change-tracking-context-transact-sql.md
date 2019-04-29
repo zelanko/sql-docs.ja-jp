@@ -21,11 +21,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 62042b08d455d77855a58aece480a84bc653f808
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865623"
 ---
 # <a name="with-changetrackingcontext-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
  *context*  
  呼び出し元アプリケーションによって提供され、変更追跡情報と共に格納されるコンテキスト情報です。 *コンテキスト*は**varbinary (128)** します。  
   
- 定数または変数を指定できますが、NULL 値は許可されません。  
+ 値は、定数または変数を指定できますが、NULL にすることはできません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、データ変更の変更追跡コンテキストを設定します。  
+ 次の例では、変更の追跡データの変更のコンテキストを設定します。  
   
 ```  
 WITH CHANGE_TRACKING_CONTEXT ( context )  

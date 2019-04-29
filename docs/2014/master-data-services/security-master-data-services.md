@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee6fd4fbf047ecb29dae4f35fe3bbbf5a3f9da61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923198"
 ---
 # <a name="security-master-data-services"></a>セキュリティ (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、セキュリティを使用して、仕事を行うのに必要な特定のマスター データにユーザーがアクセスできるようにすると同時に、利用を許可しないデータにはアクセスできないようにします。  
@@ -50,7 +50,7 @@ ms.locfileid: "52778384"
   
  ![スタイルの派生階層とメンバーのアクセス許可](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "スタイルの派生階層とメンバーの権限")  
   
- 階層を作成する方法については、[明示的階層を作成&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)と[派生階層を作成&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)を参照してください。  
+ 階層を作成する方法については、次を参照してください。[明示的階層を作成&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)と[派生階層を作成&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)します。  
   
  メンバー権限を割り当てる方法については、次を参照してください[階層メンバーの権限を割り当てる&#40;マスター データ サービス。&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   

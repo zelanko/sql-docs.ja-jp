@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733433"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、Microsoft シーケンス クラスター アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -231,7 +231,7 @@ ORDER BY Count(*) DESC
   
  次の表に、NODE_DISTRIBUTION テーブルの結果と、グラフィカル ビューアーに表示される丸められた確率値を示します。  
   
-|Product|サポート (NODE_DISTRIBUTION テーブル)|確率 (NODE_DISTRIBUTION テーブル)|確率 (グラフから)|  
+|製品|サポート (NODE_DISTRIBUTION テーブル)|確率 (NODE_DISTRIBUTION テーブル)|確率 (グラフから)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(表示されません)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  モデル コンテンツのクエリを実行して検出されたパスの一覧を取得する方法、およびシーケンス クラスター モデルのクエリのその他の例については、「 [シーケンス クラスター モデルのクエリの例](clustering-model-query-examples.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft シーケンス クラスタ リング アルゴリズム](microsoft-sequence-clustering-algorithm.md)   
+ [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
  [シーケンス クラスター モデルのクエリの例](clustering-model-query-examples.md)  
   
   

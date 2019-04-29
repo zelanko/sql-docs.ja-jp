@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcb553e6762580c20aa3fc126f2f1576d1d5ff68
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925509"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>統合メンバー ステージング テーブル (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの統合メンバー ステージング テーブル (stg.name_Consolidated) を使用して、統合メンバーを作成、更新、非アクティブ化、および削除します。 このテーブルを使用して、統合メンバーの属性値を更新することも可能です。  

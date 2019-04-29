@@ -1,5 +1,5 @@
 ---
-title: Analysis Services (SSAS - 多次元) 内のパーティションをマージ |Microsoft ドキュメント
+title: Analysis Services (SSAS - 多次元) 内のパーティションをマージ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b488997ae97a54a2755847ad9112047015fb0eb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988624"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services でのパーティションのマージ (SSAS - 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,13 +91,13 @@ ms.locfileid: "34025399"
   
  同様の理由で、名前付きクエリから分割されたデータを取得するパーティションを更新する必要もあります。 結合されたパーティションには、以前に別の名前付きクエリから取得した、結合された結果セットを返す名前付きクエリが必要になります。  
   
-## <a name="partition-storage-considerations-molap"></a>パーティション ストレージの注意事項: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>パーティションのストレージに関する考慮事項:[MOLAP]  
  MOLAP パーティションをマージすると、パーティションの多次元構造に格納されているファクトもマージされます。 これにより、内部的に完全で矛盾のないパーティションが作成されます。 ただし、MOLAP パーティションに格納されるファクトは、ファクト テーブル内のファクトのコピーです。 パーティションに対して処理が行われると、多次元構造内のファクトは削除され (完全と更新のみ)、パーティションのデータ ソースとフィルターの指定に従って、ファクト テーブルからデータがコピーされます。 マージ元パーティションで使用されるファクト テーブルがマージ先パーティションのものと異なる場合、マージ元パーティションのファクト テーブルをマージ先パーティションのファクト テーブルに手動でマージして、結果パーティションが処理されるときにデータの完全なセットを利用できるようにしてください。 これは、2 つのパーティションが、それぞれ異なる名前付きクエリに基づいている場合にも適用されます。  
   
 > [!IMPORTANT]  
 >  マージされた MOLAP パーティションに不完全なファクト テーブルが含まれている場合、パーティションには内部的にマージされたファクト テーブル データのコピーが含まれているので、そのパーティションが処理されるまでは正常に動作します。  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>パーティション ストレージの注意事項: HOLAP パーティションと ROLAP パーティション  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>パーティションのストレージに関する考慮事項:HOLAP パーティションと ROLAP パーティション  
  複数のファクト テーブルを持つ HOLAP パーティションや ROLAP パーティションをマージする場合、ファクト テーブルは自動的にマージされません。 ファクト テーブルを手動でマージしない場合、結果パーティションではマージ先パーティションに関連付けられたファクト テーブルのみを利用できます。 マージ元パーティションに関連付けられたファクトは、結果パーティションのドリル ダウンでは利用できません。また、パーティションが処理されると、集計処理では、利用できないテーブルのデータを集約しなくなります。  
   
 > [!IMPORTANT]  
@@ -114,9 +114,9 @@ ms.locfileid: "34025399"
   
 1.  オブジェクト エクスプローラーで、マージするパーティションが含まれているキューブの **[メジャー グループ]** ノードを展開し、 **[パーティション]** を展開して、マージ操作の対象となるパーティションを右クリックします。 たとえば、年間のファクト データを格納するパーティションに四半期のファクト データを移動する場合は、年間のファクト データが含まれているパーティションを選択します。  
   
-2.  をクリックして**パーティションのマージ**を開くには、**パーティションのマージ\<パーティション名 >**  ダイアログ ボックス。  
+2.  クリックして**パーティションのマージ**を開く、**パーティションのマージ\<パーティション名 >**  ダイアログ ボックス。  
   
-3.  **[基になるパーティション]** で、対象パーティションとマージする、基になる各パーティションの横のチェック ボックスをオンにし、**[OK]** をクリックします。  
+3.  **[基になるパーティション]** で、対象パーティションとマージする、基になる各パーティションの横のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
     > [!NOTE]  
     >  基になるパーティションは、対象パーティションにマージされた直後に削除されます。 マージが完了したら、[パーティション] フォルダーを更新してその内容を更新します。  
@@ -129,12 +129,12 @@ ms.locfileid: "34025399"
  詳細については、「[パーティションのマージ &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [処理の Analysis Services オブジェクト](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [パーティションと &#40; です。Analysis Services - 多次元データと &#41; です。](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [作成し、ローカル パーティション & #40; を管理Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [作成し、管理、リモート パーティションと #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [パーティションの書き戻しを設定します。](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
+ [Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [パーティション &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [ローカル パーティションの作成と管理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [リモート パーティションの作成と管理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [パーティションの書き戻しの設定](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [書き込み許可パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [ディメンションおよびパーティションの文字列ストレージを構成します。](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [ディメンションおよびパーティションの文字列ストレージの構成](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

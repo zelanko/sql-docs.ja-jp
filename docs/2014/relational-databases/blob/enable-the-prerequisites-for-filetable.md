@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920653"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable の前提条件の有効化
   FileTable を作成および使用するための前提条件を有効にする方法について説明します。  
@@ -45,7 +45,7 @@ ms.locfileid: "58538144"
   
  `sp_configure` を呼び出し、FILESTREAM をインスタンス レベルで有効にするには、filestream_access_level オプションを 2 に設定する必要があります。 詳細については、「 [filestream access level サーバー構成オプション](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)」を参照してください。  
   
-###  <a name="firewall"></a> 操作方法：FILESTREAM がファイアウォールを通過できるようにする  
+###  <a name="firewall"></a> 操作方法：FILESTREAM がファイアウォールを通過できるようにします。  
  FILESTREAM がファイアウォールを通過できるようにする方法については、「 [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md)」をご覧ください。  
   
 ##  <a name="filegroup"></a> データベース レベルでの FILESTREAM ファイル グループの指定  
@@ -54,7 +54,7 @@ ms.locfileid: "58538144"
 ##  <a name="BasicsNTAccess"></a> データベース レベルでの非トランザクション アクセスの有効化  
  FileTable は、Windows アプリケーションがトランザクションを必要とすることなく FILESTREAM データに対する Windows ファイル ハンドルを取得することを可能にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているファイルに対するこの非トランザクション アクセスを可能にするには、FileTable を格納するデータベースごとに、データベース レベルで非トランザクション アクセスのレベルを指定する必要があります。  
   
-###  <a name="HowToCheckAccess"></a> 操作方法：データベースで非トランザクション アクセスが有効かどうかを確認する  
+###  <a name="HowToCheckAccess"></a> 操作方法：データベースで非トランザクション アクセスが有効かどうかを確認します。  
  カタログ ビュー [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) に対してクエリを実行し、**non_transacted_access** 列と **non_transacted_access_desc** 列をチェックします。  
   
 ```sql  
@@ -63,7 +63,7 @@ SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc
 GO  
 ```  
   
-###  <a name="HowToNTAccess"></a> 操作方法：データベース レベルでの非トランザクション アクセスの有効化  
+###  <a name="HowToNTAccess"></a> 操作方法：データベース レベルで非トランザクション アクセスを有効にします。  
  使用できる非トランザクション アクセスのレベルは、FULL、READ_ONLY、および OFF です。  
   
  **Transact-SQL を使用して非トランザクション アクセスのレベルを指定する**  
@@ -128,7 +128,7 @@ GO
  **SQL Server Management Studio を使用して、FileTable のディレクトリを指定する**  
  **[データベースのプロパティ]** ダイアログ ボックスの **[オプション]** ページの **[FILESTREAM ディレクトリ名]** ボックスで、ディレクトリ名を指定できます。 このダイアログ ボックスの詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../databases/database-properties-options-page.md)」を参照してください。  
   
-###  <a name="viewnames"></a> 操作方法：インスタンスの既存のディレクトリ名を表示する  
+###  <a name="viewnames"></a> 操作方法：インスタンスの既存のディレクトリ名を表示します。  
  インスタンスの既存のディレクトリ名の一覧を表示するには、[ys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) カタログ ビューに対するクエリを実行し、**filestream_database_directory_name** 列を確認します。  
   
 ```sql  

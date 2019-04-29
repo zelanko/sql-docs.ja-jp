@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982387"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 関数
 **準拠**  
@@ -66,10 +66,10 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_ROWVER:ある SQLBase ROWID または Sybase タイムスタンプ) などのトランザクションによって行の任意の値が更新されたときに、データ ソースによって自動的に更新される場合、指定したテーブルの列または列を返します。  
   
- *カタログ名*  
+ *CatalogName*  
  [入力]テーブルのカタログ名。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") のカタログはありません。 それらのテーブルを表します。 *CatalogName*文字列の検索パターンを含めることはできません。  
   
- SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
+ SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
   
  *NameLength1*  
  [入力]文字の長さ **CatalogName*します。  
@@ -129,7 +129,7 @@ SQLRETURN SQLSpecialColumns(
 |HY097|範囲外の列の型|(DM)、無効な*IdentifierType*値が指定されました。|  
 |HY098|範囲外のスコープの種類|(DM)、無効な*スコープ*値が指定されました。|  
 |HY099|範囲外の null 許容型|(DM)、無効な*Nullable*値が指定されました。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|カタログが指定されていると、ドライバーまたはデータ ソースがカタログをサポートしていません。<br /><br /> スキーマが指定されていると、ドライバーまたはデータ ソース スキーマはサポートしません。<br /><br /> SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|クエリのタイムアウト期間は、要求された結果セットが返されるデータ ソースの前に有効期限が切れました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -138,10 +138,10 @@ SQLRETURN SQLSpecialColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- ときに、 *IdentifierType*引数は、SQL_BEST_ROWID **SQLSpecialColumns**列またはテーブル内の各行を一意に識別する列を返します。 これらの列で常に使用できる、*選択リスト*または**場所**句。 **SQLColumns**テーブルの列でさまざまな情報を返すために使用するは必ずしも返さない、各行を一意に識別する列またはによって行のいずれかの値に自動的に更新される列を更新します。トランザクションです。 たとえば、 **SQLColumns** Oracle の擬似列 ROWID を返さなかった可能性があります。 これは、ため**SQLSpecialColumns**これらの列を返すために使用します。 詳細については、[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)を参照してください。  
+ ときに、 *IdentifierType*引数は、SQL_BEST_ROWID **SQLSpecialColumns**列またはテーブル内の各行を一意に識別する列を返します。 これらの列で常に使用できる、*選択リスト*または**場所**句。 **SQLColumns**テーブルの列でさまざまな情報を返すために使用するは必ずしも返さない、各行を一意に識別する列またはによって行のいずれかの値に自動的に更新される列を更新します。トランザクションです。 たとえば、 **SQLColumns** Oracle の擬似列 ROWID を返さなかった可能性があります。 これは、ため**SQLSpecialColumns**これらの列を返すために使用します。 詳細については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
   
  場合は、テーブルの各行を一意に識別する列が存在しない**SQLSpecialColumns**行の存在しない行セットを返します後続の呼び出し**SQLFetch**または**SQLFetchScroll**。ステートメント SQL_NO_DATA が返されます。  
   
@@ -161,17 +161,17 @@ SQLRETURN SQLSpecialColumns(
   
  COLUMN_NAME 列の実際の長さを確認するアプリケーションを呼び出すことができます**SQLGetInfo** SQL_MAX_COLUMN_NAME_LEN オプションを使用します。  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、8 (PSEUDO_COLUMN) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、8 (PSEUDO_COLUMN) 列を超える追加の列を定義できます。 アプリケーションでは、明示的な序数位置を指定するのではなく、結果セットの末尾からカウント ダウンによって、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
 |スコープ (ODBC 1.0)|1|Smallint|Rowid の実際の範囲。 次の値のいずれかが含まれます。<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> NULL が返されます*IdentifierType* SQL_ROWVER です。 各値については、の説明を参照してください。*スコープ*構文では"、"このセクションで前にします。|  
 |COLUMN_NAME (ODBC 1.0)|2|NULL 以外の Varchar|列名 ドライバーは、名前がない列の空の文字列を返します。|  
-|DATA_TYPE (ODBC 1.0)|3|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 有効な ODBC SQL データ型の一覧は、[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)を参照してください。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
+|DATA_TYPE (ODBC 1.0)|3|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 有効な ODBC SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)します。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。|  
 |TYPE_NAME (ODBC 1.0)|4|NULL 以外の Varchar|データ ソースに依存するデータ型名です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINARY"、または「CHAR FOR BIT DATA ()」。|  
-|COLUMN_SIZE (ODBC 1.0)|5|Integer|データ ソースの列のサイズ。 列のサイズに関する詳細については、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。|  
-|BUFFER_LENGTH 列 (ODBC 1.0)|6|Integer|転送されるデータの長さ (バイト単位)、 **SQLGetData**または**SQLFetch** SQL_C_DEFAULT が指定されている場合に操作します。 数値データは、このサイズは、データ ソースに格納されたデータのサイズよりも異なる場合があります。 この値は、文字またはバイナリ データ、COLUMN_SIZE 列の場合と同じです。 詳細については、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。|  
-|DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|データ ソースの列の 10 進数字。 10 進数字は適用できないデータ型の NULL を返します。 詳細については 10 進数字、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。|  
+|COLUMN_SIZE (ODBC 1.0)|5|Integer|データ ソースの列のサイズ。 列のサイズに関する詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。|  
+|BUFFER_LENGTH 列 (ODBC 1.0)|6|Integer|転送されるデータの長さ (バイト単位)、 **SQLGetData**または**SQLFetch** SQL_C_DEFAULT が指定されている場合に操作します。 数値データは、このサイズは、データ ソースに格納されたデータのサイズよりも異なる場合があります。 この値は、文字またはバイナリ データ、COLUMN_SIZE 列の場合と同じです。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。|  
+|DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|データ ソースの列の 10 進数字。 10 進数字は適用できないデータ型の NULL を返します。 詳細については 10 進数字、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。|  
 |PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|列が Oracle ROWID などの擬似列かどうかを示します。<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**に注意してください。** 最大の相互運用性の擬似列必要がありますいないは引用符で囲むによって返される引用符文字の識別子を持つ**SQLGetInfo**します。|  
   
  アプリケーションは、SQL_BEST_ROWID の値を取得した後、アプリケーションは、定義されたスコープ内でその行をこれらの値を使用できます。 **選択**ステートメントに行または 1 つの行を返すことが保証されます。  
@@ -185,7 +185,7 @@ SQLRETURN SQLSpecialColumns(
  SQL_ROWVER は rowid を使用して、行が再度選択されるときに、特定の行の任意の列が更新されたかどうかを確認する機能を必要とするアプリケーションに適して列型に対して返される列。 たとえば、rowid を使用して行を再度選択した後、アプリケーションは、SQL_ROWVER 列だけをフェッチするものでは、前の値を比較できます。 SQL_ROWVER 列の値は、前の値と異なる場合、アプリケーションは、表示上のデータが変更されたユーザーに警告できます。  
   
 ## <a name="code-example"></a>コード例  
- 同様の関数のコード例では、[SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)を参照してください。  
+ 同様の関数のコード例では、次を参照してください。 [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)します。  
   
 ## <a name="related-functions"></a>関連する関数  
   

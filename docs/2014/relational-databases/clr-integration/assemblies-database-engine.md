@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920780"
 ---
 # <a name="assemblies-database-engine"></a>アセンブリ (データベース エンジン)
   このセクションのトピックでは、アセンブリの理解、設計、および実装に役立つ情報について説明します。  
@@ -28,13 +28,13 @@ ms.locfileid: "48208432"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアセンブリは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 共通言語ランタイムで作成されたマネージド アプリケーション モジュール (.dll ファイル) を参照するオブジェクトです。 アセンブリには、クラス メタデータとマネージド コードが含まれています。 SQL Server のインスタンスにアセンブリをアップロードすることが、次のいずれかのデータベース オブジェクトを作成するための最初の手順になります。  
   
--   CLR 関数。 詳細については、[CLR 関数の作成](../user-defined-functions/create-clr-functions.md)を参照してください。  
+-   CLR 関数。 詳細については、次を参照してください。 [CLR 関数の作成](../user-defined-functions/create-clr-functions.md)です。  
   
--   CLR ストアド プロシージャ。 詳細については、[CLR ストアド プロシージャ](../../database-engine/dev-guide/clr-stored-procedures.md)を参照してください。  
+-   CLR ストアド プロシージャ。 詳細については、次を参照してください。 [CLR ストアド プロシージャ](../../database-engine/dev-guide/clr-stored-procedures.md)します。  
   
--   CLR トリガー。 詳細については、[CLR トリガーを作成する](../triggers/create-clr-triggers.md)を参照してください。  
+-   CLR トリガー。 詳細については、次を参照してください。 [CLR トリガーを作成する](../triggers/create-clr-triggers.md)します。  
   
--   ユーザー定義集計関数。 詳細については、[作成ユーザー定義集計](../user-defined-functions/create-user-defined-aggregates.md)を参照してください。  
+-   ユーザー定義集計関数。 詳細については、次を参照してください。[作成ユーザー定義集計](../user-defined-functions/create-user-defined-aggregates.md)します。  
   
 -   ユーザー定義型。 詳細については、「[ユーザー定義型の使用](../native-client/features/using-user-defined-types.md)」を参照してください。  
   

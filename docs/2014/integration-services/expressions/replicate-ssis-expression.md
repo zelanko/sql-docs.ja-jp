@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 349a100a295ef00b19b2de69214fdd7af8bd2d32
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897351"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (SSIS 式)
   指定された回数だけレプリケートされた文字式を返します。 *times* 引数は整数に評価される必要があります。  

@@ -18,12 +18,12 @@ ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c36dfe992dc5abafa2eea78c72d1336bb33f7dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 136771c5bf691155b4547963fa2b6bd035f3f039
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994231"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,44 +52,33 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@restore_delay =** ] '*restore_delay*'  
- セカンダリ サーバーが指定されたバックアップ ファイルを復元する前に待機する分単位の時間数。 *restore_delay*は**int** NULL にすることはできません。 既定値は 0 です。  
+`[ @restore_delay = ] 'restore_delay'` セカンダリ サーバーが指定されたバックアップ ファイルを復元する前に待機する分単位の時間数。 *restore_delay*は**int** NULL にすることはできません。 既定値は 0 です。  
   
- [  **@restore_all =** ] '*restore_all*'  
- 1 に設定すると、セカンダリ サーバーでは復元ジョブの実行時にすべてのトランザクション ログ バックアップが復元されます。 1 以外に設定すると、セカンダリ サーバーは 1 つのファイルが復元された後で停止します。 *restore_all*は**ビット**NULL にすることはできません。  
+`[ @restore_all = ] 'restore_all'` 場合 1、セカンダリ サーバーに設定するは、復元ジョブを実行すると、すべてのトランザクション ログ バックアップを復元します。 それ以外の場合、1 つのファイルを復元した後を停止します。 *restore_all*は**ビット**NULL にすることはできません。  
   
- [  **@restore_mode =** ] '*restore_mode*'  
- セカンダリ データベースの復元モードを指定します。  
+`[ @restore_mode = ] 'restore_mode'` セカンダリ データベースの復元モード。  
   
  0 = NORECOVERY でログを復元。  
   
- 1 = STANDBY でログを復元。  
+ 1 = STANDBY でログを復元します。  
   
  *復元*は**ビット**NULL にすることはできません。  
   
- [  **@disconnect_users =** ] '*disconnect_users*'  
- 場合 1 をユーザーに設定するは、復元操作が実行されると、セカンダリ データベースから切断されます。 既定 = 0。 *disconnect_users*は**ビット**NULL にすることはできません。  
+`[ @disconnect_users = ] 'disconnect_users'` 場合 1 をユーザーに設定するは、復元操作が実行されると、セカンダリ データベースから切断されます。 既定 = 0。 *disconnect_users*は**ビット**NULL にすることはできません。  
   
- [  **@block_size =** ] '*block_size*'  
- バックアップ デバイスのブロック サイズに使用されるサイズ (バイト単位)。 *block_size*は**int**を既定値は-1。  
+`[ @block_size = ] 'block_size'` サイズ (バイト単位) をバックアップ デバイスのブロック サイズとして使用されます。 *block_size*は**int**を既定値は-1。  
   
- [  **@buffer_count =** ] '*buffer_count*'  
- バックアップまたは復元操作で使用されるバッファーの総数。 *buffer_count*は**int**を既定値は-1。  
+`[ @buffer_count = ] 'buffer_count'` バックアップまたは復元操作で使用されるバッファーの合計数。 *buffer_count*は**int**を既定値は-1。  
   
- [ **@max_transfer_size =** ] '*max_transfer_size*'  
- サイズをバイト単位の最大入力または出力要求によって発行された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップ デバイスにします。 *max_transfersize*は**int** NULL にすることができます。  
+`[ @max_transfer_size = ] 'max_transfer_size'` サイズをバイト単位の最大入力または出力要求によって発行された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バックアップ デバイスにします。 *max_transfersize*は**int** NULL にすることができます。  
   
- [  **@restore_threshold =** ] '*restore_threshold*'  
- 復元操作が始まってから警告が生成されるまでの許容経過時間 (分単位)。 *restore_threshold*は**int** NULL にすることはできません。  
+`[ @restore_threshold = ] 'restore_threshold'` 許容経過時間を分単位の数は、アラートを生成する前に、操作を復元します。 *restore_threshold*は**int** NULL にすることはできません。  
   
- [  **@threshold_alert =** ] '*threshold_alert*'  
- 復元のしきい値を超えたときに生成する警告を指定します。 *threshold_alert*は**int**、既定値 14420 はします。  
+`[ @threshold_alert = ] 'threshold_alert'` 復元のしきい値を超えたときに発生するアラートです。 *threshold_alert*は**int**、既定値 14420 はします。  
   
- [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- アラートがあるかどうかを指定する場合に発生します*restore_threshold*を超過します。 1 = 有効、0 = 無効。 *threshold_alert_enabled*は**ビット**NULL にすることはできません。  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` アラートがあるかどうかを指定する場合に発生します*restore_threshold*を超過します。 1 = 有効になっています。0 = 無効になっています。 *threshold_alert_enabled*は**ビット**NULL にすることはできません。  
   
- [  **@history_retention_period =** ] '*history_retention_period*'  
- 履歴を保持する期間を分単位で指定します。 *history_retention_period*は**int**します。1440 の値は、指定されていない場合に使用されます。  
+`[ @history_retention_period = ] 'history_retention_period'` 分の履歴を保持する時間の長さです。 *history_retention_period*は**int**します。1440 の値が指定されていない場合適用されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

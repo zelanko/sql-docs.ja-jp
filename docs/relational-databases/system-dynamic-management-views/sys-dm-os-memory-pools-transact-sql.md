@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0483d616a8e95662b7501b1d5de74abd6ad3cfef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013294"
 ---
 # <a name="sysdmosmemorypools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47672883"
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|メモリ プールを表すエントリのメモリ アドレス。 NULL 値は許可されません。|  
 |**pool_id**|**int**|プールのセット内にある特定プールの ID。 NULL 値は許可されません。|  
-|**type**|**nvarchar(60)**|オブジェクト プールの種類。 NULL 値は許可されません。 詳細については、[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)を参照してください。|  
+|**type**|**nvarchar(60)**|オブジェクト プールの種類。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)します。|  
 |**name**|**nvarchar (256)**|システムによって割り当てられた、メモリ オブジェクトの名前。 NULL 値は許可されません。|  
 |**max_free_entries_count**|**bigint**|プールに含めることができる空きエントリの最大数。 NULL 値は許可されません。|  
 |**free_entries_count**|**bigint**|現在プール内にある空きエントリ数。 NULL 値は許可されません。|  

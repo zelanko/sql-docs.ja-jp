@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a47d893aa1020112290c31c7e6b645a29aaccb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733332"
 ---
 # <a name="mining-model-properties"></a>マイニング モデルのプロパティ
   マイニング モデルには、次の種類のプロパティがあります。  
@@ -44,7 +44,7 @@ ms.locfileid: "48171382"
 |--------------|-----------------|  
 |**アルゴリズム**|マイニング モデルのアルゴリズムの種類を設定します。|  
 |**AlgorithmParameters**|アルゴリズムの各種類で使用可能なアルゴリズム パラメーターの値を設定します。|  
-|**Assert**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
+|**[フィルター]**|マイニング モデルのトレーニングとテストに使用するデータに適用するフィルターを設定します。 フィルター定義はモデルと共に格納され、予測クエリの作成時やモデル精度のテスト時に必要に応じて使用できます。<br /><br /> モデルのトレーニング時には、モデルのフィルターは省略できません。|  
 |**名前**|マイニング モデルの名前を設定します。|  
 |**AllowDrillThrough**|マイニング モデルでドリルスルーを有効にするかどうかを指定します。|  
   
@@ -61,11 +61,11 @@ ms.locfileid: "48171382"
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル列](mining-model-columns.md)   
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)   
  [データ マイニング ツール](data-mining-tools.md)   
- [リレーショナル マイニング構造を作成します。](create-a-relational-mining-structure.md)   
+ [リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)   
  [モデル列の別名の作成](create-an-alias-for-a-model-column.md)  
   
   

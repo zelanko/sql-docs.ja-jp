@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d9e2838e2ba3cfcb713c0353b89054ca549e4e5c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923571"
 ---
 # <a name="model-object-permissions-master-data-services"></a>モデル オブジェクト権限 (Master Data Services)
   モデル オブジェクト権限は必須です。 これにより、UI の **[エクスプローラー]** 機能領域でユーザーがアクセスできる属性が決まります。  
@@ -39,7 +39,7 @@ ms.locfileid: "52799094"
 ## <a name="see-also"></a>参照  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [モデル権限 (マスター データ サービス)](../../2014/master-data-services/model-permissions-master-data-services.md)   
- [機能領域アクセス許可 (マスター データ サービス)](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
+ [機能領域権限 (マスター データ サービス)](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
  [階層メンバーの権限 (マスター データ サービス)](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [権限の決定方法 (マスター データ サービス)](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834377"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>[データ ビューアーの構成] ([縦棒グラフ] タブ)
   **[データ ビューアーの構成]** ダイアログ ボックスの **[縦棒グラフ]** タブを使用すると、グラフにバーとして表示する列を指定できます。 バーの数は列内にある個別のデータ値の数を示し、バーの高さは各値のインスタンス数を示します。 グラフには、1 つのバッファーの内容のみが反映されます。  

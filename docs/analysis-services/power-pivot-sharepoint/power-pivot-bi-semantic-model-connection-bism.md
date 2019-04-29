@@ -1,5 +1,5 @@
 ---
-title: Power Pivot BI セマンティック モデル接続 (.bism) |Microsoft ドキュメント
+title: Power Pivot BI セマンティック モデル接続 (.bism) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8841a67a13db4321618c82f3b1e830988dce9a35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960250"
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Power Pivot BI セマンティック モデル接続 (.bism)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34024429"
 ##  <a name="bkmk_prereq"></a> サポートされるデータベース  
  BI セマンティック モデル接続は、テーブル モデル データを参照します。 このデータには、次の 3 つのソースがあります。  
   
--   表形式サーバー モードのスタンドアロン Analysis Services インスタンスで実行されている表形式モデル データベース。 スタンドアロン Analysis Services インスタンスは、ファーム外部に配置されます。 ファーム外部のデータ ソースにアクセスするには、追加の権限が必要です。追加の権限については、「 [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)」を参照してください。  
+-   表形式サーバー モードのスタンドアロン Analysis Services インスタンスで実行されている表形式モデル データベース。 スタンドアロン Analysis Services インスタンスは、ファーム外部に配置されます。 ファーム外部のデータ ソースにアクセスするには、このトピックの「について、追加の権限が必要です。[テーブル モデル データベースへの BI セマンティック モデル接続を作成する](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)します。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック。 Excel ブックに埋め込まれた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データベースが、スタンドアロン Analysis Services 表形式モード サーバーで実行されるテーブル モデル データベースに相当します。 既に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel と [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を使用している場合は、SharePoint ライブラリ内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを参照する BI セマンティック モデル接続を定義し、既存の [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] データを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] レポートを作成できます。  SQL Server 2008 R2 または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] バージョンの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成されたブックを使用できます。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34024429"
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>BI セマンティック接続の接続シーケンスについて  
  このセクションでは、さまざまなクライアント アプリケーション (Excel デスクトップ アプリケーション、SharePoint の Power View レポート クライアントなど) と SharePoint ファーム内または外のテーブル モデル データベースとの接続動作について説明します。  
   
- テーブル モデル データベースへのすべての接続は、データを要求しているユーザーの資格情報を使用して作成されます。 ただし、その接続のしくみは、接続がファーム内接続、シングルホップ接続、ダブルホップ接続のいずれであるかと、Kerberos が有効かどうかによって異なります。 SharePoint とバックエンド データ ソースとの認証接続の詳細については、「 [ダブルホップ認証: NTLM では失敗し、Kerberos では成功する理由](http://go.microsoft.com/fwlink/?LinkId=237137)」を参照してください。  
+ テーブル モデル データベースへのすべての接続は、データを要求しているユーザーの資格情報を使用して作成されます。 ただし、その接続のしくみは、接続がファーム内接続、シングルホップ接続、ダブルホップ接続のいずれであるかと、Kerberos が有効かどうかによって異なります。 SharePoint とバックエンドのデータ ソース間で認証された接続の詳細については、次を参照してください。[ダブルホップ認証。NTLM では失敗し、kerberos 理由](http://go.microsoft.com/fwlink/?LinkId=237137)します。  
   
  **Excel からネットワーク上の表形式データへの接続**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34024429"
   
  次の図は、この接続シーケンスを示しています。 .bism 接続の要求で始まり、クライアントに接続情報がダウンロードされて、最後にデータベースへのシングルホップ接続が行われます。 接続は、Analysis Services データベースに対する読み取り権限を持つ Excel ユーザーの Windows 資格情報を使用して作成されます。 シングルホップであるため、Kerberos が有効になっていても、このシナリオでは必要とされません。  
   
- ![Excel からテーブル モデル データベースへの接続](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-1.gif "Excel からテーブル モデル データベースへの接続")  
+ ![Excel から表形式モデル データベースへの接続](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-1.gif "Excel から表形式モデル データベースへの接続")  
   
  **Power View からネットワーク上の表形式データへの接続**  
   

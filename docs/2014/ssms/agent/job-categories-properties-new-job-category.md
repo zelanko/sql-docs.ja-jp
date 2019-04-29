@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936992"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>ジョブ カテゴリのプロパティ: [新しいジョブ カテゴリ]
   1 つのジョブ カテゴリまたはすべてのジョブ カテゴリのジョブを一覧表示し、新しいジョブ カテゴリを追加できます。  

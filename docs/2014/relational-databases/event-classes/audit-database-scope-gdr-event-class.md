@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a109468616cb414fa2a4b3769af37626ff42ca85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938951"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR イベント クラス
    **Audit Database Scope GDR** イベント クラスは、データベースに対する権限の許可などのデータベース限定の操作時に、ステートメント権限に対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーが GRANT、REVOKE、または DENY を実行するたびに発生します。  

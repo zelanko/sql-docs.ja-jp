@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7668cf38f01f049b95423547430e1027a4ab6090
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890418"
 ---
 # <a name="message-queue-task-editor-general-page"></a>[メッセージ キュー タスク エディター] ([全般] ページ)
   **[メッセージ キュー タスク エディター]** の **[全般]** ページを使用すると、メッセージ キュー タスクの名前と説明を設定したり、メッセージの形式を指定したり、タスクでメッセージを送受信できるかどうかを指定したりできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "58375860"
  **[MSMQConnection]**  
  既存の MSMQ 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして、新しい接続マネージャーを作成します。  
   
- **関連トピック:** [MSMQ 接続マネージャー](connection-manager/msmq-connection-manager.md)、 [MSMQ 接続マネージャー エディター](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **関連トピック:** [MSMQ 接続マネージャー](connection-manager/msmq-connection-manager.md)、[MSMQ 接続マネージャー エディター](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **メッセージ**  
  メッセージ キュー タスクでメッセージを送信するのか、受信するのかを指定します。 **[メッセージの送信]** を選択すると、ダイアログ ボックスの左側のペインに [送信] ページが表示されます。 **[メッセージの受信]** を選択すると、[受信] ページが表示されます。 既定では、 **[メッセージの送信]** に設定されています。  

@@ -22,32 +22,32 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998005"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  リソースを待機しているタスクの待機キューに関する情報を返します。  
+  いくつかのリソースで待機しているタスクの待機キューに関する情報を返します。  
   
 > [!NOTE]  
 >  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_waiting_tasks**します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**waiting_task_address**|**varbinary(8)**|待機中のタスクのアドレス。|  
+|**waiting_task_address**|**varbinary(8)**|待機中のタスクのアドレスです。|  
 |**session_id**|**smallint**|タスクに関連付けられているセッションの ID。|  
 |**exec_context_id**|**int**|タスクに関連付けられている実行コンテキストの ID。|  
-|**wait_duration_ms**|**bigint**|この待機の種類における総待機時間 (ミリ秒単位)。 この時間には**signal_wait_time**します。|  
+|**wait_duration_ms**|**bigint**|合計待機時間 (ミリ秒単位)、この待機の種類。 この時間には**signal_wait_time**します。|  
 |**wait_type**|**nvarchar(60)**|待機の種類の名前。|  
 |**resource_address**|**varbinary(8)**|タスクが待機しているリソースのアドレス。|  
-|**blocking_task_address**|**varbinary(8)**|リソースを現在保持しているタスク。|  
-|**blocking_session_id**|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションが所有しています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を特定できませんでした。|  
-|**blocking_exec_context_id**|**int**|タスクをブロックしている実行コンテキストの ID。|  
-|**resource_description**|**nvarchar(3072)**|使用されているリソースの説明。 詳細については、以下の説明を参照してください。|  
+|**blocking_task_address**|**varbinary(8)**|このリソースが現在保持しているタスク|  
+|**blocking_session_id**|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 ブロック = 遅延復旧トランザクションが所有するリソースです。<br /><br /> -4 セッション ID を = ブロックしているラッチの所有者が指定されていません内部ラッチの状態遷移が発生したためです。|  
+|**blocking_exec_context_id**|**int**|ブロックしているタスクの実行コンテキストの ID です。|  
+|**resource_description**|**nvarchar(3072)**|消費されるリソースの説明です。 詳細については、以下の説明を参照してください。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="resourcedescription-column"></a>resource_description 列  
@@ -59,7 +59,7 @@ ms.locfileid: "47629520"
   
  **並列クエリ リソース所有者:**  
   
--   exchangeEvent id = {0} ポート |パイプ}\<16 進アドレス > WaitType =\<exchange 待機の種類 > ノード =\<exchange >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
  **Exchange-wait-type:**  
   
@@ -107,7 +107,7 @@ ms.locfileid: "47629520"
   
      **\<モード > することができます。**  
   
-     Sch-S、Sch-M、S、U、X、IS、IU、IX、SIU、SIX、UIX、BU、RangeS-S、RangeS-U、RangeI-N、RangeI-S、RangeI-U、RangeI-X、RangeX-、RangeX-U、RangeX-X  
+     SCH-S、Sch M、S、U、X、IS、IU、IX、SIU、6、UIX、BU、範囲の範囲 U、RangeI N、RangeI S、RangeI、U、X、RangeX、RangeI、RangeX U、RangeX X  
   
  **外部リソースの所有者:**  
   
