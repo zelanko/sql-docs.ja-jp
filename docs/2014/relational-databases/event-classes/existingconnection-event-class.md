@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023398"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection イベント クラス
   ExistingConnection イベント クラスは、トレースが開始されたときの既存のユーザー接続のプロパティを示します。 サーバーでは、既存のユーザー接続ごとに 1 つの ExistingConnection イベントを起動します。  

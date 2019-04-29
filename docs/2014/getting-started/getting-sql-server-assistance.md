@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838005"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server の参考資料の入手
   [!INCLUDE[msCoName](../includes/msconame-md.md)] に関して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が提供している主な情報ソースは次の 3 つです。  
@@ -67,7 +67,7 @@ ms.locfileid: "53355113"
   
 -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] オンライン ブックのコピーが、インターネット上の MSDN ライブラリと TechNet ライブラリの両方で公開されています。 このような [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックのコピーのトピックには、他のユーザーからの追加情報やコード例など、コミュニティからのコメントが含まれています。 MSDN ライブラリのコピーを表示することができます、 [SQL Server 2014 オンライン ブックの「](../2014-toc/index.md)します。  
   
--   ヘルプ ライブラリ マネージャーを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックをローカル コンピューターにインストールできます。 詳細については、[の追加と SQL Server の製品ドキュメントを削除](../2014-toc/books-online-for-sql-server-2014.md)を参照してください。  
+-   ヘルプ ライブラリ マネージャーを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックをローカル コンピューターにインストールできます。 詳細については、次を参照してください。[の追加と SQL Server の製品ドキュメントを削除](../2014-toc/books-online-for-sql-server-2014.md)します。  
   
  MSDN ライブラリの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックのコピーと、ヘルプ ライブラリ マネージャーで利用できるオンライン ブック ファイルは共に、[!INCLUDE[msCoName](../includes/msconame-md.md)] が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックへの更新を公開した時点で更新されます。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53355113"
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|データ ストレージおよびビジネス インテリジェンス ツールとしての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の評価に関する発売前情報を提供します。|  
 |[マイクロソフト サポート技術情報](https://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サポートで作成された [!INCLUDE[msCoName](../includes/msconame-md.md)] 記事を検索できるリポジトリを提供します。|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品には、各リリースに利用できるサポート期間を定めたサポート ライフサイクルがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] サポートが、[!INCLUDE[msCoName](../includes/msconame-md.md)] サポート ライフサイクルを定めたページを管理しています。 このページには、[!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のサポートが利用可能かどうかを指定した別のページへのリンクが含まれています。 詳細については、[マイクロソフト サポート ライフ サイクル](https://go.microsoft.com/fwlink/?LinkId=98306)を参照してください。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 製品には、各リリースに利用できるサポート期間を定めたサポート ライフサイクルがあります。 [!INCLUDE[msCoName](../includes/msconame-md.md)] サポートが、[!INCLUDE[msCoName](../includes/msconame-md.md)] サポート ライフサイクルを定めたページを管理しています。 このページには、[!INCLUDE[msCoName](../includes/msconame-md.md)] 製品のサポートが利用可能かどうかを指定した別のページへのリンクが含まれています。 詳細については、次を参照してください。[マイクロソフト サポート ライフ サイクル](https://go.microsoft.com/fwlink/?LinkId=98306)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server の製品ドキュメントを使用します。](../2014-toc/books-online-for-sql-server-2014.md)  

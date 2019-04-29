@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960172"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 |値|説明|  
 |-----------|-----------------|  
 |**0**|使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]としてこのストアド プロシージャで指定されたログインを使用して認証*ログイン*と*パスワード*します。<br /><br /> 注:以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このオプションが動的なリモート プロシージャ コール (RPC) を指定するために使用します。|  
-|**1**|セキュリティ コンテキストを使用して ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証または Windows 認証) のサブスクライバーで、変更を行ったユーザー。<br /><br /> 注:パブリッシャー側でも、十分な権限を持つこのアカウントが必要です。 Windows 認証を使用する場合は、セキュリティ アカウントの委任をサポートする必要があります。|  
+|**1**|セキュリティ コンテキストを使用して ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証または Windows 認証) のサブスクライバーで、変更を行ったユーザー。<br /><br /> 注:このアカウントは、十分な特権でパブリッシャーに存在する必要がありますも。 Windows 認証を使用する場合は、セキュリティ アカウントの委任をサポートする必要があります。|  
 |**2**|使用して作成、既存のユーザー定義リンク サーバー ログイン**sp_link_publication**します。|  
   
 `[ @login = ] 'login'` ログインです。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターである必要があるときに指定された*security_mode*は**0**します。  

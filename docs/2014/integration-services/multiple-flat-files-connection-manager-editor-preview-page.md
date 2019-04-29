@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890582"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>[複数フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ページを使用すると、最初に選択したソース ファイルの内容をユーザーの定義に従って列に分割して表示できます。  

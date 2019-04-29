@@ -24,24 +24,24 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013478"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase データ管理で使用されるノードに関する情報を保持します。 これには、ノードごとに 1 行が一覧表示します。  
+  PolyBase データ管理で使用されるノードに関する情報を保持します。 ノードごとに 1 行が一覧表示します。  
   
  この DMV を使用して、そのロール、名と IP アドレスを使用して、スケール アウト クラスターのすべてのノードの一覧を参照してください。  
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**int**|ノードに関連付けられている一意の数値 id です。 このビューのキーです。|種類に関係なく、スケール アウト クラスター全体にわたって一意です。|  
+|compute_node_id|**int**|ノードに関連付けられている一意の数値 id。 このビューのキー。|種類に関係なく、スケール アウト クラスター全体にわたって一意です。|  
 |type|**nvarchar(32)**|ノードの型。|' COMPUTE'、'ヘッド'|  
-|NAME|**nvarchar(32)**|ノードの論理名です。|適切な長さの任意の文字列。|  
+|NAME|**nvarchar(32)**|ノードの論理名です。|適切な長さの文字列は任意です。|  
 |address|**nvarchar(32)**|このノードの P アドレスです。|IP アドレスの範囲|  
   
 ## <a name="see-also"></a>参照  

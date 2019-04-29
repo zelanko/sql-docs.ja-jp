@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851606"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 関数
 **準拠**  
@@ -54,10 +54,10 @@ SQLRETURN SQLStatistics(
  *StatementHandle*  
  [入力]ステートメント ハンドルです。  
   
- *カタログ名*  
+ *CatalogName*  
  [入力]カタログの名前。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") それらのテーブルのカタログがないことを示します。 *CatalogName*文字列の検索パターンを含めることはできません。  
   
- SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
+ SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
   
  *NameLength1*  
  [入力]文字の長さ **CatalogName*します。  
@@ -110,7 +110,7 @@ SQLRETURN SQLStatistics(
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 名の長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。<br /><br /> 名の長の引数のいずれかの値には、対応する名前の最大長の値を超えています。|  
 |HY100|範囲外の一意性オプションの種類|(DM)、無効な*Unique*値が指定されました。|  
 |HY101|範囲外の正確性オプションの種類|(DM)、無効な*占有*値が指定されました。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|カタログが指定されていると、ドライバーまたはデータ ソースがカタログをサポートしていません。<br /><br /> スキーマが指定されていると、ドライバーまたはデータ ソース スキーマはサポートしません。<br /><br /> SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|クエリのタイムアウト期間は、要求された結果セットが返されるデータ ソースの前に有効期限が切れました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -119,12 +119,12 @@ SQLRETURN SQLStatistics(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **SQLStatistics** NON_UNIQUE、型、INDEX_QUALIFIER、INDEX_NAME、および ORDINAL_POSITION 順に並べ、標準的な結果セットとして 1 つのテーブルに関する情報を返します。 結果セットは、統計情報 (結果セットのカーディナリティおよびページの列) 内のテーブルの各インデックスについての情報を結合します。 この情報の用途については、[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)を参照してください。  
+ **SQLStatistics** NON_UNIQUE、型、INDEX_QUALIFIER、INDEX_NAME、および ORDINAL_POSITION 順に並べ、標準的な結果セットとして 1 つのテーブルに関する情報を返します。 結果セットは、統計情報 (結果セットのカーディナリティおよびページの列) 内のテーブルの各インデックスについての情報を結合します。 この情報の用途については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
   
  アプリケーションが呼び出すことができますを TABLE_CAT、TABLE_SCHEM、TABLE_NAME、COLUMN_NAME、列の実際の長さを判断する**SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、SQL_MAX_TABLE_NAME_LEN、および SQL_MAX_COLUMN_NAME_LEN オプション。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
   
  次の列が ODBC 3 の名前が変更された *.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
   
@@ -135,7 +135,7 @@ SQLRETURN SQLStatistics(
 |SEQ_IN_INDEX|ORDINAL_POSITION|  
 |COLLATION|ASC_OR_DESC|  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、列 (FILTER_CONDITION) 13 を超える追加の列を定義できます。 アプリケーションでは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンして、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、列 (FILTER_CONDITION) 13 を超える追加の列を定義できます。 アプリケーションでは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンして、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  
@@ -156,7 +156,7 @@ SQLRETURN SQLStatistics(
  結果セット内の行は、テーブルに対応している場合、ドライバーは種類 SQL_TABLE_STAT を設定し、NON_UNIQUE、INDEX_QUALIFIER、INDEX_NAME、ORDINAL_POSITION、COLUMN_NAME、および ASC_OR_DESC を NULL に設定します。 ページのカーディナリティや利用できない場合、データ ソースから、ドライバーはそれらを NULL に設定します。  
   
 ## <a name="code-example"></a>コード例  
- 同様の関数のコード例では、[SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)を参照してください。  
+ 同様の関数のコード例では、次を参照してください。 [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)します。  
   
 ## <a name="related-functions"></a>関連する関数  
   

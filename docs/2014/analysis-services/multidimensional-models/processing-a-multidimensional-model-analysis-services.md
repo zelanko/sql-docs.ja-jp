@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736919"
 ---
 # <a name="multidimensional-model-object-processing"></a>多次元モデルのオブジェクト処理
   "処理" とは、Analysis Services がリレーショナル データ ソースから多次元モデルにデータを読み込む 1 つまたは一連のステップです。 MOLAP ストレージを使用するオブジェクトの場合、データはディスクのデータベース ファイル フォルダーに保存されます。 ROLAP ストレージの場合、処理は要求に応じて、オブジェクトに対する MDX クエリへの応答として発生します。 ROLAP ストレージを使用するオブジェクトの場合の処理とは、クエリ結果を返す前にキャッシュを更新する操作のことを指します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48173322"
   
 ##  <a name="bkmk_prereq"></a> 前提条件  
   
--   処理を行うには、Analysis Services のインスタンスに対する管理権限が必要です。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から対話形式で処理を行う場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのサーバー管理者ロールのメンバーである必要があります。 たとえば、SQL Server エージェントでスケジュールを設定した SSIS パッケージを使用するなど、自動的に実行される処理の場合は、パッケージの実行に使用するアカウントがサーバー管理者ロールのメンバーである必要があります。 管理者のアクセス許可の設定の詳細については、[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)を参照してください。  
+-   処理を行うには、Analysis Services のインスタンスに対する管理権限が必要です。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から対話形式で処理を行う場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのサーバー管理者ロールのメンバーである必要があります。 たとえば、SQL Server エージェントでスケジュールを設定した SSIS パッケージを使用するなど、自動的に実行される処理の場合は、パッケージの実行に使用するアカウントがサーバー管理者ロールのメンバーである必要があります。 管理者のアクセス許可の設定の詳細については、次を参照してください。[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)します。  
   
 -   データの取得に使用するアカウントは、データ ソース オブジェクトで指定されます。Windows 認証を使用する場合は権限借用オプションで指定され、データベース認証を使用する場合は接続文字列のユーザー名で指定されます。 このアカウントには、モデルで使用するリレーショナル データ ソースに対する読み取り権限が必要です。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48173322"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でオブジェクトを処理する場合は、処理オプションを選択するか、適切な種類の処理を決定する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を有効にすることができます。 使用可能な処理方法はオブジェクトごとに異なり、オブジェクトの種類に基づいています。 また、使用可能な方法は、オブジェクトの最後の処理後にオブジェクトに対して行われた変更に基づいています。 処理方法を自動的に選択する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の機能を有効にすると、オブジェクトを完全処理状態に最短時間で戻す方法が使用されます。 詳細については、「[Processing Options and Settings (Analysis Services)](processing-options-and-settings-analysis-services.md)」(処理オプションと設定 (Analysis Services)) を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [データベース オブジェクト&#40;Analysis Services - 多次元データ&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [論理アーキテクチャ (Analysis Services - 多次元データ)](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [データベース オブジェクト (Analysis Services - 多次元データ)](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

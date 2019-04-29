@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844173"
 ---
 # <a name="query-options-execution-advanced-page"></a>[クエリ オプション] の [実行] ([詳細設定] ページ)
   **SET** ステートメントを使用する際には、さまざまなオプションを指定できます。 このページを使用して **set** オプションを指定し、Microsoft SQL Server クエリを実行します。 各オプションの詳細については、SQL Server オンライン ブックを参照してください。  

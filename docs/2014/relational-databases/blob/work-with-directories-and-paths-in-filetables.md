@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920025"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
   FileTable 内でファイルが格納されるディレクトリ構造について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "58536504"
 |FileTable 内のファイルまたはディレクトリの絶対 UNC パスまたは相対 UNC パスを取得する。|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |パスを指定して、FileTable 内の指定されたファイルまたはディレクトリのパス ロケーター ID 値を取得する。|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 操作方法：相対パスを使用した移植可能なコードの実現  
+##  <a name="BestPracticeRelativePaths"></a> 操作方法：移植可能なコードの相対パスを使用します。  
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、以下の例に示すように [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 関数および [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 関数を併用して、実行時にファイルの完全なパスを取得します。 既定では、`GetFileNamespacePath` 関数はデータベースのルート パスにあるファイルの相対パスを返します。  
   
 ```sql  

@@ -20,13 +20,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956169"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>チュートリアル:ポリシー ベースの管理を使用して、ベスト プラクティスの評価
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>チュートリアル:ポリシー ベースの管理を使用したベスト プラクティスの評価
   「ポリシー ベースの管理を使用したベスト プラクティスの評価」チュートリアルへようこそ。 このチュートリアルは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] について理解しており、ポリシー ベースの管理を初めて使用するユーザーを対象としています。 ポリシー ベースの管理は、サイト管理の基準を適用するために使用できるポリシーを定義するためのシステムです。 ポリシー ベースの管理には一連のベスト プラクティス ポリシーが含まれており、これらを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを分析し、インスタンスがベスト プラクティスのガイドラインと推奨事項に適合しているかどうかを判断できます。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  

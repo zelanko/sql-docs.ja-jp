@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fc89a5677cd412a75acc8c75d0d57f38291f6c30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922873"
 ---
 # <a name="validation-statuses-master-data-services"></a>検証状態 (マスター データ サービス)
   **[バージョンの検証]** ページの **[バージョン管理]** 機能領域に表示される状態は次のとおりです。  

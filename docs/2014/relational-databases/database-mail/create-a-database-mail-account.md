@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917729"
 ---
 # <a name="create-a-database-mail-account"></a>データベース メール アカウントの作成
   データベース メール アカウントの作成には、 **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
   
 -   **作業を開始する準備:**[前提条件](#Prerequisites)  
   
--   **使用して、データベース メール アカウントを作成します。**[データベース メール構成ウィザード](#SSMSProcedure)、 [TRANSACT-SQL](#TsqlProcedure)  
+-   **使用して、データベース メール アカウントを作成します。**[データベース メール構成ウィザード](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 -   **補足情報:**[データベース メールを構成する次の手順](#FollowUp)  
   
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> フォローしてください：データベース メールを構成する次の手順  
+##  <a name="FollowUp"></a>補足情報: データベース メールを構成する次の手順  
   
 -   [データベース メール プロファイルの作成](create-a-database-mail-profile.md)  
   

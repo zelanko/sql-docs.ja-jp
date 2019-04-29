@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8a52df417f41e2ba7a71152ededc0d2846f43956
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924307"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の管理者は、列内の値を特定の一連の値に制約する場合に、ドメイン ベースの属性を作成できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "52798085"
   
 ### <a name="to-perform-this-procedure"></a>この手順を実行するには  
   
-1.  Excel で、制約する列 (属性) を含むエンティティを読み込みます。 詳細については、[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)を参照してください。  
+1.  Excel で、制約する列 (属性) を含むエンティティを読み込みます。 詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
   
 2.  制約する列の任意のセルをクリックします。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52798085"
   
 ## <a name="next-steps"></a>次の手順  
   
--   制約された一覧の値を追加および削除するには、その属性が基づいているエンティティを読み込みます。 エンティティの読み込みの詳細については、[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)を参照してください。  
+-   制約された一覧の値を追加および削除するには、その属性が基づいているエンティティを読み込みます。 エンティティの読み込みの詳細については、次を参照してください。[を Excel に MDS からのデータの読み込み](export-data-to-excel-from-master-data-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ドメインベースの属性 (マスター データ サービス)](../domain-based-attributes-master-data-services.md)   

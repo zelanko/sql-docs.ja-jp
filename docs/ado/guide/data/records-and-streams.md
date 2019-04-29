@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e26930db786b986fd1f4ba633e2cc5953f3df3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910455"
 ---
 # <a name="records-and-streams"></a>レコードとストリーム
 ADO は、現在、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとしてのリレーショナル データベースなどのデータ ソース内の情報にアクセスする主要な手段です。 ただし、一部のプロバイダーのサポート、[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[Stream](../../../ado/reference/ado-api/stream-object-ado.md)のプロバイダーからのデータを操作できる代替または補完的なオブジェクトとしてのオブジェクト。 詳細についての**レコード**動作、プロバイダーのドキュメントを参照してください。  
@@ -39,11 +39,11 @@ ADO は、現在、[レコード セット](../../../ado/reference/ado-api/recor
 ## <a name="streams"></a>ストリーム  
  **Stream**オブジェクトは、読み取り、書き込み、およびバイトのストリームを管理する手段を提供します。 このバイト ストリームは、テキストまたはバイナリがあり、システム リソースによってのみサイズに制限されます。 通常、ADO **Stream**オブジェクトは、次の目的で使用します。  
   
--   データを格納する、 **Recordset** XML 形式で保存します。 これらの XML ストリームから保存**レコード セット**s は、新しいを開くときに、ソースとして使用できます**レコード セット**します。 詳細については、[ストリームと永続性](../../../ado/guide/data/streams-and-persistence.md)を参照してください。  
+-   データを格納する、 **Recordset** XML 形式で保存します。 これらの XML ストリームから保存**レコード セット**s は、新しいを開くときに、ソースとして使用できます**レコード セット**します。 詳細については、次を参照してください。[ストリームと永続性](../../../ado/guide/data/streams-and-persistence.md)します。  
   
 -   含まれている[CommandStreams](../../../ado/reference/ado-api/commandstream-property-ado.md)の代わりに、プロバイダーに対して実行される[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)します。 たとえば、XML アップデート グラムは、SQL Server 用のプロセス Microsoft OLE DB プロバイダーに対してコマンドのソースとして使用できます。  
   
--   以外の形式で、プロバイダーから結果を受信する、 **Recordset**、Microsoft OLE DB Provider for SQL Server から XML の結果などです。 詳細については、[をストリームに結果セットを取得する](../../../ado/guide/data/retrieving-resultsets-into-streams.md)を参照してください。  
+-   以外の形式で、プロバイダーから結果を受信する、 **Recordset**、Microsoft OLE DB Provider for SQL Server から XML の結果などです。 詳細については、次を参照してください。[をストリームに結果セットを取得する](../../../ado/guide/data/retrieving-resultsets-into-streams.md)します。  
   
 -   テキストまたはファイルまたは for Internet Publishing Microsoft OLE DB プロバイダーなどのプロバイダーで使用して通常のメッセージを構成するバイトを格納するには このように使用の詳細については**Stream** 、オブジェクトを参照してください[for Internet Publishing ADO を使用する](../../../ado/guide/data/using-ado-for-internet-publishing.md)します。  
   

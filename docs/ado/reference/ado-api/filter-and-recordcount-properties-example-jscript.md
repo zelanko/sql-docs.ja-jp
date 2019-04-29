@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028096"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter および RecordCount プロパティの例 (JScript)
 この例を開いて、**レコード セット**Northwind データベースおよび、使用の企業のテーブルで、[フィルター](../../../ado/reference/ado-api/filter-property.md) CompanyName フィールドが文字で始まるこれらの場所に表示されているレコードを制限するプロパティD. 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**貼り付けて filterjs.asp という名前**します。  

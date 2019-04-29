@@ -1,5 +1,5 @@
 ---
-title: '手順 6: 変更は、サーバー (RDS チュートリアル) に送信されます |Microsoft Docs'
+title: 手順 6:変更 (RDS チュートリアル) サーバーに送信されます |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bfeb9ad607fc35c055e025fcc67435323d3143e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955719"
 ---
-# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>手順 6: 変更がサーバーに送信される (RDS チュートリアル)
+# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>手順 6:変更がサーバーに送信される (RDS チュートリアル)
 場合、 **Recordset**オブジェクトが編集、変更 (つまり、追加、変更、または削除された行) をサーバーに送信できます。  
   
 > [!NOTE]

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6367e846f3b542101db5c4328cd99e1a16f0416
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898870"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>[DQS クレンジング変換エディター] ダイアログ ボックス
   **[DQS クレンジング変換エディター]** ダイアログ ボックスを使用すると、Data Quality Services (DQS) を使用してデータを修正できます。 詳細については、「 [Data Quality Services の概念](../../2014/data-quality-services/data-quality-services-concepts.md)」を参照してください。  
@@ -112,7 +112,7 @@ ms.locfileid: "58385570"
  既存の参照データ プロバイダーから取得した追加データを出力するかどうかを示します。 詳細については、「 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
   
  **[追加されたデータ スキーマ]**  
- データ スキーマを出力するかどうかを示します。 詳細については、[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)を参照してください。  
+ データ スキーマを出力するかどうかを示します。 詳細については、次を参照してください。[参照データへのドメインまたは複合ドメインのアタッチ](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)します。  
   
 ##  <a name="manager"></a> [DQS クレンジング接続マネージャー] ダイアログ ボックスのオプションの設定  
  **サーバー名**  

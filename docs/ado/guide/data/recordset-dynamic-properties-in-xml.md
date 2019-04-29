@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50841931d26847ba339d64634d3eff4d7a7efc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910892"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML でのレコードセットの動的プロパティ
 (クライアント カーソル エンジン) から次のレコード セット プロバイダー固有のプロパティは、現在 XML 形式に永続化されます。  
   
 -   更新プログラムの再同期  
   
--   一意テーブル  
+-   Unique Table  
   
 -   一意のスキーマ  
   

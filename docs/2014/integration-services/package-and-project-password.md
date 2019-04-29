@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8f53b9972bfc9207bb7b9b06b7438e5fb8039ffd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890295"
 ---
 # <a name="package-and-project-password"></a>パッケージおよびプロジェクトのパスワード
   **[パッケージ パスワード]** ダイアログ ボックスを使用すると、パスワードによって暗号化されるパッケージのパッケージ パスワードを指定できます。 パッケージで使用される保護レベルが **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** の場合、パスワードを指定する必要があります。  
