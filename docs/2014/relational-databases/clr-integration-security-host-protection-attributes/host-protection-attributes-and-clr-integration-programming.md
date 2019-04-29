@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874350"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>ホスト保護属性と CLR 統合プログラミング
   CLR (共通言語ランタイム) には、.NET Framework の一部であるマネージド API (アプリケーション プログラミング インターフェイス) に、特定の属性で注釈を付けるメカニズムが用意されています。このような属性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降) など CLR のホストのための属性です。 このような HPA (ホスト保護属性) の例としては、次のものがあります。  
@@ -33,7 +33,7 @@ ms.locfileid: "48205592"
   
 -   `ExternalProcessMgmt`。ホスト プロセスを制御する方法が API で公開されるかどうかを示します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CAS 要件は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 3 つの権限セット (`SAFE`、`EXTERNAL_ACCESS`、または `UNSAFE`) のいずれかで指定します。 アセンブリをサーバーに登録する際に、`CREATE ASSEMBLY` ステートメントを使用して、これら 3 つのセキュリティ レベルのいずれかを指定します。 `SAFE` 権限セットまたは `EXTERNAL_ACCESS` 権限セット内で実行されるコードでは、`System.Security.Permissions.HostProtectionAttribute` 属性が適用される特定の型またはメンバーを使用しないようにする必要があります。 詳細については、[アセンブリを作成する](../clr-integration/assemblies/creating-an-assembly.md)と[CLR 統合プログラミング モデルの制限事項](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、これらの属性が与えられると、CAS (コード アクセス セキュリティ) を使用して、ホストされた環境で許可されない HPA の一覧を指定します。 CAS 要件は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 3 つの権限セット (`SAFE`、`EXTERNAL_ACCESS`、または `UNSAFE`) のいずれかで指定します。 アセンブリをサーバーに登録する際に、`CREATE ASSEMBLY` ステートメントを使用して、これら 3 つのセキュリティ レベルのいずれかを指定します。 `SAFE` 権限セットまたは `EXTERNAL_ACCESS` 権限セット内で実行されるコードでは、`System.Security.Permissions.HostProtectionAttribute` 属性が適用される特定の型またはメンバーを使用しないようにする必要があります。 詳細については、次を参照してください。[アセンブリを作成する](../clr-integration/assemblies/creating-an-assembly.md)と[CLR 統合プログラミング モデルの制限事項](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md)します。  
   
  `HostProtectionAttribute` は、ホストで許可されないコード構文 (型またはメソッド) を特定するという点で、信頼性を向上するための手段がセキュリティ権限とは異なります。 `HostProtectionAttribute` を使用すると、ホストの安定性確保に役立つプログラミング モデルを適用できます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48205592"
  次のトピックでは、`HostProtectionResource` の値が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって許可されない型およびメンバーを示します。  
   
 > [!NOTE]  
->  各トピックに含まれる一覧は、サポートされているアセンブリから作成されたものです。  詳細については、[サポートされている .NET Framework ライブラリ](../clr-integration/database-objects/supported-net-framework-libraries.md)を参照してください。  
+>  各トピックに含まれる一覧は、サポートされているアセンブリから作成されたものです。  詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../clr-integration/database-objects/supported-net-framework-libraries.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Microsoft.VisualBasic.dll の許可されない型およびメンバー](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  

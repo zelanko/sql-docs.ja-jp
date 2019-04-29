@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891675"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>手順 1:レッスン 1 パッケージのコピー
+# <a name="step-1-copying-the-lesson-1-package"></a>手順 1:レッスン 1 のパッケージのコピー
   ここでは、レッスン 1 で作成した Lesson 1.dtsx パッケージのコピーを作成します。 レッスン 1 を終了していない場合は、チュートリアルに含まれている、レッスン 1 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 2 の実習では、このパッケージの新しいコピーを使用します。  
   
 ### <a name="to-create-the-lesson-2-package"></a>レッスン 2 のパッケージを作成するには  

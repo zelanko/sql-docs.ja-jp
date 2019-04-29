@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008021"
 ---
 # <a name="buffers"></a>バッファー
 バッファーは、任意のアプリケーションとドライバーの間のデータを渡すために使用するアプリケーションのメモリです。 使用すると、たとえば、アプリケーションのバッファーを関連付けることまたは *、バインド*結果セットの列で**SQLBindCol**します。 各の行をフェッチすると、これらのバッファー内の各列のデータが返されます。 *入力バッファー*アプリケーションからドライバーにデータを渡すために使用*出力バッファー*ドライバーからアプリケーションにデータを返すために使用します。  

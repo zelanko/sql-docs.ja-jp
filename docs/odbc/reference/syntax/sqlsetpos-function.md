@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982396"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 関数
 **準拠**  
@@ -112,7 +112,7 @@ SQLRETURN SQLSetPos(
 |HY092|無効な属性の識別子|(DM) の指定された値、*操作*引数が無効です。<br /><br /> (DM) の指定された値、 *LockType*引数が無効です。<br /><br /> *操作*引数が SQL_UPDATE または SQL_DELETE、および SQL_ATTR_CONCURRENCY ステートメント属性されました SQL_ATTR_CONCUR_READ_ONLY します。|  
 |HY107|行の値が範囲外|引数が指定された値*RowNumber*が行セットの行の数を超えていました。|  
 |HY109|無効なカーソルの位置|関連付けられているカーソル、 *StatementHandle*カーソルが行セット内の配置されていませんでしたので、順方向専用として定義されました。 SQL_ATTR_CURSOR_TYPE 属性の説明を参照して**SQLSetStmtAttr**します。<br /><br /> *操作*引数が SQL_UPDATE、SQL_DELETE、または SQL_REFRESH とで識別される、行、 *RowNumber*引数に削除されたかがまだフェッチされていません。<br /><br /> (DM)、 *RowNumber*引数が 0 の場合、*操作*SQL_POSITION をされた引数。<br /><br /> **SQLSetPos**後が呼び出された**SQLBulkOperations**が呼び出されたとする前に**SQLFetchScroll**または**SQLFetch**が呼び出されました。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースがで要求された操作をサポートしていません、*操作*引数または*LockType*引数。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**で、*属性*SQL_ATTR_QUERY_TIMEOUT の。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -184,7 +184,7 @@ SQLRETURN SQLSetPos(
   
 -   アプリケーションでは、また、ステートメント属性 SQL_ATTR_CONCURRENCY を SQL_CONCUR_READ_ONLY を指定する場合、ドライバーの更新プログラムを拒否または削除操作。  
   
- また、ステートメント属性 SQL_ATTR_CONCURRENCY の詳細については、[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)を参照してください。  
+ また、ステートメント属性 SQL_ATTR_CONCURRENCY の詳細については、次を参照してください。 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)します。  
   
 ## <a name="status-and-operation-arrays"></a>状態と操作の配列  
  次の状態と操作の配列は、呼び出すときに使用します**SQLSetPos**:。  
@@ -195,7 +195,7 @@ SQLRETURN SQLSetPos(
   
  状態と操作の配列内の要素の数は、(、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で定義) された行セット内の行の数に等しくなければなりません。  
   
- 行の状態配列については、[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)を参照してください。 行操作配列については、「を無視して、行で、一括操作で、」このセクションの後半を参照してください。  
+ 行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)します。 行操作配列については、「を無視して、行で、一括操作で、」このセクションの後半を参照してください。  
   
 ## <a name="using-sqlsetpos"></a>SQLSetPos の使用  
  アプリケーションを呼び出す前に**SQLSetPos**、次の一連の手順を実行する必要があります。  
@@ -310,7 +310,7 @@ SQLRETURN SQLSetPos(
 -   アプリケーションは、SQL_ROW_IGNORE に読み取り専用の列を自動的に設定する必要があります。  
   
 ## <a name="ignoring-a-column-in-a-bulk-operation"></a>一括操作で列を無視します。  
- 1 つまたは複数の読み取り専用の列に実行しようとした更新プログラムによって生成された不要な処理の診断を避けるためには、アプリケーションは SQL_COLUMN_IGNORE にバインドされている長さ/インジケーター バッファーで値を設定できます。 詳細については、[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)を参照してください。  
+ 1 つまたは複数の読み取り専用の列に実行しようとした更新プログラムによって生成された不要な処理の診断を避けるためには、アプリケーションは SQL_COLUMN_IGNORE にバインドされている長さ/インジケーター バッファーで値を設定できます。 詳細については、次を参照してください。 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)します。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションは、ORDERS テーブルを参照し、注文ステータスを更新するユーザーをできます。 カーソルはキーセット ドリブンの行セットのサイズは 20 であり、行のバージョンを比較するオプティミスティック同時実行制御を使用します。 それぞれの行セットをフェッチすると、後に、アプリケーションはそれを出力しを選択し、注文の状態を更新できます。 アプリケーションを使用して**SQLSetPos**に選択した行にカーソルを移動し、行の位置指定更新を実行します。 (エラー処理はわかりやすくするため省略します。)  
@@ -363,7 +363,7 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 }  
 ```  
   
- 例については、[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)と[SQLSetPos による行セット内の行の更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)を参照してください。  
+ 例については、次を参照してください。[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)と[SQLSetPos による行セット内の行の更新](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)します。  
   
 ## <a name="related-functions"></a>関連する関数  
   

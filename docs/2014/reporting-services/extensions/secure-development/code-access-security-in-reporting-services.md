@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985738"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services のコード アクセス セキュリティ
   コード アクセス セキュリティの中核を成す概念として、証拠、コード グループ、名前付き権限セットがあります。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、レポート マネージャー、レポート デザイナー、およびレポート サーバー コンポーネントには、それぞれ、データ、配信、表示、セキュリティ拡張機能はもとより、カスタム アセンブリのコード アクセス セキュリティを設定するポリシー ファイルが存在します。 以下のセクションでは、コード アクセス セキュリティの概要について説明します。 このセクションで取り上げられているトピックの詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ドキュメントの「セキュリティ ポリシー モデル」を参照してください。  

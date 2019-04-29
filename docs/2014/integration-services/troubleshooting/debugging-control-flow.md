@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926692"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
@@ -106,7 +106,7 @@ ms.locfileid: "58382349"
   
  次の表は、各ウィンドウについて説明しています。  
   
-|[Window]|説明|  
+|Window|説明|  
 |------------|-----------------|  
 |ブレークポイント|パッケージ内のブレークポイントを一覧表示し、ブレークポイントの有効化および削除のオプションを提供します。|  
 |[出力]|[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]の機能に関する状態メッセージを表示します。|  

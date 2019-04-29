@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015586"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>ストアド プロシージャに対する権限の許可
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ストアド プロシージャに対する権限を許可する方法について説明します。 権限は、データベース内の既存のユーザー、データベース ロール、またはアプリケーション ロールに許可することができます。  

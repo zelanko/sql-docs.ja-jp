@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020011"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,21 +35,21 @@ ms.locfileid: "50145917"
  データベースを同期するには、データベースの同期ウィザードを実行して直ちにデータベースを同期するか、このウィザードを使用して、後で実行できる同期スクリプトを生成します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースおよびキューブの可用性とスケーラビリティを向上するために、いずれかの方法を使用できます。  
   
 > [!NOTE]  
->  次のホワイト ペーパーは、Analysis Services の以前のバージョンを対象として作成されたものですが、SQL Server 2012 を使用して作成したスケーラブルな多次元ソリューションにも引き続き当てはまります。 詳細については、「 [Analysis Services を使用するクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253136) 」および「 [読み取り専用データベースによる Analysis Services のクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253137.)」を参照してください。  
+>  次のホワイト ペーパーは、Analysis Services の以前のバージョンを対象として作成されたものですが、SQL Server 2012 を使用して作成したスケーラブルな多次元ソリューションにも引き続き当てはまります。 詳細については、「[Analysis Services を使用するクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253136)」および「[読み取り専用データベースによる Analysis Services のクエリのスケールアウト](http://go.microsoft.com/fwlink/?LinkId=253137.)」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  データベースの同期を開始する同期先 (またはターゲット) サーバーで、Analysis Services サーバー管理者ロールのメンバーである必要があります。 同期元サーバーで、使用している Windows ユーザー アカウントに、同期元データベースに対するフル コントロールの権限が付与されている必要があります。 データベースを対話形式で同期する場合は、自分の Windows ユーザー ID のセキュリティ コンテキストで同期が実行されることに注意してください。 自分のアカウントが特定のオブジェクトへのアクセスを拒否された場合は、そのようなオブジェクトは操作から除外されます。 サーバー管理者のロールとデータベース権限の詳細については、「[Analysis Services インスタンスにサーバー管理者権限を付与する](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)」と「[データベース権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)」を参照してください。  
   
  既定のインスタンス間のリモート接続を許可するために、両方のサーバーで TCP ポート 2383 を開く必要があります。 Windows ファイアウォールの例外を作成する方法の詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
   
- ソースと宛先の両方のサーバーは、同じバージョンおよび service pack である必要があります。 モデルのメタデータが同期されていることもあるため、ビルドの互換性を確保する両方のサーバー数する必要があります同じであります。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションで機能の詳細については、[エディションと SQL Server 2016 でサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)を参照してください。  
+ ソースと宛先の両方のサーバーは、同じバージョンおよび service pack である必要があります。 モデルのメタデータが同期されていることもあるため、ビルドの互換性を確保する両方のサーバー数する必要があります同じであります。 各インストールのエディションが、データベースの同期をサポートしている必要があります。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、データベースの同期は、Enterprise、Developer、および Business Intelligence の各エディションでサポートされています。 各エディションで機能の詳細については、次を参照してください。[エディションと SQL Server 2016 でサポートされる機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)します。  
   
- サーバー配置モードは、各サーバーで同じである必要があります。 同期するデータベースが多次元である場合は、同期元サーバーと同期先サーバーの両方が、多次元サーバー モードで構成されている必要があります。 配置モードの詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
+ サーバー配置モードは、各サーバーで同じである必要があります。 同期するデータベースが多次元である場合は、同期元サーバーと同期先サーバーの両方が、多次元サーバー モードで構成されている必要があります。 配置モードの詳細については、「[Analysis Services インスタンスのサーバー モードの決定](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)」を参照してください。  
   
- 同期元サーバーでレイジー集計処理を使用している場合は、その処理を無効にします。 バックグラウンドで処理されている集計は、データベースの同期を妨げる可能性があります。 このサーバー プロパティの設定の詳細については、「 [OLAP のプロパティ](../../analysis-services/server-properties/olap-properties.md)」を参照してください。  
+ 同期元サーバーでレイジー集計処理を使用している場合は、その処理を無効にします。 バックグラウンドで処理されている集計は、データベースの同期を妨げる可能性があります。 このサーバー プロパティの設定の詳細については、「[OLAP のプロパティ](../../analysis-services/server-properties/olap-properties.md)」を参照してください。  
   
 > [!NOTE]  
->  データベースのサイズは、同期が適切な方法であるかどうかを判断する要因になります。 厳格な要件は存在しませんが、同期が非常に遅い場合は、「 [Analysis Services の同期に関する推奨事項](http://go.microsoft.com/fwlink/?LinkID=253136)」というテクニカル ペーパーで説明されているように、複数のサーバーを並列に同期することを検討してください。  
+>  データベースのサイズは、同期が適切な方法であるかどうかを判断する要因になります。 厳格な要件はありませんが、同期が遅すぎる場合はときに、考慮を並列に複数のサーバー同期テクニカル ペーパーで説明されています。[Analysis Services の同期のベスト プラクティス](http://go.microsoft.com/fwlink/?LinkID=253136)します。  
   
 ## <a name="synchronize-database-wizard"></a>データベースの同期ウィザード  
  同期元から同期先データベースへの一方向の同期を実行するか、データベースの同期操作を指定するスクリプトを生成するには、データベースの同期ウィザードを使用します。 同期処理中にローカル パーティションとリモート パーティションの両方を同期し、ロールを含めるかどうかを選択することもできます。  

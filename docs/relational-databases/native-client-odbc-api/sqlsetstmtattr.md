@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014111"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "51667783"
   
  SQLSetStmtAttr が SQL_SOPT_SS_NAME_SCOPE を設定することもできます。 詳細については、このトピックの後半の「SQL_SOPT_SS_NAME_SCOPE」のセクションを参照してください。  
   
- 詳細については、[準備されたステートメントのテーブル値パラメーターのメタデータ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)を参照してください。  
+ 詳細については、次を参照してください。[準備されたステートメントのテーブル値パラメーターのメタデータ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)します。  
   
- テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>SQLSetStmtAttr によるスパース列のサポート  
- SQLSetStmtAttr sql_sopt_ss_name_scope を使用できます。 詳細については、このトピックの後半、SQL_SOPT_SS_NAME_SCOPE」のセクションを参照してください。スパース列の詳細については、[スパース列のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)を参照してください。  
+ SQLSetStmtAttr sql_sopt_ss_name_scope を使用できます。 詳細については、このトピックの後半、SQL_SOPT_SS_NAME_SCOPE」のセクションを参照してください。スパース列の詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)します。  
   
 ## <a name="statement-attributes"></a>ステートメント属性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次のドライバー固有のステートメント属性もサポートします。  
@@ -126,7 +126,7 @@ ms.locfileid: "51667783"
   
  SQL_SOPT_SS_PARAM_FOCUS の型は SQLULEN です。  
   
- 既定値は 0 で、SQL ステートメントのパラメーター マーカーに対応するパラメーターが、上記の呼び出しで指定されます。 テーブル値パラメーターのパラメーター番号に設定すると、そのテーブル値パラメーターの列が上記の呼び出しで指定されます。 テーブル値パラメーターのパラメーター番号以外の値に設定すると、エラー IM020 ("パラメーターのフォーカスがテーブル値パラメーターを参照していません") が返されます。  
+ 既定値は 0 で、SQL ステートメントのパラメーター マーカーに対応するパラメーターが、上記の呼び出しで指定されます。 テーブル値パラメーターのパラメーター番号に設定すると、そのテーブル値パラメーターの列が上記の呼び出しで指定されます。 これらの呼び出しには、テーブル値パラメーターのパラメーター数ではない値に設定すると、エラー IM020 が返されます。「パラメーターのフォーカスを示さない、テーブル値パラメーター」です。  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  SQL_SOPT_SS_NAME_SCOPE 属性は、後続のカタログ関数呼び出しの名前スコープを指定します。 SQLColumns によって返される結果セットは、SQL_SOPT_SS_NAME_SCOPE の設定に依存します。  

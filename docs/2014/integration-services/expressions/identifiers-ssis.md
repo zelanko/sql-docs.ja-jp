@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898860"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
   識別子とは、式の内部で演算に使用できる列および変数のことです。 式では、標準識別子と修飾された識別子を使用できます。  

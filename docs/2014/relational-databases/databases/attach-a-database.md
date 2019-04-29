@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872252"
 ---
 # <a name="attach-a-database"></a>データベースのインポート
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースをアタッチする方法について説明します。 この機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのコピー、移動、またはアップグレードに使用できます。  
@@ -158,7 +158,7 @@ ms.locfileid: "53354982"
     > [!NOTE]  
     > また、 [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql) ストアド プロシージャまたは [sp_attach_single_file_db](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql) ストアド プロシージャを使用することもできます。 ただし、これらのプロシージャは、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のバージョンでは削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 CREATE DATABASE を使用することをお勧めしています.FOR ATTACH を使用することをお勧めします  
   
-##  <a name="FollowUp"></a> フォローしてください：SQL Server データベースのアップグレード後  
+##  <a name="FollowUp"></a>補足情報: SQL Server データベースのアップグレード後  
  attach メソッドを使用してデータベースをアップグレードする導入後、データベースはすぐに使用可能になります、自動的にアップグレードします。 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **"フルテキスト アップグレード オプション"** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションが **[インポート]** または **[再構築]** に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションが **[インポート]** に設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。  
   
 アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレード前の互換性レベルが 90 の場合、アップグレードされたデータベースの互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。  

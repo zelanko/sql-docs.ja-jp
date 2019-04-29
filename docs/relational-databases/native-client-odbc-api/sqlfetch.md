@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5a825a043666b4e66fdd0a39fae120d69a66a7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015124"
 ---
 # <a name="sqlfetch"></a>SQLFetch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "51658271"
 
   SQLFetch サポートには、日付と時刻の機能が強化されています。  
   
- 日付/時刻型の結果列の値に変換する方法については、[SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)を参照してください。  
+ 日付/時刻型の結果列の値に変換する方法については、次を参照してください。 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)します。  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>SQLFetch による大きな CLR UDT のサポート  
- **SQLFetch**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、[Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)を参照してください。  
+ **SQLFetch**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   

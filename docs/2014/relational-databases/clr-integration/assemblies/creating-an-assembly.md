@@ -18,17 +18,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e28871e93bd718063692a31a4a3462399517dfc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919573"
 ---
 # <a name="creating-an-assembly"></a>アセンブリの作成
   ストアド プロシージャやトリガーなどのマネージド データベース オブジェクトは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 マネージ DLL アセンブリを登録する必要があります[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]アセンブリが提供する機能を使用する前にします。 アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録するには、CREATE ASSEMBLY ステートメントを使用します。 ここでは、CREATE ASSEMBLY ステートメントを使用してアセンブリをデータベースに登録する方法と、アセンブリのセキュリティ設定を指定する方法について説明します。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY ステートメント  
- データベースにアセンブリを作成するには、CREATE ASSEMBLY ステートメントを使用します。 次に例を示します。  
+ データベースにアセンブリを作成するには、CREATE ASSEMBLY ステートメントを使用します。 以下に例を示します。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -127,7 +127,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = UNSAFE;  
 ```  
   
- 各設定のアクセス許可の詳細については、[CLR 統合セキュリティ](../security/clr-integration-security.md)を参照してください。  
+ 各設定のアクセス許可の詳細については、次を参照してください。 [CLR 統合セキュリティ](../security/clr-integration-security.md)します。  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合アセンブリの管理](managing-clr-integration-assemblies.md)   

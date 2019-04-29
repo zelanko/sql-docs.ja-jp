@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856324"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>ニューラル ネットワーク構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
   データ マイニング モデルを作成するには、まずデータ マイニング ウィザードを使用して、新しいデータ ソース ビューに基づく新しいマイニング構造を作成する必要があります。 ここでは、ウィザードを使用してマイニング構造を作成し、同時に、[!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムに基づく関連マイニング モデルを作成します。  
@@ -83,7 +83,7 @@ ms.locfileid: "56037723"
     |LevelTwoOperators|入力|  
     |Orders|[入力]/[予測]|  
     |ServiceGrade|[入力]/[予測]|  
-    |shift キー|入力|  
+    |Shift|入力|  
     |TotalOperators|使用しない|  
     |WageType|入力|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "56037723"
     |LevelTwoOperators|Continuous|Long|  
     |Orders|Continuous|Long|  
     |ServiceGrade|Continuous|Double|  
-    |shift キー|Discrete|テキスト|  
+    |Shift|Discrete|テキスト|  
     |WageType|Discrete|テキスト|  
   
 13. **テストの設定を作成** ページで、オプションのテキスト ボックスをオフ**テスト用データの割合**します。 **[次へ]** をクリックします。  
@@ -161,7 +161,7 @@ ms.locfileid: "56037723"
 |>= 0.12|36|  
   
 > [!NOTE]  
->  これらの統計は、すべてのデータが処理された後のモデルのマージナル統計ノードから取得できます。 マージナル統計ノードの詳細については、[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)を参照してください。  
+>  これらの統計は、すべてのデータが処理された後のモデルのマージナル統計ノードから取得できます。 マージナル統計ノードの詳細については、次を参照してください。[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)します。  
   
  この表の "値" 列には、ServiceGrade の数値がどのように処理されたかが示されています。 "サポート" 列には、その値またはその範囲に分類されたケースの数が示されています。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "56037723"
   
      この方法を選択した場合、等しいサイズのバケットに値が分配されてから、各範囲の上限と下限が変更されます。 バケットの数は指定できますが、それぞれのバケットに含まれる値の数が数個だけにならないようにしてください。  
   
- ビン分割オプションの詳細については、[分離メソッド&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)を参照してください。  
+ ビン分割オプションの詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)します。  
   
  また、数値の値を使用するのではなくでした追加するなど、サービス グレードを定義済みの対象の範囲に分類する別の派生列**ベスト**(ServiceGrade \<= 0.05)、 **許容される**(0.10 > ServiceGrade > 0.05)、および**低下**(ServiceGrade > = 0.10)。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "56037723"
     |Orders|入力|入力|  
     |ServiceGrade Binned|Ignore|Predict (ServiceGrade)|  
     |ServiceGrade|Predict|Ignore|  
-    |shift キー|入力|入力|  
+    |Shift|入力|入力|  
     |Total Operators|入力|入力|  
     |WageType|入力|入力|  
   

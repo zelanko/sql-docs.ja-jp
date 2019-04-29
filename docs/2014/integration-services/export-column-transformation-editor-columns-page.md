@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7682e3c22885b50e1516a8f30cce468852ae2c7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898333"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター] ([列] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、ファイルに抽出するデータ フロー内の列を指定できます。 列エクスポート変換でファイルにデータを追加するか、既存のファイルを上書きするかどうかを指定できます。  

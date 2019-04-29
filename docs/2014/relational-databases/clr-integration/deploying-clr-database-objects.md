@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920842"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR データベース オブジェクトの配置
   配置は、完了したアプリケーションまたはモジュールを別のコンピューターにインストールし、実行するために配布するプロセスです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio を使用して、共通言語ランタイム (CLR) データベース オブジェクトを開発し、これらをテスト サーバーに配置することができます。 また、Visual Studio ではなく [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の再配布ファイルを使用して、マネージド データベース オブジェクトをコンパイルすることも可能です。 コンパイルすると、CLR データベース オブジェクトを含むアセンブリを、Visual Studio または [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して、テスト サーバーに配置することができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたは配置には使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
@@ -35,7 +35,7 @@ ms.locfileid: "48122783"
  すべてのコンパイラ エラーおよび警告が解決されていることを確認してください。 これで、Visual Studio または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ステートメントを使用して、CLR ルーチンを含むアセンブリを [!INCLUDE[tsql](../../../includes/tsql-md.md)] データベースに登録できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーの TCP/IP プロトコルを有効にする方法の詳細については、[Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Visual Studio を使用してリモートで開発およびデバッグを行うには、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] インスタンスで TCP/IP ネットワーク プロトコルを有効にする必要があります。 サーバーの TCP/IP プロトコルを有効にする方法の詳細については、次を参照してください。 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)します。  
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Visual Studio を使用してアセンブリを配置するには  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48122783"
  マネージ データベース オブジェクトのさまざまな種類の作成の詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[clr ユーザー定義関数](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)、 [clr ユーザー定義集計](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)、 [CLRユーザー定義型](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)、 [CLR ストアド プロシージャ](../../database-engine/dev-guide/clr-stored-procedures.md)、および[CLR トリガー](../../database-engine/dev-guide/clr-triggers.md)します。  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>実稼働サーバーへのアセンブリの配置  
- CLR データベース オブジェクトをテスト サーバーでテストおよび検証した後は、実稼働サーバーに配布できます。 マネージ データベース オブジェクトのデバッグの詳細については、[CLR データベース オブジェクトのデバッグ](debugging-clr-database-objects.md)を参照してください。  
+ CLR データベース オブジェクトをテスト サーバーでテストおよび検証した後は、実稼働サーバーに配布できます。 マネージ データベース オブジェクトのデバッグの詳細については、次を参照してください。 [CLR データベース オブジェクトのデバッグ](debugging-clr-database-objects.md)します。  
   
  マネージド データベース オブジェクトの配置は、通常のデータベース オブジェクト (テーブル、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ルーチンなど) の配置と似ています。 CLR データベース オブジェクトを含むアセンブリは、配置スクリプトを使用して別のサーバーに配置できます。 配置スクリプトは、[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] の "スクリプトの生成" 機能を使用して作成できます。 配置スクリプトは、手動で作成することも、また、"スクリプトの生成" を使用して作成した後に手動で変更することもできます。 配置スクリプトの作成後は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の別のインスタンスでこれを実行し、マネージド データベース オブジェクトを配置することができます。  
   

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990204"
 ---
 # <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
   列のプロパティのセットには、テーブル デザイナーの **[列のプロパティ]** タブに表示される完全なセット ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでのみ使用可能) と、サーバー エクスプローラーで [プロパティ] ウィンドウに表示されるサブセットの 2 種類があります。  
@@ -110,7 +110,7 @@ ms.locfileid: "52757584"
  **[テーブル デザイナー] カテゴリ**  
  展開すると、その他のプロパティが表示されます。  
   
- **[照合順序]**  
+ **照合順序**  
  選択した列における照合順序の設定が表示されます。 この設定を変更するには、**[照合順序]** をクリックした後、値の右側にある **[...]** をクリックします  
   
  **[計算列の指定] カテゴリ**  

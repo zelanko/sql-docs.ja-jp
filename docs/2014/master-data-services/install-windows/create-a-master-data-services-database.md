@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af7e442c1465ac1f93a134ab00da6a9e31242da4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924235"
 ---
 # <a name="create-a-master-data-services-database"></a>マスター データ サービス データベースの作成
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションと [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web サービスをサポートする新しいデータベースが必要な場合は、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成します。  

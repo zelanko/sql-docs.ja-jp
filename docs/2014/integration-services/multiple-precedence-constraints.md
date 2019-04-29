@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f06a05ff275151e2488b1f3ec89c8d9cb7afb12
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890730"
 ---
 # <a name="multiple-precedence-constraints"></a>複数の優先順位制約
   優先順位制約は、2 つのタスク、2 つのコンテナー、1 つのタスクと 1 つのコンテナーなど、2 つの実行可能ファイルを連結します。 これらは優先順位付き実行可能ファイル、および制約付き実行可能ファイルと呼ばれています。 制約付き実行可能ファイルには、複数の優先順位制約を含めることができます。 優先順位制約の詳細については、「[優先順位制約](control-flow/precedence-constraints.md)」を参照してください。  

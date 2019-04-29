@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835691"
 ---
 # <a name="edit-the-advanced-properties"></a>詳細プロパティの編集
   **[詳細設定]** タブを使用すると、CDC インスタンスに特殊なプロパティを追加できます。  

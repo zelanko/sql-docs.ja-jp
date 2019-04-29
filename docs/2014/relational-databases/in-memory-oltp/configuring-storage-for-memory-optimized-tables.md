@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990637"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
   記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  
@@ -34,7 +34,7 @@ ms.locfileid: "49119171"
   
      記憶域のスループットを見積もる際のもう 1 つの要因は、メモリ最適化テーブルの復旧時間です。 持続性のあるテーブルからのデータは、データベースがアプリケーションで使用される前にメモリに読み込む必要があります。 一般的に、メモリ最適化テーブルへのデータの読み込みは IOPS の速度で実行できます。 それで、持続性のあるメモリ最適化テーブルの合計の記憶域が 60 GB で、1 分でこのデータを読み込めるようにする場合は、記憶域の IOPS を 1 GB/秒に設定する必要があります。  
   
--   偶数個のスピンドルを使用している場合、コンテナー数の 2 倍を作成し、各ペアを同じスピンドルにマップする必要があります。 これは、IOPS および記憶域を分散するために必要です。 詳細については、[メモリ最適化ファイルグループ](the-memory-optimized-filegroup.md)を参照してください。  
+-   偶数個のスピンドルを使用している場合、コンテナー数の 2 倍を作成し、各ペアを同じスピンドルにマップする必要があります。 これは、IOPS および記憶域を分散するために必要です。 詳細については、次を参照してください。[メモリ最適化ファイルグループ](the-memory-optimized-filegroup.md)します。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](creating-and-managing-storage-for-memory-optimized-objects.md)  

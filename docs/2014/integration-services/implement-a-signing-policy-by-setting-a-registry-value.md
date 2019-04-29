@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f0761f0485cea055e2317ca24b2931302431e5c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893201"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>レジストリ値を設定して署名ポリシーを実装する
   オプションのレジストリ値を使用して、署名付きパッケージまたは署名がないパッケージを読み込む際の組織のポリシーを管理できます。 このレジストリ キーを使用する場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が実行されるコンピューターおよびポリシーを適用するコンピューターごとにこのレジストリ値を作成する必要があります。 レジストリ値が設定されると、パッケージを読み込む前に、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって署名が確認されます。  

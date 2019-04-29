@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2abbebbf03984e3950ae9fadac1b574db64990ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929851"
 ---
 # <a name="rds-usage-and-security"></a>RDS の使用方法とセキュリティ
 このセクションの情報を使用して、サーバーに設定して、すばやく RDS を使用します。 このセクションには、RDS とその他のテクノロジの間でキーのリレーションシップの一部について説明します、RDS を実装するときに実行する必要がある特定の構成手順が含まれていて、設定するときに発生する問題の解決策を識別するのに役立ちます、RDS ソリューションです。  

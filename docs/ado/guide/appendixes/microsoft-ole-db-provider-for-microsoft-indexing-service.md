@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855855"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft サービスの概要をインデックス作成
 Microsoft OLE DB Provider for Microsoft インデックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。

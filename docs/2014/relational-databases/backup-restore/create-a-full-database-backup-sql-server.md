@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922276"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、データベースの完全バックアップを作成する方法について説明します。  
@@ -191,7 +191,7 @@ ms.locfileid: "58530754"
     |オプション|説明|  
     |------------|-----------------|  
     |*database*|バックアップするデータベースです。|  
-    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)」を参照してください。|  
+    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|  
     |WITH *with_options* [ **,**...*o* ]|必要に応じて、1 つ以上の追加オプション ( *o*) を指定します。 基本的な with オプションについては、手順 2. を参照してください。|  
   
 2.  必要に応じて、1 つ以上の WITH オプションを指定します。 ここでは、一部の基本的な WITH オプションについて説明します。 すべての WITH オプションについては、「 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011428"
 ---
 # <a name="configure-report-manager-native-mode"></a>レポート マネージャーの構成 (ネイティブ モード)
   レポート マネージャーは、Web フロント エンド アプリケーションであり、レポートの表示、レポート サーバー コンテンツの管理、およびネイティブ モードのレポート サーバーへのアクセス権の付与に使用されます。 レポート マネージャーは、レポート サーバー Web サービスと共に、同じレポート サーバー インスタンス内にインストールされます。また、セットアップ時に **[ネイティブ モードの既存の構成をインストールする]** を選択した場合は、必要に応じて構成できます。 レポート マネージャーはインストール後のタスクとしても構成できます。 このトピックでは、次のレポート マネージャーの構成シナリオについて説明します。  

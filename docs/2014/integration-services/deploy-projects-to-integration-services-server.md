@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898880"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Integration Services サーバーへのプロジェクトの配置
   現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
@@ -24,7 +24,7 @@ ms.locfileid: "58386630"
  環境の詳細については、「 [サーバー環境の作成とマップ](../../2014/integration-services/create-and-map-a-server-environment.md)」を参照してください。  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]と同様に、現在のリリースでも、パッケージを SQL Server のインスタンスに配置し、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用してパッケージを実行および管理できます。 パッケージ配置モデルを使用できます。 詳細については、[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)を参照してください。  
+>  以前のバージョンの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]と同様に、現在のリリースでも、パッケージを SQL Server のインスタンスに配置し、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用してパッケージを実行および管理できます。 パッケージ配置モデルを使用できます。 詳細については、次を参照してください。[パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)します。  
   
  プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置するには、次の作業を実行します。  
   

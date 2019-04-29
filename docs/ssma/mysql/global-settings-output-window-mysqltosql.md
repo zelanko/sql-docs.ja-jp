@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e452278606601fd0313bedad65d18597ed5f8500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926952"
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>グローバル設定 (出力ウィンドウ) (MySQLToSQL)
 使用して、**グローバル設定**SSMA の設定を指定 ダイアログ ボックス。  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 300a59bb09fa28a626b117f51cfa6509b5ca883e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004283"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- キャッシュ ディレクトリの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、[有効] または [データ コレクションの無効化](../../relational-databases/data-collection/enable-or-disable-data-collection.md)、および[データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)を参照してください。  
+ キャッシュ ディレクトリの構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このストアド プロシージャは失敗します。 詳細については、次を参照してください。[有効] または [データ コレクションの無効化](../../relational-databases/data-collection/enable-or-disable-data-collection.md)、および[データ コレクションの管理](../../relational-databases/data-collection/manage-data-collection.md)します。  
   
  sp_syscollector_set_cache_directory の実行時には指定されたディレクトリが存在する必要はありませんが、ディレクトリが作成されるまで、データを正常にキャッシュしてアップロードすることはできません。 このストアド プロシージャを実行する前に、ディレクトリを作成することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行する、(EXECUTE 権限) を持つ dc_admin 固定データベース ロールのメンバーシップが必要です。  
+ このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、データ コレクターを無効にします、キャッシュ ディレクトリを設定するデータ コレクターの`D:\tempdata`、され、データ コレクターを有効になります。  

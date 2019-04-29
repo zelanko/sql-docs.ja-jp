@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004394"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "47655820"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|インデックスが定義されているオブジェクトの ID。|  
 |**index_id**|**int**|列が定義されているインデックスの ID です。|  
-|**index_column_id**|**int**|インデックス列の ID です。 **index_column_id**内でのみ一意です**index_id**します。|  
+|**index_column_id**|**int**|インデックス列の ID。 **index_column_id**内でのみ一意です**index_id**します。|  
 |**column_id**|**int**|内の列の ID **object_id**します。<br /><br /> 0 = 非クラスター化インデックス内の行識別子 (RID) です。<br /><br /> **column_id**内でのみ一意です**object_id**します。|  
-|**key_ordinal**|**tinyint**|一連のキー列内での 1 から始まる序数です。<br /><br /> 0 = キー列ではないか、XML インデックス、列ストア インデックス、または空間インデックスです。<br /><br /> 注: XML インデックスまたは空間インデックス キーためにできません基になる列が比較不能、つまり、その値を注文することはできません。|  
-|**partition_ordinal**|**tinyint**|一連のパーティション分割列内での 1 から始まる序数です。 クラスター化列ストア インデックスには、最大で 1 個のパーティション分割列を含めることができます。<br /><br /> 0 = パーティション分割列ではありません。|  
-|**is_descending_key**|**bit**|1 = インデックス キー列に降順の並べ替え方向が設定されています。<br /><br /> 0 = インデックス キー列に昇順の並べ替え方向が設定されているか、列が列ストア インデックスまたはハッシュ インデックスの一部です。|  
-|**is_included_column**|**bit**|1 = 列は、CREATE INDEX INCLUDE 句を使用してインデックスに追加された非キー列です。または、列は列ストア インデックスの一部です。<br /><br /> 0 = 列は付加列ではありません。<br /><br /> 列のクラスター化キーの一部であるために、暗黙的に追加するように表示されていない**sys.index_columns**します。<br /><br /> パーティション分割列であるために暗黙的に追加された列は、0 として返されます。|  
+|**key_ordinal**|**tinyint**|一連のキー列内での 1 から始まる序数です。<br /><br /> 0 = キー列ではないか、XML インデックス、列ストア インデックス、または空間インデックスです。<br /><br /> 注:XML インデックスまたは空間インデックス キーためにできません基になる列が比較不能、つまり、その値を注文することはできません。|  
+|**partition_ordinal**|**tinyint**|パーティション分割列のセット内で (1 から始まる序数です。 クラスター化列ストア インデックスには、最大で 1 個のパーティション分割列を含めることができます。<br /><br /> 0 = パーティション分割列ではありません。|  
+|**is_descending_key**|**bit**|1 = インデックス キー列が降順の並べ替え方向。<br /><br /> 0 = インデックス キー列が昇順の並べ替え方向を持っているか、列は、列ストアまたはハッシュ インデックスの一部です。|  
+|**is_included_column**|**bit**|1 = 列は、CREATE INDEX INCLUDE 句を使用して、インデックスに追加の非キー列または列が列ストア インデックスの一部です。<br /><br /> 0 = 列は付加列ではありません。<br /><br /> 列のクラスター化キーの一部であるために、暗黙的に追加するように表示されていない**sys.index_columns**します。<br /><br /> パーティション分割列であるために暗黙的に追加された列は、0 として返されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

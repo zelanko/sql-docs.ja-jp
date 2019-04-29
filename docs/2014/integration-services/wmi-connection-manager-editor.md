@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4851e8b989a161cef6cbb673a9c76a32f8afdeb8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926214"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 接続マネージャー エディター
   **[WMI 接続マネージャー]** ダイアログ ボックスを使用すると、サーバーに対する Microsoft Windows Management Instrumentation (WMI) 接続を指定できます。  

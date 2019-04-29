@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924954"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>データベース ログイン、ユーザー、およびロール (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストする [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに自動的にインストールされるログイン、ユーザー、およびロールがあります。 これらのログイン、ユーザー、およびロールは変更しないでください。  
@@ -39,7 +39,7 @@ ms.locfileid: "52795417"
 |ユーザー|説明|  
 |----------|-----------------|  
 |`mds_clr_user`|使用されていません。<br /><br /> mds_dlp_login にマップされます。|  
-|`mds_email_user`|通知に使用します。<br /><br /> mds_email_login にマップされます。<br /><br /> ロールのメンバーを示します。DatabaseMailUserRole します。|  
+|`mds_email_user`|通知に使用します。<br /><br /> mds_email_login にマップされます。<br /><br /> ロールのメンバーを示します。ロールのメンバーです。|  
   
 ## <a name="master-data-services-database-users"></a>マスター データ サービス データベース ユーザー  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52795417"
 |----------|-----------------|  
 |`mdm`|mdq スキーマに含まれている関数以外のすべての [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース オブジェクトおよび Service Broker オブジェクトが含まれます。|  
 |`mdq`|正規表現または類似性に基づくメンバーの結果のフィルター処理や書式設定通知電子メールに関連する [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース関数が含まれます。|  
-|**stg**|ステージング処理に関連する [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース テーブル、ストアド プロシージャ、およびビューが含まれます。 これらのオブジェクトは削除しないでください。 ステージング処理の詳細については、[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)を参照してください。|  
+|**stg**|ステージング処理に関連する [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース テーブル、ストアド プロシージャ、およびビューが含まれます。 これらのオブジェクトは削除しないでください。 ステージング処理の詳細については、次を参照してください。[データのインポート&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)します。|  
   
 ## <a name="see-also"></a>参照  
  [データベース オブジェクト セキュリティ (マスター データ サービス)](../../2014/master-data-services/database-object-security-master-data-services.md)  

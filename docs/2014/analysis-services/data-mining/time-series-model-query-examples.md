@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4098a1b5eade3705e10ab609c47454564a18101d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733534"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析で検出されたパターンの詳細情報を取得できます。予測クエリでは、モデル内のパターンを使用して新しいデータについての予測を行うことができます。 たとえば、時系列モデルでコンテンツ クエリを使用すると、検出された周期的構造に関する追加情報を取得できます。一方、予測クエリを使用すると、次の 5 ～ 10 のタイム スライスの予測などを取得できます。 クエリを使用してモデルに関するメタデータを取得することもできます。  
@@ -100,7 +100,7 @@ WHERE NODE_NAME = 'TA00000007'
   
 |Short equation|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24.|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24....|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
@@ -131,7 +131,7 @@ AND NODE_TYPE = 15
   
 -   `PREDICTION JOIN` を使用してトレーニング データに外部ソースのデータを結合します。  
   
--   単一予測クエリを使用してデータにスライスを 1 つずつ指定します。 単一予測クエリを作成する方法については、[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)を参照してください。  
+-   単一予測クエリを使用してデータにスライスを 1 つずつ指定します。 単一予測クエリを作成する方法については、次を参照してください。[データ マイニング クエリ インターフェイス](data-mining-query-tools.md)します。  
   
 ###  <a name="bkmk_ReplaceExtend"></a> 置換および拡張操作の動作について  
  時系列モデルに新しいデータを追加するときは、トレーニング データを拡張するか置換するかを指定できます。  

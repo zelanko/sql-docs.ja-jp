@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 600d5b5dfc42e52c4d4c04912530bf586fb569f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923793"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの保存 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、同じデータ セットに頻繁にアクセスする必要がある場合に、ショートカット クエリ ファイルを保存します。  
@@ -23,7 +23,7 @@ ms.locfileid: "52768174"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   アクティブなワークシートに、必要な形式の MDS によって管理されるデータが含まれている必要があります。 たとえば、列が必要な順序で、任意のフィルターが適用された状態で表示されている必要があります。 詳細については、[読み込み前にデータのフィルター選択&#40;MDS アドインの Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)と[列を並べ替える&#40;MDS アドインの Excel&#41;](reorder-columns-mds-add-in-for-excel.md)を参照してください。  
+-   アクティブなワークシートに、必要な形式の MDS によって管理されるデータが含まれている必要があります。 たとえば、列が必要な順序で、任意のフィルターが適用された状態で表示されている必要があります。 詳細については、次を参照してください。[読み込み前にデータのフィルター選択&#40;MDS アドインの Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)と[列を並べ替える&#40;MDS アドインの Excel&#41;](reorder-columns-mds-add-in-for-excel.md)します。  
   
 ### <a name="to-save-a-shortcut-query-file"></a>ショートカット クエリ ファイルを保存するには  
   

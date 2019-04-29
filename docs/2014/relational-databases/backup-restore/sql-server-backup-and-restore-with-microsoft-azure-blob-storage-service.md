@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52f1bdf9e748625e1310210c98beeb4401a5dd81
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920693"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
   このトピックでは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびへのバックアップから復元する、 [Windows Azure Blob ストレージ サービス](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)します。 また、Windows Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
@@ -27,7 +27,7 @@ ms.locfileid: "53353149"
     > [!NOTE]  
     >  SQL Server 2014 より前の SQL Server バージョンでは、Windows Azure への SQL Server バックアップ ツール アドインを使用して、Windows Azure ストレージへのバックアップをすばやく簡単に作成できます。 詳細については、 [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=324399)を参照してください。  
   
--   **Windows Azure へのバックアップの SQL Server 管理できるようにします。** SQL Server の 1 つのデータベースまたは複数データベースのバックアップ方法やスケジュールを管理したり、インスタンス レベルで既定値の設定を構成します。 この機能と呼ばれます **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** します。 詳細については、[SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)を参照してください。 この機能は、SQL Server 2014 以降で使用できます。  
+-   **Windows Azure へのバックアップの SQL Server 管理できるようにします。** SQL Server を構成することにより、単一データベースまたは複数データベースのバックアップ方法やスケジュールを管理することも、インスタンス レベルでの既定値を設定することもできます。 この機能と呼ばれます **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** します。 詳細については、次を参照してください。 [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)します。 この機能は、SQL Server 2014 以降で使用できます。  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Windows Azure BLOB サービスを使用する利点  
   
@@ -48,14 +48,14 @@ ms.locfileid: "53353149"
   
  [Windows Azure 料金計算ツール](https://go.microsoft.com/fwlink/?LinkId=277060)コストを見積もることができます。  
   
- **記憶域:** 料金は、使用領域に基づいており、段階的なスケールと冗長性のレベルで計算されます。 詳細と最新情報については、「 **料金の詳細** 」の「 [データ管理](https://go.microsoft.com/fwlink/?LinkId=277059) 」を参照してください。  
+ **ストレージ:** 料金は使用領域に基づいており、段階的に、また、冗長性のレベルに応じて計算されます。 詳細と最新情報については、「 **料金の詳細** 」の「 [データ管理](https://go.microsoft.com/fwlink/?LinkId=277059) 」を参照してください。  
   
  **データ転送:** Windows Azure への受信データ転送は無料です。 送信転送は、帯域幅の使用量に対して課金され、段階的な地域固有の区分に基づいて計算されます。 詳細については、「 [料金の詳細](https://go.microsoft.com/fwlink/?LinkId=277061) 」の「データ転送」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [システム データベースのバックアップと復元 &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [チュートリアル:SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
+ [チュートリアル: SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)   
  [SQL Server Backup to URL](sql-server-backup-to-url.md)  
   
   

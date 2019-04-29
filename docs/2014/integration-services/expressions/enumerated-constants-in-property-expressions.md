@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898900"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>プロパティ式における列挙定数
   プロパティ式に列挙子メンバー リストの値が含まれている場合、この式ではメンバーの表示名ではなく、列挙子メンバーの数値を使用する必要があります。 たとえば、式で `LoggingMode` プロパティを設定する場合、表示名 Disabled ではなく、数値 2 を使用する必要があります。  
@@ -61,7 +61,7 @@ ms.locfileid: "58386570"
   
 |DTSCheckpointUsage の表示名|数値|  
 |-----------------------------------------|-------------------|  
-|Never|0|  
+|しない|0|  
 |IfExists|1|  
 |毎回|2|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "58386570"
   
  `Value` プロパティのセットから値を使用して、`DTSExecResult`列挙体。  
   
-|表示名|数値|  
+|フレンドリ名|数値|  
 |-------------------|-------------------|  
 |成功|0|  
 |失敗|1|  
@@ -204,7 +204,7 @@ ms.locfileid: "58386570"
 |DTSFileSystemAttributes の表示名|数値|  
 |----------------------------------------------|-------------------|  
 |標準|0|  
-|Archive|1|  
+|アーカイブ|1|  
 |[非表示]|2|  
 |ReadOnly|4|  
 |システム|8|  
@@ -529,7 +529,7 @@ ms.locfileid: "58386570"
 |BackupTaskType の表示名|数値|  
 |-------------------------------------|-------------------|  
 |[データベース]|0|  
-|ファイル|1|  
+|[ファイル]|1|  
 |Log|2|  
   
  `BackupDevice` プロパティのセットから値を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO)`DeviceType`列挙体。  
@@ -595,7 +595,7 @@ ms.locfileid: "58386570"
 |DTSTransactionOption の表示名|数値|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|サポートされている|1|  
+|Supported|1|  
 |必須|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  

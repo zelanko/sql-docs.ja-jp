@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891071"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2:有効にして、パッケージの構成
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2:パッケージ構成の有効化と構成
   ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの `Directory` プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Directory プロパティにマップする新しいパッケージ レベル変数を作成するには  
@@ -43,7 +43,7 @@ ms.locfileid: "58378210"
   
 9. **プロパティ式エディター**、クリックして、**プロパティ**一覧`Directory`します。  
   
-10. **式**ボックスで、省略記号ボタンをクリックします **([...])**。  
+10. **式**ボックスで、省略記号ボタンをクリックします **([...])。**.  
   
 11. **[式ビルダー]** で [変数] フォルダーを展開し、 **User::varFolderName** 変数を **[式]** ボックスへドラッグします。  
   

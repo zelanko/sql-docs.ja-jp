@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876865"
 ---
 # <a name="back-up-database-backup-options-page"></a>[データベースのバックアップ] \([バックアップ オプション] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[バックアップ オプション]** ページを使用すると、データベースのバックアップのオプションを表示または変更できます。  

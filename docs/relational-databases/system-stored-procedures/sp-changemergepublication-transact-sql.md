@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997123"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ パブリケーションのプロパティを変更します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  マージ パブリケーションのプロパティを変更します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -89,7 +89,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**ftp_password**||FTP サービスへの接続に使用されるユーザー パスワード。|  
 |**ftp_port**||ディストリビューター用 FTP サービスのポート番号。 パブリケーションのスナップショット ファイルが格納される FTP サイトの TCP ポート番号を指定します。|  
 |**ftp_subdirectory**||スナップショット ファイルを作成する場所を指定します、パブリケーションが FTP を使用してスナップショットの配布をサポートしている場合。|  
-|**generation_leveling_threshold**|**int**|生成結果に含まれる変更の数を指定します。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。|  
+|**generation_leveling_threshold**|**int**|1 回の生成に含まれる変更の数です。 生成とは、パブリッシャーまたはサブスクライバーに配信される変更のコレクションです。|  
 |**keep_partition_changes**|**true**|同期は最適化され、変更されたパーティションで行を持つサブスクライバーだけが影響を受けます。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 ||**false**|同期は最適化されず、およびサブスクライバーに送信されるパーティションはパーティション内のデータが変更されたときに検証されます。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 |**max_concurrent_merge**||これは、 **int**パブリケーションに対して実行できる同時マージ処理の最大数を表します。 0 の場合、制限はありません。同時に実行するスケジュールのこのマージ処理数よりも多い場合、マージ処理が完了するまで、余分なジョブがキューに配置します。|  
@@ -98,7 +98,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**pre_snapshot_script**||ポインターを指定します、 **.sql**ファイルの場所。 マージ エージェントは、サブスクライバーでスナップショットを適用するときに、レプリケートされたオブジェクト スクリプトの前に、プリスナップ ショット スクリプトを実行します。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 ||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
-|**publish_to_activedirectory**|**true**|このパラメーターは非推奨とされました、スクリプトの旧バージョンとの互換性でのみサポートされます。 不要になった Active Directory にパブリケーション情報を追加できます。|  
+|**publish_to_activedirectory**|**true**|このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 現在、Active Directory にはパブリケーション情報を追加できません。|  
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
 |**replicate_ddl**|**1**|パブリッシャー側で実行されるデータ定義言語 (DDL) ステートメントがレプリケートされます。|  
 ||**0**|DDL ステートメントはレプリケートされません。|  

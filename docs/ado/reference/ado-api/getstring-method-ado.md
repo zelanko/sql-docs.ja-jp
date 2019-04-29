@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028199"
 ---
 # <a name="getstring-method-ado"></a>GetString メソッド (ADO)
 返します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として。  
@@ -44,7 +44,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NumRows*  
  任意。 変換する行の数、 **Recordset**します。 場合*NumRows*が指定されていない、または内の行の合計数より大きい場合、**レコード セット**、し、すべての行で、**レコード セット**変換されます。  
   
- *ColumnDelimiter*  
+ *[列区切り記号]*  
  任意。 それ以外の場合、タブ文字を指定した場合、列の間で使用する区切り記号。  
   
  *RowDelimiter*  

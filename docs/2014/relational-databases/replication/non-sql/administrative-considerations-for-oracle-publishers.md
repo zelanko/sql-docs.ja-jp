@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022555"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle パブリッシャーの管理上の注意点
   Oracle データベース システムの管理者は、Oracle パブリッシャーを構成して、レプリケーションの変更追跡のメカニズムを設定した後でも、標準の Oracle データベース ユーティリティを使用したり、通常のシステム管理作業を実行したりすることができます。 しかし、特定の管理作業を実行してパブリッシュされたデータへの影響については注意する必要があります。  
@@ -63,7 +63,7 @@ ms.locfileid: "52756294"
  パブリッシャーの削除と再構成の詳細については、「 [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md)」の「パブリッシャーの再構成が必要になる変更」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
  [Oracle パブリッシャーの設計上の注意点および制限](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   

@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0ed819643e7ea818fc17c0fa317473afc8f5ca3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007867"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>ブロック カーソルで使用するためのバインディング列
 ブロック カーソルは、複数の行を返すため、それらを使用するアプリケーションは、1 つの変数ではなく、各列に変数の配列をバインドする必要があります。 これらのアレイと総称されます、*行セットのバッファー*します。 次に、バインディングの 2 つのスタイル。  

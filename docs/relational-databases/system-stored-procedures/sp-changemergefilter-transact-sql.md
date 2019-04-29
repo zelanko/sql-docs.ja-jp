@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997044"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  いくつかのマージ フィルター プロパティを変更します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  いくつかのマージ フィルター プロパティを変更します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

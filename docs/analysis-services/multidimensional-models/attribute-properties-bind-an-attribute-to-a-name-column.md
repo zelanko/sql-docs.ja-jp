@@ -1,5 +1,5 @@
 ---
-title: 名前列に属性をバインド |Microsoft ドキュメント
+title: 名前列に属性のバインド |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95b9ddc6bfee2f33702a77fcfcf85f5dffddab0d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020439"
 ---
-# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>属性のプロパティ - 名前列に属性をバインド
+# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>属性のプロパティ - 属性を名前列にバインドする
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  この手順では、ディメンション デザイナーの **[属性]** ペインと、**[オブジェクトのバインド]** ダイアログ ボックスを使用して、手動で名前列に属性をバインドする方法について説明します。  
+  この手順では、ディメンション デザイナーの **[属性]** ペインと、 **[オブジェクトのバインド]** ダイアログ ボックスを使用して、手動で名前列に属性をバインドする方法について説明します。  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>名前列に属性をバインドするには  
   

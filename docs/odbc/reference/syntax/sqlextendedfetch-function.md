@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982286"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 関数
 **準拠**  
@@ -100,7 +100,7 @@ SQLRETURN SQLExtendedFetch(
 |HY106|フェッチの範囲外の型|引数に指定された値 (DM) *FetchOrientation*が無効です。 (「コメントです」を参照してください)<br /><br /> 引数*FetchOrientation* SQL_FETCH_BOOKMARK、あり SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されています。<br /><br /> SQL_CURSOR_TYPE ステートメント オプションの値が SQL_CURSOR_FORWARD_ONLY、および引数の値*FetchOrientation* SQL_FETCH_NEXT でした。<br /><br /> 引数*FetchOrientation* SQL_FETCH_RESUME でした。|  
 |HY107|行の値が範囲外|SQL_CURSOR_TYPE ステートメントのオプションで指定された値が、SQL_CURSOR_KEYSET_DRIVEN であるにもかかわらず、SQL_KEYSET_SIZE ステートメント属性で指定された値が 0 より大きいと、SQL_ROWSET_SIZE ステートメント属性で指定された値よりも小さい.|  
 |HY111|無効なブックマーク値|引数*FetchOrientation*が SQL_FETCH_BOOKMARK とで指定されたブックマーク、 *FetchOffset*引数が無効です。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、指定されたフェッチの型をサポートしていません。<br /><br /> ドライバーまたはデータ ソースの組み合わせで指定された変換をサポートしていません、 *TargetType*で**SQLBindCol**と対応する列の SQL データ型。 このエラーは、列の SQL データ型は、ドライバー固有の SQL データ型にマップされていた場合にのみ適用されます。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtOption**、SQL_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -123,7 +123,7 @@ SQLRETURN SQLExtendedFetch(
   
 -   呼び出す**SQLExtendedFetch**への呼び出しを混在させることはできません**SQLFetch**または**SQLFetchScroll**、場合**SQLBulkOperations**が呼び出されますすべてのフェッチ関数が呼び出される前に**SQLExtendedFetch**カーソルを閉じてから再度開くまでに呼び出すことはできません。 つまり、 **SQLExtendedFetch**ステートメント状態 S7 でのみ呼び出すことができます。 詳細については、次を参照してください[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)で付録 b:。ODBC の状態遷移のテーブル。  
   
- アプリケーションを呼び出すと**SQLFetchScroll** 、ODBC 2 を使用しているときに *.x*ドライバー、ドライバー マネージャーは、マップするには、この呼び出し**SQLExtendedFetch**します。 詳細については、"SQLFetchScroll および ODBC 2 *.x*ドライバー"で[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)を参照してください。  
+ アプリケーションを呼び出すと**SQLFetchScroll** 、ODBC 2 を使用しているときに *.x*ドライバー、ドライバー マネージャーは、マップするには、この呼び出し**SQLExtendedFetch**します。 詳細については、次を参照してください。"SQLFetchScroll および ODBC 2 *.x*ドライバー"で[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)します。  
   
  ODBC 2 *.x*、 **SQLExtendedFetch**を複数の行のフェッチが呼び出されたと**SQLFetch**を 1 つの行のフェッチが呼び出されました。 ODBC 3 *.x*、その一方で、 **SQLFetch**複数行のフェッチを呼び出すことができます。  
   

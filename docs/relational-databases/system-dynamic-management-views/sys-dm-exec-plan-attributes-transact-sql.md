@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013218"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |dbid|**int**|プランによって参照されるエンティティを含むデータベースの ID を指定します。<br /><br /> アドホック プランまたは準備されたプランでは、バッチの実行元となるデータベース ID です。|  
 |dbid_execute|**int**|格納されているシステム オブジェクトに対して、**リソース**データベース、キャッシュされたプランを実行するためのデータベース ID。 その他の場合は 0 になります。|  
 |user_id|**int**|値 -2 は、送られたバッチが暗黙的な名前解決に依存せず、複数ユーザー間での共有が可能であることを示します。 これは推奨される方法です。 他の値は、データベースのクエリを送っているユーザーのユーザー ID を示します。| 
-|language_id|**smallint**|キャッシュ オブジェクトを作成した接続の言語の ID です。 詳細については、[sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)を参照してください。|  
+|language_id|**smallint**|キャッシュ オブジェクトを作成した接続の言語の ID です。 詳細については、次を参照してください。 [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)します。|  
 |date_format|**smallint**|キャッシュ オブジェクトを作成した接続の日付形式です。 詳しくは、「[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)」をご覧ください。|  
 |date_first|**tinyint**|日付の最初の値です。 詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。|  
 |status|**int**|キャッシュ参照キーの一部である内部ステータス ビットです。|  
@@ -86,7 +86,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 ## <a name="remarks"></a>コメント  
   
-## <a name="set-options"></a>オプションの設定  
+## <a name="set-options"></a>SET オプション  
  値のみで、同じコンパイル済みプランのコピーが異なる場合があります、 **set_options**列。 これは、異なる接続では、同じクエリに対して異なる SET オプション セットが使用されていることを示します。 通常、異なるオプション セットを使用することは望ましくありません。異なるオプション セットを使用すると、余分なコンパイルが発生し、プランの再利用が減少して、キャッシュ内にプランの複数のコピーが存在することが原因でプラン キャッシュが増加します。  
   
 ### <a name="evaluating-set-options"></a>SET オプションの評価  

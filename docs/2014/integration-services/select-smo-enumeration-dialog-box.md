@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 274a56641ae4f452b8eda8bca00663b1a9e83380
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889293"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>[SMO 列挙の選択] ダイアログ ボックス
   **[SMO 列挙の選択]** ダイアログ ボックスを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスの列挙対象となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) オブジェクトを指定し、列挙型を選択できます。  

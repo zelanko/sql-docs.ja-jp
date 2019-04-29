@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662994"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page イベント クラス
   **Database Suspect Data Page** イベント クラスは、 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) の [suspect_pages](../databases/msdb-database.md)テーブルにページがいつ追加されたかを示します。 このイベント クラスは、問題があると思われるページの発生を監視するトレースに含めます。  

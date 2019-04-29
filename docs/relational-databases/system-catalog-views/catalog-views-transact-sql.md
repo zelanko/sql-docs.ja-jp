@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4679c8dbc853f0bc902a59cb653330a638b2f685
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960003"
 ---
 # <a name="system-catalog-views-transact-sql"></a>システム カタログ ビュー (TRANSACT-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "51677221"
 > [!NOTE]  
 >  カタログ ビューには、レプリケーション、バックアップ、データベース メンテナンス プラン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントなどのカタログ データに関する情報は含まれていません。  
   
- カタログ ビューの中には、他のカタログ ビューの行を継承するものもあります。 たとえば、 [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)カタログ ビューが継承、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューです。 sys.objects カタログ ビューはベース ビューと呼ばれ、sys.tables ビューは派生ビューと呼ばれます。 sys.tables カタログ ビューではテーブルに固有の列のほか、sys.objects カタログ ビューで返されるすべての列が返されます。 sys.objects カタログ ビューでは、テーブル以外の、ストアド プロシージャやビューなどのオブジェクトの行が返されます。 テーブルの作成後は、両方のビューでテーブルのメタデータが返されます。 これら 2 つのカタログ ビューではテーブルに関する異なるレベルの情報が返されますが、このテーブルのメタデータ内のエントリは 1 つだけで、名前と object_id が、それぞれ 1 つだけ含まれています。 まとめると次のようになります。  
+ カタログ ビューの中には、他のカタログ ビューの行を継承するものもあります。 たとえば、 [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)カタログ ビューが継承、 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)カタログ ビューです。 Sys.objects カタログ ビューはベース ビューと呼ばれます、sys.tables ビューは派生ビューと呼ばれます。 sys.tables カタログ ビューではテーブルに固有の列のほか、sys.objects カタログ ビューで返されるすべての列が返されます。 Sys.objects カタログ ビューでは、ストアド プロシージャやビューなどのテーブル以外のオブジェクトの行を返します。 テーブルを作成すると、両方のビューでテーブルのメタデータが返されます。 1 つだけのエントリがでは、2 つのカタログ ビューには、異なるレベルのテーブルに関する情報が返されますで、名前と object_id には、このテーブルのメタデータであります。 まとめると次のようになります。  
   
 -   ベース ビューには列のサブセットと行のスーパーセットが含まれます。  
   

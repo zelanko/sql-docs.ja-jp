@@ -11,16 +11,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923495"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
   **データベースのアップグレード ウィザード** を使用すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
   
-## <a name="action"></a>アクション  
+## <a name="action"></a>操作  
  これは、ウィザードの最初のページです。 **[次へ]** をクリックして、データベースのアップグレード処理を開始します。  
   
 ## <a name="upgrade-review"></a>[アップグレードの確認]  

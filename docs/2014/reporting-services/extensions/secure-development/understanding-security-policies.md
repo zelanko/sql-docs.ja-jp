@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990129"
 ---
 # <a name="understanding-security-policies"></a>セキュリティ ポリシーの概要
   レポート サーバーが実行するすべてのコードは、特定のコード アクセス セキュリティ ポリシーの一部である必要があります。 これらのセキュリティ ポリシーは、証拠と名前付き権限セットとを対応付けるコード グループで構成されます。 多くの場合、コード グループは、そのグループ内のコードに対して与えることのできる権限が指定された名前付き権限セットに関連付けられます。 ランタイムは、信頼されるホストまたはローダーが提供した証拠を使用して、コードが属するコード グループ、およびコードに付与された権限を確認します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の共通言語ランタイム (CLR) によって定義された、このセキュリティ ポリシー アーキテクチャに準拠します。 ここでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の各種コードおよび関連付けられたポリシー ルールについて説明します。  

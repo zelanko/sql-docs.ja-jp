@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1dc346c31b7d26989dd2fac018a7bae0752f77e4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925178"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>ドメイン ベースの属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でドメイン ベースの属性を作成して、属性の値にエンティティのメンバーを設定します。  

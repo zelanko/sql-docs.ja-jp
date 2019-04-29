@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635588"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server、Red Hat Enterprise Linux の共有ディスク クラスターで運用します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "52393576"
 
 ## <a name="architecture-description"></a>アーキテクチャの説明
 
-クラスタ リングの層は [Pacemaker](https://clusterlabs.org/)の上に構築されたRed Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています Corosync と Pacemaker クラスター通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
+クラスタ リングの層は、[Pacemaker](https://clusterlabs.org/)の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。  Corosync と Pacemaker クラスター通信およびリソース管理を調整します。 SQL Server のインスタンスは 1 つのノードもしくは別のもう一つのノードのどちらかでアクティブです。
 
 次の図は、SQL Server での Linux クラスターのコンポーネントを示しています。 
 
@@ -261,7 +261,7 @@ pacemaker: active/enabled
 
     Pacemaker ですべてのノードが通信できるように、で次のポートが開かれている必要があります。
     
-    - * * TCP:2224、3121、21064
+    - * * TCP:2224, 3121, 21064
 
 - **Pacemaker および Corosync サービスが実行されているか**
 

@@ -15,11 +15,11 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc1918bec6dc8f0cfa242341b59fefd477854887
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836892"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 接続マネージャー
   **Azure Data Lake Store 接続マネージャー** SSIS パッケージを 2 つの認証の種類を Azure Data Lake Store サービスに接続できるようにします。Azure AD のユーザー Id と Azure AD サービスの Id。  

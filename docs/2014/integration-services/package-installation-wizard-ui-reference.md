@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890275"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>パッケージ インストール ウィザードの UI リファレンス
   **パッケージ インストール ウィザード**を使用すると、プロジェクトに含まれるパッケージおよびその他のファイル、パッケージの従属ファイルを含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを配置できます。  

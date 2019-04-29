@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22090b659e78ac322aee9376a93f31bebfe77be0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988027"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、レポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  

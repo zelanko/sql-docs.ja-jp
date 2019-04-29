@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985812"
 ---
 # <a name="rendering-extensions-overview"></a>表示拡張機能の概要
   表示拡張機能は、レポート サーバーのコンポーネントまたはモジュールで、レポートのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 7 つの表示拡張機能が含まれています。HTML、Excel、Word、CSV またはテキスト、XML、イメージ、および PDF です。 追加の表示拡張機能を作成して、他の形式でレポートを生成できます。  

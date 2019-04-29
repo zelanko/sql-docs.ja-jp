@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013550"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>引数  
 *plan_handle*  
-バッチに関するクエリ実行プランの一意識別子を指定します。このバッチは既に実行されていて、そのプランはプラン キャッシュに格納されています。 *plan_handle*は**varbinary (64)** します。   
+実行されるバッチのクエリ実行プランを一意に識別するトークンは、そのプランがプラン キャッシュ内に存在します。 *plan_handle*は**varbinary (64)** します。   
 
 *Plan_handle*次の動的管理オブジェクトから取得できます。  
   
@@ -64,14 +64,14 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
 |**cacheobjtype**|**nvarchar (50)**|プランのキャッシュ オブジェクトの種類です。 列値が許容されません。 値を指定できます。<br /><br /> 実行プラン<br /><br /> CLR コンパイル済みの関数<br /><br /> CLR のコンパイル手順<br /><br /> カーソル|  
   
 ## <a name="permissions"></a>アクセス許可  
- サーバーに対する VIEW SERVER STATE 権限が必要です。  
+ サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
   
 ## <a name="physical-joins"></a>物理結合  
  ![依存関係ダイアグラム](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "依存関係ダイアグラム")  
   
 ## <a name="relationship-cardinalities"></a>リレーションシップの基数  
   
-|From|目的|基準|リレーションシップ|  
+|From|変換先|基準|リレーションシップ|  
 |----------|--------|--------|------------------|  
 |**dm_exec_cached_plan_dependent_objects**|**dm_os_memory_objects**|**memory_object_address**|一対一|  
   

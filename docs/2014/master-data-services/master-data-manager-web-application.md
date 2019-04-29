@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 20783b06559eab97cec56b527c5c8ab0f13518e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923883"
 ---
 # <a name="master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーション
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションは、主に、管理者が管理タスクを実行するために使用します。 たとえば、管理者のみが、モデル、ビジネス ルール、またはデータのバージョンを作成できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999551"
 ---
 # <a name="name-not-found-dialog-box"></a>[名前が見つかりません] ダイアログ ボックス
   ダイアログ ボックスに表示されている 1 つまたは複数のオブジェクト名が見つかりませんでした。 オプションを選択して続行してください。  
@@ -37,7 +37,7 @@ ms.locfileid: "52809464"
  **[オブジェクト名を入力してください]**  
  見つからなかったオブジェクトの名前が表示されます。 オブジェクト名を訂正するか、新しいオブジェクト名を入力してください。  
   
- **削除***\<オブジェクト名 >***選択範囲から**  
+ **Remove**  *\<object name>*  **from selection**  
  選択すると、 **[名前が見つかりません]** ダイアログ ボックスが閉じ、 **[オブジェクトの選択]** ダイアログ ボックスから項目が削除されます。  
   
   

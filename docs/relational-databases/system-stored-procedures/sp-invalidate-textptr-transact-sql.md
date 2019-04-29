@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960927"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、各データベースの各トランザクションに、アクティブで有効な行内テキスト ポインターを 1,024 個まで使用できます。ただし、複数のデータベースにまたがるトランザクションの場合は、各データベースに行内テキスト ポインターを 1,024 個まで使用できます。 **sp_invalidate_textptr**行内テキスト ポインターを無効にし、そのため、他の行内テキスト ポインター用に領域を解放するために使用できます。  
   
- Text in row オプションの詳細については、[sp_tableoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)を参照してください。  
+ Text in row オプションの詳細については、次を参照してください。 [sp_tableoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

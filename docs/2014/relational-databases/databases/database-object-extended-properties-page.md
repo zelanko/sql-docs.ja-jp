@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917207"
 ---
 # <a name="database-object-extended-properties-page"></a>データベース オブジェクト ([拡張プロパティ] ページ)
   拡張プロパティによって、カスタム プロパティをデータベース オブジェクトに追加できます。 このページを使用すると、選択されているオブジェクトの拡張プロパティを表示または変更できます。 データベース オブジェクトのすべての種類に対して、同じ **[拡張プロパティ]** ページが表示されます。  

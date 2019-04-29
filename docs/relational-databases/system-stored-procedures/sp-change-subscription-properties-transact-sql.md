@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997102"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントを使用してログインします。|  
 |**internet_password**||マージ エージェントが基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに使用するパスワード。|  
 |**internet_security_mode**|**1**|Web 同期には、Windows 統合認証を使用します。 Web 同期で基本認証を使用することをお勧めします。 詳しくは、「 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。|  
-||**0**|Web 同期に基本認証を使用。<br /><br /> 注:Web 同期には、Web サーバーへの SSL 接続が必要です。|  
+||**0**|Web 同期に基本認証を使用。<br /><br /> 注:Web 同期では、Web サーバーへの SSL 接続が必要です。|  
 |**internet_timeout**||Web 同期要求の有効期限が切れるまでの秒数で、時間の長さ。|  
 |**internet_url**||Web 同期レプリケーション リスナーの位置を表す URL です。|  
 |**merge_job_login**||エージェントを実行する Windows アカウントにログインします。|  

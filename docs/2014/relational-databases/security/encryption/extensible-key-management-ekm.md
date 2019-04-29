@@ -15,11 +15,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011664"
 ---
 # <a name="extensible-key-management-ekm"></a>拡張キー管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、 *拡張キー管理* (EKM) を含むデータ暗号化機能が用意されています。暗号化とキーの生成には *Microsoft Cryptographic API* (MSCAPI) が使用されます。 データとキーの暗号化のための暗号化キーは一時的なキー コンテナーに作成され、それらをデータベースに格納するには、まずプロバイダーからエクスポートする必要があります。 この方法により、暗号化キー階層とキーのバックアップを含むキー管理を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で処理できるようになります。  
@@ -101,7 +101,7 @@ GO
 ### <a name="encryption-and-decryption-by-an-ekm-device"></a>EKM デバイスによる暗号化および暗号化解除  
  対称キーと非対称キーを使用してデータを暗号化および暗号化解除するには、以下の関数と機能を使用できます。  
   
-|関数または機能|参照|  
+|関数または機能|リファレンス|  
 |-------------------------|---------------|  
 |対称キー暗号化|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
 |非対称キー暗号化|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  

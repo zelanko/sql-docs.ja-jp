@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db13b0c96d551eeb88e7b6c8646e4cfb87187646
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002143"
 ---
-# <a name="spsyscollectorenablecollector-transact-sql"></a>sp_syscollector_enable_collector (Transact-SQL)
+# <a name="spsyscollectorenablecollector-transact-sql"></a>sp_syscollector_enable_collector (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データ コレクターを有効にします。 データ コレクターはサーバーごとに 1 つしか存在しないので、パラメーターは必要ありません。  
+  データ コレクターを有効にします。 サーバーごとに 1 つだけのデータ コレクターがあるため、パラメーターは必要ありません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ dbo.sp_syscollector_enable_collector
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 既定でサーバー上のデータ コレクターが使用されます。  
+ 既定値は、サーバー上のデータ コレクターです。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) **dc_admin** または **dc_operator** 固定データベース ロールのメンバーシップが必要です。  

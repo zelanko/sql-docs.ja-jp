@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828005"
 ---
 # <a name="data-flow"></a>データ フロー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが用意されています。 変換元は、リレーショナル データベース、ファイル、および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのテーブルやビューなどのデータ ストアからデータを抽出します。 変換は、データを変更、集約、およびクリーンアップします。 変換先は、データをデータ ストアに読み込んだり、メモリ内のデータセットを作成します。  

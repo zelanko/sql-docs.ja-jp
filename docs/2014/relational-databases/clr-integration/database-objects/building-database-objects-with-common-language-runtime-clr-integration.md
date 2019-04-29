@@ -18,13 +18,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919253"
 ---
-# <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>共通言語ランタイム (CLR) 統合を使用したデータベース オブジェクトの構築
+# <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR (共通言語ランタイム) 統合によるデータベース オブジェクトの構築
   使用してデータベース オブジェクトを構築することができます、 [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 「CLR ルーチン」と呼びます CLR ルーチンには、次のものがあります。  
   
 -   スカラー UDF (ユーザー定義スカラー値関数)  

@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76625dc956ff36788f52c5da4106b7ac5eb8c2ab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896168"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>カスタム タスクでのデータ ソースへの接続
   タスクは、接続マネージャーを使用して外部データ ソースに接続し、データを取得または保存します。 デザイン時には、接続マネージャーは論理接続を表し、サーバー名や認証プロパティなどの重要な情報を示します。 実行時に、タスクは接続マネージャーの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> メソッドを呼び出して、データ ソースへの物理接続を確立します。  

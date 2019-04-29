@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7873f616e2a6e9657f2e7c59c745fdab77c9b61
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836051"
 ---
 # <a name="edit-instance-properties"></a>インスタンスのプロパティの編集
   プロパティ エディターを使用すると、初期構成を作成した後に CDC インスタンスを変更することができます。 プロパティ エディターでは、次の操作を実行できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "58385886"
   
      左ペインでサービスを右クリックし、 **[プロパティ]** をクリックすることもできます。  
   
-### <a name="or"></a>OR  
+### <a name="or"></a>スイッチまたは  
   
 1.  CDC デザイナー コンソールの左側のペインで、操作するサービスを選択します。  
   

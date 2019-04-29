@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6713a6b8b7b0b91fda24298a88f92b5cbd86bb09
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834044"
 ---
 # <a name="confirm-delete-page"></a>[削除の確認] ページ
   **[削除の確認]** ページでは、特定のコンポーネントを削除するときに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が確認メッセージを表示するかどうかを指定します。  

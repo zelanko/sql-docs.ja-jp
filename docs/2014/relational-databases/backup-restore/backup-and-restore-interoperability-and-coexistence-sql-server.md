@@ -1,5 +1,5 @@
 ---
-title: 'バックアップと復元: 相互運用性と共存 (SQL Server) | Microsoft Docs'
+title: 'バックアップと復元: 相互運用性と共存 (SQL Server) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922437"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>バックアップと復元: 相互運用性と共存 (SQL Server)
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のいくつかの機能のバックアップと復元に関する考慮事項について説明します。 このような機能には、ファイル復元とデータベースの起動、オンライン復元と無効化されたインデックス、データベース ミラーリング、段階的な部分復元、およびフルテキスト インデックスが含まれます。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のいくつかの機能のバックアップと復元に関する考慮事項について説明します。 このような機能には、ファイル復元とデータベースの起動、オンライン復元と無効化されたインデックス、データベース ミラーリング、段階的な部分復元、およびフルテキスト インデックスが含まれます。  
   
  **このトピックの内容**  
   
@@ -132,6 +132,6 @@ ms.locfileid: "48155572"
 ## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [レプリケートされたデータベースのバックアップと復元](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [アクティブなセカンダリ: セカンダリ レプリカでバックアップの&#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [アクティブなセカンダリ:セカンダリ レプリカでバックアップ&#40;AlwaysOn 可用性グループ&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

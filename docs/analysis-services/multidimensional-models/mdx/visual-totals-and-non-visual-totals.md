@@ -1,5 +1,5 @@
 ---
-title: 表示部分の合計と非表示部分の合計 |Microsoft ドキュメント
+title: 表示部分の合計と非表示部分の合計 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90925c99f281d128ff197fb7b0ef3b088faf5b7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62984458"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>表示部分の合計と非表示部分の合計
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -97,12 +97,12 @@ ms.locfileid: "34026749"
  前の結果と比較すると、[All Resellers] 行は [Value Added Reseller] と [Warehouse] の表示値の合計を示していますが、[All Products] 列は表示されていない製品も含むすべての製品の合計額を示していることがわかります。  
   
 ## <a name="see-also"></a>参照  
- [MDX & #40; の主な概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX の主な概念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [メンバー、組、およびセット & #40; の操作MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX の基本的なクエリ & #40 です。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [クエリおよびスライサー軸 & #40; を使用してクエリを制限します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
- [クエリ & #40; 内のキューブ コンテキストの確立MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
+ [メンバー、組、およびセットの操作 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX の基本的なクエリ &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [クエリ軸とスライサー軸によるクエリの制限 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [クエリ内のキューブ コンテキストの確立 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
   
   

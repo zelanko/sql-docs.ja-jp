@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004200"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  ハッシュ化インデックス型は、完全一致検索または範囲検索を受け付けますが、パターン照合検索ではインデックスは使用されません。  
   
- **sp_statistics**と等価**SQLStatistics** ODBC にします。 返される結果は並べ**NON_UNIQUE**、**型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および**SEQ_IN_インデックス**します。 詳細については、、 [ODBC API リファレンス](https://go.microsoft.com/fwlink/?LinkId=68323)を参照してください。  
+ **sp_statistics**と等価**SQLStatistics** ODBC にします。 返される結果は並べ**NON_UNIQUE**、**型**、 **INDEX_QUALIFIER**、 **INDEX_NAME**、および**SEQ_IN_インデックス**します。 詳細については、次を参照してください。、 [ODBC API リファレンス](https://go.microsoft.com/fwlink/?LinkId=68323)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  

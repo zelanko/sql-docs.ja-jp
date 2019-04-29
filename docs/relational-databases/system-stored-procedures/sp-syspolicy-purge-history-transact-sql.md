@@ -19,13 +19,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b251e0b215c22b447ddc1b7005b12798df4c5df0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000779"
 ---
-# <a name="spsyspolicypurgehistory-transact-sql"></a>sp_syspolicy_purge_history (Transact-SQL)
+# <a name="spsyspolicypurgehistory-transact-sql"></a>sp_syspolicy_purge_history (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   履歴の保有間隔の設定に従って、ポリシー評価履歴を削除します。  
@@ -64,10 +64,10 @@ GO
  PolicyAdministratorRole 固定データベース ロールのメンバーシップが必要です。  
   
 > [!IMPORTANT]  
->  資格情報が昇格される可能性について: PolicyAdministratorRole ロールに割り当てられているユーザーは、サーバー トリガーを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの動作に影響する可能性があるポリシーの実行をスケジュールできます。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
+>  資格情報が昇格される可能性:PolicyAdministratorRole ロールのユーザーがサーバー トリガーを作成しのインスタンスの運用に影響する可能性のあるポリシーの実行をスケジュール設定、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 たとえば、PolicyAdministratorRole ロールに割り当てられているユーザーは、ほとんどのオブジェクトが[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成されないようにすることができるポリシーを作成できます。 構成の制御について信頼できるユーザーにのみこの昇格される可能性の資格情報、ため PolicyAdministratorRole ロールを付与する必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ポリシー評価履歴を削除します。  
+ 次の例では、ポリシーの評価履歴を削除します。  
   
 ```  
 EXEC msdb.dbo.sp_syspolicy_purge_history;  

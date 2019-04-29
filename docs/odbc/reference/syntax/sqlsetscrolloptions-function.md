@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbdd2038bc217a7ca2a2efe08940c03c5da5d8f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985238"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions 関数
 **準拠**  
@@ -41,7 +41,7 @@ ms.locfileid: "53206751"
 >  ドライバー マネージャーがマップされます**SQLSetScrollOptions** 、ODBC 3 の操作、アプリケーションの *.x*がサポートされていないドライバー **SQLSetScrollOptions**、ドライバーマネージャーに SQL_ROWSET_SIZE ステートメントのオプション、not、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定、*複合カーソル*引数**SQLSetScrollOption**します。 その結果、 **SQLSetScrollOptions**への呼び出しで複数の行をフェッチするときに、アプリケーションでは使用できません**SQLFetch**または**SQLFetchScroll**します。 フェッチの複数の行への呼び出しで場合にのみ使用できます**SQLExtendedFetch**します。  
   
 ## <a name="remarks"></a>コメント  
- アプリケーションは、64 ビットのオペレーティング システムで実行される場合は、[ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)を参照してください。  
+ アプリケーションは、64 ビットのオペレーティング システムで実行される場合は、次を参照してください。 [ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

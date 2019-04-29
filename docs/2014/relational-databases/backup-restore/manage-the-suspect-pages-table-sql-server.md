@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921958"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) テーブルは、 [msdb データベース](../databases/msdb-database.md)にあります。  

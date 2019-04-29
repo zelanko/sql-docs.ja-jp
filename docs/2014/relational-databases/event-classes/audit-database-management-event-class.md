@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73fffd183e9bfea55cc5a86184e348618eabf927
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62932437"
 ---
 # <a name="audit-database-management-event-class"></a>Audit Database Management イベント クラス
   **Audit Database Management** イベント クラスは、データベースを作成、変更、または削除するときに発生します。  

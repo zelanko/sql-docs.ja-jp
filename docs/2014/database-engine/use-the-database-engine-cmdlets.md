@@ -24,11 +24,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e2d11a6cb32759d32c95ddf5cd059071ea46eb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843226"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>データベース エンジン コマンドレットの使用
   Windows PowerShell コマンドレットは、単一の機能を実現するコマンドで、通常は **Get-Help** や **Set-MachineName** のように動詞と名詞を組み合わせた名前付け規則に従います。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 固有のコマンドレットは、Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロバイダーによって提供されます。  
@@ -56,11 +56,11 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |----------------------|-----------|  
 |**Invoke-Sqlcmd** の使用による、 **または XQuery ステートメントを含む** sqlcmd [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトやコマンドの実行について説明します。 **sqlcmd** の入力を、文字列の入力パラメーターとして、または開くスクリプト ファイルの名前として受け取ることができます。|[Invoke-Sqlcmd コマンドレット](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |**Invoke-PolicyEvaluation** の使用による、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの対象セットがポリシー ベースの管理ポリシーに定義されている条件に準拠しているかどうかの報告について説明します。 必要に応じて、このコマンドレットを使用して、ポリシー条件に準拠していない対象オブジェクト内の設定可能なオプションを再構成することができます。|[Invoke-PolicyEvaluation コマンドレット](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
-|使用方法について説明`Encode-Sqlname`と`Decode-Sqlname`Windows PowerShell パスでサポートされていない文字が含まれている SQL Server 識別子の処理。|[SQL Server 識別子のエンコードとデコード](../powershell/encode-and-decode-sql-server-identifiers.md)|  
-|使用方法について説明`Convert-UrnToPath`SQL Server 管理オブジェクト URN Uniform Resource Name () を同等の SQL Server プロバイダー パスに変換します。|[URN から SQL Server プロバイダー パスへの変換](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
+|`Encode-Sqlname` と `Decode-Sqlname` の使用による、Windows PowerShell パスではサポートされていない文字を含んだ SQL Server 識別子の処理について説明します。|[SQL Server 識別子のエンコードとデコード](../powershell/encode-and-decode-sql-server-identifiers.md)|  
+|`Convert-UrnToPath` の使用による、SQL Server 管理オブジェクト URN (Uniform Resource Name) から対応する SQL Server プロバイダー パスへの変換について説明します。|[URN から SQL Server プロバイダー パスへの変換](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [AlwaysOn 可用性グループの PowerShell コマンドレットの概要&#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

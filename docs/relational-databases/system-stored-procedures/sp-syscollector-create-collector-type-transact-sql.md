@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004164"
 ---
-# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
+# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   データ コレクターのコレクター型を作成します。 コレクター型はの論理ラッパー、[!INCLUDE[ssIS](../../includes/ssis-md.md)]データの収集および管理データ ウェアハウスにアップロードすることの実際のメカニズムを提供するパッケージ。  
@@ -60,10 +60,10 @@ sp_syscollector_create_collector_type
  コレクション セットのプロパティ ページで使用するために XML を変換するときのテンプレートです。 *parameter_formatter*は**xml**既定値は NULL です。  
   
  [@collection_package_id = ] *collection_package_id*  
- コレクション セットで使用される [!INCLUDE[ssIS](../../includes/ssis-md.md)] コレクション パッケージを参照する一意なローカル識別子を指定します。 *collection_package_id*は**uniqueidentifer**必要があります。  
+ ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション パッケージのコレクション セットによって使用されます。 *collection_package_id*は**uniqueidentifer**必要があります。  
   
  [@upload_package_id = ] *upload_package_id*  
- コレクション セットで使用される [!INCLUDE[ssIS](../../includes/ssis-md.md)] アップロード パッケージを参照する一意なローカル識別子を指定します。 *upload_package_id*は**uniqueidentifier**必要があります。  
+ ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション セットによって使用されるパッケージをアップロードします。 *upload_package_id*は**uniqueidentifier**必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

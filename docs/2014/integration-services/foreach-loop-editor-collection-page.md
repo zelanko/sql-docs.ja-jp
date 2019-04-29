@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894533"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>[Foreach ループ エディター] ([コレクション] ページ)
   **[Foreach ループ エディター]** ダイアログ ボックスの **[コレクション]** ページを使用すると、列挙子の型を指定して列挙子を構成できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "58380270"
  **式**  
  **[式]** をクリックして展開すると、既存のプロパティ式のリストが表示されます。 参照ボタン ( **[...]** ) ボタンをクリックして、列挙子プロパティのプロパティ式を追加するか、既存のプロパティ式を編集して評価します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;式](expressions/integration-services-ssis-expressions.md)、[プロパティ式エディター](expressions/property-expressions-editor.md)、[式ビルダー](expressions/expression-builder.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)、[プロパティ式エディター](expressions/property-expressions-editor.md)、[式ビルダー](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>列挙子の動的オプション  
   
@@ -121,7 +121,7 @@ ms.locfileid: "58380270"
 > [!NOTE]  
 >  変数は、Object データ型にする必要があります。それ以外の場合はエラーが発生します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
  **[最初のテーブル内の行]**  
  最初のテーブルの行のみを列挙する場合に選択します。  
@@ -135,13 +135,13 @@ ms.locfileid: "58380270"
 ### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>[Enumerator] = [Foreach ADO.NET Schema Rowset 列挙子]  
  Foreach ADO.NET Schema Rowset 列挙子は、指定したデータ ソースのスキーマを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach ADO.NET Schema Rowset 列挙子を使用して、 **AdventureWorks** データベース内の列や、スキーマ権限を取得するための SQL 実行タスクなど、スキーマを列挙できます。  
   
- **[接続]**  
+ **Connection**  
  ADO.NET 接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして ADO.NET 接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  ADO.NET 接続マネージャーでは、OLE DB の .NET プロバイダーを使用する必要があります。 SQL Server に接続する場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client の使用をお勧めします。このプロバイダーは、 **[接続マネージャー]** ダイアログ ボックスの **[OleDb の .Net プロバイダー]** セクションに一覧表示されます。  
   
- **関連トピック:** [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、 [ADO.NET 接続マネージャーの構成](configure-ado-net-connection-manager.md)  
+ **関連トピック:** [ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、[ADO.NET の接続マネージャーの構成](configure-ado-net-connection-manager.md)  
   
  **[スキーマ]**  
  列挙するスキーマを選択します。  
@@ -157,7 +157,7 @@ ms.locfileid: "58380270"
  **変数**  
  一覧で変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>[Enumerator] = [Foreach NodeList 列挙子]  
  Foreach Nodelist 列挙子は、XPath 式を XML ファイルに適用した結果として生成された XML ノードのセットを列挙するために使用します。 たとえば、Foreach ループにスクリプト タスクが含まれている場合、Foreach NodeList 列挙子を使用して、XPath 式の条件を満たす値を XML ファイルからスクリプト タスクに渡すことができます。  
@@ -184,7 +184,7 @@ ms.locfileid: "58380270"
   
  **[DocumentSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
  **[EnumerationType]**  
  一覧から列挙型を選択します。 このプロパティのオプションを次の表に示します。  
@@ -214,7 +214,7 @@ ms.locfileid: "58380270"
   
  **[OuterXPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
  **[InnerElementType]**  
  場合**EnumerationType**に設定されている`ElementCollection`一覧で、内部要素の型を選択します。  
@@ -237,15 +237,15 @@ ms.locfileid: "58380270"
   
  **[InnerXPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数を追加](../../2014/integration-services/add-variable.md)します。  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>[Enumerator] = [Foreach SMO 列挙子]  
  Foreach SMO 列挙子は、SQL Server 管理オブジェクト (SMO) のオブジェクトを列挙するために使用します。 たとえば、Foreach ループに SQL 実行タスクが含まれている場合、Foreach SMO 列挙子を使用して、 **AdventureWorks** データベース内のテーブルを列挙し、各テーブル内の行数をカウントするクエリを実行できます。  
   
- **[接続]**  
+ **Connection**  
  既存の ADO.NET 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
- 関連項目 :[ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)、 [ADO.NET 接続マネージャーの構成](configure-ado-net-connection-manager.md)  
+ 関連項目:[ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)、[ADO.NET の接続マネージャーの構成](configure-ado-net-connection-manager.md)  
   
  **[列挙]**  
  列挙する SMO オブジェクトを指定します。  
@@ -261,7 +261,7 @@ ms.locfileid: "58380270"
  **[Azure Storage 接続マネージャー]**  
  既存の Azure ストレージ接続マネージャーを選択するか、Azure ストレージ アカウントを参照する接続マネージャーを新規作成します。  
   
- 関連項目 :[Azure Storage 接続マネージャー](connection-manager/azure-storage-connection-manager.md)します。  
+ 関連項目:[Azure Storage 接続マネージャー](connection-manager/azure-storage-connection-manager.md)  
   
  **BLOB コンテナーの名前**  
  列挙する BLOB ファイルを含む BLOB コンテナーの名前を指定します。  

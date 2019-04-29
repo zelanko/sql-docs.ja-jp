@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa4a76f8452034175bd4033d8213372f2793e162
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913254"
 ---
 # <a name="audit-backup-and-restore-event-class"></a>Audit Backup/Restore イベント クラス
   **Audit Backup/Restore** イベント クラスは、バックアップまたは復元コマンドが実行されたときに発生します。  

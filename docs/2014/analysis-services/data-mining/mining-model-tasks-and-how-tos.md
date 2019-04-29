@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b555d929bb343de1d651b158335673bd2e0573f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733380"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>マイニング モデル タスクと操作方法
   マイニング構造のマイニング モデルを管理および処理するには、 **のデータ マイニング デザイナーにある** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブを使用します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48196065"
   
 -   [マイニング モデルでの列の分離の変更](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [モデリング フラグの変更を表示または&#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
+-   [モデリング フラグの表示または変更 (データ マイニング)](modeling-flags-data-mining.md)  
   
 -   [モデルでリグレッサーとして使用する列の指定](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48196065"
   
 ## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)   
- [マイニング モデル&#40;Analysis Services - データ マイニング&#41;](mining-models-analysis-services-data-mining.md)   
+ [マイニング モデル (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)   
  [データ マイニングの概念](data-mining-concepts.md)  
   
   

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dd30631b5ecdcfb55fcb571bd8bf3c1eb39713dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987091"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>キーボード ショートカット (レポート ビルダー)
   レポート ビルダーで作業をする際には、Windows 環境が提供しているナビゲーション用ショートカット キーのすべてにアクセスできます。 複数ある標準キーボード マッピング スキームから選択できます。  

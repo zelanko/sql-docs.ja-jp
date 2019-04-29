@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902464"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
   フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号を使用した固定幅形式、または幅合わせしない形式を使用できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "58390230"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [フラット ファイルのカスタム プロパティ](flat-file-custom-properties.md)  
   

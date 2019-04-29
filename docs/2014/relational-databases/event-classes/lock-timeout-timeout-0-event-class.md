@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 312cda4fd588336d8be42c82a20392c8d0b80664
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023499"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Lock:Timeout (timeout &gt; 0) イベント クラス
   **Lock:Timeout (timeout > 0)** イベント クラスは、要求したリソースで別のトランザクションがブロッキング ロックを保持しているために、ページなどのリソースのロック要求がタイムアウトしたことを示します。 このイベント クラスの動作は、タイムアウト値が 0 であるイベントを含まないことを除いて、**Lock:Timeout** イベント クラスと同じです。  

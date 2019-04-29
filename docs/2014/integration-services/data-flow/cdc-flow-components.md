@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828568"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  

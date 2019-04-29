@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757322"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>パーティションと DirectQuery モード (SSAS テーブル)
   ここでは、DirectQuery モデルでのパーティションの使用方法について説明します。 テーブル モデルでのパーティションに関する一般的な情報については、「[パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  
   
- パーティションに関する情報を表示または、使用されるパーティションを変更する方法については、[DirectQuery パーティションを変更する&#40;SSAS 表形式&#41;](../change-the-directquery-partition-ssas-tabular.md)を参照してください。  
+ パーティションに関する情報を表示または、使用されるパーティションを変更する方法については、次を参照してください。 [DirectQuery パーティションを変更する&#40;SSAS 表形式&#41;](../change-the-directquery-partition-ssas-tabular.md)します。  
   
 ## <a name="using-partitions-in-directquery-mode"></a>DirectQuery モードでのパーティションの使用  
  テーブルごとに、DirectQuery データ ソースとして使用する 1 つのパーティションを指定する必要があります。  複数のパーティションがある場合は、モデルを切り替えて DirectQuery モードを有効にすると、テーブル内に作成された最初のパーティションに DirectQuery パーティションのフラグが既定で設定されます。 この設定は、後で [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のパーティション マネージャーを使用して変更できます。  
@@ -43,12 +43,12 @@ ms.locfileid: "48054048"
   
  DirectQuery パーティションには 2 つの処理オプションがあります。 このプロパティを設定するには、 **の** [パーティション マネージャー] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、 **[処理オプション]** プロパティを選択します。 次の表にこのプロパティの値を示し、接続文字列の [DirectQueryUsage] プロパティと組み合わせた場合の各値の影響について説明します。  
   
-|**DirectQueryUsage**プロパティ|**[処理オプション]** プロパティ|注|  
+|**DirectQueryUsage**プロパティ|**[処理オプション]** プロパティ|メモ|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|[このパーティションを処理しない]|モデルが DirectQuery のみを使用している場合、処理は必要ありません。<br /><br /> ハイブリッド モデルでは、DirectQuery パーティションが処理されないように構成できます。 たとえば、非常に大きなデータ セットを操作する場合に、キャッシュに結果のすべてを追加する必要がなければ、DirectQuery パーティションにテーブル内の他のパーティションに対する結果の和集合を含めて、和集合を処理しないことを指定できます。 リレーショナル ソースに対するクエリは影響を受けず、キャッシュ データに対するクエリは他のパーティションからのデータを結合します。|  
 |InMemory (DirectQuery あり)|[パーティションを処理できる]|モデルがハイブリッド モードを使用している場合は、メモリ内に対するクエリと DirectQuery データ ソースに対するクエリで同じパーティションを使用する必要があります。|  
   
 ## <a name="see-also"></a>参照  
- [パーティション&#40;SSAS 表形式&#41;](partitions-ssas-tabular.md)  
+ [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)  
   
   

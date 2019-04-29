@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3896473a1fa08f769f13d94bd1d81f373cf67c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026595"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>ブロック カーソル、スクロール可能なカーソル、および下位互換性
 両方が存在する**SQLFetchScroll**と**SQLExtendedFetch** odbc の間で、アプリケーション プログラミング インターフェイス (API)、一連の関数である最初の平文の分割は、アプリケーションの呼び出し、およびサービス プロバイダー インターフェイス (SPI) 関数のセットである、ドライバーが実装されます。 この分割が必要なことで、ODBC 3。*x*、使用する**SQLFetchScroll**、標準 bealigned も ODBC 2 と互換性があるとします *。x*、使用する**SQLExtendedFetch**します。  

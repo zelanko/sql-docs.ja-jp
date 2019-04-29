@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fa06da06ae057839a9d0e6433e57edb1f8a603d1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013513"
 ---
 # <a name="sysdmexecbackgroundjobqueuestats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52617132"
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="remarks"></a>コメント  
- このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、[統計](../../relational-databases/statistics/statistics.md)を参照してください。  
+ このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)します。  
   
 ## <a name="permissions"></a>アクセス許可
 

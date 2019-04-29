@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989674"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Reporting Services セキュリティ ポリシー ファイルの使用
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、セットアップ時にファイル システムにコピーされる 3 つの構成ファイルにコンポーネントのセキュリティ ポリシーを格納します。 これらの構成ファイルには、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のコード アセンブリについて、内部用セキュリティ ポリシーとユーザー定義セキュリティ ポリシーの組み合わせを含めることができます。 3 つの構成ファイルで次の 3 つのセキュリティ保護可能なコンポーネントに対応[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]:レポート サーバーと Windows サービス、レポート マネージャー Web アプリケーション、およびレポート デザイナーのウィンドウをプレビューします。  

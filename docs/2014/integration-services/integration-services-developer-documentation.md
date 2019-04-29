@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892414"
 ---
 # <a name="developer39s-guide-integration-services"></a>開発者&#39;ガイド (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
@@ -72,7 +72,7 @@ ms.locfileid: "58384460"
  [プログラムによるパッケージの実行と管理](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをプログラムで列挙、実行、および管理する方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  [Integration Services のエラーとメッセージのリファレンス](integration-services-error-and-message-reference.md)  
  定義済みの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   

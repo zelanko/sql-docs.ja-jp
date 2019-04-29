@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbea11b0500c075105bff885cdb1cd8264b320d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931636"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2:SQL Server 資格情報の作成
   **資格情報:**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップおよび復元プロセスで資格情報を使用して、Windows Azure BLOB ストレージ サービスを認証します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 詳細については、表示、コピー、またはストレージ アカウントを再生成する方法についての**アクセス キー**を参照してください[ストレージ アカウント アクセス キー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)します。  
@@ -49,7 +49,7 @@ ms.locfileid: "56014083"
   
 5.  T-SQL ステートメントを確認し、クリックして**Execute**します。  
   
- バックアップの概念と要件の Windows Azure Blob ストレージ サービスの詳細については、[SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)を参照してください。  
+ バックアップの概念と要件の Windows Azure Blob ストレージ サービスの詳細については、次を参照してください。 [SQL Server Backup and Restore with Windows Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)します。  
   
 ### <a name="next-lesson"></a>次のレッスン  
  [レッスン 3:Windows Azure Blob ストレージ サービスに対するデータベースの完全バックアップの書き込み](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)します。  

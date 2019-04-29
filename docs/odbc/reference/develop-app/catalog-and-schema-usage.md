@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9476f4f928890514354f97ce604f871bd8a06d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007890"
 ---
 # <a name="catalog-and-schema-usage"></a>カタログとスキーマの使用状況
-データ ソースが、すべての SQL ステートメント内でのオブジェクト名の識別子としてのカタログとスキーマ名を必ずしもにサポートしません。 データ ソースは 1 つまたは複数の SQL ステートメントの次のクラスのカタログとスキーマ名をサポートする場合がありますデータ操作言語 (DML) ステートメント、プロシージャの呼び出し、テーブル定義ステートメント、インデックス定義ステートメント、および特権の定義。ステートメント。 カタログとスキーマ名を使用できる SQL ステートメントのクラスを確認するには、アプリケーションが呼び出す**SQLGetInfo** SQL_CATALOG_USAGE および SQL_SCHEMA_USAGE のオプションを使用します。
+データ ソースが、すべての SQL ステートメント内でのオブジェクト名の識別子としてのカタログとスキーマ名を必ずしもにサポートしません。 データ ソースは、SQL ステートメントの次のクラスの 1 つ以上のカタログとスキーマ名をサポートする場合があります。データ操作言語 (DML) ステートメント、プロシージャの呼び出し、テーブル定義ステートメント、インデックス定義ステートメント、および特権定義ステートメント。 カタログとスキーマ名を使用できる SQL ステートメントのクラスを確認するには、アプリケーションが呼び出す**SQLGetInfo** SQL_CATALOG_USAGE および SQL_SCHEMA_USAGE のオプションを使用します。

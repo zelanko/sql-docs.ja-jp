@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900020"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩やかに変化するディメンション ウィザードの F1 ヘルプ
   **緩やかに変化するディメンション ウィザード** を使用すると、さまざまな種類の緩やかに変化するディメンションへのデータの読み込みを設定できます。 ここでは、 **緩やかに変化するディメンション ウィザード**のページの F1 ヘルプについて紹介します。 このトピックでは、次の内容について紹介します。  

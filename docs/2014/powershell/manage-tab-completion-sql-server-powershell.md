@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922953"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>タブ補完の管理 (SQL Server PowerShell)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインには、Windows PowerShell のタブ補完を制御するための 3 つの変数 (`$SqlServerMaximumTabCompletion`、`$SqlServerMaximumChildItems`、および `$SqlServerIncludeSystemObjects`) が追加されました。 入力された文字列で名前が始まるアイテムの一覧を返すタブ補完によって、入力の手間を削減することができます。  

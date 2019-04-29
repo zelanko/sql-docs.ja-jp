@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926313"
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
   属性とは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] エンティティに含まれるオブジェクトです。 属性値はエンティティのメンバーを表します。 属性を使用してリーフ メンバー、統合メンバー、またはコレクションを表すことができます。  
@@ -58,7 +58,7 @@ ms.locfileid: "52748064"
 -   浮動小数点数が含まれていると、値が " *ラウンド トリップ* " されない場合があります。 値のラウンド トリップとは、演算で元の浮動小数点数が別の形式に変換され、逆の演算で変換後の形式から浮動小数点数に戻されて、最終の浮動小数点数が元の浮動小数点数に等しくなる場合をいいます。 変換で最小有効数字が 1 桁以上失われるか、または変更された場合は、ラウンド トリップが失敗します。  
   
 ## <a name="attribute-examples"></a>属性の例  
- 次の例では、エンティティは、属性を持ちます。Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto します。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
  ![自転車製品エンティティ テーブル](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   

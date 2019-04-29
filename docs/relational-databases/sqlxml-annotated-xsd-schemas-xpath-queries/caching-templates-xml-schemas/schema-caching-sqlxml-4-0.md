@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bafb231e559ff0ab9e870a0482724bda7cb56ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520694"
 ---
 # <a name="schema-caching-sqlxml-40"></a>スキーマのキャッシュ (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- サイド バイ サイドでインストールの詳細については、[SQLXML 4.0 SP1 の新](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)を参照してください。  
+ サイド バイ サイドでインストールの詳細については、次を参照してください。 [SQLXML 4.0 SP1 の新](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)します。  
   
  スキーマをキャッシュすると、XPath クエリのパフォーマンスが大きく向上します。 マッピング スキーマに対して XPath クエリを実行すると、スキーマはメモリに格納され、必要なデータ構造がメモリ内で作成されます。 スキーマのキャッシュを設定している場合、スキーマはメモリに残るので、以降の XPath クエリのパフォーマンスが向上します。  
   

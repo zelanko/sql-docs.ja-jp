@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b77aaffe4e6f0f0163978ba346abdd31cdc61ce8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897308"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (SSIS 式)
   数値式の符号として正 (+1)、負 (-1)、0 のいずれかを返します。  

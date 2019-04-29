@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001387"
 ---
-# <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
+# <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ユーザー定義のコレクション アイテムのプロパティまたは名前の変更に使用されます。  
@@ -48,20 +48,20 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>引数  
  [ @collection_item_id = ] *collection_item_id*  
- コレクション アイテムを識別する一意な識別子を指定します。 *collection_item_id*は**int**既定値は NULL です。 *collection_item_id*場合、値が必要*名前*は NULL です。  
+ コレクション アイテムを識別する一意の識別子です。 *collection_item_id*は**int**既定値は NULL です。 *collection_item_id*場合、値が必要*名前*は NULL です。  
   
- [ @name =] '*名前*'  
- コレクション アイテムの名前を指定します。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_item_id*は NULL です。  
+ [ @name = ] '*name*'  
+ コレクション アイテムの名前です。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_item_id*は NULL です。  
   
- [ @new_name =] '*new_name*'  
+ [ @new_name = ] '*new_name*'  
  コレクション アイテムの新しい名前を指定します。 *新しい名前*は**sysname**、使用する場合は空の文字列にすることはできません。  
   
  *新しい名前*で一意である必要があります。 現在のコレクション アイテムの名前の一覧については、syscollector_collection_items システム ビューにクエリを実行します。  
   
- [ @frequency =]*頻度*  
+ [ @frequency = ] *frequency*  
  このコレクション アイテムによってデータを収集する頻度を秒単位で指定します。 *頻度*は**int**、既定値は 5 で指定できる最小値。  
   
- [ @parameters =] '*パラメーター*'  
+ [ @parameters = ] '*parameters*'  
  コレクション アイテムの入力パラメーターを指定します。 *パラメーター*は**xml**既定値は NULL です。 *パラメーター*スキーマはコレクター型のパラメーター スキーマと一致する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -104,7 +104,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="b-renaming-a-collection-item"></a>B. コレクション アイテムの名前を変更する  
+### <a name="b-renaming-a-collection-item"></a>B. コレクション アイテムの名前を変更します。  
  次の例では、コレクション アイテムの名前を変更します。  
   
 ```  

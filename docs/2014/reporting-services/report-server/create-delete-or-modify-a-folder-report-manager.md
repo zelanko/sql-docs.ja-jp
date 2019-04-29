@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5db8ffafa6697f085d9594939d80140865efe5a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010736"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>フォルダーの作成、削除、または変更 (レポート マネージャー)
   フォルダーを作成すると、レポート サーバーにパブリッシュするアイテムを整理して管理できます。 フォルダーを作成することには、関心のあるレポートをユーザーが見つけやすくなるという利点があります。 コンテンツ マネージャーは、権限を適用するためのフレームワークとしてフォルダーを利用できます。 特定のフォルダーに対してロールの割り当てを作成することで、開発中のレポートや限定されたユーザーのみを対象としたレポートへのアクセスを制限できます。  

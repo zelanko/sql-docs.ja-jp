@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997062"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法については、「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースをアタッチするときにアクセス許可を処理する方法については、[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)を参照してください。  
+ データベースをアタッチするときにアクセス許可を処理する方法については、次を参照してください。 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)します。  
   
 ## <a name="examples"></a>使用例  
  次の例からのファイルをアタッチする[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]現在のサーバーにします。  

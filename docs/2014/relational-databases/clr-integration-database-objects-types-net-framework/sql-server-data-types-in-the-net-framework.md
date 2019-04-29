@@ -20,11 +20,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874541"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework での SQL Server データ型
   `SqlTypes` ライブラリは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework の基本クラス ライブラリの一部です。 このライブラリには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ型と同じセマンティクスと有効桁数を備えたデータ型が用意されています。 このトピックでは、.NET Framework プログラマにとっては新しいセマンティクスについて説明し、`System.Data.SqlTypes` ライブラリに含まれる `System.Data` 名前空間に実装されている型を紹介します。  

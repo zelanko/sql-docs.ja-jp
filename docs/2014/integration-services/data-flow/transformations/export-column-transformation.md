@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900158"
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
   列エクスポート変換は、データ フローのデータを読み取り、そのデータをファイルに挿入します。 たとえば、データ フローに、各製品の写真などの製品情報が含まれる場合、列エクスポート変換を使用して、その画像をファイルに保存できます。  
@@ -55,7 +55,7 @@ ms.locfileid: "58379176"
     > [!NOTE]  
     >  BOM は、データが既存のファイルに追加されず、DT_NTEXT データ型の場合にのみ書き込まれます。  
   
- 変換では、入力列のペアを使用します。1 つの列には、ファイル名が含まれていて、その他の列にデータが含まれています。 データセットの各行では、異なるファイルを指定できます。 この変換により行が処理されると、データは指定したファイルに挿入されます。 実行時に既存のファイルがない場合、変換によりファイルが作成され、そのファイルにデータが書き込まれます。 書き込まれるデータは、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型である必要があります。 詳細については、「 [Integration Services Data Types](../integration-services-data-types.md)」を参照してください。  
+ この変換では入力列の組を使用します: 1 つの列にはファイル名が含まれ、もう 1 つの列にはデータが含まれます。 データセットの各行では、異なるファイルを指定できます。 この変換により行が処理されると、データは指定したファイルに挿入されます。 実行時に既存のファイルがない場合、変換によりファイルが作成され、そのファイルにデータが書き込まれます。 書き込まれるデータは、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型である必要があります。 詳細については、「 [Integration Services Data Types](../integration-services-data-types.md)」を参照してください。  
   
  この変換は、1 つの入力、1 つの出力、および 1 つのエラー出力をとります。  
   

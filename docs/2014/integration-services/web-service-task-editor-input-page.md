@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29ca581697231a3aa70aa6f4342fcea3408d6c99
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926254"
 ---
 # <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  

@@ -1,5 +1,5 @@
 ---
-title: 複数のファクト テーブルを使用してパーティション ソースの変更 |Microsoft ドキュメント
+title: 複数のファクト テーブルを使用するパーティション ソースの変更 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53609a1c252455f8372fd43b6a1323e93f0b3024
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991775"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>別のファクト テーブルを使用するためのパーティション ソースの変更
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,6 +29,6 @@ ms.locfileid: "34021719"
  重複データを含む複数のファクト テーブルを使用することは可能ですが、お勧めはできません。 使用する場合は、パーティション内でフィルターを使用して、あるパーティションで使用されるデータが、別のパーティションで使用されないようにする必要があります。 詳細については、「[ローカル パーティションの作成と管理 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [作成し、ローカル パーティション & #40; を管理Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+ [ローカル パーティションの作成と管理 (Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

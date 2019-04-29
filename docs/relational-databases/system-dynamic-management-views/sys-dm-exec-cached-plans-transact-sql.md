@@ -22,18 +22,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013530"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   クエリ実行を高速化するため [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャッシュされた各クエリ プランについての行を返します。 この動的管理ビューを使用して、キャッシュされたクエリ プラン、キャッシュされたクエリ テキスト、キャッシュされたプランは、およびキャッシュされたプランの再利用回数によって取得されるメモリの量を検索することができます。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、動的管理ビューは、データベースの包含に影響を与えるまたはユーザーがアクセスを他のデータベースに関する情報が公開される情報を公開できません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。さらに、列の値**memory_object_address**と**pool_id**フィルター処理され、列の値は NULL に設定されます。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。さらに、列の値**memory_object_address**と**pool_id**フィルター処理され、列の値は NULL に設定されます。  
   
 > [!NOTE]  
 >  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_exec_cached_plans**します。  
@@ -45,7 +45,7 @@ ms.locfileid: "58072336"
 |usecounts|**int**|キャッシュ オブジェクトが検索された回数。 パラメーター化クエリがキャッシュでプランを検索するときは増加しません。 プラン表示を使用しているときは複数回増加できます。|  
 |size_in_bytes|**int**|キャッシュ オブジェクトによって使用されたバイト数。|  
 |memory_object_address|**varbinary(8)**|キャッシュ エントリのメモリ アドレス。 この値で使用できる[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)およびキャッシュされたプランのメモリ内訳を取得する[sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)とエントリをキャッシュするコストを取得します。|  
-|cacheobjtype|**nvarchar(34)**|キャッシュ内のオブジェクトの種類。 値には、次のいずれかを指定できます。<br /><br /> コンパイル済みプラン<br /><br /> コンパイル済みプランのスタブ<br /><br /> Parse Tree<br /><br /> 拡張プロシージャ<br /><br /> CLR コンパイル Func<br /><br /> CLR コンパイル プロシージャ|  
+|cacheobjtype|**nvarchar(34)**|キャッシュ内のオブジェクトの種類。 値は次のいずれかになります。<br /><br /> コンパイル済みプラン<br /><br /> コンパイル済みプランのスタブ<br /><br /> Parse Tree<br /><br /> 拡張プロシージャ<br /><br /> CLR コンパイル Func<br /><br /> CLR コンパイル プロシージャ|  
 |objtype|**nvarchar(16)**|オブジェクトの種類。 使用可能な値とその対応する説明を次に示します。<br /><br /> プロシージャ:ストアド プロシージャ<br />準備。準備済みステートメント<br />Adhoc:アドホック クエリ。 指す[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、言語イベントとして送信された**osql**または**sqlcmd**の代わりにリモート プロシージャ呼び出しとして。<br />ReplProc:レプリケーション フィルター プロシージャ<br />トリガー:トリガー<br />ビュー:表示<br />既定値:既定<br />UsrTab:ユーザー テーブル<br />SysTab:システム テーブル<br />確認してください。CHECK 制約<br />ルール:Rule|  
 |plan_handle|**varbinary(64)**|メモリ内のプランの識別子。 この識別子は、一時的なプランをキャッシュに保持している間だけ一定のまま。 この値は、次の動的管理関数で使用できます。<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|このプランのメモリ使用量の大部分を占めるリソース プールの ID。|  

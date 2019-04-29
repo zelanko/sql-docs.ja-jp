@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ee139dd652204c750c99d8bad8ab2b17c7c1ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007808"
 ---
 # <a name="calling-sqlclosecursor"></a>SQLCloseCursor の呼び出し
 **SQLCloseCursor**とほぼ同じ**SQLFreeStmt** SQL_CLOSE で、ドライバー マネージャーがマップされていないこの関数。 置換関数は、既存するためのマップ ODBC 2 *.x*アプリケーションは、ODBC 3 を簡単に移動できます *。x*新しい関数を使用しています。 このような移動によって、新しい ODBC 3 の使用を開始するには、このようなアプリケーションを簡単にできます。*x*モジュール方式で条件付きコード内で機能します。 **SQLCloseCursor**の新しい機能を表していません。 アプリケーションが移行することによってメリットを利用できない**SQLCloseCursor**から**SQLFreeStmt** SQL_CLOSE とします。

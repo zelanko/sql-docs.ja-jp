@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871139"
 ---
 # <a name="use-the-copy-database-wizard"></a>データベース コピー ウィザードの使用
   データベース コピー ウィザードを使用すると、サーバーを停止することなく、データベースとそのオブジェクトをサーバー間で簡単にコピーできます。 また、以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にデータベースをアップグレードすることもできます。 このウィザードを使用すると、次の操作を実行できます。  
@@ -183,7 +183,7 @@ ms.locfileid: "52759114"
      **ステータス**  
      表示**OK**場合は、データベースを移動することができます。 データベースを移動できない場合はその理由が表示されます。  
   
-     **[更新]**  
+     **更新**  
      データベースの一覧が更新されます。  
   
      **Next**  
@@ -228,7 +228,7 @@ ms.locfileid: "52759114"
      **[フォルダーの場所]**  
      ファイル システム上にあるソース データベース ファイルの場所を指定します。  
   
-     以下に例を示します。C:\Program files \microsoft SQL Server\MSSQL110 します。MSSQLSERVER\MSSQL\DATA  
+     以下に例を示します。C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
   
      **[転送元のサーバーでのファイル共有]**  
      ソース データベース ファイルの場所をファイル共有のパスとして指定します。  
@@ -254,7 +254,7 @@ ms.locfileid: "52759114"
      **Run immediately**  
      クリックした後、移動またはコピー操作を開始**次**します。  
   
-     **[スケジュール]**  
+     **スケジュール**  
      移動操作またはコピー操作を後で開始します。 説明ボックスには、現在のスケジュール設定が表示されます。 スケジュールを変更するには、 **[変更]** をクリックします。  
   
      **変更**  
@@ -278,7 +278,7 @@ ms.locfileid: "52759114"
      **メッセージ**  
      各ステップで返されるメッセージが表示されます。  
   
-##  <a name="FollowUp"></a> フォローしてください：SQL Server データベースのアップグレード後  
+##  <a name="FollowUp"></a>補足情報: SQL Server データベースのアップグレード後  
  データベース コピー ウィザードを使用して、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のバージョンにアップグレードした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、" **フルテキスト アップグレード オプション** " サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションが **[インポート]** または **[再構築]** に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションが **[インポート]** に設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **フルテキスト アップグレード オプション** プロパティの設定の表示と変更については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
  アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレードされたデータベースの互換性レベルが 90 の場合、互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。  

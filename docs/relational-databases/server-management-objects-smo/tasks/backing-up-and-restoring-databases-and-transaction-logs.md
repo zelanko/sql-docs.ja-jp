@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d3c3329bfb88f77ac9a35c51158c71e2949c88f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62939648"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>データベースおよびトランザクション ログのバックアップと復元
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47603090"
  ように、<xref:Microsoft.SqlServer.Management.Smo.Backup>オブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Restore>オブジェクトを使用して作成する必要はありません、**作成**メソッドのインスタンス上のオブジェクトを表していないため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 <xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトは、データベースの復元に使用されるプロパティとメソッドのセットです。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Visual Basic でのデータベースおよびトランザクション ログのバックアップ  
  このコード例では、既存のデータベースをファイルにバックアップする方法と復元する方法を示します。  

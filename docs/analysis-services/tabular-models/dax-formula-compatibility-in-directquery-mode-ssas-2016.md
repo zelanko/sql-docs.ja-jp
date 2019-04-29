@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019229"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery モードでの DAX 数式の互換性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ DirectQuery モードでテーブル 1200 以降モデルで以前のバージ�
 
 | すべての DAX 数式でサポートされる                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | メジャーとクエリの数式でのみサポートされる                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  空白</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  通貨</br>  [DATE]</br>  DATEDIFF</br>  DATEVALUE</br>  [DAY]</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  [FIND]</br>  [HOUR]</br>  [IF]</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  [LEFT]</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  [LOWER]</br>  MAX</br>  MID</br>  [MIN]</br>  [MINUTE]</br>  [MOD]</br>  [MONTH]</br>  MROUND</br>  NOT</br>  [NOW]</br>  OR</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  [RIGHT]</br>  [ROUND]</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  [SECOND]</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  [SWITCH]</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  [TODAY]</br>  TRIM</br>  TRUE</br>  [TRUNC]</br>  UNICODE</br>  [UPPER]</br>  USERNAME</br>  USERELATIONSHIP</br>  Value</br>  WEEKDAY</br>  WEEKNUM</br>  [YEAR]</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> [AVERAGE]</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> [SUM]</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
+| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  空白</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  通貨</br>  [DATE]</br>  DATEDIFF</br>  DATEVALUE</br>  [DAY]</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  [FIND]</br>  [HOUR]</br>  [IF]</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  [LEFT]</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  [LOWER]</br>  MAX</br>  MID</br>  [MIN]</br>  [MINUTE]</br>  [MOD]</br>  [MONTH]</br>  MROUND</br>  NOT</br>  [NOW]</br>  スイッチまたは</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  [RIGHT]</br>  [ROUND]</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  [SECOND]</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  [SWITCH]</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  [TODAY]</br>  TRIM</br>  TRUE</br>  [TRUNC]</br>  UNICODE</br>  [UPPER]</br>  USERNAME</br>  USERELATIONSHIP</br>  Value</br>  WEEKDAY</br>  WEEKNUM</br>  [YEAR]</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> [AVERAGE]</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> [SUM]</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
 
 
 
@@ -341,7 +341,7 @@ DirectQuery モードでは、この関数のパラメーターが 3 つ (列の
 インメモリ モデルでは、結果は文字列の最後の文字で終了し、ブランクの埋め込みは行われません。  
 
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [DirectQuery モード](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

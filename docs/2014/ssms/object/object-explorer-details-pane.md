@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999937"
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のコンポーネントである [オブジェクト エクスプローラーの詳細] は、サーバーのすべてのオブジェクトを表形式で表示し、それらのオブジェクトを管理するためのユーザー インターフェイスを提供します。 オブジェクト エクスプローラーの機能は、サーバーの種類によって多少異なりますが、データベースの開発機能と管理機能は、基本的にサーバーの種類にかかわりなく用意されています。  
@@ -87,7 +87,7 @@ ms.locfileid: "52779024"
 ## <a name="sql-server-object-search"></a>SQL Server オブジェクトの検索  
  ワイルドカード  
   
--   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、[ワイルドカードを使用した検索テキスト](../../relational-databases/scripting/search-text-with-wildcards.md)を参照してください。  
+-   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、次を参照してください。[ワイルドカードを使用した検索テキスト](../../relational-databases/scripting/search-text-with-wildcards.md)します。  
   
  検索範囲  
   

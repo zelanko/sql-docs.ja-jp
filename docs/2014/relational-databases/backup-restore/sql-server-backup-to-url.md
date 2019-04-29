@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920720"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
   このトピックでは、バックアップ先として Windows Azure BLOB ストレージ サービスを使用するために必要な概念、要件、およびコンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 相違点、重要な例外、コード例についても、このトピックで説明しています。  
@@ -59,11 +59,11 @@ ms.locfileid: "53359294"
  ![sql 資格情報をストレージ アカウントのマッピング](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "sql 資格情報をストレージ アカウントのマッピング")  
   
 ###  <a name="Blob"></a> Windows Azure Blob ストレージ サービス  
- **ストレージ アカウント:** ストレージ アカウントとは、すべての記憶域サービスの開始点です。 Windows Azure BLOB ストレージ サービスにアクセスするには、最初に Windows Azure ストレージ アカウントを作成してください。 Windows Azure BLOB ストレージ サービスとそのコンポーネントを認証するには、 **storage account name** プロパティとその **access key** プロパティが必要です。  
+ **ストレージ アカウント:** ストレージ アカウントは、すべてのストレージ サービスの開始点となります。 Windows Azure BLOB ストレージ サービスにアクセスするには、最初に Windows Azure ストレージ アカウントを作成してください。 Windows Azure BLOB ストレージ サービスとそのコンポーネントを認証するには、 **storage account name** プロパティとその **access key** プロパティが必要です。  
   
  **コンテナー:** コンテナーは、一連の Blob をグループ化を示し、無制限の数の Blob を格納することができます。 Windows Azure BLOB Service に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを書き込むには、少なくともルート コンテナーを作成しておく必要があります。  
   
- **Blob:** 任意の種類とサイズのファイルです。 Windows Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、BLOB の種類としてページ BLOB を使用します。 Blob は、次の URL 形式を使用してアドレス指定できます: https://\<ストレージ アカウント >.blob.core.windows.net/\<コンテナー >/\<blob >  
+ **BLOB:** 任意の種類とサイズのファイルです。 Windows Azure BLOB ストレージ サービスに格納できる BLOB には、ブロック BLOB とページ BLOB の 2 種類があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップでは、BLOB の種類としてページ BLOB を使用します。 Blob は、次の URL 形式を使用してアドレス指定できます: https://\<ストレージ アカウント >.blob.core.windows.net/\<コンテナー >/\<blob >  
   
  ![Azure BLOB ストレージ](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure BLOB ストレージ")  
   
@@ -72,14 +72,14 @@ ms.locfileid: "53359294"
  ページ BLOB の詳細については、「 [ブロック BLOB およびページ BLOB について](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)」を参照してください。  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント  
- **URL:** URL には、一意なバックアップ ファイルに統一リソース識別子 (URI) を指定します。 URL は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ ファイルの場所と名前を指定するために使用されます。 この実装で有効な URL は、Windows Azure ストレージ アカウントでページ BLOB を指す URL のみです。 URL は、コンテナーだけでなく、実際の BLOB を指している必要があります。 BLOB が存在しない場合は作成されます。 "WITH FORMAT"オプションを指定しない限り、既存の Blob が指定すると、バックアップの失敗の場合。  
+ **URL:** 一意なバックアップ ファイルの Uniform Resource Identifier (URI) を示します。 URL は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ ファイルの場所と名前を指定するために使用されます。 この実装で有効な URL は、Windows Azure ストレージ アカウントでページ BLOB を指す URL のみです。 URL は、コンテナーだけでなく、実際の BLOB を指している必要があります。 BLOB が存在しない場合は作成されます。 "WITH FORMAT"オプションを指定しない限り、既存の Blob が指定すると、バックアップの失敗の場合。  
   
 > [!WARNING]  
 >  バックアップ ファイルをコピーして Windows Azure BLOB ストレージ サービスにアップロードする場合は、ストレージ オプションとしてページ BLOB を使用してください。 ブロック BLOB からの復元はサポートされていません。 ブロック BLOB から RESTORE ステートメントを実行すると、エラーが発生して失敗します。  
   
  サンプル URL 値を次に示します: http[s]://ACCOUNTNAME.Blob.core.windows.net/\<コンテナー >/\<ファイル名.bak> です >。 HTTPS は必須ではありませんが、推奨されています。  
   
- **資格情報:** A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資格情報が SQL Server の外部にあるリソースへの接続に必要な認証情報を格納するために使用するオブジェクト。  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップおよび復元プロセスで資格情報を使用して、Windows Azure BLOB ストレージ サービスを認証します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 詳細については、表示、コピー、またはストレージ アカウントを再生成する方法についての**アクセス キー**を参照してください[ストレージ アカウント アクセス キー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)します。  
+ **資格情報:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップおよび復元プロセスで資格情報を使用して、Windows Azure BLOB ストレージ サービスを認証します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 詳細については、表示、コピー、またはストレージ アカウントを再生成する方法についての**アクセス キー**を参照してください[ストレージ アカウント アクセス キー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)します。  
   
  作成する方法についてステップ バイ ステップの手順について、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資格情報を参照してください[資格情報を作成](#credential)このトピックで後述する例。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "53359294"
   
 |||||  
 |-|-|-|-|  
-|BACKUP/RESTORE ステートメント|サポートされている|例外|コメント|  
+|BACKUP/RESTORE ステートメント|Supported|例外|コメント|  
 |BACKUP|???|BLOCKSIZE および MAXTRANSFERSIZE はサポートされていません。|WITH CREDENTIAL を指定する必要があります|  
 |RESTORE|???||WITH CREDENTIAL を指定する必要があります|  
 |RESTORE FILELISTONLY|???||WITH CREDENTIAL を指定する必要があります|  
@@ -176,7 +176,7 @@ ms.locfileid: "53359294"
   
 |||||  
 |-|-|-|-|  
-|引数|サポートされている|例外|コメント|  
+|引数|Supported|例外|コメント|  
 |DATABASE|???|||  
 |LOG|???|||  
 |FROM (URL)|???||FROM URL 引数は、バックアップ ファイルの URL パスの指定に使用されます。|  
@@ -214,7 +214,7 @@ ms.locfileid: "53359294"
   
  次の手順では、Windows Azure ストレージへのバックアップを可能にするためにデータベースのバックアップ タスクに加えられた変更を示します。  
   
-1.  SQL Server Management Studio を起動し、SQL Server インスタンスに接続します。  バックアップ、および右クリックしデータベースを選択**タスク**を選択し、**をバックアップする.**.[データベースのバックアップ] ダイアログ ボックスが開きます。  
+1.  SQL Server Management Studio を起動し、SQL Server インスタンスに接続します。  バックアップ、および右クリックしデータベースを選択**タスク**を選択し、**をバックアップする.**.これにより、データベースのバックアップ ダイアログ ボックスが開きます。  
   
 2.  Windows Azure ストレージへのバックアップを作成するには、[全般] ページの **[URL]** オプションを使用します。 このオプションを選択すると、このページの他のオプションも有効になります。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "53359294"
         >   
         >  管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 サンプル コードを参照してください、[資格情報を作成](#credential)Transact SQL を使用して資格情報を作成します。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]** を右クリックし、 **[新規作成]**、 **[資格情報]** の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
   
-    3.  **Azure ストレージ コンテナー:** バックアップ ファイルを格納する Windows Azure ストレージ コンテナーの名前。  
+    3.  **[Azure Storage コンテナー]:** バックアップ ファイルを格納する Windows Azure ストレージ コンテナーの名前。  
   
     4.  **[URL プレフィックス]** これは、前の手順で説明したフィールドで指定された情報を使用して自動的に組み込まれています。 この値を手動で編集する場合は、前に入力した他の情報と一致することを確認してください。 たとえばストレージの URL を変更する場合は、[SQL 資格情報] も、同じストレージ アカウントに対する認証を行うように設定されていることを確認します。  
   
@@ -877,6 +877,6 @@ ms.locfileid: "53359294"
 ## <a name="see-also"></a>参照  
  [SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [システム データベースのバックアップと復元 &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [チュートリアル:SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

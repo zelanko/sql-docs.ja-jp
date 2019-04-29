@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023118"
 ---
 # <a name="full-text-event-category"></a>Full text イベント カテゴリ
   **Full Text** イベント カテゴリには、一般的なフルテキスト イベントが含まれています。  

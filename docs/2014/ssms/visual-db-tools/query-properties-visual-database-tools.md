@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011477"
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
   クエリおよびビュー デザイナーでクエリを開くと、これらのプロパティが [プロパティ] ウィンドウに表示されます。 特に断りのない限り、このプロパティを [プロパティ] ウィンドウで編集できます。  

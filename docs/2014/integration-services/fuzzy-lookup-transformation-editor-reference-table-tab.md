@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2a9a349435c48c3f9c4a9ea4672ec52e83ce01d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893369"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>[あいまい参照変換エディター] ([参照テーブル] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照に使用する変換元テーブルとインデックスを指定できます。 参照データ ソースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのテーブルである必要があります。  

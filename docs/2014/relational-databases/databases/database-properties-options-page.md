@@ -13,21 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917088"
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
-  このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで使用できるオプションについては、[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)を参照してください。  
+  このページを使用すると、選択されているデータベースのオプションを表示または変更できます。 このページで使用できるオプションについては、次を参照してください。 [ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)します。  
   
 ## <a name="page-header"></a>ページ ヘッダー  
  **[照合順序]**  
  データベースの照合順序を一覧から選択して指定します。 詳細については、「 [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md)」を参照してください。  
   
  **復旧モデル**  
- データベースの復旧に対して、次のモデルのいずれかを指定します。**完全な**、**一括ログ**、または**単純**します。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)」をご覧ください。  
+ データベースを復旧するための、次のいずれかのモデルを指定します。**[完全]**、**[一括ログ]**、**[単純]**。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)」をご覧ください。  
   
  **互換性レベル**  
  データベースがサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンを指定します。 指定できる値は、  **[SQL Server 2014 (120)]**、  **[SQL Server 2012 (110)]**、 **[SQL Server 2008 (100)]** です。 SQL Server 2005 データベースを SQL Server 2014 にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます。  互換性レベル 90 は SQL Server 2014 ではサポートされていません。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。  
@@ -93,7 +93,7 @@ ms.locfileid: "52774424"
  選択したデータベースと関連付けられている FILESTREAM データのディレクトリ名を指定します。  
   
  **[FILESTREAM 非トランザクション アクセス]**  
- Filetable に格納されている FILESTREAM データへのファイル システムを介した非トランザクション アクセスのオプションを次のいずれかを指定します。**オフ**、 **READ_ONLY**、または**完全**します。 FILESTREAM がサーバー上で有効になっていない場合、この値は OFF に設定され、変更できません。 詳細については、「[FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md)」をご覧ください。  
+ FileTable に格納されている FILESTREAM データへの、ファイル システムを通じた非トランザクション アクセスに対するオプションとして、次のいずれかを指定します。**OFF**、**READ_ONLY**、**FULL**。 FILESTREAM がサーバー上で有効になっていない場合、この値は OFF に設定され、変更できません。 詳細については、「[FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md)」をご覧ください。  
   
 ## <a name="miscellaneous"></a>その他  
  **[ANSI NULL 既定値]**  

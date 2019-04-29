@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921849"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>復元シーケンスの計画と実行 (完全復旧モデル)
   このトピックでは、主に完全復旧モデルが使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの復元シーケンスを計画し、実行する方法について説明します。 *復元シーケンス* は、1 つ以上の連続した [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) ステートメントです。 通常、復元シーケンスでは、復元対象のデータベース、ファイル、ページのコンテンツの初期化 (データ コピー フェーズ)、ログに記録されたトランザクションのロールフォワード (再実行フェーズ)、コミットされていないトランザクションのロールバック (元に戻すフェーズ) が実行されます。  

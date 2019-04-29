@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020838"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>グラフの種類の変更 (レポート ビルダーおよび SSRS)
   まず、レポートにグラフを挿入するとき、**グラフの種類の選択**ダイアログが表示されます。 このダイアログ ボックスを取り消すと、縦棒グラフというグラフの種類が既定で追加されます。  

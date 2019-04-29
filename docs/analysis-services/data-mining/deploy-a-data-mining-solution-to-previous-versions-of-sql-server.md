@@ -1,5 +1,5 @@
 ---
-title: SQL Server の以前のバージョンにデータ マイニング ソリューションの配置 |Microsoft ドキュメント
+title: 以前のバージョンの SQL Server にデータ マイニング ソリューションの配置 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011025"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "34015099"
  モデルのデータ ソースに使用されるプロバイダーが SQL Client Data Provider 10 の場合、データ ソース定義も変更して、SQL Server Native Client の前のバージョンを指定する必要があります。 そうしないと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で、プロバイダーが登録されていないことを示すエラーが発生します。  
   
 ##  <a name="bkmk_Holdout"></a> 提示されたパーティションを使用するモデルの配置  
- データ マイニング モデルをテストするために使用される、提示されたパーティションを含むマイニング構造を作成する場合は、マイニング構造を SQL Server 2005 のインスタンスに配置できますが、パーティション情報は失われます。  
+ データ マイニング モデルのテストに使用する提示されたパーティションを含むマイニング構造を作成する場合は、マイニング構造は、SQL Server 2005 のインスタンスに配置できますが、パーティション情報は失われます。  
   
  SQL Server 2005 Analysis Services でマイニング構造を開くと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でエラーが発生し、提示されたパーティションを削除するためにそのマイニング構造が再生成されます。  
   
- プロパティ ウィンドウに、提示されたパーティションのサイズが使用可能なで不要になった構造が再構築された後にただし、値\</ddl100_100:holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >)、ASSL スクリプト ファイルである可能性があります。  
+ プロパティ ウィンドウに、提示されたパーティションのサイズを使用可能なで不要になった構造が再構築した後ただし、値\<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >)、ASSL スクリプト ファイルに存在する可能性があります。  
   
 ##  <a name="bkmk_Filter"></a> フィルターを使用するモデルの配置  
- マイニング モデルにフィルターを適用する場合、モデルは、SQL Server 2005 のインスタンスに配置することができますが、フィルターは適用されません。  
+ マイニング モデルにフィルターを適用する場合は、モデルは、SQL Server 2005 のインスタンスに配置できますが、フィルターは適用されません。  
   
  マイニング モデルを開くと、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でエラーが発生し、フィルターを削除するためにモデルが再生成されます。  
   

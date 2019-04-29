@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001575"
 ---
-# <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
+# <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  管理データ ウェアハウスに接続するために使用される接続文字列のインスタンス名を指定します。  
+  管理データ ウェアハウスへの接続に使用する接続文字列のインスタンス名を指定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @instance_name =] '*instance_name*'  
+ [ @instance_name = ] '*instance_name*'  
  インスタンス名を指定します。 *instance_name*は**sysname**既定値は NULL の場合は、ローカルのインスタンス。  
   
 > **注:**_instance_name_インスタンスの完全修飾名は、コンピューター名と形式でインスタンス名で構成される必要があります*computerName* \\ *instanceName*します。    
@@ -50,7 +50,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- このデータ コレクター全体の構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このプロシージャは失敗します。  
+ このデータ コレクター全体の構成を変更する前に、データ コレクターを無効にする必要があります。 この手順は、データ コレクターが有効になっている場合に失敗します。  
   
  現在のインスタンス名を表示するにはクエリ、 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)システム ビュー。  
   

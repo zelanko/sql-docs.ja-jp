@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 96926b2c7c305bf685bc91206072755081ed35a4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011173"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
   レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 インストールまたは、レポート サーバーの構成がされていないを参照してください[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)と[Reporting Services ネイティブ モード レポート サーバーの管理](manage-a-reporting-services-native-mode-report-server.md).  

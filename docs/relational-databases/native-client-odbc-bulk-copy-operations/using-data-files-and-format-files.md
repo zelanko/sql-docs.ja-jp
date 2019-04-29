@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4c377bbfbe4170b5631ba1ac9c017af1176b279
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013980"
 ---
 # <a name="using-data-files-and-format-files"></a>データ ファイルとフォーマット ファイルの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47831400"
   
  結果セットを生成するステートメントであればどのような [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントも使用できます。 作成されるデータ ファイルには [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の結果セットが格納されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで複数の結果セットが生成される場合、一括コピーでは、最初の結果セットよりも後にある結果セットは無視されます。  
   
- も、テーブル内の別の形式でデータを格納する列のデータ ファイルを作成するには[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)列数は変更を指定する、呼び出す[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)各列の形式変更するには。 これは、呼び出した後**bcp_init**呼び出す前に**bcp_exec**します。 **bcp_colfmt**列のデータがデータ ファイルに格納されている形式を指定します。 一括コピー入力または一括コピー出力時に、この処理を利用できます。使用することも**bcp_colfmt**行と列のターミネータを設定します。 たとえば、データにタブ文字が含まれていない場合を作成、タブ区切りファイルを使用して**bcp_colfmt**として各列のターミネータがタブ文字を設定します。  
+ も、テーブル内の別の形式でデータを格納する列のデータ ファイルを作成するには[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)列数は変更を指定する、呼び出す[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)各列の形式変更するには。 これは、呼び出した後**bcp_init**呼び出す前に**bcp_exec**します。 **bcp_colfmt**列のデータがデータ ファイルに格納されている形式を指定します。 これは、一括コピー入力または出力するときに使用できます。使用することも**bcp_colfmt**行と列のターミネータを設定します。 たとえば、データにタブ文字が含まれていない場合を作成、タブ区切りファイルを使用して**bcp_colfmt**として各列のターミネータがタブ文字を設定します。  
   
  ときに一括コピー出力を使用して**bcp_colfmt**、簡単に呼び出すことで作成したデータ ファイルを記述したフォーマット ファイルを作成することができます[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)を最後に呼び出した後**bcp_colfmt**.  
   

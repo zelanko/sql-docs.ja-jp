@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea0a963781d4f0864f6aa02d8276bab1386a979d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020462"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
   レポート内に埋め込まれたカスタム コードや、ビルドして自分のコンピューターに保存 (またはレポート サーバーに配置) したカスタム アセンブリは、レポート内から参照することができます。 カスタム定数、複雑な関数、または 1 レポート内で何度も使用される関数には、埋め込みコードを使用します。 コードを 1 か所で管理し、そのコードを複数のレポートで共有する場合は、カスタム コード アセンブリを使用します。 カスタム コードには、新しいカスタム定数、変数、関数、またはサブルーチンを含めることができます。 Parameters コレクションなど、組み込みコレクションへの読み取り専用の参照を含めることが可能です。 ただし、レポート データ値セットをカスタム関数に渡すことはできません。特に、カスタム集計はサポートされていません。  

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736395"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 規則
   Analysis Services スクリプト言語 (ASSL) はオブジェクトの階層を要素の型のセットとして表し、それぞれが含むことのできる子要素を定義します。  

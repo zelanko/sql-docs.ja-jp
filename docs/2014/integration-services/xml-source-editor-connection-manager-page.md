@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877418"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>[XML ソース エディター] ([接続マネージャー] ページ)
   **[XML ソース エディター]** の **[接続マネージャー]** ページを使用すると、XML ファイルと、XML データを変換する XSD を指定できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "58393890"
 |値|説明|  
 |-----------|-----------------|  
 |[XML ファイルの場所]|XML ファイルからデータを取得します。|  
-|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**:[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
+|[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
 |[変数からの XML データ]|変数から XML データを取得します。|  
   
  **[インライン スキーマを使用する]**  

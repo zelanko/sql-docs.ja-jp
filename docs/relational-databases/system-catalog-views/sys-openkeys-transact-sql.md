@@ -22,26 +22,26 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7959611a7d8db134b58898debab9bd231d9d9553
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997971"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  このカタログ ビューは、現在のセッションで開かれている暗号化キーについての情報を返します。  
+  このカタログ ビューでは、現在のセッションで開かれている暗号化キーに関する情報を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|キーを含んでいるデータベースの ID。|  
+|**database_id**|**int**|キーを含むデータベースの ID。|  
 |**database_name**|**sysname**|キーを含んでいるデータベースの名前。|  
 |**key_id**|**int**|キーの ID。 ID はデータベース内で一意です。|  
 |**key_name**|**sysname**|キーの名前。 データベース内で一意です。|  
-|**key_guid**|**varbinary**|キーの GUID。 データベース内で一意です。|  
-|**opened_date**|**datetime**|キーが開いた日付と時刻。|  
-|**status**|**int**|キーがメタデータ内で有効である場合は 1 です。 キーがメタデータ内で見つからない場合は 0 です。|  
+|**key_guid**|**varbinary**|キーの GUID です。 データベース内で一意です。|  
+|**opened_date**|**datetime**|日付と時刻が、キーが開かれた日時。|  
+|**status**|**int**|キーがメタデータに有効な場合は 1。 キーがメタデータ内で見つからない場合は 0 です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

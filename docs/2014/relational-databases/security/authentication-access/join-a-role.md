@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011342"
 ---
 # <a name="join-a-role"></a>ロールの追加
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、ログインおよびデータベース ユーザーにロールを割り当てる方法について説明します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で権限を効率的に管理するには、ロールを使用します。 ロールに権限を割り当て、そのロールに対してユーザーとログインの追加および削除を行います。 ロールを使用すると、権限をユーザーごとに個別に管理する必要がありません。  

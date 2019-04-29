@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987145"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>IRenderingExtension インターフェイスの実装
   表示拡張機能では、実際のデータと組み合わされるレポート定義から出力結果を取得し、その結果データを使用可能な形式で表示します。 組み合わされたデータの変換と書式設定は、<xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> を実装する共通言語ランタイム (CLR) クラスを使用して実行されます。 これにより、オブジェクト モデルは、ビューアーやプリンターなどの出力先で使用できる出力形式に変換されます。  

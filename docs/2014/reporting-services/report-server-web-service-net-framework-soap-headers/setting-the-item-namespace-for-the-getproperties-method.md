@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5636ac5193c13b58ec263b8aae3e17466d968fb7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012277"
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties メソッドのアイテム名前空間の設定
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で <xref:ReportService2010.ItemNamespaceHeader> SOAP ヘッダーを使用すると、アイテムの完全なパスとアイテムの ID という 2 つの異なる識別子に基づいてアイテムのプロパティを取得できます。  

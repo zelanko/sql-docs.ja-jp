@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901123"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Integration Services 式の詳細の例
   このセクションでは、複数の演算子と関数を組み合わせた詳細な式の例について説明します。 式が優先順位制約または条件分割変換で使用される場合、式はブール型に評価される必要があります。 ただしこの制限は、プロパティ式、変数、派生列変換、または For ループ コンテナーで使用される式には適用されません。  

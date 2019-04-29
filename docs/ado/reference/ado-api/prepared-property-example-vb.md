@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41dadd067fc62de6316c5258d660c757febc0fbc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027813"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared プロパティの例 (VB)
 この例では、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを 2 つを開いて[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの準備、および準備されていません。  

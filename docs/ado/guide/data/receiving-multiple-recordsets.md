@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e70dc047456549b625a1e66250d413009293f4a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910821"
 ---
 # <a name="receiving-multiple-recordsets"></a>複数のレコードセットの受信
 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)複数取得できます**レコード セット**オブジェクトが複数の SQL ステートメントを含む 1 つのコマンドの 1 つ**Recordset**あたりの SQL ステートメント。 順序、 **Recordset**s には、コマンド テキスト内の SQL ステートメントの配置の順序が返されます。  
@@ -34,4 +34,4 @@ SELECT ProductID, ProductName, UnitPrice
   
  使用することができます、 **Recordset.NextRecordset** 2 つのオブジェクトを列挙するメソッド。  
   
- 詳細については、[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)を参照してください。
+ 詳細については、次を参照してください。 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)します。

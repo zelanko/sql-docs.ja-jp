@@ -27,25 +27,25 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1cb1740bdb0ae26d91e2a9ad9e2becb69d3b2810
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013708"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  各データベースのマスター _ キーを使用して、追加の行を返します、 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)ステートメント。 各行では、1 つの列のマスター_キー (CMK) を表します。  
+  各データベースのマスター _ キーを使用して、追加の行を返します、 [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)ステートメント。 各行は、1 つの列マスター_キー (CMK) を表します。  
     
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK の名前。|  
-|**column_master_key_id**|**int**|列のマスター_キーの ID です。|  
-|**create_date**|**datetime**|列のマスター_キーが作成された日付。|  
-|**modify_date**|**datetime**|列のマスター_キーが前回変更された日付。|  
-|**key_store_provider_name**|**sysname**|CMK を格納している列のマスター_キーのストアのプロバイダーの名前。 使用できる値は、以下のとおりです。<br /><br /> MSSQL_CERTIFICATE_STORE - 列マスター キー ストアが証明書ストアである場合。<br /><br /> ユーザー定義値をカスタム型の列マスター キー ストアがある場合。|  
-|**key_path**|**nvarchar (4000)**|キーの列マスター_キー ストア固有のパス。 パスの形式は、列のマスター_キーのストアの種類によって異なります。 例:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 開発者は、責任を定義するためのカスタム列マスター_キー ストアでは、カスタムの列のマスター_キーのストアの場合、どのようなキーのパスをします。|  
+|**column_master_key_id**|**int**|列のマスター _ キーの ID。|  
+|**create_date**|**datetime**|列マスター_キーが作成された日付。|  
+|**modify_date**|**datetime**|列マスター_キーの最終変更日。|  
+|**key_store_provider_name**|**sysname**|CMK を格納する列のマスター _ キー ストア プロバイダーの名前。 使用できる値は、以下のとおりです。<br /><br /> MSSQL_CERTIFICATE_STORE - 列マスター キー ストアが証明書ストアである場合。<br /><br /> ユーザー定義値、列マスター キー ストアのカスタム型の場合。|  
+|**key_path**|**nvarchar (4000)**|キーの列マスター キー ストア固有パス。 パスの形式は、列マスター キー ストアの種類によって異なります。 例:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 開発者は、責任を定義するためのカスタム列マスター キー ストアでは、カスタム列マスター キー ストアはどのようなキーのパス。|  
 |**allow_enclave_computations**|**bit**|かどうか、列マスター_キーがエンクレーブ対応、(場合、このマスター _ キーで暗号化された列暗号化キーは、サーバー側のセキュリティで保護された enclaves 内の計算に使用できます) を示します。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。|  
 |**signature**|**varbinary(max)**|デジタル署名**key_path**と**allow_enclave_computations**、列マスター_キーを使用して生成された、によって参照される**key_path**します。|
 

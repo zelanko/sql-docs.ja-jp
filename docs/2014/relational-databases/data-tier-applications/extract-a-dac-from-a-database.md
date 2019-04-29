@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872868"
 ---
 # <a name="extract-a-dac-from-a-database"></a>データベースからの DAC の抽出
   **データ層アプリケーションの抽出ウィザード** または Windows PowerShell スクリプトを使用すると、既存の SQL Server データベースからデータ層アプリケーション (DAC) パッケージを抽出できます。 抽出プロセスでは、データベース オブジェクトの定義とそれに関連するインスタンスレベルの要素を格納した DAC パッケージ ファイルが作成されます。 たとえば、DAC パッケージ ファイルには、データベース テーブル、ストアド プロシージャ、ビュー、ユーザー、およびデータベース ユーザーにマップされているログインが含まれます。  
   
--   **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)、[アクセス許可](#Permissions)  
+-   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
 -   **DAC を抽出するを使用します。**[データ層アプリケーションの抽出ウィザード](#UsingDACExtractWizard)、 [PowerShell](#ExtractDACPowerShell)  
   

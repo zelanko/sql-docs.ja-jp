@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26726e29bf841bef603249dedec73075e02ebe10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012358"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission イベント クラス
   **Audit Statement Permission** イベント クラスは、ステートメント権限 (CREATE TABLE など) が使用されるたびに発生します。  

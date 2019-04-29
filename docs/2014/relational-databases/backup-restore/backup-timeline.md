@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876704"
 ---
 # <a name="backup-timeline"></a>バックアップ タイムライン
   **[バックアップ タイムライン]** ダイアログ ボックスを使用して、特定の時点のデータベースを復元するためのバックアップを検索および指定します。 **[バックアップのタイムライン]** ダイアログ ボックスにアクセスするには、 **[データベースの復元] ([全般] ページ)** ペイン上の **[タイムライン]** をクリックします。 このダイアログ ボックスで、データベースで実行される復元操作のタイムラインを表示できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "48060912"
  **日付**  
  日付を入力するか、ボックスの一覧から選択します。  
   
- **Time**  
+ **[時刻]**  
  復元を停止する特定の時点を指定する日付を入力または選択します。  
   
  **[タイムラインの間隔]**  

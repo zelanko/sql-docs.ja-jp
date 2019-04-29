@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91e07bdf70954079e24b39bd345e33b348958ae0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834331"
 ---
 # <a name="configure-error-output"></a>[エラー出力の構成]
   **[エラー出力の構成]** ダイアログ ボックスを使用すると、エラー出力をサポートするデータ フロー変換のエラー処理オプションを構成できます。  

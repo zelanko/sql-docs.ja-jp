@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898077"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) の式
   式は、単一のデータ値が得られる、識別子、リテラル、関数、演算子などの記号の組み合わせです。 単純式には、1 つの定数、変数、または関数を指定できます。 より頻繁に使用されるのは複雑な式で、複数の演算子や関数を使用し、複数の列や変数を参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、CASE ステートメントの条件の定義、データ列値の生成および更新、変数への値の代入、実行時のプロパティの更新および作成、優先順位制約の制約の定義、および For ループ コンテナーでの利用に式を使用できます。  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7384fd52f28f52647c310f7c76eec994b8c8141
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896210"
 ---
 # <a name="extending-packages-with-custom-objects"></a>カスタム オブジェクトを使用したパッケージの拡張
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で提供されるコンポーネントがユーザーの要件を満たさない場合、独自の拡張機能をコーディングすることにより、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の機能を拡張できます。 パッケージを拡張するには 2 つの方法があります。1 つ目は、スクリプト タスクおよびスクリプト コンポーネントによって提供される強力なラッパー内でコードを記述する方法です。2 つ目は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルによって提供される基本クラスを基にカスタム [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 拡張機能を最初から作成する方法です。  
@@ -49,7 +49,7 @@ ms.locfileid: "58377715"
  [カスタム データ フロー コンポーネントの開発](data-flow/developing-a-custom-data-flow-component.md)  
  カスタム データ フローの変換元、変換、変換先のプログラム方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  [Integration Services のエラーとメッセージのリファレンス](../integration-services-error-and-message-reference.md)  
  事前に定義されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60923181e553fe0fb5cb35de2201718e2a155d79
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019217"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Data Quality Client で Integration Services プロジェクトを開く
 

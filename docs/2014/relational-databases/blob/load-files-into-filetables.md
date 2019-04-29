@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874749"
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
   FileTable にファイルを読み込むまたは移行する方法について説明します。  
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  FileTable 制約の無効化の詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
-###  <a name="disabling"></a> 操作方法：一括読み込みのための FileTable の制約の無効化  
+###  <a name="disabling"></a> 操作方法：一括読み込みの FileTable の制約を無効にします。  
  システム定義の制約を一時的に無効化すると、制約の適用というオーバーヘッドなしで、FileTable へのファイルの一括読み込みを行うことができます。 詳細については、「 [FileTable の管理](manage-filetables.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

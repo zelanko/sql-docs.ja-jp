@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916948"
 ---
 # <a name="model-database"></a>model データベース
   **model** データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに作成するすべてのデータベースのテンプレートとして使用されるデータベースです。 **tempdb** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動するたびに作成されるので、 **model** データベースが常に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに存在する必要があります。 **model** データベースの内容全体 (データベース オプションを含む) が新しいデータベースにコピーされます。 **model** の設定の一部は、スタートアップ中に新しい **tempdb** を作成するためにも使用されます。このため、 **model** データベースは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムに常に存在する必要があります。  

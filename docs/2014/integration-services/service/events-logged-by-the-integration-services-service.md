@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dedffe0f30c62399e4d694f7ee1bf5247222e87d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889276"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services サービスによってログに記録されるイベント
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、各種のメッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、サービスの起動時、サービスの停止時、および特定の問題の発生時にログに記録されます。  

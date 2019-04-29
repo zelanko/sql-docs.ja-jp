@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6ac37c6d3a55be4f11a4ad925a950724d5d791d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934840"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>データ アクセサー関数 - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   ノードが、xs:anyType などの複合型の場合**data()** 静的エラーが返されます。  
   
- 使用していますが、 **data()** を指定する、次の例に示すように、関数は多くの場合、 **data()** 関数は、クエリの読みやすさを明示的に増加します。 詳細については、[XQuery の基礎](../xquery/xquery-basics.md)を参照してください。  
+ 使用していますが、 **data()** を指定する、次の例に示すように、関数は多くの場合、 **data()** 関数は、クエリの読みやすさを明示的に増加します。 詳細については、次を参照してください。 [XQuery の基礎](../xquery/xquery-basics.md)します。  
   
  指定することはできません**data()** で、次に示すように、XML を構築します。  
   

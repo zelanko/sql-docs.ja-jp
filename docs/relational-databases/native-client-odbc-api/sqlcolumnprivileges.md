@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1663ffaba589d88defa598629016f51b170983ee
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015166"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51660551"
   
  **SQLColumnPrivileges**静的サーバー カーソルで実行できます。 実行しようとすると、 **SQLColumnPrivileges**更新可能な (動的またはキーセット) カーソルでは、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター: *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター。*Linked_Server_Name.Catalog_Name*します。  
   
 ## <a name="see-also"></a>参照  
  [SQLColumnPrivileges 関数](https://go.microsoft.com/fwlink/?LinkId=59335)   

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004292"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration` 管理データ ウェアハウスに収集されたデータが保存されている日の数です。 *days_until_expiration*は**smallint**で、既定値は 730 (2 年)。 *days_until_expiration* 0 または正の整数にする必要があります。  
   
-`[ @proxy_id = ] proxy_id` 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**既定値は NULL です。 指定した場合*proxy_name* NULL にする必要があります。 取得する*proxy_id*、sysproxies システム テーブルをクエリします。 Dc_admin 固定データベース ロールは、プロキシにアクセスする権限が必要です。 詳細については、[SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)を参照してください。  
+`[ @proxy_id = ] proxy_id` 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**既定値は NULL です。 指定した場合*proxy_name* NULL にする必要があります。 取得する*proxy_id*、sysproxies システム テーブルをクエリします。 Dc_admin 固定データベース ロールは、プロキシにアクセスする権限が必要です。 詳細については、次を参照してください。 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)です。  
   
 `[ @proxy_name = ] 'proxy_name'` プロキシ アカウントの名前です。 *proxy_name*は**sysname**既定値は NULL です。 指定した場合*proxy_id* NULL にする必要があります。 取得する*proxy_name*、sysproxies システム テーブルをクエリします。  
   
@@ -117,7 +117,7 @@ sp_syscollector_create_collection_set
  sp_syscollector_create_collection_set は、msdb システム データベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャを実行する、(EXECUTE 権限) を持つ dc_admin 固定データベース ロールのメンバーシップが必要です。  
+ このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733681"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>タイム シリーズ モデルの式の表示 (データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ ビューアー inData マイニング デザイナーは、タイム シリーズ モデルで使用される回帰式の詳細を表示する最も簡単な方法を提供します。  
@@ -32,7 +32,7 @@ ms.locfileid: "48164002"
   
  混合モデルを作成した場合は、ARIMA と ARTXP の分析が個別のツリーに作成され、モデルを表すルート ノードで結合されます。 ARIMA と ARTXP のツリーの構造は非常に異なります。 たとえば、ARTXP ツリーは実際にはデシジョン ツリーのようなツリー構造ですが、ARIMA ツリーは一連の移動平均を表します。 したがって、この 2 つの表現は、便宜上 1 つのモデルで提示されていますが、2 つの独立したモデルとして扱う必要があります。 式もまったく別のものであり、結合または比較することはできません。  
   
- 使用して、タイム シリーズ モデルを表示することも、 [Microsoft 汎用コンテンツ ツリー ビューアー](../microsoft-generic-content-tree-viewer-data-mining.md)します。 タイム シリーズ モデルのコンテンツに関する詳細については、[タイム シリーズ モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)を参照してください。  
+ 使用して、タイム シリーズ モデルを表示することも、 [Microsoft 汎用コンテンツ ツリー ビューアー](../microsoft-generic-content-tree-viewer-data-mining.md)します。 タイム シリーズ モデルのコンテンツに関する詳細については、次を参照してください。[タイム シリーズ モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)します。  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>タイム シリーズ モデルの ARTXP 回帰式を表示するには  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48164002"
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft タイム シリーズ ビューアーを使用してモデルを参照します。](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [タイム シリーズ モデルのクエリ例](time-series-model-query-examples.md)  
   
   

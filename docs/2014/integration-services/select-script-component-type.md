@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfff87c2b1e37b238d2f5a46581f3da8ceb2f3e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889235"
 ---
 # <a name="select-script-component-type"></a>[スクリプト コンポーネントの種類を選択]
   **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスを使用すると、変換元、変換、または変換先として構成済みのスクリプト変換を作成するかどうかを指定できます。  

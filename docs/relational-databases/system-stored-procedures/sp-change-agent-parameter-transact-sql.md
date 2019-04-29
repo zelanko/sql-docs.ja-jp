@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997032"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -254,7 +254,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [レプリケーション ディストリビューション エージェント](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [レプリケーション ログ リーダー エージェント](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [レプリケーション マージ エージェント](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [レプリケーション キュー リーダー エージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   

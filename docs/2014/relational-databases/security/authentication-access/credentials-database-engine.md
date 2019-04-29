@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d42f93735723c81baf837736bfabcda2b1707aae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011839"
 ---
 # <a name="credentials-database-engine"></a>資格情報 (データベース エンジン)
   資格情報は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]外部のリソースへの接続に必要な認証情報 (資格情報) を含むレコードです。 この情報は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって内部的に使用されます。 通常、資格情報には Windows ユーザー名とパスワードが含まれます。  
@@ -35,7 +35,7 @@ ms.locfileid: "48144542"
   
  システム資格情報は、自動的に作成され、特定のエンドポイントに関連付けられます。 システム資格情報の名前は 2 つのシャープ記号 (##) で始まります。  
   
- 資格情報の詳細については、、 [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)カタログ ビューを参照してください。  
+ 資格情報の詳細については、次を参照してください。、 [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)カタログ ビューです。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [資格情報を作成](../authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  

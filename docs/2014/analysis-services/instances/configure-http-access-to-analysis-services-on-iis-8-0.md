@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9bbe95b51982ca6835764e89b27481e0a0f4a92
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730528"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成
   この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
@@ -108,7 +108,7 @@ ms.locfileid: "53363724"
 > [!NOTE]  
 >  クライアントがリモートの Analysis Services サーバーに接続できるようにするために、Windows ファイアウォールでポートのブロックを忘れずに解除してください。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
-##  <a name="bkmk_copy"></a> 手順 1:MSMDPUMP ファイルの Web サーバー上のフォルダーへのコピー  
+##  <a name="bkmk_copy"></a> ステップ 1:MSMDPUMP ファイルの Web サーバー上のフォルダーへのコピー  
  作成した各 HTTP エンドポイントに、独自の MSMDPUMP ファイル セットを用意する必要があります。 この手順では、Analysis Services プログラム フォルダーの MSMDPUMP 実行可能ファイル、構成ファイル、およびリソース フォルダーを、IIS が実行されているコンピューターのファイル システム上に作成する新しい仮想ディレクトリ フォルダーにコピーします。  
   
  ドライブは、NTFS ファイル システム用にフォーマットされている必要があります。 作成するフォルダーへのパスには、スペースを使用することはできません。  
@@ -123,13 +123,13 @@ ms.locfileid: "53363724"
   
 4.  Web サーバーの \inetpub\wwwroot\OLAP フォルダーに以下のものが含まれていることを確認します。MSMDPUMP.DLL、MSMDPUMP.INI、および [リソース] フォルダーです。 フォルダー構造は次のようになります。  
   
-    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> 手順 2:IIS へのアプリケーション プールと仮想ディレクトリの作成  
+##  <a name="bkmk_appPool"></a> ステップ 2:IIS へのアプリケーション プールと仮想ディレクトリの作成  
  次に、アプリケーション プールと、ポンプへのエンドポイントを作成します。  
   
 #### <a name="create-an-application-pool"></a>アプリケーション プールの作成  
@@ -165,7 +165,7 @@ ms.locfileid: "53363724"
 > [!NOTE]  
 >  以前のバージョンのこれらの手順には、仮想ディレクトリを作成する手順が含まれていました。 その手順は必要なくなりました。  
   
-##  <a name="bkmk_auth"></a> 手順 3:IIS 認証の構成と拡張機能の追加  
+##  <a name="bkmk_auth"></a> ステップ 3:IIS 認証の構成と拡張機能の追加  
  この手順では、作成した SSAS 仮想ディレクトリの詳細を進めます。 認証方法を指定してから、スクリプト マップを追加します。 HTTP を使用した Analysis Services でサポートされている認証方法は次のとおりです。  
   
 -   Windows 認証 (Kerberos または NTLM)  
@@ -210,7 +210,7 @@ ms.locfileid: "53363724"
      匿名認証用に資格情報を構成する方法については、「 [匿名認証](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)」を参照してください。  
   
     > [!IMPORTANT]  
-    >  通常、匿名認証は、ファイル システムのアクセス制御リストによってユーザーのアクセスが許可または拒否される、厳密に制御された環境で使用されます。 ベスト プラクティスについては、「[匿名認証 (IIS 7) を有効にする](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)」を参照してください。  
+    >  通常、匿名認証は、ファイル システムのアクセス制御リストによってユーザーのアクセスが許可または拒否される、厳密に制御された環境で使用されます。 ベスト プラクティスについては、「 [匿名認証 (IIS 7) を有効にする](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)」を参照してください。  
   
 6.  **OLAP** 仮想ディレクトリをクリックして、メイン ページを開きます。 **[ハンドラー マッピング]** をダブルクリックします。  
   

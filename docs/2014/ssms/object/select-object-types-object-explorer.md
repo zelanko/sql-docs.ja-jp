@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 177aec3306c0be861b2fdf09f5a0d6974d715d3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63031996"
 ---
 # <a name="select-object-types-object-explorer"></a>[オブジェクトの種類を選択] (オブジェクト エクスプローラー)
   このダイアログ ボックスを使用すると、 **[オブジェクトの選択]** ダイアログ ボックスに表示するオブジェクトの種類を指定できます。  

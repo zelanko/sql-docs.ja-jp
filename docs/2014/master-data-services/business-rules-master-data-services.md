@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877240"
 ---
 # <a name="business-rules-master-data-services"></a>ビジネス ルール (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のビジネス ルールは、マスター データの品質と精度を保証するために使用するルールです。 ビジネス ルールを使用して自動的にデータを更新したり、電子メールを送信したり、ビジネス プロセスまたはワークフローを開始したりできます。  

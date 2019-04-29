@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57cab8512adb2f0377c932fbeb0140f1482ae454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922920"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
   SQL Server の区切られた識別子には、Windows PowerShell パスでサポートされない文字が含まれる場合があります。 これらの文字は、16 進数値にエンコードすることによって指定できます。  
   
-1.  **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)  
+1.  **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)  
   
 2.  **特殊文字を処理します。**[識別子のエンコード](#EncodeIdent)、[識別子のデコード](#DecodeIdent)  
   

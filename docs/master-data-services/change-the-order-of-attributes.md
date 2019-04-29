@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 08df7b421795ad73090fe8edfbe6657ed7ffca11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008490"
 ---
 # <a name="change-the-order-of-attributes"></a>属性の順序の変更
 
@@ -24,12 +24,12 @@ ms.locfileid: "52754834"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の順序を変更できます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>属性の順序を変更するには  
   

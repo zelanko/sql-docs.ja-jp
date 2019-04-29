@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3408a729c21f9e420d90e5e38a41b09b766b6b81
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856551"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>名前空間を使用した、XPath クエリの実行 (SQLXMLOLEDB Provider)
   XPath クエリには名前空間を使用できます。 スキーマ要素が名前空間で限定されている (対象の名前空間を含んでいる) 場合、そのスキーマに対する XPath クエリでは、この名前空間を指定する必要があります。  
@@ -56,7 +56,7 @@ ms.locfileid: "52763395"
  これは、上の XSD スキーマに対して XPath クエリ (x:Employee) を実行する [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションのサンプルです。 プレフィックスを解決するには、名前空間バインディングが名前空間プロパティを使用して指定されます。  
   
 > [!NOTE]  
->  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例ではデータ プロバイダーとして [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) を使用するよう指定していますが、これには追加ネットワーク クライアントがインストールされていることが必要です。 詳細については、[SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)を参照してください。  
+>  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例ではデータ プロバイダーとして [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) を使用するよう指定していますが、これには追加ネットワーク クライアントがインストールされていることが必要です。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../native-client/system-requirements-for-sql-server-native-client.md)します。  
   
 ```  
 Option Explicit  

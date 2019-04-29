@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837007"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>[ADO NET 変換元エディター] ([列] ページ)
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  

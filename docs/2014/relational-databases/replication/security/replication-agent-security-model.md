@@ -21,25 +21,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960843"
 ---
 # <a name="replication-agent-security-model"></a>レプリケーション エージェントのセキュリティ モデル
-  レプリケーション エージェントのセキュリティ モデルは、細かく制御するアカウントのレプリケーション エージェントを実行および接続を作成できます。別のアカウントは、各エージェントに対して指定できます。 アカウントを指定する方法の詳細については、「[レプリケーションのログインとパスワードの管理](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)」を参照してください。  
+  レプリケーション エージェントのセキュリティ モデルでは、レプリケーション エージェントの実行や接続に使用されるアカウントをきめ細かく制御できます。異なるアカウントをエージェントごとに指定できます。 アカウントを指定する方法の詳細については、「[レプリケーションのログインとパスワードの管理](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)」を参照してください。  
   
 > [!IMPORTANT]  
 >  **sysadmin** 固定サーバー ロールのメンバーがレプリケーションを構成する際には、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント アカウントの権限を借用するようにレプリケーション エージェントを構成できます。 このとき、レプリケーション エージェントのログインとパスワードを指定する必要はありませんが、その方法はお勧めしません。 セキュリティ上、このトピックの「エージェントに必要な権限」に記載されている最小限の権限を持った各エージェントのアカウントを指定することをお勧めします。  
   
  レプリケーション エージェントは、他の実行可能プログラムと同様に、Windows アカウントのコンテキストで実行されます。 このアカウントを使用して、Windows 統合セキュリティ接続が作成されます。 エージェントを実行するアカウントは、エージェントの開始方法で決まります。  
   
--   エージェントを開始、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エージェント ジョブ、既定値。ときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]レプリケーション エージェントを開始するエージェント ジョブを使用すると、レプリケーションを構成するときに指定したアカウントのコンテキストで、エージェントを実行します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントおよびレプリケーションの詳細については、このトピックの「SQL Server エージェントのエージェント セキュリティ」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを実行するアカウントに必要な権限の詳細については、「[Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)」 (SQL Server エージェントの構成) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブからエージェントを開始する (既定): [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブを使用してレプリケーション エージェントを開始すると、エージェントはレプリケーションを構成するときに指定したアカウントのコンテキストで実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントおよびレプリケーションの詳細については、このトピックの「SQL Server エージェントのエージェント セキュリティ」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを実行するアカウントに必要な権限の詳細については、「[Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)」 (SQL Server エージェントの構成) を参照してください。  
   
--   MS-DOS コマンドラインからエージェントを開始する直接またはスクリプトを使用します。エージェントは、コマンドラインでエージェントを実行しているユーザーのアカウントのコンテキストで実行されます。  
+-   MS-DOS コマンド ラインから直接、またはスクリプトによってエージェントを開始する: エージェントは、コマンド ラインでエージェントを実行しているユーザーのアカウントのコンテキストで実行されます。  
   
--   レプリケーション管理オブジェクト (RMO) または ActiveX コントロールを使用するアプリケーションから、エージェントを起動します。エージェントは、RMO または ActiveX コントロールを呼び出しているアプリケーションのコンテキストで実行されます。  
+-   レプリケーション管理オブジェクト (RMO) を使用するアプリケーションまたは ActiveX コントロールからエージェントを開始する: エージェントは、RMO を呼び出しているアプリケーションまたは ActiveX コントロールのコンテキストで実行されます。  
   
     > [!NOTE]  
     >  ActiveX コントロールは非推奨とされます。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c7d864d61d2782955a52ce6e20a7025379cc946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028070"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO メソッド
 Shape プロバイダーから基になる OLE DB データ ソース オブジェクトを取得します。  
@@ -39,5 +39,5 @@ HRESULT GetDataProviderDSO(
 ## <a name="remarks"></a>コメント  
  このメソッドではない addref インターフェイス ポインター。 呼び出し元が必要な addref を行う必要があります、呼び出し元ポインターを保持する場合、およびリリースします。  
   
-## <a name="applies-to"></a>適用対象  
+## <a name="applies-to"></a>対象  
  [IDSOShapeExtensions インターフェイス](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

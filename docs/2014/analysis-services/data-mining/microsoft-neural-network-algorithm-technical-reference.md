@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733816"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワークでは、最大 3 層のニューロンまたは *パーセプトロン* で構成される *多層パーセプトロン*ネットワーク ( *バックプロパゲーション デルタ ルール ネットワーク*とも呼ばれる) を使用します。 これらの層は、入力層、オプションの非表示層、および出力層です。  
@@ -105,7 +105,7 @@ ms.locfileid: "52521121"
   
  Μ = p - 状態の前の確率  
   
- StdDev sqrt(p(1-p)) を =  
+ StdDev  = sqrt(p(1-p))  
   
  **連続値**  
   

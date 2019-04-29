@@ -1,5 +1,5 @@
 ---
-title: 計算列表現 (テーブル) |Microsoft ドキュメント
+title: 計算列表現 (テーブル) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0f8e3ddd813366d713f438fc526985773abd611
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019252"
 ---
-# <a name="tables---calculated-column-representation"></a>テーブルの計算列表現
+# <a name="tables---calculated-column-representation"></a>テーブル - 計算列表現
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   計算列はテーブルに新しい列を作成する DAX 式で、取得した値はテーブルに格納されます。 計算列式はテーブルが処理されるたびに評価されます。  
   

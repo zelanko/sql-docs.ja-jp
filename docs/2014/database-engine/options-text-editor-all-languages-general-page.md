@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f25cf5a2466cc7ec8ae00b55591279e66ea7ce57
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844183"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>[オプション] ([テキスト エディター]/[すべての言語]/[全般] ページ)
   このダイアログ ボックスを使用すると、全部で 5 つある [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のすべてのエディターの全般的な編集オプションを設定できます。 これらのオプションを表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[テキスト エディター]** フォルダーを選択し、**[すべての言語]** フォルダーを展開して、**[全般]** をクリックします。  
@@ -39,7 +39,7 @@ ms.locfileid: "51030921"
  **パラメーター情報**  
  現在の宣言またはプロシージャの完全な構文、および使用できるすべてのパラメーターをエディター内のカーソルの左側に表示します。 割り当て可能な次のパラメーターは、太字で表示されます。  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  **仮想空間を有効にします。**  
  コードの横の一定の場所にコメントを記述します。 このチェック ボックスがオンの場合、行の最後の文字よりも後ろの位置にカーソルを置くことができます。 入力時には、行を完成させるためにカーソル位置にタブまたはスペースが自動的に追加されます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "51030921"
   
  行が空白でない場合、**[コピー]** または **[切り取り]** コマンドの動作はこの設定の影響を受けません。 何も選択されていない場合、行全体がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、行全体のテキストと行末文字が貼り付けられます。  
   
-## <a name="display"></a>表示  
+## <a name="display"></a>ディスプレイ  
  **行番号**  
  コードの各行の横に行番号を表示します。  
   

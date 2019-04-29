@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916890"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>[トランザクション ログのバックアップの設定]
   このダイアログ ボックスを使用すると、ログ配布構成のトランザクション ログ バックアップ設定を構成および変更できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "52756204"
  **ジョブ名**  
  ログ配布用のトランザクション ログ バックアップを作成する際に使用される SQL Server エージェント ジョブの名前を表示します。 最初にジョブを作成するときに、ボックスに別の名前を入力して名前を変更できます。  
   
- **[スケジュール]**  
+ **スケジュール**  
  プライマリ データベースのトランザクション ログのバックアップに関する現在のスケジュールを表示します。 バックアップ ジョブが作成される前に、 **[スケジュール]** をクリックしてこのスケジュールを変更できます。バックアップ ジョブが作成された後は、 **[ジョブの編集]** をクリックしてこのスケジュールを変更できます。  
   
 ### <a name="backup-job"></a>バックアップ ジョブ  

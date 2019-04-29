@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992356"
 ---
 # <a name="securing-sql-server"></a>SQL Server の保護
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の保護は、プラットフォーム、認証、オブジェクト (データを含む)、およびシステムにアクセスするアプリケーションの 4 つの領域が関係する一連の手順としてとらえることができます。 以下の各トピックでは、効果的なセキュリティ計画を作成および実装する方法について、順を追って説明します。  

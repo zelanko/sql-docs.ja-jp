@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900515"
 ---
 # <a name="derived-column-transformation"></a>派生列変換
   派生列変換では、式を変換入力列に適用することにより新しい列の値を作成します。 式には、変換入力からの列、変数、関数、および演算子の任意の組み合わせを含めることができます。 結果は、新しい列として追加するか、または既存の列の値を置き換える値として挿入できます。 派生列変換では複数の派生列を定義でき、任意の変数または入力列を複数の式に含めることができます。  

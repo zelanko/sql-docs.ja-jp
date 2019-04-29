@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900168"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   マージ結合変換では、FULL、LEFT、または INNER 結合を使用して並べ替えた 2 つのデータセットを結合した出力が生成されます。 たとえば、LEFT 結合を使用して、製品情報を含むテーブルを、製品が製造された国または地域を一覧表示するテーブルと結合します。 その結果、すべての製品とその製造元である国または地域を一覧表示するテーブルが生成されます。  

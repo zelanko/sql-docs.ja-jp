@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837394"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>データ フローにデータ ビューアーを追加する
   このトピックでは、データ フローにデータ ビューアーを追加して構成する方法について説明します。 データ ビューアーには、2 つのデータ フロー コンポーネント間を移動するデータが表示されます。 たとえば、データ ビューアーでは、データ ソースから抽出されたデータを、データ フローの変換で変更される前の状態で表示できます。  

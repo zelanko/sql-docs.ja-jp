@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916710"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
   オンライン データベースのデータが破損した場合、特定のケースでは、データベースをバックアップから復元する代わりに、データベースをデータが破損した日付より前のデータベース スナップショットに復帰させる方が適切であることがあります。 たとえば、テーブルの削除など、最近の重大なユーザー エラーを元に戻すには、データベースの復帰が役立つ場合があります。 ただし、スナップショットの作成後に行った変更はすべて失われます。  
@@ -31,7 +31,7 @@ ms.locfileid: "54125652"
   
      [Security](#Security)  
   
--   **データベースをデータベース スナップショットに戻すにを使用します。**[Transact-SQL](#TsqlProcedure)  
+-   **以下を使用して、データベースをデータベース スナップショットに戻す方法:**[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   

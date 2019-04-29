@@ -21,13 +21,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3752c7e0f99a62534a670743c0ee7deb3c2e07a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899010"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>SSIS チュートリアル:パッケージを展開します。
+# <a name="ssis-tutorial-deploying-packages"></a>SSIS チュートリアル:パッケージの配置
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを別のコンピューターへ簡単に配置できるツールが用意されています。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、ターゲット コンピューターにパッケージとその依存関係をインストールする方法を学習します。  
   
  まず、配置の準備を行います。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトを作成し、既存のパッケージとデータ ファイルをプロジェクトに追加します。 新しいパッケージを最初から作成するのではなく、このチュートリアル用に作成された既存のパッケージで作業を行います。 このチュートリアルでパッケージの機能は変更しませんが、パッケージをプロジェクトに追加した後、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開いて内容を確認しておくことをお勧めします。 パッケージの内容を確認すると、ログ ファイルなどのパッケージの依存関係やその他の便利な機能について理解できます。  
@@ -72,7 +72,7 @@ ms.locfileid: "58379720"
   
  配置バンドルを作成したコンピューターにパッケージを配置する場合は、そのコンピューターが配置元コンピューターと配置先コンピューターの両方の必要条件を満たしている必要があります。  
   
- **このチュートリアルを完了するまでに時間を推定するには。** 2 時間  
+ **このチュートリアルの推定所要時間:** 2 時間  
   
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン  
  [レッスン 1:配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  

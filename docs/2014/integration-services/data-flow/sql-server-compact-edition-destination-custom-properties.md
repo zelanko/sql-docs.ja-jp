@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf554cac0bf20e93826c183c888b1b0176e6e7da
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900940"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 変換先のカスタム プロパティ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントに共通するプロパティの両方があります。  
@@ -31,6 +31,6 @@ ms.locfileid: "58377560"
  詳細については、「 [SQL Server Compact Edition 変換先](sql-server-compact-edition-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

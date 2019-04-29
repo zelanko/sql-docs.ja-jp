@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99a456ee0b2159c7cfebfbb1ac2dff2468c2cdd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62939700"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47625850"
 |is_online|**bit**|場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が構成されている一部のスケジューラがアフィニティ マスクのないプロセッサにマップされている、サーバーで使用可能なプロセッサの一部のみを使用してこの構成が意味ことができます。 これに該当する場合、この列には 0 が返されます。 この値は、スケジューラがクエリまたはバッチの処理に使用されていないことを意味します。<br /><br /> NULL 値は許可されません。|  
 |is_idle|**bit**|1 = スケジューラはアイドル状態です。 現在実行中のワーカーはありません。 NULL 値は許可されません。|  
 |preemptive_switches_count|**int**|スケジューラのワーカーがプリエンプティブ モードに切り替えられた回数。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。|  
-|context_switches_count|**int**|スケジューラでコンテキストが切り替えられた回数。 NULL 値は許可されません。<br /><br /> 他のワーカーの実行を許可するには、現在実行しているワーカーでスケジューラの制御を解放するか、コンテキストを切り替える必要があります。<br /><br /> **注:** の作業者と自体ワーカーは、スケジューラが得られます自体を実行可能キューに配置し、他のワーカーが、検出されない、選択します。 この場合、context_switches_count は更新されませんが、yield_count は更新されます。|  
+|context_switches_count|**int**|スケジューラでコンテキストが切り替えられた回数。 NULL 値は許可されません。<br /><br /> 他のワーカーの実行を許可するには、現在実行しているワーカーでスケジューラの制御を解放するか、コンテキストを切り替える必要があります。<br /><br /> **注:** ワーカーは、スケジューラが得られます自体を実行可能キューに配置し、他のワーカーが、検出されない、自体のワーカーが選択されます。 この場合、context_switches_count は更新されませんが、yield_count は更新されます。|  
 |idle_switches_count|**int**|スケジューラがアイドル中にイベントを待機した回数。 この列は context_switches_count と類似しています。 NULL 値は許可されません。|  
 |current_tasks_count|**int**|このスケジューラに関連付けられている現在のタスクの数。 これには次のタスクが含まれます。<br /><br /> -それらを実行するワーカーを待機しているタスク。<br />-現在待機中または (SUSPENDED または RUNNABLE 状態) で実行するタスク。<br /><br /> タスクが完了すると、このカウントは 1 減ります。 NULL 値は許可されません。|  
 |runnable_tasks_count|**int**|実行可能キューにあるスケジュール待ちのワーカーで、タスクが割り当てられているワーカーの数。 NULL 値は許可されません。|  
@@ -58,9 +58,9 @@ ms.locfileid: "47625850"
 |yield_count|**int**|スケジューラの進行状況を示すために使用される内部値。 この値は、スケジューラ モニターで、このスケジューラのワーカーが予定どおりに他のワーカーに変更されるかどうかを確認するために使用されます。 ワーカーまたはタスクが新しいワーカーに移行するわけではありません。 NULL 値は許可されません。|  
 |last_timer_activity|**bigint**|前回、スケジューラのタイマー キューがスケジューラにより確認された時間 (CPU ティック単位)。 NULL 値は許可されません。|  
 |failed_to_create_worker|**bit**|スケジューラで新しいワーカーを作成できなかった場合は 1 になります。 これは通常、メモリ制約が原因で発生します。 NULL 値が許可されます。|  
-|active_worker_address|**varbinary(8)**|現在アクティブなワーカーのメモリ アドレス。 NULL 値が許可されます。 詳細については、[sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)を参照してください。|  
+|active_worker_address|**varbinary(8)**|現在アクティブなワーカーのメモリ アドレス。 NULL 値が許可されます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)します。|  
 |memory_object_address|**varbinary(8)**|スケジューラのメモリ オブジェクトのメモリ アドレス。 Null を許容しません。|  
-|task_memory_object_address|**varbinary(8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)を参照してください。|  
+|task_memory_object_address|**varbinary(8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)します。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]SQLOS によって使用されるスケジューラ クォンタムを公開します。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
@@ -143,7 +143,7 @@ active_workers_count work_queue_count
  次のクエリでは、負荷が高い表示スケジューラの状態を示します。このスケジューラでは、利用可能なワーカーの処理数を上回る要求が存在します。 この例では、256 のワーカーにタスクが割り当てられており、 一部のタスクはワーカーへの割り当てを待機中です。 実行可能なタスクの数が少ないということは、複数のタスクがリソースの待機中であることを意味します。  
   
 > [!NOTE]  
->  sys.dm_os_workers でクエリを実行すると、ワーカーの状態を確認できます。 詳細については、[sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)を参照してください。  
+>  sys.dm_os_workers でクエリを実行すると、ワーカーの状態を確認できます。 詳細については、次を参照してください。 [sys.dm_os_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)します。  
   
  クエリを次に示します。  
   

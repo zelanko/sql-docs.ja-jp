@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032834"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>アプリケーションの旧バージョンとの互換性のためのマッピング置換関数
 ODBC 3 *.x* ODBC 3 を通してアプリケーション *.x*ドライバー マネージャーは、ODBC 2 に対して動作します *。x*の新機能が使用されない限りドライバー。 両方の複製機能と動作の変更には、ただし、方法に影響する、ODBC 3。*x* ODBC 2 にアプリケーションが動作します *。x*ドライバー。 ODBC 2 代表です。*x*ドライバー、ドライバー マネージャーは、マップの次の ODBC 3 *。x*関数で、1 つまたは複数の ODBC 2 に置き換えられました *。x*関数は、対応する ODBC 2 にします *。x*関数。  
@@ -39,7 +39,7 @@ ODBC 3 *.x* ODBC 3 を通してアプリケーション *.x*ドライバー マ�
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
 |**SQLFreeHandle**|**SQLFreeEnv**、 **SQLFreeConnect**、または**SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
-|**SQLGetDiagRec**|**Sqlerror 関数**|  
+|**SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
 |**SQLSetConnectAttr**|**SQLSetConnectOption**|  
 |**SQLSetStmtAttr**|**SQLSetStmtOption**[1]|  
@@ -452,8 +452,8 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |バッファー|値|  
 |------------|-----------|  
 |[ColumnName]|"" (空の文字列)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
 |* ColumnSizePtr|4|  
 |* DecimalDigitsPtr|0|  
 |* NullablePtr|SQL_NO_NULLS|  

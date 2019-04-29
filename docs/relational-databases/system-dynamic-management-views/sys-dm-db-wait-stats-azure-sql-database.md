@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e5b81c48e017312048f15b600382af5f95aec821
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003532"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "56038923"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、[待機の種類](#WaitTypes)、このトピックで後述を参照してください。|  
+|wait_type|**nvarchar(60)**|待機の種類の名前。 詳細については、次を参照してください。[待機の種類](#WaitTypes)、このトピックで後述します。|  
 |waiting_tasks_count|**bigint**|この待機の種類における待機の数。 このカウンターは、待機が開始するたび増加します。|  
 |wait_time_ms|**bigint**|この待機の種類 (ミリ秒単位) の合計待機時間。 この時間には signal_wait_time_ms が含まれます。|  
 |max_wait_time_ms|**bigint**|この待機の種類における最大待機時間。|  

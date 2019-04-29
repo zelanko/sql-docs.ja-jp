@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918192"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
   ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから[!INCLUDE[ssDE](../../includes/ssde-md.md)]または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  

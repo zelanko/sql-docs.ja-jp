@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736941"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>親子ディメンションの単項演算子
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーにカスタム ロールアップを指定する、単項 (またはカスタム ロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  

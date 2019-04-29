@@ -26,11 +26,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a6ebe847e999d83343b072938882b9fd9e51b290
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013957"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>データ ソースへの接続 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47683024"
   
 -   **SQLBrowseConnect**  
   
- 使用可能なさまざまな接続文字列オプションを含む、データ ソースへの接続の詳細については、[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)を参照してください。  
+ 使用可能なさまざまな接続文字列オプションを含む、データ ソースへの接続の詳細については、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
   
 ## <a name="sqlconnect"></a>SQLConnect  
  **SQLConnect**は最も簡単な接続関数です。 この関数は、データ ソース名、ユーザー ID、パスワードの 3 つのパラメーターを受け取ります。 使用**SQLConnect**ときにこれら 3 つのパラメーターは、データベースへの接続に必要なすべての情報を含めることができます。 これを行うには、ビルドを使用してデータ ソースの一覧**SQLDataSources**; データ ソース、ユーザー ID、およびパスワードの入力を求めますを呼び出して**SQLConnect**します。  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2806d42e58bbd60b962f83e8ab58fbe4511e44b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001737"
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_syscollector_start_collection_set
   
  このプロシージャをスケジュールがないコレクション セットに対して実行すると、失敗します。 場合、コレクション セットに (コレクション モード設定されているために非キャッシュなど)、スケジュールがないを使用して、 [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md)ストアド プロシージャをコレクション セットを開始します。  
   
- このプロシージャは、コレクションを有効にし、指定されたコレクション セットのジョブをアップロードして、コレクション セットのコレクション モードがキャッシュ (0) に設定されている場合は、直ちにコレクション エージェント ジョブを開始します。 詳細については、[sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)を参照してください。  
+ このプロシージャは、コレクションを有効にし、指定されたコレクション セットのジョブをアップロードして、コレクション セットのコレクション モードがキャッシュ (0) に設定されている場合は、直ちにコレクション エージェント ジョブを開始します。 詳細については、次を参照してください。 [sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)します。  
   
  コレクション セットにコレクション アイテムが含まれていない場合、この操作には何も効果がありません。 警告としてエラー 14685 が返されます。  
   

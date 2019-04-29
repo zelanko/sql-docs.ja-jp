@@ -19,24 +19,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a46570a30254341fede1fb96fd368e94a09e58ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910299"
 ---
-# <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
+# <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_metadataaction_request**テーブルには、必要な各補正アクションに対して 1 行が格納されます。 エントリを作成し、Web 同期を使用して、エラーが発生し、同期を再試行する必要がある場合、 **MSmerge_metadataaction_request**します。 その後のマージのアップロード フェーズ中、同期するパブリケーションに属するすべてのアーティクルへの要求は、このテーブルから取得されてアップロードされます。 同期が正常に完了すると、対応する行で、 **MSmerge_metadataaction_request**テーブルを削除します。 このテーブルは、パブリッシャー側ではパブリケーション データベースに、サブスクライバー側ではサブスクリプション データベースに格納されます。  
+  **MSmerge_metadataaction_request**テーブルには、必要な各補正アクションに対して 1 行が格納されます。 エントリを作成し、Web 同期を使用して、エラーが発生し、同期を再試行する必要がある場合、 **MSmerge_metadataaction_request**します。 以降のマージのアップロード フェーズでは、同期されているパブリケーションに属するすべてのアーティクルに対して要求がこのテーブルから取得され、アップロードされます。 同期が正常に完了すると、対応する行で、 **MSmerge_metadataaction_request**テーブルを削除します。 このテーブルは、パブリケーション データベースでパブリッシャーとサブスクライバー側でサブスクリプション データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**int**|パブリッシュされたテーブルのニックネーム。|  
-|**rowguid**|**uniqueidentifier**|指定した行の行識別子 (ROWID)。|  
+|**tablenick**|**int**|パブリッシュされたテーブルのニックネームです。|  
+|**rowguid**|**uniqueidentifier**|特定の行の行識別子。|  
 |**action**|**tinyint**|必要な補正アクションの識別子。|  
-|**生成**|**bigint**|補正アクションが必要とされる世代の値。|  
-|**変更されました。**|**int**|内部使用のみ。|  
+|**生成**|**bigint**|補正アクションを必要とする生成の値。|  
+|**changed**|**int**|内部使用のみ。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

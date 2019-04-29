@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d991ee94e04be0ea72450b8e3e4649c339d1c2a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900212"
 ---
 # <a name="row-count-transformation"></a>行数変換
   行数変換は、行がデータ フローを通過するときに行をカウントし、最終的な行数を変数に格納します。  

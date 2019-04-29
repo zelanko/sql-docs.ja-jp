@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4cfeac28676dc8134c7eedf1e4b27901e0f053dc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877585"
 ---
 # <a name="web-service-task-editor-output-page"></a>[Web サービス タスク エディター] ([出力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[出力]** ページを使用すると、Web メソッドから返された結果を格納する場所を指定できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "58377930"
  **変数**  
  一覧で変数を選択するか、\<[**新しい変数...>]** をクリックして新しい変数を作成します。  
   
- **関連トピック:** [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   

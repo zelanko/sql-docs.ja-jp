@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833864"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 接続マネージャー
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用すると、パッケージは .NET プロバイダーを使用してデータ ソースにアクセスできます。 この接続マネージャーは通常、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのデータ ソースへのアクセスに使用されます。また、C# などの言語を使用してマネージド コードに記述されたカスタム タスク内で、OLE DB や XML を介して公開されているデータ ソースにもアクセスできます。  
@@ -35,7 +35,7 @@ ms.locfileid: "58380300"
   
 |SQL Server データ型|結果|  
 |--------------------------|------------|  
-|`time`、 `datetimeoffset`|パッケージがパラメーター化 SQL コマンドを使用していない場合、パッケージは失敗します。 パラメーター化 SQL コマンドを使用するには、パッケージで SQL 実行タスクを使用します。 詳細については、「 [SQL 実行タスク](../control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](../parameters-and-return-codes-in-the-execute-sql-task.md)」を参照してください。|  
+|`time`, `datetimeoffset`|パッケージがパラメーター化 SQL コマンドを使用していない場合、パッケージは失敗します。 パラメーター化 SQL コマンドを使用するには、パッケージで SQL 実行タスクを使用します。 詳細については、「 [SQL 実行タスク](../control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](../parameters-and-return-codes-in-the-execute-sql-task.md)」を参照してください。|  
 |`datetime2`|[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーは、ミリ秒の値を切り捨てます。|  
   
 > [!NOTE]  

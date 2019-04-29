@@ -26,11 +26,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900561"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  

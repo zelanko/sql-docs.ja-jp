@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75e62ab8ae3953524d41a85512d4d95ead968ecf
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010866"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>リモート エラーの有効化 (Reporting Services)
   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラー メッセージに "このエラーの詳細を表示するには、ローカルのサーバー コンピューターでレポート サーバーを開くか、リモート エラーを有効にしてください。" と表示されている場合は、`EnableRemoteErrors` プロパティを設定すると、問題のトラブルシューティングに役立つ追加情報にアクセスできます。 詳細については、 [オンライン ブックの「](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) レポート サーバーのシステム プロパティ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  

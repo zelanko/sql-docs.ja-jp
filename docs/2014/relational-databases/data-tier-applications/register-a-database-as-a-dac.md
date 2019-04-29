@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918134"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
   いずれかを使用して、**登録データ層アプリケーションのウィザード**または既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成するスクリプトを作成し、にDAC定義が登録は、WindowsPowerShell`msdb`システム データベース (**マスター**で[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
   
--   **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)、[アクセス許可](#Permissions)  
+-   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **DAC のアップグレードに使用します。**[データ層アプリケーションの登録ウィザード](#UsingRegisterDACWizard)、 [PowerShell](#RegisterDACPowerShell)  
+-   **DAC のアップグレード:**[データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)、[PowerShell の使用](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
  登録プロセスでデータベース オブジェクトを定義する DAC 定義を作成します。 DAC の定義とデータベースを組み合わせたものが DAC インスタンスになります。 データベース エンジンのマネージド インスタンス上で DAC としてデータベースを登録した場合は、SQL Server ユーティリティ コレクション セットをこのインスタンスからユーティリティ コントロール ポイントへ次に送信するときに、登録した DAC が SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  

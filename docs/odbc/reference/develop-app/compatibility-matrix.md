@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026565"
 ---
 # <a name="compatibility-matrix"></a>互換性マトリックス
 次の表では、アプリケーションとドライバーのこのセクションでは以前に定義した型の互換性について説明します。  

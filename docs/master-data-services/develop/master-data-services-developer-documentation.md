@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8ddb2ae5f0298a2f7d182bb5e1ef7057827617fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518216"
 ---
 # <a name="master-data-services-developer-documentation"></a>マスター データ サービスの開発者向けドキュメント
 
@@ -52,7 +52,7 @@ ms.locfileid: "47812240"
 ## <a name="web-server-namespaces"></a>Web サーバー名前空間  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] は、一連のアセンブリを Web サーバー コンピューターにインストールします。 これらのアセンブリには、Web サーバー コンピューターの動作をカスタマイズする高度なシナリオに使用できる名前空間が含まれます。 次の表では、これらの名前空間について説明します。  
   
-|Namespace|[説明]|  
+|Namespace|説明|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|モデルからの配置パッケージの作成と [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへのパッケージの配置に使用できるクラスが含まれます。|  
 |<xref:Microsoft.MasterDataServices.Services>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションを通じて Web サーバー コンピューターに対して行われた Web サービス操作を取得および処理するクラスが含まれます。|  

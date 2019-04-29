@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992359"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>アップグレード アドバイザーを使用したアップグレードの準備
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの準備に役立ちます。 アップグレード アドバイザーでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされたコンポーネントが分析され、アップグレードの前または後に修正する必要がある問題を示すレポートが生成されます。  

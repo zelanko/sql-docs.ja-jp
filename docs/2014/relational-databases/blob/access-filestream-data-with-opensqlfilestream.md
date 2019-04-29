@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875095"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream による FILESTREAM データへのアクセス
   OpenSqlFilestream API は、FILESTREAM バイナリ ラージ オブジェクト (BLOB)、ファイル システムに格納されているの Win32 互換ファイル ハンドルを取得します。 ハンドルは、次の Win32 Api のいずれかに渡すことできます。[ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)、または[FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)します。 このハンドルをその他の Win32 API に渡すと、ERROR_ACCESS_DENIED エラーが返されます。 このハンドルは、トランザクションをコミットまたはロールバックする前に Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API に渡して閉じる必要があります。 ハンドルを閉じないと、サーバー側でリソースのリークが発生します。  

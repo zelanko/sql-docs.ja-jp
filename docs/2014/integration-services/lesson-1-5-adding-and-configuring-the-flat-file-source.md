@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891540"
 ---
-# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>手順 5:追加して、フラット ファイル ソースを構成します。
+# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>手順 5:フラット ファイル ソースの追加と構成
   ここでは、フラット ファイル ソースをパッケージに追加し、構成します。 フラット ファイル ソースとは、フラット ファイル接続マネージャーにより定義されるメタデータを使用するデータ フロー コンポーネントです。フラット ファイル接続マネージャーは、変換処理によってフラット ファイルから取得されるデータの形式や構造を指定します。 フラット ファイル接続マネージャーに定義されているファイル形式を使用し、1 つのフラット ファイルからデータを取得するよう、フラット ファイル ソースを定義できます。  
   
  このチュートリアルでは、使用するフラット ファイル ソースを構成します、`Sample Flat File Source Data`以前に作成した接続マネージャー。  

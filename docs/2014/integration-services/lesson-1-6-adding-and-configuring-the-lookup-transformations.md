@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891550"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6:追加して、参照変換を構成します。
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6:参照変換の追加と構成
   ソース ファイルからデータを取り出すフラット ファイルを構成したら、次は、 **CurrencyKey** および **DateKey**の値を取得する際に必要な参照変換を定義します。 参照変換は、指定の入力列のデータを参照データセットの列に結合することにより、参照を実行します。 参照データセットは、既存のテーブル、既存のビュー、新しいテーブル、または SQL ステートメントの結果のいずれかになります。 このチュートリアルでは、参照変換は、OLE DB 接続マネージャーを使用して、参照データセットのソースとなるデータを含むデータベースに接続します。  
   
 > [!NOTE]  

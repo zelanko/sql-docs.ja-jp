@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62996365"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューション データベースに格納されているレプリケートされたコマンドの結果セットを判読可能な形で返します。診断ツールとして使用できます。 このストアド プロシージャは、ディストリビューターのディストリビューション データベースで実行されます。  
+  ディストリビューション データベースに格納されているレプリケートされたコマンドの結果セットを判読可能な形で返します。診断ツールとして使用できます。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

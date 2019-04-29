@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853332"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマでは、理想的な世界はいずれかを指定すべてのデータ ソースが OLE DB インターフェイスを公開します。 ADO は、データ ソースに直接呼び出すことができるようにします。 ますます多くのデータベース ベンダーは、OLE DB インターフェイスを実装するは、一部のデータ ソースのこの方法はまだ公開されません。 ただし、今日のほとんどの DBMS システムは、ODBC を通じてアクセスできます。
@@ -101,7 +101,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |ドライバー名 (KAGPROP_DRIVERNAME)|ODBC ドライバーのファイル名を示します。|
 |ドライバーの ODBC バージョン (KAGPROP_DRIVERODBCVER)|このドライバーをサポートする ODBC のバージョンを示します。|
 |ファイルの使用状況 (KAGPROP_FILEUSAGE)|ドライバーが、データ ソース内のファイルを処理する方法を示しますテーブル、またはカタログとして。|
-|Like エスケープ句 (KAGPROP_LIKEESCAPECLAUSE)|WHERE 句の LIKE 述語で、パーセント文字 (%) に、ドライバーが、定義とエスケープ文字の使用をサポートするかどうかと下線文字 (_) を示します。|
+|Like エスケープ句 (KAGPROP_LIKEESCAPECLAUSE)|ドライバーがパーセント記号 (%) の定義とエスケープ文字の使用をサポートするかどうかを示します下線文字 (_) を WHERE 句の LIKE 述語にします。|
 |(KAGPROP_MAXCOLUMNSINGROUPBY) によるグループ内の最大列|SELECT ステートメントの GROUP BY 句を記載されている列の最大数を示します。|
 |最大の列インデックス (KAGPROP_MAXCOLUMNSININDEX)|インデックスに含めることができる列の最大数を示します。|
 |Order By (KAGPROP_MAXCOLUMNSINORDERBY) で最大の列|SELECT ステートメントの ORDER BY 句を記載されている列の最大数を示します。|

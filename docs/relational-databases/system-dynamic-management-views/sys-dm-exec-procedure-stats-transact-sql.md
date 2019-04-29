@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013412"
 ---
-# <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
+# <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  キャッシュされたストアド プロシージャの集計パフォーマンス統計を返します。 ビューは、キャッシュされたストアド プロシージャのプランごとに 1 行を返します。その行の有効期間はストアド プロシージャがキャッシュに残っている間になります。 つまり、ストアド プロシージャがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点では、パフォーマンス統計 SQL トレース イベントが発生するのような**sys.dm_exec_query_stats**します。  
+  返します。 キャッシュされたストアド プロシージャのパフォーマンス統計情報を集計します。 ビューは、キャッシュされたストアド プロシージャのプランごとに 1 行を返します。その行の有効期間はストアド プロシージャがキャッシュに残っている間になります。 つまり、ストアド プロシージャがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点では、パフォーマンス統計 SQL トレース イベントが発生するのような**sys.dm_exec_query_stats**します。  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。  
   
@@ -44,30 +44,30 @@ ms.locfileid: "52418686"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ストアド プロシージャが存在するデータベースの ID。|  
-|**object_id**|**int**|ストアド プロシージャのオブジェクト ID 番号。|  
+|**object_id**|**int**|ストアド プロシージャのオブジェクト id 番号です。|  
 |**type**|**char(2)**|次のいずれかのオブジェクトの種類。<br /><br /> P = SQL ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> X = 拡張ストアド プロシージャ|  
 |**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明です。<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |**sql_handle**|**varbinary(64)**|これでのクエリと関連付けるために使用できる**sys.dm_exec_query_stats**するこのストアド プロシージャ内から実行されました。|  
-|**plan_handle**|**varbinary(64)**|インメモリ プランの識別子。 この識別子は一時的なもので、プランがキャッシュに残っている間だけ一定の値になります。 この値で使用できる、 **sys.dm_exec_cached_plans**動的管理ビュー。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
+|**plan_handle**|**varbinary(64)**|メモリ内のプランの識別子。 この識別子は、一時的なプランをキャッシュに保持している間だけ一定のまま。 この値で使用できる、 **sys.dm_exec_cached_plans**動的管理ビュー。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**cached_time**|**datetime**|ストアド プロシージャがキャッシュに追加された時刻。|  
-|**last_execution_time**|**datetime**|前回ストアド プロシージャが実行された時刻。|  
+|**last_execution_time**|**datetime**|ストアド プロシージャが実行された最後の時間です。|  
 |**execution_count**|**bigint**|後に、ストアド プロシージャが実行された回数は、最後にコンパイルされました。|  
 |**total_worker_time**|**bigint**|コンパイルされたので、このストアド プロシージャの実行によって消費されたマイクロ秒での CPU 時間の合計です。<br /><br /> ネイティブ コンパイル ストアド プロシージャに関して、多くの実行が 1 ミリ秒未満である場合は、 **total_worker_time** は精度が高くない可能性があります。|  
 |**last_worker_time**|**bigint**|ストアド プロシージャを前回実行したときに使用された CPU 時間 (マイクロ秒単位)。 <sup>1</sup>|  
 |**min_worker_time**|**bigint**|最小の CPU 時間をマイクロ秒でこのストアド プロシージャであることこれまで使用している 1 つの実行中に。 <sup>1</sup>|  
 |**max_worker_time**|**bigint**|最大 CPU 時間をマイクロ秒でこのストアド プロシージャが使用している 1 つの実行中に。 <sup>1</sup>|  
-|**total_physical_reads**|**bigint**|コンパイルされたので、このストアド プロシージャの実行によって実行される、物理読み取りの合計数です。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**last_physical_reads**|**bigint**|物理読み取りの数は、ストアド プロシージャが実行された最後の時間を実行します。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**min_physical_reads**|**bigint**|このストアド プロシージャであること、物理読み取りの最小数は 1 つの実行中に実行しました。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**max_physical_reads**|**bigint**|このストアド プロシージャであること、物理読み取りの最大数が 1 つの実行中に実行します。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**total_logical_writes**|**bigint**|コンパイルされたので、このストアド プロシージャの実行によって実行される、論理書き込みの合計数です。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**last_logical_writes**|**bigint**|バッファー プール ページの数は、計画が実行された最後の時間を変更します。 ページが既にダーティの場合 (変更された場合)、書き込みはカウントされません。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**min_logical_writes**|**bigint**|このストアド プロシージャの論理書き込みの最小数は 1 つの実行中に実行しました。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**max_logical_writes**|**bigint**|このストアド プロシージャの論理書き込みの最大数は 1 つの実行中に実行しました。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**total_logical_reads**|**bigint**|コンパイルされたので、このストアド プロシージャの実行によって実行される、論理読み取りの合計数です。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**last_logical_reads**|**bigint**|論理読み取りの数は、ストアド プロシージャが実行された最後の時間を実行します。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**min_logical_reads**|**bigint**|このストアド プロシージャの論理読み取りの最小数は 1 つの実行中に実行しました。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
-|**max_logical_reads**|**bigint**|このストアド プロシージャの論理読み取りの最大数は 1 つの実行中に実行しました。<br /><br /> メモリ最適化テーブルに対してクエリを実行するときは、常に 0 になります。|  
+|**total_physical_reads**|**bigint**|コンパイルされたので、このストアド プロシージャの実行によって実行される、物理読み取りの合計数です。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**last_physical_reads**|**bigint**|物理読み取りの数は、ストアド プロシージャが実行された最後の時間を実行します。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**min_physical_reads**|**bigint**|このストアド プロシージャであること、物理読み取りの最小数は 1 つの実行中に実行しました。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**max_physical_reads**|**bigint**|このストアド プロシージャであること、物理読み取りの最大数が 1 つの実行中に実行します。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**total_logical_writes**|**bigint**|コンパイルされたので、このストアド プロシージャの実行によって実行される、論理書き込みの合計数です。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**last_logical_writes**|**bigint**|バッファー プール ページの数は、計画が実行された最後の時間を変更します。 ページが既にダーティの場合 (変更された場合)、書き込みはカウントされません。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**min_logical_writes**|**bigint**|このストアド プロシージャの論理書き込みの最小数は 1 つの実行中に実行しました。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**max_logical_writes**|**bigint**|このストアド プロシージャの論理書き込みの最大数は 1 つの実行中に実行しました。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**total_logical_reads**|**bigint**|コンパイルされたので、このストアド プロシージャの実行によって実行される、論理読み取りの合計数です。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**last_logical_reads**|**bigint**|論理読み取りの数は、ストアド プロシージャが実行された最後の時間を実行します。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**min_logical_reads**|**bigint**|このストアド プロシージャの論理読み取りの最小数は 1 つの実行中に実行しました。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
+|**max_logical_reads**|**bigint**|このストアド プロシージャの論理読み取りの最大数は 1 つの実行中に実行しました。<br /><br /> 0 は、メモリ最適化テーブルのクエリは必ずします。|  
 |**total_elapsed_time**|**bigint**|合計の経過時間をマイクロ秒で、このストアド プロシージャの実行が完了したのです。|  
 |**last_elapsed_time**|**bigint**|経過時間をマイクロ秒単位で、これの最後に完了した実行のためのストアド プロシージャです。|  
 |**min_elapsed_time**|**bigint**|最小経過時間をマイクロ秒で、これを完了した実行用のストアド プロシージャです。|  
@@ -86,10 +86,10 @@ ms.locfileid: "52418686"
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
    
 ## <a name="remarks"></a>コメント  
- ビュー内の統計は、ストアド プロシージャの実行が完了したときに更新されます。  
+ ストアド プロシージャの実行が完了すると、ビュー内の統計情報が更新されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、平均経過時間で識別される上位 10 個のストアド プロシージャに関する情報を返します。  
+ 次の例では、平均経過時間で識別される最上位の 10 個のストアド プロシージャに関する情報を返します。  
   
 ```sql  
 SELECT TOP 10 d.object_id, d.database_id, OBJECT_NAME(object_id, database_id) 'proc name',   
@@ -102,7 +102,7 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>参照  
 [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys.dm_exec_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
 [sys.dm_exec_trigger_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    

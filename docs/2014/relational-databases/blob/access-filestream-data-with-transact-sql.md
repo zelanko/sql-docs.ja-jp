@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88fe39b5be43082ffc9648814eccf5384585f2b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920497"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL による FILESTREAM データへのアクセス
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の INSERT、UPDATE、および DELETE ステートメントを使用して FILESTREAM データを管理する方法について説明します。  

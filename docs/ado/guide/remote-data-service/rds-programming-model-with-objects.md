@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931417"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS のプログラミング モデルとオブジェクト
 RDS の目標にアクセスし、IIS などの中間層を介して、データ ソースを更新することです。 プログラミング モデルでは、この目標を達成するために必要なアクティビティのシーケンスを指定します。 オブジェクト モデルでは、メソッドとプロパティが、プログラミング モデルに影響するオブジェクトを指定します。  

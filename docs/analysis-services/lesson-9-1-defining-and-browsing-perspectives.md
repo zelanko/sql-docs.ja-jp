@@ -1,5 +1,5 @@
 ---
-title: 定義とパースペクティブの表示 |Microsoft ドキュメント
+title: 定義とパースペクティブの表示 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017379"
 ---
-# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>レッスン 9-1-の定義とパースペクティブの表示
+# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>レッスン 9-1-定義とパースペクティブの表示
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 パースペクティブを使用すれば、特定の目的に従ってキューブの表示を単純化できます。 既定では、ユーザーはアクセスする権限のあるキューブ内のすべての要素を表示できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ全体の表示時に表示されるものが、キューブの既定のパースペクティブです。 キューブ全体を表示すると、操作が非常に複雑になる可能性があります。特に、ビジネス インテリジェンスやレポートの要件に応じてキューブのごく一部分しか操作する必要のないユーザーにとっては複雑すぎます。  
@@ -192,7 +192,7 @@ ms.locfileid: "34018029"
     ![Internet Sales および Reseller Sales メジャー](../analysis-services/media/l9-perspectives-4.gif "Internet Sales および Reseller Sales メジャー")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[定義と翻訳の表示](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+[翻訳の定義と表示](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>参照  
 [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917095"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデタッチしたデータベースを別の場所に移動し、同じまたは異なるサーバー インスタンスに再アタッチする方法について説明します。 ただし、データベースを移動するときは、デタッチとアタッチではなく、ALTER DATABASE による計画的再配置手順を使用することをお勧めします。 詳細については、「 [ユーザー データベースの移動](move-user-databases.md)」を参照してください。  
@@ -60,7 +60,7 @@ ms.locfileid: "54136102"
     GO  
     ```  
   
-2.  任意のメソッドを使用して、データベース ファイル (AdventureWorks208R2_Data.mdf と AdventureWorks208R2_log) をコピーします。C:\MySQLServer\AdventureWorks208R2_Data.mdf と C:\MySQLServer\AdventureWorks208R2_Log.ldf にそれぞれします。  
+2.  任意の方法で、データベース ファイル (AdventureWorks208R2_Data.mdf と AdventureWorks208R2_log) をC:\MySQLServer\AdventureWorks208R2_Data.mdf と C:\MySQLServer\AdventureWorks208R2_Log.ldf にそれぞれコピーします。  
   
     > [!IMPORTANT]  
     >  実稼動データベースの場合は、データベースとトランザクション ログを別のディスクに配置します。  

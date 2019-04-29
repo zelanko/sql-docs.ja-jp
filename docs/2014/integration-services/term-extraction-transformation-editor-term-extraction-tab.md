@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07fa6e1b9523026af31138efc6f0e71ee0895936
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926642"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>[用語抽出変換エディター] ([用語抽出] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[用語抽出]** タブを使用すると、抽出するテキストを含むテキスト列を指定できます。  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926331"
 ---
 # <a name="use-variables-in-packages"></a>パッケージで変数を使用する
   変数は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに追加できる便利で柔軟な機能です。変数を使用すると、パッケージのオブジェクト間、および親パッケージと子パッケージとの間で情報を交換できます。 また、変数は式やスクリプトでも使用できます。  

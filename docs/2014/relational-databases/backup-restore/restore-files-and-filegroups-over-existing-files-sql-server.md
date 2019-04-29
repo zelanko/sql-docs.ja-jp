@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875041"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>既存のファイルにファイルとファイル グループを復元する (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でファイルとファイル グループを既存のファイルに復元する方法について説明します。  

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891794"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>手順 2:追加して、フラット ファイル接続マネージャーの構成
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>手順 2:フラット ファイル接続マネージャーの追加と構成
   この実習では、先ほど作成したパッケージにフラット ファイル接続マネージャーを追加します。 パッケージにフラット ファイル接続マネージャーを追加すると、フラット ファイルからデータを抽出できるようになります。 フラット ファイル接続マネージャーでは、フラット ファイルからデータを抽出するときに適用するファイルの名前と場所、ロケールとコード ページ、およびファイル形式を指定できます。また、列区切り記号も指定できます。 さらに、各列のデータ型を手動で指定できます。 **[列の型の予測]** ダイアログ ボックスを使用して、抽出したデータの列を [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] データ型に自動的にマップすることもできます。  
   
  通常は、操作する各フラット ファイルについて、新しいファイル インポート マネージャーを作成する必要があります。 ただし、このチュートリアルでは、データ形式がまったく同じである複数のフラット ファイルからデータを抽出するので、フラット ファイル接続マネージャーを 1 つだけパッケージに追加して、構成します。  
@@ -87,7 +87,7 @@ ms.locfileid: "58385270"
     |----------------------|--------------------|------------------------|----------------------|  
     |AverageRate|float [DT_R4]|FactCurrency.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency,CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日付|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
      に関して推奨されるデータ型、`CurrencyID`列は、変換先テーブル内のフィールドのデータ型と互換性がありません。 データ型であるため`DimCurrency.CurrencyAlternateKey`nchar (3) は、`CurrencyID`文字列 [DT_STR] から文字列 [DT_WSTR] に変更する必要があります。 フィールドではさらに、 `DimDate.FullDateAlternateKey` ; の日付データ型として定義されているがそのため、 `CurrencyDate` date [DT_Date] から database date [DT_DBDATE] に変更する必要があります。  

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891404"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>手順 3:エラー フロー リダイレクションの追加
+# <a name="step-3-adding-error-flow-redirection"></a>手順 3:エラー フロー リダイレクトの追加
   前の実習で学んだように、Lookup Currency Key 変換で壊れているサンプル フラット ファイルを処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
   
  エラー出力を使用し、失敗した行を別の処理パスにリダイレクトするようにコンポーネントを構成することで、変換の失敗を回避できます。 別のエラー処理パスを使用すると、さまざまな処理が可能になります。 たとえば、データを消去した後に失敗した行を再処理できます。 失敗した行を詳細なエラー情報と共に保存し、後の検証や再処理に役立てることも可能です。  

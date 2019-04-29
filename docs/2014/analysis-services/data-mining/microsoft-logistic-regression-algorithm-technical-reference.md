@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733936"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ロジスティック回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを変形したものです。このアルゴリズムでは、 *HIDDEN_NODE_RATIO* パラメーターは 0 に設定されています。 この設定により、非表示の層を含んでいない、ロジスティック回帰に相当するニューラル ネットワーク モデルが作成されます。  
@@ -61,7 +61,7 @@ ms.locfileid: "52518053"
   
  Μ = p - (状態の前の確率)  
   
- StdDev sqrt(p(1-p)) を =  
+ StdDev  = sqrt(p(1-p))  
   
  値が存在します。   (1-μ)/σ//(からミューを引いたもの) をシグマで除算)  
   

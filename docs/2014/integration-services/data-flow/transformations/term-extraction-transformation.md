@@ -26,11 +26,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899935"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  

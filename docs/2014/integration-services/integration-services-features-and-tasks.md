@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cb4eb52fe100dfe44f4008e22818880fe61b246
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892285"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services の機能とタスク
   そのすべてのユーザー デザイナー、開発者、アナリスト、または管理者に情報を検索の作成および開発する必要があります[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージ。 開発中のアプリケーションや Web サイトにパッケージを組み込む方法についても解説されています。  

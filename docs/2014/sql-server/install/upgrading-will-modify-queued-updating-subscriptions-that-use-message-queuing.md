@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 76af35f994413ad1e02bcafaaa8499e42fe232c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990153"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>アップグレードすると、メッセージ キューを使用するキュー更新サブスクリプションが変更される
   アップグレード アドバイザーによって、[!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キュー (MSMQ) を使用する 1 つ以上のキュー更新サブスクリプションが存在する可能性があることが検出されました。 レプリケーションでは、メッセージ キューがサポートされないため、キュー更新サブスクリプションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キューを使用するように変更されます。  

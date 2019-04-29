@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926824"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>[用語抽出変換エディター] ([詳細設定] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、頻度、長さ、語または句の抽出の有無など、抽出に関するプロパティを指定できます。  
@@ -41,7 +41,7 @@ ms.locfileid: "58385040"
  スコアが用語の頻度であることを指定します。  
   
  **[TFIDF]**  
- スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency、として定義されている製品です。TFIDF of a Term T = (frequency of T) * log( (#rows in Input) / (#rows having T) )  
+ スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積であり、次のように定義されます: 用語 T の TFIDF = (T の頻度) * log( (入力の行数) / (T を含む行数) )  
   
  **[頻度のしきい値]**  
  語または句を抽出する前の語または句の出現回数を指定します。 既定値は 2 です。  

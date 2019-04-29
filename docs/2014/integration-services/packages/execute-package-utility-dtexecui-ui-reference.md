@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890210"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>パッケージ実行ユーティリティ (DtExecUI) の UI リファレンス
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 開くことができます、このユーザー インターフェイス[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または」と入力して`dtexecui`を使用してパッケージを実行する代わりには、コマンド プロンプトで、 **DTExec**コマンド プロンプト ツールです。  

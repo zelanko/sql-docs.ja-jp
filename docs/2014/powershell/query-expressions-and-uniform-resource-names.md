@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922885"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインでは、XPath 式に似た、2 種類の式文字列が使用されます。 クエリ式は、オブジェクト モデル階層内の 1 つまたは複数のオブジェクトを列挙するための条件のセットを指定する文字列です。 URN (Uniform Resource Name) は、単一のオブジェクトを一意に識別する特定の種類のクエリ式文字列です。  

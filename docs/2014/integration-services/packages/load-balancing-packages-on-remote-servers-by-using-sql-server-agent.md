@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7c1f4792d97ae82561f0d05fe9754daae0a2bf3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890175"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>リモート サーバー上での SQL Server エージェントを使用したパッケージの負荷分散
   実行する必要のあるパッケージが数多くある場合、使用可能な他のサーバーでパッケージを実行すると便利です。 すべてのパッケージを 1 つの親パッケージで管理している場合に、他のサーバーを使用してパッケージを実行するこの方法を、負荷分散といいます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の負荷分散は、手動による方法であり、パッケージの所有者が構築する必要があります。 負荷分散は、サーバーで自動的には実行されません。 また、リモート サーバーで実行するパッケージは、他のパッケージ内の個別のタスクではなく、完全なパッケージである必要があります。  

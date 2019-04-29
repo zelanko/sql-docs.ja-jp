@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877131"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure への SQL Server マネージ バックアップ
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は Windows Azure BLOB ストレージ サービスへの SQL Server バックアップを管理および自動化します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]で使用されるバックアップ方法は、データベースの保有期間とトランザクション ワークロードに基づきます。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] では、指定された保有期間の特定の時点への復元がサポートされています。   
@@ -95,7 +95,7 @@ ms.locfileid: "52416396"
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]では、可用性データベース以外のすべてのデータベースについて SQL Server インスタンス名を使用して Windows Azure ストレージ コンテナーの名前が付けられます。  可用性データベースの場合は、可用性グループの GUID を使用して Windows Azure ストレージ コンテナーの名前が付けられます。  
   
- 可用性データベース以外のデータベースのバックアップ ファイルには、規則に従って名前が付けられます。データベース名、データベースの GUID の先頭 40 文字を使用して名前を作成せず、'-'、およびタイムスタンプ。 各セグメントの間には、区切り記号としてアンダースコア文字が挿入されます。 完全バックアップにはファイル拡張子として **.bak** が使用され、ログ バックアップには **.log** が使用されます。 可用性グループ データベースでは、前のファイル名前付け規則に加え、40 文字のデータベース名の後に可用性グループ データベース GUID が追加されます。 可用性グループ データベース GUID 値は、sys.databases の group_database_id の値です。  
+ 以外の可用性データベースのバックアップ ファイルの名前には、次の規則を使用しています。データベース名、データベースの GUID の先頭 40 文字を使用して名前を作成せず、'-'、およびタイムスタンプ。 各セグメントの間には、区切り記号としてアンダースコア文字が挿入されます。 完全バックアップにはファイル拡張子として **.bak** が使用され、ログ バックアップには **.log** が使用されます。 可用性グループ データベースでは、前のファイル名前付け規則に加え、40 文字のデータベース名の後に可用性グループ データベース GUID が追加されます。 可用性グループ データベース GUID 値は、sys.databases の group_database_id の値です。  
   
  **データベースの完全バックアップ:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]エージェントは、次のいずれかが当てはまる場合に、データベースの完全バックアップをスケジュールします。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52416396"
 -   トランザクション ログのバックアップがデータベースの完全バックアップより遅れている。 目標は、ログ チェーンが完全バックアップより進んだ状態にしておくことです。  
   
 #### <a name="retention-period-settings"></a>保有期間の設定  
- バックアップを有効にするときに、保有期間を日単位で設定する必要があります。最小値は 1 日で、最大値は 30 日です。  
+ バックアップを有効にする場合は、日単位で保有期間を設定する必要があります。最小値は 1 日、および最大値は 30 日。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] は保有期間の設定に基づいて、指定された期間内の特定の時点に復旧できるかどうかを評価し、保持するバックアップ ファイルと削除するバックアップ ファイルを決定します。 保有期間の設定で指定された期間を特定および照合するために、バックアップの backup_finish_date が使用されます。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "52416396"
 ###  <a name="support_limits"></a> サポートに関する制限事項  
  次に、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に固有の制限事項をいくつか示します。  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] エージェントでは、データベースのバックアップのみをサポートしています。その内訳は、完全バックアップとログ バックアップです。  ファイル バックアップの自動化はサポートされません。  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] エージェントには、データベースのバックアップのみがサポートされています。完全バックアップとログ バックアップ。  ファイル バックアップの自動化はサポートされません。  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の操作は、現在 Transact-SQL を使用してサポートされています。 監視とトラブルシューティングは、拡張イベントを使用して行うことができます。 PowerShell と SMO のサポートは、SQL Server インスタンスのストレージと保有期間の既定の設定を構成すること、および SQL Server のポリシー ベースの管理ポリシーに基づいてバックアップ状態と全体的な正常性を監視することに制限されています。  
   

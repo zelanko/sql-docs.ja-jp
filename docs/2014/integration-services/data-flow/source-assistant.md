@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90eaa75179bddd107db46aa197afb5c929097151
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900801"
 ---
 # <a name="source-assistant"></a>ソース アシスタント
   変換元アシスタント コンポーネントを使用すると、変換元コンポーネントおよび接続マネージャーを作成できます。 このコンポーネントは、SSIS ツールボックスの **[お気に入り]** セクションにあります。  

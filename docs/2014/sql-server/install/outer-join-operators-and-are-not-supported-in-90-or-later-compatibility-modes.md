@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 01584c368f9af43a8e63ec04d3eaf4f9228d9c96
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010775"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>互換性モード 90 以上では外部結合演算子 \*= および =\* がサポートされない
   アップグレード アドバイザーには、外部結合演算子の使用が検出しました\*= および =\*します。 このような演算子は互換性モード 90 以上ではサポートされません。 アップグレードすると、ユーザー データベースでは互換性モードが維持されます。 これらの演算子を使用するステートメントは失敗します。  

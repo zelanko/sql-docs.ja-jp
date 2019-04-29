@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919947"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の登録
   ユーザー定義型 (UDT) を使用するには[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、登録する必要があります。 UDT を登録するには、UDT を使用するデータベースにアセンブリを登録し、型を作成する必要があります。 UDT は、1 つのデータベースにスコープが設定されるので、同一のアセンブリと UDT を各データベースに登録しない限り、複数のデータベースでは使用できません。 UDT アセンブリを登録し、型を作成すると、[!INCLUDE[tsql](../../includes/tsql-md.md)] やクライアント コードでその UDT を使用できます。 詳細については、「 [CLR ユーザー定義型](clr-user-defined-types.md)」を参照してください。  

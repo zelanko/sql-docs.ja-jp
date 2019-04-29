@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732947"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利益チャート (Analysis Services - データ マイニング)
   利益チャートには、マイニング モデルの使用に関連して推定される収益性が表示されます。 たとえば、モデルでは、どの顧客か、会社がビジネス シナリオでお問い合わせくださいが予測と仮定します。 この場合、利益チャートに対して、ターゲット メーリング キャンペーンの実施コストに関する情報を追加します。 その後、完成したチャートで、ランダムに顧客に連絡を取った場合と比較して、顧客を正しくターゲット指定した場合に推定される利益を表示できます。  

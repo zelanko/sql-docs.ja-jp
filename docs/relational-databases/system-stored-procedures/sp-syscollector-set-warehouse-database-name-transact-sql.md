@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f2bae4087d929ec7f13caff28bd19afabfa6aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004254"
 ---
 # <a name="spsyscollectorsetwarehousedatabasename-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  管理データ ウェアハウスに接続するために使用される接続文字列のデータベース名を指定します。  
+  管理データ ウェアハウスへの接続に使用する接続文字列で定義されているデータベース名を指定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,14 +41,14 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @database_name =] '*database_name*'  
- 管理データ ウェアハウスの名前を指定します。 *database_name*は**sysname**既定値は NULL です。  
+ [ @database_name = ] '*database_name*'  
+ 管理データ ウェアハウスの名前です。 *database_name*は**sysname**既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- データ コレクター全体の構成を変更する前に、データ コレクターを無効にする必要があります。 データ コレクターが有効になっている場合、このプロシージャは失敗します。  
+ データ コレクター全体の構成を変更する前に、データ コレクターを無効にする必要があります。 この手順は、データ コレクターが有効になっている場合に失敗します。  
   
  現在のデータベース名を表示するにはクエリ、 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)システム ビュー。  
   

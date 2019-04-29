@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985772"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services の拡張機能
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のモジュール式アーキテクチャは、拡張性を考慮して設計されています。 マネージド コード API を使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の多くのコンポーネントで使用される拡張機能を容易に開発、インストール、および管理できます。 プライベートまたは共有のアセンブリを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して作成し、変化するビジネス要件に応じて新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の機能を追加できます。  

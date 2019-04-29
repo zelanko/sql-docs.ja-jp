@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001532"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sp_syscollector_stop_collection_set
  [ @collection_set_id = ] *collection_set_id*  
  コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**既定値は NULL です。 *collection_set_id*場合、値が必要*名前*は NULL です。  
   
- [ @name =] '*名前*'  
+ [ @name = ] '*name*'  
  コレクション セットの名前を指定します。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_set_id*は NULL です。  
   
  [ @stop_collection_job = ] *stop_collection_job*  
  コレクション セットのコレクション ジョブが実行されている場合に、停止を指定します。 *stop_collection_job*は**ビット**既定値は 1 です。  
   
- *stop_collection_job*コレクション モードを設定してキャッシュにコレクション セットにのみ適用されます。 詳細については、[sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)を参照してください。  
+ *stop_collection_job*コレクション モードを設定してキャッシュにコレクション セットにのみ適用されます。 詳細については、次を参照してください。 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

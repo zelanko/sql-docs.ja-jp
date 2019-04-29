@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892438"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>手順 2:追加してログ記録の構成
+# <a name="step-2-adding-and-configuring-logging"></a>手順 2:ログ機能の追加と設定
   ここでは、Lesson 3.dtsx パッケージのデータ フローのログを有効にします。 次に、PipelineExecutionPlan イベントと PipelineExecuteTrees イベントを記録するテキスト ファイル ログ プロバイダーを構成します。 テキスト ファイル ログ プロバイダーは、表示や移行が容易なログを作成します。 パッケージの基本テスト段階では、この簡潔なログ ファイルは特に便利です。 ログ エントリは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの [ログ イベント] ウィンドウでも確認できます。  
   
 ### <a name="to-add-logging-to-the-package"></a>パッケージにログ機能を追加するには  

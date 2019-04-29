@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028379"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType トレース イベント列
   Object Type トレース イベント列は、さまざまなトレース イベントで使用されます。 このトピックでは、この列の値と、その値に関連付けられている定義について説明します。  

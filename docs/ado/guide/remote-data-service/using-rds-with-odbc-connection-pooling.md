@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955757"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>RDS での ODBC 接続プールの使用
 ODBC データ ソースを使用している場合は、クライアントの負荷の処理を高パフォーマンスを実現するために、接続オプションでは、インターネット インフォメーション サービス (IIS) のプールを使用できます。 接続プールは、頻繁に使用される接続の開いている状態を維持する接続は、リソース マネージャーです。  

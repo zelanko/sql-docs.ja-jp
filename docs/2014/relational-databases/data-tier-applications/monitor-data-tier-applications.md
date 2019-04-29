@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918130"
 ---
 # <a name="monitor-data-tier-applications"></a>データ層アプリケーションの監視
   データ層アプリケーション (DAC) は、システム ビューおよびシステム テーブルと共に **(SSMS) で** ユーティリティ エクスプローラー **および** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から監視できます。 さらに、DAC に含まれるデータベース内のオブジェクトもすべて、データベースと [!INCLUDE[ssDE](../../includes/ssde-md.md)] の標準的な監視方法を使用して監視できます。  

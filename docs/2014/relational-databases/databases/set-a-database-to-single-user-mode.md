@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871236"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>データベースをシングル ユーザー モードに設定する
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のユーザー定義のデータベースをシングル ユーザー モードに設定する方法について説明します。 シングル ユーザー モードでは、一度に 1 人のユーザーだけがデータベースにアクセスでき、一般にはメンテナンス操作のために使用されます。  

@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900256"
 ---
 # <a name="lookup-transformation"></a>参照変換
   参照変換は、入力列のデータを参照データセットの列と結合することにより参照を実行します。 参照を使用すると、共通の列の値に基づいている関連テーブル内の追加情報にアクセスできます。  
@@ -129,11 +129,11 @@ ms.locfileid: "58386550"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   MSDN ライブラリのビデオ「[フル キャッシュ モードで参照変換を実装](https://go.microsoft.com/fwlink/?LinkId=131031)msdn.microsoft.com で  
+-   MSDN ライブラリのビデオ「[フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」 (msdn.microsoft.com)  
   
 -   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](https://go.microsoft.com/fwlink/?LinkId=146623)」  
   
--   ブログ エントリ「[参照パターン。大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)、blogs.msdn.com  
+-   blogs.msdn.com のブログ記事「[参照パターン: 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
   
 -   msftisprodsamples.codeplex.com のサンプル「 [参照変換](https://go.microsoft.com/fwlink/?LinkId=267528)」  
   

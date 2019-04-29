@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922200"
 ---
 # <a name="backup-devices-sql-server"></a>バックアップ デバイス (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース上でのバックアップ操作中、バックアップ対象のデータ (*backup*) は、物理バックアップ デバイスに書き込まれます。 この物理バックアップ デバイスは、メディア セットの最初のバックアップが書き込まれるときに初期化されます。 単一または一連のバックアップ デバイス上にあるバックアップによって、1 つのメディア セットが構成されます。  
@@ -102,7 +102,7 @@ GO
   
  FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
   
- 例えば以下のようにします。  
+ 例を次に示します。  
   
 ```  
 RESTORE DATABASE AdventureWorks2012   
@@ -110,7 +110,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="BackupFileDiskPath"></a> ディスク バックアップ ファイルのパスを指定します。  
- バックアップ ファイルを指定する場合、その完全パスとファイル名を入力する必要があります。 ファイルへのバックアップ時にファイル名または相対パスだけを指定すると、バックアップ ファイルは既定のバックアップ ディレクトリに配置されます。 既定のバックアップ ディレクトリは、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup です ( *n* はサーバー インスタンスの番号です)。 そのため、既定のサーバー インスタンスの既定のバックアップ ディレクトリはします。C:\Program files \microsoft SQL Server\MSSQL12 します。MSSQLSERVER\MSSQL\Backup します。  
+ バックアップ ファイルを指定する場合、その完全パスとファイル名を入力する必要があります。 ファイルへのバックアップ時にファイル名または相対パスだけを指定すると、バックアップ ファイルは既定のバックアップ ディレクトリに配置されます。 既定のバックアップ ディレクトリは、C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup です ( *n* はサーバー インスタンスの番号です)。 そのため、既定のサーバー インスタンスの既定のバックアップ ディレクトリはします。C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
   
  指定があいまいになる状態を避けるために、特にスクリプトでは、バックアップ ディレクトリのパスを各 DISK 句で明示的に指定することをお勧めします。 ただし、これは、クエリ エディターを使用している場合はそれほど重要ではありません。 この場合、バックアップ ファイルが既定のバックアップ ディレクトリに存在することがわかっていれば、DISK 句からパスを省略できます。 たとえば、次の `BACKUP` ステートメントでは、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースが、既定のバックアップ ディレクトリにバックアップされます。  
   

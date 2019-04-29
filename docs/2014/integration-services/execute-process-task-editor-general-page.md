@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b482fcd6f03a3a5b20a1b1825cc9a045b891224
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898370"
 ---
 # <a name="execute-process-task-editor-general-page"></a>[プロセス実行タスク エディター]\([全般] ページ)
   **[プロセス実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、プロセス実行タスクの名前と説明を入力できます。  

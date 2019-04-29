@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834354"
 ---
 # <a name="configure-data-viewer-general-tab"></a>[データ ビューアーの構成] ([全般] タブ)
   データ ビューアーは、パッケージ実行中にデータが 2 つのデータ フロー コンポーネントを接続するパスを移動するときに、データを表示します。  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49c5772404e212629a97c89bf23475ab893bd069
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740292"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue プロパティ (ADO MD)
 書式設定された表示を示します、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)値。  
@@ -36,6 +36,6 @@ ms.locfileid: "47616620"
 ## <a name="applies-to"></a>適用対象  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Value プロパティ (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)

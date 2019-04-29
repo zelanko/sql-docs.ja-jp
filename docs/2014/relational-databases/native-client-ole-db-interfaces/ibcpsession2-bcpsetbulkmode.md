@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989988"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   Ibcpsession 2::bcpsetbulkmode の代替を提供する[ibcpsession::bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md)列の形式を指定するためです。 個々 の列形式属性を設定するには、ibcpsession::bcpcolfmt とは異なり、ibcpsession 2::bcpsetbulkmode はすべての属性を設定します。  

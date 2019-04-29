@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876276"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>メディア セット、メディア ファミリ、およびバックアップ セット (SQL Server)
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を初めて使用するユーザーを対象とし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップと復元で使用する基本的なバックアップ メディア用語を紹介します。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でバックアップ メディアに使用する形式、バックアップ メディアとバックアップ デバイス間の対応付け、バックアップ メディアでのバックアップの構成、メディア セットとメディア ファミリに関するいくつかの注意点について説明します。 古いメディア セットを新しいメディア セットと交換する前に行うバックアップ メディアの初期化およびフォーマット処理の手順、メディア セット内の古いバックアップ セットを上書きする方法、新しいバックアップ セットをメディア セットに追加する方法についても説明します。  
@@ -70,7 +70,7 @@ ms.locfileid: "54129892"
 #### <a name="the-media-header"></a>メディア ヘッダー  
  バックアップ メディアの各ボリューム (ディスク ファイルまたはテープ) には、メディア ヘッダーが含まれています。メディア ヘッダーは、そのテープ (またはディスク) を使用する最初のバックアップ操作によって作成されます。 このヘッダーは、メディアが再フォーマットされるまでそのままの状態で維持されます。  
   
- メディア ヘッダーには、メディア (ディスク ファイルまたはテープ) を識別するために必要な情報と、そのメディアが属するメディア ファミリ内での位置を識別するために必要な情報がすべて含まれています。 この情報には、次の項目が含まれています。  
+ メディア ヘッダーには、メディア (ディスク ファイルまたはテープ) を識別するために必要な情報と、そのメディアが属するメディア ファミリ内での位置を識別するために必要な情報がすべて含まれています。 この情報には、次の内容が含まれます。  
   
 -   メディア名。  
   

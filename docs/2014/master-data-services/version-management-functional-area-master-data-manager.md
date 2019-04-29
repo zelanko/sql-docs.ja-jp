@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ced43d5008531f540bd9985a817794baa88705fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922863"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>[バージョン管理] 機能領域 (マスター データ マネージャー)
   [バージョン管理] 機能領域では、管理者はデータの検証、トランザクションの確認と破棄、データのバージョン管理対象コピーの作成、およびシステムをサブスクライブする場合のデータのバージョンへのフラグ設定を実行できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  

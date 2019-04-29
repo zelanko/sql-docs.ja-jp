@@ -21,17 +21,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982293"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLDescribeParam**準備された SQL ステートメントに関連付けられているパラメーター マーカーの説明を返します。 この情報は、IPD のフィールドも使用可能です。  
   
 ## <a name="syntax"></a>構文  
@@ -55,28 +55,28 @@ SQLRETURN SQLDescribeParam(
  [入力]パラメーター マーカーの数で順番に順番に増加パラメーターの順序、1 から始まります。  
   
  *DataTypePtr*  
- [出力]パラメーターの SQL データ型を返すバッファーへのポインター。 この値は、IPD の SQL_DESC_CONCISE_TYPE レコード フィールドから読み取られます。 内の値の 1 つ、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型、またはドライバーに固有の SQL データ型のセクション。  
+ [出力]パラメーターの SQL データ型を返すバッファーへのポインター。 この値は、IPD の SQL_DESC_CONCISE_TYPE レコード フィールドから読み取られます。 内の値の 1 つ、 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: のセクションデータ型、またはドライバーに固有の SQL データ型。  
   
  ODBC 3。*x*、SQL_TYPE_DATE、SQL_TYPE_TIME、または SQL_TYPE_TIMESTAMP で返される *\*DataTypePtr*の日付、時刻、またはタイムスタンプ データ、ODBC 2 にそれぞれ;.*x*SQL_DATE、SQL_TIME、または SQL_TIMESTAMP が返されます。 ドライバー マネージャーは、ODBC 2 時に、必要なマッピングを実行します。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーまたはとき、ODBC 3 *。x* ODBC 2 を利用するアプリケーション *。x*ドライバー。  
   
  ときに*ColumnNumber*と等しいで返される SQL_BINARY (ブックマーク列) を 0 に *\*DataTypePtr*の可変長のブックマーク。 (SQL_INTEGER は ODBC の 3 つのブックマークを使用する場合に返されます。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーまたは ODBC 2 *。x*アプリケーションは、ODBC 3 の操作します *。x*ドライバー)。  
   
- 詳細については、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d: データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
+ 詳細については、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。  
   
  *ParameterSizePtr*  
- [出力]データ ソースで定義されている対応するパラメーター マーカーの式または列の文字のサイズを返すバッファーへのポインター。 列のサイズの詳細については、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。  
+ [出力]データ ソースで定義されている対応するパラメーター マーカーの式または列の文字のサイズを返すバッファーへのポインター。 列のサイズの詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。  
   
  *DecimalDigitsPtr*  
- [出力]データ ソースで定義されている列の 10 進数字または式の対応するパラメーターの数を返すバッファーへのポインター。 10 進数字の詳細については、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。  
+ [出力]データ ソースで定義されている列の 10 進数字または式の対応するパラメーターの数を返すバッファーへのポインター。 10 進数字の詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。  
   
  *NullablePtr*  
  [出力]パラメーターが NULL 値を許容するかどうかを示す値を返すバッファーへのポインター。 この値は、IPD の SQL_DESC_NULLABLE フィールドから読み取られます。 次のいずれかです。  
   
--   SQL_NO_NULLS: パラメーターでは (これは、既定値)、NULL 値は許可されません。  
+-   SQL_NO_NULLS:パラメーターでは、NULL 値が (これは、既定値) は許可されません。  
   
--   SQL_NULLABLE: パラメーターは、NULL 値を許可します。  
+-   SQL_NULLABLE:パラメーターは、NULL 値を許可します。  
   
--   SQL_NULLABLE_UNKNOWN: ドライバーことはできません、パラメーターが NULL 値を許容するかどうか決定します。  
+-   SQL_NULLABLE_UNKNOWN:ドライバーは、パラメーターが NULL 値を許容するかどうかを判断できません。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
@@ -95,7 +95,7 @@ SQLRETURN SQLDescribeParam(
 |HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*します。 後でもう一度関数が呼び出された、 *StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
 |HY010|関数のシーケンス エラー|(DM) 関数が呼び出す前に呼び出された**SQLPrepare**または**SQLExecDirect**の*StatementHandle*します。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLDescribeParam**関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
@@ -106,7 +106,7 @@ SQLRETURN SQLDescribeParam(
   
  **SQLDescribeParam** SQL ステートメントのパラメーターの型 (入力、入力/出力、または出力) は返されません。 ただし、プロシージャの呼び出しでは、SQL ステートメントのすべてのパラメーターは、入力パラメーターが。 アプリケーションを呼び出すプロシージャへの呼び出し内の各パラメーターの種類を決定する**SQLProcedureColumns**します。  
   
- 詳細については、[を記述するパラメーター](../../../odbc/reference/develop-app/describing-parameters.md)を参照してください。  
+ 詳細については、次を参照してください。[を記述するパラメーター](../../../odbc/reference/develop-app/describing-parameters.md)します。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、SQL ステートメントのユーザーを要求し、し、そのステートメントを準備します。 次に、呼び出す**SQLNumParams**ステートメントにパラメーターが含まれるかどうかを確認します。 呼び出し、ステートメントにパラメーターが含まれている場合**SQLDescribeParam**これらのパラメーターを記述して**SQLBindParameter**これらをバインドできます。 最後に、パラメーターの値はユーザー要求し、ステートメントを実行します。  

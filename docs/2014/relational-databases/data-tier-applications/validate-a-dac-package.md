@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917916"
 ---
 # <a name="validate-a-dac-package"></a>DAC パッケージの検証
   DAC パッケージを運用環境に配置する前にパッケージの内容を確認し、既存の DAC をアップグレードする前にアップグレード処理を検証するようにしてください。 これは、特に、外部で開発されたパッケージを配置する場合に当てはまります。  
   
 1.  **作業を開始する準備:**[前提条件](#Prerequisites)  
   
-2.  **DAC のアップグレードに使用します。**[DAC の内容を表示](#ViewDACContents)、[データベースの変更を表示](#ViewDBChanges)、[アップグレード アクションを表示](#ViewUpgradeActions)、 [Dac の比較](#CompareDACs)  
+2.  **DAC のアップグレード:**[DAC の内容の表示](#ViewDACContents)、[データベースの変更の表示](#ViewDBChanges)、[アップグレード処理の表示](#ViewUpgradeActions)、[Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 前提条件  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、データベースに対して [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) を実行してください。また、ストアド プロシージャやその他のユーザー定義コードなど、データベースのコードを確認してください。  

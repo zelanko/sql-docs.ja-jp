@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017758"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,10 +68,10 @@ sp_help [ [ @objname = ] 'name' ]
     |**Length**|**smallint**|(バイト単位) でのデータ型の物理的な長さ。|  
     |**prec**|**int**|有効桁数 (総桁数) です。|  
     |**Scale**|**int**|小数点の右側にある数字の数。|  
-    |**NULL 値の使用**|**varchar(** 35 **)**|NULL 値を許容するかどうかを示します。はいまたはいいえです。|  
+    |**NULL 値の使用**|**varchar(** 35 **)**|NULL 値を許容するかどうかを示します。イエスかノーか答えてください。|  
     |**Default_name**|**nvarchar(** 128 **)**|このデータ型にバインドされた既定値の名前です。<br /><br /> NULL = No デフォルトをバインドします。|  
     |**規則の名前**|**nvarchar(** 128 **)**|このデータ型にバインドされたルールの名前です。<br /><br /> NULL = No デフォルトをバインドします。|  
-    |**[照合順序]**|**sysname**|データ型の照合順序。 NULL 以外の文字データ型を表します。|  
+    |**照合順序**|**sysname**|データ型の照合順序。 NULL 以外の文字データ型を表します。|  
   
 3.  場合*名前*以外のデータ型では、任意のデータベース オブジェクトは、 **sp_help**この結果に指定したオブジェクトの種類に基づいて、設定済みでも追加の結果セットを返します。  
   
@@ -90,16 +90,16 @@ sp_help [ [ @objname = ] 'name' ]
   
         |列名|データ型|説明|  
         |-----------------|---------------|-----------------|  
-        |**Column_name**|**nvarchar(** 128 **)**|列の名前。|  
+        |**Column_name**|**nvarchar(** 128 **)**|列名|  
         |**型**|**nvarchar(** 128 **)**|列のデータを入力します。|  
-        |**計算**|**varchar(** 35 **)**|列内の値が計算されているかどうかを示します。はいまたはいいえです。|  
+        |**計算**|**varchar(** 35 **)**|列の値を計算するかどうかを示します。イエスかノーか答えてください。|  
         |**Length**|**int**|列の長さ (バイト単位)。<br /><br /> 注:列のデータ型が大きな値の型 (**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**)、値は-1 として表示されます。|  
         |**prec**|**char(** 5 **)**|列の有効桁数。|  
         |**Scale**|**char(** 5 **)**|列の小数点以下桁数です。|  
-        |**NULL 値の使用**|**varchar(** 35 **)**|列で NULL 値を許容するかどうかを示します。はいまたはいいえです。|  
+        |**NULL 値の使用**|**varchar(** 35 **)**|列で NULL 値を許容するかどうかを示します。イエスかノーか答えてください。|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|末尾の空白をトリミングします。 はいまたは no を返します。|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|これは旧バージョンとの互換性のためにだけ用意されています。|  
-        |**[照合順序]**|**sysname**|列の照合順序です。 非文字データ型の場合は NULL です。|  
+        |**照合順序**|**sysname**|列の照合順序です。 非文字データ型の場合は NULL です。|  
   
     -   Id 列の追加の結果セットが返されます。  
   
@@ -136,9 +136,9 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|制約の型。|  
         |**constraint_name**|**nvarchar(** 128 **)**|制約の名前。|  
-        |**delete_action**|**nvarchar(** 9 **)**|削除操作があるかを示します。NO_ACTION、CASCADE、SET_、SET_DEFAULT、または該当なし。<br /><br /> ただし、FOREIGN KEY 制約にだけ適用されます。|  
-        |**update_action**|**nvarchar(** 9 **)**|UPDATE 操作が次のいずれかであることを示します。NO_ACTION、CASCADE、SET_、SET_DEFAULT、または該当なし。<br /><br /> ただし、FOREIGN KEY 制約にだけ適用されます。|  
-        |**status_enabled**|**varchar(** 8 **)**|制約が有効かどうかを示します。有効、無効、または該当なし。<br /><br /> CHECK および FOREIGN KEY 制約にのみ適用されます。|  
+        |**delete_action**|**nvarchar(** 9 **)**|削除操作があるかを示します。NO_ACTION、CASCADE、set _、SET_DEFAULT、または該当なし。<br /><br /> ただし、FOREIGN KEY 制約にだけ適用されます。|  
+        |**update_action**|**nvarchar(** 9 **)**|更新操作があるかを示します。NO_ACTION、CASCADE、set _、SET_DEFAULT、または該当なし。<br /><br /> ただし、FOREIGN KEY 制約にだけ適用されます。|  
+        |**status_enabled**|**varchar(** 8 **)**|制約が有効になっているかどうかを示します。有効、無効な場合、または該当なし。<br /><br /> CHECK および FOREIGN KEY 制約にのみ適用されます。|  
         |**status_for_replication**|**varchar(** 19 **)**|制約がレプリケーションを対象とするのかどうかを示します。<br /><br /> CHECK および FOREIGN KEY 制約にのみ適用されます。|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|制約を構成する列の名前です。デフォルトおよびルールの場合は、デフォルトまたはルールを定義するテキストです。|  
   

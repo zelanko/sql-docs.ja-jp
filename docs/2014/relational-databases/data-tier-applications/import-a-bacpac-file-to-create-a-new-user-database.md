@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918186"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
   データ層アプリケーション (DAC) ファイル (.bacpac ファイル) をインポートすると、データを含んだ元のデータベースのコピーを、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の新しいインスタンス上または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に作成することができます。 エクスポートとインポートという操作を組み合わせることで、DAC またはデータベースをインスタンス間で移行したり論理バックアップを作成したりすることが可能です。たとえば、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に配置されているデータベースの社内用コピーを作成することもできます。  

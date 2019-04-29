@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877692"
 ---
 # <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター] ([全般] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "58374750"
 > [!IMPORTANT]  
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- **関連トピック:** [HTTP 接続マネージャー](connection-manager/http-connection-manager.md)、 [HTTP 接続マネージャー エディター&#40;サーバー ページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **関連トピック:** [HTTP 接続マネージャー](connection-manager/http-connection-manager.md)、[HTTP 接続マネージャー エディター &#40;[サーバー] ページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **[WSDLFile]**  
  コンピューターのローカルにある WSDL ファイルの完全修飾パスを入力するか、参照ボタン ( **[...]** ) をクリックしてファイルを指定します。  

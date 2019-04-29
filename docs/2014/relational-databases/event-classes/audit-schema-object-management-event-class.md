@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53b96a33e4fc369c486dcdf19ed34279898eee57
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012540"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management イベント クラス
   **Audit Schema Object Management** イベント クラスは、サーバー オブジェクトが作成、変更、または削除されるときに発生します。  

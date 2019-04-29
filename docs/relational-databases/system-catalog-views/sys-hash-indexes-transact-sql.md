@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59d98fe6c7def4073bf0f2cd7cb631c143a766b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004693"
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のハッシュ インデックスとハッシュ インデックス プロパティを表示します。 ハッシュ インデックスがでのみサポートされている[、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)します。  
   
- Sys.hash_indexes ビューには、sys.indexes ビューと同じ列およびという列を追加が含まれています。 **bucket_count**します。 Sys.hash_indexes ビュー内の他の列に関する詳細については、[sys.indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)を参照してください。  
+ Sys.hash_indexes ビューには、sys.indexes ビューと同じ列およびという列を追加が含まれています。 **bucket_count**します。 Sys.hash_indexes ビュー内の他の列に関する詳細については、次を参照してください。 [sys.indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

@@ -22,13 +22,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013491"
 ---
-# <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
+# <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   このインスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との間に確立された接続に関する情報と各接続の詳細を返します。 SQL Server のサーバー全体の接続情報を返します。 SQL データベースの現在のデータベース接続情報を返します。  
@@ -38,27 +38,27 @@ ms.locfileid: "47774230"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|session_id|**int**|この接続に関連付けられたセッションの識別子。 NULL 値が許可されます。|  
-|most_recent_session_id|**int**|この接続に関連付けられた最新の要求のセッション ID。 SOAP 接続は別のセッションで再利用できます。NULL 値が許可されます。|  
+|session_id|**int**|この接続に関連付けられているセッションを識別します。 NULL 値が許可されます。|  
+|most_recent_session_id|**int**|この接続に関連付けられた最新の要求のセッション ID。 (SOAP 接続は別のセッションで使用できます)。NULL 値が許可されます。|  
 |connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
-|net_transport|**nvarchar(40)**|常に返します**セッション**接続で複数のアクティブな結果セット (MARS) を有効にします。<br /><br /> **注:** この接続で使用される物理的な転送プロトコルについて説明します。 NULL 値は許可されません。|  
-|protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類。 現在、TDS (TSQL) と SOAP が区別されます。 NULL 値が許可されます。|  
+|net_transport|**nvarchar(40)**|常に返します**セッション**接続で複数のアクティブな結果セット (MARS) を有効にします。<br /><br /> **注:** この接続で使用される物理的な転送プロトコルをについて説明します。 NULL 値は許可されません。|  
+|protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類を指定します。 TDS (TSQL) と SOAP が現在区別します。 NULL 値が許可されます。|  
 |protocol_version|**int**|この接続に関連付けられたデータ アクセス プロトコルのバージョン。 NULL 値が許可されます。|  
-|endpoint_id|**int**|この接続の種類を表す識別子。 この endpoint_id は sys.endpoints ビューのクエリに使用できます。 NULL 値が許可されます。|  
+|endpoint_id|**int**|接続の種類を表す識別子です。 この endpoint_id は sys.endpoints ビューのクエリに使用できます。 NULL 値が許可されます。|  
 |encrypt_option|**nvarchar(40)**|この接続で暗号化が有効かどうかを表すブール値。 NULL 値は許可されません。|  
 |auth_scheme|**nvarchar(40)**|指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows 認証スキームがこの接続で使用します。 NULL 値は許可されません。|  
 |node_affinity|**smallint**|この接続が関係しているメモリ ノード。 NULL 値は許可されません。|  
 |num_reads|**int**|この接続で発生したバイトの読み取りの数。 NULL 値が許可されます。|  
 |num_writes|**int**|この接続で発生したバイトの書き込みの数。 NULL 値が許可されます。|  
-|last_read|**datetime**|この接続で最後に発生した読み取りのタイムスタンプ。 NULL 値が許可されます。|  
-|last_write|**datetime**|この接続で最後に発生した書き込みのタイムスタンプ。 Null 値はありません。|  
+|last_read|**datetime**|この接続で最後の読み取りが発生したときのタイムスタンプ。 NULL 値が許可されます。|  
+|last_write|**datetime**|この接続で最後の書き込みが発生したときのタイムスタンプ。 Null 値はありません。|  
 |net_packet_size|**int**|情報とデータの転送に使用されたネットワーク パケット サイズ。 NULL 値が許可されます。|  
 |client_net_address|**varchar(48)**|このサーバーに接続するクライアントのホスト アドレス。 NULL 値が許可されます。<br /><br /> V12 で前に[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、この列は常に NULL を返します。|  
-|client_tcp_port|**int**|この接続に関連付けられたクライアント コンピューターのポート番号。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、この列は常に NULL を返します。|  
-|local_net_address|**varchar(48)**|この接続の対象となったサーバーの IP アドレス。 TCP トランスポート プロバイダーを使用する接続の場合にのみ該当します。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、この列は常に NULL を返します。|  
-|local_tcp_port|**int**|接続で TCP トランスポートを使用した場合に、この接続の対象となったサーバー TCP ポート。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、この列は常に NULL を返します。|  
-|connection_id|**uniqueidentifier**|各接続の一意識別子。 NULL 値は許可されません。|  
-|parent_connection_id|**uniqueidentifier**|MARS セッションが使用しているプライマリ接続の識別子。 NULL 値が許可されます。|  
+|client_tcp_port|**int**|この接続に関連付けられているクライアント コンピューター上のポート番号。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、この列は常に NULL を返します。|  
+|local_net_address|**varchar(48)**|この接続の対象とするサーバーの IP アドレスを表します。 TCP トランスポート プロバイダーを使用する接続の場合にのみ該当します。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、この列は常に NULL を返します。|  
+|local_tcp_port|**int**|サーバーの TCP トランスポートを使用して接続した場合、この接続が対象とする TCP ポートを表します。 NULL 値が許可されます。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、この列は常に NULL を返します。|  
+|connection_id|**uniqueidentifier**|各接続を一意に識別します。 NULL 値は許可されません。|  
+|parent_connection_id|**uniqueidentifier**|MARS セッションが使用しているプライマリ接続を識別します。 NULL 値が許可されます。|  
 |most_recent_sql_handle|**varbinary(64)**|この接続で実行された最新の要求の SQL ハンドル。 most_recent_sql_handle 列は、常に most_recent_session_id 列と同期されます。 NULL 値が許可されます。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   

@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce09e2c607600273f5b5778251c3c58fdf57f9dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016927"
 ---
 # <a name="caching-reports-ssrs"></a>複数のレポートのキャッシュ (SSRS)
   レポート サーバーでは、処理済みレポートのコピーをキャッシュして、ユーザーがレポートを開いたときにそのコピーを返すことができます。 レポートがキャッシュされたコピーかどうかをユーザーが判断できる唯一の方法は、レポートが実行された日時を確認することです。 その日時が現在の日時ではなく、レポートがスナップショットでない場合、そのレポートはキャッシュから取得されたレポートです。  

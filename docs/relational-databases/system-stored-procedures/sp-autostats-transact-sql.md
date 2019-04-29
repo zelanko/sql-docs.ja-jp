@@ -20,18 +20,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62995678"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   インデックス、統計オブジェクト、テーブル、またはインデックス付きビューの自動統計更新オプション (AUTO_UPDATE_STATISTICS) を表示または変更します。  
   
- AUTO_UPDATE_STATISTICS オプションの詳細については、[ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[統計](../../relational-databases/statistics/statistics.md)を参照してください。  
+ AUTO_UPDATE_STATISTICS オプションの詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)と[統計](../../relational-databases/statistics/statistics.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

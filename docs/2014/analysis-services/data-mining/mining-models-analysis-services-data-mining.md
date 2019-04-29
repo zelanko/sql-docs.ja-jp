@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733777"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>マイニング モデル (Analysis Services - データ マイニング)
   *マイニング モデル* は、データにアルゴリズムを適用することによって作成されますが、単なるアルゴリズムまたはメタデータ コンテナーではなく、予測を生成し、リレーションシップを推定するために新しいデータに適用されるデータ、統計情報、およびパターンのセットです。  

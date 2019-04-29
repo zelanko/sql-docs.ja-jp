@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 657376be08e4cd404ce53d78114604cdd11fbda2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63005838"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "56034443"
     
 > **重要!!** これに適用されます **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11 のみです。**  
 >   
->  この機能は現在プレビュー状態です。 この機能は将来のリリースで変更または削除される可能性があるので、この機能の特定の実装に依存する設定は行わないでください。  
+>  この機能はプレビュー状態にします。 機能を変更または将来のリリースで削除された可能性がありますので、この機能の特定の実装に依存関係をなりません。  
   
- サーバーで利用できるデータベース クォータの種類を返します。  
+ サーバー上のデータベースの使用可能なクォータの種類を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

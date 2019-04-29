@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874109"
 ---
 # <a name="altering-an-assembly"></a>アセンブリの変更
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に登録されているアセンブリは、ALTER ASSEMBLY ステートメントを使用することで、比較的最近のバージョンから更新できます。 アセンブリを更新するには、ALTER ASSEMBLY ステートメントを次の構文で使用します。  
@@ -30,7 +30,7 @@ ALTER ASSEMBLY SQLCLRTest
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY を使用しても、そのアセンブリを使用している現在実行中のプロセスは中断されません。プロセスの実行は、変更されていないアセンブリを使用して継続されます。 ALTER ASSEMBLY を使用して、共通言語ランタイム (CLR) 関数、集計関数、ストアド プロシージャ、およびトリガーの署名を変更することはできません。 アセンブリに新しいパブリック メソッドを追加したり、プライベート メソッドを任意の方法で変更したりできます。パブリック メソッドは、署名または属性を変更しない限り変更できます。 データ メンバーや基本クラスなどの、ネイティブ シリアル化されたユーザー定義型に含まれているフィールドは、ALTER ASSEMBLY を使用して変更することはできません。 その他すべての変更はサポートされていません。 詳細については、[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)を参照してください。  
+ ALTER ASSEMBLY を使用しても、そのアセンブリを使用している現在実行中のプロセスは中断されません。プロセスの実行は、変更されていないアセンブリを使用して継続されます。 ALTER ASSEMBLY を使用して、共通言語ランタイム (CLR) 関数、集計関数、ストアド プロシージャ、およびトリガーの署名を変更することはできません。 アセンブリに新しいパブリック メソッドを追加したり、プライベート メソッドを任意の方法で変更したりできます。パブリック メソッドは、署名または属性を変更しない限り変更できます。 データ メンバーや基本クラスなどの、ネイティブ シリアル化されたユーザー定義型に含まれているフィールドは、ALTER ASSEMBLY を使用して変更することはできません。 その他すべての変更はサポートされていません。 詳細については、次を参照してください。 [ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)します。  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>アセンブリの権限セットの変更  
  アセンブリの権限セットも、ALTER ASSEMBLY ステートメントを使用して変更できます。 次に示すステートメントでは、SQLCLRTest アセンブリの権限セットを `EXTERNAL_ACCESS` に変更します。  

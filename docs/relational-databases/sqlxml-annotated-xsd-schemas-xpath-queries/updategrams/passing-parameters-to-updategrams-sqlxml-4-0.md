@@ -19,15 +19,15 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007304"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートに渡すパラメーターの詳細については、[アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)を参照してください。  
+  アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートに渡すパラメーターの詳細については、次を参照してください。[アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)します。  
   
  アップデートグラムでは、パラメーター値として NULL を渡すことができます。 指定した、NULL パラメーターの値を渡すため、 **nullvalue**属性。 割り当てられている値、 **nullvalue**属性は、パラメーター値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "56041573"
   
  アップデート グラムの例を使用する前に、次のことを確認してください。  
   
--   例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)を参照してください。  
+-   例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. アップデートグラムにパラメーターを渡す  
  この例では、アップデートグラムで HumanResources.Shift テーブル内の従業員の姓を変更します。 アップデート グラムには、2 つのパラメーターが渡されます。ShiftID を一意に識別し、名前を使用します。  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c48f659931fc1329df0a25afd74ff1e7bcc38cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733094"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>マイニング構造からの列の削除
   データ マイニング デザイナーを使用して、マイニング構造の作成後に構造から列を削除できます。 マイニング構造列を削除する理由には、次のようなものがあります。  

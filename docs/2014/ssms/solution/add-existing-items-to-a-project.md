@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956164"
 ---
 # <a name="add-existing-items-to-a-project"></a>既存の項目をプロジェクトに追加する
-  プロジェクトに新しい項目を追加して、アプリケーションの機能を拡張できます。 既存の項目は、クエリやその他のファイルです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 2 つのプロジェクトの種類があります。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトおよび Analysis Services スクリプト プロジェクトです。 プロジェクトの種類によって、プロジェクトに追加できるクエリ ファイルが決まります。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ (拡張子が .sql のファイル) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトには追加できますが、Analysis Services スクリプト プロジェクトには追加できません。 プロジェクトの種類に追加のファイル拡張子に関連付けるを参照してください。[関連付けるファイル拡張子をコード エディター](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)します。  
+  プロジェクトに新しい項目を追加して、アプリケーションの機能を拡張できます。 既存の項目は、クエリやその他のファイルです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、次の 2 種類のプロジェクトがあります:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクト、Analysis Services スクリプト プロジェクト。 プロジェクトの種類によって、プロジェクトに追加できるクエリ ファイルが決まります。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ (拡張子が .sql のファイル) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプト プロジェクトには追加できますが、Analysis Services スクリプト プロジェクトには追加できません。 プロジェクトの種類に追加のファイル拡張子に関連付けるを参照してください。[関連付けるファイル拡張子をコード エディター](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)します。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>既存のクエリまたはその他のファイルをプロジェクトに追加するには  
   

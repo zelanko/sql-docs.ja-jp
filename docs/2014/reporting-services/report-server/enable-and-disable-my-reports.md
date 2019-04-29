@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08230bedfa4c9e62a890a34db9ac12d99cae589a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011934"
 ---
 # <a name="enable-and-disable-my-reports"></a>個人用レポートの有効化と無効化
   個人用レポート機能では、ユーザーが所有しているレポートを個人用のフォルダーに保存できるように、レポート サーバー データベースに個人の記憶域を割り当てます。 レポート サーバー管理者として、この機能を有効化または無効化したり、セキュリティ設定を変更してユーザーがこの作業領域で実行できる操作を制御することで機能の動作を変更することができます。  

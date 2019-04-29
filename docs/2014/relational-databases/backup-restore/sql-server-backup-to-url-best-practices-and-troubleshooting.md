@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877094"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
   このトピックには、Windows Azure BLOB サービスとの間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを示しています。  
@@ -24,7 +24,7 @@ ms.locfileid: "53349990"
   
 -   [Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [チュートリアル:SQL Server のバックアップと Windows Azure Blob ストレージ サービスへの復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [チュートリアル: Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>バックアップの管理  
  バックアップを管理するための一般的な推奨事項を次に示します。  
@@ -98,15 +98,15 @@ ms.locfileid: "53349990"
   
          このエラーを解決するには、`BACKUP` を指定した `BLOCKSIZE = 65536` ステートメントを再実行してください。  
   
--   それらのアクティブなリースを保持している blob のためのバックアップ中にエラー:バックアップ処理に失敗すると、アクティブなリースを使用した blob の可能性があります。  
+-   アクティブなリースを保持している BLOB が原因でバックアップ中に発生するエラー:バックアップ処理に失敗すると、アクティブなリースを保持する BLOB が生成されます。  
   
      BACKUP ステートメントが再実行されると、バックアップ操作が次のようなエラーで失敗することがあります。  
   
-     **Backup to URL はリモート エンドポイントから例外を受け取りました。例外メッセージ:リモート サーバーには、エラーが返されます。(412) は現在、blob のリースを要求にリース ID が指定されていない**します。  
+     **Backup to URL はリモート エンドポイントから例外を受け取りました。例外メッセージ:リモート サーバーがエラーを返しました: (412) は現在、blob のリースを要求にリース ID が指定されていない**します。  
   
      アクティブなリースを保持しているバックアップ BLOB ファイルに対して RESTORE ステートメントが実行されると、復元操作は次のようなエラーで失敗します。  
   
-     **例外メッセージ:リモート サーバーには、エラーが返されます。(409) 競合しています.**  
+     **例外メッセージ:リモート サーバーがエラーを返しました: (409) 競合しています.**  
   
      このようなエラーが発生した場合は、BLOB ファイルを削除する必要があります。 このシナリオの詳細とこの問題の解決方法については、「 [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)」を参照してください。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53349990"
   
  プロキシ サーバーで、1 分あたりの接続数を制限する設定が使用されている場合があります。 Backup to URL プロセスはマルチスレッド プロセスであるため、この制限を超える可能性があります。 制限を超えた場合、プロキシ サーバーは接続を切断します。 この問題を解決するには、プロキシ設定を変更し、SQL Server がプロキシを使用しないようにします。   エラー ログに表示される可能性のある種類またはエラー メッセージの例を次に示します。  
   
--   上の書き込み"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"が失敗しました。Backup to URL はリモート エンドポイントから例外を受け取りました。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続はクローズされました。  
+-   上の書き込み"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"が失敗しました。Backup to URL は、リモート エンドポイントから例外を受け取りました。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続が閉じられました。  
   
 -   ファイル "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" で回復できない I/O エラーが発生しました。リモート エンドポイントからエラーを収集できませんでした。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "53349990"
   
      バックアップ データベースが異常終了しています。  
   
--   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイス http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続はクローズされました。  
+-   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイス http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続が閉じられました。  
   
  トレース フラグ 3051 を使用して詳細ログを有効にすると、ログに次のメッセージが表示される場合もあります。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "53349990"
   
  **選択されていない既定のプロキシ設定:**  
   
- 既定の設定が選択されていないことが原因で、次のようなプロキシ認証エラーが発生する場合があります。*"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" ファイルで回復できない I/O エラーが発生しました: Backup to URL がリモート エンドポイントから例外を受け取りました。例外メッセージ:リモート サーバーには、エラーが返されます。(407)* **プロキシ認証のために必要な**します。  
+ 既定の設定が選択されていないことが原因で、次のようなプロキシ認証エラーが発生する場合があります。*"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" ファイルで回復できない I/O エラーが発生しました: Backup to URL がリモート エンドポイントから例外を受け取りました。例外メッセージ:リモート サーバーがエラーを返しました: (407)* **プロキシ認証のために必要な**します。  
   
  この問題を解決するには、次の手順に従って、Backup to URL プロセスで既定のプロキシ設定を使用できるようにするための構成ファイルを作成します。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "53349990"
   
     ```  
   
-2.  SQL Server インスタンスの Binn フォルダーに構成ファイルを配置します。 たとえば、SQL Server は、コンピューターの C ドライブにインストールする場合、構成ファイルをここに配置します。*C:\Program files \microsoft SQL Server\MSSQL12 します。\<InstanceName > \MSSQL\Binn*します。  
+2.  SQL Server インスタンスの Binn フォルダーに構成ファイルを配置します。 たとえば、SQL Server は、コンピューターの C ドライブにインストールする場合、構成ファイルをここに配置します。*C:\Program Files\Microsoft SQL Server\MSSQL12.\<InstanceName>\MSSQL\Binn*.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Windows Azure への SQL Server マネージド バックアップのトラブルシューティング  
  SQL Server マネージド バックアップは Backup to URL の上に構築されるので、前のセクションで説明したトラブルシューティングのヒントは、SQL Server マネージド バックアップを使用するデータベースまたはインスタンスに適用されます。  SQL Server Managed Backup to Windows Azure のトラブルシューティングに関する情報がで詳しく説明されている[トラブルシューティング SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)します。  

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7063448da86c97a7e3ff88899a9488915a055c71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875028"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM アプリケーションでのデータベース操作との競合の回避
   SqlOpenFilestream() により Win32 ファイル ハンドルを開いて FILESTREAM BLOB データの読み取りまたは書き込みを行うアプリケーションでは、共通のトランザクションで管理される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで競合エラーが発生する場合があります。 この例として、完了までに時間がかかる [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや MARS クエリなどがあります。 アプリケーションは、このような競合を回避できるように注意深く設計する必要があります。  

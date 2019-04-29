@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 652b301a91adc3c6c417e23ff2f192712c5f4a04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924981"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>ビジネス ルールを削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になったビジネス ルールを削除します。  

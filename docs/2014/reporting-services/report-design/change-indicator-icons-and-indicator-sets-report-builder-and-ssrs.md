@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eadd265cc4d3e9cda3678e6269c4ec998b7ace20
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021096"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 常にではありません、データを効果的に表したり、配信されたレポートで正しく機能可能性がある、事前構成済みのインジケーター セットを提供します。 このトピックでは、インジケーター アイコンの外観を変更する手順と、インジケーター セットを変更して別のインジケーター アイコンを含めたり、インジケーター アイコンの数を増減したりする手順について説明します。  

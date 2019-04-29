@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5020b0d9dc509aff629347582ef1782d1262ceb8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020425"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
   再帰型階層グループは、組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、複数の階層レベルから成る単一のレポート データセットのデータを編成します。  

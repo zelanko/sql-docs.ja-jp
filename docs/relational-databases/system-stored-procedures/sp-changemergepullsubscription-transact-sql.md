@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997092"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターに接続するときに認証します。|  
 |**dynamic_snapshot_location**||スナップショット ファイルが保存されるフォルダーへのパスです。|  
 |**ftp_address**||旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用ファイル転送プロトコル (FTP) サービスのネットワーク アドレスです。|  
-|**ftp_login**||旧バージョンとの互換性のためにだけ使用できます。 ユーザー名は FTP サービスへの接続に使用されます。|  
+|**ftp_login**||旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー名です。|  
 |**ftp_password**||旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー パスワードです。|  
 |**ftp_port**||旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用の FTP サービスのポート番号です。|  
 |**hostname**||指定します、この関数は、結合フィルターまたは論理レコード リレーションシップの WHERE 句で使用される場合の HOST_NAME() の値。|  

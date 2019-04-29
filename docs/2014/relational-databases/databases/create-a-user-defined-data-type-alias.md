@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917446"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  

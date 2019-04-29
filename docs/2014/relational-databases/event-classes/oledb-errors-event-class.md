@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961072"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors イベント クラス
   OLEDB Errors イベント クラスは、OLE DB プロバイダーの呼び出しによってエラーが返された場合に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生します。 OLE DB プロバイダーから報告された HRESULT エラーを表示する場合に、このイベント クラスをトレースに追加します。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a73ec4a842e220a16189f1390df167fe12bbab8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942995"
 ---
 # <a name="environment-handles"></a>環境ハンドル
 *環境*はデータにアクセスするためのグローバル コンテキストは、環境に関連付けられているなど、本質的にグローバルに適用されるすべての情報。  

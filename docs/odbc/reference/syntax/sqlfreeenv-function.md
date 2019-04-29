@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 979e34f89128a27a416f0af9305b1f97c6d0d385
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982267"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
  **まとめ**  
- ODBC 3 *.x*、ODBC 2.0 関数**SQLFreeEnv**置き換わりました**SQLFreeHandle**します。 詳細については、[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)を参照してください。  
+ ODBC 3 *.x*、ODBC 2.0 関数**SQLFreeEnv**置き換わりました**SQLFreeHandle**します。 詳細については、次を参照してください。 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
   
 > [!NOTE]
 >  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC 2 の詳細については *.x*アプリケーションの操作は、ODBC 3 *.x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  

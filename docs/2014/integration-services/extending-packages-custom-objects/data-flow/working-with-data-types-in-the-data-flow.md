@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 731dda855fe29a4aada9469a5d7744b9e1d5c3d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898930"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>データ フロー内のデータ型の処理
   Integration Services のカスタム データ フロー コンポーネント開発には、データ フロー バッファーにデータをコピーしたり、データ フロー バッファーからデータを取得したり、値を変換したりするなど、常にデータ型の処理が伴います。 このトピックでは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型の正しい選択と、それを扱うための適切なメソッドの使用について説明します。  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 73b2409f8e3b5b58be15351e05abd92dfc94ac8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877385"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性グループ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループがエンティティ内の属性の整理に役立ちます。 エンティティ内に多数の属性がある場合、属性グループを使用すると、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションでのエンティティの表示が見やすくなります。  
