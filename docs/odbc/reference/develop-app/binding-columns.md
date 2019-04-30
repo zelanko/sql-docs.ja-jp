@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88e3593276851b6ab38fde0472a70be31b7cbf34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199450"
 ---
 # <a name="binding-columns"></a>バインディング列
 これによって、アプリケーションに割り当てられた変数内のアプリケーションには、データ ソースからフェッチされるデータが返されます。 これを行うことができます、前に、アプリケーションに関連付ける必要があります、または*バインド*結果の列にこれらの変数の設定は、概念的には、このプロセスは、ステートメントのパラメーターをアプリケーション変数のバインドと同じです。 アプリケーションでは、変数が結果セット列にバインドした場合は、ドライバーにその変数のアドレスやデータの種類 - がについて説明します。 ドライバーでは、そのステートメントを保持し、情報を使用して、行をフェッチしたときに、列から値を返す構造体のこの情報を格納します。  

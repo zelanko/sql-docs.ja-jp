@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184541"
 ---
 # <a name="maintenance-plan-design-tab"></a>[メンテナンス プラン] ([デザイン] タブ)
   **[メンテナンス プラン]** ([デザイン] タブ) では、メンテナンス プランとそのサブプランのプロパティを指定します。 ツールボックスのタスクをプラン デザイナーにドラッグします。 タスクのグループを右クリックし、分岐する実行パスを作成します。 メンテナンス プランは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェント ジョブで実行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージとして保存されます。  
@@ -58,7 +58,7 @@ ms.locfileid: "52763744"
  **デザイナー画面**  
  メンテナンスプランのデザインとメンテナンスを行います。 デザイナー画面を使用して、プランへのメンテナンス タスクの追加、プランからのタスクの削除、タスク間の優先順位制約の指定、タスクの分岐および並列処理の指定を行います。  
   
- 2 つのタスクの間にある優先順位制約により、タスク間の関係が確立されます。 1 番目のタスク ( *先行タスク*) の実行結果が指定の条件を満たした場合のみ、2 番目のタスク ( *依存タスク*) が実行されます。 一般的に指定される実行結果は、 **[成功]**、 **[失敗]**、 **[完了]** のいずれかです。 メンテナンス プランのデザイナー画面は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデザイナー画面を基にしています。 詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
+ 2 つのタスクの間にある優先順位制約により、タスク間の関係が確立されます。 1 番目のタスク ( *先行タスク*) の実行結果が指定の条件を満たした場合のみ、2 番目のタスク ( *依存タスク*) が実行されます。 一般的に指定される実行結果は、 **[成功]**、 **[失敗]**、 **[完了]** のいずれかです。 メンテナンス プランのデザイナー画面は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] のデザイナー画面を基にしています。 優先順位制約の詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」を参照してください。  
   
  たとえば、インデックスの再構成タスクは、先行するデータベースの整合性確認タスクが正常に完了した場合のみ実行するように指定できます。 タスクの優先順位制約機能を利用すると、プランでエラーや失敗の条件を処理することもできます。 たとえば、データベースの整合性確認タスクが失敗したときに、オペレーターへの通知タスクを実行してユーザーまたはオペレーターに失敗を通知できます。  
   

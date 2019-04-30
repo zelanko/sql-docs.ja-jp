@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226012"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>高度な複数 Web サイト構成 (SSRS ネイティブ モード)
   このダイアログ ボックスは、レポート サーバーまたはレポート マネージャーへのアクセスに使用される URL を作成し、管理するために使用します。 **[高度な複数 Web サイト構成]** ダイアログ ボックスでは、追加の URL、つまりホスト ヘッダー名を含んだカスタム URL を作成することも、IPv4 または IPv6 形式の IP アドレスを指定することもできます。  
@@ -27,7 +27,7 @@ ms.locfileid: "48185372"
   
  レポート サーバーに複数の方法でアクセスできるように構成する場合は、複数の URL を作成すると便利です。 たとえば、イントラネットおよびエクストラネット接続を介してレポート サーバーにアクセスするには、接続の種類ごとに異なる URL を用意する必要があります。  
   
- 開くには、**高度な複数 Web サイトの構成**ダイアログ ボックスで、をクリックして **[詳細設定]** 上、 **Web サービスの URL**または**レポート マネージャー URL**ページで、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 **[高度な複数 Web サイト構成]** ダイアログ ボックスが開いたら、 **[追加]** または **[編集]** をクリックして、新しい URL の定義、既存の URL の変更や削除ができます。  
+ **[高度な複数 Web サイト構成]** ダイアログ ボックスを開くには、 **構成マネージャーの** [Web サービス URL] **ページまたは** [レポート マネージャー URL] **ページで** [詳細設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をクリックします。 **[高度な複数 Web サイト構成]** ダイアログ ボックスが開いたら、 **[追加]** または **[編集]** をクリックして、新しい URL の定義、既存の URL の変更や削除ができます。  
   
  **[OK]** をクリックして変更を保存します。 URL を追加または削除した後に、 **[OK]** をクリックせずにダイアログ ボックスを閉じると、変更は失われます。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48185372"
  一覧から URL エントリを削除します。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー&#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

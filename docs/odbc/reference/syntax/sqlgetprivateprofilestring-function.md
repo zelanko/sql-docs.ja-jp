@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77d1f433732cf710e715418df94eba5184e9a907
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132666"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 関数
 **準拠**  
@@ -48,7 +48,7 @@ int SQLGetPrivateProfileString(
 ```  
   
 ## <a name="arguments"></a>引数  
- *大文字、小文字*  
+ *lpszSection*  
  [入力]キー名を格納しているセクションを指定する null で終わる文字列へのポインター。 この引数が NULL の場合、関数では、ファイルのすべてのセクション名を指定されたバッファーにコピーします。  
   
  *lpszEntry*  
@@ -63,7 +63,7 @@ int SQLGetPrivateProfileString(
  *cbRetBuffer*  
  [入力]指し示されるバッファーの文字のサイズを指定します、 *RetBuffer*引数。  
   
- *場合*  
+ *lpszFilename*  
  [入力]初期化ファイルの名前を示す null で終わる文字列へのポインター。 この引数に、ファイルへの完全パスが含まれていない場合、既定のディレクトリが検索されます。  
   
 ## <a name="returns"></a>戻り値  

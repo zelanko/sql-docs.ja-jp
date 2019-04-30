@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186265"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>メンテナンス プラン ([レポートとログ記録] ページ)
   **[レポートとログ記録]** ダイアログ ボックスを使用して、メンテナンス プランを実行したときに生成されるレポートとログを構成できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "52762834"
  **[リモート サーバーにログを記録する]**  
  メンテナンス プランの履歴をリモート サーバーに記録します。  
   
- **[接続]**  
+ **Connection**  
  リモート サーバーにログを記録するときの接続情報を指定します。  
   
  **[新規作成]**  

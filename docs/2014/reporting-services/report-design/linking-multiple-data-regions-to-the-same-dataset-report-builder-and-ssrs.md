@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209347"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)
   複数のデータ領域を 1 つのレポートに追加し、同じレポート データセットのデータをさまざまな形式で表示することができます。 たとえば、データをテーブルとして表示し、さらにグラフで表示することができます。 そのためには、適切なフィルター式、並べ替え式、およびグループ式として同一の式とスコープを使用する必要があります。  

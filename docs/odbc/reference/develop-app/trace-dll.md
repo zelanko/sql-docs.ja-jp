@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7a99f6c2960600d62a789471f68c1f5da89ae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148867"
 ---
 # <a name="trace-dll"></a>トレース DLL
 トレースを実行する DLL では、ODBC コア コンポーネントの 1 つです。 以前、DLL、Windows SDK の ODBC コンポーネントでサンプル DLL として現在提供されているしがトレースには、Microsoft Data Access Components (MDAC) SDK が含まれています。 したがって、レジストリ エントリ、インターフェイス、およびトレース DLL 用のサンプル コードは、使用します。 この DLL は、DLL を ODBC ユーザーまたはサード パーティ ベンダーによって生成されたトレースで置き換えられます。 カスタム トレース DLL には、元のサンプル トレース DLL とは異なる名前を指定する必要があります。 トレース Dll はシステム ディレクトリにインストールする必要があります。 または読み込みが失敗します。 接続文字列は渡されませんトレース DLL をドライバー マネージャーによって。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224470"
 ---
 # <a name="column-size"></a>列サイズ
 数値データ型の列 (またはパラメーター) のサイズは、列またはパラメーターのデータ型またはデータの有効桁数で使用される最大桁数として定義されます。 文字型の場合、これは、データの文字の長さバイナリ データ型の列のサイズは、データの長さ (バイト単位) として定義されます。 時刻、タイムスタンプ、および間隔のすべてのデータ型の場合は、これは、このデータの文字表現の文字数です。 簡潔な SQL データ型ごとに定義されている列のサイズは、次の表に示します。  
@@ -30,17 +30,17 @@ ms.locfileid: "47665542"
 |-------------------------|-----------------|  
 |すべての文字の種類 [a] [b]。|列またはパラメーター (と SQL_DESC_LENGTH の記述子フィールドに含まれる) の文字で定義されている、または最大列サイズ。 たとえば、char (10) として定義されている 1 バイト文字列の列のサイズには 10 です。|  
 |SQL_DECIMAL SQL_NUMERIC|数字の定義済みの数。 たとえば、NUMERIC(10,3) として定義されている列の有効桁数には 10 です。|  
-|SQL_BIT [c]|1|  
-|SQL_TINYINT [c]|3|  
-|SQL_SMALLINT [c]|5|  
-|SQL_INTEGER [c]|10|  
-|SQL_BIGINT [c]|19 (符号付き) の場合、または 20 (符号なし) の場合|  
-|SQL_REAL [c]|7|  
-|[C] を使用できます。|15|  
-|SQL_DOUBLE [c]|15|  
+|SQL_BIT[c]|1|  
+|SQL_TINYINT[c]|3|  
+|SQL_SMALLINT[c]|5|  
+|SQL_INTEGER[c]|10|  
+|SQL_BIGINT[c]|19 (符号付き) の場合、または 20 (符号なし) の場合|  
+|SQL_REAL[c]|7|  
+|SQL_FLOAT[c]|15|  
+|SQL_DOUBLE[c]|15|  
 |すべてバイナリ型 [a] [b]。|定義済みまたは最大長さ (バイト単位) の列またはパラメーター。 たとえば、binary (10) として定義されている列の長さには 10 です。|  
-|SQL_TYPE_DATE [c]|10 (文字数、 *- yyyy-mm-dd*形式)。|  
-|SQL_TYPE_TIME [c]|8 (文字数、 *hh mm ss*形式)、または 9 + *s* (文字数、 *hh:mm:ss*[.fff...] 形式では、場所*の*秒の有効桁数です)。|  
+|SQL_TYPE_DATE[c]|10 (文字数、 *- yyyy-mm-dd*形式)。|  
+|SQL_TYPE_TIME[c]|8 (文字数、 *hh mm ss*形式)、または 9 + *s* (文字数、 *hh:mm:ss*[.fff...] 形式では、場所*の*秒の有効桁数です)。|  
 |SQL_TYPE_TIMESTAMP|16 (文字数、 *- yyyy-mm-dd hh:mm*形式)<br /><br /> 19 (文字数、 *- yyyy-mm-dd* *hh:mm:ss*形式)<br /><br /> または<br /><br /> 20 + *s* (文字数、 *- yyyy-mm-dd hh:mm:ss*[.fff...] 形式、場所*s*秒の有効桁数です)。|  
 |SQL_INTERVAL_SECOND|場所*p*は先頭の有効桁数の間隔と*s*秒の有効桁数は、 *p* (場合*s*= 0) または*p* + *s*+1 (場合*s*> 0). [d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|場所*p*は先頭の有効桁数の間隔と*s*は秒の有効桁数、9 +*p* (場合*s*= 0) または 10 +*p*+ *s* (場合*s*> 0). [d]|  

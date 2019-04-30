@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee8a14763479d48dfa2ea1c572222134693efaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206257"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD のコード例
 次のコード例を使用して、ADO MD オブジェクト、メソッド、およびプロパティを使用する方法について説明します。 これらの例では、SQL Server 7.0 の Microsoft SQL Server OLAP Services と共にインストールされているサンプル アプリケーションのサブセットです。  

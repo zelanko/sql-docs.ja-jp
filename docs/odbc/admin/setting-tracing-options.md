@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ccf5afd559d4d3716c22b42665c516aa230fafe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198524"
 ---
 # <a name="setting-tracing-options"></a>トレース オプションの設定
 **トレース**のタブ、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックスでは、ODBC 関数呼び出しをトレースする方法を構成することができます。  
@@ -30,7 +30,7 @@ ms.locfileid: "47626583"
   
  クリックした後、トレースが停止**今すぐトレースを停止**します。 トレースを向上させる、ログ ファイルが継続し、すべての ODBC アプリケーションのパフォーマンスに影響する注意してください。  
   
- トレースの詳細については、[トレース](../../odbc/reference/develop-app/tracing.md)を参照してください。  
+ トレースの詳細については、次を参照してください。[トレース](../../odbc/reference/develop-app/tracing.md)します。  
   
 ### <a name="changes-in-odbc-tracing"></a>ODBC トレースの変更  
  MDAC 2.7 SP2 では、前にトレースが任意の id で実行されているすべての ODBC アプリケーションの公開の詳細をキャプチャする、コンピューター全体の単位で ODBC トレースがのみ使用できます。 これには、プロセスの作成またはその他のローカル ユーザー アカウントおよびローカル サービスおよびネットワーク サービスなどのビルトイン セキュリティ プリンシパルの代わりに実行で発生する可能性のある ODBC に関連するアクティビティ トレースが含まれています。  

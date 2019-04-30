@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224606"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>マーケット バスケット モデルの検証 (中級者向けデータ マイニング チュートリアル)
   これでビルドした、`Association`モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション ビューアーで、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 このチュートリアルでは、ビューアーを使用してアイテム間の関係を検証する方法を、順を追って学習します。 ビューアーを使用すると、どの製品とどの製品がよく一緒に表示されるかが一目でわかるほか、新たなパターンの概観も可能です。  
@@ -188,7 +188,7 @@ ms.locfileid: "56035303"
   
      ルールのノードの種類は 8 で、アイテムセットのノードの種類は 7 です。 ルールの NODE_DESCRIPTION の値は、ルールを構成する条件を表します。 アイテムセットの NODE_DESCRIPTION の値は、アイテムセットに含まれるアイテムを表します。  
   
- コンテンツ クエリを作成してルールの詳細な統計情報を取得することもできます。 マイニング モデルの内容とその解釈方法の詳細については、[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)を参照してください。  
+ コンテンツ クエリを作成してルールの詳細な統計情報を取得することもできます。 マイニング モデルの内容とその解釈方法の詳細については、次を参照してください。[アソシエーション モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)します。  
   
  [トップに戻る](#bkmk_DepNet)  
   

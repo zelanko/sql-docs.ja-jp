@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e2e8bab73bfe93e8a78e013572a376b608ca9a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180611"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition プロパティ (ADO)
 OLE DB の設定を取得または**RowPosition**オブジェクトとの間で、 **ADORecordsetConstruction**オブジェクト。 使用すると**put_RowPosition**を設定する、 **RowPosition**オブジェクト、その結果、**レコード セット**オブジェクトで使用、 **RowPosition**オブジェクトを現在の行を決定します。  

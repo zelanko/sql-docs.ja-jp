@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198320"
 ---
 # <a name="driver-specification-subkeys"></a>ドライバーの仕様のサブキー
 ODBC ドライバーのサブキーの一覧の各ドライバーでは、独自のサブキーがあります。 このサブキーは、ODBC ドライバーのサブキーの下の対応する値として同じ名前を持ちます。 このサブキーの下の値は、ドライバーとドライバーのセットアップ Dll、によって返されるドライバー キーワードの値の完全なパスを一覧表示**SQLDrivers**、および使用状況カウントします。 値の形式は、次の表に示すようにします。  
@@ -29,11 +29,11 @@ ODBC ドライバーのサブキーの一覧の各ドライバーでは、独自
 |名前|データ型|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
 |CreateDSN|REG_SZ|*ドライバーの説明*|  
 |Driver|REG_SZ|*ドライバー DLL のパス*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *ファイル extension1*[**、\*します。** *ファイル extension2*].|  
+|FileExtns|REG_SZ|**\*.** *file-extension1*[**,\*.** *ファイル extension2*].|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |セットアップ|REG_SZ|*セットアップ DLL へのパス*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
@@ -44,7 +44,7 @@ ODBC ドライバーのサブキーの一覧の各ドライバーでは、独自
 |Keyword|使用方法|  
 |-------------|-----------|  
 |**APILevel**|ODBC を示す数値インターフェイスのドライバーでサポートされている一致レベル。<br /><br /> 0 = なし<br /><br /> 1 = レベル 1 のサポート<br /><br /> 2 = レベル 2 のサポート<br /><br /> これは SQL_ODBC_INTERFACE_CONFORMANCE オプションに返される値と同じである必要があります**SQLGetInfo**します。|  
-|**CreateDSN**|ドライバーのインストール時に作成される 1 つまたは複数のデータ ソースの名前。 システム情報と共に表示されるデータ ソースごとに 1 つのデータ ソースの仕様セクションを含める必要があります、 **CreateDSN**キーワード。 これらのセクションを含めないでください、**ドライバー**キーワード、これは、ドライバーの仕様のセクションで指定が十分な情報を含める必要があります、 **ConfigDSN**ドライバーで関数すべてのダイアログ ボックスを表示せず、データ ソースの仕様を作成する DLL をセットアップします。 データ ソースの仕様のセクションの形式の場合、[データ ソースの仕様のサブキー](../../../odbc/reference/install/data-source-specification-subkeys.md)を参照してください。|  
+|**CreateDSN**|ドライバーのインストール時に作成される 1 つまたは複数のデータ ソースの名前。 システム情報と共に表示されるデータ ソースごとに 1 つのデータ ソースの仕様セクションを含める必要があります、 **CreateDSN**キーワード。 これらのセクションを含めないでください、**ドライバー**キーワード、これは、ドライバーの仕様のセクションで指定が十分な情報を含める必要があります、 **ConfigDSN**ドライバーで関数すべてのダイアログ ボックスを表示せず、データ ソースの仕様を作成する DLL をセットアップします。 データ ソースの仕様のセクションの形式の場合、次を参照してください。[データ ソースの仕様のサブキー](../../../odbc/reference/install/data-source-specification-subkeys.md)します。|  
 |**ConnectFunctions**|ドライバーがサポートしているかどうかを示す 3 文字の文字列**SQLConnect**、 **SQLDriverConnect**、および**SQLBrowseConnect**します。 ドライバーがサポートしている場合**SQLConnect**、最初の文字は"Y"; 以外の場合は"N"です。 ドライバーがサポートしている場合**SQLDriverConnect**、2 番目の文字は"Y"; 以外の場合は"N"です。 ドライバーがサポートしている場合**SQLBrowseConnect**、3 番目の文字は"Y"; 以外の場合は"N"です。 たとえば、ドライバーをサポートしている場合**SQLConnect**と**SQLDriverConnect**なく**SQLBrowseConnect**、3 文字の文字列は"YYN"。|  
 |**DriverODBCVer**|ドライバーがサポートする ODBC のバージョンと文字の文字列。 形式は、バージョン*nn.nn*最初の 2 つの数字、メジャー バージョンとは、次の 2 つの数字はマイナー バージョン。 このマニュアルで説明されている ODBC のバージョン、ドライバーは「03.00」返す必要があります。<br /><br /> これは SQL_DRIVER_ODBC_VER オプションに返される値と同じである必要があります**SQLGetInfo**します。|  
 |**FileExtns**|ファイル ベースのドライバーでは、ファイルの拡張子のコンマ区切りの一覧を使用できます。 たとえば、dBASE ドライバー指定\*.dbf と書式設定されたテキスト ファイル ドライバーを指定\*.txt、\*.csv です。 アプリケーションがこの情報を使用する方法の例は、次を参照してください。、 **FileUsage**キーワード。|  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5adf32800f4c2bc2b4a0874ca7efc22f04ffd110
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200476"
 ---
 # <a name="the-odbc-solution"></a>ODBC ソリューション
 次に、質問は、ODBC がデータベースへのアクセス標準化する方法ですか。 2 つのアーキテクチャ要件があります。  
@@ -54,6 +54,6 @@ ms.locfileid: "52539143"
   
      代わりに、ODBC は、多数の機能 - 複数のほとんどの Dbms でサポートされるを公開しますが、これらの機能のサブセットのみを実装するためにドライバーが必要です。 ドライバーは、基になる DBMS でサポートされている場合にのみ、またはそれらをエミュレートする場合、その他の機能を実装します。 つまり、すべての Dbms で使用される機能のみを使用するまたはの特定の機能のサポートを確認し、それに対処するために、その DBMS 用のドライバーによって公開されるように、1 つの DBMS の機能を活用するアプリケーションを記述できます。  
   
-     ODBC が 2 つの関数を提供できるように、アプリケーションがドライバー機能を決定することができ、DBMS のサポート (**SQLGetInfo**と**SQLGetFunctions**) ドライバーと DBMS の全般的な情報を返す機能と関数の一覧、ドライバーをサポートします。 ODBC では、API と SQL の文法への準拠レベル、ドライバーでサポートされる機能の広範な範囲を指定することも定義します。 詳細については、[適合性レベル](../../odbc/reference/develop-app/conformance-levels.md)を参照してください。  
+     ODBC が 2 つの関数を提供できるように、アプリケーションがドライバー機能を決定することができ、DBMS のサポート (**SQLGetInfo**と**SQLGetFunctions**) ドライバーと DBMS の全般的な情報を返す機能と関数の一覧、ドライバーをサポートします。 ODBC では、API と SQL の文法への準拠レベル、ドライバーでサポートされる機能の広範な範囲を指定することも定義します。 詳細については、次を参照してください。[適合性レベル](../../odbc/reference/develop-app/conformance-levels.md)します。  
   
      それは、ODBC が公開機能のすべての一般的なインターフェイスを定義することに注意してください。 このためは、アプリケーションは、DBMS 固有コードではなく機能固有のコードを含めることがあり、これらの機能を公開するすべてのドライバーを使用できます。 これの利点の 1 つは、アプリケーションを DBMS でサポートされる機能が強化されています。 ときに更新する必要はありません。代わりに、更新されたドライバーがインストールされている場合、アプリケーションに自動的に機能を使用ため、そのコードは、ドライバー固有または DBMS に固有ではない、機能固有。

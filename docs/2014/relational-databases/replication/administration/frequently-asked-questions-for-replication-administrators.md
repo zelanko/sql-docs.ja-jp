@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207070"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
   ここでは、レプリケートされたデータベースの管理者が行うさまざまな作業についての指針となるような質問と回答を掲載します。  
@@ -42,7 +42,7 @@ ms.locfileid: "54125862"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>サブスクリプションはいつ利用可能になりますか。また、サブスクリプション データベースはいつ利用可能になりますか。  
  サブスクリプションは、スナップショットがサブスクリプション データベースに適用された後で利用可能になります。 それ以前にもサブスクリプション データベースにアクセスできますが、スナップショットの適用が完了するまではデータベースを使用しないでください。 スナップショットの生成と適用の状態を確認するには、レプリケーション モニターを使用します。  
   
--   スナップショットはスナップショット エージェントによって生成されます。 パブリケーションのスナップショットの生成状態は、レプリケーション モニターの **[エージェント]** タブで確認します。 詳細については、[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)を参照してください。  
+-   スナップショットはスナップショット エージェントによって生成されます。 パブリケーションのスナップショットの生成状態は、レプリケーション モニターの **[エージェント]** タブで確認します。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 -   スナップショットはディストリビューション エージェントまたはマージ エージェントによって適用されます。 スナップショットの適用状態は、レプリケーション モニターの **[ディストリビューション エージェント]** ページまたは **[マージ エージェント]** ページで確認します。 
   
@@ -121,7 +121,7 @@ ms.locfileid: "54125862"
   
 -   CREATE TABLE ステートメントなどの、オブジェクトの定義。 既定では、レプリケートされるすべてのオブジェクトの定義がサブスクライバーにコピーされます。  
   
--   オブジェクトが作成される名前空間:\<データベース >。\<スキーマ >。\<オブジェクト > です。 スキーマは、CREATE SCHEMA ステートメントで定義します。  
+-   オブジェクトが作成される\<Database>.\<Schema>.\<Object> の名前空間です。 スキーマは、CREATE SCHEMA ステートメントで定義します。  
   
 -   既定では、パブリケーションの新規作成ウィザードは、スキーマとオブジェクトの所有権に関して、以下のように動作します。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "54125862"
  可能。 データベースのレプリケーションに関係する特別な注意点がいくつかあります。 詳細については、「 [レプリケートされたデータベースのバックアップと復元](back-up-and-restore-replicated-databases.md)」を参照してください。  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>レプリケーションはトランザクション ログの大きさに影響しますか。  
- マージ レプリケーションとスナップショット レプリケーションは、トランザクション ログのサイズには影響しません。ただし、トランザクション レプリケーションは影響する場合があります。 データベースに 1 つ以上のトランザクション パブリケーションが含まれている場合、それらのパブリケーションに関連するすべてのトランザクションがディストリビューション データベースに配布されるまで、トランザクション ログの切り捨ては行われません。 トランザクション ログが大きくなりすぎ、ログ リーダー エージェントをスケジュールによって実行している場合は、実行間隔を短くすることを検討してください。 または、連続モードで実行するように設定してください。 連続モードで実行するように設定されている場合は (既定値)、実行中であることを確認してください。 ログ リーダー エージェントの状態を確認する方法の詳細については、[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)を参照してください。  
+ マージ レプリケーションとスナップショット レプリケーションは、トランザクション ログのサイズには影響しません。ただし、トランザクション レプリケーションは影響する場合があります。 データベースに 1 つ以上のトランザクション パブリケーションが含まれている場合、それらのパブリケーションに関連するすべてのトランザクションがディストリビューション データベースに配布されるまで、トランザクション ログの切り捨ては行われません。 トランザクション ログが大きくなりすぎ、ログ リーダー エージェントをスケジュールによって実行している場合は、実行間隔を短くすることを検討してください。 または、連続モードで実行するように設定してください。 連続モードで実行するように設定されている場合は (既定値)、実行中であることを確認してください。 ログ リーダー エージェントの状態を確認する方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
  また、パブリケーション データベースまたはディストリビューション データベース上で "sync with backup" オプションを設定している場合は、すべてのトランザクションのバックアップが完了するまでトランザクション ログの切り捨ては行われません。 トランザクション ログが大きくなりすぎ、かつ、このオプションを設定している場合は、トランザクション ログのバックアップ間隔を短くしてください。 トランザクション レプリケーションに関係するデータベースのバックアップと復元の詳細については、「[Strategies for Backing Up and Restoring Snapshot and Transactional Replication](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)」 (スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式) を参照してください。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "54125862"
   
 -   コマンドをサブスクライバーに配布するのに要すると推定される時間を示します。 スナップショットを生成してサブスクライバーに適用するのに必要な時間よりもこの値が大きい場合は、サブスクライバーの再初期化を検討してください。 詳細については、「 [サブスクリプションの再初期化](../reinitialize-subscriptions.md)」を参照してください。  
   
- 詳細については、[sp_replmonitorsubscriptionpendingcmds &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)と[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)を参照してください。  
+ 詳細については、次を参照してください。 [sp_replmonitorsubscriptionpendingcmds &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql)と[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 ## <a name="replication-and-other-database-features"></a>レプリケーションおよびその他のデータベース機能  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125862"
  可能。 データはすべてクラスターの 1 つのディスク セットに格納されるため、特別な注意は不要です。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーションの管理に関する FAQ](frequently-asked-questions-for-replication-administrators.md)   
+ [レプリケーション管理に関する FAQ](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

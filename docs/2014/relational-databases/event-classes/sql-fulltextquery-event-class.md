@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050752"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery イベント クラス
   SQL:FullTextQuery イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりフルテキスト クエリが実行されると発生します。 このイベント クラスは、フルテキスト カタログに関連する問題を監視するトレースに含めます。  

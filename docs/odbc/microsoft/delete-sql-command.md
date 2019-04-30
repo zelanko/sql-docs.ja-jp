@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198577"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL コマンド
 レコードの削除をマークします。  
@@ -34,12 +34,12 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>引数  
- [ *DatabaseName!*]*TableName*  
+ FROM [ *DatabaseName!*] *TableName*  
  レコードが削除対象としてマークするテーブルを指定します。  
   
  *DatabaseName!* 包含データベースは、データ ソースと指定されたデータベースがない場合は、テーブルを含むデータベースの名前を指定します。 データベースが、データ ソースと指定されたデータベースではない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に、テーブル名の前に感嘆符 (!) 区切り記号が含まれます。  
   
- 場所*FilterCondition1*[AND&#124;または*FilterCondition2*...]  
+ WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
  Visual FoxPro が特定のレコードの削除だけをマークすることを指定します。  
   
  *FilterCondition*レコードが削除対象としてマークを満たす必要のある条件を指定します。 AND で接続して、必要な数のフィルター条件を含めることができますか、OR 演算子。 NOT 演算子を使用して、論理式の値を反転するかを使用することができます**空**空のフィールドを確認する ()。  

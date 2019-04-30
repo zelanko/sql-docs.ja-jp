@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199945"
 ---
 # <a name="web-server-information"></a>Web サーバー情報
   Web サーバー情報は、マージ レプリケーションの Web 同期オプションを使用する場合に必要です。 Web 同期の構成の詳細については、「[Configure Web Synchronization (Web 同期の構成)](configure-web-synchronization.md)」をご覧ください。  
@@ -33,7 +33,7 @@ ms.locfileid: "52805844"
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)   
  [SQL Server 以外のサブスクライバー](non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [パブリケーションのサブスクライブ](subscribe-to-publications.md)   
  [マージ レプリケーションの Web 同期](web-synchronization-for-merge-replication.md)  
   
   

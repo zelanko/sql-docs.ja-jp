@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157963"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
   かどうかを作成する新しい[!INCLUDE[hek_2](../../includes/hek-2-md.md)]メモリ最適化テーブルまたは既存のディスク ベース テーブルをメモリ最適化テーブルに移行するための十分な使用して、サーバーをプロビジョニングするために各テーブルのメモリ必要量に関する適切に推定を理解しておくことはメモリ。 ここでは、メモリ最適化テーブルのデータを保持するために必要とされるメモリの量を推定する方法について説明します。  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] メモリ最適化テーブル内でのハッシュ インデックスの動作方法の詳細については、「 [Hash Indexes](../../database-engine/hash-indexes.md)」(ハッシュ インデックス) を参照してください。  
   
- **注:** ハッシュ インデックスの配列サイズを即座に変更することはできません。 ハッシュ インデックスの配列サイズを変更するには、テーブルを削除して bucket_count の値を変更し、そのテーブルを再作成する必要があります。  
+ **注:** その場でハッシュ インデックスの配列サイズを変更することはできません。 ハッシュ インデックスの配列サイズを変更するには、テーブルを削除して bucket_count の値を変更し、そのテーブルを再作成する必要があります。  
   
  **ハッシュ インデックスの配列サイズの設定**  
   

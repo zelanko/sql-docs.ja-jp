@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8cbfdf8f29db3fd96132d3e5058fb6d0f1f597f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164898"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>[クエリ] ([データセットのプロパティ] ダイアログ ボックス)
   選択**クエリ**で、**データセットのプロパティ** ダイアログ ボックスに、データ ソースを選択し、クエリを作成します。  

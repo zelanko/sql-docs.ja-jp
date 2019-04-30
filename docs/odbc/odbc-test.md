@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 797f572a6a9d847422981483c4bfe7938cd47e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057833"
 ---
 # <a name="odbc-test"></a>ODBC のテスト
 Microsoft® ODBC のテストは、ODBC ドライバーと ODBC ドライバー マネージャーのテストに使用できる ODBC 対応のアプリケーションです。 ODBC 3.51 には、ANSI および Unicode 対応のバージョンの ODBC のテストの両方が含まれています。 対応するファイルは次のとおりです。  
@@ -33,7 +33,7 @@ Microsoft® ODBC のテストは、ODBC ドライバーと ODBC ドライバー 
   
 -   Odbct32w.exe と Unicode のバージョンについては、Gtrts32w.dll します。  
   
- ODBC のテストを使用するには、ODBC API では、C 言語、および SQL を理解する必要があります。 ODBC API の詳細については、、 [ODBC プログラマ リファレンス](../odbc/reference/odbc-programmer-s-reference.md)を参照してください。  
+ ODBC のテストを使用するには、ODBC API では、C 言語、および SQL を理解する必要があります。 ODBC API の詳細については、次を参照してください。、 [ODBC プログラマ リファレンス](../odbc/reference/odbc-programmer-s-reference.md)します。  
   
  以前のドキュメントのこのセクション内に含まれていたヘルプ トピックは ODBC テスト プログラム内に含まれています。 開く Odbcte32.exe または Odbct32w.exe、オープン、**ヘルプ** メニューをクリック**ヘルプ トピック**します。  
   

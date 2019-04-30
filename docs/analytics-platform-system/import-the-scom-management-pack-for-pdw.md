@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149588"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>SCOM 管理パックでは、Analytics Platform System をインポートします。
 Analytics Platform System (APS)、System Center Operations Manager (SCOM) 管理パックをインポートする次の手順に従います。 管理パックは、SCOM から Parallel Data Warehouse を監視する必要があります。 

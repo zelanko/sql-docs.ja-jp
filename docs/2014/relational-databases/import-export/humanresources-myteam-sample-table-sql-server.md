@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5628df909bc5d28706ab6c9032f6dc62a13489c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151082"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
   「 [一括データのインポートおよびエクスポート](bulk-import-and-export-of-data-sql-server.md) 」のコード例の大部分では、 **myTeam**という名前の特殊なテスト用テーブルが必要になります。 これらのコード例を実行する前に、 **データベースの** HumanResources **スキーマに** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを作成する必要があります。  
@@ -34,7 +34,7 @@ ms.locfileid: "48109434"
 |**EmployeeID**|`smallint`|不可|行の主キー。 チーム メンバーの従業員 ID。|  
 |**名前**|`nvarchar(50)`|不可|チーム メンバーの名前。|  
 |**Title**|`nvarchar(50)`|[可]|チームにおける従業員の肩書き。|  
-|**背景情報**|`nvarchar(50)`|不可|行が最後に更新された日時 (既定値)。|  
+|**背景情報**|`nvarchar(50)`|不可|行が最後に更新された日時 EnterprisePublishing|  
   
  **HumanResources.myTeam テーブルを作成するには**  
   

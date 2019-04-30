@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77a061d9a4bc1b1e320cf8af01599cdc52e139f8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205019"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>文字列データ型の FOR XML のサポート
   FOR XML で XML が生成されるときに、データ内の空白文字はエンティティに変換されます。  
@@ -42,7 +42,7 @@ FOR XML AUTO;
 go  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
  <T c1="1" c2="Special character 0xD for carriage return   

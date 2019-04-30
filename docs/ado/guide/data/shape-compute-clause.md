@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062818"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 句
 図形の COMPUTE 句には、親が生成されます**レコード セット**の子への参照で構成されている列を持つ**レコード セット**は省略可能内容は章では、新しい、または計算列、列、または子の集計関数の実行結果**レコード セット**または以前に整形**レコード セット**; と任意の列の子から**レコード セット**記載されています句で省略可能。  
@@ -99,7 +99,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
  子**Recordset**状態によってグループ化されたが、任意の順序でそれ以外の場合に、詳細行になります。 つまり、グループはアルファベットまたは数字の順序ではできません。 場合は、親**レコード セット**指定の順序を使用することができます、**レコード セットの並べ替え**親を順序付ける方法**Recordset**します。  
   
- 開かれている親を移動できるようになりました**Recordset**子詳細へのアクセスと**レコード セット**オブジェクト。 詳細については、[階層レコード セットの行にアクセスする](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)を参照してください。  
+ 開かれている親を移動できるようになりました**Recordset**子詳細へのアクセスと**レコード セット**オブジェクト。 詳細については、次を参照してください。[階層レコード セットの行にアクセスする](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)します。  
   
 ## <a name="resultant-parent-and-child-detail-recordsets"></a>結果の親と子詳細レコード セット  
   

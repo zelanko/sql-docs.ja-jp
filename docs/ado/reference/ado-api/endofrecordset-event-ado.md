@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1697197bf9450a6487e70b0257160221e59359f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181017"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset イベント (ADO)
 **EndOfRecordset**イベントが呼び出されるは、行の末尾に移動する試みがあるときに、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  

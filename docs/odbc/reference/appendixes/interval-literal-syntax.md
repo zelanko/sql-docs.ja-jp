@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188819"
 ---
 # <a name="interval-literal-syntax"></a>Interval のリテラルの構文
 次の構文は、ODBC で interval のリテラルに使用されます。  
@@ -33,9 +33,9 @@ ms.locfileid: "47694056"
   
  *日付時刻リテラル*:: =*日間隔*&#124; です。*時間間隔*  
   
- *1 日間隔*:: =*日数値*[*時間値*[:*分値*[:*秒値*]]  
+ *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
   
- *時間間隔*:: =*時間値*[:*分値*[:*秒値*]  
+ *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
   
  &#124; です。*分値*[:*秒値*]  
   
@@ -51,13 +51,13 @@ ms.locfileid: "47694056"
   
  *分値*:: = *datetime 値*  
   
- *秒の値*:: =*秒整数*[. [*秒の端数*]  
+ *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
   
- *整数値の秒*:: =*符号なし整数*  
+ *seconds-integer-value* ::= *unsigned-integer*  
   
  *秒の端数*:: =*符号なし整数*  
   
- *datetime 値*:: =*符号なし整数*  
+ *datetime-value* ::= *unsigned-integer*  
   
  *間隔修飾子*:: =*開始フィールド*TO*終了フィールド*&#124;*単一 datetime フィールド*  
   

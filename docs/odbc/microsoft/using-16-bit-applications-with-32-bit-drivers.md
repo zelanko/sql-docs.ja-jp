@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209954"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>32 ビット ドライバーで 16 ビット アプリケーションを使用
 > [!IMPORTANT]  
@@ -44,10 +44,10 @@ ms.locfileid: "47752930"
   
  Windows (16 ビットから 32 ビットのサンク) で Windows、という名前の Ds32gt.dll は、32 ビットの設定を使用して渡される 16 ビットの引数値型に変換します。 追加のサンク DLL DLL バックアップを 16 ビット。  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>コンポーネント  
  MDAC 2.8 SP1 SDK の ODBC コンポーネントには、32 ビット ドライバーで 16 ビット アプリケーションを実行するために、次のファイルが含まれています。 これらのコンポーネントがディレクトリに \Redist します。  
   
-|[ファイル名]|説明|  
+|ファイル名|説明|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 ビット ODBC の汎用サンク DLL|  
 |Odbc32gt.dll|32 ビット ODBC の汎用サンク DLL|  
@@ -59,7 +59,7 @@ ms.locfileid: "47752930"
   
  さらに、ODBC 3.51 の一部ではない、16 ビット ODBC 2.10 ドライバー マネージャーと共に以下のファイルは必要があり、16 ビット アプリケーションをインストールする必要があります。  
   
-|[ファイル名]|説明|  
+|ファイル名|説明|  
 |---------------|-----------------|  
 |Odbc.dll|16 ビットのドライバー マネージャー|  
 |Odbcinst.dll|16 ビット インストーラー DLL|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00aa87461c1b4a82fbedc7bd7faf1da6ff327265
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199148"
 ---
 # <a name="parameter-markers-in-procedure-calls"></a>プロシージャ呼び出しのパラメーター マーカー
-パラメーターを受け取るプロシージャを呼び出すときに、相互運用可能なアプリケーションは、リテラル パラメーター値の代わりにパラメーター マーカーを使用する必要があります。 一部のデータ ソースでは、プロシージャの呼び出しでのパラメーターをリテラル値の使用の使用はサポートされません。 パラメーターの詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)を参照してください。 プロシージャの呼び出しの詳細については、[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)、このセクションで後述を参照してください。
+パラメーターを受け取るプロシージャを呼び出すときに、相互運用可能なアプリケーションは、リテラル パラメーター値の代わりにパラメーター マーカーを使用する必要があります。 一部のデータ ソースでは、プロシージャの呼び出しでのパラメーターをリテラル値の使用の使用はサポートされません。 パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。 プロシージャの呼び出しの詳細については、次を参照してください。[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)、このセクションで後述します。

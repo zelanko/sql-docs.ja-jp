@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164074"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>操作方法:データ処理拡張機能をレポート サーバーに配置します。
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>操作方法:データ処理拡張機能をレポート サーバーに配置する
   レポート サーバーは、表示レポートのデータを取得および処理するためにデータ処理拡張機能を使用します。 データ処理拡張機能のアセンブリは、プライベート アセンブリとしてレポート サーバーに配置してください。 また、レポート サーバーの構成ファイル RSReportServer.config にエントリを作成する必要もあります。  
   
 ## <a name="procedures"></a>手順  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 885d201736adb3cd16efbea4f3907cd0aa324128
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062828"
 ---
 # <a name="specifying-connection-properties"></a>接続プロパティの指定
 指定された情報の多くを指定することができます、[接続文字列](../../../ado/guide/data/creating-a-connection-string.md)のプロパティを設定して、**接続**接続を開く前にオブジェクト。 接続文字列で説明したように、同じ効果を得ることができますなど[接続文字列を作成する](../../../ado/guide/data/creating-a-connection-string.md)次のコードを使用します。  

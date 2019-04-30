@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c248afac72fac013759ad80f69dea199756a4010
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214881"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>IIS での仮想サーバーの構成
 Internet Information Services 4.0 での仮想サーバーを作成するときに、RDS を使用する仮想サーバーを構成するには、次の 2 つの余分な手順が必要です。  

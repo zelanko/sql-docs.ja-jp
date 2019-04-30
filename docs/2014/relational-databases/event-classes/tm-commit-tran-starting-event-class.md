@@ -1,5 +1,5 @@
 ---
-title: TM:Commit Tran Starting イベント クラス |Microsoft Docs
+title: 'TM: Commit Tran Starting イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061365"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>TM:Commit Tran Starting イベント クラス
+# <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting イベント クラス
   TM:Commit Tran Starting イベント クラスでは、COMMIT TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。 EventSubClass 列は、現在のトランザクションがコミットされた後に新しいトランザクションが開始されるかどうかを示します。  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM:Commit Tran Starting イベント クラスのデータ列  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  

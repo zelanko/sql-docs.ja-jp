@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200256"
 ---
 # <a name="allocating-a-statement-handle"></a>ステートメント ハンドルの割り当て
   アプリケーションでステートメントを実行する前に、ステートメント ハンドルを割り当てる必要があります。 これは呼び出すことによって、 **SQLAllocHandle**で、 *HandleType*パラメーターに sql_handle_stmt として設定し、 *InputHandle*接続ハンドルを指します。  

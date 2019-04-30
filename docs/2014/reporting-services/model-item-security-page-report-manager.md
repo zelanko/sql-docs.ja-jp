@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188426"
 ---
 # <a name="model-item-security-page-report-manager"></a>[モデル アイテムのセキュリティ] ページ (レポート マネージャー)
   このページでは、特定のアイテムに対する読み取り専用権限の許可や取り消しを行うことにより、モデルの各部をセキュリティで保護できます。 モデル アイテムのセキュリティは、実行時のアドホック データ探索や、レポート ビルダーでのレポート作成時に、パブリッシュされたモデルの各部分を使用できるかどうかに影響します。 この機能を使用するには、コンテンツ マネージャーの権限が必要です。  

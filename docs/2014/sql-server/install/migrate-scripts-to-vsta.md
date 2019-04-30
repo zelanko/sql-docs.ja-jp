@@ -17,18 +17,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ad248407922506e999c21480f8ce277f20d32b6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201350"
 ---
 # <a name="migrate-scripts-to-vsta"></a>VSTA へのスクリプトの移行
   アップグレードするときに[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]パッケージを[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]スクリプト タスクまたはスクリプト コンポーネント内のスクリプトは移行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 VSTA は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で使用されるスクリプト環境です。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、ためのスクリプト環境[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]は[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA)。  
   
  スクリプト タスクまたはスクリプト コンポーネント内のスクリプトでインターフェイスを参照している場合、パッケージをアップグレードする前にそれらの参照の変更が必要になる場合があります。 参照を変更しないと、使用するアップグレード方法によってはパッケージをアップグレードできないかスクリプトを検証できません。 これらの参照を変更するには、IDTS への参照を置き換える*xxx*90 インターフェイスを対応する IDTS 参照*xxx*100 インターフェイス。  
   
- スクリプトの移行し、パッケージをアップグレードする方法の詳細については、[Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages.md)を参照してください。  
+ スクリプトの移行し、パッケージをアップグレードする方法の詳細については、次を参照してください。 [Integration Services パッケージのアップグレード](../../integration-services/install-windows/upgrade-integration-services-packages.md)します。  
   
 ## <a name="understanding-migration-failures"></a>移行エラーについて  
  スクリプトを移行する際、次の理由により移行が失敗することがあります。  

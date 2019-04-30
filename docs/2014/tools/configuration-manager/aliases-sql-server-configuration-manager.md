@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 41a8febf554d0531f5b58fe7e79d650dda74e7ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035287"
 ---
 # <a name="aliases-sql-server-configuration-manager"></a>別名 (SQL Server 構成マネージャー)
   別名は、接続のために使用できる代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 このコンピューター上の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントの別名を作成するには、コンソール ペインで **[別名]** を右クリックして **[新しい別名]** をクリックします。 このコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントの既存の別名を構成するには、コンソール ペインで **[別名]** をクリックし、詳細ペインで目的の既存の別名を右クリックして **[プロパティ]** をクリックします。  

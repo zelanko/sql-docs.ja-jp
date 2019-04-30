@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0bc45169a3c5eee2e23f581a66d5232c22e89b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199262"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>ODBC 3.x アプリケーション用のブロック カーソル、スクロール可能なカーソル、および下位互換性
 両方が存在する**SQLFetchScroll**と**SQLExtendedFetch** odbc の間で、アプリケーション プログラミング インターフェイス (API)、一連の関数である最初の平文の分割は、アプリケーションの呼び出し、およびサービス プロバイダー インターフェイス (SPI) 関数のセットである、ドライバーが実装されます。 この分割は、ODBC 3 要件のバランスを取る必要があります。*x*、使用する**SQLFetchScroll**、標準の連携と、ODBC 2 との互換性します *。x*、使用する**SQLExtendedFetch**します。  
   
  ODBC 3 *.x*は API のセットにアプリケーション呼び出しの機能が含まれています**SQLFetchScroll**および関連するステートメント属性。 ODBC 3 *.x* 、SPI は、一連の関数のドライバーを実装して、含まれています**SQLFetchScroll**、 **SQLExtendedFetch**、および関連するステートメント属性。 ODBC は、この分割、API と SPI を正式には適用されません、ため、ODBC 3 のことが *.x*を呼び出すアプリケーション**SQLExtendedFetch**および関連するステートメント属性。 ただし、ODBC 3 の理由はありません *.x*これを行うアプリケーション。 Api および Spi の詳細についてはの概要を参照してください。 [ODBC アーキテクチャ](../../../odbc/reference/odbc-architecture.md)します。  
   
- 方法については、ODBC 3。*x*ドライバー マネージャーは、ODBC 2 への呼び出しをマップします *。x*および ODBC 3 *。x*ドライバー、およびどのような関数とステートメント属性を ODBC 3 *。x*ドライバーがブロックとスクロール可能なカーソルを実装する必要がありますを参照してください[、ドライバーが何](../../../odbc/reference/appendixes/what-the-driver-does.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
+ 方法については、ODBC 3。*x*ドライバー マネージャーは、ODBC 2 への呼び出しをマップします *。x*および ODBC 3 *。x*ドライバー、およびどのような関数とステートメント属性を ODBC 3 *。x*ドライバーがブロックとスクロール可能なカーソルを実装する必要がありますを参照してください[、ドライバーが何](../../../odbc/reference/appendixes/what-the-driver-does.md)で付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
  次の表は、どのような機能をまとめたものです。 ステートメント属性を ODBC 3.*x*ブロックとカーソルのスクロール可能なアプリケーションを使用する必要があります。 ODBC 2 の間での変更も一覧表示されます。*x*および ODBC 3 *。x*この領域で、ODBC 3 *。x* ODBC 2 と互換性があるアプリケーションが認識する必要があります *。x*ドライバー。  
   

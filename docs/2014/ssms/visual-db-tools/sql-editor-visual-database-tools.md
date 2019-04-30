@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194918"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL エディター (Visual Database Tools)
   SQL エディターを使用すると、既存のストアド プロシージャ、関数、トリガー、および SQL スクリプトを編集できます。 これらのオブジェクトのいずれかを開くと、このウィンドウが開きます。 データ ソースに対して実行する SQL ステートメントを新しく作成する場合は、クエリ デザイナーの [SQL ペイン](visual-database-tools.md) を使用します。  

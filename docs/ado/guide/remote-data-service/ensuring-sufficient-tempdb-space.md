@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67dc3f6bb82799382fa2b65754b3645dd735acab
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214827"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>十分な TempDB 領域の確保
 処理中にエラーが発生した場合[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Microsoft SQL Server 6.5 の領域を処理する必要があるオブジェクトの場合は、TempDB のサイズを大きく必要があります。 (いくつかのクエリが一時的な処理容量が必要ですたとえば、ORDER BY 句を使用してクエリには、並べ替えが必要です。 の、 **Recordset**、いくつかの一時領域必要があります。)。  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193249"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML での RAW モードの使用
   RAW モードでは、クエリの結果セットの各行が XML 要素に変換されます。この XML 要素は、汎用識別子 \<row> を持つか、必要に応じて要素名が付けられます。 既定では、NULL 以外の行セットの各列の値が \<row> 要素の属性にマップされます。 FOR XML 句に ELEMENTS ディレクティブが追加されると、各列の値が \<row> 要素のサブ要素にマップされます。 必要に応じて ELEMENTS ディレクティブと共に XSINIL オプションを指定して、xsi:nil=`"`true`"`の属性を持つ要素に結果セットの NULL 列値をマップできます。  
@@ -35,19 +35,19 @@ ms.locfileid: "58537044"
 ## <a name="in-this-section"></a>このセクションの内容  
  ここでは、次の例について説明します。  
   
--   [例:XML 製品モデル情報の取得](example-retrieving-product-model-information-as-xml.md)  
+-   [例: XML での製品モデル情報の取得](example-retrieving-product-model-information-as-xml.md)  
   
--   [例:ELEMENTS ディレクティブで XSINIL を指定します。](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [例: ELEMENTS ディレクティブで XSINIL を指定する](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [例:XMLDATA と XMLSCHEMA オプションの結果としてのスキーマの要求](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [例:バイナリ データの取得](example-retrieving-binary-data.md)  
+-   [例: バイナリ データの取得](example-retrieving-binary-data.md)  
   
--   [例:名前の変更、&#60;行&#62;要素](example-renaming-the-row-element.md)  
+-   [例: &#60;row&#62; 要素の名前を変更する](example-renaming-the-row-element.md)  
   
--   [例:FOR XML で生成した XML ルート要素の指定](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [例: FOR XML で生成される XML のルート要素の指定](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [例:Xml 型の列のクエリを実行します。](example-querying-xmltype-columns.md)  
+-   [例: XML 型の列のクエリ](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>参照  
  [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

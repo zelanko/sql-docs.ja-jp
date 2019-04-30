@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fbec69e0d984d843abc2b8754e111a1199c79a5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049791"
 ---
 # <a name="explicitly-allocated-descriptors"></a>明示的に割り当てられた記述子
 アプリケーションでは、データベースに接続されている、いつでも接続でのアプリケーション記述子を明示的に割り当てることができます。 ステートメントの属性の処理を使用して、その記述子ハンドルを指定することによって**SQLSetStmtAttr**アプリケーションは、アプリケーションを暗黙的に割り当てられているを対応する代わりにその記述子を使用するドライバーに指示記述子。 アプリケーションでは、別の実装記述子を指定できません。  

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193031"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
   」の説明に従って[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)、SQL Server が使用して XML データのネイティブ ストレージが提供、`xml`データ型。 変数や列と XSD スキーマを関連付けることができます必要に応じて`xml`XML スキーマ コレクションによって型。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
@@ -111,7 +111,7 @@ ms.locfileid: "58533714"
   
 -   MODELGROUP  
   
- 例 :  
+ 以下に例を示します。  
   
 -   **SomeAttribute** は、ATTRIBUTE コンポーネントです。  
   

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d2bfcd8f6cd5f4bf6dcfab196978f43fbb53536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215053"
 ---
 # <a name="analysis-services-parameters"></a>Analysis Services パラメーター
   分析する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスを指定する必要があります[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]し、そのインスタンスに接続する方法に関する情報を提供します。  

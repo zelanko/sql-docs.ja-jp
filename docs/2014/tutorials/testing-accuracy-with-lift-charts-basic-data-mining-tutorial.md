@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042667"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)
   **マイニング精度チャート**タブ データ マイニング デザイナーの各は、モデルの予測は、どの程度を計算し、他のモデルの結果に対して直接には、各モデルの結果を比較します。 このメソッドの比較と呼ばれます、*リフト チャート*します。 通常、マイニング モデルの予測精度は、リフトまたは分類の精度によって測定します。 このチュートリアルでは、リフト チャートのみを使用します。  
@@ -35,7 +35,7 @@ ms.locfileid: "56033923"
   
 2.  **精度チャートに使用するデータセットの選択**グループ ボックスで、**マイニング構造のテスト_ケースを使用して、** します。 これは、マイニング構造を作成したときに確保したテスト データです。  
   
-     その他のオプションの詳細については、[精度チャートの種類とグラフのオプションの設定を選択](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)を参照してください。  
+     その他のオプションの詳細については、次を参照してください。[精度チャートの種類とグラフのオプションの設定を選択](../../2014/analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)します。  
   
 ##  <a name="BKMK_Selecting"></a> 精度チャートのパラメーターの設定  
  精度チャートを作成するには、次の 3 つの事項を定義する必要があります。  
@@ -76,7 +76,7 @@ ms.locfileid: "56033923"
   
      わかります、`TM_Decision_Tree`モデル、クラスタ リングと Naive Bayes モデルを上回る、最もリフトを提供します。  
   
- このレッスンで作成されたもののようなリフト チャートの詳細については、[リフト チャート&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)を参照してください。  
+ このレッスンで作成されたもののようなリフト チャートの詳細については、次を参照してください。[リフト チャート&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [フィルター選択されたモデルのテスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/testing-a-filtered-model-basic-data-mining-tutorial.md)  

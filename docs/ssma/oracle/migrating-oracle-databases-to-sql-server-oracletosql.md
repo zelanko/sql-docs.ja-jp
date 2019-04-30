@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 9e746d1df201349011d24fc0de007c74ba0073b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209806"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>SQL Server への Oracle のデータの移行 (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle は Oracle データベースを迅速に移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL DB、または Azure SQL Data Warehouse。 SSMA for Oracle を使用してデータベース オブジェクトとデータを確認して、移行対象のデータベースを評価をするデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL DB、または Azure SQL Data Warehouse へのデータを移行し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL DB、または Azure SQL データウェアハウス。 SYS および Oracle のシステム スキーマを移行することはできませんに注意してください。
@@ -25,7 +25,7 @@ Oracle データベースからオブジェクトとデータを正常に移行�
   
 1.  [新しい SSMA プロジェクト作成](working-with-ssma-projects-oracletosql.md)です。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、[プロジェクト オプションの設定&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)を参照してください。 データ型のマッピングをカスタマイズする方法については、[マッピング Oracle および SQL Server データ型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)を参照してください。  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、次を参照してください。[プロジェクト オプションの設定&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)します。 データ型のマッピングをカスタマイズする方法については、次を参照してください。[マッピング Oracle および SQL Server データ型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)します。  
   
 2.  [Oracle データベース サーバーに接続する](connecting-to-oracle-database-oracletosql.md)します。  
   

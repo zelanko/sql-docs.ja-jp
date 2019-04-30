@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193331"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
   SQL クエリで FOR XML 句を使用することにより、クエリの結果を XML データで取得したり、XML データにキャストすることができます。 この機能により、FOR XML のクエリの結果を XML アプリケーション コードで使用するときに、次のことが可能になります。  
@@ -157,19 +157,19 @@ ms.locfileid: "58532836"
   
 -   **AnnualRevenue:** 150000  
   
--   **BankName:** プライマリの国際化  
+-   **BankName:** Primary International  
   
 -   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   
--   **専門分野:** Road  
+-   **Specialty:** Road  
   
 -   **SquareFeet:** 38000  
   
--   **ブランド:** 3  
+-   **Brands:** 3  
   
--   **インターネット:** DSL  
+-   **Internet:** DSL  
   
 -   **NumberEmployees:** 40  
   

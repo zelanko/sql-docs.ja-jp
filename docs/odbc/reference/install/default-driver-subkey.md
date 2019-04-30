@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198311"
 ---
 # <a name="default-driver-subkey"></a>既定のドライバーのサブキー
 既定のサブキーには、既定のデータ ソースで使用するドライバーを記述する 1 つの値が含まれています。 この値の形式は、次の表に示します。  

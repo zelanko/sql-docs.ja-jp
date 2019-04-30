@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b392222b8b55cc846dca66d20f70355d6778195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064559"
 ---
 # <a name="cluster-security-policy"></a>クラスターのセキュリティ ポリシー
   フェールオーバー クラスター インスタンスのセキュリティ ポリシーを構成するには、[クラスターのセキュリティ ポリシー] ページを使用します。  

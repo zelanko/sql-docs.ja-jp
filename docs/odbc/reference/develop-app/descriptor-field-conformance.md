@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049853"
 ---
 # <a name="descriptor-field-conformance"></a>記述子フィールドの適合性
 次の表では、各 ODBC 記述子のヘッダー フィールド、これは適切に定義されたの準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|コア|  
 |SQL_DESC_ARRAY_SIZE|コア|  
@@ -38,7 +38,7 @@ ms.locfileid: "47642310"
   
  次の表では、各 ODBC 記述子レコード フィールド、これは適切に定義されたの準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|[レベル 2]|  
 |SQL_DESC_BASE_COLUMN_NAME|コア|  
@@ -47,8 +47,8 @@ ms.locfileid: "47642310"
 |SQL_DESC_CATALOG_NAME|[レベル 2]|  
 |SQL_DESC_CONCISE_TYPE|コア|  
 |SQL_DESC_DATA_PTR|コア|  
-|SQL_DESC_DATETIME_INTERVAL_ コード|[1] のコア|  
-|SQL_DESC_DATETIME_INTERVAL_ 精度|[1] のコア|  
+|SQL_DESC_DATETIME_INTERVAL_ コード|Core[1]|  
+|SQL_DESC_DATETIME_INTERVAL_ 精度|Core[1]|  
 |SQL_DESC_DISPLAY_SIZE|コア|  
 |SQL_DESC_FIXED_PREC_SCALE|コア|  
 |SQL_DESC_INDICATOR_PTR|コア|  

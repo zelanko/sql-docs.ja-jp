@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142971"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ での ADO プログラミング
 ADO の API リファレンスには、ADO アプリケーション プログラミング インターフェイス (API)、Microsoft Visual Basic に似た構文を使用しての機能について説明します。 ADO のプログラマが Visual Basic、Visual C などのさまざまな言語を使用する対象とするユーザーには、すべてのユーザーが、(としない場合、 **#import**ディレクティブ)、および Visual j (ADO と WFC クラス パッケージ) にします。  
@@ -293,7 +293,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
 Dim VariableName As Variant  
 ```
   
- Visual C での型として変数を宣言 **_variant_t**します。 いくつかの概略図 **_variant_t**宣言を以下に示します。  
+ ビジュアルでC++、型として変数を宣言 **_variant_t**します。 いくつかの概略図 **_variant_t**宣言を以下に示します。  
   
 > [!NOTE]
 >  これらの宣言は、独自のプログラムでコーディングする内容の大まかなアイデアだけを提供します。 詳細については、以下の例と Visual c ドキュメントを参照してください。  
@@ -325,7 +325,7 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- Visual C の例を次に示しますを使用して、 **SafeArray**と併用、 **_variant_t**します。  
+ 次のビジュアルC++使用例を示します、 **SafeArray**と併用、 **_variant_t**します。  
   
 #### <a name="notes"></a>メモ  
  次のノートは、コード例ではコメント部分に対応します。  

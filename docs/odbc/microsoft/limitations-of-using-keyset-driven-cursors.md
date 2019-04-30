@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192318"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>キーセット ドリブン カーソルの使用に関する制限
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47668110"
  また、アプリケーションでは、テーブルの別名を使用する場合に、このキーセット ドリブン カーソルでは動作しません。順方向専用、または静的カーソルの種類が必要です。 キーセットを使用して、テーブルの別名とカーソルの種類で、次のエラーが発生します"[Microsoft] [Oracle 用 ODBC driver] は、キーセット ドリブン カーソルを使用できません参加で、和集合、交差するか、または読み取り専用にマイナスの結果セットです。"。  
   
 > [!NOTE]  
->  ドライバーは、Oracle サーバーに送信される SQL ステートメントを処理する方法、により Oracle 内部的に返します、次のエラー メッセージ:"ORA 00964: テーブルの一覧から名前ではなく"。
+>  ドライバーは、Oracle サーバーに送信する SQL ステートメントを処理するため、Oracle では、次のエラー メッセージが内部的に返されます。"ORA 00964: テーブルの一覧から名前ではなく"。

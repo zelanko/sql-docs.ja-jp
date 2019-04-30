@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8d6532998f65625bf3dacd11de2949a3478ba6ea
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156426"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
 
 
-  セットの最上位メンバーを、指定されたレベルから 1 レベル下にドリル ダウンします。  
+  1 レベル下に、指定したレベル、セットの最上位メンバーをドリル ダウンします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  返す組の数を指定する有効な数値式です。  
   
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式です。  
+ レベルを返す有効な多次元式 (MDX) 式。  
   
  *Numeric_Expression*  
- 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
   
  *Include_Calc_Members*  
  ドリルダウン結果に計算されるメンバーを追加するためのキーワードです。  
@@ -55,7 +55,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  XMLA プロパティの MdpropMdxDrillFunctions にクエリを実行、サーバーがドリル関数; が提供するサポートのレベルを確認することができます。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)詳細についてはします。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、既定のメジャーに基づいて Product Category レベルの子を最上位のものから 3 つ返します。 Adventure Works サンプル キューブでは、Accessories の最上位の 3 つの子は、Bike Racks、Bike Stands、Bottles and Cages です。 Management Studio の MDX クエリ ウィンドウで、[Products]、[Product Categories]、[Members]、[All Products]、[Accessories] にナビゲートして完全なリストを参照できます。 Count 引数を大きくして、返されるメンバーを増やすことができます。  
+ 次の例を返します、製品カテゴリの上位 3 つの子レベルで既定のメジャーに基づきます。 Adventure Works サンプル キューブでは、[アクセサリ] の上位 3 つの子は、Bike Racks、Bike Stands、Bottles およびケージです。 Management studio で MDX クエリ ウィンドウでは製品に移動することができます |製品カテゴリ |メンバー |すべての製品 |完全な一覧を表示するアクセサリ。 複数のメンバーを返す Count 引数を増やすことができます。  
   
 ```  
 SELECT DrilldownLevelTop   

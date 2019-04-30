@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72fe76d566a5b4a92899b0a8a30804201ab13109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061570"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>記述子フィールドの取得と設定
 このセクションでは、アプリケーションで使用できる記述子フィールドの値を設定または取得する方法について説明します。  

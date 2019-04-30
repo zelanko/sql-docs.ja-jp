@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2664d71243d98e9b8152c5c5c7ce241a4f3669f8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164356"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>配信拡張機能の ISubscriptionBaseUIUserControl インターフェイスの実装
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の配信拡張機能には、レポート マネージャーで拡張機能固有の情報を収集するためのサブスクリプション ユーザー インターフェイス (UI) の実装を含めることができます。 ユーザーが新しいサブスクリプションを作成するか既存のサブスクリプションを変更するとき、UI が呼び出されます。 新しいサブスクリプションの作成時には、UI に適切な既定値が表示され、ユーザーは配信プロバイダーと対話できます。 サブスクリプションの変更時には、現在のサブスクリプションの情報が UI にあらかじめ表示されます。  

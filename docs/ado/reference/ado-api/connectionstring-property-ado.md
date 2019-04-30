@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140362"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データ ソースへの接続を確立するための情報を示します。  
@@ -60,7 +60,7 @@ ms.locfileid: "47828912"
 |ADO プロバイダーは既定値|Windows オペレーティング システム|  
 |--------------------------|------------------------------|  
 |MSDASQL<br /><br /> (ソース コードの読みやすさを向上させるのに明示的にプロバイダー名、接続文字列で指定します。)|Windows 2000 (32 ビット)<br /><br /> Windows XP (32 ビット)<br /><br /> Windows 2003 Server (32 ビット)<br /><br /> Windows Vista (32 ビット)<br /><br /> Windows Vista Service Pack 1 またはそれ以降 (32 ビットおよび 64 ビット)<br /><br /> Windows Vista (32 ビットおよび 64 ビット) より後の Windows バージョン|  
-|既定値はありません。<br /><br /> ADO アプリケーションでは、次のオペレーティング システムで実行され、プロバイダーが明示的に指定しない、次のエラーが返されます。"ADODB します。接続: プロバイダーが指定されていないと、指定された既定のプロバイダーがありません"|Windows 2000 (64 ビット)<br /><br /> Windows XP (64 ビット)<br /><br /> Windows 2003 Server (64 ビット)<br /><br /> Windows Vista (64 ビット)|  
+|既定値はありません。<br /><br /> ADO アプリケーションでは、次のオペレーティング システムで実行され、プロバイダーが明示的に指定しない、ADO には、次のエラーが返されます。"ADODB します。接続: プロバイダーが指定されていないと、指定された既定のプロバイダーがありません"|Windows 2000 (64 ビット)<br /><br /> Windows XP (64 ビット)<br /><br /> Windows 2003 Server (64 ビット)<br /><br /> Windows Vista (64 ビット)|  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -68,4 +68,4 @@ ms.locfileid: "47828912"
 ## <a name="see-also"></a>参照  
  [ConnectionString、ConnectionTimeout、および状態のプロパティの例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString、ConnectionTimeout、および状態のプロパティの例 (vc++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

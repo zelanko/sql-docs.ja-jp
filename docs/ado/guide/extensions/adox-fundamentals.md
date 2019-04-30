@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5350fd4c4fd8fc447f3987ad502c49a2704e6762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184773"
 ---
 # <a name="adox-fundamentals"></a>ADOX の基礎
 Microsoft® ActiveX® Data オブジェクトの拡張機能データ定義言語およびセキュリティ (ADOX) では、ADO オブジェクトとプログラミング モデルの拡張機能です。 ADOX には、スキーマの作成と変更、セキュリティのオブジェクトが含まれます。 操作のスキーマにオブジェクト ベースのアプローチであるために、さまざまなデータ ソースのネイティブの構文を使って違いに関係なく動作するコードを記述できます。  
@@ -29,7 +29,7 @@ Microsoft® ActiveX® Data オブジェクトの拡張機能データ定義言�
   
  Microsoft OLE DB Provider for Microsoft Jet データベース エンジンは、ADOX を完全にサポートします。 データ プロバイダーによっては、ADOX の特定の機能がサポートされていない可能性があります。  
   
- このドキュメントには、Microsoft® Visual Basic® プログラミング言語と ADO の一般的な知識の実務知識を前提としています。 ADO の詳細については、、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)を参照してください。 ADOX に関する概要については、次のトピックを参照してください。  
+ このドキュメントには、Microsoft® Visual Basic® プログラミング言語と ADO の一般的な知識の実務知識を前提としています。 ADO の詳細については、次を参照してください。、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)します。 ADOX に関する概要については、次のトピックを参照してください。  
   
 -   [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)  
   

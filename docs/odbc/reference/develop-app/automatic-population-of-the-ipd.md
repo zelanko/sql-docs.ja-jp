@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198339"
 ---
 # <a name="automatic-population-of-the-ipd"></a>IPD の自動作成
 一部のドライバーでは、パラメーター化クエリが準備された後に、IPD のフィールドを設定できます。 記述子フィールドのデータ型、有効桁数、スケール、およびその他の特性などのパラメーターに関する情報が自動的に設定されます。 サポートするのと同じ**SQLDescribeParam**します。 この情報をなど、アプリケーションが認識していないパラメーターを持つアドホック クエリを実行するときにそれを検出するには、他の方法があるないとき、アプリケーションに特に役立ちます。  

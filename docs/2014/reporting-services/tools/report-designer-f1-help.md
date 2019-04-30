@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 359acef5bc6f6015a6404a3cb4f3605cdcd07b4b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201181"
 ---
 # <a name="report-designer-f1-help"></a>レポート デザイナーの F1 ヘルプ
   このセクションでは、F1 ヘルプについて紹介では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート デザイナーのウィザード、ビュー、およびダイアログ ボックス。 ダイアログ ボックスの使用中は、F1 キーを押すか、ダイアログ ボックスに表示される [ヘルプ] をクリックすることで、F1 ヘルプを開くことができます。  

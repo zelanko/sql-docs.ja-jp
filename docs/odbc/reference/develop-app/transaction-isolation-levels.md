@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63e08aa2e75d560ce73c549d307418432ffe16af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149108"
 ---
 # <a name="transaction-isolation-levels"></a>トランザクション分離レベル
 *トランザクション分離レベル*分離が成功したトランザクションにエクステントの指標です。 具体的には、トランザクション分離レベルは、次の現象の有無によって定義されます。  
@@ -42,9 +42,9 @@ ms.locfileid: "47631750"
   
 |トランザクション分離レベル|ダーティ リード|反復不能読み取り|ファントム|  
 |---------------------------------|-----------------|-------------------------|--------------|  
-|READ UNCOMMITTED|×|×|×|  
-|READ COMMITTED|--|×|×|  
-|REPEATABLE READ|--|--|×|  
+|READ UNCOMMITTED|x|X|x|  
+|READ COMMITTED|--|x|x|  
+|REPEATABLE READ|--|--|x|  
 |Serializable|--|--|--|  
   
  次の表では、DBMS が、トランザクション分離レベルを実装が簡単な方法について説明します。  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2336944b583b6077d75bd5155bb4b52c66d9a852
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200527"
 ---
 # <a name="positioned-updates-odbc"></a>位置指定更新 (ODBC)
   ODBC では、カーソルで位置指定更新を実行するために、次の 2 とおりの方法をサポートします。  

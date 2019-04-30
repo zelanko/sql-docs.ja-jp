@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79b7f15ed90684e495e20064f092b0ff70b97549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194888"
 ---
 # <a name="programming-with-ado-md"></a>ADO MD を使用したプログラミング
 開発ツールでの ADO MD を使用するには、ADO MD のタイプ ライブラリへの参照を確立する必要があります。 ADO MD ライブラリの説明は、Microsoft ActiveX データ オブジェクト (多次元) ライブラリです。 ADO MD ライブラリのファイル名は msadomd.dll で、プログラム ID (ProgID) は"ADOMD"です。 ライブラリへの参照を確立する方法の詳細については、開発ツールのドキュメントを参照してください。  

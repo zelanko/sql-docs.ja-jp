@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149130"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>実行時に構築された SQL ステートメント
 よくアド ホック分析を実行するアプリケーションは、実行時に SQL ステートメントを作成します。 たとえば、スプレッドシート データの取得元となる列を選択するユーザーを許可する可能性があります。  

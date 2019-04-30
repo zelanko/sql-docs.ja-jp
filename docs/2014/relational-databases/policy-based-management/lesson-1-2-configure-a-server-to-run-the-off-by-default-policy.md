@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 82cf55e1fa3fa9bda5a625ef89335a9f81ed5505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057542"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>"既定でオフ" ポリシーを実行するためのサーバーの構成
   "既定でオフ" という名前のポリシーがあります。 この実習では、このポリシーの要件にサーバーが準拠しているかどうかを確認します。  
@@ -44,6 +44,6 @@ ms.locfileid: "48147882"
 10. **[結果の詳細ビュー]** と **[ポリシーの評価]** の両方のダイアログ ボックスを閉じます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: 名前付け基準ポリシーの作成と適用](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [レッスン 2:名前付け基準ポリシーの作成と適用](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

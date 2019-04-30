@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127876"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL コマンド
 1 つまたは複数のテーブルからデータを取得します。  
@@ -48,7 +48,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A*サブクエリ*、次の引数で参照される、SELECT、SELECT 内では、およびかっこで囲む必要があります。 同じレベルで最大 2 つのサブクエリを持つことができます (入れ子になっていない) WHERE 句でします。 (引数の該当セクションを参照してください)。サブクエリは、複数の結合条件を含めることができます。  
   
- [すべて&#124;DISTINCT]  [*エイリアス*]。*Select_Item* [AS *Column_Name*] [、[*エイリアス*]。*Select_Item* [AS *Column_Name*]...]  
+ [ALL &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*]    [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
  SELECT 句では、フィールド、定数、およびクエリの結果に表示される式を指定します。  
   
  、既定では、クエリ結果内のすべての行すべて表示します。  
@@ -97,14 +97,14 @@ FROM [DatabaseName!]Table [Local_Alias]
  AS *Column_Name*  
  クエリの出力列の見出しを指定します。 これは、ときに便利です*Select_Item*式またはフィールドを含む関数とするが、列にわかりやすい名前を付与します。 *Column_Name*式を指定できますが、テーブルのフィールド名は許可されない文字 (スペースなど) を含めることはできません。  
   
- [*DatabaseName*!]*テーブル*[*Local_Alias*] [、[*DatabaseName*!]*テーブル*[*Local_Alias*]...]  
+ FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
  クエリで取得されたデータを含むテーブルを一覧表示します。 開いているテーブルがない場合は、Visual FoxPro が表示されます、**開く** ダイアログ ボックスのファイルの場所を指定できるようにします。 開かれた後、テーブルは、クエリが完了したら開いたのままです。  
   
  *DatabaseName*! データ ソースで指定されている以外のデータベースの名前を指定します。 データ ソースと、データベースが指定されていない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に、テーブル名の前に感嘆符 (!) 区切り記号が含まれます。  
   
  *Local_Alias*でという名前のテーブルの一時的な名前を指定します*テーブル*します。 ローカルのエイリアスを指定する場合は、SELECT ステートメントでテーブル名ではなくローカルのエイリアスを使用する必要があります。 ローカルのエイリアスでは、Visual FoxPro 環境は影響しません。  
   
- 場所*JoinCondition* [AND *JoinCondition* ...]   [AND&#124;または*FilterCondition* [AND&#124;または*FilterCondition* ...]  
+ WHERE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; OR *FilterCondition* [AND &#124; OR *FilterCondition* ...]]  
  Visual FoxPro、クエリの結果に特定のレコードだけを含めるように指示します。 複数のテーブルからデータを取得するために必要な場合。  
   
  *JoinCondition* FROM 句でテーブルをリンクするフィールドを指定します。 1 つ以上のテーブルをクエリに含める場合、最初より後すべてのテーブルの結合条件を指定する必要があります。  
@@ -130,7 +130,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 |<>, !=, #|等しくないです。|  
 |>|複数の|  
 |>=|大きいか等しい|  
-|<|より小さい|  
+|<|次の値未満|  
 |<=|以下|  
   
  使用すると、= 演算子、文字列、動作が異なる、設定の ANSI の設定に応じて。 ANSI の設定が OFF に設定されている場合、Visual FoxPro は、Xbase ユーザーが使い慣れている方法で文字列比較を扱います。 ANSI の設定が ON に設定されている場合、Visual FoxPro には、文字列比較のための ANSI 規格に従います。 参照してください[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)と[設定の正確な](../../odbc/microsoft/set-exact-command.md)Visual FoxPro が文字列の比較を実行する方法の詳細についてはします。  
@@ -195,7 +195,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- このフィルター条件に一致する各フィールドを検索*cExpression*します。 一部として、パーセント記号 (%) とアンダー スコア (_) ワイルドカード文字を使用することができます*cExpression*します。 アンダー スコアは、文字列内の 1 つの不明な文字を表します。  
+ このフィルター条件に一致する各フィールドを検索*cExpression*します。 パーセント記号 (%) を使用することができます。一部として、アンダー スコア (_) ワイルドカード文字と*cExpression*します。 アンダー スコアは、文字列内の 1 つの不明な文字を表します。  
   
  GROUP BY *GroupColumn* [、 *GroupColumn* ...]  
  1 つまたは複数の列の値に基づくクエリで行グループ。 *GroupColumn*次のいずれかを指定できます。  

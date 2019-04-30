@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898fcc7d1b35230173afa0443219d59c54720ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057075"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>位置指定更新と Delete ステートメントの処理
 > [!IMPORTANT]  
@@ -33,7 +33,7 @@ ms.locfileid: "47682749"
  配置カーソル ライブラリのサポートが更新し、delete ステートメントを置き換えることで、 **WHERE CURRENT OF**でこのようなステートメントに句を**場所**句のキャッシュに格納されている値を列挙します。バインドされた各列。 カーソル ライブラリを新しく構築された渡します**UPDATE**と**削除**のドライバーを実行するステートメント。 位置指定の update ステートメントでは、カーソル ライブラリはし、行セットのバッファー内の値からそのキャッシュを更新、SQL_ROW_UPDATED 行の状態配列内の対応する値を設定します。 位置指定の delete ステートメントの場合に、SQL_ROW_DELETED 行の状態配列内の対応する値を設定します。  
   
 > [!CAUTION]  
->  **場所**任意の行を識別する、別の行を特定または複数の行を識別する、現在の行を識別するために、カーソル ライブラリによって構築された句が失敗することができます。 詳細については、[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)、この付録で後述を参照してください。  
+>  **場所**任意の行を識別する、別の行を特定または複数の行を識別する、現在の行を識別するために、カーソル ライブラリによって構築された句が失敗することができます。 詳細については、次を参照してください。[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)、この付録で後述します。  
   
  位置指定更新と delete ステートメントが、次の制限を受けます。  
   

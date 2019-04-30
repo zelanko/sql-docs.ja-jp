@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070931"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO の実行時エラーの種類を指定します。  
@@ -91,8 +91,8 @@ ADO の実行時エラーの種類を指定します。
 |**adErrURLNamedRowDoesNotExist**|3737 -2146824551 0x800A0E99|この URL でという名前のレコードが存在しません。|  
 |**adErrVolumeNotFound**|3733 -2146824555 0x800A0E95|プロバイダーは、URL で指定されたストレージ デバイスに見つかりません。 URL が正しく入力されていることを確認します。|  
 |**adErrWriteFile**|3004 -2146825284 0x800A0BBC|ファイルへ書き込めませんでした。|  
-|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|内部使用のみです。 使用しないでください。|  
-|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|内部使用のみです。 使用しないでください。|  
+|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|内部使用のみです。 使わないでください。|  
+|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|内部使用のみです。 使わないでください。|  
   
 ## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  

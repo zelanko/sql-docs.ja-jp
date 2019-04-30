@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a77aeafff6b27b2de0b947700cef1c7251cd7548
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127264"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>デスクトップ データベース ドライバーの履歴
 次の表では、デスクトップ データベース ドライバーのバージョン履歴を示します。  
@@ -34,4 +34,4 @@ ms.locfileid: "47622500"
 |4.0|1998 年の終わり|Microsoft Jet エンジン Unicode 形式との互換性と以前のバージョンの ANSI 形式のサポートを提供します。|  
   
 > [!NOTE]  
->  Version3.5 ドライバーは、ODBC2 を使用する設計されました。*x*します。 ODBC 3.0 での動作も、ODBC 3.0 のすべての機能はサポートされません。 これらのドライバーが ODBC 3.0 を操作する方法についての詳細については、[旧バージョンとの互換性と標準準拠](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。
+>  Version3.5 ドライバーは、ODBC2 を使用する設計されました。*x*します。 ODBC 3.0 での動作も、ODBC 3.0 のすべての機能はサポートされません。 これらのドライバーが ODBC 3.0 を操作する方法についての詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。

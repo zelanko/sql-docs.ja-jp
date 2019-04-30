@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192189"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>SharePoint の SQL Server BI 機能の配置トポロジ
   このトピックでは、SharePoint 2010 環境および SharePoint 2013 環境に SQL Server ビジネス インテリジェンス機能の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] をインストールする場合の一般的なトポロジについて説明します。 たとえば、1 つのサーバーと 3 つの層があるとします。  
@@ -169,7 +169,7 @@ ms.locfileid: "53365764"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> 3 層のスケール アウト配置  
  このトポロジでは、同じ共有サービスを複数のサーバーで実行するスケールアウト配置を示します。このトポロジを使用すると、大量の要求を処理し、PowerPivot データまたは Reporting Services レポートに対する処理能力を高めることができます。 次の図には 3 つのアプリケーション サーバー クラスターがあり、それぞれが共有サービスの異なる組み合わせを実行しています。 SharePoint 環境では、サービスの探索と可用性はファームに組み込まれます。 同じ共有サービス アプリケーションを実行する複数の物理サーバー間の負荷分散は、共有サービス アーキテクチャの一部です。  
   
- マルチサーバー ファームを配置するときは、[3 層ファーム (SharePoint Server 2010) の複数のサーバー](https://go.microsoft.com/fwlink/?linkID=219834)します。  
+ マルチ サーバー ファームを展開する場合は、SharePoint の記事の手順を実行することを確認します。[3 層ファーム (SharePoint Server 2010) の複数のサーバー](https://go.microsoft.com/fwlink/?linkID=219834)します。  
   
  ![5 サーバー トポロジ](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5 サーバー トポロジ")  
   

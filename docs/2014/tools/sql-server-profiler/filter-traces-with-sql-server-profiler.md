@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035251"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>SQL Server Profiler でのトレースへのフィルターの適用
   関心のあるイベントの情報のみがキャプチャされるように、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース イベントのデータ列にフィルターを定義できます。 トレース フィルターを使用すると、トレースでキャプチャするイベントが減るため、システム パフォーマンスに対するトレースの影響が小さくなります。 フィルターを適用すると、検索対象のイベント数が減るので、トレース結果を読み取りやすくなります。  

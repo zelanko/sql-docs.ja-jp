@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f319e6a28a1eba5f803e9cf7f7087f45f227fd87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200509"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (デスクトップ データベース ドライバー)
 一意のインデックスが返されます (存在する場合の SQL_BEST_ROWID フラグ*fColType*します。 SQL_ROWVER フラグの結果セットは返されません。  

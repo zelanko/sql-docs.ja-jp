@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200425"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>カーソルを使用する方法に関するトピック (ODBC)
   カーソルを使用するには、最初に ODBC のカーソル動作を制御する接続属性とステートメント属性を設定する必要があります。 アプリケーションでカーソルを使用すると、1 回のフェッチによる複数行の取得や、現在のカーソルの場所で UPDATE、INSERT、DELETE の各ステートメントの実行が可能になります。  

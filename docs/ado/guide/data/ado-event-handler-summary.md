@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93790b3df8cb1d78ab2e0988cdc43cbd9af0718c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063018"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 接続とレコード セットのイベント
 ADO の 2 つのオブジェクトは、イベントを発生させることができます。[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトと[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 **ConnectionEvent**ファミリに関連で操作する、**接続**オブジェクト、および**RecordsetEvent**ファミリが上の操作に関連、 **レコード セット**オブジェクト。
@@ -32,7 +32,7 @@ ADO の 2 つのオブジェクトは、イベントを発生させることが�
 
 |ConnectionEvent|説明|
 |---------------------|-----------------|
-|[BeginTransComplete、CommitTransComplete、RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**トランザクション管理**-接続の現在のトランザクションが開始すると、通知がコミットまたはロールバックします。|
+|[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**トランザクション管理**-接続の現在のトランザクションが開始すると、通知がコミットまたはロールバックします。|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)、 [ConnectComplete、切断](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**接続の管理**-現在の接続が開始すると、通知が開始または終了しました。|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**コマンドの実行管理**-接続の現在のコマンドの実行が開始または終了したことを通知します。|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**情報**-現在の操作に関する追加情報があることを通知します。|
@@ -43,7 +43,7 @@ ADO の 2 つのオブジェクトは、イベントを発生させることが�
 |[WillChangeField、FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**フィールドの変更管理**-現在のフィールドの値は変更または変更されたことを通知します。|
 |[WillMove、MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)、 [EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**ナビゲーションの管理**-で、現在の行の位置が通知を**レコード セット**変更は、変更がまたはの末尾に達した、**レコード セット**します。|
 |[WillChangeRecord、RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**行の変更管理**-の現在の行で何かを通知、 **Recordset** 、変更、または変更しました。|
-|[WillChangeRecordset、RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**レコード セットの変更管理**-現在のものを通知**Recordset** 、変更、または変更しました。|
+|[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**レコード セットの変更管理**-現在のものを通知**Recordset** 、変更、または変更しました。|
 
 ## <a name="see-also"></a>参照
  [ADO イベントのインスタンス化言語で](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO イベント](../../../ado/reference/ado-api/ado-events.md)[イベント パラメーター](../../../ado/guide/data/event-parameters.md) [イベント ハンドラーがどのように連携](../../../ado/guide/data/how-event-handlers-work-together.md)[イベントの種類](../../../ado/guide/data/types-of-events.md)

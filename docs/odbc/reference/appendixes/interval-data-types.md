@@ -27,20 +27,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188902"
 ---
 # <a name="interval-data-types"></a>Interval データ型
 間隔は、2 つの日付と時刻の差として定義されます。 間隔は、2 つの方法の 1 つで表現されます。 1 つは、*年-月*単位、年と月を表す整数の間隔を表す間隔。 もう 1 つは、*日付と時刻*日、分、および秒単位の間隔を表す間隔。 これら 2 種類の間隔は、個別か月間のさまざまな日数があるため、混在させることはできません。  
   
  間隔は、一連のフィールドで構成されます。 フィールド間の暗黙的な順序。 たとえば、年月の間隔で年か早い方を 1 か月後に。 同様に、1 日 ~ 分間隔では、フィールドは、注文日、時、分では。 間隔の種類の最初のフィールドと呼ばれる、*先頭*フィールド、または*上位*フィールド。 最後のフィールドと呼ばれる、*末尾*フィールド。  
   
- 先頭のフィールドは、すべての間隔で、構成のグレゴリオ暦カレンダーのルールによって制限はありません。 たとえば、1 分間の時間間隔の時間フィールド制限はありませんは通常、0 から 23 (包括) の間で指定します。 その後、その先頭フィールドの後続のフィールドには、グレゴリオ暦の通常の制約に従ってください。 詳細については、[グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)、この付録で後述を参照してください。  
+ 先頭のフィールドは、すべての間隔で、構成のグレゴリオ暦カレンダーのルールによって制限はありません。 たとえば、1 分間の時間間隔の時間フィールド制限はありませんは通常、0 から 23 (包括) の間で指定します。 その後、その先頭フィールドの後続のフィールドには、グレゴリオ暦の通常の制約に従ってください。 詳細については、次を参照してください。[グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)、この付録で後述します。  
   
- 13 interval SQL データ型と 13 interval C データ型があります。 間隔の C データ型のそれぞれは、間隔のデータを含む SQL_INTERVAL_STRUCT、同じ構造を使用します。 (詳細については、次のセクションを参照してください[C Interval 構造体](../../../odbc/reference/appendixes/c-interval-structure.md)。)。SQL データ型の詳細については、[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)C のデータ型の詳細についてを参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)を参照してください。  
+ 13 interval SQL データ型と 13 interval C データ型があります。 間隔の C データ型のそれぞれは、間隔のデータを含む SQL_INTERVAL_STRUCT、同じ構造を使用します。 (詳細については、次のセクションを参照してください[C Interval 構造体](../../../odbc/reference/appendixes/c-interval-structure.md)。)。SQL データ型の詳細については、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)C のデータ型の詳細についてを参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)します。  
   
 |型識別子|クラス|説明|  
 |---------------------|-----------|-----------------|  
