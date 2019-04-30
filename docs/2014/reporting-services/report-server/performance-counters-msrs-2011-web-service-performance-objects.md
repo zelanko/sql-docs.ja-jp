@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7d28e597d36305b9c4df7c8b4a499dc507b1ed31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191207"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 Web Service と MSRS 2014 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター (ネイティブ モード)
   このトピックでのパフォーマンス カウンターの説明、`MSRS 2014 Web Service`と`MSRS 2014 Windows Service`パフォーマンス オブジェクト  
@@ -35,7 +35,7 @@ ms.locfileid: "59934408"
   
  パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルの「[ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx)」(https://msdn.microsoft.com/library/w4bz2147.aspx) を参照してください。  
   
- SharePoint モードのパフォーマンス カウンターに関連する情報は、次を参照してください[MSRS 2014 Web Service SharePoint Mode と MSRS 2014 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;。](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ SharePoint モードのパフォーマンス カウンターに関連する情報は、次を参照してください[MSRS 2014 Web Service SharePoint Mode と MSRS 2014 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター &#40;SharePoint モード&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)。  
   
  **このトピックの内容:**  
   
