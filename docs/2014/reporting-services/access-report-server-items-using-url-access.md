@@ -1,5 +1,5 @@
 ---
-title: URL アクセスを使用したレポート サーバー アイテムへのアクセス | Microsoft Docs
+title: URL アクセスを使用してレポート サーバー アイテムへのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,42 +15,42 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3a345cd609c4cfd79f9e93a2b63e71bbddde36ee
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233565"
 ---
-# <a name="access-report-server-items-using-url-access"></a>URL アクセスを使用したレポート サーバー アイテムへのアクセス
-  このトピックでは、*rs:Command*=*Value* を使用してレポート サーバー データベースまたは SharePoint サイトにある異なる種類のカタログ アイテムにアクセスする方法について説明します。  
+# <a name="access-report-server-items-using-url-access"></a>URL アクセスを使用してレポート サーバー項目にアクセスします。
+  このトピックでは、方法、レポート内のさまざまな種類のカタログ項目にアクセスするサーバー データベースまたは SharePoint サイトを使用してについて説明します。 *Rs:command*=*値*します。  
   
- このパラメーターの文字列を追加する必要はありません。 この文字列を省略した場合、レポート サーバーがアイテムの種類を評価し、適切なパラメーター値を自動的に選択します。 ただし、URL に *rs:Command*=*Value* 文字列を使用することで、レポート サーバーのパフォーマンスを向上できます。  
+ このパラメーターの文字列を追加する必要はありません。 を省略した場合、レポート サーバーは、項目の種類を評価し、適切なパラメーター値を自動的に選択します。 ただしを使用して、 *Rs:command*=*値*URL 内の文字列、レポート サーバーのパフォーマンスが向上します。  
   
- 以下の例では、 `_vti_bin` プロキシ構文に注意してください。 プロキシ構文の詳細については、「 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)」を参照してください。  
+ 注、`_vti_bin`次の例ではプロキシ構文。 プロキシ構文の使用に関する詳細については、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。  
   
-## <a name="access-a-report"></a>レポートへのアクセス  
- ブラウザーでレポートを表示するには、 *rs:Command*=*Render* パラメーターを使用します。 以下に例を示します。  
+## <a name="access-a-report"></a>レポートへのアクセスします。  
+ ブラウザーでレポートを表示する、 *Rs:command*=*レンダリング*パラメーター。 例えば:  
   
  `Native` `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  SharePoint および `_vti_bin` HTTP プロキシ経由で要求をルーティングする [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] プロキシ構文を URL に含めることは重要です。 プロキシによって、HTTP 要求にいくつかのコンテキストが追加されます。これは、SharePoint モード レポート サーバーに対してレポートを適切に実行するために必要なコンテキストです。  
   
-## <a name="access-a-resource"></a>リソースへのアクセス  
- リソースにアクセスするには、 *rs:Command*=*GetResourceContents* パラメーターを使用します。画像などのリソースがブラウザーと互換性がある場合は、ブラウザーにリソースが表示されます。 それ以外の場合は、ファイルまたはリソースを開くか、ディスクに保存するように要求されます。  
+## <a name="access-a-resource"></a>リソースへのアクセスします。  
+ リソースにアクセスするには、使用、 *Rs:command*=*GetResourceContents*パラメーター。リソースが、画像など、ブラウザーと互換性のある場合は、ブラウザーで開かれます。 それを開くか、ファイルまたはリソースをディスクに保存するように求められます。  
   
  `Native` `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
-## <a name="access-a-data-source"></a>データ ソースへのアクセス  
- データ ソースにアクセスするには、 *rs:Command*=*GetDataSourceContents* パラメーターを使用します。 ブラウザーで XML がサポートされている場合、そのデータ ソース定義が表示されます。ただし、目的のデータ ソースに対して `Read Contents` 権限が与えられている認証ユーザーであることが条件となります。 以下に例を示します。  
+## <a name="access-a-data-source"></a>データ ソースへのアクセスします。  
+ データ ソースにアクセスするには、使用、 *Rs:command*=*GetDataSourceContents*パラメーター。 お使いのブラウザーでは、XML をサポートする場合で認証済みのユーザーの場合データ ソースの定義が表示されます。`Read Contents`データ ソースに対する権限。 例:  
   
  `Native` `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  XML 構造は、次の例のようになります。  
   
@@ -66,19 +66,19 @@ ms.locfileid: "59940168"
 </DataSourceDefinition>  
 ```  
   
- 接続文字列は、レポート サーバーの **SecureConnectionLevel** 設定に基づいて返されます。 **SecureConnectionLevel** 設定の詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](report-server-web-service/net-framework/using-secure-web-service-methods.md)」を参照してください。  
+ 接続文字列が返されますに基づいて、 **SecureConnectionLevel**レポート サーバーの設定。 詳細については、 **SecureConnectionLevel**設定、表示[セキュリティで保護された Web サービス メソッドを使用して](report-server-web-service/net-framework/using-secure-web-service-methods.md)します。  
   
-## <a name="access-the-contents-of-a-folder"></a>フォルダーのコンテンツへのアクセス  
- フォルダーのコンテンツにアクセスするには、 *rs:Command*=*GetChildren* パラメーターを使用します。 要求されたフォルダーのサブフォルダー、レポート、データ ソース、およびリソースへのリンクを含む汎用フォルダー ナビゲーション ページが返されます。 以下に例を示します。  
+## <a name="access-the-contents-of-a-folder"></a>フォルダーの内容にアクセスします。  
+ フォルダーの内容にアクセスするには、使用、 *Rs:command*=*GetChildren*パラメーター。 汎用フォルダー ナビゲーション ページは、サブフォルダー、レポート、データ ソース、および要求されたフォルダー内のリソースへのリンクを格納しているが返されます。 例:  
   
  `Native` `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
- 表示されるユーザー インターフェイスは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS) で使用されるディレクトリ参照モードと似ています。 ビルド番号を含むレポート サーバーのバージョン番号もフォルダー一覧の下に表示されます。  
+ ユーザー インターフェイスはディレクトリで使用されるモードの参照に似ています[!INCLUDE[msCoName](../includes/msconame-md.md)]インターネット インフォメーション サーバー (IIS)。 バージョン番号は、レポート サーバーのビルド番号を含むは、以下のフォルダーの一覧も表示されます。  
   
-## <a name="see-also"></a>参照  
- [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [URL アクセス&#40;SSRS&#41;](url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)  
   
   
