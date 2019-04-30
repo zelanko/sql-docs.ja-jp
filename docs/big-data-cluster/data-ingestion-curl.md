@@ -5,17 +5,17 @@ description: Curl を使用して、SQL Server 2019 ビッグ データ クラ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 56bee3241427b9de9768e7bdd9e49646b51521d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947798"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472099"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Curl を使用して、ビッグ データの SQL Server クラスターの HDFS にデータを読み込む
 
@@ -25,10 +25,10 @@ ms.locfileid: "59947798"
 
 ## <a name="obtain-the-service-external-ip"></a>サービスの外部 ip アドレスを取得します。
 
-配置が完了したらとそのアクセスを通過 Knox、WebHDFS が開始されます。 呼ばれる Kubernetes サービスを介して Knox エンドポイントが公開される**エンドポイント セキュリティ**します。  ファイルのアップロード/ダウンロードするために必要な WebHDFS URL を作成する必要があります、**エンドポイント セキュリティ**サービスの外部 IP アドレスとクラスターの名前。 取得することができます、**エンドポイント セキュリティ**次のコマンドを実行して外部 IP アドレスをサービスします。
+配置が完了したらとそのアクセスを通過 Knox、WebHDFS が開始されます。 呼ばれる Kubernetes サービスを介して Knox エンドポイントが公開される**svc 外部のゲートウェイ**します。  ファイルのアップロード/ダウンロードするために必要な WebHDFS URL を作成する必要があります、 **svc 外部のゲートウェイ**サービスの外部 IP アドレスとクラスターの名前。 取得することができます、 **svc 外部のゲートウェイ**次のコマンドを実行して外部 IP アドレスをサービスします。
 
 ```bash
-kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
@@ -38,7 +38,7 @@ kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.
 
 ここで、次のように、WebHDFS へのアクセスに URL を構築できます。
 
-`https://<endpoint-security service external IP address>:30443/gateway/default/webhdfs/v1/`
+`https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 例 :
 
@@ -49,7 +49,7 @@ kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.
 一覧のファイルに**hdfs:///airlinedata**、次の curl コマンドを使用します。
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>ローカル ファイルを HDFS に入れる
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external 
 新しいファイルを配置する**test.csv** airlinedata ディレクトリにローカル ディレクトリから次の curl コマンドを使用して、(、 **Content-type**パラメーターが必要です)。
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>ディレクトリを作成します。
@@ -65,7 +65,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP extern
 ディレクトリを作成する**テスト** `hdfs:///`、次のコマンドを使用します。
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>次のステップ

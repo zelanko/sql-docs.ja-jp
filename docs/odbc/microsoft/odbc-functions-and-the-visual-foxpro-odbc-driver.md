@@ -22,17 +22,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244630"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 関数と Visual FoxPro ODBC ドライバー
 このセクションのトピックでは、ODBC API 関数の簡単な概要と、Visual FoxPro 固有の詳細情報を提供します。  
   
 > [!NOTE]  
->  ODBC 関数については、[ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC プログラマ ガイド 』 を参照を参照してください。  
+>  ODBC 関数については、次を参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)"ODBC プログラマ ガイド 』 を参照します。  
   
  ODBC API 関数は、ここで次の 3 つの主なカテゴリに分けられています。コア レベル API 関数、レベル 1 API 関数、およびレベル 2 API 関数。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52512458"
 |[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)|[SQLNumResultCols](../../odbc/microsoft/sqlnumresultcols-visual-foxpro-odbc-driver.md)|  
 |[SQLDescribeCol](../../odbc/microsoft/sqldescribecol-visual-foxpro-odbc-driver.md)|[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)|  
 |[SQLDisconnect](../../odbc/microsoft/sqldisconnect-visual-foxpro-odbc-driver.md)|[SQLRowCount](../../odbc/microsoft/sql-row-count-visual-foxpro-odbc-driver.md)|  
-|[Sqlerror 関数](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)|[SQLSetCursorName](../../odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md)|  
+|[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)|[SQLSetCursorName](../../odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md)|  
 |[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
   
 ## <a name="level-1-api-support"></a>レベル 1 API のサポート  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408319"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473529"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) の実行
 Microsoft は、堅牢な一連のスクリプト ファイルのコマンドとコマンド ライン オプションを実行し、SSMA アクティビティの制御を提供します。 次のセクションでは、同じについて説明します。  
@@ -128,11 +128,11 @@ create-new-project:新しい SSMA プロジェクトを作成します。
   
 **Windows 認証**と**ポート**パラメーターは、SQL Azure に接続するときは適用されません。  
   
-スクリプト ファイルの作成 ' の詳細については、[スクリプト ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)を参照してください。  
+スクリプト ファイルの作成 ' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)します。  
   
 **Command**  
   
-接続ソース データベース  
+connect-source-database  
   
 -   ソース データベースへの接続を実行し、ソース データベースが、すべてのメタデータの高レベルのメタデータを読み込みます。  
   
@@ -713,7 +713,7 @@ save-as-script
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、[SSMA コンソールのコマンド ライン オプション&#40;AccessToSQL&#41; ](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)を参照してください。  
+コマンド ライン オプションについては、次を参照してください。 [SSMA コンソールのコマンド ライン オプション&#40;AccessToSQL&#41; ](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)します。  
   
 サンプルのコンソール スクリプト ファイルについては、次を参照してください[サンプルのコンソール スクリプト FilesExecuting SSMA コンソールの操作&#40;AccessToSQL。&#41;](../../ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md)  
   
@@ -721,7 +721,7 @@ save-as-script
   
 -   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)します。  
   
--   レポートを生成するため、[レポートを生成する&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)を参照してください。  
+-   レポートを生成するため、次を参照してください。[レポートを生成する&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)します。  
   
--   コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)を参照してください。  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)します。  
   

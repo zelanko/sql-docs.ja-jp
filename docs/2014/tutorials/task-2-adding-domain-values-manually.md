@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244691"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>タスク 2:ドメイン値を手動で追加する
   このタスクでは、値を追加、**国**ドメイン手動でします。 参照してください[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)このページのフィールドの詳細についてはトピック。  

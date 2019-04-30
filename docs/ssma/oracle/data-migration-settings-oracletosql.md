@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287179"
 ---
 # <a name="data-migration-settings-oracletosql"></a>データ移行の設定 (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>データの移行設定  
 **データ移行の設定**データ移行のためのカスタム クエリを記述できます。  
   
--   このタブは、使用可能な場合に**データ移行のオプションの拡張**に設定されている**表示**と非表示設定した場合に**を非表示に**プロジェクト設定。 プロジェクトの移行設定の詳細については、[プロジェクトの設定 (移行)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)を参照してください。  
+-   このタブは、使用可能な場合に**データ移行のオプションの拡張**に設定されている**表示**と非表示設定した場合に**を非表示に**プロジェクト設定。 プロジェクトの移行設定の詳細については、次を参照してください。[プロジェクトの設定 (移行)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60)します。  
   
 -   実装するカスタム SQL ステートメントの解析**データ移行の設定**テーブル ノードのタブ。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "51656139"
   
 存在する 2 つのボタンを viz。  
   
--   **適用:** クリックして**適用**変更されている設定を適用します。  
+-   **適用されます。** クリックして**適用**変更されている設定を適用します。  
   
--   **[キャンセル]:** クリックして**キャンセル**変更が行われた前に、現在の設定を復元します。  
+-   **キャンセル：** クリックして**キャンセル**変更が行われた前に、現在の設定を復元します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server への Oracle データの移行](migrating-oracle-data-into-sql-server-oracletosql.md)  

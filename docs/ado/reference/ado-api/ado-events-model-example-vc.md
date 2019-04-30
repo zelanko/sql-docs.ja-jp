@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248980"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO イベント モデルの例 (VC++)
 Visual C のセクションの[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)ADO イベント モデルをインスタンス化する方法の一般的な説明を提供します。 によって作成された環境でのイベント モデルをインスタンス化した特定の例を次に、 **#import**ディレクティブ。  

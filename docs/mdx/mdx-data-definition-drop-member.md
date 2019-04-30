@@ -1,5 +1,5 @@
 ---
-title: DROP MEMBER ステートメント (MDX) |Microsoft ドキュメント
+title: DROP MEMBER ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 78d5d27853922d7e7524d93ae2b8157e57166968
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248296"
 ---
-# <a name="mdx-data-definition---drop-member"></a>MDX データ定義にドロップ メンバー
+# <a name="mdx-data-definition---drop-member"></a>MDX データ操作 - DROP MEMBER
 
 
   計算されるメンバーを削除します。  
@@ -33,13 +33,13 @@ DROP MEMBER
   
 ## <a name="arguments"></a>引数  
  *Cube_Name*  
- キューブ名を提供する有効な文字列式です。  
+ キューブ名を提供する有効な文字列式。  
   
  *Member_Identifier*  
- メンバー名またはメンバー キーを指定する有効な文字列式です。  
+ メンバー名またはメンバー キーを提供する有効な文字列式。  
   
 ## <a name="see-also"></a>参照  
- [CREATE MEMBER ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
+ [CREATE MEMBER ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

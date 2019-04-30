@@ -1,5 +1,5 @@
 ---
-title: および (MDX) |Microsoft ドキュメント
+title: および (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249882"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -30,16 +30,16 @@ Expression1 AND Expression2
   
 #### <a name="parameters"></a>パラメーター  
  *Expression1*  
- 数値を返す有効な多次元式 (MDX) 式です。  
+ 数値の値を返す有効な多次元式 (MDX) 式。  
   
  *Expression2*  
- 数値を返す有効な MDX 式です。  
+ 数値の値を返す有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
- 両方のパラメーターを評価する場合に true を返すブール値**true**、それ以外の**false**です。  
+ 両方のパラメーターが評価される場合は true を返すブール値**true**、それ以外の**false**します。  
   
 ## <a name="remarks"></a>コメント  
- **AND**演算子はブール値として両方の式を処理 (つまり、0 として**false**、それ以外の**true**) 論理積の演算を実行する前にします。 次の表に示しますが、どのように**AND**論理積演算を実行します。  
+ **AND**演算子はブール値として両方の式を処理 (つまり、0 として**false**、それ以外の**true**) 論理積を実行します。 次の表は、 **AND**演算子が論理積を実行します。  
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  

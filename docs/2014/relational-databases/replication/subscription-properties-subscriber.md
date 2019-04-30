@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250271"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server レプリケーション サブスクリプションのプロパティ 
 このセクションの情報を提供する、**サブスクリプションのプロパティ** ダイアログ ボックス。 
@@ -43,7 +43,7 @@ ms.locfileid: "54134982"
   
  各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](security/replication-agent-security-model.md)」を参照してください。  
   
-### <a name="publisher-options-for-transactional-subscriptions"></a>トランザクション サブスクリプションの発行元のオプション  
+### <a name="publisher-options-for-transactional-subscriptions"></a>トランザクション サブスクリプションに対するパブリッシャーのオプション  
  **[トランザクションのループを防ぐ]**  
  ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを決定します。 このオプションは双方向トランザクション レプリケーションに対して使用します。 詳細については、「 [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md)」を参照してください。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54134982"
   
 ### <a name="options-for-merge-subscriptions"></a>マージ サブスクリプションに対するオプション  
  **[パーティション定義 (HOST_NAME)]**  
- パラメーター化されたフィルターを使用するパブリケーションで、マージ レプリケーションは、2 つのシステム関数 (または両方のフィルターが両方の関数を参照している場合) のいずれかをサブスクライバーが受け取るデータを決定する同期中に評価します。**SUSER_SNAME()** または**HOST_NAME()** します。 既定では、**HOST_NAME()** は、マージ エージェントが実行されているコンピューターの名前を返しますが、この値はサブスクリプションの新規作成ウィザードでオーバーライドすることができます。 パラメーター化されたフィルターと **HOST_NAME()** のオーバーライドの詳細については、「[Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ パラメーター化されたフィルターを使用するパブリケーションの場合、マージ レプリケーションでは、同期化中に 2 つのシステム関数のうちの 1 つ (フィルターが両方の関数を参照する場合は両方の関数) を評価して、サブスクライバーが受け取る必要のあるデータを決定します。関数は **SUSER_SNAME()** または **HOST_NAME()** です。 既定では、**HOST_NAME()** は、マージ エージェントが実行されているコンピューターの名前を返しますが、この値はサブスクリプションの新規作成ウィザードでオーバーライドすることができます。 パラメーター化されたフィルターと **HOST_NAME()** のオーバーライドの詳細については、「[Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
  **[サブスクリプションの種類]** と **[優先度]**  
  サブスクリプションがクライアント サブスクリプションまたはサーバー サブスクリプションであるかどうかを表示します (これは、サブスクリプションが作成された後では変更できません)。 サーバー サブスクリプションは、他のサブスクライバーへのデータの再パブリッシュと、競合解決方法の優先度の割り当てができます。  
@@ -84,7 +84,7 @@ ms.locfileid: "54134982"
  **[スナップショットの場所]**  
  初期化または再初期化の際にアクセスするスナップショット ファイルの場所を決定します。 場所は次の値のいずれかです。  
   
--   **[既定の場所]**: ディストリビューターの構成時に定義される既定の場所です。 詳細については、[、既定のスナップショットの場所を指定](snapshot-options.md#snapshot-folder-locations)を参照してください。    
+-   **[既定の場所]**: ディストリビューターの構成時に定義される既定の場所です。 詳細については、次を参照してください。 [、既定のスナップショットの場所を指定](snapshot-options.md#snapshot-folder-locations)します。    
 -   **[代替フォルダー]**: **[パブリケーションのプロパティ]** ダイアログ ボックスで指定することができる代替の場所です。 詳細については、「 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)」を参照してください。    
 -   **[動的スナップショット フォルダー]**: パラメーター化された行フィルターを使用するマージ パブリケーションのスナップショットの場所です。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
 -   **[FTP フォルダー]**: FTP (ファイル転送プロトコル) サーバーにアクセスできるフォルダーです。 詳細については、「[FTP によるスナップショットの転送](transfer-snapshots-through-ftp.md)」を参照してください。  
@@ -110,7 +110,7 @@ ms.locfileid: "54134982"
   
 ### <a name="options-for-merge-subscriptions"></a>マージ サブスクリプションに対するオプション  
  **[パーティション定義 (HOST_NAME)]**  
- パラメーター化されたフィルターを使用するパブリケーションで、マージ レプリケーションは、2 つのシステム関数 (または両方のフィルターが両方の関数を参照している場合) のいずれかをサブスクライバーが受け取るデータを決定する同期中に評価します。**SUSER_SNAME()** または**HOST_NAME()** します。 既定では、**HOST_NAME()** は、マージ エージェントが実行されているコンピューターの名前を返しますが、この値はサブスクリプションの新規作成ウィザードでオーバーライドすることができます。 パラメーター化されたフィルターと **HOST_NAME()** のオーバーライドの詳細については、「[Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ パラメーター化されたフィルターを使用するパブリケーションの場合、マージ レプリケーションでは、同期化中に 2 つのシステム関数のうちの 1 つ (フィルターが両方の関数を参照する場合は両方の関数) を評価して、サブスクライバーが受け取る必要のあるデータを決定します。関数は **SUSER_SNAME()** または **HOST_NAME()** です。 既定では、**HOST_NAME()** は、マージ エージェントが実行されているコンピューターの名前を返しますが、この値はサブスクリプションの新規作成ウィザードでオーバーライドすることができます。 パラメーター化されたフィルターと **HOST_NAME()** のオーバーライドの詳細については、「[Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
  **[サブスクリプションの種類]** と **[優先度]**  
  サブスクリプションがクライアント サブスクリプションまたはサーバー サブスクリプションであるかどうかを表示します (これは、サブスクリプションが作成された後では変更できません)。 サーバー サブスクリプションは、他のサブスクライバーへのデータの再パブリッシュと、競合解決方法の優先度の割り当てができます。  

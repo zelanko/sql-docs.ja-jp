@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278487"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
@@ -33,10 +33,10 @@ MemberToStr(Member_Expression)
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- この関数は、メンバーの一意の名前を表す文字列を返します。 メンバーの一意の名前を外部関数に渡すには、通常使用されます。  
+ この関数は、メンバーの一意の名前を含む文字列を返します。 メンバーの一意の名前を外部関数に渡すには、通常使用されます。  
   
 ## <a name="example"></a>例  
- 次の例は、文字列 [Geography].[Geography].[Country].&[United States] を返します。  
+ 次の例では、文字列 [Geography] を返します。[Geography] です。[Country] です。 (& a) [United States]。  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   

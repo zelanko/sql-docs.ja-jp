@@ -5,16 +5,16 @@ description: Mssqlctl アプリ テンプレート コマンドに関する参�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 0b4cbae0ba35c0cef777b3535b2012ab78f8e6da
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860103"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473441"
 ---
 # <a name="mssqlctl-app-template"></a>mssqlctl アプリ テンプレート
 
@@ -22,81 +22,79 @@ ms.locfileid: "58860103"
 
 次の記事への参照を提供する、**アプリ テンプレート**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
-## <a id="commands"></a> コマンド
-
-|||
-|---|---|
-| [list](#list) | サポートされているテンプレートをフェッチします。 |
-| [プル](#pull) | サポートされているテンプレートをダウンロードします。 |
-
-## <a id="list"></a> mssqlctl アプリ テンプレートの一覧
-
-サポートされているテンプレートをフェッチします。
-
+## <a name="commands"></a>コマンド
+|     |     |
+| --- | --- |
+[mssqlctl アプリ テンプレートの一覧](#mssqlctl-app-template-list) | サポートされているテンプレートをフェッチします。
+[mssqlctl アプリ テンプレートのプル](#mssqlctl-app-template-pull) | サポートされているテンプレートをダウンロードします。
+## <a name="mssqlctl-app-template-list"></a>mssqlctl アプリ テンプレートの一覧
+[URL] の指定した github リポジトリでサポートされているテンプレートをフェッチします。
+```bash
+mssqlctl app template list [--url -u] 
+                           
 ```
-mssqlctl app template list
-   --url
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--url -u** | 別のテンプレート リポジトリの場所を指定します。 既定値:https://github.com/Microsoft/sql-server-samples.gitします。 |
-
 ### <a name="examples"></a>使用例
-
 既定のテンプレート リポジトリの場所のすべてのテンプレートをフェッチします。
-
-```
+```bash
 mssqlctl app template list
 ```
-
 別のリポジトリ場所のすべてのテンプレートをフェッチします。
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
-## <a id="pull"></a> mssqlctl アプリ テンプレートのプル
-
-サポートされているテンプレートをダウンロードします。
-
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--url -u`
+別のテンプレート リポジトリの場所を指定します。 既定値: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
+## <a name="mssqlctl-app-template-pull"></a>mssqlctl アプリ テンプレートのプル
+[URL] の指定した github リポジトリでサポートされているテンプレートをダウンロードします。
+```bash
+mssqlctl app template pull [--name -n] 
+                           [--url -u]  
+                           [--destination -d]
 ```
-mssqlctl app template pull
-   --destination
-   --name
-   --url
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--destination -d** | アプリケーションのスケルトン テンプレートを配置する場所。  既定値:./テンプレート。 |
-| **--name -n** | テンプレートの名前。 サポートされているテンプレートの名前を完全な一覧については、実行`mssqlctl app template list`します。 |
-| **--url -u** | 別のテンプレート リポジトリの場所を指定します。 既定値:
-https://github.com/Microsoft/sql-server-samples.git 。 |
-
 ### <a name="examples"></a>使用例
-
 既定のテンプレート リポジトリの場所のすべてのテンプレートをダウンロードします。
-
-```
+```bash
 mssqlctl app template pull
 ```
-
 別のリポジトリ場所のすべてのテンプレートをダウンロードします。
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
 名前では、個々 のテンプレートをダウンロードします。
-
+```bash
+mssqlctl app template pull --name ssis            
 ```
-mssqlctl app template pull --name ssis
-```
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--name -n`
+テンプレートの名前。 サポートされているテンプレート namesrun オフの完全な一覧について `mssqlctl app template list`
+#### `--url -u`
+別のテンプレート リポジトリの場所を指定します。 既定値: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+#### `--destination -d`
+アプリケーションのスケルトン テンプレートを配置する場所。
+`./templates`
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
 
 ## <a name="next-steps"></a>次のステップ
 

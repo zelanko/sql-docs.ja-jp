@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583405"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472167"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスター上のコント ローラーとは何ですか。
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-コント ローラーは、展開、およびビッグ データ クラスターを管理するためのコア ロジックをホストします。 Kubernetes では、クラスターおよび Spark、HDFS などの他のコンポーネントの一部である SQL Server インスタンスのすべての通信が処理されます。 
+コント ローラーは、展開、およびビッグ データ クラスターを管理するためのコア ロジックをホストします。 Kubernetes では、クラスターおよび Spark、HDFS などの他のコンポーネントの一部である SQL Server インスタンスのすべての通信が処理されます。
 
 コント ローラー サービスは、次のコア機能を提供します。
 
@@ -31,9 +31,10 @@ ms.locfileid: "59583405"
 - コンピューティング、データ、および記憶域プールを管理します。
 - クラスターの状態を監視する監視ツールを公開します。
 - トラブルシューティング ツールを検出し、予期しない問題の修復の公開します。
-- クラスターのセキュリティの管理: セキュリティで保護されたクラスター エンドポイントを確認、ユーザーとロールの管理、クラスター内通信の資格情報構成
-- 安全に実装されているため、アップグレードのワークフローの管理 (CTP 2.4 では使用できません)
-- (CTP 2.4 では使用できません)、クラスター内のステートフル サービスの高可用性と災害復旧を管理します。
+- クラスターのセキュリティを管理するには。
+  - セキュリティで保護されたクラスター エンドポイントを確認します。
+  - ユーザーとロールを管理します。
+  - クラスター内通信の資格情報を構成します。
 
 ## <a name="deploying-the-controller-service"></a>コント ローラー サービスのデプロイ
 

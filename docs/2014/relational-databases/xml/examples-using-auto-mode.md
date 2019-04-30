@@ -1,5 +1,5 @@
 ---
-title: 例 :AUTO モードの使用 |Microsoft Docs
+title: '例 : AUTO モードの使用 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287807"
 ---
 # <a name="examples-using-auto-mode"></a>例 :AUTO モードの使用
   次の例では、AUTO モードの使用方法を示します。 クエリの多くは、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースの ProductModel テーブルの Instructions 列に格納されている、自転車の製造手順の XML ドキュメントに対して指定されています。  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>例:顧客、注文、および注文明細情報を取得します。  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>例: 顧客情報、注文情報、および注文明細情報の取得  
  このクエリでは、特定の顧客の顧客情報、注文情報、および注文明細情報を取得しています。  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>例:GROUP BY と集計関数を指定します。  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>例: GROUP BY と集計関数の指定  
  次のクエリにより、各顧客の ID と顧客が要求した注文数が返されます。  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>例:AUTO モードで計算列を指定します。  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>例: AUTO モードでの計算列の指定  
  このクエリでは、各顧客の連結された名前と注文情報が返されます。 計算列はその時点で見つかった最も内側のレベルに割り当てられるので、この例では <`SOH`> 要素に割り当てられます。 連結された顧客名は、<`SOH`> 要素の属性として結果に追加されます。  
   
 ```  
@@ -166,7 +166,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>例:バイナリ データを返す  
+## <a name="example-returning-binary-data"></a>例: バイナリ データを返す  
  次のクエリでは、 `ProductPhoto` テーブルから製品の写真が返されます。 `ThumbNailPhoto` は、`ProductPhoto` テーブルの `varbinary(max)` 列です。 既定では、 `AUTO` モードにより、バイナリ データへの参照、つまりクエリが実行されるデータベースの仮想ルートからの相対 URL が返されます。 画像を識別するには、 `ProductPhotoID` キー属性を指定する必要があります。 この例で示すように、画像の参照を取得する場合、 `SELECT` 句でテーブルの主キーを指定して行を一意に識別する必要もあります。  
   
 ```  
@@ -176,7 +176,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `-- result`  
   
@@ -195,7 +195,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `-- result`  
   
@@ -203,7 +203,7 @@ FOR XML AUTO, BINARY BASE64;
   
  既定では、AUTO モードを使用してバイナリ データを取得すると、バイナリ データではなく、クエリが実行されたデータベースの仮想ルートからの相対 URL への参照が返されます。 BINARY BASE64 オプションを指定しないと、相対 URL への参照が返されます。  
   
- 大文字と小文字が区別されないデータベースでは、クエリで指定したテーブル名や列名がデータベース内のテーブル名や列名と一致しない場合でも、AUTO モードによりバイナリ データへの URL 参照が返されると、クエリが実行されます。 ただし、参照として返される文字列が大文字であるか小文字であるかは一貫性がありません。 例 :  
+ 大文字と小文字が区別されないデータベースでは、クエリで指定したテーブル名や列名がデータベース内のテーブル名や列名と一致しない場合でも、AUTO モードによりバイナリ データへの URL 参照が返されると、クエリが実行されます。 ただし、参照として返される文字列が大文字であるか小文字であるかは一貫性がありません。 以下に例を示します。  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  
@@ -212,7 +212,7 @@ WHERE  ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<Production.PRODUCTPHOTO`  
   
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  このことは、特に、大文字と小文字が区別されるデータベースに対して dbobject クエリが実行されるときに問題になる可能性があります。 この問題を回避するには、クエリで指定するテーブル名や列名での大文字と小文字の区別の方法が、データベース内のテーブル名や列名での大文字と小文字の区別の方法と一致している必要があります。  
   
-## <a name="example-understanding-the-encoding"></a>例:エンコードについてください。  
+## <a name="example-understanding-the-encoding"></a>例: エンコードについて  
  この例では、結果に表示されるさまざまなエンコードを示します。  
   
  次のテーブルを作成します。  
@@ -243,7 +243,7 @@ INSERT INTO [Special Chars] VALUES ('&', 0x20), ('#', 0x20);
 SELECT * FROM [Special Chars] FOR XML AUTO;  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<Special_x0020_Chars`  
   

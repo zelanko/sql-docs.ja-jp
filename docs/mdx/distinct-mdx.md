@@ -1,5 +1,5 @@
 ---
-title: Distinct (MDX) |Microsoft ドキュメント
+title: Distinct (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fc3e4680991f88743bbab8eec1de3bb629c94b66
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248263"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
 
@@ -33,10 +33,10 @@ Distinct(Set_Expression)
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- 場合、 **Distinct**関数では、指定したセットに重複する組を検索、関数は、セットの順序を維持したまま、重複した組の最初のインスタンスのみを保持します。  
+ 場合、 **Distinct**関数は、指定されたセット内の重複する組を検索、関数は、セットの順序を保持しながら、重複した組の最初のインスタンスのみを保持します。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリでは、Distinct 関数を名前付きセットと共に使用する方法と、Distinct 関数を Count 関数と共に使用してセット内の重複する組の数を調べる方法を示します。  
+ 次のクエリで名前付きセット、Distinct 関数を使用する方法と、Count 関数を使用してセット内の重複しない組数を検索する方法を示しています。  
   
  `WITH SET MySet AS`  
   
@@ -61,6 +61,6 @@ Distinct(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

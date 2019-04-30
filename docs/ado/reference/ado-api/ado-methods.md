@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248886"
 ---
 # <a name="ado-methods"></a>ADO メソッド
 
@@ -66,7 +66,7 @@ ms.locfileid: "55044758"
 |[put_OLEDBCommand メソッド](../../../ado/reference/ado-api/put-oledbcommand-method.md)|このメソッドは演算を実行しない - 常に S_OK を返します。|  
 |[読み取り](../../../ado/reference/ado-api/read-method.md)|指定したからのバイト数を読み取り、 **Stream**オブジェクト。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|テキストから指定数の文字を読み取ります**Stream**オブジェクト。|  
-|[[更新]](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、特定のオブジェクトを更新します。|  
+|[更新](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、特定のオブジェクトを更新します。|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|データを更新、**レコード セット**オブジェクトをオブジェクトの基になるクエリを再実行しています。|  
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|現在のデータを更新します**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**基になるデータベースからのオブジェクト。|  
 |[および](../../../ado/reference/ado-api/save-method.md)|保存、**レコード セット**ファイルまたは**Stream**オブジェクト。|  
@@ -75,7 +75,7 @@ ms.locfileid: "55044758"
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|ストリームの末尾の位置を設定します。|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|テキスト ストリームを読み取るときに、1 つの行全体をスキップします。|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|開いているストリームに関する統計情報を取得します。|  
-|[Supports](../../../ado/reference/ado-api/supports-method.md)|指定したかどうかを判断します**Recordset**オブジェクトは、特定の種類の機能をサポートしています。|  
+|[サポート](../../../ado/reference/ado-api/supports-method.md)|指定したかどうかを判断します**Recordset**オブジェクトは、特定の種類の機能をサポートしています。|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|現在の行に加えた変更を保存、**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**オブジェクト。|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|すべての保留中のバッチ更新プログラムをディスクに書き込みます。|  
 |[書き込み](../../../ado/reference/ado-api/write-method.md)|バイナリ データを書き込みます、 **Stream**オブジェクト。|  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0e345ca44b152986e0e8c7eae87d8a2a50481c8f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278990"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>[中心とズーム] ([マップ ビューポートのプロパティ] ダイアログ ボックス)
   **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[中心とズーム]** を選択すると、マップの中心ビューおよび拡大 (縮小) 率を設定できます。 マップのデータ ソースとレポートに含めるマップの境界を指定した後は、ビューの中心および拡大 (縮小) 率を指定して、さらにマップ表示を制御できます。 中心とズーム値の指定方法により、使用できるオプションも異なります。 **式** (*[fx]*) ボタンをクリックし、オプションの値を設定する式を編集します。  

@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245957"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>アップグレード アドバイザーの実行 (ユーザー インターフェイス)
   アップグレード アドバイザーを実行すると、アップグレードの計画時にローカルまたはリモートのコンポーネントを分析できます。 アップグレード アドバイザーでは、各コンポーネントとインスタンスは、分析レポートを生成します。  
@@ -48,7 +48,7 @@ ms.locfileid: "48176111"
   
 6.  アップグレードの問題に関するレポートを生成します。  
   
- アップグレード アドバイザー分析ウィザードの詳細については、[方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)を参照してください。  
+ アップグレード アドバイザー分析ウィザードの詳細については、次を参照してください。[方法。アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)します。  
   
  各ステップに必要な特定の情報を参照してください。[アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)します。  
   
@@ -69,14 +69,14 @@ ms.locfileid: "48176111"
   
  レポート ビューアーを使用するための操作手順については、次のトピックを参照してください。  
   
--   [アップグレード アドバイザーのレポートを表示する方法](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [方法: アップグレード アドバイザー レポートを表示します。](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [レポートに表示する問題を選択する方法](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [方法: レポートのフィルター](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [レポートをエクスポートする方法](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [方法: レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>参照  
- [方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [方法: アップグレード アドバイザー分析ウィザードを実行します。](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

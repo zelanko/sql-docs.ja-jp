@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249679"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
   **パーティションの管理ウィザード** を使用すると、パーティションの切り替えやスライディング ウィンドウ シナリオの実装によって、既存のパーティション テーブルを管理および変更することができます。 このウィザードによって、パーティションの管理が容易になり、テーブル内外へのデータの通常の移行が簡単になります。  
@@ -187,7 +187,7 @@ ms.locfileid: "52781004"
  **[スケジュールの種類]**  
  スケジュールの種類を選択します。  
   
- **Enabled**  
+ **有効**  
  スケジュールを有効または無効にします。  
   
 ### <a name="recurring-schedule-types-options"></a>定期スケジュールのオプション  

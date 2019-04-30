@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248827"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction インターフェイス
 **ADOStreamConstruction**インターフェイスは、ADO の構築に使用**Stream**から OLE DB オブジェクト**IStream** C/C++ アプリケーション内のオブジェクト。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 |||  
 |-|-|  
@@ -66,8 +66,8 @@ adoStrConstruct->put_Stream(pUnk);
   
  結果として得られる`adoStr`オブジェクトが、ADO を表すようになりました**Stream** OLE DB から構築されたオブジェクト**IStream**オブジェクト。  
   
-## <a name="requirements"></a>要件  
- **バージョン:** ADO 2.0 またはそれ以降のバージョン  
+## <a name="requirements"></a>必要条件  
+ **バージョン：** ADO 2.0 またはそれ以降のバージョン  
   
  **ライブラリ:** msado15.dll  
   

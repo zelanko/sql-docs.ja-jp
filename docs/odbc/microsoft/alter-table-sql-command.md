@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207011"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457627"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL コマンド
 プログラムによってテーブルの構造を変更します。  
@@ -70,7 +70,7 @@ ALTER TABLE TableName1
  ALTER [COLUMN] *FieldName1*  
  変更する既存のフィールドの名前を指定します。  
   
- *FieldType* [( *nFieldWidth* [、 *nPrecision*])  
+ *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
  新しいまたは変更されたフィールドのフィールドの型、フィールドの幅、およびフィールドの有効桁数 (小数点以下桁数の数) を指定します。  
   
  *FieldType*を示す、フィールドの 1 つの文字は、[データ型](../../odbc/microsoft/visual-foxpro-field-data-types.md)します。 一部のフィールド データ型を指定することを必要と*nFieldWidth*または*nPrecision*またはその両方です。  
@@ -85,7 +85,7 @@ ALTER TABLE TableName1
  確認*lExpression1*  
  フィールドの検証規則を指定します。 *lExpression1*論理式を評価する必要があり、ユーザー定義関数またはストアド プロシージャを指定できます。 空のレコードを追加すると、されるたびに検証規則がチェックされます。 検証規則が追加されたレコードのフィールドが空白の値を許可しない場合は、エラーが生成されます。  
   
- エラー *cMessageText1*  
+ ERROR *cMessageText1*  
  フィールドの検証規則がエラーを生成するときにエラー メッセージが表示されますを指定します。  
   
  既定の*eExpression1*  
@@ -122,13 +122,13 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ALTER [COLUMN] *FieldName2*  
  変更する既存のフィールドの名前を指定します。  
   
- 既定値に設定*eExpression2*  
+ SET DEFAULT *eExpression2*  
  既存のフィールドの新しい既定値を指定します。 データ型*eExpression2*フィールドのデータ型と同じである必要があります。  
   
- セット チェック*lExpression2*  
+ SET CHECK *lExpression2*  
  既存のフィールドに対して新しい検証規則を指定します。 *lExpression2*論理式を評価する必要があり、ユーザー定義関数またはストアド プロシージャがあります。  
   
- エラー *cMessageText2*  
+ ERROR *cMessageText2*  
  フィールドの検証規則がエラーを生成するときにエラー メッセージが表示されますを指定します。 参照または編集ウィンドウ内でデータが変更されたときにのみ、メッセージが表示されます。  
   
  DROP DEFAULT  
@@ -142,16 +142,16 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  インデックスのキーまたはトリガーの式では、フィールドを参照する場合、式のフィールドが削除されると無効になります。 この場合、フィールドが削除されますが、無効なインデックスのキーまたはトリガーの式は実行時にエラーを生成、エラーは生成されません。  
   
- セット チェック*lExpression3*  
+ SET CHECK *lExpression3*  
  テーブルの検証規則を指定します。 *lExpression3*論理式を評価する必要があり、ユーザー定義関数またはストアド プロシージャがあります。  
   
- エラー *cMessageText3*  
+ ERROR *cMessageText3*  
  テーブルの検証ルールがエラーを生成するときに、エラー メッセージが表示されますを指定します。 参照または編集ウィンドウ内でデータが変更されたときにのみ、メッセージが表示されます。  
   
  チェックを削除します。  
  テーブルの検証規則を削除します。  
   
- 追加のプライマリ キー *eExpression3*タグ*TagName2*  
+ ADD PRIMARY KEY *eExpression3*TAG *TagName2*  
  プライマリ インデックスをテーブルに追加します。 *eExpression3*プライマリ インデックスのキー式を指定し、 *TagName2*プライマリ インデックス タグの名前を指定します。 タグのインデックス名は、最大 10 個の文字を含めることができます。 場合タグ*TagName2*を省略すると、 *eExpression3* 1 つのフィールドは、プライマリ インデックス タグの同じ名前で指定されたフィールドとに*eExpression3*。  
   
  プライマリ キーを削除します  
@@ -163,7 +163,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  一意のタグをドロップ*TagName4*  
  候補のインデックスとそのインデックス タグを削除します。 テーブルには、複数の候補キーを持つことができますため、候補のインデックスのタグの名前を指定する必要があります。  
   
- 外部キーの追加 [ *eExpression5*] タグ*TagName4*  
+ ADD FOREIGN KEY [ *eExpression5*]TAG *TagName4*  
  テーブルには、外部 (プライマリ) のインデックスを追加します。 *eExpression5*外部インデックスのキー式を指定し、 *TagName4*外部インデックス タグの名前を指定します。 タグのインデックス名は、最大 10 個の文字を含めることができます。  
   
  参照*TableName2*[タグ*TagName5*]  

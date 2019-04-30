@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243799"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Analytics Platform System でワークロードの管理タスク
 Analytics Platform System でワークロードの管理タスク。
@@ -70,7 +70,7 @@ GO
   
 リソース クラスのサーバー ロールのメンバーであるログインがない場合、結果のテーブルが空になります。 ここでは、クエリ Ching という名前のログインを返す場合、Ching、要求を送信すると、要求を受け取ります既定のシステム リソース、リソース クラスのシステム リソースよりも小さい。 ログインが 1 つ以上のリソース クラスのメンバーである場合は、最大クラスは、優先順位をいます。  
   
-各リソース クラスのリソース割り当ての一覧は、[ワークロード管理](workload-management.md)を参照してください。  
+各リソース クラスのリソース割り当ての一覧は、次を参照してください。[ワークロード管理](workload-management.md)します。  
   
 ### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>手順 2:別のリソース クラスのメンバーシップを持つログインで要求を実行します。  
 いずれかの拡大または縮小のシステム リソースで要求を実行する 2 つの方法はあります。  
@@ -103,7 +103,7 @@ Ching は mediumrc のサーバー ロールのメンバーであるようにな
 ALTER SERVER ROLE mediumrc DROP MEMBER Ching;  
 ```  
   
-リソース クラス ロールのメンバーシップを変更する方法についての詳細については、[ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)を参照してください。  
+リソース クラス ロールのメンバーシップを変更する方法についての詳細については、次を参照してください。 [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)します。  
 
 ## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>ログインを要求の既定のシステム リソースに変更します。
 既定値へのログインを SQL Server PDW に割り当てられたシステム リソースの割り当てを変更する方法について説明します。 
@@ -125,7 +125,7 @@ ALTER SERVER ROLE MediumRC DROP MEMBER Matt;
 ## <a name="display-the-number-of-concurrency-slots-needed-for-a-waiting-request"></a>待ちの要求についての同時実行スロットの数に必要な表示
 同時実行スロットは、SQL Server PDW の実行を待機している要求で必要な数を把握する方法について説明します。  
   
-詳細については、[ワークロード管理](workload-management.md)を参照してください。  
+詳細については、次を参照してください。[ワークロード管理](workload-management.md)します。  
   
 要求は、実行されることがなく長時間待機している可能性があります。 要求が必要な同時実行スロットの数を確認要求をトラブルシューティングする方法の 1 つです。  次の例では、各待機中の要求で必要な同時実行スロットの数を示します。  
   

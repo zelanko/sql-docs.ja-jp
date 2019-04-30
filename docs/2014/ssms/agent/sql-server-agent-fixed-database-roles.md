@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245992"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server エージェントの固定データベース ロール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、次の **msdb** データベースの固定データベース ロールが用意されています。これらのロールを使用することで、管理者は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントへのアクセスをより細かく制御できます。 特権レベルの低いロールから順に、次に示します。  
@@ -56,7 +56,7 @@ ms.locfileid: "52773774"
 |プロパティの表示|いいえ|はい|[はい]|いいえ|  
 |実行/停止/開始|適用なし|はい|適用なし|適用なし|  
 |ジョブ履歴の表示|適用なし|はい|適用なし|適用なし|  
-|ジョブ履歴の削除|適用なし|いいえ<sup>4</sup>|適用なし|適用なし|  
+|ジョブ履歴の削除|適用なし|いいえ <sup>4</sup>|適用なし|適用なし|  
 |アタッチ/デタッチ|適用なし|適用なし|はい|適用なし|  
   
  <sup>1</sup>ジョブの所有権を変更することはできません。  
@@ -84,7 +84,7 @@ ms.locfileid: "52773774"
 |プロパティの編集|いいえ|可 (所有しているジョブのみ)|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
 |実行/停止/開始|適用なし|可 (所有しているジョブのみ)|いいえ|適用なし|適用なし|  
 |ジョブ履歴の表示|適用なし|はい|はい|適用なし|適用なし|  
-|ジョブ履歴の削除|適用なし|いいえ<sup>4</sup>|いいえ|適用なし|適用なし|  
+|ジョブ履歴の削除|適用なし|いいえ <sup>4</sup>|いいえ|適用なし|適用なし|  
 |アタッチ/デタッチ|適用なし|適用なし|適用なし|可 (所有しているスケジュールのみ)|適用なし|  
   
  <sup>1</sup>ジョブの所有権を変更することはできません。  

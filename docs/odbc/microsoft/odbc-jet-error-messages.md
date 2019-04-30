@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244615"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet エラー メッセージ
 データ ソースで発生するエラーの場合は、ODBC ドライバーは ODBC ファイルのライブラリによって返されたエラー メッセージを返します。 ODBC ドライバーまたはドライバー マネージャーで発生するエラー、SQLSTATE と関連付けられたエラー メッセージがテキストに基づくドライバーを返します。  

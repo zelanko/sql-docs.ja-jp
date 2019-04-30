@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.openlocfilehash: af6c2996877f4ab7d8a2305c4f6fe4b30a0127cc
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947656"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473734"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,19 +34,18 @@ ms.locfileid: "51947656"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|構成オプションの ID。|  
-|**name**|**nvarchar(60)**|構成オプションの名前。 可能な構成については、[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を参照してください。|  
+|**name**|**nvarchar(60)**|構成オプションの名前。 可能な構成については、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)します。|  
 |**value**|**sqlvariant**|プライマリ レプリカの場合は、この構成オプションの設定値です。|  
 |**value_for_secondary**|**sqlvariant**|セカンダリ レプリカの場合は、この構成オプションの設定値です。|  
 |**is_value_default**|**bit** |値のセットが既定値であるかどうかを指定します。|
-|**elevate_resumable**|nvarchar(60)|Db スコープのインデックス操作の再開可能なオプションの既定のセット| 
   
 ##  <a name="Permissions"></a> Permissions  
- ロール **public** のメンバーシップが必要です。  
+ロール **public** のメンバーシップが必要です。  
   
 ## <a name="remarks"></a>コメント  
- 値として NULL が返される**value_for_secondary**、これは、セカンダリがプライマリに設定されていることを意味します。  
+値として NULL が返される**value_for_secondary**、これは、セカンダリがプライマリに設定されていることを意味します。  
  
- データベース スコープ構成設定はデータベースで継承されます。 つまり、特定のデータベースが復元されたり、アタッチされたりしたとき、既存の構成設定が残ります。
+データベース スコープ構成設定はデータベースで継承されます。 つまり、特定のデータベースが復元されたり、アタッチされたりしたとき、既存の構成設定が残ります。
   
 ## <a name="see-also"></a>参照  
  [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

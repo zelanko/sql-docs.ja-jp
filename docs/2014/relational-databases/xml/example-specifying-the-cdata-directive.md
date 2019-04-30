@@ -1,5 +1,5 @@
 ---
-title: 例:CDATA ディレクティブの指定 |Microsoft Docs
+title: '例: CDATA ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287769"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>例:CDATA ディレクティブの指定
   **CDATA**ディレクティブが指定されている場合、含まれているデータはエンティティとしてエンコードされず、CDATA セクションに配置されます。 **CDATA** 属性は、無名でなければなりません。  
@@ -38,7 +38,7 @@ WHERE   ProductModelID=19
 FOR XML EXPLICIT  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  

@@ -8,11 +8,11 @@ ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250186"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>タスク 3:Excel ファイルからドメイン値をインポートする
   ここでは、Excel ファイルのワークシートから **State** ドメインの値をインポートします。  

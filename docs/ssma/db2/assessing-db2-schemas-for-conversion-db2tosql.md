@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608947"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453423"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>変換 (DB2ToSQL) のための DB2 スキーマの評価
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、複雑な移行されるとどれ時間だけを決定する必要があります、移行にかかる時間します。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  
@@ -35,7 +35,7 @@ SSMA が選択した DB2 データベース オブジェクトに変換します
   
     SSMA は、ウィンドウの下部にあるステータス バーに進行状況が表示されます。 [出力] ペインが表示されている場合は、出力ウィンドウ内のメッセージも表示されます。  
   
-    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2: 評価レポート ウィンドウが表示されます。  
+    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2:評価レポート ウィンドウが表示されます。  
   
 ## <a name="using-assessment-reports"></a>評価レポートを使用します。  
 評価レポート ウィンドウには、3 つのペインが含まれています。  
@@ -73,7 +73,7 @@ SSMA が選択した DB2 データベース オブジェクトに変換します
   
     -   SSMA で DB2 構文を更新します。 プロシージャ、関数、トリガー、関数をパッケージおよびパッケージ化されたプロシージャの構文を更新することができます。 構文を更新するには、DB2 メタデータ エクスプ ローラー ペインで、オブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを変更します。 項目から移動するときに、更新された構文を保存する促されます。 オブジェクトの報告されたエラーを表示することができます、**レポート**タブ。  
   
-    -   Db2 では、削除または問題のあるコードを変更するには、DB2 オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、[DB2 データベースに接続する&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)を参照してください。  
+    -   Db2 では、削除または問題のあるコードを変更するには、DB2 オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [DB2 データベースに接続する&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)します。  
   
     -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーと DB2 メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 からデータを移行します。  
   

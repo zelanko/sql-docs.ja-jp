@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278540"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>[最適化] ([マップ ビューポートのプロパティ] ダイアログ ボックス)
   **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[最適化]** を選択すると、レポート内のマップを表示するための解像度を制御できます。  

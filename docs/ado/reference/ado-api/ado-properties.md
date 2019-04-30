@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248869"
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
 
@@ -54,7 +54,7 @@ ms.locfileid: "55044677"
 |[[方向]](../../../ado/reference/ado-api/direction-property.md)|示すかどうか、**パラメーター**入力パラメーター、出力パラメーター、またはその両方を表すパラメーターがストアド プロシージャからの戻り値の場合、または。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|現在のレコードの編集状態を示します。|  
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|現在の位置がストリームの末尾にあるかどうかを示します。|  
-|[Assert](../../../ado/reference/ado-api/filter-property.md)|内のデータのフィルターを示します、 **Recordset**します。|  
+|[[フィルター]](../../../ado/reference/ado-api/filter-property.md)|内のデータのフィルターを示します、 **Recordset**します。|  
 |[HelpContext、HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|ヘルプ ファイルと関連付けられているトピックを示します、**エラー**オブジェクト。<br /><br /> **ヘルプ コンテキスト Id**として、コンテキスト ID を返します、**長い**トピックでは、ヘルプ ファイル内の値。<br /><br /> **HelpFile**を返します、**文字列**ヘルプ ファイルの完全に解決されたパスに評価される値。|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|有効なインデックスを現在の名前を示します、 **Recordset**オブジェクト。|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|分離のレベルを示します、**接続**オブジェクト。|  

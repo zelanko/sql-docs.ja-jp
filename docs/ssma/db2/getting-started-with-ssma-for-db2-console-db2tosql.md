@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668301"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453317"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Ssma for DB2 コンソール (DB2ToSQL) 作業の開始
 このセクションを起動し、DB2 のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  
@@ -32,7 +32,7 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 コンソールは、Windows システムに正常に起動した後は、作業を次の手順を使用できます。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、[スクリプト ファイルの作成&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-script-files-db2tosql.md)を参照してください。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、次を参照してください。[スクリプト ファイルの作成&#40;DB2ToSQL&#41; ](../../ssma/db2/creating-script-files-db2tosql.md)します。  
   
 2.  [変数値ファイルを作成する&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

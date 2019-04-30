@@ -4,18 +4,18 @@ description: この記事では、Linux 上の SQL Server 2017 の新機能に�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/21/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
-ms.translationtype: MT
+ms.openlocfilehash: 6ec87bdb2a1ca458893b65bc47e18a8f4664acb1
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160530"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456732"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Linux 上の SQL Server の新機能については
 
@@ -23,10 +23,10 @@ ms.locfileid: "53160530"
 
 この記事では、Linux で実行されている SQL Server 2017 の主要な機能と使用可能なサービスについて説明します。
 
-SQL Server 2019 プレビューがリリースされました。 この記事では、SQL Server 2019 プレビュー リリースは含まれません。 SQL Server 2019 プレビューについては、[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)を参照してください。
+SQL Server 2019 プレビューがリリースされました。 この記事では、SQL Server 2019 プレビュー リリースは含まれません。 SQL Server 2019 プレビューについては、次を参照してください。[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)します。
 
 > [!NOTE]
-> この記事ではこれらの機能だけでなく累積的更新プログラムは、GA リリース後一定の間隔でリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、[ https://aka.ms/sql2017cu](https://aka.ms/sql2017cu)を参照してください。 パッケージのダウンロードと既知の問題は、、[リリース ノート](sql-server-linux-release-notes.md)を参照してください。
+> この記事ではこれらの機能だけでなく累積的更新プログラムは、GA リリース後一定の間隔でリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、次を参照してください。 [ https://aka.ms/sql2017cu](https://aka.ms/sql2017cu)します。 パッケージのダウンロードと既知の問題は、次を参照してください。、[リリース ノート](sql-server-linux-release-notes.md)します。
 
 ## <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
 
@@ -48,7 +48,7 @@ SQL Server 2019 プレビューがリリースされました。 この記事で
 
 ## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
 
-- Linux で SSIS パッケージを実行する権限です。 詳細については、[ssis conf Linux で SQL Server Integration Services を構成する](sql-server-linux-configure-ssis.md)を参照してください。
+- Linux で SSIS パッケージを実行する権限です。 詳細については、次を参照してください。 [ssis conf Linux で SQL Server Integration Services を構成する](sql-server-linux-configure-ssis.md)します。
 
 ## <a name="other-improvements"></a>その他の改善
 
@@ -68,9 +68,9 @@ Linux 上の SQL Server をインストールするには、次のチュート�
 - [Docker で実行します。](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
-SQL Server 2017 で導入されたその他の改善を表示するには、[SQL Server 2017 の新](../sql-server/what-s-new-in-sql-server-2017.md)を参照してください。
+SQL Server 2017 で導入されたその他の改善を表示するには、次を参照してください。 [SQL Server 2017 の新](../sql-server/what-s-new-in-sql-server-2017.md)します。
 
 > [!TIP]
-> よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)を参照してください。
+> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 57dde428be8a70b1476de390dbbd22549434c2ee
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670121"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453508"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスは、移行するためのツールからデータベース[!INCLUDE[msCoName](../../includes/msconame_md.md)]2010年による 97 のバージョンにアクセス[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows と Linux (プレビュー) で 2017/ [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL DB します。 変換する Access データベース オブジェクトのアクセス用の SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL データベース オブジェクトにこれらのオブジェクトの読み込み[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL へのアクセスからデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL。  

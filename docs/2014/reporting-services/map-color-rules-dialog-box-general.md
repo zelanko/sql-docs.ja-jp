@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963698"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461864"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>[全般] ([マップの色のルールのプロパティ] ダイアログ ボックス)
   **[マップの色のルールのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、このレイヤー上のマップ要素の色オプションを定義できます。 マップ要素には、多角形、線、およびポイントがあります。 データセット フィールドまたは空間データ ソース フィールドからの空間データと分析データに基づいてマップ要素間のリレーションシップを作成している場合に、色ルールを適用できます。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819500"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453448"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>メニュー コマンドやその他のショートカット キー (AccessToSQL)
 次のセクションでは、メニュー コマンドや Access アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  
@@ -73,7 +73,7 @@ ms.locfileid: "47819500"
 |現在のレイアウトを追加します。|ALT + V + L + A|  
 |既定のレイアウトを選択します。|ALT + V + L + D または CTRL + ALT + 1|  
 |エクスプ ローラー レイアウトすることがなく選択します。|Alt + V + L + W または CTRL + ALT + 2|  
-|レイアウトの管理 ダイアログ ボックスを表示します。|Alt + V + L、M|  
+|レイアウトの管理 ダイアログ ボックスを表示します。|Alt + V + L + M|  
   
 ## <a name="tools-menu-commands"></a>ツールのメニュー コマンド  
 使用されているキーボード ショートカットは alt キーを押しながら t です。 [ツール] メニューにアクセスするには次の表は、キーボード ショートカット [ツール] メニューのメニュー項目にアクセスするために使用します。  

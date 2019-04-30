@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249953"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>タスク 4:SQL Server Data Tools を使用して SSIS プロジェクトを作成する
   このタスクでを使用して SSIS プロジェクトを作成する**SQL Server Data Tools**クレンジングおよび照合仕入先データを自動化します。  

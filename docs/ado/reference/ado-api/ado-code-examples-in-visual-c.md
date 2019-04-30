@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f03d615bf17cf4086482d02dfca001230276b1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249018"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ での ADO のコード例
 次のコード例を使用して、ADO メソッド、プロパティ、および Microsoft Visual C で記述するときにイベントを使用する方法について説明します。  
@@ -76,7 +76,7 @@ ms.locfileid: "47613290"
   
 -   [UpdateBatch および CancelBatch メソッドの例](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 -   [AbsolutePage、PageCount、PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   
@@ -149,4 +149,4 @@ ms.locfileid: "47613290"
 ## <a name="see-also"></a>参照  
  [Visual Basic での ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO のコード例の VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [付録 D: ADO の使用例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [付録 d:ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

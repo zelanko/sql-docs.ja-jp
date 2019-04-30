@@ -5,16 +5,16 @@ description: インストールして、SQL Server 2019 ビッグ データ ク�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c35971c0c0acf69065734cdcdbe670710ef5e4
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 0d260ae91a5890938949525f34dfae20a81a8fea
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582386"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473505"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>SQL Server のビッグ データ クラスターを管理する mssqlctl をインストールします。
 
@@ -25,7 +25,7 @@ ms.locfileid: "59582386"
 **mssqlctl**は Python で記述された、により、クラスター管理者のブートス トラップし、REST Api を使用してビッグ データ クラスターを管理するコマンド ライン ユーティリティです。 必要な最小の Python バージョン v3.5 です。 必要がある`pip`をダウンロードしてインストールに使用される**mssqlctl**ツール。 以下の手順では、Windows および Ubuntu の例を紹介します。 他のプラットフォームで Python をインストールするため、次を参照してください。、 [Python のドキュメント](https://wiki.python.org/moin/BeginnersGuide/Download)します。
 
 > [!IMPORTANT]
-> データをバックアップし、以前のクラスターを削除する必要がありますビッグ データ クラスターの新しいバージョンをインストールする場合*する前に*アップグレード**mssqlctl**と新しいリリースをインストールします。 詳細については、次を参照してください。[新しいリリースにアップグレードする](deployment-guidance.md#upgrade)します。
+> データをバックアップし、以前のクラスターを削除する必要がありますビッグ データ クラスターの新しいバージョンをインストールする場合*する前に*アップグレード**mssqlctl**と新しいリリースをインストールします。 詳細については、次を参照してください。[新しいリリースにアップグレードする](deployment-upgrade.md)します。
 
 ## <a id="windows"></a> Windows mssqlctl インストール
 
@@ -38,13 +38,13 @@ ms.locfileid: "59582386"
 
 1. 以前のリリースがあれば**mssqlctl**をインストールすることが重要アンインストール**mssqlctl**最初、最新バージョンをインストールする前にします。
 
-   CTP 2.2 またはそれ以下のバージョンに対応する unisntalling mssqlctl をする場合は次のコマンドを実行します。
+   アンインストールする場合は**mssqlctl** CTP 2.2 またはそれ以下のバージョンに対応するを実行します。
 
    ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   CTP2.3 または高い実行 (置換`ctp-2.3`バージョンをアンインストールする mssqlctl のコマンドで)。
+   CTP 2.3 以降、次のコマンドを実行します。 置換`ctp-2.3`のバージョンでのコマンドで**mssqlctl**アンインストールします。
 
    ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
@@ -53,7 +53,7 @@ ms.locfileid: "59582386"
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl のインストール
@@ -76,22 +76,22 @@ Linux は、Python 3.5 をインストールしてから pip をアップグレ�
 
 1. 以前のリリースがあれば**mssqlctl**をインストールすることが重要アンインストール**mssqlctl**最初、最新バージョンをインストールする前にします。
 
-   CTP 2.2 またはそれ以下のバージョンに対応する unisntalling mssqlctl をする場合は次のコマンドを実行します。
+   アンインストールする場合は**mssqlctl** CTP 2.2 またはそれ以下のバージョンに対応するを実行します。
 
-   ```bash
+   ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   CTP2.3 または高い実行 (置換`ctp-2.3`バージョンをアンインストールする mssqlctl のコマンドで)。
+   CTP 2.3 以降、次のコマンドを実行します。 置換`ctp-2.3`のバージョンでのコマンドで**mssqlctl**アンインストールします。
 
-   ```bash
+   ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

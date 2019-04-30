@@ -1,20 +1,20 @@
 ---
 title: mssqlctl クラスター デバッグ リファレンス
 titleSuffix: SQL Server big data clusters
-description: Mssqlctl クラスター コマンドに関する参照記事です。
+description: Mssqlctl クラスター デバッグ コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b12b0421cf32a36cfd6d681bc90ad9ca7c3f9209
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860553"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473287"
 ---
 # <a name="mssqlctl-cluster-debug"></a>mssqlctl クラスターのデバッグ
 
@@ -22,54 +22,69 @@ ms.locfileid: "58860553"
 
 次の記事への参照を提供する、**クラスター デバッグ**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
-## <a id="commands"></a> コマンド
-
-|||
-|---|---|
-| [copy-logs](#copy-logs) | ログをコピーします。 |
-| [ダンプ](#dump) | トリガー ログのダンプします。 |
-
-## <a id="copy-logs"></a> クラスターのデバッグのコピー ログ
-
-ログをコピーします。
-
+## <a name="commands"></a>コマンド
+|     |     |
+| --- | --- |
+[mssqlctl cluster debug copy-logs](#mssqlctl-cluster-debug-copy-logs) | ログをコピーします。
+[mssqlctl クラスター デバッグ ダンプ](#mssqlctl-cluster-debug-dump) | トリガー ログのダンプします。
+## <a name="mssqlctl-cluster-debug-copy-logs"></a>mssqlctl cluster debug copy-logs
+クラスターから、デバッグ ログをコピーします。
+```bash
+mssqlctl cluster debug copy-logs --namespace -n 
+                                 [--container -c]  
+                                 [--target-folder -d]  
+                                 [--pod -p]  
+                                 [--timeout -t]
 ```
-mssqlctl cluster debug copy-logs
-   --namespace
-   [--container]
-   [--pod]
-   [--target-folder]
-   [--timeout]
+### <a name="required-parameters"></a>必要なパラメーター
+#### `--namespace -n`
+クラスター名 kubernetes 名前空間に使用をします。
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--container -c`
+ログのコピーのような名前のコンテナーでは、省略可能、既定ではコピーのすべてのコンテナーのログ。 複数回を指定できません。 複数回指定すると場合、前回使用します。
+#### `--target-folder -d`
+ログをコピーする対象のフォルダー パス。 省略可能で、既定では、ローカル フォルダーのまま、結果を作成します。  複数回を指定できません。 複数回指定すると場合、前回使用します。
+#### `--pod -p`
+類似した名前のポッドのログをコピーします。 すべてのポッドの既定のコピー ログが省略可能です。 複数回を指定できません。 複数回指定すると場合、前回使用します。
+#### `--timeout -t`
+コマンドが完了するまで待機する秒数。 既定値は 0 は無制限を
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
+## <a name="mssqlctl-cluster-debug-dump"></a>mssqlctl cluster debug dump
+ログのダンプをトリガーし、コンテナーからコピーします。
+```bash
+mssqlctl cluster debug dump --namespace -n 
+                            --container -c  
+                            [--target-folder -d]
 ```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--namespace -n** | クラスター名 kubernetes 名前空間に使用をします。 必須。 |
-| **--container -c** | ログのコピーのような名前のコンテナーでは、省略可能、既定ではコピーのすべてのコンテナーのログ。 複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。 |
-| **--pod -p** | 類似した名前のポッドのログをコピーします。 すべてのポッドの既定のコピー ログが省略可能です。 複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。 |
-| **--target-folder -d** | ログをコピーする対象のフォルダー パス。 省略可能で、既定では、ローカル フォルダーのまま、結果を作成します。  複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。 |
-| **--timeout-t** | コマンドが完了するまで待機する秒数。 既定値は、0 では制限されません。 |
-
-## <a id="dump"></a> クラスター デバッグ ダンプ
-
-トリガー ログのダンプします。
-
-```
-mssqlctl cluster debug dump
-   [--container]
-   [--namespace]
-   --target-folder
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--container -c** | ログのコピーのような名前のコンテナーでは、省略可能、既定ではコピーのすべてのコンテナーのログ。 複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。  使用できる値: mssql コント ローラー。 |
-| **--namespace -n** | クラスター名 kubernetes 名前空間に使用をします。 必須。 |
-| **--target-folder -d** | ログをコピーする対象のフォルダー パス。 省略可能で、既定では、ローカル フォルダーのまま、結果を作成します。  複数回を指定できません。 複数回指定すると場合は、最後 1 つが使用されます。  既定値:`./output/dump`します。 必須。 |
+### <a name="required-parameters"></a>必要なパラメーター
+#### `--namespace -n`
+クラスター名 kubernetes 名前空間に使用をします。
+#### `--container -c`
+ログのコピーのような名前のコンテナーでは、省略可能、既定ではコピーのすべてのコンテナーのログ。 複数回を指定できません。 複数回指定すると場合、前回使用します。
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--target-folder -d`
+ログをコピーする対象のフォルダー パス。 省略可能で、既定では、ローカル フォルダーのまま、結果を作成します。  複数回を指定できません。 複数回指定すると場合、前回使用します。 `./output/dump`
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
 
 ## <a name="next-steps"></a>次のステップ
 

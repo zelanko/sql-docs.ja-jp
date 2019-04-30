@@ -1,5 +1,5 @@
 ---
-title: CREATE SUBCUBE ステートメント (MDX) |Microsoft ドキュメント
+title: CREATE SUBCUBE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248313"
 ---
-# <a name="mdx-data-definition---create-subcube"></a>MDX データ定義のサブキューブの作成
+# <a name="mdx-data-definition---create-subcube"></a>MDX データ操作 - CREATE SUBCUBE
 
 
-  指定されたキューブまたはサブキューブのキューブ空間を指定されたサブキューブに再定義します。 このステートメントを実行すると、後続の操作で使用する見かけのキューブ空間が変わります。  
+  指定したキューブまたはサブキューブを指定されたサブキューブのキューブ空間を再定義します。 このステートメントは、後続の操作の見かけのキューブ空間を変更します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,32 +31,32 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
 ## <a name="arguments"></a>引数  
  *Cube_Name*  
- 制限するキューブまたはパースペクティブの名前を指定する有効な文字列式です。この名前がサブキューブの名前になります。  
+ サブキューブの名前になりますキューブまたはパースペクティブの名前を提供する有効な文字列式を制限されているです。  
   
  *Select_Statement*  
  WITH 句、NON EMPTY 句、または HAVING 句が含まれておらず、ディメンションまたはセルのプロパティを要求しない有効な多次元式 (MDX) の SELECT 式です。  
   
- 参照してください[SELECT ステートメント&#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md)構文の詳細については、Select ステートメントを**NON VISUAL**句。  
+ 参照してください[SELECT ステートメント&#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) Select ステートメントの構文の詳細については、 **NON VISUAL**句。  
   
 ## <a name="remarks"></a>コメント  
- 既定のメンバーをサブキューブの定義から除外すると、それに応じて座標も変わります。 集計が可能な属性の場合、既定のメンバーは [All] のメンバーに移動します。 集計が不可能な属性の場合、既定のメンバーはサブキューブ内に存在するメンバーに移動します。 サブキューブと既定のメンバーの組み合わせの例を以下に示します。  
+ サブキューブの定義では、既定のメンバーが除外されているとき、座標それに応じて変更されます。 集計可能な属性の場合は、既定のメンバーは、[All] メンバーに移動されます。 集計が不可能な属性の場合、既定のメンバーはサブキューブ内に存在するメンバーに移動します。 次の表には、例サブキューブと既定のメンバーの組み合わせが含まれています。  
   
 |元の既定のメンバー|集計可能/不可能|サブセレクト|変更後の既定のメンバー|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|はい|{Time.Year.2003}|変更なし|  
 |Time.Year です。[1997]|はい|{Time.Year.2003}|Time.Year.All|  
 |Time.Year です。[1997]|いいえ|{Time.Year.2003}|Time.Year です。[2003]|  
-|Time.Year です。[1997]|はい|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year です。[1997]|いいえ|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] または<br /><br /> Time.Year.[2004]|  
+|Time.Year です。[1997]|はい|{Time.Year.2003、Time.Year.2004}|Time.Year.All|  
+|Time.Year です。[1997]|いいえ|{Time.Year.2003、Time.Year.2004}|いずれかの Time.Year です。[2003] または<br /><br /> Time.Year.[2004]|  
   
  [All] のメンバーは、常にサブキューブ内に存在します。  
   
- サブキューブのコンテキストで作成されたセッション オブジェクトは、サブキューブが削除された時点で削除されます。  
+ サブキューブのコンテキストで作成されたセッション オブジェクトは、サブキューブが削除されるときに削除されます。  
   
- サブキューブの詳細については、次を参照してください。 [MDX でのサブキューブの作成&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)です。  
+ サブキューブの詳細については、次を参照してください。 [MDX でのサブキューブの作成&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)します。  
   
 ## <a name="example"></a>例  
- 次の例では、見かけのキューブ空間を Canada に存在するメンバーに制限したサブキューブを作成しています。 次を使用して、**メンバー**すべてのメンバーを返す、国のレベルが、Geography ユーザー定義階層の Canada という国のみを返す関数。  
+ 次の例では、カナダの国または地域に存在するメンバーに見かけのキューブ空間を制限したサブキューブを作成します。 次を使用して、**メンバー**を国のすべてのメンバーの Geography ユーザー定義階層の Canada という国のみを返すのレベルを返す関数。  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -68,7 +68,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
 ```  
   
- 次の例では、サブキューブを作成します。このサブキューブでは、見かけのキューブ空間を制限して、Products.Category に存在する {Accessories, Clothing} メンバーおよび Resellers.[Business Type] に存在する {[Value Added Reseller], [Warehouse]} に限定します。  
+ 次の例は、products.category {Accessories, Clothing} メンバーに見かけのキューブ空間を制限したサブキューブを作成し、{[Value Added Reseller]、[Warehouse]} 再販業者に。[Business Type] です。  
   
  `CREATE SUBCUBE [Adventure Works] AS`  
   
@@ -88,7 +88,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  `where [Measures].[Reseller Sales Amount]`  
   
- 結果は次のようになります。  
+ 次の結果が得られます。  
   
 |||||  
 |-|-|-|-|  
@@ -97,7 +97,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 |Value Added Reseller|$767,388.52|$175,002.81|$592,385.71|  
 |Warehouse|$1,263,690.86|$331,169.64|$932,521.23|  
   
- NON VISUAL 句を使用してサブキューブを削除し、再作成すると、Products.Category および Resellers.[Business Type] に存在するすべてのメンバーについて、サブキューブに表示されているかどうかに関係なく、それらの実際の合計が維持されます。  
+ 削除して、NON VISUAL 句を使用してサブキューブを再作成には、Products.Category および Resellers 内のすべてのメンバーの実際の合計を維持するサブキューブを作成します。[Business Type]、表示されるかどうか、またはサブキューブではなく。  
   
  `CREATE SUBCUBE [Adventure Works] AS`  
   
@@ -107,7 +107,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  `from [Adventure Works])`  
   
- 前の例と同じ MDX クエリを実行します。  
+ 前述のと同じ MDX クエリを発行するには。  
   
  `select [Category].members on 0,`  
   
@@ -117,7 +117,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  `where [Measures].[Reseller Sales Amount]`  
   
- 次のように、前の例とは異なる結果になります。  
+ 次の異なる結果が得られます。  
   
 |||||  
 |-|-|-|-|  
@@ -129,9 +129,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] および [All Resellers] の列と行それぞれに、表示されているメンバーだけでなく、すべてのメンバーの合計が含まれます。  
   
 ## <a name="see-also"></a>参照  
- [MDX の主な概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX の主な概念 (Analysis Services)](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX スクリプト ステートメント&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
+ [SELECT ステートメント (MDX)](../mdx/mdx-data-manipulation-select.md)  
   
   

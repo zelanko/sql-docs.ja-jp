@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c16f76e086dfc78ffed967ef33300a09630a798
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616600"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63464969"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize プロパティの例 (VC++)
 この例では、 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)します。 コードが FirstName 列のサイズを再定義、**従業員**のテーブル、 *Northwind*データベース。 FirstName の値に変更し、[フィールド](../../../ado/reference/ado-api/field-object.md)の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブルが表示されます。 既定では、FirstName フィールドが空白で埋められます再定義した後に注意してください、 **DefinedSize**プロパティ。  

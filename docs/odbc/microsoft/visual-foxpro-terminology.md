@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e8aeb7db6f844b5182165146905f6cc9de928726
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287380"
 ---
 # <a name="visual-foxpro-terminology"></a>Visual FoxPro 用語集
 **データベース (database)**  
@@ -34,7 +34,7 @@ ms.locfileid: "47800630"
  .Dbf ファイルが作成された FoxPro バージョン 2.x は、無料テーブル Visual FoxPro テーブルに変換して Visual FoxPro データベースに追加しない限り、します。 コントラスト**データベース テーブル**します。  
   
  **準備可能な SQL ステートメント**  
- 既に処理されていない SQL ステートメント、 **SQLPrepare**関数。 Visual FoxPro ODBC ドライバーでは、この関数の詳細については、[SQLPrepare (Visual FoxPro ODBC ドライバー)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)を参照してください。  
+ 既に処理されていない SQL ステートメント、 **SQLPrepare**関数。 Visual FoxPro ODBC ドライバーでは、この関数の詳細については、次を参照してください。 [SQLPrepare (Visual FoxPro ODBC ドライバー)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)します。  
   
  **テーブル**  
  Visual FoxPro、レコードがテーブルに格納されます。 テーブルの各行は、レコードを表し、テーブルの列は、レコードのフィールドを表します。 各 Visual FoxPro テーブルは .dbf 拡張子を持つ独自のファイルに格納されます。 Visual FoxPro テーブルは、データベースを関連付けることができます。  

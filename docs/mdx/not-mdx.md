@@ -1,5 +1,5 @@
 ---
-title: されません (MDX) |Microsoft ドキュメント
+title: しない (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b70068562ff24e8a1619b85fe091ab3e17da173
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278502"
 ---
 # <a name="not-mdx"></a>NOT (MDX)
 
@@ -30,13 +30,13 @@ NOT Expression1
   
 #### <a name="parameters"></a>パラメーター  
  *Expression1*  
- 数値を返す有効な多次元式 (MDX) 式です。  
+ 数値の値を返す有効な多次元式 (MDX) 式。  
   
 ## <a name="return-value"></a>戻り値  
- ブール値を返す**false**に引数が評価された場合**true**、それ以外の**true**です。  
+ ブール値を返す**false**に引数が評価された場合**true**、それ以外の**true**します。  
   
 ## <a name="remarks"></a>コメント  
- **いない**演算子はブール値として式を処理 (つまり、0 として**false**、それ以外の**true**) 論理否定演算を実行する前にします。 次の表に示す方法、**いない**演算子が論理否定演算を実行します。  
+ **いない**演算子はブール値として式を処理 (つまり、0 として**false**、それ以外の**true**) 論理否定演算を実行します。 次の表は方法、**いない**演算子が論理否定演算を実行します。  
   
 |*Expression1*|戻り値|  
 |-------------------|------------------|  

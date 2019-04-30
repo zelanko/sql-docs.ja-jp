@@ -4,18 +4,18 @@ description: この記事には、リリース ノートとサポートされる
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c3ee750afe0af5971f571a2a0352397ed8c4f40
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
-ms.translationtype: MT
+ms.openlocfilehash: 56cb3c4fc617e4b158b974c82bec87401c01fca5
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566571"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455147"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux 上の SQL Server 2019 preview リリース ノート
 
@@ -24,7 +24,7 @@ ms.locfileid: "58566571"
 次のリリース ノートは、Linux で実行されている SQL Server 2019 プレビューに適用されます。 この記事では、各リリースについてのセクションに分割されます。 各リリースでは、CU 変更と、Linux のパッケージのダウンロードへのリンクを記述するサポートの記事にリンクがあります。
 
 > [!TIP]
-> SQL Server 2019 Linux の新機能については、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)を参照してください。
+> SQL Server 2019 Linux の新機能については、次を参照してください。[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)します。
 
 ## <a name="supported-platforms"></a>サポートされているプラットフォーム
 
@@ -36,11 +36,11 @@ ms.locfileid: "58566571"
 | Docker エンジン 1.8 + では、Windows、Mac、または Linux | なし | [インストール ガイド](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> 詳細については、確認、[システム要件](sql-server-linux-setup.md#system)SQL Server on Linux の。 SQL Server 2017 の最新のサポート ポリシーで、、 [for Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)を参照してください。
+> 詳細については、確認、[システム要件](sql-server-linux-setup.md#system)SQL Server on Linux の。 SQL Server 2017 の最新のサポート ポリシーで、次を参照してください。、 [for Microsoft SQL Server のテクニカル サポート ポリシー](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)します。
 
 ## <a name="tools"></a>ツール
 
-SQL Server を対象とするほとんどの既存クライアント ツールは、Linux で実行されている SQL Server を対象にシームレスにできます。 いくつかのツールは、Linux で機能する特定のバージョン要件があります。 SQL Server ツールの一覧については、[SQL Server の SQL ツールとユーティリティ](../tools/overview-sql-tools.md)を参照してください。
+SQL Server を対象とするほとんどの既存クライアント ツールは、Linux で実行されている SQL Server を対象にシームレスにできます。 いくつかのツールは、Linux で機能する特定のバージョン要件があります。 SQL Server ツールの一覧については、次を参照してください。 [SQL Server の SQL ツールとユーティリティ](../tools/overview-sql-tools.md)します。
 
 ## <a name="release-history"></a>リリース履歴
 
@@ -56,7 +56,7 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 ## <a id="cuinstall"></a> 更新プログラムをインストールする方法
 
-プレビューのリポジトリを構成している場合 (**mssql-サーバー-プレビュー**)、新規インストールを実行すると、最新の SQL Server CTP パッケージが表示されます。 Docker コンテナー イメージを必要とする場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](https://hub.docker.com/r/microsoft/mssql-server/)します。 リポジトリの構成の詳細については、[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)を参照してください。
+プレビューのリポジトリを構成している場合 (**mssql-サーバー-プレビュー**)、新規インストールを実行すると、最新の SQL Server CTP パッケージが表示されます。 Docker コンテナー イメージを必要とする場合の公式イメージを参照してください[Microsoft SQL Server on Linux 上の Docker エンジン](https://hub.docker.com/r/microsoft/mssql-server/)します。 リポジトリの構成の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
 
 SQL Server の既存のパッケージを更新する場合は、最新の CU を取得するには、各パッケージの適切な更新プログラムのコマンドを実行します。 各パッケージの特定の更新手順については、次のインストール ガイドを参照してください。
 
@@ -68,7 +68,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CTP24"></a> CTP 2.4 (Mar 2019)
 
-次のセクションでは、パッケージの場所を提供し、CTP 2.4 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)を参照してください。
+次のセクションでは、パッケージの場所を提供し、CTP 2.4 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -88,7 +88,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CTP23"></a> CTP 2.3 (Feb 2019)
 
-次のセクションでは、パッケージの場所を提供し、CTP 2.3 に関する既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)を参照してください。
+次のセクションでは、パッケージの場所を提供し、CTP 2.3 に関する既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -108,7 +108,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CTP22"></a> CTP 2.2 (12/2018)
 
-次のセクションでは、パッケージの場所を提供し、CTP 2.2 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)を参照してください。
+次のセクションでは、パッケージの場所を提供し、CTP 2.2 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -128,7 +128,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CTP21"></a> CTP 2.1 (2018 の年 11 月)
 
-次のセクションでは、パッケージの場所を提供し、CTP 2.1 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)を参照してください。
+次のセクションでは、パッケージの場所を提供し、CTP 2.1 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -148,7 +148,7 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 
 ## <a id="CTP20"></a> CTP 2.0 (2018年 9 月)
 
-次のセクションでは、パッケージの場所を提供し、CTP 2.0 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)を参照してください。
+次のセクションでは、パッケージの場所を提供し、CTP 2.0 の既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -177,4 +177,4 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 - [実行と接続 - クラウド](quickstart-install-connect-clouds.md)
 
-よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)を参照してください。
+よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。

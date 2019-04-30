@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248278"
 ---
 # <a name="executing-batches"></a>バッチの実行
 アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずおください。 これは、アプリケーション呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションは、行の数を生成して、結果セットを生成するステートメントは明示的なバッチおよび行の数と結果の可用性に関する情報を返しますの設定で後者の 2 つのオプションの中に、プロシージャでサポートされてがパラメーター化するかどうかを返します実行します。  
@@ -38,7 +38,7 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- バッチの結果を生成するときにステートメントが実行される、1 つを返しますまたは詳細行の数または結果を設定します。 これらを取得する方法については、[複数結果](../../../odbc/reference/develop-app/multiple-results.md)を参照してください。  
+ バッチの結果を生成するときにステートメントが実行される、1 つを返しますまたは詳細行の数または結果を設定します。 これらを取得する方法については、次を参照してください。[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
   
  ステートメントのバッチには、パラメーター マーカーが含まれている場合は、その他のステートメントでは、パラメーターの順序を増やすことでこれら番号が付けられます。 次のステートメントのバッチが 1 ~ 21 です。 番号付きのパラメーターを持ちなど最初にある**挿入**ステートメントは、番号付き 1 ~ 5 と最後の**挿入**ステートメントは番号付きの 18 ~ 21 です。  
   
@@ -51,4 +51,4 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);  
 ```  
   
- パラメーターの詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述を参照してください。
+ パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述します。

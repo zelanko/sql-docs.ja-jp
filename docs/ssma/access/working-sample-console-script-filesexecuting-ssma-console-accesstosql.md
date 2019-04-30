@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407849"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453575"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>サンプルのコンソール スクリプト FilesExecuting (AccessToSQL) SSMA コンソールの操作
 いくつかのサンプル ファイルは、ユーザーの参照と使用状況の製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  
@@ -37,11 +37,11 @@ ms.locfileid: "52407849"
   
     -   ユーザーは、必要なソースとターゲット サーバーの定義に値を変更するだけで、必要なデータベースに接続できます。 例ではすべての値が用意されています、変数の値にある、 **VariableValueFileSample.xml**します。 その他のすべての接続パラメーターは、ユーザーの作業サーバー接続ファイルから削除できます。  
   
-    -   ソースとターゲット サーバーに接続する方法の詳細については、[サーバー接続ファイルを作成する&#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md)を参照してください。  
+    -   ソースとターゲット サーバーに接続する方法の詳細については、次を参照してください。[サーバー接続ファイルを作成する&#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md)します。  
   
 -   **VariableValueFileSample.xml:** スクリプト ファイルのサンプルのコンソールで使用されているすべての変数と`ServersConnectionFileSample.xml`このファイルで照合されています。 ユーザーがサンプルの変数を置き換えるだけです、サンプルのコンソール スクリプトを実行するには、ユーザーに値は定義されているものとスクリプト ファイルと共に追加のコマンドライン引数としてこのファイルを渡します。  
   
-    変数値ファイルの詳細については、[変数値ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)を参照してください。  
+    変数値ファイルの詳細については、次を参照してください。[変数値ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)します。  
   
 -   **AssessmentReportGenerationSample.xml:** このサンプルで使用できるユーザー分析のために変換し、データの移行を始める前にこの xml 評価レポートを生成できます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52407849"
   
     場合、ユーザーが複数のオブジェクトを評価する必要があります/データベースは複数を指定できます`metabase-object`ノードに示すように、`generate-assessment-report`サンプルのコンソール スクリプト ファイルのコマンドの例 4。  
   
-    レポートを生成する方法の詳細については、[レポートを生成する&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)を参照してください。  
+    レポートを生成する方法の詳細については、次を参照してください。[レポートを生成する&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)します。  
   
     > [!NOTE]  
     > -   コンソール アプリケーションに渡される変数値ファイルのコマンドライン引数を使用すると、し VariableValueFileSample.xml が指定したユーザーに更新された値。  

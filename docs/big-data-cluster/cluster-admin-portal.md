@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fbb43d39e28a8b99e49a4dcaf0b2b4f0fc83e670
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582237"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472133"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>クラスターの管理ポータルを使用してビッグ データの SQL Server クラスターを監視する方法
 
@@ -35,10 +35,10 @@ ms.locfileid: "59582237"
 
 に従って、 [、ビッグ データ クラスターをデプロイするクイック スタート](quickstart-big-data-cluster-deploy.md)に到達するまで、**クラスター管理ポータル**セクション。 Mssqlctl で実行されているビッグ データ クラスターを作成したら、次の手順に従います。
 
-コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `endpoint-service-proxy` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
+コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `mgmtproxy-svc-external` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
 
 > [!NOTE]
-> CTP 2.4 はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
+> CTP の 2.5 はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
 
 ## <a name="overview"></a>概要
 

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8bfb0fc8deb40d46712bf072ab4a72a4eccf23f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244699"
 ---
 # <a name="odbc-errors"></a>ODBC エラー
 エラーが発生したときに、Microsoft ODBC のデスクトップ データベース ドライバーは、ネイティブ エラー番号、SQLSTATE (ODBC エラー コード) とエラー メッセージを返します。  

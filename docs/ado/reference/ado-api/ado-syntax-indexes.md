@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404c84cd5e8b737552163082d78b5e8fcc3b1ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249041"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 構文のインデックス
 ADO メソッドとプロパティを呼び出す構文は、開発環境によって異なります。 ADO の言語リファレンスの残りの部分では、ADO メソッドとプロパティ構文を説明するために Microsoft Visual Basic プログラミング言語を使用します。 ただし、プログラミング言語と方法論に基づきより具体的な構文例については、次のセクションを参照してください。  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934128"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472189"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
@@ -30,9 +30,9 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
    |プラットフォーム|ダウンロード|リリース日|バージョン
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|2019 年 4 月 18日 |0.12.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|2019 年 4 月 18日 |0.12.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|2019 年 4 月 18日 |0.12.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|2019 年 4 月 18日 |0.12.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|2019 年 4 月 18日 |0.12.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|2019 年 4 月 18日 |0.12.1
 
 1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 
@@ -44,7 +44,7 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
 1. インストールが完了したら、依存関係、Azure Data Studio を閉じて。 **SQL Server のビッグ データ クラスター**接続の種類は、Azure Data Studio を再起動するまでは使用できません。
 
-## <a name="changes-in-release-012"></a>0.12 のリリースでの変更
+## <a name="changes-in-release-0121"></a>0.12.1 のリリースでの変更
 
 * **SQL Server のビッグ データ クラスター**接続の種類はこのリリースで削除されました。 SQL Server のビッグ データ クラスター接続から以前に使用可能なすべての機能は、SQL Server の接続でご利用いただけます。
 * HDFS の参照は、「、 **Data Services**フォルダー

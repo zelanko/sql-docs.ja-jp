@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d3b2660f3a20883e9b9f2d3b4202526c15a943
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242786"
 ---
 # <a name="address-book-navigation-buttons"></a>アドレス帳のナビゲーション ボタン
 アドレス帳アプリケーションでは、Web ページの下部にあるナビゲーション ボタンが表示されます。 データの最初と最後の行または行の現在の選択範囲の横にあるいずれかを選択して、HTML のグリッド表示内のデータを移動するナビゲーション ボタンを使用できます。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287436"
 ---
 # <a name="alignment"></a>Alignment
 ODBC アプリケーションでのアライメントの問題は通常ありません、他のアプリケーションよりも。 つまり、ほとんどの ODBC アプリケーションでは、配置にほとんどまたはまったくの問題があります。 しないアドレスの配置のペナルティはハードウェアおよびオペレーティング システムによって異なります、わずかなパフォーマンスの低下としてそのマイナーまたは実行時の致命的なエラーとしてとしてメジャーがあります。 そのため、ODBC アプリケーション、および ODBC アプリケーションの移植可能な具体的には、注意が必要にデータを正しく配置します。  
@@ -47,4 +47,4 @@ ODBC アプリケーションでのアライメントの問題は通常ありま
   
  ![最大の配置境界によるバインド](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
- このソリューションでは、大きなセキュリティ ホールが退職、それを実装するコードは比較的簡単で高速です。 ほとんどの場合は、未使用のメモリ内で、パフォーマンス低下が相殺されます。 このメソッドを使用して、例では、[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)を参照してください。
+ このソリューションでは、大きなセキュリティ ホールが退職、それを実装するコードは比較的簡単で高速です。 ほとんどの場合は、未使用のメモリ内で、パフォーマンス低下が相殺されます。 このメソッドを使用して、例では、次を参照してください。[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)します。
