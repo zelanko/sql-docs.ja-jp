@@ -18,17 +18,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150029"
 ---
 # <a name="sql-type-identifiers"></a>SQL の型識別子
 各データ ソースは、独自の SQL データ型を定義します。 ODBC では、型識別子を定義し、各種類の識別子にマップすることがあります SQL データ型の一般的な特性について説明します。 ドライバー固有の ODBC SQL 型の識別子に基になるデータ ソース内の各データ型をマップする方法になります。  
   
  たとえば、SQL_CHAR は、通常 1 ~ 254 文字の間の固定長文字型列の型識別子です。 これらの特性は、多くの SQL データ ソースにある CHAR データ型に対応します。 したがって、SQL_CHAR に列の型識別子が検出されると、アプリケーション、char 型の列を処理している可能性があります想定できます。 ただし、まだチェックインと仮定すると前に、のコラムのバイトの長さは、1 ~ 254 の文字。たとえば、非 SQL データ ソースのドライバーはどちらもあるために、SQL_CHAR または SQL_LONGVARCHAR の 500 文字の固定長文字型列をマップ可能性がありますと完全に一致します。  
   
- ODBC では、さまざまな種類の SQL 識別子を定義します。 ただし、ドライバーでは、これらの識別子のすべてを使用する必要はありません。 代わりに、基になるデータ ソースでサポートされている SQL データ型を公開する必要がある識別子のみを使用します。 基になるデータ ソースに SQL データ型をサポートしている場合は、どの型識別子のない対応、ドライバーは、追加の型識別子を定義できます。 詳細については、[ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)を参照してください。  
+ ODBC では、さまざまな種類の SQL 識別子を定義します。 ただし、ドライバーでは、これらの識別子のすべてを使用する必要はありません。 代わりに、基になるデータ ソースでサポートされている SQL データ型を公開する必要がある識別子のみを使用します。 基になるデータ ソースに SQL データ型をサポートしている場合は、どの型識別子のない対応、ドライバーは、追加の型識別子を定義できます。 詳細については、次を参照してください。[ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)します。  
   
- SQL の型識別子の詳細については、次を参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d: データ型。
+ SQL の型識別子の詳細については、次を参照してください[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d:。データ型。

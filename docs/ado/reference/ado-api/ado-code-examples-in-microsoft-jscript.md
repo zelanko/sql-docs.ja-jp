@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065055"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript での ADO のコード例
 次のコード例を使用して、ADO メソッド、プロパティ、および JScript で記述するときにイベントを使用する方法について説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "47646677"
   
 -   [GetRows メソッドの例](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 -   [AbsolutePage、PageCount、PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
@@ -60,4 +60,4 @@ ms.locfileid: "47646677"
  [Visual Basic での ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO のコード例の VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual C で ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [付録 D: ADO の使用例](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [付録 d:ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

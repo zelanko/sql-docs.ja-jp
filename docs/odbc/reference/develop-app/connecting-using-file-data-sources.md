@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043887"
 ---
 # <a name="connecting-using-file-data-sources"></a>ファイル データ ソースを使用した接続
 ファイルのデータ ソースの接続情報は、.dsn ファイルに格納されます。 その結果、接続文字列を 1 人のユーザーによって繰り返し使用または適切なドライバーがインストールされている場合は、複数のユーザーの間で共有します。 ファイルには、ドライバー名 (または共有不能なファイルのデータ ソースの場合、別のデータ ソース名) が含まれています。 必要に応じて、で使用できる接続文字列と**SQLDriverConnect**します。 ドライバー マネージャーへの呼び出しの接続文字列をビルドする**SQLDriverConnect** .dsn ファイル内のキーワードから。  
   
  ファイルのデータ ソースにより、アプリケーションで使用するための接続文字列を構築することがなく接続オプションを指定する**SQLDriverConnect**します。 通常、ファイルのデータ ソースが指定することによって作成は、 **SAVEFILE**キーワードで、ドライバー マネージャーへの呼び出しによって作成された出力の接続文字列を保存すると、 **SQLDriverConnect** .dsn ファイルにします。 接続文字列を呼び出すことで繰り返し使用できること**SQLDriverConnect**で、 **FILEDSN**キーワード。 これにより、接続プロセスを合理化し、接続文字列の永続的なソースを提供します。  
   
- ファイル データ ソースも作成できます呼び出して**SQLCreateDataSource**インストーラー DLL。 情報は、呼び出すことによって、.dsn ファイルに書き込まれることができます**SQLWriteFileDSN**、呼び出して .dsn ファイルから読み取ると**SQLReadFileDSN**; インストーラー DLL もこれらの関数。 インストーラー DLL については、[データ ソースを構成する](../../../odbc/reference/install/configuring-data-sources.md)を参照してください。  
+ ファイル データ ソースも作成できます呼び出して**SQLCreateDataSource**インストーラー DLL。 情報は、呼び出すことによって、.dsn ファイルに書き込まれることができます**SQLWriteFileDSN**、呼び出して .dsn ファイルから読み取ると**SQLReadFileDSN**; インストーラー DLL もこれらの関数。 インストーラー DLL については、次を参照してください。[データ ソースを構成する](../../../odbc/reference/install/configuring-data-sources.md)します。  
   
  接続情報の使用されるキーワードは、.dsn ファイルの [ODBC] セクションには。 [ODBC] セクションでは共有可能 .dsn ファイルが、最小限の情報は、DRIVER キーワードを示します。  
   
@@ -52,7 +52,7 @@ DATABASE = MyDB
 DSN = MyDataSource  
 ```  
   
- ファイルのデータ ソースを使用する接続文字列は .dsn ファイルで指定したキーワードと接続文字列への呼び出しで指定したキーワードの和集合**SQLDriverConnect**します。 接続文字列キーワードを持つ .dsn ファイル内のキーワードのいずれかが競合する場合、ドライバー マネージャーは、キーワード値を使用する必要がありますを決定します。 詳細については、[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)を参照してください。  
+ ファイルのデータ ソースを使用する接続文字列は .dsn ファイルで指定したキーワードと接続文字列への呼び出しで指定したキーワードの和集合**SQLDriverConnect**します。 接続文字列キーワードを持つ .dsn ファイル内のキーワードのいずれかが競合する場合、ドライバー マネージャーは、キーワード値を使用する必要がありますを決定します。 詳細については、次を参照してください。 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)します。  
   
 ## <a name="see-also"></a>参照  
  [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

@@ -35,11 +35,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135505"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)
   マップには、マップの凡例、カラー スケール、および距離スケールを含めることができます。 これらのマップ要素は、マップに表示されているデータをユーザーが解釈する際に役に立ちます。  

@@ -1,5 +1,5 @@
 ---
-title: '代替方法: SQL ステートメントの使用 |Microsoft Docs'
+title: '代替: SQL ステートメントを使用して |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b95e6f0bd2b702080b3580b8b9eeb80ac5b06e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063128"
 ---
-# <a name="alternatives-using-sql-statements"></a>他の方法: SQL ステートメントを使用する
+# <a name="alternatives-using-sql-statements"></a>代替: SQL ステートメントの使用
 ADO では、その組み込みプロパティとデータを編集するためのメソッドの代わりに、コマンドを使用してもできます。 プロバイダーによっては、このセクションで説明されているすべての操作することもできます、データ ソースにコマンドを渡すことによって。 SQL UPDATE ステートメントを使用してを使用せずにデータを変更するなど、**値**のプロパティを**フィールド**します。 SQL の INSERT ステートメントは、ADO メソッドではなく、データ ソースに新しいレコードを追加するために使用できます**AddNew**します。 SQL またはプロバイダーのデータ操作言語の詳細については、データ ソースのドキュメントを参照してください。  
   
  たとえば、次のコードに示すように、データベースへの DELETE ステートメントを含む SQL 文字列を渡すことができます。  

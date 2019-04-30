@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185752"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
   データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 グラフを使用すると、大量の集計情報がひとめでわかります。 グラフを作成する前に、データを慎重に準備および理解することが重要です。これにより、グラフをすばやく効率的にデザインできます。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。 グラフをすぐに使用を開始するには、バー、列、スパーク ライン、および円グラフのチュートリアルを参照してください[チュートリアル&#40;レポート ビルダー&#41; ](../report-builder-tutorials.md)または横棒グラフおよび円グラフのチュートリアル[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  

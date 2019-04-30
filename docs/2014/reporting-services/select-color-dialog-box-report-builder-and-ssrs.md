@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdd07f8c0f8fba74432a08283c76341eb2707312
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223468"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>[色の選択] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[色の選択]** ダイアログ ボックスを使用すると、データ領域やテキスト ボックスにある 1 つまたは複数のセルの背景色や、グラフの色のオプションを指定できます。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5176ddc4f06531dcbfea383362bdd195a215fe84
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216176"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の実行中の集計を、指定されたスコープに対して評価して返します。  

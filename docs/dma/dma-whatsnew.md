@@ -15,11 +15,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: ac3f4b2ab00b7a2c792788d6e778857c7d563f66
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151866"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 この記事では、各リリースで追加の Data Migration Assistant (DMA) を示します。
@@ -125,5 +125,5 @@ DMA の v1.0 リリースは初期のリリースとを提供します。
     - ストレージ
 -   評価を実行する最新のユーザー エクスペリエンス。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 [Data Migration Assistant の概要](../dma/dma-overview.md)

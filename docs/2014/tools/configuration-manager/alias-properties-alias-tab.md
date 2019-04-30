@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035301"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;[別名]&gt; プロパティ ([別名] タブ)
   別名は、接続のために使用できる代替名です。 別名は、接続文字列の必須要素をカプセル化したものであり、ユーザーが選択した名前でそれらの要素を公開できます。 **[\<** Alias **> のプロパティ]** ダイアログ ボックスの **[別名]** ページでは、別名の接続文字列について各要素の表示や指定を行います。  

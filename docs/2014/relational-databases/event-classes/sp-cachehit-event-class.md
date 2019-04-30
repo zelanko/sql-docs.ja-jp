@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050952"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit イベント クラス
   SP:CacheHit イベント クラスは、ストアド プロシージャがプラン キャッシュに格納されていることを示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "52816554"
 |DatabaseName|`nvarchar`|ストアド プロシージャが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 38。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = 実行コンテキスト ヒット。プラン キャッシュ内にフリー実行プランが見つかりました。<br /><br /> 2 = コンパイル済みプラン ヒット。プラン キャッシュ内にコンパイル済みプランが見つかりました。|21|はい|  
+|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = 実行コンテキスト ヒット。プラン キャッシュ内にフリー実行プランが見つかりました。<br /><br /> 2 = コンパイル済みプラン ヒット。コンパイル済みプランがプラン キャッシュに見つかりました。|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  

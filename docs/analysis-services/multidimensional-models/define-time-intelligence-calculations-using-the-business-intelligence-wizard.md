@@ -1,5 +1,5 @@
 ---
-title: ビジネス インテリジェンス ウィザードを使用してタイム インテリジェンス計算の定義 |Microsoft ドキュメント
+title: ビジネス インテリジェンス ウィザードを使用してタイム インテリジェンス計算の定義 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d3659fd80d09f5f0b5ec17301606b23810df3fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043201"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>ビジネス インテリジェンス ウィザードを使用したタイム インテリジェンス計算の定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "34026919"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>タイム インテリジェンス拡張機能の表示  
  ビジネス インテリジェンス ウィザードの最後のページで、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに対して行われる変更内容を表示できます。 タイム インテリジェンス拡張機能では、次の表で説明されているように、選択した時間ディメンション、関連付けられているデータ ソース ビュー、および関連付けられているキューブがウィザードによって変更されます。  
   
-|オブジェクト|変更|  
+|オブジェクト|[変更]|  
 |------------|------------|  
 |時間ディメンション|計算 (またはビュー) ごとに属性を追加します。|  
 |データ ソース ビュー|時間ディメンションの新しい属性ごとに、計算される列を時間テーブルに追加します。|  
 |Cube|計算を実行する多次元式 (MDX) コードを定義する、計算されるメンバーを追加します。|  
   
 ## <a name="see-also"></a>参照  
- [計算されるメンバーを作成します。](../../analysis-services/multidimensional-models/create-calculated-members.md)  
+ [計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

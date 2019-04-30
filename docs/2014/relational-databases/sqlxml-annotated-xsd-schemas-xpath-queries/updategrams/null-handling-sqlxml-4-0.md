@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 59110e6686307e9555355fb72fefdbf6099bbc69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060111"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL の取り扱い (SQLXML 4.0)
   XML 構文では、NULL は "存在しない" ことを表します。 たとえば、属性または要素値が NULL の場合、その属性または要素は XML ドキュメントに存在しません。[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML では、`updg:nullvalue` 属性を使用して、要素または属性値に NULL を指定できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "52767324"
 </ROOT>  
 ```  
   
- パラメーターをアップデートグラムに渡すときには、パラメーター値として NULL を指定できます。 これを行うには、`nullvalue` ブロックに `<updg:header>` 属性を指定します。 例については、[アップデート グラムにパラメーターを渡す&#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)を参照してください。  
+ パラメーターをアップデートグラムに渡すときには、パラメーター値として NULL を指定できます。 これを行うには、`nullvalue` ブロックに `<updg:header>` 属性を指定します。 例については、次を参照してください。[アップデート グラムにパラメーターを渡す&#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)します。  
   
 ## <a name="see-also"></a>参照  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  

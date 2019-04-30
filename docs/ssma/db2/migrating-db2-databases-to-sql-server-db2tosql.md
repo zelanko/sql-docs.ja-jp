@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8ee6e9cca2e16a180f869df7bcec07bb7b09e390
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071148"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) への DB2 データベースの移行
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 は、DB2 データベースを迅速に移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。 SSMA for DB2 を使用してデータベース オブジェクトとデータを確認して、移行対象のデータベースを評価をするデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB へのデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB。 SYS およびシステムの DB2 スキーマを移行できないことに注意してください。  
@@ -25,7 +25,7 @@ DB2 データベースからオブジェクトとデータを正常に移行す�
   
 1.  [新しい SSMA プロジェクト](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)します。  
   
-    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;DB2ToSQL&#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md)および関連するセクション。 データ型のマッピングをカスタマイズする方法については、[マッピング DB2 と SQL Server データ型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)を参照してください。  
+    プロジェクトを作成した後は、プロジェクトの変換、移行、およびオプションのマッピングの種類を設定できます。 プロジェクトの設定については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;DB2ToSQL&#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md)および関連するセクション。 データ型のマッピングをカスタマイズする方法については、次を参照してください。[マッピング DB2 と SQL Server データ型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)します。  
   
 2.  [DB2 データベースに接続する](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)します。  
   

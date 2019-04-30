@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9ecc010dde59028b95896d6c00fa4f55cdc82c40
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136480"
 ---
 # <a name="instancename-property-sinstance-class"></a>InstanceName プロパティ (SInstance クラス)
    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を取得します。  

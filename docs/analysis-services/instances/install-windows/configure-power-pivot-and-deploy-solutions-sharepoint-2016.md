@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5b8d0b377be4282bdbdef8805b8e8683cb59cbe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055252"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52400016"
   
 -   バックエンド サービスと、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーをインストールする方法の詳細については、「 [Power Pivot モードでの Analysis Services のインストール](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」を参照してください。  
   
- 詳細については、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2016 構成ツールでは、[インストールまたは for SharePoint アドイン (SharePoint 2016) Power Pivot をアンインストール](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)を参照してください。  
+ 詳細については、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 2016 構成ツールでは、次を参照してください。[インストールまたは for SharePoint アドイン (SharePoint 2016) Power Pivot をアンインストール](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)します。  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Power Pivot for SharePoint 2016 の構成の実行  
  **注:** 次の手順を完了するには、ファーム管理者があります。 次のようなエラー メッセージが表示される場合があります。  
@@ -117,7 +117,7 @@ ms.locfileid: "52400016"
   
 5.  **[OK]** を選択します。  
   
- データのトラブルシューティングの更新の詳細については、[Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)を参照してください。  
+ データのトラブルシューティングの更新の詳細については、次を参照してください。 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)します。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

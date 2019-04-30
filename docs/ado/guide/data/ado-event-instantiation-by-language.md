@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 131e889847625dea825ca48ca30bf801046d229c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062998"
 ---
 # <a name="ado-event-instantiation-by-language"></a>言語別の ADO イベントのインスタンス化
 それぞれのプログラミング言語では、ADO イベントのインスタンスを異なる方法で作成します。 次の例のすべてを作成、 **ConnectComplete**イベント ハンドラー。  

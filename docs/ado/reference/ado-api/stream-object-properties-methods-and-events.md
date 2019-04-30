@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f775bf1d77ed23e153610f7b6d6cbf5c17ce544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181026"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  [Charset プロパティ](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS プロパティ](../../../ado/reference/ado-api/eos-property.md)  

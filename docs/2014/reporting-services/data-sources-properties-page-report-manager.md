@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165360"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>[データ ソース] プロパティ ページ (レポート マネージャー)
   [データ ソース] プロパティ ページでは、現在のレポートの外部データ ソースへの接続方法を定義できます。 レポートに本来パブリッシュされていたデータ ソース接続情報をオーバーライドすることができます。 レポートで複数のデータ ソースが使用される場合、プロパティ ページに各データ ソースの独自のセクションがあります。 データ ソースは、レポートで定義された順に一覧表示されます。  

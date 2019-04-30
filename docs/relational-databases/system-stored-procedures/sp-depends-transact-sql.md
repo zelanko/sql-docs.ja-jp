@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047171"
 ---
-# <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
+# <a name="spdepends-transact-sql"></a>sp_depends (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  テーブルまたはビューに従属するビューおよびプロシージャ、ビューまたはプロシージャが従属するテーブルおよびビューなど、データベース オブジェクトの従属性に関する情報を表示します。 現在のデータベース内に存在しないオブジェクトへの参照はレポートされません。  
+  データベース オブジェクト依存関係のビューとテーブルまたはビューと、テーブルとビューが従属するビューまたはプロシージャに依存する手順などに関する情報が表示されます。 現在のデータベース内に存在しないオブジェクトへの参照はレポートされません。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)と[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)代わりにします。  
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  オブジェクトが所属するスキーマの名前を指定します。  
   
  *object_name*  
- 従属性を調べるデータベース オブジェクトを指定します。 オブジェクトにはテーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、またはトリガーを指定できます。 o*bject_name*は**nvarchar (776)**、既定値はありません。  
+ 依存関係を確認するデータベース オブジェクトです。 オブジェクトは、テーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、またはトリガーできます。 o*bject_name*は**nvarchar (776)**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -68,18 +68,18 @@ sp_depends [ @objname = ] '<object>'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (257** **)**|従属性が存在するアイテムの名前。|  
-|**type**|**nvarchar(16)**|アイテムの種類。|  
-|**更新**|**nvarchar(7)**|アイテムが更新されているかどうかを示します。|  
-|**選択されています。**|**nvarchar(8)**|アイテムが SELECT ステートメントで使用されているかどうかを示します。|  
+|**name**|**nvarchar(257** **)**|依存関係が存在する項目の名前。|  
+|**type**|**nvarchar(16)**|項目の種類。|  
+|**updated**|**nvarchar(7)**|項目を更新するかどうか。|  
+|**selected**|**nvarchar(8)**|かどうか、項目は、SELECT ステートメントで使用されます。|  
 |**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
  次の結果セットに依存するオブジェクトを表示する*\<オブジェクト >* します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (257** **)**|従属性が存在するアイテムの名前。|  
-|**type**|**nvarchar(16)**|アイテムの種類。|  
+|**name**|**nvarchar(257** **)**|依存関係が存在する項目の名前。|  
+|**type**|**nvarchar(16)**|項目の種類。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

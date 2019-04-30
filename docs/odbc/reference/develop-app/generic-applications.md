@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 59110f66c512845ff5ce1f2f246c05c63fa755b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061500"
 ---
 # <a name="generic-applications"></a>汎用アプリケーション
 汎用アプリケーション、データベースからデータを取得するスプレッドシートなど、ハード コーディングされたタスクの実行場合があります。 さまざまなユーザーが入力して、SQL ステートメントを実行できる汎用クエリ アプリケーションなどのユーザー定義のタスクを実行する場合もします。 どのような汎用アプリケーションが共通は、さまざまな異なる Dbms で動作する必要があることと、開発者がわからない事前なりますこれらの Dbms です。  

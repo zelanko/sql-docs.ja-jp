@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 091073431b3ff349b8ae107fcb6a37bfab94e46e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213353"
 ---
 # <a name="open-method-ado-md"></a>Open メソッド (ADO MD)
 多次元クエリの結果を取得しに結果を返します、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)します。  

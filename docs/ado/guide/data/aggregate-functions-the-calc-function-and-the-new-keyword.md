@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063098"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数、NEW キーワード
 データ シェイプには、次の関数がサポートされています。 操作する列を含む章に割り当てられた名前は、*章エイリアス*します。  
@@ -60,9 +60,9 @@ ms.locfileid: "47625930"
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adBinary、AdVarBinary、adLongVarBinary|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
 |DBTYPE_STR|adChar、adVarChar、adLongVarChar|  
-|DBTYPE_WSTR|adWChar adVarWChar、adLongVarWChar|  
+|DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  
 |DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  

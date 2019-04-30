@@ -22,11 +22,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fba325ab05844388ceceb1e53b6d4a8cf618468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058058"
 ---
 # <a name="upgrade-advisor-overview"></a>アップグレード アドバイザーの概要
   アップグレード アドバイザーには、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のコンポーネントを分析し、分析結果に関する情報が記載されたレポートを表示するための中央コンソールが用意されています。  

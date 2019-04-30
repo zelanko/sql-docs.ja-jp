@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 96bc78d2d05cf03e13751b02efde6f76d3e2b5f9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062570"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic での RDS のコード例
 > [!IMPORTANT]
@@ -32,7 +32,7 @@ ms.locfileid: "51606232"
 > [!NOTE]
 >  全体のコード例は、End Sub にサブディレクトリをコード エディターに貼り付けます。 例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 -   [Handler プロパティの例](../../../ado/reference/rds-api/handler-property-example-vb.md)  
   

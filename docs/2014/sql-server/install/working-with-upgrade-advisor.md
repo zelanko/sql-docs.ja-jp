@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154723"
 ---
 # <a name="working-with-upgrade-advisor"></a>アップグレード アドバイザーの使用
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に確実にアップグレードできるように、アップグレード アドバイザーには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの前に、現在のインストールについて対処が必要な問題を検出するための中央コンソールが用意されています。  
@@ -34,7 +34,7 @@ ms.locfileid: "48076252"
   
 -   分析の結果を表示します。  
   
- アップグレード アドバイザーには、アナライザーとビューアーが含まれています。 アップグレード アドバイザー分析ウィザードでは、選択したコンポーネントを分析します。 アナライザーでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするにあたり、事前に処理しておく必要がある問題を示すカスタム レポートが生成されます。 アップグレード アドバイザー レポート ビューアーを使用して、カスタム レポートを表示します。 詳細については、どのようなアップグレード アドバイザー分析で検出される、[アップグレードに関する問題の解決](../../../2014/sql-server/install/resolving-upgrade-issues.md)を参照してください。  
+ アップグレード アドバイザーには、アナライザーとビューアーが含まれています。 アップグレード アドバイザー分析ウィザードでは、選択したコンポーネントを分析します。 アナライザーでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするにあたり、事前に処理しておく必要がある問題を示すカスタム レポートが生成されます。 アップグレード アドバイザー レポート ビューアーを使用して、カスタム レポートを表示します。 詳細については、どのようなアップグレード アドバイザー分析で検出される、次を参照してください。[アップグレードに関する問題の解決](../../../2014/sql-server/install/resolving-upgrade-issues.md)します。  
   
  ここでは、アップグレード アドバイザーの機能概要、およびアップグレード アドバイザーとアップグレード アドバイザー レポートの使用方法について説明します。  
   

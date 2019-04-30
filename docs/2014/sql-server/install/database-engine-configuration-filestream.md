@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 190a6ce588ed40ab7cc9181476ca3730eeef34b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035646"
 ---
 # <a name="database-engine-configuration---filestream"></a>データベース エンジンの構成 - Filestream
   このページを使用すると、このインストールの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に対して FILESTREAM を有効にすることができます。 FILESTREAM の統合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]と NTFS ファイル システムを格納する、`varbinary(max)`ファイル システム上のファイルとしてバイナリ ラージ オブジェクト (BLOB) データ。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、FILESTREAM データの挿入、更新、クエリ、検索、およびバックアップを行うことができます。 Win32 ファイル システム インターフェイスによるデータへのストリーミング アクセスが可能になります。  

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062201"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング
   行セットでは、パラメーター値として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次 OLE DB を使用してデータには、関数で報告された、データ型が定義されている**icolumnsinfo::getcolumninfo**と**Icommandwithparameters::getparameterinfo**します。  

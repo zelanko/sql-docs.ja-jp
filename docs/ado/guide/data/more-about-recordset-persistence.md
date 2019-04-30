@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161587"
 ---
 # <a name="more-about-recordset-persistence"></a>レコードセットの保持に関する詳細情報
 ADO レコード セット オブジェクトのサポートの内容を格納する、**レコード セット**を使用してファイル内のオブジェクトその[保存](../../../ado/reference/ado-api/save-method.md)メソッド。 永続的に保存されたファイルがローカルに存在してドライブ、サーバー、またはサイトとして、Web 上の URL。 ファイルを復元して、いずれかで、後で、[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)のメソッド、 **Recordset**オブジェクトまたは[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
   
  さらに、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッドに変換を**レコード セット**を行と列が、指定した文字で区切られたはフォーム オブジェクト。  
   
- 永続化する、 **Recordset**ファイルに格納できる形式に変換することから始めます。 **レコード セット**専用 adtg 高度なデータ TableGram (形式) 形式またはオープン拡張マークアップ言語 (XML) 形式でオブジェクトを格納できます。 Adtg 形式の例は、次のセクションに表示されます。 XML の永続化の詳細については、[XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)を参照してください。  
+ 永続化する、 **Recordset**ファイルに格納できる形式に変換することから始めます。 **レコード セット**専用 adtg 高度なデータ TableGram (形式) 形式またはオープン拡張マークアップ言語 (XML) 形式でオブジェクトを格納できます。 Adtg 形式の例は、次のセクションに表示されます。 XML の永続化の詳細については、次を参照してください。 [XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)します。  
   
  保留中の変更を永続化されたファイルに保存します。 これを返すクエリを発行することができます、**レコード セット**オブジェクト、編集、**レコード セット**、し、保留中の変更を保存、復元後、**レコード セット**、し、保存されたデータ ソースが更新保留中の変更。  
   

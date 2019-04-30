@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c781113124d456e1ba866546d6ada7a17371d71f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208525"
 ---
 # <a name="identifiers-limitations"></a>識別子の制限事項
 スペースまたは特殊記号が識別子が含まれる場合は、バック引用符で囲まれた識別子を囲む必要があります。 有効な名前は、うち最初の文字することはできません、スペース、64 文字の文字列です。 有効な名前は、制御文字または特殊文字を含めることはできません: ' &#124; # * でしょうか。 [ ] . ! $ .  

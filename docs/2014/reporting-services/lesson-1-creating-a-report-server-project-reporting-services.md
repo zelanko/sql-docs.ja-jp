@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143278"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1:レポート サーバー プロジェクトの作成 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でレポートを作成するには、まずレポート サーバー プロジェクトを作成して、レポート定義ファイル (.rdl) やその他レポートに必要なリソース ファイルを格納できるようにする必要があります。 次に、実際のレポート定義ファイルを作成し、レポートのデータ ソース、データセット、レイアウトを定義します。 作成したレポートを実行すると、実際のデータが取得され、レイアウト定義に従って画面上に表示されるので、その状態からエクスポート、印刷、保存を行うことができます。  

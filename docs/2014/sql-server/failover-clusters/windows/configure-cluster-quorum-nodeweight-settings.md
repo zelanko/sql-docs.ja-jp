@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049525"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>クラスター クォーラムの NodeWeight の設定の構成
   このトピックでは、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のメンバー ノードに NodeWeight 設定を構成する方法について説明します。 NodeWeight 設定は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのディザスター リカバリーとマルチサブネットのシナリオをサポートするためのクォーラムの投票時に使用されます。  
   
--   **開始する前に。**[前提条件](#Prerequisites)、[セキュリティ](#Security)  
+-   **開始前の準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
   
--   **使用して、クォーラムの NodeWeight 設定を表示するには。**[Powershell を使用して](#PowerShellProcedure)、 [Cluster.exe の使用](#CommandPromptProcedure)  
+-   **クォーラムの NodeWeight 設定を表示する方法:** [Powershell を使用して](#PowerShellProcedure)、 [Cluster.exe の使用](#CommandPromptProcedure)  
   
 -   [関連コンテンツ](#RelatedContent)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "53349881"
 > [!IMPORTANT]  
 >  NodeWeight 設定を使用するには、次の修正プログラムが WSFC クラスターのすべてのサーバーに適用されている必要があります。  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036):修正プログラムが使用すると、クラスター ノードでクォーラム投票を持たないを[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]し [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036):この修正プログラムを使用すると、[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] および [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] でクォーラムの投票のないクラスター ノードを構成することができます。  
   
 > [!TIP]  
 >  この修正プログラムがインストールされていない場合、このトピックの例では、NodeWeight に対して空の値または NULL 値が返されます。  

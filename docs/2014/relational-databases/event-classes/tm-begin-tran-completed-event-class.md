@@ -1,5 +1,5 @@
 ---
-title: TM:Begin Tran Completed イベント クラス |Microsoft Docs
+title: 'TM: Begin Tran Completed イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061231"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>TM:Begin Tran Completed イベント クラス
+# <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed イベント クラス
   TM:Begin Tran Completed イベント クラスは、BEGIN TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。  
   
-## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM:Begin Tran Completed イベント クラスのデータ列  
+## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM: Begin Tran Completed イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  

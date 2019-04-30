@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff3de6a9b9ec57f1ea96d6db17b9b30c5a22996
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179822"
 ---
 # <a name="level-2-interface-conformance"></a>レベル 2 インターフェイスの適合性
 レベル 2 インターフェイスの適合性レベルには、レベル 1 インターフェイスの適合性レベルの機能に加えて、次の機能が含まれています。  

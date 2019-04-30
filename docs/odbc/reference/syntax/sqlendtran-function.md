@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062260"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 関数
 **準拠**  
@@ -101,9 +101,9 @@ SQLRETURN SQLEndTran(
 > [!NOTE]  
 >  ドライバー マネージャーは、すべての接続はグローバル トランザクションをシミュレートせず、2 フェーズ コミット プロトコルを使用しません。  
   
- 場合*CompletionType*は指定して、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作をコミット要求を発行します。 場合*CompletionType*は SQL_ROLLBACK、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作のロールバック要求を発行します。 アクティブな場合は、トランザクションがない場合**SQLEndTran**で任意のデータ ソースに影響しない SQL_SUCCESS を返します。 詳細については、[Committing とトランザクションのロールバック](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)を参照してください。  
+ 場合*CompletionType*は指定して、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作をコミット要求を発行します。 場合*CompletionType*は SQL_ROLLBACK、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作のロールバック要求を発行します。 アクティブな場合は、トランザクションがない場合**SQLEndTran**で任意のデータ ソースに影響しない SQL_SUCCESS を返します。 詳細については、次を参照してください。 [Committing とトランザクションのロールバック](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)します。  
   
- ドライバーが手動コミット モードの場合 (呼び出して**SQLSetConnectAttr** SQL_ATTR_AUTOCOMMIT を SQL_AUTOCOMMIT_OFF にセットを属性) と内で格納できる SQL ステートメント、に暗黙的に、新しいトランザクションが開始します。トランザクションは、現在のデータ ソースに対して実行されます。 詳細については、[コミット モード](../../../odbc/reference/develop-app/commit-mode.md)を参照してください。  
+ ドライバーが手動コミット モードの場合 (呼び出して**SQLSetConnectAttr** SQL_ATTR_AUTOCOMMIT を SQL_AUTOCOMMIT_OFF にセットを属性) と内で格納できる SQL ステートメント、に暗黙的に、新しいトランザクションが開始します。トランザクションは、現在のデータ ソースに対して実行されます。 詳細については、次を参照してください。[コミット モード](../../../odbc/reference/develop-app/commit-mode.md)します。  
   
  カーソルのトランザクション操作の影響を確認するアプリケーションを呼び出す**SQLGetInfo** SQL_CURSOR_ROLLBACK_BEHAVIOR および SQL_CURSOR_COMMIT_BEHAVIOR のオプションを使用します。 詳細については、次の段落を参照してくださいし、も参照してください[カーソルと準備されたステートメントでトランザクションの効果](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)します。  
   

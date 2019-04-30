@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22fe9f04ea03769cbdc2f100ec6284d17deff097
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043847"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -32,5 +32,5 @@ ms.locfileid: "47602580"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Levels コレクション (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)

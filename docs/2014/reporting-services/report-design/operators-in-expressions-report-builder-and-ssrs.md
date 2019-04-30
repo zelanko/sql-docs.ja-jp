@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 076c9593a8f44d97de0f4856801f3864818d2a6e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209078"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  

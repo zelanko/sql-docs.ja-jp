@@ -1,5 +1,5 @@
 ---
-title: 'ADO イベントのインスタンス化: Visual C |Microsoft Docs'
+title: 'ADO イベントのインスタンス化: Visual C++ |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062948"
 ---
-# <a name="ado-event-instantiation-visual-c"></a>ADO イベントのインスタンス化: Visual C++
+# <a name="ado-event-instantiation-visual-c"></a>ADO イベントのインスタンス化: Visual C++
 Microsoft® Visual C++ での ADO イベントのインスタンスを作成する方法の概略図の説明です。 参照してください[ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)の完全な説明。  
   
  派生したクラスを作成、 **ConnectionEventsVt**と**RecordsetEventsVt**ファイル adoint.h でインターフェイスが見つかりました。  

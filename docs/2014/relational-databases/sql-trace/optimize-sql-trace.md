@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135537"
 ---
 # <a name="optimize-sql-trace"></a>SQL トレースの最適化
   SQL トレースを実行すると、データを収集するためにシステム リソースが使用されるのでパフォーマンス コストが発生しますが、このコストはさまざまな方法で最小限に抑えることができます。 トレースによって発生するパフォーマンス コストを最小限に抑えるには、次のようにしてください。  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad73f9ac85bcc770b9337b5f84282fc7fc3018a3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151478"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
   共有データセットのクエリ結果をキャッシュにコピーしておくと、複数のレポートに一貫性のあるデータを提供し、データセット クエリの応答時間を短縮できます。 レポートと同様に、初回使用時または指定されたスケジュールによってキャッシュされるように共有データセットを構成できます。  

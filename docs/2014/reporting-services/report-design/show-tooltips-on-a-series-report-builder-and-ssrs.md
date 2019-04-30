@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215190"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>系列へのツールヒントの表示 (レポート ビルダーおよび SSRS)
   グラフの系列上の各データ ポイントにツールヒントを追加すると、表示されたレポートのデータ ポイントにユーザーがマウス カーソルを合わせたときにデータ ポイントに関連する情報 (グループ名、データ ポイントの値、系列の合計に対するデータ ポイントの比率など) が表示されます。  

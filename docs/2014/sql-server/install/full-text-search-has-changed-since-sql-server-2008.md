@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127068"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>フルテキスト検索は SQL Server 2008 以降変更されています
   アップグレード アドバイザーによって、フルテキスト検索のアップグレードが検出されました。 フルテキスト検索の多くのオプションおよび設定が変更されました。 したがって、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] フルテキスト検索にアップグレードするときに、設定の一部を変更する必要がある場合があります。  

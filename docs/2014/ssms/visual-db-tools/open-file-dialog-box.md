@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138897"
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
   ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
@@ -67,7 +67,7 @@ ms.locfileid: "53328602"
  **[新しいフォルダー]**  
  **[新しいフォルダー]** ダイアログ ボックスを表示します。 このオプションを使用すると、 **[探す場所]** ボックスの一覧で選択したフォルダーの下に、新しい子フォルダーを作成できます。  
   
-## <a name="views"></a>Views  
+## <a name="views"></a>ビュー  
  アイテムの内容を配置および表示するオプションを提供します。 **[ビュー]** ボックスの一覧でオプションを選択します。  
   
  **[縮小表示]**  

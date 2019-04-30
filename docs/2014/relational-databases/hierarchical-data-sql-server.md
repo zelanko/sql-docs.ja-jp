@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065707"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
   組み込み`hierarchyid`型では、階層データの格納とクエリ容易になります。 `hierarchyid` 階層データの最も一般的な種類のツリーを表すために最適化されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "52817564"
  階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) を使用します。 階層データのクエリや管理を実行するには、 [の](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) hierarchyid 関数 [!INCLUDE[tsql](../includes/tsql-md.md)] を使用します。  
   
 ##  <a name="keyprops"></a> hierarchyid の主要な特性  
- `hierarchyid` データ型の値は、ツリー階層における位置を表します。 `hierarchyid` の値には、以下の特性があります。  
+ 値、`hierarchyid`データ型は、ツリー階層内の位置を表します。 `hierarchyid` の値には、以下の特性があります。  
   
 -   非常にコンパクト  
   
@@ -525,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [hierarchyid データ型メソッド リファレンス](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [チュートリアル:Hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [チュートリアル: Hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

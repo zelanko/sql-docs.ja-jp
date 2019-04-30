@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43083d569ca8f06571ce52445b2a2d9c2bb6178e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047856"
 ---
 # <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47837930"
 |**completed_ios_count**|**int**|ホスト経由で発行され、完了した I/O の合計数。|  
 |**completed_ios_in_bytes**|**bigint**|ホスト経由で完了した I/O の合計バイト数。|  
 |**active_ios_count**|**int**|現在完了を待機しているホストに関連する I/O 要求の合計数。|  
-|**default_memory_clerk_address**|**varbinary(8)**|ホストに関連付けられているメモリ クラーク オブジェクトのメモリ アドレス。 詳細については、[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)を参照してください。|  
+|**default_memory_clerk_address**|**varbinary(8)**|ホストに関連付けられているメモリ クラーク オブジェクトのメモリ アドレス。 詳細については、次を参照してください。 [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)します。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可

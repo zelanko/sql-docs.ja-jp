@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155327"
 ---
 # <a name="saving-reports-report-builder"></a>レポートの保存 (レポート ビルダー)
   レポート ビルダーでは、自分が書き込み権限を持っているレポート サーバー、SharePoint ライブラリ、またはファイル共有、あるいは自分のコンピューターにレポートを保存できます。 レポートは、レポートを開いた場所に保存することも、別の場所に保存することもできます。また、新しい名前を付けてそれらの場所に保存することもできます。 既定では、レポートは、レポートを開いた場所に再保存されます。 レポートを保存する場合、実際に保存されるのは、レポート レイアウトを記述したレポート定義です。 データは保存されません。 レポートを実行するたびにレポート データは更新され、ほとんどの場合、前回の実行時とは異なります。  

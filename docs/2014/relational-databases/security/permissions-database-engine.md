@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128762"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 ここでは、次の情報について説明します。  
@@ -107,10 +107,10 @@ ms.locfileid: "53355013"
 |Del|シノニム<br /><br /> テーブル、列<br /><br /> ビュー、列|  
 |EXECUTE|プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シノニム<br /><br /> CLR 型|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー|  
-|VIEW DEFINITION|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> Views<br /><br /> シーケンス オブジェクト|  
-|ALTER|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シーケンス オブジェクト<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> Views|  
-|TAKE OWNERSHIP|可用性グループ<br /><br /> ロール<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> サーバー ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> Views<br /><br /> シーケンス オブジェクト|  
-|CONTROL|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> Views<br /><br /> シーケンス オブジェクト|  
+|VIEW DEFINITION|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|ALTER|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> シーケンス オブジェクト<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー|  
+|TAKE OWNERSHIP|可用性グループ<br /><br /> ロール<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> サーバー ロール<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
+|CONTROL|可用性グループ<br /><br /> プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ログイン、ユーザー、ロール<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー<br /><br /> シノニム<br /><br /> テーブル<br /><br /> テーブル値関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)<br /><br /> ビュー<br /><br /> シーケンス オブジェクト|  
 |IMPERSONATE|ログイン、ユーザー|  
   
 > [!CAUTION]  

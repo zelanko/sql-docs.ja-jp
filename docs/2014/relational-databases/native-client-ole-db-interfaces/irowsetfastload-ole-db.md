@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35cee52e9a85989123bcb10d998d37ce86a28601
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209814"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
   `IRowsetFastLoad`インターフェイスのサポートを公開する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリベースの一括コピー操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーでは、インターフェイスを使用して、迅速にデータを追加すると、既存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。  

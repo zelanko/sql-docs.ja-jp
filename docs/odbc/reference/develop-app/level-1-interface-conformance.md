@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213487"
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスの適合性
 レベル 1 インターフェイスの適合性レベルには、コア インターフェイスへの準拠レベルの機能に加えて、OLTP のリレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 インターフェイスに準拠のドライバーにより、アプリケーションは、コア インターフェイスの適合性レベルで機能に加え、次の操作します。  

@@ -12,19 +12,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224519"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 関数
 **準拠**  
- ODBC 3.8 にバージョンが導入されています。  
+ バージョンが導入されました。ODBC 3.8  
   
- 標準への準拠: なし  
+ 標準への準拠:なし  
   
- **概要**  
+ **まとめ**  
  **SQLAsyncNotificationCallback**ドライバーに SQL_STILL_EXECUTING が返された後に、現在の非同期操作のいくつかの進行状況がある場合に、ドライバー マネージャーをコールバックするためのドライバーを使用します。 **SQLAsyncNotificationCallback**だけで、ドライバーによって呼び出されることができます。  
   
  ドライバーは呼び出さないでください**SQLAsyncNotificationCallback**関数の名前を持つ**SQLAsyncNotificationCallback**します。 代わりに、ドライバー マネージャーは、関数のポインターを渡しますドライバーに対応する接続ハンドルまたはステートメントのハンドルの SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK または SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 属性の値としてそれぞれします。 別のハンドルには、別の関数ポインターの値を割り当てることができます。 関数ポインターの型は、SQL_ASYNC_NOTIFICATION_CALLBACK として定義されます。  

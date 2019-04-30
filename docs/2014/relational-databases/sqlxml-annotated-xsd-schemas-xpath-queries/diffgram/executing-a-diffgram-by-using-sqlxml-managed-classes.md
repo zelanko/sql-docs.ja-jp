@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 42bde038458e817ad572e8b5049e13acb60a49af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127799"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML マネージド クラスを使用した、DiffGram の実行
   この例で DiffGram ファイルを実行する方法を示しています、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]データを適用する .NET Framework 環境に更新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) を使用してテーブルします。  
@@ -52,7 +52,7 @@ ms.locfileid: "52806014"
 </ROOT>  
 ```  
   
- **\<する前に >** ブロックが含まれています、 **\<顧客 >** 要素 (**diffgr:id ="Customer1"**)。  **\<DataInstance >** ブロックに含まれる、対応する**\<顧客 >** 要素と同じ**id**します。**\<顧客 >** 内の要素、  **\<NewDataSet >** も指定**diffgr:hasChanges ="modified"** します。 これは更新操作であることを示し、Cust テーブルの顧客レコードは指定に従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視されます、および更新は実行されません。  
+ **\<する前に >** ブロックが含まれています、 **\<顧客 >** 要素 (**diffgr:id ="Customer1"**)。 **\<DataInstance >** ブロックに含まれる、対応する **\<顧客 >** 要素と同じ **id**します。**\<顧客 >** 内の要素、 **\<NewDataSet >** も指定 **diffgr:hasChanges ="modified"** します。 これは更新操作であることを示し、Cust テーブルの顧客レコードは指定に従って更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視されます、および更新は実行されません。  
   
  次にアプリケーションのコードを c# チュートリアル SQLXML マネージ クラスを使用して、上の DiffGram を実行しで作成することも、2 つのテーブル (Cust、Ord) を更新する方法を示す、 **tempdb**データベース。  
   

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f45e6124dbbad79802e290f935ccc6f3f45cee0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144406"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>クライアント接続におけるサービス プリンシパル名 (SPN) (ODBC)
   ここでは、クライアント アプリケーションのサービス プリンシパル名 (SPN) をサポートする ODBC 属性および関数について説明します。 クライアント アプリケーションでの Spn の詳細についてを参照してください[サービス プリンシパル名&#40;SPN&#41;のクライアント接続のサポート](../features/service-principal-name-spn-support-in-client-connections.md)と[相互の Kerberos 認証を取得する](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md)。  

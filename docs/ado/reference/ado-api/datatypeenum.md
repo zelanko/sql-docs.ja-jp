@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc18212852954accfddd9f3082b5c8f8a5485b58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140283"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 データ型を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)します。 次の表の説明 列では、かっこは、対応する OLE DB 型インジケーターに表示されます。  

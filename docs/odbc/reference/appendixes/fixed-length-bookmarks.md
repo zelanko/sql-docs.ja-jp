@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e40947dc4dbad0830444870ea7e2d0c663490b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188970"
 ---
 # <a name="fixed-length-bookmarks"></a>固定長のブックマーク
 場合、ODBC 3 *.x*ドライバーは ODBC 2 を使用する必要があります *。x*アプリケーションは固定長のブックマーク、ドライバーが、次をサポートする必要があります。  

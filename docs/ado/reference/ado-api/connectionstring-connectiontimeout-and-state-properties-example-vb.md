@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4490edc175b14beb51b26edb205a0ace57f4ff0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140070"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、および状態のプロパティの例 (VB)
 この例を使用してさまざまな方法を示しています、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを開き、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)接続タイムアウトを設定するプロパティと[状態](../../../ado/reference/ado-api/state-property-ado.md)接続の状態を確認するプロパティ。 GetState 関数は、この手順を実行する必要があります。  

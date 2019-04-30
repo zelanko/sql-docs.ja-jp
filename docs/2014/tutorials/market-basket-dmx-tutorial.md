@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185644"
 ---
 # <a name="market-basket-dmx-tutorial"></a>マーケット バスケット DMX のチュートリアル
   このチュートリアルでは、作成、トレーニング、およびデータ マイニング拡張機能 (DMX) クエリ言語を使用してマイニング モデルを調査する方法を学びます。 その後、このマイニング モデルを使用して、同時に購入される傾向が高い製品を示す予測を作成します。  
@@ -75,7 +75,7 @@ ms.locfileid: "56027528"
   
  1 つのマイニング構造に複数のマイニング モデルを追加すると、いくつかの作業に役立ちます。 たとえば、異なるアルゴリズムを使用して複数のマイニング モデルを作成し、最適なアルゴリズムを見つけ出すことができます。 または、同じのアルゴリズムを使用して複数のマイニング モデルの作成がパラメーターを持つでそのパラメーターの最適な設定を検索するには、各マイニング モデルを異なる方法で設定する可能性があります。  
   
- 詳細については、[ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)を参照してください。  
+ 詳細については、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)します。  
   
  このチュートリアルでは複数のマイニング モデルを含むマイニング構造を作成します。したがって、2 つ目の方法を使用します。  
   

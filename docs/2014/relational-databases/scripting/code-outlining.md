@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c109b96192112a914b06748654c5a7e1510569e0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209568"
 ---
 # <a name="code-outlining"></a>コードのアウトライン表示
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターのアウトライン機能を使用して、クエリの編集時にコードを選択して非表示にすることができます。 これにより、特に大きなクエリ ファイルでは、作業中のコードを見やすくすることができます。  

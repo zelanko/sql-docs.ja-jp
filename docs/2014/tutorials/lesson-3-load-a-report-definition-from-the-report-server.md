@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042518"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>レッスン 3: レポート サーバーからレポート定義を読み込む
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>レッスン 3: レポート サーバーからのレポート定義の読み込み
   プロジェクトを作成し、RDL スキーマからクラスを生成すると、レポート定義をレポート サーバーから読み込めるようになります。  
   
 ### <a name="to-load-a-report-definition"></a>レポート定義を読み込むには  
@@ -97,7 +97,7 @@ ms.locfileid: "56025643"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、レポート サーバーから読み込んだレポート定義を更新するコードを記述します。 参照してください[レッスン 4。レポート定義をプログラムで更新](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)します。  
+ 次のレッスンでは、レポート サーバーから読み込んだレポート定義を更新するコードを記述します。 「[レッスン 4:レポート定義をプログラムで更新](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)します。  
   
 ## <a name="see-also"></a>参照  
  [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

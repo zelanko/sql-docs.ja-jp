@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046254"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プログラムで両方のパスワードの有効期限の処理 Native Client では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー、およびを変更して、**SQL Server ログイン** ダイアログ ボックス。  
@@ -86,7 +86,7 @@ ms.locfileid: "53370494"
   
  パスワード変更の試行が予期せず失敗すると、サーバーからエラー コード 18468 が返されます。 接続試行からは標準の OLE DB エラーが返されます。  
   
- DBPROPSET_SQLSERVERDBINIT プロパティ セットの詳細については、[初期化プロパティと承認プロパティ](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)を参照してください。  
+ DBPROPSET_SQLSERVERDBINIT プロパティ セットの詳細については、次を参照してください。[初期化プロパティと承認プロパティ](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)します。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがユーザー インターフェイスのパスワードの有効期限をサポートしていると、プログラムを使用します。  

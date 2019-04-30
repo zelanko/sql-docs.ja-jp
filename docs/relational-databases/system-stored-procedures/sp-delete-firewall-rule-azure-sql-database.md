@@ -20,16 +20,16 @@ ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 406f94ab0ab2d0ebaddf9635448e364bf90ceb8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032778"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーからサーバー レベルのファイアウォール設定を削除します。 このストアド プロシージャは、サーバー レベルのプリンシパルのログインのみが master データベースのみで使用できます。  
+  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーからサーバー レベルのファイアウォール設定を削除します。 このストアド プロシージャは、サーバー レベル プリンシパル ログインに master データベースにできるだけです。  
 
   
 ## <a name="syntax"></a>構文  
@@ -40,19 +40,19 @@ sp_delete_firewall_rule [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- ストアド プロシージャの引数は次のとおりです。  
+ ストアド プロシージャの引数です。  
   
  [@name =] '*名前*'  
- 削除するサーバー レベルのファイアウォール設定の名前。 *名前*は**nvarchar (128)** 既定値はありません。  
+ サーバー レベルのファイアウォール設定の名前は削除されます。 *名前*は**nvarchar (128)** 既定値はありません。  
   
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースにログイン テーブルの最新バージョンがあることを確認するには、[DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
- サーバー レベルのファイアウォール ルールを削除できるのは、準備プロセスによって作成されるサーバー レベルのプリンシパルのログインだけです。 ユーザーは、sp_delete_firewall_rule を実行する master データベースに接続する必要があります。  
+ サーバー レベル プリンシパル ログインだけプロビジョニング プロセスによって作成されるには、サーバー レベルのファイアウォール ルールを削除できます。 ユーザーは、sp_delete_firewall_rule を実行する master データベースに接続する必要があります。  
   
 ## <a name="example"></a>例  
- 次の例は、'Example setting 1' という名前のサーバー レベルのファイアウォール設定を削除します。 仮想 master データベースでは、ステートメントを実行します。  
+ 次の例では、サーバー レベルのファイアウォール 'Example setting 1' という名前の設定を削除します。 仮想 master データベースでは、ステートメントを実行します。  
   
 ```   
 EXEC sp_delete_firewall_rule N'Example setting 1';   

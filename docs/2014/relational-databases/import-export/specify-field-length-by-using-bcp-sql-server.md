@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154873"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
   フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、`int` データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp**コマンドによってフィールド長、既定のフィールド長、および含んでいるデータ ファイル内のデータ ストレージに対するフィールド長の影響のプロンプトが`char`データ。  

@@ -16,18 +16,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a26b9caa7b6ba54238ef5436cafb472e2d53010a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207751"
 ---
 # <a name="creating-script-files-sybasetosql"></a>スクリプト ファイルの作成 (SybaseToSQL)
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
   
 スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
   
-1.  **構成:** コンソール アプリケーションの構成パラメーターを設定するユーザーを有効にします。  
+1.  **config:** コンソール アプリケーションの構成パラメーターを設定するユーザーを有効にします。  
   
 2.  **サーバー:** ソース/ターゲットのサーバー定義を設定するユーザーを有効にします。 別のサーバー接続ファイルにこのことができます。  
   

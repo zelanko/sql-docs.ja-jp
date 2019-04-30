@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cefdb81aa9e9a1a5f7ad7ba1f6db86d1ae95e2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161735"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>レコードセットの切断と再接続
 ADO で検出された最も強力な機能の 1 つは、データ ソースからクライアント側のレコード セットを開いて、データ ソースからレコード セットを切断する機能です。 レコード セットを切断すると、データ ソースへの接続をするを閉じることが、それを維持するために使用されるサーバー上のリソースを解放します。 表示して、切断されているときに、レコード セット内のデータを編集し、後で、データ ソースに再接続し、バッチ モードで、更新を送信できます。  

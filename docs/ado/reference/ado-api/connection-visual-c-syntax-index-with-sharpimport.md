@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bafba8f62f5e5120cb593bc7620e74056224271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140142"
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>接続 (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -41,7 +41,7 @@ _RecordsetPtr OpenSchema( enum SchemaEnum Schema, const
     SchemaID = vtMissing );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _bstr_t GetConnectionString( );  

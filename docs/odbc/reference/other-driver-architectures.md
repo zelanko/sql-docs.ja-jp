@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd051d018cb6f53b8c08110e26bc66910e3ca4c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045531"
 ---
 # <a name="other-driver-architectures"></a>その他のドライバーのアーキテクチャ
 一部の ODBC ドライバーは、前に説明したアーキテクチャに厳密に準拠しません。 ドライバーは、従来の ODBC ドライバーでは、以外の作業を実行または通常の意味でのドライバーではない可能性があります。  

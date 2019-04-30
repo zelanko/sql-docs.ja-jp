@@ -12,25 +12,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181292"
 ---
 # <a name="odbc-appendixes"></a>ODBC の付録
 次の付録では、Microsoft ODBC インターフェイスに関連する技術的な詳細が含まれています。  
   
--   [付録 A: ODBC のエラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [付録 a:ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [付録 B: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [付録 b:ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [付録 C: SQL の文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [付録 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
--   [付録 E: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
+-   [付録 e:スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   
--   [付録 F: ODBC カーソル ライブラリ](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
+-   [付録 f:ODBC カーソル ライブラリ](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
--   [付録 G: ドライバーの下位互換性のガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
+-   [付録 g:旧バージョンとの互換性のためのドライバーのガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)

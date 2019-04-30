@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45d823defd67d4b9cb95d01e3ffdf0cad7c2c6b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125488"
 ---
 # <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  名前、型、有効桁数、スケール、および指定された結果の列の null 値を返します。  
   
- 詳細については、[SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)で、 *ODBC プログラマ リファレンス*します。

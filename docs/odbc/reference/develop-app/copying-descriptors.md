@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042758"
 ---
 # <a name="copying-descriptors"></a>記述子のコピー
 **SQLCopyDesc**記述子が 1 つのフィールドを別の識別子にコピーする関数が呼び出されます。 フィールドは、IRD ではなく、アプリケーション記述子をまたは、IPD にのみコピーできます。 フィールドは、任意の型記述子からコピーすることができます。 ソースとターゲットの両方の記述子に対して定義されているフィールドのみがコピーされます。 **SQLCopyDesc**記述子の割り当ての種類を変更できないため、SQL_DESC_ALLOC_TYPE フィールドはコピーされません。 コピーしたフィールドは、既存のフィールドを上書きします。  

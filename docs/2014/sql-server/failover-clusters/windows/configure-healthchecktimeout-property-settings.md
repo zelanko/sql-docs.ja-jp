@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049500"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout プロパティ設定の構成
   HealthCheckTimeout 設定を使用して、SQL Server リソース DLL がによって返される情報を待機するミリ秒単位で時間の長さを指定する、 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)ストアド プロシージャを報告する前に、AlwaysOn フェールオーバー クラスター インスタンス (FCI) は応答不能とします。 タイムアウトの設定に加えられた変更は直ちに有効になり、SQL Server リソースを再起動する必要はありません。  
   
--   **作業を開始する準備:**[制限事項と制約](#Limits)、[セキュリティ](#Security)  
+-   **作業を開始する準備:**[制限事項と制約事項](#Limits)、[セキュリティ](#Security)  
   
 -   **HeathCheckTimeout 設定を構成するには。**[PowerShell](#PowerShellProcedure)、[フェールオーバー クラスター マネージャー](#WSFC)、 [TRANSACT-SQL](#TsqlProcedure)  
   

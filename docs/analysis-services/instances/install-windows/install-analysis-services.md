@@ -1,5 +1,5 @@
 ---
-title: Analysis Services のインストール |Microsoft ドキュメント
+title: Analysis Services のインストール |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054540"
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services をインストールします。
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  SQL Server Analysis Services は、表形式モデル、多次元キューブ、およびレポート、スプレッドシート、およびダッシュ_ボードからアクセスできるデータ マイニング モデルをホストする分析データベース サーバーです。  
+  SQL Server Analysis Services は、表形式モデル、多次元キューブ、およびレポート、スプレッドシート、およびダッシュ ボードからアクセスできるデータ マイニング モデルをホストする分析データベース サーバーです。  
   
- Analysis Services は、複数のインスタンスが 1 台のコンピューターに複数のコピーをインストールまたは新しいバージョンと古いバージョンを同時に実行できます。 インストールしたすべてのインスタンスは、セットアップ時に決定される 3 つのモード: 多次元およびデータ マイニング、表形式、または SharePoint のいずれかで実行されます。 複数のモードを使用する場合は、それぞれに個別のインスタンスが必要です。  
+ Analysis Services は、複数のインスタンスが 1 台のコンピューターに複数のコピーをインストールまたは新旧バージョンを並列に実行できます。 インストールする任意のインスタンスは、セットアップ時に決定される 3 つのモードのいずれかで実行されます。多次元およびデータ マイニング、表形式、または SharePoint。 複数のモードを使用する場合は、それぞれに個別のインスタンスが必要です。  
   
  特定のモードでサーバーをインストールすると、そのモードに準拠しているホスト ソリューションを使用できます。 たとえば、ネットワーク上で表形式モデルのデータにアクセスする場合は、表形式モードのサーバーが必要です。  
   
@@ -31,22 +31,22 @@ ms.locfileid: "34708080"
   
 -   [SQL Server Data Tools (SSDT) のダウンロード](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
- SSMS および SSDT が Analysis Services インスタンスとデータを操作する必要があります。 ツールは、どこにでもインストールできますが、接続を試行する前に、サーバー上のポートを構成することを確認します。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 」を参照してください。  
+ SSMS と SSDT が Analysis Services インスタンスとデータを操作する必要があります。 ツールは、どこにでもインストールできますが、接続を試行する前に、サーバーでポートを構成してください。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 」を参照してください。  
   
 ## <a name="install-using-a-wizard"></a>ウィザードを使用したインストール  
  Analysis Services をインストールする場合に使用する SQL Server インストール ウィザードのページを次の一覧に示します。  
   
 1.  セットアップの機能ツリーで **[Analysis Services]** をクリックします。  
   
-     ![セットアップの機能ツリーを示す Analsyis Services](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "Analsyis Services を示すセットアップの機能ツリー")  
+     ![セットアップの機能ツリー Analsyis サービスを示す](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "Analsyis サービスを示すセットアップの機能ツリー")  
   
-2.  Analysis Services の構成 ページで、モードを選択します。 表形式モードでは、既定値です。  
+2.  Analysis Services の構成 ページで、モードを選択します。 表形式モードでは、既定値が、.  
   
-     ![Analysis Services 構成オプションのセットアップ ページ](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "Analysis Services 構成オプションのセットアップ ページ")  
+     ![Analysis Services の構成オプションを使用してセットアップ ページ](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "Analysis Services の構成オプションを使用してセットアップ ページ")  
   
-  表形式モードでは、表形式モデルの既定のストレージです、xVelocity メモリ内分析エンジン (VertiPaq) を使用します。 サーバーに表形式モデルを配置した後は、メモリ バインド ストレージする代わりに DirectQuery ディスク ストレージを使用する表形式ソリューションを選択的に構成できます。  
+  表形式モードでは、表形式モデルの既定のストレージには、xVelocity メモリ内分析エンジン (VertiPaq) を使用します。 サーバーに表形式モデルを配置した後は、メモリ負荷の高いストレージする代わりに DirectQuery ディスク ストレージを使用する表形式ソリューションを選択的に構成できます。  
  
- 多次元およびデータ マイニング モードとして使用する MOLAP、既定のストレージの Analysis Services に配置されたモデルです。 サーバーへの展開後、Analysis Services 多次元データベースにクエリ データを格納する代わりに、リレーショナル データベースに対してクエリを直接実行する場合は、ROLAP を使用するようにソリューションを構成できます。  
+ 多次元およびデータ マイニング モードの使用 MOLAP 既定のストレージとしての Analysis Services に配置されたモデル。 サーバーへの展開後、Analysis Services 多次元データベースにクエリ データを格納する代わりに、リレーショナル データベースに対してクエリを直接実行する場合は、ROLAP を使用するようにソリューションを構成できます。  
   
 
   
@@ -68,7 +68,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |値|説明|  
 |-----------|-----------------|  
-|TABULAR|これが既定値です。 設定しない場合**ASSERVERMODE**、表形式モードでは、サーバーをインストールします。|
+|TABULAR|これが既定値です。 設定しない場合**ASSERVERMODE**、表形式モードで、サーバーがインストールされます。|
 |MULTIDIMENSIONAL|この値は省略可能です。|  
 |POWERPIVOT|この値は省略可能です。 実際には、 **ROLE** パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に **の** ASSERVERMODE [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] が省略可能になります。 詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)」を参照してください。|  
   

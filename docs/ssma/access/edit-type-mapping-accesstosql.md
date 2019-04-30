@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2bbe1636db483ad24f7744fe4d9902c520e07dbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138876"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>型のマッピング (AccessToSQL) の編集します。
 **型マッピングの編集** ダイアログ ボックスでは、ソースと変換先のデータベース オブジェクトの間で型をマップする方法を指定することができます。  

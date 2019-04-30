@@ -16,17 +16,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 35ae7fec6e2a5800ec82e815b2b7bc3cdc4f8926
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131292"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0 での XPath クエリの使用
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では注釈付き XSD スキーマがサポートされており、データベースに格納されているリレーショナル データの XML ビューを作成できます。 XPath 言語のサブセットを使用すると、注釈付き XSD スキーマで作成された XML ビューに対してクエリを実行できます。  
   
 > [!NOTE]  
->  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)を参照してください。 XPath の詳細についてを参照してください、World Wide Web Consortium (W3C) によって定義されている XPath 標準 http://www.w3.org/TR/xpath します。  
+>  SQLXML 4.0 の XPath クエリを理解するには、XML ビューと、それに関連するテンプレートやマッピング スキーマなどの概念について理解している必要があります。 詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)します。 XPath の詳細についてを参照してください、World Wide Web Consortium (W3C) によって定義されている XPath 標準 http://www.w3.org/TR/xpath します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [XPath クエリの使用の概要&#40;SQLXML 4.0&#41;](introduction-to-using-xpath-queries-sqlxml-4-0.md)  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127982"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>エラー メッセージ (Visual FoxPro ODBC ドライバー)
 エラーが発生する場合、Visual FoxPro ドライバーは、次の情報を返します。  
@@ -33,17 +33,17 @@ ms.locfileid: "47804420"
  呼び出すことによってこのエラーの情報にアクセスする[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)します。  
   
 ## <a name="native-errors"></a>ネイティブ エラー  
- データ ソースで発生するエラーの場合は、Visual FoxPro ドライバーは、ネイティブ エラー番号とエラー メッセージ テキストを返します。 ネイティブ エラー番号の一覧は、[Visual FoxPro ODBC ドライバー ネイティブのエラー メッセージ](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)を参照してください。  
+ データ ソースで発生するエラーの場合は、Visual FoxPro ドライバーは、ネイティブ エラー番号とエラー メッセージ テキストを返します。 ネイティブ エラー番号の一覧は、次を参照してください。 [Visual FoxPro ODBC ドライバー ネイティブのエラー メッセージ](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)します。  
   
 ## <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC エラー コード)  
  検出され、Visual FoxPro ドライバーによって返されるエラーの場合は、ドライバーは、返されたネイティブ エラー番号を適切な SQLSTATE にマップします。 ネイティブ エラー番号にマップする ODBC エラー コードを持たない場合、Visual FoxPro ドライバーは SQLSTATE S1000 を返します (一般的なエラー)。  
   
- 対応する Visual FoxPro エラー Visual FoxPro ODBC ドライバーによって生成された、SQLSTATE 値の一覧は、[ODBC エラー コード](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)を参照してください。  
+ 対応する Visual FoxPro エラー Visual FoxPro ODBC ドライバーによって生成された、SQLSTATE 値の一覧は、次を参照してください。 [ODBC エラー コード](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)します。  
   
 ## <a name="syntax"></a>構文  
  エラー メッセージには、次の形式があります。  
   
- **[** *ベンダー* **] [** *ODBC_component* **]** *error_message*  
+ **[** *vendor* **][** *ODBC_component* **]** *error_message*  
   
  角かっこ () 内のプレフィックスは、次の表で定義されているように、エラーの原因を確認します。  
   
@@ -54,4 +54,4 @@ ms.locfileid: "47804420"
   
  たとえば、Visual FoxPro ODBC ドライバーがファイル employee.dbf を見つけられなかった場合、次のエラー メッセージを返す可能性があります。  
   
- "[*Microsoft*] [*ODBC Visual FoxPro ドライバー*] 'employee.dbf' ファイルが存在しない"
+ "[*Microsoft*][*ODBC Visual FoxPro Driver*]File 'employee.dbf' does not exist"

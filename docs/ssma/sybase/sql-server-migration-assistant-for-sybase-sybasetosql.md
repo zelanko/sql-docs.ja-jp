@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 82de3d69201a26980936172b2b08dcda9900b7a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214512"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server の Migration Assistant for Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Sybase Adaptive Server Enterprise (ASE) は、ASE データベースへの移行のためのツール[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 または[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 または[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 または[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 または[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 または[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 Windows と Linux (プレビュー) または[!INCLUDE[msCoName](../../includes/msconame_md.md)]Azure SQL DB します。 SSMA for Sybase ASE データベース オブジェクトを変換します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でこれらのオブジェクトを作成します。 データベース オブジェクトを、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL、する ASE からのデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL。  

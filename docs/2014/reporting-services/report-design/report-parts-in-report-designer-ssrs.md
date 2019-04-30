@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70a4cdef25a096f4ff0514f169839df482e9f4b3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215366"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>レポート デザイナーでのレポート パーツ (SSRS)
   レポート デザイナーで、プロジェクトのテーブル、グラフ、および他のレポート アイテムを作成した後、それらを *レポート パーツ* として、レポート サーバーまたはレポート サーバーと統合されている SharePoint サイトにパブリッシュできます。これにより、自分や他のユーザーが、それらのレポート パーツを別のレポートで再利用できるようになります。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065467"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize および DefinedSize プロパティの例 (vc++)
 この例では、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)と[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)定義されたサイズと、フィールドの実際のサイズを表示するプロパティ。  
@@ -129,24 +129,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **ストア名: Eric 読み取りブック**  
-**定義のサイズ: 40**  
-**実際のサイズ: 19**  
-**ストア名: Barnum**  
-**定義のサイズ: 40**  
-**実際のサイズ: 8**  
-**ストア名: ニュースおよび Brews**  
-**定義のサイズ: 40**  
-**実際のサイズ: 12**  
-**ストア名: Doc U マット: 洗濯物の品質とブックの「**  
-**定義のサイズ: 40**  
-**実際のサイズ: 36**  
-**ストア名: Fricative Bookshop**  
-**定義のサイズ: 40**  
-**実際のサイズ: 18**  
-**ストア名: Bookbeat**  
-**定義のサイズ: 40**  
-**実際のサイズ: 8**   
+ **ストア名:Eric 読み取りブック**  
+**定義されているサイズ:40**  
+**実際のサイズ:19**  
+**ストア名:Barnum**  
+**定義されているサイズ:40**  
+**実際のサイズ:8**  
+**ストア名:ニュースおよび Brews**  
+**定義されているサイズ:40**  
+**実際のサイズ:12**  
+**ストア名:Doc-U-Mat:洗濯物の品質とブックの「**  
+**定義されているサイズ:40**  
+**実際のサイズ:36**  
+**ストア名:Fricative Bookshop**  
+**定義されているサイズ:40**  
+**実際のサイズ:18**  
+**ストア名:Bookbeat**  
+**定義されているサイズ:40**  
+**実際のサイズ:8**   
 ## <a name="see-also"></a>参照  
  [ActualSize プロパティ (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize プロパティ](../../../ado/reference/ado-api/definedsize-property.md)

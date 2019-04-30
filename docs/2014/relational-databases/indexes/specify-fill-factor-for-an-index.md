@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036233"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>インデックスの FILL FACTOR の指定
   このトピックでは、FILL FACTOR について説明すると共に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]のインデックスの FILL FACTOR 値を指定する方法について説明します。  

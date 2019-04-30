@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30ec1817d4f22ff8ee23746f925943397981382f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046923"
 ---
 # <a name="aggregate-functions---count"></a>集計関数 - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ fn:count($arg as item()*) as xs:integer
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. count() XQuery 関数を使用して、ある製品モデルを製造するワーク センターの場所の数をカウントする  
- 次のクエリでは、ある製品モデル (ProductModelID=7) の製造プロセスでのワーク センターの場所の数をカウントします。  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Count() XQuery 関数を使用して製品モデルの製造作業センターの場所の数をカウントするには  
+ 次のクエリは、製品モデルの製造プロセス内でのワーク センターの場所の数をカウント (ProductModelID = 7)。  
   
 ```  
 SELECT Production.ProductModel.ProductModelID,   
@@ -63,9 +63,9 @@ WHERE Production.ProductModel.ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   **名前空間**キーワード[XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)名前空間プレフィックスを定義します。 このプレフィックスは XQuery の本文で使用されます。  
+-   **名前空間**キーワード[XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)名前空間プレフィックスを定義します。 プレフィックスは、XQuery の本文では使用されます。  
   
--   <`NoOfWorkStations`> 要素を含んだ XML が構成されます。  
+-   クエリに XML を構築、<`NoOfWorkStations`> 要素。  
   
 -   **Count()** 関数、XQuery の本文のカウント数 <`Location`> 要素。  
   

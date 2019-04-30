@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047192"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サーバーのアドレス空間に読み込まれたモジュールごとに 1 行のデータを返します。  
+  サーバーのアドレス空間に読み込まれたモジュールごとに 1 行を返します。  
   
 > [!NOTE]  
 >  これから[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_loaded_modules**します。  
@@ -40,14 +40,14 @@ ms.locfileid: "47794320"
 |**file_version**|**varchar(23)**|ファイルのバージョン。 次の形式で表示されます。<br /><br /> x.x:x.x|  
 |**product_version**|**varchar(23)**|製品のバージョンです。 次の形式で表示されます。<br /><br /> x.x:x.x|  
 |**debug**|**bit**|1 = モジュールは読み込まれたモジュールのデバッグ バージョンです。|  
-|**修正プログラムを適用**|**bit**|1 = モジュールは修正済みです。|  
+|**修正プログラムを適用**|**bit**|1 = モジュールは修正プログラムが適用されています。|  
 |**プレリリース版**|**bit**|1 = モジュールは読み込まれたモジュールのプレリリース バージョンです。|  
 |**private_build**|**bit**|1 = モジュールは読み込まれたモジュールの個人用ビルドです。|  
-|**special_build**|**bit**|1 = モジュールは読み込まれたモジュールの特別なビルドです。|  
-|**言語**|**int**|モジュールのバージョン情報の言語。|  
-|**company**|**nvarchar (256)**|モジュールを作成した会社名。|  
+|**special_build**|**bit**|1 = モジュールは読み込まれたモジュールの特別なビルドします。|  
+|**language**|**int**|モジュールのバージョン情報の言語。|  
+|**company**|**nvarchar (256)**|モジュールを作成した会社の名前。|  
 |**description**|**nvarchar (256)**|モジュールの説明。|  
-|**name**|**nvarchar (255)**|モジュールの名前。 モジュールの完全なパスを含みます。|  
+|**name**|**nvarchar (255)**|モジュールの名前。 モジュールの完全なパスが含まれています。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  

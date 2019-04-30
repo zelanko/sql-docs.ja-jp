@@ -1,5 +1,5 @@
 ---
-title: Members (セット) (MDX) |Microsoft ドキュメント
+title: Members (セット) (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bd4fe92c064f4665a4b397e47a45ae5bde50f39
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048451"
 ---
 # <a name="members-set-mdx"></a>Members (セット) (MDX)
 
 
-  ディメンション、レベル、階層のメンバーのセットを返します。  
+  ディメンション、レベル、または階層でメンバーのセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,18 +34,18 @@ Level_Expression.Members
   
 ## <a name="arguments"></a>引数  
  *Hierarchy_Expression*  
- 階層を返す有効な多次元式 (MDX) 式です。  
+ 階層を返す有効な多次元式 (MDX) 式。  
   
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式です。  
+ レベルを返す有効な多次元式 (MDX) 式。  
   
 ## <a name="remarks"></a>コメント  
- 階層式が指定されている場合、 **Members (セット)** 関数は、計算されるメンバーを除く、指定された階層内のすべてのメンバーのセットを返します。 すべてのメンバー、計算のセットを取得またはそれ以外の場合、階層を使用する、 [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md)関数  
+ 階層式が指定されている場合、 **Members (セット)** 関数は、計算されるメンバーを含まない、指定された階層内のすべてのメンバーのセットを返します。 すべてのメンバー、計算のセットを取得またはそれ以外の場合、階層を使用して、 [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md)関数  
   
  レベル式が指定されている場合、 **Members (セット)** 関数は、指定されたレベル内のすべてのメンバーのセットを返します。  
   
 > [!IMPORTANT]  
->  階層がディメンション内に 1 つしかない場合は、ディメンション名がその唯一の階層に解決されるので、ディメンション名または階層名でその階層を参照できます。 たとえば Measures.Members は、Measures ディメンション内の唯一の階層に解決されるため、有効な MDX 式です。  
+>  ディメンションに表示されている 1 つの階層のみが含まれている場合、階層を構成できますディメンション名または階層の名前をこのシナリオでは、ディメンション名はそののみ表示される階層に解決されるためです。 たとえば、Measures.Members は、Measures ディメンション内の唯一の階層に解決されるため、有効な MDX 式です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、Adventure Works キューブの Calendar Year 階層のすべてのメンバーのセットを返しています。  
@@ -71,7 +71,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

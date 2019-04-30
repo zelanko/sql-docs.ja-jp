@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1738c7432dce6538fe15c4b23f15f5ab7fe6f219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161536"
 ---
 # <a name="handling-ado-events"></a>ADO イベントの処理
 ADO イベント モデルを発行する特定同期および非同期 ADO 操作をサポートしています*イベント*、または、操作を開始する前に、または完了後に、通知します。 イベントは、実際には、アプリケーションで定義するイベント ハンドラー ルーチンの呼び出しです。  

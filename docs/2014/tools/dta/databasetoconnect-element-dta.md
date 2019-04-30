@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185415"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 要素 (DTA)
   データベース エンジン チューニング アドバイザーがワークロードのチューニング時に最初に接続するデータベースを指定します。  

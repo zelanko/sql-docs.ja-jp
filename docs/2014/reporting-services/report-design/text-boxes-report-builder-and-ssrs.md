@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215066"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>テキスト ボックス (レポート ビルダーおよび SSRS)
   テキスト ボックスといえば、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint のように領域にテキストを含むスタンド アロンのボックスを思い浮かべると思います。 レポート ビルダーでは、同じように、タイトル、説明、およびラベルのリテラル テキスト、または式に基づく動的なテキストを表示できます。 ただし、テーブルまたはマトリックス (Tablix データ領域) の各セルにはテキスト ボックスがあり、レポート内のスタンドアロン テキスト ボックスと同じ方法で書式設定することもできます。  

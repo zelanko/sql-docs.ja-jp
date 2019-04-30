@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129833"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 関数
 **準拠**  
@@ -59,7 +59,7 @@ SQLRETURN SQLBindCol(
   
  場合、 *TargetType*引数の SQL_DESC_DATETIME_INTERVAL_PRECISION および SQL_DESC_PRECISION のフィールド セットとして、interval データ型を既定の間隔の主要な精度 (2) と既定の間隔 (秒) の有効桁数 (6) は、それぞれ、ARD データに使用されます。 場合、 *TargetType*引数 SQL_C_NUMERIC、(ドライバー定義) の既定の精度は、ARD の SQL_DESC_PRECISION および SQL_DESC_SCALE フィールドで設定されている既定のスケール (0)、データに使用されます。 呼び出して場合、アプリケーションで明示的に適切な記述子フィールドを設定、既定の有効桁数または小数点が適切でない場合**SQLSetDescField**または**SQLSetDescRec**します。  
   
- 拡張の C データ型を指定することもできます。 詳細については、[ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)を参照してください。  
+ 拡張の C データ型を指定することもできます。 詳細については、次を参照してください。 [ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)します。  
   
  *TargetValuePtr*  
  [遅延の入力/出力]列にバインドするデータ バッファーへのポインター。 **SQLFetch**と**SQLFetchScroll**このバッファーにデータを返します。 **SQLBulkOperations**これでデータを返す場合にバッファー*操作*SQL_FETCH_BY_BOOKMARK; は、これからデータを取得場合にバッファー*操作*SQL_ADD SQL_UPDATE_BY_BOOKMARK か。 **SQLSetPos**これでデータを返す場合にバッファー*操作*SQL_REFRESH; は、これからデータを取得場合にバッファー*操作*SQL_UPDATE が。  
@@ -125,15 +125,15 @@ SQLRETURN SQLBindCol(
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている**SQLBindCol**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数に指定された値 (DM) *BufferLength*が 0 未満でした。<br /><br /> (DM) ドライバーは ODBC 2、でした。*x*ドライバー、 *ColumnNumber*引数が 0、および引数が指定された値に設定された*BufferLength* 4 に等しいでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースの組み合わせで指定された変換をサポートしていません、 *TargetType*引数と対応する列のドライバー固有の SQL データ型。<br /><br /> 引数*ColumnNumber*が 0 と、ドライバーは、ブックマークをサポートしていません。<br /><br /> ドライバーには、ODBC 2 のみがサポートしています。*x*と引数*TargetType*が、次のいずれか。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 間隔の C データ型のいずれかと[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d:データ型。<br /><br /> ドライバーのみ、3.50 と引数の前に ODBC バージョンをサポートする*TargetType* SQL_C_GUID でした。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- **SQLBindCol**に関連付けるには、使用または*バインド、* 結果内の列は、データ バッファーと、アプリケーションで長さ/インジケーター バッファーに設定します。 アプリケーションを呼び出すと**SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**は指定されたバッファーにデータをフェッチするドライバーが、バインドされた列のデータを返します詳細についてを参照してください[SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)します。 アプリケーションを呼び出すと**SQLBulkOperations**を更新または行を挿入または**SQLSetPos**ドライバー行を更新するには、指定したバッファーから、バインドされた列の詳細については、データを取得しますを参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)または[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)します。 バインドの詳細については、[(Basic) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-basic.md)を参照してください。  
+ **SQLBindCol**に関連付けるには、使用または*バインド、* 結果内の列は、データ バッファーと、アプリケーションで長さ/インジケーター バッファーに設定します。 アプリケーションを呼び出すと**SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**は指定されたバッファーにデータをフェッチするドライバーが、バインドされた列のデータを返します詳細についてを参照してください[SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)します。 アプリケーションを呼び出すと**SQLBulkOperations**を更新または行を挿入または**SQLSetPos**ドライバー行を更新するには、指定したバッファーから、バインドされた列の詳細については、データを取得しますを参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)または[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)します。 バインドの詳細については、次を参照してください。 [(Basic) を取得する結果](../../../odbc/reference/develop-app/retrieving-results-basic.md)します。  
   
- そこからデータの取得にバインドする列がないことに注意してください。 アプリケーションを呼び出すことも**SQLGetData**列からデータを取得します。 行と呼び出しで一部の列をバインドすることはできますが**SQLGetData**それ以外の場合これはいくつかの制限によって異なります。 詳細については、[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)を参照してください。  
+ そこからデータの取得にバインドする列がないことに注意してください。 アプリケーションを呼び出すことも**SQLGetData**列からデータを取得します。 行と呼び出しで一部の列をバインドすることはできますが**SQLGetData**それ以外の場合これはいくつかの制限によって異なります。 詳細については、次を参照してください。 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)します。  
   
 ## <a name="binding-unbinding-and-rebinding-columns"></a>列のバインド、バインド解除、および再バインド  
  列のバインド、バインドされていない場合、またはデータが結果セットからフェッチされた後でも、いつでも再バインドできます。 新しいバインドは次回のバインドを使用する関数が呼び出されるとに有効にします。 たとえば、結果セットと呼び出し内の列にバインドするアプリケーション**SQLFetch**します。 ドライバーは、バインドされたバッファーにデータを返します。 ここでアプリケーションのバインドをバッファーの別のセットに列とします。 ドライバーは新しくバインドされたバッファーにだけフェッチされる行のデータを配置していません。 代わりに、まで待機**SQLFetch**が再度呼び出され、新しくバインドされたバッファー内の次の行のデータを配置します。  
@@ -142,9 +142,9 @@ SQLRETURN SQLBindCol(
 >  SQL_ATTR_USE_BOOKMARKS ステートメント属性は、列 0 をバインドする前に常に設定する必要があります。 これは必要ありませんが、強くお勧めします。  
   
 ## <a name="binding-columns"></a>バインディング列  
- 列をバインドするアプリケーションを呼び出す**SQLBindCol**し、列数、種類、アドレス、およびデータ バッファーの長さと長さ/インジケーター バッファーのアドレスを渡します。 これらのアドレスを使用する方法については、このセクションの後半の「バッファー アドレス」を参照してください。 バインド列の詳細については、[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)を参照してください。  
+ 列をバインドするアプリケーションを呼び出す**SQLBindCol**し、列数、種類、アドレス、およびデータ バッファーの長さと長さ/インジケーター バッファーのアドレスを渡します。 これらのアドレスを使用する方法については、このセクションの後半の「バッファー アドレス」を参照してください。 バインド列の詳細については、次を参照してください。[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)します。  
   
- これらのバッファーの使用は延期されます。つまり、アプリケーションがバインドに**SQLBindCol**ドライバーにアクセスしてからその他の関数 - namely が**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**します。 アプリケーションの責任で、ポインターが指定されているかどうかを確認する**SQLBindCol**バインディングが有効な限り、有効なままです。 アプリケーションでは、これらのポインターが無効になる - たとえば、-、バッファーを解放しを有効にすることが必要とする関数を呼び出して、結果は未定義です。 詳細については、[遅延バッファー](../../../odbc/reference/develop-app/deferred-buffers.md)を参照してください。  
+ これらのバッファーの使用は延期されます。つまり、アプリケーションがバインドに**SQLBindCol**ドライバーにアクセスしてからその他の関数 - namely が**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**します。 アプリケーションの責任で、ポインターが指定されているかどうかを確認する**SQLBindCol**バインディングが有効な限り、有効なままです。 アプリケーションでは、これらのポインターが無効になる - たとえば、-、バッファーを解放しを有効にすることが必要とする関数を呼び出して、結果は未定義です。 詳細については、次を参照してください。[遅延バッファー](../../../odbc/reference/develop-app/deferred-buffers.md)します。  
   
  バインディングは、新しいバインドによって置き換えられる、列は、バインドがまたはステートメントが解放されるまで有効です。  
   
@@ -168,7 +168,7 @@ SQLRETURN SQLBindCol(
  バインディングのオフセットを指定するには、アプリケーションは、SQLINTEGER バッファーのアドレスに SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性を設定します。 アプリケーションのバインドを使用する関数を呼び出す前に、このバッファー内のバイトのオフセットを書き込みます。 を使用するバッファーのアドレスを確認するのには、ドライバーは、バインディングのアドレスにオフセットを追加します。 アドレスとオフセットの合計は有効なアドレスである必要がありますが、オフセットを追加するアドレスが有効にする必要はありません。 バインディングのオフセットを使用する方法の詳細については、このセクションの後半の「バッファー アドレス」を参照してください。  
   
 ## <a name="binding-arrays"></a>配列のバインド  
- 行セットのサイズ (SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性の値) が 1 より大きい場合は、アプリケーションは、1 つのバッファーではなくバッファーの配列をバインドします。 詳細については、[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)を参照してください。  
+ 行セットのサイズ (SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性の値) が 1 より大きい場合は、アプリケーションは、1 つのバッファーではなくバッファーの配列をバインドします。 詳細については、次を参照してください。[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)します。  
   
  アプリケーションでは、2 つの方法で配列をバインドできます。  
   
@@ -179,7 +179,7 @@ SQLRETURN SQLBindCol(
  各配列バッファーの行セットのサイズと少なくとも同じ数の要素が必要です。  
   
 > [!NOTE]  
->  アプリケーションは、配置が有効であることを確認する必要があります。 配置に関する考慮事項の詳細については、[配置](../../../odbc/reference/develop-app/alignment.md)を参照してください。  
+>  アプリケーションは、配置が有効であることを確認する必要があります。 配置に関する考慮事項の詳細については、次を参照してください。[配置](../../../odbc/reference/develop-app/alignment.md)します。  
   
 ## <a name="column-wise-binding"></a>列方向のバインド  
  列方向のバインドでは、そのアプリケーションが別のデータと長さ/インジケーター配列を各列にバインドします。  
@@ -203,7 +203,7 @@ SQLRETURN SQLBindCol(
   
     -   *StrLen_or_IndPtr*長さ/インジケーター配列のアドレスです。  
   
- この情報を使用する方法の詳細については、このセクションの後半の「バッファー アドレス」を参照してください。 列方向のバインドの詳細については、[列方向のバインド](../../../odbc/reference/develop-app/column-wise-binding.md)を参照してください。  
+ この情報を使用する方法の詳細については、このセクションの後半の「バッファー アドレス」を参照してください。 列方向のバインドの詳細については、次を参照してください。[列方向のバインド](../../../odbc/reference/develop-app/column-wise-binding.md)します。  
   
 ## <a name="row-wise-binding"></a>行方向のバインド  
  行方向のバインドでは、アプリケーションは、バインドするには、各列のデータと長さ/インジケーター バッファーに格納する構造体を定義します。  
@@ -227,7 +227,7 @@ SQLRETURN SQLBindCol(
   
     -   *StrLen_or_IndPtr*はバインドされる長さ/インジケーターのメンバーのアドレスです。  
   
- この情報を使用する方法の詳細については、このセクションの後半の「バッファー アドレス」を参照してください。 列方向のバインドの詳細については、[行方向のバインド](../../../odbc/reference/develop-app/row-wise-binding.md)を参照してください。  
+ この情報を使用する方法の詳細については、このセクションの後半の「バッファー アドレス」を参照してください。 列方向のバインドの詳細については、次を参照してください。[行方向のバインド](../../../odbc/reference/develop-app/row-wise-binding.md)します。  
   
 ## <a name="buffer-addresses"></a>バッファーのアドレス  
  *バッファーのアドレス*データまたは長さ/インジケーター バッファーの実際のアドレスです。 ドライバーは、(中に取得時間など) をバッファーに書き込む前にだけ、バッファーのアドレスを計算します。 指定されたアドレスを使用して、次の式から算出されます、 *TargetValuePtr*と*StrLen_or_IndPtr*引数、バインディングのオフセット、および行番号。  

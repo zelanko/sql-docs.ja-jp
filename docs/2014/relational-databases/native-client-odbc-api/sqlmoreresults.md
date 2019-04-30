@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046727"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults**により、アプリケーションを複数の結果の行のセットを取得できます。 COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメント、または ODBC ステートメントや [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの送信済みのバッチによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは複数の結果セットを生成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの場合もサーバー カーソルを作成して結果を処理することはできません。 したがって、開発者は ODBC ステートメントがブロックされていることを確認する必要があります。 また、同じ接続で他のアクティブなステートメントからのデータを処理する前に、返されたデータをすべて処理するか ODBC ステートメントを取り消す必要があります。  
@@ -27,7 +27,7 @@ ms.locfileid: "53375744"
 > [!NOTE]  
 >  COMPUTE 句を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントは、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のサーバー バージョンの接続している場合にのみサポートされます。  
   
- 開発者は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの COMPUTE 句で生成される結果セットの列と行のプロパティを確認できます。 詳細については、[SQLColAttribute](sqlcolattribute.md)を参照してください。  
+ 開発者は、[!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの COMPUTE 句で生成される結果セットの列と行のプロパティを確認できます。 詳細については、次を参照してください。 [SQLColAttribute](sqlcolattribute.md)します。  
   
  ときに**SQLMoreResults**と呼びます取り出されていないデータ行の結果セットに、これらの行は失われ、次の結果行セットから行のデータは利用可能になっています。  
   

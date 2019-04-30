@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162029"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>プロジェクトの設定 (変換) (MySQLToSQL)
 変換 ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に SQL Server または SQL Azure の構文に MySQL 構文を変換する方法をカスタマイズする設定が含まれています。  
@@ -88,7 +88,7 @@ ms.locfileid: "52411269"
 |-|-|  
 |**項目**|**[定義]**|  
 |**既定の境界ボックス {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} の空間インデックス**|既定値を定義します。 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} の境界ボックスの空間インデックスで使用されるパラメーター。<br /><br />**既定のモード**<br /><br />XMAX:100<br /><br />XMIN:0<br /><br />YMAX:100<br /><br />YMIN:0<br /><br />**オプティミスティック モード**<br /><br />XMAX:100<br /><br />XMIN:0<br /><br />YMAX:100<br /><br />YMIN:0<br /><br />**フル モード**<br /><br />XMAX:100<br /><br />XMIN:0<br /><br />YMAX:100<br /><br />YMIN:0|  
-|**空間インデックスのグリッド密度の既定値**|LEVEL_1、LEVEL_2、LEVEL_3、および空間インデックスで使用されるグリッドの密度の LEVEL_4 の既定値を定義します。<br /><br />**既定のモード**<br /><br />LEVEL_1:既定値<br /><br />LEVEL_2:既定値<br /><br />LEVEL_3:既定値<br /><br />LEVEL_4:既定値<br /><br />**オプティミスティック モード**<br /><br />LEVEL_1:既定値<br /><br />LEVEL_2:既定値<br /><br />LEVEL_3:既定値<br /><br />LEVEL_4:既定値<br /><br />**フル モード**<br /><br />LEVEL_1:既定値<br /><br />LEVEL_2:既定値<br /><br />LEVEL_3:既定値<br /><br />LEVEL_4:既定値|  
+|**空間インデックスのグリッド密度の既定値**|LEVEL_1、LEVEL_2、LEVEL_3、および空間インデックスで使用されるグリッドの密度の LEVEL_4 の既定値を定義します。<br /><br />**既定のモード**<br /><br />LEVEL_1:既定<br /><br />LEVEL_2:既定<br /><br />LEVEL_3:既定<br /><br />LEVEL_4:既定<br /><br />**オプティミスティック モード**<br /><br />LEVEL_1:既定<br /><br />LEVEL_2:既定<br /><br />LEVEL_3:既定<br /><br />LEVEL_4:既定<br /><br />**フル モード**<br /><br />LEVEL_1:既定<br /><br />LEVEL_2:既定<br /><br />LEVEL_3:既定<br /><br />LEVEL_4:既定|  
   
 ### <a name="transactions"></a>トランザクション  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52411269"
 |-|-|  
 |**項目**|**[定義]**|  
 |**非トランザクション テーブル**|変換の警告メッセージでトランザクションをサポートしていないテーブルへのすべての参照をマークする必要があるかどうかを指定します。<br /><br />**既定のモード**:いいえ<br /><br />**オプティミスティック モード**:いいえ<br /><br />**フル モード**:はい|  
-|**トランザクション分離レベル**|どのようなトランザクション分離レベルは、新しいトランザクションのために使用する必要がありますを指定します。<br /><br />**既定のモード**: 既定値<br /><br />**オプティミスティック モード**:既定値<br /><br />**フル モード**: REPEATABLE READ|  
+|**トランザクション分離レベル**|どのようなトランザクション分離レベルは、新しいトランザクションのために使用する必要がありますを指定します。<br /><br />**既定のモード**: 既定<br /><br />**オプティミスティック モード**:既定<br /><br />**フル モード**: REPEATABLE READ|  
   
 ### <a name="value-control"></a>値コントロール  
   

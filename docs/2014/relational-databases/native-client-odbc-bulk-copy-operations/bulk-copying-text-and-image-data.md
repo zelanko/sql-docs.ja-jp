@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067478"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>テキスト データと画像データの一括コピー
   大規模な**テキスト**、 **ntext**、および**イメージ**値は、一括コピーを使用して、 [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)関数。 コードを記述[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の**テキスト**、 **ntext**、または**イメージ**列で、 *pData*ポインターに設定NULL を示すデータが提供されます**bcp_moretext**します。 それぞれの指定したデータの正確な長さを指定することが重要**テキスト**、 **ntext**、または**イメージ**一括コピーの各行の列。 列のデータの長さがで指定された列の長さと異なる場合[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)を使用して、 [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)長さを適切な値に設定します。 A [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)送信すべて以外**テキスト**、非-**ntext**、および非-**イメージ**データは呼び出して**bcp_moretext**を送信する、**テキスト**、 **ntext**、または**イメージ**個別の単位でのデータ。 一括コピー関数は、現在のすべてのデータが送信されたことを確認**テキスト**、 **ntext**、または**イメージ**を通じて送信されるデータの長さの合計列**bcp_moretext**最新版の指定された長さと等しい**bcp_collen**または**bcp_bind**します。  

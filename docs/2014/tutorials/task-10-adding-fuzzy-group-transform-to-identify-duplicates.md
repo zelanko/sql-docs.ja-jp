@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6e5e6478bc1b424a8744a17f2e67d2bd74b9e70d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223382"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>タスク 10:あいまいグループ化変換を追加して重複を識別する
   ここでは、あいまいグループ化変換をデータ フローに追加します。 あいまいグループ化変換は、変換元データの重複を識別する際に役立ちます。 参照してください[Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)の詳細。  

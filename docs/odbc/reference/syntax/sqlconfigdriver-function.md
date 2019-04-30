@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062360"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 関数
 **準拠**  
@@ -54,7 +54,7 @@ BOOL SQLConfigDriver(
  *hwndParent*  
  [入力]親ウィンドウ ハンドル。 関数では、ハンドルが null の場合、ダイアログ ボックスは表示されません。  
   
- *起こり*  
+ *fRequest*  
  [入力]要求の種類。 *起こり*値は次のいずれかを含める必要があります。  
   
  ODBC_CONFIG_DRIVER:接続プール、ドライバーによって使用されるタイムアウトを変更します。  

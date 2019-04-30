@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156554"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>レポートのレポート サーバーへの保存 (レポート ビルダー)
   レポート ビルダーでは、レポート定義をレポート サーバーに保存できます (レポートのパブリッシュとも呼ばれます)。 レポート サーバーにレポートを保存すると、他のユーザーがレポートを表示できます。 パブリッシュしたレポートを実行するたびに最新のデータが取得されます。 表示されたレポートの静的コピーを保存するには、レポートを他のファイル形式にエクスポートし、それを保存するか、またはレポート履歴機能を使用して、表示されたレポートのバージョンを保存します。  

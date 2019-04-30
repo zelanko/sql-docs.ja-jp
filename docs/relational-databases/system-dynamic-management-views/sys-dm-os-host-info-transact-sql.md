@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047231"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "53209551"
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar (256)** |オペレーティング システムの種類:Windows または Linux |
 |**host_distribution** |**nvarchar (256)** |オペレーティング システムの説明です。 |
-|**host_release**|**nvarchar (256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows オペレーティング システムのリリース (バージョン番号)。 値と説明の一覧は、[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)を参照してください。 <br> Linux の場合は、空の文字列を返します。 |  
+|**host_release**|**nvarchar (256)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows オペレーティング システムのリリース (バージョン番号)。 値と説明の一覧は、次を参照してください。[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)します。 <br> Linux の場合は、空の文字列を返します。 |  
 |**host_service_pack_level**|**nvarchar (256)**|Windows オペレーティング システムの Service Pack のレベル。 <br> Linux の場合は、空の文字列を返します。 |  
-|**host_sku**|**int**|Windows 在庫商品識別番号 (SKU) ID。 SKU Id と説明の一覧は、[GetProductInfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)を参照してください。 NULL 値が許可されます。 <br> Linux の場合は、NULL を返します。 |  
-|**os_language_version**|**int**|オペレーティング システムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧は、[Microsoft によるロケール Id 割り当て](https://go.microsoft.com/fwlink/?LinkId=208080)を参照してください。 null にすることはできません。|  
+|**host_sku**|**int**|Windows 在庫商品識別番号 (SKU) ID。 SKU Id と説明の一覧は、次を参照してください。 [GetProductInfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)します。 NULL 値が許可されます。 <br> Linux の場合は、NULL を返します。 |  
+|**os_language_version**|**int**|オペレーティング システムの Windows ロケール識別子 (LCID)。 LCID 値と説明の一覧は、次を参照してください。 [Microsoft によるロケール Id 割り当て](https://go.microsoft.com/fwlink/?LinkId=208080)します。 null にすることはできません。|  
 
 ## <a name="remarks"></a>コメント  
 このビューに似ています[sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)、Windows および Linux を区別する列を追加します。
@@ -77,6 +77,6 @@ FROM sys.dm_os_host_info;
   
 ## <a name="see-also"></a>参照  
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_os_windows_info (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
+ [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  
 

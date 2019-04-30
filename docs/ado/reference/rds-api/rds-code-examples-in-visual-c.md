@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff83bb2f41415d876b89d46bfe8ba1399b940523
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213422"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual C++ の RDS コード例
 Microsoft Visual C++ で RDS プロパティを使用する方法を学習するために、次のコード例を使用してください。  

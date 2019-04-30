@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e6ea1c31cea554944824e38926318682b163ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209196"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折れ線グラフ (レポート ビルダーおよび SSRS)
   折れ線グラフでは、1 本の線で結ばれた点のセットとして系列が表示されます。 折れ線グラフは、継続的に発生する大量のデータを表す場合に使用されます。 折れ線グラフにデータを追加する方法の詳細については、「 [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)」を参照してください。  

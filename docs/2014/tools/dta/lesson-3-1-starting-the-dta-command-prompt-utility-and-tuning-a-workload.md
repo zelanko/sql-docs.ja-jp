@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048969"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング
   ここでは、**dta** ユーティリティを起動してヘルプを表示した後、同ユーティリティを使用してコマンド プロンプトからワークロードをチューニングします。 このユーティリティは、データベース エンジン チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の実習「 [ワークロードのチューニング](lesson-1-1-tuning-a-workload.md)」で作成したワークロード MyScript.sql を使用します。  
@@ -63,7 +63,7 @@ ms.locfileid: "48171112"
   
 -   コマンド プロンプト ユーティリティおよびユーティリティの動作の制御に使用できるオプションの XML ファイルに関するリファレンス情報については、「[dta Utility](dta-utility.md) 」を参照してください。  
   
- チュートリアルの開始に戻るには、「 [チュートリアル:データベース エンジン チューニング アドバイザー](tutorial-database-engine-tuning-advisor.md)」を参照してください。  
+ チュートリアルの先頭に戻り、次を参照してください。[チュートリアル。データベース エンジン チューニング アドバイザー](tutorial-database-engine-tuning-advisor.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのチュートリアル](../../relational-databases/database-engine-tutorials.md)  

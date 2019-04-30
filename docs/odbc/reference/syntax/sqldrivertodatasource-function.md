@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f5450bbabb43b1f5cbc8c0fd7cb1a83da3a8bc7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061449"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource 関数
 **SQLDriverToDataSource** ODBC ドライバーの翻訳をサポートしています。 ODBC 対応のアプリケーションではこの関数は呼び出されませんアプリケーション要求経由で翻訳**SQLSetConnectAttr**します。 関連付けられているドライバー、 *ConnectionHandle*で指定されている**SQLSetConnectAttr**データ ソースに、ドライバーから着信するすべてのデータの翻訳を実行する指定された DLL を呼び出します。 ODBC 初期化ファイルには、既定のトランスレーター DLL を指定できます。  
@@ -52,7 +52,7 @@ BOOL SQLDriverToDataSource(
  [入力]オプションの値。  
   
  *fSqlType*  
- [入力]ODBC SQL データ型。 この引数に変換する方法をドライバーに指示*rgbValueIn*データ ソースが許容される形式にします。 有効な SQL データ型の一覧は、[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)を参照してください。  
+ [入力]ODBC SQL データ型。 この引数に変換する方法をドライバーに指示*rgbValueIn*データ ソースが許容される形式にします。 有効な SQL データ型の一覧は、次を参照してください。 [SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)します。  
   
  *rgbValueIn*  
  [入力]変換する値。  
@@ -78,7 +78,7 @@ BOOL SQLDriverToDataSource(
   
  *PcbValueOut*引数が null ポインターを指定できます。  
   
- *後*  
+ *szErrorMsg*  
  [出力]エラー メッセージの記憶域へのポインター。 これは、変換が失敗しない限り、空の文字列です。  
   
  *cbErrorMsgMax*  
@@ -101,7 +101,7 @@ BOOL SQLDriverToDataSource(
   
  場合**SQLDriverToDataSource**変換中にデータの切り捨てが発生したは、FALSE を返します。 場合*pcbValueOut* (出力バッファーに返される使用可能なバイト数) がより大きい*cbValueOutMax* (出力バッファーの長さ)、切り捨てが発生しました。 ドライバーは、切り捨てが許容されるかどうかを判断する必要があります。 切り捨てが発生しなかった場合、 **SQLDriverToDataSource**別のエラーにより FALSE が返されます。 いずれの場合も、特定のエラー メッセージが返される*後*します。  
   
- データの翻訳の詳細については、[翻訳の Dll](../../../odbc/reference/develop-app/translation-dlls.md)を参照してください。  
+ データの翻訳の詳細については、次を参照してください。[翻訳の Dll](../../../odbc/reference/develop-app/translation-dlls.md)します。  
   
 ## <a name="related-functions"></a>関連する関数  
   

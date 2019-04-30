@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161777"
 ---
 # <a name="editing-data"></a>データの編集
 説明しました ADO を使用してデータ ソースへの接続、コマンドを実行で、結果を得る方法、**レコード セット**オブジェクト内を移動したり、**レコード セット**します。 このセクションでは、次の基本的な ADO 操作について重点的に取り上げます。: データを編集します。  
@@ -44,7 +44,7 @@ ms.locfileid: "47823391"
 'EndEditIntro  
 ```  
   
- コードに重要な変更は、設定、 **CursorLocation**のプロパティ、**接続**オブジェクトと等しい**adUseClient**で、 *GetNewConnection*クライアント カーソルの使用を示します (次の例で示すように) 関数。 クライアント側とサーバー側のカーソルの違いの詳細については、[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)を参照してください。  
+ コードに重要な変更は、設定、 **CursorLocation**のプロパティ、**接続**オブジェクトと等しい**adUseClient**で、 *GetNewConnection*クライアント カーソルの使用を示します (次の例で示すように) 関数。 クライアント側とサーバー側のカーソルの違いの詳細については、次を参照してください。[カーソルとロック](../../../ado/guide/data/understanding-cursors-and-locks.md)します。  
   
  **CursorLocation**プロパティの**adUseClient**設定は、データ ソース (この場合は SQL Server) から、カーソルの位置をクライアント コード (デスクトップ ワークステーション) の場所に移動します。 この設定が強制的に作成し、カーソルを管理するためにクライアントで OLE DB 用のクライアント カーソル エンジンを起動します。  
   
@@ -92,4 +92,4 @@ End Function
   
 -   [Delete メソッドを使用してレコードを削除する](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [他の方法: SQL ステートメントを使用する](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [代替手段:SQL ステートメントを使用](../../../ado/guide/data/alternatives-using-sql-statements.md)

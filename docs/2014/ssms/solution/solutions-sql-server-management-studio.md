@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064902"
 ---
 # <a name="solutions-sql-server-management-studio"></a>ソリューション (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ソリューションは、1 つまたは複数の関連プロジェクトのコレクションです。 プロジェクトは、一般的に使用される管理スクリプトなどの関連ファイルを編成するために開発者が使用できるコンテナーです。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125468"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>データ ソースまたはドライバーの選択
 データ ソースまたはドライバー、アプリケーションで使用される場合があります、アプリケーションにハードコーディングします。 名が含まれますが 1 つのデータ ソースからデータには転送する、MIS 部門によって書き込まれたカスタム アプリケーションなど、データのソースのアプリケーションだけで動作しない他のデータ ソース。 別の例は、1 つのエントリの順序の使用などの垂直方向のアプリケーションです。 このようなアプリケーションは常には、アプリケーションによって認識されている定義済みのスキーマが同じデータ ソースを使用します。  
@@ -42,4 +42,4 @@ ms.locfileid: "52507629"
   
 -   **特定の DBMS に 1 回アクセスします。** たとえば、ODBC 関数を呼び出すことによってデータを取得するワークシートが含まれる、**ドライバー**特定のドライバーを識別するためにキーワード。 ドライバー名は、そのドライバーを持つ任意のユーザーに意味のあるであるため、スプレッドシートをそれらのユーザーの間で渡すことができます。 スプレッドシートにデータ ソース名が含まれている場合、各ユーザーは、スプレッドシートを使用して同じデータ ソースを作成する必要があります。  
   
--   **特定のドライバーにアクセスできるすべてのデータベースのシステムを参照します。** 詳細については、[SQLBrowseConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)、このセクションで後述を参照してください。
+-   **特定のドライバーにアクセスできるすべてのデータベースのシステムを参照します。** 詳細については、次を参照してください。 [SQLBrowseConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)、このセクションで後述します。

@@ -10,13 +10,13 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057818"
 ---
-# <a name="what-is-polybase"></a>PolyBase とは何ですか。
+# <a name="what-is-polybase"></a>PolyBase とは
 PolyBase は、Analytics Platform System (APS) からデータを読み取るし、外部データ ソースにデータを書き込むことができますを TRANSACT-SQL クエリの処理を使用できます。 外部データにアクセスするのと同じクエリでは、AP にリレーション テーブルを含めることもできます。 これにより、AP データベースで高価値のリレーショナル データを外部ソースからデータを組み合わせることができます。
 
 ![PolyBase 論理](media/polybase/polybase-logical.png)
@@ -26,7 +26,7 @@ AP 上の PolyBase では、Hadoop (HDFS) ファイル システムと Azure Blo
 > [!NOTE]
 > APS 現在のみサポートしている標準の汎用 v1 ローカル冗長 (LRS) Azure Blob Storage。
 
-## <a name="features-and-limitations"></a>機能と制限事項
+## <a name="features-and-limitations"></a>機能および制限事項
 参照してください[機能と制限](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-versioned-feature-summary)PolyBase の概要機能の AP とその他の SQL Server 製品で使用可能なと既知の制限の。
 
 > [!NOTE] 

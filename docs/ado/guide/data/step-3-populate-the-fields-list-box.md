@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062778"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>手順 3:フィールド リスト ボックスを設定します。
+# <a name="step-3-populate-the-fields-list-box"></a>手順 3:Fields リスト ボックスに値を設定する
 フィールドのリスト ボックスを設定するには、クリック イベント ハンドラーに次のコードを挿入`lstMain`:  
   
 ```  

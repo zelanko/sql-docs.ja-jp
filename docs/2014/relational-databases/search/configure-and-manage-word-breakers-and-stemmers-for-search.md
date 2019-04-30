@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8be3cc7da791b9ea5f950d83bd0f570ca42e686f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140059"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>検索用のワード ブレーカーとステミング機能の構成と管理
   ワード ブレーカーとステミング機能は、すべてのフルテキスト インデックス データに対して言語分析を実行します。 言語分析には、単語の境界 (単語の区切り) の検索と動詞の活用 (ステミング) が含まれます。 ワード ブレーカーとステミング機能は言語に固有のものであり、言語分析の規則は言語によって異なります。 特定の言語において、 *ワード ブレーカー* によって、言語の語彙の規則に基づいて単語の境界を検出し、個々の単語を識別します。 各単語 ( *トークン*ともいいます) は、サイズを縮小するために圧縮された表現でフルテキスト インデックスに挿入されます。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。  
@@ -77,7 +77,7 @@ ms.locfileid: "52505842"
 ##  <a name="impact"></a> 新しいワード ブレーカーの影響を理解します。  
  各バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、通常、新しいワード ブレーカーが含まれています。これらのワード ブレーカーでは、言語の規則が改良されているため、以前のワード ブレーカーよりも精度が向上しています。 新しいワード ブレーカーは、前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からインポートされたフルテキスト インデックスのワード ブレーカーとは少し動作が異なる場合もあります。 データベースが現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にアップグレードされたときにフルテキスト カタログをインポートした場合は、この動作の違いが重要になります。 フルテキスト カタログのフルテキスト インデックスで使用される 1 つまたは複数の言語が、新しいワード ブレーカーに関連付けられる可能性があります。 詳細については、「 [フルテキスト検索のアップグレード](upgrade-full-text-search.md)」を参照してください。  
   
- すべてのワード ブレーカーの一覧については、[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)を参照してください。  
+ すべてのワード ブレーカーの一覧については、次を参照してください。 [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)します。  
   
 ## <a name="see-also"></a>参照  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   

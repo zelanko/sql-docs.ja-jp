@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046164"
 ---
 # <a name="query-with-full-text-search"></a>フルテキスト検索でのクエリ
   フルテキスト検索を定義するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト クエリでは、フルテキスト述語 (CONTAINS と FREETEXT) およびフルテキスト関数 (CONTAINSTABLE と FREETEXTTABLE) が使用されます。 この述語と関数は、さまざまな形式のクエリ用語に対応する豊富な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文をサポートします。 フルテキスト クエリを記述するには、これらの述語と関数をいつどのように使用するかを理解する必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "52749426"
  CONTAINS 述語と FREETEXT 述語は、TRUE 値または FALSE 値を返します。 これらの述語は、特定の行がフルテキスト クエリと一致するかどうかを判断する選択基準としてのみ使用します。 一致する行は結果セットで返されます。 CONTAINS と FREETEXT は、SELECT ステートメントの WHERE 句または HAVING 句で指定します。 これらの述語は、LIKE や BETWEEN など他の [!INCLUDE[tsql](../../includes/tsql-md.md)] 述語と組み合わせて使用できます。  
   
 > [!NOTE]  
->  これらの述語の引数と構文については、[CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)と[FREETEXT &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)を参照してください。  
+>  これらの述語の引数と構文については、次を参照してください。 [CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)と[FREETEXT &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)します。  
   
  CONTAINS または FREETEXT を使用する場合は、検索するテーブルの単一の列、一連の列、すべての列のいずれかを指定できます。 また、フルテキスト クエリで単語区切りとステミング、類義語辞典の検索、およびノイズ ワードの削除を行うために使用される言語リソースの言語を指定することもできます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "52749426"
   
 -   CONTAINS (または CONTAINSTABLE) は、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での近接検索、または重み付き検索に使用します。 CONTAINS を使用する場合は、検索するテキストを指定する検索条件を少なくとも 1 つ指定し、一致を判断する条件を指定する必要があります。  
   
-     検索条件の間には論理演算を使用できます。 詳細については、[ブール演算子の AND、OR、AND NOT (CONTAINS と CONTAINSTABLE) で](#Using_Boolean_Operators)、このトピックで後述を参照してください。  
+     検索条件の間には論理演算を使用できます。 詳細については、次を参照してください。[ブール演算子の AND、OR、AND NOT (CONTAINS と CONTAINSTABLE) で](#Using_Boolean_Operators)、このトピックで後述します。  
   
 -   FREETEXT (または FREETEXTTABLE) は、指定した単語、語句、または文章 ( *freetext 文字列*) の正確な文字列の並びではなく、意味を照合する場合に使用します。 指定した列のフルテキスト インデックスに、用語または一定の形式の用語が見つかった場合は、一致すると判断されます。  
   
@@ -85,7 +85,7 @@ GO
  CONTAINSTABLE 関数と FREETEXTTABLE 関数は、SELECT ステートメントの FROM 句で通常のテーブル名と同じように指定できます。 この関数では、フルテキスト クエリと一致する 0 行、1 行、または 2 行以上で構成されるテーブルが返されます。 返されたテーブルには、ベース テーブルの行のうち、関数のフルテキスト検索条件に指定した選択基準に一致する行のみが含まれます。  
   
 > [!NOTE]  
->  これらの関数の引数と構文については、[CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)と[FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)を参照してください。  
+>  これらの関数の引数と構文については、次を参照してください。 [CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)と[FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)します。  
   
  このいずれかの関数を使用するクエリでは、次のように、各行の関連順位値 (RANK) とフルテキスト キー (KEY) が取得されます。  
   

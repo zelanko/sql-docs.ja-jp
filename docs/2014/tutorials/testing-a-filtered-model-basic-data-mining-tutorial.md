@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044097"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>フィルター選択されたモデルのテスト (基本的なデータ マイニング チュートリアル)
   確認しましたところ、`TM_Decision_Tree`最も正確なモデルは、のニーズに合うように、モデルのカスタマイズ、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]絞り込みメール配信キャンペーン。 具体的には、マーケティング部門では男性顧客と女性顧客に違いがあるかどうかを知りたいと考えています。 情報には、広告のために使用する雑誌を決定するためでしたやにダイレクト_メールで特集する製品です。  
@@ -70,7 +70,7 @@ ms.locfileid: "56011143"
 8.  上記の手順では、今回の名前、モデルを繰り返して`TM_Decision_Tree_Female`と種類**F**で、**値**テキスト ボックス。  
   
 ## <a name="process-the-filtered-models"></a>フィルター選択されたモデルの処理  
- モデルを使用するには、事前にそのモデルを配置して処理する必要があります。 処理モデルの詳細については、[メーリング対象となる構造の処理モデル&#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)を参照してください。  
+ モデルを使用するには、事前にそのモデルを配置して処理する必要があります。 処理モデルの詳細については、次を参照してください。[メーリング対象となる構造の処理モデル&#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)します。  
   
 #### <a name="to-process-the-filtered-model"></a>フィルター選択されたモデルを処理するには  
   
@@ -124,9 +124,9 @@ ms.locfileid: "56011143"
      3 つすべてのデシジョン ツリー モデルでランダム推測モデルよりも大幅なリフトが見られ、クラスター モデルや Naive Bayes モデルより高精度であることがわかります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- フィルターの詳細については、[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)を参照してください。  
+ フィルターの詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
- 入れ子になったテーブルにフィルターを適用する方法の例は、[中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)を参照してください。  
+ 入れ子になったテーブルにフィルターを適用する方法の例は、次を参照してください。[中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)します。  
   
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
  [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  

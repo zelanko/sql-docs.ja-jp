@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143082"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>タスク 5:Excel からドメイン ベースの属性を作成する
   変換するこのタスクで、**状態**の属性、**サプライヤー**としてエンティティを**ドメイン ベースの属性**します。 ドメイン ベースの 1 つとして指定し、MDS、という名前の新しいエンティティに発行する State 属性を構成した後**状態**列のすべての値と共に MDS サーバーに作成されます、**状態**の属性、**Supplier**エンティティからの値が表示されます、**状態**エンティティ。 ここで、 **Suppliers**モデルには 2 つのエンティティには。**サプライヤー**と**状態**場所、**状態**の属性、 **Supplier**エンティティに依存するドメイン ベースの属性は、 **の状態**エンティティ。  

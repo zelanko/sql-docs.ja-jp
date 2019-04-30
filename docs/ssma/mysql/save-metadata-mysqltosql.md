@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f641b27357e75db0fb0f6ef71ff701d4f04b45a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154574"
 ---
 # <a name="save-metadata--mysqltosql"></a>メタデータの保存 (MySQLToSQL)
 **メタデータの保存** ダイアログ ボックスでは、SSMA プロジェクトにメタデータを保存する前にロードするように求められます。 これにより、オフラインで使用してテクニカル サポート担当者などの他のユーザーに送信する完全なプロジェクト ファイルがあります。  

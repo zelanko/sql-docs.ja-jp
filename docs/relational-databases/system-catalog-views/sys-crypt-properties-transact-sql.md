@@ -22,25 +22,25 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049739"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  セキュリティ保護可能なリソースに関連付けられている暗号化プロパティごとに 1 行のデータを返します。  
+  関連付けられたセキュリティ保護可能な暗号化プロパティごとに 1 行を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|プロパティが存在するリソースのクラスの識別子。<br /><br /> 1 = オブジェクトまたは列<br /> 5 = アセンブリ|  
-|**class_desc**|**nvarchar(60)**|プロパティが存在するリソースのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
-|**major_id**|**int**|プロパティが存在するリソースの ID。クラスに基づいて解釈されます。|  
-|**拇印**|**varbinary(32)**|使用する証明書または非対称キーの SHA-1 ハッシュ。|  
-|**crypt_type**|**char(4)**|暗号化の種類。<br /><br /> SPVC = 証明書の秘密キーによって暗号化されます。<br /><br /> SPVA = 非対称秘密キーによって暗号化されます。<br /><br /> CPVC = 証明書の秘密キーによって副署されます。<br /><br /> CPVA = 非対称キーによって副署されます。|  
-|**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明です。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
+|**class_desc**|**nvarchar(60)**|プロパティが存在するリソースのクラスの説明です。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
+|**major_id**|**int**|クラスに基づいて解釈されます、プロパティが存在するリソースの ID。|  
+|**thumbprint**|**varbinary(32)**|証明書または非対称キーの使用の sha-1 ハッシュ。|  
+|**crypt_type**|**char(4)**|暗号化の種類。<br /><br /> SPVC = 証明書の秘密キーによる暗号化<br /><br /> SPVA = 非対称秘密キーによって暗号化されます。<br /><br /> CPVC = 証明書の秘密キーによって副署されます。<br /><br /> CPVA = 非対称キーによって副署されます。|  
+|**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明です。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> 証明書で副署<br /><br /> 非対称キーによって副署|  
 |**crypt_property**|**varbinary(max)**|署名された、または暗号化されたビット。|  
   
 ## <a name="permissions"></a>アクセス許可  

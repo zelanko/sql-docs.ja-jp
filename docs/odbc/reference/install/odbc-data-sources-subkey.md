@@ -16,22 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9867946ce84163a504582c8a9575100c3c9aacd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069821"
 ---
 # <a name="odbc-data-sources-subkey"></a>ODBC データ ソースのサブキー
 ODBC データ ソースのサブキーの下の値は、データ ソースを一覧表示します。 これらの値の形式は、次の表に示すようにします。  
   
 |名前|データ型|data|  
 |----------|---------------|----------|  
-|*データのソース名*|REG_SZ|*ドライバーの説明*|  
+|*data-source-name*|REG_SZ|*ドライバーの説明*|  
   
  *データのソース名*(通常は、ユーザーを要求) を管理プログラムによって値が定義されていると*ドライバー説明*ドライバー開発者によって定義されます (の名前では、通常は、DBMS ドライバーに関連付けられている)。  
   
- たとえば、3 つのデータ ソースが定義されているとしますインベントリは、SQL Server を使用する。給与支払い名簿 dBASE; を使用します。スタッフ、書式設定されたテキスト ファイルを使用します。 ODBC データ ソースのサブキーの下の値が次のようにあります。  
+ たとえば、3 つのデータ ソースが定義されているとします。インベントリは、SQL Server を使用します。給与支払い名簿 dBASE; を使用します。スタッフ、書式設定されたテキスト ファイルを使用します。 ODBC データ ソースのサブキーの下の値が次のようにあります。  
   
 ```  
 Inventory : REG_SZ : SQL Server  

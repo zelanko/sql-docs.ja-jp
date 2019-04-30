@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9a48a4dfa0689e4ee30036c41980c1f4ad929108
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044144"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle の接続の種類 (SSRS)
   Oracle データベースのデータをレポートで使用するには、種類が Oracle のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、.NET Framework Managed Provider for Oracle に基づいており、Oracle クライアント ソフトウェア コンポーネントが必要です。  

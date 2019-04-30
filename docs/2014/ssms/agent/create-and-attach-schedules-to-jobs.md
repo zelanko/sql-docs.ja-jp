@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136279"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>スケジュールの作成とジョブへのアタッチ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュール設定とは、ユーザーの操作なしでジョブの実行が開始される条件を定義することです。 ジョブのスケジュールを設定して自動的に実行するには、ジョブの新しいスケジュールを作成するか、既存のスケジュールをジョブにアタッチします。  

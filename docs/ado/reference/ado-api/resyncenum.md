@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aaf396e8969d490933e26652e18c0c070e030785
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060971"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 呼び出して、基になる値を上書きするかどうかを示す[再同期](../../../ado/reference/ado-api/resync-method.md)します。  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035071"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
   **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  

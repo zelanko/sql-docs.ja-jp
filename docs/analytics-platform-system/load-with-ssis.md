@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213371"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Parallel Data Warehouse に Integration Services を使用してデータを読み込む
 SQL Server Integration Services (SSIS) パッケージを使用して SQL Server Parallel Data Warehouse にデータを読み込むための参照と展開の情報を提供します。  
@@ -40,7 +40,7 @@ PDW 変換先アダプターとは、Integration Services の dtsx パッケー�
   
 このトピックで説明されているタスクだけでなくをフィルター処理、変換、分析、Integration Services の他の機能を使用し、data warehouse に読み込む前に、データのクレンジングできます。 SQL ステートメントの実行、子パッケージの実行、またはメールの送信によって、パッケージのワークフローを拡張することもできます。  
   
-Integration Services の完全なドキュメントについては、[SQL Server Integration Services](../integration-services/sql-server-integration-services.md)を参照してください。  
+Integration Services の完全なドキュメントについては、次を参照してください。 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)します。  
   
 ## <a name="HowToDeployPackage"></a>Integration Services パッケージを実行するためのメソッド  
 Integration Services パッケージを実行するのにには、これらのメソッドのいずれかを使用します。  
@@ -218,9 +218,9 @@ id,city,lastUpdateDate,orderDate
   
 5.  ご使用のアプライアンスに固有の情報をサーバー、ユーザー、パスワード、および変換先のデータベースの情報を入力します。 (例については、以下に示します。) **[OK]** をクリックします。  
   
-    InfiniBand 接続では、**サーバー名**: < アプライアンス名 > を入力してください-SQLCTL01、17001 します。  
+    InfiniBand 接続では、**サーバー名**:< アプライアンス名 > を入力してください-SQLCTL01、17001 します。  
   
-    イーサネット接続の場合は、**サーバー名**: コントロールのノードのクラスター、コンマ、ポート 17001 の IP アドレスを入力します。 たとえば、10.192.63.134,17001 します。  
+    イーサネット接続の場合は、**サーバー名**:コントロールのノードのクラスター、コンマ、ポート 17001 の IP アドレスを入力します。 たとえば、10.192.63.134,17001 します。  
   
     **ユーザー:**`user1`  
   
@@ -254,7 +254,7 @@ id,city,lastUpdateDate,orderDate
 [はじめに (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [動的パッケージ サンプルの生成](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [SSIS パッケージのデザインの並列処理 (SQL Server ビデオ)](https://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server コミュニティの例: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
+[Microsoft SQL Server コミュニティの例:Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [変更データ キャプチャと読み込みの向上、増分](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [緩やかに変化するディメンション変換](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [一括挿入タスク](../integration-services/control-flow/bulk-insert-task.md)  

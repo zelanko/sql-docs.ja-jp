@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224971"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>最初のページまたは最後のページでページ ヘッダーまたはページ フッターを非表示にする (レポート ビルダーおよび SSRS)
   レポートでは、各ページの上部と下部にそれぞれページ ヘッダーとページ フッターを配置できます。 ヘッダーやフッターを追加した後で、レポートの最初と最後のページのヘッダーとフッターだけを非表示にできます。  

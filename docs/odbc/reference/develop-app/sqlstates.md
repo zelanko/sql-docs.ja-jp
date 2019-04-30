@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149038"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 については、警告またはエラーの原因に関する詳細情報を提供します。 このマニュアルでについては、IM で始まるこれらについては、ODBC に固有ですでは、ISO/IEF CLI 仕様に基づいています。  

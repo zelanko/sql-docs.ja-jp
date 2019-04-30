@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199712"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam のマッピング
 **SQLBindParam**は本当に呼び出せません非推奨れていないため、あるで ODBC、ただし、まだを表す重複している機能 - ドライバー マネージャーは、ISO と開いているグループに準拠しているアプリケーションで使用されて、エクスポートする必要があります。 **SQLBindParameter**のすべての機能が含まれています**SQLBindParam**、 **SQLBindParam**の上にマップする**SQLBindParameter**(基になるドライバーがの場合、ODBC 3 *.x*ドライバー)。 ODBC 3 *.x*ドライバーが実装する必要はありません**SQLBindParam**します。  

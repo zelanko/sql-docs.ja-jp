@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c74a80bb38c406acb50e5e275f658a5f1d2b30d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208371"
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Jet 4.0 は ExtendedAnsiSQL_Set で SQL-92 の予約語リストを使用
 ExtendedAnsiSQL フラグがオンになっている場合、Jet 4.0 は、sql-92 の予約語の一覧を使用します。 構文エラーで、引用符なしのオブジェクト名の結果として、予約語、sql-92 を使用しようとしています。 ExtendedAnsiSQL フラグがオフの場合、新しい予約語として前に、のオブジェクト名として使用できます。

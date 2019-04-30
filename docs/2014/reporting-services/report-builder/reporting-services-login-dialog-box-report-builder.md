@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156641"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>[Reporting Services ログイン] ダイアログ ボックス (レポート ビルダー)
   **[Reporting Services ログイン]** ダイアログ ボックスを使用すると、レポートをレポート サーバーにパブリッシュする際に使用する資格情報を指定できます。 これらの資格情報については、レポート サーバー管理者に問い合わせてください。  

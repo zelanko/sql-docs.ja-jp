@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063417"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4:レポートへのテーブルの追加 (Reporting Services)
   データセットを定義したら、レポートのデザインを開始できます。 レポートのレイアウトを作成するには、データ領域、テキスト ボックス、画像、およびレポートに含めるその他のアイテムを、デザイン画面にドラッグ アンド ドロップします。  

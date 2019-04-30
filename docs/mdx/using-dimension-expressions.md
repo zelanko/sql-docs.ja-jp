@@ -1,5 +1,5 @@
 ---
-title: ディメンション式の使用 |Microsoft ドキュメント
+title: ディメンション式の使用 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125535"
 ---
 # <a name="using-dimension-expressions"></a>ディメンション式の使用
 
 
-  ディメンション式と階層式は通常、階層からメンバー、セット、または組を返すために多次元式 (MDX) 内で関数にパラメーターを渡す場合に使用します。  
+  通常使用するディメンションと階層式で多次元式 (MDX) 関数にパラメーターを渡すときに、階層のメンバー、セット、または組を返します。  
   
- ディメンション式はオブジェクト識別子なので、単純式のみを指定できます。 参照してください[式&#40;MDX&#41; ](../mdx/expressions-mdx.md)単純式と複合式の説明。  
+ ディメンション式は、オブジェクト識別子であるために、単純な式を指定のみできます。 参照してください[式&#40;MDX&#41; ](../mdx/expressions-mdx.md)単純および複雑な式の詳細についてはします。  
   
 ## <a name="dimension-expressions"></a>ディメンション式  
  ディメンション式には、ディメンション識別子またはディメンション関数のいずれかが含まれます。  
   
- ディメンション式は、ほとんど単独では使用しません。 代わりに、通常はディメンションの階層を指定します。 唯一の例外は、Measures ディメンションを操作している場合です。このディメンションには階層がありません。  
+ ディメンション式が自身でほとんど使用しません。 代わりに、ディメンションに階層を指定するは、通常はたいです。 唯一の例外は、Measures ディメンションを操作している場合です。このディメンションには階層がありません。  
   
  次の例では、式 [Measures] を .Members 関数および Count() 関数と共に使用して Measures ディメンションのメンバー数を返す、計算されるメンバーを示しています。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34743911"
   
  `FROM [Adventure Works]`  
   
- ディメンションの識別子は*Dimension_Name* MDX ステートメントの記述に使用される BNF 表記でします。  
+ ディメンションの識別子*Dimension_Name* MDX ステートメントの記述に使用される BNF 表記でします。  
   
 ## <a name="hierarchy-expressions"></a>階層式  
  階層式にも同様に、階層識別子または階層関数のいずれかが含まれます。 次の例では、階層式 [Date].[Calendar] を .Levels 関数および .Count 関数と共に使用して、Date ディメンションの Calendar 階層のレベル数を返す方法を示しています。  
@@ -51,7 +51,7 @@ ms.locfileid: "34743911"
   
  `FROM [Adventure Works]`  
   
- 階層式を使用する最も一般的なシナリオでは、.Members 関数と組み合わせて階層のすべてのメンバーを返します。 次の例では、行軸の [Date].[Calendar] のすべてのメンバーを返します。  
+ 階層式を使用する最も一般的なシナリオでは、.Members 関数と組み合わせて階層のすべてのメンバーを返します。 次の例では、[Date] のすべてのメンバーを返します。[Calendar]、行軸上。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34743911"
   
  `FROM [Adventure Works]`  
   
- 階層識別子は*Dimension_Name **.** Hierarchy_Name* MDX ステートメントの記述に使用される BNF 表記でします。  
+ 階層識別子*Dimension_Name **.** Hierarchy_Name* MDX ステートメントの記述に使用される BNF 表記でします。  
   
 ## <a name="see-also"></a>参照  
  [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  

@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 372ed2a1eb3ecba8f84125ae0231d2110e3966dc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047586"
 ---
 # <a name="arithmetic-expressions-xquery"></a>算術式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ SET @x=''
 SELECT @x.query('xs:integer(2 div 3)')  
 ```  
   
- 算術演算子を使用した演算結果の型は入力値の型によって決まります。 オペランドどうしの型が異なる場合、必要に応じて一方または両方のオペランドが、データ型階層に基づき共通のプリミティブな基本データ型にキャストされます。 型階層については、[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)を参照してください。  
+ 算術演算子を使用した演算結果の型は入力値の型によって決まります。 オペランドどうしの型が異なる場合、必要に応じて一方または両方のオペランドが、データ型階層に基づき共通のプリミティブな基本データ型にキャストされます。 型階層については、次を参照してください。[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)します。  
   
  数値データ型の上位変換は、2 つのオペランドが異なる数値基本データ型である場合に行われます。 などの追加、 **xs:decimal**を**xs:double** double 型の値を 10 進数の値がまずします。 次に、結果が double 型の値となる加算処理が行われます。  
   

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208419"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
 
-  セットを降順で並べ替え、累積合計が指定された割合以上になるように、値の大きい方から組のセットを作成して返します。  
+  セットを降順で並べ替えし、を指定した割合以上になる最も高い値と組のセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,27 +33,27 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  セットを返す有効な多次元式 (MDX) です。  
   
  *[パーセント]*  
- 返す組の割合を指定する有効な数値式です。  
+ 返される組の割合を指定する有効な数値式です。  
   
 > [!IMPORTANT]  
 >  *割合*正の値を指定する必要がある負の値がエラーを生成します。  
   
  *Numeric_Expression*  
- 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- **TopPercent**関数セットを降順に並べ替え、指定されたセットに対して評価される指定数値式の合計を計算します。 次に、合計値の累積割合が指定されている割合以上になるように、最も値の大きい方から要素を返します。 この関数は、累積合計が指定された割合以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
+ **TopPercent**関数セットを降順に並べ替え、指定されたセットに対して評価される指定数値式の合計を計算します。 次に、合計値の累積割合が指定されている割合以上になるように、最も値の大きい方から要素を返します。 この関数は、累積合計が、指定したパーセンテージでは、少なくともセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!WARNING]  
 >  場合*Numeric_Expression*し、負の値を返します**TopPercent**のみ (1 つの行を返します。  
 >   
->  この動作の詳細な説明については、2 番目の例を参照してください。  
+>  この動作の詳細なプレゼンテーションの 2 番目の例を参照してください。  
   
 > [!IMPORTANT]  
 >  ように、 [BottomPercent](../mdx/bottompercent-mdx.md)関数の場合、 **TopPercent**関数は常に、階層を解除します。  
   
 ## <a name="example"></a>例  
- 次の例は、Bike カテゴリで、再販業者の売上の上位 10% に最も貢献している都市を返します。 結果は、降順で並べ替えられ、売上が最高値である都市が先頭になります。  
+ 次の例では、Bike カテゴリについて、再販業者の売上の上位 10% を支援する最適な都市を返します。 結果は降順に並べ替え、売上の最高値を持つ都市が先頭に並べ替えられます。  
   
 ```  
 SELECT [Measures].[Reseller Sales Amount] ON 0,  
@@ -75,7 +75,7 @@ WHERE([Product].[Product Categories].[Bikes])
 |Seattle|$1,209,418.16|  
 |Paris|$1,170,425.18|  
   
- 元のデータのセットは、次のクエリで取得でき、588 行が返されます。  
+ 元のデータのセットは、次のクエリで取得でき、588 行を返します。  
   
 ```  
 SELECT [Measures].[Reseller Sales Amount] ON 0,  
@@ -92,7 +92,7 @@ WHERE([Product].[Product Categories].[Bikes])
 ## <a name="example"></a>例  
  次のチュートリアルが負の値での影響を理解できますが、 *Numeric_Expression*します。 まず、この動作を実行できる、いくつかのコンテキストを構築します。  
   
- 次のクエリは、Reseller の 'Sales Amount'、'Total Product Cost'、および 'Gross Profit' のテーブルを、利益で降順に並べ替えて返します。 利益には負の値しかないので、損失の少ないものが上位に表示されます。  
+ 次のクエリでは、再販業者 'Sales Amount'、'Total Product Cost' および' Gross Profit'、利益の順序を降順でのテーブルを返します。 利益には負の値しかないので、損失の少ないものが上位に表示されます。  
   
 ```  
 SELECT { [Measures].[Reseller Sales Amount], [Measures].[Reseller Total Product Cost], [Measures].[Reseller Gross Profit] } ON columns  
@@ -105,10 +105,10 @@ FROM [Adventure Works]
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
+|Touring 2000 青、50|$157,444.56|$163,112.57|($5,668.01)|  
 |Touring 2000 青、46|$321,027.03|$333,021.50|($11,994.47)|  
 |Touring-3000 Blue, 62|$87,773.61|$100,133.52|($12,359.91)|  
-|[...]|[...]|[...]|[...]|  
+|[...]|...|...|[...]|  
 |Touring 1000 の黄色の場合、46|$1,016,312.83|$1,234,454.27|($218,141.44)|  
 |Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
   
@@ -121,11 +121,11 @@ FROM [Adventure Works]
   
 ```  
   
- クエリで 100% が要求されていることに注意してください。つまり、すべての行が返される必要があります。 ただし、負の値であるため、 *Numeric_Expression* 、1 行のみが返されます。  
+ クエリ要求 100% (100%;) のすべての行を返す必要があることを意味することに注意してください。 ただし、負の値であるため、 *Numeric_Expression* 、1 行のみが返されます。  
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
+|Touring 2000 青、50|$157,444.56|$163,112.57|($5,668.01)|  
   
 ## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

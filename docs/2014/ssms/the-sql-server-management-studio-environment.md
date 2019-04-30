@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8d448e0af854cab5944062368f2f13e1d81efc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156403"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のクエリの管理と開発のための豊富な機能を提供する環境です。  

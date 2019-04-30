@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215422"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)
   レポート アイテムの数、サイズ、および位置は、レポート本文の改ページに影響します。 以降、各種のレポート アイテムがどのようにレンダリングされるかについて説明します。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050938"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings イベント クラス
   Sort Warnings イベント クラスは、並べ替え操作をメモリ内で処理できないことを示します。 インデックスの作成に関連する並べ替え操作は対象になりません。SELECT ステートメントで使用される ORDER BY 句などのクエリ内の並べ替え操作のみが対象になります。  

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136418"
 ---
 # <a name="create-an-operator"></a>オペレーターの作成
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに関する通知を受信するようにユーザーを構成する方法について説明します。  
@@ -147,6 +147,6 @@ ms.locfileid: "52762924"
     GO  
     ```  
   
- 詳細については、[sp_add_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_add_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-operator-transact-sql)します。  
   
   

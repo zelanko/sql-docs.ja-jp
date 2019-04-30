@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035321"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server のライセンス条項について (SSCM)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェア ライセンス条項は、ローカル コンピューターにコピー時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます: %ProgramFiles%\Microsoft SQL server \110\license terms \ または %programfiles (x86) %\Microsoft SQL server \110\license 条項\\します。  

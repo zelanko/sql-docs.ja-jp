@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208402"
 ---
 # <a name="paradox-data-types"></a>Paradox データ型
 ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型にマップします。 次の表では、すべて Paradox データ型の一覧し、ODBC SQL データの型にマップされますを示しています。  
@@ -33,17 +33,17 @@ ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型�
 |英数字|SQL_VARCHAR|  
 |[自動増分] [1]|SQL_INTEGER|  
 |BCD [1]|SQL_DOUBLE|  
-|バイト [1]|SQL_BINARY|  
+|BYTES[1]|SQL_BINARY|  
 |[DATE]|SQL_DATE|  
 |イメージ [2]|SQL_LONGVARBINARY|  
 |論理 [1]|SQL_BIT|  
 |時間の長い [1]|SQL_INTEGER|  
 |[2] のメモ|SQL_LONGVARCHAR|  
-|MONEY [1]|SQL_DOUBLE|  
+|MONEY[1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
 |短い|SQL_SMALLINT|  
-|時間 [1]|SQL_TIMESTAMP|  
-|[1] のタイムスタンプ|SQL_TIMESTAMP|  
+|TIME[1]|SQL_TIMESTAMP|  
+|TIMESTAMP[1]|SQL_TIMESTAMP|  
   
  Paradox バージョン 5 には [1] 有効です。*x*します。  
   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144618"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。 トランザクション ログは、いっぱいにならないように、定期的に切り捨てる必要があります。 ただし、いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
@@ -87,7 +87,7 @@ ms.locfileid: "52807014"
 |6|REPLICATION|トランザクション レプリケーション中、パブリケーションに関連するトランザクションがディストリビューション データベースにまだ配信されていない  (完全復旧モデルのみ)。<br /><br /> トランザクション レプリケーションの詳細については、「 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)」を参照してください。|  
 |7|DATABASE_SNAPSHOT_CREATION|データベース スナップショットが作成されている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
 |8|LOG_SCAN|ログ スキャンが行われている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
-|9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である  (完全復旧モデル)。<br /><br /> 詳細については、[AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)を参照してください。|  
+|9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である  (完全復旧モデル)。<br /><br /> 詳細については、次を参照してください。 [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)します。|  
 |10|-|内部使用のみ|  
 |11|-|内部使用のみ|  
 |12|-|内部使用のみ|  

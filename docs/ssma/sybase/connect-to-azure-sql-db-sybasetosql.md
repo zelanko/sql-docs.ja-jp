@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060995"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Azure SQL DB への接続 (SybaseToSQL)
 Azure SQL DB ダイアログ ボックスに、Connect を使用して、移行する Azure SQL DB データベースに接続します。  
@@ -63,5 +63,5 @@ Azure SQL DB のアカウントには、データベースがない場合、は�
   
     1.  **データベース名:** データベース名を入力します。  
   
-    2.  **データベースのサイズ:** で Azure SQL DB のアカウントを作成する必要があるデータベースのサイズを選択します。  
+    2.  **データベースのサイズ:** Azure SQL DB のアカウントを作成する必要があるデータベースのサイズを選択します。  
   

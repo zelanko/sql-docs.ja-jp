@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181413"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:[レベル 1]  
   
  データ ソースでサポートされるデータ型に関する情報を返します。 ドライバーは、SQL 結果セット内の情報を返します。 次の表は、ODBC データ型と対応する Visual FoxPro データ型を示します。  
   
@@ -53,4 +53,4 @@ ms.locfileid: "47733060"
   
  * 既定の種類  
   
- Visual FoxPro データの種類の詳細については、[CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)を参照してください。 この関数の詳細については、[SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ Visual FoxPro データの種類の詳細については、次を参照してください。 [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)します。 この関数の詳細については、次を参照してください。 [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)で、 *ODBC プログラマ リファレンス*します。

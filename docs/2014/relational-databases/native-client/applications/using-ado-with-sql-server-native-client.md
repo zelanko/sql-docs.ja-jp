@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f862807f0ca273e4058263efee6ac326a74103e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046340"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>SQL Server Native Client と ADO の併用
   導入された新機能を活用するために[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]など、複数のアクティブな結果セット (MARS)、クエリ通知、ユーザー定義型 (Udt)、または新しい**xml**データ型、ActiveX を使用する既存のアプリケーションデータ オブジェクト (ADO) を使用する必要があります、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、データ アクセス プロバイダーとして。  

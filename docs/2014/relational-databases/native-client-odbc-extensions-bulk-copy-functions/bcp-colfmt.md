@@ -1,5 +1,5 @@
 ---
-title: bcp_colfmt |Microsoft Docs
+title: bcp_colfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065460"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
   ユーザー ファイルのデータのコピー元またはコピー先の形式を指定します。 ソースの形式として使用すると**bcp_colfmt**への一括コピーでデータのソースとして使用される既存のデータ ファイルの形式を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 指定された列の形式を使用して、データ ファイルを作成する先の形式として使用するときに**bcp_colfmt**します。  
@@ -143,7 +143,7 @@ idxServerCol
   
  呼び出しごとに**bcp_colfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](bcp-columns.md)**(5)** を呼び出して**bcp_colfmt**で 5 回、これらの 3 つは、独自の形式の設定を呼び出します。 残りの 2 つの呼び出しでは、設定*eUserDataType*を 0 に設定し*cbIndicator*、 *cbUserData*、および*cbUserDataTerm*を 0 に SQL_VARLEN(_D)、0、それぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
- *CbIndicator*、大きな値の型を示す 8 の値は有効です。 フィールドにプレフィックスを指定し、そのフィールドに対応する列が新しい max 型である場合、この値は 8 にしか設定できません。 詳細については、[bcp_bind](bcp-bind.md)を参照してください。  
+ *CbIndicator*、大きな値の型を示す 8 の値は有効です。 フィールドにプレフィックスを指定し、そのフィールドに対応する列が新しい max 型である場合、この値は 8 にしか設定できません。 詳細については、次を参照してください。 [bcp_bind](bcp-bind.md)します。  
   
  **Bcp_columns**呼び出しの前に関数を呼び出す必要があります**bcp_colfmt**します。  
   
@@ -158,7 +158,7 @@ idxServerCol
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_colfmt による機能強化された日付と時刻のサポート  
  使用される型は aboutt 情報の*eUserDataType*日付/時刻の型のパラメーターを参照してください[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。  
   
- 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](sql-server-driver-extensions-bulk-copy-functions.md)  

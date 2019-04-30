@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151551"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)
   ユーザー フィルター レポート データ データ ソースからまたはレポートをレポートにパラメーターを追加します。 レポート パラメーターは、データセット クエリに追加したクエリ パラメーターごとに自動で作成されます。 パラメーターのデータ型により、パラメーターがレポート ビューアー ツール バーに表示される方法が決まります。  

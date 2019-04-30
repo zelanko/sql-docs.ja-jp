@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223245"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>暗号化キー (SSRS ネイティブ モード)
   [暗号化キー] ページを使用すると、レポート サーバーでデータの暗号化と暗号化解除に使用される対称キーを管理できます。 暗号化キーの管理は、レポート サーバーの構成で重要な位置を占めています。 対称キーはレポート サーバー データベースを作成する際に自動的に作成されて適用されますが、 定期的なメンテナンス操作を実行できるように、対称キーのバックアップ コピーを作成しておく必要があります。 次に示すメンテナンス タスクを実行するには、対称キーの有効なコピーが必要です。  
@@ -43,7 +43,7 @@ ms.locfileid: "48144232"
 > [!IMPORTANT]  
 >  対称キーの削除と再作成の操作は、取り消したり元に戻したりすることはできません。 キーを削除または再作成すると、現在のインストールに重大な影響を及ぼす可能性があります。 対称キーを削除すると、その対称キーを使用して暗号化されている既存のデータも削除されます。 たとえば、外部のレポート データ ソースへの接続文字列、保存されている接続文字列、サブスクリプション情報の一部が削除されることがあります。  
   
- このページを開くには、開始、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager とナビゲーション ウィンドウで、リンクを選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
+ このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、ナビゲーション ウィンドウでリンクを選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **バックアップ**  
@@ -52,7 +52,7 @@ ms.locfileid: "48144232"
  **復元**  
  以前に保存された対称キーのコピーを、レポート サーバー データベースに適用します。 ファイルのロックを解除するパスワードを入力する必要があります。  
   
- 現在接続しているレポート サーバー インスタンスの以前の対称キーは、復元された対称キーによって上書きされます。 対称キーを復元した後、そのレポート サーバー データベースを利用するレポート サーバーをすべて初期化する必要があります。 レポート サーバーの初期化の詳細については、[レポート サーバーの初期化&#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)を参照してください。  
+ 現在接続しているレポート サーバー インスタンスの以前の対称キーは、復元された対称キーによって上書きされます。 対称キーを復元した後、そのレポート サーバー データベースを利用するレポート サーバーをすべて初期化する必要があります。 レポート サーバーの初期化の詳細については、次を参照してください。[レポート サーバーの初期化&#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)します。  
   
  **変更**  
  対称キーを再作成し、レポート サーバー データベース内の暗号化された値を再暗号化します。 対称キーを再作成する前に、レポート サーバー サービスを必ず停止してください。  

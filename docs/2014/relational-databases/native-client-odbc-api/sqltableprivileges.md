@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51492e55fd3c34c099a5f53187d1b2a9875ce7e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188636"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
   **SQLTablePrivileges**静的カーソルで実行できます。 実行しようとすると、 **SQLTablePrivileges**で更新可能な (キーセット ドリブンまたは動的) 返しますが、カーソルの種類を示す SQL_SUCCESS_WITH_INFO が変更されました。  

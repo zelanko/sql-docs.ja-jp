@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1e3009b4e3bed6fc871ecfd1aab4e2af2f1f1c86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188767"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "47854000"
  カーソル ライブラリを実装する**SQLGetData**最初に構築することによって、**選択**ステートメントを**場所**句の各バインドには、そのキャッシュに格納された値を列挙します。現在の行に列です。 実行して、**選択**し直すには、行と呼び出しステートメント**SQLGetData** (キャッシュ) ではなく、データ ソースからデータを取得するドライバー。  
   
 > [!CAUTION]  
->  **場所**任意の行を識別する、別の行を特定または複数の行を識別する、現在の行を識別するために、カーソル ライブラリによって構築された句が失敗することができます。 詳細については、[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)を参照してください。  
+>  **場所**任意の行を識別する、別の行を特定または複数の行を識別する、現在の行を識別するために、カーソル ライブラリによって構築された句が失敗することができます。 詳細については、次を参照してください。[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)します。  
   
  SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されている場合**SQLGetData**列 0 ブックマーク データを返すために呼び出すことができます。  
   

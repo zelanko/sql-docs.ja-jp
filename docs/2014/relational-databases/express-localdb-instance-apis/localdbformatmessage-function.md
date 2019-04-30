@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d287a7ceff1c38c829da91a8ae2e530f664fb4ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128746"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 関数
   指定した SQL Server Express LocalDB エラーについてのローカライズされた説明テキストを返します。  
@@ -84,7 +84,7 @@ HRESULT LocalDBFormatMessage(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、[SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)を参照してください。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

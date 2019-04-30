@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185933"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>レポート パラメーターの値の追加、変更、または削除 (レポート ビルダーおよび SSRS)
   レポート パラメーターを作成した後、ユーザーに対して表示する使用可能な値の一覧を指定できます。 使用可能な値の一覧を使用すると、ユーザーがパラメーターに選択できる値が有効な値のみに制限されます。  

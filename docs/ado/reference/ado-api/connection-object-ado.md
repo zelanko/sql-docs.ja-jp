@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140223"
 ---
 # <a name="connection-object-ado"></a>Connection オブジェクト (ADO)
 データ ソースへの接続を開くを表します。  
@@ -100,4 +100,4 @@ cnn. "parameter"
  [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

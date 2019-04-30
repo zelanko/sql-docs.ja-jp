@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049726"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 このオプションを使用して一括で読み込んだ大量のデータを使用して**bcp**がマージ追跡トリガーは起動しません。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  現在追跡テーブルに含まれていないソース テーブル内の行への参照をマージ追跡テーブルに挿入します。 このオプションを使用して一括で読み込んだ大量のデータを使用して**bcp**がマージ追跡トリガーは起動しません。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

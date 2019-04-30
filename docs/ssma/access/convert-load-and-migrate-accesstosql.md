@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fdfdfc65abef5c7d0793c4a00cdb78a033e67998
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138763"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>変換、読み込み、および (AccessToSQL) の移行
 **変換、読み込み、および移行** ダイアログ ボックスが、変換、読み込み、および移行のボタンまたは移行ウィザードを使用する場合に、移行の状態を報告します。  

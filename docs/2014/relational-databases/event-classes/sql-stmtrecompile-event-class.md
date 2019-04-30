@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061248"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile イベント クラス
   SQL:StmtRecompile イベント クラスは、ストアド プロシージャ、トリガー、アドホック バッチ、クエリなど、すべての種類のバッチに起因するステートメント レベルの再コンパイルが発生したことを示します。 クエリは、sp_executesql、動的 SQL、Prepare メソッド、Execute メソッド、または同様のインターフェイスを使用して送信できます。 SP:Recompile イベント クラスでなく、SQL:StmtRecompile イベント クラスを使用してください。  

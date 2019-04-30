@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062848"
 ---
 # <a name="shape-commands-in-general"></a>一般的な Shape コマンド
 形状の列を定義するデータの整形**レコード セット**、列、および方法で表されるエンティティ間のリレーションシップ、**レコード セット**にデータを設定します。  
@@ -50,7 +50,7 @@ ms.locfileid: "51601352"
   
  階層構造を移動する方法については**Recordset**を参照してください[階層レコード セットの行にアクセスする](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)します。  
   
- 構文的に正しい図形のコマンドに関する正確な情報は、[図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)を参照してください。  
+ 構文的に正しい図形のコマンドに関する正確な情報は、次を参照してください。[図形の正式な文法](../../../ado/guide/data/formal-shape-grammar.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199447"
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos の呼び出し
 ODBC 2。*x*、行の状態配列へのポインターが引数**SQLExtendedFetch**します。 行の状態配列への呼び出しによって更新された後で**SQLSetPos**します。 一部のドライバーがこの配列の間で変更しないという事実に依存していました**SQLExtendedFetch**と**SQLSetPos**します。 ODBC 3。*x*状態配列へのポインターは、記述子フィールド、および、そのため、変えることができます簡単に別の配列を指すようにします。 これは、問題と、ODBC 3 です。*x* ODBC 2 を利用するアプリケーション *。x*ドライバーは呼び出すことが**SQLSetStmtAttr**配列状態のポインターを設定して呼び出しは**SQLFetchScroll**データをフェッチします。 ドライバー マネージャーがへの呼び出しのシーケンスとしてマップ**SQLExtendedFetch**します。 次のコードでは、エラーは通常するときに発生ドライバー マネージャーは、2 つ目のマップ**SQLSetStmtAttr** ODBC 2 を使用するときに呼び出す *.x*ドライバー。  

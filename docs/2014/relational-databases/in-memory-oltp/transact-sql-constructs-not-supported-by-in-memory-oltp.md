@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155303"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
   メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャでは、ディスク ベース テーブルおよび解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャでサポートされる完全な [!INCLUDE[tsql](../../includes/tsql-md.md)] 領域はサポートされません。 サポートされていない機能を使用しようとすると、サーバーはエラーを返します。  
@@ -49,15 +49,15 @@ ms.locfileid: "52541238"
 |型|名前|解決策|  
 |----------|----------|----------------|  
 |機能|ON|メモリ最適化テーブルをファイル グループまたはパーティション構成に配置できません。 `CREATE TABLE` ステートメントから ON 句を削除します。|  
-|データ型|*データ型名*|指示されたデータ型はサポートされていません。 サポートされているデータ型に置き換えます。 詳細については、[Supported Data Types](supported-data-types-for-in-memory-oltp.md)を参照してください。|  
+|データ型|*データ型名*|指示されたデータ型はサポートされていません。 サポートされているデータ型に置き換えます。 詳細については、次を参照してください。 [Supported Data Types](supported-data-types-for-in-memory-oltp.md)します。|  
 |機能|計算列|計算列は、メモリ最適化テーブルではサポートされていません。 `CREATE TABLE` ステートメントから計算列を削除します。|  
 |機能|のレプリケーション|レプリケーションはメモリ最適化テーブルではサポートされていません。|  
 |機能|FILESTREAM|FILESTREAM ストレージは、メモリ最適化テーブルのサポートされた列ではありません。 列定義から `FILESTREAM` キーワードを削除します。|  
 |機能|SPARSE|メモリ最適化テーブルの列を SPARSE として定義することはできません。 列定義から `SPARSE` キーワードを削除します。|  
 |機能|ROWGUIDCOL|ROWGUIDCOL オプションはメモリ最適化テーブルの列ではサポートされていません。 列定義から `ROWGUIDCOL` キーワードを削除します。|  
-|機能|FOREIGN KEY|FOREIGN KEY 制約は、メモリ最適化テーブルではサポートされていません。 テーブル定義から制約を削除します。<br /><br /> 制約がサポートの不足を軽減する方法については、[移行を確認し、外部キー制約](../../database-engine/migrating-check-and-foreign-key-constraints.md)を参照してください。|  
-|機能|CHECK|CHECK 制約は、メモリ最適化テーブルではサポートされていません。 テーブル定義から制約を削除します。<br /><br /> 制約がサポートの不足を軽減する方法については、[移行を確認し、外部キー制約](../../database-engine/migrating-check-and-foreign-key-constraints.md)を参照してください。|  
-|機能|UNIQUE|UNIQUE 制約は、メモリ最適化テーブルではサポートされていません。 テーブル定義から制約を削除します。<br /><br /> 制約がサポートの不足を軽減する方法については、[移行を確認し、外部キー制約](../../database-engine/migrating-check-and-foreign-key-constraints.md)を参照してください。|  
+|機能|FOREIGN KEY|FOREIGN KEY 制約は、メモリ最適化テーブルではサポートされていません。 テーブル定義から制約を削除します。<br /><br /> 制約がサポートの不足を軽減する方法については、次を参照してください。[移行を確認し、外部キー制約](../../database-engine/migrating-check-and-foreign-key-constraints.md)します。|  
+|機能|CHECK|CHECK 制約は、メモリ最適化テーブルではサポートされていません。 テーブル定義から制約を削除します。<br /><br /> 制約がサポートの不足を軽減する方法については、次を参照してください。[移行を確認し、外部キー制約](../../database-engine/migrating-check-and-foreign-key-constraints.md)します。|  
+|機能|UNIQUE|UNIQUE 制約は、メモリ最適化テーブルではサポートされていません。 テーブル定義から制約を削除します。<br /><br /> 制約がサポートの不足を軽減する方法については、次を参照してください。[移行を確認し、外部キー制約](../../database-engine/migrating-check-and-foreign-key-constraints.md)します。|  
 |機能|COLUMNSTORE|COLUMNSTORE インデックスは、メモリ最適化テーブルでサポートされていません。 代わりに、NONCLUSTERED インデックスまたは NONCLUSTERED HASH インデックスを指定します。|  
 |機能|クラスター化インデックス|非クラスター化インデックスを指定します。 主キー インデックスの場合は `PRIMARY KEY NONCLUSTERED [HASH]` を指定する必要があります。|  
 |機能|1252 以外のコード ページ|メモリ最適化テーブルの `char` および `varchar` データ型の列では、コード ページ 1252 を使用する必要があります。 (var)char の代わりに n(var)char を使用するか、コード ページ 1252 で照合順序を使用します (たとえば、Latin1_General_BIN2)。 詳細については、「 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)」を参照してください。|  
@@ -119,8 +119,8 @@ ms.locfileid: "52541238"
 |機能|SELECT INTO|`INTO` 句は `SELECT` ステートメントではサポートされていません。 としてクエリを書き直します`INSERT INTO`*テーブル*`SELECT`します。|  
 |機能|OUTPUT|`OUTPUT` 句はサポートされていません。 クエリから削除します。|  
 |機能|不完全な挿入列リスト|`INSERT` ステートメントでは、テーブルのすべての列に値を指定する必要があります。|  
-|関数|*関数*|ネイティブ コンパイル ストアド プロシージャ内では、組み込み関数はサポートされません。 ストアド プロシージャから関数を削除します。 サポートされる組み込み関数の詳細については、[Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)を参照してください。|  
-|機能|CASE|ネイティブ コンパイル ストアド プロシージャ内のクエリでは、`CASE` ステートメントはサポートされません。 各ケースのクエリを作成します。 詳細については、[、CASE ステートメントを実装する](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)を参照してください。|  
+|関数|*関数*|ネイティブ コンパイル ストアド プロシージャ内では、組み込み関数はサポートされません。 ストアド プロシージャから関数を削除します。 サポートされる組み込み関数の詳細については、次を参照してください。 [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)します。|  
+|機能|CASE|ネイティブ コンパイル ストアド プロシージャ内のクエリでは、`CASE` ステートメントはサポートされません。 各ケースのクエリを作成します。 詳細については、次を参照してください。 [、CASE ステートメントを実装する](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)します。|  
 |機能|ユーザー定義関数|ユーザー定義関数はネイティブ コンパイル ストアド プロシージャ内で使用できません。 プロシージャの定義から関数への参照を削除します。|  
 |機能|ユーザー定義集計|ユーザー定義集計関数はネイティブ コンパイル ストアド プロシージャ内で使用できません。 プロシージャから関数への参照を削除します。|  
 |機能|ブラウズ モード メタデータ|ネイティブ コンパイル ストアド プロシージャでは、ブラウズ モード メタデータはサポートされていません。 セッション オプション `NO_BROWSETABLE` を OFF に設定します。|  
@@ -154,7 +154,7 @@ ms.locfileid: "52541238"
 |演算子|UNION|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから `UNION` を削除します。 単一の結果セットへのいくつかの結果セットの結合は、テーブル変数を使用しても実行できます。|  
 |演算子|INTERSECT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから `INTERSECT` を削除します。 場合によっては INNER JOIN を使用して同じ結果を得ることができます。|  
 |演算子|EXCEPT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから `EXCEPT` を削除します。|  
-|演算子|OUTER JOIN|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから `OUTER JOIN` を削除します。 詳細については、[Outer Join を実装する](implementing-an-outer-join.md)を参照してください。|  
+|演算子|OUTER JOIN|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから `OUTER JOIN` を削除します。 詳細については、次を参照してください。 [Outer Join を実装する](implementing-an-outer-join.md)します。|  
 |演算子|APPLY|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから `APPLY` を削除します。|  
 |演算子|PIVOT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから `PIVOT` を削除します。|  
 |演算子|UNPIVOT|この演算子はサポートされていません。 ネイティブ コンパイル ストアド プロシージャから `UNPIVOT` を削除します。|  

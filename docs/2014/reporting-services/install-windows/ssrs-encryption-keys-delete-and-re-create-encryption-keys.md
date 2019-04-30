@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 38547a2d48ecbe1887702d7be9b45b3166d75243
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224807"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>暗号化キーの削除と再作成 (SSRS 構成マネージャー)
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  

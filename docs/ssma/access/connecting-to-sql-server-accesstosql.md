@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139025"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL) への接続
 Access データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のターゲット インスタンスに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SSMA がのインスタンス内のデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデータベースのメタデータを表示および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が、接続先は、パスワードを保存しないことです。  
@@ -46,10 +46,10 @@ SQL Server のインスタンスに関するメタデータは、自動的に同
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
 Access データベースのオブジェクトに変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を Access データベースを移行します。  
   
-接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、データベース レベルのアクセスには、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[マッピング ソースとターゲット データベース](mapping-source-and-target-databases-accesstosql.md)を参照してください。  
+接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、データベース レベルのアクセスには、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[マッピング ソースとターゲット データベース](mapping-source-and-target-databases-accesstosql.md)します。  
   
 > [!IMPORTANT]  
-> 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると、接続を受け入れることができます。 詳細については、"への接続、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース エンジン"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
+> 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると、接続を受け入れることができます。 詳細については、次を参照してください。"への接続、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース エンジン"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 **SQL Server に接続するには**  
   
@@ -63,7 +63,7 @@ Access データベースのオブジェクトに変換する前に[!INCLUDE[ssN
   
     -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   
-    -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュ、およびインスタンス名を入力します。 例: \myinstance します。  
+    -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュ、およびインスタンス名を入力します。 以下に例を示します。\Myinstance します。  
   
     -   アクティブなユーザー インスタンスに接続する[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]、名前付きパイプを使用して接続プロトコルと、パイプ名を指定するよう\\ \\.\pipe\sql\query します。 詳細については、[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のドキュメントを参照してください。  
   
@@ -97,10 +97,10 @@ Access データベースのオブジェクトに変換する前に[!INCLUDE[ssN
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**プロジェクトの種類とターゲット サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (バージョン: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (バージョン: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|はい|はい|はい|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|はい|はい|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|はい|はい||
+|**プロジェクトの種類とターゲット サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (バージョン。9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (バージョン。10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|[はい]|[はい]|[はい]|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|[はい]|[はい]|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|[はい]|はい||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||はい|はい||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||はい||
 |SQL Azure||||||はい|

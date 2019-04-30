@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: からNumeric |Microsoft Docs'
+title: 'SQL から C へ: Numeric |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9abd536110222f8e30a781b6d648402335837f61
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151286"
 ---
-# <a name="sql-to-c-numeric"></a>SQL c: から数値
+# <a name="sql-to-c-numeric"></a>SQL から C へ: 数値
 
 識別子の数値の ODBC SQL データ型に次のとおりです。
 
@@ -35,7 +35,7 @@ ms.locfileid: "54420007"
 - SQL_SMALLINT  
 - SQL_DOUBLE SQL_INTEGER  
 
-次の表は、ODBC C データ型が数値の SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。  
+次の表は、ODBC C データ型が数値の SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
 
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  

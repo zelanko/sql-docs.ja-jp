@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0de0501bc62d8aa305f1bcd08e8fe3de5433ff9c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215210"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>円グラフの値の開始位置を円の最上部にする (レポート ビルダーおよび SSRS)
   円グラフでは、既定でデータセットの最初の値が円の最上部から 90 度の位置から開始されます。 最初の値の開始位置を最上部にすることが望ましい場合もあります。  

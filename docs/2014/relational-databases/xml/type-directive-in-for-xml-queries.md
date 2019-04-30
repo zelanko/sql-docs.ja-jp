@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193287"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポート、 [xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) FOR XML クエリの結果として返す要求オプションには、 `xml` TYPE ディレクティブを指定することによってデータ型。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、それに対して XQuery を指定に結果を割り当てる、`xml`変数、または書き込み[入れ子になった FOR XML クエリ](use-nested-for-xml-queries.md)します。  
@@ -89,7 +89,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  内側の `SELECT ... FOR XML` クエリにより `xml` 型の結果が返され、外側の `SELECT` によりその `xml` 型の結果に `query()` メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez">`  
   

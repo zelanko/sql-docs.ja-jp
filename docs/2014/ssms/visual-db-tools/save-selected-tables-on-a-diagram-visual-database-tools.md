@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067517"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムで選択したテーブルの保存 (Visual Database Tools)
   データベース ダイアグラムで加えた変更のすべてを保存する必要がない場合は、特定のまたは複数のテーブルを保存できます。  

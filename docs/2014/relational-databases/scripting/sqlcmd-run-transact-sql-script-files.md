@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dd52c6fb0c5533450a7e32ad68a156406873fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136253"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL スクリプト ファイルの実行
-  `sqlcmd` を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを実行できます。 A[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト ファイルは、テキスト ファイルの組み合わせを含むことのできる[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、`sqlcmd`コマンド、およびスクリプト変数です。  
+  `sqlcmd` を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、`sqlcmd` コマンド、およびスクリプト変数を組み合わせて記述できるテキスト ファイルです。  
   
  メモ帳を使用して簡単な [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルを作成するには  
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントして、 **[メモ帳]** をクリックします。  
   
-2.  コピーし、貼り付け[!INCLUDE[tsql](../../includes/tsql-md.md)]をメモ帳にコード。  
+2.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをコピーして、メモ帳に貼り付けます。  
   
     ```  
     USE AdventureWorks2012;  
@@ -50,7 +50,7 @@ ms.locfileid: "48085374"
   
 1.  コマンド プロンプト ウィンドウを開きます。  
   
-2.  コマンド プロンプト ウィンドウで次のように入力します。 `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  コマンド プロンプト ウィンドウで、「`sqlcmd -S myServer\instanceName -i C:\myScript.sql`」と入力します。  
   
 3.  Enter キーを押します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48085374"
   
 1.  コマンド プロンプト ウィンドウを開きます。  
   
-2.  コマンド プロンプト ウィンドウで次のように入力します。 `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  コマンド プロンプト ウィンドウで、「`sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`」と入力します。  
   
 3.  Enter キーを押します。  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48085374"
   
 ## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティの起動](sqlcmd-start-the-utility.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)  
   
   

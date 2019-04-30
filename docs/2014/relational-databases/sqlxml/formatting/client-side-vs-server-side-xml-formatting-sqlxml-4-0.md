@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 39ff0244059cd8c33473f31f8a5822332bf12e7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131175"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0)
   ここでは、SQLXML における、クライアント側とサーバー側の XML 書式設定の一般的な違いについて説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "52822436"
   
  このテンプレートはアプリケーション コードで実行できます。実行すると、クライアント側の XML 書式設定では複数の行セットの書式設定がサポートされていないため、エラーが返されます。 2 つのクエリを指定する場合は、各 **\<sql:query >** ブロックでは、目的の結果が表示されます。  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>クライアント側とサーバー側の XML 書式設定では timestamp 型のマッピングが異なる  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>マップとは異なるクライアント vs でのタイムスタンプ。サーバー側の書式設定  
  サーバー側の XML 書式設定では、XMLDATA オプションがクエリで指定される場合、`timestamp` 型のデータベース列が i8 XDR 型にマップされます。  
   
  クライアント側の XML 書式設定では、バイナリの base64 オプションがクエリで指定されているかどうかに従って、`timestamp` 型のデータベース列が `uri` または `bin.base64` XDR 型にマップされます。 `bin.base64` XDR 型は、この型に変換されますので、アップデート グラムや一括読み込み機能を使用する場合に便利です、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp`型。 この方法で、挿入、更新、または削除操作が成功します。  
@@ -50,7 +50,7 @@ ms.locfileid: "52822436"
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>サーバー側の書式設定ではサブタイプの VARIANT 型も使用される  
  サーバー側の XML 書式設定では、サブタイプの VARIANT 型も使用されます。 クライアント側の XML 書式設定を使用する場合、variant は Unicode 文字列に変換され、サブタイプの VARIANT は使用されません。  
   
-## <a name="nested-mode-vs-auto-mode"></a>NESTED モードと AUTO モード  
+## <a name="nested-mode-vs-auto-mode"></a>モードとの入れ子になった。AUTO モード  
  クライアント側の FOR XML の NESTED モードは、サーバー側の FOR XML の AUTO モードに似ていますが、次の点が異なります。  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>サーバー側で AUTO モードを使用してビューにクエリを実行すると、ビュー名が結果の XML 内の要素名として返されます。  
@@ -75,7 +75,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- テンプレートを実行すると、次の XML が返されます。 ここでは一部の結果のみが表示されています。クエリの実行対象のビューの名前が要素名になっていることに注意してください。  
+ テンプレートを実行すると、次の XML が返されます。 (部分的な結果のみ表示されます。要素名には、クエリの実行対象となるビューの名前に注意してください。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -131,7 +131,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- クライアント側の FOR XML を NESTED モードで使用すると、テーブル名が、結果の XML 内の要素名として返されます。 クエリで指定されたテーブルの別名は使用されません。たとえば、次のテンプレートを考えてみます。  
+ クライアント側の FOR XML を NESTED モードで使用すると、テーブル名が、結果の XML 内の要素名として返されます。 (クエリで指定されているテーブルの別名は使用されません)。たとえば、次のテンプレートを考えてみます。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

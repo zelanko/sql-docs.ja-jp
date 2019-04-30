@@ -1,5 +1,5 @@
 ---
-title: TM:Rollback Tran Completed イベント クラス |Microsoft Docs
+title: 'TM: Rollback Tran Completed イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061338"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM:Rollback Tran Completed イベント クラス
+# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed イベント クラス
   TM:Rollback Tran Completed イベント クラスは、ROLLBACK TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。 EventSubClass 列は、現在のトランザクションがロールバックされた後に新しいトランザクションが開始されるかどうかを示します。  
   
-## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM:Rollback Tran Completed イベント クラスのデータ列  
+## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  

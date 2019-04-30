@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209081"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
   ページ レイアウトや改ページなど、表示レポートに思いどおりの体裁を実現するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レンダラーの動作をよく理解したうえでレポートを作成することが大切です。 また、レンダリングされたレポートが、普段自分や組織が使用している用紙サイズに収まるかどうかを確認することも必要です。  

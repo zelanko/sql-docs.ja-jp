@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63052911"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>レッスン 1:新しいテーブル モデル プロジェクトの作成
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -83,7 +83,7 @@ SSDT をインストールしたときに、いくつかの新しいメニュー
 
 
 ## <a name="additional-resources"></a>その他の技術情報
-テーブル モデル プロジェクトのさまざまな種類の詳細については、[表形式モデル プロジェクト](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)を参照してください。 表形式モデル オーサリング環境についての詳細についてを参照してください。 [Tabular Model Designer](../analysis-services/tabular-models/tabular-model-designer-ssas.md)します。  
+テーブル モデル プロジェクトのさまざまな種類の詳細については、次を参照してください。[表形式モデル プロジェクト](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)します。 表形式モデル オーサリング環境についての詳細についてを参照してください。 [Tabular Model Designer](../analysis-services/tabular-models/tabular-model-designer-ssas.md)します。  
   
 
 ## <a name="whats-next"></a>次の操作

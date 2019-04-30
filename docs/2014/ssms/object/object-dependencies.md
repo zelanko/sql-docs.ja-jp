@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032420"
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
   一部のデータベース オブジェクトには、他のデータベース オブジェクトと依存関係があります。 たとえば、ビューとストアド プロシージャは、そのビューまたはプロシージャが返すデータを格納するテーブルの存在に依存します。 現在のオブジェクトの **[オブジェクトの依存関係]\([全般] ページ)** には、オブジェクトが正常に動作するために必要なデータベース オブジェクト、および選択されているオブジェクトに依存するオブジェクトの両方が一覧表示されます。 オブジェクトは、その定義で別のオブジェクトを参照する場合 (この定義はシステム カタログに格納されます)、 *参照元エンティティ*と呼ばれます。 別のオブジェクトによって参照されるオブジェクトは、 *参照先エンティティ*と呼ばれます。  

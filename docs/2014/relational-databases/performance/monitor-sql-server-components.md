@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150751"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server コンポーネントの監視
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では動的な環境でサービスを提供しているため、監視することは重要です。 アプリケーションのデータは変化します。 ユーザーが必要とするアクセスの種類は変化します。 ユーザーの接続方法も変化します。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアクセスするアプリケーションの種類が変わる可能性もあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、手動によるシステム レベルのチューニングを必要最低限に抑えるために、メモリやディスク領域などシステム レベルのリソースが自動的に管理されています。 管理者は、SQL Server を監視することにより、パフォーマンスの傾向を特定して、変更が必要かどうかを判断することができます。  

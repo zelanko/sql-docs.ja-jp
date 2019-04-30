@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 575ba4abf9ed20ffbc0f2602a91bee9776e42b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198202"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Microsoft Excel から Visual FoxPro データ ソースへのアクセス
 インストールされている Microsoft のクエリがある場合は、Visual FoxPro データに接続する Microsoft Excel でデータ ソースを作成できます。  
@@ -48,4 +48,4 @@ ms.locfileid: "47811360"
   
 8.  [使用] をクリックします。  
   
- 開いているクエリにテーブルを追加できます。 クエリの作成の詳細については、[Visual FoxPro データベースから Microsoft Excel へのデータのインポート](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)を参照してください。
+ 開いているクエリにテーブルを追加できます。 クエリの作成の詳細については、次を参照してください。 [Visual FoxPro データベースから Microsoft Excel へのデータのインポート](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)します。

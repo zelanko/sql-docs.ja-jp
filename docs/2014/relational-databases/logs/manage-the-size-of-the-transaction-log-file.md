@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144333"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのトランザクション ログは、必要に応じて、その物理ログ ファイルを物理的に圧縮または展開することができます。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のトランザクション ログ サイズの監視、トランザクション ログの圧縮、トランザクション ログ ファイルの追加と拡大、 **tempdb** トランザクション ログ増加率の最適化、トランザクション ログ ファイルのサイズ拡大の管理の方法について説明します。  
@@ -77,7 +77,7 @@ ms.locfileid: "52816614"
   
 -   拡張増分値で変更するには、FILEGROWTH オプションを使用します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 ログ ファイルの自動拡張の増分値が小さい場合も、パフォーマンスが低下することがあります。 ログ ファイルの拡張増分値は、拡張を頻繁に行わなくても済むように十分な大きさにする必要があります。 通常は、既定の拡張増分値 (10%) が適しています。  
   
-     ログ ファイルのファイル拡張プロパティを変更する方法の詳細については、[ALTER DATABASE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)を参照してください。  
+     ログ ファイルのファイル拡張プロパティを変更する方法の詳細については、次を参照してください。 [ALTER DATABASE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)します。  
   
 -   ログ ファイルの最大サイズを KB、MB、GB、および TB 単位で制御するか、拡張値を UNLIMITED に設定するには、MAXSIZE オプションを使用します。  
   

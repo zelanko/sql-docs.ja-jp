@@ -1,5 +1,5 @@
 ---
-title: + (Union)(MDX) |Microsoft ドキュメント
+title: + (Union)(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129826"
 ---
 # <a name="union---mdx-operator-reference"></a>共用体の MDX 演算子リファレンス
 
 
-  2 つのセットの重複メンバーを削除して和集合を返すセット演算を実行します。  
+  重複するメンバーを削除して、2 つのセットの和集合を返すセット演算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ Set_Expression + Set_Expression
  **+ (Union)** 演算子は機能的に等価、[共用体&#40;MDX&#41; ](../mdx/union-mdx.md)関数。  
   
 ## <a name="examples"></a>使用例  
- この演算子の使用例を以下に示します。  
+ 次の例では、この演算子の使用を示します。  
   
 ```  
 -- This member returns the gross profit margin for each year for North American countries.  

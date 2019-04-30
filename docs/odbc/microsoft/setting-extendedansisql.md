@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159367"
 ---
 # <a name="setting-extendedansisql"></a>ExtendedAnsiSQL の設定
 ExtendedAnsiSQL 属性を追加することで、接続文字列で、属性を制御できます。  
@@ -26,7 +26,7 @@ ExtendedAnsiSQL 属性を追加することで、接続文字列で、属性を�
 |値|説明|  
 |-----------|-----------------|  
 |ExtendedAnsiSQL = 0 (既定)|この設定は、新しい機能を有効になりません。|  
-|ExtendedAnsiSQL = 1|この設定により、新機能です。|  
+|ExtendedAnsiSQL=1|この設定により、新機能です。|  
   
  経由の DSN で属性を設定することも、**オプションの高度な** ダイアログ ボックスのコントロール パネルを使用した DSN を構成するときにします。  
   

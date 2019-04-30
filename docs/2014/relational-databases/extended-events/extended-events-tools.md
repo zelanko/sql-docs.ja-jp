@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137050"
 ---
 # <a name="extended-events-tools"></a>拡張イベントのツール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント セッションの作成と管理には、次のツールを使用できます。  

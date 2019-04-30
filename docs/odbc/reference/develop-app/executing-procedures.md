@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff234d1d8e099611c8718eac5ae3b584e926a2bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061970"
 ---
 # <a name="executing-procedures"></a>プロシージャの実行
 ODBC では、プロシージャを実行するための標準のエスケープ シーケンスを定義します。 このシーケンスおよびそれを使用するコード例の構文を参照してください。[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)します。  
   
  プロシージャを実行するには、アプリケーションは、次の操作を実行します。  
   
-1.  パラメーターの値を設定します。 詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述を参照してください。  
+1.  パラメーターの値を設定します。 詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述します。  
   
 2.  呼び出し**SQLExecDirect**プロシージャを実行する SQL ステートメントを含む文字列を渡します。 このステートメントは、ODBC または DBMS 固有の構文で定義されているエスケープ シーケンスを使用できます。DBMS に固有の構文を使用するステートメントは相互運用可能ではありません。  
   
 3.  ときに**SQLExecDirect**を呼び出すと、ドライバー。  
   
-    -   現在のパラメーター値を取得し、必要に応じてそれらを変換します。 詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述を参照してください。  
+    -   現在のパラメーター値を取得し、必要に応じてそれらを変換します。 詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述します。  
   
     -   データ ソース内のプロシージャを呼び出すし、変換されたパラメーターの値を送信します。 ドライバーが、プロシージャを呼び出す方法と、ドライバー固有です。 たとえば、データ ソースの SQL 文法を使用し、実行するためには、このステートメントを送信する SQL ステートメントを変更する可能性があります。 または DBMS のデータ ストリーム プロトコルで定義されているリモート プロシージャ コール (RPC) メカニズムを使用して直接プロシージャを呼び出すことができます。  
   

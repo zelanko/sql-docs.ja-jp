@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127832"
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
 後続のインデックス作成および並べ替え操作では、文字列フィールドの照合順序を指定します。  
@@ -37,7 +37,7 @@ SET COLLATE TO cSequenceName
 |および|[言語]|  
 |-------------|--------------|  
 |オランダ語|オランダ語|  
-|GENERAL|英語、フランス語、ドイツ語、最新のスペイン語、ポルトガル語、およびその他の西ヨーロッパ言語|  
+|[全般]|英語、フランス語、ドイツ語、最新のスペイン語、ポルトガル語、およびその他の西ヨーロッパ言語|  
 |ドイツ語|ドイツの電話帳順序 (DIN)|  
 |アイスランド|アイスランド語|  
 |マシン|マシン (以前のバージョンの FoxPro の既定の照合順序)|  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d94570a337f564588b2709fd292eab5ed5396dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126704"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (Visual C++ 構文用の ADO)
 ## <a name="parameters"></a>パラメーター  
@@ -44,7 +44,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
@@ -75,7 +75,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
@@ -103,7 +103,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  
@@ -116,7 +116,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
 -   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ### <a name="methods"></a>メソッド  
   
@@ -128,7 +128,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 get_Count(long *c);  

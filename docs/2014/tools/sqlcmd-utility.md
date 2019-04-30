@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035388"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   `sqlcmd`ユーティリティを使用する入力[!INCLUDE[tsql](../includes/tsql-md.md)]でコマンド プロンプトでは、ステートメント、システム プロシージャ、およびスクリプト ファイル**クエリ エディター** SQLCMD モードで、Windows スクリプト ファイル、またはオペレーティング システム (Cmd.exe) ジョブ ステップの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]エージェント ジョブ。 このユーティリティでは、ODBC を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] バッチを実行します。  
@@ -95,7 +95,7 @@ ms.locfileid: "53591926"
  ワークステーション名です。 このオプションにより、`sqlcmd` スクリプト変数 SQLCMDWORKSTATION が設定されます。 ワークステーション名は **sys.processes** カタログ ビューの **hostname** 列に一覧表示され、ストアド プロシージャ **sp_who** を使用して取得できます。 このオプションが指定されていない場合の既定値は、現在のコンピューター名になります。 この名前は、異なる `sqlcmd` セッションを識別する場合に使用できます。  
   
  **-K** _application_intent_  
- アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、**ReadOnly** だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、次を参照してください。[アクティブなセカンダリ。読み取り可能なセカンダリ レプリカ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
+ アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、**ReadOnly** だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  `-M` *multisubnet_failover*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用性グループまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず `-M` を指定してください。 `-M` を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 `-M` が指定されていない場合、`-M` は無効になります。 詳細については[!INCLUDE[ssHADR](../includes/sshadr-md.md)]を参照してください[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)、[作成し、可用性グループの構成&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)、および[アクティブなセカンダリ。読み取り可能なセカンダリ レプリカ](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
@@ -190,7 +190,7 @@ ms.locfileid: "53591926"
   
  **-i** c:\\< ファイル名\>  
   
- **-i** \\ \\< Server\>\\< Share$ >\\< ファイル名\>  
+ **-i** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-i** "C:\Some Folder\\<file name\>"  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53591926"
   
  **-o** C:\\< filename>  
   
- **-o** \\ \\< Server\>\\< Share$ >\\< ファイル名\>  
+ **-o** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-o "** C:\Some Folder\\<file name\>"  
   
@@ -260,12 +260,12 @@ ms.locfileid: "53591926"
  このオプションと共に `-b` を指定すると、`sqlcmd` はエラーで終了します。 `-b` オプションについては、このトピックの後半で説明します。  
   
  **-t** _query_timeout_  
- コマンド (または SQL ステートメント) の実行待ち時間を秒単位で指定します。このオプションにより、`sqlcmd` スクリプト変数 SQLCMDSTATTIMEOUT が設定されます。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。*query**time_out* は、1 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`sqlcmd` はエラー メッセージを生成します。  
+ コマンド (または SQL ステートメント) の実行待ち時間を秒単位で指定します。このオプションの設定、`sqlcmd`スクリプト変数 sqlcmdstattimeout が設定されます。 *time_out* 値を指定しないと、コマンドはタイムアウトしません。*query**time_out* は、1 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`sqlcmd` はエラー メッセージを生成します。  
   
 > [!NOTE]  
 >  実際のタイムアウト値は、指定した *time_out* 値より数秒異なる場合があります。  
   
- **-vvar =** _値_[ **var =** _値_...]  
+ **-vvar =** _value_[ **var =** _value_...]  
  作成、`sqlcmd`で使用できるスクリプトの変数を`sqlcmd`スクリプト。 値に空白が含まれる場合は、値を引用符で囲みます。 複数を指定する **_var_**=**"*`values`*"** 値。 指定した値にエラーが生じた場合は、`sqlcmd` は、エラー メッセージを生成してから終了します。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
@@ -427,7 +427,7 @@ ms.locfileid: "53591926"
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd スクリプト変数  
   
-|変数|関連スイッチ|R/W|既定値|  
+|変数|関連スイッチ|R/W|既定|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -439,7 +439,7 @@ ms.locfileid: "53591926"
 |SQLCMDHEADERS|-H|R/W|"0"|  
 |SQLCMDCOLSEP|-S|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|R/W|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 無制限|  
@@ -499,7 +499,7 @@ ms.locfileid: "53591926"
  ステートメント キャッシュの内容を出力します。  
   
  **変数**  
-  **: Setvar** \< **var**> [ **"*`value`*"** ]  
+  **:Setvar** \<**var**> [ **"*`value`*"** ]  
  `sqlcmd` スクリプト変数を定義します。 スクリプト変数は `$(VARNAME)`という形式になります。  
   
  変数名では大文字と小文字が区別されません。  
@@ -531,7 +531,7 @@ ms.locfileid: "53591926"
   
  **出力コマンド**  
   **:Error**   
- **_\<_** _ファイル名_**_>|_ STDERR |STDOUT**  
+ **_\<_** _filename_  **_>|_ STDERR|STDOUT**  
  すべてのエラー出力を、 *file name*によって指定されたファイル、または **stderr** や **stdout**にリダイレクトします。 **Error** コマンドは、スクリプト内で複数回使用できます。 既定では、エラー出力は **stderr**に送られます。  
   
  *ファイル名*  
@@ -550,7 +550,7 @@ ms.locfileid: "53591926"
  すべてのパフォーマンス トレース情報を、 *file name*によって指定されたファイル、または **stderr** や **stdout**に作成してリダイレクトします。 既定では、パフォーマンス トレース出力は **stdout**に送られます。 ファイルが既に存在している場合は、ファイルは 0 バイトに切り詰められます。 **Perftrace** コマンドは、スクリプト内で複数回使用できます。  
   
  **実行制御コマンド**  
-  **:On Error**[ `exit`  |  `ignore`]  
+  **:On Error**[ `exit` | `ignore`]  
  スクリプト実行中またはバッチ実行中のエラー発生時に対応するアクションを設定します。  
   
  `exit` オプションを使用した場合、`sqlcmd` は該当するエラー値を表示して終了します。  
@@ -560,7 +560,7 @@ ms.locfileid: "53591926"
  **[:]** **QUIT**  
  `sqlcmd` が終了します。  
   
- **[:]****終了**[ **(*`statement`*)** ]  
+ **[:]** **EXIT**[ **(*`statement`*)** ]  
  SELECT ステートメントの結果からの戻り値として使用できます`sqlcmd`します。 数値の場合、結果行の最終行の第 1 列は、4 バイトの (長) 整数に変換されます。 MS-DOS は、下位バイトを親プロセスやオペレーティング システムのエラー レベルに渡します。 Windows 200x では、4 バイトの整数全体を渡します。 構文は次のとおりです。  
   
  `:EXIT(query)`  
@@ -625,7 +625,7 @@ ms.locfileid: "53591926"
  **:Serverlist**  
  ローカルに構成されたサーバーと、ネットワーク上でブロードキャストしているサーバー名の一覧を表示します。  
   
- **: 接続** _server_name_[**\\**_instance_name_] [-l*タイムアウト*] [-U *user _名前*[、P*パスワード*]  
+ **:Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続します。 また、現在の接続を終了します。  
   
  タイムアウト オプション :  

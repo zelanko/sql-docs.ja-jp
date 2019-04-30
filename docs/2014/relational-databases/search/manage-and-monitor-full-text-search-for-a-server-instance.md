@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 23dd1efa80cab8301c0a361c4e8486f036baf6f7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046313"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>サーバー インスタンスでのフルテキスト検索の管理と監視
   サーバー インスタンスのフルテキスト検索の管理には次の作業があります。  
@@ -62,7 +62,7 @@ ms.locfileid: "48906372"
          **リセット**  
          フルテキスト カタログがリセットされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログ ファイルは削除されますが、フルテキスト カタログのメタデータおよびフルテキスト インデックスは保持されます。 アップグレード後、すべてのフルテキスト インデックスで変更の追跡は無効化されており、クロールは自動的には開始されません。 アップグレードの完了後、手動で完全作成を実行するまで、カタログは空のままになります。  
   
-         フルテキスト アップグレード オプションを選択する方法の詳細については、[、フルテキスト検索のアップグレード](upgrade-full-text-search.md)を参照してください。  
+         フルテキスト アップグレード オプションを選択する方法の詳細については、次を参照してください。 [、フルテキスト検索のアップグレード](upgrade-full-text-search.md)します。  
   
         > [!NOTE]  
         >  フルテキスト アップグレード オプションは、[sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) の **upgrade_option** 操作を使用して設定することもできます。  

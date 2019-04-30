@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186283"
 ---
 # <a name="data-sources"></a>ソリューション エクスプローラー
 A*データソース*はデータのソースだけです。 ファイル、DBMS、またはデータ フィードではさらに、特定のデータベースになります。 データをプログラムと同じコンピューター上またはネットワーク上のどこか別のコンピューター上にあることがあります。 たとえば、データ ソースは OS/2® オペレーティング システムを Novell® Netware; からアクセスで実行されている Oracle データベース管理システム可能性があります。ゲートウェイを使用してアクセスを IBM DB2 DBMSサーバー ディレクトリ; Xbase ファイルのコレクションまたは、ローカルの Microsoft® Access データベース ファイル。  

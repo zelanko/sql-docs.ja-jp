@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164052"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>シーケンス クラスター モデルの検証 (中級者向けデータ マイニング チュートリアル)
-  これでビルドした、 **Sequence Clustering with Region**モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]でシーケンス クラスター ビューアー、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 [!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター ビューアーには、5 つのタブが含まれています。**クラスター ダイアグラム**、**クラスターのプロファイル**、**クラスターの特性**、 **ClusterDiscrimination**、および**状態遷移**. このビューアーを使用する方法の詳細については、[Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)を参照してください。  
+  これでビルドした、 **Sequence Clustering with Region**モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]でシーケンス クラスター ビューアー、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 [!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター ビューアーには、5 つのタブが含まれています。**クラスター ダイアグラム**、**クラスターのプロファイル**、**クラスターの特性**、 **ClusterDiscrimination**、および**状態遷移**. このビューアーを使用する方法の詳細については、次を参照してください。 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)します。  
   
 -   [クラスター ダイアグラム タブ](#bkmk_CDiagram)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "56025000"
   
 7.  このクラスターを右クリックして**クラスター名の変更**します。 新しい名前を入力`Largest Cluster`します。  
   
- クラスターを表すノードからドリルスルーして、各クラスター内のケースの詳細を表示することができます。 たとえば、顧客に電子メールを送信するなど、分析の結果に対して操作を実行する場合に便利です。 構造には含まれているがモデルでは使用されていない、ケースのその他の属性を参照することもできます (Region や IncomeGroup など)。 マイニング モデルからドリルスルーする基になるケースの詳細については、[ドリルスルー クエリ&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)を参照してください。  
+ クラスターを表すノードからドリルスルーして、各クラスター内のケースの詳細を表示することができます。 たとえば、顧客に電子メールを送信するなど、分析の結果に対して操作を実行する場合に便利です。 構造には含まれているがモデルでは使用されていない、ケースのその他の属性を参照することもできます (Region や IncomeGroup など)。 マイニング モデルからドリルスルーする基になるケースの詳細については、次を参照してください。[ドリルスルー クエリ&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)します。  
   
 #### <a name="to-drill-through-to-details-from-the-cluster-diagram"></a>クラスター ダイアグラムから詳細情報にドリルスルーするには  
   
@@ -143,7 +143,7 @@ ms.locfileid: "56025000"
   
 2.  行の色付きのバーの上にマウス ポインターを置く`Region`します。  
   
-     値が Pacific である確率が非常に高いことがわかります。 これらの値を解釈する方法の詳細については、[Microsoft シーケンス クラスタ リング アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)を参照してください。  
+     値が Pacific である確率が非常に高いことがわかります。 これらの値を解釈する方法の詳細については、次を参照してください。 [Microsoft シーケンス クラスタ リング アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)します。  
   
 3.  最初の遷移行が見つかるまでクラスターの特性の一覧を調べていきます。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "56025000"
   
 2.  遷移行を見つけて、色付きのバーの上にマウス ポインターを置きます。  
   
-     内の項目、**値**列は、状態と遷移の両方を含めることができます。 各アイテムの色は識別スコアを表します。 さまざまなスコアの意味の詳細については、[シーケンス クラスター モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)を参照してください。  
+     内の項目、**値**列は、状態と遷移の両方を含めることができます。 各アイテムの色は識別スコアを表します。 さまざまなスコアの意味の詳細については、次を参照してください。[シーケンス クラスター モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)します。  
   
  [トップに戻る](#bkmk_CDiagram)  
   
@@ -248,7 +248,7 @@ ms.locfileid: "56025000"
   
 4.  ノードをさらに展開して、HTML ビューアー ペインに詳細を表示します。  
   
- マイニング モデルの内容と、ビューアーで詳細を使用する方法の詳細については、[シーケンス クラスター モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)を参照してください。  
+ マイニング モデルの内容と、ビューアーで詳細を使用する方法の詳細については、次を参照してください。[シーケンス クラスター モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)します。  
   
  [トップに戻る](#bkmk_CDiagram)  
   

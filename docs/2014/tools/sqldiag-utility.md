@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035421"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
   **SQLdiag** ユーティリティは、コンソール アプリケーションまたはサービスとして実行できる汎用的な診断収集ユーティリティです。 **SQLdiag** を使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 **SQLdiag** は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスによる診断情報収集の高速化と簡素化も目的としています。  
@@ -111,7 +111,7 @@ ms.locfileid: "53590256"
 > [!NOTE]  
 >  **SQLdiag** は起動時に、現在の出力フォルダーに出力を追加しません。 既定の出力フォルダーを上書きするか (オプション 1)、または既定のフォルダー名を変更して (オプション 2)、SQLDIAG という名前の新しい既定の出力フォルダーに出力を書き込むかのどちらかです。  
   
- **/M** _machine1_ [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  構成ファイルで指定されたコンピューターをオーバーライドします。 既定では、構成ファイルは SQLDiag.Xml です。または **/I** パラメーターで設定されます。 複数のコンピューターを指定する場合、それぞれのコンピューター名をスペースで区切ります。  
   
  *@machinelistfile* を使用すると、構成ファイルに保存するコンピューター一覧のファイル名が指定されます。  
@@ -230,7 +230,7 @@ ms.locfileid: "53590256"
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>セキュリティ要件  
-  **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合は、 **SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  
+ **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合は、 **SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
  **SQLdiag** を実行した場合のパフォーマンスへの影響は、収集用に構成した診断データの種類によって異なります。 たとえば、 **のトレース情報を収集するように** SQLdiag [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] を構成した場合、トレースを選択したイベント クラスの数に従ってサーバー パフォーマンスも影響を受けます。  

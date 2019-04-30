@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057850"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>タスク 17:SSIS パッケージによって作成された DQS クレンジング プロジェクトを確認する
   ここでは、DQS クライアントで SSIS パッケージにより作成された DQS プロジェクトを開き、クレンジング プロセスの結果を確認し、必要に応じてインタラクティブなクレンジングを実行し、結果をエクスポートします。  
@@ -26,7 +26,7 @@ ms.locfileid: "56024443"
   
 3.  に基づいて一覧を並べ替える**アクティビティの開始時刻**を最新のレコードを参照してください。  
   
-4.  プロジェクトの名前が **CleanseAndCurate.Cleanse Supplier Data.GUID**します。  
+4.  次の形式でプロジェクトの名前が表示されるに注意してください。**CleanseAndCurate.Cleanse Supplier Data.GUID**します。  
   
      ![SSIS パッケージによって作成された DQS クレンジング プロジェクト](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "SSIS パッケージによって作成された DQS クレンジング プロジェクト")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56024443"
   
 8.  メイン ページで**DQS クライアント**、 をクリックして**データ品質プロジェクトを開く**で、**データ品質プロジェクト**ウィンドウ。  
   
-9. プロジェクトの一覧で、SSIS DQS クレンジング コンポーネントによって作成されたプロジェクトを選択します。 プロジェクトの名前は、**CleanseAndCurate.Cleanse Supplier Data.GUID (赤色)** します。 に基づいて一覧を並べ替える必要があります**作成された日付**列と最新のレコードを参照してください。  
+9. プロジェクトの一覧で、SSIS DQS クレンジング コンポーネントによって作成されたプロジェクトを選択します。 プロジェクトの名前は、形式にする必要があります。**CleanseAndCurate.Cleanse Supplier Data.GUID (赤色)** します。 に基づいて一覧を並べ替える必要があります**作成された日付**列と最新のレコードを参照してください。  
   
 10. **[次へ]** をクリックします。  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217722"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 オブジェクトがオープンかクローズは、コマンドの実行またはデータを取得するデータ ソースに接続するかどうかを指定します。  

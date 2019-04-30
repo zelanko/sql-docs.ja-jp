@@ -11,14 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071822"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
-  ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラミングとクエリのセキュリティ構成が完全には実装されていません。 ネイティブ コンパイル ストアド プロシージャ内部で使用できない特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造が存在します。 詳細については、[ネイティブ コンパイル ストアド プロシージャでサポートされる構造](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)を参照してください。  
+  ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラミングとクエリのセキュリティ構成が完全には実装されていません。 ネイティブ コンパイル ストアド プロシージャ内部で使用できない特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造が存在します。 詳細については、次を参照してください。[ネイティブ コンパイル ストアド プロシージャでサポートされる構造](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)します。  
   
  ただし、ネイティブ コンパイル ストアド プロシージャに対してのみサポートされる [!INCLUDE[tsql](../../includes/tsql-md.md)] 機能がいくつかあります。  
   
@@ -69,7 +69,7 @@ go
   
 -   使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]認証します。  
   
- ネイティブ コンパイル ストアド プロシージャを作成するときに、エラー 15517 が発生することもあります。 詳細については、[MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md)を参照してください。  
+ ネイティブ コンパイル ストアド プロシージャを作成するときに、エラー 15517 が発生することもあります。 詳細については、次を参照してください。 [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md)します。  
   
 ## <a name="updating-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャの更新  
  ネイティブ コンパイル ストアド プロシージャに対する変更操作はサポートされていません。 ネイティブ コンパイル ストアド プロシージャを変更する方法の 1 つは、ストアド プロシージャを削除してから再作成することです。  

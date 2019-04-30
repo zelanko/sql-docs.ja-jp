@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2d7370b9b219c43bab4bfdc45377795edf148fc9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207854"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>SQL Server への接続 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のターゲット インスタンスのいずれかに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SSMA がのインスタンスのすべてのデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデータベースのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しているが、パスワードは保存されません。  
@@ -42,7 +42,7 @@ Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!IN
 ## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
 ASE データベース オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE データベースやデータベースを移行します。  
   
-接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、ASE スキーマ レベルでは、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、[SQL Server スキーマへの Sybase ASE スキーマのマッピング&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)を参照してください。  
+接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、ASE スキーマ レベルでは、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL Server スキーマへの Sybase ASE スキーマのマッピング&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)します。  
   
 > [!IMPORTANT]  
 > 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると、接続を受け入れることができます。  
@@ -94,7 +94,7 @@ ASE データベース オブジェクトを変換する前に[!INCLUDE[ssNoVers
 |SQL Azure||||||はい|  
   
 > [!IMPORTANT]
-> データベース オブジェクトの変換が実施しているのバージョンに従っていませんが、プロジェクトの種類に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しています。 場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年プロジェクトでは、変換は実行に従って[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 の新しいバージョンに接続している場合でも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016)  
+> データベース オブジェクトの変換が実施しているのバージョンに従っていませんが、プロジェクトの種類に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しています。 場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年プロジェクトでは、変換は実行に従って[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 の新しいバージョンに接続している場合でも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016)  
   
 ## <a name="reconnecting-to-sql-server"></a>SQL Server に再接続  
 接続を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロジェクトを終了するまでアクティブに保ちます。 プロジェクトを開くときにに再接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する場合は、サーバーにアクティブに接続します。 負荷のデータベース オブジェクトに、メタデータを更新するまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行します。  
@@ -123,7 +123,7 @@ ASE データベース オブジェクトを変換する前に[!INCLUDE[ssNoVers
   
 -   カスタム ソースとターゲットのデータ型のマッピングを参照してください[マッピング Sybase ASE と SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)します。  
   
--   Sybase ASE データベース オブジェクトの定義を変換できる場合、これらのいずれかを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、[Sybase ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)を参照してください。  
+-   Sybase ASE データベース オブジェクトの定義を変換できる場合、これらのいずれかを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [Sybase ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)します。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

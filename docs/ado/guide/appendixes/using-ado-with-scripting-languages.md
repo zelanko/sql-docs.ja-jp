@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217757"
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語で ADO を使用する
 ADO では、スクリプトの環境では、サーバー側のスクリプトを使用してデータを公開できます。 このシナリオでは、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されているコンポーネントです。 この HTML コンテンツは、クライアント Web ブラウザーに HTTP 経由で渡されることができます。 スクリプトを使用して、Web ページはサーバー側スクリプトは、更新、移動、および特定のデータを表示することができますに戻すアクションを送信できます。  

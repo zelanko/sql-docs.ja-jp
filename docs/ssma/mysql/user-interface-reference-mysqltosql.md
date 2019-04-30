@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e4aaf05b0d53e7d0fea5e509f02562ea9213bbef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215934"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>ユーザー インターフェイス リファレンス (MySQLToSQL)
 このセクションでは、for MySQL の SQL Server Migration Assistant (SSMA) のヘルプ トピックを紹介します。  

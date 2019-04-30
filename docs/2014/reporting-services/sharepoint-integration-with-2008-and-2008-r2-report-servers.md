@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d5a4394a9fbbf9ff7daa54ed7ba6a8b28921bd5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223295"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>2008 および 2008 R2 レポート サーバーとの SharePoint 統合
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、新しいアーキテクチャが導入され、SharePoint モードが SharePoint 共有サービスに基づくようになりました。 SharePoint サーバーの全体管理での新しい機能の管理が完了した、**サービスの管理**と**マネージャー サービス アプリケーション**ページ。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と SharePoint 統合用の以前のアーキテクチャがサポートされても、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前のバージョンのレポート サーバーと SharePoint 2010 を統合できるため、SharePoint 2010 製品用アドイン。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035401"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB ユーティリティ
   使用して、`SqlLocalDB`のインスタンスを作成するためのユーティリティ[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**します。 `SqlLocalDB`ユーティリティ (SqlLocalDB.exe) はユーザーと開発者を作成および管理のインスタンスを有効にするシンプルなコマンド ライン ツール[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**します。 使用する方法については**LocalDB**を参照してください[SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)します。  

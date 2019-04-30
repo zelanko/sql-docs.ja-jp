@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042330"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>ダウンロードおよび Analytics Platform System の Microsoft 更新プログラムを適用
 このトピックでは、Windows Server Update Services (WSUS) を Microsoft Update カタログから更新プログラムをダウンロードして、Analytics Platform System appliance のサーバーにこれらの更新プログラムを適用する方法について説明します。 Microsoft Update は Windows と SQL Server のすべての該当する更新プログラムをインストールします。 WSUS は、アプライアンスの VMM のバーチャル マシンにインストールされます。  
@@ -35,7 +35,7 @@ ms.locfileid: "52521477"
   
 -   Analytics Platform System の管理コンソールにアクセスし、アプライアンスの状態情報を表示する権限を持つログインがあります。  
   
--   ほとんどの場合、WSUS は、アプライアンスの外部にあるサーバーにアクセスする必要があります。 外部名を解決するのには、外部の DNS サーバーを使用するには、Analytics Platform System のホストと仮想マシン (Vm) を許可する外部名転送をサポートするために、分析プラットフォーム システム DNS を構成できますこの使用シナリオをサポートするために、アプライアンスです。 詳細については、[非アプライアンス DNS 名の解決に DNS フォワーダーを使用して、 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)を参照してください。  
+-   ほとんどの場合、WSUS は、アプライアンスの外部にあるサーバーにアクセスする必要があります。 外部名を解決するのには、外部の DNS サーバーを使用するには、Analytics Platform System のホストと仮想マシン (Vm) を許可する外部名転送をサポートするために、分析プラットフォーム システム DNS を構成できますこの使用シナリオをサポートするために、アプライアンスです。 詳細については、次を参照してください。[非アプライアンス DNS 名の解決に DNS フォワーダーを使用して、 &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)します。  
   
 ## <a name="bkmk_ImportUpdates"></a>ダウンロードして、Microsoft 更新プログラムを適用するには  
   

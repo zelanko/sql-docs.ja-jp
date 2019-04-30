@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061580"
 ---
 # <a name="function-conformance"></a>関数の適合性
 次の表では、これが適切に定義されている各 ODBC 関数の準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
 |**SQLAllocHandle**|コア|  
 |**SQLBindCol**|コア|  
-|**SQLBindParameter**|[1] のコア|  
+|**SQLBindParameter**|Core[1]|  
 |**SQLBrowseConnect**|[レベル 1]|  
 |**SQLBulkOperations**|[レベル 1]|  
-|**SQLCancel**|[1] のコア|  
+|**SQLCancel**|Core[1]|  
 |**SQLCloseCursor**|コア|  
-|**SQLColAttribute**|[1] のコア|  
+|**SQLColAttribute**|Core[1]|  
 |**SQLColumnPrivileges**|[レベル 2]|  
 |**SQLColumns**|コア|  
 |**SQLConnect**|コア|  
 |**SQLCopyDesc**|コア|  
 |**SQLDataSources**|コア|  
-|**SQLDescribeCol**|[1] のコア|  
+|**SQLDescribeCol**|Core[1]|  
 |**SQLDescribeParam**|[レベル 2]|  
 |**SQLDisconnect**|コア|  
 |**SQLDriverConnect**|コア|  
 |**SQLDrivers**|コア|  
-|**SQLEndTran**|[1] のコア|  
+|**SQLEndTran**|Core[1]|  
 |**SQLExecDirect**|コア|  
 |**SQLExecute**|コア|  
 |**SQLFetch**|コア|  
-|**SQLFetchScroll**|[1] のコア|  
+|**SQLFetchScroll**|Core[1]|  
 |**SQLForeignKeys**|[レベル 2]|  
 |**SQLFreeHandle**|コア|  
 |**SQLFreeStmt**|コア|  
@@ -77,14 +77,14 @@ ms.locfileid: "47740080"
 |**SQLProcedures**|[レベル 1]|  
 |**SQLPutData**|コア|  
 |**SQLRowCount**|コア|  
-|**SQLSetConnectAttr**|[2] のコア|  
+|**SQLSetConnectAttr**|Core[2]|  
 |**SQLSetCursorName**|コア|  
-|**SQLSetDescField**|[1] のコア|  
+|**SQLSetDescField**|Core[1]|  
 |**SQLSetDescRec**|コア|  
-|**SQLSetEnvAttr**|[2] のコア|  
+|**SQLSetEnvAttr**|Core[2]|  
 |**SQLSetPos**|レベル 1 [1]|  
-|**SQLSetStmtAttr**|[2] のコア|  
-|**SQLSpecialColumns**|[1] のコア|  
+|**SQLSetStmtAttr**|Core[2]|  
+|**SQLSpecialColumns**|Core[1]|  
 |**SQLStatistics**|コア|  
 |**SQLTablePrivileges**|[レベル 2]|  
 |**SQLTables**|コア|  

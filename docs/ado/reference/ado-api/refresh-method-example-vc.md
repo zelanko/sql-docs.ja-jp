@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15ee9263ee0bb1ece0a1b690d3a15687d87ff3d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062460"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh メソッドの例 (VC++)
 この例では、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)を更新する方法、[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)ストアド プロシージャのコレクション[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  

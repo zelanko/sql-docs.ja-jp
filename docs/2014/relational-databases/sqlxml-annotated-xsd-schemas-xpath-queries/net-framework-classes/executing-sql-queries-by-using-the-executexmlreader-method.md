@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d6b24bfdcd9f6b4634a5a66ab43223285b0e3f36
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127602"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader メソッドを使用した、SQL クエリの実行
   ExecuteToStream メソッドを使用するのではなく、示しますオブジェクトのメソッド、SqlXmlCommand コマンドを実行するために使用できます。 このメソッドは、さらに、結果は (この例では、要素名または属性名と値を印刷) の処理のために使用できる XmlReader オブジェクトを返します。  

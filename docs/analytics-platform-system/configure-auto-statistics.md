@@ -11,11 +11,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057065"
 ---
 # <a name="configure-auto-statistics"></a>統計の自動構成します。
 
@@ -32,7 +32,7 @@ ms.locfileid: "52617962"
 自動統計には、次の 3 つの設定が含まれています。 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-自動作成オプションの統計、AUTO_CREATE_STATISTICS が ON、クエリ オプティマイザーがクエリ プランのカーディナリティの推定を向上させるために、必要に応じて、クエリ述語内の個々 の列に関する統計を作成します。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
+統計の自動作成オプション AUTO_CREATE_STATISTICS が ON の場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
 統計の自動更新オプション AUTO_UPDATE_STATISTICS がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
@@ -75,5 +75,5 @@ FROM
 
 1 の設定には、戻り値が入っていて 0 は、設定がオフです。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 クエリの実行方法を確認するを参照してください[アクティブなクエリの監視。](monitoring-active-queries.md)

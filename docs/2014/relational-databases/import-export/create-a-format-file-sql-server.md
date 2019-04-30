@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140569"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
@@ -163,7 +163,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
-|**-t** `,`|コンマ (**,**) をフィールド ターミネータとして指定します。<br /><br /> 注:データ ファイルが既定のフィールド ターミネータを使用している場合 (`\t`)、 **-t**スイッチが必要ではありません。|  
+|**-t** `,`|コンマ (**,**) をフィールド ターミネータとして指定します。<br /><br /> 注: データ ファイルで既定のフィールド ターミネータ (`\t`) が使用されている場合、**-t** スイッチは不要です。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
@@ -243,7 +243,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 -   [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   

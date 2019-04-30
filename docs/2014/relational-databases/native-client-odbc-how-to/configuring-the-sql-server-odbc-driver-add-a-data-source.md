@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126076"
 ---
 # <a name="add-a-data-source-odbc"></a>データ ソースの追加 (ODBC)
   プログラムで ODBC アドミニストレーターを使用してデータ ソースを追加することができます (を使用して[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))、またはファイルを作成します。  

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071787"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>実証: インメモリ OLTP によるパフォーマンスの向上
   この例では、インメモリ OLTP を使用した場合のパフォーマンスの向上を取り上げます。メモリ最適化テーブルと従来のディスク ベースのテーブルとに対してまったく同じ Transact-SQL クエリを実行したときの応答時間の違いを比較します。 応答時間は一般に、ネイティブ コンパイル ストアド プロシージャでメモリ最適化テーブルを照会したときに最短となります。そこで、ネイティブにコンパイルされたストアド プロシージャも (同じクエリに基づいて) 作成、実行して、その点を実証することにします。 このサンプルを通じて証明されるのは、メモリ最適化テーブルのデータにアクセスしたときに得られるパフォーマンス向上の一面 (挿入操作時のデータ アクセス効率) だけです。 このサンプルはシングル スレッドで、インメモリ OLTP のコンカレンシーの利点を利用していません。 コンカレンシーを使用するワークロードでは、さらにパフォーマンスが向上します。  

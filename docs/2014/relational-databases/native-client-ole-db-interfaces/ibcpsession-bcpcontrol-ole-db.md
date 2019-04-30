@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fae6e3ba4f861fa7d75ae3ee4e8825350d80c39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046747"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
   一括コピー操作のオプションを設定します。  
@@ -46,7 +46,7 @@ void *iValue);
 |------------|-----------------|  
 |BCP_OPTION_ABORT|既に実行中の一括コピー操作を停止します。 別のスレッドから *eOption* 引数に BCP_OPTION_ABORT を指定して **BCPControl** メソッドを呼び出し、実行中の一括コピー操作を停止できます。 *IValue*引数は無視されます。|  
 |BCP_OPTION_BATCH|バッチごとの行数を指定します。 既定値は 0 です。これは、データを抽出するときはテーブル内のすべての行が抽出されることを示し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときはユーザー データ ファイル内のすべての行がコピーされることを示します。 BCP_OPTION_BATCH に 1 未満の値を指定すると、既定値にリセットされます。|  
-|BCP_OPTION_DELAYREADFMT|ブール値を設定します。true に設定した場合、[IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) により実行時に読み取りが行われます。 False (既定)、ibcpsession::bcpreadfmt はすぐに場合、フォーマット ファイルを読み取る。 シーケンス エラーが発生`BCP_OPTION_DELAYREADFMT`は true を呼び出して ibcpsession::bcpcolumns または ibcpsession::bcpcolfmt します。<br /><br /> 呼び出す場合もシーケンス エラーが発生`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`呼び出した後`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)`ibcpsession::bcpwritefmt とします。<br /><br /> 詳細については、[メタデータ検出](../native-client/features/metadata-discovery.md)を参照してください。|  
+|BCP_OPTION_DELAYREADFMT|ブール値を設定します。true に設定した場合、[IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) により実行時に読み取りが行われます。 False (既定)、ibcpsession::bcpreadfmt はすぐに場合、フォーマット ファイルを読み取る。 シーケンス エラーが発生`BCP_OPTION_DELAYREADFMT`は true を呼び出して ibcpsession::bcpcolumns または ibcpsession::bcpcolfmt します。<br /><br /> 呼び出す場合もシーケンス エラーが発生`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`呼び出した後`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)`ibcpsession::bcpwritefmt とします。<br /><br /> 詳細については、次を参照してください。[メタデータ検出](../native-client/features/metadata-discovery.md)します。|  
 |BCP_OPTION_FILECP|*iValue* 引数には、データ ファイルのコード ページ番号が含まれます。 1252 や 850 などのコード ページ番号を指定するか、次のいずれかの値を指定できます。<br /><br /> -BCP_FILECP_ACP ファイル内のデータは、Microsoft Windows では [概要] タブ クライアントのコード ページです。<br />-BCP_FILECP_OEMCP ファイル内のデータは、(既定値) のクライアントの OEM コード ページです。<br />-BCP_FILECP_RAW ファイル内のデータは、コード ページの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |BCP_OPTION_FILEFMT|データ ファイル形式のバージョン番号を指定します。 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) を指定できます。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。  たとえば、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サーバーのテキスト列から取得したデータを、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のサーバーの **varchar(max)** 列にインポートするには、80 を指定する必要があります。 同様に、データを **varchar(max)** 列からエクスポートするときに 80 を指定すると、データは、テキスト列が [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 形式で保存されるのと同じように保存されるので、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サーバーのテキスト列にインポートできます。|  
 |BCP_OPTION_FIRST|ファイルまたはテーブルにコピーするデータの先頭行を指定します。 既定値は 1 です。1 未満の値を指定すると、このオプションは既定値にリセットされます。|  

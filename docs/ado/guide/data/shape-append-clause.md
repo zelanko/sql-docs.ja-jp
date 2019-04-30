@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062858"
 ---
 # <a name="shape-append-clause"></a>Shape の APPEND 句
 Shape コマンドの APPEND 句を追加、列または列を**Recordset**します。 これらの列が子を参照しているチャプター列には多くの場合、 **Recordset**します。  

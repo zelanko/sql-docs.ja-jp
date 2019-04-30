@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061510"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 関数
 **準拠**  
@@ -68,7 +68,7 @@ SQLRETURN SQLExecDirect(
 |01004|文字列データで、右側が切り捨てられました|空白以外の文字または NULL 以外のバイナリ データの切り捨てが発生した出力パラメーターまたは入力/出力の文字列またはバイナリ データが返されます。 文字列値がいた場合は、右側から切り捨てられますことでした。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01006|権限が失効していません。|\**StatementText*に含まれている、**取り消す**ステートメント、およびユーザーに指定した権限がないです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01007|特権は与えられません|*\*StatementText*が、 **GRANT**ステートメント、およびユーザーは許可されませんでした特権を指定します。|  
-|01S02|オプション値が変更されました|指定したステートメント属性は、ような値が一時的に代用するための実装の動作状態のため無効でした。 (**SQLGetStmtAttr**一時的に置換された値を特定するということができます)。代替値が有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は次のとおりです。<br /><br /> SQL _ ATTR_CONCURRENCY SQL _ ATTR_CURSOR_TYPE SQL _ ATTR_KEYSET_SIZE SQL _ ATTR_MAX_LENGTH SQL _ ATTR_MAX_ROWS SQL _ ATTR_QUERY_TIMEOUT SQL _ ATTR_SIMULATE_CURSOR<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
+|01S02|オプション値が変更されました|指定したステートメント属性は、ような値が一時的に代用するための実装の動作状態のため無効でした。 (**SQLGetStmtAttr**一時的に置換された値を特定するということができます)。代替値が有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は次のとおりです。<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT  SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01S07|分数が切り捨てられました|入力/出力の返されるデータまたは数値データ型の小数部が切り捨てられましたや時刻、タイムスタンプ、またはその間隔のデータ型の時刻部分の小数部が切り捨てられたように、出力パラメーターが切り捨てられました。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |07002|COUNT フィールドが正しくありません。|指定されたパラメーターの数**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数より少なくなった\* *StatementText*します。<br /><br /> **SQLBindParameter**で呼び出されました*ParameterValuePtr*を null ポインターの場合は、設定*StrLen_or_IndPtr* SQL_NULL_DATA または SQL_DATA_AT_EXEC に設定されていないと*InputOutputType*パラメーターの数で指定できるように、SQL_PARAM_OUTPUT を未設定**SQLBindParameter**に含まれる SQL ステートメントのパラメーターの数よりも大きかった **StatementText*.|  
 |07006|制限付きのデータ型の属性違反|識別されるデータ値、 *ValueType*引数**SQLBindParameter**のバインドされたパラメーターがで識別されるデータ型に変換できませんでした、 *ParameterType*引数**SQLBindParameter**します。<br /><br /> SQL_PARAM_INPUT_OUTPUT または SQL_PARAM_OUTPUT で識別されるデータ型に変換しないとしてバインドされたパラメーターのデータ値が返される、 *ValueType*引数**SQLBindParameter**します。<br /><br /> (1 つまたは複数の行のデータ値を変換できませんでした、1 つまたは複数の行が正常に返された場合は、この関数を返します SQL_SUCCESS_WITH_INFO。)|  
@@ -111,7 +111,7 @@ SQLRETURN SQLExecDirect(
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 引数*TextLength*以下を 0 には、SQL_NTS 等しくもありませんでした。<br /><br /> パラメーターの値の設定で**SQLBindParameter**が null ポインターの場合、パラメーターの長さの値が 0、SQL_NULL_DATA、SQL_DATA_AT_EXEC、SQL_DEFAULT_PARAM SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> パラメーターの値の設定で**SQLBindParameter**、null ポインターでした; C データ型が SQL_C_BINARY または SQL_C_CHAR; およびパラメーターの長さの値が 0 未満の値がでした、SQL_NTS、SQL_NULL_DATA、SQL_DATA_AT_EXEC SQL_DEFAULT_PARAM、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> パラメーターの長さの値制約を受けます**SQLBindParameter** SQL_DATA_AT_EXEC に設定されました SQL 型が SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型では; および SQL_NEED_LONG_DATA_LEN 情報。入力**SQLGetInfo** "Y"でした。|  
 |HY105|無効なパラメーターの型|引数が指定された値*InputOutputType*で**SQLBindParameter** SQL_PARAM_OUTPUT、パラメーターが入力パラメーターをでした。|  
 |HY109|無効なカーソルの位置|\**StatementText* 、カーソルが置かれていると、位置指定の update または delete ステートメントを包含 (によって**SQLSetPos**または**SQLFetchScroll**) の行に削除されたかをフェッチできませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -120,13 +120,13 @@ SQLRETURN SQLExecDirect(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- アプリケーション呼び出し**SQLExecDirect**データ ソースに SQL ステートメントを送信します。 直接実行の詳細については、[を直接実行](../../../odbc/reference/develop-app/direct-execution-odbc.md)を参照してください。 ドライバーは、データ ソースで使用される SQL の形式を使用するステートメントが変更され、データ ソースに送信します。 具体的には、ドライバーは、SQL の特定の機能を定義するために使用するエスケープ シーケンスを変更します。 エスケープ シーケンスの構文を参照してください。 [odbc エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)します。  
+ アプリケーション呼び出し**SQLExecDirect**データ ソースに SQL ステートメントを送信します。 直接実行の詳細については、次を参照してください。[を直接実行](../../../odbc/reference/develop-app/direct-execution-odbc.md)します。 ドライバーは、データ ソースで使用される SQL の形式を使用するステートメントが変更され、データ ソースに送信します。 具体的には、ドライバーは、SQL の特定の機能を定義するために使用するエスケープ シーケンスを変更します。 エスケープ シーケンスの構文を参照してください。 [odbc エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)します。  
   
- アプリケーションでは、SQL ステートメントの 1 つまたは複数のパラメーター マーカーを含めることができます。 パラメーター マーカーを含めるには、アプリケーションは、適切な位置にある SQL ステートメントに疑問符 (?) を埋め込みます。 パラメーターについては、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)を参照してください。  
+ アプリケーションでは、SQL ステートメントの 1 つまたは複数のパラメーター マーカーを含めることができます。 パラメーター マーカーを含めるには、アプリケーションは、適切な位置にある SQL ステートメントに疑問符 (?) を埋め込みます。 パラメーターについては、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。  
   
  SQL ステートメントがある場合、**選択**ステートメントと、アプリケーションと呼ばれるかどうか**SQLSetCursorName**をステートメントにカーソルを関連付けるにし、ドライバーを使用して指定したカーソル。 それ以外の場合、ドライバーは、カーソル名を生成します。  
   
- (明示的なトランザクションの開始に使用が必要) 手動コミット モードでのデータ ソースが、トランザクションは既に開始されていない場合は、ドライバーは、SQL ステートメントを送信する前に、トランザクションを開始します。 詳細については、[手動コミット モード](../../../odbc/reference/develop-app/manual-commit-mode.md)を参照してください。  
+ (明示的なトランザクションの開始に使用が必要) 手動コミット モードでのデータ ソースが、トランザクションは既に開始されていない場合は、ドライバーは、SQL ステートメントを送信する前に、トランザクションを開始します。 詳細については、次を参照してください。[手動コミット モード](../../../odbc/reference/develop-app/manual-commit-mode.md)します。  
   
  アプリケーションで使用する場合**SQLExecDirect**を送信する、**コミット**または**ロールバック**ステートメントでは、ことがない DBMS の製品間で相互運用可能な。 トランザクションをロールバックまたはコミットは、アプリケーションが呼び出す**SQLEndTran**します。  
   
@@ -134,7 +134,7 @@ SQLRETURN SQLExecDirect(
   
  場合**SQLExecDirect**検索更新、挿入、またはデータ ソースへの呼び出しですべての行には影響しません delete ステートメントを実行します。 **SQLExecDirect** sql_no_data が返されます。  
   
- SQL_ATTR_PARAMSET_SIZE ステートメント属性の値が 1 より大きい場合、SQL ステートメントには、少なくとも 1 つのパラメーター マーカーが含まれています**SQLExecDirect**からパラメーター値のセットごとに、SQL ステートメントを実行。によって示される、配列、 *ParameterValuePointer*への呼び出しで引数**SQLBindParameter**します。 詳細については、[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)を参照してください。  
+ SQL_ATTR_PARAMSET_SIZE ステートメント属性の値が 1 より大きい場合、SQL ステートメントには、少なくとも 1 つのパラメーター マーカーが含まれています**SQLExecDirect**からパラメーター値のセットごとに、SQL ステートメントを実行。によって示される、配列、 *ParameterValuePointer*への呼び出しで引数**SQLBindParameter**します。 詳細については、次を参照してください。[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)します。  
   
  ブックマークは有効にして、クエリを実行する場合は、ブックマークをサポートすることはできません、ドライバーは属性値を変更し、SQLSTATE 01S02 を返すことでブックマークをサポートしている環境を強制的に試みる必要がある (オプションの値が変更されました)。 属性を変更できない場合、ドライバーは SQLSTATE HY024 を返す必要があります (無効な属性値)。  
   

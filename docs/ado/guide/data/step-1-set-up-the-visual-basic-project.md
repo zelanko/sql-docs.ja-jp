@@ -1,5 +1,5 @@
 ---
-title: '手順 1: Visual Basic プロジェクトを設定する |Microsoft Docs'
+title: 手順 1:Visual Basic プロジェクトを設定する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062808"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>手順 1: Visual Basic プロジェクトを設定する
+# <a name="step-1-set-up-the-visual-basic-project"></a>手順 1:Visual Basic プロジェクトを設定する
 このシナリオである Microsoft Visual Basic 6.0、ADO 2.5 またはそれ以降、および Microsoft OLE DB Provider for Internet Publishing がシステムにインストールされていると見なされます。 まず、新しいプロジェクトを作成して、プロジェクトで既定のフォームをいくつかのコントロールを追加します。  
   
 ### <a name="to-create-an-ado-project"></a>ADO プロジェクトを作成します。  
@@ -39,4 +39,4 @@ ms.locfileid: "47798800"
   
 ## <a name="see-also"></a>参照  
  [インターネットのシナリオへの発行](../../../ado/guide/data/internet-publishing-scenario.md)   
- [手順 2: Main リスト ボックスを初期化する](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+ [手順 2:メイン リスト ボックスを初期化します。](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

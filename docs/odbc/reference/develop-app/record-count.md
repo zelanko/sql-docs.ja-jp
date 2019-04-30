@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f8b0a6fc7aa5765d9373af33ab4fac0a4a07aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151237"
 ---
 # <a name="record-count"></a>レコード カウント
 記述子の SQL_DESC_COUNT ヘッダー フィールドは、データを格納する番号が最大のレコードの 1 から始まるインデックスです。 このフィールドは、すべての列またはバインドされているパラメーターの数ではありません。 記述子が割り当てられると、SQL_DESC_COUNT の初期値は 0 です。  

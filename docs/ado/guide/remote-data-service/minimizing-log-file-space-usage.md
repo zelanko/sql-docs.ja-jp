@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 061cae6b387611886943aabcfa3dfd99579a59d7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134403"
 ---
 # <a name="minimizing-log-file-space-usage"></a>ログ ファイルの使用領域の最小化
 ログ ファイルがすぐにいっぱい (サーバーが停止するため)、SQL Server データベースでのアクティビティ量が多い場合。 ログ ファイルを設定する**チェックポイントに Truncate**データベースのログ ファイルの有効期間を大幅に拡張します。  

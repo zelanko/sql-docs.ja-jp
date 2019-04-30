@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 632a922abb544a379892dfa168f55efd605304c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125438"
 ---
 # <a name="closing-the-cursor"></a>カーソルを閉じる
 アプリケーションは、カーソルの使用が完了したら、それを呼び出す**SQLCloseCursor**カーソルを閉じます。 以下に例を示します。  
@@ -28,7 +28,7 @@ ms.locfileid: "47792960"
 SQLCloseCursor(hstmt);  
 ```  
   
- アプリケーションが、カーソルを閉じるまで、別の SQL ステートメントの実行など、他のほとんどの操作、カーソルを開いた、ステートメントを使用できません。 カーソルが開いているときに呼び出すことができる関数の完全な一覧を参照してください。[付録 b: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
+ アプリケーションが、カーソルを閉じるまで、別の SQL ステートメントの実行など、他のほとんどの操作、カーソルを開いた、ステートメントを使用できません。 カーソルが開いているときに呼び出すことができる関数の完全な一覧を参照してください[付録 b:。ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
   
 > [!NOTE]  
 >  カーソルを閉じるには、アプリケーションを呼び出す必要があります**SQLCloseCursor**ではなく、 **SQLCancel**します。  

@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135273"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 関数
   指定した SQL Server Express LocalDB インスタンスの実行を停止します。  
@@ -102,7 +102,7 @@ HRESULT LocalDBStopInstance(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、[SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)を参照してください。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

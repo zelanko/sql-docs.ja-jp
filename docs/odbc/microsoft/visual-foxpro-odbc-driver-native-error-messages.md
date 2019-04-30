@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065109"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC ドライバーのネイティブのエラー メッセージ
 次の表には、ネイティブ Visual FoxPro ODBC ドライバーにエラー メッセージが一覧表示します。  
@@ -167,7 +167,7 @@ ms.locfileid: "47677240"
 |492|テーブルの更新のキー列が指定されていない\\*値*\\します。 カーソルの KeyFieldList プロパティを使用します。|  
 |493|SQL パラメーターがありません。|  
 |494|ビュー定義が変更されました。|  
-|495|警告: テーブルの KeyField プロパティで定義されているキー*値*一意ではありません。|  
+|495|警告:テーブルの KeyField プロパティで定義されているキー*値*一意ではありません。|  
 |498|SQL SELECT ステートメントが無効です。|  
 |499|SQL パラメーター*値*が無効です。|  
   
@@ -280,7 +280,7 @@ ms.locfileid: "47677240"
   
 |||  
 |-|-|  
-|802|SQL: テーブルが見つかりません。|  
+|802|SQL:テーブルが見つかりません。|  
 |872|列が多すぎます。|  
 |879|主キーがありません。|  
 |884|インデックスの一意性*値*に違反します。|  
@@ -297,7 +297,7 @@ ms.locfileid: "47677240"
 |902|式エバリュエーターが失敗しました。|  
 |903|合わせて文字列が長すぎます。|  
 |904|* * または ^ ドメイン エラーが発生します。|  
-|905|LOG(): 0 または負の値が引数として使用します。|  
+|905|LOG():0 または負の値が引数として使用します。|  
 |906|SQRT() 引数を負の値にすることはできません。|  
 |912|[全般] フィールドの操作が正しくありません。|  
 |914|コード ページ番号が無効です。|  

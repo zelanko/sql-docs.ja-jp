@@ -1,5 +1,5 @@
 ---
-title: 既定のテーブル名を変更する |Microsoft ドキュメント
+title: 既定のテーブル名の変更 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053130"
 ---
-# <a name="lesson-1-4---modifying-default-table-names"></a>レッスン 1 ~ 4 - 既定のテーブル名の変更
+# <a name="lesson-1-4---modifying-default-table-names"></a>レッスン 1-4 - 既定のテーブル名の変更
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 データ ソース ビューのオブジェクトの **FriendlyName** プロパティ値を変更することで、オブジェクトをわかりやすく、また使いやすくすることができます。  
@@ -47,10 +47,10 @@ ms.locfileid: "34015670"
 7.  **[ファイル]** メニューまたは [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]のツール バーで、 **[すべてを保存]** をクリックして、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトに対するこの時点までの変更を保存します。 ここでチュートリアルを終了しても、後でこの続きから再開できます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2: 定義して、キューブの展開](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[レッスン 2:定義と、キューブの配置](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>参照  
-[多次元モデル内のデータ ソース ビュー](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+[多次元モデルのデータ ソース ビュー](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [データ ソース ビューのプロパティの変更 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

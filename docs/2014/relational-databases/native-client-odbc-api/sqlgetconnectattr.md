@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectAttr |Microsoft Docs
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128665"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 属性の一部が利用する`SQLGetConnectAttr`関数は、現在の設定をレポートに使用するとします。 これらの属性とは限りませんまで接続が確立されているかを使用して、属性が設定されている後に報告される値[SQLSetConnectAttr](sqlsetconnectattr.md)します。  
@@ -46,7 +46,7 @@ ms.locfileid: "53375644"
   
 -   データ アクセスのトレース ログの診断情報 (有効な場合)。  
   
- 詳細については、[診断の情報を拡張イベント ログにアクセスする](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)を参照してください。  
+ 詳細については、次を参照してください。[診断の情報を拡張イベント ログにアクセスする](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "53375644"
   
  SQL_COPT_SS_SERVER_SPN または SQL_COPT_SS_FAILOVER_PARTNER が設定されていない場合は、既定値 (空の文字列) が返されます。  
   
- Spn の詳細については、[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)を参照してください。  
+ Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetConnectAttr 関数](https://go.microsoft.com/fwlink/?LinkId=59347)   

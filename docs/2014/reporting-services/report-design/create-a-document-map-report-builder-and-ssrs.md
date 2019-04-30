@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135465"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
   ドキュメント マップは、表示レポート内のレポート アイテムへのナビゲーション リンクのセットを提供します。 ドキュメント マップを含むレポートを表示すると、別のサイド ペインがレポートの横に表示されます。 ドキュメント マップ内のリンクをクリックすると、そのアイテムが表示されているレポート ページに移動できます。 レポート セクションとグループは、リンクの階層として配置されます。 ドキュメント マップ内のアイテムをクリックすると、レポートが更新され、ドキュメント マップのアイテムに対応したレポートの領域が表示されます。  

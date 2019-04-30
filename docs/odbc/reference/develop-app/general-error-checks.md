@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5645e00d9e3f93b2479c88ba37ec4ccf6fc5d295
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049768"
 ---
 # <a name="general-error-checks"></a>一般的なエラー チェック
-ドライバー マネージャーは、1 つの一般的なエラーを確認します。 次のエラーが発生したときに常に SQL_ERROR を返します、: ドライバーによって、関数をサポートする必要があります。
+ドライバー マネージャーは、1 つの一般的なエラーを確認します。 次のエラーが発生したときに常に SQL_ERROR を返します。関数は、ドライバーでサポートする必要があります。

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5122fe6ddecacb492539573aa769e34164e699f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216098"
 ---
 # <a name="countdistinct-function-report-builder-and-ssrs"></a>CountDistinct 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外の値が全部で何種類あるかを、指定されたスコープのコンテキストで評価して返します。  

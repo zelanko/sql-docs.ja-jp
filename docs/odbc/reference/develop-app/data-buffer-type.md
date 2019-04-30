@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049968"
 ---
 # <a name="data-buffer-type"></a>データ バッファーの種類
 バッファーの C データ型は、アプリケーションによって指定されます。 1 つの変数には、アプリケーションは、変数を割り当てるときに発生します。 汎用的なメモリの使用は、void - 型のポインターで指し示されるメモリ場合、アプリケーションが特定の種類にメモリをキャストです。 ドライバーは、2 つの方法でこの型を検出します。  
@@ -34,7 +34,7 @@ ms.locfileid: "52528860"
     SQLBindCol(hstmt, 1, SQL_C_TYPE_DATE, &Date, 0, &DateInd);  
     ```  
   
-     型識別子の詳細については、、 [ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)セクションで、このセクションで後述を参照してください。  
+     型識別子の詳細については、次を参照してください。、 [ODBC のデータ型](../../../odbc/reference/develop-app/data-types-in-odbc.md)セクションで、このセクションで後述します。  
   
 -   **定義済みの型。** によって示されるバッファーを送信し、オプションや、バッファーなどの属性を取得するために使用、 *InfoValuePtr*引数**SQLGetInfo**、指定されたオプションに依存する型は固定であります。 ドライバーは、この型のデータ バッファーを前提としています。この型のバッファーを割り当て、アプリケーションの役目です。 たとえば、以下でを呼び出す**SQLGetInfo**ドライバーでは、バッファーは 32 ビット整数 SQL_STRING_FUNCTIONS オプションが必要とこれが前提としています。  
   

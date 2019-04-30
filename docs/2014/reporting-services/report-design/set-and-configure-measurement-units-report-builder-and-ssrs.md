@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215653"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>測定単位の設定および構成 (レポート ビルダーおよび SSRS)
   インジケーターは、パーセンテージと数値の 2 つの測定単位を提供します。 既定では、インジケーターは測定単位としてパーセンテージを使用するように構成されます。 つまり、インジケーター セットの各アイコンに割り当てられたインジケーター値は、パーセンテージ範囲によって決まります。 パーセンテージ範囲は、インジケーター セット内のアイコン全体に均等に分割されます。 各アイコンは、インジケーターの状態を表します。 異なる開始パーセンテージと終了パーセンテージを指定することで、インジケーター セット内の各アイコンのパーセンテージを変更できます。 また、インジケーターはデータ内の最小値と最大値を自動的に検出します。  

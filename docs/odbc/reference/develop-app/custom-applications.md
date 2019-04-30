@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042528"
 ---
 # <a name="custom-applications"></a>カスタム アプリケーション
 通常、カスタム アプリケーションは、いくつかの Dbms の特定のタスクを実行します。 たとえば、アプリケーションが 1 つの DBMS のデータを取得し、レポートを生成またはいくつかの Dbms の間でデータを転送場合があります。 これらの Dbms が、アプリケーションが書き込まれる前に呼ばれ、アプリケーションの有効期間の経過と共に変化する可能性が低いことにはどのようなこれらのアプリケーションが共通します。  

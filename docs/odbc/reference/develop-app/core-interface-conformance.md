@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043762"
 ---
 # <a name="core-interface-conformance"></a>コア インターフェイスの適合性
 すべての ODBC ドライバーは、少なくともコア レベルを示す必要がありますインターフェイスの適合性。 コア レベルの機能は、最も一般的な相互運用可能なアプリケーションに必要なものであるために、ドライバーは、このようなアプリケーションを操作できます。 コア レベルの機能には、ISO CLI 仕様で定義されている機能と、開いているグループ CLI 仕様で定義されている nonoptional 機能にも対応しています。 コア レベルのインターフェイスに準拠 ODBC ドライバーは、次のすべてのアプリケーションを使用できます。  

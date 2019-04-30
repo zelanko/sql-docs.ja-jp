@@ -11,18 +11,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6db2f6550d252e9ede6ddfbf39f460af563f2b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126205"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>スパース列を持つテーブルに対する SQLColumns の呼び出し
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC を使用して定義されたスパース列を含むテーブルに対し、SQLColumns を呼び出す方法を示します。  
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- スパース列の機能の詳細については、[SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)を参照してください。  
+ スパース列の機能の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)します。  
   
 ## <a name="example"></a>例  
  最初のリストは、C++ ソース コードです。 "MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  

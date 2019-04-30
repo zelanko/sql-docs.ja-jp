@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82e71e6849902eb2f02423560c534056112a139a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208385"
 ---
 # <a name="when-to-use-procedures"></a>プロシージャを使用する場合
 プロシージャを使用する利点のいくつかをすべて、という事実に基づいてプロシージャを使用して移動して SQL ステートメント データ ソースへのアプリケーションから。 残りのアプリケーションでは、相互運用可能なプロシージャ呼び出しです。 これらの利点があります。  

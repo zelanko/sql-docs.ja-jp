@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf94358d5d4f06f787546ab98a8cbfcab2693bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63051412"
 ---
 # <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47846290"
 |-----------------|---------------|-----------------|  
 |Priority_id|**int**|メッセージ交換の優先度を一意に識別する番号。 Null を許容しません。|  
 |NAME|**sysname**|メッセージ交換の優先度の名前。 Null を許容しません。|  
-|service_contract_id|**int**|メッセージ交換の優先度に指定されているコントラクトの識別子。 この列は、sys.service_contracts の service_contract_id 列に結合できます。 NULL 値は許可されます。|  
-|local_service_id|**int**|メッセージ交換の優先度のローカル サービスとして指定されているサービスの識別子。 この列は、sys.services の service_id 列に結合できます。 NULL 値は許可されます。|  
-|remote_service_name|**nvarchar (256)**|メッセージ交換の優先度のリモート サービスとして指定されているサービスの名前。 NULL 値は許可されます。|  
+|service_contract_id|**int**|メッセージ交換の優先度に指定されているコントラクトの識別子。 この列は、sys.service_contracts の service_contract_id 列に結合できます。 NULL 値を許容します。|  
+|local_service_id|**int**|メッセージ交換の優先度のローカル サービスとして指定されているサービスの識別子。 この列は、sys.services の service_id 列に結合できます。 NULL 値を許容します。|  
+|remote_service_name|**nvarchar (256)**|メッセージ交換の優先度のリモート サービスとして指定されているサービスの名前。 NULL 値を許容します。|  
 |priority|**tinyint**|このメッセージ交換の優先度で指定されている優先順位。 Null を許容しません。|  
   
 ## <a name="permissions"></a>アクセス許可  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddc4ca8fa9a0d6d9a109ccb205bdd9684b2f370
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158798"
 ---
 # <a name="schedule-properties-reports-page"></a>[スケジュールのプロパティ] ([レポート] ページ)
   このページを使用すると、共有データ ソースを使用するすべてのレポートの一覧を表示できます。 スケジュールを使用して、レポート スナップショットの更新、レポート履歴の生成、サブスクリプションのトリガー、またはレポートのキャッシュされたコピーの期限の終了を実行できます。 スケジュールがどのように使用されているかを確認するには、レポートのプロパティおよびサブスクリプション情報を参照します。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209424"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>構文ペアの自動照合
   構文ペアの自動照合では、ペアでコーディングする必要がある構文要素が正しくペアになっているかどうかをすぐに検出します。 この機能は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは区切り記号の照合、Analysis Services の XMLA クエリ エディターでは中かっこの照合、MDX エディターと DMX エディターではかっこの照合として知られています。  
@@ -70,6 +70,6 @@ ms.locfileid: "49085118"
 -   属性の開始引用符と終了引用符。  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>MDX エディターと DMX エディターでのかっこの照合  
- 多次元式 (MDX) およびデータ マイニング式 (DMX) のエディターで関数のかっこのペアを自動的に照合します。  
+ 多次元式 (MDX) エディターとデータ マイニング式 (DMX) のエディターでは、関数のかっこのペアが自動的に照合されます。  
   
   

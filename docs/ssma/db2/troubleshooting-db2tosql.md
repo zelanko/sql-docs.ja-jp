@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ff0ef803274b23a54e3964ae2822dc351a3ce784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63077264"
 ---
 # <a name="troubleshooting-db2tosql"></a>トラブルシューティング (DB2ToSQL)
 コンソールのスクリプトまたはコマンドを実行する移行の問題の途中に実行することは珍しくありません。  
   
 修正可能であるエラーの関連する可能性があります。  
   
-1.  機能  
+1.  関数  
   
 2.  手順  
   

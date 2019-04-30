@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148881"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE マッピング
-このトピックでは、ODBC 2 の SQLSTATE 値について説明します。*x*および ODBC 3 *。x*します。 ODBC 3 の詳細についてはします。*x* SQLSTATE の値を参照してください[付録 a: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)します。  
+このトピックでは、ODBC 2 の SQLSTATE 値について説明します。*x*および ODBC 3 *。x*します。 ODBC 3 の詳細についてはします。*x* SQLSTATE の値を参照してください[付録 a:ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)します。  
   
  ODBC 3。*x*HYxxx SQLSTATEs が S1xxx、代わりに返される、S00XX ではなく 42Sxx SQLSTATEs が返されます。 これは、Open Group および ISO 標準に合わせて行われました。 多くの場合、標準がいくつかについての解釈を再定義があるため、マッピングは 1 対 1 ありません。  
   

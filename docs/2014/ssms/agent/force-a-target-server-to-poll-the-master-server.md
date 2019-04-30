@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044057"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>ターゲット サーバーからのマスター サーバーのポーリングの強制
   このトピックでは、ターゲット サーバーからマスター サーバーにポーリングさせる方法について説明します。 ターゲット サーバーは、マスター サーバーの登録済みサーバーである必要があります。  
@@ -30,7 +30,7 @@ ms.locfileid: "52764214"
 > [!NOTE]  
 >  ターゲット サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
   
--   **作業を開始する準備:**[制限事項と制約](#Restrictions)、[セキュリティ](#Security)  
+-   **作業を開始する準備:**[制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
   
 -   **ターゲット サーバーからマスター サーバーにポーリングさせるのにを使用します。**[SQL Server Management Studio](#SSMS)  
   

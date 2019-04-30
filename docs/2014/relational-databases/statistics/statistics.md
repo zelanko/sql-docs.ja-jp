@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033730"
 ---
 # <a name="statistics"></a>統計
   クエリ オプティマイザーでは、クエリのパフォーマンスを向上させるクエリ プランを作成するために統計を使用します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成したりクエリのデザインを変更したりする必要がある場合もあります。 このトピックでは、クエリ最適化に関する統計の概念と、それを効果的に使用するためのガイドラインについて説明します。  

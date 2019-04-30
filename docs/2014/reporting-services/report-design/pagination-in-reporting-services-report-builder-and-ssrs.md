@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf2f253405e3e64764f3b7edf61112a3bb05d601
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209060"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services の改ページ (レポート ビルダーおよび SSRS)
   ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] での改ページは、レポートの閲覧と作成に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レポート作成に使用するレンダラーに最適化された、ユーザーにとって見やすいレポートをデザインするには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]における改ページの制御規則を理解しておく必要があります。  

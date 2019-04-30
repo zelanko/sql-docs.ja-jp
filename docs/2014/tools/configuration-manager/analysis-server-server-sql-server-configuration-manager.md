@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c3372cccc36bf84ae9efd4159b5452957dca4758
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035261"
 ---
 # <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>分析サーバー &lt;サーバー&gt; (SQL Server 構成マネージャー)
   これは、Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]をサポートするサービスです。 このサービスのプロパティを表示するには、詳細ペインでそのサービスを右クリックし、 **[プロパティ]** をクリックします。  

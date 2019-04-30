@@ -1,5 +1,5 @@
 ---
-title: TM:Promote Tran Starting イベント クラス |Microsoft Docs
+title: 'TM: Promote Tran Starting イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43deb215fded67055c069dd629dcb5553b663f71
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061364"
 ---
-# <a name="tm-promote-tran-starting-event-class"></a>TM:Promote Tran Starting イベント クラス
+# <a name="tm-promote-tran-starting-event-class"></a>TM: Promote Tran Starting イベント クラス
   TM:Promote Tran Starting イベント クラスは、PROMOTE TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。  
   
-## <a name="tm-promote-tran-starting-event-class-data-columns"></a>TM:Promote Tran Starting イベント クラスのデータ列  
+## <a name="tm-promote-tran-starting-event-class-data-columns"></a>TM: Promote Tran Starting イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209876"
 ---
 # <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーのリソース プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 リソース ガバナーを使用すると、受信するアプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 各リソース プールは、1 つまたは複数のワークロード グループを含めることができます。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたリソースを使用する必要があります。  

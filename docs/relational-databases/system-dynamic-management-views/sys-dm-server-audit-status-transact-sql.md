@@ -20,24 +20,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63041158"
 ---
-# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
+# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サーバー監査ごとに 1 行を返し、監査の現在の状態を示します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
+  監査の現在の状態を示す各サーバー監査の行を返します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|監査の ID。 マップ、 **audit_id**フィールドに、 **sys.audits**カタログ ビューです。|  
 |**name**|**sysname**|監査の名前。 同じ、**名前**フィールドに、 **sys.server_audits**カタログ ビューです。|  
 |**status**|**smallint**|サーバー監査の状態を表す数値。<br /><br /> 0 = 未開始状態<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      実行時の失敗<br /><br /> 3 = ターゲット作成失敗<br /><br /> 4 = シャット ダウンしています|  
-|**status_desc**|**nvarchar (256)**|サーバー監査の状態を表す文字列。<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
-|**status_time**|**datetime2**|監査の状態が最後に変更された UTC のタイムスタンプ。|  
+|**status_desc**|**nvarchar (256)**|サーバー監査の状態を示す文字列。<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
+|**status_time**|**datetime2**|監査の最後の状態の変更の UTC タイムスタンプ。|  
 |**event_session_address**|**varbinary(8)**|監査に関連付けられている拡張イベント セッションのアドレス。 関連する、 **sys.db_xe_sessions.address**カタログ ビューです。|  
 |**audit_file_path**|**nvarchar (256)**|現在使用されている監査ファイル ターゲットの完全なパスとファイル名。 ファイル監査にのみ設定されます。|  
 |**audit_file_size**|**bigint**|監査ファイルのおおよそのサイズ (バイト)。 ファイル監査にのみ設定されます。|  

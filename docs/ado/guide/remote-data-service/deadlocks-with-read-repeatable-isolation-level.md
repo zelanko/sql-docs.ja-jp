@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a063bfa08ee0c405b52c123f0af03397751a2289
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214875"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Read Repeatable 分離レベルでのデッドロック
 カスタム ビジネス オブジェクトでは、repeatable read 分離レベルを使用して、SQL Server にアクセスして、クエリを送信し、同じトランザクションで更新する 2 つのクライアントで同時にビジネス オブジェクトを呼び出す、デッドロックは可能性があります。 デッドロックを解除する際にタイムアウトするプロセスのいずれかを許可するリモート データ サービスは設計されていますが、そのクライアントの更新プログラムが失敗します。  

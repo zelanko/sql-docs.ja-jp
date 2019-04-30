@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46e063a5458bec095148c8bcda2783bb03dd622a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149048"
 ---
 # <a name="transaction-isolation"></a>トランザクション分離
 *トランザクション分離*複数の同時実行トランザクション間の相互作用の度合いを示します。 これが重要な理由を表示するには、シリアル化可能性の概念を紹介する必要があります。  

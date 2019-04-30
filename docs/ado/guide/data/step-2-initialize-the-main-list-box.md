@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062798"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>手順 2:メイン リスト ボックスを初期化します。
+# <a name="step-2-initialize-the-main-list-box"></a>手順 2:Main リスト ボックスを初期化する
 グローバルのレコードとレコード セット オブジェクトを宣言するには、([全般]) (宣言) Form1 に、次のコードを挿入します。  
   
 ```  
@@ -53,4 +53,4 @@ End Sub
 ## <a name="see-also"></a>参照  
  [インターネットのシナリオへの発行](../../../ado/guide/data/internet-publishing-scenario.md)   
  [ステップ 1: Visual Basic プロジェクトを設定します。](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [手順 3:フィールド リスト ボックスを設定します。](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [ステップ 3:フィールド リスト ボックスを設定します。](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

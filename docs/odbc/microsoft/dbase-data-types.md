@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126315"
 ---
 # <a name="dbase-data-types"></a>dBASE データ型
 次の表では、dBASE データ型を ODBC SQL データ型にマップする方法を示します。 すべての ODBC SQL データ型がサポートされていることに注意してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "47626270"
 |論理|SQL_BIT|  
 |メモ|SQL_LONGVARCHAR|  
 |数値 (BCD)|SQL_DOUBLE|  
-|OLEOBJECT クラス [1]|SQL_LONGBINARY|  
+|OLEOBJECT[1]|SQL_LONGBINARY|  
   
  DBASE バージョン 5 には [1] 有効です。*x*  
   

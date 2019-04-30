@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067676"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   使用することができます`SQLColAttribute`準備または実行された ODBC ステートメントの結果セット列の属性を取得します。 呼び出す`SQLColAttribute`で準備されたステートメント原因へのラウンドト リップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、呼び出すので、ステートメントの実行の一部として結果セット列のデータを受信`SQLColAttribute`の完了後**SQLExecute**または**SQLExecDirect**はサーバーとのやり取りは関係ありません。  
@@ -96,15 +96,15 @@ ms.locfileid: "53361274"
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>SQLColAttribute による機能強化された日付と時刻のサポート  
  日付/時刻型に対して返される値、「情報が返されます IRD フィールドで」のセクションを参照してください。[パラメーターと結果のメタデータ](../native-client-odbc-date-time/metadata-parameter-and-result.md)します。  
   
- 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>SQLColAttribute による大きな CLR UDT のサポート  
- `SQLColAttribute` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、[Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)を参照してください。  
+ `SQLColAttribute` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>SQLColAttribute によるスパース列のサポート  
  Sqlcolattribute によるクエリを新しい実装行記述子 (IRD) フィールド SQL_CA_SS_IS_COLUMN_SET、列が決定する、`column_set`列。  
   
- 詳細については、[スパース列のサポート&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)を参照してください。  
+ 詳細については、次を参照してください。[スパース列のサポート&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLColAttribute 関数](https://go.microsoft.com/fwlink/?LinkId=59334)   

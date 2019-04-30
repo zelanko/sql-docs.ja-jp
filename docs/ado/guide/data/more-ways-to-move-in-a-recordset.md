@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e648bd9dcb3c6a073419cde42587f1be706fff4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161524"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>レコードセット内を移動する他の方法
 次の 4 つのメソッドを移動、またはスクロールしてで使用される、 **Recordset**:[MoveFirst、MoveLast、MoveNext、MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)します。 (これらのメソッドの一部は順方向専用カーソルで使用できます。)  

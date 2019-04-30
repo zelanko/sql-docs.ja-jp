@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161614"
 ---
 # <a name="errors-ado"></a>エラー (ADO)
-ADO オブジェクトに関連するすべての操作には、1 つまたは複数のプロバイダー エラーを生成できます。 各エラーが発生すると、1 つまたは複数**エラー**に配置されたオブジェクト、**エラー**のコレクション、**接続**オブジェクト。 ADO アプリケーションで警告およびエラーの処理について詳しくは、[エラー処理](../../../ado/guide/data/error-handling.md)を参照してください。  
+ADO オブジェクトに関連するすべての操作には、1 つまたは複数のプロバイダー エラーを生成できます。 各エラーが発生すると、1 つまたは複数**エラー**に配置されたオブジェクト、**エラー**のコレクション、**接続**オブジェクト。 ADO アプリケーションで警告およびエラーの処理について詳しくは、次を参照してください。[エラー処理](../../../ado/guide/data/error-handling.md)します。  
   
  別のメカニズムによってアプリケーションのエラーが発生することができます。 たとえば、Visual Basic の場合で、 **Err**オブジェクトは、アプリケーション レベルのエラーが格納されます。

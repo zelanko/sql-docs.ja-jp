@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043115"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>時系列モデルの要件について (中級者向けデータ マイニング チュートリアル)
   予測モデルで使用するデータを準備する際に、時系列内のステップの識別に使用できる列がデータに含まれていることを確認する必要があります。 その列が `Key Time` 列として指定されて キーになるため、この列には一意の数値が含まれている必要があります。  
@@ -52,7 +52,7 @@ ms.locfileid: "56035153"
 ## <a name="handling-missing-data-optional"></a>不足データの処理 (オプション)  
  系列に不足データがあると、モデルを処理しようとする際にエラーが表示されます。 不足データには、複数の方法で対処することができます。  
   
--   Analysis Services で、平均を計算するか、前の値を使用して、不足した値を埋めることができます。 この操作を行うには、マイニング モデルに MISSING_VALUE_SUBSTITUTION パラメーターを設定します。 このパラメーターの詳細については、[Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)を参照してください。 既存のマイニング モデルのパラメーターを変更する方法については、[アルゴリズム パラメーターの変更の表示または](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md)を参照してください。  
+-   Analysis Services で、平均を計算するか、前の値を使用して、不足した値を埋めることができます。 この操作を行うには、マイニング モデルに MISSING_VALUE_SUBSTITUTION パラメーターを設定します。 このパラメーターの詳細については、次を参照してください。 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)します。 既存のマイニング モデルのパラメーターを変更する方法については、次を参照してください。[アルゴリズム パラメーターの変更の表示または](../../2014/analysis-services/data-mining/view-or-change-algorithm-parameters.md)します。  
   
 -   データ ソースを変更するか、基になるビューをフィルター処理することで、不規則な系列を除外するか、値を置き換えることができます。 この操作はリレーショナル データ ソースで行うことができます。または、カスタムの名前付きクエリまたは名前付き計算を作成することでデータ ソース ビューを変更できます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。 このレッスンの後半の作業で、名前付きクエリとカスタム計算の両方を作成する例を示します。  
   

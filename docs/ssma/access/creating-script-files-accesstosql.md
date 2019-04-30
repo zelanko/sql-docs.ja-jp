@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138774"
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプト ファイル (AccessToSQL) の作成
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
   
 スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
   
-1.  **構成:** コンソール アプリケーションの構成パラメーターを設定するユーザーを有効にします。  
+1.  **config:** コンソール アプリケーションの構成パラメーターを設定するユーザーを有効にします。  
   
 2.  **サーバー:** ソース/ターゲットのサーバー定義を設定するユーザーを有効にします。 別のサーバー接続ファイルにこのことができます。  
   
@@ -393,6 +393,6 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
 ## <a name="next-step"></a>次の手順
 コンソールの運用には、次の手順は[変数値ファイルの作成&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [変数値ファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

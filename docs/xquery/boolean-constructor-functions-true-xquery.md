@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047616"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンストラクター関数 - true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- 次の例では、クエリを指定する型指定されたに対して**xml**列。 `if` 式では、<`ROOT`> 要素の型指定されたブール値が確認され、その結果に応じて、構築された XML が返されます。 この例では、次の操作が実行されます。  
+ 次の例では、クエリを指定する型指定されたに対して**xml**列。 `if`式の型指定されたブール値をチェックする、<`ROOT`> 要素を適宜構築済みの XML を返します。 この例では、次の操作が実行されます。  
   
--   xs:boolean 型の <`ROOT`> 要素を定義する、XML スキーマ コレクションを作成します。  
+-   定義する XML スキーマ コレクションを作成し、<`ROOT`> xs:boolean 型の要素。  
   
 -   型指定されたテーブルを作成します。 **xml** XML スキーマ コレクションを使用して列。  
   

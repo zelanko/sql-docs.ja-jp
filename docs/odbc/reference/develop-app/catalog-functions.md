@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125585"
 ---
 # <a name="catalog-functions"></a>カタログ関数
 すべてのデータベースでは、データベース内のデータの格納方法が説明されている構造があります。 たとえば、単純な販売注文データベースには、リンク、テーブルに ID 列を使用する、次の図に示すように構造があります。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130207"
 ---
 # <a name="persisting-data"></a>データの保持
 (たとえば、ラップトップを使用して)、ポータブル コンピューター、接続および切断状態の両方で実行できるアプリケーションの必要性が生成されます。 ADO には、開発者に、クライアント カーソルを保存する機能を提供することによりこのサポートが追加されて**Recordset**をディスクに後で再読み込みします。  
@@ -34,7 +34,7 @@ ms.locfileid: "52527635"
   
  ADO では、保存および読み込みで**レコード セット**を使用して、 **Recordset.Save**と**Recordset.Open(,,,adCmdFile)** ADO 上のメソッド**Recordset**オブジェクト。  
   
- 使用することができます、**レコード セットの保存**、ADO を保持する**レコード セット**ディスク上のファイルにします。 (保存することも、 **Recordset** ADO に**Stream**オブジェクト。 **Stream**オブジェクトは、ガイドの後半で説明します)。後で、使用することができます、**オープン**メソッドを再度開く、**レコード セット**それを使用する準備ができたら。 既定では、ADO の保存、**レコード セット**専用の Microsoft 高度なデータ TableGram (adtg 形式) の形式にします。 使用してこのバイナリ形式を指定、 **adPersistADTG PersistFormatEnum**値。 また、保存を選択することができます、**レコード セット**を代わりに使用して XML として出力**adPersistXML**します。 レコード セットを XML として保存する方法の詳細については、[XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)を参照してください。  
+ 使用することができます、**レコード セットの保存**、ADO を保持する**レコード セット**ディスク上のファイルにします。 (保存することも、 **Recordset** ADO に**Stream**オブジェクト。 **Stream**オブジェクトは、ガイドの後半で説明します)。後で、使用することができます、**オープン**メソッドを再度開く、**レコード セット**それを使用する準備ができたら。 既定では、ADO の保存、**レコード セット**専用の Microsoft 高度なデータ TableGram (adtg 形式) の形式にします。 使用してこのバイナリ形式を指定、 **adPersistADTG PersistFormatEnum**値。 また、保存を選択することができます、**レコード セット**を代わりに使用して XML として出力**adPersistXML**します。 レコード セットを XML として保存する方法の詳細については、次を参照してください。 [XML 形式で保持するレコード](../../../ado/guide/data/persisting-records-in-xml-format.md)します。  
   
  構文、**保存**メソッドを次に示します。  
   

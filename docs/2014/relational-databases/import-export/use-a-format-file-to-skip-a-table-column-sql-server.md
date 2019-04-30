@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065727"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
   このトピックでは、フォーマット ファイルについて説明します。 フォーマット ファイルを使用すると、データ ファイルにフィールドが存在しない場合にテーブル列のインポートをスキップできます。 スキップされる列に NULL 値が許容されているか、既定値があるか、またはその両方の場合のみ、テーブルの列の数より少ないフィールドをデータ ファイルに含めることができます。  

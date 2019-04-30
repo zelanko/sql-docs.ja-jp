@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0d0d9c0ad613a4453fad62e387a0eb7b0fd67aaa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131472"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
-  アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートに渡すパラメーターの詳細については、[アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)を参照してください。  
+  アップデートグラムはテンプレートであり、パラメーターを渡すことができます。 テンプレートに渡すパラメーターの詳細については、次を参照してください。[アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)します。  
   
  アップデートグラムでは、パラメーター値として NULL を渡すことができます。 NULL パラメーター値を渡すには、`nullvalue` 属性を指定し、 `nullvalue` 属性に割り当てられる値をパラメーター値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52777004"
   
  アップデート グラムの例を使用する前に、次のことを確認してください。  
   
--   例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)を参照してください。  
+-   例では、アップデートグラムでマッピング スキーマを指定せず、既定のマッピングを使用します。 マッピング スキーマを使用するアップデート グラムの例については、次を参照してください。[アップデート グラムで注釈が付けられたマッピング スキーマの指定&#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)します。  
   
 ### <a name="a-passing-parameters-to-an-updategram"></a>A. アップデートグラムにパラメーターを渡す  
  この例では、アップデートグラムで HumanResources.Shift テーブル内の従業員の姓を変更します。 アップデート グラムには、2 つのパラメーターが渡されます。ShiftID を一意に識別し、名前を使用します。  

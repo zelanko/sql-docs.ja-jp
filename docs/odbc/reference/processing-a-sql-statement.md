@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045504"
 ---
 # <a name="processing-a-sql-statement"></a>SQL ステートメントの処理
 プログラムによる SQL の使用方法を説明する前に、SQL ステートメントの処理方法を説明する必要があります。 必要な手順は、各手法を実行したら、その異なる時刻では、3 つすべての手法に共通です。 次の図では、このセクションの残りの部分で説明する、SQL ステートメントの処理に関連する手順を示します。  

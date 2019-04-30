@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066480"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>結果更新の規則 (Visual Database Tools)
   多くの場合、 [結果ペイン](visual-database-tools.md)に表示されている結果セットは更新できます。 ただし、更新できない場合もあります。  

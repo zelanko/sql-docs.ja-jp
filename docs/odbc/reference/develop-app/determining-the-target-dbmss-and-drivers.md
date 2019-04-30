@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034949"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>ターゲット DBMS とドライバーの決定
 考慮すべき次の質問は、アプリケーションのターゲット Dbms とは、これらの Dbms をサポートするためにどのようなドライバーがあるでしょうか。 汎用アプリケーションは、高い相互運用できるようにする傾向があります、ため、ターゲットの Dbms の質問はカスタムおよび垂直方向のアプリケーションに最も適したです。 ただし、速度、品質、機能のサポート、および可用性のドライバーが大きく異なるためは、すべてのアプリケーションに対象のドライバーの質問が適用されます。 また、ドライバー、アプリケーションと共に再配布する場合は、コストと可用性プランのライセンスをする必要がありますと見なされます。  

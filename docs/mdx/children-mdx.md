@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208781"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
 
-  指定されたメンバーの子のセットを返します。  
+  指定したメンバーの子のセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +36,7 @@ Member_Expression.Children
  **子**関数は、指定したメンバーの子を含む自然順序のセットを返します。 指定されているメンバーに子メンバーがない場合、この関数は空のセットを返します。  
   
 ## <a name="example"></a>例  
- 次の例では、Geography ディメンション内の Geography 階層の United States メンバーの子が返されます。  
+ 次の例では、Geography ディメンションの Geography 階層の United States メンバーの子を返します。  
   
 ```  
 SELECT [Geography].[Geography].[Country].&[United States].Children ON 0  

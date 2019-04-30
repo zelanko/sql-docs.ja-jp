@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149322"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server の参照の例
 次の例はどのように**SQLBrowseConnect** for SQL Server ドライバーで使用可能な接続を参照する場合に使用します。 最初に、アプリケーションは、接続ハンドルを要求します。  

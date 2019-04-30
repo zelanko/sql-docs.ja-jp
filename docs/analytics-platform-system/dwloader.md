@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157619"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader の Parallel Data Warehouse 用のコマンド ライン ローダー
 **dwloader の**は既存のテーブルに一括でテーブルの行をロードする並列データ ウェアハウス (PDW) コマンド ライン ツールです。 行を読み込むときに、テーブルの末尾にすべての行を追加することができます (*追加モード*または*fastappend モード*)、新しい行が追加および既存の行を更新 (*upsert モード*)、またはすべてを削除します。既存の行を読み込む前に、空のテーブルにすべての行を挿入 (*モードを再読み込み*)。  
@@ -243,7 +243,7 @@ ASCII ファイルの場合は、null 値は区切り記号を連続して配置
   
 -t \t  
   
--t ' ~ | ~'  
+-t '~|~'  
   
 **-r** *row_delimiter*  
 ソース データ ファイルの各行の区切り記号。 行区切り記号は、1 つまたは複数の ASCII 値です。  
@@ -307,7 +307,7 @@ SalesID = 10
   
 前の例では、最初に読み込まれた行が SalesCode = '230' と SalesID = 'Shirts0056'。 読み込まれた 2 つ目の行になります SalesCode = '320' と SaleID = 'Towels1356'。  
   
-先頭および末尾の固定幅モードで、スペースやデータの型変換を処理する方法については、[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)を参照してください。  
+先頭および末尾の固定幅モードで、スペースやデータの型変換を処理する方法については、次を参照してください。[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)します。  
   
 **-e** *character_encoding*  
 データ ファイルから読み込まれるデータの文字エンコーディング型を指定します。 (既定値) の ASCII、UTF8、UTF16、または UTF16BE、UTF16 リトル エンディアンあり UTF16BE はビッグ エンディアンこともできます。 これらのオプションは、大文字小文字を区別します。  
@@ -362,17 +362,17 @@ mdy
 -   01011975  
   
 myd  
-3 月のファイルの例を入力 04,2010。03-2010-04、3/2010/4  
+3 月のファイルの例を入力 04,2010。03-2010-04, 3/2010/4  
   
 dym  
-入力ファイルでは、2010 年 3 月 4 日の例:04-2010-03、3/4/2010  
+入力ファイルでは、2010 年 3 月 4 日の例:04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format*カスタム日付形式は、(例: 年/月/日) 旧バージョンとの互換性を保つのために含まれるとします。 dwloader は、カスタム日付形式 enfoce されません。 代わりに、カスタム日付形式を指定する**dwloader** ymd、ydm、年 (mdy)、myd、dym、または dmy の対応する設定に変換されます。  
   
 たとえば、-d 年/月/日を指定すると dwloader のすべての日付の最初に、1 か月の注文を入力し、日、年 (mdy) し、期待しています。 2 文字の月、2 桁の日、およびカスタム日付形式で指定された 4 桁の年は適用されません。 日付形式は、-d 年/月/日の場合、入力ファイルで日付を形式指定できる方法の例をいくつか次に示します。01/02/2013、Jan.02.2013、2013 年 1 月 2  
   
-包括的な書式設定については、[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)を参照してください。  
+包括的な書式設定については、次を参照してください。[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)します。  
   
 **-dt** *datetime_format_file*  
 各 datetime 形式がという名前のファイルで指定された*datetime_format_file*します。 コマンドラインのパラメーターとは異なりスペースが含まれるファイルのパラメーターを二重引用符で囲んでいない必要があります。 データを読み込むよう、datetime 形式を変更することはできません。 ソース データ ファイルと、対応する列を変換先テーブルでは、同じ形式が必要です。  
@@ -386,7 +386,7 @@ dym
 `ModifiedDate=dym`  
   
 **-d** *staging_database_name*  
-ステージング テーブルを格納するデータベース名。 既定では、変換先テーブルのデータベースは-t オプションで指定されたデータベースです。 詳細については、ステージング データベースを使用して、[ステージング データベース作成](staging-database.md)を参照してください。  
+ステージング テーブルを格納するデータベース名。 既定では、変換先テーブルのデータベースは-t オプションで指定されたデータベースです。 詳細については、ステージング データベースを使用して、次を参照してください。[ステージング データベース作成](staging-database.md)です。  
   
 **-M** *load_mode_option*  
 追加、アップサート、またはデータを再読み込みするかどうかを指定します。 既定のモードを追加します。  
@@ -425,7 +425,7 @@ FASTAPPEND、負荷の種類の場合、 *batchsize*それ以外の場合、テ�
 <reject_options>  
 ローダーにより、読み込みエラーの数を決定するためのオプションを指定します。 読み込みエラーがしきい値を超えた場合、ローダーは停止し、任意の行をコミットできません。  
   
-**-rt** {**値**| 割合}  
+**-rt** { **value** | percentage }  
 指定するかどうかは、*reject_value*で、 **-rv** *reject_value*オプションは、行 (値) のリテラルの数または失敗 (割合) の割合。 既定では、値は。  
   
 割合のオプションは、-rs オプションに基づいて間隔で発生するリアルタイム計算です。  
@@ -449,7 +449,7 @@ FASTAPPEND、負荷の種類の場合、 *batchsize*それ以外の場合、テ�
   
 例 :  
   
-'' に切り捨てられて '  
+'        ' gets truncated to ''  
   
 'abc' は 'abc' に切り捨てられます  
   
@@ -505,7 +505,7 @@ For more information, see [Grant permissions to load data](grant-permissions-to-
 -->
   
 ## <a name="general-remarks"></a>全般的な解説  
-Dwloader の読み込み時に、データ型変換については、[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)を参照してください。  
+Dwloader の読み込み時に、データ型変換については、次を参照してください。[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)します。  
   
 パラメーターには、1 つ以上のスペースが含まれている場合は、二重引用符でパラメーターを囲みます。  
   

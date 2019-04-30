@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214855"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>安全または無制限モード用の DataFactory の構成
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "51559913"
   
  安全な構成のハンドラーのレジストリ エントリを設定するには、レジストリ ファイル handsafe.reg を用意されています。 セーフ モードで実行するには、handsafe.reg を実行します。  
   
- Handsafe.reg を実行した後に、停止してコマンド プロンプト ウィンドウで、次のコマンドを入力して、Web サーバー上の World Wide Web 発行サービスを再起動する必要があります:"NET W3SVC を停止"、"NET 開始 W3SVC"。  
+ Handsafe.reg を実行した後は、停止し、コマンド プロンプト ウィンドウで、次のコマンドを入力して、Web サーバー上の World Wide Web 発行サービスを再起動する必要があります。"NET STOP W3SVC"と"NET 開始 W3SVC"。  
   
 ## <a name="see-also"></a>参照  
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   

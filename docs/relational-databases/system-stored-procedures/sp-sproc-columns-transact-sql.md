@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032745"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,9 +84,9 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**COLUMN_DEF**|**nvarchar(** 4000 **)**|列の既定値です。|  
 |**SQL_DATA_TYPE**|**smallint**|表示されるように SQL データ型の値、**型**の記述子フィールド。 この列は、**datetime** データ型と ISO **interval** データ型以外は、**DATA_TYPE** 列と同じです。 この列は常に値が返されます。|  
 |**SQL_DATETIME_SUB**|**smallint**|**SQL_DATA_TYPE** の値が **SQL_DATETIME** または **SQL_INTERVAL** の場合は、**datetime** ISO **interval** サブコードになります。 型のデータ型以外**datetime**と ISO**間隔**、このフィールドは NULL です。|  
-|**CHAR_OCTET_LENGTH**|**int**|最大長のバイト単位、**文字**または**バイナリ**データ型の列。 その他のすべてのデータ型では、この列は NULL を返します。|  
+|**CHAR_OCTET_LENGTH**|**int**|最大長のバイト単位、**文字**または**バイナリ**データ型の列。 他のすべてのデータ型の場合、この列は NULL を返します。|  
 |**ORDINAL_POSITION**|**int**|テーブル内の列の序数です。 テーブルの最初の列には 1 です。 この列は常に値が返されます。|  
-|**IS_NULLABLE**|**varchar(254)**|テーブル内の列の null 値許容属性。 Null 値許容属性を決定する ISO の規則が適用されます。 ISO 準拠の DBMS では、空の文字列を返すことはできません。<br /><br /> 列が NULL を含むことができる場合は YES、含むことができない場合は NO を表示します。<br /><br /> この列は、null 値許容属性が不明の場合、長さ 0 の文字列を返します。<br /><br /> この列に返される値が null 許容の列に対して返される値です。|  
+|**IS_NULLABLE**|**varchar(254)**|テーブル内の列の null 値許容属性。 NULL 値の許容属性の検査は ISO の規則に従います。 ISO 準拠の DBMS では、空の文字列を返すことはできません。<br /><br /> 列が NULL を含むことができる場合は YES、含むことができない場合は NO を表示します。<br /><br /> NULL が許可されているかどうかがわからない列は、長さ 0 の文字列を返します。<br /><br /> この列に返される値は、NULLABLE 列に返される値とは異なります。|  
 |**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用されるデータ型は拡張ストアド プロシージャです。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|  
   
 ## <a name="remarks"></a>コメント  

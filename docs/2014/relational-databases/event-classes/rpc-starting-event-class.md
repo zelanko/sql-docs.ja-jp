@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a5f427d9430c38b129b7cef6fb2e1cf7ab19e9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044257"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting イベント クラス
   RPC:Starting イベント クラスは、リモート プロシージャ コールが開始されたことを示します。  

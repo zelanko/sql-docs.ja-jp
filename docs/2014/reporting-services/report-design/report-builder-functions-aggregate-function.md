@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 50a96884a5b97e0e4a287b0c731143dfa2d6e81f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215698"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>集計関数 (レポート ビルダーおよび SSRS)
   データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。  

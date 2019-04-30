@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182957"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
