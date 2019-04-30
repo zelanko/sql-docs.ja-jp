@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261098"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>[全般] プロパティ ページ、共有データ ソース (レポート マネージャー)
   [全般] プロパティ ページでは、共有データ ソース アイテムのプロパティを表示または変更できます。 アイテムのプロパティに対して行った変更は、 **[適用]** をクリックしたときに、そのプロパティを参照するすべてのレポートに反映されます。  

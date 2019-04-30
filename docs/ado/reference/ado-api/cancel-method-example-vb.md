@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239802"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel メソッドの例 (VB)
 この例では、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)でコマンドの実行をキャンセルするメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのかどうか、接続がビジー状態です。  

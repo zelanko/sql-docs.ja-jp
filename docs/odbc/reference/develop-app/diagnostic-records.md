@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928e9ffa4701568aac8c519a23e7e371596a36eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242341"
 ---
 # <a name="diagnostic-records"></a>診断レコード
 接続、ステートメント、および記述子ハンドルは、各環境では、関連付けられている*診断レコード*します。 これらのレコードには、最後に呼び出される特定のハンドルを使用する関数についての診断情報が含まれます。 レコードは、そのハンドルを使用して、別の関数が呼び出されたときだけに置き換えられます。 いつでも格納できる診断レコードの数に制限はありません。  

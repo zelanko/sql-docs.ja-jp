@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232369"
 ---
 # <a name="xml-data-sql-server"></a>XML データ (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、半構造化されたデータを管理する多機能アプリケーションを開発するための強力なプラットフォームを提供します。 XML のサポートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのコンポーネントに統合されており、次の機能を提供します。  

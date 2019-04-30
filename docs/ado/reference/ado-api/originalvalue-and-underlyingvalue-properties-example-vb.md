@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95e09a0b3618d88929a0474e7a611d4ea1680793
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239932"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue および UnderlyingValue プロパティの例 (VB)
 この例では、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)にレコードのデータを基になる場合は、メッセージを表示することでプロパティが変更された、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)バッチ更新します。  

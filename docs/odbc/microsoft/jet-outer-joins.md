@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f72e782a80ae92a9f0ca920c06e3576146bf597e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262296"
 ---
 # <a name="jet-outer-joins"></a>Jet: 外部結合
-SELECT ステートメントは、OUTER JOIN 句の一覧を含めることができます。 入れ子になった外部結合はサポートされています。 外部結合の詳細については、、 *Microsoft Jet データベース エンジン プログラマー ガイド*を参照してください。
+SELECT ステートメントは、OUTER JOIN 句の一覧を含めることができます。 入れ子になった外部結合はサポートされています。 外部結合の詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマー ガイド*します。

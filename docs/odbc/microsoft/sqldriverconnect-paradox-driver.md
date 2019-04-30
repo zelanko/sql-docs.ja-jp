@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238376"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (Paradox ドライバー)
 > [!NOTE]  
@@ -27,13 +27,13 @@ ms.locfileid: "47654760"
   
  **SQLDriverConnect**データ ソース (DSN) を作成することがなく、ドライバーに接続することができます。  
   
- すべてのドライバーの接続文字列では、次のキーワードがサポートされて: **DSN**、 **DBQ**、および**FIL**します。  
+ すべてのドライバーの接続文字列では、次のキーワードがサポートされています。**DSN**、 **DBQ**、および**FIL**します。  
   
  **PWD**キーワードもサポートされます。 PWD キーワードの特殊文字含める必要がありますいない (SQL_SPECIAL_CHARACTERS でを参照してください。 **SQLGetInfo**に返される値)。  
   
  パスワードで保護されたファイルを開いた後にユーザーが、他のユーザーは同じファイルを開くには使用できません。  
   
- 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)を参照してください。  
+ 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)します。  
   
 > [!NOTE]  
 >  Paradox ドライバー、DBQ または DefaultDir が指定されていない場合、ドライバーは、現在のディレクトリに接続します。  

@@ -14,14 +14,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 780368a3b3c4b61c404f18289a7085a5f70c3d89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268621"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での XPath 変数の指定 (SQLXML 4.0)
-  次の例では、XPath クエリに XPath 変数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、[XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)を参照してください。  
+  次の例では、XPath クエリに XPath 変数を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52807132"
     mapping-schema="C:\MyDir\SampleSchema1.xml"  
     ```  
   
-3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
+3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
 > [!NOTE]  
 >  この例では、パラメーターは渡されていません。 このため、パラメーターの既定値が使用されます。  

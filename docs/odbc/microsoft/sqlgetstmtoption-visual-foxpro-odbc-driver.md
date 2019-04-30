@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240261"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:1 つのレベル  
   
  ステートメント オプションの現在の設定を返します。  
   
@@ -38,4 +38,4 @@ ms.locfileid: "47647000"
   
  Visual FoxPro ODBC ドライバーには、翻訳の Dll がありません。  
   
- 詳細については、[SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*します。

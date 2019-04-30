@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315078"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>コール センター モデルの検証 (中級者向けデータ マイニング チュートリアル)
   調査モデルを構築したら、それを使用して、データについてより深く考察することができます。具体的には、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] に備わっている次のツールを使用します。  
@@ -143,7 +143,7 @@ FROM [Call Center EQ4].CONTENT
 WHERE NODE_NAME = '10000000000000000'  
 ```  
   
- ノード階層と、NODE_DISTRIBUTION テーブル内の詳細情報を使用して、ニューラル ネットワーク内のパスを個別にたどり、非表示になっているレイヤーの統計を閲覧することもできます。 詳細については、[ニューラル ネットワーク モデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)を参照してください。  
+ ノード階層と、NODE_DISTRIBUTION テーブル内の詳細情報を使用して、ニューラル ネットワーク内のパスを個別にたどり、非表示になっているレイヤーの統計を閲覧することもできます。 詳細については、次を参照してください。[ニューラル ネットワーク モデルのクエリ例](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)します。  
   
  [トップに戻る](#bkmk_NNviewer)  
   

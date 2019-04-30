@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba5d3ec6958cf3dbc3cca0497f08feaac094b837
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265120"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>式を使用したカスタム アセンブリへのアクセス
   カスタム アセンブリを作成し、レポート デザイナーまたはレポート サーバーで利用可能にします。そして、適切なセキュリティ ポリシーを追加し、レポート定義のカスタム アセンブリへの参照を追加すると、レポートの式を使用してアセンブリ内のクラスのメンバーにアクセスできます。 式の中でカスタム コードを参照するには、アセンブリ内のクラスのメンバーを呼び出す必要があります。 呼び出す方法は、メソッドが静的であるかインスタンス ベースであるかにより異なります。  

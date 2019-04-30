@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302828"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 (レポート ビルダーおよび SSRS)
   マップ レイヤー上の多角形、線、およびポイントの表示オプションを制御する方法として、レイヤーのオプションを設定する方法、レイヤー上のマップ要素ルールを設定する方法、およびレイヤー上の特定の埋め込みマップ要素のオプションをオーバーライドする方法があります。  

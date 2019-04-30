@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265381"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>カスタム アセンブリでの権限のアサート
   既定では、カスタム アセンブリ コードは、限定された **Execution** アクセス許可セットに基づいて実行されます。 ただし、場合によっては、(ファイルやレジストリなど) セキュリティ システムで保護されたリソースを安全に呼び出すカスタム アセンブリを実装する必要が生じる場合もあります。 そのためには、次の操作を実行する必要があります。  

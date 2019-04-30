@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b68b6def32b50a7a03560015e21d23f51145085c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313242"
 ---
 # <a name="sqlfetch-visual-foxpro-odbc-driver"></a>SQLFetch (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  前の呼び出しで指定された場所に結果セットから 1 つの行を取得します。 [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md)します。 呼び出すのため、ドライバーを準備します[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)バインドされていない列にします。  
   
- 詳細については、[SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md)で、 *ODBC プログラマ リファレンス*します。

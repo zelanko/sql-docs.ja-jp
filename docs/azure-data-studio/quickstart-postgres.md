@@ -12,11 +12,11 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: dbf7b427c8c978538370a576aa50c35dd15417cf
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252949"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: 接続し、PostgreSQL を使用したクエリ [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 このクイック スタートは、使用する方法を示しています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Postgres、に接続し、データベースを作成する SQL ステートメントを使用する*tutorialdb*しクエリを実行します。
@@ -25,8 +25,7 @@ ms.locfileid: "58162058"
 
 このクイック スタートを完了する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]、用の PostgreSQL 拡張機能 [!含める[名前 sos](../includes/name-sos-short.md)、および PostgreSQL サーバーへのアクセス。
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)]のインストール](download.md)。
-
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストール](download.md)
 - [Azure Data Studio 用の PostgreSQL 拡張機能のインストール](postgres-extension.md)します。
 - [PostgreSQL のインストール](https://www.postgresql.org/download/)します。 (クラウドを使用して、Postgres データベースを作成する代わりに、[を az postgres](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli))。 
 
@@ -51,8 +50,8 @@ ms.locfileid: "58162058"
    | **ユーザー名** | postgres | ログインに使用するユーザー名。 |
    | **パスワード (SQL ログイン)** | *password* | ログインに使用するアカウントのパスワード。 |
    | **Password** | *[確認]* | 接続するたびにパスワードを入力しない場合は、このチェック ボックスをオンにします。 |
-   | **データベース名** | \<Default\> | データベースを指定する接続を使用する場合は、これを入力します。 |
-   | **[サーバー グループ]** | \<Default\> | このオプションには、この接続を作成した特定のサーバー グループに割り当てることができます。 | 
+   | **データベース名** | \<[Default]\> | データベースを指定する接続を使用する場合は、これを入力します。 |
+   | **[サーバー グループ]** | \<[Default]\> | このオプションには、この接続を作成した特定のサーバー グループに割り当てることができます。 | 
    | **名前 (省略可能)** | *空白のままに* | このオプションを使用して、サーバーのフレンドリ名を指定できます。 | 
 
 5. **[接続]** を選択します。 

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237704"
 ---
 # <a name="search-page-report-manager"></a>[検索] ページ (レポート マネージャー)
   レポート、リンク レポート、レポート モデル、共有データ ソース、フォルダー、またはリソースに対して指定された検索操作の結果を表示するには、[検索結果] ページを使用します。 検索結果はアルファベット順に表示されます。 型、名前、または説明で並べ替えることができます。  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2186599ac56be3d3adca986ae8f087ecb3b2218c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299086"
 ---
 # <a name="generating-reports-db2tosql"></a>レポートの生成 (DB2ToSQL)
 オブジェクト ツリーのレベルでの SSMA コンソールのコマンドを使用して実行される特定のアクティビティ レポートが生成されます。  
@@ -29,9 +29,9 @@ ms.locfileid: "52390808"
     ||||  
     |-|-|-|  
     |**Sl.No.**|**Command**|**レポートのタイトル**|  
-    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;します。XML|  
-    |2|変換とスキーマ|SchemaConversionReport&lt;n&gt;します。XML|  
-    |3|データの移行|DataMigrationReport&lt;n&gt;します。XML|  
+    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |2|変換とスキーマ|SchemaConversionReport&lt;n&gt;.XML|  
+    |3|データの移行|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;します。XML|  
     |5|同期ターゲット|TargetSynchronizationReport&lt;n&gt;します。XML|  
     |6|データベースからの更新|SourceDBRefreshReport&lt;n&gt;.XML|  
@@ -46,8 +46,8 @@ ms.locfileid: "52390808"
     ||||  
     |-|-|-|  
     |**Sl.No.**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|詳細な ="false"|アクティビティの集計レポートを生成します。|  
-    |2|詳細な ="true"|各アクティビティの概要と詳細の状態レポートを生成します。|  
+    |1|verbose="false"|アクティビティの集計レポートを生成します。|  
+    |2|verbose="true"|各アクティビティの概要と詳細の状態レポートを生成します。|  
   
     > [!NOTE]  
     > 上記で指定したレポートの詳細度の設定は生成評価レポート、convert スキーマ、データの移行、sql ステートメントの変換コマンド。  
@@ -57,8 +57,8 @@ ms.locfileid: "52390808"
     ||||  
     |-|-|-|  
     |**Sl.No.**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|レポート エラー ="false"|エラーの詳細はありません/警告/情報メッセージ。|  
-    |2|レポート エラー ="true"|エラーの詳細/警告/情報メッセージ。|  
+    |1|report-errors="false"|エラーの詳細はありません/警告/情報メッセージ。|  
+    |2|report-errors="true"|エラーの詳細/警告/情報メッセージ。|  
   
     > [!NOTE]  
     > 上記で指定したエラー報告の設定は生成評価レポート、convert スキーマ、データの移行、sql ステートメントの変換コマンド。  
@@ -99,7 +99,7 @@ ms.locfileid: "52390808"
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**オブジェクト名:** 同期 (含めることもできます個々 のオブジェクト名またはグループ オブジェクトの名前) と見なされるオブジェクトを指定します。  
+**object-name:** 同期 (含めることもできます個々 のオブジェクト名またはグループ オブジェクトの名前) と見なされるオブジェクトを指定します。  
   
 **エラー:** 同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時の使用可能なオプション:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "52390808"
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**オブジェクト名:** 最新の更新 (含めることもできます個々 のオブジェクト名またはグループ オブジェクトの名前) と見なされるオブジェクトを指定します。  
+**object-name:** 最新の更新 (含めることもできます個々 のオブジェクト名またはグループ オブジェクトの名前) と見なされるオブジェクトを指定します。  
   
 **エラー:** 更新エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時の使用可能なオプション:  
   

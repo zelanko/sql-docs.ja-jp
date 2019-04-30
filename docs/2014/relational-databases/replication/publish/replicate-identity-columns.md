@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261897"
 ---
 # <a name="replicate-identity-columns"></a>ID 列のレプリケート
   IDENTITY プロパティを列に割り当てると、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、その ID 列を含むテーブルに挿入された新しい行に対して連続する番号が自動的に生成されます。 詳細については、「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)」を参照してください。 ID 列は主キーの一部に含まれる場合があるため、ID 列の値が重複しないようにすることが重要です。 複数のノードで更新されるレプリケーション トポロジで ID 列を使用するには、レプリケーション トポロジ内の各ノードで異なる範囲の ID 値を使用して、重複が生じないようにする必要があります。  

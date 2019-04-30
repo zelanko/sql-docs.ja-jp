@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 89c8ab8693ae814e9b471fe8212f8a1961d09873
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267898"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 用の SQL Server Migration Assistant (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 は、DB2 データベースへの移行のためのツール[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows と Linux (上の 2017プレビュー)、または Azure SQL DB します。 SSMA for DB2 が DB2 のデータベース オブジェクトに変換します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でこれらのオブジェクトを作成します。 データベース オブジェクトを、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、DB2 からデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB。  

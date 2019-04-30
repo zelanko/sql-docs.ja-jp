@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241001"
 ---
 # <a name="decimal-digits"></a>10 進数字
 *10 進数字*decimal および numeric のデータの種類は、またはデータの小数点以下桁数、小数点の右側に桁の数字の最大数として定義されます。 浮動小数点概数の数値列またはパラメーターの場合、小数点の右側にある数字の数が固定されていないため、小数点以下桁数が定義されていません。 秒コンポーネントを含む datetime または間隔のデータ、10 進数字は、データの秒部分の小数点の右側にある数字の数として定義されます。  

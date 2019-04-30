@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30d91302161b236cee5634196bea33f61411f046
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259564"
 ---
 # <a name="sqlgetconnectoption-function"></a>SQLGetConnectOption 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
  **まとめ**  
- ODBC 3 *.x*、ODBC 2 *.x*関数**SQLGetConnectOption**置き換わりました**SQLGetConnectAttr**します。 詳細については、[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)を参照してください。  
+ ODBC 3 *.x*、ODBC 2 *.x*関数**SQLGetConnectOption**置き換わりました**SQLGetConnectAttr**します。 詳細については、次を参照してください。 [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)します。  
   
 > [!NOTE]
 >  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC 2 の詳細については *.x*アプリケーションの操作は、ODBC 3 *.x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  

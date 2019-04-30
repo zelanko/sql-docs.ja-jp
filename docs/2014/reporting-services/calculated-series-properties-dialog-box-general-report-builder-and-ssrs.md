@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc02b99c77f35ad803f6e975ae445a50ccf718d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266372"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([計算系列のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[計算系列のプロパティ]** ダイアログ ボックスの **[数式]** を選択すると、既存の系列データを入力として使用する組み込みの数式に基づいて計算される系列を追加または変更できます。  

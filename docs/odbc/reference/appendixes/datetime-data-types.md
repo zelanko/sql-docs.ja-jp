@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241009"
 ---
 # <a name="datetime-data-types"></a>Datetime データ型
 ODBC 3 *.x*、識別子を日付、時刻、および timestamp SQL データ型は、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP から変更された (のインスタンスと **#define** 9、10、および 11 のヘッダー ファイルで) に sql _TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP (のインスタンスと **#define** 91、92、および 93 のヘッダー ファイルで)、それぞれします。 識別子から変更されている SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP SQL_C_TYPE_DATE、SQL_C_TYPE_TIME、SQL_C_TYPE_TIMESTAMP では、それぞれ、対応する C 型とインスタンスの **#define**が変更されました。それに応じて。  
   
- ODBC 3 での SQL の datetime データ型の列のサイズと 10 進数字が返される *.x*は、ODBC 2 でそれらの有効桁数と小数点と同じ返されます *。x*します。 これらの値は、SQL_DESC_PRECISION および SQL_DESC_SCALE 記述子フィールドの値と異なります。 (詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d: データ型にします。)。  
+ ODBC 3 での SQL の datetime データ型の列のサイズと 10 進数字が返される *.x*は、ODBC 2 でそれらの有効桁数と小数点と同じ返されます *。x*します。 これらの値は、SQL_DESC_PRECISION および SQL_DESC_SCALE 記述子フィールドの値と異なります。 (詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型です。)  
   
  これらの変更に影響を与える**SQLDescribeCol**、 **SQLDescribeParam**、および**SQLColAttributes**;**SQLBindCol**、 **SQLBindParameter**、および**SQLGetData**; と**SQLColumns**、 **SQLGetTypeInfo**、 **SQLProcedureColumns**、 **SQLStatistics**、および**SQLSpecialColumns**します。  
   
@@ -40,4 +40,4 @@ ODBC 3 *.x*、識別子を日付、時刻、および timestamp SQL データ型
   
  呼び出しですべてのデータ型を要求するときに**SQLGetTypeInfo**、ODBC 3 で定義されているに、関数によって返される結果セットが SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP の両方を格納する *.x*、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP ODBC 2 で定義されています。*x*します。  
   
- 方法により、ODBC 3 *.x*ドライバー マネージャーは、日付、時刻、タイムスタンプ データ型、ODBC 3 のマッピングを実行します *.x*のみ必要なドライバーを認識 **#defines** 91 の 92、および入力された日付、時刻、および timestamp C データ型の 93、 *TargetType*の引数**SQLBindCol**と**SQLGetData**または*ValueType*の引数**SQLBindParameter**、必要がありますのみを認識および **#defines** 91 92、および、日付の 93 の時間、および timestamp SQL データ型が、に入力*ParameterType*の引数**SQLBindParameter**または*DataType*の引数**SQLGetTypeInfo**します。 詳細については、[Datetime データ型の変更](../../../odbc/reference/develop-app/datetime-data-type-changes.md)を参照してください。
+ 方法により、ODBC 3 *.x*ドライバー マネージャーは、日付、時刻、タイムスタンプ データ型、ODBC 3 のマッピングを実行します *.x*のみ必要なドライバーを認識 **#defines** 91 の 92、および入力された日付、時刻、および timestamp C データ型の 93、 *TargetType*の引数**SQLBindCol**と**SQLGetData**または*ValueType*の引数**SQLBindParameter**、必要がありますのみを認識および **#defines** 91 92、および、日付の 93 の時間、および timestamp SQL データ型が、に入力*ParameterType*の引数**SQLBindParameter**または*DataType*の引数**SQLGetTypeInfo**します。 詳細については、次を参照してください。 [Datetime データ型の変更](../../../odbc/reference/develop-app/datetime-data-type-changes.md)します。

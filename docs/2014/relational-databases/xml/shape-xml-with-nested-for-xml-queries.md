@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231234"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>入れ子になった FOR XML クエリを使用した XML の構造化
   次の例では、`Production.Product` テーブルにクエリを実行し、特定の製品の `ListPrice` 値と `StandardCost` 値を取得します。 ここでは、例示を目的として、両方の価格を <`Price`> 要素に返します。各 <`Price`> 要素には、`PriceType` 属性があります。  
@@ -88,7 +88,7 @@ FOR XML AUTO, TYPE
   
  上の例では `query()` データ型の `xml` メソッドを使用し、内側の FOR XML クエリで返される XML に対してクエリを実行し、必要な結果を構築しています。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <Production.Product ProductID="520">  

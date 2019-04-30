@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280432"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>クラスター モデルの検証 (基本的なデータ マイニング チュートリアル)
   [!INCLUDE[msCoName](../includes/msconame-md.md)]クラスタ リング アルゴリズムは、類似した特性を持つクラスターにケースをグループ化します。 このグループ化は、データの探索、データの異常の特定、および予測の作成に役立ちます。  

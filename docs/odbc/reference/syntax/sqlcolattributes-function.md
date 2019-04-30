@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff7d1349666d236e640d8de3524a7d069662ec86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226346"
 ---
 # <a name="sqlcolattributes-function"></a>SQLColAttributes 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
- **概要**  
- ODBC 3。*x*、ODBC 2.0 関数**SQLColAttributes**置き換わりました**SQLColAttribute**します。 詳細については、[SQLColAttribute 関数](../../../odbc/reference/syntax/sqlcolattribute-function.md)を参照してください。  
+ **まとめ**  
+ ODBC 3。*x*、ODBC 2.0 関数**SQLColAttributes**置き換わりました**SQLColAttribute**します。 詳細については、次を参照してください。 [SQLColAttribute 関数](../../../odbc/reference/syntax/sqlcolattribute-function.md)します。  
   
 > [!NOTE]  
->  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
+>  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)で付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
  参照してください[ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)場合、アプリケーションが 64 ビットのオペレーティング システムで実行します。  
   

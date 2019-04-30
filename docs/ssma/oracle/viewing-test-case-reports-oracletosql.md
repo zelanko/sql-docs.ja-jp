@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283640"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>テスト ケースのレポートの表示 (OracleToSQL)
 テスト_ケースのレポートは、テスト検証の結果とテストの一般的な情報を示します。 失敗した場合、テスト、検証済みのオブジェクト内の一致しないデータに関する情報も表示されます。  

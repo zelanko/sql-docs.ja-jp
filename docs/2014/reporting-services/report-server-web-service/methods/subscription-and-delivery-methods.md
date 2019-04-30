@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6ae92a6abd5c25b9ab1236a2b5b11429d210cba
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283910"
 ---
 # <a name="subscription-and-delivery-methods"></a>サブスクリプション メソッドおよび配信メソッド
   これらのメソッドを使用して、カタログ アイテムのサブスクリプションと配信を作成および管理できます。  

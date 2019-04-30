@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a16262d562ca2088f38cd863a6f44e537e65d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254204"
 ---
 # <a name="multithreading"></a>マルチスレッド
 マルチ スレッドのオペレーティング システムでは、ドライバーは、スレッド セーフである必要があります。 つまり、アプリケーションは 1 つ以上のスレッドで同じハンドルを使用する場合があります。 ドライバーに固有では、これを実現する方法と、ドライバーがしようとすると同時に 2 つの異なるスレッドで同じハンドルを使用するシリアル化する可能性があります。  

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1575853338483132a5e2060ba7d0985e1211e05c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268570"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
   この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、アップデートグラムを実行します。 このアップデートグラムでは、特定の従業員の名前が更新されます。 この例では、AdventureWorks サンプル データベースを使用します。  

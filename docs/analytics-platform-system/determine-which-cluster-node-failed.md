@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283151"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>どのクラスター決定 Analytics Platform System のノードに失敗しました
 このトピックでは、クラスター フェールオーバーが発生した後にクラスター フェールオーバーの警告が発生しましたが失敗した Analytics Platform System (APS) ノードの名前を確認する方法について説明します。 クラスターのフェイル オーバーのトラブルシューティングの一環として、問題を解決するために Microsoft に連絡する前に失敗したノードの名前を決定する必要があります。  
@@ -28,7 +28,7 @@ SQL Server PDW の高可用性の管理 ノードとコンピューティング 
   
 #### <a name="to-find-the-name-of-the-node-that-failed"></a>失敗したノードの名前を検索するには  
   
-1.  管理者コンソールを開きます。 管理コンソールの詳細については、[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)を参照してください。 アラートの数でフェールオーバー イベントが含まれるフェールオーバーが発生した後、**ヘルス**ページ。 **ヘルス**PDW リージョン、およびアプライアンスの fabric 領域のページ。 各正常性ページには、**アラート**タブ。アラートについての詳細については、正常性 ページの アラート タブをクリックし、アラートをクリックします。  
+1.  管理者コンソールを開きます。 管理コンソールの詳細については、次を参照してください。[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)します。 アラートの数でフェールオーバー イベントが含まれるフェールオーバーが発生した後、**ヘルス**ページ。 **ヘルス**PDW リージョン、およびアプライアンスの fabric 領域のページ。 各正常性ページには、**アラート**タブ。アラートについての詳細については、正常性 ページの アラート タブをクリックし、アラートをクリックします。  
   
 ## <a name="SystemView"></a>システム ビューのソリューション  
 次の SQL ステートメントを使用する方法を示しています、 [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)失敗したサーバーの名前を検索するシステム ビュー。  

@@ -1,5 +1,5 @@
 ---
-title: クイック スタート:接続し、Azure SQL database のクエリ
+title: 'クイック スタート: 接続し、Azure SQL database のクエリ'
 titleSuffix: Azure Data Studio
 description: このクイック スタートは、Azure Data Studio を使用して SQL database に接続し、クエリを実行する方法を示しています。
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255962"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート:使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]に接続して Azure SQL database のクエリ
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]に接続して Azure SQL database のクエリ
 
 このクイック スタートで使用する[!INCLUDE[name-sos](../includes/name-sos-short.md)]Azure SQL Database サーバーに接続します。 TRANSACT-SQL (T-SQL) ステートメントを作成し、その他で使用されている TutorialDB データベースのクエリを実行しする[!INCLUDE[name-sos](../includes/name-sos-short.md)]チュートリアル。
 
@@ -152,7 +152,7 @@ Azure SQL サーバーを持っていない場合は、次の Azure SQL Database
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップします。
 
-それ以降のクイック スタートの記事では、ここで作成されたリソースに基づいて構築します。 これらの記事を使用する場合は、必ずこれらのリソースを削除します。 それ以外の場合、Azure portal のでは、不要になったリソースを削除します。 詳細については、[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)を参照してください。
+それ以降のクイック スタートの記事では、ここで作成されたリソースに基づいて構築します。 これらの記事を使用する場合は、必ずこれらのリソースを削除します。 それ以外の場合、Azure portal のでは、不要になったリソースを削除します。 詳細については、次を参照してください。[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)します。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 885e8ffb9eaa02aae02db590c8d042dadb1f2ab0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224919"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 予約の構文 (SSRS 構成マネージャー)
   このトピックでは、レポート サーバー Web サービスとレポート マネージャーの URL 文字列の各部分について説明します。 内部的に格納される URL 文字列の構造は、ブラウザー ウィンドウのアドレス バーに入力する URL の構造とは異なります。 URL 予約文字列は、URL の構成時の Reporting Services 構成ツールの [結果] ウィンドウおよび RSReportServer.config ファイルに示されます。 URL 文字列の定義方法を理解しておくと、URL 予約の問題のトラブルシューティングや、サーバーで定義されている内部 URL 予約を表示するための HTTP.SYS に対するクエリを実行する場合に役立ちます。  

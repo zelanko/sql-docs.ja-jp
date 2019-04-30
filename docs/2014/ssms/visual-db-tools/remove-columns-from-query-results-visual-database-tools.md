@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253512"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>クエリ結果からの列の削除 (Visual Database Tools)
   選択クエリで使用する列を結果セットには表示しない場合、つまりクエリの選択リストにはその列が必要ない場合、出力から列を削除できます。 クエリ出力から列を削除した後でも、検索条件や並べ替えフィールドとしてその列を使用できます。  

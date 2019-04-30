@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42afb911dda26cbda53f9cd14c883abb3775b94b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270524"
 ---
 # <a name="sqlctchar"></a>SQL_C_TCHAR
 SQL_C_TCHAR 型識別子が、データ型を実際に識別できません。これは、Unicode への変換用のヘッダー ファイル内に存在するマクロです。 UNICODE の設定に応じて SQL_C_CHAR、SQL_C_WCHAR またはによって置き換えられる **#define**します。 ANSI および Unicode アプリケーションの両方としてコンパイルされる文字データを転送するアプリケーションに適しています。

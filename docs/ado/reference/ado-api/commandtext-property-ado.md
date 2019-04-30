@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9593b45e8b336fe777b8e240061e82c23543c1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316178"
 ---
 # <a name="commandtext-property-ado"></a>CommandText プロパティ (ADO)
 プロバイダーに対して発行するコマンドのテキストを示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "47691180"
  使用して、 **CommandText**プロパティを設定またはファイルやディレクトリなどのリソースを指定する相対 URL を取得します。 絶対 url では、または暗黙的には、オープンで明示的に指定された場所に対する相対リソース パスです[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  

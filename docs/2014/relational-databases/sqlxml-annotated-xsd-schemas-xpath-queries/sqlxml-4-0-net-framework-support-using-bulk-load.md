@@ -16,14 +16,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268533"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>.NET 環境での SQLXML 一括読み込みの使用
-  ここでは、XML 一括読み込み機能を .NET 環境で使用する方法について説明します。 XML 一括読み込みの詳細については、[XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)を参照してください。  
+  ここでは、XML 一括読み込み機能を .NET 環境で使用する方法について説明します。 XML 一括読み込みの詳細については、次を参照してください。 [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)します。  
   
  マネージド環境から SQLXML 一括読み込み COM オブジェクトを使用するには、このオブジェクトにプロジェクト参照を追加する必要があります。 これによって、一括読み込み COM オブジェクトのマネージド ラッパー インターフェイスが生成されます。  
   

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6aa776472581ce06ad05b0133df6101b12f75061
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266660"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>ProtocolDLL プロパティ (ServerNetworkProtocol クラス)
   サーバー ネットワーク プロトコルに必要な .dll ファイルの名前を取得します。  

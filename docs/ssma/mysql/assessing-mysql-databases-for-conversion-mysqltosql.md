@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 9983edb500e424be6bbb4f85ff005af00fd65aaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253247"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>変換のための MySQL データベースの評価 (MySQLToSQL)
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、複雑な移行されるとどれ時間だけを決定する必要があります、移行にかかる時間します。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  
@@ -75,7 +75,7 @@ SSMA が選択した MySQL データベース オブジェクトに変換しま�
   
 -   SSMA で MySQL の構文を更新します。 プロシージャと関数のみの構文を更新することができます。 構文を更新するには、MySQL メタデータ エクスプ ローラー ペインで、オブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを変更します。 項目から移動するときに、更新された構文を保存する促されます。 オブジェクトの報告されたエラーを表示することができます、**レポート**タブ。  
   
--   MySQL で削除または問題のあるコードを変更するには MySQL オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、[MySQL に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)を参照してください。  
+-   MySQL で削除または問題のあるコードを変更するには MySQL オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [MySQL に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)します。  
   
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラーと MySQL メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の MySQL からデータを移行します。  
   

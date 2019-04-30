@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266176"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>埋め込みデータ ソースまたは共有データ ソースを作成する (SSRS)
   レポートのデータ ソースは名前と接続情報を指定します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、"埋め込み" と "共有" の 2 種類のデータ ソースをサポートしています。 埋め込みデータ ソースは、レポート定義内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、個別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、次を参照してください。[埋め込みと共有のデータ接続またはデータ ソース&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)します。  

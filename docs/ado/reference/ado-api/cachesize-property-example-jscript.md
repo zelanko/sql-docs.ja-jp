@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5dfc7affb2a6db7db0b30fa95087b3e024e00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239834"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize プロパティの例 (JScript)
 この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)と 30 レコードのキャッシュなしに実行される操作のパフォーマンスの違いを表示するプロパティ。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**CacheSizeJS.asp**します。  

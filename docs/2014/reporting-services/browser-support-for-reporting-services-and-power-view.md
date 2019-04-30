@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266822"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services と Power View ブラウザー サポートの計画 (Reporting Services 2014)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] では、Web ブラウザーを使用して、レポートを表示したりレポート マネージャーを実行したりします。 すべてのブラウザーですべてのレポート機能がサポートされているわけではありません。 このトピックでは、レポート マネージャーの管理機能、レポートの表示、Visual Studio のレポート ビューアー コントロールのサポートと要件について説明します。 また、サポートされるブラウザーで使用できる機能、認証要件、およびスクリプトの要件の概要も示します。  

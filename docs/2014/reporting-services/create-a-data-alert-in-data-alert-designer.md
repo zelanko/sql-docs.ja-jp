@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266385"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
   データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md) 」および「 [警告デザイナーでのデータ警告の編集](edit-a-data-alert-in-alert-designer.md)」を参照してください。  

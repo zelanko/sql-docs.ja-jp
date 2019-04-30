@@ -31,11 +31,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 9ab56815fa36f23a15bc646c69094c3ca2f5fa3e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299246"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>SQL Server (AccessToSQL) へのデータベース オブジェクトの変換後の読み込み
 Access データベースのオブジェクトに変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure には、結果のデータベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース。  
@@ -130,7 +130,7 @@ SSMA を使用して作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 4.  一連のステートメントを実行するクエリ エディター ウィンドウで、ステートメントを選択し、キーを押します、 **F5**キー。  
   
-クエリ エディターを使用してスクリプトを実行する方法の詳細については、" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「を参照してください。  
+クエリ エディターを使用してスクリプトを実行する方法の詳細については、次を参照してください。" [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 使用して、コマンドラインからスクリプトを実行することも、 **sqlcmd**ユーティリティ、およびから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。 詳細については**sqlcmd**、"sqlcmd ユーティリティ"を参照してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントを参照してください"管理タスクを自動化する ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント)"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   

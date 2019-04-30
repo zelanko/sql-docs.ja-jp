@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b88fcbd191317259c1d2d2c1facfb6e6b1ade1c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265975"
 ---
 # <a name="contents-page-report-manager"></a>[コンテンツ] ページ (レポート マネージャー)
   [コンテンツ] ページを使用すると、現在のフォルダーのコンテンツを表示、表示するアイテムを選択、または他のフォルダーへ移動できます。 フォルダーを選択すると、このページが開きます。 このページは、レポート マネージャーのホーム ページでもあります。  

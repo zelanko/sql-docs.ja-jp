@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267436"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>トレース定義の既定値の設定 (SQL Server Profiler)
   トレース定義の既定値は、プロバイダーまたはサーバーごとに使用される既定のトレース テンプレートです。 既定のトレース テンプレートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に設定できます。  

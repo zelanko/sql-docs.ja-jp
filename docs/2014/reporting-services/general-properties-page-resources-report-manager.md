@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260671"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>[全般] プロパティ ページ、リソース (レポート マネージャー)
   リソースの [全般] プロパティ ページでは、リソースの名前変更、削除、移動、または置換を行うことができます。 リソースの追加またはプロパティの変更を行ったユーザーに関する情報が、ページ上部に表示されます。  

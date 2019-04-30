@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240536"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>トレースに表示される列の構成 (SQL Server Profiler)
   トレース テーブルまたは **[トレース ファイルのプロパティ]** ダイアログ ボックスで **[列の構成]** をクリックするか、またはトレースを定義するときに、トレースのデータ列をグループ化できます。 データ列をグループ化すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース出力を分析しやすくなります。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](view-and-analyze-traces-with-sql-server-profiler.md)」を参照してください。  

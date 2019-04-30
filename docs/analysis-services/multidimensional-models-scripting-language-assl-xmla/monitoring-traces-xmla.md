@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261632"
 ---
 # <a name="monitoring-traces-xmla"></a>トレースの監視 (XMLA)
   使用することができます、[購読](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)XML for Analysis (XMLA) のインスタンスで定義されている既存のトレースを監視するためにコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 **購読**コマンドが行セットとしてトレースの結果を返します。  
@@ -48,7 +48,7 @@ ms.locfileid: "50145748"
 |ObjectReference|String|ObjectName で指定されたオブジェクトへのオブジェクト参照を表す XML 表現。|  
 |NestLevel|Integer|イベントが発生したトランザクションのレベル。|  
 |NumSegments|Long integer|イベントが発生したコマンドによって影響を受ける、またはアクセスされるデータ セグメントの数。|  
-|Severity|Integer|イベントの例外の重大度レベル。 この列には、以下の値のいずれかが含まれます。<br /><br /> <br /><br /> 0: 成功<br /><br /> <br /><br /> 1: 情報<br /><br /> <br /><br /> 2: 警告<br /><br /> <br /><br /> 3: エラー|  
+|重大度|Integer|イベントの例外の重大度レベル。 この列には、以下の値のいずれかが含まれます。<br /><br /> <br /><br /> 0:成功<br /><br /> <br /><br /> 1:[情報]<br /><br /> <br /><br /> 2:警告<br /><br /> <br /><br /> 3:[エラー]|  
 |成功|ブール値|コマンドが成功したか、失敗したかを示します。|  
 |[エラー]|Long integer|イベントのエラー番号 (ある場合)。|  
 |ConnectionID|String|イベントが発生した接続の識別子。|  

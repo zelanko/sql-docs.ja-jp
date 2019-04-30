@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240758"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>式のリファレンス (レポート ビルダーおよび SSRS)
   レポートの式には、各種の組み込み関数や組み込みコレクションの参照を使用できます。 レポートをパブリッシュまたは処理するには、式に有効な [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 構文が使用されている必要があります。  

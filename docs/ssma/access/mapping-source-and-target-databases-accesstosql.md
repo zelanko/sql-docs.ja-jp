@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299197"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>ソースとターゲット データベース (AccessToSQL) のマッピング
 接続すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の移行のターゲット データベースを指定する必要があります。 複数データベースにアクセスした場合も複数とそれらにマップできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース (またはスキーマ) または接続されている SQL Azure データベースで複数のスキーマにします。  

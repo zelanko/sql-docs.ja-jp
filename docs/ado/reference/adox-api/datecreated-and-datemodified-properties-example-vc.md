@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b95a22661ef66b80b9b0007aee6087e1bb49a1b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281841"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated および DateModified プロパティの例 (VC++)
 この例では、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)と[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを追加して[列](../../../ado/reference/adox-api/column-object-adox.md)既存[テーブル](../../../ado/reference/adox-api/table-object-adox.md)および新しいを作成する**テーブル**します。 DateOutput プロシージャは、この例を実行する必要があります。  

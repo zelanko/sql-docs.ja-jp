@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 586e5f26c943fdc267ad98627ada3b56cbc4013c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233541"
 ---
 # <a name="other-text-file-driver-programming-details"></a>その他のテキスト ファイル ドライバーのプログラミングの詳細
 > [!NOTE]  
 >  このセクションでは、ODBC 関数とその他のプログラミングの詳細に関するテキスト ファイル ドライバー固有の情報を提供します。 関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- このセクションのトピックは次のとおりです。  
+ このセクションでは、次のトピックについて説明します。  
   
 -   [テキスト形式の定義 (テキスト ファイル ドライバー)](../../odbc/microsoft/defining-text-format-text-file-driver.md)  
   

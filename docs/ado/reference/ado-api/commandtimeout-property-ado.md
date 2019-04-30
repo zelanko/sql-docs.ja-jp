@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5bb74384e043130ccfe4c3399b363b25d40737c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315946"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout プロパティ (ADO)
 試行を終了し、エラーが発生する前に、コマンドの実行中に待機する時間を示します。  

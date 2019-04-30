@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0eb6f4a62eb9b6228f8aeb3715ea35dec2eec026
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260892"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>[全般] プロパティ ページ、フォルダー (レポート マネージャー)
   フォルダーの [全般] プロパティ ページでは、作成するフォルダーのプロパティを表示または設定できます。 フォルダーを作成または変更したユーザーおよびフォルダーの変更日時に関する情報が、[全般] プロパティ ページの上部に表示されます。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288756"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の許可
   XML スキーマ コレクションを作成する権限、および XML スキーマ コレクション オブジェクトに対する権限を許可できます。  

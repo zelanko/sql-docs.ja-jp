@@ -1,5 +1,5 @@
 ---
-title: メンバー関数の使用 |Microsoft ドキュメント
+title: メンバー関数の使用 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c9979b6b9fcb04115695cbe8d9c224e1c6c1f57
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251588"
 ---
 # <a name="using-member-functions"></a>メンバー関数の使用
 

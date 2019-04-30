@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294571"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server での SSMA コンポーネントのインストール (SybaseToSQL)
 に加えて、サーバー側のデータ移行を使用するため、SSMA をインストールする必要がありますもコンポーネントをインストールするを実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 これらのコンポーネントには、データの移行、およびサーバー間の接続を有効にする Sybase プロバイダーをサポートする SSMA 拡張パックが含まれます。  

@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce2ecf5e44b18298823240519c99eccb80d016e4
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264814"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>カスタム レポート アイテムの実装要件
   このトピックでは、カスタム レポート アイテムの開発と配置の前提条件について説明します。  

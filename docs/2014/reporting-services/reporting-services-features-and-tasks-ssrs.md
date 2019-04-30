@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d20fc0c1257d467f2115095b19c4d1b05c37cebb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255018"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services の機能とタスク (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の基本コンテンツは、レポートとレポート機能、レポート サーバー機能、および [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 製品の機能別に編成されています。  

@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237912"
 ---
-# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト:PowerPivot for SharePoint 2010 のマルチ サーバー インストール
+# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト:PowerPivot for SharePoint 2010 のマルチサーバー インストール
   このチェックリストを追加する手順の手順を説明します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をゼロから構築される 3 層 SharePoint 2010 ファームをします。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 追加[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]このトポロジをインストールする SQL Server セットアップを実行する必要があります[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]アプリケーション層にします。 PowerPivot プログラム ファイルは、web アプリケーション ソリューションでデプロイするときに、web 層には、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 のみのインストール手順を実行する必要のあるをインストールする[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]アプリケーション サーバーにします。  
   
 ||  
@@ -147,7 +147,7 @@ ms.locfileid: "53350545"
 ##  <a name="installppapp"></a> アプリケーション サーバーで PowerPivot for SharePoint をインストールします。  
  SQL Server セットアップを実行して SharePoint ファームに PowerPivot for SharePoint を追加します。 ファームが複数の SharePoint サーバーで構成されている場合は、既にファームに参加しているアプリケーション サーバーで SQL Server セットアップを実行する必要があります。  
   
- アプリケーション サーバーには常に PowerPivot for SharePoint をインストールします。 PowerPivot for SharePoint サーバー コンポーネントは Web フロントエンド サーバーでも実行されますが、Web フロントエンドで実行されるコンポーネントは、PowerPivot for SharePoint の構成手順で、ファームにソリューションを配置するときにインストールされます。 セットアップの詳細については、[PowerPivot for SharePoint 2010 インストール](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)を参照してください。  
+ アプリケーション サーバーには常に PowerPivot for SharePoint をインストールします。 PowerPivot for SharePoint サーバー コンポーネントは Web フロントエンド サーバーでも実行されますが、Web フロントエンドで実行されるコンポーネントは、PowerPivot for SharePoint の構成手順で、ファームにソリューションを配置するときにインストールされます。 セットアップの詳細については、次を参照してください。 [PowerPivot for SharePoint 2010 インストール](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)します。  
   
  配置トポロジに 2 つの PowerPivot for SharePoint インスタンスが必要な場合は、各アプリケーション サーバーで SQL Server セットアップを実行します。 1 台のコンピューターには PowerPivot for SharePoint のインスタンスを 1 つだけインストールできます。 複数のインスタンスが必要な場合は、追加のサーバーを使用する必要があります。 同じファームに複数の PowerPivot for SharePoint サーバーを追加する方法の詳細については、次を参照してください。[展開のチェックリスト。SharePoint 2010 ファームに PowerPivot サーバーの追加によるスケール アウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)します。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "53350545"
 ##  <a name="configsrvr"></a> サーバーを構成します。  
  PowerPivot 構成ツールを使用して PowerPivot for SharePoint を構成します。 このツールは、ファームの既存の構成をスキャンし、インストールまたは SharePoint の PowerPivot で必要な SharePoint 機能をアクティブ化のオプションを提供します。 このステップで、Claims to Windows Token Service が開始されます。 さらに、その他の必要な SharePoint 機能がまだ有効になっていない場合は、構成ツールによってそれらが一覧に追加され、機能を有効にするためのアクションが組み込まれます。  
   
- 詳細については、[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)を参照してください。  
+ 詳細については、次を参照してください。[構成または修復の PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)します。  
   
 ##  <a name="AAM"></a> Web フロント エンド サーバーの代替アクセス マッピングを構成します。  
  PowerPivot のデータ アクセスまたはデータ更新に対する要求を各 Web フロントエンド サーバーによって処理するには、各サーバーの異なる URL を同じ Web アプリケーションにマップする必要があります。  
@@ -183,7 +183,7 @@ ms.locfileid: "53350545"
 ##  <a name="activatePP"></a> サイト コレクションの PowerPivot 機能の統合をアクティブ化します。  
  サイト コレクション レベルで機能をアクティブ化すると、サイトでアプリケーション ページやテンプレートを使用できるようになります。これには、定期データを更新するための構成ページや、PowerPivot ギャラリーとデータ フィード ライブラリのアプリケーション ページなどが含まれます。  
   
- PowerPivot 構成ツールでは、指定したサイト コレクションに対して機能の統合がアクティブ化されます。 ツールを複数回実行すると追加のサイト コレクションを選択できます。 または、サイト管理者が SharePoint 内から機能のアクティブ化を構成することもできます。 詳細については、[PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)を参照してください。  
+ PowerPivot 構成ツールでは、指定したサイト コレクションに対して機能の統合がアクティブ化されます。 ツールを複数回実行すると追加のサイト コレクションを選択できます。 または、サイト管理者が SharePoint 内から機能のアクティブ化を構成することもできます。 詳細については、次を参照してください。 [PowerPivot 機能の統合サーバーの全体管理のサイト コレクション用にアクティブ化](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)します。  
   
 ##  <a name="verify"></a> 統合とサーバーの可用性を確認します。  
  ファームの PowerPivot クエリ処理は、ユーザーまたはアプリケーションが PowerPivot データを含む Excel ブックを開いたときに発生します。 PowerPivot 機能が使用可能になっているかどうかは、SharePoint サイトのページを調べれば確認できますが、 インストールを完全に確認するには、SharePoint にパブリッシュでき、ライブラリからアクセスできる PowerPivot ブックが必要になります。 テストの際には、既に PowerPivot データが含まれているサンプル ブックをパブリッシュし、それを使用して SharePoint 統合が正しく構成されているかどうかを確認できます。  
@@ -224,10 +224,10 @@ ms.locfileid: "53350545"
  インストールの確認が完了したら、PowerPivot ギャラリーを作成するか個々の構成設定を調整してサービスの構成を終了します。 インストールしたサーバー コンポーネントを完全に利用するには、[!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] をダウンロードし、最初の PowerPivot ブックを作成してパブリッシュします。  
   
 ####  <a name="bkmk_disk"></a> ディスク領域使用量の上限値を設定します。  
- ディスクにキャッシュされる PowerPivot データ ファイルに使用されるディスク容量の最大制限を設定できます。 既定では、使用可能なすべてのディスク領域が使用されます。 ディスク使用量を制限する方法については、[ディスク使用領域の構成&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)を参照してください。  
+ ディスクにキャッシュされる PowerPivot データ ファイルに使用されるディスク容量の最大制限を設定できます。 既定では、使用可能なすべてのディスク領域が使用されます。 ディスク使用量を制限する方法については、次を参照してください。[ディスク使用領域の構成&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)します。  
   
 ####  <a name="Upload"></a> SharePoint Web アプリケーションのファイルの最大アップロード サイズを増やす  
- PowerPivot ブックはサイズが大きくなる可能性があるため、ファイルの最大アップロード サイズを増やしたい場合があります。 構成する 2 つのファイル サイズの設定として、Web アプリケーションには [アップロードの最大サイズ]、Excel Services には [ブックの最大サイズ] があります。 最大ファイル サイズは、両方のアプリケーションで同じ値に設定してください。 手順については、[構成ファイルの最大アップロード サイズ&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)を参照してください。  
+ PowerPivot ブックはサイズが大きくなる可能性があるため、ファイルの最大アップロード サイズを増やしたい場合があります。 構成する 2 つのファイル サイズの設定として、Web アプリケーションには [アップロードの最大サイズ]、Excel Services には [ブックの最大サイズ] があります。 最大ファイル サイズは、両方のアプリケーションで同じ値に設定してください。 手順については、次を参照してください。[構成ファイルの最大アップロード サイズ&#40;PowerPivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)します。  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>ブックのユーザーへの SharePoint 権限の付与  
  ユーザーがブックをパブリッシュまたは表示するには、SharePoint 権限が必要です。 付与してください**ビュー**パブリッシュ済みのブックを表示する必要があるユーザーへのアクセス許可と**投稿**パブリッシュまたはブックを管理するユーザーへのアクセス許可。 権限を付与するには、サイト コレクションの管理者である必要があります。  
@@ -253,16 +253,16 @@ ms.locfileid: "53350545"
 10. **[OK]** をクリックします。  
   
 #### <a name="install-adonet-data-services-35-sp1"></a>ADO.NET Data Services 3.5 SP1 のインストール  
- ADO.NET Data Services は、SharePoint リストのデータ フィードのエクスポートに必要です。 SharePoint 2010 では、このコンポーネントは PrerequisiteInstaller プログラムに含まれていないため、手動でインストールする必要があります。 ADO.NET Data Services をインストールする方法の詳細については、[データをサポートする ADO.NET Data Services のインストールは、SharePoint リストのエクスポートをフィード](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)を参照してください。  
+ ADO.NET Data Services は、SharePoint リストのデータ フィードのエクスポートに必要です。 SharePoint 2010 では、このコンポーネントは PrerequisiteInstaller プログラムに含まれていないため、手動でインストールする必要があります。 ADO.NET Data Services をインストールする方法の詳細については、次を参照してください。[データをサポートする ADO.NET Data Services のインストールは、SharePoint リストのエクスポートをフィード](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)します。  
   
 #### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>データ更新で使用するデータ プロバイダーのインストールとユーザー権限の確認  
- サーバー側のデータ更新により、ユーザーは更新されたデータをブックに自動モードで再インポートできます。 データ更新を正常に行うためには、最初にデータをインポートするために使用したものと同じデータ プロバイダーがサーバーに必要になります。 さらに、通常は、データ更新を実行するユーザー アカウントに外部データ ソースに対する読み取り権限が必要です。 データ更新を正常に実行できるように、データ更新の有効化と構成の要件をご確認ください。 詳細については、[SharePoint 2010 で PowerPivot データ更新](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)を参照してください。  
+ サーバー側のデータ更新により、ユーザーは更新されたデータをブックに自動モードで再インポートできます。 データ更新を正常に行うためには、最初にデータをインポートするために使用したものと同じデータ プロバイダーがサーバーに必要になります。 さらに、通常は、データ更新を実行するユーザー アカウントに外部データ ソースに対する読み取り権限が必要です。 データ更新を正常に実行できるように、データ更新の有効化と構成の要件をご確認ください。 詳細については、次を参照してください。 [SharePoint 2010 で PowerPivot データ更新](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md)します。  
   
 #### <a name="create-a-powerpivot-gallery"></a>PowerPivot ギャラリーを作成します。  
- PowerPivot ギャラリーは、SharePoint サイトの PowerPivot ブックを表示するためのプレビュー オプションや表示オプションを備えたライブラリです。 プレビュー機能があるため、PowerPivot ブックをパブリッシュしたり表示したりする際には PowerPivot ギャラリーを使用することをお勧めします。 同じ SharePoint サーバーに Reporting Services も配置されている場合は、 PowerPivot ギャラリーからレポート ビルダーを起動して、パブリッシュされた PowerPivot ブックを新しいレポートのベースとして使用することもできます。 作成して、ライブラリの使用の詳細については、[PowerPivot ギャラリーのカスタマイズの作成と](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)と[PowerPivot ギャラリーを使用して](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)を参照してください。  
+ PowerPivot ギャラリーは、SharePoint サイトの PowerPivot ブックを表示するためのプレビュー オプションや表示オプションを備えたライブラリです。 プレビュー機能があるため、PowerPivot ブックをパブリッシュしたり表示したりする際には PowerPivot ギャラリーを使用することをお勧めします。 同じ SharePoint サーバーに Reporting Services も配置されている場合は、 PowerPivot ギャラリーからレポート ビルダーを起動して、パブリッシュされた PowerPivot ブックを新しいレポートのベースとして使用することもできます。 作成して、ライブラリの使用の詳細については、次を参照してください。 [PowerPivot ギャラリーのカスタマイズの作成と](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)と[PowerPivot ギャラリーを使用して](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)します。  
   
 #### <a name="tune-configuration-settings"></a>構成設定の調整  
- PowerPivot サービス アプリケーションは、既定のプロパティと値を使用して作成されますが、 個々のサービス アプリケーションの構成設定を変更して、要求の割り当て方法を変更したり、サーバー タイムアウトを設定したり、クエリ応答レポート イベントのしきい値を変更したり、使用状況データを保持する期間を指定したりすることもできます。 サーバーの全体管理の構成や SharePoint Web アプリケーションで PowerPivot 機能の使用に関する詳細については、[サーバーの全体管理で PowerPivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)を参照してください。  
+ PowerPivot サービス アプリケーションは、既定のプロパティと値を使用して作成されますが、 個々のサービス アプリケーションの構成設定を変更して、要求の割り当て方法を変更したり、サーバー タイムアウトを設定したり、クエリ応答レポート イベントのしきい値を変更したり、使用状況データを保持する期間を指定したりすることもできます。 サーバーの全体管理の構成や SharePoint Web アプリケーションで PowerPivot 機能の使用に関する詳細については、次を参照してください。[サーバーの全体管理で PowerPivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2012 の各エディションでサポートされる機能](https://go.microsoft.com/fwlink/?linkid=232473)   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253880"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>[SQL Server エージェント エラー ログの構成] ([全般] ページ)
   この画面を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのエラー ログ設定の表示と更新を行うことができます。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9320afb2592a37360d65b4645eb68a999a21db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241168"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate メソッド (ADO)
 現在のまたは新しい行に加えられた変更を取り消します、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクションを[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを呼び出す前に、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド。  

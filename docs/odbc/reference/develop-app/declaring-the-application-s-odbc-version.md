@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267692"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>アプリケーションを宣言する&#39;s ODBC のバージョン
 アプリケーションが接続によって割り当てられる前に、SQL_ATTR_ODBC_VERSION 環境属性を設定があります。 この属性は、アプリケーションが ODBC 2 に従うことを示しています。*x*または ODBC 3 *。x*仕様、次のものを使用する場合。  
@@ -43,9 +43,9 @@ ms.locfileid: "53591546"
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   _CatalogName_  **SQLTables 引数**します。 ODBC 2。*x*でワイルドカード文字 (「%」および「_」)、 *CatalogName*引数が文字どおり扱われます。 ODBC 3。*x*、ワイルドカード文字として扱われます。 したがって、ODBC 2 に依存するアプリケーション。*x*仕様ワイルドカード文字し、エスケープしないにそれらをリテラルとして使用する場合に使用これらにできません。 ODBC 3 に依存するアプリケーション。*x*仕様はまたはワイルドカード文字として使用して、エスケープする、およびリテラルとして使用します。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
+-   _CatalogName_  **SQLTables 引数**します。 ODBC 2。*x*でワイルドカード文字 (「%」および「_」)、 *CatalogName*引数が文字どおり扱われます。 ODBC 3。*x*、ワイルドカード文字として扱われます。 したがって、ODBC 2 に依存するアプリケーション。*x*仕様ワイルドカード文字し、エスケープしないにそれらをリテラルとして使用する場合に使用これらにできません。 ODBC 3 に依存するアプリケーション。*x*仕様はまたはワイルドカード文字として使用して、エスケープする、およびリテラルとして使用します。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
   
- ODBC 3 *.x*ドライバー マネージャーと ODBC 3 *.x*ドライバーは、アプリケーションの書き込み先となる、ODBC 仕様のバージョンを確認し、適宜応答します。 たとえば、次のように、アプリケーションには、ODBC 2 が後ろにある場合です。*x*仕様と呼び出し**SQLExecute**呼び出す前に**SQLPrepare**、ODBC 3 *.x*ドライバー マネージャーは、SQLSTATE S1010 (を返します関数シーケンス エラー) です。 アプリケーションが ODBC 3 に従う場合 *.x*仕様、ドライバー マネージャーは、SQLSTATE HY010 を返します (関数のシーケンス エラーです)。 詳細については、[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。  
+ ODBC 3 *.x*ドライバー マネージャーと ODBC 3 *.x*ドライバーは、アプリケーションの書き込み先となる、ODBC 仕様のバージョンを確認し、適宜応答します。 たとえば、次のように、アプリケーションには、ODBC 2 が後ろにある場合です。*x*仕様と呼び出し**SQLExecute**呼び出す前に**SQLPrepare**、ODBC 3 *.x*ドライバー マネージャーは、SQLSTATE S1010 (を返します関数シーケンス エラー) です。 アプリケーションが ODBC 3 に従う場合 *.x*仕様、ドライバー マネージャーは、SQLSTATE HY010 を返します (関数のシーケンス エラーです)。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。  
   
 > [!IMPORTANT]  
 >  次の ODBC 3 アプリケーション。*x*仕様で条件付きのコードを使用して ODBC 3 に新しい機能を使用しないようにする必要があります *。x* ODBC 2 を使用する場合 *。x*ドライバー。 ODBC 2。*x*ドライバーは ODBC 3 に新しい機能をサポートしていません *。x*いって、アプリケーションが ODBC 3 に従っていることを宣言します *。x*仕様。 さらに、ODBC 3。*x*ドライバーは ODBC 3 に新しい機能をサポートするためを停止していません *。x*いって、アプリケーションは、ODBC 2 に従っていることを宣言します *。x*仕様。

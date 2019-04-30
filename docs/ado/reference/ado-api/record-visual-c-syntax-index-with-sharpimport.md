@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05b2ab826fd5afe9b91b3dcfb314af176b1cb9da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240095"
 ---
 # <a name="record-visual-c-syntax-index-with-import"></a>レコード (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -49,7 +49,7 @@ HRESULT Open( const _variant_t & Source, const _variant_t
     Options, _bstr_t UserName, _bstr_t Password );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _variant_t GetActiveConnection( );  

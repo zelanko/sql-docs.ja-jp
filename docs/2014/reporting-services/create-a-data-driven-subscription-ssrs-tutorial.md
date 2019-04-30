@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265917"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が提供するデータ ドリブン サブスクリプションにより、動的なサブスクライバー データに基づいてレポートの配信をカスタマイズできます。 データ ドリブン サブスクリプションには次のような用途があります。  

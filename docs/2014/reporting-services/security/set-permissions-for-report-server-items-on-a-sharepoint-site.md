@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d55ef7730032c782997a75c2b85f402626a89ad8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306252"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)
   既定のセキュリティ設定では必要なレベルのアクセスが提供されない場合は、新しい権限レベルを作成して、特定のレポート サーバー アイテムまたは処理に対するアクセスを提供できます。 カスタム セキュリティ設定は、アクセスを特定のレポートに制限する場合に便利です。  

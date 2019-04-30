@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267727"
 ---
 # <a name="data-returned-by-catalog-functions"></a>カタログ関数によって返されるデータ
-各カタログ関数では、データがその結果セットを返します。 この結果セットが他のすべての結果セットと変わりありません。 通常生成されるパラメーター化によって、定義済み**選択**ドライバーでハードコーディングまたはストアド プロシージャは、データ ソース内にあるステートメント。 結果セットからデータを取得する方法については、[が、結果セットを作成しますか?](../../../odbc/reference/develop-app/was-a-result-set-created.md)を参照してください。  
+各カタログ関数では、データがその結果セットを返します。 この結果セットが他のすべての結果セットと変わりありません。 通常生成されるパラメーター化によって、定義済み**選択**ドライバーでハードコーディングまたはストアド プロシージャは、データ ソース内にあるステートメント。 結果セットからデータを取得する方法については、次を参照してください。[が、結果セットを作成しますか?](../../../odbc/reference/develop-app/was-a-result-set-created.md)します。  
   
  各カタログ関数の結果セットは、その関数の参照エントリの説明です。 一覧の列だけでなく、結果セットは、最後の定義済みの列の後にドライバー固有の列を含めることができます。 これらの列 (存在する場合) は、ドライバーのドキュメントで説明します。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "52539781"
 SELECT "Customer Name" FROM "Accounts Payable"  
 ```  
   
- 詳細については、[引用符で囲まれた識別子](../../../odbc/reference/develop-app/quoted-identifiers.md)を参照してください。  
+ 詳細については、次を参照してください。[引用符で囲まれた識別子](../../../odbc/reference/develop-app/quoted-identifiers.md)します。  
   
  カタログ関数は、ユーザー名とパスワードに基づいて接続が確立し、ユーザーが特権を持ってデータのみが返される SQL に似た承認モデルに基づきます。 このモデルに適合しません、個々 のファイルのパスワード保護は、ドライバーの定義です。  
   

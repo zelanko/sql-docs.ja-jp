@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97ee8e554fa246848b64ebafb0961f35d65f15c9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264723"
 ---
 # <a name="initializing-custom-assembly-objects"></a>カスタム アセンブリ オブジェクトの初期化
   状況によっては、カスタム アセンブリ クラスのプロパティ値とフィールド値をインスタンス化する際、これらを初期化する必要があります。 初期化が必要になる可能性が最も高いのは、レポートのグローバル オブジェクト コレクションからカスタム クラスと値を使用する場合です。 そのためには、レポートの **Code** オブジェクトの **OnInit** メソッドをオーバーライドします。 **OnInit** にアクセスするには、レポート定義の **Code** 要素を使用します。 これには初期化プロパティまたはフィールドの値をレポートで使用するカスタム アセンブリのクラスの 2 つの方法があります。宣言しを使用して、クラスの新しいインスタンスを作成**OnInit**を使用して、公開されているメソッドを呼び出すことができますか**OnInit**します。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a64a4f1a51d678e70516f277c08071f5884492c1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225842"
 ---
 # <a name="query-method-rds"></a>Query メソッド (RDS)
 返す有効な SQL クエリ文字列を使用して、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -41,7 +41,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *DataFactory*  
  オブジェクト変数を表す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト。  
   
- *[接続]*  
+ *Connection*  
  A**文字列**をサーバーの接続情報を含む値です。 これに似ています、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティ。  
   
  *クエリ*  

@@ -1,5 +1,5 @@
 ---
-title: MDX および DAX での VBA 関数 |Microsoft ドキュメント
+title: MDX および DAX での VBA 関数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251546"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
 
 
-  このドキュメントには、交差で使用できるすべての VBA 関数の参照が含まれています[アプリケーション関数の Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) MDX でサポートされている; も、リストでは、DAX 言語で同等の機能がある場合に、ノートが含まれています.  
+  このドキュメントには、交差で使用できるすべての VBA 関数の参照が含まれています[Visual Basic for Applications の関数](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications)MDX でサポートされている; も、一覧では、DAX 言語で同等の機能がある場合に、メモが含まれています.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 関数リファレンス  
   
-|関数名|Supported|注|  
+|関数名|Supported|メモ|  
 |-------------------|---------------|-----------|  
 |Abs|DAX、MDX||  
 |Array|サポートされていません||  
@@ -52,7 +52,7 @@ ms.locfileid: "34743891"
 |CVar|MDX のみ||  
 |CVErr|サポートされていません||  
 |date|MDX のみ|**警告**DAX が同じで別の関数を実装する名前は、DATE (Year, Month, Day) 関数は、指定された引数から日付型の値を生成するために使用|  
-|DateAdd|MDX のみ|**警告**DAX が同じで別の関数を実装する名前; DATEADD (\<日付 >、< number_of_intervals >\<間隔 >) の数で指定された日付をシフトするために使用されている関数の間隔を指定|  
+|DateAdd|MDX のみ|**警告**DAX が同じで別の関数を実装する名前の dateadd (\<日付 >、< number_of_intervals >\<間隔 >) の数で指定された日付をシフトするために使用されている関数の間隔を指定|  
 |DateDiff]|MDX のみ||  
 |DatePart|MDX のみ||  
 |DateSerial|MDX のみ||  
@@ -68,7 +68,7 @@ ms.locfileid: "34743891"
 |FileAttr|サポートされていません||  
 |FileDateTime|サポートされていません||  
 |FileLen|サポートされていません||  
-|Assert|サポートされていません|**警告**MDX が同じ名前の別の関数を実装する以外の場合は、FILTER (Set_Expression, Logical_Expression) 関数には、指定された引数から、検索条件に基づいて、指定されたセットをフィルター処理を実行した結果セットが返されます。<br /><br /> **警告**DAX が同じで別の関数を実装する名前の FILTER (\<テーブル >、\<フィルター >) を別のテーブルまたは指定された引数から式のサブセットを表すテーブルを返す関数|  
+|Assert|サポートされていません|**警告**MDX 実装と同じ名前の別の関数は FILTER (Set_Expression, Logical_Expression) 関数は、指定された引数から検索条件に基づいて、指定されたセットをフィルター処理の結果セットを返します<br /><br /> **警告**DAX が同じで別の関数を実装する名前の FILTER (\<テーブル >、\<フィルター >) 関数は、別のテーブルまたは指定された引数から式のサブセットを表すテーブルを返します。|  
 |Fix|MDX のみ||  
 |Format (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|サポートされていません||  
@@ -83,7 +83,7 @@ ms.locfileid: "34743891"
 |GetSetting|サポートされていません||  
 |Hex|MDX のみ||  
 |Hour|DAX、MDX||  
-|Iif|MDX のみ|**警告**DAX が名前を持つ同様の機能を実装する: IF (logical_test、value_if_true, value_if_false) 関数です。|  
+|Iif 関数|MDX のみ|**警告**DAX は、名前を持つような関数を実装します。IF (logical_test、value_if_true, value_if_false) 関数。|  
 |IMEStatus|サポートされていません||  
 |入力|サポートされていません||  
 |InputBox|サポートされていません||  
@@ -100,14 +100,14 @@ ms.locfileid: "34743891"
 |IsNull|MDX のみ||  
 |IsNumeric|MDX のみ||  
 |IsObject|サポートされていません||  
-|Join|サポートされていません||  
+|結合|サポートされていません||  
 |LBound|サポートされていません||  
 |LCase|MDX のみ||  
-|[左]|DAX、MDX||  
+|Left|DAX、MDX||  
 |Len|DAX、MDX||  
 |Loc|サポートされていません||  
 |LOF|サポートされていません||  
-|Log|MDX のみ|**重要な**DAX が同じで別の関数を実装する名前は、ログ (番号が、基本) 関数です。 この関数は、指定された引数からの指定された数を底とする対数を返します。|  
+|Log|MDX のみ|**重要な**DAX が同じで別の関数を実装する名前は、LOG (number, base) 関数。 指定された引数から指定されたベースに数値の対数を返します。|  
 |LTrim|MDX のみ||  
 |MacID|サポートされていません||  
 |MacScript|サポートされていません||  
@@ -129,7 +129,7 @@ ms.locfileid: "34743891"
 |Rate|MDX のみ||  
 |[置換]|サポートされていません||  
 |RGB|MDX のみ||  
-|[右]|DAX、MDX||  
+|Right|DAX、MDX||  
 |Rnd|MDX のみ||  
 |四捨五入|DAX、MDX||  
 |RTrim|MDX のみ||  
@@ -146,13 +146,13 @@ ms.locfileid: "34743891"
 |Str|MDX のみ||  
 |StrComp|MDX のみ||  
 |StrConv|MDX のみ||  
-|[文字列]|MDX のみ||  
+|String]|MDX のみ||  
 |StrReverse|サポートされていません||  
 |スイッチ|MDX のみ||  
 |SYD|MDX のみ||  
 |タブ|サポートされていません||  
 |Tan|MDX のみ||  
-|[時刻]|サポートされていません||  
+|Time|サポートされていません||  
 |Timer|MDX のみ||  
 |TimeSerial|MDX のみ||  
 |TimeValue|DAX、MDX||  

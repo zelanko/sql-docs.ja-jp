@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e9ccc7648be4915a68b798f314689d961113639a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298656"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>SQL Server スキーマ (DB2ToSQL) への DB2 スキーマのマッピング
 DB2 の場合に、各データベースは、1 つまたは複数のスキーマを持っています。 SSMA は既定では、DB2 スキーマのすべてのオブジェクトを移行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマという名前のデータベース。 ただし、DB2 スキーマの間のマッピングをカスタマイズすることができますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  

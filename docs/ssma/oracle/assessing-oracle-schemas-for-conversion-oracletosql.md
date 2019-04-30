@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288461"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>変換のための Oracle Schemas へのアクセス (OracleToSQL)
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、複雑な移行されるとどれ時間だけを決定する必要があります、移行にかかる時間します。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  
@@ -37,7 +37,7 @@ SSMA が選択されている Oracle データベースのオブジェクトを�
   
     SSMA は、ウィンドウの下部にあるステータス バーに進行状況が表示されます。 [出力] ペインが表示されている場合は、出力ウィンドウ内のメッセージも表示されます。  
   
-    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle: 評価レポート ウィンドウが表示されます。  
+    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle:評価レポート ウィンドウが表示されます。  
   
 ## <a name="using-assessment-reports"></a>評価レポートを使用します。  
 評価レポート ウィンドウには、3 つのペインが含まれています。  
@@ -75,7 +75,7 @@ SSMA が選択されている Oracle データベースのオブジェクトを�
   
     -   SSMA で Oracle の構文を更新します。 プロシージャ、関数、トリガー、関数をパッケージおよびパッケージ化されたプロシージャの構文を更新することができます。 構文を更新するには、Oracle メタデータ エクスプ ローラー ペインで、オブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを変更します。 項目から移動するときに、更新された構文を保存する促されます。 オブジェクトの報告されたエラーを表示することができます、**レポート**タブ。  
   
-    -   Oracle では、削除または問題のあるコードを変更するには Oracle のオブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、[Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)を参照してください。  
+    -   Oracle では、削除または問題のあるコードを変更するには Oracle のオブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)します。  
   
     -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーと Oracle メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Oracle からデータを移行します。  
   

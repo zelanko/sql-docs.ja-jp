@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233349"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
- **概要**  
- ODBC 3。*x*、ODBC 2 *.x*関数**SQLTransact**置き換わりました**SQLEndTran**します。 詳細については、[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。  
+ **まとめ**  
+ ODBC 3。*x*、ODBC 2 *.x*関数**SQLTransact**置き換わりました**SQLEndTran**します。 詳細については、次を参照してください。 [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)します。  
   
 > [!NOTE]  
 >  ODBC 3.8 にで導入された、SQL_ASYNC_DBC_FUNCTION_ENABLE 属性がサポートされていない**SQLTransact**します。 接続ハンドルでの非同期操作を使用してアプリケーションを使用する必要があります**SQLEndTran**します。  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253188"
 ---
 # <a name="errors-collection-ado"></a>Errors コレクション (ADO)
 すべてが含まれています、[エラー](../../../ado/reference/ado-api/error-object.md)単一のプロバイダーに関連の障害への応答で作成されたオブジェクト。  
@@ -48,4 +48,4 @@ ms.locfileid: "47612230"
   
 ## <a name="see-also"></a>参照  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

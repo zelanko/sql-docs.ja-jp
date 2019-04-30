@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df2fa8df9af317bd76b2d7f10e50f7cc937e4660
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254146"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>ドライバー 3.5 をドライバー 3.8 にアップグレードする
 このトピックでは、ガイドラインと、ODBC 3.8 ドライバーに、ODBC 3.5 ドライバーをアップグレードするための考慮事項を提供します。  
@@ -55,7 +55,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="asynchronous-execution-for-connection-operations-polling-method"></a>接続操作 (ポーリング メソッド) の非同期の実行  
  ドライバーは、さまざまな接続の操作の非同期サポートを有効にできます。  
   
- ODBC では Windows 7 以降では、ポーリング メソッド (詳細については、[非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)を参照してください。 接続ハンドルで非同期操作を実装するために、バージョン 3.8 の ODBC ドライバーの要件はありません。 ドライバーが、SQL_ASYNC_DBC_FUNCTIONS を実装する必要がありますも、ドライバーが接続ハンドルで非同期操作を実装していない場合でも*情報の種類*戻って**SQL_ASYNC_DBC_NOT_CAPABLE**します。  
+ ODBC では Windows 7 以降では、ポーリング メソッド (詳細については、次を参照してください。[非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)します。 接続ハンドルで非同期操作を実装するために、バージョン 3.8 の ODBC ドライバーの要件はありません。 ドライバーが、SQL_ASYNC_DBC_FUNCTIONS を実装する必要がありますも、ドライバーが接続ハンドルで非同期操作を実装していない場合でも*情報の種類*戻って**SQL_ASYNC_DBC_NOT_CAPABLE**します。  
   
  非同期接続の操作を有効にすると、接続操作の実行時間、繰り返しのすべての呼び出しの合計時間です。 最後の呼び出しは、時間の合計が、SQL_ATTR_CONNECTION_TIMEOUT 接続属性で設定された値を超えていて、操作が完了していません後に発生しますを繰り返し、場合、ドライバーは SQL_ERROR を返しますと、SQLState HYT01 を使用して診断レコードを記録し、。メッセージの「接続のタイムアウトが期限切れ」です。 操作が完了している場合、タイムアウトはありません。  
   
@@ -65,13 +65,13 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
  両方をサポートする必要はありません**SQLCancelHandle**と同時に操作を非同期接続します。 ドライバーは、非同期接続の操作をサポートできますが**SQLCancelHandle**、またはその逆です。  
   
 ##### <a name="suspended-connections"></a>中断状態の接続  
- ODBC 3.8 ドライバー マネージャーは、接続を中断状態に配置できます。 アプリケーションが呼び出す**SQLDisconnect**接続に関連付けられたリソースを解放します。 この場合、ドライバーは接続の状態をチェックせず、できるだけ多くのリソースを解放するください。 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。  
+ ODBC 3.8 ドライバー マネージャーは、接続を中断状態に配置できます。 アプリケーションが呼び出す**SQLDisconnect**接続に関連付けられたリソースを解放します。 この場合、ドライバーは接続の状態をチェックせず、できるだけ多くのリソースを解放するください。 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。  
   
 ##### <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール  
- Windows 8 での ODBC では、接続プールの動作をカスタマイズするドライバーを許可します。 詳細については、[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)を参照してください。  
+ Windows 8 での ODBC では、接続プールの動作をカスタマイズするドライバーを許可します。 詳細については、次を参照してください。[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)します。  
   
 ##### <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)  
- ODBC 3.8 は、Windows 8 以降、非同期操作の通知方法をサポートします。 詳細については、[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)を参照してください。  
+ ODBC 3.8 は、Windows 8 以降、非同期操作の通知方法をサポートします。 詳細については、次を参照してください。[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

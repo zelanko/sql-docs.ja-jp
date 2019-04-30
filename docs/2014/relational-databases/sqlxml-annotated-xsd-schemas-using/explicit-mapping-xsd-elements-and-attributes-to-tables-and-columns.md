@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c4f6244ee58619e48a1fb17b9eb803f013e2120b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228938"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>テーブルおよび列への XSD 要素および属性の明示的なマッピング (SQLXML 4.0)
   XSD スキーマを使用してリレーショナル データベースの XML ビューを作成するときには、スキーマの要素と属性をデータベースのテーブルと列にマップする必要があります。 データベースのテーブルおよびビューの行は、XML ドキュメントの要素にマップされます。 データベースの列値は属性または要素にマップされます。  
@@ -55,7 +55,7 @@ ms.locfileid: "52798794"
  `sql-field` 注釈では、要素または属性がデータベース列にマップされます。 スキーマ内の XML ノードをデータベース列にマップするには、`sql:field` 注釈を追加します。 空のコンテンツ要素に `sql:field` は指定できません。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、[SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)を参照してください。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 注釈と sql:field 注釈を指定する  
  XSD スキーマから成る、この例では、 **\<連絡先 >** 複合型の要素 **\<FName >** と **\<LName >** 子要素および**ContactID**属性。  
@@ -106,7 +106,7 @@ ms.locfileid: "52798794"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、[SQLXML クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
+     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  次に結果セットの一部を示します。  
   

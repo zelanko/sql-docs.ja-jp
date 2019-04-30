@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301810"
 ---
 # <a name="column-name-limitations"></a>列名の制限
 列名は、任意の有効な文字 (スペースなど) を含めることができます。 列名に文字、数字、およびアンダー スコアを除くすべての文字が含まれている場合、バック引用符 (') で囲んで、名前を区切る必要があります。  

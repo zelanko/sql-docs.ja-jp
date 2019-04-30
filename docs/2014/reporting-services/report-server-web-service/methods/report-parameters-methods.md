@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 567888d7dae14108e595c76f45f0ab7b95619cca
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283451"
 ---
 # <a name="report-parameters-methods"></a>レポート パラメーターのメソッド
   これらのメソッドを使用して、レポートのパラメーターを設定および取得できます。  

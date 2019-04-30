@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240780"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>組み込みの XML スキーマ コレクション (sys) の参照
   作成したどのデータベースでも、 **sys** リレーショナル スキーマに **sys** XML スキーマ コレクションが事前に定義されています。 各データベースはこれらの事前定義されたスキーマを保持します。また、これらのスキーマは、ユーザーが作成した他の XML スキーマ コレクションからアクセスできます。 このような事前定義されたスキーマに使われているプレフィックスは、XQuery で意味があるものとして扱われます。 **xml** のみが、予約されているプレフィックスです。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240815"
 ---
 # <a name="recordset-object-ado"></a>Recordset オブジェクト (ADO)
 ベース テーブル、またはコマンドの実行の結果からレコードのセット全体を表します。 いつでもでも、 **Recordset**オブジェクトとして現在のレコード セット内で 1 つのレコードのみを参照します。  
@@ -81,4 +81,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265436"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>ネイティブ モード レポート サーバーのサブスクリプションの作成と管理
   このセクションでは、サブスクリプションの処理、管理、および制御について説明します。 サブスクリプションの管理は、標準のサブスクリプションとデータ ドリブン サブスクリプションで異なります。 標準のサブスクリプションは、通常、ユーザーが所有および管理します。 一方、データ ドリブン サブスクリプションは、通常、レポート サーバー管理者が作成およびメンテナンスします。  

@@ -1,5 +1,5 @@
 ---
-title: '&lt; (より小さい)(MDX) |Microsoft ドキュメント'
+title: '&lt; (より小さい)(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 111c3aae92839ff9f1574da6420d096d31517c80
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241050"
 ---
 # <a name="lt-less-than-mdx"></a>&lt; (より小さい)(MDX)
 
@@ -33,16 +33,16 @@ MDX_Expression < MDX_Expression
  有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
- 以下の条件に基づくブール値です。  
+ 次の条件に基づくブール値。  
   
--   **true**かどうか両方のパラメーターが null 以外の場合と、最初のパラメーターには、2 番目のパラメーターの値よりも小さい値が含まれています。  
+-   **true**かどうかは、両方のパラメーターが null 以外の場合、および最初のパラメーターが 2 番目のパラメーターの値よりも小さい値です。  
   
--   **false**かどうかは、両方のパラメーターが null 以外の場合、および最初のパラメーターにはと等しいか、2 番目のパラメーターの値より大きい値が含まれています。  
+-   **false**両方のパラメーターが null 以外の場合と、最初のパラメーターが値に等しいか、2 番目のパラメーターの値以下であるかどうか。  
   
 -   いずれか一方または両方のパラメーターが NULL 値に評価される場合は、NULL です。  
   
 ## <a name="examples"></a>使用例  
- この演算子の使用例を以下に示します。  
+ 次の例では、この演算子の使用を示します。  
   
 ```  
 -- This query returns the gross profit margin (GPM)  

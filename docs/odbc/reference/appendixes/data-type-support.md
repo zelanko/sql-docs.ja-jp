@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9a3d63f0bf1923905c5281655aff2af294b8284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241326"
 ---
 # <a name="data-type-support"></a>データ型のサポート
 ODBC ドライバーは、SQL_CHAR、SQL_VARCHAR の少なくとも 1 つをサポートする必要があります。 その他のデータ型のサポートは、ドライバーのまたはデータ ソースの sql-92 準拠のレベルによって決定されます。 アプリケーションを呼び出す必要があります**SQLGetTypeInfo**ドライバーでサポートされるデータの種類を決定します。  
   
- データ型の詳細については、[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)を参照してください。
+ データ型の詳細については、次を参照してください[付録 d:。データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242315"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 関数
 **準拠**  
@@ -52,11 +52,11 @@ BOOL SQLInstallTranslatorEx(
   
 ## <a name="arguments"></a>引数  
  *lpszTranslator*  
- [入力]これは、二重の null で終わる変換プログラムを記述するキーワードと値のペアの一覧を含める必要があります。 キーワードと値のペアの構文の詳細については、[仕様のサブキー](../../../odbc/reference/install/translator-specification-subkeys.md)を参照してください。  
+ [入力]これは、二重の null で終わる変換プログラムを記述するキーワードと値のペアの一覧を含める必要があります。 キーワードと値のペアの構文の詳細については、次を参照してください。[仕様のサブキー](../../../odbc/reference/install/translator-specification-subkeys.md)します。  
   
  **Translator**と**セットアップ**でキーワードを含める必要がある、 *lpszTranslator*文字列。 DLL が記載されている翻訳、 **Translator**キーワード、およびトランスレーター セットアップ DLL が記載されている、**セットアップ**キーワード。 各ペアは、NULL バイトで終了し、全体の一覧は NULL バイトで終了します。 (つまり、2 つの NULL バイトの末尾を示す一覧。)形式*lpszTranslator*のとおりです。  
   
- \0Translator=*translator-filename DLL*\0[Setup=*セットアップ-filename DLL*\0]\0  
+ \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
   
  *lpszPathIn*  
  [入力]変換プログラムのインストールまたは null ポインターの完全パス。 場合*lpszPath* null ポインターの場合は、翻訳者は、システム ディレクトリにインストールされます。  
@@ -70,7 +70,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [出力]返される使用可能なバイトの合計数*lpszPathOut*します。 返される使用可能なバイト数がより大きいかに等しい場合*cbPathOutMax*、出力パス*lpszPathOut*に切り捨てられます*pcbPathOutMax*マイナス、null 終了文字です。 *PcbPathOut*引数が null ポインターを指定できます。  
   
- *起こり*  
+ *fRequest*  
  [入力]要求の種類。 *起こり*値は次のいずれかを含める必要があります。  
   
  ODBC_INSTALL_INQUIRY:翻訳者をインストールできる場所について照会します。  

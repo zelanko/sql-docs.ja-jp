@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0272c7598e34d7ba920484b3d2b9c504587212cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261320"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>レポート ビルダーのインストール、アンインストール、およびサポート
   レポート ビルダーは、レポート、レポート パーツ、および共有データセットの作成、更新、および共有に使用できるレポート作成ツールです。 レポート ビルダーには、スタンドアロン バージョンと [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]バージョンの 2 つがあります。 スタンドアロン バージョンは、ユーザーまたは管理者によってコンピューターにインストールされます。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] バージョンは、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] と共に自動的にインストールされ、レポート マネージャーから、または [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトからコンピューターにダウンロードされます。  

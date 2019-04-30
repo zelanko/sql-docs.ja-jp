@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228973"
 ---
 # <a name="sessions"></a>セッション
   A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー セッションのインスタンスへの接続を 1 つを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  

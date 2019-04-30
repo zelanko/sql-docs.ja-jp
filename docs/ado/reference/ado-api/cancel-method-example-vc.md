@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32751ae891da27602dc80aa9dc3b54990b3e27a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239914"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel メソッドの例 (VC++)
 この例では、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)でコマンドの実行をキャンセルするメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのかどうか、接続がビジー状態です。  

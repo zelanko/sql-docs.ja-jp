@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261816"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>プロジェクトの設定 (移行) (MySQLToSQL)
 移行 ページ、**プロジェクト設定** ダイアログ ボックスにどのように SSMA データが移行 MySQL から SQL Server をカスタマイズする設定が含まれています。  

@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ceb1bcf0e05a667372aefa625c40d4ef0238661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240023"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD の基礎
 Microsoft® ActiveX® Data Objects (多次元) (ADO MD) により簡単にアクセスする多次元データ Microsoft Visual Basic® などの言語から Microsoft Visual C++® します。 ADO MD の拡張などの多次元データに固有のオブジェクトを含める Microsoft ActiveX® Data オブジェクト (ADO)、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)と[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト。 ADO MD とには、多次元スキーマを参照し、キューブを照会および結果を取得することができます。  
   
  ADO と同様には、ADO MD は、データにアクセスするのに、基になる OLE DB プロバイダーを使用します。 ADO MD を使用するには、プロバイダーは OLE DB for OLAP 仕様で定義されている多次元データ プロバイダー (MDP) をある必要があります。 MDP は、表形式のデータ プロバイダー (TDP) がデータを表示する方法は、表形式のビューではなく多次元ビュー内のデータを表示します。 特定の構文と、プロバイダーでサポートされている動作の詳細については、OLAP OLE DB プロバイダーは、ドキュメントを参照してください。  
   
- このドキュメントでは、Visual Basic プログラミング言語の知識と ADO と OLAP の一般的な知識を前提としています。 詳細については、、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)と[OLE DB のオンライン分析処理 (OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx)を参照してください。  
+ このドキュメントでは、Visual Basic プログラミング言語の知識と ADO と OLAP の一般的な知識を前提としています。 詳細については、次を参照してください。、 [ADO プログラマー ガイド](../../../ado/guide/ado-programmer-s-guide.md)と[OLE DB のオンライン分析処理 (OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx)します。  
   
  このセクションでは、次のトピックを扱います。  
   

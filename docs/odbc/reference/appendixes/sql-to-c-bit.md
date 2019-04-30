@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: ビットから |Microsoft Docs'
+title: 'SQL から C へ: ビット |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7ff0bd2988460596623eb47ded276392dc3d443
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270979"
 ---
-# <a name="sql-to-c-bit"></a>SQL から C へ: ビット
+# <a name="sql-to-c-bit"></a>SQL から C へ: bit
 ODBC SQL データ型がビットの識別子。  
   
  SQL_BIT  
   
- 次の表は、ODBC C データ型のビットの SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。  
+ 次の表は、ODBC C データ型のビットの SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
   
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  

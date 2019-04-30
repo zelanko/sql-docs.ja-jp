@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241258"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>サーバー上の XML スキーマ コレクションの要件と制限
   XSD (XML Schema Definition Language) の検証には、`xml` データ型を使用する SQL 列に関して制限事項がいくつかあります。 次の表は、このような制限事項に関する詳細と、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機能するように XSD スキーマを変更するためのガイドラインを示しています。 このセクションのトピックでは、具体的な制限事項の詳細とその対処方法について説明します。  

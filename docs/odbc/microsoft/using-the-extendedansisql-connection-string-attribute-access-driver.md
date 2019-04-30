@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e8994c441c2c0de82ff89029a489e5ff3d3a7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259364"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>ExtendedAnsiSQL 接続文字列属性の使用 (Access ドライバー)
 Jet 4.0 では、ODBC デスクトップ データベース ドライバー バージョン 4.0 で既定で無効になっているいくつかの新しい機能があります。 これらの新機能を利用するには、アプリケーションは、新しい接続属性を設定、接続文字列 に新しい属性を追加または DSN で属性を設定する必要があります。 属性と ExtendedAnsiSQL と呼びます。 以降、Microsoft ODBC デスクトップ データベース ドライバー 4.0 のみに関連します。  

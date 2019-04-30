@@ -12,14 +12,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a87118acbfa2b4dc38fc8ba50fecc56e8c22b656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240177"
 ---
 # <a name="ready-to-repair"></a>[修復の準備完了]
-  [修復の準備完了] ページには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによる修復プロセスの概要が示されます。  
+  [修復の準備完了] ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによる修復プロセスの概要が示されます。  
   
 ## <a name="options"></a>および  
  このページには、次のオプションがあります。  

@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240277"
 ---
 # <a name="determining-installed-oracle-components"></a>インストールされる Oracle コンポーネントの決定
 > [!IMPORTANT]  
 >  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
   
- システム (とそのバージョン) にインストールされている Oracle コンポーネントを確認するのには、Oracle ホーム ディレクトリの下の \Orainst ディレクトリに移動します。 次のテキスト ファイルのいずれかを開く: インストール、Win95.rgs、または Win98.rgs します。  
+ システム (とそのバージョン) にインストールされている Oracle コンポーネントを確認するのには、Oracle ホーム ディレクトリの下の \Orainst ディレクトリに移動します。 次のテキスト ファイルのいずれかを開きます。インストール、Win95.rgs、または Win98.rgs します。  
   
  ファイル形式は、次のような。  
   
