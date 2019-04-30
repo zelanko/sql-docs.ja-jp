@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3852e713e517828e83e74bf7fb291ef20865532
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238700"
 ---
 # <a name="driver-specific-connection-information"></a>ドライバー固有の接続情報
 **SQLConnect**データ ソース名、ユーザー ID、およびパスワードがデータ ソースに接続するための十分なことと、システム上の他のすべての接続情報を格納できることを前提としています。 これは頻繁にできません。 たとえば、ドライバーは、1 人のユーザー ID とパスワード、サーバーおよび別のユーザー ID とパスワードにログオンするため、DBMS にログオンする必要があります。 **SQLConnect**受け取る、1 人のユーザー ID とパスワード、つまり他のユーザー ID とパスワードが場合、システム上のデータ ソース情報を格納する必要があります**SQLConnect**が使用されます。 これは潜在的なセキュリティ違反であり、パスワードは暗号化されていない限り避ける必要があります。  

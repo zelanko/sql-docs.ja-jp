@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: から文字 |Microsoft Docs'
+title: 'SQL から C へ: 文字 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3a0a7036d67716a3d90bd8953a3c7ba2c575c92
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259509"
 ---
-# <a name="sql-to-c-character"></a>SQL c: から文字
+# <a name="sql-to-c-character"></a>SQL から C へ: 文字
 
 識別子の文字の ODBC SQL データ型に次のとおりです。
 
@@ -33,7 +33,7 @@ ms.locfileid: "54419977"
 - SQL_WVARCHAR
 - SQL_WLONGVARCHAR
 
-次の表は、ODBC C データ型の SQL データの文字が変換される可能性がありますを示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。  
+次の表は、ODBC C データ型の SQL データの文字が変換される可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
 
 |C 型識別子|テスト|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|
 |:----------------|:---|:-------------|:---------------|:-------|

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c0ac65e0973ac9e862a73dd9c04a916156c8a314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298799"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>グローバル設定 (ダイアログ ボックス) (DB2ToSQL)
 ダイアログ ボックスのページを使用して、**グローバル設定** ダイアログ ボックスで、既定のユーザー アクションと SSMA に対する警告の設定を指定します。  

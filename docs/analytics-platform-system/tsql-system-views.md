@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0cf828263d8d3c70fc9b972bbc584b73397cbf91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252616"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System Parallel Data Warehouse のシステム ビュー
 システム ビューの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
@@ -225,7 +225,7 @@ Parallel Data Warehouse は、SQL Server の動的管理ビュー (Dmv) の多�
 * [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>次の手順
-参照の詳細については、[T-SQL 言語要素](tsql-language-elements.md)と[T-SQL ステートメント](tsql-statements.md)を参照してください。
+参照の詳細については、次を参照してください。 [T-SQL 言語要素](tsql-language-elements.md)と[T-SQL ステートメント](tsql-statements.md)します。
 
 <!--Image references-->
 

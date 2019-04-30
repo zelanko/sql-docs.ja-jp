@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 789dc265513c4d0068c721e8cdefb07d7a3d5331
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297906"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>登録済みサーバーへの接続 (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、登録済みサーバーに接続する方法について説明します。 サーバーが実行されていない場合、またはネットワーク上に見つからない場合、登録済みサーバーではエラーが表示されます。  

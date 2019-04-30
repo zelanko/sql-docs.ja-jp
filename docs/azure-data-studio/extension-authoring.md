@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237714"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio の拡張機能を作成して、機能を拡張します。
 

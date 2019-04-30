@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa9b979ed90ffcc5df73968fd784b31bc044282a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281208"
 ---
 # <a name="views-delete-method-example-vb"></a>Views Delete メソッドの例 (VB)
 次のコードを使用する方法を示しています、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)カタログからビューを削除するメソッド。  

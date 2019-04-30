@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270495"
 ---
 # <a name="sql-minimum-grammar"></a>SQL の最小限の文法
 このセクションでは、ODBC ドライバーのサポートが必要な最低限の SQL 構文について説明します。 このセクションで説明する構文は、SQL 92 のエントリ レベルの構文のサブセットです。  
@@ -31,7 +31,7 @@ ms.locfileid: "47818906"
 ## <a name="statement"></a>ステートメントから削除してください。  
  *create table ステートメント*:: =  
   
- CREATE TABLE*ベース テーブル名*  
+ CREATE TABLE *base-table-name*  
   
  (*列識別子のデータ型*[*、列識別子のデータ型*]...)  
   
@@ -40,11 +40,11 @@ ms.locfileid: "47818906"
   
  *delete ステートメント検索*:: =  
   
- DELETE FROM*テーブル名*[場所*検索条件*]  
+ DELETE FROM *table-name* [WHERE *search-condition*]  
   
  *drop-テーブル-ステートメント*:: =  
   
- DROP TABLE*ベース テーブル名*  
+ DROP TABLE *base-table-name*  
   
  *insert ステートメント*:: =  
   
@@ -54,9 +54,9 @@ ms.locfileid: "47818906"
   
  [すべて &#124; を選択します。DISTINCT]*選択リスト*  
   
- *テーブルの参照リスト*  
+ FROM *table-reference-list*  
   
- [場所*検索条件*]  
+ [WHERE *search-condition*]  
   
  [*order by*]  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47818906"
   
  &#124; です。*update ステートメントの検索*  
   
- *update ステートメントの検索*  
+ *update-statement-searched*  
   
  UPDATE*テーブル名*  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47818906"
   
  [、*列識別子*= {*式*&#124; です。NULL}].  
   
- [場所*検索条件*]  
+ [WHERE *search-condition*]  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231144"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>SQL Server Always On 可用性グループのデプロイ スクリプトを作成します。
 
@@ -64,7 +64,7 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 
 次の例を実行する方法を示します`deploy-ag.py`します。
 
-### <a name="help"></a>ヘルプ
+### <a name="help"></a>Help
 
 ```cmd
 python ./deploy-ag.py --help
@@ -129,7 +129,7 @@ python ./deploy-ag.py deploy --help
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  SA パスワードです。 既定の 'SAPassword2018' を =
+  SA パスワードです。 Default='SAPassword2018'
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
@@ -228,6 +228,6 @@ SQL Server は、適切なレプリカにセカンダリ データベースを�
 python ./deploy-ag.py failover --ag ag1 --namespace ag1 --verbose mssql1-0
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Kubernetes クラスター上の SQL Server 可用性グループ](sql-server-ag-kubernetes.md)

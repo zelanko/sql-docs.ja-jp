@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259350"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 関数
 **準拠**  
@@ -54,11 +54,11 @@ SQLRETURN SQLColumns(
  *StatementHandle*  
  [入力]ステートメント ハンドルです。  
   
- *カタログ名*  
+ *CatalogName*  
  [入力]カタログの名前。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") それらのテーブルのカタログがないことを示します。 *CatalogName*文字列の検索パターンを含めることはできません。  
   
 > [!NOTE]  
->  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
+>  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
   
  *NameLength1*  
  [入力]文字の長さ **CatalogName*します。  
@@ -111,7 +111,7 @@ SQLRETURN SQLColumns(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 名の長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。|  
 |||名の長の引数のいずれかの値には、対応するカタログまたは名前の最大長の値を超えています。 各カタログまたは名前の最大長を呼び出すことによって取得できる**SQLGetInfo**で、*情報の種類*値。 (「コメントです」を参照してください)|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|カタログ名が指定されました、およびドライバーまたはデータ ソースがカタログをサポートしていません。<br /><br /> スキーマ名を指定してから、およびドライバーまたはデータ ソースがスキーマをサポートしていません。<br /><br /> スキーマ名、テーブル名、または列名、文字列の検索パターンが指定されて、データ ソースがこれらの引数の 1 つ以上の検索パターンをサポートしていません。<br /><br /> SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -120,10 +120,10 @@ SQLRETURN SQLColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- この関数通常は使用ステートメントを実行する前に、データ ソースのカタログからテーブルまたはテーブルの列に関する情報を取得します。 **SQLColumns**によって返される項目のすべての種類のデータを取得するために使用できる**SQLTables**します。 ベース テーブルだけでなくこの可能性があります (ただし、これに限定されません) ビュー、シノニム、システム テーブル、およびなど。 一方、関数によって**SQLColAttribute**と**SQLDescribeCol**結果セットと、関数内の列について説明する**SQLNumResultCols**の数を返します結果セット内の列。 詳細については、[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)を参照してください。  
+ この関数通常は使用ステートメントを実行する前に、データ ソースのカタログからテーブルまたはテーブルの列に関する情報を取得します。 **SQLColumns**によって返される項目のすべての種類のデータを取得するために使用できる**SQLTables**します。 ベース テーブルだけでなくこの可能性があります (ただし、これに限定されません) ビュー、シノニム、システム テーブル、およびなど。 一方、関数によって**SQLColAttribute**と**SQLDescribeCol**結果セットと、関数内の列について説明する**SQLNumResultCols**の数を返します結果セット内の列。 詳細については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
   
  **SQLColumns** TABLE_CAT、TABLE_SCHEM、TABLE_NAME、および ORDINAL_POSITION 順に並べ、標準的な結果セットとして結果を返します。  
   
@@ -156,7 +156,7 @@ SQLRETURN SQLColumns(
 |COLUMN_DEF|SQL_DATA_TYPE|  
 |IS_NULLABLE|SQL_DATETIME_SUB|  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、18 (によって IS_NULLABLE) 列を超える追加の列を定義できます。 アプリケーションでは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンして、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、18 (によって IS_NULLABLE) 列を超える追加の列を定義できます。 アプリケーションでは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンして、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
   
 |列名|[列]<br /><br /> number|データ型|コメント|  
 |-----------------|-----------------------|---------------|--------------|  
@@ -164,7 +164,7 @@ SQLRETURN SQLColumns(
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|スキーマ名。データ ソースに適用されない場合は NULL です。 ドライバーの空の文字列を返します、ドライバーは、さまざまな Dbms からデータを取得するときなどに、他のユーザーではなく一部のテーブルのスキーマをサポートする場合 ("")、それらのテーブル スキーマがないです。|  
 |TABLE_NAME (ODBC 1.0)|3|NULL 以外の Varchar|テーブル名です。|  
 |COLUMN_NAME (ODBC 1.0)|4|NULL 以外の Varchar|列名 ドライバーは、名前がない列の空の文字列を返します。|  
-|DATA_TYPE (ODBC 1.0)|5|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 Datetime と間隔のデータ型は、この列は、(SQL_TYPE_DATE SQL_DATETIME または SQL_INTERVAL など nonconcise データ型ではなく、SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 に対して返されるデータ型。*x*および ODBC 2 *。x*アプリケーションが異なる場合があります。 詳細については、[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。|  
+|DATA_TYPE (ODBC 1.0)|5|Smallint (NULL 以外)|SQL データ型です。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 Datetime と間隔のデータ型は、この列は、(SQL_TYPE_DATE SQL_DATETIME または SQL_INTERVAL など nonconcise データ型ではなく、SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型を返します。 有効な ODBC SQL データ型の一覧は、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 に対して返されるデータ型。*x*および ODBC 2 *。x*アプリケーションが異なる場合があります。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。|  
 |TYPE_NAME (ODBC 1.0)|6|NULL 以外の Varchar|データ ソースに依存するデータ型名です。たとえば、"CHAR"、"VARCHAR"、"MONEY"、"LONG VARBINAR"または「CHAR FOR BIT DATA ()」。|  
 |COLUMN_SIZE (ODBC 1.0)|7|Integer|DATA_TYPE が SQL_CHAR、SQL_VARCHAR またはの場合は、この列には、最大長列の文字にはが含まれます。 Datetime データ型の文字に変換された場合、値を表示するために必要な文字の合計数になります。 数値データ型の場合は、これは数字の合計数または合計 列で許可されているビット数のいずれかに従って NUM_PREC_RADIX 列です。 Interval データ型では、これは、文字形式のリテラルの間隔の文字数 (先頭の有効桁数の間隔によって定義されたを参照してください[Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)付録 d:。データ型の場合)。 詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
 |BUFFER_LENGTH 列 (ODBC 1.0)|8|Integer|SQL_C_DEFAULT が指定されている場合、データの長さ (バイト単位) は、SQLGetData、SQLFetch、または SQLFetchScroll 操作で転送されます。 数値データは、このサイズは、データ ソースに格納されているデータのサイズを異なる場合があります。 この値は、COLUMN_SIZE 列の文字データに対して異なる場合があります。 長さの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
@@ -173,7 +173,7 @@ SQLRETURN SQLColumns(
 |NULL 許容型 (ODBC 1.0)|11|Smallint (NULL 以外)|SQL_NO_NULLS 列が含まれていない場合は NULL 値です。<br /><br /> SQL_NULLABLE 列で NULL 値許容される場合。<br /><br /> SQL_NULLABLE_UNKNOWN 列が NULL 値を受け入れるかどうかが不明である場合。<br /><br /> この列に返される値は、によって IS_NULLABLE 列に返される値によって異なります。 列が null 値を受け入れることができますが、列が null 値を受け付けないことで示すことはできませんの確実性で null 許容の列を示します。 によって IS_NULLABLE 列は、列が null 値を受け入れることはできませんが、確実性の列が null 値を受け入れることを示すことはできません、確信を示します。|  
 |「解説」(ODBC 1.0)|12|Varchar|列の説明。|  
 |COLUMN_DEF (ODBC 3.0)|13|Varchar|列の既定値です。 引用符で囲まれている場合、この列の値を文字列として解釈する必要があります。<br /><br /> 既定値として NULL が指定されている場合、この列は null の場合、引用符で囲まれていない、単語になります。 場合は切り捨てることがなく、既定値を表すことができない、単一引用符に囲まれていないが切り捨てられて、この列が含まれます。 既定値が指定されていない場合、この列は NULL を使用します。<br /><br /> COLUMN_DEF の値は、切り捨てられた値が含まれている場合を除き、新しい列定義の生成に使用できます。|  
-|SQL_DATA_TYPE (ODBC 3.0)|14|Smallint (NULL 以外)|SQL データ型、IRD の SQL_DESC_TYPE レコード フィールドに表示されます。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 この列は、datetime と間隔のデータ型を除く、DATA_TYPE 列と同じです。 この列は、datetime (SQL_TYPE_DATE SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型と interval データ型ではなく (SQL_DATETIME または SQL_INTERVAL) などの nonconcise データ型を返します。 SQL_DATETIME または SQL_INTERVAL にこの列が返される場合は、SQL_DATETIME_SUB 列から特定のデータ型を決定できます。 有効な ODBC SQL データ型の一覧は、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 に対して返されるデータ型。*x*および ODBC 2 *。x*アプリケーションが異なる場合があります。 詳細については、[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)を参照してください。|  
+|SQL_DATA_TYPE (ODBC 3.0)|14|Smallint (NULL 以外)|SQL データ型、IRD の SQL_DESC_TYPE レコード フィールドに表示されます。 これには、ODBC SQL データ型をまたはドライバーに固有の SQL データ型を指定できます。 この列は、datetime と間隔のデータ型を除く、DATA_TYPE 列と同じです。 この列は、datetime (SQL_TYPE_DATE SQL_INTERVAL_YEAR_TO_MONTH など) の簡潔なデータ型と interval データ型ではなく (SQL_DATETIME または SQL_INTERVAL) などの nonconcise データ型を返します。 SQL_DATETIME または SQL_INTERVAL にこの列が返される場合は、SQL_DATETIME_SUB 列から特定のデータ型を決定できます。 有効な ODBC SQL データ型の一覧は、次を参照してください[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)付録 d:。データ型。 ドライバー固有の SQL データ型については、ドライバーのドキュメントを参照してください。<br /><br /> ODBC 3 に対して返されるデータ型。*x*および ODBC 2 *。x*アプリケーションが異なる場合があります。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。|  
 |SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|Datetime と間隔のデータ型のサブタイプ コード。 その他のデータ型の場合は、NULL が返されます。 Datetime と間隔サブコードの詳細についてを参照してください"SQL_DESC_DATETIME_INTERVAL_CODE" [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|16|Integer|文字またはバイナリ データの最大長 (バイト単位) は、列を入力します。 他のすべてのデータ型の場合、この列は NULL を返します。|  
 |ORDINAL_POSITION (ODBC 3.0)|17|Integer (NULL 以外)|テーブル内の列の序数位置です。 テーブルの最初の列の番号は 1 です。|  

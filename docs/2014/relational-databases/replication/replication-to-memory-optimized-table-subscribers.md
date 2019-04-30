@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250881"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
   トランザクション レプリケーションのサブスクライバーとして機能するテーブルは、ピア ツー ピア トランザクション レプリケーションを除き、メモリ最適化テーブルとして構成できます。 その他のレプリケーション構成はメモリ最適化テーブルとは互換性がありません。  
@@ -293,13 +293,13 @@ GO
   
  サブスクライバーで、トランザクション レプリケーションにかかわるテーブルをメモリ最適化テーブルとして構成できますが、サブスクライバーのテーブルはメモリ最適化テーブルの要件を満たす必要があります。 この場合の制限事項は次のとおりです。  
   
--   トランザクション レプリケーションのサブスクライバーでメモリ最適化テーブルを作成するには、メモリ最適化テーブルの作成に使用されるスナップショット スキーマ ファイルを手動で変更する必要があります。 詳細については、[スキーマ ファイルの変更](#Schema)を参照してください。  
+-   トランザクション レプリケーションのサブスクライバーでメモリ最適化テーブルを作成するには、メモリ最適化テーブルの作成に使用されるスナップショット スキーマ ファイルを手動で変更する必要があります。 詳細については、次を参照してください。[スキーマ ファイルの変更](#Schema)します。  
   
 -   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルは、メモリ最適化テーブルの行の制限に従って 8,060 バイトに制限されます。  
   
--   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルは、メモリ最適化テーブルに使用できるデータ型に制限されます。 詳細については、[Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)を参照してください。  
+-   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルは、メモリ最適化テーブルに使用できるデータ型に制限されます。 詳細については、次を参照してください。 [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)します。  
   
--   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルの主キーを更新するには、制限があります。 詳細については、[主キーに変更をレプリケートする](#PrimaryKey)を参照してください。  
+-   サブスクライバーのメモリ最適化テーブルにレプリケートされるテーブルの主キーを更新するには、制限があります。 詳細については、次を参照してください。[主キーに変更をレプリケートする](#PrimaryKey)します。  
   
 -   外部キー、UNIQUE 制約、トリガー、スキーマの変更、ROWGUIDCOL、計算列、データ圧縮、別名データ型、バージョン管理、ロックは、メモリ最適化テーブルではサポートされていません。 詳細については、「 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 」を参照してください。  
   

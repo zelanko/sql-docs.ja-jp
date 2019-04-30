@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0df165514a10bc667c8bd2cc6d2a8569faa79d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239713"
 ---
 # <a name="open-method-ado-stream"></a>Open メソッド (ADO Stream)
 開く、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)バイナリまたはテキスト データのストリームを操作するオブジェクト。  
@@ -36,7 +36,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>パラメーター  
  *Source*  
- 任意。 A**バリアント**のデータ ソースを指定する値、 **Stream**します。 *ソース*電子メールまたはファイル システムなどのよく知られているツリー構造で既存のノードを指す絶対 URL 文字列を含めることができます。 URL のキーワードを使用して URL を指定する必要があります ("URL =*スキーム*://*server*/*フォルダー*")。 または、*ソース*既に開いているへの参照を含めることができます[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトに関連付けられている既定のストリームを開き、**レコード**します。 場合*ソース*が指定されていない、 **Stream**はインスタンス化し、開く、既定ではない基になるソースに関連付けられています。 URL スキームと関連するプロバイダーの詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+ 任意。 A**バリアント**のデータ ソースを指定する値、 **Stream**します。 *ソース*電子メールまたはファイル システムなどのよく知られているツリー構造で既存のノードを指す絶対 URL 文字列を含めることができます。 URL のキーワードを使用して URL を指定する必要があります ("URL =*スキーム*://*server*/*フォルダー*")。 または、*ソース*既に開いているへの参照を含めることができます[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトに関連付けられている既定のストリームを開き、**レコード**します。 場合*ソース*が指定されていない、 **Stream**はインスタンス化し、開く、既定ではない基になるソースに関連付けられています。 URL スキームと関連するプロバイダーの詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
  *モード*  
  任意。 A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) 、結果として得られるアクセス モードを指定する値**Stream** (たとえば、読み取り/書き込みまたは読み取り専用)。 既定値は**adModeUnknown**します。 参照してください、[モード](../../../ado/reference/ado-api/mode-property-ado.md)アクセス モードの詳細についての詳細については、プロパティ。 場合*モード*が指定されていない、ソース オブジェクトによって継承されます。 たとえば場合、ソース**レコード**は読み取り専用モードで開かれます、 **Stream**既定では読み取り専用モードで開くこともできます。  

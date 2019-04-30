@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240385"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>記述子およびデスクトップ データベース ドライバー
 記述子は、列のデータまたは動的パラメーターのいずれかに関する情報を保持するデータ構造です。 **SQLGetDescField**以下に、サポートされている記述子を取得するために使用できます。 実装パラメーター記述子 (IPD) が自動的に作成されないため、 **SQLDescribeParam**はサポートされていません。 しない (SQL_DESC_BASE_TABLE_NAME) などの Jet を介して利用できる記述子フィールドもサポートされません。  
   
- 記述子の Jet でサポートされているフィールドの詳細については、、 *Microsoft Jet データベース エンジン プログラマー ガイド*を参照してください。  
+ 記述子の Jet でサポートされているフィールドの詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマー ガイド*します。  
   
  記述子の詳細については、「記述子」の下にあるトピックを参照してください、 *ODBC プログラマ リファレンス*します。  
   

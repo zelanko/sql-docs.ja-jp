@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233353"
 ---
 # <a name="sqltables-function"></a>SQLTables 関数
 **準拠**  
@@ -54,10 +54,10 @@ SQLRETURN SQLTables(
  *StatementHandle*  
  [入力]ステートメント ハンドルでは、結果を取得します。  
   
- *カタログ名*  
+ *CatalogName*  
  [入力]カタログの名前。 *CatalogName* SQL_ODBC_VERSION 環境属性が SQL_OV_ODBC3 場合引数は検索パターンを受け入れます。 SQL_OV_ODBC2 が設定されている場合の検索パターンを受け取ることはできません。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") それらのテーブルのカタログがないことを示します。  
   
- SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*パターン引数の値は、; 文字どおり、扱われ、そのケースは重要です。 詳細については、[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)を参照してください。  
+ SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*パターン引数の値は、; 文字どおり、扱われ、そのケースは重要です。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
   
  *NameLength1*  
  [入力]文字の長さ **CatalogName*します。  
@@ -106,7 +106,7 @@ SQLRETURN SQLTables(
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数は、SQLTables が呼び出されたときにまだ実行中だった。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM) 長の引数のいずれかの値が 0 未満でしたが、SQL_NTS と等しくありません。<br /><br /> 名の長の引数のいずれかの値には、対応する名前の最大長の値を超えています。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|カタログが指定されていると、ドライバーまたはデータ ソースがカタログをサポートしていません。<br /><br /> スキーマが指定されていると、ドライバーまたはデータ ソース スキーマはサポートしません。<br /><br /> カタログ名、テーブル スキーマ、またはテーブル名、文字列の検索パターンが指定されて、データ ソースがこれらの引数の 1 つ以上の検索パターンをサポートしていません。<br /><br /> SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|クエリのタイムアウト期間は、要求された結果セットが返されるデータ ソースの前に有効期限が切れました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -123,10 +123,10 @@ SQLRETURN SQLTables(
   
  アプリケーションをユーザーが対象のテーブルを選択する状況に対処することがある必要がありますそれ以外の場合、**選択**特権は付与されません。  
   
- *SchemaName*と*TableName*引数は、検索パターンをそのまま使用します。 *CatalogName* SQL_ODBC_VERSION 環境属性が SQL_OV_ODBC3 場合引数は検索パターンを受け入れます。 SQL_OV_ODBC2 が設定されている場合の検索パターンを受け取ることはできません。 SQL_OV_ODBC3 設定されている場合、ODBC 3 *.x*ドライバーでのワイルドカード文字が必要になります、 *CatalogName*文字どおり扱うにはエスケープする引数。 有効な検索パターンの詳細については、[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)を参照してください。  
+ *SchemaName*と*TableName*引数は、検索パターンをそのまま使用します。 *CatalogName* SQL_ODBC_VERSION 環境属性が SQL_OV_ODBC3 場合引数は検索パターンを受け入れます。 SQL_OV_ODBC2 が設定されている場合の検索パターンを受け取ることはできません。 SQL_OV_ODBC3 設定されている場合、ODBC 3 *.x*ドライバーでのワイルドカード文字が必要になります、 *CatalogName*文字どおり扱うにはエスケープする引数。 有効な検索パターンの詳細については、次を参照してください。[パターン値の引数](../../../odbc/reference/develop-app/pattern-value-arguments.md)します。  
   
 > [!NOTE]  
->  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)を参照してください。  
+>  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
   
  カタログ、スキーマ、およびテーブル型の列挙をサポートするために次の特別な意味が定義されている、 *CatalogName*、 *SchemaName*、 *TableName*、および*TableType*の引数**SQLTables**:  
   
@@ -138,7 +138,7 @@ SQLRETURN SQLTables(
   
  場合*TableType*が空の文字列の場合は、関心のある型の値をコンマ区切りのリストを含める必要があります;、各値は、単一引用符 (') で囲むことができますか、引用符、たとえば、'TABLE'、'VIEW' や、テーブルを表示します。 アプリケーションでは、テーブル型を指定する必要があります常に大文字で;ドライバーは、データ ソースでどのようなケースが必要、テーブル型を変換する必要があります。 データ ソースは、指定されたテーブル型をサポートしていない場合**SQLTables**その型のすべての結果は返されません。  
   
- **SQLTables** TABLE_TYPE、TABLE_CAT、TABLE_SCHEM、TABLE_NAME、順に並べ、標準的な結果セットとして結果を返します。 この情報の用途については、[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)を参照してください。  
+ **SQLTables** TABLE_TYPE、TABLE_CAT、TABLE_SCHEM、TABLE_NAME、順に並べ、標準的な結果セットとして結果を返します。 この情報の用途については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
   
  アプリケーションが呼び出すことができますを TABLE_CAT、TABLE_SCHEM、TABLE_NAME の各列の実際の長さを判断する**SQLGetInfo** SQL_MAX_CATALOG_NAME_LEN、SQL_MAX_SCHEMA_NAME_LEN、および SQL_MAX_TABLE_NAME_LEN 情報型。  
   
@@ -149,7 +149,7 @@ SQLRETURN SQLTables(
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
   
- 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、列 5 (注釈) を超える追加の列を定義できます。 アプリケーションでは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンして、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)を参照してください。  
+ 次の表には、結果セット内の列が一覧表示します。 ドライバーでは、列 5 (注釈) を超える追加の列を定義できます。 アプリケーションでは、結果の明示的な位置を表す序数を指定する代わりにセットの末尾からカウント ダウンして、ドライバー固有の列へのアクセスを得る必要があります。 詳細については、次を参照してください。[カタログ関数によって返されるデータ](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md)します。  
   
 |列名|列番号|データ型|コメント|  
 |-----------------|-------------------|---------------|--------------|  

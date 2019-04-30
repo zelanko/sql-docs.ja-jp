@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f226cc3db3d9f10292624c363d3f0cc04b13010
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266032"
 ---
 # <a name="complete-the-report-wizard"></a>レポート ウィザードを完了する
   このページを使用すると、レポートに名前を付けて、レポートに適用されるオプションを確認できます。  

@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252751"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 関数
 **準拠**  
- バージョンで導入されました ODBC 3.81 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
   
- **概要**  
+ **まとめ**  
  **SQLCleanupConnectionPoolID**プール ID がタイムアウトになったドライバーに通知します。そのプール ID に関連付けられたプール内のすべての接続されたときに ID がタイムアウトには、プールがタイムアウトしました。参照してください[、Microsoft Data Access Components のプーリング](https://msdn.microsoft.com/library/ms810829.aspx)接続タイムアウトの詳細についてはします。  
   
 ## <a name="syntax"></a>構文  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259530"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 関数
 **準拠**  
@@ -53,7 +53,7 @@ SQLRETURN SQLConnect(
  [入力]接続ハンドルです。  
   
  *ServerName*  
- [入力]データ ソースの名前。 データをプログラムと同じコンピューター上またはネットワーク上のどこか別のコンピューター上にあることがあります。 アプリケーションがデータ ソースを選択する方法については、[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)を参照してください。  
+ [入力]データ ソースの名前。 データをプログラムと同じコンピューター上またはネットワーク上のどこか別のコンピューター上にあることがあります。 アプリケーションがデータ ソースを選択する方法については、次を参照してください。[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)します。  
   
  *NameLength1*  
  [入力]長さ **ServerName*文字数。  
@@ -103,7 +103,7 @@ SQLRETURN SQLConnect(
 |IM009|トランスレーター DLL に接続できません。|ドライバーは、変換、データ ソースの指定された DLL への接続にできませんでした。|  
 |IM010|データ ソース名が長すぎます|(DM)  *\*ServerName* SQL_MAX_DSN_LENGTH 文字を超えていました。|  
 |IM014|指定された DSN には、ドライバーとアプリケーション間のアーキテクチャの不一致が含まれています。|64 ビット ドライバー; に接続する DSN を使用する (DM) 32 ビット アプリケーションまたはその逆です。|  
-|IM015|ドライバーの SQLConnect SQL_HANDLE_DBC_INFO_HANDLE に失敗しました|ドライバーでは、SQL_ERROR が返された場合は、ドライバー マネージャーは、アプリケーションに SQL_ERROR を返し、接続は失敗します。<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN の詳細については、[ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)を参照してください。|  
+|IM015|ドライバーの SQLConnect SQL_HANDLE_DBC_INFO_HANDLE に失敗しました|ドライバーでは、SQL_ERROR が返された場合は、ドライバー マネージャーは、アプリケーションに SQL_ERROR を返し、接続は失敗します。<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
 |S1118|ドライバーが非同期通知をサポートしていません|ドライバーが非同期通知をサポートしていない場合、SQL_ATTR_ASYNC_DBC_EVENT または SQL_ATTR_ASYNC_DBC_RETCODE_PTR を設定することはできません。|  
@@ -113,7 +113,7 @@ SQLRETURN SQLConnect(
   
  ドライバー マネージャーでは、アプリケーションは、関数を呼び出すまで、ドライバーに接続しません (**SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**) に接続するため、ドライバー。 その時点まで、ドライバー マネージャーは、独自の処理と連携し、接続情報を管理します。 指定したかどうかをドライバーに現在接続されているアプリケーションが接続関数を呼び出すと、ドライバー マネージャーを確認します*ConnectionHandle*:  
   
--   ドライバー マネージャーは、ドライバーと呼び出しに接続するドライバーが接続されていない場合**SQLAllocHandle**で、 *HandleType* sql_handle_env としての**SQLAllocHandle**で、*HandleType* sql_handle_dbc としての**SQLSetConnectAttr** (かどうか、アプリケーション指定された任意の接続属性)、およびドライバーの接続関数。 ドライバー マネージャーは、SQLSTATE IM006 を返します (ドライバーの**SQLSetConnectOption**に失敗しました) と接続関数の場合は、ドライバーのエラーを返しました SQL_SUCCESS_WITH_INFO **SQLSetConnectAttr**します。 詳細については、[データ ソースまたはドライバーに接続する](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)を参照してください。  
+-   ドライバー マネージャーは、ドライバーと呼び出しに接続するドライバーが接続されていない場合**SQLAllocHandle**で、 *HandleType* sql_handle_env としての**SQLAllocHandle**で、*HandleType* sql_handle_dbc としての**SQLSetConnectAttr** (かどうか、アプリケーション指定された任意の接続属性)、およびドライバーの接続関数。 ドライバー マネージャーは、SQLSTATE IM006 を返します (ドライバーの**SQLSetConnectOption**に失敗しました) と接続関数の場合は、ドライバーのエラーを返しました SQL_SUCCESS_WITH_INFO **SQLSetConnectAttr**します。 詳細については、次を参照してください。[データ ソースまたはドライバーに接続する](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)します。  
   
 -   指定されたドライバーをオンに既に接続されている場合、 *ConnectionHandle*、ドライバー マネージャーがドライバーの接続関数のみを呼び出します。 この場合、ドライバーがすべての接続の属性を確認してくださいに行う必要があります、 *ConnectionHandle*現在の設定を維持します。  
   

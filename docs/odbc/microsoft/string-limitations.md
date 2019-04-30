@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 003cd318d6db54c7547375219805c63cfc4ce249
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269855"
 ---
 # <a name="string-limitations"></a>文字列の制限事項
 SQL ステートメントの文字列の最大長は、65,000 文字です。  

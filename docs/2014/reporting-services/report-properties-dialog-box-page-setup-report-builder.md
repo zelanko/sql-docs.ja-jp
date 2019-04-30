@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d24e05e13827624c7bb1b2d771ed1641c8e9ee13
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306561"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>[ページ設定] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   選択**ページ設定**上、**レポートのプロパティ**、ダイアログ ボックスをレポート全体のページのオプションを設定します。  

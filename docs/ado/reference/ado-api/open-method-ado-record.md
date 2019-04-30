@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241085"
 ---
 # <a name="open-method-ado-record"></a>Open メソッド (ADO Record)
 既存を開く[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト、またはで表される新しい項目の作成、**レコード**ファイルやディレクトリなどです。  
@@ -72,7 +72,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  場合、**レコード**オブジェクトは、URL でアクセスできませんエンティティを表します (の行など、**レコード セット**データベースから派生)、両方の値、 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)。プロパティとフィールドを使用してアクセス、 **adRecordURL**定数が null です。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  

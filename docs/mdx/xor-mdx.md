@@ -1,5 +1,5 @@
 ---
-title: XOR (MDX) |Microsoft ドキュメント
+title: XOR (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9115fc1e226e05c788206706d59a5435bfd1c5d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251459"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 
@@ -31,16 +31,16 @@ Expression1 XOR Expression2
   
 #### <a name="parameters"></a>パラメーター  
  *Expression1*  
- 数値を返す有効な多次元式 (MDX) 式です。  
+ 数値の値を返す有効な多次元式 (MDX) 式。  
   
  *Expression2*  
- 数値を返す有効な MDX 式です。  
+ 数値の値を返す有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
- ブール値を返す**true**に、1 つの引数が評価された場合**true**、それ以外の**false**です。  
+ ブール値を返す**true**に 1 つだけの引数が評価された場合**true**、それ以外の**false**します。  
   
 ## <a name="remarks"></a>コメント  
- **XOR**演算子はブール値として両方のパラメーターを処理 (つまり、0 として**false**、それ以外の**true**) 排他的論理和を実行します。 次の表に示しますが、どのように**XOR**論理和を実行します。  
+ **XOR**演算子はブール値として両方のパラメーターを処理 (つまり、0 として**false**、それ以外の**true**) 排他的論理和を実行します。 次の表は方法、 **XOR**排他的論理和を実行します。  
   
 |*Expression1*|*Expression2*|戻り値|  
 |-------------------|-------------------|------------------|  

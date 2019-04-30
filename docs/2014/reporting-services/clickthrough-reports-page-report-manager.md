@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266138"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>[クリックスルー レポート] ページ (レポート マネージャー)
   クリックスルー レポートは、レポート内に含まれている対話的なデータをユーザーがクリックしたときに、関連するデータのテーブルを表示するレポートです。 これらのレポートは、レポートの作成に使用したモデルに含まれている情報に基づいて、レポート サーバーによって生成されます。 レポート サーバーによって生成されるクリックスルー レポートを使用しない場合は、カスタム レポートを作成し、レポート サーバーにパブリッシュして、そのモデルで定義されている対話的なデータ ポイントにマップすることができます。 カスタム レポートは、レポート ビルダーで同じモデルを使用して作成し、レポート サーバーにパブリッシュする必要があります。 カスタム レポートをモデル内のアイテムにマップするには、レポート マネージャーの [クリックスルー レポート] ページを使用します。  

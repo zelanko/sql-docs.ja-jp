@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255788"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>クエリ結果の消去 (Visual Database Tools)
   **クエリおよびビュー デザイナー**でクエリを実行した後、結果ペインの内容を消去できます。 この手順は、オブジェクト エクスプローラーで **[ビューを開く]** オプション、または **[テーブルを開く]** オプションを使用して作成されたクエリに当てはまります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターでクエリを実行した場合は、クエリ エディター ウィンドウを閉じるか別のクエリを実行しないと結果ペインの内容が消去されません。  

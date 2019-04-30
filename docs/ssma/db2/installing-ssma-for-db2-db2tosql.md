@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 88a1d6554f8a8975918a59a4ab3ec9d728a8d201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298742"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>SSMA for DB2 のインストール (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 を使用する DB2 からの移行を実行するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Azure SQL DB します。 移行されたデータベースのデータの移行と、DB2 システム関数の使用をサポートする拡張機能パックも含まれています。  

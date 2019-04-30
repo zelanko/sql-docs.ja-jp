@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239946"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue および UnderlyingValue プロパティの例 (vc++)
 この例では、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)にレコードのデータを基になる場合は、メッセージを表示することでプロパティが変更された、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)バッチ更新します。  
@@ -196,27 +196,27 @@ void PrintComError(_com_error &e) {
 ```  
   
  **データが変更されました。**  
-**ID のタイトル: PS1372**  
+**タイトルの ID。PS1372**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**   
 **データが変更されました。**  
-**ID のタイトル: PS2091**  
+**タイトルの ID。PS2091**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**   
 **データが変更されました。**  
-**ID のタイトル: PS2106**  
+**タイトルの ID。PS2106**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**   
 **データが変更されました。**  
-**ID のタイトル: PS3333**  
+**タイトルの ID。PS3333**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**   
 **データが変更されました。**  
-**ID のタイトル: PS7777**  
+**タイトルの ID。PS7777**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**    

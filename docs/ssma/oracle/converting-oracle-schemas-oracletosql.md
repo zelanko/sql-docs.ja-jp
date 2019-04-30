@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288893"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Oracle スキーマの変換 (OracleToSQL)
 Oracle に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、プロジェクトの設定とデータ マッピング オプションでは、Oracle データベースのオブジェクトを変換できますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース オブジェクト。  
@@ -28,7 +28,7 @@ Oracle からオブジェクトの定義は、データベース オブジェク
 変換中は、SSMA は、出力ウィンドウに出力メッセージとエラー一覧 ウィンドウにエラー メッセージを出力します。 出力とエラー情報を使用して、Oracle データベース、または必要な変換の結果を得るため、変換プロセスを変更しているかどうかを確認します。  
   
 ## <a name="setting-conversion-options"></a>変換オプションの設定  
-オブジェクトを変換する前に、プロジェクトの変換オプションを確認して、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA が関数とグローバル変数に変換する方法を設定できます。 詳細については、[プロジェクト設定&#40;変換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)を参照してください。  
+オブジェクトを変換する前に、プロジェクトの変換オプションを確認して、**プロジェクト設定** ダイアログ ボックス。 このダイアログ ボックスを使用すると、SSMA が関数とグローバル変数に変換する方法を設定できます。 詳細については、次を参照してください。[プロジェクト設定&#40;変換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)します。  
   
 ## <a name="conversion-results"></a>変換結果  
 次の表は、変換されますが、Oracle のオブジェクトし、その結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト。  
@@ -109,7 +109,7 @@ Oracle データベースのオブジェクトを変換する、変換するオ�
   
 -   プロシージャのソース コードを変更することができます、 **SQL**タブ。  
   
--   削除または問題のあるコードを変更するには、Oracle データベースでオブジェクトを変更することができます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、[Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)を参照してください。  
+-   削除または問題のあるコードを変更するには、Oracle データベースでオブジェクトを変更することができます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [Oracle データベースに接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)します。  
   
 -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーと Oracle メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Oracle からデータを移行します。  
   

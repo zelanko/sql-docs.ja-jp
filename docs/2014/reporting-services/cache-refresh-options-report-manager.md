@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266465"
 ---
 # <a name="cache-refresh-options-report-manager"></a>キャッシュ更新オプション (レポート マネージャー)
   [キャッシュ更新オプション] ページでは、レポートまたは共有データセットのデータの一時コピーを事前にキャッシュに読み込むスケジュールを作成できます。 更新計画には、スケジュールと、パラメーターの値を指定またはオーバーライドするためのオプションが含まれます。 共有データセットの場合、読み取り専用にマークされているパラメーターの値をオーバーライドすることはできません。 更新オプション ページの一部として複数の更新計画を作成して使用できます。  

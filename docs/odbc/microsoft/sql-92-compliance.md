@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf6d8d056c1658a924de4b108d3c0d025e8a58f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313396"
 ---
 # <a name="sql-92-compliance"></a>SQL-92 準拠
-ODBC のデスクトップ データベース ドライバーと、基になる Microsoft Jet エンジンは、sql-92 準拠ではありません。 Sql-92 で定義されている多くの機能をサポートしています。 ドライバーでサポートされている一部の機能は、sql-92 ではサポートされていません。 詳細については、、 *Microsoft Jet データベース エンジン プログラマー ガイド*を参照してください。 次に、2 つの主な違いを示します。  
+ODBC のデスクトップ データベース ドライバーと、基になる Microsoft Jet エンジンは、sql-92 準拠ではありません。 Sql-92 で定義されている多くの機能をサポートしています。 ドライバーでサポートされている一部の機能は、sql-92 ではサポートされていません。 詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマー ガイド*します。 次に、2 つの主な違いを示します。  
   
 -   デスクトップ データベース ドライバーで使用される SQL より強力な SQL 92 によって指定された式がサポートしています。  
   

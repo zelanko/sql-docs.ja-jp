@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253559"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するユーザーを構成する方法について説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "52796144"
   
 3.  **[プロキシ]** を右クリックして **[新しいプロキシ]** をクリックします。  
   
-4.  **[新しいプロキシ アカウント]** ダイアログの **[全般]** ページで、新しいプロキシのプロキシ名、資格情報名、および説明を指定します。 SQL Server エージェントのプロキシを作成する前に、まず資格情報を作成する必要があることに注意してください。 資格情報の作成の詳細については、[資格情報を作成](../../relational-databases/security/authentication-access/create-a-credential.md)と[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)を参照してください。  
+4.  **[新しいプロキシ アカウント]** ダイアログの **[全般]** ページで、新しいプロキシのプロキシ名、資格情報名、および説明を指定します。 SQL Server エージェントのプロキシを作成する前に、まず資格情報を作成する必要があることに注意してください。 資格情報の作成の詳細については、次を参照してください。[資格情報を作成](../../relational-databases/security/authentication-access/create-a-credential.md)と[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)します。  
   
 5.  このプロキシに適したサブシステムを確認します。  
   

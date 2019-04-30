@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232430"
 ---
 # <a name="use-xml-data-in-applications"></a>アプリケーションでの XML データの使用
   このトピックでは、アプリケーションで `xml` データ型を操作する際のオプションについて説明します。 このトピックには、次の項目に関する情報が含まれています。  

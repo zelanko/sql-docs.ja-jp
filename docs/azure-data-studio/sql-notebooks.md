@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312774"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio で notebook を使用する方法
 
@@ -186,4 +186,4 @@ import <package-name>
 
 ## <a name="next-steps"></a>次のステップ
 
-既存のノートブックを使用する方法については、[notebook Azure Data Studio での管理方法](https://docs.microsoft.com/sql/big-data-cluster/notebooks-how-to-manage?view=sqlallproducts-allversions)を参照してください。
+既存のノートブックを使用する方法については、次を参照してください。 [notebook Azure Data Studio での管理方法](https://docs.microsoft.com/sql/big-data-cluster/notebooks-how-to-manage?view=sqlallproducts-allversions)します。

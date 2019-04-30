@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a5ab00cc6e01b97639ae3f7d353fa2462ef3fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309169"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 データを変更する使用可能なアクセス許可を指定します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)を開いて、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の値を指定するか、[モード](../../../ado/reference/ado-api/mode-property-ado.md)のプロパティ、 **レコード**と[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  

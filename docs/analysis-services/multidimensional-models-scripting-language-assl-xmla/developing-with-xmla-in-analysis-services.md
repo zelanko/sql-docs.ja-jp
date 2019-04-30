@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99ccf53ab36d68ab0b03fa042d08e00d65703228
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265086"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Analysis Services での XMLA による開発
   XML for Analysis (XMLA) は SOAP ベースの XML プロトコルで、HTTP 接続を使用してアクセスできるあらゆる標準的な多次元データ ソースへの汎用データ アクセスを提供することを目的に特別に設計されています。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、クライアント アプリケーションとの通信を行う場合に、XMLA を唯一のプロトコルとして使用します。 基本的に、Analysis Services によってサポートされるすべてのクライアント ライブラリでは、要求と応答は XMLA で作成されます。  
   
  開発者は、.NET Framework または COM インターフェイスに依存しないで、XMLA を使用してクライアント アプリケーションと [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を統合できます。 広範なプラットフォームでのホスティングを含むアプリケーションの要件は、XMLA および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] への HTTP 接続を使用して満たすことができます。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は XMLA の 1.1 仕様に完全に準拠していますが、データ定義、データ操作、データ制御のサポートを有効にするように拡張することもできます。 Analysis Services の拡張機能は、Analysis Services Scripting Language (ASSL) と呼ばれます。 XMLA と ASSL を組み合わせて使用すると、XMLA 単独より広範な機能セットを提供できます。 ASSL の詳細については、[Analysis Services スクリプト言語を使用した開発&#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は XMLA の 1.1 仕様に完全に準拠していますが、データ定義、データ操作、データ制御のサポートを有効にするように拡張することもできます。 Analysis Services の拡張機能は、Analysis Services Scripting Language (ASSL) と呼ばれます。 XMLA と ASSL を組み合わせて使用すると、XMLA 単独より広範な機能セットを提供できます。 ASSL の詳細については、次を参照してください。 [Analysis Services スクリプト言語を使用した開発&#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -47,7 +47,7 @@ ms.locfileid: "52393426"
 ## <a name="data-mining-with-xmla"></a>XMLA を使用したデータ マイニング  
  XML for Analysis は、データ マイニング スキーマ行セットを完全にサポートしています。 これらの行セットを使用してデータ マイニング モデルのクエリの情報を提供する、 [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)メソッド。 データ マイニング スキーマ行セットの詳細については、次を参照してください[データ マイニング スキーマ行セット。](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
- DMX の詳細については、[データ マイニング拡張機能&#40;DMX&#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)を参照してください。  
+ DMX の詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)します。  
   
 ## <a name="namespace-and-schema"></a>名前空間とスキーマ  
   

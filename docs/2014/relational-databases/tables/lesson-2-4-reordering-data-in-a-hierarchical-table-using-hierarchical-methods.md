@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298962"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>階層的な手法を使用した階層テーブルのデータの並べ替え
   階層の再編成は、一般的なメンテナンス タスクです。 ここでは、UPDATE ステートメントを [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) メソッドと共に使用して、まず 1 つの行を階層内の新しい位置に移動します。 次に、サブツリー全体を新しい場所に移動します。  
@@ -124,6 +124,6 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
  階層のセクションを再編成するストアド プロシージャについては、「 [サブツリーの移動](../hierarchical-data-sql-server.md#BKMK_MovingSubtrees)」の「サブツリーの移動」を参照してください。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [まとめ : 階層テーブルでのデータの管理](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+ [概要:階層テーブルでデータを管理します。](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   

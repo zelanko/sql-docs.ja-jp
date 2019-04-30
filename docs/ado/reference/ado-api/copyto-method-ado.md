@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308909"
 ---
 # <a name="copyto-method-ado"></a>CopyTo メソッド (ADO)
 指定した数の文字またはバイトのコピー (に応じて[型](../../../ado/reference/ado-api/type-property-ado-stream.md)) で、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)間**Stream**オブジェクト。  

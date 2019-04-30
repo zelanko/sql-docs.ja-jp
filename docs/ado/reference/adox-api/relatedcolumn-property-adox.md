@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6939c346283e14848e44a822e05d1a3140656183
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281847"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn プロパティ (ADOX)
 関連の名前を示します[列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)関連テーブル (キー列のみ)。  

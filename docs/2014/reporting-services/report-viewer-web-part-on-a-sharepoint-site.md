@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1b63b7d6591e7296b5b45349351620595c2b5d02
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255511"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint サイトのレポート ビューアー Web パーツ
   レポート ビューアー Web パーツは、SharePoint 製品用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインによってインストールされるカスタム Web パーツです。 Web パーツを使用すると、統合モードで動作するように構成されたレポート サーバー上でレポートの表示、ナビゲーション、印刷、およびエクスポートを行うことができるようになります。 レポート ビューアー Web パーツは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーによって処理されるレポート定義 (.rdl) ファイルに関連付けられます。 他のソフトウェア製品を使用して作成した他のレポート ドキュメントで、レポート ビューアー Web パーツを使用することはできません。  

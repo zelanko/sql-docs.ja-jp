@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 09cfb2bb9d4d07f410ad901d3fcf0d2a458e00f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308429"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle コンソール入門 (OracleToSQL)
 このセクションを起動し、Oracle のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  
@@ -35,7 +35,7 @@ SSMA コンソール アプリケーションを起動するのにには、次�
 ## <a name="procedure-for-using-the-ssma-console"></a>SSMA コンソールを使用する手順  
 コンソールは、Windows システムに正常に起動した後は、作業を次の手順を使用できます。  
   
-1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、[スクリプト ファイルの作成&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-script-files-oracletosql.md)を参照してください。  
+1.  SSMA コンソールは、スクリプト ファイルを構成します。 このセクションの詳細については、次を参照してください。[スクリプト ファイルの作成&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-script-files-oracletosql.md)します。  
   
 2.  [変数値ファイルを作成する&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   

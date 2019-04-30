@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231114"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>SQL Server Always On 可用性グループの Kubernetes を管理します。
 
@@ -71,7 +71,7 @@ Always On 可用性グループで Kubernetes を管理するには、マニフ�
   >[!IMPORTANT]
   >別の手動フェールオーバーを実行する前に、ジョブを手動で削除する必要があります。
   > 
-  >Kubernetes でのジョブ オブジェクトは、その状態を表示できるように完了した後が維持されます。 それらの状態を記録した後、古いジョブを手動で削除する必要があります。 ジョブを削除すると、Kubernetes のログも削除されます。 ジョブを削除しない場合、ジョブの名前と、ポッドのセレクターを変更しない限り、今後のフェールオーバー ジョブは失敗します。 詳細については、[- ジョブが完了するまで実行](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)を参照してください。
+  >Kubernetes でのジョブ オブジェクトは、その状態を表示できるように完了した後が維持されます。 それらの状態を記録した後、古いジョブを手動で削除する必要があります。 ジョブを削除すると、Kubernetes のログも削除されます。 ジョブを削除しない場合、ジョブの名前と、ポッドのセレクターを変更しない限り、今後のフェールオーバー ジョブは失敗します。 詳細については、次を参照してください。 [- ジョブが完了するまで実行](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)します。
 
   次のコマンドは、ジョブを削除します。
 

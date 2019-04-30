@@ -1,5 +1,5 @@
 ---
-title: REFRESH CUBE ステートメント (MDX) |Microsoft ドキュメント
+title: REFRESH CUBE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dafc13dda1f8ecab1400a88d1ca66eff5f317e43
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285079"
 ---
-# <a name="mdx-data-definition---refresh-cube"></a>MDX データ定義の更新キューブ
+# <a name="mdx-data-definition---refresh-cube"></a>MDX データ操作 - REFRESH CUBE
 
 
   キューブのクライアント キャッシュを更新します。  
@@ -30,12 +30,12 @@ REFRESH CUBECube_Name
   
 ## <a name="arguments"></a>引数  
  *Cube_Name*  
- キューブ名を提供する有効な文字列式です。  
+ キューブ名を提供する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
- インスタンスに接続されているクライアント アプリケーションの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、このステートメントにより、サーバーと同期するクライアント アプリケーションでキャッシュされているメモリです。 この検出および更新は日常的かつ自動的に行われますが、同期が行われるまでの時間はクライアント接続文字列の設定によって異なります。 REFRESH CUBE ステートメントを実行すると、データが直ちに更新されます。  
+ インスタンスに接続されているクライアント アプリケーションの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、このステートメントは、サーバーと同期するクライアント アプリケーションのキャッシュ メモリをによりします。 この検出および更新は日常的かつ自動的に行われますが、同期が行われるまでの時間はクライアント接続文字列の設定によって異なります。 REFRESH CUBE ステートメントは、データをすぐに更新します。  
   
- ローカル キューブに接続しているクライアント アプリケーションの場合、REFRESH CUBE ステートメントは、ローカルのキューブ ファイルを再構築します。  
+ ローカル キューブに接続されている、クライアント アプリケーションは、REFRESH CUBE ステートメントは、再構築するローカル キューブ ファイルをさせます。  
   
 > [!IMPORTANT]  
 >  サーバーに保存されている名前付きセットは更新されません。  

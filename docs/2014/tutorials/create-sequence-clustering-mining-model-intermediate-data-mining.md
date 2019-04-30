@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273479"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>シーケンス クラスター マイニング モデル構造の作成 (中級者向けデータ マイニング チュートリアル)
   シーケンス クラスター マイニング モデルを作成する最初の手順では、データ マイニング ウィザードを使用して新しいマイニング構造を作成し、[!INCLUDE[msCoName](../includes/msconame-md.md)] シーケンス クラスター アルゴリズムに基づくマイニング モデルを作成します。  
@@ -36,14 +36,14 @@ ms.locfileid: "56039354"
   
      **データ ソース ビューの選択**ページが表示されます。 **使用可能なデータ ソース ビュー**、`Orders`します。  
   
-     Orders は、マーケット バスケット シナリオで使用したものと同じデータ ソース ビューです。 このデータ ソース ビューを作成していない場合は、[入れ子になったテーブルのデータ ソース ビューの追加&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)を参照してください。  
+     Orders は、マーケット バスケット シナリオで使用したものと同じデータ ソース ビューです。 このデータ ソース ビューを作成していない場合は、次を参照してください。[入れ子になったテーブルのデータ ソース ビューの追加&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)します。  
   
 5.  **[次へ]** をクリックします。  
   
 6.  **テーブルの種類の指定** ページで、、**ケース** の隣にチェック ボックス、 **vAssocSeqOrders** 、テーブルを選択、**入れ子になった** チェック ボックス次に、 **vAssocSeqLineItems**テーブル。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
-    >  選択すると、エラーが発生した場合、**ケース**または**入れ子になった**チェック ボックス、可能性があるデータ ソース ビューの結合が正しくないこと。 入れ子になったテーブル、 **vAssocSeqLineItems**、ケースのテーブルに接続する必要があります**vAssocSeqOrders**多対一結合でします。 結合線を右クリックして結合の方向を逆向きにすることによって、リレーションシップを編集できます。 詳細については、[リレーションシップの編集 ダイアログ ボックスの作成または&#40;Analysis Services - 多次元データ&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)を参照してください。  
+    >  選択すると、エラーが発生した場合、**ケース**または**入れ子になった**チェック ボックス、可能性があるデータ ソース ビューの結合が正しくないこと。 入れ子になったテーブル、 **vAssocSeqLineItems**、ケースのテーブルに接続する必要があります**vAssocSeqOrders**多対一結合でします。 結合線を右クリックして結合の方向を逆向きにすることによって、リレーションシップを編集できます。 詳細については、次を参照してください。[リレーションシップの編集 ダイアログ ボックスの作成または&#40;Analysis Services - 多次元データ&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)します。  
   
 7.  **トレーニング データの指定**ページで、チェック ボックスを次のように選択して、モデルで使用する列を選択します。  
   

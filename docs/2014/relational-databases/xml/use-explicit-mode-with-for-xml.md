@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231272"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
   トピック「 [FOR XML を使用した XML の構築](../xml/for-xml-sql-server.md)」で説明されているように、RAW モードと AUTO モードでは、クエリ結果から生成される XML の構造を厳密に制御することはできません。 一方、EXPLICIT モードを使用すると、クエリ結果から生成される XML の構造を柔軟に制御することができます。  
@@ -147,25 +147,25 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>このセクションの内容  
  次の例では、EXPLICIT モードの使用方法を示します。  
   
--   [例:従業員情報の取得](../xml/example-retrieving-employee-information.md)  
+-   [例: 従業員情報の取得](../xml/example-retrieving-employee-information.md)  
   
--   [例:ELEMENT ディレクティブの指定](../xml/example-specifying-the-element-directive.md)  
+-   [例: ELEMENT ディレクティブの指定](../xml/example-specifying-the-element-directive.md)  
   
--   [例:ELEMENTXSINIL ディレクティブの指定](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [例: ELEMENTXSINIL ディレクティブの指定](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [例:EXPLICIT モードを使用した兄弟の構築](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [例: EXPLICIT モードを使用した兄弟の構築](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [例:ID ディレクティブと IDREF ディレクティブの指定](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [例: ID ディレクティブと IDREF ディレクティブの指定](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [例:ID と IDREFS ディレクティブの指定](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [例: ID ディレクティブと IDREFS ディレクティブの指定](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [例:HIDE ディレクティブの指定](../xml/example-specifying-the-hide-directive.md)  
+-   [例: HIDE ディレクティブの指定](../xml/example-specifying-the-hide-directive.md)  
   
--   [例:ELEMENT ディレクティブとエンティティのエンコードを指定します。](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [例: ELEMENT ディレクティブとエンティティのエンコードの指定](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [例:CDATA ディレクティブの指定](../xml/example-specifying-the-cdata-directive.md)  
+-   [例: CDATA ディレクティブの指定](../xml/example-specifying-the-cdata-directive.md)  
   
--   [例:XMLTEXT ディレクティブの指定](../xml/example-specifying-the-xmltext-directive.md)  
+-   [例: XMLTEXT ディレクティブの指定](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>参照  
  [FOR XML での RAW モードの使用](../xml/use-raw-mode-with-for-xml.md)   

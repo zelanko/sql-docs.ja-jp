@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 37b575f9e208b5a1b7fa03b170b74633da149c67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237874"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>トランザクション分離レベルの設定
 トランザクション分離レベルを設定するには、アプリケーションは、SQL_ATTR_TXN_ISOLATION 接続属性を使用します。 データ ソースが要求された分離レベルをサポートしていない場合、ドライバーまたはデータ ソースはより高いレベルを設定できます。 どのようなトランザクション分離レベルでデータ ソースを決定するをサポートし、既定の分離レベルは、アプリケーションを呼び出す**SQLGetInfo** SQL_TXN_ISOLATION_OPTION と SQL_DEFAULT_TXN_ISOLATION オプションそれぞれします。  
@@ -33,4 +33,4 @@ ms.locfileid: "47750620"
   
 -   速度が精度およびすべてのエラーよりもより重要な場合は、小さい可能性があります。 たとえば、会社、多くの小規模な販売することとの大きな売り上げはまれであるとします。 開いているすべての売上の合計値を推定するトランザクションでは、Read Uncommitted 分離レベルを安全に使用可能性があります。 トランザクションが開かれたり閉じられたりするは、その後、注文が含まれますがロールバックし、これらは通常どうしし、ことが、このような順序が発生するたびにブロックされていないために、トランザクションがはるかに高速になります。  
   
- 詳細については、[オプティミスティック同時実行制御](../../../odbc/reference/develop-app/optimistic-concurrency.md)を参照してください。
+ 詳細については、次を参照してください。[オプティミスティック同時実行制御](../../../odbc/reference/develop-app/optimistic-concurrency.md)します。

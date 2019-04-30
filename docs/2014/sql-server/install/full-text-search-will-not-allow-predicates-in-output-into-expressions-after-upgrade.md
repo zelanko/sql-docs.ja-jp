@@ -12,17 +12,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297550"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>アップグレード後、フルテキスト検索では、OUTPUT INTO 式で述語を使用できません。
   データベースの互換性レベルが 100 以上に設定されている場合、OUTPUT 句でフルテキスト述語を使用することはできません。  
   
 ## <a name="description"></a>説明  
- OUTPUT 句の詳細については、[OUTPUT 句&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)を参照してください。  
+ OUTPUT 句の詳細については、次を参照してください。 [OUTPUT 句&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)します。  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285688"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>予測の作成 (基本的なデータ マイニング チュートリアル)
   予測クエリ ビルダーを使用して予測を生成できますし、マイニング モデルの精度をテストし、結果に満足していることにしましたが後、**マイニング モデル予測**データ マイニング モデル タブデザイナー。  
@@ -94,7 +94,7 @@ ms.locfileid: "56035263"
   
      して、[tm_decision_tree]。[Bike Buyer] が表示されます、**条件と引数**セル。  
   
-     これにより、`PredictProbability` 関数の対象列を指定します。 関数の詳細については、[データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)を参照してください。  
+     これにより、`PredictProbability` 関数の対象列を指定します。 関数の詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)します。  
   
 5.  次の空白行をクリックして、**ソース**列、および TM_Decision_Tree マイニング モデル**します。**  
   
@@ -164,7 +164,7 @@ ms.locfileid: "56035263"
   
              また、複数の列の名前が同じ場合 (たとえば、既定の列名**式**)、重複した名前の列の別名を作成する必要がありますまたはデザイナーには、SQL 結果を保存しようとするときに、エラーが発生します。サーバー。 SQL Server では、複数の列に同じ名前が含まれることが許可されないためです。  
   
-             詳細については、[保存データ マイニング クエリ結果 ダイアログ ボックス&#40;マイニング モデル予測 ビュー&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)を参照してください。  
+             詳細については、次を参照してください。[保存データ マイニング クエリ結果 ダイアログ ボックス&#40;マイニング モデル予測 ビュー&#41;](../../2014/analysis-services/save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [構造データにドリルスルーを使用して&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  

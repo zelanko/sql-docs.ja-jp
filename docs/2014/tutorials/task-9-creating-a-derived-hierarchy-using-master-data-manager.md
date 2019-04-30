@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262429"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>タスク 9:マスター データ マネージャーを使用して派生階層を作成する
   ここでは、マスター データ マネージャーを使用して派生階層を作成します。 この派生階層は、ドメイン ベースの属性リレーションシップから派生した、 **Supplier**と**状態**エンティティ。  

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d297b8516cb09db317ba835b49fe41b3e13be9e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228552"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 属性を使用した、対象名前空間の指定 (SQLXML 4.0)
   XSD スキーマを作成するには、XSD を使用することができます**targetNamespace**ターゲット名前空間を指定する属性です。 このトピックで説明する方法、XSD **targetNamespace**、**よ**、および**されていません**属性を使用する XML インスタンスをどのように影響生成されると、名前空間と XPath クエリを指定する方法とします。  
@@ -32,7 +32,7 @@ ms.locfileid: "52793584"
  使用することができます、 **xsd:targetNamespace**属性を別の名前空間に要素と属性の既定の名前空間に配置します。 また、スキーマでローカルに宣言された要素と属性を、名前空間で修飾して表示するかどうかも指定できます。名前空間は、プレフィックスを使って明示的に、または既定により暗黙的に指定できます。 使用することができます、**よ**と**されていません**属性を **\<xsd:schema >** 要素をグローバルに指定するのには、ローカル要素と属性の修飾に使用できる、**フォーム**の個々 の要素と属性を個別に指定する属性です。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、[SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)を参照してください。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 対象名前空間を指定する  
  次の XSD スキーマを使用して、ターゲット名前空間を指定する、 **xsd:targetNamespace**属性です。 また、スキーマ、設定、**よ**と**されていません**属性に値を **「不適切な」** (これらの属性の既定値)。 これはグローバル宣言であり、すべてのローカル要素に影響を与えます (**\<注文 >** スキーマで) と属性 (**[得意先コード]**、 **[担当者名]**、および **[受注コード]** スキーマで)。  
@@ -127,7 +127,7 @@ ms.locfileid: "52793584"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、[SQLXML クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
+     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  スキーマが指定されている場合**よ**と**されていません**属性の値を持つ **「修飾」**、すべてのローカル インスタンス ドキュメントには要素および属性で修飾します。 これらの属性を含めるには、前のスキーマを変更することができます、  **\<xsd:schema >** 要素テンプレートを再度実行するとします。 この場合は、インスタンスで属性も修飾されるので、名前空間プレフィックスを含むよう XPath クエリを変更します。  
   
