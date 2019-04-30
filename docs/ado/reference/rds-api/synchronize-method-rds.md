@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134346"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize メソッド (RDS)
 ADO 2.5 以降で使用するための接続文字列で指定されたデータベースでは、特定のレコード セットを同期します。  
@@ -56,7 +56,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  同期するレコード セットへのポインター。  
   
  *pStatusArray*  
- 影響を受ける行の行の状態のセーフ配列を返すために使用バリアントを同期します。 未設定、次の同期オプションのいずれも設定されている場合: *RefreshWithUpdate*、*更新*と*RefreshConflicts*します。  
+ 影響を受ける行の行の状態のセーフ配列を返すために使用バリアントを同期します。 次の同期オプションのいずれも設定されている場合を設定できません。*RefreshWithUpdate*、*更新*と*RefreshConflicts*します。  
   
  *lcid*  
  返されるエラーをビルドするために使用、LCID *pInformation*します。  

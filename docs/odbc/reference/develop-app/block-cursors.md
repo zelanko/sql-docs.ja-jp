@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199292"
 ---
 # <a name="block-cursors"></a>ブロック カーソル
 多くのアプリケーションでは、かなりのネットワーク経由でデータを取り込む時間を費やしています。 この時間の一部では、実際には、ネットワーク経由でデータを取り込むに費やされ、行のデータを要求する、ドライバーによって行われた呼び出しなどの一部がネットワークのオーバーヘッドに費やされました。 アプリケーションが効率的に使用した場合、後者の時間を短縮できます。*ブロック、* または*fat、* *カーソル、* を一度に 1 つ以上の行を返すことができます。  
@@ -29,7 +29,7 @@ ms.locfileid: "52504684"
   
  ブロック カーソルを 1 回のフェッチで返される行が呼び出される、*行セット*します。 結果セットの行セットを混同しないように重要です。 アプリケーション バッファーに行セットを保持したまま、結果セットは、データ ソースで保持されます。 結果セットを固定すると、行セットがない - 位置を変更し、内容を毎回新しい一連の行がフェッチされます。 ブロック カーソルとして考えることができますが、行セットを指す、単一行には、現在の行には、従来の SQL 順方向専用カーソル ポイントなどのカーソルが、同様*現在行*します。  
   
- 複数の行がフェッチされたときに 1 つの行で動作する操作を実行するには、アプリケーションする必要がありますまずを示しますが、現在の行の行。 呼び出して、現在の行が必要な**SQLGetData**と更新プログラムを配置および delete ステートメント。 最初に、ブロック カーソルでは、行セットが戻るときに現在の行が行セットの最初の行にします。 現在の行では、アプリケーション呼び出しを変更する**SQLSetPos**または**SQLBulkOperations** (ブックマークによる更新) します。 次の図は、結果セット、行セット、現在の行、行セットのカーソル、およびブロック カーソルとの関係を示します。 詳細については、[ブロック カーソルを使用して](../../../odbc/reference/develop-app/using-block-cursors.md)は、このセクションでは、後半と[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)と[SQLSetPos によるデータの更新](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)を参照してください。  
+ 複数の行がフェッチされたときに 1 つの行で動作する操作を実行するには、アプリケーションする必要がありますまずを示しますが、現在の行の行。 呼び出して、現在の行が必要な**SQLGetData**と更新プログラムを配置および delete ステートメント。 最初に、ブロック カーソルでは、行セットが戻るときに現在の行が行セットの最初の行にします。 現在の行では、アプリケーション呼び出しを変更する**SQLSetPos**または**SQLBulkOperations** (ブックマークによる更新) します。 次の図は、結果セット、行セット、現在の行、行セットのカーソル、およびブロック カーソルとの関係を示します。 詳細については、次を参照してください。[ブロック カーソルを使用して](../../../odbc/reference/develop-app/using-block-cursors.md)は、このセクションでは、後半と[配置の更新と削除ステートメント](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md)と[SQLSetPos によるデータの更新](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)します。  
   
  ![次に、前に、最初と最後の行セットのフェッチ](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   

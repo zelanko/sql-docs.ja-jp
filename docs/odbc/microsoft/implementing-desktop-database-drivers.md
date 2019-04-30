@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127257"
 ---
 # <a name="implementing-desktop-database-drivers"></a>デスクトップ データベース ドライバーの実装
 手順とテクニカル ノートを実装し、Microsoft ODBC のデスクトップ データベース ドライバーを設定する方法の詳細については、ODBC データ ソース アドミニストレーターのオンライン ヘルプで確認できます。 このファイルからドライバーのセットアップ ルーチンにアクセスできる、 [Microsoft ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)します。  

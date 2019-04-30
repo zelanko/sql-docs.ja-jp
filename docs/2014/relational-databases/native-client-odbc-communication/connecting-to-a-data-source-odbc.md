@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63075187"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>データ ソースへの接続 (ODBC)
   アプリケーションは、環境ハンドルと接続ハンドルを割り当て、任意の接続属性を設定してから、データ ソースまたはドライバーに接続します。 接続には、次の 3 つの関数を使用できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "48185722"
   
 -   **SQLBrowseConnect**  
   
- 使用可能なさまざまな接続文字列オプションを含む、データ ソースへの接続の詳細については、[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)を参照してください。  
+ 使用可能なさまざまな接続文字列オプションを含む、データ ソースへの接続の詳細については、次を参照してください。[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
   
 ## <a name="sqlconnect"></a>SQLConnect  
  **SQLConnect**は最も簡単な接続関数です。 この関数は、データ ソース名、ユーザー ID、パスワードの 3 つのパラメーターを受け取ります。 使用**SQLConnect**ときにこれら 3 つのパラメーターは、データベースへの接続に必要なすべての情報を含めることができます。 これを行うには、ビルドを使用してデータ ソースの一覧**SQLDataSources**; データ ソース、ユーザー ID、およびパスワードの入力を求めますを呼び出して**SQLConnect**します。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188921"
 ---
 # <a name="interval-data-type-length"></a>Interval データ型の長さ
 次の規則は、文字間隔のデータ型の長さを決定に使用されます。 長さは、文字数で表されます。 バイト数は、文字セットに依存します。 長さには、次の値一緒に追加にはが含まれています。  

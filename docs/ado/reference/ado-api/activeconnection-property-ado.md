@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 951f43a2842162aa00f664dc83b754d06d8aafb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065540"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
 先を示します[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの指定した[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが現在属しています。  
@@ -66,7 +66,7 @@ ms.locfileid: "47684340"
  A**接続**オブジェクトが暗黙的に作成されるときに、**レコード**オブジェクトは、URL から開きます。 開く、**レコード**開き、既存の**接続**オブジェクトを割り当てることによって、**接続**オブジェクトをこのプロパティは、またはを使用して、 **の接続**オブジェクト内のパラメーターとして、[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッドの呼び出し。 場合、**レコード**を既存の開いた**レコード**または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)が自動的に関連付けられている**レコード**または**レコード セット**オブジェクトの**接続**オブジェクト。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
   

@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162106"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションの 4 つの主要な ADO 操作の各ステップ: を取得する、確認、編集、およびデータを更新します。 これらの操作は、Microsoft® SQL Server に含まれている Northwind サンプル データベースに対して実行されます。 ADO の基礎に注目して、コードの煩雑さを回避するには、エラー処理の例では最小限です。  
   
 ### <a name="to-run-hellodata"></a>HelloData を実行するには  
   
-1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、[ADO ライブラリを参照する](../../../ado/guide/referencing-the-ado-libraries.md)を参照してください。  
+1.  ADO ライブラリを参照する新しい標準 EXE Visual Basic プロジェクトを作成します。 詳細については、次を参照してください。 [ADO ライブラリを参照する](../../../ado/guide/referencing-the-ado-libraries.md)します。  
   
 2.  フォームの上部にある 4 つのコマンド ボタンを作成、**名前**と**キャプション**プロパティの値をこのトピックの最後にある表に示すようにします。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "47624680"
 > [!NOTE]
 >  次の例と、このガイドでは、ユーザー id"123 abc"のパスワードを使用して「MyId」が、サーバーに対する認証に使用されます。 サーバーの有効なログオンの資格情報でこれらの値を置き換える必要があります。 また、サーバーの名前を持つ"MySQLServer"値に置き換えてください。  
   
- コードの詳細については、[HelloData に関するコメント](../../../ado/guide/data/comments-on-hellodata.md)を参照してください。  
+ コードの詳細については、次を参照してください。 [HelloData に関するコメント](../../../ado/guide/data/comments-on-hellodata.md)します。  
   
  ![HelloData VB アプリケーションの Form1 を示しています](../../../ado/guide/data/media/hellodata.gif "HelloData。")  
   

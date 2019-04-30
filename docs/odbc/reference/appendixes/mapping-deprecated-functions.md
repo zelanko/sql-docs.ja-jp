@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181318"
 ---
 # <a name="mapping-deprecated-functions"></a>非推奨の関数のマッピング
 このセクションには、どのように非推奨の関数がについて説明します、ODBC 3 によってマップされます *.x* ODBC 3 の旧バージョンとの互換性を保証するために、ドライバー マネージャー *.x*ドライバーは ODBC 2 で使用される *。x*アプリケーション。 ドライバー マネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ため、各 ODBC 2。*x*関数は、次の一覧は、対応する ODBC 3 にマップされて *.x*関数、ODBC 3 で呼び出されると *.x*ドライバー、ODBC 3 *.x*ドライバーは、ODBC 2 を実装する必要はありません。*x*関数。  
@@ -39,7 +39,7 @@ ms.locfileid: "47818373"
 |**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
-|**Sqlerror 関数**|**SQLGetDiagRec**|  
+|**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
 |**SQLFreeStmt**で、*オプション*SQL_DROP の|**SQLFreeHandle**|  

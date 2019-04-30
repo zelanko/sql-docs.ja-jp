@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bfb6ff3ba39400278db23931b4c9420e506c973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127944"
 ---
 # <a name="scalar-function-limitations"></a>スカラー関数の制限事項
 スカラー関数は、ODBC の正規の形式を使用してでのみサポートされます。

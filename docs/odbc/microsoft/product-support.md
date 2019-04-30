@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a52573ce455fc19b776143ce009c5fc89ef9523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200467"
 ---
 # <a name="product-support"></a>製品のサポート
 ODBC の製品サポートは、マイクロソフト製品サポート サービスによって提供されます。 多くの Microsoft 製品が主要なコンポーネントとして ODBC を使用して、ODBC ドライバーを再配布もため、マイクロソフト製品サポート サービスは、コンポーネントとして ODBC が組み込まれている各製品の一部として ODBC を考慮します。 サポートする製品のサポート契約に従って ODBC が提供されます。 詳細については、個々 の製品ドキュメントを参照してください。

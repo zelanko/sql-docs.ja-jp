@@ -1,5 +1,5 @@
 ---
-title: 例 :OPENXML の使用 |Microsoft Docs
+title: '例 : OPENXML の使用 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205108"
 ---
 # <a name="examples-using-openxml"></a>例 :OPENXML の使用
   このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](specify-metaproperties-in-openxml.md)」を参照してください。  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 CustomerID ContactName            
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 CustomerID ContactName            
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 oid   amount        comment  
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 oid   date                        amount  
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 結果はエッジ テーブルとして返されます。 エッジ テーブルに対するクエリを作成して、情報を取得できます。 例 :  
+ 結果はエッジ テーブルとして返されます。 エッジ テーブルに対するクエリを作成して、情報を取得できます。 以下に例を示します。  
   
 -   次のクエリにより、ドキュメント内の **Customer** ノードの数が返されます。 WITH 句が指定されていないので、OPENXML からエッジ テーブルが返されます。 SELECT ステートメントにより、エッジ テーブルへのクエリが実行されます。  
   
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 ProdID      Qty         OID  
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 複数のテキスト ノードを含む XML ドキュメントの指定  
- XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例 :  
+ XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 以下に例を示します。  
   
 ```  
 DECLARE @h int  
@@ -578,7 +578,7 @@ EXEC sp_xml_removedocument @h
   
  具体的には、**xml** 型の変数 (\@x) を **sp_xml_preparedocument()** 関数に渡しています。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 id  lname   xmlname                   OverFlow  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a083f9d411474769335fdfae32bd59dfe455a9f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184922"
 ---
 # <a name="using-bookmarks"></a>ブックマークを使用する
 移動した後、特定のレコードに直接戻ると便利です、 **Recordset**すべてのレコードをスクロールし、値を比較する必要はありません。 たとえばを使用してレコードを検索しようとした場合、**検索**メソッドが、検索、レコードが返されない、いずれかの端に自動的に、**レコード セット**。 使用する前に、お客様の場所をマークするブックマークを使用できる、プロバイダーは、それらをサポートする場合、**検索**メソッドの場所に戻れるようにします。 ブックマークは、**バリアント**内のレコードを一意に識別する値を入力、**レコード セット**オブジェクト。  

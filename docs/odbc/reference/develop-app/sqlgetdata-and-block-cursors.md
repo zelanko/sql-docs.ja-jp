@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a14c98f045fd974b404209cc998496dc5fa7193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149076"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData およびブロック カーソル
 **SQLGetData**は 1 つの行の 1 つの列を操作し、複数の行からデータを格納する配列をフェッチできません。 これは、プライマリの使用のため**SQLGetData**パートでは、長い形式のデータをフェッチするには、一度に 1 つ以上の行に対して行うほとんどまたはまったくない理由があるとします。  

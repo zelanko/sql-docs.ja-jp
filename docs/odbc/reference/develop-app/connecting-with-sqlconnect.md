@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042742"
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect による接続
 **SQLConnect**は最も簡単な接続関数です。 データ ソース名が必要ですし、省略可能なユーザー ID とパスワードを受け付けます。 ハードコードされたデータ ソース名、ユーザー ID またはパスワードが必要としないアプリケーションに対して適切に機能します。 また、独自「ルック アンド フィール」を制御する必要があるアプリケーションまたはそのユーザー インターフェイスのないにもでも機能します。 このようなアプリケーションを使用してデータ ソースの一覧を構築できます**SQLDataSources**、データ ソース、ユーザー ID、およびパスワードをユーザーに確認し、呼び出す**SQLConnect**します。  

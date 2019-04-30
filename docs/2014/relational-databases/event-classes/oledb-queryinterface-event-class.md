@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032423"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface イベント クラス
   **OLEDB QueryInterface** イベント クラスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から分散クエリやリモート ストアド プロシージャの **OLE DB QueryInterface** 呼び出しが行われるときに発生します。 このイベント クラスは、分散クエリやリモート ストアド プロシージャに関連する問題を監視するトレースに含めます。  

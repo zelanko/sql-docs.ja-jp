@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dc88892fab2fd18dbcbec5ce54fa09c9c9b89e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199382"
 ---
 # <a name="result-set-metadata"></a>結果セットのメタデータ
 *メタデータ*はその他のデータを表すデータです。 たとえば、結果セットのメタデータには、結果セット内の列の数、それらの列、その名前、有効桁数、null 許容属性、およびなどのデータ型など、結果セットがについて説明します。  

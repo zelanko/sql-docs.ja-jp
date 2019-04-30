@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199378"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>名前によるパラメーターのバインド (名前付きパラメーター)
 特定の Dbms では、アプリケーションの代わりに、プロシージャの呼び出し内の位置での名前でストアド プロシージャにパラメーターを指定します。 このようなパラメーターが呼び出される*名前付きパラメーター*します。 ODBC では、名前付きパラメーターの使用をサポートします。 ODBC では、名前付きパラメーターはストアド プロシージャの呼び出しでのみ使用され、その他の SQL ステートメントでは使用できません。  

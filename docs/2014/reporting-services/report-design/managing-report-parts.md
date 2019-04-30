@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209274"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
   以降で[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、レポート パーツをレポート サーバーにパブリッシュおよび適切なアクセス許可がある場合に、その他のレポートおよび他のユーザーを再利用できます。  

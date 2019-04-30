@@ -15,11 +15,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: cda6719eb46a4a05222bd54062e6cab98459d7dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181769"
 ---
 # <a name="parameter-markers"></a>パラメーター マーカー
 SQL 92 の仕様に従って、アプリケーションは、次の場所にパラメーター マーカーを配置できません。 詳細な一覧は、SQL 92 仕様を参照してください。  
@@ -40,4 +40,4 @@ SQL 92 の仕様に従って、アプリケーションは、次の場所にパ�
   
 -   引数として、*セットの参照関数*  
   
- パラメーター マーカーの詳細については、SQL 92 仕様を参照してください。 パラメーターの詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)を参照してください。
+ パラメーター マーカーの詳細については、SQL 92 仕様を参照してください。 パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。

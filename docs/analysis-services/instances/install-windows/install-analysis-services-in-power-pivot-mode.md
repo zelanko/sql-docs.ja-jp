@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054807"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Power Pivot モードでの Analysis Services のインストール
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "52527751"
 6.  「 [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md)」で、リリース ノートを確認します。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
- ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションでサポートされる Analysis Services 機能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)と[エディションと SQL Server 2016 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)を参照してください。  
+ ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、次を参照してください。 [SQL Server 2016 の各エディションでサポートされる Analysis Services 機能](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)と[エディションと SQL Server 2016 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
-##  <a name="InstallSQL"></a> 手順 1:Power Pivot for SharePoint をインストールします。  
+##  <a name="InstallSQL"></a> ステップ 1:Power Pivot for SharePoint をインストールします。  
  この手順では、SQL Server セットアップを実行して、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーをインストールします。 後の手順で、このサーバーをブックのデータ モデルで使用するように Excel Services を構成します。  
   
 1.  SQL Server インストール ウィザード (Setup.exe) を実行します。  
@@ -139,7 +139,7 @@ ms.locfileid: "52527751"
   
 3.  Analysis Services インスタンス (たとえば、**[サーバー名]\POWERPIVOT**) に接続します。 インスタンスに接続できたら、サービスが実行されていることがわかります。  
   
-##  <a name="bkmk_config"></a> 手順 2:基本的な Analysis Services の SharePoint 統合を構成する  
+##  <a name="bkmk_config"></a> ステップ 2:基本的な Analysis Services の SharePoint 統合を構成する  
  SharePoint ドキュメント ライブラリ内で Excel の高度なデータ モデルを操作できるようにするには、次の手順を実行して構成を変更する必要があります。 これらの手順は、SharePoint と SQL Server Analysis Services をインストールしてから実行します。  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,7 +215,7 @@ ms.locfileid: "52527751"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 手順 3:統合を確認する  
+##  <a name="bkmk_verify"></a> ステップ 3:統合を確認する  
  ここでは、Analysis Services 統合を確認するために、新しいブックを作成し、アップロードする手順を示します。 この手順を実行するには、SQL Server データベースが必要です。  
   
 1.  **注:** スライサーやフィルターが含まれた高度なブックが既にある場合は、そのブックを SharePoint ドキュメント ライブラリにアップロードし、[ドキュメント ライブラリ] ビューからスライサーとフィルターを操作できるかどうかを確認します。  

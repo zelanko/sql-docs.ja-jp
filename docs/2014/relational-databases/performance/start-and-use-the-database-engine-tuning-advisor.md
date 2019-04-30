@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150637"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]でデータベース エンジン チューニング アドバイザーを起動して使用する方法について説明します。 データベースをチューニングした後で結果を表示および操作する方法については、「 [データベース エンジン チューニング アドバイザーからの出力の表示および操作](database-engine-tuning-advisor.md)」を参照してください。  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  インデックス付きビューを追加するための推奨設定のみが含まれます。 クラスター化インデックスおよび非クラスター化インデックスは、推奨されません。  
   
  **フィルター選択されたインデックスを含める**  
- フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、これらの物理デザイン構造のいずれかを選択する場合に使用できます。**インデックスおよびインデックス付きビュー**、**インデックス**、または**非クラスター化インデックス**します。  
+ フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、**[インデックスおよびインデックス付きビュー]**、**[インデックス]**、または **[非クラスター化インデックス]** のいずれかの物理デザイン構造を選択した場合に使用できます。  
   
  **[インデックス]**  
  クラスター化インデックスおよび非クラスター化インデックスを追加するための推奨設定のみが含まれます。 インデックス付きビューは推奨されません。  

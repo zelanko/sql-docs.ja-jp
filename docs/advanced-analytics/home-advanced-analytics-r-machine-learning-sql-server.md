@@ -10,11 +10,11 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 20acdf2789158bf067319930a5be65770eae67f3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126845"
 ---
 # <a name="sql-server-machine-learning"></a>SQL Server Machine Learning
 
@@ -65,9 +65,9 @@ SQL Server 2019 では、Java コード実行で、R および Python と同じ�
 
 > [!VIDEO https://www.youtube.com/embed/ACejZ9optCQ]
 
-## <a name="reference"></a>参照
+## <a name="reference"></a>リファレンス
 
-| [パッケージ] | 言語 | 説明 |
+| [パッケージ] | [言語] | 説明 |
 |:--------|:---------|:------------|
 | [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | R | R タスクの分散および並列処理: データ変換、探索、視覚化、統計および予測分析。 |
 | [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | R に適合された Microsoft の AI アルゴリズムに基づいた関数。 |

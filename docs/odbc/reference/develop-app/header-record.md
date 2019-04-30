@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7b6ffacb618dd2b7714be59814f3f1a88a52228
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208490"
 ---
 # <a name="header-record"></a>ヘッダー レコード
 ヘッダー レコード内のフィールドには、リターン コード、行の数、実行されるステートメントの状態のレコードの数と種類などの関数の実行に関する一般的な情報が含まれています。 関数から SQL_INVALID_HANDLE が返さしない限り、ヘッダー レコードが常に作成されます。 ヘッダー レコードのフィールドの完全な一覧を参照してください、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。

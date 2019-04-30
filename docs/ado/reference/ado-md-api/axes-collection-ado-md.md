@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb700997165ceeb6d300f6332c9e758706c0fbc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062600"
 ---
 # <a name="axes-collection-ado-md"></a>Axes コレクション (ADO MD)
 含まれています、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)セル セットを定義するオブジェクト。  

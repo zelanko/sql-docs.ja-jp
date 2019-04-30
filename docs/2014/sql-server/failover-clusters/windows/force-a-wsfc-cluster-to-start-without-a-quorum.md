@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049485"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
   このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、ディザスター リカバリーとマルチサブネットのシナリオにおいて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
   
--   **開始する前に。**[推奨事項](#Recommendations)、[セキュリティ](#Security)  
+-   **開始前の準備:** [推奨事項](#Recommendations)、[セキュリティ](#Security)  
   
 -   **クラスター クォーラムを使用せずを起動させるには。**[フェールオーバー クラスター マネージャーを使用して](#FailoverClusterManagerProcedure)、 [Powershell を使用して](#PowerShellProcedure)、 [Net.exe の使用](#CommandPromptProcedure)  
   
--   **フォローしてください：**[補足情報:クラスターを強制的にクォーラムを使用せずに開始した後](#FollowUp)  
+-   **フォローしてください：**[フォローしてください：クラスターを強制的にクォーラムを使用せずに開始した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始前の準備  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> フォローしてください：クラスターを強制的にクォーラムを使用せずに開始した後  
+##  <a name="FollowUp"></a>補足情報: クラスターを強制的にクォーラムを使用せずに開始した後  
   
 -   他のノードをオンラインに戻す前に、NodeWeight の値を再評価および再構成して、新しいクォーラムを正しく構築する必要があります。 この処理を行わないと、クラスターが再びオフラインに戻る場合があります。  
   

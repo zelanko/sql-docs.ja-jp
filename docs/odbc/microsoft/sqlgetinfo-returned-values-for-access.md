@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135310"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo で Access に返される値
 次の表に、C 言語 # の defines、 *fInfoType*引数と対応する値によって返される**SQLGetInfo**します。 この情報を一覧表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 *ODBC プログラマ リファレンス*します。  
@@ -84,7 +84,7 @@ ms.locfileid: "47826260"
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_DATA_SOURCE_NAME|Odbc.ini の DSN または""Odbc.ini で DRIVER キーワードを使用する場合|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|[ファイル名]|  
+|SQL_DATABASE_NAME|ファイル名|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|「アクセス」|  
 |SQL_DBMS_VER|[複数の値]|  
@@ -142,7 +142,7 @@ ms.locfileid: "47826260"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_ への準拠|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|ドライバー マネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  

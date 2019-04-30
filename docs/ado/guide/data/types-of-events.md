@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142941"
 ---
 # <a name="types-of-events"></a>イベントの種類
 2 つのイベントの種類があります。 「イベントは」操作を開始する前に呼び出されなどの名前に「は」は、通常**WillChangeRecordset**または**WillConnect**します。 イベントが通常は完了した後に呼び出されるイベントを含める"Complete"の名前になど**RecordChangeComplete**または**ConnectComplete**します。 例外の存在 - など**InfoMessage** - が関連付けられている操作が完了した後にこれらが発生します。  

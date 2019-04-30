@@ -14,23 +14,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213326"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:[レベル 1]  
   
  Visual FoxPro ODBC ドライバーと、接続ハンドルに関連付けられているデータ ソースに関する一般的な情報を返します*hdbc*します。 次の一覧には、各 Visual FoxPro ODBC ドライバーによって返される値が表示されます。 *fInfoType*引数と戻り値に関するコメント。  
   
- 詳細については、[SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。  
+ 詳細については、次を参照してください。 [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md)で、 *ODBC プログラマ リファレンス*します。  
   
 ## <a name="a"></a>A  
  SQL_ACCESSIBLE_PROCEDURES 返します 'N' です。  
@@ -146,7 +146,7 @@ ms.locfileid: "47855420"
   
  SQL_FILE_USAGE では、データベース (.dbc ファイル) の両方の SQL_FILE_QUALIFIER を取得し、テーブル (.dbf ファイル) のデータ ソースの無料します。  
   
-## <a name="g-h"></a>G H  
+## <a name="g-h"></a>G-H  
  SQL_GETDATA_EXENSIONS が返されます。  
   
 -   SQL_GD_ANY_COLUMN  
@@ -384,7 +384,7 @@ ms.locfileid: "47855420"
   
  SQL_TIMEDATE_ADD_INTERVALS が返されます。  
   
--   SQL_FN_TSI_ 秒  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -406,7 +406,7 @@ ms.locfileid: "47855420"
   
  SQL_TIMEDATE_DIFF_INTERVALS が返されます。  
   
--   SQL_FN_TSI_ 秒  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   

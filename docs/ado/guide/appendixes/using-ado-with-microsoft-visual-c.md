@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5c01c1b764ad09243ce20d25997036c38d167b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199844"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Microsoft Visual C++ での ADO の使用
 Visual C で ADO を使用する方法の詳細については、次のセクションを参照してください。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2cd892ad41beba2b5715b3a7186ae5e44bb7911
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206357"
 ---
 # <a name="about-sql-server-analysis-services"></a>SQL Server Analysis Services の概要
 
@@ -43,7 +43,7 @@ Analysis Services は、2 つの異なるプラットフォームで使用でき
 - [開発者向けドキュメント](analysis-services-developer-documentation.md)
 - [テクニカル リファレンス](https://docs.microsoft.com/bi-reference/)
 
-#### <a name="see-also"></a>関連項目
+#### <a name="see-also"></a>参照
 
 [Azure Analysis Services のドキュメント](https://docs.microsoft.com/azure/analysis-services/)
 [SQL Server のドキュメント](../sql-server/sql-server-technical-documentation.md)

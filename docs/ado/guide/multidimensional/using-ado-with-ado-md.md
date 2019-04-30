@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69707e5026497a1f98ab168d71b4e6b286520fbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194902"
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD と ADO の併用
 ADO および ADO MD は、関連するが、別のオブジェクト モデルです。 ADO では、データ ソースへの接続、コマンドを実行する、表形式のデータと表形式のスキーマのメタデータの取得、およびプロバイダーのエラー情報を表示するためのオブジェクトを提供します。 ADO MD では、多次元データを取得し、マルチ ディメンション スキーマのメタデータを表示するためのオブジェクトを提供します。  
@@ -43,7 +43,7 @@ ADO および ADO MD は、関連するが、別のオブジェクト モデル�
   
  ADO の列挙値の ADO MD のプロパティまたはメソッドを使用するには、プロジェクトは、ADO MD と ADO ライブラリを参照する必要があります。 たとえば、ADO を使用することができます**adState** ADO md の列挙値[状態](../../../ado/reference/ado-md-api/state-property-ado-md.md)プロパティ。 ライブラリへの参照を確立する方法の詳細については、開発ツールのドキュメントを参照してください。  
   
- ADO オブジェクトやメソッドの詳細については、、 [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)を参照してください。  
+ ADO オブジェクトやメソッドの詳細については、次を参照してください。、 [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

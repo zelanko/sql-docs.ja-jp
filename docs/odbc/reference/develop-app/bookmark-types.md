@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f5c5a126ea220f055349ad00dc950281606ed4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199245"
 ---
 # <a name="bookmark-types"></a>ブックマークの種類
 ODBC 3 のすべてのブックマーク *.x*は可変長のブックマーク。 これにより、プライマリ キーまたはブックマークとして使用するテーブルに関連付けられている一意のインデックス。 ブックマークも値を指定できます 32 ビット、ODBC 2 で使用されていたとします。*x*します。 カーソルでは、ODBC 3 は、ブックマークが使用されることを指定する *.x* SQL_UB_VARIABLE にアプリケーションが SQL_ATTR_USE_BOOKMARK ステートメント属性を設定します。 可変長のブックマークが自動的に使用します。  

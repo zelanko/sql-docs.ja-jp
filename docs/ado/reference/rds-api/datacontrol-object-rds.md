@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134416"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl オブジェクト (RDS)
 データのクエリをバインド[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を 1 つまたは複数のコントロール (たとえば、テキスト ボックス、取引先グリッド コントロール、またはコンボ ボックス) を表示する、**レコード セット**Web ページ上のデータ。  

@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046155"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
   フルテキスト インデックスの作成と保持では、 *作成* (または *クロール*) と呼ばれるプロセスを使用してインデックスが作成されます。  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> フルテキスト作成 (クロール) でエラーのトラブルシューティング  
  クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 この場合は、特定のインスタンスに対して既定のクロール ログでは、最初のインスタンスが %programfiles%\microsoft SQL Server\MSSQL12 に配置が。MSSQLSERVER\MSSQL\LOG フォルダーです。 クロール ログは次のような規則に従って命名されます。  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >。ログ [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  データベースの ID です。 <`dbid`> は 5 桁のゼロで始まる番号。  

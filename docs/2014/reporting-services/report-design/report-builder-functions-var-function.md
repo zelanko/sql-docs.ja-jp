@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 920fc72443036328e4ac5c9181c479b2900d84fc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215270"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の分散を、指定されたスコープで評価して返します。  

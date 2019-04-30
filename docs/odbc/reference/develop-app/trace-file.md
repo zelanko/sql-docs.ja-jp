@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e0ca79b64cafcd2ac34c14af120f29781a7ae22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148919"
 ---
 # <a name="trace-file"></a>トレース ファイル
 アプリケーション ファイルを指定します、トレースを設定するか、 **TraceFile**キーワード Odbc.ini のレジストリ エントリで、または呼び出すことによって**SQLSetConnectAttr** SQL_ATTR_TRACEFILE 接続属性を持つ。 トレースが有効にすると、ファイルが存在しない場合、ドライバー マネージャーは、ファイルを作成します。 各アプリケーションの競合を回避するために、独自の専用のトレース ファイルが必要です。 アプリケーションが複数のトレース ファイルを使用できます。アプリケーションのセットアップ プログラムは、トレース ファイルの選択肢をユーザーに提供できます。 トレースが動的に有効な場合、アプリケーションも表示できますログ記録ではなく、トレース結果トレース ファイルに。  

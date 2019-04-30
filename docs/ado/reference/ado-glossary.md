@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206369"
 ---
 # <a name="ado-glossary"></a>ADO の用語集
 このトピックでは、ADO に関連する用語を定義します。  
@@ -160,7 +160,7 @@ ms.locfileid: "52530390"
  データ プロバイダーまたはカーソル サービスに固有のプロパティ。 **プロパティ**オブジェクトのコレクションが自動的に入力されます (「動的」)。 特定のデータ プロバイダーを介してデータ ソースに接続されるまでオブジェクトの動的プロパティがありません。 参照データ プロバイダー、カーソル。  
   
 ## <a name="e"></a>E  
- 列挙型  
+ 列挙値  
  名前付き定数のリスト。 列挙値は一意でない必要があります。 ただし各値の名前は、列挙が定義されているスコープ内で一意である必要があります。 ADO では、列挙型は数値パラメーターは使用され、ADO のコードに意味を追加して、開発者が数値 (これは、バージョンを変更することがあります) をシールドする値を返します。 たとえば、静的なを開く**レコード セット**を使用して、 **adOpenStatic**列挙値。 `Recordset.Open ,,adOpenStatic`  
   
  呼ば*列挙型定数*します。 参照してください*定数*します。  
@@ -178,7 +178,7 @@ ms.locfileid: "52530390"
  階層レコード セット  
  A **Recordset**別の操作を含む**レコード セット**します。 データ シェイプの章を参照してください。  
   
- 詳細については、[階層レコード セットの行にアクセスする](../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)を参照してください。  
+ 詳細については、次を参照してください。[階層レコード セットの行にアクセスする](../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)します。  
   
  階層 (hierarchy)  
  階層と top を含むランク付けされた構造体は、一般に、レベルし、下位レベル。 ADO では、階層で**レコード セット**レコードと章の間の親子リレーションシップを表すために使用します。 ADO でも**レコード**と**Stream**オブジェクトは、フォルダーやドキュメントなどの階層ツリーの構造体へのアクセスに使用できます。 ADO MD も含まれています。**階層**OLAP キューブのディメンションのレベル間のリレーションシップを表すオブジェクト。 階層レコード セット、親子リレーションシップ、章、ツリーを参照してください。  

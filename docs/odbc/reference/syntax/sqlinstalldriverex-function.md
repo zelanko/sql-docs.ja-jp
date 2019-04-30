@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132717"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 関数
 **準拠**  
@@ -54,7 +54,7 @@ BOOL SQLInstallDriverEx(
   
 ## <a name="arguments"></a>引数  
  *lpszDriver*  
- [入力]物理ドライバー名の代わりにユーザーに表示されるドライバーの名前 (通常は、関連付けられている DBMS の名前)。 *LpszDriver*引数は、二重の null で終わる、ドライバーを記述するキーワードと値のペアの一覧を含める必要があります。 キーワードと値のペアの詳細については、[ドライバーの仕様のサブキー](../../../odbc/reference/install/driver-specification-subkeys.md)を参照してください。 二重の null で終わる文字列の詳細については、[ConfigDSN 関数](../../../odbc/reference/syntax/configdsn-function.md)を参照してください。  
+ [入力]物理ドライバー名の代わりにユーザーに表示されるドライバーの名前 (通常は、関連付けられている DBMS の名前)。 *LpszDriver*引数は、二重の null で終わる、ドライバーを記述するキーワードと値のペアの一覧を含める必要があります。 キーワードと値のペアの詳細については、次を参照してください。[ドライバーの仕様のサブキー](../../../odbc/reference/install/driver-specification-subkeys.md)します。 二重の null で終わる文字列の詳細については、次を参照してください。 [ConfigDSN 関数](../../../odbc/reference/syntax/configdsn-function.md)します。  
   
  *lpszPathIn*  
  [入力]インストール、または null ポインターのターゲット ディレクトリの完全パス。 場合*lpszPathIn* null ポインターの場合は、ドライバーはシステム ディレクトリにインストールされます。  
@@ -68,7 +68,7 @@ BOOL SQLInstallDriverEx(
  *pcbPathOut*  
  [出力]\(Null 終了文字を除く) バイトの合計数で返される使用可能な*lpszPathOut*です。 返される使用可能なバイト数がより大きいかに等しい場合*cbPathOutMax*、出力パス*lpszPathOut*に切り捨てられます*cbPathOutMax*マイナス、null 終了文字です。 *PcbPathOut*引数が null ポインターを指定できます。  
   
- *起こり*  
+ *fRequest*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
   
  ODBC_INSTALL_INQUIRY:ドライバーをインストールできる場所について照会します。  
@@ -102,7 +102,7 @@ BOOL SQLInstallDriverEx(
   
  _ドライバー desc_ **\\**0Driver**=**_ドライバー-filename DLL_ **\\**0 [セットアップ**=**_セットアップ-filename DLL_<b>\\</b>0]  
   
- [_ドライバー-attr-keyword1_**=**_value1_<b>\\</b>0] [_ドライバー-attr-keyword2_ **=** _value2_<b>\\</b>0].<b> \\ </b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  \0 の null バイトがあると*ドライバー-attr-keywordn*ドライバー属性のいずれかのキーワードは、します。 キーワードは、指定した順序で表示する必要があります。 たとえば、書式設定されたテキスト ファイル用のドライバーが個別のドライバーと Dll のセットアップとし、.txt および .csv の拡張子を持つファイルを使用できます。 *LpszDriver*引数のこのドライバーで次のようにある可能性があります。  
   
@@ -124,7 +124,7 @@ SQL Server\0Driver=SQLSRVR.DLL\0\0
  アプリケーションのセットアップ プログラムは、物理的にドライバー ファイルをコピーし、ファイルの使用率カウントを維持します。 ドライバー ファイルが以前インストールされていない場合、アプリケーションのセットアップ プログラムがでファイルをコピーする必要があります、 *lpszPathIn*パスとファイルの使用率カウントを作成します。 セットアップ プログラムは、ファイルが既にインストールされている場合、単ファイルの使用率カウントをインクリメントし、以前のインストールでのパスを返します、 *lpszPathOut*引数。  
   
 > [!NOTE]  
->  使用状況カウントがコンポーネントと使用状況カウントがファイルの詳細については、[使用状況のカウント](../../../odbc/reference/install/usage-counting.md)を参照してください。  
+>  使用状況カウントがコンポーネントと使用状況カウントがファイルの詳細については、次を参照してください。[使用状況のカウント](../../../odbc/reference/install/usage-counting.md)します。  
   
  場合は、アプリケーションでは、以前のバージョンのドライバー ファイルがインストールされていた、ドライバーをアンインストールし、再インストール、ドライバー コンポーネントの使用率カウントは有効なようにする必要があります。 **SQLConfigDriver** (で、*起こり*ODBC_REMOVE_DRIVER の) 必要がありますまず呼び出され、し**SQLRemoveDriver**コンポーネントの使用率カウントをデクリメントを呼び出す必要があります。 **SQLInstallDriverEx**し、コンポーネントの使用率カウントをインクリメント、ドライバを再インストールを呼び出す必要があります。 アプリケーションのセットアップ プログラムは、古いファイルを新しいファイルに置き換える必要があります。 ファイルの使用率カウントは同じですが、引き続き、以前のバージョンのファイルを使用して、他のアプリケーションは、新しいバージョンを使用してようになりました。  
   

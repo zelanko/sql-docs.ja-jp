@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76c2e4673d9b561aeb5af3e61e1e4dc8532195d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201591"
 ---
-# <a name="c-to-sql-binary"></a>C から SQL へ: バイナリ
+# <a name="c-to-sql-binary"></a>C から SQL へ: Binary
 バイナリの ODBC C データ型の識別子です。  
   
  SQL_C_BINARY  
   
- 次の表は、ODBC SQL データ型が C のバイナリ データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)を参照してください。  
+ 次の表は、ODBC SQL データ型が C のバイナリ データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  

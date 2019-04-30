@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188809"
 ---
 # <a name="like-escape-sequence"></a>LIKE エスケープ シーケンス
 ODBC では、LIKE 句のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
@@ -29,7 +29,7 @@ ODBC では、LIKE 句のエスケープ シーケンスを使用します。 �
 {'escape-character'}  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  BNF 表記では、構文がとおりです。  
   
  *ODBC のエスケープ似た*:: =  

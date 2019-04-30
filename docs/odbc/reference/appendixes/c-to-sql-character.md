@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0158da62ed360e926cdb5382b89b1491c0723550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201623"
 ---
 # <a name="c-to-sql-character"></a>C から SQL へ: 文字
 ODBC C データ型の文字の識別子は次のとおりです。  
@@ -29,7 +29,7 @@ ODBC C データ型の文字の識別子は次のとおりです。
   
  SQL_C_WCHAR  
   
- 次の表は、ODBC SQL データ型が C の文字データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)を参照してください。  
+ 次の表は、ODBC SQL データ型が C の文字データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
   
 > [!NOTE]  
 >  文字データが Unicode SQL データに変換されると、Unicode データの長さは偶数である必要があります。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159344"
 ---
 # <a name="set-exact-command"></a>SET EXACT コマンド
 異なる長さの 2 つの文字列を比較するための規則を指定します。  
@@ -56,7 +56,7 @@ SET EXACT ON | OFF
 |"abc"="abc"|一致|一致|一致|  
 |"ab"="abc"|一致なし|一致なし|一致なし|  
 |"abc"="ab"|一致|一致なし|一致なし|  
-|"abc"="ab_"|一致なし|一致なし|一致なし|  
+|"abc" = "ab_"|一致なし|一致なし|一致なし|  
 |"ab"="ab_"|一致なし|一致|一致なし|  
 |"ab_"="ab"|一致|一致|一致なし|  
 |"""ab"を =|一致なし|一致なし|一致なし|  
@@ -64,7 +64,7 @@ SET EXACT ON | OFF
 |"__" = ""|一致|一致|一致なし|  
 |"" = "___"|一致なし|一致|一致なし|  
 |TRIM("___") =""|一致|一致|一致|  
-|""TRIM("___") を =|一致|一致|一致|  
+|"" = TRIM("___")|一致|一致|一致|  
   
 ## <a name="see-also"></a>参照  
  [SET ANSI コマンド](../../odbc/microsoft/set-ansi-command.md)

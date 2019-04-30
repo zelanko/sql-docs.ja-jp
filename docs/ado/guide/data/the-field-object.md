@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062670"
 ---
 # <a name="the-field-object"></a>Field オブジェクト
 各**フィールド**オブジェクトは、通常、データベース テーブル内の列に対応します。 ただし、**フィールド**を別のポインターを表すことができますも**レコード セット**チャプターと呼ばれます。 チャプター列などの例外は、このガイドの後半で取り上げます。  
@@ -61,7 +61,7 @@ ms.locfileid: "52516533"
 ### <a name="determining-field-contents"></a>フィールドの内容を決定します。  
  データ ソースから列の識別子がによって表される、**名前**のプロパティ、**フィールド**します。 **値**のプロパティ、**フィールド**オブジェクトを返すか、フィールドの実際のデータの内容を設定します。 これは、既定のプロパティです。  
   
- フィールドのデータを変更するには、設定、**値**プロパティを適切な型の新しい値を等しくします。 カーソルの種類には、フィールドの内容を変更する更新をサポートする必要があります。 データベースの検証が行われないバッチ モードでを呼び出すときにエラーをチェックする必要がありますので**UpdateBatch**このような場合。 一部のプロバイダーもサポートして、ADO**フィールド**オブジェクトの**UnderlyingValue**と**OriginalValue**しようとしたときに競合を解決する際のプロパティバッチ更新を実行します。 このような競合を解決する方法の詳細については、[データを編集](../../../ado/guide/data/editing-data.md)を参照してください。  
+ フィールドのデータを変更するには、設定、**値**プロパティを適切な型の新しい値を等しくします。 カーソルの種類には、フィールドの内容を変更する更新をサポートする必要があります。 データベースの検証が行われないバッチ モードでを呼び出すときにエラーをチェックする必要がありますので**UpdateBatch**このような場合。 一部のプロバイダーもサポートして、ADO**フィールド**オブジェクトの**UnderlyingValue**と**OriginalValue**しようとしたときに競合を解決する際のプロパティバッチ更新を実行します。 このような競合を解決する方法の詳細については、次を参照してください。[データを編集](../../../ado/guide/data/editing-data.md)します。  
   
 > [!NOTE]
 >  **レコード セット フィールド**新規に追加するときに、値を設定することはできません**フィールド**を**Recordset**します。 代わりに、新しい**フィールド**追加できるを閉じている**レコード セット**します。 次に、 **Recordset**する必要がありますが、開かれているとだけ、値を割り当てるこれら**フィールド**します。  
@@ -118,4 +118,4 @@ ms.locfileid: "52516533"
   
  使用すると、現在のレコードがない場合、 **GetChunk**または**AppendChunk**メソッドを**フィールド**オブジェクト、3021 (現在のレコードがありません) エラーが発生します。  
   
- これらのメソッドを使用してバイナリ データを操作する例は、、 [AppendChunk メソッド](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk メソッド](../../../ado/reference/ado-api/getchunk-method-ado.md)の例では、 *ADO プログラマー リファレンス*を参照してください。
+ これらのメソッドを使用してバイナリ データを操作する例は、次を参照してください。、 [AppendChunk メソッド](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk メソッド](../../../ado/reference/ado-api/getchunk-method-ado.md)の例では、 *ADO プログラマー リファレンス*します。

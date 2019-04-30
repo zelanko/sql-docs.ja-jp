@@ -1,5 +1,5 @@
 ---
-title: クイック スタート:接続し、SQL Server のクエリ
+title: 'クイック スタート: 接続し、SQL Server のクエリ'
 titleSuffix: Azure Data Studio
 description: このクイック スタートは、Azure Data Studio を使用して、SQL Server に接続し、クエリを実行する方法を示しています。
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142418"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート:接続し、クエリを使用して SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: 接続し、クエリを使用して SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、[!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用する *TutorialDB* を作成します。
 
 ## <a name="prerequisites"></a>前提条件
@@ -48,7 +48,7 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
     - **ユーザー名:** SQL Server のユーザー名  
     - **パスワード:** SQL Server のパスワード  
     - **データベース名:** このフィールドを空白のままにします 
-    - **サーバー グループ:**\<Default\>  
+    - **サーバー グループ:**\<[Default]\>  
 
    ![新しい接続 画面](media/quickstart-sql-server/new-connection-screen.png)
 

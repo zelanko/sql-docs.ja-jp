@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064013"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL の保持または既定値の使用 (SQL Server)
   既定では、データをテーブルにインポートするとき、 **bcp** コマンドと BULK INSERT ステートメントによって、テーブルの列に対して定義されているすべての既定値が監視されます。 たとえば、データ ファイルに NULL フィールドがある場合は、NULL 値の代わりにその列の既定値が読み込まれます。 **bcp** コマンドと BULK INSERT ステートメントの両方で、NULL 値を保持することを指定することもできます。  
@@ -137,7 +137,7 @@ GO
 ## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>INSERT ...SELECT * FROM OPENROWSET(BULK...)  
  既定では、一括読み込み操作で指定されないすべての列が、INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してテーブルにインポートできます。ただし、データ ファイルのフィールドが空の場合、対応するテーブル列に既定値があるときはその列で既定値を使用することを指定できます。 既定値を使用するには、次のテーブル ヒントを指定します。  
   
-|コマンド|Qualifier|修飾子の種類|  
+|コマンド|修飾子|修飾子の種類|  
 |-------------|---------------|--------------------|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|テーブル ヒント|  
   
@@ -212,7 +212,7 @@ GO
 ## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [テーブル ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   

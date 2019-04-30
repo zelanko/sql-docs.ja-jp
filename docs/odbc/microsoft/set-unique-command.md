@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f58eb771245b9820e27ca4d14c2f69035effa44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159315"
 ---
 # <a name="set-unique-command"></a>SET UNIQUE コマンド
 インデックス ファイルで、重複するインデックス キー値を持つレコードが保持されるかどうかを指定します。  
@@ -38,4 +38,4 @@ SET UNIQUE ON | OFF
  (既定)。インデックス ファイルに重複するインデックス キー値を持つレコードが含まれることを指定します。  
   
 ## <a name="remarks"></a>コメント  
- インデックス ファイルでは、インデックスの再作成を発行するときに、設定の一意の設定が保持されます。 詳細については、[インデックス](../../odbc/microsoft/index-command.md)を参照してください。
+ インデックス ファイルでは、インデックスの再作成を発行するときに、設定の一意の設定が保持されます。 詳細については、次を参照してください。[インデックス](../../odbc/microsoft/index-command.md)します。

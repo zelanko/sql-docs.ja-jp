@@ -12,11 +12,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215131"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services の構成 - データ ディレクトリ
   次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルにアクセスする権限は、ローカル管理者と、セットアップ中に作成されて準備される SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "48147682"
 |Temp ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 します。\<InstanceID > \OLAP\Temp\|Temp ディレクトリは、高パフォーマンス記憶域サブシステムに配置します。|  
 |バックアップ ディレクトリ|C:\Program files \microsoft SQL Server\MSAS12 します。\<InstanceID > \OLAP\Backup\|これは、ディレクトリの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]既定のバックアップ ファイル。 PowerPivot for SharePoint のインストールでは、ここは PowerPivot System サービスが PowerPivot データ ファイルをキャッシュする場所でもあります。<br /><br /> データの損失を防ぐために適切な権限を設定し、バックアップ ディレクトリに書き込むための適切な権限が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスのユーザー グループに付与されるようにしてください。 マップされたドライブをバックアップ ディレクトリに使用することはサポートされていません。|  
   
-## <a name="notes"></a>注  
+## <a name="notes"></a>メモ  
   
 -   SharePoint ファームに配置された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスは、アプリケーション ファイル、データ ファイル、およびコンテンツ データベースのプロパティとサービス アプリケーション データベースのプロパティを格納します。  
   
