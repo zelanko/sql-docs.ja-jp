@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d0c2fa02eaf5ec72c31bd733401ff93ee259a9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754630"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453481"
 ---
 # <a name="project-settings-gui-accesstosql"></a>プロジェクトの設定 (GUI) (AccessToSQL)
 GUI プロジェクトの設定では、上のデータの表示方法を構成できる、**データ**タブとにデータを評価レポートを使用してレポートを含める場合。  
@@ -30,15 +30,15 @@ GUI のウィンドウが表示されます、**プロジェクト設定**と**�
 **ソースの行の最大数**  
 表示されるデータの行の数を設定、**データ**選択したソース テーブルのタブ。  
   
-**既定の**: 100  
+**Default**:100  
   
 **対象の行の最大数**  
 表示されるデータの行の数を設定、**データ**選択した対象テーブルのタブ。  
   
-**既定の**: 100  
+**Default**:100  
   
 **変換後のレポートを表示します。**  
 スキーマに変換した後に、レポートを表示するには、True を選択します。 結果として得られる変換レポートには、同じレイアウトと評価レポートの情報が含まれています。  
   
-**既定の**: False  
+**Default**:False  
   

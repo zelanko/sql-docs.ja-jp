@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526484"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472112"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- データベース メール プロファイルは、データベース メール アカウントの任意の数を保持します。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、[sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)を参照してください。  
+ データベース メール プロファイルは、データベース メール アカウントの任意の数を保持します。 データベース メールのストアド プロシージャでは、このプロシージャで生成されたプロファイル名またはプロファイル ID によって、プロファイルを参照できます。 アカウントをプロファイルに追加する方法の詳細については、次を参照してください。 [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)します。  
   
  プロファイルの名前と説明は、ストアド プロシージャで変更できます**sysmail_update_profile_sp**プロファイル id は変わらず、プロファイルの有効期間中に、します。  
   

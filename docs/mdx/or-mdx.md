@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278259"
 ---
-# <a name="or-mdx"></a>OR (MDX)
+# <a name="or-mdx"></a>または (MDX)
 
 
   2 つの数値式の論理和を実行します。  
@@ -30,10 +30,10 @@ Expression1 OR Expression2
   
 #### <a name="parameters"></a>パラメーター  
  Expression1  
- 数値を返す有効な多次元式 (MDX) 式です。  
+ 数値の値を返す有効な多次元式 (MDX) 式。  
   
  Expression2  
- 数値を返す有効な MDX 式です。  
+ 数値の値を返す有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
  ブール値を返す**true**にいずれかまたは両方の引数が評価される場合**true**、それ以外の**false**します。  

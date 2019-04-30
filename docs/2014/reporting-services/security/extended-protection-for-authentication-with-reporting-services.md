@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242615"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
   拡張保護は、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに追加された一連の拡張機能です。 拡張保護により、アプリケーションで資格情報と認証を保護する方法の幅が広がります。 この機能自体は、資格情報の転送をはじめとする特定の攻撃を直接防ぐものではありませんが、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] などのアプリケーションに対し、認証の拡張保護を適用するためのインフラストラクチャを提供します。  

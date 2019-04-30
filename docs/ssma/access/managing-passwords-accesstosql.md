@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: bfa7b7481589ccb636147b3842a15b92f1a59d43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540609"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453690"
 ---
 # <a name="managing-passwords-accesstosql"></a>パスワードの管理 (AccessToSQL)
 このセクションでは、データベースのパスワードとサーバー間でのエクスポートをインポートまたはプロシージャのセキュリティ保護の詳細については。  

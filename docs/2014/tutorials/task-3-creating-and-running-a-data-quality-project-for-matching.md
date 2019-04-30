@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: abca2dcf68472884eb3c1e42f0ff9c14004098c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250019"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>タスク 3:照合するデータ品質プロジェクトを作成および実行する
   ここでは、照合アクティビティ用のデータ品質プロジェクトを作成し、クレンジングされた仕入先データで照合プロセスを実行して、データ内の重複部分を削除します。  

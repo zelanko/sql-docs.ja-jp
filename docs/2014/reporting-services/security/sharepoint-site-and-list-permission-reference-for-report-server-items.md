@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a08fccd5b6739dd27fc25c87e8b6ff3facfd62e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970948"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461056"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
   ここでは、SharePoint 統合モードで動作するレポート サーバーに関して、レポート サーバー処理に対するアクセスの許可に使用できる、SharePoint の権限のリファレンス情報を提供します。 このトピックは、カスタム権限レベルを作成する場合に使用する権限を選択するのに役立ちます。  

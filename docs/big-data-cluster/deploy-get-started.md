@@ -5,16 +5,16 @@ description: 手順と SQL Server 2019 ビッグ データ クラスター (プ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860433"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472249"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターを概要します。
 
@@ -45,21 +45,23 @@ ms.locfileid: "58860433"
 
 - **Minikube**:Minikube を使用すると、1 台のサーバーで Kubernetes をローカルに実行できます。 ビッグ データ クラスターをテストするか、またはテストまたは開発のシナリオで使用する必要がある場合、有効な選択肢になります。 詳細については、Minikube を使用して、次を参照してください。、 [Minikube ドキュメント](https://kubernetes.io/docs/setup/minikube/)します。 ビッグ データ クラスターを Minikube を使用するため、特定の要件を参照してください。 [minikube の SQL Server 2019 ビッグ データ クラスターのデプロイを構成する](deploy-on-minikube.md)します。
 
-## <a name="deployment-scripts"></a>展開スクリプト
-
-配置スクリプトは、Kubernetes と 1 つのステップでのビッグ データ クラスターの両方を展開できます。 多くの場合も、必要な環境変数の既定値を指定します。 Azure Kubernetes Service (AKS) でのビッグ データ クラスターのデプロイ スクリプトの例は、次を参照してください。[デプロイ クラスター デプロイ スクリプト (AKS) でのビッグ データ、SQL Server 2019](quickstart-big-data-cluster-deploy.md)します。
-
-任意の配置スクリプトをカスタマイズするには、ビッグ データ クラスター環境変数が異なる方法で構成される、独自のバージョンを作成します。
-
 ## <a name="deploy-a-big-data-cluster"></a>ビッグ データ クラスターをデプロイする
 
-1 つのスクリプトを使用して、AKS の Kubernetes とビッグ データ クラスターを展開するには、次の例を参照してください。
+ビッグ データ クラスターをデプロイする Kubernetes を構成した後、`mssqlctl cluster create`コマンド。 を展開する場合は、いくつかの方法を実行できます。
 
-- [デプロイ スクリプト (AKS) で SQL Server 2019 ビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
+- 開発/テスト環境に展開する場合は、いずれかを使用することもできます、[既定の構成](deployment-guidance.md#deploy)によって提供される**mssqlctl**します。
 
-AKS、kubeadm、MiniKube を使用してビッグ データ クラスターの展開の展開の詳細については、次の記事を参照してください。
+- デプロイをカスタマイズする作成し、使用、独自[展開構成ファイル](deployment-guidance.md#configfile)します。 
 
-- [Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法](deployment-guidance.md)
+- 完全に無人インストールでは、環境変数にその他のすべての設定を渡すことができます。 詳細については、次を参照してください。[無人展開](deployment-guidance.md#unattended)します。
+
+## <a name="deployment-scripts"></a>展開スクリプト
+
+配置スクリプトは、Kubernetes と 1 つのステップでのビッグ データ クラスターの両方を展開できます。 多くの場合もビッグ データ クラスター設定の既定値を指定します。 Azure Kubernetes Service (AKS) でのビッグ データ クラスターのデプロイ スクリプトの例は、次の記事を参照してください。
+
+[ビッグ データ クラスターのデプロイ スクリプト (AKS) で SQL Server 2019 展開](quickstart-big-data-cluster-deploy.md)します。
+
+任意の配置スクリプトをカスタマイズするには、ビッグ データ クラスター環境変数が異なる方法で構成される、独自のバージョンを作成します。
 
 ## <a name="next-steps"></a>次のステップ
 

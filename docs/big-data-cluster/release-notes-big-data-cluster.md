@@ -5,17 +5,17 @@ description: この記事では、最新の更新プログラムと SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/28/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: a3148b9e3d7b2797684c2330e231640fb9ac2a1d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860530"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473537"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -24,6 +24,99 @@ ms.locfileid: "58860530"
 この記事では、更新プログラムの一覧し、ビッグ データの SQL Server クラスターの最新のリリースに関する問題を把握します。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp25"></a> CTP 2.5 (年 4 月)
+
+次のセクションでは、新機能と SQL Server 2019 CTP 2.5 でのビッグ データ クラスターの既知の問題について説明します。
+
+### <a name="whats-new"></a>新機能
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+| プロファイルの展開 | 既定値を使用およびカスタマイズした[配置の構成 JSON ファイル](deployment-guidance.md#configfile)のビッグ データ クラスターのデプロイ環境変数の代わりにします。 |
+| 要求された展開 | `mssqlctl cluster create` 既定の展開に必要な設定の入力を求めるようになりました。 |
+| サービス エンドポイントとのポッドの名前の変更 | 次の外部エンドポイントの名前が変更されました。<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| **mssqlctl**の機能強化 | 使用**mssqlctl**に[外部エンドポイント一覧を](deployment-guidance.md#endpoints)のバージョンを確認および**mssqlctl**で、`--version`パラメーター。 |
+| オフライン インストール | オフラインのビッグ データ クラスターの展開のガイダンスです。 |
+| HDFS の階層化の機能強化 | ADLS Gen2 の S3 が階層化、マウントは、次のキャッシュ、および OAuth をサポートします。 |
+| 新しい`mssql`Spark SQL Server コネクタ | |
+
+### <a name="known-issues"></a>既知の問題
+
+次のセクションでは、このリリースでの制限事項と既知の問題について説明します。
+
+#### <a name="deployment"></a>展開
+
+- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。
+
+   > [!IMPORTANT]
+   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-upgrade.md)します。
+
+- を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間は削除されません。 これは、結果、クラスターの孤立した、名前空間。 回避策では、同じ名前のクラスターをデプロイする前に、名前空間を手動で削除します。
+
+
+
+#### <a id="externaltablesctp24"></a> 外部テーブル
+
+- ビッグ データ クラスターのデプロイを作成しなく、 **SqlDataPool**と**SqlStoragePool**外部データ ソース。 データのプールと記憶域プールへのデータ仮想化をサポートするために手動でこれらのデータ ソースを作成することができます。
+
+   ```sql
+   -- Create the SqlDataPool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+
+   -- Create the SqlStoragePool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+   BEGIN
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+   END
+   ```
+
+- 列の型はサポートされていないテーブルのデータ プール外部テーブルを作成することになります。 外部テーブルを照会する場合はメッセージが表示、次のような。
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- 記憶域プールの外部テーブルをクエリすると、同時に、基になるファイルを HDFS にコピーするは場合にエラーが発生する可能性があります。
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 文字データ型を使用して Oracle に外部テーブルを作成する場合、Data Studio の Azure の仮想化ウィザードはこれらの列を VARCHAR として、外部テーブル定義で解釈されます。 外部テーブル DDL にエラーがなります。 いずれか NVARCHAR2 の種類を使用または EXTERNAL TABLE ステートメントを手動で作成し、ウィザードを使用してではなく NVARCHAR を指定するには、Oracle スキーマを変更します。
+
+#### <a name="application-deployment"></a>アプリケーションの展開
+
+- RESTful API から R、Python、または MLeap アプリケーションを呼び出すときに、呼び出しがタイムアウトに 5 分でします。
+
+#### <a name="spark-and-notebooks"></a>Spark と notebook
+
+- ポッド IP アドレスは、ポッドの再起動時に Kubernetes 環境で変更できます。 マスター ポッドを再起動する場合、Spark セッションが失敗とする`NoRoteToHostException`します。 これは、原因は新しい IP で更新しない JVM キャッシュでアドレスします。
+
+- Windows に既にインストールされている Jupyter と別の Python がある、Spark のノートブックが失敗する可能性があります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
+
+- Notebook をクリックした場合に、**テキストの追加**コマンド、テキスト セルが編集モードではなく、プレビュー モードで追加されます。 編集モードとセルの編集に切り替え、プレビュー アイコンをクリックすることができます。
+
+#### <a name="hdfs"></a>HDFS
+
+- プレビューするために HDFS 内のファイルを右クリックした場合は、次のエラーを参照してください可能性があります。
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   現時点で Azure Data Studio 30 MB より大きいファイルをプレビューする方法はありません。
+
+- HDFS hdfs-site.xml への変更に関連する構成の変更はサポートされていません。
+
+#### <a name="security"></a>セキュリティ
+
+- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
+
+- AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
 
 ## <a id="ctp24"></a> CTP 2.4 (3 月)
 
@@ -49,7 +142,7 @@ ms.locfileid: "58860530"
 - 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。
 
    > [!IMPORTANT]
-   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
+   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-upgrade.md)します。
 
 - を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
 
@@ -193,7 +286,7 @@ make: *** [deploy-clean] Error 2
 - 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。
 
    > [!IMPORTANT]
-   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
+   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-upgrade.md)します。
 
 - **ACCEPT_EULA**環境変数が、EULA に同意するには、"Yes"または"yes"にする必要があります。 以前のリリースには、"y"と"Y"が許可されているが、これらは受け入れられないと、展開に失敗すると、します。
 
@@ -243,7 +336,7 @@ make: *** [deploy-clean] Error 2
    mssqlctl cluster create --name <cluster_name>
    ```
 
-- 最新バージョンのビッグ データ クラスターへのアップグレードに関する重要な情報と**mssqlctl**を参照してください[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
+- 最新バージョンのビッグ データ クラスターへのアップグレードに関する重要な情報と**mssqlctl**を参照してください[を新しいリリースにアップグレード](deployment-upgrade.md)します。
 
 #### <a name="external-tables"></a>外部テーブル
 
@@ -302,7 +395,7 @@ make: *** [deploy-clean] Error 2
 
 #### <a name="deployment"></a>展開
 
-- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
+- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-upgrade.md)します。
 
 - を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
 
@@ -370,7 +463,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 #### <a name="deployment"></a>展開
 
-- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-guidance.md#upgrade)します。
+- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。 バックアップし、最新のリリースを展開する前に、既存のビッグ データ クラスターを削除する必要があります。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-upgrade.md)します。
 
 - を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
 

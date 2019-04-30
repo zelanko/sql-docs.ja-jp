@@ -1,5 +1,5 @@
 ---
-title: CurrentMember (MDX) |Microsoft ドキュメント
+title: CurrentMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248885"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -30,16 +30,16 @@ Hierarchy_Expression.CurrentMember
   
 ## <a name="arguments"></a>引数  
  *Hierarchy_Expression*  
- 階層を返す有効な多次元式 (MDX) 式です。  
+ 階層を返す有効な多次元式 (MDX) 式。  
   
 ## <a name="remarks"></a>コメント  
- 階層メンバーのセットに対する反復処理の間、反復の各ステップにおいては、処理対象のメンバーが現在のメンバーになります。 **CurrentMember**関数は、そのメンバーを返します。  
+ 階層メンバーのセットに対する反復処理の間、反復の各ステップにおいては、処理対象のメンバーが現在のメンバーになります。 **CurrentMember**関数がそのメンバーを返します。  
   
 > [!IMPORTANT]  
 >  表示可能な階層がディメンション内に 1 つしかない場合は、ディメンション名がその 1 つしかない階層に解決されるため、その階層はディメンション名でも階層名でも参照できます。 たとえば、`Measures.CurrentMember`有効な MDX 式は、Measures ディメンション内の唯一の階層に解決されるためです。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリがどのように表示**Currentmember**列、行、およびスライス軸で階層から現在のメンバーを検索するために使用できます。  
+ 次のクエリの表示方法**Currentmember**列、行、およびスライス軸で階層から現在のメンバーを検索するために使用できます。  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 現在のメンバーは、クエリ内の軸で使用される階層で変更されます。 そのため、現在、同じディメンションに、軸上で使用されていないその他の階層のメンバーを変更することができますも;この動作は ' autoexist"' と呼ばれ、詳細についてを参照できます[MDX の主な概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)です。 たとえば、次のクエリでは、Date ディメンションの Calendar Year 階層の現在のメンバーを、Calendar 階層の現在のメンバーと共に変更する方法 (後者が行軸に表示されている場合) を示しています。  
+ クエリ内の軸で使用される階層の現在のメンバーの変更。 したがって、軸で使用されていない、同じディメンションの他の階層の現在のメンバーも変更もできます。この動作は"autoexist"と呼ばれ、詳細についてを参照できる[MDX の主な概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)します。 たとえば、次のクエリでは、Rows 軸で、後者が表示されるときに、現在、Calendar 階層のメンバーで Date ディメンションの Calendar Year 階層の現在のメンバーが変更する方法を示しています。  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -93,7 +93,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember**は計算で使用されているクエリのコンテキストを認識させるため非常に重要です。 次の例の各製品の注文数量と注文数量の割合のカテゴリおよびモデルを返しますから、 **Adventure Works**キューブ。 **CurrentMember**関数は、注文数量が製品を計算中に使用されるを識別します。  
+ **CurrentMember**計算で使用されているクエリのコンテキストを認識させるために非常に重要です。 次の例では、各製品の注文数量と注文数量の割合カテゴリおよび返しますモデルから、 **Adventure Works**キューブ。 **CurrentMember**関数は、注文数量が製品を計算中に使用されるを識別します。  
   
 ```  
 WITH   
@@ -118,6 +118,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

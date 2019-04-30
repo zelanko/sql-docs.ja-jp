@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249117"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 構文のインデックス
 ADO の言語リファレンスでは、ADO メソッドとプロパティ構文を説明するために Microsoft Visual Basic プログラミング言語を使用します。 このインデックスは、ADO の Windows Foundation Class (ADO と WFC) に基づいて、ADO 言語リファレンスのトピックを相互参照します。 構文の違いが発生した場合は、言語リファレンスのトピックの構文の一覧ではなく、このインデックスに関数のシグネチャを使用します。  
@@ -49,6 +49,6 @@ ADO の言語リファレンスでは、ADO メソッドとプロパティ構文
   
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

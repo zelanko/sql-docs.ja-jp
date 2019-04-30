@@ -1,5 +1,5 @@
 ---
-title: タスク 3 (省略可能)。サブスクリプション ビューを確認 |Microsoft Docs
+title: タスク 3 (オプション):サブスクリプション ビューを確認 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249998"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>タスク 3 (省略可能)。サブスクリプション ビューを確認する
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>タスク 3 (オプション):サブスクリプション ビューを確認する
   ここでは、SQL ビューが SQL Server Management Studio を使用して作成されていることを確認します。  
   
 1.  起動**SQL Server Management Studio**します。 をクリックして、**開始**ボタンをクリックして**すべてのプログラム**、 をクリックして**Microsoft SQL Server 2012**、順にクリックします**SQL Server Management Studio**します。  

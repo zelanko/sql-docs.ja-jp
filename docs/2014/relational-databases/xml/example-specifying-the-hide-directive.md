@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287736"
 ---
 # <a name="example-specifying-the-hide-directive"></a>例: HIDE ディレクティブの指定
   この例では、 **HIDE** ディレクティブの使用方法を示します。 クエリから返されたユニバーサル テーブル内の行を並べ替える目的でクエリから属性を返し、最終的な結果の XML ドキュメントにはその属性を含めない場合に、このディレクティブが役立ちます。  
@@ -67,7 +67,7 @@ FOR XML EXPLICIT
 go  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  

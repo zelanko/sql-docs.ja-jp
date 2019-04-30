@@ -5,17 +5,17 @@ description: 1 台のコンピューターでのビッグ データ クラスタ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860693"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473498"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>SQL Server のビッグ データ クラスター展開 minikube を構成します。
 
@@ -27,7 +27,7 @@ ms.locfileid: "58860693"
 
 - 32 GB のメモリ (64 GB を推奨)。
 
-- コンピューターに推奨されるメモリの最小値のみがある場合は、プールのコンピューティング インスタンスの 1 つだけ、1 つのデータ プール インスタンスと 1 の記憶域プールのインスタンスがクラスターのデプロイを構成します。 この構成のみ使用してください評価環境の持続性とデータの可用性が重要です。 参照してください、[のデプロイに関するドキュメント](deployment-guidance.md#env)データ プールのレプリカの数を構成する設定を環境変数の詳細については、プール、および記憶域プールを計算します。
+- コンピューターに推奨されるメモリの最小値のみがある場合は、プールのコンピューティング インスタンスの 1 つだけ、1 つのデータ プール インスタンスと 1 の記憶域プールのインスタンスがクラスターのデプロイを構成します。 この構成のみ使用してください評価環境の持続性とデータの可用性が重要です。 参照してください、[のデプロイに関するドキュメント](deployment-guidance.md#configfile)データ プールのレプリカの数を構成する設定を環境変数の詳細については、プール、および記憶域プールを計算します。
 
 - -X VT または amd-v の仮想化は、コンピューターの BIOS で有効にする必要があります。
 
@@ -46,7 +46,7 @@ ms.locfileid: "58860693"
 
 ## <a name="install-minikube"></a>Minikube をインストールします。
 
-Minikube をインストールするための手順に従って、 [v0.28.2 リリース](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)します。 SQL Server 2019 ビッグ データ クラスター (プレビュー) は、バージョン v0.24.1 と構成にのみ機能します。
+インストールの指示に従って minikube、 [v0.28.2 リリース](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)します。 SQL Server 2019 ビッグ データ クラスター (プレビュー) は、バージョン v0.24.1 と構成にのみ機能します。
 
 ## <a name="create-a-minikube-cluster"></a>Minikube クラスターを作成します。
 
@@ -58,7 +58,7 @@ Minikube をインストールするための手順に従って、 [v0.28.2 リ�
 minikube start --vm-driver="hyperv" --cpus 8 --memory 28672 --disk-size 100g --hyperv-virtual-switch "External"
 ```
 
-VirtualBox を使用した、Minikube を使用している場合、コマンドは次のようになります。
+VirtualBox を使用した、minikube を使用している場合、コマンドは次のようになります。
 
 ```base
 minikube start --cpus 8 --memory 28672 --disk-size 100g
@@ -74,6 +74,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>次のステップ
 
-この記事の手順では、Minikube クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データのクラスターにデプロイします。 手順については、次の記事を参照してください。
+この記事の手順では、minikube クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データのクラスターにデプロイします。 手順については、次の記事を参照してください。
 
 [Kubernetes での SQL Server 2019 ビッグ データ クラスターを展開します。](deployment-guidance.md#deploy)

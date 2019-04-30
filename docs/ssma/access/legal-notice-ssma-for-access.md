@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 563cd62cb600be54ab1e4412db4d8869bd84e18f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527270"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453776"
 ---
 # <a name="legal-notice-ssma-for-access"></a>法的通知 (SSMA for Access)
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  

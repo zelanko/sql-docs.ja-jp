@@ -5,17 +5,17 @@ description: SQL Server 2019 ビッグ データ クラスター (プレビュ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582916"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473479"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>デプロイメント スクリプトを実行します。
 
-次の手順を使用して、デプロイ スクリプトを実行します。 このスクリプトは Azure での AKS サービスを作成し、AKS の SQL Server 2019 のビッグ データ クラスターをデプロイします。 他のスクリプトを変更することもできます。[環境変数](deployment-guidance.md#env)カスタムの展開を作成します。
+次の手順を使用して、デプロイ スクリプトを実行します。 このスクリプトは Azure での AKS サービスを作成し、AKS の SQL Server 2019 のビッグ データ クラスターをデプロイします。 他のスクリプトを変更することもできます。[環境変数](deployment-guidance.md#configfile)カスタムの展開を作成します。
 
 1. 次のコマンドを使用して、スクリプトを実行します。
 
@@ -114,7 +114,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 ```
 
 > [!IMPORTANT]
-> デプロイ全体のビッグ データ クラスター コンポーネントのコンテナー イメージをダウンロードするために必要な時間のため時間がかかることができます。 ただし、いくつかの時間はなりません。 デプロイに関する問題が発生する場合を参照してください、[展開のトラブルシューティング](deployment-guidance.md#troubleshoot)展開ガイダンスの記事のセクション。
+> デプロイ全体のビッグ データ クラスター コンポーネントのコンテナー イメージをダウンロードするために必要な時間のため時間がかかることができます。 ただし、いくつかの時間はなりません。 デプロイに関する問題が発生する場合は、次を参照してください。[監視とビッグ データの SQL Server クラスターのトラブルシューティングを行う](cluster-troubleshooting-commands.md)します。
 
 ## <a name="inspect-the-cluster"></a>クラスターを検査します。
 
@@ -149,20 +149,20 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    ```
 
 > [!TIP]
-> 監視し、デプロイのトラブルシューティング方法の詳細については、次を参照してください。、[展開のトラブルシューティング](deployment-guidance.md#troubleshoot)展開ガイダンスの記事のセクション。
+> 監視し、デプロイのトラブルシューティング方法の詳細については、次を参照してください。[監視とビッグ データの SQL Server クラスターのトラブルシューティングを行う](cluster-troubleshooting-commands.md)します。
 
 ### <a name="use-the-cluster-administration-portal"></a>クラスターの管理ポータルを使用してください。
 
-コント ローラーのポッドが実行されている場合は、展開の監視、クラスターの管理ポータルを使用することもできます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `endpoint-service-proxy` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 ポータルにログインするために使用する資格情報の値と一致する**コント ローラーのユーザー**と**パスワード**配置スクリプトで指定されています。
+コント ローラーのポッドが実行されている場合は、展開の監視、クラスターの管理ポータルを使用することもできます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `mgmtproxy-svc-external` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 ポータルにログインするために使用する資格情報の値と一致する**コント ローラーのユーザー**と**パスワード**配置スクリプトで指定されています。
 
-IP アドレスを取得することができます、**エンドポイント サービスのプロキシ**bash または cmd ウィンドウでこのコマンドを実行してサービス。
+IP アドレスを取得することができます、 **svc 外部の mgmtproxy** bash または cmd ウィンドウでこのコマンドを実行してサービス。
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.4、表示されますセキュリティの警告を web ページにアクセスするときにビッグ データ クラスターが現在使用して SSL 証明書の自動生成されるためです。
+> CTP 2.5 で表示されますセキュリティの警告を web ページにアクセスするときにビッグ データ クラスターが現在自動生成された SSL 証明書を使用しているためです。
 
 ## <a name="connect-to-the-cluster"></a>クラスターに接続します。
 

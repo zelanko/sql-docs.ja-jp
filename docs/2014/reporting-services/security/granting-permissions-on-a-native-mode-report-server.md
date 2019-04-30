@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1188f0d5cb68a86b6e3f3305ec9b5a40e51a8d3a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242472"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーに対する権限の許可
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ロールベースの承認および認証サブシステムを使用して、操作の実行およびレポート サーバーのアイテムへのアクセスを行えるユーザーを決定します。 ロールベースの承認では、ユーザーまたはグループが実行できる一連のアクションがロールに分類されます。 認証は、組み込みの Windows 認証、または指定したカスタム認証モジュールに基づいて行われます。 どちらの種類の認証でも、定義済みロールまたはカスタム ロールを使用できます。  

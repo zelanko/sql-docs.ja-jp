@@ -5,16 +5,16 @@ description: Mssqlctl アプリ コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 850964adc9cd790a27cf69e3e0f5229cdaf589c8
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860653"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473270"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl アプリ
 
@@ -22,275 +22,251 @@ ms.locfileid: "58860653"
 
 次の記事への参照を提供する、**アプリ**コマンド、 **mssqlctl**ツール。 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。
 
-## <a id="commands"></a> コマンド
-
-|||
-|---|---|
-| [create](#create) | アプリケーションを作成します。 |
-| [delete](#delete) | アプリケーションを削除します。 |
-| [について説明します](#describe) | アプリケーションをについて説明します。 |
-| [Init](#init) | Kickstart の新しいアプリケーションのスケルトンです。 |
-| [list](#list) | アプリケーションの一覧を表示します。 |
-| [run](#run) | アプリケーションを実行します。 |
-| [update](#update) | アプリケーションを更新します。 |
-| [テンプレート](reference-mssqlctl-app-template.md) | テンプレート コマンド。 |
-
-## <a id="create"></a> mssqlctl アプリを作成します。
-
-アプリケーションを作成します。
-
+## <a name="commands"></a>コマンド
+|     |     |
+| --- | --- |
+[mssqlctl アプリ テンプレート](reference-mssqlctl-app-template.md) | テンプレート。
+[mssqlctl アプリの初期化](#mssqlctl-app-init) | Kickstart の新しいアプリケーションのスケルトンです。
+[mssqlctl アプリを作成します。](#mssqlctl-app-create) | アプリケーションを作成します。
+[mssqlctl アプリの更新プログラム](#mssqlctl-app-update) | アプリケーションを更新します。
+[mssqlctl アプリの一覧](#mssqlctl-app-list) | アプリケーションの一覧を表示します。
+[mssqlctl アプリの削除](#mssqlctl-app-delete) | アプリケーションを削除します。
+[mssqlctl アプリの実行](#mssqlctl-app-run) | アプリケーションを実行します。
+[mssqlctl アプリについて説明します](#mssqlctl-app-describe) | アプリケーションをについて説明します。
+## <a name="mssqlctl-app-init"></a>mssqlctl アプリの初期化
+Kickstart の新しいアプリケーションのスケルトンやランタイム環境に基づいて、spec ファイルにできます。
+```bash
+mssqlctl app init [--spec -s] 
+                  [--name -n]  
+                  [--version -v]  
+                  [--template -t]  
+                  [--destination -d]  
+                  [--url -u]
 ```
-mssqlctl app create
-   --assets
-   --code
-   --description
-   --entrypoint
-   --inputs
-   --name
-   --outputs
-   --runtime
-   --spec
-   --version
-   --yes
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--assets -a** | 含まれる追加のアプリケーション ファイル資産の一覧。 |
-| **--code -c** | R または Python のコード ファイルへのパス。 |
-| **--description -d** | アプリケーションの説明。 |
-| **--entrypoint** |  |
-| **-入力** | 入力パラメーターのスキーマです。 |
-| **--name -n** | [アプリケーション名] |
-| **--outputs** | 出力パラメーターのスキーマです。 |
-| **-ランタイム r** | アプリケーション ランタイム。  有効な値:Mleap、Python、R では、SSIS します。 |
-| **--s の仕様** | アプリケーションを記述する YAML spec ファイルのディレクトリへのパス。 |
-| **-バージョン v** | アプリケーションのバージョン。 |
-| **--y を [はい]** | 求めない確認 CWD の spec.yaml ファイルからアプリケーションを作成するときにします。 |
-
 ### <a name="examples"></a>使用例
-
-Spec.yaml (推奨) を使用して新しいアプリケーションを作成します。
-
-```
-mssqlctl app create --spec /path/to/dir/with/spec/yaml
-```
-
-引数を使用して新しい Python アプリのインラインを作成します。
-
-```
-mssqlctl app create --name add --version v1 --inputs x=float, y=float --outputs result=float --runtime Python --code add.py  --init init.py
-```
-
-引数を使用して、新しい R アプリケーション インラインを作成します。
-
-```
-mssqlctl app create --name add --version v1 --inputs x=numeric, y=numeric --outputs result=numeric --runtime R --code add.R  --init init.R
-```
-
-含まれる追加のファイルのアセットには、新しい R アプリケーション インラインを作成します。
-
-```
-mssqlctl app create --name add --version v1 --runtime R --code  add.R --assets file.RData,/path/to/more/files
-```
-
-## <a id="delete"></a> mssqlctl アプリの削除
-
-アプリケーションを削除します。
-
-```
-mssqlctl app delete
-   --name
-   --version
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--name -n** | [アプリケーション名] |
-| **-バージョン v** | アプリケーションのバージョン。 |
-
-### <a name="examples"></a>使用例
-
-名前とバージョンでアプリケーションを削除します。
-
-```
-mssqlctl app delete --name reduce --version v1
-```
-
-## <a id="describe"></a> mssqlctl アプリについて説明します
-
-アプリケーションをについて説明します。
-
-```
-mssqlctl app describe
-   --name
-   --spec
-   --version
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--name -n** | [アプリケーション名] |
-| **--s の仕様** | アプリケーションを記述する YAML spec ファイルのディレクトリへのパス。 |
-| **-バージョン v** | アプリケーションのバージョン。 |
-
-### <a name="examples"></a>使用例
-
-アプリケーションをについて説明します。
-
-```
-mssqlctl app describe --name reduce --version v1
-```
-
-## <a id="init"></a> mssqlctl アプリの初期化
-
-Kickstart の新しいアプリケーションのスケルトンです。
-
-```
-mssqlctl app init
-   --destination
-   --name
-   --spec
-   --template
-   --url
-   --version
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--destination -d** | アプリケーションのスケルトンを配置する場所。 現在の作業ディレクトリ既定値:。 |
-| **--name -n** | [アプリケーション名] |
-| **--s の仕様** | アプリケーション spec.yaml だけを生成します。 |
-| **-テンプレート -t** | テンプレートの名前。 サポートされているテンプレートの名前を完全な一覧については、実行`mssqlctl app template list`します。 |
-| **--url -u** | 別のテンプレート リポジトリの場所を指定します。 既定値:https://github.com/Microsoft/sql-server-samples.gitします。 |
-| **-バージョン v** | アプリケーションのバージョン。 |
-
-### <a name="examples"></a>使用例
-
 新しいアプリケーションのスキャフォールディング`spec.yaml`のみです。
-
-```
+```bash
 mssqlctl app init --spec
 ```
-
 基づく新しい R アプリケーション アプリケーション スケルトンのスキャフォールディング、`r`テンプレート。
-
-```
+```bash
 mssqlctl app init --name reduce --template r
 ```
-
 基づく新しい Python アプリケーション アプリケーション スケルトンのスキャフォールディング、`python`テンプレート。
-
-```
+```bash
 mssqlctl app init --name reduce --template python
 ```
-
 基づく新しい SSIS アプリケーション アプリケーション スケルトンのスキャフォールディング、`ssis`テンプレート。
-
+```bash
+mssqlctl app init --name reduce --template ssis            
 ```
-mssqlctl app init --name reduce --template ssis
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--spec -s`
+アプリケーション spec.yaml だけを生成します。
+#### `--name -n`
+[アプリケーション名]
+#### `--version -v`
+アプリケーションのバージョン。
+#### `--template -t`
+テンプレートの名前。 実行のサポートされているテンプレート名を完全な一覧について `mssqlctl app template list`
+#### `--destination -d`
+アプリケーションのスケルトンを配置する場所。 現在の作業ディレクトリ既定値:。
+#### `--url -u`
+別のテンプレート リポジトリの場所を指定します。 既定値: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
+## <a name="mssqlctl-app-create"></a>mssqlctl アプリを作成します。
+アプリケーションを作成します。
+```bash
+mssqlctl app create --spec -s 
+                    
 ```
-
-## <a id="list"></a> mssqlctl アプリの一覧
-
-アプリケーションの一覧を表示します。
-
-```
-mssqlctl app list
-   --name
-   --version
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--name -n** | [アプリケーション名] |
-| **-バージョン v** | アプリケーションのバージョン。 |
-
 ### <a name="examples"></a>使用例
-
-名前およびバージョン別のアプリケーションの一覧を表示します。
-
+有効な spec.yaml 配置の仕様を含むディレクトリから新しいアプリケーションを作成します。
+```bash
+mssqlctl app create --spec /path/to/dir/with/spec/yaml
 ```
+### <a name="required-parameters"></a>必要なパラメーター
+#### `--spec -s`
+アプリケーションを記述する YAML spec ファイルのディレクトリへのパス。
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
+## <a name="mssqlctl-app-update"></a>mssqlctl アプリの更新プログラム
+アプリケーションを更新します。
+```bash
+mssqlctl app update [--spec -s] 
+                    [--yes -y]
+```
+### <a name="examples"></a>使用例
+有効な spec.yaml 配置の仕様を含むディレクトリから既存のアプリケーションを更新します。
+```bash
+mssqlctl app update --spec /path/to/dir/with/spec/yaml    
+```
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--spec -s`
+アプリケーションを記述する YAML spec ファイルのディレクトリへのパス。
+#### `--yes -y`
+求めない確認 CWD の spec.yaml ファイルからアプリケーションを更新するときにします。
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
+## <a name="mssqlctl-app-list"></a>mssqlctl アプリの一覧
+アプリケーションの一覧を表示します、。
+```bash
+mssqlctl app list [--name -n] 
+                  [--version -v]
+```
+### <a name="examples"></a>使用例
+名前およびバージョン別のアプリケーションの一覧を表示します。
+```bash
 mssqlctl app list --name reduce  --version v1
 ```
-
 名前では、アプリケーションのすべてのバージョンを一覧表示します。
-
-```
+```bash
 mssqlctl app list --name reduce
 ```
-
-すべてのアプリケーションの一覧を表示します。
-
-```
+名前では、アプリケーションのすべてのバージョンを一覧表示します。
+```bash
 mssqlctl app list
 ```
-
-## <a id="run"></a> mssqlctl アプリの実行
-
-アプリケーションを実行します。
-
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--name -n`
+[アプリケーション名]
+#### `--version -v`
+アプリケーションのバージョン。
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
+## <a name="mssqlctl-app-delete"></a>mssqlctl アプリの削除
+アプリケーションを削除します。
+```bash
+mssqlctl app delete --name -n 
+                    --version -v
 ```
-mssqlctl app run
-   --name
-   --version
-   --inputs
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--name -n** | [アプリケーション名] |
-| **-バージョン v** | アプリケーションのバージョン。 |
-| **-入力** | アプリケーションの入力を CSV パラメーター`name=value`形式。 |
-
 ### <a name="examples"></a>使用例
-
-入力パラメーターなしでアプリケーションを実行します。
-
+名前とバージョンでアプリケーションを削除します。
+```bash
+mssqlctl app delete --name reduce --version v1    
 ```
+### <a name="required-parameters"></a>必要なパラメーター
+#### `--name -n`
+[アプリケーション名]
+#### `--version -v`
+アプリケーションのバージョン。
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
+## <a name="mssqlctl-app-run"></a>mssqlctl アプリの実行
+アプリケーションを実行します。
+```bash
+mssqlctl app run --name -n 
+                 --version -v  
+                 [--inputs]
+```
+### <a name="examples"></a>使用例
+入力パラメーターなしでアプリケーションを実行します。
+```bash
 mssqlctl app run --name reduce --version v1
 ```
-
 1 つの入力パラメーターを使用してアプリケーションを実行します。
-
-```
+```bash
 mssqlctl app run --name reduce --version v1 --inputs x=10
 ```
-
 複数の入力パラメーターを持つアプリケーションを実行します。
-
+```bash
+mssqlctl app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
-mssqlctl app run --name reduce --version v1 --inputs x=10,y5.6
+### <a name="required-parameters"></a>必要なパラメーター
+#### `--name -n`
+[アプリケーション名]
+#### `--version -v`
+アプリケーションのバージョン。
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--inputs`
+アプリケーションの入力を CSV パラメーター`name=value`形式。
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
+## <a name="mssqlctl-app-describe"></a>mssqlctl アプリについて説明します
+アプリケーションを記述します。
+```bash
+mssqlctl app describe [--spec -s] 
+                      [--name -n]  
+                      [--version -v]
 ```
-
-## <a id="update"></a> mssqlctl アプリの更新プログラム
-
-アプリケーションを更新します。
-
+### <a name="examples"></a>使用例
+アプリケーションをについて説明します。
+```bash
+mssqlctl app describe --name reduce --version v1    
 ```
-mssqlctl app update
-   --spec
-   --yes
-```
-
-### <a name="parameters"></a>パラメーター
-
-| パラメーター | 説明 |
-|---|---|
-| **--s の仕様** | アプリケーションを記述する YAML spec ファイルのディレクトリへのパス。 |
-| **--y を [はい]** | 求めない確認 CWD の spec.yaml ファイルからアプリケーションを更新するときにします。 |
+### <a name="optional-parameters"></a>省略可能なパラメーター
+#### `--spec -s`
+アプリケーションを記述する YAML spec ファイルのディレクトリへのパス。
+#### `--name -n`
+[アプリケーション名]
+#### `--version -v`
+アプリケーションのバージョン。
+### <a name="global-arguments"></a>グローバル引数
+#### `--debug`
+すべてのデバッグ ログを表示するログの詳細度を向上します。
+#### `--help -h`
+このヘルプ メッセージと終了を示します。
+#### `--output -o`
+出力形式。  使用できる値: json、jsonc、table、tsv です。  既定: json。
+#### `--query -q`
+JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
+#### `--verbose`
+ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
 
 ## <a name="next-steps"></a>次のステップ
 

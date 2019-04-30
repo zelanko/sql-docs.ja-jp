@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245494"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>[サーバーへの接続] \([接続プロパティ] ページ) (データベース エンジン)
   このタブを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続するとき、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] を **登録済みサーバー**に登録するときのオプションを表示または指定できます。 **のインスタンスに接続するときには、** [接続] **および** [オプション] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみがこのダイアログ ボックスに表示されます。  

@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299a4c6379f1323128e28dc992e18fd7228014ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669300"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473111"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: レベル 2  
+ ODBC API 準拠:[レベル 2]  
   
  行セットのカーソル位置を設定します。 使用することができます**SQLSetPos**で[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)行セット内の特定の行にカーソルを配置した後、バインドされていない列から行を取得します。  
   
- 詳細については、[SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md)で、 *ODBC プログラマ リファレンス*します。

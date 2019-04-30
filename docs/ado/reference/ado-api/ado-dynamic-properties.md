@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249048"
 ---
 # <a name="ado-dynamic-properties"></a>ADO の動的プロパティ
 動的プロパティに追加できる、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 これらのプロパティのソースは、いずれかのデータ プロバイダーをなどが、 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、またはサービス プロバイダーの場合など、 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)します。 適切なデータ プロバイダーまたは特定の動的プロパティの詳細についてはサービス プロバイダーのマニュアルを参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "47726600"
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 b:ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   

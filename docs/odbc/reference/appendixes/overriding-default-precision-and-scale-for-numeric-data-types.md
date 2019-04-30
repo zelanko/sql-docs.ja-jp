@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278308"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>数値データ型での既定の有効桁数と小数点以下桁数のオーバーライド
 ARD の SQL_DESC_TYPE フィールド設定されている場合、SQL_C_NUMERIC にいずれかを呼び出して**SQLBindCol**または**SQLSetDescField**ARD SQL_DESC_SCALE フィールドが 0 に設定されて、SQL_DESC_PRECISION フィールドが設定されますドライバーで定義された既定の有効桁数。 これは、場合でも、APD の SQL_DESC_TYPE フィールドは、いずれかを呼び出すことによって、SQL_C_NUMERIC に設定されて**SQLBindParameter**または**SQLSetDescField**します。 これは、入力、入力/出力、または出力パラメーターの場合は true。  

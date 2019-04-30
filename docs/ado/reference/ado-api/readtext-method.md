@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b095e034df987fd580b5f5855993c9cf070a1236
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278608"
 ---
 # <a name="readtext-method"></a>ReadText メソッド
 指定されたテキストの文字数を読み取ります[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -47,7 +47,7 @@ String = Stream.ReadText ( NumChars)
 > [!NOTE]
 >  **ReadText**メソッドは、テキスト ストリームの使用 ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)。 バイナリ ストリームの (**型**は**adTypeBinary**) を使用して、[読み取り](../../../ado/reference/ado-api/read-method.md)します。  
   
- クエリから返される XML データの量が大きくなる、 **ReadText** ActiveX データ オブジェクト (ADO) Stream オブジェクトのメソッドは、これを行う COM + コンポーネントから呼び出された場合; を実行する時間を大幅にかかる場合があります、ASP ページで、ユーザーのセッション タイムアウトになる可能性があります。ADO から utf-8 エンコードが Unicode; に Stream オブジェクト データを変換します一度に大量のデータの変換に関連するメモリが頻繁に再割り当てが非常に時間がかかります。 を解決することを繰り返し呼び出す、 **ReadText** ADO のメソッド、オブジェクトのコマンドし、より小さい文字数を指定します。 128 K (131,072) と等価の値が最適な表示がテストされます。 この値が減少すると、応答時間が減少します。 詳細については、サポート技術情報の記事 280067 を参照してください。"[prb]: 速度が低下する可能性があります ADO ストリーム オブジェクトの ReadText メソッドを使用して SQL Server 2000 から非常に大きな XML ドキュメントを取得する"、Microsoft サポート技術情報で https://support.microsoft.com です。  
+ クエリから返される XML データの量が大きくなる、 **ReadText** ActiveX データ オブジェクト (ADO) Stream オブジェクトのメソッドは、これを行う COM + コンポーネントから呼び出された場合; を実行する時間を大幅にかかる場合があります、ASP ページで、ユーザーのセッション タイムアウトになる可能性があります。ADO から utf-8 エンコードが Unicode; に Stream オブジェクト データを変換します一度に大量のデータの変換に関連するメモリが頻繁に再割り当てが非常に時間がかかります。 を解決することを繰り返し呼び出す、 **ReadText** ADO のメソッド、オブジェクトのコマンドし、より小さい文字数を指定します。 128 K (131,072) と等価の値が最適な表示がテストされます。 この値が減少すると、応答時間が減少します。 詳細については、サポート技術情報記事 280067 を参照してください。"[prb]。ADO のストリーム オブジェクトの ReadText メソッドを使用して SQL Server 2000 から非常に大きな XML ドキュメントを取得する場合があります"、Microsoft サポート技術情報で https://support.microsoft.comします。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

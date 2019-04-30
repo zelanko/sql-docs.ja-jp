@@ -4,18 +4,18 @@ description: このトピックでは、SQL Server が Linux 上でどのよう�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/25/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408879"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457368"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -26,22 +26,22 @@ SQL Server は SQL Server 2017 以降では、Linux で実行されます。 同
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-SQL Server 2019 プレビューは、Linux で実行されます。 同じ SQL Server データベース エンジンのような多くの機能と、オペレーティング システムに関係なくサービスにすることをお勧めします。 このリリースに関する詳細については、[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)を参照してください。
+SQL Server 2019 プレビューは、Linux で実行されます。 同じ SQL Server データベース エンジンのような多くの機能と、オペレーティング システムに関係なくサービスにすることをお勧めします。 このリリースに関する詳細については、次を参照してください。[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)します。
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [SQL Server 2019 プレビュー](sql-server-linux-overview.md?view=sql-server-ver15)がリリースされました! 最新のリリースで新しい Linux の新機能についてを参照してください[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)します。
+> [SQL Server 2019 プレビュー](sql-server-linux-overview.md?view=sql-server-ver15)がリリースされました! 最新のリリースで新しい Linux の新機能についてを参照してください[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)します。
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [SQL Server 2019 プレビュー](sql-server-linux-overview.md?view=sql-server-linux-ver15)がリリースされました! 最新のリリースで新しい Linux の新機能についてを参照してください[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux)します。
+> [SQL Server 2019 プレビュー](sql-server-linux-overview.md?view=sql-server-linux-ver15)がリリースされました! 最新のリリースで新しい Linux の新機能についてを参照してください[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux)します。
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> SQL Server 2019 プレビューがリリースされました! 最新のリリースで新しい Linux の新機能についてを参照してください[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)します。
+> SQL Server 2019 プレビューがリリースされました! 最新のリリースで新しい Linux の新機能についてを参照してください[新機能については Linux 用の SQL Server 2019 プレビュー](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)します。
 ::: moniker-end
 
 ## <a name="install"></a>インストール
@@ -99,12 +99,12 @@ SQL Server on Linux 理解している場合は、リリース ノートを確�
 次の新機能になります。
 
 - [SQL Server 2017 の新機能については](sql-server-linux-whats-new.md)
-- [Linux 上の SQL Server 2019 プレビューは新機能](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+- [Linux 上の SQL Server 2019 プレビューは新機能](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 
 > [!TIP]
-> よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)を参照してください。
+> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 

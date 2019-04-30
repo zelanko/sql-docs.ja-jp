@@ -5,16 +5,16 @@ description: SQL Server のマスター インスタンスと SQL Server 2019 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860173"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472281"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターに接続します。
 
@@ -45,7 +45,7 @@ Azure データ Studio を使用したビッグ データ クラスターに接�
 1. コマンドラインから次のコマンドを使用して、マスター インスタンスの ip アドレスを見つけます。
 
    ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-cluster-name>
    ```
 
 1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。
@@ -83,7 +83,7 @@ Azure Data Studio の 2019年 2 月リリースでは、SQL Server のマスタ�
 1. コマンドラインから次のコマンドのいずれかを使用して、HDFS/Spark gateway の IP アドレスを検索します。
 
    ```
-   kubectl get svc endpoint-security -n <your-cluster-name>
+   kubectl get svc gateway-svc-external -n <your-cluster-name>
    ```
  
 1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。

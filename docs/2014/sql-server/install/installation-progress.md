@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff48c85e24c0f2c21e06fa868ee933e9455e25c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244708"
 ---
 # <a name="installation-progress"></a>インストールの進行状況
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ状況を監視するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[インストールの進行状況]** ページを使用します。  

@@ -1,5 +1,5 @@
 ---
-title: CurrentOrdinal (MDX) |Microsoft ドキュメント
+title: CurrentOrdinal (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6fe956591b6bde0c5e6b074115fec8724995a59
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248193"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
 
 
-  繰り返し処理中に、セット内の現在の繰り返し数を返します。  
+  イテレーション中に、セット内の現在のイテレーション数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,10 +33,10 @@ Set_Expression.CurrentOrdinal
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- 反復処理に使用して、セットなどのときに、 [Filter (MDX)](../mdx/filter-mdx.md)または[Generate (MDX)](../mdx/generate-mdx.md) 、関数、 **CurrentOrdinal**は繰り返しの数を返します。  
+ 使用し、セットなど、反復処理するとき、 [Filter (MDX)](../mdx/filter-mdx.md)または[Generate (MDX)](../mdx/generate-mdx.md)関数の場合、 **CurrentOrdinal**関数のイテレーション数を返します。  
   
 ## <a name="examples"></a>使用例  
- 単純な例を次にどのように**CurrentOrdinal**で使用できる**生成**セット内での位置と、セット内の各項目の名前を含む文字列を返します。  
+ 単純な例を次に示す方法**CurrentOrdinal**で使用できる**生成**セット内の位置と、セット内の各項目の名前を含む文字列を返します。  
   
  `WITH SET MySet AS [Customer].[Customer Geography].[Country].MEMBERS`  
   
@@ -48,7 +48,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- 実際に CurrentOrdinal が使用されるのは、非常に複雑な計算に限られます。 次の例では、製品の数を返しますを使用して、一意のセットで、**順序**関数を使用する前に空の組を順序付ける、**フィルター**関数。 **CurrentOrdinal**を比較し、関係を排除する関数を使用します。  
+ CurrentOrdinal の実際の使用は、非常に複雑な計算に制限されます。 次の例では、製品の数を返しますを使用して、一意のセットで、**順序**関数を使用する前に、空の組を順序付け、**フィルター**関数。 **CurrentOrdinal**を比較し、関係を排除する関数を使用します。  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -83,6 +83,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

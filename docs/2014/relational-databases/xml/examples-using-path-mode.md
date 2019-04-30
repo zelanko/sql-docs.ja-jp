@@ -1,5 +1,5 @@
 ---
-title: 例 :PATH モードの使用 |Microsoft Docs
+title: '例 : PATH モードの使用 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287781"
 ---
 # <a name="examples-using-path-mode"></a>例 :PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
@@ -111,7 +111,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +135,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `< ProductModelData id="122">`  
   
@@ -244,7 +244,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 したがって、指定された `query()` 型の `xml` メソッドにおいて、クエリ プロローグでこのプレフィックスは定義されていません。 これは、結果です。  
+ `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 したがって、指定された `query()` 型の `xml` メソッドにおいて、クエリ プロローグでこのプレフィックスは定義されていません。 結果を次に示します。  
   
  `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -395,7 +395,7 @@ GO
   
  <`English`> 要素に追加されている `@xml:lang` 属性は、定義済みの XML 名前空間で定義されています。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<Translation>`  
   
@@ -432,7 +432,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   

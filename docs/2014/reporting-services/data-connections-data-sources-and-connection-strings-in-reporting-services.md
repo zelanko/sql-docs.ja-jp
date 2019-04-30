@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f2b49a645866f310a7a0ff006b47cce2ff32f3c3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: a89cb1d06b60d086c139b4d618b7bd716c04616e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954158"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462035"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Reporting Services でのデータ接続、データ ソース、および接続文字列
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポートにデータを含めるには、最初に *データ ソース* および *データセット*を作成する必要があります。 このトピックでは、データ ソースの種類、データ ソースの作成方法、およびデータ ソースの資格情報に関連する重要な情報について説明します。 データ ソースには、データ ソースの種類、接続情報、および使用する資格情報の種類が含まれています。 データ ソースには、埋め込みと共有の 2 種類があります。 埋め込みデータ ソースは、レポート内で定義され、そのレポートでのみ使用されます。 共有データ ソースは、レポートとは別のアイテムとして定義され、複数のレポートで使用できます。 詳細については、「[埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)」および「[埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)」を参照してください。  
@@ -135,7 +135,7 @@ ms.locfileid: "59954158"
 |SQL Server 並列データ ウェアハウス|`HOST=<IP address>;database= AdventureWorks; port=<port>`|データ ソースの種類を設定`Microsoft SQL Server Parallel Data Warehouse`します。 詳細については、「[SQL Server 並列データ ウェアハウスの接続の種類 &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)」を参照してください。|  
 |ローカル サーバーの Analysis Services データベース|`data source=localhost;initial catalog=Adventure Works DW`|データ ソースの種類を設定`Microsoft SQL Server Analysis Services`します。 詳細については、「[MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)」または「[DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)」を参照してください。|  
 |Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|データ ソースの種類を設定`Microsoft SQL Server Analysis Services`します。 cube= 設定にパースペクティブの名前を指定します。 詳しくは、「 [パースペクティブ &#40;SSAS テーブル&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)」をご覧ください。|  
-|ネイティブ モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。 詳細については、「[レポート モデルの接続 &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md)」を参照してください。|  
+|ネイティブ モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。
 |SharePoint 統合モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバー|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|データ ソースの種類を `OLE DB Provider for OLAP Services 8.0` に設定します。<br /><br /> `ConnectTo` プロパティを `8.0` に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ ソースにより高速に接続できるようになります。 このプロパティを設定するには、 **[接続プロパティ]** ダイアログ ボックスの **[詳細プロパティ]** タブを使用します。|  
 |Oracle サーバー|`data source=myserver`|データ ソースの種類を `Oracle` に設定します。 レポート デザイナーがインストールされているコンピューターとレポート サーバーに、Oracle クライアント ツールがインストールされている必要があります。 詳細については、「[Oracle の接続の種類 &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md)」を参照してください。|  
@@ -146,9 +146,7 @@ ms.locfileid: "59954158"
 |XML データ ソース、XML ドキュメント|`http://localhost/XML/Customers.xml`|データ ソースの種類を `XML` に設定します。 接続文字列は XML ドキュメントへの URL です。|  
 |XML データ ソース、埋め込み XML ドキュメント|*空*|データ ソースの種類を `XML` に設定します。 XML データはレポート定義に埋め込まれています。|  
   
- `localhost` を使用してレポート サーバーに接続できない場合は、TCP/IP プロトコルのネットワーク プロトコルが有効になっていることを確認します。 詳細については、「 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
-  
- これらの種類のデータ ソースへの接続に必要な設定の詳細については、「[外部データ ソースのデータを追加する (SSRS)](report-data/add-data-from-external-data-sources-ssrs.md)」または「[Reporting Services でサポートされるデータ ソース (SSRS)](create-deploy-and-manage-mobile-and-paginated-reports.md)」で、目的のデータ接続のトピックを参照してください。  
+`localhost` を使用してレポート サーバーに接続できない場合は、TCP/IP プロトコルのネットワーク プロトコルが有効になっていることを確認します。 詳細については、「 [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。  
   
 ##  <a name="bkmk_special_password_characters"></a> パスワードの特殊文字  
  パスワードを要求したり、接続文字列にパスワードを含めるように ODBC データ ソースや SQL データ ソースを構成し、ユーザーが句読点のような特殊文字を使用してパスワードを入力した場合、基になるデータ ソースのドライバーによってはその特殊文字を検証することができません。 レポートを処理する際に、この問題によって、"パスワードが無効です" というメッセージが表示される場合があります。 パスワードを変更できない場合は、データベース管理者と連携して、適切な資格情報をシステム ODBC データ ソース名 (DSN) の一部としてサーバーに格納することができます。 詳細については、 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK ドキュメントの「OdbcConnection.ConnectionString」を参照してください。  

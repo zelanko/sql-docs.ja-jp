@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: b33a7658e4bc4d474d7ecbf326295c8263796e24
+ms.openlocfilehash: 0e48ae5898c4d999b7478e80ffb7487bba6af5f5
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
-ms.locfileid: "62655396"
+ms.locfileid: "62843501"
 ---
-  **AdventureWorks2012**  
+レポート ビルダー

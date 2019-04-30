@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79c1a291781c5d58b83b05f77ce5ccb952765277
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242440"
 ---
 # <a name="search-a-report-using-url-access"></a>URL アクセスを使用してレポートを検索する
   URL アクセスを使用して、レポート内に特定の文字列があるかどうかを検索できます。 レポート内を検索するには、URL の *rc:FindString* パラメーターの値として検索する文字列を設定します。 さらに、 *rc:StartFind* パラメーターと *rc:EndFind* パラメーターを使用すれば、検索対象をレポート内の特定のページに絞り込むことができます。  

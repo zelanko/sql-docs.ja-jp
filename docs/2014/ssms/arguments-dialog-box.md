@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e671905eaf17c5980f2a89a6a8d1b6056dd6831
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245404"
 ---
 # <a name="arguments-dialog-box"></a>[引数] ダイアログ ボックス
   **[引数]** ダイアログ ボックスでは、ツールの新しい引数または既存の引数を指定します。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスで **[起動時に引数を入力]** オプションをオンにしている外部ツールを起動したときに表示されます。  

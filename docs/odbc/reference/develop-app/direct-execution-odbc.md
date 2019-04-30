@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242360"
 ---
 # <a name="direct-execution-odbc"></a>直接実行 (ODBC)
 直接実行は、ステートメントを実行する最も簡単な方法です。 実行するため、ステートメントが送信されると、データ ソース アクセス プランにコンパイルし、しアクセス計画を実行します。  
@@ -41,7 +41,7 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
   
  ステートメントを実行するには、直接アプリケーションを実行、次の操作します。  
   
-1.  パラメーターの値を設定します。 詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述を参照してください。  
+1.  パラメーターの値を設定します。 詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述します。  
   
 2.  呼び出し**SQLExecDirect**し、SQL ステートメントを含む文字列を渡します。  
   
@@ -49,7 +49,7 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
   
     -   ステートメントを解析することがなく、データ ソースの SQL 文法を使用する SQL ステートメントを変更します。これで説明されているエスケープ シーケンスを置き換えるが含まれています。 [odbc エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)します。 アプリケーションが呼び出すことによって、SQL ステートメントの変更されたフォームを取得できます**SQLNativeSql**します。 SQL_ATTR_NOSCAN ステートメントの属性が設定されている場合、エスケープ シーケンスは置き換えられません。  
   
-    -   現在のパラメーター値を取得し、必要に応じてそれらを変換します。 詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述を参照してください。  
+    -   現在のパラメーター値を取得し、必要に応じてそれらを変換します。 詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述します。  
   
     -   ステートメントと変換されたパラメーターの値を実行するためのデータ ソースに送信します。  
   
