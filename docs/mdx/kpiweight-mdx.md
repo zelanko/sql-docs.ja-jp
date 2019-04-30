@@ -1,5 +1,5 @@
 ---
-title: KPIWeight (MDX) |Microsoft ドキュメント
+title: KPIWeight (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 325942d8bd0b4aa674266b2f3e40941fc401b277
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270522"
 ---
 # <a name="kpiweight-mdx"></a>KPIWeight (MDX)
 
@@ -29,13 +29,13 @@ KPIWeight(KPI_Name)
 ```  
   
 ## <a name="arguments"></a>引数  
- *Kpi 名*  
- KPI の名前を指定する有効な文字列式です。  
+ *KPI_Name*  
+ KPI の名前を指定する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
- 返される値は、親に対する KPI の比重です。  
+ 返される値は、親 KPI の比重です。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

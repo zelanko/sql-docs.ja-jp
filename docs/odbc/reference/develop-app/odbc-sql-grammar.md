@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53200bb8af774c11b9384174d5596708ef01f990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305831"
 ---
 # <a name="odbc-sql-grammar"></a>ODBC SQL 文法
-相互運用可能なアプリケーションは、SQL ステートメントで ODBC SQL 文法を常に使用する必要があります。 ただし、多くのバリエーションは、この文法内でも可能です。 詳細については、[SQL ステートメントの相互運用性](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)を参照してください。
+相互運用可能なアプリケーションは、SQL ステートメントで ODBC SQL 文法を常に使用する必要があります。 ただし、多くのバリエーションは、この文法内でも可能です。 詳細については、次を参照してください。 [SQL ステートメントの相互運用性](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)します。

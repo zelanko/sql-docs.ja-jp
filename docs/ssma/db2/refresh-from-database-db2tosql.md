@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ef7778854248f194c01254b9cd6f833f67e9cefc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269998"
 ---
 # <a name="refresh-from-database-db2tosql"></a>データベース (DB2ToSQL) からの更新します。
 **データベースからの更新** ダイアログ ボックスを使用して、DB2 データベースから更新するには、どのオブジェクトを選択できます。 ダイアログ ボックス内の行は色分け、メタデータの状態に基づいて。  
@@ -28,7 +28,7 @@ ms.locfileid: "47685120"
   
 -   オブジェクトが、DB2 データベースの新機能の場合は、その行はピンク色です。  
   
-オブジェクトの更新設定は既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、[プロジェクト設定&#40;同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)を参照してください。  
+オブジェクトの更新設定は既定値を指定することができます、**プロジェクト設定** ダイアログ ボックス。 詳細については、次を参照してください。[プロジェクト設定&#40;同期&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)します。  
   
 アクセスする、**データベースからの更新**DB2 メタデータ エクスプ ローラーでオブジェクトを右クリックしてダイアログ ボックスで、**データベースからの更新**します。  
   

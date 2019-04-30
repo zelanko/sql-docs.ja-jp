@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 874c22fa4625ba78af44f19ad328a39d854eb8de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316486"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>コマンド (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -32,7 +32,7 @@ _RecordsetPtr Execute( VARIANT * RecordsAffected, VARIANT * Parameters, long Opt
 _ParameterPtr CreateParameter( _bstr_t Name, enum DataTypeEnum Type, enum ParameterDirectionEnum Direction, long Size, const _variant_t & Value = vtMissing );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _ConnectionPtr GetActiveConnection( );  
@@ -60,5 +60,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: チュートリアル :追加して、データベース ダイアグラムを変更する |Microsoft Docs
+title: 'チュートリアル: 追加して、データベース ダイアグラムを変更する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273742"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>チュートリアル :追加して、データベース ダイアグラムを変更します。
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>チュートリアル: データベース ダイアグラムの追加と変更
   このチュートリアルでは、データベース ダイアグラムを作成および変更する方法と、データベース ダイアグラム コンポーネントを使用してデータベースを変更する方法について説明します。 ダイアグラムにテーブルを追加する方法、テーブル間のリレーションシップを作成する方法、列に制約とインデックスを作成する方法、およびテーブルごとに表示する情報のレベルを変更する方法を記載しています。  
   
 ## <a name="prerequisites"></a>前提条件  
@@ -130,7 +130,7 @@ ms.locfileid: "52822626"
   
 2.  `T2col1` を `T1col1`にドラッグします。  
   
-     2 つのダイアログ ボックスが表示されます。**外部キー リレーションシップ**バック グラウンドでと**テーブルと列**フォア グラウンドでします。  
+     2 つのダイアログ ボックス、**外部キー リレーションシップ**バック グラウンドでと**テーブルと列**フォア グラウンドでします。  
   
 3.  **[OK]** をクリックして、新しいリレーションシップを保存します。  
   

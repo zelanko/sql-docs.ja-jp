@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298138"
 ---
 # <a name="ado-glossary-terms"></a>ADO の用語集の用語
 このトピックでは、ADO に関連する用語を定義します。
@@ -133,7 +133,7 @@ ms.locfileid: "52528019"
 
  階層レコード セット A **Recordset**別の操作を含む**レコード セット**します。 データ シェイプの章を参照してください。
 
- 詳細については、[階層レコード セットの行にアクセスする](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)を参照してください。
+ 詳細については、次を参照してください。[階層レコード セットの行にアクセスする](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)します。
 
  一般に、階層内の階層は、上位ランク付けされた構造レベルし、下位レベル。 ADO では、階層で**レコード セット**レコードと章の間の親子リレーションシップを表すために使用します。 ADO でも**レコード**と**Stream**オブジェクトは、フォルダーやドキュメントなどの階層ツリーの構造体へのアクセスに使用できます。 ADO MD も含まれています。**階層**OLAP キューブのディメンションのレベル間のリレーションシップを表すオブジェクト。 階層レコード セット、親子リレーションシップ、章、ツリーを参照してください。
 

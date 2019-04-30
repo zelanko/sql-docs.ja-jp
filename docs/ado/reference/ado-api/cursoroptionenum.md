@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba39c4bdc2bffc3198d780aa155e9ee60000d88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308726"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 どのような機能を指定します、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドをテストする必要があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "47673220"
 |**adApproxPosition**|0x4000|では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)と[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティ。|  
 |**adBookmark**|0x2000|では、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)特定のレコードにアクセスするプロパティ。|  
 |**adDelete**|0x1000800|では、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)レコードを削除するメソッド。|  
-|**adFind**|0x80000|サポート、[検索](../../../ado/reference/ado-api/find-method-ado.md)内の行を検索するメソッド、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。|  
+|**adFind**|これに対して、0x80000|サポート、[検索](../../../ado/reference/ado-api/find-method-ado.md)内の行を検索するメソッド、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。|  
 |**adHoldRecords**|0x100|複数のレコードを取得または保留中のすべての変更をコミットしなくても、次の位置を変更します。|  
 |**adIndex**|0x100000|サポート、[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティにインデックスの名前します。|  
 |**adMovePrevious**|0x200|サポート、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)と[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッド、および[移動](../../../ado/reference/ado-api/move-method-ado.md)または[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)に現在のレコードを移動する方法が後方移動ブックマークをせずにします。|  

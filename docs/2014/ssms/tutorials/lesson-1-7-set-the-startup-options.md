@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312623"
 ---
 # <a name="set-the-startup-options"></a>起動オプションの設定
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の起動時に指定の構成でデザイン画面が開くように構成できます。 使いやすい構成で開くように [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を設定しておけば、時間を節約できます。  

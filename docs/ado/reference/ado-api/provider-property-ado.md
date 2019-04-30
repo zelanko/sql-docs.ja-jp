@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22ee1b88ee6065a49c53ae7024c93e869099ca3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280336"
 ---
 # <a name="provider-property-ado"></a>Provider プロパティ (ADO)
 プロバイダーの名前を示します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
@@ -45,4 +45,4 @@ ms.locfileid: "47755291"
  [Provider および DefaultDatabase プロパティの例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider および DefaultDatabase プロパティの例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

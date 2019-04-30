@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 901d410fc7aa954dcd39a852f240168f2a690e3c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294519"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>データベース実験アシスタントでの分析レポートを作成します。
 
@@ -37,7 +37,7 @@ DEA では、メニュー アイコンを選択します。 展開されたメ�
 入力するか、次の情報を選択します。
 
 - **レポート名**:レポートの名前を入力します。 レポート名が使用される両方 A と B のデータベース。 例:*(A または B)* + *レポート名* + *一意識別子*します。 
-- **サーバー名**:A、追加するサーバー コンピューターの名前を入力します。 B、および分析データベース。
+- **[サーバー名]**: A、追加するサーバー コンピューターの名前を入力します。 B、および分析データベース。
 - **SQL Server インスタンス名**:レポートに使用する SQL Server インスタンスの名前を入力します。
 - **移行元サーバーのトレース**:SQL Server (2008 R2) の最初のトレース (.trc) ファイルを入力します。
 - **対象サーバーのトレース**:ターゲット SQL Server (2014) 最初 .trc ファイルを入力します。
@@ -66,7 +66,7 @@ No.  現時点では、競合を防ぐには、一度に 1 つのレポートを
     
 ### <a name="can-i-generate-an-analysis-report-by-using-the-command-prompt"></a>コマンド プロンプトを使用して、分析レポートを生成できますか。
     
-可能。 コマンド プロンプトで、分析レポートを生成することができます。 UI で、レポートを表示できます。 詳細については、[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)を参照してください。
+可能。 コマンド プロンプトで、分析レポートを生成することができます。 UI で、レポートを表示できます。 詳細については、次を参照してください。[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)します。
     
 ## <a name="troubleshoot-analysis-reports"></a>分析レポートをトラブルシューティングします。
 
@@ -110,7 +110,7 @@ DEA にログインしたユーザーによっては、分析サーバーの sys
 
 ## <a name="next-steps"></a>次のステップ
 
-- 分析レポートを表示する方法については、[レポートを表示する](database-experimentation-assistant-view-report.md)を参照してください。
+- 分析レポートを表示する方法については、次を参照してください。[レポートを表示する](database-experimentation-assistant-view-report.md)します。
 
 - DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
 

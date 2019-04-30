@@ -21,17 +21,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232065"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 関数
 **準拠**  
- 2.5 ODBC のバージョンで導入されました。  
+ バージョンが導入されました。ODBC 2.5  
   
- **概要**  
+ **まとめ**  
  **ConfigDriver**により、セットアップ プログラムをインストールを実行し、関数を呼び出すプログラムを必要とせずアンインストール**ConfigDSN**します。 この関数では、ドライバー固有のシステム情報を作成し、インストール中に、DSN の変換を実行するだけでなくアンインストール中に、システム情報の変更をクリーンアップなどのドライバー固有の関数を実行します。 この関数は、ドライバーのセットアップ DLL または別のセットアップ DLL によって公開されます。  
   
 ## <a name="syntax"></a>構文  
@@ -52,12 +52,12 @@ BOOL ConfigDriver(
  *hwndParent*  
  [入力]親ウィンドウ ハンドル。 関数では、ハンドルが null の場合、ダイアログ ボックスは表示されません。  
   
- *起こり*  
+ *fRequest*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
   
- ODBC_INSTALL_DRIVER: は、新しいドライバーをインストールします。  
+ ODBC_INSTALL_DRIVER:新しいドライバーをインストールします。  
   
- ODBC_REMOVE_DRIVER: は、ドライバーを削除します。  
+ ODBC_REMOVE_DRIVER:ドライバーを削除します。  
   
  このオプションは、ドライバー固有を場合にも、*起こり*ODBC_CONFIG_DRIVER_MAX + 1 から最初のオプションの引数を起動する必要があります。 *起こり*ODBC_CONFIG_DRIVER_MAX + 1 より大きい値から、追加のオプションの引数を開始する必要がありますもします。  
   

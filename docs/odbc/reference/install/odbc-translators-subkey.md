@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e7109a6f1b88cf7639b2fc823ce0c5f14d05002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280788"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC トランスレーターのサブキー
 ODBC トランスレーターのサブキーの下の値には、インストールされている翻訳者が一覧表示します。 これらの値の形式は、次の表に示します。  
   
 |名前|データ型|data|  
 |----------|---------------|----------|  
-|*translator desc*|REG_SZ|**インストールされています。**|  
+|*translator-desc*|REG_SZ|**インストールされています。**|  
   
  *Translator desc*名は変換プログラムの開発者によって定義されます。  
   

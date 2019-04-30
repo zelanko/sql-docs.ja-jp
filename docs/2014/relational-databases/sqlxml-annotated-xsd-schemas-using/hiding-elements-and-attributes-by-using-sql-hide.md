@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 541f5ccff727552730e4648552ad5126fdfd4858
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228472"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide による要素と属性の非表示
   XSD スキーマに対して XPath クエリを実行すると、結果の XML ドキュメントにはスキーマで指定された要素と属性が含められます。 `sql:hide` 注釈を使用すると、スキーマでいくつかの要素と属性を非表示にするよう指定できます。 この機能は、クエリの選択条件としてはスキーマ内の特定の要素または属性が必要でも、生成される XML ドキュメントではこれらを返したくない場合に便利です。  
@@ -37,12 +37,12 @@ ms.locfileid: "52793614"
  `sql:hide` 注釈はブール値 (0 = false、1=true) をとります。 指定できる値は 0、1、true、false です。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、[SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)を参照してください。  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 属性に sql:hide を指定する  
  この例では、XSD スキーマから成る、  **\<Person.Contact >** を持つ要素**ContactID**、 **FirstName**、および**LastName**属性。  
   
-  **\<Person.Contact >** 要素は複合型はあり、そのため、同じ名前 (既定のマッピング) のテーブルにマップされます。 すべての属性 **\<Person.Contact >** 要素は単純型と、AdventureWorks データベース Person.Contacttable 内の同じ名前の列にマップします。 スキーマで、`sql:hide`注釈が指定されて、 **ContactID**属性。 このスキーマに対して XPath クエリを指定した場合、 **ContactID** XML ドキュメントでは返されません。  
+ **\<Person.Contact >** 要素は複合型はあり、そのため、同じ名前 (既定のマッピング) のテーブルにマップされます。 すべての属性 **\<Person.Contact >** 要素は単純型と、AdventureWorks データベース Person.Contacttable 内の同じ名前の列にマップします。 スキーマで、`sql:hide`注釈が指定されて、 **ContactID**属性。 このスキーマに対して XPath クエリを指定した場合、 **ContactID** XML ドキュメントでは返されません。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -79,7 +79,7 @@ ms.locfileid: "52793614"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  Here is the result set:  
   

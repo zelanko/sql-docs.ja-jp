@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273036"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC プログラマ&#39;リファレンス
 *ODBC プログラマ リファレンス*次のセクションが含まれています。  
@@ -50,7 +50,7 @@ ms.locfileid: "52520185"
   
 |形式|使用目的|  
 |------------|--------------|  
-|選択 * から|大文字の文字は、SQL ステートメント、マクロ名、およびオペレーティング システム コマンド レベルで使用される用語を示します。|  
+|SELECT * FROM|大文字の文字は、SQL ステートメント、マクロ名、およびオペレーティング システム コマンド レベルで使用される用語を示します。|  
 |`RETCODE SQLFetch(hdbc)`|固定幅フォントは、コマンドラインのサンプルとプログラム コードに使用されます。|  
 |*argument*|斜体の単語は、プログラムの引数については、ユーザーまたはアプリケーションを提供する必要があります強調を word ことを示します。|  
 |**SQLEndTran**|太字では、構文を正確に示すように、関数名を含む入力する必要があることを示します。|  

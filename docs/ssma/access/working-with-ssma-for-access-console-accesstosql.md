@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 021458a2c47f9c57f641da575b346ab09c66fee9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299030"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>SSMA for Access コンソール (AccessToSQL) の操作
 Microsoft SQL Server Migration Assistant (SSMA) のアクセスは、コマンドラインでコンソール アプリケーションからアクセスできるようになりました。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとしては、SSMA はにより、スクリプト レベルのインターフェイス、移行サイクルが削減され、移行作業を拡大または縮小します。  
@@ -38,6 +38,6 @@ Microsoft SQL Server Migration Assistant (SSMA) のアクセスは、コマン�
 |[レポートを生成する&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)|レポートを生成するコマンドが表示されます。|  
 |[トラブルシューティング&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|移行に関する問題の解決方法に関する簡単な情報を提供します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Ssma for Access コンソール作業の開始](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

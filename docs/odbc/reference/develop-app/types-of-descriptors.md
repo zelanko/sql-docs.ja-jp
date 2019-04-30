@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305617"
 ---
 # <a name="types-of-descriptors"></a>記述子の種類
 次のいずれかを記述する記述子が使用されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "47797290"
 |**アプリケーション バッファー**|アプリケーション行記述子 (ARD)|アプリケーション パラメーター記述子 (APD)|  
 |**バッファーの実装**|実装行記述子 (IRD)|実装パラメーター記述子 (IPD)|  
   
- パラメーターまたは行のバッファーのいずれかのアプリケーションを実装し、アプリケーションの記述子のレコードを対応するさまざまなデータ型を指定する場合、ドライバーを実行しますデータ変換の記述子を使用する場合。 たとえば、数値および日時の値を文字の文字列形式に変換が可能性があります。 (有効な変換は、次を参照してください[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。)。  
+ パラメーターまたは行のバッファーのいずれかのアプリケーションを実装し、アプリケーションの記述子のレコードを対応するさまざまなデータ型を指定する場合、ドライバーを実行しますデータ変換の記述子を使用する場合。 たとえば、数値および日時の値を文字の文字列形式に変換が可能性があります。 (有効な変換は、次を参照してください[付録 d:。データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md))。  
   
  記述子は、さまざまなロールを実行できます。 別のステートメントでは、アプリケーションが明示的に割り当てる任意の記述子を共有できます。 1 つのステートメントで行記述子は、別のステートメントでパラメーターの記述子として使用できます。  
   

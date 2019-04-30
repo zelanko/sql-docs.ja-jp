@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301373"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>マーケット バスケット モデルの変更と処理 (中級者向けデータ マイニング チュートリアル)
   作成したアソシエーション マイニング モデルを処理する前に、2 つのパラメーターの既定値を変更する必要があります。*サポート*と*確率*します。  
@@ -24,7 +24,7 @@ ms.locfileid: "56035413"
   
 -   *確率*アソシエーションがどの程度必要がありますを定義する前に、有効と見なされます。 ここでは、確率が 10% 以上のアソシエーションを対象とします。  
   
- サポートと確率の増減による影響の詳細については、[Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)を参照してください。  
+ サポートと確率の増減による影響の詳細については、次を参照してください。 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)します。  
   
  構造とパラメーターを定義した後、**アソシエーション**マイニング モデル、モデルが処理されます。  
   

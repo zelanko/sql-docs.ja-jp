@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7d632b040a5124d73470ce825af91e254866a0ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299218"
 ---
 # <a name="global-settings-logging-db2tosql"></a>グローバル設定 (ログ) (DB2ToSQL)
 使用して、**グローバル設定**SSMA のログ記録設定を指定 ダイアログ ボックス。 通常、製品サポートを使用する場合にのみ、これらの設定を変更するは。  
@@ -48,7 +48,7 @@ ms.locfileid: "47857320"
 |**致命的なエラー**|致命的なエラー メッセージのみをログに書き込みます。|  
 |**Error**|エラーと致命的なエラー メッセージをログに書き込みます。|  
 |**警告**|警告、エラー、および致命的なエラー メッセージをログに書き込みます。|  
-|**情報**|情報、警告、エラー、および致命的なエラー メッセージをログに書き込みます。|  
+|**Info**|情報、警告、エラー、および致命的なエラー メッセージをログに書き込みます。|  
 |**デバッグ**|デバッグ ログにメッセージを含む、すべてのメッセージを記述します。|  
   
 **ログ ファイルのパス**  

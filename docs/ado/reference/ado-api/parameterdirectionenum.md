@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314830"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定するかどうか、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)表します入力パラメーター、出力パラメーター、両方の入力と出力パラメーター、またはストアド プロシージャからの戻り値。  

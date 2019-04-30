@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 626ee1de57fdcecdf53d20263b1717df25480c40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313430"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access ドライバー)
 > [!NOTE]  
@@ -116,9 +116,9 @@ ms.locfileid: "52532522"
   
  [自動増分]  
   
- BINARY  
+ バイナリ  
   
- BOOLEAN  
+ ブール値  
   
  BYTE  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52532522"
   
  FLOAT8  
   
- GENERAL  
+ [全般]  
   
  IEEEDOUBLE  
   
@@ -204,7 +204,7 @@ ms.locfileid: "52532522"
   
  [TEXT]  
   
- 先頭に戻る  
+ TOP  
   
  変換  
   
@@ -222,7 +222,7 @@ ms.locfileid: "52532522"
  SQL_FN_NUM_ABS &#124; です。SQL_FN_NUM_ATAN &#124; です。SQL_FN_NUM_CEILING &#124; です。SQL_FN_NUM_COS &#124; です。SQL_FN_NUM_EXP &#124; です。SQL_FN_NUM_FLOOR &#124; です。SQL_FN_NUM_LOG &#124; です。SQL_FN_NUM_MOD &#124; です。SQL_FN_NUM_POWER &#124; です。SQL_FN_NUM_RAND &#124; です。SQL_FN_NUM_SIGN &#124; です。SQL_FN_NUM_SIN &#124; です。SQL_FN_NUM_SQRT &#124; です。SQL_FN_NUM_TAN  
   
 ## <a name="sqlojcapabilities"></a>SQL_OJ_CAPABILITIES  
- SQL_OJ_LEFT、SQL_OJ_RIGHT SQL_OJ_NOT_ORDERED SQL_OJ_INNER SQL_OJ_ALL_COMPARISON_OPS  
+ SQL_OJ_LEFT SQL_OJ_RIGHT SQL_OJ_NOT_ORDERED SQL_OJ_INNER SQL_OJ_ALL_COMPARISON_OPS  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
  SQL_QU_DML_STATEMENTS &#124; です。SQL_QU_TABLE_DEFINITION &#124; です。SQL_QU_INDEX_DEFINITION &#124; です。SQL_QU_PROCEDURE_INVOCATION  

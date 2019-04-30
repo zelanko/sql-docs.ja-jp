@@ -1,5 +1,5 @@
 ---
-title: //(コメント)(MDX) |Microsoft ドキュメント
+title: (コメント)(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6570694bc38eb6f32f660006f1ed1b6797793b7b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306337"
 ---
-# <a name="comment-mdx-double-slash"></a>コメントの MDX 二重スラッシュ
+# <a name="comment-mdx-double-slash"></a>MDX 二重スラッシュのコメント
 
 
-  ユーザーが入力したテキストを示します。  
+  ユーザー指定のテキストを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,14 +33,14 @@ ms.locfileid: "34739521"
  コメントのテキストを含む文字列です。  
   
 ## <a name="remarks"></a>コメント  
- コメントは、別個の行として挿入することも、多次元式 (MDX) スクリプトの行の末尾で入れ子にすることも、MDX ステートメント内で入れ子にすることも可能です。 サーバーはコメントを評価しません。  
+ コメントは、個別の行に挿入された、多次元式 (MDX) スクリプトの行の末尾で入れ子にまたは MDX ステートメント内で入れ子になったことができます。 サーバーでは、コメントは評価されません。  
   
  単一行のみのコメントには、// を使用します。 // を使用して挿入するコメントは、改行文字で区切ります。  
   
  コメントの長さには制限がありません。  
   
 ## <a name="examples"></a>使用例  
- この演算子の使用例を以下に示します。  
+ 次の例では、この演算子の使用を示します。  
   
 ```  
 // This member returns the gross profit margin for product types  

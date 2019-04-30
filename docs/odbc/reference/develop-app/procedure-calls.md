@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284574"
 ---
 # <a name="procedure-calls"></a>プロシージャ呼び出し
 A*プロシージャ*はデータ ソースに格納されている実行可能オブジェクトです。 これは通常、プリコンパイルされた 1 つ以上の SQL ステートメントです。 プロシージャの呼び出しのエスケープ シーケンスは、します。  
   
- **{****[? =]****呼び出す***プロシージャ名*[**(**[*パラメーター*] [**、**[*パラメーター*].**)**]**}**  
+ **{****[?=]****call** *procedure-name*[**(**[*parameter*][**,**[*parameter*]]...**)**]**}**  
   
  場所*プロシージャ名*プロシージャの名前を指定し、*パラメーター*プロシージャのパラメーターを指定します。  
   
- プロシージャ呼び出しのエスケープ シーケンスの詳細については、[プロシージャの Call エスケープ シーケンス](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)付録 c: SQL の文法でを参照してください。  
+ プロシージャ呼び出しのエスケープ シーケンスの詳細については、次を参照してください[プロシージャの Call エスケープ シーケンス](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)付録 c:。SQL 文法。  
   
  プロシージャには、0 個以上のパラメーターを指定できます。 省略可能なパラメーター マーカーで示されている値を返すことも **? =** 構文の先頭。 場合*パラメーター*が入力パラメーターまたは入力/出力パラメーター、リテラルまたはパラメーター マーカーを指定できます。 ただし、一部のデータ ソースがリテラル パラメーター値を受け入れないために、相互運用可能なアプリケーションはパラメーター マーカーを使用常にする必要があります。 場合*パラメーター*出力パラメーター、パラメーター マーカーをする必要があります。 パラメーター マーカーにバインドする必要があります**SQLBindParameter**プロシージャ呼び出しの前にステートメントが実行されます。  
   
@@ -63,4 +63,4 @@ SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);
   
  アプリケーションを呼び出すプロシージャをデータ ソースがサポートしているかどうかを判断する**SQLGetInfo** SQL_PROCEDURES オプションを使用します。  
   
- プロシージャの詳細については、[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)を参照してください。
+ プロシージャの詳細については、次を参照してください。[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)します。

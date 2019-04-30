@@ -12,14 +12,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288519"
 ---
 # <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)
-ODBC では、接続とステートメントの操作の非同期実行を許可します。 アプリケーション スレッドで非同期モードで ODBC 関数を呼び出すことができ、操作が完了すると、その他のタスクを実行するアプリケーションのスレッドを許可する前に、関数が返すことができます。 Windows 7 sdk の非同期ステートメントまたは接続操作では、アプリケーションは、非同期操作が完了のポーリング メソッドを使用して決定されます。 詳細については、[非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)を参照してください。 以降、Windows 8 SDK では、非同期操作が通知メソッドを使用して完全なことを確認できます。  
+ODBC では、接続とステートメントの操作の非同期実行を許可します。 アプリケーション スレッドで非同期モードで ODBC 関数を呼び出すことができ、操作が完了すると、その他のタスクを実行するアプリケーションのスレッドを許可する前に、関数が返すことができます。 Windows 7 sdk の非同期ステートメントまたは接続操作では、アプリケーションは、非同期操作が完了のポーリング メソッドを使用して決定されます。 詳細については、次を参照してください。[非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)します。 以降、Windows 8 SDK では、非同期操作が通知メソッドを使用して完全なことを確認できます。  
   
  ポーリング メソッドでは、アプリケーションが操作の状態が必要があるたびに、非同期関数を呼び出す必要があります。 通知方法は、コールバックと ADO.NET での待機に似ています。 ODBC では、通知オブジェクトとしてただし、Win32 イベントを使用します。  
   

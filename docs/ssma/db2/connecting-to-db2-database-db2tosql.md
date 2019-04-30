@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299349"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 データベース (DB2ToSQL) に接続します。
 DB2 のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行する DB2 データベースに接続する必要があります。 接続すると、SSMA は、すべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -75,7 +75,7 @@ DB2 データベースについてのメタデータは、自動的に更新さ�
   
     `Data Source=MyDB2DB;Integrated Security=yes;`  
   
-    詳細については、[Oracle に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)を参照してください。  
+    詳細については、次を参照してください。 [Oracle に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)します。  
   
 ## <a name="reconnecting-to-db2"></a>DB2 への再接続  
 プロジェクトを閉じるまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くとする場合は、データベースにアクティブな接続を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要になるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行します。  

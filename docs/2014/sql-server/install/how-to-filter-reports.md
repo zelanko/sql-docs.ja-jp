@@ -1,5 +1,5 @@
 ---
-title: '方法: レポートをフィルター処理 |Microsoft Docs'
+title: 操作方法:レポートをフィルター処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8eb337798afec3311b6e31027b7acbff96b8d8a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294849"
 ---
-# <a name="how-to-filter-reports"></a>レポートに表示する問題を選択する方法
+# <a name="how-to-filter-reports"></a>操作方法:レポートに表示する問題を選択する
   このトピックでは、アップグレード アドバイザー レポート ビューアーを使用して、レポートにフィルターを適用する方法について説明します。  
   
 ### <a name="to-filter-reports"></a>レポートに表示する問題を選択するには  
   
-1.  レポート ビューアーで、フィルター選択するレポートを表示します。 手順については、[方法: アップグレード アドバイザーのレポート表示](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)を参照してください。  
+1.  レポート ビューアーで、フィルター選択するレポートを表示します。 手順については、次を参照してください。[方法。アップグレード アドバイザー レポートを表示する](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)します。  
   
 2.  **でフィルター処理**一覧を表示する問題の種類を選択します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48222142"
     -   **未解決の問題を**します。 まだ解決されていないすべての問題を表示します。  
   
 ## <a name="see-also"></a>参照  
- [方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [方法: アップグレード アドバイザー分析ウィザードを実行します。](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [アップグレード アドバイザーの操作方法に関するトピック](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

@@ -17,17 +17,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273388"
 ---
 # <a name="usage-counting"></a>使用状況のカウント
 > [!NOTE]  
 >  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
   
- 各コンポーネントのレジストリでの使用状況カウントが 2 つの型が保持されます。 コンポーネントの使用率カウントと省略可能なファイル使用状況カウントが 1 つまたは複数です。 コンポーネントの使用率カウントは、インストーラー DLL レジストリ エントリを維持します。 ODBC Core、ドライバー、およびトランスレーターのサブキーの下の UsageCount 値で格納されます。 UsageCount 値との詳細については、これらのサブキーはの形式の場合、[ODBC コンポーネントのレジストリ エントリ](../../../odbc/reference/install/registry-entries-for-odbc-components.md)を参照してください。  
+ 各コンポーネントのレジストリでの使用状況カウントが 2 つの型が保持されます。 コンポーネントの使用率カウントと省略可能なファイル使用状況カウントが 1 つまたは複数です。 コンポーネントの使用率カウントは、インストーラー DLL レジストリ エントリを維持します。 ODBC Core、ドライバー、およびトランスレーターのサブキーの下の UsageCount 値で格納されます。 UsageCount 値との詳細については、これらのサブキーはの形式の場合、次を参照してください。 [ODBC コンポーネントのレジストリ エントリ](../../../odbc/reference/install/registry-entries-for-odbc-components.md)します。  
   
  コンポーネントが最初にインストールされたときに、インストーラー DLL のサブキーを作成し、設定 UsageCount 値のデータをそのサブキーを 1 にします。 コンポーネントを再度インストールをインストーラー DLL は、使用率カウントをインクリメントします。 コンポーネントが削除されると、インストーラー DLL、使用状況カウントをデクリメントします。 使用率カウントを 0 になる場合、インストーラーの DLL は、コンポーネントのサブキーを削除します。  
   

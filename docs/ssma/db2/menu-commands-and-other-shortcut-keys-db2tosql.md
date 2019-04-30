@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280329"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>メニュー コマンドやその他のショートカット キー (DB2ToSQL)
 次のセクションでは、メニュー コマンドや DB2 アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  

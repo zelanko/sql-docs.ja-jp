@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232092"
 ---
 # <a name="standard-gateway"></a>標準のゲートウェイ
 A*ゲートウェイ*は別のように 1 つの DBMS を原因となるソフトウェアの一部です。 つまり、ゲートウェイ、プログラミング インターフェイス、SQL の文法とデータ ストリームを 1 つの DBMS のプロトコルとプログラミング インターフェイス、SQL の文法に変換されます受け取りデータ ストリームの非表示の DBMS のプロトコル。 たとえば、Microsoft® SQL Server™ を使用するアプリケーション データにアクセスできます DB2 マイクロ Decisionware DB2 ゲートウェイ; 経由この製品により、DB2 から SQL Server のようになります。 ゲートウェイを使用している場合は、ターゲット データベースごとに別のゲートウェイを書き込む必要があります。  

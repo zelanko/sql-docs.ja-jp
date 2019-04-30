@@ -18,17 +18,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299103"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>変換と移行オプション (AccessToSQL) の設定
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定することができます。 これらのオプションは、オブジェクトに変換する方法、データを移行する方法、およびソースのデータ型が対象のデータ型にマップする方法を指定します。 オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure にデータを移行または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、構成オプションが、プロジェクトの適切なことを確認します。  
   
 ## <a name="configuration-options-and-modes"></a>構成オプションとモード  
-SSMA は 4 つのセットの構成設定とこれらの設定を構成するための 4 つのモード: 既定、Optimistic、Full、およびユーザー設定。 ほとんどのユーザーには、既定のモードを使用することをお勧めします。 単純な変換をオプティミスティック モードを使用します。 すべてのメッセージを表示する場合は、完全なモードを使用します。 カスタム モードでは、オプションを設定します。  
+SSMA では、4 つのセットの構成設定とこれらの設定を構成するための 4 つのモードがあります。既定値、オプティミスティック、完全、およびカスタム。 ほとんどのユーザーには、既定のモードを使用することをお勧めします。 単純な変換をオプティミスティック モードを使用します。 すべてのメッセージを表示する場合は、完全なモードを使用します。 カスタム モードでは、オプションを設定します。  
   
 設定は、このドキュメントの「ユーザー インターフェイス リファレンス」のセクションで説明します。 設定と各モードで、設定を適用する方法の詳細については、次のトピックを参照してください。  
   

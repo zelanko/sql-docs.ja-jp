@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223548"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias クラス
   [SqlServerAlias クラス](sqlserveralias-class.md)クラスは、サーバー接続別名を表します。  

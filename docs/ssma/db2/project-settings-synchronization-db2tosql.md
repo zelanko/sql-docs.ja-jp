@@ -11,16 +11,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270082"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>プロジェクト設定 (同期) (DB2ToSQL)
 [同期] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA をロードし、へのデータベース テーブルとストアド プロシージャなどのオブジェクトを更新する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-既定のアクションのオプションは、DB2 データベースからオブジェクトを更新して、SQL Server データベースとオブジェクトを同期するために、既定の設定を指定します。 詳細については、[データベースからの更新&#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)を参照してください。  
+既定のアクションのオプションは、DB2 データベースからオブジェクトを更新して、SQL Server データベースとオブジェクトを同期するために、既定の設定を指定します。 詳細については、次を参照してください。[データベースからの更新&#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)します。  
   
 同じ設定が含まれている 2 つの異なる同期ページにアクセスできます。  
   

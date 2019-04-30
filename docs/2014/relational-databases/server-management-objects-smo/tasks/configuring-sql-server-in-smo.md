@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7fc07b0b38a9612159ea8f88c00724340f7b494
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273766"
 ---
 # <a name="configuring-sql-server-in-smo"></a>SMO での SQL Server の構成
   SMO では、<xref:Microsoft.SqlServer.Management.Smo.Information>オブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Settings>オブジェクト、<xref:Microsoft.SqlServer.Management.Smo.UserOptions>オブジェクト、および<xref:Microsoft.SqlServer.Management.Smo.Configuration>オブジェクトには、のインスタンスの設定および情報が含まれます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -39,7 +39,7 @@ ms.locfileid: "52804673"
  <xref:Microsoft.SqlServer.Management.Smo.Configuration> オブジェクトの構成オプションの変更はすべて、システム管理者が行う必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)と[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)と[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="modifying-sql-server-configuration-options-in-visual-basic"></a>Visual Basic での SQL Server 構成オプションの変更  
  このコード例は、Visual Basic .NET で構成オプションを更新する方法を示しています。 また、指定された構成オプションの最大値と最小値についての情報を取得および表示しています。 最後に、変更が動的に行われたのか、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが再起動されるまで変更が格納されるのかを、ユーザーに通知しています。  

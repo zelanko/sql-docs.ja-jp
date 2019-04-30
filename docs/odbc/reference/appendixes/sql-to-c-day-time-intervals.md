@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: から日付と時刻の間隔 |Microsoft Docs'
+title: 'SQL から C へ: 日付と時刻の間隔 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270428"
 ---
-# <a name="sql-to-c-day-time-intervals"></a>SQL c: から日付と時刻の間隔
+# <a name="sql-to-c-day-time-intervals"></a>SQL から C へ: 日付と時刻の間隔
 
 日付と時刻の間隔の ODBC SQL データ型の識別子、次に示します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "54420037"
 - SQL_INTERVAL_DAY_TO_HOUR
 - SQL_INTERVAL_MINUTE_TO_SECOND
 
-次の表は、ODBC C データ型の日付と時刻の間隔 SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。
+次の表は、ODBC C データ型の日付と時刻の間隔 SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。
 
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  

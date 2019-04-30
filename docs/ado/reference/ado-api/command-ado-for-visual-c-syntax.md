@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c97a8495b1877c8c72dcacba25943c04934abca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302539"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -32,7 +32,7 @@ CreateParameter(BSTR Name, DataTypeEnum Type, ParameterDirectionEnum Direction, 
 Execute(VARIANT *RecordsAffected, VARIANT *Parameters, long Options, _ADORecordset **ppirs)  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ```  
 get_ActiveConnection(_ADOConnection **ppvObject)  

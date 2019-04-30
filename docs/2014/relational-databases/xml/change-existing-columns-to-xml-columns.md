@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288335"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>既存の列を XML 列に変更する方法
   `xml` データ型は ALTER TABLE ステートメントでサポートされています。 たとえば、文字列型の列を `xml` データ型に変更できます。 このような場合、列に格納されるドキュメントは正しい形式でなければなりません。 また、列の型を文字列から型指定された xml に変更する場合、列内のドキュメントは指定した XSD スキーマに対して検証されます。  
@@ -33,7 +33,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- `xml` 型の列は、型指定されていない XML から型指定された XML に変更できます。 例 :  
+ `xml` 型の列は、型指定されていない XML から型指定された XML に変更できます。 以下に例を示します。  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

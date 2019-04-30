@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dfee0dd00e30f6446430156617ba45a5a39b994
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288548"
 ---
 # <a name="argument-value-checks"></a>引数の値のチェック
 ドライバー マネージャーは、次の種類の引数を確認します。 明記されない限り、ドライバー マネージャーは、引数の値でエラーの SQL_ERROR を返します。  

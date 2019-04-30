@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7557a34698f90054806aeafe9b7285970af092c3
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299071"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) の新機能新機能
 この記事では、アクセスの変更を各リリースでの SQL Server Migration Assistant (SSMA) が一覧表示します。  
@@ -193,7 +193,7 @@ SSMA for Access の 2006 年 11 月リリースには、次の変更が含まれ
   
 -   新しいデータベースの移行ウィザードへのアクセスを 1 つのデータベースの移行をガイドする追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
 -   新しい変換、読み込みを追加し、Access データベースに変換する移行コマンドに変換されたオブジェクトを読み込みます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのデータを移行したり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すべて 1 つの手順でします。  
--   強化されたクエリの移行。 移行をクエリに変換しますをビューにクエリをより選択するようになりました。 詳細については、[Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)を参照してください。  
+-   強化されたクエリの移行。 移行をクエリに変換しますをビューにクエリをより選択するようになりました。 詳細については、次を参照してください。 [Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)します。  
 -   テーブルとインデックスのプロパティを編集する機能を追加、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **テーブル**タブ。  
 -   新しいグローバル設定を追加するには。  
     -   エディターのウィンドウで行番号を表示できます。  

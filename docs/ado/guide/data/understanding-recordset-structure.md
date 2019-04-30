@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 011853836425b22beece83ef52bf21b563c6e64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228093"
 ---
 # <a name="understanding-recordset-structure"></a>レコードセットの構造を理解する
 すべて**レコード セット**が、**フィールド**コレクションの 1 つまたは複数から成る**フィールド**オブジェクト。 A**フィールド**オブジェクトは、通常は、テーブルの列を表します。 次のトピック内を移動する方法を説明は、**フィールド**各フィールドに関する情報のコレクションを取得します。 どのような情報をご確認いただける経由でについても説明し、**フィールド**オブジェクトとその使用方法。  

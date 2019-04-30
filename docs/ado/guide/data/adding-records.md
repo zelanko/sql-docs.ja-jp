@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294410"
 ---
 # <a name="adding-records-to-a-recordset"></a>レコードをレコード セットに追加します。
 使用して、 **AddNew**メソッドを作成し、既存の新しいレコードの初期化を**Recordset**します。 使用することができます、**サポート**メソッドを**CursorOptionEnum**の値**adAddNew**を現在のレコードを追加できるかどうかを確認する**レコードセット**オブジェクト。

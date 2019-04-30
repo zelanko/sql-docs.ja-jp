@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273295"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC と標準の CLI
 ODBC は、次の仕様およびコールレベル インターフェイス (CLI) を処理する標準に揃えて配置します。 (ODBC の機能は、これらの標準のそれぞれのスーパー セットです)。  
   
--   Open Group CAE 仕様"のデータ管理: SQL コールレベル インターフェイス (CLI)"  
+-   Open Group CAE 仕様"のデータ管理。SQL 呼び出しレベルのインターフェイス (CLI)"  
   
 -   ISO/IEC 9075-3:1995 (E) コールレベル インターフェイス (SQL/CLI)  
   
@@ -35,7 +35,7 @@ ODBC は、次の仕様およびコールレベル インターフェイス (CLI
   
 -   ODBC 3 は、Open Group および ISO CLI 仕様に記述されたアプリケーションは動作します。*x*ドライバーまたは ODBC 3 でコンパイルされるときに、標準に準拠したドライバー *。x*ヘッダー ファイルし、ODBC 3 にリンクされている *。x*ライブラリとすると、ドライバーは ODBC 3 へのアクセスが得られます *。x*ドライバー マネージャー。  
   
--   Open Group および ISO CLI 仕様に記述されたドライバーは、ODBC 3 *.x*アプリケーションまたは ODBC 3 でコンパイルされるときに、標準に準拠したアプリケーションを *.x*ヘッダー ファイルし、リンクODBC 3 *.x*ライブラリ、ドライバーは ODBC 3 に、アプリケーションがアクセスおよび *.x*ドライバー マネージャー。 (詳細については、[標準に準拠したアプリケーションやドライバー](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)を参照してください。  
+-   Open Group および ISO CLI 仕様に記述されたドライバーは、ODBC 3 *.x*アプリケーションまたは ODBC 3 でコンパイルされるときに、標準に準拠したアプリケーションを *.x*ヘッダー ファイルし、リンクODBC 3 *.x*ライブラリ、ドライバーは ODBC 3 に、アプリケーションがアクセスおよび *.x*ドライバー マネージャー。 (詳細については、次を参照してください。[標準に準拠したアプリケーションやドライバー](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)します。  
   
  コア インターフェイスの適合性レベルには、ISO CLI でのすべての機能と、開いているグループ CLI で nonoptional すべての機能が含まれます。 開くグループ CLI の省略可能な機能より高いインターフェイスの適合性レベルに表示されます。 ため、すべての ODBC 3。*x*ドライバーは、コア インターフェイスへの準拠レベルの機能をサポートするために必要で、次が該当します。  
   

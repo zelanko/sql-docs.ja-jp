@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54379bde808a5283f637b8b308cd86cbb09561e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270904"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>ストアド プロシージャ (for Oracle ODBC ドライバー)
 > [!IMPORTANT]  
 >  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
   
- このセクションの内容は次のとおりです。  
+ ここでは、次のトピックについて説明します。  
   
 -   [ストアド プロシージャのパラメーターの制限](../../odbc/microsoft/stored-procedure-parameter-limitations.md)  
   

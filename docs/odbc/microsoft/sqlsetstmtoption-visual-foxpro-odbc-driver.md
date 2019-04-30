@@ -14,25 +14,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d7bcecfbd880f53d1067fd68202b62c34fce398
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305820"
 ---
 # <a name="sqlsetstmtoption-visual-foxpro-odbc-driver"></a>SQLSetStmtOption (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:[レベル 1]  
   
  ステートメント ハンドルに関連するオプションを設定*hstmt*します。  
   
 |*fOption*|指定できる値|コメント|  
 |---------------|--------------------|--------------|  
-|SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|これを設定しようとした場合*fOption*ドライバーには、エラーが返されます。"ドライバーに対応していない"。 Visual FoxPro は、非同期実行をサポートしていません。|  
+|SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|これを設定しようとした場合*fOption*ドライバーは、エラーを返します。"Driver できない"。 Visual FoxPro は、非同期実行をサポートしていません。|  
 |SQL_BIND_TYPE|SQL_BIND_BY_COLUMN または構造体、または結果に列がバインドされるバッファーのインスタンスの長さを示す 32 ビット値。||  
 |SQL_CONCURRENCY|SQL_CONCUR_READ_ONLY<br /><br /> SQL_CONCUR_LOCK<br /><br /> SQL_CONCUR_VALUES|Visual FoxPro にタイムスタンプに基づく行のバージョン管理があるないために、ドライバーは、SQL_CONCUR_ROWVER を許可しません。|  
 |SQL_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY<br /><br /> SQL_CURSOR_STATIC|ドライバーでは、SQL_CURSOR_KEYSET_DRIVEN または SQL_CURSOR_DYNAMIC; は許可しません参照してください[SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md)詳細についてはします。|  
@@ -46,4 +46,4 @@ ms.locfileid: "47854400"
 |SQL_SIMULATE_CURSOR|エラー:"Driver できません。"||  
 |SQL_USE_BOOKMARKS|SQL_UB_OFF<br /><br /> SQL_UB_ON||  
   
- 詳細については、[SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md)で、 *ODBC プログラマ リファレンス*します。

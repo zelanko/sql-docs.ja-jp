@@ -1,5 +1,5 @@
 ---
-title: 例:FOR XML で生成した XML ルート要素の指定 |Microsoft Docs
+title: 例:FOR XML で生成される XML のルート要素の指定 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288377"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>例:FOR XML で生成される XML のルート要素の指定
   次のクエリに示すように、 `ROOT` クエリで `FOR XML` オプションを指定することにより、結果の XML に 1 つのトップレベル要素を要求できます。 `ROOT` ディレクティブに指定した引数で、ルート要素名を指定します。  
@@ -35,7 +35,7 @@ FOR XML RAW, ROOT('MyRoot')
 go  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <MyRoot>  

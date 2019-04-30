@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287669"
 ---
 # <a name="allocating-the-environment-handle"></a>環境ハンドルの割り当て
 ODBC アプリケーションの最初のタスクが、ドライバー マネージャーの読み込みにはこれを行う方法は、オペレーティング システムに依存します。 たとえば、Microsoft® Windows NT® Server または Windows 2000 Server、Windows NT ワークステーション/Windows 2000 Professional、または Microsoft Windows® 95/98 を実行するコンピューターでアプリケーションかへのリンク ドライバー マネージャーのライブラリまたは呼び出し**LoadLibrary**ドライバー マネージャーの DLL を読み込めません。  
@@ -41,10 +41,10 @@ ODBC アプリケーションの最初のタスクが、ドライバー マネ�
   
 2.  ドライバー マネージャーは、環境に関する情報を格納する構造体を割り当てるし、変数内の環境ハンドルを返します。  
   
- ドライバー マネージャーは呼び出しません**SQLAllocHandle**このドライバーで時間を呼び出すには、どのドライバーがわからないためです。 呼び出し元を遅らせる**SQLAllocHandle**ドライバー、アプリケーションがデータ ソースに接続する関数を呼び出すまでにします。 詳細については、[接続処理でドライバー マネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)、このセクションで後述を参照してください。  
+ ドライバー マネージャーは呼び出しません**SQLAllocHandle**このドライバーで時間を呼び出すには、どのドライバーがわからないためです。 呼び出し元を遅らせる**SQLAllocHandle**ドライバー、アプリケーションがデータ ソースに接続する関数を呼び出すまでにします。 詳細については、次を参照してください。[接続処理でドライバー マネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)、このセクションで後述します。  
   
  アプリケーションは、ODBC を使用してが完了したら、使用して、環境ハンドルが解放されます**SQLFreeHandle**します。 これは、環境を解放した後、ODBC 関数呼び出しで、環境のハンドルを使用するアプリケーション プログラミング エラーこれには結果が未定義であるが、致命的な可能性があります。  
   
  ときに**SQLFreeHandle**を呼び出すと、ドライバーのリリースの環境に関する情報を格納する構造体を使用します。 なお**SQLFreeHandle**その環境ハンドルのすべての接続ハンドルが解放されるまでの環境ハンドルを呼び出すことができません。  
   
- 環境ハンドルの詳細については、[環境処理](../../../odbc/reference/develop-app/environment-handles.md)を参照してください。
+ 環境ハンドルの詳細については、次を参照してください。[環境処理](../../../odbc/reference/develop-app/environment-handles.md)します。

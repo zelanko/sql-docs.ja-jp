@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 4ad868122fd8986c642bace1b2c9cf419bb89182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288398"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Oracle データベースへの接続 (OracleToSQL)
 Oracle データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行する Oracle データベースに接続する必要があります。 接続すると、SSMA は、すべての Oracle スキーマに関するメタデータを取得し、Oracle メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -91,7 +91,7 @@ Oracle データベースへの接続に使用されるアカウントが少な�
   
     `Data Source=MyOracleDB;Integrated Security=yes;`  
   
-    詳細については、[Oracle に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)を参照してください。  
+    詳細については、次を参照してください。 [Oracle に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)します。  
   
 ## <a name="reconnecting-to-oracle"></a>Oracle への再接続  
 プロジェクトを閉じるまで、データベース サーバーへの接続をアクティブに保ちます。 プロジェクトを再度開くとする場合は、データベースにアクティブな接続を再接続する必要があります。 メタデータを更新するには、データベース オブジェクトに読み込む必要になるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行します。  

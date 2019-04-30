@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294371"
 ---
-# <a name="c-to-sql-date"></a>C から SQL へ: 日付
+# <a name="c-to-sql-date"></a>C から SQL へ: date
 日付の ODBC C データ型の識別子を示します。  
   
  SQL_C_TYPE_DATE  
   
- 次の表は、ODBC SQL データ型の C データの日付を変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)を参照してください。  
+ 次の表は、ODBC SQL データ型の C データの日付を変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  

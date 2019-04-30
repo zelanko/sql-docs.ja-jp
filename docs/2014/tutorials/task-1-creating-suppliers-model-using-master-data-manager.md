@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222704"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>タスク 1:マスター データ マネージャーを使用して Suppliers モデルを作成する
   このタスクでという名前のモデルを作成する**Suppliers** MDS を使用して**マスター データ マネージャー**します。  

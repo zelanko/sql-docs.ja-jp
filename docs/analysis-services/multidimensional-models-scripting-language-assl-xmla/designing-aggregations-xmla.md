@@ -10,14 +10,14 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9f681b3c99bd0e8351a844f28b16be6249de199
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288502"
 ---
 # <a name="designing-aggregations-xmla"></a>集計のデザイン (XMLA)
-  集計デザインは、集計の格納時に複数のパーティションで同じ構造を確実に使用するようにするため、特定のメジャー グループのパーティションに関連付けられるものです。 使用して後でマージできるパーティションを簡単に定義することができるパーティションに対して同じストレージ構造を使用して、 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)コマンド。 集計デザインの詳細については、[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)を参照してください。  
+  集計デザインは、集計の格納時に複数のパーティションで同じ構造を確実に使用するようにするため、特定のメジャー グループのパーティションに関連付けられるものです。 使用して後でマージできるパーティションを簡単に定義することができるパーティションに対して同じストレージ構造を使用して、 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)コマンド。 集計デザインの詳細については、次を参照してください。[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)します。  
   
  使用することができます、集計デザインの集計を定義する、 [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) XML for Analysis (XMLA) コマンド。 **DesignAggregations**コマンドには、参照とその参照に基づいたデザイン プロセスを制御する方法として使用する集計デザインを識別するプロパティ。 使用して、 **DesignAggregations**コマンドとそのプロパティには、反復処理またはバッチでは、集計をデザインして、デザイン プロセスを評価する結果として得られるデザインの統計を表示できます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "50147187"
 ## <a name="specifying-queries"></a>クエリを指定します。  
  DesignAggregations コマンドは、1 つまたは複数を含めることによって最適化の使用量ベースのコマンドをサポートしている**クエリ**内の要素、[クエリ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla)プロパティ。 **クエリ**プロパティは、1 つまたは複数含めることができます[クエリ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)要素。 場合、**クエリ**プロパティが含まれない**クエリ**で指定された要素の集計のデザイン、**オブジェクト**要素を含む既定の構造を使用して、一般的な集計のセット。 この一般的な集計のセットがで指定された条件を満たすように設計、**最適化**と**ストレージ**のプロパティ、 **DesignAggregations**コマンド。  
   
- 各 **Query** 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 ユーザー独自のクエリを指定することもできますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスによってクエリ ログに格納されている情報を使用して、最もよく使用されるクエリに関する情報を取得することもできます。 使用法に基づく最適化ウィザードでは、クエリ ログを使用して、送信するとき、時間、使用状況、または指定されたユーザーに基づいて目標クエリを取得する、 **DesignAggregations**コマンド。 詳細については、[使用法に基づく最適化ウィザードの F1 ヘルプ](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)を参照してください。  
+ 各 **Query** 要素は、最もよく使用するクエリを対象とする集計を定義するためにデザイン プロセスが使用する、目標クエリを表します。 ユーザー独自のクエリを指定することもできますが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスによってクエリ ログに格納されている情報を使用して、最もよく使用されるクエリに関する情報を取得することもできます。 使用法に基づく最適化ウィザードでは、クエリ ログを使用して、送信するとき、時間、使用状況、または指定されたユーザーに基づいて目標クエリを取得する、 **DesignAggregations**コマンド。 詳細については、次を参照してください。[使用法に基づく最適化ウィザードの F1 ヘルプ](http://msdn.microsoft.com/library/e5f5a938-ae7c-4f4e-9416-a7f94ac82763)します。  
   
  集計を反復的にデザインする場合、目標クエリは最初の **DesignAggregations** コマンドで送信するだけで十分です。これは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスがこれらの目標クエリを保存し、後続の **DesignAggregations** コマンドでそれらのクエリを使用するためです。 反復処理の最初の **DesignAggregations** コマンドで目標クエリを渡した場合、後続の **DesignAggregations** コマンドの **Queries** プロパティに目標クエリが含まれていると、エラーが発生します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "50147187"
  たとえば文字列 "011" は、3 つの属性を持つディメンションを処理するクエリの中に、2 番目と 3 番目の属性が含まれることを示しています。  
   
 > [!NOTE]  
->  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外された属性の詳細については、[Query 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)を参照してください。  
+>  いくつかの属性は、データセットでの考慮の対象から除外されます。 除外された属性の詳細については、次を参照してください。 [Query 要素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)します。  
   
  集計デザインを含むメジャー グループ内の各ディメンションは、 *Query* 要素の **Dataset** の値によって表されます。 *Dataset* の値の順序は、メジャー グループに含まれるディメンションの順序と一致している必要があります。  
   
@@ -65,10 +65,10 @@ ms.locfileid: "50147187"
  使用することができます、 **DesignAggregations**反復処理または、デザイン プロセスで必要な対話性に応じて、バッチ処理の一部としてコマンド。  
   
 ### <a name="designing-aggregations-using-an-iterative-process"></a>反復処理を使用した集計のデザイン  
- 集計を反復処理によってデザインするには、複数送信**DesignAggregations**デザイン プロセスを細かく制御するためのコマンド。 集計のデザイン ウィザードでも、同じアプローチを使用してデザイン プロセスを細かく制御します。 詳細については、[集計デザイン ウィザードの F1 ヘルプ](http://msdn.microsoft.com/library/39e23cf1-6405-4fb6-bc14-ba103314362d)を参照してください。  
+ 集計を反復処理によってデザインするには、複数送信**DesignAggregations**デザイン プロセスを細かく制御するためのコマンド。 集計のデザイン ウィザードでも、同じアプローチを使用してデザイン プロセスを細かく制御します。 詳細については、次を参照してください。[集計デザイン ウィザードの F1 ヘルプ](http://msdn.microsoft.com/library/39e23cf1-6405-4fb6-bc14-ba103314362d)します。  
   
 > [!NOTE]  
->  集計を反復処理によってデザインするには、明示的なセッションが必要です。 明示的なセッションの詳細については、[接続の管理とセッション&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)を参照してください。  
+>  集計を反復処理によってデザインするには、明示的なセッションが必要です。 明示的なセッションの詳細については、次を参照してください。[接続の管理とセッション&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)します。  
   
  送信する最初の反復的なプロセスを開始する、 **DesignAggregations**コマンドを次の情報が含まれています。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50147187"
 ### <a name="designing-aggregations-using-a-batch-process"></a>バッチ処理を使用した集計のデザイン  
  1 つを送信することによって、バッチ処理での集計をデザインすることも**DesignAggregations**コマンドが含まれていますが、**手順**、**時間**、**ストレージ**、および**最適化**デザイン プロセス全体を対象し、制限がプロパティの値。 デザイン プロセスが対象となる目標クエリを含めることも使用法に基づく最適化を実行する場合に、**クエリ**プロパティ。 確認、**具体化**プロパティが true に設定は、デザイン プロセスは、コマンドが完了すると集計デザインを定義された集計を保存できるようにします。  
   
- バッチ処理による集計のデザインは、暗黙のセッションまたは明示的なセッションのいずれでも行うことができます。 暗黙的および明示的なセッションの詳細については、[接続の管理とセッション&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)を参照してください。  
+ バッチ処理による集計のデザインは、暗黙のセッションまたは明示的なセッションのいずれでも行うことができます。 暗黙的および明示的なセッションの詳細については、次を参照してください。[接続の管理とセッション&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)します。  
   
 ## <a name="returning-design-statistics"></a>デザインの統計を返す処理  
  ときに、 **DesignAggregations**コマンドは、クライアント アプリケーションに制御を返した場合、コマンドは、コマンドのデザインの統計を表す 1 つの行を含む行セットを返します。 行セットに含まれる列は、次の表のとおりです。  

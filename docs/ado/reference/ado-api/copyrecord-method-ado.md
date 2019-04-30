@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70dcba3d373b195950f90b6ef82c3d670844bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309210"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord メソッド (ADO)
 によって表されるエンティティのコピーを[レコード](../../../ado/reference/ado-api/record-object-ado.md)別の場所にします。  
@@ -67,7 +67,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 >  使用して、 **adCopyOverWrite**慎重オプションします。 など、ファイルをディレクトリにコピーするときに、このオプションを指定する*削除*ディレクトリ、ファイルに置き換えます。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

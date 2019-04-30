@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 37a8b8ef757184e7467c3551148c8c149bb45097
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309095"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX データ操作 - CREATE MEASURE
 
@@ -45,7 +45,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
   
  CREATE MEASURE ステートメントは、MDX スクリプト定義; の内部でのみ使用できます。参照してください[MdxScript 要素&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl)します。  
   
- 1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、[MDX でのメジャーの作成](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)を参照してください。  
+ 1 つのクエリだけで使用する計算されるメンバーを定義することも可能です。 1 つのクエリに限定される計算されるメンバーを定義するには、SELECT ステートメントで WITH 句を使用します。 詳細については、次を参照してください。 [MDX でのメジャーの作成](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)です。  
   
 ## <a name="see-also"></a>参照  
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

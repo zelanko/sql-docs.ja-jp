@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298298"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>ダイアグラムのフォントの色、サイズ、およびスタイルを変更する (Visual Database Tools)
   データベース ダイアグラムのテキストの表示方法は、フォントの色、サイズ、スタイルを変更することによってカスタマイズできます。 変更が行われた時点で変更内容が新しいダイアグラムと既存のダイアグラムに適用されます。  

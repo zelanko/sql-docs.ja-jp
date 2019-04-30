@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 683b81f82094aa33deef86ffc19dc8c5c0a53a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270436"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 型識別子を使用してを ARD の SQL_DESC_CONCISE_TYPE フィールドで指定した型のバッファー内のデータがなることを示します。 SQL_ARD_TYPE が入力されて、 *TargetType*への呼び出しの引数**SQLGetData**特定のデータ型と記述子を変更することで、データを変更するアプリケーションが入力バッファーの有効ではなくフィールド。 この値のデータ型を結び付ける、  *\*TargetValuePtr*記述子フィールドをバッファーします。 (SQL_ARD_TYPE への呼び出しが入力されていない**SQLBindCol**または**SQLBindParameter**のため、バインドされたバッファーの種類の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE フィールドに既に関連付けられている、変更できますいつでもこれらのフィールドのいずれかを変更することによって。)  
   
- 既定以外の先頭の有効桁数と秒の有効桁数、interval データ型の値を指定する SQL_ARD_TYPE 型識別子を使用でき、SQL_C_NUMERIC データの有効桁数と小数点の値を入力します。 詳細については、[先頭既定をオーバーライドすると Interval データ型の秒の有効桁数](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)と[既定の精度をオーバーライドし、数値データ型の小数点以下桁数](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)、この付録で後述を参照してください。
+ 既定以外の先頭の有効桁数と秒の有効桁数、interval データ型の値を指定する SQL_ARD_TYPE 型識別子を使用でき、SQL_C_NUMERIC データの有効桁数と小数点の値を入力します。 詳細については、次を参照してください。[先頭既定をオーバーライドすると Interval データ型の秒の有効桁数](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)と[既定の精度をオーバーライドし、数値データ型の小数点以下桁数](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)、この付録で後述します。

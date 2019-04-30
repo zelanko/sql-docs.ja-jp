@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c6c9ba7f2981fd4162f93f37e6ad0eb2cbae882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311907"
 ---
 # <a name="name-property-ado-md"></a>Name プロパティ (ADO MD)
 オブジェクトの名前を示します。  

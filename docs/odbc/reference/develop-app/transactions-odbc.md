@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6ce5decd2744c0ce9d753e355321a40d00fd620
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305810"
 ---
 # <a name="transactions-odbc"></a>トランザクション (ODBC)
 A*トランザクション*作業単位は、1 つのアトミック操作として行われます。 は、操作の成功や全体が失敗しました。 たとえば、1 つの銀行口座から資金の転送を検討してください。 これは、2 つの手順: 最初のアカウントからお金を現金との 1 秒間のデポジットします。 重要です。 両方の手順が成功します。1 つのステップが成功して失敗するその他の余裕がないです。 トランザクションをサポートするデータベースは、これを保証できます。  
@@ -30,7 +30,7 @@ A*トランザクション*作業単位は、1 つのアトミック操作とし
   
  この問題を解決するには、1 つ別のトランザクションを分離するさまざまなパターンがあります。 *トランザクション分離*一般にによって実装されるロックの行を同時に同じ行を使用して 1 つ以上のトランザクションを適応します。 一部のデータベースで行をロックには他の行をロック可能性がありますはもできます。  
   
- トランザクション分離は削減*同時実行性、* または同時に同じデータを使用する 2 つのトランザクションの機能です。 詳細については、[トランザクション分離レベルの設定](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)を参照してください。  
+ トランザクション分離は削減*同時実行性、* または同時に同じデータを使用する 2 つのトランザクションの機能です。 詳細については、次を参照してください。[トランザクション分離レベルの設定](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

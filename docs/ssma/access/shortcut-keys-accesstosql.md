@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b1c9991c12cb35ed89217afc41d31c8b447c5de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299074"
 ---
 # <a name="shortcut-keys-accesstosql"></a>ショートカット キー (AccessToSQL)
 SSMA アプリケーション内を移動するキーボード ショートカットを使用することができます。 詳細については、次の各トピックを参照してください。  

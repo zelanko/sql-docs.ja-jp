@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e7d1b0b68835fe8b909369a87814a3d1c41e07d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240245"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>評価の SAP ASE データベース オブジェクトの変換 (SybaseToSQL)
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]判断した Azure SQL、または方法、移行の複雑さとどれだけ時間かかります。 SSMA は、オブジェクトとを正常に変換されるプロシージャの割合を示す評価レポートを作成できます[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 SSMA では、変換エラーを引き起こす可能性のある特定の問題を表示することもできます。  
@@ -35,7 +35,7 @@ ms.locfileid: "47841060"
   
     SSMA では、ウィンドウの下部にあるステータス バーで進行状況を示しています。 [出力] ペインが表示されている場合は、関連するメッセージも表示されます。  
   
-    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase: 評価レポート ウィンドウが表示されます。  
+    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase:評価レポート ウィンドウが表示されます。  
   
 ## <a name="use-assessment-reports"></a>評価レポートの使用  
 評価レポート ウィンドウには、3 つのペインが含まれています。  
@@ -70,7 +70,7 @@ ms.locfileid: "47841060"
   
     -   SSMA で ASE の構文を更新します。 ストアド プロシージャとトリガーのみに対して構文を更新することができます。 構文を更新するには、Sybase メタデータ エクスプ ローラー ペインで、オブジェクトを選択 をクリックして、 **SQL**タブをクリックし、SQL コードを編集します。 項目から移動するときに、更新された構文を保存するように求められます。 オブジェクトの報告されたエラーを表示、**レポート**タブ。  
   
-    -   ASE では、削除または問題のあるコードを変更するには ASE オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、[Sybase ASE への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)を参照してください。  
+    -   ASE では、削除または問題のあるコードを変更するには ASE オブジェクトを変更できます。 SSMA に更新されたコードを読み込むには、メタデータを更新する必要があります。 詳細については、次を参照してください。 [Sybase ASE への接続&#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)します。  
   
     -   オブジェクトは、移行から除外できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL のメタデータ エクスプ ローラーと Sybase メタデータ エクスプ ローラーにオブジェクトを読み込む前に、項目の横にあるチェック ボックスをオフに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL と ASE からデータを移行します。
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272940"
 ---
 # <a name="translator-specification-subkeys"></a>ドライバーの仕様のサブキー
 ODBC トランスレーターのサブキーで表示されている各翻訳には、独自のサブキーがあります。 このサブキーは、ODBC トランスレーターのサブキーの下の対応する値として同じ名前を持ちます。 このサブキーの下の値は、翻訳者とトランスレーター セットアップ Dll と使用率カウントの完全なパスを一覧表示します。 値の形式は、次の表に示すようにします。  

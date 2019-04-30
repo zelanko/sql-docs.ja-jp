@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283177"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>オプション (デザイナー-メンテナンス プラン ページ)
   **[オプション]** ダイアログ ボックスを使用すると、デザイン画面に新しい図形を追加したときのデザイナーの既定の動作を指定できます。 **[ツール]** メニューの **[オプション]** をクリックします。次に **[デザイナー]** を展開し、 **[メンテナンス プラン]** を選択します。  

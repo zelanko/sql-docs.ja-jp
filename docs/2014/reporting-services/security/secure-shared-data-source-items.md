@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f96e9f1a52e7c64ce1efb99b70e73c0dedada292
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306308"
 ---
 # <a name="secure-shared-data-source-items"></a>共有データ ソース アイテムをセキュリティで保護する
   共有データ ソース アイテムにセキュリティを設定して、そのアイテムへのアクセスを有効または無効にすることができます。  

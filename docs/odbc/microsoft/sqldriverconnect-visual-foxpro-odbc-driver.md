@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238086"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:[レベル 1]  
   
  いずれかになりますが、既存のデータ ソースに接続する、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリまたは[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)します。 UID および PWD ODBC 属性キーワードは無視されます。 次の表では、追加のサポートされている属性のキーワードを示します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47792720"
 |Visual FoxPro ODBC ドライバー属性のキーワード|属性値|  
 |-------------------------------------------------|---------------------|  
 |BackgroundFetch|"Yes"または"No"|  
-|[部単位で印刷]|「コンピューター」またはその他の照合順序。 サポートされている照合順序の一覧は、[COLLATE 設定](../../odbc/microsoft/set-collate-command.md)を参照してください。|  
+|[部単位で印刷]|「コンピューター」またはその他の照合順序。 サポートされている照合順序の一覧は、次を参照してください。 [COLLATE 設定](../../odbc/microsoft/set-collate-command.md)します。|  
 |説明||  
 |[Exclusive]|"Yes"または"No"|  
 |SourceDB|0 個以上完全修飾パスを含むディレクトリ[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)、またはの絶対パスとファイル名、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)します。|  
@@ -49,4 +49,4 @@ ms.locfileid: "47792720"
   
  ドライバー マネージャーをデータ ソース名が指定されていない場合については、ユーザー メッセージが表示されます (の設定に応じて、 *fDriverCompletion*引数) し続行します。 詳細については、必要なは、Visual FoxPro ODBC ドライバーはプロンプト ダイアログを表示します。  
   
- 詳細については、[SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md)で、 *ODBC プログラマ リファレンス*します。

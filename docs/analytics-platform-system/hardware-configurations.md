@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283258"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Analytics Platform System のハードウェア構成
 お客様のビジネス要件に従って処理およびストレージの量を適切を購入するために、スケーラブルなユニットで、Analytics Platform System (APS) ハードウェアが設計されています。 アプライアンスの SQL Server 並列データ Wareouse (PDW) 数テラバイトからを超える 6 ペタバイト規模のデータ ストレージをスケーリングします。  

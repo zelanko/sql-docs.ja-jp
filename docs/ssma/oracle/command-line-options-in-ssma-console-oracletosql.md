@@ -16,11 +16,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 039728bd18abcd1f3a660297fa0a1d937b7b1eb3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288247"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA コンソールのコマンド ライン オプション (OracleToSQL)
 Microsoft を実行し、SSMA アクティビティを制御する信頼性の高い一連のコマンド ライン オプションを提供します。 次のセクションでは、同じについて説明します。  
@@ -172,7 +172,7 @@ SSMA コンソールのコマンド ライン オプションの表を参照し�
   
 -   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)します。  
   
--   レポートを生成するため、[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)を参照してください。  
+-   レポートを生成するため、次を参照してください。[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)します。  
   
--   コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)を参照してください。  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)します。  
   

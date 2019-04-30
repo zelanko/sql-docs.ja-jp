@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281091"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>相互運用可能な SQL ステートメントの構築
 前のセクションで説明したように、相互運用可能なアプリケーションは、ODBC SQL 文法を使用しないでください。 ただし、この文法を使用して、外はさまざまな他の問題が相互運用可能なアプリケーションが直面しています。 たとえばと、アプリケーションはすべてのデータ ソースでサポートされていない機能、外部結合などを使用する必要がある場合  

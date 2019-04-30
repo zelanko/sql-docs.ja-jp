@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac1a80e94d225b26cf879b27bdb0e138e0b0d1d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306331"
 ---
 # <a name="64-bit-integer-structures"></a>64 ビットの整数の構造
 Microsoft C コンパイラで SQL_C_SBIGINT、SQL_C_UBIGINT データ型識別子の C 型は、_ _int64 です。 Microsoft® C コンパイラよりも他のコンパイラを使用する場合は、C 型が異なる可能性があります。 コンパイラは、ネイティブ 64 ビット整数をサポートする場合、ドライバーまたはアプリケーションはネイティブの 64 ビット整数型である ODBCINT64 を定義する必要があります。 コンパイラで 64 ビット整数がネイティブでサポートされていない場合、アプリケーションやドライバーはこのデータにアクセスすることができるように、次の構造を定義できます。  

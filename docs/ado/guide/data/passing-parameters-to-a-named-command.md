@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302366"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>名前付きコマンドにパラメーターを渡す
 コマンドの結果がとして渡された場合と同様、*アウト*名前付きのコマンドでは、パラメーターの変数されているパラメーター化コマンドとして渡された*で*変数を名前付きコマンド。  

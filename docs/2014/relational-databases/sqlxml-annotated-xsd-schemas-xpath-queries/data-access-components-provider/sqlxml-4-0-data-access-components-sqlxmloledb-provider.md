@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d6b5c08e9387517f737ab7003729a281e5594bc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239703"
 ---
 # <a name="sqlxml-40-data-access-components"></a>SQLXML 4.0 のデータ アクセス コンポーネント
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに対して XML データを挿入または取得するときに使用できる、3 種類のデータ プロバイダーが用意されています。  
@@ -33,7 +33,7 @@ ms.locfileid: "52798334"
   
 -   SQLXML マネージド クラス  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML の機能へのアクセスを提供します。 詳細については、[SQLXML マネージ クラス](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)を参照してください。  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML の機能へのアクセスを提供します。 詳細については、次を参照してください。 [SQLXML マネージ クラス](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)します。  
   
 -   SQL Server Native Client (SQLNCLI11)  
   

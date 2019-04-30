@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306301"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同期実行 (ポーリング メソッド)
-ODBC 3.8 と Windows 7 SDK では、前に、非同期操作は、ステートメントの関数でのみ可能でした。 詳細については、、**ステートメントの操作を非同期に実行**、このトピックで後述を参照してください。  
+ODBC 3.8 と Windows 7 SDK では、前に、非同期操作は、ステートメントの関数でのみ可能でした。 詳細については、次を参照してください。、**ステートメントの操作を非同期に実行**、このトピックで後述します。  
   
- Windows 7 SDK で ODBC 3.8 には、接続関連の操作での非同期実行が導入されました。 詳細については、、**接続の操作を非同期に実行**セクションで、このトピックで後述を参照してください。  
+ Windows 7 SDK で ODBC 3.8 には、接続関連の操作での非同期実行が導入されました。 詳細については、次を参照してください。、**接続の操作を非同期に実行**セクションで、このトピックで後述します。  
   
- Windows 7 sdk の非同期ステートメントまたは接続操作では、アプリケーションは、非同期操作が完了のポーリング メソッドを使用して決定されます。 以降、Windows 8 SDK では、非同期操作が通知メソッドを使用して完全なことを確認できます。 詳細については、[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)を参照してください。  
+ Windows 7 sdk の非同期ステートメントまたは接続操作では、アプリケーションは、非同期操作が完了のポーリング メソッドを使用して決定されます。 以降、Windows 8 SDK では、非同期操作が通知メソッドを使用して完全なことを確認できます。 詳細については、次を参照してください。[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)します。  
   
  既定では、ドライバーの ODBC 関数同期的に実行します。つまり、アプリケーション関数を呼び出し、関数の実行が完了するまで、ドライバーがアプリケーションにコントロールを返すされません。 一部の関数を非同期的に実行できる、つまり、関数を呼び出し、アプリケーションと、ドライバーの 最小限の処理後に、アプリケーションに返しますコントロール。 アプリケーションは、最初の関数がまだ実行中に、他の関数を呼び出すしことができます。  
   
@@ -146,7 +146,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 ## <a name="executing-connection-operations-asynchronously"></a>接続操作を非同期的に実行します。  
  ODBC 3.8、前にステートメント関連の操作の準備などの非同期実行が許可されました、実行、およびフェッチもカタログ メタデータの操作です。 ODBC 3.8 以降、非同期実行ことも、接続の切断などの接続に関連する操作、commit、およびロールバックのできます。  
   
- ODBC 3.8 の詳細については、[で ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)を参照してください。  
+ ODBC 3.8 の詳細については、次を参照してください。[で ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)します。  
   
  接続操作を非同期的に実行するは、次のシナリオで役立ちます。  
   
@@ -203,7 +203,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  両方をサポートする必要はありません**SQLCancelHandle**と同時に操作を非同期接続します。 ドライバーは、非同期接続の操作をサポートできますが**SQLCancelHandle**、またはその逆です。  
   
- 非同期接続の操作と**SQLCancelHandle** ODBC によっても使用できます 3.x と ODBC 2.x アプリケーションの ODBC 3.8 ドライバーと ODBC 3.8 ドライバー マネージャーを使用します。 以降の ODBC バージョンの新機能を使用する古いアプリケーションを有効にする方法については、[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)を参照してください。  
+ 非同期接続の操作と**SQLCancelHandle** ODBC によっても使用できます 3.x と ODBC 2.x アプリケーションの ODBC 3.8 ドライバーと ODBC 3.8 ドライバー マネージャーを使用します。 以降の ODBC バージョンの新機能を使用する古いアプリケーションを有効にする方法については、次を参照してください。[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)します。  
   
 ### <a name="connection-pooling"></a>接続のプール  
  接続を確立するため、非同期操作が最小限でのみサポートされる接続プールが有効になっているときに (で**SQLConnect**と**SQLDriverConnect**) との接続を閉じると**SQLDisconnect**します。 アプリケーションから SQL_STILL_EXECUTING の戻り値を処理できる必要がありますが、 **SQLConnect**、 **SQLDriverConnect**、および**SQLDisconnect**します。  

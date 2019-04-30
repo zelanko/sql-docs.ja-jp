@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b320f5a2b0ba1a7de4e348b3ba8877ef83714209
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226236"
 ---
 # <a name="implementing-full-text-search"></a>フルテキスト検索の実装
   フルテキスト検索は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに使用することができ、SMO では <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> オブジェクトで表現されます。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService> オブジェクトは、`Server` オブジェクトの下位に位置します。 このオブジェクトは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] フルテキスト検索サービスの構成オプションを管理するために使用します。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトに属し、データベースに対して定義されるフルテキスト カタログを表す <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> オブジェクトのコレクションです。 通常のインデックスとは異なり、フルテキスト インデックスは各テーブルに対して 1 つのみ定義されます。 これは、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> オブジェクト内の <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトで表現されます。  
@@ -27,7 +27,7 @@ ms.locfileid: "53980358"
  まず、<xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> コンストラクターを呼び出し、カタログ名を指定して、データベースにフルテキスト カタログを作成します。 次に、コンストラクターを呼び出し、フルテキスト インデックスを作成するテーブルを指定して、フルテキスト インデックスを作成します。 次に、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> オブジェクトを使用して、テーブル内の列の名前を指定し、フルテキスト インデックスのインデックス列を追加します。 次に、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> プロパティを、作成したカタログに設定します。 最後に、<xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> メソッドを呼び出して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスにフルテキスト インデックスを作成します。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、[Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)を参照してください。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>Visual Basic でのフルテキスト検索サービスの作成  
  このコード例では、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] サンプル データベースの `ProductCategory` テーブルに対してフルテキスト検索カタログを作成します。 次に、`ProductCategory` テーブル内の Name 列にフルテキスト検索インデックスを作成します。 フルテキスト検索インデックスを作成する列には、既に定義されている一意のインデックスが存在する必要があります。  

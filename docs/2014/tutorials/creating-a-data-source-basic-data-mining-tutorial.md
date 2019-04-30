@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273160"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>データ ソースの作成 (基本的なデータ マイニング チュートリアル)
   A*データソース*保存し、プロジェクトで管理されに展開されるデータ接続、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベース。 データ ソースには、ソース データが存在するサーバーとデータベースの名前、および接続に必要なその他のプロパティが含まれます。  
@@ -40,7 +40,7 @@ ms.locfileid: "56042623"
 6.  **サーバーにログオン**グループで、 **Windows 認証を使用**します。  
   
     > [!IMPORTANT]  
-    >  Windows 認証は SQL Server 認証よりも安全性に優れているので、実装時はできる限り Windows 認証を使用してください。 SQL Server 認証は旧バージョンとの互換性を維持するために提供されています。 認証方法の詳細については、[データベース エンジンの構成 - アカウントのプロビジョニング](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md)を参照してください。  
+    >  Windows 認証は SQL Server 認証よりも安全性に優れているので、実装時はできる限り Windows 認証を使用してください。 SQL Server 認証は旧バージョンとの互換性を維持するために提供されています。 認証方法の詳細については、次を参照してください。[データベース エンジンの構成 - アカウントのプロビジョニング](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md)します。  
   
 7.  **を選択するか、データベース名を入力**一覧で、選択[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]順にクリックします**OK**します。  
   

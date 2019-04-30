@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281056"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネス オブジェクトのプロキシを作成し、ポインターを返します。 サーバー側のスタブ、インターネット経由で要求とデータを送信するビジネス オブジェクトとの通信をプロキシ パッケージとマーシャ リング データ。 インプロセス コンポーネントのオブジェクトのプロキシは使用されず、オブジェクトへのポインターのみが提供されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "54419927"
 ## <a name="syntax"></a>構文  
  リモート データ サービスには、次のプロトコルがサポートされています。HTTP、HTTPS (HTTP over Secure Socket Layer)、DCOM、およびプロセスにします。  
   
-|[プロトコル]|構文|  
+|プロトコル|構文|  
 |--------------|------------|  
 |HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  

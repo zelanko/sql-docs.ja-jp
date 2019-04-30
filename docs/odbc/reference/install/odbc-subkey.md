@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281009"
 ---
 # <a name="odbc-subkey"></a>ODBC のサブキー
 ODBC のサブキーの下の値は、ODBC トレース オプションを指定します。 これらのオプションを設定で表示される ODBC データ ソース アドミニストレーター ダイアログ ボックスの トレース タブから**SQLManageDataSources**します。 ODBC のサブキー自体は省略可能です。 これらの値の形式は、次の表に示すようにします。  

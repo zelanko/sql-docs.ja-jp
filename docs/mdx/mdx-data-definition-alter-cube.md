@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315289"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ操作 - ALTER CUBE
 
 
-  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用に関する詳細については、このブログの投稿を参照してください: [Analysis Services (ブログ) での書き戻しアプリケーションの構築](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用に関する詳細については、このブログの投稿を参照してください。[Analysis Services (ブログ) での書き戻しアプリケーションの構築](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  ディメンションの書き戻しを同時に実行すると、デッドロックが発生する可能性があります。この場合、最初の書き戻しがブロックされコミットできなくなります。これは、共有ロックが 2 番目の書き戻しによって保持されているためです。 このような状況では、エラーは生成されません。また、どのような操作も実行されません。 最終的には、タイムアウトと変更がロールバックされます。  
   
@@ -162,7 +162,7 @@ CELL CALCULATION Calculation_Name
  計算されるメンバー プロパティの値を定義する有効な MDX スカラー式です。  
   
 ## <a name="creating-a-cell-calculation"></a>セル計算の作成  
- ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、[DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)を参照してください。  
+ ALTER CUBE ステートメントを使用してセル計算の作成の詳細については、次を参照してください。 [DROP CELL CALCULATION ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)します。  
   
 ## <a name="see-also"></a>参照  
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

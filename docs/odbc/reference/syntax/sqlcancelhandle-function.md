@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253182"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 関数
 **準拠**  
@@ -67,7 +67,7 @@ SQLRETURN SQLCancelHandle(
 |HY010|関数のシーケンス エラー|関連付けられているステートメント ハンドルのいずれかの非同期実行ステートメント関連の関数が呼び出された、*処理*、および*HandleType* sql_handle_dbc としてに設定されました。 非同期関数ではときに実行されている**SQLCancelHandle**が呼び出されました。<br /><br /> (DM)、 *HandleType*引数が sql_handle_stmt として、関連付けられている接続ハンドル; で非同期的に実行中の関数が呼び出されました; 関数は、この関数が呼び出されたときにまだ実行中だったとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかが呼び出された、*処理* *HandleType*が sql_handle_dbc としてに設定され、SQL_PARAM_DATA_AVAILABLE が返されます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> **SQLBrowseConnect**に対して呼び出された*ConnectionHandle*SQL_NEED_DATA が返されます。 この関数は、参照の処理を完了する前に呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY092|無効な属性またはオプション識別子|*HandleType* sql_handle_env としてまたは SQL_HANDLE_DESC に設定されました。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、*処理*関数をサポートしていません。|  
   
@@ -76,7 +76,7 @@ SQLRETURN SQLCancelHandle(
 ## <a name="comments"></a>コメント  
  この機能に似ています**SQLCancel**ステートメント ハンドルだけではなく、パラメーターとして接続またはステートメントのいずれかのハンドルがかかる場合があります。 ドライバー マネージャーは、マップへの呼び出し**SQLCancelHandle**への呼び出しに**SQLCancel**とき*HandleType* sql_handle_stmt としては、します。 これにより、アプリケーションを使用する**SQLCancelHandle**ドライバーが実装していない場合でも、ステートメントの操作をキャンセルする**SQLCancelHandle**します。  
   
- ステートメントの操作を取り消しています。 詳細については、[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)を参照してください。  
+ ステートメントの操作を取り消しています。 詳細については、次を参照してください。 [SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)します。  
   
  進行中の操作がない場合*処理*呼び出し**SQLCancelHandle**も何も起こりません。  
   
@@ -88,10 +88,10 @@ SQLRETURN SQLCancelHandle(
   
  ときに**SQLCancelHandle**接続によって投稿された診断レコードで非同期的に実行されている関数を取り消すために呼び出される**SQLCancelHandle**操作によって返されるものに追加されます取り消されました。**SQLCancelHandle**返さない診断レコードは、ただし、別のスレッド上の接続で実行されている関数をキャンセルする場合。  
   
- 使用して**SQLCancelHandle**をキャンセルする**SQLEndTran**中断された状態の接続を配置することがあります。 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。  
+ 使用して**SQLCancelHandle**をキャンセルする**SQLEndTran**中断された状態の接続を配置することがあります。 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。  
   
 > [!NOTE]  
->  使用する方法については**SQLCancelHandle** Windows 7 より古い Windows オペレーティング システム上に配置されるアプリケーションで、[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)を参照してください。  
+>  使用する方法については**SQLCancelHandle** Windows 7 より古い Windows オペレーティング システム上に配置されるアプリケーションで、次を参照してください。[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)します。  
   
 #### <a name="canceling-connection-related-asynchronous-processing"></a>接続に関連する非同期処理のキャンセル  
  アプリケーションを呼び出すことができる場合、関数が返す SQL_STILL_EXECUTING、 **SQLCancelHandle**操作をキャンセルします。 取り消し要求が成功すると場合、 **SQLCancelHandle** SQL_SUCCESS を返します。 元の関数が取り消されたことはありません。これは、キャンセル要求が処理されたことを示します。 ドライバーとデータ ソース、または、操作が取り消された場合を決定します。 リターン コードが SQL_STILL_EXECUTING されるまで、元の関数を呼び出すアプリケーションを続行する必要があります。 リターン コードが SQL_ERROR と SQLSTATE HY008 には、元の関数が取り消された場合 (操作が取り消されました)。 元の関数には、通常の処理が完了した場合 (キャンセルされていない)、リターン コードが SQL_SUCCESS や、SQL_SUCCESS_WITH_INFO または SQL_ERROR HY008 以外の SQLSTATE (操作が取り消されました)、元の関数が失敗した場合。  

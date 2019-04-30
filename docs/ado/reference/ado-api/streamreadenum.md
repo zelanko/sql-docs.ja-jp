@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26ccabf3e73a67c14e7201f26e4ebf739a6352cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311861"
 ---
 # <a name="streamreadenum"></a>StreamReadEnum
 ストリーム全体、または次の行をから読み取る必要があるかどうかを指定します、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  

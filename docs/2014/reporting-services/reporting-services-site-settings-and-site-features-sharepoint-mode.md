@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14708d286ea11a872a3260f41cae44e05e7fb30c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283411"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Reporting Services のサイト設定とサイト機能 (SharePoint モード)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の SharePoint モードには、SharePoint の [サイトの設定] ページから管理できるいくつかのサイト レベルのカスタム機能とサイト機能があります。 これらはサイト全体に対する設定で、すべての [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションに影響を与えます。 このページを表示するには、コンテンツ マネージャーとシステム管理者の権限が必要です。  

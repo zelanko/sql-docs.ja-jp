@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a2b6172fdd35e98d1b4a5f1b3c6ff19293a7f81
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294416"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  
@@ -75,7 +75,7 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- 具体的な VBScript 例については、ADO のドキュメントに含まれています。 詳細については、[ADO のコード例では、Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)を参照してください。  
+ 具体的な VBScript 例については、ADO のドキュメントに含まれています。 詳細については、次を参照してください。 [ADO のコード例では、Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)します。  
   
 ## <a name="differences-between-vbscript-and-visual-basic"></a>VBScript と Visual Basic の違い  
  ADO を使用して VBScript では、Visual Basic での構文を使用する方法など、さまざまな方法で ADO を使用してに似ています。 ただし、いくつかの重要な違いがあります。  

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237882"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 関数
 
@@ -78,7 +78,7 @@ SQLRETURN SQLBindParameter(
  場合は、64 ビット Windows オペレーティング システムでは、アプリケーションを実行してを参照してください。 [ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)します。  
   
  *DecimalDigits*  
- [入力]対応するパラメーター マーカーの式または列の 10 進数字。 列のサイズの詳細については、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。  
+ [入力]対応するパラメーター マーカーの式または列の 10 進数字。 列のサイズの詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。  
   
  *ParameterValuePtr*  
  [遅延の入力]パラメーターのデータを格納するバッファーへのポインター。 詳細については、次を参照してください"*ParameterValuePtr*引数"で"コメントです。"。  
@@ -115,7 +115,7 @@ SQLRETURN SQLBindParameter(
 |HY090|文字列またはバッファーの長さが無効です。|(DM) の値*BufferLength*が 0 未満でした。 (SQL_DESC_DATA_PTR フィールドの説明を参照して**SQLSetDescField**)。|  
 |HY104|有効桁数または小数点以下桁数の値が無効です。|引数が指定された値*ColumnSize*または*DecimalDigits*がで指定された SQL データ型の列のデータ ソースによってサポートされる値の範囲外の*ParameterType*引数。|  
 |HY105|無効なパラメーターの型|引数に指定された値 (DM) *InputOutputType*が無効です。 (「コメントです」を参照してください)|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースは、引数に指定された値の組み合わせで指定された変換をサポートしていません*ValueType*引数が指定されたドライバー固有の値と*ParameterType*.<br /><br /> 引数が指定された値*ParameterType* ODBC SQL データ型の有効な識別子が ODBC のバージョンのドライバーをサポートしていますが、ドライバーまたはデータ ソースでサポートされていませんでした。<br /><br /> ドライバーには、ODBC 2 のみがサポートしています。*x*と引数*ValueType*が、次のいずれか。<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 間隔 C のすべてのデータ型と[C データ型](../../../odbc/reference/appendixes/c-data-types.md)付録 d:データ型。<br /><br /> ドライバーのみ、3.50 と引数の前に ODBC バージョンをサポートする*ValueType* SQL_C_GUID でした。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
@@ -124,7 +124,7 @@ SQLRETURN SQLBindParameter(
 
  アプリケーションを呼び出す**SQLBindParameter** SQL ステートメント内の各パラメーター マーカーをバインドします。 バインドは、アプリケーションが有効になります**SQLBindParameter** 、もう一度呼び出す**SQLFreeStmt** SQL_RESET_PARAMS オプション、または呼び出し**SQLSetDescField**にAPD の SQL_DESC_COUNT ヘッダー フィールドを 0 に設定します。  
   
- パラメーターの詳細については、[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)を参照してください。 パラメーターのデータ型とパラメーター マーカーの詳細については、次を参照してください[パラメーターのデータ型](../../../odbc/reference/appendixes/parameter-data-types.md)と[パラメーター マーカー](../../../odbc/reference/appendixes/parameter-markers.md)付録 c:。SQL 文法。  
+ パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。 パラメーターのデータ型とパラメーター マーカーの詳細については、次を参照してください[パラメーターのデータ型](../../../odbc/reference/appendixes/parameter-data-types.md)と[パラメーター マーカー](../../../odbc/reference/appendixes/parameter-markers.md)付録 c:。SQL 文法。  
   
 ## <a name="parameternumber-argument"></a>ParameterNumber 引数  
  場合*ParameterNumber*への呼び出しで**SQLBindParameter** SQL_DESC_COUNT の値よりも大きい**SQLSetDescField** SQL_DESC_ の価値を高めるために呼び出されるカウント*ParameterNumber*します。  
@@ -151,7 +151,7 @@ SQLRETURN SQLBindParameter(
   
      しない限り、ドライバーが、アプリケーションに、パラメーターのデータを返します、ステートメントが実行された後、 *ParameterValuePtr*と*StrLen_or_IndPtr*引数は、どちらも null ポインターでは、この場合、ドライバーは、出力値を破棄します。 ドライバーの設定、データ ソースが出力パラメーターの値を返さない場合、**StrLen_or_IndPtr* SQL_NULL_DATA をバッファーします。  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM します。 入力/出力パラメーターをストリーミングすることを示します。 **SQLGetData**部分のパラメーター値を読み取ることができます。 *BufferLength*バッファーの長さは、の呼び出しで判断するために無視**SQLGetData**します。 値、 *StrLen_or_IndPtr*バッファーが SQL_NULL_DATA、SQL_DEFAULT_PARAM、生成される場合、または SQL_LEN_DATA_AT_EXEC マクロの結果に含める必要があります。 出力にストリーミングされる場合、入力データで実行 (DAE) パラメーターとしてパラメーターをバインドする必要があります。 *ParameterValuePtr*によって返される null 以外のポインター値を指定できます**SQLParamData**トークンの値を持つユーザー定義としてで渡された*ParameterValuePtr*の両方の入力と出力します。 詳細については、[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM します。 入力/出力パラメーターをストリーミングすることを示します。 **SQLGetData**部分のパラメーター値を読み取ることができます。 *BufferLength*バッファーの長さは、の呼び出しで判断するために無視**SQLGetData**します。 値、 *StrLen_or_IndPtr*バッファーが SQL_NULL_DATA、SQL_DEFAULT_PARAM、生成される場合、または SQL_LEN_DATA_AT_EXEC マクロの結果に含める必要があります。 出力にストリーミングされる場合、入力データで実行 (DAE) パラメーターとしてパラメーターをバインドする必要があります。 *ParameterValuePtr*によって返される null 以外のポインター値を指定できます**SQLParamData**トークンの値を持つユーザー定義としてで渡された*ParameterValuePtr*の両方の入力と出力します。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
   
 -   SQL_PARAM_OUTPUT_STREAM します。 SQL_PARAM_INPUT_OUTPUT_STREAM、出力パラメーターのと同じです。 **StrLen_or_IndPtr*入力は無視されます。  
   
@@ -182,7 +182,7 @@ SQLRETURN SQLBindParameter(
   
  SQL_C_DEFAULT は、すべてのユーザーを SQL データ型がで指定、既定の C データ型から転送されるパラメーターの値を指定します*ParameterType*します。  
   
- 拡張の C データ型を指定することもできます。 詳細については、[ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)を参照してください。  
+ 拡張の C データ型を指定することもできます。 詳細については、次を参照してください。 [ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)します。  
   
  詳細については、次を参照してください[C データ型の既定の](../../../odbc/reference/appendixes/default-c-data-types.md)、 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)、および[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d:。データ型。  
   
@@ -192,7 +192,7 @@ SQLRETURN SQLBindParameter(
   
  場合、 *ParameterType*引数は、datetime 識別子のいずれか、SQL_DATETIME に IPD の SQL_DESC_TYPE フィールドが設定されている、IPD の SQL_DESC_CONCISE_TYPE フィールド簡潔な datetime の SQL データ型と、SQL_DESC_ に設定されますDATETIME_INTERVAL_CODE フィールドは、適切な datetime サブコード値に設定されます。  
   
- 場合*ParameterType*は 1 つ SQL_INTERVAL に設定されている、IPD の SQL_DESC_TYPE フィールドの間隔の識別子、IPD の SQL_DESC_CONCISE_TYPE フィールド簡潔な SQL interval データ型と、SQL_DESC_DATETIME_ に設定されますIPD の INTERVAL_CODE フィールドは、適切な間隔サブコードに設定されます。 IPD の SQL_DESC_DATETIME_INTERVAL_PRECISION フィールドが間隔の先頭有効桁数に設定され、該当する場合、間隔の秒の有効桁数を SQL_DESC_PRECISION フィールドが設定されます。 アプリケーションが呼び出すことによって明示的に設定 SQL_DESC_DATETIME_INTERVAL_PRECISION または SQL_DESC_PRECISION の既定値が適切でない場合必要があります、 **SQLSetDescField**します。 これらのフィールドのいずれかの詳細については、[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)を参照してください。  
+ 場合*ParameterType*は 1 つ SQL_INTERVAL に設定されている、IPD の SQL_DESC_TYPE フィールドの間隔の識別子、IPD の SQL_DESC_CONCISE_TYPE フィールド簡潔な SQL interval データ型と、SQL_DESC_DATETIME_ に設定されますIPD の INTERVAL_CODE フィールドは、適切な間隔サブコードに設定されます。 IPD の SQL_DESC_DATETIME_INTERVAL_PRECISION フィールドが間隔の先頭有効桁数に設定され、該当する場合、間隔の秒の有効桁数を SQL_DESC_PRECISION フィールドが設定されます。 アプリケーションが呼び出すことによって明示的に設定 SQL_DESC_DATETIME_INTERVAL_PRECISION または SQL_DESC_PRECISION の既定値が適切でない場合必要があります、 **SQLSetDescField**します。 これらのフィールドのいずれかの詳細については、次を参照してください。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。  
   
  場合、 *ValueType*引数が SQL_NUMERIC データ型、既定の有効桁数 (これは、ドライバーで定義) と既定スケール (0)、IPD の SQL_DESC_PRECISION および SQL_DESC_SCALE のフィールド セットとして、データに使用します。 アプリケーションがへの呼び出しで記述子フィールドを設定する必要があります明示的に既定の有効桁数または小数点が適切でない場合**SQLSetDescField**または**SQLSetDescRec**します。  
   
@@ -279,7 +279,7 @@ SQLRETURN SQLBindParameter(
   
 2.  入力および入力/出力パラメーターの値を格納、 \* *ParameterValuePtr*と **StrLen_or_IndPtr*バッファー。  
   
-    -   アプリケーションの通常のパラメーターでパラメーター値の場所、 \* *ParameterValuePtr*バッファーとその値の長さ、**StrLen_or_IndPtr*バッファー。 詳細については、[パラメーター値の設定](../../../odbc/reference/develop-app/setting-parameter-values.md)を参照してください。  
+    -   アプリケーションの通常のパラメーターでパラメーター値の場所、 \* *ParameterValuePtr*バッファーとその値の長さ、**StrLen_or_IndPtr*バッファー。 詳細については、次を参照してください。[パラメーター値の設定](../../../odbc/reference/develop-app/setting-parameter-values.md)します。  
   
     -   実行時データ パラメーターの場合、アプリケーションが、SQL_LEN_DATA_AT_EXEC の結果を配置 (*長さ*) でのマクロ (ODBC 2.0、ドライバーを呼び出す) 場合、**StrLen_or_IndPtr*バッファー。  
   
@@ -312,7 +312,7 @@ SQLRETURN SQLBindParameter(
 
  アプリケーションの設定と*InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM または SQL_PARAM_OUTPUT_STREAM、1 つまたは複数の呼び出しで出力パラメーターの値を取得する必要があります**SQLGetData**します。 ドライバーは、アプリケーションに戻るにストリーミングされる出力パラメーターの値を持つ、ときに、SQL_PARAM_DATA_AVAILABLE を次の関数の呼び出しに応答返します。**SQLMoreResults**、 **SQLExecute**、および**SQLExecDirect**します。 アプリケーションを呼び出す**SQLParamData**パラメーター値が使用可能なを判断します。  
   
- SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
+ SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
   
 ## <a name="using-arrays-of-parameters"></a>パラメーターの配列の使用
 
@@ -322,7 +322,7 @@ SQLRETURN SQLBindParameter(
   
  オプション、SQL_PARAM_ARRAY_SELECTS **SQLGetInfo**パラメーター (SQL_PAS_BATCH) のセットごとに結果セットがあるか、1 つの結果セットが使用可能な (SQL_PAS_NO_BATCH) かどうかを示します。 ドライバーがパラメーターの配列を実行するときに、結果セットを生成するステートメントを許可していない場合、SQL_PARAM_ARRAY_SELECTS は SQL_PAS_NO_SELECT を返します。  
   
- 詳細については、[SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)します。  
   
  パラメーターの配列をサポートするためには、SQL_ATTR_PARAMSET_SIZE ステートメント属性は、各パラメーターの値の数を指定に設定されます。 フィールドが 1 より大きい場合は、APD の SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR フィールドは配列を指す必要があります。 各配列のカーディナリティは、SQL_ATTR_PARAMSET_SIZE の値と同じです。  
   
@@ -355,7 +355,7 @@ SQLRETURN SQLBindParameter(
   
     -   *StrLen_or_IndPtr*長さ/インジケーター配列のアドレスです。  
   
- この情報を使用する方法の詳細については、「コメント」このセクションの後半の「ParameterValuePtr 引数」を参照してください。 パラメーターの列方向のバインドの詳細については、[バインド パラメーター配列](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)を参照してください。  
+ この情報を使用する方法の詳細については、「コメント」このセクションの後半の「ParameterValuePtr 引数」を参照してください。 パラメーターの列方向のバインドの詳細については、次を参照してください。[バインド パラメーター配列](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)します。  
   
 ## <a name="row-wise-parameter-binding"></a>行方向のパラメーターのバインド
 
@@ -382,7 +382,7 @@ SQLRETURN SQLBindParameter(
   
     -   *StrLen_or_IndPtr*はバインドされる長さ/インジケーターのメンバーのアドレスです。  
   
- この情報を使用する方法の詳細については、"*ParameterValuePtr*引数、"このセクションで後述を参照してください。 パラメーターの行方向のバインドの詳細については、、[バインド パラメーター配列](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)を参照してください。  
+ この情報を使用する方法の詳細については、次を参照してください。"*ParameterValuePtr*引数、"このセクションで後述します。 パラメーターの行方向のバインドの詳細については、次を参照してください。、[バインド パラメーター配列](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)します。  
   
 ## <a name="error-information"></a>エラー情報
 

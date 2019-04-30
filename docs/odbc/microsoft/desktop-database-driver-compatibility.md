@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d081d53458ec59eb2ac9f05c5c1d47d6991b5010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240357"
 ---
 # <a name="desktop-database-driver-compatibility"></a>デスクトップ データベース ドライバーの互換性
 Unicode は、ソフトウェア文字エン コードのメソッドのすべての文字を 2 バイトの固定幅を持つものとして扱われます。 このメソッドは、1 バイト文字を表すためには、256 文字に限定されている Windows の ANSI 文字のエンコード、代替手段として使用されます。 文字は表されない多数の言語に対応 Unicode が 65,000 を超える文字を表すことのできるため、ANSI エンコーディングにします。  

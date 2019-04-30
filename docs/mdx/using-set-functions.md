@@ -1,5 +1,5 @@
 ---
-title: 集合関数の使用 |Microsoft ドキュメント
+title: 集合関数の使用 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251589"
 ---
 # <a name="using-set-functions"></a>集合関数の使用
 
 
   集合関数は、ディメンション、階層、レベルからセットを取得します。あるいは、それらのオブジェクト内でのメンバーの絶対位置および相対位置をトラバースすることにより、さまざまな方法でセットを構築します。  
   
- 集合関数は、メンバー関数や組関数と同様に、Analysis Services で使用される多次元構造を操作するために不可欠です。 さらに、セット式が多次元式 (MDX) クエリの軸を定義するため、集合関数は MDX クエリから結果を得るうえでも不可欠です。  
+ メンバー関数や組関数と同様、集合関数は、Analysis Services の多次元構造を操作するために不可欠です。 集合関数は、多次元式 (MDX) クエリから結果を取得するセット式の MDX クエリ軸を定義するために不可欠なもします。  
   
  最も一般的な集合関数の 1 つは、[Member&#40;セット&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md)関数で、すべてのディメンション、階層、またはレベルからメンバーを含むセットを取得します。 クエリ内でのこの関数の使用例を次に示します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34743671"
   
  `FROM [Adventure Works]`  
   
- 一般的に使用される別の関数は、 [Crossjoin &#40;MDX&#41; ](../mdx/crossjoin-mdx.md)関数。 この関数は、パラメーターとして渡されるセットのデカルト積を表す組のセットを返します。 つまり、この関数を使用すると、クエリに "入れ子になった" 軸または "クロス集計された" 軸を作成できます。  
+ 一般的に使用されるもう 1 つの関数は、 [Crossjoin &#40;MDX&#41; ](../mdx/crossjoin-mdx.md)関数。 この関数は、パラメーターとして渡されるセットのデカルト積を表す組のセットを返します。 実際には、この関数には、クエリで"クロス集計された"軸または '入れ子になった' を作成することが有効にします。  
   
  `SELECT`  
   
@@ -71,29 +71,29 @@ ms.locfileid: "34743671"
   
  `FROM [Adventure Works]`  
   
- [Descendants&#40;MDX&#41; ](../mdx/descendants-mdx.md)関数は似ています、**Child**機能しますより強力です。 この関数は、階層内の 1 つ以上のレベルにある任意のメンバーの子孫を返します。  
+ [Descendants&#40;MDX&#41; ](../mdx/descendants-mdx.md)関数は似ています、**Child**機能しますより強力です。 階層の 1 つまたは複数のレベルで任意のメンバーの子孫を返します。  
   
  SELECT  
   
- [Measures].[Internet Sales Amount]  
+ [Measures] です。[Internet Sales Amount]  
   
  ON Columns,  
   
  //Returns a set containing all of the Dates beneath Calendar Year  
   
- //2004 in the Calendar hierarchy of the Date dimension  
+ Date ディメンションの Calendar 階層に 2004  
   
- DESCENDANTS(  
+ 子孫 (  
   
- [Date].[Calendar].[Calendar Year].&[2004]  
+ [Date] です。[カレンダー] です。[Calendar Year] です & [2004]。  
   
  , [Date].[Calendar].[Date])  
   
  ON Rows  
   
- FROM [Adventure Works]  
+ [Adventure Works] から  
   
- [Order&#40;MDX&#41; ](../mdx/order-mdx.md)関数では、昇順または降順の特定の数値式に従って順序でセットの内容を注文することができます。 次のクエリでは、上記のクエリと同じ、行のメンバーを返しますが、ここでは Internet Sales Amount メジャーでこのメンバーを並べ替えます。  
+ [Order&#40;MDX&#41; ](../mdx/order-mdx.md)関数では、昇順または降順の特定の数値式に従って順序でセットの内容を注文することができます。 次のクエリでは、行の前のクエリと同じメンバーを返しますが、Internet Sales Amount メジャーに整列ようになりました。  
   
  `SELECT`  
   
@@ -121,7 +121,7 @@ ms.locfileid: "34743671"
   
  `FROM [Adventure Works]`  
   
- このクエリでは、集合関数 Descendants から返されたセットをパラメーターとして別の集合関数 Order に渡す方法も示しています。  
+ このクエリも 1 つからセットを返す方法を示しています、集合関数 Descendants は、別の集合関数 Order にパラメーターとして渡すことができます。  
   
  特定の条件に従ってセットをフィルター選択非常に便利です、クエリを記述する場合は、この目的で使用することができます、[Filter ー &#40;MDX&#41; ](../mdx/filter-mdx.md)関数は、次の例で示すようにします。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "34743671"
   
  `FROM [Adventure Works]`  
   
- また、他の方法でセットにフィルターを適用できるようにする、さらに高度な関数もあります。 たとえば、次のクエリの表示、 [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md)関数がセット内の最上位の n 個のアイテムを返します。  
+ また、他の方法でセットにフィルターを適用できるようにする、さらに高度な関数もあります。 たとえば、次のクエリの表示、 [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md)関数がセット内の最初の n 個の項目を返します。  
   
  `SELECT`  
   
@@ -177,7 +177,7 @@ ms.locfileid: "34743671"
   
  `FROM [Adventure Works]`  
   
- 最後に、多数のなどの関数を使用して論理セットの操作を実行することは[Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md)、[Union&#40;MDX&#41; ](../mdx/union-mdx.md)と[Except&#40;MDX&#41; ](../mdx/except-mdx-function.md)関数。 次のクエリでは、後者 2 つの関数の例を示します。  
+ 最後に、多数のなどの関数を使用して論理セットの操作を実行することは[Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md)、[Union&#40;MDX&#41; ](../mdx/union-mdx.md)と[Except&#40;MDX&#41; ](../mdx/except-mdx-function.md)関数。 次のクエリでは、後者の 2 つの関数の例を示します。  
   
  `SELECT`  
   

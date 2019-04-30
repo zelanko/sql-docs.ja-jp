@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238396"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
   [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述語または [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 関数で近接語句 (NEAR) を使用すると、互いに似た単語や語句を検索できます。 最初の検索語句と最後の検索語句を分離する非検索用語の最大数を指定することもできます。 さらに、任意の順序で語や句を検索したり、指定した順序で語や句を検索したりすることができます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 両方を以前サポート[汎用近接語句](#Generic_NEAR)が、非推奨となりましたが、[カスタム近接語句](#Custom_NEAR)、新機能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。  
@@ -51,11 +51,11 @@ ms.locfileid: "52502839"
   
  {  
   
- *search_term* [,...*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [,...*n* ])[、< maximum_distance > [、< match_order >]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -101,7 +101,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) OR NEAR((*term3*,*term4*),2, TRUE)')  
   
- 例えば以下のようにします。  
+ 例を次に示します。  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -160,7 +160,7 @@ GO
   
  汎用近接語句とは、検索用語の間で検索されない語句の数 ( *距離*) に関係なく、特定の用語がドキュメントで一致すればすべて返されることを示します。 基本構文は次のとおりです。  
   
- { *search_term* {NEAR | ~} *search_term* } [,...*n* ]  
+ { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
   
  たとえば、次の例では、"fox" という語と "chicken" という語が任意の順序で両方とも含まれる場合に一致として検出されます。  
   

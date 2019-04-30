@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283587"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services サイト コレクション機能
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードには、SharePoint サイト コレクションの 3 つの機能が用意されています。 これらの機能は、一般的な [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードのレポート環境、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Enterprise Edition 用の [!INCLUDE[SPS2010](../includes/sps2010-md.md)] アドインの機能、および SharePoint サーバーの全体管理での [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 用の管理操作をサポートします。  

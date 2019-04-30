@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309562"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>バックアップと復元を使用するデータベース [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "53207131"
 
 - [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
 
-このチュートリアルでは、SQL Server データベースに接続する必要があります。 Azure SQL Database は、Azure Data Studio から Azure SQL Database のバックアップを実行して復元しないように自動バックアップ、います。 詳細については、[SQL Database 自動バックアップについての詳細情報](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)を参照してください。
+このチュートリアルでは、SQL Server データベースに接続する必要があります。 Azure SQL Database は、Azure Data Studio から Azure SQL Database のバックアップを実行して復元しないように自動バックアップ、います。 詳細については、次を参照してください。 [SQL Database 自動バックアップについての詳細情報](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)します。
 
 ## <a name="backup-a-database"></a>データベースのバックアップ
 

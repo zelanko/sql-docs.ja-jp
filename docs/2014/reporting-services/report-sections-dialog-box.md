@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 47bd8d2b6912d28d992a0655b33396ce9042c1af
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306362"
 ---
 # <a name="report-sections-dialog-box"></a>[レポート セクション] ダイアログ ボックス
   レポート デザイナーでは、レポートには、1 つだけレポート定義言語 (RDL) が含まれる検証レポートを開くときに**\<セクション >** 要素。 複数の **\<Section>** 要素を含むレポートを開くことはサポートされていません。  

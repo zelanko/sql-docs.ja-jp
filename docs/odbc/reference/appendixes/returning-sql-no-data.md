@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74c122819980abaa328db5ad46f240cae24b92d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280586"
 ---
 # <a name="returning-sqlnodata"></a>SQL_NO_DATA を返す
 ODBC 2 時にします。*x*アプリケーションの操作、ODBC 3 *.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**、検索された update または delete ステートメントが実行されましたが、データ ソース、ODBC 3 行によって影響されなかったと *.x*ドライバーは SQL_SUCCESS を返す必要があります。 ときに、ODBC 3 *.x* 、ODBC 3 の操作アプリケーション *.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**と同じ結果が、ODBC 3 *.x*ドライバーが SQL_NO_DATA を返す必要があります。  

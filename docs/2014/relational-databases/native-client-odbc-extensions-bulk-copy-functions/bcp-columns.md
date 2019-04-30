@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225525"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との一括コピー入出力に使用する、ユーザー ファイル内の合計列数を設定します。 [bcp_setbulkmode](bcp-setbulkmode.md) bcp_columns 代わりに使用でき、 [bcp_colfmt](bcp-colfmt.md)します。  
@@ -55,7 +55,7 @@ nColumns
 ## <a name="remarks"></a>コメント  
  この関数は、後でのみ呼び出すことができます[bcp_init](bcp-init.md)は有効なファイル名で呼び出されました。  
   
- この関数を呼び出す必要があるのは、既定とは異なる形式のユーザー ファイルを使用する場合のみです。 既定のユーザー ファイル形式の説明の詳細については、**bcp_init**を参照してください。  
+ この関数を呼び出す必要があるのは、既定とは異なる形式のユーザー ファイルを使用する場合のみです。 既定のユーザー ファイル形式の説明の詳細については、次を参照してください。 **bcp_init**します。  
   
  呼び出した後`bcp_columns`、呼び出す必要があります[bcp_colfmt](bcp-colfmt.md)カスタム ファイル形式を完全に定義するユーザー ファイル内の各列にします。  
   

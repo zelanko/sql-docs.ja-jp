@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312868"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 動的カーソル
-動的カーソルがあっただけです。 動的です。 メンバーシップ、順序、および、カーソルを開いた後に結果セットの値に加えられた変更を検出できます。 たとえば、動的カーソルが 2 つの行をフェッチし、別のアプリケーションは、これらの行のいずれかを更新し、もう一方を削除します。 動的カーソルは、行の再フェッチしようとすると、削除された行は見つかりませんが、更新された行の新しい値を返します。  
+動的カーソルがあっただけです。 動的です。 メンバーシップ、順序、および、カーソルを開いた後に結果セットの値に加えられた変更を検出できます。 たとえば、動的カーソルで 2 つの行がフェッチされた後、別のアプリケーションによって一方の行は更新され、他の行は削除されたものとします。 動的カーソルは、行の再フェッチしようとすると、削除された行は見つかりませんが、更新された行の新しい値を返します。  
   
  動的カーソルは、すべての更新プログラムを検出削除、および挿入する場合に、どちらも、自分と他のユーザーによるものです。 (これは、分離の対象 SQL_ATTR_TXN_ISOLATION 接続属性によって設定されると、トランザクションのレベル) です。SQL_ATTR_ROW_STATUS_PTR ステートメント属性で指定された行の状態配列では、これらの変更を反映し、SQL_ROW_SUCCESS、SQL_ROW_SUCCESS_WITH_INFO、SQL_ROW_ERROR、SQL_ROW_UPDATED、および SQL_ROW_ADDED に含めることができます。 動的カーソルが行セット外の削除された行は返されません、そのため、結果セットで削除された行または行の状態配列内の対応する要素の存在を認識しないために、SQL_ROW_DELETED を戻すことはできません。 呼び出しによって行が更新された場合にのみ、SQL_ROW_ADDED が返される**SQLSetPos**別のカーソルによって更新されたときではなく、します。  
   

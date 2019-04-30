@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20fff124f33bfeccaec665c74687753e2c0af20b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239740"
 ---
 # <a name="charset-property-ado"></a>Charset プロパティ (ADO)
 文字セットを示します、テキストの内容[Stream](../../../ado/reference/ado-api/stream-object-ado.md)の内部バッファー内の記憶域に変換する必要があります、 **Stream**オブジェクト。  
@@ -36,7 +36,7 @@ ms.locfileid: "47752340"
   
  **Charset**はテキストでのみ使用**Stream**オブジェクト ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)。 場合、このプロパティは無視されます**型**は**adTypeBinary**します。  
   
- コード サンプルは、[手順 4: Details テキスト ボックスに入力](../../../ado/guide/data/step-4-populate-the-details-text-box.md)を参照してください。  
+ コード サンプルは、次を参照してください。[手順 4。詳細情報のテキスト ボックスに入力](../../../ado/guide/data/step-4-populate-the-details-text-box.md)します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

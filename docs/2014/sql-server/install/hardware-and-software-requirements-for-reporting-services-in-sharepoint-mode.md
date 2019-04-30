@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5b70a6a736d9a7f566eb4aa60a37ed7b5151168e
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295416"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Reporting Services の SharePoint モードに関するハードウェアとソフトウェアの要件
 
@@ -68,7 +68,7 @@ ms.locfileid: "54206178"
   
 ##  <a name="bkmk_more_information"></a> その他の情報
 
- SharePoint の変更点については、[SharePoint 2010 から SharePoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx)を参照してください。  
+ SharePoint の変更点については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 への変更](https://technet.microsoft.com/library/ff607742\(office.15\).aspx)(https://technet.microsoft.com/library/ff607742(office.15).aspx)します。  
   
  [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

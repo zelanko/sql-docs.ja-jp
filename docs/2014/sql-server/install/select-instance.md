@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87f2ed4ff5bac29d65e9fe6132b2593580aa6639
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270346"
 ---
 # <a name="select-instance"></a>インスタンスの選択
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インスタンスの選択] ページを使用すると、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にアップグレードする [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のインスタンスを指定できます。  

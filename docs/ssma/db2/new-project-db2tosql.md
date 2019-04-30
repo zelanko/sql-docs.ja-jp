@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 05ef20ebb3458e32cda4cc1f0bbe9a924ed8e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281697"
 ---
 # <a name="new-project-db2tosql"></a>新しいプロジェクト (DB2ToSQL)
 使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**します。  
@@ -24,7 +24,7 @@ ms.locfileid: "47672990"
 **名前**  
 プロジェクトの名前を入力します。 SSMA は、ファイル拡張子を追加します。  
   
-**場所**  
+**[場所]**  
 入力するか、フォルダーまたはプロジェクトを保存するネットワークの場所を参照します。  
   
 **移行します。**  

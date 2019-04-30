@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a7b8baf1eb666e6639e7e7f47cbf6c321dc217b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225278"
 ---
 # <a name="find-in-files"></a>[フォルダーを指定して検索]
   **[検索と置換]** ウィンドウの [フォルダーを指定して検索] タブでは、指定したファイルのセットのコードで文字列や式を検索できます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  
