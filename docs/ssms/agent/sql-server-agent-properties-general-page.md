@@ -55,6 +55,6 @@ ms.locfileid: "47609540"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってログ ファイルに書き込まれるメッセージの、Net Send 通知を受信するオペレーターの名前を入力します。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
 [SQL Server エージェント エラー ログ](../../ssms/agent/sql-server-agent-error-log.md)  
   
