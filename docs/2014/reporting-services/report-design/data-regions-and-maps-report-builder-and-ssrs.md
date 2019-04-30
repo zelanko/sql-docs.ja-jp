@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 590cbab5e2b4091c4d0112914631f57d6f7bc8ea
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137290"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>データ領域とマップ (レポート ビルダーおよび SSRS)
   データ領域は、レポート データセットのデータを表示するレポート内のオブジェクトです。 レポート データは、数字やテキストとしてテーブル、マトリックス、または一覧に表示することも、グラフまたはゲージでグラフィカルに表示することも、マップの地理的背景上に表示することもできます。 テーブル、マトリックス、および一覧は、 *Tablix* データ領域に基づいており、データセットのデータをすべて表示するために必要に応じて拡張されます。 Tablix データ領域では、複数の行グループおよび列グループと、静的および動的な行と列がサポートされます。 グラフでは、複数の系列グループとカテゴリ グループをさまざまなグラフ形式で表示します。 ゲージでは、データセットの単一の値または集計値を表示します。 マップでは、データセットの集計データに基づいて表示を変更できるマップ要素として空間データを表示します。  

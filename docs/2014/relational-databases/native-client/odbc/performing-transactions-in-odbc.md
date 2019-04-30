@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ade18b71fa83c7acbb16cb7facd19dd3de61a2e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143321"
 ---
 # <a name="transactions-in-odbc"></a>ODBC でのトランザクション
   ODBC のトランザクションは接続レベルで管理されます。 アプリケーションはトランザクションの完了時に、その接続のすべてのステートメント ハンドルで完了したすべての作業を、コミットまたはロールバックします。 コミットするトランザクションをロールバックするか、アプリケーションを呼び出す必要があります[sqlendtran を呼び出してと](../../native-client-odbc-api/sqlendtran.md)COMMIT または ROLLBACK ステートメントを送信する代わりにします。  

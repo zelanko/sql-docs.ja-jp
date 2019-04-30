@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157127"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
@@ -61,7 +61,7 @@ ms.locfileid: "52772204"
   
     -   プロファイルの削除  
   
--   **補足情報:**[エージェントのパラメーターを変更した後](#FollowUp)  
+-   **補足情報:**[エージェント パラメーターを変更した後](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -284,7 +284,7 @@ ms.locfileid: "52772204"
   
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出して、このオブジェクトで表されるユーザー定義プロファイルをサーバーから削除します。  
   
-##  <a name="FollowUp"></a> フォローしてください：エージェントのパラメーターを変更した後  
+##  <a name="FollowUp"></a> 補足情報:エージェント パラメーターを変更した後  
  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

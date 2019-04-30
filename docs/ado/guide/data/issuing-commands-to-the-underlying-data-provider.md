@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2267ff0af67682417b118e9fa01b2dceeb1454a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161436"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>基になるデータ プロバイダーにコマンドを発行する
 図形で始まらない任意のコマンドは、データ プロバイダーに渡されます。 これは、「図形 {0} プロバイダー コマンド}」形式での図形のコマンドを実行するのと同じです。 これらのコマンドは*いない*を生成する必要がある、**レコード セット**します。 たとえば、"形状 {ドロップ テーブル MyTable} は完全に有効な図形コマンドでは、データ プロバイダーは、DROP TABLE をサポートするいると仮定した場合です。  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc000d9e3ded940e00d249743a9b84cd1ae2bcf5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190639"
 ---
 # <a name="complete-image-progress"></a>[イメージの完了の進行状況]
   使用して、**イメージの完了の進行状況**のページ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の状態を監視するインストール ウィザード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イメージの完了のセットアップ。 このステップの完了時には、構成が済んで完了済みの各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能のステータスがこのページに一覧表示されます。  

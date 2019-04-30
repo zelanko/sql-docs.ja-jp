@@ -10,11 +10,11 @@ manager: kfile
 ms.date: 10/24/2018
 ms.technology: install
 ms.openlocfilehash: 44805d6fd7512a5180a2b62e2c8808b890901705
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151641"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>SQL Server 2014 の BI 機能のインストール
 
@@ -22,7 +22,7 @@ ms.locfileid: "52808354"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スタンドアロン サーバーとして、スケールアウト構成で、または SharePoint ファームの共有サービス アプリケーションとしてインストールできます。 サービスをファームにインストールすると、SharePoint のみで使用できる BI 機能が有効になります。これらの機能には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint と、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表形式モデルのデータベースで実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を対話形式でアドホック実行したレポート デザイナーの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が含まれます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、または PowerPivot for SharePoint のインストール手順について詳しく理解している場合は、特定のシナリオを有効にする手順のチェック リストに進みます。 詳細については、[と SharePoint の BI 機能のインストールのチェックリスト](checklists-for-installing-bi-features-with-sharepoint.md)を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、または PowerPivot for SharePoint のインストール手順について詳しく理解している場合は、特定のシナリオを有効にする手順のチェック リストに進みます。 詳細については、次を参照してください。[と SharePoint の BI 機能のインストールのチェックリスト](checklists-for-installing-bi-features-with-sharepoint.md)します。  
   
 ## <a name="contents"></a>目次
 

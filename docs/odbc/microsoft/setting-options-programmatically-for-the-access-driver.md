@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159298"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>プログラムで Access ドライバーのオプションの設定
 
@@ -36,5 +36,5 @@ ms.locfileid: "55044468"
 |ページのタイムアウト|削除される前に、(使用しない) 場合、ページがバッファーに残っている、ミリ秒単位で時間の期間を指定します。 Microsoft Access ドライバーを既定値は 500 ミリ秒 (0.5 秒) です。 このオプションは、ODBC ドライバーを使用するすべてのデータ ソースに適用されます。<br /><br /> ページのタイムアウトは、固有の遅延のため、0 をすることはできません。 ページのタイムアウトは、その値を下回るページのタイムアウト オプションが設定されている場合でも、本質的な遅延よりも小さくできません。|このオプションを動的に設定するには、使用、 **PAGETIMEOUT**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
 |[読み取り専用]|読み取り専用データベースを指定します。|このオプションを動的に設定するには、使用、 **READONLY**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
 |システム データベース|アクセスする Microsoft Access データベースで使用する Microsoft Access のシステム データベースの完全パス。<br /><br /> をクリックして、**システム データベース** ボタンを使用するシステム データベースを選択します。 Microsoft Access の ODBC ドライバーでは、ユーザー名とパスワードが求められます。 既定の名前は管理者と管理者ユーザーの Microsoft Access での既定のパスワードが空の文字列。<br /><br /> Microsoft Access データベースのセキュリティを向上させるのに管理者ユーザーを置き換えるし、管理者ユーザーを削除する新しいユーザーを作成または管理者のユーザーがアクセスを持っているオブジェクトを変更します。|このオプションを動的に設定するには、使用、 **SYSTEMDB**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
-|スレッド|使用するエンジンのバック グラウンド スレッドの数。 Microsoft Access ドライバーの場合は、この値は、既定値は、3 が、変更することができます。 ユーザーは、大量のデータベース内のアクティビティがある場合は、スレッドの数を増やす可能性があります。<br /><br /> このオプションが記載されて、**高度なオプションの設定**Microsoft Access ドライバーのダイアログ ボックス。|このオプションを動的に設定するには、使用、**スレッド**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
+|スレッド数|使用するエンジンのバック グラウンド スレッドの数。 Microsoft Access ドライバーの場合は、この値は、既定値は、3 が、変更することができます。 ユーザーは、大量のデータベース内のアクティビティがある場合は、スレッドの数を増やす可能性があります。<br /><br /> このオプションが記載されて、**高度なオプションの設定**Microsoft Access ドライバーのダイアログ ボックス。|このオプションを動的に設定するには、使用、**スレッド**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
 |UserCommitSync|Microsoft Access ドライバーが明示的なユーザー定義のトランザクションを非同期的に実行されるかどうかを判断します。 この値は"Yes"は、Microsoft Access ドライバーが完了するユーザー定義のトランザクションでコミットを待つことを意味する最初に設定されます。<br /><br /> このオプションを False に設定すると、マルチ ユーザー環境で予期しない結果をことができます。|このオプションを動的に設定するには、使用、 **USERCOMMITSYNC**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|

@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156209"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Transact-SQL によるインメモリ OLTP のサポート
-  Transact-SQL クエリまたは DML ステートメント (SELECT、INSERT、UPDATE、または DELETE)、アドホック ステートメント、および SQL モジュール (ストアド プロシージャ、テーブル-値関数、スカラー関数、トリガー、ビューなど) を使用して、メモリ最適化テーブルにアクセスできます。 詳細については、[したテーブルを使用して解釈された TRANSACT-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)を参照してください。  
+  Transact-SQL クエリまたは DML ステートメント (SELECT、INSERT、UPDATE、または DELETE)、アドホック ステートメント、および SQL モジュール (ストアド プロシージャ、テーブル-値関数、スカラー関数、トリガー、ビューなど) を使用して、メモリ最適化テーブルにアクセスできます。 詳細については、次を参照してください。[したテーブルを使用して解釈された TRANSACT-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)します。  
   
  メモリ最適化テーブルのみを参照するストアド プロシージャは、マシン コードにネイティブ コンパイルできます。これにより、一般に、インタープリタ式の (ディスク ベースの) ストアド プロシージャよりも大幅に高いパフォーマンスが得られます。 メモリ最適化テーブル アクセスを最適化するには、ネイティブ コンパイル ストアド プロシージャを使用します。 詳細については、[ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)を参照してください。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48218492"
   
 -   [宣言@local_variable &#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (を参照してください`NULL`  |  `NOT NULL`)  
   
- メモリ最適化テーブルは、`PRIMARY KEY` および `NOT NULL` の制約をサポートしています。 サポートされていない制約を実装する方法の詳細については、[移行を確認し、外部キー制約](../../database-engine/migrating-check-and-foreign-key-constraints.md)を参照してください。  
+ メモリ最適化テーブルは、`PRIMARY KEY` および `NOT NULL` の制約をサポートしています。 サポートされていない制約を実装する方法の詳細については、次を参照してください。[移行を確認し、外部キー制約](../../database-engine/migrating-check-and-foreign-key-constraints.md)します。  
   
  サポートされていない機能の詳細については、「[インメモリ OLTP でサポートされていない Transact-SQL の構造](transact-sql-constructs-not-supported-by-in-memory-oltp.md)」を参照してください。  
   

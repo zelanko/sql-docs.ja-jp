@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 013df1f64ab3d19869f5ca18121610fc0e960e89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070946"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute、Requery、および Clear のメソッドの例 (vc++)
 この例では、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得するメソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と[オフ](../../../ado/reference/ado-api/clear-method-ado.md)メソッドの内容を消去する、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 ExecuteCommand と PrintOutput 関数は、この例を実行する必要があります。  

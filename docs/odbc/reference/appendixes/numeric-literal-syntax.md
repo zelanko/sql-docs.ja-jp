@@ -16,22 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181279"
 ---
 # <a name="numeric-literal-syntax"></a>数値リテラルの構文
 次の構文は、ODBC での数値リテラルに使用されます。  
   
  *数値リテラル*:: =*符号付き数値リテラル&#124;符号なし数値リテラル*  
   
- *符号付き数値リテラル*:: = [*サインオン*]*符号なし数値リテラル*  
+ *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
   
  *符号なし数値リテラル*:: =*正確な数値リテラル&#124;おおよその数値リテラル*  
   
- *正確な数値リテラル*:: =*符号なし整数*[*期間*[*符号なし整数*] *&#124;期間符号なし整数*  
+ *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
   
  *サインオン*:: =*プラス記号&#124;マイナス記号*  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47601540"
   
  *指数*:: =*符号付き整数*  
   
- *符号付き整数*:: = [*サインオン*]*符号なし整数*  
+ *signed-integer* ::= [*sign*] *unsigned-integer*  
   
  *符号なし整数*:: =*桁.*  
   

@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193235"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML での value() メソッドと nodes() メソッドの使用
   複数回使用することができます**value()** メソッド`xml`のデータ型の**選択**句の行セットを生成する抽出した値。 **nodes()** メソッドは、追加のクエリに使用するために選択した各ノードの内部参照を生成します。 **nodes()** メソッドと **value()** メソッドを併用すると、行セットに複数の列があるとき、および行セット生成のためのパス式が複雑なときに、効率的に行セットを生成できます。  
   
  **Nodes()** メソッドは、特殊なインスタンス生成`xml`が選択されている別のノードに設定されているそのコンテキストのデータ型。 このような XML インスタンスは、**query()** メソッド、**value()** メソッド、**nodes()** メソッド、および **exist()** メソッドをサポートし、**count(\*)** 集計で使用できます。 それ以外の使用方法ではエラーが発生します。  
   
-## <a name="example-using-nodes"></a>例:Nodes() の使用  
+## <a name="example-using-nodes"></a>例:nodes() の使用  
  名が "David" ではない著者の姓と名を抽出するとします。 2 つの列 FirstName および LastName から構成される行セットとしてこの情報を抽出します。 そのためには次に示すように、 **nodes()** メソッドと **value()** メソッドを使用します。  
   
 ```  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 には、 **OpenXml()** を使用して XML インスタンスから行セットを生成する機能があります。 行セットにリレーショナル スキーマを指定し、その中の列に XML インスタンス内の値をどのようにマップするかを指定できます。  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>例:Xml データ型での OpenXml() の使用  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>例:xml データ型での OpenXml() の使用  
  上記の例のクエリは、 **OpenXml()** を使用して次のように書き換えることができます。 そのためには、各 XML インスタンスを読み取って XML 変数に代入し、OpenXML に渡すカーソルを作成します。  
   
 ```  

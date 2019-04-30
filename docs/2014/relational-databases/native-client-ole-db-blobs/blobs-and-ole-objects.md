@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195220"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、し、xml データ型とバイナリ ラージ オブジェクト (Blob). **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
   
- この機能を示すサンプルについては、[大量のデータを設定&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)を参照してください。  
+ この機能を示すサンプルについては、次を参照してください。[大量のデータを設定&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用してコンシューマーに実装された**IStorage**データ変更のため、コンシューマーはアクセサーにインターフェイス ポインターを提供するときのインターフェイスにバインドされています。  
   

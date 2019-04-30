@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200004"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのマップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC SQL データ型への SQL データ型。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  

@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73f0a50b1ab06eeea97b54b6776135e35e56520e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181405"
 ---
 # <a name="literals-in-odbc"></a>ODBC のリテラル
-次のセクションで、構文は、間隔と ODBC の数値リテラルに使用されます。 この構文を提供する数値型または interval 型では、文字列型とは、文字の文字列型に型の数値型または interval 型から変換を実行するとドライバー開発者を支援するためにここでします。 詳細については、次を参照してください。 [Interval のリテラル](../../../odbc/reference/appendixes/interval-literals.md)と[数値リテラル](../../../odbc/reference/appendixes/numeric-literals.md)付録 d: データ型。  
+次のセクションで、構文は、間隔と ODBC の数値リテラルに使用されます。 この構文を提供する数値型または interval 型では、文字列型とは、文字の文字列型に型の数値型または interval 型から変換を実行するとドライバー開発者を支援するためにここでします。 詳細については、次を参照してください[Interval のリテラル](../../../odbc/reference/appendixes/interval-literals.md)と[数値リテラル](../../../odbc/reference/appendixes/numeric-literals.md)付録 d:。データ型。  
   
  この付録には、次のトピックが含まれています。  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4c5a2e9ae543f7ebbbefb6286835906626a6285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214896"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Collections (ADO - WFC 構文)
 **package com.ms.wfc.data**  
@@ -39,7 +39,7 @@ public Parameter getItem(int n)
 public Parameter getItem(String s)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getCount()  
@@ -60,7 +60,7 @@ public com.ms.wfc.data.Field getItem(int n)
 public com.ms.wfc.data.Field getItem(String s)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getCount()  
@@ -77,7 +77,7 @@ public com.ms.wfc.data.Error getItem(int n)
 public com.ms.wfc.data.Error getItem(String s)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 public int getCount()  

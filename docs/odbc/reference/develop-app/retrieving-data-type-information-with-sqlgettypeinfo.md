@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c69113e4bb5457cb997f832179e5c1aab2841d82
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199095"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo によるデータ型情報の取得
 ODBC 関数は、基になる SQL データ型から ODBC 型識別子へのマッピングは概数であるため (**SQLGetTypeInfo**) を介して、ドライバーは完全にデータ ソース内の各 SQL データ型について説明します。 この関数は、各行は、名前、型識別子、精度、スケール、および null 値許容属性などの 1 つのデータ型の特性を記述します。 結果セットを返します。  

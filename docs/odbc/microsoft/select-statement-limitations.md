@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bf17596dbd3279498df2edcee7636db95ae139
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127853"
 ---
 # <a name="select-statement-limitations"></a>SELECT ステートメントの制限事項
 SELECT ステートメントの非集計列と、集計関数の列を混在させることはできません。  

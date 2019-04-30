@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8209bf586e5a0b288b4975869ee8903a73a27f06
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188666"
 ---
 # <a name="sqltables"></a>SQLTables
   SQLTables は静的サーバー カーソルで実行できます。 SQLTables を更新可能な (動的またはキーセット) カーソルで実行するとは、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO を返します。  
@@ -33,11 +33,11 @@ ms.locfileid: "53357400"
  SQLTables がテーブルの名前が一致をに関する情報を返します*TableName*現在のユーザーによって所有されているとします。  
   
 ## <a name="sqltables-and-table-valued-parameters"></a>SQLTables とテーブル値パラメーター  
- ステートメント属性 SQL_SOPT_SS_NAME_SCOPE が、既定値の SQL_SS_NAME_SCOPE_TABLE ではなく sql_ss_name_scope_table_type である場合、値、SQLTables はテーブル型に関する情報を返します。 SQLTables によって返される結果セットの列 4 でテーブル型に対して返される TABLE_TYPE 値は、テーブル型です。 SQL_SOPT_SS_NAME_SCOPE の詳細については、[SQLSetStmtAttr](sqlsetstmtattr.md)を参照してください。  
+ ステートメント属性 SQL_SOPT_SS_NAME_SCOPE が、既定値の SQL_SS_NAME_SCOPE_TABLE ではなく sql_ss_name_scope_table_type である場合、値、SQLTables はテーブル型に関する情報を返します。 SQLTables によって返される結果セットの列 4 でテーブル型に対して返される TABLE_TYPE 値は、テーブル型です。 SQL_SOPT_SS_NAME_SCOPE の詳細については、次を参照してください。 [SQLSetStmtAttr](sqlsetstmtattr.md)します。  
   
  テーブル、ビュー、およびシノニムは、テーブル型によって使用される名前空間とは異なる、共通の名前空間を共有します。 テーブルとビューを同じ名前にすることはできませんが、同じ名前のテーブルとテーブル型を同じカタログおよびスキーマ内に配置することはできます。  
   
- テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   
 ## <a name="example"></a>例  
   

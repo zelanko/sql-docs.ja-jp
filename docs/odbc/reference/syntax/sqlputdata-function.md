@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186112"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 関数
 **準拠**  
@@ -91,7 +91,7 @@ SQLRETURN SQLPutData(
 |HY019|部分で送信される文字またはバイナリ以外のデータ|**SQLPutData**が呼び出された複数の 1 回のパラメーターまたは列、およびそれが使用されていない文字、バイナリ、またはデータのソースに固有のデータ型の列に文字データを送信する、または文字の列にバイナリの C データを送信するには、バイナリ、またはデータ ソースに固有のデータ型。|  
 |HY020|Null 値を連結しようとしてください。|**SQLPutData** 、SQL_NEED_DATA が返されますの呼び出し後、これらの呼び出しのいずれかで複数回呼び出された、 *StrLen_or_Ind* SQL_NULL_DATA または SQL_DEFAULT_PARAM 引数が含まれています。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数*DataPtr*が null ポインターの場合は、および引数*StrLen_or_Ind* SQL_NTS または SQL_NULL_DATA 等しくありませんが、0 より小さいをでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  

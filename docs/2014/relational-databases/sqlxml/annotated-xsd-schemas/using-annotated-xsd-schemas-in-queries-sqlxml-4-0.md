@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 37c7f266fbfa09a4cd8fea463ba224e9ec2b4534
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131121"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>クエリでの注釈付き XSD スキーマの使用 (SQLXML 4.0)
   注釈付きスキーマに対してクエリを指定し、XSD スキーマに対してテンプレートで XPath クエリを指定して、データベースからデータを取得することができます。  
@@ -62,7 +62,7 @@ ms.locfileid: "52800385"
 </sql:xpath-query>  
 ```  
   
- SQLXML 4.0 のテスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用すると、テンプレート ファイルの一部としてクエリを実行できます。 詳細については、[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)を参照してください。  
+ SQLXML 4.0 のテスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用すると、テンプレート ファイルの一部としてクエリを実行できます。 詳細については、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)します。  
   
 ## <a name="using-inline-mapping-schemas"></a>インライン マッピング スキーマの使用  
  注釈付きスキーマはテンプレートに直接含めることができます。このテンプレートで、インライン スキーマに対する XPath クエリを指定できます。 テンプレートはアップデートグラムとしても使用できます。  
@@ -120,7 +120,7 @@ ms.locfileid: "52800385"
   
  `sql:is-mapping-schema` 注釈は、テンプレートの名前空間 `urn:schemas-microsoft-com:xml-sql` に属しています。  
   
- この例をテストするには、テンプレート (InlineSchemaTemplate.xml) をローカルのディレクトリに保存した後、SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
+ この例をテストするには、テンプレート (InlineSchemaTemplate.xml) をローカルのディレクトリに保存した後、SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  指定するだけでなく、`mapping-schema`属性を **\<sql:xpath-クエリ >** 要素 (XPath クエリがある) 場合のテンプレート、または **\<updg:sync >** アップデート グラム内の要素、次の操作を行うことができます。  
   

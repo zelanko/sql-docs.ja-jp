@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d742c1b3c81ca995c106591fe7c610251537d5d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181504"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services エラーの原因と解決方法
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に関連するさまざまなエラーの原因と解決方法について説明します。 このセクションのエラー メッセージ トピックでは、エラー メッセージとその原因、および問題を解決するための対策について説明します。  

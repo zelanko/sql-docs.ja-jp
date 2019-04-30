@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195228"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
   一般に、コンシューマーを作成するコードを分離する必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクトにより参照されないデータを処理する他のコードから、 **ISequentialStream**インターフェイス ポインター。  

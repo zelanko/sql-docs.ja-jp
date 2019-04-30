@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9dcd637feae0160636de6ec1430a232a91c67b3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190655"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)
   タイムアウト値を指定して、システム リソースの使用に制限を設定できます。 レポート サーバーでは、2 つのタイムアウト値がサポートされます。  

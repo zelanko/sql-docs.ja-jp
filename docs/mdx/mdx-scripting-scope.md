@@ -1,5 +1,5 @@
 ---
-title: SCOPE ステートメント (MDX) |Microsoft ドキュメント
+title: SCOPE ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187529"
 ---
-# <a name="mdx-scripting---scope"></a>MDX スクリプティングのスコープ
+# <a name="mdx-scripting---scope"></a>MDX スクリプティング - SCOPE
 
 
   指定された多次元式 (MDX) ステートメントのスコープを指定されたサブキューブに限定します。  
@@ -68,23 +68,23 @@ Limited_Set ::=
  有効な MDX ステートメントです。  
   
  *Common_Grain_Members*  
- 同じ粒度のメンバーに評価される有効な MDX ステートメントです。  
+ 同じ粒度を持つメンバーに評価される有効な MDX ステートメントです。  
   
  *single_tuple*  
  1 つの組です。  
   
 ## <a name="remarks"></a>コメント  
- SCOPE ステートメントでは、1 つ以上の MDX ステートメントの実行対象のサブキューブを指定します。 MDX ステートメントを SCOPE ステートメントの中に組み込まない限り、MDX ステートメントの暗黙的なスコープは、キューブ全体になります。  
+ SCOPE ステートメントは、1 つまたは複数の MDX ステートメントの実行によって影響を受けるサブキューブを決定します。 MDX ステートメントが SCOPE ステートメント内で囲まれている場合を除き、MDX ステートメントの暗黙的なスコープはキューブ全体になります。  
   
 > [!NOTE]  
 >  SCOPE ステートメントは、非表示のメンバーも公開します。  
   
- SCOPE ステートメントに関係なく「口」を公開するサブキューブを作成、 **MDX Compatibility**設定します。 たとえば、次のようなステートメントがあると、`Scope( Customer.State.members )`国や地域が含まれていない状態で、状態を含めることができますが、どのそれ以外の場合に非表示のプレース ホルダーのメンバーを挿入します。  
+ SCOPE ステートメントに関係なく「ホール」を公開するサブキューブを作成、 **MDX Compatibility**設定します。 たとえば、次のようなステートメントがあると、`Scope( Customer.State.members )`国や地域の状態を含まないで状態を含めることができますが、どのそれ以外の場合に非表示のプレース ホルダーのメンバーを挿入します。  
   
- SCOPE ステートメントの中で作成する計算されるメンバーと名前付きセットは、SCOPE ステートメントの影響を受けません。  
+ 計算されるメンバー、および SCOPE ステートメント内で作成された名前付きセットは、SCOPE ステートメントによる影響を受けません。  
   
 ## <a name="example"></a>例  
- Adventure Works サンプル ソリューションの MDX 計算スクリプトから次の例では、2005 年会計年度と sales amount quota メジャー、会計四半期として現在のスコープを定義しを使用して現在のスコープ内のセルに値を割り当てます、 **ParallelPeriod**関数。 例では、別の SCOPE ステートメントを使用してスコープを変更しを実行別の割り当てを使用して、 [This (MDX)](../mdx/this-mdx.md)関数。  
+ Adventure Works での MDX 計算スクリプトから、次の例のサンプル ソリューション、現在のスコープを 2005 会計年度と sales amount quota メジャー、会計四半期として定義および、を使用して、現在のスコープ内のセルに値を割り当てます**ParallelPeriod**関数。 例では、別の SCOPE ステートメントを使用してスコープを変更し、および別の割り当てを使用して、実行、 [This (MDX)](../mdx/this-mdx.md)関数。  
   
 ```  
 Scope   
@@ -115,6 +115,6 @@ End Scope ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX スクリプト ステートメント&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

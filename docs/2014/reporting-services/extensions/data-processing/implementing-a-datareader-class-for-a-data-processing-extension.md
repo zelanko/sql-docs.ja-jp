@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7c9e55741c72d624b7149435ced90550135d8b4a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163999"
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>データ処理拡張機能の DataReader クラスの実装
   クライアントは **DataReader** オブジェクトを使用して、読み取り専用、順方向専用のデータ ストリームをデータ ソースから取得できます。 クエリを実行すると結果が返され、結果は **DataReader** クラスの **Read** メソッドを使用して要求するまではクライアントのネットワーク バッファーに格納されます。 **DataReader** クラスを作成するには、<xref:Microsoft.ReportingServices.DataProcessing.IDataReader> を実装し、必要に応じて <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> を実装します。 **DataReader** オブジェクトを使用すると、アプリケーションのパフォーマンスが向上します。これは、クエリの結果全体が返されるまで待機するのではなく、データが使用可能になりしだい取得することと、メモリに一度に 1 行のみが格納されるため (既定)、システムのオーバーヘッドが小さくなることにより実現します。  

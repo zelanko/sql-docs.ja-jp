@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e56eff5064cf797e4acdfff10f346a43ee4210de
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195093"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>アップグレード後にログ配布が実行されない
   アップグレード アドバイザーによって、ログ配布を使用していることが検出されました。 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] のログ配布は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のログ配布と互換性がなく、直接アップグレードできません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードした後、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] またはストアド プロシージャを使用してログ配布を再構成します。  

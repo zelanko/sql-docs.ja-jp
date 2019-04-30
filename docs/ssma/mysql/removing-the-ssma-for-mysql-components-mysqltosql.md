@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ad23c4add9b6e7ea9999a434261a95282f129935
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182076"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>SSMA for MySQL コンポーネントの削除 (MySQLToSql)
 終了したらから MySQL へのデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA コンポーネントをアンインストールしたい場合があります。 クライアント コンポーネントは、いつでもアンインストールできます。 ただしから拡張機能パックをアンインストールする場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA では MySQL からデータをサーバー側のデータ移行のエンジンを使用してターゲット データベース (SQL Server または SQL Azure) への移行をサポートできなくします。  

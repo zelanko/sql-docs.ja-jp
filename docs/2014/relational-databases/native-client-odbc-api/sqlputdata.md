@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046627"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   SQLPutData を使用して、65,535 バイトを超えるデータを送信するときに、次の制限が適用されます (の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.21) または 400 KB を sql_longvarchar (SQL Server バージョン 6.0 以降) 用のデータを (`text`)、SQL_WLONGVARCHAR (`ntext`) またはSQL_LONGVARBINARY (`image`) 列。  
@@ -53,15 +53,15 @@ ms.locfileid: "53358554"
   
  場合*StrLen_Or_Ind* SQL_DEFAULT_PARAM または 0 から SQL_PARAMSET_SIZE までの数値以外の任意の値を持つ (つまり、 *ColumnSize* SQLBindParameter のパラメーター)、エラーになります。 このエラーには、SQL_ERROR が返される SQLPutData が発生します。SQLSTATE = HY090、"無効な文字列長またはバッファー長"。  
   
- テーブル値パラメーターの詳細については、[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)を参照してください。  
+ テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>SQLPutData による機能強化された日付と時刻のサポート  
  日付/時刻型のパラメーターの値で説明したように変換[C から SQL への変換](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。  
   
- 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>SQLPutData による大きな CLR UDT のサポート  
- `SQLPutData` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、[Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)を参照してください。  
+ `SQLPutData` は、大きな CLR ユーザー定義型 (UDT) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLPutData 関数](https://go.microsoft.com/fwlink/?LinkId=59365)   

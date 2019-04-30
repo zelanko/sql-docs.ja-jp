@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200306"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>ドライバーのパフォーマンス データのプロファイル (ODBC)
   このサンプルでは、パフォーマンス統計を記録するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバー固有のオプションを示します。 サンプルは、1 つのファイルを作成します: odbcperf.log.This サンプル (SQLPERF 構造体は Odbcss.h で定義されます). SQLPERF データ構造体から直接パフォーマンス データの表示、パフォーマンス データのログ ファイルの作成を示しています。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 860732a8d694ee59dae05f76eb9cabe49ebc8c96
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161574"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML での階層レコードセット
 ADO には、XML に階層レコード セット オブジェクトの永続化ができます。 階層レコード セット オブジェクトでは、親レコード セット内のフィールドの値は、別のレコード セットです。 このようなフィールドは、属性ではなく、XML ストリーム内の子要素として表されます。  

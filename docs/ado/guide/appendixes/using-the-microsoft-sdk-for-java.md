@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab4aaed1cfd661d38476c81f8bdc3dcab3aa0f88
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199746"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Microsoft SDK for Java を使用する
 
@@ -32,7 +32,7 @@ Microsoft SDK for Java は、Microsoft Internet Explorer の環境の開発キ�
   
  このメカニズムは、ADO のタイプ ライブラリを読み取って、アプリケーション内でインスタンス化できるクラスが生成されます。 次の場所にそれらのクラスが生成されます: \\< windows directory\>\Java\trustlib\msado15 します。  
   
- Java 用 Microsoft SDK を使用して Java で ADO アプリケーションを作成することは、根本的にまったく同じでは、ソース コードの観点から Java 型ライブラリのウィザードを使用してです。 サンプル コードでは、[ADO Java クラス ラッパー](../../../ado/guide/appendixes/ado-java-class-wrappers.md)を参照してください。 唯一の違いは、最初に、次の手順で示したラッパー クラスを生成する方法です。  
+ Java 用 Microsoft SDK を使用して Java で ADO アプリケーションを作成することは、根本的にまったく同じでは、ソース コードの観点から Java 型ライブラリのウィザードを使用してです。 サンプル コードでは、次を参照してください。 [ADO Java クラス ラッパー](../../../ado/guide/appendixes/ado-java-class-wrappers.md)します。 唯一の違いは、最初に、次の手順で示したラッパー クラスを生成する方法です。  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Microsoft sdk for Java ADO プロジェクトを作成するには  
   

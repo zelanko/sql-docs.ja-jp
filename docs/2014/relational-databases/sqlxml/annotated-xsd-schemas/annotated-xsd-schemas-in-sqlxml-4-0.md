@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131192"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 における注釈付き XSD スキーマ
   ここでは、SQLXML 4.0 での注釈付き XSD スキーマの使用について、情報を提供します。 以前のバージョンの SQLXML では、同様の機能が XML-Data Reduced (XDR) スキーマで提供されていました。 ここではレガシ アプリケーション用の XDR に関する情報も提供します。  

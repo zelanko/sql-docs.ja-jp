@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7df49e572b910bee5627b8cb2d14f067c314a3f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186245"
 ---
 # <a name="sqlnumparams-function"></a>SQLNumParams 関数
 **準拠**  
@@ -65,7 +65,7 @@ SQLRETURN SQLNumParams(
 |HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 **SQLNumParams**関数が呼び出された、前に、実行を完了**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*、 **SQLNumParams**で関数が再度呼び出された後、 *StatementHandle*します。<br /><br /> また、 **SQLNumParams**関数が呼び出された、前に、実行を完了**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*マルチ スレッド アプリケーションで別のスレッドから。|  
 |HY010|関数のシーケンス エラー|(DM) 関数が呼び出す前に呼び出された**SQLPrepare**または**SQLExecDirect**の*StatementHandle*します。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLNumParams**関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
@@ -78,7 +78,7 @@ SQLRETURN SQLNumParams(
   
  によって返されるパラメーターの数**SQLNumParams** IPD の SQL_DESC_COUNT フィールドと同じ値です。  
   
- 詳細については、[を記述するパラメーター](../../../odbc/reference/develop-app/describing-parameters.md)を参照してください。  
+ 詳細については、次を参照してください。[を記述するパラメーター](../../../odbc/reference/develop-app/describing-parameters.md)します。  
   
 ## <a name="related-functions"></a>関連する関数  
   

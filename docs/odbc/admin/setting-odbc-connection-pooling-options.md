@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198536"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>ODBC 接続プール オプションの設定
 接続プールを使用するアプリケーションを使用するたびに再確立する必要がない接続プールから接続を使用します。 使用することができます、**接続プール**のタブ、 **ODBC データ ソース アドミニストレーター**  ダイアログ ボックスを有効にし、パフォーマンスの監視を無効にします。 接続タイムアウト期間を設定するドライバー名をダブルクリックします。  
   
  ドライバー レベルでは、接続プールは CPTimeout レジストリの値で有効にします。 接続プールがサポートするドライバーだけを有効にするシステム管理者は、有効にするこのドライバーごとのオプションを選択できます。 これは、ドライバーのセットアップ プログラムの中に CPTimeout の既定値の設定によって実現されます。 接続タイムアウト期間を設定するドライバー名をダブルクリックします。  
   
- 接続プールの詳細については、[ODBC 接続プーリング](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)を参照してください。  
+ 接続プールの詳細については、次を参照してください。 [ODBC 接続プーリング](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)します。  
   
 ## <a name="performance-monitoring"></a>パフォーマンス監視  
  さまざまな統計情報を記録することによって接続のパフォーマンスを追跡するパフォーマンスを監視します。 これらの統計情報は、次の項目を含める開発者によってカスタマイズできます。  
@@ -40,7 +40,7 @@ ms.locfileid: "52503894"
 |1 秒あたりの ODBC ソフト切断カウンター|アプリケーションによって発行された 1 秒あたりの数を切断します。 アプリケーションのリリースまたは切断、プールに戻り、接続が配置されます。|  
 |ODBC の現在アクティブな接続のカウンター|現在使用されている、プール内の接続の数。|  
 |ODBC 現在無料接続カウンター|現在、プールで使用可能な無料の接続数。 これらは、使用可能なライブ接続です。|  
-|現在アクティブなプールします。|現在アクティブなプールの数。 このカウンターは、接続プール内の接続を管理するドライバーに対して、Windows 8 で追加されました。 詳細については、[ドライバー対応接続プール](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)を参照してください。|  
-|作成されたプール|アクティブで、アクティブ、削除されたプールを含むプールの数。 このカウンターは、接続プール内の接続を管理するドライバーに対して、Windows 8 で追加されました。 詳細については、[ドライバー対応接続プール](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)を参照してください。|  
+|現在アクティブなプールします。|現在アクティブなプールの数。 このカウンターは、接続プール内の接続を管理するドライバーに対して、Windows 8 で追加されました。 詳細については、次を参照してください。[ドライバー対応接続プール](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)します。|  
+|作成されたプール|アクティブで、アクティブ、削除されたプールを含むプールの数。 このカウンターは、接続プール内の接続を管理するドライバーに対して、Windows 8 で追加されました。 詳細については、次を参照してください。[ドライバー対応接続プール](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)します。|  
   
  独自の監視パラメーターを指定する必要があります。 パフォーマンスを監視するためのサンプルは、このバージョンの ODBC に組み込まれています。

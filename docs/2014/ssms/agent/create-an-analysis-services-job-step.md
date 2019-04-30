@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 832e49db5221c2e978cac584e8f1e406d33be30f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134988"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Analysis Services のコマンドとクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] エージェント ジョブ ステップの作成と定義方法について説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "53366114"
   
 -   ジョブ ステップで Analysis Services コマンドを使用する場合、コマンド ステートメントは XML for Analysis Services の **Execute** メソッドである必要があります。 ステートメントには、完全な SOAP (Simple Object Access Protocol) エンベロープまたは XML for Analysis の **Discover** メソッドを含めることはできません。 完全な SOAP エンベロープと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Discover **メソッドは、** ではサポートされていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップではサポートされていません。 XML for Analysis Services の詳細については、「 [XML for Analysis の概要 (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)」を参照してください。  
   
--   ジョブ ステップで Analysis Services クエリを使用する場合、クエリ ステートメントは多次元式 (MDX) クエリである必要があります。 MDX の詳細については、[MDX クエリの基礎&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)を参照してください。  
+-   ジョブ ステップで Analysis Services クエリを使用する場合、クエリ ステートメントは多次元式 (MDX) クエリである必要があります。 MDX の詳細については、次を参照してください。 [MDX クエリの基礎&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -135,7 +135,7 @@ ms.locfileid: "53366114"
     GO  
     ```  
   
- 詳細については、[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Analysis Services クエリ ジョブ ステップを作成するには  
   
@@ -163,7 +163,7 @@ ms.locfileid: "53366114"
     GO  
     ```  
   
- 詳細については、[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **PowerShell スクリプト ジョブ ステップを作成するには**  

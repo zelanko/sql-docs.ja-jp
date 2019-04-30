@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187435"
 ---
 # <a name="data-type-limitations"></a>データ型の制限事項
 Microsoft ODBC のデスクトップ データベース ドライバーでは、データ型には、以下の制限を強制します。  
@@ -28,7 +28,7 @@ Microsoft ODBC のデスクトップ データベース ドライバーでは、
 |データ型|説明|  
 |---------------|-----------------|  
 |すべてのデータ型|型変換に失敗すると、影響を受ける列を NULL に設定されている可能性があります。|  
-|BINARY|長さ 0 のバイナリ列を作成すると、255 バイトのバイナリ列実際に返されます。|  
+|バイナリ|長さ 0 のバイナリ列を作成すると、255 バイトのバイナリ列実際に返されます。|  
 |[DATE]|DATE データ型は、CONVERT 関数によって別のデータ型 (または自体) に変換できません。|  
 |10 進数 (正確な数値)|サポートされていません。|  
 |浮動小数点データ型|浮動小数点数の小数点以下桁数は、Windows コントロール パネルの国際化のセクションで設定されている数値書式によって制限される可能性があります。|  

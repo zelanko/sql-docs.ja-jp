@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187013"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
   **sqlmaint** ユーティリティは、1 つまたは複数のデータベース上で、指定された一連のメンテナンス操作を実行します。 **sqlmaint** を使用して、DBCC チェックの実行、データベースとデータベース トランザクション ログのバックアップ、統計の更新、およびインデックスの再構築を行います。 すべてのデータベース メンテナンス操作では、指定されたテキスト ファイル、HTML ファイル、または電子メール アカウントに送信できるレポートが生成されます。 **sqlmaint** は、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で作成されたデータベース メンテナンス プランを実行します。 コマンド プロンプトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メンテナンス プランを実行するには、 [dtexec](../integration-services/packages/dtexec-utility.md)ユーティリティを使用します。  
@@ -120,7 +120,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  *sqlmaint* がリモート サーバーにアクセスする場合、 **text_file** には、完全な汎用名前付け規則 (UNC) のファイル名を指定する必要があります。  
   
- **-** _演算子_  
+ **-To** _operator_name_  
  生成されたレポートが SQL Mail を使用して送信される場合の、送信先となるオペレーターを指定します。  
   
  **-HtmlRpt** _html_file_  

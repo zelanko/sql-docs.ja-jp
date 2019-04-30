@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191316"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター
   このトピックでは、次の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  

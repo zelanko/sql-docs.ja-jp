@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2aa1133b9e23ea8f2174f73e9d8bf4a34ff0c824
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131208"
 ---
-# <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>配置のチェック リスト:Reporting Services、Power View および PowerPivot for SharePoint
+# <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>配置のチェック リスト:Reporting Services、Power View、PowerPivot for SharePoint
   同じ SharePoint ファーム内の各 BI 機能をインストールするには、次のチェック リストを使用します。PowerPivot for SharePoint、レポート ビルダー、および [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]。 このチェック リストでは特定のインストール順序が推奨されていますが、実際には、ほぼどのような順序でもこれらの機能をインストールできます。 このチェック リストでは、次の製品または機能のインストールが想定されています。  
   
 1.  SharePoint Server 2010 Service Pack 1 (SP1)  
@@ -55,7 +55,7 @@ ms.locfileid: "53369104"
   
  PowerPivot インスタンスの名前を使用できる必要があります。 PowerPivot の名前のインスタンスが既に存在するコンピューターに、PowerPivot for SharePoint をインストールすることはできません。  
   
- 既存のファームに PowerPivot for SharePoint をインストールする場合は、クラシック モード認証用に構成された SharePoint Web アプリケーションが 1 つ以上必要です。 PowerPivot データ アクセスは、Web アプリケーションがクラシック モード認証をサポートする場合にのみ機能します。 クラシック モードの要件の詳細については、[PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)を参照してください。  
+ 既存のファームに PowerPivot for SharePoint をインストールする場合は、クラシック モード認証用に構成された SharePoint Web アプリケーションが 1 つ以上必要です。 PowerPivot データ アクセスは、Web アプリケーションがクラシック モード認証をサポートする場合にのみ機能します。 クラシック モードの要件の詳細については、次を参照してください。 [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)します。  
   
  次の追加トピックを確認し、システムとバージョンの要件を理解してください。  
   

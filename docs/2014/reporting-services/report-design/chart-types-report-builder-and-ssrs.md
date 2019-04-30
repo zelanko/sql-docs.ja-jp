@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185650"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>グラフの種類 (レポート ビルダーおよび SSRS)
   表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 たとえば、グラフのサイズに対して多数のデータ ポイントがデータセットに含まれている場合は、面グラフ、折れ線グラフ、または散布図を使用して表示するのが適しています。 選択したグラフの種類に応じてデータを準備する方法の詳細については、「 [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)」を参照してください。  

@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063078"
 ---
 # <a name="ado-errors"></a>ADO エラー
-**ErrorValueEnum**定数は、ADO エラー値を示します。 値を含む、これらの列挙定数の完全な一覧を参照してください。[付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)します。 このセクションは、さらに興味深いエラーのいくつかを確認し、または問題を解決するソリューションを発生させることが特定の状況について説明します。 両方の**ErrorValueEnum**定数と短いの正の 10 進数の一覧が表示されます。
+**ErrorValueEnum**定数は、ADO エラー値を示します。 値を含む、これらの列挙定数の完全な一覧を参照してください[付録 b:。ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)します。 このセクションは、さらに興味深いエラーのいくつかを確認し、または問題を解決するソリューションを発生させることが特定の状況について説明します。 両方の**ErrorValueEnum**定数と短いの正の 10 進数の一覧が表示されます。
 
 |数値|ErrorValueEnum 定数|説明/考えられる原因します。|
 |------------|-----------------------------|----------------------------------|

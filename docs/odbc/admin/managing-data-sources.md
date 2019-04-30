@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198760"
 ---
 # <a name="managing-data-sources"></a>データ ソースの管理
 ドライバーのセットアップ プログラムから ODBC ドライバーをインストールした後は、その 1 つまたは複数のデータ ソースを定義できます。 データ ソース名 (DSN) では、データの一意の説明を提供する必要があります。たとえば、*給与*または*Accounts Payable*します。 現在インストールされているすべてのドライバーに定義されているユーザーおよびシステム データ ソースが記載されて、**ユーザー DSN**または**システム DSN**のタブ、 **ODBC データ ソース アドミニストレーター** ダイアログ ボックス。 指定されたディレクトリにファイル データ ソースが記載されて、**ファイル DSN**  タブに表示されるディレクトリが入力されて、**ファイルの場所**ボックスに、**ファイル DSN**タブ。  
@@ -46,7 +46,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
 |データ ソースの変更|要件に応じて、する必要がありますをデータ ソースを再構成します。 オプションをリセットするをクリックして**構成**ドライバーのセットアップ ダイアログ ボックス。|  
 |データ ソースの削除|クリックして**削除**データ ソースを選択した後。|  
   
- ファイル データ ソースの詳細については、[を使用してファイル データ ソースの接続](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)または[SQLDriverConnect 関数](../../odbc/reference/syntax/sqldriverconnect-function.md)を参照してください。  
+ ファイル データ ソースの詳細については、次を参照してください。[を使用してファイル データ ソースの接続](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)または[SQLDriverConnect 関数](../../odbc/reference/syntax/sqldriverconnect-function.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7d912f7f71a642fbcdad0aa4fdd5ed60305f14d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191880"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する
   SharePoint は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセスに使用できる、組み込みのセキュリティ機能を提供します。 サイトおよびリストに対する権限がユーザーに割り当て済みである場合は、SharePoint とレポート サーバーの間の統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。  

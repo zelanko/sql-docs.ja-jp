@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127054"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、2 つのキーボード スキームが用意されています。 既定のスキームは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] スキームであり、そのキーボード ショートカットの基になっているのは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 です。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] では、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] の標準スキームに似たキーボード スキームも提供されています。 キーボード スキームの変更やキーボード ショートカットの追加を行うには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[環境]** の **[キーボード]** ページで目的のキーボード スキームを選択できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "52794734"
   
 ## <a name="menu-activation-keyboard-shortcuts"></a>メニューのアクティブ化のためのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] メニュー バーに移動する|Alt|Alt|  
 |ツール コンポーネントのメニューをアクティブ化する|Alt + ハイフン|Alt + ハイフン|  
@@ -51,7 +51,7 @@ ms.locfileid: "52794734"
   
 ## <a name="windows-management-and-toolbar-keyboard-shortcuts"></a>ウィンドウ管理とツール バーのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |現在の MDI 子ウィンドウを閉じる|Ctrl + F4|Ctrl + F4|  
 |メニューまたはダイアログ ボックスを閉じるか、実行中の操作を取り消すか、または現在のドキュメント ウィンドウにフォーカスを設定する|Esc|Esc|  
@@ -94,7 +94,7 @@ ms.locfileid: "52794734"
   
 ## <a name="cursor-movement-keyboard-shortcuts"></a>カーソル移動のキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |カーソルを左に移動する|左方向キー|←|  
 |カーソルを右に移動する|右矢印|→|  
@@ -116,7 +116,7 @@ ms.locfileid: "52794734"
   
 ## <a name="text-selection-keyboard-shortcuts"></a>テキスト選択のキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |カーソルからドキュメントの先頭までのテキストを選択する|Ctrl + Shift + Home|Ctrl + Shift + Home|  
 |カーソルからドキュメントの末尾までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
@@ -154,7 +154,7 @@ ms.locfileid: "52794734"
   
 ## <a name="bookmark-keyboard-shortcuts"></a>ブックマークのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |現在の行のブックマークを設定または解除する|Ctrl + K、Ctrl + K|Ctrl + K、Ctrl + K|  
 |次のブックマークに移動する|Ctrl + K、Ctrl + N|Ctrl + K、Ctrl + N|  
@@ -165,7 +165,7 @@ ms.locfileid: "52794734"
   
 ## <a name="tree-control-keyboard-shortcuts"></a>ツリー コントロールのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |ツリー ノードを折りたたむ|- (テンキー)|- (テンキー)|  
 |すべてのツリー ノードを展開する|* (テンキー)|* (テンキー)|  
@@ -175,7 +175,7 @@ ms.locfileid: "52794734"
 ## <a name="code-editor-keyboard-shortcuts"></a>コード エディターのキーボード ショートカット  
  すべての種類のコード エディターにすべてのショートカットが実装されているわけではありません。  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |全画面表示を切り替える|Shift + Alt + Enter|Shift + Alt + Enter|  
 |テキストを 1 つ上の行にスクロールする|Ctrl + ↑|Ctrl + ↑|  
@@ -230,7 +230,7 @@ ms.locfileid: "52794734"
   
 ## <a name="text-manipulation-in-code-editor-keyboard-shortcuts"></a>コード エディターのテキスト操作のキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |新しい行を挿入する|Enter または Shift + Enter|Enter または Shift + Enter|  
 |カーソルの両側の文字を入れ替える (SQL エディターは適用外)|Ctrl + T|Ctrl + T|  
@@ -267,7 +267,7 @@ ms.locfileid: "52794734"
   
 ## <a name="transact-sql-debugger-keyboard-shortcuts"></a>Transact-SQL デバッガーのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |デバッグを開始または続行する|Alt + F5|Alt + F5|  
 |デバッグを停止する|Shift + F5|Shift + F5|  
@@ -301,7 +301,7 @@ ms.locfileid: "52794734"
   
 ## <a name="microsoft-intellisense-keyboard-shortcuts"></a>Microsoft IntelliSense のキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |メンバーの一覧を表示する|Ctrl + J|Ctrl + Space<br /><br /> または<br /><br /> Ctrl + J|  
 |ワードを完成する|Ctrl + Space<br /><br /> または<br /><br /> Alt + →|Alt + →|  
@@ -319,7 +319,7 @@ ms.locfileid: "52794734"
   
 ## <a name="document-window-and-browser-keyboard-shortcuts"></a>ドキュメント ウィンドウとブラウザーのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |全画面モードを切り替える|Shift + Alt + Enter|Shift + Alt + Enter|  
 |ドキュメントの分割ペイン ビューの次のペインに移動する|F6|F6|  
@@ -331,7 +331,7 @@ ms.locfileid: "52794734"
   
 ## <a name="solution-explorer-keyboard-shortcuts"></a>ソリューション エクスプローラーのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |ソリューション エクスプローラーを表示する|Ctrl + Alt + L|Ctrl + Alt + L|  
 |新しいファイルを作成するための **[新しいファイル]** ダイアログ ボックスを表示する|Ctrl + N|Ctrl + N|  
@@ -341,7 +341,7 @@ ms.locfileid: "52794734"
   
 ## <a name="help-and-books-online-keyboard-shortcuts"></a>ヘルプとオンライン ブックのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |ヘルプ|F1<br /><br /> または<br /><br /> Shift + F1|F1|  
 |SQL Server オンライン ブックを表示する|Ctrl + F1|同等の機能がありません|  
@@ -357,9 +357,9 @@ ms.locfileid: "52794734"
   
 ## <a name="search-keyboard-shortcuts"></a>検索のキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|**[検索]** ダイアログ ボックスを表示する|Ctrl + F|Ctrl + F|  
+|**[検索]** ダイアログ ボックスを表示する|Ctrl + F|CTRL + F|  
 |**[検索]** ダイアログ ボックスの **[ファイル内]** タブを表示する|||  
 |選択した記号の定義を表示する|F12|同等の機能がありません|  
 |選択した記号の参照の一覧を表示する|Shift + F12|同等の機能がありません|  
@@ -379,17 +379,17 @@ ms.locfileid: "52794734"
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>切り取りと貼り付けのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |切り取る (現在選択している項目を削除してクリップボードに配置する)|Ctrl + X<br /><br /> または<br /><br /> Shift + Delete|Ctrl + X<br /><br /> または<br /><br /> Shift + Del|  
-|選択された行をすべて切り取る。何も選択されていない場合は現在の行を切り取る。|Ctrl + L<br /><br /> または<br /><br /> Ctrl + Shift + L|同等の機能がありません|  
-|クリップボードにコピーする|Ctrl + C<br /><br /> または<br /><br /> Ctrl + Ins|Ctrl + C<br /><br /> または<br /><br /> Ctrl + Ins|  
+|選択された行をすべて切り取る。何も選択されていない場合は現在の行を切り取る。|CTRL + L<br /><br /> または<br /><br /> Ctrl + Shift + L|同等の機能がありません|  
+|クリップボードにコピーする|Ctrl + C<br /><br /> または<br /><br /> Ctrl + Ins|CTRL キーを押しながら C<br /><br /> または<br /><br /> Ctrl + Ins|  
 |クリップボードから挿入ポイントに貼り付ける|Ctrl + V<br /><br /> または<br /><br /> Shift + Ins|Ctrl + V<br /><br /> または<br /><br /> Shift + Ins|  
 |挿入ポイントにクリップボード リングから項目を貼り付け、貼り付けた項目を自動的に選択する|Ctrl + Shift + V<br /><br /> または<br /><br /> Ctrl + Shift + Insert|同等の機能がありません|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>ログ ビューアーのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |更新|同等の機能がありません|F5|  
 |**[ログの選択]** ペインと **[ログ ファイルの概要]** ペインの間を移動する|同等の機能がありません|F6|  
@@ -401,30 +401,30 @@ ms.locfileid: "52794734"
   
 ## <a name="activity-monitor-keyboard-shortcuts"></a>利用状況モニターのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |利用状況モニターの起動|Ctrl + Alt + A|Ctrl + Alt + A|  
 |利用状況モニターを閉じる|Ctrl + F4|Ctrl + F4|  
-|更新|F5|F5|  
+|Refresh|F5|F5|  
 |モニター表示にフィルターを適用する|Ctrl + Shift + F|Ctrl + Shift + F|  
 |パネルを順番に表示する|F6|F6|  
 |選択したペインの展開または折りたたみ|Ctrl を押しながら + または -|Ctrl を押しながら + または -|  
 |すべてのペインの展開または折りたたみ|+ または -|+ または -|  
-|グリッド内の選択した行全体をコピー|Ctrl + C|Ctrl + C|  
+|グリッド内の選択した行全体をコピー|CTRL キーを押しながら C|CTRL キーを押しながら C|  
 |セルをコピー|Ctrl + Shift + C|Ctrl + Shift + C|  
 |グリッド内でのフィルター処理のためのドロップダウン|Alt + 下方向キー|Alt + 下方向キー|  
 |利用状況モニターを上下にスクロール|Ctrl + Alt + 上方向/下方向キー|Ctrl + Alt + 上方向/下方向キー|  
   
 ## <a name="replication-monitor-keyboard-shortcuts"></a>レプリケーション モニターのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|更新|F5|F5|  
+|Refresh|F5|F5|  
 |グリッドから詳細ウィンドウを開く|Enter|Enter|  
   
 ## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>レプリケーション競合表示モジュールのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |フィルターを定義する|F6|F6|  
 |フィルターを適用する|F7|F7|  
@@ -445,7 +445,7 @@ ms.locfileid: "52794734"
   
 ## <a name="designer-keyboard-shortcuts"></a>デザイナーのキーボード ショートカット  
   
-|アクション|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |デザイン画面で選択したコントロールを 8 単位ずつ下に移動する|下方向キー|同等の機能がありません|  
 |デザイン画面で選択したコントロールを 8 単位ずつ左に移動する|左方向キー|同等の機能がありません|  

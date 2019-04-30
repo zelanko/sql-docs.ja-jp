@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158307"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>配置タスクおよび管理タスクのスクリプト作成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スクリプトを使用した日常的なインストール、配置、および管理タスクの自動化をサポートします。 レポート サーバーの配置は複数の段階を伴うプロセスです。 配置を構成するためには複数のツールとプロセスを使用する必要があります。すべての作業を自動化する単一のプログラムやアプローチは存在しません。  

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 25972bd46bbf28a56a8a44bd5f8a49132eb93acf
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155704"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
   ReportingServicesService.exe.config ファイルには、トレースを構成する設定が含まれています。  

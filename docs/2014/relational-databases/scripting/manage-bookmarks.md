@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191819"
 ---
 # <a name="manage-bookmarks"></a>ブックマークの管理
   コード エディターでの作業中に、 **[ブックマーク]** ウィンドウで、ドキュメント内のコードの特定の行へのリンクを作成できます。 このウィンドウは、 **[表示]** メニューから表示できます。  

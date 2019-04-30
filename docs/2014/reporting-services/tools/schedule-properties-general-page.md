@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eaaff2a90f18a4fb7cec3c049945c87fd0a5ed8b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158727"
 ---
 # <a name="schedule-properties-general-page"></a>[スケジュールのプロパティ]\([全般] ページ)
   このページを使用すると、共有スケジュールを表示したり変更したりできます。 共有スケジュールは、レポート固有のスケジュールやサブスクリプション固有のスケジュールの代わりに使用できます。 スケジュールに対する変更は、スケジュールを保存した後に適用されます。 スケジュールを編集しても、現在実行中のジョブには影響しません。 使用中のスケジュールを編集すると、そのスケジュールからトリガーされた現在処理中のレポートおよびサブスクリプションはすべて終了できるようになります。  

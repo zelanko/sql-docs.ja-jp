@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a198ad51c424b42aff71afbeb3a82952aa57a52
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164733"
 ---
 # <a name="delete-columns-dialog-box"></a>[列の削除] ダイアログ ボックス
   **[列の削除]** ダイアログ ボックスを使用して、テーブル、マトリックス、または一覧データ領域から列を削除します。 グループに関連付けられている列の場合は、グループ定義も削除できます。  

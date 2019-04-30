@@ -16,19 +16,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188806"
 ---
 # <a name="interval-literals"></a>Interval のリテラル
 ODBC では、すべてのドライバーが SQL_CHAR または SQL_VARCHAR データ型のすべての C interval データ型への変換をサポートすることが必要です。 基になるデータ ソースが interval データ型をサポートしていない場合は、ドライバーをこれらの変換をサポートするために、正しい形式の SQL_CHAR フィールドの値を知る必要があります。 同様に、ODBC では、ドライバーは、どのような形式の文字のフィールドに格納されている間隔を知る必要があるために、型が SQL_CHAR、SQL_VARCHAR、またはに変換できるすべての ODBC C を使用する必要があります。 このセクションでは、ドライバー開発者が使用するか、C interval データ型からの変換中に SQL_CHAR フィールドを検証する必要がある interval のリテラルの構文について説明します。  
   
 > [!NOTE]  
->  Interval のリテラルの BNF 構文は、セクションに示した[Interval のリテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md)付録 c: SQL の文法でします。  
+>  Interval のリテラルの BNF 構文は、セクションに示した[Interval のリテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md)付録 c:SQL 文法。  
   
- Interval のリテラルを渡す SQL ステートメントの一部として、interval のリテラルのエスケープ句の構文が定義されます。 詳細については、[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)を参照してください。  
+ Interval のリテラルを渡す SQL ステートメントの一部として、interval のリテラルのエスケープ句の構文が定義されます。 詳細については、次を参照してください。[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)します。  
   
  形式は、リテラル、間隔です。  
   
@@ -84,7 +84,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{間隔 '163:39' HOUR(3) 分}|163 時間 39 分の間隔を指定します。 先頭の有効桁数の間隔は 3 です。|  
 |{間隔 '163:39:59.163' SECOND(4) に HOUR(3)}|163 時間 39 分 59.163 秒の間隔を指定します。 間隔の先頭有効桁数が 3、および秒の有効桁数は 4 です。|  
 |{間隔 '163:59.163' SECOND(5) に MINUTE(3)}|163 分 59.163 秒の間隔を指定します。 間隔の先頭有効桁数は 3 で、秒の有効桁数は 5 です。|  
-|{間隔、2 番目の '16 23:39:56.23' 日}|-16 日 23 時間 39 分 56.23 秒の間隔を指定します。 暗黙の先頭の有効桁数は 2、および暗黙の秒の有効桁数は 6 です。|  
+|{INTERVAL -'16 23:39:56.23' DAY TO SECOND}|-16 日 23 時間 39 分 56.23 秒の間隔を指定します。 暗黙の先頭の有効桁数は 2、および暗黙の秒の有効桁数は 6 です。|  
   
  次の表では、無効な interval のリテラルの例を示します。  
   

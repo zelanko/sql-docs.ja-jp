@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128027"
 ---
 # <a name="drop-table-command"></a>DROP TABLE コマンド
 データ ソースで指定されたデータベースからテーブルを削除し、ディスクから削除されます。  
@@ -32,7 +32,7 @@ ms.locfileid: "47852300"
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  *TableName*  
  データ ソースで指定されたデータベースから削除して、ディスクから削除するテーブルを指定します。  
   
@@ -50,5 +50,5 @@ DROP TABLE TableName | FileName | ?
   
 |ODBC 構文|データ ソース|Visual FoxPro 構文|  
 |-----------------|-----------------|--------------------------|  
-|DROP TABLE*ベース テーブル名*|データベース (.dbc ファイル)|テーブルの削除*TableName*削除|  
-||無料のテーブル (.dbf ファイル) のディレクトリ|消去*dbfName*<br /><br /> 消去*cdxName*<br /><br /> 消去*fptName*|
+|DROP TABLE *base-table-name*|データベース (.dbc ファイル)|REMOVE TABLE *TableName* DELETE|  
+||無料のテーブル (.dbf ファイル) のディレクトリ|ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|

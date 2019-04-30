@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161569"
 ---
 # <a name="field-related-error-information"></a>フィールドに関連するエラー情報
 エラーは、フィールドに直接関連している場合など、データが不足している場合、または、フィールドに対して無効な型である場合を取得できます、問題の原因の詳細についてを調べることで、**フィールド**オブジェクトの**ステータス**プロパティ。 このプロパティは、問題の特定の情報を提供する拡張されています。 そのため、たとえばへの呼び出し時に**UpdateBatch**失敗した場合、問題の原因を調べることで決定できます、**状態**のプロパティ、**フィールド**影響を受ける各レコードがあります。 内の値のいずれかのプロパティには、 **FieldStatusEnum**定数。 次の表には、エラーが発生したときに特定の関心のあるこれらの値が含まれています。  

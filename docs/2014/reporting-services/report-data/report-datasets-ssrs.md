@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d45da9b4611fc67cf022efa148bcec2f43c3d04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218411"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>レポートへのデータの追加 (レポート ビルダーおよび SSRS)
   データをレポートに追加するには、データセットを作成します。 各データセットは、データ ソースに対するクエリ コマンドの実行によって取得された結果セットを表します。 結果セットの列はフィールド コレクションです。 結果セット内の行がデータです。 データセットに実際のデータは格納されていません。 データセットには、データ ソースから特定のデータを取得するために必要な情報が含まれています。  

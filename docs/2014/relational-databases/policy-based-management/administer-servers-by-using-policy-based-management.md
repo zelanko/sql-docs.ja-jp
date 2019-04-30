@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157105"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
   ポリシー ベースの管理とは、1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを管理するためのシステムのことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ポリシー管理者は、ポリシー ベースの管理を使用する際、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してサーバー上のエンティティ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス、データベース、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトなど) を管理するためのポリシーを作成します。  
@@ -128,7 +128,7 @@ ms.locfileid: "53377484"
 |ポリシー ベースの管理ポリシーをエクスポートおよびインポートする方法について説明します。|[ポリシーベースの管理ポリシーのエクスポート](export-a-policy-based-management-policy.md)<br /><br /> [ポリシーベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)|  
 |サーバー インスタンス、データベース、サーバー オブジェクト、またはデータベース オブジェクトがポリシーに準拠していることを確認する方法について説明します。|[オブジェクトからのポリシーベースの管理ポリシーの評価](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [ポリシーからのポリシーベースの管理ポリシーの評価](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [ポリシーベースの管理ポリシーがスケジュールに従っていることの評価](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |ポリシー ベースの管理ファセットの状態を表示してファイルにコピーする方法について説明します。|[ポリシー ベースの管理ファセットの操作](working-with-policy-based-management-facets.md)|  
-|ベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価する方法について説明します。|[ポリシーベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
+|ベスト プラクティス ポリシーとしてインポートできる一連のポリシー ファイルを提供し、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価する方法について説明します。|[ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーの **[ポリシー管理]** ノードに関する F1 ヘルプ トピックを提供します。|[ポリシー管理 ノード&#40;オブジェクト エクスプ ローラー&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>参照  

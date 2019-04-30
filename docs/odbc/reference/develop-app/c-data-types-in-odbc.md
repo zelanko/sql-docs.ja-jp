@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199213"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC の C データ型
-ODBC では、アプリケーション変数とその対応する型識別子で使用される C データ型を定義します。 これらは、結果セットの列とステートメントのパラメーターにバインドされているバッファーが使用されます。 たとえば、アプリケーションが文字形式で結果セット列からデータを取得しようとします。 SQLCHAR を持つ変数を宣言します * データ型で、この変数を SQL_C_CHAR の型識別子を持つ結果セット列にバインドします。 C データ型と型識別子の完全な一覧を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。  
+ODBC では、アプリケーション変数とその対応する型識別子で使用される C データ型を定義します。 これらは、結果セットの列とステートメントのパラメーターにバインドされているバッファーが使用されます。 たとえば、アプリケーションが文字形式で結果セット列からデータを取得しようとします。 SQLCHAR を持つ変数を宣言します * データ型で、この変数を SQL_C_CHAR の型識別子を持つ結果セット列にバインドします。 C データ型と型識別子の完全な一覧を参照してください[付録 d:。データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。  
   
  ODBC では、各 SQL データ型から C データ型に既定のマッピングも定義します。 たとえば、データ ソース内の 2 バイト整数は、アプリケーションで 2 バイトの整数にマップされます。 既定のマッピングを使用するには、アプリケーションは、SQL_C_DEFAULT 型の識別子を指定します。 ただし、この識別子の使用は相互運用性上の理由から推奨されません。  
   
@@ -49,7 +49,7 @@ ODBC では、アプリケーション変数とその対応する型識別子で
   
  アプリケーションを呼び出す ODBC 3.8 のコンプライアンス レベルを指定する[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)属性を設定する、SQL_ATTR_ODBC_VERSION に**SQL_OV_ODBC3_80**します。 ドライバーのバージョンを確認するには、アプリケーションが呼び出す**SQLGetInfo** SQL_DRIVER_ODBC_VER とします。  
   
- ODBC 3.8 の詳細については、[で ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)を参照してください。  
+ ODBC 3.8 の詳細については、次を参照してください。[で ODBC 3.8 新](../../../odbc/reference/what-s-new-in-odbc-3-8.md)します。  
   
 ## <a name="see-also"></a>参照  
  [C データ型](../../../odbc/reference/appendixes/c-data-types.md)

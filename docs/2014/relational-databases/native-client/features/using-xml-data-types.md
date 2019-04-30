@@ -31,11 +31,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136664"
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] には **xml** データ型が導入されています。このデータ型を使用すると XML ドキュメントや XML フラグメントを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに格納できます。 **xml** データ型は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、**int** や **varchar** などの他の組み込みデータ型といくつかの点で似ています。 **xml** データ型は、他の組み込みデータ型と同様に、テーブル作成時の列の型、変数の型、パラメーターの型、または関数の戻り値の型として使用したり、CAST 関数や CONVERT 関数でも使用できます。  
@@ -63,7 +63,7 @@ ms.locfileid: "52406009"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、SAX リーダーは含まれませんが、 **ISequentialStream** msxml SAX、DOM オブジェクトに簡単に渡すことができます。  
   
- **ISequentialStream**大きな XML ドキュメントの取得のために使用をする必要があります。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、[大きな値の型を使用して](using-large-value-types.md)を参照してください。  
+ **ISequentialStream**大きな XML ドキュメントの取得のために使用をする必要があります。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、次を参照してください。[大きな値の型を使用して](using-large-value-types.md)します。  
   
  行セットの XML 型の列に格納されているデータは、アプリケーションで **IRow::GetColumns**、**IRowChange::SetColumns**、**ICommand::Execute** などの通常のインターフェイスを使用することにより、取得、挿入、または更新することもできます。 同様に取得の場合に、アプリケーション プログラムを渡すことができます、テキスト文字列または**ISequentialStream**を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー。  
   

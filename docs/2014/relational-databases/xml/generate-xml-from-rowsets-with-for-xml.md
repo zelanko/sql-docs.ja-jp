@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204988"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>FOR XML を使用した行セットからの XML の生成
   生成することができます、`xml`新しいを FOR XML を使用して行セットからのデータ型のインスタンス**型**ディレクティブ。  
@@ -26,7 +26,7 @@ ms.locfileid: "58529064"
   
  新しい **FOR XML TYPE** ディレクティブを使用すると、リレーショナル データの読み取り専用の XML ビューを SQL 構文で定義できます。 このビューには、次の例で示すように SQL ステートメントおよびそれに埋め込まれた XQuery を使用してクエリを実行できます。 この SQL ビューをストアド プロシージャで参照することもできます。  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>例:SQL ビューの生成を返す xml データ型  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>例: 生成された xml データ型を返す SQL ビュー  
  次の SQL ビュー定義により、リレーショナル列 pk および XML 列から取得した著者氏名の XML ビューが作成されます。  
   
 ```  

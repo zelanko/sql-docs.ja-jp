@@ -21,20 +21,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66968fe0ec81f437c3da76428fe981041c7892d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061544"
 ---
 # <a name="sqlerror-function"></a>SQLError 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
- **概要**  
+ **まとめ**  
  **SQLError**エラーまたは状態情報を返します。  
   
- 詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
+ 詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)で付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cb472e106438aee781bf54fd6216d2ed32f7f190
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190723"
 ---
 # <a name="cluster-node-configuration-complete"></a>クラスター ノードの構成 (完了)
   [クラスター ノードの構成] (完了) ページを使用して、クラスター化用に準備されている既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたはアップグレードするには、フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。  

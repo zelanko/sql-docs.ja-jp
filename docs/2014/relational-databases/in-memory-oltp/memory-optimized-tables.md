@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158750"
 ---
 # <a name="memory-optimized-tables"></a>メモリ最適化テーブル
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインメモリ OLTP は、メモリ最適化された効率的なデータ アクセス、ビジネス ロジックのネイティブ コンパイル、ロック フリーおよびラッチ フリーのアルゴリズムによって OLTP アプリケーションのパフォーマンスを高めます。 インメモリ OLTP 機能には、メモリ最適化テーブルおよびテーブル型と、これらのテーブルに効率的にアクセスするための [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャのネイティブ コンパイルが含まれます。  

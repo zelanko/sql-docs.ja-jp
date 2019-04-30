@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140551"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX のチュートリアル
   このチュートリアルでは、データ マイニング拡張機能 (DMX) クエリ言語を使用して、マイニング モデルを作成、トレーニング、および調査する方法を学習します。 その後、これらのマイニング モデルを使用して、顧客が自転車を購入するかどうかを判断する予測を作成します。  
@@ -68,7 +68,7 @@ ms.locfileid: "56025253"
  ALTER MINING STRUCTURE  
  このステートメントを使用すると、サーバー上に既に存在するマイニング構造にマイニング モデルを追加できます。 このステートメントは、複数の異なるマイニング モデルを含むマイニング構造を作成する場合に便利です。 1 つのマイニング構造に複数のマイニング モデルを追加すると、いくつかの作業に役立ちます。 たとえば、異なるアルゴリズムを使用する複数のマイニング モデルを作成し、最適なアルゴリズムを見つけ出すことができます。 また、同じアルゴリズムでそれぞれ異なるパラメーターを設定して複数のマイニング モデルを作成し、パラメーターの最適な設定を見つけ出すことができます。  
   
- 詳細については、[ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)を参照してください。  
+ 詳細については、次を参照してください。 [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)します。  
   
  このチュートリアルでは複数のマイニング モデルを含むマイニング構造を作成します。したがって、2 つ目の方法を使用します。  
   

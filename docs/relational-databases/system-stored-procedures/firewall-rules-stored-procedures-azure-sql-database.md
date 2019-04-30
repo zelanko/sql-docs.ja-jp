@@ -18,16 +18,16 @@ ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 1794f45c95095dbbfaac065eed40b4ef23cac725
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032903"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>ファイアウォール ルールのストアド プロシージャ (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  ここでは、ファイアウォール ルールを設定または削除する次のストアド プロシージャについて説明します。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ファイアウォール規則で使用できる[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]します。 詳細については、[ファイアウォール規則を Azure SQL Database の構成 - 概要](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)を参照してください。
+  ここでは、ファイアウォール ルールを設定または削除する次のストアド プロシージャについて説明します。 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] ファイアウォール規則で使用できる[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]と[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]します。 詳細については、次を参照してください。[ファイアウォール規則を Azure SQL Database の構成 - 概要](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)します。
   
  
   

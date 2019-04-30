@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 926223ad0a5a8cdb1a5ff7aacfb7fdd7f84a8c57
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188330"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>[新しいサブスクリプション] ページまたは [サブスクリプションの編集] ページ (レポート マネージャー)
   [新しいサブスクリプション] ページまたは [サブスクリプションの編集] ページでは、レポートに新しいサブスクリプションを作成したり、既存のサブスクリプションを変更したりできます。 このページに表示されるオプションは、ロールの割り当てによって異なります。 高度な権限を持つユーザーは、追加のオプションを使用して作業できます。  

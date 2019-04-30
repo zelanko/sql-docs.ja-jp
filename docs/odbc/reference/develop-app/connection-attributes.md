@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0fad1db10e40c71d22dd75417420c54cefa7803
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194436"
 ---
 # <a name="connection-attributes"></a>接続属性
 接続属性は、接続の特性です。 たとえば、トランザクションは接続レベルで行われるので、トランザクション分離レベルは 1 つの接続属性になります。 同様に、ログイン タイムアウト、または、タイムアウトするまでに接続しているときに待機する秒数は、接続属性です。  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97272209c1ceba780711ecf4a07178ddf8943d49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156727"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>マスター サーバーをアップグレードする前にすべてのターゲット サーバーをアップグレードする
   マスター サーバーをアップグレードする前に、ターゲット サーバーとして構成され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているすべてのコンピューターをアップグレードしてください。  
@@ -37,7 +37,7 @@ ms.locfileid: "48061954"
 ## <a name="corrective-action"></a>修正措置  
  マスター サーバーをアップグレードする前に、すべてのターゲット サーバーをアップグレードできない場合は、アップグレード後に、すべてのターゲット サーバーの参加を解除してからもう一度参加させる必要があります。  
   
- 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックのトピック「エンタープライズ全体の管理の自動化」、「マスター サーバーからターゲット サーバーの参加を解除する方法」、および「マスター サーバーにターゲット サーバーを参加させる方法」を参照してください。  
+ 詳細については、「を自動化するエンタープライズ全体の管理、」のトピックを参照してください。"する方法。マスター サーバーから対象サーバーの参加を解除"と"する方法。マスター ターゲット サーバー"に参加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server エージェントのアップグレードに関する問題](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   

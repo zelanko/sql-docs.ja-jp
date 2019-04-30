@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187154"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入門 (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL では、迅速に MySQL データベースのスキーマを SQL Server または Azure SQL DB のスキーマに変換、SQL Server または Azure SQL DB に結果のスキーマをアップロードおよび MySQL から SQL Server または Azure SQL DB にデータを移行することができます。  
@@ -52,7 +52,7 @@ SQL Server のインスタンスに接続することも必要があります。
   
 SQL Server または Azure SQL DB に変換されたスキーマを同期した後は、MySQL メタデータ エクスプ ローラーに戻るし、MySQL スキーマから SQL Server または Azure SQL DB データベースにデータを移行します。  
   
-これらのタスクとその実行方法の詳細については、[SQL Server - Azure SQL DB への MySQL データベースの移行&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)を参照してください。  
+これらのタスクとその実行方法の詳細については、次を参照してください。 [SQL Server - Azure SQL DB への MySQL データベースの移行&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)します。  
   
 次のセクションでは、SSMA ユーザー インターフェイスの機能について説明します。  
   
@@ -76,7 +76,7 @@ SQL Server または Azure SQL DB メタデータ エクスプ ローラーに�
 詳細については、次を参照してください[同期 (SQL Server への MySQL または Azure SQL DB)。](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>メタデータ  
-各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、MySQL メタデータ エクスプ ローラーでテーブルを選択する場合は、9 つのタブが表示されます:**テーブル**、 **SQL**、**型マッピングの**、**データ**、 **設定**、 **Charset マッピング**、 **SQL モード**、**プロパティ**、および**レポート**します。 **レポート** タブには、選択したオブジェクトを格納しているレポートを作成した後にのみ情報が含まれます。 SQL Server メタデータ エクスプ ローラーでテーブルを選択する場合、3 つのタブが表示されます:**テーブル**、 **SQL**と**データ**します。  
+各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、MySQL メタデータ エクスプ ローラーでテーブルを選択する場合は、9 つのタブが表示されます。**テーブル**、 **SQL**、**の種類のマッピング**、**データ**、**設定**、 **Charset マッピング**、**SQL モード**、**プロパティ**、および**レポート**します。 **レポート** タブには、選択したオブジェクトを格納しているレポートを作成した後にのみ情報が含まれます。 SQL Server メタデータ エクスプ ローラーでテーブルを選択する場合は、3 つのタブが表示されます。**テーブル**、 **SQL**と**データ**します。  
   
 ほとんどのメタデータの設定とは、読み取り専用です。 ただし、次のメタデータを変更できます。  
   
@@ -97,7 +97,7 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
   
 |||  
 |-|-|  
-|**ボタン**|**関数**|  
+|**Button**|**関数**|  
 |**レポートを作成します。**|SQL Server または Azure SQL DB のオブジェクトを選択した MySQL オブジェクトに変換し、どのように成功して、変換を示すレポートを作成します。<br /><br />MySQL メタデータ エクスプ ローラーでオブジェクトが選択されていない場合は、このコマンドが無効です。|  
 |**スキーマを変換します。**|選択した MySQL オブジェクトを SQL Server または Azure SQL DB のオブジェクトに変換します。<br /><br />MySQL メタデータ エクスプ ローラーでオブジェクトが選択されていない場合は、このコマンドが無効です。|  
 |**データを移行します。**|MySQL データベースからデータを SQL Server または Azure SQL DB に移行します。 このコマンドを実行する前に、MySQL スキーマを SQL Server または Azure SQL DB のスキーマに変換し、SQL Server または Azure SQL DB にオブジェクトを読み込む必要があります。<br /><br />MySQL メタデータ エクスプ ローラーでオブジェクトが選択されていない場合は、このコマンドが無効です。|  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180293"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS および LineSeparator プロパティの SkipLine メソッドの例 (VB)
 この例では、一度に 1 つのテキスト ストリームの行を操作する方法を示します。 既定キャリッジ リターンとライン フィードから、行区切り記号を変更した効果 (**adCRLF**) を単にライン フィード (**adLF**) またはキャリッジ リターン (**adCR**) が表示されます。  

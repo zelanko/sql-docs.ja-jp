@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057763"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ
   このダイアログ ボックスを使用すると、ポリシー ベースの管理条件を作成または変更できます。 条件とは、ポリシー ベースの管理で管理する対象に許可されている状態のセットをファセットについて指定するブール式です。 **[式]/[フィールド]** ボックスで選択できるプロパティは、使用するファセットによって異なります。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  

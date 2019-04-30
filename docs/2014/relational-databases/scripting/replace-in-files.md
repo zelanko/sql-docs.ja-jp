@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1a59377a075d7db189b91543590aee8c2cb0013
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144462"
 ---
 # <a name="replace-in-files"></a>[フォルダーを指定して置換]
   **[検索と置換]** ウィンドウの [フォルダーを指定して置換] タブを使用すると、指定したファイル セットのコード内で文字列や正規表現を検索したり、検出された項目の一部またはすべてを置き換えたりできます。 検出された項目および実行するアクションは、 **[結果オプション]** で選択された検索結果ウィンドウに表示されます。  

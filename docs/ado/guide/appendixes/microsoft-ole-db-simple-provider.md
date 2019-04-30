@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33858c9cc0778e550bf90f574e4443dff033c5d1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199765"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB プロバイダーの簡単な概要
 Microsoft OLE DB 単純なプロバイダー (OSP) により、対象のプロバイダーが書き込まれたを使用して任意のデータにアクセスする ADO、 [OLE DB 単純なプロバイダー (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)します。 単純なプロバイダーはインメモリ配列、または XML ドキュメントなどの OLE DB の基本的なサポートを必要とするデータ ソースにアクセスするためのものです。
@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO を各 $Text のデータの追加の列を追加します**Recordset**階層にします。
 
- OLE DB 単純なプロバイダーの詳細については、[単純なプロバイダーを構築](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)を参照してください。
+ OLE DB 単純なプロバイダーの詳細については、次を参照してください。[単純なプロバイダーを構築](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)します。
 
 ## <a name="code-example"></a>コード例
  Visual Basic コードを次に示します、階層を構築する任意の XML ファイルを開く**レコード セット**、およびそれぞれの各レコードの書き込みを再帰的に**レコード セット**デバッグ ウィンドウにします。

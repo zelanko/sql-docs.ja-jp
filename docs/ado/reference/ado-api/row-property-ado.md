@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192827"
 ---
 # <a name="row-property-ado"></a>Row プロパティ (ADO)
 OLE DB の設定を取得または**行**オブジェクトから、または 、 [ADORecordConstruction インターフェイス](../../../ado/reference/ado-api/adorecordconstruction-interface.md)オブジェクト。 使用すると**put_Row**を設定する、**行**オブジェクト、行は、ADO に変換されます**レコード**オブジェクト。  

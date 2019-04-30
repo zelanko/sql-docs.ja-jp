@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63189017"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>位置指定更新と Delete ステートメントの実行
 > [!IMPORTANT]  
@@ -53,7 +53,7 @@ ms.locfileid: "47772050"
 4.  位置指定の update または delete ステートメントがカーソルに関連付けられているステートメントよりも別のステートメントを使用して実行します。  
   
     > [!CAUTION]  
-    >  **場所**任意の行を識別する、別の行を特定または複数の行を識別する、現在の行を識別するために、カーソル ライブラリによって構築された句が失敗することができます。 詳細については、[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)を参照してください。  
+    >  **場所**任意の行を識別する、別の行を特定または複数の行を識別する、現在の行を識別するために、カーソル ライブラリによって構築された句が失敗することができます。 詳細については、次を参照してください。[検索ステートメントの構築](../../../odbc/reference/appendixes/constructing-searched-statements.md)します。  
   
  配置されているすべての更新と delete ステートメントがカーソル名が必要です。 カーソル名を指定するには、アプリケーションが呼び出す**SQLSetCursorName**カーソルが開かれる前にします。 ドライバーによって生成されるカーソル名を使用するアプリケーションを呼び出す**SQLGetCursorName**カーソルが開かれています。  
   

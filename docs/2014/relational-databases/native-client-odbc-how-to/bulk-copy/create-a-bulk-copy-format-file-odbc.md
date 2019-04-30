@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54f57ae8d03037639076e890b93c0cff9021bd78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157233"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>一括コピー フォーマット ファイル (ODBC) の作成
   このサンプルでは、一括コピー関数を使用してデータ ファイルとフォーマット ファイルの両方を作成する方法を示します。 このサンプルは、ODBC 3.0 以降のバージョン用に開発されました。  

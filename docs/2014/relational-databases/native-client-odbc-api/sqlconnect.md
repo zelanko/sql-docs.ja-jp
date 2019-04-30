@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5292d3141d6ae520a333827796ca8fc6005be15
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067670"
 ---
 # <a name="sqlconnect"></a>SQLConnect
-  接続が開いている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、SQL_COPT_SS_MUTUALLY_AUTHENTICATED および SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD が、接続を開くときに使用された認証方式に設定されます。 Spn の詳細については、[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)を参照してください。  
+  接続が開いている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、SQL_COPT_SS_MUTUALLY_AUTHENTICATED および SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD が、接続を開くときに使用された認証方式に設定されます。 Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)します。  
   
 ## <a name="sqlconnect-support-for-high-availability-disaster-recovery"></a>SQLConnect の HADR サポート  
  使用しての詳細については**SQLConnect**への接続に、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]クラスターを参照してください[SQL Server Native Client のサポート高可用性、ディザスター リカバリー](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)します。  

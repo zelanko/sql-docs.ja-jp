@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192961"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
   マルチサーバー管理では、マスター サーバー (MSX) 1 台と、ターゲット サーバー (TSX) 1 台以上を設定する必要があります。 すべてのターゲット サーバーで処理されるジョブは、まずマスター サーバーで定義されてからターゲット サーバーにダウンロードされます。  
@@ -35,7 +35,7 @@ ms.locfileid: "52795618"
 ## <a name="considerations-for-multiserver-environments"></a>マルチサーバー環境に関する注意点  
  サポートされている MSX/TSX 構成については、以下の表を参照してください。  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 以降**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 以降**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|はい|[はい]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |**MSX = 8.0 &LT; SP3**|はい|[はい]|いいえ|いいえ|いいえ|いいえ|いいえ|  

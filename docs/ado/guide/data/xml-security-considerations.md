@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e80a0bbb70a626ff01043592896ecfbe3c21f189
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184811"
 ---
 # <a name="xml-security-considerations"></a>XML のセキュリティに関する考慮事項
 ADO を保存し、レコード セット オブジェクトで Open メソッドは、Internet Explorer で実行する安全な操作は考慮されません。 そのため、アプリケーションまたはブラウザーでホストされているコントロールで実行されているスクリプト コードでこれらのメソッドを使用する場合、ブラウザーのセキュリティの構成は、動作に影響があります。  

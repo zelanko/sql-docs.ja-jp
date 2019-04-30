@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191764"
 ---
 # <a name="securing-rds-applications"></a>RDS アプリケーションの保護
 このトピックでは、rds. のセキュリティ情報を提供します。  
@@ -42,6 +42,6 @@ ms.locfileid: "51559979"
  その結果、IIS の Windows NT チャレンジ/レスポンス認証モードにより、HTML ページをユーザーがデータベースにログオンするために必要なユーザーの ID とパスワードの情報について明示的に要求されることがなく作成できます。 IIS 基本認証が使用されている場合、これにも必要です。  
   
 ## <a name="password-authentication"></a>パスワード認証  
- RDS は、次の 3 つのパスワード認証モードのいずれかで実行されている IIS Web サーバーと通信できる: 匿名、基本、または (Windows 2000 では統合 Windows 認証と呼ばれます) NT チャレンジ/レスポンス認証します。 これらの設定は、Web サーバーがクライアント コンピューターにある NT の Web サーバー上の明示的なアクセス特権を必要とするなど、アクセスを制御する方法を定義します。
+ RDS は、次の 3 つのパスワード認証モードのいずれかで実行されている IIS Web サーバーと通信できます。Anonymous、Basic、または NT チャレンジ/レスポンス認証 (Windows 2000 では統合 Windows 認証と呼ばれます)。 これらの設定は、Web サーバーがクライアント コンピューターにある NT の Web サーバー上の明示的なアクセス特権を必要とするなど、アクセスを制御する方法を定義します。
 
 

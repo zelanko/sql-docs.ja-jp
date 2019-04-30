@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184839"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML レコードセットの保持シナリオ
 このシナリオでは、ASP の応答オブジェクトに直接レコード セット オブジェクトの内容を保存する Active Server Pages (ASP) アプリケーションを作成します。  
@@ -38,10 +38,10 @@ ms.locfileid: "51600242"
   
 -   受信して、データの表示  
   
-## <a name="step-1-set-up-the-application"></a>手順 1: アプリケーションを設定します。  
+## <a name="step-1-set-up-the-application"></a>手順 1:アプリケーションを設定します。  
  スクリプトのアクセス許可を持つ"XMLPersist"をという名前の IIS 仮想ディレクトリを作成します。 仮想ディレクトリがポイントする、1 つ名前付き"XMLResponse.asp、"、他の名前付き"Default.htm"フォルダー内の 2 つの新しいテキスト ファイルを作成します。  
   
-## <a name="step-2-get-the-data"></a>手順 2: データを取得します。  
+## <a name="step-2-get-the-data"></a>手順 2:データを取得します。  
  この手順では、ADO レコード セットを開くし、クライアントに送信するための準備にコードを記述します。 メモ帳などのテキスト エディターで XMLResponse.asp ファイルを開き、次のコードを挿入します。  
   
 ```  
@@ -70,7 +70,7 @@ ms.locfileid: "51600242"
   
  オープンで、次の手順に進んでください、ファイルを保持します。  
   
-## <a name="step-3-send-the-data"></a>手順 3: データを送信します。  
+## <a name="step-3-send-the-data"></a>手順 3:データを送信します。  
  レコード セットがある場合は、できたは、ASP の応答オブジェクトを XML として保存して、クライアントに送信する必要があります。 XMLResponse.asp の一番下には、次のコードを追加します。  
   
 ```  
@@ -89,7 +89,7 @@ ms.locfileid: "51600242"
   
  保存して、次の手順に進む前に XMLResponse.asp を閉じます。 Adovbs.inc ファイルを既定 ADO ライブラリのインストール フォルダーから同じ XMLResponse.asp ファイルを保存したフォルダーにコピーします。  
   
-## <a name="step-4-receive-and-display-the-data"></a>手順 4: 受信し、データを表示  
+## <a name="step-4-receive-and-display-the-data"></a>手順 4:受信して、データの表示  
  この手順では、埋め込みの HTML ファイルを作成します[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトを指し示す XMLResponse.asp ファイルをレコード セットを取得します。 Default.htm をメモ帳などのテキスト エディターで開き、次のコードを追加します。 URL に"sqlserver"をサーバーの名前に置き換えます。  
   
 ```  

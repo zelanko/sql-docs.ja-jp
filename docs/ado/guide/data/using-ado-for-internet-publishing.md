@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d779204046b9bca2591fbdc9459d7c6b53061ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184968"
 ---
 # <a name="using-ado-for-internet-publishing"></a>インターネットへの発行に ADO を使用する
 [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO を使用した異種データへのアクセスの具体的な例を示しています。 このセクションの例では、インターネット パブリッシング用プロバイダーを使用する特定できますは、電子メール ストアにプロバイダーなどの異種データを他のプロバイダーと ADO を使用するときに示されている原則が生成されます。  
@@ -29,10 +29,10 @@ ms.locfileid: "47779000"
 ## <a name="urls"></a>URL  
  Uniform Resource Locator (Url) は、データ ソースとファイルとディレクトリの場所を指定する接続文字列とコマンドのテキストの代替として使用できます。 Url を使用するには、既存の[接続](../../../ado/reference/ado-api/connection-object-ado.md)と**Recordset**オブジェクトを使用して、**レコード**と**Stream**オブジェクト。  
   
- Url を使用する方法の詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+ Url を使用する方法の詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
 ## <a name="record-fields"></a>レコードのフィールド  
- 異種データと同種のデータの主な違いは、前者は、データの各行または**レコード**、異なる一連の列を持つことができますまたは**フィールド**します。 同種のデータの各行は、同じ列のセットを持ちます。 インターネット公開プロバイダーに固有のフィールドの詳細については、[レコードとプロバイダー提供の余分なフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)を参照してください。  
+ 異種データと同種のデータの主な違いは、前者は、データの各行または**レコード**、異なる一連の列を持つことができますまたは**フィールド**します。 同種のデータの各行は、同じ列のセットを持ちます。 インターネット公開プロバイダーに固有のフィールドの詳細については、次を参照してください。[レコードとプロバイダー提供の余分なフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)します。  
   
 ### <a name="appending-new-fields"></a>新しいフィールドを追加します。  
  組み合わせて動作するいくつかの ADO のオブジェクトが強化されています**レコード**と**Stream**オブジェクト。  

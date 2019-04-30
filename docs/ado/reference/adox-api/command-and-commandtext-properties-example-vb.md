@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 742f00402a553d8f918e0de0c3aad0f6c6e4af64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180184"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Command プロパティおよび CommandText プロパティの例 (VB)
 次のコードを使用する方法を示します、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロシージャのテキストを更新するプロパティ。  

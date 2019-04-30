@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7354568395dd940c171ae3837fa1a8de1fe2f441
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206321"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD の列挙定数
 デバッグを支援するには、ADO MD の列挙定数には、各定数の値が一覧表示します。 ただし、この値は、純粋なアドバイザリは、ADO MD の 1 つのリリース別に変更があります。 コードは、列挙定数の実際の値ではなく、名前にのみ依存する必要があります。  

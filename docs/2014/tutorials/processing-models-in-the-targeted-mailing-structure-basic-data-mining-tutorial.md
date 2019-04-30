@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188230"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>絞り込みメール配信構造でのモデルの処理 (基本的なデータ マイニング チュートリアル)
   作成したマイニング モデルを参照したり操作したりする前に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを配置し、マイニング構造とマイニング モデルを処理する必要があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "56038983"
   
  この値は、トレーニング セット内に含まれるケースの数に影響しません。単純に、モデルを構築するたびに、同じ分割方法が使用されることを保証します。  
   
- 提示されたシードの詳細については、[トレーニングとテスト データ セット](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md)を参照してください。  
+ 提示されたシードの詳細については、次を参照してください。[トレーニングとテスト データ セット](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md)します。  
   
 #### <a name="to-set-the-holdout-seed"></a>提示されたシードを設定するには  
   

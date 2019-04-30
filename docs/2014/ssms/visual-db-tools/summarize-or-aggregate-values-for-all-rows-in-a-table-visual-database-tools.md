@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204611"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>テーブルにあるすべての行の値の要約または集計 (Visual Database Tools)
   集計関数を使用すると、テーブルのすべての値の要約を作成できます。 たとえば、`titles` テーブルの本の総額を表示するには、次のようなクエリを作成できます。  

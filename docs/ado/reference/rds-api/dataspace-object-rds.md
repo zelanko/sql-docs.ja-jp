@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d75a5dcd8a09388c031e4e01c8bb8b9c1d62bb80
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134486"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace オブジェクト (RDS)
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "51600562"
   
  リモート データ サービスには、クライアント側コンポーネントは、中間層にあるビジネス オブジェクトと通信できるように、ビジネス オブジェクトのプロキシが必要があります。 パッケージ化、アンパッケージ処理、およびトランスポート (マーシャ リング) のアプリケーションのプロキシを容易に[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)プロセスやコンピューターの境界を越えてデータ。  
   
- リモート データ サービスを使用して、 **rds.DataSpace**オブジェクトの[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)ビジネス オブジェクトのプロキシを作成します。 中間層ビジネス オブジェクトの対応のインスタンスが作成されるたびに、ビジネス オブジェクトのプロキシが動的に作成されます。 リモート データ サービスは、次のプロトコルをサポートしています: HTTP、HTTPS (HTTP Secure Sockets)、DCOM、およびインプロセス (クライアント コンポーネントと同じコンピューター上にビジネス オブジェクト)。  
+ リモート データ サービスを使用して、 **rds.DataSpace**オブジェクトの[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)ビジネス オブジェクトのプロキシを作成します。 中間層ビジネス オブジェクトの対応のインスタンスが作成されるたびに、ビジネス オブジェクトのプロキシが動的に作成されます。 リモート データ サービスには、次のプロトコルがサポートされています。HTTP、HTTPS (HTTP Secure Sockets)、DCOM、およびインプロセス (クライアント コンポーネントと同じコンピューター上にビジネス オブジェクト)。  
   
 > [!NOTE]
 >  RDS の「ステートレス」方法で動作時に、 **rds.DataSpace**オブジェクトが HTTP または HTTPS プロトコルを使用します。 つまり、サーバーに応答が返された後にクライアント要求に関する内部情報は破棄されます。  

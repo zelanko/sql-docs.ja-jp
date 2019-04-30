@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125478"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -34,10 +34,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Logical_Expression*  
  評価される条件**true** (1) または**false** (0)。 有効な多次元式 (MDX) の論理式を指定する必要があります。  
   
- *Expression1 ヒント [Eager |厳密な |遅延]*  
+ *Expression1 Hint [Eager|Strict|Lazy]]*  
  論理式を評価するときに使用**true**します。 Expression1 には、有効な多次元式 (MDX) を指定する必要があります。  
   
- *Expression2 ヒント [Eager |厳密な |遅延]*  
+ *Expression2 Hint [Eager|Strict|Lazy]]*  
  論理式を評価するときに使用**false**します。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
   
 ## <a name="remarks"></a>コメント  
@@ -64,7 +64,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  ヒントで EAGER と STRICT を同時に使用することはできません。同じ IIF(,,) の別の式で使用することはできます。  
   
- 詳細については、[IIF 関数のクエリ ヒントでは、SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540)と[実行プランおよび MDX の IIF 関数と CASE ステートメントのプラン ヒント](https://go.microsoft.com/fwlink/?LinkId=269565)を参照してください。  
+ 詳細については、次を参照してください。 [IIF 関数のクエリ ヒントでは、SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540)と[実行プランおよび MDX の IIF 関数と CASE ステートメントのプラン ヒント](https://go.microsoft.com/fwlink/?LinkId=269565)します。  
   
 ## <a name="examples"></a>使用例  
  次のクエリの簡単な使用を示しています。 **IIF** Internet Sales Amount メジャーが大きい場合は、2 つの異なる文字列値または $10000 未満のいずれかを返す計算されるメジャー内で。  

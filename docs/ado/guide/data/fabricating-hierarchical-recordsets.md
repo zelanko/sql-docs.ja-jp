@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161458"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
 次の例は、データのシェイプの親、子、および孫の列を定義する文法を使用して、基になるデータ ソースのない階層レコード セットを作成する方法を示しています。**レコード セット**します。  
   
- 階層構造を作成する**レコード セット**を指定する必要があります、 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) なしでのデータ プロバイダーの値を指定して、接続文字列パラメーター、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 詳細については、[データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)を参照してください。  
+ 階層構造を作成する**レコード セット**を指定する必要があります、 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) なしでのデータ プロバイダーの値を指定して、接続文字列パラメーター、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 詳細については、次を参照してください。[データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)します。  
   
 ```  
 Dim cn As New ADODB.Connection  

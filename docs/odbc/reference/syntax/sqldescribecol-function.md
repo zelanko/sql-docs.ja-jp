@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061867"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 関数
 **準拠**  
@@ -111,7 +111,7 @@ SQLRETURN SQLDescribeCol(
 |HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている**SQLDescribeCol**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) 関数が呼び出す前に呼び出された**SQLPrepare**、 **SQLExecute**、またはステートメント ハンドルでのカタログ関数。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*BufferLength*が 0 未満でした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
@@ -122,7 +122,7 @@ SQLRETURN SQLDescribeCol(
  パフォーマンス上の理由から、アプリケーションを呼び出す必要がありますいない**SQLDescribeCol**ステートメントを実行する前にします。  
   
 ## <a name="comments"></a>コメント  
- アプリケーションを呼び出す通常**SQLDescribeCol**呼び出しの後に**SQLPrepare**の前に、または後に関連付けられている呼び出し**SQLExecute**します。 アプリケーションを呼び出すことも**SQLDescribeCol**呼び出しの後に**SQLExecDirect**します。 詳細については、[結果セットのメタデータ](../../../odbc/reference/develop-app/result-set-metadata.md)を参照してください。  
+ アプリケーションを呼び出す通常**SQLDescribeCol**呼び出しの後に**SQLPrepare**の前に、または後に関連付けられている呼び出し**SQLExecute**します。 アプリケーションを呼び出すことも**SQLDescribeCol**呼び出しの後に**SQLExecDirect**します。 詳細については、次を参照してください。[結果セットのメタデータ](../../../odbc/reference/develop-app/result-set-metadata.md)します。  
   
  **SQLDescribeCol**列名、型、およびによって生成される長さを取得、**選択**ステートメント。 列が式の場合 **ColumnName*が空の文字列またはドライバーの定義の名前。  
   

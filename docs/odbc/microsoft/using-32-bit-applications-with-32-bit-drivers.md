@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213475"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 ビット ドライバーで 32 ビット アプリケーションを使用
 32 ビット ドライバーでは、32 ビット アプリケーションを実行できます。 32 ビット アプリケーションと 32 ビット ドライバーは、Win32® API を使用します。  
@@ -35,10 +35,10 @@ ms.locfileid: "47696340"
 ## <a name="administration"></a>管理  
  ODBC データ ソース アドミニストレーターを使用して、32 ビット ドライバーのデータ ソースを管理できます。 Windows 2000 を実行しているコンピューター上の ODBC アドミニストレーターを開くには、Windows コントロール パネルを開き、ダブルクリック**管理ツール**、し、ダブルクリック**データ ソース (ODBC)** します。 Microsoft Windows の以前のバージョンを実行するコンピューターで、アイコンの名前は**32 ビット ODBC**または単に**ODBC**します。  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>コンポーネント  
  ODBC コンポーネントには、32 ビット ドライバーで 32 ビット アプリケーションを実行するために、次のファイルが含まれています。 これらのコンポーネントがディレクトリに \Redist します。  
   
-|[ファイル名]|説明|  
+|ファイル名|説明|  
 |---------------|-----------------|  
 |Odbc32.dll|32 ビット ドライバー マネージャー|  
 |Odbccp32.dll|32 ビット インストーラー DLL|  

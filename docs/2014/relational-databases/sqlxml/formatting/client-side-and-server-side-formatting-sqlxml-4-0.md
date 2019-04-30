@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: de1b564ee27885b0e5d5453cfbe53c5d00f4634f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131221"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>クライアント側とサーバー側の書式設定 (SQLXML 4.0)
   SQLXML では、次の 2 つの方法で XML ドキュメントの書式設定を行えます。  

@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155227"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C 構文のインデックスで #import)
 コレクションが特定の一般的なメソッドとプロパティを継承するかを把握すると便利です。  
@@ -39,7 +39,7 @@ ms.locfileid: "47662660"
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -55,7 +55,7 @@ HRESULT Clear( );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -72,7 +72,7 @@ HRESULT Delete( const _variant_t & Index );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -90,7 +90,7 @@ HRESULT Refresh( );
 HRESULT Update( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>プロパティ  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  

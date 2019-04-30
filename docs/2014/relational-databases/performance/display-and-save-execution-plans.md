@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 869c74a0a739ce95ccb91861d031da1d5d0c6510
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151052"
 ---
 # <a name="display-and-save-execution-plans"></a>実行プランの表示と保存
   ここでは、実行プランを表示する方法、および Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して実行プランを XML 形式でファイルに保存する方法について説明します。  

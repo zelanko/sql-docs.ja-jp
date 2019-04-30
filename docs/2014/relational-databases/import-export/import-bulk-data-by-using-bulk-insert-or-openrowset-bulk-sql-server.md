@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151632"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server)
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の BULK INSERT ステートメントと INSERT...SELECT * FROM OPENROWSET(BULK...) ステートメントを使用して、データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにデータを一括インポートする方法の概要を説明します。 また、BULK INSERT および OPENROWSET(BULK...) を使用する場合のセキュリティの注意点や、リモート データ ソースから一括インポートする方法についても説明します。  
@@ -122,7 +122,7 @@ GO
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)  
   
   

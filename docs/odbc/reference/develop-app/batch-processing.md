@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c4aa7b22e2d7b419db0e80d723ab7b0d875c2a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201603"
 ---
 # <a name="batch-processing"></a>バッチ処理
-SQL ステートメントのバッチのサポートは、広範囲にわたるはないため、アプリケーションの相互運用可能な条件付きで、またはまったく使用それらにする必要があります。 詳細については、[を実行するバッチ](../../../odbc/reference/develop-app/executing-batches.md)を参照してください。
+SQL ステートメントのバッチのサポートは、広範囲にわたるはないため、アプリケーションの相互運用可能な条件付きで、またはまったく使用それらにする必要があります。 詳細については、次を参照してください。[を実行するバッチ](../../../odbc/reference/develop-app/executing-batches.md)します。

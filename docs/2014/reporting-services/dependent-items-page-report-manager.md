@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165113"
 ---
 # <a name="dependent-items-page-report-manager"></a>[依存アイテム] ページ (レポート マネージャー)
   [依存アイテム] ページには、共有データ ソースを参照するレポートおよびモデルの一覧を表示できます。 各アイテムの種類のアイコンはそのアイテムがレポートであるか、またはモデルであるかを示します。 このページはリスト ビューまたは詳細ビューで表示できます。 アイテムごとの詳細な情報を表示するには詳細ビューを使用します。 詳細ビューでは、より多くのページ オプションを利用できます。 共有データ ソースを管理しやすくするために、このページには、データ ソースを使用するレポートおよびモデルへのリンク、レポートやモデルを最後に実行または変更した時点の基準、使用しないレポートやモデルを簡単に削除できる [削除] ボタン、レポートやモデルが必要かどうかを判断する間それらを別の場所に移動できる [移動] ボタンがあります。  

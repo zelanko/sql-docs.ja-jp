@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186512"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>改ページ、見出し、列、および行の制御 (レポート ビルダーおよび SSRS)
   レポートは、改ページによって複数のページに分割され表示および印刷されます。 改ページを使用すると、レポートのプレビュー時または他のファイル形式へのエクスポート時に、表示が最適化されるようにコンテンツをレポート ページに収めることができます。  

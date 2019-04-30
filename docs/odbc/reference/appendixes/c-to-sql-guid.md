@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159355"
 ---
 # <a name="c-to-sql-guid"></a>C から SQL へ: GUID
 GUID の ODBC C データ型の識別子です。  
   
  SQL_C_GUID  
   
- 次の表は、ODBC SQL データ型の GUID の C データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)を参照してください。  
+ 次の表は、ODBC SQL データ型の GUID の C データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  

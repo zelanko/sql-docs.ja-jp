@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049136"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>[空間インデックス] ダイアログ ボックス (Visual Database Tools)
   **[インデックス/キー]** ダイアログ ボックスを使用してインデックスを作成できない **geometry** データ型や **geography** データ型の列 (*空間列*) のインデックスを作成するには、 **[空間インデックス]** を使用します。 各空間列に複数の空間インデックスを作成できますが、空間インデックスは一度に 1 つずつ作成する必要があります。  

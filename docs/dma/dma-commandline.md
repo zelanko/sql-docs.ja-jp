@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154669"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行します。
 Data Migration Assistant をインストールするバージョン 2.1 以降で、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft Data Migration Assistant\\*します。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 このメソッドは、いくつかのデータベースや巨大なデータベースを評価するときに便利です。 
@@ -46,8 +46,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Dmacmd.exe ヘルプ テキストを使用する方法        | N
 |`/AssessmentName`     |   評価プロジェクトの名前   | Y
 |`/AssessmentDatabases`     | 接続文字列のスペースで区切られた一覧。 データベース名 (初期カタログ) と小文字は区別されます。 | Y
-|`/AssessmentSourcePlatform`     | 評価では、サポートされている値のソースのプラットフォーム:SqlOnPrem、RdsSqlServer します。 ターゲットの準備状態評価は、ソースのプラットフォームとしても Cassandra をサポートします。 既定値は SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | 評価では、サポートされている値のターゲット プラットフォーム:AzureSqlDatabase、ManagedSqlServer、SqlServer2012、SqlServer2014、SqlServer2016、SqlServerLinux2017 および SqlServerWindows2017 します。 ターゲットの準備状態評価は、ターゲット プラットフォームとしても cosmos Db をサポートします。 既定値は SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | 評価用のソース プラットフォーム: <br>評価のためのサポートされる値:SqlOnPrem、RdsSqlServer (既定値) <br>ターゲットの準備状態評価の値がサポートされています。SqlOnPrem RdsSqlServer (既定)、Cassandra (プレビュー)   | N
+|`/AssessmentTargetPlatform`     | 評価用のターゲット プラットフォーム:  <br> 評価のためのサポートされる値:AzureSqlDatabase、ManagedSqlServer、SqlServer2012、SqlServer2014、SqlServer2016、SqlServerLinux2017 および SqlServerWindows2017 (既定値)  <br> ターゲットの準備状態評価の値がサポートされています。ManagedSqlServer (既定)、CosmosDB (プレビュー)   | N
 |`/AssessmentEvaluateFeatureParity`  | 機能パリティ ルールを実行します。 ターゲット プラットフォーム AzureSqlDatabase の機能パリティの評価はサポートされていませんソースのプラットフォームが RdsSqlServer の場合は、  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 互換性規則を実行します。  | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendations が必要です)。
 |`/AssessmentEvaluateRecommendations`     | 機能のお勧めを実行します。        | Y <br> (AssessmentEvaluateCompatibilityIssues または必要な AssessmentEvaluateRecommendationsis)
@@ -330,6 +330,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 - [Data Migration Assistant](https://aka.ms/get-dma)をダウンロードします。
 - この記事[オンプレミス データベースの適切な Azure SQL データベース SKU を特定](https://aka.ms/dma-sku-recommend-sqldb)します。

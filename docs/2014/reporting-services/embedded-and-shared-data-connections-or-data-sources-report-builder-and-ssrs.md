@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf9b9bfd500c5ddb9e10fb1e2320bf0287114808
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164812"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>埋め込みおよび共有のデータ接続またはデータ ソース (レポート ビルダーおよび SSRS)
   クエリが実行されるとき、またはレポートが処理されるとき、レポートはデータを取得するためにデータ接続を使用します。 ユーザーは、そのデータ接続を、リレーショナル データベース、多次元データベース、Web サービスなどのデータ ソースに接続する組み込みのデータ接続の種類の一覧から選択します。 データ接続の説明では、次の用語を使用します。  

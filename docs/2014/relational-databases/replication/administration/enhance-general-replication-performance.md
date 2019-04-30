@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187084"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
   このトピックで解説するガイドラインに従うことによって、アプリケーションおよびネットワーク上にある全種類のレプリケーションの全般的なパフォーマンスを向上させることができます。  
@@ -146,7 +146,7 @@ ms.locfileid: "57579372"
   
 -   サブスクリプションを手作業で初期化する。  
   
-     巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+     巨大な初期データセットを扱うようなシナリオでは、スナップショット以外の方法を使用して、サブスクリプションを初期化することをお勧めします。 詳細については、「[スナップショットを使用しないトランザクション サブスクリプションの初期化](../initialize-a-transactional-subscription-without-a-snapshot.md)」を参照してください。  
   
 ## <a name="agent-parameters"></a>エージェント パラメーター  
   

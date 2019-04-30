@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183060"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA コンソールの実行 (MySQLToSQL)
 Microsoft は、ファイルのコマンドを実行し、SSMA アクティビティを制御する堅牢なスクリプトのセットを提供します。  
@@ -140,11 +140,11 @@ close-project
   
 2.  **Windows 認証**と**ポート**パラメーターは、SQL Azure に接続するときは適用されません。  
   
-3.  スクリプト ファイルの作成 ' の詳細については、[スクリプト ファイルの作成&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)を参照してください。  
+3.  スクリプト ファイルの作成 ' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)します。  
   
 **Command**  
   
-接続ソース データベース  
+connect-source-database  
   
 -   ソース データベースへの接続を実行し、ソース データベースが、すべてのメタデータの高レベルのメタデータを読み込みます。  
   
@@ -750,7 +750,7 @@ convert-sql-statement
 ```  
   
 ## <a name="next-step"></a>次の手順  
-コマンド ライン オプションについては、[SSMA コンソールのコマンド ライン オプション&#40;MySQLToSQL&#41; ](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)を参照してください。  
+コマンド ライン オプションについては、次を参照してください。 [SSMA コンソールのコマンド ライン オプション&#40;MySQLToSQL&#41; ](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)します。  
   
 サンプルのコンソール スクリプト ファイルの詳細については、次を参照してください[サンプルのコンソール スクリプト ファイルを扱う&#40;MySQLToSQL。&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
   
@@ -758,7 +758,7 @@ convert-sql-statement
   
 1.  パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)します。  
   
-2.  レポートを生成するため、[レポートを生成する&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)を参照してください。  
+2.  レポートを生成するため、次を参照してください。[レポートを生成する&#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)します。  
   
-3.  コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)を参照してください。  
+3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)します。  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a07ec878b1198fbf23bfb251460d83869313c83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062130"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name プロパティ - 動的 (ADO)
 名前を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -32,7 +32,7 @@ ms.locfileid: "47696831"
   
  **Reshape Name**プロパティは、再整形の機能で使用する主な対象は、 [Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)サービス プロバイダー。 名前は、再整形に参加するで一意である必要があります。  
   
- このプロパティは読み取り専用設定することがない直接ときに、 **Recordset**が作成されます。 などの場合、句の Shape コマンドが作成されます。 を**レコード セット**を使用して、エイリアス名を割り当てます、 **AS**エイリアスが割り当てられているキーワード、、 **Reshape Name**プロパティ。 エイリアスが宣言されていない場合、 **Reshape Name**プロパティには、データのシェイプ サービスによって生成された一意の名前が割り当てられます。 エイリアス名は、既存の名前と同じ場合**レコード セット**、 **Recordset**うち 1 つが解放されるまでに形状変更できます。 一意の名前を設定して、既定の動作を変更することができます、 [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)プロパティを ADO 接続を**True**します。 データのシェイプの一意性を確保するために必要な場合は、割り当てられているユーザーの名前を変更するサービスのアクセス許可は、このプロパティを設定します。 形状を変更の詳細については、[OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)を参照してください。  
+ このプロパティは読み取り専用設定することがない直接ときに、 **Recordset**が作成されます。 などの場合、句の Shape コマンドが作成されます。 を**レコード セット**を使用して、エイリアス名を割り当てます、 **AS**エイリアスが割り当てられているキーワード、、 **Reshape Name**プロパティ。 エイリアスが宣言されていない場合、 **Reshape Name**プロパティには、データのシェイプ サービスによって生成された一意の名前が割り当てられます。 エイリアス名は、既存の名前と同じ場合**レコード セット**、 **Recordset**うち 1 つが解放されるまでに形状変更できます。 一意の名前を設定して、既定の動作を変更することができます、 [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)プロパティを ADO 接続を**True**します。 データのシェイプの一意性を確保するために必要な場合は、割り当てられているユーザーの名前を変更するサービスのアクセス許可は、このプロパティを設定します。 形状を変更の詳細については、次を参照してください。 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)します。  
   
  使用して、 **Reshape Name**プロパティを参照するときに、**レコード セット**図形コマンドで、または Data Shaping Service によって作成されたため、名前を判断できない場合。 その場合は、コマンドによって返される文字列を連結することによって SHAPE コマンドを生成する可能性があります、 **Reshape Name**プロパティ。  
   

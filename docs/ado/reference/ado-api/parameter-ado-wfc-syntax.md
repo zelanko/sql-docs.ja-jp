@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad7331fbbfed123da5d7121d83558ba4bbabc912
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138694"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 構文)
-## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>コンストラクター  
   

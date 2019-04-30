@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057122"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
     
@@ -54,13 +54,13 @@ ms.locfileid: "54124402"
   
     -   スナップショット エージェント、ログ リーダー エージェント、およびキュー リーダー エージェントを参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
-    -   ディストリビューション エージェントおよびマージ エージェントでは、[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)を参照してください。  
+    -   ディストリビューション エージェントおよびマージ エージェントでは、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 -   エージェントがビジーであるためにこのエラーが頻繁に発生する場合は、次の操作を実行します。  
   
      場合によっては、エージェントの処理時間が短くなるように、アプリケーションを再設計する必要があります。  
   
-     **[ジョブのプロパティ]** ダイアログ ボックスを使用してエージェントの状態を確認する間隔を長くすることができます。 レプリケーション ジョブの場合は、このダイアログ ボックスへのアクセス方法の詳細については、[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)を参照してください。  
+     **[ジョブのプロパティ]** ダイアログ ボックスを使用してエージェントの状態を確認する間隔を長くすることができます。 レプリケーション ジョブの場合は、このダイアログ ボックスへのアクセス方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
   
 -   エージェントがトポロジ内のコンピューターのいずれにもログインできない場合には、次の操作を実行します。  
   

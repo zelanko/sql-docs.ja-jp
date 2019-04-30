@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199398"
 ---
 # <a name="binding-parameter-markers"></a>バインディング パラメーター マーカー
 アプリケーションが呼び出すことによってパラメーターをバインド**SQLBindParameter**します。 **SQLBindParameter**一度に 1 つのパラメーターをバインドします。 アプリケーションは、次を指定します。  
   
 -   パラメーターの数。 パラメーターは、増加のパラメーターの順序番号 1 以降、SQL ステートメント内で番号が付けられます。 以上であるパラメーターの数を指定することは、ステートメントが実行されたときに、SQL ステートメント内のパラメーター数よりも、パラメーター値は無視されます。  
   
--   パラメーターの型 (入力、入力/出力、または出力)。 プロシージャ呼び出しのパラメーターを除くすべてのパラメーターは入力パラメーターが。 詳細については、[プロシージャ パラメーター](../../../odbc/reference/develop-app/procedure-parameters.md)、このセクションで後述を参照してください。  
+-   パラメーターの型 (入力、入力/出力、または出力)。 プロシージャ呼び出しのパラメーターを除くすべてのパラメーターは入力パラメーターが。 詳細については、次を参照してください。[プロシージャ パラメーター](../../../odbc/reference/develop-app/procedure-parameters.md)、このセクションで後述します。  
   
--   変数の C データ型、アドレス、およびバイト長は、パラメーターにバインドします。 ドライバーは、データを C データ型から SQL データ型に変換できる必要があります。 またはエラーが返されます。 サポートされる変換の一覧は、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d: データ型。  
+-   変数の C データ型、アドレス、およびバイト長は、パラメーターにバインドします。 ドライバーは、データを C データ型から SQL データ型に変換できる必要があります。 またはエラーが返されます。 サポートされる変換の一覧は、次を参照してください[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d:。データ型。  
   
 -   SQL データ型、有効桁数、およびパラメーター自体の小数点以下桁数。  
   
--   長さ/インジケーター バッファーのアドレス。 バイナリまたは文字のデータの長さをバイト、データが null の場合を指定します。 または、でのデータが送信されることを指定します**SQLPutData**します。 詳細については、[長さ/インジケーターの値を使用して](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)を参照してください。  
+-   長さ/インジケーター バッファーのアドレス。 バイナリまたは文字のデータの長さをバイト、データが null の場合を指定します。 または、でのデータが送信されることを指定します**SQLPutData**します。 詳細については、次を参照してください。[長さ/インジケーターの値を使用して](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)します。  
   
  たとえば、次のコードのバインド*販売員*と*CustID*販売員と CustID 列のパラメーターにします。 *販売員*可変長である、文字データが含まれています、コードのバイト長の指定*販売員*(11) バインドと*SalesPersonLenOrInd*に内のデータのバイトの長さを含む*販売員*します。 この情報が必要ない*CustID*の固定長である整数データが含まれています。  
   

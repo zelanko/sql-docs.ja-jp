@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f4e17074616111ee93ce87c04036d1fc3fd48dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062420"
 ---
 # <a name="gateways-diagnostic-example"></a>ゲートウェイ診断の例
 ゲートウェイのアーキテクチャでは、ドライバーは ODBC をサポートするゲートウェイに要求を送信します。 ゲートウェイは、DBMS に要求を送信します。 ドライバー マネージャーとのインターフェイスのコンポーネントであるため、ドライバーが書式設定し、の引数を返します**SQLGetDiagRec**します。  

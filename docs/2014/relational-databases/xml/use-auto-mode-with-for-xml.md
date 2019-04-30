@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193265"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>FOR XML での AUTO モードの使用
   「 [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)」で説明したように、AUTO モードを使用すると、入れ子構造の XML 要素としてクエリ結果が返されます。 AUTO モードでは、クエリ結果から生成される XML の構造はあまり制御されません。 AUTO モードのクエリは、単純な階層を生成する場合に役立ちます。 ただし、 [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md) や [FOR XML での PATH モードの使用](use-path-mode-with-for-xml.md) により、クエリ結果から XML の構造を決定するときに、より厳密な制御や高い柔軟性を実現できます。  
@@ -136,7 +136,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [返される XML を構造化する際の AUTO モード ヒューリスティック](auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [例:AUTO モードの使用](examples-using-auto-mode.md)  
+-   [例: AUTO モードの使用](examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

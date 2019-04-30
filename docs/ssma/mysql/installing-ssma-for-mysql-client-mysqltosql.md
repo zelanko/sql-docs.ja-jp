@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187190"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>SSMA for MySQL クライアントのインストール (MySQLToSQL)
 SSMA for MySQL クライアントは、次のタスクを実行するプログラム ファイルで構成されます。  
@@ -49,7 +49,7 @@ SSMA をインストールする前に、コンピューターが、次の要件
   
 -   アクセスと、移行するデータベース オブジェクトとデータの SQL Server のターゲット インスタンスをホストするコンピューターに十分なアクセス許可。 詳細については、次を参照してください[SQL Server に接続する&#40;MySQLToSQL。&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
--   SQL Azure のプロジェクトが発生した場合へのアクセスと、移行する Azure SQL DB のインスタンスに十分なアクセス許可はデータベース オブジェクトとデータになります。 詳細については、[Azure SQL DB に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)を参照してください。  
+-   SQL Azure のプロジェクトが発生した場合へのアクセスと、移行する Azure SQL DB のインスタンスに十分なアクセス許可はデータベース オブジェクトとデータになります。 詳細については、次を参照してください。 [Azure SQL DB に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)します。  
   
 -   4 GB の RAM を推奨します。  
   

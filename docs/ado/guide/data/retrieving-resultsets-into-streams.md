@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188108"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリーム形式で結果セットを取得する
 従来の結果を受信するのではなく**Recordset**オブジェクト、ADO は代わりに、ストリームにクエリ結果を取得します。 ADO **Stream**オブジェクト (またはその他のオブジェクト、COM をサポートする**IStream** 、ASP などのインターフェイス**要求**と**応答**オブジェクト) これらの結果を含めるために使用できます。 この機能の 1 つの用途では、XML 形式で結果を取得します。 SQL Server では、たとえば、XML できます結果 SQL SELECT クエリで FOR XML 句を使用して、XPath クエリの使用など、複数の方法で。  

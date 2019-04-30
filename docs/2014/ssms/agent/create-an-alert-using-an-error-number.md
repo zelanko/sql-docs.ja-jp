@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135365"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>エラー番号を使用して警告を作成する
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、特定の番号のエラーが発生したときに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で発生する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント警告の作成方法について説明します。  
@@ -100,6 +100,6 @@ ms.locfileid: "52762620"
     GO  
     ```  
   
- 詳細については、[sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)します。  
   
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186035"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 関数
 **準拠**  
@@ -82,11 +82,11 @@ BOOL SQLRemoveDriverManager(
 |||  
 |-|-|  
 |ODBC32DLL|ODBCCP32 します。DLL|  
-|ODBCCR32 します。DLL|ODBC16GT します。DLL|  
-|ODBCCU32 します。DLL|ODBC32GT します。DLL|  
-|ODBCINT します。DLL|DS16GT します。DLL|  
-|ODBCTRAC します。DLL|DS32GT します。DLL|  
-|MSVCRT40 します。DLL|ODBCAD32 します。実行可能ファイル|  
+|ODBCCR32 します。DLL|ODBC16GT.DLL|  
+|ODBCCU32.DLL|ODBC32GT.DLL|  
+|ODBCINT.DLL|DS16GT.DLL|  
+|ODBCTRAC します。DLL|DS32GT.DLL|  
+|MSVCRT40.DLL|ODBCAD32 します。実行可能ファイル|  
 |ODBCCP32 します。CPL||  
   
  **SQLRemoveDriverManager**アップグレード プロセスの一部としても呼ばれます。 アプリケーションは、アップグレードを実行する必要があることと、ドライバーが既にインストールを検出した場合、ドライバーを削除して再インストールする必要があります。  

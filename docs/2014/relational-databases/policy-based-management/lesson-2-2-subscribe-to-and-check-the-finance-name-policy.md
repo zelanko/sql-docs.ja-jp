@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f1b91c1d46bc4a396a8b0358a1a3bf3aa8acbcd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135705"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Finance の名前ポリシーのサブスクライブおよび確認
   ここでは、Finance データベースを構成し、Finance ポリシー カテゴリをサブスクライブします。 その後で、Finance の名前ポリシーをテストします。  
@@ -69,9 +69,9 @@ ms.locfileid: "48137082"
  このチュートリアルでは、ポリシー ベースの管理の条件、ポリシー、およびポリシー グループを作成する方法と、フィルターを適用してポリシー ベースの管理対象がポリシーに準拠しているかどうかを調べる方法について学習しました。  
   
 ## <a name="next"></a>Next  
- このチュートリアルはこれで終了です。 最初に戻るには、「 [チュートリアル: ポリシー ベースの管理を使用したサーバーの管理](tutorial-administering-servers-by-using-policy-based-management.md)」をクリックしてください。  
+ このチュートリアルはこれで終了です。 先頭に戻るにはクリックして[チュートリアル。ポリシー ベースの管理を使用してサーバーを管理する](tutorial-administering-servers-by-using-policy-based-management.md)します。  
   
- チュートリアルの一覧は、[for SQL Server 2014 チュートリアル](../../tutorials/tutorials-for-sql-server-2014.md)を参照してください。  
+ チュートリアルの一覧は、次を参照してください。 [for SQL Server 2014 チュートリアル](../../tutorials/tutorials-for-sql-server-2014.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)  

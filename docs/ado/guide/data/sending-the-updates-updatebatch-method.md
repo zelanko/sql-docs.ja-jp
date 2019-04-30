@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062878"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>更新プログラムの送信: UpdateBatch メソッド
 次のコードは、バッチ モードで adLockBatchOptimistic を CursorLocation LockType プロパティを設定してレコード セットを開きます。 2 つの新しいレコードを追加しますして、元の値を保存、既存のレコードのフィールドの値を変更し、データ ソースへの変更の送信を UpdateBatch を呼び出します。  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161593"
 ---
 # <a name="examining-data"></a>データの調査
 [データの取得](../../../ado/guide/data/getting-data.md)セクションでは、1 つまたは複数としてデータ ソースからデータを取得する方法を説明しました。 **Recordset**オブジェクト。 このセクションで取り上げる**レコード セット**内を移動する方法を含む詳細についてで、**レコード セット**し、そのデータを表示します。  

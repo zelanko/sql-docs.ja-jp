@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188441"
 ---
 # <a name="move-items-page-report-manager"></a>[<ItemName> を移動] ページ (レポート マネージャー)
   [アイテムの移動] ページは、レポート、フォルダー、またはその他のアイテムを、レポート サーバー上の新しい場所に移動するときに使用します。 レポート サーバーの名前空間内の移動先を参照する際は、移動先のパスを入力することも、ツリー ビューを使用することもできます。 移動できるアイテムは、移動する権限を持っていて、現在のレポート サーバーに保存されているアイテムに限ります。  

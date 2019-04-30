@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157839"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>メモリ最適化テーブルの概要
   メモリ最適化テーブルは、[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) を使用して作成されるテーブルです。  
@@ -24,7 +24,7 @@ ms.locfileid: "53358204"
   
  インメモリ OLTP は、開発、配置、管理、サポートなど、すべての領域においてシームレスな使用環境を提供するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と統合されています。 データベースには、ディスク ベースのオブジェクトと同様にインメモリのオブジェクトを含めることができます。  
   
- メモリ最適化テーブル内の行には、バージョンが付いています。 これは、テーブルの各行に複数のバージョンが存在する可能性があることを意味します。 行バージョンはいずれも、同じテーブル データ構造で保持されます。 行のバージョン管理は、同じ行に対して読み取りと書き込みを同時に実行できるようにするために使用します。 詳細については、同時読み取りと書き込みが同じ行には、[メモリ最適化テーブルでのトランザクション](memory-optimized-tables.md)を参照してください。  
+ メモリ最適化テーブル内の行には、バージョンが付いています。 これは、テーブルの各行に複数のバージョンが存在する可能性があることを意味します。 行バージョンはいずれも、同じテーブル データ構造で保持されます。 行のバージョン管理は、同じ行に対して読み取りと書き込みを同時に実行できるようにするために使用します。 詳細については、同時読み取りと書き込みが同じ行には、次を参照してください。[メモリ最適化テーブルでのトランザクション](memory-optimized-tables.md)です。  
   
  次の図は、複数バージョン管理について説明したものです。 この図では、行が 3 つあるテーブルを示しています。行のそれぞれに、バージョンが複数存在します。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53358204"
 |[メモリ最適化テーブル変数](../../database-engine/memory-optimized-table-variables.md)|はい|[はい]|いいえ|  
 |[ネイティブ コンパイル ストアド プロシージャ](https://msdn.microsoft.com/library/dn133184.aspx)|EXECUTE ステートメントを使用してネイティブ コンパイル ストアド プロシージャからストアド プロシージャを実行することはできません。|はい|不可 <sup>1</sup>|  
   
- <sup>1</sup>コンテキスト接続からメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャにアクセスすることはできません (から接続[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR モジュールを実行する場合)。 ただし、別の接続を作成して開き、そこからメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスできます。 詳細については、[正規 vs を参照してください。コンテキスト接続](../clr-integration/data-access/context-connections-vs-regular-connections.md)します。  
+ <sup>1</sup>コンテキスト接続からメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャにアクセスすることはできません (から接続[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CLR モジュールを実行する場合)。 ただし、別の接続を作成して開き、そこからメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスできます。 詳細については、次を参照してください。[正規 vs します。コンテキスト接続](../clr-integration/data-access/context-connections-vs-regular-connections.md)します。  
   
 ## <a name="performance-and-scalability"></a>パフォーマンスとスケーラビリティ  
  インメモリ OLTP を使用することで実現できるパフォーマンスの向上には、次の要素が影響します。  

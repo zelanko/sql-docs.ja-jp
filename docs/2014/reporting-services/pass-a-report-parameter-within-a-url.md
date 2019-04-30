@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f05aaedf8e3b8bb15d5d15d47823752832e659a5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188278"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
   レポート パラメーターはレポート URL に含めることでレポートに渡すことができます。 このような URL パラメーターにはプレフィックスを付けません。パラメーターはレポート処理エンジンに直接渡されるためです。  

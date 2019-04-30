@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b0d571210c44026fc34ab43cb07e18bbd8526ed5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188420"
 ---
 # <a name="new-model-page-report-manager"></a>[新しいモデル] ページ (レポート マネージャー)
   このページでは、共有データ ソースから既定のレポート モデルを生成できます。 レポート モデルを生成できるのは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元データ ソース、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データ ソース、および Oracle リレーショナル データ ソースだけです。  

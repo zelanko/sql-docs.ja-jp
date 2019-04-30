@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0229e95b6d4bdc4fec8950a5e8e5e155300bfd19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136235"
 ---
 # <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
   **[検索と置換]** ダイアログ ボックスでは、プロジェクト内、ソリューション内、ファイル システム フォルダー内のすべてのファイルを対象にしてテキストの検索と置換を実行できます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で開いていないファイルも対象になります。 **[検索と置換]** ダイアログ ボックスで実行した検索の一致項目は、[検索結果 1] ウィンドウと [検索結果 2] ウィンドウに表示されるので、一致項目を含んだ行のテキストを実際に確認できます。  

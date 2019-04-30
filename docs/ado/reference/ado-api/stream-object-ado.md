@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 976e822482efc530e3b055f61c242ee03a30e012
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179832"
 ---
 # <a name="stream-object-ado"></a>Stream オブジェクト (ADO)
 バイナリ データまたはテキストのストリームを表します。  
@@ -69,7 +69,7 @@ ms.locfileid: "47613860"
 -   指定のアクセス モード、 **Stream**で、[モード](../../../ado/reference/ado-api/mode-property-ado.md)プロパティ。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
  **Stream**オブジェクトがスクリプトを実行します。  
   

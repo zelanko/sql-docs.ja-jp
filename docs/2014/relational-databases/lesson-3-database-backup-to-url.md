@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 4: Windows Azure ストレージにデータベースを作成する |Microsoft Docs'
+title: レッスン 4:Windows Azure ストレージにデータベースの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182006"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>レッスン 4: Windows Azure ストレージにデータベースを作成する
+# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>レッスン 4:Windows Azure ストレージにデータベースを作成する
   このレッスンでは、Windows Azure 機能で SQL Server データ ファイルを使用してデータベースを作成する方法を学びます。 このレッスンの前に、レッスン 1、2、および 3 を完了する必要があることに注意してください。 レッスン 3 は非常に重要な手順です。レッスン 4 の前に、SQL Server の資格情報ストアに、Windows Azure ストレージ コンテナーと関連するポリシー名、および SAS キーに関する情報を格納する必要があるためです。  
   
  データ ファイルまたはログ ファイルによって使用されるストレージ コンテナーごとに、名前がコンテナーのパスに一致する SQL Server 資格情報を作成する必要があります。 その後、Windows Azure ストレージに新しいデータベースを作成できます。  
@@ -86,7 +86,7 @@ ms.locfileid: "48063012"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **注:** 資格情報の失敗を関連付けられている SQL サーバーを削除しようとすると、コンテナーのデータ ファイルに対するアクティブな参照がある場合。 同様に、既に BLOB の特定のデータベース ファイルにリースが設定されていて、そのデータベースを削除する場合、まず、BLOB のリースを解除する必要があります。 使用することができます、リースを解約するには、 [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)します。  
+ **注:** コンテナーのデータ ファイルに対するアクティブな参照がある場合は、関連付けられている SQL Server 資格情報を削除しようとするとは失敗します。 同様に、既に BLOB の特定のデータベース ファイルにリースが設定されていて、そのデータベースを削除する場合、まず、BLOB のリースを解除する必要があります。 使用することができます、リースを解約するには、 [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)します。  
   
  この新しい機能を使用して、CREATE DATABASE ステートメントの既定値がクラウド対応データベースになるように、SQL Server を構成できます。 言い換えれば、SQL Server Management Studio でサーバー インスタンスのプロパティに既定のデータとログの場所を設定して、データベースを作成すると常にすべてのデータベース ファイル (.mdf、.ldf) が Windows Azure ストレージにページ BLOB として作成されるようにすることができます。  
   

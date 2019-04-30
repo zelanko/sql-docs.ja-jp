@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2236103c76c6af8f81b0d4004962c23adedc2eaa
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188243"
 ---
 # <a name="plan-for-map-report-support"></a>マップ レポートのサポートを計画する
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 空間データ ソースを使用するマップ レポートをサポートしています。 空間データは、SQL Server データベース、ESRI シェープファイル、または Reporting Services かレポート ビルダーを使用してインストールされたマップ ギャラリーから取得できます。 また、マップには Bing のマップ タイルの背景も表示できます。 レポート作成者には、動的と実行時に取得した、または静的と、レポート定義に埋め込まれたとして空間データまたは Bing のマップ タイルを示すレポートを作成できます。  

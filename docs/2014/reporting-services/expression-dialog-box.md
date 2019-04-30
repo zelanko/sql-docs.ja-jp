@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 074932c980ab047d734c21dfe8ba03bdb4b12393
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181464"
 ---
 # <a name="expression-dialog-box"></a>[式] ダイアログ ボックス
   使用して、**式**書き込む ダイアログ ボックス[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]の式のレポート アイテムのプロパティ。 式を使用して、色、フォント、罫線など多数のプロパティを設定できます。 実行時に、レポート プロセッサによって式が評価され、その結果がプロパティの値に置き換えられます。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188499"
 ---
 # <a name="procedure-call-escape-sequence"></a>プロシージャ呼び出しのエスケープ シーケンス
 ODBC では、プロシージャ呼び出しのエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
@@ -49,7 +49,7 @@ ODBC では、プロシージャ呼び出しのエスケープ シーケンス�
   
  *所有者名*:: =*ユーザー定義名*  
   
- *カタログ名*:: =*ユーザー定義名*  
+ *catalog-name* ::= *user-defined-name*  
   
  *カタログの区切り*:: = {*実装定義*}  
   

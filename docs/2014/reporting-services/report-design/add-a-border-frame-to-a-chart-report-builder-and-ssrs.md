@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185964"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>グラフへの枠線の追加 (レポート ビルダーおよび SSRS)
   グラフの視覚効果を高めるには、グラフの外枠に罫線の使用を検討してください。 枠線を選択するには、 **[グラフのプロパティ]** ダイアログ ボックスを使用するか、プロパティ ペインを使用します。 グラフの枠線を他のデータ領域に適用することはできません。  

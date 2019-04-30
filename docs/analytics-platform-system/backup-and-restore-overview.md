@@ -10,11 +10,11 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200959"
 ---
 # <a name="backup-and-restore"></a>バックアップと復元
 
@@ -34,7 +34,7 @@ PDW では、SQL Server のバックアップ テクノロジを使用して、�
   
 1 つまたは複数バックアップ サーバーで、顧客のネットワークに存在するデータベースのバックアップが格納されます。  PDW では、1 つのバックアップ サーバーに並列でコンピューティング ノードから直接ユーザー データベースのバックアップを書き込み、バックアップ サーバーから直接コンピューティング ノードに並列でユーザー データベースのバックアップを復元します。  
   
-バックアップは、Windows ファイル システムで、バックアップ サーバーで、一連のファイルとして格納されます。 PDW のデータベースのバックアップは、PDW にのみ復元できます。 ただし、標準の Windows ファイルのバックアップ プロセスを使用して、別の場所にバックアップ サーバーからデータベース バックアップをアーカイブできます。 バックアップ サーバーの詳細については、[取得し、構成サーバーのバックアップ](acquire-and-configure-backup-server.md)を参照してください。  
+バックアップは、Windows ファイル システムで、バックアップ サーバーで、一連のファイルとして格納されます。 PDW のデータベースのバックアップは、PDW にのみ復元できます。 ただし、標準の Windows ファイルのバックアップ プロセスを使用して、別の場所にバックアップ サーバーからデータベース バックアップをアーカイブできます。 バックアップ サーバーの詳細については、次を参照してください。[取得し、構成サーバーのバックアップ](acquire-and-configure-backup-server.md)します。  
   
 ## <a name="BackupTypes"></a>データベースのバックアップの種類
 
@@ -120,7 +120,7 @@ PDW では、SQL Server のバックアップ テクノロジを使用して、�
   
 5.  各コンピューティング ノードでは、ユーザー データベースの部分を復元します。 復元が正常に完了しないと場合のすべてのデータベース削除され、復元が正常に完了します。  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>コンピューティング ノード数がより大きな備えたアプライアンスへの復元  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>より多くの計算ノードを備えたアプライアンスへの復元  
   
 より多くの計算ノードを備えたアプライアンスにバックアップを復元すると、計算ノードの数に比例して、割り当てられるデータベースのサイズが大きくなります。  
   

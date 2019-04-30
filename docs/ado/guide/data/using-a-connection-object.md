@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184948"
 ---
 # <a name="using-a-connection-object"></a>接続オブジェクトを使用する
 開始する前に、**接続**オブジェクト、データ ソースと接続の種類に関する特定の情報を定義する必要があります。 この情報の大部分が保持している、 *ConnectionString*のパラメーター、 [Open メソッド](../../../ado/reference/ado-api/open-method-ado-connection.md)上、**接続**オブジェクト、または、 [ConnectionStringプロパティ](../../../ado/reference/ado-api/connectionstring-property-ado.md)上、**接続**オブジェクト。 接続文字列は、単一引用符で囲まれた値を使用して、セミコロンで区切られた引数と値のペアの一覧で構成されます。 以下に例を示します。  

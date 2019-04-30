@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6c21af2ef3f47c05aacf4b47673ab42a170f506
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128079"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>デスクトップ データベース ドライバーの診断
 すべてのエラーと警告をチェックするか、ドライバー マネージャーによってを部分的にチェックされませんが、ドライバーによって処理されます。 ドライバーにもマップ ネイティブ エラー、またはエラー SQLSTATEs に、データ ソースによって返されます。 記載の各関数、 *ODBC プログラマ リファレンス*条件とメッセージを指定する「診断」セクションが含まれています。  

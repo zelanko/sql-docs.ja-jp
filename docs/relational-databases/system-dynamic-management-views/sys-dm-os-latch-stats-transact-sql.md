@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048046"
 ---
-# <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
+# <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  すべてのラッチ待機に関する情報を、クラスごとに返します。  
+  クラス別に整理されたすべてのラッチ待機に関する情報を返します。  
   
 > [!NOTE]  
 >  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_latch_stats**します。  
@@ -37,8 +37,8 @@ ms.locfileid: "52407149"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|ラッチ クラスの名前。|  
-|waiting_requests_count|**bigint**|クラス内のラッチに対する待機数。 このカウンターは、ラッチ待機の開始時に増加します。|  
-|wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列は、ラッチの待機中、5 分ごとに更新されます。またラッチ待機の終了時にも更新されます。|  
+|waiting_requests_count|**bigint**|このクラス内のラッチに対する待機の数。 このカウンターは、ラッチ待機の先頭にインクリメントされます。|  
+|wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列は、ラッチの待機中に、ラッチ待機の最後に、5 分ごとに更新されます。|  
 |max_wait_time_ms|**bigint**|メモリ オブジェクトがラッチを待機した最大時間。 この値が著しく大きい場合、内部デッドロックを示している可能性があります。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52407149"
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
   
 ## <a name="remarks"></a>コメント  
- sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 状況によっては、ラッチの競合を自分で解決または緩和できます。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービスへの連絡が必要になる場合もあります。  
+ sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 いくつかの状況では、解決またはラッチの競合を緩和することができます。 ただし、状況もあります。 が必要になることにお問い合わせください[!INCLUDE[msCoName](../../includes/msconame-md.md)]カスタマー サポート サービス。  
   
  次のように `DBCC SQLPERF` を使用すると、sys.dm_os_latch_stats の内容をリセットできます。  
   
@@ -57,52 +57,52 @@ DBCC SQLPERF ('sys.dm_os_latch_stats', CLEAR);
 GO  
 ```  
   
- これは、すべてのカウンターを 0 にリセットします。  
+ これにより、すべてのカウンターが 0 にリセットされます。  
   
 > [!NOTE]  
->  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータは、統計を最後にリセットした後に累積したものか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後に累積したものです。  
+>  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータが、前回の統計がリセットされた後、または累積的な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]開始されました。  
   
 ## <a name="latches"></a>ラッチ  
- ラッチとは、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントで使用される軽量の同期オブジェクトです。 ラッチは、主にデータベース ページを同期するために使用されます。 各ラッチは、1 つのアロケーション ユニットに関連付けられています。  
+ ラッチとは、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントで使用される軽量の同期オブジェクトです。 ラッチは、データベース ページを同期する主に使用します。 各ラッチは、1 つのアロケーション ユニットに関連付けられています。  
   
- ラッチが別のスレッドによって、競合するモードで保持されており、ラッチ要求がすぐに許可されない場合は、ラッチ待機が発生します。 ロックと異なり、ラッチは操作後すぐに解放されます。書き込み操作の場合でも同様です。  
+ ラッチが別のスレッドによって、競合するモードで保持されており、ラッチ要求がすぐに許可されない場合は、ラッチ待機が発生します。 ロックとは異なり、ラッチは、書き込み操作であっても、操作の直後にリリースされます。  
   
- ラッチは、コンポーネントと使用方法に基づいて複数のクラスに分類されます。 特定クラスのラッチは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に、任意の時点でいくつでも存在できます。  
+ ラッチは、コンポーネントと使用状況に基づいたクラスにグループ化されます。 特定クラスのラッチは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に、任意の時点でいくつでも存在できます。  
   
 > [!NOTE]  
 >  sys.dm_os_latch_stats は、すぐに許可されたラッチ要求、または待機せずに失敗したラッチ要求を追跡しません。  
   
- 次の表では、さまざまなラッチ クラスについて簡単に説明します。  
+ 次の表には、さまざまなラッチ クラスの簡単な説明が含まれています。  
   
 |ラッチ クラス|説明|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で使用され、割り当てリング バッファーの作成の同期を初期化します。|  
-|ALLOC_CREATE_FREESPACE_CACHE|ヒープ用の内部空き領域キャッシュの同期を初期化するために使用します。|  
+|ALLOC_CREATE_FREESPACE_CACHE|ヒープの空き領域の内部キャッシュの同期を初期化するために使用します。|  
 |ALLOC_CACHE_MANAGER|内部の一貫性テストを同期するために使用します。|  
-|ALLOC_FREESPACE_CACHE|ヒープとバイナリ ラージ オブジェクト (BLOB) で使用できる領域を含む、ページのキャッシュへのアクセスを同期するために使用します。 このクラスのラッチの競合は、複数の接続が行をヒープまたは BLOB に同時に挿入しようとしたときに発生します。 このような競合を少なくするには、オブジェクトをパーティション分割します。 各パーティションには、独自のラッチが含まれます。 パーティション分割により、挿入が複数のラッチに分配されます。|  
-|ALLOC_EXTENT_CACHE|割り当てられていないページを含む、エクステントのキャッシュへのアクセスを同期するために使用します。 このクラスのラッチの競合は、複数の接続が、同じアロケーション ユニット内のデータ ページを同時に割り当てようとしたときに発生します。 このような競合を少なくするには、このアロケーション ユニットが属しているオブジェクトをパーティション分割します。|  
-|ACCESS_METHODS_DATASET_PARENT|並列操作中、子データセットの親データセットへのアクセスを同期するために使用します。|  
+|ALLOC_FREESPACE_CACHE|ヒープの空き領域と、ページのキャッシュへのアクセスを同期するために使用し、バイナリ ラージ オブジェクト (Blob)。 複数の接続が同時に、ヒープまたは BLOB に行を挿入しようとした場合、このクラスのラッチの競合が発生します。 このような競合を少なくするには、オブジェクトをパーティション分割します。 各パーティションは、独自のラッチを持っています。 パーティション分割すると、複数のラッチの挿入は配布します。|  
+|ALLOC_EXTENT_CACHE|割り当てられていないページを含むエクステントのキャッシュへのアクセスを同期するために使用します。 このクラスのラッチの競合は、複数の接続を同時に、同じアロケーション ユニット内のデータ ページを割り当てるときに発生することができます。 このような競合は、このアロケーション ユニットが一部であるオブジェクトをパーティション分割で短縮できます。|  
+|ACCESS_METHODS_DATASET_PARENT|並列操作中に親データセットへのアクセスをデータセットを同期するために使用します。|  
 |ACCESS_METHODS_HOBT_FACTORY|内部ハッシュ テーブルへのアクセスを同期するために使用します。|  
-|ACCESS_METHODS_HOBT|HoBt のメモリ内表記へのアクセスを同期するために使用します。|  
+|ACCESS_METHODS_HOBT|HoBt のメモリ内表現へのアクセスを同期するために使用します。|  
 |ACCESS_METHODS_HOBT_COUNT|HoBt ページおよび行カウンターへのアクセスを同期するために使用します。|  
-|ACCESS_METHODS_HOBT_VIRTUAL_ROOT|内部 B-Tree のルート ページの抽象化に対するアクセスを同期するために使用します。|  
+|ACCESS_METHODS_HOBT_VIRTUAL_ROOT|内部の B ツリーのルート ページの抽象化へのアクセスを同期するために使用します。|  
 |ACCESS_METHODS_CACHE_ONLY_HOBT_ALLOC|作業テーブルへのアクセスを同期するために使用します。|  
 |ACCESS_METHODS_BULK_ALLOC|一括アロケーター内のアクセスを同期するために使用します。|  
 |ACCESS_METHODS_SCAN_RANGE_GENERATOR|並列スキャン中、範囲ジェネレーターへのアクセスを同期するために使用します。|  
 |ACCESS_METHODS_KEY_RANGE_GENERATOR|キー範囲の並列スキャン中、先行読み取り操作へのアクセスを同期するために使用します。|  
-|APPEND_ONLY_STORAGE_INSERT_POINT|高速の追加専用ストレージ ユニット内で、挿入を同期するために使用します。|  
+|APPEND_ONLY_STORAGE_INSERT_POINT|高速の追加専用ストレージ ユニットの挿入を同期するために使用します。|  
 |APPEND_ONLY_STORAGE_FIRST_ALLOC|追加専用ストレージ ユニットの最初の割り当てを同期するために使用します。|  
-|APPEND_ONLY_STORAGE_UNIT_MANAGER|高速の追加専用ストレージ ユニット マネージャー内で、内部データ構造のアクセスを同期するために使用します。|  
-|APPEND_ONLY_STORAGE_MANAGER|高速の追加専用ストレージ ユニット マネージャー内で、圧縮操作を同期するために使用します。|  
+|APPEND_ONLY_STORAGE_UNIT_MANAGER|高速追加専用ストレージ ユニット マネージャー内の内部データ構造へのアクセスの同期に使用されます。|  
+|APPEND_ONLY_STORAGE_MANAGER|高速追加専用ストレージ ユニット マネージャーで圧縮操作を同期するために使用します。|  
 |BACKUP_RESULT_SET|並列バックアップ結果セットを同期するために使用します。|  
 |BACKUP_TAPE_POOL|バックアップ テープ プールを同期するために使用します。|  
-|BACKUP_LOG_REDO|バックアップ ログの再実行操作を同期するために使用します。|  
-|BACKUP_INSTANCE_ID|パフォーマンス モニター カウンターをバックアップするインスタンス ID の生成を同期するために使用します。|  
+|BACKUP_LOG_REDO|バックアップ ログのやり直し操作を同期するために使用します。|  
+|BACKUP_INSTANCE_ID|バックアップのパフォーマンス モニター カウンターのインスタンス Id の生成を同期するために使用します。|  
 |BACKUP_MANAGER|内部バックアップ マネージャーを同期するために使用します。|  
-|BACKUP_MANAGER_DIFFERENTIAL|DBCC を使用した差分バックアップ操作を同期するために使用します。|  
-|BACKUP_OPERATION|バックアップ操作で、データベース、ログ、ファイルのバックアップなどの内部データ構造を同期するために使用します。|  
+|BACKUP_MANAGER_DIFFERENTIAL|DBCC と差分バックアップ操作を同期するために使用します。|  
+|BACKUP_OPERATION|バックアップ操作で、データベース、ログ、またはファイルのバックアップなどの内部データ構造の同期に使用されます。|  
 |BACKUP_FILE_HANDLE|復元操作中にファイルを開く操作を同期するために使用します。|  
-|BUFFER|データベース ページへの短時間アクセスを同期するために使用します。 いずれのデータベース ページを読み取りまたは修正する場合も、事前にバッファー ラッチが必要です。 バッファー ラッチの競合によって、ホット ページや低速な I/O など、いくつかの問題が発生する場合があります。<br /><br /> このラッチ クラスは、ページ ラッチを使用するすべての状況に対応しています。 sys.dm_os_wait_stats は、ページ ラッチ待機は、I/O 操作および読み取りによって発生し、ページに対する書き込み操作間の差です。|  
+|バッファー|データベース ページへの短期的なアクセスを同期するために使用します。 読み取りや任意のデータベース ページを変更する前に、バッファー ラッチが必要です。 バッファー ラッチの競合では、ホット ページなど、いくつかの問題を示すでき、I/o が低下することができます。<br /><br /> このラッチ クラスは、ページ ラッチを使用するすべての状況に対応しています。 sys.dm_os_wait_stats は、ページ ラッチ待機は、I/O 操作および読み取りによって発生し、ページに対する書き込み操作間の差です。|  
 |BUFFER_POOL_GROW|バッファー プールの拡張操作中、内部バッファー マネージャーの同期に使用します。|  
 |DATABASE_CHECKPOINT|データベース内のチェックポイントをシリアル化するために使用します。|  
 |CLR_PROCEDURE_HASHTABLE|内部使用のみです。|  

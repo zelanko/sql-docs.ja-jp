@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200246"
 ---
 # <a name="using-statement-parameters"></a>ステートメント パラメーターの使用
   パラメーターは、ODBC アプリケーションで次の操作を可能にする SQL ステートメント内の変数です。  

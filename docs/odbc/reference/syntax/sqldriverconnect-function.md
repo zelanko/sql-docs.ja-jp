@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062410"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 関数
 **準拠**  
@@ -44,7 +44,7 @@ ms.locfileid: "53212391"
   
 -   .Dsn ファイル内の情報から構築された接続文字列を使用してデータ ソースへの接続を確立します。  
   
- 接続が確立されると、 **SQLDriverConnect**完全な接続文字列を返します。 アプリケーションでは、後続の接続要求に対して、この文字列を使用できます。 詳細については、[SQLDriverConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)を参照してください。  
+ 接続が確立されると、 **SQLDriverConnect**完全な接続文字列を返します。 アプリケーションでは、後続の接続要求に対して、この文字列を使用できます。 詳細については、次を参照してください。 [SQLDriverConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -137,7 +137,7 @@ SQLRETURN SQLDriverConnect(
 |IM011|ドライバー名が長すぎます|(DM) の場合は、属性値、**ドライバー**キーワードが 255 文字より長かった。|  
 |IM012|DRIVER キーワードの構文エラー|(DM) キーワードと値のペア、**ドライバー**キーワードには、構文エラーが含まれています。<br /><br /> (DM) 内の文字列 *\*InConnectionString*に含まれている、 **FILEDSN**キーワードが .dsn ファイルが含まれていない、**ドライバー**キーワードまたは**DSN**キーワード。|  
 |IM014|指定された DSN には、ドライバーとアプリケーション間のアーキテクチャの不一致が含まれています。|64 ビット ドライバー; に接続する DSN を使用する (DM) 32 ビット アプリケーションまたはその逆です。|  
-|IM015|ドライバーの SQLDriverConnect SQL_HANDLE_DBC_INFO_HANDLE に失敗しました|ドライバーでは、SQL_ERROR が返された場合は、ドライバー マネージャーは、アプリケーションに SQL_ERROR を返し、接続は失敗します。<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN の詳細については、[ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)を参照してください。|  
+|IM015|ドライバーの SQLDriverConnect SQL_HANDLE_DBC_INFO_HANDLE に失敗しました|ドライバーでは、SQL_ERROR が返された場合は、ドライバー マネージャーは、アプリケーションに SQL_ERROR を返し、接続は失敗します。<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。|  
 |IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
 |S1118|ドライバーが非同期通知をサポートしていません|ドライバーが非同期通知をサポートしていない場合、SQL_ATTR_ASYNC_DBC_EVENT または SQL_ATTR_ASYNC_DBC_RETCODE_PTR を設定することはできません。|  
@@ -145,7 +145,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>コメント  
  接続文字列では、次の構文があります。  
   
- *接続文字列*:: =*空の文字列*[;]&#124; *属性*[;]&#124; *属性*;*接続文字列*  
+ *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
   
  *空の文字列*:: =*属性*:: =*属性キーワード*=*属性値*&#124;ドライバー = [{}]*属性値*[}]  
   
@@ -176,7 +176,7 @@ SQLRETURN SQLDriverConnect(
 |**PWD**|ユーザー ID のパスワードがない場合は、ユーザー ID、または空の文字列に対応するパスワード (PWD =;)。|  
 |**SAVEFILE**|現時点では、成功した接続の作成で使用されるキーワードの属性値を保存する必要があります .dsn ファイルのファイル名。|  
   
- アプリケーションがデータ ソースまたはドライバーを選択する方法については、[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)を参照してください。  
+ アプリケーションがデータ ソースまたはドライバーを選択する方法については、次を参照してください。[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)します。  
   
  接続文字列では、一切のキーワードが繰り返される、ドライバーは、最初に見つかったキーワードの関連付けられた値を使用します。 場合、 **DSN**と**ドライバー**で同じ接続文字列キーワードが含まれている、ドライバー マネージャーとドライバーを使用して最初にどちらのキーワードが表示されます。  
   
@@ -231,7 +231,7 @@ SQLRETURN SQLDriverConnect(
   
 5.  ドライバーの新しい接続文字列を渡します。  
   
- .Dsn ファイルの例については、[を使用してファイル データ ソースの接続](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)を参照してください。  
+ .Dsn ファイルの例については、次を参照してください。[を使用してファイル データ ソースの接続](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)します。  
   
 ## <a name="savefile-keyword"></a>SAVEFILE キーワード  
  アプリケーションで指定された接続文字列が含まれている場合、 **SAVEFILE**キーワード、その後、ドライバー マネージャーは、.dsn ファイルで接続文字列を保存します。 ドライバー マネージャーは、次のように処理されます。  
@@ -267,14 +267,14 @@ SQLRETURN SQLDriverConnect(
   
  ユーザーが、ドライバー マネージャー、または、ドライバーによって提示されるダイアログ ボックスを取り消した場合**SQLDriverConnect** sql_no_data が返されます。  
   
- ドライバー マネージャーとドライバーが接続プロセス中にどのように対話する方法については、[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)を参照してください。  
+ ドライバー マネージャーとドライバーが接続プロセス中にどのように対話する方法については、次を参照してください。 [SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)します。  
   
  ドライバーをサポートしている場合**SQLDriverConnect**、システム情報、ドライバーのドライバー キーワード セクションを含める必要があります、 **ConnectFunctions**キーワードを 2 番目の文字は"Y"に設定します。  
   
 ## <a name="connecting-when-connection-pooling-is-enabled"></a>接続プールが有効になっているときに接続します。  
- 接続プールでは既に作成されている接続を再利用するアプリケーション。 ときに**SQLDriverConnect**を呼び出すと、ドライバー マネージャーの接続プールが指定されている環境で接続プールの一部である接続を使用して接続を確立しよう。 接続プールの詳細については、[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)を参照してください。  
+ 接続プールでは既に作成されている接続を再利用するアプリケーション。 ときに**SQLDriverConnect**を呼び出すと、ドライバー マネージャーの接続プールが指定されている環境で接続プールの一部である接続を使用して接続を確立しよう。 接続プールの詳細については、次を参照してください。 [SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)します。  
   
- アプリケーションでは、プールが有効になっている接続で SQLDisconnect を呼び出す前に、SQL_ATTR_RESET_CONNECTION を設定できます。 詳細については、[SQLSetConnectAttr 関数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)を参照してください。  
+ アプリケーションでは、プールが有効になっている接続で SQLDisconnect を呼び出す前に、SQL_ATTR_RESET_CONNECTION を設定できます。 詳細については、次を参照してください。 [SQLSetConnectAttr 関数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)します。  
   
  アプリケーションを呼び出すときに、次の制限が適用**SQLDriverConnect**プールされた接続に接続します。  
   
@@ -289,7 +289,7 @@ SQLRETURN SQLDriverConnect(
   
  データ ソースのシステム情報の既定のライブラリは翻訳が指定されている場合、ドライバーによって読み込みます。 別の翻訳のライブラリを呼び出すことによって読み込める**SQLSetConnectAttr** SQL_ATTR_TRANSLATE_LIB 属性を持つ。 呼び出して変換オプションを指定できます**SQLSetConnectAttr** SQL_ATTR_TRANSLATE_OPTION オプションを使用します。  
   
- 詳細については、[SQLDriverConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQLDriverConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)します。  
   
 ```  
 // SQLDriverConnect_ref.cpp  

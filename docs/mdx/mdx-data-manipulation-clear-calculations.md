@@ -1,5 +1,5 @@
 ---
-title: CLEAR CALCULATIONS ステートメント (MDX) |Microsoft ドキュメント
+title: CLEAR CALCULATIONS ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cdc4b2d3e948f0123eb15e38a6140e63009907bc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187666"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX データ操作 - CLEAR CALCULATIONS 
 
 
-  キューブからすべての計算を削除して、キューブの計算パスを 0 に戻します。  
+  すべての計算をキューブから削除し、計算パス 0 をキューブを返します。  
   
 ## <a name="syntax"></a>構文  
   

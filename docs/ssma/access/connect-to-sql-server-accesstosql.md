@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7a3e6b18377f01d93dfb4bdda840bc6abc0dafee
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139054"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL) への接続します。
 使用して、 **SQL サーバーへの接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行したいです。 アクセスする、 **SQL サーバーへの接続** ダイアログ ボックスで、**ファイル** メニューのをクリックして**SQL サーバーへの接続**します。  

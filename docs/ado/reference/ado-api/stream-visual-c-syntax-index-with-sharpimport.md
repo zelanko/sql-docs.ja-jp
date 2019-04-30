@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b66a3549fde85f7806443a0cf5fa1299739e6f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180716"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -58,7 +58,7 @@ HRESULT WriteText( _bstr_t Data, enum StreamWriteEnum
     Options );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 ```  
 _bstr_t GetCharset( );  

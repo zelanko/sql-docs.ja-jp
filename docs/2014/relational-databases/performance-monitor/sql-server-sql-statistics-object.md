@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183080"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
   **の** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、コンパイルの動作や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  

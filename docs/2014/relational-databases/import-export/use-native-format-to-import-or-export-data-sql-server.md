@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065753"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
   ネイティブ形式は、拡張文字や 2 バイト文字セット (DBCS) の文字を含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合に推奨します。  
@@ -64,9 +64,9 @@ ms.locfileid: "48124302"
   
 -   `sql_variant` データ  
   
-     場合`sql_variant`データがネイティブ形式のデータ ファイルに SQLVARIANT として格納されている、データでは、すべての特性が保持されます。 各データ値のデータ型を記録するメタデータが、そのデータ値と一緒に格納されます。 このメタデータは、先に同じデータ型を持つデータ値を再作成に使用`sql_variant`列。  
+     `sql_variant` データが SQLVARIANT としてネイティブ形式のデータ ファイルに格納されている場合、そのデータのすべての特性が保持されます。 各データ値のデータ型を記録するメタデータが、そのデータ値と一緒に格納されます。 このメタデータを使用して、インポート先の `sql_variant` 列に同じデータ型でデータ値を再作成します。  
   
-     変換先列のデータ型でないかどうか`sql_variant`、各データ値が暗黙的なデータ変換の通常の規則に従って、変換先列のデータ型に変換されます。 データ変換中にエラーが発生すると、現在のバッチがロールバックされます。 `char` 列間で転送される `varchar` 値と `sql_variant` 値で、コード ページの変換問題が生じている可能性があります。  
+     インポート先の列のデータ型が `sql_variant` でない場合、各データ値は、暗黙的なデータ変換の通常の規則に従ってインポート先の列のデータ型に変換されます。 データ変換中にエラーが発生すると、現在のバッチがロールバックされます。 `char` 列間で転送される `varchar` 値と `sql_variant` 値で、コード ページの変換問題が生じている可能性があります。  
   
      詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)」を参照してください。  
   

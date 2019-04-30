@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188739"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
   行識別子を要求するとき (*IdentifierType* SQL_BEST_ROWID)、 **SQLSpecialColumns** SQL_SCOPE_CURROW 以外のスコープ、要求された空の結果セット (データ行を含まない) を返します。 生成される結果セットは、列がこのスコープ内でのみ有効であることを示します。  
@@ -31,10 +31,10 @@ ms.locfileid: "53376094"
 ## <a name="sqlspecialcolumns-support-for-enhanced-date-and-time-features"></a>SQLSpecialColumns による機能強化された日付と時刻のサポート  
  値について返される列の DATA_TYPE、TYPE_NAME、COLUMN_SIZE、buffer_length 列、および decimal_digts の各日付/時刻型を参照してください。[カタログ メタデータ](../native-client-odbc-date-time/metadata-catalog.md)します。  
   
- 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="sqlspecialcolumns-support-for-large-clr-udts"></a>SQLSpecialColumns による大きな CLR UDT のサポート  
- **SQLSpecialColumns**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、[Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)を参照してください。  
+ **SQLSpecialColumns**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQLSpecialColumns 関数](https://go.microsoft.com/fwlink/?LinkId=59371)   

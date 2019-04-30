@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188513"
 ---
 # <a name="new-data-source-page-report-manager"></a>[新しいデータ ソース] ページ (レポート マネージャー)
   [新しいデータ ソース] ページを使用すると、共有データ ソース アイテムを作成できます。 共有データ ソースにより、外部のデータ ソースへの接続が定義されます。 共有データ ソースを使用すると、データ ソースの接続の設定を、そのデータ ソースを使用するレポート、モデル、およびデータ ドリブン サブスクリプションとは別に作成および保持できます。  

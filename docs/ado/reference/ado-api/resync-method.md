@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68ca8ac6d223100f437a7ba0ca8bf7776953d40a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062270"
 ---
 # <a name="resync-method"></a>Resync メソッド
 現在のデータを更新します[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、または[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクションを[レコード](../../../ado/reference/ado-api/record-object-ado.md)基になるデータベースからのオブジェクト。  
