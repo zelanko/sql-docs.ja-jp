@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238949"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>概要[!INCLUDE[name-sos](../includes/name-sos-short.md)]機能拡張
 
@@ -37,11 +37,11 @@ ms.locfileid: "53030016"
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>管理ダッシュ ボード タブのパネルの投稿
 
-詳細については、[貢献ポイント](#contribution-points)と[コンテキスト変数](#context-variables)を参照してください。
+詳細については、次を参照してください。[貢献ポイント](#contribution-points)と[コンテキスト変数](#context-variables)します。
 
 ## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 機能拡張 Api
 
-詳細については、[拡張性 Api](extensibility-apis.md)を参照してください。
+詳細については、次を参照してください。[拡張性 Api](extensibility-apis.md)します。
 
 
 ## <a name="contribution-points"></a>貢献ポイント
@@ -264,7 +264,7 @@ Dashboard.insights を使用してインサイトを登録することができ�
 
 ## <a name="context-variables"></a>コンテキスト変数
 
-Visual Studio Code とその後に Azure Data Studio でのコンテキストについては、[Extensibility](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)を参照してください。
+Visual Studio Code とその後に Azure Data Studio でのコンテキストについては、次を参照してください。 [Extensibility](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)します。
 
 Azure データ studio では、拡張機能の使用可能なデータベース接続に関する特定のコンテキストがあります。
 

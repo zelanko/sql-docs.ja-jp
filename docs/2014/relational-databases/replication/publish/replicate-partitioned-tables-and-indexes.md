@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266574"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
   大きなテーブルやインデックスをパーティション分割すると、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うと同時に、データ コレクションの整合性を維持することができるので、大きなテーブルやインデックスを管理しやすくなります。 詳細については、「 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)」を参照してください。 レプリケーションでは、パーティション テーブルとパーティション インデックスを扱う方法を指定するプロパティ セットによって、パーティション分割をサポートします。  
@@ -49,7 +49,7 @@ ms.locfileid: "52793624"
   
  レプリケーションでは、初期同期中にオブジェクトがサブスクライバーにコピーされます。 パーティション構成で PRIMARY 以外のファイル グループを使用する場合、そのファイル グループは初期同期の前にサブスクライバーに存在している必要があります。  
   
- サブスクライバーが初期化された後、データ変更がサブスクライバーに反映され、適切なパーティションに適用されます。 ただし、パーティション構成に対する変更はサポートされていません。 トランザクション レプリケーションとマージ レプリケーションでは、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME、ALTER INDEX の REBUILD WITH PARTITION ステートメントはサポートされていません。  これらに関連付けられた変更は、サブスクライバーに自動的にレプリケートされません。 ユーザーがサブスクライバー側で同様の変更を手動で行う必要があります。  
+ サブスクライバーが初期化された後、データ変更がサブスクライバーに反映され、適切なパーティションに適用されます。 ただし、パーティション構成に対する変更はサポートされていません。 トランザクション レプリケーションおよびマージ レプリケーションでは、次のコマンドをレプリケートはサポートされません。ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME、または ALTER INDEX の REBUILD WITH PARTITION ステートメント。  これらに関連付けられた変更は、サブスクライバーに自動的にレプリケートされません。 ユーザーがサブスクライバー側で同様の変更を手動で行う必要があります。  
   
 ## <a name="replication-support-for-partition-switching"></a>レプリケーションによるパーティション切り替えのサポート  
  テーブル分割の主な利点の 1 つは、パーティション間でデータのサブセットをすばやく効率的に移動できることです。 データは SWITCH PARTITION コマンドを使用して移動します。 既定では、テーブルのレプリケーションが有効な場合、SWITCH PARTITION 操作は次の理由でブロックされます。  

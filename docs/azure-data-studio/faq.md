@@ -1,5 +1,5 @@
 ---
-title: よく寄せられる質問
+title: FAQ
 titleSuffix: Azure Data Studio
 description: Azure Data Studio についてよく寄せられる質問 (FAQ)。
 ms.custom: seodec18
@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238294"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
@@ -97,7 +97,7 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |ダーク モード|はい||
 |Azure リソース エクスプ ローラー|[プレビュー]||
 |スクリプト生成ウィザード||はい
-|DACPAC のインポート||はい|
+|Import\Export DACPAC||はい|
 |オブジェクトのプロパティ||はい|
 |テーブル デザイナー (Table Designer)||はい|
 
@@ -116,7 +116,7 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |[結果をファイルに出力]||はい|
 |[結果をテキストで表示]||はい|
 |空間ビューアー||はい|
-|SQLCMD||はい|
+|sqlcmd||はい|
 |T-SQL デバッガー||はい|
 
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート

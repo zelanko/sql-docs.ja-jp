@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 33bf052e27640ee08784927351579378bffbec2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316356"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Analytics Platform System でのユーザー セッション
 適切な権限を持つログインは、これらのアクションの実行を含む、SQL Server PDW アプライアンス上のすべてのログインのセッションを管理できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "52419223"
   
 2.  結果の一覧で目的のセッションのセッション ID をクリックします。  
   
-3.  結果として得られるクエリの一覧は、セッションの最新のクエリを示します。 クエリの詳細を表示する方法については、[アクティブなクエリの監視](monitoring-active-queries.md)を参照してください。  
+3.  結果として得られるクエリの一覧は、セッションの最新のクエリを示します。 クエリの詳細を表示する方法については、次を参照してください。[アクティブなクエリの監視](monitoring-active-queries.md)します。  
   
 ### <a name="to-end-sessions-by-using-the-admin-console"></a>管理者コンソールを使用してセッションを終了するには  
   

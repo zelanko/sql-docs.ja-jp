@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232291"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL コマンド
 指定したフィールドを持つテーブルを作成します。  
@@ -47,18 +47,18 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>引数  
- テーブルを作成する&#124;DBF *TableName1*  
+ CREATE TABLE &#124; DBF *TableName1*  
  作成するテーブルの名前を指定します。 テーブルと DBF のオプションは同じです。  
   
- 名前*LongTableName*  
+ NAME *LongTableName*  
  テーブルの長い名前を指定します。 長いテーブル名がデータベースに格納されているために、データベースが開いたときにのみ、長いテーブル名を指定できます。  
   
  長い名前は、最大 128 文字を含めることができ、データベース内の短いファイル名の代わりに使用できます。  
   
- FREE  
+ 無料  
  テーブルが開いているデータベースに追加されませんを指定します。 FREE は、データベースが開いていない場合に必要はありません。  
   
- *(FieldName1 FieldType* [( *nFieldWidth* [、 *nPrecision*])]  
+ *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
  フィールド名、フィールドの型、フィールドの幅、およびフィールドの有効桁数 (小数点以下桁数の番号) をそれぞれ指定します。  
   
  *FieldType*フィールドのことを示す 1 つの文字は、[データ型](../../odbc/microsoft/visual-foxpro-field-data-types.md)します。 一部のフィールド データ型を指定することを必要と*nFieldWidth*または*nPrecision*またはその両方です。  
@@ -76,7 +76,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  確認*lExpression1*  
  フィールドの検証規則を指定します。 *lExpression1*ユーザー定義関数であることができます。 空のレコードを追加すると、されるたびに検証規則がチェックされます。 検証規則では、追加されたレコードのフィールドが空白の値が許可されていませんがある場合は、エラーが生成されます。  
   
- エラー *cMessageText1*  
+ ERROR *cMessageText1*  
  Visual FoxPro は、フィールド規則は、エラーを生成するときに表示されます。 エラー メッセージを指定します。 [参照] ウィンドウまたは編集ウィンドウ内でデータが変更されたときにのみ、メッセージが表示されます。  
   
  既定の*eExpression1*  
@@ -110,7 +110,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
    memo1 M, memo2 M NOCPTRANS)  
 ```  
   
- 主キー *eExpression2*タグ*TagName2*  
+ PRIMARY KEY *eExpression2* TAG *TagName2*  
  プライマリのインデックスを作成するを指定します。 *eExpression2*テーブルのすべてのフィールドまたはフィールドの組み合わせを指定します。 タグ*TagName2*作成されるプライマリ インデックス タグの名前を指定します。 タグのインデックス名は、最大 10 個の文字を含めることができます。  
   
  テーブルが 1 つだけのプライマリ インデックスを持てないために、フィールドのプライマリ インデックスを既に作成している場合、この句を含めることはできません。 Visual FoxPro は、テーブルの作成に主キーの 1 つ以上の句を含める場合は、エラーを生成します。  
@@ -128,10 +128,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  参照*TableName3*[タグ*TagName5*]  
  永続的な関係を確立する親テーブルを指定します。 タグを含める*TagName5*親テーブルのインデックス タグに基づく関係を確立します。 タグのインデックス名は、最大 10 個の文字を含めることができます。 タグを省略した場合、既定で*TagName5、* 親テーブルのプライマリ インデックスのキーを使用して関係を確立します。  
   
- 確認*eExpression2*[エラー *cMessageText2*]  
+ CHECK *eExpression2*[ERROR *cMessageText2*]  
  テーブルの検証規則を指定します。 エラー *cMessageText2* Visual FoxPro は、テーブルの検証ルールが実行されたときに表示されます。 エラー メッセージを指定します。 データ [参照] ウィンドウで変更されたかウィンドウを編集する場合にのみ、メッセージが表示されます。  
   
- 配列から*ArrayName*  
+ FROM ARRAY *ArrayName*  
  既存の名前、型、有効桁数、およびテーブル内の各フィールドの小数点以下桁数で構成される配列の名前を指定します。 配列の内容を定義すること、 **AFIELDS**() 関数。  
   
 ## <a name="remarks"></a>コメント  
@@ -151,7 +151,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |ODBC 構文|Visual FoxPro 構文|  
 |-----------------|--------------------------|  
-|CREATE TABLE*ベース テーブル名*<br /><br /> (*列識別子のデータ型*<br /><br /> [NULL 以外]<br /><br /> [、*列識別子のデータ型*<br /><br /> [NOT NULL]...)|テーブルを作成する*TableName1* [名前*LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [、 *nPrecision*])]<br /><br /> [NULL 以外])|  
+|CREATE TABLE *base-table-name*<br /><br /> (*列識別子のデータ型*<br /><br /> [NULL 以外]<br /><br /> [、*列識別子のデータ型*<br /><br /> [NOT NULL]...)|CREATE TABLE *TableName1* [NAME *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NULL 以外])|  
   
  ドライバーを使用してテーブルを作成するときに、ドライバーは、他のユーザーがテーブルにアクセスできるように作成後すぐに、テーブルを閉じます。 これは、Visual FoxPro は、テーブルを作成時にのみ開いたままにするとは異なります。 ただし、CREATE TABLE ステートメントを含む、データ ソースのストアド プロシージャが実行されたテーブルが開いたままです。  
   

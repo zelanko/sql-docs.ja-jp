@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242295"
 ---
 # <a name="diagnostics"></a>診断
 ODBC 関数では、2 つの方法で診断情報を返します。 リターン コードでは、全体的な成功または失敗、関数の診断レコードが、関数に関する詳細情報を提供に示します。 関数が成功した場合でも、少なくとも 1 つの診断レコードのヘッダー レコード - が返されます。  

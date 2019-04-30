@@ -1,5 +1,5 @@
 ---
-title: DROP SET ステートメント (MDX) |Microsoft ドキュメント
+title: DROP SET ステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284964"
 ---
-# <a name="mdx-data-definition---drop-set"></a>MDX データ定義にドロップ セット
+# <a name="mdx-data-definition---drop-set"></a>MDX データ操作 - DROP SET
 
 
   名前付きセットを削除します。  
@@ -35,10 +35,10 @@ DROP [SESSION] SET
   
 ## <a name="arguments"></a>引数  
  *Cube_Name*  
- キューブの名前を指定する有効な文字列式です。  
+ キューブの名前を指定する有効な文字列式を指定します。  
   
  *Set_Name*  
- 削除する名前付きセットの名前を指定する有効な文字列式です。  
+ 削除する名前付きセットの名前を提供する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
  名前付きセットの詳細については、「[MDX での名前付きセットの作成 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)」をご覧ください。  

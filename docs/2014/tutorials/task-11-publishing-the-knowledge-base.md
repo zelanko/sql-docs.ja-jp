@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 345dd3670fe42789907a567fce4df4ad34ce3cd3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222493"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>タスク 11:ナレッジ ベースをパブリッシュする
   ここでは、ナレッジ ベースをパブリッシュします。 パブリッシュされたナレッジ ベースは、データ品質プロジェクトでのクレンジングまたは照合アクティビティに使用できます。  

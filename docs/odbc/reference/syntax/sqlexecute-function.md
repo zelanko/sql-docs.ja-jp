@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259242"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 関数
 **準拠**  
@@ -92,7 +92,7 @@ SQLRETURN SQLExecute(
 |HY090|文字列またはバッファーの長さが無効です。|パラメーターの値の設定で**SQLBindParameter**が null ポインターの場合、パラメーターの長さの値が 0、SQL_NULL_DATA、SQL_DATA_AT_EXEC、SQL_DEFAULT_PARAM SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> パラメーターの値の設定で**SQLBindParameter**、null ポインターでした; C データ型が SQL_C_BINARY または SQL_C_CHAR; およびパラメーターの長さの値が 0 未満の値がでした SQL_NTS、SQL_NULL_DATA、SQL_DEFAULT_PARAM、または SQL_DATA_AT_EXEC、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> パラメーターの長さの値制約を受けます**SQLBindParameter** SQL_DATA_AT_EXEC に設定されました SQL 型が SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型では; および SQL_NEED_LONG_DATA_LEN 情報。入力**SQLGetInfo** "Y"でした。|  
 |HY105|無効なパラメーターの型|引数が指定された値*InputOutputType*で**SQLBindParameter** SQL_PARAM_OUTPUT、パラメーターが入力パラメーターをでした。|  
 |HY109|無効なカーソルの位置|準備されたステートメントが位置指定の update または delete ステートメントと、カーソルが配置された (によって**SQLSetPos**または**SQLFetchScroll**) の行に削除されたかをフェッチできませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|SQL_ATTR_CURSOR_TYPE、SQL_ATTR_CONCURRENCY ステートメント属性の現在の設定の組み合わせが、ドライバーまたはデータ ソースでサポートされていません。<br /><br /> SQL_ATTR_USE_BOOKMARKS ステートメント属性は SQL_UB_VARIABLE に設定されており、SQL_ATTR_CURSOR_TYPE ステートメント属性は、ドライバーがブックマークをできません、カーソルの種類に設定されました。|  
 |HYT00|タイムアウトが発生しました|データ ソースには、結果セットが返される前に、クエリのタイムアウト期間が終了しました。 によって、タイムアウト期間が設定されます**SQLSetStmtAttr**、SQL_ATTR_QUERY_TIMEOUT します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
@@ -103,11 +103,11 @@ SQLRETURN SQLExecute(
  **SQLExecute**によって返される任意の SQLSTATE を返すことができます**SQLPrepare**を基に、データ ソースが、ステートメントに関連付けられた SQL ステートメントと評価される場合。  
   
 ## <a name="comments"></a>コメント  
- **SQLExecute**によって準備されたステートメントが実行される**SQLPrepare**します。 アプリケーションを処理するかへの呼び出しから結果を破棄した後**SQLExecute**、アプリケーションが呼び出すことができます**SQLExecute**新しいパラメーター値をもう一度使用します。 準備実行の詳細については、[準備された実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)を参照してください。  
+ **SQLExecute**によって準備されたステートメントが実行される**SQLPrepare**します。 アプリケーションを処理するかへの呼び出しから結果を破棄した後**SQLExecute**、アプリケーションが呼び出すことができます**SQLExecute**新しいパラメーター値をもう一度使用します。 準備実行の詳細については、次を参照してください。[準備された実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)します。  
   
  実行する、**選択**ステートメントが複数回、アプリケーションが呼び出す必要があります**SQLCloseCursor**の前に、**選択**ステートメント。  
   
- (明示的なトランザクションの開始に使用が必要) 手動コミット モードでのデータ ソースが、トランザクションは既に開始されていない場合は、ドライバーは、SQL ステートメントを送信する前に、トランザクションを開始します。 詳細については、[トランザクション](../../../odbc/reference/develop-app/transactions-odbc.md)を参照してください。  
+ (明示的なトランザクションの開始に使用が必要) 手動コミット モードでのデータ ソースが、トランザクションは既に開始されていない場合は、ドライバーは、SQL ステートメントを送信する前に、トランザクションを開始します。 詳細については、次を参照してください。[トランザクション](../../../odbc/reference/develop-app/transactions-odbc.md)です。  
   
  アプリケーションで使用する場合**SQLPrepare**を準備して**SQLExecute**を送信する、**コミット**または**ロールバック**ステートメントでは、ことはできませんDBMS の製品間で相互運用可能です。 トランザクションをロールバックまたはコミットは、呼び出す**SQLEndTran**します。  
   
@@ -115,7 +115,7 @@ SQLRETURN SQLExecute(
   
  場合**SQLExecute**検索更新、挿入、またはデータ ソースへの呼び出しですべての行には影響しません delete ステートメントを実行します。 **SQLExecute** sql_no_data が返されます。  
   
- SQL_ATTR_PARAMSET_SIZE ステートメント属性の値が 1 より大きい場合、SQL ステートメントには、少なくとも 1 つのパラメーター マーカーが含まれています**SQLExecute** 、配列内のパラメーター値のセットごとに、SQL ステートメントを実行します。によって示される、  *\*ParameterValuePtr*への呼び出しで引数**SQLBindParameter**します。 詳細については、[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)を参照してください。  
+ SQL_ATTR_PARAMSET_SIZE ステートメント属性の値が 1 より大きい場合、SQL ステートメントには、少なくとも 1 つのパラメーター マーカーが含まれています**SQLExecute** 、配列内のパラメーター値のセットごとに、SQL ステートメントを実行します。によって示される、  *\*ParameterValuePtr*への呼び出しで引数**SQLBindParameter**します。 詳細については、次を参照してください。[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)します。  
   
  ブックマークが有効になっており、クエリが実行されるブックマークをサポートすることはできません、ドライバーが属性値を変更し、SQLSTATE 01S02 を返すことでブックマークをサポートしている環境を強制的に試行する必要があります (オプションの値が変更されました)。 属性を変更できない場合、ドライバーは SQLSTATE HY024 を返す必要があります (無効な属性値)。  
   

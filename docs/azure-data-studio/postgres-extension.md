@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL 拡張機能 (プレビュー)
+title: PostgreSQL の拡張機能 (プレビュー)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用の PostgreSQL 拡張機能 (プレビュー)
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: e25dd1c244766e1409e14747722fe53b3583c9a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252829"
 ---
-# <a name="postgresql-extension-preview"></a>PostgreSQL 拡張機能 (プレビュー)
+# <a name="postgresql-extension-preview"></a>PostgreSQL の拡張機能 (プレビュー)
 
 PostgreSQL 拡張機能 (プレビュー) を使用するへの接続、照会、および Postgres Azure Data Studio の機能を使用して開発できます。 
 
@@ -35,7 +35,7 @@ PostgreSQL で使用できる Azure Data Studio 機能は次のとおりです�
 
 ## <a name="install-the-postgresql-extension-preview"></a>PostgreSQL 拡張機能 (プレビュー) のインストールします。
 
-Azure データ Studio がインストールされていない場合は、その[インストール手順](download.md)を参照してください。
+Azure データ Studio がインストールされていない場合は、次を参照してください。 その[インストール手順](download.md)します。
 
 1. Azure Data Studio のサイド バーから拡張機能アイコンを選択します。
    ![拡張機能のアイコン](media/extensions/postgresql-extension/extensions-icon.png)

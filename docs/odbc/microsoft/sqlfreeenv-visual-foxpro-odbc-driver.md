@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b908c66a11287b134c10935bfef9519b6d9a0425
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313216"
 ---
 # <a name="sqlfreeenv-visual-foxpro-odbc-driver"></a>SQLFreeEnv (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  Visual FoxPro ODBC ドライバーを終了し、ドライバーに関連付けられているすべてのメモリを解放します。  
   
- 詳細については、[SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md)で、 *ODBC プログラマ リファレンス*を参照してください。
+ 詳細については、次を参照してください。 [SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md)で、 *ODBC プログラマ リファレンス*します。

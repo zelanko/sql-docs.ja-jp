@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260819"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>[全般] プロパティ ページ、レポート (レポート マネージャー)
   レポートの [全般] プロパティ ページでは、レポート定義の名前変更、削除、移動、または置換を行うことができます。 また、このページを使用して、リンク レポートを作成することもできます。 レポートの作成者または変更者、および変更日時の詳細がページの上部に表示されます。  

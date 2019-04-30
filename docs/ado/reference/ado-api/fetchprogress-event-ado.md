@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258969"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress イベント (ADO)
 **FetchProgress**に現在取得された複数行の数を報告する時間のかかる非同期操作中に定期的にイベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  

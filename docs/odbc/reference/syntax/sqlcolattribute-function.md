@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226407"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 関数
 **準拠**  
@@ -108,7 +108,7 @@ SQLRETURN SQLColAttribute (
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|(DM)  *\*CharacterAttributePtr*文字の文字列と*BufferLength* SQL_NTS 等しくもありませんが、0 より小さいをでした。|  
 |HY091|無効な記述子フィールドの識別子|引数が指定された値*FieldIdentifier*が定義されている値のいずれかと、実装定義の値でした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|対応していないドライバー|引数が指定された値*FieldIdentifier*ドライバーによってサポートされていませんでした。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
@@ -138,7 +138,7 @@ SQLRETURN SQLColAttribute (
   
 -   場合、 **#define** ODBC 2 の値 *。x* *FieldIdentifier*と同じ、 **#define** ODBC 3 の値 *。x* *FieldIdentifier*、関数呼び出しで値が渡されるだけです。  
   
--   **#Define** ODBC 2 の値 *。x* *FieldIdentifiers* SQL_COLUMN_LENGTH、SQL_COLUMN_PRECISION、および SQL_COLUMN_SCALE が異なる、 **#define** ODBC 3 の値 *。x* *FieldIdentifiers* SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_LENGTH します。 ODBC 2。*x*ドライバーでは、ODBC 2 がサポートのみ必要があります *。x*値。 ODBC 3。*x*ドライバーは、これらの 3 つの"SQL_COLUMN"と"SQL_DESC"の両方の値をサポートする必要があります*FieldIdentifiers*します。 有効桁数、小数点、および長さは、ODBC 3 で異なる方法で定義されるため、これらの値が異なります。*x*よりも ODBC 2 *。x*します。 詳細については、[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)を参照してください。  
+-   **#Define** ODBC 2 の値 *。x* *FieldIdentifiers* SQL_COLUMN_LENGTH、SQL_COLUMN_PRECISION、および SQL_COLUMN_SCALE が異なる、 **#define** ODBC 3 の値 *。x* *FieldIdentifiers* SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_LENGTH します。 ODBC 2。*x*ドライバーでは、ODBC 2 がサポートのみ必要があります *。x*値。 ODBC 3。*x*ドライバーは、これらの 3 つの"SQL_COLUMN"と"SQL_DESC"の両方の値をサポートする必要があります*FieldIdentifiers*します。 有効桁数、小数点、および長さは、ODBC 3 で異なる方法で定義されるため、これらの値が異なります。*x*よりも ODBC 2 *。x*します。 詳細については、次を参照してください。[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)します。  
   
 -   場合、 **#define** ODBC 2 の値 *。x* *FieldIdentifier*とは異なる、 **#define** ODBC 3 の値 *。x* *FieldIdentifier*、として発生数、名前、および null 許容の値、関数呼び出しで値が対応する値にマップされます。 SQL_COLUMN_COUNT を SQL_DESC_COUNT にマップするなど、あり SQL_DESC_COUNT はマッピングの方向に応じて、SQL_COLUMN_COUNT にマップされます。  
   
@@ -159,8 +159,8 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|列がデータ ソースに固有である固定有効桁数とスケールを 0 以外の場合は SQL_TRUE にします。<br /><br /> 列にデータ ソースに固有である固定有効桁数とスケールを 0 以外の値がない場合は sql_false になります。|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|列のラベルまたはタイトル。 たとえば、EmpName という名前の列は従業員名ラベルを付けることがあります。 またはエイリアスを持つという場合があります。<br /><br /> 列がラベルを持たない場合、列名が返されます。 列がラベルが付いていない、名前のない場合は、空の文字列が返されます。|  
 |SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|いずれかである数値の値を文字の文字列またはバイナリ データの最大値または実際の文字の長さを入力します。 固定長データ型の場合は、最大文字長または可変長データ型の実際の文字の長さになります。 その値は、常に文字列を終了する null 終了バイトを除外します。<br /><br /> この情報は、IRD の SQL_DESC_LENGTH レコード フィールドから返されます。<br /><br /> 長さの詳細については、次を参照してください[列のサイズ、10 進数字、転送オクテット長、および表示サイズ](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)付録 d:。データ型。|  
-|SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|この varchar (128) レコードのフィールドには、このデータ型のリテラルのプレフィックスとして、ドライバーが認識できる文字が含まれています。 このフィールドには、空の文字列データ型のリテラル プレフィックスは適用されませんが含まれています。 詳細については、[リテラル プレフィックスおよびサフィックス](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)を参照してください。|  
-|SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|この varchar (128) レコードのフィールドには、このデータ型のリテラルのサフィックスとして、ドライバーが認識できる文字が含まれています。 このフィールドには、空の文字列データ型のリテラル サフィックスは適用されませんが含まれています。 詳細については、[リテラル プレフィックスおよびサフィックス](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)を参照してください。|  
+|SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|この varchar (128) レコードのフィールドには、このデータ型のリテラルのプレフィックスとして、ドライバーが認識できる文字が含まれています。 このフィールドには、空の文字列データ型のリテラル プレフィックスは適用されませんが含まれています。 詳細については、次を参照してください。[リテラル プレフィックスおよびサフィックス](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)します。|  
+|SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|この varchar (128) レコードのフィールドには、このデータ型のリテラルのサフィックスとして、ドライバーが認識できる文字が含まれています。 このフィールドには、空の文字列データ型のリテラル サフィックスは適用されませんが含まれています。 詳細については、次を参照してください。[リテラル プレフィックスおよびサフィックス](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)します。|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|この varchar (128) レコードのフィールドには、データ型の正規名と異なる可能性があるデータ型の任意のローカライズされた (ネイティブ言語) 名前が含まれています。 ローカライズされた名前がない場合は、空の文字列が返されます。 このフィールドは、表示目的でのみです。 文字列の文字セットは、ロケールに依存するでは通常、サーバーの既定の文字セット。|  
 |SQL_DESC_NAME (ODBC 3.0)|*CharacterAttributePtr*|列の別名、適用される場合。 列の別名が適用されない場合は、列名が返されます。 どちらの場合は、SQL_DESC_UNNAMED ができませんに設定されます。 列名がありませんまたは列の別名がある場合は、空の文字列が返され、SQL_DESC_UNNAMED が SQL_UNNAMED に設定されています。<br /><br /> この情報は、IRD の SQL_DESC_NAME レコード フィールドから返されます。|  
 |SQL_DESC_NULLABLE (ODBC 3.0)|*NumericAttributePtr*|Sql _ null 許容列の NULL 値であることができる場合SQL_NO_NULLS 列に NULL 値がない場合または、SQL_NULLABLE_UNKNOWN 列が NULL 値を受け入れるかどうかが不明である場合。<br /><br /> この情報は、IRD の SQL_DESC_NULLABLE レコード フィールドから返されます。|  

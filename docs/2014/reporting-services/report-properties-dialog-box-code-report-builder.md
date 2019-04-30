@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40e3bdb096f6e755d65c64d99774cbc0bc606c94
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302396"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>[コード] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   **[レポートのプロパティ]** ダイアログ ボックスの **[コード]** を選択すると、レポート内の式によって使用されるカスタム コードを定義できます。  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259395"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 関数
 **SQLDataSourceToDriver** supportstranslations ODBC ドライバー。 ODBC 対応のアプリケーションではこの関数は呼び出されませんアプリケーション要求経由で翻訳**SQLSetConnectAttr**します。 関連付けられているドライバー、 *ConnectionHandle*で指定されている**SQLSetConnectAttr**ドライバーにデータ ソースから送られて、すべてのデータの翻訳を実行する指定された DLL を呼び出します。 ODBC 初期化ファイルには、既定のトランスレーター DLL を指定できます。  
@@ -78,7 +78,7 @@ BOOL SQLDataSourceToDriver(
   
  *PcbValueOut*引数が null ポインターを指定できます。  
   
- *後*  
+ *szErrorMsg*  
  [出力]エラー メッセージの記憶域へのポインター。 これは、変換が失敗しない限り、空の文字列です。  
   
  *cbErrorMsgMax*  
@@ -101,7 +101,7 @@ BOOL SQLDataSourceToDriver(
   
  場合**SQLDataSourceToDriver**変換中にデータの切り捨てが発生したは、FALSE を返します。 場合*pcbValueOut* (出力バッファーに返される使用可能なバイト数) がより大きい*cbValueOutMax* (出力バッファーの長さ)、切り捨てが発生しました。 ドライバーは、切り捨てが許容されるかどうかを判断する必要があります。 切り捨てが発生しなかった場合、 **SQLDataSourceToDriver**別のエラーにより FALSE が返されます。 いずれの場合も、特定のエラー メッセージが返される*後*します。  
   
- データの翻訳の詳細については、[翻訳の Dll](../../../odbc/reference/develop-app/translation-dlls.md)を参照してください。  
+ データの翻訳の詳細については、次を参照してください。[翻訳の Dll](../../../odbc/reference/develop-app/translation-dlls.md)します。  
   
 ## <a name="related-functions"></a>関連する関数  
   

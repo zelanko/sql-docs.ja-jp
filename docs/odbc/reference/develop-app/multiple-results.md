@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254170"
 ---
 # <a name="multiple-results"></a>複数の結果
 A*結果*何かによって返されるデータ ソース、ステートメントが実行された後にします。 ODBC には 2 つの種類の結果: 結果セットと、行の数。 *行数*は、更新によって影響を受ける行の数は、削除、またはステートメントを挿入します。 説明されているバッチ、 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)、複数の結果を生成することができます。  
@@ -31,8 +31,8 @@ A*結果*何かによって返されるデータ ソース、ステートメン�
   
 |バッチの種類|行の数|結果セット|  
 |----------------|----------------|-----------------|  
-|明示的なバッチ|[A] SQL_BATCH_ROW_COUNT|-[b]。|  
-|手順|[A] SQL_BATCH_ROW_COUNT|-[b]。|  
+|明示的なバッチ|SQL_BATCH_ROW_COUNT[a]|-[b]。|  
+|手順|SQL_BATCH_ROW_COUNT[a]|-[b]。|  
 |パラメーターの配列|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [a] 行のバッチ内の数を生成するステートメントはサポートされている可能性があります、まだ行カウントの戻り値はサポートされません。 SQL_BATCH_SUPPORT オプション**SQLGetInfo**を示すかどうかの行の数を生成するステートメントがバッチで許可されている; SQL_BATCH_ROW_COUNTS オプションでは、これらの行カウントがアプリケーションに返されるかどうかを示します。  

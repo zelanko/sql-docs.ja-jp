@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 72b6171864c0ab801e89d3eba5a19ff61031a81e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253288"
 ---
 # <a name="assessment-report-mysqltosql"></a>評価レポート (MySQLToSQL)
 評価レポート ウィンドウには、データベース オブジェクトの変換の結果が表示されます。[!INCLUDE[tsql](../../includes/tsql-md.md)]構文、およびヘルプの複雑さと、移行プロジェクトのコストを見積もることができます。  
@@ -26,7 +26,7 @@ ms.locfileid: "47762720"
   
 |||  
 |-|-|  
-|**項目**|**定義**|  
+|**項目**|**[定義]**|  
 |**変換の統計情報**|ステートメントの種類別の変換の統計を示します。 このウィンドウが表示されるは、スキーマなどのグループ オブジェクトまたは左側のウィンドウでコードがないオブジェクトを選択します。|  
 |**カテゴリ別のオブジェクト**|カテゴリ別のオブジェクトの数を示します。 このウィンドウが表示されるは、スキーマなどのグループ オブジェクト場合にのみまたは左側のウィンドウでコードがないオブジェクトを選択します。|  
 |**統計**|選択したオブジェクトの変換の統計情報を示します。 このペインは、コードの個々 のオブジェクトが左側のウィンドウで選択したときにだけ表示されます。 展開する必要があります**統計**をすぐに、**ソース**ウィンドウで、このウィンドウを表示します。|  

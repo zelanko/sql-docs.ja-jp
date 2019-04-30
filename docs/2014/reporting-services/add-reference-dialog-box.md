@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231289"
 ---
 # <a name="add-reference-dialog-box"></a>[参照の追加] ダイアログ ボックス
   **[参照の追加]** ダイアログ ボックスを使用すると、カスタム アセンブリや [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] コンポーネントへの参照をレポートに追加できます。 アセンブリ参照を追加すると、アセンブリまたはコンポーネント内のクラスやメソッドへの完全修飾参照を含む式や埋め込みのカスタム コードを記述できます。 詳細については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」または「[レポートにアセンブリへの参照を追加する (SSRS)](report-design/add-an-assembly-reference-to-a-report-ssrs.md)」を参照してください。  

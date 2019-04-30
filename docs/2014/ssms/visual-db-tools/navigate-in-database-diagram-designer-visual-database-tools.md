@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254458"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナー内でのナビゲーション (Visual Database Tools)
   データベース ダイアグラム デザイナーでの作業には、キーボードとマウスが使用できます。 データベース ダイアグラム デザイナーで使用する特定の方法については、次の表を参照してください。  
   
-|**To**|**ショートカット キー**|  
+|**変換先**|**ショートカット キー**|  
 |------------|---------------|  
 |データベース ダイアグラムのメニューにアクセスする|Alt + M|  
 |テーブルとリレーションシップ間で移動する (可能な場合)|Tab または Shift + Tab|  

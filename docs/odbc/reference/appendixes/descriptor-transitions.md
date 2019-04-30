@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240979"
 ---
 # <a name="descriptor-transitions"></a>記述子の遷移
 ODBC 記述子では、次の 3 つの状態があります。  
@@ -35,10 +35,10 @@ ODBC 記述子では、次の 3 つの状態があります。
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙的|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
-|D1i [1]|--|--|  
-|D1e [2]|--|--|  
+|D1i[1]|--|--|  
+|D1e[2]|--|--|  
   
  [1] この行は、移行を示しています。 ときに*HandleType* sql_handle_stmt としてでした。  
   
@@ -46,13 +46,13 @@ ODBC 記述子では、次の 3 つの状態があります。
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙的|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |(組み込み)|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙的|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
 |(組み込み)[2]|(HY017)|D0|  
@@ -63,13 +63,13 @@ ODBC 記述子では、次の 3 つの状態があります。
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField および SQLGetDescRec  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙的|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |(組み込み)|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField および SQLSetDescRec  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙的|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |(組み込み)[1]|--|--|  
   
@@ -77,6 +77,6 @@ ODBC 記述子では、次の 3 つの状態があります。
   
 ## <a name="all-other-odbc-functions"></a>他のすべての ODBC 関数  
   
-|D0<br /><br /> 未割り当て|D1i<br /><br /> Implicit|D1e<br /><br /> 明示|  
+|D0<br /><br /> 未割り当て|D1i<br /><br /> 暗黙的|D1e<br /><br /> 明示|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

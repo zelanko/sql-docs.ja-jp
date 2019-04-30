@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259319"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 関数
 **準拠**  
@@ -50,13 +50,13 @@ SQLRETURN SQLFreeStmt(
  *Option*  
  [入力]次のオプションのいずれか:  
   
- SQL _ 閉じる:関連付けられているカーソルをクローズ*StatementHandle* (定義されている) 場合と、保留中のすべての結果を破棄します。 アプリケーションが実行することによってこのカーソルを後で再度ことができます、**選択**同じまたは別のパラメーター値を使用してステートメントです。 カーソルが開いていない場合、このオプションは、アプリケーションに影響を与えません。 **SQLCloseCursor**カーソルを閉じるには呼び出すこともできます。 詳細については、[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)を参照してください。  
+ SQL _ 閉じる:関連付けられているカーソルをクローズ*StatementHandle* (定義されている) 場合と、保留中のすべての結果を破棄します。 アプリケーションが実行することによってこのカーソルを後で再度ことができます、**選択**同じまたは別のパラメーター値を使用してステートメントです。 カーソルが開いていない場合、このオプションは、アプリケーションに影響を与えません。 **SQLCloseCursor**カーソルを閉じるには呼び出すこともできます。 詳細については、次を参照してください。[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)します。  
   
  SQL_DROP:このオプションは非推奨とされます。 呼び出し**SQLFreeStmt**で、*オプション*SQL_DROP のマップをドライバー マネージャーで[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
   
- SQL_UNBIND:によってバインドされるすべての列バッファーを解放する 0 に ARD の SQL_DESC_COUNT フィールド セット**SQLBindCol**の指定された*StatementHandle*します。 これは、バインドは解除されません。 ブックマーク列そのためには、ブックマーク列 ARD の SQL_DESC_DATA_PTR フィールドが NULL に設定されます。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、操作に影響する記述子を共有するすべてのステートメントのバインドに注目してください。 詳細については、[の概要を取得する結果の (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)を参照してください。  
+ SQL_UNBIND:によってバインドされるすべての列バッファーを解放する 0 に ARD の SQL_DESC_COUNT フィールド セット**SQLBindCol**の指定された*StatementHandle*します。 これは、バインドは解除されません。 ブックマーク列そのためには、ブックマーク列 ARD の SQL_DESC_DATA_PTR フィールドが NULL に設定されます。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、操作に影響する記述子を共有するすべてのステートメントのバインドに注目してください。 詳細については、次を参照してください。[の概要を取得する結果の (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)します。  
   
- SQL_RESET_PARAMS:0 に設定すべてのパラメーター バッファーを解放する、APD の SQL_DESC_COUNT フィールドを設定します**SQLBindParameter**の指定された*StatementHandle*します。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、この操作は、記述子を共有するすべてのステートメントのバインディングに反映されます。 詳細については、[パラメーターのバインド](../../../odbc/reference/develop-app/binding-parameters-odbc.md)を参照してください。  
+ SQL_RESET_PARAMS:0 に設定すべてのパラメーター バッファーを解放する、APD の SQL_DESC_COUNT フィールドを設定します**SQLBindParameter**の指定された*StatementHandle*します。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、この操作は、記述子を共有するすべてのステートメントのバインディングに反映されます。 詳細については、次を参照してください。[パラメーターのバインド](../../../odbc/reference/develop-app/binding-parameters-odbc.md)します。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
@@ -81,7 +81,7 @@ SQLRETURN SQLFreeStmt(
  解放するとします。 アプリケーションが、ステートメント ハンドルを使用しないでください。ドライバー マネージャーでは、関数呼び出しでハンドルの有効性はチェックされません。  
   
 ## <a name="example"></a>例  
- ハンドルを解放する場合は、適切なプログラミング手法を勧めします。 ただし、わかりやすくするために、次の例はハンドルの割り当てを解放するコードを含まれません。 ハンドルを解放する方法の例は、[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)を参照してください。  
+ ハンドルを解放する場合は、適切なプログラミング手法を勧めします。 ただし、わかりやすくするために、次の例はハンドルの割り当てを解放するコードを含まれません。 ハンドルを解放する方法の例は、次を参照してください。 [SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
   
 ```  
 // SQLFreeStmt.cpp  

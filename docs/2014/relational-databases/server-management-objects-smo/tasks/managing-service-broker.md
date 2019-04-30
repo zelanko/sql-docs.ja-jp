@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226206"
 ---
 # <a name="managing-service-broker"></a>Service Broker の管理
   SMO では、[!INCLUDE[ssSB](../../../includes/sssb-md.md)] オブジェクトは `Microsoft.SqlServer.Management.Smo.Broker` 名前空間にあり、この名前空間は Microsoft.SqlServer.Smo.dll への参照を必要とします。 クラス情報のサポートには、Microsoft.SqlServer.ServiceBrokerEnum.dll への参照も必要です。  

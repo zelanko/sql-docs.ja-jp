@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231364"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server のコンテナーの高可用性
 
@@ -88,7 +88,7 @@ SQL Server 2019 では、Kubernetes でコンテナーの可用性グループ�
 
 一般に、可用性グループのフェールオーバー時間は、最大 10 分間は、コンテナーを復旧する単一のインスタンスに対してフェールオーバー時間 (秒単位) で計測されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Kubernetes Service (AKS) での SQL Server コンテナーを展開するには、これらの例を参照してください。
 

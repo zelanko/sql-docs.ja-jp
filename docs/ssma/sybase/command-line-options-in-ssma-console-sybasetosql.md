@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240164"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA コンソールのコマンド ライン オプション (SybaseToSQL)
 Microsoft は、堅牢なコマンド ライン オプションを実行し、制御 SSMA アクティビティのセットを提供します。 次のセクションでは、同じについて説明します。  
@@ -169,7 +169,7 @@ SSMA コンソールのコマンド ライン オプションの表を参照し�
   
 -   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)します。  
   
--   レポートを生成するため、[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)を参照してください。  
+-   レポートを生成するため、次を参照してください。[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)します。  
   
--   コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)を参照してください。  
+-   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)します。  
   

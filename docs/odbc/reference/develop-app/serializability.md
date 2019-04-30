@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251462"
 ---
 # <a name="serializability"></a>シリアル化可能性
 理想的には、トランザクションをする必要があります*シリアル化可能な*します。 トランザクションといいます直列の実行の結果とは同時に実行されるトランザクションの結果が同じ場合、シリアル化可能で、もう一方の後に、1 つ。 トランザクションには最初に、実行、結果は、トランザクションの任意の混在が反映されませんするのみは重要はありません。  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280847"
 ---
 # <a name="connection-handles"></a>接続ハンドル
 A*接続*ドライバーとデータ ソースで構成されます。 接続ハンドルでは、各接続を識別します。 接続ハンドルでは、ドライバーを使用するだけでなく、ドライバーを使用するデータ ソースを定義します。 ODBC ドライバー マネージャー (ドライバー) を実装するコードのセグメント内では、接続ハンドルは、次の接続情報を格納する構造体を識別します。  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222597"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>タスク 13:データを書き込む OLE DB 変換先を MDS ステージング テーブルに追加する
   これで、追加した**ImportType**と**BatchTag**を経由して送信を MDS ステージング用に準備ができたら、すべてのレコード値。 このタスクでデータを書き込む OLE DB Destination を使用する**stg.supplier_Leaf**ステージング テーブル。  

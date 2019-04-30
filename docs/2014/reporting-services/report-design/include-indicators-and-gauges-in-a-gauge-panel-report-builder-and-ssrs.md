@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 848eb1bc39b45d76e1e1ffd97fbd05d557a740a0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225005"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS)
   ゲージ パネルは、1 つ以上のゲージとインジケーターを格納する最上位のコンテナーです。 インジケーターは、ゲージに埋め込んだり、ゲージ パネルのゲージの横に配置したりできます。  

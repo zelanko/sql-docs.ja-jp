@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2153c8d47afdf0770b03509554d9aa46673956ec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266092"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>テーブルのスタイルを選択/マトリックスのスタイルを選択
   レポート ウィザードのこの 2 つのページを使用すると、レポートのテキストと線のスタイルを選択できます。 スタイルの一覧は、構成できるテンプレートに基づいています。 レポート デザイナーには、次の初期テンプレートが用意されています。スレート、フォレスト、企業、太字、[オーシャン]、およびジェネリックです。  

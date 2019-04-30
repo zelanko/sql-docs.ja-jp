@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 15107082c9556b42e53a0746c8400e83f22abf3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261808"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>プロジェクトの設定 (GUI) (MySQLToSQL)
 GUI プロジェクトの設定では、上のデータの表示方法を構成できる、**データ**タブとにデータを評価レポートを使用してレポートを含める場合。  
@@ -30,15 +30,15 @@ GUI のウィンドウが表示されます、**プロジェクト設定**と**�
 **ソースの行の最大数**  
 表示されるデータの行の数を設定、**データ**選択したソース テーブルのタブ。  
   
-**既定の**: 100  
+**Default**:100  
   
 **対象の行の最大数**  
 表示されるデータの行の数を設定、**データ**選択した対象テーブルのタブ。  
   
-**既定の**: 100  
+**Default**:100  
   
 **変換後のレポートを表示します。**  
 スキーマに変換した後に、レポートを表示するには、True を選択します。 結果として得られる変換レポートには、同じレイアウトと評価レポートの情報が含まれています。  
   
-**既定の**: False  
+**Default**:False  
   

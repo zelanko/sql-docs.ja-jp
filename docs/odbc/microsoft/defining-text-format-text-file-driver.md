@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240377"
 ---
 # <a name="defining-text-format-text-file-driver"></a>テキスト形式の定義 (テキスト ファイル ドライバー)
 テキストのドライバーを使用すると、ときに使用できます、**テキスト形式の定義** ダイアログ ボックスで選択したファイルの列の形式を定義します。 このダイアログ ボックスでは、各データ テーブルのスキーマを指定することができます。 この情報は、データ ソース ディレクトリに Schema.ini ファイルに書き込まれます。 テキスト データのソース ディレクトリごとに個別の Schema.ini ファイルが作成されます。  

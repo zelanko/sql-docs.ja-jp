@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f362d725f8b734ab9ecdbdc79c268af08a495b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313138"
 ---
 # <a name="sqlgetdata-desktop-database-drivers"></a>SQLGetData (デスクトップ データベース ドライバー)
 この関数は、その後に、列を取得する順序に関係なくバインドされた列があるかどうか、任意の列からデータを取得できます。  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315976"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks メソッド (ADO)
 2 つのブックマークを比較し、これらの相対値を示す値を返します。  
@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  ADO としてそれを公開して、ブックマークのデータ型は、各プロバイダーに固有であるため、**バリアント**します。 たとえば、SQL Server のブックマークは型 DBTYPE_R8 (**二重**)。 ADO では、次の種類として、**バリアント**のサブタイプで**二重**します。  
   
- ブックマークを比較するときに、ADO は任意の型の強制型変換を行いません。 単に値は、比較が発生したプロバイダーに渡されます。 ブックマークが渡された場合、 **CompareBookmarks**メソッドが異なる型の変数に格納されている、次の型の不一致エラーを生成できます"引数型が正しくありませんが、許容の範囲外のまたはが競合しています。相互。"  
+ ブックマークを比較するときに、ADO は任意の型の強制型変換を行いません。 単に値は、比較が発生したプロバイダーに渡されます。 ブックマークが渡された場合、 **CompareBookmarks**メソッドが異なる型の変数に格納されている、次の型の不一致エラーを生成できます。"引数型が正しくありません、許容の範囲から外れているや、他と競合しています。"  
   
  無効か、形式が正しくないブックマークには、エラーが発生します。  
   

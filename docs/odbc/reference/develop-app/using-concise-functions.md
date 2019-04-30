@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312478"
 ---
 # <a name="using-concise-functions"></a>簡潔な関数の使用
 一部の ODBC 関数では、記述子への暗黙のアクセスを取得します。 アプリケーションの作成者があります呼び出しよりも便利な**SQLSetDescField**または**SQLGetDescField**します。 これらの関数を呼び出す*簡潔な*多くの機能、設定、記述子フィールドの取得などを実行するために機能します。 一部の簡潔な関数では、アプリケーションが 1 つの関数の呼び出しでいくつかの関連する記述子フィールドを取得または設定できるようにします。  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be472a4a99324927128514fa9f8cbf19d44d49cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262249"
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>レベル 2 API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -41,10 +41,10 @@ ms.locfileid: "47825905"
 |**SQLExtendedFetch**|ような**SQLFetch**が各列の配列を使用して複数の行を返します。 結果セットは前方スクロールし、旧バージョンとのスクロール可能な静的、順方向専用カーソルが定義されている場合に行んだことができます。 既定の列のバインドで順方向専用カーソルでは、データ バッファーに直接 BUFFERSIZE 接続属性よりも大きいデータ セットから列データがフェッチされます。 可変長のブックマークをサポートしていませんし、ブックマークからのオフセット位置 (0) 以外で行セットのフェッチをサポートしません。|  
 |**SQLForeignKeys**|1 つのテーブル、または 1 つのテーブルを参照するその他のテーブルの外部キーの一覧で、外部キーの一覧を返します。|  
 |**SQLMoreResults**|さらに結果が保留中かどうかを判断します hstmt、ステートメント ハンドルで SELECT、UPDATE、INSERT、または DELETE ステートメントを格納していると、そうである場合は、それらの結果の処理を初期化します。<br /><br /> Oracle は、{resultset...} エスケープ シーケンスを使用する場合にのみ、ストアド プロシージャから複数の結果セットをサポートします。|  
-|**SQLNativeSql**|使用状況の詳細については、[ストアド プロシージャから配列パラメーターを返す](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)を参照してください。|  
+|**SQLNativeSql**|使用状況の詳細については、次を参照してください。[ストアド プロシージャから配列パラメーターを返す](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)します。|  
 |**SQLNumParams**|SQL ステートメントのパラメーターの数を返します。 パラメーターの数が疑問符 (?) に渡された SQL ステートメント内の数と等しくなります**SQLPrepare**します。|  
 |**SQLPrimaryKeys**|テーブルの主キーを構成する列の名前を返します。|  
 |**SQLProcedureColumns**|入力と出力パラメーター、戻り値、1 つのプロシージャの結果セット内の列およびオーバー ロードと ORDINAL_POSITION、2 つの列の一覧を返します。 オーバー ロードは、Oracle のデータ辞書ビューの ALL_ARGUMENTS テーブルからオーバー ロードの列です。 ORDINAL_POSITION は、Oracle のデータ辞書ビューの ALL_ARGUMENTS テーブルからシーケンス列です。 パッケージ化されたプロシージャは、プロシージャ名の列は*packagename.procedurename*形式。 作成されたシノニムを参照するプロシージャまたは関数のプロシージャの列は返されません。|  
 |**SQLProcedures**|データ ソース内には、プロシージャの一覧を返します。 パッケージ化されたプロシージャは、プロシージャ名の列は*packagename.procedurename*形式。<br /><br /> Oracle がパッケージ化された関数からのパッケージ化されたプロシージャを識別する手段を提供しないため、ドライバーは列 PROCEDURE_TYPE SQL_PT_UNKNOWN を返します。|  
 |**SQLSetPos**|行セットのカーソル位置を設定します。 使用することができます**SQLSetPos**で**SQLGetData**行セット内の特定の行にカーソルを配置した後、バインドされていない列から行を取得します。 結果を使用してセットに追加された行*fOption* SQL_ADD が結果セットの最後の行の後に追加されます。|  
-|**SQLSetScrollOptions**|Hstmt、ステートメント ハンドルに関連付けられているカーソルの動作を制御するオプションを設定します。 詳細については、[カーソルの種類および同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)を参照してください。|
+|**SQLSetScrollOptions**|Hstmt、ステートメント ハンドルに関連付けられているカーソルの動作を制御するオプションを設定します。 詳細については、次を参照してください。[カーソルの種類および同時実行の組み合わせ](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)します。|

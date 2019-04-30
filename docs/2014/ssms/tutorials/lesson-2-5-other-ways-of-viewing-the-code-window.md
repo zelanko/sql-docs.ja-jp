@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252676"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>コード ウィンドウを表示するその他の方法
   コード ウィンドウでは、複数のコード ウィンドウをいくつかの方法で構成できます。  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 186ae568a21c39f35389100d55d5395687f20755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253516"
 ---
 # <a name="distributed-replay-controller-configuration"></a>分散再生コントローラーの構成
   **インストール ウィザードの** [分散再生コントローラーの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、分散再生コントローラー サービスに対する管理権限を付与するユーザーを指定します。  

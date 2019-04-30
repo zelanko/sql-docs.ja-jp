@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280420"
 ---
 # <a name="driver-manager-connection-pooling"></a>ドライバー マネージャーの接続プール
 接続プールが使用するたびに再確立されている必要がない接続プールからの接続を使用するアプリケーションを有効にします。 接続が作成され、プール内に配置されている、アプリケーションは、完全な接続プロセスを実行せず、その接続を再利用できます。  
@@ -58,13 +58,13 @@ ms.locfileid: "53590936"
 4.  呼び出し**SQLConnect**または**SQLDriverConnect**接続を作成します。 ドライバー マネージャーへの呼び出しで、接続オプションを使用して**SQLConnect** (またはへの呼び出しで接続キーワード**SQLDriverConnect**) への接続の割り当て後に、接続属性の設定プールの接続を使用する必要がありますを決定します。  
   
     > [!NOTE]  
-    >  要求された接続が照合されているプールされた接続する方法については、SQL_ATTR_CP_MATCH 環境属性によって決まります。 詳細については、[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)を参照してください。  
+    >  要求された接続が照合されているプールされた接続する方法については、SQL_ATTR_CP_MATCH 環境属性によって決まります。 詳細については、次を参照してください。 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)します。  
   
      接続プールを使用する ODBC アプリケーションで呼び出す必要があります[CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307)アプリケーションの初期化中に、 [CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310)アプリケーションの終了します。  
   
 5.  呼び出し**SQLDisconnect**接続を完了します。 接続では、接続プールに返され、再利用できるようになります。  
   
- 詳細については、[、Microsoft Data Access Components のプーリング](https://go.microsoft.com/fwlink/?LinkId=120776)を参照してください。  
+ 詳細については、次を参照してください。 [、Microsoft Data Access Components のプーリング](https://go.microsoft.com/fwlink/?LinkId=120776)します。  
   
 ## <a name="connection-pooling-considerations"></a>接続プールの考慮事項  
  SQL コマンドを使用して、次の操作 (ではなくの ODBC API を使用) のいずれかを実行の接続の状態に影響を与えるし、接続プールがアクティブなときに予期しない問題が発生することができます。  
@@ -81,7 +81,7 @@ ms.locfileid: "53590936"
 >  接続状態にある特定の設定を望んでいません。 常に、アプリケーションで接続状態を設定し、アプリケーションが使用されていない接続プール設定を削除することを確認する必要があります。  
   
 ## <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール  
- 以降 Windows 8 では、ODBC ドライバーできます接続プールでより効率的に使用します。 詳細については、[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)を参照してください。  
+ 以降 Windows 8 では、ODBC ドライバーできます接続プールでより効率的に使用します。 詳細については、次を参照してください。[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)します。  
   
 ## <a name="see-also"></a>参照  
  [データ ソースまたはドライバー](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   

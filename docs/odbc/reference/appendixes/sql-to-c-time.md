@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: 時間から |Microsoft Docs'
+title: 'SQL から C へ: 時間 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,26 +16,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259602"
 ---
-# <a name="sql-to-c-time"></a>SQL から C へ: 時刻
+# <a name="sql-to-c-time"></a>SQL から C へ: Time
 ODBC SQL データ型が時間の識別子。  
   
  SQL_TYPE_TIME  
   
- 次の表は、ODBC C データ型が time の SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。  
+ 次の表は、ODBC C データ型が time の SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
   
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |SQL_C_CHAR|*BufferLength* > バイト長の文字<br /><br /> *9* <= *BufferLength* < = バイト長の文字<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*BufferLength* > 文字長<br /><br /> *9* <= *BufferLength* < = 文字の長さ<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 切り捨てられたデータ<br /><br /> 未定義。|データの文字の長さ<br /><br /> データの文字の長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|data<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
+|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|データ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
 |SQL_C_TYPE_TIME|[なし] [b]|data|6 [d]|n/a|  
-|SQL_C_TYPE_TIMESTAMP|[なし] [b]|データ [c]|16 [d]|n/a|  
+|SQL_C_TYPE_TIMESTAMP|[なし] [b]|Data[c]|16 [d]|n/a|  
   
  [a]、時間の秒の小数部が切り捨てられます。  
   

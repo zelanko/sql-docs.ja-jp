@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91046e19e77d3074a8ecef2163e8d46ab528bec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259356"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 関数
 **準拠**  
- ODBC 3.8 にバージョンが導入されています。  
+ バージョンが導入されました。ODBC 3.8  
   
- 標準への準拠: なし  
+ 標準への準拠:なし  
   
- **概要**  
- **SQLCompleteAsync**非同期関数のいずれかの通知またはポーリング ベースの処理を使用して完了時に決定するために使用できます。 非同期操作の詳細については、[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution.md)を参照してください。  
+ **まとめ**  
+ **SQLCompleteAsync**非同期関数のいずれかの通知またはポーリング ベースの処理を使用して完了時に決定するために使用できます。 非同期操作の詳細については、次を参照してください。[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution.md)します。  
   
  **SQLCompleteAsync**は、ODBC ドライバー マネージャーでのみ実装します。  
   
@@ -67,11 +67,11 @@ SQLRETURN SQLCompleteAsync(
   
  **SQLCompleteAsync**ことを示す SQL_SUCCESS 以外のコードを返します**SQLCompleteAsync**は正しく呼び出されません。 **SQLCompleteAsync**任意の診断レコードをここで投稿されます。 リターン コードは次のとおりです。  
   
--   SQL_INVALID_HANDLE: で、ハンドルが示される*HandleType*と*処理*有効なハンドルではありません。  
+-   SQL_INVALID_HANDLE:によって示されるハンドル*HandleType*と*処理*有効なハンドルではありません。  
   
--   SQL_ERROR: *AsyncRetCodePtr*が NULL またはハンドルの非同期処理が有効になっていません。  
+-   SQL_ERROR:*AsyncRetCodePtr*が NULL またはハンドルの非同期処理が有効になっていません。  
   
--   SQL_NO_DATA: 通知モードで非同期の操作が進行中またはドライバー マネージャーが、アプリケーションが通知されません。 ポーリング モードで、非同期操作は進行中です。  
+-   SQL_NO_DATA:通知モードでは、非同期の操作が進行中またはドライバー マネージャーが、アプリケーションが通知されません。 ポーリング モードで、非同期操作は進行中です。  
   
 ## <a name="comments"></a>コメント  
  ポーリング ベースの非同期処理モードで*AsyncRetCodePtr* SQL_STILL_EXECUTING がありますと**SQLCompleteAsync** SQL_SUCCESS を返します。 アプリケーションはまでポーリングを保持する必要があります*AsyncRetCodePtr* SQL_STILL_EXECUTING ではありません。 通知ベースの非同期処理モードで*AsyncRetCodePtr* SQL_STILL_EXECUTING ものではありません。  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260806"
 ---
 # <a name="general-properties-page-models-report-manager"></a>[全般] プロパティ ページ、モデル (レポート マネージャー)
   モデル定義 (.smdl) ファイルの名前変更、削除、移動、または置換を行うには、レポート モデルの [全般] プロパティ ページを使用します。 モデルの作成者または変更者、および変更日時の詳細がページの上部に表示されます。  

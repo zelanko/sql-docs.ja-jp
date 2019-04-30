@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308300"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX の列挙定数
 デバッグを支援するには、ADOX の列挙定数には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADOX の 1 つのリリース別に変更があります。 コードは、列挙定数の実際の値ではなく、名前にのみ依存する必要があります。  
   
  次の列挙定数が定義されます。  
   
-|列挙型|説明|  
+|列挙値|説明|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|ときに実行されるアクションの種類を指定します**SetPermissions**が呼び出されます。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 値を持つレコードのインデックスを作成するかどうかを指定します。|  

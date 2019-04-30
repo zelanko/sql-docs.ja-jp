@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e433e6aee341085965f361992fc8ea9ac8744353
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305631"
 ---
 # <a name="sqlsetcursorname-desktop-database-drivers"></a>SQLSetCursorName (デスクトップ データベース ドライバー)
 ドライバーから位置指定更新をサポートします。 または、WHERE CURRENT OF によって削除されないため*カーソル名*構文、 **SQLSetCursorName**はサポートされていますが、位置指定更新は使用できません。 のみ使用できます、カーソル ライブラリを有効にして、アプリケーションを使用して**SQLExtendedFetch**します。

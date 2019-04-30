@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264830"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
   レポート ビューアー Web パーツを使用することで、SharePoint 統合用に構成されているレポート サーバーで実行されるレポートを表示できます。 表示できるレポートは、レポート定義 (.rdl) ファイルやレポート ビルダーのレポートなどです。 レポートは自動的に新しいページのレポート ビューアー Web パーツに表示されますが、既存の Web ページや Web サイトにレポート ビューアー Web パーツを追加することで、そのページで特定のレポートが常に表示されるようにすることもできます。  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240962"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL ステートメントで使用される要素
 次の要素は、前の表に、SQL ステートメントで使用されます。  
@@ -58,7 +58,7 @@ ms.locfileid: "52512192"
   
  *挿入値*:: =  
   
- *動的パラメーター*  
+ *dynamic-parameter*  
   
  &#124; です。*リテラル*  
   

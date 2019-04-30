@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240072"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize プロパティの例 (VC++)
 この例では、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト動的**最適化**プロパティ。 **Zip**のフィールド、**作成者**テーブルに、 **Pubs**データベースのインデックス付けされていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 **zip**フィールドのパフォーマンスを向上させるインデックスの構築に ADO の承認、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッド。  

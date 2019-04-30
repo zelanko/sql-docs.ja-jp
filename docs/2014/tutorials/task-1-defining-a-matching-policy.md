@@ -11,14 +11,14 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222778"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>タスク 1:照合ポリシーを定義する
-  ここでは、1 つのルールを持つ照合ポリシーを作成します。 このルールでは、**Supplier ID**、つまり、ルール内の他のドメインを使用する前に Supplier Id が一致する必要があります。 このルールでは、そのほかに、**Supplier Name**で**類似性**値に設定**70%** と**Contact Email**で**類似性**に値の設定**30%** します。  
+  ここでは、1 つのルールを持つ照合ポリシーを作成します。 ルールは、1 つの前提条件が適用されます。**Supplier ID**、つまり、ルール内の他のドメインを使用する前に Supplier Id が一致する必要があります。 ルールは、その他の 2 つのドメインを使用します。**Supplier Name**で**類似性**値に設定**70%** と**Contact Email**で**類似性**に値の設定**30%** します。  
   
 1.  メイン ページで**DQS クライアント**、 をクリックして**右矢印**横に**Suppliers**ナレッジ ベース、および選択**照合ポリシー**します。  
   

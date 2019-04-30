@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: からタイムスタンプ |Microsoft Docs'
+title: 'SQL から C へ: タイムスタンプ |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,19 +16,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259258"
 ---
-# <a name="sql-to-c-timestamp"></a>SQL c: からTimestamp
+# <a name="sql-to-c-timestamp"></a>SQL から C へ: Timestamp
 
 タイムスタンプの ODBC SQL データ型の識別子を次に示します。
 
 - SQL_TYPE_TIMESTAMP  
 
-次の表は、ODBC C SQL のタイムスタンプ データを変換できるデータ型を示します。 列とテーブルの用語の詳細については、[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)を参照してください。  
+次の表は、ODBC C SQL のタイムスタンプ データを変換できるデータ型を示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
 
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  

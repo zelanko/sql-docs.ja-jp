@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258851"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 関数
 **準拠**  
@@ -98,7 +98,7 @@ SQLRETURN SQLDataSources(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*BufferLength1*が 0 未満でした。<br /><br /> 引数に指定された (DM) 値*BufferLength2*が 0 未満でした。|  
 |HY103|無効な取得コード|引数に指定された値 (DM)*方向*SQL_FETCH_FIRST、SQL_FETCH_FIRST_USER、SQL_FETCH_FIRST_SYSTEM、または SQL_FETCH_NEXT でした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
   
 ## <a name="comments"></a>コメント  
  **SQLDataSources**は実装されてドライバー マネージャーでの特定のドライバーの標準への準拠に関係なくすべてのドライバーでサポートされています。  

@@ -16,24 +16,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237947"
 ---
 # <a name="catalog-position"></a>カタログの位置
 識別子および他の識別子を区切る方法でカタログ名の位置は、データ ソースからデータ ソースに変化します。 たとえば、Xbase データソースでカタログ名がディレクトリで、Microsoft® Windows® は分離 (つまり、ファイル名)、テーブル名に円記号 (\\)。 次の図では、この条件を示します。  
   
- ![カタログの位置: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
+ ![カタログの位置。Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
  SQL Server データ ソースには、カタログはデータベースでありはスキーマとテーブル名とピリオド (.) で区切られます。  
   
- ![カタログの位置: SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
+ ![カタログの位置。SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
   
  Oracle データ ソースに、カタログもデータベースが、テーブル名に依存して、によって、スキーマとテーブルの名前から分離されて、アット マーク (@)。  
   
- ![カタログの位置: Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
+ ![カタログの位置。Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
   
  カタログの区切り記号とカタログ名の場所を決定するには、アプリケーションが呼び出す**SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR および SQL_CATALOG_LOCATION のオプションを使用します。 相互運用可能なアプリケーションでは、これらの値に従って識別子を構築する必要があります。  
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c77629975b495d43e21f5d985264ed12f42dd56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308760"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、LockType、EditMode プロパティの例 (VB)
 この例の設定、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを開く前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 値も表示されます、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でのプロパティ。 EditModeOutput 関数は、この手順を実行する必要があります。  

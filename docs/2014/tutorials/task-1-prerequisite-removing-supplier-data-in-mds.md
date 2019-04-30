@@ -1,5 +1,5 @@
 ---
-title: 'タスク 1 (前提条件): MDS の仕入先データを削除する |Microsoft Docs'
+title: タスク 1 (前提条件):MDS の仕入先データを削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222520"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>タスク 1 (前提条件): MDS の仕入先データを削除する
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>タスク 1 (前提条件):MDS の仕入先データを削除する
   ここでは、MDS に格納されている仕入先データを削除します。 使用して手動でデータをアップロードした**MDS Excel アドイン**前のレッスンでします。 このレッスンで作成する SSIS パッケージは、MDS にデータを自動的にアップロードします。 したがって、SSIS パッケージをテストする前に、MDS からの仕入先データの削除、派生階層の削除、Supplier および State エンティティの削除、データのない Supplier エンティティの作成が必要となります。  
   
 1.  起動**マスター データ マネージャー**に移動して**http://localhost/MDS**または web サイトと指定した場合にアプリケーションが MDS を構成します。 保持する場合、**マスター データ マネージャー**を開き、 **SQL Server 2012 マスター データ サービス**に切り替えるの上部にある、**ホーム ページ**します。  

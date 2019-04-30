@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dd63f490ed1c635abfb6bef6972363cfba3c96bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 8fe968185f05c7a48415e5e158a20f4dc61b28c1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142194"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance for Azure Data Studio (プレビュー)
 Azure Data Studio には、.csv、.tsv ファイルで作業しているの簡単な視覚エフェクトを作成する方法を今すぐは提供します。 SQL Server 2019 ビッグ データ クラスター内のローカル ファイルまたは HDFS 上のファイルが含まれます。 迅速なデータを確認し、何が起こってを理解している場合、この拡張機能の使用をお勧めします。 データの場所で視覚化を生成できるは、Microsoft research SandDance と呼ばれるテクノロジを使用します。
@@ -30,7 +30,7 @@ SandDance が画面に、データベース内の行とマーク間の一対一�
 
 ## <a name="usage"></a>使用方法
 
-ローカルの .csv ファイルまたは .tsv ファイルを右クリックし、選択*SandDance ビュー*します。
+含むディレクトリを開くフォルダーを開くか、[Ctrl + K Ctrl + O] を使用してファイルメニューから起動します。CSV ファイル。  次から、エクスプ ローラー パネル内で .csv ファイルまたは .tsv ファイルを右クリックし、選択*SandDance ビュー*します。
 
 SQL Server 2019 ビッグ データ クラスターに接続し、選択した場合は、HDFS で .csv ファイルまたは .tsv ファイルを右クリックして*SandDance ビュー*します。
 

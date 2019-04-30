@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231819"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
 プロジェクトの型マッピングの設定では、SSMA プロジェクトの既定の型マッピングを設定できます。  
@@ -58,47 +58,47 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |バイナリ [0..1]|バイナリ [1]|  
 |バイナリ [2..255]|バイナリ [*]|  
 |bit|バイナリ [1]|  
-|ビット [0..8]|バイナリ [1]|  
+|bit[0..8]|バイナリ [1]|  
 |ビット [17..24]|バイナリ [3]|  
 |ビット [25..32]|バイナリ [4]|  
-|ビット [33..40]|バイナリ [5]|  
-|ビット [41..48]|バイナリ [6]|  
-|ビット [49..56]|バイナリ [7]|  
-|ビット [57..64]|バイナリ [8]|  
-|ビット [9..16]|バイナリ [2]|  
+|bit[33..40]|バイナリ [5]|  
+|ビット [41..48]|binary[6]|  
+|bit[49..56]|binary[7]|  
+|ビット [57..64]|binary[8]|  
+|bit[9..16]|バイナリ [2]|  
 |blob (blob)|varbinary(max)|  
-|blob [0..1]|varbinary [1]|  
-|blob[2..8000]|varbinary [*]|  
+|blob[0..1]|varbinary[1]|  
+|blob[2..8000]|varbinary[*]|  
 |blob [8001.. *]|varbinary(max)|  
 |[bool]|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char バイト|バイナリ [1]|  
-|バイト [0..1] char 型します。|バイナリ [1]|  
+|char byte[0..1]|バイナリ [1]|  
 |バイト [2..255] char 型します。|バイナリ [*]|  
-|char [0..1]|nchar [1]|  
-|char [2..255]|nchar [*]|  
+|char[0..1]|nchar [1]|  
+|char [2..255]|nchar[*]|  
 |character|nchar [1]|  
 |文字のさまざまな [0..1]|nvarchar [1]|  
 |文字のさまざまな [2..255]|NVARCHAR|  
 |文字 [0..1]|nchar [1]|  
-|文字 [2..255]|nchar [*]|  
+|文字 [2..255]|nchar[*]|  
 |日付|日付|  
 |DATETIME|datetime2 [0]|  
 |dec|Decimal|  
 |dec [*..65]|10 進数 [*] [0]|  
-|dec [*..65] [\*..30]|10 進数 [*] [\*]|  
+|dec [*..65] [\*..30]|decimal[*][\*]|  
 |Decimal|Decimal|  
 |decimal [*..65]|10 進数 [*] [0]|  
-|decimal [*..65] [\*..30]|10 進数 [*] [\*]|  
+|decimal [*..65] [\*..30]|decimal[*][\*]|  
 |double|float [53]|  
 |倍精度|float [53]|  
-|倍精度 [*..255] [\*..30]|数値 [*] [\*]|  
-|二重 [*..255] [\*..30]|数値 [*] [\*]|  
+|倍精度 [*..255] [\*..30]|numeric[*][\*]|  
+|二重 [*..255] [\*..30]|numeric[*][\*]|  
 |修正しました|NUMERIC|  
-|固定 [*..65] [\*..30]|数値 [*] [\*]|  
+|固定 [*..65] [\*..30]|numeric[*][\*]|  
 |FLOAT|float [24]|  
-|float [*..255] [\*..30]|数値 [*] [\*]|  
+|float [*..255] [\*..30]|numeric[*][\*]|  
 |float [*..53]|float [53]|  
 |ssNoversion|ssNoversion|  
 |int [*..255]|ssNoversion|  
@@ -112,83 +112,83 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |mediumtext|nvarchar(max)|  
 |national char|nchar [1]|  
 |national char [0..1]|nchar [1]|  
-|national char [2..255]|nchar [*]|  
+|national char [2..255]|nchar[*]|  
 |各国語文字|nchar [1]|  
 |各国語文字がさまざまな|nvarchar [1]|  
 |各国語文字の可変 [0..1]|nvarchar [1]|  
 |各国語文字の可変 [2..4000]|nvarchar [*]|  
 |各国語文字がさまざまな [4001.. *]|nvarchar(max)|  
 |各国語文字 [0..1]|nchar [1]|  
-|各国語文字 [2..255]|nchar [*]|  
+|各国語文字 [2..255]|nchar[*]|  
 |national varchar|nvarchar [1]|  
 |national varchar [0..1]|nvarchar [1]|  
 |national varchar [2..4000]|nvarchar [*]|  
 |national varchar [4001.. *]|nvarchar(max)|  
 |NCHAR|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
-|nchar varchar [0..1]|nvarchar [1]|  
+|nchar varchar[0..1]|nvarchar [1]|  
 |nchar varchar [2..4000]|nvarchar [*]|  
 |nchar varchar [4001.. *]|nvarchar(max)|  
-|nchar [0..1]|nchar [1]|  
-|nchar [2..255]|nchar [*]|  
+|nchar[0..1]|nchar [1]|  
+|nchar [2..255]|nchar[*]|  
 |NUMERIC|NUMERIC|  
 |数値 [*..65]|数値 [*] [0]|  
-|数値 [*..65] [\*..30]|数値 [*] [\*]|  
+|数値 [*..65] [\*..30]|numeric[*][\*]|  
 |NVARCHAR|nvarchar [1]|  
-|nvarchar [0..1]|nvarchar [1]|  
+|nvarchar[0..1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
-|nvarchar [4001.. *]|nvarchar(max)|  
+|nvarchar[4001..*]|nvarchar(max)|  
 |REAL|float [53]|  
-|実際 [*..255] [\*..30]|数値 [*] [\*]|  
+|実際 [*..255] [\*..30]|numeric[*][\*]|  
 |シリアル|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint [*..255]|SMALLINT|  
 |text|nvarchar(max)|  
-|テキスト [0..1]|nvarchar [1]|  
+|text[0..1]|nvarchar [1]|  
 |text[2..4000]|nvarchar [*]|  
-|テキスト [4001.. *]|nvarchar(max)|  
+|text[4001..*]|nvarchar(max)|  
 |time|time|  
 |TIMESTAMP|DATETIME|  
 |tinyblob|varbinary [255]|  
 |TINYINT|SMALLINT|  
 |tinyint [*..255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
-|符号なし bigint|BIGINT|  
-|符号なし bigint [*..255]|BIGINT|  
-|符号なしの 12 月|Decimal|  
+|unsigned bigint|BIGINT|  
+|unsigned bigint[*..255]|BIGINT|  
+|unsigned dec|Decimal|  
 |符号なしの dec [*..65]|10 進数 [*] [0]|  
-|符号なしの dec [*..65] [\*..30]|10 進数 [*] [\*]|  
-|符号なし 10 進数|Decimal|  
+|符号なしの dec [*..65] [\*..30]|decimal[*][\*]|  
+|unsigned decimal|Decimal|  
 |符号なし 10 進数 [*..65]|10 進数 [*] [0]|  
-|符号なし 10 進数 [*..65] [\*..30]|10 進数 [*] [\*]|  
+|符号なし 10 進数 [*..65] [\*..30]|decimal[*][\*]|  
 |倍精度浮動小数点符号なし|float [53]|  
 |符号なしの倍精度|float [53]|  
-|符号なしの倍精度 [*..255] [\*..30]|数値 [*] [\*]|  
-|符号なしの倍精度浮動小数点 [*..255] [\*..30]|数値 [*] [\*]|  
+|符号なしの倍精度 [*..255] [\*..30]|numeric[*][\*]|  
+|符号なしの倍精度浮動小数点 [*..255] [\*..30]|numeric[*][\*]|  
 |符号なしの固定|NUMERIC|  
-|符号なしの固定 [*..65] [\*..30]|数値 [*] [\*]|  
+|符号なしの固定 [*..65] [\*..30]|numeric[*][\*]|  
 |符号なしの float|float [24]|  
-|符号なしの float [*..255] [\*..30]|数値 [*] [\*]|  
+|符号なしの float [*..255] [\*..30]|numeric[*][\*]|  
 |符号なしの float [*..53]|float [53]|  
 |unsigned int|BIGINT|  
-|符号なし int [*..255]|BIGINT|  
-|符号なし整数|BIGINT|  
+|unsigned int[*..255]|BIGINT|  
+|unsigned integer|BIGINT|  
 |符号なし整数 [*..255]|BIGINT|  
 |符号なしの mediumint|ssNoversion|  
 |符号なしの mediumint [*..255]|ssNoversion|  
-|符号なし数値|NUMERIC|  
-|符号なし数値 [*..65]|数値 [*] [0]|  
-|符号なし数値 [*..65] [\*..30]|数値 [*] [\*]|  
+|unsigned numeric|NUMERIC|  
+|unsigned numeric[*..65]|数値 [*] [0]|  
+|unsigned numeric[*..65][\*..30]|numeric[*][\*]|  
 |実際に符号なし|float [53]|  
-|実際に署名されていない [*..255 [\*..30]|数値 [*] [\*]|  
-|符号なしの smallint|ssNoversion|  
+|実際に署名されていない [*..255 [\*..30]|numeric[*][\*]|  
+|unsigned smallint|ssNoversion|  
 |符号なしの smallint [*..255]|ssNoversion|  
-|符号なしの tinyint|TINYINT|  
+|unsigned tinyint|TINYINT|  
 |符号なしの tinyint [*..255]|TINYINT|  
-|varbinary [0..1]|varbinary [1]|  
-|varbinary [2..8000]|varbinary [*]|  
+|varbinary[0..1]|varbinary[1]|  
+|varbinary [2..8000]|varbinary[*]|  
 |varbinary [8001.. *]|varbinary(max)|  
-|varchar [0..1]|nvarchar [1]|  
+|varchar[0..1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
 |year|SMALLINT|  

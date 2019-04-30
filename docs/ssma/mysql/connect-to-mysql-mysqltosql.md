@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7289b3d5b287c1619a08921eba5cc30ff741e3b1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252704"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
 使用して、 **MySQL への接続**を移行する MySQL データベースに接続するためのダイアログ ボックス。  

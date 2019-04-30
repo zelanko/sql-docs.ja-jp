@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241097"
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO Recordset)
 カーソルをオープンする[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -98,7 +98,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 >  を通してのみサポートされてバック グラウンド フェッチ MS リモート プロバイダー、**オープン**メソッドの*オプション*パラメーター。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)を参照してください。  
+>  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
   
  特定の組み合わせの[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)と[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値が無効です。 については、どのオプションを組み合わせることはできませんのトピックを参照して、 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)、および[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)します。  
   

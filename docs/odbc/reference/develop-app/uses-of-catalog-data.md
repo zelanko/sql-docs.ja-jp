@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9b75d59d8fc28e364f5826d95e7fc50cb6afda7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312532"
 ---
 # <a name="uses-of-catalog-data"></a>カタログ データの使用
 アプリケーションでは、さまざまな方法で、カタログ データを使用します。 一般的な使用方法を次に示します。  
@@ -33,4 +33,4 @@ ms.locfileid: "47622310"
   
      また、このような環境を使用**SQLTables**と**SQLColumns**プログラマが選択を行うでしたリストを作成します。 これらの環境を使うことも**SQLPrimaryKeys**と**SQLForeignKeys**自動的に決定して、選択したテーブル間のリレーションシップを表示、使用**SQLStatistics**を特定し、プログラマは、効率的なクエリを作成できるように、インデックス付きフィールドを強調表示します。  
   
--   **カーソルを作成します。** アプリケーション、ドライバー、またはスクロール可能なカーソル エンジンを提供するミドルウェアを使用して、でした**SQLSpecialColumns**行を一意に識別する列または列を確認します。 プログラムを作成できます、*キーセット*がフェッチされた行ごとにこれらの列の値を格納します。 アプリケーションは、行にスクロールするときを使用してこれらの値の行の最新のデータをフェッチします。 スクロール可能なカーソルとキーセットの詳細については、[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)を参照してください。
+-   **カーソルを作成します。** アプリケーション、ドライバー、またはスクロール可能なカーソル エンジンを提供するミドルウェアを使用して、でした**SQLSpecialColumns**行を一意に識別する列または列を確認します。 プログラムを作成できます、*キーセット*がフェッチされた行ごとにこれらの列の値を格納します。 アプリケーションは、行にスクロールするときを使用してこれらの値の行の最新のデータをフェッチします。 スクロール可能なカーソルとキーセットの詳細については、次を参照してください。[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)します。

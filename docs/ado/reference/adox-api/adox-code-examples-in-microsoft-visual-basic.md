@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308789"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic での ADOX コードの例
 これらのトピックでは、ADOX を使用する方法を理解するのに役立つサンプル コードを提供します。 すべてのコード例では、Microsoft Visual Basic を使用して書き込まれます。  
@@ -58,7 +58,7 @@ ms.locfileid: "47645750"
   
 -   [Views Refresh メソッドの例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
   
 -   [Attributes プロパティの例 (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)  
   

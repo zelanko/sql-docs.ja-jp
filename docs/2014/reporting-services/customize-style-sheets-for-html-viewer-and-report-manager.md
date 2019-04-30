@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264861"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>HTML ビューアーとレポート マネージャーのスタイル シートのカスタマイズに関する記事 (ページ、サイトなどの場合もあります)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 既定のカスケード スタイル シート (.css) ファイルがスタイルを定義する提供、**レポート**HTML ビューアーおよびレポート マネージャーのツールバー。 Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。  

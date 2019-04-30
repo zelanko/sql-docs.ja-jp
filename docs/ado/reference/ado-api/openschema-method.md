@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239992"
 ---
 # <a name="openschema-method"></a>OpenSchema メソッド
 プロバイダーからデータベース スキーマ情報を取得します。  
@@ -62,10 +62,10 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **リモート データ サービスの使用状況**、 **OpenSchema**メソッドがクライアント側でご利用いただけません[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
   
 > [!NOTE]
->  Visual basic での 4 バイト符号なし整数 (DBTYPE UI4) である列、 **Recordset**から返される、 **OpenSchema**メソッドを**接続**オブジェクトことはできませんその他の変数と比較します。 OLE DB データ型の詳細については、次を参照してください。 [OLE DB (OLE DB) でのデータ型](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a)と[付録 a: データ型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)Microsoft OLE DB プログラマーズ リファレンス。  
+>  Visual basic での 4 バイト符号なし整数 (DBTYPE UI4) である列、 **Recordset**から返される、 **OpenSchema**メソッドを**接続**オブジェクトことはできませんその他の変数と比較します。 OLE DB データ型の詳細については、次を参照してください[OLE DB (OLE DB) でのデータ型](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a)と[付録 a:。データ型](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)Microsoft OLE DB プログラマーズ リファレンス。  
   
 > [!NOTE]
->  **Visual C と C++ ユーザー**クライアント側のカーソルを使用していない場合は、MDAC 2.7、MDAC 2.8、および MDAC で使用される型の中に Windows Data Access Components (Windows DAC) 6.0 では、型 VT_R8 のバリアント型を返します ADO では列のスキーマの"ORDINAL_POSITION"を取得します。2.6 VT_I4 が発生しました。 MDAC 2.6 のバリアント型を探してそのだけに記述されたプログラムは、0 を変更しなくても、MDAC 2.7、MDAC 2.8、および Windows DAC 6.0 で実行する場合は、すべて序数を取得 VT_I4 型の返されます。 OLE DB が返すデータ型が、DBTYPE_UI4 であるために、この変更が行われ、VT_I4 の符号付きの型がないが発生していると、原因となり、データが失われる可能性がある切り捨てることがなくすべての値を格納する十分な空き領域。  
+>  **Visual C/C++ユーザー**クライアント側のカーソルを使用していない場合は、MDAC 2.7、MDAC 2.8、および使用される型の中に Windows Data Access Components (Windows DAC) 6.0 では、型 VT_R8 のバリアント型を返します ADO では列のスキーマの"ORDINAL_POSITION"を取得します。MDAC 2.6 VT_I4 でした。 MDAC 2.6 のバリアント型を探してそのだけに記述されたプログラムは、0 を変更しなくても、MDAC 2.7、MDAC 2.8、および Windows DAC 6.0 で実行する場合は、すべて序数を取得 VT_I4 型の返されます。 OLE DB が返すデータ型が、DBTYPE_UI4 であるために、この変更が行われ、VT_I4 の符号付きの型がないが発生していると、原因となり、データが失われる可能性がある切り捨てることがなくすべての値を格納する十分な空き領域。  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open メソッド (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

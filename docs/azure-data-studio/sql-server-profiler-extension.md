@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: b883883cbe201de32020e86ca2cd38746caf46be
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309696"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler の拡張機能 (プレビュー)
 
@@ -51,7 +51,7 @@ SQL Server Profiler の拡張機能 (プレビュー) は、XEvents を使用し
 
 ## <a name="next-steps"></a>次の手順
 
-Profiler と拡張イベントの詳細については、[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)を参照してください。
+Profiler と拡張イベントの詳細については、次を参照してください。[拡張イベント](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)します。
 
 
 

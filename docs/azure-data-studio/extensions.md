@@ -12,17 +12,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a79732ba0a10121f4c4323e7f19bac009c64964d
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237745"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の機能を拡張します
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] の拡張機能はベース [!INCLUDE[name-sos](../includes/name-sos-short.md)] のインストールにより多くの機能を簡単に追加する方法を提供します。 
 
-拡張機能は、サード パーティ コミュニティ (する!) と (マイクロソフト)、Azure Data Studio チームによって提供されます。 拡張機能の作成方法の詳細については、[拡張機能作成](extension-authoring.md)を参照してください。
+拡張機能は、サード パーティ コミュニティ (する!) と (マイクロソフト)、Azure Data Studio チームによって提供されます。 拡張機能の作成方法の詳細については、次を参照してください。[拡張機能作成](extension-authoring.md)です。
 
 
 ## <a name="add-azure-data-studio-extensions"></a>Azure Data Studio の拡張機能を追加します。

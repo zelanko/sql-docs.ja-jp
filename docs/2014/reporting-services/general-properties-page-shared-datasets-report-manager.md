@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ed5b54ea07249a69e6f599e53658e8aba10d656
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260757"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>[全般] プロパティ ページ、共有データセット (レポート マネージャー)
   共有データセット アイテムのプロパティを表示および管理するには、[共有データセット] ページを使用します。  

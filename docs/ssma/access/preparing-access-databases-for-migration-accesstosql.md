@@ -22,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299476"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>移行 (AccessToSQL) を Access データベースを準備します。
 Access データベースを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行し、これらのデータベースが移行の準備ができていることを確認するデータベースを決定する必要があります。  
@@ -37,10 +37,10 @@ Access データベースを移行する前に[!INCLUDE[ssNoVersion](../../inclu
 データベースを移行した後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンク テーブルを使用して、アクセスを使用を継続できますしたりするようにアプリケーションを手動で移行することができます[!INCLUDE[msCoName](../../includes/msconame_md.md)]と直接やり取りするコードを .NET Framework に基づく[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="determining-which-databases-to-migrate"></a>移行対象のデータベースを決定します。  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスは、の Access データベースを検索できます。 そのデータベースに関するメタデータをエクスポートできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 エクスポートのメタデータを照会する方法の詳細については、[Access インベントリのエクスポート](exporting-an-access-inventory-accesstosql.md)を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスは、の Access データベースを検索できます。 そのデータベースに関するメタデータをエクスポートできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 エクスポートのメタデータを照会する方法の詳細については、次を参照してください。 [Access インベントリのエクスポート](exporting-an-access-inventory-accesstosql.md)します。  
 
    > [!NOTE]
-   > 、でサポートされていないすべてのアクセス機能と設定、または、簡単に変換できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 データベースの移行を開始する前に、[互換性のないアクセス機能](incompatible-access-features-accesstosql.md)を参照してください。
+   > 、でサポートされていないすべてのアクセス機能と設定、または、簡単に変換できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 データベースの移行を開始する前に、次を参照してください。[互換性のないアクセス機能](incompatible-access-features-accesstosql.md)します。
   
 ## <a name="preparing-for-migration"></a>移行の準備  
 移行を Access データベースを準備できるように、次のガイドラインを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  

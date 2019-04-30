@@ -1,5 +1,5 @@
 ---
-title: bcp_setcolfmt |Microsoft Docs
+title: bcp_setcolfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226241"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt**関数は、 [bcp_colfmt](bcp-colfmt.md)します。 列の照合順序を指定するときに、 **bcp_setcolfmt**関数を使用する必要があります。 [bcp_setbulkmode](bcp-setbulkmode.md) 1 つ以上の列の形式を指定するために使用できます。  
@@ -119,7 +119,7 @@ cbValue
 ## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_setcolfmt による機能強化された日付と時刻のサポート  
  日付/時刻型の BCP_FMT_TYPE プロパティと共に使用される型がで指定されている[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。  
   
- 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](sql-server-driver-extensions-bulk-copy-functions.md)  
