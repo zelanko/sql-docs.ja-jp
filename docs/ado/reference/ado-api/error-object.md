@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275900"
 ---
 # <a name="error-object"></a>Error オブジェクト
 プロバイダーを含む 1 つの操作に関連するデータ アクセス エラーの詳細が含まれています。  
@@ -62,4 +62,4 @@ ms.locfileid: "47802930"
  [Description、HelpContext、HelpFile、NativeError、数、ソース、および SQLState プロパティの例 (vc++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -1,5 +1,5 @@
 ---
-title: KPIStatus (MDX) |Microsoft ドキュメント
+title: KPIStatus (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c0824a9235aa7fd949910800d1e8ce20eab709e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272902"
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (MDX)
 
 
-  指定された主要業績評価指標 (KPI) の状態を表す、正規化された値を返します。  
+  指定された主要業績評価指標 (KPI) の [状態] 領域を表す正規化された値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,14 +29,14 @@ KPIStatus(KPI_Name)
 ```  
   
 ## <a name="arguments"></a>引数  
- *Kpi 名*  
- KPI の名前を指定する有効な文字列式です。  
+ *KPI_Name*  
+ KPI の名前を指定する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
- 状態値は、通常、-1 ～ 1 の範囲に正規化されます。  
+ 状態値は-1 ~ 1 の正規化された値では一般にします。  
   
 ## <a name="example"></a>例  
- 次の例では、Fiscal Year 属性階層の 3 つのメンバーの子孫について、Channel Revenue メジャーに対応する KPI 値、KPI 目標、KPI 状態、および KPI 傾向を返しています。  
+ 次の例では、KPI の値、KPI 目標、KPI の状態、および、Fiscal Year 属性階層の 3 つのメンバーの子孫に対する、channel revenue メジャーの KPI の傾向を返します。  
   
 ```  
 SELECT  
@@ -55,6 +55,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

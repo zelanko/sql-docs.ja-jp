@@ -11,11 +11,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: b4fa05bcc33c9a305253563e40bf071338f19461
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276144"
 ---
 # <a name="appliance-feature-switches"></a>アプライアンスの機能スイッチ
 
@@ -28,7 +28,7 @@ ms.locfileid: "57578786"
 
 ## <a name="autostatsenabled"></a>AutoStatsEnabled
 
-自動統計機能を制御します。 この機能スイッチが 設定されている AU7 へのアップグレード後に既定では true。 アップグレード後に作成されたデータベースの自動作成し、統計の非同期更新を継承します。 既存のデータベースに対してデータベース管理者の自動統計をできるように[ALTER DATABASE (並列データ ウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)します。 統計の詳細については、[統計](../relational-databases/statistics/statistics.md)を参照してください。
+自動統計機能を制御します。 この機能スイッチが 設定されている AU7 へのアップグレード後に既定では true。 アップグレード後に作成されたデータベースの自動作成し、統計の非同期更新を継承します。 既存のデータベースに対してデータベース管理者の自動統計をできるように[ALTER DATABASE (並列データ ウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)します。 統計の詳細については、次を参照してください。[統計](../relational-databases/statistics/statistics.md)します。
 
 ## <a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
 

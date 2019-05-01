@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 49758d367f5ec22ffe3893896ab607917f28bf31
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63274120"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>データベース実験アシスタント分析レポートの表示
 
@@ -87,7 +87,7 @@ DEA では、メニュー アイコンを選択します。 展開されたメ�
 
 ## <a name="next-steps"></a>次のステップ
 
-- コマンド プロンプトで、分析レポートを生成する方法については、[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)を参照してください。
+- コマンド プロンプトで、分析レポートを生成する方法については、次を参照してください。[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)します。
 
 - DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
 

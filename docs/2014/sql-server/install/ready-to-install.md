@@ -17,14 +17,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e9c8f954d5c9839b732912e8f747a443b57f7bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276089"
 ---
 # <a name="ready-to-install"></a>インストールの準備完了
-  [インストールの準備完了] ページには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでインストールまたは変更される機能の概要が示されます。  
+  [インストールの準備完了] ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでインストールまたは変更される機能の概要が示されます。  
   
 ## <a name="options"></a>および  
  このページには、次のオプションがあります。  

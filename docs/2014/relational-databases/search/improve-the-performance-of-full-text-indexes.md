@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273146"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
   フルテキスト インデックス作成とフルテキスト クエリのパフォーマンスは、メモリ、ディスク速度、CPU 速度、コンピューターのアーキテクチャなどのハードウェア リソースの影響を受けます。  
@@ -124,7 +124,7 @@ ms.locfileid: "54128617"
 -   *M*、最適な`max server memory`設定します。  
   
 > [!IMPORTANT]  
->  数式に関する基本情報については、<sup>1</sup>、 <sup>2</sup>、および<sup>3</sup>、後述を参照してください。  
+>  数式に関する基本情報については、次を参照してください。 <sup>1</sup>、 <sup>2</sup>、および<sup>3</sup>、後述します。  
   
 |プラットフォーム|MB-fdhost.exe のメモリ要件の推定*F*<sup>1</sup>|最大サーバー メモリの計算式*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  

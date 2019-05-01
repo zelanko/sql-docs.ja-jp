@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e1c09d9a90b94201642bcad5b3e0c3dbb20ef45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273618"
 ---
 # <a name="native-error"></a>ネイティブ エラー
-正のネイティブ エラー コードは、デスクトップ データベース ドライバーによって生成されます。 負のエラー コードは、Microsoft Jet によって生成されます。 詳細については、、 *Microsoft Jet データベース エンジン プログラマー ガイド*を参照してください。
+正のネイティブ エラー コードは、デスクトップ データベース ドライバーによって生成されます。 負のエラー コードは、Microsoft Jet によって生成されます。 詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマー ガイド*します。

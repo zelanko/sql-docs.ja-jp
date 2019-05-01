@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273216"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースでは、フルテキストが既定で有効になっています。 ただし、テーブルでフルテキスト インデックスを使用するには、Full-Text Engine を使用してアクセスするテーブルの列に対してフルテキスト インデックス作成機能をセットアップする必要があります。  
@@ -129,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  通常、カタログ全体の作成を実行している間は、結果として 1 が返されます。  
   
   
-##  <a name="example"></a> 例:フルテキスト検索のセットアップ  
+##  <a name="example"></a> 例: フルテキスト検索のセットアップ  
  次の 2 部構成の例では、AdventureWorks データベースに `AdvWksDocFTCat` という名前のフルテキスト カタログを作成し、次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の `Document` テーブルにフルテキスト インデックスを作成します。 このステートメントによって、セットアップ時に指定した既定のディレクトリ内にフルテキスト カタログが作成されます。 `AdvWksDocFTCat` というフォルダーが既定のディレクトリ内にあります。  
   
 1.  `AdvWksDocFTCat` という名前のフルテキスト カタログを作成するために、この例では、[CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql) ステートメントを使用します。  
