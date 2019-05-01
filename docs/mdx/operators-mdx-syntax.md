@@ -1,5 +1,5 @@
 ---
-title: 演算子 (MDX 構文) |Microsoft ドキュメント
+title: 演算子 (MDX 構文) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277600"
 ---
 # <a name="operators-mdx-syntax"></a>演算子 (MDX 構文)
 
@@ -47,7 +47,7 @@ ms.locfileid: "34742751"
  複数の演算子を使用する場合、MDX によって演算子が評価される順序は重要です。 同様に重要な点として、演算子を評価する前に、あるデータ型を別のデータ型に変換しておかなければならない場合もあります。  
   
 ## <a name="evaluating-complex-expressions"></a>複雑な式の評価  
- 演算子を使用すると、複数の小さい式を結合して 1 つの式を作成できます。 これらの複雑な式に MDX 演算子によって使用される演算子の優先順位の定義に基づく順序で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]です。 MDX は、優先順位の高い演算子を、優先順位の低い演算子より先に実行します。  
+ 演算子を使用すると、複数の小さい式を結合して 1 つの式を作成できます。 これらの複雑な式で MDX の評価で使用される演算子の優先順位の定義に基づく順序で演算子[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 MDX は、優先順位の高い演算子を、優先順位の低い演算子より先に実行します。  
   
 ### <a name="understanding-operator-precedence"></a>演算子の優先順位について  
  以下の一覧に、演算子を優先順位の高いものから順に示します。 同じ行に示されている演算子は優先順位が同じです。かっこによる強制的な優先がない限り、左から右の順に評価されます。  
@@ -78,12 +78,12 @@ ms.locfileid: "34742751"
   
 -   OR  
   
- MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)です。  
+ MDX の演算子の詳細については、次を参照してください。 [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)します。  
   
 ### <a name="determining-results"></a>結果の決定  
  単純な式を結合して複雑な式を作成する場合、演算子に関する規則とデータ型の優先順位に関する規則の組み合わせによって、結果の値のデータ型が決まります。  
   
- 結果が文字値または Unicode 値の場合、演算子に関する規則と照合順序の優先順位に関する規則の組み合わせによって、結果の照合順序が決まります。 照合順序の詳細については、次を参照してください。[言語および照合順序&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)です。  
+ 結果が文字値または Unicode 値の場合、演算子に関する規則と照合順序の優先順位に関する規則の組み合わせによって、結果の照合順序が決まります。 照合順序の詳細については、次を参照してください。[言語および照合順序&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)します。  
   
  単純式の有効桁数、小数点以下桁数、長さに基づいて結果の有効桁数、小数点以下桁数、長さを指定するルールもあります。  
   
