@@ -1,5 +1,5 @@
 ---
-title: オペレーターのプロパティ - [新しいオペレーター] - ([通知] ページ) | Microsoft Docs
+title: オペレーターのプロパティ - [新しいオペレーター] ([通知] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47650790"
 ---
-# <a name="operator-properties---new-operator-notifications-page"></a>オペレーターのプロパティ - [新しいオペレーター] - ([通知] ページ)
+# <a name="operator-properties---new-operator-notifications-page"></a>オペレーターのプロパティ - [新しいオペレーター] ([通知] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

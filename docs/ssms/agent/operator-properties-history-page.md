@@ -1,5 +1,5 @@
 ---
-title: '[<OperatorName> のプロパティ] - ([履歴] ページ) | Microsoft Docs'
+title: '[<OperatorName> のプロパティ] ([履歴] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47743710"
 ---
-# <a name="operator-properties-history-page"></a>[<OperatorName> のプロパティ] - ([履歴] ページ)
+# <a name="operator-properties-history-page"></a>[<OperatorName> のプロパティ] ([履歴] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
