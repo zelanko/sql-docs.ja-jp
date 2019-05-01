@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729804"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services インスタンスの名前変更
-  既存のインスタンスの名前を変更することができます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用して、**インスタンスの名前を変更**ダイアログ ボックス。  
+  既存のインスタンスの名前を変更することができます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用して、**インスタンスの名前を変更**] ダイアログ ボックス。  
   
 > [!IMPORTANT]  
 >  インスタンスの名前を変更しているとき、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool が高度な特権で実行され、インスタンスに関連付けられている Windows サービス名、セキュリティ アカウント、およびレジストリ エントリが更新されます。 これらのアクションを確実に実行するため、このツールは必ずローカルのシステム管理者として実行してください。  
@@ -60,7 +60,7 @@ ms.locfileid: "52401447"
   
      次に例を示します。 "Tabular"既定の仮想アカウントを使用してその結果、次の構成を名前付きインスタンスとして、表形式モードのサーバーをインストールしたとします。  
   
-    1.  インスタンス名 = \<server > \TABULAR  
+    1.  Instance name = \<server>\TABULAR  
   
     2.  サービス名 = MSOLAP$TABULAR  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52401447"
   
      これで、"TAB2"インスタンスの名前を変更するとします。 名前を変更したことで、必要な構成も次のように変わります。  
   
-    1.  インスタンス名 = \<server > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  サービス名 = MSOLAP$TAB2  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fdc41aaaad19317db3b3795cc63d137b19600c2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055269"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Power Pivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "52418513"
   
 -   内のサーバー[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 Excel Services では、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーとして SQL Server Analysis Services インスタンスを使用します。 Analysis Services は、ローカル コンピューターでもリモート コンピューターでも実行できます。  
   
--   **アクセス許可:**[!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
+-   **権限:**[!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
   
 -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の要件と前提条件の詳細については、「 [SharePoint モードの Analysis Service サーバーのハードウェア要件とソフトウェア要件](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)」を参照してください。  
   
@@ -163,7 +163,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
 3.  **[構成ツール]** をクリックします。  
   
-4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 の構成**をクリックします。  
+4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 の構成]** をクリックします。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

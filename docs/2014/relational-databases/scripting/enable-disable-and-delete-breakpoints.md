@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43b54740d0d7870423778e2e8a692089fa3a8ebd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225273"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>ブレークポイントの有効化、無効化、および削除
   開かれているすべてのブレークポイントを表示および管理するには、 **[ブレークポイント]** ウィンドウを使用します。 ブレークポイントの情報を表示し、各種の操作 (ブレークポイントの削除、無効化、有効化など) を実行するには、このウィンドウを使用します。  
   
 ## <a name="the-breakpoints-window"></a>[ブレークポイント] ウィンドウ  
- **[ブレークポイント]** ウィンドウには、ブレークポイントが設定されているコード行などの情報が表示されます。 **[ブレークポイント]** ウィンドウでは、ブレークポイントの削除、無効化、および有効化を行うこともできます。 **[ブレークポイント]** ウィンドウの詳細については、「 [[ブレークポイント] Window](transact-sql-debugger-breakpoints-window.md)」を参照してください。  
+ **[ブレークポイント]** ウィンドウには、ブレークポイントが設定されているコード行などの情報が表示されます。 **[ブレークポイント]** ウィンドウでは、ブレークポイントの削除、無効化、および有効化を行うこともできます。  **[ブレークポイント]** ウィンドウの詳細については、「 [[ブレークポイント] Window](transact-sql-debugger-breakpoints-window.md)」を参照してください。  
   
  ブレークポイントを無効化した場合、そのブレークポイントで実行は一時停止されませんが、後でブレークポイントを有効化できるように、定義がその位置に保持されます。 削除したブレークポイントは完全に削除されます。 そのステートメントで実行を一時停止するには、新たにブレークポイントを設定する必要があります。  
   

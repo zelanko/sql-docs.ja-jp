@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653864"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>レッスン 3: Market Basket マイニング構造の処理
   このレッスンでは、使用、 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)ステートメントと vAssocSeqLineItems および vAssocSeqOrders から、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]マイニング構造とマイニング処理のサンプル データベースをモデル化します。作成した[レッスン 1。Market Basket マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)と[レッスン 2。Market Basket マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。  
   
- マイニング構造の処理では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でソース データが読み込まれ、マイニング モデルをサポートする構造が構築されます。 マイニング モデルを処理すると、選択したデータ マイニング アルゴリズム使用して、マイニング構造で定義されているデータが渡されます。 このアルゴリズムでは傾向とパターンが検索され、結果の情報がマイニング モデルに保存されます。 したがって、マイニング モデルには、実際のソース データではなく、アルゴリズムで検出された情報が含まれます。 マイニング モデルの処理の詳細については、[処理の要件と考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)を参照してください。  
+ マイニング構造の処理では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でソース データが読み込まれ、マイニング モデルをサポートする構造が構築されます。 マイニング モデルを処理すると、選択したデータ マイニング アルゴリズム使用して、マイニング構造で定義されているデータが渡されます。 このアルゴリズムでは傾向とパターンが検索され、結果の情報がマイニング モデルに保存されます。 したがって、マイニング モデルには、実際のソース データではなく、アルゴリズムで検出された情報が含まれます。 マイニング モデルの処理の詳細については、次を参照してください。[処理の要件と考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)します。  
   
  マイニング構造の再処理は、構造列またはソース データを変更した場合にのみ必要です。 処理済みのマイニング構造にマイニング モデルを追加する場合は、`INSERT INTO MINING MODEL` ステートメントを使用して既存のデータに対して新しいマイニング モデルをトレーニングできます。  
   
@@ -83,7 +83,7 @@ RELATE [<case key>] TO [<foreign key>]
 ) AS [<nested table>]  
 ```  
   
- このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソース データに対してクエリを定義するその他の方法については、[&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)を参照してください。  
+ このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソース データに対してクエリを定義するその他の方法については、次を参照してください。 [&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)します。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンでは、次のタスクを実行します。  
@@ -94,7 +94,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO を使用してマイニング構造を処理するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -158,7 +158,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-     ソース クエリの参照、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]で定義されているデータ ソース、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]サンプル プロジェクト。 ソース クエリはこのデータ ソースを使用して、vAssocSeqLineItems ビューと vAssocSeqOrders ビューにアクセスします。 これら 2 つのビューには、マイニング モデルのトレーニングに使用されるソース データが含まれます。 このプロジェクトやこれらのビューを作成していない場合は、[Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)を参照してください。  
+     ソース クエリの参照、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]で定義されているデータ ソース、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]サンプル プロジェクト。 ソース クエリはこのデータ ソースを使用して、vAssocSeqLineItems ビューと vAssocSeqOrders ビューにアクセスします。 これら 2 つのビューには、マイニング モデルのトレーニングに使用されるソース データが含まれます。 このプロジェクトやこれらのビューを作成していない場合は、次を参照してください。 [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md)します。  
   
      `SHAPE` コマンド内では、`OPENQUERY` を使用して 2 つのクエリを定義します。 最初のクエリでは親テーブルを定義し、2 つ目のクエリでは入れ子になったテーブルを定義します。 2 つのテーブルは、両方のテーブルに存在する OrderNumber 列を使用して関連付けられます。  
   

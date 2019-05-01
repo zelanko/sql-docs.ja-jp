@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678502"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>レッスン 1:Bike Buyer マイニング構造を作成します。
-  このレッスンでは、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の潜在顧客が自転車を購入するかどうかを予測するためのマイニング構造を作成します。 マイニング構造およびデータ マイニングでのロールに慣れていない場合は、[マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)を参照してください。  
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>レッスン 1:Bike Buyer マイニング構造の作成
+  このレッスンでは、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の潜在顧客が自転車を購入するかどうかを予測するためのマイニング構造を作成します。 マイニング構造およびデータ マイニングでのロールに慣れていない場合は、次を参照してください。[マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)します。  
   
  このレッスンで作成する Bike Buyer マイニング構造に基づく追加のマイニング モデルをサポートしている、 [Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[Microsoft デシジョン ツリー アルゴリズム](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)します。 後のレッスンでは、クラスター マイニング モデルを使用して顧客をグループ化するさまざまな方法を確認し、デシジョン ツリー マイニング モデルを使用して潜在顧客が自転車を購入するかどうかを予測します。  
   
@@ -50,7 +50,7 @@ WITH HOLDOUT (<holdout specifier>)
 CREATE MINING STRUCTURE [<mining structure name>]  
 ```  
   
- データ マイニング拡張機能 (DMX) でオブジェクトの名前付け方法の詳細については、[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)を参照してください。  
+ データ マイニング拡張機能 (DMX) でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
   
  コードの次の行では、マイニング構造のキー列を定義します。キー列は、ソース データ内のエンティティを一意に識別します。  
   
@@ -70,7 +70,7 @@ CREATE MINING STRUCTURE [<mining structure name>]
   
  `DISCRETIZE(<method>,<number of buckets>)`  
   
- 列の分離の詳細については、[分離メソッド&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)を参照してください。 マイニング構造列が定義の種類の詳細については、[マイニング構造列](../../2014/analysis-services/data-mining/mining-structure-columns.md)を参照してください。  
+ 列の分離の詳細については、次を参照してください。[分離メソッド&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/discretization-methods-data-mining.md)します。 マイニング構造列が定義の種類の詳細については、次を参照してください。[マイニング構造列](../../2014/analysis-services/data-mining/mining-structure-columns.md)します。  
   
  コードの最後の行では、マイニング構造の省略可能なパーティションを定義します。  
   
@@ -98,7 +98,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 2.  **サーバーへの接続** ダイアログ ボックスの**サーバーの種類**を選択します**Analysis Services**します。 **サーバー名**、型`LocalHost`のインスタンスの名前を入力または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスンに接続します。 **[接続]** をクリックします。  
   
-3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**を開く、**クエリ エディター**と新しい空のクエリ。  
+3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**を開く、**クエリ エディター**と新しい空のクエリ。  
   
 ## <a name="altering-the-query"></a>クエリの変更  
  次の手順では、上の CREATE MINING STRUCTURE ステートメントを変更し、Bike Buyer マイニング構造を作成します。  
@@ -196,7 +196,7 @@ WITH HOLDOUT (<holdout specifier>)
 7.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Bike Buyer Structure.dmx`します。  
   
 ## <a name="executing-the-query"></a>クエリの実行  
- 最後の手順では、クエリを実行します。 クエリを作成して保存したら、そのクエリを実行する必要があります。 つまり、サーバーでマイニング構造を作成するには、ステートメントを実行する必要があります。 クエリ エディターでクエリを実行する方法の詳細については、[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)を参照してください。  
+ 最後の手順では、クエリを実行します。 クエリを作成して保存したら、そのクエリを実行する必要があります。 つまり、サーバーでマイニング構造を作成するには、ステートメントを実行する必要があります。 クエリ エディターでクエリを実行する方法の詳細については、次を参照してください。[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)します。  
   
 #### <a name="to-execute-the-query"></a>クエリを実行するには  
   

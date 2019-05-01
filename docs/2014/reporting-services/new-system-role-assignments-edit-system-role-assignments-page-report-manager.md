@@ -1,5 +1,5 @@
 ---
-title: 新しいシステム ロールの割り当て:[編集システム ロールの割り当て] ページ (レポート マネージャー) |Microsoft Docs
+title: '[新しいシステム ロールの割り当て]:[編集システム ロールの割り当て] ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188409"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新しいシステム ロールの割り当て:システム ロールの割り当て ページ (レポート マネージャー) を編集します。
   レポート サーバーのセキュリティを定義する場合には、[システム ロールの新規割り当て] ページまたは [システム ロールの割り当てを編集] ページを使用します。 すべてのセキュリティはロールの割り当てによって定義され、この割り当てを通じて、実行できるタスクに特定のユーザーまたはグループがマップされます。 タスク リストは、ロールの割り当ての作成時に選択するロールの定義を示します。  

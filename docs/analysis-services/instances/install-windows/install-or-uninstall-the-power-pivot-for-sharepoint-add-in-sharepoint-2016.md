@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a3fba818dbedfe7d21f3b3a9527ed3b83f085ef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055157"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>PowerPivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "52407389"
   
 -   内のサーバー[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 Office Online Server では、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーとして SQL Server Analysis Services インスタンスを使用します。 Analysis Services は、ローカルの SharePoint サーバーでもリモート コンピューターでも実行できます。 Office Online Server にインストールすることはできません。  
   
--   **アクセス許可:** インストールする[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]、現在のユーザーには、SharePoint ファーム管理者グループと、コンピューターで、管理者が必要です。  
+-   **権限:** インストールする[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]、現在のユーザーには、SharePoint ファーム管理者グループと、コンピューターで、管理者が必要です。  
   
 -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の要件と前提条件の詳細については、「 [SharePoint モードの Analysis Service サーバーのハードウェア要件とソフトウェア要件](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)」を参照してください。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52407389"
 ### <a name="command-line-installation"></a>コマンド ライン インストール  
  コマンド ライン インストールでは、管理権限でコマンド プロンプトを開き、 **spPowerPivot16.msi**を実行します。 以下に例を示します。  
   
- `Msiexec.exe /i spPowerPivot16.msi`」をご覧ください。  
+ `Msiexec.exe /i spPowerPivot16.msi`」を参照してください。  
   
  インストール ログを作成するには、MsiExec の標準のログ スイッチを使用します。 次の例では、"Install_Log.txt"を"v"詳細ログ スイッチを使用して、ログ ファイルを作成します。  
   
@@ -157,7 +157,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADO
   
 3.  **[構成ツール]** を選択します。  
   
-4.  **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] の構成**を選択します。  
+4.  **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] の構成]** を選択します。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」をご覧ください。  
   

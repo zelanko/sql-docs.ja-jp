@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505992"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Controller および Client のサービス アカウントの変更
   このトピックでは、分散再生コントローラーと分散再生クライアントのサービス アカウントを変更し、アクセス制御リスト (ACL) を再度適用する方法について説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "52822116"
   
 1.  コントローラー コンピューターで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービスを停止します。  
   
-2.  **[サービス]** で、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー**を右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[サービス]** で、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラーのプロパティ** ウィンドウの **[ログオン]** タブで、 **[このアカウント]** を選択して、新しいログオン アカウントを入力するか、 **[参照]** をクリックして新しいログオン アカウントを指定し、 **[OK]** をクリックします。  
   

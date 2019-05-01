@@ -1,23 +1,26 @@
 ---
 title: SQL Server Agent のプロパティ ([ログオン] タブ) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 6b31cb3bc05f9785154b89033cde2e158f204b3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753059"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([ログオン] タブ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   **[SQL Server Agent のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスで使用するアカウントを指定します。また、このサービスの開始と停止も行えます。 アカウントのパスワードを変更した場合、サービスを再起動しなくても、すぐにその変更が有効になります。  
   
 > [!NOTE]  
@@ -39,7 +42,7 @@ ms.locfileid: "52779394"
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **[開始]**  
+ **開始2}  
  サービスを開始します。  
   
  **[停止]**  

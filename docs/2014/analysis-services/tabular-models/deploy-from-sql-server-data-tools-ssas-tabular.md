@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c542edcd14da08ab58770d7706139762c9735902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757340"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>SQL Server データ ツールからの配置 (SSAS テーブル)
   このトピックのタスクは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の Deploy コマンドを使用してテーブル モデル ソリューションを配置するために使用します。  
@@ -32,7 +32,7 @@ ms.locfileid: "48054142"
 -   [配置状態](#bkmk_deploy_status)  
   
 ##  <a name="bkmk_deploy"></a> 配置オプションおよび配置サーバー プロパティの構成  
- テーブル モデル ソリューションを配置する前に、まず、配置オプションと配置サーバーのプロパティを指定する必要があります。 展開のプロパティおよび設定に関する詳細については、[表形式モデル ソリューションの配置&#40;SSAS 表形式&#41;](tabular-model-solution-deployment-ssas-tabular.md)を参照してください。  
+ テーブル モデル ソリューションを配置する前に、まず、配置オプションと配置サーバーのプロパティを指定する必要があります。 配置のプロパティおよび設定の詳細については、「 [テーブル モデル ソリューションの配置 (SSAS テーブル)](tabular-model-solution-deployment-ssas-tabular.md)の Deploy コマンドを使用してテーブル モデル ソリューションを配置するために使用します。  
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>配置オプションおよび配置サーバー プロパティを構成するには  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48054142"
  クリックすると、配置操作が停止されます。 このオプションは、配置操作に時間がかかりすぎる場合や、エラーが多すぎる場合に有効です。  
   
 ## <a name="see-also"></a>参照  
- [表形式モデル ソリューションの配置&#40;SSAS 表形式&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [既定のデータ モデルと配置プロパティを構成する&#40;SSAS 表形式&#41;](properties-ssas-tabular.md)  
+ [テーブル モデル ソリューションの配置 (SSAS テーブル)](tabular-model-solution-deployment-ssas-tabular.md)   
+ [既定のデータ モデルと配置プロパティの構成 (SSAS テーブル)](properties-ssas-tabular.md)  
   
   

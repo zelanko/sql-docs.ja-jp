@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237987"
 ---
 # <a name="sql-server-properties-service-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([サービス] タブ)
   **[MSSQLSERVER のプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションの表示や指定を行います。  

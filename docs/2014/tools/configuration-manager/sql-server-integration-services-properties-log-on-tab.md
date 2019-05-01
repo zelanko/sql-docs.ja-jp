@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcaa38cd3849f1665d0f31e8d2749730d2494fcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217946"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
    **のプロパティ** ダイアログ ボックスの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[ログオン]** タブでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
@@ -36,7 +36,7 @@ ms.locfileid: "52755974"
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **[開始]**  
+ **開始2}  
  サービスを開始します。  
   
  **[停止]**  

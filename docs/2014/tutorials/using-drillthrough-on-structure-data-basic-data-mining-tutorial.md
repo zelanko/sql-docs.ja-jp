@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745543"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>構造データでのドリルスルーの使用 (基本的なデータ マイニング チュートリアル)
   自分の広告キャンペーンの一環として[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]はメーラーを顧客に送信する潜在的な 34 ~ 40 歳の人口統計。 マーケティング部門では、5 年以上前に [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] から自転車を購入した顧客にも宣伝リーフレットを送付することにしました。 このレッスンでは、古い型の自転車を購入した顧客を特定し、その連絡先情報を取得します。 この情報は、モデルではなく構造に含まれています。 連絡先情報を取得するには、まず構造に対してドリルスルーを有効にし、ドリルスルーを使用して対象とする顧客の名前と住所を明らかにします。  
   
 ### <a name="to-enable-drillthrough-on-a-mining-model"></a>マイニング モデルのドリルスルーを有効にするには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の**マイニング モデル** タブのデータ マイニング デザイナーを右クリックし、 **TM_Decision_Tree**をモデル化し、選択**プロパティ**します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の**マイニング モデル**] タブのデータ マイニング デザイナーを右クリックし、 **TM_Decision_Tree**をモデル化し、選択**プロパティ**します。  
   
 2.  [プロパティ] ウィンドウで **[AllowDrillthrough]** をクリックし、 **[True]** を選択します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "56012763"
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
  [予測の作成 &#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [予測クエリ ビルダーを使用した予測クエリの作成](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

@@ -16,18 +16,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733591"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   すべてのマイニング モデルは同じ構造を使用してコンテンツを格納します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
   
- すべてのモデルの種類に適用される一般的なマイニング モデル コンテンツの説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ すべてのモデルの種類に適用される一般的なマイニング モデル コンテンツの説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
- このトピックは、タイム シリーズ モデルのコンテンツを参照しながら読むことをお勧めします。 タイム シリーズ モデルは、「基本的なデータ マイニング チュートリアル」を完了することによって作成できます。 このチュートリアルで作成するモデルは、ARIMA アルゴリズムと ARTXP アルゴリズムの両方を使用してデータをトレーニングする混合モデルです。 詳細については、[予測構造およびモデルの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)を参照してください。 マイニング モデルのコンテンツの表示方法の詳細については、「 [データ マイニング モデル ビューアー](data-mining-model-viewers.md)」を参照してください。  
+ このトピックは、タイム シリーズ モデルのコンテンツを参照しながら読むことをお勧めします。 タイム シリーズ モデルは、「基本的なデータ マイニング チュートリアル」を完了することによって作成できます。 このチュートリアルで作成するモデルは、ARIMA アルゴリズムと ARTXP アルゴリズムの両方を使用してデータをトレーニングする混合モデルです。 詳細については、次を参照してください。[予測構造およびモデルの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)します。 マイニング モデルのコンテンツの表示方法の詳細については、「 [データ マイニング モデル ビューアー](data-mining-model-viewers.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>タイム シリーズ モデルの構造について  
  タイム シリーズ モデルには、モデルとそのメタデータを表す 1 つの親ノードがあります。 その親ノードの下には、モデルの作成に使用したアルゴリズムに応じて 1 つまたは 2 つのタイム シリーズ ツリーがあります。  
@@ -83,7 +83,7 @@ ms.locfileid: "52531393"
 ## <a name="model-content-for-time-series"></a>タイム シリーズ モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、タイム シリーズ モデルに関連する列についてのみ詳細と例を紹介します。  
   
- スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -158,16 +158,16 @@ ms.locfileid: "52531393"
  NODE_DESCRIPTION  
  現在のノードのルール、分割、または式の説明テキスト。  
   
- **ARTXP:** 詳細については、[ARTXP ツリーについて](#bkmk_ARTXP_1)を参照してください。  
+ **ARTXP:** 詳細については、次を参照してください。 [ARTXP ツリーについて](#bkmk_ARTXP_1)します。  
   
- **ARIMA:** 詳細については、[ARIMA ツリーについて](#bkmk_ARIMA_1)を参照してください。  
+ **ARIMA:** 詳細については、次を参照してください。 [ARIMA ツリーについて](#bkmk_ARIMA_1)します。  
   
  NODE_RULE  
  現在のノードのルール、分割、または式の XML 記述。  
   
  **ARTXP:** 一般に、NODE_RULE は NODE_CAPTION に対応します。  
   
- **ARIMA:** 詳細については、[ARIMA ツリーについて](#bkmk_ARIMA_1)を参照してください。  
+ **ARIMA:** 詳細については、次を参照してください。 [ARIMA ツリーについて](#bkmk_ARIMA_1)します。  
   
  MARGINAL_RULE  
  そのノードに固有の分割またはコンテンツの XML 記述。  
@@ -260,7 +260,7 @@ ms.locfileid: "52531393"
   
  Quantity = 21.322  
   
- -0.293 * quantity (R250 北アメリカ、~ 7) + 0.069\*数量 (R250 Europe、-1) + 0.023 \*  
+ -0.293 * Quantity(R250 North America,-7) + 0.069 \* Quantity(R250 Europe,-1) + 0.023 \*  
   
  Quantity(R250 Europe,-3) -0.142 * Quantity(R750 Europe,-8)  
   
@@ -385,7 +385,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  ARIMA 式:  
   
- ARIMA ({1,1}0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922、}): 56.8888888888889 インターセプト  
+ ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889  
   
  この式は、係数や切片の値を含む長い ARIMA 形式です。 この式を短い形式にすると{1,0,7}1 タイム スライスの数と期間を示す、用語の差分の次数は 0、7 は係数の数を示します。  
   

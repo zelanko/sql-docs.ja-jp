@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822072"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>レッスン 5: タイム シリーズの拡張モデル
+# <a name="lesson-5-extending-the-time-series-model"></a>レッスン 5: 時系列モデルの拡張
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition では、時系列モデルに新しいデータを追加し、モデルに新しいデータを自動的に組み込むことができます。 次の 2 つの方法のいずれかで、時系列マイニング モデルに新しいデータを追加します。  
   
 -   PREDICTION JOIN を使用してトレーニング データに外部ソースのデータを結合します。  
@@ -49,7 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>時系列モデルに対する単一予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   

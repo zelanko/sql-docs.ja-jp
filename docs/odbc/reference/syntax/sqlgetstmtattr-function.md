@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d85f9fcf788dc5ccbba4b2675cbd7caa34dd242c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132766"
 ---
 # <a name="sqlgetstmtattr-function"></a>SQLGetStmtAttr 関数
 **準拠**  
@@ -95,13 +95,13 @@ SQLRETURN SQLGetStmtAttr(
 |HY090|文字列またはバッファーの長さが無効です。|*(DM) \*ValuePtr*文字の文字列し、BufferLength は SQL_NTS に等しくないが、0 より小さいをでした。|  
 |HY092|無効な属性またはオプション識別子|引数が指定された値*属性*ODBC ドライバーでサポートされているのバージョンには無効です。|  
 |HY109|無効なカーソルの位置|*属性*引数が SQL_ATTR_ROW_NUMBER と行に削除されたかをフェッチできませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYC00|省略可能な機能が実装されていません|引数が指定された値*属性*有効な ODBC ステートメント属性が ODBC のバージョンのドライバーでサポートされていますが、ドライバーによってサポートされていませんでした。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に対応するドライバー、 *StatementHandle*関数をサポートしていません。|  
   
 ## <a name="comments"></a>コメント  
- ステートメント属性については、[ステートメント属性](../../../odbc/reference/develop-app/statement-attributes.md)を参照してください。  
+ ステートメント属性については、次を参照してください。[ステートメント属性](../../../odbc/reference/develop-app/statement-attributes.md)します。  
   
  呼び出し**SQLGetStmtAttr**で返します *\*ValuePtr*で指定されたステートメント属性の値*属性*します。 その値は sqlulen です値または null で終わる文字の文字列にもできます。 Sqlulen です値の場合、一部のドライバーは、下位の 32 ビットを書き込む場合がありますのみまたは 16 ビット バッファーと参加解除の上位ビットに変更されていません。 そのため、アプリケーションは sqlulen ですのバッファーを使用し、この関数を呼び出す前に、値を 0 を初期化する必要があります。 また、 *BufferLength*と*StringLengthPtr*引数は使用されません。 アプリケーションが内の文字列の最大長を指定して、値が null で終わる文字列の場合は、 *BufferLength*引数と、ドライバーでは、その文字列の長さを返します、  *\*StringLengthPtr*バッファー。  
   
@@ -115,7 +115,7 @@ SQLRETURN SQLGetStmtAttr(
   
 -   SQL_ATTR_ROW_NUMBER  
   
- 設定し、取得が可能な属性の一覧は、[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)を参照してください。  
+ 設定し、取得が可能な属性の一覧は、次を参照してください。 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)します。  
   
 ## <a name="related-functions"></a>関連する関数  
   

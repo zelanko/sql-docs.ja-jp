@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676269"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>レッスン 1:Market Basket マイニング構造を作成します。
-  このレッスンでは、同時に購入される可能性が高い [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の製品を予測するためのマイニング構造を作成します。 マイニング構造およびデータ マイニングでのロールに慣れていない場合は、[マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)を参照してください。  
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>レッスン 1:Market Basket マイニング構造の作成
+  このレッスンでは、同時に購入される可能性が高い [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の製品を予測するためのマイニング構造を作成します。 マイニング構造およびデータ マイニングでのロールに慣れていない場合は、次を参照してください。[マイニング構造&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)します。  
   
  このレッスンで作成したアソシエーション マイニング構造に基づく追加のマイニング モデルをサポートしている、 [Microsoft アソシエーション アルゴリズム](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)します。 後のレッスンでは、マイニング モデルを使用して、同時に購入される可能性が高い製品の種類を予測します。これはマーケット バスケット分析と呼ばれます。 たとえば、この予測で、マウンテン バイクとタイヤ、およびヘルメットが同時に購入される傾向にあることがわかります。  
   
- このレッスンでは、入れ子になったテーブルを使用してマイニング構造を定義します。 入れ子になったテーブルを使用するのは、マイニング構造で定義するデータ ドメインが、2 つの異なるソース テーブル内に含まれているためです。 入れ子になったテーブルの詳細については、[入れ子になったテーブル&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)を参照してください。  
+ このレッスンでは、入れ子になったテーブルを使用してマイニング構造を定義します。 入れ子になったテーブルを使用するのは、マイニング構造で定義するデータ ドメインが、2 つの異なるソース テーブル内に含まれているためです。 入れ子になったテーブルの詳細については、次を参照してください。[入れ子になったテーブル&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)します。  
   
 ## <a name="create-mining-structure-statement"></a>マイニング構造のステートメントを作成します。  
  入れ子になったテーブルを含むマイニング構造を作成するために使用する、 [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
@@ -55,7 +55,7 @@ CREATE MINING STRUCTURE [<Mining Structure Name>]
 CREATE MINING STRUCTURE [Mining Structure Name]  
 ```  
   
- DMX でオブジェクトの名前付け方法の詳細については、[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)を参照してください。  
+ DMX でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
   
  コードの次の行では、マイニング構造のキー列を定義します。キー列は、ソース データ内のエンティティを一意に識別します。  
   
@@ -77,7 +77,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
    <nested mining structure columns> )  
 ```  
   
- マイニング構造列が定義の型については、[マイニング構造列](../../2014/analysis-services/data-mining/mining-structure-columns.md)を参照してください。  
+ マイニング構造列が定義の型については、次を参照してください。[マイニング構造列](../../2014/analysis-services/data-mining/mining-structure-columns.md)します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、既定で、マイニング構造ごとに 30% の予約データ セットが作成されます。ただし、DMX を使用してマイニング構造を作成する場合は、必要に応じて予約データ セットを手動で追加する必要があります。  
@@ -100,7 +100,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 2.  **サーバーへの接続** ダイアログ ボックスの**サーバーの種類**を選択します**Analysis Services**します。 **サーバー名**、型`LocalHost`のインスタンスの名前または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスンに接続します。 **[接続]** をクリックします。  
   
-3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -169,7 +169,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
 6.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Market Basket Structure.dmx`します。  
   
 ## <a name="executing-the-query"></a>クエリの実行  
- 最後の手順では、クエリを実行します。 クエリを作成して保存したら、サーバー上にマイニング構造を作成するためクエリを実行 (ステートメントを実行) します。 クエリ エディターでクエリを実行する方法の詳細については、[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)を参照してください。  
+ 最後の手順では、クエリを実行します。 クエリを作成して保存したら、サーバー上にマイニング構造を作成するためクエリを実行 (ステートメントを実行) します。 クエリ エディターでクエリを実行する方法の詳細については、次を参照してください。[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)します。  
   
 #### <a name="to-execute-the-query"></a>クエリを実行するには  
   

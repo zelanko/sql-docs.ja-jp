@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842886"
 ---
 # <a name="view-event-session-data"></a>イベント セッション データの表示
   このトピックでは、表示のユーザー インターフェイスを使用して、拡張イベント データを表示および分析する方法について説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "49120299"
 ## <a name="view-target-data"></a>[ターゲット データの表示]  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]内で指定したターゲットに収集されたデータを表示することができます。  
   
-### <a name="view-target-data"></a>ターゲット データの表示  
+### <a name="view-target-data"></a>[ターゲット データの表示]  
  ターゲット データを表示するには:  
   
 1.  オブジェクト エクスプローラーで、 **[管理]**、 **[拡張イベント]**、 **[セッション]** の順に展開し、セッションを展開します。  
@@ -45,7 +45,7 @@ ms.locfileid: "49120299"
   
 -   event_file ターゲットの場合、ファイル ターゲット データ (.XEL ファイル) を表示するには、次のいずれかの方法を使用します。  
   
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [ファイル] -> [開く] を使用する。  
+    -   ファイルを使用するには [開く]-> [[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]します。  
   
     -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]にファイルをドラッグ アンド ドロップする。  
   

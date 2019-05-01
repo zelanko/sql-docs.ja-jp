@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745761"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
@@ -116,6 +116,6 @@ ms.locfileid: "59582365"
 > [!NOTE]  
 >  編集した内容は、回避を選択した行の一部でなければ適用されません。 たとえば、 **[パブリッシャー]** の下を編集し、 **[サブスクライバーを優先]** をクリックしても、編集内容は破棄されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インタラクティブな競合解決](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

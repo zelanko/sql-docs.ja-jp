@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0bc4168d6e6cf786b3137713d44441be0bd3a13f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511396"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)
   ゲージには 3 つの組み込みスタイルが用意されており、これらを使用してポインターの外観をカスタマイズできます。 放射状ゲージには、組み込みのスタイルは。針、マーカー、およびバー。 線形ゲージには、マーカー、バー、および温度計の 3 種類の組み込みスタイルがあります。 独自のポインターが必要な場合は、自分で作成した画像をポインターとして使用できます。  

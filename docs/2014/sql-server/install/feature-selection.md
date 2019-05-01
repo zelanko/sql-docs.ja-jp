@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d20a8ea8a4e05b455a4c69a867504e82bdce014a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165381"
 ---
 # <a name="feature-selection"></a>機能の選択
   **のインストールに含めるコンポーネントを選択するには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [機能の選択] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページのチェック ボックスを使用します。  
@@ -46,7 +46,7 @@ ms.locfileid: "53365834"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -ネイティブ|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードには、表形式、マトリックス形式、グラフィカル形式、および自由形式のレポートを作成、管理、配置するためのサーバー コンポーネントとクライアント コンポーネントが含まれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート アプリケーション開発用の拡張可能プラットフォームとしても使用できます。|  
   
 > [!IMPORTANT]
->  1.  セットアップでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スケールアウト配置の複数ノードに対して負荷分散と単一 URL アドレス指定が構成されません。 スケールアウト配置を完了するには、Windows Server、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center、またはサード パーティ製クラスター管理ソフトウェアを使用する必要があります。 Web ファーム配置のセットアップの詳細については、[Reporting Services のスケール アウト配置構成](https://go.microsoft.com/fwlink/?LinkId=199448)(https://go.microsoft.com/fwlink/?LinkId=199448)を参照してください。  
+>  1.  セットアップでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スケールアウト配置の複数ノードに対して負荷分散と単一 URL アドレス指定が構成されません。 スケールアウト配置を完了するには、Windows Server、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center、またはサード パーティ製クラスター管理ソフトウェアを使用する必要があります。 Web ファーム配置のセットアップの詳細については、次を参照してください。 [Reporting Services のスケール アウト配置構成](https://go.microsoft.com/fwlink/?LinkId=199448)(https://go.microsoft.com/fwlink/?LinkId=199448)します。  
 > 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのブラウザーの要件については、「[Reporting Services と Power View のブラウザー サポートの計画 &#40;Reporting Services 2014&#41;](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
 > 3.  64 ビット プラットフォームと、64 ビット サーバーの 32 ビット サブシステム (WOW64) 上では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を並列構成で同時に実行することはできません。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "53365834"
 -   他のファイルやアプリケーションを移動して、指定したドライブ上の空き領域を増やします。  
   
 ## <a name="installing-adventureworks-sample-databases"></a>AdventureWorks サンプル データベースのインストール  
- 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 サンプル データベースとサンプル コードのインストールの詳細については、、 [Microsoft SQL Server コミュニティのプロジェクトとサンプル](https://go.microsoft.com/fwlink/?LinkId=87843)(https://go.microsoft.com/fwlink/?LinkId=87843)を参照してください。  
+ 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 サンプル データベースとサンプル コードのインストールの詳細については、次を参照してください。、 [Microsoft SQL Server コミュニティのプロジェクトとサンプル](https://go.microsoft.com/fwlink/?LinkId=87843)(https://go.microsoft.com/fwlink/?LinkId=87843)します。  
   
  サンプルの詳細については、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールした後で確認できます。 **開始**] メニューのをクリックして**すべてのプログラム**、] をクリックして**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**、 をクリックして**マニュアルとチュートリアル**をクリックして **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サンプルの概要**します。  
   

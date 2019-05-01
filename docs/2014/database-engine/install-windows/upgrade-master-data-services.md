@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774660"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  CTP2 へのアップグレード シナリオは 4 つあります。 状況に適したシナリオを選択してください。  
@@ -67,7 +67,7 @@ ms.locfileid: "53365494"
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
         > [!IMPORTANT]  
-        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
+        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
     2.  左ペインで **[データベース構成]** をクリックします。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53365494"
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
         > [!IMPORTANT]  
-        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
+        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
     2.  左ペインで **[データベース構成]** をクリックします。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "53365494"
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
         > [!IMPORTANT]  
-        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
+        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
     2.  左ペインで **[データベース構成]** をクリックします。  
   
@@ -264,7 +264,7 @@ ms.locfileid: "53365494"
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]を開きます。  
   
         > [!IMPORTANT]  
-        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)を参照してください。  
+        >  MDS データベース スキーマをアップグレードするには、MDS データベースの作成時に指定した管理者アカウントでログインする必要があります。 MDS データベースの mdm.tblUser で、このユーザーは **1** の **ID**値を持ちます。 このユーザーの変更方法の詳細については、次を参照してください。[システム管理者アカウントを変更&#40;Master Data Services&#41;](../../master-data-services/change-the-system-administrator-account-master-data-services.md)します。  
   
     2.  左ペインで **[データベース構成]** をクリックします。  
   

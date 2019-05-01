@@ -1,5 +1,5 @@
 ---
-title: 新しいロールの割り当て:[編集ロールの割り当て] ページ (レポート マネージャー) |Microsoft Docs
+title: '[新しいロールの割り当て]:[編集ロールの割り当て] ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188399"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>新しいロールの割り当て:ロールの割り当て ページ (レポート マネージャー) を編集します。
   レポート サーバーのアイテムと操作に対する権限を与えるには、[新しいロールの割り当て] ページまたは [ロールの割り当てを編集] ページを使用します。 レポート サーバーへのアクセスを必要とするユーザーごとに、アクセスのレベルを定義するロールの割り当てが必要です。 ロールの割り当ては、ルート ノードか、特定のレポート、モデル、フォルダー、リソース、または共有データ ソースに作成できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のセキュリティは、アイテムに適用するロールの割り当てによって設定されます。 ロールの割り当てにより、グループまたはユーザーをロールの定義と適合させます。各ロールの定義により、特定のアイテムに対してグループまたはユーザーが実行できるタスクが識別されます。  

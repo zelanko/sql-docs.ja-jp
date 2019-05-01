@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748684"
 ---
 # <a name="prediction-query-builder-data-mining"></a>予測クエリ ビルダー (データ マイニング)
   **[マイニング モデル予測]** ビューを使用すると、マイニング構造に含まれるマイニング モデルに基づいた予測を作成できます。  
@@ -25,7 +25,7 @@ ms.locfileid: "48095052"
   
 -   [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [作成して、DMX を使用したデータ マイニング モデルのクエリ: チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [DMX を使用したデータ マイニング モデルのクエリの作成と:チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [データ マイニング クエリ](data-mining/data-mining-queries.md)  
   

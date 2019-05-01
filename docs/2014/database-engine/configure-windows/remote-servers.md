@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809790"
 ---
 # <a name="remote-servers"></a>リモート サーバー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、旧バージョンとの互換性を保つ目的でのみ、リモート サーバーがサポートされています。 新しいアプリケーションでは、リモート サーバーではなく、リンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  

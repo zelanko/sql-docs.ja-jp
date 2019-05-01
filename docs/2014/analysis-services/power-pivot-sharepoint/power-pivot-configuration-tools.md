@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749667"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   PowerPivot 構成ツールを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を構成、修復、または削除します。  
@@ -92,7 +92,7 @@ ms.locfileid: "53210871"
   
 1.  **開始**画面で「 `powerpivot`  
   
-     **開始**画面で[`powerpivot`かまたは、**開始**] メニューの [] をクリックして**すべてのプログラム** をクリック[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**次のいずれかをクリックします。  
+     **開始**画面で「`powerpivot`かまたは、**開始**] メニューの [] をクリックして**すべてのプログラム** をクリック[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**次のいずれかをクリックします。  
   
     -   **PowerPivot 構成ツール**  
   

@@ -1,5 +1,5 @@
 ---
-title: SSIS、MDS、および [チュートリアル] の DQS の組み合わせを使用した Enterprise Information Management |Microsoft Docs
+title: SSIS、MDS、および [チュートリアル] の [DQS の組み合わせを使用した Enterprise Information Management |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313856"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS、MDS、DQS の組み合わせを使用した Enterprise Information Management [チュートリアル]
   企業の情報管理には、一般に、企業の枠を超えたデータ統合、データのクレンジング、データ照合による重複項目の削除、データの標準化、データの拡充、法的およびコンプライアンス条件に対するデータの準拠、および必要なすべてのセキュリティ設定によるデータの集中管理などの作業が含まれます。  

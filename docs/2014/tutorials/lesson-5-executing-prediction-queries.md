@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822314"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>レッスン 5: 予測クエリの実行
   このレッスンでは、使用、 [SELECT FROM \<model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式の 2 種類のデシジョン ツリーに基づく予測を作成する SELECT ステートメントをモデルで作成した[レッスン 2:アソシエーション マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 作成する予測の種類は次のとおりです。  
@@ -34,7 +34,7 @@ ms.locfileid: "56038413"
   
 -   マイニング モデル列とソース データ間のマッピング。 これらの名前が同じ場合は、NATURAL 構文を使用して列マッピングを省略できます。  
   
- 予測関数を使用すると、さらにクエリを改良できます。 予測関数では、予測が発生する可能性など追加の情報と、トレーニング データセットでの予測サポートが提供されます。 予測関数の詳細については、[関数&#40;DMX&#41;](/sql/dmx/functions-dmx)を参照してください。  
+ 予測関数を使用すると、さらにクエリを改良できます。 予測関数では、予測が発生する可能性など追加の情報と、トレーニング データセットでの予測サポートが提供されます。 予測関数の詳細については、次を参照してください。[関数&#40;DMX&#41;](/sql/dmx/functions-dmx)します。  
   
  このチュートリアルの予測は、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] サンプル データベースの ProspectiveBuyer テーブルに基づくものです。 ProspectiveBuyer テーブルには、潜在顧客と、それらの顧客に関連付けられている特性の一覧が格納されています。 このテーブルに格納されている顧客は、デシジョン ツリー マイニング モデルの作成で使用した顧客とは異なります。  
   
@@ -76,7 +76,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>単一予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -94,7 +94,7 @@ ORDER BY <expression>
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
     ```  
   
-     AS ステートメントは、クエリで返される列に別名を付けるために使用します。 [PredictHistogram](/sql/dmx/predicthistogram-dmx)関数は、確率とサポートなどの予測に関する統計を返します。 予測ステートメントで使用できる関数の詳細については、[関数&#40;DMX&#41;](/sql/dmx/functions-dmx)を参照してください。  
+     AS ステートメントは、クエリで返される列に別名を付けるために使用します。 [PredictHistogram](/sql/dmx/predicthistogram-dmx)関数は、確率とサポートなどの予測に関する統計を返します。 予測ステートメントで使用できる関数の詳細については、次を参照してください。[関数&#40;DMX&#41;](/sql/dmx/functions-dmx)します。  
   
 4.  次の部分を探します。  
   
@@ -171,7 +171,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   AS [<input alias>]  
 ```  
   
- ソース データを取得するにはいくつかの方法がありますが、このチュートリアルでは OPENQUERY を使用します。 使用可能なオプションの詳細については、[&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)を参照してください。  
+ ソース データを取得するにはいくつかの方法がありますが、このチュートリアルでは OPENQUERY を使用します。 使用可能なオプションの詳細については、次を参照してください。 [&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)します。  
   
  次の行では、マイニング モデルのソース列とソース データの列間のマッピングを定義します。  
   
@@ -195,7 +195,7 @@ ORDER BY <expression> [DESC|ASC]
   
 #### <a name="to-create-a-batch-prediction-query"></a>バッチ予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -337,6 +337,6 @@ ORDER BY <expression> [DESC|ASC]
   
  以上で Bike Buyer チュートリアルは終了です。 これで、顧客の類似性を特定し、潜在顧客が自転車を購入するかどうかを予測するために使用できるマイニング モデルのセットが完成しました。  
   
- マーケット バスケット シナリオで DMX を使用する方法については、[マーケット バスケット DMX のチュートリアル](../../2014/tutorials/market-basket-dmx-tutorial.md)を参照してください。  
+ マーケット バスケット シナリオで DMX を使用する方法については、次を参照してください。[マーケット バスケット DMX のチュートリアル](../../2014/tutorials/market-basket-dmx-tutorial.md)します。  
   
   

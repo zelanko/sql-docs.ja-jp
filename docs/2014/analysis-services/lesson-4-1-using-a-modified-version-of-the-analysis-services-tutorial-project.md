@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729115"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Analysis Services チュートリアル プロジェクトの修正バージョンの使用
   このチュートリアルの残りのレッスンでは、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版を使用します。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
@@ -41,7 +41,7 @@ ms.locfileid: "53368884"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>修正したプロジェクトの読み込みと処理  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の**ファイル**メニューのをクリックして**ソリューションを閉じる**を使用しないファイルを閉じます。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の**ファイル**] メニューのをクリックして**ソリューションを閉じる**を使用しないファイルを閉じます。  
   
 2.  **[ファイル]** メニューの **[開く]** をポイントし、 **[プロジェクト/ソリューション]** をクリックします。  
   

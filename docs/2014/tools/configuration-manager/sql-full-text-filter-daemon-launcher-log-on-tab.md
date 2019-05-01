@@ -1,23 +1,26 @@
 ---
 title: SQL フルテキスト フィルター デーモン ランチャー ([ログオン] タブ) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 984bd529dbd9291f00c1aad86e99c979bf73d82f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999354"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>SQL フルテキスト フィルター デーモン ランチャー ([ログオン] タブ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト検索で SQL フルテキスト フィルター デーモン ランチャー (FDHOST ランチャー) サービスが使用されます。 フルテキスト検索を使用する場合はこのサービスが実行されている必要があります。 フィルター デーモン ホスト プロセスの詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「フルテキスト検索のアーキテクチャ」を参照してください。  
   
  **[SQL フルテキスト フィルター デーモン ランチャーのプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト サービスが使用するアカウントの指定、アカウントのパスワードの変更、サービスの開始や停止を行います。 アカウントのパスワードを変更した場合、その変更はサービスの再起動後に有効になります。  
@@ -50,7 +53,7 @@ ms.locfileid: "52757594"
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **[開始]**  
+ **開始2}  
  サービスを開始します。  
   
  **[停止]**  

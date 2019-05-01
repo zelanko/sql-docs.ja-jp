@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6314eb5a81d2384763b69dbc44296913f1ba49d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225309"
 ---
 # <a name="feature-reference-reporting-services"></a>機能リファレンス (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポートを作成、管理、表示できるツールとアプリケーションが数種類用意されています。 ここでは、これらのツールとアプリケーションのダイアログ ボックス、Web ページ、およびウィザードに関する特有のトピックを紹介します。  

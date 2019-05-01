@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061900"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 関数
 **準拠**  
@@ -94,7 +94,7 @@ SQLRETURN SQLDrivers(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*BufferLength1*が 0 未満でした。<br /><br /> 引数に指定された (DM) 値*BufferLength2*が 0 未満か、1 にします。|  
 |HY103|無効な取得コード|引数に指定された値 (DM)*方向*SQL_FETCH_FIRST または SQL_FETCH_NEXT でした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、[SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)を参照してください。|  
+|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
   
 ## <a name="comments"></a>コメント  
  **SQLDrivers**でドライバーの説明を返します、 \* *DriverDescription*バッファー。 ドライバーに関する追加情報が返されます、 \* *DriverAttributes*キーワードと値のペアのリストとしてのバッファー。 すべてのキーワードに一覧されたシステム情報を除き、すべてのドライバーのドライバーが返される**CreateDSN**、データ ソースの作成が要求するために使用してはそのため、省略可能です。 各ペアは、null バイトで終了し、完全な一覧が null のバイトで終了しました (つまり、2 つの null バイトがリストの末尾をマークする)。 たとえば、C# の構文を使用して、ファイル ベースのドライバーでは、次の属性 (「\0」は、null 文字を表します) の一覧を返す可能性があります。  
@@ -105,7 +105,7 @@ FileUsage=1\0FileExtns=*.dbf\0\0
   
  場合\* *DriverAttributes*が十分に大きくないリスト全体を保持するために、リストが切り詰め、 **SQLDrivers** SQLSTATE 01004 (データは切り捨てられます)、およびリストの長さを返します (を除く、最後の null 終端バイト) が返される **AttributesLengthPtr*します。  
   
- ドライバーがインストールされている場合、システムの情報からドライバー属性のキーワードが追加されます。 詳細については、[ODBC コンポーネントをインストール](../../../odbc/reference/install/installing-odbc-components.md)を参照してください。  
+ ドライバーがインストールされている場合、システムの情報からドライバー属性のキーワードが追加されます。 詳細については、次を参照してください。 [ODBC コンポーネントをインストール](../../../odbc/reference/install/installing-odbc-components.md)します。  
   
  アプリケーションが呼び出すことができます**SQLDrivers**すべてのドライバーの説明の取得を複数回です。 ドライバー マネージャーは、システム情報からこの情報を取得します。 ない複数のドライバーの説明がある場合に**SQLDrivers** sql_no_data が返されます。 場合**SQLDrivers**は、最初のドライバーの説明を返します SQL_NO_DATA が返された後すぐに SQL_FETCH_NEXT で呼び出されます。 アプリケーションがによって返される情報を使用する方法については**SQLDrivers**を参照してください[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)します。  
   

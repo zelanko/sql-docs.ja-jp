@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー) | Microsoft Docs
+title: チュートリアル:スパーク ラインの追加、レポート (レポート ビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648690"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) へのスパーク ラインを追加します。
   このチュートリアルでは、サンプルの売上データに基づいて基本的なテーブル レポートを作成してから、テーブルのセルにスパークライン グラフを追加します。  
   
  このチュートリアルで作成するレポートについては、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダーのサンプル レポートに発展版が含まれています。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)します。 次の図に、ここで作成するレポートと同様のサンプル レポートを示します。  
@@ -183,7 +183,7 @@ ms.locfileid: "59951238"
   
 14. テーブルがデザイン画面に追加されます。 テーブルには 3 列および 5 行が含まれています。  
   
-     グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインには 1 つの行グループ**Product** が表示されます。 列グループ ペインには 1 つ列グループ**SalesDate** が表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+     グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインには、1 つの行グループを示しています。**製品**します。 列グループ ペインには、1 つの列グループを示しています。**SalesDate**します。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
 15. **[実行]** をクリックして、レポートをプレビューします。  
   

@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cc0fe3bef02ebd50558c298ef8d9b3d8565744ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298682"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>SharePoint 2010 用 Reporting Services の SharePoint モードのインストール
   このトピックでは、SharePoint モードでの Reporting Services レポート サーバーのシングル サーバー インストールの手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint 2010 サーバーの全体管理を使用する追加構成タスクが含まれます。 また、既存のインストールについての個々の手順 ([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成など) をこのトピックで確認することもできます。 追加の追加について[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、既存のファームにサーバーを参照してください[ファームにレポート サーバーの追加&#40;SSRS スケール アウト&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)と[Reporting Services Web の追加ファームのフロント エンド](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)します。  
@@ -35,7 +35,7 @@ ms.locfileid: "53350900"
 ##  <a name="bkmk_prereq"></a> 前提条件  
   
 -   > [!IMPORTANT]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを構成および管理するために、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用するまたはサポートする必要はなくなりました。 SharePoint モードでレポート サーバーを構成するには、SharePoint サーバーの全体管理を使用します。 詳細については、[Reporting Services SharePoint サービス アプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)を参照してください。  
+    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを構成および管理するために、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用するまたはサポートする必要はなくなりました。 SharePoint モードでレポート サーバーを構成するには、SharePoint サーバーの全体管理を使用します。 詳細については、次を参照してください。 [Reporting Services SharePoint サービス アプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)します。  
   
 -   SharePoint 2010 製品を含む要件については、次のトピックを参照してください。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "53350900"
   
     -   [SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイド](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
--   このトピックでは、SharePoint 2010 製品のインストールについては説明しません。 詳細については、[、SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイダンス](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)を参照してください。  
+-   このトピックでは、SharePoint 2010 製品のインストールについては説明しません。 詳細については、次を参照してください。 [、SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイダンス](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)します。  
   
 -   ここで説明する手順は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバーを構成するためのものであり、以前のバージョンのレポート サーバーには使用できません。 以前のバージョンのレポート サーバーでは、SharePoint 共有サービス アーキテクチャが使用されていませんでした。 たとえば、SQL Server 2008 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーや、SQL Server 2008 R2 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーなどです。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "53350900"
   
 6.  **[アクティブ化]** をクリックします。  
   
- この手順は、サイト コレクションごとに実行します。 詳細については、[レポート サーバーと SharePoint の Power View の統合機能のアクティブ化](../../reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)を参照してください。  
+ この手順は、サイト コレクションごとに実行します。 詳細については、次を参照してください。[レポート サーバーと SharePoint の Power View の統合機能のアクティブ化](../../reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)します。  
   
 ##  <a name="bkmk_additional_config"></a> その他の構成  
  このセクションでは、SharePoint のほとんどの配置で重要になる追加の構成手順について説明します。  
@@ -241,7 +241,7 @@ ms.locfileid: "53350900"
 
   
 ### <a name="add-reporting-services-content-types"></a>Reporting Services のコンテンツの種類を追加  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用されるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用されるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
   
 
   

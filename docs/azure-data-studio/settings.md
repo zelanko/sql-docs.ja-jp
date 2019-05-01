@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312838"
 ---
 # <a name="modify-user-and-workspace-settings"></a>ユーザーとワークスペースの設定を変更します。
 
@@ -55,7 +55,7 @@ ms.locfileid: "55689855"
 
 Azure Data Studio では、既定で終了すると、ファイルに未保存の変更が記録されています。 これは、Visual Studio Code でホット終了機能と同じです。
 
-既定では、ホットな終了は off です。 編集することによってホットの終了を有効にする、`files.hotExit`設定します。 詳細については、[(Visual Studio Code のドキュメント) でホット終了](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)を参照してください。
+既定では、ホットな終了は off です。 編集することによってホットの終了を有効にする、`files.hotExit`設定します。 詳細については、次を参照してください。 [(Visual Studio Code のドキュメント) でホット終了](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)します。
 
 
 ## <a name="tab-color"></a>タブの色

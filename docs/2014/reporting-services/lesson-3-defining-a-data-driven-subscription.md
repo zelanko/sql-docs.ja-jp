@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eda13c16caf3f123887da00e2c7896d36b8bf7ed
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226032"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3: データ ドリブン サブスクリプションの定義
   このレッスンでは、データ ドリブン サブスクリプションを使用し、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、および結果セットとレポート、配信オプションのマッピングを行います。  

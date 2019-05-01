@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252854"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>役割の交代後のログインとジョブの管理 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの高可用性ソリューションまたは災害復旧ソリューションを展開する場合、 **master** 内のデータベースまたは **msdb** データベースに格納されている関連情報を再現することが重要です。 通常、関連情報には、プライマリ/プリンシパル データベースのジョブおよびデータベースへの接続に必要なユーザーまたはプロセスのログインが含まれます。 セカンダリ/ミラー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の任意のインスタンスでこの情報を複製する必要があります。 可能であれば、役割の交代後に、プログラムで新しいプライマリ/プリンシパル データベースに情報を再現することが最善の方法です。  

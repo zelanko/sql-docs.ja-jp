@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5520554b509b0c25d62e4a191e16ad3524a02652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297460"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions のマッピング
 アプリケーションを呼び出すと**SQLSetScrollOptions**を通じて、ODBC 3 *.x*ドライバーとドライバーがサポートしない**SQLSetScrollOptions**への呼び出し  
@@ -65,7 +65,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     *\*ValuePtr*の値に基づいて、次の表の値のいずれかに設定、*キーセット*引数**SQLSetScrollOptions**します。  
+      *\*ValuePtr*の値に基づいて、次の表の値のいずれかに設定、*キーセット*引数**SQLSetScrollOptions**します。  
   
     |*キーセット*引数|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -81,7 +81,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     *\*ValuePtr*に設定、*同時実行*引数**SQLSetScrollOptions**します。  
+      *\*ValuePtr*に設定、*同時実行*引数**SQLSetScrollOptions**します。  
   
 -   場合、*キーセット*への呼び出しで引数**SQLSetScrollOptions**が正の値への呼び出し  
   
@@ -89,7 +89,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     *\*ValuePtr*に設定、*キーセット*引数**SQLSetScrollOptions**します。  
+      *\*ValuePtr*に設定、*キーセット*引数**SQLSetScrollOptions**します。  
   
 -   呼び出し  
   
@@ -97,7 +97,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     *\*ValuePtr*に設定、*複合カーソル*引数**SQLSetScrollOptions**します。  
+      *\*ValuePtr*に設定、*複合カーソル*引数**SQLSetScrollOptions**します。  
   
     > [!NOTE]  
     >  ドライバー マネージャーがマップされます**SQLSetScrollOptions** 、ODBC 3 の操作、アプリケーションの *.x*がサポートされていないドライバー **SQLSetScrollOptions**、ドライバーマネージャーに SQL_ROWSET_SIZE ステートメントのオプション、not、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定、*複合カーソル*引数**SQLSetScrollOption**します。 その結果、 **SQLSetScrollOptions**への呼び出しで複数の行をフェッチするときに、アプリケーションでは使用できません**SQLFetch**または**SQLFetchScroll**します。 フェッチの複数の行への呼び出しで場合にのみ使用できます**SQLExtendedFetch**します。

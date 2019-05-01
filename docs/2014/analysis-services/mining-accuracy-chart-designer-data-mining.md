@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf2c26f3d2029e180261ba478184b3d95dd72a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703183"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>マイニング精度チャート デザイナー (データ マイニング)
   **[マイニング精度チャート]** ビューを使用すると、選択したマイニング構造に基づいて構築されるマイニング モデルのパフォーマンスを比較できます。  
@@ -35,9 +35,9 @@ ms.locfileid: "48171972"
   
 -   [[分類マトリックス] タブ&#40;マイニング精度チャート] ビュー&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     選択したモデルの分類マトリックスを表示します、`Input Selection`タブ。  
+     `Input Selection` タブで選択したモデルの分類マトリックスを表示します。  
   
--   [クロス検証 タブ&#40;マイニング精度チャート ビュー&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [[相互検証] タブ ([マイニング精度チャート] ビュー)](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      選択したマイニング構造のオプションを設定して、クロス検証の結果を生成します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48171972"
 ## <a name="see-also"></a>参照  
  [マイニング構造 ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [マイニング モデル ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [予測クエリ ビルダー&#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)  
   
   

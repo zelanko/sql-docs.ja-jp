@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185429"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>レッスン 5: モデル (基本的なデータ マイニング チュートリアル) のテスト
   絞り込みメール配信シナリオのトレーニング セットを使用してモデルを処理したので、テスト セットに対してモデルをテストします。 検証は、データ マイニング プロセスにおける重要な手順です。 運用環境に配置する前に、実際のデータに対する絞り込みメール配信マイニング モデルの性能を把握しておくことが重要です。  
@@ -47,7 +47,7 @@ ms.locfileid: "56025623"
  [リフト チャート タブ&#40;マイニング精度チャート ビュー&#41;](../../2014/analysis-services/lift-chart-tab-mining-accuracy-chart-view.md)   
  [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [テストおよび検証 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [[分類マトリックス タブ&#40;マイニング精度チャート] ビュー&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
+ [[分類マトリックス] タブ&#40;マイニング精度チャート] ビュー&#41;](../../2014/analysis-services/classification-matrix-tab-mining-accuracy-chart-view.md)   
  [分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 新しいスケジュール:[スケジュールの編集] ページ (レポート マネージャー) |Microsoft Docs
+title: '[新しいスケジュール]:[スケジュールの編集] ページ (レポート マネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188354"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>新しいスケジュール:[編集のスケジュール] ページ (レポート マネージャー)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>[新しいスケジュール]:[編集のスケジュール] ページ (レポート マネージャー)
   [新しいスケジュール] ページまたは [スケジュールの編集] ページを使用すると、レポートのスケジュールを作成できます。 スケジュールはサブスクリプションで使用されます。その用途は、キャッシュされたレポートを更新、スナップショットをスタンドアロン アイテムとして作成、スナップショットをレポート履歴で作成することです。  
   
 > [!NOTE]  

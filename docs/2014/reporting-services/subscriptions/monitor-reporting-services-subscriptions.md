@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238303"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services のサブスクリプションを監視する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの監視は、ユーザー インターフェイス、Windows PowerShell、またはログ ファイルから行うことができます。 監視のために使用できるオプションは、実行しているレポート サーバーのモードによって異なります。  

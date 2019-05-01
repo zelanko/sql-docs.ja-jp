@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b689a3eee612bdeb5bac5e0706574e21493635
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260985"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
   このトピックでは、SharePoint モードで配置した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint 環境間で移行するために必要な手順の概要について説明します。 具体的な手順は、以降元の SharePoint のバージョンによって異なる場合があります。 SharePoint モードのアップグレードと移行のシナリオの詳細については、「 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)」を参照してください。 1 つのサーバーから別のサーバーにのみレポート アイテムをコピーする場合は、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  

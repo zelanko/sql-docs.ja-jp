@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c52bc6b7781b6593f945d582e033653aeb61dc9f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242820"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトのレポート サーバー アイテムに対する権限の付与
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセス許可に使用できる、組み込みのセキュリティ機能を提供します。 既にユーザーに権限を割り当てている場合、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] とレポート サーバーの統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。 既存の権限を使用して、レポート定義などのドキュメントのアップロード、レポートの表示、サブスクリプションの作成、アイテムの管理を実行できます。  

@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144670"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>スクリプトの生成 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成するための 2 つのメカニズムが用意されています。 複数のオブジェクト用のスクリプトは、 **スクリプトの生成とパブリッシュ ウィザード**を使用して作成できます。 また、個々のオブジェクトまたは複数のオブジェクト用のスクリプトを、 **オブジェクト エクスプローラー** の **[スクリプト化]** メニューを使用して生成することもできます。  
   
-1.  **方法の選択:**  [スクリプトの生成とパブリッシュ ウィザード](#GenPubScriptWiz)、 [オブジェクト エクスプローラーの [スクリプト化] メニュー](#OEScriptAsMenu)  
+1.  **メソッドを選択します。**[生成し、パブリッシュ ウィザードのスクリプト](#GenPubScriptWiz)、[オブジェクト エクスプ ローラーのスクリプト化] メニュー](#OEScriptAsMenu)  
   
-2.  **[スクリプト化] メニューの使用方法:**  [単一オブジェクトのスクリプトの生成](#ScriptSingleObject)、 [オブジェクト エクスプローラーによる 2 つのオブジェクトのスクリプトの生成](#ScriptTwoObjectsOE)、 [[オブジェクト エクスプローラーの詳細] による 2 つのオブジェクトのスクリプトの生成](#ScriptTwoObjectsOED)  
+2.  **スクリプト化 メニューを使用します。**[1 つのオブジェクトのスクリプト作成](#ScriptSingleObject)、[オブジェクト エクスプ ローラーを使用して 2 つのオブジェクトのスクリプト作成](#ScriptTwoObjectsOE)、[オブジェクト エクスプ ローラーの詳細を使用して 2 つのオブジェクトのスクリプト作成](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>はじめに  
  要件に最も適したメカニズムを選択します。  

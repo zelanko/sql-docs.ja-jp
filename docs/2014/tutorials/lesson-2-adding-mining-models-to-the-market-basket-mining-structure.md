@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204720"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>レッスン 2:マイニング モデルを Market Basket マイニング構造に追加する
   このレッスンで作成した Market Basket マイニング構造に 2 つのマイニング モデルを追加[レッスン 1。Market Basket マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)します。 これらのマイニング モデルを使用すると、予測を作成できます。  
@@ -67,7 +67,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- データ マイニング拡張機能 (DMX) でオブジェクトの名前付け方法の詳細については、[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)を参照してください。  
+ データ マイニング拡張機能 (DMX) でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
   
  コードの次の行では、マイニング モデルで使用されるマイニング構造で列を定義します。  
   
@@ -106,7 +106,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>Association マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -200,7 +200,7 @@ ADD MINING MODEL [<mining model name>]
   
 #### <a name="to-add-an-association-mining-model"></a>Association マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   

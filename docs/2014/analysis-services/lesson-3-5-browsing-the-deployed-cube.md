@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5418cadc533b5253e15f8677753dd0213319ef0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729345"
 ---
 # <a name="browsing-the-deployed-cube"></a>配置したキューブの表示
   この実習では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを表示します。 分析で複数のディメンションにわたってメジャーを比較するため、データの参照には Excel のピボットテーブルを使用します。 ピボットテーブルを使用すると、顧客、日付、および製品情報を異なる軸に配置して、特定の期間、顧客の人口統計、および製品ラインにわたって見たときに、Internet Sales がどのように変化するかを確認できます。  
@@ -46,6 +46,6 @@ ms.locfileid: "48077799"
      ![地域および製品ラインごとのインターネット販売](../../2014/tutorials/media/l3-cube-browser-finish.gif "地域および製品ラインごとのインターネット販売")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4: 高度な属性およびディメンションのプロパティの定義](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [レッスン 4:高度な属性およびディメンションのプロパティを定義します。](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

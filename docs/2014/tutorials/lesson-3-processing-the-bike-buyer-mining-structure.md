@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655799"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>レッスン 3: Bike Buyer マイニング構造の処理
   このレッスンでは、ステートメントとから vTargetMail ビューに INSERT を使用します、[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]マイニング構造とマイニング モデルで作成したを処理するサンプル データベース[レッスン 1。Bike Buyer マイニング構造を作成する](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)と[レッスン 2。Bike Buyer マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)します。  
   
- マイニング構造の処理では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でソース データが読み込まれ、マイニング モデルをサポートする構造が構築されます。 マイニング モデルの処理では、マイニング構造で定義されたデータが、選択したデータ マイニング アルゴリズムを介して受け渡されます。 このアルゴリズムでは傾向とパターンが検索され、結果の情報がマイニング モデルに保存されます。 したがって、マイニング モデルには、実際のソース データではなく、アルゴリズムで検出された情報が含まれます。 マイニング モデルの処理の詳細については、[処理の要件と考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)を参照してください。  
+ マイニング構造の処理では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でソース データが読み込まれ、マイニング モデルをサポートする構造が構築されます。 マイニング モデルの処理では、マイニング構造で定義されたデータが、選択したデータ マイニング アルゴリズムを介して受け渡されます。 このアルゴリズムでは傾向とパターンが検索され、結果の情報がマイニング モデルに保存されます。 したがって、マイニング モデルには、実際のソース データではなく、アルゴリズムで検出された情報が含まれます。 マイニング モデルの処理の詳細については、次を参照してください。[処理の要件と考慮事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)します。  
   
  マイニング構造の再処理は、構造列またはソース データを変更した場合に必要です。 処理済みのマイニング構造にマイニング モデルを追加する場合は、INSERT INTO MINING MODEL ステートメントを使用して新しいマイニング モデルをトレーニングできます。  
   
@@ -63,7 +63,7 @@ INSERT INTO MINING STRUCTURE [<mining structure name>]
 OPENQUERY([<datasource>],'<SELECT statement>')  
 ```  
   
- このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソース クエリを定義するその他の方法については、[&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)を参照してください。  
+ このレッスンでは、`OPENQUERY` を使用してソース データを定義します。 ソース クエリを定義するその他の方法については、次を参照してください。 [&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)します。  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  
  このレッスンでは、次のタスクを実行します。  
@@ -74,7 +74,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO を使用してマイニング構造を処理するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   

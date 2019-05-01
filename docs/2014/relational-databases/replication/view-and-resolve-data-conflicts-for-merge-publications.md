@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255427"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>マージ パブリケーションでのデータの競合の表示および解決 (SQL Server Management Studio)
   マージ レプリケーションの競合は、各アーティクルに対して指定された競合回避モジュールに基づいて解決されます。 既定では、競合はユーザーの介入を必要とせずに解決されます。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] レプリケーション競合表示モジュールで競合を表示したり、解決の結果を変更したりすることができます。  
@@ -51,7 +51,7 @@ ms.locfileid: "52770815"
 3.  競合を表示するパブリケーションを右クリックしてから、 **[競合の表示]** をクリックします。  
   
     > [!NOTE]  
-    >  **conflict_logging** プロパティの値として **'subscriber'** を指定した場合は、 **[競合の表示]** メニュー オプションを利用できません。 競合を表示するには、コマンド プロンプトで ConflictViewer.exe を起動します。 既定では、ConflictViewer.exe は次のディレクトリにあります。Microsoft SQL server \100\tools\binn\vsshell\common7\ide です。 有効な起動時のパラメーターの一覧を表示するには、ConflictViewer.exe -? を実行します。  
+    >  **conflict_logging** プロパティの値として **'subscriber'** を指定した場合は、 **[競合の表示]** メニュー オプションを利用できません。 競合を表示するには、コマンド プロンプトで ConflictViewer.exe を起動します。 既定では、ConflictViewer.exe は Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE のディレクトリにあります。 有効な起動時のパラメーターの一覧を表示するには、ConflictViewer.exe -? を実行します。  
   
 4.  **[競合テーブルの選択]** ダイアログ ボックスで、競合を表示するデータベース、パブリケーション、およびテーブルを選択します。  
   

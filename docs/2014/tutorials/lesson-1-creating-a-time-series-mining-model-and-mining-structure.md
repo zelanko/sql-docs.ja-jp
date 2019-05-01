@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678449"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>レッスン 1:タイム シリーズ マイニング モデルとマイニング構造を作成します。
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>レッスン 1:時系列マイニング モデルおよびマイニング構造の作成
   このレッスンでは、履歴データを基に時間の経過に応じて値を予測するためのマイニング モデルを作成します。 モデルを作成すると、基になる構造が自動的に生成され、追加のマイニング モデルのベースとして使用できるようになります。  
   
  このレッスンは、予測モデルおよび Microsoft タイム シリーズ アルゴリズムの要件について理解していることを前提としています。 詳細については、「 [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)」を参照してください。  
@@ -51,7 +51,7 @@ WITH DRILLTHROUGH
 CREATE MINING MODEL [Mining Model Name]  
 ```  
   
- Analysis Services では、基になる構造に対し、モデル名の後に「_structure」を追加した名前が自動的に生成されます。これにより、構造名がモデル名と重複しないことが保証されます。 DMX でオブジェクトの名前付け方法の詳細については、[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)を参照してください。  
+ Analysis Services では、基になる構造に対し、モデル名の後に「_structure」を追加した名前が自動的に生成されます。これにより、構造名がモデル名と重複しないことが保証されます。 DMX でオブジェクトの名前付け方法の詳細については、次を参照してください。[識別子&#40;DMX&#41;](/sql/dmx/identifiers-dmx)します。  
   
  コードの次の行では、マイニング モデルのキー列を定義します。キー列は、時系列モデルでソース データの時間ステップを一意に識別します。 時間ステップがで識別される、`KEY TIME`キーワードの後、列名とデータ型。 時系列モデルに別の系列キーが含まれている場合は、`KEY` キーワードでそのキーが識別されます。  
   
@@ -83,7 +83,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 2.  **サーバーへの接続** ダイアログ ボックスの**サーバーの種類**を選択します**Analysis Services**します。 **サーバー名**、型`LocalHost`のインスタンスの名前または[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]このレッスンに接続します。 **[接続]** をクリックします。  
   
-3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+3.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -177,7 +177,7 @@ CREATE MINING MODEL [Mining Model Name]
 7.  **付けて** ダイアログ ボックスで、適切なフォルダーを参照し、ファイル名前`Forecasting_MIXED.dmx`します。  
   
 ## <a name="executing-the-query"></a>クエリの実行  
- 最後の手順では、クエリを実行します。 クエリを作成して保存したら、そのクエリを実行してサーバーにマイニング モデルとそのマイニング構造を作成します。 クエリ エディターでクエリを実行する方法の詳細については、[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)を参照してください。  
+ 最後の手順では、クエリを実行します。 クエリを作成して保存したら、そのクエリを実行してサーバーにマイニング モデルとそのマイニング構造を作成します。 クエリ エディターでクエリを実行する方法の詳細については、次を参照してください。[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)します。  
   
 #### <a name="to-execute-the-query"></a>クエリを実行するには  
   

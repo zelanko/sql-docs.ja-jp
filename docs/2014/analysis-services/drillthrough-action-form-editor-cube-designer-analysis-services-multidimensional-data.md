@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8589c743e926b6654cfba123ef7a47a85c0e95d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731716"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>ドリルスルー アクション フォーム エディター (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[アクション]** タブの **[ドリルスルー アクション フォーム エディター]** ペインを使用すると、**[アクション オーガナイザー]** ペインで選択したドリルスルー アクションを変更できます。 アクションの種類の詳細については、「[アクション (Analysis Services - 多次元データ)](multidimensional-models/actions-analysis-services-multidimensional-data.md)」を参照してください。  
@@ -104,9 +104,9 @@ ms.locfileid: "48213232"
  クライアント アプリケーションのアクションに表示されるキャプションを表す文字列を返す MDX 式が **[キャプション]** に入力されている場合は、 **[True]** を選択します。 MDX 式は、アクションがクライアント アプリケーションに返される前に解析される必要があります。  
   
 ## <a name="see-also"></a>参照  
- [多次元式&#40;MDX&#41;リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [多次元式 (MDX) リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [アクション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [ツールバー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [ツールバー&#40;アクションタブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [[アクション オーガナイザー]&#40;アクション] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [計算ツール&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   

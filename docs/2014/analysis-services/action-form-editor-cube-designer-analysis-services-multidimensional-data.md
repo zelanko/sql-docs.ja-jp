@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626104"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>アクション フォーム エディター (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[アクション**] タブのアクション フォーム エディター ペインを使用すると、標準のアクションを作成したり変更したりできます。  
@@ -37,7 +37,7 @@ ms.locfileid: "48225552"
 |-----------|---------------------|  
 |[属性メンバー]|**[対象になるオブジェクト]** の属性に基づくレベルからメンバーが選択されます。|  
 |[セル]|**[対象になるオブジェクト]** の名前付きセットが選択されます。 キューブ内のすべてのセルを選択するには、 **[すべてのセル]** を選択します。|  
-|Cube|**[対象になるオブジェクト]** のキューブが選択されます。 現在のキューブを使用するには、[CURRENTCUBE] を選択します。<br /><br /> 注: キューブが名前を変更したり、アクションを他のキューブへコピーしたりする場合、[CURRENTCUBE] を使用することにより、移植性が向上します。 現在のキューブを表すために、[CURRENTCUBE] を使用することをお勧めします。|  
+|Cube|**[対象になるオブジェクト]** のキューブが選択されます。 現在のキューブを使用するには、[CURRENTCUBE] を選択します。<br /><br /> 注:[Currentcube] を使用する場合、キューブの名前を変更することがありますまたは他のキューブにアクションがコピーされる移植性を提供します。 現在のキューブを表すために、[CURRENTCUBE] を使用することをお勧めします。|  
 |[ディメンションのメンバー]|**[対象になるオブジェクト]** でディメンションのメンバーが選択されます。|  
 |Hieararchy|**[対象になるオブジェクト]** で階層が選択されます。|  
 |[階層メンバー]|**[対象になるオブジェクト]** で階層内のメンバーが選択されます。|  
@@ -58,7 +58,7 @@ ms.locfileid: "48225552"
  **型**  
  アクションが実行されるときのアクションの種類を選択します。 次のアクションの種類が使用できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |データセット|クライアント アプリケーションによって実行および表示される、多次元データセットを表す多次元式 (MDX) ステートメントを返します。|  
 |[専用]|このアクションの **[アプリケーション]** 設定に関連付けられたクライアント アプリケーションによって、解釈される専用文字列を返します。|  
@@ -109,9 +109,9 @@ ms.locfileid: "48225552"
   
  クライアント アプリケーションのアクションに表示されるキャプションを表す文字列を返す MDX 式が **[キャプション]** に入力されている場合は、 **[True]** を選択します。 MDX 式は、アクションがクライアント アプリケーションに返される前に解析される必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [ツールバー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [ツールバー&#40;アクションタブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [[アクション オーガナイザー]&#40;アクション] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [計算ツール&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [ドリルスルー アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   

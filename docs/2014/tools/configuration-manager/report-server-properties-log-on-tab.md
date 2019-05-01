@@ -1,23 +1,26 @@
 ---
 title: レポート サーバーのプロパティ ([ログオン] タブ) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: f56d5ea637adc2ce8fc5490c44408bdd1de7f3f6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999526"
 ---
 # <a name="report-server-properties-log-on-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   **[SQL Server Reporting Services のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、レポート サーバー サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
 ## <a name="options"></a>および  
@@ -36,7 +39,7 @@ ms.locfileid: "52751634"
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **[開始]**  
+ **開始2}  
  サービスを開始します。  
   
  **[停止]**  

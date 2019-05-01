@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f1eaa33c0a113f540a841ca2cfcfadd71ed0c74
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265908"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>共有データ ソースを作成、削除、または変更する (レポート マネージャー)
   共有データ ソースでは、1 つのデータ ソースに対する接続プロパティを指定します。 多数のレポート、モデル、またはデータ ドリブン サブスクリプションで 1 つのデータ ソースを使用する場合は、共有データ ソースを作成することにより、同じ接続情報を複数箇所で管理するオーバーヘッドを低減できます。  

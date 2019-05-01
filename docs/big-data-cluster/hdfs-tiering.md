@@ -6,26 +6,29 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32648829c64143b4f31a5d27479bbc3d28076fa2
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: ccafa7914d09971e33d60fc9d25c7b812983aa98
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582425"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472090"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>HDFS のビッグ データの SQL Server クラスター上の階層制御の構成します。
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS の階層制御では、HDFS ファイル システムの HDFS と互換性のある、外部にマウントする機能を提供します。 この記事では、HDFS の SQL Server 2019 ビッグ データ クラスター (プレビュー) の階層化を構成する方法について説明します。 この時点で、この記事の焦点である Azure Data Lake ストレージ Gen2 への接続を CTP 2.4 はのみサポートします。
+HDFS の階層制御では、HDFS ファイル システムの HDFS と互換性のある、外部にマウントする機能を提供します。 この記事では、HDFS の SQL Server 2019 ビッグ データ クラスター (プレビュー) の階層化を構成する方法について説明します。 現時点では、Azure Data Lake ストレージの Gen2 および Amazon S3 への接続をサポートします。 
 
 ## <a name="hdfs-tiering-overview"></a>HDFS の階層化の概要
 
-階層化、アプリケーションのシームレスなアクセスさまざまな外部ストアでデータ HDFS にデータが存在する場合と同様。 マウントは、メタデータの操作では、HDFS に経由で外部のファイル システム上の名前空間を表すメタデータがコピーされる場所。 このメタデータには、外部のディレクトリとそのアクセス許可や Acl と共にファイルに関する情報が含まれます。 対応するデータは、データ自体にアクセスする場合にのみコピーした、オンデマンドでです。 外部のファイル システムのデータは、SQL Server のビッグ データ クラスターから今すぐアクセスできます。 行うことができます Spark ジョブと SQL クエリでこのデータ クラスター上の HDFS に格納されているすべてのローカル データで実行するのと同様にします。
+階層化、アプリケーションのシームレスなアクセスさまざまな外部ストアでデータ、ローカルの HDFS にデータが存在する場合と同様。 マウントは、メタデータの操作をローカルの HDFS に経由で外部のファイル システム上の名前空間を表すメタデータがコピーされる場所。 このメタデータには、外部のディレクトリとそのアクセス許可や Acl と共にファイルに関する情報が含まれます。 対応するデータは、たとえば、クエリ、データ自体にアクセスする場合にのみコピーした、オンデマンドでです。 外部のファイル システムのデータは、SQL Server のビッグ データ クラスターから今すぐアクセスできます。 行うことができます Spark ジョブと SQL クエリでこのデータ クラスター上の HDFS に格納されているすべてのローカル データで実行するのと同様にします。
+
+### <a name="caching"></a>キャッシュ
+今日では、既定では、HDFS ストレージの合計の 1% が予約されますマウントされたデータのキャッシュ。 キャッシュは、グローバル設定を使って、マウント全体です。
 
 > [!NOTE]
 > Microsoft が開発した機能は、HDFS が階層化し、以前のバージョンには、Apache Hadoop 3.1 ディストリビューションの一部としてリリースされています。 詳細については、次を参照してください。 [ https://issues.apache.org/jira/browse/HDFS-9806 ](https://issues.apache.org/jira/browse/HDFS-9806)詳細についてはします。
@@ -39,82 +42,16 @@ HDFS の階層制御では、HDFS ファイル システムの HDFS と互換性
   - **mssqlctl**
   - **kubectl**
 
-## <a id="load"></a> Azure Data Lake Storage にデータを読み込む
+## <a name="mounting-instructions"></a>マウント操作手順
 
-次のセクションでは、HDFS が階層化をテストするために Azure Data Lake ストレージ Gen2 を設定する方法について説明します。 Azure Data Lake Storage に格納されたデータが既にあるを場合は、独自のデータを使用するには、このセクションをスキップできます。
+Azure Data Lake ストレージ Gen2 および Amazon S3 への接続がサポートされます。 これらの記憶域の種類に対してをマウントする方法については、次の記事を参照してください。
 
-1. [Data Lake ストレージ Gen2 機能を備えたストレージ アカウントの作成](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)です。
-
-1. [Blob コンテナーを作成する](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)外部データの場合は、このストレージ アカウントにします。
-
-1. CSV、または Parquet ファイルをコンテナーにアップロードします。 これは、ビッグ データ クラスターの HDFS にマウントされる外部 HDFS データです。
-
-## <a id="mount"></a> リモートの HDFS の記憶域をマウントします。
-
-次の手順では、リモートの HDFS のストレージが Azure Data lake、ビッグ データ クラスターの HDFS のローカル ストレージをマウントします。
-
-1. ビッグ データ クラスターにアクセスできるクライアント コンピューターでコマンド プロンプトを開きます。
-
-1. という名前のローカル ファイルを作成する**files.creds**次の形式を使用して、Azure Data Lake ストレージ Gen2 アカウントの資格情報を格納します。
-
-   ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
-
-   > [!TIP]
-   > アクセス キーを検索する方法の詳細についての (`<storage-account-access-key>`)、ストレージ アカウントを参照してください。[アクセス キーの表示とコピー](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)します。
-
-1. 使用**kubectl**の IP アドレスを検索する、**エンドポイント サービスのプロキシ**ビッグ データ クラスター サービス。 探して、 **EXTERNAL-IP**します。
-
-   ```bash
-   kubectl get svc endpoint-service-proxy -n <your-cluster-name>
-   ```
-
-1. ログイン**mssqlctl**サービス プロキシのエンドポイントを使用して、クラスター ユーザー名とパスワード。
-
-   ```bash
-   mssqlctl login -e https://<IP-of-endpoint-service-proxy>:30777/ -u <username> -p <password>
-   ```
-
-1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl ストレージ マウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
-
-   ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
-   ```
-
-   > [!NOTE]
-   > コマンドの作成、マウントは非同期です。 この時点では、マウントが成功したかどうかを示すメッセージはありません。 参照してください、[状態](#status)セクション、マウントの状態を確認します。
-
-正常にマウントされている場合、HDFS データを照会し、それに対して Spark ジョブを実行できる必要があります。 指定された場所でビッグ データ クラスターの HDFS に表示される`--local-path`します。
-
-## <a id="status"></a> マウントの状態を取得します。
-
-ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
-
-```bash
-mssqlctl storage mount status
-```
-
-HDFS 内の特定のパスでのマウントの状態を一覧表示するには、次のコマンドを使用します。
-
-```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
-```
-
-## <a id="delete"></a> マウントを削除します。
-
-マウントを削除するには、使用、 **mssqlctl ストレージ マウント delete**コマンド、および HDFS のマウント パスを指定します。
-
-```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
-```
+- [マウント ADLS Gen2 の HDFS のビッグ データ クラスター内の階層化する方法](hdfs-tiering-mount-adlsgen2.md)
+- [HDFS のビッグ データ クラスター内の階層制御の S3 をマウントする方法](hdfs-tiering-mount-s3.md)
 
 ## <a id="issues"></a> 既知の問題と制限事項
 
 次の一覧は、HDFS のビッグ データの SQL Server クラスターでの階層化を使用する場合、既知の問題と現在の制限事項を提供します。
-
-- マウントされている外部のディレクトリのサイズが、クラスターの容量よりも大きい場合は、マウントは失敗します。
 
 - マウントがスタックしている場合、`CREATING`がほとんどの場合に失敗した時間が長く状態します。 このような状況では、コマンドをキャンセルし、必要な場合に、マウントを削除します。 パラメーターと資格情報が正しいことを再試行する前に確認します。
 
@@ -128,7 +65,7 @@ mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 
 - マウントの作成コマンドは非同期です。 コマンドを実行するは、マウントの状態を把握するマウント状態を確認することができます。
 
-- マウントを作成するときに、引数の使用 **--ローカル パス**マウントの本質的に一意の識別子。 後続のコマンドでは、(、「/」最終的に存在する場合を含む) と同じ文字列を使用する必要があります。
+- マウントを作成するときに、引数の使用 **--マウント パス**マウントの本質的に一意の識別子。 後続のコマンドでは、(、「/」最終的に存在する場合を含む) と同じ文字列を使用する必要があります。
 
 - マウントとは、読み取り専用です。 ディレクトリまたはマウントを下にあるファイルを作成することはできません。
 
@@ -136,4 +73,4 @@ mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか。](big-data-cluster-overview.md)。

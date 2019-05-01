@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ba3dd43475f656be7268349e0760cd48cbaa32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677073"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>[計算ツール] (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[アクション]** タブの **[計算ツール]** ペインを使用すると、アクション、ドリルスルー アクション、およびレポート アクションで使用可能なメタデータ、関数、およびテンプレートを調査できます。  
@@ -47,14 +47,14 @@ ms.locfileid: "48133512"
   
 |オプション|定義|  
 |------------|----------------|  
-|**[コピー]**|**[メタデータ]** または **[関数]** で選択した要素をクリップボードにコピーします。<br /><br /> 場合に、このオプションが表示されないことに注意してください。**テンプレート**が選択されています。 なお、このオプションが選択されているメンバーがコピーできない場合などを無効になっている、**セット**フォルダーに表示されるディメンションの**メタデータ**またはに表示される関数の関数グループフォルダー**関数**します。|  
+|**コピー**|**[メタデータ]** または **[関数]** で選択した要素をクリップボードにコピーします。<br /><br /> 場合に、このオプションが表示されないことに注意してください。**テンプレート**が選択されています。 なお、このオプションが選択されているメンバーがコピーできない場合などを無効になっている、**セット**フォルダーに表示されるディメンションの**メタデータ**またはに表示される関数の関数グループフォルダー**関数**します。|  
 |**メンバーのフィルター選択します。**|**[メンバーのフィルター選択]** ダイアログ ボックスを表示し、 **[メタデータ]** で選択した要素について表示されたメンバーをフィルター処理します。 **[メンバーのフィルター選択]** ダイアログ ボックスの詳細については、「[[メンバーのフィルター選択] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。<br /><br /> 場合にのみ、このオプションが表示されることに注意してください。**メタデータ**が選択されています。 なお、属性のレベルを選択した場合にのみこのオプションが有効になっている**メタデータ**します。|  
-|**テンプレートを追加します。**|選択したテンプレートに基づいて新しいアクション、ドリルスルー アクション、またはレポート アクションをキューブに追加し、それぞれ、 **アクション フォーム エディター**、 **ドリルスルー アクション フォーム エディター**、または **レポート アクション フォーム エディター**を表示します。<br /><br /> 注: 場合にのみこのオプションが表示される**メタデータ**が選択されています。|  
+|**テンプレートを追加します。**|選択したテンプレートに基づいて新しいアクション、ドリルスルー アクション、またはレポート アクションをキューブに追加し、それぞれ、 **アクション フォーム エディター**、 **ドリルスルー アクション フォーム エディター**、または **レポート アクション フォーム エディター**を表示します。<br /><br /> 注:このオプションは、 **[メタデータ]** が選択されている場合にのみ表示されます。|  
   
 ## <a name="see-also"></a>参照  
- [MDX スクリプティングの基礎&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [アクション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [ツールバー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [ツールバー&#40;アクションタブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [[アクション オーガナイザー]&#40;アクション] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [ドリルスルー アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6423c2caca256a257f660eabb8ce5eaf2d81c55f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165308"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>[資格情報] ([データ ソースのプロパティ] ダイアログ ボックス)
   **[データ ソースのプロパティ]** ダイアログ ボックスの **[資格情報]** を選択すると、レポート内のデータ ソースに接続するための資格情報を表示および変更できます。 指定した資格情報は、データ ソースへのアクセス、およびレポート プレビュー用のデータのコピーのキャッシュに使用されます。 プレビュー データのキャッシュの方法の詳細については、「 [レポートのプレビュー](reports/previewing-reports.md)」を参照してください。 資格情報の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  

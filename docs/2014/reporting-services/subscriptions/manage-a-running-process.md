@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12fa851a8f524bae83017042d01a7c7733225fd7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237796"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバーで実行中のジョブの状態を監視します。 レポート サーバーは、一定の間隔で、実行中のジョブをスキャンし、レポート サーバー データベース (SharePoint モードの場合はサービス アプリケーション データベース) に状態情報を書き込みます。 リモートまたはローカル データベース サーバーでのクエリの実行、レポート処理、およびレポート表示のいずれかが行われている場合、ジョブは実行中です。  

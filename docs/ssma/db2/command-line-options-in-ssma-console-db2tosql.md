@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: de41d864b6bfd8e7fe80188b69b50e2592d6cf16
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514479"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453405"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA コンソール (DB2ToSQL) コマンド ライン オプション
 Microsoft を実行し、SSMA アクティビティを制御する信頼性の高い一連のコマンド ライン オプションを提供します。 次のセクションでは、同じについて説明します。  
@@ -167,7 +167,7 @@ SSMA コンソールのコマンド ライン オプションの表を参照し�
   
 1.  パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md)します。  
   
-2.  レポートを生成するため、[レポートを生成する&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)を参照してください。  
+2.  レポートを生成するため、次を参照してください。[レポートを生成する&#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)します。  
   
-3.  コンソールで問題をトラブルシューティングするには、[トラブルシューティング&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)を参照してください。  
+3.  コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)します。  
   

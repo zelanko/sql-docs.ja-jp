@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245008"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([証明書] タブ)
    **[MSSQLSERVER のプロトコルのプロパティ]** ダイアログ ボックスの **[証明書]** ページでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の証明書の選択や、証明書のプロパティの表示を行います。 証明書を選択するまで、すべてのフィールドは空になっています。  
@@ -40,7 +40,7 @@ ms.locfileid: "52801894"
  [有効期限]  
  証明書の有効期間の最終日付です。  
   
- 表示名  
+ フレンドリ名  
  証明書の発行先の個人または認証局を表す表示名または一般名です。  
   
  [発行元]  

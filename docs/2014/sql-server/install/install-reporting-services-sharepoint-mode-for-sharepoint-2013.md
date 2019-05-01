@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ec3e854d72f28646ba556d09514b6646dbb3e60c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298815"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>SharePoint 2013 用 Reporting Services の SharePoint モードのインストール
   このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のシングル サーバー インストールの手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。 また、既存のインストールの更新について個々の手順 ( [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成など) をこのトピックで確認することもできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "53359844"
   
 -   [手順 2:登録し、Reporting Services SharePoint サービスの開始](#bkmk_install_SSRS_sharedservice)  
   
--   [手順 3:Reporting Services サービス アプリケーションを作成します。](#bkmk_create_serrviceapplication)  
+-   [ステップ 3:Reporting Services サービス アプリケーションを作成します。](#bkmk_create_serrviceapplication)  
   
 -   [手順 4:Power View のサイト コレクション機能を有効にします。](#bkmk_powerview)  
   
@@ -79,11 +79,11 @@ ms.locfileid: "53359844"
   
  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成:**  
   
--   インストールと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの登録の後、1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成します。 Reporting Services サービス アプリケーションを作成できるように、"SharePoint ファーム サービス アカウント" を一時的にローカルの Administrators グループのメンバーにする必要があります。 SharePoint 2013 のアカウントのアクセス許可の詳細については、[アカウントのアクセス許可と SharePoint 2013 でセキュリティ設定](https://technet.microsoft.com/library/cc678863.aspx)(https://technet.microsoft.com/library/cc678863.aspx)を参照してください。  
+-   インストールと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの登録の後、1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成します。 Reporting Services サービス アプリケーションを作成できるように、"SharePoint ファーム サービス アカウント" を一時的にローカルの Administrators グループのメンバーにする必要があります。 SharePoint 2013 のアカウントのアクセス許可の詳細については、次を参照してください。[アカウントのアクセス許可と SharePoint 2013 でセキュリティ設定](https://technet.microsoft.com/library/cc678863.aspx)(https://technet.microsoft.com/library/cc678863.aspx)します。  
   
      セキュリティ上、SharePoint ファーム管理者アカウントがローカル オペレーティング システムの管理者アカウントを兼ねないことをお勧めします。 インストール プロセスの一環としてファーム管理者アカウントをローカルの Administrators グループに追加する場合は、インストールの完了後にローカルの Administrators グループからそのアカウントを削除することをお勧めします。  
   
-##  <a name="bkmk_install_SSRS"></a> 手順 1:SharePoint モードでの Reporting Services レポート サーバーのインストール  
+##  <a name="bkmk_install_SSRS"></a> ステップ 1:SharePoint モードでの Reporting Services レポート サーバーのインストール  
  この手順では、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールします。 コンピューターに既にインストールされている内容によっては、次の手順で説明するインストール ページの一部は表示されない場合があります。  
   
 1.  SQL Server インストール ウィザード (Setup.exe) を実行します。  
@@ -161,7 +161,7 @@ ms.locfileid: "53359844"
   
 20. インストールには数分かかります。 機能の一覧と各機能の状態が表示された **[完了]** ページが表示されます。 コンピューターの再起動が必要であることを示す情報ダイアログが表示される場合もあります。  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> 手順 2:Reporting Services SharePoint サービスの登録と開始  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> ステップ 2:Reporting Services SharePoint サービスの登録と開始  
  ![PowerShell 関連コンテンツ](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
 > [!NOTE]  
@@ -222,7 +222,7 @@ ms.locfileid: "53359844"
     > [!NOTE]  
     >  Reporting Services サービスが **[開始中]** ステータスのままで、**[開始]** に変わらない場合は、Windows サーバー マネージャーで "SharePoint 2013 Administration" サービスが開始されていることを確認します。  
   
-##  <a name="bkmk_create_serrviceapplication"></a> 手順 3:Reporting Services サービス アプリケーションの作成  
+##  <a name="bkmk_create_serrviceapplication"></a> ステップ 3:Reporting Services サービス アプリケーションの作成  
  ここでは、既存のサービス アプリケーションを確認している場合に、サービス アプリケーションおよびプロパティの説明を作成する手順について説明します。  
   
 1.  SharePoint サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** をクリックします。  
@@ -397,7 +397,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のデータ警告機能は、電子メール メッセージで警告を送信します。 電子メールを送信するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを構成して、このサービス アプリケーションの電子メール配信拡張機能を変更しなければならない場合があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプション機能の電子メール配信拡張機能を使用する場合は、電子メールの設定が必要です。 詳細については、「[Reporting Services サービス アプリケーションの電子メールの構成 &#40;SharePoint 2010 および SharePoint 2013&#41;](../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md)」を参照してください。  
   
 ### <a name="add-reporting-services-content-types-to-content-libraries"></a>コンテンツ ライブラリに Reporting Services のコンテンツの種類を追加する  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用されるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用されるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>レポート サーバー ファイル同期機能をアクティブにする  
  ユーザーがパブリッシュされたレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合は、サイト レベルの **レポート サーバー ファイル同期** 機能が役立ちます。 ファイル同期機能では、レポート サーバー カタログとドキュメント ライブラリのアイテムの同期が、より頻繁に行われます。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)」をご覧ください。  

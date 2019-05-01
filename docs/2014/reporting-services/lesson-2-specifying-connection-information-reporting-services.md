@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:接続情報の指定 (Reporting Services) | Microsoft Docs
+title: レッスン 2:接続情報 (Reporting Services) の指定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064112"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>レッスン 2:接続情報の指定 (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>レッスン 2:(Reporting Services) の接続情報を指定します。
   チュートリアル プロジェクトにレポートを追加した後、リレーショナル データベース、多次元データベース、その他のリソースのデータにアクセスするためにレポートで使用される接続情報である *データ ソース*を定義する必要があります。  
   
  このレッスンでは、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベースをデータ ソースとして使用します。 このチュートリアルでは、ローカル コンピューターにインストールされている既定の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスにこのデータベースが配置されているものとします。  
   
 ### <a name="to-set-up-a-connection"></a>接続を設定するには  
   
-1.  **レポート データ**ウィンドウで、をクリックして**新規** をクリックし、**データ ソース.**.  
+1.  **レポート データ**ウィンドウで、をクリックして**新規** をクリックし、**データ ソース**.  
   
     > [!NOTE]  
     >  **レポート データ** ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。  
@@ -56,7 +56,7 @@ ms.locfileid: "59955578"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] データ ソース[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]に追加されます、**レポート データ**ウィンドウ。  
   
 ## <a name="next-task"></a>次の作業  
- [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベースへの接続が正常に定義されました。 次に、レポートを作成します。 「[レッスン 3:テーブル レポートのデータセットの定義 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)」を参照してください。  
+ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] サンプル データベースへの接続が正常に定義されました。 次に、レポートを作成します。 参照してください[レッスン 3。テーブル レポートのデータセットを定義する&#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services でのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

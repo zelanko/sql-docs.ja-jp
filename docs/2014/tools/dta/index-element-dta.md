@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63229003"
 ---
 # <a name="index-element-dta"></a>Index 要素 (DTA)
   ユーザー指定の構成のために作成したり削除したりするインデックスの情報が含まれます。  
