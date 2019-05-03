@@ -141,6 +141,6 @@ ms.locfileid: "62829357"
   
 -   agilebi.com のブログ「 [XML 変換先スクリプト コンポーネント](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)」  
   
--   www.codeplex.com に掲載されている CodePlex サンプル「 [Process XML Data パッケージ サンプル](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)」  
+-    www.codeplex.com に掲載されている CodePlex サンプル「 [Process XML Data パッケージ サンプル](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)」  
   
   
