@@ -18,7 +18,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "63217946"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
-   **のプロパティ** ダイアログ ボックスの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[ログオン]** タブでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
+  **のプロパティ** ダイアログ ボックスの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **[ログオン]** タブでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
 ## <a name="options"></a>および  
  **[ローカル システム アカウント]**  
@@ -36,7 +36,7 @@ ms.locfileid: "63217946"
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **開始2}  
+ **[開始]**  
  サービスを開始します。  
   
  **[停止]**  
