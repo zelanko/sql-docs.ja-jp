@@ -88,7 +88,7 @@ ms.locfileid: "63206895"
   
 |XML Query 要素|データセットとして取得されるフィールド|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|A: 値 https://schemas.microsoft.com/..します。<br /><br /> 値 b:https://schemas.microsoft.com/..します。<br /><br /> 値の c:https://schemas.microsoft.com/..します。|  
+|\<Query/>|A: 値 https://schemas.microsoft.com/.. します。<br /><br /> 値 b: https://schemas.microsoft.com/.. します。<br /><br /> 値の c: https://schemas.microsoft.com/.. します。|  
 |\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML ドキュメント:DPNamespace.xml  
