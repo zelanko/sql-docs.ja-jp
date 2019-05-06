@@ -10,7 +10,7 @@ ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 45643dbcdc2876fe0794ddb731abe6334537169c
 ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58510359"
@@ -68,7 +68,7 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
   
     最初の値としては、各チャンク (5,000 行) 内の行の数を制御するのにデータベース エンジンのインスタンスで定義された既定のバッチ処理サイズを使用します。 その値を変数に保存*sqlRowsPerRead*します。
   
-4.  新しいデータ ソース オブジェクトの変数を定義し、以前に定義されている引数を渡す、 **RxSqlServerData**コンス トラクター。 ここではデータ ソース オブジェクトが作成されるだけで、設定は行われないことに注意してください。 データの読み込みとは別の手順です。
+4.  新しいデータ ソース オブジェクトの変数を定義し、以前に定義されている引数を渡す、 **RxSqlServerData**コンストラクター。 ここではデータ ソース オブジェクトが作成されるだけで、設定は行われないことに注意してください。 データの読み込みとは別の手順です。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,

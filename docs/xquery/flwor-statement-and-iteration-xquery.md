@@ -26,7 +26,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
 ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/17/2018
 ms.locfileid: "51858667"
@@ -40,7 +40,7 @@ ms.locfileid: "51858667"
   
 -   1 つ以上の反復子変数を入力シーケンスにバインドする 1 つ以上の FOR 句。  
   
-     入力シーケンスは、XPath 式などの他の XQuery 式でもかまいません。 その場合、ノードのシーケンス、またはアトミック値のシーケンスのいずれかを指定します。 アトミック値のシーケンスは、リテラルまたはコンス トラクター関数を使用して構築できます。 構成された XML ノードは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の入力シーケンスとしては使用できません。  
+     入力シーケンスは、XPath 式などの他の XQuery 式でもかまいません。 その場合、ノードのシーケンス、またはアトミック値のシーケンスのいずれかを指定します。 アトミック値のシーケンスは、リテラルまたはコンストラクター関数を使用して構築できます。 構成された XML ノードは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の入力シーケンスとしては使用できません。  
   
 -   省略可能な `let` 句。 この句は、特定の繰り返し処理の変数に値を割り当てます。 割り当てる式として XPath 式などの XQuery 式を指定でき、ノードのシーケンスまたはアトミック値のシーケンスを返すことができます。 アトミック値のシーケンスを構成するには、リテラルまたはコンストラクター関数を使用できます。 構成された XML ノードは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の入力シーケンスとしては使用できません。  
   

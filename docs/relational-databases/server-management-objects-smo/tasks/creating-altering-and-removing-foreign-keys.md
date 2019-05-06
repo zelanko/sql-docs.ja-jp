@@ -16,7 +16,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9d4632c05bbbde885589d7f1dd57ddea60aa5d98
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47616240"
@@ -26,7 +26,7 @@ ms.locfileid: "47616240"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、外部キーは <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトで表現します。  
   
- SMO に外部キーを作成するには、外部キーが、コンス トラクターで定義されているテーブルを指定する必要があります、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>オブジェクト。 このテーブルから、外部キーになる列を少なくとも 1 つ選択する必要があります。 選択するには、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> オブジェクト変数を作成し、外部キーの列の名前を指定します。 次に、参照先のテーブルと列を指定します。 使用して、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>列を追加する方法、**列**オブジェクト プロパティです。  
+ SMO に外部キーを作成するには、外部キーが、コンストラクターで定義されているテーブルを指定する必要があります、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>オブジェクト。 このテーブルから、外部キーになる列を少なくとも 1 つ選択する必要があります。 選択するには、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> オブジェクト変数を作成し、外部キーの列の名前を指定します。 次に、参照先のテーブルと列を指定します。 使用して、<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>列を追加する方法、**列**オブジェクト プロパティです。  
   
  外部キーを表す列が一覧表示、**列**オブジェクトのプロパティ、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>オブジェクト。 外部キーによって参照される主キーがで表される、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>プロパティで指定したテーブルにある、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>プロパティ。  
   

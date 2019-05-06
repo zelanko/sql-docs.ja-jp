@@ -10,7 +10,7 @@ ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 613053b05d675963ceef89a71de4e8ac73352fad
 ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58510909"
@@ -72,7 +72,7 @@ ms.locfileid: "58510909"
   
     - 引数を使用して*sqlConsoleOutput*に R コンソールからの出力を確認しないことを示します。
 
-4. 呼び出す、 [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)変数と、既に定義されている接続文字列で計算コンテキスト オブジェクトを作成し、R 変数に新しいオブジェクトを保存するコンス トラクター *sqlcc*します。
+4. 呼び出す、 [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)変数と、既に定義されている接続文字列で計算コンテキスト オブジェクトを作成し、R 変数に新しいオブジェクトを保存するコンストラクター *sqlcc*します。
   
     ```R
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)

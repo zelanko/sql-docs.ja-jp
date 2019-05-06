@@ -10,7 +10,7 @@ ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: f020fffd28223fe37699c38f55bedb2f9e5e65d8
 ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58511020"
@@ -78,7 +78,7 @@ ms.locfileid: "58511020"
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-4. 引数を渡す、 **RxInSqlServer**を作成するコンス トラクター、*計算コンテキスト オブジェクト*します。
+4. 引数を渡す、 **RxInSqlServer**を作成するコンストラクター、*計算コンテキスト オブジェクト*します。
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -120,7 +120,7 @@ ms.locfileid: "58511020"
 
 リモート計算コンテキストで実行すると、ローカル コンテキストで動作する操作で問題が発生することがあります。 問題を分析またはパフォーマンスを監視する場合は、実行時のトラブルシューティングをサポートするために、計算コンテキストでトレースを有効にすることができます。
 
-1. 同じ接続文字列を使用する新しい計算コンテキストの作成が、引数を追加*traceEnabled*と*traceLevel*を**RxInSqlServer**コンス トラクター。
+1. 同じ接続文字列を使用する新しい計算コンテキストの作成が、引数を追加*traceEnabled*と*traceLevel*を**RxInSqlServer**コンストラクター。
 
     ```R
     sqlComputeTrace <- RxInSqlServer(

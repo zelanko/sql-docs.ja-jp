@@ -24,7 +24,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
 ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/11/2019
 ms.locfileid: "56024603"
@@ -32,16 +32,16 @@ ms.locfileid: "56024603"
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery では、使用することができます、**直接**と**計算**コンス トラクターをクエリ内での XML 構造を構築します。  
+  XQuery では、使用することができます、**直接**と**計算**コンストラクターをクエリ内での XML 構造を構築します。  
   
 > [!NOTE]  
->  違いはありません、**直接**と**計算**コンス トラクター。  
+>  違いはありません、**直接**と**計算**コンストラクター。  
   
 ## <a name="using-direct-constructors"></a>直接コンストラクターの使用  
  直接コンストラクターを使用するときは、XML の構築時に XML 同様の構文を指定します。 次の例では、直接コンストラクターを使用した XML 構築を示しています。  
   
 ### <a name="constructing-elements"></a>要素の構築  
- XML の表記法を使用して要素を構築できます。 次の例は、直接要素コンス トラクター式を使用し、作成、 \<ProductModel > 要素。 構築される要素には、次の 3 つの子要素があります。  
+ XML の表記法を使用して要素を構築できます。 次の例は、直接要素コンストラクター式を使用し、作成、 \<ProductModel > 要素。 構築される要素には、次の 3 つの子要素があります。  
   
 -   テキスト ノード。  
   
@@ -547,7 +547,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>その他の直接 XML コンストラクター  
  処理命令や XML コメントのコンストラクターでは、対応する XML の構築と同じ構文を使用します。 テキスト ノードの計算コンストラクターもサポートされますが、主に、テキスト ノードを構築するために XML DML で使用されます。  
   
- **注**、明示的なテキスト ノード コンス トラクターを使用しての例は、特定の例を参照してください。[挿入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)します。  
+ **注**、明示的なテキスト ノード コンストラクターを使用しての例は、特定の例を参照してください。[挿入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)します。  
   
  次のクエリでは、構築される XML に 1 つの要素、2 つの属性、1 つのコメント、および 1 つの処理命令が含まれます。 シーケンスを作成するので、<`FirstLocation`> の前でコンマを使用していることに注意してください。  
   

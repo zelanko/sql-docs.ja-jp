@@ -19,7 +19,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6a7527fe3fb4e250e0cf884e17ee6e53eeba7b8b
 ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/11/2019
 ms.locfileid: "56042953"
@@ -58,10 +58,10 @@ ms.locfileid: "56042953"
 ||[最小値](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
 ||[合計](../xquery/aggregate-functions-sum.md)|  
-|[コンス トラクター関数&#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[コンス トラクター関数](../xquery/constructor-functions-xquery.md)|  
+|[コンストラクター関数&#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[コンストラクター関数](../xquery/constructor-functions-xquery.md)|  
 |[データ アクセサー関数](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[data](../xquery/data-accessor-functions-data-xquery.md)|  
-|[ブール値コンス トラクター関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 関数 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
+|[ブール値コンストラクター関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 関数 (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 関数 (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[QNames に関係する関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[Expanded-qname() (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
 ||[ローカルの名前-から-QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  

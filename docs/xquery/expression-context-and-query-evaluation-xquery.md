@@ -21,7 +21,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f8092182bff23580936e17923985739525309097
 ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/14/2019
 ms.locfileid: "54256877"
@@ -38,7 +38,7 @@ ms.locfileid: "54256877"
 ## <a name="static-context"></a>静的コンテキスト  
  静的コンテキストの初期化とは、式の静的分析向けに、すべての情報をまとめるプロセスのことです。 静的コンテキストの初期化の一環として、次のことが行われます。  
   
--   **境界空白文字**ポリシーが分離に設定します。 そのため、境界の空白で保持されません、**任意の要素**と**属性**クエリのコンス トラクター。 以下に例を示します。  
+-   **境界空白文字**ポリシーが分離に設定します。 そのため、境界の空白で保持されません、**任意の要素**と**属性**クエリのコンストラクター。 以下に例を示します。  
   
     ```  
     declare @x xml  

@@ -10,7 +10,7 @@ ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: f0d9916414514e0ad0d73c3bb849b9c6e546289d
 ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58512455"
@@ -128,9 +128,9 @@ def test_linmod_sql():
 
 + Python の変数など`sql_query`と`sql_connection_string`データのソースを定義します。 
 
-    これらの変数を渡す、 [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata)コンス トラクターを実装する、**データ ソース オブジェクト**という`data_source`します。
+    これらの変数を渡す、 [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata)コンストラクターを実装する、**データ ソース オブジェクト**という`data_source`します。
 
-+ 作成する、**計算コンテキスト オブジェクト**を使用して、 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)コンス トラクター。 その結果、**計算コンテキスト オブジェクト**という`sql_cc`。
++ 作成する、**計算コンテキスト オブジェクト**を使用して、 [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)コンストラクター。 その結果、**計算コンテキスト オブジェクト**という`sql_cc`。
 
     この例では、計算コンテキストとして使用する同じ SQL Server インスタンスにデータがあるという前提で、データ ソースで同じ接続文字列を使用して、再使用します。 
     

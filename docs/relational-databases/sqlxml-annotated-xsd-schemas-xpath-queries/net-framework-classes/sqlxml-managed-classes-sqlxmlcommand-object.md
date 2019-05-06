@@ -34,14 +34,14 @@ manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
 ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/11/2019
 ms.locfileid: "56041503"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML マネージド クラス - SqlXmlCommand オブジェクト
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  SqlXmlCommand オブジェクトのコンス トラクターです。  
+  SqlXmlCommand オブジェクトのコンストラクターです。  
   
 ```  
 public SqlXmlCommand(string cnString)  

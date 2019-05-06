@@ -27,7 +27,7 @@ ms.locfileid: "62711467"
   
 -   [カーソルの行セット サイズ](cursor-rowset-size.md)  
   
--   [カーソルのコンカレンシー &amp;#40;ODBC&amp;#41;](cursor-concurrency-odbc.md)  
+-   [カーソルのコンカレンシー &#40;ODBC&#41;](cursor-concurrency-odbc.md)  
   
 -   [カーソルのトランザクション分離レベル](cursor-transaction-isolation-level.md)  
   

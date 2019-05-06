@@ -22,7 +22,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
 ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/14/2019
 ms.locfileid: "54254677"
@@ -36,7 +36,7 @@ ms.locfileid: "54254677"
   
  このトピックでは、次のいずれかの方法を使用して、ある型から別の型へキャストする場合に適用される型キャストの規則について説明します。  
   
--   使用して実行する明示的なキャスト**としてキャスト**または型コンス トラクター関数 (たとえば、 `xs:integer("5")`)。  
+-   使用して実行する明示的なキャスト**としてキャスト**または型コンストラクター関数 (たとえば、 `xs:integer("5")`)。  
   
 -   型の上位変換中に行われる暗黙のキャスト  
   

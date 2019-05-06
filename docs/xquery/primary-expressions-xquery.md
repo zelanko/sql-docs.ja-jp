@@ -22,7 +22,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51674241"
@@ -30,7 +30,7 @@ ms.locfileid: "51674241"
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 原始式には、リテラル、変数参照、コンテキスト アイテム式、コンス トラクター、および関数呼び出しが含まれます。  
+  XQuery 原始式には、リテラル、変数参照、コンテキスト アイテム式、コンストラクター、および関数呼び出しが含まれます。  
   
 ## <a name="literals"></a>リテラル  
  XQuery リテラルには、数値型または文字列型のリテラルを使用できます。 文字列リテラルには、定義済みのエンティティ参照を含めることができます。エンティティ参照は文字のシーケンスです。 シーケンスは、構文上意味を持つことも考えられる 1 文字を表すアンパサンドで始まります。 XQuery の定義済みエンティティ参照を次に示します。  
