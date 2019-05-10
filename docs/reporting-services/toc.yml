@@ -926,8 +926,6 @@
   href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
 - name: リンク レポートを作成する
   href: ../reporting-services/reports/create-a-linked-report.md
-- name: View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
-  href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: SSRS でのレポート データ
   href: ../reporting-services/report-data/report-data-ssrs.md
 - name: Reporting Services でサポートされるデータ ソース
@@ -1019,8 +1017,6 @@
           href: ../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
         - name: Analysis Services の MDX クエリ デザイナーでのパラメーターの定義
           href: ../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md
-        - name: '[クエリ パラメーターの定義] ダイアログ ボックス'
-          href: ../reporting-services/report-data/define-query-parameters-dialog-box.md
         - name: Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス
           href: ../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md
         - name: Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス
