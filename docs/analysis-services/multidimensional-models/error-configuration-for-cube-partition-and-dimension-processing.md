@@ -1,5 +1,5 @@
 ---
-title: キューブ、パーティション、およびディメンションの処理のエラーの構成 |Microsoft ドキュメント
+title: キューブ、パーティション、およびディメンションの処理のエラーの構成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025549"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357353"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>キューブ、パーティション、およびディメンションの処理のエラーの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "34025549"
   
  **特定のエラーに対するサーバーの応答**  
   
-|プロパティ|既定値|その他の値|  
+|プロパティ|既定|その他の値|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> エラー構成を初期化するときに発生します。|**IgnoreError** は、エラー数が上限より少ない限り、エラーのログ記録やカウントを行わずに処理を続行します。|**ReportAndContinue** をログに記録し、エラーをカウントします。<br /><br /> **ReportAndStop** は、エラーの上限に関係なく、エラーを報告し、直ちに処理を停止します。|  
 |**KeyNotFound**<br /><br /> ファクト テーブルの外部キーに関連ディメンション テーブルで一致する主キーがない場合に発生します (たとえば、Sales ファクト テーブルに Product ディメンション テーブルに存在しない製品 ID のレコードがあります)。 このエラーは、パーティションの処理中、またはスノーフレーク ディメンションのディメンション処理中に発生する可能性があります。|**ReportAndContinue** をログに記録し、エラーをカウントします。|**ReportAndStop** は、エラーの上限に関係なく、エラーを報告し、直ちに処理を停止します。<br /><br /> **IgnoreError** は、エラー数が上限より少ない限り、エラーのログ記録やカウントを行わずに処理を続行します。 このエラーをトリガーするレコードは、既定では不明なメンバーに変換されますが、 **KeyErrorAction** プロパティを変更して代わりに破棄することもできます。|  
@@ -142,7 +142,7 @@ ms.locfileid: "34025549"
   
 -   **NullProcessing**=**Error** を設定して、NULL 値を持つレコードを除外します。 これによって、 **NullKeyNotAllowed** エラーが生成されて記録され、キー エラーの上限に加算されます。 **[許可されていない NULL キー]** のエラー構成プロパティを **IgnoreError** に設定して、処理を続行するようにできます。  
   
- NULL は非キー フィールドで問題になる可能性があります。NULL がゼロまたは空として解釈されるかどうかによって MDX クエリが異なる結果を返します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には変換動作をあらかじめ定義するために使用できる NULL 処理オプションが用意されています。 詳細については、「 [不明なメンバーと NULL 処理のプロパティの定義](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) コマンドと <xref:Microsoft.AnalysisServices.NullProcessing> 」を参照してください。  
+ NULL は非キー フィールドで問題になる可能性があります。NULL がゼロまたは空として解釈されるかどうかによって MDX クエリが異なる結果を返します。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には変換動作をあらかじめ定義するために使用できる NULL 処理オプションが用意されています。  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>ディメンション属性での NullProcessing プロパティの設定  
   
@@ -174,10 +174,10 @@ ms.locfileid: "34025549"
 ##  <a name="bkmk_next"></a> 次の手順  
  エラーによって処理を停止するか、または無視するかを決定します。 エラーのみが無視されることに注意してください。 エラーの原因となったレコードは無視されず、破棄されるか、不明なメンバーに変換されます。 データの整合性規則に違反するレコードは、データベースには追加されません。 既定では、最初のエラーが発生したときに処理が停止しますが、エラーの上限を引き上げることによってこれを変更できます。 キューブの開発では、処理を続行できるようにエラー構成ルールを緩和することが役立つ場合があります。これによって、確認するデータが存在するようになります。  
   
- 既定の NULL 処理動作を変更するかどうかを決定します。 既定では、文字列型の列の NULL は空の値として処理されますが、数値列の NULL はゼロとして処理されます。 属性に対して NULL 処理を設定する手順については、「 [不明なメンバーと NULL 処理のプロパティの定義](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 」を参照してください。  
+ 既定の NULL 処理動作を変更するかどうかを決定します。 既定では、文字列型の列の NULL は空の値として処理されますが、数値列の NULL はゼロとして処理されます。  
   
 ## <a name="see-also"></a>参照  
  [ログのプロパティ](../../analysis-services/server-properties/log-properties.md)   
- [不明なメンバーと Null 処理のプロパティを定義します。](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [不明なメンバーと NULL 処理のプロパティの定義](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

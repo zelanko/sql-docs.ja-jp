@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvconnect.f1
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c5214722aea9ea3fb1d04519d414b4c86ebb33de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 911338cd67c44125ec7c10d8e76c5abe4b2f52af
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925542"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483513"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>[マスター データ サービス データベースへの接続] ダイアログ ボックス
   **[マスター データ サービス データベースへの接続]** ダイアログ ボックスを使用して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択します。  

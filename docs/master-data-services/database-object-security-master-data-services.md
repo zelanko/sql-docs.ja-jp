@@ -11,15 +11,15 @@ helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbad98239ef2aabbea33a1874e5e6f3efad51c55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: df262ea32662a160b0a0ebcadc26eb43676271b6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783614"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487720"
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
 
@@ -60,7 +60,7 @@ ms.locfileid: "52783614"
   
 ##  <a name="rules"></a> ビジネス ルールに対してデータを検証する  
   
-|操作|セキュリティ保護可能|アクセス許可|  
+|アクション|セキュリティ保護可能|アクセス許可|  
 |------------|---------------|-----------------|  
 |ビジネス ルールに対してデータのバージョンを検証する|mdm.udpValidateModel|EXECUTE|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52783614"
   
 ##  <a name="Versions"></a> バージョンを削除する  
   
-|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
+|アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
 |削除するバージョンの ID を決定する|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |モデルのバージョンを削除する|mdm.udpVersionDelete|EXECUTE|  
@@ -77,7 +77,7 @@ ms.locfileid: "52783614"
   
 ##  <a name="Hierarchy"></a> 階層メンバーの権限を直ちに適用する  
   
-|操作|[セキュリティ保護可能なリソース]|アクセス許可|  
+|アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
 |メンバー権限を直ちに適用する|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   

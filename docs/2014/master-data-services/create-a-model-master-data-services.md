@@ -10,20 +10,20 @@ helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: efab3218e3b4ee94af22c5fe52c9c4183666c54d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765835"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479934"
 ---
 # <a name="create-a-model-master-data-services"></a>モデルを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルを作成してモデル オブジェクトを含めます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -50,7 +50,7 @@ ms.locfileid: "62765835"
   
 -   [エンティティを作成する (マスター データ サービス)](create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)   
  [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)   
  [モデルを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-model-master-data-services.md)   

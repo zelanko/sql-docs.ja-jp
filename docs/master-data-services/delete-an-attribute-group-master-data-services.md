@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d9b308459c406555c81a89203fea5de768356a11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 243847e8ac2a1f3cb06a121b9ec42f556accc0e1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759904"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478589"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>属性グループを削除する (マスター データ サービス)
 
@@ -29,12 +29,12 @@ ms.locfileid: "52759904"
   
 -   **注** 属性グループが存在する場合、いずれの属性グループにも属さない属性は **[エクスプローラー]** に表示されません。 属性グループが存在しない場合、すべての属性が表示されます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-delete-an-attribute-group"></a>属性グループを削除するには  
   

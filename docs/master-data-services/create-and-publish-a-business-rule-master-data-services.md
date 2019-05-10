@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777344"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489615"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
 
@@ -27,12 +27,12 @@ ms.locfileid: "52777344"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、マスター データの精度を保証するためにビジネス ルールを作成します。 ルールを作成した後、データに適用する前に、そのルールをパブリッシュする必要があります。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>ビジネス ルールを作成してパブリッシュするには  
   
@@ -103,16 +103,16 @@ ms.locfileid: "52777344"
 ## <a name="grid-columns"></a>グリッド列  
  作成されたビジネス ルールごとに、6 列の行がグリッドに追加されます。 次の列が追加されます。  
   
-|[オブジェクト名]|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |状態|**[保存]** をクリックすると、ビジネス ルールが更新中であることを示す次のイメージが表示されます。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> ビジネス ルールの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|[オブジェクト名]|ビジネス ルール名。|  
-|[説明]|ビジネス ルールの説明。|  
+|名前|ビジネス ルール名。|  
+|説明|ビジネス ルールの説明。|  
 |[ビジネス ルールの状態]|次のビジネス ルールの状態のいずれか: ルール未定義、アクティブ、除外、保留中の変更、保留中の実行、保留中の削除。|  
 |除外|ビジネス ルールを除外するかどうかを指定します。|  
 |Notification|電子メール通知を送信するユーザーまたはグループを指定します。|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
   
 -   以下のいずれかの手順でビジネス ルールをデータに適用します。  
   

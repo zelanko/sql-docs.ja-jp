@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7261d8b5b72b835c726a268477c44e4d0663f131
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516518"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376844"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -83,11 +83,11 @@ docker run --name sqlenterprise `
       -d "store/microsoft/mssql-server-linux:2017-latest"
  ```
 
-      > [!IMPORTANT]
-      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+> [!IMPORTANT]
+> 値を渡すことによって**Y**環境変数に**ACCEPT_EULA**にエディションの値と**MSSQL_PID**、有効であり、既存のライセンスがあることを表現する、使用する SQL Server のバージョンとエディション。 また、Docker コンテナー イメージをで実行されている SQL Server ソフトウェアの使用は、SQL Server ライセンスの条項に準拠するものを同意するものです。
 
-      > [!NOTE]
-      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+> [!NOTE]
+> 使用できる値の完全な一覧については**MSSQL_PID**を参照してください[on Linux の環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)します。
 
 ::: moniker-end
 

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 83fca35f8e67ebcefcf587cd0faf22ddbdd075d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8dc3e4efaf4a2951dfaf4f5af9e9a850c20763d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925132"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479881"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>[Web サイトの作成] ダイアログ ボックス (マスター データ サービス構成マネージャー)
   **[Web サイトの作成]** ダイアログ ボックスを使用すると、ローカル コンピューター上に新しい Web サイトを作成できます。 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]で Web サイトを作成すると、作成したサイトは、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションとして構成されるルート アプリケーションを伴って、ローカル コンピューター上のインターネット インフォメーション サービス (IIS) に追加されます。 また、新しいアプリケーション プールが作成され、Web アプリケーションがそのアプリケーション プールに追加されます。  

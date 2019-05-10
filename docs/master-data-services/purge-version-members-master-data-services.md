@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b681d06ab2ebb7c26d57fcef3bc34b070d30269e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9834e79746feb3e7890ab8b6d5bdd43bbfc36dbb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62639704"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486010"
 ---
 # <a name="purge-version-members-master-data-services"></a>バージョン メンバーのパージ (マスター データ サービス)
 
@@ -24,7 +24,7 @@ ms.locfileid: "62639704"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーを削除してもメンバーは非アクティブ化 (論理削除) されるだけです。 データはデータベースに残ります。 このトピックでは、モデル バージョンで論理削除されたすべてのメンバーをパージ (永続的に削除) する方法について説明します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [バージョン管理] 機能領域にアクセスする権限が必要です。  

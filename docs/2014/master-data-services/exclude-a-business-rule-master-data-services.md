@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6285d32ca514cacef4b78b31336bb33866baf860
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8f18e047b11bee4093ce7a6e494c1ae1bf3d0ada
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765345"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483385"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>ビジネス ルールを除外する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ビジネス ルールを完全に削除せずにそのルールに対するデータの検証が行われないようにする場合は、ビジネス ルールを除外します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -49,7 +49,7 @@ ms.locfileid: "62765345"
   
 9. 確認のダイアログ ボックスで **[OK]** をクリックします。 値、**状態**列が**除外**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス ルールを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
  [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)  
