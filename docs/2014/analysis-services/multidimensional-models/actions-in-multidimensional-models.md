@@ -77,7 +77,7 @@ ms.locfileid: "62701936"
 |**アプリケーション**|アクションのアプリケーションについて説明します。|  
 |**[説明]**|アクションについて説明します。|  
 |**Caption**|アクションに関して表示されるキャプションを指定します。 キャプションが MDX の場合は、指定`True`の**キャプションに MDX**します。|  
-|**True**|キャプションが MDX の場合は `True`、MDX でない場合は `False` を指定します。|  
+|**キャプションに MDX**|キャプションが MDX の場合は `True`、MDX でない場合は `False` を指定します。|  
   
 > [!NOTE]  
 >  HTML およびコマンド ラインのアクションの種類を定義するには、Analysis Services スクリプト言語 (ASSL) または分析管理オブジェクト (AMO) を使用する必要があります。 詳細については、「[アクション要素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)」「[Type 要素 &#40;アクション&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl)」、および「[高度な AMO OLAP オブジェクトのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)」を参照してください。  

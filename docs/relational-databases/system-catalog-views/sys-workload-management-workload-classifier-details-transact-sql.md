@@ -1,7 +1,7 @@
 ---
 title: sys.workload_management_workload_classifier_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2019
+ms.date: 05/01/2019
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -12,19 +12,16 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 9afd00a887244c02849d40eed635500b06533709
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 0e693c97ad2702eefb0e02084b6c49d138ef934a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582725"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089522"
 ---
-# <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql-preview"></a>sys.workload_management_workload_classifier_details (TRANSACT-SQL) (プレビュー)
+# <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>sys.workload_management_workload_classifier_details (TRANSACT-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
-
-> [!Note]
-> ワークロードの分類は、SQL Data Warehouse Gen2 のプレビューで使用できます。 ワークロード管理の分類と重要度のプレビューは 2019 年 4 月 9 日、またはそれ以降のリリース日でビルドです。  ユーザーは、ワークロード管理のテストの前にこの日付よりもビルドの使用を避ける必要があります。  ビルドがワークロードの管理ができるかどうかを決定、実行 select @@version SQL Data Warehouse インスタンスに接続されている場合。
 
   各分類器の詳細を返します。  
   

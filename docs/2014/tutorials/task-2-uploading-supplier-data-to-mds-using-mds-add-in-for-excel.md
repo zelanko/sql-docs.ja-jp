@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250217"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484660"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>タスク 2:Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする
   このタスクで、クレンジングされた仕入先データを発行する**MDS**を使用して、 **MDS アドインの Excel**します。 という名前のエンティティを作成する**Supplier**で、 **Suppliers**前のレッスンで作成したモデル。 エンティティは、Excel ファイルの各列に属性を持ちます。 Supplier エンティティの Code および Name 属性に対応して、 **SupplierID**と**Supplier Name** Excel の列。  

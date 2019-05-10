@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589582"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450023"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  たとえば、{00026BA1-0000-0000-C000-000000000046} には、SQL-DMO の CLSID **SQLServer**オブジェクト。  
   
- _objecttoken_ **出力**  
+ _objecttoken_ **OUTPUT**  
  返されるオブジェクト トークンは、データ型のローカル変数にする必要があります**int**します。このオブジェクト トークンは、作成する OLE オブジェクトを識別するもので、その他の OLE オートメーション ストアド プロシージャの呼び出しに使用されます。  
   
  *context*  
@@ -76,15 +76,15 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ## <a name="return-code-values"></a>リターン コードの値  
  成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
   
- HRESULT のリターン コードの詳細については、[OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)を参照してください。  
+ HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
   
 ## <a name="remarks"></a>コメント  
- OLE オートメーション プロシージャが有効な場合に呼び出し**sp_OACreate** OLE オートメーションの共有実行環境が開始します。 OLE オートメーションを有効にする方法の詳細については、[Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)を参照してください。  
+ OLE オートメーション プロシージャが有効な場合に呼び出し**sp_OACreate** OLE オートメーションの共有実行環境が開始します。 OLE オートメーションを有効にする方法の詳細については、次を参照してください。 [Ole Automation Procedures サーバー構成オプション](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)します。  
   
  作成された OLE オブジェクトは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの最後に自動的に破棄されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
   
 ## <a name="examples"></a>使用例  
   

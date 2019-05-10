@@ -10,15 +10,15 @@ ms.topic: conceptual
 keywords:
 - マスター データ サービス
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cfad36590bc36e604efb563390f4e50442080676
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 99009d961baf3d1f870783f565cb93c628eb85c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658256"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480159"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
 
@@ -52,14 +52,14 @@ ms.locfileid: "58658256"
   
 ||  
 |-|  
-|[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注:WebDAV 発行はインストールしないでください]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> セキュリティ<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
+|[インターネット インフォメーション サービス]<br /><br /> Web 管理ツール<br /><br /> IIS 管理コンソール<br /><br /> World Wide Web サービス<br /><br /> アプリケーション開発<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 拡張<br /><br /> ISAPI フィルター<br /><br /> HTTP 基本機能<br /><br /> 既定のドキュメント<br /><br /> ディレクトリの参照<br /><br /> HTTP エラー<br /><br /> 静的なコンテンツ<br /><br /> [注:WebDAV 発行はインストールしない]<br /><br /> 状態と診断<br /><br /> HTTP ログ<br /><br /> 要求の監視<br /><br /> パフォーマンス<br /><br /> 静的なコンテンツの圧縮<br /><br /> セキュリティ<br /><br /> 要求フィルター<br /><br /> [Windows 認証]|  
   
-### <a name="features"></a>機能 
+### <a name="features"></a>機能のインストール 
  Windows Server 2012 および Windows Server 2012 R2 では、 **サーバー マネージャー** を使用して、次に示す必要な機能をインストールできます。  
   
 ||  
 |-|  
-|.NET Framework 3.5 (.NET 2.0 および 3.0 を含む)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF サービス<br /><br /> HTTP のアクティブ化 [注:これは必須です。]<br /><br /> TCP ポート共有<br /><br /> Windows プロセス アクティブ化サービス<br /><br /> プロセス モデル<br /><br /> .NET 環境<br /><br /> 構成 API<br/><br/>動的なコンテンツ圧縮|  
+|.NET Framework 3.5 (.NET 2.0 および 3.0 を含む)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF サービス<br /><br /> HTTP のアクティブ化 [注:これが必要です。]<br /><br /> TCP ポート共有<br /><br /> Windows プロセス アクティブ化サービス<br /><br /> プロセス モデル<br /><br /> .NET 環境<br /><br /> 構成 API<br/><br/>動的なコンテンツ圧縮|  
   
  前提条件となるサーバーの役割と機能を追加する PowerShell スクリプトのサンプルを次に示します。 前提条件となるサーバーの役割と機能は、環境によって異なります。  
   

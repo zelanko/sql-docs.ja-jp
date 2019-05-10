@@ -2,21 +2,21 @@
 title: チュートリアル:テーブル領域使用状況のサンプル insight ウィジェットを有効にします。
 titleSuffix: Azure Data Studio
 description: このチュートリアルでは、Azure Data Studio データベース ダッシュ ボードのテーブル領域使用状況のサンプル insight ウィジェットを有効にする方法について説明します。
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 6594aea6a618e2b9c4bd28368462f85c94a5ff0a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239510"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089666"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>チュートリアル:テーブル領域使用状況分析ウィジェットを使用する例を有効にします。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

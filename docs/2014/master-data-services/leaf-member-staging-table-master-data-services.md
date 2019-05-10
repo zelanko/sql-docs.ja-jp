@@ -10,15 +10,15 @@ helpviewer_keywords:
 - members staging table [Master Data Services]
 - database [Master Data Services], members staging table
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24e6d55dda51e663247a3a54900004b2e18f24ae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3730ed26ec94d64dedb0ac17cd306a3d6d75a2b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765061"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482909"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>リーフ メンバー ステージング テーブル (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのリーフ メンバー ステージング テーブル (stg.name_Leaf) を使用して、リーフ メンバーを作成、更新、非アクティブ化、および削除します。 また、このテーブルを使用して、リーフ メンバーの属性値を更新できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "62765061"
 ##  <a name="feedback"></a> この記事ではする方法でしょうか。 待ちしています  
  どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツを向上させるためにお客様のフィードバックを受け付けています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Leaf%20Member%20Staging%20Table%20page) にコメントをお送りください  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
  [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [ステージング処理中に発生するエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   

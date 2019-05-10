@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072449"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65356499"
 ---
 # <a name="dax-in-tabular-models"></a>テーブル モデルにおける DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "53072449"
   
  行フィルターは、指定行と関連行に適用されます。 1 つのテーブルに複数のリレーションシップがある場合、フィルターによりセキュリティがアクティブなリレーションシップに適用されます。 行フィルターには、関連テーブルに対して定義された他の行フィルターと類似する点があります。  
   
- 詳細については、[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)を参照してください。  
+ 詳細については、次を参照してください。[ロール](../../analysis-services/tabular-models/roles-ssas-tabular.md)します。  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX データ型  
  多様なデータ型をサポートするさまざまなデータ ソースから、モデルにデータをインポートできます。 モデルにデータをインポートする場合、そのデータはいずれかのテーブル モデル データ型に変換されます。 モデル データが計算に使用される場合、そのデータは計算中および計算の出力時に DAX データ型に変換されます。 DAX の数式を作成すると、数式に使用されている語句によって、返される値のデータ型が自動的に判断されます。  
@@ -76,7 +76,7 @@ ms.locfileid: "53072449"
   
  通常、データ型は自動的に設定されますが、データ型とは何か、それらが特に DAX の数式においてどのように利用されているかを知ることは大切です。 たとえば、式のエラーや予期しない結果は、データ型に対して使用できない特定の演算子を引数に指定したことが原因で発生することが少なくありません。 たとえば、「 `= 1 & 2`」という数式では、文字列の結果 (12) が返されます。 これに対し、「 `= "1" + "2"`」という数式では、整数の結果 (3) が返されます。  
   
- 表形式モデルと DAX のデータ型の明示的および暗黙的な変換でのデータ型の詳細については、[型でサポートされているデータ](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)を参照してください。  
+ 表形式モデルと DAX のデータ型の明示的および暗黙的な変換でのデータ型の詳細については、次を参照してください。[型でサポートされているデータ](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)します。  
   
 ##  <a name="bkmk_DAX_opertors"></a> DAX の演算子  
  DAX 言語では、次の 4 種類の計算演算子が数式に使用されます。  
@@ -198,7 +198,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  DAX の数学関数は、Excel の数学関数や三角関数と非常によく似ています。 ただし DAX 関数で使用する数値データ型には、小さな違いがいくつかあります。 詳細については、「 [数学関数と三角関数 (DAX)](http://msdn.microsoft.com/1f408ec1-e769-43d6-a68c-567bc30d893f)」を参照してください。  
  
 ### <a name="other-functions"></a>その他の関数  
- これらの関数に属している他のほとんどの関数のカテゴリのいずれかで定義できない一意のアクションを実行します。 詳細については、[その他の関数 (DAX)](https://msdn.microsoft.com/mt150101)を参照してください。
+ これらの関数に属している他のほとんどの関数のカテゴリのいずれかで定義できない一意のアクションを実行します。 詳細については、次を参照してください。[その他の関数 (DAX)](https://msdn.microsoft.com/mt150101)します。
   
 ### <a name="statistical-functions"></a>統計関数  
  DAX には、集計を行う統計関数があります。 DAX では、集計と平均の作成や最小値と最大値の特定に加えて、集計前に列をフィルター処理したり、関連テーブルに基づき集計を作成したりすることができます。 詳細については、「 [統計関数 (DAX)](http://msdn.microsoft.com/ba4c1298-57a0-40fc-b6f6-00e187ace559)」を参照してください。  
@@ -207,7 +207,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  DAX の文字列関数は、Excel の文字列関数と非常によく似ています。 文字列の一部を返したり、文字列内のテキストを検索したり、文字列値を連結したりすることができます。 さらに、DAX には日付、時刻、数値の形式を制御する関数も用意されています。 詳細については、「 [文字列関数 (DAX)](http://msdn.microsoft.com/e4821571-ae55-4df7-ae98-c578200bba5f)」を参照してください。  
   
 ### <a name="time-intelligence-functions"></a>タイム インテリジェンス関数  
- DAX に用意されているタイム インテリジェンス関数を使用して、カレンダーおよび日付に関して組み込まれた知識を使用する計算を作成できます。 時刻と日付の範囲を集計や計算と一緒に使用することで、比較可能な複数期間の売上、在庫などに関する有意な比較を構築できます。 詳細については、[タイム インテリジェンス関数 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)を参照してください。  
+ DAX に用意されているタイム インテリジェンス関数を使用して、カレンダーおよび日付に関して組み込まれた知識を使用する計算を作成できます。 時刻と日付の範囲を集計や計算と一緒に使用することで、比較可能な複数期間の売上、在庫などに関する有意な比較を構築できます。 詳細については、次を参照してください。[タイム インテリジェンス関数 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)します。  
   
 ###  <a name="bkmk_TableFunc"></a> テーブル値関数  
  DAX 関数には、テーブルを出力する関数、入力としてテーブルを受け取る関数、またはその両方を行う関数が存在します。 テーブルに含めることができるのは 1 列であるため、テーブル値関数も入力として 1 列を受け取ります。 DAX の数式を最大限に活用するには、このようなテーブル値関数の使い方を理解することが大切です。 DAX には、次の種類のテーブル値関数があります。  
@@ -360,7 +360,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  再計算の結果、異なる値が返され、ロール メンバーによる行のクエリの可否が変化しない限り、処理も再計算も行フィルターの数式には影響しません。  
   
- 詳細については、[データを処理する](../../analysis-services/tabular-models/process-data-ssas-tabular.md)を参照してください。  
+ 詳細については、次を参照してください。[データを処理する](../../analysis-services/tabular-models/process-data-ssas-tabular.md)します。  
   
 ##  <a name="bkmk_troubleshoot"></a> 数式内のエラーのトラブルシューティング  
  数式を定義するときにエラーが発生した場合は、その数式に *構文エラー*、 *セマンティック エラー*、または *計算エラー*が含まれている可能性があります。  
@@ -382,7 +382,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  最初の 4 つのケースでは、DAX は無効な数式を含んでいる列全体にフラグを設定します。 最後のケースでは、DAX は列をグレーで表示し、その列が未処理状態であることを示します。  
   
 ##  <a name="bkmk_addional_resources"></a> その他のリソース  
- 「[テーブル モデリング &#40;Adventure Works チュートリアル&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md)」では、計算列、メジャー、および行フィルターに多数の計算を含んだテーブル モデルの作成手順について説明します。 ほとんどの数式について、それぞれの目的が説明されています。  
+ 「[テーブル モデリング &#40;Adventure Works チュートリアル&#41;](../tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md)」では、計算列、メジャー、および行フィルターに多数の計算を含んだテーブル モデルの作成手順について説明します。 ほとんどの数式について、それぞれの目的が説明されています。  
   
  [Analysis Services チーム ブログ](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409)最新の情報、ヒント、ニュースとお知らせを提供します。 
   

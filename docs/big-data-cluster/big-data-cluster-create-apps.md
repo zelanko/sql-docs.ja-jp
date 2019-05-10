@@ -12,11 +12,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472235"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775373"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server のビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
@@ -111,7 +111,7 @@ mssqlctl app create --spec ./addpy
 
 このアプリのサンプル アプリをデプロイするには、という名前のディレクトリで次のファイルを作成`addpy`:
 
-- `add.py` 。 このファイルに次の Python コードをコピーします。
+- `add.py`。 このファイルに次の Python コードをコピーします。
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ mssqlctl app create --spec ./addpy
         return result
     result=add(x,y)
    ```
-- `spec.yaml` 。 このファイルには、次のコードをコピーします。
+- `spec.yaml`。 このファイルには、次のコードをコピーします。
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

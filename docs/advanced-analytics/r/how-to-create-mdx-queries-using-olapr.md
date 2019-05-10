@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503738"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357524"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR を使って R で MDX クエリを作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "62503738"
 
 次の例は、そのプロジェクトは広く普及して、複数のバージョンでは、Analysis Services に簡単に復元するバックアップ ファイルを含むために、AdventureWorks データ マートとキューブのプロジェクトに基づいています。 既存のキューブを持っていない場合は、これらのオプションのいずれかのサンプル キューブを取得します。
 
-+ これらの例で使用されるキューブを作成するには、次のレッスン 4 まで Analysis Services チュートリアル。[OLAP キューブを作成します。](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ これらの例で使用されるキューブを作成するには、次のレッスン 4 まで Analysis Services チュートリアル。[OLAP キューブを作成します。](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
 + 既存のキューブをバックアップとしてをダウンロードして、Analysis Services のインスタンスに復元します。 たとえば、このサイトには、zip 形式で完全に処理されたキューブが用意されています。[Adventure Works 多次元モデル SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)します。 ファイルを抽出し、SSAS インスタンスに復元します。 詳細については、次を参照してください。[バックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)、または[Restore-asdatabase コマンドレット](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)します。
 

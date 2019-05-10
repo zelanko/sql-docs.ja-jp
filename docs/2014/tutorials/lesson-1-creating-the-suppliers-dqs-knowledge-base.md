@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6e25b57bce84876de1119ec52ad068602cd5cf13
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62676039"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485590"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>レッスン 1:Suppliers DQS ナレッジ ベースを作成する
   という名前の DQS ナレッジ ベースを作成するこのレッスンで**Suppliers**仕入先データに関するナレッジ (メタデータ) とします。 ナレッジ ベースを使用して、入力仕入先データのクレンジングおよび照合アクティビティを実行します。 クレンジング アクティビティでは、不正/無効なデータの識別、不正確なデータの修正、修正/提案の提示、データの標準化、および詳細情報を含むデータの拡充が行われます。 照合アクティビティでは、データを比較して、データ上の重複項目を削除するために、データ内で類似したレコード (ただし、若干異なる) を特定します。  
