@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8918a9c8373f8d711f0400915be97dc6799a5b5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 66671c88d3cf2cec018da1450ce8564853a3e3f1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779604"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487791"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>派生階層を削除する (マスター データ サービス)
 
@@ -30,12 +30,12 @@ ms.locfileid: "52779604"
 > [!NOTE]  
 >  派生階層を削除しても、その階層が基づいている属性リレーションシップには影響しません。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>派生階層を削除するには  
   

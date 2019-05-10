@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 357b7d9e6ec63de52c5a7128b60330ce53943251
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241970"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357377"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>多次元モデル内のメジャーおよびメジャー グループの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "59241970"
   
 |||  
 |-|-|  
-|キューブ ウィザード|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でキューブ ウィザードを実行してキューブを作成します。<br /><br /> ソリューション エクスプローラーで **[キューブ]** を右クリックし、**[新しいキューブ]** を選択します。 これらの手順については、「[多次元モデリング (Adventure Works チュートリアル)](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。<br /><br /> 既存のデータ ウェアハウスのテーブルに基づいてキューブを作成すると、メジャーおよびメジャー グループの定義がキューブの作成プロセスの一部として具体化されます。 ウィザードで、キューブ内のメジャーとメジャー グループのオブジェクトのベースとして使用するファクトとファクト テーブルを選択します。|  
+|キューブ ウィザード|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でキューブ ウィザードを実行してキューブを作成します。<br /><br /> ソリューション エクスプローラーで **[キューブ]** を右クリックし、**[新しいキューブ]** を選択します。 これらの手順については、「[多次元モデリング (Adventure Works チュートリアル)](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。<br /><br /> 既存のデータ ウェアハウスのテーブルに基づいてキューブを作成すると、メジャーおよびメジャー グループの定義がキューブの作成プロセスの一部として具体化されます。 ウィザードで、キューブ内のメジャーとメジャー グループのオブジェクトのベースとして使用するファクトとファクト テーブルを選択します。|  
 |[新しいメジャー] ダイアログ|キューブが既に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に存在していることを前提に、キューブ デザイナーでソリューション エクスプローラー内のキューブ名をダブルクリックして開きます。 [メジャー] ペインで、ソース テーブル、列、集計の型を指定し、最上位のノードを右クリックして新しいメジャー グループまたは新しいメジャーを作成します。 この方法を使用するには、構築済みの関数の固定リストから集計の方法を選択することが必要です。 より一般的に使用されている集計の説明については、「 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 」を参照してください。|  
 |計算されるメンバー|計算されるメンバーについては、いつどのように作成するかを制御できるため、それにより [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でキューブに柔軟性と分析機能が追加されます。 ユーザー セッションの期間中、または調査の一部としての Management Studio では、一時的にのみメジャーが必要になることがあります。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[計算] タブを開いて計算されるメンバーを新規作成します。<br /><br /> メジャーを MDX 式のベースにする場合は、この方法を選択します。 詳細については次のトピックを参照してください。[MDX でのメジャーを構築](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md)、[計算](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)、[多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)と[MDX スクリプティングの基礎&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX または XMLA|計算される新しいメジャーを含めるには、SQL Server Management Studio で、MDX または XMLA を実行してデータベースを変更します。 この方法は、ソリューションをサーバーに配置した後の、データのアドホック テストに役立ちます。 「 [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)」を参照してください。|  
