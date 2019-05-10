@@ -2,7 +2,7 @@
 title: コマンドライン (SQL Server) から Data Migration Assistant を実行 |Microsoft Docs
 description: SQL Server データベースの移行を評価するためのコマンドラインから Data Migration Assistant を実行する方法について説明します
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 05/06/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,19 +15,19 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccb2b0b6a60bfc2df94f2cc09b087a22b22ce7ab
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63154669"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105842"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>コマンドラインから Data Migration Assistant を実行します。
+
 Data Migration Assistant をインストールするバージョン 2.1 以降で、ときで dmacmd.exe もインストールされます *%programfiles%\\Microsoft Data Migration Assistant\\*します。 Dmacmd.exe を使用して、無人モードでデータベースを評価し、JSON または CSV ファイルに結果を出力します。 このメソッドは、いくつかのデータベースや巨大なデータベースを評価するときに便利です。 
 
 > [!NOTE]
 > 評価のみを実行している Dmacmd.exe をサポートします。 この時点では、移行はサポートされていません。
-
 
 ## <a name="assessments-using-the-command-line-interface-cli"></a>コマンド ライン インターフェイス (CLI) を使用して評価
 
@@ -50,14 +50,14 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentTargetPlatform`     | 評価用のターゲット プラットフォーム:  <br> 評価のためのサポートされる値:AzureSqlDatabase、ManagedSqlServer、SqlServer2012、SqlServer2014、SqlServer2016、SqlServerLinux2017 および SqlServerWindows2017 (既定値)  <br> ターゲットの準備状態評価の値がサポートされています。ManagedSqlServer (既定)、CosmosDB (プレビュー)   | N
 |`/AssessmentEvaluateFeatureParity`  | 機能パリティ ルールを実行します。 ターゲット プラットフォーム AzureSqlDatabase の機能パリティの評価はサポートされていませんソースのプラットフォームが RdsSqlServer の場合は、  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 互換性規則を実行します。  | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendations が必要です)。
-|`/AssessmentEvaluateRecommendations`     | 機能のお勧めを実行します。        | Y <br> (AssessmentEvaluateCompatibilityIssues または必要な AssessmentEvaluateRecommendationsis)
+|`/AssessmentEvaluateRecommendations`     | 機能のお勧めを実行します。        | Y <br> (AssessmentEvaluateCompatibilityIssues または AssessmentEvaluateRecommendations のいずれかが必要)
 |`/AssessmentOverwriteResult`     | 結果ファイルを上書きします    | N
 |`/AssessmentResultJson`     | JSON の結果ファイルへの完全パス     | Y <br> (AssessmentResultJson または AssessmentResultCsv のいずれかが必要)
-|`/AssessmentResultCsv`    | CSV 結果ファイルへの完全パス   | Y <br>(AssessmentResultJson または AssessmentResultCsv のいずれかが必要)
+|`/AssessmentResultCsv`    | CSV 結果ファイルへの完全パス   | Y <br> (AssessmentResultJson または AssessmentResultCsv のいずれかが必要)
 |`/Action`    | SkuRecommendation を使用して、SKU の推奨事項の取得、AssessTargetReadiness を使用して、ターゲットの準備状態評価を実行します。   | N
-|`/SourceConnections`    | 接続文字列のスペースで区切られた一覧。 データベース名 (初期カタログ) は省略可能です。 データベース名が指定されていない場合は、ソース上のすべてのデータベースは評価します。   | Y <br>(必須のかどうか、操作は 'AssessTargetReadiness')
-|`/TargetReadinessConfiguration`    | 結果ファイルの名前、およびソースへの接続の値を記述する XML ファイルの完全パスです。   | Y <br>(TargetReadinessConfiguration または SourceConnections のいずれかが必要)
-|`/FeatureDiscoveryReportJson`    | 機能探索 JSON レポートへのパス。 このファイルが生成される場合は、ソースに接続しなくても、ターゲットの準備状態評価を再実行に使用できます。   | N
+|`/SourceConnections`    | 接続文字列のスペースで区切られた一覧。 データベース名 (初期カタログ) は省略可能です。 データベース名が指定されていない場合は、ソース上のすべてのデータベースは評価します。   | Y <br> (必須のかどうか、操作は 'AssessTargetReadiness')
+|`/TargetReadinessConfiguration`    | 結果ファイルの名前、およびソースへの接続の値を記述する XML ファイルの完全パスです。   | Y <br> (TargetReadinessConfiguration または SourceConnections のいずれかが必要)
+|`/FeatureDiscoveryReportJson`    | 機能探索 JSON レポートへのパス。 このファイルが生成される場合は、ソースに接続しなくても、ターゲットの準備状態評価を再実行に使用できます。 | N
 |`/ImportFeatureDiscoveryReportJson`    | 先ほど作成した機能検出 JSON レポートへのパス。 ソースの接続ではなく、このファイルが使用されます。   | N
 
 ## <a name="examples-of-assessments-using-the-cli"></a>CLI を使用して評価の例
@@ -67,7 +67,6 @@ DmaCmd.exe /AssessmentName="string"
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
 **Windows 認証と実行の互換性規則を使用して単一データベースの評価**
-
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -166,11 +165,11 @@ Catalog=DatabaseName;Integrated Security=true"
 **複数データベースのターゲットの準備状態評価**
 
 ```
-DmaCmd.exe /Action=AssessTargetReadiness 
-/AssessmentName="TestAssessment" 
+DmaCmd.exe /Action=AssessTargetReadiness
+/AssessmentName="TestAssessment"
 /AssessmentSourcePlatform=SourcePlatform
 /AssessmentTargetPlatform=TargetPlatform
-/SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
+/SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true"
 /AssessmentOverwriteResult  
 /AssessmentResultJson="C:\Results\test2016.json"
 
@@ -180,10 +179,10 @@ DmaCmd.exe /Action=AssessTargetReadiness
 **Windows 認証を使用してサーバー上のすべてのデータベースのターゲットの準備状態評価**
 
 ```
-DmaCmd.exe /Action=AssessTargetReadiness 
-/AssessmentName="TestAssessment" 
-/SourceConnections="Server=SQLServerInstanceName;Integrated Security=true" 
-/AssessmentOverwriteResult 
+DmaCmd.exe /Action=AssessTargetReadiness
+/AssessmentName="TestAssessment"
+/SourceConnections="Server=SQLServerInstanceName;Integrated Security=true"
+/AssessmentOverwriteResult
 /AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
 
 ```
@@ -191,10 +190,10 @@ DmaCmd.exe /Action=AssessTargetReadiness
 **先ほど作成した機能の検出レポートをインポートすることでターゲットの準備状態評価**
 
 ```
-DmaCmd.exe /Action=AssessTargetReadiness 
-/AssessmentName="TestAssessment" 
+DmaCmd.exe /Action=AssessTargetReadiness
+/AssessmentName="TestAssessment"
 /ImportFeatureDiscoveryReportJson="c:\temp\feature_report.json" 
-/AssessmentOverwriteResult 
+/AssessmentOverwriteResult
 /AssessmentResultJson="C:\temp\Results\AssessmentReport.json"
 
 ```
@@ -204,9 +203,10 @@ DmaCmd.exe /Action=AssessTargetReadiness
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /TargetReadinessConfiguration=.\Config.xml
-
 ```
+
 ソース接続の構成ファイルの内容を使用する場合。
+
 ```
 <?xml version="1.0" encoding="utf-8" ?>
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
@@ -226,6 +226,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 ```
 
 構成ファイルの内容をインポートするときに機能の検出レポート。
+
 ```
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
@@ -235,7 +236,9 @@ DmaCmd.exe /Action=AssessTargetReadiness
 </TargetReadinessConfiguration>
 ```
 
-## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>CLI を使用して azure の SQL データベースの SKU の推奨事項
+## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Azure SQL Database/マネージ インスタンス SKU の推奨事項、CLI を使用して
+
+これらのコマンドは、1 つのデータベースを Azure SQL Database とマネージ インスタンスのデプロイ オプションの両方の推奨事項をサポートします。
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -249,29 +252,31 @@ DmaCmd.exe /Action=AssessTargetReadiness
 |引数  |説明  | 必須 (はい/いいえ)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | DMA のコマンドラインを使用して SKU 評価を実行します。 | Y
-|`/SkuRecommendationInputDataFilePath`  | 収集されたパフォーマンス カウンターのファイル、データベースをホストするコンピューターの完全なパス |    Y
-|`/SkuRecommendationTsvOutputResultsFilePath`   | TSV 結果ファイルの完全なパス |    Y <br>(TSV または JSON または HTML ファイルのパスが必要)
-|`/SkuRecommendationJsonOutputResultsFilePath`  | JSON の結果ファイルへの完全パス |   Y <br>(TSV または JSON または HTML ファイルのパスが必要)
-|`/SkuRecommendationHtmlResultsFilePath` |  結果の HTML ファイルへの完全パス | Y <br>(TSV または JSON または HTML ファイルのパスが必要)
-|`/SkuRecommendationPreventPriceRefresh` |  価格の更新が発生するを防ぎます。 オフライン モードで実行されている場合に使用します。 |    Y <br>(静的な価格についてはこの引数が選択されているまたは下のすべての引数が最新の価格を取得するために選択する必要があります)
-|`/SkuRecommendationCurrencyCode` | (例: 価格を表示する通貨「(米ドル)」) | Y <br>(この場合、最新の価格を取得するには)
-|`/SkuRecommendationOfferName` |    プランの名前 (例。"MS-解決しない場合、0003 P")。 詳細については、次を参照してください。、 [Microsoft Azure プランの詳細](https://azure.microsoft.com/support/legal/offer-details/)ページ。 |   Y <br>(この場合、最新の価格を取得するには)
-|`/SkuRecommendationRegionName` |   領域の名前 (例。「米国西部」) |   Y <br>(この場合、最新の価格を取得するには)
-|`/SkuRecommendationSubscriptionId` | サブスクリプション ID です。 |    Y <br>(この場合、最新の価格を取得するには)
-|`/AzureAuthenticationTenantId` | 認証のテナント。 |  Y <br>(この場合、最新の価格を取得するには)
-|`/AzureAuthenticationClientId` | 認証に使用される AAD アプリのクライアント ID。 | Y <br>(この場合、最新の価格を取得するには)
-|`/AzureAuthenticationInteractiveAuthentication`    | ウィンドウがポップアップする場合は true に設定します。 |   Y <br>(この場合、最新の価格を取得するには) <br>(オプション 1 - 3 の認証オプションのいずれかを選択)
-|`/AzureAuthenticationCertificateStoreLocation` | (例: 証明書ストアの場所に設定します。"CurrentUser")。 | Y <br>(この場合、最新の価格を取得するには) <br>(オプション 2 - 3 の認証オプションのいずれかを選択)
-|`/AzureAuthenticationCertificateThumbprint`    | 証明書の拇印に設定します。 | Y <br>(この場合、最新の価格を取得するには) <br>(オプション 2 - 3 の認証オプションのいずれかを選択)
-|`/AzureAuthenticationToken` |  証明書トークンに設定します。 | Y <br>(この場合、最新の価格を取得するには) <br>(オプション 3 - 3 の認証オプションのいずれかを選択)
+|`/SkuRecommendationInputDataFilePath` | 収集されたパフォーマンス カウンターのファイル、データベースをホストするコンピューターの完全なパス | Y
+|`/SkuRecommendationTsvOutputResultsFilePath` | TSV 結果ファイルの完全なパス | Y <br> (TSV または JSON または HTML ファイルのパスが必要)
+|`/SkuRecommendationJsonOutputResultsFilePath` | JSON の結果ファイルへの完全パス | Y <br> (TSV または JSON または HTML ファイルのパスが必要)
+|`/SkuRecommendationHtmlResultsFilePath` | 結果の HTML ファイルへの完全パス | Y <br> (TSV または JSON または HTML ファイルのパスが必要)
+|`/SkuRecommendationPreventPriceRefresh` | 価格の更新が発生するを防ぎます。 (例:, true)、オフライン モードで実行されている場合に使用します。 | Y <br> (静的な価格についてはこの引数のいずれかを選択するか下のすべての引数を最新の価格の取得を選択する必要)
+|`/SkuRecommendationCurrencyCode` | (例: 価格を表示する通貨「(米ドル)」) | Y <br> (の最新の価格)
+|`/SkuRecommendationOfferName` | プランの名前 (例。"MS-解決しない場合、0003 P")。 詳細については、次を参照してください。、 [Microsoft Azure プランの詳細](https://azure.microsoft.com/support/legal/offer-details/)ページ。 | Y <br> (の最新の価格)
+|`/SkuRecommendationRegionName` | 領域の名前 (例。「米国西部」) | Y <br> (の最新の価格)
+|`/SkuRecommendationSubscriptionId` | サブスクリプション ID です。 | Y <br> (の最新の価格)
+|`/SkuRecommendationDatabasesToRecommend` | (例: 推奨するデータベースのスペース区切りのリスト"Database1""Database2""Database3")。 名前は大文字小文字を区別し、二重引用符で囲む必要があります。 省略すると、すべてのデータベースの推奨事項が提供されます。 | N
+|`/AzureAuthenticationTenantId` | 認証のテナント。 | Y <br> (の最新の価格)
+|`/AzureAuthenticationClientId` | 認証に使用される AAD アプリのクライアント ID。 | Y <br> (の最新の価格)
+|`/AzureAuthenticationInteractiveAuthentication` | ウィンドウがポップアップする場合は true に設定します。 | Y <br> (の最新の価格) <br>(オプション 1 - 3 の認証オプションのいずれかを選択)
+|`/AzureAuthenticationCertificateStoreLocation` | (例: 証明書ストアの場所に設定します。"CurrentUser")。 | Y <br>(の最新の価格) <br> (オプション 2 - 3 の認証オプションのいずれかを選択)
+|`/AzureAuthenticationCertificateThumbprint` | 証明書の拇印に設定します。 | Y <br> (の最新の価格) <br>(オプション 2 - 3 の認証オプションのいずれかを選択)
+|`/AzureAuthenticationToken` | 証明書トークンに設定します。 | Y <br> (の最新の価格) <br>(オプション 3 - 3 の認証オプションのいずれかを選択)
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>CLI を使用して SKU 評価の例
 
 **Dmacmd.exe**
 
-  `Dmacmd.exe /? or DmaCmd.exe /help`
+`Dmacmd.exe /? or DmaCmd.exe /help`
 
-**価格の更新 (get 最新の価格) - azure SQL DB の SKU の推奨事項対話型認証** 
+**価格の更新 (get 最新の価格) - azure SQL DB/MI SKU の推奨事項対話型認証** 
+
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -287,7 +292,8 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**価格の更新 (get 最新の価格) - azure SQL DB の SKU の推奨事項の証明書認証**
+**価格の更新 (get 最新の価格) - azure SQL DB/MI SKU の推奨事項の証明書認証**
+
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -304,7 +310,8 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**価格の更新 (get 最新の価格) - azure SQL DB の SKU の推奨事項のトークン認証**  
+**価格の更新 (get 最新の価格) - azure SQL DB SKU/MI 推奨事項がトークンの認証とを推奨するデータベースを指定**
+  
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -314,13 +321,14 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationCurrencyCode=USD
 /SkuRecommendationOfferName=MS-AZR-0044p
 /SkuRecommendationRegionName=UKWest
+/SkuRecommendationDatabasesToRecommend=“TPCDS1G,EDW_3G,TPCDS10G”
 /SkuRecommendationSubscriptionId=<Your Subscription Id>
 /AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**価格の更新 (静的な価格を使用) ことがなく azure SQL DB の SKU の推奨事項** 
+**価格の更新 (静的な価格を使用) ことがなく azure SQL DB/MI SKU の推奨事項** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -330,6 +338,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [Data Migration Assistant](https://aka.ms/get-dma)をダウンロードします。
 - この記事[オンプレミス データベースの適切な Azure SQL データベース SKU を特定](https://aka.ms/dma-sku-recommend-sqldb)します。

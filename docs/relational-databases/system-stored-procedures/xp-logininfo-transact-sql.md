@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62644807"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099958"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  場合*account_name*と**メンバー**は指定するには、次のレベル グループのメンバーの一覧が返されます。 場合*account_name*ローカル グループは、一覧は、ローカル ユーザー、ドメインのユーザーとグループを含めることができます。 場合*account_name*ドメイン アカウント、ドメイン ユーザーの一覧から成ます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではドメイン コントローラーに接続してグループのメンバーシップ情報を取得する必要があります。 サーバーがドメイン コント ローラーに接続できない場合は、情報は返されません。  
   
- **xp_logininfo** Active Director グローバル グループ、ユニバーサルいないグループからのみ情報を返します。  
+ **xp_logininfo** Active Directory のグローバル グループ、ユニバーサルいないグループからのみ情報を返します。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **sysadmin**固定サーバー ロールのメンバーシップまたは、**パブリック**固定データベース ロール、**マスター** EXECUTE 権限を持つデータベース。  
@@ -86,7 +86,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

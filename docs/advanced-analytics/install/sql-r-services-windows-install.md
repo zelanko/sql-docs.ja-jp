@@ -3,17 +3,17 @@ title: インストール SQL Server 2016 R Services (In-database) - SQL Server 
 description: R プログラミング言語のサポートを Windows 上の SQL Server 2016 R Services のデータベース エンジンを追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 787b26c401f825c6c74298a803a16d59f1a37d04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748714"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095940"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services をインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -208,6 +208,7 @@ R の機能統合のみに設定する必要があります、 **MKL_CBWR**環�
 * [SQL Server Machine Learning サービスのファイアウォールの構成](../../advanced-analytics/security/firewall-configuration.md)
 * [その他のネットワーク プロトコルを有効にします。](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続を有効にします。](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [ディスク クォータ管理](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)ディスク領域を使い果たすのあるタスクを実行している外部スクリプトを回避するには
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>
