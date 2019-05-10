@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676907"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106271"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン
 
@@ -40,7 +40,7 @@ ms.locfileid: "51676907"
 
 ### <a name="advanced-configuration"></a>高度な構成
 
-次の推奨事項は、Linux に SQL Server をインストールした後に実行することができる省略可能な構成設定です。 ワークロードの要件とLinux オペレーティング システムの構成に基づいて選択します。
+次の推奨事項は、オプションの構成設定を SQL Server on Linux のインストール後に実行することができます。 ワークロードの要件とLinux オペレーティング システムの構成に基づいて選択します。
 
 - **mssql-conf でメモリの制限を設定します**
 
@@ -74,7 +74,7 @@ ms.locfileid: "51676907"
 | 設定 | 値 | 詳細情報 |
 |---|---|---|
 | ディスクの先行読み込み | 4096 | **blockdev**コマンドを参照してください |
-| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns 15000000 を =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | **sysctl**コマンドを参照してください |
+| sysctl 設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | **sysctl**コマンドを参照してください |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>マルチノード NUMA システムの自動 NUMA バランシングのカーネル設定
 
@@ -110,6 +110,6 @@ SQL Server のデータおよびログ ファイルを格納するファイル �
 
 ## <a name="next-steps"></a>次の手順
 
-パフォーマンスを向上させる SQL Server 機能の詳細については、[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)を参照してください。
+パフォーマンスを向上させる SQL Server 機能の詳細については、次を参照してください。[パフォーマンス機能の概要](sql-server-linux-performance-get-started.md)します。
 
 Linux 上の SQL Server に関する詳細については、[Linux の SQL Server の概要](sql-server-linux-overview.md)を参照してください。

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532484"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088504"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_describe_undeclared_parameters
   
 `[ \@params = ] N'parameters'` \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (**_n_**)** または**nvarchar (max)** します。  
   
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む*Transact SQL_batch*します。 文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 TRANSACT-SQL ステートメントまたはステートメント内のバッチが、パラメーターが含まれない場合\@params は必要ありません。 このパラメーターの既定値は、NULL です。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む*Transact SQL_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 TRANSACT-SQL ステートメントまたはステートメント内のバッチが、パラメーターが含まれない場合\@params は必要ありません。 このパラメーターの既定値は、NULL です。  
   
  データ型  
  パラメーターのデータ型です。  
@@ -67,15 +67,15 @@ sp_describe_undeclared_parameters
 |**suggested_max_length**|**smallint NOT NULL**|Sys.columns を参照してください。 **max_length**列の説明。|  
 |**suggested_precision**|**tinyint NOT NULL**|Sys.columns を参照してください。 有効桁数の列の説明。|  
 |**suggested_scale**|**tinyint NOT NULL**|Sys.columns を参照してください。 スケールの列の説明。|  
-|**suggested_user_type_id**|**int NULL**|CLR 型と別名型、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
-|**suggested_user_type_database**|**sysname NULL**|CLR 型と別名型、型が定義されているデータベースの名前が含まれます。 それ以外の場合は NULL です。|  
-|**suggested_user_type_schema**|**sysname NULL**|CLR 型と別名型、型が定義されているスキーマの名前が含まれます。 それ以外の場合は NULL です。|  
-|**suggested_user_type_name**|**sysname NULL**|CLR 型と別名型、型の名前が含まれます。 それ以外の場合は NULL です。|  
+|**suggested_user_type_id**|**int NULL**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
+|**suggested_user_type_database**|**sysname NULL**|CLR 型と別名型の場合、その型が定義されたデータベースの名前を格納します。 それ以外の場合は NULL です。|  
+|**suggested_user_type_schema**|**sysname NULL**|CLR 型と別名型の場合、その型が定義されたスキーマの名前を格納します。 それ以外の場合は NULL です。|  
+|**suggested_user_type_name**|**sysname NULL**|CLR 型と別名型の場合、その型の名前を格納します。 それ以外の場合は NULL です。|  
 |**suggested_assembly_qualified_type_name**|**nvarchar (4000) NULL**|CLR 型には、アセンブリと型を定義するクラスの名前を返します。 それ以外の場合は NULL です。|  
-|**suggested_xml_collection_id**|**int NULL**|Sys.columns で指定されたパラメーターのデータ型の xml_collection_id を格納します。 返される型は、XML スキーマ コレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**suggested_xml_collection_database**|**sysname NULL**|この種類に関連付けられた XML スキーマ コレクションが定義されているデータベースが含まれています。 返される型は、XML スキーマ コレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**suggested_xml_collection_schema**|**sysname NULL**|この種類に関連付けられた XML スキーマ コレクションが定義されているスキーマが含まれています。 返される型は、XML スキーマ コレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**suggested_xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 返される型は、XML スキーマ コレクションに関連付けられていない場合、この列は NULL を返します。|  
+|**suggested_xml_collection_id**|**int NULL**|Sys.columns で指定されたパラメーターのデータ型の xml_collection_id を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**suggested_xml_collection_database**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているデータベースを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**suggested_xml_collection_schema**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているスキーマを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**suggested_xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**suggested_is_xml_document**|**bit NOT NULL**|返される型が XML とその型の XML ドキュメントのことが保証されている場合は、1 を返します。 それ以外の場合 0 を返します。|  
 |**suggested_is_case_sensitive**|**bit NOT NULL**|列がない場合に大文字の文字列型で、0 の場合は、1 を返します。|  
 |**suggested_is_fixed_length_clr_type**|**bit NOT NULL**|この列が固定長の CLR 型の場合は 1、それ以外の場合は 0 を返します。|  
@@ -101,6 +101,8 @@ sp_describe_undeclared_parameters
 -   場合、入力[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチで宣言されているパラメーターに同じ名前のローカル変数を宣言します\@params します。  
   
 - ステートメントは、一時テーブルを参照している場合。
+
+- クエリには、クエリを実行し、永続的なテーブルの作成が含まれています。
   
  場合\@tsql がで宣言されている以外のパラメーターを持たない\@params、プロシージャは、空の結果セットを返します。  
   
@@ -227,7 +229,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     この場合、 **int**と**smallint** 1 つの変換を生成します。 他のすべてのデータ型では、2 つ以上の変換が生成されます。 **Int**よりも優先**smallint**、 **int**使用\@p。 データ型の優先順位の詳細については、[データ型の優先順位&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)を参照してください。  
+     この場合、 **int**と**smallint** 1 つの変換を生成します。 他のすべてのデータ型では、2 つ以上の変換が生成されます。 **Int**よりも優先**smallint**、 **int**使用\@p。 データ型の優先順位の詳細については、次を参照してください。[データ型の優先順位&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)します。  
   
      このルールは、ルール 1 に該当するすべてのデータ型と、最高位の優先順位を持つデータ型との間に暗黙的な変換がある場合にのみ適用されます。 暗黙的な変換がない場合、データ型の推論はエラーで失敗します。 たとえば、クエリで`SELECT @p FROM t`、任意のデータの型のためのデータ型の推論は失敗\@p は同等になります。 たとえばからの暗黙的変換がない**int**に**xml**します。  
   
