@@ -2,26 +2,26 @@
 title: Azure Data Studio でノートブックを実行します。
 titleSuffix: SQL Server big data clusters
 description: この記事では、SQL Server 2019 のビッグ データ クラスターに接続されている Azure Data Studio で Jupyter Notebook を実行する方法について説明します。
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859973"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462050"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 プレビューで notebook を使用する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、ノートブック エクスペリエンスは、Azure Data Studio を起動する方法と、独自のノートブックの作成を開始する方法について説明します。 また、さまざまなカーネルを使用して Notebook を作成する方法も示します。
+この記事の最新のリリースで Notebook エクスペリエンスを起動する方法を説明します[ **Azure Data Studio** ](../azure-data-studio/download.md)と独自のノートブックの作成を開始する方法。 また、さまざまなカーネルを使用して Notebook を作成する方法も示します。
 
 ## <a name="connect-to-sql-server"></a>SQL Server への接続
 
@@ -48,7 +48,7 @@ Azure データ Studio では、また、F1 キーを押して をクリック�
 
 Azure Data Studio で Notebook のインストールは、SQL のカーネルをネイティブでサポートします。 となり、選択したかどうかは、SQL 開発者し、Notebook を使用するにはカーネルです。 
 
-SQL カーネルが PostgreSQL のサーバー インスタンスに接続することもできます。 PostgreSQL 開発者あり、PostgreSQL サーバーに接続する場合は、ダウンロード、 [ **PostgreSQL 拡張機能**](../azure-data-studio/postgres-extension.md)で Azure Data Studio の拡張機能マーケットプ レースです。
+SQL カーネルが PostgreSQL のサーバー インスタンスに接続することもできます。 PostgreSQL 開発者あり、notebook を PostgreSQL サーバーに接続する場合は、ダウンロード、 [ **PostgreSQL 拡張機能**](../azure-data-studio/postgres-extension.md) Data Studio の Azure 拡張機能マーケットプ レースにし、起動**新しい Notebook** PostgreSQL サーバーに接続するための notebook インスタンスを開きます。
 
 ![PostgreSQL の接続](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ PostgreSQL のサーバー インスタンスに接続する SQL カーネル
 クエリ結果
 
 ![クエリ結果](media/notebooks-guidance/pgsql-cell-results.png)
+
+Notebook が SQL カーネルに接続されている場合は、既存のテキストのセルを追加するには、をクリックして、 **+ テキスト**ツールバーにコマンド。
+
+![Notebook のツールバー](media/notebooks-guidance/notebook-toolbar.png)
+
+セルの変更が編集モードおよび markdown とする入力と同時にプレビューが表示されます。
+
+![Markdown のセル](media/notebooks-guidance/notebook-markdown-cell.png)
+
+テキスト セルの外側をクリックすると、マークダウン テキストが表示されます。
+
+![Markdown テキスト](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>Notebook の Python を構成します。
 
@@ -119,9 +132,27 @@ Notebook を Azure Data Studio で開くには、既定**信頼済み**します
 
 開くが他のソースからノートブックを開く場合**信頼されていない**モードとしやすく**信頼済み**します。
 
+### <a name="run-cells"></a>セルを実行します。
+ノートブックのすべてのセルを実行し、をクリックする場合、**セルの実行**ツールバーのボタンをクリックします。
+
+![Markdown テキスト](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>[結果をクリア]
+
+Notebook で実行されたすべてのセルの結果をクリアするかどうかをクリックして、 **Clear Results**ツールバーのボタン。
+
+![Markdown テキスト](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>保存
 
-ノートブックを保存する**Ctrl + S**  をクリックしてまたは、**ファイルの保存の**、**ファイルとして保存しています.** と**ファイルすべて保存**ファイル メニューからコマンドと**ファイル。保存**コマンド パレットで入力したコマンド。
+Notebook は、次のいずれかを保存します。
+
+- Ctrl キーを押しながら S キーを選択します。
+- クリックして**ファイル** > **保存**
+- クリックして**ファイル** > **として保存しています.**
+- クリックして**ファイル** > **すべてを保存** 
+- コマンド パレットで、次のように入力します。**ファイル。保存** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark カーネル
 

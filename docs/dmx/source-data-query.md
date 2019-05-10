@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38063962"
@@ -24,7 +24,7 @@ ms.locfileid: "38063962"
 ## <a name="query-types"></a>クエリの種類  
  ソース データの指定には、最も一般的な次の 3 つの方法があります。  
   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
  このステートメントのインスタンスの外部にあるデータ照会[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、既存のデータ ソースを使用しています。  
   
  中に**OPENQUERY**を関数のような**OPENROWSET**、 **OPENQUERY**次の利点があります。  
@@ -33,10 +33,10 @@ ms.locfileid: "38063962"
   
 -   管理者は、サーバー上のデータがアクセスされる方法を制御しやすくなります。 たとえば、管理者は、サーバーに読み込まれるプロバイダーや、アクセスできる外部データを管理できます。  
   
- [OPENROWSET &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  このステートメントのインスタンスの外部にあるデータ照会[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、既存のデータ ソースを使用しています。  
   
- [図形&AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
+ [図形&#40;DMX&#41;](../dmx/source-data-query-shape.md)  
  このステートメントは複数のデータ ソースをクエリして、入れ子になったテーブルを作成します。 使用して**図形**、1 つの階層テーブルに複数のソースからデータを結合することができます。 これは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の機能を利用して、テーブル内にテーブルを埋め込むことによってテーブルを入れ子にします。  
   
  ソース データの指定には、次のオプションを使用することもできます。  

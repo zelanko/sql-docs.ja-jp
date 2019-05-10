@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2ace569180006f54461631848ecbf5342b2c1e3
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472034"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099480"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -133,12 +133,12 @@ mssqlctl cluster create
 
 ## <a id="env"></a> 環境変数
 
-次の環境変数は、展開の構成ファイルに格納されていないセキュリティ設定に使用されます。
+次の環境変数は、展開の構成ファイルに格納されていないセキュリティ設定に使用されます。 資格情報を除く、Docker の設定を構成ファイルで設定できることに注意してください。
 
 | 環境変数 | 説明 |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | クラスターのデプロイに使用されるイメージが格納されているプライベート レジストリです。 |
-| **DOCKER_REPOSITORY** | イメージを格納、上記のレジストリ内のプライベート リポジトリ。 |
+| **DOCKER_REGISTRY** | クラスターのデプロイに使用されるイメージが格納されているプライベート レジストリです。 使用*プライベート repo.microsoft.com*ゲートのパブリック プレビューの ducration の。|
+| **DOCKER_REPOSITORY** | イメージを格納、上記のレジストリ内のプライベート リポジトリ。 使用*mssql-プライベート プレビュー*ゲートのパブリック プレビューの期間。|
 | **DOCKER_USERNAME** | これらはプライベート リポジトリに格納されている場合に、コンテナー イメージにアクセスするユーザー名。 |
 | **DOCKER_PASSWORD** | 上記のプライベート リポジトリにアクセスするパスワード。 |
 | **DOCKER_IMAGE_TAG** | イメージにタグ付けに使用されるラベル。 既定値は**最新**がバージョンの非互換性の問題を回避するために、リリースに対応するタグを使用することをお勧めします。 |
@@ -152,12 +152,12 @@ mssqlctl cluster create
 次の例では、Linux (bash) および Windows (PowerShell) の環境変数を設定する方法を示します。
 
 ```bash
-export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
-export DOCKER_REGISTRY=<docker-registry>
-export DOCKER_REPOSITORY=<docker-repository>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export DOCKER_REGISTRY=private-repo.microsoft.com
+export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
 export DOCKER_IMAGE_TAG=ctp2.5
@@ -166,10 +166,10 @@ export DOCKER_IMAGE_TAG=ctp2.5
 ```PowerShell
 SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
-SET DOCKER_REGISTRY=<docker-registry>
-SET DOCKER_REPOSITORY=<docker-repository>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
+SET DOCKER_REGISTRY=private-repo.microsoft.com
+SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 SET DOCKER_IMAGE_TAG=ctp2.5

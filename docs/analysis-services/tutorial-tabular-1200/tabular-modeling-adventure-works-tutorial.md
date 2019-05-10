@@ -1,6 +1,6 @@
 ---
-title: Analysis Services テーブル モデリング (1200 互換性レベル) |Microsoft Docs
-ms.date: 05/07/2019
+title: Analysis Services の Internet Sales チュートリアル (互換性レベル 1200) |Microsoft Docs
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ae9dd208d151dc3b8fb8117ba6e672ada2aecdd
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
-ms.translationtype: HT
+ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403354"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503618"
 ---
-# <a name="tabular-modeling-1200-compatibility-level"></a>テーブル モデリング (1200 互換性レベル)
+# <a name="adventure-works-internet-sales-tutorial-1200"></a>Adventure Works Internet Sales のチュートリアル (1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 このチュートリアルでは、Analysis Services 表形式モデルを作成する方法のレッスンを提供する、[互換性レベル 1200](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)を使用して[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)、Analysis services モデルをデプロイし、サーバーをオンプレミスまたは Azure です。  
@@ -98,7 +98,7 @@ SQL Server 2017 または Azure Analysis Services を使用しているし、140
 |[Power View レポートのレポート プロパティの構成](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30 分| 
 
   
-## <a name="next-step"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 チュートリアルを開始するには、最初のレッスンに進んでください。[レッスン 1:新しいテーブル モデル プロジェクト作成](lesson-1-create-a-new-tabular-model-project.md)です。  
   
   

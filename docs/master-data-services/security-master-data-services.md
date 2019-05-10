@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 13678d9b3d522e65ff1f9e895020bb0fde020bef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c36f1850a5ab6aff1537d8000872d157dbe2eb41
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751915"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488126"
 ---
 # <a name="security-master-data-services"></a>セキュリティ (Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "52751915"
   
 -   **[エクスプローラー]** 機能領域でデータにアクセスするユーザー。  
   
--   **[エクスプローラー]** 以外の領域で管理タスクを実行できるユーザー。 これらのユーザーは、 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+-   **[エクスプローラー]** 以外の領域で管理タスクを実行できるユーザー。 これらのユーザーは、[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md) と呼ばれます。  
   
 ## <a name="how-to-set-security"></a>セキュリティの設定方法  
  MDS のデータまたは機能にアクセスする権限をユーザーまたはグループに付与するには、次の設定を割り当てる必要があります。  
