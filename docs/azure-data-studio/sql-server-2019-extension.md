@@ -3,7 +3,7 @@ title: SQL Server 2019 拡張機能 (プレビュー)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用 SQL Server 2019 Preview の拡張機能
 ms.custom: seodec18
-ms.date: 04/19/2019
+ms.date: 05/09/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,16 +11,16 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 045152d472029c1ff3fe50230b20b69a851d9dcb
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472189"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450103"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
-SQL Server 2019 拡張機能 (プレビュー) の新機能とツールのサポートに配布のプレビュー サポートを提供します[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]します。 プレビュー サポートが含まれます[SQL Server 2019 ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)、統合[ノートブック エクスペリエンス](../big-data-cluster/notebooks-guidance.md)と、PolyBase [Create External Table ウィザード](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)します。
+SQL Server 2019 拡張機能 (プレビュー) の新機能とツールのサポートに配布のプレビュー サポートを提供します[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]します。 プレビュー サポートが含まれます[SQL Server 2019 ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)、統合[ノートブック エクスペリエンス](../big-data-cluster/notebooks-guidance.md)と、PolyBase [Create External Table ウィザード](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)します。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー) のインストールします。
 
@@ -30,9 +30,9 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
    |プラットフォーム|ダウンロード|リリース日|バージョン
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|2019 年 4 月 18日 |0.12.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|2019 年 4 月 18日 |0.12.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|2019 年 4 月 18日 |0.12.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092118)|2019 年 5 月 8日 |0.13.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092117)|2019 年 5 月 8日 |0.13.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092116)|2019 年 5 月 8日 |0.13.0
 
 1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 

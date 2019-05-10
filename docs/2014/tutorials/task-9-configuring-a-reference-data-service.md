@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: adbde32de86da407bdd2655f66d036021e6784f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 08ead4185051ad90f53e904b55e541e9bb2edd2f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866234"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489571"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>タスク 9:参照データ サービスを構成する
   ここでは、Windows Azure Marketplace の参照データ サービスを使用するように DQS を構成します。 次のタスクでは、構成、 **Address Validation**ドメインをこのサービスを使用します。 実行時に、クレンジング アクティビティ中に DQS 渡します内のドメインの値、 **Address Validation**ドメインをクレンジングするためのサービスです。 参照してください[Configure DQS to Use Reference Data](https://msdn.microsoft.com/library/hh213070.aspx)の詳細。  

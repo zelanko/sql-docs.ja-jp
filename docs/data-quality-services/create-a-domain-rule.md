@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b7ff9b57b8b83b8850aac4a854a3fd7b04a76804
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: a81b217b00ead3f9c26915f19c540e1225a198c2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030663"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486357"
 ---
 # <a name="create-a-domain-rule"></a>ドメイン ルールの作成
 
@@ -113,7 +113,7 @@ ms.locfileid: "56030663"
   
  ドメイン ルールを作成するときには、いくつかの選択肢があります。 たとえば、値が A、B、C のいずれかの文字で始まるかどうかを検証するには、複雑な条件を含む単純なルール (パイプ文字を含む正規表現など) を作成することも、複数の単純な条件を含む複雑なルールを作成することもできます。 たとえば、前者の例は "Value contains regular expression (^A|^B|^C)" です。 後者の例は、"'Value begins with A' OR 'Value begins with B' OR 'Value begins with C'" です。  
   
-|条件|[説明]|例|  
+|条件|説明|例|  
 |---------------|-----------------|-------------|  
 |長さが次の値と等しい|オペランドで指定された文字数の文字で構成される値のみが有効になります。|オペランドの例:3<br /><br /> 有効な値:BB1<br /><br /> 無効な値:AA|  
 |長さが次の値以上|オペランドで指定された文字数以上の文字で構成される値のみが有効になります。|オペランドの例:3<br /><br /> 有効な値:BB1、BBAA<br /><br /> 無効な値:AA|  

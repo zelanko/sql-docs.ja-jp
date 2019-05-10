@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0548176a191d5c2b16b113b5a931a1ed0435741c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472297"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877663"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視とビッグ データの SQL Server クラスターのトラブルシューティング
 
@@ -244,7 +244,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 > [!Note]
 > : 次のエラーが発生した場合*ポート 8001 でリッスンすることができません。すべてのリスナーは、次のエラーを作成できませんでした。リスナーを作成することができません。エラー リッスン tcp4 127.0.0.1:8001: > バインドします。通常、各ソケット アドレス (ネットワーク プロトコル/アドレス/ポート) の 1 つだけを使用できます。リスナーを作成することができません。エラー リッスン tcp6: アドレス [:: 1]: 8001: でのポートがありません > エラーへの対処します。要求されたポートのいずれかでリッスンできません: [{8001 9090}]*、別のウィンドウから既にダッシュ ボードで開始しなかったことを確認します。
 
-お使いのブラウザーでダッシュ ボードを起動すると、AKS クラスターで既定で有効になる RBAC のためのアクセス許可の警告を取得する可能性があります、ダッシュ ボードで使用されるサービス アカウントにはすべてのリソースにアクセスするための十分なアクセス許可がありません (たとえば、 *ポッドは禁止されています。ユーザー"システム: serviceaccount:kube-システム: kubernetes-ダッシュ"、「既定」の名前空間に含まれるポッドを一覧表示できません*)。 必要なアクセス許可を付与するには、次のコマンドを実行`kubernetes-dashboard`、し、ダッシュ ボードを再起動します。
+お使いのブラウザーでダッシュ ボードを起動すると、AKS クラスターで既定で有効になる RBAC のためのアクセス許可の警告を取得する可能性があります、ダッシュ ボードで使用されるサービス アカウントにはすべてのリソースにアクセスするための十分なアクセス許可がありません (たとえば、 *ポッドは禁止されています。ユーザー"システム: serviceaccount:kube-システム: kubernetes-ダッシュ ボード"、「既定」の名前空間に含まれるポッドを一覧表示できません*)。 必要なアクセス許可を付与するには、次のコマンドを実行`kubernetes-dashboard`、し、ダッシュ ボードを再起動します。
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

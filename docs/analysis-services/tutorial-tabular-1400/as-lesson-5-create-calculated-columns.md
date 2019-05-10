@@ -1,6 +1,6 @@
 ---
 title: Analysis Services チュートリアル-レッスン 5:計算列の作成 |Microsoft Docs
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685559"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776070"
 ---
 # <a name="create-calculated-columns"></a>計算列の作成
 
@@ -47,7 +47,7 @@ ms.locfileid: "57685559"
   
     **Calculated Column 1** という新しい列が、 **Calendar Quarter** 列の左側に挿入されます。  
   
-4.  テーブルの上、数式バーには、次の DAX 数式を入力します。オートコンプリートを利用すると、列やテーブルの完全修飾名を簡単に入力できるだけでなく、使用可能な関数の一覧も表示できます。  
+4.  テーブルの上、数式バーには、次の DAX 数式を入力します。オート コンプリート、列やテーブルの完全修飾名を入力できるようにし、使用可能な関数を一覧表示します。  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -85,7 +85,7 @@ MonthCalendar には、1 か月の並べ替え可能な名前を提供する列�
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>DimProduct テーブルに ProductSubcategoryName 計算列を作成します。  
   
   
-1.  **DimProduct**テーブル、テーブルの右端までスクロールします。 右端にある **Add Column** (斜体) という列の列見出しをクリックします。  
+1.  **DimProduct**テーブル、テーブルの右端までスクロールします。 右端の列がという名前に注意してください。***列の追加***、列見出しをクリックします。  
   
 2.  数式バーで、次の数式を入力します。  
     

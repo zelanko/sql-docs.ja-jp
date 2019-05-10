@@ -2,22 +2,22 @@
 title: R 言語と Python の統合 - SQL Server Machine Learning Services の既知の問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
+ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650703"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64906160"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning サービスの既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python。](install/sql-machine-learning-services-windows-install.md).
+この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python](install/sql-machine-learning-services-windows-install.md)。
 
 ## <a name="setup-and-configuration-issues"></a>セットアップと構成の問題
 
@@ -406,6 +406,29 @@ R --max-ppsize=500000
 
 順序付けされた係数は、 `rxDTree`を除くすべての RevoScaleR 分析関数の係数と同様に処理されます。
 
+### <a name="20-datatable-as-an-outputdataset-in-r"></a>20.R で、OutputDataSet として Data.table
+
+使用して`data.table`として、 `OutputDataSet` R では SQL Server 2017 Cumulative Update 13 (CU13) 以前のバージョンでサポートされません。 次のメッセージが表示される可能性があります。
+
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 
+'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
+
+`data.table` として、 `OutputDataSet` R では、SQL Server 2017 Cumulative Update 14 (CU14) 以降がサポートされます。
+
 ## <a name="python-script-execution-issues"></a>Python スクリプトの実行に関する問題
 
 このセクションには、SQL Server、および、マイクロソフトによって発行された Python パッケージに関連する問題に Python を実行している固有の既知の問題が含まれていますなど[revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)と[microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -465,8 +488,19 @@ SQL Server 2017 CU2 以降では、次のメッセージが表示される場合
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state はグローバル宣言の前に使用*
 
-
 この問題は SQL Server 2017 Cumulative Update 3 (CU3) で修正されました。 
+
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5.数値、10 進数、およびコストのデータ型がサポートされていません
+
+以降では、SQL Server 2017 Cumulative Update 12 (CU12) は、WITH RESULT SETS 内の数値、10 進数、およびコストのデータ型はサポートされていませんで Python を使用する場合`sp_execute_external_script`します。 次のメッセージが表示されます。
+
+> *[コード。39004、SQL の状態:S1000] hresult 0x80004004 'sp_execute_external_script' の実行中に、'Python' スクリプト エラーが発生しました。*
+
+> *[コード。39019、SQL の状態:S1000] 外部スクリプト エラーが発生しました。*
+> 
+> *SqlSatelliteCall エラー:出力スキーマでサポートされていない型です。サポートされている種類: bit、smallint、int 型、datetime、smallmoney、real、float です。char、varchar は部分的にサポートされています。*
+
+これは、SQL Server 2017 Cumulative Update 14 (CU14) で修正されています。
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise と Microsoft R Open
 

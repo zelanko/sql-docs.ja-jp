@@ -140,7 +140,7 @@ ms.locfileid: "47856830"
 ### <a name="schedule-backups"></a>バックアップのスケジュール  
  バックアップの実行によって、実行中のトランザクションが受ける影響はわずかです。したがってバックアップは、通常の運用時に実行できます。 実稼働ワークロードへの影響は最小限にとどめて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを実行できます。  
    
->  バックアップ中のコンカレンシーの制限については、「[バックアップの概要 &amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
+>  バックアップ中のコンカレンシーの制限については、「[バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」を参照してください。  
   
  必要なバックアップの種類、および各種類のバックアップを実行する必要のある頻度を決定した後、データベースに対するデータベース メンテナンス プランの一部として、定期的なバックアップをスケジュールすることをお勧めします。 メンテナンス プランと、データベース バックアップおよびログ バックアップ用のメンテナンス プランの作成方法については、「 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。
   
