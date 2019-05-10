@@ -2,21 +2,21 @@
 title: ダウンロードしてインストールする
 titleSuffix: Azure Data Studio
 description: ダウンロードと Windows 用の Azure データ Studio のインストール、macOS、または Linux
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.custom: seodec18
+ms.date: 04/19/2019
+ms.reviewer: alayu; sstein
+ms.openlocfilehash: 06f6dbd9184b13768e25f1ea652ed41b4fe245a1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180518"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104868"
 ---
 # <a name="download-and-install-azure-data-studio"></a>ダウンロードし、Azure Data Studio のインストール
 
@@ -158,11 +158,12 @@ Windows インストーラーを使用して[!INCLUDE[name-sos-short](../include
 
 ## <a name="recommended-system-requirements"></a>推奨システム要件
 最適なエクスペリエンスは、推奨システム要件を使用してください。
+[メモリを定量化する更新プログラムは、ここを必要があります]
 
 |             | CPU コア | メモリと RAM |
-|:-----------:|:---------:|:----------:|
-| 推奨 |     4     |      8     |
-|   最小   |     2     |      4     |
+|:-----------|:---------|:----------|
+| 推奨 |     4     |      8 GB    |
+|   最小   |     2     |      4 GB     |
 |             |           |            |
 
 ## <a name="check-for-updates"></a>更新を確認する
