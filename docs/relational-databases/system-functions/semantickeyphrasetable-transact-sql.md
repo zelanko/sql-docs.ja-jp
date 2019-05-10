@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ac666af5ed24d526953dd8aa57c76871d2064f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 01e00d353f3585f7fd2568d5b8906e202263c212
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414489"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103300"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ SEMANTICKEYPHRASETABLE
 |**score**|**REAL**|インデックスが作成された列の同じドキュメントに含まれる他のすべてのキー フレーズとの関係における、このキー フレーズの相対値です。<br /><br /> この値は [0.0, 1.0] の範囲内の小数値です。スコアの値が大きいほど類似性が高く、1.0 は完全に一致することを表します。|  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 詳細については、[セマンティック検索を使用したドキュメント内のキー フレーズの検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)を参照してください。  
+ 詳細については、次を参照してください。[セマンティック検索を使用したドキュメント内のキー フレーズの検索](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)します。  
   
 ## <a name="metadata"></a>メタデータ  
  セマンティックなキー フレーズの抽出および生成の詳細と状態については、次の動的管理ビューに対してクエリを実行してください。  
@@ -92,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>使用例  
   
-###  <a name="HowToTopPhrases"></a> 例 1:特定のドキュメント内の最上位のキー フレーズを検索します。  
+###  <a name="HowToTopPhrases"></a> 例 1: 特定のドキュメント内の最上位のキー フレーズを検索します。  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列にある、@DocumentId 変数で指定されたドキュメントから、上位 10 個のキー フレーズを取得します。 @DocumentId 変数は、フルテキスト インデックスのキー列の値を表します。 **SEMANTICKEYPHRASETABLE** 関数は、テーブル スキャンではなくインデックス シークを使用してこれらの結果を効率的に取得します。 この例では、フルテキストとセマンティック インデックスに対して列が設定されます。  
   
 ```sql  
@@ -107,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a> 例 2:特定のキー フレーズを含む上位のドキュメントを検索します。  
+###  <a name="HowToTopDocuments"></a> 例 2: 特定のキー フレーズを含む上位のドキュメントを検索します。  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列から、キー フレーズ "Bracket" を含む上位 25 個のドキュメントを取得します。 この例では、フルテキストとセマンティック インデックスに対して列が設定されます。  
   
 ```sql  

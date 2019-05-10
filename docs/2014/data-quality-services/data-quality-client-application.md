@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7f50c5e77e93fcddbf7eb6f1d16432dd54bc7625
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755805"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480761"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションを使用すると、スタンドアロンのツールを使用してデータ品質に関する操作を実行できます。 このアプリケーションでは、ナレッジ ベースを作成し、データ品質プロジェクトを作成して実行し、管理タスクを実行できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "62755805"
 |DQS で照合を実行する方法について説明します。|[データ照合](../../2014/data-quality-services/data-matching.md)|  
 |DQS を管理する方法について説明します。|[DQS 管理](../../2014/data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Data Quality Client のホーム画面](../../2014/data-quality-services/data-quality-client-home-screen.md)  
   
   

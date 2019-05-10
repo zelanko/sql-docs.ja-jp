@@ -13,15 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a9bc3aa9f703cc53b50bc499f44ffc6b7971dcfd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 308001ec4e6e903eadfcf203b6673e154de8faf7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020404"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489196"
 ---
 # <a name="monitor-dqs-activities"></a>DQS アクティビティの監視
 
@@ -52,7 +52,7 @@ ms.locfileid: "56020404"
   
 3.  アクティビティ監視画面には、アクティビティ グリッド内の各アクティビティに関する情報が表示されます。 アクティビティ グリッドには、各 DQS アクティビティに関する次の情報が表示されます。  
   
-     **[ID]**:整数値です。 アクティビティ監視のためにシステムによって生成された一意のアクティビティ番号です。  
+     **[ID]**:整数値。 アクティビティ監視のためにシステムによって生成された一意のアクティビティ番号です。  
   
      **[名前]**:このアクティビティで使用されるナレッジ ベースまたはデータ品質プロジェクトの名前です。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "56020404"
   
 3.  保存する Excel ファイルの名前と場所を指定するように求めるメッセージが表示されます。 エクスポートした Excel ファイルには、次のシートが含まれています。  
   
-    |シート名|[説明]|  
+    |シート名|説明|  
     |----------------|-----------------|  
     |アクティビティ|アクティビティ グリッドと同様の、アクティビティに関する情報 (列) が表示されます。|  
     |プロセス|**[アクティビティ ステップ]** タブと同様の、アクティビティのプロセスに関する情報 (列) が表示されます。|  

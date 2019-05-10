@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5daf66aeb2eba3fd30302ef9e3e806c490f46e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b5d76c06096dd2dab13bd6dcf7ff59fbd612302
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766015"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483760"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>コレクションにメンバーを追加する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーおよび統合メンバーをコレクションに追加できます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -55,7 +55,7 @@ ms.locfileid: "62766015"
   
 11. 必要に応じて、 **[重み]** 列の値をクリックして、重みの値を設定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
   
   

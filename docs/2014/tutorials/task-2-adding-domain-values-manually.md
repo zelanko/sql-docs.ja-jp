@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63244691"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488384"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>タスク 2:ドメイン値を手動で追加する
   このタスクでは、値を追加、**国**ドメイン手動でします。 参照してください[Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx)このページのフィールドの詳細についてはトピック。  

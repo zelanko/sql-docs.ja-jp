@@ -10,20 +10,20 @@ helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765822"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479950"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>サブスクリプション ビューを作成する (マスター データ サービス)
   サブスクリプション ビューを作成して、データのビューを作成するとき、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]サブスクライブ システムで使用するデータベース。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[統合管理]** 機能領域にアクセスする権限が必要です。  
@@ -55,7 +55,7 @@ ms.locfileid: "62765822"
   
 10. **[保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データのエクスポート&#40;マスター データ サービス&#41;](overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを削除する &#40;マスター データ サービス&#41;](delete-a-subscription-view-master-data-services.md)   
  [バージョン フラグを作成する (マスター データ サービス)](create-a-version-flag-master-data-services.md)  

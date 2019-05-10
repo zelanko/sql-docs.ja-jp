@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a58809544a4c4d6db82aedf2eab54841c6c6ec0f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 0dc6047dcbcc0fa6d5100f9aaed10a7efa24818b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027434"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487693"
 ---
 # <a name="domain-management-domain-list"></a>ドメイン管理:ドメイン リスト
 
@@ -26,7 +26,7 @@ ms.locfileid: "56027434"
 
   このトピックでは、 **(DQS) の** [ドメイン管理] [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ページの [ドメイン] リスト内のコントロールについて説明します。 このペインを使用して管理操作を実行するドメインを選択します。 これと同じペインが、 **[ドメイン管理]** ページのすべてのタブ ページで使用されています。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 ### <a name="domains-list"></a>[ドメイン] リスト  
  **[ドメイン]**  

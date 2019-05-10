@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ''
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215821"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489604"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
@@ -76,7 +76,7 @@ ms.locfileid: "53215821"
 
 ![AlwaysOn 可用性グループの典型的構成](media/Fig1_TypicalConfig.png)
 
-図 1.  典型的 AlwaysOn 可用性グループ構成
+図 1. 典型的 AlwaysOn 可用性グループ構成
 
 ディザスター リカバリーを考慮する必要がない場合、セカンダリ データ センターにレプリカを置く必要がありません。 HA を改善する必要がある場合、同じプライマリ データ センターの同期レプリカを増やすことができます。
 
@@ -94,7 +94,7 @@ ms.locfileid: "53215821"
 
 WSFC は、アプリケーションやサービスの高可用性を改善する機能です。 Microsoft フェールオーバー クラスター サービスを実行する非依存 Windows Server インスタンスのグループで構成されています。 Windows Server インスタンス (ノードと呼ばれることもあります) は互いに通信できるように接続され、不具合の検出が可能になります。 WSFC は不具合の検出機能とフェールオーバー機能を提供します。 クラスターでノードやサービスに不具合が生じた場合、それが検出され、別のノードが、自動または手動で、不具合のあるノードでホストされているサービスの提供を開始します。 そのため、ユーザーにとっては、サービスの中断が最小限に抑えられます。サービスの可用性が向上します。  
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 Windows Server オペレーティング システムがすべてのインスタンスにインストールされており、あらゆる更新プログラムが適用されていること。
 
@@ -213,7 +213,7 @@ AG は、データベース レベルで高可用性を強化します。 AG (�
 FCI は、インスタンス レベルで高可用性を強化します。 SQL Server サービスと関連サービスはリソースとして WSFC に登録されます。 また、FCI ソリューションには、SAN または SMB ファイル共有など、対称的共有ディスク ストレージが必要です。対称的共有ディスク ストレージは、WFC クラスターのすべてのノードで利用できるようにする必要があります。
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>前提条件
 
 -   すべてのノードに SQL Server をインストールすること。 詳細については、「[SQL Server 2016 のインストール](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server)」を参照してください。
 

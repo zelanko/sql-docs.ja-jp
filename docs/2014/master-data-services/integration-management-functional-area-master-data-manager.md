@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 063e68b8efad6227643d6309f08bcf3c6bf9c38c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765105"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479321"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>[統合管理] 機能領域 (マスター データ マネージャー)
   [統合管理] 機能領域では、管理者はステージング テーブルからデータをインポートして、システムをサブスクライブするためのサブスクリプション ビューを作成できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "62765105"
   
  [サブスクリプション ビューを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Cron で Linux 上の SSIS パッケージのスケジュール |Microsoft Docs
 description: この記事では、cron サービスで Linux 上の SQL Server Integration Services (SSIS) パッケージをスケジュールする方法について説明します。
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bfc30c25d93581ee36f88c075416dbfebf59aea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32734698fffde10594513ad770b2129886e97b01
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753500"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486046"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>スケジュールの SQL Server Integration Services パッケージ cron を使用した Linux 上の実行
 

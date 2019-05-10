@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f8816afcf44bdcb38f6513f61b3b88ce505dedc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753228"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489077"
 ---
 # <a name="task-4-setting-domain-rules"></a>タスク 4:ドメイン ルールを設定する
-  このタスクでのルールを作成する、 **Contact Email**かどうかに、電子メール アドレスが終わることを確認するドメイン **@adventure-works.com**します。 参照してください[ドメイン ルールを作成する](https://msdn.microsoft.com/library/hh510397.aspx)ページの詳細についてはトピック。  
+  このタスクでのルールを作成する、 **Contact Email**かどうかに、電子メール アドレスが終わることを確認するドメイン **@adventure-works.com** します。 参照してください[ドメイン ルールを作成する](https://msdn.microsoft.com/library/hh510397.aspx)ページの詳細についてはトピック。  
   
 1.  クリックして**Contact Email**で、**ドメイン リスト**します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62753228"
   
 5.  **ルールの作成**ウィンドウで、をクリックして**下向きの矢印**を選択し、**値で終わります**します。  
   
-6.  型**@adventure-works.com**キーを押して、テキスト ボックス内**タブ**します。 さらに条件を追加するにはクリックして**選択した句に新しい条件の追加**ツール バー ボタン、**ルールの作成**ウィンドウ。  
+6.  型 **@adventure-works.com** キーを押して、テキスト ボックス内**タブ**します。 さらに条件を追加するにはクリックして **選択した句に新しい条件の追加** ツール バー ボタン、 **ルールの作成** ウィンドウ。  
   
      ![電子メール検証ルール](../../2014/tutorials/media/et-settingdomainrules-02.jpg "電子メール検証ルール")  
   

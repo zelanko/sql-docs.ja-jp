@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 111b4dc0c1731b28da503794008be2b4d269094f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755822"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481120"
 ---
 # <a name="change-domain-values"></a>ドメイン値の変更
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのメタデータを変更および拡張する方法について説明します。 ナレッジ検出でナレッジを生成したり、ナレッジ ベースまたはドメインにナレッジをインポートしたり、別のナレッジ ベースに基づいてナレッジ ベースを作成した後に、データ値を対話形式で変更することができます。 ナレッジ ベースを生成するときは、コンピューター支援型のプロセスを利用するほかに、独自のナレッジを使用してデータ値を確認したり、次のように変更したりできます。  

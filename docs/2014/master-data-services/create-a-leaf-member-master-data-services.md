@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbfd5a806badca4a8d24f57a9b3791a1fdf7ff68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925302"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483406"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>リーフ メンバーを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]、リーフ メンバーを作成する、システムにマスター データを追加して、ステージング テーブルを使用していない場合、または[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]データをインポートします。  

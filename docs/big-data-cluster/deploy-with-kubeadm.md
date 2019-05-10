@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0432f590af92befa845af819269b1111da28251c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4e79c74851dae2d86b74064799b053d57b1a17db
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860623"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488269"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>複数のコンピューターの SQL Server のビッグ データ クラスターのデプロイでの Kubernetes を構成します。
 
@@ -80,7 +80,7 @@ ms.locfileid: "58860623"
 
 ## <a name="configure-the-kubernetes-master"></a>Kubernetes マスターを構成します。
 
-各コンピューターで、前のコマンドを実行した後、Kubernetes マスターとして指定する、マシンのいずれかを選択します。 そのコンピューターで、次のコマンドを楽しいします。
+各コンピューターで、前のコマンドを実行した後、Kubernetes マスターとして指定する、マシンのいずれかを選択します。 そのコンピューターで、次のコマンドを実行します。
 
 1. 最初に、次のコマンドを使用して、現在のディレクトリに rbac.yaml ファイルを作成します。 
 

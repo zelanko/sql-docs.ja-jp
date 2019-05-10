@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84c0acceb4953b819cb5696c4ef90c39e4376846
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222520"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481222"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>タスク 1 (前提条件):MDS の仕入先データを削除する
   ここでは、MDS に格納されている仕入先データを削除します。 使用して手動でデータをアップロードした**MDS Excel アドイン**前のレッスンでします。 このレッスンで作成する SSIS パッケージは、MDS にデータを自動的にアップロードします。 したがって、SSIS パッケージをテストする前に、MDS からの仕入先データの削除、派生階層の削除、Supplier および State エンティティの削除、データのない Supplier エンティティの作成が必要となります。  

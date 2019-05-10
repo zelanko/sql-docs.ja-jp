@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 928624480fca725392bb13c87a18c6d48e639f25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 8d93ae5e43a550cb1c7faaa9a05e57e4408bbd43
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024043"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480301"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
 
@@ -26,7 +26,7 @@ ms.locfileid: "56024043"
 
   この画面を使用すると、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) の 3 つの主要なタスク グループ (ナレッジ ベース管理、データ品質プロジェクト、および管理) のそれぞれに対するユーザー インターフェイスにアクセスできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>および  
   
 ### <a name="knowledge-base-management"></a>[ナレッジ ベース管理]  
  DQS ナレッジ ベースは、データの品質を向上させるために DQS によって使用されるメタデータのリポジトリです。 このメタデータは、コンピューター支援型のナレッジ検出プロセスの DQS プラットフォームとインタラクティブなドメイン管理プロセスのデータ スチュワードの両者によって作成されます。  

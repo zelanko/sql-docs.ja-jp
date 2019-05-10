@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866782"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489095"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>タスク 6:Cleanse Supplier List プロジェクトから値をインポートする
   ここでは、クレンジング プロセスで収集したデータ品質ナレッジをインポートします。 参照してください[クレンジング プロジェクトの値をドメインにインポート](https://msdn.microsoft.com/library/hh479581.aspx)詳細についてはトピック。 エクスポートすることも、ナレッジ ベースを DQS ファイルに、更新を発行する前に**Suppliers**ナレッジ ベース。  

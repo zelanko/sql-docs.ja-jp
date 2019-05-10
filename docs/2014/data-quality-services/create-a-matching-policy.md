@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793170"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481023"
 ---
 # <a name="create-a-matching-policy"></a>照合ポリシーの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースの照合ポリシーを作成する方法について説明します。 サンプル データに対して照合ポリシー アクティビティを実行して、DQS の照合プロセスの準備を行います。 このアクティビティでは、まず、ポリシーの照合ルールを 1 つ以上作成してテストします。次に、ナレッジ ベースを発行して、それらの照合ルールを使用できるように公開します。 ナレッジ ベースで作成できる照合ポリシーは 1 つだけですが、そのポリシーに複数の照合ルールを含めることができます。  

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.administration.rdsconfiguration.f1
 - sql12.dqs.administration.configuration.createDirectRDS.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c89d09d077a5b416d4afb46b195a03c5144c4108
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8ce22855cfbc3239f4ab2e8695400d92386b858
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755767"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480937"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>参照データを使用する DQS の構成
   このトピックでは、データのクレンジングに参照データを使用するように [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) を構成する方法について説明します。 Windows Azure Marketplace、またはダイレクト オンライン サード パーティ参照データ プロバイダーの参照データを使用することができます。  

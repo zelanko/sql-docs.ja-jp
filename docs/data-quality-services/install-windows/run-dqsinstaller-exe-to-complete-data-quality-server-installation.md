@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013423"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487531"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
 
@@ -56,7 +56,7 @@ ms.locfileid: "56013423"
 3.  データベース マスター キーのパスワードの入力を求めるメッセージが表示されます。 後で [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) に参照データ プロバイダーを設定するときに DQS_MAIN データベースに保存される参照データ サービス プロバイダー キーを暗号化するには、データベース マスター キーが必要です。  
   
     > [!IMPORTANT]  
-    >  パスワードは、8 文字以上にする必要があり、次の 4 つのカテゴリのうち 3 つカテゴリの文字を含める必要があります。英語の大文字 (A、B、C、...Z)、英語の小文字 (a、b、c、...)、数字 (0、1、2、...9) と英数字以外の特殊文字 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/) です。 例: P@ssword」を参照してください。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
+    >  パスワードは、少なくとも 8 文字にする必要があり、次の 4 つのカテゴリの 3 つの文字を含める必要があります。英語の大文字 (A、B、C、...Z)、英語の小文字 (a、b、c、...)、数字 (0、1、2、...9) と英数字以外の特殊文字 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/) です。 たとえば、「 P@ssword」のように入力します。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
   
 4.  パスワードを入力し、さらに確認のためにもう一度そのパスワードを入力してから、Enter キーを押してインストールを続行します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "56013423"
 ##  <a name="CommandPrompt"></a> コマンド プロンプトから DQSInstaller.exe を実行する  
  DQSInstaller.exe をコマンド プロンプトから実行する場合は、次のコマンド ライン パラメーターを使用します。  
   
-|DQSInstaller.exe のパラメーター|[説明]|サンプル構文|  
+|DQSInstaller.exe のパラメーター|説明|サンプル構文|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]のインストールに使用するサーバー照合順序。<br /><br /> DQS は、大文字と小文字を区別しない照合順序のみをサポートします。 大文字と小文字が区別される照合順序を指定した場合、インストーラーは、指定された照合順序の大文字と小文字を区別しないバージョンを使用して処理を実行しようとします。 大文字と小文字を区別しないバージョンが存在しない場合や、照合順序が SQL によってサポートされていない場合、 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールは失敗します。<br /><br /> サーバーの照合順序を指定しなかった場合は、既定の照合順序 (SQL_Latin1_General_CP1_CI_AS) が使用されます。|`dqsinstaller.exe -collation <collation_name>`|  
 |-upgradedlls|DQS データベース (DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA) の再作成をスキップし、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースで DQS によって使用される SQL 共通言語ランタイム アセンブリ (SQLCLR) の更新のみを行います。<br /><br /> 詳細については、「 [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)」を参照してください。|`dqsinstaller.exe -upgradedlls`|  
@@ -93,11 +93,11 @@ ms.locfileid: "56013423"
   
     -   **コマンド ライン パラメーターを使用しない場合**:「`dqsinstaller.exe`」と入力して Enter キーを押します。  
   
-    -   **コマンド ライン パラメーターを使用する場合**:上の表で説明したように、必要なコマンドを入力し、Enter キーを押します。  
+    -   **コマンド ライン パラメーターを使用する場合**:前の表で説明したように必要なコマンドを入力し、ENTER キーを押します。  
   
 4.  指定したコマンドに基づいて、必要なアクションが実行されます。 コマンド ライン パラメーターを使用せずに [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] をインストールした場合、残りの手順は、前のセクション (「 [[スタート] 画面、[スタート] メニュー、または Windows エクスプローラーから DQSInstaller.exe を実行する](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer)」) の手順 2. ～ 6. と同じです。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
   
 -   作業プロファイルに基づき適切な DQS ロールをユーザーに付与します。 「 [ユーザーに DQS ロールを付与する](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)」を参照してください。  
   

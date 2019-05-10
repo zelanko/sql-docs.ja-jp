@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c4f85a74b91a74b58847a24d04053e2b8848234d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763388"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482748"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>[システム管理] 機能領域 (マスター データ マネージャー)
   [システム管理] 機能領域では、管理者はモデルとそのすべてのオブジェクトを作成できます。 また、ビジネス ルールを作成し、モデル パッケージを配置することも可能です。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  
   
-## <a name="model"></a>モデル  
+## <a name="model"></a>[モデル]  
  [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)  
   
  [モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)  
@@ -60,7 +60,7 @@ ms.locfileid: "62763388"
   
  [ビジネス ルール アクション (マスター データ サービス)](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マスター データ マネージャー Web アプリケーション](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

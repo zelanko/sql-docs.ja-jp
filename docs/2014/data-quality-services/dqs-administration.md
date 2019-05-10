@@ -11,15 +11,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6ff50e59daa241d64bbe878d6bd134c4efdea619
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc8f84eb268fab041b65e4fc2faced7ee9b0103a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756028"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480621"
 ---
 # <a name="dqs-administration"></a>DQS 管理
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) では、 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]で実行されるさまざまな DQS アクティビティを管理し、DQS アクティビティに関連するサーバー レベルのプロパティを構成し、参照データ サービスの設定を構成し、DQS ログの設定を構成できます。 これらの作業は、 **の** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]機能を使用して行います。 DQS でのセキュリティ アクセス (ロール) に基づいて、特定の管理機能へのアクセスが許可/禁止されます。  
@@ -80,7 +80,7 @@ ms.locfileid: "62756028"
 |DQS データベースのバックアップと復元の方法について説明します。|[DQS データベースのバックアップと復元](../../2014/data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS データベースをデタッチおよびアタッチする方法について説明します。|[DQS データベースのデタッチとアタッチ](../../2014/data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DQS の参照データ サービス](../../2014/data-quality-services/reference-data-services-in-dqs.md)   
  [DQS ログ ファイルの管理](../../2014/data-quality-services/manage-dqs-log-files.md)   
  [DQS データベースの管理](../../2014/data-quality-services/manage-dqs-databases.md)  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf0a02e973d046f3dff2b2df95327cf38e88443c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3fe1eb6032d9d550b36252e16eee51c98c5d2384
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222730"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477098"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>タスク 14:SQL 実行タスクを制御フローに追加して MDS のストアド プロシージャを実行する
   MDS のステージング テーブルにデータを読み込んだ後、ステージングから MDS データベース内の適切なテーブルにデータを読み込むために、そのテーブルに関連付けられているストアド プロシージャを実行します。 このストアド プロシージャでは、渡す必要がある 2 つの必須パラメーターがあります。LogFlag および VersionName します。 LogFlag はトランザクションがステージング処理中にログ記録されるかどうかを指定し、VersionName はモデルのバージョンを示します。 参照してください[ステージング ストアド プロシージャ](https://msdn.microsoft.com/library/hh231028.aspx)詳細についてはトピック。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866287"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488963"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>タスク 7:複合ドメインを作成する
   このタスクで、複合ドメインを作成する**Address Validation**で構成される**Address Line**、**市区町村**、**状態**、および**Zip**ドメイン。 複合ドメインでは、ルール内の複数のドメインに関するクロスドメイン ルールを定義できます。 複合ドメインには、フィールド値を複数のドメインに解析できるなどの利点があります。  たとえば、氏名フィールドの値を、名、ミドル ネーム、および姓の個別のドメインに解析できます。 このチュートリアルでは、クロスドメイン ルールのみを定義します。 参照してください[複合ドメインの管理](https://msdn.microsoft.com/library/hh510399.aspx)の詳細。  

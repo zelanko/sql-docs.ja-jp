@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65de28bcf880fab6dc0546c5ed4c315978ad39f4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763273"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478790"
 ---
 # <a name="staging-process-errors-master-data-services"></a>ステージング処理のエラー (Master Data Services)
   ステージング処理が完了すると、ステージング テーブル内のすべての処理済みレコードの [ErrorCode] 列に値が格納されます。 これらの値を次の表に示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "62763273"
 |210047|Unused の兄弟をメンバーにすることはできません。|**RelationshipType** = **2** (兄弟) で、 **ParentCode** または **ChildCode** のどちらかが **Unused**の場合に、このエラーが発生します。 未使用ノードの子しかメンバーになれません。|リレーションシップ|  
 |210048|**ParentCode** と **ChildCode** を同じにすることはできません。|**ParentCode** の値は **ChildCode** の値と同じです。 これらの値は別にする必要があります。|リレーションシップ|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ステージング処理中に発生するエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b204fe10d94cc875f1967aa50d8531826cd53f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f87f812ad9f4f12f5f78828e88c220e3dcf494d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765435"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483034"
 ---
 # <a name="developer39s-guide-master-data-services"></a>開発者&#39;ガイド (マスター データ サービス)
   ここでは、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] の操作方法を、コードの記述によってカスタマイズする方法について説明します。 具体的には、次の方法を学習します。  
