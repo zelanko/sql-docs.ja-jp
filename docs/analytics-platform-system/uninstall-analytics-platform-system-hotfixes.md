@@ -36,7 +36,7 @@ ms.locfileid: "62675671"
   
 2.  管理者として実行を使用して、コマンド プロンプトを開きます。  
   
-3.  ディレクトリに移動`C:\PDWINST\Patches\<kbarticle>\media`場所*<kbarticle>* をアンインストールする修正プログラムのサポート技術情報記事番号です。  
+3.  ディレクトリに移動`C:\PDWINST\Patches\<kbarticle>\media`場所 *<kbarticle>* をアンインストールする修正プログラムのサポート技術情報記事番号です。  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7a85644328591f037ee342866ca7dfb5e887ed17
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38006834"
@@ -33,9 +33,9 @@ ms.locfileid: "38006834"
 |[&#60;&#62;&#40;等しく&#41; &#40;DMX&#41;](../dmx/not-equal-to-dmx.md)|比較演算子です。 NULL 以外の値として評価される引数では、左の引数の値が右の引数の値と等しくない場合に TRUE を返します。そうでない場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
 |[&#60;=&#40;に等しいまたはそれよりも小さい&#41; &#40;DMX&#41;](../dmx/less-than-or-equal-to-dmx.md)|比較演算子です。 Null 以外の値に評価される引数で、左の引数の値が右の引数の値に等しいまたはそれよりも小さい場合に TRUE を返しますそれ以外の場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
 |[&#62;=&#40;より大きいまたは等しい&#41; &#40;DMX&#41;](../dmx/greater-than-or-equal-to-dmx.md)|比較演算子です。 NULL 以外の値として評価される引数では、左の引数の値が右の引数の値以上の場合に TRUE を返します。そうでない場合は FALSE を返します。 どちらかまたは両方の引数の結果が NULL 値の場合、演算子は NULL 値を返します。|  
-|[&AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|2 つの数値式の積を実行する論理演算子です。|  
-|[いない&AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|数値式の否定を実行する論理演算子です。|  
-|[または&AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|2 つの数値式の和を実行する論理演算子です。|  
+|[&#40;DMX&#41;](../dmx/and-dmx.md)|2 つの数値式の積を実行する論理演算子です。|  
+|[いない&#40;DMX&#41;](../dmx/not-dmx.md)|数値式の否定を実行する論理演算子です。|  
+|[または&#40;DMX&#41;](../dmx/or-dmx.md)|2 つの数値式の和を実行する論理演算子です。|  
 |[+&#40;正&#41; &#40;DMX&#41;](../dmx/positive-dmx.md)|数値式の正の値を返す単項演算子です。|  
 |[-&#40;負&#41; &#40;DMX&#41;](../dmx/negative-dmx.md)|数値式の負の値を返す単項演算子です。|  
 |[2 つのスラッシュ&#40;コメント&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)|テキストを示す文字列を[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は実行されません。 コメントは、DMX ステートメント内で入れ子にしたり、コード行の最後に含めたり、別の行に挿入したりすることができます。|  

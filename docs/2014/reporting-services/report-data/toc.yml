@@ -153,8 +153,6 @@
       href: ../report-data/dataset-properties-dialog-box-parameters.md
     - name: '[クエリ] ([データセットのプロパティ] ダイアログ ボックス)'
       href: ../dataset-properties-dialog-box-query.md
-    - name: '[クエリ パラメーターの定義] ダイアログ ボックス'
-      href: define-query-parameters-dialog-box.md
     - name: '[データ ソースの資格情報の入力] ダイアログ ボックス'
       href: ../enter-data-source-credentials-dialog-box.md
     - name: '[資格情報] ([共有データ ソース プロパティ] ダイアログ ボックス)'

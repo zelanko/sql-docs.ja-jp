@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 6ec87bdb2a1ca458893b65bc47e18a8f4664acb1
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d6f3d0b7fd60a39ce81a8464abdb6f2908f54239
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63456732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774752"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Linux 上の SQL Server の新機能については
 
@@ -66,7 +66,7 @@ Linux 上の SQL Server をインストールするには、次のチュート�
 - [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
 - [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
 - [Docker で実行します。](quickstart-install-connect-docker.md)
-- [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 SQL Server 2017 で導入されたその他の改善を表示するには、次を参照してください。 [SQL Server 2017 の新](../sql-server/what-s-new-in-sql-server-2017.md)します。
 

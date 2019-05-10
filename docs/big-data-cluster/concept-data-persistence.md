@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472197"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776161"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
 
@@ -49,19 +49,19 @@ ms.locfileid: "63472197"
 > [!WARNING]
 > 永続的な記憶域のない実行中は、テスト環境で作業できますが、非機能的なクラスターになる可能性があります。 ポッドが再起動するとクラスター メタデータ、またはユーザー データは完全に失われます。 この構成で実行をお勧めしません。 
 
-ここでは、SQL Server ビッグ データ クラスターのデプロイのストレージ設定を構成する方法の他の例を示します。
+[記憶域構成](#config-samples)ストレージの SQL Server ビッグ データ クラスター デプロイの設定を構成する方法の例についてを説明します。
 
 ## <a name="aks-storage-classes"></a>AKS のストレージ クラス
 
 AKS が付属して[2 つの組み込みストレージ クラス](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**既定**と**管理されている premium**に動的プロビジョナーと共にします。 これらのいずれかを指定するか、永続的なストレージが有効になっているとビッグ データ クラスターをデプロイするため、独自のストレージ クラスを作成します。 既定で組み込まれた aks クラスターの構成ファイル内で*aks の開発-test.json*を使用する永続的なストレージ構成が付属して**管理されている premium**ストレージ クラスです。
 
 > [!WARNING]
-> 作成された永続ボリューム**既定**ストレージ クラスが再要求ポリシーを持つ*削除*します。 時に、SQL Server のビッグ データ クラスターも、削除、永続ボリューム要求は削除され、永続的なボリュームもを取得します。 **管理対象 premium**の回収ポリシー*保持*します。 AKS での記憶域クラスおよびの構成に関する詳細が見つかります[この](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)記事。
+> 組み込みストレージ クラスで作成された永続ボリューム**既定**と**管理されている premium**回収ポリシーを持つ*削除*します。 時に、SQL Server のビッグ データ クラスターも、削除、永続ボリューム要求は削除され、永続的なボリュームもを取得します。 使用してカスタムのストレージ クラスを作成する**azure ディスク**で privioner、*保持*ように、ポリシーを再利用[この](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)記事。
 
 
 ## <a name="minikube-storage-class"></a>Minikube ストレージ クラス
 
-呼ばれる組み込みストレージ クラスが付属して Minikube**標準**その動的プロビジョナーと共にします。 組み込みの構成ファイルを minikube *minikube-開発-test.json*に記憶域の構成設定、コントロール プレーンの仕様の。すべてのプール仕様には、同じ設定が適用されます。 またこのファイルのコピーをカスタマイズし、minikube でビッグ データ クラスターのデプロイに使用できます。 手動で、カスタムのファイルを編集しを実行する特定のプール、ワークロードに対応するために、永続ボリューム要求のサイズを変更することができます。 使用して編集を行う方法の例は、このセクションを参照してください。 または、 *mssqlctl*コマンド。
+呼ばれる組み込みストレージ クラスが付属して Minikube**標準**その動的プロビジョナーと共にします。 組み込みの構成ファイルを minikube *minikube-開発-test.json*に記憶域の構成設定、コントロール プレーンの仕様の。すべてのプール仕様には、同じ設定が適用されます。 またこのファイルのコピーをカスタマイズし、minikube でビッグ データ クラスターのデプロイに使用できます。 手動で、カスタムのファイルを編集しを実行する特定のプール、ワークロードに対応するために、永続ボリューム要求のサイズを変更することができます。 または、[記憶域構成](#config-samples)を使用して行う方法の例のセクションを編集します*mssqlctl*コマンド。
 
 ## <a name="kubeadm-storage-classes"></a>Kubeadm ストレージ クラス
 
@@ -97,7 +97,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>ストレージ クラスを構成します。
+### <a id="config-samples"></a> ストレージ クラスを構成します。
 
 次の例では、コントロール プレーンのストレージ クラスを変更する方法を示します。
 
