@@ -11,15 +11,15 @@ helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 286647785defdb2391f2c9e7be4d1fc4c6d5599b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 11c4a53fc29e23a41ac2d7f16109bd41a0cc34c1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634652"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484828"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
 
@@ -27,7 +27,7 @@ ms.locfileid: "62634652"
 
   ユーザーを **の** [ユーザー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] の一覧に追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 一覧に含まれるユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスするには、ユーザーの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[ユーザー/グループの権限]** 機能領域にアクセスするための権限が必要です。  
@@ -48,7 +48,7 @@ ms.locfileid: "62634652"
   
 -   [機能領域の権限を割り当てる (マスター データ サービス)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659697"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357401"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services のグローバリゼーションのシナリオ
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659697"
 |**機能**|**テーブル**|**多次元**|  
 |[言語および照合順序 &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|オペレーティング システムから継承されます。|モデル階層で主要オブジェクトの言語と照合順序の両方をオーバーライドする機能と共に継承されます。|  
 |翻訳サポートのスコープ|キャプションと説明。|オブジェクトの名前、キャプション、識別子、および説明の翻訳を、どの Unicode 言語およびスクリプトでも作成できます。 これは、ツールや環境が別の言語の場合にも当てはまります。 たとえば、スタック全体で英語およびラテン文字の照合順序を使用する開発環境で、名前にキリル文字を使用したオブジェクトをモデルに含めることができます。|  
-|翻訳サポートの実装|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して作成し、入力する翻訳ファイルを生成して、モデルにインポートし直します。<br /><br /> 詳しくは、「[表形式モデルでの翻訳 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)」をご覧ください。|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して作成し、キューブ、メジャー、ディメンション、および属性のキャプション、説明、およびアカウントの種類の翻訳を定義します。<br /><br /> 詳しくは、「[多次元モデルの翻訳 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)」をご覧ください。 この機能を使用する方法が記載[レッスン 9。パースペクティブと翻訳の定義](../analysis-services/lesson-9-defining-perspectives-and-translations.md)の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]チュートリアル。|  
+|翻訳サポートの実装|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して作成し、入力する翻訳ファイルを生成して、モデルにインポートし直します。<br /><br /> 詳しくは、「[表形式モデルでの翻訳 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)」をご覧ください。|[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] を使用して作成し、キューブ、メジャー、ディメンション、および属性のキャプション、説明、およびアカウントの種類の翻訳を定義します。<br /><br /> 詳しくは、「[多次元モデルの翻訳 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)」をご覧ください。 |  
 |通貨換算|使用できません。|通貨換算は、通貨データを含むメジャーを変換する専用の MDX スクリプトで行います。 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] のビジネス インテリジェンス ウィザードを使用すると、属性、メジャー グループのデータおよびメタデータの組み合わせを使用して通貨データを含むメジャーを換算する MDX スクリプトディメンションを生成できます。 「[通貨換算 &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md)」をご覧ください。|  
   
 ## <a name="see-also"></a>参照  

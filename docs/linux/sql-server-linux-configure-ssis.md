@@ -1,7 +1,7 @@
 ---
 title: Linux で ssis conf と SSIS の構成 |Microsoft Docs
 description: この記事では、ssis conf ユーティリティを使用した Linux 上の SQL Server Integration Services (SSIS) を構成する方法について説明します。
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 600a40f0ff04d401cfddbdee0f214254b1d3f7a4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c22fed22e4d2c8d2a903f72c9a28763efd491ee0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412509"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488365"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Ssis conf で Linux 上の SQL Server Integration Services を構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-実行する、 `ssis-conf` Red Hat Enterprise Linux と Ubuntu 用 SQL Server Integration Services (SSIS) をインストールするときに、構成スクリプト。 SSIS をインストールする方法の詳細については、[インストール SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)を参照してください。
+実行する、 `ssis-conf` Red Hat Enterprise Linux と Ubuntu 用 SQL Server Integration Services (SSIS) をインストールするときに、構成スクリプト。 SSIS をインストールする方法の詳細については、次を参照してください。[インストール SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)します。
 
 使用することも、`ssis-conf`ユーティリティは、次のプロパティを構成します。
 
@@ -114,7 +114,7 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 
 実行する、`setup`言語でのプロンプトでコマンドを必要に応じて、ロケールを指定することができます。 たとえば、中国語では、画面の指示を受信するに次のコマンドを実行します。`sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`します。
 
-## <a name="ssisconf-format"></a>ssis.conf 形式
+## <a name="ssisconf-format"></a>ssis.conf format
 
 次`/var/opt/ssis/ssis.conf`ファイルは、各設定の例を示します。
 

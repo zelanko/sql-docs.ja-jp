@@ -2,25 +2,40 @@
 title: リリース ノート
 titleSuffix: Azure Data Studio
 description: Azure Data Studio リリース ノート
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143711"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450016"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
+
+## <a name="may-2019"></a>2019 年の月
+
+2019 年 5 月 8日&nbsp;  /  &nbsp;バージョン。1.7.0 
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| スキーマ比較の拡張機能のリリース | スキーマ比較は SQL Server Data Tools (SSDT) でよく知られている機能であり、基本的なユース ケースを比較して、データベースや .dacpac ファイルの違いを視覚化して、同じことにアクションを実行するは。 |
+| タスクの表示を出力ウィンドウに移動 | ユーザーは、タスク ビュー [出力] ウィンドウで、バックアップ、復元、およびスキーマ比較などの実行時間の長いタスクの状態を表示できますようになりました
+| [ようこそ] ページの追加 | &bull; &nbsp; 一般的な操作へのリンクなどの新しい Notebook の新しいファイルは、新しいクエリ <br/>&bull; &nbsp; ドキュメントおよび Github へのリンク |
+| SQL のノートブック機能強化 | &bull; &nbsp; メモとテーブルに対する優れたサポートをなど、マークダウン レンダリング機能強化 <br/>&bull; &nbsp; ツールバーにユーザビリティの強化 <br/>&bull; &nbsp; 信頼されている notebook を不要になったマークダウン リンク Cmd/ctrl キー + をクリックし、直接クリックすることができます。 <br/>&bull; &nbsp; Notebook を終了し、同時に複数のノートブックを開始するときにエラーを削減後のクリーンアップを Jupyter プロセスの強化 <br/>&bull; &nbsp; 同じデータベースに対して 2 つのノートブックを実行している場合にエラーを確認します。 SQL notebook 接続の機能強化は発生しません <br/>&bull; &nbsp; 自動スクロールを現在実行中のセルに、ツールバーから [セルの実行] ボタンをクリックすると notebook の機能強化 <br/>&bull; &nbsp; 全般的な安定性とパフォーマンスの向上 |
+| 解決済みバグと問題。 | 参照してください[バグと github の問題](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)します。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>2019 年 4 月
 

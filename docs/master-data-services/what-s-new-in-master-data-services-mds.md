@@ -8,21 +8,19 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: aaa80c3b66d7991414033c9c05c79b12681d4ef4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764604"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488030"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] このトピックでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]リリースのマスター データ サービスの変更と更新の概要を説明します。 
   
@@ -229,12 +227,12 @@ ms.locfileid: "52764604"
  **モデル配置パッケージ サンプルの更新**  
   
  新しいシナリオをサポートするためにサンプル パッケージが更新されました。 詳細については、「[SQL Server の例: モデルの配置パッケージ (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)」を参照してください。  
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
 ## <a name="see-also"></a>参照  
  [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)   
- [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
+ [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)  
+ [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)

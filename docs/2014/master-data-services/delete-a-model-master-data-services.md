@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d053ee3d9e48e261eb7fe1ed8f89b7429949cd50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765715"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483176"
 ---
 # <a name="delete-a-model-master-data-services"></a>モデルを削除する (マスター データ サービス)
   モデルを削除して、モデルおよびそのすべてのデータを [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]から削除します。  
@@ -26,7 +26,7 @@ ms.locfileid: "62765715"
 > [!NOTE]  
 >  これらの手順が完了すると、モデルのすべてのバージョンのすべてのオブジェクトおよびすべてのデータが完全に削除されます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -47,7 +47,7 @@ ms.locfileid: "62765715"
   
 6.  追加の確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)   
  [モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)  
   

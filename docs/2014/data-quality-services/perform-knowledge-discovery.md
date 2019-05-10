@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmap.f1
 - sql12.dqs.kb.kbterms.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc2eac8564c08831527d71ee5942c37b618aedcf
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792320"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481307"
 ---
 # <a name="perform-knowledge-discovery"></a>ナレッジ検出の実行
   このトピックでは、ナレッジ検出を使用してナレッジ ベースを構築する方法について説明します。 検出プロセスでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) によって、コンピューター支援型のプロセスを使用してサンプル データ ソースのデータが分析され、取得されたナレッジがナレッジ ベースに追加されます。 そのナレッジは、ナレッジ検出アクティビティの **[ドメイン値の管理]** 手順か、ドメイン管理アクティビティで変更および強化できます。  

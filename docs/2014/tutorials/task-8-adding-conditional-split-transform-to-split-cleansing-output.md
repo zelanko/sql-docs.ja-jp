@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401768ca9a811e9b9709127be391bb52de778b32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866182"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489672"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>タスク 8:条件分割変換を追加してクレンジング出力を分割する
   この変換では、データ フローに条件分割変換を追加します。 条件分割変換では、データの内容に応じて別の出力に行をルートできます。 このチュートリアルでは、使用して、**レコードの状態**DQS クレンジング変換からの出力列です。 このチュートリアルでは、適切なレコードまたは修正されたレコードのみを MDS サーバーにアップロードします。 場合を確認するため、**レコードの状態**は**修正**または**Corrected**とレコードを MDS にアップロードする前に、レコードを結合します。  

@@ -2,21 +2,21 @@
 title: 拡張機能を通じて追加の機能を追加します。
 titleSuffix: Azure Data Studio
 description: 機能拡張モデルと Azure Data Studio の機能を拡張するための重要な拡張機能領域について説明します
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: ce80ae9ec15fc7e1fdf8c68b595c71b2ee3f0a64
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238949"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105040"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>概要[!INCLUDE[name-sos](../includes/name-sos-short.md)]機能拡張
 

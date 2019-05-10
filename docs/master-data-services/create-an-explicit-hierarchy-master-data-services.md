@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a0927a940b23a906f2dcd5c595326d9b13f065c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3d117224e9afb331979556d12c6cddc0869382f3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796820"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477156"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>明示的階層を作成する (マスター データ サービス)
 
@@ -29,12 +29,12 @@ ms.locfileid: "52796820"
   
  明示的階層を作成したら、 **[エクスプローラー]** 機能領域で明示的階層にメンバーを追加できます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   エンティティは、明示的階層およびコレクションに対して有効化されている必要があります。  
   
@@ -59,17 +59,17 @@ ms.locfileid: "52796820"
 ## <a name="grid-columns"></a>グリッド列  
  作成する各明示的階層で、グリッドに 7 列の行が追加されます。 次に、各列について説明します。  
   
-|[オブジェクト名]|[説明]|  
+|名前|説明|  
 |----------|-----------------|  
 |状態|エンティティの状態。 **[保存]** をクリックすると、エンティティが更新中であることを示す次のイメージが表示されます。<br /><br /> ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン")<br /><br /> エンティティの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン")|  
-|[オブジェクト名]|明示的階層の名前。|  
+|名前|明示的階層の名前。|  
 |必須|明示的階層が必須かどうかを指定します。|  
 |[作成者]|明示的階層を作成したユーザーの名前。|  
 |作成日|明示的階層が作成された日時。|  
 |更新者|明示的階層を更新したユーザーの名前。|  
 |更新日|明示的階層が最後に更新された日時。|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
   
 -   [統合メンバーを作成する (マスター データ サービス)](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   

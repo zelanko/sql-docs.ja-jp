@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dac7b74969c341b7f68c7dfbf56d2314d9ab4427
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65e057224a8456f893b38e106e6b7f75d03d237a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765745"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483230"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>[Web アプリケーションの作成] ダイアログ ボックス (Master Data Services 構成マネージャー)
   **[Web アプリケーションの作成]** ダイアログ ボックスを使用して、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションを作成します。 この Web アプリケーションは、 **[Web の構成]** ページで選択したサイトに作成されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "62765745"
 |**Password**|指定したユーザー アカウントのパスワードを入力します。|  
 |**[パスワードの確認入力]**|指定したユーザー アカウントのパスワードを再入力します。 **[パスワード]** フィールドと **[パスワードの確認入力]** フィールドには、同じパスワードを入力する必要があります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[Web の構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
  [マスター データ サービスのデータベースと web サイトの設定します。](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [Web アプリケーションの要件&#40;マスター データ サービス&#41;](install-windows/web-application-requirements-master-data-services.md)   

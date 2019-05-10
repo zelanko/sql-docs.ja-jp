@@ -9,30 +9,30 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.custom: seodec18
-ms.date: 04/19/2019
+ms.date: 05/08/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 06f6dbd9184b13768e25f1ea652ed41b4fe245a1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
-ms.translationtype: HT
+ms.openlocfilehash: 6ac951b377806f66eaea2f39969f84b92c91ee50
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104868"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449962"
 ---
 # <a name="download-and-install-azure-data-studio"></a>ダウンロードし、Azure Data Studio のインストール
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] Windows、macOS、および Linux で動作します。
 
 
-ダウンロードして、最新のリリースでは、インストール、*年 4 月リリース*:
+ダウンロードして、最新のリリースでは、インストール、 *May リリース*:
 
 > [!NOTE]
 > SQL Operations Studio から更新しているし、設定、キーボード ショートカット、またはコード スニペットを保持する場合は、次を参照してください。[ユーザー設定の移動](#move-user-settings)します。
 
 |プラットフォーム|ダウンロード|リリース日| バージョン |
 |:---|:---|:---|:---|
-|Windows|[ユーザーのインストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2087316)<br>[システムのインストーラー](https://go.microsoft.com/fwlink/?linkid=2087317)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2087318)|2019 年 4 月 18日 |1.6.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2087170)|2019 年 4 月 18日 |1.6.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2087415)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2087171)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2087414)|2019 年 4 月 18日 |1.6.0|
+|Windows|[ユーザーのインストーラー (推奨)](https://go.microsoft.com/fwlink/?linkid=2091882)<br>[システムのインストーラー](https://go.microsoft.com/fwlink/?linkid=2091491)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2091490)|2019 年 5 月 8日 |1.7.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2091489)|2019 年 5 月 8日 |1.7.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2092022)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2091487)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2091488)|2019 年 5 月 8日 |1.7.0|
 
 最新のリリースに関する詳細は、次の [リリース ノート](release-notes.md) を参照してください。
 
@@ -45,25 +45,25 @@ ms.locfileid: "65104868"
 
 **ユーザーのインストーラー** (推奨)
 
-1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *ユーザー* Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2087316)します。
+1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *ユーザー* Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2091882)します。
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 **システムのインストーラー**
 
-1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *システム*Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2087317)します。
+1. ダウンロードし、実行、 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *システム*Windows 用のインストーラー](https://go.microsoft.com/fwlink/?linkid=2091491)します。
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]のアプリを開始します。
 
 
 **zip ファイル**
 
-1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2087318) をダウンロードします。
+1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Windows .zip](https://go.microsoft.com/fwlink/?linkid=2091490) をダウンロードします。
 2. ダウンロードしたファイルを参照し、展開します。
 3. `\azuredatastudio-windows\azuredatastudio.exe`を実行します。
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>MacOS 用の Azure データ Studio を入手します。
 
-1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2087170) をダウンロードします。
+1. [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2091489) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
 3. させる[!INCLUDE[name-sos](../includes/name-sos-short.md)]で使用できる、*スタート パッド*、ドラッグ*Azure データ Studio.app*を*アプリケーション*フォルダー。
 
@@ -71,9 +71,9 @@ ms.locfileid: "65104868"
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 用 Azure Data Studio を入手します。
 
 1. ダウンロード[!INCLUDE[name-sos](../includes/name-sos-short.md)]for Linux を使用して、インストーラーまたは tar.gz アーカイブのいずれかで。
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2087415)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2087171)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2087414)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2092022)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2091487)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2091488)
 1. ファイルを展開し、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を起動するため、新しいターミナル ウィンドウを開いて次のコマンドを入力します。
 
    **Debian のインストール:**

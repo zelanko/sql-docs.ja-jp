@@ -10,12 +10,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 2d31736ee4dd68857e3afce678b6dd806701a82b
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473307"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774954"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>GPU サポートと共に、ビッグ データ クラスターをデプロイして TensorFlow の実行
 
@@ -53,11 +53,11 @@ ms.locfileid: "63473307"
 1. 使用して AKS で Kubernetes クラスターを作成、 [az aks 作成](https://docs.microsoft.com/cli/azure/aks)コマンド。 次の例では、という名前の Kubernetes クラスターを作成する`gpucluster`で、`sqlbigdatagroupgpu`リソース グループ。
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6s_v3 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]
-   > このクラスターを使用して、 **Standard_NC6** [GPU 最適化済み仮想マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu)、1 つまたは複数の NVIDIA Gpu で利用可能な特殊化された仮想マシンの 1 つです。 詳細については、次を参照してください。[コンピューティング集中型ワークロードを Azure Kubernetes Service (AKS) を使用して Gpu](https://docs.microsoft.com/azure/aks/gpu-cluster)します。
+   > このクラスターを使用して、 **Standard_NC6s_v3** [GPU 最適化済み仮想マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu)、1 つまたは複数の NVIDIA Gpu で利用可能な特殊化された仮想マシンの 1 つです。 詳細については、次を参照してください。[コンピューティング集中型ワークロードを Azure Kubernetes Service (AKS) を使用して Gpu](https://docs.microsoft.com/azure/aks/gpu-cluster)します。
 
 1. Kubernetes クラスターに接続するように kubectl を構成するには、実行、 [az aks 資格情報の取得](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)コマンド。
 
@@ -69,7 +69,7 @@ ms.locfileid: "63473307"
 
 1. 使用**kubectl**という名前の Kubernetes 名前空間を作成する`gpu-resources`します。
 
-   ```
+   ```bash
    kubectl create namespace gpu-resources
    ```
 
@@ -122,69 +122,31 @@ ms.locfileid: "63473307"
 
 1. ここで、kubectl を使用してでは、DaemonSet を作成するコマンドが適用されます。 **nvidia デバイス プラグイン ds.yaml**次のコマンドを実行すると、作業ディレクトリである必要があります。
 
-   ```
+   ```bash
    kubectl apply -f nvidia-device-plugin-ds.yaml
    ```
 
 ## <a name="deploy-the-big-data-cluster"></a>ビッグ データ クラスターをデプロイします。
 
-Gpu をサポートする SQL Server 2019 ビッグ データ クラスター (プレビュー) を展開するには、特定の docker レジストリとリポジトリからデプロイする必要があります。 具体的には、さまざまな値を使用する**DOCKER_REGISTRY**、 **DOCKER_REPOSITORY**、 **DOCKER_USERNAME**、 **DOCKER_PASSWORD**、**DOCKER_EMAIL**します。 次のセクションでは、環境変数を設定する方法の例を提供します。 ビッグ データ クラスターのデプロイに使用しているクライアントのプラットフォームに応じて、Windows または Linux のいずれかのセクションを使用します。
+Gpu をサポートする SQL Server 2019 ビッグ データ クラスター (プレビュー) を展開するには、特定の docker レジストリとリポジトリからデプロイする必要があります。 次の環境変数は、GPU の展開に異なります。
 
-### <a name="windows"></a>Windows
+| 環境変数 | 値 |
+|---|---|
+| **DOCKER_REGISTRY** | `marinchcreus3.azurecr.io` |
+| **DOCKER_REPOSITORY** | `ctp25-8-0-61-gpu` |
+| **DOCKER_USERNAME** | `<your username, gpu-specific credentials provided by Microsoft>` |
+| **DOCKER_PASSWORD** | `<your password, gpu-specific credentials provided by Microsoft>` |
 
-   1. コマンド ウィンドウ (PowerShell ではなく) を使用して、次の環境変数を構成します。 値を囲む引用符は使用しないでください。
+使用**mssqlctl**クラスター、選択、aks の開発-test.json 構成カスタム上値の入力を求められたらサプライをデプロイします。
 
-      ```cmd
-      SET ACCEPT_EULA=yes
-      SET CLUSTER_PLATFORM=aks
+```bash
+mssqlctl cluster create
+```
 
-      SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-      SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-      SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-      SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+> [!TIP]
+> ビッグ データ クラスターの既定の名前は`mssql-cluster`します。
 
-      SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
-      SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_EMAIL=<your email address>
-      SET DOCKER_PRIVATE_REGISTRY=1
-      SET STORAGE_SIZE=10Gi
-      ```
-
-   1. ビッグ データ クラスターをデプロイするには。
-
-      ```cmd
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
-
-### <a name="linux"></a>Linux
-
-   1. 次の環境変数を初期化します。 Bash では、各値を囲む引用符を使用できます。
-
-      ```bash
-      export ACCEPT_EULA=yes
-      export CLUSTER_PLATFORM="aks"
-
-      export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-      export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-      export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-      export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-      export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
-      export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_EMAIL="<your email address>"
-      export DOCKER_PRIVATE_REGISTRY="1"
-      export STORAGE_SIZE="10Gi"
-      ```
-
-   1. ビッグ データ クラスターをデプロイするには。
-
-      ```bash
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
+カスタム展開構成ファイルを渡すことによってさらに、デプロイをカスタマイズすることもできます。 詳細については、次を参照してください。、[デプロイ ガイダンス](deployment-guidance.md#customconfig)します。
 
 ## <a name="run-the-tensorflow-example"></a>TensorFlow の例を実行します。
 
@@ -198,7 +160,7 @@ Gpu をサポートする SQL Server 2019 ビッグ データ クラスター (�
 ローカル コンピューターに適切なノートブック ファイルを配置し、開く PySpark3 カーネルを使用して Azure Data Studio で実行します。 CUDA や TensorFlow の古いバージョンの特別なニーズがない限り、CUDA 9/CUDNN 7/TensorFlow 1.12.0 を選択します。 ビッグ データ クラスターで notebook を使用する方法の詳細については、次を参照してください。 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
 
 > [!NOTE]
-> ノートブックがシステムの場所でソフトウェアをインストールすることに注意してください。 Notebook は、現在 CTP 2.4 でルート権限で実行されるため、可能です。
+> ノートブックがシステムの場所でソフトウェアをインストールすることに注意してください。 Notebook は、現在 CTP 2.5 ではルート権限で実行されるため、可能です。
 
 GPU の NVIDIA GPU ライブラリと TensorFlow をインストールすると、ノートブックには、使用可能な GPU デバイスが一覧表示します。 適合し、MNIST データ セットを使用して手書きの数字を認識する TensorFlow モデルを評価します。 使用可能なディスク領域を確認するには後の ダウンロードしてから 10 の CIFAR イメージ分類の例を実行する[ https://github.com/tensorflow/models.git](https://github.com/tensorflow/models.git)します。 CIFAR 10 例が別の Gpu クラスターで実行すると、GPU が Azure で使用できるは、各ジェネレーションで提供される速度の増加を確認できます。
 
@@ -206,7 +168,7 @@ GPU の NVIDIA GPU ライブラリと TensorFlow をインストールすると�
 
 ビッグ データ クラスターを削除するには、次のコマンドを使用します。
 
-```
+```bash
 mssqlctl cluster delete --name gpubigdatacluster
 ```
 

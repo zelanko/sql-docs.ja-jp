@@ -3,17 +3,17 @@ title: インストール SQL Server Machine Learning サービス (In-database)
 description: SQL Server または Windows の SQL Server 2017 Machine Learning Services の SQL Server インストールの手順での Python での R です。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4cd076ae79db7537235aa2a57fe4992ac0993473
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748674"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097299"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>SQL Server Machine Learning では、Windows サービスをインストールします。
 
@@ -252,6 +252,7 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 * [その他のネットワーク プロトコルを有効にします。](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続を有効にします。](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [SQLRUserGroup のログインを作成します。](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [ディスク クォータ管理](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)ディスク領域を使い果たすのあるタスクを実行している外部スクリプトを回避するには
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 

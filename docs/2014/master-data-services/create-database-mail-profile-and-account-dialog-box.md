@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 521afe37ef58a8b2e325bb513c7bdee2a1ed66a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765855"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483277"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス (Master Data Services 構成マネージャー)
   **[データベース メール プロファイルとアカウントの作成]** ダイアログ ボックスを使用すると、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースのデータベース メール プロファイルおよびデータベース メール アカウントを作成できます。 このプロファイルは、ビジネス ルールの検証が失敗したときに電子メールでユーザーやグループに通知する際に使用されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "62765855"
 |**[パスワードの確認入力]**|パスワードに間違いがないことを確認するために、設定したパスワードをもう一度入力します。|  
 |**[匿名認証]**|SMTP サーバーで認証を要求しないことを指定します。 SMTP サーバーの認証には資格情報をまったく使用しません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [マスター データ サービスのデータベースと Web サイトの設定](set-up-the-database-and-website-for-master-data-services.md)  
   
