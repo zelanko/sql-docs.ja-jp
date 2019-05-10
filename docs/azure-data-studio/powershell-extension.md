@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 0ffb46d5d498ba04a6916e7e2d56ffccaaa71aef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137173"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105946"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Azure Data Studio 用の PowerShell エディターのサポート
 
@@ -85,13 +85,45 @@ $HOME/.azuredatastudio/extensions/ms-vscode.PowerShell-<version>/examples
 $HOME/.azuredatastudio/extensions/ms-vscode.powershell-preview-<version>/examples
 ```
 
-ビュー/オープン、拡張機能の例では、Azure Data Studio、するには、PowerShell コマンド プロンプトから、次を実行します。
+ビュー/オープン、拡張機能の例では、Azure Data Studio、するには、PowerShell コマンド プロンプトから次のコードを実行します。
 
 ```powershell
 azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
 ```
 
-### <a name="sql-powershell-examples"></a>SQL PowerShell の例
+### <a name="creating-and-opening-files"></a>作成してファイルを開く
+
+作成し、エディター内で新しいファイルを開き、PowerShell 統合ターミナル内から新規-EditorFile を使用します。
+
+```powershell
+PS C:\temp> New-EditorFile ExportData.ps1
+```
+
+このコマンドは、PowerShell ファイルだけでなく、ファイルの種類により適しています。
+
+```powershell
+PS C:\temp> New-EditorFile ImportData.py
+```
+
+Azure Data Studio で 1 つまたは複数のファイルを開くには、使用、`Open-EditorFile`コマンド。
+
+```powershell
+Open-EditorFile ExportData.ps1, ImportData.py
+```
+
+### <a name="no-focus-on-console-when-executing"></a>コンソールを実行するときに対象なし
+
+SSMS の使用に慣れているこれらのユーザーに対しては、クエリを実行することとできない再しなくても、クエリ ウィンドウに戻るにもう一度実行するを使用しています。  この場合、コード エディターの既定の動作には奇妙に思える可能性があります。  実行するときに、エディターで、フォーカスを保持する<kbd>F8</kbd>次の設定を変更します。
+
+```json
+"powershell.integratedConsole.focusConsoleOnExecute": false
+```
+
+既定値は`true`アクセシビリティのためにします。
+
+この設定により、フォーカスを明示的に入力、呼び出しのようなコマンドを使用する場合でも、コンソールに変更に注意してください`Get-Credential`します。
+
+## <a name="sql-powershell-examples"></a>SQL PowerShell の例
 これらの例 (下記) を使用するためから SqlServer モジュールをインストールする必要があります、 [PowerShell ギャラリー](https://www.powershellgallery.com/packages/SqlServer)します。
 
 ```powershell
@@ -115,16 +147,33 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
+`SqlServer`モジュールと呼ばれるプロバイダーに含まれる`SQLRegistration`保存された SQL Server 接続の次の種類をプログラムでアクセスできます。
 
-次の例を実行、 `dir` (別名`Get-ChildItem`)、登録済みサーバー ファイルに表示されているすべての SQL Server インスタンスの一覧を取得し、使用して、`Get-SqlDatabase`それらのインスタンスの各データベースの一覧を取得するコマンドレット。
++ データベース エンジンのサーバー (登録済みサーバー)
++ 中央管理サーバー (CMS)
++ Analysis Services
++ Integration Services
++ Reporting Services
+
+ 次の例を実行、 `dir` (エイリアスの`Get-ChildItem`)、登録済みサーバー ファイルに表示されているすべての SQL Server インスタンスの一覧を取得します。
 
 ```powershell
-dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
-WHERE { $_.Mode -ne 'd' } |
-FOREACH {
-    Get-SqlDatabase -ServerInstance $_.Name
-}
+dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse 
 ```
+
+サンプルを次に示しますをどのような出力ようになります。
+
+```powershell
+Mode Name
+---- ----
+-    ServerA
+-    ServerB
+-    localhost\SQL2017
+-    localhost\SQL2016Happy
+-    localhost\SQL2017
+```
+
+データベース、または、データベース内のオブジェクトに関連する多くの操作を`Get-SqlDatabase`コマンドレットを使用できます。  両方の値を指定する場合、`-ServerInstance`と`-Database`パラメーター、その 1 つのデータベース オブジェクトのみが取得されます。  ただし、のみを指定する場合、`-ServerInstance`パラメーター、そのインスタンス上のすべてのデータベースの完全な一覧が返されます。
 
 サンプルをどのような出力のようになります。
 
@@ -143,7 +192,7 @@ tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa
 WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 ```
 
-この例では、 `Get-SqlDatabase` ServerB 上では、すべてのデータベースの一覧を取得するコマンドレットは、グリッドとテーブルを表示します (を使用して、`Out-GridView`コマンドレット) を選択するデータベースをバックアップする必要があります。  ユーザーが、[OK] ボタンをクリックすると、強調表示されているデータベースのみをバックアップします。
+この次の例では、 `Get-SqlDatabase` ServerB 上では、すべてのデータベースの一覧を取得するコマンドレットは、グリッドとテーブルを表示します (を使用して、`Out-GridView`コマンドレット) を選択するデータベースをバックアップする必要があります。  ユーザーが、[OK] ボタンをクリックすると、強調表示されているデータベースのみをバックアップします。
 
 ```powershell
 Get-SqlDatabase -ServerInstance ServerB |
@@ -159,28 +208,6 @@ WHERE {$_.Mode -ne 'd' } |
 FOREACH {
     Get-SqlAgentJobHistory -ServerInstance  $_.Name -Since Midnight -OutcomesType Failed
 }
-```
-
-### <a name="sql-powershell-examples"></a>SQL PowerShell の例
-これらの例 (下記) を使用するためから SqlServer モジュールをインストールする必要があります、 [PowerShell ギャラリー](https://www.powershellgallery.com/packages/SqlServer)します。
-
-```powershell
-Install-Module -Name SqlServer -AllowPrerelease
-```
-
-この例では使用して、 `Get-SqlInstance` ServerA と ServerB の SMO Server オブジェクトを取得するコマンドレットです。  このコマンドは、インスタンス名を含める出力の既定バージョンについては、サービス パック、および CU の更新プログラムのインスタンスのレベル。
-
-```powershell
-Get-SqlInstance -ServerInstance ServerA, ServerB
-```
-
-サンプルをどのような出力のようになります。
-
-```
-Instance Name             Version    ProductLevel UpdateLevel
--------------             -------    ------------ -----------
-ServerA                   13.0.5233  SP2          CU4
-ServerB                   14.0.3045  RTM          CU12
 ```
 
 この例でを実行、 `dir` (エイリアスの`Get-ChildItem`)、登録済みサーバー ファイルに表示されているすべての SQL Server インスタンスの一覧を取得し、使用して、`Get-SqlDatabase`それらのインスタンスの各データベースの一覧を取得するコマンドレットです。
@@ -208,24 +235,6 @@ PBIRSTempDB          Normal       16.00 MB    4.20 MB Simple       140 sa
 SSISDB               Normal      325.06 MB   26.21 MB Full         140 sa   
 tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa   
 WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa   
-```
-
-この例では、 `Get-SqlDatabase` ServerB 上では、すべてのデータベースの一覧を取得するコマンドレットは、グリッドとテーブルを表示します (を使用して、`Out-GridView`コマンドレット) を選択するデータベースをバックアップする必要があります。  ユーザーが、[OK] ボタンをクリックすると、強調表示されているデータベースのみをバックアップします。
-
-```powershell
-Get-SqlDatabase -ServerInstance ServerB |
-Out-GridView -PassThru |
-Backup-SqlDatabase -CompressionOption On
-```
-
-この例では、もう一度、登録済みサーバー ファイルに表示されているすべての SQL Server インスタンスの一覧取得を呼び出して、`Get-SqlAgentJobHistory`表示されている SQL Server インスタンスごとに、午前 0 時からすべての失敗した SQL エージェント ジョブをレポートします。
-
-```powershell
-dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
-WHERE {$_.Mode -ne 'd' } |
-FOREACH {
-    Get-SqlAgentJobHistory -ServerInstance  $_.Name -Since Midnight -OutcomesType Failed
-}
 ```
 
 ## <a name="reporting-problems"></a>問題の報告

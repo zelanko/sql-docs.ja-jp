@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a14059e72dfb7ba2c2e0740969ee3ea30618e35
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792062"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484100"
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のスペル チェックでは、ドメイン内の文字列値の構文、スペル、および文構造をチェックします。 スペル チェックは、サーバー側のエンジンと統合されないクライアント側のスタンドアロンの機能で、現在のフローや状態には影響しません。 スペル チェックで誤りの可能性がある文字列値が見つかると、対応する各ページでドメイン値に対するその他の手動の変更を行うときに、それらの文字列値が赤い下線で示されます。 対象となるページは次のとおりです。  

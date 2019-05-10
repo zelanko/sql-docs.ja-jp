@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce2b909ea7853a0a77d42f8c14a510b529f4ae88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7207cd8e3a087ed0aa85931254754d4009d73c53
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765885"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479870"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>データベースの作成ウィザード (マスター データ サービス構成マネージャー)
   **データベースの作成** ウィザードを使用して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成します。  
@@ -54,7 +54,7 @@ ms.locfileid: "62765885"
 ## <a name="progress-and-finish"></a>[続行して完了する]  
  作成処理の進捗状況を表示します。 データベースが作成されたら、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 新しいデータベースが選択され、そのシステム設定を表示および変更できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [マスター データ サービスのデータベースと web サイトの設定します。](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [データベース要件 &#40;マスター データ サービス&#41;](install-windows/database-requirements-master-data-services.md)  

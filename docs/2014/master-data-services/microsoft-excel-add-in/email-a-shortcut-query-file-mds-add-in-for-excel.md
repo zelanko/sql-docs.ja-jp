@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3eb075777b65a410f27e318e2d923f0b0882822d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765666"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478890"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] で、他のユーザーが確実に自分と同じデータを操作するようにするには、ショートカット クエリ ファイルをそのユーザーに電子メールで送信します。 ワークシートを保存して電子メールで送信するのではなく、クエリを共有する必要があります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   Outlook 2010 以降がインストールされている必要があります。  
@@ -37,7 +37,7 @@ ms.locfileid: "62765666"
   
 -   ショートカット クエリ ファイルを開くには、電子メールの受信者は [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] をインストールしておく必要があります。 受信者は、ファイルをダブルクリックして開くことができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

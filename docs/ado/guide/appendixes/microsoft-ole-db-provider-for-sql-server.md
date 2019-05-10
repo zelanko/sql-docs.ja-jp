@@ -15,17 +15,18 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17146ee01a2e4b99dbe50b1d81aedaf0ad7e0b94
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678670"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095887"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
 Microsoft OLE DB Provider for SQL Server、SQLOLEDB には、Microsoft SQL Server にアクセスする ADO ができます。
 
-**注:** このドライバーを使用して、新規の開発には推奨されません。 新しい OLE DB プロバイダーが呼び出される、 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 今後、最新のサーバー機能と更新されます。
+> [!IMPORTANT]
+> Microsoft OLE DB Provider for SQL Server (SQLOLEDB) は非推奨と、新しい開発作業で使用するには使用しないでいます。 代わりに、新しい使用[Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) server の最新の機能と更新されます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
  このプロバイダーに接続するには、設定、*プロバイダー*への引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。

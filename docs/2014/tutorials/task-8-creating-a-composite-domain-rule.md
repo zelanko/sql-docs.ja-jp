@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217801"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489625"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>タスク 8:複合ドメイン ルールを作成する
   このタスクでのルールを作成する、 **Address Validation**複合ドメイン。 クロス ドメイン ルールを定義する: 場合**市区町村**は**Los Angeles**、**状態**必要があります**CA**場所**市区町村****状態**は 2 つのドメイン。  

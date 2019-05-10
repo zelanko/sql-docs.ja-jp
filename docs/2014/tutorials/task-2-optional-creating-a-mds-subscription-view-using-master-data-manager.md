@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e6cbed42d059714dde1c82dbb50edf8ccc1dd65b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63198893"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484723"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>タスク 2 (オプション):マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成する
   このタスクで公開するサブスクリプション ビューを作成する、 **Supplier**内のエンティティ、 **Suppliers**モデルを他のアプリケーション。 現在のバージョンのチュートリアルでは、このビューを使用しません。  

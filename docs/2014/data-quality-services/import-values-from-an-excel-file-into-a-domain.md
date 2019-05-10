@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.importfailing.f1
 - sql12.dqs.kb.importselect.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f53d25c99da4ae193f3f37ea07748f603b9cf2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792668"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484313"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で Excel ファイルからドメインにデータをインポートする方法について説明します。 Excel ファイルを使用して [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションにドメイン値をインポートすることで、ナレッジの生成処理を簡略化し、時間と労力を節約します。 この処理では、有効なデータ値の一覧が保存された Excel ファイルまたはテキスト ファイルを使用して、それらの値をドメインにインポートすることができます。 Excel ファイルからドメインにドメイン値をインポートしたり、ナレッジ ベースにドメインをインポートしたりできます (ナレッジ ベースへのドメインのインポートについて詳しくは、「[ナレッジ検出でドメインを Excel ファイルからインポートする](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください)。Excel ファイルへのエクスポートはサポートされていません。  
