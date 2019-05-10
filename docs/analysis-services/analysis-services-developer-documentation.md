@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44be6e7ab0bb3598b2478f1a5f94e64fee48d05a
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930322"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449982"
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services の開発者向けドキュメント
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ Analysis Services には、コードのソリューションをカスタマイ�
 - XMLA や MDX のオープン スタンダードに基づくソリューションを構築することはできますが、これを行うにはきわめてまれですが。 .NET またはネイティブ (MSOLAP) テクノロジの経験から、およびほとんどのコミュニティとフォーラムをサポートするための MDX リファレンスを描画し、XMLA 以外のドキュメントはありません。
 
 ## <a name="programming-in-analysis-services"></a>Analysis Services でのプログラミング
-[データ マイニングのプログラミング](../analysis-services/data-mining-programming.md)データ マイニング オブジェクトを含むソリューションを構築する方法について説明します。
+[データ マイニングのプログラミング](../analysis-services/data-mining/data-mining-programming.md)データ マイニング オブジェクトを含むソリューションを構築する方法について説明します。
 
 [多次元モデルのプログラミング](../analysis-services/multidimensional-models/multidimensional-model-programming.md)開発タスクと、カスタム ソリューションで多次元モデル オブジェクトを統合するための方法について説明します。
 
