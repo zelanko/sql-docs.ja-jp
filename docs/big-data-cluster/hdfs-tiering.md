@@ -11,11 +11,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ccafa7914d09971e33d60fc9d25c7b812983aa98
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472090"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775006"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>HDFS のビッグ データの SQL Server クラスター上の階層制御の構成します。
 

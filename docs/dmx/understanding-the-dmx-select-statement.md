@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: f76729b419fccf3d17e66ddd8ab00e8b54b1b264
 ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52398075"
@@ -85,7 +85,7 @@ ms.locfileid: "52398075"
   
 |クエリの型|説明|  
 |----------------|-----------------|  
-|SELECT INTO *\<新しいモデル >*|マイニング モデルのコピーを作成します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT &AMP;#40;DMX&AMP;#41;](../dmx/select-into-dmx.md)|  
+|SELECT INTO *\<新しいモデル >*|マイニング モデルのコピーを作成します。<br /><br /> このクエリの型のドメインはデータ マイニング モデルです。<br /><br /> [SELECT &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
   
  [Select の型に戻る](#Select_Types)  
   

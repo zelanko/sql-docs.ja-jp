@@ -27,11 +27,11 @@ ms.locfileid: "62773767"
   
  [Analysis Services クエリ結果&#40;[全般] ページ&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)  
   
- [クエリ実行オプション] の&#40;[詳細] ページ&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)  
+ [クエリ実行オプション の&#40;[詳細] ページ&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)  
   
  [クエリ実行オプション の&#40;の ANSI ページ&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)  
   
- [クエリ実行オプション] の&#40;[全般] ページ&#41;](../../2014/database-engine/query-options-execution-general-page.md)  
+ [クエリ実行オプション の&#40;[全般] ページ&#41;](../../2014/database-engine/query-options-execution-general-page.md)  
   
  [クエリ オプション の結果&#40;グリッド ページ&#41;](../../2014/database-engine/query-options-results-grid-page.md)  
   
