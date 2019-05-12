@@ -20,12 +20,12 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465958"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536532"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465958"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
      SQLHDBC        ConnectionHandle,  
@@ -97,25 +97,25 @@ SQLRETURN SQLNativeSql(
 ## <a name="comments"></a>コメント  
  どのような例を次に**SQLNativeSql** CONVERT スカラー関数を含む次の入力 SQL 文字列を返す可能性があります。 データ ソースの整数型の列 empid があると仮定します。  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  Microsoft SQL Server 用のドライバーでは、次の変換された SQL 文字列を返す可能性があります。  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  ORACLE サーバー用のドライバーでは、次の変換された SQL 文字列を返す可能性があります。  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  Ingres 用のドライバーでは、次の変換された SQL 文字列を返す可能性があります。  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   

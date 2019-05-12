@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982396"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536317"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982396"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションは、ORDERS テーブルを参照し、注文ステータスを更新するユーザーをできます。 カーソルはキーセット ドリブンの行セットのサイズは 20 であり、行のバージョンを比較するオプティミスティック同時実行制御を使用します。 それぞれの行セットをフェッチすると、後に、アプリケーションはそれを出力しを選択し、注文の状態を更新できます。 アプリケーションを使用して**SQLSetPos**に選択した行にカーソルを移動し、行の位置指定更新を実行します。 (エラー処理はわかりやすくするため省略します。)  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

@@ -20,12 +20,12 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240236"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538020"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "63240236"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
      SQLHDBC           ConnectionHandle,  
@@ -148,7 +148,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="code-example"></a>コード例  
  次の 3 つの例は、アプリケーションでの使用方法を表示する**SQLGetFunctions**ドライバーをサポートしているかを判断する**SQLTables**、 **SQLColumns**、および**SQLStatistics**します。 ドライバーがこれらの関数をサポートしていない場合、アプリケーションは、ドライバーから切断します。 最初の例では、 **SQLGetFunctions**関数ごとに 1 回です。  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -171,7 +171,7 @@ SQLDisconnect(hdbc);
   
  ODBC 3.x アプリケーションを呼び出すと 2 番目の例では、 **SQLGetFunctions**で配列を渡します**SQLGetFunctions**に関するすべての ODBC 情報を返します 3.x と以前の関数。  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -193,7 +193,7 @@ SQLDisconnect(hdbc);
   
  3 番目の例は、ODBC 2.x アプリケーションを呼び出す**SQLGetFunctions**を 100 個の要素の配列を渡します**SQLGetFunctions**に関するすべての ODBC 情報を返します 2.x と以前の関数。  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  

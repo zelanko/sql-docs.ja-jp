@@ -20,12 +20,12 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94afb817462022ff21c312291b31c738be15c72f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259350"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537688"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259350"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumns(  
      SQLHSTMT       StatementHandle,  
@@ -182,7 +182,7 @@ SQLRETURN SQLColumns(
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションによって返される結果セットのバッファーを宣言して**SQLColumns**します。 呼び出す**SQLColumns**を従業員テーブル内の各列を表す結果セットを返します。 呼び出して**SQLBindCol**バッファーに結果セットで列をバインドします。 アプリケーションでデータの各行をフェッチする最後に、 **SQLFetch**しそれを処理します。  
   
-```  
+```cpp  
 // SQLColumns_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

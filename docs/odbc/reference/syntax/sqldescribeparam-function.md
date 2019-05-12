@@ -20,12 +20,12 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2e810d2e7ff3f69faea5fdcbccbb7f7ba276df48
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982293"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537614"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982293"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeParam(  
       SQLHSTMT        StatementHandle,  
@@ -111,7 +111,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="code-example"></a>コード例  
  次の例では、SQL ステートメントのユーザーを要求し、し、そのステートメントを準備します。 次に、呼び出す**SQLNumParams**ステートメントにパラメーターが含まれるかどうかを確認します。 呼び出し、ステートメントにパラメーターが含まれている場合**SQLDescribeParam**これらのパラメーターを記述して**SQLBindParameter**これらをバインドできます。 最後に、パラメーターの値はユーザー要求し、ステートメントを実行します。  
   
-```  
+```cpp  
 SQLCHAR       Statement[100];  
 SQLSMALLINT   NumParams, i, DataType, DecimalDigits, Nullable;  
 SQLUINTEGER   ParamSize;  

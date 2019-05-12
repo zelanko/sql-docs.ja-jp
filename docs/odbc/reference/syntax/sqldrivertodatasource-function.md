@@ -20,19 +20,19 @@ ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f5450bbabb43b1f5cbc8c0fd7cb1a83da3a8bc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 844e11e72bb46b69229a9a4747ac7e64f013f14e
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061449"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537165"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource 関数
 **SQLDriverToDataSource** ODBC ドライバーの翻訳をサポートしています。 ODBC 対応のアプリケーションではこの関数は呼び出されませんアプリケーション要求経由で翻訳**SQLSetConnectAttr**します。 関連付けられているドライバー、 *ConnectionHandle*で指定されている**SQLSetConnectAttr**データ ソースに、ドライバーから着信するすべてのデータの翻訳を実行する指定された DLL を呼び出します。 ODBC 初期化ファイルには、既定のトランスレーター DLL を指定できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLDriverToDataSource(  
      UDWORD     fOption,  
