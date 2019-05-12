@@ -21,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237894"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538188"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 関数
 **準拠**  
@@ -37,7 +37,7 @@ ms.locfileid: "63237894"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLBrowseConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -223,7 +223,7 @@ SQLRETURN SQLBrowseConnect(
   
  これは、ドライバーは、データ ソースへの接続が必要な情報の最後の部分**SQLBrowseConnect** SQL_SUCCESS を返します、**OutConnectionString*完全な接続文字列が含まれています。  
   
-```  
+```cpp  
 // SQLBrowseConnect_Function.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

@@ -20,12 +20,12 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258956"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538001"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "63258956"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetData(  
       SQLHSTMT       StatementHandle,  
@@ -204,7 +204,7 @@ SQLRETURN SQLGetData(
   
  連続して呼び出す**SQLGetData**要求された最後の列からデータが取得されます。 以前のオフセットが無効になります。 たとえば、ときに、次のシーケンスは実行されます。  
   
-```  
+```cpp  
 SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)  
 ```  
   
@@ -218,7 +218,7 @@ SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションを実行、**選択**ステートメントを Id、名、顧客の結果セットを返すし、電話番号の名前、ID、および電話番号で並べ替えられます。 データの各行に対して呼び出す**SQLFetch**に次の行にカーソルを移動します。 呼び出す**SQLGetData**取得するへの呼び出しで、フェッチされたデータは、データと返されたバイト数のバッファーを指定します。 **SQLGetData**します。 最後に、各従業員の名前、ID、および電話番号を印刷します。  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 50  
   

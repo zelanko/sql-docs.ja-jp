@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259279"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537727"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259279"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -106,7 +106,7 @@ SQLRETURN SQLCopyDesc(
 ### <a name="code-example"></a>コード例  
  次の例では、記述子の操作は PartsSource テーブルのフィールドを PartsCopy テーブルにコピーに使用されます。 PartsSource テーブルの内容は、行セットのバッファーにフェッチされて*hstmt0*します。 これらの値がで INSERT ステートメントのパラメーターとして使用される*hstmt1* PartsCopy テーブルの列の設定にします。 そのための ird フィールドに*hstmt0*の IPD フィールドにコピーされます*hstmt1*の ARD のフィールドと*hstmt0* のAPDのフィールドにコピーされます*hstmt1*します。 使用**SQLSetDescField** IRD フィールドを出力パラメーターを持つステートメントからは入力パラメーターとして指定する必要がある IPD フィールドにコピーする場合に SQL_PARAM_INPUT IPD の SQL_DESC_PARAMETER_TYPE 属性を設定します。  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  

@@ -20,12 +20,12 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ff8cb5bd0ff257d42cd658da54415697e99ae0f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259319"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538147"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259319"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeStmt(  
      SQLHSTMT       StatementHandle,  
@@ -83,7 +83,7 @@ SQLRETURN SQLFreeStmt(
 ## <a name="example"></a>例  
  ハンドルを解放する場合は、適切なプログラミング手法を勧めします。 ただし、わかりやすくするために、次の例はハンドルの割り当てを解放するコードを含まれません。 ハンドルを解放する方法の例は、次を参照してください。 [SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
   
-```  
+```cpp  
 // SQLFreeStmt.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  
