@@ -2,18 +2,18 @@
 title: レポート デザインとレポートの展開の計画 |Reporting Services | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 019a76f0df9884f788cb11de38ea14fdc723e701
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814235"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503691"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>レポート デザインとレポート配置の計画 | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、ページ分割されたレポートの作成と配置に関していくつかのアプローチが用意されています。 レポートの作成とレポート サーバーを併用する環境を計画する方法について説明します。
@@ -51,8 +51,12 @@ ms.locfileid: "51814235"
 -   **レポート ビルダー:** レポート ビルダーからレポート サーバーにレポートを保存する。  
   
 -   **Web ポータル:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]からネイティブ モード レポート サーバーにレポートをアップロードします。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 -   **SharePoint:** SharePoint モード レポート サーバーで構成された SharePoint サイトにレポートをアップロードする。  
+
+::: moniker-end
   
 -   **プログラムから:** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートをパブリッシュする。 詳しくは、「 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)」をご覧ください。  
   
@@ -66,7 +70,13 @@ ms.locfileid: "51814235"
   
  レポート定義をレポート サーバーにアップロードするか、既存のレポートが保存されたレポート サーバーをアップグレードすると、レポート定義は元の形式のまま維持されます。 レポート サーバー データベース内のレポートは、**初回使用時に**レポート サーバーによってバイナリ形式へとアップグレードされて初めて、閲覧が可能となります。 レポート定義 (.rdl) そのものはアップグレードされません。  
   
- レポート サーバーからレポート定義ファイル (.rdl) の読み取り専用コピーを抽出できます。 ネイティブ モード レポート サーバーで、 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]を参照し、 **[ダウンロード]** をクリックします。 SharePoint モードの配置で、ドキュメント ライブラリを参照し、レポートを選択して、 **[コピーのダウンロード]** をクリックします。  
+ レポート サーバーからレポート定義ファイル (.rdl) の読み取り専用コピーを抽出できます。 ネイティブ モード レポート サーバーで、 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]を参照し、 **[ダウンロード]** をクリックします。 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+SharePoint モードの配置で、ドキュメント ライブラリを参照し、レポートを選択して、 **[コピーのダウンロード]** をクリックします。  
+
+::: moniker-end
   
  レポート定義をアップグレードするには、アップグレードするレポートをレポート作成環境 (SQL Server Data Tools、レポート ビルダーなど) で開いて保存する必要があります。  
   
