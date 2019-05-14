@@ -2,20 +2,22 @@
 title: PolyBase Kerberos の接続性のトラブルシューティング | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
+ms.reviewer: jroth
 manager: craigg
 ms.technology: polybase
 ms.custom: ''
 ms.devlang: ''
 ms.topic: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57976332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776008"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -236,7 +238,7 @@ Kerberos へのアクセス時に引き続き問題が発生する場合は、�
 1. SQL Server の外部から Kerberos HDFS データにアクセスできることを確認します。 次のいずれかを実行できます。 
 
     - 独自の Java プログラムを記述します。
-    - PolyBase インストール フォルダーの `HdfsBridge` クラスを使用します。 例 :
+    - PolyBase インストール フォルダーの `HdfsBridge` クラスを使用します。 例:
 
       ```java
       -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt

@@ -1,7 +1,7 @@
 ---
 title: PolyBase の構成と Hadoop 用のセキュリティ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: polybase
@@ -9,12 +9,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd85274454db10b0bd3415ec41aa6cedcd629d0f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: d9fa25f4b6369db64c96d21a0591a1f8c214d61a
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241840"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775253"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>PolyBase の構成と Hadoop 用のセキュリティ
 
@@ -158,7 +159,7 @@ MIT KDC を使用して、Kerberos でセキュリティ保護された Hadoop �
    
 3. これらの構成値を、SQL Server コンピューター上の対応するファイル内の値プロパティにコピーします。  
    
-   |**#**|**[構成ファイル]**|**構成キー**|**操作**|  
+   |**#**|**構成ファイル**|**構成キー**|**操作**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|KDC のホスト名を指定します。 例: kerberos.your-realm.com.|  
    |2|core-site.xml|polybase.kerberos.realm|Kerberos 領域を指定します。 例:YOUR-REALM.COM|  

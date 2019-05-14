@@ -14,16 +14,16 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9a7592e4ba1d3087aafaff1eef22b467eb55dd7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 335352fbf9753c2be6e0ddbed3d0f8d8032a3649
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215478"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946172"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>フィールド ターミネータと行ターミネータの指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "53215478"
         >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」を参照してください。  
   
 ### <a name="guidelines-for-using-terminators"></a>ターミネータ使用のガイドライン  
- 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例 :  
+ 状況によっては、 **char** データ フィールドまたは **nchar** データ フィールドには、ターミネータが役に立つ場合があります。 例:  
   
 -   プレフィックス長がわからないプログラムにインポートされるデータ ファイル内で NULL 値が含まれるデータ列。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "53215478"
 
 ### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>`\n` を一括エクスポートの行ターミネータとして指定する
 
-`\n` を一括エクスポートの行ターミネータとして指定するか、既定の行ターミネータを暗黙的に使用する場合、bcp では復帰と改行の組み合わせ (CRLF) が行ターミネータとして出力されます。 行ターミネータとして改行文字のみ (LF) を出力する場合 (Unix および Linux コンピュータの標準)、16 進数表記を使用して LF 行ターミネータを指定します。 例 :
+`\n` を一括エクスポートの行ターミネータとして指定するか、既定の行ターミネータを暗黙的に使用する場合、bcp では復帰と改行の組み合わせ (CRLF) が行ターミネータとして出力されます。 行ターミネータとして改行文字のみ (LF) を出力する場合 (Unix および Linux コンピュータの標準)、16 進数表記を使用して LF 行ターミネータを指定します。 例:
 
 ```cmd
 bcp -r '0x0A'

@@ -21,16 +21,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 523b1cc852c7098f6c18828efdb789fa2fcafcdf
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0cdd3d2a7a64ddc701a73a3b6c978bd9f0264e20
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801746"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877586"
 ---
 # <a name="sql-server-documentation"></a>SQL Server のドキュメント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server は Microsoft データ プラットフォームの中心部です。 SQL Server は、オペレーション データベース管理システム (ODBMS) 業界のリーダーといえる製品です。 このドキュメントは、Windows および Linux の両方での SQL Server のインストール、構成、使用の際に役立ちます。 コンテンツには、エンド ツー エンドの例、コード サンプル、およびビデオが含まれています。 SQL Server 言語のトピックについては、「[言語リファレンス](../t-sql/language-reference.md)」を参照してください。
@@ -84,8 +83,6 @@ SQL Server は Microsoft データ プラットフォームの中心部です。
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 **SQL Server 2016 をお試しください。**
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Windows 用 SQL Server をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![仮想マシンの作成](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server で仮想マシンをすぐにご利用いただけます](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
@@ -93,10 +90,10 @@ SQL Server は Microsoft データ プラットフォームの中心部です。
 **SQL Server をお試しください。**
 - [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Windows 用 SQL Server をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Linux に SQL Server をインストールする](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Linux に SQL Server をインストールする](../linux/sql-server-linux-setup.md)
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![仮想マシンの作成](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server で仮想マシンをすぐにご利用いただけます](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
+
+[!INCLUDE[get-sql-tools](../includes/paragraph-content/get-sql-tools.md)]
 
 ## <a name="sql-server-technologies"></a>SQL Server のテクノロジ
 

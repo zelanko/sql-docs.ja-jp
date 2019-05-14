@@ -39,7 +39,7 @@ ms.locfileid: "62748684"
   
 -   [結果ウィンドウ&#40;マイニング モデル予測 ビュー&#41;](result-pane-mining-model-prediction-view.md)  
   
--   [[マイニング モデル] ダイアログ ボックスの選択&#40;マイニング モデル予測] ビュー&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
+-   [マイニング モデル ダイアログ ボックスの選択&#40;マイニング モデル予測 ビュー&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
   
 -   [データ マイニングのクエリ結果 ダイアログ ボックスの保存&#40;マイニング モデル予測 ビュー&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
   

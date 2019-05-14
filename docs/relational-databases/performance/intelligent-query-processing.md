@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのインテリジェントなクエリ処理 | Microsoft Docs
 description: SQL Server および Azure SQL Database のクエリ パフォーマンスを向上させるためのインテリジェントなクエリ処理の機能です。
 ms.custom: ''
-ms.date: 03/05/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776026"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
@@ -224,6 +224,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
 
 ## <a name="row-mode-memory-grant-feedback"></a>行モード メモリ許可フィードバック
+
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (パブリック プレビューの機能)
 
 > [!NOTE]

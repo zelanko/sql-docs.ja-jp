@@ -14,16 +14,16 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab8431339c53d782b8823000b12fa368a523040e
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: f32cf35670149a42941c91572d25bdd235c503d1
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100807"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946121"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,15 +44,15 @@ ms.locfileid: "54100807"
   
     |ファイル ストレージ型|コマンド プロンプトで入力する文字|  
     |-----------------------|-----------------------------|  
-    |**char**|**c** **[har]**|  
+    |**char**|**c****[har]**|  
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text**|**T** **[ext]**|  
+    |**text**|**T****[ext]**|  
     |**ntext2**|**W**|  
-    |**[バイナリ]**|**x**|  
+    |**binary**|**x**|  
     |**varbinary**|**x**|  
-    |**image**|**I** **[mage]**|  
+    |**image**|**I****[mage]**|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
