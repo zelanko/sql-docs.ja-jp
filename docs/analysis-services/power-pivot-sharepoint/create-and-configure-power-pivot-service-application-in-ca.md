@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
 ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38982604"
@@ -106,7 +106,7 @@ ms.locfileid: "38982604"
   
 9. [データ更新] の **[営業時間]** では、営業時間を定義する時間の範囲を指定できます。 データ更新スケジュールを営業時間後に実行すると、通常の営業時間中に生成されたトランザクション データを取得できます。  
   
-10. **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント]** で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新ジョブを実行するための定義済みアカウントを保存する Secure Store Service の定義済みの対象アプリケーションを指定できます。 ID ではなく、必ず対象アプリケーション名を指定してください。 自動データ更新の対象アプリケーションは、SQL Server セットアップで [新しいサーバー] オプションを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールした場合は自動的に作成されます。 それ以外の場合は、対象アプリケーションを手動で作成する必要があります。 アカウントを構成する方法については、「 [Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)」を参照してください。  
+10. **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント**で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ更新ジョブを実行するための定義済みアカウントを保存する Secure Store Service の定義済みの対象アプリケーションを指定できます。 ID ではなく、必ず対象アプリケーション名を指定してください。 自動データ更新の対象アプリケーションは、SQL Server セットアップで [新しいサーバー] オプションを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールした場合は自動的に作成されます。 それ以外の場合は、対象アプリケーションを手動で作成する必要があります。 アカウントを構成する方法については、「 [Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)」を参照してください。  
   
 11. **[ユーザーによるカスタムの Windows 資格情報の入力を許可する]** チェック ボックスをオンまたはオフにして、スケジュールの所有者が任意の Windows 資格情報を入力してデータ更新スケジュールを実行できるようにするかどうかを指定します。 このチェック ボックスを選択した場合 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションは作成され、保存された資格情報のセットごとに対象アプリケーションを管理します。 詳細については、「 [PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)」を参照してください。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "38982604"
   
 -   **"既定"** の接続グループに追加します。 *既定の接続グループ* とは、そのグループを参照する任意の Web アプリケーションで使用できるサービス アプリケーション接続のコレクションです。 このリストに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを 1 つ追加する必要があります。  
   
--   特定の Web アプリケーションの "カスタム" **** 接続リストを作成します。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、カスタム リストで選択することによって、使用するサービス アプリケーションを選択できます。  
+-   特定の Web アプリケーションの **カスタム** 接続リストを作成します。 複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成した場合は、カスタム リストで選択することによって、使用するサービス アプリケーションを選択できます。  
   
  既定の接続グループに同じ型のサービス アプリケーションを複数含めることもできますが、 このリストに複数の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを追加する構成はサポートされていません。  
   
