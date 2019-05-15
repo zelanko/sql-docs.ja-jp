@@ -13,12 +13,12 @@ ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83d6f9a67fbef5be4acb2230d88e5e61feddf16c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 528df24b3963d83a236f198055614d15ab66a5c4
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143157"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619776"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>構成ファイル内の URL (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、RSReportServer.config ファイルにアプリケーション設定を格納します。 このファイルには、URL と URL 予約の両方の構成設定が含まれています。 これらの構成設定は、変更の目的とルールが大きく異なります。 構成ファイルの変更による配置のチューニングに慣れている場合、各 URL 設定の使用方法の理解にこのトピックが役立ちます。  
@@ -56,7 +56,7 @@ ms.locfileid: "63143157"
   
 |設定|使用方法|説明|  
 |-------------|-----------|-----------------|  
-|`ReportServerUrl`|任意。 この要素は、手動で追加しない限り RSReportServer.config ファイルには含まれません。 この要素は、次のいずれかのシナリオを構成する場合にのみ設定します。<br /><br /> 別のコンピューターまたは同じコンピューター上の別のインスタンスで実行されるレポート サーバー Web サービスへの Web フロントエンド アクセスを、レポート マネージャーが提供する場合<br /><br /> レポート サーバーの URL が複数存在し、レポート マネージャーで特定の URL を使用する場合<br /><br /> レポート マネージャーのすべての接続に特定のレポート サーバーの URL を使用する場合<br /><br /> たとえば、ネットワーク上のすべてのコンピューターにレポート マネージャーへのアクセスを許可しても、ローカル接続を使用してレポート サーバーに接続するようにレポート マネージャーに求める場合があります。 この場合、構成する場合があります`ReportServerUrl`に"http://localhost/reportserver"。<br /><br /> <br /><br /> これらのシナリオを実装する方法については、次を参照してください。[レポート マネージャーの構成&#40;ネイティブ モード&#41;](../report-server/configure-web-portal.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。|この値には、レポート サーバー Web サービスの URL を指定します。 この値は、起動時にレポート マネージャー アプリケーションによって読み取られます。 この値を設定すると、レポート マネージャーは、URL で指定されたレポート サーバーに接続します。<br /><br /> 既定では、レポート マネージャーは、レポート マネージャーと同じレポート サーバー インスタンス内で実行されるレポート サーバー Web サービスへの Web フロントエンド アクセスを提供します。 ただし、別のインスタンスまたは別のコンピューター上のインスタンス内で実行されるレポート サーバー Web サービスでレポート マネージャーを使用する場合は、外部のレポート サーバー Web サービスに接続するようにレポート マネージャーに指示するようにこの URL を設定することができます。<br /><br /> 接続先のレポート サーバーに SSL (Secure Sockets Layer) 証明書がインストールされている場合、`ReportServerUrl` の値には、その証明書に登録されているサーバーの名前を指定する必要があります。 エラーが発生した場合"基になる接続が閉じられました。確立できませんでした、SSL/TLS セキュリティ チャネルに対する信頼関係"、設定`ReportServerUrl`SSL 証明書の発行対象のサーバーの完全修飾ドメイン名にします。 たとえば、証明書が **https://adventure-works.com.onlinesales** に登録されている場合、レポート サーバーの URL は **https://adventure-works.com.onlinesales/reportserver** になります。|  
+|`ReportServerUrl`|任意。 この要素は、手動で追加しない限り RSReportServer.config ファイルには含まれません。 この要素は、次のいずれかのシナリオを構成する場合にのみ設定します。<br /><br /> 別のコンピューターまたは同じコンピューター上の別のインスタンスで実行されるレポート サーバー Web サービスへの Web フロントエンド アクセスを、レポート マネージャーが提供する場合<br /><br /> レポート サーバーの URL が複数存在し、レポート マネージャーで特定の URL を使用する場合<br /><br /> レポート マネージャーのすべての接続に特定のレポート サーバーの URL を使用する場合<br /><br /> たとえば、ネットワーク上のすべてのコンピューターにレポート マネージャーへのアクセスを許可しても、ローカル接続を使用してレポート サーバーに接続するようにレポート マネージャーに求める場合があります。 この場合、構成する場合があります`ReportServerUrl`に"http://localhost/reportserver"。<br /><br /> <br /><br /> これらのシナリオを実装する方法については、次を参照してください。[レポート マネージャーの構成&#40;ネイティブ モード&#41;](../report-server/configure-web-portal.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。|この値には、レポート サーバー Web サービスの URL を指定します。 この値は、起動時にレポート マネージャー アプリケーションによって読み取られます。 この値を設定すると、レポート マネージャーは、URL で指定されたレポート サーバーに接続します。<br /><br /> 既定では、レポート マネージャーは、レポート マネージャーと同じレポート サーバー インスタンス内で実行されるレポート サーバー Web サービスへの Web フロントエンド アクセスを提供します。 ただし、別のインスタンスまたは別のコンピューター上のインスタンス内で実行されるレポート サーバー Web サービスでレポート マネージャーを使用する場合は、外部のレポート サーバー Web サービスに接続するようにレポート マネージャーに指示するようにこの URL を設定することができます。<br /><br /> 接続先のレポート サーバーに SSL (Secure Sockets Layer) 証明書がインストールされている場合、`ReportServerUrl` の値には、その証明書に登録されているサーバーの名前を指定する必要があります。 エラーが発生した場合"基になる接続が閉じられました。確立できませんでした、SSL/TLS セキュリティ チャネルに対する信頼関係"、設定`ReportServerUrl`SSL 証明書の発行対象のサーバーの完全修飾ドメイン名にします。 証明書が登録されている場合など、 **https:\//adventure-works.com.onlinesales**、レポート サーバー URL になります。 **https:\//adventure-works.com.onlinesales/reportserver**します。|  
 |`ReportServerExternalUrl`|任意。 この要素は、手動で追加しない限り RSReportServer.config ファイルには含まれません。<br /><br /> SharePoint 2.0 Web パーツを使用しており、ユーザーがレポートを取得して新しいブラウザー ウィンドウで開くことができるようにする場合にのみ、この要素を設定します。<br /><br /> <`ReportServerUrl`> 要素の下に <`ReportServerExternalUrl`> を追加し、別のブラウザー ウィンドウでアクセスされたときにレポート サーバー インスタンスに解決されるレポート サーバーの完全修飾名に設定します。 <`ReportServerUrl`> は削除しないでください。<br /><br /> 構文例を次に示します。<br /><br /> `<ReportServerExternalUrl>http://myserver/reportserver</ReportServerExternalUrl>`|この値は SharePoint 2.0 Web パーツで使用されます。<br /><br /> 以前のリリースでは、この値を設定してインターネットに接続されたレポート サーバーにレポート ビルダーを配置することが推奨されていました。 この配置シナリオはテストされていません。 以前に、レポート ビルダーへのインターネット アクセスをサポートするためにこの設定を使用していた場合は、他の方法を検討してください。|  
   
 ## <a name="see-also"></a>参照  

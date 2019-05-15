@@ -20,12 +20,12 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 181d3aea0b2c756abc0dc603348cc9cfd728ac4f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061900"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538161"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 関数
 **準拠**  
@@ -36,7 +36,7 @@ ms.locfileid: "63061900"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLDrivers(  
      SQLHENV         EnvironmentHandle,  
@@ -76,7 +76,7 @@ SQLRETURN SQLDrivers(
  [入力]長さ、 \* *DriverAttributes*文字のバッファー。 場合、  *\*DriverDescription*値は、Unicode 文字列 (呼び出し時に**SQLDriversW**)、 *BufferLength*引数は偶数である必要があります。  
   
  *AttributesLengthPtr*  
- [出力](Null 終了バイトを除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *DriverAttributes*します。 返される使用可能なバイト数がより大きいかに等しい場合*BufferLength2*、属性値のペアの一覧\* *DriverAttributes*に切り捨てられます*BufferLength2* null 終了文字の長さマイナスです。  
+ [出力]\(Null 終了バイトを除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *DriverAttributes*します。 返される使用可能なバイト数がより大きいかに等しい場合*BufferLength2*、属性値のペアの一覧\* *DriverAttributes*に切り捨てられます*BufferLength2* null 終了文字の長さマイナスです。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE。  

@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: SQL Server Analysis Services の概要
   href: ../analysis-services/analysis-services.md
@@ -33,74 +33,78 @@
   items:
     - name: Analysis Services チュートリアルの概要
       href: ../analysis-services/analysis-services-tutorials-ssas.md
-    - name: 表形式のモデリング (1400 互換性レベル)
-      href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+    - name: テーブル モデリング
       items:
-        - name: 1 - テーブル モデル プロジェクトの作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - データの取得
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
-        - name: 3 - 日付テーブルとしてマーク
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
-        - name: 4 - リレーションシップの作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
-        - name: 5 - 計算列の作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
-        - name: 6 - メジャーの作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
-        - name: 7 - 主要業績評価指標の作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
-        - name: 8 - パースペクティブの作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
-        - name: 9 - 階層の作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
-        - name: 10 - パーティションの作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
-        - name: 11 - ロールの作成
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
-        - name: 12 - Excel で分析
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
-        - name: 13 - 配置
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
-        - name: '補足のレッスン: 詳細行'
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
-        - name: '補足のレッスン: 動的なセキュリティ'
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
-        - name: '補足のレッスン: 不規則階層'
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-    - name: 表形式のモデリング (1200 互換性レベル)
-      href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
-      items:
-        - name: 1 - 新しいテーブル モデル プロジェクトの作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - データの追加
-          href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
-        - name: 3 - 日付テーブルとしてマーク
-          href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
-        - name: 4 - リレーションシップの作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
-        - name: 5 - 計算列の作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
-        - name: 6 - メジャーの作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
-        - name: 7 - 主要業績評価指標の作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
-        - name: 8 - パースペクティブの作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
-        - name: 9 - 階層の作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
-        - name: 10 - パーティションの作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
-        - name: 11 - ロールの作成
-          href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
-        - name: 12 - Excel で分析
-          href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
-        - name: 13 - 配置
-          href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
-        - name: '補足のレッスン: 行フィルターを使用した動的なセキュリティの実装'
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
-        - name: '補足のレッスン: Power View レポートのレポート プロパティの構成'
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+        - name: Internet Sales チュートリアル (1400)
+          items:
+            - name: Internet Sales チュートリアルの概要 (1400)
+              href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+            - name: 1 - テーブル モデル プロジェクトの作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
+            - name: 2 - データの取得
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
+            - name: 3 - 日付テーブルとしてマーク
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
+            - name: 4 - リレーションシップの作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
+            - name: 5 - 計算列の作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
+            - name: 6 - メジャーの作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
+            - name: 7 - 主要業績評価指標の作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
+            - name: 8 - パースペクティブの作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
+            - name: 9 - 階層の作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
+            - name: 10 - パーティションの作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
+            - name: 11 - ロールの作成
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
+            - name: 12 - Excel で分析
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
+            - name: 13 - 配置
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
+            - name: '補足のレッスン: 詳細行'
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
+            - name: '補足のレッスン: 動的なセキュリティ'
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
+            - name: '補足のレッスン: 不規則階層'
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
+        - name: Internet Sales チュートリアル (1200)
+          items:
+            - name: Internet Sales チュートリアルの概要 (1200)
+              href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
+            - name: 1 - 新しいテーブル モデル プロジェクトの作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
+            - name: 2 - データの追加
+              href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
+            - name: 3 - 日付テーブルとしてマーク
+              href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
+            - name: 4 - リレーションシップの作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
+            - name: 5 - 計算列の作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
+            - name: 6 - メジャーの作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
+            - name: 7 - 主要業績評価指標の作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
+            - name: 8 - パースペクティブの作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
+            - name: 9 - 階層の作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
+            - name: 10 - パーティションの作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
+            - name: 11 - ロールの作成
+              href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
+            - name: 12 - Excel で分析
+              href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
+            - name: 13 - 配置
+              href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
+            - name: '補足のレッスン: 行フィルターを使用した動的なセキュリティの実装'
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+            - name: '補足のレッスン: Power View レポートのレポート プロパティの構成'
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
     - name: 多次元モデリング
       href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
       items:
@@ -819,13 +823,13 @@
               href: ../analysis-services/multidimensional-models/create-a-report-data-source.md
             - name: Power View レポートの作成
               href: ../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md
-            - name: ADOMD.NET のサーバー機能 +
+            - name: ADOMD.NET のサーバー機能 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
-            - name: ADOMD.NET サーバー オブジェクト アーキテクチャ +
+            - name: ADOMD.NET サーバー オブジェクト アーキテクチャ >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
-            - name: ADOMD.NET サーバー プログラミング +
+            - name: ADOMD.NET サーバー プログラミング >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
-            - name: ユーザー定義関数およびストアド プロシージャ +
+            - name: ユーザー定義関数およびストアド プロシージャ >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
         - name: アセンブリの管理
           href: ../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md
@@ -1374,7 +1378,7 @@
               href: ../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
             - name: パフォーマンス カウンター
               href: ../analysis-services/instances/performance-counters-ssas.md
-            - name: トレース イベント +
+            - name: トレース イベント >
               href: /bi-reference/trace-events/analysis-services-trace-events
             - name: ログ操作
               href: ../analysis-services/instances/log-operations-in-analysis-services.md
@@ -1414,7 +1418,7 @@
           href: ../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Developer
   items:
-    - name: Analysis Services の開発者向けドキュメント
+    - name: 開発者向けドキュメントの概要
       href: ../analysis-services/analysis-services-developer-documentation.md
     - name: テーブル モデル
       items:
@@ -1422,11 +1426,11 @@
           items:
             - name: テーブル モデルのプログラミング互換性レベル 1200 以上
               href: ../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
-            - name: テーブル モデルのスクリプト言語 (TMSL) +
+            - name: テーブル モデルのスクリプト言語 (TMSL) >
               href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-            - name: 表形式オブジェクト モデル (TOM) +
+            - name: 表形式オブジェクト モデル (TOM) >
               href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-            - name: 分析管理オブジェクト (AMO) +
+            - name: 分析管理オブジェクト (AMO) >
               href: /bi-reference/amo/amo-classes-introduction
         - name: テーブル (1103 以下)
           items:
@@ -1439,7 +1443,7 @@
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
                 - name: CSDLBI の概念
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
-                - name: 概念スキーマ定義言語 (CSDL) リファレンス +
+                - name: 概念スキーマ定義言語 (CSDL) リファレンス >
                   href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
             - name: '[表記]'
               items:
@@ -1473,12 +1477,13 @@
       items:
         - name: 多次元モデルのプログラミング
           href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
-        - name: 分析管理オブジェクト (AMO) +
+        - name: 分析管理オブジェクト (AMO) >
           href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-        - name: Analysis Services スクリプト言語 (ASSL) での開発
-          href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+        - name: Analysis Services スクリプト言語 (ASSL)
           items:
-            - name: Analysis Services スクリプト言語 (XMLA 用 ASSL) リファレンス +
+            - name: Analysis Services スクリプト言語 (ASSL) での開発
+              href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+            - name: Analysis Services スクリプト言語 (XMLA 用 ASSL) リファレンス >
               href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
             - name: ASSL オブジェクトとオブジェクトの特性
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1518,231 +1523,242 @@
               href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
             - name: ASSL XML 規則
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-        - name: XML for Analysis (XMLA) +
+        - name: XML for Analysis (XMLA) リファレンス >
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-        - name: ADOMD.NET サーバー プログラミング
-          href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+        - name: ADOMD.NET
           items:
+            - name: ADOMD.NET リファレンス >
+              href: /bi-reference/adomd/developing-with-adomd-net
+            - name: ADOMD.NET サーバー プログラミング
+              href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
             - name: ADOMD.NET のサーバー機能
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
             - name: ADOMD.NET サーバー オブジェクト アーキテクチャ
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
             - name: ユーザー定義関数およびストアド プロシージャ
               href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
-            - name: ADOMD.NET リファレンス +
-              href: /bi-reference/adomd/developing-with-adomd-net
-        - name: データベース オブジェクト (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-        - name: 'のディメンション デザイナーでは、[ディメンション構造] ビューの'
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
-        - name: 属性と属性階層
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
-        - name: データベース ディメンション プロパティ - 種類
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
-        - name: データベース ディメンション プロパティ
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
-        - name: Dimension オブジェクト (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
-        - name: ディメンションの翻訳
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
-        - name: ディメンション - 概要
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
-        - name: ディメンション - ストレージ
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
-        - name: ディメンション (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
-        - name: プロアクティブ キャッシュ (ディメンション)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
-        - name: ユーザー階層 - レベルのプロパティ
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
-        - name: ユーザー階層 - プロパティ
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
-        - name: ユーザー階層
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
-        - name: 書き込み許可ディメンション
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
-        - name: 集計と集計デザイン
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
-        - name: '[新しい名前付きセット]'
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
-        - name: キューブ セル (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
-        - name: Cube オブジェクト (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
-        - name: キューブ プロパティ - 多次元モデルのプログラミング
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
-        - name: キューブのストレージ (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
-        - name: キューブの翻訳
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
-        - name: ディメンション リレーションシップ
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
-        - name: パーティション - パーティションのストレージ モードおよび処理
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
-        - name: パーティション - プロアクティブ キャッシュ
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
-        - name: パーティション - リモート パーティション
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
-        - name: パーティション - 書き込み許可パーティション
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
-        - name: パーティション (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
-        - name: パースペクティブ
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
-        - name: 論理アーキテクチャの概要 (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
-        - name: セキュリティ ロール (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
-        - name: Server オブジェクト (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
-        - name: Microsoft OLAP 論理アーキテクチャについて
-          href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
-        - name: Analysis Services 開発に関するクライアント アーキテクチャの要件
-          href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-        - name: Analysis Services で使用するデータ型
-          href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
-        - name: ローカル キューブ (Analysis Services - 多次元データ)
-          href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
-        - name: 最大容量仕様 (Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
-        - name: オブジェクトの名前付け規則 (Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
-        - name: OLAP エンジンのサーバー コンポーネント
-          href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
-        - name: Microsoft OLAP アーキテクチャについて
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
-        - name: Microsoft OLAP 物理アーキテクチャについて
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
-        - name: Analysis Services のパーソナル化拡張機能
-          href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-        - name: ストアド プロシージャのクエリ コンテキストへのアクセス
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-        - name: ストアド プロシージャを呼び出す
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
-        - name: ストアド プロシージャの作成
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
-        - name: デバッグ系のストアド プロシージャ
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
-        - name: ストアド プロシージャの定義
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
-        - name: ストアド プロシージャのデザイン
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
-        - name: ストアド プロシージャのセキュリティの設定
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
-        - name: OLAP 機能の拡張
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
-        - name: パーソナル化による OLAP の拡張
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
-        - name: MDX を使用したデータ アクセス
-          href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
-        - name: MDX による多次元データのクエリ
-          href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
-        - name: MDX の主な概念
-          href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+        - name: OLAP (OLAP)
           items:
-            - name: autoexists
-              href: ../analysis-services/multidimensional-models/mdx/autoexists.md
-            - name: 計算コンテキスト
-              href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
-            - name: サブセレクトとサブキューブで計算されるメンバー
-              href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
-            - name: キューブ空間
-              href: ../analysis-services/multidimensional-models/mdx/cube-space.md
-            - name: クエリのサブセレクト
-              href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
-            - name: 組
-              href: ../analysis-services/multidimensional-models/mdx/tuples.md
-            - name: 表示部分の合計と非表示部分の合計
-              href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
-            - name: メンバー、組、およびセットの操作 (MDX)
-              href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
-        - name: MDX クエリの基礎
-          href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+            - name: OLAP 論理的要素
+              items:
+                - name: データベース オブジェクト (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+                - name: 'のディメンション デザイナーでは、[ディメンション構造] ビューの'
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+                - name: 属性と属性階層
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
+                - name: データベース ディメンション プロパティ - 種類
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
+                - name: データベース ディメンション プロパティ
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+                - name: Dimension オブジェクト (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
+                - name: ディメンションの翻訳
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
+                - name: ディメンション - 概要
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
+                - name: ディメンション - ストレージ
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
+                - name: ディメンション (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+                - name: プロアクティブ キャッシュ (ディメンション)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
+                - name: ユーザー階層 - レベルのプロパティ
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
+                - name: ユーザー階層 - プロパティ
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
+                - name: ユーザー階層
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+                - name: 書き込み許可ディメンション
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
+                - name: 集計と集計デザイン
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+                - name: '[新しい名前付きセット]'
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
+                - name: キューブ セル (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
+                - name: Cube オブジェクト (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
+                - name: キューブ プロパティ - 多次元モデルのプログラミング
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
+                - name: キューブのストレージ (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
+                - name: キューブの翻訳
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
+                - name: ディメンション リレーションシップ
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
+                - name: パーティション - パーティションのストレージ モードおよび処理
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
+                - name: パーティション - プロアクティブ キャッシュ
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
+                - name: パーティション - リモート パーティション
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
+                - name: パーティション - 書き込み許可パーティション
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
+                - name: パーティション (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+                - name: パースペクティブ
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
+                - name: 論理アーキテクチャの概要 (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
+                - name: セキュリティ ロール (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
+                - name: Server オブジェクト (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
+                - name: Microsoft OLAP 論理アーキテクチャについて
+                  href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
+            - name: OLAP 物理的要素
+              items:
+                - name: Analysis Services 開発に関するクライアント アーキテクチャの要件
+                  href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+                - name: Analysis Services で使用するデータ型
+                  href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
+                - name: ローカル キューブ (Analysis Services - 多次元データ)
+                  href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
+                - name: 最大容量仕様 (Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
+                - name: オブジェクトの名前付け規則 (Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
+                - name: OLAP エンジンのサーバー コンポーネント
+                  href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
+                - name: Microsoft OLAP アーキテクチャについて
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
+                - name: Microsoft OLAP 物理アーキテクチャについて
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
+            - name: OLAP の拡張
+              items:
+                - name: OLAP 機能の拡張
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
+                - name: パーソナル化による OLAP の拡張
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
+                - name: Analysis Services のパーソナル化拡張機能
+                  href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+                - name: ストアド プロシージャのクエリ コンテキストへのアクセス
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+                - name: ストアド プロシージャを呼び出す
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
+                - name: ストアド プロシージャの作成
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
+                - name: デバッグ系のストアド プロシージャ
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
+                - name: ストアド プロシージャの定義
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
+                - name: ストアド プロシージャのデザイン
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
+                - name: ストアド プロシージャのセキュリティの設定
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
+        - name: 多次元データ式 (MDX)
           items:
-            - name: MDX クエリ - 基本的なクエリ
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
-            - name: MDX クエリ - EXISTING キーワード
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
-            - name: MDX クエリ軸とスライサー軸 - クエリの制限
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
-            - name: MDX クエリ軸とスライサー軸 - クエリ軸のコンテンツを指定する
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
-            - name: MDX クエリ軸とスライサー軸 - スライサー軸のコンテンツを指定する
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
-            - name: MDX クエリ軸とスライサー軸 - 軸を使用する簡単な例
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
-            - name: クエリ内のキューブ コンテキストの確立
-              href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
-            - name: MDX でのサブキューブの作成
-              href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
-            - name: MDX 名前付きセット - ビルド
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
-            - name: MDX 名前付きセット - クエリ スコープ セットの作成
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
-            - name: MDX 名前付きセット - セッション スコープ セットの作成
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
-            - name: MDX の計算されるメンバー - 計算されるメンバーの作成
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
-            - name: MDX 計算されるメンバー - クエリ スコープ
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
-            - name: MDX 計算されるメンバー - セッション スコープ
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
-            - name: MDX セル計算 - ビルド
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
-            - name: MDX セル計算 - クエリ スコープ
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
-            - name: MDX セル計算 - セッション スコープ
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
-            - name: MDX メジャーの作成
-              href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
-            - name: MDX メンバー プロパティ
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
-            - name: MDX メンバー プロパティ - 固有
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
-            - name: MDX メンバー プロパティ - ユーザー定義
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
-            - name: MDX セル プロパティ - 使用
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
-            - name: MDX セル プロパティ - FORMAT_STRING コンテンツ
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
-            - name: MDX セル プロパティ - FORE_COLOR と BACK_COLOR コンテンツ
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
-            - name: MDX セル プロパティ - FORMATTED_VALUE
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
-            - name: MDX データ操作
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
-            - name: MDX データ操作 - DRILLTHROUGH を使用してソース データを取得する
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
-            - name: MDX データ操作 - RollupChildren 関数
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
-            - name: MDX データ操作 - パス順序と解決の順序について
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
-            - name: MDX データの変更
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
-            - name: MDX データの変更 - キューブの書き戻しの使用
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
-            - name: 変数とパラメーターの使用
-              href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
-        - name: MDX スクリプティングの基礎
-          href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
-          items:
-            - name: 基本的な MDX スクリプト
-              href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
-            - name: スコープとコンテキストの管理
-              href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
-            - name: エラー処理
-              href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
-            - name: サポートされる MDX
-              href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
+            - name: MDX を使用したデータ アクセス
+              href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
+            - name: MDX による多次元データのクエリ
+              href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
+            - name: MDX の主な概念
+              href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+              items:
+                - name: autoexists
+                  href: ../analysis-services/multidimensional-models/mdx/autoexists.md
+                - name: 計算コンテキスト
+                  href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
+                - name: サブセレクトとサブキューブで計算されるメンバー
+                  href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
+                - name: キューブ空間
+                  href: ../analysis-services/multidimensional-models/mdx/cube-space.md
+                - name: クエリのサブセレクト
+                  href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
+                - name: 組
+                  href: ../analysis-services/multidimensional-models/mdx/tuples.md
+                - name: 表示部分の合計と非表示部分の合計
+                  href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
+                - name: メンバー、組、およびセットの操作 (MDX)
+                  href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
+            - name: MDX クエリの基礎
+              href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+              items:
+                - name: MDX クエリ - 基本的なクエリ
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
+                - name: MDX クエリ - EXISTING キーワード
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
+                - name: MDX クエリ軸とスライサー軸 - クエリの制限
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
+                - name: MDX クエリ軸とスライサー軸 - クエリ軸のコンテンツを指定する
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+                - name: MDX クエリ軸とスライサー軸 - スライサー軸のコンテンツを指定する
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+                - name: MDX クエリ軸とスライサー軸 - 軸を使用する簡単な例
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+                - name: クエリ内のキューブ コンテキストの確立
+                  href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
+                - name: MDX でのサブキューブの作成
+                  href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
+                - name: MDX 名前付きセット - ビルド
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
+                - name: MDX 名前付きセット - クエリ スコープ セットの作成
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
+                - name: MDX 名前付きセット - セッション スコープ セットの作成
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
+                - name: MDX の計算されるメンバー - 計算されるメンバーの作成
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
+                - name: MDX 計算されるメンバー - クエリ スコープ
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
+                - name: MDX 計算されるメンバー - セッション スコープ
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
+                - name: MDX セル計算 - ビルド
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
+                - name: MDX セル計算 - クエリ スコープ
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
+                - name: MDX セル計算 - セッション スコープ
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
+                - name: MDX メジャーの作成
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
+                - name: MDX メンバー プロパティ
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
+                - name: MDX メンバー プロパティ - 固有
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
+                - name: MDX メンバー プロパティ - ユーザー定義
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
+                - name: MDX セル プロパティ - 使用
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
+                - name: MDX セル プロパティ - FORMAT_STRING コンテンツ
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
+                - name: MDX セル プロパティ - FORE_COLOR と BACK_COLOR コンテンツ
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
+                - name: MDX セル プロパティ - FORMATTED_VALUE
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
+                - name: MDX データ操作
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
+                - name: MDX データ操作 - DRILLTHROUGH を使用してソース データを取得する
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+                - name: MDX データ操作 - RollupChildren 関数
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
+                - name: MDX データ操作 - パス順序と解決の順序について
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+                - name: MDX データの変更
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
+                - name: MDX データの変更 - キューブの書き戻しの使用
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
+                - name: 変数とパラメーターの使用
+                  href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
+            - name: MDX スクリプティングの基礎
+              href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
+              items:
+                - name: 基本的な MDX スクリプト
+                  href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
+                - name: スコープとコンテキストの管理
+                  href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
+                - name: エラー処理
+                  href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
+                - name: サポートされる MDX
+                  href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
     - name: データ マイニング
       items:
         - name: データ マイニングのプログラミング
           href: ../analysis-services/data-mining/data-mining-programming.md
-        - name: 分析管理オブジェクト (AMO) +
+        - name: 分析管理オブジェクト (AMO) >
           href: /bi-reference/amo/amo-classes-introduction
-        - name: ADOMD.NET +
+        - name: ADOMD.NET >
           href: /bi-reference/adomd/developing-with-adomd-net
-        - name: XML for Analysis (XMLA) +
+        - name: XML for Analysis (XMLA) >
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: OLE DB for Data Mining
           href: ../analysis-services/data-mining/data-mining-programming-ole-db.md
@@ -1756,27 +1772,27 @@
       href: ../analysis-services/powershell/analysis-services-powershell-reference.md
     - name: Power Pivot for SharePoint 用 PowerShell
       href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-    - name: Data Analysis Expressions (DAX)
+    - name: Data Analysis Expressions (DAX) >
       href: /dax/data-analysis-expressions-dax-reference
-    - name: Power Query M
+    - name: Power Query M >
       href: /powerquery-m/power-query-m-reference
-    - name: テーブル モデルのスクリプト言語 (TMSL)
+    - name: テーブル モデルのスクリプト言語 (TMSL) >
       href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-    - name: 表形式オブジェクト モデル (TOM)
+    - name: 表形式オブジェクト モデル (TOM) >
       href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-    - name: 分析管理オブジェクト (AMO)
+    - name: 分析管理オブジェクト (AMO) >
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: 概念スキーマ定義言語 (CSDL)
+    - name: 概念スキーマ定義言語 (CSDL) >
       href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-    - name: XML for Analysis (XMLA)
+    - name: XML for Analysis (XMLA) >
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET
+    - name: ADOMD.NET >
       href: /bi-reference/adomd/developing-with-adomd-net
-    - name: Analysis Services スクリプト言語 (XMLA 用 ASSL)
+    - name: Analysis Services スクリプト言語 (XMLA 用 ASSL) >
       href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
-    - name: スキーマ行セット
+    - name: スキーマ行セット >
       href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
-    - name: トレース イベント
+    - name: トレース イベント >
       href: /bi-reference/trace-events/analysis-services-trace-events
     - name: データ マイニング拡張機能 (DMX) リファレンス
       href: ../dmx/data-mining-extensions-dmx-reference.md
@@ -2146,7 +2162,7 @@
                       href: ../mdx/comment-mdx-double-slash.md
                     - name: ':(範囲)'
                       href: ../mdx/range-mdx.md
-                    - name: + (加算)"
+                    - name: + (加算)
                       href: ../mdx/add-mdx.md
                     - name: + (正号)
                       href: ../mdx/positive-mdx.md
