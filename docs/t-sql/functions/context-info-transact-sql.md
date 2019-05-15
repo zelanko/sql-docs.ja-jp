@@ -46,7 +46,7 @@ CONTEXT_INFO()
 **context_info** 値。
   
 **Context_info** は設定されませんでした: 場合
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
+-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
 -   * * -[!INCLUDE[ssSDS](../../includes/sssds-md.md)] で  、一意のセッション固有 GUID.* * を返します。  
   
 ## <a name="remarks"></a>Remarks  
