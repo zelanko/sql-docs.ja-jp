@@ -2,8 +2,8 @@
 title: 'クイック スタート: 接続し、Azure SQL database のクエリ'
 titleSuffix: Azure Data Studio
 description: このクイック スタートは、Azure Data Studio を使用して SQL database に接続し、クエリを実行する方法を示しています。
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255962"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620354"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]に接続して Azure SQL database のクエリ
 
@@ -39,7 +39,7 @@ Azure SQL サーバーを持っていない場合は、次の Azure SQL Database
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して Azure SQL データベース サーバーへの接続を確立します。
 
-1. [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初回実行時には **[接続]** ページが開きます。 表示されない場合、**接続**] ページで、[**接続の追加**、または**新しい接続**アイコン、**サーバー**サイドバー。
+1. 初めて実行する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**ようこそ**ページを開く必要があります。 表示されない場合、**ようこそ**] ページで、[**ヘルプ** > **ようこそ**。 選択**新しい接続**を開く、**接続**ウィンドウ。
    
    ![新しい接続のアイコン](media/quickstart-sql-database/new-connection-icon.png)
 

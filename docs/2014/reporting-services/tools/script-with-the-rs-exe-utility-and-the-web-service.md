@@ -31,7 +31,7 @@ ms.locfileid: "63158288"
   
  スクリプトの例については、次を参照してください。  
   
- [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+ [レポート サーバー間でコンテンツを移行するサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)  
   
  [SQL Server Reporting Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=177889)。  
   
