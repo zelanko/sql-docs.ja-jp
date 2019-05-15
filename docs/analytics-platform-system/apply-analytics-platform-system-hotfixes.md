@@ -53,7 +53,7 @@ Microsoft 更新プログラムとは異なり、Analytics Platform System の�
   
     2.  使用して、**管理者として実行**オプションをコマンド プロンプトを開きます。  
   
-    3.  次のコマンドを実行して交換*<HotfixPackageName>* 修正プログラムの実行可能パッケージ、および他の項目のプレース ホルダーを置き換えるの名前を持つ *< >* 適切な情報。  
+    3.  次のコマンドを実行して交換 *<HotfixPackageName>* 修正プログラムの実行可能パッケージ、および他の項目のプレース ホルダーを置き換えるの名前を持つ *< >* 適切な情報。  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  
