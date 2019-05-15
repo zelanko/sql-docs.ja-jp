@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: SQL Server Reporting Services (SSRS) とは
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
@@ -1592,7 +1592,7 @@
   items:
     - name: REST API
       href: ../reporting-services/developer/rest-api.md
-    - name: REST API のサンプル +
+    - name: REST API のサンプル >
       href: 'https://github.com/Microsoft/Reporting-Services'
     - name: アプリケーションへの Reporting Services の統合
       href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
@@ -1909,7 +1909,7 @@
         - name: 'レッスン 9: アプリケーションをビルドして実行する'
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: レポート ビルダー チュートリアル
-      href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+      href: ../reporting-services/report-builder-tutorials.md
       items:
         - name: チュートリアルの前提条件
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md

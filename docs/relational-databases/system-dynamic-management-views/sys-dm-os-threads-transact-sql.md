@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628159"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577999"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,6 +70,10 @@ ms.locfileid: "62628159"
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+
+## <a name="notes-on-linux-version"></a>Linux のバージョンに関する注意事項
+
+Linux では、SQL エンジンの動作方法、によりこの情報の一部には Linux の診断データと一致しません。 たとえば、`os_thread_id`などのツールの結果と一致しません`ps`、`top` 、詳しい情報、または (/proc/`pid`)。  これは、プラットフォームの抽象化レイヤー (SQLPAL) ための SQL Server コンポーネントとオペレーティング システムの間のレイヤー。
 
 ## <a name="examples"></a>使用例  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、起動時にスレッドが開始され、これらのスレッドとワーカーが関連付けられますが、 拡張ストアド プロシージャなどの外部コンポーネントでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスでスレッドを開始できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらのスレッドを制御できません。 sys.dm_os_threads でリソースを消費する悪意のあるスレッドに関する情報を提供できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセス。  

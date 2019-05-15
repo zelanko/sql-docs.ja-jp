@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97bca181b847c514c8ca3e66f69c47d99a6c0666
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: 20d392d5019bf643654bb3a0a6989f882a05b671
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401764"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094227"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Blob (SQL Server) を保存するオプションの比較
 
@@ -53,12 +53,12 @@ FileTable 機能は、既存の FILESTREAM 機能をベースとして構築さ�
 
 |機能|ファイル サーバーとデータベース ソリューション|FILESTREAM ソリューション|FileTable ソリューション|
 |:------|:--------------------------------|:------------------|:-----------------|
-|**管理タスクのシングル ストーリー**|いいえ|可|**はい**|
-|**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|可|**はい**|
-|**統合セキュリティ モデル**|いいえ|可|**可**|
-|**FILESTREAM データのインプレース更新**|可|いいえ|**はい**|
+|**管理タスクのシングル ストーリー**|いいえ|はい|**はい**|
+|**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|はい|**はい**|
+|**統合セキュリティ モデル**|いいえ|はい|**可**|
+|**FILESTREAM データのインプレース更新**|はい|いいえ|**はい**|
 |**データベースで管理されるファイルおよびディレクトリの階層**|いいえ|いいえ|**はい**|
-|**Windows アプリケーションの互換性**|可|いいえ|**可**|
+|**Windows アプリケーションの互換性**|はい|いいえ|**可**|
 |**ファイルの属性へのリレーショナル アクセス**|いいえ|いいえ|**はい**|
 
 ## <a name="CompareRBS"></a> FILESTREAM とリモート BLOB ストア (RBS) の比較

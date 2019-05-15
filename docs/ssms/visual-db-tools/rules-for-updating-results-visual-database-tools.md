@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], Results pane
 - Results pane
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8815f7e5bf0192222a0dfdf9917a39606642da1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22d2fc216a4772a7c9ba4e0a8f654d002f050252
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716652"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105343"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>結果更新の規則 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47716652"
   
 次の表は、結果ペインに表示されたクエリの結果を更新できる場合とできない場合の例をまとめたものです。 多くの場合、クエリの結果を更新できるかどうかは、使用しているデータベースによって決まります。  
   
-|[クエリ]|結果更新の可/不可|  
+|クエリ|結果更新の可/不可|  
 |---------|---------------------------|  
 |出力リストに主キーを持つ、単一のテーブルに基づくクエリ|可 (下のリストを除く)。|  
 |一意のインデックスおよび主キーを持たないテーブルに基づくクエリ|クエリとデータベースによって異なります。 データベースによっては、レコードを一意に識別するのに十分な情報があれば、クエリの結果を更新できます。|  

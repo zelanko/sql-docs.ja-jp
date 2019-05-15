@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.target.post.f1
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 599534c1760c3753f91371de5f237ac0c2de6f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 573dec07eadd70edde5e9607cc6dd90927c75613
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735580"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088793"
 ---
 # <a name="post-download-instructions"></a>ダウンロード命令の通知
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47735580"
 
 このページを使用すると、ターゲット サーバーに対するダウンロード命令を指定できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[命令の種類]**  
 送信するダウンロード命令の種類を指定します。  
   
@@ -39,16 +39,16 @@ ms.locfileid: "47735580"
 **[ポーリング間隔]**  
 ターゲット サーバーに対するポーリングの間隔を設定します。 **[ポーリング間隔の設定]** 命令に対してのみ適用されます。  
   
-**[すべての対象サーバー]**  
+**[すべてのターゲット サーバー]**  
 このオプションをクリックすると、ダウンロード命令がすべてのターゲット サーバーに送信されます。  
   
-**[特定の対象サーバー]**  
+**[特定のターゲット サーバー]**  
 このオプションをクリックすると、ダウンロード命令が、選択されたターゲット サーバーに送信されます。  
   
 **Select**  
 ターゲット サーバーでダウンロード命令を受け取るよう指定します。  
   
-**[対象サーバー]**  
+**[ターゲット サーバー]**  
 ターゲット サーバーの名前を表示します。  
   
 **[ローカル時刻]**  
