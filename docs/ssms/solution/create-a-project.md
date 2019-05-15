@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 46a65938bdac731d9922c1ccdb5f95eb8a05f700
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: a2bae29b9292ecd36950c131389a8eb9ecc7253d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328002"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104881"
 ---
 # <a name="create-a-project"></a>プロジェクトを作成する
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "53328002"
     **[テンプレート]**  
     **[テンプレート]** ボックスで、テンプレートを選択します。 **[テンプレート]** ボックスの下に、選択したプロジェクト テンプレートの簡単な説明が表示されます。  
   
-    **名前**  
+    **[名前]**  
     作成するスクリプト プロジェクトの名前を入力します。 **[場所]** フィールドに表示された場所に、プロジェクトと同じ名前のフォルダーも作成されます。 プロジェクトによっては、ソース ファイルなどのサポート ファイルが [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] によって作成され、新しいプロジェクト フォルダーに追加されます。  
   
     > [!NOTE]  
@@ -91,7 +91,7 @@ ms.locfileid: "53328002"
     **[ソース管理に追加]**  
     このチェック ボックスをオンにすると、 **[OK]** をクリックしたときにソース管理アプリケーションが開きます。 ソース管理アプリケーションにより求められる情報をすべて入力します。 このオプションを使用するには、ソース管理クライアント アプリケーションをインストールしておく必要があります。  
   
-4.  [**OK**] をクリックします。  
+4.  **[OK]** をクリックします。  
   
 スクリプト プロジェクトの名前は設定できますが、フォルダー名は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] によって設定され、変更できません。 **[新しいプロジェクトの追加]** ダイアログ ボックスを使用すると、共通のフォルダーのセットを示すドライブとパスを指定できます。 **ソリューション エクスプローラー**でソリューション アイコンを右クリックし、 **[追加]** をクリックします。 スクリプト プロジェクト フォルダーの既定の場所は、C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\ です。  
   
