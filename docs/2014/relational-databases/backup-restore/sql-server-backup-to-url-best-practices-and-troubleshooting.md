@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877094"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619585"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
   このトピックには、Windows Azure BLOB サービスとの間の SQL Server のバックアップと復元に関するベスト プラクティスとトラブルシューティングのヒントを示しています。  
@@ -125,7 +125,7 @@ ms.locfileid: "62877094"
   
      バックアップ データベースが異常終了しています。  
   
--   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイス http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続が閉じられました。  
+-   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイス 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続が閉じられました。  
   
  トレース フラグ 3051 を使用して詳細ログを有効にすると、ログに次のメッセージが表示される場合もあります。  
   
