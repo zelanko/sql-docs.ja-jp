@@ -12,17 +12,22 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3c3f3bb02022fe4bbb8090c2160fa3cf75cfefa7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814055"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503288"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブまたは SharePoint の 2 つのモードのうちのいずれかのモードでインストールできます。 インストールの確認に必要な手順は、レポート サーバーのモードによって変わります。  
+
+> [!NOTE]
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint モードのインストールの確認  
   
@@ -71,6 +76,8 @@ ms.locfileid: "51814055"
 1.  Reporting Services のチュートリアルのいずれかを完了します。 詳細については、「[Reporting Services のチュートリアル (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)」を参照してください。  
   
 2.  GitHub から AdventureWorks のサンプル データベースと [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートをダウンロードします。 詳細については、「[AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)」 (AdventureWorks サンプル データベース) を参照してください。  
+
+::: moniker-end
   
 ##  <a name="bkmk_nativemode"></a> ネイティブ モードのインストールの確認  
  既定の構成を使用してネイティブ モードでレポート サーバーをインストールする場合、セットアップでサーバーをインストールし、配置します。 いくつかの簡単なテストを行うことで、レポート サーバーが正常に配置されたかどうかを確認できます。 これらの手順を実行するには、ローカル管理者である必要があります。 他のユーザーがテストを実行する場合は、そのユーザーがレポート サーバーにアクセスできるように構成する必要があります。  
