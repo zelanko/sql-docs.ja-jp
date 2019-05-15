@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a312663c26142bfd532adbcaba80d2a6ee30d6db
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683682"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502860"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -90,7 +90,7 @@ ms.locfileid: "57683682"
 ## <a name="syntax-for-disk-based-tables"></a>ディスク ベース テーブルの構文
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -249,7 +249,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ## <a name="syntax-for-memory-optimized-tables"></a>メモリ最適化テーブルの構文
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -380,7 +380,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
-ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_name
+ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
     ALTER COLUMN column_name
         {
@@ -848,7 +848,7 @@ Windows と互換性のある FileTable ディレクトリ名を指定します�
 - テーブルに対する Stretch を無効にして、テーブルのリモート データを Azure から SQL Server にコピーして戻すには、次のコマンドを実行します。 このコマンドは取り消すことができません。
 
     ```sql
-    ALTER TABLE \<table name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
@@ -859,7 +859,7 @@ Windows と互換性のある FileTable ディレクトリ名を指定します�
 - テーブルに対する Stretch を無効にして、リモート データを破棄するには、次のコマンドを実行します。
 
     ```sql
-    ALTER TABLE \<table_name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
@@ -1304,7 +1304,7 @@ GO
 -- The keyword CONSTRAINT is optional. The keyword COLUMN is required.
 ALTER TABLE dbo.doc_exc
 
-    DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
+    DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 
@@ -1901,11 +1901,11 @@ WITH
 
 |パーティション|データがある|境界の範囲|
 |---------------|---------------|--------------------|
-|1|可|OrderDate < '2004-01-01'|
-|2|可|'2004-01-01' <= OrderDate < '2005-01-01'|
-|3|可|'2005-01-01' <= OrderDate< '2006-01-01'|
-|4|可|'2006-01-01'<= OrderDate < '2007-01-01'|
-|5|可|'2007-01-01' <= OrderDate|
+|1|はい|OrderDate < '2004-01-01'|
+|2|はい|'2004-01-01' <= OrderDate < '2005-01-01'|
+|3|はい|'2005-01-01' <= OrderDate< '2006-01-01'|
+|4|はい|'2006-01-01'<= OrderDate < '2007-01-01'|
+|5|はい|'2007-01-01' <= OrderDate|
 
 - パーティション 1 (データがある):OrderDate < '2004-01-01'
 - パーティション 2 (データがある):'2004-01-01' <= OrderDate < '2005-01-01'

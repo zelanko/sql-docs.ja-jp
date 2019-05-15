@@ -20,12 +20,12 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13ab95c762573be002782c06615fc6f01317499f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258812"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538119"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 関数
 
@@ -38,6 +38,7 @@ ms.locfileid: "63258812"
 ## <a name="syntax"></a>構文  
   
 ```cpp
+
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  
@@ -92,7 +93,7 @@ SQLRETURN SQLGetDiagField(
 -   場合 *\*DiagInfoPtr* 、固定長データ型を含む*BufferLength*に応じて SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT、または SQL_IS_USMALLINT は、します。  
   
  *StringLengthPtr*  
- [出力](Null 終端文字のために必要なバイト数を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *DiagInfoPtr*、文字データ。 返される使用可能なバイト数がより大きいかに等しい場合*BufferLength*、内のテキスト\* *DiagInfoPtr*に切り捨てられます*BufferLength*マイナスnull 終了文字の長さ。  
+ [出力]\(Null 終端文字のために必要なバイト数を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *DiagInfoPtr*、文字データ。 返される使用可能なバイト数がより大きいかに等しい場合*BufferLength*、内のテキスト\* *DiagInfoPtr*に切り捨てられます*BufferLength*マイナスnull 終了文字の長さ。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_NO_DATA します。  

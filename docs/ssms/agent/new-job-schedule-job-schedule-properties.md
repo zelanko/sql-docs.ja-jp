@@ -11,16 +11,16 @@ f1_keywords:
 - sql13.ag.job.scheduleproperties.f1
 - sql13.swb.maint.editrecurringjobsched.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1cc425cb817873d50966bf8c5fcbcc54864414c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cedcba1f41921a0e364a3e5419bec82cfa273920
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744650"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105507"
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>[新しいジョブ スケジュール] - [ジョブ スケジュールのプロパティ]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "47744650"
 
 このページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
   
-## <a name="options"></a>[変数]  
-**名前**  
+## <a name="options"></a>オプション  
+**[名前]**  
 スケジュールの新しい名前を入力します。  
   
 **[スケジュール済みのジョブ]**  
@@ -96,7 +96,7 @@ ms.locfileid: "47744650"
 スケジュールを無期限に適用するように指定します。  
   
 ## <a name="one-time-schedule-types-options"></a>指定日時スケジュールのオプション  
-**日付**  
+**Date**  
 ジョブを実行する日付を選択します。  
   
 **[時刻]**  

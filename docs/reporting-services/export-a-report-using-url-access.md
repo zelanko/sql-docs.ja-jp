@@ -2,21 +2,21 @@
 title: URL アクセスを使用してレポートをエクスポートする | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Reporting Services], URL rendering
 - URL access [Reporting Services], rendering formats
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bf1113603800d232ccdc88aa6b436f8d8a0e6f6c
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a6d6d9dd46e6c54dc9be72e30a19498bf39391c
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814205"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504004"
 ---
 # <a name="export-a-report-using-url-access"></a>URL アクセスを使用してレポートをエクスポートする
   *rs:Format* URL パラメーターを使用すると、レポートを表示する形式を必要に応じて指定できます。  HTML4.0 および HTM5 (表示拡張機能) の場合は、ブラウザーにレンダリングされます。他の形式の場合は、レポート出力をローカル ファイルに保存するよう促すメッセージが表示されます。  
@@ -26,13 +26,17 @@ ms.locfileid: "51814205"
 ```  
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  また、SharePoint 統合モードのレポート サーバーから取得するには、次の URL を使用します。  
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
 ```  
-  
+ 
+::: moniker-end
+ 
  たとえば、ブラウザーで次の URL コマンドを実行すると、レポート サーバーの名前付きインスタンスから PPTX レポートがエクスポートされます。  
   
 ```  

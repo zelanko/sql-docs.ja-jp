@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - property pages [SQL Server Management Studio]
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b9c399e30e39cc07a27d805032f2176541d9df9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dfcb81955409e2435373e3257ae4e1002ab5e1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735540"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097391"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio のプロパティ ページ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "47735540"
 |**項目別**|選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目順に表示します。 項目別表示では、項目を折りたたんで、表示するプロパティの数を少なくすることができます。 項目の展開または折りたたみを行うと、項目名の左側に正符号 (+) または負符号 (-) が表示されます。 項目はアルファベット順に表示されます。|  
 |**アルファベット順**|選択したオブジェクトのすべてのプロパティおよびプロパティ値をアルファベット順に表示します。|  
 |プロパティ名|表の 1 列目にプロパティ名が表示されます。|  
-|[プロパティ]|表の 2 列目にはプロパティ値が表示されます。|  
+|Properties|表の 2 列目にはプロパティ値が表示されます。|  
 |説明ペイン|説明ペインはページの最下部にあり、プロパティの種類と、プロパティの短い説明が表示されます。 ショートカット メニューの **[説明]** を使用して、プロパティの説明の表示と非表示を切り替えることができます。|  
   

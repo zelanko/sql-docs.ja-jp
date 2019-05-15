@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - Jobs Referencing a Schedule dialog box
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02f98c99db2960c248129dbf5f58d3be87e31c98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbd5a6d5a4a29bafc1b57d55b3bcd34c5dc5024
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817390"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095767"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>スケジュールを参照するジョブ
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "47817390"
 
 このダイアログ ボックスでは、特定のスケジュールを参照するジョブに関する情報を表示できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[スケジュール]**  
 表示しているスケジュールの名前が表示されます。  
   
 **選択**  
 読み取り専用です。  
   
-**名前**  
+**[名前]**  
 このスケジュールを使用するジョブの名前です。  
   
 **有効**  

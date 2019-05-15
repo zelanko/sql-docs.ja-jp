@@ -11,21 +11,21 @@ helpviewer_keywords:
 - Arguments dialog box
 - arguments [SQL Server Management Studio]
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 638dd1453b3f5388e870ef0133692aac496ee72c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d743f79951f55b713ec1104fa1bfd15b3bdfc93
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626320"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102900"
 ---
 # <a name="arguments-dialog-box"></a>[引数] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[引数]** ダイアログ ボックスでは、ツールの新しい引数または既存の引数を指定します。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスで **[起動時に引数を入力]** オプションをオンにしている外部ツールを起動したときに表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[引数]**  
 **[外部ツール]** ダイアログ ボックス内のツールに指定されている現在の変数が一覧表示されます。 定義済み引数および定義の完全な一覧については、「 [外部ツールの引数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)」を参照してください。 カスタム引数を入力することも可能です。  
   

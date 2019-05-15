@@ -491,7 +491,7 @@
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
                 - name: PowerShell
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
-                - name: Azure の仮想マシン +
+                - name: Azure の仮想マシン >
                   href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
         - name: 操作方法
           href: ../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
@@ -1946,9 +1946,9 @@
               href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 開発
   items:
-    - name: プログラミングの相互作用 + +
+    - name: クライアント プログラムのコード >>
+      displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: ../connect/index.md
-      displayName: 'Connectivity, Connect, Connection'
     - name: データ層アプリケーション
       href: ../relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -4432,12 +4432,12 @@
               href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: データの移行と読み込み
   items:
-    - name: SQL Server Integration Services (SSIS) ++
+    - name: SQL Server Integration Services (SSIS) >>
       href: ../integration-services/index.md
     - name: 一括コピー ユーティリティ (bcp)
       href: ../tools/bcp-utility.md
-    - name: Azure Integration Services +
-      displayName: 'DMS, Data Migration Service'
+    - name: Azure Integration Services >
+      displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
     - name: Data Quality Services (DQS)
       items:
@@ -4965,7 +4965,7 @@
               items:
                 - name: メモリ最適化テーブル サブスクライバー
                   href: ../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
-                - name: SQL Database へのレプリケーション +
+                - name: SQL Database へのレプリケーション >
                   href: /azure/sql-database/replication-to-sql-database
                 - name: データの再パブリッシュ
                   href: ../relational-databases/replication/republish-data.md
@@ -5315,7 +5315,7 @@
                     - name: マージ サブスクリプション
                       href: ../relational-databases/replication/subscription-validation-options-merge-subscriptions.md
                 - name: サブスクリプションの再初期化
-                  itmes:
+                  items:
                     - name: '[すべてのサブスクリプション]'
                       href: ../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md
                     - name: 1 つのサブスクリプション
@@ -5593,13 +5593,13 @@
                   href: ../sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: リソース
           items:
-            - name: 価格 +
+            - name: 価格 >
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: ブログ +
+            - name: ブログ >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: サービスの更新 +
+            - name: サービスの更新 >
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: ビデオ +
+            - name: ビデオ >
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: Database Experimentation ウィザード
       href: ../dea/database-experimentation-assistant-overview.md
@@ -6826,9 +6826,9 @@
                   items:
                     - name: SQL Server エージェント オブジェクト
                       items:
-                        - name: オブジェクト エクスプローラーには
+                        - name: 警告
                           href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-                        - name: の
+                        - name: ジョブ
                           href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
                         - name: ジョブ ステップ
                           href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
@@ -6978,180 +6978,173 @@
                     - name: 実際の実行プランの分析
                       href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
         - name: インメモリ OLTP
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
           items:
-            - name: サンプル
-              items:
-                - name: インメモリ OLTP のコード サンプル
-                  href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
-                  items:
-                    - name: '実証: インメモリ OLTP によるパフォーマンスの向上'
-                      href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-                    - name: メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成
-                      href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
-                    - name: アプリケーション レベルのパーティション分割
-                      href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
-                    - name: インメモリ OLTP のサンプル データベース
-                      href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
             - name: 概念
               items:
-                - name: 使用シナリオ
+                - name: インメモリの概要
                   href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
-                - name: 機能の導入の計画
-                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
-                - name: 必要条件
-                  href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
-                - name: インメモリ OLTP でのユーザー定義のスカラー関数
-                  href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-                - name: インデックス
-                  href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
-                - name: メモリ最適化テーブル
-                  href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
                   items:
-                    - name: 概要
+                    - name: メモリ最適化テーブル
                       href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
-                    - name: ネイティブ コンパイル
-                      href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
-                    - name: テーブルの変更
-                      href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
-                    - name: トランザクション
-                      href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
-                    - name: パーティション分割に関するアプリケーションのパターン
-                      href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
-                    - name: 統計
-                      href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+                    - name: 簡単なアンケート
+                      href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
+                    - name: ビデオ、サンプル、リソース
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+                - name: インメモリの計画
+                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+                  items:
+                    - name: 必要条件
+                      href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
+                    - name: 利点の評価
+                      href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+                    - name: PowerShell を使用した評価
+                      href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
+                    - name: メモリ最適化アドバイザー
+                      href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
+                    - name: ネイティブ コンパイル アドバイザー
+                      href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
                     - name: テーブルと行のサイズ
                       href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
-                    - name: クエリ処理のガイド
-                      href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
-                    - name: ネイティブ コンパイル ストアド プロシージャ
-                      href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
-                      items:
-                        - name: ネイティブ コンパイル ストアド プロシージャの作成
-                          href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
-                        - name: Altering Natively Compiled T-SQL Modules
-                          href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
-                        - name: ATOMIC ブロック
-                          href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
-                        - name: ネイティブ コンパイル ストアド プロシージャと実行 SET オプション
-                          href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
-                        - name: ネイティブ コンパイル ストアド プロシージャの呼び出しに関するベスト プラクティス
-                          href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
-                        - name: ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
-                          href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
-                        - name: データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
-                          href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
-                    - name: メモリ要件の見積もり
+                    - name: メモリの推定
                       href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
-                      items:
-                        - name: リソース プールへのデータベースのバインド
-                          href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
-                        - name: メモリ使用量の監視とトラブルシューティング
-                          href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
-                        - name: メモリ不足の問題の解決
-                          href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
-                        - name: データベースの復元とリソース プールへのバインド
-                          href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
-                        - name: ガベージ コレクション
-                          href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
-                    - name: ストレージの作成と管理
-                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
-                      items:
-                        - name: ストレージの構成
-                          href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
-                        - name: メモリ最適化ファイルグループ
-                          href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
-                        - name: Durability
-                          href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
-                        - name: チェックポイント操作
-                          href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
-                        - name: 持続性の定義
-                          href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
-                        - name: ディスク ベース テーブル ストレージとメモリ最適化テーブル ストレージの比較
-                          href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
-                        - name: スケーラビリティ
-                          href: ../relational-databases/in-memory-oltp/scalability.md
-                    - name: データベースのバックアップ
+                    - name: 記憶域を構成する
+                      href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
+                    - name: トリガーの移行
+                      href: ../relational-databases/in-memory-oltp/migrating-triggers.md
+                - name: ネイティブ コンパイル ストアド プロシージャ
+                  href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+                  items:
+                    - name: テーブルとストアド プロシージャ
+                      href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
+                    - name: ATOMIC ブロック
+                      href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
+                    - name: スカラー ユーザー定義関数
+                      href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
+                    - name: ベスト プラクティス
+                      href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
+                    - name: インメモリ テーブルで解釈されたアクセス
+                      href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+                - name: インメモリのパフォーマンス
+                  href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
+                  items:
+                    - name: インメモリのハードウェア
+                      href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
+                    - name: Azure SQL Database 上のインメモリ
+                      href: /azure/sql-database/sql-database-in-memory
+                - name: インメモリの管理
+                  href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
+                  items:
+                    - name: 復元と復旧
+                      href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
+                    - name: バックアップ
                       href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
-                      items:
-                        - name: 段階的な部分復元
-                          href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
-                        - name: 復元と復旧
-                          href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: SQL Server のサポート
-                      href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
-                      items:
-                        - name: サポートされていない機能
-                          href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
-                        - name: 管理オブジェクト
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
-                        - name: SQL Server Integration Services
-                          href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
-                        - name: SQL Server Management Studio
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-                        - name: 高可用性
-                          href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-                        - name: T-SQL サポート
-                          href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
-                          items:
-                            - name: データ型
-                              href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-                            - name: 解釈された T-SQL を使用したメモリ最適化テーブルへのアクセス
-                              href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
-                            - name: ネイティブ コンパイル T-SQL モジュールでサポートされる機能
-                              href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
-                            - name: ネイティブ コンパイル T-SQL モジュールでサポートされる DDL
-                              href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-                            - name: インメモリ OLTP でサポートされていない T-SQL の構造
-                              href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
-                    - name: インメモリ OLTP への移行
-                      href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
-                      items:
-                        - name: テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
-                          href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
-                        - name: メモリ最適化アドバイザー
-                          href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
-                        - name: ネイティブ コンパイル アドバイザー
-                          href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
-                        - name: 移行を評価するための PowerShell コマンドレット
-                          href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
-                        - name: メモリ最適化テーブルへの SQL_VARIANT の実装
-                          href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
-                        - name: 計算列の移行
-                          href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
-                        - name: トリガーの移行
-                          href: ../relational-databases/in-memory-oltp/migrating-triggers.md
-                        - name: 複数データベースにまたがるクエリ
-                          href: ../relational-databases/in-memory-oltp/cross-database-queries.md
-                        - name: メモリ最適化テーブルへの IDENTITY の実装
-                          href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
-                        - name: ネイティブ コンパイル ストアド プロシージャの移行に関する問題
-                          href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
-                          items:
-                            - name: ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成とアクセス
-                              href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
-                            - name: ネイティブ コンパイル モジュールでの IF-WHILE EXISTS ステートメントのシミュレーション
-                              href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
-                            - name: ネイティブ コンパイル ストアド プロシージャに MERGE 機能を実装する
-                              href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                            - name: ネイティブ コンパイル ストアド プロシージャに CASE 式を実装する
-                              href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
-                            - name: FROM またはサブクエリを使用した UPDATE を実装する
-                              href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
-                            - name: 外部結合の実装
-                              href: ../relational-databases/in-memory-oltp/implementing-an-outer-join.md
-            - name: 操作方法
-              items:
-                - name: パフォーマンスを高速化するためのテクノロジのインベントリ
-                  href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-                - name: メモリ最適化を使用した一時テーブルとテーブル変数の高速化
-                  href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
-                - name: ハッシュ インデックスのトラブルシューティング
-                  href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
-            - name: References
-              items:
-                - name: SQL Server 2016 内部構造に関するホワイト ペーパー
+                    - name: Checkpoint
+                      href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
+                    - name: 高可用性
+                      href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
+                    - name: スケーラビリティ
+                      href: ../relational-databases/in-memory-oltp/scalability.md
+                    - name: IDENTITY の実装
+                      href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
+                - name: インメモリのアーキテクチャ
                   href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                  items:
+                    - name: ストレージ
+                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
+                    - name: ストレージ モードの比較
+                      href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+                    - name: Durability
+                      href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
+                    - name: ガベージ コレクション
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
+                - name: インメモリの T-SQL
+                  href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
+                  items:
+                    - name: サポートされている T-SQL
+                      href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
+                    - name: サポートされていない T-SQL
+                      href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
+                    - name: サポートされていない機能
+                      href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
+                    - name: ネイティブ コンパイル用の DDL
+                      href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
+                    - name: 持続性の定義
+                      href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
+                    - name: データ型
+                      href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
+                    - name: インメモリのインデックス
+                      href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
+                - name: インメモリの SSIS
+                  href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
+            - name: チュートリアル
+              items:
+                - name: メモリが最適化されたテーブルとプロシージャの作成
+                  href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+                - name: ホット日付別のアプリケーションのパーティション
+                  href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
+                - name: パフォーマンス デモ
+                  href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
+                - name: 監視とトラブルシューティング
+                  href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
+            - name: サンプル
+              items:
+                - name: インメモリのサンプル データベース
+                  href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+                - name: ネイティブ コンパイルされたプロシージャの呼び出し
+                  href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
+                - name: テーブル パーティション分割のパターン
+                  href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
+                - name: ネイティブ コンパイルされたプロシージャの統合
+                  href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+                - name: 'インメモリの SMO C#'
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
+            - name: 操作方法ガイド
+              items:
+                - name: メモリが最適化されたテーブル
+                  href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                  items:
+                    - name: ハッシュ インデックス
+                      href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
+                - name: ネイティブ コンパイル モジュール
+                  href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
+                  items:
+                    - name: ネイティブ コンパイル モジュールの ALTER
+                      href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
+                - name: T-SQL の回避策
+                  href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
+                  items:
+                    - name: TempDb テーブルへのアクセス
+                      href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
+                    - name: DB 間のクエリ
+                      href: ../relational-databases/in-memory-oltp/cross-database-queries.md
+                    - name: IF WHILE EXISTS のシミュレーション
+                      href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+                    - name: CASE 式
+                      href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+                    - name: SQL_VARIANT の列
+                      href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
+                    - name: SQL 2016 の計算列
+                      href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
+                    - name: トランザクション
+                      href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
+                - name: メモリ不足などの管理
+                  href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
+                  items:
+                    - name: リソース プール
+                      href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+                    - name: データベースのプールへの復元
+                      href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
+                    - name: 段階的な復元
+                      href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
+                - name: 統計情報を含むパフォーマンス
+                  href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+                  items:
+                    - name: パフォーマンスの監視
+                      href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
+                    - name: 一時テーブルの高速化
+                      href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
+                - name: メモリ最適化のための SSMS
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: '[メジャー グループ]'
           href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
@@ -7317,15 +7310,15 @@
               href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: リソース
           items:
-            - name: DBA Stack Exchange +
+            - name: DBA Stack Exchange >
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: Stack Overflow +
+            - name: Stack Overflow >
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN フォーラム +
+            - name: MSDN フォーラム >
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: フィードバックの送信 +
+            - name: フィードバックの送信 >
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit +
+            - name: Reddit >
               href: 'https://www.reddit.com/r/SQLServer'
     - name: リンク サーバー
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7421,16 +7414,17 @@
           href: ../relational-databases/synonyms/create-synonyms.md
 - name: レポートと分析
   items:
-    - name: 高度な分析と機械学習 ++
+    - name: 高度な分析と機械学習 >>
       href: ../advanced-analytics/index.md
-    - name: 分析プラットフォーム システム ++
+    - name: 分析プラットフォーム システム >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: ../analytics-platform-system/index.md
-    - name: SQL Server Analysis Services (SSAS) ++
+    - name: SQL Server Analysis Services (SSAS) >>
       href: ../analysis-services/index.md
-    - name: SQL Server Reporting Services (SSRS) ++
+    - name: SQL Server Reporting Services (SSRS) >>
       href: ../reporting-services/index.md
     - name: マスター データ サービス
+      displayName: MDS
       href: ../master-data-services/master-data-services-overview-mds.md
       items:
         - name: 作業の開始
@@ -7915,6 +7909,8 @@
           items:
             - name: アルゴリズムの選択
               href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
+            - name: TDE のトラブルシューティング
+              href: ../relational-databases/security/encryption/troubleshoot-tde.md
             - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
               href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
@@ -7956,11 +7952,11 @@
           items:
             - name: 暗号化を使用する SQL Server コネクタ
               href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-            - name: Bring Your Own Key +
+            - name: Bring Your Own Key >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
-            - name: TDE BYOK キーの交換 +
+            - name: TDE BYOK キーの交換 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-            - name: TDE の保護機能の削除 +
+            - name: TDE の保護機能の削除 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
             - name: Azure Key Vault を使用した EKM
               href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
@@ -8020,6 +8016,8 @@
               href: ../relational-databases/security/permissions-database-engine.md
             - name: 権限の階層
               href: ../relational-databases/security/permissions-hierarchy-database-engine.md
+            - name: サービスの SID を使用して SQL Server のサービスにアクセス許可を付与する
+              href: ../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
         - name: 暗号化
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
@@ -8027,10 +8025,10 @@
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: Transparent Data Encryption (TDE)
               href: ../relational-databases/security/encryption/transparent-data-encryption.md
-            - name: Azure SQL Database での TDE +
+            - name: Azure SQL Database での TDE >
               href: /azure/sql-database/transparent-data-encryption-azure-sql
               items:
-                - name: Bring Your Own Key +
+                - name: Bring Your Own Key >
                   href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
             - name: Always Encrypted
               href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
@@ -8156,13 +8154,13 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: リソース
           items:
-            - name: Azure Data Studio の GitHub リポジトリ +
+            - name: Azure Data Studio の GitHub リポジトリ >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server ブログ +
+            - name: SQL Server ブログ >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
             - name: よく寄せられる質問
               href: ../azure-data-studio/faq.md
-            - name: 問題の報告とご提案 +
+            - name: 問題の報告とご提案 >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: コマンド プロンプト ユーティリティ
       href: ../tools/command-prompt-utility-reference-database-engine.md
@@ -8797,7 +8795,7 @@
                   href: ../ssms/agent/new-job-schedule-job-schedule-properties.md
                 - name: Notify an Operator of Job Status
                   href: ../ssms/agent/notify-an-operator-of-job-status.md
-                - name: 演算子
+                - name: オペレーター
                   href: ../ssms/agent/operators.md
                 - name: ジョブの整理
                   href: ../ssms/agent/organize-jobs.md
@@ -8873,7 +8871,7 @@
                   href: ../ssms/agent/create-an-operator.md
                 - name: スケジュールの作成とジョブへのアタッチ
                   href: ../ssms/agent/create-and-attach-schedules-to-jobs.md
-                - name: の
+                - name: ジョブ
                   href: ../ssms/agent/create-jobs.md
             - name: 参加解除
               items:
@@ -8899,7 +8897,7 @@
                   href: ../ssms/agent/delete-an-alert.md
                 - name: 演算子
                   href: ../ssms/agent/delete-an-operator.md
-                - name: の
+                - name: ジョブ
                   href: ../ssms/agent/delete-jobs.md
                 - name: 1 つまたは複数のジョブ
                   href: ../ssms/agent/delete-one-or-more-jobs.md
@@ -9048,8 +9046,8 @@
                       href: ../ssms/agent/job-categories-manage-job-categories.md
                     - name: 新しいジョブ カテゴリ
                       href: ../ssms/agent/job-categories-properties-new-job-category.md
-                    - name: ジョブのプロパティ
-                      items: null
+                - name: ジョブのプロパティ
+                  items:
                     - name: スケジュールを参照するジョブ
                       href: ../ssms/agent/jobs-that-reference-a-schedule.md
                     - name: '[警告] ページ'
@@ -10043,7 +10041,7 @@
           href: ../linux/quickstart-install-connect-ubuntu.md
         - name: 実行と接続 - Docker
           href: ../linux/quickstart-install-connect-docker.md
-        - name: Azure での SQL VM プロビジョニング +
+        - name: Azure での SQL VM プロビジョニング >
           href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
         - name: 実行と接続 - クラウド
           href: ../linux/quickstart-install-connect-clouds.md
@@ -10128,8 +10126,10 @@
               href: ../linux/sql-server-linux-manage-ssms.md
             - name: Azure Data Studio を使用しての管理
               href: ../azure-data-studio/quickstart-sql-server.md
-            - name: PowerShell を使用した管理
+            - name: Windows PowerShell の使用
               href: ../linux/sql-server-linux-manage-powershell.md
+            - name: PowerShell Core の使用
+              href: ../linux/sql-server-linux-manage-powershell-core.md
             - name: ログ配布の使用
               href: ../linux/sql-server-linux-use-log-shipping.md
             - name: データベース メールと電子メール警告の使用
@@ -10255,63 +10255,63 @@
       items:
         - name: '[トラブルシューティング]'
           href: ../linux/sql-server-linux-troubleshooting-guide.md
-        - name: ライセンス方法
+        - name: ライセンス方法 >
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム +
+        - name: MSDN フォーラム >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: フィードバックの送信 +
+        - name: フィードバックの送信 >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
 - name: Azure 上の SQL
   items:
-    - name: Azure SQL Database +
+    - name: Azure SQL Database >
       href: /azure/sql-database/
-    - name: Azure SQL Data Warehouse +
+    - name: Azure SQL Data Warehouse >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - name: Azure VM 上の SQL Server +
+    - name: Azure VM 上の SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: リソース
   items:
     - name: 学習する
       items:
-        - name: Microsoft Virtual Academy +
+        - name: Microsoft Virtual Academy >
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: Channel 9 での SQL +
+        - name: Channel 9 での SQL >
           href: 'https://channel9.msdn.com/Search'
     - name: ブログ
       items:
-        - name: SQL Server +
+        - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server データベース エンジン +
+        - name: SQL Server データベース エンジン >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server のセキュリティ +
+        - name: SQL Server セキュリティ >
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools +
+        - name: SQL Server Data Tools >
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: フィードバックとヘルプ
       items:
         - name: ヘルプの参照
           href: ../sql-server/sql-server-get-help.md
-        - name: SQL ドキュメントのフィードバック +
+        - name: SQL ドキュメントのフィードバック >
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: SQL Server のフィードバック (UserVoice) +
+        - name: SQL Server のフィードバック (UserVoice) >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL ドキュメントのアンケート +
+        - name: SQL ドキュメントのアンケート >
           href: 'https://aka.ms/sqldocsurvey'
         - name: SQL ドキュメントへの投稿
           href: ../sql-server/sql-server-docs-contribute.md
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム +
+        - name: MSDN フォーラム >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
     - name: パートナー
       items:
@@ -10329,14 +10329,14 @@
   items:
     - name: SQL ドキュメントのインクルード ファイル
       href: ../sql-server/applies-to-includes.md
-    - name: アーカイブ コンテンツ (SQL 2005 から 2012) +
-      displayName: '2005, 2008, 2008 r2, 2012'
+    - name: アーカイブ コンテンツ (SQL 2005 から 2012) >
+      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: データベースのサンプル
       items:
         - name: サンプルの概要
           href: ../samples/sql-samples-where-are.md
-        - name: すべての Github サンプル +
+        - name: すべての Github サンプル >
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -16190,7 +16190,7 @@
                   href: ../t-sql/language-elements/coalesce-transact-sql.md
                 - name: NULLIF
                   href: ../t-sql/language-elements/nullif-transact-sql.md
-            - name: 演算子
+            - name: オペレーター
               href: ../t-sql/language-elements/operators-transact-sql.md
               items:
                 - name: 単項演算子 - 正
@@ -17119,6 +17119,8 @@
                   href: ../t-sql/statements/set-quoted-identifier-transact-sql.md
                 - name: REMOTE_PROC_TRANSACTIONS
                   href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
+                - name: 結果セットのキャッシュ
+                  href: ../t-sql/statements/set-result-set-caching-transact-sql.md
                 - name: ROWCOUNT
                   href: ../t-sql/statements/set-rowcount-transact-sql.md
                 - name: SHOWPLAN_ALL

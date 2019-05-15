@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.proxy.editor.f1
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: de14af686d5a8539c326fdba979c85de13076464
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 627edc6b58395f9d741b3972f04e9101127f72fa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684330"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099919"
 ---
 # <a name="proxy-editor---add-principal"></a>プロキシ エディター - [プリンシパルの追加]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "47684330"
 
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントにサーバー プリンシパル アクセス権を付与できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[プリンシパルの種類]**  
 表示するプリンシパルの種類を入力します。  
   
 **[利用可能なプリンシパル]**  
 選択対象のプリンシパルの種類を一覧表示します。  
   
-**名前**  
+**[名前]**  
 アクセス権を与える対象プリンシパルの名前を選択するか、 **[名前]** を選択して一覧内のすべてのプリンシパルにアクセス権を与えます。  
   
 ## <a name="see-also"></a>参照  

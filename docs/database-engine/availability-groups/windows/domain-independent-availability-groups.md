@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744562"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090253"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 
 現在、ドメインの独立した可用性グループの作成は、SQL Server Management Studio を使用して完全に達成することはできません。 ドメインに依存しない可用性グループの作成は、標準の可用性グループの作成と基本的に同じですが、特定のアスペクト (証明書の作成など) は Transact-SQL でのみ可能です。 次の例は、2 つのレプリカを持つ可用性グループの構成を想定しています。プライマリが 1 つとセカンダリが 1 つです。 
 
-1. [このリンクの手順を使用して](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)、すべてが可用性グループに参加するサーバーで構成されるワークグループ クラスターを展開します。 ワークグループ クラスターを構成する前に、共通の DNS サフィックスが既に構成されていることを確認します。
+1. [このリンクの手順を使用して](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)、すべてが可用性グループに参加するサーバーで構成されるワークグループ クラスターを展開します。 ワークグループ クラスターを構成する前に、共通の DNS サフィックスが既に構成されていることを確認します。
 2. 可用性グループに追加する各インスタンスの [Always On 可用性グループ機能を有効にします](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server)。 これには、各 SQL Server インスタンスの再起動が必要がです。
 3. プライマリ レプリカをホストするインスタンスごとに、データベース マスター キーが必要です。 マスター キーがまだ存在していない場合は、次のコマンドを実行します。
 
@@ -126,7 +126,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
    ```
 
 10. プライマリになる可能性があるレプリカでは、関連するすべてのセカンダリ レプリカでログインとユーザーを作成します。
-11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例 :
+11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例:
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]

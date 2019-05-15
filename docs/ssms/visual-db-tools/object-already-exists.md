@@ -1,9 +1,8 @@
 ---
 title: オブジェクトが既に存在します | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,16 +13,16 @@ ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db816122ceb5d8320e33d883ac5f6b1f4fd2e944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdadc4734db5dd8911b384b8aa35a01248aff453
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744790"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095262"
 ---
 # <a name="object-already-exists"></a>[オブジェクトが既に存在します]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-保存しようとしているオブジェクトと同じ名前のオブジェクトが既にデータベースに存在します。 別の名前を選択し直してください。  
+  保存しようとしているオブジェクトと同じ名前のオブジェクトが既にデータベースに存在します。 別の名前を選択し直してください。  
   
-列名が既に存在することを示す場合もあります。  
+ 列名が既に存在することを示す場合もあります。  
+  
   
