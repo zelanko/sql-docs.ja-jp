@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 176e73b6-08aa-48ec-b349-e84b431e65cc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0277feaf7063cdbf1e4e37cd97c4f8cb5895f18
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: dd62d1c9961a5ae8cdd9018a01966fc0b6d3a4db
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590366"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105551"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "53590366"
   
     [セキュリティ](#Security)  
   
--   **以下を使用して SQL Server エージェントのマスター ジョブに関連付けられている対象サーバーを変更するには:**  
+-   **SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更するために使用するもの:**  
   
     [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53590366"
   
 #### <a name="to-modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更するには  
   
-1.  **オブジェクト エクスプローラー** で、対象サーバーを変更するジョブを含むサーバーをプラス記号をクリックして展開します。  
+1.  **オブジェクト エクスプローラー**で、ターゲット サーバーを変更するジョブを含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53590366"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     -- removes the server SEATTLE2 from processing the Weekly Sales Backupsjob   
@@ -97,7 +97,7 @@ ms.locfileid: "53590366"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     -- assigns the multiserver job Weekly Sales Backups to the server SEATTLE2   

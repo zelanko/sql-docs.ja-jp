@@ -11,22 +11,22 @@ f1_keywords:
 - vdtsql.chm:69645
 - vdt.dlgbox.definequeryparameters
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1f530954b2449e3a85822ad04d87cd553ae26a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b841a4874c8fefa735547cdd42ff0cb704c1ccc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674176"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098225"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>[クエリ パラメーター] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスを使用すると、クエリに定義されたパラメーターの値を入力できます。 このダイアログ ボックスは、エンド ユーザーが値を入力する必要があるパラメーターを含むクエリを実行するときに表示されます。  
   
-## <a name="options"></a>[変数]  
-**名前**  
+## <a name="options"></a>オプション  
+**[名前]**  
 実行するクエリに対して定義されているパラメーターを一覧表示します。 クエリに名前付きのパラメーターが含まれる場合は、名前が表示されます。 クエリに名前のないパラメーターが含まれる場合、クエリ内のパラメーターごとに、システム定義のパラメーター名が一覧表示されます。  
   
 **Value**  

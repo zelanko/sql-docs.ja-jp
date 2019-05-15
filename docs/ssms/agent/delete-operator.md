@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.delete.f1
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1cb0cdd102506fe9762055057e84bf981d058a91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c03c67a71774c7656196a034d64efe4284479fc3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805350"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096792"
 ---
 # <a name="delete-operator"></a>Delete 操作
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47805350"
 
 このページを使用すると、オペレーターを削除できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[削除されるオブジェクト]**  
 削除されるオペレーターを表示します。  
   

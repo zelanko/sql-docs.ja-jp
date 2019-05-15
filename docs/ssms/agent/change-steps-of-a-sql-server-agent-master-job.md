@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bcb614a09b3c2313bdceeb9cc10c20ba4e17db8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 39e43b52575b8f500b68c61eda2cb12c68406db9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537073"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106280"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52537073"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **以下を使用して SQL Server エージェントのマスター ジョブのステップに変更を加えるには:**  
   
@@ -46,10 +46,10 @@ ms.locfileid: "52537073"
 ### <a name="Restrictions"></a>制限事項と制約事項  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの対象サーバーを、ローカル サーバーとリモート サーバーの両方に設定することはできません。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>Permissions  
-**sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+#### <a name="Permissions"></a>アクセス許可  
+**sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
@@ -79,7 +79,7 @@ ms.locfileid: "52537073"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     -- changes the number of retry attempts for the first step

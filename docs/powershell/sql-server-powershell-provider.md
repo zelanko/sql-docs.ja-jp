@@ -17,12 +17,12 @@ ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83afb8016d2887af305ed61089a05a6e85150fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec1bbc16f12424c1be539e9b82f56224822646b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855070"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450071"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,22 +45,22 @@ Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   
 |フォルダー|SQL Server オブジェクト モデルの名前空間|オブジェクト|  
 |------------|---------------------------------------|-------------|  
-|SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|データベース オブジェクト (テーブル、ビュー、ストアド プロシージャなど)|  
-|SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|ポリシー ベースの管理オブジェクト (ポリシーやファセットなど)|  
-|SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|登録済みサーバー オブジェクト (サーバー グループや登録済みサーバーなど)|  
-|SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|ユーティリティ オブジェクト ( [!INCLUDE[ssDE](../includes/ssde-md.md)]のマネージド インスタンスなど)|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|データ層アプリケーション オブジェクト (DAC パッケージなど) と操作 (DAC の配置など)|  
-|SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|コレクション セットや構成ストアなどのデータ コレクター オブジェクト|  
-|SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、環境などのオブジェクト。|  
-|SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ、集計、ディメンションなどのオブジェクト。|  
+|`SQLSERVER:\SQL`|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|データベース オブジェクト (テーブル、ビュー、ストアド プロシージャなど)|  
+|`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|ポリシー ベースの管理オブジェクト (ポリシーやファセットなど)|  
+|`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|登録済みサーバー オブジェクト (サーバー グループや登録済みサーバーなど)|  
+|`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|ユーティリティ オブジェクト ( [!INCLUDE[ssDE](../includes/ssde-md.md)]のマネージド インスタンスなど)|  
+|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|データ層アプリケーション オブジェクト (DAC パッケージなど) と操作 (DAC の配置など)|  
+|`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|コレクション セットや構成ストアなどのデータ コレクター オブジェクト|  
+|`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、環境などのオブジェクト。|  
+|`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ、集計、ディメンションなどのオブジェクト。|  
   
  たとえば、SQLSERVER:\SQL フォルダーを使用して、SMO オブジェクト モデルでサポートされる任意のオブジェクトを表すパスを開始することができます。 SQLSERVER:\SQL パスの先頭部分は、SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*です。 インスタンス名の後のノードは、オブジェクト コレクション ( *Databases* 、 *Views*など) とオブジェクト名 (AdventureWorks2012 など) で切り替わります。 スキーマはオブジェクト クラスとしては表されません。 スキーマ内の最上位レベルのオブジェクト (テーブルやビューなど) のノードを指定する場合、オブジェクト名を *SchemaName.ObjectName*の形式で指定する必要があります。  
   
  次の例は、ローカル コンピューター上の [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスにある AdventureWorks2012 データベースの Purchasing スキーマ内の Vendor テーブルのパスを示しています。  
   
-```  
+```powershell
 SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
-```  
+```
   
  SMO オブジェクト モデルの階層の詳細については、「 [SMO オブジェクト モデル ダイアグラム](../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)」を参照してください。  
   
@@ -68,8 +68,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
 |[パス]|SMO クラス|  
 |----------|---------------|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
 ## <a name="sql-server-provider-tasks"></a>SQL Server プロバイダーのタスク  
   

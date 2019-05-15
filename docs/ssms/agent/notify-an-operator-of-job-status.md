@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, notification options
 - notifications [SQL Server], job status
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 627b25149bae300a19360fa23288a05569430c81
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 56d6a4c0dffdbb0b768ab0ef0808932d59e3f814
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702810"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105503"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51702810"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **オペレーターにジョブの状態を通知する方法:**  
   
@@ -50,8 +50,8 @@ ms.locfileid: "51702810"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+### <a name="Security"></a>セキュリティ  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
@@ -95,7 +95,7 @@ ms.locfileid: "51702810"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     -- adds an e-mail notification for the specified alert (Test Alert).  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQL Server Agent, alerts
 - alerts [SQL Server], error numbers
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8663e9976dfa48d02b6b874f5d53692300cfbf0a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 453c8e5a2361e93580b7cdd737f03d357946df89
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699142"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090140"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>エラー番号を使用して警告を作成する
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51699142"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **エラー番号を使用する警告を作成する方法:**  
   
@@ -53,9 +53,9 @@ ms.locfileid: "51699142"
   
 -   **xp_logevent** で生成されたイベントは master データベースで発生します。 このため、 **xp_logevent** では、警告の **@database_name** が **'master'** または NULL になっていないと、警告が起動されません。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>アクセス許可  
 既定では、 **sp_add_alert** を実行できるのは、 **sysadmin**固定サーバー ロールのメンバーだけです。  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
@@ -90,7 +90,7 @@ ms.locfileid: "51699142"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     -- adds an alert (Test Alert) that runs the Back up

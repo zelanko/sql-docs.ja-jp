@@ -11,15 +11,15 @@ f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a78a5b477fd92610ba4685cac96cb398d590634d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd09972eaebba893ac92198c9b953392e383f9e4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662500"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095721"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47662500"
 ## <a name="remarks"></a>Remarks  
 **[編集]** コマンドおよび **[変更]** コマンドを実行した場合は、同じオプション設定に対して **[<object> をスクリプト化]** コマンドを実行した場合と異なる結果になることがあります。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **[<object> をスクリプト化]** コマンドは、後でオブジェクトの作成に使用できるスクリプトを生成するために設計されています。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。  
   
 ### <a name="general-scripting-options"></a>全般スクリプト作成オプション  

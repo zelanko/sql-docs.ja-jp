@@ -11,21 +11,21 @@ f1_keywords:
 - vdtsql.chm:69650
 - vdt.dlgbox.maketable
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5fecc39eb41cc39c9879c1f68f778575cde04fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a4a512a552448c1ef50320dd3269365ab487968
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763531"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096736"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>[テーブルの作成] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 行のコピー先として作成したテーブルに名前を付けることができます。 このダイアログ ボックスは、クエリの種類を MAKE TABLE クエリに変更したときに表示されます。 クエリの種類を変更するには、 **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[テーブルの作成]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **テーブル名**  
 作成するテーブルの名前を入力します。 クエリおよびビュー デザイナーでは、名前が既に使用されているかどうかや、テーブルを作成する権限があるかどうかなどの確認は行われません。  
   

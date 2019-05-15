@@ -11,16 +11,16 @@ helpviewer_keywords:
 - proxies [SQL Server Agent], modifying
 - modifying SQL Server Agent proxy
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5ccf029d7b21c378884c8cbfaae1fb4c1064c699
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 65d884ab6fd9f378e977fd3be9f24e134fc9df23
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697322"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105491"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51697322"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **SQL Server エージェント プロキシを変更する方法:**  
   
@@ -54,9 +54,9 @@ ms.locfileid: "51697322"
   
 -   ユーザーのログインにプロキシへのアクセス許可がある場合、またはプロキシへのアクセス許可のあるロールにユーザーが属している場合、このユーザーはジョブ ステップでプロキシを使用できます。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>アクセス許可  
 プロキシ アカウントを作成、変更、または削除できるのは、 **sysadmin** 固定サーバー ロールのメンバーだけです。  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
@@ -85,7 +85,7 @@ ms.locfileid: "51697322"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     -- Disables the proxy named 'Catalog application proxy'.  

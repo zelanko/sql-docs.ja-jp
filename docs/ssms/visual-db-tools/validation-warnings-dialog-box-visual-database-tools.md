@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65556
 - vdt.dlgbox.validationwarnings
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d99e77c385fdf29e068371a7b7c6bbdc1e294f53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77a20360718563f101b44e68bf287e59876d8d38
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674970"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098557"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>[評価に関する警告] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47674970"
   
 -   変更によって、1 つのテーブル内の列に対して ANSI_NULLS と ANSI_PADDING のいずれかまたは両方に意味のある設定がされる。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **はい**  
 操作を続行し、変更スクリプトを生成するか、変更をデータベースに転送します。 データベースを変更する権限を持っていない場合、変更によってインデックスが 900 バイトを超える場合、または変更の結果として計算される列、既定の制約、CHECK 制約が正しく作成されない場合に、コミット操作は失敗します。  
   

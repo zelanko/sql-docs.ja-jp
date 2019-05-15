@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cf71491623cdac031632cfba2a3cc0b8860dde2c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c548cb5ac6fcb722dc1130aea5317871592f8544
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701930"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105974"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51701930"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブ履歴ログを消去する方法:**  
   
@@ -49,8 +49,8 @@ ms.locfileid: "51701930"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+### <a name="Security"></a>セキュリティ  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
@@ -78,7 +78,7 @@ ms.locfileid: "51701930"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     -- example removes the history for a job named NightlyBackups.  

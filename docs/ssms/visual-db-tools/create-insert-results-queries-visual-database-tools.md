@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72f6c3fd862e6b122513eed605658835ec61442e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845010"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105997"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>結果の挿入クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     > クエリおよびビュー デザイナーは、更新できるテーブルおよびビューを事前に判別できません。 そのため、 **[挿入先のテーブル選択]** ダイアログ ボックスの **[テーブル名]** ボックスには、クエリを実行するデータ接続で使用できるテーブルおよびビューがすべて表示されます。行をコピーできないテーブルおよびビューも表示されます。  
   
-4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 すべての行をコピーする場合は、**&#42; (すべての行)** を選択します。  
+4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 すべての行をコピーする場合は、**[&#42; (すべての列)]** を選択します。  
   
     選択した列が、抽出条件ペインの **[列]** 列に追加されます。  
   

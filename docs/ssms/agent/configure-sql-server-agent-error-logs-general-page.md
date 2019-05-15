@@ -1,5 +1,5 @@
 ---
-title: '[SQL Server エージェント エラー ログの構成] - ([全般] ページ) | Microsoft Docs'
+title: '[SQL Server エージェント エラー ログの構成] ([全般] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.errorlog.configure.f1
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d9feb892096bd620f817c0ae8c913fa2eaf3416c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5325fb530796ee0e1f29e0f52b718986aab358e6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707240"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105955"
 ---
-# <a name="configure-sql-server-agent-error-logs-general-page"></a>[SQL Server エージェント エラー ログの構成] - ([全般] ページ)
+# <a name="configure-sql-server-agent-error-logs-general-page"></a>[SQL Server エージェント エラー ログの構成] \([全般] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

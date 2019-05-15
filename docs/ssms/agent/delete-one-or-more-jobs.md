@@ -14,16 +14,16 @@ helpviewer_keywords:
 - deleting jobs
 - removing jobs
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b921aa0561273b89f7c1434db189f34c0f6583b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c576d4adb09ee1bd50c23c29d490cb15c829744f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698180"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096594"
 ---
 # <a name="delete-one-or-more-jobs"></a>1 つまたは複数のジョブの削除
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51698180"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブを削除する方法:**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "51698180"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
 **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか削除できません。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
@@ -82,7 +82,7 @@ ms.locfileid: "51698180"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     USE msdb ;  

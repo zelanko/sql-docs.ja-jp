@@ -19,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, master servers
 - Master Server Wizard
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12a799591b0c3af58493e6daad9c5605f715eaf1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5a32ee7b130727f537f818942879f0486bbf9422
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697370"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095744"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51697370"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **マスター サーバーを作成するために使用するもの:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "51697370"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
 プロキシに関連付けられているステップがある分散ジョブは、ターゲット サーバーのプロキシ アカウントのコンテキストで実行されます。 次の条件を満たしていることを確認してください。満たしていないと、プロキシに関連付けられているジョブ ステップがマスター サーバーから対象サーバーにダウンロードされません。  
   
 -   マスター サーバー レジストリのサブキー **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<&#42;instance_name&#42;>\SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定されていること。 既定では、この値は 0 (false) に設定されます。  
@@ -69,7 +69,7 @@ ms.locfileid: "51697370"
   
     このエラーを解決するには、ターゲット サーバー上にプロキシ アカウントが存在し、ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前が付けられているかどうかを確認します。  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>アクセス許可  
 このプロシージャの実行権限は、既定では **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
@@ -78,7 +78,7 @@ ms.locfileid: "51697370"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[マルチサーバーの管理]** をポイントして、 **[マスター サーバーに設定]** をクリックします。 **マスター サーバー ウィザード** を使用してマスター サーバーを作成し、対象サーバーを追加します。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[マルチサーバーの管理]** をポイントして、 **[マスター サーバーに設定]** をクリックします。 **マスター サーバー ウィザード** を使用してマスター サーバーを作成し、ターゲット サーバーを追加します。  
   
 3.  **[マスター サーバー オペレーター]** ページで、マスター サーバーのオペレーターを設定します。電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、電子メールが送信されるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを設定しておく必要があります。 **net send**を使用してオペレーターに通知を送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが置かれているサーバーで Messenger サービスが実行されている必要があります。  
   
@@ -91,12 +91,12 @@ ms.locfileid: "51697370"
     **[Net Send アドレス]**  
     オペレーターの **net send** アドレスを設定します。  
   
-4.  **[対象サーバー]** ページで、マスター サーバーの対象サーバーを選択します。  
+4.  **[ターゲット サーバー]** ページで、マスター サーバーのターゲット サーバーを選択します。  
   
     **[登録済みサーバー]**  
     Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に登録されているサーバーで、まだターゲット サーバーになっていないものを一覧表示します。  
   
-    **[対象サーバー]**  
+    **[ターゲット サーバー]**  
     ターゲット サーバーであるサーバーを一覧表示します。  
   
     **>**  
@@ -117,7 +117,7 @@ ms.locfileid: "51697370"
     **[接続]**  
     選択したサーバーの接続プロパティを変更します。  
   
-5.  **[マスター サーバー ログインの資格情報]** ページで、必要に応じて対象サーバーの新しいログインを作成してマスター サーバーへの権利を割り当てるかどうかを指定します。  
+5.  **[マスター サーバー ログインの資格情報]** ページで、必要に応じてターゲット サーバーの新しいログインを作成してマスター サーバーへの権利を割り当てるかどうかを指定します。  
   
     **[必要に応じて新しいログインを作成し、MSX へのアクセス権を割り当てる]**  
     指定されたログインが存在しない場合に、新しいログインをターゲット サーバーに作成します。  
@@ -130,7 +130,7 @@ ms.locfileid: "51697370"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、現在のサーバーを AdventureWorks1 マスター サーバーに追加します。 現在のサーバーの場所は、Building 21 の Room 309 の Rack 5 です。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、現在のサーバーを AdventureWorks1 マスター サーバーに追加します。 現在のサーバーの場所は、Building 21 の Room 309 の Rack 5 です。  
   
 ```  
 USE msdb ;  

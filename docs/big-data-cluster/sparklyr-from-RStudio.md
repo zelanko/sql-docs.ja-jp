@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 148e4942babafb35af2efe33eb427f9462f0a47e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969878"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620323"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Sparklyr を使用して、SQL Server のビッグ データ クラスター内
 
@@ -36,17 +36,20 @@ Sparklyr では、Apache Spark 用 R インターフェイスを提供します�
 
 1. インストールの完了後、必要なパッケージをインストールする RStudio Desktop 内で、次のコマンドを実行します。
 
-   '' RStudio Desktop install.packages (リポジトリである"DBI"="https://cran.microsoft.com/snapshot/2019-01-01") install.packages (リポジトリ"dplyr"="https://cran.microsoft.com/snapshot/2019-01-01") install.packages (リポジトリ"sparklyr"="https://cran.microsoft.com/snapshot/2019-01-01")
+   ```RStudioDesktop
+   install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## Connect to Spark in a big data cluster
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>ビッグ データ クラスターで Spark に接続します。
 
-You can use sparklyr to connect from a client to the big data cluster using Livy and the HDFS/Spark gateway. 
+Sparklyr を使用して、Livy と HDFS/Spark ゲートウェイを使用してビッグ データ クラスターにクライアントから接続することができます。 
 
-In RStudio, create an R script and connect to Spark as in the following example:
+Rstudio に、R スクリプトを作成し、次の例のように Spark に接続します。
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+> `<USERNAME>`と`<PASSWORD>`(ルート) などのユーザー名を使用して、値、およびビッグ データ クラスターのデプロイ時に設定したパスワード。 `<IP>`と`<PORT>`値でドキュメントを参照して、 [HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md#hdfs)します。
 
 ```r
 library(sparklyr)

@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: SQL Server の ML とプログラミング拡張機能に関するドキュメント
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
@@ -168,7 +168,7 @@
               href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
             - name: 4 - 予測
               href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
-- name: サンプル +
+- name: サンプル >
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: ソリューション
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
@@ -305,7 +305,7 @@
           href: ../advanced-analytics/python/ref-py-microsoftml.md
 - name: リソース
   items:
-    - name: リリース ノート +
+    - name: リリース ノート >>
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
     - name: トラブルシューティング
       href: ../advanced-analytics/machine-learning-troubleshooting-faq.md

@@ -12,19 +12,19 @@ f1_keywords:
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6c48e1dd5a5fbcdc2141f14288e10f452b64c850
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8c9a1ab29b09722882394e323d63666eb1b1b7fb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201441"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106320"
 ---
 # <a name="save-as"></a>[名前を付けて保存]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。  **ファイル** *<file>* **別名** **を保存** ( *<file>* は現在のアイテムの名前) をクリックするか、コード エディターで Alt キーを押しながら F キー、A キーの順に押します。  
+現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 **ファイル** *<file>* **別名** **を保存** ( *<file>* は現在のアイテムの名前) をクリックするか、コード エディターで Alt キーを押しながら F キー、A キーの順に押します。  
   
 ## <a name="central-panel"></a>中央のパネル  
 **[保存先]**  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - WMI event alerts [SQL Server Management Studio]
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aed644bec059dadff338711634c6ec7d252498cd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e2c4e739852adcb492241a46b5f04a755728c63f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701851"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105457"
 ---
 # <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ WMI Provider を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **WMI イベント警告を作成する方法:**  
   
@@ -55,9 +55,9 @@ WMI Provider を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されているコンピューター上の WMI 名前空間だけがサポートされます。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>アクセス許可  
 既定では、 **sp_add_alert** を実行できるのは、 **sysadmin**固定サーバー ロールのメンバーだけです。  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
@@ -90,7 +90,7 @@ WMI Provider を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```  
     -- creates a WMI event alert that retrieves all event properties for any ALTER_TABLE event that occurs on table AdventureWorks2012.Sales.SalesOrderDetail  

@@ -1,9 +1,9 @@
 ---
-title: 洞察のウィジェットを使用して、サーバーとデータベースを監視するには
+title: Azure データ Studio での洞察のウィジェットを使用してサーバーとデータベースの監視
 titleSuffix: Azure Data Studio
 description: Azure Data Studio での洞察のウィジェットについて説明します
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238883"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620339"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとの洞察のウィジェットでのデータベースを管理します。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-洞察のウィジェットは、サーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察に満ちた視覚エフェクトに変換します。 
+洞察のウィジェットは、サーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察に満ちた視覚エフェクトに変換します。
 
-インサイトは、カスタマイズ可能なチャートやグラフ サーバーとデータベースの監視ダッシュ ボードに追加するには。 サーバーをデータベースの概要の詳細情報の表示し、詳細については、ドリルダウンを定義する管理アクションを起動します。 
+インサイトは、カスタマイズ可能なチャートやグラフ サーバーとデータベースの監視ダッシュ ボードに追加するには。 サーバーをデータベースの概要の詳細情報の表示し、詳細については、ドリルダウンを定義する管理アクションを起動します。
 
 すばらしいサーバーおよびデータベース管理ダッシュ ボード例を次のようなをビルドすることができます。
 
@@ -33,11 +33,11 @@ ms.locfileid: "63238883"
 
 - [カスタム インサイト ウィジェットをビルドします。](tutorial-build-custom-insight-sql-server.md)
 - *組み込みの洞察のウィジェットを有効にします。*
-   - [パフォーマンスの洞察の監視を有効にします。](tutorial-qds-sql-server.md)
-   - [テーブル領域使用状況の分析情報を有効にします。](tutorial-table-space-sql-server.md)
+  - [パフォーマンスの洞察の監視を有効にします。](tutorial-qds-sql-server.md)
+  - [テーブル領域使用状況の分析情報を有効にします。](tutorial-table-space-sql-server.md)
 
 
-## <a name="sql-queries"></a>SQL クエリ 
+## <a name="sql-queries"></a>SQL クエリ
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] まだ他の言語や複雑なユーザー インターフェイスの最小限の JSON 構成で可能な限り T-SQL を使用するための概要を回避しようとしています。 T-SQL で洞察のウィジェットを構成するには、洞察に富むウィジェットに変換できる便利な T-SQL クエリの既存のソースの数を数えきれないほどが利用しています。
 

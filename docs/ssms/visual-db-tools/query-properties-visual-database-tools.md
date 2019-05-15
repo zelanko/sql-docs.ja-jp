@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8c274b4e442d161071960af4578ccf7485050b26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84745411a3a44ea75d20c6c9f304fb7fe87d4d85
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524820"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098349"
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "52524820"
 > [!NOTE]  
 > このトピックでは、アルファベット順ではなくカテゴリ別にプロパティが示されています。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[IDENTITY] カテゴリ**  
 展開して **[オブジェクト名]** プロパティを表示します。  
   
-**名前**  
+**[名前]**  
 現在のクエリの名前を表示します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では変更できません。  
   
 **Database Name**  

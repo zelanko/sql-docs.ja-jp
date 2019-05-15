@@ -1,5 +1,5 @@
 ---
-title: 操作方法:Team Foundation ビルドから SQL Server の単体テストを実行する | Microsoft Docs
+title: 方法:Team Foundation ビルドから SQL Server の単体テストを実行する | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226539"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099651"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>操作方法:Team Foundation ビルドから SQL Server の単体テストを実行する
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>方法:Team Foundation ビルドから SQL Server の単体テストを実行する
 Team Foundation ビルドを使用すると、SQL Server の単体テストをビルド確認テスト (BVT) の一環として実行できます。 データベースを配置し、テスト データを生成して、選択したテストを実行するように単体テストを構成できます。 Team Foundation ビルドを使い慣れていない場合は、このトピックの手順を実行する前に、次の情報を確認してください。  
   
 -   [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -167,7 +167,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 9. ソリューション エクスプローラーで、app.config をダブルクリックします。  
   
-10. エディターで、各 \<SqlUnitTesting_*VSVersion*> ノードに `AllowConfigurationOverride="true"` を追加します。 例 :  
+10. エディターで、各 \<SqlUnitTesting_*VSVersion*> ノードに `AllowConfigurationOverride="true"` を追加します。 例:  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  

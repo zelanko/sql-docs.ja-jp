@@ -1,5 +1,5 @@
 ---
-title: '[オプション] - ([デザイナー] - [メンテナンス プラン] ページ) | Microsoft Docs'
+title: '[オプション] ([デザイナー] - [メンテナンス プラン] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: db6e43e681adb66d7ccf8895cf57820f80260118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e126769f0dbaa149915553b425bb79d0fb04d59
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747753"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105207"
 ---
-# <a name="options-designers---maintenance-plans-page"></a>[オプション] - ([デザイナー] - [メンテナンス プラン] ページ)
+# <a name="options-designers---maintenance-plans-page"></a>[オプション] \([デザイナー] - [メンテナンス プラン] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[オプション]** ダイアログ ボックスを使用すると、デザイン画面に新しい図形を追加したときのデザイナーの既定の動作を指定できます。 **[ツール]** メニューの **[オプション]** をクリックします。次に **[デザイナー]** を展開し、 **[メンテナンス プラン]** を選択します。  
   

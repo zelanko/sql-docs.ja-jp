@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391665"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502671"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
 
@@ -47,6 +47,8 @@ ms.locfileid: "52391665"
 -   System32 フォルダーに Authz.dll があることが必要です。  
   
  インターネット インフォメーション サービス (IIS) または [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]はセットアップでチェックされなくなりました。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には MDAC 2.0 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] バージョン 2.0 が必要です。これらがまだインストールされていない場合は、セットアップで自動的にインストールされます。  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> SharePoint モードのインストールでのトラブルシューティング  
   
@@ -188,6 +190,8 @@ ms.locfileid: "52391665"
  **解決方法:** 解決方法はありません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SYSPREP (PREPAREIMAGE) をサポートしていません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは SYSPREP をサポートしています。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [SharePoint モードのインストールでのトラブルシューティング](#bkmk_tshoot_sharepoint)  
+
+::: moniker-end
   
 ##  <a name="bkmk_tshoot_native"></a> ネイティブ モードのインストールでのトラブルシューティング  
   

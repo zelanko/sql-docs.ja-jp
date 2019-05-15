@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ee1b1e45970be6501f8ab40dcc92c6675c0bc10b
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215458"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626670"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux をトラブルシューティングします。
 
@@ -24,10 +24,12 @@ ms.locfileid: "53215458"
 このドキュメントでは、Linux または Docker コンテナーで実行されている Microsoft SQL Server のトラブルシューティングを行う方法について説明します。 SQL Server on Linux のトラブルシューティングを行うときにサポートされている機能と既知の制限事項を確認する注意してください、 [SQL Server on Linux リリース ノート](sql-server-linux-release-notes.md)します。
 
 > [!TIP]
-> よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)を参照してください。
+> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](sql-server-linux-faq.md)します。
 
 ## <a id="connection"></a> 接続エラーをトラブルシューティングします。
-Linux、SQL Server への接続に問題が発生した場合は、いくつかを確認します。 
+Linux、SQL Server への接続に問題が発生した場合は、いくつかを確認します。
+
+- 使用してローカルで接続できない場合**localhost**、代わりに、IP アドレス 127.0.0.1 を使用してください。 できますを**localhost**このアドレスに正しくマップされていません。
 
 - サーバー名または IP アドレスが、クライアント コンピューターから到達可能であることを確認します。
 
@@ -193,7 +195,7 @@ SQLCMD を使用したシングル ユーザー モードで SQL Server を起�
 
 ## <a name="improve-performance"></a>パフォーマンスを向上させる
 
-データベースの設計、ハードウェア、およびワークロードの需要をなど、パフォーマンスに影響を与える多くの要素があります。 パフォーマンスを向上させるために検索する場合は、この記事でベスト プラクティスを確認して開始[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)します。 パフォーマンスの問題のトラブルシューティングに利用されてツールの一部について説明します。
+データベースの設計、ハードウェア、およびワークロードの需要をなど、パフォーマンスに影響を与える多くの要素があります。 パフォーマンスを向上させるために検索する場合は、この記事でベスト プラクティスを確認して開始[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)します。 パフォーマンスの問題のトラブルシューティングに利用できるツールの一部について説明します。
 
 - [クエリ ストア](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [システム動的管理ビュー (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

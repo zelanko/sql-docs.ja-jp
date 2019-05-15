@@ -18,15 +18,15 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6289e84ecfce552345688368810a9081529b5f9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cf5eec621d32ac0454700e6519332b3419c9aa8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615522"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102860"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -236,7 +236,7 @@ ms.locfileid: "47615522"
 |------------|-----------------------------|---------------------------------|  
 |新しい行を挿入する|Enter または Shift + Enter|Enter または Shift + Enter|  
 |カーソルの両側の文字を入れ替える (SQL エディターは適用外)|Ctrl + T|Ctrl + T|  
-|カーソルの右側の 1 文字を削除する|Del|Del|  
+|カーソルの右側の 1 文字を削除する|DELETE|DELETE|  
 |カーソルの左側の 1 文字を削除する|BackSpace<br /><br /> 内の複数の<br /><br /> Shift +<br /><br /> BackSpace|BackSpace<br /><br /> 内の複数の<br /><br /> Shift +<br /><br /> BackSpace|  
 |選択範囲内の空白文字を削除する。選択範囲がない場合は、カーソルの隣の空白文字を削除する。|Ctrl + K、C|該当するショートカットはありません|  
 |エディターで指定されている数のスペースを挿入する|Tab|Tab|  

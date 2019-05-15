@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b5967b38a0bcc648bf02a5b3c6fa404b31eaaccf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 876b9f1501ff4fa4ba819e5fbccecfe48c9bf6dc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540626"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099476"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM アプリケーションでのデータベース操作との競合の回避
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

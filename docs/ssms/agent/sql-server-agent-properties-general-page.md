@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.agent.general.f1
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 577a42d869670d44102f4ccc06735b31b07fd8ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9dc1f9fa030c66d3cfacd7ebdf420a455b9aa24
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609540"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089635"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>[SQL Server エージェントのプロパティ]\([全般] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47609540"
 
 このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの全般プロパティを表示したり、変更したりできます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[サービスの状態]**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの現在の状態を表示します。  
   

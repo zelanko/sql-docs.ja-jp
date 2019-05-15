@@ -13,16 +13,16 @@ helpviewer_keywords:
 - target servers [SQL Server], about target servers
 - multiserver environments [SQL Server]
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eeb8e8be10fe89ce151add34abe5f4677fae0320
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 34ac4e4eac35a4086689e08c2f4c1eff9994ad0f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699500"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095612"
 ---
 # <a name="create-a-multiserver-environment"></a>マルチサーバー環境の作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ ms.locfileid: "51699500"
 |[説明]|トピック|  
 |---------------|---------|  
 |マスター サーバーを作成する方法について説明します。|[マスター サーバーの作成](../../ssms/agent/make-a-master-server.md)|  
-|ターゲット サーバーを作成する方法について説明します。|[対象サーバーの作成](../../ssms/agent/make-a-target-server.md)|  
-|マスター サーバーにターゲット サーバーを参加させる方法について説明します。|[マスター サーバーへの対象サーバーの参加](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
-|マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからの対象サーバーの参加の解除](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
-|マスター サーバーから複数のターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからの複数の対象サーバーの参加の解除](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
+|ターゲット サーバーを作成する方法について説明します。|[ターゲット サーバーの作成](../../ssms/agent/make-a-target-server.md)|  
+|マスター サーバーにターゲット サーバーを参加させる方法について説明します。|[マスター サーバーへのターゲット サーバーの参加](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
+|マスター サーバーからターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからのターゲット サーバーの参加の解除](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
+|マスター サーバーから複数のターゲット サーバーの参加を解除する方法について説明します。|[マスター サーバーからの複数のターゲット サーバーの参加の解除](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
 |ターゲット サーバーの状態を確認する方法について説明します。|[sp_help_targetserver (Transact-SQL)](https://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](https://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>参照  
