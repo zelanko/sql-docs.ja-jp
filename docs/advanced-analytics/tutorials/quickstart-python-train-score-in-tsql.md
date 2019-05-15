@@ -10,7 +10,7 @@ ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: e8bacc383eba1148c1b357c344bc483e824df99b
 ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/04/2019
 ms.locfileid: "54046912"
