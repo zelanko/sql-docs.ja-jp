@@ -22,7 +22,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "62938882"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password イベント クラス
-   **Audit Login Change Password** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン パスワードを変更するたびに発生します。  
+  **Audit Login Change Password** イベント クラスは、ユーザーが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン パスワードを変更するたびに発生します。  
   
 ## <a name="audit-login-change-password-event-class-data-columns"></a>Audit Login Change Password イベント クラスのデータ列  
   
