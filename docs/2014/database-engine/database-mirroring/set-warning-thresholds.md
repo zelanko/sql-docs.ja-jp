@@ -12,12 +12,12 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62754140"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805158"
 ---
 # <a name="set-warning-thresholds"></a>[警告しきい値の設定]
   このダイアログ ボックスでは、 **[データベース ミラーリング モニター]** ダイアログ ボックスのナビゲーション ツリーで選択されているデータベースの警告しきい値を有効にしたり構成したりできます。  
@@ -30,7 +30,7 @@ ms.locfileid: "62754140"
   
 ## <a name="options"></a>および  
  *サーバー インスタンスと接続状態*  
- パートナー サーバー インスタンスの名前が *SYSTEM***\\***INSTANCE_NAME* という形式で表示されます。 既定のサーバー インスタンスの場合、システム名だけが表示されます。  
+ パートナー サーバー インスタンスの名前が _SYSTEM_**\\**_INSTANCE_NAME_という形式で表示されます。 既定のサーバー インスタンスの場合、システム名だけが表示されます。  
   
  このフィールドには、該当のサーバー インスタンスに対して現在モニターが接続されているかどうかも示されます。 次の接続ステータスがあります。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62754140"
   
  イベントがパフォーマンスのイベント ログに書き込まれるのは、状態テーブルの更新時に、該当する値がしきい値以上になった場合だけです。 状態が更新されるまでの間に、一時的にピーク値がしきい値に達した場合、そのピーク値は反映されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
