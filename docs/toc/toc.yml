@@ -8692,7 +8692,7 @@
               href: ../ssms/install-other-languages.md
             - name: SSMS のサポート ポリシー
               href: ../ssms/support-policy.md
-        - name: 'チュートリアル:SQL Server Management Studio'
+        - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
           items:
             - name: SSMS を使用した SQL Server に対する接続およびクエリ
@@ -9274,6 +9274,10 @@
                           items:
                             - name: スクリプト生成ウィザードでサポートされるオブジェクト
                               href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: '[トラブルシューティング]'
+          items:
+            - name: 完全メモリ ダンプの取得
+              href: ../ssms/troubleshoot/get-full-memory-dump.md
         - name: References
           items:
             - name: SSMS 環境

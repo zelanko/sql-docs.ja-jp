@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690812"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805169"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -778,6 +778,10 @@ GO
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |QUERY_TRACEOUT |単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。| 
 |RBIO_WAIT_VLF |TBD <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|RBIO_RG_STORAGE |ページ サーバーの消費量は遅延ログにより、ハイパー スケールのデータベースのコンピューティング ノードが制限されているときに発生します。 <br /> **適用対象**:Azure SQL データベースのハイパー スケールします。|
+|RBIO_RG_DESTAGE |ハイパー スケールのデータベースのコンピューティング ノードが長期的なログのストレージ遅延ログの使用量のため制限されているときに発生します。 <br /> **適用対象**:Azure SQL データベースのハイパー スケールします。|
+|RBIO_RG_REPLICA |ためにデータベースのコンピューティング ノードが制限されているハイパー スケールで読み取り可能セカンダリ レプリカ ノード ログの使用量を遅延する場合に発生します。 <br /> **適用対象**:Azure SQL データベースのハイパー スケールします。|
+|RBIO_RG_LOCALDESTAGE |ログ サービスによってハイパー スケールのデータベースのコンピューティング ノードが遅延ログの使用量のため制限されているときに発生します。 <br /> **適用対象**:Azure SQL データベースのハイパー スケールします。|
 |RECOVER_CHANGEDB |ウォーム スタンバイ データベース内で、データベースの状態の同期中に発生します。| 
 |RECOVERY_MGR_LOCK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
