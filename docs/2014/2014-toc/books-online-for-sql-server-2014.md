@@ -19,17 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62470472"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836204"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Books Online for SQL Server 2014
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® オンライン ブックへようこそ。 オンライン ブックには、タスクの説明とリファレンスのドキュメントが含まれており、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用してデータ管理およびビジネス インテリジェンスに関連する作業を行う方法が記載されています。  
-  
+
+SQL Server 2016、およびそれ以降のバージョンが記載されている[ここ](https://docs.microsoft.com/sql/sql-server/index)します。 SQL Server 2012、および以前のバージョンが記載されている[ここ](#previous-versions-gm2014)します。 <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
+
  **お試しください:**  
  ![Azure Virtual Machine のアイコン](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure アカウントをすでにお持ちですか?  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 SQL Server 2014 (SP1) の詳細については、次を参照してください。 [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。 
   
@@ -64,7 +66,11 @@ ms.locfileid: "62470472"
 -   [データ プラットフォーム デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [XML デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=42458)  
-  
+
+## <a name="previous-versions-gm2014"></a> SQL Server 2005、2008、2012、2016 +
+
+[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>参照  
 
  [SQL Server 構成マネージャーのヘルプ](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
