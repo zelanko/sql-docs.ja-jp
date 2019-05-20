@@ -21,14 +21,18 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1a7e2f0320790959df4f29bfd586f70acec9de7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271045"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726802"
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   フラット ファイル ソースは、テキスト ファイルからデータを読み取ります。 テキスト ファイルには、Delimited 形式、FixedWidth 形式、または Mixed 形式を使用できます。  
   
 -   Delimited 形式では、列区切り記号と行区切り記号を使用して、列と行が定義されます。  

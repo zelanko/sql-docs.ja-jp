@@ -13,14 +13,18 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c16d757432c964f778b39c8cc4e290faf7711ef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fee01a2531ce405f212c2559d91ec0ea241b9784
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277591"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728625"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>複数のテーブルの増分読み込みを実行する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「 [変更データ キャプチャによる増分読み込みの向上](../../integration-services/change-data-capture/change-data-capture-ssis.md)」の図は、1 つのみのテーブルの増分読み込みを実行する基本的なパッケージを示しています。 ただし、1 つのテーブルの読み込みよりも、複数のテーブルの増分読み込みを実行する必要がある場合の方が一般的です。  
   
  複数のテーブルの増分読み込みを実行する場合の手順には、すべてのテーブルに対して一度実行する必要があるものと、ソース テーブルごとに繰り返し実行する必要があるものがあります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]でこれらの手順を実装する方法は複数あります。  

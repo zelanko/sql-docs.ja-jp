@@ -29,14 +29,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a30e2b2ff3ee716f48b3ba91bf0bbea6b4cf571d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba1a50942233f44586be498306e2b58f6fa04223
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274477"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726098"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
   
 > [!NOTE]  
@@ -118,7 +122,7 @@ ms.locfileid: "58274477"
  **使用できる入力列**  
  重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
   
- **名前**  
+ **[名前]**  
  使用できる入力列の名前を表示します。  
   
  **[パススルー]**  

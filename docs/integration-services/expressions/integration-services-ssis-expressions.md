@@ -17,14 +17,18 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6bf32e59bd433ec0916568e8eb873724beac13b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f5b93a38b461cb56348902beef37ef696d3f0723
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290348"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725304"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) の式
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   式は、単一のデータ値が得られる、識別子、リテラル、関数、演算子などの記号の組み合わせです。 単純式には、1 つの定数、変数、または関数を指定できます。 より頻繁に使用されるのは複雑な式で、複数の演算子や関数を使用し、複数の列や変数を参照します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、CASE ステートメントの条件の定義、データ列値の生成および更新、変数への値の代入、実行時のプロパティの更新および作成、優先順位制約の制約の定義、および For ループ コンテナーでの利用に式を使用できます。  
   
  式は、式の言語および式エバリュエーターに基づいています。 式エバリュエーターは式を解析して、式の言語のルールに従っているかどうか判断します。 式の構文およびサポートされているリテラルと識別子の詳細については、次のトピックを参照してください。  

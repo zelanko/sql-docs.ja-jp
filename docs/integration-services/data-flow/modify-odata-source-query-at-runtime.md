@@ -11,14 +11,18 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4835193453b1f58f7aa6dec5c81cd3c349bc6a04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a29245c790f97d92529ff2bf1e100675b3c9530
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275433"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726693"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの提供
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  データ フロー タスクの **[OData ソース].[クエリ]** プロパティに*式*を追加すると、OData ソースのクエリを実行時に変更できます。  
   
  返される列は、デザイン時に返されたものと同じ列である必要があります。それ以外の場合、パッケージの実行時にエラーが発生します。 $select クエリ オプションを使用する場合は、同じ列を (同じ順序で) 指定してください。 $select オプションを使用するより安全な代替手段は、ソース コンポーネント UI で、直接使用することを希望しない列を選択解除することです。  

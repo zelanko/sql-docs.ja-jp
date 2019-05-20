@@ -15,14 +15,18 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 199c6a433523fed4a4cb164669529b2426df37f7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04457acc8bd47f3802ba7ad68797d1745117871d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275190"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725425"
 ---
 # <a name="expression-builder"></a>[式ビルダー]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[式ビルダー]** ダイアログ ボックスには、変数を一覧表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の言語に含まれる関数、型キャスト、および演算子への組み込み参照を提供するグラフィカル ユーザー インターフェイスが用意されています。このグラフィカル ユーザー インターフェイスを使用して、プロパティ式の作成および編集や、変数の値を設定する式の作成を行えます。  
   
  プロパティ式とは、プロパティに割り当てられる式です。 式が評価されると、式の評価結果を使用してプロパティが動的に更新されます。 同様に、変数内で式を使用することにより、式の評価結果で変数値を更新することができます。  

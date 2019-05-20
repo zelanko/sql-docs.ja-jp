@@ -11,14 +11,18 @@ ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cae6eec034f56f94635ec33bd2550e96a726d7c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 358780e6a25e6f39459e90eaba7f7d6e4b3e7ac8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270506"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725684"
 ---
 # <a name="delete-packages"></a>パッケージを削除する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]では、ファイル システムに保存したパッケージを削除できます。 パッケージを削除した場合は完全に削除されるため、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに復元することはできません。  
   
 > [!NOTE]  

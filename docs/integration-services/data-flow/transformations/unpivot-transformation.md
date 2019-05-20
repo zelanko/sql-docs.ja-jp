@@ -19,14 +19,18 @@ ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33ccc6269c37f3f0b97e6f10de8d53ca58854a7c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6bd29508a760421722a776aa3924c3866bee79f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277821"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725739"
 ---
 # <a name="unpivot-transformation"></a>ピボット解除変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ピボット解除変換は、単一のレコード内にある複数の列の値を、単一の列内で同じ値を持つ複数のレコードに展開することにより、正規化されていないデータセットを正規化されたバージョンに変換します。 たとえば、顧客名を一覧表示するデータセットに、顧客ごとに 1 つの行があり、製品と購入した数量がその行の列に表示されているとします。 ピボット解除変換がこのデータセットを正規化すると、データセットには、顧客が購入した各製品に対して異なる行が含まれるようになります。  
   
  次の図は、データが Product 列でピボット解除される前のデータセットを示しています。  
@@ -64,7 +68,7 @@ ms.locfileid: "58277821"
  **使用できる入力列**  
  チェック ボックスを使用して、行でピボットする列を指定します。  
   
- **名前**  
+ **[名前]**  
  使用できる入力列の名前を表示します。  
   
  **[パススルー]**  

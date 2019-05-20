@@ -24,14 +24,18 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 43b91f4afcedf7348919758fa2ce691b6a457d72
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270593"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724224"
 ---
 # <a name="working-with-images-with-the-script-task"></a>スクリプト タスクによる画像の操作
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   製品またはユーザーのデータベースには、テキストや数値データに加え、画像も頻繁に含まれています。 Microsoft .NET Framework の **System.Drawing** 名前空間では、画像を操作するためのクラスが提供されています。  
   
  [例 1: 画像を JPEG 形式に変換する](#example1)  
