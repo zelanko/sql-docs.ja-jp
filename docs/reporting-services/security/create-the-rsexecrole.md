@@ -2,20 +2,20 @@
 title: RSExecRole を作成する | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f08ddfed806f1b6476599b0d83ef3d795633cb0e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8596cf62ddf4212023841db003ec7936a2cb70c7
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029698"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577909"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
 
@@ -47,7 +47,7 @@ ms.locfileid: "50029698"
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio を使用して master システム データベースに RSExecRole を作成するには  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続します。  
+1.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続します。  
   
 2.  **[データベース]** を開きます。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "50029698"
   
 11. **[検索]** をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 既定では、 **[特定のオブジェクト]** オプションが選択されています。  
   
-12. **[OK]** をクリックします。 **[オブジェクトの選択]** ダイアログ ボックスが表示されます。  
+12. [**OK**] をクリックします。 **[オブジェクトの選択]** ダイアログ ボックスが表示されます。  
   
 13. **[オブジェクトの種類]** をクリックします。  
   
 14. **[拡張ストアド プロシージャ]** をクリックします。  
   
-15. **[OK]** をクリックします。  
+15. [**OK**] をクリックします。  
   
 16. **[参照]** をクリックします。  
   
@@ -118,13 +118,13 @@ ms.locfileid: "50029698"
   
 9. **[追加]** をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 **[オブジェクトの指定]** オプションが既定で選択されます。  
   
-10. **[OK]** をクリックします。  
+10. [**OK**] をクリックします。  
   
 11. **[オブジェクトの種類]** をクリックします。  
   
-12. **[ストアド プロシージャ]** をクリックします。  
+12.  **[ストアド プロシージャ]** をクリックします。  
   
-13. **[OK]** をクリックします。  
+13. [**OK**] をクリックします。  
   
 14. **[参照]** をクリックします。  
   
@@ -160,13 +160,13 @@ ms.locfileid: "50029698"
   
 20. [セキュリティ保護可能なリソース] タブで、もう一度 **[追加]** をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 **[オブジェクトの指定]** オプションが既定で選択されます。  
   
-21. **[OK]** をクリックします。  
+21. [**OK**] をクリックします。  
   
 22. **[オブジェクトの種類]** をクリックします。  
   
-23. **[テーブル]** をクリックします。  
+23.  **[テーブル]** をクリックします。  
   
-24. **[OK]** をクリックします。  
+24. [**OK**] をクリックします。  
   
 25. **[参照]** をクリックします。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "50029698"
   
 6.  **[接続テスト]** をクリックします。  
   
-7.  **[次へ]** をクリックします。  
+7.  [**次へ**] をクリックします。  
   
 8.  [データベース] で、レポート サーバー データベースを選択します。  
   
