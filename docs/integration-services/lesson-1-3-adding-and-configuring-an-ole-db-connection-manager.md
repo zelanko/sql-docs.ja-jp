@@ -11,14 +11,18 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f52d5b011e2932ceeadc7f81a564dd52ad503917
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e55427c2249a93d2a97bbc13b7385dd56fac5d01
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275001"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723505"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>レッスン 1-3:OLE DB 接続マネージャーを追加し、構成する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 データ ソースに接続するためのフラット ファイル接続マネージャーを追加したら、データの変換先に接続するための OLE DB 接続マネージャーを追加します。 パッケージに OLE DB 接続マネージャーを追加すれば、OLE DB 対応のデータ ソースからデータを抽出したり、OLE DB 対応のデータ ソースへデータを読み込んだりできるようになります。 OLE DB 接続マネージャーでは、接続に必要なサーバー、認証方法、既定のデータベースを指定できます。  
   

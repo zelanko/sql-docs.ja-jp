@@ -15,14 +15,18 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64218cb8435f7bb30fc1a1309daeb93632d2bad9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1109e0b7c86e03efe41c05b47af9e74c266edb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277861"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724131"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「[スクリプト コンポーネントのコーディングおよびデバッグ](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」で説明したように、スクリプト コンポーネント プロジェクトには、次の 3 つのプロジェクト アイテムがあります。  
   
 1.  **ScriptMain** アイテム。**ScriptMain** クラスを含み、ここにカスタム コードを記述します。 **ScriptMain** クラスは **UserComponent** クラスから継承されます。  

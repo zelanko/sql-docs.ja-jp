@@ -16,14 +16,18 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ef0f0c4cb73c28d23eec35a30f8d120c9b49c66f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 480716e1afd453a9eb229dbbe11b35e877bb77e9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280376"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725100"
 ---
 # <a name="operators-ssis-expression"></a>演算子 (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このセクションでは、式の言語が提供する演算子、および式エバリュエーターが使用する演算子の優先順位と結合性について説明します。  
   
  次の表に、演算子に関するこのセクションのトピックの一覧を示します。  

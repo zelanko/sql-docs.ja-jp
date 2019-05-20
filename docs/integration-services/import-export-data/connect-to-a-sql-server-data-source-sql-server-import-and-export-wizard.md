@@ -10,14 +10,18 @@ ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ebdf33cf262d000af9b1604299e95883f8ab0d12
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 4d6da9ab263164b58b88105e27c4a92abe158979
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221986"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723907"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>SQL Server データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft SQL Server** データ ソースに接続する方法を説明します。 SQL Server への接続に使用できるいくつかのデータ プロバイダーがあります。
 
 > [!TIP]

@@ -11,14 +11,18 @@ ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b82c9db104783e4a725964a2d781d4f3ded40aeb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 821071096967e1a6bfa767f920baafeaa094b0dc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289708"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727150"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC ソースのカスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   次の表は、CDC ソースのカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  
   
 |プロパティ名|データ型|[説明]|  

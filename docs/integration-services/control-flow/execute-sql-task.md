@@ -21,14 +21,18 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273914"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727722"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
   
 -   データを挿入する準備として、テーブルまたはビューを切り捨てます。  
@@ -115,7 +119,7 @@ ms.locfileid: "58273914"
 Transact-SQL クエリ言語の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
- **名前**  
+ **[名前]**  
  ワークフロー内の SQL 実行タスクに一意な名前を指定します。 指定された名前は [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
  **[説明]**  

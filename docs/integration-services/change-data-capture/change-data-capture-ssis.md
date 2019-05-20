@@ -14,14 +14,18 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06e24dcef49f54000010455c1070877f82947ebe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9ff79d145f11d64c7ac97a9d068ea99ec7886d2e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281116"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729000"
 ---
 # <a name="change-data-capture-ssis"></a>変更データ キャプチャ (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、変更データ キャプチャによって、ソース テーブルからデータ マートおよびデータ ウェアハウスへの増分読み込みを効率的に実行するための効果的なソリューションが実現します。  
   
 ## <a name="what-is-change-data-capture"></a>変更データ キャプチャとは  
@@ -41,7 +45,7 @@ ms.locfileid: "58281116"
   
  上の図に示したように、変更データの増分読み込みを実行するパッケージを作成するには、次の手順を実行します。  
   
- **ステップ 1: 制御フローのデザイン**  
+ **ステップ 1:制御フローのデザイン**  
  パッケージの制御フローでは、次のタスクを定義する必要があります。  
   
 -   取得するソース データに対する変更の間隔の開始と終了の **datetime** 値を計算します。  

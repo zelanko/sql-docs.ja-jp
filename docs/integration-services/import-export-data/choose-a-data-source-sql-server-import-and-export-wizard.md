@@ -12,14 +12,18 @@ ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 08baea2a92d21d9dca3a53dc17d6499f77e193d3
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 302cb0b4f041c674eda5af46bec91ca768d8f822
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222076"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724012"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [ようこそ] ページの後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[データ ソースを選ぶ]** が表示されます。 このページでは、データ ソースおよびデータに接続する方法についての情報を指定します。
   
 使用できるデータ ソースの詳細については、「 [どのようなデータ ソースと変換先を使用できるでしょうか。](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。

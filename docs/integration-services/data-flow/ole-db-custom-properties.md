@@ -11,14 +11,18 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c89571f4f1447574e50ceb1ad7c487badbc551d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f57318058b9640e771b30311fe0f7513dc7575e0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277951"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726599"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB カスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **変換元のカスタム プロパティ**  
   
  OLE DB ソースには、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  

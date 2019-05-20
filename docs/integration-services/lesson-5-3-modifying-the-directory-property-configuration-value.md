@@ -11,14 +11,18 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b685268f1a4b76adf1d8947dde53c251190ee3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274830"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721211"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>レッスン 5-3:Directory プロパティの構成値の変更
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 ここでは、**SSISTutorial.dtsConfig** ファイルに保存されている構成設定を変更し、パッケージ レベル変数 `User::varFolderName` の **Value** プロパティを設定します。 この変数は、Foreach ループ コンテナーの **Directory** プロパティを更新します。 変更後の値は、前の実習で作成した **New Sample Data** フォルダーを参照するようにします。 構成設定を変更し、パッケージを実行すると、構成ファイルの変数の **Directory** プロパティが更新されます。 以前は、**Directory** プロパティ値はパッケージに含まれていました。  
   

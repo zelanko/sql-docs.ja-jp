@@ -14,14 +14,18 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0abad5caf128ac49a3d764684716436f54a14322
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 69d2edc4de33348daaab80344f9174ae7e308e27
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271066"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724933"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減算) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   最初の数値式から 2 番目の数値式を減算します。  
   
 ## <a name="syntax"></a>構文  

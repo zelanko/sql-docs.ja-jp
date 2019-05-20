@@ -11,14 +11,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e1b4aef64ef4b7f0d99d7b5f44e88ca26d063c0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281666"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722567"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>レッスン 1:SSIS によるプロジェクトと基本パッケージの作成
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 この実習では、シンプルな ETL パッケージを作成します。このパッケージは、1 つのフラット ファイル ソースからデータを抽出し、2 つの参照変換を使用してそのデータを変換します。さらに、変換したデータを **AdventureWorksDW2012** サンプル データベースの **FactCurrencyRate** ファクト テーブルのコピーに書き込みます。 ここでは、新しいパッケージを作成する方法、データの変換元と変換先の接続を追加、構成する方法、新しい制御フロー コンポーネントとデータ フロー コンポーネントを操作する方法を学習します。  
   
@@ -83,7 +87,7 @@ SampleCurrencyData.txt ファイルのソース データの例:
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: 新しい Integration Services プロジェクトを作成する](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [ステップ 1:新しい Integration Services プロジェクトを作成する](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
 -   [ステップ 2:フラット ファイル接続マネージャーの追加と構成](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
@@ -102,5 +106,5 @@ SampleCurrencyData.txt ファイルのソース データの例:
 -   [ステップ 9:レッスン 1 パッケージをテストする](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1: 新しい Integration Services プロジェクトを作成する](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+[ステップ 1:新しい Integration Services プロジェクトを作成する](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   

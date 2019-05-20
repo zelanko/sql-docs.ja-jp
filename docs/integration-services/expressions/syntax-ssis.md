@@ -14,14 +14,18 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9d56775d0754676d22717a193ea6749ae70a11f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 56134fd6e9c71d041f0feeed075d350935fe78a0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279846"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724920"
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文は、C 言語および C# 言語が使用する構文と同様です。 式には、識別子 (列および変数)、リテラル、演算子、関数などの要素が含まれます。 このトピックでは、式エバリュエーターの構文がさまざまな式要素を適用する際の、一意の必要条件の概要について説明します。  
   
 > [!NOTE]  
@@ -41,7 +45,7 @@ ms.locfileid: "58279846"
 ## <a name="literals"></a>リテラル  
  式には、数値、文字列、およびブール値のリテラルを含めることができます。 文字列リテラルを式で使用するには、引用符で囲む必要があります。 数値リテラルおよびブール値のリテラルには、引用符は付けません。 式言語には、通常エスケープされる文字のエスケープ シーケンスが含まれます。 詳細については、「[リテラル (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)」を参照してください。  
   
-## <a name="operators"></a>演算子  
+## <a name="operators"></a>オペレーター  
  式エバリュエーターで提供される演算子セットの機能は、Transact-SQL、C++、C# などの言語に含まれる、演算子セットの機能と同様です。 ただし、式言語には別の演算子が含まれており、周知の記号とは異なる記号が使用されます。 詳細については、「[演算子 (SSIS)](../../integration-services/expressions/operators-ssis-expression.md)」を参照してください。  
   
 ### <a name="namespace-resolution-operator"></a>名前空間を解決する演算子  

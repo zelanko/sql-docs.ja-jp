@@ -10,14 +10,18 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e75ab1dd193cd8691166eff42fe30d11c89503dc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dafe47a0a136c7ab5640fc667b46cc496cfdbcb2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290518"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723699"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードの手順
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードを使用して、データをインポートおよびエクスポートする一連の手順について説明します。 また、ウィザードで表示される各ページやダイアログ ボックスを説明するドキュメントの個々のページへのリンクも含まれます。
 
 このトピックでは、ウィザードの**手順**についてのみ説明します。 他のものをお探しの場合は、「[関連タスクとコンテンツ](#related)」を参照してください。

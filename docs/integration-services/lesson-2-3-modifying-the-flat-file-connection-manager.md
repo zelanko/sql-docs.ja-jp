@@ -11,14 +11,18 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf1179c8415b7db67e6552ceb0d9db24c4d585a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278926"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722547"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>レッスン 2-3:フラット ファイル接続マネージャーの変更
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 この実習では、レッスン 1 で作成したフラット ファイル接続マネージャーを変更します。 そのフラット ファイル接続マネージャーはファイルを 1 つ静的に読み込むように構成されています。 フラット ファイル接続マネージャーで繰り返しファイルを読み込むには、ユーザー定義変数 `User::varFileName` を使用するように接続マネージャーの ConnectionString プロパティを変更します。この変数に、実行時に読み込むファイルのパスを定義します。  
   

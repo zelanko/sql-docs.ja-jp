@@ -15,14 +15,18 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80f4948d7223dbe4f95b7b81fcc7043796cf2809
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289938"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728308"
 ---
 # <a name="cache-connection-manager"></a>キャッシュ接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) からデータを読み取り、そのデータをキャッシュ ファイルに保存できます。 キャッシュ ファイルを使用するようにキャッシュ接続マネージャーを構成したかどうかに関係なく、データは常にメモリに格納されます。  
   
  キャッシュ変換を使用して、データ フロー内の接続されているデータ ソースのデータをキャッシュ接続マネージャーに書き込みます。 パッケージ内の参照変換は、データに対する参照を実行します。  

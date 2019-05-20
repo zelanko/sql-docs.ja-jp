@@ -13,14 +13,18 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53021d9d3f2081ffb14876cd325bb8f1df8bf180
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db439c34845dc01c54752e01428fa9793f994fdb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271290"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729092"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>変換先に変更を適用する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、3 番目に行う最後のタスクは、変更を変換先に適用することです。 挿入を適用するコンポーネント、更新を適用するコンポーネント、および削除を適用するコンポーネントが必要です。  
   
 > [!NOTE]  

@@ -14,14 +14,18 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67f493fc040e090294afa9671123613f5acac50a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2c6253baf56d869eb5748f07a9648a7e8e57ccb8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274076"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725340"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (より大きい) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   最初の式が 2 番目の式より大きいかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
   
 > [!NOTE]  

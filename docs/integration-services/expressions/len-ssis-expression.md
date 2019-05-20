@@ -14,14 +14,18 @@ ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 836be2ee439fa39b433b2c89755e4402bad2e8e3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 83256bfc8b610869b8bbc1938f7846ce41971b1b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270519"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725282"
 ---
 # <a name="len-ssis-expression"></a>LEN (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文字式の文字数を返します。 文字列の先頭および末尾に空白が含まれる場合、この関数は、それらの空白をカウントに含めます。 1 バイト文字の文字列と 2 バイト文字の文字列が同一の場合、LEN 関数は同一の値を返します。  
   
 ## <a name="syntax"></a>構文  

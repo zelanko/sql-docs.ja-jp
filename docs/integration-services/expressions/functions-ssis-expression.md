@@ -17,14 +17,18 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0b768e591f73d004959b728d055a9232043c594
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba74954d0cf587161b02d1a37a09f222722f9f61
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272744"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725390"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  
   
  関数は、次の各グループに分類されます。  
@@ -48,7 +52,7 @@ ms.locfileid: "58272744"
 |[LN &#40;SSIS 式&#41;](../../integration-services/expressions/ln-ssis-expression.md)|数値式の自然対数を返します。|  
 |[LOG &#40;SSIS 式&#41;](../../integration-services/expressions/log-ssis-expression.md)|数値式の常用対数を返します。|  
 |[POWER &#40;SSIS 式&#41;](../../integration-services/expressions/power-ssis-expression.md)|指定された数値式の結果をべき乗値で返します。|  
-|[ROUND &#40;SSIS 式&#41;](../../integration-services/expressions/round-ssis-expression.md)|指定された長さまたは有効桁数に丸めた数値式を返します。 .|  
+|[ROUND &#40;SSIS 式&#41;](../../integration-services/expressions/round-ssis-expression.md)|指定された長さまたは有効桁数に丸めた数値式を返します。 。|  
 |[SIGN &#40;SSIS 式&#41;](../../integration-services/expressions/sign-ssis-expression.md)|数値式の符号として正 (+)、負 (-)、ゼロ (0) のいずれかを返します。|  
 |[SQUARE &#40;SSIS 式&#41;](../../integration-services/expressions/square-ssis-expression.md)|数値式の 2 乗値を返します。|  
 |[SQRT &#40;SSIS 式&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|数値式の平方根を返します。|  

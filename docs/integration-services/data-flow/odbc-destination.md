@@ -16,14 +16,18 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2914cdec402cee3be7ba92d74e0c8ff7db8fd41e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273431"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726630"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 入力先は、ODBC でサポートされているデータベース テーブルにデータを一括で読み込みます。 ODBC 入力先は ODBC 接続マネージャーを使用してデータ ソースに接続します。  
   
  ODBC 入力先には、入力列と入力先データ ソースの列との間のマッピングが含まれています。 入力列をすべての入力先列にマップする必要はありませんが、入力先列のプロパティによっては、入力先列にマップされる入力列がない場合、エラーが発生することがあります。 たとえば、入力先列で NULL 値が許容されていない場合は、入力列をその列にマップする必要があります。 また、さまざまな種類の列をマッピングできますが、入力データと入力先の列の型との間に互換性がない場合は、実行時にエラーが発生します。 エラー動作設定に応じて、エラーが無視されるか、エラーが発生するか、エラー出力に行が送信されます。  

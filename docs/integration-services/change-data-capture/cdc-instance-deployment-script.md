@@ -11,14 +11,18 @@ ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e75d66755f85650c6ac8630c08dc38e5d295b6f1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c9942407693caaf1a8c0c2ef3222c20a237774c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273670"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729102"
 ---
 # <a name="cdc-instance-deployment-script"></a>[CDC インスタンス配置スクリプト]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CCD インスタンス配置スクリプトを表示する [CDC インスタンス配置スクリプト] ダイアログ ボックスです。 このスクリプトは、すべてのアーティファクトが異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにある CDC データベースを再作成するために使用できます。  
   
  配置スクリプトの終了時に、次のことを確認する必要があります。  

@@ -13,14 +13,18 @@ ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31dd335814a54e44b7db90c26a13b4417734a384
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 34f07a3b0518e202cbbcba0f15d7782da56921d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289648"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728588"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>挿入、更新、および削除を処理する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変更データの増分読み込みを実行する Integration Services パッケージのデータ フローにおいて、2 番目のタスクは、挿入、更新、および削除を分割することです。 その後、適切なコマンドを使用してそれらの変更を変換先に適用できるようになります。  
   
 > [!NOTE]  

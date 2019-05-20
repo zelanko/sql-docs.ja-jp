@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274309"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726210"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   緩やかに変化するディメンション ウィザードは、緩やかに変化するディメンションの変換用のエディターとして機能します。 緩やかに変化するディメンションのデータのデータ フローを構築および構成する作業は、複雑なタスクになる場合があります。 緩やかに変化するディメンション ウィザードを使用すると、列のマッピング、ビジネス キーの列の選択、列の変化する属性の設定、および推定ディメンション メンバー サポートの構成などの手順の指針が示され、これにより、最も簡単な方法で、緩やかに変化するディメンションの変換出力のデータ フローを構築できます。  
   
  ディメンション テーブルで、ビジネス キーの列を少なくとも 1 つ選択し、入力列にマップする必要があります。 ビジネス キーの値は、変換元のレコードをディメンション テーブルのレコードにリンクします。 変換はこのマッピングを使用してディメンション テーブルのレコードを検索し、レコードが新しいものか変更されたものかを判断します。 通常、変換元の主キーがビジネス キーとなりますが、レコードを一意で識別し、値が変更されない限り、代替キーを使用することもできます。 複数の列から成る複合キーをビジネス キーとすることもできます。 ディメンション テーブルの主キーは、通常、代理キーです。つまり、ID 列、またはスクリプトなどのカスタム ソリューションによって自動的に生成された数値です。  

@@ -15,14 +15,18 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c6167895a35781d0adf91869a4bcdc3ab4d79a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 20a65f9755e0cea30a79435f885912c15cce5e7b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275261"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725768"
 ---
 # <a name="transform-data-with-transformations"></a>変換を使用してデータを変換する
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが含まれています。  
   
  次の図は、1 つの変換元、2 つの変換、および 1 つの変換先を持つ、簡単なデータ フローを示しています。  

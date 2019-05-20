@@ -11,14 +11,18 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ba2488aff0efdb6ed0d1c4ae03ec46ba6a6a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80d2eb1ec30b4729deb4891c451fc5967bec9d54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277911"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722066"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>レッスン 3-2:ログ記録の追加および構成
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 ここでは、Lesson 3.dtsx パッケージのデータ フローのログを有効にします。 次に、PipelineExecutionPlan イベントと PipelineExecuteTrees イベントを記録するテキスト ファイル ログ プロバイダーを構成します。 テキスト ファイル ログ プロバイダーによって、表示や移行が容易なログが作成されます。 パッケージの基本テスト段階では、ログ ファイルのこのような簡潔性が便利です。 ログ エントリは、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[ログ イベント]** ウィンドウでも確認できます。  
   

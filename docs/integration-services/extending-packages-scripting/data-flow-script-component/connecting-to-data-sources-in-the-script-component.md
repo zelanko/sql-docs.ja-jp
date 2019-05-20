@@ -13,14 +13,18 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 247b0b7a1f54417257d3af0e59f07dadf6d669e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f9d4fecd34be2464947ce3c493b8bd333d2ce0c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280396"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724164"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>スクリプト コンポーネントでのデータ ソースへの接続
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   接続マネージャーは、便宜上、特定の種類のデータ ソースに接続するために必要な情報をカプセル化して格納するユニットです。 詳細については、「[Integration Services (SSIS) の接続](../../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
  既存の接続マネージャーを、変換元または変換先コンポーネントのカスタム スクリプトでアクセスできるようにするには、**[スクリプト変換エディター]** の **[接続マネージャー]**  ページで、**[追加]** および **[削除]**  ボタンをクリックします。 ただし、データの読み込みや保存、場合によってはデータ ソースとの接続や切断を行うためには、独自のカスタム コードを記述する必要があります。 **[スクリプト変換エディター]** の **[接続マネージャー]** ページの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」および「[スクリプト変換エディター &#40;[接続マネージャー] ページ&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)」を参照してください。  

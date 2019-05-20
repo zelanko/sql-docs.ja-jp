@@ -14,14 +14,18 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d47462eeb7259b0289f7c554c0c6a4bd30dbb995
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5cf167278c898b71466379dc1e65d783ce2b710b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275232"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725662"
 ---
 # <a name="add-or-change-a-property-expression"></a>プロパティ式を追加または変更する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージ、タスク、Foreach ループ コンテナー、For ループ コンテナー、シーケンス コンテナー、イベント ハンドラー、パッケージおよびプロジェクト レベルの接続マネージャー、およびログ プロバイダーに対してプロパティ式を作成できます。  
   
  プロパティ式を作成または変更するには、 **[プロパティ式エディター]** か **[式ビルダー]** を使用します。 **[プロパティ式エディター]** には、タスクおよびコンテナーで使用可能なカスタム エディターか、 **[プロパティ]** ウィンドウからアクセスできます。 **[式ビルダー]** には、 **[プロパティ式エディター]** 内からアクセスできます。 **[プロパティ式エディター]** または **[式ビルダー]** のいずれかで式を作成することができますが、**[式ビルダー]** には、複雑な式の作成を容易にするグラフィカル ツール セットが備わっています。  

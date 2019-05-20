@@ -21,14 +21,18 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bcc6036ba1821b502ad04fe003b21ac1a30b64b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bb3ad2907396d88515f9d661e8fdfddaba4e5fc5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279966"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723994"
 ---
 # <a name="using-variables-in-the-script-task"></a>スクリプト タスクでの変数の使用
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   スクリプト タスクで変数を使用すると、パッケージ内の別のオブジェクトとデータを交換できます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
  スクリプト タスクは、**Dts** オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを使用して、パッケージ内の <xref:Microsoft.SqlServer.Dts.Runtime.Variable> オブジェクトからデータを読み取ったり、オブジェクトにデータを書き込んだりします。  

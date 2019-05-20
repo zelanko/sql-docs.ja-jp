@@ -11,14 +11,18 @@ ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 953d462e6756ea3c9e3c8a7d79b51b82904bc9d8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5aec8974f2b21bd28869b2c06be9eadbf5cd239c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273460"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728698"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>CDC Service のコマンド ライン インターフェイスを使用する方法
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC サービス プログラム xdbcdcsvc.exe は、通常、Oracle CDC Windows サービスを実行します。ただし、コマンド ラインから直接呼び出して、Oracle CDC Windows サービスを作成または削除することもできます。  
   
 ### <a name="to-use-the-command-line"></a>コマンド ラインを使用するには  

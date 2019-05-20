@@ -18,14 +18,18 @@ ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6023db6e91b7d689afe621b23b6b0654ff70d985
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7ff2de68a43fff15b452579c6ecf681ea586772c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290428"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726197"
 ---
 # <a name="copy-column-transformation"></a>列コピー変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   列コピー変換は、入力列をコピーして新しい列を変換出力に追加し、新しい列を作成します。 後のデータ フローで、その列コピーに別の変換を適用できます。 たとえば、列コピー変換を使用して列のコピーを作成した後、文字マップ変換を使用してそのコピーしたデータを大文字に変換したり、集計変換を使用して新しい列に集計を適用したりできます。  
   
 ## <a name="configuration-of-the-copy-column-transformation"></a>列コピー変換の構成  

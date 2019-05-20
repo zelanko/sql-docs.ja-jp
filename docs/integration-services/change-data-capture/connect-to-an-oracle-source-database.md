@@ -13,14 +13,18 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e14dc619cfe913239e47090ccc2a635454ea6e92
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 76b35434fd3d9a171478394967ef13cca6411c32
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271710"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728960"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Oracle ソース データベースへの接続
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [Oracle ソース] ページを使用すると、Oracle ソース データベースへの接続に必要な情報を提供できます。 CDC インスタンスによって、接続している Oracle データベースの再実行ログが読み取られます。  
   
  **[Oracle 接続文字列]**  

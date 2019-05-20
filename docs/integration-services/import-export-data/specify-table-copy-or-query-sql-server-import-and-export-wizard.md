@@ -12,14 +12,18 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 708448cb0993af1bdb9f4d1784daf217ffd442c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c147014aa6554612a51be0ed2369aba053c8c68a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270711"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723686"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] \(SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データの出力先とデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[テーブルのコピーまたはクエリの指定]** が表示されます。 このページで、次のいずれかのオプションを選択します。
 -   **1 つ以上のテーブルまたはビューからデータをコピーする**が表示されます。 一覧からテーブル (複数可) を選択します。
 -   **転送するデータを指定するためのクエリを記述する**が表示されます。 SQL クエリのテキストを入力するか貼り付けます。

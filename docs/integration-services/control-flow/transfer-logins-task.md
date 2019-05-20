@@ -17,14 +17,18 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: feed75c71d49f64ad7fd8285fd45f36ed19a7eda
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fc1df2936c51509ffe3e2b68c6ee497e18558dbc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282507"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727392"
 ---
 # <a name="transfer-logins-task"></a>ログイン転送タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ログイン転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス間で 1 つ以上のログインを転送します。  
   
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>SQL Server のインスタンス間でのログインの転送  
@@ -86,7 +90,7 @@ ms.locfileid: "58282507"
   **[ログイン転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ログイン転送タスクの名前と説明を入力します。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **[名前]**  
  ログイン転送タスクの一意の名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

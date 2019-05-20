@@ -11,14 +11,18 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b166ceafd545952039d9c1929dc8aea6dc538d24
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273550"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724499"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 Visual Studio 2015 用の SSDT を入手する方法については、「[最新の SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 
 
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
@@ -34,7 +38,7 @@ SSIS カスタム拡張機能の 5 種類すべてで、複数バージョン対
 -   ログ プロバイダー
 -   データ フロー コンポーネント
 
-マネージド拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 例 :
+マネージド拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 例:
 -   対応バージョンが SQL Server 2012 の場合、デザイナーは、拡張機能の2012 バージョンを読み込みます。
 -   対応バージョンが SQL Server 2016 の場合、デザイナーは、拡張機能の2016 バージョンを読み込みます。
 

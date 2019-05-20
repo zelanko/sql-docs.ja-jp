@@ -11,17 +11,22 @@ author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
-ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
+ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59516468"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580979"
 ---
 # <a name="static-data-masking"></a>静的データ マスク
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-静的データ マスキングは、[SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 プレビュー 5 以降のコンポーネントとしてリリースされました。 Microsoft では、現在のプロトタイプはお客様の期待を満たしていないと判断しました。 そのため、この機能の今後の改良は行われない予定です。 これに代わるものが用意できた場合、弊社の計画を改めてお知らせします。
+静的データ マスキングは、[SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 プレビュー 5 以降のコンポーネントとしてリリースされました。 
+> [!IMPORTANT]
+> Microsoft では、現在のプロトタイプはお客様の期待を満たしていないと判断しました。 そのため、この機能の今後の改良は行われない予定です。 これに代わるものが用意できた場合、弊社の計画を改めてお知らせします。
+>
+
+
 
 ![静的データ マスク](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

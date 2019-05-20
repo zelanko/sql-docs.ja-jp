@@ -11,14 +11,18 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16dde3b03f85834a66c0cdddbc9c530997affde9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d97cf4f9f877ad29f1e5b17d9f79df4a8171b8ed
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279916"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721747"
 ---
 # <a name="lesson-5-1-copy-the-lesson-4-package"></a>レッスン 5-1:レッスン 4 のパッケージをコピーする
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 ここでは、レッスン 4 で作成した **Lesson 4.dtsx** パッケージのコピーを作成します。 レッスン 4 を終了していない場合は、チュートリアルに含まれている、レッスン 4 を完了した状態のパッケージをプロジェクトに追加し、作業用のコピーを作成することもできます。 レッスン 5 の残りの実習では、このパッケージの新しいコピーを使用します。  
   

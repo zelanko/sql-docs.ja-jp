@@ -15,14 +15,18 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c39db8b0bc318b9bf3adb117e72e8f8af3f62c6b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b7802a28926b9e81763bacc85d2623100bb480f1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279086"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725234"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (論理 AND) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   論理 AND 演算を実行します。 両方の条件が TRUE の場合、式は TRUE に評価されます。  
   
 ## <a name="syntax"></a>構文  

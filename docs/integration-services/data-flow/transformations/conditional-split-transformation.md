@@ -17,14 +17,18 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3150d6a8c42a9e4cb0c4cb0cf17b581be61fd418
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 71ecd9b7eb0dc1f1371d31d4e97c230536249168
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280880"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726226"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているため、行が式に一致しない場合は既定の出力に送信されます。  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>条件分割変換の構成  

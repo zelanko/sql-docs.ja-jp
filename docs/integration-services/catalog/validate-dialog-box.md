@@ -14,14 +14,18 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9af217f8a866438774a4345b2fd799609ef5e360
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 26390931bce4a2b26a4b9e2c234368b02a1e0442
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282799"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729154"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **のプロジェクトまたはパッケージの一般的な問題を確認するには、** [検証] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。  
   
  問題がある場合は、ダイアログ ボックスの上部にメッセージが表示されます。 それ以外の場合は、上部に "準備完了" と表示されます。  
@@ -71,7 +75,7 @@ ms.locfileid: "58282799"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **名前**  
+ **[名前]**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  

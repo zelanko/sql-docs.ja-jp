@@ -17,14 +17,18 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70c36478c4dac5ad4bbdf5398acb64dc338994dc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2af46174ea1dc6d21a8bb95daa0e20614d42f6b7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271799"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727370"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master ストアド プロシージャ転送タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Master ストアド プロシージャ転送タスクは、 **のインスタンス上の** master [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース間で、1 つ以上のユーザー定義ストアド プロシージャを転送します。 **master** データベースからストアド プロシージャを転送するには、プロシージャの所有者が dbo である必要があります。  
   
  Master ストアド プロシージャ転送タスクは、すべてのストアド プロシージャまたは指定したストアド プロシージャのみを転送するように設定できます。 このタスクでは、システム ストアド プロシージャはコピーされません。  
@@ -87,7 +91,7 @@ ms.locfileid: "58271799"
 >  このタスクは、コピー元のサーバーの **master** データベースからコピー先のサーバーの **master** データベースに、 **dbo** が所有しているユーザー定義のストアド プロシージャのみを転送します。 コピー先のサーバーでストアド プロシージャを作成するには、そのサーバーの **master** データベースの CREATE PROCEDURE 権限を取得するか、そのサーバーの **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **[名前]**  
  Master ストアド プロシージャ転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

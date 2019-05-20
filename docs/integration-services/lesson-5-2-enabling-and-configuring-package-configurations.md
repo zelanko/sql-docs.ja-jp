@@ -11,14 +11,18 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b65e44de58e2aeea21485b1a2875fa7f00349dc5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271687"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721524"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>レッスン 5-2:パッケージ構成の有効化と構成
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 このウィザードを使用し、Foreach ループ コンテナーの **Directory** プロパティの構成設定が記述された XML 構成ファイルを生成します。 **Directory** プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テストで使用するために、新しいサンプル データ フォルダーにデータを入力します。  
   

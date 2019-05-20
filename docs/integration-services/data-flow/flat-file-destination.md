@@ -20,14 +20,18 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96badece6d707558fa9fcda87bdf9f71af64255e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5c432741bd8ba3d369230ac72e26ee5516d21d97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290438"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726806"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号を使用した固定幅形式、または幅合わせしない形式を使用できます。  
   
  フラット ファイル変換先は、次の方法で構成できます。  

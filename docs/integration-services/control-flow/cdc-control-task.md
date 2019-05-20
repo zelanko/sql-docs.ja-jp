@@ -14,14 +14,18 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283036"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727922"
 ---
 # <a name="cdc-control-task"></a>CDC 制御タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 制御タスクは、変更データ キャプチャ (CDC) パッケージのライフ サイクルの制御に使用します。 CDC 制御タスクは、初期読み込みパッケージと CDC パッケージとの同期処理を行い、CDC パッケージの実行で処理されるログ シーケンス番号 (LSN) 範囲を管理します。 また、エラー シナリオおよび復旧の処理も行います。  
   
  CDC 制御タスクは CDC パッケージの状態を SSIS パッケージ変数に保持します。また、データベース テーブルに保存して、アクティブ化されるパッケージ間および共通の CDC プロセスを実行する複数のパッケージ間 (たとえば、あるタスクが初期読み込みを実行し、別のタスクがトリクル フィード更新を実行する場合) で状態が維持されるようにすることもできます。  

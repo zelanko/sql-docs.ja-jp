@@ -15,14 +15,18 @@ ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8f7a5a5258e1ff90568ce90a34e67b01bd22d4cd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281236"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726740"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込む
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   OLE DB 変換先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
   
 ### <a name="to-load-data-using-an-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込むには  

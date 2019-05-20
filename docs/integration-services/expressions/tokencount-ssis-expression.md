@@ -11,14 +11,18 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c1ee4bf54117a9b2b29aa2e892186d61b44683c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfd70ba37cff4b7516170a4a5ab3191892d78933
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271221"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724909"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定された区切り記号で区切られたトークンを含んでいる文字列内のトークン数を返します。  
   
 ## <a name="syntax"></a>構文  

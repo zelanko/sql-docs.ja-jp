@@ -11,14 +11,18 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7e644744a53318ed1359bc0cdb47c3c896ed5ff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274847"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722090"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>レッスン 3-3:レッスン 3 で作成したチュートリアル パッケージのテスト
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 この実習では、**Lesson 3.dtsx** パッケージを実行します。 パッケージが実行されると、**[ログ イベント]** ウィンドウに、SSIS によってログ ファイルに書き込まれるログ エントリがログ プロバイダー別に一覧表示されます。 パッケージ実行が完了したら、ログ ファイルの内容を閲覧できます。  
   

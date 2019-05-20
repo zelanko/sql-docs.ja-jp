@@ -11,14 +11,18 @@ ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9227f1c3d7cd6e6c6aacfd58c2e3fefa7a19728f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6246183a4a928e1813125676753c827bf20cf8c5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282006"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721167"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>レッスン 5: パッケージ配置モデルの SSIS パッケージ構成を追加する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 パッケージ構成を使用すれば、開発環境の外部からランタイムのプロパティと変数を設定できます。 この構成により、配置と配信が容易で柔軟なパッケージを開発できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、次の種類の構成が用意されています。  
   
@@ -42,7 +46,7 @@ ms.locfileid: "58282006"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: レッスン 4 のパッケージをコピーする](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [ステップ 1:レッスン 4 のパッケージをコピーする](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
 -   [手順 2:パッケージ構成の有効化と構成](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
@@ -52,7 +56,7 @@ ms.locfileid: "58282006"
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
   
--   [ステップ 1: レッスン 4 のパッケージをコピーする](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
+-   [ステップ 1:レッスン 4 のパッケージをコピーする](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
   
   

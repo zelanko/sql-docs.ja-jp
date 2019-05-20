@@ -14,14 +14,18 @@ ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d82da0734ba0e3dda009b912fa9c537e77a6f39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cf646a6cc26b757b65e0c7c1e561aa7aff26d020
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280606"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725500"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ある日付の、特定の日付要素を整数で返します。  
   
 ## <a name="syntax"></a>構文  

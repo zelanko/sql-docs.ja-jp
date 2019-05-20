@@ -11,14 +11,18 @@ ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9ebfb17a69abbaf8482999d3435bbdea11e0822
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 54fb96d23fb02be01068ce5c2206913a0e6716f0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289898"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721057"
 ---
 # <a name="lesson-6-use-parameters-with-the-project-deployment-model-in-ssis"></a>レッスン 6: SSIS でプロジェクト配置モデルを持つパラメーターを使用する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SQL Server 2012 では、Integration Services サーバーにプロジェクトを配置できる新しい配置モデルが導入されました。 Integration Services サーバーを使用すると、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
   
@@ -34,7 +38,7 @@ Integration Services プロジェクト変換ウィザードを使用し、プ�
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
-1.  [ステップ 1: レッスン 5 のパッケージをコピーする](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [ステップ 1:レッスン 5 のパッケージをコピーする](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   
 2.  [手順 2:プロジェクトをプロジェクト配置モデルに変換する](../integration-services/lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
@@ -43,5 +47,5 @@ Integration Services プロジェクト変換ウィザードを使用し、プ�
 4.  [手順 4:レッスン 6 のパッケージを配置する](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1: レッスン 5 のパッケージをコピーする](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
+[ステップ 1:レッスン 5 のパッケージをコピーする](../integration-services/lesson-6-1-copying-the-lesson-5-package.md)  
   

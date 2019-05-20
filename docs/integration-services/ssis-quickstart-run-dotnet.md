@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eccdb5f36d0340097bfb6eb280eb06cf2c04ec5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8344f9377cfe1850c7eefbf379667dba664aedfa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280526"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717603"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>.NET アプリで C# コードを使用して SSIS パッケージを実行する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このクイックスタートでは、データベース サーバーに接続し、SSIS パッケージを実行する C# コードを記述する方法について説明します。
 
 Visual Studio、Visual Studio Code、または他の任意のツールを使用して、C# アプリを作成することができます。

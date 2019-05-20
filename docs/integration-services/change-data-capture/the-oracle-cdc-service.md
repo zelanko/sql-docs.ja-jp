@@ -11,14 +11,18 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34f86e859bb09e6b3e62d9819c13ba1bf7abec26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c033a631425a051fae411acbd5ff589302eb7344
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276078"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728481"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC Service は、プログラム xdbcdcsvc.exe を実行する Windows サービスです。 それぞれ異なる Windows サービス名を持つ複数の Windows サービスを、同じコンピューターで実行するように構成できます。 1 つのコンピューターで複数の Oracle CDC Windows サービスを作成する場合としては、サービス間の分離を強化したい場合や、各サービスでそれぞれ異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する必要がある場合などが一般的です。  
   
  Oracle CDC Service は、Oracle CDC Service 構成コンソールを使用して作成されるか、xdbcdcsvc.exe プログラムに組み込まれているコマンド ライン インターフェイスを使用して定義されます。 いずれの場合も、作成された Oracle CDC Service は、それぞれ 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス ( **AlwaysOn** 設定を使用してクラスター化またはミラー化されている場合もあります) に関連付けられます。接続情報 (接続文字列とアクセス資格情報) はサービス構成に含まれます。  

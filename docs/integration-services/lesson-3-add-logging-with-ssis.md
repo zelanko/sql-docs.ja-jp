@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: SSIS でのログ記録の追加 | Microsoft Docs'
+title: レッスン 3:SSIS でのログ記録の追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dbec1a2d2fd19e26fc56e8f73db312f2994d300
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4d8fdf2a714f47e40e4c2afe12bb7357068fa9d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270898"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722084"
 ---
-# <a name="lesson-3-add-logging-with-ssis"></a>レッスン 3: SSIS でのログ記録の追加
+# <a name="lesson-3-add-logging-with-ssis"></a>レッスン 3:SSIS でのログ記録の追加
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージの実行を監視し、問題を解決するためのログ機能があります。このログを使用して、タスクやコンテナー イベントを追跡できます。 ログ記録には柔軟性があります。 ログ記録はパッケージ レベルで有効にするか、パッケージ内の個々のタスクやコンテナーで有効にすることができます。 ログを記録するイベントを複数選択すると、1 つのパッケージに対して複数のログが作成されます。  
   
@@ -42,12 +46,12 @@ ms.locfileid: "58270898"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+-   [ステップ 1:レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
 -   [ステップ 2:ログ記録の追加および構成](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
 -   [ステップ 3:レッスン 3 のパッケージのテスト](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1: レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+[ステップ 1:レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   

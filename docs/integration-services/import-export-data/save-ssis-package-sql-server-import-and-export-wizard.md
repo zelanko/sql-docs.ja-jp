@@ -12,14 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33bde1142408b160317c74f23cb7636783e44390
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 163cdb0de7c41961e0646e38a5a208ec842f11b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279886"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723757"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[パッケージの保存および実行]** ページで、設定を SQL Server Integration Services (SSIS) パッケージとして保存することを指定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードは **[SSIS パッケージの保存]** を表示します。 このページでは、ウィザードで作成されたパッケージを保存するための追加オプションを指定します。  
 
 **[SSIS パッケージの保存]** ページに表示されるオプションは、SQL Server またはファイル システムにパッケージを保存するために **[パッケージの保存および実行]** ページで以前に行った選択によって異なります。 **[パッケージの保存および実行]** ページについては、「 [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)」 ([パッケージの保存および実行]) を参照してください。
@@ -32,7 +36,7 @@ ms.locfileid: "58279886"
 ![パッケージの保存 - 共通オプション](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>パッケージの名前と説明を指定します。  
- **名前**  
+ **[名前]**  
  パッケージの一意な名前を指定します。  
   
  **[説明]**  

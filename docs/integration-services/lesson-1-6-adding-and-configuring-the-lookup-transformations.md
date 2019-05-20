@@ -10,14 +10,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.reviewer: ''
-ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c605d2f0e42f34a8f1b4c7a01ea7ffce43d23f9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221963"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723179"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>レッスン 1-6:参照変換を追加し、構成する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 ソース ファイルからデータを取り出すフラット ファイルを構成したら、**CurrencyKey** と **DateKey** の値を取得する際に必要な参照変換を定義します。 参照変換は、指定の入力列のデータを参照データセットの列に結合することにより、参照を実行します。 参照データセットは、既存のテーブル、既存のビュー、新しいテーブル、または SQL ステートメントの結果のいずれかになります。 このチュートリアルでは、参照変換は、OLE DB 接続マネージャーを使用して、参照データセットのソース データを含むデータベースに接続します。  
   

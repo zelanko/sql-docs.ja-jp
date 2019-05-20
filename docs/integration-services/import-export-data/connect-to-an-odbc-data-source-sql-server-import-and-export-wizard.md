@@ -10,14 +10,18 @@ ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 261f29d8cebfcb9837bae0640df50913d96f05ea
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 22fd8a3e1518c535e61321255fda9c2a3f279ab1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222063"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723938"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **ODBC** データ ソースに接続する方法を説明します。
 
 Microsoft またはサード パーティから必要な ODBC ドライバーをダウンロードすることが必要な場合があります。
@@ -142,7 +146,7 @@ ODBC ドライバーの接続文字列をオンラインで調べるには、「
     TrustServerCertificate=No  
     DATABASE=WideWorldImporters    
     WSID=<local computer name>  
-    APP=Microsoft® Windows® Operating System  
+    APP=MicrosoftÂ® WindowsÂ® Operating System  
     Trusted_Connection=Yes  
     SERVER=localhost   
     ```

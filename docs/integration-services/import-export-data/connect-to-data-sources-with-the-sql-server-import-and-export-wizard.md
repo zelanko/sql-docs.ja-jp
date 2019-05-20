@@ -10,14 +10,18 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221895"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723864"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを使用してデータ ソースに接続する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このセクションのトピックでは、SQL Server インポートおよびエクスポート ウィザードを実行するときに、よく使用されるさまざまなデータ ソースに接続する方法を説明します。 ウィザードの **[データ ソースの選択]** ページと **[変換先の選択]** ページにデータ ソースの接続情報を入力する必要があります。
 
 このセクションのトピックでは、ウィザードの **[データ ソースの選択]** ページと **[変換先の選択]** ページから**データ ソースへの接続**方法についてのみ説明します。 他のものをお探しの場合は、「[関連タスクとコンテンツ](#related)」を参照してください。

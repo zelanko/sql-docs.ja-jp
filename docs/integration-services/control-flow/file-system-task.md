@@ -16,14 +16,18 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47776933cee01725d19c74b571c63ad91342dd88
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0d67f8d826f20006ff0b01dbf32e8bd5383d026
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272206"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727691"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ファイル システム タスクは、ファイル システム内のファイルとディレクトリの操作を実行します。 たとえば、ファイル システム タスクを使用すると、パッケージはディレクトリやファイルの作成、移動、または削除を実行できます。 また、ファイル システム タスクを使用して、ファイルやディレクトリの属性を設定することもできます。 たとえば、ファイル システム タスクを使用すると、ファイルを非表示にしたり読み取り専用にできます。  
   
  ファイル システム タスクのすべての操作では、ファイルまたはディレクトリをソースとして使用します。 たとえば、タスクによりコピーされるファイルや、タスクにより削除されるディレクトリは、ソースと呼ばれます。 ソースを指定するには、ファイル接続マネージャーを使用してディレクトリまたはファイルをポイントするか、ソースへのパスが含まれる変数の名前を指定します。 詳細については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」および「[Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)」を参照してください。  

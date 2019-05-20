@@ -16,14 +16,18 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 027c7c142a825b6ebed8bac35f38779a6ac4bd12
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 91ea18d66129f5450e20bf7e9412380aeb47611e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279836"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725936"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB コマンド変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   OLE DB コマンド変換は、データ フローの各行に対して SQL ステートメントを実行します。 たとえば、データベース テーブル内に行を挿入したり、行を更新または削除する SQL ステートメントを実行できます。  
   
  OLE DB コマンド変換は、次の方法で構成できます。  

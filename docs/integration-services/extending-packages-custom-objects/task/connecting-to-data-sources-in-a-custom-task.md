@@ -22,14 +22,18 @@ ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65dad92f0d005e24e6cc7f5a1846c5c29cbd7d1c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7b460d01adfdc4a2282311c16b7c7a9acddb6542
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289978"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724447"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>カスタム タスクでのデータ ソースへの接続
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   タスクは、接続マネージャーを使用して外部データ ソースに接続し、データを取得または保存します。 デザイン時には、接続マネージャーは論理接続を表し、サーバー名や認証プロパティなどの重要な情報を示します。 実行時に、タスクは接続マネージャーの <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> メソッドを呼び出して、データ ソースへの物理接続を確立します。  
   
  パッケージに多数のタスクが含まれていると、各タスクに異なるデータ ソースへの接続が含まれる場合があるため、パッケージは <xref:Microsoft.SqlServer.Dts.Runtime.Connections> コレクション内のすべての接続マネージャーを監視します。 タスクはパッケージ内にあるコレクションを使用し、検証および実行中に使用する接続マネージャーを検索します。 <xref:Microsoft.SqlServer.Dts.Runtime.Connections> コレクションは、<xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッドの最初のパラメーターです。  

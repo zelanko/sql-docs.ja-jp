@@ -11,14 +11,18 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188735b5a02150ba801154e338090ce75dc23060
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274180"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722449"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>レッスン 2:SSIS でのループの追加
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 「[レッスン 1: SSIS によるプロジェクトと基本パッケージの作成](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)」で、1 つのフラット ファイル ソースからデータを抽出するパッケージを作成しました。 抽出されたデータは参照変換を使用して変換されます。 最後に、パッケージによって、**AdventureWorksDW2012** サンプル データベースの **FactCurrencyRate** ファクト テーブルのコピーにそのデータが読み込まれます。  
   
@@ -54,7 +58,7 @@ ms.locfileid: "58274180"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+-   [ステップ 1:レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
 -   [ステップ 2:Foreach ループ コンテナーの追加および構成](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
@@ -63,7 +67,7 @@ ms.locfileid: "58274180"
 -   [ステップ 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1: レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+[ステップ 1:レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## <a name="see-also"></a>参照  
 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)  

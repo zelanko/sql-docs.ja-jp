@@ -19,14 +19,18 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272999"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726241"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文字マップ変換は、小文字から大文字への変換関数などの文字列関数を、文字データに適用します。 この変換は、文字列データ型の列データにのみ実行されます。  
   
  文字マップ変換では、列データを適切に変換したり、変換出力に列を追加して、変換後のデータを新しい列に挿入したりできます。 また、さまざまなマップ操作のセットを同じ入力列に適用し、その結果を別の列に格納できます。 たとえば、同じ列を大文字と小文字に変換し、その結果を 2 つの異なる列に格納できます。  

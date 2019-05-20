@@ -11,14 +11,18 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55c040385615c0bd7db750f7eb31a0f2eb7aa73b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c13a761087cb263983a8d99b27514fcb225d93a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273842"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721450"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>レッスン 4-4:フラット ファイル変換先を追加する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Lookup Currency Key 変換でエラーが出力されると、参照に失敗したデータ行がスクリプト変換操作にリダイレクトされます。 発生したエラーに関する詳細を提供する目的で、スクリプト変換によって各エラーの説明を取得するスクリプトが実行されます。  
   

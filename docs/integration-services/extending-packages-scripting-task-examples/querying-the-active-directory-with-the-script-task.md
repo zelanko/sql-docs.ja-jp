@@ -18,14 +18,18 @@ ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 078d028bb1f997e6a198c91b8019519f81460ae6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5bd648817edb921df46c73f341d02b9e389fa522
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270635"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724306"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>スクリプト タスクによる Active Directory へのクエリの実行
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージなどの企業データ処理アプリケーションでは、Active Directory に格納されている従業員の階級、役職、またはその他の特性に基づいて、個別にデータを処理する必要性が頻繁に生じます。 Active Directory は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ディレクトリ サービスで、ユーザーに関するメタデータだけでなく、コンピューターやプリンターなどの他の組織資産に関するメタデータも集中して格納します。 Microsoft .NET Framework の **System.DirectoryServices** 名前空間では、Active Directory を使用して作業するためのクラスが用意されており、これを使用すると Active Directory が格納している情報に基づくデータ処理のワークフローを送信できます。  
   
 > [!NOTE]  
@@ -44,7 +48,7 @@ ms.locfileid: "58270635"
   
 4.  このスクリプト プロジェクトでは、参照を **System.DirectoryServices** 名前空間に追加します。  
   
-5.  . コードで **Imports** ステートメントを使用し、**DirectoryServices** 名前空間をインポートします。  
+5.  。 コードで **Imports** ステートメントを使用し、**DirectoryServices** 名前空間をインポートします。  
   
 > [!NOTE]  
 >  このスクリプトを正しく実行するには、組織のネットワーク上で Active Directory が使用され、この例で使用される従業員の情報が格納されている必要があります。  

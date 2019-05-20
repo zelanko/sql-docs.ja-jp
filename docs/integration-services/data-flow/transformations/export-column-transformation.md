@@ -22,14 +22,18 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d0b7124909a7759f61d97fc748a527c31237e33
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e47a17c2802b9de56c567d4f12a2edcff84f1061
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289798"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726123"
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   列エクスポート変換は、データ フローのデータを読み取り、そのデータをファイルに挿入します。 たとえば、データ フローに、各製品の写真などの製品情報が含まれる場合、列エクスポート変換を使用して、その画像をファイルに保存できます。  
   
 ## <a name="append-and-truncate-options"></a>追加オプションと切り捨てオプション  
@@ -41,10 +45,10 @@ ms.locfileid: "58289798"
 |True|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |False|True|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |True|True|いいえ|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
-|False|False|可|実行時エラーが発生します。 ファイルは存在しますが、そのファイルに書き込めません。|  
-|False|True|可|ファイルが削除されて再作成され、データが書き込まれます。|  
-|True|False|可|ファイルが開かれ、そのファイルの終わりにデータが書き込まれます。|  
-|True|True|可|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
+|False|False|はい|実行時エラーが発生します。 ファイルは存在しますが、そのファイルに書き込めません。|  
+|False|True|はい|ファイルが削除されて再作成され、データが書き込まれます。|  
+|True|False|はい|ファイルが開かれ、そのファイルの終わりにデータが書き込まれます。|  
+|True|True|はい|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>列エクスポート変換の構成  
  列エクスポート変換は、次の方法で構成できます。  

@@ -24,14 +24,18 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce6b5ea32630a5dca08657150c2819d61c499813
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 925db41997def8591c9304e3116f23271ed77581
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290358"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724666"
 ---
 # <a name="implementing-external-metadata"></a>外部メタデータの実装
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   コンポーネントがそのデータ ソースから切断されると、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> インターフェイスを使用することによって、入力および出力列のコレクション内の列を、その外部データ ソースの列に対して検証できます。 このインターフェイスを使用すると、外部データ ソースの列のスナップショットを保持し、これらの列をコンポーネントの入力および出力列コレクションの列にマップできます。  
   
  外部メタデータ列を実装することで、追加した列のコレクションに対する管理と検証の必要が生じるため、コンポーネントの開発にオーバーヘッドと複雑性が加わりますが、検証のためのサーバーへのラウンド トリップに余計な費用をかけなくても済むので、開発作業は行う価値のあるものになるでしょう。  

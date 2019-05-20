@@ -13,14 +13,18 @@ ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 314e6895b4a4888970ae09fb29851446b3d6859c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04992a3c70342d60d5c64e251081a32672d65812
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273217"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720059"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW の F1 ヘルプ
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このセクションには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW の 3 種類のコンポーネントについての F1 ヘルプのトピックが含まれています。 このヘルプ トピックは、ウィザードの各画面やダイアログ ボックスで F1 キーを押すか、[ヘルプ] をクリックすることにより、ユーザー インターフェイスから表示することもできます。  
 
 > [!IMPORTANT]

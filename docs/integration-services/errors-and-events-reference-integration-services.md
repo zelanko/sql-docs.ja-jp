@@ -16,14 +16,18 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f9e6845c7bcaaffc85621338a169cdaa2c10dc5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e107326e5269cfbd0f9e229bb418b83bc9fbfdb8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271267"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725777"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>エラーとイベントのリファレンス (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ここでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に関連するいくつかのエラーとイベントについて説明します。 エラー メッセージについては、原因と解決方法も示します。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラーとその説明の一覧など、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージの詳細については、「 [Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)」を参照してください。 ただし、現在一覧にはトラブルシューティング情報は含まれていません。  

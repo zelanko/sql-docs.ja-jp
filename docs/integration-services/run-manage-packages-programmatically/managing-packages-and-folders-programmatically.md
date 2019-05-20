@@ -15,14 +15,18 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 712f4c25af85db5c4ec7f5df52680e83aad06398
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f38f79f90a1ec39a013efc4efd03a13f96e51a72
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290008"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719117"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>プログラムによるパッケージとフォルダーの管理
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 <a name="top"></a> プログラムで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを操作する際に、個々のパッケージやフォルダーが存在するかどうかを判断したり、パッケージが格納されたフォルダーを管理したりする必要がある場合があります。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスは、これらの要件を満たすさまざまなメソッドを提供します。    
     
 ##  <a name="exists"></a> パッケージまたはフォルダーが存在するかどうかの判断    

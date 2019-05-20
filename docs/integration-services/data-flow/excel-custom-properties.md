@@ -11,14 +11,18 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f67b887e2f035e1ced192a967e2f8cfe2291ff7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 45df4518b935057e23e46b62583989bf98d0b0ab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276457"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726901"
 ---
 # <a name="excel-custom-properties"></a>Excel のカスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **変換元のカスタム プロパティ**  
   
  Excel ソースには、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
