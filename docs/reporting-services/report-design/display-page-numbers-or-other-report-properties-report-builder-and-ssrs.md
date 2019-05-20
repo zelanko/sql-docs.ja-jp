@@ -2,18 +2,18 @@
 title: ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 576d2fc5ba8ea023e69fe9b6136a676b188366e4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296800"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580891"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
   レポートのページ ヘッダーまたはページ フッターにページ番号、レポート タイトル、ファイル名、およびその他のレポート プロパティを簡単に追加できます。 これらのプロパティは、レポート データ ペインの [組み込みフィールド] フォルダーのフィールドとして保存されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "56296800"
   
 1.  [&PageNumber] が含まれているテキスト ボックスを右クリックし、**[式]** をクリックします。  
   
-     **[式の設定:値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
+     **[式の設定: 値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
   
 2.  = (等号) の後ろにカーソルを置き、「**"ページ " &**」と入力します。  
   
