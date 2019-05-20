@@ -2,7 +2,7 @@
 title: Reporting Services での SharePoint ライブラリへの配信 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813245"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578064"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  
   
- SharePoint 配信拡張機能を使用するには、SharePoint サイトのアプリケーション ページからサブスクリプションを作成し、配信の種類を **[SharePoint ドキュメント ライブラリ]** に設定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーで作成したサブスクリプションに対して、SharePoint 配信拡張機能を使用することはできません。  
+ SharePoint 配信拡張機能を使用するには、SharePoint サイトのアプリケーション ページからサブスクリプションを作成し、配信の種類を **[SharePoint ドキュメント ライブラリ]** に設定します。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーで作成したサブスクリプションに対して、SharePoint 配信拡張機能を使用することはできません。  
   
 > [!NOTE]  
 >  レポート サーバーがネイティブ モードで動作している場合、配信拡張機能では SharePoint サイトへのレポートの配信がサポートされません。 ネイティブ モードのレポート サーバーに対して、プログラムから配信拡張機能を呼び出そうとすると、サーバーは **rsDeliveryExtensionNotFound** エラーを返し、レポート サーバーのログ ファイルに **rsOperationNotSupportedSharePointMode** エラーが記録されます。  

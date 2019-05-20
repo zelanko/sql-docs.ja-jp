@@ -210,7 +210,7 @@ GO
  テープが誤って開いたまま、テープを解放する最も簡単な方法は、次のコマンドを使用しては。RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_します。 詳細については、「[RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)」を参照してください。  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスの使用  
- SQL Server のバックアップを Windows Azure BLOB ストレージ サービスに書き込むことができます。  Windows Azure BLOB ストレージ サービスを使用したバックアップについては、「 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
+ SQL Server のバックアップを Windows Azure BLOB ストレージ サービスに書き込むことができます。  Windows Azure BLOB ストレージ サービスを使用したバックアップについては、「 [Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
 ##  <a name="LogicalBackupDevice"></a> 論理バックアップ デバイスの使用  
  " *論理バックアップ デバイス* " とは、特定の物理バックアップ デバイス (ディスク ファイルやテープ ドライブ) を示す、省略可能なユーザー定義名です。 論理バックアップ デバイスにより、対応する物理バックアップ デバイスを参照する際に間接指定を使用できます。  

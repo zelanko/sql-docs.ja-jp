@@ -2,7 +2,7 @@
 title: InstanceID プロパティ (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceID property
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 397a82b01be8bf2ab0f053b26b9c15509f8a48c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 924db3a5f26fad62baaded79471786619d1ef9ec
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616530"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569129"
 ---
 # <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance プロパティ - InstanceID
   このオブジェクトは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  

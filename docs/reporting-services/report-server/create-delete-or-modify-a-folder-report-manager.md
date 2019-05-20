@@ -2,7 +2,7 @@
 title: フォルダーの作成、削除、または変更 (レポート マネージャー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - folders [Reporting Services], deleting
 - folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 548c66c7e62f5197e27a633ea4f8325c1466cdd8
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1a4f0f068cea9e36b6be2ac3081e6399644f1c0a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021208"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580527"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>フォルダーの作成、削除、または変更 (レポート マネージャー)
   フォルダーを作成すると、レポート サーバーにパブリッシュするアイテムを整理して管理できます。 フォルダーを作成することには、関心のあるレポートをユーザーが見つけやすくなるという利点があります。 コンテンツ マネージャーは、権限を適用するためのフレームワークとしてフォルダーを利用できます。 特定のフォルダーに対してロールの割り当てを作成することで、開発中のレポートや限定されたユーザーのみを対象としたレポートへのアクセスを制限できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "50021208"
   
 5.  **[コンテンツ]** ページの既定の表示でフォルダーを非表示にする場合は、 **[リスト ビューで非表示にする]** をオンにします。 このフォルダーは、 **[コンテンツ]** ページの **[詳細の表示]** をクリックした場合にのみ表示されるようになります。  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
 ### <a name="to-delete-a-folder"></a>フォルダーを削除するには  
   

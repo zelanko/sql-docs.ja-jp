@@ -2,26 +2,26 @@
 title: Word デバイス情報設定 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Word [Reporting Services]
 - device information settings [Reporting Services], Word
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 40b52fd5c296ad95db7376e6a2c571b0203cf526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 776a825c480568be2640d1309c7c3a48970e2c54
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638396"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571140"
 ---
 # <a name="word-device-information-settings"></a>Word デバイス情報設定
   次の表は、 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 形式で表示するためのデバイス情報設定を示しています。  
   
-|設定|ReplTest1|  
+|設定|[値]|  
 |-------------|-----------|  
 |**AutoFit**|**[False]**。 Word のすべての表で AutoFit が **false** に設定されます。<br /><br /> **[True]**。 Word のすべての表で AutoFit が **true** に設定されます。<br /><br /> **Never**。 Word の表で AutoFit 値が設定されず、動作が Word の既定値に戻ります。<br /><br /> **Default**。 各論理ページごとに、物理的な描画領域 (余白を除いた物理ページの幅) よりも幅の狭い表で AutoFit が設定されます。|  
 |**ExpandToggles**|表示と非表示の切り替えが可能なすべてのアイテムを完全に展開した状態で表示するかどうかを示します。 既定値は **false**です。|  

@@ -2,19 +2,19 @@
 title: データ警告デザイナーでのデータ警告の作成 | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c588a25b95e5625fa3ecd6d6b2765194a41be5a
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331512"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571575"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
 
@@ -69,7 +69,7 @@ ms.locfileid: "56331512"
   
      一覧表示される比較演算子は、選択した列のデータ型によって異なります。 日付データ型の列の場合、ルールのしきい値の横にカレンダーのアイコンが表示されます。 カレンダーの日付をクリックするか日付を入力してデータを入力できます。  
   
-     データ警告デザイナーには 2 つの比較モードが用意されています。**[値入力モード]** と **[フィールドの選択モード]** です。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
+     データ警告デザイナーでは、 **[値入力モード]** と **[フィールドの選択モード]** の 2 つの比較モードが提供されます。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
   
 9. OR 句を追加するには、下矢印をクリックし、 **[値入力モード]** をクリックします。  
   

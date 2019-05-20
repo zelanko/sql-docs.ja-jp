@@ -2,20 +2,20 @@
 title: '[ジョブのプロパティ] (Management Studio) | Microsoft Docs'
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e93afa5dd974ed7ae6dbdff5844f849d50e72bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630568"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571126"
 ---
 # <a name="job-properties-management-studio"></a>[ジョブのプロパティ]\(Management Studio)
   **[ジョブのプロパティ]** ページを使用して、進行中のレポートまたはサブスクリプションを取り消す前にそれらの情報を表示できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "47630568"
   
 3.  ジョブが表示されたら、ジョブを右クリックして、 **[プロパティ]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[ジョブ ID]**  
  処理中にジョブに割り当てられる GUID。 この値は、レポートまたはサブスクリプションが実行されるたびにランダムに生成されます。  
   

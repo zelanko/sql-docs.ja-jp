@@ -2,7 +2,7 @@
 title: サブスクリプションと配信 (Reporting Services) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e04bdc6edaf53e73c7f26dd85a512dbda369ebb1
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711964"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578039"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>サブスクリプションと配信 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションは、特定の時刻で、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。  
@@ -113,7 +113,7 @@ ms.locfileid: "52711964"
 |配信拡張機能|[説明]|  
 |------------------------|-----------------|  
 |Windows ファイル共有|レポートを静的なアプリケーション ファイルとして、ネットワーク上の共有フォルダーに配信します。|  
-|[電子メール]|通知またはレポートを、電子メールの添付ファイルまたは URL リンクとして配信します。|  
+|電子メール|通知またはレポートを、電子メールの添付ファイルまたは URL リンクとして配信します。|  
 |SharePoint ライブラリ|SharePoint サイトからアクセスできる SharePoint ライブラリに対し、レポートを静的なアプリケーション ファイルとして配信します。 このサイトは、SharePoint 統合モードで実行されたレポート サーバーと統合されている必要があります。|  
 |[Null]|NULL 配信プロバイダーは、特殊な用途向けの配信拡張機能です。表示する準備が整った、パラメーター化されたレポートを事前にキャッシュする場合に使用されます。ユーザーが個別のサブスクリプションでこの方法を使用することはできません。 NULL 配信は、データ ドリブン サブスクリプションで、事前にデータをキャッシュすることによってレポート サーバーのパフォーマンスを向上させるために管理者が使用します。|  
   

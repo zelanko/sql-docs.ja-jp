@@ -2,18 +2,18 @@
 title: SQL Server 並列データ ウェアハウスの接続の種類 (SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1253ef0bc89bc72dbd3b0e19fe8fca90f68c75e4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0b27ad8b4eddabca20be239c1126e4e6acc44737
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029861"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574983"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "50029861"
   
  このアプライアンスでは、複数の物理ノードにわたる大規模なデータベース テーブルを分割し、各ノードが SQL Server の独自のインスタンスを実行するようにします。 レポートが [!INCLUDE[ssDW](../../includes/ssdw-md.md)] に接続してレポート データを取得するときには、クエリの処理を管理する、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] アプライアンス内の管理ノードに接続します。 接続が確立すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境内にある [!INCLUDE[ssDW](../../includes/ssdw-md.md)] のインスタンスに対する操作と、この環境外にある  のインスタンスに対する操作の区別が付かなくなります。  
   
- [!INCLUDE[ssDW](../../includes/ssdw-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスの種類に該当するレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスのデータ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]からのデータに接続し、そのデータを取得します。  
+  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスの種類に該当するレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスのデータ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]からのデータに接続し、そのデータを取得します。  
   
  このデータ拡張機能は、接続文字列とは個別に管理される、複数の値を持つパラメーター、サーバー集計、および資格情報をサポートしています。  
   

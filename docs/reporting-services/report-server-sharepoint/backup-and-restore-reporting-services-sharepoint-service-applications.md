@@ -2,18 +2,18 @@
 title: Reporting Services SharePoint サービス アプリケーションのバックアップと復元 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 35273d3b60abf328f916907a0a6cfeb8b6a206c6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405716"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574344"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
 
@@ -63,7 +63,7 @@ ms.locfileid: "52405716"
   
 2.  **[共有サービス]** ノードで、 **[共有サービス アプリケーション]** を展開し、サービス アプリケーションを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション]** になります。  
   
-3.  **[次へ]** を選択します。  
+3.  [ **次へ**] を選択します。  
   
 4.  **[バックアップの場所]** にパスを入力し、**[バックアップの開始]** を選択します。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "52405716"
   
 4.  アカウントとパスワードを入力し、 **[実行アカウントの指定]** ボックスを選択します。  
   
-5.  **[OK]** を選択します。  
+5.  [ **OK**] を選択します。  
   
  **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用していた場合は、次の手順を実行します。  
   

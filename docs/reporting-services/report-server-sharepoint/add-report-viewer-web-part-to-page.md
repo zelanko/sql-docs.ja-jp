@@ -2,17 +2,17 @@
 title: SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する | Microsoft Docs
 ms.date: 11/26/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 39379fa6d6471f9d0d624dbbd2b05331c7e7a36a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398352"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574788"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
 
@@ -42,7 +42,7 @@ ms.locfileid: "52398352"
 
     ![Office リボンから Web パーツを挿入します。](media/sharepoint-insert-web-part.png)
 
-4. **[カテゴリ] で** [SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 **[追加]** を選びます。
+4. **[カテゴリ] で **[SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 **[追加]** を選びます。
 
     ![レポート ビューアー Web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
 

@@ -2,21 +2,21 @@
 title: レポート サーバー アクセスに対するファイアウォールの構成 | Microsoft Docs
 ms.date: 09/14/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4044dc8ac56d7aad17f61f314e0536a08c6a8d6e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dadbeda727f03347dee70a1e860d1a0afd0eb535
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030111"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580436"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>レポート サーバー アクセスに対するファイアウォールの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー アプリケーションとパブリッシュされたレポートには、IP アドレス、ポート、および仮想ディレクトリを指定した URL を通じてアクセスします。 Windows ファイアウォールが有効になっている場合、レポート サーバーで使用するように構成されているポートは閉じられる可能性が高くなります。 リモート クライアント コンピューターから **レポート マネージャー** を開こうとしたときに空白のページが表示される場合、またはレポート要求後に空白の Web ページが表示される場合は、ポートが閉じている可能性があります。  
@@ -40,29 +40,29 @@ ms.locfileid: "50030111"
   
 2.  **[詳細な設定]** をクリックします。  
   
-3.  **[受信の規則]** をクリックします。  
+3.   **[受信の規則]** をクリックします。  
   
 4.  **[操作]** ウィンドウで **[新しい規則]** をクリックします **。**  
   
-5.  **[ポート]** の **[規則の種類]** をクリックします。  
+5.   **[ポート]** の **[規則の種類]** をクリックします。  
   
-6.  **[次へ]** をクリックします。  
+6.  [**次へ**] をクリックします。  
   
 7.  **[プロトコルおよびポート]** ページで、 **[TCP]** をクリックします。  
   
 8.  **[特定のローカル ポート]** を選択し、「 **80**」という値を入力します。  
   
-9. **[次へ]** をクリックします。  
+9. [**次へ**] をクリックします。  
   
 10. **[操作]** ページで、 **[接続を許可する]** をクリックします。  
   
-11. **[次へ]** をクリックします。  
+11. [**次へ**] をクリックします。  
   
 12. **[プロファイル]** ページで、実際の環境に合った適切なオプションをクリックします。  
   
-13. **[次へ]** をクリックします。  
+13. [**次へ**] をクリックします。  
   
-14. **[名前]** ページで、「**ReportServer (TCP on port 80)**」という名前を入力します。  
+14.  **[名前]** ページで、「**ReportServer (TCP on port 80)**」という名前を入力します。  
   
 15. **[完了]** をクリックします。  
   

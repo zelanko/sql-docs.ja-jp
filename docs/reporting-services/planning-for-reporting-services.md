@@ -2,21 +2,21 @@
 title: Reporting Services の計画 | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 50282a856d6d6448923c05b7e81394b6f9e6c541
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 573a35b3e1c8512f274d05658b3030e41576a65e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031721"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580829"
 ---
 # <a name="planning-for-reporting-services"></a>Reporting Services の計画
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]について十分に理解するには、次の各トピックをご覧ください。 ニーズに最も合った [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境をインストールおよび構成する方法について学習してください。  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]について十分に理解するには、次の各トピックをご覧ください。 ニーズに最も合った [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境をインストールおよび構成する方法について学習してください。  
   
  ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン")**全般的な Reporting Services の機能の計画とアーキテクチャ**  
  [Reporting Services と Power View のブラウザー サポート](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
