@@ -14,14 +14,18 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25d76f4ad37b5fb8631dfacb526576c1fd52d2bf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 81739ff18b8030194b3cb2d2245abb5983fd2725
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270838"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729310"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Integration Services (SSIS) サーバーとカタログ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置できます。  
   
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] データベースをホストする **ssDEnoversion** のインスタンスです。 データベースには、パッケージ、プロジェクト、パラメーター、権限、サーバーのプロパティ、および運用履歴というオブジェクトが格納されます。  

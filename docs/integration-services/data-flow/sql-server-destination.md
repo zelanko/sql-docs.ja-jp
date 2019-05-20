@@ -22,14 +22,18 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 19fe20d882810488e077ed1158b79c3399cc12f8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: becd2493929fb12ddcec6a0623dec7c46f7b5a2d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290588"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726339"
 ---
 # <a name="sql-server-destination"></a>SQL Server 変換先
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL Server 変換先はローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルまたはビューに一括で読み込みます。 SQL Server 変換先は、リモート サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアクセスするパッケージでは使用できません。 代わりに、このパッケージでは OLE DB 変換先を使用する必要があります。 詳細については、「 [OLE DB 変換先](../../integration-services/data-flow/ole-db-destination.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  

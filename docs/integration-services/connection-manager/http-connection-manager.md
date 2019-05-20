@@ -20,14 +20,18 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bde008098dee9b48004b6ee036df4832d83f3ff2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6076c2e0cf877a150a2b66a5b9f4728e2cdd25c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282446"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728228"
 ---
 # <a name="http-connection-manager"></a>HTTP 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクには、この接続マネージャーを使用します。  
   
  HTTP 接続マネージャーをパッケージに追加するときは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、実行時に HTTP 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **Connections** コレクションに追加します。  

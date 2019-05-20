@@ -17,14 +17,18 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5811c4ea89a177f9862f27ba75f6baaddef7208
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4078c1b6bea837ae7f5f9b1ffc9529076660059
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272379"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728423"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーを使用すると、パッケージは .NET プロバイダーを使用してデータ ソースにアクセスできます。 この接続マネージャーは通常、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのデータ ソースへのアクセスに使用されます。また、C# などの言語を使用してマネージド コードに記述されたカスタム タスク内で、OLE DB や XML を介して公開されているデータ ソースにもアクセスできます。  
   
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。  

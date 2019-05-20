@@ -21,14 +21,18 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d66c98acec072ff2ce3afa4fb2ecfb0236f05ec
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282456"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726872"
 ---
 # <a name="integration-services-paths"></a>Integration Services のパス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パスは、データ フロー コンポーネントの出力を別のコンポーネントの入力に連結することにより、データ フロー内の 2 つのコンポーネントを連結します。 パスには連結元と連結先があります。 たとえば、パスが OLE DB ソースと並べ替え変換を連結する場合、OLE DB ソースはパスの連結元であり、並べ替え変換はパスの連結先になります。 連結元とはパスが開始するコンポーネントで、連結先とはパスが終了するコンポーネントのことです。  
   
  パッケージを [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで実行する場合、データ ビューアーをパスにアタッチすることにより、データ フロー内のデータを表示できます。 データ ビューアーを構成し、グリッドにデータを表示できます。 データ ビューアーは、デバッグ用のツールとして便利です。 詳細については、「 [データ フローのデバッグ](../../integration-services/troubleshooting/debugging-data-flow.md)」を参照してください。  
@@ -63,7 +67,7 @@ ms.locfileid: "58282456"
  **[データ フロー パス エディター]** ダイアログ ボックスの **[全般]** ノードを使用して、パスに名前を付けて説明を記述したり、パスの注釈のオプションを指定したりできます。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **[名前]**  
  パスの一意な名前を指定します。  
   
  **ID**  
@@ -91,7 +95,7 @@ ms.locfileid: "58282456"
  **[パスのメタデータ]**  
  列のメタデータが一覧表示されます。 列のデータを並べ替えるには、列ヘッダーをクリックします。  
   
- **名前**  
+ **[名前]**  
  列名が一覧表示されます。  
   
  **[データ型]**  
@@ -128,7 +132,7 @@ ms.locfileid: "58282456"
 **[データ フロー パス エディター]** ダイアログ ボックスの **[データ ビューアー]** ページを使用すると、パスにアタッチされているデータ ビューアーを管理できます。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **[名前]**  
  データ ビューアーが一覧表示されます。  
   
  **[データ ビューアーの種類]**  

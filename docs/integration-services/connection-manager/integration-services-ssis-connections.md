@@ -24,14 +24,18 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4764ae6b782ea1f7f8187a4d76ce89ea320b145f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dd0a6810290d3f7becd6e03cb061b5052b544d17
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275863"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728246"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
   
 -   テキスト、XML、Excel ブック、リレーショナル データベースなど、変換元および変換先のデータ ストアに接続し、データの抽出と読み込みを行います。  

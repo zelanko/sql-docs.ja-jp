@@ -23,14 +23,18 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280646"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725910"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
   
 -   複数の変換をデータ フロー内で使用する代わりに、複数の変換をデータに適用します。 たとえば、スクリプトによって 2 つの列に値を追加し、その合計の平均を計算できます。  

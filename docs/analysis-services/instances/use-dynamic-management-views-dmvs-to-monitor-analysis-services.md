@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
 ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/06/2018
 ms.locfileid: "52984103"
@@ -153,7 +153,7 @@ DMV が指定された行セットは利用できない場合、サーバーに�
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|特定のデータ ソースの XMLA プロバイダーによってサポートされている列挙子の名前、データ型、および列挙値の一覧を返します。|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|サーバー上のインスタンスについて記述します。|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|サーバーで実行されているアクティブなジョブに関する情報を提供します。 ジョブはコマンドの一部であり、コマンドに代わって特定のタスクを実行します。|  
-|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|XMLA サーバーによって予約されているキーワードに関する情報を返します。|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|XMLA サーバーによって予約されているキーワードに関する情報を返します。|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|サーバーでサポートされているリテラルに関する情報を返します。|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|バックアップ ファイルの内容に関する情報を返します。 |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|サーバー上で現在保持されているロックに関する情報を提供します。|  

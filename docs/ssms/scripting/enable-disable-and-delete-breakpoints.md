@@ -8,23 +8,23 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa887ae052c51b2a79ad1016437c136ad0360457
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a2c7ad89e8097f690b275f927588796665a36b45
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643718"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820790"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>ブレークポイントの有効化、無効化、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   開かれているすべてのブレークポイントを表示および管理するには、 **[ブレークポイント]** ウィンドウを使用します。 ブレークポイントの情報を表示し、各種の操作 (ブレークポイントの削除、無効化、有効化など) を実行するには、このウィンドウを使用します。  
   
 ## <a name="the-breakpoints-window"></a>[ブレークポイント] ウィンドウ  
- **[ブレークポイント]** ウィンドウには、ブレークポイントが設定されているコード行などの情報が表示されます。 **[ブレークポイント]** ウィンドウでは、ブレークポイントの削除、無効化、および有効化を行うこともできます。 **[ブレークポイント]** ウィンドウの詳細については、「 [[ブレークポイント] Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)」を参照してください。  
+ **[ブレークポイント]** ウィンドウには、ブレークポイントが設定されているコード行などの情報が表示されます。 **[ブレークポイント]** ウィンドウでは、ブレークポイントの削除、無効化、および有効化を行うこともできます。  **[ブレークポイント]** ウィンドウの詳細については、「 [[ブレークポイント] Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)」を参照してください。  
   
  ブレークポイントを無効化した場合、そのブレークポイントで実行は一時停止されませんが、後でブレークポイントを有効化できるように、定義がその位置に保持されます。 削除したブレークポイントは完全に削除されます。 そのステートメントで実行を一時停止するには、新たにブレークポイントを設定する必要があります。  
   

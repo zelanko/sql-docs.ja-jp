@@ -17,14 +17,18 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d8e8a699ababd04002cd85582f55ae7903f0474
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 013e0d0d28d961496e4bec367775d16f994a5e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275423"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723519"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services のユーザー インターフェイス
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのタブ上にあるデザイン画面以外にも、パッケージに機能を追加したり、パッケージ オブジェクトのプロパティを構成するための、次に示すようなウィンドウやダイアログ ボックスが用意されています。  
   
 -   ログ記録や構成などの機能をパッケージに追加するために使用する、ダイアログ ボックスおよびウィンドウ。  

@@ -18,14 +18,18 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67b3b3446cc6890a802e972e9c12a93b3e58c6b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a089ea233f99294c1e4a38a643e93607e5c56d13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282356"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728302"
 ---
 # <a name="excel-connection-manager"></a>Excel 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Excel 接続マネージャーを使用すると、パッケージは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック ファイルに接続できます。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Excel ソースと Excel 変換先は、Excel 接続マネージャーを使用します。  
  
 > [!IMPORTANT]

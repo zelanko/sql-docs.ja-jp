@@ -16,14 +16,18 @@ ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53d4bbc5b87dbbf4586baf6418b52076b95f65a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3ec797c98cd0d18408c511b20313b99ca50f04b2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58288858"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724368"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>スクリプト コンポーネントに対するエラー出力のシミュレート
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   エラー行の自動処理のスクリプト コンポーネントでエラー出力として出力を直接構成することはできませんが、別の出力を作成するか、可能な場合はスクリプトで条件ロジックを使用してこの出力に行を送信することによって、組み込みエラー出力の機能を再現することができます。 2 つの出力列を追加してエラー番号、およびエラーが発生した列の ID を受け取ることにより、組み込みエラー出力の動作を模倣することもできます。  
   
  事前定義された特定の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー コードに対応するエラーの説明を追加する場合は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを使用できます。これは、スクリプト コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> プロパティから使用できます。  

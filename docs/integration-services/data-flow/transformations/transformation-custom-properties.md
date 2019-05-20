@@ -42,14 +42,18 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b9f8b3c7a4a4b6b2abf8cd0711ac0e6cec259c6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d075bdbd593d450cbeef18162da5e8329d4ea850
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277451"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725804"
 ---
 # <a name="transformation-custom-properties"></a>変換のカスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
    [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、ほとんどのデータ フロー オブジェクトには共通するプロパティがありますが、それ以外にも、多くのデータ フロー オブジェクトにはオブジェクト固有のカスタム プロパティがあります。 カスタム プロパティにアクセスできるのは実行時のみで、このプロパティに関する説明は、『[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] マネージド プログラミング リファレンス マニュアル』には記載されていません。  
   
  ここでは、さまざまなデータ フローの変換のカスタム プロパティを一覧で示し、それぞれについて説明します。 データ フロー オブジェクトの大部分との共通プロパティについては、「 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)」を参照してください。  
@@ -184,7 +188,7 @@ ms.locfileid: "58277451"
   
 |プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
-|FastParse|ブール値|列の解析に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 このプロパティの既定値は **False**です。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 .<br /><br /> 注:このプロパティは、**データ変換変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
+|FastParse|ブール値|列の解析に、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 このプロパティの既定値は **False**です。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 。<br /><br /> 注:このプロパティは、**データ変換変換エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
 |SourceInputColumnLineageId|Integer|出力列のソースである入力列の **LineageID** 。|  
   
  データ変換の変換の入力、入力列、および出力には、カスタム プロパティがありません。  

@@ -13,14 +13,18 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282666"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726382"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変換元、変換先、変換などを含むデータ フロー コンポーネントのプロパティを設定するには、次の機能のいずれかを使用します。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が提供するコンポーネント エディター。 これらのエディターには、各データ フロー コンポーネントのカスタム プロパティのみ含まれます。  
@@ -137,7 +141,7 @@ ms.locfileid: "58282666"
 |PipelineVersion|Integer|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
 |UsesDispositions|ブール値|コンポーネントにエラー出力があるかどうかを示します。|  
 |[ValidateExternalMetadata]|ブール値|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True**です。|  
-|[バージョンのオプション]|Integer|コンポーネントのバージョン。|  
+|バージョン|Integer|コンポーネントのバージョン。|  
   
 ###  <a name="inputs"></a> 入力プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換および変換先には入力があります。 データ フロー内のコンポーネントの入力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> インターフェイスを実装します。  

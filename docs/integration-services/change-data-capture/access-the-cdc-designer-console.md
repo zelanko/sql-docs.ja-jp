@@ -13,14 +13,18 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f100526ed890b3c180d0d0e948da81081c0171ab
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 57e8a0986fda07fb0850172497f27af2618dd962
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277801"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729126"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC デザイナー コンソールへのアクセス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC デザイナー コンソールには、コンソールをインストールしたコンピューターからアクセスすることができます。 インストールの詳細については、インストールを参照してください。  
   
  CDC デザイナー コンソールを開くと、[SQL Server への接続] ダイアログ ボックスが表示されます。  
@@ -45,7 +49,7 @@ ms.locfileid: "58277801"
  矢印をクリックして、構成するオプションを表示します。 これらのオプションを既定値のままにすることもできます。 使用可能なオプションは次のとおりです。  
   
  **[接続タイムアウト]**  
- CDC Service for Oracle が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は **15**です。  
+ CDC Service for Oracle が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は 15**です。  
   
  **[実行タイムアウト]**  
  Oracle CDC Windows Service がコマンドの実行を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は、 **30**です。  
