@@ -19,19 +19,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11ed3624f1a8ac74f650bd1468750452580fb911
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853573"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626675"
 ---
 # <a name="reserved-keywords-transact-sql"></a>予約済みキーワード (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、データベースの定義、操作、アクセスに予約済みキーワードが使用されます。 予約済みキーワードは [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語の文法の一部です。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの予約済みキーワードによって [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとバッチが解析され、理解されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の予約済みキーワードを識別子およびオブジェクト名として使用することは構文的に可能ですが、これは識別子を区切って使用するときに限られます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と SQL Data Warehouse の予約済みキーワードの一覧を次の表に示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Azure SQL Data Warehouse の予約済みキーワードの一覧を次の表に示します。  
   
 ||||  
 |-|-|-|  
@@ -79,13 +79,13 @@ ms.locfileid: "47853573"
 |DEALLOCATE|OF|TRUNCATE|  
 |DECLARE|OFF|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|Del|ON|UNION|  
+|DELETE|ON|UNION|  
 |DENY|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|USER|  
+|DOUBLE|OPTION|User|  
 |DROP|OR|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -98,11 +98,11 @@ ms.locfileid: "47853573"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-**SQL Data Warehouse** に固有の予約済みキーワードの一覧を次の表に示します。
+**Azure SQL Data Warehouse** に固有の予約済みキーワードの一覧を次の表に示します。
 
 |||
 |-|-|
-|**Label**||
+|**LABEL**||
   
  これに加えて、ISO 標準では予約済みキーワードの一覧が定義されています。 オブジェクト名と識別子には、ISO の予約済みキーワードを使用しないでください。 次の表にある ODBC の予約済みキーワードの一覧は、ISO の予約済みキーワードの一覧と同じです。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "47853573"
 |BOTH|LEADING|SIMILAR|  
 |BREADTH|LESS|SIZE|  
 |CALL|LEVEL|SMALLINT|  
-|CALLED|LIKE_REGEX|Space|  
+|CALLED|LIKE_REGEX|SPACE|  
 |CARDINALITY|LIMIT|SPECIFIC|  
 |CASCADED|LN|SPECIFICTYPE|  
 |CAST|LOCAL|SQL|  
