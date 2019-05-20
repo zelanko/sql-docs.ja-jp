@@ -15,14 +15,18 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b5ba4c8a12c194eda57379c1fa382e70142bf8b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a4ade06f7275007c17834fbee3d69e2d5583d7f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280516"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729194"
 ---
 # <a name="folder-properties-dialog-box"></a>[フォルダーのプロパティ] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   フォルダーには、 **SSISDB** カタログ内のプロジェクトおよび環境が含まれます。 フォルダーごとに、フォルダーの内容に適用される権限を定義します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の権限の詳細については、「[catalog.grant_permission &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)」をご覧ください。  
   
 ## <a name="to-set-folder-description-and-permissions"></a>フォルダーの説明と権限を設定するには  

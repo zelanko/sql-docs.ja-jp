@@ -15,14 +15,18 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4df9d8299d7c423dc0fe96fb41222cc041a01146
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dbf1fba077d693b45cd20c0e9f683cda64bc03dd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283156"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729220"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージとプロジェクトのパラメーター、接続マネージャー、および環境への参照を構成するには、 **[構成]** ダイアログ ボックスを使用します。  
   
  **目的に合ったトピックをクリックしてください**  
@@ -57,7 +61,7 @@ ms.locfileid: "58283156"
  **コンテナー**  
  パラメーターを含むオブジェクトを一覧表示します。  
   
- **名前**  
+ **[名前]**  
  パラメーター名を一覧表示します。  
   
  **Value**  
@@ -68,7 +72,7 @@ ms.locfileid: "58283156"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **名前**  
+ **[名前]**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  

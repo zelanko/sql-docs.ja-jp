@@ -14,14 +14,18 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3c188f7ba04162b3cd385606789c94e9c08354e4
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271207"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805251"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   次の 1 つ以上のツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行、プロジェクトの検証、およびその他の操作を監視できます。 データ タップなどの特定のツールは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトに対してのみ使用できます。  
   
 -   ログ  

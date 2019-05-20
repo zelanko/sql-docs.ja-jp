@@ -17,14 +17,18 @@ ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48868a8bdcbe5ed1ead3d3e1bf2478a5a598488a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e32c34f8fde97d780d7c5cc743e3b78c9805271e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283186"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727514"
 ---
 # <a name="reorganize-index-task"></a>インデックスの再編成タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   インデックスの再編成タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルおよびビューのインデックスを再編成します。 インデックスの管理の詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
  インデックスの再編成タスクを使用すると、パッケージは単一データベースまたは複数データベースのインデックスを再編成できます。 タスクにより単一データベースのインデックスのみを再編成する場合、インデックスの再編成の対象となるビューまたはテーブルを選択できます。 また、インデックスの再編成タスクには、ラージ オブジェクト データを圧縮するオプションが含まれます。 ラージ オブジェクト データとは、**image**、**text**、**ntext**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、または **xml** データ型のデータのことです。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  

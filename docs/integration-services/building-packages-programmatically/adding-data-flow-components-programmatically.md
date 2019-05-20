@@ -18,14 +18,18 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 399a5b83aff03813418f3c32e00dd11f518a1b51
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abbd2298f1bcd2024db50e83a77ce2f82f732e7a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280136"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729386"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ フローを作成するには、最初にコンポーネントを追加します。 次に、追加したコンポーネントを構成して相互に接続し、実行時のデータ フローを確立します。 このセクションでは、データ フロー タスクへのコンポーネントの追加、コンポーネントのデザイン時インスタンスの作成、およびコンポーネントの構成について説明します。 コンポーネントの接続方法については、「[プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)」を参照してください。  
   
 ## <a name="adding-a-component"></a>コンポーネントの追加  

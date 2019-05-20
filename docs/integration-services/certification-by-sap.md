@@ -11,14 +11,18 @@ ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c53cba2770796090b47acf7f6d1d3ff374f2ea26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ac34b1617736dbd928dd6b405ecb305d4da84291
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277721"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729142"
 ---
 # <a name="certification-by-sap"></a>SAP による認定
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Microsoft Connector 1.1 for SAP BW は、SAP から SAP NetWeaver との統合に関する認定を受けました。  
   
  ![証明される SAP - SAP NetWeaver での統合](../integration-services/media/sapcertifiedforssis11.gif "証明される SAP - SAP NetWeaver での統合")  

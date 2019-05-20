@@ -11,14 +11,18 @@ ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21a01d4280b48dcb78466927d1872191e3d3fb67
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ceddb40eee5f5eafcc134e4ed434c2dabadd6896
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276861"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728280"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>DQS クレンジング接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   DQS クレンジング接続マネージャーを使用すると、パッケージから [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] サーバーに接続できます。 DQS クレンジング変換では、DQS クレンジング接続マネージャーを使用します。  
   
  Data Quality Services について詳しくは、「 [Data Quality Services の概念](../../data-quality-services/data-quality-services-concepts.md)」をご覧ください。  

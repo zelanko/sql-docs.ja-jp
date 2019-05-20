@@ -24,14 +24,18 @@ ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bffb4abd200c1a67c6115f3c890192d5ee375e75
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 57728316aa1a2f194fd48e681475828d4ba4a918
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273530"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724808"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>非同期出力型のカスタム変換コンポーネントの開発
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   非同期出力型変換コンポーネントは、変換が入力行をすべて受け取るまで行を出力できないようにする場合や、変換が入力として受信した各行に対して必ずしも 1 つずつ出力行を生成しない場合に使用します。 たとえば、集計変換では、行をすべて読み込むまではすべての行の合計を計算できません。 これに対し、同期出力型コンポーネントは、データが渡されるたびに各データ行を変更する場合に使用します。 各行のデータを順に変更したり、1 つまたは複数の列を新規作成して、各列にすべての入力行ごとの値を設定したりできます。 同期コンポーネントと非同期コンポーネントの相違点の詳細については、「[同期変換と非同期変換について](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)」を参照してください。  
   
  非同期出力型変換コンポーネントは、変換先コンポーネントと変換元コンポーネントの、両方の機能を果たすという特徴があります。 この種のコンポーネントは、上流コンポーネントから行を受け取り、下流コンポーネントで使用される行を追加します。 これらの操作を両方とも行うデータ フロー コンポーネントは、他にはありません。  

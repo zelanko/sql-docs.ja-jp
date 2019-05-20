@@ -14,14 +14,18 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8338cb3c4e4d4d4915c1eaee5d6a118edc23ca5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80445ce66d9b6333e5fd8f6856af251eda2ac5ca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282826"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727253"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>データ フローでコンポーネントを追加または削除する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ フロー コンポーネントとは、データ フロー内の変換元、変換、および変換先のことです。 コンポーネントをデータ フローに追加するには、データ フロー タスクを事前にパッケージ制御フローに含める必要があります。  
   
  次の手順では、パッケージのデータ フローでコンポーネントを追加または削除する方法について説明します。  

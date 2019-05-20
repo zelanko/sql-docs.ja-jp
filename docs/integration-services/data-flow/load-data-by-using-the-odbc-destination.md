@@ -11,14 +11,18 @@ ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bbf24f97146e98fc074870410f8e68a83672f72
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7e0ea4b800a4e48959782bfb70d834db93a323d6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282326"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726755"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   次の手順では、ODBC 入力先を使用してデータを読み込む方法を示します。 ODBC 入力先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの入力元があらかじめ含まれている必要があります。  
   
 ### <a name="to-load-data-using-an-odbc-destination"></a>ODBC 入力先を使用してデータを読み込むには  

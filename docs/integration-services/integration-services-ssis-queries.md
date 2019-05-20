@@ -18,14 +18,18 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d1c5ab11bd6fb6447e991eea64ba2d8a10dfca5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289435"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723541"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL 実行タスク、OLE DB ソース、OLE DB 変換先、および参照変換では、SQL クエリを使用できます。 SQL 実行タスクでは、SQL ステートメントによってデータベース オブジェクトとデータを作成、更新、および削除したり、ストアド プロシージャを実行したり、SELECT ステートメントを実行したりすることができます。 OLE DB ソースと参照変換の場合、通常 SQL ステートメントは SELECT ステートメントまたは EXEC ステートメントです。 EXEC ステートメントで最もよく実行するのは、結果セットを返すストアド プロシージャです。  
   
  クエリを解析して、有効かどうかを確認できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]への接続を使用するクエリを解析すると、クエリは解析後に実行されて、実行結果 (成功または失敗) が解析結果に割り当てられます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]以外のデータへの接続をクエリで使用する場合、ステートメントは解析されるだけです。  

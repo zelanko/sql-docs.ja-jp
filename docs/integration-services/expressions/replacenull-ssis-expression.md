@@ -11,14 +11,18 @@ ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7f931a95981ae15fe98c80770e91d370fe0a6b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d0d250b3b3b6ac37982794a3580dee0eabfdd8a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290118"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725073"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   1 番目の式パラメーターの値が NULL の場合、2 番目の式パラメーターの値を返します。NULL でない場合は、1 番目の式の値を返します。  
   
 ## <a name="syntax"></a>構文  

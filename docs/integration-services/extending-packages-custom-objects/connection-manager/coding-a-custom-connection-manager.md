@@ -13,14 +13,18 @@ ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48d18edc37d5073ab4346ec58cbb6a341d8870fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f03fa46643f062aa03cac60dbf3dcbe7b31f22c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282416"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724761"
 ---
 # <a name="coding-a-custom-connection-manager"></a>カスタム接続マネージャーのコーディング
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
   
  カスタム接続マネージャーのサンプルについては、「[カスタム接続マネージャー用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)」を参照してください。 このトピック内のコード例は、SQL Server カスタム接続マネージャーのサンプルに含まれています。  

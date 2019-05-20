@@ -19,14 +19,18 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f759c8ee2b21d22e49bcc402baf16b1fe1534f87
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281966"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727831"
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ マイニング クエリ タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に構築されたデータ マイニング モデルに基づいて、予測クエリを実行します。 予測クエリは、マイニング モデルを使用して新しいデータの予測を作成します。 たとえば、予測クエリにより、夏季のヨット販売数を予測したり、ヨットを購入する可能性の高い顧客の一覧を生成できます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ定義言語 (DDL) ステートメントの実行や分析オブジェクトの処理など、ビジネス インテリジェンス操作を実行するその他のタスクが用意されています。  
@@ -71,7 +75,7 @@ ms.locfileid: "58281966"
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
- **名前**  
+ **[名前]**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -103,7 +107,7 @@ ms.locfileid: "58281966"
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
- **名前**  
+ **[名前]**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -159,7 +163,7 @@ ms.locfileid: "58281966"
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
- **名前**  
+ **[名前]**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

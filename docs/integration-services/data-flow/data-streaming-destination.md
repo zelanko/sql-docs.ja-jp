@@ -13,14 +13,18 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242500"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727004"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、 **OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
   
  下の例のクエリは、SSIS カタログの Power BI フォルダーに SSISPackagePublishing プロジェクトの Package.dtsx パッケージからの出力を返します。 このクエリは [Default Linked Server for Integration Services] という名前のリンク サーバーを利用し、このリンク サーバーは新しい OLE DB Provider for SSIS を利用します。 クエリには、SSIS カタログのフォルダー名、プロジェクト名、パッケージ名が含まれています。 OLE DB Provider for SSIS はクエリに指定されたパッケージを実行し、表形式の結果セットを返します。  

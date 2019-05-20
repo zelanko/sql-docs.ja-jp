@@ -11,14 +11,18 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fad3dbcd1a181fd2343fc37fb5227a439011c4b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c280b829f5d3efbca5cdff1dfcf7368e9f26111
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273516"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728744"
 ---
 # <a name="how-to-work-with-cdc-services"></a>CDC Service の操作方法
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   この手順では、CDC Service 構成コンソールを使用して、Oracle CDC Service の操作用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを準備し、新しい CDC サービスを作成する方法について説明します。  
   
 ### <a name="to-work-with-cdc-services"></a>CDC サービスを操作するには  

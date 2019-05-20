@@ -19,14 +19,18 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 181ea0007d2a61ba3705d3d318bda3b0da62fe77
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0a9ef2d748bacbcab184c5f60dea8c3514cb61b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280746"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723661"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services の開発者向けのドキュメント
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の開発者として、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のプログラミングでは、次の 2 つの基本的な方法を採用できます。  

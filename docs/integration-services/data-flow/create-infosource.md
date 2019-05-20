@@ -11,14 +11,18 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a69f86f7eccbf7a105fa67e3572ddc46615468f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 270f2831b814144f6e053db32509e27ffef02ba2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271250"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727049"
 ---
 # <a name="create-infosource"></a>[インフォソースの作成]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[インフォソースの作成]** ダイアログ ボックスを使用すると、新しいインフォソースを作成できます。 新しいインフォソースを作成するには、 **[トランザクション データのインフォソースの作成]** または **[マスター データのインフォソースの作成]** ダイアログ ボックスを使用します。  
   
  **[インフォソースの作成]** ダイアログ ボックスは、 **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページから開くことができます。 SAP BW 変換先の詳細については、「 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  

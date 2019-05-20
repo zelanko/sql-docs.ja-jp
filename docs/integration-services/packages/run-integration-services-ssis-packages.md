@@ -22,14 +22,18 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a598695807d978df8dd14635f127949e835b9e7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277364"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805260"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージの実行
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行するには、それらのパッケージの格納場所に応じていくつかのツールのうちの 1 つを使用できます。 次の表にツールを示します。  
 
 > [!NOTE]
@@ -43,16 +47,16 @@ ms.locfileid: "58277364"
   
 |ツール|Integration Services サーバーに格納されているパッケージ|SSIS パッケージ ストアまたは msdb データベースに格納されているパッケージ|ファイル システムに格納されているパッケージ (SSIS パッケージ ストアに含まれる場所の範囲外)|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
-|**SQL Server Data Tools**|いいえ|いいえ<br /><br /> ただし、msdb データベースを含む [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアからプロジェクトに既存のパッケージを追加できます。 この方法でプロジェクトに既存のパッケージを追加すると、ファイル システム内にパッケージのローカル コピーが作成されます。|可|  
-|**SQL Server Management Studio (Integration Services サーバーをホストするデータベース エンジンのインスタンスに接続している場合)**<br /><br /> 詳細については、「 [[パッケージの実行] ダイアログ ボックス](#execute_package_dialog)」を参照してください。|可|いいえ<br /><br /> ただし、これらの場所からサーバーにパッケージをインポートできます。|いいえ<br /><br /> ただし、ファイル システムからサーバーにパッケージをインポートできます。|
-|**SQL Server Management Studio (Scale Out Master として有効になっている Integration Services サーバーをホストするデータベース エンジンのインスタンスに接続している場合)**<br /><br /> 詳しくは、「[Integration Services (SSIS) Scale Out でパッケージを実行する](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)」をご覧ください。|可|いいえ|いいえ|
+|**SQL Server Data Tools**|いいえ|いいえ<br /><br /> ただし、msdb データベースを含む [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアからプロジェクトに既存のパッケージを追加できます。 この方法でプロジェクトに既存のパッケージを追加すると、ファイル システム内にパッケージのローカル コピーが作成されます。|はい|  
+|**SQL Server Management Studio (Integration Services サーバーをホストするデータベース エンジンのインスタンスに接続している場合)**<br /><br /> 詳細については、「 [[パッケージの実行] ダイアログ ボックス](#execute_package_dialog)」を参照してください。|はい|いいえ<br /><br /> ただし、これらの場所からサーバーにパッケージをインポートできます。|いいえ<br /><br /> ただし、ファイル システムからサーバーにパッケージをインポートできます。|
+|**SQL Server Management Studio (Scale Out Master として有効になっている Integration Services サーバーをホストするデータベース エンジンのインスタンスに接続している場合)**<br /><br /> 詳しくは、「[Integration Services (SSIS) Scale Out でパッケージを実行する](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md)」をご覧ください。|はい|いいえ|いいえ|
 |**SQL Server Management Studio (SSIS パッケージ ストアを管理する Integration Services サービスに接続している場合)**|いいえ|はい|いいえ<br /><br /> ただし、ファイル システムから [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアにパッケージをインポートできます。|  
-|**dtexec**<br /><br /> 詳しくは、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」をご覧ください。|可|[はい]|可|  
-|**dtexecui**<br /><br /> 詳細については、「[パッケージ実行ユーティリティ &#40;DtExecUI&#41; の UI リファレンス](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)」を参照してください。|いいえ|はい|可|  
-|**SQL Server エージェント**<br /><br /> パッケージのスケジュールを設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用します。<br /><br /> 詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。|可|[はい]|可|  
-|**組み込みのストアド プロシージャ**<br /><br /> 詳細については、「[catalog.start_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)」を参照してください。|可|いいえ|いいえ|  
-|**API (**<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の型およびメンバーを使用)|可|いいえ|いいえ|  
-|**API (**<xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の型およびメンバーを使用)|現時点ではいいえ|可|可|  
+|**dtexec**<br /><br /> 詳しくは、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」をご覧ください。|はい|はい|はい|  
+|**dtexecui**<br /><br /> 詳細については、「[パッケージ実行ユーティリティ &#40;DtExecUI&#41; の UI リファレンス](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)」を参照してください。|いいえ|はい|はい|  
+|**SQL Server エージェント**<br /><br /> パッケージのスケジュールを設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用します。<br /><br /> 詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。|はい|はい|はい|  
+|**組み込みのストアド プロシージャ**<br /><br /> 詳細については、「[catalog.start_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)」を参照してください。|はい|いいえ|いいえ|  
+|**API (**<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の型およびメンバーを使用)|はい|いいえ|いいえ|  
+|**API (**<xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の型およびメンバーを使用)|現時点ではいいえ|はい|はい|  
 
 ## <a name="execution-and-logging"></a>実行とログ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージではログ記録を有効にできるので、実行時情報をログ ファイルに保存できます。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  

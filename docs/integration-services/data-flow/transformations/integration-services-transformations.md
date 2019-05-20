@@ -22,14 +22,18 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16df5bb208136b09c76d461fe7f603a06b66e567
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: df6bcf51ca8be47ffa4d6b7a56bc67bd0ce15d1b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289728"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726028"
 ---
 # <a name="integration-services-transformations"></a>Integration Services の変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の変換とは、パッケージのデータ フロー内にある、データを集計、マージ、配信、および変更するコンポーネントのことです。 変換では、参照操作を実行してサンプル データセットを生成することもできます。 このセクションでは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] に含まれる変換と、その機能について説明します。  
   
 ## <a name="business-intelligence-transformations"></a>ビジネス インテリジェンス変換  

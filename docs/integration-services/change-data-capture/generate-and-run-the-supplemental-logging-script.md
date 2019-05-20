@@ -13,14 +13,18 @@ ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91f76644545af1c53ac72d293907da7fb2be17f4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 91086f31ef9461b1fd1f71bac7fff7a4491b90f5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273859"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728830"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>補足ログ スクリプトの生成および実行
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   補足ログを設定する Oracle ソース データベースでスクリプトを実行するには、[変更をキャプチャするためのテーブルの設定] ページを使用します。  
   
  **補足ログ スクリプトを実行するには**  

@@ -11,14 +11,18 @@ ms.assetid: 84ed22e8-2a0c-41c2-a8f0-eea3f4047656
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f95f6e017e38460a049900b6001136d693f600a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e5b1070586ea1ed4e47bd803cdcaad3f2800d22e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290788"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729055"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-how-to-guide"></a>Change Data Capture Designer for Oracle by Attunity 操作ガイド
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ここでは、Change Data Capture Designer for Oracle by Attunity のタスクを実行する方法について説明します。  
   
 ## <a name="learn-how-to-use-the-oracle-cdc-designer-console"></a>Oracle CDC デザイナー コンソールを使用する方法を学ぶ  

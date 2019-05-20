@@ -16,14 +16,18 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e47c5474daa564c63cb80c72f14df6fe990b5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: faeb7edf94c402a6a4558f95c2b42a6c6f4b3d1c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283026"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713599"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>同期および非同期変換について
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の同期変換と非同期変換の相違点を理解するには、まず同期変換を理解するのが最も簡単な方法です。 同期変換がニーズに合わない場合は、デザインに非同期変換が必要になることがあります。  
   
 ## <a name="synchronous-transformations"></a>同期変換  
@@ -42,7 +46,7 @@ ms.locfileid: "58283026"
   
 -   入力行と出力行の間に 1 対 1 の対応がない場合。 たとえば、集計変換です。この変換では、コンポーネントは出力に行を追加し、計算された集計値を保持する必要があります。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のスクリプトとプログラミングでは、コンポーネントの出力の **SynchronousInputID** プロパティに 0 の値を割り当てることによって、非同期変換を指定します。 . これにより、出力に各行を自動的に送信しないようにデータ フロー エンジンに指示します。 次に、非同期変換の出力用に作成される新しい出力バッファーに各行を追加することによって、各行を適切な出力に明示的に送信するためのコードを記述する必要があります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のスクリプトとプログラミングでは、コンポーネントの出力の **SynchronousInputID** プロパティに 0 の値を割り当てることによって、非同期変換を指定します。 。 これにより、出力に各行を自動的に送信しないようにデータ フロー エンジンに指示します。 次に、非同期変換の出力用に作成される新しい出力バッファーに各行を追加することによって、各行を適切な出力に明示的に送信するためのコードを記述する必要があります。  
   
 > [!NOTE]  
 >  変換元コンポーネントはデータ ソースから読み取った各行を出力バッファーに明示的に追加する必要もあるため、変換元では変換を非同期出力のように表示します。  

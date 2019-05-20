@@ -13,14 +13,18 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88b9871a3e89ab1f21c6c37344ed26e19fc5dca7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4991fd3ad95a633881099b9677c9db55935f6a13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271719"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727598"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Hadoop Pig Task は、Hadoop クラスターで Pig スクリプトを実行するために使用します。  
   
  Hadoop Pig Task を追加するには、デザイナーにドラッグ アンド ドロップします。 その後タスクをダブルクリックするか、右クリックして **[編集]** をクリックし、 **[Hadoop Pig タスク エディター]** ダイアログ ボックスを表示します。  

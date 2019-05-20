@@ -13,14 +13,18 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b542d886c20ef0560e92565106d72d8e1303e2b8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 781f734ac394ffa1374c6bc93861c552dc32618a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290528"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727671"
 ---
 # <a name="expression-task"></a>式タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   式タスクでは、式ビルダーを使用して、実行時に変数値を設定する式を作成して評価します。 タスクを編集するときは、 [Expression Builder](../../integration-services/expressions/expression-builder.md) が起動します。  
   
 ## <a name="expression-examples"></a>式の例  

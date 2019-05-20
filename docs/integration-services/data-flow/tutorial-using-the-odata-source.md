@@ -11,14 +11,18 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91b03ca49059ea12898420eea2abff6326fa7d0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 795d4d31c3b26d2ef1f587e6b96d158d5d304789
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272773"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725693"
 ---
 # <a name="tutorial-using-the-odata-source"></a>チュートリアル:OData ソースの使用
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このチュートリアルでは、サンプルの **Northwind** OData サービス (https://services.odata.org/V3/Northwind/Northwind.svc/)) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
   
 ## <a name="1-create-an-integration-services-project"></a>1.Integration Services プロジェクトの作成  
@@ -55,7 +59,7 @@ ms.locfileid: "58272773"
   
 10. **[コレクション]** ドロップダウン リストで、**[Employees]** を選択します。  
   
-11. **[クエリ オプション]** で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、`$orderby=CompanyName&$top=100` のようにします。 このチュートリアルでは、「`$top=5`」と入力します。  
+11. **[クエリ オプション]** で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、`$orderby=CompanyName&$top=100` のようになります。 このチュートリアルでは、「`$top=5`」と入力します。  
   
 12. **[プレビュー]** をクリックして、データをプレビューします。  
   

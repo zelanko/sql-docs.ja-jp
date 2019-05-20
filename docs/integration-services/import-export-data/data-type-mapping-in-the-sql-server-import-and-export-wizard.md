@@ -10,14 +10,18 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bbccfb6504a6b84735b3310c98b8805d2fce6e68
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 71e52e1e20575f52e4aefde27e16578411c2ea2d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221836"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723819"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードのデータ型マッピング
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでは、列の名前、データ型、およびデータ型プロパティを新しい変換先テーブルとファイルに設定できますが、列の値についてカスタム変換を指定することはできません。 このため、変換元から変換先へのデータ型の組み込みマッピングが重要になります。  
   
 ##  <a name="wizardMapping"></a> ウィザードが変換元と変換先の間でデータ型をマップする方法

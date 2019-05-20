@@ -34,14 +34,18 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1424df38f6ff0cc091e0f71a316a60e1388d7a33
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1c87b0167c4810c36e6d9579a501aff2a2954d25
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273597"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726094"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
   
 > [!NOTE]  
@@ -186,7 +190,7 @@ ms.locfileid: "58273597"
  **使用できる入力列**  
  入力列をドラッグして、使用できる参照列に接続します。 これらの列は、サポートされているデータ型と一致する必要があります。 マッピングする行を選択して右クリックし、 [[リレーションシップの作成]](../../../integration-services/data-flow/transformations/create-relationships.md) ダイアログ ボックスでマッピングを編集します。  
   
- **名前**  
+ **[名前]**  
  使用可能な入力列の名前が表示されます。  
   
  **[パススルー]**  

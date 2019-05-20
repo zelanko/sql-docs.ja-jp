@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fe8e30ec548703a8210680bca10f75304cbc3c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282606"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720479"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して、Excel からデータをインポートする、または Excel にデータをエクスポートする
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 この記事では、Excel からデータをインポートするとき、または SQL Server Integration Services (SSIS) を使って Excel にデータをエクスポートするときに、指定する必要のある接続情報および構成する必要のある設定について説明します。
 
@@ -60,7 +64,7 @@ Excel の接続コンポーネントの最新版を [Microsoft Access データ�
 
 -   32 ビット バージョンの Office を既にインストールしている場合は、32 ビット バージョンのコンポーネントをインストールする必要があります。 また、SSIS パッケージを 32 ビット モードで実行していること、またはインポートおよびエクスポート ウィザードの 32 ビット バージョンを実行していることを確認する必要があります。
 
--   Office 365 サブスクリプションをお持ちの場合は、インストーラーを実行するときにエラー メッセージが表示される場合があります。 このエラーは、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示します。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例 :
+-   Office 365 サブスクリプションをお持ちの場合は、インストーラーを実行するときにエラー メッセージが表示される場合があります。 このエラーは、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示します。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例:
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

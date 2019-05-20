@@ -13,14 +13,18 @@ ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f09237459aed33110adf37c0ea90c0639a1b62ab
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9d7f388a854897b450a6e29b78763125c01e6037
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290468"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726169"
 ---
 # <a name="create-relationships"></a>[リレーションシップの作成]
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[リレーションシップの作成]** ダイアログ ボックスを使用すると、[あいまい参照変換エディター]、[参照変換エディター]、および [用語参照変換エディター] で設定したソース列と参照テーブル列の間のマッピングを編集できます。  
   
 > [!NOTE]  

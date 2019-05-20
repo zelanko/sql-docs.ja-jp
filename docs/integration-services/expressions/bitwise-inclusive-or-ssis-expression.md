@@ -14,14 +14,18 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a0e23af1cf138fa3bbf613ce0cc0f34cca75b3c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1c865c1316996c54e589326fa1351aa3cab4a934
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277701"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725608"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (ビット演算包含的 OR) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   2 つの整数値の OR 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 いずれかのビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットはゼロ (0) に設定されます。  
   
  どちらの条件も符号付き整数データ型か、または、どちらの条件も符号なし整数データ型である必要があります。  

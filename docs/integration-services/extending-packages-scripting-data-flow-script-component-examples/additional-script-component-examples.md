@@ -15,14 +15,18 @@ ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c68ab205087358682959685953266ad962a7e9a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9f962738621bf4be19975077d39fb253f62ad3ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281106"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724380"
 ---
 # <a name="additional-script-component-examples"></a>その他のスクリプト コンポーネントの例
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   スクリプト コンポーネントは構成可能なツールです。パッケージのデータ フローで使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に備わっている変換元、変換、および変換先では満たせないほとんどすべての要件に対応できます。 ここでは、使用できるさまざまな種類の機能を説明する、スクリプト コンポーネントのコード例を示します。  
   
  スクリプト コンポーネントを基本の変換元、変換、または変換先として構成する方法の例については、「[特定の種類のスクリプト コンポーネントの開発](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」を参照してください。  

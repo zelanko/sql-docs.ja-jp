@@ -18,14 +18,18 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92bc802b8277d933eb0fea3b8211834efe3e34bf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0e26853a97cbadf0855eae7bfe24eefad206ddfe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275438"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724196"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、**[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
   
 ## <a name="selecting-the-type-of-component-to-create"></a>作成するコンポーネントの種類の選択  

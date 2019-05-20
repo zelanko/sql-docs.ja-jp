@@ -18,14 +18,18 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 043c99a06b42e1bc1fcbe76971c55d77fc2bd45f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fa4eca66eaab6abf6b6bf4332dce1c48bb5835cd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290448"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727310"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   WMI データ リーダー タスクは、WQL (Windows Management Instrumentation Query Language) を使用してクエリを実行し、コンピューター システムに関する WMI から情報を返します。 WMI データ リーダー タスクは、次の目的で使用できます。  
   
 -   ローカルまたはリモート コンピューター上の Windows イベント ログのクエリを実行し、その情報をファイルまたは変数に書き込みます。  
@@ -104,7 +108,7 @@ Select * FROM Win32_QuickFixEngineering
   WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](https://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **[名前]**  
  WMI データ リーダー タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

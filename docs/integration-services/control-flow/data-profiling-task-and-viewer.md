@@ -15,14 +15,18 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a340ece64bc69b012919bb57afd1b80690f3a59
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6301066549a8008512bef934f9d887349a6b765b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273048"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727771"
 ---
 # <a name="data-profiling-task-and-viewer"></a>データ プロファイル タスクとビューアー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ プロファイル タスクを使用すると、データの抽出、変換、および読み込みを行うプロセス内でデータのプロファイルを実行できます。 データ プロファイル タスクを使用することによって、次のような利点があります。  
   
 -   ソース データをより効果的に分析できます。  
@@ -56,7 +60,7 @@ ms.locfileid: "58273048"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services とデータ プロファイル  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]におけるデータのプロファイル処理は、次の手順で構成されています。  
   
- **ステップ 1: データ プロファイル タスクの設定**  
+ **ステップ 1:データ プロファイル タスクの設定**  
  データ プロファイル タスクは、計算するプロファイルを構成するために使用するタスクです。 データ プロファイル タスクが含まれているパッケージを実行して、プロファイルを計算します。 このタスクによって、XML 形式のプロファイル出力がファイルまたはパッケージ変数に保存されます。  
   
  **詳細:**[データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  

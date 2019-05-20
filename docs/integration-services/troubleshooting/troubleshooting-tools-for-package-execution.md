@@ -17,14 +17,18 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a43ee9007ab396357e2390841384e61101fa4ec4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290128"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713667"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、デザイン時に、パッケージの実行を一時的に停止するブレイクポイント、進行状況ウィンドウ、およびデータ フロー全体でのデータの流れが追えるデータ ビューアーが用意されています。 ただし、既に配置されているパッケージを実行するときは、これらの機能を使用できません。 配置済みのパッケージのトラブルシューティングを行うための主な技法は次のとおりです。  

@@ -14,14 +14,18 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d26385e50f26e2cc494db2729727ee7358acd5f2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aa21219ef5946ec4d4b95aff1a201aca9b453a2e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271241"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724591"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services 用のカスタム オブジェクトの開発
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる制御フロー オブジェクトおよびデータ フロー オブジェクトが、求める条件を満たしていない場合は、次のようなさまざまな種類のカスタム オブジェクトを独自に開発できます。  
   
 -   **カスタム タスク**。  

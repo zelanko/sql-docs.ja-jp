@@ -11,14 +11,18 @@ ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70b4738f4a6e9d5cab8b4e851b8467b984b4ec47
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a3e9f70011d96d9aa5d5068af5cddecd8f29cce9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290318"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728989"
 ---
 # <a name="connection-to-sql-server"></a>SQL Server への接続
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   MSXDBCDC データベースに対する書き込み権限を含むデータベース ロール (**db_owner** ロールなど) を持たないログインが Oracle CDC インスタンスの作成を試みると、[SQL Server への接続] ダイアログ ボックスが表示されます。  
   
  新しい Oracle CDC インスタンスを作成するには、このダイアログ ボックスに、 **db_owner** データベース ロールなど、MSXDBCDC データベースに対する書き込み権限を持つログインの資格情報を入力する必要があります。  

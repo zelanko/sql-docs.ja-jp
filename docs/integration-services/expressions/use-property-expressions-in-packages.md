@@ -20,14 +20,18 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277661"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724885"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   プロパティ式とは、実行時にプロパティの動的更新を可能にするためにプロパティに割り当てられた式のことです。 たとえば、プロパティ式を使用して、変数に格納された電子メール アドレスを挿入して、メール送信タスクで使用される [宛先] 行を更新できます。  
   
  式は、パッケージ、タスク、Foreach ループ、For ループ、シーケンス、Foreach 列挙子、イベント ハンドラー、パッケージまたはプロジェクト レベルの接続マネージャー、またはログ プロバイダーに追加できます。 これらのオブジェクトの読み取り/書き込みプロパティはすべて、プロパティ式を実装できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ フロー コンポーネントの一部のカスタム プロパティでプロパティ式を使用することもできます。 変数と優先順位制約では、プロパティ式がサポートされていませんが、式を使用できる特殊なプロパティが使用されています。  

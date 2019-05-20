@@ -13,14 +13,18 @@ ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ffe94079514d25b49cae9e792aa3e3b8e5a6e74
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6b46ba1015cac981a08c156add837c2fe295e96e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274138"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726110"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードの完了]
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[緩やかに変化するディメンション ウィザードの完了]** ダイアログ ボックスを使用すると、緩やかに変化するディメンションのサポートをウィザードで構築する前に選択内容を確認できます。  
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  

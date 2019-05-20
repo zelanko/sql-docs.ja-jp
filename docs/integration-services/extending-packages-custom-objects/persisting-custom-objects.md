@@ -13,14 +13,18 @@ ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 913eb1bc47687b890032bf2300a237ec4a29bf5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9272628b44c0f8d9e660e1577bd4485c040d9423
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281064"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724471"
 ---
 # <a name="persisting-custom-objects"></a>カスタム オブジェクトの永続化
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   プロパティで **integer** や **string** などの単純なデータ型のみを使用している限り、カスタム オブジェクトのカスタムの永続性を実装する必要はありません。 既定の永続性の実装により、オブジェクトのメタデータがすべてのプロパティの値と共に保存されます。  
   
  ただし、オブジェクトが複合データ型を使用するプロパティを持つ場合や、プロパティ値の読み込み時と保存時にカスタム処理を実行する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> インターフェイスと、このインターフェイスの <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A> メソッドを実装することができます。 これらのメソッドで、オブジェクトのプロパティとプロパティの現在の値を含む XML フラグメントを、パッケージの XML 定義から読み込んだり、パッケージの XML 定義に保存したりします。 この XML フラグメントの形式は定義されていません。必要なのは、整形式の XML であるということだけです。  

@@ -16,14 +16,18 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b1c9e39e4ccec7ab54229a8bbd0bf51b1d751207
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290618"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726666"
 ---
 # <a name="odata-source"></a>OData ソース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Open Data Protocol (OData) サービスからのデータを使用するには、SSIS パッケージの OData ソース コンポーネントを使用します。
 
 ## <a name="supported-protocols-and-data-formats"></a>サポートされるプロトコルとデータ形式
@@ -102,7 +106,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 例 :Employees  
+ リソースのパスを入力します。 例:Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
   出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、**[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  

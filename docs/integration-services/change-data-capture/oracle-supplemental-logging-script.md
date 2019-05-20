@@ -11,14 +11,18 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7715008903a51377a5819493a61d2cead90f604d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f4d20c4a0eaaf573cdb9da6e9880df6d698a8f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271659"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728629"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle の補足ログ スクリプト
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このダイアログ ボックスには、Oracle の補足ログ スクリプトが表示されます。  
   
  CDC インスタンスを使用に備えて準備すると、CDC デザイナーにより、キャプチャするテーブル用の補足ログを設定する Oracle SQL スクリプトが作成されます。 補足ログ スクリプトは Oracle に対し、特定のテーブルが更新された場合、トランザクション ログに書き込む変更レコードに、変更された列だけでなく、対象のすべての列のデータを含める必要があることを伝えます。  

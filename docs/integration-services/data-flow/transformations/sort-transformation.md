@@ -21,14 +21,18 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 19bf7654a37d589877f806aaaa1d98fefac95b22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6a8cb120d8934ca909408de71caf2b2c049bb853
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270598"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725839"
 ---
 # <a name="sort-transformation"></a>並べ替え変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   並べ替え変換は、入力データを昇順または降順で並べ替え、並べ替えたデータを変換出力にコピーします。 入力には複数の並べ替えを適用できます。各並べ替えは、並べ替えの順序を決定する数値によって識別されます。 順序の数値が最も小さい列が最初に並べ替えられ、順序の数値の大きさの順に列が並べ替えられます。 たとえば、 **CountryRegion** という名前の列の並べ替え順序が 1 で、 **City** という名前の列の並べ替え順序が 2 の場合、出力は、国または地域、次に都市の順に並べ替えられます。 正の値は昇順の並べ替えを表し、負の値は降順の並べ替えを表します。 並べ替えを行わない列の並べ替え順序は 0 です。 並べ替えを選択されていない列は、並べ替えられた列と共に、自動的に変換出力にコピーされます。  
   
  並べ替え変換には、比較オプションのセットが含まれており、変換による列の文字列データの処理方法を決定します。 詳しくは、「 [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md)」をご覧ください。  
@@ -64,7 +68,7 @@ ms.locfileid: "58270598"
  **使用できる入力列**  
  このチェック ボックスを使用して、並べ替える列を指定します。  
   
- **名前**  
+ **[名前]**  
  使用できる各入力列の名前を表示します。  
   
  **パススルー**  

@@ -16,14 +16,18 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 993cf560f8bd3c07b5930219ca041ebe5c411ea1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270455"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727452"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[変数の選択]** ダイアログ ボックスを使用すると、スクリプト タスクまたはスクリプト コンポーネントを構成するときに、 **ReadOnlyVariables** プロパティおよび **ReadWriteVariables** プロパティで 1 つ以上の変数を選択できます。  
   
  **[変数の選択]** ダイアログ ボックスを開くには、**[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** ページで、 **[カスタム プロパティ]** の下にある **ReadOnlyVariables** プロパティまたは **ReadWriteVariables** プロパティのいずれかを探して、そのプロパティに関連付けられている参照ボタン ( [...] ) をクリックします。  
@@ -32,7 +36,7 @@ ms.locfileid: "58270455"
  選択ボックス  
  特定の変数またはすべての変数を選択したり、すべての変数の選択を解除したりします。  
   
- **名前**  
+ **[名前]**  
  変数の名前を指定します。  
   
  **型**  

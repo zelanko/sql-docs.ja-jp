@@ -11,14 +11,18 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 751480be76b38ff10f0c71fbde12bcc6765e6ef6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5d6b035f0ca428f6c31492f940a9964982f04f66
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277257"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722328"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>レッスン 3-3 - 配置したパッケージのテスト
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このタスクでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに配置したパッケージをテストします。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の他のチュートリアルでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)][デバッグ] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]メニューの **[デバッグ開始]** オプションを使用して、 **の配置環境である** でパッケージを実行しました。 今度は別の方法でパッケージを実行します。  

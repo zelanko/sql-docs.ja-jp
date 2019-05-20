@@ -11,14 +11,18 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7b71c3d1e92f755227903f9a02a7e37f28a0307
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13b88630ed7f8280bc57282f9f6681de29080a47
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272019"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726325"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 変換先のカスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントに共通するプロパティの両方があります。  
   
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  

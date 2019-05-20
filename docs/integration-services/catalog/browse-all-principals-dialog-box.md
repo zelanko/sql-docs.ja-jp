@@ -13,14 +13,18 @@ ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3cb979449214daa1cf9d4d03a01cd53f72eabef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 523fb8a446e6985efe3e632a2e1c2b9804b76f49
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276931"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729241"
 ---
 # <a name="browse-all-principals-dialog-box"></a>[すべてのプリンシパルを参照] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、データベースのプリンシパルを選択し、選択したプロジェクトに対する、または選択したフォルダーに格納されたすべてのプロジェクトに対するプリンシパルの権限を変更できます。  
   
  **目的に合ったトピックをクリックしてください**  
@@ -56,7 +60,7 @@ ms.locfileid: "58276931"
  **[アイコン列]**  
  プリンシパルの **[種類]** に対応したアイコンです。  
   
- **名前**  
+ **[名前]**  
  プリンシパルの名前です。  
   
  **型**  

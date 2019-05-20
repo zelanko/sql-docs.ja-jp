@@ -21,14 +21,18 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3aa42ecf4fa8af66026301004ca0520a0d08de7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cb842aa871516beef2b1484a9f76d93b7371999d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277258"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724865"
 ---
 # <a name="developing-a-custom-destination-component"></a>カスタム変換先コンポーネントの開発
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   開発者は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用すると、任意のカスタム データ ソースに接続してデータを格納するためのカスタム変換先コンポーネントを記述することができます。 カスタム変換先コンポーネントは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれている、既存の変換先コンポーネントを使用してもアクセスできないデータ ソースに接続する必要がある場合に役立ちます。  
   
  変換先コンポーネントには 1 つ以上の入力がありますが、出力はありません。 デザイン時に、外部データ ソースとの接続を作成して設定を行い、そこから列メタデータを読み込みます。 実行時には、外部データ ソースに接続し、データ フロー内で上流にあるコンポーネントから受け取った行を、この外部データ ソースに追加します。 コンポーネントの実行前に外部データ ソースが存在する場合は、変換先コンポーネントにより、コンポーネントが受け取る列のデータ型が、外部データ ソースの列のデータ型と一致することを確認する必要もあります。  

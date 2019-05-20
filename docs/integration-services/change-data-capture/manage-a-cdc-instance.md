@@ -13,14 +13,18 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6964ac46f08a11aac9f3619acf181f11fd78960
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b5d988854d3dcf63b1a6be85d672fb2af31d6620
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274778"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728721"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC デザイナー コンソールを使用して、作成したインスタンスに関する情報を表示し、インスタンスの操作を管理することができます。  
   
  インスタンスに関する情報を表示するには、左ペインでインスタンスの名前をクリックします。  

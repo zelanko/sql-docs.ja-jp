@@ -22,14 +22,18 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282386"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724492"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>カスタム タスクにおけるデバッグのサポートの追加
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンでは、ブレークポイントを使用することにより、パッケージ、タスク、およびその他の種類のコンテナーを実行中に中断できます。 ブレークポイントを使用すると、アプリケーションまたはタスクの正しい動作を妨げるエラーを確認し、修正できます。 ブレークポイントのアーキテクチャにより、クライアントは、タスクの処理を中断している間にパッケージ内のオブジェクトのランタイム値を定義された実行地点で評価できます。  
   
  カスタム タスクの開発者はこのアーキテクチャを利用して、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイス、およびその親インターフェイスである <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> を使用することにより、カスタム ブレークポイント ターゲットを作成できます。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> インターフェイスは、ランタイム エンジンと、カスタム ブレークポイント サイトまたはターゲットを作成し管理するためのタスクとの間の対話を定義します。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> インターフェイスは、ランタイム エンジンによって呼び出され、タスクの実行の中断および再開を通知するメソッドおよびプロパティを提供します。  

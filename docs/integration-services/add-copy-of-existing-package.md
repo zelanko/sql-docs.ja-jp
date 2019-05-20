@@ -15,14 +15,18 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8602665ef47ec206c1a6c751b9c3e3ffb0aa74e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6015de3f6c300e8a96d16ad6b0a322754d882945
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280906"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729426"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[既存のパッケージのコピーを追加]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のファイル システムまたは SSIS パッケージ ストアに格納されたパッケージのコピーを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加できます。  
   
 ## <a name="options"></a>オプション  

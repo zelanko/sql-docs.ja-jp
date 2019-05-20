@@ -15,14 +15,18 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a023b8a1a24c8e98856d1540574e1c3c99f87c7d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2ac6b4018d24d3ee94d50482295541c36cbafe14
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282876"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727849"
 ---
 # <a name="control-flow"></a>[制御フロー]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージは、制御フローと、オプションで含まれる 1 つ以上のデータ フローから構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されている制御フロー要素は、パッケージ内の構造を提供するコンテナー、機能を提供するタスク、および優先順位制約の 3 種類です。優先順位制約は、実行ファイル、コンテナー、タスクを連結して正しく順序付けされた制御フローを作成するために使用されます。  
   
  詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」、「 [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)」、および「 [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)」を参照してください。  

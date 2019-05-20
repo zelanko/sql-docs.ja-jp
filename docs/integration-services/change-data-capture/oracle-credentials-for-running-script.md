@@ -11,14 +11,18 @@ ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a12faf8abe604adac73af56586b40338c5aa48cd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae98170e3c6628afc75934cece345bbbfbc22267
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277491"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728640"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Oracle Credentials for Running Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC デザイナー コンソールから Oracle の補足ログ スクリプトを実行するために、スクリプトを実行する Oracle ユーザーの資格情報の入力が求められます。 このスクリプトを実行するには、キャプチャするすべてのテーブルに対する ALTER TABLE 権限と、DBA_LOG_GROUPS ビューに対する SELECT 権限が Oracle ユーザーに必要です。  
   
 ## <a name="task-list"></a>タスク一覧  

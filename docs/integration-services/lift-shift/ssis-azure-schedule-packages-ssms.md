@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2276b2d769128be1d8ce5cbd44c992f08ddf625b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e65c9f5a1ab41ef8ba47636960e3b1b7725b630f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786240"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720723"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を利用し、Azure でデプロイされた SSIS パッケージの実行スケジュールを設定します
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SQL Server Management Studio (SSMS) を使用して、Azure SQL Database にデプロイされた SSIS パッケージのスケジュールを設定することができます。 オンプレミス SQL Server と SQL Database Managed Instance にはファースト クラス SSIS ジョブ スケジューラーとしてそれぞれ、SQL Server エージェントと Managed Instance Agent があります。 一方、SQL Database には、ファースト クラス SSIS ジョブ スケジューラーが組み込まれていません。 この記事で説明する SSMS 機能は SQL Server エージェントに似た、おなじみのインターフェイスを備えており、SQL Database にデプロイされているパッケージをそのインターフェイスでスケジュール設定できます。
 

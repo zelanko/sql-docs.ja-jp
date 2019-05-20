@@ -13,21 +13,21 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac5b1039e6424a66842fcd156fe3475d14826694
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 6ddb6a3b343e89f5f844e54788ce88658a1a76e6
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53329032"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820745"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[検索と置換]** ダイアログ ボックスの **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
+正規表現は、文字列のパターンの検索や置換のための、正確で柔軟性の高い表記方法です。 **の** [検索と置換] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[検索する文字列]** フィールドでは、特定のセットの正規表現を使用できます。  
   
 ## <a name="find-using-regular-expressions"></a>正規表現を使用して検索を行う  
   

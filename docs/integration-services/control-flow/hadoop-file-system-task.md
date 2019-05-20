@@ -13,14 +13,18 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87dd03cb63da117f3d754cdc9692310e9633e70d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ffb3559a379a8d1f64c76072f262b89d41164533
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290738"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727634"
 ---
 # <a name="hadoop-file-system-task"></a>Hadoop ファイル システム タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Hadoop ファイル システム タスクを使用すると、SSIS パッケージで Hadoop クラスター内外にファイルをコピーできます。  
   
  Hadoop ファイル システム タスクを追加するには、デザイナーにドラッグ アンド ドロップします。 その後、タスクをダブルクリックするか、右クリックして **[編集]** をクリックし、 **[Hadoop ファイル システム タスク エディター]** ダイアログ ボックスを開きます。  

@@ -17,14 +17,18 @@ ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61aabb951b05da511ccea7315ed7f4bddbecb4e1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5ee2afaf911ac4a3f66a769ded09ed92ebe0dd58
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279606"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724301"
 ---
 # <a name="script-task-examples"></a>スクリプト タスクの例
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   スクリプト タスクは複数の用途を持つツールで、パッケージで使用すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に組み込まれているタスクでは満たせないほとんどすべての要件を満たすことができます。 このトピックでは、使用できる機能の一部を示すスクリプト タスクのコード例について説明します。  
   
 > [!NOTE]  

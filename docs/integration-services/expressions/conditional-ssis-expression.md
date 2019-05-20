@@ -14,14 +14,18 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e7b89ac833f428a098671cbf5eceaab0b338e2e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272096"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725536"
 ---
 # <a name="--conditional-ssis-expression"></a>? :(条件) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ブール式の評価に基づいて 2 つの式のうちのいずれかの式を返します。 ブール式が TRUE に評価された場合、最初の式が評価対象となり、その結果が式の結果になります。 ブール式が FALSE に評価された場合、2 番目の式が評価対象となり、その結果が式の結果になります。  
   
 ## <a name="syntax"></a>構文  

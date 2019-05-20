@@ -16,14 +16,18 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 165c9d05e91be151377d23f597ddb1ca1d66e851
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9ae4716ec1f239cbe939970e8b37f0d733e34106
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271652"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724032"
 ---
 # <a name="group-or-ungroup-components"></a>コンポーネントのグループ化とグループの解除
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **デザイナーの**[制御フロー] **、**[データ フロー] **、および** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブでは、折りたたみ可能なグループ化がサポートされています。 パッケージに多数のコンポーネントがある場合、タブは過密状態になることがあります。このような状態になると、すべてのコンポーネントを一度に表示するのが難しくなり、操作する項目を探すのも困難になります。 折りたたみ可能なグループ化機能を使用すると、作業画面上の領域を節約でき、大きなパッケージの処理が容易になります。  
   
  グループ化機能では、グループ化するコンポーネントを選択し、それらをグループ化します。次に、作業に合わせてグループを展開するか、折りたたみます。 グループを展開すると、グループ内のコンポーネントのプロパティにアクセスできます。 タスクとコンテナーを連結する優先順位制約は、自動的にグループ内に含まれます。  

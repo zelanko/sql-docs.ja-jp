@@ -18,14 +18,18 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271970"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727335"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
   
 -   Web サービス メソッドが返す値を変数に書き込みます。 たとえば、Web サービス メソッドから 1 日の最高気温を取得し、その値を使用して、列の値を設定する式で使用する変数を更新できます。  
@@ -112,7 +116,7 @@ ms.locfileid: "58271970"
   
  **[WSDL のダウンロード]** ボタンを使用して WSDL ファイルをダウンロードする場合は、この値を **True**に設定します。  
   
- **名前**  
+ **[名前]**  
  Web サービス タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -139,7 +143,7 @@ ms.locfileid: "58271970"
  **[WebMethodDocumentation]**  
  Web メソッドの説明を入力するか、参照ボタン ( **[...]** ) をクリックして **[Web メソッド ドキュメント]** ダイアログ ボックスに説明を入力します。  
   
- **名前**  
+ **[名前]**  
  Web メソッドへの入力の名前を一覧表示します。  
   
  **型**  

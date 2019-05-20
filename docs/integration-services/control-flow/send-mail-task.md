@@ -21,14 +21,18 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c50b86d2d5e96951b9bdeabf6750fbb8dd7a3d30
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 18150e08b06e1b8f919df98e8e10b4eb43cc4b64
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271480"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727471"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   メール送信タスクは、電子メール メッセージを送信します。 メール送信タスクを使用すると、パッケージ ワークフロー内のタスクが成功または失敗した場合にパッケージからメッセージを送信したり、実行時にパッケージで発生するイベントに応答してメッセージを送信したりできます。 たとえば、データベースのバックアップ タスクが成功または失敗したことを、メール送信タスクからデータベース管理者に通知できます。  
   
  メール送信タスクは、次の方法で構成できます。  
@@ -89,7 +93,7 @@ ms.locfileid: "58271480"
   **[メール送信タスク エディター]** の **[全般]** ページを使用すると、メール送信タスクに名前を付けて説明を記述できます。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **[名前]**  
  メール送信タスクに一意の名前を提供します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
  **注** &#xA0;&#xA0;&#xA0;タスク名はパッケージ内で一意である必要があります。  

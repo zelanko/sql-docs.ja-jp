@@ -14,14 +14,18 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62d4cc21bbe5469886e4087c9ec310abc9185ed8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7d0dd556e17d50e66a0d74805fd754318f5226ad
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282075"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727186"
 ---
 # <a name="azure-blob-source"></a>Azure BLOB Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Azure BLOB Source** コンポーネントは、SSIS パッケージが Azure BLOB のデータを読み取ることを可能にします。 サポートされるファイル形式は、CSV と AVRO です。
   
   Azure BLOB Source のエディターを表示するには、データ フロー デザイナー上に **Azure Blob Source** をドラッグ アンド ドロップし、これをダブルクリックしてエディターを開きます。  

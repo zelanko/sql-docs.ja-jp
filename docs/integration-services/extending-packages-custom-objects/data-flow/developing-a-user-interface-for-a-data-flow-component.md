@@ -23,14 +23,18 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4bad04ba6970b578c8dd0faa99f9860bd346408f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5db0f81b46e825201c82e0b99a15604ba1acd154
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272117"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724743"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   コンポーネント開発者は、コンポーネント用のカスタム ユーザー インターフェイスを作成し、コンポーネントを編集するときに [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に表示させることができます。 カスタム ユーザー インターフェイスを実装すると、データ フロー タスクでコンポーネントが追加または削除されたとき、またはコンポーネントに関するヘルプが要求されたときに通知されます。  
   
  コンポーネント用のカスタム ユーザー インターフェイスを提供しない場合でも、ユーザーは、詳細エディターを使用することで、コンポーネントおよびそのカスタム プロパティを構成することができます。 詳細エディターでユーザーがカスタム プロパティ値を適切に変更できるようにするには、必要に応じて、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> プロパティを使用します。 詳細については、「[データ フロー コンポーネントのデザイン時のメソッド](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)」の「カスタム プロパティの作成」を参照してください。  

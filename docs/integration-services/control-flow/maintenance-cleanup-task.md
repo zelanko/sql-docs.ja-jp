@@ -17,14 +17,18 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a44c15b2fc324a6f172fbc11e82f822261e0c8e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0cdbaa7d265720cc85966180811221d5883ffc66
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289398"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727545"
 ---
 # <a name="maintenance-cleanup-task"></a>メンテナンス クリーンアップ タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   メンテナンス クリーンアップ タスクでは、データベース バックアップ ファイルや、メンテナンス プランによって作成されたレポートなど、メンテナンス プランに関連するファイルを削除します。 詳細については、「 [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md) 」および「 [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)」を参照してください。  
   
  パッケージは、メンテナンス クリーンアップ タスクを使用して、指定したサーバー上のバックアップ ファイルやメンテナンス プランのレポートを削除することができます。 メンテナンス クリーンアップ タスクには、特定のファイルを削除したり、1 つのフォルダー内のファイルのグループを削除するオプションがあります。 必要に応じて、削除するファイルの拡張子を指定することもできます。  

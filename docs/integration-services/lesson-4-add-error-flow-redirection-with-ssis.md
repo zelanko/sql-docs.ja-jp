@@ -11,14 +11,18 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64982c47b9089bcaf878e9846714ed93b49eb7ad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c52d5115539b35f769ce74a35887e0538526deb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275630"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721772"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>レッスン 4:SSIS でエラー フロー リダイレクションを追加する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、変換プロセスで発生するエラーを処理する目的で、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で変換できないデータの処理方法をコンポーネントごとに、および列ごとに決定できます。 特定の列の失敗を無視するか、失敗した行全体をリダイレクトするか、コンポーネント単位で失敗を判定するように選択できます。 既定の構成では、エラーの発生時に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のコンポーネントが変換に失敗したものと見なされます。 コンポーネントが失敗と見なされると、パッケージが失敗と見なされ、処理が停止します。  
   
@@ -38,7 +42,7 @@ ms.locfileid: "58275630"
 ## <a name="lesson-task"></a>レッスンの作業
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: レッスン 3 のパッケージをコピーする](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+-   [ステップ 1:レッスン 3 のパッケージをコピーする](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [手順 2:破損したファイルを作成する](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
@@ -49,7 +53,7 @@ ms.locfileid: "58275630"
 -   [手順 5:レッスン 4 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1: レッスン 3 のパッケージをコピーする](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[ステップ 1:レッスン 3 のパッケージをコピーする](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   

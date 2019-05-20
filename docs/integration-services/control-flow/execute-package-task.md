@@ -20,14 +20,18 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8cda7bf1c07cbba3233a94c05d14c5620fa784ce
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 47e228c3494c03e86ffa7208f7caf5c1fe150a95
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280126"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727738"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
   
  パッケージ実行タスクは、次の目的で使用されます。  
@@ -141,7 +145,7 @@ ms.locfileid: "58280126"
 2.  SSIS デザイナーでタスクを右クリックし、 **[編集]** をクリックします。  
   
 ###  <a name="general"></a> [全般] ページのオプションを設定する  
- **名前**  
+ **[名前]**  
  パッケージ実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

@@ -20,14 +20,18 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a45b20ac413c04ca641674020e8d98ed39a01e8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0580c61bae4fdca1d311e4ccaee88f05a8b6ecd0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290558"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726284"
 ---
 # <a name="aggregate-transformation"></a>集計変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   集計変換は Average などの集計関数を列の値に適用し、その結果を変換出力にコピーします。 集計変換では、集計関数の他に GROUP BY 句を使用して集計範囲のグループを指定できます。  
   
 ## <a name="operations"></a>操作  

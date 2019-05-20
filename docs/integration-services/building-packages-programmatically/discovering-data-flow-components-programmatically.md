@@ -20,14 +20,18 @@ ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7558f5505674da6f3345514c5ad28d5fcb47dfdb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9191d9a88480f6efd64099f744abc7b311ec7b39
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270923"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729278"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの検出
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ フロー タスクをパッケージに追加したら、次の手順として、使用できるようにするデータ フロー コンポーネントを決定できます。 ローカル コンピューター上にインストールされ、使用可能なデータ フローの変換元、変換、および変換先は、プログラムによって検出できます。 パッケージにデータ フロー タスクを追加する方法について詳しくは、「[プログラムによるデータ フロー タスクの追加](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)」をご覧ください。  
   
 ## <a name="discovering-components"></a>コンポーネントの検出  

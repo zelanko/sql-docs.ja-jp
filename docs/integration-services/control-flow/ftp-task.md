@@ -17,14 +17,18 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b183ff23efd18a19e08033e64691b723d4b4f323
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 11414e0a669ea3169a610c98740b3fd35ff4e751
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276030"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727664"
 ---
 # <a name="ftp-task"></a>FTP タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
   
 -   データを移動し、変換をデータに適用する前または後で、あるディレクトリから別のディレクトリに、ディレクトリやデータ ファイルをコピーします。  
@@ -92,7 +96,7 @@ ms.locfileid: "58276030"
  **[StopOnFailure]**  
  FTP 操作が失敗した場合に FTP タスクを終了するかどうかを示します。  
   
- **名前**  
+ **[名前]**  
  FTP タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

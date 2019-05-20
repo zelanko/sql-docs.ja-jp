@@ -11,14 +11,18 @@ ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10af58bf19696175926090a87f87551e4738c674
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3c8fbab9c430f28b5814dee137056c5c7f69a02e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271641"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726757"
 ---
 # <a name="look-up-infoobject"></a>[インフォオブジェクトの参照]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP Netweaver BW システムで定義されたインフォオブジェクトを参照する場合、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用します。 使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、SAP BW 変換先で関連するオプションに必要な値が設定されます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の SAP BW 変換先は、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用します。 SAP BW 変換先の詳細については、「 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
@@ -59,7 +63,7 @@ ms.locfileid: "58271641"
  **時間の特性**  
  時間の特性を表すインフォオブジェクトを参照します。  
   
- **名前**  
+ **[名前]**  
  参照するインフォオブジェクトの名前、または部分的な名前をアスタリスクのワイルドカード文字 (*) と入力します。 すべてのインフォオブジェクトを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
  **[説明]**  

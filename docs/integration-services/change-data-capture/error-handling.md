@@ -11,14 +11,18 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05aca45bdfc8a6f45ce32b4a6ac328ae5acc0ad5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4c957089cf73ba9992c04d56162b1a0cb9901f29
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280006"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728858"
 ---
 # <a name="error-handling"></a>エラー処理
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  
   
  CDC インスタンスでは、 **cdc.xdbcdc_state**というシステム テーブルで状態を管理します。 このテーブルをクエリすると、CDC インスタンスの状態をいつでも確認することができます。 cdc.xdbcdc_state テーブルの詳細については、「 [cdc.xdbcdc_state](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state)」をご覧ください。  

@@ -17,14 +17,18 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd98db30045ad2c6658d6d7d2df0b98f1abed192
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6844adf38e6139a050cf1f97200323704f8a8ff2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272364"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719337"
 ---
 # <a name="reuse-of-package-objects"></a>パッケージ オブジェクトの再利用
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   多くの場合、パッケージには、再利用できるような機能が含まれています。 たとえば、一連のタスクを作成した場合、それらのアイテムを合わせてグループとして再利用したり、別の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトで作成した接続マネージャーのように、1 つのアイテムを再利用したりすることができます。  
   
 ## <a name="copy-and-paste"></a>コピーと貼り付け  

@@ -13,19 +13,23 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd8979186639a840c3fa7721d8f94ed98b35ca39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e6ebbdd1f4df148d146393865039102af26b2984
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280116"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728902"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Oracle データベースのプロパティの編集
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   プロパティ エディターの [Oracle] タブを使用して、新しいインスタンス ウィザードの [CDC データベースの作成] ページで指定した説明を変更し、Oracle ログ マイニング データベースの接続情報を変更します。  
   
  **[Oracle]** タブの情報について、次に説明します。  
   
- **名前**  
+ **[名前]**  
  新しいインスタンス ウィザードの [CDC データベースの作成] ページで入力した CDC インスタンスの名前です。 このフィールドは読み取り専用であり、この情報を編集することはできません。  
   
  **[説明]**  
