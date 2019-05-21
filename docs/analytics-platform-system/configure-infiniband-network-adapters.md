@@ -74,7 +74,7 @@ SQLCTL01 を使用すると、Analytics Platform System の DNS は、コント�
   
 4.  インターネット プロトコル バージョン 4 (Tcp/ipv4) のプロパティ ウィンドウからの値を書き込み、 **IP アドレス**と**サブネット マスク**します。  IP アドレス、 **_アプライアンス\_ドメイン_-AD01**ノードは、Analytics Platform System の DNS サーバーの IP アドレス。  
   
-5.  TeamIB1 アダプターの 1 ~ 5 の上記の手順を繰り返します**_アプライアンス\_ドメイン_-AD02**サーバー。  
+5.  TeamIB1 アダプターの 1 ~ 5 の上記の手順を繰り返します **_アプライアンス\_ドメイン_-AD02** サーバー。  
   
     ![PDW 管理ノード InfiniBand 1 プロパティ](media/network-ip1-properties.png "PDW 管理ノード InfiniBand 1 のプロパティ")  
   

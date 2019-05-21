@@ -38,7 +38,7 @@ ROUND(numeric_expression,length)
  整数式です。 *numeric_expression* の丸め結果とする有効桁数です。  
   
 ## <a name="result-types"></a>戻り値の型  
-  *numeric*_*expression.* と同じ型。  
+ *numeric*_*expression.* と同じ型。  
   
 ## <a name="remarks"></a>コメント  
  *length* 引数は正の整数または 0 に評価される必要があります。  
