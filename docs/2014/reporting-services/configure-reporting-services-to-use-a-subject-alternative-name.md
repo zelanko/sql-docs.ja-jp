@@ -29,7 +29,7 @@ ms.locfileid: "63266038"
   
  SAN を使用するには、SSL 証明書がサーバーに登録され、署名され、秘密キーを保持している必要があります。 自己署名証明書は使用できません  
   
- SSL 証明書を使用するように、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の URL を構成できます。 通常、証明書にはサブジェクト名のみが記載されているため、SSL (Secure Sockets Layer) セッションに対して許可される URL は 1 つだけです。 SAN は、SSL サービスがリッスンでき、多数の URL 対して有効化され、SSL ポートを他のアプリケーションと共有できるようにするための証明書の追加フィールドです。 SAN は、www.s2.com のようになります。  
+ SSL 証明書を使用するように、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の URL を構成できます。 通常、証明書にはサブジェクト名のみが記載されているため、SSL (Secure Sockets Layer) セッションに対して許可される URL は 1 つだけです。 SAN は、SSL サービスがリッスンでき、多数の URL 対して有効化され、SSL ポートを他のアプリケーションと共有できるようにするための証明書の追加フィールドです。 SAN は、 www.s2.com のようになります。  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のSSL 設定の詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
   
