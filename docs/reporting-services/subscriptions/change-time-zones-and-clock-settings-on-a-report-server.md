@@ -2,7 +2,7 @@
 title: レポート サーバーでタイム ゾーンと時計の設定を変更する | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb822890e3a54be5c221c41a0c1489a4e2b252b5
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973481"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578365"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>レポート サーバーでタイム ゾーンと時計の設定を変更する
   レポート サーバーでは、インストールされているコンピューターのローカル時刻が常に使用されます。 異なるタイム ゾーンを使用するように構成することはできません。 クライアント アプリケーションと、参照先のレポート サーバーのタイム ゾーンが異なる場合、スケジュールが設定された操作は、レポート サーバーのタイム ゾーンを使用して実行されます。 レポート マネージャーと SharePoint 管理ページの各スケジュール ページには、スケジュールが設定された操作が行われる正確な日時がわかるよう、タイム ゾーンが明記されます。 たとえば、カスタム スケジュールを作成するためのページには、"時間は (UTC-08:00) 太平洋標準時 (米国およびカナダ) で表されます" と表示されます。
-レポート サーバーにより、スケジュールをトリガーするために使用する SQL Server エージェント ジョブが作成されます。 別のサーバーで、レポート サーバーと SQL Server エージェントがあるときにすべてのサーバーで同じタイム ゾーンがある必要があります。
+レポート サーバーにより、スケジュールをトリガーするために使用する SQL Server エージェント ジョブが作成されます。 レポート サーバーと SQL Server エージェントが別々のサーバーにある場合、タイム ゾーンがすべてのサーバーで同じである必要があります。
   
 ## <a name="changing-the-time-zone-native-mode"></a>タイム ゾーンの変更 (ネイティブ モード)  
  レポート サーバーをホストするコンピューターのタイム ゾーンを変更した場合、変更を有効にするにはレポート サーバー サービスを再起動する必要があります。  

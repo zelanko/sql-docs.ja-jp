@@ -2,21 +2,21 @@
 title: キャッシュの事前読み込み (レポート マネージャー) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9c92612f58461f1fc94551396b364087cb3c05c3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021877"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581456"
 ---
 # <a name="preload-the-cache-report-manager"></a>キャッシュの事前読み込み (レポート マネージャー)
   共有データセットのキャッシュ更新計画を作成することによって、共有データセットのキャッシュを事前に読み込むことができます。  
@@ -84,7 +84,7 @@ ms.locfileid: "50021877"
   
 8.  **[次へ]** をクリックします。  
   
-9. サブスクライバー データを取得するクエリまたはコマンドを指定します。 必要に応じて、処理に時間のかかるクエリのタイムアウト値を増やします。 例 :  
+9. サブスクライバー データを取得するクエリまたはコマンドを指定します。 必要に応じて、処理に時間のかかるクエリのタイムアウト値を増やします。 例:  
   
     ```  
     Select * from UserInfo  
