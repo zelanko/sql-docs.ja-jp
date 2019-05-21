@@ -17,33 +17,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_memory_buffers dynamic management view
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26f63826244bacc32377a2b7e3315f9b4696fdd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 254ba42c828bbe719d5ddce0502d0a9063755fe3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624030"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947266"
 ---
-# <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
+# <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   フルテキスト クロールまたはフルテキスト クロール範囲の一部として使用される、特定のメモリ プールのメモリ バッファーに関する情報を返します。  
   
 > [!NOTE]
-> 次の列はの将来のリリースで削除される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **row_count**します。 新しい開発作業では、この列の使用は避け、現在この列を使用しているアプリケーションは修正するようにしてください。  
+> 次の列はの将来のリリースで削除される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **row_count**します。 新しい開発作業でこの列を使用しないようにし、使用されているアプリケーションの変更を検討します。  
 
   
 |[列]|データ型|説明|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|割り当てられたメモリ プールの ID。<br /><br /> 0 = 小さいバッファー<br /><br /> 1 = 大きいバッファー|  
 |**memory_address**|**varbinary(8)**|割り当てられたメモリ バッファーのアドレス。|  
-|**name**|**nvarchar (4000)**|この割り当ての対象となっている共有メモリ バッファーの名前。|  
-|**is_free**|**bit**|メモリ バッファーの現在の状態。<br /><br /> 0 = 空き<br /><br /> 1 = ビジー|  
-|**row_count**|**int**|バッファーで現在処理されている行の数。|  
+|**name**|**nvarchar (4000)**|この割り当てが行われた共有メモリ バッファーの名前です。|  
+|**is_free**|**bit**|メモリ バッファーの現在の状態。<br /><br /> 0 = 空き<br /><br /> 1 = Busy|  
+|**row_count**|**int**|このバッファーが処理されている行の数。|  
 |**bytes_used**|**int**|バッファーで使用されているメモリ サイズ (バイト単位)。|  
 |**percent_used**|**int**|割り当てられたメモリの使用パーセンテージ。|  
   

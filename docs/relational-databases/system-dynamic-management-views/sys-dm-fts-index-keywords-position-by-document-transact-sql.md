@@ -16,20 +16,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_index_keywords_position_by_document dynamic management view
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7470367bd827faf4c2468ee7187a05c766256dab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12c557029b0b479fbb780fdd93ae05faa4c26735
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716230"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944334"
 ---
 # <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  インデックス付きのドキュメントでは、位置指定のキーワードを使用する情報を返します。  
+  インデックス付きドキュメント内のキーワードの位置情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,7 +59,7 @@ OBJECT_ID('table_name')
 |position|**int**|ドキュメント内のキーワードの位置。|  
   
 ## <a name="remarks"></a>コメント  
- DMV を使用すると、インデックス付きドキュメント内のインデックス付けされた単語の場所を識別できます。 この DMV のトラブルシューティングに使用できる際に問題**sys.dm_fts_index_keywords_by_document**単語は、フルテキスト インデックスが、それらの単語を使用してクエリを実行すると、ドキュメントは返されませんを示します。  
+ DMV を使用して、インデックス付きドキュメントにインデックス付けされた単語の場所を識別します。 この DMV のトラブルシューティングに使用できる際に問題**sys.dm_fts_index_keywords_by_document**単語は、フルテキスト インデックスが、それらの単語を使用してクエリを実行すると、ドキュメントは返されませんを示します。  
   
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト インデックスに含まれる列に対する SELECT 権限と、CREATE FULL TEXT CATALOG 権限が必要です。  
@@ -79,7 +79,7 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 GO  
 ```  
   
- 次のクエリ、さらに、場所を特定するのと同様に、その他の columns_id では、述語を追加できます。  
+ さらに、場所を特定する、次の例クエリと同様に、その他の columns_id では、述語を追加できます。  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_position_by_document  

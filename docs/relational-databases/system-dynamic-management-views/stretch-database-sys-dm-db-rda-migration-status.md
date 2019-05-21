@@ -16,35 +16,35 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_rda_migration_status dynamic management view
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 3027978ca57b5ea94c69dc2410b0d25d73ce3823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 257d83e522b398cce8358c1e30f4966dd951739e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740980"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945454"
 ---
 # <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database - sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   ローカル インスタンス上のそれぞれの Stretch 対応テーブルから移行されたデータのバッチごとの 1 つの行を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 バッチは、開始時刻と終了時刻によって識別されます。  
   
- **sys.dm_db_rda_migration_status**スコープは現在のデータベース コンテキストに設定します。 移行の状態を表示する拡張を有効にするテーブルのデータベースのコンテキストであることを確認してください。  
+ **sys.dm_db_rda_migration_status**スコープは現在のデータベース コンテキストに設定します。 移行の状態を表示するストレッチを有効にテーブルのデータベース コンテキストで確認するようにします。  
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の出力**sys.dm_db_rda_migration_status** 200 行に制限されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|テーブルの行が移行された元の ID です。|  
-|**database_id**|**int**|行が移行されたデータベースの ID です。|  
+|**table_id**|**int**|行が移行されたテーブルの ID。|  
+|**database_id**|**int**|行が移行されたデータベースの ID。|  
 |**migrated_rows**|**bigint**|行の数は、このバッチで移行します。|  
 |**start_time_utc**|**datetime**|バッチが開始された UTC 時刻。|  
-|**end_time_utc**|**datetime**|バッチの終了を UTC 時刻。|  
-|**error_number**|**int**|バッチが失敗した場合は、エラーが発生するエラー数それ以外の場合は null です。|  
-|**error_severity**|**int**|バッチが失敗した場合は、エラーが発生の重要度それ以外の場合は null です。|  
-|**error_state**|**int**|バッチが失敗した場合は、エラーが発生の状態それ以外の場合は null です。<br /><br /> **Error_state**条件またはエラーが発生した場所を示します。|  
+|**end_time_utc**|**datetime**|バッチが完了した UTC 時刻。|  
+|**error_number**|**int**|バッチが失敗した場合は、エラーが発生しました。 エラー数それ以外の場合は null です。|  
+|**error_severity**|**int**|バッチが失敗した場合は、発生したエラーの重大度それ以外の場合は null です。|  
+|**error_state**|**int**|バッチが失敗した場合は、発生したエラーの状態それ以外の場合は null です。<br /><br /> **Error_state**条件またはエラーが発生した場所を示します。|  
   
 ## <a name="see-also"></a>参照  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
