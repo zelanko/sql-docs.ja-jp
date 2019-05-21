@@ -15,7 +15,7 @@ ms.locfileid: "65836175"
 
 - SQL Server 2012
 - SQL Server 2008 R2
-- SQL Server 2008:
+- SQL Server 2008
 - SQL Server 2005
 
 [SQL Server 2014 のドキュメント](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)は検索エンジンによって処理されます。
