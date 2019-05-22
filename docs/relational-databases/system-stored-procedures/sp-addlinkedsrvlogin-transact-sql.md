@@ -20,7 +20,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
 ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/12/2019
 ms.locfileid: "59542192"
@@ -69,7 +69,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 > [!NOTE]  
 >  リンク サーバーでテーブルを使用している場合は、最適なクエリ プランを作成するには、リンク サーバーのデータの分布統計情報がクエリ プロセッサに必要です。 ユーザー テーブルの列に対するアクセス許可が制限されている便利なすべての統計を取得する可能性があります効率の悪いクエリ プランを受信し、パフォーマンスが低下のための十分な権限がありません。 リンク サーバーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスである場合、利用可能な統計情報をすべて取得するには、ユーザーがテーブルを所有しているか、リンク サーバーの固定サーバー ロール sysadmin、固定データベース ロール db_owner、または固定データベース ロール db_ddladmin のメンバーである必要があります。 SQL Server 2012 SP1 では、統計を取得するための権限の制限が変更され、SELECT 権限を持つユーザーは DBCC SHOW_STATISTICS で入手可能な統計にアクセスできます。 詳細については、アクセス許可のセクションを参照してください。 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)します。  
   
- すべてのローカル サーバー上のログインとリンク サーバー上のリモート ログインの既定のマッピングは、sp_addlinkedserver を実行することによって自動的に作成されます。 既定のマッピングでは、ことを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインの代わりに、リンク サーバーに接続するときに、ローカル ログインのユーザーの資格情報を使用します。 Sp_addlinkedsrvlogin を実行するのと同じ@useself設定**true**ローカル ユーザー名を指定せず、リンク サーバー。 既定のマッピングを変更するときや、特定のローカル ログインに対応する新しいマッピングを追加するときだけ sp_addlinkedsrvlogin を使用します。 既定のマッピングまたはその他のマッピングを削除するには、sp_droplinkedsrvlogin を使用します。  
+ すべてのローカル サーバー上のログインとリンク サーバー上のリモート ログインの既定のマッピングは、sp_addlinkedserver を実行することによって自動的に作成されます。 既定のマッピングでは、ことを示す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインの代わりに、リンク サーバーに接続するときに、ローカル ログインのユーザーの資格情報を使用します。 Sp_addlinkedsrvlogin を実行するのと同じ@useself設定 **true** ローカル ユーザー名を指定せず、リンク サーバー。 既定のマッピングを変更するときや、特定のローカル ログインに対応する新しいマッピングを追加するときだけ sp_addlinkedsrvlogin を使用します。 既定のマッピングまたはその他のマッピングを削除するには、sp_droplinkedsrvlogin を使用します。  
   
  次のすべての条件が成立する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、sp_addlinkedsrvlogin を使用してあらかじめ決められたログイン マッピングを作成する代わりに、クエリを実行するユーザーの Windows セキュリティ資格情報 (Windows のログイン名とパスワード) を自動的に使用して、リンク サーバーに接続できます。  
   

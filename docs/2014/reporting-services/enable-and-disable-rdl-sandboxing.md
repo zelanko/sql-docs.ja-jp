@@ -149,7 +149,7 @@ ms.locfileid: "63164870"
 -   RDL 型に新しいメンバーが追加された可能性があるため、新しい RDL スキーマを処理できるようにレポート サーバーを更新する場合  
   
 ### <a name="working-with-operators-and-new"></a>演算子と New の操作  
- 既定では、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の言語演算子は、`New` を除いて常に許可されます。 `New`演算子がによって制御される、`AllowNew`属性を**\<許可 >** 要素。 既定のコレクション アクセサー演算子などの他の言語演算子`!`と[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework のキャスト マクロ`CInt`は常に許可します。  
+ 既定では、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の言語演算子は、`New` を除いて常に許可されます。 `New`演算子がによって制御される、`AllowNew`属性を **\<許可>** 要素。 既定のコレクション アクセサー演算子などの他の言語演算子`!`と[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework のキャスト マクロ`CInt`は常に許可します。  
   
  カスタム演算子を含め、ブロック一覧への演算子の追加はサポートされていません。 特定の型に対して演算子を除外するには、次の手順を実行する必要があります。  
   
