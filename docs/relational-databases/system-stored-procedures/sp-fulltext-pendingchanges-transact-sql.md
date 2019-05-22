@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_pendingchanges
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: baf9443372b36eaaa5aac26ddaaa10d3609bcea4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef93287acb610e813f20f213e8fb6a325058116d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833750"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983023"
 ---
-# <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
+# <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  変更の追跡を使用している指定のテーブルについて、保留中の挿入、更新、削除など、未処理となっている変更に関する情報を返します。  
+  保留中の挿入、更新、および削除の場合は、指定したテーブルを使用している変更の追跡など返しますが、変更にまだ処理されていません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ sp_fulltext_pendingchanges table_id
   
 ## <a name="arguments"></a>引数  
  *table_id*  
- テーブルの ID を指定します。 テーブルにフルテキスト インデックスが作成されていない場合、またはテーブルで変更の追跡が有効になっていない場合は、エラーが返されます。  
+ テーブルの ID。 テーブルがない場合、フルテキスト インデックスを作成、またはテーブルの変更の追跡が有効でない、エラーが返されます。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -50,7 +50,7 @@ sp_fulltext_pendingchanges table_id
 |-----------------|---------------|-----------------|  
 |**[キー]**|*|指定したテーブルからのフルテキスト キー値。|  
 |**DocId**|**bigint**|キー値に対応する内部ドキュメント識別子 (DocId) 列。|  
-|**ステータス**|**int**|0 = 行はフルテキスト インデックスから削除されます。<br /><br /> 1 = 行にはフルテキスト インデックスが作成されます。<br /><br /> 2 = 行は最新です。<br /><br /> -1 = 行は遷移 (一括処理されたがコミットされていない) 状態またはエラー状態にあります。|  
+|**ステータス**|**int**|0 = 行は、フルテキスト インデックスから削除されます。<br /><br /> 1 = 行にはフルテキスト インデックスが作成されます。<br /><br /> 2 = 行は最新です。<br /><br /> -1 = 行は、遷移 (一括処理されたがコミットされていない) 状態またはエラー状態にします。|  
 |**DocState**|**tinyint**|内部ドキュメント識別子 (Docld) のマップ ステータス列の行ダンプ。|  
   
  <sup>* キーのデータ型は、ベース テーブルのフルテキスト キー列のデータ型と同じです。</sup>  
@@ -61,7 +61,7 @@ sp_fulltext_pendingchanges table_id
 ## <a name="remarks"></a>コメント  
  未処理の変更がない場合、空の行セットが返されます。  
   
- フルテキスト検索のクエリを持つ行が返されない、**状態**0 の値。 この場合、行はベース テーブルから削除されており、フルテキスト インデックスからの削除を待機しています。  
+ フルテキスト検索のクエリを持つ行が返されない、**状態**0 の値。 これは、行がベース テーブルから削除されて、フルテキスト インデックスから削除するを待機しているためです。  
   
  いくつの変更が保留中を検索する特定のテーブルを使用して、 **TableFullTextPendingChanges** OBJECTPROPERTYEX 関数のプロパティ。  
   

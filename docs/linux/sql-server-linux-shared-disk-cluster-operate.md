@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62633999"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982809"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
 
@@ -34,7 +34,7 @@ Fci のフェールオーバーは、Windows Server フェールオーバー ク
 - [RHEL または Ubuntu](#-manual-failover-rhel-or-ubuntu)
 - [SLES](#-manual-failover-sles)
 
-## <a name = "#rhelFailover"></a> 手動フェールオーバー (RHEL または Ubuntu)
+## <a name = "#-manual-failover-rhel-or-ubuntu"></a> 手動フェールオーバー (RHEL または Ubuntu)
 
 バイ サイドの Red Hat Enterprise Linux (RHEL) または Ubuntu サーバーは、手動フェールオーバーを実行するには、次の手順を実行します。
 1.  次のコマンドを発行します。 
@@ -55,10 +55,10 @@ Fci のフェールオーバーは、Windows Server フェールオーバー ク
 
 \<FCIResourceName > は、FCI の Pacemaker リソース名です。 
 
-## <a name = "#slesFailover"></a> 手動フェールオーバー (SLES)
+## <a name = "#-manual-failover-sles"></a> 手動フェールオーバー (SLES)
 
 
-Suse Linux Enterprise Server (SLES) で使用して、 `migrate` SQL Server FCI を手動でフェールオーバー コマンドします。 例:
+Suse Linux Enterprise Server (SLES) で使用して、 `migrate` SQL Server FCI を手動でフェールオーバー コマンドします。 例 :
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -22,19 +21,20 @@ helpviewer_keywords:
 - updategrams [SQLXML], GUID values
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6220abfc616fc82bd0d1c16dd2d066da496c1f0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 548ed870abdfc1932b769bb13328b336ac0760a6
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021602"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980636"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>sql:identity 注釈と sql:guid 注釈の使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  指定することができます、 **sql:identity 注釈**と**sql:guid**でデータベース列にマップされる任意のノードの XSD スキーマで注釈[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 アップデート グラムの形式をサポートしていますが、 **updg: id で**と**updg:guid**属性、DiffGram 形式はありません。 **Updg: id で**属性、IDENTITY 型の列を更新中に、動作を定義します。 **Updg:guid**属性から GUID 値を取得できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップデート グラムで使用します。 詳細と実際のサンプルは、[を挿入するデータを使用して XML アップデート グラム&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)を参照してください。  
+  指定することができます、 **sql:identity 注釈**と**sql:guid**でデータベース列にマップされる任意のノードの XSD スキーマで注釈[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 アップデート グラムの形式をサポートしていますが、 **updg: id で**と**updg:guid**属性、DiffGram 形式はありません。 **Updg: id で**属性、IDENTITY 型の列を更新中に、動作を定義します。 **Updg:guid**属性から GUID 値を取得できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップデート グラムで使用します。 詳細と実際のサンプルは、次を参照してください。[を挿入するデータを使用して XML アップデート グラム&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)します。  
   
  **Sql:identity 注釈**と**sql:guid**注釈は Diffgram にこの機能を拡張します。  
   

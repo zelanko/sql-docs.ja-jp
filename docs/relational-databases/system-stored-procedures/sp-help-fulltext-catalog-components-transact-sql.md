@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc3538ab8485b7fb9658c665d4ed7dddf53aba33
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720370"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983100"
 ---
-# <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
+# <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースにあるすべてのフルテキスト カタログに使用されている、すべてのコンポーネント (フィルター、ワード ブレーカー、プロトコル ハンドラー) の一覧を返します。  
@@ -47,13 +47,13 @@ sp_help_fulltext_catalog_components
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**フルテキスト カタログ名**|**int**|フルテキスト カタログの名前。|  
-|**フルテキスト カタログ id**|**sysname**|フルテキスト カタログの ID。|  
+|**full-text catalog id**|**sysname**|フルテキスト カタログの ID。|  
 |**componenttype**|**sysname**|コンポーネントの型。 次のいずれかです。<br /><br /> Assert<br /><br /> プロトコル ハンドラー<br /><br /> ワード ブレーカー|  
 |**componentname**|**sysname**|コンポーネント名。|  
 |**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
 |**fullpath**|**nvarchar (256)**|コンポーネントの場所へのパス。<br /><br /> NULL のメンバーでない呼び出し元を = **serveradmin**固定サーバー ロール。|  
 |**version**|**nvarchar(30)**|コンポーネントのバージョンです。|  
-|**manufacturer**|**sysname**|コンポーネントの製造元の名前。|  
+|**manufacturer**|**sysname**|コンポーネントの製造元の名前です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

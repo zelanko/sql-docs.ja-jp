@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb8ac0d8af4c6180bb9851df793285d3bc17340c
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542252"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980055"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "59542252"
 |**runtime_stats_interval_id**|**bigint**|外部キーです。 結合[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)します。|  
 |**execution_type**|**tinyint**|クエリの実行の種類を決定します。<br /><br /> 0 - 通常の実行 (が正常に完了)<br /><br /> 3-クライアントによる実行を中止<br /><br /> 4-例外は、実行を中止します。|  
 |**execution_type_desc**|**nvarchar(128)**|実行の種類フィールドの説明テキスト。<br /><br /> 0 - 標準<br /><br /> 3-中止<br /><br /> 4-例外|  
-|**first_execution_time**|**datetimeoffset**|クエリの最初の実行時間は、集計間隔に含まれる予定です。|  
-|**last_execution_time**|**datetimeoffset**|クエリの最後の実行時間は、集計間隔に含まれる予定です。|  
+|**first_execution_time**|**datetimeoffset**|クエリの最初の実行時間は、集計間隔に含まれる予定です。 これは、クエリの実行の終了時刻を示します。|  
+|**last_execution_time**|**datetimeoffset**|クエリの最後の実行時間は、集計間隔に含まれる予定です。 これは、クエリの実行の終了時刻を示します。|  
 |**count_executions**|**bigint**|集計間隔内でクエリ プランの実行回数の合計数。|  
 |**avg_duration**|**float**|(マイクロ秒単位で報告されます)、集計間隔内でクエリ プランの実行時間を平均します。|  
 |**last_duration**|**bigint**|クエリの最後の期間が (マイクロ秒単位で報告されます)、集計間隔に含まれる予定です。|  

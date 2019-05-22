@@ -1,5 +1,5 @@
 ---
-title: シーケンス クラスター モデルのマイニング モデル コンテンツ |Microsoft ドキュメント
+title: シーケンス クラスター モデルのマイニング モデル コンテンツ |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019289"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65961366"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>シーケンス クラスター モデルのマイニング モデル コンテンツ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34019289"
  NODE_TYPE  
  シーケンス クラスター モデルでは、次のノードの種類が出力されます。  
   
-|ノードの種類の ID|Description|  
+|ノードの種類の ID|説明|  
 |------------------|-----------------|  
 |1 (モデル)|モデルのルート ノードです。|  
 |5 (クラスター)|クラスター内の遷移の数、属性の一覧、およびクラスター内の値を表す統計が含まれます。|  
@@ -68,14 +68,11 @@ ms.locfileid: "34019289"
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
- 
-  **モデル ルート** カーディナリティの値はクラスター数に 1 を加算した値と等しくなります。 詳細については、「 [カーディナリティ](#bkmk_cardinality)」を参照してください。  
+ **モデル ルート** カーディナリティの値はクラスター数に 1 を加算した値と等しくなります。 詳細については、「 [カーディナリティ](#bkmk_cardinality)」を参照してください。  
   
- 
-  **クラスター ノード** カーディナリティは常に 1 です。これは、各クラスターに 1 つの子ノードが含まれるためです。子ノードには、クラスター内のシーケンスの一覧が含まれます。  
+ **クラスター ノード** カーディナリティは常に 1 です。これは、各クラスターに 1 つの子ノードが含まれるためです。子ノードには、クラスター内のシーケンスの一覧が含まれます。  
   
- 
-  **シーケンス ノード** カーディナリティは、そのクラスターに含まれる遷移の数を示します。 たとえば、モデル ルートのシーケンス ノードのカーディナリティは、モデル全体で検出された遷移の数を示します。  
+ **シーケンス ノード** カーディナリティは、そのクラスターに含まれる遷移の数を示します。 たとえば、モデル ルートのシーケンス ノードのカーディナリティは、モデル全体で検出された遷移の数を示します。  
   
  PARENT_UNIQUE_NAME  
  ノードの親の一意な名前です。  
@@ -230,7 +227,7 @@ ORDER BY Count(*) DESC
   
  次の表に、NODE_DISTRIBUTION テーブルの結果と、グラフィカル ビューアーに表示される丸められた確率値を示します。  
   
-|Product|サポート (NODE_DISTRIBUTION テーブル)|確率 (NODE_DISTRIBUTION テーブル)|確率 (グラフから)|  
+|製品|サポート (NODE_DISTRIBUTION テーブル)|確率 (NODE_DISTRIBUTION テーブル)|確率 (グラフから)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(表示されません)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -262,7 +259,7 @@ ORDER BY Count(*) DESC
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Microsoft シーケンス クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [シーケンス クラスター モデルのクエリの例](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

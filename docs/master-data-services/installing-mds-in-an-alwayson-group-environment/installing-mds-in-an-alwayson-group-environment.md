@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489604"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982114"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
@@ -303,7 +303,6 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
     図 17
 
     レプリカごとに、**同期コミット**、**自動フェールオーバー**、**読み取り可能なセカンダリ**を設定します。 図 17 を参照してください。
-17.
 
     **同期コミット**:あるデータベースのプライマリ レプリカでトランザクションがコミットされた場合、そのトランザクションは他のすべての同期レプリカでもコミットされます。 非同期コミットではこれが保証されません。プライマリ レプリカに遅れることがあります。
 

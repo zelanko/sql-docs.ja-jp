@@ -14,20 +14,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f16a46c9461e7870897582fe2094fa233232973e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d700fd19999da3905a0ff69231a286a022d57e5
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790440"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982914"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stretch とリモートのデータベースを有効になっているローカル データベースのデータベース間での認証済みの接続を復元します。  
+  Stretch とリモートのデータベースが有効なローカル データベースの間で認証された接続を復元します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,12 +52,12 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  リモート データを含む Azure のデータベースの名前を指定します。 *@azure_databasename* sysname です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または >0 (失敗)  
+ 0 (成功) または > 0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  実行すると[sys.sp_rda_reauthorize_db (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)リモート Azure データベースに再接続すると、この操作が自動的にリセット クエリ モード LOCAL_AND_REMOTE に Stretch Database の既定の動作です。 つまり、クエリは、ローカルとリモートの両方のデータから結果を返します。  
   
 ## <a name="example"></a>例  
@@ -70,7 +70,7 @@ EXEC sp_rda_reauthorize_db @credential = @credentialName, @with_copy = 1;
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.sp_rda_deauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   

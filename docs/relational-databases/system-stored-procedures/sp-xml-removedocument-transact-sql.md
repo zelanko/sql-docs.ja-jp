@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_removedocument
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5319f3cd1cb7f06677bfe35eb19ba66f2dca4151
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 5f249871fd1037ad5fcf485c85e7b758e9becf7a
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947606"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65979969"
 ---
-# <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (Transact-SQL)
+# <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   ドキュメント ハンドルで指定された XML ドキュメントの内部表現を削除し、ドキュメント ハンドルを無効にします。  
   
 > [!NOTE]  
->  解析済みのドキュメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部キャッシュに格納されます。 MSXML パーサー (Msxmlsql.dll) では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられている総メモリの 8 分の 1 が使用されます。 メモリ不足を回避するには、実行**sp_xml_removedocument**メモリを解放します。  
+>  解析済みドキュメントがの内部キャッシュに格納されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 MSXML パーサー (Msxmlsql.dll) では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に割り当てられている総メモリの 8 分の 1 が使用されます。 メモリ不足を回避するには、実行**sp_xml_removedocument**メモリを解放します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,16 +44,16 @@ sp_xml_removedocument hdoc
   
 ## <a name="arguments"></a>引数  
  *hdoc*  
- 新しく作成されたドキュメントへのハンドルを指定します。 有効でないハンドルを指定するとエラーが返されます。 *hdoc*は整数です。  
+ 新しく作成されたドキュメントへのハンドルを指定します。 無効なハンドルには、エラーが返されます。 *hdoc*は整数です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または >0 (失敗)  
+ 0 (成功) または > 0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、XML ドキュメントの内部表現を削除します。 この XML ドキュメントのハンドルは、入力値として指定します。  
+ 次の例では、XML ドキュメントの内部表現を削除します。 ドキュメントを識別するハンドルは、入力として提供されます。  
   
 ```  
 EXEC sp_xml_removedocument @hdoc;  
