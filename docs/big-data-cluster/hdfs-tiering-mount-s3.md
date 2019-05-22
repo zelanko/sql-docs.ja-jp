@@ -1,27 +1,27 @@
 ---
-title: HDFS の階層制御のマウント S3
+title: HDFS の階層制御の S3 のマウント
 titleSuffix: SQL Server big data clusters
 description: この記事では、HDFS の HDFS に SQL Server 2019 ビッグ データ クラスター (プレビュー) で外部の S3 ファイル システムをマウントする階層化を構成する方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
-ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64330605"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993956"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>HDFS のビッグ データ クラスター内の階層制御の S3 をマウントする方法
 
 次のセクションでは、HDFS、S3 ストレージのデータ ソースに階層化を構成する方法の例を提供します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - [デプロイされたビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -48,22 +48,22 @@ ms.locfileid: "64330605"
 
 資格情報ファイルを用意して、アクセス キーである、マウントを開始します。 次の手順では、S3 で、ビッグ データ クラスターのローカルの HDFS ストレージへのリモートの HDFS storage をマウントできます。
 
-1. 使用**kubectl**の IP アドレスを検索する、 **svc 外部の mgmtproxy**ビッグ データ クラスター サービス。 探して、 **EXTERNAL-IP**します。
+1. 使用**kubectl**エンドポイントの IP アドレスを検索する**svc 外部のコント ローラー**ビッグ データ クラスター サービス。 探して、 **EXTERNAL-IP**します。
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. ログイン**mssqlctl**管理プロキシのエンドポイントの外部 IP アドレスを使用して、クラスター ユーザー名とパスワード。
+1. ログイン**mssqlctl**コント ローラーのエンドポイントの外部 IP アドレスを使用して、クラスター ユーザー名とパスワード。
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl ストレージ マウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
+1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl クラスター記憶域プールのマウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
 
    ```bash
-   mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,23 +76,23 @@ ms.locfileid: "64330605"
 ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 HDFS 内の特定のパスでのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> マウントを削除します。
 
-マウントを削除するには、使用、 **mssqlctl ストレージ マウント delete**コマンド、および HDFS のマウント パスを指定します。
+マウントを削除するには使用、 **mssqlctl クラスター記憶域プールのマウント delete**コマンド、および HDFS のマウント パスを指定します。
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか。](big-data-cluster-overview.md)。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。

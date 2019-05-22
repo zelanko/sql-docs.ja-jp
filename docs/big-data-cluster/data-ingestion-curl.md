@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774228"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994049"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Curl を使用して、ビッグ データの SQL Server クラスターの HDFS にデータを読み込む
 
@@ -32,7 +32,7 @@ kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .stat
 ```
 
 > [!NOTE]
-> `<cluster name>`を実行したときに指定したクラスターの名前を次に示します`mssqlctl cluster create --name <cluster name>`します。
+> `<cluster name>`展開構成ファイルで指定したクラスターの名前を次に示します。 既定の名前は`mssql-cluster`します。
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>WebHDFS へのアクセスに URL を構築します。
 

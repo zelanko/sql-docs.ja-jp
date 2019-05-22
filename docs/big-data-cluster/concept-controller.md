@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775591"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994076"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスター上のコント ローラーとは何ですか。
 
@@ -38,11 +38,7 @@ ms.locfileid: "64775591"
 
 ## <a name="deploying-the-controller-service"></a>コント ローラー サービスのデプロイ
 
-コント ローラーが展開され、ビッグ データ クラスターを構築するためのユーザーが同じの Kubernetes 名前空間でホストされています。 このサービスは、mssqlctl コマンド ライン ユーティリティを使用して、クラスターのブートス トラップ中には、Kubernetes には、管理者がインストールされています。
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+コント ローラーが展開され、ビッグ データ クラスターを構築するためのユーザーが同じの Kubernetes 名前空間でホストされています。 クラスターを使用してブートス トラップ中に、Kubernetes の管理者がこのサービスがインストールされている、 **mssqlctl**コマンド ライン ユーティリティです。 詳細については、次を参照してください。[ビッグ データの SQL Server クラスターの概要](deploy-get-started.md)します。
 
 年間のワークフローは Kubernetes の上にレイアウトで説明されているすべてのコンポーネントを含む完全に機能の SQL Server ビッグ データ クラスター、[概要](big-data-cluster-overview.md)記事。 ブートス トラップのワークフローが最初に、コント ローラー サービスを作成し、コント ローラー サービスでのインストールとマスター、コンピューティング、データ、および記憶域プールのサービスの一部の残りの部分の構成を調整はこれが配置されるとします。
 

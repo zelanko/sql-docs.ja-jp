@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945159"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994143"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>チュートリアル:ビッグ データの SQL Server クラスターでのサンプルの notebook を実行します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "65945159"
 
 次の手順では、Azure Data Studio で、ノートブック ファイルを開く方法を示しています。
 
-1. Azure Data Studio、ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続します。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)します。
+1. Azure データ studio では、ビッグ データ クラスターのマスター インスタンスに接続します。 詳細については、次を参照してください。[ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)します。
 
 1. HDFS/Spark ゲートウェイ接続をダブルクリックして、**サーバー**ウィンドウ。 選び**Notebook を開いて**します。
 

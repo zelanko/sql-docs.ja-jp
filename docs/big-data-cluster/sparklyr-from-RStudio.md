@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620323"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994179"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Sparklyr を使用して、SQL Server のビッグ データ クラスター内
 
@@ -49,7 +49,7 @@ Sparklyr を使用して、Livy と HDFS/Spark ゲートウェイを使用して
 Rstudio に、R スクリプトを作成し、次の例のように Spark に接続します。
 
 > [!TIP]
-> `<USERNAME>`と`<PASSWORD>`(ルート) などのユーザー名を使用して、値、およびビッグ データ クラスターのデプロイ時に設定したパスワード。 `<IP>`と`<PORT>`値でドキュメントを参照して、 [HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md#hdfs)します。
+> `<USERNAME>`と`<PASSWORD>`(ルート) などのユーザー名を使用して、値、およびビッグ データ クラスターのデプロイ時に設定したパスワード。 `<IP>`と`<PORT>`値でドキュメントを参照して[ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)します。
 
 ```r
 library(sparklyr)

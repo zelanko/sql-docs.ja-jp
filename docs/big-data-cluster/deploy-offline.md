@@ -5,16 +5,16 @@ description: ビッグ データの SQL Server クラスターをオフライン
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd7c0e3b8fcf92721e95231175cb33d81c6775e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 49c96300792adfefa32152ec73911ba32fac47ee
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759149"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994017"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>ビッグ データの SQL Server クラスターのデプロイのオフライン実行します。
 
@@ -42,7 +42,7 @@ ms.locfileid: "63759149"
    > [!TIP]
    > これらのコマンドは、例として、PowerShell を使用しますが、cmd、bash、または docker を実行できる任意のコマンド シェルから実行することができます。 Linux では、次のように追加します。`sudo`各コマンドにします。
 
-1. 次のコマンドを繰り返すことにより、ビッグ データ クラスターにコンテナー イメージをプルします。 置換`<SOURCE_IMAGE_NAME>`各[イメージ名](#images)します。 置換`<SOURCE_DOCKER_TAG>`などクラスター リリースでは、ビッグ データのタグを持つ**ctp2.5**します。  
+1. 次のコマンドを繰り返すことにより、ビッグ データ クラスターにコンテナー イメージをプルします。 置換`<SOURCE_IMAGE_NAME>`各[イメージ名](#images)します。 置換`<SOURCE_DOCKER_TAG>`などクラスター リリースでは、ビッグ データのタグを持つ**ctp3.0**します。  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -174,16 +174,17 @@ ms.locfileid: "63759149"
 
 1. ターゲット コンピューターに、フォルダーをコピーします。
 
-## <a name="deploy-with-from-repository"></a>リポジトリからのデプロイします。
+## <a name="deploy-from-private-repository"></a>プライベート リポジトリからデプロイします。
 
-プライベート リポジトリからを展開するには、記載された手順を使用、[展開ガイド](deployment-guidance.md)が、プライベート Docker リポジトリを一致するように、次の環境変数をカスタマイズします。
+プライベート リポジトリからを展開するには、記載された手順を使用、[展開ガイド](deployment-guidance.md)が、プライベート Docker リポジトリ情報を指定するカスタムの展開構成ファイルを使用します。 次**mssqlctl**コマンドは、という名前のカスタム展開構成ファイルで Docker の設定を変更する方法を示します**custom.json**:
 
-- **DOCKER_REGISTRY**  
-- **DOCKER_REPOSITORY**
-- **DOCKER_USERNAME**
-- **DOCKER_PASSWORD**  
-- **DOCKER_EMAIL**
-- **DOCKER_IMAGE_TAG**
+```bash
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+```
+
+展開が、docker のユーザー名とパスワードを求めまたはで指定することができます、 **DOCKER_USERNAME**と**DOCKER_PASSWORD**環境変数。
 
 ## <a name="next-steps"></a>次のステップ
 

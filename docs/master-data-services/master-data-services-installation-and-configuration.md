@@ -1,7 +1,7 @@
 ---
 title: マスター データ サービスのイントールと構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f177e333353cb8fb48b86a320c8e77e37a8991ae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488219"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994117"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
 
@@ -128,8 +128,19 @@ ms.locfileid: "65488219"
   
 2.  **[データベースの作成]** をクリックして、 **データベースの作成ウィザード** で **[次へ]** をクリックします。  
   
-3.  **[データベース サーバー]** ページで、 **[認証の種類]** を選択して、 **[接続のテスト]** をクリックし、選択した認証の種類の資格情報を使用して、データベースに接続できることを確認します。 **[次へ]** をクリックします。
-  
+3.  **データベース サーバー**  ページで、SQL Server インスタンスを指定します。 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] SQL Server マネージ インスタンスのサポートを追加します。 値を設定**SQL Server インスタンス**を Azure SQL Database のホスト インスタンスを管理します。 たとえば、`xxxxxx.xxxxxx.database.windows.net` のようにします。
+
+4. 選択、**認証の種類**順にクリックします**Test-connection**を選択した認証の種類の資格情報を使用してデータベースに接続できることを確認します。 **[次へ]** をクリックします。
+
+    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]、Azure SQL Database に接続するためのマネージ インスタンス、次の認証の種類のいずれかを使用します。
+    >
+    >- Azure Active Directory 統合認証:**現在のユーザー-Active Directory 統合**
+    >- SQL Server 認証:**SQL Server アカウント**します。
+    >
+    >ユーザーの Azure SQL Database マネージ インスタンスのメンバーである必要があります、`sysadmin`固定サーバー ロール。
+
     > [!NOTE]  
     >  認証の種類に **[現在のユーザー - 統合セキュリティ]** を選択すると、**[ユーザー名]** ボックスは読み取り専用で、コンピューターにログオンした Windows ユーザー アカウント名が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、**[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
 

@@ -3,17 +3,17 @@ title: 新しい R 言語パッケージ - SQL Server Machine Learning Services 
 description: SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) に新しい R パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506924"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994208"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server に新しい R パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "62506924"
 
 R パッケージ ライブラリは限定的なアクセスのセキュリティで保護されたフォルダーには、SQL Server インスタンスの Program Files フォルダー内に物理的に配置します。 この場所に書き込むには、管理者のアクセス許可が必要です。
 
-管理者以外のユーザーがパッケージをインストールできますが、これは addititional 構成と機能の初期インストールでは使用できないために必要です。 管理者以外のパッケージのインストールの 2 つの方法はあります。RevoScaleR バージョン 9.0.1 と以降、またはを使用して外部ライブラリの作成 (SQL Server 2017 のみ) を使用します。 SQL Server 2017 で**dbo_owner** CREATE EXTERNAL LIBRARY のアクセス許可を持つ別のユーザーは、現在のデータベースに R パッケージをインストールすることもできます。
+管理者以外のユーザーがパッケージをインストールできますが、これは追加の構成と機能の初期インストールでは使用できないために必要です。 管理者以外のパッケージのインストールの 2 つの方法はあります。RevoScaleR バージョン 9.0.1 と以降、またはを使用して外部ライブラリの作成 (SQL Server 2017 のみ) を使用します。 SQL Server 2017 で**dbo_owner** CREATE EXTERNAL LIBRARY のアクセス許可を持つ別のユーザーは、現在のデータベースに R パッケージをインストールすることもできます。
 
 R 開発者は、中央に配置されたライブラリが手付かずの状態がある場合に必要なパッケージのユーザーのライブラリの作成に慣れています。 この実習では、SQL Server データベース エンジンのインスタンスで実行される R コードの問題が発生します。 SQL Server は、そのライブラリが同じコンピューター上にある場合でも、外部ライブラリをからパッケージを読み込むことはできません。 インスタンスのライブラリからのみパッケージは、SQL Server で実行される R コードで使用できます。
 
@@ -41,7 +41,6 @@ R 開発者は、中央に配置されたライブラリが手付かずの状態
 新しいパッケージをインストールする前に、特定のパッケージで有効化機能が SQL Server 環境に適しているかどうかを検討してください。 セキュリティを強化した SQL Server 環境では、次のことを回避する可能性があります。
 
 + ネットワーク アクセスを必要とするパッケージ
-+ Java または通常は、SQL Server 環境で使用されるその他のフレームワークを必要とするパッケージ
 + 管理者特権でのファイル システムへのアクセスを必要とするパッケージ
 + パッケージを web 開発または SQL Server 内部で実行することで利点を得られるしないその他のタスクの使用します。
 
@@ -51,7 +50,7 @@ R 開発者は、中央に配置されたライブラリが手付かずの状態
 
 すべての依存関係を識別する複雑なを取得します。 R、私たちにを使用することを推奨[ローカル リポジトリを作成する miniCRAN](create-a-local-package-repository-using-minicran.md)し、分離の SQL Server インスタンスに完全に定義されているリポジトリを転送します。
 
-Alternativley、操作を行いますこの手動で。
+または、次の手順を手動で実行できます。
 
 1. すべてのパッケージの依存関係を特定します。 
 2. サーバーで、必要なパッケージが既にインストールされているかどうかを確認します。 パッケージがインストールされている場合は、バージョンが正しいことを確認します。

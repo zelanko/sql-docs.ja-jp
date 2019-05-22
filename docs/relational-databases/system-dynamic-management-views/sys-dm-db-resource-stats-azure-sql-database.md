@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL データベース) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325505"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993888"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58325505"
 |[列]|データ型|説明|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 時刻では、現在のレポート間隔の終了を示します。|  
-|avg_cpu_percent|**10 進数 (5,2)**|サービス層の制限の割合で表した平均コンピューティング使用率。|  
+|avg_cpu_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均コンピューティング使用率。|  
 |avg_data_io_percent|**10 進数 (5,2)**|データ サービス層の制限の割合での I/O 使用率は平均です。|  
 |avg_log_write_percent|**10 進数 (5,2)**|平均は、I/O スループットの使用率のサービス層の上限に対するパーセンテージとしてを記述します。|  
 |avg_memory_usage_percent|**10 進数 (5,2)**|サービス層の制限の割合の平均メモリ使用率。<br /><br /> これには、バッファー プール ページと、インメモリ OLTP オブジェクトのストレージに使用されるメモリが含まれます。|  
@@ -44,6 +44,10 @@ ms.locfileid: "58325505"
 |max_session_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合で表した最大同時セッション数。|  
 |dtu_limit|**int**|現在データベースの最大 DTU このデータベースの設定この間隔中にします。 仮想コアベースのモデルを使用してデータベースでは、この列は NULL です。|
 |cpu_limit|**10 進数 (5,2)**|この間隔中にこのデータベースの仮想コアの数。 データベースが DTU に基づくモデルを使用して、この列は NULL です。|
+|avg_instance_cpu_percent|**10 進数 (5,2)**|データベースの割合の CPU 使用率の平均。|
+|avg_instance_memory_percent|**10 進数 (5,2)**|データベース メモリ使用量の割合を平均します。|
+|avg_login_rate_percent|**10 進数 (5,2)**|単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
+|replica_role|**int**|フォワーダー (geo セカンダリ データベースのプライマリ) として、セカンダリと 2 のプライマリとして 0、1 でのロールの現在のレプリカを表します。 すべての読み取り可能セカンダリへの読み取り専用インテントに接続されている場合、「1」が表示されます。 読み取り専用インテントを指定せずに、geo セカンダリ データベースに接続している場合、は、「2」(フォワーダーへの接続) が表示されます。|
 |||
   
 > [!TIP]  
@@ -57,7 +61,7 @@ ms.locfileid: "58325505"
  
  データベースは、過去 60 分以内の別のサーバーにフェールオーバーしたが、ビューはそのフェールオーバー以降、プライマリ データベースがされた時間のデータを返すだけです。  
   
- このデータの詳細度の低いビューは、使用**sys.resource_stats**カタログ ビューで、**マスター**データベース。 このビューでは、5 分ごとにデータをキャプチャし、履歴データを 14 日間保持します。  詳細については、[sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)を参照してください。  
+ このデータの詳細度の低いビューは、使用**sys.resource_stats**カタログ ビューで、**マスター**データベース。 このビューでは、5 分ごとにデータをキャプチャし、履歴データを 14 日間保持します。  詳細については、次を参照してください。 [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)します。  
   
  データベースがエラスティック プールのメンバーである場合は、割合の値として表示されるリソース統計は、エラスティック プールの構成で設定されているデータベースの最大制限の割合として表されます。  
   

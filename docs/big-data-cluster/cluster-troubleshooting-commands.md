@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877663"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994090"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視とビッグ データの SQL Server クラスターのトラブルシューティング
 
@@ -121,7 +121,7 @@ kubectl get svc -n mssql-cluster
 | **appproxy-svc-external** | アプリケーションの展開シナリオをサポートします。 |
 
 > [!TIP]
-> これでサービスを表示する方法は、 **kubectl**を使用することも、`mssqlctl cluster endpoints list`これらのエンドポイントを表示するコマンド。 詳細については、次を参照してください。[ビッグ データ クラスター エンドポイントを取得](deployment-guidance.md#endpoints)します。
+> これでサービスを表示する方法は、 **kubectl**を使用することも、`mssqlctl cluster endpoint list`これらのエンドポイントを表示するコマンド。 詳細については、次を参照してください。[ビッグ データ クラスター エンドポイントを取得](deployment-guidance.md#endpoints)します。
 
 ## <a name="get-service-details"></a>サービスを詳細します。
 

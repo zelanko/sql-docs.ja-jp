@@ -1,51 +1,37 @@
 ---
-title: R と Python の機械学習とプログラミング拡張機能のドキュメント - SQL Server Machine Learning
+title: R と Python の machine learning のドキュメント - SQL Server Machine Learning サービス
 description: SQL Server での R および Python と大規模なエンタープライズ データ分析用の組み込みのデータ サイエンス モデリングおよび機械学習アルゴリズム。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 20acdf2789158bf067319930a5be65770eae67f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e93d9ad5fd6415b6d8c1b6208857e81d60de2bd0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126845"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994128"
 ---
-# <a name="sql-server-machine-learning"></a>SQL Server Machine Learning
+# <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning サービス
+
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning Services (R および Python) のドキュメント
+
+クイック スタート、チュートリアル、および操作方法に関する記事によって、常駐のリレーショナル データに対して R および Python 外部ライブラリおよび言語を使用する方法について説明します。 [SQL Server Machine Learning](what-is-sql-server-machine-learning.md) の R および Python ライブラリには、基本ディストリビューション、データ サイエンス モデル、機械学習アルゴリズム、およびネットワーク上でデータを転送する必要なく、大規模な高パフォーマンス分析を実行するための関数が含まれています。
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-
-## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server Machine Learning とプログラミング拡張機能のドキュメント
-
-クイック スタート、チュートリアル、および操作方法に関する記事によって、常駐のリレーショナル データに対して R および Python 外部ライブラリおよび言語を使用する方法について説明します。 [SQL Server Machine Learning](what-is-sql-server-machine-learning.md) の R および Python ライブラリには、基本ディストリビューション、データ サイエンス モデル、機械学習アルゴリズム、およびネットワーク上でデータを転送する必要なく、大規模な高パフォーマンス分析を実行するための関数が含まれています。
-
-SQL Server 2019 では、Java コード実行で、R および Python と同じ拡張機能フレームワークが使われていますが、データ サイエンスと機械学習関数ライブラリは含まれていません。 新機能の詳細については、「[What's New in SQL Server Machine Learning Services](what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
-
-|   |   |
-|---|:--|
-| ![R ロゴ](media/index/logo_r.png) | オープンソース R は、[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) で [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) と Microsoft AI アルゴリズムによって拡張されました。 これらのライブラリにより、予測および予測モデル、統計分析、視覚化、および大規模なデータ操作ができます。<br/>R の統合は、[SQL Server 2016](install/sql-r-services-windows-install.md) から始まり、[SQL Server 2017](install/sql-machine-learning-services-windows-install.md) にも含まれています。 |
-| ![Python ロゴ](media/index/logo_python.png) | Python 開発者は、大規模な予測分析と機械学習に Microsoft [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) と [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) ライブラリを使用できます。 Anaconda および Python 3.5 互換ライブラリは、ベースライン ディストリビューションです。<br/>Python の統合は、[SQL Server 2017](install/sql-machine-learning-services-windows-install.md) から開始されています。 |
-| ![Java のロゴ](media/index/logo_java.png) | Java 開発者は、[Java 言語拡張](java/extension-java.md)を使用して、ストアド プロシージャまたは TRANSACT-SQL からアクセス可能なバイナリ形式でコードをラップできます。<br/>Java の統合は、[SQL Server 2019 - プレビュー](install/sql-machine-learning-services-ver15.md)から開始されています。 |
-| &nbsp; | &nbsp; |
+> [!NOTE]
+> Java のドキュメントについては、次を参照してください。、 [SQL Server の言語拡張機能ドキュメント](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)します。
 ::: moniker-end
-
-::: moniker range="=sql-server-2016||=sql-server-2017"
-
-## <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server Machine Learning R および Python ドキュメント
-
-クイック スタート、チュートリアル、および操作方法に関する記事によって、常駐のリレーショナル データに対して R および Python 外部ライブラリおよび言語を使用する方法について説明します。 [SQL Server Machine Learning](what-is-sql-server-machine-learning.md) の R および Python ライブラリには、基本ディストリビューション、データ サイエンス モデル、機械学習アルゴリズム、およびネットワーク上でデータを転送する必要なく、大規模な高パフォーマンス分析を実行するための関数が含まれています。
 
 |   |   |
 |---|:--|
 | ![R ロゴ](media/index/logo_r.png) | オープンソース R は、[MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) で [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) と Microsoft AI アルゴリズムによって拡張されました。 これらのライブラリにより、予測および予測モデル、統計分析、視覚化、および大規模なデータ操作ができます。<br/>R の統合は、[SQL Server 2016](install/sql-r-services-windows-install.md) から始まり、[SQL Server 2017](install/sql-machine-learning-services-windows-install.md) にも含まれています。 |
 | ![Python ロゴ](media/index/logo_python.png) | Python 開発者は、大規模な予測分析と機械学習に Microsoft [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) と [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) ライブラリを使用できます。 Anaconda および Python 3.5 互換ライブラリは、ベースライン ディストリビューションです。<br/>Python の統合は、[SQL Server 2017](install/sql-machine-learning-services-windows-install.md) から開始されています。 |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 ## <a name="5-minute-quickstarts"></a>5 分のクイックスタート
 

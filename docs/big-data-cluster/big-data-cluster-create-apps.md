@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 462bff09e37f293f39109e9c129fcbb0ca4d2111
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775373"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994109"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server のビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
@@ -45,7 +45,7 @@ ms.locfileid: "64775373"
 
 ## <a name="capabilities"></a>Capabilities
 
-SQL Server 2019 (プレビュー) CTP 2.5 作成、削除、説明、初期化では、一覧を実行し、アプリケーションを更新します。 次の表は、アプリケーションの展開コマンドで使用できる**mssqlctl**します。
+SQL Server 2019 (プレビュー) CTP 3.0 作成、削除、説明、初期化では、一覧を実行し、アプリケーションを更新します。 次の表は、アプリケーションの展開コマンドで使用できる**mssqlctl**します。
 
 |コマンド |説明 |
 |:---|:---|
@@ -68,10 +68,10 @@ mssqlctl app create --help
 
 ## <a name="sign-in"></a>サインイン
 
-展開するアプリケーションとやり取りする前に、最初にサインインを使用したクラスターのビッグ データの SQL Server、`mssqlctl login`コマンド。 外部 IP アドレスを指定、`mgmtproxy-svc-external`サービス (例: `https://ip-address:30777`) およびユーザー名とクラスターへのパスワード。
+展開するアプリケーションとやり取りする前に、最初にサインインを使用したクラスターのビッグ データの SQL Server、`mssqlctl login`コマンド。 外部 IP アドレスを指定、`controller-svc-external`サービス (例: `https://ip-address:30080`) およびユーザー名とクラスターへのパスワード。
 
 ```bash
-mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
+mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## <a name="aks"></a>AKS

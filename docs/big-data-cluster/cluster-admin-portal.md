@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472133"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994097"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>クラスターの管理ポータルを使用してビッグ データの SQL Server クラスターを監視する方法
 
@@ -38,7 +38,7 @@ ms.locfileid: "63472133"
 コント ローラーのポッドが実行されている展開の監視、クラスターの管理ポータルを使用できます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `mgmtproxy-svc-external` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 値の管理ポータルにアクセスするための資格情報`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`上で指定した環境変数。
 
 > [!NOTE]
-> CTP の 2.5 はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
+> CTP 3.0 はセキュリティの警告を自動生成された SSL 証明書を使用しているため、web ページにアクセスするときです。
 
 ## <a name="overview"></a>概要
 

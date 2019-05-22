@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/18/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d9e01e31f0f9e68c5b41b92da773dca8aab54c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317131"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993968"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>マウント ADLS Gen2 の HDFS のビッグ データ クラスター内の階層化する方法
 
@@ -100,22 +100,22 @@ Azure portal で ADLS アカウントを取得できるアクセス キーの使
 
 アクセス キーまたは OAuth を使用して資格情報ファイルが準備できたら、マウントを開始します。 次の手順では、ビッグ データ クラスターのローカルの HDFS ストレージに Azure Data Lake でリモートの HDFS ストレージをマウントします。
 
-1. 使用**kubectl**エンドポイントの IP アドレスを検索する**svc 外部の mgmtproxy**ビッグ データ クラスター サービス。 探して、 **EXTERNAL-IP**します。
+1. 使用**kubectl**エンドポイントの IP アドレスを検索する**svc 外部のコント ローラー**ビッグ データ クラスター サービス。 探して、 **EXTERNAL-IP**します。
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. ログイン**mssqlctl**管理プロキシのエンドポイントの外部 IP アドレスを使用して、クラスター ユーザー名とパスワード。
+1. ログイン**mssqlctl**コント ローラーのエンドポイントの外部 IP アドレスを使用して、クラスター ユーザー名とパスワード。
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl ストレージ マウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
+1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl クラスター記憶域プールのマウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,23 +128,23 @@ Azure portal で ADLS アカウントを取得できるアクセス キーの使
 ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 HDFS 内の特定のパスでのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> マウントを削除します。
 
-マウントを削除するには、使用、 **mssqlctl ストレージ マウント delete**コマンド、および HDFS のマウント パスを指定します。
+マウントを削除するには使用、 **mssqlctl クラスター記憶域プールのマウント delete**コマンド、および HDFS のマウント パスを指定します。
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか。](big-data-cluster-overview.md)。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。

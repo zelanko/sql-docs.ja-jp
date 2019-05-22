@@ -3,30 +3,30 @@ title: SQL Server 2019 - SQL Server Machine Learning サービスの違い
 description: R と Python の SQL Server machine learning 拡張機能の SQL Server 2019 のプレビュー リリースでは新機能について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745902"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994230"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 で SQL Server Machine Learning Services のインストールの違い  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 、Windows では、SQL Server 2019 セットアップは、外部プロセス用の分離メカニズムを変更します。 この変更でローカルのワーカー アカウントが置き換えられます[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)Windows で実行されているクライアント アプリケーションの分離テクノロジ。 
 
-変更の結果として、管理者の特定のアクション アイテムはありません。 新規またはアップグレードされたサーバーでは、すべての外部スクリプトおよびから実行されるコード[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)自動的に新しい分離モデルに従います。 これは、R、Python、および SQL Server 2019 で導入された新しい Java 言語拡張機能に適用されます。
+変更の結果として、管理者の特定のアクション アイテムはありません。 新規またはアップグレードされたサーバーでは、すべての外部スクリプトおよびから実行されるコード[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)自動的に新しい分離モデルに従います。 
 
 このリリースでの主な相違点は、集計。
 
 + ローカル ユーザー アカウント。 対象**SQL 制限されたユーザー グループ (SQLRUserGroup)** が不要になった作成または外部プロセスを実行するために使用します。 AppContainers を交換します。
-+ **SQLRUserGroup**メンバーシップが変更されました。 複数のローカル ユーザー アカウントではなく、メンバーシップは、SQL Server スタート パッド サービス アカウントだけで構成されます。 AppContainers を通じて、分離、スタート パッドのサービス id で R、Python、Java プロセスを実行します。
++ **SQLRUserGroup**メンバーシップが変更されました。 複数のローカル ユーザー アカウントではなく、メンバーシップは、SQL Server スタート パッド サービス アカウントだけで構成されます。 R と Python のプロセスは、今すぐスタート パッド サービス id、AppContainers を通じて分離で実行されます。
 
 分離モデルが変更されていますが、インストール ウィザードとコマンド ライン パラメータが SQL Server 2019 で同じになります。 インストールについては、次を参照してください。 [SQL Server Machine Learning のサービスをインストール](sql-machine-learning-services-windows-install.md)します。
 
@@ -49,7 +49,7 @@ AppContainer Sid に基づいて、新しいファイアウォール規則があ
 
 ## <a name="program-file-permissions"></a>プログラム ファイルのアクセス許可
 
-以前のリリースと同様、 **SQLRUserGroup**読み取りを行い、実行可能ファイルの SQL Server を実行する権限は引き続き**Binn**、 **R_SERVICES**、および**PYTHON_SERVICES**ディレクトリ。 このリリースでは、唯一のメンバーで**SQLRUserGroup**は、SQL Server スタート パッド サービス アカウントです。  スタート パッド サービスには、R、Python、または Java の実行環境が起動するときに、スタート パッド サービスとして、プロセスが実行されます。
+以前のリリースと同様、 **SQLRUserGroup**読み取りを行い、実行可能ファイルの SQL Server を実行する権限は引き続き**Binn**、 **R_SERVICES**、および**PYTHON_SERVICES**ディレクトリ。 このリリースでは、唯一のメンバーで**SQLRUserGroup**は、SQL Server スタート パッド サービス アカウントです。  スタート パッド サービスには、R または Python の実行環境が起動するときに、スタート パッド サービスとして、プロセスが実行されます。
 
 ## <a name="implied-authentication"></a>暗黙の認証
 

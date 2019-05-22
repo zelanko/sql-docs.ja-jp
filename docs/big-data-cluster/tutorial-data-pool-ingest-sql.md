@@ -5,17 +5,17 @@ description: このチュートリアルでは、SQL Server 2019 ビッグ デ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: eb0bd2639dc2e2738215c51a18d87a3eb771c826
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583435"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994154"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル:Transact SQL を使用した SQL Server のデータ プールにデータを取り込む
 
@@ -63,7 +63,7 @@ ms.locfileid: "59583435"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. という名前の外部テーブルを作成**web_clickstream_clicks_data_pool**データ プールにします。
@@ -79,7 +79,7 @@ ms.locfileid: "59583435"
       );
    ```
   
-1. CTP 2.4、データのプールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
+1. CTP 3.0 でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
 
 ## <a name="load-data"></a>データの読み込み
 
@@ -88,32 +88,13 @@ ms.locfileid: "59583435"
 1. 使用してデータ プールにデータを挿入するクエリの変数を定義します。 CTP 2.3 以前、**モデル.sp_data_pool_table_insert_data**ストアド プロシージャが必要です。 CTP 2.4、後で、使用する、`INSERT INTO`データ プールに、クエリから結果を挿入するステートメント (、 **web_clickstream_clicks_data_pool**外部テーブル)。
 
    ```sql
-   IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-   BEGIN
-      INSERT INTO web_clickstream_clicks_data_pool
-      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-        FROM sales.dbo.web_clickstreams_hdfs_parquet
-      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-                              AND wcs_user_sk IS NOT NULL)
-      GROUP BY wcs_user_sk, i_category_id
-      HAVING COUNT_BIG(*) > 100;
-   END
-
-   ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-   BEGIN
-      DECLARE @db_name SYSNAME = 'Sales'
-      DECLARE @schema_name SYSNAME = 'dbo'
-      DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-      DECLARE @query NVARCHAR(MAX) = '
-      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-      FROM sales.dbo.web_clickstreams
-      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-         AND wcs_user_sk IS NOT NULL)
-      GROUP BY wcs_user_sk, i_category_id
-      HAVING COUNT_BIG(*) > 100;'
-
-      EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
-   END
+   INSERT INTO web_clickstream_clicks_data_pool
+   SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+     FROM sales.dbo.web_clickstreams_hdfs_parquet
+   INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+                           AND wcs_user_sk IS NOT NULL)
+   GROUP BY wcs_user_sk, i_category_id
+   HAVING COUNT_BIG(*) > 100;
    ```
 
 1. 2 つの SELECT クエリで挿入されたデータを検査します。

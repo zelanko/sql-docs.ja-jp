@@ -5,16 +5,16 @@ description: Mssqlctl クラスター デバッグ コマンドに関する参�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774861"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993659"
 ---
 # <a name="mssqlctl-cluster-debug"></a>mssqlctl クラスターのデバッグ
 
@@ -28,7 +28,7 @@ ms.locfileid: "64774861"
 [mssqlctl cluster debug copy-logs](#mssqlctl-cluster-debug-copy-logs) | ログをコピーします。
 [mssqlctl クラスター デバッグ ダンプ](#mssqlctl-cluster-debug-dump) | トリガー ログのダンプします。
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>mssqlctl cluster debug copy-logs
-クラスターから、デバッグ ログをコピーします。
+デバッグ ログをクラスターからコピー - kube 構成がシステムに必要です。
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](
 #### `--verbose`
 ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
 ## <a name="mssqlctl-cluster-debug-dump"></a>mssqlctl cluster debug dump
-ログのダンプをトリガーし、コンテナーからコピーします。
+ログのダンプをトリガーし、コンテナーからコピー - kube 構成がシステムに必要です。
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

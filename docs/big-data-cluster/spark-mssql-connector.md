@@ -5,22 +5,22 @@ description: Spark で MSSQL Spark コネクタを使用して、SQL Server へ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759219"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994189"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>読み取りし、MSSQL Spark コネクタを使用して Spark から SQL Server への書き込み方法
 
 キーのビッグ データの使用パターンでは、基幹業務アプリケーションにアクセスするために SQL Server データの書き込み後に、Spark での大量データ処理です。 これらの使用状況パターン SQL の主要な最適化を利用し、書き込みを効率的なメカニズムを提供するコネクタを享受できます。
 
-CTP2.5 ビッグ データ クラスターでは、一括の Spark SQL の書き込みにパフォーマンスの高い Api を記述する SQL Server を使用する新しい MSSQL Spark コネクタを提供します。 この記事では、読み取り、MSSQL の Spark コネクタを使用して Spark から SQL Server に書き込む方法の例を示します。 この例では、Spark、によって処理され、新しい MSSQL Spark コネクタを使用して、クラスター内の SQL Server のマスター インスタンスに書き込まれ、ビッグ データ クラスターでの HDFS からデータは読み取られます。
+ビッグ データ クラスターは、一括の Spark SQL の書き込みにパフォーマンスの高い Api を記述する SQL Server を使用する新しい MSSQL Spark コネクタを提供します。 この記事では、読み取り、MSSQL の Spark コネクタを使用して Spark から SQL Server に書き込む方法の例を示します。 この例では、Spark、によって処理され、新しい MSSQL Spark コネクタを使用して、クラスター内の SQL Server のマスター インスタンスに書き込まれ、ビッグ データ クラスターでの HDFS からデータは読み取られます。
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark コネクタ インターフェイス
 

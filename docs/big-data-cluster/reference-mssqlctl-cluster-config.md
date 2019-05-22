@@ -5,16 +5,16 @@ description: Mssqlctl クラスター コマンドに関する参照記事です
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3a4693c5ffb68ad555d97d02f983fadf4e6bbd9a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 984a3c50ac691df3759edc161baabc533bd9456f
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774671"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993332"
 ---
 # <a name="mssqlctl-cluster-config"></a>mssqlctl クラスターの構成
 
@@ -25,22 +25,26 @@ ms.locfileid: "64774671"
 ## <a name="commands"></a>コマンド
 |     |     |
 | --- | --- |
-[mssqlctl クラスター構成を取得します。](#mssqlctl-cluster-config-get) | クラスターの構成 - kube の取得、システム構成が必要です。
-[mssqlctl クラスター構成の初期化](#mssqlctl-cluster-config-init) | クラスター構成を初期化します。
+[mssqlctl クラスター構成の表示](#mssqlctl-cluster-config-show) | SQL Server ビッグ データ クラスターの現在の構成を取得します。
+[mssqlctl クラスター構成の初期化](#mssqlctl-cluster-config-init) | クラスターで使用できるクラスターの構成プロファイルの作成を初期化します。
 [mssqlctl クラスター構成の一覧](#mssqlctl-cluster-config-list) | 使用可能な構成ファイルの選択を一覧表示します。
-[mssqlctl クラスターの構成セクション](reference-mssqlctl-cluster-config-section.md) | 構成ファイルの個々 のセクションを操作するコマンド。
-## <a name="mssqlctl-cluster-config-get"></a>mssqlctl クラスター構成を取得します。
-SQL Server ビッグ データ クラスターの現在の構成ファイルを取得します。
+[mssqlctl クラスターの構成セクション](reference-mssqlctl-cluster-config-section.md) | クラスターの構成ファイルの個々 のセクションを操作するコマンド。
+## <a name="mssqlctl-cluster-config-show"></a>mssqlctl cluster config show
+SQL Server ビッグ データ クラスターの現在の構成ファイルを取得およびターゲット ファイルに出力またはかなりし、コンソールに出力します。
 ```bash
-mssqlctl cluster config get --name -n 
-                            [--output-file -f]
+mssqlctl cluster config show [--target -t] 
+                             [--force -f]
 ```
-### <a name="required-parameters"></a>必要なパラメーター
-#### `--name -n`
-クラスター名 kubernetes 名前空間に使用をします。
+### <a name="examples"></a>使用例
+コンソールで、クラスターの構成を表示します。
+```bash
+mssqlctl cluster config show
+```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
-#### `--output-file -f`
+#### `--target -t`
 結果を格納する出力ファイル。 既定値: は stdout に送られます。
+#### `--force -f`
+ターゲット ファイルの上書きを強制します。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するログの詳細度を向上します。
@@ -53,16 +57,28 @@ JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](
 #### `--verbose`
 ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
 ## <a name="mssqlctl-cluster-config-init"></a>mssqlctl cluster config init
-指定した既定の種類に基づくユーザーのクラスター構成ファイルを初期化します。
+クラスターで使用できるクラスターの構成プロファイルの作成を初期化します。 構成プロファイルの特定のソースは、3 つの選択肢から引数を指定できます。
 ```bash
 mssqlctl cluster config init [--target -t] 
-                             [--src -s]
+                             [--src -s]  
+                             [--force -f]
+```
+### <a name="examples"></a>使用例
+クラスター構成の init 画面 - の指示に従って必要な値のメッセージが表示されます。
+```bash
+mssqlctl cluster config init
+```
+クラスターの引数を持つ構成 init、aks、開発、テストでの構成プロファイルを作成します。/custom.json します。
+```bash
+mssqlctl cluster config init --src aks-dev-test.json --target custom.json
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--target -t`
-既定値はカスタム config.json と cwd 先、構成ファイルとなるファイルのパスが配置されます。
+既定値はカスタム config.json と cwd 先、構成プロファイルとなるファイルのパスが配置されます。
 #### `--src -s`
-Config source: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
+Config profile source: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
+#### `--force -f`
+ターゲット ファイルの上書きを強制します。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するログの詳細度を向上します。
@@ -77,11 +93,20 @@ JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](
 ## <a name="mssqlctl-cluster-config-list"></a>mssqlctl cluster config list
 クラスター構成の初期化で使用するための使用可能な構成ファイルの選択を一覧表示されます。
 ```bash
-mssqlctl cluster config list [--config-file -f] 
+mssqlctl cluster config list [--config-file -c] 
                              
 ```
+### <a name="examples"></a>使用例
+すべての利用可能な構成プロファイル名を示します。
+```bash
+mssqlctl cluster config list
+```
+特定の構成プロファイルの json を示しています。
+```bash
+mssqlctl cluster config list --config-file aks-dev-test.json
+```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
-#### `--config-file -f`
+#### `--config-file -c`
 Default config file: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`

@@ -5,16 +5,16 @@ description: 構成ファイルでビッグ データ クラスターのデプ�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7dd774d390587d0c2c0248ab9b419ad40f8f212b
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: ed86e7d293ba72eb178c65b53865b62ca419a6d2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759169"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993997"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>ビッグ データ クラスターのデプロイ設定を構成します。
 
@@ -46,7 +46,7 @@ ms.locfileid: "63759169"
 次のコマンドにキー/値ペアの送信、 **- json 値**ビッグ データ クラスター名を変更するパラメーター**テスト クラスター**:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-cluster"
+mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -84,7 +84,7 @@ mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-clust
 次の例では、インライン JSON を使用して、用のポートを変更する、**コント ローラー**エンドポイント。
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> プールのレプリカを構成します。
@@ -102,11 +102,17 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.
             "type": "Storage",
             "replicas": 2,
             "storage": {
-                "usePersistentVolume": true,
-                "className": "managed-premium",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
+               "data": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "15Gi"
+               },
+               "logs": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "10Gi"
+               }
+           },
         }
     }
 ]
@@ -115,31 +121,17 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.
 プールのインスタンスの数を構成するには変更することによって、**レプリカ**各プールの値。 次の例では、インライン JSON を使用して、ストレージとデータのプールをこれらの値を変更する`10`と`4`それぞれ。
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
 ```
-
-> [!IMPORTANT]
-> このリリースでは、コンピューティング プール内のインスタンスの数を変更することはできません。
 
 ## <a id="storage"></a> 記憶域を構成します。
 
-ストレージ クラスと各プールに使用される特徴を変更することもできます。 次の例では、記憶域プールに、カスタムのストレージ クラスを割り当てます。
+ストレージ クラスと各プールに使用される特徴を変更することもできます。 次の例では、カスタム ストレージ クラスを記憶域プールに割り当てられ、100 gb のデータを格納するため、永続ボリューム要求のサイズを更新します。 このセクションを使用して設定を更新する構成ファイルである、 *mssqlctl クラスター構成セット*コマンドで、以下の修正プログラム ファイルを使用して、このセクションを追加する方法を参照してください。
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec={""replicas"": 2,""storage"": {""className"": ""newStorageClass"",""size"": ""20Gi"",""accessMode"": ""ReadWriteOnce"",""usePersistentVolume"": true},""type"": ""Storage""}"
-```
-
-次の例は、記憶域プールのサイズをのみ更新`32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
-```
-
-次の例にすべてのプールのサイズを更新する`32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
@@ -170,7 +162,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 ```
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> JSON の修正プログラム ファイル
@@ -181,10 +173,10 @@ JSON の修正プログラム ファイルは、一度に複数の設定を構�
 
 - 1 つのエンドポイントのポートを更新します。
 - すべてのエンドポイントを更新 (**ポート**と**serviceType**)。
-- コントロール プレーンの記憶域を更新します。
+- コントロール プレーンの記憶域を更新します。 これらの設定は、プール レベルでオーバーライドされない限り、すべてのクラスター コンポーネントに適用されます。
 - コントロール プレーンの記憶域内のストレージ クラス名を更新します。
-- 更新プログラムは、(記憶域プール) のレプリカを含む、記憶域をプールします。
-- 特定のプール (記憶域プール) の Spark の設定を更新します。
+- 記憶域プールのプール ストレージの設定を更新します。
+- 記憶域プールの Spark の設定を更新します。
 
 ```json
 {
@@ -222,30 +214,39 @@ JSON の修正プログラム ファイルは、一度に複数の設定を構�
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage",
+      "path": "spec.controlPlane.spec.controlPlane",
       "value": {
-        "usePersistentVolume":true,
-        "accessMode":"ReadWriteMany",
-        "className":"managed-premium",
-        "size":"10Gi"
-      }
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
+        }
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage.className",
-      "value": "default"
+      "path": "spec.controlPlane.spec.storage.data.className",
+      "value": "managed-premium"
     },
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "managed-premium",
-          "size": "10Gi"
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
     },
@@ -270,7 +271,7 @@ JSON の修正プログラム ファイルは、一度に複数の設定を構�
 使用**mssqlctl クラスター構成セクション セット**パッチの JSON ファイルの変更を適用します。 次の例では、適用、 **patch.json**ファイル ターゲットの展開構成ファイルを**custom.json**します。
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>次のステップ

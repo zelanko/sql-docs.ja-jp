@@ -5,17 +5,17 @@ description: この記事では、最新の更新プログラムと SQL Server 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7bdd39fc4b66c0485b453a6541e1f4c22abb5242
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775069"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993356"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -24,6 +24,104 @@ ms.locfileid: "64775069"
 この記事では、更新プログラムの一覧し、ビッグ データの SQL Server クラスターの最新のリリースに関する問題を把握します。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp30"></a> CTP 3.0 (月)
+
+次のセクションでは、新機能と SQL Server 2019 CTP 3.0 でのビッグ データ クラスターの既知の問題について説明します。
+
+### <a name="whats-new"></a>新機能
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+| **mssqlctl**更新プログラム | いくつか**mssqlctl** [コマンドとパラメーターの更新プログラム](../big-data-cluster/reference-mssqlctl.md)します。 更新プログラムが含まれます、 **mssqlctl ログイン**コマンドで、コント ローラーのユーザー名とエンドポイントを対象になります。 |
+| 記憶域の強化 | ログとデータのさまざまなストレージ構成のサポート。 また、クラスターのビッグ データの永続ボリューム要求の数が削減されました。 |
+| 複数のコンピューティング プール インスタンス | 複数のコンピューティング プール インスタンスをサポートします。 |
+| 新しいプールの動作と機能 | コンピューティング プールは既定で記憶域プールおよびプールの操作に使用ようになりましたが、 **ROUND_ROBIN**のみに配布します。 データのプールを使用できるよう、新しい新しい**レプリケートされた**分布の種類は、同じデータがすべてのデータ プール インスタンスに存在することを意味します。 |
+
+### <a name="known-issues"></a>既知の問題
+
+次のセクションでは、このリリースでの制限事項と既知の問題について説明します。
+
+#### <a name="hdfs"></a>HDFS
+
+- Azure Data Studio は、HDFS に新しいフォルダーを作成しようとしたときにエラーを返します。 この機能を有効にするのには、Azure Data Studio の insider ビルドをインストールします。
+  
+   - [Windows ユーザー インストーラー - **Insider のビルド**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
+   - [Windows システムのインストーラー - **Insider のビルド**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
+   - [Windows - ZIP **Insider のビルド**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
+   - [macOS - ZIP **Insider のビルド**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
+   - [Linux TAR します。GZ - **Insider のビルド**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
+
+- プレビューするために HDFS 内のファイルを右クリックした場合は、次のエラーを参照してください可能性があります。
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   現時点で Azure Data Studio 30 MB より大きいファイルをプレビューする方法はありません。
+
+- HDFS hdfs-site.xml への変更に関連する構成の変更はサポートされていません。
+
+#### <a name="deployment"></a>展開
+
+- GPU 対応のビッグ データ クラスターの以前の展開手順は、CTP 3.0 ではサポートされません。 代替のデプロイの手順を調査中です。 ここでは、記事「展開ビッグ データ クラスターの GPU サポートと共にと TensorFlow を実行」を一時的に混乱を避けるため未発行されています。
+
+- 以前のリリースからのビッグ データのデータのクラスターのアップグレードはサポートされていません。
+
+   > [!IMPORTANT]
+   > データをバックアップし、既存のビッグ データ クラスターを削除する必要があります (の以前のバージョンを使用して**mssqlctl**) 最新リリースを展開する前にします。 詳細については、次を参照してください。[を新しいリリースにアップグレード](deployment-upgrade.md)します。
+
+- を AKS にデプロイした後、展開から、次の 2 つの警告イベントを表示があります。 2 つのイベントには既知の問題が、それらが妨げられないして AKS でビッグ データ クラスターを正常に展開します。
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間は削除されません。 これは、結果、クラスターの孤立した、名前空間。 回避策では、同じ名前のクラスターをデプロイする前に、名前空間を手動で削除します。
+
+#### <a name="external-tables"></a>外部テーブル
+
+- ビッグ データ クラスターのデプロイを作成しなく、 **SqlDataPool**と**SqlStoragePool**外部データ ソース。 データのプールと記憶域プールへのデータ仮想化をサポートするために手動でこれらのデータ ソースを作成することができます。
+
+   > [!NOTE]
+   > これらの外部データ ソースを作成するための URI では、Ctp で異なります。 それらを作成する方法については、次の TRANSACT-SQL コマンドを参照してください。 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   ```
+
+- 列の型はサポートされていないテーブルのデータ プール外部テーブルを作成することになります。 外部テーブルを照会する場合はメッセージが表示、次のような。
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- 記憶域プールの外部テーブルをクエリすると、同時に、基になるファイルを HDFS にコピーするは場合にエラーが発生する可能性があります。
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 文字データ型を使用して Oracle に外部テーブルを作成する場合、Data Studio の Azure の仮想化ウィザードはこれらの列を VARCHAR として、外部テーブル定義で解釈されます。 外部テーブル DDL にエラーがなります。 いずれか NVARCHAR2 の種類を使用または EXTERNAL TABLE ステートメントを手動で作成し、ウィザードを使用してではなく NVARCHAR を指定するには、Oracle スキーマを変更します。
+
+#### <a name="application-deployment"></a>アプリケーションの展開
+
+- RESTful API から R、Python、または MLeap アプリケーションを呼び出すときに、呼び出しがタイムアウトに 5 分でします。
+
+#### <a name="spark-and-notebooks"></a>Spark と notebook
+
+- ポッド IP アドレスは、ポッドの再起動時に Kubernetes 環境で変更できます。 マスター ポッドを再起動する場合、Spark セッションが失敗とする`NoRoteToHostException`します。 これは、原因は新しい IP で更新しない JVM キャッシュでアドレスします。
+
+- Windows に既にインストールされている Jupyter と別の Python がある、Spark のノートブックが失敗する可能性があります。 この問題を回避するには、Jupyter を最新バージョンにアップグレードします。
+
+- Notebook をクリックした場合に、**テキストの追加**コマンド、テキスト セルが編集モードではなく、プレビュー モードで追加されます。 編集モードとセルの編集に切り替え、プレビュー アイコンをクリックすることができます。
+
+#### <a name="security"></a>セキュリティ
+
+- SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
+
+- AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
 
 ## <a id="ctp25"></a> CTP 2.5 (年 4 月)
 
@@ -60,24 +158,19 @@ ms.locfileid: "64775069"
 
 - ビッグ データ クラスターのデプロイが失敗した場合、関連付けられた名前空間は削除されません。 これは、結果、クラスターの孤立した、名前空間。 回避策では、同じ名前のクラスターをデプロイする前に、名前空間を手動で削除します。
 
-
-
-#### <a id="externaltablesctp24"></a> 外部テーブル
+#### <a name="external-tables"></a>外部テーブル
 
 - ビッグ データ クラスターのデプロイを作成しなく、 **SqlDataPool**と**SqlStoragePool**外部データ ソース。 データのプールと記憶域プールへのデータ仮想化をサポートするために手動でこれらのデータ ソースを作成することができます。
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-   END
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    ```
 
 - 列の型はサポートされていないテーブルのデータ プール外部テーブルを作成することになります。 外部テーブルを照会する場合はメッセージが表示、次のような。
@@ -201,21 +294,14 @@ make: *** [deploy-clean] Error 2
 - ビッグ データ クラスターのデプロイを作成しなく、 **SqlDataPool**と**SqlStoragePool**外部データ ソース。 データのプールと記憶域プールへのデータ仮想化をサポートするために手動でこれらのデータ ソースを作成することができます。
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   END
    ```
 
 - 列の型はサポートされていないテーブルのデータ プール外部テーブルを作成することになります。 外部テーブルを照会する場合はメッセージが表示、次のような。

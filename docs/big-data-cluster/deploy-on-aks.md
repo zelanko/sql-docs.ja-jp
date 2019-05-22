@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ddf14cf97fc72acb4a7c44bbc123f171e31c20a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 562bdce8144707b9e5ee62dfe77ae0091efd1f98
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911149"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994004"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server のビッグ データ クラスター デプロイ用 Azure Kubernetes サービスを構成します。
 
@@ -86,7 +86,7 @@ Azure リソース グループは、azure リソースのデプロイし、管�
     --generate-ssh-keys \
     --node-vm-size Standard_L8s \
     --node-count 1 \
-    --kubernetes-version 1.12.6
+    --kubernetes-version 1.12.8
     ```
 
    大きくしたり、変更することで Kubernetes エージェント ノードの数を減らす、`--node-count <n>`場所`<n>`を使用するエージェント ノードの数です。 これは、AKS でバック グラウンドで管理されているマスターの Kubernetes ノードには含まれません。 前の例では、のみ、評価の目的で 1 つのノードを使用します。

@@ -5,17 +5,17 @@ description: このチュートリアルでは、Azure Data Studio で Spark ジ
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582755"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994165"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブの SQL Server のデータ プールにデータを取り込む
 
@@ -56,7 +56,7 @@ ms.locfileid: "59582755"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. という名前の外部テーブルを作成**web_clickstreams_spark_results**データ プールにします。
@@ -74,13 +74,13 @@ ms.locfileid: "59582755"
       );
    ```
   
-1. CTP 2.4、データのプールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
+1. CTP 3.0 でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
 
 ## <a name="start-a-spark-streaming-job"></a>Spark ストリーミングのジョブを開始します。
 
 次の手順は、データ プールで作成した外部テーブルに、Spark ストリーミング web クリック ストリーム データを読み込みます (HDFS) の記憶域プールからジョブを作成します。
 
-1. Azure のデータの Studio に接続、 **HDFS/Spark ゲートウェイ**ビッグ データ クラスター。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)します。
+1. Azure データ studio では、ビッグ データ クラスターのマスター インスタンスに接続します。 詳細については、次を参照してください。[ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)します。
 
 1. HDFS/Spark ゲートウェイ接続をダブルクリックして、**サーバー**ウィンドウ。 選び**Spark ジョブを新しい**します。
 
