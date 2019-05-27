@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc34ca4eb6e73233fc5302c154f5397bf44a81d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680595"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087725"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>[ウィザードの完了] (集計のデザイン ウィザード)
   **[ウィザードの完了]** ページを使用すると、選択したパーティションに集計デザインを保存できます。 オプションで、集計デザイン ウィザードが集計のデザインと保存を終了した後で、選択されたパーティションの配置および処理を行うことができます。  

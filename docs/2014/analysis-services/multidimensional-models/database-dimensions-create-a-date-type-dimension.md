@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3eec8ddf87193eddbafc5a56e8e397c83f142a91
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726683"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075938"
 ---
 # <a name="create-a-date-type-dimension"></a>日付型ディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、時間ディメンションとは、属性が年、半期、四半期、月、日などの時間間隔を表すディメンションの種類を指します。 時間ディメンションの期間は、分析やレポートの粒度を時間ベースで指定します。 時間ディメンションの属性は階層化され、粒度は履歴データのビジネス要件とレポート要件によって主に決定されます。 たとえば、ビジネス インテリジェンス アプリケーションの財務データと販売データでは、ほとんどの場合、月または四半期の粒度が使用されます。  
@@ -68,7 +67,7 @@ ms.locfileid: "62726683"
 > [!NOTE]  
 >  ビジネス インテリジェンス ウィザードを使用して、タイム インテリジェンスをサーバー時間ディメンションに追加することはできません。 ビジネス インテリジェンス ウィザードによってタイム インテリジェンスをサポートする階層が追加されたら、この階層を時間ディメンション テーブルの列にバインドする必要があります。 サーバー時間ディメンションは、対応する時間ディメンション テーブルを持たないため、この追加の階層をサポートできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [時間テーブルの生成による時間ディメンションの作成](create-a-time-dimension-by-generating-a-time-table.md)   
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](../business-intelligence-wizard-f1-help.md)   
  [ディメンションの種類](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: dcb58a1eddbce7bfd718c49726825a29164d4081
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802428"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980434"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +121,7 @@ RAISERROR ( { msg_str | @local_variable }
 >  これらの型指定は、C 標準ライブラリの **printf** 関数に対して定義されている型指定に基づいています。 RAISERROR メッセージ文字列に使用される型指定は [!INCLUDE[tsql](../../includes/tsql-md.md)] のデータ型にマップされ、**printf** で使用される型指定は C 言語のデータ型にマップされます。 **printf** で使用される型指定は、関連する C のデータ型に類似するデータ型が [!INCLUDE[tsql](../../includes/tsql-md.md)] にない場合、RAISERROR でサポートされません。 たとえば、ポインターに対する *%p* 指定は、[!INCLUDE[tsql](../../includes/tsql-md.md)] にポインターのデータ型がないため、RAISERROR でサポートされません。  
   
 > [!NOTE]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** データ型に値を変換するには、**%I64d** を指定します。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** データ型に値を変換するには、 **%I64d** を指定します。  
   
  *@local_variable*  
  *msg_str* と同じ形式の文字列を含む有効な文字データ型の変数です。 *@local_variable* のデータ型は **char** または **varchar** であるか、これらのデータ型に暗黙的に変換できるデータ型である必要があります。  

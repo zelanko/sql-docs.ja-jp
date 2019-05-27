@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740732"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072715"
 ---
 # <a name="use-aggregate-functions"></a>集計関数の使用
   メジャーをスライスするためにディメンションを使用する場合、メジャーはそのディメンションに含まれる階層に沿って集約されます。 この集約動作は、メジャーに指定される集計関数に依存します。 数値データが含まれているほとんどのメジャーでは、集計関数は `Sum` になります。 メジャーの値は、どの階層のレベルがアクティブかに応じて異なる量の合計になります。  
@@ -67,7 +66,7 @@ ms.locfileid: "62740732"
   
  メンバーをカウントする個別のカウント メジャーは、ファクト テーブル内の外部キー列に基づきます  (つまり、メジャーの **Source Column** プロパティでこの列を識別します)。この列は、個別のカウント メジャーによってカウントされたメンバーを識別するディメンション テーブル列と結合します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メジャーおよびメジャー グループ](measures-and-measure-groups.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [準加法の動作の定義](define-semiadditive-behavior.md)  

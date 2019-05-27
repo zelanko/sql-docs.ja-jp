@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
@@ -13,12 +12,12 @@ ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679720"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086764"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>[処理クエリの作成] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[処理クエリの作成]** ダイアログ ボックスを使用すると、**[ストレージのオプション]** ダイアログ ボックスの **[通知]** タブで処理クエリを作成できます。 処理クエリは、オブジェクトの多次元 OLAP (MOLAP) キャッシュを増分更新するため、最後にテーブルがポーリングされた後に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトに関連付けられたテーブルへの変更を含む行セットを返すクエリです。 Analysis Services は、ポーリング クエリとして参照される他のクエリを使用して、オブジェクトに関連付けられたテーブルをポーリングし、テーブルが変更されたかどうかを判断します。 処理クエリは、オブジェクトの MOLAP キャッシュを完全に更新する場合には不要です。  

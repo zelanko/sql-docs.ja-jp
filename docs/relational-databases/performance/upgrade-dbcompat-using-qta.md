@@ -38,7 +38,7 @@ ms.locfileid: "59516558"
 
 このアップグレードの制御は、[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)が導入されており、上記の推奨されるワークフローの最後のステップを自動化できる [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] でさらに強化されました。
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、新しい **クエリ調整アシスタント (QTA)** 機能を利用して、推奨されるワークフローに従うことで、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンへのアップグレード時のパフォーマンスの安定性を維持できます。これについては、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」の「*新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する*」セクションに記載されています。 ただし、推奨されるワークフローの最後の手順で示されているように、QTA は以前の既知の適切なプランにロールバックしません。 代わりに、QTA は [クエリ ストアの **[低下したクエリ]**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ビューで見つかった回帰をすべて追跡し、適用できるオプティマイザー モデル バリエーションの可能な順列を反復処理することで、新しいより良いプランを作成できます。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、新しい **クエリ調整アシスタント (QTA)** 機能を利用して、推奨されるワークフローに従うことで、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンへのアップグレード時のパフォーマンスの安定性を維持できます。これについては、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」の「*新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する*」セクションに記載されています。 ただし、推奨されるワークフローの最後の手順で示されているように、QTA は以前の既知の適切なプランにロールバックしません。 代わりに、QTA は [クエリ ストアの **[機能低下したクエリ]**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ビューで見つかった回帰をすべて追跡し、適用できるオプティマイザー モデル バリエーションの可能な順列を反復処理することで、新しいより良いプランを作成できます。
 
 > [!IMPORTANT]
 > QTA では、ユーザー ワークロードは生成されません。 アプリケーションで使用されていない環境で QTA を実行する場合は、別の方法でターゲットとなる [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で代表的なテスト ワークロードを引き続き確実に実行できるようにします。 
@@ -49,7 +49,7 @@ QTA の開始点では、以前のバージョンの [!INCLUDE[ssNoVersion](../.
 2.  クエリ ストアでワークロード データのベースラインを収集できるように (まだ使用できるものがない場合)、必要なワークロードの開始を要求します。
 3.  ユーザーが選択したターゲットのデータベース互換レベルにアップグレードします。
 4.  比較と機能低下の検出のために、ワークロード データの 2 番目の受け渡しが収集されるように要求します。
-5.  [クエリ ストア**の** [機能低下したクエリ]](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ビューに基づいて検出された機能低下を繰り返し処理し、適用可能なオプティマイザー モデル バリエーションの可能な順列で実行時統計を収集して実験し、その結果を測定します。 
+5.  [クエリ ストアの **[機能低下したクエリ]**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ビューに基づいて検出された機能低下を繰り返し処理し、適用可能なオプティマイザー モデル バリエーションの可能な順列で実行時統計を収集して実験し、その結果を測定します。 
 6.  測定された改善について報告し、必要に応じて、[プラン ガイド](../../relational-databases/performance/plan-guides.md)を使用して変更を保持できるようにします。
 
 データベースのアタッチの詳細については、[データベースのデタッチとアタッチ](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb)に関するページを参照してください。
@@ -212,7 +212,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
 ## <a name="see-also"></a>参照  
  [互換性レベルと SQL Server アップグレード](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
  [パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       
  [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)     

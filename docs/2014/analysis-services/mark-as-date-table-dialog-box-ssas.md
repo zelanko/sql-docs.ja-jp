@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.createdatetable.f1
@@ -13,12 +12,12 @@ ms.assetid: 698b5ef1-b79b-4d76-9847-39669b4f5bb9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cb946a717399ee58b06ed4bf0af783170f6e4bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c3dc2c084cdc426842cf822b1d65735030a9e9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728018"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077940"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>[日付テーブルとしてマーク] ダイアログ ボックス (SSAS)
   **[日付テーブルとしてマーク]** ダイアログ ボックスは、 **[テーブル]** メニューをクリックし、 **[日付]** をクリックして、 **[日付テーブルとしてマーク]** をクリックすると表示されます。 日付テーブルは、タイム インテリジェンス関数と共に使用されます。 データ テーブルとのリレーションシップを作成するには、テーブルの一意識別子として使用される一意の値を持つ列を指定する必要があります。  

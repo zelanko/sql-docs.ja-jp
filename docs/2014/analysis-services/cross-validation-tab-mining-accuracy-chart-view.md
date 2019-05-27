@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
@@ -13,12 +12,12 @@ ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679750"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086614"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>[相互検証] タブ ([マイニング精度チャート] ビュー)
   相互検証では、マイニング構造をセクションにパーティション分割し、それぞれのセクションに対してモデルのトレーニングとテストを反復的に実行できます。 データの分割先のフォールドをいくつか指定します。それぞれのフォールドは、順にテスト データとして使用されます。一方、残りのデータは、新しいモデルのトレーニングに使用されます。 その後、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] により、それぞれのモデルに対して標準的な精度の基準のセットが生成されます。 それぞれのセクションに対して生成されるモデルの基準を比較することで、データセット全体に対するマイニング モデルの信頼性を確認できます。  

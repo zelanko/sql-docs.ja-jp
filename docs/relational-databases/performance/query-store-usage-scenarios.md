@@ -50,7 +50,7 @@ ms.locfileid: "59542042"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>リソースを大量に消費しているクエリを識別して調整する  
  ワークロードで数千のクエリが生成される可能性がありますが、通常は少数のクエリのみがシステム リソースの大半を実際に使用しています。このため、そのような少数のクエリに注目する必要があります。 ほとんどの場合、リソースを大量に消費しているクエリの中から、後退しているクエリか、調整を行うことで改善できるクエリを見つけることができます。  
   
- 調査を開始する最も簡単な方法は、 **で** [Top Resource Consuming Queries] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)](上位リソース消費クエリ) を開くことです。 ユーザー インターフェイスは、次の 3 つのウィンドウに分かれています。上位リソース消費クエリを表すヒストグラム (左側)、選択したクエリで使用されたプランの概要 (右側)、および選択したプランの視覚化されたクエリ プラン (下部)。 分析するクエリの数と関心のある期間を制御するには、 **[構成]** ボタンをクリックします。 異なるリソース消費ディメンション (期間、CPU、メモリ、IO、実行回数) とベースライン (平均、最小、最大、合計、標準偏差) も選択できます。  
+ 調査を開始する最も簡単な方法は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で **[Top Resource Consuming Queries]** (上位リソース消費クエリ) を開くことです。 ユーザー インターフェイスは、次の 3 つのウィンドウに分かれています。上位リソース消費クエリを表すヒストグラム (左側)、選択したクエリで使用されたプランの概要 (右側)、および選択したプランの視覚化されたクエリ プラン (下部)。 分析するクエリの数と関心のある期間を制御するには、 **[構成]** ボタンをクリックします。 異なるリソース消費ディメンション (期間、CPU、メモリ、IO、実行回数) とベースライン (平均、最小、最大、合計、標準偏差) も選択できます。  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -219,7 +219,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
 ```  
   
 ## <a name="see-also"></a>参照  
- [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
   

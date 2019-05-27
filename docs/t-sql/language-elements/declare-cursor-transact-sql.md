@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801636"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982537"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  このカーソルによる更新を禁止します。 `UPDATE` または `DELETE` ステートメントの `WHERE CURRENT OF` 句では、このカーソルを参照できません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  カーソル内で更新できる列を定義します。 OF <column_name> [, <... n>] を指定した場合は、指定した列に対してのみ更新ができます。 列リストなしで `UPDATE` を指定した場合は、すべての列を更新できます。  
   
 *cursor_name*  
@@ -135,7 +135,7 @@ OPTIMISTIC
   
 *select_statement* 内の句が、要求されたカーソルの種類の機能と矛盾する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってカーソルが別の種類に暗黙的に変換されます。 詳細については、「暗黙的なカーソル変換」を参照してください。  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 カーソル内で更新できる列を定義します。 `OF <column_name> [, <... n>]` を指定した場合は、指定した列に対してのみ更新できます。 列リストなしで `UPDATE` を指定した場合は、すべての列を更新できます。ただし、`READ_ONLY` コンカレンシー オプションを指定した場合を除きます。  
   
 ## <a name="remarks"></a>Remarks  

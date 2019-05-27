@@ -5,17 +5,17 @@ author: Abiola
 ms.author: aboke
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: dab04f5c544e84c5763b8101cb166741463d460a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512959"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993939"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>CSV ファイルで外部テーブル ウィザードを使用する
 
@@ -26,15 +26,14 @@ SQL Server 2019 では、CSV ファイルからのデータを HDFS に仮想化
 CTP 2.4 より、データ プールと記憶域プールの外部データ ソースは、ビッグ データ クラスターに既定で作成されなくなりました。 ウィザードを使用する前に、次の Transact-SQL クエリを使用してターゲット データベースに既定の **SqlStoragePool** 外部データ ソースを作成してください。 最初に、クエリのコンテキストをターゲット データベースに変更します。
 
 ```sql
-IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-  BEGIN
-    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+  -- Create default data sources for SQL Big Data Cluster
+  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+      CREATE EXTERNAL DATA SOURCE SqlDataPool
+      WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+
+  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-  END
+      WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
 ```
 
 ## <a name="launch-the-external-table-wizard"></a>外部テーブル ウィザードを起動する
@@ -45,7 +44,7 @@ IP アドレスを使用して HDFS ルートに接続します。 オブジェ�
 
 ## <a name="connect-to-a-sql-server-master-instance"></a>SQL Server マスター インスタンスに接続する
 
-ここでは、IP、ポート、および資格情報を使用して接続する SQL マスター インスタンスを指定できます。 前に保存した接続に、**[Active SQL Server connections]\(アクティブな SQL Server 接続\)** ドロップダウン ボックスからアクセスできます。 
+ここでは、IP、ポート、および資格情報を使用して接続する SQL マスター インスタンスを指定できます。 前に保存した接続に、 **[Active SQL Server connections]\(アクティブな SQL Server 接続\)** ドロップダウン ボックスからアクセスできます。 
 > [!NOTE]
 >保存した接続を使用している場合、他のフィールドはブロックされます。
 
@@ -78,7 +77,7 @@ IP アドレスを使用して HDFS ルートに接続します。 オブジェ�
 
 ## <a name="summary"></a>[概要]
 
-このステップでは、選択内容の要約が提供されます。 SQL マスター インスタンスと提案される外部テーブルの情報が提供されます。 このステップでは、**[スクリプトの生成]** オプションを選択すると外部データ ソースを作成する構文が T-SQL でスクリプト化され、**[作成]** を選択すると外部データ ソース オブジェクトが作成されます。
+このステップでは、選択内容の要約が提供されます。 SQL マスター インスタンスと提案される外部テーブルの情報が提供されます。 このステップでは、 **[スクリプトの生成]** オプションを選択すると外部データ ソースを作成する構文が T-SQL でスクリプト化され、 **[作成]** を選択すると外部データ ソース オブジェクトが作成されます。
 
 ![概要画面](media/data-virtualization/csv-virtualize-data-summary.png)
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699017"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073488"
 ---
 # <a name="multidimensional-modeling-ssas"></a>多次元モデリング (SSAS)
   Analysis Services 多次元ソリューションは、複数のディメンションにわたるビジネス データの分析にキューブ構造を使用します。 多次元モードは Analysis Services の既定のサーバー モードです。 OLAP データ用のクエリおよび計算エンジンが含まれており、パフォーマンスとスケーラブルなデータ要件のバランスをとるために MOLAP、ROLAP、および HOLAP ストレージ モードをサポートしています。 Analysis Services OLAP エンジンは、業界最高レベルの OLAP サーバーであり、さまざまな BI ツールに対応しています。 ほとんどの Analysis Services 配置は、従来の OLAP サーバーとしてインストールされます。  

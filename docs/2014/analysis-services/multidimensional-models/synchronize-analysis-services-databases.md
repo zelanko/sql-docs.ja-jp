@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
@@ -16,12 +15,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740958"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072850"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に付属しているデータベースの同期機能は、同期元サーバー上のデータベースから同期先サーバー上のデータベースにデータおよびメタデータをコピーすることによって、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを同一にします。 データベースの同期機能は、次のタスクを達成するために使用します。  

@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: e65c9f5a1ab41ef8ba47636960e3b1b7725b630f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 5ab271c79ffdcb43573c8a55680a2695305a96af
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720723"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012828"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を利用し、Azure でデプロイされた SSIS パッケージの実行スケジュールを設定します
 
@@ -43,7 +43,7 @@ SSMS を使用してパッケージのスケジュールを設定するとき、
 
 ## <a name="schedule-a-package-in-ssms"></a>SSMS でパッケージのスケジュールを設定する
 
-1. SSMS のオブジェクト エクスプローラーで、SSISDB データベースを選択し、フォルダーを選択し、プロジェクトを選択し、パッケージを選択します。 パッケージを右クリックし、**[スケジュール]** を選択します。
+1. SSMS のオブジェクト エクスプローラーで、SSISDB データベースを選択し、フォルダーを選択し、プロジェクトを選択し、パッケージを選択します。 パッケージを右クリックし、 **[スケジュール]** を選択します。
 
     ![スケジュールを設定するパッケージを選択します。](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image1-schedule.png)
 
@@ -63,7 +63,7 @@ SSMS を使用してパッケージのスケジュールを設定するとき、
 
     ![新しいスケジュールの確認](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image5-confirmation.png)
 
-6. スケジュールのトリガーをカスタマイズするには、**[トリガー]** メニューから **[New/Edit]\(新規/編集\)** を選択します。
+6. スケジュールのトリガーをカスタマイズするには、 **[トリガー]** メニューから **[New/Edit]\(新規/編集\)** を選択します。
 
     ![新しいパイプラインを任意で編集する](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image6-edit.png)
 

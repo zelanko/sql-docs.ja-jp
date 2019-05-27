@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -17,12 +16,12 @@ ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7035fb90d9cc84743fc484e020efd6a19a217a4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b80cfeae2957753cfe96d54dcbe0052e19db741
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725416"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074467"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING の内容 (MDX)
   `FORMAT_STRING` セル プロパティは、`VALUE` セル プロパティを書式設定して、`FORMATTED_VALUE` セル プロパティの値を作成します。 `FORMAT_STRING` セル プロパティは文字列と数値列の値を処理し、その値にフォーマット式を適用して、`FORMATTED_VALUE` セル プロパティ用に書式設定した値を返します。 次の表は、文字列および数値の処理に使用する構文および書式文字の詳細を示しています。  

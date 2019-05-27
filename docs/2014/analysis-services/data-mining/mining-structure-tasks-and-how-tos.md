@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
@@ -13,12 +12,12 @@ ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 118e4eee68f3c88bd2d09f1d0c366d1c5d9e65df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 991185cbf8545fab21270d77ab90267c09380566
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083438"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>マイニング構造のタスクと操作方法
   **のデータ マイニング デザイナーの** [マイニング構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブには、マイニング構造の作成、編集、および処理に使用できるツールが含まれています。  

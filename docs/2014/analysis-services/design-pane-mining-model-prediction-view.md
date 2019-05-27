@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
@@ -13,12 +12,12 @@ ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732128"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081850"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>[デザイン] ペイン ([マイニング モデル予測] ビュー)
   **デザイン** ペインには、データ マイニング予測クエリ ビルダーがあり、これを利用してデータ マイニング予測クエリを作成できます。 データ ソース ビューから入力データのテーブルを使用する予測クエリを設計して一括予測を生成することも、個々の値を取得する単一予測クエリを作成することもできます。  
@@ -83,10 +82,10 @@ ms.locfileid: "62732128"
  ソース テーブルから派生した列の一覧から列を選択します。 **[ソース]** で **[予測関数]** を選択した場合、ここには選択したマイニング モデルで利用できる予測関数が表示されます。  
   
  **[グループ]**  
- 式をグループ化するために **[ルールの適用条件]** 列と組み合わせて使用します。 たとえば、 `(expr1 Or expr2) And expr3`のようにします。  
+ 式をグループ化するために **[ルールの適用条件]** 列と組み合わせて使用します。 たとえば、`(expr1 Or expr2) And expr3` のようにします。  
   
  **[ルールの適用条件]**  
- 論理クエリを作成するために使用します。 たとえば、 `(expr1 Or expr2) And expr3`のようにします。  
+ 論理クエリを作成するために使用します。 たとえば、`(expr1 Or expr2) And expr3` のようにします。  
   
  **[条件と引数]**  
  列に適用する条件またはユーザー式を指定します。 マイニング モデルや入力テーブルを含むテーブルから列をドラッグして、セルに入力できます。  

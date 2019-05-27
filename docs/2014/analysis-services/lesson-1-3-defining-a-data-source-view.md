@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca6e9661c65098bed1175c7108b18a482b14a542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730327"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079282"
 ---
 # <a name="defining-a-data-source-view"></a>データ ソース ビューの定義
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトで使用するデータ ソースを定義した後は、一般に、プロジェクトのデータ ソース ビューを定義します。 データ ソース ビューは、指定したテーブルのメタデータと、プロジェクトのデータ ソースによって定義されているビューを 1 つに統合したものです。 データ ソース ビューにメタデータを格納すると、基になるデータ ソースへの接続を開かなくても、開発時にメタデータを操作することができます。 詳細については、 [「多次元モデルのデータ ソース ビュー」](multidimensional-models/data-source-views-in-multidimensional-models.md)を参照してください。  
@@ -53,7 +52,7 @@ ms.locfileid: "62730327"
   
 5.  選択したテーブルを [ **>** 含まれているオブジェクト **] の一覧に追加するには、** をクリックします。  
   
-6.   **[次へ].**  
+6.  **[次へ].**  
   
 7.  [名前] フィールドに **Adventure Works DW 2012** と表示されていることを確認し、**[完了]** をクリックします。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "62730327"
   
     -   データ ソース ビュー デザイナーのツール バー  
   
-8.   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開発環境を最大化するには、**[最大化]** ボタンをクリックします。  
+8.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 開発環境を最大化するには、**[最大化]** ボタンをクリックします。  
   
 9. **[ダイアグラム]** ウィンドウ内のテーブルを 50% の大きさで表示するには、データ ソース ビュー デザイナーのツール バーにある **[ズーム]** アイコンをクリックします。 表示サイズを 50% にすると、各テーブルの列の詳細が非表示になります。  
   

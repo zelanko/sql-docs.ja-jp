@@ -296,5 +296,5 @@ WHERE s.ticket = r.ticket AND
  [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
- [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0f3d10776e661eaa15ed39a141fe06608d8dbde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722634"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085150"
 ---
 # <a name="cross-validation-formulas"></a>クロス検証の式
   生成したクロス検証レポートには、マイニング モデルの種類 (つまり、モデルの作成に使用したアルゴリズム)、予測可能な属性のデータ型、および予測可能な属性の値に応じて、モデルごとの精度のメジャーが含まれます。  

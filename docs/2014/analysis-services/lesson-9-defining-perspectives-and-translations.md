@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f1af3719a658711b1a232b0248e511e0a658414d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078182"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9: パースペクティブと翻訳の定義
   このレッスンでは、パースペクティブと翻訳を定義する方法について学習します。 パースペクティブを定義すると、キューブの表示上の複雑さを軽減できます。翻訳を定義すると、ユーザーは希望する言語でキューブ メタデータを表示できます。  

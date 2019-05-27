@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
@@ -14,12 +13,12 @@ ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736790"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073290"
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services オブジェクトの処理
   処理は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの種類 ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、キューブ、ディメンション、メジャー グループ、パーティション、データ マイニング構造、およびデータ マイニング モデル) に影響します。 オブジェクトごとに、オブジェクトの処理レベルを指定するか、または [既定の処理] オプションを指定して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が自動的に最適な処理レベルを選択するようにできます。 各オブジェクトに適用できる異なるレベルの処理の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」を参照してください。  

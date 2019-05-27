@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700117"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076555"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>データ ソース ビューを使用したキューブの作成
   既存のデータ ソース ビューを使用する場合、新しいキューブを構築するには、ここで説明する方法を使用します。 この方法では、データ ソース ビューを指定して、データ ソース ビューで使用するファクト テーブルとディメンション テーブルを選択します。 次に、キューブに含めるディメンションとメジャーを選択します。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733198"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083114"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   一般的なデータ マイニング プロジェクトの目標は、マイニング モデルを使用して予測を行うことです。 たとえば、あるサーバーの集まりのダウンタイムを予測したり、顧客区分が広告キャンペーンに反応するかどうかを示すスコアを生成したりする場合があります。 これらすべてを行うには、予測クエリを作成します。  

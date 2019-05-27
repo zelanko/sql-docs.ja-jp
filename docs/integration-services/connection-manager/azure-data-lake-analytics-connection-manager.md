@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -15,12 +15,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 441c5d157be083baff6b3ae1810bc2da932f188e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 07470283d3f6028fae4b6435d6134813601009e0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728379"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012876"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 接続マネージャー
 
@@ -36,7 +36,7 @@ Data Lake Analytics 接続マネージャー は、[SQL Server Integration Servi
  
 ## <a name="configure-the-connection-manager"></a>接続マネージャーの構成
 
-1. **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureDataLakeAnalytics]** > **[追加]** の順に選択します。 **[Azure Data Lake Analytics Connection Manager Editor]\(Azure Data Lake Analytics 接続マネージャー エディター\)** ダイアログ ボックスが開きます。
+1. **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureDataLakeAnalytics]**  >  **[追加]** の順に選択します。 **[Azure Data Lake Analytics Connection Manager Editor]\(Azure Data Lake Analytics 接続マネージャー エディター\)** ダイアログ ボックスが開きます。
   
 2. **[Azure Data Lake Analytics Connection Manager Editor]\(Azure Data Lake Analytics 接続マネージャー エディター\)** ダイアログ ボックスの **[ADLA Account Name]\(ADLA アカウント名\)** フィールドに、Data Lake Analytics アカウントの名前を入力します。 たとえば、「myadlaaccountname」などと入力します。
   
@@ -45,7 +45,7 @@ Data Lake Analytics 接続マネージャー は、[SQL Server Integration Servi
    A. **[Azure AD のユーザー ID]** 認証オプションを選択する場合は、次の操作を行います。
    
       i. **[ユーザー名]** と **[パスワード]** のフィールドに値を指定します。    
-      ii. 接続をテストするには、**[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Analytics アカウントへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)」を参照してください。
+      ii. 接続をテストするには、 **[接続テスト]** を選択します。 自分自身またはテナント管理者が SSIS から Data Lake Analytics アカウントへのアクセスに同意していない場合は、プロンプトが表示されたときに **[同意する]** を選択します。 この同意エクスペリエンスの詳細については、「 [Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)」を参照してください。
     
    > [!NOTE] 
    > **[Azure AD のユーザー ID]** 認証オプションを選択する場合、多要素認証と Microsoft アカウント認証はサポートされません。
@@ -54,10 +54,10 @@ Data Lake Analytics 接続マネージャー は、[SQL Server Integration Servi
    
       i. Data Lake Analytics アカウントにアクセスするための Azure AD アプリケーションおよびサービス プリンシパルを作成します。 この認証オプションの詳細については、「 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。    
       ii. 適切な権限を割り当てて、この Azure AD アプリケーションが Data Lake Analytics アカウントにアクセスできるようにします。 [ユーザー追加ウィザード](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user)を使用して Data Lake Analytics アカウントへのアクセス許可を付与する方法を確認してください。    
-      iii. **[アプリケーション ID]**、**[認証キー]**、**[テナント ID]** フィールドの値を指定します。    
-      iv. 接続をテストするには、**[接続テスト]** を選択します。  
+      iii. **[アプリケーション ID]** 、 **[認証キー]** 、 **[テナント ID]** フィールドの値を指定します。    
+      iv. 接続をテストするには、 **[接続テスト]** を選択します。  
 
-4. **[OK]** を選択して、**[Azure Data Lake Analytics Connection Manager Editor]\(Azure Data Lake Analytics 接続マネージャー エディター\)** ダイアログ ボックスを閉じます。  
+4. **[OK]** を選択して、 **[Azure Data Lake Analytics Connection Manager Editor]\(Azure Data Lake Analytics 接続マネージャー エディター\)** ダイアログ ボックスを閉じます。  
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>接続マネージャーのプロパティを表示する
 作成した接続マネージャーのプロパティは、 **[プロパティ]** ウィンドウに表示されます。  
