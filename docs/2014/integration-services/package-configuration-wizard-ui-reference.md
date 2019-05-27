@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
@@ -16,12 +15,12 @@ ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767134"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056941"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>パッケージ構成ウィザードの UI リファレンス
   **パッケージ構成ウィザード**を使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[SSIS]** メニューの **[パッケージ構成]** をクリックします。 詳細については、「[パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
@@ -67,7 +66,7 @@ ms.locfileid: "62767134"
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[構成ファイル名]**|ウィザードで生成する構成ファイルのパスを入力します。|  
 |**[参照]**|**[構成ファイルの場所の選択]** ダイアログ ボックスを使用して、ウィザードで生成する構成ファイルのパスを指定します。 指定したファイルが存在しない場合、ウィザードによってファイルが新しく作成されます。|  
@@ -75,7 +74,7 @@ ms.locfileid: "62767134"
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -102,14 +101,14 @@ ms.locfileid: "62767134"
  **[構成設定を直接指定する]**  
  設定を直接指定する場合に使用します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[親変数]**|構成情報を格納する親パッケージ内の変数を指定します。|  
   
  **[構成の場所を環境変数に格納する]**  
  構成を格納する環境変数を指定する場合に使用します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**環境変数**|一覧から環境変数を選択します。|  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62767134"
  **[完了]**  
  構成を作成して **[パッケージ構成ウィザード]** を終了します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)  
   
   

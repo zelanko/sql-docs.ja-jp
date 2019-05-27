@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7dddb6aec8d55a2a0495900b87661a431f8de9d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643353"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062437"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services のチュートリアル シナリオ
   このチュートリアルには、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]という架空の会社が登場します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] は、特殊合金自転車を北アメリカ、ヨーロッパ、およびアジアの市場に供給する大規模な多国籍製造会社です。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] はワシントン州のボセルに本社を置き、500 名の従業員を抱えています。 さらに、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] の各市場には、その地域を担当する販売チームがいます。  
@@ -63,7 +62,7 @@ ms.locfileid: "62643353"
   
  Analysis Services チュートリアルのレッスンには、これらのすべての目標に適したキューブ データベースを構築するためのガイダンスが用意されています。 開始するには、最初のレッスンに進みます。[レッスン 1:新しいテーブル モデル プロジェクト作成](lesson-1-create-a-new-tabular-model-project.md)です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

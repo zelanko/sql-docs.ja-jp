@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timeperioddefinition.f1
@@ -13,12 +12,12 @@ ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732327"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082009"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>[時間間隔の定義] (データ ソース) (ディメンション ウィザード)
   **[時間間隔の定義]** ページを使用すると、 **[ディメンションの種類の選択]** ページで指定されたテーブル内の列を使用して、時間ディメンション内の期間を表す属性を指定できます。  

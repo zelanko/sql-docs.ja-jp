@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], viewing snapshots
@@ -26,12 +25,12 @@ ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 492835539e36611a56e3896a29d06ed75c17f4b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647436"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098704"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>レポート履歴を表示または削除する (レポート マネージャー)
   レポート履歴は、その基になっているレポートと共に保持されます。 レポートを表示する権限を持っているすべてのユーザーは、そのレポート履歴を表示できます。  
@@ -54,7 +53,7 @@ ms.locfileid: "62647436"
   
 3.  クリックして、削除する履歴スナップショットの横にあるチェック ボックスをオン**削除**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [レポート履歴ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [レポート処理プロパティの設定](report-server/set-report-processing-properties.md)   

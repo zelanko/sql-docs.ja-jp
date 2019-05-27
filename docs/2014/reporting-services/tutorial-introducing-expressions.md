@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62649197"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098846"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル:式の概要
   式を使用すると、強力で柔軟なレポートを作成できます。 このチュートリアルでは、一般的な関数および演算子を使用した式を作成および実装する方法を説明します。 使用する、**式**名前値の連結、見て別のデータセット内の値式を作成する ダイアログ ボックスとフィールドの値に基づいた画像を表示します。  
@@ -704,7 +703,7 @@ ms.locfileid: "62649197"
   
 4.  **[保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](report-design/expression-examples-report-builder-and-ssrs.md)   
  [インジケーター&#40;レポート ビルダーおよび SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   

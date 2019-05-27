@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
@@ -13,12 +12,12 @@ ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8480066485cf22c48cebbba738b2c604a50b23c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767704"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057976"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services プロジェクト変換ウィザード
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
@@ -242,7 +241,7 @@ ms.locfileid: "62767704"
  **[レポートの保存]**  
  プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

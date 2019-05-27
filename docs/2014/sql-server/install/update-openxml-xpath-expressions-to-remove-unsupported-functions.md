@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - OPENXML queries
@@ -13,12 +12,12 @@ ms.assetid: b459abaf-8787-4b65-9231-ae30e5469fd0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe0ed92b5a48fb92f98a73be92e578314a0bdb5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec0edb2e72143fd41709355a3e9cc338544289a6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62470069"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091690"
 ---
 # <a name="update-openxml-xpath-expressions-to-remove-unsupported-functions"></a>OPENXML XPath 式の更新によりサポートされていない関数が削除される
   アップグレード アドバイザーによって、XPath 機能の使用が検出されました。 OPENXML の XPath 機能が変更されているので、アップグレードした後でその影響を受ける可能性があります。  

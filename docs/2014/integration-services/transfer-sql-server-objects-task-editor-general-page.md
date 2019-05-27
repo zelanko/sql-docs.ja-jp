@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.general.f1
@@ -15,12 +14,12 @@ ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa17cef1fddd5d131424dc645763683d59b75325
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766205"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054893"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>[SQL オブジェクトの転送タスク エディター] ([全般] ページ)
   **[SQL オブジェクトの転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクの名前と説明を入力できます。 このタスクの詳細については、「 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)」を参照してください。  
@@ -38,7 +37,7 @@ ms.locfileid: "62766205"
  **[説明]**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの転送タスクの説明を入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [[SQL Server オブジェクトの転送タスク エディター] &#40;[オブジェクト] ページ&#41;](../../2014/integration-services/transfer-sql-server-objects-task-editor-objects-page.md)   

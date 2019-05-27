@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
@@ -13,12 +12,12 @@ ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1255cbcaffe114a47b4c7d251c37e5b3d50d6b2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650603"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063096"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性リレーションシップ ダイアグラム ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[属性リレーションシップ]** タブのツール バーのすぐ下にあるペインを使用すると、属性リレーションシップ ダイアグラムを表示したり、属性リレーションシップを作成、変更、および削除したりできます。  
@@ -92,7 +91,7 @@ ms.locfileid: "62650603"
  **Properties**  
  リレーションシップのプロパティを **[プロパティ]** ウィンドウに表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性リレーションシップ&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;属性リレーションシップ タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [属性&#40;属性リレーションシップ タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   

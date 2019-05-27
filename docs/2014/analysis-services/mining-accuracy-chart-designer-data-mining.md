@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.overview.f1
@@ -13,12 +12,12 @@ ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf2c26f3d2029e180261ba478184b3d95dd72a8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703183"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077779"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>マイニング精度チャート デザイナー (データ マイニング)
   **[マイニング精度チャート]** ビューを使用すると、選択したマイニング構造に基づいて構築されるマイニング モデルのパフォーマンスを比較できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62703183"
   
      `Input Selection` タブで選択したモデルのリフト チャート、利益チャート、または散布図を生成します。  
   
--   [[分類マトリックス] タブ&#40;マイニング精度チャート] ビュー&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
+-   [[分類マトリックス] タブ&#40;マイニング精度チャートビュー&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
      `Input Selection` タブで選択したモデルの分類マトリックスを表示します。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62703183"
   
  タブでは、次のツールとダイアログ ボックスを使用できます。  
   
--   [[マイニング構造] ダイアログ ボックスの選択&#40;マイニング精度チャート] ビュー&#41;](select-mining-structure-dialog-box-mining-accuracy-chart-view.md)  
+-   [[マイニング構造] ダイアログ ボックスの選択&#40;マイニング精度チャートビュー&#41;](select-mining-structure-dialog-box-mining-accuracy-chart-view.md)  
   
 -   [テーブルのダイアログ ボックスをオンに&#40;マイニング精度チャート ビュー&#41;](select-table-dialog-box-mining-accuracy-chart-view.md)  
   

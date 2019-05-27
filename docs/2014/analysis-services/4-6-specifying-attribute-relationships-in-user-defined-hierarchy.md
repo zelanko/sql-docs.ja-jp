@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6fd010dbf16468343b15eb383a5308d94b255da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 490d9f6e1cdaeab274290649d2bb7f5c691595ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62512626"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063031"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>ユーザー定義階層の属性間での属性リレーションシップの指定
   このチュートリアルで既に学習したように、ユーザー階層に属性階層を配置し、キューブ内を移動するためのパスを作ることができます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SetVirtualDirectory method
@@ -13,12 +12,12 @@ ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5be09f364a0cfcf881cdbedd1db8f1f099819d0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e68bb7c70d08fb07d3079436fafe5fd61ae104f1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646378"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097917"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>SetVirtualDirectory メソッド (WMI MSReportServer_ConfigurationSetting)
   指定したアプリケーションの仮想ディレクトリの名前を設定します。  
@@ -65,7 +64,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

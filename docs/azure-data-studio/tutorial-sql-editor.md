@@ -55,7 +55,7 @@ ms.locfileid: "65089694"
 
    ![クイック検索ウィジェット](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編集、**電子メール**最初の行では、型の列*orlando0@adventure-works.com*、キーを押します**Enter**の変更を保存します。
+1. 編集、**電子メール**最初の行では、型の列 *orlando0@adventure-works.com* 、キーを押します **Enter** の変更を保存します。
 
    ![データを編集します。](./media/tutorial-sql-editor/edit-data.png)
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Parameter Info option [IntelliSense]
@@ -16,12 +15,12 @@ ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0b7c93da6efafc5603b79efc992637ff2d1fd757
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9605062317572bb89e5bd806f2d7babd9d3a09f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144735"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063916"
 ---
 # <a name="parameter-info-intellisense"></a>パラメーター ヒント (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense の **[パラメーター ヒント]** オプションを使用すると、パラメーター リストが表示され、関数またはストアド プロシージャで必要とされるパラメーターの数、名前、およびデータ型について確認できます。 太字で表示されるパラメーターは、入力中の関数やストアド プロシージャで次に必要なパラメーターを示しています。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.treeview.f1
@@ -13,12 +12,12 @@ ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a20d1bf52e623112f96ee2890e75e8d3ce0416ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ab5c3112bfeddd41c9c877365e36780e32b4241e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62878040"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055390"
 ---
 # <a name="ssis-package-explorer-tab"></a>SSIS の [パッケージ エクスプローラー] タブ
   **デザイナーの** [パッケージ エクスプローラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、パッケージのすべての要素 (構成、接続、イベント ハンドラー、タスクやコンテナーなどの実行可能オブジェクト、ログ プロバイダー、優先順位制約、変数) の階層ビューを参照できます。 パッケージにデータ フロー タスクが含まれている場合、 **[パッケージ エクスプローラー]** タブにはデータ フロー コンポーネントの階層ビューを格納するノードが含まれます。  

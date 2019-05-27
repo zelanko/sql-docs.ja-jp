@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - match case [SQL Server]
@@ -29,12 +28,12 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 299cb79646ff7d0955ca25343fbe2a7d9c0b1140
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135146"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090203"
 ---
 # <a name="search-and-replace"></a>検索と置換
   テキストの検索と置換にはいくつかの方法があります。 **編集** メニューの **検索し、置換**は 4 つの選択肢を提供します。**クイック検索**、**クイック置換**、**ファイル内の検索**、または**ファイル内の置換**します。 各オプションを選択すると、各バージョンの **[検索と置換]** ダイアログ ボックスが表示されます。 ダイアログ ボックスを使用しないで、インクリメンタル検索キーボード ショートカット キーによって検索することも可能です。 これらの方法によって、検索と置換の範囲を設定することや、検索一致項目や置換項目を確認する方法を選択することができます。  

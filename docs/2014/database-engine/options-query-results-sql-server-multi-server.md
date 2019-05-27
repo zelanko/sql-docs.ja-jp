@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
@@ -14,12 +13,12 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 99b9192f2bf2b6e1fe00e1b0e367ff254219539c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774066"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089964"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>[オプション] ([クエリ結果] - [SQL Server] - [マルチサーバー])
   複数のサーバーに対して同時にクエリを実行する場合、このページで結果セットの表示オプションを指定します。 結果をマージすると、すべてのサーバーからの結果セットが 1 つの結果セットに結合されます。 結果をマージする場合は、最初に応答したサーバーによって結果セットのスキーマが設定されます。 結果セットをマージするには、クエリから返される列の数とその列名が、各サーバーで同じであることが必要です。 結果をマージする際には、最初に結果を返したサーバーから返されたスキーマ (列数と列名) と一致しないサーバーごとにメッセージが表示されます。  
@@ -36,7 +35,7 @@ ms.locfileid: "62774066"
  **ログイン名を結果に追加します。**  
  各行を提供したサーバーへの接続に使用されたログインを表示する列を追加するには、このチェック ボックスをオンにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [中央管理サーバーおよびサーバー グループの作成&#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   

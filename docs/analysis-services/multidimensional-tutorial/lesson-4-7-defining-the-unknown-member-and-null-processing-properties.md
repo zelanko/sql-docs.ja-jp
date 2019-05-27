@@ -148,7 +148,7 @@ ms.locfileid: "65404074"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.   **[属性]** ペインで、 **[Subcategory]** を選択します。  
+7.  **[属性]** ペインで、 **[Subcategory]** を選択します。  
   
 8.  [プロパティ] ウィンドウで、 **[KeyColumns]** プロパティ、 **[DimProductSubcategory.ProductSubcategoryKey (Integer)]** プロパティの順に展開します。  
   

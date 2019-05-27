@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ee56d8f285eb3e054241ac912b552e55665a552
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766904"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056427"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 実行タスクにおける結果セット
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージでは、タスクが使用する SQL コマンドの種類によって、SQL 実行タスクに結果セットが返されるかどうかが決まります。 たとえば、通常、SELECT ステートメントは結果セットを返しますが、INSERT ステートメントは返しません。  

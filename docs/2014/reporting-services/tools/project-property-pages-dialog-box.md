@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a76281eead6430ca0dafae8671c7990f3c6c2de3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201077"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100038"
 ---
 # <a name="project-property-pages-dialog-box"></a>[プロパティ ページ] ダイアログ ボックス
   プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、**[プロジェクト]** メニューの _[\<レポート プロジェクト名>_ **のプロパティ]** をクリックします。  

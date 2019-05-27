@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deploystatus.f1
@@ -13,12 +12,12 @@ ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c542edcd14da08ab58770d7706139762c9735902
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757340"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067300"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>SQL Server データ ツールからの配置 (SSAS テーブル)
   このトピックのタスクは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の Deploy コマンドを使用してテーブル モデル ソリューションを配置するために使用します。  
@@ -55,7 +54,7 @@ ms.locfileid: "62757340"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>テーブル モデル ソリューションを配置するには  
   
--   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の**ビルド**] メニューのをクリックして**デプロイ\<プロジェクト名 >** します。  
+-   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の**ビルド** メニューのをクリックして**デプロイ\<プロジェクト名 >** します。  
   
      **[配置]** ダイアログ ボックスが表示され、メタデータの配置の状態とモデルに含まれる各テーブルの処理が示されます ([処理オプション] プロパティが [処理しない] に設定されている場合を除きます)。 配置プロセスが完了したら、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、Analysis Services インスタンスに接続し、新しい model データベース オブジェクトが作成されていることを確認するか、クライアント レポート アプリケーションを使用して配置済みモデルと接続します。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.reportaction.f1
@@ -13,12 +12,12 @@ ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748384"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070297"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>レポート アクション フォーム エディター (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーで **[アクション]** タブの**レポート アクション フォーム エディター** ペインを使用すると、**[アクション オーガナイザー]** ペインで選択されたレポート アクションを変更できます。  
@@ -45,7 +44,7 @@ ms.locfileid: "62748384"
 |[レベル メンバー]|**[対象になるオブジェクト]** でレベル内のメンバーが選択されます。|  
   
  **ターゲット オブジェクト**  
- アクションが関連付けられるオブジェクトを選択します。  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスは、選択したオブジェクトに適用されるこれらのアクションのみをクライアントに返します。 使用可能なオブジェクトは、 **[対象になる種類]** の選択によって制限されます。  
+ アクションが関連付けられるオブジェクトを選択します。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスは、選択したオブジェクトに適用されるこれらのアクションのみをクライアントに返します。 使用可能なオブジェクトは、 **[対象になる種類]** の選択によって制限されます。  
   
  **[条件 (省略可能)]**  
  オプションの条件を記述する多次元式 (MDX) を入力します。この式は、アクションが使用可能な場合に制限を設定する **[対象になるオブジェクト]** のメンバーと一緒に使用されます。 この式は、ブール値を返す必要があります (true は、アクションが使用可能なことを示します)。  
@@ -64,7 +63,7 @@ ms.locfileid: "62748384"
  **[レポート形式]**  
  レポートが返される形式を選択します。 次の表では、使用可能な形式について説明しています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |[HTML5]|レポートが HTML 5.0 に準拠した形式で返されます。|  
 |[HTML3]|レポートが HTML 3.2 に準拠した形式で返されます。|  
@@ -112,15 +111,15 @@ ms.locfileid: "62748384"
   
  **[キャプションに MDX を使用]** を **[True]** に設定する場合は、キャプションの文字列を返す多次元式 (MDX) を入力します。  
   
- **True**  
+ **キャプションに MDX**  
  クライアント アプリケーションのアクションに表示されるキャプションを表すリテラル文字列が **[キャプション]** に入力されている場合は、 **[False]** を選択します。  
   
  クライアント アプリケーションのアクションに表示されるキャプションを表す文字列を返す MDX 式が **[キャプション]** に入力されている場合は、 **[True]** を選択します。 MDX 式は、アクションがクライアント アプリケーションに返される前に解析される必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アクション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;アクションタブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [[アクション オーガナイザー]&#40;アクション] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [アクション オーガナイザー&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [計算ツール&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [ドリルスルー アクション フォーム エディター&#40;アクション タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  

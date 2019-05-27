@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: f6473409-121a-414d-8fe9-ea9aea6cb7eb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63297550"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095010"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>アップグレード後、フルテキスト検索では、OUTPUT INTO 式で述語を使用できません。
   データベースの互換性レベルが 100 以上に設定されている場合、OUTPUT 句でフルテキスト述語を使用することはできません。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columnproperties.f1
@@ -15,12 +14,12 @@ ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 067bb5a2da9a93bc29e93a3844a29e1a4028c7d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768348"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058790"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページでは、Integration Services で、フラット ファイルからデータをどのように読み取るか、フラット ファイルにデータをどのように書き込むかを指定するプロパティを設定できます。 フラット ファイル内の列名を変更し、ファイル内の各列にデータ型および区切り記号を指定するプロパティを設定できます。  
@@ -66,7 +65,7 @@ ms.locfileid: "62768348"
  **[型の推測]**  
  **[列の型の推測]** ダイアログ ボックスを使用して、ファイルのサンプル データを評価し、各列のデータ型と長さの推測を取得します。 詳細については、「 [[列の型の推測] ダイアログ ボックスの UI リファレンス](connection-manager/suggest-column-types-dialog-box-ui-reference.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   

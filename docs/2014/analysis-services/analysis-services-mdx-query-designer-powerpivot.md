@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 419db8a664d235090a68d495373eee1e0addbfff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643996"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062468"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX クエリ デザイナー (PowerPivot)
   Analysis Services 多次元式 (MDX) クエリ デザイナーには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースに対する MDX クエリの作成に役立つグラフィカル ユーザー インターフェイスが用意されています。 MDX のグラフィカル クエリ デザイナーには、デザイン モードとクエリ モードという 2 つのモードがあります。 どちらのモードでもメタデータ ペインが表示されます。このペインから、選択したキューブのメンバーをドラッグすることによって、使用するデータを取得する MDX クエリを作成できます。  

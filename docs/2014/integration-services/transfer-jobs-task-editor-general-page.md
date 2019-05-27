@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926625"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055009"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>[ジョブ転送タスク エディター] ([全般] ページ)
   **[ジョブ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ジョブ転送タスクの名前と説明を入力できます。 ジョブ転送タスクの詳細については、「 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)」を参照してください。  

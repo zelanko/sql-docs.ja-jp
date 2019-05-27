@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8282cf7060f106798f2fa482f474bc5e364492ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768318"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058750"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>[フラット ファイル接続マネージャー エディター] ([全般] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ファイルおよびデータ形式を選択できます。 フラット ファイル接続により、パッケージをテキスト ファイルに接続できるようになります。  
@@ -84,7 +83,7 @@ ms.locfileid: "62768318"
  **[先頭データ行を列名として使用する]**  
  先頭データ行を列名として使用するか、ここに列名を指定するかを示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[フラット ファイル接続マネージャー エディター] ([列] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [[フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   

@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 2fd30ccac5cfb88d2b9258268ecc6844b78ddb53
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: ba29528248a94a2a46aa14a2cdb5f72e1501f273
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65721294"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015176"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure の SSIS カタログ (SSISDB) に接続する
 
@@ -37,7 +37,7 @@ Azure SQL Database サーバーでホストされている SSIS カタログ (SS
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal から接続情報を取得する
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. Azure Portal で、左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [`SSISDB` データベース] を選択します。 
+2. Azure Portal で、左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで [`SSISDB` データベース] を選択します。 
 3. `SSISDB` データベースの **[概要]** ページで、次の図のように、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを呼び出すには、サーバー名にマウス ポインターを移動します。
 
     ![サーバー接続情報](media/ssis-azure-connect-to-catalog-database/server-name.png) 
@@ -59,7 +59,7 @@ Azure SQL Database サーバーでホストされている SSIS カタログ (SS
 
     ![SSMS を使用してサーバーに接続する](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
 
-3. **SSISDB データベースに接続します**。 **[オプション]** を選択して、**[サーバーへの接続]** ダイアログ ボックスを展開します。 展開した **[サーバーへの接続]** ダイアログ ボックスで、**[接続プロパティ]** タブを選択します。**[データベースへの接続]** フィールドで、`SSISDB` を選択または入力します。
+3. **SSISDB データベースに接続します**。 **[オプション]** を選択して、 **[サーバーへの接続]** ダイアログ ボックスを展開します。 展開した **[サーバーへの接続]** ダイアログ ボックスで、 **[接続プロパティ]** タブを選択します。 **[データベースへの接続]** フィールドで、`SSISDB` を選択または入力します。
 
     > [!IMPORTANT]
     > 接続時に `SSISDB` を選択しないと、オブジェクト エクスプローラーで SSIS カタログが表示されない場合があります。
@@ -68,7 +68,7 @@ Azure SQL Database サーバーでホストされている SSIS カタログ (SS
 
 4. **[接続]** を選択します。
 
-5. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
+5. オブジェクト エクスプローラーで、 **[Integration Services カタログ]** 、 **[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
     ![SSMS のオブジェクト エクスプローラーで SSISDB データベースを探す](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 

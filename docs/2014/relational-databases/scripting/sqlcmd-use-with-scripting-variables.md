@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62666779"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090058"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>sqlcmd でのスクリプト変数の使用
   スクリプトで使用される変数は、スクリプト変数と呼ばれます。 スクリプト変数を使用すると、1 つのスクリプトを複数のシナリオで使用できます。 たとえば、1 つのスクリプトを複数のサーバーに対して実行する場合、各サーバー用にスクリプトを変更するのではなく、サーバー名にスクリプト変数を使用することができます。 サーバー名をスクリプト変数で指定することで、同じスクリプトを複数のサーバーで実行することができるようになります。  

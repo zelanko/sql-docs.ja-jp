@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f06bd12161065c6961581a2a29a2c02af6e27dcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837297"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061902"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>優先順位制約に式を追加する
   優先順位制約では、優先順位付き実行可能ファイルと、制約付き実行可能ファイルの 2 つの実行可能ファイル間の制約を定義するために、式を使用できます。 これらの実行可能ファイルには、タスクまたはコンテナーを設定できます。 式は単独で使用することも、優先順位付き実行可能ファイルの実行結果と組み合わせて使用することもできます。 実行可能ファイルの実行結果は、成功または失敗のどちらかです。 優先順位制約の実行結果を構成する場合、実行結果を `Success`、`Failure`、または `Completion` に設定できます。 `Success` に設定した場合、優先順位付き実行可能ファイルは成功する必要があります。`Failure` に設定した場合、優先順位付き実行可能ファイルは失敗する必要があります。`Completion` は、優先順位付きタスクの成功または失敗にかかわらず、制約つき実行可能ファイルが実行されることを示します。 優先順位制約の詳細については、「 [優先順位制約](control-flow/precedence-constraints.md)」を参照してください。  

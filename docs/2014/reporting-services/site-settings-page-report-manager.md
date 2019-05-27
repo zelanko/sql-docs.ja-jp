@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223130"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101122"
 ---
 # <a name="site-settings-page-report-manager"></a>[サイトの設定] ページ (レポート マネージャー)
   [サイトの設定] ページでは、アプリケーションのタイトルの変更、レポート履歴の制限やレポート処理タイムアウトに関するサーバー全体の既定値の設定、システム レベルのロールの割り当ての管理、および共有スケジュールの管理を実行できます。 このページを表示するには、コンテンツ マネージャーとシステム管理者の権限が必要です。  

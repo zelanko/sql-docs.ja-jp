@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
@@ -13,12 +12,12 @@ ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f0d333cde04e41f7f640a93cd68108af334d71d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a6f9701371b9a6007f831d1e06dd6bbd0605e7dc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62718019"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063578"
 ---
 # <a name="breakpoints-window"></a>[ブレークポイント] ウィンドウ
   **[ブレークポイント]** ウィンドウには、現在の[!INCLUDE[ssDE](../../includes/ssde-md.md)]のクエリ エディターで設定されているすべてのブレークポイントが表示されます。 ブレークポイントを管理するには、 **[ブレークポイント]** ウィンドウのツール バーを使用します。 ブレークポイントとは、デバッグ モードでコードの実行を一時停止する箇所で、デバッグ データを表示できます。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 414f817adbbafd0e85cf5503336965ed86567caf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0eb37b891afc31b56d0e518ba7aa73190491e5ea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657356"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107807"
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
@@ -185,7 +184,7 @@ ms.locfileid: "62657356"
 |アイテムレベルのロールの割り当て (item-level role assignment)|レポート サーバー フォルダーにあるアイテムに適用されるセキュリティ ポリシー。|  
 |アイテムレベルのロールの定義 (item-level role definition)|レポート サーバー フォルダーの名前空間にあるアイテムへのアクセスや対話の制御に使用されるロールを定義するセキュリティ テンプレート。|  
 |主要業績評価指標 (key performance indicator)|(KPI) 定量化可能で標準化された指標。一定期間にわたって追跡された、業務の重要な変動要素 (市場シェアなど) を反映します。|  
-|キーワード (keyword)|データベース オブジェクトの定義、操作、アクセスなど、特定の機能を持つ SQL Server の予約語。 以下に例を示します。SELECT、FROM、AND。|  
+|キーワード (keyword)|データベース オブジェクトの定義、操作、アクセスなど、特定の機能を持つ SQL Server の予約語。 例 :SELECT、FROM、AND。|  
 |KPI (KPI)|「主要業績評価指標 (key performance indicator)」を参照。|  
 |ラベル フィールド (label field)|対応するキー フィールドのラベルを識別するレポート データセット フィールド。 パラメーターとデータ領域には、値の代わりにキー フィールドのラベルを表示できます。|  
 |待機時間 (latency)|あるサーバーでデータ変更が完了して、その変更が他のサーバーに反映されるまでの経過時間。|  

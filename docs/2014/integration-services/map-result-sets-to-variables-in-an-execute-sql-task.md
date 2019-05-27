@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767274"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057757"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>結果セットを SQL 実行タスクの変数にマップする
   このトピックでは、結果セットと SQL 実行タスクの変数との間のマッピングを作成する方法について説明します。 結果セットを変数にマップすることで、結果セットをパッケージ内の他の要素で使用できるようになります。 たとえば、スクリプト タスクのスクリプトでは、変数を読み取ってから、結果セットからの値を使用できます。XML ソースでは、変数に格納された結果セットを利用できます。 親パッケージで結果セットが生成される場合、パッケージ実行タスクから呼び出された子パッケージでその結果セットを使用できるようにするには、結果セットを親パッケージ内の変数にマップしてから、子パッケージ内で親パッケージの変数構成を作成して、親変数の値を格納します。  
@@ -60,7 +59,7 @@ ms.locfileid: "62767274"
   
 11. **[OK]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL 実行タスク](control-flow/execute-sql-task.md)   
  [結果セットで、SQL 実行タスク](result-sets-in-the-execute-sql-task.md)   
  [パッケージ実行タスク](control-flow/execute-package-task.md)   

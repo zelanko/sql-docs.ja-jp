@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216013"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105117"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の結合を、指定されたスコープで評価して返します。  

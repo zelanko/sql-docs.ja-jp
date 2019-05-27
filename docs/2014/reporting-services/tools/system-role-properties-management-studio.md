@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.systemroleproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84c201e4370adafbd944ba803326d5b97e11e42a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d64c8e0fc4281a5e2f8767a303b1ee1009ee76b8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634514"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099455"
 ---
 # <a name="system-role-properties-management-studio"></a>システム ロールのプロパティ (Management Studio)
   [システム ロール] ページは、レポート サーバーで現在定義されているシステム ロールの定義を表示するために使用します。 システム ロールの定義には、個別のアイテムではなく、サイト全体に関連して実行される名前付きのタスクのコレクションが含まれています。 ロールの定義は、ロールの割り当てを作成するために、ユーザーまたはグループに割り当てられます。 ロールの定義のタスクには、ユーザーまたはグループが実行できる操作を指定します。  
@@ -41,7 +40,7 @@ ms.locfileid: "62634514"
  **[説明]**  
  各タスクに関する情報が表示されます。 タスクの説明を変更することはできません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
  [システムレベルのタスク](../security/tasks-and-permissions-system-level-tasks.md)   
  [タスクと権限](../security/tasks-and-permissions.md)   

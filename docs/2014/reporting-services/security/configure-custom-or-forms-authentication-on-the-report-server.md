@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
@@ -14,12 +13,12 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8969e3202a9c58b46fac2116912e3d90474d7072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242646"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102143"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>レポート サーバーでカスタム認証またはフォーム認証を構成する
   Reporting Services に用意されている拡張可能なアーキテクチャを使用すると、カスタム認証モジュールまたはフォームベースの認証モジュールを組み込むことができます。 配置の要件に Windows 統合セキュリティまたは基本認証が含まれていない場合は、カスタム認証拡張機能を実装することを検討してください。 カスタム認証を使用する最も一般的なシナリオは、インターネットまたはエクストラネットを介した Web アプリケーションへのアクセスをサポートすることです。 既定の Windows 認証拡張機能の代わりにカスタム認証拡張機能を使用することで、レポート サーバーへのアクセスを外部ユーザーに許可する方法をより細かく制御できます。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - development [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3cb4eb52fe100dfe44f4008e22818880fe61b246
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62892285"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058028"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services の機能とタスク
   そのすべてのユーザー デザイナー、開発者、アナリスト、または管理者に情報を検索の作成および開発する必要があります[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]パッケージ。 開発中のアプリケーションや Web サイトにパッケージを組み込む方法についても解説されています。  

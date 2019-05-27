@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
@@ -13,14 +12,14 @@ ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774389"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089370"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>[オプション] ([クエリ実行]: [SQL Server]: [詳細設定] ページ)
+# <a name="options-query-executionsql-serveradvanced-page"></a>オプション ([クエリ実行]: [SQL Server]: [詳細設定] ページ)
   SET コマンドを使用する場合は、いくつかのオプションを使用できます。 このページを使用すると、SQL Server クエリ エディターで [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリを実行するための **set** オプションを指定できます。 他のコード エディターには影響しません。 これらのオプションに加えられた変更は、新しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリだけに適用されます。 現在のクエリのオプションを変更するには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ ウィンドウの **[クエリ]** メニューまたはショートカット メニューの **[クエリ オプション]** をクリックします。 **[実行]** の **[詳細設定]** をクリックします。 各オプションの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
   
 ## <a name="options"></a>および  

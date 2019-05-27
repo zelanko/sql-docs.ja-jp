@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SetServiceState (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b24f8c609aea85acea9cd702459d78f105e7efc2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646619"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097949"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーの Windows サービスおよび Web サービスを開始または停止します。  
@@ -63,7 +62,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

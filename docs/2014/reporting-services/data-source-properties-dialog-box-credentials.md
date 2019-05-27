@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.credentials.f1
@@ -14,12 +13,12 @@ ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6423c2caca256a257f660eabb8ce5eaf2d81c55f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed5b58aa9a4fe81a55e602fb61f673bf10059ee7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165308"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109458"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>[資格情報] ([データ ソースのプロパティ] ダイアログ ボックス)
   **[データ ソースのプロパティ]** ダイアログ ボックスの **[資格情報]** を選択すると、レポート内のデータ ソースに接続するための資格情報を表示および変更できます。 指定した資格情報は、データ ソースへのアクセス、およびレポート プレビュー用のデータのコピーのキャッシュに使用されます。 プレビュー データのキャッシュの方法の詳細については、「 [レポートのプレビュー](reports/previewing-reports.md)」を参照してください。 資格情報の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
@@ -47,7 +46,7 @@ ms.locfileid: "63165308"
  データ ソースの資格情報を指定しません。 このオプションは、データ ソースで資格情報が不要な場合、または他の方法で資格情報を渡している場合にのみ機能します。  
   
 ## <a name="see-also"></a>参照  
- [データ ソースのプロパティ] ダイアログ ボックスの [全般]](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
+ [データ ソースのプロパティダイアログ ボックスの [全般]](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services でのデータ接続、データ ソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   

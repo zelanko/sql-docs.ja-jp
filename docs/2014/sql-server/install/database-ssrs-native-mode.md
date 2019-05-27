@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
@@ -13,12 +12,12 @@ ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278559"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095716"
 ---
 # <a name="database-ssrs-native-mode"></a>データベース (SSRS ネイティブ モード)
   [データベース] ページを使用すると、1 つまたは複数のレポート サーバー インスタンスに対して内部記憶域を提供するレポート サーバー データベースの作成や構成を行うことができます。 リモートのレポート サーバー データベースが使用されるようにレポート サーバーを構成する場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してデータベースを作成する必要があります。  

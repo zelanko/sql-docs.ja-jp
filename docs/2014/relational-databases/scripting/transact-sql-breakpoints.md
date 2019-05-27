@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
@@ -13,12 +12,12 @@ ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06342291cc73951043c14c6f29539eaf9f1be689
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e170a2177ceefb0329e85f8fbf252cc62de76469
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745513"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063554"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL ブレークポイント
   ブレークポイントは、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの実行の一時停止を指定し、その時点のコード要素の状態を確認できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "62745513"
 |ブレークポイント ステートメントが実行されるときに行われるカスタム操作である、 **ヒット時** アクションを指定する方法について説明します。 例としては、メッセージの出力などが考えられます。|[ブレークポイント アクションの指定](specify-a-breakpoint-action.md)|  
 |ブレークポイントの場所を編集する方法について説明します。|[ブレークポイントの位置の編集](edit-a-breakpoint-location.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Transact-SQL デバッガー情報](transact-sql-debugger-information.md)  
   
   

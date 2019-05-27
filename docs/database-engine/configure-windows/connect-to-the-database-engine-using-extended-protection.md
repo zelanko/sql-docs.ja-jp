@@ -1,7 +1,7 @@
 ---
 title: 拡張保護を使用したデータベース エンジンへの接続 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774547"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015007"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "59774547"
   
 -   **拡張保護**  
   
-     選択できる値は、 **[オフ]**、 **[許可]**、および **[必須]** です。 **拡張保護** 変数を使用すると、各 **インスタンスの** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルを構成できます。 **[拡張保護]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ) にあります。  
+     選択できる値は、 **[オフ]** 、 **[許可]** 、および **[必須]** です。 **拡張保護** 変数を使用すると、各 **インスタンスの** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルを構成できます。 **[拡張保護]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ) にあります。  
   
     -   **[オフ]** に設定すると、 **[拡張保護]** は無効になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは、クライアントが保護されているかどうかに関係なく、任意のクライアントからの接続を許可します。 **[オフ]** は、古いオペレーティング システムや修正プログラムの適用が解除されたオペレーティング システムと互換性がありますが、安全性は低くなります。 この設定は、クライアント オペレーティング システムで拡張保護がサポートされていないことがわかっている場合に使用してください。  
   
@@ -81,13 +81,13 @@ ms.locfileid: "59774547"
      **[承認された NTLM SPN]** の変数は、サーバーに複数の SPN がある場合に必要です。 クライアントがサーバーへの接続に使用した有効な SPN がサーバーで認識されないと、サービス バインドが失敗します。 この問題を回避するには、 **[承認された NTLM SPN]** を使用して、サーバーを表す複数の SPN を指定します。 **[承認された NTLM SPN]** には、一連の SPN をセミコロンで区切って指定します。 たとえば、 **MSSQLSvc/ HostName1.Contoso.com** および **MSSQLSvc/ HostName2.Contoso.com**という SPN を許可するには、 **[承認された NTLM SPN]** ボックスに「 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 」と入力します。 変数の最大長は 2048 文字です。 **[承認された NTLM SPN]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ)) にあります。  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>データベース エンジンでの拡張保護の有効化  
- **拡張保護**を使用するには、サーバーとクライアントの両方のオペレーティング システムで **拡張保護**がサポートされていて、オペレーティング システムで **拡張保護** が有効になっている必要があります。 オペレーティング システムで **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](https://support.microsoft.com/kb/968389)」を参照してください。  
+ **拡張保護**を使用するには、サーバーとクライアントの両方のオペレーティング システムで **拡張保護**がサポートされていて、オペレーティング システムで **拡張保護** が有効になっている必要があります。 オペレーティング システムで **拡張保護** を有効にする方法の詳細については、「 [認証に対する保護の強化](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 以前のバージョンの**については、今後の更新によって一部で** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用できるようになります。 サーバー コンピューターで **拡張保護** を有効にした後、次の手順に従って **拡張保護**を有効にします。  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server ネットワークの構成]** を展開し、**[**_\<_InstanceName*> のプロトコル]* を右クリックして、**[プロパティ]** をクリックします。  
+2.  **[SQL Server ネットワークの構成]** を展開し、 **[** _\<_InstanceName *> のプロトコル]* を右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  チャネル バインドとサービス バインドの両方について、 **[詳細設定]** タブで **[拡張保護]** を適切な値に設定します。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
@@ -16,15 +15,15 @@ ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079618"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services インスタンスの名前変更
-  既存のインスタンスの名前を変更することができます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用して、**インスタンスの名前を変更**] ダイアログ ボックス。  
+  既存のインスタンスの名前を変更することができます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用して、**インスタンスの名前を変更**ダイアログ ボックス。  
   
 > [!IMPORTANT]  
 >  インスタンスの名前を変更しているとき、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instance Rename Tool が高度な特権で実行され、インスタンスに関連付けられている Windows サービス名、セキュリティ アカウント、およびレジストリ エントリが更新されます。 これらのアクションを確実に実行するため、このツールは必ずローカルのシステム管理者として実行してください。  

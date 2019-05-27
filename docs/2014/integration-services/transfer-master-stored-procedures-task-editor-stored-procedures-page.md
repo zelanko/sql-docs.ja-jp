@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferstoredprocedurestask.storedprocedures.f1
@@ -15,12 +14,12 @@ ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1168d12153233a3b904a36e601d9163f34e76b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766265"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054859"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>[Master ストアド プロシージャ転送タスク エディター] ([ストアド プロシージャ] ページ)
   **[Master ストアド プロシージャ転送タスク エディター]** ダイアログ ボックスの **[ストアド プロシージャ]** ページを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つのインスタンスの **master** データベースから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の別のインスタンスの **master** データベースに、1 つ以上のユーザー定義ストアド プロシージャをコピーする場合のプロパティを指定できます。 このタスクの詳細については、「 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)」を参照してください。  
@@ -49,7 +48,7 @@ ms.locfileid: "62766265"
  **[TransferAllStoredProcedures]**  
  コピー元のサーバーの **master** データベースのすべてのユーザー定義ストアド プロシージャをコピー先のサーバーにコピーするかどうかを選択します。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**True**|**master** データベースのユーザー定義ストアド プロシージャをすべてコピーします。|  
 |**False**|指定したストアド プロシージャのみをコピーします。|  
@@ -57,7 +56,7 @@ ms.locfileid: "62766265"
  **[StoredProceduresList]**  
  コピー先の **master** データベースにコピーする、コピー元サーバーの **master** データベースのユーザー定義ストアド プロシージャを選択します。 このオプションは、 **[TransferAllStoredProcedures]** を **[False]** に設定した場合のみ使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [[Master ストアド プロシージャ転送タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   

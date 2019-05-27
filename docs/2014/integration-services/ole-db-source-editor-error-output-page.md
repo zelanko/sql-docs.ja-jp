@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.errorhandling.f1
@@ -15,12 +14,12 @@ ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: df4932604a6de27c2205ad0f619939587d02b916
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767054"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057012"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター] ([エラー出力] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -51,7 +50,7 @@ ms.locfileid: "62767054"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[OLE DB ソース エディター] ([接続マネージャー] ページ)](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [OLE DB ソース エディター ([列] ページ)](../../2014/integration-services/ole-db-source-editor-columns-page.md)   

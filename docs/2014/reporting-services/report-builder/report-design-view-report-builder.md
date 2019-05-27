@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -22,12 +21,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156455"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107684"
 ---
 # <a name="report-design-view-report-builder"></a>レポート デザイン ビュー (レポート ビルダー)
   レポート ビルダーのウィンドウは、レポート リソースを整理しやすく、必要なレポートをすばやく作成できるように設計されています。 デザイン画面がウィンドウの中央にあり、その上にリボン、左にレポート データ ペイン、下にグループ化ペイン、右にプロパティ ペインおよびレポート パーツ ギャラリーが配置されています。 デザイン画面は、レポート アイテムの追加や整理を行うための領域です。 リボンには、従来のメニュー項目が、簡単に見つけて使用できるようにカテゴリ別に分類されて表示されます。 ペインでは、レポート リソースの追加、選択、整理や、レポート アイテムのプロパティの変更などを行うことができます。  

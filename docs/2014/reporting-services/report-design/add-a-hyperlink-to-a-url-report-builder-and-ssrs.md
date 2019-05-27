@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6fa7b0d32a62e5e2d729e05c88b892ccaffc0fc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106816"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
   ユーザーがレポート内のリンクをクリックするとブラウザーが開かれ、指定した URL にアクセスできるようにするために、レポート アイテムへのハイパーリンクを追加できます。 ハイパーリンクには、静的な URL または URL を評価する式を使用できます。 URL を保持しているデータベースのフィールドがある場合は、式にそのフィールドを指定し、レポートにハイパーリンクの動的な一覧を渡すことができます。 ハイパーリンクは、テキスト ボックス、画像、グラフ、およびゲージに追加できます。 ただし、ユーザーがその URL にアクセスできることを確認する必要があります。  

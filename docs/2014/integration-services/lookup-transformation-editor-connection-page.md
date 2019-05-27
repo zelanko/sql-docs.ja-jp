@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
@@ -15,12 +14,12 @@ ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5c2971b1d4da669cadc57f0a557b32bf2b1adde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767324"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057949"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>[参照変換エディター] ([接続] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[接続]** ページを使用して、接続マネージャーを選択します。 OLE DB 接続マネージャーを選択する場合は、参照データセットを生成するためのクエリ、テーブル、またはビューも選択します。  
@@ -71,7 +70,7 @@ ms.locfileid: "62767324"
 ## <a name="external-resources"></a>外部リソース  
  blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[参照変換エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [[参照変換エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   

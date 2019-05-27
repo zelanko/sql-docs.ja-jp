@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680822"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087769"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparing Tabular and Multidimensional Solutions (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、多次元と表形式の 2 つの方法でデータ モデリングを行えます。 それらの間にはかなり重複している部分がありますが、前進する方法について決定を通知するうえで重要な相違点もあります。 このトピックでは、機能比較を提供し、それぞれのアプローチで一般的なプロジェクト要件にどのように対処しているかを説明します。 たとえば、特定のデータ ソースのサポートが最も重要な考慮事項である場合、データ ソースに関するセクションが、使用するモデリング アプローチを決定するうえで役立ちます。  

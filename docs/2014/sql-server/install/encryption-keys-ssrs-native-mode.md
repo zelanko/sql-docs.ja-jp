@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
@@ -13,12 +12,12 @@ ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16ac264f89c541f0a864f8b47ed008fa254f181c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223245"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095415"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>暗号化キー (SSRS ネイティブ モード)
   [暗号化キー] ページを使用すると、レポート サーバーでデータの暗号化と暗号化解除に使用される対称キーを管理できます。 暗号化キーの管理は、レポート サーバーの構成で重要な位置を占めています。 対称キーはレポート サーバー データベースを作成する際に自動的に作成されて適用されますが、 定期的なメンテナンス操作を実行できるように、対称キーのバックアップ コピーを作成しておく必要があります。 次に示すメンテナンス タスクを実行するには、対称キーの有効なコピーが必要です。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsedim.view.f1
@@ -15,12 +14,12 @@ ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9672408d1a63729f21395184644ca6a92d091e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640507"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064628"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>[ブラウザー] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[ブラウザー]** タブを使用すると、ディメンションのディメンション データとメタデータを参照できます。 現在選択しているディメンションで、ディメンションの書き戻しが可能な場合は、このビューを使用してディメンションのメンバー データを変更します。  
@@ -34,7 +33,7 @@ ms.locfileid: "62640507"
  [レベルとメンバー](level-members-dimension-designer-analysis-services-multidimensional-data.md)  
  **[レベルとメンバー]** ペインを使用すると、選択した言語で、選択した階層のメンバーを参照および変更できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)   

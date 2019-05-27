@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - IsSharePointIntegrated property
@@ -13,12 +12,12 @@ ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 08f27657e4ba0e586c5734d2575b5017e8bfc1ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a8f996b0f4a2f7b29647195f64dad3c7558f4d4c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62645916"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097671"
 ---
 # <a name="issharepointintegrated-property-wmi"></a>IsSharePointIntegrated プロパティ (WMI)
   レポート サーバーが SharePoint 統合モードであるかどうかを示します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、このプロパティは常に `False` を返します。これは、SharePoint モードでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスは SharePoint 共有サービスであり、WMI プロバイダーによって制御されないためです。  
@@ -42,7 +41,7 @@ public Boolean IsSharePointIntegrated;
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

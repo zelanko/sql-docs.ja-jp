@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156554"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107635"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>レポートのレポート サーバーへの保存 (レポート ビルダー)
   レポート ビルダーでは、レポート定義をレポート サーバーに保存できます (レポートのパブリッシュとも呼ばれます)。 レポート サーバーにレポートを保存すると、他のユーザーがレポートを表示できます。 パブリッシュしたレポートを実行するたびに最新のデータが取得されます。 表示されたレポートの静的コピーを保存するには、レポートを他のファイル形式にエクスポートし、それを保存するか、またはレポート履歴機能を使用して、表示されたレポートのバージョンを保存します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - drop system objects [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 68e5000e924c438a4611e2fa8c134f0dd822f930
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d420e2dba1dfdb284b0002eca6d8408c4e019e8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294489"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093076"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>システム オブジェクトを破棄するステートメントを削除する
   アップグレード アドバイザーによって、システム オブジェクトを削除するステートメントが検出されました。 拡張ストアド プロシージャを含む、システム オブジェクトは、読み取り専用でデプロイされる**リソース**データベース (mssqlsystemresource) を削除できません。 システム オブジェクトに対する EXECUTE 権限を禁止または拒否するように、アプリケーションを変更します。  

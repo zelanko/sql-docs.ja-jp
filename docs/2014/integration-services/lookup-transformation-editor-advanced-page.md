@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ec8ac0bbb56282474bde4e399eaf1d32b0e1996
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f78c568d467601b2f23ae8952036764ea2b464d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767344"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057880"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>[参照変換エディター] ([詳細設定] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用して、部分キャッシュを構成し、参照変換用 SQL ステートメントを変更します。  
@@ -52,7 +51,7 @@ ms.locfileid: "62767344"
 ## <a name="external-resources"></a>外部リソース  
  blogs.msdn.com のブログ「 [キャッシュ モードの参照](https://go.microsoft.com/fwlink/?LinkId=219518) 」  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[参照変換エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[参照変換エディター] &#40;[接続] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [[参照変換エディター] &#40;[列] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   

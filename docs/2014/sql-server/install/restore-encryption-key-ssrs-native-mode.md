@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
@@ -13,12 +12,12 @@ ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126925"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092518"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>暗号化キーを復元する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化キーを使用して、レポート サーバー データベースに格納されている機密データのセキュリティを保護します。 暗号化されたデータに継続してアクセスできるようにするには、サービス アカウントの変更のために後で暗号化キーを復元する必要がある場合に備えて、または計画的な移行の一環として、暗号化キーのバックアップを作成することが重要です。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してキーを復元する方法の概要を示します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.connection.f1
@@ -13,12 +12,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 611436db1ea4a69a5c33c7bc2c3c9e92f2a350a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ae5cc8303fa09eae7a4af6ef9ae6d589f43bcb2b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772298"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061739"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>[ADO NET 変換先エディター] ([接続マネージャー] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の [!INCLUDE[vstecado](../includes/vstecado-md.md)] 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -69,7 +68,7 @@ ms.locfileid: "62772298"
 ## <a name="external-resources"></a>外部リソース  
  sqlcat.com の技術記事「 [Windows Azure SQL データベースへのデータの高速な読み込み](https://go.microsoft.com/fwlink/?LinkId=244333)」  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[ADO NET 変換先エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   
  [[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)   
  [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)   

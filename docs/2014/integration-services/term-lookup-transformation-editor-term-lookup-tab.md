@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.termlookup.f1
@@ -15,12 +14,12 @@ ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4b792290b4c774a9a16dfed685fff83a5a8495f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2939d160773d60944a2e8a786e5495cea366edb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766255"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055133"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>[用語参照変換エディター] ([用語参照] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[用語参照]** タブを使用すると、入力列を参照テーブルの参照列にマップし、各出力列の別名を提供できます。  
@@ -43,7 +42,7 @@ ms.locfileid: "62766255"
  **エラー出力の構成**  
  [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスは、エラーが発生した行に対するエラー処理オプションを指定するために使用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [用語参照変換エディター ([参照テーブル] タブ)](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
  [用語参照変換エディター ([詳細設定] タブ)](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining algorithms
@@ -17,12 +16,12 @@ ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681099"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088090"
 ---
 # <a name="choosing-a-model"></a>モデルの選択
   **マイニング アルゴリズム:** データ マイニング*アルゴリズム*はデータからパターンを作成するメカニズムです。 このアルゴリズムでは、データのカウント方法、リレーションシップの派生方法、およびパターンの格納方法が定義されます。 アルゴリズムの選択は、分析するデータの種類によっても異なります。 たとえば、アルゴリズムによっては、連続する数値のみを操作できるものもあれば、個々の値の数が制限されている場合に最も効果を発揮するものもあります。  

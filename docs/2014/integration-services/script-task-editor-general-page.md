@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d6853a1384aca7c799ca22639ce3f9a90f22a86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766614"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056180"
 ---
 # <a name="script-task-editor-general-page"></a>[スクリプト タスク エディター] \([全般] ページ)
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、スクリプト タスクの名前と説明を入力できます。  
@@ -37,7 +36,7 @@ ms.locfileid: "62766614"
  **[説明]**  
  スクリプト タスクの説明を入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[スクリプト タスク エディター] ([スクリプト] ページ)](../../2014/integration-services/script-task-editor-script-page.md)   
  [[式] ページ](expressions/expressions-page.md)   

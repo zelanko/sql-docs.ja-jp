@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771938"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061590"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>[集計変換エディター] ([詳細設定] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、コンポーネントのプロパティの設定、集計の指定、入力列と出力列のプロパティの設定を行うことができます。  
@@ -62,7 +61,7 @@ ms.locfileid: "62771938"
  **[自動拡張率]**  
  集計の際にメモリを拡張できる割合を 1 ～ 100% の範囲で指定します。 既定では、このオプションの値は **25%** です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[集計変換エディター] ([集計] タブ)](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
  [集計変換を使用してデータセットの値を集計する](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  

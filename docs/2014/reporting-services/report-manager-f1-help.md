@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
@@ -13,12 +12,12 @@ ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f1437ee34eded7b9bec88ed9f8e8f64184f5a8d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967958"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104464"
 ---
 # <a name="report-manager-f1-help"></a>レポート マネージャー F1 ヘルプ
   以下のトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーのページごとのヘルプについて説明しています。 アプリケーションのページごとに、1 つのトピックがあります。 記載されているページの一部は、利用できない場合があります。 セキュリティの設定により、アクセスできるページが決まります。 レポート マネージャーからこれらのトピックにアクセスするには、メイン ツール バーの **[ヘルプ]** をクリックします。  
@@ -67,13 +66,13 @@ ms.locfileid: "59967958"
   
 -   [[新しいモデル] ページ](../../2014/reporting-services/new-model-page-report-manager.md)  
   
--   [新しいロールの割り当て]、[ロールの割り当て] ページの編集](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
+-   [新しいロールの割り当て、[ロールの割り当て] ページの編集](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
   
 -   [[新しいスケジュール]/[スケジュール] ページの編集](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
 -   [新しいサブスクリプション/[サブスクリプション] ページの編集](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
--   [新しいシステム ロールの割り当て]、[システム ロールの割り当て] ページの編集](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+-   [新しいシステム ロールの割り当て、[システム ロールの割り当て] ページの編集](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
 -   [[パラメーター] プロパティ ページ](../../2014/reporting-services/parameters-properties-page-report-manager.md)  
   

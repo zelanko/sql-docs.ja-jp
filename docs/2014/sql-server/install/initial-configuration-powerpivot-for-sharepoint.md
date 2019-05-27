@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dc6ab85f562aa4a2149e6471b13422e97d7fc7c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: adf5d9682ad1b2b9002a69884a183b30b3454c61
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063328"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094685"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初期構成 (PowerPivot for SharePoint)
   このトピックの手順を使用して、PowerPivot for SharePoint の最初のインストールを構成します。 最初のインストールを構成する最も簡単な方法は、PowerPivot 構成ツールを使用することです。 これによって、以下に説明したすべての構成手順が自動で行われます。  

@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8aa65678c9604cac609ca1a914e542724d354872
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144670"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090360"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>スクリプトの生成 (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成するための 2 つのメカニズムが用意されています。 複数のオブジェクト用のスクリプトは、 **スクリプトの生成とパブリッシュ ウィザード**を使用して作成できます。 また、個々のオブジェクトまたは複数のオブジェクト用のスクリプトを、 **オブジェクト エクスプローラー** の **[スクリプト化]** メニューを使用して生成することもできます。  
   
-1.  **メソッドを選択します。**[生成し、パブリッシュ ウィザードのスクリプト](#GenPubScriptWiz)、[オブジェクト エクスプ ローラーのスクリプト化] メニュー](#OEScriptAsMenu)  
+1.  **メソッドを選択します。**[生成し、パブリッシュ ウィザードのスクリプト](#GenPubScriptWiz)、[オブジェクト エクスプ ローラーのスクリプト化メニュー](#OEScriptAsMenu)  
   
 2.  **スクリプト化 メニューを使用します。**[1 つのオブジェクトのスクリプト作成](#ScriptSingleObject)、[オブジェクト エクスプ ローラーを使用して 2 つのオブジェクトのスクリプト作成](#ScriptTwoObjectsOE)、[オブジェクト エクスプ ローラーの詳細を使用して 2 つのオブジェクトのスクリプト作成](#ScriptTwoObjectsOED)  
   

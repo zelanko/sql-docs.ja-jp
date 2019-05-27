@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237912"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095700"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト:PowerPivot for SharePoint 2010 のマルチサーバー インストール
   このチェックリストを追加する手順の手順を説明します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をゼロから構築される 3 層 SharePoint 2010 ファームをします。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 追加[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]このトポロジをインストールする SQL Server セットアップを実行する必要があります[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]アプリケーション層にします。 PowerPivot プログラム ファイルは、web アプリケーション ソリューションでデプロイするときに、web 層には、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 のみのインストール手順を実行する必要のあるをインストールする[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]アプリケーション サーバーにします。  

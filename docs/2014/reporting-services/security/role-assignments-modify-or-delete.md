@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -17,12 +16,12 @@ ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8810a4df8c04703667e1b817931ada65fda0e5f
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461139"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101957"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>ロールの割り当てを変更または削除する (レポート マネージャー)
   ロールの割り当てとは、実行できるタスクがあらかじめ規定されたロール定義に、グループまたはユーザー アカウントをマップすることです。 ユーザーが実行できる操作の種類は、フォルダー、レポート、モデルなど、コンテンツの種類に基づいて決定されます。 ロールの割り当てを作成、変更、または削除するには、レポート マネージャーを使用します。 特定のユーザーまたはグループに対して作成したロールの割り当ては、後で異なるロールを選択することによって変更できます。 レポート サーバーに対する権限を取り消したい場合は、ロールの割り当てをレポート サーバーから削除します。  
