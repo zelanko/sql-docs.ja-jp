@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
@@ -48,12 +47,12 @@ ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 555a92bf4131ee821fa70065cf02cada87f671ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635503"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062596"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>アルゴリズム パラメーター (SQL Server データ マイニング アドイン)
   Excel 用のテーブル分析ツールを使用してデータ マイニングを実行する場合は、データ マイニングのアルゴリズムまたはパラメーターを構成する必要はありません。各ツールによってデータが分析され、最適なパラメーターが自動的に選択されます。 ただし、モデルを修正する場合や、マイニング モデルを最初から作成する場合に備えて、Excel 用のデータ マイニング クライアントにはカスタマイズのためのオプションがいくつか用意されています。  
@@ -71,7 +70,7 @@ ms.locfileid: "62635503"
   
  次の表では、パラメーターの一覧を示して個々の機能について説明し、詳細な技術情報へのリンクを示します。  
   
-|パラメーター名|使用される場所|説明|  
+|[パラメーター名]|使用される場所|説明|  
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Microsoft タイム シリーズ アルゴリズム|周期性を検出するために使用する 0 から 1 までの数値を指定します。 1 に近い値を設定するには、多くのほぼ周期的なパターンの検出と周期性のヒントの自動生成が優先されます。 周期性のヒントを多数処理すると、モデルのトレーニングに非常に長い時間がかかりますが、精度の高いモデルになる可能性があります。 より 0 に近い値を設定すると、周期性の高いデータのみを対象にして周期性が検出されます。<br /><br /> 既定値は 0.6 です。|  
 |CLUSTER_COUNT|Microsoft クラスタリング アルゴリズム<br /><br /> 「Microsoft シーケンス クラスター アルゴリズム」|アルゴリズムによって作成されるクラスターの概数を指定します。 その数のクラスターをデータから作成できない場合は、可能な限り多数のクラスターが作成されます。 CLUSTER_COUNT を 0 に設定すると、アルゴリズムではヒューリスティックを使用して、作成するクラスターの数が最適に決定されます。<br /><br /> 既定値は 10 です。|  
@@ -117,7 +116,7 @@ ms.locfileid: "62635503"
 ### <a name="comments"></a>コメント  
  アルゴリズムの詳細については、SQL Server オンライン ブックを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム&#40;SQL Server データ マイニング アドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)  
   
   

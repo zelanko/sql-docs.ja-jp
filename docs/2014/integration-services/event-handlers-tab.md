@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
@@ -13,12 +12,12 @@ ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f13aa09f7b424da63348c5363bc6d5077ed9f2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769758"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059292"
 ---
 # <a name="event-handlers-tab"></a>[イベント ハンドラー] タブ
   **デザイナーの** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの制御フローを構築できます。 イベント ハンドラーは、パッケージによって生成されたイベントまたはパッケージ内のタスクまたはコンテナーによって生成されたイベントに応答して実行されます。  
@@ -40,7 +39,7 @@ ms.locfileid: "62769758"
   
  また、注釈を追加するには、デザイン画面を右クリックし、メニューの **[注釈の追加]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; のイベント ハンドラー](integration-services-ssis-event-handlers.md)   
  [制御フロー](control-flow/control-flow.md)   
  [SSIS デザイナー](ssis-designer.md)   

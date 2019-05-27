@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 611d22fa-5ac7-485e-9a40-7131e852f794
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ebb9a4424c3aab4f3d65c14d9a3befed64dfa21a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30e1e0d882d249130cbd72ca62088ba3f7978ad3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771998"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061255"
 ---
 # <a name="behavior-changes-to-integration-services-features-in-sql-server-2014"></a>SQL Server 2014 における Integration Services 機能の動作の変更
   このトピックでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]における動作変更について説明します。 動作の変更に影響する機能や操作方法の現在のリリースで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の以前のバージョンと比較して[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  

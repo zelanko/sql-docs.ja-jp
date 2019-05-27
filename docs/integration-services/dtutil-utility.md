@@ -26,15 +26,19 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d627540315f63e63d4f6220540222cf3f98073a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 396e9b59f41ae31b7ae2a6f091dd540fa41afdcc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281596"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725731"
 ---
 # <a name="dtutil-utility"></a>Encrypt
-   **dtutil** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの管理に使用します。 このユーティリティを使用して、パッケージのコピー、移動、削除を行ったり、パッケージの存在を確認することができます。 これらの操作は [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ上で実行できます。このパッケージは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のいずれかに格納されます。 このユーティリティが **msdb**に格納されているパッケージにアクセスする場合、コマンド プロンプトでユーザー名とパスワードが必要となる場合があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、コマンド プロンプトではユーザー名とパスワードの両方が必要です。 ユーザー名を入力しない場合、 **dtutil** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にログオンしようとします。 パッケージのストレージ型は **SQL**、 **FILE**、および **DTS** オプションで指定します。  
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  **dtutil** コマンド プロンプト ユーティリティは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの管理に使用します。 このユーティリティを使用して、パッケージのコピー、移動、削除を行ったり、パッケージの存在を確認することができます。 これらの操作は [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ上で実行できます。このパッケージは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のいずれかに格納されます。 このユーティリティが **msdb**に格納されているパッケージにアクセスする場合、コマンド プロンプトでユーザー名とパスワードが必要となる場合があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合、コマンド プロンプトではユーザー名とパスワードの両方が必要です。 ユーザー名を入力しない場合、 **dtutil** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にログオンしようとします。 パッケージのストレージ型は **SQL**、 **FILE**、および **DTS** オプションで指定します。  
   
  **dtutil** コマンド プロンプト ユーティリティでは、コマンド ファイルの使用およびリダイレクションはサポートされていません。  
   
@@ -95,7 +99,7 @@ dtutil /option [value] [/option [value]]...
 |/DestU[ser] *username*|*認証を使用する*インスタンスへ接続するために、 *SIGN SQL*オプション、 *COPY SQL* オプション、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] MOVE SQL [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オプションで使用するユーザー名を指定します。 コマンド ラインで *DESTUSER* オプション、 *SIGN SQL*オプション、または *COPY SQL*オプションを指定せずに *MOVE SQL* を指定すると、エラーになります。|  
 |/Dump *process ID*|(省略可) 指定したプロセス ( **dtexec** ユーティリティまたは **dtsDebugHost.exe** プロセス) を一時停止し、デバッグ ダンプ ファイル (.mdmp および .tmp) を作成します。<br /><br /> 注:**/Dump** オプションを使用するには、Debug Programs ユーザー権限 (SeDebugPrivilege) が割り当てられている必要があります。<br /><br /> 一時停止するプロセスの *process ID* を見つけるには、Windows タスク マネージャーを使用します。<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の既定では、デバッグ ダンプ ファイルは *\<ドライブ>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps フォルダーに格納されます。<br /><br /> **dtexec** ユーティリティおよび **dtsDebugHost.exe** プロセスの詳細については、「 [dtexec Utility](../integration-services/packages/dtexec-utility.md) 」および「 [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)」を参照してください。<br /><br /> デバッグ ダンプ ファイルの詳細については、「 [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。<br /><br /> 注:デバッグ ダンプ ファイルには機密情報が含まれている場合があります。 アクセス制御リスト (ACL) を使用してファイルへのアクセスを制限するか、アクセスが制限されたフォルダーにファイルをコピーしてください。|  
 |/DT[S] *filespec*|実行される [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージが [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアに存在することを指定します。 *filespec* 引数には、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストアのルートから始まるフォルダー パスを指定する必要があります。 既定では、構成ファイル内のルート フォルダーの名前は "MSDB" と "File System" です。 空白を含むパスは、二重引用符で囲む必要があります。<br /><br /> DT[S] オプションが、次のオプションのいずれかと同じコマンド ライン上に指定された場合、DTEXEC_DTEXECERROR が返されます。<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
-|/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(省略可)。 読み込まれたパッケージを指定された保護レベルおよびパスワードで暗号化し、それを *Path*で指定された場所に保存します。 パスワードが必要かどうかは、 *ProtectionLevel* で判断されます。<br /><br /> *SQL* - Path には保存先となるパッケージ名を指定します。<br /><br /> *FILE* - Path にはパッケージの完全修飾パスとファイル名を指定します。<br /><br /> *DTS* - このオプションは現在サポートされていません。<br /><br /> *ProtectionLevel* オプション:<br /><br /> レベル 0 :重要な情報を切り離します。<br /><br /> Level 1: ローカル ユーザーの資格情報を使用して重要な情報を暗号化します。<br /><br /> Level 2: 必要なパスワードを使用して重要な情報を暗号化します。<br /><br /> Level 3: 必要なパスワードを使用してパッケージを暗号化します。<br /><br /> Level 4: ローカル ユーザーの資格情報を使用してパッケージを暗号化します。<br /><br /> Level 5: パッケージは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ストレージの暗号化を使用します。|  
+|/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(省略可)。 読み込まれたパッケージを指定された保護レベルおよびパスワードで暗号化し、それを *Path*で指定された場所に保存します。 パスワードが必要かどうかは、 *ProtectionLevel* で判断されます。<br /><br /> *SQL* - Path には保存先となるパッケージ名を指定します。<br /><br /> *FILE* - Path にはパッケージの完全修飾パスとファイル名を指定します。<br /><br /> *DTS* - このオプションは現在サポートされていません。<br /><br /> *ProtectionLevel* オプション:<br /><br /> Level 0:重要な情報を切り離します。<br /><br /> Level 1: ローカル ユーザーの資格情報を使用して重要な情報を暗号化します。<br /><br /> Level 2: 必要なパスワードを使用して重要な情報を暗号化します。<br /><br /> Level 3: 必要なパスワードを使用してパッケージを暗号化します。<br /><br /> Level 4: ローカル ユーザーの資格情報を使用してパッケージを暗号化します。<br /><br /> Level 5: パッケージは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ストレージの暗号化を使用します。|  
 |/Ex[ists]|(省略可)。 パッケージが存在するかどうかを判断するために使用されます。 **dtutil** は、 *SQL*オプション、 *DTS* オプション、または *FILE* オプションのいずれかによって指定されたパッケージを検索します。 **dtutil** が指定されたパッケージを見つけることができない場合、DTEXEC_DTEXECERROR が返されます。|  
 |/FC[reate] {*SQL* &#124; *DTS*};*ParentFolderPath;NewFolderName*|(省略可)。 *NewFolderName*で指定された名前で新しいフォルダーを作成します。 新しいフォルダーの場所は、 *ParentFolderPath*によって指定されます。|  
 |/FDe[lete] {*SQL* &#124; *DTS*}[;*ParentFolderPath;FolderName]*|(省略可)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] FolderName [!INCLUDE[ssIS](../includes/ssis-md.md)] で指定された名前のフォルダーを *または*から削除します。 削除するフォルダーの場所は、 *ParentFolderPath*で指定されます。|  

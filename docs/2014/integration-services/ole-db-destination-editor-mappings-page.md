@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.mappings.f1
@@ -15,12 +14,12 @@ ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7f08879e314ac17e47d4bc3eb096a559ff654d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767064"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057091"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>[OLE DB 変換先エディター] ([マッピング] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -40,7 +39,7 @@ ms.locfileid: "62767064"
  **変換先列**  
  マップするかどうかにかかわらず、使用できる変換先列を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [OLE DB 変換先エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   

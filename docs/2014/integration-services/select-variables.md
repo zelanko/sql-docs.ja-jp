@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectvariables.f1
@@ -15,12 +14,12 @@ ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766535"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055915"
 ---
 # <a name="select-variables"></a>[変数の選択]
   **[変数の選択]** ダイアログ ボックスを使用すると、メッセージ キュー タスクの 2 番目のメッセージ操作で使用する変数を指定できます。 **[利用可能な変数]** の一覧には、メッセージ キュー タスクまたは親コンテナーのスコープのシステム変数とユーザー定義変数が含まれます。 タスクは、 **[選択された変数]** の一覧の変数を使用します。  
@@ -43,7 +42,7 @@ ms.locfileid: "62766535"
   
  **関連トピック:** [変数の追加](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メッセージ キュー タスク](control-flow/message-queue-task.md)  
   
   

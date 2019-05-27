@@ -30,19 +30,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 829459fadb58ff24093d422c365089639e7b76b9
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 7a6414ca219cbc2ca871a1100c4ff82570409873
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503821"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580638"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 行ストア テーブルをクラスター化された列ストア インデックスに変換するか、クラスター化されていない列ストア インデックスを作成します。 OLTP ワークロードに対して効率的に運用分析をリアルタイムで実行するには、またはデータ ウェアハウスに対するワークロードのデータ圧縮とクエリのパフォーマンスを向上させるには、列ストア インデックスを使用します。  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、テーブルをクラスター化列ストア インデックスとして作成できます。   最初に行ストア テーブルを作成し、それをクラスター化列ストア インデックスに変換する作業は不要になりました。  
 
 > [!TIP]
@@ -64,14 +64,15 @@ ms.locfileid: "65503821"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
+    [ ON <on_option> ] 
+    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
@@ -80,7 +81,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
         ( column  [ ,...n ] )  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]   
+    [ ON <on_option> ]
 [ ; ]  
   
 <with_option> ::=  
@@ -92,9 +93,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
       [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]  
   
 <on_option>::=  
-      partition_scheme_name ( column_name )   
-    | filegroup_name   
-    | "default"   
+      partition_scheme_name ( column_name )
+    | filegroup_name
+    | "default"
   
 <filter_expression> ::=  
       column_name IN ( constant [ ,...n ]  
@@ -102,14 +103,14 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
-```  
+```
   
 ## <a name="arguments"></a>引数  
 
@@ -124,7 +125,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 すべてのオプションは、Azure SQL Database で使用できます。
 
-### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX
+
 すべてのデータが列ごとに圧縮されて格納されるクラスター化列ストア インデックスを作成します。 インデックスにはテーブル内の列がすべて含まれ、テーブル全体が格納されます。 既存のテーブルがヒープまたはクラスター化インデックスである場合、そのテーブルはクラスター化列ストア インデックスに変換されます。 テーブルが既にクラスター化列ストア インデックスとして格納されている場合、既存のインデックスは削除され、再構築されます。  
   
 *index_name*  
@@ -132,11 +134,14 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 テーブルに既にクラスター化列ストア インデックスがある場合、既存のインデックスとして、同じ名前を指定するか、DROP EXISTING オプションを使用して新しい名前を指定します。  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   クラスター化列ストア インデックスとして格納するテーブルの 1 部、2 部、または 3 部構成の名前を指定します。 テーブルがヒープかクラスター化インデックスの場合、テーブルは行ストアから列ストアに変換されます。 テーブルが既に列ストアである場合、このステートメントでクラスター化列ストア インデックスが再構築されます。  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+
+クラスター化列ストア インデックスとして格納するテーブルの 1 部、2 部、または 3 部構成の名前を指定します。 テーブルがヒープかクラスター化インデックスの場合、テーブルは行ストアから列ストアに変換されます。 テーブルが既に列ストアである場合、このステートメントでクラスター化列ストア インデックスが再構築されます。 順序付けされたクラスター化列ストア インデックスに変換するには、、既存のインデックスがクラスター化列ストア インデックスである必要があります。
   
-#### <a name="with-options"></a>WITH オプション  
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>WITH オプション
+
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+
    `DROP_EXISTING = ON` の場合、既存のインデックスを削除し、新しい列ストア インデックスを作成します。  
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -156,6 +161,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH (MAXDOP = 2);
 ```
+
    詳細については、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 」と「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
  
 ###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
@@ -211,7 +217,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    インデックスの名前を指定します。 *index_name* はテーブル内で一意にする必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
- **(** _column_  [ **,**...*n* ] **)**  
+ **(** _column_  [ **,** ...*n* ] **)**  
     格納する列を指定します。 非クラスター化列ストア インデックスの列の上限は、1024 です。  
    各列のデータ型は、列ストア インデックスでサポートされているものである必要があります。 サポートされるデータ型の一覧については、「[制限事項と制約事項](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)」を参照してください。  
 
@@ -742,3 +748,11 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
+### <a name="f-create-an-ordered-clustered-columnstore-index"></a>F. 順序付けされたクラスター化列ストア インデックスを作成する
+
+SHIPDATE で順序付けされた、順序付けされたクラスター化列ストア インデックスを作成します。
+
+```sql 
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+```

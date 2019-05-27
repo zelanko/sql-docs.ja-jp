@@ -30,14 +30,18 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277511"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719594"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでのパッケージ実行中に発生するログ記録のスコープを構成できます。 詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](#server_logging)」を参照してください。  
@@ -253,7 +257,7 @@ ms.locfileid: "58277511"
     > [!NOTE]  
     >  既定では、すべての情報がログに記録されます。  
   
-9.  **[詳細]** タブで、 **[保存]** をクリックします。 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ログ構成を保存するフォルダーに移動し、新しいログ構成のファイル名を入力し、 **[保存]** をクリックします。  
+9. **[詳細]** タブで、 **[保存]** をクリックします。 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ログ構成を保存するフォルダーに移動し、新しいログ構成のファイル名を入力し、 **[保存]** をクリックします。  
   
 10. **[OK]** をクリックします。  
   
@@ -302,7 +306,7 @@ ms.locfileid: "58277511"
  **[追加]**  
  パッケージのログ プロバイダーのコレクションに、指定した種類のログを追加します。  
   
- **名前**  
+ **[名前]**  
  **[SSIS ログの構成]** ダイアログ ボックスの **[コンテナー]** ペインで選択したコンテナーまたはタスクについて、ログを有効または無効にします。 [名前] フィールドは編集可能です。 プロバイダーの既定の名前を使用するか、わかりやすい一意な名前を入力します。  
   
  **[説明]**  
@@ -311,7 +315,7 @@ ms.locfileid: "58277511"
  **Configuration**  
  既存の接続マネージャーを一覧から選択するか、**[\<新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
   
- 関連項目 :[OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) マネージャー、[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ 関連トピック:[OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) マネージャー、[File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **削除**  
  ログ プロバイダーを選択して、 **[削除]** をクリックします。  
@@ -332,7 +336,7 @@ ms.locfileid: "58277511"
 |[値]|[説明]|  
 |-----------|-----------------|  
 |**[Computer]**|ログ記録されたイベントが発生したコンピューターの名前。|  
-|**[演算子]**|パッケージを起動した人物のユーザー名。|  
+|**[オペレーター]**|パッケージを起動した人物のユーザー名。|  
 |**[SourceName]**|ログ記録されたイベントが発生したパッケージ、コンテナー、またはタスクの名前。|  
 |**[SourceID]**|ログ記録されたイベントが発生したパッケージ、コンテナー、またはタスクの GUID (global unique identifier)。|  
 |**[ExecutionID]**|パッケージ実行インスタンスの GUID。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variableoptionswindow.f1
@@ -15,12 +14,12 @@ ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766055"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054675"
 ---
 # <a name="variable-grid-options"></a>可変グリッドのオプション
   **[可変グリッドのオプション]** ダイアログ ボックスを使用して、 **[変数]** ウィンドウに表示される列を選択したり、変数の一覧に適用するフィルターを選択したりします。 対応する変数のプロパティの詳細については、「 [Integration Services (SSIS) の変数](integration-services-ssis-variables.md)」を参照してください。  
@@ -53,7 +52,7 @@ ms.locfileid: "62766055"
   
 -   **[式]**  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[変数] ウィンドウ](../../2014/integration-services/variables-window.md)   
  [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   

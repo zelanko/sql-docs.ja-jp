@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222146"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65771481"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -354,10 +354,10 @@ NAME *logical_file_name*
 *logical_file_name*     
 ファイルを参照するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される論理名を指定します。 *Logical_file_name* は、データベース内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、UNICODE 定数、標準の識別子、区切られた識別子のいずれでもかまいません。
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }      
+FILENAME { **'** _os\_file\_name_ **'**  |  **'** _filestream\_path_ **'** }      
 オペレーティング システムの (物理) ファイル名を指定します。
 
-**'** *os_file_name* **'**     
+**'** *os_file_name* **'**      
 ファイルを作成する際にオペレーティング システムが使用するパスとファイル名です。 ファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているローカル サーバー、ストレージ エリア ネットワーク (SAN)、または、iSCSI ベースのネットワークのうちのいずれかのデバイスに存在する必要があります。 指定したパスは、CREATE DATABASE ステートメントを実行する前に存在する必要があります。 詳細については、「解説」セクションの「データベース ファイルとファイル グループ」を参照してください。
 
 ファイルに対して UNC パスが指定されている場合は、SIZE、MAXSIZE、および FILEGROWTH パラメーターを設定できます。
@@ -366,7 +366,7 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }
 
 ファイルが読み取り専用のセカンダリ ファイルであるか、データベースが読み取り専用である場合を除き、データ ファイルを圧縮ファイル システム上に置かないでください。 ログ ファイルは、圧縮ファイル システム上に置くことはできません。
 
-**'** *filestream_path* **'**      
+**'** *filestream_path* **'**       
 FILESTREAM ファイル グループの場合、FILENAME は FILESTREAM データが格納されるパスを参照します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。 たとえば、パス C:\MyFiles\MyFilestreamData を指定する場合は、ALTER DATABASE を実行するとき、C:\MyFiles は既に存在している必要がありますが、MyFilestreamData フォルダーは存在してはなりません。
 
 ファイル グループとファイル (`<filespec>`) は、同じステートメントで作成する必要があります。
@@ -409,7 +409,7 @@ FILEGROWTH *growth_increment*
 
 FILEGROWTH が指定されていない場合、既定値は次のとおりです。
 
-|[バージョンのオプション]|[既定値]|
+|バージョン|[既定値]|
 |-------------|--------------------|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|
@@ -439,7 +439,7 @@ DEFAULT
 *database_snapshot_name*    
 新規データベース スナップショットの名前です。 データベース スナップショット名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意であり、識別子のルールに従っている必要があります。 *database_snapshot_name* は 128 文字以下です。
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]    
+ON **(** NAME **=**_logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]    
 データベース スナップショットを作成するには、ソース データベースのファイルのリストを指定します。 スナップショットが機能するためには、すべてのデータ ファイルを個別に指定する必要があります。 ただし、データベース スナップショットにログ ファイルは指定できません。 FILESTREAM ファイル グループは、データベース スナップショットではサポートされていません。 CREATE DATABASE ON 句に FILESTREAM データ ファイルが含まれていると、ステートメントが失敗してエラーが発生します。
 
 NAME、FILENAME、およびそれらの値については、相当する \<filespec> 値の説明を参照してください。
@@ -1042,7 +1042,7 @@ vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない
 
 引数 MAXSIZE および EDITION には、以下の規則が適用されます。
 
-- EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定されていて、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 500 MB に設定されます。
+- EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定されていて、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 250 MB に設定されます。
 - MAXSIZE も EDITION も指定されていない場合、EDITION は Standard (S0) に設定され、MAXSIZE は 250 GB に設定されます。
 
 SERVICE_OBJECTIVE     

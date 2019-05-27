@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542242"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779250"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -156,7 +156,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |最もリソースを消費するクエリ|対象となる実行メトリックを選択し、対象期間内で最も極端な値を持つクエリを特定します。 <br />このビューを使用して、データベースのリソース消費量に最も大きな影響を与えているクエリに焦点を絞ります。|  
 |強制適用されたプランのあるクエリ|クエリ ストアを使って以前に強制適用されたプランを一覧表示します。 <br />このビューを使って、現在強制適用されているすべてのプランに簡単にアクセスします。|  
 |高バリエーションのクエリ|目的の期間内の継続時間、CPU 時間、IO、メモリ使用率など、使用可能なディメンションのいずれかに関連して実行バリエーションが高いクエリを分析します。<br />このビューを使用して、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼす可能性のある、パフォーマンスの差異が大きいクエリを特定します。|  
-|クエリ待機統計|データベースで最もアクティブな待機カテゴリ、および選択した待機カテゴリに対して最も影響を与えているクエリを分析します。<br />このビューを使用して待機統計を分析し、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼしている可能性のあるクエリを特定します。<br /><br />**適用対象:**[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 以降および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|クエリ待機統計|データベースで最もアクティブな待機カテゴリ、および選択した待機カテゴリに対して最も影響を与えているクエリを分析します。<br />このビューを使用して待機統計を分析し、アプリケーション全体のユーザー エクスペリエンスに影響を及ぼしている可能性のあるクエリを特定します。<br /><br />**適用対象:** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18.0 以降および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |追跡対象のクエリ|最も重要なクエリの実行をリアルタイムで追跡します。 このビューは通常、強制適用されたプランを持つクエリがあり、クエリのパフォーマンスを安定させる必要がある場合に使用します。|
   
 > [!TIP]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  それでも問題が解決しない場合、ディスクに破損したクエリ ストア データが存在しています。
  
- 影響を受けたデータベース内で **sp_query_store_consistency_check** ストアド プロシージャを実行することで、クエリ ストアを復旧できる場合があります。
+ SQL 2017 以上では、影響を受けたデータベース内で **sp_query_store_consistency_check** ストアド プロシージャを実行することで、クエリ ストアを復旧させることができます。 2016 の場合は、次に示すように、クエリ ストアからデータをクリアする必要があります。
  
  復旧できない場合は、読み取り/書き込みモードを要求する前にクエリ ストアのクリアを試すことができます。  
   
@@ -295,7 +295,7 @@ FROM sys.database_query_store_options;
 
 -   可能であればクエリをパラメーター化します (例: sp_executesql などのストアド プロシージャ内にクエリをラップする)。 詳細については、「[パラメーターと実行プランの再利用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)」をご覧ください。    
   
--   ワークロードに 1 回限りのアドホック バッチが多数含まれており、そこで異なるクエリ プランが使用されている場合は、[**[アドホック ワークロードの最適化]**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) オプションを使用します。  
+-   ワークロードに 1 回限りのアドホック バッチが多数含まれており、そこで異なるクエリ プランが使用されている場合は、[ **[アドホック ワークロードの最適化]** ](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) オプションを使用します。  
   
     -   個々の query_hash 値の数と、sys.query_store_query 内のエントリの総数を比較します。 この比率が 1 に近い場合、アドホック ワークロードは異なるクエリを生成します。  
   

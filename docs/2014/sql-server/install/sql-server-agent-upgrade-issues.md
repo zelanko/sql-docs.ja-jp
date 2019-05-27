@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server Agent
@@ -14,12 +13,12 @@ ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c58e0cb5b53d2866ff39a5c1352c7884383a0cf
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581939"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092010"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server エージェントのアップグレードに関する問題
   アップグレードに影響する可能性がある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントに関する問題については、以下のトピックを参照してください。 これらのトピックでは、これらの変更が各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境にもたらす影響を軽減するための措置についても説明します。  

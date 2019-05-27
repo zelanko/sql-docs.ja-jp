@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f765607b179b9a53a32be356f1b4863c0f35988
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 4529593459248b6cf0777019147ced855fc1c4fa
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671328"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65801374"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>データベースの完全バックアップの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "59671328"
   
 -   新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって作成されたバックアップは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では復元できません。  
   
--   バックアップの概要、詳細、概念およびタスクについて、「 [バックアップの概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md) 」を参照してから先に進んでください。  
+-   バックアップの概念とタスクに関する概要および詳細については、先へ進む前に「[Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)」をご覧ください。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59671328"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してバックアップ タスクを指定する場合、**[スクリプト]** ボタンをクリックしてスクリプトの保存先を選択することにより、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) スクリプトを生成できます。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してバックアップ タスクを指定する場合、 **[スクリプト]** ボタンをクリックしてスクリプトの保存先を選択することにより、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) スクリプトを生成できます。  
   
 ### <a name="back-up-a-database"></a>データベースをバックアップする  
   
@@ -75,13 +75,13 @@ ms.locfileid: "59671328"
   
 4.  **[データベース]** ボックスの一覧で、適切なデータベース名が表示されていることを確認します。 必要に応じて、このボックスの一覧から別のデータベースを選択することもできます。  
   
-5.  **[復旧モデル]** テキスト ボックスは参照専用です。  どの復旧モデル (**[FULL]**、 **[BULK_LOGGED]**、 **[SIMPLE]**) でも、データベースのバックアップを実行できます。  
+5.  **[復旧モデル]** テキスト ボックスは参照専用です。  どの復旧モデル ( **[FULL]** 、 **[BULK_LOGGED]** 、 **[SIMPLE]** ) でも、データベースのバックアップを実行できます。  
   
 6.  **[バックアップの種類]** ボックスの一覧で、 **[完全]** を選択します。  
   
      データベースの完全バックアップを作成すると、データベースの差分バックアップを作成できるようになります。詳細については、「 [データベースの差分バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)」を参照してください。  
   
-7.  必要であれば、 **[コピーのみのバックアップ]** チェック ボックスをオンにして、コピーのみのバックアップを作成することもできます。 *コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 詳細については、「[コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」を参照してください。  コピーのみのバックアップは、**[差分]** バックアップの種類には使用できません。  
+7.  必要であれば、 **[コピーのみのバックアップ]** チェック ボックスをオンにして、コピーのみのバックアップを作成することもできます。 *コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 詳細については、「[コピーのみのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)」を参照してください。  コピーのみのバックアップは、 **[差分]** バックアップの種類には使用できません。  
 
 8.  **[バックアップ コンポーネント]** では、 **[データベース]** ラジオ ボタンを選択します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "59671328"
 11. 次のいずれかをクリックして、 **[メディアに上書きします]** オプションを選択します。 
 
     > [!IMPORTANT]  
-    >  **[全般]** ページでバックアップ先として **[URL]** を選択した場合、**[メディアを上書きする]** オプションは無効になります。 詳細については、「[[データベースのバックアップ] &#40;[メディア オプション] ページ&#41;](../../relational-databases/backup-restore/back-up-database-media-options-page.md)」を参照してください。  
+    >  **[全般]** ページでバックアップ先として **[URL]** を選択した場合、 **[メディアを上書きする]** オプションは無効になります。 詳細については、「[[データベースのバックアップ] &#40;[メディア オプション] ページ&#41;](../../relational-databases/backup-restore/back-up-database-media-options-page.md)」を参照してください。  
 
 
   -   **[既存のメディア セットにバックアップする]**  
@@ -115,11 +115,11 @@ ms.locfileid: "59671328"
   
 14. **[信頼性]** セクションで、必要に応じて以下のチェック ボックスをオンにします。  
   
-    -   **[完了時にバックアップを検証する]**。  
+    -   **[完了時にバックアップを検証する]** 。  
   
-    -   **[メディアに書き込む前にチェックサムを行う]**。  チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
+    -   **[メディアに書き込む前にチェックサムを行う]** 。  チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
     
-    -   **[エラーのまま続行する]**。 
+    -   **[エラーのまま続行する]** 。 
 
 15. **[全般]** ページの **[バックアップの種類]** で、トランザクション ログをバックアップするように指定しなかった場合、 **[トランザクション ログ]** セクションは無効になっています。  
       
@@ -256,15 +256,15 @@ ms.locfileid: "59671328"
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
     |オプション|[説明]|  
     |------------|-----------------|  
     |*database*|バックアップするデータベースです。|  
-    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|  
-    |WITH *with_options* [ **,**...*o* ]|必要に応じて、1 つ以上の追加オプション ( *o*) を指定します。 基本的な with オプションについては、手順 2. を参照してください。|  
+    |*backup_device* [ **,** ...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|  
+    |WITH *with_options* [ **,** ...*o* ]|必要に応じて、1 つ以上の追加オプション ( *o*) を指定します。 基本的な with オプションについては、手順 2. を参照してください。|  
   
 2.  必要に応じて、1 つ以上の WITH オプションを指定します。 ここでは、一部の基本的な WITH オプションについて説明します。 すべての WITH オプションについては、「 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
   
@@ -276,10 +276,10 @@ ms.locfileid: "59671328"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 以降でのみ、使用する暗号化アルゴリズムと暗号化の保護に使用する証明書または非対称キーを指定します。  
   
-         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
+         DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ }  
          バックアップ セットを記述したテキストを自由な形式で指定します。 文字列の長さは最大 255 文字です。  
   
-         NAME **=** { *backup_set_name* | **@**_backup\_set\_name\_var_ }  
+         NAME **=** { *backup_set_name* |  **@** _backup\_set\_name\_var_ }  
          バックアップ セットの名前を指定します。 名前の長さは最大 128 文字です。 NAME を指定しないと、名前は空白になります。  
   
     -   基本的なバックアップ セット WITH オプション  
@@ -288,7 +288,7 @@ ms.locfileid: "59671328"
   
          また、FORMAT オプションを使用して、バックアップ メディアをフォーマットすることもできます。  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* |  **@** _media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* |  **@** _text\_variable_ } ]  
          FORMAT 句は、バックアップ メディアを初めて使用する場合や既存のデータをすべて上書きする場合に使用します。 必要に応じて、新しいメディアにメディア名と説明を割り当てます。  
   
         > [!IMPORTANT]  

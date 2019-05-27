@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756765"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066697"
 ---
 # <a name="relationships-ssas-tabular"></a>リレーションシップ (SSAS テーブル)
   テーブル モデルでは、リレーションシップは 2 つのデータ テーブル間の接続を表します。 これにより、2 つのテーブルのデータの関連付けの方法が決まります。 たとえば、Customers テーブルと Orders テーブルを関連付けると、各注文に関連付けられた顧客名を表示できます。  
@@ -190,7 +189,7 @@ ms.locfileid: "62756765"
 |[2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)](create-a-relationship-between-two-tables-ssas-tabular.md)|2 つのテーブル間のリレーションシップを手動で作成する方法について説明します。|  
 |[リレーションシップの削除 (SSAS テーブル)](relationships-ssas-tabular.md)|リレーションシップを削除する方法とリレーションシップの削除がもたらす影響について説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テーブルと列 (SSAS テーブル)](tables-and-columns-ssas-tabular.md)   
  [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)  
   

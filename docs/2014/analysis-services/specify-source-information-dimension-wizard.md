@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionmaintable.f1
@@ -13,12 +12,12 @@ ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01ce74621f22da45807112a63f7f85d5849a620f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746166"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068180"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>[基になる情報の指定] (ディメンション ウィザード)
   **[メイン ディメンション テーブルの選択]** ページを使用すると、作成するディメンションのデータ ソース ビュー、メイン ディメンション テーブル、キー列、およびメンバー名列を選択できます。  
@@ -43,7 +42,7 @@ ms.locfileid: "62746166"
  **[名前] 列**  
  **[メイン テーブル]** で指定したテーブルから、ディメンションのメンバー名を含んでいる列を選択します。 名前列は、複合キーを使用する場合に指定する必要があります。 複合キーの名前列を作成するには、指定されたキー列を連結する名前付き計算をデータ ソース ビューで作成することをお勧めします。 1 つのキーを使用する場合、名前列は省略可能です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  
