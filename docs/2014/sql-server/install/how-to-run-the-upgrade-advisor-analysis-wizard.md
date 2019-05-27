@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -13,14 +12,14 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1464b55724e4305f2833ddce34e27170c7afd484
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207651"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094826"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>操作方法:アップグレード アドバイザー分析ウィザードを実行します。
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>操作方法:アップグレード アドバイザー分析ウィザードを実行する
   アップグレード アドバイザー分析ウィザードは、アップグレード アドバイザー開始ページから起動します。 ここでは、アップグレード アドバイザー分析ウィザードの実行方法について説明します。  
   
 > [!IMPORTANT]
@@ -49,7 +48,7 @@ ms.locfileid: "53207651"
   
      既定のインスタンス名は MSSQLSERVER です。  
   
-5.  選択したコンポーネントに対し、必要な情報を入力します。 各ダイアログ ボックスの詳細については、[アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)を参照してください。  
+5.  選択したコンポーネントに対し、必要な情報を入力します。 各ダイアログ ボックスの詳細については、次を参照してください。[アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)します。  
   
 6.  **アップグレード アドバイザーの設定を確認します** ページで入力した情報を確認します。 選択できる**にレポートを送信[!INCLUDE[msCoName](../../includes/msconame-md.md)]** アップグレード レポートを送信する場合。 プライバシー ポリシーを確認することもできます。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "53207651"
 8.  分析が完了したら、クリックして**レポートの起動**検出されたアップグレードの問題を表示します。  
   
 ## <a name="see-also"></a>参照  
- [操作方法：アップグレード アドバイザーを起動します。](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [方法: アップグレード アドバイザーを起動します。](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [アップグレード アドバイザーを実行している&#40;ユーザー インターフェイス&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

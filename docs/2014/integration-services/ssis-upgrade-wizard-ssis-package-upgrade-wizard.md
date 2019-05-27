@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.ssisupgradewizard.f1
@@ -13,12 +12,12 @@ ms.assetid: a8698217-4793-40fd-85a0-ef4dad1c139f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43481553088a1ca7ce32ab0f8b86eeb9869a5cb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec51fbd40031f330a85e8b1c0613c05ce90ae0e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62927161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055314"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS アップグレード ウィザード (SSIS パッケージ アップグレード ウィザード)
   [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用すると、 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] および [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] で開発されたパッケージを、現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で使用するパッケージ形式に移行できます。  

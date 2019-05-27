@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.erroroutput.f1
@@ -15,12 +14,12 @@ ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769578"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059230"
 ---
 # <a name="excel-source-editor-error-output-page"></a>[Excel ソース エディター] ([エラー出力] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -51,7 +50,7 @@ ms.locfileid: "62769578"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[Excel ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [[Excel ソース エディター] &#40;[列] ページ&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722885"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084827"
 ---
 # <a name="data-mining-tools"></a>データ マイニング ツール
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、データ マイニング ソリューションの作成に使用できる次のツールが用意されています。  
@@ -72,7 +71,7 @@ ms.locfileid: "62722885"
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services のデータ マイニング タスクおよび変換  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ マイニングをサポートする多くのコンポーネントが提供されます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、一般的なデータ マイニング タスク (予測、モデル作成、処理など) を自動化するためのツールが含まれます。 以下に例を示します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、一般的なデータ マイニング タスク (予測、モデル作成、処理など) を自動化するためのツールが含まれます。 例 :  
   
 -   新しい顧客によってデータセットが更新されるたびに自動的にモデルを更新する、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの作成。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62722885"
   
 -   パラメーターで渡されたモデルの自動生成。  
   
- ただし、他のプロセスへの入力として、パッケージ ワークフローのデータ マイニングを使用することもできます。 以下に例を示します。  
+ ただし、他のプロセスへの入力として、パッケージ ワークフローのデータ マイニングを使用することもできます。 例 :  
   
 -   モデルで生成された確率値の使用。テキスト マイニングまたは他の分類タスクのスコアを重み付けします。  
   

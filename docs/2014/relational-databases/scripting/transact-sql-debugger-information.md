@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -18,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147442"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063430"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL デバッガー情報
   デバッガーが特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止するたびに、さまざまなデバッガー ウィンドウを使用して現在の実行状態を表示できます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48147442"
 -   **[デバッグ]** ツール バーの **[ブレークポイント]** をクリックし、目的のウィンドウを選択する。  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 式  
- 式は、変数やパラメーターなどの単独のスカラー値に評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 句です。 左側のデバッガー ウィンドウでは、式に現在割り当てられているデータ値を最大で 5 つのタブまたはウィンドウ ( **[ローカル]、[ウォッチ 1]**、 **[ウォッチ 2]**、 **[ウォッチ 3]**、および **[ウォッチ 4]**) に表示できます。  
+ 式は、変数やパラメーターなどの単独のスカラー値に評価される [!INCLUDE[tsql](../../includes/tsql-md.md)] 句です。 左側のデバッガー ウィンドウには、最大で 5 つのタブまたはウィンドウ内の式に現在割り当てられているデータ値を表示できます。**[ローカル]、[ウォッチ 1]**、 **[ウォッチ 2]**、 **[ウォッチ 3]**、および **[ウォッチ 4]** します。  
   
  **[ローカル]** ウィンドウには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの現在のスコープ内のローカル変数についての情報が表示されます。 **[ローカル]** ウィンドウに表示される式のセットは、一覧の式を追加または削除しない限り変更されません。  
   

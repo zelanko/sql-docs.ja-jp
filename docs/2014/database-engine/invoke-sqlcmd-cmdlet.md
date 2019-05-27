@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
@@ -16,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774596"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064704"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd コマンドレット
   **Invoke-Sqlcmd** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットであり、言語 ([!INCLUDE[tsql](../includes/tsql-md.md)] と XQuery) のステートメントと **sqlcmd** ユーティリティでサポートされているコマンドを含んだスクリプトを実行します。  
@@ -96,7 +95,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** では **sqlcmd** 環境または SQLCMDDBNAME や SQLCMDWORKSTATION などのスクリプト変数が初期化されません。  
   
- **Invoke-Sqlcmd** では、Windows PowerShell の **-Verbose** 共通パラメーターを指定しない限り、PRINT ステートメントの出力などのメッセージが表示されません。 例:  
+ **Invoke-Sqlcmd** では、Windows PowerShell の **-Verbose** 共通パラメーターを指定しない限り、PRINT ステートメントの出力などのメッセージが表示されません。 例 :  
   
 ```  
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -147,7 +146,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |コマンドの終了|-c|パラメーターなし|  
 |Windows 認証を使用した接続|-E|パラメーターなし|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース エンジン コマンドレットの使用](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
  [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)   
  [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 474e910a-6abb-4e28-acc2-055338c011d4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b98fa9765a40d3eb9c05852e9c20c05c4bb818a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856308"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092918"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>UDT を削除&#39;予約 ORDPATH データ型の後に名前付き s
   アップグレード アドバイザーによって、`ORDPATH` データ型に予約されている語句に基づいて名前が付けられたユーザー定義型 (UDT) が検出されました。  

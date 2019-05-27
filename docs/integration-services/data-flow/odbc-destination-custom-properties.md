@@ -11,14 +11,18 @@ ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bedbe74352ca317497d731acc0ff542eb0b8bd63
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c1775b42624d755da4642d0c17c277c3b254eb4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272911"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726658"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC 入力先のカスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   次の表は、ODBC 入力先のカスタム プロパティを示しています。 すべてのプロパティは、SSIS プロパティ式から設定できます。  
   
 |プロパティ名|データ型|[説明]|  

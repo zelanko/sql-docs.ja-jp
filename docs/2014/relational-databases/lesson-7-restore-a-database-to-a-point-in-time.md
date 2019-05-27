@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743353"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090707"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>レッスン 8: Windows Azure ストレージにデータベースを復元する
   このレッスンでは、バックアップ ファイルをローカルで作成して、それを Windows Azure ストレージに復元する方法を学習します。 データベースの場所は、内部設置でも、Windows Azure の仮想マシンでもかまいません。 このレッスンを続行するには、レッスン 4、5、6 および 7 を実行する必要はありません。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nodes [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dffcb63d5f8b89f4d777f7bdb07bc972cf5bff58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722494"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084376"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークでの特定のノードの検索
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング モデルの依存関係ネットワークに含まれているノードの数が多すぎると、対象となるデータを見つけにくくなる場合があります。 データ マイニング デザイナーの **[依存関係ネットワーク]** タブでは、 **[ノードの検索]** ダイアログ ボックスを使用して特定のノードを検索できるので、この問題を解決することができます。  

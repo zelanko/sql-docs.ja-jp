@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.selection.f1
@@ -13,12 +12,12 @@ ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b09e8e689f090feb2d823a13ac9329bee9bc3f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747094"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069221"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>[選択項目] ([パーティションのプロパティ] ダイアログ ボックス) (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスの **[選択項目]** ページを使用すると、 **[全般]** ペイン、 **[プロアクティブ キャッシュ]** ペイン、または **[エラーの構成]** ペインでプロパティを表示または変更するメジャー グループからパーティションを選択できます。  
@@ -37,7 +36,7 @@ ms.locfileid: "62747094"
 |**Source**|パーティションのソース データを提供するために使用されるテーブルまたはクエリが表示されます。|  
 |**集計**|パーティションで使用される集計デザインを説明する文字列が表示されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パーティションのプロパティ ダイアログ ボックス&#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [一般的な&#40;プロパティ ダイアログ ボックスをパーティション分割&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
  [プロアクティブ キャッシュ&#40;プロパティ ダイアログ ボックスをパーティション分割&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   

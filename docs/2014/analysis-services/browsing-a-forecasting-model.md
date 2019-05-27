@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5176d4e40f0f99810a14ad5ce4298e3a7167d770
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088489"
 ---
 # <a name="browsing-a-forecasting-model"></a>予測モデルの参照
   使用して予測モデルを開く**参照**では、タイム シリーズ モデル ビューアーに似たの対話型ビューアーにモデルが表示されます[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 ビューアーは、傾向の調査、系列の比較、予測の作成、およびモデルと基になるデータに関する情報の取得に役立ちます。  
@@ -110,7 +109,7 @@ ms.locfileid: "62640270"
   
  [モデルを調査します。](#bkmk_Top)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

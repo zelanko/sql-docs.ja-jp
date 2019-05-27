@@ -19,21 +19,21 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec39c68294ae1de6563e37857f2c6e1041e674fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05612e0b32a336b64614d6072169471fe0450d1b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666740"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943497"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  すべて有効なテキスト データ型と文字データ型で指定された式の中で、パターンが最初に現れる先頭位置を返します。パターンが見つからない場合は、0 を返します。  
+  すべて有効なテキストおよび文字データ型について、指定された式の中で、パターンが最初に現れる先頭位置を返します。パターンが見つからない場合は、0 を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,13 +55,15 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="remarks"></a>Remarks  
  *pattern* または*式*が NULL の場合、PATINDEX は NULL を返します。  
-  
+ 
+ 開始位置は 0 ではなく 1 を基準とします。
+ 
  PATINDEX では、入力の照合順序に基づいて比較が行われます。 指定した照合順序で比較を実行するには、COLLATE を使って入力に明示的な照合順序を適用できます。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  SC の照合順序を使用する場合、戻り値では、*expression* パラメーターの UTF-16 サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
- 0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、PATINDEX に含めることができません。  
+ 0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、PATINDEX に含めることができません。  
   
 ## <a name="examples"></a>使用例  
   

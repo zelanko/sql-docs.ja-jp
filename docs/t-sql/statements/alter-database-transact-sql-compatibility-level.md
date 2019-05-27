@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 互換性レベル (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583375"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626687"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 
@@ -237,9 +237,9 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 |データベースの包含状態が PARTIAL に設定されている場合、`MERGE` ステートメントの `OUTPUT` 句にある `$action` フィールドを検証すると、照合順序のエラーが確認されることがあります。|`MERGE` ステートメントの `$action` 句によって返される値の照合順序は、サーバー照合順序ではなく、データベース照合順序です。また、照合順序の競合エラーは返されません。|
 |`SELECT INTO` ステートメントでは、常にシングル スレッドの挿入操作が作成されます。|`SELECT INTO` ステートメントでは、並列挿入操作を作成できます。 多数の行を挿入するときは、並列操作によってパフォーマンスを向上させることができます。|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>レベル 120 とレベル 110 以下の互換性レベルの相違点
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>より低い互換性レベルとレベル 100 および 110 の相違点
 
-このセクションでは、互換性レベル 110 で導入された新しい動作について説明します。 このセクションはレベル 120 にも当てはまります。
+このセクションでは、互換性レベル 110 で導入された新しい動作について説明します。 このセクションは、110 より大きい互換性レベルにも適用されます。
 
 |100 以下に、互換性レベル設定|互換性レベル設定 110 以上|
 |--------------------------------------------------|--------------------------------------------------|
@@ -295,7 +295,7 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 
 キーワードはいったん導入されると、キーワードの予約が維持されます。 たとえば、互換性レベル 90 で導入された予約済みキーワード PIVOT は、レベル 100、110、および 120 でも予約済みとして扱われます。
 
-互換性レベル設定でキーワードとして予約した識別子をアプリケーションで使用しようとすると、アプリケーションは失敗します。 この問題を回避するには、識別子をかっこ (**[]**) または引用符 (**""**) で囲みます。たとえば、識別子 **EXTERNAL** を使用しているアプリケーションを互換性レベル 90 にアップグレードするには、識別子を **[EXTERNAL]** または **"EXTERNAL"** のように変更します。
+互換性レベル設定でキーワードとして予約した識別子をアプリケーションで使用しようとすると、アプリケーションは失敗します。 この問題を回避するには、識別子をかっこ ( **[]** ) または引用符 ( **""** ) で囲みます。たとえば、識別子 **EXTERNAL** を使用しているアプリケーションを互換性レベル 90 にアップグレードするには、識別子を **[EXTERNAL]** または **"EXTERNAL"** のように変更します。
 
 詳細については、「[予約済みキーワード](../../t-sql/language-elements/reserved-keywords-transact-sql.md)」を参照してください。
 

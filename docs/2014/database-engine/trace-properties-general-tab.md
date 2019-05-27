@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35e9ee16ee50d5dc697e862b2777db7f0199970d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089533"
 ---
 # <a name="trace-properties-general-tab"></a>[トレースのプロパティ] ([全般] タブ)
   **[トレースのプロパティ]** ダイアログ ボックスの **[全般]** タブを使用すると、トレースのプロパティを表示したり指定したりできます。  
@@ -68,7 +67,7 @@ ms.locfileid: "62773804"
  **[トレース停止時刻を有効にする]**  
  トレースを終了して閉じる日時を設定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トレースの作成 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
   

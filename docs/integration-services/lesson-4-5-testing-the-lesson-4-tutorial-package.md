@@ -11,14 +11,18 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cf825d92c53afcf138e060cb9cbd335c9f6a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280956"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721506"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>レッスン 4-5: レッスン 4 のパッケージをテストする
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 壊れているファイル **Currency_BAD.txt** を実行すると、CurrencyKey 参照変換の照合結果の生成に失敗します。 CurrencyKey 参照変換のエラー出力は、失敗した行を新しい Failed Rows 変換先へリダイレクトするように構成されているので、コンポーネント自体は失敗せず、パッケージは正常に実行されます。 エラーがある行はすべて、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によって **ErrorOutput.txt** に書き込まれます。  
   
@@ -42,11 +46,11 @@ ms.locfileid: "58280956"
   
 1.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
   
-2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>ErrorOutput.txt ファイルの内容を確認する  
   
-メモ帳などのテキスト エディターで、**ErrorOutput.txt** ファイルを開きます。 既定の列の順序は、AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription です。  
+メモ帳などのテキスト エディターで、**ErrorOutput.txt** ファイルを開きます。 既定の列の順序は次のとおりです。AverageRate、CurrencyID、CurrencyDate、EndOfDateRate、ErrorCode、ErrorColumn、ErrorDescription です。  
  
 ファイルのすべての行には、一致しない CurrencyID 値 ("BAD")、ErrorCode 値 (-1071607778)、ErrorColumn 値 (0)、ErrorDescription 値 ("参照中に一致する行が見つかりませんでした") が含まれています。 エラーは列固有のものではなく、参照操作の失敗によるものであるため、ErrorColumn の値は 0 となります。
   
