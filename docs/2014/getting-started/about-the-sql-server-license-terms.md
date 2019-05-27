@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - licenses [SQL Server]
@@ -14,19 +13,19 @@ ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843124"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088633"
 ---
 # <a name="about-the-sql-server-license-terms"></a>SQL Server の使用許諾条件について
   [!INCLUDE[msCoName](../includes/msconame-md.md)] ソフトウェア使用許諾条件は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストール時にローカル コンピューターにコピーされます。 同じエディションと言語の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます %programfiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ または % の ProgramFiles(x86) % \。[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 条項\\します。  
   
  同じ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションと言語のインスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。  
   
- ライセンス条項ファイル名は、インストールされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の言語を示します。 ライセンス条項ファイル名は、形式です。SQLServer2014_License_Edition_\<型 > _\<LCID > .rtf します。 以下に例を示します。  
+ ライセンス条項ファイル名は、インストールされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の言語を示します。 ライセンス条項ファイル名は、形式です。SQLServer2014_License_Edition_\<型 > _\<LCID > .rtf します。 例 :  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer (英語版) の場合: SQLServer2014_License_DEV_1033.rtf  
   

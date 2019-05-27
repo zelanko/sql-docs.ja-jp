@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
@@ -13,12 +12,12 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2810a8738368f87651bc90d6cb15ae34195258ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774374"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090018"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>オプション (クエリ結果-SQL Server の結果をテキスト ページ)
   このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスの **[結果]** で、**[テキスト]** をクリックします。  

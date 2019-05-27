@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b006a2d5ef8c6de9b915f73fe68223329c6393d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a404c18f47fb13464d01f5be6af9869fd10292cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728760"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078625"
 ---
 # <a name="defining-a-referenced-relationship"></a>参照リレーションシップの定義
   このチュートリアルのこれまでの実習では、主キーから外部キーへのリレーションシップを使用し、メジャー グループのファクト テーブルに直接リンクしているテーブルに基づいて、各キューブ ディメンションを定義しました。 このトピックの実習では、 **Reseller** ディメンションを介し、 **Geography** ディメンションを再販業者販売のファクト テーブルにリンクさせます。このようにリンクを中継するディメンションを、 *参照ディメンション*といいます。 参照ディメンションにより、販売店の売上と地域を関連付けることができます。 詳細については、「 [参照リレーションシップと参照リレーションシップのプロパティの定義](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。  
@@ -85,7 +84,7 @@ ms.locfileid: "62728760"
   
 2.  **Geography Key** 属性を **Reseller** ディメンションに追加するには、 **[データ ソース ビュー]** ペインで **[GeographyKey]** を右クリックし、 **[列から新しい属性を作成]** をクリックします。  
   
-3.   **[属性]** ペインで、 **[Geography Key]** をクリックします。次に、[プロパティ] ウィンドウで **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定します。さらに、 **AttributeHierarchyOrdered** プロパティを **False**に設定し、 **AttributeHierarchyVisible** プロパティを **False**に設定します。  
+3.  **[属性]** ペインで、 **[Geography Key]** をクリックします。次に、[プロパティ] ウィンドウで **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定します。さらに、 **AttributeHierarchyOrdered** プロパティを **False**に設定し、 **AttributeHierarchyVisible** プロパティを **False**に設定します。  
   
      Reseller ディメンションの Geography Key 属性は、Geography ディメンションを Reseller Sales ファクト テーブルにリンクするためにのみ使用されます。 Geography Key 属性は表示しないため、この属性階層の表示を定義する値はありません。 また、この属性階層の並べ替えや最適化を行っても、処理パフォーマンスを低下させるだけです。 しかし、2 つのディメンション間を結ぶリンクとしてのみ機能するように、この属性を有効にする必要があります。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
@@ -14,12 +13,12 @@ ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767413"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057789"
 ---
 # <a name="manage-the-integration-services-service"></a>Integration Services サービスを管理する
     
@@ -53,7 +52,7 @@ ms.locfileid: "62767413"
   
 -   [Integration Services サービスのイベントを表示する](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)   
  [Integration Services サービスの構成 (SSIS サービス)](configuring-the-integration-services-service-ssis-service.md)   
  [SQL Server インポートおよびエクスポート ウィザード](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

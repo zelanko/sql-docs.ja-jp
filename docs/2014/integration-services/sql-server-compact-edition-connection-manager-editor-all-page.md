@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlmobileconnection.all.f1
@@ -15,12 +14,12 @@ ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70cc046320d978779016bae7277cdb2b26c2431e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766455"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055469"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] ([すべて] ページ)
   **[SQL Server Compact Edition 接続マネージャー エディター]** ダイアログ ボックスでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact データベースに接続するためのプロパティを指定できます。  
@@ -54,7 +53,7 @@ ms.locfileid: "62766455"
   
  [Mode] オプションには、次の表に示すように 4 つの値が用意されています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[読み取り専用]**|データベースに対する読み取り専用アクセスを指定します。|  
 |**[Read Write]**|データベースに対する読み取り/書き込み権限を指定します。|  
@@ -73,7 +72,7 @@ ms.locfileid: "62766455"
  **Password**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact データベースのパスワードを入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[SQL Server Compact Edition 接続マネージャー エディター] &#40;[接続] ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   

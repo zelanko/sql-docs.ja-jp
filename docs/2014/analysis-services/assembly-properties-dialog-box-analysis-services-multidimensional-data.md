@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.assemblyproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36ad3870fbbbfbcb457e54929bcd4729b7814d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b21230ddff5a3db043b533a4f921a30b02da739b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643557"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062295"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>[アセンブリのプロパティ] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [アセンブリのプロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのアセンブリ参照のプロパティを設定できます。 **[アセンブリのプロパティ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** でアセンブリを右クリックして **[プロパティ]** をクリックします。  

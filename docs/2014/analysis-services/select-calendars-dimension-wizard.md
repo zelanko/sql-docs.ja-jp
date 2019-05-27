@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
@@ -13,12 +12,12 @@ ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67e4d316b122f44e207037603354f696446aed3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747664"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069693"
 ---
 # <a name="select-calendars-dimension-wizard"></a>[カレンダーの選択] (ディメンション ウィザード)
   **[カレンダーの選択]** ページを使用すると、会計カレンダー、レポート カレンダー、製造カレンダー、ISO (国際標準化機構) 8601 カレンダーを表す階層を作成し、時間ディメンションに追加できます。  
@@ -59,7 +58,7 @@ ms.locfileid: "62747664"
   
  次の表に、[月単位の週のパターン] に指定できるオプションを示します。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**週 445**|四半期の 1 番目の月が 4 週、四半期の 2 番目の月が 4 週、四半期の 3 番目の月が 5 週になります。|  
 |**週 454**|四半期の 1 番目の月が 4 週、四半期の 2 番目の月が 5 週、四半期の 3 番目の月が 4 週になります。|  
@@ -83,7 +82,7 @@ ms.locfileid: "62747664"
  **ISO 8601 カレンダー**  
  ISO 8601 カレンダーに基づく階層を作成する場合に選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

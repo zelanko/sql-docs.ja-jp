@@ -24,14 +24,18 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f250c7b2dcaaaf86384ac4af592c423a9077ffd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ee831e325d7291548e9d6e4ae266cabcb2607a46
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281586"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718252"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>パッケージ内の機微なデータへのアクセス制御
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータを保護するために、保護レベルを設定できます。保護レベルを使用すると、パッケージ内の機微なデータのみを保護することも、すべてのデータを保護することもできます。 さらに、パスワードまたはユーザー キーでこのデータを暗号化したり、データベースを使用してデータを暗号化したりすることもできます。 また、パッケージに使用する保護レベルは静的である必要はなく、パッケージのライフ サイクルの各段階で変更できます。 多くの場合、開発中に保護レベルを 1 つ設定し、パッケージを配置した時点で別の保護レベルを設定します。  
   
 > [!NOTE]  

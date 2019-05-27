@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62775022"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089324"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>オプション (クエリ結果-SQL Server-[全般] ページ)
   このページを使用すると、クエリ結果ペインの既定の動作を設定できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックし、**[クエリ結果]** フォルダーを展開して、**[SQL Server]** を選択してから、**[全般]** をクリックします。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ ウィンドウで右クリックし、**[クエリ オプション]** をクリックします。  

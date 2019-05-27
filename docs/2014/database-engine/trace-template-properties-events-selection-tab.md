@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.eventsselection.f1
@@ -15,12 +14,12 @@ ms.assetid: 5b202457-ab42-4902-8012-7f3f40aa09f5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac74d361758cda8ec0b345b93e542d96c709e586
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773458"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089547"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>[トレース テンプレートのプロパティ] ([イベントの選択] タブ)
   **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[イベントの選択]** タブを使用すると、 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] トレース テンプレートに含めるイベント クラスとデータ列の表示、編集、指定ができます。  
@@ -48,7 +47,7 @@ ms.locfileid: "62773458"
  **[列の構成]**  
  トレースとグループ化の結果で、1 つ以上の列を使用して列の順序を変更します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [トレースに表示される列を整理&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [トレース内のイベントをフィルター処理&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e02123703295d13a0be9bcb74382ce4a7ed9dd66
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756782"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066271"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>テーブル モデルでの DAX について (SSAS テーブル)
   Data Analysis Expressions (DAX) は、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel のブックおよび [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のテーブル モデル プロジェクトでカスタムの計算を作成するための数式言語です。 DAX の数式は、テーブル内や列内のデータに対して高度な計算を実行するための関数、演算子、値などで構成されます。  

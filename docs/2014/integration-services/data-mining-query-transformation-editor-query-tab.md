@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytransformation.query.f1
@@ -15,12 +14,12 @@ ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d752fbd5ec1cd82ce7d573bb68ddb8acd162adc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769968"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059752"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>[データ マイニング クエリ変換エディター] ([クエリ] タブ)
   **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[クエリ]** タブを使用すると、予測クエリを作成できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "62769968"
  **[新しいクエリの作成]**  
  **[新しいクエリの作成]** をクリックし、グラフィカルなクエリ ビルダーを使用して、データ マイニング拡張機能 (DMX) クエリを作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[データ マイニング クエリ変換エディター] &#40;[マイニング モデル] タブ&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   

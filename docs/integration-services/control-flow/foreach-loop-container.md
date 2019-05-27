@@ -31,14 +31,18 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271324"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727706"
 ---
 # <a name="foreach-loop-container"></a>Foreach ループ コンテナー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Foreach ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **Foreach** ループ構造と同様です。 パッケージでは、ループは Foreach 列挙子を使用することで有効になります。  Foreach ループ コンテナーは、指定した列挙子のメンバーが処理されるたびに制御フローを繰り返します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、次の種類の列挙子が用意されています。  
@@ -181,7 +185,7 @@ ms.locfileid: "58271324"
  Foreach ループ コンテナーとその構成方法については、「 [Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md) 」と「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **[名前]**  
  Foreach ループ コンテナーの一意な名前を指定します。 この名前は、タスク アイコンとログでラベルとして使用されます。  
   
 > [!NOTE]  
@@ -416,7 +420,7 @@ ms.locfileid: "58271324"
  **[接続]**  
  既存の ADO.NET 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
- 関連項目 :[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)、[ADO.NET の接続マネージャーの構成](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ 関連トピック:[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)、[ADO.NET の接続マネージャーの構成](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **[列挙]**  
  列挙する SMO オブジェクトを指定します。  
@@ -458,7 +462,7 @@ ms.locfileid: "58271324"
  **[Azure Storage 接続マネージャー]**  
  既存の Azure ストレージ接続マネージャーを選択するか、Azure ストレージ アカウントを参照する接続マネージャーを新規作成します。  
   
- 関連項目 :[Azure Storage 接続マネージャー](../../integration-services/connection-manager/azure-storage-connection-manager.md)  
+ 関連トピック:[Azure Storage 接続マネージャー](../../integration-services/connection-manager/azure-storage-connection-manager.md)  
   
  **BLOB コンテナーの名前**  
  列挙する BLOB ファイルを含む BLOB コンテナーの名前を指定します。
@@ -492,7 +496,7 @@ Azure Data Lake 接続マネージャーを指定するか、ADLS アカウン�
   
  Integration Services パッケージでの Foreach Loop コンテナーの使用方法の詳細については、「[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」を参照してください。 構成方法の詳細については、「 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)」を参照してください。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] チュートリアルの「簡単な ETL パッケージの作成」には、Foreach ループの追加および構成について説明するレッスンが含まれています。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] チュートリアルの「簡単な ETL パッケージの作成」には、Foreach ループの追加および構成について説明するレッスンが含まれています。  
   
 ### <a name="options"></a>オプション  
  **変数**  

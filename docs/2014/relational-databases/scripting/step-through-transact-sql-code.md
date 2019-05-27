@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
@@ -16,12 +15,12 @@ ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b46deb42a6729cbf122aca0fcb4618143bc786a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e79a92bc1756003341cbb9e0581ade42a2bcee8b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62667099"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090008"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL コードのステップ実行
   [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディター ウィンドウでどの [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントを実行するかを制御できます。 個々のステートメントでデバッガーを一時停止して、その時点のコード要素の状態を確認できます。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6da9652c18bd6e8093a38d337b61171bc448341
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766604"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055621"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>デジタル証明書を使用してパッケージに署名する
   このトピックでは、デジタル証明書を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに署名する方法について説明します。 デジタル署名を他の設定と共に使用して、有効でないパッケージの読み込みや実行を防ぐことができます。  
@@ -67,7 +66,7 @@ ms.locfileid: "62766604"
   
      パッケージは署名されましたが、パッケージを読み込む前にデジタル署名を確認するように、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を構成する必要があります。 詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](security/identify-the-source-of-packages-with-digital-signatures.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティの概要 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

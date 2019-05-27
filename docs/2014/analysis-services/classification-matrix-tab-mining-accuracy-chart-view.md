@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
@@ -13,12 +12,12 @@ ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1879e9ec4f2a6decf4168e7c49a5e81d3a043d29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca3471a96a2ad171255f488b255deee55f73e2e0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681731"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087946"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>[分類マトリックス] タブ ([マイニング精度チャート] ビュー)
   **[分類マトリックス]** タブには、 **[列マッピング]** タブのモデル グリッドで選択した各モデルの分類マトリックスが表示されます。分類マトリックスは、 **[列マッピング]** タブで選択した予測可能列が不連続である場合にのみ使用できます。 より詳細な説明については、**分類マトリックス** タブを参照してください[テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)します。  

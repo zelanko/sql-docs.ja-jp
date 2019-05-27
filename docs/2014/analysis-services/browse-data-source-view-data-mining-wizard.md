@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.browsedatasourceview.f1
@@ -13,12 +12,12 @@ ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59c8690a9b71f8a6fecf98e64007eecfbd339b82
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650352"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064493"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>データ ソース ビューの参照 (データ マイニング ウィザード)
   **[データ ソース ビューの参照]** ダイアログ ボックスを使用すると、ウィザードの **[データ ソース ビューの選択]** ページで選択したデータ ソース ビューを表示できます。  
@@ -32,7 +31,7 @@ ms.locfileid: "62650352"
  **[ズーム]**  
  ダイアグラムに表示される詳細のレベルを変更します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [データ ソース ビューを選択します&#40;データ マイニング ウィザード。&#41;](select-data-source-view-data-mining-wizard.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.addreference.f1
@@ -16,12 +15,12 @@ ms.assetid: 457958c4-6baa-474d-99a0-34c195ceba09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2a44c1f7a37cc7e7e010ea15c72d35255b443e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 541b7371cdc05ee316e9fb9de9f50affc4f14fc7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62632955"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062858"
 ---
 # <a name="add-reference-dialog-box-analysis-services---multidimensional-data"></a>[参照の追加] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [参照の追加] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework アセンブリに参照を追加することも、開発プロジェクトに別の開発プロジェクトを追加することもできます。 **[参照の追加]** ダイアログ ボックスを表示するには、**ソリューション エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトの **[アセンブリ]** フォルダーを右クリックして、ショートカット メニューから **[新しいアセンブリ参照]** を選択します。  
@@ -37,7 +36,7 @@ ms.locfileid: "62632955"
 |**[削除]**|クリックすると、 **[選択されたプロジェクトとコンポーネント]** で選択されているコンポーネントが削除されます。|  
 |**選択されたプロジェクトとコンポーネント**|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトに追加されるコンポーネント参照の一覧が表示されます。 選択したコンポーネントをグリッドから削除するには、1 つ以上の項目を選択して **[削除]** をクリックします。 このグリッドには次の列が含まれています。<br /><br /> **[コンポーネント名]**:コンポーネントの正確な名前、または通称です。 コンポーネント名で並べ替えるには、タイトルを選択します。<br /><br /> **[バージョン]** コンポーネントのバージョン番号の一覧です。 バージョンで並べ替えるには、タイトルを選択します。<br /><br /> **[ランタイム]**:コンポーネントが基づく .NET Framework のバージョンです。 ランタイムのバージョンで並べ替えるには、タイトルを選択します。<br /><br /> **[パス]**:コンポーネントのファイル名と、置かれているパスです。 パスで並べ替えるには、タイトルを選択します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [多次元モデルのアセンブリの管理](multidimensional-models/multidimensional-model-assemblies-management.md)  
   

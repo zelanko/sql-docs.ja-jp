@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
@@ -13,12 +12,12 @@ ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643718"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062387"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services のウィザード (多次元データ)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用するためのウィザードを提供[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]と[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。 次の表に、使用できるウィザードを示します。  
@@ -40,7 +39,7 @@ ms.locfileid: "62643718"
 |[スキーマ生成ウィザードの F1 ヘルプ&#40;Analysis Services - 多次元データ&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|スキーマ生成ウィザードを使用すると、既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトからデータ ソース ビューを定義できます。また、必要に応じて、このオブジェクトのデータ ソースに対してデータ ソース ビューのリレーショナル スキーマのスクリプトを作成できます。|  
 |[使用法に基づく最適化ウィザードの F1 ヘルプ](usage-based-optimization-wizard-f1-help.md)|使用法に基づく最適化ウィザードを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのクエリ ログに格納されたクエリに基づいて集計デザインの集計を定義できます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [ユーザー インターフェイス リファレンス&#40;Analysis Services&#41;](user-interface-reference-analysis-services.md)  
   

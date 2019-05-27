@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.editfilter.f1
@@ -13,12 +12,12 @@ ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f21abbe6ce79db149104b13399b819a811558c43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844361"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089780"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - [フィルターの編集]
   **[フィルターの編集]** ダイアログ ボックスを使用すると、トレース内のデータ列フィルターを作成および変更できます。 一覧のデータ列名をクリックすると、そのデータ列に使用できるフィルター条件が横のペインに表示されます。 フィルター条件を入力して **[OK]** をクリックすると、選択したデータ列にその条件が適用されます。 一覧のデータ列名の左側にフィルター アイコンが表示されている場合、その列には既にフィルターが構成されています。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 350aadcdd44dcc4424b94792286a7421e2613b2e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680480"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087387"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>PowerPivot for SharePoint 2010 の構成または修復 (PowerPivot 構成ツール)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 のインストールを構成または修復するには、PowerPivot 構成ツールを使用します。 構成ツールはまずシステムをスキャンし、インストールを完了または修復するために必要なアクションの一覧を返します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]セットアップ ウィザードは、SharePoint 2010 用 PowerPivot 構成ツールと SharePoint 2013 用 PowerPivot 構成ツールがインストールされます。 このトピックでは、SharePoint 2010 用 PowerPivot 構成ツールについて説明します。 SharePoint 2010 の詳細については、次を参照してください。[構成または修復の PowerPivot for SharePoint 2013 &#40;PowerPivot 構成ツール&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)します。  

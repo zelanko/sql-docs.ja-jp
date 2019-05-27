@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 986813601be89e201978e50b76085752e4f34356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767154"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057134"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>[OLE DB 変換先エディター] ([接続マネージャー] ページ)
   **[OLE DB 変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先の OLE DB 接続を選択できます。 さらにこのページを使用して、データベースのテーブルやビューを選択できます。  
@@ -157,7 +156,7 @@ ms.locfileid: "62767154"
  **[クエリの解析]**  
  クエリ テキストの構文を検査します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[OLE DB 変換先エディター] &#40;[マッピング] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [[OLE DB 変換先エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   

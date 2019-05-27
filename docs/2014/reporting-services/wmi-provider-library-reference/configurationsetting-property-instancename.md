@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - InstanceName Property
@@ -19,12 +18,12 @@ ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8dfe34895ae18f3195ee90882ed0b400299418e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dfe3796a862b300ae8d2778b5b55437ab9426cc5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646278"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097766"
 ---
 # <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>InstanceName プロパティ (WMI MSReportServer_ConfigurationSetting)
   特定のコンピューターのレポート サーバー インスタンスの名前を指定します。 読み取り専用。  
@@ -48,7 +47,7 @@ public string InstanceName;
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

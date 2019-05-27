@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourceselection.f1
@@ -13,12 +12,12 @@ ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5f82386128c8b4cac8e8a68719d4ece3f3489ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747734"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069748"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>[データ ソース ビューの選択] (キューブ ウィザード)
   **[データ ソース ビューの選択]** ページを使用すると、空のキューブのデータ ソース ビューを選択できます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62747734"
  **None**  
  データ ソース ビューを作成しない場合は、このオプションを選択します。 このオプションは、データ ソース ビューを後で生成する場合や、リンク メジャー グループのみが含まれるキューブを使用する予定である場合に適しています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

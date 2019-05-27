@@ -11,14 +11,18 @@ ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c5cb28e7474a78c25d82b86f7ba3b81bed90d38
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: caa86a14e114958ef109d54e2f2d374c8b096b4d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277001"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728730"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC デザイナー コンソールから CDC サービスを管理する方法
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   この手順では、CDC デザイナー コンソールを使用して CDC サービスを管理する方法について説明します。  
   
 ### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC デザイナー コンソールから CDC サービスを管理するには  
@@ -33,7 +37,7 @@ ms.locfileid: "58277001"
   
 4.  CDC サービスでは、以下のタスクを実行できます。  
   
-    -    **新しい CDC インスタンス**の作成  
+    -   **新しい CDC インスタンス**の作成  
   
     -   **すべてのインスタンスの開始** (選択した CDC サービスに含まれるすべてのインスタンス)  
   

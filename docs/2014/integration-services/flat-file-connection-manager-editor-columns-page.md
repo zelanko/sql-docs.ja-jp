@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6dad0ca9855cfad8811b1598356ab624ea3fc5ca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894445"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058729"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>[フラット ファイル接続マネージャー エディター] ([列] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[列]** ページを使用すると、行および列情報を指定したり、ファイルをプレビューしたりできます。  

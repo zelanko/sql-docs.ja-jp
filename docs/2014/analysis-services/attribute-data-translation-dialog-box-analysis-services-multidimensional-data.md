@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
@@ -15,12 +14,12 @@ ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650663"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063065"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>[属性データの翻訳] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[属性データの翻訳]** ダイアログ ボックスを使用すると、翻訳キャプション データを含んでいる列を設定でき、翻訳済みデータと共に使用する照合順序と並べ替え順も設定できます。 **[属性データの翻訳]** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -73,7 +72,7 @@ ms.locfileid: "62650663"
   
  このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は同じ文字の 1 バイト表現と 2 バイト表現を同じものと見なします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [翻訳の詳細&#40;[翻訳] タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   

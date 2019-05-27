@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionattributes.f1
@@ -13,12 +12,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84f8612b4d420eed11308472c9c8fabfc56e23c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748094"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069528"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>[ディメンション属性の選択] (ディメンション ウィザード)
   **[ディメンション属性の選択]** ページを使用すると、作成するディメンションの属性を選択したり変更したりできます。  
@@ -60,7 +59,7 @@ ms.locfileid: "62748094"
  **属性の型**  
  属性の型を設定します (省略可)。 既定値は **Regular**です。 属性の型によって、クライアント アプリケーションは、属性にどのような情報が含まれているかを判別できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  
