@@ -38,7 +38,7 @@ ms.locfileid: "66102163"
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-     ファイルがある*\<ドライブ >:* \Program Files\Microsoft SQL Server\MSRS12 します。MSSQLSERVER\Reporting services \reportserver にあります。  
+     ファイルがある *\<ドライブ >:* \Program Files\Microsoft SQL Server\MSRS12 します。MSSQLSERVER\Reporting services \reportserver にあります。  
   
 2.  検索 <`Authentication`>。  
   

@@ -27,7 +27,7 @@ ms.locfileid: "66094904"
   
 ### <a name="to-launch-upgrade-advisor"></a>アップグレード アドバイザーを起動するには  
   
--   アップグレード アドバイザーを起動する をクリックして**開始**、 をクリックして**すべてのプログラム**、 をクリックして**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**、 をクリックし、  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**.  
+-   アップグレード アドバイザーを起動する をクリックして**開始**、 をクリックして**すべてのプログラム**、 をクリックして **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**、 をクリックし、 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**.  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーを実行している&#40;ユーザー インターフェイス&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

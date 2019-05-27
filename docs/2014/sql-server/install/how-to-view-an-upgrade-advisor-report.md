@@ -31,7 +31,7 @@ ms.locfileid: "66094802"
   
 ### <a name="to-view-a-report"></a>レポートを表示するには  
   
-1.  クリックして**開始**、 をクリックして**すべてのプログラム**、 をクリックして**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**、順にクリックします**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**します。  
+1.  クリックして**開始**、 をクリックして**すべてのプログラム**、 をクリックして **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 、順にクリックします **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**します。  
   
 2.  アップグレード アドバイザーの開始 ページで、**アップグレード アドバイザー レポート ビューアーの起動**します。  
   
