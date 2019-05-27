@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260671"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109122"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>[全般] プロパティ ページ、リソース (レポート マネージャー)
   リソースの [全般] プロパティ ページでは、リソースの名前変更、削除、移動、または置換を行うことができます。 リソースの追加またはプロパティの変更を行ったユーザーに関する情報が、ページ上部に表示されます。  

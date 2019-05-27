@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157619"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175036"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader の Parallel Data Warehouse 用のコマンド ライン ローダー
 **dwloader の**は既存のテーブルに一括でテーブルの行をロードする並列データ ウェアハウス (PDW) コマンド ライン ツールです。 行を読み込むときに、テーブルの末尾にすべての行を追加することができます (*追加モード*または*fastappend モード*)、新しい行が追加および既存の行を更新 (*upsert モード*)、またはすべてを削除します。既存の行を読み込む前に、空のテーブルにすべての行を挿入 (*モードを再読み込み*)。  
@@ -43,7 +43,7 @@ ms.locfileid: "63157619"
   
 5.  実行**dwloader**します。  
   
-    読み込みサーバーにログインし、実行可能ファイル実行**dwloader.exe**適切なコマンド ライン オプションを使用します。  
+    読み込みサーバーにサインインし、実行可能ファイル実行**dwloader.exe**適切なコマンド ライン オプションを使用します。  
   
 6.  結果を確認します。  
   
@@ -111,7 +111,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -143,7 +144,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 `rv=25`  
   
-**-S***target_appliance*  
+* *-S***target_appliance*  
 読み込まれたデータを受信する SQL Server PDW アプライアンスを指定します。  
   
 *Infiniband 接続*、 *target_appliance* < アプライアンス名 > として指定されて-SQLCTL01 します。 この接続を名前付きを構成するを参照してください。 [InfiniBand ネットワーク アダプターの構成](configure-infiniband-network-adapters.md)します。  
@@ -156,10 +157,10 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schema*].*table_name*  
 変換先テーブルの 3 つの部分の名前。  
   
-**-I***source_data_location*  
+* *-I***source_data_location*  
 読み込みに 1 つまたは複数のソース ファイルの場所。 各ソース ファイルは、テキスト ファイルまたは gzip で圧縮されているテキスト ファイルである必要があります。 Gzip ファイルごとに 1 つだけのソース ファイルを圧縮できます。  
   
 ソース ファイルの書式を設定します。  
@@ -174,7 +175,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   ソース データの場所には、ネットワーク パスまたは読み込みサーバー上のディレクトリへのローカル パスを指定できます。  
   
--   ディレクトリ内のすべてのファイルを指定するには、後に、ディレクトリ パスを入力、* ワイルドカード文字です。  ローダーでは、ソース データの場所にある任意のサブディレクトリからのファイルを読み込みません. Gzip ファイルにディレクトリが存在する場合のローダーのエラーです。  
+-   ディレクトリ内のすべてのファイルを指定するには、後に、ディレクトリ パスを入力、* ワイルドカード文字です。  ローダーでは、ソース データの場所にある任意のサブディレクトリからのファイルを読み込みません。 Gzip ファイルにディレクトリが存在する場合のローダーのエラーです。  
   
 -   ディレクトリ内には、一部のファイルを指定するには、文字の組み合わせを使用して、* ワイルドカードです。  
   
@@ -219,7 +220,7 @@ ASCII ファイルの場合は、null 値は区切り記号を連続して配置
 データ ファイルから読み込まれるデータの文字エンコーディング型を指定します。 (既定値) の ASCII、UTF8、UTF16、または UTF16BE、UTF16 リトル エンディアンあり UTF16BE はビッグ エンディアンこともできます。 これらのオプションは、大文字小文字を区別します。  
   
 **-t** *field_delimiter*  
-各フィールド (列)、行区切り記号。 フィールド区切り記号は、1 つ以上のこれらのエスケープ文字の ASCII または ASCII 16 進値には.  
+各フィールド (列)、行区切り記号。 フィールド区切り記号は、これらのエスケープ文字の ASCII または ASCII の 16 進値の 1 つ以上です。  
   
 |名前|エスケープ文字|16 進の文字|  
 |--------|--------------------|-----------------|  
@@ -368,9 +369,9 @@ dym
 入力ファイルでは、2010 年 3 月 4 日の例:04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format*カスタム日付形式は、(例: 年/月/日) 旧バージョンとの互換性を保つのために含まれるとします。 dwloader は、カスタム日付形式 enfoce されません。 代わりに、カスタム日付形式を指定する**dwloader** ymd、ydm、年 (mdy)、myd、dym、または dmy の対応する設定に変換されます。  
+*custom_date_format*カスタム日付形式は、(例: 年/月/日) 旧バージョンとの互換性を保つのために含まれるとします。 dwloader のでは、カスタムの日付の書式は適用されません。 代わりに、カスタム日付形式を指定する**dwloader** ymd、ydm、年 (mdy)、myd、dym、または dmy の対応する設定に変換されます。  
   
-たとえば、-d 年/月/日を指定すると dwloader のすべての日付の最初に、1 か月の注文を入力し、日、年 (mdy) し、期待しています。 2 文字の月、2 桁の日、およびカスタム日付形式で指定された 4 桁の年は適用されません。 日付形式は、-d 年/月/日の場合、入力ファイルで日付を形式指定できる方法の例をいくつか次に示します。01/02/2013、Jan.02.2013、2013 年 1 月 2  
+たとえば、-d 年/月/日を指定すると dwloader のすべての日付の最初に、1 か月の注文を入力し、日、年 (mdy) し、期待しています。 2 文字の数か月、2 桁の日、およびカスタム日付形式で指定された 4 桁の年は適用されません。 日付形式は、-d 年/月/日の場合、入力ファイルで日付を形式指定できる方法の例をいくつか次に示します。01/02/2013、Jan.02.2013、2013 年 1 月 2  
   
 包括的な書式設定については、次を参照してください。[データ型の変換規則 dwloader の](dwloader-data-type-conversion-rules.md)します。  
   
@@ -481,7 +482,10 @@ C に-e を使用すると、-e の操作に最初に発生します。 空白�
 ターゲット アプライアンスが信頼された証明機関から有効な SQL Server PDW の証明書を確認します。 これを使用して、対象外のデータを確保しやすくが攻撃者によって盗ま、不正な場所に送信します。 証明書は、アプライアンスに既にインストールする必要があります。 証明書をインストールする唯一の方法では、アプライアンス管理者は、Configuration Manager ツールを使用してインストールします。 かどうかかわからないアプライアンスがインストールされている信頼された証明書を持つかどうかは、アプライアンス管理者に問い合わせてください。  
   
 **-se**  
-空のファイルの読み込みをスキップします。 これも空の gzip ファイルを圧縮解除をスキップします。  
+空のファイルの読み込みをスキップします。 これも空の gzip ファイルを圧縮解除をスキップします。
+
+**-l**  
+CU7.4 更新により、利用可能では、読み込むことができるバイト単位での行の最大長を指定します。 有効な値は、32768 と 33554432 間の整数です。 のみ、必要なときに使用して、これは、クライアントとサーバーでより多くのメモリを割り当てます (32 KB より大きい) サイズの大きい行を読み込みます。
   
 ## <a name="return-code-values"></a>リターン コードの値  
 0 (成功) またはその他の整数値 (失敗)  
@@ -542,7 +546,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 -   **upsert** -アップサート ステージング テーブルにデータをロードおよび最終的なテーブルにステージング テーブルからマージ操作を実行します。 Upsert では、最終的なテーブルに排他ロックは必要ありません。 Upsert を使用する場合、パフォーマンスが異なる場合があります。 環境内で動作をテストします。  
   
 ### <a name="locking-behavior"></a>ロック動作  
-**Append モード ロック**  
+**ロックのモードを追加します。**  
   
 追加 (-m 引数を使用して) 複数のトランザクション モードで実行できますが、トランザクションの安全ではありません。 そのための追加 (-m 引数を使用) せずにトランザクション操作として使用する必要があります。 残念ながら、最終的な INSERT SELECT 操作中にトランザクション モードが現在約 6 倍よりも低い複数のトランザクション モードです。  
   
@@ -600,7 +604,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-次のスクリプト スニペットは、DimAccount し、DimCurrency テーブルにデータを読み込む dwloader を使用します。 このスクリプトは、イーサネット アドレスを使用しています。 InfiniBand を使用していた場合、サーバーがなります *< appliance_name >*`-SQLCTL01`します。  
+次のスクリプト スニペットは、DimAccount し、DimCurrency テーブルにデータを読み込む dwloader を使用します。 このスクリプトは、イーサネット アドレスを使用しています。 InfiniBand を使用していた場合、サーバーがなります *< appliance_name >* `-SQLCTL01`します。  
   
 ```  
 set server=10.193.63.134  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ded40a4ceca02e56f78207c35ff174f2d09feb07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746654"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068809"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>[集計オプションの設定] (集計のデザイン ウィザード)
   **[集計オプションの設定]** ページを使用すると、集計のデザイン プロセスを開始したり、生成する集計のストレージ制限やパフォーマンス制限を指定したりできます。  
@@ -45,7 +44,7 @@ ms.locfileid: "62746654"
  **リセット**  
  このページにある集計のオプションをすべて既定値にリセットします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   

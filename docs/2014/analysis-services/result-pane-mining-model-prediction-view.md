@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.result.f1
@@ -13,12 +12,12 @@ ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748214"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070177"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>[結果] ペイン ([マイニング モデル予測] ビュー)
   **[結果]** ペインには、予測クエリ ビルダーの **[デザイン]** ビューで作成したデータ マイニング予測クエリの結果が表示されます。 グリッド内で選択した範囲または結果のグリッド全体をクリップボードにコピーできます。  
@@ -36,7 +35,7 @@ ms.locfileid: "62748214"
  **クエリ結果を更新します。**  
  予測クエリを再処理します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [予測クエリ ビルダー &#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)   
  [データ マイニング クエリ インターフェイス](data-mining/data-mining-query-tools.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](/sql/dmx/data-mining-extensions-dmx-statements)  

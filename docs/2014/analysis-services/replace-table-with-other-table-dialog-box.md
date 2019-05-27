@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
@@ -15,12 +14,12 @@ ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748304"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070272"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>[テーブルと他のテーブルとの置換] ダイアログ ボックス
   **の** [テーブルと他のテーブルとの置換] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、データ ソース ビュー内の既存のテーブルを、まだデータ ソース ビューに含まれていない、基になるデータ ソース内のテーブルで置き換えることができます。 **[テーブルと他のテーブルとの置換]** ダイアログ ボックスを表示するには、 **データ ソース ビュー デザイナー** の **[ダイアグラム]** ペインまたは **[テーブル]** ペインでテーブル名を右クリックし、 **[テーブルの置換]** の **[他のテーブルを使用]** をクリックします。  
@@ -38,7 +37,7 @@ ms.locfileid: "62748304"
  **システム オブジェクトを表示します。**  
  選択されたデータ ソースのシステム オブジェクトが **[グリッド]** に表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   

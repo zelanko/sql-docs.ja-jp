@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069250"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>[テーブルとビューの選択] (データ ソース ビュー ウィザード) (Analysis Services)
   **[テーブルとビューの選択]** ページを使用すると、データ ソース ビューに含めるテーブルまたはビューをデータ ソースから選択できます。  
@@ -39,7 +38,7 @@ ms.locfileid: "62747126"
   
  次の表に一覧表示されているワイルドカード文字をフィルター文字列に含めることができます。  
   
-|ワイルドカード文字|[値]|  
+|ワイルドカード文字|値|  
 |------------------------|-----------|  
 |**\***|任意の文字列|  
 |**%**|任意の文字列|  
@@ -52,7 +51,7 @@ ms.locfileid: "62747126"
  **関連テーブルを追加します。**  
  **[含まれているオブジェクト]** の一覧に関連するすべてのテーブルを追加します。 このオプションではビューを追加することはできません。 ただし、パーティション テーブルは追加できます。 ウィザードの **[名前の一致]** ページで名前の一致条件を選択した場合、このオプションは選択された条件に従って、論理的な関連テーブルも含みます。 テーブルには、新しく追加された関連テーブルに関連している場合や、元のテーブルと同一の構造を持つ場合のテーブルも含まれます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ ソース ビュー ウィザードの F1 ヘルプ&#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)   
  [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

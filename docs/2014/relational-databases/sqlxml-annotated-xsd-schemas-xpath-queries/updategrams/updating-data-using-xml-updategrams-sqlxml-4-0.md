@@ -23,15 +23,15 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131510"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014677"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの更新 (SQLXML 4.0)
   既存のデータを更新するときに、両方を指定する必要があります、 **\<する前に >** と**\<後 >** ブロックします。 指定した要素、 **\<する前に >** と**\<後 >** ブロックが、必要な変更について説明します。 アップデート グラムで指定されている要素を使用して、 **\<する前に >** データベースの既存のレコードを識別するためにブロックします。 内で、対応する要素、 **\<後 >** ブロックは、更新操作を実行した後、レコードの表示方法を示します。 アップデート グラムからこの情報は、一致する SQL ステートメントが作成、 **\<後 >** ブロックします。 そのステートメントによってデータベースが更新されます。  

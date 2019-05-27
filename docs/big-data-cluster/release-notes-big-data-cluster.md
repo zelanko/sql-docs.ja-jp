@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993356"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014990"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -37,6 +37,7 @@ ms.locfileid: "65993356"
 | 記憶域の強化 | ログとデータのさまざまなストレージ構成のサポート。 また、クラスターのビッグ データの永続ボリューム要求の数が削減されました。 |
 | 複数のコンピューティング プール インスタンス | 複数のコンピューティング プール インスタンスをサポートします。 |
 | 新しいプールの動作と機能 | コンピューティング プールは既定で記憶域プールおよびプールの操作に使用ようになりましたが、 **ROUND_ROBIN**のみに配布します。 データのプールを使用できるよう、新しい新しい**レプリケートされた**分布の種類は、同じデータがすべてのデータ プール インスタンスに存在することを意味します。 |
+| 外部テーブルの機能強化 | HADOOP データ ソースの外部テーブルは、これを読むサイズ最大 1 MB の行を入力します。 外部テーブル (ODBC、記憶域プール、データ プール) ここでサポート行、幅、SQL Server のテーブルと同じです。 |
 
 ### <a name="known-issues"></a>既知の問題
 

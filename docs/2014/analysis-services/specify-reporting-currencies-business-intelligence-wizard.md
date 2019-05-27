@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
@@ -13,12 +12,12 @@ ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746545"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068207"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>[レポート用通貨の指定] (ビジネス インテリジェンス ウィザード)
   **[レポート用通貨の指定]** ページを使用すると、**[換算の種類の選択]** ページで指定した多対多または一対多の換算に対応できる通貨換算機能に、レポート用通貨を定義できます  (レポート用通貨とは、**[メジャーの選択]** ページで選択されたメジャーの値の換算に使用される通貨です)。通貨ディメンションから選択したメンバーにより、ビジネス インテリジェンス ウィザードで生成される通貨換算のレポート用通貨ディメンションが定義されます。  
@@ -32,7 +31,7 @@ ms.locfileid: "62746545"
   
  特定のメンバーをレポート用通貨ディメンションに含めるには、そのメンバーをオンにします。 特定のメンバーを除外するには、そのメンバーをオフにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

@@ -17,7 +17,7 @@ ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62722474"
@@ -27,11 +27,11 @@ ms.locfileid: "62722474"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングは、ドリルスルーの次の 2 つのオプションを提供します。  
   
--    **モデル ケース**へのドリルスルー  
+-    **モデル ケース** へのドリルスルー  
   
      モデル_ケースへのドリルスルーがクラスターまたはデシジョン ツリーの分岐としてモデルなどの特定のパターンから移動する場合に使用されるのと、個々 のケースに関する詳細を表示します。  
   
--    **構造ケース**へのドリルスルー  
+-    **構造ケース** へのドリルスルー  
   
      構造ケースのドリルスルーは、モデル内で使用できない情報が構造に含まれている際に使用します。 たとえば、構造のデータとして顧客の連絡先情報が含まれていても、クラスター モデルでは使用しません。 しかし、モデルを作成した後に、特定のクラスターにグループ化された顧客に関する連絡先情報を取得する必要が生じる場合もあります。  
   

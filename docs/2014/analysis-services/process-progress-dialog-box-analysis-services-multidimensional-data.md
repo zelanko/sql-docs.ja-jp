@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processprogress.f1
@@ -13,12 +12,12 @@ ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 056e29133faf174cadc790f71d999417e1eb4d84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748814"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070679"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>[処理の進行状況] ダイアログ ボックス (Analysis Services - 多次元データ)
   **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [処理の進行状況] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で処理を監視できます。 **[処理の進行状況]** ダイアログ ボックスは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクト上で処理が開始される場合に表示されます。  
@@ -39,7 +38,7 @@ ms.locfileid: "62748814"
  **詳細を表示します。**  
  **[詳細表示]** ダイアログ ボックスを表示して、**状態ツリー ビュー**で選択したアイテムに関する詳細を表示します。 **[詳細表示]** ダイアログ ボックスの詳細については、「[[詳細表示] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](view-details-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

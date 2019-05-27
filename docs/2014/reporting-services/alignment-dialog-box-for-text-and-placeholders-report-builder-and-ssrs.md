@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10136"
@@ -16,12 +15,12 @@ ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233451"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110036"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>テキストとプレースホルダーの [配置] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[配置]** タブをクリックすると、選択したセルまたはデータ領域内で値の配置を調整できます。 テキスト ボックスでは、個々のテキストの横方向の配置の書式のみを設定できます。 テキスト ボックスに余白の値を設定する場合やテキストを縦方向に整列させる場合は、対応するテキスト ボックス プロパティを使用します。 詳細については、次を参照してください。[テキスト ボックスのプロパティ ダイアログ ボックスで、配置&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)します。  

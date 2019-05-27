@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.modifyconnections.f1
@@ -13,12 +12,12 @@ ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703196"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077682"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>[マッピングの変更] ダイアログ ボックス (マイニング精度チャート)
   **[マッピングの変更]** ダイアログ ボックスを使用すると、入力列をマイニング モデルの列と結合する方法を変更できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 列が列名とデータ型に基づいて自動的にマップされますが、このダイアログ ボックスを使用して列マッピングを変更することができます。 列マッピングを変更する場合は、外部データ ソースにある列のデータ型とコンテンツの種類が、テスト対象のマイニング モデルにある列のデータ型とコンテンツの種類と一致していることを確認する必要があります。  

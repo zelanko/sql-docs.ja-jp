@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61e0cc160e8e2881e7c2832956358424c24d97dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5e93d3e46dcad5331b765fbfa440297c34bbb98
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063464"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108756"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサーバー モードを別のモードにアップグレードまたは変換することはできません。 たとえば、ネイティブ モードのレポート サーバーを SharePoint モードにアップグレードまたは変換することはできません。 モードが異なると使用されるデータベース スキーマも異なるため、モード間でレポート サーバー データベースをコピーすることはできません。 コンテンツはレポート サーバー間で移行できます。 使用するツールは、移行元サーバーと移行先サーバーに対して構成されたレポート サーバー モードの種類によって異なります。  
@@ -48,7 +47,7 @@ ms.locfileid: "63063464"
 |[レポート]|はい|移行後にデータソースのパスワードを再入力します。|  
 |データソース|はい|移行後にレポートとデータソースとの間のリンクを再設定します。|  
 |モデル|はい||  
-|[データセット]|はい||  
+|[データセット]|[はい]||  
 |レポート パーツ||移行後にレポート パーツへのパスを確認または更新します。|  
 |Schedules|はい|ListSchedules メソッドに関する説明 (「 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)」) を参照してください。|  
 |サブスクリプション|はい|Listsubscriptions メソッドを参照してください[Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)と ChangeSubscriptionOwner メソッド。 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  

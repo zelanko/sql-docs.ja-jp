@@ -133,7 +133,7 @@ ms.locfileid: "65404084"
   
 6.  **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-7.   **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
+7.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
 8.  **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "65404084"
   
 13. **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-14.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
+14. **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
 15. **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   

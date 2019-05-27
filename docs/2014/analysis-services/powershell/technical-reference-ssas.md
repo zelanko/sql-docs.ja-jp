@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, technical reference
@@ -15,12 +14,12 @@ ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ac8e3de76709f4ae8e4839d79d1f40aae9195ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea1514b8b4e029537958e74fcdf20497b1e22d00
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748897"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070836"
 ---
 # <a name="technical-reference-ssas"></a>テクニカル リファレンス (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用および管理するためのツール、言語、および PowerShell のリファレンス ドキュメントがあります。  
@@ -46,7 +45,7 @@ ms.locfileid: "62748897"
  ![小さいファイル フォルダー アイコン](../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**ユーザー インターフェイス リファレンス**  
  [ユーザー インターフェイス リファレンス&#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
  [Analysis Services のスキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
  [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   

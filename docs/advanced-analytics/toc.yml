@@ -1,6 +1,6 @@
 - name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-- name: SQL Server の ML とプログラミング拡張機能に関するドキュメント
+- name: SQL Server Machine Learning Services のドキュメント
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
 - name: 機械学習の拡張機能 (R、Python)
   items:
@@ -12,18 +12,6 @@
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: スタンドアロン サーバー
       href: ../advanced-analytics/r/r-server-standalone.md
-- name: Java 拡張機能
-  items:
-    - name: SQL での Java コードの実行
-      href: ../advanced-analytics/java/extension-java.md
-    - name: SQL から Java を呼び出す方法
-      href: ../advanced-analytics/java/howto-call-java-from-sql.md
-    - name: Java サンプル
-      href: ../advanced-analytics/java/java-first-sample.md
-    - name: SDK for Java
-      href: ../advanced-analytics/java/java-sdk.md
-    - name: Java および SQL データ型
-      href: ../advanced-analytics/java/java-sql-datatypes.md
 - name: インストール
   items:
     - name: SQL Server 2019 の相違点

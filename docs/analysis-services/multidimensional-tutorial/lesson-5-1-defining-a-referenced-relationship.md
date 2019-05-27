@@ -85,7 +85,7 @@ ms.locfileid: "65404134"
   
 2.  **Geography Key** 属性を **Reseller** ディメンションに追加するには、 **[データ ソース ビュー]** ペインで **[GeographyKey]** を右クリックし、 **[列から新しい属性を作成]** をクリックします。  
   
-3.   **[属性]** ペインで、 **[Geography Key]** をクリックします。次に、[プロパティ] ウィンドウで **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定します。さらに、 **AttributeHierarchyOrdered** プロパティを **False**に設定し、 **AttributeHierarchyVisible** プロパティを **False**に設定します。  
+3.  **[属性]** ペインで、 **[Geography Key]** をクリックします。次に、[プロパティ] ウィンドウで **AttributeHierarchyOptimizedState** プロパティを **NotOptimized**に設定します。さらに、 **AttributeHierarchyOrdered** プロパティを **False**に設定し、 **AttributeHierarchyVisible** プロパティを **False**に設定します。  
   
     Reseller ディメンションの Geography Key 属性は、Geography ディメンションを Reseller Sales ファクト テーブルにリンクするためにのみ使用されます。 Geography Key 属性は表示しないため、この属性階層の表示を定義する値はありません。 また、この属性階層の並べ替えや最適化を行っても、処理パフォーマンスを低下させるだけです。 しかし、2 つのディメンション間を結ぶリンクとしてのみ機能するように、この属性を有効にする必要があります。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b568790f9a61c01054d4a7225e4a2dbf9a39887
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749253"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071507"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>SharePoint への PowerPivot ソリューションの配置
   SharePoint Server 2010 環境に PowerPivot 機能を追加する 2 つのソリューション パッケージを手動で配置するには、次の手順に従います。 ソリューションの配置は、SharePoint 2010 サーバー上で PowerPivot for SharePoint を構成するために必要な手順です。 必要な手順の完全な一覧を表示するには、次を参照してください。[サーバーの全体管理で PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)します。  
@@ -33,7 +32,7 @@ ms.locfileid: "62749253"
   
  [手順 2:サーバーの全体管理の PowerPivot Web アプリケーション ソリューションを配置します。](#deployCA)  
   
- [手順 3:他の Web アプリケーションに PowerPivot Web アプリケーション ソリューションを配置します。](#deployUI)  
+ [ステップ 3:他の Web アプリケーションに PowerPivot Web アプリケーション ソリューションを配置します。](#deployUI)  
   
  [ソリューションの再配置または取り消し](#retract)  
   

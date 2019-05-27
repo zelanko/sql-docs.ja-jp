@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionpropertiesdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743585"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072157"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>[パーティションのプロパティ] (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのキューブに対してパーティションのプロパティを設定できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "62743585"
 |**プロアクティブ キャッシュ**|**[プロアクティブ キャッシュ]** ページを使用して、 **[選択項目]** ページで選択したパーティションのストレージとプロアクティブ キャッシュ設定の表示と変更を行います。 このページの詳細については、「[[プロアクティブ キャッシュ] &#40;[パーティションのプロパティ] ダイアログ ボックス&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)」を参照してください。|  
 |**エラーの構成**|**[エラーの構成]** ページを使用して、 **[選択項目]** ページで選択したパーティションを処理するためのエラー構成設定の表示と変更を行います。 このページの詳細については、「[キューブ、パーティション、およびディメンションに関する処理のエラー構成 &#40;SSAS - 多次元&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)」を参照してください。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パーティション &#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [リモート パーティション](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

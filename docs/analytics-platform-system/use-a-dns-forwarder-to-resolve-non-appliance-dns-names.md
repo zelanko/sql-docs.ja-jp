@@ -17,14 +17,14 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "63243791"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS フォワーダーを使用して、Analytics Platform System で非アプライアンス DNS 名を解決するのには
-Active Directory ドメイン サービス ノードで DNS フォワーダーを構成することができます (**_アプライアンス\_ドメイン_-AD01**と**_アプライアンス\_ドメイン_-AD02**) のスクリプトとソフトウェア アプリケーションの外部サーバーへのアクセスを許可する、Analytics Platform System appliance。  
+Active Directory ドメイン サービス ノードで DNS フォワーダーを構成することができます ( **_アプライアンス\_ドメイン_-AD01** と **_アプライアンス\_ドメイン_-AD02** ) のスクリプトとソフトウェア アプリケーションの外部サーバーへのアクセスを許可する、Analytics Platform System appliance。  
   
 ## <a name="ResolveDNS"></a>DNS フォワーダーを使用します。  
 Analytics Platform System appliance では、アプライアンスではありません。 サーバーの DNS 名の解決されないように構成されます。 Windows Software Update Services (WSUS) など、一部のプロセスは、アプライアンスの外部にあるサーバーにアクセスする必要があります。 この使用シナリオの Analytics プラットフォームの DNS システムをサポートするためには、外部 DNS サーバーを使用して、アプライアンス外の名前を解決するには、Analytics Platform System のホストとバーチャル マシン (Vm) を許可する外部名転送をサポートするために構成できます。 DNS サフィックスのカスタム構成サポートされていません、つまり、非アプライアンス サーバー名を解決するのには、完全修飾ドメイン名を使用する必要があります。  
   
 **DNS の GUI で DNS フォワーダーを作成するには**  
   
-1.  ログオン、 **_アプライアンス\_ドメイン_-AD01**ノード。  
+1.  ログオン、 **_アプライアンス\_ドメイン_-AD01** ノード。  
   
 2.  DNS マネージャーを開き (**dnsmgmt.msc**)。  
   
@@ -36,13 +36,13 @@ Analytics Platform System appliance では、アプライアンスではあり�
   
 6.  名前解決を提供する外部の DNS サーバーの IP アドレスを入力します。 Vm と、アプライアンス内のサーバー (ホスト) は、完全修飾ドメイン名を使用して外部のサーバーに接続されます。  
   
-7.  手順 1. ~ 6. を繰り返します、 **_アプライアンス\_ドメイン_-AD02**ノード  
+7.  手順 1. ~ 6. を繰り返します、 **_アプライアンス\_ドメイン_-AD02** ノード  
   
 **Windows PowerShell を使用して、DNS フォワーダーを作成するには**  
   
-1.  ログオン、 **_アプライアンス\_ドメイン_-AD01**ノード。  
+1.  ログオン、 **_アプライアンス\_ドメイン_-AD01** ノード。  
   
-2.  次の Windows PowerShell スクリプトの実行、 **_アプライアンス\_ドメイン_-AD01**ノード。 Windows PowerShell スクリプトを実行する前に、非アプライアンス DNS サーバーの IP アドレスと IP アドレスを置き換えます。  
+2.  次の Windows PowerShell スクリプトの実行、 **_アプライアンス\_ドメイン_-AD01** ノード。 Windows PowerShell スクリプトを実行する前に、非アプライアンス DNS サーバーの IP アドレスと IP アドレスを置き換えます。  
   
     ```  
     $DNS=Get-WmiObject -class "MicrosoftDNS_Server"  -Namespace "root\microsoftdns"  
@@ -50,7 +50,7 @@ Analytics Platform System appliance では、アプライアンスではあり�
     $DNS.put()  
     ```  
   
-3.  同じコマンドを実行、 **_アプライアンス\_ドメイン_-AD02**ノード。  
+3.  同じコマンドを実行、 **_アプライアンス\_ドメイン_-AD02** ノード。  
   
 ## <a name="configuring-dns-resolution-for-wsus"></a>WSUS の DNS 解決の構成  
 SQL Server PDW 2012 では、統合のサービスと機能の修正を提供します。 SQL Server PDW では、Microsoft Update と他の Microsoft のテクノロジのサービスを使用します。 アプライアンスは、更新プログラムを有効にするには、か、企業 WSUS リポジトリまたは Microsoft のパブリック WSUS リポジトリに接続できる必要があります。  

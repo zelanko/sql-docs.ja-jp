@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.newdatabase.f1
@@ -13,12 +12,12 @@ ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bef5adba44a5202e3cc0fc7f2eb48fae08a0e3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed652c47be4bfbe2783f5138bb80f8ed9c37dd32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743720"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072304"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>[新しいデータベース] ダイアログ ボックス (Analysis Services)
   **の** [新しいデータベース] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、新しい空の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを作成できます。 **[新しいデータベース]** ダイアログ ボックスを表示するには、**オブジェクト エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの **[データベース]** フォルダーを右クリックし、**[新しいデータベース]** をクリックします。  
@@ -36,7 +35,7 @@ ms.locfileid: "62743720"
 |**[Default]**|このオプションを選択すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]に既定のユーザー アカウントの資格情報が使用されます。 このオプションでは、オブジェクトの処理、サーバーの同期、**OpenQuery** データ マイニング ステートメントの実行に、データベースの既定の設定が使用されます。 データベース レベルでの既定設定の指定に関する詳細については、「[多次元データベースのプロパティ設定 &#40;Analysis Services&#41;](multidimensional-models/set-multidimensional-database-properties-analysis-services.md)」をご覧ください。<br /><br /> 既定では、`DataSourceImpersonationInfo`データベース プロパティに設定されて**サービス アカウントを使用して、** します。 `DataSourceImpersonationInfo` プロパティの値に関係なく、不一致バインド、ROLAP クエリ、ローカル キューブ、データ マイニング モデルには現在のユーザーの資格情報が使用されます。|  
 |**[説明]**|新しい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースの説明を入力します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [多次元モデル データベース (SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   

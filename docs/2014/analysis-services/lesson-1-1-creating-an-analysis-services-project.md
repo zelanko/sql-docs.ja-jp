@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730264"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079358"
 ---
 # <a name="creating-an-analysis-services-project"></a>Analysis Services プロジェクトの作成
   次のタスクで使用して[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]新たに作成する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]という名前のプロジェクト`Analysis Services Tutorial`を基に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト テンプレート。 *プロジェクト* とは、関連するオブジェクトのコレクションです。 プロジェクトはソリューションに追加され、各ソリューションは 1 つ以上のプロジェクトで構成されます。 詳しくは、「[Analysis Services プロジェクトの作成 (SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)」を参照してください。  

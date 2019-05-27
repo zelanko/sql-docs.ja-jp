@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.selectdataconnection.f1
@@ -13,12 +12,12 @@ ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f425112a324cbef3bc18ea6ddabf671d5bcd20c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30e727a207c0aeec93f945cc6f550b0e8f1f56f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747744"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069498"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>[接続の定義方法を選択します] (データ ソース ウィザード) (Analysis Services)
   **[接続の定義方法を選択します]** ページを使用すると、データ ソースのデータ接続を作成したり選択したりできます。  

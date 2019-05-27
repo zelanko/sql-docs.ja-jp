@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743248"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071807"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>ディスクの使用領域の構成 (PowerPivot for SharePoint)
   PowerPivot for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、PowerPivot データベースをキャッシュします。 後ですばやく再読み込みして新しい要求を処理できるように、メモリに読み込まれているすべての PowerPivot データベースが最初にディスクにキャッシュされます。 既定では、PowerPivot for SharePoint は、使用できるすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  

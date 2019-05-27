@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994154"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014946"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル:Transact SQL を使用した SQL Server のデータ プールにデータを取り込む
 
@@ -85,7 +85,7 @@ ms.locfileid: "65994154"
 
 次の手順では、前の手順で作成された外部テーブルを使用してデータ プールにサンプル web クリック ストリーム データを取り込みます。
 
-1. 使用してデータ プールにデータを挿入するクエリの変数を定義します。 CTP 2.3 以前、**モデル.sp_data_pool_table_insert_data**ストアド プロシージャが必要です。 CTP 2.4、後で、使用する、`INSERT INTO`データ プールに、クエリから結果を挿入するステートメント (、 **web_clickstream_clicks_data_pool**外部テーブル)。
+1. 使用して、`INSERT INTO`データ プールに、クエリから結果を挿入するステートメント (、 **web_clickstream_clicks_data_pool**外部テーブル)。
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

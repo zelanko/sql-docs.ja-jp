@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165014"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109434"
 ---
 # <a name="data-source-selection-page-report-manager"></a>[データ ソースの選択] ページ (レポート マネージャー)
   [データ ソースの選択] ページを使用すると、レポートまたはレポート モデルで使用する既存の共有データ ソース アイテムを選択できます。 このページは、異なるデータ ソースを選択する場合も使用します。 データ ソースの種類または接続文字列を表示するには、共有データ ソースに移動してプロパティ ページを開く必要があります。  
@@ -37,7 +36,7 @@ ms.locfileid: "63165014"
 5.  プロパティ ペインで **[共有データ ソース]** を選択し、 **[参照]** をクリックします。  
   
 ## <a name="options"></a>および  
- **[場所]**  
+ **場所**  
  共有データ ソース アイテムへの完全パスを、ルート フォルダー名から指定します。 共有データ ソース アイテムを参照する際は、パス名を入力することも、ツリー ビューを使用することもできます。  
   
  **ツリー ビュー**  

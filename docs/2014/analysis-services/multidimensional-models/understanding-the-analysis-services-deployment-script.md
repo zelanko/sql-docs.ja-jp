@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, scripts
@@ -16,12 +15,12 @@ ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84bc0e699a0fb47b78b1b0d075a0ef87c8a4dcc3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9436d33cdc99cf979509a40f06ceea15c0cd765
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62741112"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072657"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Analysis Services 配置スクリプトについて
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードによって生成される XMLA 配置スクリプトは、次の 2 つのセクションで構成されています。  
@@ -35,7 +34,7 @@ ms.locfileid: "62741112"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードでは、単一の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースへのオブジェクトの配置のみを行います。 サーバー レベルのオブジェクトまたはデータは配置しません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)   
  [配置スクリプトを作成するための入力ファイルについて](deployment-script-files-input-used-to-create-deployment-script.md)  
   

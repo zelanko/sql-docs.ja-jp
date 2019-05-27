@@ -4,18 +4,18 @@ description: この記事には、リリース ノートとサポートされる
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: eb62c8cf4efb9a2ca2d59ea55ba194559eda9962
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
-ms.translationtype: MT
+ms.openlocfilehash: 45fad1a973c06fd487dc3b2a92b7c45679f8bc93
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775410"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036929"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux 上の SQL Server 2019 preview リリース ノート
 
@@ -48,6 +48,7 @@ SQL Server を対象とするほとんどの既存クライアント ツール�
 
 | リリース               | バージョン       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CTP 3.0](#CTP30)     | 15.0.1500.28  | 2019-5-22    |
 | [CTP 2.5](#CTP25)     | 15.0.1500.28  | 2019-4-24    |
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
@@ -67,6 +68,26 @@ SQL Server の既存のパッケージを更新する場合は、最新の CU �
 - [Linux 上の SQL Server 2019 プレビューの Machine Learning サービスの R と Python のサポートをインストールします。](sql-server-linux-setup-machine-learning.md)
 - [SQL Server エージェントを有効にします。](sql-server-linux-setup-sql-agent.md)
 - [PolyBase の Linux のセットアップ](../relational-databases/polybase/polybase-linux-setup.md)
+
+## <a id="CTP30"></a> CTP 3.0 (月 2019)
+
+次のセクションでは、パッケージの場所を提供し、CTP 3.0 に関する既知の問題を離します。 SQL Server 2019 上の Linux の新機能の詳細については、次を参照してください。、[新機能については SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)します。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージのインストールでの次の表の情報の RPM および Debian パッケージをダウンロードできます。
+
+| [パッケージ] | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat の RPM パッケージ | 15.0.1600.8-1 | [エンジンの RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1600.8-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1600.8-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1600.8-1.x86_64.rpm)</br>[機能拡張の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1600.8-1.x86_64.rpm)</br>[Java の機能拡張の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1600.8-1.x86_64.rpm)</br>[PolyBase の RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1600.8-1.x86_64.rpm)|
+| SLES RPM パッケージ | 15.0.1600.8-1 | [mssql server エンジンの RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1600.8-1.x86_64.rpm)</br>[高可用性の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1600.8-1.x86_64.rpm)</br>[フルテキスト検索の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1600.8-1.x86_64.rpm)</br>[機能拡張の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1600.8-1.x86_64.rpm)</br>[Java の機能拡張の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1600.8-1.x86_64.rpm)</br>[PolyBase の RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1600.8-1.x86_64.rpm)|
+| Debian パッケージを Ubuntu 16.04 | 15.0.1600.8-1 | [エンジンの Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1600.8-1_amd64.deb)</br>[高可用性の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1600.8-1_amd64.deb)</br>[フルテキスト検索の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1600.8-1_amd64.deb)</br>[Debian パッケージの機能拡張](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1600.8-1_amd64.deb)</br>[Java の機能拡張の Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1600.8-1_amd64.deb)</br>[PolyBase の RPM パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1600.8-1_amd64.deb)|
+
+### <a name="known-issues"></a>既知の問題
+
+#### <a id="msdtc"></a> Microsoft 分散トランザクション コーディネーター
+
+現時点では、MSDTC では、認証できないトランザクションが必要です。 たとえばで Windows SQL Server on Linux に SQL Server からのリンク サーバーを使用している Windows クライアント アプリケーションを使用して Linux 上の SQL Server に対して分散トランザクションを開始するか、し、Windows サーバー/クライアントの MSDTC は"No オプションを使用するために必要認証が必要です"。
 
 ## <a id="CTP25"></a> CTP 2.5 (Apr 2019)
 

@@ -205,11 +205,15 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: mssqlctl クラスターのデバッグ
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+                - name: mssqlctl クラスターのエンドポイント
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
+                - name: mssqlctl クラスターの状態
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
             - name: ストレージ
               items:
-                - name: mssqlctl ストレージ
+                - name: mssqlctl クラスターの記憶域プール
                   href: ../big-data-cluster/reference-mssqlctl-storage.md
-                - name: mssqlctl ストレージのマウント
+                - name: mssqlctl クラスターの記憶域プールのマウント
                   href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: ビジネス継続性
   items:
@@ -2379,6 +2383,36 @@
               href: ../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md
             - name: 出力の使用
               href: ../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md
+    - name: 言語拡張
+      items:
+        - name: 概要
+          items:
+            - name: 言語拡張とは
+              href: ../language-extensions/language-extensions-overview.md
+            - name: 新機能
+              href: ../language-extensions/language-extensions-whats-new.md
+        - name: インストール
+          items:
+            - name: Windows に言語拡張をインストールする
+              href: ../language-extensions/install/install-sql-server-language-extensions-on-windows.md
+        - name: チュートリアル
+          items:
+            - name: Java で正規表現を使って文字列を検索する
+              href: ../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
+        - name: 概念
+          items:
+            - name: 機能拡張フレームワーク
+              href: ../language-extensions/concepts/extensibility-framework.md
+        - name: 操作方法ガイド
+          items:
+            - name: SQL Server から Java を呼び出す
+              href: ../language-extensions/how-to/call-java-from-sql.md
+            - name: 拡張機能 SDK for Java
+              href: ../language-extensions/how-to/extensibility-sdk-java-sql-server.md
+            - name: Java から SQL データ型
+              href: ../language-extensions/how-to/java-to-sql-data-types.md
+            - name: Java の jar ファイルを作成する
+              href: ../language-extensions/how-to/create-a-java-jar-file-from-class-files.md
     - name: SQL Server Native Client
       href: ../relational-databases/native-client/sql-server-native-client.md
       items:
@@ -4147,6 +4181,8 @@
           href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
         - name: lock pages in memory オプションの有効化
           href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+        - name: メモリ内データベース
+          href: ../relational-databases/in-memory-database.md
         - name: ハイブリッド バッファー プール
           href: ../database-engine/configure-windows/hybrid-buffer-pool.md
         - name: サーバーの認証モードの変更
@@ -10096,6 +10132,8 @@
               href: ../linux/sql-server-linux-setup-ssis.md
             - name: SQL Server Machine Learning Services のインストール
               href: ../linux/sql-server-linux-setup-machine-learning.md
+            - name: SQL Server の言語拡張をインストールする
+              href: ../linux/sql-server-linux-setup-language-extensions.md
             - name: リポジトリの構成
               href: ../linux/sql-server-linux-change-repo.md
         - name: '[構成]'
@@ -11708,6 +11746,10 @@
               href: ../relational-databases/system-catalog-views/sys-event-notification-event-types-transact-sql.md
             - name: sys.extended_procedures
               href: ../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md
+            - name: sys.external_language_files
+              href: ../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md
+            - name: sys.external_languages
+              href: ../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md
             - name: sys.external_libraries
               href: ../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md
             - name: sys.external_library_files
@@ -16502,6 +16544,8 @@
                   href: ../t-sql/statements/alter-event-session-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
                   href: ../t-sql/statements/alter-external-data-source-transact-sql.md
+                - name: EXTERNAL LANGUAGE
+                  href: ../t-sql/statements/alter-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/alter-external-library-transact-sql.md
                 - name: EXTERNAL RESOURCE POOL
@@ -16662,6 +16706,8 @@
                   href: ../t-sql/statements/create-event-session-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
                   href: ../t-sql/statements/create-external-data-source-transact-sql.md
+                - name: EXTERNAL LANGUAGE
+                  href: ../t-sql/statements/create-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/create-external-library-transact-sql.md
                 - name: EXTERNAL FILE FORMAT
@@ -16816,6 +16862,8 @@
                   href: ../t-sql/statements/drop-external-data-source-transact-sql.md
                 - name: EXTERNAL FILE FORMAT
                   href: ../t-sql/statements/drop-external-file-format-transact-sql.md
+                - name: EXTERNAL LANGUAGE
+                  href: ../t-sql/statements/drop-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/drop-external-library-transact-sql.md
                 - name: EXTERNAL RESOURCE POOL

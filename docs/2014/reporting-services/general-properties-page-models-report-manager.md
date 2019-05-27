@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260806"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109109"
 ---
 # <a name="general-properties-page-models-report-manager"></a>[全般] プロパティ ページ、モデル (レポート マネージャー)
   モデル定義 (.smdl) ファイルの名前変更、削除、移動、または置換を行うには、レポート モデルの [全般] プロパティ ページを使用します。 モデルの作成者または変更者、および変更日時の詳細がページの上部に表示されます。  

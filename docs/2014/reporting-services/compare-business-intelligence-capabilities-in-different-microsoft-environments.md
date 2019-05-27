@@ -1,8 +1,7 @@
 ---
 title: Microsoft のさまざまな環境でのビジネス インテリジェンス機能の比較 |Microsoft Docs
 ms.prod: sql-server-2014
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -10,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.openlocfilehash: 13ae9380cc3f034ace5f43d83640eea665cb3b02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267268"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109761"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>さまざまな Microsoft 環境での Business Intelligence 機能の比較
 
@@ -30,15 +29,15 @@ SharePoint Server と SharePoint Online の比較に関する詳細について�
 |BI サイト|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] ギャラリー|いいえ|Power BI サイト|  
 |データ スチュワードシップおよびクエリの共有と管理|いいえ|いいえ|可 **<sup>1</sup>**|  
 |Master Data Services (MDS) と Data Quality Services (DQS) との統合|はい|いいえ|いいえ|  
-|定期データ更新|可 (ただし Power Query データを含むブックはサポートしない)|いいえ|はい|  
+|定期データ更新|可 (ただし Power Query データを含むブックはサポートしない)|いいえ|[はい]|  
 |自然言語クエリ (Q & A)|いいえ|いいえ|可 **<sup>2</sup>**|  
 |予測される予測|いいえ|いいえ|可 **<sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 統合|はい|いいえ|いいえ|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 統合|[はい]|いいえ|いいえ|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 統合 (多次元および表形式)|はい|いいえ|いいえ|  
 |対話型の Power View ダッシュボードを PowerPoint プレゼンテーションにエクスポートする|はい|いいえ|いいえ|  
 |ブラウザー内のダッシュ ボードの作成|はい|いいえ|いいえ|  
-|利用状況の監視|はい|いいえ|はい|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの行ベースのセキュリティの活用|はい|いいえ|いいえ|  
+|利用状況の監視|[はい]|いいえ|[はい]|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの行ベースのセキュリティの活用|[はい]|いいえ|いいえ|  
   
  **<sup>1</sup>**[データ管理におけるデータ スチュワードの役割について](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)と[ビデオ。Power BI の情報管理とデータ スチュワードシップ](https://www.youtube.com/watch?v=8dHOj68ts7c)します。  
   
@@ -53,7 +52,7 @@ SharePoint Server と SharePoint Online の比較に関する詳細について�
 |ブラウザーで Microsoft Excel ブックを表示する|可 (ブックのサイズが 2 GB より小さい場合)|可 (ブックのサイズが 10 MB より小さい場合)|可 (ブックのサイズが 250 MB より小さい場合)|  
 |HTML5 でのブラウザー内のデータ探索|いいえ|いいえ|はい|  
 |レポートとダッシュ ボードにリモートでアクセスするモバイル BI アプリ|いいえ|いいえ|可 **<sup>1</sup>**|  
-|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] をデータ ソースとする Excel ブック **<sup>2</sup>**|はい|いいえ|いいえ|  
+|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] をデータ ソースとする Excel ブック **<sup>2</sup>**|[はい]|いいえ|いいえ|  
 |機能をさまざまなブラウザーやバージョンで使用するための機能|可 (Power View の視覚化以外の場合) **<sup>3</sup>**|可 (ブック ファイルのサイズが 10 MB より小さい場合) **<sup>3</sup>**|可 **<sup>3</sup>**|  
   
  **<sup>1</sup>**[Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba)します。  
