@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -15,12 +14,12 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: df1d06a3d68485576673d8d793385be97dadac55
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190880"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103312"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  

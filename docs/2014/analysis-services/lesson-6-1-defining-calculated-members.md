@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d9411ab88d259718aaa62873e615a62efdd82e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728966"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078401"
 ---
 # <a name="defining-calculated-members"></a>計算されるメンバーの定義
   計算されるメンバーとは、キューブ データ、算術演算子、数値、関数を組み合わせて定義した、ディメンション グループまたはメジャー グループのメンバーです。 たとえば、キューブ内の 2 つの物理的なメジャーの合計を計算する、計算されるメンバーを作成できます。 計算されるメンバーの定義はキューブ内に保存されますが、その値はクエリ時に計算されます。  
@@ -62,7 +61,7 @@ ms.locfileid: "62728966"
   
 7.  **[計算ツール]** ペインの **[メタデータ]** タブで **[Reseller Sales]** を展開します。次に、 **[Reseller Sales-Sales Amount]** を、 **計算式** ペインの **[式]** ボックスにあるプラス符号 (+) の後ろにドラッグします。  
   
-8.   **[書式設定文字列]** ボックスの一覧の **["Currency"]** を選択します。  
+8.  **[書式設定文字列]** ボックスの一覧の **["Currency"]** を選択します。  
   
 9. **[空以外の動作]** ボックスの一覧で、 **Internet Sales-Sales Amount** と **Reseller Sales-Sales Amount**のチェック ボックスをオンにして、 **[OK]** をクリックします。  
   

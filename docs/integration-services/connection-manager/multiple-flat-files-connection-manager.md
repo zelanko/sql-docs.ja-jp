@@ -23,14 +23,18 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0e81e43aa0eafb76b107c30b2bdd07a0a70b60fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 401d146241bae341db981f207f877c18919eaaa2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275728"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728191"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>複数フラット ファイル接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   複数フラット ファイル接続マネージャーを使用すると、パッケージで複数のフラット ファイルのデータにアクセスできます。 たとえば、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、フラット ファイル ソースで複数フラット ファイル接続マネージャーを使用できます。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。  
   
  複数フラット ファイル接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に複数のフラット ファイルの接続を解決する接続マネージャーを作成し、複数フラット ファイル接続マネージャーのプロパティを設定して、複数フラット ファイル接続マネージャーをパッケージの **Connections** コレクションに追加します。  
@@ -237,7 +241,7 @@ ms.locfileid: "58275728"
 |**[出力列の幅]**|格納する値をバイト数で指定します。Unicode ファイルの場合、これは文字数として表示されます。 データ フロー タスクでは、この値を使用してフラット ファイル ソースの出力列の幅を設定します。<br /><br /> 注:オブジェクト モデルでは、このプロパティの名前は MaximumWidth です。|  
 |**DataType**|使用できるデータ型を一覧から選択します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[テキスト修飾子]**|テキスト データがテキスト修飾子文字を使用して修飾されるかどうかを示します。<br /><br /> **True**:フラット ファイルのテキスト データは修飾されます。<br /><br /> **False**:フラット ファイルのテキスト データは修飾されません。|  
-|**名前**|列名を指定します。 既定では列の番号になりますが、わかりやすい一意な名前を選択することもできます。|  
+|**[名前]**|列名を指定します。 既定では列の番号になりますが、わかりやすい一意な名前を選択することもできます。|  
 |**[データ スケール]**|数値データの小数点以下の精度を指定します。 これは小数点以下の桁数を表します。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  
 |**[列区切り記号]**|使用できる列区切り記号の一覧から、列区切り記号を選択します。 テキストに出現しないと思われる区切り記号を選択してください。 固定幅列の場合、この値は無視されます。<br /><br /> **{CR}{LF}** - 列は、復帰と改行の組み合わせで区切られます<br /><br /> **{CR}** - 列は、復帰で区切られます<br /><br /> **{LF}** - 列は、改行で区切られます<br /><br /> **Semicolon {;}** - 列は、セミコロンで区切られます<br /><br /> **Colon {:}** - 列は、コロンで区切られます<br /><br /> **Comma {,}** - 列は、コンマで区切られます<br /><br /> **Tab {t}** - 列は、タブで区切られます<br /><br /> **Vertical bar {&#124;}** - 列は、縦棒で区切られます|  
 |**[データ精度]**|数値データの精度を指定します。 精度とは、桁数です。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。|  

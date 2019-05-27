@@ -1,7 +1,7 @@
 ---
 title: チュートリアル:SQL Server Management Studio (SSMS) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/30/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800976"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620517"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のチュートリアル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-SQL Server Management Studio (SSMS) のチュートリアルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのグラフィカル インターフェイスを提供します。 さらに、データベースなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
+SQL Server Management Studio (SSMS) のチュートリアルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、Azure SQL Database、Azure SQL Database マネージド インスタンス、Azure SQL Data Warehouse、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを構成、監視、管理するためのグラフィカル インターフェイスが用意されています。 さらに、データベースなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
 
@@ -41,9 +41,9 @@ SQL Server Management Studio (SSMS) のチュートリアルでは、 [!INCLUDE[
   
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 これらのチュートリアルを行うと、SSMS 内で使用できるさまざまな機能に慣れることができます。  これらのチュートリアルでは、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能へのアクセス方法について説明します。  
 
-チュートリアルの内容は次のとおりです。 
+チュートリアルの内容は次のとおりです。
 
-  
+
 - [チュートリアル: SSMS を使用した SQL Server に対する接続およびクエリ](connect-query-sql-server.md)
 
     このチュートリアルでは、SQL Server インスタンスに接続する方法を学習します。 新しいデータベースを作成してクエリを実行するための基本的な Transact-SQL (T-SQL) コマンドについても学習します。 
@@ -54,7 +54,7 @@ SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的
 
 - [チュートリアル: SSMS でテンプレートを使用する](templates-ssms.md)
    
-    このチュートリアルでは、SSMS で構築済みのテンプレートを使う方法を学習します。 テンプレートは、さまざまなデータベース管理タスクの Transact-SQL コード スニペットを格納する機能ですが、あまり知られていません。 
+    このチュートリアルでは、SSMS で構築済みのテンプレートを使う方法を学習します。 テンプレートは、さまざまなデータベース管理タスクの Transact-SQL コード スニペットを多数格納している機能ですが、あまり知られていません。 
 
 - [チュートリアル: SSMS を構成する](ssms-configuration.md)
 

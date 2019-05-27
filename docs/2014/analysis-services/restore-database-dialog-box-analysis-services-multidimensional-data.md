@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Restore.f1
@@ -13,12 +12,12 @@ ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9231189bb3bf127c7413a0b5d55ae286a32f42cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748414"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070258"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>[データベースの復元] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[データベースの復元]** ダイアログ ボックスでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) 形式を使用するバックアップ ファイルから [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを復元できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "62748414"
  **パーティション**  
  このページを使用して、ローカル パーティションを指定された場所へ復元したり、リモート パーティションをリモート バックアップ ファイルから復元したりします。 このページの詳細については、「[[パーティション] &#40;[データベースの復元] ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Analysis Services データベースのバックアップと復元](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Event Tracing for Windows ターゲット | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478117"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198315"
 ---
 # <a name="event-tracing-for-windows-target"></a>Event Tracing for Windows ターゲット
 
@@ -60,7 +60,8 @@ ms.locfileid: "58478117"
 |default_etw_session_logfile_size_mb|任意の符号なし整数。 この値は省略可能です。|拡張イベント セッションのログ ファイル サイズ (MB)。 既定値は 20 MB です。|  
 |default_etw_session_buffer_size_kb|任意の符号なし整数。 この値は省略可能です。|拡張イベント セッションのメモリ内バッファーのサイズ (KB)。 既定値は 128 KB です。|  
 |retries|任意の符号なし整数。|ETW サブシステムへのイベントのパブリッシュを再試行する回数。この回数を超えるとイベントが破棄されます。 既定値は 0 です。|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  これらの設定は省略できます。 これらの設定については既定値が使用されます。  
   
  ETW ターゲットには、次のような役割があります。  
@@ -80,19 +81,22 @@ ms.locfileid: "58478117"
     > [!IMPORTANT]  
     >  最初のセッションの開始後にファイル パスを変更することはできません。  
   
--   マネージド オブジェクト フォーマット (MOF) ファイルは *\<インストール パス&gt;* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。  
-  
+-   マネージド オブジェクト フォーマット (MOF) ファイルは *\<インストール パス&gt;* \Microsoft SQL Server\Shared に格納されます。 詳細については、MSDN の「[マネージド オブジェクト フォーマット](https://go.microsoft.com/fwlink/?LinkId=92851)」を参照してください。
+
+<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+-->
+
 ## <a name="adding-the-target-to-a-session"></a>セッションへのターゲットの追加  
  ETW ターゲットを拡張イベント セッションに追加するには、イベント セッションの作成時または変更時に次のステートメントを含める必要があります。  
   
-```  
+```sql
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
  データの表示方法を含む、ETW ターゲットの使用法を示す完全な例の詳細については、「 [拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 拡張イベント ターゲット](targets-for-extended-events-in-sql-server.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1
@@ -13,12 +12,12 @@ ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67ebcc8bcf5c3219d259e4b29eb5c2c737c11df1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748844"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070712"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>[プロアクティブ キャッシュ] ([パーティションのプロパティ] ダイアログ ボックス) (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスの **[プロアクティブ キャッシュ]** ページでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのキューブに対してメジャー グループのパーティションのストレージおよびプロアクティブ キャッシュのプロパティを設定できます。  
@@ -46,7 +45,7 @@ ms.locfileid: "62748844"
  **[オプション]**  
  **[ストレージのオプション]** ダイアログ ボックスを表示し、ストレージ モード、プロアクティブ キャッシュ、通知の各オプションを明示的に設定します。 **[ストレージ設定]** ダイアログ ボックスの詳細については、「[[ストレージ設定] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロアクティブ キャッシュ&#40;パーティション&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [パーティションのプロパティ ダイアログ ボックス&#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [選択範囲&#40;プロパティ ダイアログ ボックスをパーティション分割&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   

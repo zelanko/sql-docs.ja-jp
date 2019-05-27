@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -17,12 +16,12 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 687193b79cdf0bee179062bb40bd49b23ada60d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025893"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102188"
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) には、レポート サーバーに対してユーザーおよびクライアント アプリケーションを認証するための構成可能なオプションがいくつか用意されています。 既定では、レポート サーバーは Windows 統合認証を使用し、クライアントとネットワーク リソースが同じドメインまたは信頼されているドメインに属している場合は、信頼関係があると見なされます。 ネットワーク トポロジおよび組織のニーズに応じて、Windows 統合認証に使用される認証プロトコルをカスタマイズしたり、基本認証を使用したり、自分で提供したカスタムのフォームベースの認証拡張機能を使用したりすることができます。 認証の種類ごとに、個別にオンとオフを切り替えることができます。 レポート サーバーで複数の種類の要求を受け入れる場合は、複数の種類の認証を有効にすることができます。  
@@ -37,7 +36,7 @@ ms.locfileid: "63025893"
   
 |認証の種類の名前|HTTP 認証レイヤーの値|既定で使用|説明|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
-|RSWindowsNegotiate|ネゴシエート|はい|Windows 統合認証に対して Kerberos が最初に試行されますが、レポート サーバーへのクライアント要求に対して Active Directory でチケットを付与できない場合は NTLM に戻ります。 ネゴシエートは、チケットが使用できない場合にのみ NTLM に戻ります。 チケットがないのではなく、最初の試行でエラーになった場合は、レポート サーバーで 2 回目の試行は行われません。|  
+|RSWindowsNegotiate|ネゴシエート|[はい]|Windows 統合認証に対して Kerberos が最初に試行されますが、レポート サーバーへのクライアント要求に対して Active Directory でチケットを付与できない場合は NTLM に戻ります。 ネゴシエートは、チケットが使用できない場合にのみ NTLM に戻ります。 チケットがないのではなく、最初の試行でエラーになった場合は、レポート サーバーで 2 回目の試行は行われません。|  
 |RSWindowsNTLM|NTLM|はい|Windows 統合認証に NTLM を使用します。<br /><br /> 資格情報は、他の要求で委任または権限借用されません。 後続の要求は、新しい要求/応答シーケンスに従います。 ネットワークのセキュリティ設定によっては、ユーザーは資格情報または認証要求を透過的に処理するように要求される場合があります。|  
 |RSWindowsKerberos|Kerberos|いいえ|Windows 統合認証に Kerberos を使用します。 サービス アカウントのセットアップ サービス プリンシパル名 (SPN) を設定して、Kerberos を構成する必要があります。そのためには、ドメイン管理者権限が必要です。 Kerberos での ID 委任を設定した場合は、レポートを要求したユーザーのトークンを使用して、レポート データを提供する別の外部データ ソースに接続することもできます。<br /><br /> RSWindowsKerberos を指定する前に、使用しているブラウザーの種類で実際にサポートされていることを確認してください。 Internet Explorer を使用している場合、Kerberos 認証はネゴシエートを通してのみサポートされます。 Internet Explorer では、Kerberos を直接指定する認証要求は作成されません。|  
 |RSWindowsBasic|Basic|いいえ|基本認証は、HTTP プロトコルで定義され、レポート サーバーへの HTTP 要求の認証にのみ使用できます。<br /><br /> HTTP 要求で資格情報が base64 エンコードとして渡されます。 基本認証を使用した場合、ユーザー アカウント情報をネットワークで送信する前に Secure Sockets Layer (SSL) で暗号化できます。 SSL は、クライアントからレポート サーバーに接続要求を送信するための暗号化されたチャネルを HTTP TCP/IP 接続で提供します。 詳細については、 [TechNet Web サイトの「](https://go.microsoft.com/fwlink/?LinkId=71123) SSL を使用して資格情報データを暗号化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。|  

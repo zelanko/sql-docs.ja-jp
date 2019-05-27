@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733641"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083638"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」(マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  

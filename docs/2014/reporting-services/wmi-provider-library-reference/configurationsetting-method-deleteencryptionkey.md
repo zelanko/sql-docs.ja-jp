@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e594b68fffccc3cb73feda3541a93686bfc6aef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cbf0eee13a113dff42a22da3703e60b3869b757f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646966"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098528"
 ---
 # <a name="deleteencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>DeleteEncryptionKey メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースから暗号化キーを削除します。  
@@ -60,7 +59,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,12 +14,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747954"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070008"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>データ更新のスケジュール (PowerPivot for SharePoint)
   データ更新をスケジュールすると、SharePoint サイトにパブリッシュした Excel ブック内の PowerPivot データが自動更新されるようになります。  
@@ -159,7 +158,7 @@ ms.locfileid: "62747954"
 > [!NOTE]  
 >  SharePoint 管理者は、サーバーの全体管理で PowerPivot 管理ダッシュボードにある統合データ更新レポートを表示して、データ更新の問題をトラブルシューティングできます。 詳細については、「 [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」をご参照ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint 2010 で PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)   
  [データ更新履歴表示&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
  [PowerPivot データ更新用の保存された資格情報の構成&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  

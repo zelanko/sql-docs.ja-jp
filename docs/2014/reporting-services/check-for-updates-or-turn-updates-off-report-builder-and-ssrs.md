@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae7f72240148291504654fffa304ebda252178ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266070"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109871"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>更新を確認するまたは更新をオフにする (レポート ビルダーおよび SSRS)
   レポートを開くたびに、レポート ビルダーによって、そのレポートにあるレポート パーツのパブリッシュ済みインスタンスがレポート サーバー、またはレポート サーバーと統合されている SharePoint サイト上で更新されたかどうかが確認されます。 また、データセットやパラメーターなどのレポート パーツの依存アイテムに変更が加えられたかどうかも確認されます。 レポート パーツまたはレポート パーツの依存アイテムがサイトまたはサーバー上で更新されている場合は、レポート内の情報バーに、更新されたパーツの数が表示されます。 更新は、表示して受け入れることも、拒否することもできます。また、情報バーを消去することもできます。  

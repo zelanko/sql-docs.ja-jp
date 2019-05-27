@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.rules.f1
@@ -13,12 +12,12 @@ ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748014"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070098"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>[ルール] タブ (マイニング モデル ビューアー)
   アルゴリズムによってデータから抽出されたルールを表示するには、関連モデルの **[ルール]** ペインを使用します。 ルールは、アイテムが互いにどのように関連しているのかを記述し、推奨を作成するために使用できます。  
@@ -87,7 +86,7 @@ ms.locfileid: "62748014"
   
  列見出しをクリックすることで、ルールのテキストで並べ替えることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  

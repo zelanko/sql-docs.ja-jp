@@ -1,6 +1,6 @@
 ---
 title: Analysis services 表形式モデルの互換性レベル |Microsoft Docs
-ms.date: 05/14/2019
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709124"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175123"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表形式モデルの互換性レベル
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "65709124"
   
  ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.png)  
   
- 選択した場合、**今後このメッセージを表示しない**オプション、後続のすべてのプロジェクトには、既定値として指定した互換性レベルが使用されます。 SSDT の既定の互換性レベルは、 **[ツール]** > **[オプション]** の順に選択すると変更できます。  
+ 選択した場合、**今後このメッセージを表示しない**オプション、後続のすべてのプロジェクトには、既定値として指定した互換性レベルが使用されます。 SSDT の既定の互換性レベルは、 **[ツール]**  >  **[オプション]** の順に選択すると変更できます。  
   
  SSDT で表形式モデル プロジェクトをアップグレードするには、設定、**互換性レベル**モデル内のプロパティ**プロパティ**ウィンドウ。 注意して、互換性レベルのアップグレードは元に戻すことはありません。
   
@@ -60,8 +60,11 @@ ms.locfileid: "65709124"
   
 ## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>SSMS でサーバーのサポートされる互換性レベルを確認する  
  SSMS で、サーバー名を右クリックして >**プロパティ** > **サポートされる互換性レベル**します。  
-  
- このプロパティは、サーバーで実行されるデータベースの最も高い互換性レベルを指定します。 サポートされる互換性レベルは読み取り専用であり、変更できません。  
+
+ このプロパティは、サーバーで実行されるデータベースの最も高い互換性レベルを指定します。 サポートされる互換性レベルは読み取り専用であり、変更できません。
+ 
+> [!NOTE]  
+>  SSMS では、SQL Server Analysis Services サーバー、Azure Analysis Services サーバー、または Power BI Premium ワークスペースに接続されているときにサポートされる互換性レベル プロパティを表示 1200 です。 これは既知の問題とは今後の SSMS で解決されます更新します。 解決されると、このプロパティは、最高のサポートされる互換性レベルを表示します。 
   
 ## <a name="see-also"></a>関連項目  
  [多次元データベースの互換性レベル](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

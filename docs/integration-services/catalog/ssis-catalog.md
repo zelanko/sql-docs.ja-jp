@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283206"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729174"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **SSISDB** カタログは、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバーに配置した [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) プロジェクトを操作するための中核となります。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
  
 > [!NOTE]
@@ -115,7 +119,7 @@ ms.locfileid: "58283206"
 -   2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (_) を使用できます。  
   
 ##  <a name="Configuration"></a> カタログの構成  
- カタログ プロパティを調整することによって、カタログの動作を微調整します。 カタログ プロパティは、機微なデータを暗号化する方法と、操作およびプロジェクトのバージョン管理データを保持する方法を定義します。 カタログ プロパティを設定するには、**[カタログのプロパティ]** ダイアログ ボックスを使用するか、[catalog.configure_catalog (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) ストアド プロシージャを呼び出します。 プロパティを表示するには、ダイアログ ボックスまたはクエリ [catalog.catalog_properties (SSISDB Database)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) を使用します。 ダイアログ ボックスには、オブジェクト エクスプローラーで **SSISDB** を右クリックしてアクセスできます。  
+ カタログ プロパティを調整することによって、カタログの動作を微調整します。 カタログ プロパティは、機微なデータを暗号化する方法と、操作およびプロジェクトのバージョン管理データを保持する方法を定義します。 カタログ プロパティを設定するには、 **[カタログのプロパティ]** ダイアログ ボックスを使用するか、[catalog.configure_catalog (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md) ストアド プロシージャを呼び出します。 プロパティを表示するには、ダイアログ ボックスまたはクエリ [catalog.catalog_properties (SSISDB Database)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) を使用します。 ダイアログ ボックスには、オブジェクト エクスプローラーで **SSISDB** を右クリックしてアクセスできます。  
   
 ###  <a name="Cleanup"></a> 操作とプロジェクト バージョンのクリーンアップ  
  カタログの多くの操作の状態データは、内部データベース テーブルに格納されます。 たとえば、カタログではパッケージの実行とプロジェクトの配置の状態が追跡されます。 操作データのサイズを維持するには、 **の** SSIS サーバー メンテナンス ジョブ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して古いデータを削除します。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に作成されます。  
@@ -169,10 +173,10 @@ ms.locfileid: "58283206"
   
  次の表では、 **[カタログのプロパティ]** ダイアログ ボックスに示されるプロパティ名と、データベース ビュー内の対応するプロパティについて説明します。  
   
-|プロパティ名 (**[カタログのプロパティ]** ダイアログ ボックス)|プロパティ名 (データベース ビュー)|  
+|プロパティ名 ( **[カタログのプロパティ]** ダイアログ ボックス)|プロパティ名 (データベース ビュー)|  
 |---------------------------------------------------------|-------------------------------------|  
 |暗号化アルゴリズムの名前|ENCRYPTION_ALGORITHM|  
-|ログを定期的に消去する|OPERATION_CLEANUP_ENABLED|  
+|ログを定期的に消去する|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |保有期間 (日)|RETENTION_WINDOW|  
 |古いバージョンを定期的に削除する|VERSION_CLEANUP_ENABLED|  
 |プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|  
@@ -416,15 +420,15 @@ ms.locfileid: "58283206"
   
 4.  次の手順を実行して、##MS_SSISServerCleanupJobLogin## の CREATE LOGIN スクリプトを生成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
-    1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、**[セキュリティ]** ノードを展開し、**[ログイン]** ノードを展開します。  
+    1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、 **[セキュリティ]** ノードを展開し、 **[ログイン]** ノードを展開します。  
   
-    2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 5.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、次の操作を行って、sp_ssis_startup の CREATE PROCEDURE スクリプトを生成します。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)」を参照してください。  
   
-    1.  オブジェクト エクスプローラーで、 **[データベース]** ノードを展開し、 **[master]** > **[プログラミング]** > **[ストアド プロシージャ]** ノードの順に展開します。  
+    1.  オブジェクト エクスプローラーで、 **[データベース]** ノードを展開し、 **[master]**  >  **[プログラミング]**  >  **[ストアド プロシージャ]** ノードの順に展開します。  
   
-    2.  **[dbo.sp_ssis_startup]** を右クリックし、**[ストアド プロシージャをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  **[dbo.sp_ssis_startup]** を右クリックし、 **[ストアド プロシージャをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 6.  SQL Server エージェントが起動したことを確認します。  
   
@@ -432,7 +436,7 @@ ms.locfileid: "58283206"
   
     1.  オブジェクト エクスプローラーで、 **[SQL Server エージェント]** ノードを展開し、 **[ジョブ]** ノードを展開します。  
   
-    2.  SSIS サーバー メンテナンス ジョブを右クリックし、**[ジョブをスクリプト化]** > **[CREATE]** > **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+    2.  SSIS サーバー メンテナンス ジョブを右クリックし、 **[ジョブをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS データベースを復元するには  
   
@@ -587,7 +591,7 @@ ms.locfileid: "58283206"
   
 ###  <a name="Firsttime"></a> Always On の SSIS サポートを構成する  
   
--   [ステップ 1: Integration Services カタログを作成する](#Step1)  
+-   [ステップ 1:Integration Services カタログを作成する](#Step1)  
   
 -   [ステップ 2:SSISDB を Always On 可用性グループに追加する](#Step2)  
   
@@ -620,7 +624,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
 ![[データベースの選択]](../../integration-services/service/media/ssis-newavailabilitygroup.png "[データベースの選択]")  
   
 ####  <a name="Step3"></a> ステップ 3:Always On の SSIS サポートを有効にする  
- Integration Service カタログを作成した後に、**[Integration Service カタログ]** ノードを右クリックし、**[Always On サポートを有効にする]** をクリックします。 次の **[AlwaysOn のサポートを有効にする]** ダイアログ ボックスが表示されます。 このメニュー項目が無効な場合、すべての前提条件がインストールされていることを確認してから、 **[更新]** をクリックします。  
+ Integration Service カタログを作成した後に、 **[Integration Service カタログ]** ノードを右クリックし、 **[Always On サポートを有効にする]** をクリックします。 次の **[AlwaysOn のサポートを有効にする]** ダイアログ ボックスが表示されます。 このメニュー項目が無効な場合、すべての前提条件がインストールされていることを確認してから、 **[更新]** をクリックします。  
   
  ![Always On のサポートを有効にする](../../integration-services/service/media/ssis-enablesupportforalwayson.png)  
   

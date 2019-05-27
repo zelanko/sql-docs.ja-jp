@@ -13,14 +13,18 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b523b3653e7fff1ffba694c49056debaa6d64ec
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 078e7be919c9cefca45ac7676d5621bfb302f4eb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278091"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727340"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>[値包含プロファイル要求] のオプション (データ プロファイル タスク)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[値包含プロファイル要求]** のオプションを設定できます。 値包含プロファイルは、2 つの列間または列のセット間の値の重複を計算します。 したがって、このプロファイルでは、列または列のセットが、選択したテーブル間の外部キーとして適しているかどうかを判断できます。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、値包含プロファイルで Sales テーブルの ProductID 列をプロファイルするとします。 プロファイルでは、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。  
   
 > [!NOTE]  
@@ -54,7 +58,7 @@ ms.locfileid: "58278091"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[値包含プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]**( **[SubsetTableOrView]** オプション、 **[SupersetTableOrView]** オプション、 **[InclusionColumns]** オプションなど)  
+-   **[データ]** ( **[SubsetTableOrView]** オプション、 **[SupersetTableOrView]** オプション、 **[InclusionColumns]** オプションなど)  
   
 -   **全般**  
   
@@ -101,7 +105,7 @@ ms.locfileid: "58278091"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
   
 |[値]|[説明]|  
 |-----------|-----------------|  
@@ -114,7 +118,7 @@ ms.locfileid: "58278091"
 |[値]|[説明]|  
 |-----------|-----------------|  
 |**IgnoreCase**|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
-|**IgnoreNonSpace**|比較で、通常の文字と分音文字付きの文字を区別するかどうかを指定します。 このオプションを設定した場合、比較で分音文字は無視されます。 たとえば、"&#xE5;" は "a" と同じ文字になります。|  
+|**IgnoreNonSpace**|比較で、通常の文字と分音文字付きの文字を区別するかどうかを指定します。 このオプションを設定した場合、比較で分音文字は無視されます。 たとえば、"Ã¥" は "a" に等しくなります。|  
 |**IgnoreKanaType**|日本語の比較で、2 種類のかな文字である、ひらがなとカタカナを区別するかどうかを指定します。 このオプションを設定した場合、文字列比較でひらがなとカタカナは区別されません。|  
 |**IgnoreWidth**|比較で、1 バイト文字と、それと同じ文字を表記した 2 バイト文字を区別するかどうかを指定します。 このオプションを設定した場合、文字列比較で 1 バイト表記と 2 バイト表記は同一文字として扱われます。|  
   

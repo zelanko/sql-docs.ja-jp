@@ -11,14 +11,18 @@ ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea0050beae23d2178d08037b026a3d9ad8676b26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 40884a52395aee9bb45338f5c56d2709f3d4d956
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277551"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722965"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>レッスン 1-5 - 更新したパッケージのテスト
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 次のレッスンでは、目的のコンピューターにチュートリアル パッケージをインストールするときに使用する配置バンドルを作成しますが、その前にパッケージをテストする必要があります。 この作業では、Deployment Tutorial プロジェクトに追加して構成を拡張したパッケージ DataTransfer.dtsx および LoadXMLData を実行します。  
   
 パッケージを実行すると、パッケージ内の各実行ファイルが完了したときに緑色になります。 実行ファイルのすべてが緑色になると、パッケージの実行に成功したことを表します。 **[進行状況]** タブでパッケージ実行の進み具合を見ることもできます。  

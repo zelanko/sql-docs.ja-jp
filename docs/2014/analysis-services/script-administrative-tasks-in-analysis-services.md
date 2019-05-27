@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic Analysis Services administration
@@ -14,12 +13,12 @@ ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ff9d6a44f027de2ef5994ea9a7b29c97175e45b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0384498d5068171b205bcafdfd28222a86e1bab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069943"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Analysis Services の管理タスクのスクリプト作成
   SQL Server エージェントで手動、またはスケジュールして実行できるスクリプトを記述または生成することで、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理タスクを自動化できます。 次の表は、使用可能なスクリプト作成オプションについてまとめ、詳細情報へのリンクを提供します。  
@@ -36,7 +35,7 @@ ms.locfileid: "62747934"
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ|.dtsx|[!INCLUDE[ssIS](../includes/ssis-md.md)] は、データ マイニング モデルを含む、Analysis Services オブジェクトを作成、変更、削除、および処理するタスクとデータ フローを提供します。 SQL Server エージェントを使用して、パッケージの実行をスケジュールできます。|[Analysis Services DDL 実行タスク](../integration-services/control-flow/analysis-services-execute-ddl-task.md)<br /><br /> [Analysis Services 処理タスク](../integration-services/control-flow/analysis-services-processing-task.md)<br /><br /> [Data Mining Query Task](../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [データ マイニング モデル トレーニング変換先](../integration-services/data-flow/data-mining-model-training-destination.md)<br /><br /> [ディメンション処理変換先](../integration-services/data-flow/dimension-processing-destination.md)<br /><br /> [パーティション処理変換先](../integration-services/data-flow/partition-processing-destination.md)|  
 |分析管理オブジェクト (Analysis Management Objects)||分析管理オブジェクト (AMO) は、管理操作を自動化するカスタム アプリケーションを開発するために、プログラマが使用できる管理インターフェイスです。 AMO を使用して、指定した XMLA、MDX または DMX スクリプトを実行するカスタム アプリケーションを開発することができます。|[AMO による管理タスクのプログラミング](https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services スクリプト言語&#40;ASSL&#41;リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
  [分析管理オブジェクト (AMO) による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)   
  [多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

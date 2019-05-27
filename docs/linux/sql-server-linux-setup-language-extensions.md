@@ -1,5 +1,5 @@
 ---
-title: Linux 上の SQL Server マシン言語拡張機能 (Java) のインストール |Microsoft Docs
+title: Linux 上の SQL Server の言語拡張機能 (Java) のインストール |Microsoft Docs
 description: Red Hat、Ubuntu、SUSE には、SQL Server の言語拡張機能 (Java) をインストールする方法をについて説明します。
 author: dphansen
 ms.author: davidph
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d25739fb4f2ef104ba86c8e9124162e67fd8553
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995080"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186806"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Linux 上の SQL Server 2019 言語拡張機能 (Java) のインストールします。
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md)以降の SQL Server 2019 このプレビュー リリースでは Linux オペレーティング システム上で動作します。 Java 言語の拡張機能をインストールするには、この記事の手順に従います。 
-
 言語拡張機能は、データベース エンジンへのアドオンです。 できますが、[データベース エンジンと言語の拡張機能を同時にインストール](#install-all)、インストールしてより多くのコンポーネントを追加する前に、問題を解決できるように、まず、SQL Server データベース エンジンを構成することをお勧めします。 
 
-Java 拡張機能パッケージの場所は、SQL Server Linux ソース リポジトリでいます。 データベース エンジンのインストールのソース リポジトリが既に構成されている場合は実行できます、 **mssql server extensibility java**同じリポジトリの登録を使用して、インストール コマンドをパッケージ化します。
+Java 言語の拡張機能をインストールするには、この記事の手順に従います。
+
+Java 拡張機能のパッケージの場所は、SQL Server Linux ソースのリポジトリでです。 データベース エンジンのインストールのソース リポジトリが既に構成されている場合は実行できます、 **mssql server extensibility java**同じリポジトリの登録を使用して、インストール コマンドをパッケージ化します。
 
 言語拡張機能は、Linux コンテナーでもサポートされます。 言語拡張機能の構築済みのコンテナーは提供されませんを使用して SQL Server のコンテナーから 1 つを作成することができます、 [GitHub で入手できるテンプレートの例](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)します。
 
@@ -185,6 +185,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. 再起動、`mssql-launchpadd`もう一度サービスを提供します。
 
+7. 言語拡張機能を使用する各データベースに対して、外部の言語でを登録する必要が[外部言語の作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)です。
+
 ## <a name="verify-installation"></a>インストールの確認
 
 Java と機能の統合は、ライブラリは含まれませんが、実行することができます`grep -r JRE_HOME /etc`JAVA_HOME 環境変数の作成を確定します。
@@ -195,7 +197,7 @@ Java と機能の統合は、ライブラリは含まれませんが、実行す
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>SQL Server および言語拡張機能のフル インストール
 
-インストールして、Java のパッケージとデータベース エンジンをインストールするコマンドのパラメーターを追加して、1 つの手順で、データベース エンジンと Machine Learning サービスを構成します。
+インストールして、Java のパッケージとデータベース エンジンをインストールするコマンドのパラメーターを追加して、1 つの手順で、データベース エンジンと言語の拡張機能を構成します。
 
 1. データベース エンジン、および言語拡張機能が含まれるコマンドラインを提供します。
 
@@ -235,7 +237,7 @@ Java と機能の統合は、ライブラリは含まれませんが、実行す
 
 #### <a name="download-site"></a>ダウンロード サイト
 
-パッケージをダウンロードする[ https://packages.microsoft.com/](https://packages.microsoft.com/)します。 すべての Java のパッケージは、データベース エンジンのパッケージと同じ場所にします。 
+パッケージをダウンロードする[ https://packages.microsoft.com/](https://packages.microsoft.com/)します。 すべての Java のパッケージは、データベース エンジンのパッケージと併置されてます。 
 
 #### <a name="redhat7-paths"></a>Red Hat 7/パス
 

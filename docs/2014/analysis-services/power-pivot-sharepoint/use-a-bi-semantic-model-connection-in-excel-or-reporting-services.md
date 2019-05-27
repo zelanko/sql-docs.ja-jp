@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749232"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070927"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel または Reporting Services での BI セマンティック モデル接続の使用
   このトピックでは、他のトピックの手順に従って作成した BI セマンティック モデル接続の使用方法について説明します。 BI セマンティック モデルを作成していない場合は、次を参照してください。 [PowerPivot ブックへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)と[表形式モデル データベースへの BI セマンティック モデル接続を作成する](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)します。  

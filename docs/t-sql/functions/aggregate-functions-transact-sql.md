@@ -19,19 +19,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d0fa6a0ee5b63d098e0feb4a6ace368e145dd57
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3195259f2ea4c709b0e01011264dedfc88e538af
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801436"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875200"
 ---
 # <a name="aggregate-functions-transact-sql"></a>集計関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 集計関数は、値の集まりに対して計算を実行し、1 つの値を返します。 `COUNT` を除くその他の集計関数は NULL 値を無視します。 集計関数は、SELECT ステートメントの GROUP BY 句と共によく使用されます。
   
-集計関数はすべて決定的です。 つまり集計関数は、特定の入力値のセットと共に呼び出された場合、そのたびに同じ値を返します。 関数の決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)は、GROUPING 関数または GROUPING_ID 関数を除くすべての集計関数の後に使用できます。
+集計関数はすべて決定的です。 つまり集計関数は、特定の入力値のセットと共に呼び出された場合、そのたびに同じ値を返します。 関数の決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。 [OVER 句](../../t-sql/queries/select-over-clause-transact-sql.md)は、STRING_AGG、GROUPING、または GROUPING_ID 関数を除くすべての集計関数の後に使用できます。
   
 集計関数は、次の状況でのみ式として使用できます。
 -   SELECT ステートメントの選択リスト (サブクエリまたは外部クエリ)。  

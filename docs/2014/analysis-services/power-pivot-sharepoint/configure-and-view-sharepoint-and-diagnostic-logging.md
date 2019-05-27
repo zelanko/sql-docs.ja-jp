@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743378"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071852"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>SharePoint ログ ファイルと診断ログの構成と表示 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー操作、イベント、およびメッセージは、SharePoint ログ ファイルに記録されます。 このトピックでは、ログ記録レベルの構成とログ ファイルの情報の表示について説明します。 ログ ファイルに記録される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー イベントを制御できます。 また、ログに記録されるメッセージの重大度も制御できます。 詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  

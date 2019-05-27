@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
@@ -13,12 +12,12 @@ ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748374"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070517"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>[クエリ] ペイン ([マイニング モデル予測] ビュー)
   **[クエリ]** ペインには、予測クエリ ビルダーによって作成されたデータ マイニング式 (DMX) ステートメントが表示されます。 ステートメントを変更してから **[クエリ結果ビューに切り替え]** ボタンをクリックすると、結果が返されます。 **[デザイン]** ビューに戻ると、ステートメントに加えた変更がすべて失われます。  
@@ -38,7 +37,7 @@ ms.locfileid: "62748374"
  **クエリ結果を更新します。**  
  予測クエリを再処理します。 この操作は **[結果]** ペインでのみ行えます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング クエリ インターフェイス](data-mining/data-mining-query-tools.md)   
  [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](/sql/dmx/data-mining-extensions-dmx-statements)   
  [予測クエリ ビルダー&#40;データ マイニング&#41;](prediction-query-builder-data-mining.md)  

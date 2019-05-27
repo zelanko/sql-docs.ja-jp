@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e73468de8edd2497409c37acb2c00bfaf79ebd2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b54c06d86490c92936d147f2876d663f43d99fac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749412"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071585"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成
   Excel Services では、SharePoint サーバーで開いたブックの有効なリポジトリの場所を指定できます。 これは「信頼できる場所」と呼ばれ、作成したそれぞれの信頼できる場所について異なる構成設定を使用できます。 PowerPivot for SharePoint の配置の場合、PowerPivot ブックが含まれるサイト用に信頼できる場所を作成し、ファームのその他の部分に対する既定値を保持しながら PowerPivot データ アクセスに対しては最適な設定を適用することを検討してください。  
