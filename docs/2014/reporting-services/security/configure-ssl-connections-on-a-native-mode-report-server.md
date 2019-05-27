@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Secure Sockets Layer (SSL)
@@ -13,12 +12,12 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 173b8b5de6dd1a370073338ad13fb7eb065680c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102116"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでの SSL 接続の構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードでは、HTTP SSL (Secure Sockets Layer) サービスを使用してレポート サーバーへの暗号化接続を確立します。 レポート サーバー コンピューター上のローカルの証明書ストアに証明書 (.cer) ファイルがインストールされている場合、その証明書を [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約にバインドして、暗号化チャネルでのレポート サーバー接続をサポートできます。  

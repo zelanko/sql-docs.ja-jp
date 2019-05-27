@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648346"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099048"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)
   円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフおよびドーナツ グラフ、ピラミッド、じょうごグラフでは、図形グラフと呼ばれるグラフのグループを構成します。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。  
@@ -236,7 +235,7 @@ ms.locfileid: "62648346"
 ## <a name="next-steps"></a>次の手順  
  これで、「レポートへの円グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)   
  [SQL Server 2014 のレポート ビルダー](report-builder/report-builder-in-sql-server-2016.md)  
   

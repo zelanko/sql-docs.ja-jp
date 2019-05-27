@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.setordering.f1
@@ -13,12 +12,12 @@ ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acecdb460ee61e16a82609b658eb20a2b38f323d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746314"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068542"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>[属性の順序の指定] (ビジネス インテリジェンス ウィザード)
   **[属性の順序の指定]** ページを使用すると、順序付け属性と、選択されたディメンションの属性に対する順序付け条件を指定できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "62746314"
 |**名前**|**[属性の並べ替え]** の属性のメンバー名を使用して **[属性]** を並べ替えます。|  
 |**[キー]**|**[属性の並べ替え]** の属性のメンバー キーを使用して **[属性]** を並べ替えます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -15,12 +14,12 @@ ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83d04d6f8bb5b9c0701df3e6ba0d2c498cd2d5ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647628"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098839"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)
   レポート定義やレポート モデルを SharePoint ライブラリにアップロードすることができます。 レポート サーバー アイテムをアップロードするときには、ライブラリまたはライブラリ内のフォルダーを選択する必要があります。 レポート サーバー アイテムを一覧やページにアップロードすることはできません。  
@@ -48,7 +47,7 @@ ms.locfileid: "62647628"
   
  レポートにパラメーターを含めると、ユーザーがデータをフィルター選択できるようになります。 パラメーターは、特定の値を使用するように構成したり、表示方法を変更したりすることができます。 詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 &#40;Reporting Services の SharePoint 統合モード&#41;](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SharePoint ライブラリへのレポートのパブリッシュ](reports/publish-a-report-to-a-sharepoint-library.md)   
  [SharePoint ライブラリへの共有データ ソースのパブリッシュ](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  

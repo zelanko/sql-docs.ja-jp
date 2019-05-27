@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
@@ -13,12 +12,12 @@ ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6cf40f4d3baa60caa0d9d44f372e41521497e33e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63287758"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102668"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>レポート内のテキスト、数値、または日付を検索する (Reporting Services の SharePoint 統合モード)
   レポートのコンテンツは、単語や語句を入力して検索できます (検索用語の最大文字数は 256 文字です)。 検索は、レポート内にある一致する値を検出し、その値の位置にカーソルを移動するナビゲーション技法です。  

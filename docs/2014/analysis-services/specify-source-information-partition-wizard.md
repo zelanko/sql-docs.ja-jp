@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
@@ -13,12 +12,12 @@ ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068171"
 ---
 # <a name="specify-source-information-partition-wizard"></a>[基になる情報の指定] (パーティション ウィザード)
   **[基になる情報の指定]** ページを使用すると、パーティションを作成するメジャー グループと、パーティションのデータ ソース ビューとフィルター テーブルを選択できます。  
@@ -49,7 +48,7 @@ ms.locfileid: "62746126"
 > [!NOTE]  
 >  複数のテーブルが選択されている場合は、 **[行の制限]** ページは表示されず、選択したテーブルから作成されるパーティションに対して、行を制限することはできません。 パーティションごとに行を制限するには、パーティションを作成するテーブルごとにパーティション ウィザードを 1 回実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パーティション (Analysis Services - 多次元データ)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   
