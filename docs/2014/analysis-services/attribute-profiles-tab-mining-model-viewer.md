@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.profiles.f1
@@ -13,12 +12,12 @@ ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c216ce257c513d59a5007637ca4a5642104306f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650673"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063171"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>[属性のプロファイル] タブ (マイニング モデル ビューアー)
   Naive Bayes モデルにおける入力値の分布と、結果の属性の状態との関係を確認するには、**[属性のプロファイル]** タブを使用します。 値の分布はカラー ヒストグラムで表示され、すべての分布は値を簡単に比較できるように表形式で提示されます。  
@@ -54,7 +53,7 @@ ms.locfileid: "62650673"
 |**[母集団]**|データセット全体における属性の分布が表示されます。|  
 |**予測可能属性の状態の列**|予測可能な列の各状態を表す列が表示されます。各行が、モデル内の入力属性に対応しています。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  

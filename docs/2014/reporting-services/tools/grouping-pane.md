@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -16,12 +15,12 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe230d9e3ed5259da9decc87e044005184b7d989
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62711348"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100268"
 ---
 # <a name="grouping-pane"></a>グループ化ペイン
   グループ化ペインには、行グループと、現在選択されている Tablix データ領域の列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインは、行グループ ペインと列グループ ペインで構成されています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -64,11 +63,11 @@ ms.locfileid: "62711348"
   
 -   **KeepTogether**。  
   
--   `KeepWithGroup` 。 Boolean です。 静的行メンバーにのみ使用します。 可能な場合、非表示でなければ、この行が前の動的な兄弟メンバーまたは次の動的な兄弟メンバーに付随するようにします。  
+-   `KeepWithGroup`。 Boolean です。 静的行メンバーにのみ使用します。 可能な場合、非表示でなければ、この行が前の動的な兄弟メンバーまたは次の動的な兄弟メンバーに付随するようにします。  
   
 -   **RepeatOnNewPage**。 Boolean です。 静的行メンバー専用であり、KeepWithGroup の値が [なし] 以外の場合に使用します。 可能な場合、KeepWithGroup で指定された動的メンバーのインスタンスが少なくとも 1 つ含まれるページごとに、この静的行を繰り返します。  
   
--   `Hidden` 。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
+-   `Hidden`。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
   
 -   **ToggleItem。** [String]。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
   

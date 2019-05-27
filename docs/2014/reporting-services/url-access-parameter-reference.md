@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
@@ -14,12 +13,12 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d57d3a1b50b88bfd2ec27641cca4f7058f9639f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62652398"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098721"
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](specify-device-information-settings-in-a-url.md)」を参照してください。  
@@ -64,7 +63,7 @@ ms.locfileid: "62652398"
 |*PersistStreams*|1 つの永続化ストリームでレポートを表示します。 このパラメーターは、表示レポートをチャンク単位で送信するために画像レンダラーによって使用されます。 URL アクセス文字列でこのパラメーターを使用した後、同じ URL アクセス文字列を、 *GetNextStream* パラメーターではなく *PersistStreams* パラメーターと共に使用すると、永続化ストリームの次のチャンクを取得できます。 この URL コマンドは、最終的に永続化ストリームの末尾に到達した時点で 0 バイト ストリームを返します。 既定値は `false` です。|  
 |*GetNextStream*|*PersistStreams* パラメーターを使用してアクセスした永続化ストリームの次のデータ チャンクを取得します。 詳細については、 *PersistStreams*の説明を参照してください。 既定値は `false` です。|  
 |*SessionID*|クライアント アプリケーションとレポート サーバー間で確立されたアクティブ レポート セッションを指定します。 このパラメーターの値は、セッション ID に設定されます。<br /><br /> セッション ID をクッキーまたは URL の一部として指定できます。 セッション クッキーを使用しないようにレポート サーバーを構成している場合、指定したセッション ID なしの最初の要求はセッション ID 付きでリダイレクトされます。 レポート サーバーのセッションの詳細については、「 [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)」を参照してください。|  
-|*ClearSession*|値が `true` の場合は、レポート セッションからレポートを削除するようにレポート サーバーに指示します。 認証されているユーザーに関連付けられたすべてのレポート インスタンスがレポート セッションから削除されます (レポート インスタンスは、別のレポート パラメーターの値を複数回実行する同じレポートとして定義されます)。既定値は `false` です。|  
+|*ClearSession*|値が `true` の場合は、レポート セッションからレポートを削除するようにレポート サーバーに指示します。 認証されているユーザーに関連付けられたすべてのレポート インスタンスがレポート セッションから削除されます (レポート インスタンスは、別のレポート パラメーターの値を指定して、レポートを複数回実行するように定義されます)。既定値は `false` です。|  
 |*ResetSession*|値が `true` の場合は、レポート セッションのすべてのレポート スナップショットとの関連付けを削除することによって、レポート セッションをリセットするようレポート サーバーに指示します。 既定値は `false` です。|  
 |*ShowHideToggle*|レポートのセクションの表示と非表示を切り替えます。 切り替えるセクションを表す正の整数を指定します。|  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62652398"
 |*DockToolBar*|レポート ビューアー Web パーツのツールバーを上部または下部にドッキングするかどうかを制御します。 有効値は `Top` および `Bottom` です。 既定値は `Top` です。<br /><br /> <br /><br /> `SharePoint` モードで、下部にツール バーをドッキングする例。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
 |*ToolBarItemsDisplayMode*|表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。  既定値は `-1` です。すべてのツール バー項目を表示します。 有効な値は、<br /><br /> 1 (0x1): **[戻る]** ボタン<br /><br /> 2 (0x2): テキスト検索コントロール<br /><br /> 4 (0x4): ページ ナビゲーション コントロール<br /><br /> 8 (0x8): **[更新]** ボタン<br /><br /> 16 (0x10): **[ズーム]** ボックスの一覧<br /><br /> 32 (0x20): **[Atom フィード]** ボタン<br /><br /> 64 (0x40): **[アクション]** の **[印刷]** メニュー オプション<br /><br /> 128 (0x80): **[アクション]** の **[エクスポート]** サブメニュー<br /><br /> 256 (0x100): **[アクション]** の **[レポート ビルダーで開く]** メニュー オプション<br /><br /> 512 (0x200): **[アクション]** の **[サブスクライブ]** メニュー オプション<br /><br /> 1024 (0x400): **[アクション]** の **[新しいデータの警告]** メニュー オプション<br /><br /> たとえば、`SharePoint`モードのみを表示する、**戻る**ボタン、テキスト検索コントロール、ページ ナビゲーション コントロールと**更新**ボタン。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15`|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)  
   
   

@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 5c080e380c28a137c3bb02bf1506276d8319fac3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: d879833ee055d857627890471a68cbbaf4263abb
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65721017"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012837"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージの実行スケジュールを設定する
 
@@ -39,7 +39,7 @@ ms.locfileid: "65721017"
 
 ## <a name="ssms"></a> SSMS でパッケージをスケジュールする
 
-SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB に配置されたパッケージを右クリックして **[スケジュール]** を選択することで、**[新しいスケジュール]** ダイアログ ボックスを開くことができます。 詳細については、「[SSMS を利用して Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages-ssms.md)」を参照してください。
+SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB に配置されたパッケージを右クリックして **[スケジュール]** を選択することで、 **[新しいスケジュール]** ダイアログ ボックスを開くことができます。 詳細については、「[SSMS を利用して Azure で SSIS パッケージのスケジュールを設定する](ssis-azure-schedule-packages-ssms.md)」を参照してください。
 
 この機能には、SQL Server Management Studio バージョン 17.7 以降が必要です。 最新バージョンの SSMS を入手するには、「[SQL Server Management Studio (SSMS) のダウンロード](../../ssms/download-sql-server-management-studio-ssms.md)」を参照してください。
 
@@ -136,9 +136,9 @@ SQL Server エージェントの詳細については、「[パッケージに�
 
 1.  SQL Server Management Studio では、ジョブを作成するオンプレミスの SQL Server データベースに接続します。
 
-2.  **SQL Server エージェント** ノードを右クリックし、**[新規]**、**[ジョブ]** の順に選択し、**[新しいジョブ]** ダイアログ ボックスを開きます。
+2.  **SQL Server エージェント** ノードを右クリックし、 **[新規]** 、 **[ジョブ]** の順に選択し、 **[新しいジョブ]** ダイアログ ボックスを開きます。
 
-3.  **[新しいジョブ]** ダイアログ ボックスで、**[手順]** ページを選択し、**[新規]** を選択して、**[新しいジョブ ステップ]** ダイアログ ボックスを開きます。
+3.  **[新しいジョブ]** ダイアログ ボックスで、 **[手順]** ページを選択し、 **[新規]** を選択して、 **[新しいジョブ ステップ]** ダイアログ ボックスを開きます。
 
 4.  **[新しいジョブ ステップ]** ダイアログ ボックスで、`SSISDB` を**データベース**として選択します。
 

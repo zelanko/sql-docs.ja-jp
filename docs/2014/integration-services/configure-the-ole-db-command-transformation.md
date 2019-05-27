@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d71ffe723df317733841450713ddccc3d03ddb36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834295"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060561"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>OLE DB コマンド変換を構成する
   OLE DB コマンド変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと、フラット ファイル ソースや OLE DB ソースなどの変換元があらかじめ含まれている必要があります。 この変換は、通常、パラメーター化クエリを実行するために使用されます。  

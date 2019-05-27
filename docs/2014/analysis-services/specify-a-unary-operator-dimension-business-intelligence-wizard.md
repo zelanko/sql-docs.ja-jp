@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.addcustomaggregation.selectdimension.f1
@@ -13,12 +12,12 @@ ms.assetid: 0c8ce9ce-f5ce-4bea-830d-05836ea17112
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33302a69ab9e04930020e222699d6fd133ab63ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 72807eca5fb43c81bf51c20a93cd69f4d618c241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746394"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068612"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>[単項演算子の指定] ([ディメンション]) (ビジネス インテリジェンス ウィザード)
   **[単項演算子の指定]** ページを使用すると、親属性が定義されており、ビジネス インテリジェンス ウィザードで単項演算子が適用されるディメンションを選択できます。 親属性の詳細については、「 [属性と属性階層](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)」を参照してください。  
@@ -30,7 +29,7 @@ ms.locfileid: "62746394"
  **Dimension**  
  ビジネス インテリジェンス ウィザードで単項演算子を適用し、親属性が含まれるディメンションを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

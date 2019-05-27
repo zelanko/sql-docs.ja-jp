@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], publishing
@@ -14,12 +13,12 @@ ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657582"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108029"
 ---
 # <a name="publish-reports"></a>レポートのパブリッシュ
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]から、プロジェクトを配置してレポート サーバーにレポート サーバー プロジェクト内のすべてのレポートおよび共有データ ソースをパブリッシュしたり、単一のレポートをパブリッシュしたりできます。 レポートをパブリッシュする前に、ターゲット レポート サーバーの URL を指定する必要があります。 詳細については、「[配置プロパティを設定する (Reporting Services)](tools/set-deployment-properties-reporting-services.md)」を参照してください。  

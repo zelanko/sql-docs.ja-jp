@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.errormessages.F1
@@ -15,12 +14,12 @@ ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9d9d0d7f03b52b2ea82d555b6cbe9127128e83f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766295"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055036"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>[エラー メッセージ転送タスク エディター] ([メッセージ] ページ)
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[メッセージ]** ページを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスからインスタンスへ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーザー定義エラー メッセージをコピーする際のプロパティを指定できます。 このタスクの詳細については、「 [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md)」を参照してください。  
@@ -40,7 +39,7 @@ ms.locfileid: "62766295"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|Description|  
+|値|Description|  
 |-----------|-----------------|  
 |**True**|すべてのユーザー定義メッセージをコピーします。|  
 |**False**|指定されたユーザー定義メッセージのみをコピーします。|  
@@ -57,7 +56,7 @@ ms.locfileid: "62766295"
 > [!NOTE]  
 >  コピーするエラー メッセージを選択する前に **[SourceConnection]** を指定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
  [[エラー メッセージ転送タスク エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   

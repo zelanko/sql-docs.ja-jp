@@ -1,7 +1,7 @@
 ---
 title: XML データ型と列 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46a9dd3021f56292e56544fb1d688329b7456bc9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511579"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836157"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML データ型と列 (SQL Server)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 **での** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を使用する利点と制限および、XML データを保存する方法の正しい選択について説明します。  
   
@@ -175,6 +176,8 @@ ms.locfileid: "58511579"
 -   ISNULL、COALESCE、および DATALENGTH を除く組み込みのスカラー関数のパラメーターとしては使用できません。  
   
 -   インデックスのキー列としては使用できません。 ただし、クラスター化インデックスのデータとして使用したり、非クラスター化インデックスの作成時に INCLUDE キーワードを使用して明示的に非クラスター化インデックスに追加することはできます。  
+
+- XML 要素は 128 レベルまで入れ子にできます。
   
 ## <a name="see-also"></a>参照  
  [XML ドキュメントの一括インポートと一括エクスポートの例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -15,12 +14,12 @@ ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8f04df51d1a88ac0fb13ce1a262b3e3ebc245004
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b8d19d1f1fc33bfcd90f7cd801b2256a88859c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224888"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105726"
 ---
 # <a name="grouping-pane-report-builder"></a>グループ化ペイン (レポート ビルダー)
   グループ化ペインには、現在選択されている Tablix データ領域の行グループと列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインには、行グループ ペインと列グループ ペインが含まれています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -63,11 +62,11 @@ ms.locfileid: "63224888"
   
 -   **KeepTogether**。 Boolean です。 可能な場合、Tablix メンバー全体および入れ子になっているすべてのメンバーを 1 ページにまとめるように指定します。  
   
--   `KeepWithGroup` 。 Boolean です。 静的行メンバーにのみ使用します。 可能な場合、非表示でなければ、この行が前の動的な兄弟メンバーまたは次の動的な兄弟メンバーに付随するようにします。 行ヘッダーをその関連グループと一緒に表示するには KeepWithGroup を **After**に設定します。  
+-   `KeepWithGroup`。 Boolean です。 静的行メンバーにのみ使用します。 可能な場合、非表示でなければ、この行が前の動的な兄弟メンバーまたは次の動的な兄弟メンバーに付随するようにします。 行ヘッダーをその関連グループと一緒に表示するには KeepWithGroup を **After**に設定します。  
   
--   `RepeatOnNewPage` 。 Boolean です。 静的行メンバー専用であり、KeepWithGroup の値が [なし] 以外の場合に使用します。 可能な場合、KeepWithGroup で指定された動的メンバーのインスタンスが少なくとも 1 つ含まれるページごとに、この静的行を繰り返します。 行ヘッダーをその関連グループと一緒に表示するには RepeatOnNewPage を **True**に設定します。  
+-   `RepeatOnNewPage`。 Boolean です。 静的行メンバー専用であり、KeepWithGroup の値が [なし] 以外の場合に使用します。 可能な場合、KeepWithGroup で指定された動的メンバーのインスタンスが少なくとも 1 つ含まれるページごとに、この静的行を繰り返します。 行ヘッダーをその関連グループと一緒に表示するには RepeatOnNewPage を **True**に設定します。  
   
--   `Hidden` 。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
+-   `Hidden`。 Boolean です。 行または列を初期設定で非表示にしておくかどうかを示します。  
   
 -   **ToggleItem。** [String]。 切り替えイメージを追加するテキスト ボックスの名前。 テキスト ボックスは、同じグループのスコープまたはコンテナー スコープに存在する必要があります。  
   

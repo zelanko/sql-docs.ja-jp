@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.savecopyas.f1
@@ -15,12 +14,12 @@ ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0e28fec1fb562c5ba6ed28ad615f40ada5fc2db9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766794"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056319"
 ---
 # <a name="save-copy-of-package"></a>[パッケージのコピーの保存]
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[パッケージのコピーの保存]** ダイアログ ボックスを使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのコピーを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] から別の場所に保存し、必要に応じてパッケージの保護レベルを変更できます。  
@@ -59,7 +58,7 @@ ms.locfileid: "62766794"
  **保護レベル**  
  参照 をクリックして **(...)** ボタンをクリックしで保護レベルを更新、**パッケージの保護レベル** ダイアログ ボックス。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[パッケージのインポート] ダイアログ ボックスの UI リファレンス](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [パッケージを保存する](save-packages.md)   

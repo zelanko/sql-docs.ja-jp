@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cdd3d2a7a64ddc701a73a3b6c978bd9f0264e20
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 6b17e6b799bf3ff35b441286fd1205ca5382b207
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877586"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836168"
 ---
 # <a name="sql-server-documentation"></a>SQL Server のドキュメント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,8 @@ SQL Server は Microsoft データ プラットフォームの中心部です。
 ::: moniker range="= sql-server-2016"
 SQL Server は Microsoft データ プラットフォームの中心部です。 SQL Server は、オペレーション データベース管理システム (ODBMS) 業界のリーダーといえる製品です。 このドキュメントは、Windows での SQL Server のインストール、構成、使用の際に役立ちます。 コンテンツには、エンド ツー エンドの例、コード サンプル、およびビデオが含まれています。 SQL Server 言語のトピックについては、「[言語リファレンス](../t-sql/language-reference.md)」を参照してください。
 ::: moniker-end
+
+SQL Server 2014、および SQL Server 2005 などのさらに古いバージョンについては、[こちら](#previous-versions-gm66)からドキュメントを入手できます。
 
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
@@ -137,6 +139,10 @@ SQL Server は Microsoft データ プラットフォームの中心部です。
 - [Wide World Importers のサンプル データベース](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
 - [SQL Server 2016 の AdventureWorks サンプル データベースとスクリプト](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [GitHub の SQL Server サンプル](https://github.com/Microsoft/sql-server-samples)
+
+## <a name="previous-versions-gm66"></a> SQL Server 2014、2012、2008、2005
+
+[!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

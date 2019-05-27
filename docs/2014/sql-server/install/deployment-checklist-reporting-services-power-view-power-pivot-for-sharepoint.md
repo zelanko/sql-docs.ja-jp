@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2aa1133b9e23ea8f2174f73e9d8bf4a34ff0c824
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2c6e28a8c328bd1e38cee2f4cad74802a981aa9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131208"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095641"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>配置のチェック リスト:Reporting Services、Power View、PowerPivot for SharePoint
   同じ SharePoint ファーム内の各 BI 機能をインストールするには、次のチェック リストを使用します。PowerPivot for SharePoint、レポート ビルダー、および [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]。 このチェック リストでは特定のインストール順序が推奨されていますが、実際には、ほぼどのような順序でもこれらの機能をインストールできます。 このチェック リストでは、次の製品または機能のインストールが想定されています。  

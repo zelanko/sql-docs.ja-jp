@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10018"
@@ -13,12 +12,12 @@ ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7f5aa4efa9170e9b51e583aedada909d756edeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164991"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109466"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>[全般] ([データ ソースのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   レポート サーバーから共有データ ソースを選択する場合や、レポートに埋め込まれたデータ ソースの接続情報を作成または変更する場合は、 **[データ ソースのプロパティ]** ダイアログ ボックスの **[全般]** を選択します。  

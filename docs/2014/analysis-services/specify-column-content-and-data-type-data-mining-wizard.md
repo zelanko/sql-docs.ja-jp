@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746285"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068466"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>[列のコンテンツおよびデータ型の指定] (データ マイニング ウィザード)
   **[列のコンテンツおよびデータ型の指定]** ページを使用すると、ウィザードの前のページで選択した各列に対し、使用法とデータ型を指定できます。 列を無視するには、 **[戻る]** をクリックして **[トレーニング データの指定]** ページに戻り、すべてのチェック ボックスをオフにします。  
@@ -69,7 +68,7 @@ ms.locfileid: "62746285"
  **検出**  
  すべての数値列でデータのサンプルを分析します。 指定した **[コンテンツの種類]** 値を、推奨されるコンテンツの種類に置換します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [関連列の提示&#40;データ マイニング ウィザード&#41;](suggest-related-columns-data-mining-wizard.md)   
  [テーブル型を指定&#40;データ マイニング ウィザード&#41;](specify-table-types-data-mining-wizard.md)   

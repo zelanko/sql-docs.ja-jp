@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215131"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096808"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services の構成 - データ ディレクトリ
   次の表にある既定のディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ中にユーザーが構成できます。 これらのファイルにアクセスする権限は、ローカル管理者と、セットアップ中に作成されて準備される SQLServerMSASUser$\<インスタンス> セキュリティ グループのメンバーに付与されます。  

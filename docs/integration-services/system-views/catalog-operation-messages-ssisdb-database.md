@@ -14,14 +14,18 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6dd9ed869034959484427c063e101fe12d8f3d39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a45ce170d7965ca8358dd6a442a25a67190651cb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282216"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714376"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでの操作中に記録されるメッセージを表示します。  
@@ -51,7 +55,7 @@ ms.locfileid: "58282216"
 |20|検証後|  
 |30|実行前|  
 |40|実行後|  
-|60|中|  
+|60|進行状況|  
 |50|StatusChange|  
 |100|QueryCancel|  
 |130|TaskFailed|  

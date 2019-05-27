@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.config.f1
@@ -13,12 +12,12 @@ ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2309dd332a66ae724133c4b1d21cbe0dc8684630
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771683"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061116"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 制御タスク エディター
   **[CDC 制御タスク エディター]** ダイアログ ボックスを使用すると、CDC 制御タスクを構成できます。 CDC 制御タスクの構成では、CDC データベースへの接続、CDC タスクの操作、状態管理情報の定義などを行います。  
@@ -90,7 +89,7 @@ ms.locfileid: "62771683"
  **[状態名]**  
  永続的な CDC 状態に関連付ける名前を入力します。 同じ CDC コンテキストを使用する完全読み込みパッケージと CDC パッケージでは、共通の状態名を指定する必要があります。 この名前は、状態テーブルで状態行を検索するために使用されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CDC 制御タスクのカスタム プロパティ](control-flow/cdc-control-task-custom-properties.md)  
   
   

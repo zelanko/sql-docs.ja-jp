@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164312"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109180"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)
-  レポートは、レポート ビルダーまたはレポート デザイナーでプレビュー中に、CSV、Image、PDF、 [!INCLUDE[ofprword](../includes/ofprword-md.md)]、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]などの他のファイル形式に変換できます。また、レポート サーバーで閲覧中に変換することもできます。 レポートを特定の形式で表示することが便利であるのは、レポートをレポート サーバーにパブリッシュせずにすぐに別のファイルの種類で保存する場合や、レポートを特定の形式でユーザーに配信する際にレポートのデザインがどのように表示されるかを確認する場合です。 レポート サーバーでレポートを変換するのが便利なのは、サブスクリプションを設定したり電子メールでレポートを配信したりする場合や、レポート サーバーで利用可能なレポートを保存する場合です。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+  レポートは、レポート ビルダーまたはレポート デザイナーでプレビュー中に、CSV、Image、PDF、 [!INCLUDE[ofprword](../includes/ofprword-md.md)]、 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]などの他のファイル形式に変換できます。また、レポート サーバーで閲覧中に変換することもできます。 レポートを特定の形式で表示することが便利であるのは、レポートをレポート サーバーにパブリッシュせずにすぐに別のファイルの種類で保存する場合や、レポートを特定の形式でユーザーに配信する際にレポートのデザインがどのように表示されるかを確認する場合です。 レポート サーバーでレポートを変換するのが便利なのは、サブスクリプションを設定したり電子メールでレポートを配信したりする場合や、レポート サーバーで利用可能なレポートを保存する場合です。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  

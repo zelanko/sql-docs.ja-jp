@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SetDatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bcd76bb3ff07cc9091fe37440f38a6138d1ab4a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff1b75e942de46309df68707cc3acec976adb991
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646609"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098066"
 ---
 # <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseQueryTimeout メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベース クエリの既定のタイムアウト値を指定します。  
@@ -54,7 +53,7 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

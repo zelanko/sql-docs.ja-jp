@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportServer property
@@ -13,12 +12,12 @@ ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fb25607dc929e8309ba908f02fd973395add1b63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ce39066ca805e024c77a6bf45bcf9ce8c1302053
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097368"
 ---
 # <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportServer プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー アプリケーションの仮想ディレクトリを返します。 読み取り専用。  
@@ -42,7 +41,7 @@ public string VirtualDirectoryReportServer;
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

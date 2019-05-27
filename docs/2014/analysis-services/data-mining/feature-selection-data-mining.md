@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722394"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084418"
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
   *機能の選択*はツールと処理と分析のために管理しやすいサイズに入力を減らすために使用できる手法を説明するデータ マイニングでよく使用する用語です。 機能の選択は意味だけでなく*カーディナリティの引き下げ*、つまり、モデルをも意味している属性の選択のビルド時に考慮できる属性の数に、任意または定義済みのカットオフを課すアナリストまたはモデリング ツールのいずれか積極的に、選択または分析のための有用性に基づく属性を破棄します。  

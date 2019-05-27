@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733591"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083533"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   すべてのマイニング モデルは同じ構造を使用してコンテンツを格納します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
@@ -245,14 +244,14 @@ ms.locfileid: "62733591"
  要するに、データ マイニングは、興味の対象になりうる現象がどこで発生しているかについてのヒントを得るのには役立ちますが、その情報の価値をコンテキストの中で正確に解釈するためには、詳細な調査と、ビジネス ユーザーの専門知識が必要になります。  
   
 ### <a name="elements-of-the-artxp-time-series-formula"></a>ARTXP のタイム シリーズ式の要素  
- ARTXP のツリーまたは分岐の完全な式を表示するには、 **Microsoft タイム シリーズ ビューアー** の [[マイニング凡例]](browse-a-model-using-the-microsoft-time-series-viewer.md)を使用することをお勧めします。これにより、すべての定数を判読可能な形式で表示できます。  
+ ARTXP のツリーまたは分岐の完全な式を表示するには、 **Microsoft タイム シリーズ ビューアー** の [マイニング凡例](browse-a-model-using-the-microsoft-time-series-viewer.md)を使用することをお勧めします。これにより、すべての定数を判読可能な形式で表示できます。  
   
 -   [タイム シリーズ モデルの式の表示 &#40;データ マイニング&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  次のセクションで、式のサンプルを示して基本的な項について説明します。  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>ARTXP 式のマイニング凡例  
- 次の例は、 **[マイニング凡例]** に表示されたモデルの一部の ARTXP 式を示しています。 この式を表示するには、Microsoft タイム シリーズ ビューアーで基本的なデータ マイニング チュートリアルで作成した [Forecasting] モデルを開く] をクリックして、**モデル**タブをクリックし、R250 のツリーを選択します。Europe データ系列。  
+ 次の例は、 **[マイニング凡例]** に表示されたモデルの一部の ARTXP 式を示しています。 この式を表示するには、Microsoft タイム シリーズ ビューアーで基本的なデータ マイニング チュートリアルで作成した [Forecasting] モデルを開く をクリックして、**モデル**タブをクリックし、R250 のツリーを選択します。Europe データ系列。  
   
  この例で使用される式を表示するには、7/5/2003 以降のデータ系列を表すノードをクリックします。  
   

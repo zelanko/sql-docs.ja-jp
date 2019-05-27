@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165113"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109326"
 ---
 # <a name="dependent-items-page-report-manager"></a>[依存アイテム] ページ (レポート マネージャー)
   [依存アイテム] ページには、共有データ ソースを参照するレポートおよびモデルの一覧を表示できます。 各アイテムの種類のアイコンはそのアイテムがレポートであるか、またはモデルであるかを示します。 このページはリスト ビューまたは詳細ビューで表示できます。 アイテムごとの詳細な情報を表示するには詳細ビューを使用します。 詳細ビューでは、より多くのページ オプションを利用できます。 共有データ ソースを管理しやすくするために、このページには、データ ソースを使用するレポートおよびモデルへのリンク、レポートやモデルを最後に実行または変更した時点の基準、使用しないレポートやモデルを簡単に削除できる [削除] ボタン、レポートやモデルが必要かどうかを判断する間それらを別の場所に移動できる [移動] ボタンがあります。  

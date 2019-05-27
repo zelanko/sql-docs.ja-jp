@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftpconnectionmanager.f1
@@ -15,12 +14,12 @@ ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b363d622d82a2829e25e21bcf7d8cf21fe0962d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768186"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058486"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP 接続マネージャー エディター
   **[FTP 接続マネージャー エディター]** ダイアログ ボックスを使用すると、FTP サーバーに接続するためのプロパティを指定できます。  
@@ -58,7 +57,7 @@ ms.locfileid: "62768186"
  **[接続テスト]**  
  FTP 接続マネージャーを構成した後に、 **[接続テスト]** をクリックして、接続が利用可能であることを確認します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

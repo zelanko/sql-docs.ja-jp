@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ListReservedURLs method
@@ -13,12 +12,12 @@ ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2cf4ea295f450db5536751fc4d9d58ec4bd0febc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098264"
 ---
 # <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー上のすべてのアプリケーション用に予約されている URL を一覧表示します。  
@@ -64,7 +63,7 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   
