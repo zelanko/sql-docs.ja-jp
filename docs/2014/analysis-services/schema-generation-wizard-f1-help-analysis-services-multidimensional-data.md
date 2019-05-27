@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
@@ -13,12 +12,12 @@ ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747836"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069944"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>スキーマ生成ウィザードの F1 ヘルプ (Analysis Services - 多次元データ)
   スキーマ生成ウィザードを使用すると、既存のキューブとディメンションに基づくサブジェクト領域データベースのリレーショナル スキーマが自動的に生成されます。 さらに、ウィザードで生成されたテーブルに時間ディメンションを入力したり、サブジェクト領域データベースの名前付け規則やオプションを管理したりできます。  
@@ -45,7 +44,7 @@ ms.locfileid: "62747836"
   
 -   [ウィザードの完了&#40;スキーマ生成ウィザード&#41; &#40;Analysis Services - 多次元データ&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

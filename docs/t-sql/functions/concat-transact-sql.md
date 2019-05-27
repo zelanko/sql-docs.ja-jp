@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e679c1c9090f189881ad9de3b1615d6ecfa5b72
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 819601e12f2e9b4179ffa966fb8e54962c9f31d4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801276"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943870"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -55,7 +55,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |入力型|出力型と長さ|  
 |---|---|
 |1.次の任意の引数<br><br />SQL-CLR システム型<br><br />SQL CLR UDT<br><br />内の複数の<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2.それ以外の場合、次の型の任意の引数<br><br />**varbinary(max)**<br><br />内の複数の<br><br />**varchar(max)**|**varchar(max)**。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
+|2.それ以外の場合、次の型の任意の引数<br><br />**varbinary(max)**<br><br />内の複数の<br><br />**varchar(max)**|**varchar(max)** 。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
 |3.それ以外の場合、最大 4,000 文字の **nvarchar** 型の任意の引数<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
 |4.その他のすべての場合|**varchar**(<= 8000) (最大 8,000 文字の **varchar**)。ただし、いずれかのパラメーターが任意の長さの nvarchar である場合を除きます。 その場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
   

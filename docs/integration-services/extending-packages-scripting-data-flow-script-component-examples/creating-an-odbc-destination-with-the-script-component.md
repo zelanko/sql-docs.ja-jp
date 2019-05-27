@@ -16,14 +16,18 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b698e0e3aaafbe3e05b8fb9d100872af1f5c3e0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 812915337b03927af5b23a66a0452d0d6a875112
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275487"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724477"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>スクリプト コンポーネントによる ODBC 変換先の作成
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、通常、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 変換先および [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC を使用して、ODBC 変換先にデータを保存します。 ただし、単一のパッケージで使用するアドホックな ODBC 変換先を作成することもできます。 このアドホックな ODBC 変換先を作成するには、次の例に示すように、スクリプト コンポーネントを使用します。  
   
 > [!NOTE]  
@@ -61,7 +65,7 @@ ms.locfileid: "58275487"
   
 7.  **[接続マネージャー]** ページで、ODBC 接続マネージャーを追加または作成し、**MyODBCConnectionManager** などのわかりやすい名前を付けます。  
   
-8.  **[スクリプト]** ページで、**[スクリプトの編集]** をクリックし、以下に示すスクリプトを **ScriptMain** クラスに入力します。  
+8.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、以下に示すスクリプトを **ScriptMain** クラスに入力します。  
   
 9. スクリプト開発環境と **[スクリプト変換エディター]** を閉じ、サンプルを実行します。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,12 +14,12 @@ ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749295"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070847"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 での PowerPivot データ更新
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] のデータ更新は、外部データ ソースにクエリを実行して、コンテンツ ライブラリに保存されている Excel 2010 ブック内の埋め込み [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] データを更新する、スケジュールされたサーバー側の操作です。  
@@ -38,7 +37,7 @@ ms.locfileid: "62749295"
   
  [手順 2:サポートしない資格情報オプションをオフにします。](#bkmk_creds)  
   
- [手順 3:データ更新で使用される資格情報を格納する対象のアプリケーションを作成します。](#bkmk_stored)  
+ [ステップ 3:データ更新で使用される資格情報を格納する対象のアプリケーションを作成します。](#bkmk_stored)  
   
  [手順 4:スケーラブルなデータ更新のサーバーを構成します。](#bkmk_scale)  
   

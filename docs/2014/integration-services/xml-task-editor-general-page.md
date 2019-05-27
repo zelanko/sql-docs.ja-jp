@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d8500dbe5253bddcbd71b4376050c6f3d56cdbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765955"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054277"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   **[XML タスク エディター]** ダイアログ ボックスの **[全般]** ノードを使用すると、操作の種類を指定したり構成したりできます。  
@@ -71,7 +70,7 @@ ms.locfileid: "62765955"
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **Destination (公開先)**  
+ **変換先**  
  既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -130,7 +129,7 @@ ms.locfileid: "62765955"
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **Destination (公開先)**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -176,7 +175,7 @@ ms.locfileid: "62765955"
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **Destination (公開先)**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -256,7 +255,7 @@ ms.locfileid: "62765955"
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **Destination (公開先)**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -331,7 +330,7 @@ ms.locfileid: "62765955"
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **Destination (公開先)**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -377,7 +376,7 @@ ms.locfileid: "62765955"
  **[OverwriteDestination]**  
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
- **Destination (公開先)**  
+ **変換先**  
  **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
@@ -414,7 +413,7 @@ ms.locfileid: "62765955"
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[式] ページ](expressions/expressions-page.md)  
   

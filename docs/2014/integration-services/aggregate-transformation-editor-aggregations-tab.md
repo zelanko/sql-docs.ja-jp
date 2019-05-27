@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
@@ -15,12 +14,12 @@ ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771948"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061578"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>[集計変換エディター] ([集計] タブ)
   **[集計変換エディター]** ダイアログ ボックスの **[集計]** タブを使用すると、集計列および集計プロパティを指定できます。 複数の集計を適用することができます。 この変換ではエラー出力を生成しません。  
@@ -45,7 +44,7 @@ ms.locfileid: "62771948"
  **[キー スケール]**  
  [詳細設定] 画面で、集計によって書き込むことのできるキーの概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 **[キー スケール]** プロパティと **[キー]** プロパティの両方が設定されている場合、 **[キー]** の値が優先されます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |[未指定]|[キー スケール] プロパティは使用されません。|  
 |Low|集計では約 500,000 キーを書き込むことができます。|  
@@ -83,7 +82,7 @@ ms.locfileid: "62771948"
  **Count Distinct Scale**  
  集計で書き込むことのできる個別の値の概数をオプションで指定します。 既定では、このオプションの値は **[未指定]** です。 両方`CountDistinctScale`と**CountDistinctKeys**が指定されて**CountDistinctKeys**が優先されます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |[未指定]|`CountDistinctScale` プロパティは使用されません。|  
 |Low|集計では約 500,000 の個別の値を書き込むことができます。|  
@@ -93,7 +92,7 @@ ms.locfileid: "62771948"
  **Count Distinct Keys**  
  集計によって書き込むことのできる個別の値の正確な数をオプションで指定します。 両方`CountDistinctScale`と**CountDistinctKeys**が指定されて**CountDistinctKeys**が優先されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[集計変換エディター] &#40;[詳細設定] タブ&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [集計変換を使用してデータセットの値を集計する](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  

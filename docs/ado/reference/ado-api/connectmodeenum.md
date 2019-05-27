@@ -30,7 +30,7 @@ ms.locfileid: "63309169"
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|読み取り専用アクセス許可を示します。|  
 |**adModeReadWrite**|3|読み取り/書き込みアクセス許可を示します。|  
-|**adModeRecursive**|0x400000|他と組み合わせて使用*\*ShareDeny\** 値 (**adModeShareDenyNone**、 **adModeShareDenyWrite**、または**adModeShareDenyRead**)、現在のすべてのサブ レコードに共有の制限が反映されるまでに**レコード**します。 これは、影響を与えません場合、**レコード**子はありません。 使用した場合、実行時エラーが生成される**adModeShareDenyNone**のみです。 ただしで使用する**adModeShareDenyNone**他の値と組み合わせたときにします。 たとえば、使用することができます"**adModeRead**または**adModeShareDenyNone**または**adModeRecursive**"。|  
+|**adModeRecursive**|0x400000|他と組み合わせて使用 *\*ShareDeny\** 値 (**adModeShareDenyNone**、 **adModeShareDenyWrite**、または**adModeShareDenyRead**)、現在のすべてのサブ レコードに共有の制限が反映されるまでに**レコード**します。 これは、影響を与えません場合、**レコード**子はありません。 使用した場合、実行時エラーが生成される**adModeShareDenyNone**のみです。 ただしで使用する**adModeShareDenyNone**他の値と組み合わせたときにします。 たとえば、使用することができます"**adModeRead**または**adModeShareDenyNone**または**adModeRecursive**"。|  
 |**adModeShareDenyNone**|16|すべてのアクセス許可を持つ接続を開く他のユーザーを使用できます。 他のユーザーに対して、読み取りアクセスも書き込みアクセスも拒否できません。|  
 |**adModeShareDenyRead**|4|読み取りアクセス許可で接続を開くには、他のユーザーを禁止します。|  
 |**adModeShareDenyWrite**|8|書き込みアクセス許可を持つ接続を開くには、他のユーザーを禁止します。|  

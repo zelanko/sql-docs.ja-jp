@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.aggregations.standard.f1
@@ -13,12 +12,12 @@ ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3cc09c5306d5c4fb9e63b1cba9b859f9633fcccc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745842"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068057"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>標準ビュー ([集計] タブ、キューブ デザイナー)
   集計デザイナーの **標準ビュー** を使用すると、集計を表示できます。 このビューでは、 **集計のデザイン ウィザード** または **使用法に基づく最適化ウィザード**を使用して、集計デザインを作成および変更することもできます。  
@@ -33,7 +32,7 @@ ms.locfileid: "62745842"
 |**削除**|クリックすると、選択した集計デザインが削除されます。|  
 |**Properties**|クリックすると、集計のプロパティが表示されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [集計&#40;キューブのデザイン&#41;](aggregations-cube-design.md)  
   
   

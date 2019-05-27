@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
@@ -16,12 +15,12 @@ ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d20a8ea8a4e05b455a4c69a867504e82bdce014a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165381"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095223"
 ---
 # <a name="feature-selection"></a>機能の選択
   **のインストールに含めるコンポーネントを選択するには、** インストール ウィザードの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [機能の選択] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページのチェック ボックスを使用します。  
@@ -90,7 +89,7 @@ ms.locfileid: "63165381"
 ## <a name="installing-adventureworks-sample-databases"></a>AdventureWorks サンプル データベースのインストール  
  既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 サンプル データベースとサンプル コードのインストールの詳細については、次を参照してください。、 [Microsoft SQL Server コミュニティのプロジェクトとサンプル](https://go.microsoft.com/fwlink/?LinkId=87843)(https://go.microsoft.com/fwlink/?LinkId=87843)します。  
   
- サンプルの詳細については、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールした後で確認できます。 **開始**] メニューのをクリックして**すべてのプログラム**、] をクリックして**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**、 をクリックして**マニュアルとチュートリアル**をクリックして **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サンプルの概要**します。  
+ サンプルの詳細については、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールした後で確認できます。 **開始** メニューのをクリックして**すべてのプログラム**、をクリックして**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**、をクリックして**マニュアルとチュートリアル**をクリックして **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サンプルの概要**します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のエディションとコンポーネント](../editions-and-components-of-sql-server-2016.md)  

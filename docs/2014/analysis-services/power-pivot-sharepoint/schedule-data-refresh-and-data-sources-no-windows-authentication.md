@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749041"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071156"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>定期データ更新と Windows 認証をサポートしないデータ ソース (PowerPivot for SharePoint)
   このトピックでは、Windows 認証を**サポートしない**データ ソースを使用できる PowerPivot for SharePoint 定期データ更新のワークフローについて説明します。 たとえば、Oracle データ ソースまたは IDM DB2 データ ソースが該当します。 このトピックにある図と手順では、Oracle データ ソースを参照していますが、他のデータ ソースにも同じワークフローが当てはまります。  
@@ -37,7 +36,7 @@ ms.locfileid: "62749041"
   
 -   **(4)** PowerPivot ブックでは Oracle データが使用されます。 ブックの更新設定では、データ ソースへの接続で、資格情報にターゲット アプリケーション **(2)** を使用するよう指定します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
   
 -   PowerPivot サービス アプリケーションがある。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "62749041"
   
     -   **ターゲット アプリケーションの種類:** グループ。  
   
-    -   **ターゲット アプリケーション ページの URL:** なし。  
+    -   **ターゲット アプリケーション ページの URL:**[なし] :  
   
 5.  **[次へ]** をクリックします。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62749041"
   
     -   **ターゲット アプリケーションの種類:** グループ。  
   
-    -   **ターゲット アプリケーション ページの URL:** なし。  
+    -   **ターゲット アプリケーション ページの URL:**[なし] :  
   
 5.  **[次へ]** をクリックします。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -17,12 +16,12 @@ ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69df18da28672f05099f22821240fdf28e1fb880
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153102"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095965"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>レポート サーバーでカスタム拡張機能が検出された (アップグレード アドバイザー)
   構成ファイル内のカスタム拡張機能の設定がアップグレード アドバイザーによって検出されました。これは、データ処理、配信、表示、セキュリティ、または認証用のカスタム拡張機能が 1 つ以上インストールに含まれていることを示しています。 アップグレードによって、拡張機能の構成設定はアップグレード後のレポート サーバーに移動されます。 ただし、カスタム拡張機能を既存のレポート サーバーのインストール フォルダーにインストールした場合、アップグレードの処理中に、これらのカスタム拡張機能のアセンブリ ファイルは新しいインストール フォルダーに移動されません。 アップグレードの完了後、アセンブリ ファイルを新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストール フォルダーに移動する必要があります。  
@@ -40,7 +39,7 @@ ms.locfileid: "48153102"
  現在インストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム拡張機能またはアセンブリを使用している場合、セットアップを使用してアップグレードを実行できますが、アップグレードの完了後に拡張機能を新しいインストール場所に移動するか、アップグレードの前に手順を実行する必要が生じることがあります。  
   
 > [!NOTE]  
->  アイテムの値、スタイル、および書式設定を計算するためにレポートで使用するようにカスタム コード アセンブリが設定されているかどうかは、アップグレード アドバイザーによって検出されません。 詳細については、[その他の Reporting Services のアップグレードに関する問題](../../../2014/sql-server/install/other-reporting-services-upgrade-issues.md)を参照してください。  
+>  アイテムの値、スタイル、および書式設定を計算するためにレポートで使用するようにカスタム コード アセンブリが設定されているかどうかは、アップグレード アドバイザーによって検出されません。 詳細については、次を参照してください。[その他の Reporting Services のアップグレードに関する問題](../../../2014/sql-server/install/other-reporting-services-upgrade-issues.md)します。  
   
  カスタム拡張機能をソフトウェア ベンダーから購入した場合、ベンダーに問い合わせて、そのカスタム機能のアップグレードに関する詳細を確認してください。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "48153102"
   
 3.  ソリューションを再構築して拡張機能をバインドします。  
   
- アップグレードを続行しない場合、代わりに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を移行できます。 カスタム拡張機能を移行する手順は、[カスタム拡張機能の移行](#migrcustext)このトピックの「を参照してください。  
+ アップグレードを続行しない場合、代わりに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を移行できます。 カスタム拡張機能を移行する手順は、次を参照してください。[カスタム拡張機能の移行](#migrcustext)このトピックの「します。  
   
 ###  <a name="dataprocdeliver"></a> カスタム データ処理または配信拡張機能  
  データ処理または配信のカスタム拡張機能がアップグレード アドバイザーによって検出された場合、アップグレード プロセスはブロックされません。 ただし、アップグレードの完了後、これらの拡張機能によって提供されるカスタム機能を使用する前に、追加の手順を実行する必要が生じることがあります。 たとえば、カスタム拡張機能ファイルが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストール フォルダーにインストールされている場合は、追加の手順を実行する必要があります。  

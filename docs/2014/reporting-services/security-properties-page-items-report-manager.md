@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bb1835a67ca1f909bf382fd227783cb0a20bbbf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5ad98fe533caefa937d969754fa1278354e5c6e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025726"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102169"
 ---
 # <a name="security-properties-page-items-report-manager"></a>[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)
   [セキュリティのプロパティ] ページを使用すると、フォルダー、レポート、モデル、リソース、および共有データ ソースへのアクセスを決定するセキュリティ設定の表示や変更を行えます。 このページは、セキュリティ保護の権限の対象となるアイテムに対して利用できます。  

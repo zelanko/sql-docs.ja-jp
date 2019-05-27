@@ -16,15 +16,15 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d297b8516cb09db317ba835b49fe41b3e13be9e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228552"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013678"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 属性を使用した、対象名前空間の指定 (SQLXML 4.0)
   XSD スキーマを作成するには、XSD を使用することができます**targetNamespace**ターゲット名前空間を指定する属性です。 このトピックで説明する方法、XSD **targetNamespace**、**よ**、および**されていません**属性を使用する XML インスタンスをどのように影響生成されると、名前空間と XPath クエリを指定する方法とします。  

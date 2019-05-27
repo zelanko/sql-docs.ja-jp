@@ -1,23 +1,23 @@
 ---
 title: キューブ スキーマの表示 |Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740692"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072512"
 ---
 # <a name="view-the-cube-schema"></a>キューブ スキーマの表示
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   **キューブ デザイナー** の **[キューブ構造]** タブにある **[データ ソース ビュー]** ペインには、キューブ スキーマが表示されます。 スキーマとは、キューブのメジャーおよびディメンションの派生元であるテーブルのセットです。 どのキューブ スキーマも、キューブ内のメジャーとディメンションの基になっている 1 つ以上のファクト テーブルと 1 つ以上のディメンション テーブルで構成されます。  
   
  **[キューブ構造]** タブの **[データ ソース ビュー]** ペインには、キューブの基になっているデータ ソース ビューのダイアグラムが表示されます。 このダイアグラムは、データ ソース ビューのメイン ダイアグラムのサブセットです。 **[データ ソース ビュー]** ペインのテーブルの表示と非表示を切り替えたり、既存のダイアグラムを表示したりできます。 ただし、基になるスキーマに変更 (新しいリレーションシップまたは名前付きクエリの追加など) を加えることはできません。 スキーマに変更を加えるには、データ ソース ビュー デザイナーを使用します。  

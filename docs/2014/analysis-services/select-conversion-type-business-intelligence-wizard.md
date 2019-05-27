@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
@@ -13,12 +12,12 @@ ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748084"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069616"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>[換算の種類の選択] (ビジネス インテリジェンス ウィザード)
   **[換算の種類の選択]** ページを使用すると、複数の通貨で保存されているトランザクションに関して、現地通貨とレポート用通貨の間のリレーションシップを定義できます。 現地通貨とは、 **[メジャーの選択]** ページで選択されたメジャーのトランザクションが保存される通貨です。 レポート用通貨とは、 **[メジャーの選択]** ページで選択されたトランザクションが変換される通貨です。  
@@ -48,7 +47,7 @@ ms.locfileid: "62748084"
   
  たとえば、ピボット通貨を米国ドル (USD) に設定し、トランザクションを USD でファクト テーブルに格納するように設定できます。 このオプションを選択すると、これらのトランザクションは、ピボット通貨から指定されたレポート用通貨に換算されます。 その結果、トランザクションを指定のピボット通貨で格納して、指定のピボット通貨または **[レポート用通貨の指定]** ページで指定されたいずれかのレポート用通貨で表示できるようになります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
