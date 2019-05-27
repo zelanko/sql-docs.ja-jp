@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736919"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073362"
 ---
 # <a name="multidimensional-model-object-processing"></a>多次元モデルのオブジェクト処理
   "処理" とは、Analysis Services がリレーショナル データ ソースから多次元モデルにデータを読み込む 1 つまたは一連のステップです。 MOLAP ストレージを使用するオブジェクトの場合、データはディスクのデータベース ファイル フォルダーに保存されます。 ROLAP ストレージの場合、処理は要求に応じて、オブジェクトに対する MDX クエリへの応答として発生します。 ROLAP ストレージを使用するオブジェクトの場合の処理とは、クエリ結果を返す前にキャッシュを更新する操作のことを指します。  

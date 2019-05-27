@@ -11,14 +11,18 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4648f66c9bc73a3de8bcf1bad68a9ad748718bc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271180"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727210"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  
   
  SSIS CDC コンポーネントは、ソース テーブルが同じ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースか Oracle データベース (Oracle CDC Service for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の使用時) である場合に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CDC 機能を使用できるようにデザインされています。 パーティション テーブルがサポートされます。  
@@ -40,7 +44,7 @@ ms.locfileid: "58271180"
 ## <a name="installation"></a>インストール  
  このセクションでは、CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]のインストール手順について説明します。  
   
- SSIS 用の CDC コンポーネントは、Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® に同梱されています。 このダウンロードは、SQL Server の Feature Pack の一部です。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+ SSIS 用の CDC コンポーネントは、MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® に同梱されています。 このダウンロードは、SQL Server の Feature Pack の一部です。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
   
 ### <a name="version-support"></a>バージョンのサポート
 

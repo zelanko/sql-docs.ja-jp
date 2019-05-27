@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271203"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723675"
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を含む任意またはすべてのコンポーネントを 1 つのセットアップ プログラムでインストールできます。 他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントと共にまたは単独で、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を 1 台のコンピューターにインストールするには、セットアップを使います。    
     
@@ -62,9 +66,9 @@ Microsoft SQL Server がまだない場合は、無料の Evaluation Edition ま
 
 -   **[機能の選択]** ページの **[共有機能]**で**[Integration Services]** を選びます。
 
--   SSIS パッケージを格納、管理、実行、監視するために SSIS カタログ データベース `SSISDB` をホストするには、**[インスタンス機能]** で必要に応じて **[データベース エンジン サービス]** を選びます。
+-   SSIS パッケージを格納、管理、実行、監視するために SSIS カタログ データベース `SSISDB` をホストするには、 **[インスタンス機能]** で必要に応じて **[データベース エンジン サービス]** を選びます。
 
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プログラミング用にマネージド アセンブリをインストールするには、**[共有機能]** で **[クライアント ツール SDK]** も選びます。
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プログラミング用にマネージド アセンブリをインストールするには、 **[共有機能]** で **[クライアント ツール SDK]** も選びます。
 
 > [!NOTE]
 > セットアップ ウィザードの **[機能の選択]** ページでインストールを選ぶことができる一部の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントのサブセットの一部がインストールされます。 これらのコンポーネントを使って一部のタスクを実行することは可能ですが、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のすべての機能を使うことはできません。 たとえば、 **[データベース エンジン サービス]** オプションを選択すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インポートおよびエクスポート ウィザードに必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントがインストールされます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を完全にインストールするには、 **[機能の選択]** ページで **[Integration Services]** を選択する必要があります。
@@ -81,7 +85,7 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の完全なインストールの場合は、次の一覧から必要なコンポーネントを選びます。
 
--   **Integration Services (SSIS)**。 SQL Server セットアップ ウィザードで SSIS をインストールします。 SSIS を選ぶと、次のものがインストールされます。
+-   **Integration Services (SSIS)** 。 SQL Server セットアップ ウィザードで SSIS をインストールします。 SSIS を選ぶと、次のものがインストールされます。
 
     -   SQL Server データベース エンジンでの SSIS カタログのサポート。
 
@@ -93,7 +97,7 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
 -   **SQL Server データベース エンジン**。 SQL Server セットアップ ウィザードでデータベース エンジンをインストールします。 データベース エンジンを選ぶと、SSIS パッケージを格納、管理、実行、監視するための SSIS カタログ データベース `SSISDB` を作成してホストできます。
 
--   **SQL Server Data Tools (SSDT)**。 SSDT をダウンロードしてインストールするには、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」をご覧ください。 SSDT をインストールすると、SSIS パッケージを設計して展開できます。 SSDT では次のものがインストールされます。
+-   **SQL Server Data Tools (SSDT)** 。 SSDT をダウンロードしてインストールするには、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」をご覧ください。 SSDT をインストールすると、SSIS パッケージを設計して展開できます。 SSDT では次のものがインストールされます。
 
     -   SSIS パッケージの設計および開発ツール (SSIS デザイナーなど)。
 
@@ -119,6 +123,6 @@ ETL (抽出、変換、読み込み) プロセス専用のサーバーを使う�
 
 -   **オプションの追加コンポーネント**。 必要に応じて、SQL Server Feature Package から追加のサードパーティ コンポーネントをダウンロードできます。
 
-    -   Microsoft SQL Server® 用 Microsoft® Connector for SAP BW。 これらのコンポーネントを入手するには、「[Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992)」をご覧ください。
+    -   Microsoft SQL ServerÂ® 用 MicrosoftÂ® Connector for SAP BW。 これらのコンポーネントを入手するには、[MicrosoftÂ® SQL ServerÂ® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) に関するページをご覧ください。
 
     -   Microsoft Connector Version 5.0 for Oracle by Attunity および Microsoft Connector Version 5.0 for Teradata by Attunity。 これらのコンポーネントを入手するには、「[Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)」をご覧ください。

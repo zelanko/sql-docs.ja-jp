@@ -18,16 +18,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88f57c22df5b6a621b5133f56f79a16ede550d77
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802289"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947079"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 検索が開始される **integer** 型または **bigint** 型の式。 *start_location* を指定しない場合、または負の値や 0 を指定した場合は、*expressionToSearch* の先頭から検索が開始されます。
   
 ## <a name="return-types"></a>戻り値の型
-*expressionToSearch* が **varchar(max)**、**nvarchar(max)**、または **varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
+*expressionToSearch* が **varchar(max)** 、**nvarchar(max)** 、または **varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
   
 ## <a name="remarks"></a>Remarks  
 *expressionToFind* または *expressionToSearch* のいずれかの式が Unicode データ型 (**nchar** または **nvarchar**) の場合で、他の式がそうでない場合、CHARINDEX 関数はその他の式を Unicode データ型に変換します。 CHARINDEX は、**image**、**ntext**、または **text** データ型では使用できません。
@@ -66,7 +66,7 @@ CHARINDEX は、入力の照合順序に基づいて比較を行います。 特
   
 開始位置は 0 ではなく 1 を基準とします。
   
-0x0000 (**char(0)**) は Windows 照合順序で未定義の文字であり、CHARINDEX に含めることはできません。
+0x0000 (**char(0)** ) は Windows 照合順序で未定義の文字であり、CHARINDEX に含めることはできません。
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
 SC の照合順序を使用する場合、*start_location* と戻り値では、サロゲート ペアが 2 文字ではなく 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。

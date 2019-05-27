@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], objects
@@ -15,12 +14,12 @@ ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 181e2a367f6196d50f90aee77ca9590f55ba0ce4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733064"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083129"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>処理の要件および注意事項 (データ マイニング)
   このトピックでは、データ マイニング オブジェクトを処理するときに注意するいくつかの技術的な考慮事項について説明します。 処理について、および処理がデータ マイニングに適用される方法に関する一般情報については、「 [データ マイニング オブジェクトの処理](processing-data-mining-objects.md)」を参照してください。  

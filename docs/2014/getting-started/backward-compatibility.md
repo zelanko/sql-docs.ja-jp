@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Surface Area Configuration Tool
@@ -26,12 +25,12 @@ ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774443"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088577"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   次の各セクションでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントの旧バージョンとの互換性について説明します。 この内容には、非推奨の機能、提供が中止された機能、重大な変更、および動作変更に関する情報が含まれています。  
@@ -48,7 +47,7 @@ ms.locfileid: "62774443"
 |[旧バージョンとの互換性&#40;マスター データ サービス&#41;](../master-data-services/backward-compatibility-master-data-services.md)|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ソリューションを修正する必要があります。|  
 |[レプリケーションの旧バージョンとの互換性](../../2014/relational-databases/replication/replication-backward-compatibility.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に加えられた変更について説明します。これらの変更に伴い、場合によっては、既存のレプリケーション ソリューションを修正する必要があります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 2014 をインストールします。](../database-engine/install-windows/install-sql-server.md)   
  [SQL Server 2014 へのアップグレード](../database-engine/install-windows/upgrade-sql-server.md)  
   

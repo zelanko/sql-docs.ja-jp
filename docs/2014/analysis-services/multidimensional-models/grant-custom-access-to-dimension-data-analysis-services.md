@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
@@ -24,12 +23,12 @@ ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726609"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075057"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>ディメンション データへのカスタム アクセス権の付与 (Analysis Services)
   キューブに対する読み取りアクセスを有効にすると、ディメンション メンバー (キューブで使用されるすべてのメジャーを含むメジャー ディメンションのメジャーを含む) へのアクセスを明示的に許可または拒否する追加の権限を設定できます。 たとえば、再販業者のカテゴリが複数ある場合は、特定のビジネスの種類のデータを除外する権限を設定できます。 次の図は、Reseller ディメンションでウェアハウスのビジネスの種類へのアクセスを拒否した場合の、前後の影響を比較しています。  
