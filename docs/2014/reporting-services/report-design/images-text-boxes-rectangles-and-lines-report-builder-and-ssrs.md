@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ded5827fa476d6d71839d77fd00f56d69e7cd710
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224935"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105686"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>画像、テキスト ボックス、四角形、および罫線 (レポート ビルダーおよび SSRS)
   レポートでは、視覚的な効果の追加、重要な情報の強調、または関連情報の提供のために、テーブル、マトリックス、グラフなどのデータ領域以外にも、画像、テキスト ボックス、四角形などのレポート アイテムが使用されます。 レポート アイテムの書式設定は変更できます。 たとえば、罫線または余白の追加、初期表示または方向の変更、またはアイテムの正確なサイズと位置の指定を行うことができます。  

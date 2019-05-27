@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
@@ -13,12 +12,12 @@ ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6f77a2ecf9ed5a985efa4a36f18b9f495c7091f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240721"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105901"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>レポートでの式の使用 (レポート ビルダーおよび SSRS)
   パラメーター、クエリ、フィルター、レポート アイテムのプロパティ、グループ化と並べ替え定義、テキスト ボックスのプロパティ、ブックマーク、ドキュメント マップ、ページ ヘッダーとページ フッターの動的なコンテンツ、画像、および動的データ ソース定義の値を指定または計算するために、レポート定義には随所に式が使用されています。 このトピックでは、レポートの内容と外観を変更するために式を使用できるさまざまな場所の例を示します。 この一覧がすべてではありません。 式 (**[fx]**) ボタンが表示されるダイアログ ボックスや、**[\<式...>]** が表示されるドロップダウン リストで、あらゆるプロパティに式を設定できます。  

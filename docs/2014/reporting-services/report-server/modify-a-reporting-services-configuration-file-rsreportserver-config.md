@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: daf92c429e8d223f29a0d0d27f4ba6afca66d905
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191157"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103760"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、一連の構成ファイルにアプリケーション設定を格納します。 構成ファイルはセットアップ時に作成され、インストールしたレポート サーバー インスタンスごとに存在します。 各ファイル内の値は、インストール中に設定されるか、ツールやアプリケーションを使用してサーバーの動作を構成したときに設定されます。 場合によっては、高度な設定を追加したり構成したりするために、ファイルを直接変更する必要があります。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。  

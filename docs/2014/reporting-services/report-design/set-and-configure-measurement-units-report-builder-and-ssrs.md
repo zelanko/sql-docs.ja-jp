@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d29a18d8d194928389ca78fbd854ccb021871c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215653"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105008"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>測定単位の設定および構成 (レポート ビルダーおよび SSRS)
   インジケーターは、パーセンテージと数値の 2 つの測定単位を提供します。 既定では、インジケーターは測定単位としてパーセンテージを使用するように構成されます。 つまり、インジケーター セットの各アイコンに割り当てられたインジケーター値は、パーセンテージ範囲によって決まります。 パーセンテージ範囲は、インジケーター セット内のアイコン全体に均等に分割されます。 各アイコンは、インジケーターの状態を表します。 異なる開始パーセンテージと終了パーセンテージを指定することで、インジケーター セット内の各アイコンのパーセンテージを変更できます。 また、インジケーターはデータ内の最小値と最大値を自動的に検出します。  

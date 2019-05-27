@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720247"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104722"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix データ領域部分 (レポート ビルダーおよび SSRS)
   Tablix データ領域には、tablix セルを含む 4 つの領域: コーナー、行グループ領域、列グループ領域、および本文です。 それぞれの領域内のセルには個別の関数があります。 詳細データとグループ化されたデータを表示するには、Tablix 本体領域にセルを追加します。 グループ インスタンス値を表示するためにグループを作成すると、レポート ビルダーおよびレポート デザイナーによって行グループ領域または列グループ領域にセルが追加されます。 行グループと列グループの両方が存在する場合は、レポート ビルダーおよびレポート デザイナーによって Tablix コーナー セルが作成されます。  

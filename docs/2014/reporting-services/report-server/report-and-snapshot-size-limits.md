@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - large reports
@@ -18,12 +17,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9ef488e088a9101e46b3c203ef6f3ca519dc3aec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: cef2943b2d7805a9738662bcd85c9602430a7e6b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946458"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103538"
 ---
 # <a name="report-and-snapshot-size-limits"></a>レポートとスナップショットのサイズ制限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の配置を管理する管理者は、このトピックの情報を参照することにより、レポート サーバーへのパブリッシュ時、レンダリング時 (実行時)、ファイル システムへの保存時のレポート サイズ制限を理解できます。 このトピックでは、レポート サーバー データベースのサイズを測定する方法の具体的な指針とサーバーのパフォーマンスのスナップショット サイズの効果についても説明します。  

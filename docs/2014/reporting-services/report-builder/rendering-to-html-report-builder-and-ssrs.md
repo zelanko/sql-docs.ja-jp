@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4a3f82e7cd561e3d5d1ce216eecc9f2dfec70dac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155285"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107718"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   HTML 表示拡張機能では、HTML 形式でレポートを表示します。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  

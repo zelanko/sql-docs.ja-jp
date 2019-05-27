@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -17,12 +16,12 @@ ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8f1eaa33c0a113f540a841ca2cfcfadd71ed0c74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265908"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109611"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>共有データ ソースを作成、削除、または変更する (レポート マネージャー)
   共有データ ソースでは、1 つのデータ ソースに対する接続プロパティを指定します。 多数のレポート、モデル、またはデータ ドリブン サブスクリプションで 1 つのデータ ソースを使用する場合は、共有データ ソースを作成することにより、同じ接続情報を複数箇所で管理するオーバーヘッドを低減できます。  

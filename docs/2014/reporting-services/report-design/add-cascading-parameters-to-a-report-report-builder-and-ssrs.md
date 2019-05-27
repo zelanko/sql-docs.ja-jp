@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5244d423e8e4369be7ce942fde8dbdaaf2f2e391
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963288"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106698"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
   カスケード型パラメーターを使用すると、大量のレポート データの管理が可能になります。 パラメーターの値の一覧が、別のパラメーターで選択された値によって決まるように、関連するパラメーターのセットを定義できます。 たとえば、最初のパラメーターが独立しており、製品カテゴリの一覧を表すとします。 ユーザーが任意のカテゴリを選択すると、2 番目のパラメーターは最初のパラメーターの値によって決まります。 その値は、選択したカテゴリ内のサブカテゴリの一覧で更新されます。 ユーザーがレポートを表示するとき、カテゴリ パラメーターとサブカテゴリ パラメーターの両方の値を使用して、レポート データにフィルターが適用されます。  

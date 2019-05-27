@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
@@ -15,12 +14,12 @@ ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f345eaa2a51b5e6789f2a03968f8a1e68b12519a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62698435"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107566"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>チュートリアル:オフラインでのクイック グラフ レポートの作成 (レポート ビルダー)
   このチュートリアルでは、ウィザードを使用して円グラフを作成し、少し変更して実行可能な操作を確認します。 このチュートリアルは 2 つの異なる方法で実行できます。 両方の方法では、同じ結果を円グラフでは、次の図のようながあります。  

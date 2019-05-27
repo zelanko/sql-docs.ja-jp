@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10249"
@@ -41,12 +40,12 @@ ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2fe3d55dc70a606df759c049b7b147820f0e3110
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825312"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105989"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>ドリルダウン アクション (レポート ビルダーおよび SSRS)
   テキスト ボックスに正符号と負符号のアイコンを組み込むことによって、アイテムの表示/非表示をユーザーが対話的に切り替えられるように設定できます。 これを *ドリルダウン* アクションと呼びます。 テーブルまたはマトリックスの場合、静的な行や列、またはグループに関連付けられている行や列の表示と非表示を切り替えることができます。  
@@ -55,7 +54,7 @@ ms.locfileid: "62825312"
   
  この図では、レポートの正符号 (+) をクリックして詳細データを表示しています。  
   
- たとえば、行グループのあるテーブルの場合、外側のグループの概要行を除いて、最初にすべての行を非表示にすることができます。 それぞれの内部グループ (詳細グループを含む) に対して、グループ化セルの展開/折りたたみを切り替えるアイコンを対象グループに追加します。 レポートが表示されると、ユーザーはこのテキスト ボックスをクリックして、詳細データを展開したり折りたたんだりすることができます。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS& #41;](tables-report-builder-and-ssrs.md)」を参照してください。  
+ たとえば、行グループのあるテーブルの場合、外側のグループの概要行を除いて、最初にすべての行を非表示にすることができます。 それぞれの内部グループ (詳細グループを含む) に対して、グループ化セルの展開/折りたたみを切り替えるアイコンを対象グループに追加します。 レポートが表示されると、ユーザーはこのテキスト ボックスをクリックして、詳細データを展開したり折りたたんだりすることができます。 詳細については、「[テーブル &#40;レポート ビルダーおよび SSRS&#41;](tables-report-builder-and-ssrs.md)」を参照してください。  
   
  アイテムの展開と折りたたみをユーザーが行うようにするには、アイテムの表示プロパティを設定します。  
   

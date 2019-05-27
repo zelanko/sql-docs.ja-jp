@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10404"
@@ -20,12 +19,12 @@ ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020741"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106394"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)
   レポート内の式で複数回使用される複雑な計算があれば、変数を作成した方がよい場合があります。 このような場合は、レポート変数またはグループ変数を作成できます。 変数名は、レポート内で一意である必要があります。  
@@ -58,7 +57,7 @@ ms.locfileid: "63020741"
 ## <a name="group-variables"></a>グループ変数  
  グループ変数は、グループのスコープ内で複合式を 1 回計算するために使用します。 グループ変数は、グループとその子グループのスコープ内でのみ有効です。  
   
- たとえば、別々の税区分にある各アイテムの在庫データをデータ領域に表示し、各カテゴリに異なる税率を適用するとします。 Category でデータをグループ化し、親グループで *Tax* 変数を定義します。 次に、税区分ごとに *ItemTax* のグループ変数を定義し、異なる Category サブグループをそれぞれ適切なグループ変数に割り当てます。 以下に例を示します。  
+ たとえば、別々の税区分にある各アイテムの在庫データをデータ領域に表示し、各カテゴリに異なる税率を適用するとします。 Category でデータをグループ化し、親グループで *Tax* 変数を定義します。 次に、税区分ごとに *ItemTax* のグループ変数を定義し、異なる Category サブグループをそれぞれ適切なグループ変数に割り当てます。 例 :  
   
 -   `[Category]`に基づく親グループでは、値 *Tax* を指定して、変数 `[Tax]`を定義します。 カテゴリ値が Food と Clothing であるとします。  
   

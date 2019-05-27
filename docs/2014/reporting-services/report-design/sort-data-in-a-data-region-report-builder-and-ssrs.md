@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 57933ec6894d36af0ab8a54236ff75655fab6967
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dac2694101678f8728de4a4bcdd3db416ad4c17f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720338"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104916"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>データ領域内のデータの並べ替え (レポート ビルダーおよび SSRS)
   レポートを初めて実行したときのデータ領域内のデータの並べ替え順序を変更するには、データ領域またはグループに対して並べ替え式を設定する必要があります。 既定で、グループの並べ替え式は、グループ式と同じ値に自動的に設定されます。  

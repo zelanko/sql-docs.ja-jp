@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10423"
@@ -13,12 +12,12 @@ ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185650"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106267"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>グラフの種類 (レポート ビルダーおよび SSRS)
   表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 たとえば、グラフのサイズに対して多数のデータ ポイントがデータセットに含まれている場合は、面グラフ、折れ線グラフ、または散布図を使用して表示するのが適しています。 選択したグラフの種類に応じてデータを準備する方法の詳細については、「 [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)」を参照してください。  

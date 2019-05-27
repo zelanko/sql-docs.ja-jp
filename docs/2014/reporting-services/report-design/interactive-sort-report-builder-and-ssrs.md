@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209227"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105614"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>対話的な並べ替え (レポート ビルダーおよび SSRS)
   対話的な並べ替えボタンを追加すると、ユーザーがテーブルの行またはマトリックスの行と列を昇順および降順で並べ替えることができるようになります。 対話的な並べ替えの最も一般的な使用方法は、各列ヘッダーに並べ替えボタンを追加することです。 これにより、ユーザーは並べ替えの基準となる列を選択できます。  

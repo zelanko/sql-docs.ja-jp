@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0becc3627ee54158b8beed7c888698c9052ab1b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63207201"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106494"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域へのデータの追加 (レポート ビルダーおよび SSRS)
   レポート データセットのデータをテーブルまたはマトリックス形式で表示するには、各データ セルで表示するデータセット フィールドの名前を指定します。 詳細データまたはグループ化されたデータを表示できます。 グループをテーブルまたはマトリックスに追加すると、グループの値およびデータの行と列が自動的に追加されます。 データの小計および合計を追加できます。  

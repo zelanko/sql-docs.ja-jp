@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -18,12 +17,12 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c62b34985ccd967ec21e88e01c146851b9c18df9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: c9047073a39076fd246b14db26ca1d519fd2e1c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932618"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105067"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
   このトピックでは、SSRS レポート パラメーターの一般的な使用方法、設定できるプロパティ、およびパラメーターの詳細について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。  
@@ -131,7 +130,7 @@ ms.locfileid: "59932618"
 |--------------|-----------------|  
 |名前|パラメーターの名前を入力します (大文字と小文字が区別されます)。 名前は文字で始まる必要があります。また、名前には、文字、数字、アンダースコア (_) を使用できます。 空白は使用しないでください。 自動的に生成されたパラメーターの名前は、データセット クエリのパラメーターと同じ名前になります。 既定では、手動で作成されたパラメーターの名前は、ReportParameter1 のようになります。|  
 |[プロンプト]|レポート ビューアー ツール バーでパラメーターの横に表示されるテキストです。|  
-|データ型|データ型が場合でも、ユーザーが、ドロップダウン リストから値を選択パラメーターの使用可能な値を定義したら、`DateTime`します。 レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> `Boolean` 。 オプション ボタンから True または False を選択します。<br /><br /> `DateTime` 。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]**。 テキスト ボックスに値を入力します。<br /><br /> **[Float]**。 テキスト ボックスに値を入力します。<br /><br /> `Text` 。 テキスト ボックスに値を入力します。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
+|データ型|データ型が場合でも、ユーザーが、ドロップダウン リストから値を選択パラメーターの使用可能な値を定義したら、`DateTime`します。 レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> `Boolean`。 オプション ボタンから True または False を選択します。<br /><br /> `DateTime`。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]**。 テキスト ボックスに値を入力します。<br /><br /> **[Float]**。 テキスト ボックスに値を入力します。<br /><br /> `Text`。 テキスト ボックスに値を入力します。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
 |[空白の値を許可]|パラメーターの値に空の文字列 (空白) を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に空白を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に空白が有効な値に含まれるわけではありません。|  
 |[NULL 値を許可]|パラメーターの値に NULL 値を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に NULL を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に NULL が有効な値に含まれるわけではありません。|  
 |[複数の値を許可]|使用可能な値を指定して、ユーザーがドロップダウン リストから値を選択できるようにすると、 データセット クエリで有効な値のみが送信されるようにすることができます。<br /><br /> パラメーターの値に、ドロップダウン リストに表示される複数の値を指定できる場合に選択します。 NULL 値は許容されません。 このチェック ボックスがオンの場合、パラメーターのドロップダウン リストで、使用可能な値の一覧にチェック ボックスが追加されます。 一覧の一番上には、 **[すべて選択]** チェック ボックスが表示されます。 ユーザーは、必要な値のチェック ボックスをオンにすることができます。<br /><br /> 値を提供するデータが急速に変化する場合は、ユーザーに最新の一覧が表示されるとは限りません。|  
@@ -164,7 +163,7 @@ ms.locfileid: "59932618"
   
 -   **リンク レポート。** さまざまな対象ユーザーのためにデータをフィルター処理するパラメーター値が事前に設定されたリンク レポートを作成できます。 詳細については、「 [リンク レポートを作成する](../reports/create-a-linked-report.md)」を参照してください。  
   
--   **レポート サブスクリプション。** データをフィルター処理してレポートをサブスクリプションで配信するためのパラメーター値を指定できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+-   **レポート サブスクリプション。** データをフィルター処理してレポートをサブスクリプションで配信するためのパラメーター値を指定できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 -   **URL アクセス。** レポートへの URL でパラメーター値を指定できます。 URL アクセスを使用して、レポートを実行したりパラメーター値を指定したりすることもできます。 詳細については、「[URL アクセス (SSRS)](../url-access-ssrs.md)」を参照してください。  
   
@@ -188,7 +187,7 @@ ms.locfileid: "59932618"
 > [!NOTE]  
 >  データ ドリブン サブスクリプションでは、サブスクライバー データ ソースから取得したパラメーター値を使用できます。 詳細については、「[サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)」を参照してください。  
   
- 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+ 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_Parameters_Security"></a> パラメーターとデータのセキュリティ保護  
  秘密性の高い情報を含むパラメーター化されたレポートを配布する際には注意が必要です。 レポート パラメーターは簡単に別の値に置き換えることができるので、予想外の情報が公開される可能性があるためです。  

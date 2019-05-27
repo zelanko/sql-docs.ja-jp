@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191088"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103584"
 ---
 # <a name="preload-the-cache-report-manager"></a>キャッシュの事前読み込み (レポート マネージャー)
   共有データセットのキャッシュ更新計画を作成することによって、共有データセットのキャッシュを事前に読み込むことができます。  
@@ -87,7 +86,7 @@ ms.locfileid: "63191088"
   
 8.  **[次へ]** をクリックします。  
   
-9. サブスクライバー データを取得するクエリまたはコマンドを指定します。 必要に応じて、処理に時間のかかるクエリのタイムアウト値を増やします。 以下に例を示します。  
+9. サブスクライバー データを取得するクエリまたはコマンドを指定します。 必要に応じて、処理に時間のかかるクエリのタイムアウト値を増やします。 例 :  
   
     ```  
     Select * from UserInfo  
@@ -114,7 +113,7 @@ ms.locfileid: "63191088"
   
 17. 次の 2 つのキャッシュ オプションのいずれかを選択し、以下のように有効期限を構成します。  
   
-    -   特定の期間後に期限切れのキャッシュされたコピーを作成するをクリックします。**レポートの一時コピーをキャッシュします。[レポートのコピーの有効期限は数分後に切れます]** をクリックします。 レポートの有効期限を分単位で入力します。  
+    -   キャッシュされたコピーが、特定の期間が過ぎた後で有効期限が切れるようにするには、**レポートの一時コピーをキャッシュします。レポートのコピーの有効期限は数分後に切れます** をクリックします。 レポートの有効期限を分単位で入力します。  
   
     -   キャッシュされたコピーが、スケジュールに基づいて有効期限が切れるようにするには、**[レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの有効期限は切れます。]** をクリックします。 **[構成]** をクリックするか、共有スケジュールを選択して、レポートの有効期限をスケジュールします。  
   

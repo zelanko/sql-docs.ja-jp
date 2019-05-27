@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
@@ -21,12 +20,12 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302828"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104614"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 (レポート ビルダーおよび SSRS)
   マップ レイヤー上の多角形、線、およびポイントの表示オプションを制御する方法として、レイヤーのオプションを設定する方法、レイヤー上のマップ要素ルールを設定する方法、およびレイヤー上の特定の埋め込みマップ要素のオプションをオーバーライドする方法があります。  

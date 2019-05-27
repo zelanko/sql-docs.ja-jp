@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d3e5c894c75002f95ed67c8383c5497db998dfa9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8d9838306090cf219fed799c5982481ac3365a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240700"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105917"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)
   式の作成に関して、*スコープ*という用語は、さまざまな文脈で用いられています。 スコープは、式を評価するのに使用するデータ、表示されたページのテキスト ボックスのセット、または表示と非表示を切り替えることのできるレポート アイテムのセットを示します。 *スコープ* という用語は、式の評価、集計関数の構文、条件付き表示に関連したトピックと、これらの領域に関連したエラー メッセージで使用されます。 次の説明を参考にして、どの意味で *スコープ* が適用されているかを区別してください。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
@@ -18,12 +17,12 @@ ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 417c0aa5a444c6d73c76b11aa21756400ac891c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2c0e935cc3d5264a1d2f5569b62db416d85b0427
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190930"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103379"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services のログ ファイルとソース
   A[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポート サーバーとレポート サーバー環境は、さまざまなサーバー操作および状態に関する情報を記録するログの保存先をサポートします。 ログ記録には、実行のログ記録とトレースのログ記録という 2 つの基本的なカテゴリがあります。 実行のログ記録には、レポート実行統計、監査、パフォーマンスの診断、および最適化に関する情報が含まれます。 トレースのログ記録は、エラー メッセージおよび一般的な診断に関する情報です。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 838c48ec4c15d1e89a571e5cb84cf1add613a045
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011487"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103928"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX コントロール、 **RSClientPrint**レポートのクライアント側印刷機能は、ブラウザーで表示を提供します。 このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、一般的な印刷ダイアログ ボックスの機能がサポートされています。 この機能には、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなどが含まれます。 クライアント側印刷機能は既定で有効になっていますが、無効にして使用できないようにすることもできます。  

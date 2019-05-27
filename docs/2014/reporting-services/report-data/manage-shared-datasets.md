@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d0d32084abfb744c2c5f9fdf6f585c7713e3057d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224719"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107208"
 ---
 # <a name="manage-shared-datasets"></a>共有データセットを管理する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、共有データセットによって、外部データ ソースに接続された共有データ ソースからデータを取得します。 共有データセットを使用するとクエリを共有できるので、複数のレポートに同じデータ セットを取り込むことができます。 データセット クエリにはデータセット パラメーターが含まれる場合があります。 初回使用時または指定したスケジュールに従い、特定のパラメーターの組み合わせによるクエリ結果をキャッシュするよう共有データセットを構成できます。 レポート キャッシュおよびレポート データ フィードと共に共有データセットのキャッシュを使用すると、データ ソースへのアクセスの管理に役立ちます。  

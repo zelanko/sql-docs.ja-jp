@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21726a3f57db48a9dd1ec163de7ece3ba5e544c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186070"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106752"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)
   レポート アイテムの展開と折りたたみや、グループと関連付けられているテーブルやマトリックスの行と列の展開と折りたたみを、ユーザーが対話形式で行うようにできます。 アイテムの展開と折りたたみをユーザーが行うようにするには、アイテムの表示プロパティを設定します。 表示の設定は HTML レポート ビューアーで行い、 *ドリルダウン* アクションと呼ばれることがあります。  

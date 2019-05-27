@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
@@ -14,12 +13,12 @@ ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c89de031408d222caa030900cececb97d8aa2db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 28b981dfe725a42228f287bc7a02df836030f3d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215627"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104963"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは、小さい領域で多くの情報を伝達する小さい単純なグラフで、多くの場合、インライン テキストが含まれています。 スパークラインとデータ バーはテーブルやマトリックスでよく使用されます。 その効果は、それらを個々に表示するのではなく、同時に上下に表示して簡単に比較できることにあります。 この機能によって、他の値と動作の異なる行である外れ値を把握しやすくなります。 これらは小さいですが、各スパークラインは長期にわたる複数のデータ ポイントを表す場合が多く、 データ バーは複数のデータ ポイントを表すこともできますが、通常は 1 つのデータ ポイントのみを示します。 各スパークラインは通常 1 つの系列を表します。 スパークラインをテーブル内の詳細グループに追加することはできません。 スパークラインは集計データを表示するため、グループに関連付けられているセル内に含める必要があります。 スパークラインとデータ バーには、カテゴリ、系列、および値という同じ基本グラフ要素がありますが、凡例、軸線、ラベル、目盛りはありません。  
