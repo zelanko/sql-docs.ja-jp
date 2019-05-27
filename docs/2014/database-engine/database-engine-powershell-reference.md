@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3c379a43-c497-47dd-8e7d-2b015c068bb7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41131b63817ababfe20e171185f0c27dc5f0ca06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed2e407b724f57d6ded518b864e3b1d78b4c489e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807496"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064966"
 ---
 # <a name="database-engine-powershell-reference"></a>データベース エンジン PowerShell リファレンス
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、[!INCLUDE[ssDE](../includes/ssde-md.md)]で一般的な操作を実行するための一連の Windows PowerShell 2.0 コマンドレットが含まれています。 また、クエリ式と URN (Uniform Resource Name) は、SQL Server PowerShell パスに変換したり、 [!INCLUDE[ssDE](../includes/ssde-md.md)]で 1 つ以上のオブジェクトを指定するために使用したりできます。  

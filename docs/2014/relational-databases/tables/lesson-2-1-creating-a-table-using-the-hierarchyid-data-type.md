@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: 0d1f361f-336c-4571-99d1-f4813b2d9fc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5af072e27ff1e1c70d6a3035ceb7eb2a1cc2493
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98ce16a3630032001a1191b09b1b0ade13aacb73
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760909"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110116"
 ---
 # <a name="creating-a-table-using-the-hierarchyid-data-type"></a>hierarchyid データ型を使用したテーブルの作成
   EmployeeOrg という名前のテーブルを作成する例を次に示します。このテーブルには、従業員データと、それらの従業員のレポート階層が含まれています。 この例では、テーブルを [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに作成しますが、これは任意です。 例をわかりやすくするために、このテーブルには 5 つの列のみ含まれています。  

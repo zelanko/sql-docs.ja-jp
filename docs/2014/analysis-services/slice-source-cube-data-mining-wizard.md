@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
@@ -13,12 +12,12 @@ ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746465"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068594"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Slice Source Cube (Data Mining Wizard)
   **[ソース キューブのスライス]** ダイアログ ボックスを使用すると、モデルのトレーニング用に使用するデータを制限できます。 通常、キューブには、すべての店舗、すべての地域、すべての製品など、多くの異なるディメンションと属性に関連するデータが含まれています。 属性の無限の組み合わせに対してモデルのトレーニングを実行することは実用的ではないため、このダイアログ ボックスを使用して、モデルのトレーニングで利用する特定のセットを選択します。  
@@ -60,7 +59,7 @@ ms.locfileid: "62746465"
  **パラメーター**  
  このオプションは、データ マイニング モデルでは使用されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ウィザードの完了&#40;データ マイニング ウィザード&#41;](completing-the-wizard-data-mining-wizard.md)   
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [マイニング モデル列の使用法の指定&#40;データ マイニング ウィザード&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  

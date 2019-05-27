@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
@@ -16,12 +15,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753284"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092441"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>アップグレード アドバイザーの実行 (コマンド プロンプト)
   使用して、 **UpgradeAdvisorWizardCmd**ユーティリティをコマンド プロンプトからアップグレード アドバイザーを実行します。 結果を XML 形式で受け取るか、コンマ区切り値のファイルで受け取るかを選択できます。  
@@ -75,7 +74,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>戻り値  
  次の表は、値を**UpgradeAdvisorWizardCmd**を返します。  
   
-|値|説明|  
+|値|Description|  
 |-----------|-----------------|  
 |0|分析が正常に完了し、アップグレードの問題は見つかりませんでした。|  
 |正の整数|分析が正常に完了し、アップグレードの問題が見つかりました。|  
@@ -169,7 +168,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
     -SqlUser "MyUserName" -SqlPassword "QweRTy-55"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [アップグレード アドバイザーを実行している&#40;ユーザー インターフェイス&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)  

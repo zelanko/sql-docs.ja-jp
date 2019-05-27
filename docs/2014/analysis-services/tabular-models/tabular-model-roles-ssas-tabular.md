@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.duplicateroles.f1
@@ -13,12 +12,12 @@ ms.assetid: 28658862-dce2-459f-8868-29ee31c879bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 714bc18b6eda419bbcc148c32c5ddcc316daf503
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794562"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066448"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>テーブル モデル ロール (SSAS テーブル)
   このトピックおよび関連するタスクで提供される情報は、配置されているテーブル モデルのロールを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して作成および管理するテーブル モデル データベース管理者向けです。 テーブル モデルのロールの詳細については、「[Roles (SSAS Tabular)](roles-ssas-tabular.md)」(ロール (SSAS テーブル)) を参照してください。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のロール マネージャーを使用してテーブル モデル プロジェクトのロールを作成および管理する方法の詳細については、「[Create and Manage Roles (SSAS Tabular)](create-and-manage-roles-ssas-tabular.md)」(ロールの作成および管理 (SSAS テーブル)) を参照してください。  

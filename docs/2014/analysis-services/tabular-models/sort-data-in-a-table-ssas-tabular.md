@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5fa6ad56-bf68-4aac-a226-52556173b7e2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794372"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066657"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>テーブル内のデータの並べ替え (SSAS テーブル)
   データは、1 つ以上の列のテキスト (A から Z、または Z から A) または数値 (小さい数値から大きい数値、または大きい数値から小さい数値) の順で並べ替えることができます。  

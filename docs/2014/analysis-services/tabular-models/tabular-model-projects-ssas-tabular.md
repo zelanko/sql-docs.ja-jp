@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47cd197168b275762b5fa2faa4790a567171022f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756595"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066340"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>テーブル モデル プロジェクト (SSAS テーブル)
   新しいテーブル モデルを作成するには、まず [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で新しいテーブル モデル プロジェクトを作成する必要があります。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]をインストールすると、テーブル モデル プロジェクト作成のために 3 つのビジネス インテリジェンス プロジェクト テンプレートが提供されます。 各プロジェクト テンプレートは、モデルの作成を開始するためのフレームワークを提供します。 このセクションのトピックでは、プロジェクト テンプレートを使用して、新しいテーブル モデル プロジェクトを作成する方法を説明します。  

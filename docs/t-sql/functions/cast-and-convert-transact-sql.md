@@ -32,16 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801836"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942892"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,15 +52,16 @@ ms.locfileid: "56801836"
 
 **CAST**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **[変換]**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
@@ -181,7 +182,7 @@ date または time データ型の *expression* の場合、*style* には次�
 |**3**|余分な空白を保持し、限定的な内部 DTD サブセット処理を有効にします。|  
   
 ## <a name="binary-styles"></a>バイナリ スタイル
-*expression* が **binary(n)**、**char(n)**、**varbinary(n)**、または **varchar(n)** の場合、*style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
+*expression* が **binary(n)** 、**char(n)** 、**varbinary(n)** 、または **varchar(n)** の場合、*style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
   
 |[値]|[出力]|  
 |---|---|
@@ -221,7 +222,7 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="output-collation"></a>出力の照合順序  
 CAST または CONVERT 関数が文字列を入出力する場合、出力では入力と同じ照合順序および照合順序ラベルが使用されます。 入力が文字列ではない場合、出力ではデータベースの既定の照合順序、および強制可能な既定照合順序の照合順序ラベルが使用されます。 詳細については、「[照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)」を参照してください。
   
-出力に別の照合順序を割り当てるには、CAST 関数または CONVERT 関数の結果式に COLLATE 句を適用します。 例 :
+出力に別の照合順序を割り当てるには、CAST 関数または CONVERT 関数の結果式に COLLATE 句を適用します。 例:
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   

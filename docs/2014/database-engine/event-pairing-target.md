@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
@@ -15,12 +14,12 @@ ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62780413"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064846"
 ---
 # <a name="event-pairing-target"></a>イベント ペアリング ターゲット
   イベント ペアリング ターゲットは、各イベントに存在する単一列または複数列のデータを使って 2 つのイベントを照合します。 ロックの取得とロックの解放など、対で発生するイベントが数多く存在します。 イベント シーケンスが対で発生した後は、両方のイベントが破棄されます。 一対のイベントを破棄することによって、取得されたまま解放されていないロックを容易に検出できます。  
@@ -90,7 +89,7 @@ WHERE xe.name = 'session_name'
 </unpaired>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

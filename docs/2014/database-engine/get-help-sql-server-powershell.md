@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Help [PowerShell]
@@ -15,12 +14,12 @@ ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c9f297459b498276f84fa4fdfed5adf9941112d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779104"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064882"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Windows PowerShell 用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーおよびコマンドレットの使用方法に関していくつかの情報源が用意されています。 これには、Windows PowerShell 環境で参照できるヘルプが含まれます。  
@@ -122,7 +121,7 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
  [データベース エンジン コマンドレットの使用](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265948"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109618"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>[データ ドリブン サブスクリプションの作成] ページ (レポート マネージャー)
   [データ ドリブン サブスクリプションの作成] ページでは、実行するたびにサブスクライバー データベースにサブスクリプション情報をクエリするサブスクリプションを作成または変更できます。 データ ドリブン サブスクリプションはクエリ結果を使用して、サブスクリプションの受信先、配信設定、およびレポート パラメーターの値を決定します。 実行時に、レポート サーバーで、サブスクリプションの設定に使用されている値を取得するクエリが実行されます。 [データ ドリブン サブスクリプションの作成] ページを使用して、クエリを定義し、クエリの値をサブスクリプションの設定に割り当てることができます。 データドリブン サブスクリプションに指定する値およびオプションは、いくつかのウィザード形式になったページに分かれて表示されます。 ページは全部で 7 ページあります。  

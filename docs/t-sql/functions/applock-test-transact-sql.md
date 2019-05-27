@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - testing application locks
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6fe1b71d95dd326eedbdf481c68a74d30c052c6f
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: b1619c37bbae6c885862c4749c07a3d5be559565
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980188"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945107"
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 特定のリソースに対して取得するロック モード。 *lock_mode* は **nvarchar (32)** であり、既定値はありません。 *lock_mode* は、次のいずれかの値をとります:**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
   
 **'** *lock_owner* **'**  
-ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**, 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。 既定値または **Transaction** を明示的に指定した場合、APPLOCK_TEST はトランザクション内から実行する必要があります。
+ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)** , 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。 既定値または **Transaction** を明示的に指定した場合、APPLOCK_TEST はトランザクション内から実行する必要があります。
   
 ## <a name="return-types"></a>戻り値の型
 **smallint**

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.generationtarget.f1
@@ -13,12 +12,12 @@ ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d27db6fab4536a5f703a1f6b7ba7cc6b5405f817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746156"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068250"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>[対象の指定] (スキーマ生成ウィザード) (Analysis Services - 多次元データ)
   **[対象の指定]** ページを使用すると、リレーショナル スキーマを作成するデータ ソース ビューを指定できます。  
@@ -47,7 +46,7 @@ ms.locfileid: "62746156"
  **既存のデータ ソース ビューを使用します。**  
  ウィザードで生成されるリレーショナル スキーマが含まれる、既存のデータ ソース ビューを選択する場合に選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スキーマ生成ウィザードの F1 ヘルプ&#40;Analysis Services - 多次元データ&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   

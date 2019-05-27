@@ -1,25 +1,28 @@
 ---
 title: レポート データ
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 1469f8467e455dbf4bfe70a502d1f29698dc6d1a
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.openlocfilehash: 65cc1f358a7bb6507e0a4d869fdd623c35f27949
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553084"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935389"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でのレポート データ
 
   レポート データは、組織の複数のデータ ソースから取得できます。 レポートをデザインする最初の手順は、基になるレポート データを表すデータ ソースとデータセットを作成することです。 各データ ソースには、データの接続情報が含まれます。 各データセットには、データ ソースのデータとして使用するフィールドのセットを定義するクエリ コマンドが含まれます。 各データセットのデータを視覚化するには、データ領域 (テーブル、マトリックス、グラフ、マップなど) を追加します。 レポートの処理時に、データ ソースに対してクエリが実行され、各データ領域は、データセットのクエリ結果を表示するために、必要に応じて拡張されます。  
+
+> [!NOTE]
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
 ##  <a name="BkMk_ReportDataTerms"></a> 用語  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756267"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065765"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>データの処理のトラブルシューティング (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を使用したモデルの作成時のモデル データの処理 (更新) について説明します。 このトピックでは、Analysis Services サーバー インスタンスに配置されたモデルでのデータの処理については説明しません。 配置済みモデルでのデータ処理の詳細については、「 [Analysis Services の管理タスクのスクリプト作成](script-administrative-tasks-in-analysis-services.md)」を参照してください。  

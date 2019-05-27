@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746734"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068373"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>[ディメンションの種類を指定] (ディメンション ウィザード)
   **[ディメンションの種類を指定]** ページを使用すると、ディメンションの種類を定義し、選択したディメンションの種類に関連付けられている特殊な属性の型をディメンションに追加できます。  
@@ -62,7 +61,7 @@ ms.locfileid: "62746734"
  **ディメンションの属性**  
  **[属性の型]** に表示された特殊な属性の型を、ディメンション ウィザードが割り当てるディメンションの属性を選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

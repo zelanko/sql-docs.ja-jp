@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188544"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108189"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>[個人用サブスクリプション] ページ (レポート マネージャー)
   [個人用サブスクリプション] ページでは、各自のサブスクリプションをすべて参照できます。 このページから所有している任意のサブスクリプションにアクセスし、サブスクリプションを変更または削除できます。 所有できるサブスクリプションは、自分で作成したサブスクリプションだけです。 他のユーザーのサブスクリプションにはアクセスできません。また、使用していても所有していないサブスクリプション (たとえば、他のユーザーが定義して、自分の名前が追加されている既存のサブスクリプション) にもアクセスできません。 また、このページからサブスクリプションを作成することはできません。 サブスクリプションの作成についての詳細については、次を参照してください。、[新しいサブスクリプションまたはサブスクリプションの編集 ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)します。  

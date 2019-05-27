@@ -1,18 +1,19 @@
 ---
 title: ネットワーク負荷分散クラスターにおけるレポート サーバーの構成 | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 10/03/2018
-ms.openlocfilehash: 26c8423308b07c570cf289113a00fbd07a1133aa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041773"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937241"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>ネットワーク負荷分散クラスターにおけるレポート サーバーの構成
 

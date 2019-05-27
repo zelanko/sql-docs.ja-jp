@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
@@ -13,12 +12,12 @@ ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756326"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065852"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>[翻訳の詳細] ([翻訳] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[翻訳]** タブの **[翻訳の詳細]** ペインを使用すると、現在選択しているディメンションの翻訳を定義および管理できます。  
@@ -99,7 +98,7 @@ ms.locfileid: "62756326"
  **すべての属性を表示します。**  
  属性階層が無効になっている属性を含め、選択したディメンションに定義されている全属性が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

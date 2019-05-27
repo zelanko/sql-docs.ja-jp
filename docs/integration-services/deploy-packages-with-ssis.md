@@ -21,14 +21,18 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6be73e7253bc0be8d8dde9766f9fcb8be0a2dfa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277281"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725750"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS によるパッケージの配置
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを別のコンピューターへ簡単に配置できるツールが用意されています。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、ターゲット コンピューターにパッケージとその依存関係をインストールする方法を学習します。    
     
 まず、配置の準備を行います。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトを作成し、既存のパッケージとデータ ファイルをプロジェクトに追加します。 新しいパッケージを最初から作成するのではなく、このチュートリアル用に作成された既存のパッケージで作業を行います。 このチュートリアルでパッケージの機能は変更しませんが、パッケージをプロジェクトに追加した後、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開いて内容を確認しておくことをお勧めします。 パッケージの内容を確認すると、ログ ファイルなどのパッケージの依存関係やその他の便利な機能について理解できます。    

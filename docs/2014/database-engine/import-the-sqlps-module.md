@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b6fdc0b8267f1e995812d573ae80f0f24ee11843
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 303d4cb75ad678ddd0c0f49e204566fc8a0d2c2c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778971"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064731"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS モジュールのインポート
   PowerShell から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を管理する方法としては、`sqlps` モジュールを Windows PowerShell 2.0 環境にインポートする方法を推奨します。 このモジュールによって、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスナップインと管理アセンブリが読み込まれ、登録されます。  
@@ -63,7 +62,7 @@ Import-Module "sqlps" -DisableNameChecking
   
 
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [SQL Server PowerShell プロバイダー](../powershell/sql-server-powershell-provider.md)   
  [データベース エンジン コマンドレットの使用](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

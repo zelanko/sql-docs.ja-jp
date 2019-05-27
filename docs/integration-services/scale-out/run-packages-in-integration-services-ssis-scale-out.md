@@ -5,7 +5,7 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
@@ -13,12 +13,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: b466bb90d9a40599bad9c924da7f2ae6f5f74089
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 1825b26912b507b8e58b1828437102cf3650d5e6
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718290"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015034"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out でパッケージを実行する
 
@@ -43,10 +43,10 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
     **[パッケージの選択内容]** ページで、実行するパッケージを 1 つまたは複数選択します。 環境、パラメーター、接続マネージャー、および詳細設定オプションをパッケージごとに設定します。 これらのオプションを設定するには、パッケージをクリックします。
     
-    **[詳細設定]** タブで、**[再試行回数]** と呼ばれる Scale Out オプションを設定して、パッケージが失敗した場合のパッケージの再試行回数を指定します。
+    **[詳細設定]** タブで、 **[再試行回数]** と呼ばれる Scale Out オプションを設定して、パッケージが失敗した場合のパッケージの再試行回数を指定します。
 
     > [!NOTE]
-    > Scale Out Worker サービスを実行しているアカウントがローカル コンピューターの管理者である場合、**[エラー時にダンプする]** オプションのみが機能します。
+    > Scale Out Worker サービスを実行しているアカウントがローカル コンピューターの管理者である場合、 **[エラー時にダンプする]** オプションのみが機能します。
 
 3. worker コンピューターを選択します。
 
@@ -60,7 +60,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
 4. パッケージを実行してレポートを表示します。
 
-    パッケージの実行を開始するには、 **[OK]** をクリックします。 パッケージの実行レポートを表示するには、オブジェクト エクスプローラーでパッケージを右クリックし、 **[レポート]**、 **[すべての実行]** の順にクリックして実行を見つけます。
+    パッケージの実行を開始するには、 **[OK]** をクリックします。 パッケージの実行レポートを表示するには、オブジェクト エクスプローラーでパッケージを右クリックし、 **[レポート]** 、 **[すべての実行]** の順にクリックして実行を見つけます。
     
 ## <a name="stored_proc"></a> ストアド プロシージャでパッケージを実行する
 
@@ -115,15 +115,15 @@ Scale Out でパッケージを実行するには、次のアクセス許可の�
 ## <a name="set-default-execution-mode"></a>既定の実行モードを設定する
 パッケージの既定の実行モードを **[Scale Out]** に設定するには、以下の操作を行います。
 
-1.  SSMS のオブジェクト エクスプローラーで、**SSISDB** ノードを右クリックし、**[プロパティ]** を選択します。
+1.  SSMS のオブジェクト エクスプローラーで、**SSISDB** ノードを右クリックし、 **[プロパティ]** を選択します。
 
-2.  **[カタログ プロパティ]** ダイアログ ボックスで、**[サーバー全体の既定の実行モード]** を **[Scale Out]** に設定します。
+2.  **[カタログ プロパティ]** ダイアログ ボックスで、 **[サーバー全体の既定の実行モード]** を **[Scale Out]** に設定します。
 
-この既定の実行モードを設定したら、`[catalog].[create_execution]` ストアド プロシージャを呼び出すときに、**@runinscaleout** パラメーターを指定する必要がなくなります。 パッケージは、Scale Out で自動的に実行されます。 
+この既定の実行モードを設定したら、`[catalog].[create_execution]` ストアド プロシージャを呼び出すときに、 **@runinscaleout** パラメーターを指定する必要がなくなります。 パッケージは、Scale Out で自動的に実行されます。 
 
 ![実行モード](media/exe-mode.PNG)
 
-パッケージが既定で Scale Out モードで実行されなくなるように、既定の実行モードを元に戻すには、**[サーバー全体の既定の実行モード]** を **[サーバー]** に設定します。
+パッケージが既定で Scale Out モードで実行されなくなるように、既定の実行モードを元に戻すには、 **[サーバー全体の既定の実行モード]** を **[サーバー]** に設定します。
 
 ## <a name="sql_agent"></a> SQL Server エージェント ジョブでパッケージを実行する
 SQL Server エージェント ジョブで、ジョブの 1 つの手順として SSIS パッケージを実行することができます。 Scale Out でパッケージを実行するには、既定の実行モードを **Scale Out** に設定します。既定の実行モードを **Scale Out** に設定すると、SQL Server エージェント ジョブ内のパッケージが Scale Out モードで実行されます。

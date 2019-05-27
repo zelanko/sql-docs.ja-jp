@@ -24,16 +24,16 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91a73ebf7d840669837a43cf89427463e9b46b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802906"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945719"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>week および weekday (datepart 引数)
 **week** (**wk**、**ww**) または **weekday** (**dw**) *datepart* の場合、`DATEPART` の戻り値は、[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) で設定された値によって変わります。
   
-任意の年の 1 月 1 日が、**week**_datepart_ の開始番号と定義されます。 例 :
+任意の年の 1 月 1 日が、**week**_datepart_ の開始番号と定義されます。 例:
 
 DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
 
@@ -160,12 +160,12 @@ ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されていま
   
 |週の最初の曜日|年の最初の週の構成|2 回割り当てられる週の有無|利用されている地域|  
 |---|---|---|---|
-|日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 から 7 日間|可|United States|  
-|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 から 7 日間|可|欧州およびイギリス|  
+|日曜日|1 月 1 日<br /><br /> 最初の土曜日<br /><br /> 年の 1 から 7 日間|はい|United States|  
+|月曜日|1 月 1 日<br /><br /> 最初の日曜日<br /><br /> 年の 1 から 7 日間|はい|欧州およびイギリス|  
 |月曜日|1 月 4 日<br /><br /> 最初の木曜日<br /><br /> 年の 4 から 7 日間|いいえ|ISO 8601、ノルウェー、およびスウェーデン|  
 |月曜日|1 月 7 日<br /><br /> 最初の月曜日<br /><br /> 年の 7 日間|いいえ||  
-|水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 から 7 日間|可||  
-|土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 から 7 日間|可||  
+|水曜日|1 月 1 日<br /><br /> 最初の火曜日<br /><br /> 年の 1 から 7 日間|はい||  
+|土曜日|1 月 1 日<br /><br /> 最初の金曜日<br /><br /> 年の 1 から 7 日間|はい||  
   
 ## <a name="tzoffset"></a>TZoffset  
 `DATEPART` は、符号付きの分数として **TZoffset** (**tz**) 値を返します。 次のステートメントは、310 分のタイム ゾーン オフセットを返します。

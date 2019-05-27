@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Filter Web Part [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1d249662ef306e2b1608582b5b61271098ccf42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266435"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109715"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>フィルター Web パーツまたはドキュメント Web パーツの接続 (Reporting Services の SharePoint 統合モード)
   SharePoint 製品を使用している場合、フィルター Web パーツまたはドキュメント Web パーツとレポート ビューアー Web パーツを含む、ダッシュボードや Web パーツ ページを作成できます。 サポートされているバージョンは [!INCLUDE[SPF2010](../includes/spf2010-md.md)] または [!INCLUDE[SPS2010](../includes/sps2010-md.md)]です。 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] または [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 もサポートされています。 フィルター Web パーツを接続することによって、フィルター値をフィルター Web パーツで選択するユーザーは、同じページでパラメーター化されたレポートに値を送信できるようになります。 ドキュメント Web パーツを接続することによって、ドキュメント ライブラリでレポートをクリックするユーザーは、隣接するレポート ビューアー Web パーツでレポートを表示できるようになります。  

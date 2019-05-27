@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
+author: VanMSFT
 ms.author: vanto
+ms.reviewer: aliceku
 manager: craigg
-ms.openlocfilehash: 0ec072bae284fad63cea677830bad307d9961f4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a26cf3fa31d7e228b7d74f3c6a68bc5925fc02a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512240"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938189"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>包含データベースでのセキュリティのベスト プラクティス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>ログインが重複するユーザーの作成  
  パスワードを持つ包含データベース ユーザーが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと同じ名前を使用して作成された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが包含データベースを初期カタログとして指定して接続しようとすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは接続できません。 その接続は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに基づくユーザーとしてではなく、包含データベース上のパスワード プリンシパル付きの包含データベース ユーザーとして評価されます。 このことは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに対する意図的または偶発的なサービス拒否を引き起こす可能性があります。  
   
--   ベスト プラクティスとして、 **sysadmin** 固定サーバー ロールのメンバーは常に、初期カタログ オプションを使用せずに接続することを検討してください。 このようにすると、ログインが master データベースに接続されるので、データベースの所有者によるログイン試行の悪用を回避できます。 その後、管理者は **USE**_\<database>_ ステートメントを使用して、包含データベースに切り替えることができます。 また、ログインの既定のデータベースを包含データベースに設定することもできます。この場合、まず **master**へのログインが行われ、その後、ログインが包含データベースに転送されます。  
+-   ベスト プラクティスとして、 **sysadmin** 固定サーバー ロールのメンバーは常に、初期カタログ オプションを使用せずに接続することを検討してください。 このようにすると、ログインが master データベースに接続されるので、データベースの所有者によるログイン試行の悪用を回避できます。 その後、管理者は **USE** _\<database>_ ステートメントを使用して、包含データベースに切り替えることができます。 また、ログインの既定のデータベースを包含データベースに設定することもできます。この場合、まず **master**へのログインが行われ、その後、ログインが包含データベースに転送されます。  
   
 -   ベスト プラクティスとして、パスワードを持つ包含データベース ユーザーを作成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと同じ名前にしないようにしてください。  
   

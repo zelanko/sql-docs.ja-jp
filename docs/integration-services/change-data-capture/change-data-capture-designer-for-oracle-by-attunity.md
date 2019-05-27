@@ -13,14 +13,18 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 070d0e47ae356e479c227e04fa2d4478788fa1bf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280856"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729058"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC デザイナー コンソールは、Oracle CDC インスタンスを開発および管理するために使用されます。 CDC デザイナー コンソールは、次の要素を含む Microsoft 管理コンソール スナップインです。  
   
 -   新しいインスタンス ウィザード: このウィザードでは、新しい Oracle CDC インスタンスを作成します。 新しいインスタンス ウィザードの使用の詳細については、「 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)」を参照してください。  
@@ -29,7 +33,7 @@ ms.locfileid: "58280856"
   
 -   CDC インスタンス プロパティ エディター: このダイアログ ボックスを使用して、既存の Oracle CDC Service インスタンスを編集します。 CDC インスタンス プロパティの編集の詳細については、「 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)」を参照してください。  
   
- Microsoft® Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL Server® 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+ MicrosoftÂ® Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
   
 ## <a name="in-this-documentation"></a>このドキュメントの内容  
   

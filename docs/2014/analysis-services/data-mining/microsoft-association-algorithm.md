@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
@@ -31,12 +30,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a799f5a8aef79dec7cb951e95e6f252b3be2626
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722108"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084070"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft アソシエーション アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で提供されているアソシエーション アルゴリズムであり、推奨エンジンで使用できます。 推奨エンジンでは、顧客が既に購入した製品または興味を示した製品に基づいて、顧客に製品が推奨されます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析にも使用できます。 マーケット バスケット分析の例は、次を参照してください。[レッスン 3。マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)データ マイニング チュートリアル」でします。  

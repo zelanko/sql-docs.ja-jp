@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756396"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066048"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **ディメンション デザイナー** の **[ディメンション構造]** ページのツール バーを使用すると、一般的な操作を実行できます。  
@@ -25,7 +24,7 @@ ms.locfileid: "62756396"
  **ビジネス インテリジェンスを追加します。**  
  **ビジネス インテリジェンス ウィザード** を表示して、ビジネス インテリジェンス機能を追加します。  
   
- **プロセス**  
+ **[処理]**  
  **[処理]** ダイアログ ボックスを表示して、オブジェクトを処理します。  
   
  **属性として表示します**  

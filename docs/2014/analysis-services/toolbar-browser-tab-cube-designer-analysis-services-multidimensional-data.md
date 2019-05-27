@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe356d15c0602f33ec9c59ee463a69783686899b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756817"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066148"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの**ツール バー**にある機能は、キューブやそのオブジェクトをデザインまたは参照しているときと、MDX クエリを作成しているときに使用する共通の操作を実行するときに使用します。 デザイン時とクエリ ビューの両方に共通する操作としては、ユーザー コンテキストの設定、オブジェクトの処理、既定の言語の設定などがあります。  
@@ -56,7 +55,7 @@ ms.locfileid: "62756817"
   
 |オプション|説明|  
 |------------|-----------------|  
-|**プロセス**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、キューブを処理できます。 **[処理]** ダイアログ ボックスの詳細については、「[[処理] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**[処理]**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、キューブを処理できます。 **[処理]** ダイアログ ボックスの詳細については、「[[処理] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
 |**ユーザーの変更**|**[セキュリティ コンテキスト]** ダイアログ ボックスを表示し、**[ブラウザー]** タブで使用されているユーザーおよびロールを変更します。**[セキュリティ コンテキスト]** ダイアログ ボックスの詳細については、「[[セキュリティ コンテキスト] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
 |**再接続**|接続が失われたりタイムアウトしたりしたために **[ブラウザー]** タブに対するセッションが切断された場合に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [計算] **タブを** インスタンスおよびキューブを含むデータベースに再接続します。|  
 |**更新**|**[メタデータ]** ペインおよび **[レポート]** ペインの表示を最新の情報に更新します。|  

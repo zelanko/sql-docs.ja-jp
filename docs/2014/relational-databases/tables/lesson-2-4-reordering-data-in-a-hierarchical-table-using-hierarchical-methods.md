@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298962"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110110"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>階層的な手法を使用した階層テーブルのデータの並べ替え
   階層の再編成は、一般的なメンテナンス タスクです。 ここでは、UPDATE ステートメントを [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) メソッドと共に使用して、まず 1 つの行を階層内の新しい位置に移動します。 次に、サブツリー全体を新しい場所に移動します。  

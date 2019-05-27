@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306050"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729450"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server に関するドキュメント](https://docs.microsoft.com/sql/linux/)をご覧ください
 
-[![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **お試しください:**[SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)。
+[![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **お試しください:** [SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)。
 
 > [!NOTE]
 > 以下の変更に加えて、GA リリースの後も累積的な更新プログラムが定期的にリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、[SQL Server 2017 の累積的な更新プログラム](https://aka.ms/sql2017cu)に関するページをご覧ください。

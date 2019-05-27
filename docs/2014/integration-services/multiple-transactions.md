@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], multiple
@@ -14,12 +13,12 @@ ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6c66d64d7dc7117c5903f1eb3ac2e2ad97178af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da0f932acb2ab97204aeb27c9e077c7fae154987
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767251"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057399"
 ---
 # <a name="multiple-transactions"></a>複数のトランザクション
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージでは、関連しないトランザクションをパッケージに含めることができます。 入れ子になったコンテナー階層の中間にあるコンテナーでトランザクションがサポートされない場合、階層の上位または下位にあるコンテナーがトランザクションをサポートするように構成されている場合はそのコンテナーで別個のトランザクションが開始されます。 トランザクションは、入れ子になったコンテナー階層において最も内側のタスクから順にパッケージにコミットまたはロールバックされます。 ただし、内側のトランザクションがコミットされた後、その外側のトランザクションが中止された場合は、内側のトランザクションをロールバックできません。  

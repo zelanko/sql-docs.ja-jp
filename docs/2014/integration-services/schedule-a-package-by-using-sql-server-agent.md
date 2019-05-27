@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 55b872b46b5e0007d0651e190f6698ff0cfb50ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766884"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056224"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>SQL Server エージェントを使用してパッケージのスケジュールを設定する
   以下の手順は、パッケージを実行する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブ ステップを使用して、パッケージの実行を自動化する方法を示しています。  
@@ -112,7 +111,7 @@ ms.locfileid: "62766884"
     > [!TIP]  
     >  スケジュールに名前を付けるときには、他の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントのスケジュールとの区別がより簡単にできるように、一意でわかりやすい名前を使用してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)  
   
   

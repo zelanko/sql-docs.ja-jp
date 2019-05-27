@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af799e8e806696022635a04d808213ffb5c0e779
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a39cbc319b7b0a62f31b55ded8adfe60a49314b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794303"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066559"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル)
   DAX 数式のタイム インテリジェンス機能を使用するには、日付テーブルと Date データ型の一意の識別子 (datetime) の列を指定する必要があります。 日付テーブルの列が一意の識別子として指定されている場合は、日付テーブル内の列と任意のファクト テーブルのリレーションシップを作成できます。  
@@ -39,7 +38,7 @@ ms.locfileid: "62794303"
   
 2.  **[テーブル]** メニュー、 **[日付]**、 **Mark as [日付] [テーブル]** の順にクリックします。  
   
-3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意識別子として使用する列を選択します。 この列は、一意の値を含んでいる必要があり、Date データ型である必要があります。 以下に例を示します。  
+3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意識別子として使用する列を選択します。 この列は、一意の値を含んでいる必要があり、Date データ型である必要があります。 例 :  
   
     |date|  
     |----------|  

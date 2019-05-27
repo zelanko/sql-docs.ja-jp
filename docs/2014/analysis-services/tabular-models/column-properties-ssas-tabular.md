@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.columnprop.f1
@@ -13,12 +12,12 @@ ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bb076297af4e666513a0c5b86d6783b7c245c00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2773c2b837aa9344e2e8427c6f960fa098fa2408
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757606"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067607"
 ---
 # <a name="column-properties-ssas-tabular"></a>Column Properties (SSAS Tabular)
   このトピックでは、テーブル モデルの列のプロパティについて説明します。  
@@ -61,7 +60,7 @@ ms.locfileid: "62757606"
   
 2.  **[プロパティ]** ウィンドウで、プロパティをクリックして値を入力するか、下矢印をクリックして設定オプションを選択します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Power View レポート プロパティ (SSAS テーブル)](properties-ssas-tabular.md)   
  [列の非表示または固定 (SSAS テーブル)](hide-or-freeze-columns-ssas-tabular.md)   
  [列のテーブルへの追加 (SSAS テーブル)](add-columns-to-a-table-ssas-tabular.md)  

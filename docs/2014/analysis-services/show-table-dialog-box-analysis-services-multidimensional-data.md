@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746485"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068659"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>[テーブルの表示] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [テーブルの表示] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、ディメンション、キューブ、またはマイニング構造に関連付けられているデータ ソース ビューのテーブルを含めることができます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] でこのダイアログ ボックスを表示するには、次の手順に従います。  
@@ -42,7 +41,7 @@ ms.locfileid: "62746485"
  **[フィルター]**  
  表示するオブジェクトを限定するために使用するフィルターを入力した後、ボタンをクリックすると、 **[他に表示するテーブルを選択します。]** に表示されるテーブルがフィルター選択されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [データ ソース ビュー&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [データ ソース ビュー&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  

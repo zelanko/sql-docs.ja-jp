@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronous event counter target [SQL Server extended events]
@@ -14,12 +13,12 @@ ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f701ff8a1648a3f90f7e04c71f159081ac7a3da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddf153da7af2906fe7167c8cb2b77d9100d1154f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62780906"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064919"
 ---
 # <a name="event-counter-target"></a>イベント カウンター ターゲット
   イベント カウンター ターゲットは、拡張イベント セッション中に発生したすべてのイベントをカウントします。 イベント カウンター ターゲットを使用すると、完全なイベント コレクションのオーバーヘッドを追加することなく負荷の特性に関する情報を取得できます。 このターゲットには、カスタマイズ可能なパラメーターはありません。  
@@ -54,7 +53,7 @@ WHERE xe.name = 'session_name'
 </CounterTarget>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

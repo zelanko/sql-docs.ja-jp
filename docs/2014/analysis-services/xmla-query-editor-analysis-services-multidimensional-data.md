@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.editor.xmla.f1
@@ -16,17 +15,17 @@ ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d324657c6a405d090913909a7e5aaa756970734
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755909"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065306"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA クエリ エディター (Analysis Services - 多次元データ)
   XMLA クエリ エディターを使用すると、多次元式 (XMLA) 言語で記述されたステートメントおよびスクリプトを作成したり実行したりできます。  
   
-## <a name="features"></a>機能  
+## <a name="features"></a>機能のインストール  
   
 -   XMLA クエリ エディターのクエリ エディター ペインに、スクリプトを入力します。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62755909"
 |**結果ウィンドウ**|XMLA ステートメントまたはスクリプトの結果がテキスト形式で表示されます。|  
 |**[メッセージ] ウィンドウ**|XMLA ステートメントまたはスクリプトの実行に関する情報が表示されます。 たとえば、実行中に発生したエラーや、実行後に取得されたセルの数などが表示されます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](dmx-query-editor-analysis-services-data-mining.md)   
  [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   

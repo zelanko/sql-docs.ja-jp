@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
@@ -13,12 +12,12 @@ ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756006"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065427"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>[警告] (データベース デザイナー) (Analysis Services - 多次元データ)
   **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。 **警告** タブには 2 つのグリッドが表示されます。**デザイン警告ルール**と**された警告**します。  
@@ -69,7 +68,7 @@ ms.locfileid: "62756006"
 > [!NOTE]  
 >  オブジェクトに警告が含まれていても、オブジェクトが無効な状態であったり、プロジェクトから手動で削除されたりすると、一覧にある警告の横にエラー アイコンが表示されます。 警告を消去するには、警告を選択し、 **[再有効化]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [警告ダイアログ ボックスを閉じます&#40;Analysis Services - 多次元データ&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
  [一般的な&#40;データベース デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   

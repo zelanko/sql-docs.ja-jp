@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.transition.f1
@@ -13,12 +12,12 @@ ms.assetid: 40aef457-d69f-4905-a2d3-924c37bd3d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bada5acfd14b824be79fca692debf1a3479f056d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746794"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069078"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>シーケンス クラスターの [状態遷移] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー**の **[状態遷移]** タブでは、選択したクラスターにおける属性と値のペア間または状態間の遷移を詳細に調べることができます。  
@@ -60,7 +59,7 @@ ms.locfileid: "62746794"
  **リンク**  
  スライダーを使用して、グラフに表示される状態と遷移の数を制御します。 スライダーを下に移動すると、確率が最も高い状態と遷移だけが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  

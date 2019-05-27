@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec1ec91705dfb9194f42c079cb7b3d5100c9d396
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135356"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090106"
 ---
 # <a name="start-the-sqlcmd-utility"></a>sqlcmd ユーティリティの起動
   `sqlcmd` を使用するには、最初にユーティリティを起動し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続する必要があります。 既定のインスタンスまたは名前付きインスタンスのいずれにも接続できます。 最初の手順として、`sqlcmd` ユーティリティを起動します。  

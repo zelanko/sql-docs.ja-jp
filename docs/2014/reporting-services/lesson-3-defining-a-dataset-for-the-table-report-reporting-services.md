@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065430"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108461"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3: テーブル レポートのデータセットの定義 (Reporting Services)
   データ ソースを定義した後、データセットを定義する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートで使用するデータは *データセット*に格納されます。 データセットには、データ ソースへのポインターと、レポートで使用されるクエリ、および計算フィールドと変数が含まれています。  

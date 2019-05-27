@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.partitions.partitionmgr.imbi.f1
@@ -13,12 +12,12 @@ ms.assetid: 041c269f-a229-4a41-8794-6ba4b014ef83
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8cfe346c56b767b2986ea929271a1ee0e601953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066388"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>テーブル モデル パーティション (SSAS テーブル)
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時にあるモデルのために定義されたパーティションが、配置済みモデルで複製されます。 いったん配置されると、 **の** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスまたはスクリプトを使用して、それらのパーティションを管理したり、新しいパーティションを作成したりできます。 このトピックでは、配置済みのテーブル モデル データベースにおけるパーティションについて説明します。 モデル作成時のパーティションの作成と管理の詳細については、「[パーティション (SSAS テーブル)](partitions-ssas-tabular.md)」を参照してください。  

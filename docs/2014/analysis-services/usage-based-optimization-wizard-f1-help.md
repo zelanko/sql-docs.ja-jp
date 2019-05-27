@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.f1
@@ -15,12 +14,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756153"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065568"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>使用法に基づく最適化ウィザードの F1 ヘルプ
   使用法に基づく最適化ウィザードを使用するとパーティションの集計をデザインすることができ、その出力は集計のデザイン ウィザードに似ています。 ただし、使用法に基づく最適化ウィザードでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスのクエリ ログに記録されているクエリの特定の使用パターンに基づいて集計をデザインします。 集計を利用するとパフォーマンスが向上しますが、これは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が各クエリの基となるデータ ソースからデータを取得して再計算を行うのではなく、キューブのストレージから直接、事前に計算された合計を取得するためです。  
@@ -62,7 +61,7 @@ ms.locfileid: "62756153"
   
 -   [ウィザードの完了&#40;使用法に基づく最適化ウィザード&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [集計と集計デザイン](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [集計デザイン ウィザードの F1 ヘルプ](aggregation-design-wizard-f1-help.md)   

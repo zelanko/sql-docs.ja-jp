@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - create extended events session
@@ -14,12 +13,12 @@ ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef0dfbb1c0e62bbe5301f769ee0f3e4d585b06b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808354"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065028"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>クエリ エディターを使用した拡張イベント セッションの作成
   拡張イベント セッションを作成するには、クエリ エディターを使用するか、オブジェクト エクスプローラーでセッションを作成します。 オブジェクト エクスプ ローラーでは、拡張イベントは、作成、変更、およびイベント セッション データのイベント セッションの作成プロセスをガイドするウィザードとより高度な構成オプションを提供する新しいセッション UI を表示する際、2 つのユーザー インターフェイスを提供します。 拡張イベント セッションを作成して SQL Server のトレースを診断できます。これにより次のような問題を解決できます。  

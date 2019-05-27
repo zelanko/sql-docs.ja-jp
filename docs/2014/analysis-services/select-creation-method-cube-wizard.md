@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.cubedefinition.f1
@@ -13,12 +12,12 @@ ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48a6ef3849e91f606cb94ae7fa1f7c67817bfff7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747884"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069631"
 ---
 # <a name="select-creation-method-cube-wizard"></a>[作成方法の選択] (キューブ ウィザード)
   **[作成方法の選択]** ページを使用すると、キューブの作成方法を指定できます。  
@@ -47,7 +46,7 @@ ms.locfileid: "62747884"
 > [!NOTE]  
 >  このオプションは、 **[データ ソースにテーブルを生成]** オプションが選択された場合のみ使用できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

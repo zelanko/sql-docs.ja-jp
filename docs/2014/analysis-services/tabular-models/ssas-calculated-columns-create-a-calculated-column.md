@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.as.daxref.CreataCalculatedColumn.f1
@@ -13,12 +12,12 @@ ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 40e802ac33c7aa9b97267a725b20eb0d2f00dbb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794207"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066519"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>計算列の作成 (SSAS テーブル)
   計算列では、モデルに新しいデータを追加することができます。 貼り付けや列に値のインポートではなく、列の行レベルの値を定義する DAX 数式を作成します。 計算列の各行の値は、有効な数式を作成して Enter キーを押したときに、計算および代入されます。 計算列は、他のデータ列と同じように、レポートまたは分析のアプリケーションに追加できます。 このトピックでは、モデル デザイナーの DAX 数式バーを使用して新しい計算列を作成する方法について説明します。  

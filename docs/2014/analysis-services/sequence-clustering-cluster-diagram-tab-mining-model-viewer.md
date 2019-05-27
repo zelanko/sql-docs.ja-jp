@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
@@ -13,12 +12,12 @@ ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746784"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069110"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスター ダイアグラム] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー**の **[クラスター ダイアグラム]** タブには、シーケンス クラスター モデルに含まれるすべてのクラスターのグラフィカル ビューが表示されます。  
@@ -76,7 +75,7 @@ ms.locfileid: "62746784"
  **リンク**  
  図の線は、シーケンス クラスター間の関連付けを示します。 ビューアーに表示されるリンクの数は、クラスターの右側のスライダーを使用して調整できます。 スライダーを小さく設定すると、緊密なリンクのみが表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41746f2938afd17e59dc4a9f2278179e4ccc1695
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 619d35c084884aa72de63ff221d5a6f61ea86196
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225134"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108487"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2:レポート データ ソースのプロパティの変更
   このレッスンでは、受信者に配信されるレポートを、レポート マネージャーを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。 この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  

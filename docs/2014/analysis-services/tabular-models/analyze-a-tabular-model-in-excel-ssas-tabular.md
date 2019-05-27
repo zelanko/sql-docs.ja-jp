@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.chooseperspect.f1
@@ -13,12 +12,12 @@ ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b918cca81ba7e2ba0964012b7efcf40ad0a09fde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757693"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067758"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Excel でのテーブル モデルの分析 (SSAS テーブル)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の [Excel で分析] 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、ピボットテーブルがワークシートに追加されます。 モデル オブジェクト (テーブル、列、メジャー、階層、および KPI) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれています。  
@@ -51,7 +50,7 @@ ms.locfileid: "62757693"
 > [!NOTE]  
 >  Excel のピボットテーブルのフィールドの一覧は、モデル デザイナーでモデル プロジェクトに変更を加えても自動的に更新されません。 ピボットテーブルのフィールドの一覧を更新するには、Excel の **[オプション]** リボンで **[更新]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)  
   
   
