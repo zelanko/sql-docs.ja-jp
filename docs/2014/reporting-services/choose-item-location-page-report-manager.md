@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1833989b2dd5fed0616a7587252ac97a09cb75f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266232"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109898"
 ---
 # <a name="choose-item-location-page-report-manager"></a>[アイテムの場所の選択] ページ (レポート マネージャー)
   新しいリンク レポートまたは新しいモデル用のフォルダーを選択するには、[アイテムの場所の選択] ページを使用します。 特定のユーザー グループ用のリンク レポートまたはモデルを作成している場合、それらのユーザーが使用する他のレポートおよびモデルと同じフォルダーにそのアイテムを配置できます。 既に存在し、コンテンツを追加する権限があるフォルダーを選択する必要があります。  
@@ -53,7 +52,7 @@ ms.locfileid: "63266232"
 4.  プロパティ ページの **[全般]** タブで **[場所の変更]** をクリックし、[アイテムの場所の選択] ページを開きます。  
   
 ## <a name="options"></a>および  
- **[場所]**  
+ **場所**  
  作成するアイテムを格納するフォルダーの名前を指定します。 フル ネームを入力するか、ツリー ビューを使用して、使用するフォルダーに移動できます。  
   
  **ツリー ビュー**  
