@@ -48,7 +48,7 @@ ms.locfileid: "66013818"
   
  **\<Sql:relationship >** 親子リレーションシップを指定するタグを使用します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するには不十分です。 `sql:key-fields` 注釈を指定しないと、不正確な階層が生成されます。  
   
- `sql:key-fields`で指定した**\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別して、その子要素がその親の下に表示します。  
+ `sql:key-fields`で指定した **\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別して、その子要素がその親の下に表示します。  
   
  スキーマは次のようになります。  
   

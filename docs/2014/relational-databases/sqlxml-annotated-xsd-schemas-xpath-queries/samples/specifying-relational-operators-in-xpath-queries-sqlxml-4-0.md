@@ -28,7 +28,7 @@ ms.locfileid: "66012437"
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-specify-relational-operator"></a>A. 関係演算子を指定する  
- この XPath クエリは、子の要素を返します、 **\<顧客 >** 要素を**CustomerID**属性の値が「1」、任意の子**\<順序>** 要素が含まれる、  **\<OrderDetail >** を持つ子、 **OrderQty** 3 より大きい値を持つ属性。  
+ この XPath クエリは、子の要素を返します、 **\<顧客 >** 要素を**CustomerID**属性の値が「1」、任意の子 **\<順序>** 要素が含まれる、  **\<OrderDetail >** を持つ子、 **OrderQty** 3 より大きい値を持つ属性。  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  

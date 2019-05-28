@@ -30,7 +30,7 @@ ms.locfileid: "66010699"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 明示変換関数を使用する  
  `number()` 関数は、引数を数値に変換します。  
   
- 値と仮定すると**ContactID**は数値型以外は、次のクエリに変換します**ContactID**を数値と値 4 を比較します。 クエリが、すべてを返します**\<従業員 >** 、コンテキスト ノードの子要素、 **ContactID** 4 の数値の値を持つ属性。  
+ 値と仮定すると**ContactID**は数値型以外は、次のクエリに変換します**ContactID**を数値と値 4 を比較します。 クエリが、すべてを返します **\<従業員 >** 、コンテキスト ノードの子要素、 **ContactID** 4 の数値の値を持つ属性。  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +79,7 @@ ms.locfileid: "66010699"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 明示変換関数を使用する  
  `string()` 関数は、引数を文字列に変換します。  
   
- 次のクエリに変換します**ContactID**文字列値「4」文字列を比較します。 クエリでは、すべてを返します**\<従業員 >** 、コンテキスト ノードの子要素を**ContactID** 「4」の文字列値を持つ。  
+ 次のクエリに変換します**ContactID**文字列値「4」文字列を比較します。 クエリでは、すべてを返します **\<従業員 >** 、コンテキスト ノードの子要素を**ContactID** 「4」の文字列値を持つ。  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
