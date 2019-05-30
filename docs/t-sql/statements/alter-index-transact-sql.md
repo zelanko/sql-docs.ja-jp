@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502871"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580123"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>引数  
+```
+
+## <a name="arguments"></a>引数
+
  *index_name*  
  インデックスの名前です。 インデックス名は、テーブルまたはビュー内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
@@ -653,23 +655,28 @@ ONLINE、MAXDOP、および SORT_IN_TEMPDB の値は、システム カタログ
   
 クラスター化列ストア インデックスを再構築する際、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は以下のように動作します。  
   
-1.  再構築が行われている間、テーブルまたはパーティションを排他的にロックします。 再構築の間、データは "オフライン" になって使用できません。  
+1. 再構築が行われている間、テーブルまたはパーティションを排他的にロックします。 再構築の間、データは "オフライン" になって使用できません。  
   
-2.  テーブルから論理的に削除された行を物理的に削除することで、列ストアをデフラグします。削除されたバイトは物理メディアで再利用されます。  
+1. テーブルから論理的に削除された行を物理的に削除することで、列ストアをデフラグします。削除されたバイトは物理メディアで再利用されます。  
   
-3.  元の列ストア インデックスから、デルタストアを含むすべてのデータを読み取ります。 データを新しい行グループに結合し、行グループを列ストアに圧縮します。  
+1. 元の列ストア インデックスから、デルタストアを含むすべてのデータを読み取ります。 データを新しい行グループに結合し、行グループを列ストアに圧縮します。  
   
-4.  再構築中に、物理メディア上の領域を要求して列ストア インデックスのコピーを 2 つ格納します。 再構築が完了すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は元のクラスター化列ストア インデックスを削除します。  
+1. 再構築中に、物理メディア上の領域を要求して列ストア インデックスのコピーを 2 つ格納します。 再構築が完了すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は元のクラスター化列ストア インデックスを削除します。
+
+1. 順序付けされたクラスター化列ストア インデックスを使用しての Azure SQL Data Warehouse テーブルでは、ALTER INDEX REBUILD がデータを再度並べ替えます。  
   
-## <a name="reorganizing-indexes"></a> インデックスの再構成  
+## <a name="reorganizing-indexes"></a> インデックスの再構成
 インデックスの再構成では、最小のシステム リソースが使用されます。 この操作では、リーフ レベル ページをリーフ ノードの論理順序 (左から右) に合わせて物理的に並べ替えることにより、テーブルやビュー上にあるクラスター化および非クラスター化インデックスのリーフ レベルをデフラグします。 再構成でも、インデックス ページは圧縮されます。 圧縮は既存の FILL FACTOR 値に基づいて行われます。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) を使用します。  
   
 ALL を指定した場合、テーブル上のクラスター化および非クラスター化両方のリレーショナル インデックスと XML インデックスが再構成されます。 ALL を指定した場合は、いくつかの制限が適用されます。本記事の「引数」セクションの ALL の定義を参照してください。  
   
 詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
- 
+
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインデックスが再編成されるとき、統計は更新されません。
+
+>[!IMPORTANT]
+> 順序付けされたクラスター化列ストア インデックスを使用しての Azure SQL Data Warehouse テーブルでは、`ALTER INDEX REORGANIZE` がデータを再度並べ替えません。 データを再度並べ替えるには `ALTER INDEX REBUILD` を使用します。
   
 ## <a name="disabling-indexes"></a> インデックスの無効化  
 インデックスを無効化すると、ユーザーはインデックスにアクセスできなくなり、クラスター化インデックスの場合は基になるテーブル データにもアクセスできなくなります。 インデックス定義はシステム カタログに残ります。 ビュー上で非クラスター化インデックスまたはクラスター化インデックスを物理的に無効にすると、インデックス データが削除されます。 クラスター化インデックスを無効にすると、データにアクセスできなくなりますが、データはインデックスが削除または再構築されるまで B ツリーに残ります。このデータは管理されません。 有効化または無効化されたインデックスの状態を表示するには、**sys.indexes** カタログ ビューの **is_disabled** 列にクエリを実行します。  
