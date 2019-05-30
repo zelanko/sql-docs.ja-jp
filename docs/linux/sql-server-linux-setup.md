@@ -1,21 +1,22 @@
 ---
-title: Linux 上の SQL Server のインストールのガイダンス |Microsoft Docs
+title: Linux 上の SQL Server のインストールのガイダンスについて
+titleSuffix: SQL Server
 description: インストール、更新、および Linux 上の SQL Server をアンインストールします。 この記事では、オンライン、オフライン、および無人のシナリオについて説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/07/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: fde3465c26d2e148d99976b81e0a01c9fb3395ff
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 4cccab2331a564737112d9fb3efc42e5a6b81ed8
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775510"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265391"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux 上の SQL Server のインストールのガイダンスについて
 
@@ -40,8 +41,8 @@ SQL Server 2017 は、Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Se
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 を取得します。](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 を入手します。](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](https://www.ubuntu.com/download/server)
-| **Docker エンジン** | 1.8+ | [Docker を取得します。](https://www.docker.com/products/overview)
+| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **Docker エンジン** | 1.8+ | [Docker を取得します。](https://www.docker.com/get-started)
 
 Microsoft を展開して、OpenShift と Kubernetes を使用して SQL Server のコンテナーの管理もサポートしています。
 
@@ -71,9 +72,6 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 
 インストールまたは SQL Server をアップグレードするときは、構成済みの Microsoft リポジトリから最新バージョンの SQL Server を取得します。 クイック スタートを使用して、SQL Server 2017 Cumulative Update **CU**リポジトリ。 代わりに構成することができますが、 **GDR**リポジトリまたは**プレビュー (vNext)** リポジトリ。 リポジトリとその構成方法の詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
 
-> [!IMPORTANT]
-> CTP または SQL Server 2017 の RC バージョンを以前インストールした場合は、プレビューのリポジトリを削除する必要があり、一般公開 (GA) 1 つを登録します。 詳細については、次を参照してください。[リポジトリを構成する SQL Server on Linux の](sql-server-linux-change-repo.md)します。
-
 ## <a id="platforms"></a> SQL Server 2017 をインストールします。
 
 コマンドラインから Linux 上の SQL Server 2017 をインストールできます。 手順については、次のクイック スタートのいずれかを参照してください。
@@ -84,11 +82,11 @@ SQL Server 2017 では、Linux の次のシステム要件があります。
 - [Docker で実行します。](quickstart-install-connect-docker.md)
 - [Azure での SQL VM プロビジョニング](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
+インストールした後、最適なパフォーマンスの追加の構成の変更を検討してください。 詳細については、次を参照してください。[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)します。
+
 ## <a id="sqlvnext"></a> SQL Server 2019 preview をインストールします。
 
 SQL Server 2019 プレビューは、前のセクションで、同じのクイック スタートのリンクを使用して Linux にインストールできます。 ただし、登録する必要があります、**プレビュー (vNext)** リポジトリの代わりに、 **CU**リポジトリ。 クイック スタートでは、これを行う方法についてを説明します。  
-
-インストールした後、最適なパフォーマンスの追加の構成の変更を検討してください。 詳細については、次を参照してください。[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](sql-server-linux-performance-best-practices.md)します。
 
 ## <a id="upgrade"></a> SQL Server を更新します。
 
@@ -220,6 +218,7 @@ SQL Server のライセンスは Linux と Windows で同じです。 SQL Server
 - [SQL Server コマンド ライン ツール](sql-server-linux-setup-tools.md)
 - [SQL Server エージェント](sql-server-linux-setup-sql-agent.md)
 - [SQL Server フルテキスト検索](sql-server-linux-setup-full-text-search.md)
+- [Machine Learning サービス (R、Python)](sql-server-linux-setup-machine-learning.md)
 - [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

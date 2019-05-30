@@ -18,17 +18,18 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 2df74dbf5ee1205a801ea816c4bd48b255c6c80f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: b2e4685c83c1587e43b26363c9a48af5683d33e5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013393"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577446"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  JSON 文字列からには、スカラー値を抽出します。  
+ JSON 文字列からには、スカラー値を抽出します。  
   
  JSON 文字列からスカラー値ではなくオブジェクトまたは配列を抽出する場合は、「[JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)」を参照してください。 **JSON_VALUE** と **JSON_QUERY** の違いについては、「[JSON_VALUE と JSON_QUERY を比較する](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)」を参照してください。  
   
@@ -40,27 +41,29 @@ ms.locfileid: "56013393"
 JSON_VALUE ( expression , path )  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>引数
+
  *式 (expression)*  
- 式。 通常、変数またはを JSON テキストを含む列の名前。  
- 
+ 式。 通常、変数または JSON テキストを含む列の名前。  
+
  **JSON_VALUE** が、*path* によって識別される値を検出する前に *expression* で無効な JSON を検出した場合、関数はエラーを返します。 **JSON_VALUE** が *path* によって識別される値を検出できない場合、テキスト全体がスキャンされ、*expression* のどこかで無効な JSON を検出した場合はエラーを返します。
   
  *path*  
  抽出するプロパティを指定する JSON のパス。 詳細については、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
- 
+
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
   
  *path* の書式が有効でない場合、**JSON_VALUE** はエラーを返します。  
   
-## <a name="return-value"></a>戻り値  
+## <a name="return-value"></a>戻り値
+
  型 nvarchar (4000) の 1 つのテキスト値を返します。 返される値の照合順序は、入力された式の照合順序と同じです。  
   
- 値が 4,000 文字を超える場合は。  
+ 値が 4,000 文字を超える場合:  
   
--   厳密でないモードでは、**JSON_VALUE** は null を返します。  
+- 厳密でないモードでは、**JSON_VALUE** は null を返します。  
   
--   厳格モードでは、**JSON_VALUE** はエラーを返します。  
+- 厳格モードでは、**JSON_VALUE** はエラーを返します。  
   
  4,000 文字を超えるスカラー値を返す必要がある場合は、**JSON_VALUE** の代わりに **OPENJSON** を使用します。 詳細については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)」をご覧ください。  
   
@@ -92,16 +95,16 @@ SET @jsonInfo=N'{
 |[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
-|$info.type。|N '1'|N '1'|該当なし|  
+|$.info.type|N'1'|N'1'|該当なし|  
 |$.info.address.town|N'Bristol'|N'Bristol'|該当なし|  
-|$ .info。"アドレス|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
-|$info.tags。|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
-|$info.type[0]。|NULL|Error|配列ではありません。|  
-|$info.none。|NULL|Error|プロパティが存在しません。|  
+|$.info."address"|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$.info.tags|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$.info.type[0]|NULL|Error|配列ではありません。|  
+|$.info.none|NULL|Error|プロパティが存在しません。|  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="example-1"></a>例 1  
+### <a name="example-1"></a>例 1
  次の例では、クエリの結果に JSON のプロパティの値 `town` と `state` を使用します。 **JSON_VALUE** がソースの照合順序を保持するため、結果の並べ替え順序が `jsonInfo` 列の照合順序に依存します。 
 
 > [!NOTE]
@@ -115,19 +118,20 @@ WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
 ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ```  
   
-### <a name="example-2"></a>例 2  
+### <a name="example-2"></a>例 2
  次の例では、ローカル変数に JSON プロパティの値 `town` を抽出します。  
   
 ```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
-SET @jsonInfo=N'<array of address info>'
+SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
 
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
+SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- Paris
+SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
 ```  
   
-### <a name="example-3"></a>例 3  
+### <a name="example-3"></a>例 3
  次の例では、JSON のプロパティの値に基づいて、計算列を作成します。  
   
 ```sql  
@@ -141,8 +145,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
  [JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON データ &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
   

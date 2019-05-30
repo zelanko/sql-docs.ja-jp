@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e33e1602f98094c6085d179982a252aa6abc840b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: bf05845ce09fab783692d6b5c63f60fd91a98997
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478287"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036905"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -70,7 +70,7 @@ ms.locfileid: "58478287"
 ```
 --Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -80,7 +80,7 @@ CREATE TABLE
 ```
 --Disk-Based CREATE TABLE Syntax
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
     ( {   <column_definition>
         | <computed_column_definition>
@@ -265,10 +265,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
-    [database_name . [schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
     | [ <table_constraint> ] [ ,... n ]
     | [ <table_index> ]
@@ -381,23 +380,23 @@ AS FileTable
 PERSISTED    
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で、計算値をテーブルに物理的に保存し、依存する計算列のいずれかが更新された場合にその値を更新するように指定します。 計算列を `PERSISTED` とマークすることで、計算列に対して決定論的なインデックスを作成することができますが、正確ではありません。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。 パーティション テーブルのパーティション分割列として使用される計算列は、明示的に `PERSISTED` に設定する必要があります。 `PERSISTED` が指定されている場合、*computed_column_expression* は決定論的である必要があります。
 
-ON { *partition_scheme* | *filegroup* | **"default"** }     
+ON { *partition_scheme* | *filegroup* |  **"default"** }     
 テーブルが格納されるパーティション構成またはファイル グループを指定します。 *partition_scheme* を指定すると、テーブルはパーティション テーブルとなり、各パーティションは *partition_scheme* で指定した 1 つ以上のファイル グループに格納されます。 *filegroup* を指定すると、テーブルは指定されたファイル グループに格納されます。 ファイル グループがデータベース内に存在している必要があります。 **"default"** を指定するか、ON をまったく指定しないと、テーブルは既定のファイル グループに格納されます。 CREATE TABLE で指定したテーブルの格納方法を後から変更することはできません。
 
-ON {*partition_scheme* | *filegroup* | **"default"**} は、PRIMARY KEY 制約または UNIQUE 制約で指定することもできます。 これらの制約はインデックスを作成します。 *filegroup* を指定すると、インデックスは指定されたファイル グループに格納されます。 **"default"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに格納されます。 `PRIMARY KEY` または `UNIQUE` 制約によりクラスター化インデックスが作成される場合、テーブルのデータ ページはインデックスと同じファイル グループに格納されます。 `CLUSTERED` を指定するか、制約によりクラスター化インデックスを作成し、テーブル定義の *partition_scheme* または *filegroup* とは異なる *partition_scheme* (またはその逆) を指定すると、制約定義だけが優先され、それ以外は無視されます。
+ON {*partition_scheme* | *filegroup* |  **"default"** } は、PRIMARY KEY 制約または UNIQUE 制約で指定することもできます。 これらの制約はインデックスを作成します。 *filegroup* を指定すると、インデックスは指定されたファイル グループに格納されます。 **"default"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに格納されます。 `PRIMARY KEY` または `UNIQUE` 制約によりクラスター化インデックスが作成される場合、テーブルのデータ ページはインデックスと同じファイル グループに格納されます。 `CLUSTERED` を指定するか、制約によりクラスター化インデックスを作成し、テーブル定義の *partition_scheme* または *filegroup* とは異なる *partition_scheme* (またはその逆) を指定すると、制約定義だけが優先され、それ以外は無視されます。
 
 > [!NOTE]
-> このコンテキストでは、*default* はキーワードではありません。 これは、既定ファイル グループの識別子なので、ON **"default"** または ON **[default]** のように区切る必要があります。 **"default"** を指定する場合は、現在のセッションに対して `QUOTED_IDENTIFIER` オプションが ON である必要があります。 これが既定の設定です。 詳しくは、「[SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。
+> このコンテキストでは、*default* はキーワードではありません。 これは、既定ファイル グループの識別子なので、ON **"default"** または ON **[** default **]** のように区切る必要があります。 **"default"** を指定する場合は、現在のセッションに対して `QUOTED_IDENTIFIER` オプションが ON である必要があります。 これが既定の設定です。 詳しくは、「[SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。
 >
 > パーティション テーブルを作成した後、テーブルの `LOCK_ESCALATION` オプションを `AUTO` に設定することを検討してください。 これにより、テーブルではなくパーティション (HoBT) レベルにロックをエスカレートできるようにすることで、コンカレンシーを向上させることができます。 詳細については、「[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。
 
-TEXTIMAGE_ON { *filegroup*| **"default"** }    
-**text** 列、**ntext** 列、**image** 列、**xml** 列、**varchar(max)** 列、**nvarchar(max)** 列、**varbinary(max)**、および CLR ユーザー定義型の列 (geometry 型や geography 型など) が、指定したファイル グループに格納されることを示します。
+TEXTIMAGE_ON { *filegroup*|  **"default"** }    
+**text** 列、**ntext** 列、**image** 列、**xml** 列、**varchar(max)** 列、**nvarchar(max)** 列、**varbinary(max)** 、および CLR ユーザー定義型の列 (geometry 型や geography 型など) が、指定したファイル グループに格納されることを示します。
 
 テーブル内に値の大きな列がない場合は、`TEXTIMAGE_ON` は指定できません。 *partition_scheme* を指定した場合は、`TEXTIMAGE_ON` を指定できません。 **"default"** を指定するか、`TEXTIMAGE_ON` をまったく指定しないと、値の大きな列は既定のファイル グループに格納されます。 `CREATE TABLE` で指定した値の大きな列のデータのストレージを、後から変更することはできません。
 
 > [!NOTE]
-> Varchar(max)、nvarchar(max)、varbinary(max)、xml および大きな UDT 値は、データ行に直接格納されます。レコードのサイズまで値を格納できますが、サイズの上限は 8,000 バイトです。 値がレコードに収まらない場合には、ポインターが行内に格納され、残りは行外の LOB ストレージ領域に格納されます。 0 が既定値です。
+> Varchar(max)、nvarchar(max)、varbinary(max)、xml および大きな UDT 値は、データ行に直接格納されます。レコードのサイズまで値を格納できますが、サイズの上限は 8,000 バイトです。 値がレコードに収まらない場合には、ポインターが行内に格納され、残りは行外の LOB ストレージ領域に格納されます。 0 は、すべての値がデータ行に直接格納されていることを示す既定値です。
 >
 > `TEXTIMAGE_ON` では、"LOB ストレージ領域" の場所のみが変更され、データが行内に格納されている場合は影響しません。 sp_tableoption の large value types out of row オプションを使用すると、LOB 値全体が行外に格納されます。
 >
@@ -423,7 +422,7 @@ ON や `TEXTIMAGE_ON` と同様に、`FILESTREAM_ON` の `CREATE TABLE` を使�
 
 FILESTREAM の関連トピックについては、[バイナリ ラージ オブジェクト - BLOB データ](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)に関するページをご覧ください。
 
-[ _type\_schema\_name_**.** ] *type_name*     
+[ _type\_schema\_name_ **.** ] *type_name*     
 列のデータ型と、そのデータ型が所属するスキーマを指定します。 ディスク ベース テーブルの場合、データ型は次のいずれかです。
 
 - システム データ型
@@ -466,7 +465,7 @@ DEFAULT
 列の既定値として使用できる定数、NULL、システム関数です。 ネイティブ コンパイル ストアド プロシージャでサポートされている必要があります。 ネイティブ コンパイル ストアド プロシージャの組み込み関数について詳しくは、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」をご覧ください。
 
 IDENTITY    
-新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は列に一意な増分の値を設定します。 ID 列は通常、PRIMARY KEY 制約と共に使用され、テーブルの一意な行識別子 (ROWID) の役割を果たします。 `IDENTITY` プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)**、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と共に使用することはできません。 seed と increment の両方を指定するか、またはどちらも指定しません。 どちらも指定しないときの既定値は (1,1) です。
+新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は列に一意な増分の値を設定します。 ID 列は通常、PRIMARY KEY 制約と共に使用され、テーブルの一意な行識別子 (ROWID) の役割を果たします。 `IDENTITY` プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と共に使用することはできません。 seed と increment の両方を指定するか、またはどちらも指定しません。 どちらも指定しないときの既定値は (1,1) です。
 
 *seed*    
 テーブルに読み込まれる最初の行に使用される値です。
@@ -482,7 +481,7 @@ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]
 
 指定した `datetime2` 列が、システムによって、レコードの有効期限の開始時刻またはレコードの有効期限の終了時刻のいずれかを記録するために使用されることを指定します。 列を `NOT NULL` として定義する必要があります。 それらを `NULL` として指定しようとすると、システムによりエラーがスローされます。 期間列に対して明示的に NOT NULL を指定しない場合、システムにより既定で列が `NOT NULL` として定義されます。 `PERIOD FOR SYSTEM_TIME` および `WITH SYSTEM_VERSIONING = ON` 引数と組み合わせてこの引数を使い、テーブル上でシステムのバージョン管理を有効にします。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
-1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM**_`<table>`_ がこれらの列の値を返さないようにすることができます。 既定では、期間列は非表示ではありません。 非表示の列を使用するためには、テンポラル テーブルを直接参照するすべてのクエリで明示的に含める必要があります。 変更する、 **HIDDEN** を既存の**期間**列の属性 期間 削除し、別の非表示フラグを再作成する必要があります。
+1 つまたは両方の期間列を **HIDDEN** フラグでマークしてこれらの列を暗黙的に非表示にし、**SELECT \* FROM** _`<table>`_ がこれらの列の値を返さないようにすることができます。 既定では、期間列は非表示ではありません。 非表示の列を使用するためには、テンポラル テーブルを直接参照するすべてのクエリで明示的に含める必要があります。 変更する、 **HIDDEN** を既存の**期間**列の属性 期間 削除し、別の非表示フラグを再作成する必要があります。
 
 INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )     
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
@@ -501,7 +500,7 @@ INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )
 
 非クラスター化列ストア インデックスは、クラスター化列ストア インデックスとして格納および管理されます。 これも非クラスター化列ストア インデックスと呼ばれます。列を制限することができ、テーブル上のセカンダリ インデックスとして存在するためです。
 
-ON _partition\_scheme\_name_**(**_column\_name_**)**    
+ON _partition\_scheme\_name_ **(** _column\_name_ **)**     
 ファイル グループが定義されているパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) または [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) を実行して、パーティション構成がデータベース内に存在するようにする必要があります。 *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、および有効桁数に一致する必要があります。 *column_name* インデックス定義内の列に限定されません。 UNIQUE インデックスをパーティション分割する場合、*column_name* は一意のキーとして使用されている列から選択する必要がありますが、それ以外の場合はベース テーブルの任意の列を指定できます。 この制限により、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、単一のパーティション内だけでキー値の一意性を確認できます。
 
 > [!NOTE]
@@ -517,7 +516,7 @@ ON _partition\_scheme\_name_**(**_column\_name_**)**
 ON *filegroup_name*    
 指定したファイル グループに、指定したインデックスを作成します。 位置の指定がなく、テーブルまたはビューがパーティション分割されていない場合、インデックスには、基になるテーブルまたはビューと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。
 
-ON **"default"**    
+ON **"default"**     
 既定のファイル グループに、指定したインデックスを作成します。
 
 このコンテキストでの default という用語はキーワードではありません。 これは、既定ファイル グループの識別子なので、ON **"default"** または ON **[default]** のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して `QUOTED_IDENTIFIER` オプションが ON である必要があります。 これが既定の設定です。 詳しくは、「[SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。
@@ -622,10 +621,10 @@ PRIMARY KEY または UNIQUE 制約に対して、クラスター化インデッ
 FOREIGN KEY REFERENCES       
 1 つ以上の列内のデータに参照整合性を持たせる制約です。 FOREIGN KEY 制約では、列内の各値が、参照されるテーブル内の対応する参照される列 (1 つまたは複数) に存在している必要があります。 FOREIGN KEY 制約は、参照されるテーブル内の PRIMARY KEY 制約または UNIQUE 制約である列、または参照されるテーブルの UNIQUE INDEX で参照される列のみを参照できます。 計算列上の外部キーも、PERSISTED とマークする必要があります。
 
-[ _schema\_name_**.**] *referenced_table_name*]      
+[ _schema\_name_ **.** ] *referenced_table_name*]      
 FOREIGN KEY 制約で参照されるテーブル名と、そのテーブルが所属するスキーマ名です。
 
-**(** *ref_column* [ **,**... *n* ] **)**: FOREIGN KEY 制約によって参照されるテーブルの、列または列の一覧です。
+**(** *ref_column* [ **,** ... *n* ] **)** : FOREIGN KEY 制約によって参照されるテーブルの、列または列の一覧です。
 
 ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }         
 作成されたテーブルの行が参照関係を持ち、参照される行が親テーブルから削除された場合に、その行に対して実行される操作を指定します。 既定値は NO ACTION です。
@@ -692,13 +691,13 @@ TRUE または FALSE を返す論理式です。 別名データ型を式に含�
 *partition_scheme_name*     
 パーティション テーブルの各パーティションがマップされるファイル グループを定義するパーティション構成の名前です。 パーティション構成はデータベース内に存在している必要があります。
 
-[ _partition\_column\_name_**.** ]      
+[ _partition\_column\_name_ **.** ]      
 パーティション テーブルに対して、パーティション分割する列を指定します。 ここで指定する列は、*partition_scheme_name* が使用しているパーティション関数で指定した列と、データ型、長さ、有効桁数が同じであることが必要です。 パーティション関数に関与する計算列は、明示的に PERSISTED とマークされている必要があります。
 
 > [!IMPORTANT]
 > パーティション テーブルに加え、ALTER TABLE...SWITCH 操作のソースまたはターゲットとなっているパーティション分割されていないテーブルのパーティション分割列にも、NOT NULL を指定することをお勧めします。 こうすることで、パーティション分割列上のすべての CHECK 制約で null 値のチェックを行う必要がなくなります。
 
-WITH FILLFACTOR **=**_fillfactor_     
+WITH FILLFACTOR **=** _fillfactor_     
 インデックス データの格納に使用される個々のインデックス ページを[!INCLUDE[ssDE](../../includes/ssde-md.md)]がどの程度埋めるかを指定します。 ユーザーが指定できる *fillfactor* の値は、1 ～ 100 です。 値を指定しない場合の既定値は 0 です。 FILL FACTOR 値 0 と 100 の機能は、まったく同じです。
 
 > [!IMPORTANT]
@@ -751,7 +750,7 @@ COLUMNSTORE_ARCHIVE
 
 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**      
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ...*n* ] **)**       
 DATA_COMPRESSION 設定を適用するパーティションを指定します。 テーブルがパーティション分割されていない場合に `ON PARTITIONS` 引数を使用すると、エラーが発生します。 `ON PARTITIONS` 句を指定しないと、パーティション テーブルのすべてのパーティションに対して `DATA_COMPRESSION` オプションが適用されます。
 
 *partition_number_expression* は以下の方法で指定できます。
@@ -779,7 +778,7 @@ WITH
 PAD_INDEX = { ON | **OFF** }     
 ON の場合、FILLFACTOR で指定された空き領域の割合が、インデックスの中間レベル ページに適用されます。 OFF の場合や、FILLFACTOR 値を指定しない場合、中間レベル ページは、中間ページの一連のキーを考慮しつつ、インデックスが持つことのできる最大サイズの行を少なくとも 1 つ格納できる領域を残して、ほぼ容量いっぱいに使用されます。 既定値は OFF です。
 
-FILLFACTOR **=**_fillfactor_     
+FILLFACTOR **=** _fillfactor_     
 インデックスの作成時または変更時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 値には、1 ～ 100 の整数値を指定してください。 既定値は 0 です。 FILL FACTOR 値 0 と 100 の機能は、まったく同じです。
 
 IGNORE_DUP_KEY = { ON | **OFF** }    
@@ -1087,7 +1086,7 @@ CREATE TABLE を使用してパーティション テーブルを作成するに
 テーブルとテーブルの列に関するレポートを表示するには、`sp_help` または `sp_helpconstraint` を使用します。 テーブル名を変更するには、`sp_rename` を使用します。 テーブルに依存するビューとストアド プロシージャに関するレポートを表示するには、[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) および [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) を使用します。
 
 ## <a name="nullability-rules-within-a-table-definition"></a>テーブル定義内での NULL 値許容の規則
-列の NULL 値の許容により、その列でその列内のデータとして null 値 (NULL) が許可されるかどうかが決定されます。 NULL は 0 でも空白でもありません。NULL は、何も入力されなかった、または明示的な NULL が供給されたことを意味し、通常、値が未知である、または使用できないことを示します。
+列の NULL 値の許容により、その列でその列内のデータとして null 値 (NULL) が許可されるかどうかが決定されます。 NULL は 0 でも空白でもありません。NULL は、何も入力されなかった、または明示的な NULL が設定されたことを意味し、通常、値が未知である、または使用できないことを示します。
 
 `CREATE TABLE` または `ALTER TABLE` を使用してテーブルを作成または変更すると、データベースとセッションの設定は、列定義で使われているデータ型に NULL 値を許すかどうかの設定に影響を及ぼし、場合によっては、NULL 値を許すかどうかの設定をオーバーライドします。 計算列でない場合は、常に明示的に NULL または NOT NULL として列を定義することをお勧めします。または、ユーザー定義データ型を使用する場合は、データ型の規定の NULL 値の許容を列が使用できるようにすることをお勧めします。 スパース列では常に NULL を許容する必要があります。
 
@@ -1288,7 +1287,7 @@ CREATE TABLE dbo.mytable
 ```
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. ユーザー定義型の列に基づく計算列の作成
-次の例では、ユーザー定義型 `utf8string` として定義された 1 つの列を持つテーブルを作成します。型のアセンブリと型自体が現在のデータベース中に既に作成されていることを前提としています。 2 番目の列は `utf8string` に基づいて定義され、**type(class)**`utf8string` のメソッド `ToString()` を使用して列の値が計算されます。
+次の例では、ユーザー定義型 `utf8string` として定義された 1 つの列を持つテーブルを作成します。型のアセンブリと型自体が現在のデータベース中に既に作成されていることを前提としています。 2 番目の列は `utf8string` に基づいて定義され、**type(class)** `utf8string` のメソッド `ToString()` を使用して列の値が計算されます。
 
 ```sql
 CREATE TABLE UDTypeTable

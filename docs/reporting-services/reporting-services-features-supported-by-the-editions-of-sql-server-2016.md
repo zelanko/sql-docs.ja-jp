@@ -1,18 +1,18 @@
 ---
 title: SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/01/2018
-ms.openlocfilehash: 1b46c6cec15f3a229892116758fe7f147f24c9ac
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185038"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936547"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
 
@@ -34,34 +34,34 @@ Evaluation Edition および Developer Edition でサポートされている機
   
 |機能名|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
 |------------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|モバイル レポートと分析|可||||可|  
+|モバイル レポートと分析|はい||||はい|  
 |サポートされているカタログ データベースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Standard 以上|Standard 以上|Web|Express|Standard 以上|  
 |サポートされているデータ ソースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Web|Express|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|  
-|レポート サーバー|はい|[はい]|[はい]|[はい]|はい|  
-|レポート デザイナー|はい|[はい]|[はい]|[はい]|はい|  
-|レポート デザイナー Web ポータル|はい|[はい]|[はい]|[はい]|可|  
-|ロール ベース セキュリティ|可|[はい]|[はい]|[はい]|可|  
-|Excel、PowerPoint、Word、PDF、およびイメージへのエクスポート|可|[はい]|[はい]|[はい]|はい|  
-|強化されたゲージとグラフ|はい|[はい]|[はい]|[はい]|可|  
-|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードへのレポート アイテムのピン留め|可|[はい]|[はい]|[はい]|はい|  
-|カスタム認証|はい|[はい]|[はい]||はい|  
-|データ フィードとしてのレポート|はい|[はい]|[はい]|[はい]|はい|  
-|モデルのサポート|はい|[はい]|[はい]||はい|  
-|ロールベースのセキュリティのカスタム ロールの作成|はい|[はい]|||可|  
-|モデル アイテムのセキュリティ|可|[はい]|||はい|  
-|無限クリック スルー|はい|[はい]|||可|  
-|共有コンポーネント ライブラリ|可|[はい]|||はい|  
-|電子メールおよびファイル共有のサブスクリプションとスケジュール設定|はい|[はい]|||可|  
-|レポート履歴、実行スナップショット、およびキャッシュ|可|[はい]|||可|  
-|SharePoint 統合|可|[はい]|||はい|  
-|リモートおよび非 SQL データ ソースのサポート<sup>1</sup>|はい|[はい]|||可|  
-|データ ソース、配信およびレンダリング、RDCE の拡張性|可|[はい]|||はい|  
-|カスタム ブランド化|はい||||可|  
-|データ ドリブン レポートのサブスクリプション|可||||可|  
-|スケール アウト配置 (Web ファーム)|可||||可|  
-|警告<sup>2</sup> (SSRS 2016) |可||||可|  
-|Power View<sup>2</sup> (SSRS 2016) |可||||可| 
-|コメント<sup>3</sup> |可|[はい]|[はい]|[はい]|可|  
+|レポート サーバー|はい|はい|はい|はい|はい|  
+|レポート デザイナー|はい|はい|はい|はい|はい|  
+|レポート デザイナー Web ポータル|はい|はい|はい|はい|はい|  
+|ロール ベース セキュリティ|はい|はい|はい|はい|はい|  
+|Excel、PowerPoint、Word、PDF、およびイメージへのエクスポート|はい|はい|はい|はい|はい|  
+|強化されたゲージとグラフ|はい|はい|はい|はい|はい|  
+|[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードへのレポート アイテムのピン留め|はい|はい|はい|はい|はい|  
+|カスタム認証|はい|はい|はい||はい|  
+|データ フィードとしてのレポート|はい|はい|はい|はい|はい|  
+|モデルのサポート|はい|はい|はい||はい|  
+|ロールベースのセキュリティのカスタム ロールの作成|はい|はい|||はい|  
+|モデル アイテムのセキュリティ|はい|はい|||はい|  
+|無限クリック スルー|はい|はい|||はい|  
+|共有コンポーネント ライブラリ|はい|はい|||はい|  
+|電子メールおよびファイル共有のサブスクリプションとスケジュール設定|はい|はい|||はい|  
+|レポート履歴、実行スナップショット、およびキャッシュ|はい|はい|||はい|  
+|SharePoint 統合|はい|はい|||はい|  
+|リモートおよび非 SQL データ ソースのサポート<sup>1</sup>|はい|はい|||はい|  
+|データ ソース、配信およびレンダリング、RDCE の拡張性|はい|はい|||はい|  
+|カスタム ブランド化|はい||||はい|  
+|データ ドリブン レポートのサブスクリプション|はい||||はい|  
+|スケール アウト配置 (Web ファーム)|はい||||はい|  
+|警告<sup>2</sup> (SSRS 2016) |はい||||はい|  
+|Power View<sup>2</sup> (SSRS 2016) |はい||||はい| 
+|コメント<sup>3</sup> |はい|はい|はい|はい|はい|  
 
  <sup>1</sup> SQL Server Reporting Services (SSRS) でサポートされるデータ ソースの詳細については、「[Reporting Services でサポートされるデータ ソース (SSRS)](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
   
@@ -88,9 +88,9 @@ Evaluation Edition および Developer Edition でサポートされている機
   
 |ツール名|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
 |---------------|----------------|--------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、**.rdl**、**.rds**|可|[はい]|[はい]|[はい]|可|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]、**.rsmobile**|可||||可|  
-|モバイル デバイス (iOS、Windows 10、Android) 用 Power BI アプリ、**.rsmobile**|可||||可|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、 **.rdl**、 **.rds**|はい|はい|はい|はい|はい|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]、 **.rsmobile**|はい||||はい|  
+|モバイル デバイス (iOS、Windows 10、Android) 用 Power BI アプリ、 **.rsmobile**|はい||||はい|  
   
 > [!NOTE]  
 > * 上記の表では、これらのクライアント ツールを有効にするために必要な [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションが示されています。 ただし、これらのツールは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の任意のエディションでホストされているデータにアクセスできます。  

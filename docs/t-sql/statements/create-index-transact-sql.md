@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe34c0441e455fad18d87b5ddb5dfbc3081c378
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0e53128745296653d3892947310d03d8acc2d780
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802316"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504124"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -118,10 +118,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 [ ; ]
   
 <object> ::=
-{
-    [ database_name. [ schema_name ] . | schema_name. ]
-    table_or_view_name
-}
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 
 <relational_index_option> ::=
 {
@@ -236,19 +233,19 @@ NONCLUSTERED テーブルの論理順序を示すインデックスを作成し�
 
 1 つの複合インデックス キーには、最大 32 の列を結合できます。 複合インデックス キーに含まれる列はすべて、同じテーブルまたはビュー内に存在する必要があります。 複合インデックスの値の最大許容サイズは、クラスター化インデックスの場合は、900 バイトまたは非クラスター化インデックスの 1,700 です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前のバージョンの場合、制限は列数が 16、サイズが 900 バイトになります。
 
-ラージ オブジェクト (LOB) データ型の列 **ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、または **image** 、インデックスのキー列として指定することはできません。 また、ビュー定義に含めることはできません**ntext**、**text**、または **image** 列では、CREATE INDEX ステートメントで参照されていない場合でも。
+ラージ オブジェクト (LOB) データ型の列 **ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、または **image** 、インデックスのキー列として指定することはできません。 また、ビュー定義に含めることはできません**ntext**、**text**、または **image** 列では、CREATE INDEX ステートメントで参照されていない場合でも。
 
 バイナリ順序がサポートされる CLR ユーザー定義型列に対してインデックスを作成できます。 ユーザー定義型列からメソッドを呼び出すように定義されている計算列にも、そのメソッドが決定的とマークされていて、データ アクセス操作が実行されない限り、インデックスを作成できます。 CLR ユーザー定義型列でのインデックス作成の詳細については、「[CLR ユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。
 
 [ **ASC** | DESC ] 特定のインデックス列に対して、昇順または降順の並べ替えの方向を指定します。 既定値は ASC です。
 
-INCLUDE **(**_column_ [ **,**... *n* ] **)** 非クラスター化インデックスのリーフ レベルに、非キー列を追加します。 非クラスター化インデックスは、一意であっても一意でなくてもかまいません。
+INCLUDE **(** _column_ [ **,** ... *n* ] **)** 非クラスター化インデックスのリーフ レベルに、非キー列を追加します。 非クラスター化インデックスは、一意であっても一意でなくてもかまいません。
 
 列名は INCLUDE リスト内で繰り返すことはできず、キー列と非キー列両方で同時に使用することはできません。 テーブルにクラスター化インデックスが定義されている場合、非クラスター化インデックスには常にクラスター化インデックスの列が含まれます。 詳細については、「 [付加列インデックスの作成](../../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。
 
-**text**、 **ntext**、および **image**を除く、すべてのデータ型を使用できます。 インデックスを作成またはオフラインで再構築する必要があります (ONLINE = OFF) かどうかには、指定された非キー列のいずれかは **varchar (max)**, 、**nvarchar (max)**, 、または **varbinary (max)** データ型。
+**text**、 **ntext**、および **image**を除く、すべてのデータ型を使用できます。 インデックスを作成またはオフラインで再構築する必要があります (ONLINE = OFF) かどうかには、指定された非キー列のいずれかは **varchar (max)** , 、**nvarchar (max)** , 、または **varbinary (max)** データ型。
 
-決定的な計算列、および正確または不正確な計算列を、付加列にできます。 派生した計算列 **image**、**ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、および **xml** 計算列のデータ型が付加列として使用できる限り、非キー列でのデータ型を含めることができます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。
+決定的な計算列、および正確または不正確な計算列を、付加列にできます。 派生した計算列 **image**、**ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、および **xml** 計算列のデータ型が付加列として使用できる限り、非キー列でのデータ型を含めることができます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。
 
 XML インデックスの作成の詳細については、「[CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)」を参照してください。
 
@@ -268,7 +265,7 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 フィルター選択されたインデックスは、XML インデックスおよびフルテキスト インデックスには適用されません。 UNIQUE インデックスの場合、一意のインデックス値を持つ必要があるのは選択した行のみです。 フィルター選択されたインデックスでは IGNORE_DUP_KEY オプションを使用できません。
 
-ON *partition_scheme_name* **( _column_name_ )**
+ON *partition_scheme_name* **( _column_name_ )** 
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 ファイル グループが定義されているパーティション構成を指定します。このファイル グループは、パーティション インデックスのパーティションのマップ先となります。 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) または [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) を実行して、パーティション構成がデータベース内に存在するようにする必要があります。 *column_name* には、パーティション インデックスがパーティション分割される対象の列を指定します。 この列は、*partition_scheme_name* で使用されているパーティション関数の引数のデータ型、長さ、および有効桁数に一致する必要があります。 *column_name* インデックス定義内の列に限定されません。 UNIQUE インデックスをパーティション分割する場合、*column_name* は一意のキーとして使用されている列から選択する必要がありますが、それ以外の場合はベース テーブルの任意の列を指定できます。 この制限により、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、単一のパーティション内だけでキー値の一意性を確認できます。
@@ -288,7 +285,7 @@ ON _filegroup_name_
 
 指定したファイル グループに、指定したインデックスを作成します。 位置の指定がなく、テーブルまたはビューがパーティション分割されていない場合、インデックスには、基になるテーブルまたはビューと同じファイル グループが使用されます。 ファイル グループは既に存在している必要があります。
 
-ON **"** default **"**
+ON **"** default **"** 
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)]。
 
 テーブルまたはビューと同じファイルグループまたはパーティション スキームに対して、指定されたインデックスを作成します。
@@ -306,7 +303,7 @@ _filestream_filegroup_name_ FILESTREAM ファイル グループの名前を指�
 
 テーブルがパーティション分割されている場合、FILESTREAM_ON 句を使用して、テーブルのパーティション構成と同じパーティション関数とパーティション列を使用するように、FILESTREAM ファイル グループのパーティション構成を指定する必要があります。 それ以外の場合は、エラーが発生します。
 
-テーブルがパーティション分割されていない場合、FILESTREAM 列も分割できません。 テーブルの FILESTREAM データは、FILESTREAM_ON 句で指定した単一のファイル グループに格納する必要があります。
+テーブルがパーティション分割されていない場合、FILESTREAM 列をパーティション分割することはできません。 テーブルの FILESTREAM データは、FILESTREAM_ON 句で指定した単一のファイル グループに格納する必要があります。
 
 クラスター化インデックスの作成で、テーブルに FILESTREAM 列が含まれていないときは、CREATE INDEX ステートメントに FILESTREAM_ON NULL を指定できます。
 
@@ -344,7 +341,7 @@ PAD_INDEX では FILLFACTOR で指定されるパーセンテージが使用さ�
 
 旧バージョンと互換性のある構文では、WITH PAD_INDEX は WITH PAD_INDEX = ON と同じです。
 
-FILLFACTOR **=**_fillfactor_
+FILLFACTOR **=** _fillfactor_
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 インデックスの作成時または再構築時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] が各インデックス ページのリーフ レベルをどの程度まで埋めるかを、パーセント値で指定します。 *fillfactor* 値には、1 ～ 100 の整数値を指定してください。 *fillfactor* が 100 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では全容量を使用するリーフ ページでインデックスが作成されます。
@@ -370,9 +367,9 @@ OFF 中間の並べ替え結果はインデックスと同じデータベース�
 
 IGNORE_DUP_KEY = { ON | **OFF** } このオプションは、挿入操作で、一意のインデックスに重複するキーの値を挿入しようとしたときのエラー応答を指定します。 IGNORE_DUP_KEY オプションは、インデックスが作成または再構築された後の挿入操作のみに適用されます。 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)、または [UPDATE](../../t-sql/queries/update-transact-sql.md) を実行した場合、このオプションは無効です。 既定値は OFF です。
 
-ON 重複したキー値が一意のインデックスに挿入されると、警告メッセージが表示されます。 一意性制約に違反する行のみが失敗します。
+ON: 重複したキー値が一意のインデックスに挿入されると、警告メッセージが表示されます。 一意性制約に違反する行のみが失敗します。
 
-OFF 重複したキー値が一意のインデックスに挿入されると、エラー メッセージが表示されます。 INSERT 操作全体がロールバックされます。
+OFF: 重複したキー値が一意のインデックスに挿入されると、エラー メッセージが表示されます。 INSERT 操作全体がロールバックされます。
 
 ビューに作成されたインデックス、一意でないインデックス、XML インデックス、空間インデックス、およびフィルター選択されたインデックスの IGNORE_DUP_KEY を ON に設定することはできません。
 
@@ -507,16 +504,16 @@ PAGE ページの圧縮を使用して、インデックスまたは指定した
 
 圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)** 
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 DATA_COMPRESSION 設定を適用するパーティションを指定します。 インデックスがパーティション分割されていない場合に ON PARTITIONS 引数を使用すると、エラーが発生します。 ON PARTITIONS 句を指定しないと、パーティション インデックスのすべてのパーティションに対して DATA_COMPRESSION オプションが適用されます。
 
 \<partition_number_expression> は以下の方法で指定できます。
 
-- ON PARTITIONS (2) などのようにパーティション番号を指定しますON PARTITIONS (2)。
-- コンマで区切った複数の個別のパーティションのパーティション番号を提供します。たとえば次のとおりです。ON PARTITIONS (1, 5)。
-- 範囲と個別のパーティションの両方を提供します。たとえば次のとおりです。ON PARTITIONS (2, 4, 6 TO 8)。
+- パーティション番号を指定します。たとえば次のとおりです。ON PARTITIONS (2)。
+- コンマで区切った複数の個別のパーティションのパーティション番号を指定します。たとえば次のとおりです。ON PARTITIONS (1, 5)。
+- 範囲と個別のパーティションの両方を指定します。たとえば次のとおりです。ON PARTITIONS (2, 4, 6 TO 8)。
 
 \<範囲> はパーティション番号として、TO で区切って指定できます。たとえば次のとおりです。ON PARTITIONS (6 TO 8)。
 
@@ -634,7 +631,7 @@ XML インデックスについては、「[CREATE XML INDEX](../../t-sql/statem
 
 インデックス作成の条件をすべて満たしている限り、UNIQUE または PRIMARY KEY 制約があっても計算列を含めることができます。 この計算列は、決定的かつ正確であるか、決定的かつ持続可能である必要があります。 決定性の詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
 
-派生した計算列 **image**、**ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、および **xml** データ型は、インデックスを設定または含まれる非キー列としては、計算列のデータ型をインデックス キー列または非キー列として使用できる限りです。 たとえば、**xml** 計算列にはプライマリ XML インデックスを作成できません。 インデックス サイズが 900 バイトを超える場合、警告メッセージが表示されます。
+派生した計算列 **image**、**ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、および **xml** データ型は、インデックスを設定または含まれる非キー列としては、計算列のデータ型をインデックス キー列または非キー列として使用できる限りです。 たとえば、**xml** 計算列にはプライマリ XML インデックスを作成できません。 インデックス サイズが 900 バイトを超える場合、警告メッセージが表示されます。
 
 計算列にインデックスを作成すると、以前は機能していた挿入または更新の操作が失敗することがあります。 このような失敗は、計算列の結果が算術エラーになる場合に発生する可能性があります。 たとえば、次のテーブルでは、計算列 `c` は計算エラーになりますが、INSERT ステートメントは正常に実行されます。
 
@@ -661,9 +658,9 @@ INSERT INTO t1 VALUES (1, 0);
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では新しいインデックス オプションが導入され、オプションの指定方法も変更になりました。 旧バージョンとの互換性のある構文では、WITH *option_name* は WITH **(** \<option_name> **= ON )** と同じです。 インデックス オプションを設定する場合は、次の規則が適用されます。
 
-- 新しいインデックス オプションは、WITH (**_option\_name_ = ON | OFF**) を使用してのみ指定できる。
+- 新しいインデックス オプションは、WITH ( **_option\_name_ = ON | OFF**) を使用してのみ指定できる。
 - 同じステートメントで、旧バージョンとの互換性がある構文と新しい構文の両方を使ってオプションを指定することはできない。 たとえば、WITH (**DROP_EXISTING, ONLINE = ON**) を指定すると、ステートメントは失敗します。
-- XML インデックスを作成するとき、オプションは WITH (**_option_name_= ON | OFF**) を使用して指定する必要がある。
+- XML インデックスを作成するとき、オプションは WITH ( **_option_name_= ON | OFF**) を使用して指定する必要がある。
 
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 句
 

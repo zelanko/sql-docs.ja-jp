@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc12318b9d19ec7d14d1d97e5c83276fedfe6c98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777470"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503242"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,22 +60,16 @@ CREATE QUEUE <object>
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        queue_name  
-}   
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
   
 <procedure> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        stored_procedure_name  
-}  
+{ database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }  
   
 ```  
   
 ## <a name="arguments"></a>引数  
  *database_name* (オブジェクト)  
- 新しいキューを作成するデータベースの名前を指定します。 *database_name* には、既存のデータベース名を指定する必要があります。 *database_name* が指定されていない場合、キューは現在のデータベースに作成されます。  
+ 新しいキューを作成するデータベースの名前です。 *database_name* には、既存のデータベース名を指定する必要があります。 *database_name* が指定されていない場合、キューは現在のデータベースに作成されます。  
   
  *schema_name* (オブジェクト)  
  新しいキューが所属するスキーマの名前を指定します。 省略すると、ステートメントを実行するユーザーの既定のスキーマが使用されます。 CREATE QUEUE ステートメントが、sysadmin 固定サーバー ロールのメンバー、または *database_name* で指定されるデータベース内の db_dbowner または db_ddladmin 固定データベース ロールのメンバーによって実行される場合、*schema_name* には、現在の接続のログインに関連付けられているスキーマ以外のスキーマを指定できます。 それ以外の場合、*schema_name* には、ステートメントを実行するユーザーの既定のスキーマを指定する必要があります。  
@@ -86,7 +80,7 @@ CREATE QUEUE <object>
  STATUS (Queue)   
  キューが使用可能 (ON) か、使用不可能 (OFF) かを指定します。 キューが使用不可能な場合、キューにメッセージを追加したり、キューからメッセージを削除することはできません。 ALTER QUEUE ステートメントによってキューが使用可能になるまでキューにメッセージが届かないようにする場合は、キューを使用不可能な状態で作成できます。 この句を省略すると、既定値の ON が使用され、キューは使用可能になります。  
   
- RETENTION   
+ RETENTION  
  キューのメッセージ保有期間の設定を指定します。 RETENTION = ON の場合、このキューを使用するメッセージ交換で送信または受信されるすべてのメッセージは、メッセージ交換が終了するまでキュー内に保有されます。 このことにより、監査目的でメッセージを保有したり、エラーが発生した場合に補正するトランザクションを実行することができます。 この句を指定しない場合、保有期間の設定は既定で OFF になります。  
   
 > [!NOTE]  
@@ -95,8 +89,8 @@ CREATE QUEUE <object>
  ACTIVATION  
  このキュー内のメッセージを処理するために開始する必要があるストアド プロシージャの情報を指定します。  
   
- STATUS (Activation)   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] によってストアド プロシージャを開始するかどうかを指定します。 STATUS = ON の場合は、現在実行中のプロシージャの数が MAX_QUEUE_READERS より少なく、ストアド プロシージャによるメッセージの受信よりも早くメッセージがキューに到着する場合に、PROCEDURE_NAME で指定されるストアド プロシージャがキューによって開始されます。 STATUS = OFF の場合は、キューによってストアド プロシージャは開始されません。 この句を指定しない場合、既定値は ON になります。  
+ STATUS (Activation)  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] によってストアド プロシージャを開始するかどうかを指定します。 STATUS = ON の場合は、現在実行中のプロシージャの数が MAX_QUEUE_READERS より少なく、ストアド プロシージャによるメッセージの受信よりも早くメッセージがキューに到着する場合に、PROCEDURE_NAME で指定されるストアド プロシージャがキューによって開始されます。 STATUS = OFF の場合は、キューによってストアド プロシージャが開始されません。 この句を指定しない場合、既定値は ON になります。  
   
  PROCEDURE_NAME = \<procedure>  
  このキュー内のメッセージを処理するために開始するストアド プロシージャの名前を指定します。 この値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子にする必要があります。  
@@ -108,7 +102,7 @@ CREATE QUEUE <object>
  ストアド プロシージャを含むスキーマの名前を指定します。  
   
  *procedure_name*  
- ストアド プロシージャの名前を指定します。  
+ ストアド プロシージャの名前です。  
   
  MAX_QUEUE_READERS =*max_readers*  
  キューで同時に開始する、アクティブ化ストアド プロシージャの最大インスタンス数を指定します。 *max_readers* の値には、**0** から **32767** の数値を指定する必要があります。  
@@ -117,7 +111,7 @@ CREATE QUEUE <object>
  アクティブ化ストアド プロシージャを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ユーザー アカウントを指定します キューによってストアド プロシージャが開始されたときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこのユーザーの権限を確認できる必要があります。 ドメイン ユーザーの場合は、プロシージャが開始されるかアクティブ化が失敗したとき、サーバーがドメインに接続している必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーの場合は、サーバーで常に権限を確認できます。  
   
  SELF  
- 現在のユーザーとしてストアド プロシージャを実行します。 (対象の CREATE QUEUE ステートメントを実行しているデータベース プリンシパル。)  
+ 現在のユーザーとしてストアド プロシージャを実行することを指定します。 (対象の CREATE QUEUE ステートメントを実行しているデータベース プリンシパル。)  
   
  '*user_name*'  
  ストアド プロシージャを実行するユーザーの名前を指定します。 *user_name* パラメーターには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子として有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーを指定する必要があります。 現在のユーザーは、指定した *user_name* に対して IMPERSONATE 権限を保持している必要があります。  
@@ -136,9 +130,9 @@ CREATE QUEUE <object>
 ## <a name="remarks"></a>Remarks  
  キューは SELECT ステートメントの対象にすることができますが、 キューの内容を変更するには、SEND、RECEIVE、END CONVERSATION など、[!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ交換で動作するステートメントを使用する必要があります。 キューは、INSERT、UPDATE、DELETE、または TRUNCATE ステートメントの対象にすることはできません。  
   
- キューは一時オブジェクトとして指定できません。 したがって、**#** で始まるキューの名前は無効になります。  
+ キューは一時オブジェクトとして指定できません。 したがって、 **#** で始まるキューの名前は無効になります。  
   
- キューを使用不可能な状態で作成した場合、サービス用のインフラストラクチャを配置してから、キューでメッセージを受信することができます。  
+ キューを非アクティブ状態で作成した場合、サービス用のインフラストラクチャを配置してから、キューでメッセージを受信することができます。  
   
  キューにメッセージがない場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってアクティブ化ストアド プロシージャは停止されません。 アクティブ化ストアド プロシージャは、しばらくの間キューに使用できるメッセージがないときには終了してください。  
   
@@ -212,7 +206,7 @@ CREATE QUEUE ExpenseQueue
 ```  
   
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. 複数のパラメーターでキューを作成する  
- 次の例では、`DEFAULT` ファイル グループにキューを作成します。 このキューは使用不可能な状態になります。 メッセージは、そのメッセージ交換が終わるまでキューに保持されます。 ALTER QUEUE を使用してキューを使用できるようにすると、キューによってストアド プロシージャ `2008R2.dbo.expense_procedure` が開始され、メッセージが処理されます。 このストアド プロシージャは、`CREATE QUEUE` ステートメントを実行したユーザーとして実行されます。 キューによって、ストアド プロシージャのインスタンスが `10` 個まで起動されます。  
+ 次の例では、`DEFAULT` ファイル グループにキューを作成します。 このキューは使用不可能な状態になります。 メッセージは、それらが属するメッセージ交換が終わるまでキューに保持されます。 ALTER QUEUE を使用してキューを使用できるようにすると、キューによってストアド プロシージャ `2008R2.dbo.expense_procedure` が開始され、メッセージが処理されます。 このストアド プロシージャは、`CREATE QUEUE` ステートメントを実行したユーザーとして実行されます。 キューによって、ストアド プロシージャのインスタンスが `10` 個まで起動されます。  
   
 ```  
 CREATE QUEUE ExpenseQueue  

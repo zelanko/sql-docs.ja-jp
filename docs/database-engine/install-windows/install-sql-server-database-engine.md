@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532760"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484337"
 ---
 # <a name="install-sql-server-database-engine"></a>SQL Server データベース エンジンのインストール
 
@@ -37,7 +37,7 @@ ms.locfileid: "52532760"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   レプリケーション (オプションのコンポーネント)  
+-   [SQL Server レプリケーション](../../relational-databases/replication/sql-server-replication.md) (オプションのコンポーネント)  
 
 -   [R と Python での Machine Learning Services (データベース内)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (オプションのコンポーネント)
 
@@ -47,6 +47,9 @@ ms.locfileid: "52532760"
   
     > [!NOTE]  
     >  今回のリリースでは、セットアップで **[Data Quality Services]** チェック ボックスをオンにしても、Data Quality Services (DQS) サーバーはインストールされません。 DQS サーバーをインストールするには、インストール後の追加の手順を実行する必要があります。 詳細については、「 [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)」を参照してください。  
+    
+- [外部データ用 PolyBase クエリ サービス](../../relational-databases/polybase/polybase-guide.md) (オプションのコンポーネント) 
+
   
  一般的なユーザー シナリオでは、データベース サービスに加えて次の機能もインストールします。  
   

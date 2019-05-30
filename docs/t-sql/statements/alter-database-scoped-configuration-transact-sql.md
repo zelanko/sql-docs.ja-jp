@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ccc25df3c3567907b50e37164d9090ca63fc58b6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582955"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568341"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -49,6 +49,7 @@ ms.locfileid: "59582955"
 - [インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の機能を有効または無効にします。
 - [軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にします。
 - 新しい `String or binary data would be truncated` のエラー メッセージを有効または無効にします。
+- [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) の最後の実際の実行プランのコレクションを有効または無効にします。
 
 ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -85,6 +86,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
+    | LAST_QUERY_PLAN_STATS = { ON | OFF }
 }
 ```
 
@@ -154,16 +156,16 @@ PRIMARY
 
 データベースがプライマリにあるとき、この値はセカンダリでのみ有効になります。すべてのセカンダリでこの設定の値がプライマリに設定されている値になることを示します。 プライマリの構成が変更されると、セカンダリの値も適宜変更されます。セカンダリの値を明示的に設定する必要はありません。 PRIMARY はセカンダリの既定の設定です。
 
-IDENTITY_CACHE **=** { **ON** | OFF }
+IDENTITY_CACHE **=** { **ON** | OFF }      
 
-**適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 データベース レベルで ID キャッシュを有効または無効にします。 既定値は **ON** です。 ID キャッシュは、ID 列が含まれるテーブルでの INSERT パフォーマンスを改善するために使用されます。 サーバーが突然再起動したか、セカンダリ サーバーにフェールオーバーしたときに ID 列の値に隔たりができることを回避するには、IDENTITY_CACHE オプションを無効にします。 このオプションは、サーバー レベルのみならずデータベース レベルで設定可能という点を除き、既存の[トレース フラグ 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) と似ています。
 
 > [!NOTE]
 > このオプションはプライマリにのみ設定できます。 詳細については、「[ID 列](create-table-transact-sql-identity-property.md)」を参照してください。
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
@@ -172,18 +174,18 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 > [!NOTE]
 > データベース互換性レベルが 130 以下である場合は、このデータベース スコープの構成に影響がありません。
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 バッチ モード メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モード メモリ許可フィードバックは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
 
 > [!NOTE]
 > データベース互換性レベルが 130 以下である場合は、このデータベース スコープの構成に影響がありません。
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 バッチ モードの適応結合は、データベースの互換性レベル 140 以上を維持しながら、データベース範囲で有効または無効にできます。 バッチ モードの適応結合は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です。
 
@@ -192,7 +194,7 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 データベースの互換性レベル 150 以上を維持しながら、データベース範囲で T-SQL スカラー UDF のインライン化を有効または無効にできます。 T-SQL スカラー UDF のインライン化は、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部です。
 
@@ -218,7 +220,7 @@ WHEN_SUPPORTED
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**適用対象**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 サポートされている操作から再開可能にエンジンを自動的に昇格させるオプションを選択できます。 既定は OFF であり、ステートメントで指定されない限り、操作は再開可能に昇格されません。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) は ELEVATE_RESUMABLE の現在の値を反映します。 これらのオプションは、再開可能実行でサポートされている操作にのみ適用されます。
 
@@ -259,7 +261,7 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 行モード メモリ許可フィードバックは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行モード メモリ許可フィードバックは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] で導入された[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の一部の機能です (行モードは [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でサポートされています)。
 
@@ -268,7 +270,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 行ストアのバッチ モードは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 行ストアのバッチ モードは、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
 
@@ -277,7 +279,7 @@ BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
 DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 テーブル変数の遅延コンパイルは、データベースの互換性レベル 150 以上を維持しながら、データベース範囲で有効または無効にできます。 テーブル変数の遅延コンパイルは、[インテリジェント クエリの処理](../../relational-databases/performance/intelligent-query-processing.md)機能ファミリの一部の機能です。
 
@@ -295,13 +297,15 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 [軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にできます。 軽量クエリ プロファイリング インフラストラクチャ (LWP) は、標準のプロファイリング メカニズムよりも効率的にクエリのパフォーマンス データを提供するもので、既定で有効になっています。
 
+<a name="verbose-truncation"></a>
+
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
 
 新しい `String or binary data would be truncated` のエラー メッセージの有効と無効が切り替えられるようになります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、次のシナリオに対してより具体的な新しいエラー メッセージ (2628) が導入されています。  
 
@@ -312,6 +316,12 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 データベース互換性レベルが 150 の状態で OFF に設定すると、切り捨てエラーにより前のエラー メッセージ 8152 が発生します。
 
 データベース互換性レベルが 140 以下の場合、エラー メッセージ 2628 はオプトインのエラー メッセージとして残ります。このエラー メッセージでは[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 を有効にする必要があり、このデータベース スコープ構成に影響がありません。
+
+LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
+
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) (機能はパブリック プレビュー段階)
+
+[sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) の最後の実際の実行プラン (実際の実行プランに相当) のコレクションを有効または無効にすることができます。
 
 ## <a name="Permissions"></a> Permissions
 
@@ -474,6 +484,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. プラン キャッシュからクエリ プランを削除する
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 この例では、プロシージャ キャッシュから特定のプランを削除します。 
 
 ```sql

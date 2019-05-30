@@ -1,5 +1,5 @@
 ---
-title: SQL Server の使用状況と診断データの収集の構成 | Microsoft Docs
+title: SQL Server の使用状況および診断データの収集を構成する (CEIP) | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: b616c8f3a41d960ecd04ac1407014aa2bfa3ce29
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582715"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372758"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server"></a>SQL Server の使用状況と診断データの収集の構成
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>SQL Server の使用状況および診断データの収集を構成する (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -56,6 +56,12 @@ Linux 上の SQL Server については、「[Customer Feedback for SQL Server o
 > [!NOTE]
 > Microsoft への情報送信を無効にできるのは、有料版の SQL Server のみです。
 
+## <a name="remarks"></a>Remarks
+ - SQL CEIP サービスの削除または無効化はサポートされていません。 
+ - クラスター グループからの SQL CEIP リソースの削除はサポートされていません。 
+
+データ収集をオプト アウトするには、「[ローカル監査の有効/無効を切り替える](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)」を参照してください。
+
 ## <a name="error-and-usage-reporting-application"></a>エラーと使用状況レポートのアプリケーション 
 
 セットアップ後は、SQL Server コンポーネントおよびインスタンスの使用状況と診断データの収集の設定は、エラーと使用状況レポートのアプリケーションを通じて変更できます。 このアプリケーションは、SQL Server のインストールの一部として提供されます。 このツールを使うと、それぞれの SQL Server インスタンスで、それ自体の使用状況レポート設定を構成できます。
@@ -63,7 +69,7 @@ Linux 上の SQL Server については、「[Customer Feedback for SQL Server o
 > [!NOTE]
 > エラーと使用状況レポートのアプリケーションは、SQL Server の構成ツールに表示されます。 このツールを使用して、SQL Server 2017 と同様の方法で、エラー報告および使用状況と診断データの収集の設定を管理できます。 エラー報告は、使用状況と診断データの収集とは異なるため、使用状況と診断データの収集に関係なくオンまたはオフにすることができます。 エラー報告では、Microsoft に送信するクラッシュ ダンプを収集しますが、それには「[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」で説明されているような機密情報が含まれている可能性があります。
 
-SQL Server エラーと使用状況レポートを開始するには、**[開始]** をクリックまたはタップし、検索ボックスで「エラー」を検索します。 SQL Server エラーと使用状況レポートの項目が表示されます。 このツールを開始した後は、使用状況と診断データに加えて、インスタンスとそのコンピューターにインストールされているコンポーネントについて収集された重大なエラーを管理できます。
+SQL Server エラーと使用状況レポートを開始するには、 **[開始]** をクリックまたはタップし、検索ボックスで「エラー」を検索します。 SQL Server エラーと使用状況レポートの項目が表示されます。 このツールを開始した後は、使用状況と診断データに加えて、インスタンスとそのコンピューターにインストールされているコンポーネントについて収集された重大なエラーを管理できます。
 
 有料版では、[使用状況レポート] チェック ボックスを使用して、使用状況と診断データの Microsoft への送信を管理します。
 

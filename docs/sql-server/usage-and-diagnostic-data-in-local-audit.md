@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582766"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372448"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>SQL Server の使用状況と診断データの収集のローカル監査
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server の使用状況と診断データの収集のローカル監査 (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>概要
 
-Microsoft SQL Server は、お客様のコンピューターまたはデバイスに関する情報を収集して送信するインターネット対応の機能を備えています。 これは*標準的なコンピューター情報*と呼ばれています。 [SQL Server の使用状況と診断データの収集](https://support.microsoft.com/kb/3153756)のローカル監査コンポーネントでは、サービスによって収集されたデータが保存先フォルダーに出力されます。このデータは、Microsoft に送信されるデータ (ログ) です。 ローカル監査の目的は、Microsoft がこの機能を使用して収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。  
+Microsoft SQL Server は、お客様のコンピューターまたはデバイスに関する情報を収集して送信するインターネット対応の機能を備えています。 これは*標準的なコンピューター情報*と呼ばれています。 [SQL Server の使用状況と診断データの収集](usage-and-diagnostic-data-configuration-for-sql-server.md)のローカル監査コンポーネントでは、サービスによって収集されたデータが保存先フォルダーに出力されます。このデータは、Microsoft に送信されるデータ (ログ) です。 ローカル監査の目的は、Microsoft がこの機能を使用して収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。  
 
 SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと Analysis Services (SSAS) のインスタンス レベルで構成できるようになりました。 SQL Server 2016 CU4 および SQL Server 2016 SP1 では、ローカル監査は SQL Server Integration Services (SSIS) に対しても有効になります。 セットアップ中にインストールされる他の SQL Server コンポーネントと、セットアップ後にダウンロードまたはインストールされる SQL Server ツールには、使用状況と診断データの収集用のローカル監査機能はありません。
+
+## <a name="remarks"></a>Remarks
+
+ - SQL CEIP サービスの削除または無効化はサポートされていません。 
+ - クラスター グループからの SQL CEIP リソースの削除はサポートされていません。 
+
+データ収集をオプト アウトするには、「[ローカル監査の有効/無効を切り替える](#turning-local-audit-on-or-off)」を参照してください。
 
 ## <a name="prerequisites"></a>Prerequisites 
 
@@ -56,7 +63,7 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
 
 次の手順で、SQL Server CEIP サービス ログオン アカウントを取得します
  
-1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー**を押し、**[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、**[OK]** を選択して**サービス** コンソールを起動します。  
+1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー**を押し、 **[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、 **[OK]** を選択して**サービス** コンソールを起動します。  
 
 2. 目的のサービスに移動します。 たとえば、データベース エンジンの場合、**SQL Server CEIP サービス** **(*Your-Instance-Name*)** を探します。 Analysis Services の場合、**SQL Server Analysis Services CEIP** **(*Your-Instance-Name*)** を探します。 Integration Services の場合は、**SQL Server Integration Services CEIP サービス**を探します。
 
@@ -89,9 +96,9 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
 
 1. **[追加]** を選択し、SQL Server CEIP サービスの資格情報を入力します。 たとえば、 `NT Service\SQLTELEMETRY`があります。
 
-1. **[名前の確認]** を選択して入力した名前を検証し、**[OK]** を選択します。
+1. **[名前の確認]** を選択して入力した名前を検証し、 **[OK]** を選択します。
 
-1. **[権限]** ダイアログ ボックスで、SQL Server CEIP サービスのログオン アカウントを選択し、**[フォルダーの内容の一覧表示]**、**[読み取り]**、**[書き込み]** を選択します。
+1. **[権限]** ダイアログ ボックスで、SQL Server CEIP サービスのログオン アカウントを選択し、 **[フォルダーの内容の一覧表示]** 、 **[読み取り]** 、 **[書き込み]** を選択します。
 
 1. **[OK]** を選択すると、権限の変更が直ちに適用されます。 
   
@@ -101,25 +108,25 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
 
 1. 目的の CPE パスに移動します。
 
-   | [バージョンのオプション] | ***データベース エンジン*** - レジストリ キー |
+   | バージョン | ***データベース エンジン*** - レジストリ キー |
    | :------ | :----------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL**14**.*Your-Instance-Name*\\CPE |
    | &nbsp; | &nbsp; |
 
-   | [バージョンのオプション] | ***Analysis Services*** - レジストリ キー |
+   | バージョン | ***Analysis Services*** - レジストリ キー |
    | :------ | :------------------------------- |
    | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**13**.*Your-Instance-Name*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS**14**.*Your-Instance-Name*\\CPE |
    | &nbsp; | &nbsp; |
 
-  | [バージョンのオプション] | ***Integration Services*** - レジストリ キー |
+  | バージョン | ***Integration Services*** - レジストリ キー |
   | :------ | :---------------------------------- |
   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
   | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
   | &nbsp; | &nbsp; |
 
-1. CPE パスを右クリックし、**[新規]** を選択します。 **[文字列値]** を選択します。
+1. CPE パスを右クリックし、 **[新規]** を選択します。 **[文字列値]** を選択します。
 
 1. 新しいレジストリ キーに `UserRequestedLocalAuditDirectory`と名前を付けます。 
  
@@ -131,22 +138,22 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
 
 1. 目的の CPE [パス](#create-a-registry-key-setting-to-configure-local-audit-target-directory)に移動します。 
 
-1. **[UserRequestedLocalAuditDirectory]** を右クリックし、*[変更]* を選択します。 
+1. **[UserRequestedLocalAuditDirectory]** を右クリックし、 *[変更]* を選択します。 
 
-1. ローカル監査を有効にするには、ローカル監査のパスを入力します (例: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*)。
+1. ローカル監査を有効にするには、ローカル監査のパスを入力します (例: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* )。
  
-    ローカル監査を無効にするには、**[UserRequestedLocalAuditDirectory]** の値を空にします。
+    ローカル監査を無効にするには、 **[UserRequestedLocalAuditDirectory]** の値を空にします。
 
 1. **regedit**を閉じます。 
 
 SQL Server CEIP が既に実行中の場合、ローカル監査設定は直ちに認識されます。 SQL Server CEIP サービスを開始するには、システム管理者、または Windows サービスを開始または停止するアクセス権を持つユーザーが、次の手順を実行します。 
 
-1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー**を押し、**[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、**[OK]** を選択して**サービス** コンソールを起動します。  
+1. **サービス** コンソールを起動します。 これを行うには、キーボードで **Windows キーを押しながら R キー**を押し、 **[実行]** ダイアログ ボックスを開きます。 次に、テキスト フィールドに「*services.msc*」と入力し、 **[OK]** を選択して**サービス** コンソールを起動します。  
 
 1. 目的のサービスに移動します。 
 
-    - データベース エンジンの場合、「**SQL Server CEIP サービス (*Your-Instance-Name*)**」を使用します。     
-    - Analysis Services の場合、「**SQL Server Analysis Services CEIP (*Your-Instance-Name*)**」を使用します。
+    - データベース エンジンの場合、「**SQL Server CEIP サービス (*Your-Instance-Name*)** 」を使用します。     
+    - Analysis Services の場合、「**SQL Server Analysis Services CEIP (*Your-Instance-Name*)** 」を使用します。
     - Integration Services の場合、 
         - SQL 2016 の場合、「*SQL Server Integration Services CEIP サービス 13.0*」を使用します。
         - SQL 2017 の場合、「*SQL Server Integration Services CEIP サービス 14.0*」を使用します。

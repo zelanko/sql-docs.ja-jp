@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aea2f8900f4c56168b6e1ef95fe2383b1b8163cc
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282536"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376832"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>PowerShell を使用して SSIS パッケージを実行する
 このクイックスタートでは、PowerShell スクリプトを使用してデータベース サーバーに接続し、SSIS パッケージを実行する方法を示します。
@@ -37,12 +37,22 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
-1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
+1. [Azure portal](https://portal.azure.com/) にサインインします。
+2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 5. **[データベース接続文字列の表示]** をクリックします。
 6. 完全な **ADO.NET** 接続文字列を確認します。
+
+## <a name="ssis-powershell-provider"></a>SSIS PowerShell プロバイダー
+SSIS PowerShell プロバイダーを使用すると、SSIS カタログに接続し、その中のパッケージを実行することができます。
+
+SSIS PowerShell プロバイダーを使用してパッケージ カタログ内の SSIS パッケージを実行する方法の基本的な例を次に示します。
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>PowerShell スクリプト
 次のスクリプトの一番上で変数の適切な値を指定し、スクリプトを実行して SSIS パッケージを実行します。

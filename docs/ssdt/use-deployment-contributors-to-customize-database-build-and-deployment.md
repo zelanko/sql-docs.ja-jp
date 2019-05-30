@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 547fb6e8bc880fc98d4cf1f3592e550edfaab735
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666251"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101957"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする
 Visual Studio には、データベース プロジェクトのビルド操作および配置操作の動作を変更するための拡張ポイントが用意されています。  
@@ -48,7 +48,7 @@ Visual Studio には、データベース プロジェクトのビルド操作�
 |**一般的なタスク**|**関連する参照先**|  
 |--------------------|--------------------------|  
 |**拡張ポイントの詳細を理解する:** ビルド コントリビューターおよび配置コントリビューターの実装に使用する基本クラスについて確認できます。|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**サンプル コントリビューターを作成する:** ビルド コントリビューターまたは配置コントリビューターの作成に必要な手順について説明します。 これらのチュートリアルを実行する場合は、次のタスクを実行します。<br /><br />-   モデル内のすべての要素が表示されるレポートを生成するビルド コントリビューターを作成する。<br />-   配置計画を実行前に変更する配置コントリビューターを作成する。<br />-   SQL プロジェクトの配置時に配置レポートを生成する配置コントリビューターを作成する。<br /><br />コントリビューターをチームに配布する方法に応じて、すべてのコントリビューターを単一のアセンブリ内に作成することも、複数のアセンブリに分けて作成することもできます。|[チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[チュートリアル: 配置計画を変更するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**サンプル コントリビューターを作成する:** ビルド コントリビューターまたは配置コントリビューターの作成に必要な手順について説明します。 これらのチュートリアルを実行する場合は、次のタスクを実行します。<br /><br />-   モデル内のすべての要素が表示されるレポートを生成するビルド コントリビューターを作成する。<br />-   配置計画を実行前に変更する配置コントリビューターを作成する。<br />-   SQL プロジェクトの配置時に配置レポートを生成する配置コントリビューターを作成する。<br /><br />コントリビューターをチームに配布する方法に応じて、すべてのコントリビューターを単一のアセンブリ内に作成することも、複数のアセンブリに分けて作成することもできます。|[チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[チュートリアル:配置計画を変更するためにデータベース プロジェクトの配置を拡張する](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[チュートリアル:配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストのカスタム テスト条件](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

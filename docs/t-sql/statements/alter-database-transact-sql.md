@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63203065"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,12 +50,12 @@ ms.locfileid: "58538664"
 
 ||||||
 |---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-sql-server"></a>概要 :SQL Server
+## <a name="overview-sql-server"></a>概要:SQL Server
 
 SQL Server では、このステートメントはデータベース、またはそのデータベースに関連付けられているファイルおよびファイル グループを変更します。 データベースに対するファイルやファイル グループの追加と削除、データベースおよびデータベースのファイルやファイル グループの属性の変更、データベースの照合順序の変更、データベース オプションの設定を行えます。 データベース スナップショットを変更することはできません。 レプリケーションに関連するデータベース オプションを変更するには、[sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を使用してください。
 
@@ -72,6 +72,9 @@ ALTER DATABASE: この記事では、データベースの名前と照合順序�
 [ALTER DATABASE の SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) Always On 可用性グループのセカンダリ レプリカ上のセカンダリ データベースを構成するための、ALTER DATABASE の [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] オプションの構文と関連情報について説明します。
 
 「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」では、ALTER DATABASE のデータベース互換レベルに関連した SET オプションの構文と関連情報について説明します。
+
+[データベース スコープ構成の変更](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+関連する動作のクエリの最適化とクエリの実行など、個別のデータベース レベルの設定に使用するため、データベース スコープ構成に関連する構文について説明します。 
 
 ## <a name="syntax"></a>構文
 
@@ -131,7 +134,7 @@ CURRENT
 
 使用中の現在のデータベースを変更することを指定します。
 
-MODIFY NAME **=**_new_database_name_     
+MODIFY NAME **=** _new_database_name_     
 データベースの名前を、*new_database_name* で指定した名前に変更します。
 
 COLLATE *collation_name*    
@@ -144,12 +147,12 @@ COLLATE *collation_name*
 
 Windows 照合順序名および SQL 照合順序名について詳しくは、「[COLLATE](~/t-sql/statements/collations.md)」をご覧ください。
 
-**\<delayed_durability_option> ::=**      
+**\<delayed_durability_option> ::=**       
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 詳しくは、「[ALTER DATABASE の SET オプション](../../t-sql/statements/alter-database-transact-sql-set-options.md)」および「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。
 
-**\<file_and_filegroup_options>::=**     
+**\<file_and_filegroup_options>::=**      
 詳しくは、「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
@@ -274,12 +277,12 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />単一データベース/エラスティック プール\*_** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\* SQL Database<br />単一データベース/エラスティック プール\*_ ** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>概要 :Azure SQL Database 単一データベース/エラスティック プール
+## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>概要:Azure SQL Database 単一データベース/エラスティック プール
 
 Azure SQL Database では、このステートメントを使って単一データベース/エラスティック プール上のデータベースを変更します。 データベースの名前の変更、データベースのエディションとサービス目標の変更、エラスティック プールへのデータベースの参加またはエラスティック プールからのデータベースの削除、データベース オプションの設定、geo レプリケーション リレーションシップでのセカンダリ としてのデータベースの追加または削除、データベースの互換性レベルの設定を行うには、このステートメントを使います。
 
@@ -374,7 +377,7 @@ ALTER DATABASE { database_name | CURRENT }
 CURRENT        
 使用中の現在のデータベースを変更することを指定します。
 
-MODIFY NAME **=**_new_database_name_      
+MODIFY NAME **=** _new_database_name_      
 データベースの名前を、*new_database_name* で指定した名前に変更します。 次の例では、`db1` データベースの名前を `db2` に変更します。
 
 ```sql
@@ -661,12 +664,12 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|** _\* SQL Database<br />マネージド インスタンス \*_ ** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-managed-instance"></a>概要 :Azure SQL Database マネージド インスタンス
+## <a name="overview-azure-sql-database-managed-instance"></a>概要:Azure SQL Database マネージド インスタンス
 
 Azure SQL Database マネージド インスタンスでは、このステートメントを使ってデータベース オプションを設定します。
 
@@ -781,12 +784,12 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>概要 :Azure SQL Data Warehouse
+## <a name="overview-azure-sql-data-warehouse"></a>概要:Azure SQL Data Warehouse
 
 データベースの名前、最大サイズ、またはサービス目標を変更します。
 
@@ -899,12 +902,12 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
 ||||||
 
 &nbsp;
 
-## <a name="overview-analytics-platform-system"></a>概要 :分析プラットフォーム システム
+## <a name="overview-analytics-platform-system"></a>概要:分析プラットフォーム システム
 
 PDW の複製テーブル、分散テーブル、およびトランザクション ログの最大データベース サイズ オプションを変更します。 このステートメントを使用すると、サイズの増加または減少に合わせてデータベースのディスク領域割り当てを管理できます。 また、この記事では PDW のデータベース オプションの設定に関連する構文についても説明します。
 

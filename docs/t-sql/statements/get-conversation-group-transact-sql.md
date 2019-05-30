@@ -25,12 +25,12 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 997334b76a2f07d5e9c9b7a06cc5499838251e7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15be53ce562e717af448092699689687b4cb30bf
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665082"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503441"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +50,12 @@ ms.locfileid: "47665082"
 [ ; ]  
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ] queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
 ## <a name="arguments"></a>引数  
  WAITFOR  
- 現在メッセージが存在しない場合、GET CONVERSATION GROUP ステートメントは、キューにメッセージが到着するのを待機します。  
+ 現在メッセージが存在しない場合、GET CONVERSATION GROUP ステートメントが、キューにメッセージが到着するのを待機するように指定します。  
   
  *@conversation_group_id*  
  GET CONVERSATION GROUP ステートメントによって返されるメッセージ交換グループ ID が格納される変数です。 この変数は、**uniqueidentifier** 型である必要があります。 使用できるメッセージ交換グループがない場合、この変数は NULL に設定されます。  
@@ -80,7 +78,7 @@ ms.locfileid: "47665082"
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン (**;**) を指定する必要があります。  
+>  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン ( **;** ) を指定する必要があります。  
   
  GET CONVERSATION GROUP ステートメントで指定したキューが使用できない場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが返されます。  
   

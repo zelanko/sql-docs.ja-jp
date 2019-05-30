@@ -1,7 +1,7 @@
 ---
 title: クエリ プロファイリング インフラストラクチャ | Microsoft Docs
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568275"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "58645564"
 - [ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> ライブ クエリ統計を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] と使用すると、標準プロファイリング インフラストラクチャを活用できます。    
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンでは、[軽量プロファイリング インフラストラクチャ](#lwp)が有効になっていると、標準プロファイリングの代わりに、ライブ クエリ統計で活用されます。
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で *[ライブ クエリ統計を含む]* ボタンをクリックすると、標準プロファイリング インフラストラクチャを活用できます。    
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の上位バージョンで、[軽量プロファイリング インフラストラクチャ](#lwp)が有効になっていると、[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)を通じて表示したとき、または [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV を直接クエリしたときに、標準プロファイリングではなく、ライブ クエリ統計によって利用されます。 
 
 次の**すべてのセッション**のグローバルな実行プラン情報収集メソッドでは、標準プロファイリング インフラストラクチャが活用されます。
 
@@ -121,11 +121,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] には、すべての実行の行数情報を収集する軽量プロファイリングの新しい改訂版が含まれます。 軽量プロファイリングは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で既定で有効であり、トレース フラグ 7412 は機能しません。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] には、すべての実行の行数情報を収集する軽量プロファイリングの新しい改訂版が含まれます。 軽量プロファイリングは、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で既定で有効であり、トレース フラグ 7412 は機能しません。 軽量プロファイリングは、LIGHTWEIGHT_QUERY_PROFILING [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;` を使用して、データベース レベルで無効にできます。
 
-ほとんどのクエリで最後の既知の実際の実行プランと同等のものが返されるように、新しい DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) が導入されました。 新しい *query_post_execution_plan_profile* 拡張イベントでは、標準プロファイリングを使用する *query_post_execution_showplan* とは異なり、軽量プロファイリングに基づいて、実際の実行プランと同等のものが収集されます。 
+ほとんどのクエリで最後の既知の実際の実行プランと同等のものが返されるように、*最後のクエリ プランの統計*と呼ばれる新しい DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) が導入されました。 最後のクエリ プランの統計は、LAST_QUERY_PLAN_STATS [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;` を使用して、データベース レベルで有効にすることができます。
 
-*query_post_execution_plan_profile* 拡張イベントを使用したサンプル セッションは下の例のように構成できます。
+新しい *query_post_execution_plan_profile* 拡張イベントでは、標準プロファイリングを使用する *query_post_execution_showplan* とは異なり、軽量プロファイリングに基づいて、実際の実行プランと同等のものが収集されます。 *query_post_execution_plan_profile* 拡張イベントを使用したサンプル セッションは下の例のように構成できます。
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -142,6 +142,34 @@ WITH (MAX_MEMORY=4096 KB,
   MEMORY_PARTITION_MODE=NONE,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
+```
+
+#### <a name="example-1---extended-event-session-using-standard-profiling"></a>例 1: 標準プロファイリングを使用した拡張イベント セッション
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>例 2: 軽量プロファイリングを使用した拡張イベント セッション
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
 ## <a name="remarks"></a>Remarks

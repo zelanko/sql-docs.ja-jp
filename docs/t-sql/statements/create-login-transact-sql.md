@@ -28,16 +28,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797042"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095333"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
 SQL Server、SQL Database、SQL Data Warehouse、または Analytics Platform System データベースのログインを作成します。 特定のバージョンの構文、引数、注釈、権限、例を表示するには、以下のいずれかのタブをクリックします。
+
+CREATE LOGIN はトランザクションに参加します。 CREATE LOGIN がトランザクション内で実行されており、トランザクションがロールバックされると、ログインの作成がロールバックされます。 トランザクション内で実行された場合、作成されたログインは、トランザクションがコミットされるまで使用できません。
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
@@ -49,7 +51,7 @@ SQL Server、SQL Database、SQL Data Warehouse、または Analytics Platform Sy
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -86,9 +88,9 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>引数
 
-*login_name*: 作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに "**\\**" を含めることはできません。 Windows ログインには "**\\**" を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。
+*login_name*: 作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに " **\\** " を含めることはできません。 Windows ログインには " **\\** " を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。
 
-PASSWORD **=**'*password*' SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
+PASSWORD **=** '*password*' SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
 
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a-z、A-Z、0-9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。
 
@@ -98,13 +100,13 @@ HASHED SQL Server ログインにのみ適用されます。 PASSWORD 引数の�
 
 MUST_CHANGE SQL Server ログインにのみ適用されます。 このオプションが含まれている場合、SQL Server では、新しいログインが最初に使用されたときに、ユーザーに新しいパスワードの入力が求められます。
 
-CREDENTIAL **=**_credential\_name_: 新しい SQL Server ログインにマップする資格情報の名前。 この資格情報は、サーバー内に既に存在している必要があります。 現在このオプションは、資格情報をログインに関連付けるだけです。 資格情報をシステム管理者 (sa) ログインにマップすることはできません。
+CREDENTIAL **=** _credential\_name_: 新しい SQL Server ログインにマップする資格情報の名前。 この資格情報は、サーバー内に既に存在している必要があります。 現在このオプションは、資格情報をログインに関連付けるだけです。 資格情報をシステム管理者 (sa) ログインにマップすることはできません。
 
-SID = *sid*: ログインの再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Server ログイン SID: GUID に基づく 16 バイト (**binary (16)**) のリテラル値。 たとえば、`SID = 0x14585E90117152449347750164BA00A7` のようにします。
+SID = *sid*: ログインの再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Server ログイン SID: GUID に基づく 16 バイト (**binary (16)** ) のリテラル値。 たとえば、`SID = 0x14585E90117152449347750164BA00A7` のようになります。
 
-DEFAULT_DATABASE **=**_database_: ログインに割り当てられる既定のデータベースを指定します。 このオプションを指定しない場合は、既定のデータベースが master に設定されます。
+DEFAULT_DATABASE **=** _database_: ログインに割り当てられる既定のデータベースを指定します。 このオプションを指定しない場合は、既定のデータベースが master に設定されます。
 
-DEFAULT_LANGUAGE **=**_language_: ログインに割り当てられる既定の言語を指定します。 このオプションを指定しない場合は、サーバーの現在の既定の言語が既定の言語になります。 サーバーの既定の言語が将来変更されても、ログインの既定の言語は変更されません。
+DEFAULT_LANGUAGE **=** _language_: ログインに割り当てられる既定の言語を指定します。 このオプションを指定しない場合は、サーバーの現在の既定の言語が既定の言語になります。 サーバーの既定の言語が将来変更されても、ログインの既定の言語は変更されません。
 
 CHECK_EXPIRATION **=** { ON | **OFF** }: SQL Server ログインにのみ適用されます。 このログインに、パスワードの有効期限ポリシーを適用するかどうかを指定します。 既定値は OFF です。
 
@@ -257,7 +259,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />単一データベース/エラスティック プール \*_**|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|** _\* SQL Database<br />単一データベース/エラスティック プール \*_ **|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -279,11 +281,11 @@ CREATE LOGIN login_name
 
 *login_name*: 作成するログインの名前を指定します。 Azure SQL Database 単一データベース/エラスティック プールでは SQL ログインのみがサポートされます。
 
-PASSWORD **='** password**'*: 作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
+PASSWORD **='** password* *'* : 作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
 
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a-z、A-Z、0-9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。
 
-SID = *sid*: ログインの再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようにします。
+SID = *sid*: ログインの再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)** ) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようになります。
 
 ## <a name="remarks"></a>Remarks
 
@@ -299,11 +301,11 @@ SID = *sid*: ログインの再作成に使用されます。 Windows 認証ロ�
 
 **CREATE LOGIN** ステートメントはバッチ内の唯一のステートメントである必要があります。
 
-**sqlcmd** などの SQL Database に接続するいくつかのメソッドでは、*\<login>*@*\<server>* の表記法を使用して、接続文字列のログイン名に SQL Database サーバー名を追加する必要があります。 たとえば、ログインが `login1` で、SQL Database サーバーの完全修飾名が `servername.database.windows.net` である場合、接続文字列の *username* パラメーターは `login1@servername` となる必要があります。 の合計の長さ、 *username* パラメーターには、128 文字まで *login_name* サーバー名の長さマイナス 127 文字に制限されます。 この例では、`login_name` が 10 文字であるため、`servername` には 117 文字までしか指定できません。
+**sqlcmd** などの SQL Database に接続するいくつかのメソッドでは、 *\<login>* @ *\<server>* の表記法を使用して、接続文字列のログイン名に SQL Database サーバー名を追加する必要があります。 たとえば、ログインが `login1` で、SQL Database サーバーの完全修飾名が `servername.database.windows.net` である場合、接続文字列の *username* パラメーターは `login1@servername` となる必要があります。 の合計の長さ、 *username* パラメーターには、128 文字まで *login_name* サーバー名の長さマイナス 127 文字に制限されます。 この例では、`login_name` が 10 文字であるため、`servername` には 117 文字までしか指定できません。
 
 SQL Database では、ログインを作成する際に master データベースに接続する必要があります。
 
-SQL Server ルールを使用すると、\<loginname>@\<servername> 形式の SQL Server 認証ログインを作成できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーが **myazureserver** で、ログインが **myemail@live.com** である場合、**myemail@live.com@myazureserver** としてログインを指定する必要があります。
+SQL Server ルールを使用すると、\<loginname>@\<servername> 形式の SQL Server 認証ログインを作成できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーが **myazureserver** で、ログインが **myemail@live.com** である場合、 **myemail@live.com@myazureserver** としてログインを指定する必要があります。
 
 SQL Database では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースに最新バージョンのログイン テーブルがあることを確認するには、[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。
 
@@ -377,7 +379,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />マネージド インスタンス \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|** _\* SQL Database<br />マネージド インスタンス \*_ **|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -410,7 +412,7 @@ PASSWORD **=** '*password*': 作成する SQL ログインのパスワードを�
 
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a-z、A-Z、0-9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。
 
-SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようにします。
+SID **=** *sid*: ログインの再作成に使用されます。 SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Database の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)** ) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようになります。
 
 ## <a name="remarks"></a>Remarks
 
@@ -558,7 +560,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ **|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -580,11 +582,11 @@ CREATE LOGIN login_name
 
 *login_name*: 作成するログインの名前を指定します。 Azure SQL Database では SQL ログインのみがサポートされます。
 
-PASSWORD **='** password**'*: 作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
+PASSWORD **='** password* *'* : 作成する SQL ログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
 
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a-z、A-Z、0-9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。
 
- SID = *sid*: ログインの再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Data Warehouse の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)**) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようにします。
+ SID = *sid*: ログインの再作成に使用されます。 Windows 認証ログインではなく、SQL Server 認証ログインにのみ適用されます。 新しい SQL Server 認証ログインの SID を指定します。 このオプションが使用されていない場合、SQL Server で自動的に SID が割り当てられます。 SID 構造体は、SQL Server のバージョンに依存します。 SQL Data Warehouse の場合、これは、`0x01060000000000640000000000000000` と、GUID を表す 16 バイトで構成される 32 バイト (**binary(32)** ) のリテラルです。 たとえば、`SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7` のようになります。
 
 ## <a name="remarks"></a>Remarks
 
@@ -598,11 +600,11 @@ PASSWORD **='** password**'*: 作成する SQL ログインのパスワードを
 
 **CREATE LOGIN** ステートメントはバッチ内の唯一のステートメントである必要があります。
 
-**sqlcmd** などの SQL Data Warehouse に接続するいくつかのメソッドでは、*\<login>*@*\<server>* の表記法を使用して、接続文字列のログイン名に SQL Data Warehouse サーバー名を追加する必要があります。 たとえば、ログインが `login1` で、SQL Data Warehouse サーバーの完全修飾名が `servername.database.windows.net` である場合、接続文字列の *username* パラメーターは `login1@servername` となる必要があります。 の合計の長さ、 *username* パラメーターには、128 文字まで *login_name* サーバー名の長さマイナス 127 文字に制限されます。 この例では、`login_name` が 10 文字であるため、`servername` には 117 文字までしか指定できません。
+**sqlcmd** などの SQL Data Warehouse に接続するいくつかのメソッドでは、 *\<login>* @ *\<server>* の表記法を使用して、接続文字列のログイン名に SQL Data Warehouse サーバー名を追加する必要があります。 たとえば、ログインが `login1` で、SQL Data Warehouse サーバーの完全修飾名が `servername.database.windows.net` である場合、接続文字列の *username* パラメーターは `login1@servername` となる必要があります。 の合計の長さ、 *username* パラメーターには、128 文字まで *login_name* サーバー名の長さマイナス 127 文字に制限されます。 この例では、`login_name` が 10 文字であるため、`servername` には 117 文字までしか指定できません。
 
 SQL Data Warehouse では、ログインを作成する際に master データベースに接続する必要があります。
 
-SQL Server ルールを使用すると、\<loginname>@\<servername> 形式の SQL Server 認証ログインを作成できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーが **myazureserver** で、ログインが **myemail@live.com** である場合、**myemail@live.com@myazureserver** としてログインを指定する必要があります。
+SQL Server ルールを使用すると、\<loginname>@\<servername> 形式の SQL Server 認証ログインを作成できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーが **myazureserver** で、ログインが **myemail@live.com** である場合、 **myemail@live.com@myazureserver** としてログインを指定する必要があります。
 
 SQL Data Warehouse では、接続の認証に必要なログイン データおよびサーバー レベルのファイアウォール規則は、各データベースで一時的にキャッシュされます。 このキャッシュは定期的に更新されます。 認証キャッシュを強制的に更新し、データベースに最新バージョンのログイン テーブルがあることを確認するには、[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) を実行します。
 
@@ -672,7 +674,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](create-login-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ **
 
 &nbsp;
 
@@ -695,9 +697,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>引数
 
-*login_name*: 作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに "**\\**" を含めることはできません。 Windows ログインには "**\\**" を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。
+*login_name*: 作成するログインの名前を指定します。 ログインには 4 つの種類があります。SQL Server ログイン、Windows ログイン、証明書マッピング ログイン、非対称キー マッピング ログインです。 Windows ドメイン アカウントからマップされるログインを作成する場合は、Windows 2000 よりも前の Windows で使用されていた [\<domainName>\\<login_name>] 形式のユーザー ログイン名を使用する必要があります。 login_name@DomainName 形式の UPN は使用できません。 例については、この記事の後半の例 D を参照してください。 認証ログインは **sysname** 型であり、[識別子](../../relational-databases/databases/database-identifiers.md) のルールに従っている必要があります。このログインに " **\\** " を含めることはできません。 Windows ログインには " **\\** " を含めることができます。 Active Directory ユーザーに基づくログインは、21 文字未満の名前に制限されます。
 
-PASSWORD **='**_password_' SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
+PASSWORD **='** _password_' SQL Server ログインにのみ適用されます。 作成するログインのパスワードを指定します。 強力なパスワードを使用してください。 詳細については、「[強力なパスワード](../../relational-databases/security/strong-passwords.md)」と「[パスワード ポリシー](../../relational-databases/security/password-policy.md)」を参照してください。 SQL Server 2012 (11.x) 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。
 
 パスワードでは大文字と小文字が区別されます。 パスワードの長さは 8 文字以上 128 文字以下である必要があります。 パスワードには、a-z、A-Z、0-9 およびほとんどの英数字以外の文字を含めることができます。 パスワードには、単一引用符、または *login_name* を含めることはできません。
 

@@ -1,7 +1,7 @@
 ---
 title: DROP WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/01/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -21,17 +21,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: a9ef53323d77f1439df5daf0fedc669fe380cb3f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 67909db180af056add12324622cfd6094d8729fe
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581516"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105830"
 ---
-# <a name="drop-workload-classifier-transact-sql-preview"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL) (プレビュー)
-
-> [!Note]
-> SQL Data Warehouse Gen2 上でワークロードの分類のプレビュー版が使用可能です。 ワークロード管理の分類および重要性のプレビューは、リリース日が 2019 年 4 月 9 日以降のビルドに対応しています。  ワークロード管理テストでは、この日付より前のビルドは使用しないでください。  ビルドがワークロード管理に対応しているかどうかを確認するには、SQL Data Warehouse インスタンスに接続しているときに select @@version を実行してください。
+# <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

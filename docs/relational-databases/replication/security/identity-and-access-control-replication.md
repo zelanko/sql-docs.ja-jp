@@ -16,12 +16,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bbdc659100477b7a4d5edae427ba74c76365ea3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8c43cd13760808822b2c0332584799383eab5e39
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135982"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776259"
 ---
 # <a name="identity-and-access-control-replication"></a>ID およびアクセス制御 (レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,8 @@ ms.locfileid: "54135982"
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>レプリケーションのログインとパスワードの管理
 レプリケーションを構成する際には、レプリケーション エージェントのログインとパスワードを指定します。 レプリケーションの構成後は、ログインとパスワードを変更できます。 詳細については、「 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。 レプリケーション エージェントで使用されるアカウントのパスワードを変更する場合は、[sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md) を実行します。  
+
+グループのマネージド サービス アカウント (gMSA) の使用のサポートは、SQL Server 2014 で導入されました。 詳細については、ブログ「[Replication and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/)」 (レプリケーションとグループのマネージド サービス アカウント) を参照してください。
   
 ## <a name="see-also"></a>参照  
  [脅威と脆弱性の対策 &#40;レプリケーション&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [レプリケーション エージェントのセキュリティ モデル](../../../relational-databases/replication/security/replication-agent-security-model.md)   

@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534654"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270161"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トラブルシューティングを行うときに、サブスクライバー側のディストリビューション エージェントによって適用される次のトランザクションのログ シーケンス番号 (LSN) を指定する場合に使用します。これにより、エージェントでは失敗したトランザクションをスキップできます。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。 SQL Server 以外のサブスクライバーをサポートされていません。  
+  トラブルシューティングの際に使用すると、次のトランザクションで提供を開始するディストリビューション エージェントを許可するログ シーケンス番号 (LSN) を使用して、最後に配信されたトランザクションを指定します。 、再起動時に、ディストリビューション エージェントを返すトランザクションこの透かし (LSN) より大きい、ディストリビューション データベースのキャッシュ (msrepl_commands) から。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。 SQL Server 以外のサブスクライバーをサポートされていません。  
   
 > [!CAUTION]  
 >  このストアド プロシージャの使用または不正な LSN 値を指定する、サブスクライバーに既に適用された変更を元に戻すか、残りのすべての変更をスキップするには、ディストリビューション エージェントが発生することができます。  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_setsubscriptionxactseqno**します。  
   
-  
+## <a name="see-more"></a>詳細情報
+
+[ブログ:トランザクションをスキップする方法](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

@@ -1,21 +1,22 @@
 ---
-title: Linux 上の SQL Server コマンド ライン ツールのインストール |Microsoft Docs
+title: Linux 上の SQL Server コマンド ライン ツールをインストールします。
+titleSuffix: SQL Server
 description: この記事では、Linux に SQL Server ツールをインストールする方法について説明します。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 86a452237628df8952beaa09277a79b1de507aa1
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801756"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265402"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd および bcp、SQL Server コマンド ライン ツールを Linux にインストールします。
 
@@ -178,7 +179,7 @@ ms.locfileid: "56801756"
 
 ## <a id="macos"></a> MacOS でのツールをインストールします。
 
-プレビュー **sqlcmd**と**bcp** macOS で公開されています。 詳細については、、[アナウンス](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)を参照してください。
+プレビュー **sqlcmd**と**bcp** macOS で公開されています。 詳細については、次を参照してください。、[アナウンス](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)します。
 
 *インストール[Homebrew](https://brew.sh)まだ持っていない場合。*
 
@@ -203,25 +204,21 @@ Docker イメージには、SQL Server コマンド ライン ツールが含ま
 
 [!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
 
-次の表では、最新のツール パッケージの場所を示します。
+1. 最初に、検索して、コピー、 **mssql ツール**Linux ディストリビューションのパッケージ。
 
-| ツール パッケージ | バージョン | ダウンロード |
-|-----|-----|-----|
-| Red Hat RPM ツール パッケージ | 14.0.5.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| SLES RPM ツール パッケージ | 14.0.5.0-1 | [mssql-tools RPM package](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian ツール パッケージ | 14.0.5.0-1 | [mssql ツール Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian ツール パッケージ | 14.0.5.0-1 | [mssql ツール Debian パッケージ](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+   | Linux ディストリビューション | **mssql-tools** package location |
+   |---|---|
+   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
+   | Ubuntu 16.04 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools) |
 
-これらのパッケージが依存**移動**を最初にインストールする必要があります。 **移動**パッケージもいずれかに依存している**unixODBC devel** (RPM) または**unixodbc dev** (Debian)。 場所、**移動**パッケージが次の表に一覧表示します。
+1. 検索して、コピーも、**移動**パッケージは、依存関係。 **移動**パッケージもいずれかに依存している**unixODBC devel** (Red Hat および SLES) または**unixodbc dev** (Ubuntu)。 場所、**移動**パッケージが次の表に一覧表示します。
 
-| パッケージの移動 | バージョン | ダウンロード |
-|-----|-----|-----|
-| 移動の Red Hat の RPM パッケージ | 13.1.6.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| 移動の SLES RPM パッケージ | 13.1.6.0-1 | [msodbcsql RPM package](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian msodbcsql package | 13.1.6.0-1 | [Debian パッケージの移動](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian msodbcsql package | 13.1.6.0-1 | [Debian パッケージの移動](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-
-これらのパッケージを手動でインストールするには、次の手順を使用します。
+   | Linux ディストリビューション | ODBC のパッケージの場所 |
+   |---|---|
+   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
+   | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
 1. **Linux コンピューターにダウンロードしたパッケージを移動**します。 Linux コンピューターに、パッケージを移動する方法の 1 つは、パッケージをダウンロードする別のコンピューターを使用した場合、 **scp**コマンド。
 
@@ -229,17 +226,17 @@ Docker イメージには、SQL Server コマンド ライン ツールが含ま
 
     | プラットフォーム | パッケージのインストール コマンド |
     |-----|-----|
-    | Red Hat | `sudo yum localinstall msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo yum localinstall mssql-tools-14.0.5.0-1.x86_64.rpm` |
-    | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
-    | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
+    | Red Hat | `sudo yum localinstall msodbcsql-<version>.rpm`<br/>`sudo yum localinstall mssql-tools-<version>.rpm` |
+    | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
+    | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
 1. **解決するには依存関係がない**:この時点での依存関係が不足しているがあります。 それ以外の場合は、この手順をスキップすることができます。 場合によってでは、手動で検索して、これらの依存関係をインストールする必要があります。
 
     RPM パッケージでは、次のコマンドで必要な依存関係を確認できます。
 
     ```bash
-    rpm -qpR msodbcsql-13.1.6.0-1.x86_64.rpm
-    rpm -qpR mssql-tools-14.0.5.0-1.x86_64.rpm
+    rpm -qpR msodbcsql-<version>.rpm
+    rpm -qpR mssql-tools-<version>.rpm
     ```
 
     Debian パッケージは、それらの依存関係を含む承認済みのリポジトリにアクセスする場合、最も簡単なソリューションを使用する、 **apt-get と**コマンド。
@@ -254,8 +251,8 @@ Docker イメージには、SQL Server コマンド ライン ツールが含ま
     これが機能しない、Debian パッケージの場合は、次のコマンドで必要な依存関係を確認できます。
 
     ```bash
-    dpkg -I msodbcsql_13.1.6.0-1_amd64.deb | grep "Depends:"
-    dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
+    dpkg -I msodbcsql_<version>_amd64.deb | grep "Depends:"
+    dpkg -I mssql-tools_<version>_amd64.deb | grep "Depends:"
     ```
 
 ## <a name="next-steps"></a>次のステップ

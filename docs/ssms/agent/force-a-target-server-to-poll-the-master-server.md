@@ -13,16 +13,16 @@ helpviewer_keywords:
 - master servers [SQL Server], polling
 - target servers [SQL Server], polling the master server
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0f3c9d209055bc05ff53c64f354b282e32be8c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49408bfe22bf05e6315b9598c0b65f5c02b791de
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740500"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096568"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>ターゲット サーバーからのマスター サーバーのポーリングの強制
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47740500"
 > [!NOTE]  
 > ターゲット サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [セキュリティ](#Security)  
+-   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
   
--   **対象サーバーからマスター サーバーにポーリングさせるために使用するもの:** [SQL Server Management Studio](#SSMS)  
+-   **ターゲット サーバーからマスター サーバーにポーリングさせるには、次を使用します。** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
@@ -50,11 +50,11 @@ ms.locfileid: "47740500"
 詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md) 」および「 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](../../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
-**対象サーバーからマスター サーバーにポーリングさせるには**  
+**ターゲット サーバーからマスター サーバーにポーリングさせるには**  
   
 1.  **オブジェクト エクスプローラー**で、マスター サーバーを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーの管理]** をクリックします。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[ターゲット サーバーの管理]** をクリックします。  
   
-3.  ターゲット サーバーをクリックし、**[強制的にポーリング]** をクリックします。  
+3.  ターゲット サーバーをクリックし、 **[強制的にポーリング]** をクリックします。  
   

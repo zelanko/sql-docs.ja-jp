@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535854"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450089"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>AlwaysOn 可用性グループのレプリカ インスタンスのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Always On 可用性グループ (AG) をホストする [!INCLUDE[ssNoVersion](.
 - [変更データ キャプチャまたはレプリケーションを AG データベースに使用するかどうかの確認](#special-steps-for-change-data-capture-or-replication):AG のデータベースを変更データ キャプチャ (CDC) に対して有効にする場合は、この[手順](#special-steps-for-change-data-capture-or-replication)を完了してください。
 
 >[!NOTE]  
->レプリカをアップグレードするローリング アップグレードでなければ、同じ AG でさまざまなバージョンの SQL Server インスタンスを混在させることはできません。 新しいバージョンの SQL Server インスタンスを既存の AG に新しいレプリカとして追加することはできません。 たとえば、SQL Server 2017 レプリカは既存の SQL Server 2016 AG に追加できません。 AG を使用して新しいバージョンの SQL Server インスタンスに移行するには、SQL Server 2016 Enterprise Edition 以降でサポートされている分散型 AG を使用するしかありません。
+>同じ AG 内で SQL Server インスタンスのバージョンが混在することは、ローリング アップグレード以外ではサポートされていません。また、アップグレードはすぐに実行されるため、長期間その状態のままにしないでください。 SQL Server 2016 以降をアップグレードするには、分散可用性グループを使用する方法もあります。
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>Always On AG のローリング アップグレードの基本  
 サーバーのアップグレードまたは更新を行う時に、AG のダウンタイムとデータ損失を最小限に抑えるには、次のガイドラインに従ってください。  

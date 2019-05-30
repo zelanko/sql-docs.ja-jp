@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0bb145c668022c310a159455a77c9065635c99d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: af2982aa2f7955c5196ec445064c691a5f070259
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201527"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503473"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,15 +57,14 @@ ms.locfileid: "53201527"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-DROP TABLE [ IF EXISTS ] [ database_name . [ schema_name ] . | schema_name . ]  
-table_name [ ,...n ]  
+DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
   
@@ -95,7 +94,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
   
  DELETE *tablename* や、TRUNCATE TABLE ステートメントを使用して、テーブルのすべての行を削除しても、そのテーブルは、テーブル自体を削除しない限り存在します。  
   
- 128 個を超えるエクステントを使用する大きなテーブルやインデックスは、論理フェーズと物理フェーズの 2 段階で削除します。 論理フェーズでは、そのテーブルが使用している既存のアロケーション ユニットに割り当て解除のマークが付き、トランザクションがコミットするまでロックされます。 物理フェーズでは、割り当て解除のマークが付いた IAM ページが、バッチによって物理的に削除されます。  
+ 128 個を超えるエクステントを使用する大きなテーブルやインデックスは、論理フェーズと物理フェーズの 2 段階で削除します。 論理フェーズでは、そのテーブルが使用している既存のアロケーション ユニットに割り当て解除のマークが付き、トランザクションがコミットするまでロックされます。 物理フェーズでは、割り当て解除のマークが付いた IAM ページが、バッチで物理的に削除されます。  
   
  FILESTREAM 属性が指定されている VARBINARY(MAX) 列を含むテーブルを削除しても、ファイル システムに保存されているデータは削除されません。  
   
@@ -140,11 +139,11 @@ SELECT * FROM #temptable;
   
 ```  
   
-### <a name="d-dropping-a-table-using-if-exists"></a>D. IF EXISTS を使用してテーブルを削除します。  
+### <a name="d-dropping-a-table-using-if-exists"></a>D. IF EXISTS を使用してテーブルを削除する  
   
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
- 次の例では、T1 のという名前のテーブルを作成します。 2 番目のステートメントは、テーブルを削除します。 3 番目のステートメントでは、操作は一切実行、テーブルが既に削除されるためが、エラーは発生しません。  
+ 次の例では、T1 のという名前のテーブルを作成します。 2 番目のステートメントで、テーブルを削除します。 3 番目のステートメントでは、テーブルがすでに削除されているため、何も操作が実行されませんが、エラーは発生しません。  
   
 ```  
 CREATE TABLE T1 (Col1 int);  

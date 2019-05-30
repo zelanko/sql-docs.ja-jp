@@ -1,5 +1,5 @@
 ---
-title: SQL Server ツールの使用状況と診断データの収集の構成 | Microsoft Docs
+title: SQL Server ツールの使用状況と診断データの収集を構成する (CEIP) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243516"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376850"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>SQL Server ツールの使用状況と診断データの収集の構成
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>SQL Server ツールの使用状況と診断データの収集を構成する (CEIP)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>SQL Server Data Tools の CEIP を有効または無効にする  
 
- カスタマー エクスペリエンス向上プログラムは、Microsoft が時間の経過と共に製品を向上させるために記述されたプログラムです。 このプログラムは、コンピューターで実行しているユーザーのタスクを中断することなく、コンピューターのハードウェアおよびユーザーによる製品の利用状況を収集します。 収集される情報は、Microsoft がどの機能を改善するかを特定するために役立ちます。 このドキュメントでは、Visual Studio 2017、Visual Studio 2015 および Visual Studio 2013 で SQL Server Data Tools (SSDT) の CEIP を有効または無効にする方法について説明します。  
+ カスタマー エクスペリエンス向上プログラムは、Microsoft が時間の経過と共に製品を向上させるために記述されたプログラムです。 このプログラムは、コンピューターで実行しているユーザーのタスクを中断することなく、コンピューターのハードウェアおよびユーザーによる製品の利用状況を収集します。 収集される情報は、Microsoft がどの機能を改善するかを特定するために役立ちます。 このドキュメントでは、Visual Studio 2017、Visual Studio 2015 および Visual Studio 2013 で SQL Server Data Tools (SSDT) の CEIP を有効または無効にする方法について説明します。  SQL Server の CEIP をオプト アウトする方法については、[SQL Server のローカル監査の有効/無効の切り替え](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)に関する記事を参照してください。
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Visual Studio 2017 の CEIP と SQL Server Data Tools の選択および制御
 
@@ -43,11 +43,11 @@ Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP
   
 1.  Visual Studio を起動します。  
   
-2.  [ヘルプ] メニューから、 **[フィードバックの送信]** > **[設定]** を選択します。  
+2.  [ヘルプ] メニューから、 **[フィードバックの送信]**  >  **[設定]** を選択します。  
   
 3.  CEIP をオフにするには、 **[いいえ、協力しません]** をクリックし、 **[OK]** をクリックします。  
   
-     CEIP をオンにするには、**[はい、協力します]** をクリックし、**[OK]** をクリックします。  
+     CEIP をオンにするには、 **[はい、協力します]** をクリックし、 **[OK]** をクリックします。  
   
 
   
@@ -87,11 +87,11 @@ Microsoft がカスタマー エクスペリエンス向上プログラム (CEIP
   
 1.  Visual Studio を起動します。  
   
-2.  [ヘルプ] メニューから、 **[フィードバックの送信]** > **[設定]** を選択します。  
+2.  [ヘルプ] メニューから、 **[フィードバックの送信]**  >  **[設定]** を選択します。  
   
 3.  CEIP をオフにするには、 **[いいえ、協力しません]** をクリックし、 **[OK]** をクリックします。  
   
-     CEIP をオンにするには、**[はい、協力します]** をクリックし、**[OK]** をクリックします。  
+     CEIP をオンにするには、 **[はい、協力します]** をクリックし、 **[OK]** をクリックします。  
   
 
   

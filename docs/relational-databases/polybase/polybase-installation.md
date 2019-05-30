@@ -11,12 +11,13 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775048"
 ---
 # <a name="install-polybase-on-windows"></a>Windows への PolyBase のインストール
 
@@ -40,15 +41,16 @@ SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.
    
 - PolyBase が正常に機能するには、TCP/IP を有効にする必要があります。 TCP/IP は、Developer Edition と Express Edition を除く SQL Server のすべてのエディションで、既定で有効です。 Developer Edition および Express Edition で PolyBase が正常に機能するためには、TCP/IP 接続を有効にする必要があります。 「[サーバー ネットワーク プロトコルの有効化または無効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。
 
-- MSVC++ 2012。 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > PolyBase は各マシンで 1 つの SQL Server インスタンスにのみインストールできます。
-> 
-> [!IMPORTANT]
-> 
-> Hadoop に対して計算プッシュダウン機能を使用するには、ターゲットの Hadoop クラスターに、ジョブの履歴サーバーが有効になっている HDFS のコア コンポーネントの YARN と MapReduce がある必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、ジョブの履歴サーバーからステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。
+
+
+>[!NOTE]
+>PolyBase を使用するには、データベースでの sysadmin または CONTROL SERVER レベルのアクセス許可が必要です。
+
+>[!IMPORTANT]
+>Hadoop に対して計算プッシュダウン機能を使用するには、ターゲットの Hadoop クラスターに、ジョブの履歴サーバーが有効になっている HDFS のコア コンポーネントの YARN と MapReduce がある必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、ジョブの履歴サーバーからステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>シングル ノードまたは PolyBase スケールアウト グループ
 
@@ -67,18 +69,17 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
    
 1. SQL Server の setup.exe を実行します。   
    
-2. **[インストール]** を選択し、**[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** を選択します。  
+2. **[インストール]** を選択し、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** を選択します。  
    
-3. [機能の選択] ページで、**[外部データ用 PolyBase クエリ サービス]** を選択します。  
+3. [機能の選択] ページで、 **[外部データ用 PolyBase クエリ サービス]** を選択します。  
 
    ![PolyBase サービス](../../relational-databases/polybase/media/install-wizard.png "PolyBase サービス")  
    
 4. [Server の構成] ページで、**SQL Server PolyBase エンジン サービス**と **SQL Server PolyBase Data Movement Service** を同じアカウントで実行するように構成します。  
-   
-   > [!IMPORTANT] 
-   >
+
+   >[!IMPORTANT]
    >PolyBase スケールアウト グループで、すべてのノード上の PolyBase エンジンおよび PolyBase Data Movement サービスを、同じドメイン アカウントで実行する必要があります。 「[PolyBase スケールアウト グループ](#enable)」を参照してください。
-   
+
 5. [PolyBase の構成] ページで、次の 2 つのオプションのいずれかを選択します。 詳細については、「[PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md) 」を参照してください。  
    
    - スタンドアロンの PolyBase 対応インスタンスとして、SQL Server インスタンスを使用します。  
@@ -91,8 +92,7 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
    
 6. [PolyBase の構成] ページで、少なくとも 6 つのポートを含むポート範囲を指定します。 SQL Server セットアップにより、この範囲の最初の 6 つの利用可能なポートが割り当てられます。  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > インストール後に、[PolyBase 機能を有効にする](#enable)必要があります。
 
 
@@ -192,11 +192,11 @@ SQL Server PolyBase のセットアップでは、コンピューターに次の
 
 1. **コントロール パネル**を開きます。  
 
-2. **[システムとセキュリティ]** を選択し、**[Windows ファイアウォール]** を選択します。  
+2. **[システムとセキュリティ]** を選択し、 **[Windows ファイアウォール]** を選択します。  
    
-3. **[詳細設定]** を選択して、**[受信の規則]** を選択します。  
+3. **[詳細設定]** を選択して、 **[受信の規則]** を選択します。  
    
-4. 無効になっている規則を右クリックして、**[規則の有効化]** を選択します。  
+4. 無効になっている規則を右クリックして、 **[規則の有効化]** を選択します。  
    
 ### <a name="polybase-service-accounts"></a>PolyBase サービス アカウント
 

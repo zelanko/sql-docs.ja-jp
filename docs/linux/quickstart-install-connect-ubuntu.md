@@ -5,18 +5,18 @@ description: このクイック スタートでは、SQL Server 2017 または S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/16/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 5d1294c9219fd14d5e1de363069e25a9bc144a6b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 93b02908a1341af18044c1c8a86dfd2e6024f8f3
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803097"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265362"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート: Ubuntu に SQL Server をインストールし、データベースを作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "56803097"
 ::: moniker-end
 
 > [!TIP]
-> このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended) または [オフライン](sql-server-linux-setup.md#offline) インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
+> このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 自動またはオフラインのインストールの手順で必要な場合を参照してください。 [Linux 上の SQL Server のインストールのガイダンスについて](sql-server-linux-setup.md)します。
 
 ## <a name="prerequisites"></a>前提条件
 
 Ubuntu 16.04 コンピューターに **少なくとも 2 GB** メモリを搭載する必要があります。
 
-独自のマシンに Ubuntu をインストールするには[ https://www.ubuntu.com/download/server](https://www.ubuntu.com/download/server)します。 Azure の Ubuntu 仮想マシンを作成することもできます。 [Azure CLI を使用して Linux Vm を作成および管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) を参照してください。
+Ubuntu 16.04 を自分のコンピューターにインストールするには[ http://releases.ubuntu.com/xenial/](http://releases.ubuntu.com/xenial/)します。 Azure の Ubuntu 仮想マシンを作成することもできます。 [Azure CLI を使用して Linux Vm を作成および管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) を参照してください。
 
 > [!NOTE]
 > 現時点で、 Windows 10 の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) は、インストール対象としてサポートされていません。
@@ -97,7 +97,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
 5. 構成が完了したら、サービスが実行されていることを確認します。
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. リモートで接続する場合はファイアウォールで SQL Server の TCP ポート (既定は 1433) を開く必要もあります。
@@ -143,7 +143,7 @@ Ubuntu で SQL Server を構成するには、ターミナルで次のコマン�
 5. 構成が完了したら、サービスが実行されていることを確認します。
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. リモートで接続する場合はファイアウォールで SQL Server の TCP ポート (既定は 1433) を開く必要もあります。

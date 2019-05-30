@@ -12,14 +12,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 882f6c9691905d4dd18d7c70a19b3afd9bc86751
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f184ea911bb7731c8b5adba8010d81a91ee4ff3c
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012663"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503965"
 ---
-# <a name="create-table-as-select-azure-sql-data-warehouse"></a>テーブルとして選択 (Azure SQL データ ウェアハウス) を作成します。
+# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 CREATE TABLE AS SELECT (CTAS) は、使用可能な最も重要な T-SQL 機能の 1 つです。 SELECT ステートメントの出力に基づいて新しいテーブルを作成する完全に並列化された操作です。 CTAS は、テーブルのコピーを作成する最も簡単で速い方法です。   
@@ -41,7 +41,7 @@ CREATE TABLE AS SELECT (CTAS) は、使用可能な最も重要な T-SQL 機能�
 ## <a name="syntax"></a>構文   
 
 ```  
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
       <distribution_option> -- required
@@ -110,7 +110,7 @@ SELECT ステートメントは、CTAS と CREATE TABLE の基本的な違いで
  共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。  
   
  `SELECT` *select_criteria*  
- SELECT ステートメントの結果を新しいテーブルを追加します。 *select_criteria* は、新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントについては、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
+ SELECT ステートメントの結果を新しいテーブルに追加します。 *select_criteria* は、新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントについては、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
 <a name="permissions-bk"></a>  
   
@@ -386,10 +386,10 @@ AS SELECT CustomerKey AS c, LastName AS ln
 
 <a name="ctas-query-hint-bk"></a>
 
-### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. 作成するテーブルとの間でのクエリ ヒントを使用する (CTAS) を選択します。  
+### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. CREATE TABLE AS SELECT (CTAS) でクエリ ヒントを使用する  
 適用対象Azure SQL Data Warehouse と Parallel Data Warehouse
   
-このクエリは、CTAS ステートメントを使用してクエリの結合ヒントを使用するための基本構文を示しています。 クエリが送信されると、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、分散ごとにクエリ プランを生成する際にハッシュ結合方法が適用されます。 ハッシュ結合のクエリ ヒントの詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
+このクエリは、CTAS ステートメントでクエリの結合ヒントを使用するための基本構文を示しています。 クエリが送信されると、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、分散ごとにクエリ プランを生成する際にハッシュ結合方法が適用されます。 ハッシュ結合のクエリ ヒントの詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
 ```  
 CREATE TABLE dbo.FactInternetSalesNew  
@@ -412,9 +412,9 @@ OPTION ( HASH JOIN );
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. CTAS を使用して Azure BLOB ストレージからデータをインポートする  
 適用対象Azure SQL Data Warehouse と Parallel Data Warehouse  
 
-外部テーブルからデータをインポートするには、だけで作成表を使用する AS 外部テーブルからを選択します。 外部テーブルからデータを選択して [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
+外部テーブルからデータをインポートするには、CREATE TABLE AS SELECT を使用して外部テーブルから選択するだけです。 外部テーブルからデータを選択して [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
   
- 次の例では、Azure BLOB ストレージ アカウントのデータに対して外部テーブルを定義します。 使用して、テーブルとして選択の作成、外部テーブルからを選択します。 これで、Azure BLOB ストレージのテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] テーブルにデータが格納されます。  
+ 次の例では、Azure BLOB ストレージ アカウントのデータに対して外部テーブルを定義します。 次に CREATE TABLE AS SELECT を使用して、外部テーブルから選択します。 これで、Azure BLOB ストレージのテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] テーブルにデータが格納されます。  
   
 ```  
 --Use your own processes to create the text-delimited files on Azure blob storage.  
@@ -447,9 +447,9 @@ AS SELECT * FROM ClickStreamExt
 ### <a name="h-use-ctas-to-import-hadoop-data-from-an-external-table"></a>H. CTAS を使用して外部テーブルから Hadoop データをインポートする  
 適用対象: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-外部テーブルからデータをインポートするには、だけで作成表を使用する AS 外部テーブルからを選択します。 外部テーブルからデータを選択して [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
+外部テーブルからデータをインポートするには、CREATE TABLE AS SELECT を使用して外部テーブルから選択するだけです。 外部テーブルからデータを選択して [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
   
- 次の例では、Hadoop クラスター上、外部テーブルを定義します。 使用して、テーブルとして選択の作成、外部テーブルからを選択します。 これで、Hadoop のテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] テーブルにデータが格納されます。  
+ 次の例では、Hadoop クラスターに外部テーブルを定義します。 次に CREATE TABLE AS SELECT を使用して、外部テーブルから選択します。 これで、Hadoop のテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] テーブルにデータが格納されます。  
   
 ```  
 -- Create the external table called ClickStream.  

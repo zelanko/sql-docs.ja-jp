@@ -1,7 +1,7 @@
 ---
 title: 復元と復旧の概要 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242043"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461815"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,9 +91,9 @@ ms.locfileid: "54242043"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |データの復旧|完全な復旧 (ログが使用可能な場合)。|一部データ損失の可能性。|最新の完全バックアップまたは差分バックアップ以降のデータが損失。|  
 |特定の時点での復元|ログ バックアップに含まれる任意の時点。|ログ バックアップに一括ログ記録された変更が含まれている場合は不可。|サポートされていません。|  
-|File restore **\***|完全にサポートされます。|場合によりサポートされます。**\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
-|Page restore **\***|完全にサポートされます。|場合によりサポートされます。**\*\***|[なし] :|  
-|段階的な (ファイル グループ レベルの) 部分復元 **\***|完全にサポートされます。|場合によりサポートされます。**\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
+|File restore **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
+|Page restore **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|[なし] :|  
+|段階的な (ファイル グループ レベルの) 部分復元 **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
   
  **\*** の Enterprise Edition でのみ使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -155,7 +155,22 @@ ms.locfileid: "54242043"
 -   [復旧アドバイザー: 概要](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [復旧アドバイザー: SSMS を使用して分割バックアップを作成/復元する](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> 高速データベース復旧
+
+SQL Server 2019 プレビュー CTP 2.3 では、オンプレミスの SQL Server 用に[高速データベース復旧](/azure/sql-database/sql-database-accelerated-database-recovery/)が導入されました。 高速データベース復旧では、SQL Server データベース エンジンの復旧プロセスの再設計により、データベースの可用性が大幅に向上します (実行時間の長いトランザクションが存在する場合は特に)。 [データベース復旧](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started)とは、トランザクション的に一貫した (クリーンな) 状態で各データベースを開始させるために SQL Server で使用されるプロセスです。 高速データベース復旧が有効なデータベースでは、フェールオーバーまたは他のクリーンではないシャットダウンの後の復旧が、非常に速く完了します。 
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 以降では、次の構文を使用してデータベースごとに高速データベース復旧を有効にできます。
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> Azure SQL DB では、この機能は既定で有効になるので、利用するためにこの構文を使用する必要はありません。
+
+大規模なトランザクションの多いクリティカルなデータベースがある場合は、プレビュー期間中にこの機能を試してください。 フィードバックを[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]チーム](<https://aka.ms/sqlfeedback>)にお送りください。
+
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  
   

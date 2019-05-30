@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63202419"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -53,13 +53,15 @@ ms.locfileid: "59583385"
 
 > |||
 > |---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
+> |** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
 
 &nbsp;
 
 ## <a name="sql-server"></a>SQL Server
 
 データベース ミラーリング、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルは `SET` オプションですが、長くなるため別の記事で説明します。 詳しくは、「[ALTER DATABASE データベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)」、「[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)」、および「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。
+
+データベース スコープ構成は、複数のデータベース構成を個々のデータベース レベルで設定するために使用されます。 詳細については、「[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。
 
 > [!NOTE]
 > 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
@@ -362,7 +364,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
 **適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。
 
 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)オプションを有効または無効にします。
@@ -743,7 +745,7 @@ REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scope
 
 **権限**: データベースまたはテーブル データベースの Stretch Database を有効にするには、db_owner 権限が必要です。 データベースの Stretch Database を有効にするには、CONTROL DATABASE 権限も必要です。
 
-SERVER = \<server_name>: Azure サーバーのアドレスを指定します。 名前の `.database.windows.net` の部分を含めます。 たとえば、`MyStretchDatabaseServer.database.windows.net` のようにします。
+SERVER = \<server_name>: Azure サーバーのアドレスを指定します。 名前の `.database.windows.net` の部分を含めます。 たとえば、`MyStretchDatabaseServer.database.windows.net` のようになります。
 
 CREDENTIAL = \<db_scoped_credential_name>: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが Azure サーバーに接続するために使用する、データベース スコープ資格情報を指定します。 このコマンドを実行する前に、資格情報が存在することを確認してください。 詳しくは、「[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」をご覧ください。
 
@@ -948,7 +950,7 @@ sys.databases カタログ ビューの is_recursive_triggers_on 列、または
 
 間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は 1 分であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time*: クラッシュが発生した場合に、指定したデータベースを復旧にかかる時間の上限を指定します。
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time*: クラッシュが発生した場合に、指定したデータベースを復旧にかかる時間の上限を指定します。
 
 SECONDS: *target_recovery_time* が秒単位で表されていることを示します。
 
@@ -1148,7 +1150,7 @@ SET QUERY_STORE = ON
 
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />単一データベース/エラスティック プール\*_** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _\* SQL Database<br />単一データベース/エラスティック プール\*_ ** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
@@ -1360,7 +1362,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
 **適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。
 
 [自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)に関する自動オプションを制御します。
@@ -1680,7 +1682,7 @@ sys.databases カタログ ビューの is_recursive_triggers_on 列、または
 
 間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は 1 分であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time*: クラッシュが発生した場合に、指定したデータベースを復旧にかかる時間の上限を指定します。
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time*: クラッシュが発生した場合に、指定したデータベースを復旧にかかる時間の上限を指定します。
 
 SECONDS: *target_recovery_time* が秒単位で表されていることを示します。
 
@@ -1834,7 +1836,7 @@ SET QUERY_STORE = ON
 
 > |||
 > |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />単一データベース/エラスティック プール](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _\* SQL Database<br />マネージド インスタンス \*_ ** &nbsp;|
 
 &nbsp;
 
@@ -2028,7 +2030,7 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
 **適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。
 
 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)オプションを有効または無効にします。
@@ -2318,7 +2320,7 @@ sys.databases カタログ ビューの is_recursive_triggers_on 列、または
 
 間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は 1 分であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time*: クラッシュが発生した場合に、指定したデータベースを復旧にかかる時間の上限を指定します。
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time*: クラッシュが発生した場合に、指定したデータベースを復旧にかかる時間の上限を指定します。
 
 SECONDS: *target_recovery_time* が秒単位で表されていることを示します。
 

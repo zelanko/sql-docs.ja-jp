@@ -1,7 +1,7 @@
 ---
 title: グラフのエッジ制約 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d8c2549196021754dc5ad343a38604eba6651f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833870"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774647"
 ---
 # <a name="edge-constraints"></a>エッジ制約
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47833870"
 ##  <a name="Tasks"></a> 関連タスク  
  次の表は、エッジ制約に関連する一般的なタスクの一覧です。  
   
-|タスク|記事|  
+|タスク|[アーティクル]|  
 |----------|-----------|  
 |エッジ制約の作成方法について説明します。|[エッジ制約を作成する](../../relational-databases/tables/create-edge-constraints.md)|  
 |エッジ制約の削除方法について説明します。|[エッジ制約を削除する](../../relational-databases/tables/delete-edge-constraint.md)|  
