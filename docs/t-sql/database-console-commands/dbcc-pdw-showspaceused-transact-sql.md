@@ -55,7 +55,7 @@ VIEW SERVER STATE 権限が必要です。
 |data_space|BIGINT|データに使用されている領域 (KB 単位)。|  
 |index_space|BIGINT|インデックスに使用されている領域 (KB 単位)。|  
 |unused_space|BIGINT|予約済み領域の一部で使用されていない領域 (KB 単位)。|  
-|pdw_node_id|ssNoversion|データに使用されているコンピューティング ノード。|  
+|pdw_node_id|INT|データに使用されているコンピューティング ノード。|  
   
 これは、1 つのテーブルの結果セットです。
   
@@ -66,8 +66,8 @@ VIEW SERVER STATE 権限が必要です。
 |data_space|BIGINT|データに使用されている領域 (KB 単位)。||  
 |index_space|BIGINT|インデックスに使用されている領域 (KB 単位)。||  
 |unused_space|BIGINT|予約済み領域の一部で使用されていない領域 (KB 単位)。||  
-|pdw_node_id|ssNoversion|領域の使用状況の報告に使用されるコンピューティング ノード。||  
-|distribution_id|ssNoversion|領域の使用状況の報告に使用されるディストリビューション。|レプリケートされたテーブルの場合、値は -1 です。|  
+|pdw_node_id|INT|領域の使用状況の報告に使用されるコンピューティング ノード。||  
+|distribution_id|INT|領域の使用状況の報告に使用されるディストリビューション。|レプリケートされたテーブルの場合、値は -1 です。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED の基本的な構文  

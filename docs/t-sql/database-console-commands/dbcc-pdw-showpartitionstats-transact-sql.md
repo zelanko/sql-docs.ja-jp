@@ -46,12 +46,12 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|partition_number|ssNoversion|パーティション番号。|  
+|partition_number|INT|パーティション番号。|  
 |used_page_count|BIGINT|データの使用ページ数。|  
 |reserved_page_count|BIGINT|パーティションのために予約されたページ数。|  
 |row_count|BIGINT|パーティション内の行数。|  
-|pdw_node_id|ssNoversion|データのノードを計算します。|  
-|distribution_id|ssNoversion|データの配布識別子。|  
+|pdw_node_id|INT|データのノードを計算します。|  
+|distribution_id|INT|データの配布識別子。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. DBCC PDW_SHOWPARTITIONSTATS の基本的な構文の例  
