@@ -76,7 +76,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |カテゴリ|型|.NET Framework 型|使用されるスタイル|  
 |--------------|----------|-------------------------|-----------------|  
 |数値|BIGINT|Int64|NumberStyles.Number|  
-|数値|ssNoversion|Int32|NumberStyles.Number|  
+|数値|INT|Int32|NumberStyles.Number|  
 |数値|SMALLINT|Int16|NumberStyles.Number|  
 |数値|TINYINT|Byte|NumberStyles.Number|  
 |数値|Decimal|Decimal|NumberStyles.Number|  
@@ -85,7 +85,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |数値|REAL|Single|NumberStyles.Float|  
 |数値|smallmoney|Decimal|NumberStyles.Currency|  
 |数値|money|Decimal|NumberStyles.Currency|  
-|日時|日付|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -98,39 +98,39 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |完全名|別名|LCID (LCID)|特定のカルチャ|  
 |---------------|-----------|----------|----------------------|  
-|us_english|英語|1033|en-US|  
-|Deutsch|ドイツ語|1031|de-DE|  
-|Français|フランス語|1036|fr-FR|  
-|日本語|日本語|1041|ja-JP|  
-|Dansk|デンマーク語|1030|da-DK|  
-|Español|スペイン語|3082|es-ES|  
-|Italiano|イタリア語|1040|it-IT|  
-|Nederlands|オランダ語|1043|nl-NL|  
-|Norsk|ノルウェー語|2068|nn-NO|  
-|Português|ポルトガル語|2070|pt-PT|  
-|Suomi|フィンランド語|1035|fi|  
-|Svenska|スウェーデン語|1053|sv-SE|  
-|Čeština|チェコ語|1029|Cs-CZ|  
-|magyar|ハンガリー語|1038|Hu-HU|  
-|polski|ポーランド語|1045|Pl-PL|  
-|română|ルーマニア語|1048|Ro-RO|  
-|hrvatski|クロアチア語|1050|hr-HR|  
-|slovenčina|スロバキア語|1051|Sk-SK|  
-|slovenski|スロベニア語|1060|Sl-SI|  
-|ΕΛΛΗΝΙΚΆ|ギリシャ語|1032|El-GR|  
-|БЪЛГАРСКИ|ブルガリア語|1026|bg-BG|  
-|РУССКИЙ|ロシア語|1049|Ru-RU|  
-|Türkçe|トルコ語|1055|Tr-TR|  
-|British|英語 (U.K.)|2057|en-GB|  
-|eesti|エストニア語|1061|Et-EE|  
-|latviešu|ラトビア語|1062|lv-LV|  
-|lietuvių|リトアニア語|1063|lt-LT|  
-|ポルトガル語 (ブラジル)|ブラジル|1046|pt-BR|  
-|繁體中文|繁体字中国語|1028|zh-TW|  
-|한국어|韓国語|1042|Ko-KR|  
-|简体中文|簡体字中国語|2052|zh-CN|  
-|アラビア語|アラビア語|1025|ar-SA|  
-|ไทย|タイ語|1054|Th-TH|  
+|us_english|English|1033|en-US|  
+|Deutsch|German|1031|de-DE|  
+|Français|French|1036|fr-FR|  
+|日本語|Japanese|1041|ja-JP|  
+|Dansk|Danish|1030|da-DK|  
+|Español|Spanish|3082|es-ES|  
+|Italiano|Italian|1040|it-IT|  
+|Nederlands|Dutch|1043|nl-NL|  
+|Norsk|Norwegian|2068|nn-NO|  
+|Português|Portuguese|2070|pt-PT|  
+|Suomi|Finnish|1035|fi|  
+|Svenska|Swedish|1053|sv-SE|  
+|Čeština|Czech|1029|Cs-CZ|  
+|magyar|Hungarian|1038|Hu-HU|  
+|polski|Polish|1045|Pl-PL|  
+|română|Romanian|1048|Ro-RO|  
+|hrvatski|Croatian|1050|hr-HR|  
+|slovenčina|Slovak|1051|Sk-SK|  
+|slovenski|Slovenian|1060|Sl-SI|  
+|ΕΛΛΗΝΙΚΆ|Greek|1032|El-GR|  
+|БЪЛГАРСКИ|Bulgarian|1026|bg-BG|  
+|РУССКИЙ|Russian|1049|Ru-RU|  
+|Türkçe|Turkish|1055|Tr-TR|  
+|British|British English|2057|en-GB|  
+|eesti|Estonian|1061|Et-EE|  
+|latviešu|Latvian|1062|lv-LV|  
+|lietuvių|Lithuanian|1063|lt-LT|  
+|Português (Brasil)|Brazilian|1046|pt-BR|  
+|繁體中文|Traditional Chinese|1028|zh-TW|  
+|한국어|Korean|1042|Ko-KR|  
+|简体中文|Simplified Chinese|2052|zh-CN|  
+|Arabic|Arabic|1025|ar-SA|  
+|ไทย|Thai|1054|Th-TH|  
   
 ## <a name="examples"></a>使用例  
   
