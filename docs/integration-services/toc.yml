@@ -228,6 +228,8 @@
       href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
     - name: Azure SQL DW アップロード タスク
       href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+    - name: 柔軟なファイル タスク
+      href: ../integration-services/control-flow/flexible-file-task.md
     - name: データベースのバックアップ タスク
       href: ../integration-services/control-flow/back-up-database-task.md
     - name: 一括挿入タスク
@@ -406,6 +408,10 @@
   href: ../integration-services/data-flow/azure-data-lake-store-source.md
 - name: Azure Data Lake Store Destination
   href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: 柔軟なファイル ソース
+  href: ../integration-services/data-flow/flexible-file-source.md
+- name: 柔軟なファイルの変換先
+  href: ../integration-services/data-flow/flexible-file-destination.md
 - name: CDC フロー コンポーネント
   href: ../integration-services/data-flow/cdc-flow-components.md
   items:
