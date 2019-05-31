@@ -43,8 +43,8 @@ ms.locfileid: "65715196"
 |Subcomponent_name|nvarchar (4000)|メッセージのソースであるデータ フロー コンポーネント。<br /><br /> メッセージが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エンジンによって返されると、SSIS.Pipeline がこの列に表示されます。|  
 |Package_path|nvarchar(max)|パッケージ内のコンポーネントの一意のパス。|  
 |Execution_path|nvarchar(max)|親パッケージからコンポーネントが実行されるポイントまでの完全パス。<br /><br /> このパスは、コンポーネントの繰り返しもキャプチャします。|  
-|threadID|ssNoversion|メッセージがログに記録されるときに実行しているスレッドの ID。|  
-|Message_code|ssNoversion|メッセージに関連付けられたコード。|  
+|threadID|INT|メッセージがログに記録されるときに実行しているスレッドの ID。|  
+|Message_code|INT|メッセージに関連付けられたコード。|  
   
 ## <a name="remarks"></a>Remarks  
  このビューに表示されるメッセージ ソースの種類は次のとおりです。  
