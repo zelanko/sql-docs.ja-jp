@@ -2304,7 +2304,7 @@
               href: ../relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md
             - name: LOCALDB_ERROR_XEVENT_FAILED
               href: ../relational-databases/express-localdb-error-messages/localdb-error-xevent-failed.md
-        - name: 'インスタンス API: '
+        - name: 'インスタンス API:'
           href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
           items:
             - name: 'コマンド ライン管理ツール: SqlLocalDB.exe'
