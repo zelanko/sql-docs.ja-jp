@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106069"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413630"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミス データベースの右側の Azure SQL Database/マネージ インスタンス SKU の識別します。
 
@@ -41,7 +41,7 @@ Azure SQL データベースの SKU の推奨事項を特定し、対応する 1
 
 ## <a name="prerequisites"></a>前提条件
 
-- 最新バージョンのインストールをダウンロードして[DMA](https://aka.sm/get-dma)します。 ツールの以前のバージョンが既にある、それを開いてし、DMA のアップグレードを求められます。
+- 最新バージョンのインストールをダウンロードして[DMA](https://aka.ms/get-dma)します。 ツールの以前のバージョンが既にある、それを開いてし、DMA のアップグレードを求められます。
 - コンピューターにインストールすることを確認[PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616)または後で、すべてのスクリプトの実行に必要です。 コンピューターにどのバージョンの PowerShell がインストールされている findoug については、記事を参照してください。[をダウンロードして Windows PowerShell 5.1 をインストール](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)します。
 - お使いのコンピューターに、Azure Powershell モジュールをインストールしてください。 詳細については、この記事を参照してください。 [Azure PowerShell モジュールをインストール](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)します。
 - いることを確認、PowerShell ファイル**SkuRecommendationDataCollectionScript.ps1**、DMA フォルダーにインストールされますが、パフォーマンス カウンターを収集するために必要な。

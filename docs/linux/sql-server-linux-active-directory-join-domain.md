@@ -10,12 +10,12 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243586"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413340"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server を Linux ホストを Active Directory ドメインに参加します。
 
@@ -139,7 +139,7 @@ ping contoso.com
 
 Active Directory ドメインに SQL Server ホストに参加するのにには、次の手順を使用します。
 
-1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md)ホスト マシンを AD ドメインに参加させる。 両方をインストールする必要があります最初、 **realmd**と Linux ディストリビューションのパッケージ マネージャーを使用して SQL Server ホスト マシンでの Kerberos クライアント パッケージ。
+1. 使用[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join)ホスト マシンを AD ドメインに参加させる。 両方をインストールする必要があります最初、 **realmd**と Linux ディストリビューションのパッケージ マネージャーを使用して SQL Server ホスト マシンでの Kerberos クライアント パッケージ。
 
    **RHEL の場合:**
 
@@ -161,7 +161,7 @@ Active Directory ドメインに SQL Server ホストに参加するのにには
 
 1. Kerberos クライアント パッケージのインストールでは、領域名を求め、大文字で、ドメイン名を入力します。
 
-1. DNS が正しく構成されていることを確認した後、次のコマンドを実行して、ドメインに参加します。 新しいマシンをドメインに参加させる AD のための十分な特権を持つ AD アカウントを使用して認証する必要があります。 このコマンドは、AD で新しいコンピューター アカウントを作成、作成、 **/etc/krb5.keytab** keytab ファイルをホストでドメインを構成します **/etc/sssd/sssd.conf**、および更新 **/etc/krb5.conf。**.
+1. DNS が正しく構成されていることを確認した後、次のコマンドを実行して、ドメインに参加します。 新しいマシンをドメインに参加させる AD のための十分な特権を持つ AD アカウントを使用して認証する必要があります。 このコマンドは、AD で新しいコンピューター アカウントを作成、作成、 **/etc/krb5.keytab** keytab ファイルをホストでドメインを構成します **/etc/sssd/sssd.conf**、および更新 **/etc/krb5.conf。** .
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -179,7 +179,7 @@ Active Directory ドメインに SQL Server ホストに参加するのにには
 
    SQL Server は、ユーザー アカウントとグループをセキュリティ識別子 (Sid) にマップするための SSSD と NSS を使用します。 SSSD 構成され、AD ログインを正常に作成する SQL Server を実行している必要があります。 **realmd**は、通常は自動的に一環として、ドメインに参加するが、場合によっては、これを行うとは別にします。
 
-   詳細については、次を参照してください。 方法[SSSD を手動で構成](https://access.redhat.com/articles/3023951)、および[SSSD を使用する NSS を構成する](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)します。
+   詳細については、次を参照してください。 方法[SSSD を手動で構成](https://access.redhat.com/articles/3023951)、および[SSSD を使用する NSS を構成する](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)します。
 
 1. ドメインからユーザーに関する情報を収集できますようになりましたこととそのユーザーとして Kerberos チケットを取得することを確認します。 次の例では**id**、 [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)、および[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)このコマンド。
 

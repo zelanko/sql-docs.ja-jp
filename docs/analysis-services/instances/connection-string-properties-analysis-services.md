@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e4b457cc59602c9c4c1fc2306446cbb7f47c173
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.openlocfilehash: 269f90b796a6c7ead0e7801235645b897df70e66
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984123"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413320"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52984123"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|**Application Name**|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、アプリケーション名を追加 = 'test'、接続文字列 'test' を SQL Server Profiler トレースに表示する次のスクリーン ショットに示すようにします。<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、 **sspropinitAppName**および **AppName**があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](http://go.microsoft.com/fwlink/?LinkId=301699)」をご覧ください。|  
+|**Application Name**|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、アプリケーション名を追加 = 'test'、接続文字列 'test' を SQL Server Profiler トレースに表示する次のスクリーン ショットに示すようにします。<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、 **sspropinitAppName**および **AppName**があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](https://www.connectionstrings.com/use-application-name-sql-server/)」をご覧ください。|  
 |**AutoSyncPeriod**|クライアントとサーバーのキャッシュを同期する頻度 (ミリ秒単位) を設定します。 ADOMD.NET には、最小限のメモリ オーバーヘッドが発生する、よく使用されるオブジェクトのために、クライアント キャッシュが用意されています。 これは、サーバーへのラウンド トリップを減らすのに役立ちます。 既定値は 10,000 ミリ秒 (10 秒) です。 null または 0 に設定した場合、自動同期は無効になります。|  
 |**Character Encoding**|要求での文字をエンコードする方法を定義します。 有効な値は、Default または UTF-8 (これらは同じです) と、UTF-16 です。| 
 |**CommitTimeout**|XMLA プロパティ。 現在実行中のコマンドのコミット フェーズがロールバックするまでに待機する時間をミリ秒数で指定します。 0 より大きいとき、サーバー構成の該当する CommitTimeout プロパティの値をオーバーライドします。 |   
@@ -153,11 +153,11 @@ ms.locfileid: "52984123"
   
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブック (.xlsx、.xlsb、または .xlsm ファイル) への Http(s) 接続**  
   
- `Data Source=<URL>`。URL には、SharePoint ライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの SharePoint パスを指定します。 たとえば、 `Data Source=http://localhost/Shared Documents/Sales.xlsx` のようにします。  
+ `Data Source=<URL>`。URL には、SharePoint ライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの SharePoint パスを指定します。 たとえば、`Data Source=http://localhost/Shared Documents/Sales.xlsx` のようにします。  
   
  **BI Semantic Model 接続ファイルへの Http(s) 接続**  
   
- `Data Source=<URL>` 。URL には、.bism ファイルへの SharePoint パスを指定します。 たとえば、 `Data Source=http://localhost/Shared Documents/Sales.bism` のようにします。  
+ `Data Source=<URL>` 。URL には、.bism ファイルへの SharePoint パスを指定します。 たとえば、`Data Source=http://localhost/Shared Documents/Sales.bism` のようにします。  
   
  **埋め込み [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 接続**  
   

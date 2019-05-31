@@ -1,7 +1,7 @@
 ---
 title: 照合順序と Unicode のサポート | Microsoft Docs
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206441"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775031"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,15 +147,20 @@ Unicode は、コード ポイントを文字にマップするための標準�
     
     -   バージョン 100 照合順序    
     
-    -   バージョン 140 照合順序    
+    -   バージョン 140 照合順序   
+    
+    -   BIN2<sup>1</sup> バイナリ照合順序
     
 -   UTF8 フラグは、以下には適用できません。    
     
     -   補助文字 (\_SC) または異体字セレクター (\_VSS) をサポートしていないバージョン 90 照合順序    
     
-    -   BIN または BIN2 バイナリ照合順序    
+    -   BIN または BIN2<sup>2</sup> バイナリ照合順序    
     
-    -   SQL\* 照合順序       
+    -   SQL\* 照合順序  
+    
+<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 以降     
+<sup>2</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 まで
     
 Unicode または非 Unicode データ型の使用に関連する問題点を評価するには、使用環境におけるパフォーマンスの違いを測定するためのシナリオをテストする必要があります。 組織内のシステムで使用する照合順序を標準化し、可能であれば Unicode サーバーおよびクライアントを配置するようにしてください。    
     
@@ -245,7 +250,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 すべての新しい照合順序には補助文字の組み込みサポートがあるので、どの新しい照合順序にも SC フラグはありません (または必要ありません)。
 
 これらの照合順序はデータベース エンジン インデックス、メモリ最適化テーブル、列ストア インデックス、ネイティブ コンパイル モジュールでサポートされています。
-    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>UTF-8 のサポート
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、インポートまたはエクスポートのエンコードとして、あるいはテキスト データのデータベース レベルまたは列レベルの照合順序として、広く使用されている UTF-8 文字エンコードの完全なサポートが導入されています。 UTF-8 は、`CHAR` および `VARCHAR` データ型で許可されており、`UTF8` サフィックスを持つようにオブジェクトの照合順序を作成するか変更すると有効になります。 
+
+たとえば、`LATIN1_GENERAL_100_CI_AS_SC` を `LATIN1_GENERAL_100_CI_AS_SC_UTF8` に変更するような場合です。 UTF-8 は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で導入された補助文字をサポートする Windows 照合順序にのみ使用できます。 `NCHAR` および `NVARCHAR` では UTF-16 エンコードのみが許可され、変更されていません。
+
+使用されている文字セットによっては、この機能によりストレージを大幅に節約できます。 たとえば、ASCII (ラテン) 文字列の既存の列データ型を、UTF-8 対応の照合順序を使用して `NCHAR(10)` から `CHAR(10)` に変更すると、必要なストレージが 50% 削減されます。 このように減るのは、`NCHAR(10)` を保存するには 20 バイト必要であるのに対し、`CHAR(10)` では同じ Unicode 文字列に 10 バイトしか必要ないためです。
+
 ##  <a name="Related_Tasks"></a> 関連タスク    
     
 |タスク|トピック|    
@@ -260,6 +275,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ##  <a name="Related_Content"></a> 関連コンテンツ    
 [SQL Server ベスト プラクティス照合順序の変更](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [SQL Server ベスト プラクティス Unicode への移行](https://go.microsoft.com/fwlink/?LinkId=113890) - 今後は維持されません   
 [Unicode コンソーシアムの Web サイト](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
