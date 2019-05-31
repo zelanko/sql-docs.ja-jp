@@ -63,18 +63,18 @@ ms.locfileid: "65098139"
   
     |[オブジェクト名]|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
-    |Id|ssNoversion|unchecked|  
-    |[オブジェクト名]|nvarchar (128)|unchecked|  
+    |Id|int|オフ|  
+    |Name|nvarchar (128)|オフ|  
   
 7.  もう 1 つ、**Products** という名前のテーブルを作成します。 列グリッドを使用して、以下に示す列を Products テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Products]` になるようにスクリプトを変更します。  
   
     |[オブジェクト名]|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
-    |Id|ssNoversion|unchecked|  
-    |[オブジェクト名]|nvarchar (128)|unchecked|  
-    |ShelfLife|ssNoversion|オン|  
-    |SupplierId|ssNoversion|オン|  
-    |CustomerId|ssNoversion|オン|  
+    |Id|int|オフ|  
+    |Name|nvarchar (128)|オフ|  
+    |ShelfLife|int|オン|  
+    |SupplierId|int|オン|  
+    |CustomerId|int|オン|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>テーブル デザイナーを使用して新しい CHECK 制約を作成するには  
   

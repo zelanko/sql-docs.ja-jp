@@ -78,16 +78,16 @@ FORMAT ( value, format [, culture ] )
 |カテゴリ|型|.NET の種類|  
 |--------------|----------|---------------|  
 |数値|BIGINT|Int64|  
-|数値|ssNoversion|Int32|  
+|数値|INT|Int32|  
 |数値|SMALLINT|Int16|  
 |数値|TINYINT|Byte|  
 |数値|Decimal|SqlDecimal|  
 |数値|NUMERIC|SqlDecimal|  
 |数値|FLOAT|Double|  
-|数値|REAL|単一|  
+|数値|REAL|Single|  
 |数値|SMALLMONEY|Decimal|  
 |数値|money|Decimal|  
-|日時|日付|DateTime|  
+|日時|date|DateTime|  
 |日時|time|TimeSpan|  
 |日時|DATETIME|DateTime|  
 |日時|smalldatetime|DateTime|  

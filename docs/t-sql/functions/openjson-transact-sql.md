@@ -128,10 +128,10 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |Key|[値]|  
 |---------|-----------|  
 |0|en-GB|  
-|1|en 英国|  
-|2|de AT|  
-|3|es AR|  
-|4|sr という|  
+|1|en-UK|  
+|2|de-AT|  
+|3|es-AR|  
+|4|sr-Cyrl|  
 
 **OPENJSON** が JSON 配列を解析するとき、この関数は、JSON テキスト内の要素のインデックスをキーとして返します。
 
@@ -228,7 +228,7 @@ OPENJSON 関数によって返される列は、WITH オプションによって
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|ssNoversion|  
+        |2|int|  
         |3|true/false|  
         |4|array|  
         |5|object|  

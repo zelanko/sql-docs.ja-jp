@@ -57,7 +57,7 @@ SELECT 9.5 AS Original,
        CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
-**[変換]**
+**CONVERT**
 ```sql  
 SELECT 9.5 AS Original,
        CONVERT(INT, 9.5) AS [int],
@@ -65,7 +65,7 @@ SELECT 9.5 AS Original,
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|変更元   |ssNoversion    |Decimal |  
+|変更元   |int    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
