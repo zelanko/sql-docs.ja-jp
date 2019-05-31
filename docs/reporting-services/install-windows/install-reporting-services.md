@@ -4,15 +4,15 @@ ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712653"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502689"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services のインストール (2017 以降)
 
@@ -42,7 +42,7 @@ Reporting Services をインストールする前に、「[Hardware and software
 
     ![Reporting Services のインストール](media/install-reporting-services/report-server-install.png)
 
-3. インストールするエディションを選択して、**[次へ]** を選択します。
+3. インストールするエディションを選択して、 **[次へ]** を選択します。
 
     ![エディションの選択](media/install-reporting-services/report-server-install-edition.png)
 
@@ -52,7 +52,7 @@ Reporting Services をインストールする前に、「[Hardware and software
 
     それ以外の場合は、プロダクト キーを入力します。 [SQL Server 2017 Reporting Services のプロダクト キーを見つけます](find-reporting-services-product-key-ssrs.md)。
 
-4. ライセンス条項および条件を読んで同意し、**[次へ]** をクリックします。
+4. ライセンス条項および条件を読んで同意し、 **[次へ]** をクリックします。
 
 5. レポート サーバー データベースを格納するには、データベース エンジンを利用可能にする必要があります。 **[次へ]** を選択して、レポート サーバーのみをインストールします。
 
@@ -65,7 +65,7 @@ Reporting Services をインストールする前に、「[Hardware and software
     > [!NOTE]
     > 既定のパスは、C:\Program Files\Microsoft SQL Server Reporting Services です。
 
-7. 正常にセットアップした後、**[レポート サーバーの構成]** を選択して、Reporting Services Configuration Manager を起動します。
+7. 正常にセットアップした後、 **[レポート サーバーの構成]** を選択して、Reporting Services Configuration Manager を起動します。
 
     ![レポート サーバーの構成](media/install-reporting-services/report-server-install-configure.png)
 
@@ -124,7 +124,13 @@ Web サービス URL および Web ポータル URL 用に構成されている 
 
 ## <a name="related-information"></a>関連情報
 
-SQL Server Reporting Services ネイティブ モードをインストールする方法については、「[Reporting Services ネイティブ モードのレポート サーバーのインストール](install-reporting-services-native-mode-report-server.md)」を参照してください。 SharePoint 統合モードで SQL Server 2016 Reporting Services (およびそれ以降) をインストールする方法については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。
+SQL Server Reporting Services ネイティブ モードをインストールする方法については、「[Reporting Services ネイティブ モードのレポート サーバーのインストール](install-reporting-services-native-mode-report-server.md)」を参照してください。 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+SharePoint 統合モードで SQL Server 2016 Reporting Services (およびそれ以降) をインストールする方法については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。
+
+::: moniker-end
 
 ## <a name="next-steps"></a>次の手順
 

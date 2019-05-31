@@ -1,8 +1,8 @@
 ---
 title: レポート サーバーへのユーザー アクセスを許可する | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021856"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449688"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>レポート サーバーへのユーザー アクセスを許可する
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021856"
 
  **SharePoint モードのレポート サーバー:** SharePoint 統合モード用に構成されたレポート サーバーの場合は、SharePoint サイトから、SharePoint の権限を使ってアクセスを構成します。 レポート サーバーのコンテンツや操作にアクセスできるかどうかは、SharePoint サイト上の権限レベルによって決まります。 SharePoint サイトでの権限を付与できるのはサイト管理者だけです。 詳細については、「 [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)」を参照してください。
 
- **ネイティブ モードのレポート サーバー:** このトピックでは、ネイティブ モードで構成されているレポート サーバーと、ロールにユーザーを割り当てる Web ポータルの使用方法に注目します。 ロールには次の 2 種類があります。
+ **ネイティブ モードのレポート サーバー:** この記事では、ネイティブ モードで構成されているレポート サーバーと、ロールにユーザーを割り当てる Web ポータルの使用方法に注目します。 ロールには次の 2 種類があります。
 
 - アイテムレベルのロール : レポート サーバーのコンテンツ、サブスクリプション、レポート処理、レポート履歴などを表示、追加、および管理するためのロール。 アイテム レベルのロール割り当ては、ルート ノード ([ホーム] フォルダー)、または階層内でそれより下位にある特定のフォルダーやアイテムに対して定義できます。
 
@@ -61,7 +61,7 @@ ms.locfileid: "50021856"
 
 5. **[グループまたはユーザーの追加]** を選択します。
 
-6. **[グループまたはユーザー]** で、Windows ドメインのユーザー アカウントまたはグループ アカウントを \<ドメイン>\\<アカウント\> の形式で入力します。 
+6. **[グループまたはユーザー]** で、Windows ドメインのユーザー アカウントまたはグループ アカウントを \<ドメイン>\\<アカウント\> の形式で入力します。
 
     > [!NOTE]
     > フォーム認証やカスタム セキュリティを使用している場合は、その環境に合った適切な形式でユーザー アカウントまたはグループ アカウントを指定します。
@@ -95,10 +95,8 @@ ms.locfileid: "50021856"
 
 ## <a name="next-steps"></a>次の手順
 
-[ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[[新しいロールの割り当て]: [ロールの割り当てを編集] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[[セキュリティのプロパティ] ページ、アイテム (レポート マネージャー)](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[ロールの割り当て](../../reporting-services/security/role-assignments.md)   
+[ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[ロールの割り当て](../../reporting-services/security/role-assignments.md)  
 [ロールの定義](../../reporting-services/security/role-definitions.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)
