@@ -6,23 +6,22 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 793672d6f98d588b0f2d4c80963a29c41e392354
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296479"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775431"
 ---
 # <a name="glossary-report-builder"></a>用語集 (レポート ビルダー)
   
-  
 |項目|定義|  
 |----------|----------------|  
-|.NET Framework|次世代のアプリケーションおよび Web サービスの構築、配置、および実行をサポートするために不可欠な Windows コンポーネント。 .NET Framework は、既存の資産を次世代のアプリケーションやサービスに統合できるように、標準ベースで生産性が高い多言語環境を提供するほか、インターネット スケールのアプリケーションの配置や運用の課題を解決するためのアジリティも提供します。 .NET Framework を構成する主要な要素には、共通言語ランタイム、階層的な統合クラス ライブラリ、および ASP のコンポーネント化バージョン (ASP.NET) の 3 つがあります。 関連項目:「ASP.NET」、「共通言語ランタイム」、「.NET Framework クラス ライブラリ」。|  
+|.NET Framework|次世代のアプリケーションおよび Web サービスの構築、配置、および実行をサポートするために不可欠な Windows コンポーネント。 .NET Framework は、既存の資産を次世代のアプリケーションやサービスに統合できるように、標準ベースで生産性が高い多言語環境を提供するほか、インターネット スケールのアプリケーションの配置や運用の課題を解決するためのアジリティも提供します。 .NET Framework を構成する主要な要素には、共通言語ランタイム、階層的な統合クラス ライブラリ、および ASP のコンポーネント化バージョン (ASP.NET) の 3 つがあります。 「ASP.NET」、「共通言語ランタイム」、「.NET Framework クラス ライブラリ」も参照。|  
 |ActiveX データ オブジェクト (ActiveX Data Objects)|データ ソースへのアクセスを提供するコンポーネント オブジェクト モデル オブジェクト。 OLE DB とプログラミング言語 (Visual Basic、Visual Basic for Applications、Active Server Pages、Microsoft Internet Explorer Visual Basic Scripting など) との間にレイヤーを提供する API です。|  
-|アドホック レポート (ad hoc report)|レポート モデルにアクセスする、レポート ビルダー 1.0 で作成された .rdl レポート。|  
+|アドホック レポート (ad hoc report)|  
 |修飾 (adornment)|ツール バーやルーラーなど、ペインまたはウィンドウの枠に付いているコントロールまたはステータスの領域。|  
 |集計 (aggregate)|複数の個別の値から成る合計値。|  
 |集計関数 (aggregate function)|複数の値に対して計算を実行し、1 つの集計値を返す関数。|  
@@ -60,7 +59,6 @@ ms.locfileid: "56296479"
 |グラフ データ領域 (chart data region)|データをグラフィック形式で表示する、レポート レイアウト上のレポート アイテム。|  
 |子 (child)|階層内で、現在のメンバーに直接関係している次の下位レベルのメンバー。|  
 |句 (clause)|Transact-SQL における、SQL ステートメントのサブユニット。 句はキーワードで始まります。|  
-|クリックスルー レポート (clickthrough report)|レポート ビルダーに表示されたレポート内のデータをクリックすると、関連するレポート モデルのデータを表示するレポート。|  
 |クライアント アプリケーション (client application)|サーバーからデータを取得し、リレーショナル データベースまたは多次元データベースのデータをローカルで分析および表示するアプリケーション。|  
 |クライアント カーソル (client cursor)|クライアント側で実装されるカーソル。 まず、結果セット全体がクライアントに転送され、次にクライアント API ソフトウェアが、キャッシュされた結果セットからカーソル機能を実装します。|  
 |CLR (CLR)|「共通言語ランタイム (common language runtime)」を参照。|  
@@ -166,7 +164,7 @@ ms.locfileid: "56296479"
 |ヒート マップ (heat map)|各多角形の色濃度が関連する分析データに対応する、マップ表示の一種。 たとえば、範囲内の低い温度を表す小さな値は青色で表され、高い温度を表す大きな値は赤色で表されます。|  
 |階層 (hierarchy)|各メンバーに対し 1 つの親メンバーと 0 個以上の子メンバーが存在するディメンションのメンバーから構成される論理的なツリー構造。|  
 |高可用性 (high availability)|サービスを中断する障害がほとんど発生することなく、リソースがほぼ常に動作していて、クライアントが使用できる状態。|  
-|HTML (HTML)|次を参照: ハイパーテキスト マークアップ言語 (Hypertext Markup Language)|  
+|HTML (HTML)|「ハイパーテキスト マークアップ言語 (Hypertext Markup Language)」を参照。|  
 |HTML ビューアー|レポート ツール バーなど、レポート操作用のナビゲーション要素で構成されるユーザー インターフェイス。|  
 |ハイパーテキスト マークアップ言語 (Hypertext Markup Language)|Web 向けドキュメントを作成するためのテキスト マークアップ言語。 各種のタグや属性によって、Web ドキュメントの構造およびレイアウトが定義されます。|  
 |識別子 (identifier)|データベース内のオブジェクトの名前。|  
@@ -177,12 +175,12 @@ ms.locfileid: "56296479"
 |インスタンス (instance)|1.コンピューターで実行されている SQL Server のコピー。 2. レポート パーツ、サブレポート、動的メンバー、またはグループなどのレポート アイテムの特定のコピー。|  
 |整数 (integer)|数値データ型のカテゴリの 1 つ。bigint 型、int 型、smallint 型、tinyint 型があります。|  
 |インターネット プロトコル セキュリティ (Internet Protocol security)|コンピューターが暗号化セキュリティ サービスを使用してインターネット プロトコル (IP) ネットワーク経由のセキュリティで保護されたプライベート通信を提供する際に従う規則。|  
-|IPsec (IPsec)|次を参照: インターネット プロトコル セキュリティ (Internet Protocol security)|  
+|IPsec (IPsec)|「インターネット プロトコル セキュリティ (Internet Protocol security)」を参照。|  
 |ISO|国際データ通信規格を制定する 2 つの国際標準機関の 1 つ。 ISO (国際標準化機構) は IEC (国際電気技術標準機関) と密接に連携して、コンピューター関連の規格を制定します。 ISO と IEC は共同で SQL に関する ISO/IEC SQL-92 規格を発表しました。|  
 |アイテムレベルのロールの割り当て (item-level role assignment)|レポート サーバー フォルダーにあるアイテムに適用されるセキュリティ ポリシー。|  
 |アイテムレベルのロールの定義 (item-level role definition)|レポート サーバー フォルダーの名前空間にあるアイテムへのアクセスや対話の制御に使用されるロールを定義するセキュリティ テンプレート。|  
 |主要業績評価指標 (key performance indicator)|(KPI) 定量化可能で標準化された指標。一定期間にわたって追跡された、業務の重要な変動要素 (市場シェアなど) を反映します。|  
-|キーワード (keyword)|データベース オブジェクトの定義、操作、アクセスなど、特定の機能を持つ SQL Server の予約語。 例 :SELECT、FROM、AND。|  
+|キーワード (keyword)|データベース オブジェクトの定義、操作、アクセスなど、特定の機能を持つ SQL Server の予約語。 たとえば、SELECT、FROM、AND などです。|  
 |KPI (KPI)|「主要業績評価指標 (key performance indicator)」を参照。|  
 |ラベル フィールド (label field)|対応するキー フィールドのラベルを識別するレポート データセット フィールド。 パラメーターとデータ領域には、値の代わりにキー フィールドのラベルを表示できます。|  
 |待機時間 (latency)|あるサーバーでデータ変更が完了して、その変更が他のサーバーに反映されるまでの経過時間。|  
@@ -210,7 +208,7 @@ ms.locfileid: "56296479"
 |master ファイル (master file)|旧バージョンの SQL Server でインストールされるファイル。master、model、および tempdb システム データベースとトランザクション ログの格納に使用します。さらに、pubs サンプル データベースとトランザクション ログも格納します。|  
 |対応フィールド (match fields)|分析データと空間データ間の関係を構築するために使用される一連のフィールド。|  
 |マトリックス データ領域 (matrix data region)|クロス集計表や PivotTable レポートと同様の機能があるレポート レイアウト上のデータ領域。 実行時にレポート データとデータ領域が組み合わされると、マトリックスはページ上で縦横に拡大します。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。|  
-|MDX (MDX)|次を参照: 多次元式 (MDX) (Multidimensional Expressions (MDX))|  
+|MDX (MDX)|「多次元式 (MDX) (Multidimensional Expressions (MDX))」を参照。|  
 |メルカトル図法 (Mercator projection)|マップ レポート アイテムで、1569 年にゲラルドゥス メルカトルにより考案された円筒マップ投影法。|  
 |メタデータ (metadata)|列に格納されるデータの型 (numeric、text など) や列の長さなど、データのプロパティに関する情報。タイトル、説明、作成日、最終変更日など、ファイルに関する情報。または、データの構造に関する情報のほか、オブジェクト (キューブ、ディメンションなど) のデザインを指定する情報。|  
 |メソッド|SQL-DMO、OLE DB、および ADO (ActiveX データ オブジェクト) のように、COM オブジェクトを使用して操作を実行する関数。|  
@@ -261,7 +259,7 @@ ms.locfileid: "56296479"
 |プロトコル (protocol)|コンピューターどうしで情報を交換できるようにするための、標準的な形式とプロシージャのセット。|  
 |provider|1.OLE DB プロバイダー。 2. データベースへのアクセスを提供するインプロセス DLL (ダイナミック リンク ライブラリ)。|  
 |クエリ パラメーター (query parameters)|Transact-SQL クエリなどのデータセット クエリで指定されるパラメーター。|  
-|RDL (RDL)|次を参照: レポート定義言語 (Report Definition Language)|  
+|RDL (RDL)|「レポート定義言語 (Report Definition Language)」を参照。|  
 |レコード (record)|関連する情報についてのフィールド (列) のグループ。1 つの単位として扱われます。 リレーショナル データベースでは、通常、レコードのことを行と呼びます。|  
 |四角形 (rectangle)|複数のレポート アイテムのコンテナーとして、またはレポート上のグラフィカル要素として使用できるレポート アイテム。|  
 |再帰型階層 (recursive hierarchy)|1.組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、階層構造内の複数の階層レベルから成る単一のレポート データセットのデータの階層。 2. Master Data Services で、再帰リレーションシップを含む派生階層。 再帰リレーションシップは、エンティティ自体に基づくドメイン ベースの属性がエンティティにある場合に存在します。|  
@@ -283,12 +281,10 @@ ms.locfileid: "56296479"
 |レポート レイアウト (report layout)|レポート内のデータ領域、レポート アイテム、およびテキストの配置と、適用される書式。|  
 |レポート レイアウト テンプレート (report layout template)|レポート ビルダーで使用する、デザイン済みの表形式、マトリックス形式、グラフ形式のレポートのテンプレート。|  
 |レポート リンク (report link)|ハイパーリンクの設定されたレポートの URL。|  
-|レポート モデル (report model)|ビジネス データのメタデータによる記述。レポート ビルダーでアドホック レポートを作成するために使用します。|  
 |レポート パラメーター (report parameter)|レポート定義内で定義されるパラメーター。 すべてのクエリ パラメーターには対応するレポート パラメーターがありますが、レポート パラメーターはクエリとは無関係に作成できます。|  
 |レポート パーツ (report parts)|レポート サーバーに個別にパブリッシュされ、別のレポートで再利用できるレポート アイテム。 テーブル、マトリックス、グラフ、画像などのレポート アイテムを、レポート パーツとしてパブリッシュできます。 レポート パーツには .rsc ファイル拡張子が付いており、スキーマ componentdefinition.xsd に準拠しています。|  
 |レポート処理拡張機能 (report processing extension)|レポート処理のロジックを拡張するための Reporting Services のコンポーネント。|  
 |レポート表示 (report rendering)|レポートを視覚化するために、レポート レイアウトとデータ ソースのデータを結合する処理。|  
-|レポート サーバー (report server)|レポート ビルダーの ClickOnce バージョンを起動し、レポートを保存、管理、およびパブリッシュするネットワーク上の場所。|  
 |レポート サーバー管理者 (report server administrator)|レポート サーバーのすべての設定およびコンテンツにアクセスできる、高度な特権を持つユーザー。|  
 |レポート サーバー データベース|レポート サーバーの内部記憶域を提供するデータベース。|  
 |レポート サーバー実行アカウント (report server execution account)|レポート サーバー Web サービスおよびレポート サーバー Windows サービスの実行に使用するアカウント。|  
@@ -329,12 +325,12 @@ ms.locfileid: "56296479"
 |SKU (SKU)|特定の製品のさまざまなエディションを識別する方法。"Stock Keeping Unit" の頭字語です (一般的なビジネス用語)。|  
 |スライス (slice)|1 つ以上のディメンションをディメンションのメンバーに基づいて制限することで得られるキューブ内のデータのサブセット。|  
 |スマート タグ (smart tag)|スマート タグは、Visual Studio 2005 のデザイン時の生産性全体を高めるために、主要な構成をデザイン画面に直接公開します。|  
-|SMDL (SMDL)|次を参照: SMDL (セマンティック モデル定義言語) (Semantic Model Definition Language)|  
+|SMDL (SMDL)|「セマンティック モデル定義言語 (Semantic Model Definition Language)」を参照。|  
 |スナップショット (snapshot)|「レポート スナップショット (report snapshot)」を参照。|  
 |並べ替え順 (sort order)|照合順序の規則のセット。比較操作での文字の評価方法や、文字を並べ替える順序を定義しています。|  
 |空間データ (spatial data)|平坦表面または曲線表面のオブジェクトの特定の位置を指定するデータ。 空間データには、ポイント、線、または多角形があります。|  
 |空間データ型 (spatial data types)|geometry (平面) または geography (測地) 情報を表すデータを指定します。|  
-|SQL|次を参照: 構造化照会言語 (SQL) (Structured Query Language) (SQL)|  
+|SQL|「構造化照会言語 (Structured Query Language)」を参照。|  
 |SQL クエリ (SQL query)|SQL ステートメント。SELECT、INSERT、UPDATE、DELETE、CREATE TABLE など。|  
 |SQL Server 認証 (SQL Server Authentication)|SQL Server インスタンスへの接続の試行を検証するメカニズム。接続するには、ユーザーは SQL Server ログイン ID とパスワードを指定する必要があります。|  
 |SQL Server ログイン (SQL Server login)|SQL Server に保存されるアカウント。ユーザーは、このアカウントを使用して SQL Server に接続できます。|  
@@ -363,11 +359,10 @@ ms.locfileid: "56296479"
 |Windows Management Instrumentation (Windows Management Instrumentation)|マネージド環境のオブジェクトに関する情報を提供するインターフェイス。|  
 |WKB (WKB)|Open Geospatial Consortium (OGC) で指定された Well Known Binary データ表現。|  
 |WKT (WKT)|Open Geospatial Consortium (OGC) で指定された Well Known Text データ表現。|  
-|WMI (WMI)|次を参照: Windows Management Instrumentation (Windows Management Instrumentation)|  
+|WMI (WMI)|「Windows Management Instrumentation (Windows Management Instrumentation)」を参照。|  
 |x 軸 (x-axis)|「カテゴリ (x) 軸 (category (x) axis)」を参照。|  
 |y 軸 (y-axis)|「値 (y) 軸 (value (y) axis)」を参照。|  
   
-## <a name="see-also"></a>参照  
- [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+ [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)
