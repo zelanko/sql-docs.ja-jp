@@ -37,7 +37,7 @@ ms.locfileid: "65714965"
 |Execution_path|nvarchar(max)|コンポーネントの各繰り返しを含む、パッケージ コンポーネントの実行の完全パス。|  
 |Start_time|datetimeoffset(7)|実行可能ファイルが実行前フェーズに入ったときの時刻。|  
 |End_time|datetimeoffset(7)|実行可能ファイルが実行後フェーズに入ったときの時刻。|  
-|Execution_duration|ssNoversion|実行可能ファイルの実行に費やされた時間の長さ。 値の単位はミリ秒です。|  
+|Execution_duration|INT|実行可能ファイルの実行に費やされた時間の長さ。 値の単位はミリ秒です。|  
 |Execution_result|SMALLINT|使用できる値を次に示します。<br /><br /> 0 (成功)<br /><br /> 1 (失敗)<br /><br /> 2 (完了)<br /><br /> 3 (キャンセル)|  
 |Execution_value|sql_variant|実行によって返される値。 これは、ユーザー定義の値です。|  
   
