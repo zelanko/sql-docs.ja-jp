@@ -36,11 +36,11 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
 | TINYINT       | Byte                      | TINYINT        | ByteWritable          | 符号なし数値の場合のみです。     |
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
-| ssNoversion           | Int32                     | ssNoversion            | IntWritable           |
+| int           | Int32                     | int            | IntWritable           |
 | BIGINT        | Int64                     | BIGINT         | LongWritable          |
-| bit           | ブール値                   | boolean        | BooleanWritable       |
+| bit           | Boolean                   | boolean        | BooleanWritable       |
 | FLOAT         | Double                    | double         | DoubleWritable        |
-| REAL          | 単一                    | FLOAT          | FloatWritable         |
+| REAL          | Single                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
 | NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
@@ -49,7 +49,7 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 | varchar       | String<br /><br /> Char[] | string         | Varchar               |
 | binary        | Byte[]                    | binary         | BytesWritable         | Hive 0.8 以降に適用されます。 |
 | varbinary     | Byte[]                    | binary         | BytesWritable         | Hive 0.8 以降に適用されます。 |
-| 日付          | DateTime                  | TIMESTAMP      | TimestampWritable     |
+| date          | DateTime                  | TIMESTAMP      | TimestampWritable     |
 | smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
 | datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
 | DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
@@ -98,7 +98,7 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 | String             | nvarchar        |
 | Binary Data        | nvarchar        |
 | Object ID          | nvarchar        |
-| ブール値            | bit             |
+| Boolean            | bit             |
 | date               | Datetime2       |
 | 32-bit integer     | Int             |
 | Timestamp          | nvarchar        |
@@ -108,7 +108,7 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 | Javascript         | nvarchar        |
 | Max Key            | nvarchar        |
 | Min Key            | nvarchar        |
-| 記号             | nvarchar        |
+| Symbol             | nvarchar        |
 | Regular Expression | nvarchar        |
 | 未定義/NULL     | nvarchar        |
 
@@ -124,7 +124,7 @@ MongoDB では、BSON ドキュメントを使用して、データ レコード
 |SMALLINT            |SmallInt         |
 |bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
-|[DECIMAL]             |Decimal          |
+|DECIMAL             |Decimal          |
 |FLOAT               |Decimal          |
 |BYTE                |Binary           |
 |VARBYTE             |Varbinary        |
