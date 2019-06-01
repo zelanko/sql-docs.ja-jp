@@ -11,18 +11,18 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450016"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454725"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
 
-## <a name="may-2019"></a>2019 年の月
+## <a name="may-2019"></a>2019 年 5 月
 
 2019 年 5 月 8日&nbsp;  /  &nbsp;バージョン。1.7.0 
 
@@ -101,7 +101,7 @@ ms.locfileid: "65450016"
 
 | [変更] | 詳細 |
 | :----- | :------ |
-| 追加**SQL Server 用管理パック**拡張パックします。 | これにより、SQL Server の管理に関連する拡張機能のインストールを容易にします。 この機能には、次が含まれます。<br/>&bull; &nbsp; [SQL Server エージェント](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server のインポート](sql-server-import-extension.md?view=sql-server-2017) |
+| 追加**SQL Server 用管理パック**拡張パックします。 | これにより、SQL Server の管理に関連する拡張機能のインストールを容易にします。 この機能には、次が含まれます。<br/>&bull; &nbsp; [SQL Server エージェント](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server のインポート](sql-server-import-extension.md?view=sql-server-2017) |
 | Profiler の拡張機能でのイベントのサポートを拡張する追加のフィルター処理します。 | &nbsp; |
 | Added は、XML として T-SQL の結果を保存することができる機能を XML として保存します。 | &nbsp; |
 | 追加のデータ層アプリケーションのウィザードの機能強化。 | &bull; &nbsp; 生成スクリプトの追加 ボタン<br/>&bull; &nbsp; デプロイ時にデータ損失の可能性の警告を提供する追加のビュー。 |

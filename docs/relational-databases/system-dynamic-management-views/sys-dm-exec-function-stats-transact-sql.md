@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_function_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013203"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428953"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,6 +68,10 @@ ms.locfileid: "63013203"
 |**last_elapsed_time**|**bigint**|この関数の最後に完了した実行のマイクロ秒単位の経過時間。|  
 |**min_elapsed_time**|**bigint**|最小経過時間、いずれかのマイクロ秒単位には、この関数の実行を完了します。|  
 |**max_elapsed_time**|**bigint**|最大経過時間をいずれかのマイクロ秒単位には、この関数の実行を完了します。|  
+|**total_page_server_reads**|**bigint**|コンパイルされた後に、この関数の実行によって実行されるリモート ページ サーバーの読み取りの合計数。<br /><br /> **適用対象します。** Azure SQL データベースのハイパー スケールします。|  
+|**last_physical_reads**|**bigint**|関数が実行された最終時刻を実行するサーバーのリモートのページ読み取りの数。<br /><br /> **適用対象します。** Azure SQL データベースのハイパー スケールします。|  
+|**min_physical_reads**|**bigint**|ページのリモート サーバーの最小数は、この関数が 1 回の実行中に行われたことを読み取ります。<br /><br /> **適用対象します。** Azure SQL データベースのハイパー スケールします。|  
+|**max_physical_reads**|**bigint**|ページのリモート サーバーの最大数は、この関数が 1 回の実行中に行われたことを読み取ります。<br /><br /> **適用対象します。** Azure SQL データベースのハイパー スケールします。|
   
 ## <a name="permissions"></a>アクセス許可  
 

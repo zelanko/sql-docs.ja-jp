@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503838"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454669"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理し、SQL server machine learning ワークロードの統合
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ R と Python の統合には、一連の手順で使用できるになります�
 Dba では、SQL Server データのセキュリティを使用するには、スクリプトを実行する権限を持っているユーザーを指定して、ジョブで使用されるデータは同じを制御するセキュリティ ロールの下で管理されていることに T-SQL クエリを通じてアクセスします。 システム管理者は、明示的に拒否できます**SQLRUserGroup** Acl を作成してローカル サーバー上の機密データにアクセスします。
 
 >[!NOTE]
-> 既定で、 **SQLRUserGroup**が、ログインまたはアクセス許可では、SQL Server 自体。 ワーカー アカウントがデータ アクセスのログインを要求する必要があります、する必要があります、手動で作成します。 具体的には、ログインの作成を呼び出すシナリオは、ユーザー id が Windows ユーザーと信頼されたユーザーを指定する接続文字列のデータや、データベース エンジン インスタンスに対する操作の実行でスクリプトからの要求をサポートするためにです。 詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)します。
+> 既定で、 **SQLRUserGroup**が、ログインまたはアクセス許可では、SQL Server 自体。 ワーカー アカウントがデータ アクセスのログインを要求する必要があります、する必要があります、手動で作成します。 具体的には、ログインの作成を呼び出すシナリオは、ユーザー id が Windows ユーザーと信頼されたユーザーを指定する接続文字列のデータや、データベース エンジン インスタンスに対する操作の実行でスクリプトからの要求をサポートするためにです。 詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)します。
 
 ## <a name="disable-script-execution"></a>スクリプトの実行を無効にします。
 

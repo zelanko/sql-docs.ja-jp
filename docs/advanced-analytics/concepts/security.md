@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1f19e3322b8aee78fdb5a76a29a719148cc6a0c7
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596573"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454539"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要
 
@@ -45,7 +45,7 @@ R または Python で記述された外部スクリプトがへの入力パラ�
 
 実行コンテキストとして SQL Server を使用して外部スクリプトを実行する各ユーザーは、データベース内のユーザーにマップする必要があります。 個別にデータベース ユーザー アクセス許可を設定ではなく、アクセス許可のセットを管理し、これらのロールにユーザーの割り当てではなくユーザーのアクセス許可を個別に設定するロールを作成できます。
 
-詳細については、[SQL Server Machine Learning サービスへのアクセス許可をユーザーに付与](../../advanced-analytics/security/user-permission.md)を参照してください。
+詳細については、次を参照してください。 [SQL Server Machine Learning サービスへのアクセス許可をユーザーに付与](../../advanced-analytics/security/user-permission.md)します。
 
 ## <a name="permissions-when-using-an-external-client-tool"></a>外部のクライアント ツールを使用する場合のアクセス許可
 
@@ -71,14 +71,14 @@ SQL Server から外部のスクリプトを起動するたびに、データベ
 
 ## <a name="services-used-in-external-processing-launchpad"></a>外部の処理 (スタート パッド) で使用されるサービス
 
-機能拡張フレームワークを 1 つの新しい NT サービスの追加、[サービスの一覧](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)SQL Server のインストール。[**SQL Server スタート パッド (MSSSQLSERVER)**](extensibility-framework.md#launchpad)します。
+機能拡張フレームワークを 1 つの新しい NT サービスの追加、[サービスの一覧](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details)SQL Server のインストール。[**SQL Server スタート パッド (MSSSQLSERVER)** ](extensibility-framework.md#launchpad)します。
 
 データベース エンジンでは、SQL Server スタート パッド サービスを使用して、別のプロセスとして、R または Python のセッションをインスタンス化します。 低い特権のアカウントの下で、プロセスが実行されます。SQL Server、スタート パッド、およびストアド プロシージャまたはホストのクエリが実行されたときのユーザー id とは異なります。 R と SQL Server での Python のセキュリティと分離のモデルの基になる低い特権のアカウントで別のプロセスでスクリプトを実行します。
 
 外部プロセスを起動するだけでなく、スタート パッドは、呼び出し元のユーザーの id を追跡して、プロセスを開始するために使用する低特権ワーカー アカウントにその id のマッピングを行うはも。 スクリプトまたはコードを呼び出して SQL Server のデータと操作、一部のシナリオでは、スタート パッドは通常の id の転送をシームレスに管理できます。 SELECT ステートメントを格納しているか、関数およびその他のプログラミング オブジェクトを呼び出すスクリプトは通常、呼び出し元のユーザーに十分なアクセス許可がある場合に成功します。
 
 > [!NOTE]
-> 既定では、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]が実行するように構成されている**NT service \mssqllaunchpad**、外部スクリプトを実行するすべての必要なアクセス許可がプロビジョニングされていますが。 構成可能なオプションの詳細については、[SQL Server スタート パッド サービスの構成](../security/sql-server-launchpad-service-account.md)を参照してください。
+> 既定では、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]が実行するように構成されている**NT service \mssqllaunchpad**、外部スクリプトを実行するすべての必要なアクセス許可がプロビジョニングされていますが。 構成可能なオプションの詳細については、次を参照してください。 [SQL Server スタート パッド サービスの構成](../security/sql-server-launchpad-service-account.md)します。
 
 <a name="sqlrusergroup"></a>
 
@@ -92,14 +92,14 @@ SQL Server から外部のスクリプトを起動するたびに、データベ
 
 + プールのワーカー アカウント名は、sqlinstancename*nn*します。 たとえば、既定のインスタンスで**SQLRUserGroup**という名前に、最大 MSSQLSERVER20 MSSQLSERVER01、MSSQLSERVER02 などのアカウントが含まれています。
 
-並列化されたタスクでは、追加のアカウントは使用しません。 たとえば、ユーザーは、並列処理を使用するスコア付けのタスクを実行する場合のすべてのスレッドと同じワーカー アカウントが再利用されます。 Machine learning の頻繁に使用する場合は、外部スクリプトの実行に使用するアカウントの数を増やすことができます。 詳細については、[machine learning のユーザー アカウント プールを変更する](../../advanced-analytics/administration/modify-user-account-pool.md)を参照してください。
+並列化されたタスクでは、追加のアカウントは使用しません。 たとえば、ユーザーは、並列処理を使用するスコア付けのタスクを実行する場合のすべてのスレッドと同じワーカー アカウントが再利用されます。 Machine learning の頻繁に使用する場合は、外部スクリプトの実行に使用するアカウントの数を増やすことができます。 詳細については、次を参照してください。 [machine learning のユーザー アカウント プールを変更する](../../advanced-analytics/administration/modify-user-account-pool.md)します。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ### <a name="appcontainer-isolation-in-sql-server-2019"></a>SQL Server 2019 で AppContainer の分離
 
 SQL Server の 2019 のセットアップは作成されなくなりましたのワーカー アカウント**SQLRUserGroup**します。 によって分離を実現する代わりに、 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)します。 ストアド プロシージャまたはクエリの外部のスクリプトが検出された場合、実行時に、SQL Server は、要求で拡張機能に固有の起動ツールのスタート パッドを呼び出します。 スタート パッドは、その id でのプロセスで適切なランタイム環境を呼び出し、そのを含む、AppContainer をインスタンス化します。 ローカル アカウントとパスワードの管理が必要になるために、この変更の使用をお勧めします。 また、ローカル ユーザー アカウントは禁止されている、インストールでローカル ユーザー アカウントの依存関係をなくすこと、この機能を使用するようになりました。
 
-、SQL Server で実装された AppContainers は、内部のメカニズムです。 プロセス モニターで AppContainers の物理的な証拠が表示されなくなります、中には、プロセスがネットワーク呼び出しを行うことを防ぐためにセットアップによって作成された送信ファイアウォール規則で見つけることができます。 詳細については、[SQL Server Machine Learning サービスのファイアウォールの構成](../../advanced-analytics/security/firewall-configuration.md)を参照してください。
+、SQL Server で実装された AppContainers は、内部のメカニズムです。 プロセス モニターで AppContainers の物理的な証拠が表示されなくなります、中には、プロセスがネットワーク呼び出しを行うことを防ぐためにセットアップによって作成された送信ファイアウォール規則で見つけることができます。 詳細については、次を参照してください。 [SQL Server Machine Learning サービスのファイアウォールの構成](../../advanced-analytics/security/firewall-configuration.md)します。
 
 > [!Note]
 > SQL Server の 2019 で**SQLRUserGroup**は 1 つのメンバーが複数のワーカー アカウントではなく、1 つの SQL Server スタート パッド サービス アカウントになっています。
@@ -111,7 +111,7 @@ SQL Server の 2019 のセットアップは作成されなくなりましたの
 
 SQL Server 上の機密リソースを保護する、アクセスを拒否するアクセス制御リスト (ACL) を定義することができます必要に応じて**SQLRUserGroup**します。 逆に、SQL Server 自体とは別のホスト コンピューター上に存在するローカル データ リソースへのアクセス許可を付与することもできます。 
 
-仕様上、 **SQLRUserGroup**はデータベース ログインまたは任意のデータへのアクセス許可がありません。 特定の状況で信頼できる Windows id が呼び出し元のユーザーの場合に特にループ バックの接続を許可するログインを作成する場合があります。 この機能が呼び出されます[*暗黙の認証*](#implied-authentication)します。 詳細については、[データベース ユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)を参照してください。
+仕様上、 **SQLRUserGroup**はデータベース ログインまたは任意のデータへのアクセス許可がありません。 特定の状況で信頼できる Windows id が呼び出し元のユーザーの場合に特にループ バックの接続を許可するログインを作成する場合があります。 この機能が呼び出されます[*暗黙の認証*](#implied-authentication)します。 詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)します。
 
 ## <a name="identity-mapping"></a>Id マッピング
 
@@ -127,7 +127,7 @@ SQL Server 上の機密リソースを保護する、アクセスを拒否する
 
 信頼関係接続では、追加の構成にのみ、R と Python のスクリプトから実行可能なです。 機能拡張のアーキテクチャで、R と Python のプロセスがワーカー アカウント、アクセス許可を親から継承で実行**SQLRUserGroup**します。 接続文字列を指定すると`Trusted_Connection=True`、接続要求では、既定では SQL Server に既知でないワーカー アカウントの id が表示されます。
 
-信頼関係接続を成功させるにはデータベース ログインを作成する必要があります、 **SQLRUserGroup**します。 その後、すべての信頼済みのすべてのメンバーからの接続**SQLRUserGroup** SQL Server ログイン権限があります。 手順については、[データベース ログインを追加の SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)を参照してください。
+信頼関係接続を成功させるにはデータベース ログインを作成する必要があります、 **SQLRUserGroup**します。 その後、すべての信頼済みのすべてのメンバーからの接続**SQLRUserGroup** SQL Server ログイン権限があります。 手順については、次を参照してください。[データベース ログインを追加の SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)します。
 
 信頼された接続は、接続要求の最も広く使用されている構成ではできません。 R または Python スクリプトでは、接続を指定する場合、ODBC データ ソースへの接続だ場合に、SQL ログインまたは完全に指定されたユーザー名とパスワードを使用する方が一般的になります。
 
@@ -153,4 +153,4 @@ SQL Server 上の機密リソースを保護する、アクセスを拒否する
 
 この記事では、コンポーネントを説明しに組み込まれたセキュリティ アーキテクチャの対話モデル、[拡張性フレームワーク](../../advanced-analytics/concepts/extensibility-framework.md)します。 この記事で説明したポイントには、R、Python、およびユーザー id がワーカー アカウントにマップする方法のプロセスの分離、スタート パッドの SQLRUserGroup、ワーカー アカウントの目的が含まれます。 
 
-次の手順の手順を確認[アクセス許可を与える](../../advanced-analytics/security/user-permission.md)します。 Windows 認証を使用するサーバーも参照してください[データベース ログインを追加の SQLRUserGroup](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)に追加の構成が必要な場合について説明します。
+次の手順の手順を確認[アクセス許可を与える](../../advanced-analytics/security/user-permission.md)します。 Windows 認証を使用するサーバーも参照してください[データベース ログインを追加の SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)に追加の構成が必要な場合について説明します。

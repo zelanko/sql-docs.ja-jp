@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072356"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429027"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,10 @@ ms.locfileid: "58072356"
 |**min_spills**|**bigint**|このクエリが 1 回の実行中に書き込まれたことがこれまでのページの最小数。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 と[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|このクエリが 1 回の実行中に書き込まれたことがこれまでのページの最大数。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 と[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|この配布であるノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|コンパイルされた後に、このプランの実行によって実行されるリモート ページ サーバーの読み取りの合計数。<br /><br /> **適用対象:** Azure SQL DB のハイパー スケール |  
+|**last_page_server_reads**|**bigint**|リモート ページ サーバーの読み取りの数は、プランが実行された最終時刻を実行します。<br /><br /> **適用対象します。** Azure SQL DB のハイパー スケール |  
+|**min_page_server_reads**|**bigint**|ページのリモート サーバーの最小数は、このプランが 1 回の実行中に行われたことを読み取ります。<br /><br /> **適用対象します。** Azure SQL DB のハイパー スケール |  
+|**max_page_server_reads**|**bigint**|ページのリモート サーバーの最大数は、このプランが 1 回の実行中に行われたことを読み取ります。<br /><br /> **適用対象します。** Azure SQL DB のハイパー スケール |  
 > [!NOTE]
 > <sup>1</sup>ネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にすると、ワーカー時間がミリ秒単位で収集します。 クエリを 1 ミリ秒未満で実行している場合、値が 0 になります。  
   

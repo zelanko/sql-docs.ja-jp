@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 09b96f6934fec9e24ca4a254a1d14c23327ebe5b
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57577932"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454707"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>クイック スタート: SQL Server に Python が存在することを確認する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,9 +62,9 @@ SQL クエリを実行するためのツールも必要です。 任意のデー
 
 最初に、インストールの問題を排除します。 インストール後の構成は、外部コード ライブラリの使用を有効にする必要があります。 参照してください[SQL Server 2017 の Machine Learning サービスをインストール](../install/sql-machine-learning-services-windows-install.md)します。 同様に、スタート パッド サービスが実行されていることを確認します。
 
-Windows ユーザー グループを追加することも必要があります。`SQLRUserGroup`スタート パッドで Python と SQL Server 間の通信を提供できることを確認する、インスタンス上のログインとして。 (同じグループが両方の R の使用し、Python コードの実行)。詳細については、[暗黙の認証を有効](../security/add-sqlrusergroup-to-database.md)を参照してください。
+Windows ユーザー グループを追加することも必要があります。`SQLRUserGroup`スタート パッドで Python と SQL Server 間の通信を提供できることを確認する、インスタンス上のログインとして。 (同じグループが両方の R の使用し、Python コードの実行)。詳細については、次を参照してください。 [SQLRUserGroup のログインの作成](../security/create-a-login-for-sqlrusergroup.md)です。
 
-さらに、無効になっているネットワーク プロトコルを有効にまたは SQL Server が外部クライアントと通信できるようにファイアウォールを開く必要があります。 詳細については、[セットアップのトラブルシューティング](../common-issues-external-script-execution.md)を参照してください。
+さらに、無効になっているネットワーク プロトコルを有効にまたは SQL Server が外部クライアントと通信できるようにファイアウォールを開く必要があります。 詳細については、次を参照してください。[セットアップのトラブルシューティング](../common-issues-external-script-execution.md)します。
 
 ## <a name="call-revoscalepy-functions"></a>Revoscalepy 関数を呼び出す
 

@@ -13,12 +13,12 @@ ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01096d84c831a374cb2dd087a4fdf1b4d4d29a5c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 9fe7c7cf04767e0536be8d04d99387a091962375
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66061436"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429000"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 接続マネージャー
   **Azure Data Lake Store 接続マネージャー** SSIS パッケージを 2 つの認証の種類を Azure Data Lake Store サービスに接続できるようにします。Azure AD のユーザー Id と Azure AD サービスの Id。  
@@ -27,7 +27,7 @@ ms.locfileid: "66061436"
   
 1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureDataLake]** を選択し、 **[追加]** をクリックします。   
   
-2.  Azure Data Lake Store 接続マネージャー エディター ダイアログ ボックスの **[ADLS ホスト]** フィールドに、Azure Data Lake Store ホストの URL を入力します。 例:https://test.azuredatalakestore.netまたは test.azuredatalakestore.net します。
+2.  Azure Data Lake Store 接続マネージャー エディター ダイアログ ボックスの **[ADLS ホスト]** フィールドに、Azure Data Lake Store ホストの URL を入力します。 例: https:\//test.azuredatalakestore.net または test.azuredatalakestore.net します。
   
 3.  Azure Data Lake Store データにアクセスするための該当する認証の種類を選択します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "66061436"
     
         2. Azure Data Lake リソースにアクセスするために適切な権限をこの AAD アプリケーションに割り当てます。 この認証オプションの詳細については、「[Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)」 (ポータルを使用して、リソースにアクセスできる Active Directory アプリケーションとサービス プリンシパルを作成する) を参照してください。
     
-        3. **[クライアント ID]**、 **[シークレット キー]** および **[テナント名]** の各フィールドに値を指定します。
+        3. **[クライアント ID]** 、 **[シークレット キー]** および **[テナント名]** の各フィールドに値を指定します。
     
         4. **[接続テスト]** ボタンをクリックして接続をテストします。  
   
