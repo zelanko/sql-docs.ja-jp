@@ -215,7 +215,7 @@ ms.locfileid: "65726881"
 |DT_DBTIMESTAMPOFFSET|秒の小数点以下桁数が、変換先の DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
 ## <a name="mapping-of-integration-services-data-types-to-database-data-types"></a>Integration Services のデータ型とデータベースのデータ型とのマッピング  
- 次の表に、特定のデータベースによって使用されるデータ型を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型にマッピングする際のガイダンスを示します。 これらのマッピングは、 [!INCLUDE[int](../../includes/int-md.md)] インポートおよびエクスポート ウィザードでソースからデータをインポートする際に使用されるマッピング ファイルから集約されます。 これらのマッピング ファイルの詳細については、「 [SQL Server インポートおよびエクスポート ウィザード](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)」を参照してください。  
+ 次の表に、特定のデータベースによって使用されるデータ型を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型にマッピングする際のガイダンスを示します。 これらのマッピングは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでソースからデータをインポートする際に使用されるマッピング ファイルから集約されます。 これらのマッピング ファイルの詳細については、「 [SQL Server インポートおよびエクスポート ウィザード](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  これらのマッピングは厳密な対応関係を表しているわけではなく、ガイダンスの提供のみを目的としています。 場合によっては、この表に示されているデータ型とは異なるデータ型を使用する必要があります。  
@@ -229,7 +229,7 @@ ms.locfileid: "65726881"
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
 |DT_CY|smallmoney、money|smallmoney、money|Currency||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||日付|日付|日付|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
@@ -240,7 +240,7 @@ ms.locfileid: "65726881"
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|int|int|Long||INTEGER|INTEGER|  
+|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
 |DT_R4|REAL|REAL|Single||real|real|  

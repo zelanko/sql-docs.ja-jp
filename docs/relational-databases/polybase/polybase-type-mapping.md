@@ -36,7 +36,7 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
 | TINYINT       | Byte                      | TINYINT        | ByteWritable          | 符号なし数値の場合のみです。     |
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
-| int           | Int32                     | int            | IntWritable           |
+| ssNoversion           | Int32                     | ssNoversion            | IntWritable           |
 | BIGINT        | Int64                     | BIGINT         | LongWritable          |
 | bit           | Boolean                   | boolean        | BooleanWritable       |
 | FLOAT         | Double                    | double         | DoubleWritable        |
