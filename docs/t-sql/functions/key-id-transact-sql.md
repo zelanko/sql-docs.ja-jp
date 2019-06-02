@@ -18,20 +18,20 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], IDs
 - IDs [SQL Server], symmetric keys
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1ffafacce7d82645d0f1e8c0335637d26d850798
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56683b05b940ce9c11ba41d05659fb94bf26a921
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604760"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949208"
 ---
 # <a name="keyid-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベースの対称キーの ID を返します。  
+  現在のデータベース内の非対称キーの ID を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ SELECT KEY_ID('ABerglundKey1');
 ```  
   
 ### <a name="b-returning-the-id-of-a-temporary-symmetric-key"></a>B. 一時対称キーの ID を返す  
- 次の例では、一時対称キーの ID を返します。 キー名の前に `#` が付いていることに注意してください。  
+ 次の例では、一時的な非対称キーの ID を返します。 キー名の前に `#` が付いていることに注意してください。  
   
 ```  
 SELECT KEY_ID('#ABerglundKey2');  

@@ -10,16 +10,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63ca67092d534377278e19936b92cb1f8493e9d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab0a3bff6159d098ce8a53631e4f4da49f81fba9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663896"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980155"
 ---
 # <a name="variables-transact-sql"></a>変数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,7 +92,7 @@ DECLARE @MyCounter int;
 ```
 複数のローカル変数を宣言するには、最初のローカル変数を定義した後にコンマを付け、次のローカル変数名とデータ型を指定します。
 
-たとえば、次の **DECLARE** ステートメントでは、**\@LastName**、**\@FirstName**、および **\@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
+たとえば、次の **DECLARE** ステートメントでは、 **\@LastName**、 **\@FirstName**、および **\@StateProvince** という 3 つのローカル変数が作成され、各変数が NULL に初期化されます。  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -147,7 +147,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-選択リストの中で変数を参照して、変数に値を代入することもできます。 選択リストの中で変数を参照する場合は、スカラー値を代入することをお勧めします。スカラー値を代入しないと、SELECT ステートメントからは 1 行しか返されません。 例 :  
+選択リストの中で変数を参照して、変数に値を代入することもできます。 選択リストの中で変数を参照する場合は、スカラー値を代入することをお勧めします。スカラー値を代入しないと、SELECT ステートメントからは 1 行しか返されません。 例:  
 
 ```sql
 USE AdventureWorks2014;

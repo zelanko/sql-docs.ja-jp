@@ -19,15 +19,15 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c071df768fa18e153bfac1c2dcd738bbaafa538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0554182b6a18478d917ecf83c8ea4d9ebdb69e23
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781141"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982735"
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (ワイルドカード - 1 文字に一致) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47781141"
   
 ## <a name="examples"></a>使用例  
 
-## <a name="a-simple-example"></a>A: 簡単な例   
+## <a name="a-simple-example"></a>A:簡単な例   
 
 次の例では、データベース名の文字 `m` から始まり、3 番目の文字が `d` のデータベースがすべて返されます。 アンダースコア文字は、名前の 2 番目の文字は何の文字でもよいことを指定します。 `model` データベースと `msdb` データベースがこの条件を満たしています。 `master` データベースはこの条件を満たしません。
 
@@ -55,7 +55,7 @@ msdb
 
 複数のアンダースコアを使用し、複数の文字を表すことができます。 `LIKE` 条件を変更し、2 つのアンダースコア `'m__%` を含めると、結果に master データベースが含まれます。
 
-### <a name="b-more-complex-example"></a>B: より複雑な例
+### <a name="b-more-complex-example"></a>B:より複雑な例
  次の例では、_ 演算子を使用して、`Person` テーブル内の `an` で終わる 3 文字の名前 (名) を持つすべての人物を検索します。  
   
 ```sql  

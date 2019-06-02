@@ -1,7 +1,7 @@
 ---
 title: コマンド プロンプトからの SQL Server のインストール | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bc2d05b54added3ac8ce57746eb89cbd9d1efd8d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537424"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993700"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -201,7 +201,7 @@ ms.locfileid: "58537424"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/UpdateSource<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが製品の更新プログラムを取得する場所を指定します。 有効値は [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update を検索する "MU"、有効なフォルダー パス、相対パス (`.\MyUpdates` など)、または UNC 共有です。 既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update、または Windows Server Update Services を介して Windows Update Service を検索します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可**|使用する [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) を指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ERRORREPORTING<br /><br /> **省略可**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には影響しません。 <br/><br/> エラーのフィードバックを Microsoft に送信する方法を管理するには、「[フィードバックをマイクロソフトに送信するように [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] を構成する方法](https://support.microsoft.com/kb/3153756)」を参照してください。 <br/><br/>以前のバージョンでは、これにより SQL Server のエラー報告が指定されます。<br /><br /> 詳細については、「 [Microsoft エラー報告サービスのプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)」を参照してください。<br /><br /> サポートされる値:<br /><br /> 0 = 無効<br /><br /> 1 = 有効|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/FEATURES<br /><br /> - または -<br /><br /> /ROLE<br /><br /> **必須**|インストールするコンポーネントを指定します。<br /><br /> インストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを個別に指定するには、**/FEATURES** を選びます。 詳細については、「 [機能パラメーター](#Feature) 」を参照してください。<br /><br /> セットアップ ロールを指定するには、**/ROLE** を選びます。 セットアップ ロールは、事前に定義された構成で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールします。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/FEATURES<br /><br /> - または -<br /><br /> /ROLE<br /><br /> **必須**|インストールするコンポーネントを指定します。<br /><br /> インストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントを個別に指定するには、 **/FEATURES** を選びます。 詳細については、「 [機能パラメーター](#Feature) 」を参照してください。<br /><br /> セットアップ ロールを指定するには、 **/ROLE** を選びます。 セットアップ ロールは、事前に定義された構成で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールします。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/HELP、/H、/?<br /><br /> **省略可**|インストール パラメーターの使用方法を表示します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/INDICATEPROGRESS<br /><br /> **省略可**|詳細なセットアップ ログ ファイルがコンソールにパイプされるように指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/INSTALLSHAREDDIR<br /><br /> **省略可**|共有コンポーネント (64 ビット) の既定以外のインストール ディレクトリを指定します。<br /><br /> 既定値は `%Program Files%\Microsoft SQL Server` です<br /><br /> `%Program Files(x86)%\Microsoft SQL Server` に設定することはできません|  
@@ -246,7 +246,7 @@ ms.locfileid: "58537424"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値:**SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)」を参照してください。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **省略可**|現在のユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールに追加します。 /ADDCURRENTUSERASSQLADMIN パラメーターは、Express エディションをインストールする場合、または /Role=ALLFeatures_WithDefaults が指定されている場合に使用できます。 詳細については、後述の /ROLE をご覧ください。<br /><br /> /ADDCURRENTUSERASSQLADMIN の使用はオプションですが、/ADDCURRENTUSERASSQLADMIN または /SQLSYSADMINACCOUNTS のどちらかを指定する必要があります。 既定値:<br /><br /> **のエディション:** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 他のすべてのエディション:**False** |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **省略可**|現在のユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールに追加します。 /ADDCURRENTUSERASSQLADMIN パラメーターは、Express エディションをインストールする場合、または /Role=ALLFeatures_WithDefaults が指定されている場合に使用できます。 詳細については、後述の /ROLE をご覧ください。<br /><br /> /ADDCURRENTUSERASSQLADMIN の使用はオプションですが、/ADDCURRENTUSERASSQLADMIN または /SQLSYSADMINACCOUNTS のどちらかを指定する必要があります。 既定値:<br /><br /> **のエディション:** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 他のすべてのエディション:**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モードを指定します。 サポートされる値:<br /><br /> **自動**<br /><br /> **無効**<br /><br /> **手動**|  
@@ -261,6 +261,7 @@ ms.locfileid: "58537424"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのファイルの瞬時初期化を有効にします。 セキュリティとパフォーマンスに関する考慮事項については、「 [データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)」をご覧ください。<br /><br /> 既定値:"False"<br /><br /> 省略可能な値:"True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **省略可** 無人 (サイレント) インストール時に省略した場合、MAXDOP は、[並列処理の最大限度のガイドライン](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)に従います。 |並列処理の最大限度を指定します。これにより、1 つのステートメントで実行中に使用できるプロセッサ数が決定します。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降でのみ使用できます。 <br /><br /> 既定値は、[max degree of parallelism のガイドライン](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)に従います。|
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
 |SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
@@ -418,7 +419,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSUPGRADEPASSWORD<br /><br /> **省略可**|既存のレポート サーバー サービス アカウントのパスワード。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/ALLOWUPGRADEFORSSRSSHAREPOINTMODE|SharePoint 共有サービス アーキテクチャに基づく SharePoint モードのインストールをアップグレードする場合、このスイッチが必要です。 スイッチは、非共有サービス バージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をアップグレードする場合には必要ありません。|  
   
-###### <a name="sample-syntax"></a>サンプル構文:   
+###### <a name="sample-syntax"></a>サンプル構文:  
  既存のインスタンスまたはフェールオーバー クラスター ノードを [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の以前のバージョンからアップグレードするためのサンプル構文は次のとおりです。  
   
 ```  
@@ -684,7 +685,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERDISKS<br /><br /> **省略可**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスター リソース グループに含まれる共有ディスクの一覧を指定します。<br /><br /> 既定値:<br /><br /> 最初のドライブは、すべてのデータベースに対して既定のドライブとして使用されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERIPADDRESSES<br /><br /> **必須**|エンコードされた IP アドレスを指定します。 エンコードはセミコロン (;) で区切り、\<IP の種類>;\<アドレス>;\<ネットワーク名>;\<サブネット マスク> という形式に従います。 サポートされている IP の種類には、DHCP、IPv4、および IPv6 があります。<br />フェールオーバー クラスターの IP アドレスを複数指定するには、間にスペースを入れます。 次の例を参照してください。<br /><br /> `FAILOVERCLUSTERIPADDRESSES=DEFAULT`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv4;172.16.0.0;ClusterNetwork1;172.31.255.255`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;DHCP;ClusterNetwork1`<br /><br /> `FAILOVERCLUSTERIPADDRESSES=IPv6;2001:db8:23:1002:20f:1fff:feff:b3a3;ClusterNetwork1`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/FAILOVERCLUSTERNETWORKNAME<br /><br /> **必須**|新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 このネットワーク名は、ネットワーク上で新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] フェールオーバー クラスター インスタンスを識別するために使用されます。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIRMIPDEPENDENCYCHANGE|マルチサブネット フェールオーバー クラスターについて、IP アドレス リソースの依存関係を OR に設定することを示します。 詳細については、「[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)」をご覧ください。 サポートされる値: <br /><br /> 0 = False (既定値)<br /><br /> 1 = True|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIRMIPDEPENDENCYCHANGE|マルチサブネット フェールオーバー クラスターについて、IP アドレス リソースの依存関係を OR に設定することを示します。 詳細については、「[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)」をご覧ください。 サポートされる値:<br /><br /> 0 = False (既定値)<br /><br /> 1 = True|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] バックアップ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Backup`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値:**Latin1_General_CI_AS**|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 構成ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
@@ -827,7 +828,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  ビルトイン アカウント、ローカル アカウント、またはドメイン アカウントを使用して、SQL Server サービスを構成できます。 
   
 > [!NOTE] 
-> 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントを使用する場合、対応するパスワード パラメーターを指定しないでください。 これらのサービス アカウントの詳細については、「[Windows サービス アカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」の「**[!INCLUDE[win7](../../includes/win7-md.md)] と [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] で利用可能な新しいアカウントの種類**」セクションをご覧ください。 
+> 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントを使用する場合、対応するパスワード パラメーターを指定しないでください。 これらのサービス アカウントの詳細については、「[Windows サービス アカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」の「 **[!INCLUDE[win7](../../includes/win7-md.md)] と [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] で利用可能な新しいアカウントの種類**」セクションをご覧ください。 
   
  サービス アカウント構成の詳細については、「[Windows サービス アカウントとアクセス許可の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。 
   

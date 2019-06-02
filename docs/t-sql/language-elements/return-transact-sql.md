@@ -22,15 +22,15 @@ helpviewer_keywords:
 - exiting procedures [SQL Server]
 - RETURN statement
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 208e09a392665970c6ea718b18dbf5b1a2b1fac5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8620c5d309342b6337027581e5bda6b70459a48f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607820"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980356"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ RETURN [ integer_expression ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-from-a-procedure"></a>A. プロシージャを終了する  
- 次の例では、`findjobs` を実行するときにユーザー名がパラメーターとして指定されていない場合、ユーザーの画面にメッセージを出力後、`RETURN` でプロシージャを終了します。 ユーザー名が指定された場合は、そのユーザーが現在のデータベースに作成したすべてのオブジェクトの名前を、適切なシステム テーブルから取得します。  
+ 次の例では、`findjobs` を実行するときにユーザー名がパラメーターとして指定されていない場合、ユーザーの画面にメッセージを出力後、`RETURN` でプロシージャを終了します。 ユーザー名が指定された場合は、そのユーザーが現在のデータベースに作成したすべてのオブジェクトの名前が、適切なシステム テーブルから取得されます。  
   
 ```  
 CREATE PROCEDURE findjobs @nm sysname = NULL  

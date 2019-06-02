@@ -1,7 +1,7 @@
 ---
 title: NULL 値が含まれる列の既定動作 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,31 +13,35 @@ ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775155e56e180d8e5d0c2f9a24de2a1716d13101
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 33acf250b60628869cde6b1c920ee3e86e08259a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513326"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175351"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>NULL 値が含まれる列の既定動作
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  既定で、列内の NULL 値は、属性、ノード、または要素がない状態にマップされます。 この既定動作を変更するには、次のクエリに示すように、ELEMENTS ディレクティブで要素中心の XML を要求し、NULL 値に対しても要素の追加を要求する XSINIL を指定します。  
-  
-```  
+
+既定で、列内の NULL 値は、属性、ノード、または要素がない状態にマップされます。 この既定の動作は、ELEMENTS XSINIL キーワード句を使用してオーバーライドできます。 この句では、要素中心の XML が要求されます。 これは、返される結果で null 値が明示的に示されることを意味します。 これらの要素には、値はありません。
+
+次の Transact-SQL の SELECT の例では、ELEMENTS XSINIL 句を示します。
+
+```sql
 SELECT EmployeeID as "@EmpID",   
        FirstName  as "EmpName/First",   
        MiddleName as "EmpName/Middle",   
        LastName   as "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
 WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH, ELEMENTS XSINIL  
+  AND  E.EmployeeID=1
+FOR XML PATH, ELEMENTS XSINIL;
 ```  
   
  結果を次に示します。 XSINIL を指定しないと、<`Middle`> 要素は出力されません。  
   
-```  
+```xml
 <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

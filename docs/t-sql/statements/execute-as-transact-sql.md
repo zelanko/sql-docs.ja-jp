@@ -23,12 +23,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 007ae07fd58f5f508fd80e17640a3f0e1cb59f1a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b5bb549859bf6177571b080033b09419c5eed90d
+ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326598"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221168"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,12 @@ ms.locfileid: "54326598"
  詳しくは、後の「[ユーザーまたはログイン名の指定](#_user)」をご覧ください。  
   
  NO REVERT  
- コンテキスト スイッチを以前のコンテキストに戻せないことを示します。 **NO REVERT** オプションを使用できるのは、アドホック レベルでのみです。  
+ コンテキスト スイッチを以前のコンテキストに戻せないことを示します。 **NO REVERT** オプションを使用できるのは、アドホック レベルでのみです。
   
  以前のコンテキストに戻す方法について詳しくは、「[REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)」をご覧ください。  
   
- COOKIE INTO **@**_varbinary_variable_  
- REVERT WITH COOKIE ステートメントの呼び出し時に適切な **@**_varbinary_variable_ 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻せることを示します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、Cookie を **@**_varbinary_variable_ に渡します。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
+ COOKIE INTO **@** _varbinary_variable_  
+ REVERT WITH COOKIE ステートメントの呼び出し時に適切な **@** _varbinary_variable_ 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻せることを示します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、Cookie を **@** _varbinary_variable_ に渡します。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
   
  **@** _varbinary_variable_ は **varbinary(8000)** です。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "54326598"
   
 -   別の EXECUTE AS ステートメントの実行  
   
--   REVERT ステートメントの実行  
+-   REVERT ステートメントの実行。  
   
 -   セッションの停止  
   
@@ -126,7 +126,9 @@ ms.locfileid: "54326598"
 >  EXECUTE AS ステートメントは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が名前を解決できる限り、正常に実行できます。 ドメイン ユーザーが存在する場合、Windows ユーザーに [!INCLUDE[ssDE](../../includes/ssde-md.md)] へのアクセス権がなくても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーを解決できることがあります。 これにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権のないログインがログインしているように見える場合もありますが、権限借用したログインの権限が public または guest に付与されているだけの場合があります。  
   
 ## <a name="using-with-no-revert"></a>WITH NO REVERT の使用  
- EXECUTE AS ステートメントにオプションの WITH NO REVERT 句が含まれている場合、REVERT を使用、または別の EXECUTE AS ステートメントを実行して、セッションの実行コンテキストを元に戻すことはできません。 ステートメントで設定されたコンテキストはセッションが削除されるまで有効です。  
+ EXECUTE AS ステートメントにオプションの WITH NO REVERT 句が含まれている場合、REVERT を使用、または別の EXECUTE AS ステートメントを実行して、セッションの実行コンテキストを元に戻すことはできません。 ステートメントで設定されたコンテキストはセッションが削除されるまで有効です。   接続プールが有効になっている場合、`sp_reset_connection` は失敗して、接続が削除されることに注意してください。  イベント ログのエラー メッセージは次のようなものです。
+ 
+> 接続が削除されました。その接続を開いたプリンシパルが、その後新しいセキュリティ コンテキストを想定し、権限を借用したセキュリティ コンテキストの管理下に接続を再設定しようとしました。 このシナリオはサポートされません。 オンライン ブックの「権限借用の概要」を参照してください。
   
  WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]はクッキー値を @*varbinary_variable* に渡します。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、同じ *@varbinary_variable* 値が含まれている場合だけです。  
   

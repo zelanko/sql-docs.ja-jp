@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161646"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175028"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -171,7 +171,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
   
 -   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
--   時刻: 'HH:mm:ss'  
+-   Time: 'HH:mm:ss'  
   
 **日付形式の例**を次の表に示します。
   
@@ -197,7 +197,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、AM/am/PM/pm、およびタイムゾーンのオフセットが含まれます。 前の行の説明を参照してください。|  
 |Time|DATE_FORMAT = 'HH:mm:ss'|日付の値はありません。00 から 23 時、00 から 59 分、00 から 59 秒のみです。|  
   
- サポートされているすべての日付形式: 
+ サポートされているすべての日付形式:
   
 |DATETIME|smalldatetime|日付|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
@@ -244,7 +244,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
  すべての不足値を NULL として格納します。 区切りテキスト ファイルで単語 NULL を使って格納されている NULL 値は、文字列 "NULL" としてインポートされます。
   
    Encoding = {'UTF8' | 'UTF16'}  
- Azure SQL Data Warehouse では、PolyBase は UTF8 および UTF16-LE でエンコードされた区切りテキスト ファイルを読み取ることができます。 SQL Server と PDW では、PolyBase は UTF16 でエンコードされたファイルの読み取りをサポートしていません。
+ Azure SQL Data Warehouse と PDW (APS CU7.4) では、UTF8 および UTF16-LE でエンコードされた区切りテキスト ファイルを PolyBase で読み取ることができます。 SQL Server の PolyBase では、UTF16 でエンコードされたファイルの読み取りはサポートされていません。
   
  DATA_COMPRESSION = *data_compression_method*  
  外部データのデータ圧縮方法を指定します。 DATA_COMPRESSION を指定しない場合の既定値は、圧縮されていないデータです。

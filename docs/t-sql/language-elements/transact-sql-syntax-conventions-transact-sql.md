@@ -25,16 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154717"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981451"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 構文表記規則 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "56154717"
 |(& a) #124 です。(縦棒)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目を示します。 中かっこは入力しません。|  
-|[**,**..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目はコンマで区切ります。|  
+|[ **,** ..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目はコンマで区切ります。|  
 |[..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目は空白で区切ります。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの終端記号を示します。 セミコロンは、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのステートメントでは必須ではありませんが、将来のバージョンでは必須になる予定です。|  
 |\<label> ::=|構文のブロックの名前を示します。 この表記規則を使用して、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付けます。 構文のブロックを使用できる箇所は、不等号で囲まれたラベル (\<label>) で示します。<br /><br /> セットとは、式のコレクションです (たとえば \<grouping set>)。リストとは、セットのコレクションです (たとえば \<composite element list>)。|  
@@ -85,7 +85,7 @@ _object\_name_
   
 中間のノードを省略するには、ピリオドを使用してそれらの位置を示します。 次の表に、オブジェクト名の有効な形式を示します。  
   
-|オブジェクト参照形式|説明|  
+|オブジェクト参照形式|[説明]|  
 |-----------------------------|-----------------|  
 |_server_._database_._schema_._object_|4 部構成の名前です。|  
 |_server_._database_.._object_|スキーマ名を省略しています。|  

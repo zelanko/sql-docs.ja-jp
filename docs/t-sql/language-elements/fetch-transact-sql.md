@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 68d27a88ec604de05f8165f6c251982e53914794
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: e0c93242a047e261ae9d40c7ded9293653f7e287
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586215"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982320"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ FETCH
  `@@FETCH_STATUS` 関数は、最後に実行された `FETCH` ステートメントのステータスを返します。 sp_describe_cursor で返されるカーソル内の fetch_status 列に、同じ情報が記録されます。 `FETCH` ステートメントで返されたデータに対して操作を行う前に、このステータス情報を使用してデータの妥当性を判断する必要があります。 詳細については、「[@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- `FETCH` 権限は、特に指定のない限りすべての有効なユーザーに与えられます。  
+ `FETCH` のアクセス許可は、既定ですべての有効なユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  
   

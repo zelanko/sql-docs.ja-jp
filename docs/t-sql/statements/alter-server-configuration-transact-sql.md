@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,14 +21,14 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aad389a5b54918a65b7eedab225c35425e404bf8
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570795"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993464"
 ---
-# <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (TRANSACT-SQL)
+# <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で現在のサーバーのグローバル構成設定を変更します。  
@@ -50,6 +50,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -98,8 +99,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -186,7 +196,7 @@ SQL Server データベース エンジンのリソース DLL が、サーバー
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
+HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 サーバー インスタンスの HADR クラスター コンテキストを、指定した Windows Server フェールオーバー クラスター (WSFC) に切り替えます。 *HADR クラスター コンテキスト*は、サーバー インスタンスによってホストされる可用性レプリカのメタデータを管理する WSFC を決定します。 SET HADR CLUSTER CONTEXT オプションは、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を新しい WSFC 上の [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 以降のバージョンのインスタンスに移行するクラスター間での移行中にのみ使用してください。  
   
 HADR クラスター コンテキストの切り替えは、ローカル WSFC とリモート WSFC 間でのみ実行できます。 その後、リモート WSFC からローカル WSFC に切り戻すことができます。 HADR クラスター コンテキストは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが可用性レプリカをホストしていない場合のみリモート クラスターに切り替えることができます。  
@@ -245,7 +255,28 @@ OFF
 > 4) SQL Server エージェントのインスタンスを起動します。  
   
 **詳細情報:** SQL Server サービスが再起動する前に ALTER SERVER CONFIGURATION と SET SOFTNUMA コマンドを実行した場合、SQL Server エージェント サービスが停止するときに、エージェントは T-SQL RECONFIGURE コマンドを実行して、SOFTNUMA の設定を ALTER SERVER CONFIGURATION の前の状態に戻します。 
-  
+
+**\<memory_optimized> ::=**
+
+**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降
+
+ON <br>
+[メモリ内データベース](../../relational-databases/in-memory-database.md)機能ファミリの一部である、インスタンスレベルのすべての機能を有効にします。 これには現在、[メモリ最適化 tempdb メタデータ](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)と[ハイブリッド バッファー プール](../../database-engine/configure-windows/hybrid-buffer-pool.md)が含まれます。 有効にするには再起動が必要です。
+
+OFF <br>
+メモリ内データベース機能ファミリの一部である、インスタンスレベルのすべての機能を無効にします。 有効にするには再起動が必要です。
+
+TEMPDB_METADATA = ON | OFF <br>
+メモリ最適化 tempdb メタデータのみを有効または無効にします。 有効にするには再起動が必要です。 
+
+RESOURCE_POOL='resource_pool_name' <br>
+TEMPDB_METADATA = ON と組み合わせて使用することで、tempdb 用に使用する必要があるユーザー定義リソース プールを指定します。 指定しない場合、tempdb には既定のプールが使用されます。 プールは既に存在している必要があります。 サービスが再起動されたときにプールが使用できない場合、tempdb には既定のプールが使用されます。
+
+
+HYBRID_BUFFER_POOL = ON | OFF <br>
+インスタンス レベルでのハイブリッド バッファー プールを有効または無効にします。 有効にするには再起動が必要です。
+
+
 ## <a name="general-remarks"></a>全般的な解説  
 このステートメントでは、明記されていない限り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の再起動は必要ありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスター リソースを再起動する必要はありません。  
   
@@ -264,15 +295,17 @@ OFF
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
 |[プロセス関係を設定する](#Affinity)|CPU、NUMANODE、AUTO|  
-|[診断ログ オプションを設定する](#Diagnostic)|ON、OFF、PATH、MAX_SIZE|  
+|[診断ログ オプションを設定する](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[フェールオーバー クラスター プロパティを設定する](#Failover)|HealthCheckTimeout|  
 |[可用性レプリカのクラスター コンテキストを変更する](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[バッファー プール拡張を設定する](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[バッファー プール拡張を設定する](#BufferPoolExtension)|バッファー プール拡張| 
+|[メモリ内データベース オプションの設定](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> プロセス関係を設定する  
 このセクションの例では、CPU および NUMA ノードにプロセス関係を設定する方法を示します。 この例では、256 個の CPU が、4 つのグループから成る NUMA ノード構成 (4 グループ合計 16 ノード) でサーバーに搭載されていることを想定しています。 スレッドは NUMA ノードにも CPU にも割り当てられていません。  
   
--   グループ 0:NUMA ノード 0 ～ 3、CPU 0 ～ 63  
+-   グループ 0:NUMA ノード 0 から 3、CPU 0 から 63  
 -   グループ 1:NUMA ノード 4 から 7、CPU 64 から 127  
 -   グループ 2:NUMA ノード 8 から 12、CPU 128 から 191  
 -   グループ 3:NUMA ノード 13 から 16、CPU 192 から 255  
@@ -404,7 +437,37 @@ SET BUFFER POOL EXTENSION ON
 GO  
   
 ```  
-  
+
+### <a name="MemoryOptimized">メモリ内データベース オプションの設定</a>
+
+**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降
+
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. 既定のオプションを使用してすべてのメモリ内データベース機能を有効にする
+
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
+GO
+```
+
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>B. 既定のリソース プールを使用してメモリ最適化 tempdb メタデータを有効にする
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
+GO
+```
+
+#### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>C. ユーザー定義のリソース プールを使用してメモリ最適化 tempdb メタデータを有効にする
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+GO
+```
+
+#### <a name="d-enable-hybrid-buffer-pool"></a>D. ハイブリッド バッファー プールを有効にする
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+GO
+```
+
+
 ## <a name="see-also"></a>参照  
 [ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
 [サーバー インスタンスの HADR クラスター コンテキストの変更 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   

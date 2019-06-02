@@ -2,7 +2,7 @@
 title: tempdb データベース | Microsoft Docs
 description: このトピックでは、SQL Server と Azure SQL Database で tempdb データベースを構成し、使用する方法について説明します。
 ms.custom: P360
-ms.date: 02/14/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65a1afa2bf72c53f2ce656afb7f397dd10be9ef6
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265369"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994236"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -74,34 +74,34 @@ ms.locfileid: "56265369"
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|可|  
-|ANSI_NULL_DEFAULT|OFF|可|  
-|ANSI_NULLS|OFF|可|  
-|ANSI_PADDING|OFF|可|  
-|ANSI_WARNINGS|OFF|可|  
-|ARITHABORT|OFF|可|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
+|ANSI_NULL_DEFAULT|OFF|はい|  
+|ANSI_NULLS|OFF|はい|  
+|ANSI_PADDING|OFF|はい|  
+|ANSI_WARNINGS|OFF|はい|  
+|ARITHABORT|OFF|はい|  
 |AUTO_CLOSE|OFF|いいえ|  
-|AUTO_CREATE_STATISTICS|ON|可|  
+|AUTO_CREATE_STATISTICS|ON|はい|  
 |AUTO_SHRINK|OFF|いいえ|  
-|AUTO_UPDATE_STATISTICS|ON|可|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|可|  
+|AUTO_UPDATE_STATISTICS|ON|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|可|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|可|  
-|CURSOR_DEFAULT|GLOBAL|可|  
+|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
+|CURSOR_DEFAULT|GLOBAL|はい|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|可|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|OFF|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|可|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|可|  
-|PARAMETERIZATION|SIMPLE|可|  
-|QUOTED_IDENTIFIER|OFF|可|  
+|NUMERIC_ROUNDABORT|OFF|はい|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新規インストールの場合は CHECKSUM<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアップグレードの場合は NONE|はい|  
+|PARAMETERIZATION|SIMPLE|はい|  
+|QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
 |RECOVERY|SIMPLE|いいえ|  
-|RECURSIVE_TRIGGERS|OFF|可|  
-|Service Broker のオプション|ENABLE_BROKER|可|  
+|RECURSIVE_TRIGGERS|OFF|はい|  
+|Service Broker のオプション|ENABLE_BROKER|はい|  
 |TRUSTWORTHY|OFF|いいえ|  
   
 これらのデータベース オプションの説明は、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
@@ -207,7 +207,7 @@ GO
 - 一時テーブルとテーブル変数はキャッシュされます。 キャッシュを使用することで、一時オブジェクトを削除および作成する操作を非常に高速に実行でき、ページ割り当ての競合が減少します。  
 - 割り当てページのラッチ プロトコルが改善され、使用される UP (更新) ラッチの回数が減っています。  
 - **tempdb** のログ記録オーバーヘッドが減らされ、**tempdb** ログ ファイルのディスク I/O 帯域幅消費が減りました。  
-- セットアップによって、新しいインスタンスのインストール中に複数の tempdb データ ファイルが追加されます。 この操作を実行するには、**[データベース エンジンの構成]** セクションの新しい UI 入力コントロールまたはコマンドライン パラメーター /SQLTEMPDBFILECOUNT を使用します。 既定では、セットアップ時に、論理プロセッサ数または 8 のいずれか小さい方と同数の tempdb データ ファイルが追加されます。  
+- セットアップによって、新しいインスタンスのインストール中に複数の tempdb データ ファイルが追加されます。 この操作を実行するには、 **[データベース エンジンの構成]** セクションの新しい UI 入力コントロールまたはコマンドライン パラメーター /SQLTEMPDBFILECOUNT を使用します。 既定では、セットアップ時に、論理プロセッサ数または 8 のいずれか小さい方と同数の tempdb データ ファイルが追加されます。  
 - 複数の **tempdb** データ ファイルがある場合は、拡張設定に応じて、すべてのファイルが同時に同量ずつ自動拡張されます。 トレース フラグ 1117 は必須ではなくなりました。  
 - **tempdb** 内のすべての割り当てで単一エクステントが使用されます。 [トレース フラグ 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) は必須ではなくなりました。  
 - プライマリ ファイル グループの場合は、AUTOGROW_ALL_FILES プロパティがオンで、プロパティは変更できません。
@@ -215,6 +215,43 @@ GO
 tempdb でのパフォーマンスの向上の詳細については、次のブログ記事を参照してください。
 
 [TEMPDB - ファイル、トレース フラグ、更新プログラム](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
+## <a name="memory-optimized-tempdb-metadata"></a>メモリ最適化 tempdb メタデータ
+
+tempdb メタデータの競合は、従来から、SQL Server 上で実行されている多くのワークロードのスケーラビリティに対するボトルネックになっていました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、[メモリ内データベース](../in-memory-database.md)機能ファミリの一部として、メモリ最適化 tempdb メタデータという新機能が導入されています。この機能により、効果的にこのボトルネックが除去され、tempdb が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。 この新しい機能にオプトインするには、次のスクリプトを使用します。
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+この構成の変更を有効にするには、サービスの再起動が必要です。
+
+この実装には、注意すべき重要な制限がいくつかあります。
+
+1. 機能のオンとオフの切り替えは、動的ではありません。 tempdb の構造を根本的に変更する必要があるため、この機能を有効または無効にするには再起動が必要です。
+2. 1 つのトランザクションで複数のデータベース内のメモリ最適化テーブルにアクセスすることはできません。  つまり、ユーザー データベースにメモリ最適化テーブルが含まれるすべてのトランザクションでは、同じトランザクション内の tempdb システム ビューにアクセスできなくなります。  ユーザー データベース内のメモリ最適化テーブルと同じトランザクションで tempdb システム ビューにアクセスしようとした場合、次のエラーを受け取ります。
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    例:
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. メモリ最適化テーブルに対するクエリではロックと分離のヒントがサポートされていないため、メモリ最適化 tempdb カタログ ビューに対するクエリでは、ロックと分離のヒントは適用されません。 SQL Server 内の他のシステム カタログ ビューと同じように、システム ビューに対するすべてのトランザクションは、READ COMMITTED (または、このケースでは READ COMMITTED SNAPSHOT) の分離になります。
+4. メモリ最適化 tempdb メタデータが有効になっていると、一時テーブルの列ストア インデックスで問題が発生する場合あります。 このプレビュー リリースでは、メモリ最適化 tempdb メタデータを使用するときは、一時テーブルで列ストア インデックスを使用しないことをお勧めします。
+
+> [!NOTE] 
+> これらの制限は、tempdb システム ビューを参照するときにのみ適用されます。ユーザー データベース内のメモリ最適化テーブルにアクセスするときは、必要であれば、同じトランザクションで一時テーブルを作成することができます。
+
+次の T-SQL コマンドを使用して、tempdb がメモリ最適化かどうかを確認できます。
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server の tempdb に使用するディスク領域の計画
 

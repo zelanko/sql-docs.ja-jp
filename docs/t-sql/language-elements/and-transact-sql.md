@@ -19,16 +19,16 @@ helpviewer_keywords:
 - AND
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ec754bf92dc62650a1f1d7a1d82c07e5a35932e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5629288c66b3d8ae4f93185f35ec1d8cacaf85e6
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818456"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983224"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>引数  
  *boolean_expression*  
- **TRUE**、**FALSE** または、**UNKNOWN** のブール値を返す有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ 次のブール値を返す有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。**TRUE**、**FALSE**、**UNKNOWN** のいずれかの値をとります。  
   
 ## <a name="result-types"></a>戻り値の型  
  **ブール値**  

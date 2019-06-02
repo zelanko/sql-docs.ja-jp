@@ -20,16 +20,16 @@ helpviewer_keywords:
 - comparing queries
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf81273605c1b2cac7c7564626a1d54b06282b3d
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ccad340088f83dc4b5c38445506c74c9aa7e70f4
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154787"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981751"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>セット演算子 - EXCEPT および INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56154787"
   
 EXCEPT は、左の入力クエリからの行のうち、右の入力クエリから出力されないものを、重複を除去した上で返します。  
  
-INTERSECT は、両方の左辺と右辺の入力クエリ演算子によって出力される個別の行を返します。  
+INTERSECT では、両方の左辺と右辺の入力クエリ演算子によって出力される個別の行を返します。  
   
 EXCEPT と INTERSECT を使用する 2 つのクエリの結果セットを結合する場合の基本的な規則は、次のとおりです。  
   
@@ -93,7 +93,7 @@ EXCEPT または INTERSECT を使用して、3 つ以上のクエリのセット
   
 EXCEPT と INTERSECT は、分散パーティション ビュー定義やクエリ通知では使用できません。  
  
-EXCEPT と INTERSECT は分散クエリで使用できますが、この場合ローカル サーバーでのみ実行され、リンク サーバーにはプッシュされません。 そのため、EXCEPT と INTERSECT を分散クエリで使用すると、パフォーマンスに影響が生じる可能性があります。  
+EXCEPT と INTERSECT は分散クエリで使用できますが、この場合、ローカル サーバーでのみ実行され、リンク サーバーにはプッシュされません。 そのため、EXCEPT と INTERSECT を分散クエリで使用すると、パフォーマンスに影響が生じる可能性があります。  
   
 高速順方向専用カーソルと静的カーソルを EXCEPT または INTERSECT 演算と共に使用した場合、結果セットでそれらを使用できます。 キーセット ドリブン カーソルまたは動的カーソルも、EXCEPT または INTERSECT 演算と一緒に使用できます。 これを行うと、演算の結果セットのカーソルが静的カーソルに変換されます。  
   

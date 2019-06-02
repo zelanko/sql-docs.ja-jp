@@ -14,16 +14,16 @@ helpviewer_keywords:
 - bitwise operators
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98e3ffaa281ed723a5e455979fd6cb14d5d5953d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c99a195bba8a81aeb9f962732365f79ee07516ab
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614390"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981305"
 ---
 # <a name="bitwise-operators-transact-sql"></a>ビットごとの演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47614390"
 
 |演算子 (operator)|ビットごとの数値演算|
 |---- |---- |
-|[AND] <br> 任意の位置にあるビットが両方とも 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
+|AND <br> 任意の位置にあるビットが両方とも 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 0000 1010 =  10 |
 |[OR] <br> 任意の位置にあるいずれかのビットが 1 の場合、結果は 1 になります。 |1010 1010 = 170 <br>0100 1011 =  75 <br>-----------------  <br> 1110 1011 = 235|
-|[NOT]  <br> すべてのビット位置にあるビット値を反転させます。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
+|NOT  <br> すべてのビット位置にあるビット値を反転させます。 |1010 1010 = 170 <br>----------------- <br>  0101 0101 =   85 |
   
 次のトピックを参照してください。   
 * [& &#40;ビット演算 AND&#41;](../../t-sql/language-elements/bitwise-and-transact-sql.md)  
@@ -49,11 +49,11 @@ ms.locfileid: "47614390"
 * [^= &#40;ビットごとの排他的 OR 代入&#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)  
 * [~ &#40;ビット演算子 NOT&#41;](../../t-sql/language-elements/bitwise-not-transact-sql.md)  
   
- ビットごとの演算子のオペランドは、整数または **image** 型を除くバイナリ文字列型に分類されるデータ型です。ただし、両方のオペランドがバイナリ文字列型に分類されるデータ型であってはなりません。 次の表は、サポートされているオペランドのデータ型を示します。  
+ ビットごとの演算子のオペランドは、整数または **image** 型を除くバイナリ文字列型に分類されるデータ型です。ただし、両方のオペランドがバイナリ文字列型に分類されるデータ型であってはなりません。 次の表に、サポートされているオペランドのデータ型を示します。  
   
 |左オペランド|右オペランド|  
 |------------------|-------------------|  
-|[[バイナリ]](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**、**smallint**、または **tinyint**|  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**、**smallint**、または **tinyint**|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**、**smallint**、**tinyint**、または **bit**|  
 |[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**、**smallint**、**tinyint**、**binary**、または **varbinary**|  
 |[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**、**smallint**、**tinyint**、**binary**、または **varbinary**|  

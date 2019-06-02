@@ -20,16 +20,16 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e384d2835bcb28487757384543298d5a20144cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768479"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980087"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  *test_expression*  
  *begin_expression* と *end_expression* で定義した範囲内でテストする[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *test_expression* のデータ型は、*begin_expression* および *end_expression* の両方と同じにする必要があります。  
   
- [NOT]  
+ NOT  
  述語の結果を否定することを指定します。  
   
  *begin_expression*  
@@ -57,7 +57,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  *end_expression*  
  有効な式を指定します。 *end_expression* のデータ型は、*test_expression* および *begin_expression* の両方と同じにする必要があります。  
   
- [AND]  
+ AND  
  *begin_expression* と *end_expression* で表される範囲内で *test_expression* をテストする必要があることを示すプレースホルダーとして動作します。  
   
 ## <a name="result-types"></a>戻り値の型  

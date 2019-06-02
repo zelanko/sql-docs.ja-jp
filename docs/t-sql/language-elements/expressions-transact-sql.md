@@ -18,16 +18,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 241da55ac2e4a0f0bf144bd0360767265f3258fd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124102"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982338"
 ---
 # <a name="expressions-transact-sql"></a>式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,11 +86,11 @@ ms.locfileid: "54124102"
 |----------|----------------|  
 |*constant*|1 つの特定のデータ値を表す記号です。 詳細については、「[定数 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)」を参照してください。|  
 |*scalar_function*|特定のサービスを提供し、単一の値を返す [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文の単位です。 *scalar_function* には、組み込みの SUM 関数、GETDATE 関数、または CAST 関数、スカラー ユーザー定義関数などのスカラー関数を指定できます。|  
-|[ _table_name_**.** ]|テーブルの名前または別名です。|  
-|*column*|列の名前を指定します。 式では列の名前だけが許可されます。|  
-|*variable*|変数名、またはパラメーターを指定します。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。|  
+|[ _table_name_ **.** ]|テーブルの名前または別名です。|  
+|*column*|列の名前です。 式では列の名前だけが許可されます。|  
+|*variable*|変数名、またはパラメーターです。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。|  
 |**(** _expression_  **)**|このトピックで定義されている有効な式を指定します。 かっこはグループ化の演算子です。かっこ内の式のすべての演算子は最初に評価され、その後で結果の式が別の式と結合されます。|  
-|**(** _scalar_subquery_ **)**|1 つの値を返すサブクエリを指定します。 例 :<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _scalar_subquery_ **)**|1 つの値を返すサブクエリを指定します。 例:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|単項演算子を適用できるのは、数値型に属するいずれかのデータ型に評価される式だけです。 1 つの数値オペランドだけを含む演算子を指定します。<br /><br /> + は正の値を示します。<br /><br /> - は負の値を示します。<br /><br /> ~ は 1 の補数演算子を示します。|  
 |{ *binary_operator* }|2 つの式を結合して 1 つの結果を生成する方法を定義する演算子を指定します。 *binary_operator* には、算術演算子、代入演算子 (=)、ビットごとの演算子、比較演算子、論理演算子、文字列の連結演算子 (+)、または単項演算子を指定できます。 演算子の詳細については、「[演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)」を参照してください。|  
 |*ranking_windowed_function*|任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] 順位付け関数です。 詳細については、「[順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)」を参照してください。|  

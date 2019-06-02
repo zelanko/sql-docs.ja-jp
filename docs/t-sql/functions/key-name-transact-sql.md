@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 59b69687434a1432f087da75d77d93907c02edee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2b88a38075fe5951340bcc72eb636cab3e251e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745450"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949195"
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  対称キーの GUID または暗号化テキストの対称キーの名前を返します。  
+  対称キー GUID または暗号化テキストから対称キーの名前を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +68,7 @@ SELECT KEY_NAME(@guid) AS [Name of Key];
 ```  
   
 ### <a name="b-displaying-the-name-of-a-symmetric-key-using-the-cipher-text"></a>B. 暗号化テキストを使用して対称キーの名前を表示する  
- 次の例では、対称キーを作成してテーブルにデータを取り込む全手順を示します。 さらに、KEY_NAME に暗号化テキストに渡してキーの名前を返す方法を示します。  
+ 次の例では、対称キーを作成してテーブルにデータを入力するプロセス全体を示します。 次に、この例では、暗号化テキストが渡されたときに KEY_NAME によってキーの名前がどのように返されるかを示します。  
   
 ```  
 -- Create a symmetric key  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ending batches [SQL Server]
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c6bb6632bfccc0874d77835dcef07fbede1cec3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765470"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981668"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server のユーティリティのステートメント - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ GO [count]
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーティリティでは、GO は、現在の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのバッチを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに送信するためのシグナルとして解釈されます。 現在のステートメントのバッチは、前回の GO の後に入力されたすべてのステートメントで構成されます。最初の GO の場合、現在のバッチは、アドホック セッションまたはスクリプトの開始後に入力されたすべてのステートメントで構成されます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを GO コマンドと同じ行に入力することはできません。 ただし、GO コマンドの行にコメントは入力できます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを GO コマンドと同じ行に入力することはできません。 ただし、この行にコメントは入力できます。  
   
  ユーザーは、バッチの規則に従う必要があります。 たとえば、バッチの最初のステートメント以降でストアド プロシージャを実行する場合は、バッチに EXECUTE キーワードを含める必要があります。 ローカル (ユーザー定義) 変数のスコープはバッチ内に限られ、GO コマンドの後では参照できません。  
   
@@ -78,7 +78,7 @@ GO
   
  ODBC または OLE DB API に基づくアプリケーションで、GO コマンドを実行しようとすると、構文エラーになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティは、サーバーに GO コマンドを送信することはありません。  
   
- 移動した後、ステートメントのターミネータとしてセミコロンを使用しません。  
+ GO の後、ステートメントのターミネータとしてセミコロンを使用しません。  
   
 ## <a name="permissions"></a>アクセス許可  
  GO は、権限を必要としないユーティリティ コマンドです。 すべてのユーザーが実行できます。  
@@ -104,7 +104,7 @@ PRINT 'The number of people as of ' +
 GO  
 ```  
   
- 次の例は、2 回、バッチ内のステートメントを実行します。  
+ 次の例では、バッチ内のステートメントを 2 回実行します。  
   
 ```  
 SELECT DB_NAME();  

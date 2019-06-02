@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 リリース ノート | Microsoft Docs
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 3362a03fe1437b15985fdc557fac6536db5fd2f7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 8f44927fb59e6d1b613b2a67e26aed980b3a080a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582876"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993943"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 プレビュー リリース ノート
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,41 +23,25 @@ ms.locfileid: "59582876"
 この記事では、[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) リリースに関する制限事項と既知の問題について説明します。 関連情報については、次を参照してください。
 - [SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-> [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のプレビュー リリースは、次期リリースの機能を体験していただく目的で提供されるものです。 運用環境向けとしては、サポートもライセンスもされません。 次のシナリオは明示的に非サポートとなっています。
->
-> - 古いバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とのサイド バイ サイド インストール
-> - SQL Server の既存のインスタンスを任意のバージョンからアップグレード
+## <a name="ctp-30"></a>CTP 3.0
 
-**[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] をお試しください**
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] をダウンロードして Windows にインストールする](https://go.microsoft.com/fwlink/?LinkID=862101)
-- [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)、および [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) の Linux にインストールする。
-- [Docker で SQL Server 2019 を実行する](../linux/quickstart-install-connect-docker.md)。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 は [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。
 
-## <a name="ctp-24"></a>CTP 2.4
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 は [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 は評価版としてのみ使用可能です。 他のエディションは提供されません。 
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 は評価版としてのみ使用可能です。 他のエディションは提供されません。 CTP のリリースのサポートの説明は、ご利用のインストール メディアの `license_Eval.rtf` にあります。
+CTP リリースのサポートとライセンスに関するすべての詳細情報については、インストール メディアの `license_Eval.rtf` に記載されています。
 
-限定的なサポートは、次のいずれかの場所で提供される場合があります。
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
-- フォーラム
-  - [SQL Server フィードバック](https://aka.ms/sqlfeedback)
-  - [SQL Server の概要](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
-  - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [SQL Server のドキュメント](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+## <a name="documentation"></a>ドキュメント
 
-- または、[#sqlhelp](https://twitter.com/search?q=%23sqlhelp) を付けて [@SQLServer](https://twitter.com/SQLServer) にツイートしてください
-
-### <a name="documentation-ctp-24"></a>ドキュメント (CTP 2.4)
-
-- **問題およびユーザーへの影響**:SQL Server 2019 (15.x) のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] ドキュメント セットに付属しています。 記事の中で SQL Server 2019 (15.x) に固有のコンテンツは、**適用対象**で言及されています。
+- **問題およびユーザーへの影響**:SQL Server 2019 (15.x) のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] ドキュメント セットに付属しています。 記事の中で SQL Server 2019 (15.x) に固有の内容は、**適用対象**で示されています。
 
 - **問題およびユーザーへの影響**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドキュメントはバージョンによってフィルター処理できます。 各ドキュメント ページの左上にあるコントロールを使用し、要件に応じてフィルター処理してください。
 
 - **問題およびユーザーへの影響**:SQL Server 2019 (15.x) には、オフライン コンテンツがありません。
 
-### <a name="hardware-and-software-requirements-ctp-24"></a>ハードウェアとソフトウェアの要件 (CTP 2.4)
+## <a name="hardware-and-software-requirements"></a>ハードウェアとソフトウェアの要件
 
 - **問題およびユーザーへの影響**:ハードウェア要件とソフトウェア要件は現在レビュー段階であり、製品リリース用の最終版ではありません。
 
@@ -69,51 +53,57 @@ ms.locfileid: "59582876"
     - Microsoft .NET Framework 4.6.2。 [ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53344)から入手できます。
     - Linux については、[サポートされている Linux プラットフォーム](../linux/sql-server-linux-setup.md#supportedplatforms)に関する記事をご覧ください
 
-### <a name="updated-compiler"></a>更新されたコンパイラ
+## <a name = "release-notes"></a>サポートから除外された機能
 
-- **問題およびユーザーへの影響**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] は更新されたコンパイラで構築されています。 コンパイラの更新の結果、CTP 2.1 には浮動小数点数の結果と他の変換シナリオで、前のバージョンとは異なる値が返される場合があるという既知の問題がありました。 CTP 2.2 には、影響のあるシナリオで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の前のバージョンと同じ結果が返されるようにする作業が含まれています。 CTP 2.3 リリースでは、もう問題は解決されたと考えています。 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] と比較した結果に異常がある場合、[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] チーム](http://aka.ms/sqlfeedback)にすぐに報告してください。
+- **問題とお客様への影響**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、次のコンポーネント、機能、シナリオのサポートが除外されています。
+  - SQL Server Analysis Services
+  - SQL Server Reporting Services (SQL Server Reporting Services)
+  - Kubernetes での Always On 可用性グループ
+  - 高速データベース復旧
+  - メモリ最適化 tempdb メタデータ
+
+- **回避策**:[なし] : 除外は、SQL 早期導入者プログラムの参加者を含む、すべてのお客様に適用されます。
+
+- **適用対象**:CTP 3.0
+
+## <a name="updated-compiler"></a>更新されたコンパイラ
+
+- **問題およびユーザーへの影響**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] は更新されたコンパイラで構築されています。 コンパイラの更新の結果、CTP 2.1 には浮動小数点数の結果と他の変換シナリオで、前のバージョンとは異なる値が返される場合があるという既知の問題がありました。 CTP 2.2 には、影響のあるシナリオで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の前のバージョンと同じ結果が返されるようにする作業が含まれています。 CTP 3.0 リリースでは、もう問題は解決されたと考えています。 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] と比較した結果に異常がある場合、[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] チーム](http://aka.ms/sqlfeedback)にすぐに報告してください。
 
 - **回避策**:なし
 
-- **適用対象**:SQL Server 2019 CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1
+- **適用対象**:SQL Server 2019 CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1
 
-### <a name="utf-8-collations"></a>UTF-8 対応の照合順序
+## <a name="installation-wizard-may-wait-between-eula-pages"></a>インストール ウィザードが使用許諾契約ページの間で待機状態になることがある
+
+- **問題およびユーザーへの影響**:インストール ウィザードでのインストールの間に、R Services の使用許諾契約 (EULA) と Python の EULA の間で、プロセスが長時間待機状態になることがあります。
+
+- **回避策**:インストール ウィザードが動くまで待ちます。 待つ時間は 30 分を超える可能性があります。
+
+- **適用対象**:SQL Server 2019 CTP 3.0
+
+## <a name="utf-8-collations"></a>UTF-8 対応の照合順序
 
 - **問題およびユーザーへの影響**:UTF-8 対応の照合順序は、他の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能とは併用できない場合があります。 UTF-8 は、次の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 機能が使用されている場合にはサポートされません。
 
-  - Linked Server
   - インメモリ OLTP
   - PolyBase 用の外部テーブル
   - Always Encrypted
 
   > [!Note]
-  > Azure Data Studio および SQL Server Data Tools (SSDT) では、UTF-8 対応の照合順序を選択するための UI は現在のところサポートされていません。 最新バージョンの [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) では、UTF-8 対応の照合順序を UI で選択することができます。
+  > Azure Data Studio および SQL Server Data Tools (SSDT) では、UTF-8 対応の照合順序を選択するための UI は現在のところサポートされていません。 最新の [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) バージョン 18 では、UTF-8 対応の照合順序を UI で選択することができます。
  
 - **回避策**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP には回避策はありません。
 
-- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
+- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
 
-### <a name="sql-graph"></a>SQL Graph
-
-- **問題およびユーザーへの影響**:DacFx に依存しているツール (インポート/エクスポートなど) は、新しいグラフ機能 (エッジ制約や DML マージ) には対応していません。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でのスクリプト記述は機能しない可能性があります。
-
-- **回避策**:[!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを記述し、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] または SQLCMD を使用して、それらをサーバーに対して実行する場合は機能します。 エッジ制約を作成したり、新しいマージ DML 構文を使用したり、あるいはグラフ オブジェクトに基づく派生テーブル/ビューを作成したりするデータベース オブジェクトについては、エクスポートやインポートは機能しません。 このようなオブジェクトは、[!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを使用して、データベース内に手動で作成する必要があります。 
-
-- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
-
-### <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
+## <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 
 - **問題およびユーザーへの影響**:高度な計算では、いくつかのパフォーマンスの最適化が保留になっており、機能が制限 (インデックス作成がないなど) されていて、現在は既定で無効になっています。
 
 - **回避策**:高度な計算を有効にするには、`DBCC traceon(127,-1)` を実行します。 詳細については、[高度な計算の有効化](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave)に関する記事をご覧ください。
 
-- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
-
-### <a name="system-dynamic-management-views"></a>システム動的管理ビュー
-
-- **問題およびユーザーへの影響**:システムのテーブル値関数 [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) によって `dependency` 列にランダム値が返されます。
-
-- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4、CTP 2.3。
+- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: ff78af4ffcfe530ba28d47ec57852486523f859a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822510"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983125"
 ---
 # <a name="get-full-memory-dump"></a>完全メモリ ダンプの取得
 
@@ -37,7 +37,7 @@ ms.locfileid: "65822510"
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
-    使用許諾契約書に同意するように求められるので、**[同意する]** を選択します。
+    使用許諾契約書に同意するように求められるので、 **[同意する]** を選択します。
 
 4. SQL Server Management Studio (SSMS) をまだ起動していない場合は起動します。
 
@@ -71,7 +71,7 @@ SSMS から OutOfMemoryException の問題を解決するための診断情報�
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
     ```
 
-    使用許諾契約書に同意するように求められるので、**[同意する]** を選択します。
+    使用許諾契約書に同意するように求められるので、 **[同意する]** を選択します。
 
 4. SQL Server Management Studio をまだ起動していない場合は起動します。
 
@@ -88,6 +88,15 @@ SSMS から OutOfMemoryException の問題を解決するための診断情報�
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. フォルダーを圧縮します。
+
+## <a name="share-the-information"></a>情報を共有する
+
+1. SSMS チームと情報を共有するには、 https://aka.ms/sqlfeedback で問題を記録します。
+
+2. さらに、ファイルを収集できる OneDrive (または同等のもの) に収集したメモリ ダンプ ファイルを共有します。
+
+    > [!Important]
+    > メモリ ダンプ ファイルには機密情報が含まれている場合があります。
 
 ## <a name="next-steps"></a>次の手順
 
