@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202661"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454590"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -229,7 +229,9 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  開始に役立つトピックについては、次を参照してください。  
   
--   [チュートリアル: データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [データベースの作成 &#40;チュートリアル&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [チュートリアル: データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+
+-   [データベースの作成 (チュートリアル)](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [チュートリアル: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

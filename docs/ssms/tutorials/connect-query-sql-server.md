@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+Title: チュートリアル:SQL Server Management Studio を使用して SQL Server インスタンスに接続し、クエリを行う
 description: SQL Server Management Studio を使用し、基本的な T-SQL クエリを実行して SQL Server インスタンスに接続するためのチュートリアルです。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,12 +11,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 21f6d4c689a30dc60fc103f7e881ae5499baafa8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 034e0663065003a47245ad71b602ec8bfb256df3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802498"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454457"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>チュートリアル:SQL Server Management Studio を使用して SQL Server インスタンスに接続し、クエリを行う
 
@@ -43,22 +43,22 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 
 ## <a name="connect-to-a-sql-server-instance"></a>SQL Server インスタンスに接続する
 
-1. [SQL Server Management Studio] を起動します。 SSMS を初めて実行すると、**[サーバーへの接続]** ウィンドウが開きます。 開かない場合は、**[オブジェクト エクスプローラー]** > **[接続]** > **[データベース エンジン]** の順に選択して、手動で開くことができます。
+1. [SQL Server Management Studio] を起動します。 SSMS を初めて実行すると、 **[サーバーへの接続]** ウィンドウが開きます。 開かない場合は、 **[オブジェクト エクスプローラー]**  >  **[接続]**  >  **[データベース エンジン]** の順に選択して、手動で開くことができます。
 
     ![オブジェクト エクスプローラーの接続リンク](media/connect-query-sql-server/connectobjexp.png)
 
 2. **[サーバーへの接続]** ウィンドウで、次の操作を行います。 
 
-    - **[サーバーの種類]** に、**[データベース エンジン]** (通常は既定のオプションです) を選択します。
+    - **[サーバーの種類]** に、 **[データベース エンジン]** (通常は既定のオプションです) を選択します。
     - **[サーバー名]** に、SQL Server インスタンスの名前を入力します。 (この記事では、ホスト名 NODE5 でインスタンス名 SQL2016ST を使用します [NODE5\SQL2016ST]。)SQL Server インスタンス名を確認する方法がわからない場合は、「[SSMS を使用するためのヒントとテクニック](ssms-tricks.md#determine-sql-server-name)」を参照してください。  
 
     ![SQL Server インスタンスの使用のオプションが表示された "サーバー名" フィールド](media/connect-query-sql-server/connection2.png)
 
-    - **[認証]** に、**[Windows 認証]** を選択します。 この記事では Windows 認証を使用しますが、SQL Server ログインもサポートされています。 **[SQL ログイン]** を選択した場合は、ユーザー名とパスワードが求められます。 認証の種類の詳細については、「[サーバーへの接続](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)」を参照してください。
+    - **[認証]** に、 **[Windows 認証]** を選択します。 この記事では Windows 認証を使用しますが、SQL Server ログインもサポートされています。 **[SQL ログイン]** を選択した場合は、ユーザー名とパスワードが求められます。 認証の種類の詳細については、「[サーバーへの接続](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)」を参照してください。
 
     **[オプション]** を選択して追加の接続オプションを変更することもできます。 接続オプションの例には、接続しているデータベース、接続のタイムアウト値、ネットワーク プロトコルなどがあります。 この記事では、すべてのオプションについて既定値を使用します。 
 
-3. すべてのフィールドを入力したら、**[接続]** を選択します。 
+3. すべてのフィールドを入力したら、 **[接続]** を選択します。 
 
 ### <a name="examples-of-successful-connections"></a>接続の成功例
 SQL Server 接続の成功を確認するには、**オブジェクト エクスプローラー**内でオブジェクトを展開し、調べます。 これらのオブジェクトは、接続先のサーバーの種類によって異なります。 
@@ -68,12 +68,12 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
 - SQL Azure DB に接続 - この場合、msftestserver.database.windows.net:![SQL Azure DB に接続](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > このチュートリアルでは、以前、"*Windows 認証*" を使用してオンプレミス SQL Server に接続しましたが、この方法は SQL Azure DB ではサポートされていません。 そのため、この画像では、SQL 認証を使用して SQL Azure DB に接続しています。 詳細については、[SQL オンプレミス認証](../../relational-databases/security/choose-an-authentication-mode.md)に関するページと [SQL Azure 認証](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)に関するページを参照してください。 
+  > このチュートリアルでは、以前、"*Windows 認証*" を使用してオンプレミス SQL Server に接続しましたが、この方法は SQL Azure DB ではサポートされていません。 そのため、この画像では、SQL 認証を使用して SQL Azure DB に接続しています。 詳細については、[SQL オンプレミス認証](../../relational-databases/security/choose-an-authentication-mode.md)に関するページと [SQL Azure 認証](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management)に関するページを参照してください。 
 
 ## <a name="create-a-database"></a>データベースの作成
 次の手順で、TutorialDB という名前のデータベースを作成します。 
 
-1. オブジェクト エクスプローラーでサーバー インスタンスを右クリックして、**[新しいクエリ]** を選択します。
+1. オブジェクト エクスプローラーでサーバー インスタンスを右クリックして、 **[新しいクエリ]** を選択します。
 
    ![[新しいクエリ] のリンク](media/connect-query-sql-server/newquery.png)
    
@@ -89,11 +89,11 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
    CREATE DATABASE [TutorialDB]
    GO
    ```
-2. クエリを実行するには、**[実行]** を選択します (または、キーボードの F5 キーを押します)。 
+2. クエリを実行するには、 **[実行]** を選択します (または、キーボードの F5 キーを押します)。 
 
    ![[実行] コマンド](media/connect-query-sql-server/execute.png)
   
-    クエリが完了すると、オブジェクト エクスプローラーのデータベースの一覧に新しい TutorialDB データベースが表示されます。 表示されない場合は、**[データベース]** ノードを右クリックして **[更新]** を選択します。  
+    クエリが完了すると、オブジェクト エクスプローラーのデータベースの一覧に新しい TutorialDB データベースが表示されます。 表示されない場合は、 **[データベース]** ノードを右クリックして **[更新]** を選択します。  
 
 
 ## <a name="create-a-table-in-the-new-database"></a>新しいデータベースにテーブルを作成する
@@ -103,8 +103,8 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
 
    ![データベースの変更](media/connect-query-sql-server/changedb.png)
 
-2. 次の T-SQL コード スニペットをクエリ ウィンドウに貼り付けて選択し、**[実行]** を選択します (または、キーボードの F5 キーを押します)。  
-   クエリ ウィンドウの既存のテキストを置き換えても、末尾に追加してもかまいません。 クエリ ウィンドウ内のすべてを実行する場合は、**[実行]** を選択します。 テキストの一部を実行する場合は、その部分を強調表示にしてから、**[実行]** を選択します。  
+2. 次の T-SQL コード スニペットをクエリ ウィンドウに貼り付けて選択し、 **[実行]** を選択します (または、キーボードの F5 キーを押します)。  
+   クエリ ウィンドウの既存のテキストを置き換えても、末尾に追加してもかまいません。 クエリ ウィンドウ内のすべてを実行する場合は、 **[実行]** を選択します。 テキストの一部を実行する場合は、その部分を強調表示にしてから、 **[実行]** を選択します。  
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -123,10 +123,10 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
    GO
    ```
 
-クエリが完了すると、オブジェクト エクスプローラーのテーブルの一覧に新しい Customers テーブルが表示されます。 テーブルが表示されない場合は、オブジェクト エクスプローラーで **[TutorialDB]** > **[テーブル]** ノードを右クリックし、**[更新]** を選択します。
+クエリが完了すると、オブジェクト エクスプローラーのテーブルの一覧に新しい Customers テーブルが表示されます。 テーブルが表示されない場合は、オブジェクト エクスプローラーで **[TutorialDB]**  >  **[テーブル]** ノードを右クリックし、 **[更新]** を選択します。
 
 ## <a name="insert-rows-into-the-new-table"></a>新しいテーブルに行を挿入する
-一部の行を先に作成した Customers テーブルに挿入します。 これを行うには、クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けて、**[実行]** を選択します。 
+一部の行を先に作成した Customers テーブルに挿入します。 これを行うには、クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けて、 **[実行]** を選択します。 
 
 
    ```sql
@@ -144,7 +144,7 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
 ## <a name="query-the-table-and-view-the-results"></a>テーブルのクエリを行って結果を表示する
 クエリの結果は、クエリ テキスト ウィンドウの下に表示されます。 Customers テーブルのクエリを行い、前に挿入した行を表示するには、次の操作を行います。  
 
-1. クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けて、**[実行]** を選択します。 
+1. クエリ ウィンドウに次の T-SQL コード スニペットを貼り付けて、 **[実行]** を選択します。 
 
    ```sql
    -- Select rows from table 'Customers'
@@ -176,7 +176,7 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>クエリ ウィンドウが接続するサーバーを変更する
 次の手順で、現在のクエリ ウィンドウが接続しているサーバーを変更できます。
 
-1. クエリ ウィンドウを右クリックして、**[接続]** > **[接続の変更]** を選択します。 **[サーバーへの接続]** ウィンドウがもう一度開きます。
+1. クエリ ウィンドウを右クリックして、 **[接続]**  >  **[接続の変更]** を選択します。 **[サーバーへの接続]** ウィンドウがもう一度開きます。
 2. クエリ ウィンドウが接続するサーバーを変更します。 
  
    ![[接続の変更] コマンド](media/connect-query-sql-server/changeconnection.png)

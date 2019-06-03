@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store Destination | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da23e2b0bdda3c99babe18d500edace9d18f9ca4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: d934cafef262f5c07b5eeac95d65abd776d8bb35
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727203"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403034"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store Destination
 
@@ -47,3 +47,27 @@ ms.locfileid: "65727203"
        ファイル形式が ORC の場合は、適切なプラットフォームの Java Runtime Environment (JRE) をインストールする必要があります。
   
 3.  接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  
+
+## <a name="prerequisite-for-orc-file-format"></a>ORC ファイル形式の前提条件
+ORC ファイル形式を使用するには Java が必須です。
+Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイムのそれと一致しなければ使用できません。
+次の Java ビルドがテストされています。
+
+- [Zulu の OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Oracle の Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### <a name="set-up-zulus-openjdk"></a>Zulu の OpenJDK を設定する
+1. インストール zip パッケージをダウンロードし、抽出します。
+2. コマンド プロンプトから `sysdm.cpl` を実行します。
+3. **[詳細設定]** タブの **[環境変数]** を選択します。
+4. **[システム変数]** セクションで **[新規]** を選択します。
+5. **[変数名]** に「`JAVA_HOME`」と入力します。
+6. **[ディレクトリの参照]** を選択し、解凍したフォルダーに移動し、`jre` サブフォルダーを選択します。
+   **[OK]** を選択すると、**変数の値**が自動的に入力されます。
+7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。
+8. **[OK]** を選択し、 **[環境変数]** ダイアログ ボックスを閉じます。
+9. **[OK]** を選択して **[システム プロパティ]** ダイアログ ボックスを閉じます。
+
+### <a name="set-up-oracles-java-se-runtime-environment"></a>Oracle の Java SE Runtime Environment を設定する
+1. exe インストーラーをダウンロードし、実行します。
+2. インストーラーの指示に従い、設定を完了します。

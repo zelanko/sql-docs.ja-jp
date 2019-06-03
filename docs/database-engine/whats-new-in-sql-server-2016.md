@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872312"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413614"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>データベース エンジンの新機能 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "58872312"
 
 #### <a name="try-it-out"></a>お試しください
 
-- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] をダウンロードするには、**[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![ダウンロード](../analysis-services/media/download.png "ダウンロード")に移動してください。
+- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] をダウンロードするには、 **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![ダウンロード](../analysis-services/media/download.png "ダウンロード")に移動してください。
 
 - Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azure.microsoft.com/services/virtual-machines/sql-server/)** にアクセスして、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] がインストール済みの仮想マシンをすぐにご利用いただけます。
 
@@ -444,7 +444,7 @@ Always On で、暗号化されたデータベースがサポートされるよ�
 ### <a name="upgrade-advisor"></a>アップグレード アドバイザー
 SQL Server 2016 Upgrade Advisor プレビューはスタンドアロン ツールです。これにより、以前のバージョンのユーザーは、SQL Server データベースに対して一連のアップグレード ルールを実行し、重大な動作変更や非推奨の機能を検出でき、Stretch Database などの新機能の採用に役立ちます。
 
- Upgrade Advisor プレビューは [ここ](https://www.microsoft.com/download/details.aspx?id=48119) からダウンロードできます。また、Web Platform Installer を使用してインストールすることもできます。
+ Upgrade Advisor プレビューは [ここ](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) からダウンロードできます。また、Web Platform Installer を使用してインストールすることもできます。
 
 ## <a name="see-also"></a>参照
 [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)

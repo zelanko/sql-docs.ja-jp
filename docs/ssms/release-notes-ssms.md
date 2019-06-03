@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04c7d8564b739bd593b84c3925e3d7491a1bbca8
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: 3139f841d1ef7c75decbc5a3dbab34fb333d289c
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198071"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428991"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -231,7 +231,7 @@ SSMS 18.0 の一般公開 (GA) リリースが利用可能です。 SSMS の以�
 |オブジェクト エクスプローラー|データベースの名前を変更するときに、すべてのスキーマ オブジェクトに対して確認を要求するためのロジックが拡張されました (この設定は構成可能です)。|
 |オブジェクト エクスプローラー|オブジェクト エクスプローラーのフィルター処理に適切なエスケープを追加しました。 詳細については、 https://feedback.azure.com/forums/908035/suggestions/36678803 を参照してください。 |
 |オブジェクト エクスプローラー|[オブジェクト エクスプローラーの詳細] のビューで数字が適切な区切り記号で表示されるよう、修正/改善しました。 詳細については、 https://feedback.azure.com/forums/908035/suggestions/32900944 を参照してください。 |
-|オブジェクト エクスプローラー|SQL Express に接続しているときの [テーブル] ノードのコンテキスト メニューを修正しました。ここには、[新規] ポップアップが表示されず、[グラフ] テーブルが誤って一覧表示され、[システム バージョン管理] テーブルが表示されていませんでした。 詳細については、 https://feedback.azure.com/forums/908035/suggestions/37245529 を参照してください。|
+|オブジェクト エクスプローラー|SQL Express に接続しているときの [テーブル] ノードのコンテキスト メニューを修正しました。ここには、[新規] ポップアップが表示されず、[グラフ] テーブルが誤って一覧表示され、[システム バージョン管理] テーブルが表示されていませんでした。 詳細については、 https://feedback.azure.com/forums/908035/suggestions/37245529 を参照してください。 |
 |オブジェクト スクリプト作成|全体的なパフォーマンスの改善: WideWorldImporters のスクリプト生成にかかる時間が SSMS 17.7 と比べて半分になりました。|
 |オブジェクト スクリプト作成|オブジェクトのスクリプト作成時に、既定値がある DB のスコープ設定の構成は省略されます。|
 |オブジェクト スクリプト作成|スクリプト作成時に動的 T-SQL を生成しないでください。 「 https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391」を参照してください。 |
@@ -691,7 +691,7 @@ SMO:
 オブジェクト エクスプローラー:
 - インデックスの管理圧縮が失敗する問題を修正しました (https://feedback.azure.com/forums/908035-sql-server/suggestions/32610058-ssms-17-4-error-when-enabling-page-compression-o)。
 
-監査: 
+監査:
 - *監査ファイルの統合*機能に関する問題が修正されました。
 <br>
 
@@ -855,7 +855,7 @@ Azure SQL オブジェクトをターゲットにしたときに、"スクリプ
    - Azure のテーブルとインデックスに圧縮ウィザードが追加されました。
 - Showplan: 
    - PDW 演算子が認識されない問題を修正しました。
-- サーバー プロパティ : 
+- サーバー プロパティ :
    - サーバー プロセッサのアフィニティを変更できない問題を修正しました。
 
 

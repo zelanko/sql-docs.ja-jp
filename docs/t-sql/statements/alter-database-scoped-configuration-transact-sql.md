@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c8be3a1568e45f62e393ce07f5fd174d5e3949ef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 8932a3413923016783f50c3084658fa992e6c984
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66064471"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270168"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -296,6 +296,8 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースおよびエラスティック プールでは、このオプションを SQL Database サーバーの個々のユーザー データベース内で設定できます。
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス上では、このオプションは `TempDB` 内で設定され、個々のユーザー データベースの設定に影響を与えません。
+
+<a name="lqp"></a>
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 

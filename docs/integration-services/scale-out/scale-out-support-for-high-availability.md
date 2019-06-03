@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718422"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454578"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -87,9 +87,9 @@ SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##**
 
 ## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Windows Server フェールオーバー クラスターの Scale Out Master サービス ロールを構成する
 
-1.  フェールオーバー クラスター マネージャーで、Scale Out のクラスターに接続します。クラスターを選択します。 メニューで **[アクション]** を選択してから、**[役割の構成]** を選択します。
+1.  フェールオーバー クラスター マネージャーで、Scale Out のクラスターに接続します。クラスターを選択します。 メニューで **[アクション]** を選択してから、 **[役割の構成]** を選択します。
 
-2.  **[高可用性ウィザード]** ダイアログ ボックスの **[役割の選択]** ページで、**[汎用サービス]** を選択します。 **[サービスの選択]** ページで、[SQL Server Integration Services Scale Out Master 14.0] を選択します。
+2.  **[高可用性ウィザード]** ダイアログ ボックスの **[役割の選択]** ページで、 **[汎用サービス]** を選択します。 **[サービスの選択]** ページで、[SQL Server Integration Services Scale Out Master 14.0] を選択します。
 
 3.  **[クライアント アクセス ポイント]** ページで、Scale Out Master サービスの DNS ホスト名を入力します。
 
@@ -99,7 +99,7 @@ SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##**
 
 Azure の仮想マシンでは、この構成手順の他に追加の手順が必要です。 これらの概念および手順の詳しい説明については、この記事の範囲対象外です。
 
-1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)」を参照してください。
+1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance)」を参照してください。
 
 2. Azure ロード バランサーを設定する必要があります。 これは可用性グループ リスナーの要件です。 詳細については、「[チュートリアル:Azure portal の Basic ロードバランサーを使用して内部トラフィックの負荷を分散する](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)」を参照してください。
 

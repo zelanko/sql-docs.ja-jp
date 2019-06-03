@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3dce0805933c63f6562b687a9a4be429ad6ab681
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: a7f8e0577a7edd885084e117bcac801970993caa
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776020"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428855"
 ---
 # <a name="polybase-transact-sql-reference"></a>PolyBase Transact-SQL リファレンス
 
@@ -46,7 +46,7 @@ PolyBase を構成します。 「 [PolyBase configuration](../../relational-dat
   
 ## <a name="create-external-tables-for-hadoop"></a>Hadoop の外部テーブルの作成
 
-適用対象: SQL Server (2016 以降)、Parallel Data Warehouse
+適用対象SQL Server (2016 以降)、Parallel Data Warehouse
 
 **1.データベース スコープ ベースの資格情報を作成する**
 
@@ -122,7 +122,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Azure BLOB ストレージ用の外部テーブルを作成します。  
-適用対象: SQL Server (2016 以降)、Azure SQL Data Warehouse、Parallel Data Warehouse
+適用対象SQL Server (2016 以降)、Azure SQL Data Warehouse、Parallel Data Warehouse
 
 **1.データベース スコープ ベースの資格情報を作成する**  
 
@@ -197,7 +197,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store 用の外部テーブルを作成する
-適用対象: Azure SQL Data Warehouse
+適用対象Azure SQL Data Warehouse
 
 詳しくは、「[Azure Data Lake Store から Azure SQL Data Warehouse へのデータの読み込み](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」をご覧ください
 
@@ -319,7 +319,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
     );
 ```
 
-**4.スキーマを作成する** 
+**3.スキーマの作成を作成する** 
 
 ```sql
      CREATE SCHEMA sqlserver;

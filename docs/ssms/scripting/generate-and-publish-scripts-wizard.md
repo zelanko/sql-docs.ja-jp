@@ -44,18 +44,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2d6226b6b5c21f1c233c41157ac85b8cfb48c690
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820808"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454769"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **スクリプトの生成とパブリッシュ ウィザード** を使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]のインスタンス間でデータベースを転送するスクリプトを作成できます。 データベース用のスクリプトは、ローカル ネットワーク上のデータベース エンジンのインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]から生成できます。 生成したスクリプトは、データベース エンジンの別のインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行できます。 また、ウィザードを使用して、Database Publishing Services を使用して作成された Web サービスに、データベースの内容を直接パブリッシュすることもできます。 スクリプトの作成は、データベース全体または特定のオブジェクトに限定して行うことができます。  
 
-スクリプトの生成とパブリッシュ ウィザードの使用に関する詳細なチュートリアルについては、[チュートリアル:スクリプト生成ウィザード](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)に関するページをご覧ください。
+スクリプトの生成とパブリッシュ ウィザードの使用に関する詳細なチュートリアルについては、[チュートリアル:スクリプト生成ウィザード](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases)に関するページをご覧ください。
 
 
   

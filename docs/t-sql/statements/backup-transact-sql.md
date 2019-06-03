@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c764f90d21300ee5c537265de86a10971d9c0991
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828242"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175306"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ SQL Database をバックアップします。
 
 ||||
 |---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|[分析プラットフォーム <br />システム (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -200,16 +200,16 @@ LOG
 > [!NOTE]
 > `WITH NO_TRUNCATE` または `COPY_ONLY` を指定した場合を除き、一般的なログ バックアップの後、一部のトランザクション ログ レコードが非アクティブになります。 1 つ以上の仮想ログ ファイル内ですべてのレコードがアクティブでなくなった場合、ログは切り捨てられます。 定期的なログ バックアップの後にログが切り捨てられていない場合は、何らかの原因によりログの切り捨てが遅れている可能性があります。 詳細については、「[ログの切り捨てが遅れる原因となる要因](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)」を参照してください。
 
-{ _database\_name_ | **@**_database\_name\_var_ }: トランザクション ログ、データベースの一部、またはデータベース全体のバックアップ元となるデータベースです。 変数 (**@**_database\_name\_var_) として指定する場合、この名前は、文字列定数 (**@**_database\_name\_var_**=**_database name_) として指定するか、**ntext** または**text** データ型以外の文字列データ型の変数として指定します。
+{ _database\_name_ |  **@** _database\_name\_var_ }: トランザクション ログ、データベースの一部、またはデータベース全体のバックアップ元となるデータベースです。 変数 ( **@** _database\_name\_var_) として指定する場合、この名前は、文字列定数 ( **@** _database\_name\_var_ **=** _database name_) として指定するか、**ntext** または**text** データ型以外の文字列データ型の変数として指定します。
 
 > [!NOTE]
 > データベース ミラーリング パートナーシップ内のミラー データベースは、バックアップできません。
 
-\<file_or_filegroup> [ **,**...*n* ]: BACKUP DATABASE のみで使用できます。ファイル バックアップに含めるデータベース ファイルまたはファイル グループを指定するか、部分バックアップに含める読み取り専用ファイルまたはファイル グループを指定します。
+\<file_or_filegroup> [ **,** ...*n* ]: BACKUP DATABASE のみで使用できます。ファイル バックアップに含めるデータベース ファイルまたはファイル グループを指定するか、部分バックアップに含める読み取り専用ファイルまたはファイル グループを指定します。
 
-FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ }: バックアップに含めるファイルの論理名、またはその論理名と同じ値を保持する変数です。
+FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ }: バックアップに含めるファイルの論理名、またはその論理名と同じ値を保持する変数です。
 
-FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ }: バックアップに含めるファイル グループの論理名、またはその論理名と同じ値を保持する変数です。 単純復旧モデルでは、ファイル グループのバックアップは、読み取り専用のファイル グループに対してのみ使用できます。
+FILEGROUP **=** { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ }: バックアップに含めるファイル グループの論理名、またはその論理名と同じ値を保持する変数です。 単純復旧モデルでは、ファイル グループのバックアップは、読み取り専用のファイル グループに対してのみ使用できます。
 
 > [!NOTE]
 > データベースのサイズおよびパフォーマンス要件によりデータベース バックアップの実行が難しい場合は、ファイル バックアップの利用を検討してください。 NUL デバイスはバックアップのパフォーマンスをテストするために使用できますが、運用環境では使用できません。
@@ -218,28 +218,28 @@ FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_v
 
 詳しくは、「[ファイルの完全バックアップ](../../relational-databases/backup-restore/full-file-backups-sql-server.md)」および「[ファイルおよびファイル グループのバックアップ](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)」をご覧ください。
 
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ]: 部分バックアップを指定します。 部分バックアップには、データベース内のすべての読み取り/書き込みファイル (プライマリ ファイル グループ、存在する場合は読み取り/書き込みセカンダリ ファイル グループ、および指定の読み取り専用ファイルまたはファイル グループ) が含まれます。
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ..._n_ ] ]: 部分バックアップを指定します。 部分バックアップには、データベース内のすべての読み取り/書き込みファイル (プライマリ ファイル グループ、存在する場合は読み取り/書き込みセカンダリ ファイル グループ、および指定の読み取り専用ファイルまたはファイル グループ) が含まれます。
 
 READ_WRITE_FILEGROUPS: 部分バックアップにおいて、すべての読み取り/書き込みファイル グループをバックアップするように指定します。 データベースが読み取り専用の場合、READ_WRITE_FILEGROUPS にはプライマリ ファイル グループのみが含まれます。
 
 > [!IMPORTANT]
 > READ_WRITE_FILEGROUPS の代わりに FILEGROUP を使用して、読み取り/書き込みファイル グループのリストを明示的に指定すると、ファイル バックアップが作成されます。
 
-FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }: 部分バックアップに含める読み取り専用ファイル グループの論理名、またはその論理名と同じ値を保持する変数です。 詳細については、このトピックの前述の "\<file_or_filegroup>" を参照してください。
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ }: 部分バックアップに含める読み取り専用ファイル グループの論理名、またはその論理名と同じ値を保持する変数です。 詳細については、このトピックの前述の "\<file_or_filegroup>" を参照してください。
 
 *n*: 複数の読み取り専用ファイル グループを、コンマ区切りのリストで指定できることを示すプレースホルダーです。
 
 部分バックアップについて詳しくは、「[部分バックアップ](../../relational-databases/backup-restore/partial-backups-sql-server.md)」をご覧ください。
 
-TO \<backup_device> [ **,**...*n* ] 関連する[バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)のセットが、ミラー化されていないメディア セット、またはミラー化されたメディア セット内にあるミラーの 1 つ目 (1 つ以上の MIRROR TO 句が宣言されている場合) であることを示します。
+TO \<backup_device> [ **,** ...*n* ] 関連する[バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)のセットが、ミラー化されていないメディア セット、またはミラー化されたメディア セット内にあるミラーの 1 つ目 (1 つ以上の MIRROR TO 句が宣言されている場合) であることを示します。
 
 \<backup_device>
 
 バックアップ操作に使用する論理または物理バックアップ デバイスを指定します。
 
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **適用対象:** SQL Server: データベースのバックアップが作成されるバックアップ デバイスの論理名です。 論理名は、識別子のルールに従う必要があります。 変数 (@*logical_device_name_var*) として指定する場合、バックアップ デバイス名を文字列定数 (@_logical\_device\_name\_var_**=** logical backup device name) として指定するか、**ntext** または **text** データ型以外の文字列データ型の変数として指定できます。
+{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **適用対象:** SQL Server: データベースのバックアップが作成されるバックアップ デバイスの論理名です。 論理名は、識別子のルールに従う必要があります。 変数 (@*logical_device_name_var*) として指定する場合、バックアップ デバイス名を文字列定数 (@_logical\_device\_name\_var_ **=** logical backup device name) として指定するか、**ntext** または **text** データ型以外の文字列データ型の変数として指定できます。
 
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **適用対象:** SQL Server に適用する DISK、TAPE、URL。
+{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **適用対象:** SQL Server に適用する DISK、TAPE、URL。
 ディスク ファイルまたはテープ デバイス、あるいは Microsoft Azure BLOB ストレージ サービスを指定します。 URL の形式は、Microsoft Azure ストレージ サービスへのバックアップを作成するために使用されます。 詳細と例については、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。 チュートリアルについては、「[チュートリアル: Microsoft Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)」を参照してください。
 
 > [!NOTE]
@@ -261,7 +261,7 @@ TO \<backup_device> [ **,**...*n* ] 関連する[バックアップ デバイス
 
 *n*: 最大 64 個のバックアップ デバイスを、コンマ区切りのリストで指定できることを示すプレースホルダーです。
 
-MIRROR TO \<backup_device> [ **,**...*n* ] TO 句で指定したバックアップ デバイスをミラー化する、最大 3 つまでのセカンダリ バックアップ デバイスのセットを指定します。 MIRROR TO 句には、TO 句で指定した同じ種類と数のバックアップ デバイスを指定する必要があります。 MIRROR TO 句の最大数は 3 です。
+MIRROR TO \<backup_device> [ **,** ...*n* ] TO 句で指定したバックアップ デバイスをミラー化する、最大 3 つまでのセカンダリ バックアップ デバイスのセットを指定します。 MIRROR TO 句には、TO 句で指定した同じ種類と数のバックアップ デバイスを指定する必要があります。 MIRROR TO 句の最大数は 3 です。
 
 このオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Enterprise Edition でのみ使用できます。
 
@@ -342,25 +342,25 @@ COMPRESSION: バックアップの圧縮を明示的に有効にします。
 
 NO_COMPRESSION: バックアップの圧縮を明示的に無効にします。
 
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }: バックアップ セットを記述したテキストを自由な形式で指定します。 文字列の長さは最大 255 文字です。
+DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ }: バックアップ セットを記述したテキストを自由な形式で指定します。 文字列の長さは最大 255 文字です。
 
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }: バックアップ セットの名前を指定します。 名前の長さは最大 128 文字です。 NAME を指定しないと、名前は空白になります。
+NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ }: バックアップ セットの名前を指定します。 名前の長さは最大 128 文字です。 NAME を指定しないと、名前は空白になります。
 
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ }: このバックアップのバックアップ セットがいつ上書きできるかを指定します。 これらのオプションを両方とも使用した場合は、RETAINDAYS が EXPIREDATE よりも優先されます。
+{ EXPIREDATE **='** _date_ **'** | RETAINDAYS **=** _days_ }: このバックアップのバックアップ セットがいつ上書きできるかを指定します。 これらのオプションを両方とも使用した場合は、RETAINDAYS が EXPIREDATE よりも優先されます。
 
 どちらのオプションも指定されていない場合、失効日は **mediaretention** 構成設定によって決まります。 詳しくは、「[サーバー構成オプション](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」をご覧ください。
 
 > [!IMPORTANT]
 > これらのオプションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのファイルの上書きを防ぐことのみを目的としています。 テープは、ほかの方法を使用して消去でき、ディスク ファイルはオペレーティング システムから削除できます。 有効期限の確認について詳しくは、このトピックの「SKIP」および「FORMAT」をご覧ください。
 
-EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }: バックアップ セットがいつ期限切れとなり、上書き可能になるかを指定します。 変数 (@_date\_var_) として指定する場合、この日付は構成されたシステムの **datetime** 形式に従い、次のいずれかとして指定する必要があります。
+EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ }: バックアップ セットがいつ期限切れとなり、上書き可能になるかを指定します。 変数 (@_date\_var_) として指定する場合、この日付は構成されたシステムの **datetime** 形式に従い、次のいずれかとして指定する必要があります。
 
 - A string constant (@_date\_var_ **=** date)
 - 文字列データ型 (**ntext** または **text** データ型を除く) の変数
 - **smalldatetime**
 - **datetime** 変数
 
-例 :
+例:
 
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
@@ -370,7 +370,7 @@ EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }: バックアップ セ
 > [!NOTE]
 > 失効日を無視するには、`SKIP` オプションを使用します。
 
-RETAINDAYS **=** { *days* | **@**_days\_var_ }: このバックアップ メディア セットを上書きできるようになるまでに必要な経過日数を指定します。 変数 (**@**_days\_var_) として指定する場合は、整数で指定する必要があります。
+RETAINDAYS **=** { *days* |  **@** _days\_var_ }: このバックアップ メディア セットを上書きできるようになるまでに必要な経過日数を指定します。 変数 ( **@** _days\_var_) として指定する場合は、整数で指定する必要があります。
 
 **メディア セットのオプション**
 
@@ -415,11 +415,11 @@ FORMAT: 新しいメディア セットを作成するように指定します�
 
 FORMAT を指定することは `SKIP` を実行することを意味します。`SKIP` を明示的に指定する必要はありません。
 
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }: メディア セットを説明した自由形式のテキストを最大 255 文字で指定します。
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ }: メディア セットを説明した自由形式のテキストを最大 255 文字で指定します。
 
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }: バックアップ メディア セット全体のメディア名を指定します。 メディア名は最長 128 文字まで入力できます。`MEDIANAME` を指定する場合、バックアップ ボリュームに既に存在する、前回指定したメディア名と一致する必要があります。 指定しなかった場合場合、または SKIP オプションを指定した場合、メディア名の照合チェックは行われません。
+MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ }: バックアップ メディア セット全体のメディア名を指定します。 メディア名は最長 128 文字まで入力できます。`MEDIANAME` を指定する場合、バックアップ ボリュームに既に存在する、前回指定したメディア名と一致する必要があります。 指定しなかった場合場合、または SKIP オプションを指定した場合、メディア名の照合チェックは行われません。
 
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }: 物理的なブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、BACKUP によってデバイスに適したブロック サイズが自動的に選択されるので、このオプションは必要ありません。 ブロック サイズを明示的に指定すると、自動選択されたブロック サイズがオーバーライドされます。
+BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ }: 物理的なブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、BACKUP によってデバイスに適したブロック サイズが自動的に選択されるので、このオプションは必要ありません。 ブロック サイズを明示的に指定すると、自動選択されたブロック サイズがオーバーライドされます。
 
 バックアップを作成して CD-ROM に格納したり、CD-ROM からバックアップを復元する場合は、BLOCKSIZE=2048 と指定します。
 
@@ -428,14 +428,14 @@ BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }: 物理的なブロ
 
 **データ転送オプション**
 
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }: バックアップ操作に使用される I/O バッファーの総数を指定します。 任意の正の整数を指定できますが、バッファー数が多いと Sqlservr.exe プロセス内で仮想アドレス空間が不足し、"メモリ不足" エラーが発生する場合があります。
+BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ }: バックアップ操作に使用される I/O バッファーの総数を指定します。 任意の正の整数を指定できますが、バッファー数が多いと Sqlservr.exe プロセス内で仮想アドレス空間が不足し、"メモリ不足" エラーが発生する場合があります。
 
 バッファーで使用される領域の合計は、*buffercount/maxtransfersize* で決定されます。
 
 > [!NOTE]
 > `BUFFERCOUNT` オプションの使用に関する重要な情報については、ブログ「[Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)」 (不適切な BufferCount データ転送オプションによって OOM の状態になる可能性がある) を参照してください。
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。
 
 > [!NOTE]
 > SQL ライター サービスを使用してバックアップを作成する際に、データベースに [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) が構成されているか、[メモリ最適化ファイル グループ](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)が含まれている場合、復元時の `MAXTRANSFERSIZE` はバックアップの作成時に使用された `MAXTRANSFERSIZE` 以上である必要があります。
@@ -749,6 +749,7 @@ BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** �
 - G. [既存のミラー化メディア セットにバックアップする](#existing_mirrored_media_set)
 - H. [新しいメディア セットに圧縮されたバックアップを作成する](#creating_compressed_backup_new_media_set)
 - I. [Microsoft Azure BLOB ストレージ サービスへのバックアップ](#url)
+- J. [バックアップ ステートメントの進行状況を追跡する](#backup_progress)
 
 > [!NOTE]
 > バックアップ方法に関するトピックには、他にも例が記載されています。 詳しくは、「[バックアップの概要](../../relational-databases/backup-restore/backup-overview-sql-server.md)」をご覧ください。
@@ -895,6 +896,17 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
+### <a name="backup_progress"></a> J. バックアップ ステートメントの進行状況を追跡する
+
+次のクエリでは、現在実行中のバックアップ ステートメントに関する情報が返されます。
+```sql
+SELECT query = a.text, start_time, percent_complete,
+    eta = dateadd(second,estimated_completion_time/1000, getdate())
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+WHERE r.command LIKE 'BACKUP%'
+```
+
 ## <a name="see-also"></a>参照
 
 - [バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)
@@ -919,7 +931,7 @@ WITH STATS = 5;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[分析プラットフォーム <br />システム (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL Database<br />マネージド インスタンス \*_ ** &nbsp;|[分析プラットフォーム <br />システム (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -970,7 +982,7 @@ DATABASE: データベース全体のバックアップを指定します。 デ
 
 BACKUP DATABASE (*データ バックアップ*) で作成されたバックアップを復元すると、バックアップ全体が復元されます。 Azure SQL Database マネージド インスタンスの自動バックアップから復元する方法については、「[SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)」(SQL Database の復元) を参照してください
 
-{ *database_name* | **@**_database\_name\_var_ }: データベース全体のバックアップ元となるデータベースです。 変数 (**@**_database\_name\_var_) として指定する場合、この名前は、文字列定数 (**@**_database\_name\_var_**=**_database name_) として指定するか、**ntext** または**text** データ型以外の文字列データ型の変数として指定します。
+{ *database_name* |  **@** _database\_name\_var_ }: データベース全体のバックアップ元となるデータベースです。 変数 ( **@** _database\_name\_var_) として指定する場合、この名前は、文字列定数 ( **@** _database\_name\_var_ **=** _database name_) として指定するか、**ntext** または**text** データ型以外の文字列データ型の変数として指定します。
 
 詳しくは、「[ファイルの完全バックアップ](../../relational-databases/backup-restore/full-file-backups-sql-server.md)」および「[ファイルおよびファイル グループのバックアップ](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)」をご覧ください。
 
@@ -1014,26 +1026,26 @@ COMPRESSION: バックアップの圧縮を明示的に有効にします。
 
 NO_COMPRESSION: バックアップの圧縮を明示的に無効にします。
 
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }: バックアップ セットを記述したテキストを自由な形式で指定します。 文字列の長さは最大 255 文字です。
+DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ }: バックアップ セットを記述したテキストを自由な形式で指定します。 文字列の長さは最大 255 文字です。
 
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }: バックアップ セットの名前を指定します。 名前の長さは最大 128 文字です。 NAME を指定しないと、名前は空白になります。
+NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ }: バックアップ セットの名前を指定します。 名前の長さは最大 128 文字です。 NAME を指定しないと、名前は空白になります。
 
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }: メディア セットを説明した自由形式のテキストを最大 255 文字で指定します。
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ }: メディア セットを説明した自由形式のテキストを最大 255 文字で指定します。
 
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }: バックアップ メディア セット全体のメディア名を指定します。 メディア名は最長 128 文字まで入力できます。`MEDIANAME` を指定する場合、バックアップ ボリュームに既に存在する、前回指定したメディア名と一致する必要があります。 指定しなかった場合場合、または SKIP オプションを指定した場合、メディア名の照合チェックは行われません。
+MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ }: バックアップ メディア セット全体のメディア名を指定します。 メディア名は最長 128 文字まで入力できます。`MEDIANAME` を指定する場合、バックアップ ボリュームに既に存在する、前回指定したメディア名と一致する必要があります。 指定しなかった場合場合、または SKIP オプションを指定した場合、メディア名の照合チェックは行われません。
 
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }: 物理的なブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、BACKUP によってデバイスに適したブロック サイズが自動的に選択されるので、このオプションは必要ありません。 ブロック サイズを明示的に指定すると、自動選択されたブロック サイズがオーバーライドされます。
+BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ }: 物理的なブロック サイズをバイト単位で指定します。 サポートされるサイズは、512、1024、2048、4096、8192、16384、32768、および 65536 (64 KB) バイトです。 テープ デバイスの場合の既定値は 65536 バイトで、他のデバイスの場合の既定値は 512 バイトです。 通常は、BACKUP によってデバイスに適したブロック サイズが自動的に選択されるので、このオプションは必要ありません。 ブロック サイズを明示的に指定すると、自動選択されたブロック サイズがオーバーライドされます。
 
 **データ転送オプション**
 
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }: バックアップ操作に使用される I/O バッファーの総数を指定します。 任意の正の整数を指定できますが、バッファー数が多いと Sqlservr.exe プロセス内で仮想アドレス空間が不足し、"メモリ不足" エラーが発生する場合があります。
+BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ }: バックアップ操作に使用される I/O バッファーの総数を指定します。 任意の正の整数を指定できますが、バッファー数が多いと Sqlservr.exe プロセス内で仮想アドレス空間が不足し、"メモリ不足" エラーが発生する場合があります。
 
 バッファーで使用される領域の合計は、*buffercount/maxtransfersize* で決定されます。
 
 > [!NOTE]
 > `BUFFERCOUNT` オプションの使用に関する重要な情報については、ブログ「[Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)」 (不適切な BufferCount データ転送オプションによって OOM の状態になる可能性がある) を参照してください。
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Specifies the largest unit of transfer in bytes to be used between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the backup media. 有効値は 65536 バイト (64 KB) の倍数で、最大有効値は 4194304 バイト (4 MB) です。
 
 > [!NOTE]
 > 単一のデータ ファイルを含む、[透過的なデータ暗号化 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が有効になっているデータベースの場合、既定の `MAXTRANSFERSIZE` は 65536 (64 KB) です。 TDE で暗号化されていないデータベースでは、ディスクへのバックアップを使用する場合は既定の `MAXTRANSFERSIZE` が 1048576 (1 MB) となり、VDI または TAPE を使用する場合は 65536 (64 KB) となります。
@@ -1104,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\*分析<br />プラットフォーム システム (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\*分析<br />プラットフォーム システム (PDW) \*_ ** &nbsp;|
 
 &nbsp;
 
@@ -1151,11 +1163,11 @@ TO DISK = '\\\\*UNC_path*\\*backup_directory*': [!INCLUDE[ssPDW](../../includes/
 - UNC パスとバックアップ ディレクトリ名の最大長は 200 文字です。
 - サーバーまたはホストは IP アドレスとして指定する必要があります。 これはホストまたはサーバー名として指定できません。
 
-DESCRIPTION = **'**_text_**'**: バックアップの説明テキストを指定します。 テキストの最大長は 255 文字です。
+DESCRIPTION = **'** _text_ **'** : バックアップの説明テキストを指定します。 テキストの最大長は 255 文字です。
 
 説明はメタデータに格納されます。バックアップ ヘッダーが RESTORE HEADERONLY で復元されるときに表示されます。
 
-NAME = **'**_backup \_name_**'**: バックアップの名前を指定します。 バックアップ名には、データベース名とは異なる名前を指定できます。
+NAME = **'** _backup \_name_ **'** : バックアップの名前を指定します。 バックアップ名には、データベース名とは異なる名前を指定できます。
 
 - 名前の長さは最大 128 文字です。
 - パスを含めることはできません。
@@ -1166,7 +1178,7 @@ NAME = **'**_backup \_name_**'**: バックアップの名前を指定します�
 
 DIFFERENTIAL: ユーザー データベースの差分バックアップを実行するように指定します。 省略した場合、データベースの完全バックアップが選択されます。 差分バックアップの名前は、完全バックアップの名前に一致する必要がありません。 差分バックアップとそれに対応する完全バックアップを追跡記録するために、同じ名前に 'full' または 'diff' を付けることを検討してください。
 
-例 :
+例:
 
 `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`
 

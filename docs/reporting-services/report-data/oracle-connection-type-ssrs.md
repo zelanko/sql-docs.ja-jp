@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3dd35c6630c825e5341246170f6e96d61a47de4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1cf0134d4c71111537a9d7c020c03f77d9377fd1
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577901"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413437"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle の接続の種類 (SSRS)
 Oracle データベースのデータをレポートで使用するには、種類が Oracle のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、Oracle Data Provider を直接使用し、Oracle クライアント ソフトウェア コンポーネントが必要です。
 
 Oracle クライアント ツールをインストールするには、次の操作を実行します。
  
-1.  [Oracle のダウンロード サイト](https://www.oracle.com/us/products/tools/index-090165.html)に移動します
+1.  [Oracle のダウンロード サイト](https://www.oracle.com/downloads/)に移動します
 2.  Windows 用 ODAC 12c リリース 4 (12.1.0.2.4) をダウンロードします (サーバー用の 64 ビット、ツール用の 32 ビット)。
 3.  Data Provider for .NET 4 をインストールします
   
