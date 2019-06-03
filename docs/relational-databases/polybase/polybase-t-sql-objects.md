@@ -46,7 +46,7 @@ PolyBase を構成します。 「 [PolyBase configuration](../../relational-dat
   
 ## <a name="create-external-tables-for-hadoop"></a>Hadoop の外部テーブルの作成
 
-適用対象SQL Server (2016 以降)、Parallel Data Warehouse
+適用対象:SQL Server (2016 以降)、Parallel Data Warehouse
 
 **1.データベース スコープ ベースの資格情報を作成する**
 
@@ -122,7 +122,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Azure BLOB ストレージ用の外部テーブルを作成します。  
-適用対象SQL Server (2016 以降)、Azure SQL Data Warehouse、Parallel Data Warehouse
+適用対象:SQL Server (2016 以降)、Azure SQL Data Warehouse、Parallel Data Warehouse
 
 **1.データベース スコープ ベースの資格情報を作成する**  
 
@@ -197,7 +197,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store 用の外部テーブルを作成する
-適用対象Azure SQL Data Warehouse
+適用対象:Azure SQL Data Warehouse
 
 詳しくは、「[Azure Data Lake Store から Azure SQL Data Warehouse へのデータの読み込み](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)」をご覧ください
 
@@ -319,7 +319,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
     );
 ```
 
-**3.スキーマの作成を作成する** 
+**3.スキーマを作成する** 
 
 ```sql
      CREATE SCHEMA sqlserver;
