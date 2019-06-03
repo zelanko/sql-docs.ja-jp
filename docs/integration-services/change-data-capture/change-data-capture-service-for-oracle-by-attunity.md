@@ -11,12 +11,12 @@ ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 00cda57e3656bb41031f79647c3e4829dcab4858
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: cbce8f29b2c623102d0e9f7dad749c784a3764ba
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198162"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354357"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity の Change Data Capture Service for Oracle
 
@@ -26,7 +26,8 @@ ms.locfileid: "66198162"
   CDC Service for Oracle は、Oracle トランザクション ログをスキャンして目的の Oracle テーブルに対する変更を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更テーブルにキャプチャする Windows サービスです。 Oracle からキャプチャされた変更が格納される SQL 変更テーブルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブの変更データ キャプチャ機能で使用される変更テーブルと同じ種類のテーブルです。 そのため、このような変更も、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに対して行われた変更を使用する場合と同様に簡単に使用できます。  
   
 ## <a name="installation"></a>インストール  
- Microsoft Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL Server 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+
+Microsoft Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL Server 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。
   
  CDC Service for Oracle は、キャプチャするソース Oracle データベースと、対象の CDC データベースが存在する対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにアクセスできる、サポートされているすべての Windows コンピューターにインストールできます。 CDC Service では、Oracle データベースまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのローカル インストールは必要なく、サポートされるクライアントのみが必要です。 必要なデータベース コンポーネントのインストール場所の詳細については、「 **データベースの前提条件** 」を参照してください。  
   

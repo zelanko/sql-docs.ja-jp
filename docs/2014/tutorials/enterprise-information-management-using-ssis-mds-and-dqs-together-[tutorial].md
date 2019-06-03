@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489723"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429036"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS、MDS、DQS の組み合わせを使用した Enterprise Information Management [チュートリアル]
   企業の情報管理には、一般に、企業の枠を超えたデータ統合、データのクレンジング、データ照合による重複項目の削除、データの標準化、データの拡充、法的およびコンプライアンス条件に対するデータの準拠、および必要なすべてのセキュリティ設定によるデータの集中管理などの作業が含まれます。  
@@ -62,9 +62,9 @@ ms.locfileid: "65489723"
   
 5.  インストール**マスター データ サービス アドインの Excel** (32 ビットまたは 64 ビットに基づいて、コンピューター上にある Excel のバージョン) から[ここ](https://www.microsoft.com/download/details.aspx?id=29064)します。 コンピューターにインストールされている Excel のバージョンを見つけるには実行**Excel**、 をクリックして**ファイル**をクリックし、メニュー バー**ヘルプ**右側のウィンドウでバージョンを確認します。 Excel アドインをインストールする前に、for Office Runtime Visual Studio 2010 Tools をインストールする必要があるに注意してください。  
   
-6.  (省略可能)持つアカウントを作成する[Windows Azure Marketplace](https://datamarket.azure.com/)します。 チュートリアルのタスクの 1 つ必要がある場合、 **Azure Marketplace** (元の名前**データ マーケット**) アカウント。 次のタスクに進む場合は、このタスクをスキップできます。  
+6.  (省略可能)持つアカウントを作成する[Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)します。 チュートリアルのタスクの 1 つ必要がある場合、 **Azure Marketplace** (元の名前**データ マーケット**) アカウント。 次のタスクに進む場合は、このタスクをスキップできます。  
   
-7.  Suppliers.xls ファイルをダウンロード[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=271504)します。  
+7.  Suppliers.xls ファイルをダウンロード[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=50426)します。  
   
 8.  DQS はクレンジングまたは照合では、使用する場合を Excel ファイルに結果をエクスポートすることを許可しない**64 ビット バージョンの Excel**します。 これは既知の問題です。 この問題を回避するには、次の手順を実行します。  
   
