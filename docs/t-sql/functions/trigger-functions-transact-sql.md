@@ -10,20 +10,20 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 249233c31a38ed0a1b72e531b258b3d9ad167330
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb8b6a2186928d3fcbeb2156d172bcbb9ff9cd9
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614380"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946635"
 ---
 # <a name="trigger-functions-transact-sql"></a>トリガー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  次のスカラー関数は、データ値が変更されたかどうかを調べたり、他のデータを返したりするためのトリガーの定義に使用できます。  
+  次のスカラー関数は、データ値の変更をテストする、またはその他のデータを返すトリガーの定義で使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md)  

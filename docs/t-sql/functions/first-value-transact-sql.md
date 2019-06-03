@@ -16,16 +16,16 @@ helpviewer_keywords:
 - FIRST_VALUE function
 - analytic functions, FIRST_VALUE
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a1cd0345c767ea0e97e9a5571a6e7a9bad43ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb15792c255a00b77565bc84eabbd474a63cc63c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612810"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945916"
 ---
 # <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -57,7 +57,7 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-firstvalue-over-a-query-result-set"></a>A. クエリ結果セットで FIRST_VALUE を使用する  
+### <a name="a-using-firstvalue-over-a-query-result-set"></a>A. クエリの結果セットで FIRST_VALUE を使用する  
  次の例では、FIRST_VALUE を使用して、指定された製品カテゴリ内で最も安価な製品の名前を返します。  
   
 ```  
@@ -90,7 +90,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
 ```  
   
 ### <a name="b-using-firstvalue-over-partitions"></a>B. パーティションで FIRST_VALUE を使用する  
- 次の例では、FIRST_VALUE を使用して、同じ役職に付いている他の従業員と比べて、最も休暇時間数が少ない従業員を返します。 PARTITION BY 句によって役職ごとに従業員がパーティションに分割され、各パーティションに個別に FIRST_VALUE 関数が適用されます。 OVER 句に指定された ORDER BY 句は、各パーティション内の行に FIRST_VALUE 関数が適用される論理的な順序を決定します。 ROWS UNBOUNDED PRECEDING 句は、ウィンドウの開始位置が各パーティションの最初の行であることを指定します。  
+ 次の例では、FIRST_VALUE を使用して、同じ役職の他の従業員と比較して休暇時間数が最も少ない従業員を返します。 PARTITION BY 句によって役職ごとに従業員がパーティションに分割され、各パーティションに個別に FIRST_VALUE 関数が適用されます。 OVER 句に指定された ORDER BY 句は、各パーティション内の行に FIRST_VALUE 関数が適用される論理的な順序を決定します。 ROWS UNBOUNDED PRECEDING 句は、ウィンドウの開始位置を各パーティションの最初の行として指定します。  
   
 ```  
 USE AdventureWorks2012;   

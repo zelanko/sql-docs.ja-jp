@@ -19,15 +19,15 @@ helpviewer_keywords:
 - displaying index keys
 - keys [SQL Server], index
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4107bfb27ad756d47a80257289cb05c62f1f99e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36471a1e20a150e39dedc866130d3373448573bf
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844040"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944497"
 ---
 # <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +57,9 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  インデックス キー列の位置です。 *key_ID* is **int**.  
   
  *property*  
- 情報を返す基になるプロパティの名前です。 *プロパティ* 、文字の文字列は、次の値のいずれかを指定することができます。  
+ 情報が返されるプロパティの名前です。 *プロパティ* 、文字の文字列は、次の値のいずれかを指定することができます。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**ColumnId**|列の ID で、*key_ID*、インデックスの位置。|  
 |**IsDescending**|インデックス列を格納する順序です。<br /><br /> 1 = 降順、0 = 昇順|  
@@ -85,7 +85,7 @@ SELECT
         1,1,'IsDescending') AS [Asc or Desc order];  
 ```  
   
- Here is the result set:  
+ 以下に結果セットを示します。  
   
 ```  
 Column ID   Asc or Desc order   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromText (geometry Data Type)
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 10d6547d8547abdf795decf01bcc7af6e80f346e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc462311df940b03c8a76e2867c49e6b35729415
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661500"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938609"
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- OGC の型: **MultiPoint**  
+ OGC の型:**MultiPoint**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  

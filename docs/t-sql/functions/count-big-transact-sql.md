@@ -19,16 +19,16 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4e1fef3fdaad1b7c8a1bd2b82f8ee1f1da8f76d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c25a0cf97c556baad24f475cdf71698e03fa6a25
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130842"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948049"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,13 +68,13 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 **bigint**
   
 ## <a name="remarks"></a>Remarks  
-COUNT_BIG(\*) は、グループ内の項目数を返します。 これには NULL 値と重複値も含まれます。
+COUNT_BIG(\*) は、グループ内の項目数を返します。 これには NULL 値と重複値が含まれます。
   
 COUNT_BIG (ALL *expression*) はグループ内の各行に対して *expression* を評価し、非 NULL 値の数を返します。
   
 COUNT_BIG (DISTINCT *expression*) はグループ内の各行に対して *expression* を評価し、一意の非 NULL 値の数を返します。
   
-COUNT_BIG は、OVER 句や ORDER BY 句**_なし_** で使用される場合は決定的関数です。 COUNT_BIG が OVER 句や ORDER BY 句と**_共に_** 使用される場合は、非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
+COUNT_BIG は、OVER 句や ORDER BY 句 **_なし_** で使用される場合は決定的関数です。 COUNT_BIG が OVER 句や ORDER BY 句と **_共に_** 使用される場合は、非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
 例については、「[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)」を参照してください。

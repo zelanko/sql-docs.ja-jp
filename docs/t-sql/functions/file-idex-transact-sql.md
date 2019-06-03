@@ -20,15 +20,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89cd8bfb5a3098151565252e1a1fe5147c8aa6f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44cb6fa7f32616f7a1616c334c438b7a752546e3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740670"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946055"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ File ID
 (1 row(s) affected)  
 ```  
   
-### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. ファイル名が不明の場合のファイル ID を取得する  
+### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. ファイル名が不明な場合ファイル ID を取得する  
 この例では、`AdventureWorks` ログ ファイルのファイル ID が返されます。 Transact-SQL (T-SQL) のコード スニペットで、`sys.database_files` カタログ ビューから論理ファイル名が選択されます (ファイルの種類は `1` (ログ) です)。  
   
 ```sql  

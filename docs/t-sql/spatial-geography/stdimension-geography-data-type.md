@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDimension method
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 20103774beb936ede7ab6a3b56201230b18cbd3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2fd921d384e8c79220a435eb8b43d01eccda566
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801100"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937069"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47801100"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
- CLR の戻り値の型: **SqlInt32**  
+ CLR の戻り値の型:**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  STDimension() では、**geography** インスタンスが空の場合、-1 を返します。  
@@ -65,7 +65,7 @@ FROM @temp;
 |----------|---------|  
 |ポイント|0|  
 |LineString|1|  
-|多角形|2|  
+|Polygon|2|  
   
 ## <a name="see-also"></a>参照  
  [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

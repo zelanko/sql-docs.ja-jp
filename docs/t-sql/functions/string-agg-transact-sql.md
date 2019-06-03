@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83040a96a96e34e71864a967ecb9ab06632c1376
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e368b005eaa1f5729f177356f3e06ea5effbd417
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518519"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947537"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ FROM Person.Person;
 
 `name` セルにある `NULL` 値は結果で返されません。   
 > [!NOTE]  
->  Management Studio のクエリ エディターを使用している場合、**[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、**[結果をテキストで表示]** に切り替えてください。   
+>  Management Studio のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、 **[結果をテキストで表示]** に切り替えてください。   
 
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. NULL 値を含まない、コンマ区切りの名前のリストを生成する   
 次の例では、null 値を 'N/A' に置き換え、コンマで区切った名前を 1 つの結果セルに返します。  
@@ -125,7 +125,7 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />[...] |
 
 > [!NOTE]  
->  Management Studio のクエリ エディターを使用している場合、**[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、**[結果をテキストで表示]** に切り替えてください。   
+>  Management Studio のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、 **[結果をテキストで表示]** に切り替えてください。   
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 関連するタグが付いたニュース記事を返す 
 記事とそのタグは別のテーブルに分かれています。 開発者は、すべての関連するタグが付いた記事ごとに 1 つの行を返したいと考えています。 この場合、次のクエリを使用します。 

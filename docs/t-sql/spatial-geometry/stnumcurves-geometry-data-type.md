@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumCurves method (geometry)
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 95e18d5d9495959ffab627dbd3e1b0d516453183
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6447c64b18b690f6bcdcd0f2ffca7e6b674e3200
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763500"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938537"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47763500"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  空の 1 次元 **geometry** インスタンスは 0 を返します。 **geometry** インスタンスが 1 次元のインスタンスではない場合や初期化されていない場合は、**NULL** が返されます。  

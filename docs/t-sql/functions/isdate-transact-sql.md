@@ -28,16 +28,16 @@ helpviewer_keywords:
 - time [SQL Server], validate
 - ISDATE function [SQL Server]
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 277d865ddabacf6bd6f9cd2797b06848f6978f94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0afa469d682aac12e35ddf0bad15091cdac14364
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682218"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947204"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47682218"
   
  *expression* が **datetime2** 値の場合、ISDATE は 0 を返します。  
   
- すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). datetime データの範囲は 1753-01-01 ～ 9999-12-31、date データの範囲は 0001-01-01 ～ 9999-12-31 です。  
+ すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md). datetime データの範囲は 1753-01-01 から 9999-12-31、date データの範囲は 0001-01-01 から 9999-12-31 です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,8 +78,8 @@ ISDATE ( expression )
 |NULL|0|  
 |「[データ型](../../t-sql/data-types/data-types-transact-sql.md)」に列挙されているデータ型のうち、文字列、Unicode 文字列、日付/時刻以外のデータ型カテゴリの値。|0|  
 |**text**、**ntext**、または **image** データ型の値。|0|  
-|3 を超える秒の有効桁数のスケールを持つ任意の値 (.0000 ～。 0000000... n)。 ISDATE は、*expression* が **datetime2** 値の場合は 0 を返し、*expression* が有効な **datetime** 値の場合は 1 を返します。|0|  
-|有効な日付と無効な値を組み合わせた値 (1995-10-1a など)。|0|  
+|3 を超える秒の有効桁数のスケールを持つ任意の値 (.0000 から 0000000...n)。 ISDATE は、*expression* が **datetime2** 値の場合は 0 を返し、*expression* が有効な **datetime** 値の場合は 1 を返します。|0|  
+|有効な日付と無効な値を組み合わせた任意の値 (1995-10-1a など)。|0|  
   
 ## <a name="examples"></a>使用例  
   

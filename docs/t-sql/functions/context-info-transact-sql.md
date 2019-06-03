@@ -19,17 +19,17 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - session context information [SQL Server]
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a45a442eec592d70eb776e68c5bcc7fed50a8683
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 014dee25c2e2237f7c9b72b79f78aa2a0abb4e47
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713500"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948147"
 ---
-# <a name="contextinfo--transact-sql"></a>CONTEXT_INFO (TRANSACT-SQL)
+# <a name="contextinfo--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 この関数は、現在のセッションまたはバッチに設定された、または [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) ステートメントを使用して派生した **context_info** 値を返します。
@@ -46,7 +46,7 @@ CONTEXT_INFO()
 **context_info** 値。
   
 **Context_info** は設定されませんでした: 場合
--    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
 -   * * -[!INCLUDE[ssSDS](../../includes/sssds-md.md)] で  、一意のセッション固有 GUID.* * を返します。  
   
 ## <a name="remarks"></a>Remarks  

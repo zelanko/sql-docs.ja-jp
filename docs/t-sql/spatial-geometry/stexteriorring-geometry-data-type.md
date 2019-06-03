@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STExteriorRing (geometry Data Type)
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f90bcc20761f3fb3ac4aa7c4ec5e32bd715da176
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 808651c889985586e28132694f02b3f4c35b39f2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763990"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938930"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47763990"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型: **LineString**  
+ Open Geospatial Consortium (OGC) の型:**LineString**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスが多角形ではない場合、このメソッドは **NULL** を返します。  

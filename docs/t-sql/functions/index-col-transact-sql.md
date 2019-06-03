@@ -19,15 +19,15 @@ helpviewer_keywords:
 - column names [SQL Server]
 - names [SQL Server], columns
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59846b76c9beb1740f1cd21f62584160ebbfef0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dbf3bbd011838bc9c000f271317c86623251896
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794980"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946344"
 ---
 # <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  インデックスが組み込まれているスキーマの名前です。  
   
  *table_or_view_name*  
- テーブルまたはインデックス付きビューの名前です。 *table_or_view_name* 単一引用符で区切る必要があるあり、データベース名とスキーマ名で完全に修飾することができます。  
+ テーブルまたはインデックス付きビューのスキーマです。 *table_or_view_name* 単一引用符で区切る必要があるあり、データベース名とスキーマ名で完全に修飾することができます。  
   
  *index_id*  
  インデックスの ID です。 *index_ID* は **int**です。  
@@ -85,7 +85,7 @@ SELECT
 GO  
 ```  
   
- Here is the result set:  
+ 以下に結果セットを示します。  
   
 ```  
 Index Column 1      Index Column 2  

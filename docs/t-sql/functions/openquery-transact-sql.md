@@ -20,20 +20,20 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f89a979716e944a4fff4f6d3021a34c7a51973aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fd7377f622d5d986ddb7b665f4f920365d5189f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768530"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944898"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したパススルー クエリを、指定したリンク サーバーで実行します。 このサーバーは OLE DB データ ソースです。 OPENQUERY は、テーブル名と同じように、クエリの FROM 句で参照できます。 また、INSERT、UPDATE、または DELETE ステートメントの対象テーブルとして参照することもできます。 これは OLE DB プロバイダーの機能により制限されます。 クエリでは複数の結果セットが返されることがありますが、OPENQUERY では最初の 1 つのみが返されます。  
+  指定されたパススルー クエリを、指定されたリンク サーバーで実行します。 このサーバーは OLE DB データ ソースです。 OPENQUERY は、テーブル名と同じように、クエリの FROM 句で参照できます。 OPENQUERY は、INSERT、UPDATE、または DELETE ステートメントの対象のテーブルとしても参照できます。 これは OLE DB プロバイダーの機能により制限されます。 クエリでは複数の結果セットが返されることがありますが、OPENQUERY では最初の 1 つのみが返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,15 +45,15 @@ OPENQUERY ( linked_server ,'query' )
   
 ## <a name="arguments"></a>引数  
  *linked_server*  
- リンク サーバーの名前を表す識別子を指定します。  
+ リンク サーバーの名前を表す識別子です。  
   
  **'** *query* **'**  
- リンク サーバーで実行するクエリ文字列を指定します。 文字列の最大長は 8 KB です。  
+ リンク サーバーで実行されるクエリ文字列です。 文字列の最大長は 8 KB です。  
   
 ## <a name="remarks"></a>Remarks  
- OPENQUERY の引数に変数は指定できません。  
+ OPENQUERY は、その引数で変数を受け入れません。  
   
- OPENQUERY を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできません。 ただし、4 つの要素で構成される名前を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできます。 例 :  
+ OPENQUERY を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできません。 ただし、4 つの要素で構成される名前を使用して、リンク サーバーで拡張ストアド プロシージャを実行することはできます。 例:  
   
 ```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
@@ -66,7 +66,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-executing-an-update-pass-through-query"></a>A. UPDATE パススルー クエリを実行する  
+### <a name="a-executing-an-update-pass-through-query"></a>A. B. UPDATE パススルー クエリを実行する  
  次の例では、例 A で作成したリンク サーバーに対して、`UPDATE` パススルー クエリを使用します。  
   
 ```sql  

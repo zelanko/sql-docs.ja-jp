@@ -18,15 +18,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], ENCRYPTBYKEY function
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 75dbab8f45c8a617ed0a98829082170dcf85e310
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: e0883513725000588fe53ee31939f331902ba147
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53265963"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948874"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  *cleartext*. **uniqueidentifier** の暗号化に使用する、キーの GUID です。  
   
  '*cleartext*'  
- キーで暗号化されるデータを指定します。  
+ キーを使用して暗号化するデータです。  
   
  @cleartext  
- キーで暗号化されるデータを含む **nvarchar**、**char**、**varchar****binary**、**varbinary**、または **nchar** 型の変数です。  
+ キーで暗号化されるデータを含む **nvarchar**、**char**、**varchar** **binary**、**varbinary**、または **nchar** 型の変数です。  
   
  *add_authenticator*  
  *cleartext* と共に認証子を暗号化するかどうかを指定します。 認証子を使用する場合は 1 にする必要があります。 **int**.  
@@ -76,9 +76,9 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ## <a name="remarks"></a>Remarks  
  EncryptByKey では対称キーが使用されます。 このキーは開いている必要があります。 対称キーが現在のセッションで既に開いている場合、クエリのコンテキストで再度開く必要はありません。  
   
- 認証子を使用すると、暗号化されたフィールド全体が外部から置き換えられるのを防ぐことができます。 次の給与データの表を例として説明します。  
+ 認証子を使用すると、暗号化されたフィールド全体が外部から置き換えられるのを防ぐことができます。 たとえば、次の給与データのテーブルについて考えてみます。  
   
-|従業員 ID (Employee_ID)|役職 (Standard_Title)|基本給 (Base_Pay)|  
+|従業員 ID (Employee_ID)|Standard_Title|Base_Pay|  
 |------------------|---------------------|---------------|  
 |345|事務アシスタント|Fskj%7^edhn00|  
 |697|最高財務責任者|M0x8900f56543|  

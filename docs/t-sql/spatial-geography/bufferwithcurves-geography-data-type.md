@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: afcd0b1256b42f6f89d979de1e2178d566981a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695800"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937322"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47695800"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  次の条件を満たす場合、**ArgumentException** がスローされます。  
@@ -61,7 +61,7 @@ ms.locfileid: "47695800"
 |distance 値|型ディメンション|返される空間の種類|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|0 または 1|空の **GeometryCollection** インスタンス|  
-|distance \< 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス<br /><br /> 注: 負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります。|
+|distance \< 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス<br /><br /> 注:負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります|
 |distance = 0|すべてのディメンション|呼び出し元の **geography** インスタンスのコピー|  
 |distance > 0|すべてのディメンション|**CurvePolygon** または **GeometryCollection** インスタンス|  
   

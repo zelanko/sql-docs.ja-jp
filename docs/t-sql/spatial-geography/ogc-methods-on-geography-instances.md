@@ -10,22 +10,22 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 989dd7b7fc73a7ec18a44b9ac30e58f060fe5b1f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2938e8d6c8bf0f3aebfbbadc0bbaa4f8ded57161
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511225"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935884"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>geography インスタンスの OGC メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**geography** インスタンスに対して Open Geospatial Consortium (OGC) メソッドをサポートしています。  
   
- OGC 仕様の詳細については、以下を参照してください。  
+ OGC 仕様の詳細については、以下のリソースを参照してください。  
   
  [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
   

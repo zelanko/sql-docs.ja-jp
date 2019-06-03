@@ -20,16 +20,16 @@ helpviewer_keywords:
 - YEAR function [SQL Server]
 - dateparts [SQL Server], year
 ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28d7df812fb8d945bfb87bb7de59f52b67f0037d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a8c6728692e27a1af301e28f58c9f3640d5eb48
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818537"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944919"
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ YEAR ( date )
  *日付*には、時刻部分のみが含まれる、戻り値は基準年を 1900 年にです。  
   
 ## <a name="examples"></a>使用例  
- 次のステートメントでは、`2010` が返されます。 これは、年を表す値です。  
+ 次のステートメントでは、`2010` が返されます。 これは年の数値です。  
   
 ```  
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  

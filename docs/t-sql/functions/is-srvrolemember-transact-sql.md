@@ -17,15 +17,15 @@ helpviewer_keywords:
 - IS_SRVROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 43087fe361e611d3cca013bdbe9aa222a5fc99d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ddd94836db559fe56cf6b7443b7dac69643a5a2
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748080"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942810"
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |NULL|*role* または *login* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
 ## <a name="remarks"></a>Remarks  
- 現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断する UseIS_SRVROLEMEMBER です。  
+ 現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断するには IS_SRVROLEMEMBER を使用します。  
   
  Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスが許可または拒否されている場合を除き、**NULL** を返します。  
   

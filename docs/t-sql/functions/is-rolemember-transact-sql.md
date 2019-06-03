@@ -17,21 +17,21 @@ helpviewer_keywords:
 - IS_ROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38be2330c039af77dd00d694aac2b59471d12785
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc51f5f2d064e5a9cfeeb709cc3649daaaf4c736
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824000"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942780"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  指定されたデータベース プリンシパルが、指定されたデータベース ロールのメンバーであるかどうかを示します。  
+  データベース プリンシパルが指定されたデータベース ロールのメンバーであるかどうかを示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  確認するデータベース ロールの名前を指定します。 *role* は **sysname**です。  
   
  **'** *database_principal* **'**  
- 確認するデータベース ユーザー、データベース ロール、またはアプリケーション ロールの名前を指定します。 *database_principal* は **sysname**, 、既定値は NULL です。 値を指定しない場合、結果は現在の実行コンテキストに基づきます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
+ 確認するデータベース ユーザー、データベース ロール、またはアプリケーション ロールの名前です。 *database_principal* は **sysname**, 、既定値は NULL です。 値を指定しない場合、結果は現在の実行コンテキストに基づきます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  

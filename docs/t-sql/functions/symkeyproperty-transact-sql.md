@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - SYMKEYPROPERTY
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36e608b8167a5cd42a0f7c32035ad822eab461d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e300fe8e5ff6e0818396d0764ff33172df55354d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681790"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948684"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
   
 ## <a name="arguments"></a>引数  
  *Key_ID*  
- データベース内の対称キーの Key_ID を指定します。 キー名しかわからない場合に Key_ID を調べるには、SYMKEY_ID を使用します。 *Key_ID* は、**int** データ型です。  
+ データベース内の対称キーの Key_ID を指定します。 キー名しかわからない場合に Key_ID を見つけるには、SYMKEY_ID を使用します。 *Key_ID* は、**int** データ型です。  
   
  **'** algorithm_desc **'**  
  出力が対称キーのアルゴリズムの説明を返すように指定します。 EKM モジュールから作成された対称キーに対してのみ使用できます。  
@@ -50,7 +50,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
  **sql_variant**  
   
 ## <a name="permissions"></a>アクセス許可  
- 対称キーに対する権限が必要です。呼び出し元で、対称キーに対する VIEW 権限が拒否されていないことも必要になります。  
+ 対称キーに対する何らかの権限が必要です。呼び出し元で、対称キーに対する VIEW 権限が拒否されていないことも必要になります。  
   
 ## <a name="examples"></a>使用例  
  次の例では、Key_ID が 256 の対称キーのアルゴリズムを返します。  

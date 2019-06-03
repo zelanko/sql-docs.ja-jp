@@ -17,16 +17,16 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a074e7ad5f443a4aaac722b3c15383b6c0078e6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 558d1a1f3d5d0cbb204c5dfd80833ce82a02d0c0
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756950"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945841"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +43,10 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="arguments"></a>引数  
  *string_expression*  
- 文字列またはバイナリ データ型の式を指定します。 *string_expression* 文字またはバイナリ データのいずれかを指定できます。  
+ 文字列またはバイナリ データ型の式です。 *string_expression* 文字またはバイナリ データのいずれかを指定できます。  
   
 > [!NOTE]  
->  場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)**, 、戻り値が 8,000 バイトで切り捨てられます。 8,000 バイトの場合より大きい値を返す *string_expression* 適切な大きな値のデータ型に明示的にキャストする必要があります。  
+>  場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)** , 、戻り値が 8,000 バイトで切り捨てられます。 8,000 バイトの場合より大きい値を返す *string_expression* 適切な大きな値のデータ型に明示的にキャストする必要があります。  
   
  *integer_expression*  
  **bigint** を含む、整数型の式を指定します。 場合 *であれば、任意* は負の場合、NULL が返されます。  
@@ -120,7 +120,7 @@ Varchar Column        Char Column
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C. REPLICATE を使用する  
+### <a name="c-using-replicate"></a>C: REPLICATE を使用する  
  次の例では、`ItemCode` 値の前に `0` という文字を 4 回繰り返します。  
   
 ```  

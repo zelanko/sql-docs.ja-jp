@@ -22,16 +22,16 @@ helpviewer_keywords:
 - comparing dates times [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e430a8b3555fe42377950d5176e63e7d487ff277
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 189c33c70474f3075236a22de5242de9bcda72ab
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609170"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945772"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +106,7 @@ DATENAME ( datepart , date )
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>date 引数に存在しない datepart を指定した場合に返される既定値  
 *date* 引数のデータ型に *datepart* が指定されていない場合、`DATENAME` は、*date* 引数にリテラルが含まれる場合にのみ、その *datepart* の既定値を返します。
   
-* * など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。`DATENAME` は `1900, January, 1, 1, Monday` を返します。
+など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。`DATENAME` は `1900, January, 1, 1, Monday` を返します。
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  
@@ -116,7 +116,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-*date* が変数またはテーブル列として指定され、その変数または列のデータ型に *datepart* が指定されていない場合、`DATENAME` はエラー 9810 を返します。 この例では、変数 *@t* に **time** データ型があります。 **time** データ型の日付部分の年度が無効なため、この例は失敗します。
+*date* が変数またはテーブル列として指定され、その変数または列のデータ型に *datepart* が指定されていない場合、`DATENAME` はエラー 9810 を返します。 この例では、変数 *\@t* に **time** データ型があります。 **time** データ型の日付部分の年度が無効なため、この例は失敗します。
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

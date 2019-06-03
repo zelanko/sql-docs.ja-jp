@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText (geometry Data Type)
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 8ec4adefe4696312a499cf622bb5f20e4b71900f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62526fb80056ea9074f562d304e5d511e898953e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632599"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938711"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- OGC の型: **LineString**  
+ OGC の型:**LineString**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  

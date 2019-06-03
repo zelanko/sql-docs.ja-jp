@@ -20,16 +20,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: df3ae48887370bc7b0339b86e32c31b9ce6d360b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571391"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944890"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  データ ソースにアクセスするときに使用される、OLE DB プロバイダーの PROGID として登録されている名前を指定します。 *provider_name* のデータ型は **char** であり、既定値はありません。  
   
  *init_string*  
- 接続先のプロバイダーの IDataInitialize インターフェイスに渡される接続文字列を指定します。 プロバイダー文字列の構文は、**'**_keyword1_=_value_ **;** _keyword2_=_value_**'** のように、セミコロンで区切ったキーワードと値のペアに基づいています。  
+ 接続先のプロバイダーの IDataInitialize インターフェイスに渡される接続文字列を指定します。 プロバイダー文字列の構文は、 **'** _keyword1_=_value_ **;** _keyword2_=_value_ **'** のように、セミコロンで区切ったキーワードと値のペアに基づいています。  
   
  プロバイダーでサポートされる、特定のキーワードと値の組み合わせについては、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK を参照してください。 このドキュメントには、基本構文が定義されています。 次の表は、*init_string* 引数で最もよく使われるキーワードの一覧です。  
   
@@ -58,17 +58,17 @@ OPENDATASOURCE ( provider_name, init_string )
 |-------------|---------------------|----------------------------------|  
 |[データ ソース]|DBPROP_INIT_DATASOURCE|接続先のデータ ソースの名前。 この値の解釈は、プロバイダーによって異なります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの場合、この値はサーバーの名前を表します。 Jet OLE DB プロバイダーの場合、この値は .mdb ファイルまたは .xls ファイルのフル パスを表します。|  
 |場所|DBPROP_INIT_LOCATION|接続先のデータベースの位置。|  
-|Extended Properties|DBPROP_INIT_PROVIDERSTRING|プロバイダー固有の接続文字列。|  
-|Connect timeout|DBPROP_INIT_TIMEOUT|接続試行が失敗する基準となるタイムアウト値。|  
+|拡張プロパティ|DBPROP_INIT_PROVIDERSTRING|プロバイダー固有の接続文字列。|  
+|接続のタイムアウト|DBPROP_INIT_TIMEOUT|接続試行が失敗する基準となるタイムアウト値。|  
 |[ユーザー ID]|DBPROP_AUTH_USERID|接続に使用されるユーザー ID。|  
 |パスワード|DBPROP_AUTH_PASSWORD|接続に使用されるパスワード。|  
 |Catalog|DBPROP_INIT_CATALOG|データ ソースに接続するときの初期カタログまたは既定のカタログの名前。|  
-|Integrated Security|DBPROP_AUTH_INTEGRATED|Windows 認証を指定する SSPI。|  
+|Integrated Security|DBPROP_AUTH_INTEGRATED|Windows 認証を指定する SSPI|  
   
 ## <a name="remarks"></a>Remarks  
- OPENDATASOURCE は、OLE DB データ ソースからリモート データにアクセスするときに使用できます。ただしこの場合、指定したプロバイダーに対して DisallowAdhocAccess レジストリ オプションが明示的に 0 に設定されており、Ad Hoc Distributed Queries 詳細構成オプションが有効になっている必要があります。 これらのオプションが設定されていない場合は、既定でアドホック接続は許可されません。  
+ OPENDATASOURCE は、OLE DB データ ソースからリモート データにアクセスするときに使用できます。ただしこの場合、指定したプロバイダーに対して DisallowAdhocAccess レジストリ オプションが明示的に 0 に設定されており、Ad Hoc Distributed Queries 詳細構成オプションが有効になっている必要があります。 これらのオプションが設定されていない場合は、既定でアドホック アクセスは許可されません。  
   
- OPENDATASOURCE 関数は、[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文内のリンク サーバー名と同じ位置で使用できます。 つまり、この関数は、4 つの要素で構成される名前の先頭で、SELECT、INSERT、UPDATE、および DELETE ステートメント内のテーブル名やビュー名、または EXECUTE ステートメント内のリモート ストアド プロシージャを参照する要素として使用できます。 リモート ストアド プロシージャを実行する場合、OPENDATASOURCE では別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを参照する必要があります。 OPENDATASOURCE の引数に変数は指定できません。  
+ OPENDATASOURCE 関数は、[!INCLUDE[tsql](../../includes/tsql-md.md)] 構文内のリンク サーバー名と同じ位置で使用できます。 つまり、OPENDATASOURCE は、4 つの要素で構成される名前の先頭で、SELECT、INSERT、UPDATE、および DELETE ステートメント内のテーブル名やビュー名、または EXECUTE ステートメント内のリモート ストアド プロシージャを参照する要素として使用できます。 リモート ストアド プロシージャを実行する場合、OPENDATASOURCE では別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを参照する必要があります。 OPENDATASOURCE の引数に変数は指定できません。  
   
  OPENROWSET 関数と同様に、OPENDATASOURCE では、あまり頻繁にアクセスされない OLE DB データ ソースだけを参照してください。 頻繁にアクセスされるデータ ソースに対してはリンク サーバーを定義します。 OPENDATASOURCE でも OPENROWSET でも、リンク サーバー定義のすべての機能は提供されず、たとえばセキュリティを管理したりカタログ情報に対してクエリを実行したりすることはできません。 すべての接続情報は、パスワードを含め、OPENDATASOURCE を呼び出すたびに指定する必要があります。  
   
@@ -83,7 +83,7 @@ OPENDATASOURCE ( provider_name, init_string )
  すべてのユーザーが OPENDATASOURCE を実行できます。 リモート サーバーへの接続に使用される権限は、接続文字列によって決まります。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、サーバー `Payroll` 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `London` インスタンスにアドホック接続を作成し、`AdventureWorks2012.HumanResources.Employee` テーブルをクエリします。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。  
+ 次の例では、サーバー `London` 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `Payroll` インスタンスにアドホック接続を作成し、`AdventureWorks2012.HumanResources.Employee` テーブルをクエリします。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。  
   
 ```  
 SELECT *  

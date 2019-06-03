@@ -16,16 +16,16 @@ helpviewer_keywords:
 - uniqueidentifier data type
 - NEWID function
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6d789c1841681ca2126de8e90baf62e5fa072bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d411af5fe27f012884f44e18fd065091237b394f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759764"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943003"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -66,7 +66,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
 ```  
   
 > [!NOTE]  
->  NEWID によって返される値は、コンピューターごとに異なります。 ここに示す値はあくまでも 1 つの例です。  
+>  NEWID によって返される値は、コンピューターごとに異なります。 この数値は、説明のためだけに示しています。  
   
 ### <a name="b-using-newid-in-a-create-table-statement"></a>B. CREATE TABLE ステートメント内で NEWID を使用する  
   

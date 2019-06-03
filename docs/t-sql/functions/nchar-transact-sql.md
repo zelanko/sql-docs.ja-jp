@@ -16,16 +16,16 @@ helpviewer_keywords:
 - NCHAR function
 - Unicode [SQL Server], NCHAR function
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 65ad272ed3b5b3bc83e9d6035d693342482dcf05
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636441"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944187"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,16 +42,16 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>引数  
  *integer_expression*  
- データベースの照合順序に[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) フラグが含まれない場合、これは 0 から 65535 (0 から 0xFFFF) までの正の整数です。 この範囲外の値を指定すると、NULL が返されます。 補助文字の詳細については、次を参照してください。 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)です。  
+ データベースの照合順序に[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) フラグが含まれない場合、これは 0 から 65535 (0 から 0xFFFF) までの正の整数です。 この範囲外の値を指定すると NULL が返されます。 補助文字の詳細については、次を参照してください。 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)です。  
   
- データベースの照合順序が SC フラグをサポートする場合、これは 0 から 1114111 (0 から 0x10FFFF) までの正の整数です。 この範囲外の値を指定すると、NULL が返されます。  
+ データベースの照合順序が SC フラグをサポートする場合、これは 0 から 1114111 (0 から 0x10FFFF) までの正の整数です。 この範囲外の値を指定すると NULL が返されます。  
   
 ## <a name="return-types"></a>戻り値の型  
- 既定のデータベースの照合順序が補助文字をサポートしない場合は **nchar(1)**。  
+ 既定のデータベースの照合順序が補助文字をサポートしない場合は **nchar(1)** 。  
   
- 既定のデータベースの照合順序が補助文字をサポートする場合は **nvarchar(2)**。  
+ 既定のデータベースの照合順序が補助文字をサポートする場合は **nvarchar(2)** 。  
   
- パラメーター *integer_expression* が 0 ～ 0 xFFFF の範囲内にある場合、1 つの文字だけが返されます。 値が大きい場合、NCHAR は対応するサロゲート ペアを返します。 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` を使用してサロゲート ペアを作成しないでください。 代わりに、補助文字をサポートするデータベース照合順序を使用し、サロゲート ペアの Unicode コード ポイントを指定します。 次の例では、サロゲート ペアを作成する古いスタイルの方法と、Unicode コード ポイントを指定する推奨される方法の両方を示します。  
+ パラメーター *integer_expression* が 0 ～ 0 xFFFF の範囲内にある場合、1 つの文字だけが返されます。 値が大きい場合、NCHAR から対応するサロゲート ペアが返されます。 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` を使用してサロゲート ペアを作成しないでください。 代わりに、補助文字をサポートするデータベースの照合順序を使用して、サロゲート ペアの Unicode コードポイントを指定します。 次の例では、サロゲート ペアを構築する古いスタイルの方法と Unicode コードポイントを指定する推奨される方法の両方を示しています。  
   
 ```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  

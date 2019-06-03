@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geography
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f6db4d1090d464a7b2783b3494c0b478060faf7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bbe4c8cf9f6084282f37353aede357d5086ddc6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698720"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937682"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47698720"
   
 |戻り値|[説明]|  
 |------------------|-----------------|  
-|24400|有効です|  
+|24400|有効|  
 |24401|無効です。原因は不明です。|  
 |24402|ポイント {0} がこの型のオブジェクトで無効な孤立点であるため無効です。|  
 |24403|多角形のエッジの一部のペアが重なり合っているため無効です。|  

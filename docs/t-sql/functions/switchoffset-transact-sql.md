@@ -21,16 +21,16 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22431979c986ddab8bbcd4be423e799d5c9679fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f28eaf5d8b6e0c3ef06e739d97c4e20c565ebc4e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658340"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948187"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
  **datetimeoffset(n)** 値に解決可能な式を指定する。  
   
  *time_zone*  
- [+|-]TZH:TZM 形式の文字列、またはタイム ゾーン オフセットを表す (分の) 符号付き整数を指定します。夏時間は認識されて調整されているものと想定されます。  
+ [+|-]TZH:TZM 形式の文字列か、またはタイムゾーンのオフセットを表す符号付き整数 (分) です。夏時間対応であり調整済みと見なされます。  
   
 ## <a name="return-type"></a>戻り値の型  
  **datetimeoffset** の小数部の有効桁数を持つ、 *DATETIMEOFFSET* 引数。  
@@ -62,7 +62,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
  SWITCHOFFSET を使用して、更新、 **datetimeoffset** 列です。  
   
- SWITCHOFFSET を GETDATE() 関数と共に使用すると、クエリの実行速度が遅くなる場合があります。 これは、クエリ オプティマイザーが datetime 値のカーディナリティを正確に推定できないためです。 この問題を解決するには、OPTION (RECOMPILE) クエリ ヒントを使用し、次に同じクエリが実行されるときにクエリ オプティマイザーによってクエリ プランが強制的に再コンパイルされるようにします。 その後、オプティマイザーでは、カーディナリティの推定が正確になり、より効率的なクエリ プランが生成されます。 詳細については、RECOMPILE クエリ ヒント、を参照してください。 [クエリ ヒント (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ GETDATE() 関数と一緒に SWITCHOFFSET を使用すると、クエリの実行速度が遅くなる場合があります。 これは、クエリ オプティマイザーが datetime 値のカーディナリティを正確に推定できないためです。 この問題を解決するには、OPTION (RECOMPILE) クエリ ヒントを使用し、次に同じクエリが実行されるときにクエリ オプティマイザーによってクエリ プランが強制的に再コンパイルされるようにします。 そうすると、オプティマイザーによって、正確なカーディナリティの推定値が取得され、より効率的なクエリ プランが生成されます。 詳細については、RECOMPILE クエリ ヒント、を参照してください。 [クエリ ヒント (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   

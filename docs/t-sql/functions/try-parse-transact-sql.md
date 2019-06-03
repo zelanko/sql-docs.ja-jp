@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9968c95f42d2256054d472b53d5c9039c26c1865
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785558"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946888"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  式の結果を、要求されたデータ型に変換して返します。キャストに失敗した場合は、NULL を返します。  
   
 ## <a name="remarks"></a>Remarks  
- TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 一定のパフォーマンス オーバーヘッドが文字列値を解析中に注意してください。  
+ TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 文字列値の解析には一定のパフォーマンス オーバーヘッドがあることに注意してください。  
   
  TRY_PARSE は、.NET Framework の共通言語ランタイム (CLR) の存在に依存しています。  
   
@@ -76,8 +76,8 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |数値|Decimal|Decimal|NumberStyles.Number|  
 |数値|NUMERIC|Decimal|NumberStyles.Number|  
 |数値|FLOAT|Double|NumberStyles.Float|  
-|数値|REAL|Single|NumberStyles.Float|  
-|数値|smallmoney|Decimal|NumberStyles.Currency|  
+|数値|REAL|単一|NumberStyles.Float|  
+|数値|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |数値|money|Decimal|NumberStyles.Currency|  
 |日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -95,7 +95,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |us_english|English|1033|en-US|  
 |Deutsch|German|1031|de-DE|  
 |Français|French|1036|fr-FR|  
-|日本語|Japanese|1041|ja-JP|  
+|Japanese|Japanese|1041|ja-JP|  
 |Dansk|Danish|1030|da-DK|  
 |Español|Spanish|3082|es-ES|  
 |Italiano|Italian|1040|it-IT|  
@@ -104,16 +104,16 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Português|Portuguese|2070|pt-PT|  
 |Suomi|Finnish|1035|fi|  
 |Svenska|Swedish|1053|sv-SE|  
-|Čeština|Czech|1029|Cs-CZ|  
+|čeština|Czech|1029|Cs-CZ|  
 |magyar|Hungarian|1038|Hu-HU|  
 |polski|Polish|1045|Pl-PL|  
 |română|Romanian|1048|Ro-RO|  
 |hrvatski|Croatian|1050|hr-HR|  
 |slovenčina|Slovak|1051|Sk-SK|  
 |slovenski|Slovenian|1060|Sl-SI|  
-|ΕΛΛΗΝΙΚΆ|Greek|1032|El-GR|  
-|БЪЛГАРСКИ|Bulgarian|1026|bg-BG|  
-|РУССКИЙ|Russian|1049|Ru-RU|  
+|ελληνικά|Greek|1032|El-GR|  
+|български|Bulgarian|1026|bg-BG|  
+|русский|Russian|1049|Ru-RU|  
 |Türkçe|Turkish|1055|Tr-TR|  
 |British|British English|2057|en-GB|  
 |eesti|Estonian|1061|Et-EE|  
@@ -123,7 +123,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |繁體中文|Traditional Chinese|1028|zh-TW|  
 |한국어|Korean|1042|Ko-KR|  
 |简体中文|Simplified Chinese|2052|zh-CN|  
-|Arabic|Arabic|1025|ar-SA|  
+|アラビア語|アラビア語|1025|ar-SA|  
 |ไทย|Thai|1054|Th-TH|  
   
 ## <a name="examples"></a>使用例  

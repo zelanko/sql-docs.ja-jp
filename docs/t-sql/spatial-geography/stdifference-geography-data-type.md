@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDifference (geography Data Type)
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c4dc5bcc6afb4928004dcf70e353124a2b6f17a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5d32ef391dee55f0b651c6729ccd5e2924e9f3c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644610"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937082"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47644610"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  このメソッドは、このインスタンスに対蹠点が含まれている場合、**ArgumentException** をスローします。  

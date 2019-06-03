@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Point method
 - Point (geography Data Type)
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4de164536b75684d8c019a9f93db4a9b21415650
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddd506ca3e78dd4ad5a12cfb108ca539e094cb4e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759810"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937998"
 ---
 # <a name="point-geography-data-type"></a>Point (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Point ( Lat, Long, SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 > [!NOTE]  
 >  Point (geography データ型) メソッドの引数は、WKT と比較して元に戻された座標を持ちます。  

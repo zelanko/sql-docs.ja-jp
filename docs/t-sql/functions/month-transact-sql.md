@@ -22,16 +22,16 @@ helpviewer_keywords:
 - dates [SQL Server], MONTH
 - MONTH function [SQL Server]
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78bf0f01db1553f4cb80e26df3385481d4a84271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9636e4c00e56545445c33f8108fac5ac0e8876c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774060"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944199"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ MONTH ( date )
  *日付*に時刻部分のみが含まれている場合、戻り値は 1、基本の月です。  
   
 ## <a name="examples"></a>使用例  
- 次のステートメントでは、`4` が返されます。 これは、月を表す値です。  
+ 次のステートメントでは、`4` が返されます。 これは月の数値です。  
   
 ```  
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
@@ -74,7 +74,7 @@ SELECT YEAR(0), MONTH(0), DAY(0);
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、`4` が返されます。 これは、月を表す値です。  
+ 次の例では、`4` が返されます。 これは月の数値です。  
   
 ```  
 -- Uses AdventureWorks  

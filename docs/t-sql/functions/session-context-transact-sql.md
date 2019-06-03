@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - SESSION_CONTEXT function
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: de4b1ac25cfefe1df9e8e3a0db8d8019d63763bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d875024e6f227c6ba0d65ab0346092c02e860385
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404437"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945240"
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (TRANSACT-SQL)
+# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  現在のセッションのコンテキストでは、指定したキーの値を返します。 値が、を使用して設定 [sp_set_session_context (& a) #40 です。TRANSACT-SQL と #41; ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)プロシージャです。  
+  現在のセッションのコンテキストで指定されたキーの値を返します。 値が、を使用して設定 [sp_set_session_context (& a) #40 です。TRANSACT-SQL と #41; ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)プロシージャです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,14 +39,14 @@ SESSION_CONTEXT(N'key')
 ```  
   
 ## <a name="arguments"></a>引数  
- ' key'  
+ 'key'  
  取得される値のキー (sysname 型)。  
   
 ## <a name="return-type"></a>戻り値の型  
  **sql_variant**  
   
 ## <a name="return-value"></a>戻り値  
- そのキーの値が設定されていない場合は、セッションのコンテキスト、または NULL で指定されたキーに関連付けられている値です。  
+ セッションのコンテキストで指定されたキーに関連付けられている値か、そのキーの値が設定されていない場合は NULL です。  
   
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは、そのセッションのセッションのコンテキストを読み取ることができます。  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEnvelope (geometry Data Type)
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9abd3e8e48e38916da9b5cb7cc3293b27ad66659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: beb560d41f2fdd58382afbd6374da9869225ddb2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663150"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938983"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ STEnvelope ( )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="examples"></a>使用例  
  `STGeomFromText()` を使用して `LineString` インスタンスをテキストから (0,0) ～ (2,3) の範囲で作成し、`STEnvelope()` を使用して `LineString` に外接する四角形を返す例を次に示します。  

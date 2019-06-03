@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2019
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: c15cff20feb4fd3f9ef5057babaad884de022975
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502860"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943294"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -450,8 +450,8 @@ ALTER COLUMN: 名前指定された列に変更を加えるように指定しま
 
 **text**、**ntext**、**image** のデータ型の列は、次の方法でのみ変更できます。
 
-- **text** を **varchar(max)**、**nvarchar(max)**、または **xml** へ
-- **ntext** を **varchar(max)**、**nvarchar(max)**、または **xml** へ
+- **text** を **varchar(max)** 、**nvarchar(max)** 、または **xml** へ
+- **ntext** を **varchar(max)** 、**nvarchar(max)** 、または **xml** へ
 - **image** を **varbinary(max)** へ
 
 一部のデータ型を変更すると、データが変更される可能性があります。 たとえば、**nchar** または **nvarchar** の列を、**char** または **varchar** に変更すると、拡張文字の変換が発生する場合があります。 詳しくは、「[CAST および CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。 列の有効桁数または小数点以下桁数を減らすと、データが切り捨てられる可能性があります。
@@ -469,7 +469,7 @@ ALTER COLUMN: 名前指定された列に変更を加えるように指定しま
 
 *column_name*: 変更、追加、または削除する列の名前です。 *column_name* の最大値は 128 文字です。 新しい列の場合、**timestamp** データ型を使って作成した列の *column_name* は省略できます。 **timestamp** データ型の列に *column_name* を指定していない場合は、**timestamp** という名前が使われます。
 
-[ _type\_schema\_name_**.** ] _type\_name_: 変更する列の新しいデータ型、または追加する列のデータ型。 パーティション テーブルの既存の列に *type_name* を指定することはできません。 *type_name* には次の型のいずれかを指定できます。
+[ _type\_schema\_name_ **.** ] _type\_name_: 変更する列の新しいデータ型、または追加する列のデータ型。 パーティション テーブルの既存の列に *type_name* を指定することはできません。 *type_name* には次の型のいずれかを指定できます。
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型。
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型に基づく別名データ型。 CREATE TYPE ステートメントを使って別名データ型を作成した後、それらをテーブル定義で使用できます。
@@ -673,7 +673,7 @@ OFF: テーブル ロックは、インデックス操作の期間に適用さ�
 > [!NOTE]
 > オンラインでのインデックス操作は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 詳細については、[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)に関するセクションと [SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)に関するページを参照してください。
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** } **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** } **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 クラスター化インデックスのリーフ レベルに現在あるデータ行を移動する場所を指定します。 テーブルは、新しい場所に移動されます。 このオプションは、クラスター化インデックスを作成する制約のみに適用されます。
 
@@ -698,12 +698,12 @@ ALL: テーブル内のすべてのトリガーが有効または無効になる
 
 変更の追跡を有効にするには、テーブルに主キーが必要です。
 
-WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**
+WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)** 
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で追跡するかどうか、どの追跡対象列の変更が更新されたかを指定します。 既定値は OFF です。
 
-SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 次のいずれかの方法で、データのブロックを切り替えます。
 
@@ -727,7 +727,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 用およびバージョン V12 より前の SQL Database 用に構築された非クラスター化列ストア インデックスは、読み取り専用形式でした。 あらゆる PARTITION 操作を実行する前に、非クラスター化列ストア インデックスを現在の形式に再構築する必要があります (これは更新可能です)。
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** | **"** NULL **"** }**)**
+SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)** 
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] は `FILESTREAM` をサポートしていません。
 
 FILESTREAM データの格納場所を指定します。
@@ -746,11 +746,11 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . h
 
 テーブルに関するシステムのバージョン管理を無効または有効にします。 テーブルのシステム バージョン管理を有効にするために、システムでは、システム バージョン管理のためのデータ型、null 値許容制約、および主キー制約の要件が満たされていることを確認します。 HISTORY_TABLE 引数を使用しない場合、システムによって現在のテーブルのスキーマに一致する履歴テーブルが生成され、2 つのテーブル間のリンクが作成され、システムが現在のテーブルにある各レコードの履歴を履歴テーブルに記録できるようになります。 この履歴テーブルの名前は `MSSQL_TemporalHistoryFor<primary_table_object_id>` になります。 HISTORY_TABLE 引数を使ってリンクを作成し、既存の履歴テーブルを使用する場合、システムにより現在のテーブルと、指定したテーブルの間のリンクが作成されます。 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを行うよう選択できます。 このデータの整合性チェックにより、既存のレコードが重複しないようになります。 既定ではデータの整合性チェックを実行します。 詳細については、「 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)」を参照してください。
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
+HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 テンポラル テーブルに履歴データ用の有限または無限のリテンション期間を指定します。 省略すると、無限のリテンション期間が使用されます。
 
-SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**
+SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)** 
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
 許可されるテーブル ロックのエスカレーション方法を指定します。
@@ -929,7 +929,7 @@ ALTER TABLE で指定した変更はすぐに実装されます。 変更でテ�
 
 既存の行はメタデータに格納された値を参照しますが、新しい行が挿入され、列に別の値が指定されない場合、既定値はその行に格納されます。 メタデータに格納された既定値は、行が更新されるか (UPDATE ステートメントで実際の列が指定されなくても)、テーブルまたはクラスター化インデックスが再構築された場合、既存の行に移動されます。
 
-型 **varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、**text**、**ntext**、**image**、**hierarchyid**、**geometry**、**geography**、または CLR UDTS の列をオンライン操作で追加することはできません。 行の最大サイズが 8,060 バイトの制限を超える場合は、列をオンラインで追加することはできません。 この場合、列はオフライン操作として追加されます。
+型 **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、**text**、**ntext**、**image**、**hierarchyid**、**geometry**、**geography**、または CLR UDTS の列をオンライン操作で追加することはできません。 行の最大サイズが 8,060 バイトの制限を超える場合は、列をオンラインで追加することはできません。 この場合、列はオフライン操作として追加されます。
 
 ## <a name="parallel-plan-execution"></a>並列プランの実行
 

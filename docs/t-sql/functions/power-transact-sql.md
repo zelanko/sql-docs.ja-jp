@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - POWER function
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0003102d607cac065a1168e0c5544a8db2163249
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743177"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943333"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ POWER ( float_expression , y )
 ## <a name="return-types"></a>戻り値の型  
  戻り値の型は、*float_expression* の入力型によって異なります。
  
-|入力型|の戻り値の型 : |  
+|入力型|の戻り値の型 :|  
 |----------|-----------|  
 |**float**、**real**|**float**|
 |**decimal(*p*, *s*)**|**decimal(38, *s*)**|
@@ -149,7 +149,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: POWER を使用して数値の 3 乗を返す  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D:POWER を使用して数値の 3 乗を返す  
  次の例は、`2.0` の 3 乗の `POWER` 結果を示しています。  
   
 ```  

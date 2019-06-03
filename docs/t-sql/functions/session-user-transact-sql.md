@@ -20,21 +20,21 @@ helpviewer_keywords:
 - viewing user names
 - SESSION_USER function
 ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3825cbca4f8117a67ecc515dcbc20ae3a1ebd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e14053f2168beeedcd94c198a1f5b6ca7a69b2ad
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804670"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945219"
 ---
 # <a name="sessionuser-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  現在のデータベースに含まれる現在のコンテキストのユーザー名を返します。  
+  SESSION_USER では現在のデータベースに含まれる現在のコンテキストのユーザー名が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ SESSION_USER
  **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- SESSION_USER は、DEFAULT 制約と共に CREATE TABLE または ALTER TABLE ステートメント内で使用するか、標準の関数として使用します。 SESSION_USER は、既定値が指定されていなければテーブルに挿入できます。 この関数は引数をとりません。 SESSION_USER はクエリで使用できます。  
+ SESSION_USER は、DEFAULT 制約と共に CREATE TABLE または ALTER TABLE ステートメント内で使用するか、標準の関数として使用します。 SESSION_USER は、既定値が指定されていなければテーブルに挿入できます。 この関数は引数を取りません。 SESSION_USER はクエリで使用できます。  
   
  コンテキスト切り替え後に SESSION_USER が呼び出された場合、SESSION_USER では借用したコンテキストのユーザー名が返されます。  
   
@@ -73,7 +73,7 @@ This session's current user is: Surya
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-sessionuser-with-default-constraints"></a>B. SESSION_USER を DEFAULT 制約とを使用します。  
+### <a name="b-using-sessionuser-with-default-constraints"></a>B. SESSION_USER を DEFAULT 制約と共に使用する  
  次の例では、荷物の受領記録者の名前に対し、`SESSION_USER` を `DEFAULT` 制約として使用するテーブルを作成します。  
   
 ```  
@@ -140,7 +140,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C. SESSION_USER を使用して現在のセッションのユーザー名を返す  
+### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C: SESSION_USER を使用して現在のセッションのユーザー名を返す  
  次の例では、現在のセッションのセッション ユーザーを返します。  
   
 ```  

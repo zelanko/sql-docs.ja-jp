@@ -20,16 +20,16 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 397922e30eee608cc3fc32a841d204bab3d45e2f
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2af7316e8c2530c627e93f07a5cbd05ba9bd55ab
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421349"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945275"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,10 +51,10 @@ SERVERPROPERTY ( 'propertyname' )
 |プロパティ|返される値|  
 |--------------|---------------------|  
 |BuildClrVersion|[!INCLUDE[msCoName](../../includes/msconame-md.md)] インスタンスの構築時に使用された [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語ランタイム (CLR) のバージョン。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **nvarchar(128)**|  
-|[照合順序]|サーバーの既定の照合順序の名前。<br /><br /> NULL = 無効な入力またはエラー。<br /><br /> 基本データ型: **nvarchar(128)**|  
+|照合順序|サーバーの既定の照合順序の名前。<br /><br /> NULL = 無効な入力またはエラー。<br /><br /> 基本データ型: **nvarchar(128)**|  
 |CollationID|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の ID。<br /><br /> 基本データ型: **int**|  
 |ComparisonStyle|照合順序の Windows 比較形式。<br /><br /> 基本データ型: **int**|  
-|ComputerNamePhysicalNetBIOS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが現在実行されているローカル コンピューターの NetBIOS 名。<br /><br /> フェールオーバー クラスターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスター化インスタンスでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがフェールオーバー クラスターの他のノードにフェールオーバーすると、この値が変わります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インスタンスではこの値は変わらず、MachineName プロパティと同じ値が返されます。<br /><br /> **注:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがフェールオーバー クラスター内にある場合に、フェールオーバー クラスター インスタンスの名前を取得するには、MachineName プロパティを使用します。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **nvarchar(128)**|  
+|ComputerNamePhysicalNetBIOS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが現在実行されているローカル コンピューターの NetBIOS 名。<br /><br /> フェールオーバー クラスターの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クラスター化インスタンスでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがフェールオーバー クラスターの他のノードにフェールオーバーすると、この値が変わります。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インスタンスではこの値は変わらず、MachineName プロパティと同じ値が返されます。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがフェールオーバー クラスター内にある場合に、フェールオーバー クラスター インスタンスの名前を取得するには、MachineName プロパティを使用します。<br /><br /> NULL = 無効な入力、エラー、または該当なし<br /><br /> 基本データ型: **nvarchar(128)**|  
 |のエディション|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのインストールされている製品のエディション。 機能や制限 ([SQL Server のエディション別の計算容量制限](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)など) は、このプロパティの値を使用して調べます。 このバージョン (64 ビット) には、64 ビット バージョンの[!INCLUDE[ssDE](../../includes/ssde-md.md)]が追加されています。<br /><br /> 戻り値:<br /><br /> 'Enterprise Edition'<br /><br /> 'Enterprise Edition:Core-based Licensing'<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' は、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssDW](../../includes/ssdw-md.md)] を示します<br /><br /> 基本データ型: **nvarchar(128)**|  
 |EditionID|EditionID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスについて、インストールされている製品のエディションを表します。 機能や制限 ([SQL Server のエディション別の計算容量制限](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)など) は、このプロパティの値を使用して調べます。<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition:Core-based Licensing<br /><br /> 610778273= Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905 = Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = SQL Database または SQL Data Warehouse<br /><br /> 基本データ型: **bigint** 型|  
 |EngineEdition|サーバーにインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディション。<br /><br /> 1 = Personal または Desktop Engine ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンでは使用できません)<br /><br /> 2 = Standard (Standard、Web、および Business Intelligence の場合に返されます)<br /><br /> 3 = Enterprise (Evaluation、Developer、および両方の Enterprise エディションの場合にこの値が返されます)<br /><br /> 4 = Express (Express、Express with Tools、および Express with Advanced Services の場合に返されます)<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 - [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = マネージド インスタンス<br /><br /> 基本データ型: **int**|  

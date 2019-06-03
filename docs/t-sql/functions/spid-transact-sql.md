@@ -21,16 +21,16 @@ helpviewer_keywords:
 - session IDs [SQL Server]
 - process ID of current user process
 ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fdf3f363b77a798ba329ed44da08cb15662a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7be3bc3a5d49dc7ef978c6bc2dba98f97258d5cb
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680370"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947712"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47680370"
  @@SPID は、**sp_who** の出力で、現在のユーザー プロセスを識別する場合に使用できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、現在のユーザー プロセスのセッション ID、ログイン名、およびユーザー名を返します。  
+ 次の例では、現在のユーザー プロセスに対応するセッション ID、ログイン名、およびユーザー名を返します。  
   
 ```  
 SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  

@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CAST function
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78a32d990eb4a63251750e3e40e0de72bb1ff080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20f6cf51157746f167186ad041943167d40e6d65
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658290"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946918"
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  キャストが成功した場合は、指定したデータ型にキャストされた値を返します。それ以外の場合は null を返します。  
+  指定されたデータ型へのキャストが成功した場合は、キャストされる値が返されます。それ以外の場合は、null が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  許容される値の範囲は、*data_type* の値によって決まります。  
   
 ## <a name="return-types"></a>戻り値の型  
- キャストが成功した場合は、指定したデータ型にキャストされた値を返します。それ以外の場合は null を返します。  
+ 指定されたデータ型へのキャストが成功した場合は、キャストされる値が返されます。それ以外の場合は、null が返されます。  
   
 ## <a name="remarks"></a>Remarks  
  **TRY_CAST** は渡された値を使用して、指定された *data_type* への変換を試みます。 キャストが成功した場合、**TRY_CAST** は指定された *data_type* と同じ値を返します。エラーが発生した場合は null が返されます。 ただし、明示的に許可されない変換を要求すると、**TRY_CAST** はエラーが発生して失敗します。  
@@ -62,7 +62,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-trycast-returns-null"></a>A. TRY_CAST が null を返す  
- キャストに失敗して TRY_CAST が null を返す場合の例を次に示します。  
+ 次の例は、キャストが失敗した場合に TRY_CAST から null が返されることを示しています。  
   
 ```sql  
 SELECT   
@@ -102,7 +102,7 @@ NULL
 ```  
   
 ### <a name="b-trycast-fails-with-an-error"></a>B. TRY_CAST でエラーが発生して失敗する  
- キャストが明示的に許可されていないときに TRY_CAST がエラーを返す場合の例を次に示します。  
+ 次の例では、キャストが明示的に許可されていない場合に TRY_CAST がエラーを返すことを示します。  
   
 ```sql  
 SELECT TRY_CAST(4 AS xml) AS Result;  

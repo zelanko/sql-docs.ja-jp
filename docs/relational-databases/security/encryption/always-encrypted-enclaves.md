@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 377c2d95564e7348bdfb5de9480c7c7f5004c7f7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711183"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938162"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -50,12 +50,12 @@ SQL Server Engine は、アプリケーションのクエリを解析すると�
 
 - **インプレース暗号化**: 最初のデータ暗号化や列暗号化キーの交換など、機密データに対する暗号化操作はセキュリティで保護されたエンクレーブ内で実行され、データをデータベースの外部に移動する必要はありません。 ALTER TABLE Transact-SQL ステートメントを使用してインプレース暗号化を発行することができます。SSMS の Always Encrypted ウィザードや Set-SqlColumnEncryption PowerShell コマンドレットなどのツールを使用する必要はありません。
 
-- **高度な計算 (プレビュー)**: パターン マッチング (LIKE 述語) と範囲比較など、暗号化された列に対する操作は、セキュリティで保護されたエンクレーブ内でサポートされます。そのため、データベース システム内でこのような計算を実行する必要がある幅広いアプリケーションやシナリオに Always Encrypted を使用できます。
+- **高度な計算 (プレビュー)** : パターン マッチング (LIKE 述語) と範囲比較など、暗号化された列に対する操作は、セキュリティで保護されたエンクレーブ内でサポートされます。そのため、データベース システム内でこのような計算を実行する必要がある幅広いアプリケーションやシナリオに Always Encrypted を使用できます。
 
 > [!IMPORTANT]
 > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] では、高度な計算は、いくつかのパフォーマンスの最適化について保留中であり、機能が制限 (インデックス作成がないなど) されていて、現在は既定で無効になっています。 [高度な計算を有効にする](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)方法に関するページを参照してください。
 
-[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] のセキュリティで保護されたエンクレーブが設定された Always Encrypted は、Windows で[仮想化ベースのセキュリティ (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) のセキュリティで保護されたメモリ エンクレーブ (仮想保護モード (VSM) エンクレーブとも呼ばれます) を使用します。
+[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] のセキュリティで保護されたエンクレーブが設定された Always Encrypted は、Windows で[仮想化ベースのセキュリティ (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) のセキュリティで保護されたメモリ エンクレーブ (仮想保護モード (VSM) エンクレーブとも呼ばれます) を使用します。
 
 ## <a name="secure-enclave-attestation"></a>セキュリティで保護されたエンクレーブの構成証明
 
@@ -143,4 +143,4 @@ SQL Server エンジンは、クエリで指定された操作をセキュリテ
 
 ## <a name="next-steps"></a>Next Steps
 
-- テスト環境を設定し、SSMS で、セキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を試すには、「[Tutorial: Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)」(チュートリアル: SSMS を使用するセキュリティで保護されたエンクレーブが設定された Always Encrypted の概要) を参照してください。
+- テスト環境を設定し、SSMS でセキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を試します。「[Tutorial:Getting started with Always Encrypted with secure enclaves using SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)」 (チュートリアル: SSMS を使用するセキュリティで保護されたエンクレーブが設定された Always Encrypted の概要) を参照してください。

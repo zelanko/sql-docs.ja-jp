@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geography)
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 66bc3e4887fe6762113208b7554fec4b1eccadc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f237da350b47ea0c3141709cd82d083ef509196
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630080"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939193"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47630080"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  **CircularString** または **CompoundCurve** インスタンスに対して **LineString** インスタンスを返します。  
@@ -49,7 +49,7 @@ ms.locfileid: "47630080"
   
  **CircularString**、**CompoundCurve**、または **CurvePolygon** インスタンスを含まない **geography** インスタンスのコピーを返します。  
   
- は、SQL MM 仕様とは異なり、このメソッドは多角形近似の計算に z 座標値を使用しません。 呼び出し元の **geography** インスタンスに含まれているすべての z-coordinate 値は無視されます。  
+ SQL MM 仕様とは異なり、このメソッドは多角形近似の計算に z 座標値を使用しません。 呼び出し元の **geography** インスタンスに含まれているすべての z-coordinate 値は無視されます。  
   
 ## <a name="examples"></a>使用例  
  次の例は、`LineString` インスタンスの多角形近似である `CircularString` インスタンスを返します。  
