@@ -1,5 +1,7 @@
 - name: '[ようこそ]'
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+- name: 以前のバージョン 2014-2005
+  href: ../toc/previous-versions-sql-server.md
 - name: 概要
   items:
     - name: SQL Server の新機能
@@ -7951,47 +7953,47 @@
               href: ../relational-databases/security/authentication-access/create-a-credential.md
         - name: 暗号化
           items:
-            - name: アルゴリズムの選択
-              href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
             - name: TDE のトラブルシューティング
               href: ../relational-databases/security/encryption/troubleshoot-tde.md
-            - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
-              href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+            - name: Always Encrypted の構成
               items:
-                - name: SQL Server Management Studio
+                - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
+                  href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+                - name: SQL Server Management Studio での構成
                   href: ../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: PowerShell
+                - name: PowerShell での構成
                   href: ../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                  items:
+                    - name: Always Encrypted キーの構成
+                      href: ../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                    - name: Always Encrypted キーの交換
+                      href: ../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                    - name: 列暗号化の構成
+                      href: ../relational-databases/security/encryption/configure-column-encryption-using-powershell.md
                 - name: 列マスター キーの作成と保存
                   href: ../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: 構成キー
-                  href: ../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                - name: 回転キー
-                  href: ../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                - name: 列暗号化の構成
-                  href: ../relational-databases/security/encryption/configure-column-encryption-using-powershell.md
                 - name: 機密データの移行
                   href: ../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: .NET Framework でのアプリケーションの開発
                   href: ../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-                - name: TDE で保護されたデータベースの移動
-                  href: ../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-                - name: EKM で TDE を有効にする
-                  href: ../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
-                - name: サービス マスター キーをバックアップする
-                  href: ../relational-databases/security/encryption/back-up-the-service-master-key.md
-                - name: サービス マスター キーを復元する
-                  href: ../relational-databases/security/encryption/restore-the-service-master-key.md
-                - name: データベースのマスター キーを作成する
-                  href: ../relational-databases/security/encryption/create-a-database-master-key.md
-                - name: データベースのマスター キーをバックアップする
-                  href: ../relational-databases/security/encryption/back-up-a-database-master-key.md
-                - name: データベースのマスター キーを復元する
-                  href: ../relational-databases/security/encryption/restore-a-database-master-key.md
-                - name: 2 台のサーバーでの同じ対称キーの作成
-                  href: ../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md
-                - name: データの列の暗号化
-                  href: ../relational-databases/security/encryption/encrypt-a-column-of-data.md
+            - name: TDE で保護されたデータベースの移動
+              href: ../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
+            - name: EKM で TDE を有効にする
+              href: ../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: サービス マスター キーをバックアップする
+              href: ../relational-databases/security/encryption/back-up-the-service-master-key.md
+            - name: サービス マスター キーを復元する
+              href: ../relational-databases/security/encryption/restore-the-service-master-key.md
+            - name: データベースのマスター キーを作成する
+              href: ../relational-databases/security/encryption/create-a-database-master-key.md
+            - name: データベースのマスター キーをバックアップする
+              href: ../relational-databases/security/encryption/back-up-a-database-master-key.md
+            - name: データベースのマスター キーを復元する
+              href: ../relational-databases/security/encryption/restore-a-database-master-key.md
+            - name: 2 台のサーバーでの同じ対称キーの作成
+              href: ../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md
+            - name: データの列の暗号化
+              href: ../relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: Azure SQL Database のセキュリティ保護
           items:
             - name: 暗号化を使用する SQL Server コネクタ
@@ -8065,6 +8067,8 @@
         - name: 暗号化
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
+            - name: アルゴリズムの選択
+              href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
             - name: Hierarchy
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: Transparent Data Encryption (TDE)
@@ -8088,8 +8092,6 @@
             - name: 暗号化キー
               href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
-                - name: サービス マスター キー
-                  href: ../relational-databases/security/encryption/service-master-key.md
                 - name: 拡張キー管理 (EKM)
                   href: ../relational-databases/security/encryption/extensible-key-management-ekm.md
                 - name: Azure Key Vault を使用した EKM
@@ -15024,7 +15026,7 @@
         - name: 日時
           href: ../t-sql/data-types/date-and-time-types.md
           items:
-            - name: 日付
+            - name: date
               href: ../t-sql/data-types/date-transact-sql.md
             - name: DATETIME
               href: ../t-sql/data-types/datetime-transact-sql.md
@@ -16533,7 +16535,7 @@
                   href: ../t-sql/queries/select-order-by-clause-transact-sql.md
                 - name: SELECT - OVER 句
                   href: ../t-sql/queries/select-over-clause-transact-sql.md
-            - name: FROM
+            - name: FROM と JOIN、APPLY、PIVOT
               href: ../t-sql/queries/from-transact-sql.md
               items:
                 - name: FROM - PIVOT と UNPIVOT の使用
