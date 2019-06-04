@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,34 +9,78 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09e1a4203ef519fb9939df2ba1892b85509f1324
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775480"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198194"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]の新機能をまとめます。 
+以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]の新機能をまとめます。
 
 この記事では、各リリースの機能をまとめ、各機能の詳細を説明しています。 「[詳細](#details)」セクションでは、主要なドキュメントでは説明されていない可能性がある機能の技術的な詳細を提供します。 この記事のその他のセクションでは、現在この [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してリリースされているすべての機能の詳細を説明します。
 
 詳細および既知の問題については、「[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-ver15-release-notes.md)」 をご覧ください。
 
-**[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をお試しください**
-
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] をダウンロードして Windows にインストールする](https://go.microsoft.com/fwlink/?LinkID=862101)。
-- [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)、および [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) の Linux にインストールする。
-- [Docker 上で [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]を実行する](../linux/quickstart-install-connect-docker.md)。
-
 **[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] で最良のエクスペリエンスを得るには、[最新のツール](#tools)を使用してください。**
 
-## <a name="ctp-25-april-2019"></a>CTP 2.5 2019 年 4 月
+## <a name="ctp-30-may-2019"></a>CTP 3.0 2019 年 5 月
 
-Community Technology Preview (CTP) 2.5 は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。 このリリースには、以前の CTP リリースのバグを修正し、セキュリティを強化し、パフォーマンスを最適化する機能強化が含まれています。 また、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.5 では、以下の機能が追加または強化されています。
+Community Technology Preview (CTP) 3.0 は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。 このリリースには、以前の CTP リリースのバグを修正し、セキュリティを強化し、パフォーマンスを最適化する機能強化が含まれています。
+
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+
+サポートから除外される特定の機能については、[リリース ノート](sql-server-ver15-release-notes.md)を参照してください。
+
+また、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 では、以下の機能が追加または強化されています。
+
+### <a name="big-data-clusters"></a>ビッグ データ クラスター
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+| **mssqlctl** の更新 | 複数の **mssqlctl** [コマンドとパラメーターが更新されました](../big-data-cluster/reference-mssqlctl.md)。 これには、コントローラーのユーザー名とエンドポイントをターゲットにするようになった **mssqlctl login** コマンドの更新も含まれています。 |
+| ストレージの機能強化 | ログとデータのさまざまなストレージ構成のサポート。 また、ビッグ データ クラスターへの永続ボリューム要求の数が削減されました。 |
+| 複数のコンピューティング プール インスタンス | 複数のコンピューティング プール インスタンスのサポート。 |
+| 新しいプールの動作と機能 | コンピューティング プールは、既定で **ROUND_ROBIN** 配布内​​のストレージ プールおよびデータ プールの操作にのみ使用されるようになりました。 データ プールで新しい **REPLICATED** 分布の種類が使用できるようになりました。これは、同じデータがすべてのデータ プール インスタンスに存在することを意味します。 |
+| 外部テーブルの機能強化 | HADOOP データ ソースの種類の外部テーブルで、最大サイズ 1 MB の行の読み取りがサポートされるようになりました。 外部テーブル (ODBC、記憶域プール、データ プール) で、SQL Server テーブルと同じ幅の行がサポートされるようになりました。 |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>データベース エンジン
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+|外部言語を登録する|新しい DDL `CREATE EXTERNAL LANGUAGE` では、Java などの外部の言語を SQL Server に登録します。 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) に関するページを参照してください。 |
+|Java に対してサポートされるデータ型の追加|[Java のデータ型](../language-extensions/how-to/java-to-sql-data-types.md)に関するページを参照してください。|
+|クエリ ストア用のカスタム キャプチャ ポリシー|有効にすると、新しいクエリ ストアのキャプチャ ポリシーの設定で、特定のサーバーでのデータ収集を微調整するための追加のクエリ ストアを使用できるようになります。 詳しくは、「[ALTER DATABASE SET オプション](../t-sql/statements/alter-database-transact-sql-set-options.md)」をご覧ください。|
+|[メモリ内データベース](../relational-databases/in-memory-database.md)により、ハイブリッド バッファー プールを制御する新しい DDL 構文が追加されました。 <sup>2</sup>|[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md)を使用すると、永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされます。|
+|新しいメモリ内データベース機能のメモリ最適化 tempdb メタデータが追加されました。|「[メモリ最適化 tempdb メタデータ](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」を参照してください。|
+|リンク サーバーでは UTF-8 文字エンコードがサポートされます。 |[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md) |
+|並列処理の次数とクエリ プランのメモリ許可に関する詳細が `sys.dm_exec_query_plan_stats` によって返されます。 |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| &nbsp; | &nbsp; |
+
+><sup>1</sup> これはオプトイン機能であり、有効にするには[トレース フラグ](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 が必要です。
+>
+><sup>2</sup> ハイブリッド バッファー プールを有効にするためにトレース フラグは必要ではなくなりました。
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] の Azure SQL Database マネージド インスタンス データベースのサポート。| マネージド インスタンス上で [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] をホストします。 [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] のインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)に関するページを参照してください。
+| &nbsp; | &nbsp; |
+
+### <a name="analysis-services"></a>Analysis Services
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+|計算グループを使用した表形式モデルに対する MDX クエリのサポート |このリリースで以前の[計算グループ](#calc-ctp24)での制限が削除されました。 |
+|計算グループを使用したメジャーの動的な書式設定 |この機能を使用すると、[計算グループ](#calc-ctp24)を使用してメジャーの書式設定文字列を条件付きで変更できます。 たとえば、通貨換算を使用すると、さまざまな外貨形式を使ってメジャーを表示することができます。|
+
+## <a name="ctp-25-april-2019"></a>CTP 2.5 2019 年 4 月
 
 ### <a name="big-data-clusters"></a>ビッグ データ クラスター
 
@@ -125,7 +169,7 @@ Community Technology Preview (CTP) 2.5 は、[!INCLUDE[sql-server-2019](../inclu
 |高速順方向カーソルと静的カーソルのサポートを強制するクエリ ストア プラン|[高速順方向カーソルと静的カーソルのサポートを強制するプラン](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |複数のスコープにまたがる一時テーブルを使用するワークロードの再コンパイルの削減 |[ワークロードの再コンパイルの削減](../relational-databases/tables/tables.md#ctp23) |
 |間接チェックポイントのスケーラビリティの向上 |[間接チェックポイントのスケーラビリティの向上](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
-|UTF-8 のサポート:BIN2 照合順序 (`UTF8_BIN2`) で UTF-8 文字エンコードを使用するためのサポートの追加 |[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md) |
+|BIN2 照合順序 (`UTF8_BIN2`) で UTF-8 文字エンコードを使用するためのサポートの追加 |[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md) |
 |グラフ データベースでのエッジ制約で連鎖削除操作を定義する |[エッジ制約](../relational-databases/tables/graph-edge-constraints.md) |
 |新しいデータベース スコープ構成を使用して `LIGHTWEIGHT_QUERY_PROFILING` を有効化または無効化する |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
 | &nbsp; | &nbsp; |
