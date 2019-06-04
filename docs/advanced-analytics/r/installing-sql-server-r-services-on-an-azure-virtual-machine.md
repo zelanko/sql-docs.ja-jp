@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.openlocfilehash: 01fb7962a5be08f40fe1c790b335c24d34979a2a
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454758"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462553"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>SQL Server Machine Learning サービスを Azure の仮想マシンで R と Python のインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ Azure では、インストールおよび構成タスクを排除すること�
  
 ステップ バイ ステップの手順については、次を参照してください。 [、Azure portal で Windows SQL Server 仮想マシンのプロビジョニング方法](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)します。
 
-[構成の SQL server の設定](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#4-configure-sql-server-settings)の手順では、インスタンスに machine learning を追加します。
+[構成の SQL server の設定](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)の手順では、インスタンスに machine learning を追加します。
 
 <a name="firewall"></a>
 

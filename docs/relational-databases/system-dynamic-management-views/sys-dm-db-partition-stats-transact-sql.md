@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_partition_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025114"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462658"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "63025114"
   現在のデータベースのパーティションごとに、ページ数と行数の情報を返します。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_db_partition_stats**します。  
+>  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_db_partition_stats**します。 Azure SQL Data Warehouse の sys.partitions カタログ ビューで partition_id sys.dm_pdw_nodes_db_partition_stats で partition_id とは異なります。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|パーティションの ID。 データベース内で一意です。 これは、同じ値として、 **partition_id**で、 **sys.partitions**カタログ ビュー|  
+|**partition_id**|**bigint**|パーティションの ID。 データベース内で一意です。 これは、同じ値として、 **partition_id**で、 **sys.partitions**カタログを除き、Azure SQL Data Warehouse のビュー。|  
 |**object_id**|**int**|パーティションが属するテーブルまたはインデックス付きビューのオブジェクト ID。|  
 |**index_id**|**int**|パーティションが属するヒープまたはインデックスの ID。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス|  
 |**partition_number**|**int**|インデックスまたはヒープ内の、1 から始まるパーティション番号。|  
 |**in_row_data_page_count**|**bigint**|パーティションで行内データの格納に使用されているページ数。 パーティションがヒープに属している場合、値はヒープのデータ ページ数になります。 パーティションがインデックスに属している場合、値はリーフ レベルのページ数になります。 B-Tree の非リーフ ページは含まれません。どちらの場合も、IAM (Index Allocation Map) ページは含まれません。 xVelocity メモリ最適化列ストア インデックスでは、常に 0 です。|  
 |**in_row_used_page_count**|**bigint**|パーティションで行内データの格納と管理に使用されているページの合計数。 この数には、非リーフ b-tree ページ、IAM ページ、およびすべてのページが含まれています、 **in_row_data_page_count**列。 列ストア インデックスでは、常に 0 です。|  
 |**in_row_reserved_page_count**|**bigint**|パーティションで行内データの格納と管理に予約されているページの合計数。ページが使用されているかどうかは考慮されません。 列ストア インデックスでは、常に 0 です。|  
-|**lob_used_page_count**|**bigint**|格納および行外を管理するために使用されているページ数**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、 **nvarchar(max)**、 **varbinary (max)**、および**xml**パーティション内の列。 IAM ページは含まれます。<br /><br /> パーティションで列ストア インデックスの格納と管理に使用されている LOB の合計数。|  
-|**lob_reserved_page_count**|**bigint**|格納して、行外を管理するために予約されたページの合計数**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および**xml**かどうか、ページが使用されていないかに関係なく、パーティション内の列。 IAM ページは含まれます。<br /><br /> パーティションで列ストア インデックスの格納と管理のために予約されている LOB の合計数。|  
+|**lob_used_page_count**|**bigint**|格納および行外を管理するために使用されているページ数**テキスト**、 **ntext**、**イメージ**、 **varchar (max)** 、 **nvarchar(max)** 、 **varbinary (max)** 、および**xml**パーティション内の列。 IAM ページは含まれます。<br /><br /> パーティションで列ストア インデックスの格納と管理に使用されている LOB の合計数。|  
+|**lob_reserved_page_count**|**bigint**|格納して、行外を管理するために予約されたページの合計数**テキスト**、 **ntext**、**イメージ**、 **varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、および**xml**かどうか、ページが使用されていないかに関係なく、パーティション内の列。 IAM ページは含まれます。<br /><br /> パーティションで列ストア インデックスの格納と管理のために予約されている LOB の合計数。|  
 |**row_overflow_used_page_count**|**bigint**|格納および行オーバーフローを管理するために使用されているページ数**varchar**、 **nvarchar**、 **varbinary**、および**sql_variant**列内でのパーティションです。 IAM ページは含まれます。<br /><br /> 列ストア インデックスでは、常に 0 です。|  
 |**row_overflow_reserved_page_count**|**bigint**|格納および行オーバーフローを管理するために予約されたページの合計数**varchar**、 **nvarchar**、 **varbinary**、および**sql_variant**かどうか、ページが使用されていないかに関係なく、パーティション内の列。 IAM ページは含まれます。<br /><br /> 列ストア インデックスでは、常に 0 です。|  
 |**used_page_count**|**bigint**|パーティションで使用されているページの合計数。 ように計算**in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**します。|  

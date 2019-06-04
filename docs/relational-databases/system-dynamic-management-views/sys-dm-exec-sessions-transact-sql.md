@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_sessions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 49638971a01d2082938d4759bb9f597d7bfdf254
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535191"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462623"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,6 +90,7 @@ ms.locfileid: "52535191"
 |authenticating_database_id|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> プリンシパルを認証するデータベースの ID。 ログインの場合、値は 0 になります。 包含データベース ユーザーの場合、値は包含データベースのデータベース ID になります。|  
 |open_transaction_count|**int**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> セッションごとに開いているトランザクションの数。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
+|page_server_reads|**bigint**|**適用対象**:Azure SQL データベースのハイパー スケール<br /><br /> サーバーのページ読み取りの数は、このセッション中に、セッションの要求によって実行します。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
 すべてのユーザーには、独自のセッション情報がわかります。  
@@ -106,7 +107,7 @@ ms.locfileid: "52535191"
   
 -   unsuccessful_logons  
   
- このオプションが有効でない場合、これらの列は NULL 値を返します。 このサーバー構成オプションを設定する方法の詳細については、[enabled サーバー構成オプションの一般的な条件のコンプライアンス対応](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)を参照してください。  
+ このオプションが有効でない場合、これらの列は NULL 値を返します。 このサーバー構成オプションを設定する方法の詳細については、次を参照してください。 [enabled サーバー構成オプションの一般的な条件のコンプライアンス対応](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)します。  
  
  
  Azure SQL Database で管理者接続は、認証済みセッションごとに 1 行に表示されます。 結果セットに表示される"sa"セッションは、セッションのユーザーのクォータの影響を及ぼすがありません。 管理者以外の接続には、そのデータベースのユーザー セッションに関連する情報のみ表示されます。

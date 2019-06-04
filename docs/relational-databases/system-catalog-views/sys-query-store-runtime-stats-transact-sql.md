@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2019
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: dd25f70c7cf3d34a4411cc15802437d97f5f8190
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65980055"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462726"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -93,7 +93,12 @@ ms.locfileid: "65980055"
 |**last_log_bytes_used**|**bigint**|集計間隔内で、クエリ プランの前回の実行で使用されるデータベースのログのバイト数。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
 |**min_log_bytes_used**|**bigint**|集計間隔内で、クエリ プランで使用されるデータベースのログのバイト数の最小数。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
 |**max_log_bytes_used**|**bigint**|集計間隔内で、クエリ プランで使用されるデータベースのログのバイト数の最大数。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**stdev_log_bytes_used**|**float**|集計間隔内でのクエリ プランで使用されるデータベースのログのバイト数の標準偏差。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
+|**stdev_log_bytes_used**|**float**|集計間隔内でのクエリ プランで使用されるデータベースのログのバイト数の標準偏差。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
+|**avg_page_server_io_reads**|**float**|ページの平均数 server IO は、集計間隔内でクエリ プランを読み取ります。 (8 KB ページの読み取りの数として表されます)。<br><br/>**注:** 適用先:Azure SQL データベースのハイパー スケール</br> Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパー スケール) は、ゼロ (0) を常に返します。|
+|**last_page_server_io_reads**|**bigint**|最後のページ サーバーの IO 数は、集計間隔内でクエリ プランを読み取ります。 (8 KB ページの読み取りの数として表されます)。<br><br/>**注:** 適用先:Azure SQL データベースのハイパー スケール </br> Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパー スケール) は、ゼロ (0) を常に返します。|
+|**min_page_server_io_reads**|**bigint**|ページの最小数 server IO は、集計間隔内でクエリ プランを読み取ります。 (8 KB ページの読み取りの数として表されます)。<br><br/>**注:** 適用先:Azure SQL データベースのハイパー スケール </br> Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパー スケール) は、ゼロ (0) を常に返します。|
+|**max_page_server_io_reads**|**bigint**|ページの最大数 server IO は、集計間隔内でクエリ プランを読み取ります。(8 KB ページの読み取りの数として表されます)。<br><br/>**注:** 適用先:Azure SQL データベースのハイパー スケール </br> Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパー スケール) は、ゼロ (0) を常に返します。|
+|**stdev_page_server_io_reads**|**float**|ページ サーバー IO の数は、集計間隔内でクエリ プランの標準偏差を読み取ります。 (8 KB ページの読み取りの数として表されます)。<br><br/>**注:** 適用先:Azure SQL データベースのハイパー スケール </br> Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパー スケール) は、ゼロ (0) を常に返します。|
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります、 **VIEW DATABASE STATE**権限。  

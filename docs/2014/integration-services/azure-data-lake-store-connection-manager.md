@@ -13,12 +13,12 @@ ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9fe7c7cf04767e0536be8d04d99387a091962375
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66429000"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462699"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 接続マネージャー
   **Azure Data Lake Store 接続マネージャー** SSIS パッケージを 2 つの認証の種類を Azure Data Lake Store サービスに接続できるようにします。Azure AD のユーザー Id と Azure AD サービスの Id。  
@@ -35,7 +35,7 @@ ms.locfileid: "66429000"
 
         1. **[ユーザー名]** と **[パスワード]** のフィールドに値を指定します。 
     
-        2. **[接続テスト]** ボタンをクリックして接続をテストします。 自分自身とテナント管理者が SSIS から Azure Data Lake Store データへのアクセスに同意していない場合は、別ウィンドウで表示されるダイアログで **[同意する]** ボタンをクリックし、SSIS から Azure Data Lake Store データへのアクセスに同意する必要があります。 この同意エクスペリエンスの詳細については、「[Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)」を参照してください。
+        2. **[接続テスト]** ボタンをクリックして接続をテストします。 自分自身とテナント管理者が SSIS から Azure Data Lake Store データへのアクセスに同意していない場合は、別ウィンドウで表示されるダイアログで **[同意する]** ボタンをクリックし、SSIS から Azure Data Lake Store データへのアクセスに同意する必要があります。 この同意エクスペリエンスの詳細については、「[Azure Active Directory とアプリケーションの統合](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)」を参照してください。
     
         > [!NOTE] 
         > Azure AD のユーザー ID 認証オプションでは、多要素認証と Microsoft アカウントはサポートされていません。

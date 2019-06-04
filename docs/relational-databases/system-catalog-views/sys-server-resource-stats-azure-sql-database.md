@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2a0a1f82685cb107902c8065f2f696f615ad3930
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62744074"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462777"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Azure SQL マネージ インスタンスの CPU 使用量、IO、およびス�
 
  
 > [!TIP]  
->  これらの制限とサービス レベルに関する詳細なコンテキスト、トピックを参照してください。[マネージ インスタンスのサービス レベル](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)します。  
+>  これらの制限とサービス レベルに関する詳細なコンテキスト、トピックを参照してください。[マネージ インスタンスのサービス レベル](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)します。  
     
 ## <a name="permissions"></a>アクセス許可  
  このビューに接続するアクセス許可を持つすべてのユーザー ロールが使用できる、**マスター**データベース。  
@@ -78,5 +78,5 @@ GROUP BY resource_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>関連項目  
- [インスタンスのサービス レベルの管理](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+## <a name="see-also"></a>参照  
+ [インスタンスのサービス レベルの管理](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_procedure_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013412"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462664"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,6 +77,10 @@ ms.locfileid: "63013412"
 |**min_spills**|**bigint**|このストアド プロシージャが 1 つの実行中にこれまでにこぼしたことページの最小数です。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**max_spills**|**bigint**|このストアド プロシージャが 1 つの実行中にこれまでにこぼしたことページの最大数です。<br /><br /> **適用対象**:以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]CU3|  
 |**pdw_node_id**|**int**|この配布であるノードの識別子。<br /><br />**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|コンパイルされた後に、このストアド プロシージャの実行によって実行されるページ サーバーの読み取りの合計数。<br /><br /> **適用対象**:Azure SQL データベースのハイパー スケール|  
+|**last_page_server_reads**|**bigint**|サーバーのページ読み取りの数は、ストアド プロシージャが実行された最終時刻を実行します。<br /><br /> **適用対象**:Azure SQL データベースのハイパー スケール|  
+|**min_page_server_reads**|**bigint**|ページ サーバーの最小数は、このストアド プロシージャが 1 回の実行中に行われたことを読み取ります。<br /><br /> **適用対象**:Azure SQL データベースのハイパー スケール|  
+|**max_page_server_reads**|**bigint**|ページ サーバーの最大数は、このストアド プロシージャが 1 回の実行中に行われたことを読み取ります。<br /><br /> **適用対象**:Azure SQL データベースのハイパー スケール|  
   
  <sup>1</sup>ネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にすると、ワーカー時間がミリ秒単位で収集します。 クエリが 1 ミリ秒未満で実行された場合は、値は 0 になります。  
   
