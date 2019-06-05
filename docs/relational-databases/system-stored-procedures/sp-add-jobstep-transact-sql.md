@@ -1,7 +1,7 @@
 ---
 title: sp_add_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,15 +18,16 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afa9128537cf699277385de3b7dce6aabd900191
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494414"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500357"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ジョブにステップ (操作) を追加します。  
   
@@ -34,8 +35,7 @@ ms.locfileid: "58494414"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -71,7 +71,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'` ステップの名前。 *step_name*は**sysname**、既定値はありません。  
   
-`[ @subsystem = ] 'subsystem'` によって使用されるサブシステム、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスを実行する*コマンド*します。 *サブシステム*は**nvarchar (40)**、これらの値のいずれかを指定できます。  
+`[ @subsystem = ] 'subsystem'` によって使用されるサブシステム、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスを実行する*コマンド*します。 *サブシステム*は**nvarchar (40)** 、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -88,17 +88,17 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|PowerShell スクリプト|  
 |'**TSQL**' (既定値)|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント|  
   
-`[ @command = ] 'command'` によって実行されるコマンド**SQLServerAgent**サービス*サブシステム*します。 *コマンド*は**nvarchar (max)**、既定値は NULL です。 SQL Server エージェントでは、ソフトウェア プログラムを記述するときの変数と同じような柔軟性を持つトークン置換を使用できます。  
+`[ @command = ] 'command'` によって実行されるコマンド**SQLServerAgent**サービス*サブシステム*します。 *コマンド*は**nvarchar (max)** 、既定値は NULL です。 SQL Server エージェントでは、ソフトウェア プログラムを記述するときの変数と同じような柔軟性を持つトークン置換を使用できます。  
   
 > [!IMPORTANT]  
 >  エスケープ マクロがジョブ ステップで使用されるすべてのトークンを含める必要があります。 そう、ジョブ ステップは失敗します。 さらに、ようになりましたトークン名をかっこで囲みしてドル記号 (`$`)、トークン構文の先頭にします。 例 :  
 >   
 >  `$(ESCAPE_` *マクロ名* `(DATE))`  
   
- これらのトークンと、新しいトークン構文を使用するジョブ ステップの更新の詳細については、[ジョブ ステップでトークンを使用して](../../ssms/agent/use-tokens-in-job-steps.md)を参照してください。  
+ これらのトークンと、新しいトークン構文を使用するジョブ ステップの更新の詳細については、次を参照してください。[ジョブ ステップでトークンを使用して](../../ssms/agent/use-tokens-in-job-steps.md)します。  
   
 > [!IMPORTANT]  
->  Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(**_property_**)** があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
+>  Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(** _property_ **)** があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
 >   
 >  これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。次に、 **[警告システム]** ページで、 **[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
   
@@ -128,7 +128,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id` ステップが失敗した場合に実行するこのジョブ ステップの ID と*fail_action*は**4**します。 *fail_step_id*は**int**、既定値は**0**します。  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*は**nvarchar (30)**、既定値は NULL です。  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*は**nvarchar (30)** 、既定値は NULL です。  
   
 `[ @database_name = ] 'database'` 実行するためのデータベースの名前、[!INCLUDE[tsql](../../includes/tsql-md.md)]手順。 *データベース*は**sysname**、既定値は null の場合、この場合、**マスター**データベースが使用されます。 角かっこ () で囲まれた名前を指定することはできません。 ActiveX ジョブ ステップでは、*データベース*ステップを使用するスクリプト言語の名前を指定します。  
   
@@ -140,7 +140,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority` 予約されています。  
   
-`[ @output_file_name = ] 'file_name'` このステップの出力を保存するファイルの名前。 *file_name*は**nvarchar (200)**、既定値は NULL です。 *file_name*で説明したトークンの 1 つ以上含めることができます*コマンド*します。 実行されているコマンドでのみこのパラメーターは有効、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、または[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サブシステム。  
+`[ @output_file_name = ] 'file_name'` このステップの出力を保存するファイルの名前。 *file_name*は**nvarchar (200)** 、既定値は NULL です。 *file_name*で説明したトークンの 1 つ以上含めることができます*コマンド*します。 実行されているコマンドでのみこのパラメーターは有効、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、 **CmdExec**、 **PowerShell**、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、または[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サブシステム。  
   
 `[ @flags = ] flags` 動作を制御するオプションです。 *フラグ*は**int**、これらの値のいずれかを指定できます。  
   
@@ -192,14 +192,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  この例では、`Weekly Sales Data Backup`ジョブが既に存在します。  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  

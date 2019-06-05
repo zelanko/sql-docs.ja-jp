@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 7df3901104c061c93c7a0b0b4a23f95f5ed43c82
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.openlocfilehash: 55061de57903d33c5f31c532f680fcf0c66684f9
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265470"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506560"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>クイック スタート: Docker を使用した SQL Server のコンテナー イメージを実行します。
 
@@ -157,7 +157,7 @@ any changes to one section should be duplicated in the other-->
 
    ![Docker ps コマンドの出力](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、**[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
+4. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
 
 `-h` (ホスト名) のパラメーターも役に立ちますが、簡略化のためこのチュートリアルでは使用しません。 これにより、コンテナーの内部名がカスタム値に変更されます。 これは、次の Transact-SQL クエリで返される名前です。
 
@@ -215,7 +215,7 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
@@ -223,7 +223,7 @@ SELECT @@SERVERNAME,
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
@@ -231,7 +231,7 @@ SELECT @@SERVERNAME,
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
@@ -275,7 +275,7 @@ SELECT @@SERVERNAME,
 
    ![Docker ps コマンドの出力](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、**[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
+4. **[STATUS]** 列に **[Up]** の状態が表示されている場合、SQL Server はコンテナーで実行されており、 **[PORTS]** 列に指定されたポートでリッスンしています。 SQL Server コンテナーの **[STATUS]** 列に **[Exited]** と表示されている場合は、[構成ガイドのトラブルシューティングのセクション](sql-server-linux-configure-docker.md#troubleshooting)を参照してください。
 
 `-h` (ホスト名) のパラメーターも役に立ちますが、簡略化のためこのチュートリアルでは使用しません。 これにより、コンテナーの内部名がカスタム値に変更されます。 これは、次の Transact-SQL クエリで返される名前です。
 
@@ -327,9 +327,9 @@ SELECT @@SERVERNAME,
 
 ## <a name="connect-to-sql-server"></a>SQL Server への接続
 
-次の手順では、コンテナー内の SQL Server のコマンドライン ツール **sqlcmd** を使用して、SQL Server に接続します。 
+次の手順では、コンテナー内の SQL Server のコマンドライン ツール **sqlcmd** を使用して、SQL Server に接続します。
 
-1. コマンド `docker exec -it` を使用して、実行中のコンテナー内の対話型 bash シェルを起動します。 次の例にある `sql1` は、コンテナーを作成したときに `--name` パラメーターで指定した名前です。 
+1. コマンド `docker exec -it` を使用して、実行中のコンテナー内の対話型 bash シェルを起動します。 次の例にある `sql1` は、コンテナーを作成したときに `--name` パラメーターで指定した名前です。
 
    ::: zone pivot="cs1-bash"
    ```bash
@@ -358,11 +358,11 @@ SELECT @@SERVERNAME,
    > [!TIP]
    > コマンド ラインでパスワードを省略すると、入力を求められます。
 
-3. 成功すると、**sqlcmd** のコマンド プロンプトである `1>` が表示されます。 
+3. 成功すると、**sqlcmd** のコマンド プロンプトである `1>` が表示されます。
 
 ## <a name="create-and-query-data"></a>データの作成とクエリ
 
-次のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。 
+次のセクションでは、**sqlcmd** と Transact-SQL を使用して新しいデータベースを作成し、データを追加して簡単なクエリを実行します。
 
 ### <a name="create-a-new-database"></a>新しいデータベースの作成
 
@@ -390,7 +390,7 @@ SELECT @@SERVERNAME,
 
 次に、新しいテーブル `Inventory` を作成し、2 つの新しい行を挿入します。
 
-1. **sqlcmd** のコマンド プロンプトで、新しい `TestDB` データベースのコンテキストに切り替えます。 
+1. **sqlcmd** のコマンド プロンプトで、新しい `TestDB` データベースのコンテキストに切り替えます。
 
    ```sql
    USE TestDB

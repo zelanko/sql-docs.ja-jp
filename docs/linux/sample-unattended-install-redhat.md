@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 28fe32859ddec126d763447911db6a11f343f97a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7aaaf8166799f0703abba939fefa9844d469d22c
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578983"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506452"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>サンプル:Red Hat Enterprise Linux の SQL Server の無人インストール スクリプト
 
@@ -49,7 +49,7 @@ MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 MSSQL_PID='evaluation'
 
 # Install SQL Server Agent (recommended)
-SQL_INSTALL_AGENT='y'
+SQL_ENABLE_AGENT='y'
 
 # Install SQL Server Full Text Search (optional)
 # SQL_INSTALL_FULLTEXT='y'
@@ -85,11 +85,12 @@ echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 
-# Optional SQL Server Agent installation:
-if [ ! -z $SQL_INSTALL_AGENT ]
+# Optional Enable SQL Server Agent :
+if [ ! -z $SQL_ENABLE_AGENT ]
 then
-  echo Installing SQL Server Agent...
-  sudo yum install -y mssql-server-agent
+  echo Enable SQL Server Agent...
+  sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+  sudo systemctl restart mssql-server
 fi
 
 # Optional SQL Server Full Text Search installation:
@@ -221,4 +222,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux 上の SQL Server に関する詳細については、[SQL Server on Linux の概要](sql-server-linux-overview.md)を参照してください。
+Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux の概要](sql-server-linux-overview.md)します。
