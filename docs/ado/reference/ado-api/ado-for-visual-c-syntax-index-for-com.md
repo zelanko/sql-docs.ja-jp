@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 265b274a76e1cf88b5d039a1296090e4fa4c6324
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248908"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718573"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>COM 向け Visual C++ 構文用の ADO のインデックス
 このインデックスは、Microsoft Visual C に基づく、ADO 言語リファレンスへの相互参照します。  
   
- 使用する場合、 **#import**アプリケーションでディレクティブをヘッダー ファイルが生成されます Microsoft Visual Basic に似た構文を使用することを有効になります。 フォームのプロパティ名**get _**_PropertyName_と**put _**_PropertyName_ として単純に宣言されたかのように扱うことができます*PropertyName*します。 プロパティは、関数の代わりにデータ メンバーのように処理できます。  
+ 使用する場合、 **#import**アプリケーションでディレクティブをヘッダー ファイルが生成されます Microsoft Visual Basic に似た構文を使用することを有効になります。 フォームのプロパティ名**get _** _PropertyName_と**put _** _PropertyName_ として単純に宣言されたかのように扱うことができます*PropertyName*します。 プロパティは、関数の代わりにデータ メンバーのように処理できます。  
   
  返す関数をすべてのメソッド、プロパティ、イベント、 **HRESULT**関数が正常に実行されたかどうかを判断するテストできます。  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 62a652321bf98cbddb2f07cf65baa5317b45447c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249117"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718530"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 構文のインデックス
 ADO の言語リファレンスでは、ADO メソッドとプロパティ構文を説明するために Microsoft Visual Basic プログラミング言語を使用します。 このインデックスは、ADO の Windows Foundation Class (ADO と WFC) に基づいて、ADO 言語リファレンスのトピックを相互参照します。 構文の違いが発生した場合は、言語リファレンスのトピックの構文の一覧ではなく、このインデックスに関数のシグネチャを使用します。  

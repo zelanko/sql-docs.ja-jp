@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494394"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719394"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Linux 上の SQL Server を mssql-conf ツールを構成します。
 
@@ -82,7 +81,7 @@ ms.locfileid: "58494394"
 ::: moniker-end
 
 > [!TIP]
-> これらの設定の一部は、環境変数を構成できます。 詳細については、[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)を参照してください。
+> これらの設定の一部は、環境変数を構成できます。 詳細については、次を参照してください。[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)します。
 
 ## <a name="usage-tips"></a>使用上のヒント
 
@@ -149,7 +148,7 @@ ms.locfileid: "58494394"
    sudo systemctl restart mssql-server
    ```
 
-詳細については、[Linux 上の SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)と[SQL Server のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)を参照してください。
+詳細については、次を参照してください。 [Linux 上の SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)と[SQL Server のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)します。
 
 ## <a id="datadir"></a> 既定のデータまたはログのディレクトリの場所を変更します。
 
@@ -453,7 +452,7 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-詳細については、[Linux 上の SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)を参照してください。
+詳細については、次を参照してください。 [Linux 上の SQL Server カスタマー フィードバック](sql-server-linux-customer-feedback.md)します。
 
 ## <a id="lcid"></a> SQL Server のロケールを変更します。
 
@@ -505,7 +504,7 @@ sudo systemctl restart mssql-server
    sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
    ```
 
-これらの値を設定するだけでなくもルーティングを構成して、ポート 135 に関するファイアウォールを更新する必要があります。 これを行う方法の詳細については、[Linux で MSDTC を構成する方法](sql-server-linux-configure-msdtc.md)を参照してください。
+これらの値を設定するだけでなくもルーティングを構成して、ポート 135 に関するファイアウォールを更新する必要があります。 これを行う方法の詳細については、次を参照してください。 [Linux で MSDTC を構成する方法](sql-server-linux-configure-msdtc.md)します。
 
 Mssql conf を監視し、MSDTC をトラブルシューティングする際の他のいくつかの設定があります。 次の表は、これらの設定を簡単に説明します。 使用の詳細については、Windows のサポートの記事で詳細をご覧ください。 [MS DTC の診断トレースを有効にする方法](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)します。
 
@@ -624,7 +623,7 @@ outboundnetworkaccess = 1
 |**network.tlsciphers** |許可されている暗号を指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (TLS)。 この文字列の書式を設定ごと[OpenSSL の暗号一覧形式](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)します。 一般に、このオプションを変更する必要はありません。 <br /> 既定では、次の暗号は使用できます。 <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab ファイルへのパス |
 
-TLS の設定を使用しての例は、[Linux 上の SQL Server への接続の暗号化](sql-server-linux-encrypted-connections.md)を参照してください。
+TLS の設定を使用しての例は、次を参照してください。 [Linux 上の SQL Server への接続の暗号化](sql-server-linux-encrypted-connections.md)します。
 
 ## <a id="traceflags"></a> トレース フラグを有効/無効にします。
 
@@ -797,6 +796,6 @@ traceflag = 3456
 
 ## <a name="next-steps"></a>次のステップ
 
-代わりにこれらの構成変更の一部を環境変数を使用して、[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)を参照してください。
+代わりにこれらの構成変更の一部を環境変数を使用して、次を参照してください。[環境変数と SQL Server の構成設定](sql-server-linux-configure-environment-variables.md)します。
 
-その他の管理ツールやシナリオでは、[Linux 上の SQL Server の管理](sql-server-linux-management-overview.md)を参照してください。
+その他の管理ツールやシナリオでは、次を参照してください。 [Linux 上の SQL Server の管理](sql-server-linux-management-overview.md)します。

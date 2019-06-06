@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6160010d02482f9ffd4ed1a4306ae064607b7d75
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 520866e80cd3526d7c039cd98e08f5cc8fc52798
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947576"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713384"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows と Linux に SQL Server Always On 可用性グループを構成する (クロス プラットフォーム)
 
@@ -56,9 +55,9 @@ ms.locfileid: "51947576"
 
    **混合モード認証を設定**
 
-    手順については、[サーバーの認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure) を参照してください。
+   手順については、[サーバーの認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure) を参照してください。
 
-1. Linux で SQL Server 2017 をインストールします。 手順については、[SQL Server のインストール](sql-server-linux-setup.md)を参照してください。 mssql-conf を使用して `hadr` を有効にします。
+1. Linux で SQL Server 2017 をインストールします。 手順については、次を参照してください。 [SQL Server のインストール](sql-server-linux-setup.md)します。 mssql-conf を使用して `hadr` を有効にします。
 
    シェル プロンプトから mssql-conf を使用して `hadr` を有効にするには、次のコマンドを発行します。
 

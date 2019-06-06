@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48530cfd233aa8ca2fd8d5af4bba075952b13678
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 15e4643baed45b04bff003c6f0fcb25b2e8951a0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065200"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718179"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic での ADO のコード例
 次のコード例を使用して、ADO メソッド、プロパティ、および Visual Basic で記述するときにイベントを使用する方法について説明します。  
@@ -159,4 +159,4 @@ ms.locfileid: "63065200"
 ## <a name="see-also"></a>参照  
  [ADO のコード例の VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual C で ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [付録 d:ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

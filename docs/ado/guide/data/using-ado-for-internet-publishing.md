@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d779204046b9bca2591fbdc9459d7c6b53061ff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ac7922dda2d486f4783d1230296dc89b81cb4fe3
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184968"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718607"
 ---
 # <a name="using-ado-for-internet-publishing"></a>インターネットへの発行に ADO を使用する
 [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO を使用した異種データへのアクセスの具体的な例を示しています。 このセクションの例では、インターネット パブリッシング用プロバイダーを使用する特定できますは、電子メール ストアにプロバイダーなどの異種データを他のプロバイダーと ADO を使用するときに示されている原則が生成されます。  

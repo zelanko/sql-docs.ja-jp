@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d8103da63d91c5d59d1bfc4ac5b738ba8f333d1e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62630673"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719197"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows メソッドの例 (JScript)
 この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)のすべての行を取得するメソッドを*Custiomers*からテーブルを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と結果のデータの配列を設定します。 **GetRows**メソッドが返す行の必要な数よりも少ない: 場合[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達している場合、または**GetRows**がレコードを取得しようとしています。別のユーザーによって削除されます。 関数を返します**False** 2 番目のケースが発生した場合にのみです。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**GetRowsJS.asp**します。  
@@ -159,6 +159,6 @@ BODY {
 <!-- EndGetRowsJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

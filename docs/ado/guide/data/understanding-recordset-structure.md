@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 011853836425b22beece83ef52bf21b563c6e64b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 08cde6e2e0b33272852413692be50e8232f2a195
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228093"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718631"
 ---
 # <a name="understanding-recordset-structure"></a>レコードセットの構造を理解する
 すべて**レコード セット**が、**フィールド**コレクションの 1 つまたは複数から成る**フィールド**オブジェクト。 A**フィールド**オブジェクトは、通常は、テーブルの列を表します。 次のトピック内を移動する方法を説明は、**フィールド**各フィールドに関する情報のコレクションを取得します。 どのような情報をご確認いただける経由でについても説明し、**フィールド**オブジェクトとその使用方法。  

@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658408"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719372"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイの SQL Server 可用性の基礎
 
@@ -108,7 +107,7 @@ Windows と同様に、Linux ディストリビューションには、組み込
 | 変数    | TCP/UDP  | NFS のポートを`MOUNTD_PORT`(で見つかった`/etc/sysconfig/nfs`on RHEL)                                                |
 | 変数    | TCP/UDP  | NFS のポートを`STATD_PORT`(で見つかった`/etc/sysconfig/nfs`on RHEL)                                                 |
 
-Samba を使用できる追加のポートでは、[Samba ポートの使用状況](https://wiki.samba.org/index.php/Samba_Port_Usage)を参照してください。
+Samba を使用できる追加のポートでは、次を参照してください。 [Samba ポートの使用状況](https://wiki.samba.org/index.php/Samba_Port_Usage)します。
 
 逆に、Linux でのサービスの名前も追加できます。 ポートではなく、例外としてたとえば、 `high-availability` Pacemaker 用です。 この方向を追求する場合は、名前のディストリビューションを参照してください。 たとえば、RHEL で Pacemaker で追加するコマンドは
 
@@ -229,7 +228,7 @@ WSFC でのように Pacemaker を希望冗長ネットワークは、個別の�
 ### <a name="quorum-and-stonith"></a>クォーラムと STONITH
 クォーラム構成および要件に関連する AG または FCI 固有の展開の[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]します。
 
-STONITH は、Pacemaker クラスターのサポートされている必要があります。 STONITH を構成するのにには、分布からドキュメントを使用します。 例が、[ストレージ ベースのフェンス操作](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html)SLES 用です。 VMware vCenter の ESXI ベースのソリューションの STONITH エージェントもあります。 詳細については、[VMWare VM VCenter SOAP のフェンス用 (Unofficial) Stonith プラグイン エージェント](https://github.com/olafrv/fence_vmware_soap)を参照してください。
+STONITH は、Pacemaker クラスターのサポートされている必要があります。 STONITH を構成するのにには、分布からドキュメントを使用します。 例が、[ストレージ ベースのフェンス操作](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html)SLES 用です。 VMware vCenter の ESXI ベースのソリューションの STONITH エージェントもあります。 詳細については、次を参照してください。 [VMWare VM VCenter SOAP のフェンス用 (Unofficial) Stonith プラグイン エージェント](https://github.com/olafrv/fence_vmware_soap)します。
 
 > [!NOTE]
 > この記事の執筆時点で、HYPER-V は STONITH のソリューションをありません。 これはオンプレミスのデプロイメントの場合は true であり、RHEL などの特定のディストリビューションを使用して Pacemaker の Azure ベースの展開にも影響を与えます。

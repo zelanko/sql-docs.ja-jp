@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a9ece5a7774ca2b718af90fe041c070fcc99bdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6ad7cdfdfc3c08175faf0584f2ae5069fcd39acb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155903"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719021"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection プロパティ (ADO MD)
 どの ADO に[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの現在のセル セットまたは現在が属するカタログ。  

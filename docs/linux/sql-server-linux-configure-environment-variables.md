@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 29869a34883fdb4fbdf105321f0621cc3323d17b
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 299a7db7304a0f6a1090d7d60dbbe4a7e451179d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566481"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719417"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上の SQL Server の設定を環境変数で構成する
 
@@ -129,7 +128,7 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 ```
 
 > [!NOTE]
-> コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については、次を参照してください。[実稼働のコンテナー イメージを実行](sql-server-linux-configure-docker.md#production)
+> コンテナーで実稼働のエディションを実行するためのプロセスは若干異なります。 詳細については 「[実稼働環境のコンテナー イメージを実行する](sql-server-linux-configure-docker.md#production)」を参照してください。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->

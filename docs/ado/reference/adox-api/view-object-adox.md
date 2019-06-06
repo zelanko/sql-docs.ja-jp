@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61b3f81a23c3bb35921e0374eea44e58a31dcd4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d87b56716ed1876acc6ac139e7804036d5cdfb86
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281293"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718813"
 ---
 # <a name="view-object-adox"></a>View オブジェクト (ADOX)
 フィルター選択された一連のレコードまたは仮想テーブルを表します。 ADO と組み合わせて使用すると[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、**ビュー**オブジェクトは、追加、削除、またはビューの変更のために使用できます。  

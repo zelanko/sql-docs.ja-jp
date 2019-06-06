@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50da9f42927747d0d901e24a6c1018cc7ab3f3f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3ec8dbdce6a813663f7909adb2a9ec1edacee9b1
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62523325"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718754"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset プロパティ (RDS)
 示す、**レコード セット**カスタム ビジネス オブジェクトからオブジェクトが返されます。  
   
- **適用対象します。**[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **適用対象します。** [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
