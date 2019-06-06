@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6939c346283e14848e44a822e05d1a3140656183
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9620f5d92393578493b4867a81cf462798319046
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281847"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705978"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn プロパティ (ADOX)
 関連の名前を示します[列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)関連テーブル (キー列のみ)。  

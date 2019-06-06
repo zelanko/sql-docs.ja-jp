@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 718124fce3c2ce7a1adf9e6dbdb1d54e8a834fca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 59a043b6258de83986e447c87209fa781a1ae352
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740372"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711117"
 ---
 # <a name="source-property-ado-recordset"></a>Source プロパティ (ADO Recordset)
 データ ソースを示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -47,7 +47,7 @@ ms.locfileid: "62740372"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Source プロパティの例 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [ソースのプロパティ (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source プロパティ (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)
