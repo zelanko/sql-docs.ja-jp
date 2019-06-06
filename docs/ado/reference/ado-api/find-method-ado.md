@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028139"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697958"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 検索、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を指定した条件を満たす行のできます。 必要に応じて、検索、開始行、および開始行からのオフセットの方向を指定することがあります。 現在の行位置が; 検出されたレコードの設定、条件が満たされた場合(先頭または末尾) に、位置を設定する場合は、 **Recordset**します。  
@@ -44,13 +44,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  省略可能な*します。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)検索の方向で使用可能な次の行または現在の行に検索を開始するかどうかを指定する値。 最後に停止する検索が失敗した、**レコード セット**値が場合**adSearchForward**します。 検索が失敗したの停止の開始時、**レコード セット**値が場合**adSearchBackward**します。  
   
- *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
+ *[開始]*  
  任意。 A**バリアント**検索の開始位置として機能するブックマーク。  
   
 ## <a name="remarks"></a>コメント  
  単一の列名のみを指定することがあります*条件*します。 このメソッドは、複数列の検索をサポートしていません。  
   
- 比較演算子*条件*可能性があります"**>**「(より大きい)、」**\<**"(より小さい)、「=」(等しい)、"> ="(より大きいまたは等しい)"< ="(以下)、"<>"(等しくない)、または"like"(パターン一致)。  
+ 比較演算子*条件*可能性があります" **>** 「(より大きい)、」 **\<** "(より小さい)、「=」(等しい)、"> ="(より大きいまたは等しい)"< ="(以下)、"<>"(等しくない)、または"like"(パターン一致)。  
   
  値*条件*文字列、浮動小数点数、または日付があります。 文字列の値が単一引用符または「#」(シャープ記号) で区切られた (たとえば、"状態 = 'WA'"または"の状態 = WA #")。 日付の値は「#」(シャープ記号) 記号で区切られます (たとえば、"start_date > #7/22/97 #")。 これらの値は、時間、分、および秒を示すタイムスタンプを含めることができますが、ミリ秒を含めることはできませんまたはエラーが発生します。  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802936"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702657"
 ---
 # <a name="absolute-and-relative-urls"></a>絶対 URL と相対 URL
 URL には、ローカルまたはネットワーク コンピューターに格納されているターゲットの場所を指定します。 ファイル、ディレクトリ、HTML ページ、画像、プログラム、およびにターゲットを指定できます*します。*  
@@ -53,7 +53,7 @@ URL には、ローカルまたはネットワーク コンピューターに格
   
  Ado 2.7 以降では、絶対 URL をコンテキストを定義できます。 たとえばときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、絶対 URL でオブジェクトを開く、**接続**オブジェクトは、URL で指定されたリソースを表すために暗黙的に作成します。  
   
- コンテキストを定義する絶対 URL を指定することができます、 *ActiveConnection*のパラメーター、**レコード**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。 値として絶対 URL を指定することも、"URL**=**"キーワード、**接続**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッド*ConnectionString*パラメーター、および[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド*ActiveConnection*パラメーター。  
+ コンテキストを定義する絶対 URL を指定することができます、 *ActiveConnection*のパラメーター、**レコード**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。 値として絶対 URL を指定することも、"URL **=** "キーワード、**接続**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッド*ConnectionString*パラメーター、および[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド*ActiveConnection*パラメーター。  
   
  開くことでコンテキストを定義することも、**レコード**または**Recordset**これらのオブジェクトが既にある、暗黙的または明示的に宣言されたため、ディレクトリを表すオブジェクトを**接続**コンテキストを指定するオブジェクト。  
   
@@ -86,7 +86,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB プロバイダーが指定した URL スキーム  
  完全修飾 URL の先頭部分は、*スキーム*URL の残りの部分で識別されるリソースにアクセスするために使用されます。 例は、HTTP (ハイパー テキスト転送プロトコル) および FTP (ファイル転送プロトコル) です。  
   
- ADO では、独自の URL スキームを認識する OLE DB プロバイダーをサポートします。 たとえば、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*、* 「公開」の Windows 2000 ファイルにアクセスする既存の HTTP スキームを認識します。  
+ ADO では、独自の URL スキームを認識する OLE DB プロバイダーをサポートします。 たとえば、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *、* 「公開」の Windows 2000 ファイルにアクセスする既存の HTTP スキームを認識します。  
   
 ## <a name="see-also"></a>参照  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

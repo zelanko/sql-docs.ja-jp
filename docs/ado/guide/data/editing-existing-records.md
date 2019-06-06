@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64262ae52b802398fc2060092a03e7469146f063
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6bd1e02bf406906cc8a893ccee66a408b38510f3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161716"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702069"
 ---
 # <a name="editing-existing-records"></a>既存のレコードの編集
 既存のレコードを編集するには、編集し、変更する行に移動、**値**を変更するフィールドのプロパティ。 詳細については、**フィールド**オブジェクトの**値**プロパティを参照してください[データを調べる](../../../ado/guide/data/examining-data.md)します。 カーソルの種類によってを使用して**Update**または**UpdateBatch**変更をデータ ソースに送信します。 詳細については、次を参照してください。[更新およびデータの永続化](../../../ado/guide/data/updating-and-persisting-data.md)します。  

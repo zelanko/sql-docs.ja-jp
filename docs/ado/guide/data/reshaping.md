@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6d7137d67c14cd435ffe814a3bfbf0e42a7be976
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280402"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700430"
 ---
 # <a name="reshaping"></a>リシェイプ
 A **Recordset**作成図形の句でのコマンドを割り当てることができます、*エイリアス*名 (通常の AS キーワード)。 形状のエイリアス**Recordset**完全に別のコマンドで参照できます。 つまり、再利用できる、または*変形*、以前成型された**レコード セット**新しい図形コマンドでします。 この機能をサポートする ADO は、プロパティを提供します[Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)します。  

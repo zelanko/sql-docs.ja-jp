@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53891b4e82b3ae391d095e8cbca2189fb201d29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b251da97fe14abb8b10abe974c40b9adf0b37898
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142961"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699884"
 ---
 # <a name="updating-and-persisting-data"></a>データの更新と保持
 前の章は、ADO を使用して、データ ソース内のデータを取得する方法、データ内を移動する方法、およびデータを編集する方法も説明してきました。 もちろん、アプリケーションの目的がデータを変更するユーザーを許可する場合は、これらの変更を保存する方法を理解する必要があります。 永続化することができますか、**レコード セット**を使用してファイルへの変更、**保存**メソッド、またはを使用してストレージのデータ ソースをバックアップを作成、変更を送信できます、 **Update**または**UpdateBatch**メソッド。  

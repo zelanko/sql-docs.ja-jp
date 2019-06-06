@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a5ab00cc6e01b97639ae3f7d353fa2462ef3fd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3528034b4a87115d704e7cbbc1f9d98a36e11794
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309169"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695677"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 データを変更する使用可能なアクセス許可を指定します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)を開いて、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の値を指定するか、[モード](../../../ado/reference/ado-api/mode-property-ado.md)のプロパティ、 **レコード**と[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  

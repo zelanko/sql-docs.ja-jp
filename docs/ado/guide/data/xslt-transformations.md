@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c522a8d278080d9249761309d29f465befe217d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1e443a2c131fc2338660c6ddfd0a09b285e1dba0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184788"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699731"
 ---
 # <a name="xslt-transformations"></a>XSLT 変換
 XSLT は、別の形式に変換して、生成される XML に適用できます。 ADO での XML 形式を理解することよりユーザー フレンドリな形式に変換する XSLT テンプレートの開発に役立ちます。  

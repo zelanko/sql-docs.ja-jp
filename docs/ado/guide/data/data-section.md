@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472549"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702136"
 ---
 # <a name="data-section"></a>データ セクション
 データ セクションでは、更新、挿入、または削除保留中のと共に、行セットのデータを定義します。 [データ] セクションでは、0 個以上の行を含めることができます。 行がスキーマによって定義されている 1 つの行セットからのデータのみを含めることができます。 また、前述したように、データを含まない列を省略できます。 データ セクションの属性またはサブ要素が使用され、その構成要素がスキーマのセクションで定義されていない場合は、暗黙的に無視されます。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88d3900417bfbdaec6d2408d503b1537b8dff2da
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472284"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702105"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>競合の検出および解決
 イミディ エイト モードで、レコード セットを処理する場合は、同時実行の問題が発生する可能性ははるかに少ないです。 その一方で、アプリケーションでは、バッチ モードの更新を使用する場合があります良い機会が同じレコードを編集する別のユーザーによって加えられた変更が保存される前にその 1 つのユーザーが、レコードを変更します。 このような場合は、競合を適切に処理するアプリケーションを必要があります。 最後に変更をサーバーに更新を送信するユーザーが優先します"をお望みがある可能性があります。 または、どの更新プログラムの優先順位が競合する 2 つの値の間で選択 (英語) を提供することで決定する最新のユーザーに通知します。  

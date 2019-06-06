@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53e28fdfbc49b53c4927bbcc0d5a6a8dc44b3d6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cbd237580dc8c56284552e6fe2fb00e469832c5b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62913317"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702049"
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>フィルター処理されたレコードセットおよび階層レコードセットの保持
 場合、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティはに対して有効で、 **Recordset**フィルターでアクセス可能な行のみ保存されます。 場合、**レコード セット**は階層構造を持つ現在の子**レコード セット**と親を含む、その子が保存**レコード セット**します。 場合、**保存**子メソッド**レコード セット**は子とそのすべての子を保存すると、呼び出されるが、親はありません。 階層の詳細については**レコード セット**を参照してください[データ シェイプ](../../../ado/guide/data/data-shaping.md)します。  

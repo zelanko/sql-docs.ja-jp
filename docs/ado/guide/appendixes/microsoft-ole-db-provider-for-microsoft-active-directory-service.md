@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855177"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702723"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory サービス
 Active Directory サービス インターフェイス (ADSI) プロバイダーが ADSI による異種ディレクトリ サービスに接続するための ADO を許可します。 これにより、ADO アプリケーションは Microsoft Windows NT 4.0 および Microsoft Windows 2000 directory services のすべての LDAP 準拠ディレクトリ サービスと Novell Directory Services だけでなくに読み取り専用アクセスできるようにします。 ADO アプリケーションがシームレスにアクセスできる、新しいプロバイダー アクセス権を付与する別のディレクトリがある場合、ADSI はプロバイダー モデルに基づきます。 ADSI プロバイダーは、フリー スレッドし、Unicode に対応します。  
   
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター  
- このプロバイダーに接続するには、設定、**Provider**の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)には、次のプロパティ。   
+ このプロバイダーに接続するには、設定、**Provider**の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)には、次のプロパティ。  
   
 ```vb
 ADSDSOObject  
@@ -67,7 +67,7 @@ ADSDSOObject
 |*Attributes*|返される属性のコンマ区切りの一覧を示します。|  
 |*Scope*|任意。 **文字列**検索のスコープを指定します 次のいずれかになります。<br /><br /> ベースでは、ベース オブジェクト (検索のルート) のみを検索します。<br />-OneLevel では、1 レベルのみを検索します。<br />サブツリーには、サブツリー全体を検索します。|  
   
- 以下に例を示します。  
+ 例 :  
   
 ```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  

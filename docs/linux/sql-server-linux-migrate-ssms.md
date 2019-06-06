@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.custom: sql-linux
-ms.openlocfilehash: ca8a5f92c3ee4c9ee1e9e45ec7fd23b8a3341835
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 428af4498fc45a32909e424aecc99b8f6fc3aadb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742390"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705276"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>エクスポートし、SSMS または SqlPackage.exe で Windows を使った Linux 上のデータベースのインポート
 
@@ -82,4 +81,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>関連項目
-SSMS を使用する方法の詳細については、[SQL Server Management Studio を使用して](https://msdn.microsoft.com/library/ms174173.aspx)を参照してください。 SqlPackage.exe の詳細については、、 [SqlPackage のリファレンス ドキュメント](https://msdn.microsoft.com/library/hh550080.aspx)を参照してください。
+SSMS を使用する方法の詳細については、次を参照してください。 [SQL Server Management Studio を使用して](https://msdn.microsoft.com/library/ms174173.aspx)します。 SqlPackage.exe の詳細については、次を参照してください。、 [SqlPackage のリファレンス ドキュメント](https://msdn.microsoft.com/library/hh550080.aspx)します。

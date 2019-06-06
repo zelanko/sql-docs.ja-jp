@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e80a0bbb70a626ff01043592896ecfbe3c21f189
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e5ef2215725382650540d24f90e7cbd61102a71
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184811"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704425"
 ---
 # <a name="xml-security-considerations"></a>XML のセキュリティに関する考慮事項
 ADO を保存し、レコード セット オブジェクトで Open メソッドは、Internet Explorer で実行する安全な操作は考慮されません。 そのため、アプリケーションまたはブラウザーでホストされているコントロールで実行されているスクリプト コードでこれらのメソッドを使用する場合、ブラウザーのセキュリティの構成は、動作に影響があります。  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217757"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702765"
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語で ADO を使用する
 ADO では、スクリプトの環境では、サーバー側のスクリプトを使用してデータを公開できます。 このシナリオでは、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されているコンポーネントです。 この HTML コンテンツは、クライアント Web ブラウザーに HTTP 経由で渡されることができます。 スクリプトを使用して、Web ページはサーバー側スクリプトは、更新、移動、および特定のデータを表示することができますに戻すアクションを送信できます。  
@@ -32,7 +32,7 @@ ADO では、スクリプトの環境では、サーバー側のスクリプト�
 |ADO コマンド|いいえ|  
 |ADO パラメーター|いいえ|  
 |ADO レコード セット|はい|  
-|ADO レコード|はい|  
+|ADO レコード|[はい]|  
 |ADO Stream|はい|  
 |ADO エラーです。|いいえ|  
 |ADOX のカタログ|いいえ|  

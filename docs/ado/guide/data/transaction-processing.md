@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 032677452fa80502d37383af8172ff9475dea363
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472191"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704813"
 ---
 # <a name="transaction-processing"></a>トランザクション処理
 A*トランザクション*先頭との接続にまたがって実行データ アクセス操作の一連の末尾を区切ります。 データ ソースのトランザクションの機能によって、**接続**オブジェクトでは作成してトランザクションを管理することもできます。 など、Microsoft OLE DB Provider for SQL Server を使用して、Microsoft SQL Server でのデータベースにアクセスする、作成を実行するコマンドの複数の入れ子になったトランザクション。  
