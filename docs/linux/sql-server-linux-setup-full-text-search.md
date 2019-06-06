@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: d16a399ceb6a2c22599d7a95396d49f21e378eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809740"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705048"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上の SQL Server フルテキスト検索をインストールします。
 
@@ -32,7 +31,7 @@ ms.locfileid: "47809740"
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">RHEL をインストールします。</a>
+## <a name="RHEL">RHEL へのインストール</a>
 
 次のコマンドを使用して、インストール、 **mssql-サーバー-fts** Red Hat Enterprise linux。 
 
@@ -47,7 +46,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 この記事で説明されている同じオフライン インストール手順を使用して[SQL Server のインストール](sql-server-linux-setup.md#offline)します。
+オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 次に、[SQL Server のインストール](sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
 ## <a name="ubuntu">Ubuntu にインストールします</a>
 
@@ -65,9 +64,9 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 この記事で説明されている同じオフライン インストール手順を使用して[SQL Server のインストール](sql-server-linux-setup.md#offline)します。
+オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 次に、[SQL Server のインストール](sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
-## <a name="SLES">SLES でのインストールします。</a>
+## <a name="SLES">SLES へのインストール</a>
 
 次のコマンドを使用して、インストール、 **mssql-サーバー-fts** SUSE Linux Enterprise server。 
 
@@ -82,7 +81,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 この記事で説明されている同じオフライン インストール手順を使用して[SQL Server のインストール](sql-server-linux-setup.md#offline)します。
+オフライン インストールが必要な場合に、フルテキスト検索のパッケージのダウンロードを検索、[リリース ノート](sql-server-linux-release-notes.md)します。 次に、[SQL Server のインストール](sql-server-linux-setup.md#offline)の記事で説明されているのと同じオフライン インストール手順を使用します。
 
 ## <a name="supported-languages"></a>サポートされている言語
 
@@ -146,7 +145,7 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a> フィルター
 
-フルテキスト検索は、バイナリ ファイルに格納されているテキストでも機能します。 インストール済みのフィルターがファイルを処理するために必要なこの場合。 フィルターの詳細については、[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)を参照してください。
+フルテキスト検索は、バイナリ ファイルに格納されているテキストでも機能します。 インストール済みのフィルターがファイルを処理するために必要なこの場合。 フィルターの詳細については、次を参照してください。[検索用フィルターの管理と構成](../relational-databases/search/configure-and-manage-filters-for-search.md)します。
 
 呼び出すことによって、インストールされているフィルターの一覧を確認できます**sp_help_fulltext_system_components 'filter'** します。 SQL Server では、次のフィルターがインストールされます。
 
@@ -284,4 +283,4 @@ sudo zypper update mssql-server-fts
 
 ## <a name="next-steps"></a>次の手順
 
-フルテキスト検索については、[SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)を参照してください。 
+フルテキスト検索については、次を参照してください。 [SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)します。 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302346"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701866"
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大規模な子を使用する場合**レコード セット**、特に、親のサイズと比較**レコード セット**、いくつかの子章のみにアクセスする必要がある場合がありますを使用する方が効率的、パラメーター化されたコマンド。  
@@ -75,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  パラメーター化されていない階層を使用して、方法はありません、このような方法でチームやゲームのテーブルを関連付けるを子**Recordset**に各チームには、完全なスケジュールが含まれています。 ホーム スケジュールまたは道路のスケジュールが、両方が含まれている章を作成することができます。 RELATE 句に、フォームの親子関係を制限します。 これは (pc1 = cc1) AND (pc2 = pc2)。 そのため、コマンドに"関連付け team_id TO home_team、team_id TO visiting_team"が含まれている場合得ゲームのみで、チームが再生されて自体。 必要なの"(team_id=home_team) または (team_id = visiting_team)"、Shape プロバイダーで OR 句がサポートされていません。  
   
- 目的の結果を取得するには、パラメーター化されたコマンドを使用することができます。 以下に例を示します。  
+ 目的の結果を取得するには、パラメーター化されたコマンドを使用することができます。 例 :  
   
 ```  
 SHAPE {SELECT * FROM teams}   

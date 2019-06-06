@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 57fd1d8c90a9d5b24d0d4cbea6eb0491006f89da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e7f315e65702eab373430ede3adb23199f4edc83
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527114"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712842"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server の SLES 共有ディスク クラスターを構成します。
 
@@ -23,7 +22,7 @@ ms.locfileid: "58527114"
 
 このガイドでは、SQL Server SUSE Linux Enterprise Server (SLES) 上の 2 ノードの共有ディスク クラスターを作成する手順を提供します。 クラスタ リングの階層は SUSE に基づいて[高可用性の拡張機能 (HAE)](https://www.suse.com/products/highavailability)上に構築された[Pacemaker](https://clusterlabs.org/)します。 
 
-クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、[SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)を参照してください。
+クラスターの構成、リソース エージェントのオプション、管理、ベスト プラクティス、および推奨事項の詳細については、次を参照してください。 [SUSE Linux Enterprise 高可用性拡張子 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)します。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -35,7 +34,7 @@ ms.locfileid: "58527114"
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>各クラスター ノードで、SQL Server のインストールと構成をする
 
-1. 両方のノード上に SQL Server をインストールし、セットアップします。 詳細については、[Linux 上の SQL Server のインストール](sql-server-linux-setup.md)を参照してください。
+1. 両方のノード上に SQL Server をインストールし、セットアップします。 詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)します。
 2. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。 
 3. セカンダリ ノードでSQL Server を停止し無効にします。 次の例では、SQL Server を停止して無効にします。
 
@@ -125,7 +124,7 @@ NFS サーバーを構成するには、SUSE ドキュメントでは、次の�
     > [!NOTE]
     > SUSE のベスト プラクティスと高使用可能な NFS ストレージに関する推奨事項に従うことをお勧めします。[DRBD と Pacemaker に高可用性 NFS ストレージ](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)します。
 
-2. 新しいファイル パスで SQL Server が正常に開始するかを検証します。 これは、各ノードで行います。 この時点で 一度に1 つのノードのみで SQL Server を実行する必要があります。 各ノードが同時にデータベースファイルにアクセスしようとするため(両方のノードで SQL Server が誤って開始しないように、ファイル システムのクラスター リソースを使用して、ファイル共有が別々 のノードによって 2 回マウントされていないようにします) 各ノードで同時に実行することはできません。 次のコマンドは、SQL Server を起動し、状態を確認し、SQL Server を停止します。 
+2. 新しいファイル パスで SQL Server が正常に開始するかを検証します。 これは、各ノードで行います。 この時点で 一度に1 つのノードのみで SQL Server を実行する必要があります。 各ノードが同時にデータベースファイルにアクセスしようとするため(両方のノードで SQL Server が誤って開始しないように、ファイル システムのクラスター リソースを使用して、ファイル共有が別々 のノードによって 2 回マウントされていないようにします) 各ノードで同時に実行することはできません。 次のコマンドは、SQL Server を起動し、状態を確認し、SQL Server を停止します。
 
     ```bash
     sudo systemctl start mssql-server
@@ -223,7 +222,7 @@ exit
 
 構成がコミットされると、SQL Server は、仮想 IP リソースと同じノードで開始されます。 
 
-詳細については、[構成とクラスター リソースを管理する」(コマンドライン)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)を参照してください。 
+詳細については、次を参照してください。[構成とクラスター リソースを管理する」(コマンドライン)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)します。 
 
 ### <a name="verify-that-sql-server-is-started"></a>SQL Server が開始されたことを確認します。 
 

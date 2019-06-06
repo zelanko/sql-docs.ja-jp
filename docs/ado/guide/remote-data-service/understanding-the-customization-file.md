@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955808"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704136"
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
-カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます (**[]**) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**connect**、 **sql**、 **userlist**、または**logs**です。 パラメーターは、リテラル文字列、既定値、ユーザー指定の識別子では、または何もです。  
+カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます ( **[]** ) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**connect**、 **sql**、 **userlist**、または**logs**です。 パラメーターは、リテラル文字列、既定値、ユーザー指定の識別子では、または何もです。  
   
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
@@ -55,9 +55,9 @@ identifier
   
  特定のセクションは、次の状況で使用されます。  
   
--   A**接続**セクションを使用して、クライアントの値の部分文字列のキーワードを接続する場合は"**データ ソース =**_値_"と一致する、**接続**セクションの識別子*します。*  
+-   A**接続**セクションを使用して、クライアントの値の部分文字列のキーワードを接続する場合は"**データ ソース =** _値_"と一致する、**接続**セクションの識別子*します。*  
   
--   **Sql** セクションには、クライアントのコマンド文字列に一致する文字列が含まれている場合、使用、 **sql** セクションの識別子。   
+-   **Sql** セクションには、クライアントのコマンド文字列に一致する文字列が含まれている場合、使用、 **sql** セクションの識別子。  
   
 -   **connect**または**sql**既定パラメーターを持つセクションは、一致する識別子が存在しない場合に使用します。  
   

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93e377fc187968b031438ccd896e29b7ebff4144
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231364"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713196"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server のコンテナーの高可用性
 
@@ -74,8 +73,8 @@ SQL Server 2019 では、Kubernetes でコンテナーの可用性グループ�
 | |可用性グループで | スタンドアロンのコンテナー インスタンス<br/> 可用性グループなし
 |:------|:------|:------
 |ノードの障害から自動的に回復します。 | はい | はい
-|ポッドの障害から自動的に回復します。 | はい | はい
-|高速フェールオーバー |はい |
+|ポッドの障害から自動的に回復します。 | はい | [はい]
+|高速フェールオーバー |[はい] |
 |SQL Server インスタンスの障害から自動的に回復します。 | はい | 
 |データベースの正常性チェックのエラーから自動的に回復します。 | はい | 
 |読み取り専用レプリカを指定します。 | はい |

@@ -8,21 +8,20 @@ manager: craigg
 ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: ac544f145ae5d571f8e4dac979738585b0c13c60
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 6c1c966c394f871a5772c6df5226d6a136dd12dc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581335"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713524"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの RHEL のクラスターを構成します。
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このドキュメントでは、Red Hat Enterprise Linux 上の SQL Server の 3 つのノードの可用性グループのクラスターを作成する方法について説明します。 可用性を高めるためにはLinux 上の可用性グループでは 3 つのノードが必要です - [可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。 クラスタ リングの層は、[Pacemaker](https://clusterlabs.org/)の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。  
+このドキュメントでは、Red Hat Enterprise Linux 上の SQL Server の 3 つのノードの可用性グループのクラスターを作成する方法について説明します。 可用性を高めるためにはLinux 上の可用性グループでは 3 つのノードが必要です - [可用性グループの構成の高可用性とデータ保護](sql-server-linux-availability-group-ha.md)を参照してください。 クラスタ リングの層は、[Pacemaker](https://clusterlabs.org/)の上に構築された Red Hat Enterprise Linux (RHEL) [HA アドオン](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)に基づいています。 
 
 > [!NOTE] 
 > Red Hat の完全なドキュメントにアクセスするには、有効なサブスクリプションが必要です。 
@@ -30,19 +29,19 @@ ms.locfileid: "59581335"
 クラスターの構成、リソース エージェント オプション、および管理の詳細については、  [RHEL リファレンス ドキュメント](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)を参照してください。
 
 > [!NOTE] 
-> SQL Server は Linux 上では Pacemaker と、Windows Server フェールオーバー クラスタ リングほどには緊密には統合されていません。 SQL Server インスタンスは、クラスターを認識していません。 Pacemaker は、クラスター リソースのオーケストレーションを提供します。 また、 Windows Server フェールオーバー クラスタ リングに固有の仮想ネットワーク名に該当するものはPacemakerにはありません。 クラスター情報を照会する可用性グループ動的管理ビュー (DMV) は、Pacemaker クラスターでは空の行を返します。 フェールオーバー後に透過的に再接続するためのリスナーを作成するには、 DNS で仮想 IP リソースを作成するために使用する ip アドレスを使い、リスナー名を手動で登録します。  
+> SQL Server は Linux 上では Pacemaker と、Windows Server フェールオーバー クラスタ リングほどには緊密には統合されていません。 SQL Server インスタンスは、クラスターを認識していません。 Pacemaker は、クラスター リソースのオーケストレーションを提供します。 また、 Windows Server フェールオーバー クラスタ リングに固有の仮想ネットワーク名に該当するものはPacemakerにはありません。 クラスター情報を照会する可用性グループ動的管理ビュー (DMV) は、Pacemaker クラスターでは空の行を返します。 フェールオーバー後に透過的に再接続するためのリスナーを作成するには、 DNS で仮想 IP リソースを作成するために使用する ip アドレスを使い、リスナー名を手動で登録します。 
 
 次のセクションでは、Pacemaker クラスターを設定して、可用性グループの高可用性クラスター内のリソースとして追加する手順について説明します。
 
 ## <a name="roadmap"></a>ロードマップ
 
-高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスターの手順と異なります。 手順の概要を以下に説明します。  
+高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスターの手順と異なります。 手順の概要を以下に説明します。 
 
 1. [SQL Server のクラスター ノードで構成](sql-server-linux-setup.md)します。
 
 2. [可用性グループの作成](sql-server-linux-availability-group-configure-ha.md)です。 
 
-3. Pacemaker のように、クラスター リソース マネージャーを構成します。  これらの手順は、このドキュメントに記載されています。
+3. Pacemaker のように、クラスター リソース マネージャーを構成します。 これらの手順は、このドキュメントに記載されています。
    
    クラスター リソース マネージャーを構成する方法は、特定の Linux ディストリビューションによって異なります。 
 
@@ -59,7 +58,7 @@ RHEL の高可用性を構成するには、高可用性のサブスクリプシ
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>RHEL の高可用性のサブスクリプションを有効にします。
 
-クラスター内の各ノードは、RHEL と High Availability Add on の適切なサブスクリプションが必要です。 [Red Hat Enterprise Linux での高可用性クラスター パッケージをインストールする方法](https://access.redhat.com/solutions/45930)の要件を確認してください。  サブスクリプションとリポジトリを構成する手順に従います。
+クラスター内の各ノードは、RHEL と High Availability Add on の適切なサブスクリプションが必要です。 [Red Hat Enterprise Linux での高可用性クラスター パッケージをインストールする方法](https://access.redhat.com/solutions/45930)の要件を確認してください。 サブスクリプションとリポジトリを構成する手順に従います。
 
 1. システムを登録します。
 
@@ -107,7 +106,7 @@ Pacemaker クラスターのベンダーは、STONITH を有効にして、サ�
 
 リソース レベルのフェンス操作により、リソースの構成で障害が発生した場合でも、データの破損がないことが保証されます。 たとえば、リソース レベルのフェンス操作を使用して、通信リンクがダウンしたときに、ノード上のディスクを古くなったとマークすることができます。 
 
-ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。 これは、ノードをリセットすることによって行います。  Pacemaker はさまざまなフェンス操作デバイスをサポートします。 たとえば、無停電電源装置やサーバーの管理インターフェイスのカードなどがあります。
+ノード レベルのフェンス操作により、ノードがどのリソースも実行しないことが保証されます。 これは、ノードをリセットすることによって行います。 Pacemaker はさまざまなフェンス操作デバイスをサポートします。 たとえば、無停電電源装置やサーバーの管理インターフェイスのカードなどがあります。
 
 STONITH、およびフェンス操作については、次の記事を参照してください。
 
@@ -170,7 +169,7 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 ## <a name="create-virtual-ip-resource"></a>仮想 IP リソースを作成します。
 
-仮想 IP アドレス リソースを作成するには、1 つのノードで次のコマンドを実行します。 ネットワークから使用可能な静的 IP アドレスを使用します。 `<10.128.16.240>`を有効な IP アドレスで置換します。 
+仮想 IP アドレス リソースを作成するには、1 つのノードで次のコマンドを実行します。 ネットワークから使用可能な静的 IP アドレスを使用します。 `<10.128.16.240>`を有効な IP アドレスで置換します。
 
 ```bash
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
@@ -192,7 +191,7 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 ## <a name="add-ordering-constraint"></a>順序付けの制約を追加します。
 
-コロケーションの制約には、暗黙的な順序付け制約があります。 可用性グループ リソースを移動する前に、仮想 IP リソースを移動します。 既定では一連のイベントは次のとおりです。 
+コロケーションの制約には、暗黙的な順序付け制約があります。 可用性グループ リソースを移動する前に、仮想 IP リソースを移動します。 既定では一連のイベントは次のとおりです。
 
 1. ユーザーの問題に関する`pcs resource move`可用性グループにプライマリ node1 から node2 にします。
 1. 仮想 IP リソースは、ノード 1 で停止します。
@@ -215,7 +214,7 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 >[!IMPORTANT]
 >クラスターを構成するクラスター リソースとして、可用性グループを追加したら、TRANSACT-SQL を使用して可用性グループのリソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは関連付けられていませんに厳しく、オペレーティング システムは Windows Server フェールオーバー クラスター (WSFC) にします。 SQL Server サービスでは、クラスターの存在を認識しません。 すべてのオーケストレーションは、クラスターの管理ツールを使用して行われます。 RHEL または Ubuntu を使用して`pcs`と SLES 使用`crm`ツール。 
 
-`pcs`を使って、可用性グループを手動でフェールオーバーしてください。 Transact-SQL を使用したフェールオーバーを開始してはいけません。 手順については、[フェールオーバー](sql-server-linux-availability-group-failover-ha.md#failover)を参照してください。 
+`pcs`を使って、可用性グループを手動でフェールオーバーしてください。 Transact-SQL を使用したフェールオーバーを開始してはいけません。 手順については、[フェールオーバー](sql-server-linux-availability-group-failover-ha.md#failover)を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

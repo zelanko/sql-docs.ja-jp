@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 701ced4f5e0ad511f4a1c5b39c9775e285d1f751
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140223"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695788"
 ---
 # <a name="connection-object-ado"></a>Connection オブジェクト (ADO)
 データ ソースへの接続を開くを表します。  
@@ -64,7 +64,7 @@ ms.locfileid: "63140223"
 >  この機能を使用しない (でネイティブ メソッドがあるかのように、名前付きコマンドまたはストアド プロシージャを呼び出す、**接続**オブジェクト)、Microsoft® .NET Framework アプリケーションのため、機能の競合の基になる実装方法と、.NET Framework に com 相互運用します。  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブ メソッドとしてコマンドを実行します。  
- コマンドを実行するコマンドを指定の名前を使用して、**コマンド**オブジェクト[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティ。 設定、 **ActiveConnection**のプロパティ、**コマンド**オブジェクトに接続します。 メソッドがあるかのように、コマンド名が使用されているステートメントを発行し、**接続**任意のパラメーターの前に、オブジェクトと**レコード セット**オブジェクトのかどうか、すべての行が返されます。 設定、 **Recordset**プロパティ、その結果をカスタマイズする**レコード セット**します。 以下に例を示します。  
+ コマンドを実行するコマンドを指定の名前を使用して、**コマンド**オブジェクト[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティ。 設定、 **ActiveConnection**のプロパティ、**コマンド**オブジェクトに接続します。 メソッドがあるかのように、コマンド名が使用されているステートメントを発行し、**接続**任意のパラメーターの前に、オブジェクトと**レコード セット**オブジェクトのかどうか、すべての行が返されます。 設定、 **Recordset**プロパティ、その結果をカスタマイズする**レコード セット**します。 例 :  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -80,7 +80,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブ メソッドとしてストアド プロシージャを実行します。  
- ストアド プロシージャを実行するには、上のメソッドがあるかのように、ストアド プロシージャ名が使用されているステートメントを発行、**接続**任意のパラメーターの前に、オブジェクト。 ADO は、パラメーターの型の「最善の推測」になります。 以下に例を示します。  
+ ストアド プロシージャを実行するには、上のメソッドがあるかのように、ストアド プロシージャ名が使用されているステートメントを発行、**接続**任意のパラメーターの前に、オブジェクト。 ADO は、パラメーターの型の「最善の推測」になります。 例 :  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -100,4 +100,4 @@ cnn. "parameter"
  [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

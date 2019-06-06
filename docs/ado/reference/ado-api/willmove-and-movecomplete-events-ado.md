@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88a04ff636f06589515f409b7c2274217ae8f3f8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642474"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710017"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
 **WillMove**保留中の操作の現在の位置を変更する前に、イベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 **MoveComplete**内の現在位置の後にイベントが呼び出される、 **Recordset**変更します。  
@@ -64,7 +64,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
  設定する必要があります、 *adStatus*パラメーターを**adStatusUnwantedEvent**の可能性のある各*adReason*任意のイベントのイベント通知を完全に停止するには値を含まれています、 *adReason*パラメーター。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 985cb58b860c594e8cfc3e405934fafd9cfb245a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5fc27ed728483fd42d90e599580ce32194f08b99
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184954"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699897"
 ---
 # <a name="using-a-recordset-object"></a>レコードセット オブジェクトを使用する
 また、使用することができます**Recordset.Open**を暗黙的に接続を確立し、1 回の操作では、その接続経由でコマンドを発行します。 たとえばでは Visual Basic の場合。  

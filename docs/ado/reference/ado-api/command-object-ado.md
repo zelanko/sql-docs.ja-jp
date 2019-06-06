@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab3348906affc9a1c1a4b5471de861831992dc32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 089a261eaea2701354af6082827c12491810b74c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126799"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699006"
 ---
 # <a name="command-object-ado"></a>Command オブジェクト (ADO)
 データ ソースに対して実行する特定のコマンドを定義します。  
@@ -81,4 +81,4 @@ objCmd(0)
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

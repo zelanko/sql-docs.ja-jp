@@ -8,15 +8,14 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: e339d83503c8fa1f5cdd383004fa93d41529d12d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872202"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713439"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>構成する SQL Server Always On 可用性グループの Linux での高可用性
 
@@ -32,7 +31,7 @@ ms.locfileid: "58872202"
 
 ## <a name="roadmap"></a>ロードマップ
 
-高可用性のための Linux サーバーで、AG を作成する手順は、Windows Server フェールオーバー クラスター上の手順と異なります。 手順の概要を以下に説明します。  
+高可用性のための Linux サーバーで、AG を作成する手順は、Windows Server フェールオーバー クラスター上の手順と異なります。 手順の概要を以下に説明します。 
 
 1. [次の 3 つのクラスター サーバー上の SQL Server の構成](sql-server-linux-setup.md)します。
 
@@ -41,7 +40,7 @@ ms.locfileid: "58872202"
 
 2. AG を作成します。 この手順は現在この記事で説明します。 
 
-3. Pacemaker のように、クラスター リソース マネージャーを構成します。 
+3. Pacemaker のように、クラスター リソース マネージャーを構成します。
    
    クラスター リソース マネージャーを構成する方法は、特定の Linux ディストリビューションによって異なります。 配布の具体的な手順は次のリンクを参照してください。 
 

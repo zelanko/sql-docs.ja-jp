@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 45839834e25a94d584ac250503de153bf6fb0eb3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631257"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694976"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter および RecordCount プロパティの例 (vc++)
 この例では、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを開き、新しい[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)既存に適用される指定した条件に基づいて**レコード セット**します。 使用して、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティを 2 つのレコードの数を表示する**レコード セット**します。 FilterField 関数は、この手順を実行する必要があります。  
@@ -303,7 +303,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

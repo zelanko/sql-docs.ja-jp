@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161569"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702008"
 ---
 # <a name="field-related-error-information"></a>フィールドに関連するエラー情報
 エラーは、フィールドに直接関連している場合など、データが不足している場合、または、フィールドに対して無効な型である場合を取得できます、問題の原因の詳細についてを調べることで、**フィールド**オブジェクトの**ステータス**プロパティ。 このプロパティは、問題の特定の情報を提供する拡張されています。 そのため、たとえばへの呼び出し時に**UpdateBatch**失敗した場合、問題の原因を調べることで決定できます、**状態**のプロパティ、**フィールド**影響を受ける各レコードがあります。 内の値のいずれかのプロパティには、 **FieldStatusEnum**定数。 次の表には、エラーが発生したときに特定の関心のあるこれらの値が含まれています。  

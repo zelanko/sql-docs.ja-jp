@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e8a46dd9358b085fb6079f03df88474b72440068
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027667"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711258"
 ---
 # <a name="state-property-ado"></a>State プロパティ (ADO)
 すべての該当するオブジェクトのオブジェクトの状態がオープンかクローズかどうかを示します。 オブジェクトが非同期メソッドを実行している場合は、オブジェクトの現在の状態が接続になっていること、実行、または取得するかどうかを示します。  

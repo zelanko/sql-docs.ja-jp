@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f3506070a55b852292067ec89ee24ee11417d6da
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281569"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705777"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder プロパティの例 (VB)
 この例では、 [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)に追加された、[列](../../../ado/reference/adox-api/columns-collection-adox.md)のコレクション、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードでは、国の列に昇順のインデックスを付加、**従業員**テーブルし、レコードが表示されます。 コードでは、国の列に降順のインデックスを付加し、**従業員**テーブルし、レコードをもう一度表示されます。 昇順と降順のインデックスの違いが表示されます。  

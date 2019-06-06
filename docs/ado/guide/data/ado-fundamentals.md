@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 155e1e810309ee4efa40badac55ca749a4329182
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062928"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702340"
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO は、プログラムへのアクセス、編集、およびさまざまなシステムの OLE DB インターフェイス経由でデータ ソースからデータを更新するための強力な論理オブジェクト モデルを開発者に提供します。 ADO の最も一般的な使用方法をテーブルやリレーショナル データベースのテーブルをクエリを取得し、アプリケーションでは、結果を表示し、おそらくユーザー行い、データに変更を保存できるようにします。 その他のタスクを以下に示します。  

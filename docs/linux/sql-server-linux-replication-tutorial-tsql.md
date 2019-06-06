@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 09/24/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b1d86b56e836a9b9b7bf575d5e9353a962894ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e815a2c4c1f17caf1d07aad91d1ae30224bc9f21
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405317"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705125"
 ---
 # <a name="configure-replication-with-t-sql"></a>T-SQL でレプリケーションを構成します。
 
@@ -287,7 +286,7 @@ ms.locfileid: "52405317"
 
 ## <a name="see-also"></a>関連項目
 
-レプリケーションの詳細については、[SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)を参照してください。
+レプリケーションの詳細については、次を参照してください。 [SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)します。
 
 ## <a name="next-steps"></a>次の手順
 

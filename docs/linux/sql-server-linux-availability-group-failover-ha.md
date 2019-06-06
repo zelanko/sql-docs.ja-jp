@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: ee4550d9b86c5969bdf930391090e06c54988063
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 42401590745985baa207fa0db3ac9da774041ff4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657907"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713459"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上の always On 可用性グループのフェールオーバー
 
@@ -23,14 +22,14 @@ ms.locfileid: "58657907"
 
 、可用性グループ (AG) のコンテキスト内でプライマリ ロールとセカンダリ ロールの可用性レプリカは通常、フェールオーバーと呼ばれるプロセスで交換されることです。 フェールオーバーには、自動フェールオーバー (データ損失なし)、計画的な手動フェールオーバー (データ損失なし)、および " *強制フェールオーバー*" と通常呼ばれる強制手動フェールオーバー (データ損失の可能性あり) の 3 つの形式があります。 自動フェールオーバーと計画的な手動フェールオーバーでは、すべてのデータを保持します。 AG は、可用性レプリカのレベルでフェールオーバーします。 つまり、AG はそのセカンダリ レプリカ (現在のフェールオーバー ターゲット) のいずれかにフェールオーバーします。 
 
-フェールオーバーの背景については、[フェールオーバーとフェールオーバー モード](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)を参照してください。
+フェールオーバーの背景については、次を参照してください。[フェールオーバーとフェールオーバー モード](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)します。
 
 ## <a name="failover"></a>手動フェールオーバー
 
 クラスターの管理ツールを使用して、外部のクラスター マネージャーによって管理されている AG をフェールオーバーする場合します。 たとえば、ソリューションでは、Linux クラスターを管理する Pacemaker を使用している場合を使用して`pcs`RHEL または Ubuntu での手動フェールオーバーを実行します。 SLES を使用して`crm`します。 
 
 > [!IMPORTANT]
-> 通常の操作では、失敗しない経由で SSMS または PowerShell のような TRANSACT-SQL または SQL Server の管理ツールを使用します。 ときに`CLUSTER_TYPE = EXTERNAL`にのみ使用できる値`FAILOVER_MODE`は`EXTERNAL`します。 これらの設定では、すべての手動または自動フェールオーバー アクションは、外部のクラスター マネージャーで実行されます。 データ損失のフェールオーバーを強制する手順については、[を強制的にフェールオーバー](#forceFailover)を参照してください。
+> 通常の操作では、失敗しない経由で SSMS または PowerShell のような TRANSACT-SQL または SQL Server の管理ツールを使用します。 ときに`CLUSTER_TYPE = EXTERNAL`にのみ使用できる値`FAILOVER_MODE`は`EXTERNAL`します。 これらの設定では、すべての手動または自動フェールオーバー アクションは、外部のクラスター マネージャーで実行されます。 データ損失のフェールオーバーを強制する手順については、次を参照してください。[を強制的にフェールオーバー](#forceFailover)します。
 
 ### <a name="a-namemanualfailovermanual-failover-steps"></a><a name="manualFailover">手動のフェールオーバー手順
 

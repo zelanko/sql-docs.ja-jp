@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 52561b6d240a58e59490d607c8729b5d878b96a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 59a89db47036129e3c345d26ded57ecf4e26fc84
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642428"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710026"
 ---
 # <a name="write-method"></a>Write メソッド
 バイナリ データを書き込みます、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -51,5 +51,5 @@ Stream.Write Buffer
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WriteText メソッド](../../../ado/reference/ado-api/writetext-method.md)

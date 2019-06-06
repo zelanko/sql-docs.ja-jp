@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723200"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713156"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio を使用して、Linux 上の SQL Server を管理するには
 
@@ -65,7 +64,7 @@ SQL Server を使用する場合は、最新バージョンの SQL Server Manage
    | **Login** | サーバー上のデータベースにアクセス権を持つユーザーの名前を入力します (既定ではたとえば、 **SA**セットアップ中に作成したアカウント)。 |
    | **Password** | 指定したユーザーのパスワードを入力します (用、 **SA**アカウントを作成したこのセットアップ中に)。 |
 
-    ![SQL Database サーバーに接続する SQL Server Management Studio:](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio:SQL Database サーバーに接続します。](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. **[接続]** をクリックします。
 
@@ -93,7 +92,7 @@ SQL Server を使用する場合は、最新バージョンの SQL Server Manage
 
 1. をクリックして、 **Execute**クエリを実行し、結果を表示するボタンをクリックします。
 
-   ![正常終了しました。 SQL Database サーバーへの接続: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![正常終了しました。 SQL Database サーバーに接続します。SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Transact SQL クエリと管理タスクほぼすべてを実行することはできますが、SSMS は、グラフィカルなツールが SQL Server を管理しやすいです。 次のセクションでは、グラフィカル ユーザー インターフェイスを使用していくつかの例を提供します。
 

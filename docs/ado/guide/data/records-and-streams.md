@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9e26930db786b986fd1f4ba633e2cc5953f3df3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 19fc6e61a10e1a92f0f674a23d00f1e1b06a596c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910455"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701699"
 ---
 # <a name="records-and-streams"></a>レコードとストリーム
 ADO は、現在、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとしてのリレーショナル データベースなどのデータ ソース内の情報にアクセスする主要な手段です。 ただし、一部のプロバイダーのサポート、[レコード](../../../ado/reference/ado-api/record-object-ado.md)と[Stream](../../../ado/reference/ado-api/stream-object-ado.md)のプロバイダーからのデータを操作できる代替または補完的なオブジェクトとしてのオブジェクト。 詳細についての**レコード**動作、プロバイダーのドキュメントを参照してください。  

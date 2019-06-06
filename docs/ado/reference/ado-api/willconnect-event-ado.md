@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22d30e389c61a66d417ad5baec99a8834a754047
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 01b5c20668f97c80ae5abdcbb213914c012c7359
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642520"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710059"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect イベント (ADO)
 **WillConnect**の接続を開始する前に、イベントが呼び出されます。  
   
- **適用対象します。**[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **適用対象します。** [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,6 +64,6 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
   
  このイベントが取り消されると、 **ConnectComplete**呼び出しに使用されるその*adStatus*パラメーターに設定**adStatusErrorsOccurred**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

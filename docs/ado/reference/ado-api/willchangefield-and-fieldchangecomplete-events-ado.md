@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f046a3a33e05228ab5e49116bc46eb9451f43129
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 35efd51d640943c4d5293956a0638fa85ac302f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642457"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710075"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField および FieldChangeComplete イベント (ADO)
 **WillChangeField**保留中の操作が 1 つまたは複数の値を変更する前に、イベントが呼び出される[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 **FieldChangeComplete**イベントが 1 つ以上の値の後に呼び出される**フィールド**オブジェクトが変更されました。  
@@ -65,6 +65,6 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
 ## <a name="remarks"></a>コメント  
  A **WillChangeField**または**FieldChangeComplete**を設定するときに、イベントが発生する可能性があります、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティと呼び出し、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドフィールドと値の配列パラメーター。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

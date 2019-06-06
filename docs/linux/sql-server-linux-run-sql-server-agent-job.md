@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: fa24fc0f36ab007ea8b16fadf9a9d06dc9c48314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7df0ed46d9ded592a8cebc6571c5ec1e1b1f486
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605866"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705117"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>作成し、Linux 上の SQL Server エージェント ジョブの実行
 
@@ -155,7 +154,7 @@ Linux 上の SQL Server エージェントを使用して、既に SQL Server �
 
 作成し、Windows 上の SQL Server Management Studio (SSMS) を使用してリモートでジョブを管理することができますも。
 
-1. Windows で SSMS を起動し、Linux の SQL Server インスタンスに接続します。 詳細については、[SSMS を使用した Linux 上の SQL Server の管理](sql-server-linux-manage-ssms.md)を参照してください。
+1. Windows で SSMS を起動し、Linux の SQL Server インスタンスに接続します。 詳細については、次を参照してください。 [SSMS を使用した Linux 上の SQL Server の管理](sql-server-linux-manage-ssms.md)します。
 
 1. という名前のサンプル データベースを作成することを確認**SampleDB**します。
 

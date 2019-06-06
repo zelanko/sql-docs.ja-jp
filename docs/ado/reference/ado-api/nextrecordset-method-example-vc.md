@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6c4b3846c2402287660ffd106074b8e7429ce1c0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242711"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707219"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset メソッドの例 (VC++)
 この例では、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッドの 3 つの異なるから成る複合コマンド ステートメントを使用してレコード セット内のデータを表示する**選択**ステートメント。  

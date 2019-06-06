@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 500beed65583eea1e1e01b34a3bb585198b219e1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062948"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700985"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO イベントのインスタンス化: Visual C++
 Microsoft® Visual C++ での ADO イベントのインスタンスを作成する方法の概略図の説明です。 参照してください[ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)の完全な説明。  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43e615d29c10553ef52f536320266abb3d28f542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0dab0712b05b1ef21f07e86d854f5ee63d388277
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308584"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698443"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType、EditMode プロパティの例 (vc++)
 この例の設定、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを開く前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 値も表示されます、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でのプロパティ。 EditModeOutput 関数は、この手順を実行する必要があります。  
@@ -158,7 +158,7 @@ void PrintComError(_com_error &e) {
   
   **AddNew: の後**   
  **EditMode = adEditAdd**  
-**後の更新。**   
+**後の更新。**    
  **EditMode = adEditNone**  
 **[編集]: の後**   
  **EditMode = adEditInProgress**   

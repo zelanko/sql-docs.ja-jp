@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853332"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701331"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマでは、理想的な世界はいずれかを指定すべてのデータ ソースが OLE DB インターフェイスを公開します。 ADO は、データ ソースに直接呼び出すことができるようにします。 ますます多くのデータベース ベンダーは、OLE DB インターフェイスを実装するは、一部のデータ ソースのこの方法はまだ公開されません。 ただし、今日のほとんどの DBMS システムは、ODBC を通じてアクセスできます。
@@ -65,7 +65,7 @@ MSDASQL
 
  プロバイダーは、ADO で定義されているだけでなく特定の接続パラメーターをサポートしていません。 ただし、プロバイダーは、ODBC ドライバー マネージャーを ADO 非接続パラメーターを渡します。
 
- 省略することができますので、**プロバイダー**パラメーター、ADO 接続文字列を同じデータ ソース用の ODBC 接続文字列と同じであるため作成できます。 同じパラメーター名を使用して (**ドライバー =**、**データベース =**、 **DSN =** など)、値とすると構文は、ODBC 接続文字列を作成するとき。 定義済みのデータ ソース名 (DSN) または FileDSN の有無を接続することができます。
+ 省略することができますので、**プロバイダー**パラメーター、ADO 接続文字列を同じデータ ソース用の ODBC 接続文字列と同じであるため作成できます。 同じパラメーター名を使用して (**ドライバー =** 、**データベース =** 、 **DSN =** など)、値とすると構文は、ODBC 接続文字列を作成するとき。 定義済みのデータ ソース名 (DSN) または FileDSN の有無を接続することができます。
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>DSN、FileDSN の構文:
 
@@ -84,9 +84,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>コメント
  使用する場合、 **DSN**または**FileDSN**、Windows コントロール パネルの ODBC データ ソース アドミニストレーターを定義する必要があります。 Microsoft Windows 2000 では、odbc データ ソース アドミニストレーターは管理ツールの下にあります。 Windows の以前のバージョンでは、という名前の ODBC アドミニストレーター アイコン**32 ビット ODBC**単**ODBC**します。
 
- 設定する代わりに、 **DSN**、ODBC ドライバーを指定することができます (**ドライバー =**)、"SQL Server;"など、サーバー名 (**SERVER =**); とデータベース名 (**データベース =**)。
+ 設定する代わりに、 **DSN**、ODBC ドライバーを指定することができます (**ドライバー =** )、"SQL Server;"など、サーバー名 (**SERVER =** ); とデータベース名 (**データベース =** )。
 
- ユーザー アカウント名を指定することもできます (**UID =**)、およびユーザー アカウントのパスワード (**PWD =**) ODBC に固有のパラメーターまたは標準の ADO 定義*ユーザー*と*パスワード*パラメーター。
+ ユーザー アカウント名を指定することもできます (**UID =** )、およびユーザー アカウントのパスワード (**PWD =** ) ODBC に固有のパラメーターまたは標準の ADO 定義*ユーザー*と*パスワード*パラメーター。
 
  **DSN**指定できますの定義は既にデータベースを指定して、 *、* *データベース*パラメーターに加え、 **DSN**接続するには別のデータベース。 常に含めることをお勧め *、* *データベース*パラメーターを使用する場合、 **DSN**します。 これは、確認した後、別のユーザーは、既定のデータベース パラメーターを変更する場合は、適切なデータベースに接続することにより、 **DSN**定義します。
 
@@ -208,18 +208,18 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|いいえ|いいえ|はい|はい|
 |[Close](../../../ado/reference/ado-api/close-method-ado.md)|はい|[はい]|[はい]|はい|
 |[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|[はい]|[はい]|はい|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|[はい]|[はい]|はい|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|[はい]|[はい]|[はい]|
 |[Move](../../../ado/reference/ado-api/move-method-ado.md)|はい|[はい]|[はい]|はい|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|[はい]|[はい]|はい|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|[はい]|はい|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|[はい]|[はい]|はい|
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|[はい]|はい|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|はい|[はい]|[はい]|はい|
-|[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|[はい]|[はい]|はい|
+|[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[はい]|[はい]|[はい]|はい|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|[はい]|[はい]|はい|
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|いいえ|いいえ|はい|はい|
-|[Supports](../../../ado/reference/ado-api/supports-method.md)|はい|[はい]|[はい]|はい|
-|[Update](../../../ado/reference/ado-api/update-method.md)|はい|[はい]|[はい]|はい|
+|[Supports](../../../ado/reference/ado-api/supports-method.md)|[はい]|[はい]|[はい]|はい|
+|[Update](../../../ado/reference/ado-api/update-method.md)|[はい]|[はい]|[はい]|はい|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|はい|[はい]|[はい]|はい|
 
  * Microsoft Access データベースはサポートされていません。

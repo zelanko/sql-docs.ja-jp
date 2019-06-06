@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211741"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705206"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のセキュリティ機能のチュートリアル
 
@@ -78,7 +77,7 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-固定データベース ロールの一覧では、[データベース レベル ロール](../relational-databases/security/authentication-access/database-level-roles.md)を参照してください。
+固定データベース ロールの一覧では、次を参照してください。[データベース レベル ロール](../relational-databases/security/authentication-access/database-level-roles.md)します。
 
 後で、(強く推奨) データをより正確なアクセスを構成する準備ができたら、作成を使用して、独自のユーザー定義データベース ロール[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)ステートメント。 カスタム ロールに特定の詳細なアクセス許可を割り当てます。
 
@@ -138,9 +137,9 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 セキュリティ ポリシー SalesFilter を作成します。   
-フィルター述語 Security.fn_securitypredicate(SalesPersonID) を追加します。    
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   Sales.SalesOrderHeader、   
-ブロック述語 Security.fn_securitypredicate(SalesPersonID) を追加します。    
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   Sales.SalesOrderHeader で   
 WITH (STATE = ON);   
 ```
@@ -149,11 +148,11 @@ Execute the following to query the `SalesOrderHeader` table as each user. Verify
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
-選択 * Sales.SalesOrderHeader; から    
+SELECT * FROM Sales.SalesOrderHeader;    
 元に戻します。 
  
-EXECUTE AS USER = 'マネージャー';   
-選択 * Sales.SalesOrderHeader; から   
+EXECUTE AS USER = 'Manager';   
+SELECT * FROM Sales.SalesOrderHeader;   
 元に戻します。   
 ```
  
@@ -173,17 +172,17 @@ Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` c
  
 ```
 AdventureWorks2014; の使用します。移動の ALTER TABLE Person.EmailAddress     ALTER 列 EmailAddress    
-追加マスクで (関数 = ' email()');
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-TestUser のユーザーを作成しますログインに関係なく。   
-GRANT SELECT ON Person.EmailAddress TestUser; に    
+CREATE USER TestUser WITHOUT LOGIN;   
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
-EXECUTE AS USER ="TestUser";   
-SELECT EmailAddressID、EmailAddress Person.EmailAddress; から       
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
 元に戻します。    
 ```
  
@@ -224,17 +223,17 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-マスター_キーをパスワードで暗号化を作成する = ' * * * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-作成 MyServerCert の証明書の件名の付いた = '、データベース暗号化キー証明書';  
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-AdventureWorks2014; の使用します。 移動
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
 アルゴリズムで AES_256 を =  
-サーバー証明書 MyServerCert; による暗号化  
+ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
 ALTER DATABASE AdventureWorks2014  
@@ -266,7 +265,7 @@ WITH
   ENCRYPTION   
    (  
    アルゴリズム、AES_256 を =  
-   サーバー証明書 BackupEncryptCert を =  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

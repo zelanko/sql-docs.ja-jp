@@ -8,14 +8,13 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 0e61b42cb7a0d0f0262a4ac4a38c413bf4c4b512
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 6216d7b1a241229fabf9ce9d9d2ed3a63658b2a5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579708"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713569"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>サンプル:SUSE Linux Enterprise Server の無人インストール用の SQL Server のインストール スクリプト
 
@@ -227,4 +226,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-Linux 上の SQL Server に関する詳細については、[SQL Server on Linux の概要](sql-server-linux-overview.md)を参照してください。
+Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux の概要](sql-server-linux-overview.md)します。

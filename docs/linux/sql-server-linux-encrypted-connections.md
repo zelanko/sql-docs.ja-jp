@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826087"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705670"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux への接続の暗号化
 
@@ -72,7 +71,7 @@ TLS は、クライアント アプリケーションからの接続の暗号化
         - **macOS**: 
            - 証明書をコピーします。 ```/usr/local/etc/openssl/certs```
            - ハッシュ値を取得する次のコマンドを実行します。 ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 値に、証明書の名前を変更します。 たとえば、 ```mv mssql.pem dc2dd900.0```のようにします。 Dc2dd900.0 がで確認します。 ```/usr/local/etc/openssl/certs```
+           - 値に、証明書の名前を変更します。 たとえば、「 ```mv mssql.pem dc2dd900.0```」のように入力します。 Dc2dd900.0 がで確認します。 ```/usr/local/etc/openssl/certs```
     
 -   **接続文字列の例** 
 
@@ -135,5 +134,5 @@ TLS は、クライアント アプリケーションからの接続の暗号化
 |--- |--- |
 |証明書チェーンが信頼されていない証明機関によって発行されました。  |このエラーは、クライアントは TLS ハンドシェイク中に SQL サーバーによって提示される証明書の署名を確認することがときに発生します。 クライアントが信頼するかを確認、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]証明書を直接、または SQL Server 証明書に署名する CA です。 |
 |対象のプリンシパル名が正しくありません。  |SQL Server の証明書の共通名 フィールドに、クライアントの接続文字列で指定されたサーバー名と一致することを確認します。 |  
-|既存の接続は、リモート ホストによって強制的に切断されました。 |SQL Server に必要な TLS プロトコル バージョンをサポートしていないクライアント、このエラーが発生します。 たとえば場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を TLS 1.2 を必要として、クライアントも TLS 1.2 プロトコルをサポートしているかどうかを確認するように構成します。 |
+|既存の接続はリモート ホストに強制的に切断されました。 |SQL Server に必要な TLS プロトコル バージョンをサポートしていないクライアント、このエラーが発生します。 たとえば場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を TLS 1.2 を必要として、クライアントも TLS 1.2 プロトコルをサポートしているかどうかを確認するように構成します。 |
 | | |   

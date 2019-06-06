@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 29db423235533a0855f268459c6db379c7f7dfca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f07885aaef22da63d1c94e669db17e7536ccc933
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690130"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713345"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux に SQL Server データベースのバックアップと復元
 
@@ -82,13 +81,13 @@ sqlcmd -S localhost -U SA -Q "RESTORE LOG demodb FROM DISK = N'/var/opt/mssql/da
 Windows コンピューターから SSMS を使用して、Linux データベースに接続し、ユーザー インターフェイスからバックアップを実行することができます。
 
 >[!NOTE] 
-> 最新バージョンの SSMS を使用して、SQL Server に接続します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SSMS のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)します。 SSMS を使用する方法の詳細については、[Linux 上の SQL Server の管理を使用して SSMS](sql-server-linux-manage-ssms.md)を参照してください。
+> 最新バージョンの SSMS を使用して、SQL Server に接続します。 ダウンロードして、最新バージョンをインストールを参照してください。 [SSMS のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)します。 SSMS を使用する方法の詳細については、次を参照してください。 [Linux 上の SQL Server の管理を使用して SSMS](sql-server-linux-manage-ssms.md)します。
 
 SSMS を使用したバックアップを利用して、次の手順が説明します。 
 
 1. SSMS を起動し、SQL Server 2017 on Linux で、サーバーに接続します。
 
-1. オブジェクト エクスプ ローラーをクリックして、データベースを右クリックし**タスク**、 をクリックし、**をバックアップしています.**.
+1. オブジェクト エクスプ ローラーをクリックして、データベースを右クリックし**タスク**、 をクリックし、**をバックアップしています.** .
 
 1. **データベースのバックアップ**ダイアログ ボックスで、パラメーターとオプションを確認し、クリックして**OK**。
  
@@ -98,7 +97,7 @@ SQL Server では、データベースのバックアップを完了します。
 
 次の手順には、SSMS でデータベースを復元について説明します。
 
-1. SSMS で、右クリック**データベース**クリック**データベースの復元しています.**. 
+1. SSMS で、右クリック**データベース**クリック**データベースの復元しています.** . 
 
 1. **ソース**クリックして**デバイス:** 省略記号 (...) を順にクリックします。
 

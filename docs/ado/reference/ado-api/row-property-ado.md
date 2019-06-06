@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f67978362c7e55357c3cdbfea1c8590354277416
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63192827"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711467"
 ---
 # <a name="row-property-ado"></a>Row プロパティ (ADO)
 OLE DB の設定を取得または**行**オブジェクトから、または 、 [ADORecordConstruction インターフェイス](../../../ado/reference/ado-api/adorecordconstruction-interface.md)オブジェクト。 使用すると**put_Row**を設定する、**行**オブジェクト、行は、ADO に変換されます**レコード**オブジェクト。  

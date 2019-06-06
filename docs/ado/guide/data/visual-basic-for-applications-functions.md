@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184885"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699706"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications の関数
 データ シェイプの計算式では、次の Visual Basic for Applications の関数を使用できます。  

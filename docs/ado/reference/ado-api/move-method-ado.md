@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8306a7d8e3247e77579d0bebc9147c3f9a1cc56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c7b99a0848101ca0fad4844c51e44f1ccc628cd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62863489"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707604"
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
 現在のレコードの位置を移動、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -38,7 +38,7 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  符号付き**長い**レコードの現在の位置を移動するレコードの数を指定する式。  
   
- *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
+ *[開始]*  
  任意。 A**文字列**値または**バリアント**ブックマークに評価されます。 使用することも、 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値。  
   
 ## <a name="remarks"></a>コメント  
@@ -46,9 +46,9 @@ recordset.Move NumRecords, Start
   
  場合、 *NumRecords*引数に 0 を超えると、現在のレコードの位置を前方に移動 (の終了に向けて、 **Recordset**)。 場合*NumRecords* 0、現在のレコードの位置は後方に移動します未満です (の先頭に向かって、 **Recordset**)。  
   
- 場合、**移動**呼び出しは、最初のレコードの前に、のポイントに現在のレコードの位置を移動、ADO レコード セット内の最初のレコードの前に位置する現在のレコードを設定する ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 旧バージョンとのときに移動しよう、 **BOF**プロパティが既に**True**エラーが生成されます。  
+ 場合、**移動**呼び出しは、最初のレコードの前に、のポイントに現在のレコードの位置を移動、ADO レコード セット内の最初のレコードの前に位置する現在のレコードを設定する ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。** ). 旧バージョンとのときに移動しよう、 **BOF**プロパティが既に**True**エラーが生成されます。  
   
- 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO レコード セットの最後のレコードの後に、現在のレコードを位置に設定する ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 転送時に移動しよう、 **EOF**プロパティが既に**True**エラーが生成されます。  
+ 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO レコード セットの最後のレコードの後に、現在のレコードを位置に設定する ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。** ). 転送時に移動しよう、 **EOF**プロパティが既に**True**エラーが生成されます。  
   
  呼び出す、**移動**メソッド空から**レコード セット**オブジェクト、エラーが発生します。  
   

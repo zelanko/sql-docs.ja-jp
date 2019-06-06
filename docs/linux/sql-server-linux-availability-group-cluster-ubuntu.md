@@ -8,15 +8,14 @@ manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: b174f21cc0fa15404587f63019b5bcda2eb72534
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 322ace7103fcba46894b56862c5066391cbe9f0e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658106"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713428"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Ubuntu のクラスターと可用性グループ リソースを構成します。
 
@@ -31,13 +30,13 @@ ms.locfileid: "58658106"
 
 ## <a name="roadmap"></a>ロードマップ
 
-高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスターの手順と異なります。 手順の概要を以下に説明します。  
+高可用性の Linux サーバーに可用性グループを作成する手順は、Windows Server フェールオーバー クラスターの手順と異なります。 手順の概要を以下に説明します。 
 
 1. [SQL Server のクラスター ノードで構成](sql-server-linux-setup.md)します。
 
 2. [可用性グループの作成](sql-server-linux-availability-group-configure-ha.md)です。 
 
-3. Pacemaker のように、クラスター リソース マネージャーを構成します。  これらの手順は、このドキュメントに記載されています。
+3. Pacemaker のように、クラスター リソース マネージャーを構成します。 これらの手順は、このドキュメントに記載されています。
    
    クラスター リソース マネージャーを構成する方法は、特定の Linux ディストリビューションによって異なります。 
 
@@ -214,7 +213,7 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 ## <a name="add-ordering-constraint"></a>順序付けの制約を追加します。
 
-コロケーションの制約には、暗黙的な順序付け制約があります。 可用性グループ リソースを移動する前に、仮想 IP リソースを移動します。 既定では一連のイベントは次のとおりです。 
+コロケーションの制約には、暗黙的な順序付け制約があります。 可用性グループ リソースを移動する前に、仮想 IP リソースを移動します。 既定では一連のイベントは次のとおりです。
 
 1. ユーザーの問題に関する`pcs resource move`可用性グループにプライマリ node1 から node2 にします。
 1. 仮想 IP リソースは、node1 で停止します。

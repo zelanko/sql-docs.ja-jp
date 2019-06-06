@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: ef9ee77366b5087ea0beda81eb756d281f495b78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7d31490369b1562db91820d0e47f5935b5b42911
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398986"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713125"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して Windows から Linux へ SQL Server データベースを移行する
 
@@ -100,7 +99,7 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
    ![scp コマンド](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
 > [!TIP]
-> ファイル転送に scp を使用する代替案がないです。 使用する 1 つは[Samba](https://help.ubuntu.com/community/Samba) Windows と Linux での SMB ネットワーク共有を構成します。 Ubuntu でチュートリアルは、[をネットワーク共有を使用して Samba を作成する方法](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!)を参照してください。 確立されると、ネットワーク ファイルとしてアクセスできるよう、Windows から共有 **\\ \\machinenameorip\\共有**。
+> ファイル転送に scp を使用する代替案がないです。 使用する 1 つは[Samba](https://help.ubuntu.com/community/Samba) Windows と Linux での SMB ネットワーク共有を構成します。 Ubuntu でチュートリアルは、次を参照してください。[をネットワーク共有を使用して Samba を作成する方法](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!)します。 確立されると、ネットワーク ファイルとしてアクセスできるよう、Windows から共有 **\\ \\machinenameorip\\共有**。
 
 ## <a name="move-the-backup-file-before-restoring"></a>復元する前にバックアップ ファイルを移動する
 
@@ -151,8 +150,7 @@ Windows 上のデータベースのバックアップ ファイルを作成す�
    sqlcmd -S localhost -U SA
    ```
 
-1. `>1` プロンプトで、次の **RESTORE DATABASE** コマンドを入力します。各行 (複数行のコマンド全体を一度にコピーして貼り付けることはできません) の後にENTERキーを押します。
- `YourDB` をすべてデータベースの名前に置き換えます。
+1. `>1` プロンプトで、次の **RESTORE DATABASE** コマンドを入力します。各行 (複数行のコマンド全体を一度にコピーして貼り付けることはできません) の後にENTERキーを押します。 `YourDB` をすべてデータベースの名前に置き換えます。
 
    ```sql
    RESTORE DATABASE YourDB

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e0f6984c464c08518c7b3143986a041b195cce69
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62653558"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695063"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 1 つまたは複数の属性を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
   
-|定数|Value|説明|  
+|定数|値|説明|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|プロバイダーは、フィールドの値をキャッシュし、キャッシュからそれ以降の読み取りが行われることを示します。|  
 |**adFldFixed**|0x10|フィールドが固定長のデータが含まれていることを示します。|  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c15f4be9d452580cebd6b530f0703f249af17b36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 783dfb43f1eaebcc823f49000f589542465b1735
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62913297"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701938"
 ---
 # <a name="persisting-records-in-xml-format"></a>レコードを XML 形式で保持する
 Adtg 形式の形式のような**Recordset** XML 形式で永続化は、Microsoft OLE DB 永続化プロバイダーが実装されます。 このプロバイダーは、保存されている XML ファイルまたは ADO によって生成されるスキーマ情報を格納しているストリームから順方向専用、読み取り専用の行セットを生成します。 同様に、ADO をかかる**Recordset**、XML を生成し、ファイルまたは COM を実装する任意のオブジェクトに保存、 **IStream**インターフェイス。 (ファイルをサポートするオブジェクトのもう 1 つの例は、実際には、 **IStream**)。依存に XML を読み込むには Microsoft XML Parser (MSXML) バージョン 2.5 以降では、ADO、 **Recordset**; したがって行いますが必要です。  

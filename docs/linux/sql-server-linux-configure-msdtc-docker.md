@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f031323cf862840ef775875e1de1b868288256a9
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 71392b2d5de785df22ec1cf758a12675a0058e45
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566531"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705573"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>SQL Server on Docker での分散トランザクションを使用する方法
 
@@ -77,8 +76,8 @@ sudo firewall-cmd --reload
 
 前の例では、1 つの Docker コンテナーでは、RPC ポート 135 をホストのポート 135 にマップされるため、ホストでの分散トランザクションは必要があります構成なしで動作ようになりました。 ある直接ポート 135、コンテナーを使用する SQL Server がコンテナーに昇格した特権で実行されるため、注意してください。 コンテナーの外部での SQL server の別のエフェメラル ポートを使用する必要があり、ポート 135 へのトラフィックをそのポートにルーティングする必要があります。
 
-ただし、コンテナーのポート 135 を 13500 など、ホスト上の別のポートにマップした場合は、し構成する必要ポートがホストにルーティングします。 これにより、docker コンテナーのホストおよびその他の外部のサーバーと分散トランザクションに参加できます。 詳細については、[ポート ルーティングを構成する](sql-server-linux-configure-msdtc.md#configure-port-routing)を参照してください。
+ただし、コンテナーのポート 135 を 13500 など、ホスト上の別のポートにマップした場合は、し構成する必要ポートがホストにルーティングします。 これにより、docker コンテナーのホストおよびその他の外部のサーバーと分散トランザクションに参加できます。 詳細については、次を参照してください。[ポート ルーティングを構成する](sql-server-linux-configure-msdtc.md#configure-port-routing)します。
 
 ## <a name="next-steps"></a>次のステップ
 
-Linux 上の MSDTC に関する詳細については、[Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法](sql-server-linux-configure-msdtc.md)を参照してください。
+Linux 上の MSDTC に関する詳細については、次を参照してください。 [Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法](sql-server-linux-configure-msdtc.md)します。

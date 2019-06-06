@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edafc34bc4a2e9e860edd1101b5ce17bddd02a37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 82b85c42b56c97a59d34c0ed9a98fe5d4bc73e0b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720010"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701548"
 ---
 # <a name="capture-ado-error-codes"></a>ADO エラー コードをキャプチャします。
 返される、プロバイダー エラーだけでなく、[エラー](../../../ado/reference/ado-api/error-object.md)のオブジェクト、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション、ADO 自体にエラーを返す、実行時環境の例外処理メカニズムです。 エラーのトラップ メカニズムを使用するプログラミング言語をなど、使用、 **On Error** Microsoft® Visual Basic では、ステートメント、または**try catch** Microsoft Visual C++®、ADO エラーをキャプチャするをブロックします。

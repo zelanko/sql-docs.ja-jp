@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cc7a22d72e282bfe84d9a63dac8382a380eebe7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ea4614191ea8be88f801f92f1ca90eb5110b7dec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309117"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698592"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、CopyTo、および SaveToFile メソッドの例 (VB)
 使用してファイルのコピーを作成する方法を示します[Stream](../../../ado/reference/ado-api/stream-object-ado.md)または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。 1 つのコピーは、インターネットへの発行の Web フォルダーに作成されます。 その他のプロパティと示されているメソッドが含まれて[Stream 型](../../../ado/reference/ado-api/type-property-ado-stream.md)、**オープン**、 [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)と[レコード オープン](../../../ado/reference/ado-api/open-method-ado-record.md)します。  

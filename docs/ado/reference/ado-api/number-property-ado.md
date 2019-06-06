@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afc9955920784af966ef5d793d76ce251df1bc1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4ef1665bf96688fba5fc7d157b73d2df2fcd2c68
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242666"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705603"
 ---
 # <a name="number-property-ado"></a>Number プロパティ (ADO)
 一意に識別する番号を示します、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62752959"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699586"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS のプログラミング モデルの詳細
 以下は、RDS のプログラミング モデルの主な要素です。  
@@ -29,7 +29,7 @@ ms.locfileid: "62752959"
   
 -   RDS.DataControl  
   
--   event  
+-   イベント  
   
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
@@ -71,7 +71,7 @@ ms.locfileid: "62752959"
 > [!NOTE]
 >  Microsoft Internet Explorer では、RDS の 2 つの追加イベント:**詳細**、ことを示します、**レコード セット**機能ですがまだ、行を取得するには、 **詳細について**、ことを示します、 **Recordset**行の取得が完了します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS のプログラミング モデルとオブジェクト](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

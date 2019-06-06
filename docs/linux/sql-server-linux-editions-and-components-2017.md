@@ -1,6 +1,5 @@
 ---
 title: 各エディションと SQL Server 2017 の機能がサポートされている ~ Linux |Microsoft Docs
-ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -27,18 +26,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533555"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713177"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>エディションと SQL Server 2017 on Linux のサポートされる機能
+# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、SQL Server 2017 on Linux の各種エディションでサポートされる機能の詳細を説明します。 エディションと Windows 上の SQL Server のサポートされる機能は、[SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)を参照してください。  
+この記事では、SQL Server 2017 on Linux の各種エディションでサポートされる機能の詳細を説明します。 エディションと Windows 上の SQL Server のサポートされる機能は、次を参照してください。 [SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)します。  
   
 インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
 
@@ -46,7 +45,7 @@ ms.locfileid: "52533555"
 - [Linux 上の SQL Server のリリース ノート](sql-server-linux-release-notes.md)
 - [Linux 上の SQL Server の新機能新機能](sql-server-linux-whats-new.md)
 
-Linux で使用できない SQL Server 機能の一覧は、[機能とサービスがサポートされていない](sql-server-linux-release-notes.md#Unsupported)を参照してください。
+Linux で使用できない SQL Server 機能の一覧は、次を参照してください。[機能とサービスがサポートされていない](sql-server-linux-release-notes.md#Unsupported)します。
 
 ### <a name="try-sql-server"></a>SQL Server を試してください    
     
@@ -91,7 +90,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のデータベースごとの最大メモリ最適化データ サイズ|メモリ制限なし| 32 GB| 16 GB| 352 MB|
 |リレーショナル データベースの最大サイズ|524 PB|524 PB|524 PB|10 GB|  
   
-<sup>1</sup> Enterprise edition with Server およびクライアント アクセス ライセンス (CAL) に基づくライセンス (新しい使用許諾契約は利用できません) は SQL Server インスタンスあたり 20 コアの最大数に制限されます。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、[エディションの SQL Server での計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)を参照してください。  
+<sup>1</sup> Enterprise edition with Server およびクライアント アクセス ライセンス (CAL) に基づくライセンス (新しい使用許諾契約は利用できません) は SQL Server インスタンスあたり 20 コアの最大数に制限されます。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、次を参照してください。[エディションの SQL Server での計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)します。  
  
 ##  <a name="RDBMSHA"></a> RDBMS の高可用性  
   

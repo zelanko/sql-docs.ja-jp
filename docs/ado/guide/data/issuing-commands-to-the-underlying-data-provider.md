@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2267ff0af67682417b118e9fa01b2dceeb1454a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 231d9ced5bf370b8ee7c507e930e6961cfbed5a8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161436"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700579"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>基になるデータ プロバイダーにコマンドを発行する
 図形で始まらない任意のコマンドは、データ プロバイダーに渡されます。 これは、「図形 {0} プロバイダー コマンド}」形式での図形のコマンドを実行するのと同じです。 これらのコマンドは*いない*を生成する必要がある、**レコード セット**します。 たとえば、"形状 {ドロップ テーブル MyTable} は完全に有効な図形コマンドでは、データ プロバイダーは、DROP TABLE をサポートするいると仮定した場合です。  

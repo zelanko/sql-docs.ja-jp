@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddcbba246f0bdcfb5c3a22766f5d335a2bd5893e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 34a4ab7327edfb6f6f4204fb457ade97be4f5975
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719968"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702929"
 ---
 # <a name="ado-java-class-wrappers"></a>ADO Java クラス ラッパー
 このコードは、ADO のインスタンスを宣言して[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)クラス ラッパーと、コードの同じ行でそれを初期化します。 さらに、それぞれの引数の変数を宣言、[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド、特に[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)と[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (Java をサポートしていないため、列挙型型の場合)。 開きし、閉じます、 **Recordset**オブジェクト。 Java が使用されていないオブジェクトの体系的な断続的なリリースを実行するときに解放するには、その変数をスケジュールするだけで Rs1 を NULL に設定します。  

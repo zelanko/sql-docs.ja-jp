@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1fe29d28d3d860b7108972abc1e1f20a10de1edc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063038"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701032"
 ---
 # <a name="ado-run-time-errors"></a>ADO の実行時エラー
 ADO エラーは、プログラムを実行時エラーとして報告されます。 トラップし、それらを処理するプログラミング言語のエラー トラップ メカニズムを使用できます。 たとえば、Visual Basic では、使用して、 **On Error**ステートメント。 Visual C で ADO ライブラリへのアクセスに使用しているメソッドに依存します。 #Import を使用して、 **try catch**ブロックします。 それ以外の場合、C++ プログラマは、明示的に呼び出すことによって、エラー オブジェクトを取得する必要があります。 **GetErrorInfo**します。 ADO エラーをトラップする次の Visual Basic のサブ手順を示しています。

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142971"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702619"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ での ADO プログラミング
 ADO の API リファレンスには、ADO アプリケーション プログラミング インターフェイス (API)、Microsoft Visual Basic に似た構文を使用しての機能について説明します。 ADO のプログラマが Visual Basic、Visual C などのさまざまな言語を使用する対象とするユーザーには、すべてのユーザーが、(としない場合、 **#import**ディレクティブ)、および Visual j (ADO と WFC クラス パッケージ) にします。  
@@ -65,7 +65,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- コンパイラは、適切な生成**取得**_-_、**配置**-、または**PutRef**_プロパティ_代替構文は宣言されており、プロパティがされているかどうかに基づいて、呼び出しの読み取りまたは書き込み。  
+ コンパイラは、適切な生成**取得** _-_ 、**配置**-、または**PutRef**_プロパティ_代替構文は宣言されており、プロパティがされているかどうかに基づいて、呼び出しの読み取りまたは書き込み。  
   
  **__Declspec(property...)** コンパイラ ディレクティブでのみ宣言できます**取得**、**配置**、または**取得**と**配置**関数の代替構文。 読み取り専用操作のみがある、**取得**宣言です書き込み専用の操作のみが、**配置**宣言です。 操作はどちらも読み取りおよび書き込みの両方がある**取得**と。**配置**宣言します。  
   
@@ -85,7 +85,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- などのフィールドに値を割り当てる、 **Recordset**という名前のオブジェクト **_rs_** から派生した、**作成者**のテーブル**pubs**データベース。 使用して、 **Item()** 、3 番目にアクセスするプロパティ**フィールド**の**Recordset**オブジェクト**フィールド**コレクション (コレクションのインデックスはから0;3 番目のフィールドがという名前の想定 **_au\_fname_**)。 呼び出して、 **Value()** メソッドを**フィールド**文字列値を代入するオブジェクト。  
+ などのフィールドに値を割り当てる、 **Recordset**という名前のオブジェクト **_rs_** から派生した、**作成者**のテーブル**pubs**データベース。 使用して、 **Item()** 、3 番目にアクセスするプロパティ**フィールド**の**Recordset**オブジェクト**フィールド**コレクション (コレクションのインデックスはから0;3 番目のフィールドがという名前の想定 **_au\_fname_** )。 呼び出して、 **Value()** メソッドを**フィールド**文字列値を代入するオブジェクト。  
   
  これで表現できる Visual Basic では、次の 4 つの方法 (Visual Basic に最後の 2 つのフォームが固有; 他の言語には、相当するはありません)。  
   

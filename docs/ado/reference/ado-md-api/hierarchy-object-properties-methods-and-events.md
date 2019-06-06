@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bc1e778dcba4520148b56f2c0aca168c1744bbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef9547c1c6364b9799ad6eccade905783966b6c7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740262"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709166"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -33,10 +33,10 @@ ms.locfileid: "62740262"
  [UniqueName プロパティ](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>メソッド  
- なし。  
+ [なし] :  
   
 ## <a name="events"></a>イベント  
- なし。  
+ [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Hierarchy オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)

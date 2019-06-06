@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161393"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702001"
 ---
 # <a name="formal-shape-grammar"></a>Shape の正式文法
 これは、任意図形のコマンドを作成するための正式な文法です。  

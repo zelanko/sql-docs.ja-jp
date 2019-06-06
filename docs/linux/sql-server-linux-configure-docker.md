@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7261d8b5b72b835c726a268477c44e4d0663f131
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: f6364755ee1719a17f4927cfd157b757c6097830
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65376844"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705558"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 
@@ -537,7 +536,7 @@ Windows では、PowerShell または管理者としてコマンド プロンプ
 
 SQL Server のコンテナーは、実行に失敗した場合、次のテストを行います。
 
-- など、エラーが発生した場合 **' エンドポイント CONTAINER_NAME をネットワーク ブリッジを作成できませんでした。プロキシの開始エラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。**、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターのローカル SQL Server を実行している場合に発生することができます。 2 つの SQL Server のコンテナーを開始し、それら両方を同じホストのポートにマップする場合にも発生します。 この場合、使用、`-p`コンテナー ポート 1433 を別のホストのポートにマッピングするパラメーター。 例 : 
+- など、エラーが発生した場合 **' エンドポイント CONTAINER_NAME をネットワーク ブリッジを作成できませんでした。プロキシの開始エラー: リッスン tcp 0.0.0.0:1433 バインド: 既に使用されているアドレスです '。** 、コンテナーのポート 1433 を既に使用されているポートにマップしようとしています。 これは、ホスト コンピューターのローカル SQL Server を実行している場合に発生することができます。 2 つの SQL Server のコンテナーを開始し、それら両方を同じホストのポートにマップする場合にも発生します。 この場合、使用、`-p`コンテナー ポート 1433 を別のホストのポートにマッピングするパラメーター。 例 : 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

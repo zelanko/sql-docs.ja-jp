@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5d68f0e74e4bbfb275cbe23641c72eca4c941559
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028149"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697968"
 ---
 # <a name="filter-property"></a>Filter プロパティ
 内のデータのフィルターを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -57,7 +57,7 @@ ms.locfileid: "63028149"
 -   このフィルターを構築する代わりに、  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   **など**句では、先頭とパターンの末尾にワイルドカードを使用することができます。 たとえば、使用することができます`LastName Like '*mit*'`します。 または**など**パターンの末尾にのみ、ワイルドカードを使用することができます。 たとえば、 `LastName Like 'Smit*'`のようにします。  
+-   **など**句では、先頭とパターンの末尾にワイルドカードを使用することができます。 たとえば、使用することができます`LastName Like '*mit*'`します。 または**など**パターンの末尾にのみ、ワイルドカードを使用することができます。 たとえば、`LastName Like 'Smit*'` のようにします。  
   
  フィルター定数容易に解決するにはこれらのレコードのみを表示、たとえば、許可することで、バッチ更新モード時に競合レコードの最後の中に影響を受けた[UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)メソッドの呼び出し。  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4f13a77a9f03aa76fccc41a1fa19878dd935db0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef5f6cc4a262cecc81a8dd72f2d3e3f6a7e2fded
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63187801"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700414"
 ---
 # <a name="recordset-related-error-information"></a>レコードセット関連のエラー情報
 バッチの処理中に、**状態**のプロパティ、**レコード セット**オブジェクト内の個別のレコードに関する情報は、**レコード セット**します。 バッチ更新が実行する前に、**状態**のプロパティ、 **Recordset**追加、変更および削除するレコードについての情報が反映されます。 後**UpdateBatch**が呼び出されて、**状態**プロパティは、操作の成否を示します。 レコード間を移動すると、**レコード セット**の値、**状態**プロパティに対する変更を現在のレコードの状態を説明します。

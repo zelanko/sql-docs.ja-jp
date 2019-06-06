@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a9b8bcf01f348679fc16230c021166d4d9dc786
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c6af51d8d69f5897021733468ee93290e1b5e280
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472221"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702101"
 ---
 # <a name="determining-what-is-supported"></a>サポートされている機能を特定する
 **サポート**メソッドを使用して、指定したかどうかを判断**レコード セット**オブジェクトは、特定の種類の機能をサポートしています。 次の構文があります。  
@@ -30,7 +30,7 @@ boolean = recordset.Supports(CursorOptions )
 ```  
   
 ## <a name="remarks"></a>コメント  
- **サポート**メソッドすべて CursorOptions 引数によって識別される機能のプロバイダーをサポートするかどうかを示すブール値を返します。 使用することができます、**サポート**機能の種類を特定する方法、**レコード セット**サポートしています。 場合、**レコード セット**オブジェクトが定数に対応するが、機能をサポートしている*CursorOptions*、**サポート**メソッドを返します**True。**. 返しますそれ以外の場合、 **False**します。  
+ **サポート**メソッドすべて CursorOptions 引数によって識別される機能のプロバイダーをサポートするかどうかを示すブール値を返します。 使用することができます、**サポート**機能の種類を特定する方法、**レコード セット**サポートしています。 場合、**レコード セット**オブジェクトが定数に対応するが、機能をサポートしている*CursorOptions*、**サポート**メソッドを返します**True。** . 返しますそれ以外の場合、 **False**します。  
   
  使用して、**サポート**メソッドの機能をチェックすることができます、**レコード セット**新しいレコードを追加、ブックマークを使用して、使用するオブジェクト、**検索**メソッドを使用して、スクロール、を使用します。**インデックス**プロパティ、およびバッチ更新を実行します。 定数とその意味の一覧は、次を参照してください。 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)します。  
   

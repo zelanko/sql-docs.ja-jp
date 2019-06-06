@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3d1f328baf628e86c75abc9a452600e1f0e8cf88
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929884"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704258"
 ---
 # <a name="rds-tutorial"></a>RDS チュートリアル
 このチュートリアルでは、RDS のプログラミング モデルを使用して、データ ソースの更新とクエリを示しています。 最初に、このタスクの実行に必要な手順をについて説明します。 このチュートリアルは Microsoft® Visual Basic Scripting Edition (ADO の Windows Foundation Class (ADO と WFC) を備えた) で繰り返されます。  
