@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473516"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743837"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server のビッグ データ クラスターにサンプル データを読み込む
 
@@ -71,7 +71,7 @@ ms.locfileid: "63473516"
    | <KNOX_PASSWORD> | HDFS/Spark ゲートウェイのパスワード。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md) master の SQL Server インスタンスおよび Knox の IP アドレスが見つかりません。 実行`kubectl get svc -n <your-cluster-name>`マスター インスタンスの外部 IP アドレスを確認し、(**svc 外部のマスター**) および Knox (**svc 外部のゲートウェイ**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md) master の SQL Server インスタンスおよび Knox の IP アドレスが見つかりません。 実行`kubectl get svc -n <your-big-data-cluster-name>`マスター インスタンスの外部 IP アドレスを確認し、(**svc 外部のマスター**) および Knox (**svc 外部のゲートウェイ**)。 クラスターの既定の名前は**mssql クラスター**します。
 
 1. ブートス トラップ スクリプトを実行します。
 
@@ -107,7 +107,7 @@ ms.locfileid: "63473516"
    | <KNOX_PASSWORD> | HDFS/Spark ゲートウェイのパスワード。 |
 
    > [!TIP]
-   > 使用[kubectl](cluster-troubleshooting-commands.md) master の SQL Server インスタンスおよび Knox の IP アドレスが見つかりません。 実行`kubectl get svc -n <your-cluster-name>`マスター インスタンスの外部 IP アドレスを確認し、(**svc 外部のマスター**) および Knox (**svc 外部のゲートウェイ**)。
+   > 使用[kubectl](cluster-troubleshooting-commands.md) master の SQL Server インスタンスおよび Knox の IP アドレスが見つかりません。 実行`kubectl get svc -n <your-big-data-cluster-name>`マスター インスタンスの外部 IP アドレスを確認し、(**svc 外部のマスター**) および Knox (**svc 外部のゲートウェイ**)。 クラスターの既定の名前は**mssql クラスター**します。
 
 1. ブートス トラップ スクリプトを実行します。
 

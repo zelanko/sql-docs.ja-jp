@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994052"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743992"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターに接続します。
 
@@ -37,14 +37,17 @@ Azure データ Studio を使用したビッグ データ クラスターに接�
 1. コマンドラインから次のコマンドを使用して、マスター インスタンスの ip アドレスを見つけます。
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > ビッグ データ クラスター名の既定値に**mssql クラスター**展開構成ファイル内の名前をカスタマイズしていない限り、します。 詳細については、次を参照してください。[ビッグ データ クラスターのデプロイ設定を構成する](deployment-custom-configuration.md#clustername)します。
 
 1. Azure Data Studio でキーを押して**F1** > **新しい接続**します。
 
 1. **接続の種類**、 **Microsoft SQL Server**します。
 
-1. SQL Server のマスター インスタンスの IP アドレスを入力**サーバー名**(例。**\<IP アドレス\>31433、**)。
+1. SQL Server のマスター インスタンスの IP アドレスを入力**サーバー名**(例。 **\<IP アドレス\>31433、** )。
 
 1. SQL ログインを入力**ユーザー名**と**パスワード**します。
 

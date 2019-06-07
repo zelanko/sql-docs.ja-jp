@@ -10,17 +10,46 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 05/08/2019
-ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.date: 06/06/2019
+ms.openlocfilehash: 6e2d4ff6e300290381f75ff4ab984743d7ea106e
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454725"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749143"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
+
+## <a name="june-2019"></a>6 月 2019
+
+2019 年 6 月 6日&nbsp;  /  &nbsp;バージョン。1.8.0 
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| 中央管理サーバー (CMS) の拡張機能のリリース | 中央管理サーバーが 1 つまたは複数のサーバーの全体管理サーバー グループに構成されている SQL Server のインスタンスの一覧を格納します。 ユーザーは、それぞれ独自の既存の CMS サーバーに接続して、追加して、サーバーを削除するように、サーバー管理します。 詳細についてを参照して[ここ](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| Windows 用のデータベース管理ツールの拡張機能のリリース | この拡張機能では、2 つの Azure Data Studio から SQL Server Management Studio で最も使用されているエクスペリエンスが起動します。 ユーザーは、(データベース、テーブル、列、ビューなど) などの多数の異なるオブジェクトを右クリックし、そのオブジェクトの SSMS のプロパティ ダイアログ ボックスを表示するプロパティを選択します。 さらに、ユーザーは、データベースを右クリックして、よく知られた SSMS スクリプト生成ウィザードを起動するには、スクリプトの生成を選択することができます。 
+| スキーマ比較の機能強化 | &bull; &nbsp; オプションの追加の除外または含める <br/>&bull; &nbsp; 生成後のスクリプトが開きますスクリプトを生成します。 <br/>&bull; &nbsp; 二重のスクロール バーを削除  <br/>&bull; &nbsp; 書式設定とレイアウトの機能強化 <br/>&bull; &nbsp; 完了した変更はあります[ここ](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
+| 独自のタブに移動した Messages セクション | SQL クエリを実行したユーザー場合の結果とメッセージは積み上げパネルにいました。 ここでは SSMS のように 1 つのパネルで別々 のタブにあります。 |
+| SQL のノートブック機能強化 | &bull; &nbsp; ノートブックで独自の Python 3、Anaconda のインストールを使用するユーザーが選択できるようになりました <br/>&bull; &nbsp; 複数の安定性 +/終了サイズに合わせて修正&bull;&nbsp;の機能強化の完全な一覧を表示[ここ](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Visual Studio Code でマージ 1.34 May リリースします。 | 最新の機能強化が見つかります[ここ](https://code.visualstudio.com/updates/v1_34) |
+| 解決済みバグと問題。 | 参照してください[バグと github の問題](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)します。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>既知の問題
+- Windows 用のデータベース管理ツールの拡張機能
+    - 切断されたサーバー ノードからプロパティを起動することはできません。
+    - Azure サーバーのプロパティを起動することはできません。
+    - すべてのオブジェクトのプロパティ ダイアログ ボックスがあります。
+    - ダイアログ開始する時間がかかる
+    - エラーのいくつかの種類 (AAD) などの接続のサーバーを起動します。
+- ノートブック
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838)システム Python Notebook を使用するユーザーを許可します。
+- スキーマ比較
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804)スキーマ比較のタスクが何も既定のキャンセルのショートカット メニューを表示します。
 
 ## <a name="may-2019"></a>2019 年 5 月
 
@@ -32,8 +61,8 @@ ms.locfileid: "66454725"
 | :----- | :------ |
 | スキーマ比較の拡張機能のリリース | スキーマ比較は SQL Server Data Tools (SSDT) でよく知られている機能であり、基本的なユース ケースを比較して、データベースや .dacpac ファイルの違いを視覚化して、同じことにアクションを実行するは。 |
 | タスクの表示を出力ウィンドウに移動 | ユーザーは、タスク ビュー [出力] ウィンドウで、バックアップ、復元、およびスキーマ比較などの実行時間の長いタスクの状態を表示できますようになりました
-| [ようこそ] ページの追加 | &bull; &nbsp; 一般的な操作へのリンクなどの新しい Notebook の新しいファイルは、新しいクエリ <br/>&bull; &nbsp; ドキュメントおよび Github へのリンク |
-| SQL のノートブック機能強化 | &bull; &nbsp; メモとテーブルに対する優れたサポートをなど、マークダウン レンダリング機能強化 <br/>&bull; &nbsp; ツールバーにユーザビリティの強化 <br/>&bull; &nbsp; 信頼されている notebook を不要になったマークダウン リンク Cmd/ctrl キー + をクリックし、直接クリックすることができます。 <br/>&bull; &nbsp; Notebook を終了し、同時に複数のノートブックを開始するときにエラーを削減後のクリーンアップを Jupyter プロセスの強化 <br/>&bull; &nbsp; 同じデータベースに対して 2 つのノートブックを実行している場合にエラーを確認します。 SQL notebook 接続の機能強化は発生しません <br/>&bull; &nbsp; 自動スクロールを現在実行中のセルに、ツールバーから [セルの実行] ボタンをクリックすると notebook の機能強化 <br/>&bull; &nbsp; 全般的な安定性とパフォーマンスの向上 |
+| [ようこそ] ページの追加 | &bull; &nbsp; 一般的な操作へのリンクなどの新しい Notebook の新しいファイルは、新しいクエリ <br/>&bull; &nbsp; ドキュメントおよび GitHub へのリンク |
+| SQL のノートブック機能強化 | &bull; &nbsp; メモとテーブルに対する優れたサポートをなど、マークダウン レンダリング機能強化 <br/>&bull; &nbsp; ツールバーにユーザビリティの強化 <br/>&bull; &nbsp; 信頼されている notebook を不要になったマークダウン リンク Cmd/ctrl キー + をクリックし、直接クリックすることができます。 <br/>&bull; &nbsp; Notebook を終了し、同時に複数のノートブックを開始するときにエラーを削減後のクリーンアップを Jupyter プロセスの強化 <br/>&bull; &nbsp; 同じデータベースに対して 2 つのノートブックを実行している場合にエラーを確認します。 SQL notebook 接続の機能強化は発生しません <br/>&bull; &nbsp; ツールバーから [セルの実行] ボタンをクリックするときに、現在実行中のセルを notebook の自動スクロールの機能強化 <br/>&bull; &nbsp; 全般的な安定性とパフォーマンスの向上 |
 | 解決済みバグと問題。 | 参照してください[バグと github の問題](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)します。 |
 | &nbsp; | &nbsp; |
 
@@ -203,7 +232,7 @@ Azure Data Studio (SQL Operations Studio 以前) の一般的な可用性リリ�
 | :----- | :------ |
 | クエリ結果グリッド パフォーマンスおよび結果セットの数が多いため、UX の機能強化。 | &nbsp; |
 | Visual Studio Code のソース コードは、1.23 から 1.26.1 とグリッド レイアウトと向上の設定エディター (プレビュー) を更新します。 | &nbsp; |
-| スクリーン リーダー、キーボード ナビゲーションとハイ コントラストのアクセシビリティ機能改善します。 | &nbsp; |
+| スクリーン リーダー、キーボード操作、およびハイ コントラストのアクセシビリティ機能改善します。 | &nbsp; |
 | 追加`Connection name`サーバーのビューとで代替表示名を指定するオプション。 | &nbsp; |
 | &nbsp; | &nbsp; |
 

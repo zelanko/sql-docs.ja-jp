@@ -9,12 +9,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774772"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743981"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターを概要します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "64774772"
 
 ビッグ データ クラスターは、一連の相互に関連するコンテナーで管理されているデプロイ[Kubernetes](https://kubernetes.io/docs/home)します。 さまざまな方法で Kubernetes をホストすることができます。 既存の Kubernetes 環境を既に存在する場合でも、ビッグ データ クラスターの場合、関連する要件を確認してください。
 
-- **Azure Kubernetes Service (AKS)**:AKS で Azure の managed Kubernetes クラスターをデプロイすることができます。 管理し、エージェント ノードのメンテナンスだけです。 Aks を使うと、クラスター用ハードウェアをプロビジョニングする必要はありません。 簡単にビッグ データ クラスターを使用しても[配置スクリプト](quickstart-big-data-cluster-deploy.md)AKS クラスターを作成し、1 つの手順でビッグ データ クラスターをデプロイします。 ビッグ データ クラスターを AKS を使用する方法の詳細については、次を参照してください。 [Azure Kubernetes サービスの構成の SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ](deploy-on-aks.md)します。
+- **Azure Kubernetes Service (AKS)** :AKS で Azure の managed Kubernetes クラスターをデプロイすることができます。 管理し、エージェント ノードのメンテナンスだけです。 Aks を使うと、クラスター用ハードウェアをプロビジョニングする必要はありません。 簡単にビッグ データ クラスターを使用しても[配置スクリプト](quickstart-big-data-cluster-deploy.md)AKS クラスターを作成し、1 つの手順でビッグ データ クラスターをデプロイします。 ビッグ データ クラスターを AKS を使用する方法の詳細については、次を参照してください。 [Azure Kubernetes サービスの構成の SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ](deploy-on-aks.md)します。
 
 - **複数のマシン**:Kubernetes を複数の Linux マシン、物理サーバーまたは仮想マシンにデプロイすることもできます。 [Kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)ツールは、Kubernetes クラスターを作成するために使用できます。 このメソッドは、ビッグ データ クラスターに使用する既存のインフラストラクチャが既にある場合にも動作します。 使用しての詳細については**kubeadm**ビッグ データのクラスターでのデプロイを参照してください[複数のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイでの Kubernetes の構成](deploy-with-kubeadm.md)します。
 
@@ -51,7 +51,7 @@ ms.locfileid: "64774772"
 
 - 開発/テスト環境に展開する場合は、いずれかを使用することもできます、[既定の構成](deployment-guidance.md#deploy)によって提供される**mssqlctl**します。
 
-- デプロイをカスタマイズする作成し、使用、独自[展開構成ファイル](deployment-guidance.md#configfile)します。 
+- デプロイをカスタマイズする作成し、使用、独自[展開構成ファイル](deployment-guidance.md#configfile)します。
 
 - 完全に無人インストールでは、環境変数にその他のすべての設定を渡すことができます。 詳細については、次を参照してください。[無人展開](deployment-guidance.md#unattended)します。
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4c6cb2032949131277d5baa126f2895255fd18b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994049"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743949"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Curl を使用して、ビッグ データの SQL Server クラスターの HDFS にデータを読み込む
 
@@ -25,14 +25,14 @@ ms.locfileid: "65994049"
 
 ## <a name="obtain-the-service-external-ip"></a>サービスの外部 ip アドレスを取得します。
 
-配置が完了したらとそのアクセスを通過 Knox、WebHDFS が開始されます。 呼ばれる Kubernetes サービスを介して Knox エンドポイントが公開される**svc 外部のゲートウェイ**します。  ファイルのアップロード/ダウンロードするために必要な WebHDFS URL を作成する必要があります、 **svc 外部のゲートウェイ**サービスの外部 IP アドレスとクラスターの名前。 取得することができます、 **svc 外部のゲートウェイ**次のコマンドを実行して外部 IP アドレスをサービスします。
+配置が完了したらとそのアクセスを通過 Knox、WebHDFS が開始されます。 呼ばれる Kubernetes サービスを介して Knox エンドポイントが公開される**svc 外部のゲートウェイ**します。  ファイルのアップロード/ダウンロードするために必要な WebHDFS URL を作成する必要があります、 **svc 外部のゲートウェイ**サービスの外部 IP アドレスとビッグ データ クラスターの名前。 取得することができます、 **svc 外部のゲートウェイ**次のコマンドを実行して外部 IP アドレスをサービスします。
 
 ```bash
-kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> `<cluster name>`展開構成ファイルで指定したクラスターの名前を次に示します。 既定の名前は`mssql-cluster`します。
+> `<big data cluster name>`展開構成ファイルで指定したクラスターの名前を次に示します。 既定の名前は`mssql-cluster`します。
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>WebHDFS へのアクセスに URL を構築します。
 

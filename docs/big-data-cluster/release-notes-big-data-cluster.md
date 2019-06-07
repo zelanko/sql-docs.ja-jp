@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014990"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744151"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -33,11 +33,11 @@ ms.locfileid: "66014990"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| **mssqlctl**更新プログラム | いくつか**mssqlctl** [コマンドとパラメーターの更新プログラム](../big-data-cluster/reference-mssqlctl.md)します。 更新プログラムが含まれます、 **mssqlctl ログイン**コマンドで、コント ローラーのユーザー名とエンドポイントを対象になります。 |
-| 記憶域の強化 | ログとデータのさまざまなストレージ構成のサポート。 また、クラスターのビッグ データの永続ボリューム要求の数が削減されました。 |
-| 複数のコンピューティング プール インスタンス | 複数のコンピューティング プール インスタンスをサポートします。 |
-| 新しいプールの動作と機能 | コンピューティング プールは既定で記憶域プールおよびプールの操作に使用ようになりましたが、 **ROUND_ROBIN**のみに配布します。 データのプールを使用できるよう、新しい新しい**レプリケートされた**分布の種類は、同じデータがすべてのデータ プール インスタンスに存在することを意味します。 |
-| 外部テーブルの機能強化 | HADOOP データ ソースの外部テーブルは、これを読むサイズ最大 1 MB の行を入力します。 外部テーブル (ODBC、記憶域プール、データ プール) ここでサポート行、幅、SQL Server のテーブルと同じです。 |
+| **mssqlctl** の更新 | 複数の **mssqlctl** [コマンドとパラメーターが更新されました](../big-data-cluster/reference-mssqlctl.md)。 これには、コントローラーのユーザー名とエンドポイントをターゲットにするようになった **mssqlctl login** コマンドの更新も含まれています。 |
+| ストレージの機能強化 | ログとデータのさまざまなストレージ構成のサポート。 また、ビッグ データ クラスターへの永続ボリューム要求の数が削減されました。 |
+| 複数のコンピューティング プール インスタンス | 複数のコンピューティング プール インスタンスのサポート。 |
+| 新しいプールの動作と機能 | コンピューティング プールは、既定で **ROUND_ROBIN** 配布内​​のストレージ プールおよびデータ プールの操作にのみ使用されるようになりました。 データ プールで新しい **REPLICATED** 分布の種類が使用できるようになりました。これは、同じデータがすべてのデータ プール インスタンスに存在することを意味します。 |
+| 外部テーブルの機能強化 | HADOOP データ ソースの種類の外部テーブルで、最大サイズ 1 MB の行の読み取りがサポートされるようになりました。 外部テーブル (ODBC、記憶域プール、データ プール) で、SQL Server テーブルと同じ幅の行がサポートされるようになりました。 |
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -132,12 +132,12 @@ ms.locfileid: "66014990"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| プロファイルの展開 | 既定値を使用およびカスタマイズした[配置の構成 JSON ファイル](deployment-guidance.md#configfile)のビッグ データ クラスターのデプロイ環境変数の代わりにします。 |
-| 要求された展開 | `mssqlctl cluster create` 既定の展開に必要な設定の入力を求めるようになりました。 |
-| サービス エンドポイントとのポッドの名前の変更 | 次の外部エンドポイントの名前が変更されました。<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl**の機能強化 | 使用**mssqlctl**に[外部エンドポイント一覧を](deployment-guidance.md#endpoints)のバージョンを確認および**mssqlctl**で、`--version`パラメーター。 |
+| 展開プロファイル | ビッグ データ クラスターの展開には、環境変数の代わりに、既定およびカスタマイズした[展開構成 JSON ファイル](deployment-guidance.md#configfile)を使用します。 |
+| 入力が求められる展開 | `mssqlctl cluster create` では、既定の展開に必要な設定の入力が求められるようになりました。 |
+| サービス エンドポイントとのポッド名の変更 | 次の外部エンドポイントの名前が変更されました。<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| **mssqlctl** の機能強化 | **mssqlctl** を使用して[外部エンドポイントを一覧表示](deployment-guidance.md#endpoints)し、**mssqlctl** のバージョンを `--version` パラメーターを使用して確認します。 |
 | オフライン インストール | オフラインのビッグ データ クラスターの展開のガイダンスです。 |
-| HDFS の階層化の機能強化 | ADLS Gen2 の S3 が階層化、マウントは、次のキャッシュ、および OAuth をサポートします。 |
+| HDFS 階層の機能強化 | ADLS Gen2 の S3 が階層化、マウントは、次のキャッシュ、および OAuth をサポートします。 |
 | 新しい`mssql`Spark SQL Server コネクタ | |
 
 ### <a name="known-issues"></a>既知の問題
@@ -220,11 +220,11 @@ ms.locfileid: "66014990"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| Spark で TensorFlow を使用しディープ ラーニングを実行する場合の GPU でのサポートに関するガイダンス。 | [GPU サポートと共にビッグ データ クラスターにデプロイし、実行 TensorFlow](spark-gpu-tensorflow.md)します。 |
-| **SqlDataPool**と**SqlStoragePool**データ ソースは、既定では作成されません。 | これらを必要に応じて手動で作成します。 参照してください、[既知の問題](#externaltablesctp24)します。 |
-| データ プール用の `INSERT INTO SELECT` のサポート。 | 例については、次を参照してください。[チュートリアル。Transact SQL を使用した SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)します。 |
-| `FORCE SCALEOUTEXECUTION` `DISABLE SCALEOUTEXECUTION`オプション。 | 強制的に有効または無効にコンピューティングの使用は、外部テーブルに対するクエリのプールです。 たとえば、`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` のようにします。 |
-| 更新された AKS デプロイの推奨事項。 | AKS でのビッグ データ クラスターを評価するときに今すぐ使用が推奨サイズの 1 つのノード**Standard_L8s**します。 |
+| Spark で TensorFlow を使用しディープ ラーニングを実行する場合の GPU でのサポートに関するガイダンス。 | [GPU をサポートしているビッグ データ クラスターを展開し、TensorFlow を実行します](spark-gpu-tensorflow.md)。 |
+| データ ソース **SqlDataPool** と **SqlStoragePool** は、既定では作成されなくなりました。 | 必要に応じてこれらを手動で作成します。 [既知の問題](#externaltablesctp24)を参照してください。 |
+| データ プール用の `INSERT INTO SELECT` のサポート。 | 例については、「[Tutorial:Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md)」 (チュートリアル: Transact SQL を使用して SQL Server のデータ プールにデータを取り込む) を参照してください。 |
+| オプション `FORCE SCALEOUTEXECUTION` と `DISABLE SCALEOUTEXECUTION` | 強制的に有効または無効にコンピューティングの使用は、外部テーブルに対するクエリのプールです。 たとえば、`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` のようにします。 |
+| 更新された AKS の展開に関する推奨事項 | AKS でビッグ データ クラスターを評価するときには、サイズ **Standard_L8s** の単一ノードを使用することをお勧めします。 |
 | Spark 2.4 への Spark のランタイムのアップグレード。 | |
 
 ### <a name="known-issues"></a>既知の問題
@@ -351,17 +351,17 @@ make: *** [deploy-clean] Error 2
 
 | 新機能または更新 | 詳細 |
 | :---------- | :------ |
-| IntelliJ でのビッグ データ クラスターで Spark ジョブを送信します。 | [IntelliJ での SQL Server のビッグ データ クラスターで Spark ジョブを送信します。](spark-submit-job-intellij-tool-plugin.md) |
-| アプリケーションの展開およびクラスター管理用の一般的な CLI。 | [SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリをデプロイする方法](big-data-cluster-create-apps.md) |
-| VS Code の拡張機能、ビッグ データ クラスターにアプリケーションを展開します。 | [VS Code を使用してビッグ データの SQL Server クラスターにアプリケーションを展開する方法](app-deployment-extension.md) |
-| 変更、 **mssqlctl**ツールのコマンドの使用方法。 | 詳細についてを参照してください、 [mssqlctl の既知の問題](#mssqlctlctp23)します。 |
-| Sparklyr を使用して、ビッグ データ クラスター | [SQL Server 2019 ビッグ データ クラスターで Sparklyr を使用します。](sparklyr-from-RStudio.md) |
-| **HDFS 階層**を使用した、外部の HDFS 互換ストレージのビッグ データ クラスターへのマウント。 | 参照してください[HDFS が階層化](hdfs-tiering.md)します。 |
-| SQL Server のマスター インスタンスと HDFS/Spark ゲートウェイの新しい統一された接続エクスペリエンス。 | 参照してください[master の SQL Server インスタンスと HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md)します。 |
-| クラスターを削除して**mssqlctl クラスター削除**これで、名前空間内のビッグ データ クラスターの一部であったオブジェクトのみを削除します。 | 名前空間は削除されません。 ただし、以前のリリースでこのコマンドは、名前空間の全体を削除しました。 |
-| _セキュリティ_エンドポイントの名前が変更され、統合します。 | **サービス-セキュリティ-lb**と**サービス-セキュリティ-nodeport**に統合されています、**エンドポイント セキュリティ**エンドポイント。 |
-| _プロキシ_エンドポイントの名前が変更され、統合します。 | **サービス プロキシ-lb**と**サービス-プロキシ-nodeport**に統合されています、**エンドポイント サービスのプロキシ**エンドポイント。 |
-| _コント ローラー_エンドポイントの名前が変更され、統合します。 | **サービス mssql コント ローラー lb**と**サービス mssql コント ローラー nodeport**に統合されています、**エンドポイント コント ローラー**エンドポイント。 |
+| IntelliJ のビッグ データ クラスターでの Spark ジョブの送信。 | [IntelliJ の SQL Server ビッグ データ クラスターで Spark ジョブを送信する](spark-submit-job-intellij-tool-plugin.md) |
+| アプリケーションの展開およびクラスター管理の一般的な CLI。 | [SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリを展開する方法](big-data-cluster-create-apps.md) |
+| ビッグ データ クラスターにアプリケーションを展開するための VS Code の拡張機能。 | [VS Code を使用して SQL Server のビッグ データ クラスターにアプリケーションを展開する方法](app-deployment-extension.md) |
+| **mssqlctl**ツール コマンドの使用方法の変更。 | 詳細については、[mssqlctl の既知の問題](#mssqlctlctp23)を参照してください。 |
+| Sparklyr を使用して、ビッグ データ クラスター | [SQL Server 2019 のビッグ データ クラスターで Sparklyr を使用する](sparklyr-from-RStudio.md) |
+| **HDFS 階層**を使用した、外部の HDFS 互換ストレージのビッグ データ クラスターへのマウント。 | [HDFS 階層](hdfs-tiering.md)に関するページを参照してください。 |
+| SQL Server のマスター インスタンスと HDFS/Spark ゲートウェイの新しい統一された接続エクスペリエンス。 | [SQL Server のマスター インスタンスと HDFS/Spark ゲートウェイ](connect-to-big-data-cluster.md)に関するページを参照してください。 |
+| **mssqlctl cluster delete** を使用してクラスターを削除すると、ビッグ データ クラスターの一部であった名前空間内のオブジェクトのみが削除されるようになりました。 | 名前空間は削除されません。 ただし、以前のリリースでは、このコマンドを使用すると、名前空間全体が削除されました。 |
+| _セキュリティ_ エンドポイントの名前が変更され、統合されました。 | **service-security-lb** と **service-security-nodeport** は、**endpoint-security** エンドポイントに統合されました。 |
+| _プロキシ_ エンドポイントの名前が変更され、統合されました。 | **service-proxy-lb** と **service-proxy-nodeport** は、**endpoint-service-proxy** エンドポイントに統合されました。 |
+| _コントローラー_ エンドポイントの名前が変更され、統合されました。 | **service-mssql-controller-lb** と **service-mssql-controller-nodeport** は、**endpoint-controller** エンドポイントに統合されました。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
@@ -497,7 +497,7 @@ make: *** [deploy-clean] Error 2
 クラスターの管理ポータルでは、SQL Server のマスター インスタンスのエンドポイントは表示されません。 マスター インスタンスの IP アドレスとポートを検索するには、次を使用**kubectl**コマンド。
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>外部テーブル

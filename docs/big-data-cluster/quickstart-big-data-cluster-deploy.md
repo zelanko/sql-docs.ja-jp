@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462795"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744206"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
 
@@ -82,7 +82,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Azure リージョン** | 新しい AKS クラスターの Azure リージョン (既定**westus**)。 |
    | **マシンのサイズ** | [マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)AKS クラスター内のノードを使用する (既定**Standard_L8s**)。 |
    | **ワーカー ノード** | AKS クラスター内の worker ノードの数 (既定**1**)。 |
-   | **クラスター名** | AKS クラスターとビッグ データ クラスターの両方の名前。 クラスターの名前は、小文字の英数字文字のみとスペースなしである必要があります。 (既定**sqlbigdata**)。 |
+   | **クラスター名** | AKS クラスターとビッグ データ クラスターの両方の名前。 ビッグ データ クラスターの名前は、小文字の英数字文字のみとスペースなしである必要があります。 (既定**sqlbigdata**)。 |
    | **Password** | コント ローラー、HDFS/Spark ゲートウェイ、およびマスター インスタンスのパスワード (デフォルト**MySQLBigData2019**)。 |
    | **コント ローラーのユーザー** | コント ローラーのユーザーのユーザー名 (既定:**管理者**)。 |
 
@@ -118,7 +118,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="inspect-the-cluster"></a>クラスターを検査します。
 
-デプロイ中にいつでも状態と、実行されているビッグ データ クラスターに関する詳細を検査するのにには、kubectl またはクラスターの管理ポータルを使用できます。
+使用することができます、デプロイ中にいつでも**kubectl**または**mssqlctl**状態と、実行されているビッグ データ クラスターに関する詳細を検査します。
 
 ### <a name="use-kubectl"></a>Kubectl を使用します。
 
@@ -127,42 +127,32 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 1. クラスター全体の状態の概要を取得する次のコマンドを実行します。
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > ビッグ データ クラスター名を変更しなかった場合、スクリプトは既定値**sqlbigdata**します。
 
 1. Kubernetes サービスと、次に、内部および外部エンドポイントを検査**kubectl**コマンド。
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. 次のコマンドを使用して kubernetes ポッドの状態を調べることもできます。
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. 次のコマンドで特定のポッドの詳細を確認します。
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > 監視し、デプロイのトラブルシューティング方法の詳細については、次を参照してください。[監視とビッグ データの SQL Server クラスターのトラブルシューティングを行う](cluster-troubleshooting-commands.md)します。
-
-### <a name="use-the-cluster-administration-portal"></a>クラスターの管理ポータルを使用してください。
-
-コント ローラーのポッドが実行されている場合は、展開の監視、クラスターの管理ポータルを使用することもできます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `mgmtproxy-svc-external` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 ポータルにログインするために使用する資格情報の値と一致する**コント ローラーのユーザー**と**パスワード**配置スクリプトで指定されています。
-
-IP アドレスを取得することができます、 **svc 外部の mgmtproxy** bash または cmd ウィンドウでこのコマンドを実行してサービス。
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> CTP 3.0 で表示されますセキュリティの警告を web ページにアクセスするときにビッグ データ クラスターが現在自動生成された SSL 証明書を使用しているためです。
 
 ## <a name="connect-to-the-cluster"></a>クラスターに接続します。
 

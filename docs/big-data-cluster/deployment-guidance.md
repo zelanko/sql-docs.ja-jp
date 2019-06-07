@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993984"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743928"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -92,8 +92,10 @@ CTP 2.5 以降、ほとんどのビッグ データ クラスター設定は、J
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> この例では、パスワードなどの既定の構成の一部ではないすべての設定を求められます。 Docker 情報が提供する Microsoft SQL Server の 2019 の一部として注[Early Adoption Program](https://aka.ms/eapsignup)します。
+このシナリオでは、パスワードなどの既定の構成の一部ではないすべての設定を求められます。 Docker 情報が提供する Microsoft SQL Server の 2019 の一部として注[Early Adoption Program](https://aka.ms/eapsignup)します。
+
+> [!IMPORTANT]
+> ビッグ データ クラスターの既定の名前は**mssql クラスター**します。 これは、いずれかを実行するには把握しておく、 **kubectl**の Kubernetes 名前空間を指定するコマンド、`-n`パラメーター。
 
 ## <a id="customconfig"></a> カスタム構成
 
@@ -220,8 +222,11 @@ URL に注意してください、**ポータル エンドポイント**で、�
 1. デプロイ後、次の外部 IP の出力を調べることでコント ローラー エンドポイントの IP アドレスを見つける**kubectl**コマンド。
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > デプロイ時に既定の名前を変更しなかった場合は、使用`-n mssql-cluster`前のコマンド。 **mssql クラスター**はビッグ データ クラスターの既定の名前です。
 
 1. 使用して、ビッグ データ クラスターにログイン**mssqlctl ログイン**します。 設定、 **-コント ローラー エンドポイント**コント ローラーのエンドポイントの外部 IP アドレスへのパラメーター。
 
@@ -267,7 +272,7 @@ minikube ip
 プラットフォームに関係なく、Kubernetes クラスターを実行するクラスター、次のコマンド用にデプロイされたすべてのサービス エンドポイントを取得する、実行されます。
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> クラスターに接続します。

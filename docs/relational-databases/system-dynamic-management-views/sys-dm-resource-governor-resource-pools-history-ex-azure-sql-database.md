@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc5c5d8377b93a3e0101f1160444a207b5881cd
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: d585f1f1245457aa9051f25bca696cf4495d93ed
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618119"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743923"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (TRANSACT-SQL)
 
@@ -95,14 +95,14 @@ ms.locfileid: "58618119"
 |**avg_data_io_percent**|decimal(5,2)|プールの限度に対する割合で表した平均 I/O 使用率。|
 |**avg_log_write_percent**|decimal(5,2)|平均書き込みリソース使用率、プールの制限の割合。|
 |**avg_storage_percent**|decimal(5,2)|プールの記憶域の上限の割合で表した平均ストレージ使用率。|
-|**avg_allocated_storage_percent**|decimal(5,2)|エラスティック プール内のすべてのデータベースで割り当てられているデータ領域の割合。 これは、エラスティック プールの最大サイズのデータに割り当てられているデータ領域の比率です。 詳細について参照してください。SQL DB でのファイル領域の管理|
+|**avg_allocated_storage_percent**|decimal(5,2)|エラスティック プール内のすべてのデータベースで割り当てられているデータ領域の割合。 これは、エラスティック プールの最大サイズのデータに割り当てられているデータ領域の比率です。 詳しくは、次のトピックをご覧ください。SQL DB でのファイル領域の管理|
 |**max_worker_percent**|decimal(5,2)|プールの限度に対する割合で表した最大同時実行ワーカー (要求)。|
 |**max_session_percent**|decimal(5,2)|プールの限度に対する割合で表した最大同時セッション数。|
 |||
 
 ## <a name="permissions"></a>アクセス許可
 
-このビューには、VIEW DATABASE STATE 権限が必要です。
+このビューには、VIEW SERVER STATE 権限が必要です。
 
 ## <a name="remarks"></a>コメント
 
