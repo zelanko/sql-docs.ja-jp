@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: この記事では、監視、および SQL Server 2019 ビッグ データ クラスター (プレビュー) のトラブルシューティングに便利なコマンドを提供します。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994090"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800736"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視とビッグ データの SQL Server クラスターのトラブルシューティング
 
@@ -242,7 +242,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> : 次のエラーが発生した場合*ポート 8001 でリッスンすることができません。すべてのリスナーは、次のエラーを作成できませんでした。リスナーを作成することができません。エラー リッスン tcp4 127.0.0.1:8001: > バインドします。通常、各ソケット アドレス (ネットワーク プロトコル/アドレス/ポート) の 1 つだけを使用できます。リスナーを作成することができません。エラー リッスン tcp6: アドレス [:: 1]: 8001: でのポートがありません > エラーへの対処します。要求されたポートのいずれかでリッスンできません: [{8001 9090}]*、別のウィンドウから既にダッシュ ボードで開始しなかったことを確認します。
+> : 次のエラーが発生した場合*ポート 8001 でリッスンすることができません。すべてのリスナーは、次のエラーを作成できませんでした。リスナーを作成することができません。エラー リッスン tcp4 127.0.0.1:8001: > バインドします。通常、各ソケット アドレス (ネットワーク プロトコル/アドレス/ポート) の 1 つだけを使用できます。リスナーを作成することができません。エラー リッスン tcp6: アドレス [:: 1]: 8001: でのポートがありません > エラーへの対処します。要求されたポートのいずれかでリッスンできません: [{8001 9090}]* 、別のウィンドウから既にダッシュ ボードで開始しなかったことを確認します。
 
 お使いのブラウザーでダッシュ ボードを起動すると、AKS クラスターで既定で有効になる RBAC のためのアクセス許可の警告を取得する可能性があります、ダッシュ ボードで使用されるサービス アカウントにはすべてのリソースにアクセスするための十分なアクセス許可がありません (たとえば、 *ポッドは禁止されています。ユーザー"システム: serviceaccount:kube-システム: kubernetes-ダッシュ ボード"、「既定」の名前空間に含まれるポッドを一覧表示できません*)。 必要なアクセス許可を付与するには、次のコマンドを実行`kubernetes-dashboard`、し、ダッシュ ボードを再起動します。
 

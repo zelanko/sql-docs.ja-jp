@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7adcae568e97d4bbecd5f901a76dc465dad53ba7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 6431b869af8abc91a9de319f32c0576b82428a0a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089724"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798028"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>ソース管理での使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -38,7 +38,6 @@ ms.locfileid: "65089724"
 ## <a name="initialize-a-new-git-repository"></a>新しい git リポジトリを初期化します。
 
 1. **ソース管理**を選択し、gitアイコンを選択します。
-
 
    ![ソース管理 git アイコン](media/source-control/source-control.png)
 

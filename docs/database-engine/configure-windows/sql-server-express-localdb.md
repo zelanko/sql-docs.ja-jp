@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 53b55ce0449dfd4eb415ee49ac29ac3cb493e111
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779514"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794111"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -34,7 +34,7 @@ LocalDB のインストールでは、[!INCLUDE[ssDEnoversion](../../includes/ss
 
 ## <a name="try-it-out"></a>お試しください 
 
-- SQL Server Express LocalDB をダウンロードしてインストールするには、**[SQL Server ダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)** に移動します。 LocalDB は、インストール中に選択する機能で、メディアをダウンロードするときに使用できます。 メディアをダウンロードする場合は、**[Express Advanced]** または [LocalDB] パッケージを選択します。 **Visual Studio インストーラー**で、**.NET デスクトップ開発** ワークロードの一部として、または個別のコンポーネントとして、SQL Server Express LocalDB をインストールできます。
+- SQL Server Express LocalDB をダウンロードしてインストールするには、 **[SQL Server ダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)** に移動します。 LocalDB は、インストール中に選択する機能で、メディアをダウンロードするときに使用できます。 メディアをダウンロードする場合は、 **[Express Advanced]** または [LocalDB] パッケージを選択します。 **Visual Studio インストーラー**で、 **.NET デスクトップ開発** ワークロードの一部として、または個別のコンポーネントとして、SQL Server Express LocalDB をインストールできます。
 
  >[!TIP]
  > LocalDB は、Visual Studio の一部としてインストールすることもできます。 Visual Studio のインストール中に、SQL Server Express LocalDB が含まれている **[.NET デスクトップ開発]** ワークロードを選択します。
@@ -123,7 +123,7 @@ REM Gather information about the instance of LocalDB
 |インスタンス パイプ名|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->アプリケーションで .NET 4.0.2 より前のバージョンが使用されている場合、LocalDB の名前付きパイプに直接接続する必要があります。 インスタンス パイプ名の値は、LocalDB のインスタンスがリッスンしている名前付きパイプです。 LOCALDB# の後ろのインスタンス パイプ名の部分は、LocalDB のインスタンスが開始されるたびに変わります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して LocalDB のインスタンスに接続するには、**[[!INCLUDE[ssDE](../../includes/ssde-md.md)]への接続]** ダイアログ ボックスにある **[サーバー名]** ボックスにインスタンス パイプ名を入力します。 カスタム プログラムから LocalDB のインスタンスへの接続を確立するには、次のような接続文字列を使用します。`SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`
+>アプリケーションで .NET 4.0.2 より前のバージョンが使用されている場合、LocalDB の名前付きパイプに直接接続する必要があります。 インスタンス パイプ名の値は、LocalDB のインスタンスがリッスンしている名前付きパイプです。 LOCALDB# の後ろのインスタンス パイプ名の部分は、LocalDB のインスタンスが開始されるたびに変わります。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して LocalDB のインスタンスに接続するには、 **[[!INCLUDE[ssDE](../../includes/ssde-md.md)]への接続]** ダイアログ ボックスにある **[サーバー名]** ボックスにインスタンス パイプ名を入力します。 カスタム プログラムから LocalDB のインスタンスへの接続を確立するには、次のような接続文字列を使用します。`SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>LocalDB の共有インスタンスへの接続
 
