@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 34218bbe7e8ac2e94acbb55ceb8bd64008e67c1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487531"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776337"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
 
@@ -36,9 +36,9 @@ ms.locfileid: "65487531"
   
 1.  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールするコンピューターで、次のうち適切ないずれかを使用して DQSInstaller.exe ファイルを実行します。  
   
-    -   **[スタート] 画面**: **[スタート]** 画面で、**[Data Quality Server Installer]** をクリックします。  
+    -   **[スタート] 画面**: **[スタート]** 画面で、 **[Data Quality Server Installer]** をクリックします。  
   
-    -   **[スタート] メニュー**: タスク バーの **[スタート]** ボタンをクリックし、**[すべてのプログラム]** をポイントし、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] をクリックします。 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]で、 **[Data Quality Services]** をクリックし、 **[Data Quality Server Installer]** をクリックします。  
+    -   **[スタート] メニュー**: タスク バーの **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントし、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] をクリックします。 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]で、 **[Data Quality Services]** をクリックし、 **[Data Quality Server Installer]** をクリックします。  
   
     -   **Windows エクスプローラー**: DQSInstaller.exe ファイルを探します。 SQL Server の既定のインスタンスをインストールした場合、DQSinstaller.exe ファイルは C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn に格納されます。 DQSInstaller.exe ファイルをダブルクリックします。  
   
