@@ -10,13 +10,13 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 3eb1ff10fbf0af49cd698537af915378cc1ddb87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306220"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794926"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core への SQL Server のインストール
 
@@ -42,15 +42,15 @@ Server Core インストール オプションでは、特定のサーバー ロ
   
 |機能|Supported|追加情報|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|可||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|可||  
-|フルテキスト検索|可||  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[はい]||  
-|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|[はい]||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション|はい||  
+|フルテキスト検索|はい||  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|はい||  
+|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|はい||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|いいえ||  
-|クライアント ツール接続|可||  
-|Integration Services サーバー|可||  
+|クライアント ツール接続|はい||  
+|Integration Services サーバー|はい||  
 |クライアント ツールの旧バージョンとの互換性|いいえ||  
 |クライアント ツール SDK|いいえ||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック|いいえ||  
@@ -58,8 +58,8 @@ Server Core インストール オプションでは、特定のサーバー ロ
 |管理ツール - 完全|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
 |分散再生コントローラー|いいえ||  
 |分散再生クライアント|リモートのみ|Server Core へのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。|  
-|SQL クライアント接続 SDK|可||  
-|Microsoft Sync Framework|可|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
+|SQL クライアント接続 SDK|はい||  
+|Microsoft Sync Framework|はい|Microsoft Sync Framework は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール パッケージに含まれていません。 適切なバージョンの Sync Framework は、この [Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) からダウンロードして、Server Core を実行しているコンピューターにインストールできます。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|いいえ||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|いいえ||  
   
@@ -273,7 +273,7 @@ Server Core インストール オプションでは、特定のサーバー ロ
    GO
    ```  
   
-### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
+### <a name="enable-and-start-the-includessnoversionincludesssnoversion-mdmd-browser-service"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] browser service  
  Browser サービスは、既定では無効になっています。  Server Core で実行している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで無効になっている場合、このサービスを有効にするには、コマンド プロンプトから次のコマンドを実行します。  
   
  `sc config SQLBROWSER start= auto`  
@@ -285,14 +285,14 @@ Server Core インストール オプションでは、特定のサーバー ロ
 ### <a name="create-exceptions-in-windows-firewall"></a>Windows ファイアウォールで例外を作成する  
  Windows ファイアウォールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスの例外を作成するには、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」で指定されている手順に従います。  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 以下の操作を行ってください。  
   
 1.  サーバーで、タスク マネージャーを起動します。  
   
 2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
   
-3.  **[新しいタスクの作成]** ダイアログ ボックスで、**[開く]** フィールドに **sqlps.exe** と入力して、**[OK]** をクリックします。 **[[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウが開きます。  
+3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[開く]** フィールドに **sqlps.exe** と入力して、 **[OK]** をクリックします。 **[[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウが開きます。  
   
 4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   
