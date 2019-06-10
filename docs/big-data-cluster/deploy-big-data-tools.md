@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) で使用するツールをインストールする方法について説明します。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860483"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797923"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 ビッグ データ ツールをインストールします。
 
@@ -33,7 +33,7 @@ ms.locfileid: "58860483"
 |---|---|---|---|
 | **mssqlctl** | はい | インストールすると、ビッグ データ クラスターを管理するコマンド ライン ツールです。 | [インストール](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | はい | 基になる Kuberentes クラスターを監視するためのコマンド ライン ツール ([詳細](https://kubernetes.io/docs/tasks/tools/install-kubectl/))。 | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | はい | SQL Server を照会するためのクロスプラット フォームでグラフィカルなツール ([詳細](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [インストール](../azure-data-studio/download.md) |
+| **Azure Data Studio** | [はい] | SQL Server を照会するためのクロスプラット フォームでグラフィカルなツール ([詳細](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15))。 | [インストール](../azure-data-studio/download.md) |
 | **SQL Server 2019 の拡張機能** | はい | ビッグ データ クラスターへの接続をサポートする Azure Data Studio の拡張機能です。 また、データの仮想化ウィザードを提供します。 | [インストール](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | AKS の | Azure サービスを管理するための最新のコマンド ライン インターフェイス。 AKS のビッグ データ クラスター展開での使用 ([詳細](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest))。 | [インストール](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 省略可 | SQL Server を照会するための最新のコマンド ライン インターフェイス ([詳細](https://github.com/dbcli/mssql-cli/blob/master/README.rst))。 | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042441"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798148"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59042441"
 > [!IMPORTANT]  
 >  可用性グループへの接続に必要な構成が環境に対して正しく実施されていることも確認します。 詳細については、「 [Always On クライアント接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
-###  <a name="ComputerRecommendations"></a> 可用性レプリカをホストするコンピューターに関する推奨事項 (Windows システム)  
+##  <a name="ComputerRecommendations"></a> 可用性レプリカをホストするコンピューターに関する推奨事項 (Windows システム)  
   
 -   **同程度のシステム:** 可用性グループ内の可用性レプリカはすべて、ワークロードの処理能力が同程度であるシステム上で運用する必要があります。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59042441"
   
 3.  **Get-ClusterResource** コマンドレットを使用してネットワーク名リソースを検索し、次に **Set-ClusterParameter** コマンドレットを使用して **HostRecordTTL** 値を設定します。次に例を示します。  
   
-     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      次に示す PowerShell の例では、`SQL Network Name (SQL35)` というネットワーク名リソースの HostRecordTTL を 300 秒に設定します。  
   
@@ -261,7 +261,7 @@ ms.locfileid: "59042441"
 -   **可用性レプリカは、1 つの WSFC の別々のノードによってホストされている必要がある:** 各可用性グループで、個々の可用性レプリカは、同じ WSFC の別々のノード上で動作するサーバー インスタンスによってホストされる必要があります。 唯一の例外は、別のクラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。  
   
     > [!NOTE]  
-    >  同じ物理コンピューター上の各仮想コンピューターは独立したコンピューターとして動作するため、同じ可用性グループの可用性レプリカをそれぞれの仮想コンピューターがホストできます。  
+    >  同じ物理コンピューター上の各仮想マシンは独立したコンピューターとして動作するため、同じ可用性グループの可用性レプリカをそれぞれの仮想マシンがホストできます。  
   
 -   **一意の可用性グループ名:** 各可用性グループの名前は、WSFC 上で一意である必要があります。 可用性グループ名の最大文字数は 128 文字です。  
   
@@ -356,7 +356,7 @@ ms.locfileid: "59042441"
   
 -   セカンダリ データベースのファイル パス (ドライブ文字を含む) が、対応するプライマリ データベースのパスと異なる場合、次の制限が適用されます。  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:****[完全]** オプションはサポートされません ([[最初のデータの同期を選択]](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) ページ)、  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** **[完全]** オプションはサポートされません ([[最初のデータの同期を選択]](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md) ページ)、  
   
     -   **RESTORE WITH MOVE:** セカンダリ データベースを作成するには、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンス上で、WITH MOVE を使用してデータベース ファイルを復元する必要があります。  
   

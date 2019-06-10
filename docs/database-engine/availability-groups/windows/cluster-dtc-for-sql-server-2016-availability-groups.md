@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b5003b20a1cfa477cde724a7ddfa32914eab9ef
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: bfe3b6cb865736fbc87bfc747fdedfc23f23d7f2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044458"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796565"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Always On 可用性グループの DTC サービスをクラスター化する方法
 
@@ -25,14 +25,14 @@ ms.locfileid: "55044458"
 
 このトピックでは、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用に Microsoft 分散トランザクション コーディネーター (DTC) サービスをクラスター化するための要件と手順について説明します。 分散トランザクションと [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の詳細については、「 [Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」をご覧ください。
 
- ## <a name="checklist-preliminary-requirements"></a>チェック リスト:準備要件
+ ## <a name="checklist-preliminary-requirements"></a>チェックリスト:準備要件
 
 ||タスク|リファレンス|  
 |------|-----------------|----------|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|すべてのノード、サービス、可用性グループが正しく構成されていることを確認します。|[Always On 可用性グループの前提条件、制限事項、推奨事項 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)|
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループの DTC 要件が満たされていることを確認します。|[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 
-## <a name="checklist-clustered-dtc-resource-dependencies"></a>チェック リスト:クラスター化された DTC リソースの依存関係
+## <a name="checklist-clustered-dtc-resource-dependencies"></a>チェックリスト:クラスター化された DTC リソースの依存関係
 
 ||タスク|リファレンス|  
 |------|-----------------|----------|  
@@ -44,7 +44,7 @@ ms.locfileid: "55044458"
 可用性グループ リソースを作成したら、クラスター化された DTC リソースを作成し、可用性グループに追加します。  サンプル スクリプトは「[Create Clustered DTC for an Always On Availability Group](../../../database-engine/availability-groups/windows/create-clustered-dtc-for-an-always-on-availability-group.md)」(AlwaysOn 可用性グループのクラスター化された DTC を作成する) で確認できます。
 
 
-## <a name="checklist-post-clustered-dtc-resource-configurations"></a>チェック リスト:クラスター化 DTC リソースの事後構成
+## <a name="checklist-post-clustered-dtc-resource-configurations"></a>チェックリスト:クラスター化 DTC リソースの事後構成
 
 ||タスク|リファレンス|  
 |------|-----------------|----------|  

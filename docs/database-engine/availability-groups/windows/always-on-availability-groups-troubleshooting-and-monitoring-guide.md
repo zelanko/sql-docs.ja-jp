@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59ca941e6588f00140b4b57fa3a73904b6ad8f35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: a1b25ea57ef34ebe8dd0c098695a0b59b6f87472
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215621"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789638"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性グループのトラブルシューティングと監視のガイド
  このガイドは、Always On 可用性グループの監視と可用性グループのいくつかの一般的な問題のトラブルシューティング作業を開始するために役立ちます。 オリジナルのコンテンツに加えて、他の場所で公開されている役に立つ情報のランディング ページを提供します。 このガイドでは、可用性グループの大きな領域で発生する可能性があるすべての問題を完全に説明することはできませんが、根本原因の分析と問題の解決に関して正しい方向を示すことができます。 
@@ -34,8 +34,8 @@ ms.locfileid: "53215621"
 |[マルチ サブネット環境で可用性グループ リスナーに接続できない](https://support.microsoft.com/kb/2792139/en-us)|クライアント接続|可用性グループ リスナーを構成した後で、リスナーへの ping が失敗するか、アプリケーションから接続できません。|  
 |[失敗した自動フェールオーバーのトラブルシューティング](https://support.microsoft.com/kb/2833707)|[フェールオーバー]|自動フェールオーバーが正常に完了しませんでした。|  
 |[トラブルシューティング:可用性グループ接続の超過 RTO ](troubleshoot-availability-group-exceeded-rto.md)|パフォーマンス|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
-|[トラブルシューティング:可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|パフォーマンス|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
-|[トラブルシューティング:プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|パフォーマンス|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
+|[トラブルシューティング: 可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|パフォーマンス|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
+|[トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|パフォーマンス|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
 |[トラブルシューティング:Always On 可用性グループでの長い HADR_SYNC_COMMIT 待機の種類](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|パフォーマンス|HADR_SYNC_COMMIT が異常に長い場合は、データの移動フローまたはセカンダリ レプリカのログの書き込みにパフォーマンスの問題があります。|  
 
 ##  <a name="BKMK_TOOLS"></a> トラブルシューティングに役立つツール  

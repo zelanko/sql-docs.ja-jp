@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fb7b3f6a0932df1490eade1e3745182b05071da9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 139a8317b934ac262f57cb4025deb15d05dadc20
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486341"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785811"
 ---
 # <a name="create-a-data-quality-project"></a>データ品質プロジェクトの作成
 
@@ -55,9 +55,9 @@ ms.locfileid: "65486341"
   
     4.  **[アクティビティの選択]** 領域で、このデータ品質プロジェクトを使用して実行するアクティビティをクリックします。  
   
-        -   **[クレンジング]**: ソース データをクレンジングするには、このアクティビティを選択します。  
+        -   **[クレンジング]** : ソース データをクレンジングするには、このアクティビティを選択します。  
   
-        -   **[照合]**: 照合を実行するには、このアクティビティを選択します。 このアクティビティは、データ品質プロジェクトで選択されたナレッジ ベースに照合ポリシーが含まれている場合にのみ利用可能です。  
+        -   **[照合]** : 照合を実行するには、このアクティビティを選択します。 このアクティビティは、データ品質プロジェクトで選択されたナレッジ ベースに照合ポリシーが含まれている場合にのみ利用可能です。  
   
 4.  **[作成]** をクリックし、データ品質プロジェクトを作成します。  
   

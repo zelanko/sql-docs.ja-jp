@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de3fe01573e9719ef63b09735c2701789582d7c3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578408"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500400"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Reporting Services の既定の配信拡張機能を変更する
   サブスクリプション定義ページの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [配信者] **リストに表示される既定の配信拡張機能は** の構成設定で変更できます。 たとえば、ユーザーが新しいサブスクリプションを作成したときに電子メール配信ではなくファイル共有配信が既定で選択されるように構成を変更することができます。 また、ユーザー インターフェイスにおける配信拡張機能の表示順を変更することもできます。  
@@ -114,18 +114,4 @@ ms.locfileid: "65578408"
  [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services でのファイル共有の配信](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
- [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
-  
-<!-- TODO:
-The above See Also link to the old MSDN at...
-https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83
 
-...is redirected to the following Docs link, for SQL Server 2014...
-
-https://docs.microsoft.com/sql/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager?view=sql-server-2014
-
-...So if I was not presently resolving conflicts with public repo PR, related to private repo PR 7827,
-the better fix would be to replace the whole MSDN link with the newer Docs link (to which the older MSDN link is redirected).
-Maybe later someone can perform this replacement, and under docs/reporting-services/ there are multiple similar replacement opportunities.
-GeneMi , 2018/10/25
--->

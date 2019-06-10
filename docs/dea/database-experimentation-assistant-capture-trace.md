@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 822f8d02a9bcaa27a405acdc351646fd63560880
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015170"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794496"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>データベース実験アシスタントでのトレースをキャプチャします。
 
@@ -39,7 +39,7 @@ ms.locfileid: "66015170"
     - **SQL Server インスタンス名**:サーバー トレースをキャプチャする SQL Server を実行しているコンピューターの名前を入力します。
     - **データベース名**:データベースの追跡を開始するデータベースの名前を入力します。 データベースを指定しない場合、トレースは、すべてのデータベース サーバー上でキャプチャされます。
     - **トレース ファイル名**:キャプチャのトレース ファイルの名前を入力します。
-    - **最大ファイル サイズ (MB)**:ファイルのロール オーバーのサイズを選択します。 選択したファイルのサイズで必要に応じて、新しいファイルが作成されます。 ロール オーバーの推奨されるサイズは、200 MB です。
+    - **最大ファイル サイズ (MB)** :ファイルのロール オーバーのサイズを選択します。 選択したファイルのサイズで必要に応じて、新しいファイルが作成されます。 ロール オーバーの推奨されるサイズは、200 MB です。
     - **期間 (分) で**:トレース キャプチャが実行する時間 (分単位) を選択します。
     - **出力トレース ファイルを格納するパス**:トレース ファイルの保存先を選択します。 
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Kubernetes で実行して、リレーショナルの両方でスケール アウト オプションおよび HDFS データを提供する SQL Server 2019 ビッグ データ クラスター (プレビュー) について説明します。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860254"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801890"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターとは
 

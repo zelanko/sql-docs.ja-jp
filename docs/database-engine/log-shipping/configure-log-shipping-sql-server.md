@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: 4ed8568dd53d02df3e0788b79d0b9240f47dbe5f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105973"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794640"
 ---
 # <a name="configure-log-shipping-sql-server"></a>ログ配布の構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "65105973"
   
 5.  **[バックアップ フォルダーのネットワーク パスを指定する]** ボックスに、トランザクション ログ バックアップ フォルダー用に作成した共有へのネットワーク パスを入力します。  
   
-6.  **バックアップ フォルダーがプライマリ サーバーに存在する場合は、バックアップ フォルダー ボックスにローカル パスを入力します**  (バックアップ フォルダーが、プライマリ サーバー上にない場合は、このボックスは空のままでかまいません)。  
+6.  **バックアップ フォルダーがプライマリ サーバーに存在する場合は、バックアップ フォルダー ボックスにローカル パスを入力します** (バックアップ フォルダーが、プライマリ サーバー上にない場合は、このボックスは空のままでかまいません)。  
   
     > [!IMPORTANT]  
     >  プライマリ サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントがローカル システム アカウントで実行されている場合、バックアップ フォルダーはプライマリ サーバー上に作成し、このフォルダーへのローカル パスを指定する必要があります。  
