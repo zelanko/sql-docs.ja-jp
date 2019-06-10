@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 883c0c98531311d77754fcbcdd86615283aecdc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312838"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798064"
 ---
 # <a name="modify-user-and-workspace-settings"></a>ユーザーとワークスペースの設定を変更します。
 
@@ -31,7 +31,7 @@ ms.locfileid: "63312838"
 
 メニュー コマンド**ファイル** > **設定** > **設定**(**コード** >  **設定** > **設定**Mac で) ユーザーとワークスペースの設定を構成するエントリ ポイントを提供します。 既定の設定の一覧が表示されます。 適切な変更に必要な任意の設定をコピー`settings.json`ファイル。 右側のタブを使用して、ユーザーとワークスペースの設定ファイルをすばやく切り替えることができます。
 
-ユーザーとワークスペースの設定を開くことも、**コマンド パレット**(**Ctrl + Shift + P**) と**設定。ユーザー設定を開く**と**設定。ワークスペースの設定を開く**キーボード ショートカットを使用して、または (**Ctrl +,**)。
+ユーザーとワークスペースの設定を開くことも、**コマンド パレット**(**Ctrl + Shift + P**) と**設定。ユーザー設定を開く**と**設定。ワークスペースの設定を開く**キーボード ショートカットを使用して、または (**Ctrl +,** )。
 
 次の例では、エディター内の行番号を無効にし、行のコードを自動的にインデントを設定するを構成します。
 

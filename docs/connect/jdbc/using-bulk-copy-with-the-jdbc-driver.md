@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b81937878a4c9e733b6a7c23a6156221c356e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: df92d111897336fdcb40fad59cb5aafec3a52b6f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860643"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803355"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
 
@@ -575,13 +575,13 @@ public class BulkCopyExistingTransactions {
   
 1. **SQL Server Management Studio** を開き、AdventureWorks データベースを含む SQL Server に接続します。  
   
-2. データベースを展開し、AdventureWorks データベースを右クリックして、**[タスク]**、**[データのエクスポート]** の順にクリックします。  
+2. データベースを展開し、AdventureWorks データベースを右クリックして、 **[タスク]** 、 **[データのエクスポート]** の順にクリックします。  
   
 3. データ ソースに関しては、使用する SQL Server に接続できる**データ ソース** (例: SQL Server Native Client 11.0) を選択し、構成を確認して **[次へ]** をクリックします。  
   
-4. コピー先に関しては、**[フラット ファイル変換先]** を選択し、「C:\Test\TestBulkCSVExample.csv」のように変換先を含めた **[ファイル名]** を入力します。 **[形式]** が [区切りあり]、**[テキスト修飾子]** が [なし] に設定されていることを確認し、**[先頭データ行を列名として使用する]** を有効にして、**[次へ]** をクリックします。  
+4. コピー先に関しては、 **[フラット ファイル変換先]** を選択し、「C:\Test\TestBulkCSVExample.csv」のように変換先を含めた **[ファイル名]** を入力します。 **[形式]** が [区切りあり]、 **[テキスト修飾子]** が [なし] に設定されていることを確認し、 **[先頭データ行を列名として使用する]** を有効にして、 **[次へ]** をクリックします。  
   
-5. **[転送するデータを指定するためのクエリを記述する]** をオンにして、**[次へ]** をクリックします。  **SQL ステートメント**の SELECT ProductID、Name、ProductNumber FROM Production.Product を入力し、**[次へ]** をクリックします。  
+5. **[転送するデータを指定するためのクエリを記述する]** をオンにして、 **[次へ]** をクリックします。  **SQL ステートメント**の SELECT ProductID、Name、ProductNumber FROM Production.Product を入力し、 **[次へ]** をクリックします。  
   
 6. 構成の確認: 行区切り記号を {CR}{LF}、列区切り記号をコンマ {,} にしておくことができます。  **[マッピングの編集]** を選択し ... 各列のデータの **[型]** が適切かどうか (ProductID には整数、他は Unicode 文字列など) を確認します。  
   

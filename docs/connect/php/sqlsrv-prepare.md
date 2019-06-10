@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+manager: jroth
+ms.openlocfilehash: 8029d83fd51d126a4ca6bdc8ae69e61536c2aa3d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582895"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802354"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,7 +59,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     次の表では、これらの配列の要素を説明します。  
   
-    |要素|説明|  
+    |要素|[説明]|  
     |-----------|---------------|  
     |*&$value*|リテラル値または PHP の変数への参照。|  
     |*$direction*[オプション]|パラメーターの方向を示すために使用する **SQLSRV_PARAM_\*** 定数 (**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**) のいずれか。 既定値は **SQLSRV_PARAM_IN** です。<br /><br />PHP 定数の詳細については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。|  
@@ -68,7 +68,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* (省略可能): <a name="properties">クエリのプロパティ</a>を設定する連想配列。 次の表に、サポートされているキーと対応する値を示します。
 
-|Key|サポートされている値|説明|  
+|Key|サポートされている値|[説明]|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|正の整数|クライアント側カーソルの結果セットを保持するバッファーのサイズを設定します。<br /><br />既定値は 10240 KB です。 詳細については、「[Specifying a Cursor Type and Selecting Rows (カーソルの種類の指定と行の選択)](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。|
 |小数点以下表示桁数|0 から 4 までの整数|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。<br /><br />負の整数値または 4 を超える値は無視されます。<br /><br />このオプションは、FormatDecimals が **true** 場合にのみ機能します。|
