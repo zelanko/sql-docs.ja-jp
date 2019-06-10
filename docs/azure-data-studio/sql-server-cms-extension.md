@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 1d10e3c4e9c1e1b2a6ce316902d4f70bbfac3740
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+manager: jroth
+ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748475"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798014"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server の中央管理サーバーの拡張機能 (プレビュー)
 中央管理サーバーの拡張機能では、1 つまたは複数のグループに編成は、SQL Server のインスタンスのリストを格納することができます。 CMS のグループを使用して実行されるアクションは、サーバー グループ内のすべてのサーバー上で動作します。

@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3d227d308ba05a4c9336e2f5dcb728e85c18d7ed
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089694"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797941"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル:TRANSACT-SQL エディターを使用して、データベースのオブジェクトを作成するには [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "65089694"
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] はデータベース オブジェクトをすばやく検索する検索ウィジェットを提供します。 結果一覧には、選択したオブジェクトに関連する、例えばテーブルの*データ編集*のような一般的なタスクのためのコンテキスト メニューが提供されます。
 
-1. [サーバー] サイド バーを開き (**Ctrl + G**)、**[データベース]** を展開して、**[TutorialDB]** を選択します。 
+1. [サーバー] サイド バーを開き (**Ctrl + G**)、 **[データベース]** を展開して、 **[TutorialDB]** を選択します。 
 
 1. **[TutorialDB]** を右クリックして、コンテキスト メニューの **[管理]** を選択し、*TutorialDB ダッシュボード*を開きます。
 
@@ -183,7 +183,7 @@ ms.locfileid: "65089694"
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用は、setCustomer ストアド プロシージャをテストする JSON としてクエリ結果を保存します。
 
-*SetCustomer*前のセクションで作成したストアド プロシージャは、JSON を必要がありますに渡すデータ、 *@json_val*パラメーター。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡す JSON の正しく書式設定されたビットを取得する方法を示します。
+*SetCustomer*前のセクションで作成したストアド プロシージャは、JSON を必要がありますに渡すデータ、 *@json_val* パラメーター。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡す JSON の正しく書式設定されたビットを取得する方法を示します。
 
 1. **サーバー**サイド バーを右クリックし、 *dbo します。顧客*テーブルし、クリックして**上位 1000 行**します。
 

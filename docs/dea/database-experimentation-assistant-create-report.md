@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 2d0e07e069754e961b290b33d77cb30b522c367f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015147"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794476"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>データベース実験アシスタントでの分析レポートを作成します。
 
@@ -36,8 +36,8 @@ DEA では、メニュー アイコンを選択します。 展開されたメ�
 
 入力するか、次の情報を選択します。
 
-- **レポート名**:レポートの名前を入力します。 レポート名が使用される両方 A と B のデータベース。 例:*(A または B)* + *レポート名* + *一意識別子*します。 
-- **[サーバー名]**: A、追加するサーバー コンピューターの名前を入力します。 B、および分析データベース。
+- **レポート名**:レポートの名前を入力します。 レポート名が使用される両方 A と B のデータベース。 例: *(A または B)*  + *レポート名* + *一意識別子*します。 
+- **[サーバー名]** : A、追加するサーバー コンピューターの名前を入力します。 B、および分析データベース。
 - **SQL Server インスタンス名**:レポートに使用する SQL Server インスタンスの名前を入力します。
 - **移行元サーバーのトレース**:SQL Server (2008 R2) の最初のトレース (.trc) ファイルを入力します。
 - **対象サーバーのトレース**:ターゲット SQL Server (2014) 最初 .trc ファイルを入力します。
