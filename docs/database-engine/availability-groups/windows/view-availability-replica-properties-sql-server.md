@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bf0e948dd5f6e6334e9eb66b4e395bad5fde52c
-ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
+manager: jroth
+ms.openlocfilehash: 2608097cb5b0ca626c8776c6a7312552a181342d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "63049049"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780187"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>可用性レプリカのプロパティの表示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +31,11 @@ ms.locfileid: "63049049"
   
 2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
-3.  可用性レプリカが属する可用性グループを展開し、**[可用性レプリカ]** ノードを展開します。  
+3.  可用性レプリカが属する可用性グループを展開し、 **[可用性レプリカ]** ノードを展開します。  
   
-4.  プロパティを表示する可用性レプリカを右クリックし、**[プロパティ]** をクリックします。  
+4.  プロパティを表示する可用性レプリカを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、**[全般]** ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、「[可用性レプリカのプロパティ &#40;[全般] ページ&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md)」を参照してください。  
+5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、 **[全般]** ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、「[可用性レプリカのプロパティ &#40;[全般] ページ&#41;](../../../database-engine/availability-groups/windows/availability-replica-properties-general-page.md)」を参照してください。  
 
    [!NOTE]
    >クラスターの種類がなしの場合は、フェールオーバー モードを変更できません。

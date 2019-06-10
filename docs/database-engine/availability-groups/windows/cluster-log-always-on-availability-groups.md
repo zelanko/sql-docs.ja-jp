@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bfb0b56bba45d5e4622076f1d38bec2f4aca97a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1d025a77cace9d8bbcdd746c2e6a193f23efd34d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211731"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772586"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 可用性グループ用の CLUSTER.LOG を生成および分析する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="always-on-log-verbosity"></a>Always On ログの詳細レベル  
  可用性グループに対する CLUSTER.LOG ではログの詳細レベルを上げることができます。 詳細レベルを変更するには、次の手順を実行します。  
   
-1.  **[スタート]** メニューから、**[フェールオーバー クラスター マネージャー]** を開きます。  
+1.  **[スタート]** メニューから、 **[フェールオーバー クラスター マネージャー]** を開きます。  
   
-2.  クラスター、**[サービスとアプリケーション]** ノードの順に展開し、可用性グループの名前をクリックします。  
+2.  クラスター、 **[サービスとアプリケーション]** ノードの順に展開し、可用性グループの名前をクリックします。  
   
-3.  詳細ウィンドウで、可用性グループのリソースを右クリックし、**[プロパティ]** をクリックします。  
+3.  詳細ウィンドウで、可用性グループのリソースを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[プロパティ]** タブをクリックします。  
   
 5.  **VerboseLogging** プロパティを変更します。 既定では、**VerboseLogging** は `0` に設定されます。この場合、情報、警告、およびエラーがレポートされます。 **VerboseLogging** には `0` から `2` までの値を設定できます。  
   
-6.  [**OK**] をクリックします。  
+6.  **[OK]** をクリックします。  
   
-7.  可用性グループのリソースをもう一度右クリックし、**[このリソースをオフラインにする]** をクリックします。  
+7.  可用性グループのリソースをもう一度右クリックし、 **[このリソースをオフラインにする]** をクリックします。  
   
-8.  可用性グループのリソースをもう一度右クリックし、**[このリソースをオンラインにする]** をクリックします。  
+8.  可用性グループのリソースをもう一度右クリックし、 **[このリソースをオンラインにする]** をクリックします。  
   
 ## <a name="availability-group-resource-events"></a>可用性グループのリソース イベント  
  次の表に、可用性グループのリソースに関連するイベントのうち、CLUSTER.LOG 内で確認できる各種イベントを示します。 WSFC のリソース ホスティング サブシステム (RHS) およびリソース コントロール モニター (RCM) の詳細については、「[Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)」 (Windows Server 2008 フェールオーバー クラスターのリソース ホスティング サブシステム (RHS)) を参照してください。  

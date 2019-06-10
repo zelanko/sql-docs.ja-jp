@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3f3b6bfdb766ab2007591ed661fe89e81b813c04
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132802"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799510"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>特定の TCP ポートで受信待ちするようにサーバーを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "54132802"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンに TCP/IP ポート番号を割り当てるには  
   
-1.  SQL Server 構成マネージャーのコンソール ペインで、**[SQL Server ネットワークの構成]**、**[\<インスタンス名> のプロトコル]** の順に展開し、**[TCP/IP]** をダブルクリックします。  
+1.  SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** 、 **[\<インスタンス名> のプロトコル]** の順に展開し、 **[TCP/IP]** をダブルクリックします。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを開く際に問題がある場合は、「 [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)」を参照してください。  
   
-2.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2**という形式で **IPAll**まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターの各 IP アドレスとして表示されます。 (おそらく IP バージョン 4 と IP バージョン 6 の両方のアドレスが表示されます)。各アドレスを右クリックし、**[プロパティ]** をクリックして、構成する IP アドレスを識別します。  
+2.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2**という形式で **IPAll**まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターの各 IP アドレスとして表示されます。 (おそらく IP バージョン 4 と IP バージョン 6 の両方のアドレスが表示されます)。各アドレスを右クリックし、 **[プロパティ]** をクリックして、構成する IP アドレスを識別します。  
   
 3.  **[TCP 動的ポート]** ダイアログ ボックスには、 **が動的ポートで受信待ちすることを示す**0 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が表示されています。この 0 を削除します。  
   
@@ -59,12 +59,12 @@ ms.locfileid: "54132802"
 4.  **IP**_n_ **のプロパティ** ボックスの **TCP ポート** box, type the port number you want this IP address to listen on, and then click **OK**をクリックします。 複数のポートを指定する場合は、コンマで区切ります。
 
     > [!NOTE] 
-    > **[プロトコル]** タブの **[すべて受信待ち]** 設定が [はい] に設定されている場合、**[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の値のみが使用され、個々の **[IP**_n]_ セクションは完全に無視されます。 **[すべて受信待ち]** の設定が [いいえ] に設定されている場合、**[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の設定は無視され、個々の **[IP**_n]_ セクションの **[TCP ポート]**、**[TCP 動的ポート]**、および **[有効]** の設定が代わりに使用されます。
+    > **[プロトコル]** タブの **[すべて受信待ち]** 設定が [はい] に設定されている場合、 **[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の値のみが使用され、個々の **[IP**_n]_ セクションは完全に無視されます。 **[すべて受信待ち]** の設定が [いいえ] に設定されている場合、 **[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の設定は無視され、個々の **[IP**_n]_ セクションの **[TCP ポート]** 、 **[TCP 動的ポート]** 、および **[有効]** の設定が代わりに使用されます。
     > 各 **[IP**_n]_ セクションには、既定値が [いいえ] の **[有効]** 設定があります。[いいえ] では、ポートが定義されている場合でも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの IP アドレスは無視されます。  
   
 5.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-6.  詳細ペインで **[SQL Server (**\<インスタンス名>**)]** を右クリックします。次に、**[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
+6.  詳細ペインで **[SQL Server (** \<インスタンス名> **)]** を右クリックします。次に、 **[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
   
 ## <a name="connecting"></a>接続  
 特定のポートで受信待ちするように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成した後、次の 3 つの方法でクライアント アプリケーションを使用して特定のポートに接続できます。  

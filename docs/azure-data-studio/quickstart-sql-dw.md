@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143905"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800264"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]に接続して、Azure SQL Data Warehouse のデータの照会
 
@@ -27,7 +27,6 @@ ms.locfileid: "63143905"
 
 - [[!INCLUDE[name-sos](../includes/name-sos-short.md)]のインストール](download.md)。
 
-
 SQL データ ウェアハウスをもっていない場合は [SQL データ ウェアハウスを作成](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision) を参照してください。
 
 サーバー名、およびログイン資格情報を覚えておくようにしてください。
@@ -37,7 +36,7 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]を使用して、Azure SQL Data Warehouse に接続しデータを照会する
 
-1. [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初回実行時には **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、**[接続の追加]**、または **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
+1. [!INCLUDE[name-sos](../includes/name-sos-short.md)] の初回実行時には **[接続]** ページが開きます。 **[接続]** ページが表示されない場合は、 **[接続の追加]** 、または **[サーバー]** サイドバーの **[新しい接続]** アイコンをクリックします。
    
    ![新しい接続のアイコン](media/quickstart-sql-dw/new-connection-icon.png)
 

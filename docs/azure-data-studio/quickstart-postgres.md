@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: craigg
-ms.openlocfilehash: dbf7b427c8c978538370a576aa50c35dd15417cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63252949"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778332"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: 接続し、PostgreSQL を使用したクエリ [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 このクイック スタートは、使用する方法を示しています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Postgres、に接続し、データベースを作成する SQL ステートメントを使用する*tutorialdb*しクエリを実行します。
@@ -33,7 +33,7 @@ ms.locfileid: "63252949"
 
 1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** を実行します。
 
-2. 初めて起動する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ダイアログ ボックスが開きます。 **[接続]** ダイアログが開かない場合、**[サーバー]** ページの **[新しい接続]** アイコンをクリックしてください。
+2. 初めて起動する[!INCLUDE[name-sos](../includes/name-sos-short.md)]、**接続**ダイアログ ボックスが開きます。 **[接続]** ダイアログが開かない場合、 **[サーバー]** ページの **[新しい接続]** アイコンをクリックしてください。
 
    ![新しい接続のアイコン](media/quickstart-postgresql/new-connection-icon.png)
 
