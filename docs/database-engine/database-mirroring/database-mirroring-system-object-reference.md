@@ -9,27 +9,27 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f45b0a5b792f3fb8de9f2ee46fb15984ed520b24
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+manager: jroth
+ms.openlocfilehash: 6f43477ebb45812fb4e71ca501296518ed3950c9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533401"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795513"
 ---
 # <a name="database-mirroring-system-object-reference"></a>データベース ミラーリング システム オブジェクト リファレンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="system-catalog-views"></a>システム カタログ ビュー
 
-| システム カタログ ビュー | 説明|
+| システム カタログ ビュー | [説明]|
 | :------ | :----------------------------- |
 | [sys.database_mirroring_witnesses](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   | サーバーがデータベース ミラーリング パートナーシップで果たすすべてのミラーリング監視ロールの行を格納します。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="system-dynamic-management-views"></a>システム動的管理ビュー
 
-| システム動的管理ビュー | 説明|
+| システム動的管理ビュー | [説明]|
 | :------ | :----------------------------- |
 | [sys.dm_db_mirroring_auto_page_repair](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-auto-page-repair.md)   | サーバー インスタンス上のミラー化されたデータベースに対して試行されたページの自動修復ごとに 1 行を返します。  |
 | [sys.dm_db_mirroring_connections](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)    | データベース ミラーリング用に確立された各接続の行を返します。 |
@@ -37,7 +37,7 @@ ms.locfileid: "59533401"
 
 ## <a name="system-tables"></a>システム テーブル
 
-| システム テーブル | 説明|
+| システム テーブル | [説明]|
 | :------ | :----------------------------- |
 | [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)   | データベース ミラーリング メンテナンス プランに関する情報を返します。 |
 | [sysdbmaintplan_history](../../relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md)    | データベース ミラーリング メンテナンス プランの履歴に関する情報を返します。 |

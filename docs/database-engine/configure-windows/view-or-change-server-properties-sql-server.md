@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 65f613ebf1364d7aeaeda77ec244794f983f3fc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255377"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775229"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>サーバー プロパティの表示または変更 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "54255377"
   
      [SQL Server 構成マネージャー](#PowerShellProcedure)  
   
--   **補足情報:**[サーバーのプロパティを変更した後](#FollowUp)  
+-   **補足情報:** [サーバーのプロパティを変更した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -151,13 +151,13 @@ GO
   
 #### <a name="to-view-or-change-server-properties"></a>サーバーのプロパティを表示または変更するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 2.  **SQL Server 構成マネージャー**で **[SQL Server のサービス]** をクリックします。  
   
-3.  詳細ウィンドウで **[SQL Server (\<**_instancename>_**)]** を右クリックし、**[プロパティ]** をクリックします。  
+3.  詳細ウィンドウで **[SQL Server (\<** _instancename>_ **)]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[SQL Server (\<**_instancename_**>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、**[OK]** をクリックします。  
+4.  **[SQL Server (\<** _instancename_ **>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、 **[OK]** をクリックします。  
   
 ##  <a name="FollowUp"></a>補足情報: サーバーのプロパティを変更した後  
  いくつかのプロパティでは、変更を有効にするためにサーバーを再起動する必要があります。  

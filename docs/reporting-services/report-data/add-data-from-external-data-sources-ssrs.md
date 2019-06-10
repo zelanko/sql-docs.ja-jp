@@ -10,12 +10,12 @@ manager: kfile
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 946d16e240bc8601f695cc4fd5269e046672f122
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 60387cff118b0e809bba1e659be496c4ca2c00cc
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578224"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500561"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>外部データ ソースのデータを追加する (SSRS)
   外部データ ソースからデータを取得するには、データ接続を使用します。 データ接続情報は、通常は権限の付与と使用する資格情報の指定を担う外部データ ソースの所有者によって提供されます。 データ接続情報は、レポート データ ソースとして保存されます。 データ ソースの種類により、データの取得に使用するデータ拡張機能が決まります。  
@@ -40,7 +40,7 @@ ms.locfileid: "65578224"
 -   **外部データ ソース** データベース、ファイル、キューブ、Web サービスなど、レポート データの取得先です。  
   
 > [!NOTE]  
->  レポート サーバーに接続していないときは、レポート ビルダーと共にインストールされたデータ拡張機能を選択できます。 データには、使用しているコンピューターの資格情報を使用して、シングル ユーザーとしてアクセスします。 レポート サーバーに接続しているときは、レポート サーバーにインストールされているデータ拡張機能を選択できます。 データには、レポートを実行する複数のユーザーの 1 人としてアクセスし、レポート サーバー上の資格情報を使用します。 詳細については、「 [レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
+>  レポート サーバーに接続していないときは、レポート ビルダーと共にインストールされたデータ拡張機能を選択できます。 データには、使用しているコンピューターの資格情報を使用して、シングル ユーザーとしてアクセスします。 レポート サーバーに接続しているときは、レポート サーバーにインストールされているデータ拡張機能を選択できます。 データには、レポートを実行する複数のユーザーの 1 人としてアクセスし、レポート サーバー上の資格情報を使用します。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。  
   
 ##  <a name="ReportData"></a> レポート データについて  
  簡単に言うと、レポートでは、レポート データセットのデータがレポート ページのデータ領域に表示されます。このデータ領域は、単一のテーブル、グラフ、マトリックス、またはその他の種類のレポート データ領域です。 レポート データセットのデータは、外部データ ソースに読み取り専用アクセスを実行する単一のクエリ コマンドから返された最初の結果セットから取得されます。 各データ領域は、データセットのすべてのデータを表示するために、必要に応じて拡張されます。  
@@ -98,7 +98,7 @@ ms.locfileid: "65578224"
 |トピック|[説明]|  
 |-----------|-----------------|  
 |[レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|レポートのデータへのアクセスの概要について説明します。|  
-|[レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|データ接続とデータ ソースについて説明します。|  
+|[レポート ビルダーでのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|データ接続とデータ ソースについて説明します。|  
 |[レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|埋め込みデータセットと共有データセットについて説明します。|  
 |[データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|クエリによって生成されるデータセット フィールド コレクションについて説明します。|  
 |[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312))。|各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。|  
@@ -106,7 +106,7 @@ ms.locfileid: "65578224"
   
   
 ## <a name="see-also"></a>参照  
- [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [クエリ デザイナー &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [クエリ デザイン ツール &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 35ff790595dbcb6a3864b2d1414149374119d907
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125952"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787990"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>レプリケーション、変更の追跡、変更データ キャプチャ - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "54125952"
   
      可用性グループ リスナー名または明示的なノード名を使用してセカンダリ レプリカを検索できます。 可用性グループ リスナー名を使用すると、アクセスは適切なセカンダリ レプリカに送られます。  
   
-     **sp_addlinkedserver** を使用してセカンダリにアクセスするためのリンク サーバーを作成する場合は、可用性グループ リスナー名または明示的なサーバー名に *@datasrc* パラメーターを使用し、*@provstr* パラメーターを使用して読み取り専用の目的を指定します。  
+     **sp_addlinkedserver** を使用してセカンダリにアクセスするためのリンク サーバーを作成する場合は、可用性グループ リスナー名または明示的なサーバー名に *@datasrc* パラメーターを使用し、 *@provstr* パラメーターを使用して読み取り専用の目的を指定します。  
   
     ```sql  
     EXEC sp_addlinkedserver   
@@ -208,10 +208,10 @@ Always On 可用性グループに含まれるデータベースで変更デー�
 |||||  
 |-|-|-|-|  
 ||**パブリッシャー**|**ディストリビューター**|**サブスクライバー (Subscriber)**|  
-|**トランザクション**|可<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|可|可| 
+|**トランザクション**|はい<br /><br /> 注:双方向の相互トランザクション レプリケーションのサポートは含まれません。|はい|はい| 
 |**P2P**|いいえ|いいえ|いいえ|  
-|**Merge**|可|いいえ|いいえ|  
-|**スナップショット**|可|いいえ|可|
+|**Merge**|はい|いいえ|いいえ|  
+|**スナップショット**|はい|いいえ|はい|
   
  **データベース ミラーリングでディストリビューター データベースを使用することはできません。  
   
@@ -252,7 +252,7 @@ Always On 可用性グループに含まれるデータベースで変更デー�
  [レプリケーション サブスクライバーと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 可用性グループ: 相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [変更の追跡について &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   

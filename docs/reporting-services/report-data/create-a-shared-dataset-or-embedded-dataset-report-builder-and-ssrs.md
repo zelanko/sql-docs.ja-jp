@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdb756a8afe170a75c8b4f2975ef4bffaa41d939
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1aeae63d9fdec1b7afb876364b2fc36714e72479
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573342"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500476"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
 埋め込みデータセットは、単一の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポートで使用されます。 レポート サーバーの共有データセットはモバイルとページ分割があるタイプの、複数のレポートで使用できます。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが必要です。  
@@ -58,7 +58,7 @@ ms.locfileid: "65573342"
   
 4.  クエリ デザイナーで、データセットに含めるフィールドを指定します。  
   
-5.  **[実行]** (**!**) をクリックしてクエリを実行します。  
+5.  **[実行]** ( **!** ) をクリックしてクエリを実行します。  
   
 6.  **レポート ビルダー** のボタンの **[保存]** または **[名前を付けて保存]** をクリックして、共有データセットをレポート サーバーに保存します。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "65573342"
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

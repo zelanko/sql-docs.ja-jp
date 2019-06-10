@@ -13,36 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59367240"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793623"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 可用性グループでレプリケーションを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのレプリケーションおよび AlwaysOn 可用性グループの構成には、7 つのステップが必要です。 各ステップの詳細については、以下のセクションで説明します。  
-  
-1.  [データベースのパブリケーションとサブスクリプションを構成します。](#step1)  
-  
-2.  [AlwaysOn 可用性グループを構成します。](#step2)  
-  
-3.  [セカンダリ レプリカのすべてのホストでレプリケーションが構成されていることを確認します。](#step3)  
-  
-4.  [セカンダリ レプリカのホストをレプリケーションのパブリッシャーとして構成します。](#step4)  
-  
-5.  [元のパブリッシャーを可用性グループ リスナー名にリダイレクトします。](#step5)  
-  
-6.  [検証ストアド プロシージャを実行して構成を確認します。](#step6)  
-  
-7.  [元のパブリッシャーをレプリケーション モニターに追加します。](#step7)  
-  
- ステップ 1. とステップ 2. の実行順序は逆にすることもできます。  
   
 ##  <a name="step1"></a> 1.データベースのパブリケーションとサブスクリプションを構成する  
  **ディストリビューターの構成**  
@@ -214,7 +198,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [AlwaysOn パブリケーション データベースのメンテナンス &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [レプリケーション、変更の追跡、変更データ キャプチャ、および Always On 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
+-   [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
 -   [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
@@ -230,7 +214,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Always On 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [AlwaysOn 可用性グループのデータベース ミラーリング エンドポイントの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -242,7 +226,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server のレプリケーション](../../../relational-databases/replication/sql-server-replication.md)  
   

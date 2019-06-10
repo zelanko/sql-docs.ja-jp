@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a516be313ddca5edd5d899ca05eeab6b1818b972
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175194"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499594"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
   ここでは、Reporting Services 構成マネージャーを使用してネイティブ モードのレポート サーバー インスタンスを構成する手順について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "66175194"
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Reporting Services の構成ツールを開始するための手順を説明します。  
   
- [サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  レポート サーバー サービス用のアカウントとパスワードの情報を指定する方法について説明します。  
   
  [レポート サーバーのサービス プリンシパル名 (SPN) の登録](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "66175194"
  [ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  レポート サーバー データベースを共有するための複数のレポート サーバーの構成手順を説明します。  
   
- [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Reporting Services の電子メール配信](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   
  電子メール配信用のレポート サーバーを構成する手順を説明します。  
   
  [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 28a2c9bd527fb4996730630a6121d205fbaebf04
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+manager: jroth
+ms.openlocfilehash: 210572e30dc1115fa52cfab4da293533a051d634
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429348"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767425"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "59429348"
  クライアントは、サーバーが使用する証明書の所有権を検証できる必要があります。 サーバー証明書に署名した証明機関の公開キー証明書をクライアントが持っている場合は、それ以上の構成は必要ありません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows には、多くの証明機関の公開キー証明書が含まれています。 サーバー証明書に署名した公的または私的な証明機関に対する公開キー証明書をクライアントが持っていない場合は、サーバー証明書に署名した証明機関の公開キー証明書をインストールする必要があります。  
   
 > [!NOTE]  
-> フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、test1.*\<your company>*.com および test2.*\<your company>*.com という 2 つのノードと、virtsql という仮想サーバーがあるクラスターがあるとします。この場合、virtsql.*\<your company>*.com の証明書を両方のノードにインストールする必要があります。 **[ForceEncryption]** オプションの値を **[はい]** に設定できます。
+> フェールオーバー クラスターで暗号化を使用する場合、フェールオーバー クラスター内のすべてのノードに対して、仮想サーバーの完全修飾 DNS 名を使用してサーバー証明書をインストールする必要があります。 たとえば、test1. *\<your company>* .com および test2. *\<your company>* .com という 2 つのノードと、virtsql という仮想サーバーがあるクラスターがあるとします。この場合、virtsql. *\<your company>* .com の証明書を両方のノードにインストールする必要があります。 **[ForceEncryption]** オプションの値を **[はい]** に設定できます。
 
 > [!NOTE]
 > Azure VM の SQL Server に対する Azure Search インデクサーの暗号化された接続を作成するときは、「 [Azure VM での Azure Search インデクサーから SQL Server への接続の構成](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)」をご覧ください。 
@@ -76,7 +76,7 @@ SQL Server で SSL 証明書を読み込むには、証明書が次の条件を�
   
 7. **[スナップインの追加と削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
-8. **[証明書]** スナップインで、 **[証明書]**、 **[個人]** の順に展開し、 **[証明書]** を右クリックします。次に **[すべてのタスク]** をポイントし、 **[インポート]** をクリックします。  
+8. **[証明書]** スナップインで、 **[証明書]** 、 **[個人]** の順に展開し、 **[証明書]** を右クリックします。次に **[すべてのタスク]** をポイントし、 **[インポート]** をクリックします。  
 
 9. インポートした証明書を右クリックし、 **[すべてのタスク]** をポイントして、 **[秘密キーの管理]** をクリックします。 **[セキュリティ]** ダイアログ ボックスで、SQL Server サービス アカウントが使用するユーザー アカウントの読み取りアクセス許可を追加します。  
   
@@ -89,15 +89,15 @@ SQL Server で SSL 証明書を読み込むには、証明書が次の条件を�
 
 ## <a name="to-export-the-server-certificate"></a>サーバー証明書をエクスポートするには  
   
-1. **[証明書]** スナップインで、 **[証明書]** / **[個人]** フォルダーで証明書を探し、 **[証明書]** を右クリックします。次に **[すべてのタスク]** をポイントし、 **[エクスポート]** をクリックします。  
+1. **[証明書]** スナップインで、 **[証明書]**  /  **[個人]** フォルダーで証明書を探し、 **[証明書]** を右クリックします。次に **[すべてのタスク]** をポイントし、 **[エクスポート]** をクリックします。  
   
 2. **証明書のエクスポート ウィザード**を実行して、証明書ファイルを使いやすい場所に格納します。  
   
 ## <a name="to-configure-the-server-to-force-encrypted-connections"></a>暗号化された接続を強制するサーバーを構成するには  
   
-1. **SQL Server 構成マネージャー**で、**[SQL Server ネットワークの構成]** を展開し、**[**_\<server instance> のプロトコル]_ を右クリックします。次に **[プロパティ]** を選びます。  
+1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 **[** _\<server instance> のプロトコル]_ を右クリックします。次に **[プロパティ]** を選びます。  
   
-2. **[**_\<instance name> のプロトコル]_ の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、**[証明書]** ボックスのドロップダウンから必要な証明書を選択し、**[OK]** をクリックします。  
+2. **[** _\<instance name> のプロトコル]_ の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、 **[証明書]** ボックスのドロップダウンから必要な証明書を選択し、 **[OK]** をクリックします。  
   
 3. **[フラグ]** タブの **[ForceEncryption]** ボックスの一覧の **[はい]** をクリックし、 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   

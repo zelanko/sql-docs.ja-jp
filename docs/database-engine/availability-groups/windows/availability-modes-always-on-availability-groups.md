@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+manager: jroth
+ms.openlocfilehash: 6e25840a2dfe52bb6d6c9e1584e12aceaa862f0a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53206371"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781055"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性モードの違い
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +55,8 @@ ms.locfileid: "53206371"
   
 |現在のプライマリ レプリカ|自動フェールオーバー ターゲット|同期コミット モードの動作の対象|非同期コミット モードの動作の対象|自動フェールオーバー|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 と 03|04|可|  
-|02|01|01 と 03|04|可|  
+|01|02|02 と 03|04|はい|  
+|02|01|01 と 03|04|はい|  
 |03||01 と 02|04|いいえ|  
 |04|||01、02、03|いいえ|  
   

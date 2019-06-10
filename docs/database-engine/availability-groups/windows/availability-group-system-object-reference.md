@@ -8,14 +8,14 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: 805e2944d1485ed3242185aa1fcfbbef4bdcdb98
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 8eff161c24275ee86938bf5d57bbe39473ac19cc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533404"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800159"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>AlwaysOn 可用性グループ システム オブジェクト リファレンス
 
@@ -25,7 +25,7 @@ ms.locfileid: "59533404"
 
 ## <a name="system-catalog-views"></a>システム カタログ ビュー
 
-| システム カタログ ビュー | 説明|
+| システム カタログ ビュー | [説明]|
 | :------ | :----------------------------- |
 | [可用性データベースの監視](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)   | Windows Server フェールオーバー クラスタリング (WSFC) クラスター内にある任意の AlwaysOn 可用性グループの可用性レプリカをホストしている SQL Server インスタンス上の可用性データベースごとに 1 行のデータを格納します。ローカル コピー データベースが可用性グループに参加しているかどうかは問いません。 |
 | [sys.availability_group_listener_ip_addresses](../../../relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql.md)  | Windows Server フェールオーバー クラスタリング (WSFC) クラスター内の任意の AlwaysOn 可用性グループ リスナーに関連付けられている IP アドレスごとに 1 行のデータを返します。 |
@@ -39,7 +39,7 @@ ms.locfileid: "59533404"
 ## <a name="system-dynamic-management-views"></a>システム動的管理ビュー
 
 
-| システム動的管理ビュー | 説明|
+| システム動的管理ビュー | [説明]|
 | :------ | :----------------------------- |
 | [sys.dm_hadr_auto_page_repair](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql.md)   | サーバー インスタンスで任意の可用性グループに対してホストされている可用性レプリカの可用性データベースに対するページの自動修復の試行ごとに 1 行のデータを返します。  |
 | [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)    | SQL Server のローカル インスタンスで可用性レプリカを保持する AlwaysOn 可用性グループごとに 1 行のデータを返します。 各行には、特定の可用性グループの正常性を定義する状態が表示されます。 |
@@ -59,7 +59,7 @@ ms.locfileid: "59533404"
 ## <a name="system-functions"></a>システム関数
 
 
-| システム関数 | 説明|
+| システム関数 | [説明]|
 | :------ | :----------------------------- |
 | [sys.fn_hadr_is_primary_replica](../../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  | 現在のレプリカがプライマリ レプリカであるかどうかを決定するために使用されます。 |
 | [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)    | 現在のレプリカが推奨されるバックアップ レプリカであるかどうかを決定するために使用されます。 |

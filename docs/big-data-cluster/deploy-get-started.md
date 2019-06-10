@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 手順と SQL Server 2019 ビッグ データ クラスター (プレビュー) を展開するためのリソースについて説明します。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743981"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797907"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターを概要します。
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 1655124738d88ecfd154d934bceef9c1b0236dcf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257187"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795116"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>データベース ミラーリング構成のトラブルシューティング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54257187"
 |[ネットワーク アクセス](#NetworkAccess)|各サーバー インスタンスが他のサーバー インスタンスのポートに TCP 経由でアクセスできるという要件について説明します。|  
 |[ミラー データベースの準備](#MirrorDbPrep)|ミラーリングを開始できるようにミラー データベースを準備する際の要件について概要を説明します。|  
 |[失敗したファイル作成操作](#FailedCreateFileOp)|失敗したファイル作成操作の対処方法について説明します。|  
-|[Transact-SQL を使用したミラーリングの開始](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** ステートメントを実行する際に必要な順序について説明します。|  
+|[Transact-SQL を使用したミラーリングの開始](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** ステートメントを実行する際に必要な順序について説明します。|  
 |[複数データベースにまたがるトランザクション](#CrossDbTxns)|自動フェールオーバーにより、状態が不明なトランザクションが自動的に解決されることがあります。ただし、この解決は不適切な場合があります。 このため、データベース ミラーリングでは複数データベースにまたがるトランザクションをサポートしていません。|  
   
 ##  <a name="Accounts"></a> Accounts  
@@ -144,7 +144,7 @@ ms.locfileid: "54257187"
  詳細については、「[データベース ミラーリングの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)」、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)」、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)」、「[データベース ミラーリング エンドポイントでの証明書の使用&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)」のいずれかを参照してください。  
   
 ##  <a name="StartDbm"></a> Transact-SQL を使用したミラーリングの開始  
- ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** ステートメントを実行する際は、順序が非常に重要です。  
+ ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** ステートメントを実行する際は、順序が非常に重要です。  
   
 1.  最初のステートメントは、ミラー サーバーで実行する必要があります。 このステートメントの実行時に、ミラー サーバーでは他のサーバー インスタンスへの接続は試行されません。 ミラー サーバーは自身のデータベースに対し、プリンシパル サーバーからそのミラー サーバーへの接続が行われるまで待機するように指示します。  
   

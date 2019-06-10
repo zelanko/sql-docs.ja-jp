@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e64c26d781bc7200540f6482185cc71e6214c64b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206271"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783705"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカに読み取り専用の負荷を移す
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ ms.locfileid: "53206271"
 -   サフィックス _readonly_database_statistic は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって生成される統計用に予約されています。 このサフィックスは、プライマリ データベースで統計を作成するときには使用できません。 詳細については、「 [Statistics](../../../relational-databases/statistics/statistics.md)」を参照してください。  
   
 ##  <a name="bkmk_AccessInMemTables"></a> セカンダリ レプリカ上でのメモリ最適化テーブルへのアクセス  
- セカンダリ レプリカ上でメモリ最適化テーブルとともに使用できるトランザクション分離レベルは、プライマリ レプリカでのレベルと同じです。 セッション レベルの分離レベルを READ COMMITTED に、またデータベース レベル オプション MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を ON に設定することをお勧めします。 例 :  
+ セカンダリ レプリカ上でメモリ最適化テーブルとともに使用できるトランザクション分離レベルは、プライマリ レプリカでのレベルと同じです。 セッション レベルの分離レベルを READ COMMITTED に、またデータベース レベル オプション MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT を ON に設定することをお勧めします。 例:  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
@@ -217,9 +217,9 @@ GO
     |セカンダリ レプリカは読み取り可能かどうか|スナップショット分離または RCSI レベルは有効かどうか|プライマリ データベース|セカンダリ データベース|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
     |いいえ|いいえ|行のバージョンまたは 14 バイトのオーバーヘッドなし|行のバージョンまたは 14 バイトのオーバーヘッドなし|  
-    |いいえ|可|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンはないが、14 バイトのオーバーヘッドあり|  
-    |可|いいえ|行のバージョンはないが、14 バイトのオーバーヘッドあり|行のバージョンおよび 14 バイトのオーバーヘッド|  
-    |可|可|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンおよび 14 バイトのオーバーヘッド|  
+    |いいえ|はい|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンはないが、14 バイトのオーバーヘッドあり|  
+    |はい|いいえ|行のバージョンはないが、14 バイトのオーバーヘッドあり|行のバージョンおよび 14 バイトのオーバーヘッド|  
+    |はい|はい|行のバージョンおよび 14 バイトのオーバーヘッド|行のバージョンおよび 14 バイトのオーバーヘッド|  
   
 ##  <a name="bkmk_RelatedTasks"></a> 関連タスク  
   

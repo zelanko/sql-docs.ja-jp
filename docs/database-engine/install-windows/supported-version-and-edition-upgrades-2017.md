@@ -15,13 +15,13 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 0a2942ac69ba5ed6d381c6377b08b551be94f589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 879d98b00c4728d9a93ea34e08e2fd98964f4e13
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711570"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794794"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 のサポートされているバージョンとエディションのアップグレード
 
@@ -121,7 +121,7 @@ ms.locfileid: "47711570"
   
 -   [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] キューブをバックアップし、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] で復元します。  
   
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のデータベース互換性レベルの有効な値は 100、110、120、130、および 140 です)。[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のデータベース互換性レベルの有効な値は 100、110、120、130、および 140 です)。[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
   
 上記の一覧で説明されていないどのシナリオもサポートされていませんが、以下のシナリオに限定されるものではありません。  
   

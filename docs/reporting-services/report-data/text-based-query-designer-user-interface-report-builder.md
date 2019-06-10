@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d646a58c09fcc580fcc1f95acfd251bd17f4f290
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 318f1bae413dad632f5cd93ebefde0cc7cfd4d29
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574955"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500119"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   デザイン時に、データ ソースでサポートされているクエリ言語でクエリを指定し、クエリを実行し、結果を表示するには、テキスト ベースのクエリ デザイナーを使用します。 複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、カスタム データ処理拡張機能のクエリまたはコマンド構文、および式としてのクエリを指定できます。 テキスト ベースのクエリ デザイナーはクエリを前処理せず、あらゆる種類のクエリ構文に対応できるため、これは多くの種類のデータ ソースで既定のクエリ デザイナー ツールになっています。  
@@ -39,7 +39,7 @@ ms.locfileid: "65574955"
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 すべての種類のデータ ソースでグラフィカル クエリ デザイナーがサポートされているとは限りません。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。|  
 |![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、その結果セットを結果ペインに表示します。|  
-|**[コマンドの種類]**|**[Text]**、 **[StoredProcedure]**、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。 サポートされるコマンドの種類は、データ ソースの種類によって異なります。 たとえば、 **[TableDirect]** がサポートされるのは、OLE DB と ODBC だけです。<br /><br /> 注: ストアド プロシージャから複数の結果セットが返された場合、最初の結果セットのみを使ってデータセットが設定されます。|  
+|**[コマンドの種類]**|**[Text]** 、 **[StoredProcedure]** 、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。 サポートされるコマンドの種類は、データ ソースの種類によって異なります。 たとえば、 **[TableDirect]** がサポートされるのは、OLE DB と ODBC だけです。<br /><br /> 注: ストアド プロシージャから複数の結果セットが返された場合、最初の結果セットのみを使ってデータセットが設定されます。|  
   
 ### <a name="command-type-text"></a>コマンドの種類 (Text)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データセットを作成するとき、既定ではリレーショナル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。  
@@ -83,7 +83,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- **[実行]** (**!**) ボタンをクリックします。 クエリ パラメーターの入力画面が表示されたら、次の表にある値を入力します。  
+ **[実行]** ( **!** ) ボタンをクリックします。 クエリ パラメーターの入力画面が表示されたら、次の表にある値を入力します。  
   
 |||  
 |-|-|  
@@ -104,6 +104,6 @@ uspGetWhereUsedProductID
   
 ## <a name="see-also"></a>参照  
  [リレーショナル クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
- [クエリ デザイナー &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [クエリ デザイン ツール &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

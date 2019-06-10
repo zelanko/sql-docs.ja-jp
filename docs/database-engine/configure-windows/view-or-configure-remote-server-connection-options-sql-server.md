@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58d6ca34183b63054b851cf3ef15ca32f7ed7a80
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: fd6f49f4e3c27491382723c3fdcfad995e379fbc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255559"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775140"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>リモート サーバー接続オプションの表示または構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "54255559"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[リモート サーバー接続オプションを構成した後](#FollowUp)  
+-   **補足情報:** [リモート サーバー接続オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54255559"
   
 1.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[サーバーのプロパティ - \<**_server_name_**>]** ダイアログ ボックスで、**[接続]** をクリックします。  
+2.  **[サーバーのプロパティ - \<** _server_name_ **>]** ダイアログ ボックスで、 **[接続]** をクリックします。  
   
 3.  **[接続]** ページで、 **[リモート サーバー接続]** の設定を確認し、必要に応じて変更します。  
   

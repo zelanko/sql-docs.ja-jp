@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a447f804474cc845b58c87832e965223d6cd873d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573114"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500448"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>「クエリ」 (「データセットのプロパティ」 ダイアログ ボックス) (レポート ビルダー)
  
@@ -61,11 +61,11 @@ ms.locfileid: "65573114"
  クエリがタイムアウトするまでの期間を秒数で入力します。既定値は 30 秒です。 **[タイムアウト]** には、値を指定しないか、0 より大きい値を指定する必要があります。 空の場合は、クエリはタイムアウトしません。  
   
  **[フィールドの更新]**  
- クエリ コマンドを実行して、「**[フィールド] ([データセットのプロパティ] ダイアログ ボックス)**」ページにあるフィールドの一覧を更新します。  
+ クエリ コマンドを実行して、「 **[フィールド] ([データセットのプロパティ] ダイアログ ボックス)** 」ページにあるフィールドの一覧を更新します。  
   
 ## <a name="see-also"></a>参照  
 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
 [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
-[クエリ デザイナー &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+[クエリ デザイン ツール &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

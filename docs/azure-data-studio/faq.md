@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 0b73dabb77ae04b915efa50dd8e0a8453b3ab3be
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105080"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800748"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
@@ -116,7 +116,7 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |[結果をファイルに出力]||はい|
 |[結果をテキストで表示]||はい|
 |空間ビューアー||はい|
-|sqlcmd||はい|
+|sqlcmd||[はい]|
 |T-SQL デバッガー||はい|
 
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート
@@ -146,7 +146,7 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |Always On||はい|
 |Always Encrypted||はい|
 |データのコピー ウィザード||はい|
-|チューニング アドバイザーのデータ||はい|
+|チューニング アドバイザーのデータ||[はい]|
 |データベース ダイアグラム||はい|
 |エラー ログの表示||はい|
 |メンテナンス プラン||はい|

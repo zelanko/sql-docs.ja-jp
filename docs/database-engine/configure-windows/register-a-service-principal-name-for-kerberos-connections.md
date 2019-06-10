@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6d10f1d16c31ad3af67e193a8bc684be0c66c1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b36c25969ac053bad4e626b110c314c28dff6b08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395483"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772160"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 接続用のサービス プリンシパル名の登録
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **[既定のインスタンス]**  
   
--   **MSSQLSvc/\<FQDN>:\<port>** | **MSSQLSvc/\<FQDN>**  
+-   **MSSQLSvc/\<FQDN>:\<port>**  | **MSSQLSvc/\<FQDN>**  
   
     -   **MSSQLSvc** は、登録されるサービスです。  
   
@@ -106,9 +106,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > TCP ポートが SPN に含まれている TCP/IP 接続の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Kerberos 認証を使用して接続するユーザー用に TCP プロトコルを有効にする必要があります。 
 
 ##  <a name="Auto"></a> SPN の自動登録  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスが開始すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに対する SPN の登録を試みます。 インスタンスが停止すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は SPN の登録解除を試みます。 TCP/IP 接続の場合、SPN は *MSSQLSvc/\<FQDN>*:*\<tcpport>* という形式で登録されます。名前付きインスタンスと既定のインスタンスは、どちらも *MSSQLSvc* として登録され、インスタンスの区別は *\<tcpport>* の値で行われます。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスが開始すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに対する SPN の登録を試みます。 インスタンスが停止すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は SPN の登録解除を試みます。 TCP/IP 接続の場合、SPN は *MSSQLSvc/\<FQDN>* : *\<tcpport>* という形式で登録されます。名前付きインスタンスと既定のインスタンスは、どちらも *MSSQLSvc* として登録され、インスタンスの区別は *\<tcpport>* の値で行われます。  
   
- Kerberos をサポートするその他の接続の場合、名前付きインスタンスの SPN は *MSSQLSvc/\<FQDN>*/*\<instancename>* という形式で登録されます。 既定のインスタンスを登録する場合の形式は、*MSSQLSvc/\<FQDN>* です。  
+ Kerberos をサポートするその他の接続の場合、名前付きインスタンスの SPN は *MSSQLSvc/\<FQDN>* / *\<instancename>* という形式で登録されます。 既定のインスタンスを登録する場合の形式は、*MSSQLSvc/\<FQDN>* です。  
   
  SPN の登録または登録解除に必要な権限がサービス アカウントにない場合は、これらのアクションを手動で実行することが必要になる場合があります。  
   
@@ -139,7 +139,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname
 ##  <a name="Client"></a> クライアント接続  
  クライアント ドライバーでは、ユーザー指定の SPN がサポートされています。 ただし、SPN を指定しない場合は、クライアント接続の種類に基づいて SPN が自動的に生成されます。 TCP 接続の場合は、名前付きインスタンスと既定のインスタンスの両方で、 *MSSQLSvc*/*FQDN*:[*port*] という形式の SPN が使用されます。  
   
-名前付きパイプおよび共有メモリ接続の場合は、名前付きインスタンスでは *MSSQLSvc/\<FQDN>:\<instancename>*、既定のインスタンスでは *MSSQLSvc/\<FQDN>* という形式の SPN が使用されます。  
+名前付きパイプおよび共有メモリ接続の場合は、名前付きインスタンスでは *MSSQLSvc/\<FQDN>:\<instancename>* 、既定のインスタンスでは *MSSQLSvc/\<FQDN>* という形式の SPN が使用されます。  
   
  **SPN としてのサービス アカウントの使用**  
   

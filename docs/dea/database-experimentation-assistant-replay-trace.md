@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015118"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794446"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>データベース実験アシスタントでのトレースを再生します。
 
@@ -65,7 +65,7 @@ DEA では、メニュー アイコンを選択します。 展開されたメ�
 ### <a name="replay-a-trace"></a>トレースを再生します。
 
 1.  **トレース ファイル名**:トレース ファイルの名前を入力します。
-1.  **最大ファイル サイズ (MB)**:トレース ファイルのロール オーバー サイズの値を入力します。 既定値は、200 MB です。 カスタム値を入力することができます。
+1.  **最大ファイル サイズ (MB)** :トレース ファイルのロール オーバー サイズの値を入力します。 既定値は、200 MB です。 カスタム値を入力することができます。
 1.  **再生のトレース出力を格納するパス**:出力の .trc ファイルのパスを入力します。
 1.  **SQL Server インスタンス名**:トレースを再生する SQL Server インスタンスの名前を入力します。
 1.  **[スタート]** を選択します。

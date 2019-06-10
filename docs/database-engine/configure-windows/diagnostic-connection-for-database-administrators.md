@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7cdcffb40c1c0e15a1be56a4484edade6b5f1463
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+manager: jroth
+ms.openlocfilehash: 7abd7c83f5f6259ad9415f1e790088f98567f06c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955983"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767448"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "56955983"
   
  DAC を使用して接続できるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin ロールのメンバーのみです。  
   
- DAC は、 **sqlcmd** コマンド プロンプト ユーティリティで特殊な管理者スイッチ (**-A**) を指定することによって使用できます。 **sqlcmd** を使用する方法については、「[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。 また、**sqlcmd -S admin:<*instance_name*>** という形式で、インスタンス名に **admin:** というプレフィックスを指定して接続することもできます。 また、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターから **admin:\<*instance_name*>** に接続して DAC を開始することもできます。  
+ DAC は、 **sqlcmd** コマンド プロンプト ユーティリティで特殊な管理者スイッチ ( **-A**) を指定することによって使用できます。 **sqlcmd** を使用する方法については、「[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。 また、**sqlcmd -S admin:<*instance_name*>** という形式で、インスタンス名に **admin:** というプレフィックスを指定して接続することもできます。 また、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターから **admin:\<*instance_name*>** に接続して DAC を開始することもできます。  
   
 ## <a name="restrictions"></a>制限  
  DAC の唯一の目的は、ごくまれな状況でサーバーの問題を診断することであるので、この接続には次のようないくつかの制限があります。  
@@ -76,7 +76,7 @@ ms.locfileid: "56955983"
   
 -   [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)、[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)、[DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md)、[DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) などの基本的な DBCC コマンド。 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)、[DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) などのリソースを集中的に消費するコマンドは実行しないでください。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>* コマンド。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の状態によっては、KILL コマンドは必ずしも成功しません。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動するしか方法がありません。 次に一般的なガイドラインをいくつか示します。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* コマンド。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の状態によっては、KILL コマンドは必ずしも成功しません。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動するしか方法がありません。 次に一般的なガイドラインをいくつか示します。  
   
     -   `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`というクエリを実行し、SPID が実際に強制終了されたかどうかを確認します。 行が返されなかった場合は、セッションが強制終了されたことを示します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "56955983"
   
  DAC ポートは、起動中に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって動的に割り当てられます。 既定のインスタンスに接続する場合、DAC では SQL Server Browser サービスへの SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) 要求が使用されません。 まず、TCP ポート 1434 経由で接続が試行されます。 接続が失敗した場合、ポートを取得するために SSRP 呼び出しが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が SSRP 要求をリッスンしていない場合は、接続要求によってエラーが返されます。 DAC がリッスンしているポート番号を確認するには、エラー ログを参照します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート管理接続を受け入れるように構成されている場合、次のように DAC を明示的なポート番号で開始する必要があります。  
   
- **sqlcmd -S tcp:**_\<server>,\<port>_  
+ **sqlcmd -S tcp:** _\<server>,\<port>_  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログには DAC のポート番号が一覧されます。既定のポート番号は 1434 です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカルの DAC 接続のみを受け入れるように構成されている場合は、次のコマンドを実行し、ループバック アダプターを使用して接続します。  
   

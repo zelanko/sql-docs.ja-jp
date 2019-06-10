@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 996bf79c296ff11c708c687f5a084d73b0bcde95
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63152582"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794333"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Data Migration Assistant を Power BI で作成された統合評価レポートを分析します。
 
@@ -137,7 +137,7 @@ DTC データベースでフィルター処理など、**読み取り専用デ�
 
 ![読み取り専用データベースにすることはできませんアップグレードの問題](../dma/media/ReadOnlyDatabases.png)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Data Migration Assistant の概要](../dma/dma-overview.md)
 
