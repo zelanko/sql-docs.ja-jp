@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+manager: jroth
+ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429338"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767716"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "59429338"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して max worker threads オプションを構成するには:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59429338"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[max worker threads オプションを構成した後](#FollowUp)  
+-   **補足情報:** [max worker threads オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -73,8 +73,8 @@ ms.locfileid: "59429338"
     |CPU の数|32 ビット コンピューター|64 ビット コンピューター|  
     |------------|------------|------------| 
     |\<= 4 個のプロセッサ|256|512|
-    |4 個を超えるプロセッサと 64 個以下のプロセッサ|256 + ((論理 CPU - 4) * 8)|512 + ((論理 CPU - 4) * 16)|
-    |64 個を超えるプロセッサ|256 + ((論理 CPU - 4) * 32)|512 + ((論理 CPU - 4) * 32)|
+    |\> 4 個を超えるプロセッサと \< 64 個以下のプロセッサ|256 + ((論理 CPU - 4) * 8)|512 + ((論理 CPU - 4) * 16)|
+    |\> 64 個を超えるプロセッサ|256 + ((論理 CPU - 4) * 32)|512 + ((論理 CPU - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、32 ビットのオペレーティング システムにインストールすることができません。 32 ビット コンピューターの値は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前のバージョンを実行しているお客様への参考として一覧表示されています。 32 ビット コンピューター上で動作する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場合、ワーカー スレッドの最大数として 1,024 をお勧めします。  
@@ -128,7 +128,7 @@ ms.locfileid: "59429338"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `max worker threads` オプションを `900`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `max worker threads` オプションを `900`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
