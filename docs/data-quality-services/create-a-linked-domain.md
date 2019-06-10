@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dcf52d8c69c59ca7318a2a20ce82ab2a8217c9c4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: a7ad04719883f6674d3656d56ce8df6519c0d29e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480428"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761842"
 ---
 # <a name="create-a-linked-domain"></a>リンク ドメインの作成
 
@@ -84,7 +84,7 @@ ms.locfileid: "65480428"
   
 -   リンク ドメインの名前と説明を変更することができます。  
   
--   ドメインの **[データ型]**、 **[先頭の値を使用]**、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。  
+-   ドメインの **[データ型]** 、 **[先頭の値を使用]** 、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../data-quality-services/create-a-domain.md)」を参照してください。  
   
 -   [ドメイン管理] ページの **[参照データ]** タブ、 **[ドメイン ルール]** タブ、 **[ドメイン値]** タブ、および **[用語ベースのリレーション]** タブの設定は、リンク ドメインとリンク先のドメインのどちらでも変更できます。一方を変更すると、もう一方に反映されます。  
   
