@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: このチュートリアルを読み込む方法、実行、SQL Server 2019 ビッグ データ クラスター (プレビュー) のサンプルの Spark notebook を示します。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 91daed271ca8e6a8eb04928a0806b287163143a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994143"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770871"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>チュートリアル:ビッグ データの SQL Server クラスターでのサンプルの notebook を実行します。
 

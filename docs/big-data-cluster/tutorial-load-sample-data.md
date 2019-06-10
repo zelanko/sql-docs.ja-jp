@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: このチュートリアルでは、SQL Server のビッグ データ クラスターにサンプル データを読み込む方法を示します。 サンプル データには、SQL Server のマスター インスタンス内のリレーショナル データが含まれます。 記憶域プールでの HDFS データも含まれています。 このデータは、このセクションでは、他のチュートリアルをサポートします。
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743837"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770824"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server のビッグ データ クラスターにサンプル データを読み込む
 
