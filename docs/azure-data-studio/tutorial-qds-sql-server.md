@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089683"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797933"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>チュートリアル:追加、 *5 つの最も低速なクエリ*データベース ダッシュ ボードにサンプルのウィジェット
 
@@ -129,7 +129,7 @@ ms.locfileid: "65089683"
 
 ## <a name="view-insight-details-for-more-information"></a>詳細については把握詳細の表示
 
-1. 洞察のウィジェットの追加情報を表示する、省略記号ボタンをクリックします (**...**) クリックし、右上にある**詳細の表示**します。
+1. 洞察のウィジェットの追加情報を表示する、省略記号ボタンをクリックします ( **...** ) クリックし、右上にある**詳細の表示**します。
 2. 項目の詳細を表示するには、任意の項目を選択します。**グラフ データ**一覧。
 
    ![インサイトの詳細 ダイアログ](./media/tutorial-qds-sql-server/insight-details-dialog.png)

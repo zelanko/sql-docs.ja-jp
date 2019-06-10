@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54672f4c5ccda6951d4c9496032a00896e790a8d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 731181af3d9e5bda7d73f5b56179069e85353857
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487815"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801408"
 ---
 # <a name="set-domain-properties"></a>ドメインのプロパティの設定
 
@@ -53,7 +53,7 @@ ms.locfileid: "65487815"
  ドメインを作成した後に、ドメインの名前または説明を変更できます。 ドメイン名は、ナレッジ ベースに対して一意である必要があります。 説明は 256 文字まで指定できます。  
   
 ###  <a name="Type"></a> データ型  
- ドメインを作成するときに、ドメイン内の値は、次のデータ型のいずれかを選択します。**[String]** (既定値)、**[Date]**、**[Integer]**、**[Decimal]** のいずれか 1 つを選択します。 ドメインを作成した後は、データ型を表示することはできますが、変更することはできません。 ドメイン用に選択したデータ型によって、ドメインにマップできるソース データの型が定義されます。 DQS の 4 つのドメイン データ型のそれぞれでサポートされているデータ型については、「[DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」をご覧ください。  
+ ドメインを作成するときに、ドメイン内の値は、次のデータ型のいずれかを選択します。 **[String]** (既定値)、 **[Date]** 、 **[Integer]** 、 **[Decimal]** のいずれか 1 つを選択します。 ドメインを作成した後は、データ型を表示することはできますが、変更することはできません。 ドメイン用に選択したデータ型によって、ドメインにマップできるソース データの型が定義されます。 DQS の 4 つのドメイン データ型のそれぞれでサポートされているデータ型については、「[DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)」をご覧ください。  
   
 ###  <a name="Leading"></a> [先頭の値を使用]  
  シノニムの値ではなく、シノニムのグループの先頭の値が出力されることを指定する場合は、このチェック ボックスをオンにします。 各シノニムの値が正しいフォームまたは修正されたフォームで出力され、そのグループの先頭の値で置き換えられないことを指定する場合は、 **[先頭の値を使用]** をオフにします。  
