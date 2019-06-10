@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6834e3dd223f8b27a8c038e58f0e4121a670b9c3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f709a2a58b6dd6f18c992a79c94ad63bdd8f0ef6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487426"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776466"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
 
@@ -85,7 +85,7 @@ ms.locfileid: "65487426"
   
     -   DQInitDQS_MAIN ストアド プロシージャがマスター データベースに作成されます。  
   
-    -   DQS_install.log ファイルは通常 C:\Program Files\Microsoft SQL Server\MSSQL13.*<instance_name>* \MSSQL\Log フォルダーに作成されます。 このファイルには、DQSInstaller.exe ファイルの実行時に行われた操作に関する情報が含まれます。  
+    -   DQS_install.log ファイルは通常 C:\Program Files\Microsoft SQL Server\MSSQL13. *<instance_name>* \MSSQL\Log フォルダーに作成されます。 このファイルには、DQSInstaller.exe ファイルの実行時に行われた操作に関する情報が含まれます。  
   
     -   マスター データ サービス データベースが [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]と同じ SQL Server インスタンス上に存在する場合は、マスター データ サービス ログインにマップされたユーザーが作成され、DQS_MAIN データベースに対する dqs_administrator ロールが付与されます。  
   
