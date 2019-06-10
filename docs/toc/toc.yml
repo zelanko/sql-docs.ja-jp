@@ -8189,16 +8189,20 @@
               href: ../azure-data-studio/sql-server-2019-extension.md
             - name: SQL Server エージェント (プレビュー)
               href: ../azure-data-studio/sql-server-agent-extension.md
+            - name: SQL Server 中央管理サーバーの拡張機能 (プレビュー)
+              href: ../azure-data-studio/sql-server-cms-extension.md
             - name: SQL Server dacpac の拡張機能 (プレビュー)
               href: ../azure-data-studio/sql-server-dacpac-extension.md
             - name: SQL Server インポート (プレビュー)
               href: ../azure-data-studio/sql-server-import-extension.md
             - name: SQL Server Profiler (プレビュー)
               href: ../azure-data-studio/sql-server-profiler-extension.md
-            - name: SandDance の拡張機能 (プレビュー)
-              href: ../azure-data-studio/sanddance-extension.md
+            - name: スキーマ比較の拡張機能 (プレビュー)
+              href: ../azure-data-studio/schema-compare-extension.md
             - name: PowerShell の拡張機能
               href: ../azure-data-studio/powershell-extension.md
+            - name: SandDance の拡張機能 (プレビュー)
+              href: ../azure-data-studio/sanddance-extension.md
         - name: 拡張機能のオーサリング
           items:
             - name: 拡張性の概要
@@ -9367,8 +9371,6 @@
               href: ../powershell/sql-server-powershell.md
             - name: SQL Server 管理オブジェクト (SMO)
               href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-            - name: Transact-SQL リファレンス (データベース エンジン)
-              href: ../t-sql/language-reference.md
             - name: SSMS 環境
               items:
                 - name: SSMS 環境
@@ -15006,7 +15008,7 @@
           href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
         - name: systranschemas (T-SQL)
           href: ../relational-databases/system-views/systranschemas-transact-sql.md
-    - name: Transact-SQL (T-SQL)
+    - name: Transact-SQL (T-SQL) リファレンス
       displayName: tsql
       href: ../t-sql/language-reference.md
       items:
