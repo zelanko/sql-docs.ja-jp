@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 820ebc7e2bd79d0c321e327a2e5713151f3e24f3
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527924"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822462"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行中のローカル サーバーに対してリモート ストアド プロシージャを実行する場合に使用される、ローカル ログインにマップされているリモート ログインを削除します。  
@@ -37,7 +39,6 @@ ms.locfileid: "58527924"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_dropremotelogin [ @remoteserver = ] 'remoteserver'   
      [ , [ @loginame = ] 'login' ]   
      [ , [ @remotename = ] 'remote_name' ]  
@@ -70,21 +71,21 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. リモート サーバーのリモート ログインをすべて削除します。  
  次の例は、リモート サーバー エントリを削除します。 `ACCOUNTS`、し、そのため、ローカル サーバー上のログインとリモート サーバー上のリモート ログイン マッピングをすべて削除します。  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
 ### <a name="b-dropping-a-login-mapping"></a>B. ログインのマッピングを削除します。  
  次の例では、リモート サーバー `ACCOUNTS` からのリモート ログインとローカル ログイン `Albert` をマップしているエントリを削除します。  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
 ### <a name="c-dropping-a-remote-user"></a>C. リモート ユーザーを削除  
  次の例では、リモート ログインのログインを削除する`Chris`、リモート サーバーで`ACCOUNTS`ローカル ログインにマップされている`salesmgr`します。  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
