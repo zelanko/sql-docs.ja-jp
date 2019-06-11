@@ -84,13 +84,13 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+manager: jroth
+ms.openlocfilehash: 8c8dd90ae08cae3f62be07443af5bdae68cfee2b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993700"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794962"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -213,7 +213,7 @@ ms.locfileid: "65993700"
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **省略可**|エンジン サービス アカウントのパスワードを指定します。|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **省略可**|PolyBase エンジン サービスのスタートアップ モードを指定します (Automatic (既定)、Disabled、Manual)。|  
 |PolyBase|/PBPORTRANGE<br /><br /> **省略可**|PolyBase サービスのポート範囲 (6 ポート以上) を指定します。 例:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **省略可**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 サポートされる値:**True**、**False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **省略可**|PolyBase スケールアウト計算グループの一部として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンスを使用するかどうかを指定します。 ヘッド ノードを含む PolyBase スケール アウト計算グループを構成する場合は、このオプションを使用します。 サポートされる値:**True**、**False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/PID<br /><br /> **省略可**|SQL Server のエディション用のプロダクト キーを指定します。 このパラメーターが指定されていない場合、Evaluation が使用されます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/Q または /QUIET<br /><br /> **省略可**|セットアップが、ユーザー インターフェイスなしで、非表示モードで実行されるように指定します。 このパラメーターは、自動インストールに使用されます。 /Q パラメーターによって /QS パラメーターの入力がオーバーライドされます。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/QS または /QUIETSIMPLE <br /><br /> **省略可**|セットアップが UI を使用して実行され、UI を使用して進捗状況が表示されるように指定します。さらに、セットアップで入力ができないように、またはエラー メッセージが表示されないように指定します。|  
@@ -276,7 +276,7 @@ ms.locfileid: "65993700"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスの開始アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **省略可**|[の](#Accounts) スタートアップ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]モードを指定します。|  
 |Python/Machine Learning Services (データベース内)|MPYCACHEDIRECTORY|将来の使用のために予約されています。 インターネットに接続されていないコンピューター上にインストール用の Python .CAB ファイルを格納するには %TEMP% を使用します。 |  
-|R/Machine Learning Services (データベース内)|MRCACHEDIRECTORY|このパラメーターを使用して、SQL Server 2017 Machine Learning Services または Machine Learning Server (スタンドアロン) で Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (スタンドアロン)、または R の機能をサポートするためのキャッシュ ディレクトリを指定します。 通常、この設定を使用するのは、[インターネット アクセスを使用していないコンピューターでコマンド ラインから](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access) R コンポーネントをインストールする場合です。|  
+|R/Machine Learning Services (データベース内)|MRCACHEDIRECTORY|このパラメーターを使用して、SQL Server 2017 Machine Learning Services または Machine Learning Server (スタンドアロン) で Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (スタンドアロン)、または R の機能をサポートするためのキャッシュ ディレクトリを指定します。 通常、この設定を使用するのは、[インターネット アクセスを使用していないコンピューターでコマンド ラインから](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access) R コンポーネントをインストールする場合です。|  
   
 ###### <a name="sample-syntax"></a>サンプル構文:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、レプリケーション、フルテキスト検索の各コンポーネントが配置された新しいスタンドアロン インスタンスをインストールし、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のファイルの瞬時初期化を有効にするには、次の構文を使用します。 
