@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ae91678807351dfa53b92a63c9dcd1514974de3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.openlocfilehash: 864c7b2da5b6b04f1c017997c3d1ecba31375b43
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65536248"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265161"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -70,20 +70,20 @@ WITH
 
 接続プロトコルと外部データ ソースへのパスを指定します。
 
-| 外部データ ソース        | 場所プレフィックス | ロケーション パス                                         | 製品/サービスでサポートされている場所    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera または Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016 以降)、PDW                     |
-| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016 以降)、PDW、SQL DW             |
-| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
-| Azure Data Lake Store Gen 2 | `abfss`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019 以降)                          |
-| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
-| MongoDB または CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019 以降) - Windows のみ           |
-| 一括操作             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017 以降)、SQL DB                  |
-| エラスティック クエリ (シャード)       | 任意    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                      |
-| エラスティック クエリ (リモート)      | 任意    | `<remote_server_name>.database.windows.net`           | SQL DB                                      |
+| 外部データ ソース        | 場所プレフィックス | ロケーション パス                                         | 製品/サービスでサポートされている場所 |
+| --------------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera または Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016 以降)、PDW                  |
+| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016 以降)、PDW、SQL DW          |
+| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                   |
+| Azure Data Lake Store Gen 2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                   |
+| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019 以降)                       |
+| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019 以降)                       |
+| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019 以降)                       |
+| MongoDB または CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019 以降)                       |
+| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019 以降) - Windows のみ        |
+| 一括操作             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017 以降)、SQL DB               |
+| エラスティック クエリ (シャード)       | 任意    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                   |
+| エラスティック クエリ (リモート)      | 任意    | `<remote_server_name>.database.windows.net`           | SQL DB                                   |
 
 場所のパス:
 
@@ -134,7 +134,7 @@ WITH
   - 読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可がある
   - 有効な有効期限を使用する (すべての日付が UTC 時間)。
 
-`SHARED ACCESS SIGNATURE` と `TYPE` = `BLOB_STORAGE` で、`CREDENTIAL` を使用する例については、[一括操作を実行し、Azure Blob Storage から SQL Database にデータを取得するための外部データ ソースの作成](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)に関するセクションを参照してください
+`SHARED ACCESS SIGNATURE` と `TYPE` = `BLOB_STORAGE` で、`CREDENTIAL` を使用する例については、[一括操作を実行し、Azure Blob Storage から SQL Database にデータを取得するための外部データ ソースの作成](#k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)に関するセクションを参照してください
 
 データベース スコープ資格情報を作成するには、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]」を参照してください。
 
@@ -173,7 +173,7 @@ Resource Manager を指定しない場合、Hadoop への計算のプッシュ�
 | 7                   | 8050                          |
 
 サポートされている Hadoop バージョンの完全な一覧については、「[PolyBase 接続構成 (Transact-SQL)][connectivity_pb]」を参照してください。
-  
+
 > [!IMPORTANT]  
 > RESOURCE_MANAGER_LOCATION 値は、外部データ ソースを作成するときに検証されません。 正しくない値を入力すると、指定された値で解決できないため、プッシュ ダウンが試行されるたびに実行時にクエリ エラーが発生する可能性があります。
 
@@ -183,10 +183,10 @@ Resource Manager を指定しない場合、Hadoop への計算のプッシュ�
 
 この引数は、`TYPE` が `RDBMS` または `SHARD_MAP_MANAGER` に設定されている場合に構成します。
 
-| TYPE              | DATABASE_NAME の値                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | DATABASE_NAME の値                                       |
+| ----------------- | ------------------------------------------------------------ |
 | RDBMS (RDBMS)             | `LOCATION` を使用して指定されたサーバー上のリモート データベースの名前 |
-| SHARD_MAP_MANAGER | シャード マップ マネージャーとして動作しているデータベースの名前                 |
+| SHARD_MAP_MANAGER | シャード マップ マネージャーとして動作しているデータベースの名前      |
 
 `TYPE` = `RDBMS` の外部データ ソースを作成する方法を示す例については、「[RDBMS 外部データ ソースを作成する](#g-create-an-rdbms-external-data-source)」を参照してください。
 
@@ -248,7 +248,7 @@ MongoDB などの他のデータ ソースの追加の例については、「[M
 ### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. Hadoop を参照する外部データ ソースを作成する
 
 Hortonworks または Cloudera Hadoop クラスターを参照する外部データ ソースを作成するには、Hadoop `Namenode` のマシン名または IP アドレスとポートを指定します。 <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -261,7 +261,7 @@ WITH
 ### <a name="c-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>C. プッシュダウンが有効になっている Hadoop を参照する外部データ ソースを作成する
 
 `RESOURCE_MANAGER_LOCATION` オプションを指定して、PolyBase クエリの Hadoop への計算のプッシュダウンを有効にします。 有効にすると、PolyBase によって、クエリの計算を Hadoop にプッシュするかどうかがコストに基づいて決定されます。
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -275,7 +275,7 @@ WITH
 ### <a name="d-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>D. Kerberos でセキュリティ保護された Hadoop を参照する外部データ ソースを作成する
 
 Hadoop クラスターが Kerberos でセキュリティ保護されていることを確認するには、Hadoop core-site.xml で hadoop.security.authentication プロパティの値を確認します。 Kerberos でセキュリティ保護された Hadoop クラスターを参照するには、ご自分の Kerberos ユーザー名とパスワードを含むデータベース スコープの資格情報を指定する必要があります。 データベース マスター キーは、データベース スコープの資格情報シークレットの暗号化に使用されます。
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
@@ -439,12 +439,36 @@ WITH
 [;]
 ```
 
+### <a name="j-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2-or-azure-blob-storage-with-managed-identities"></a>J. マネージド ID を使用して Azure Data Lake Store (ADLS) Gen 2 または Azure Blob Storage を参照する外部データ ソースを作成する
+
+データベース スコープ資格情報を作成する前に、SQL Server への RBAC アクセスを登録および構成する[手順](https://docs.microsoft.com/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional)に従います。  
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+-- There is no need to specify SECRET because this mechanism uses Managed Identity under the covers.
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+     IDENTITY   = 'Managed Service Identity'
+;
+
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+(    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
+,    CREDENTIAL = ADLS_credential
+,    TYPE       = HADOOP
+)
+[;]
+```
+
 ## <a name="examples-bulk-operations"></a>例 :一括操作
 
 > [!NOTE]
 > 一括操作用の外部データ ソースの構成時に、`LOCATION` URL の末尾に、 **/** 、ファイル名、または Shared Access Signature パラメーターを配置しないでください。
 
-### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する
+### <a name="k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>K. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する
 
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。
 [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) の使用][sas_token]」を参照してください。

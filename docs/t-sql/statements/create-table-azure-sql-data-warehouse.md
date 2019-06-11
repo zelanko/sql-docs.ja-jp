@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574886"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413334"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65574886"
 
 ## <a name="syntax"></a>構文
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -166,12 +166,12 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>クラスター化列ストア インデックスの順序付けオプション (プレビュー)
 
-クラスター化列ストア インデックスは、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  ORDER 指定の規定値は COMPOUND キーです。  並べ替えは常に昇順です。 ORDER 句を指定しなかった場合、列ストアは並べ替えられません。
+クラスター化列ストア インデックスは、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  ORDER 指定の規定値は COMPOUND キーです。  並べ替えは常に昇順です。 ORDER 句を指定しなかった場合、列ストアは並べ替えられません。 順序付けのプロセスによっては、順序付けされていないクラスター化列ストア インデックスよりも、順序付けされたクラスター化列ストア インデックスを使用するテーブルの方がデータの読み込み時間が長い場合があります。 データの読み込み中に追加の tempdb 領域が必要な場合は、挿入ごとのデータ量を減らすことができます。
 
 プレビュー期間中、このクエリを実行して、ORDER を有効にした列を確認できます。  ORDER で複数の列を指定した場合、後でカタログ ビューが提供され、この情報と列序数が提供されます。
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   

@@ -1,7 +1,7 @@
 ---
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457675"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354515"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,8 +123,8 @@ ON SERVER
  SET { *event_customizable_attribute*= \<value> [ ,...*n*] }  
  イベントのカスタマイズ可能な属性を設定できます。 カスタマイズ可能な属性は、column_type 'customizable' および object_name = *event_name* として sys.dm_xe_object_columns ビューに表示されます。  
   
- ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })  
- イベント セッションに関連付けるアクションを指定します。  
+ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] })  
+ 以下の場合、イベント セッションに関連付けるアクションです。  
   
 -   *event_module_guid* は、イベントを含むモジュールの GUID です。  
   
@@ -140,7 +140,7 @@ ON SERVER
  述語ソースを識別するイベント フィールドの名前を指定します。  
   
  [*event_module_guid*].*event_package_name*.*predicate_source_name*  
- グローバル述語ソースの名前を指定します。  
+ 以下の場合、グローバル述語ソースの名前です。  
   
 -   *event_module_guid* は、イベントを含むモジュールの GUID です。  
   
@@ -149,7 +149,7 @@ ON SERVER
 -   *predicate_source_name* は、object_type 'pred_source' として sys.dm_xe_objects ビューに定義されます。  
   
  [*event_module_guid*].*event_package_name*.*predicate_compare_name*  
- イベントに関連付ける述語オブジェクトの名前を指定します。  
+ 以下の場合、イベントに関連付ける述語オブジェクトの名前です。  
   
 -   *event_module_guid* は、イベントを含むモジュールの GUID です。  
   
@@ -181,13 +181,13 @@ ON SERVER
  WITH ( \<event_session_options> [ ,...*n*] ) イベント セッションで使用するオプションを指定します。  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- イベントのバッファリング用にセッションに割り当てる最大メモリ容量を指定します。 既定値は、4 MB です。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 最大容量は 2 GB を超える (2048 MB 未満にする) ことはできません。 しかし、GB の範囲でメモリの値を使用することはお勧めできません。
+ イベントのバッファリング用にセッションに割り当てる最大メモリ容量を指定します。 既定値は 4 MB です。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 最大容量は 2 GB を超える (2048 MB 未満にする) ことはできません。 しかし、GB の範囲でメモリの値を使用することはお勧めできません。
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  イベントの削除を処理するために使用するイベント保有モードを指定します。  
   
  **ALLOW_SINGLE_EVENT_LOSS**  
- セッションから単独のイベントを削除できます。 単独のイベントは、すべてのイベント バッファーがいっぱいになったときだけ削除されます。 イベント バッファーがいっぱいのときに単独のイベントを削除することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス特性が許容可能な状態になり、処理後のイベント ストリームのデータ損失を最小限に抑えることができます。  
+ セッションからイベントを削除できます。 単独のイベントは、すべてのイベント バッファーがいっぱいになった場合にのみ削除されます。 イベント バッファーがいっぱいのときに単独のイベントを削除することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス特性が許容可能な状態になり、処理後のイベント ストリームのデータ損失を最小限に抑えることができます。  
   
  ALLOW_MULTIPLE_EVENT_LOSS  
  複数のイベントでいっぱいのイベント バッファーをセッションから削除できます。 削除されるイベントの数は、セッションに割り当てられているメモリ サイズ、メモリのパーティション分割、およびバッファー内のイベントのサイズによって異なります。 このオプションを使用すると、イベント バッファーがすぐにいっぱいになるときにサーバーのパフォーマンスに与える影響を最小限に抑えることができますが、多数のイベントがセッションから削除される可能性があります。  
@@ -196,19 +196,19 @@ ON SERVER
  イベントの削除は許可されません。 このオプションを指定した場合、発生したすべてのイベントが保持されます。 このオプションを使用した場合、イベントを開始するすべてのタスクは、イベント バッファーに空きができるまで待機します。 その結果、イベント セッションがアクティブになっている間、検知できる程度のパフォーマンスの問題が発生することがあります。 バッファーからイベントがフラッシュされるのを待機する間、ユーザーの接続に遅延が生じる可能性があります。  
   
  MAX_DISPATCH_LATENCY = { *seconds* SECONDS | **INFINITE** }  
- イベントをイベント セッション ターゲットにディスパッチする前にメモリにバッファリングする時間を指定します。 既定では、この値は 30 秒に設定されます。  
+ イベントをイベント セッション ターゲットにディスパッチする前に、メモリにバッファリングする時間を指定します。 既定では、この値は 30 秒に設定されます。  
   
  *seconds* SECONDS  
  ターゲットへのバッファーのフラッシュを開始する前に待つ秒数を指定します。 *seconds* は整数です。 最小待機値は 1 秒です。 ただし、0 を使用すると、INFINITE 待機を指定できます。  
   
  **INFINITE**  
- バッファーがいっぱいのとき、またはイベント セッションが閉じるときだけ、バッファーをターゲットにフラッシュします。  
+ バッファーがいっぱいになっている、またはイベント セッションが閉じられる場合にのみ、バッファーをターゲットにフラッシュします。  
   
 > [!NOTE]  
 >  MAX_DISPATCH_LATENCY = 0 SECONDS と MAX_DISPATCH_LATENCY = INFINITE は同じです。  
   
  MAX_EVENT_SIZE =*size* [ KB | **MB** ]  
- イベントの最大許容サイズを指定します。 MAX_EVENT_SIZE は、MAX_MEMORY よりも大きな単独のイベントを許可するように設定する必要があります。MAX_MEMORY よりも小さな値を設定した場合はエラーが発生します。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 *size* をキロバイト単位で指定する場合、最小許容サイズは 64 KB です。 MAX_EVENT_SIZE を設定すると、MAX_MEMORY に加えて、サイズが *size* のバッファーが 2 つ作成されます。 つまり、イベントのバッファリングに使用されるメモリの合計量は MAX_MEMORY + 2 * MAX_EVENT_SIZE となります。  
+ イベントの最大許容サイズを指定します。 MAX_EVENT_SIZE は、MAX_MEMORY よりも大きな単独のイベントのみを許可するように設定する必要があります。MAX_MEMORY よりも小さな値を設定した場合はエラーが発生します。 *size* は、キロバイト (KB) またはメガバイト (MB) 数を示す整数値です。 *size* をキロバイト単位で指定する場合、最小許容サイズは 64 KB です。 MAX_EVENT_SIZE を設定すると、MAX_MEMORY に加えて、サイズが *size* のバッファーが 2 つ作成されます。 つまり、イベントのバッファリングに使用されるメモリの合計量は MAX_MEMORY + 2 * MAX_EVENT_SIZE となります。  
   
  MEMORY_PARTITION_MODE = { **NONE** | PER_NODE | PER_CPU }  
  イベント バッファーを作成する場所を指定します。  
@@ -235,7 +235,7 @@ ON SERVER
  起動時にイベント セッションが開始されます。  
   
  **OFF**  
- イベント セッションは起動時に開始されません。  
+ イベント セッションが起動時に開始されません。  
   
 ## <a name="remarks"></a>Remarks  
 論理演算子の優先順位は、高い方から `NOT`、`AND`、`OR` です。  
@@ -259,7 +259,11 @@ ON SERVER
     WITH (MAX_MEMORY=4MB, MAX_EVENT_SIZE=4MB);  
 GO  
 ```  
-  
+
+### <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL Database では、コード例が異なる可能性があります。
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## <a name="see-also"></a>参照  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

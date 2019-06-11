@@ -1,7 +1,7 @@
 ---
 title: Azure BLOB のダウンロード タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dfde0bdb50c5f8fbb81a5eb7d9b88067999f1de4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: ec05684572563228ec3bce88ebb5c5ca32a86bc2
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728042"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403205"
 ---
 # <a name="azure-blob-download-task"></a>Azure BLOB のダウンロード タスク
 
@@ -33,15 +33,13 @@ Azure BLOB のダウンロード タスクを使うと、SSIS パッケージで
  **Azure BLOB のダウンロード タスク**は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。  
   
  次の表で、このダイアログ ボックスの各フィールドを説明します。  
-  
-|||  
-|-|-|  
+
 |**フィールド**|**[説明]**|  
+|---|---|
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを指定するか、Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。この接続マネージャーは、BLOB ファイルがホストされている場所をポイントします。|  
 |BlobContainer|ダウンロードする BLOB ファイルを含む BLOB コンテナーの名前を指定します。|  
 |BlobDirectory|ダウンロードする BLOB ファイルを含む BLOB ディレクトリを指定します。 BLOB ディレクトリは仮想階層構造です。|  
+|SearchRecursively|サブディレクトリ内で再帰的に検索するかどうかを指定します。|  
 |LocalDirectory|ダウンロードした BLOB ファイルが格納されているローカル ディレクトリを指定します。|  
 |FileName|指定した名前のパターンを持つファイルを選択するための名前フィルターを指定します。 たとえば、`MySheet*.xls\*` には `MySheet001.xls` や `MySheetABC.xlsx` などのファイルが含まれます。|  
 |TimeRangeFrom/TimeRangeTo|時間範囲フィルターを指定します。 **TimeRangeFrom** から **TimeRangeTo** までの間に変更されたファイルが含まれます。|  
-  
-  

@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90bdc946a136a9888d5cbf4e8ec86daf1531acc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fa294214b85e84f03f6867e50bc1fdba80731f8
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794990"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265436"
 ---
 # <a name="initialize-a-subscription-manually"></a>手動によるサブスクリプションの初期化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、サブスクリプションを手動で初期化する方法について説明します。 サブスクリプションを初期化する場合、一般には、初期スナップショットが使用されます。ただし、スキーマおよび初期データがサブスクライバー側に既に存在していれば、パブリケーションのサブスクリプションをスナップショットを使用せずに初期化できます。  
   
 
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -52,7 +52,7 @@ ms.locfileid: "47794990"
   
 1.  スキーマとデータがサブスクリプション データベースに存在することを確認します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **@publication**、**@subscriber**、**@destination_db** にパブリッシュされたデータを格納するサブスクライバー側データベースの名前、**@subscription_type** に **pull** 値、**@sync_type** に **replication support only** 値を指定します。 詳細については、「 [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **\@publication** **\@subscriber**、 **\@destination_db** にパブリッシュ済みのデータを格納するサブスクライバー側データベースの名前、 **\@subscription_type** に対する **pull** の値、 **\@sync_type** に対する **replication support only** の値を指定します。 詳細については、「 [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
 3.  サブスクライバーで、 [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)を実行します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)」を参照してください。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47794990"
   
 1.  スキーマとデータがサブスクリプション データベースに存在することを確認します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **@destination_db** にパブリッシュされたデータを格納するサブスクライバー側データベースの名前、**@subscription_type** に **push** 値、**@sync_type** に **replication support only** 値を指定します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)」を参照してください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **\@destination_db** にパブリッシュ済みのデータを格納するサブスクライバー側データベースの名前、 **\@subscription_type** に対する **push**の値、 **\@sync_type** に対する **replication support only** の値を指定します。 サブスクリプションの更新については、「 [Create an Updatable Subscription to a Transactional Publication](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [プッシュ サブスクリプションの作成](../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "47794990"
   
 1.  スキーマとデータがサブスクリプション データベースに存在することを確認します。 これは、サブスクライバーでパブリケーション データベースのバックアップを復元することによって行います。  
   
-2.  パブリッシャーで [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)を実行します。 **@publication**、**@subscriber**、**@subscriber_db**、および **@subscription_type** に **pull** 値を指定します。 これにより、プル サブスクリプションが登録されます。  
+2.  パブリッシャーで [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)を実行します。 **\@publication**、 **\@subscriber**、 **\@subscriber_db**、 **\@subscription_type** に対する **pull** の値を指定します。 これにより、プル サブスクリプションが登録されます。  
   
-3.  パブリッシュされたデータを格納するサブスクライバーのデータベースで [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)を実行します。 **@sync_type** に **none** を指定します。  
+3.  パブリッシュされたデータを格納するサブスクライバーのデータベースで [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)を実行します。 **\@sync_type** には **none** の値を指定します。  
   
 4.  サブスクライバーで、 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47794990"
   
 1.  スキーマとデータがサブスクリプション データベースに存在することを確認します。 これは、サブスクライバーでパブリケーション データベースのバックアップを復元することによって行います。  
   
-2.  パブリッシャー側のパブリケーション データベースに対し、 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)を実行します。 **@subscriber_db** にパブリッシュされたデータを格納するサブスクライバー側データベースの名前、**@subscription_type** に **push** 値、**@sync_type** に **none** 値を指定します。  
+2.  パブリッシャー側のパブリケーション データベースに対し、 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)を実行します。 **\@subscriber_db** にパブリッシュ済みのデータを格納するサブスクライバー側データベースの名前、 **\@subscription_type** に対する **push** の値、 **\@sync_type** に対する **none** の値を指定します。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行します。 詳細については、「 [プッシュ サブスクリプションの作成](../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   

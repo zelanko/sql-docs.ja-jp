@@ -1,7 +1,7 @@
 ---
 title: Integration Services (SSIS) 用の Azure Feature Pack | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 003cfeefbea35d635264793555d771c5fddcead0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 29e30a8a7da41bcb7c75c61ef5ed78d0e3096536
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65729412"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403165"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 
@@ -72,6 +72,8 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
 
     -   [Azure SQL DW のアップロード タスク](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [柔軟なファイル タスク](../integration-services/control-flow/flexible-file-task.md)
+
 -   データ フロー コンポーネント
 
     -   [Azure BLOB Source](../integration-services/data-flow/azure-blob-source.md)
@@ -82,7 +84,11 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob と Azure Data Lake Store のファイル列挙子。 「[Foreach ループ コンテナー](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)」を参照してください。
+    -   [柔軟なファイル ソース](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [柔軟なファイルの変換先](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Azure BLOB、Azure Data Lake Store、および Data Lake Storage Gen2 のファイル列挙子。 「[Foreach ループ コンテナー](../integration-services/control-flow/foreach-loop-container.md)」を参照してください。
 
 ## <a name="scenario-processing-big-data"></a>シナリオ:ビッグ データの処理
  Azure コネクタを使用して、次のビッグ データの処理を完了します。

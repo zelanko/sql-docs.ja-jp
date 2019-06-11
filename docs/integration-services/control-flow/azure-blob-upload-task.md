@@ -1,7 +1,7 @@
 ---
 title: Azure BLOB のアップロード タスク | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3f35e1178af11111cdbdd00d1cbdba51660c098
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: b65a6d6616d844f01ffdb245a81daba04c88dddd
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728028"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403244"
 ---
 # <a name="azure-blob-upload-task"></a>Azure BLOB のアップロード タスク
 
@@ -33,15 +33,13 @@ ms.locfileid: "65728028"
  **Azure BLOB のアップロード タスク**は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
   
  次の表で、このダイアログ ボックスの各フィールドを説明します。  
-  
-|||  
-|-|-|  
+
 |**フィールド**|**[説明]**|  
+|---|---|  
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを指定するか、Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。この接続マネージャーは、BLOB ファイルがホストされている場所をポイントします。|  
 |BlobContainer|アップロードしたファイルを BLOB として含む BLOB コンテナーの名前を指定します。|  
 |BlobDirectory|アップロードしたファイルがブロック BLOB として格納される BLOB ディレクトリを指定します。 BLOB ディレクトリは仮想階層構造です。 BLOB が既に存在する場合は置き換えられます。|  
 |LocalDirectory|アップロードするファイルを含むローカル ディレクトリを指定します。|  
+|SearchRecursively|サブディレクトリ内で再帰的に検索するかどうかを指定します。|  
 |FileName|指定した名前のパターンを持つファイルを選択するための名前フィルターを指定します。 たとえば、`MySheet*.xls\*` には `MySheet001.xls` や `MySheetABC.xlsx` などのファイルが含まれます。|  
 |TimeRangeFrom/TimeRangeTo|時間範囲フィルターを指定します。 **TimeRangeFrom** から **TimeRangeTo** までの間に変更されたファイルが含まれます。|  
-  
-  

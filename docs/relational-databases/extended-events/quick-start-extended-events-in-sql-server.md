@@ -1,7 +1,7 @@
 ---
 title: 'クイック スタート: SQL Server の拡張イベント | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/10/2016
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: dc8a06380e54e49f188813f29fe6c0f4ee68346f
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478237"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354570"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>クイック スタート: SQL Server の拡張イベント
 
@@ -90,7 +90,7 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
 1. SSMS と接続します。
 
-2. オブジェクト エクスプローラーで、 **[管理]** > **[拡張イベント]** > **[新しいセッション]** をクリックします。 **[新しいセッション]** ダイアログと **新規セッション ウィザード**は互いに似ていますが、[新しいセッション] をお勧めします。
+2. オブジェクト エクスプローラーで、 **[管理]**  >  **[拡張イベント]**  >  **[新しいセッション]** をクリックします。 **[新しいセッション]** ダイアログと **新規セッション ウィザード**は互いに似ていますが、[新しいセッション] をお勧めします。
 
 3. 左上で、 **[全般]** ページをクリックします。 *[セッション名]* テキスト ボックスに ” **YourSession** ” または任意の名前を入力します。 **[OK]** ボタンはデモの終了時にのみ押すため、まだ*押さないで*ください。
 
@@ -106,7 +106,7 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
     - 右矢印ボタン **>** をクリックして、イベントを **[選択したイベント]** ボックスに移動します。
 
 6. **[イベント]** ページで、右端にある **[構成]** ボタンをクリックします。
-    - 見やすくするために左側を切り取った次のスクリーンショットで、**[イベントの構成オプション]** 領域を確認できます。
+    - 見やすくするために左側を切り取った次のスクリーンショットで、 **[イベントの構成オプション]** 領域を確認できます。
 
     ![[新しいセッション] > [イベント] > [構成] > [フィルター (述語)] > [フィールド]](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
@@ -114,7 +114,7 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
 8. **[フィールド]** ドロップ ダウン リストから、 **[sqlserver.sql_text]** を選択します。
    - **[演算子]** に LIKE 演算子を選択します。
-   - **[値]** に " **%SELECT%HAVING%**” を入力します。
+   - **[値]** に " **%SELECT%HAVING%** ” を入力します。
 
     > [!NOTE]
     > この 2 部構成の名前では、 *sqlserver* がパッケージ名、 *sql_text* がフィールド名です。 前の手順で選択したイベント *sql_statement_completed* は、選択したフィールドと同じパッケージ内にある必要があります。
@@ -133,11 +133,11 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
     ![[新しいセッション] > [詳細] > [ディスパッチの最大待機時間] > [OK]](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. 左上で、**[詳細]** ページをクリックします。
+12. 左上で、 **[詳細]** ページをクリックします。
     - **[ディスパッチの最大待機時間]** を 3 秒に減らします。
     - 最後に、下部にある **[OK]** ボタンをクリックします。
 
-13. **オブジェクト エクスプローラー**に戻り、**[管理]** > **[セッション]** の順に展開して、**YourSession** の新しいノードを表示します。
+13. **オブジェクト エクスプローラー**に戻り、 **[管理]**  >  **[セッション]** の順に展開して、**YourSession** の新しいノードを表示します。
 
     ![オブジェクト エクスプローラーで [管理] > [拡張イベント] > [セッション] の下に表示される YourSession という名前の新しい *イベント セッション* のノード](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -153,7 +153,7 @@ SSMS **オブジェクト エクスプローラー**でイベント セッショ
 
 SSMS UI を使用して、イベント セッションを作成した T-SQL スクリプトを生成しました。 生成されたスクリプトは、次の手順で表示できます。
 
-- セッション ノードを右クリックし、 **[セッションをスクリプト化]** > **[CREATE]** > **[クリップボード]** の順にクリックします。
+- セッション ノードを右クリックし、 **[セッションをスクリプト化]**  >  **[CREATE]**  >  **[クリップボード]** の順にクリックします。
 - 任意のテキスト エディターに貼り付けます。
 
 
@@ -231,7 +231,7 @@ ALTER EVENT SESSION [YourSession]
 
 SQL Server インスタンスの開始時に、自動的に開始するようにイベント セッションに指示することもできます。 CREATE EVENT SESSION でキーワード **STARTUP STATE = ON** を参照してください。
 
-- SSMS UI は **[新しいセッション]** > **[全般]** ページで対応するチェック ボックスを提供しています。
+- SSMS UI は **[新しいセッション]**  >  **[全般]** ページで対応するチェック ボックスを提供しています。
 
 
 ## <a name="test-your-event-session"></a>イベント セッションのテスト
@@ -411,7 +411,7 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 拡張イベントの効果的な使用には、多くのシナリオがあります。 次の記事では、クエリ中に取得したロックに関連するシナリオの例を示します。
 
 
-ロックの評価を目的としたイベント セッションの具体的なシナリオは、次の記事で説明しています。 これらの記事では、 **@dbid**の使用や、動的な `EXECUTE (@YourSqlString)`の使用など、高度な技法もいくつか紹介しています。
+ロックの評価を目的としたイベント セッションの具体的なシナリオは、次の記事で説明しています。 これらの記事では、 **@dbid** の使用や、動的な `EXECUTE (@YourSqlString)`の使用など、高度な技法もいくつか紹介しています。
 
 - [ロックの大半を取得しているオブジェクトを見つける](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - このシナリオでは、生のイベント データを表示する前に処理するターゲット package0.histogram を使用します。
@@ -479,7 +479,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 #### <a name="ssms-ui-for-search"></a>検索の SSMS UI
 
 
-もう 1 つの検索オプションは、前述のスクリーンショットで示した **[新しいセッション]** > **[イベント]** > **[イベント ライブラリ]** ダイアログに SSMS UI を使用することです。
+もう 1 つの検索オプションは、前述のスクリーンショットで示した **[新しいセッション]**  >  **[イベント]**  >  **[イベント ライブラリ]** ダイアログに SSMS UI を使用することです。
 
 
 
@@ -515,7 +515,7 @@ ETW イベントは、Azure SQL Database の拡張イベントではご利用い
 
 SQL Server には、作成済みの拡張イベントがいくつか付属します。 いずれも SQL システムを起動すると開始されるように設定されています。 これらのイベント セッションは、システム エラーが発生した場合に役立つデータを収集します。 すべての拡張イベントと同様に、これらのセッションはほんの少しのリソースしか消費しないため、実行したままにしておくことをお勧めします。
 
-これらのイベント セッションは、 **[管理]** [拡張イベント] **[セッション]** > **の下の SSMS** > **オブジェクト エクスプローラー**で確認できます。  2016年 6 月時点での、これらのインストール済みのイベント セッションの一覧は次のとおりです。
+これらのイベント セッションは、 **[管理]** [拡張イベント] **[セッション]**  > **の下の SSMS** > **オブジェクト エクスプローラー**で確認できます。  2016年 6 月時点での、これらのインストール済みのイベント セッションの一覧は次のとおりです。
 
 - AlwaysOn_health
 - system_health
@@ -553,10 +553,11 @@ SQL Server PowerShell を使用して、SQL Server 拡張イベントを管理�
     - CREATE EVENT SESSION 句
     - SSMS UI コントロール
 
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL Database では、コード例が異なる可能性があります。
 
-<a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>付録: アクセス許可の所有者を事前に確認するための SELECT
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
+## <a name="appendix1"></a>付録: アクセス許可の所有者を事前に確認するための SELECT
 
 この記事で言及されているアクセス許可は次のとおりです。
 

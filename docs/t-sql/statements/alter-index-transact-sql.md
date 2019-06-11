@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580123"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413645"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -663,7 +663,7 @@ ONLINE、MAXDOP、および SORT_IN_TEMPDB の値は、システム カタログ
   
 1. 再構築中に、物理メディア上の領域を要求して列ストア インデックスのコピーを 2 つ格納します。 再構築が完了すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は元のクラスター化列ストア インデックスを削除します。
 
-1. 順序付けされたクラスター化列ストア インデックスを使用しての Azure SQL Data Warehouse テーブルでは、ALTER INDEX REBUILD がデータを再度並べ替えます。  
+1. 順序付けされたクラスター化列ストア インデックスを使用しての Azure SQL Data Warehouse テーブルでは、ALTER INDEX REBUILD がデータを再度並べ替えます。 再構築操作中に tempdb を監視します。 tempdb 領域がさらに必要な場合は、データ ウェアハウスをスケール アップすることができます。 インデックスの再構築が完了したら、スケール ダウンで戻します。
   
 ## <a name="reorganizing-indexes"></a> インデックスの再構成
 インデックスの再構成では、最小のシステム リソースが使用されます。 この操作では、リーフ レベル ページをリーフ ノードの論理順序 (左から右) に合わせて物理的に並べ替えることにより、テーブルやビュー上にあるクラスター化および非クラスター化インデックスのリーフ レベルをデフラグします。 再構成でも、インデックス ページは圧縮されます。 圧縮は既存の FILL FACTOR 値に基づいて行われます。 FILL FACTOR 設定を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) を使用します。  
