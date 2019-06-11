@@ -15,16 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_proxy_to_subsystem
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
+author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+manager: jroth
+ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528134"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822623"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サブシステムに対するアクセス権をプロキシに与えます。  
@@ -34,7 +36,6 @@ ms.locfileid: "58528134"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_grant_proxy_to_subsystem  
      { [ @proxy_id = ] proxy_id | [ @proxy_name = ] 'proxy_name' },  
      { [ @subsystem_id = ] subsystem_id | [ @subsystem_name = ] 'subsystem_name' }  
@@ -60,6 +61,7 @@ sp_grant_proxy_to_subsystem
 |"**10**"|Analysis Services コマンド|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ実行|  
 |**12**|PowerShell スクリプト|  
+| &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'` アクセスを許可するサブシステムの名前。 **Subsystem_name**は**sysname**、既定値は NULL です。 いずれか*subsystem_id*または*subsystem_name*指定する必要がありますが、両方を指定することはできません。 次の表では、各サブシステムの値を示します。  
   
@@ -76,6 +78,7 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Analysis Services コマンド|  
 |**Dts**|SSIS パッケージ実行|  
 |**PowerShell**|PowerShell スクリプト|  
+| &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>コメント  
  サブシステムに対するプロキシ アクセスを許可する場合は、プロキシで指定されるプリンシパルのアクセス許可は変更されません。  
@@ -88,7 +91,7 @@ sp_grant_proxy_to_subsystem
 ### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. 使用して ID サブシステムへのアクセスを許可  
  次の例は、プロキシを許可`Catalog application proxy`ActiveX スクリプティング サブシステムにアクセスします。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -101,7 +104,7 @@ GO
 ### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. 名前では、サブシステムへのアクセスを許可します。  
  次の例は、プロキシを許可`Catalog application proxy`SSIS パッケージ実行サブシステムへのアクセス。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

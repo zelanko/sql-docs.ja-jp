@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535584"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822632"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   セキュリティ プリンシパルとプロキシ間の関連付けを一覧表示します。  
@@ -34,7 +36,6 @@ ms.locfileid: "58535584"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -42,7 +43,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プリンシパル、ログイン、サーバー ロール、または**msdb**プロキシを一覧表示するデータベース ロール。 名前は**nvarchar (256)**、既定値は NULL です。  
+`[ @name = ] 'name'` 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プリンシパル、ログイン、サーバー ロール、または**msdb**プロキシを一覧表示するデータベース ロール。 名前は**nvarchar (256)** 、既定値は NULL です。  
   
 `[ @proxy_id = ] id` に関する情報を表示するプロキシのプロキシ識別番号。 *Proxy_id*は**int**、既定値は NULL です。 いずれか、 *id*または*proxy_name*指定することがあります。  
   
@@ -59,6 +60,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|プロキシの名前。|  
 |**name**|**sysname**|関連付けのセキュリティ プリンシパルの名前を指定します。|  
 |**flags**|**int**|セキュリティ プリンシパルの種類<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン<br /><br /> **1** = 固定システム ロール<br /><br /> **2**データベース ロールを = **msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>コメント  
  パラメーターが指定されていないときに**sp_enum_login_for_proxy**各プロキシのインスタンス内のすべてのログインに関する情報を一覧表示します。  
@@ -77,7 +79,7 @@ sp_enum_login_for_proxy
 ### <a name="a-listing-all-associations"></a>A. すべての関連付けを一覧表示する  
  次の例では、現在のインスタンスで、ログインとプロキシの間で確立されているすべてのアクセス許可が一覧表示します。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -88,7 +90,7 @@ GO
 ### <a name="b-listing-proxies-for-a-specific-login"></a>B. 指定したログインに対するプロキシを一覧表示する  
  次の例では、ログイン `terrid` がアクセスできるプロキシを一覧表示します。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

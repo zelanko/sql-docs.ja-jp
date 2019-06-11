@@ -16,18 +16,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_page_info dynamic management view
-author: ''
+author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03d284ad2dc8ac41e13ca6c90b38a65297ec7fcd
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62507719"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822246"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 データベース内のページに関する情報を返します。  ページで、ヘッダー情報を含む 1 つの行を返しますなど、 `object_id`、 `index_id`、および`partition_id`します。  この関数を使用すると、ほとんどの場合に `DBCC PAGE` を使用する必要がなくなります。

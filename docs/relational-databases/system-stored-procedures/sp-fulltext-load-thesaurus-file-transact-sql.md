@@ -20,14 +20,15 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ea972558da077dd984ce2ef30c99e1b46b0e5c4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65983017"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822764"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー インスタンスを解析し、指定された LCID の言語に対応する類義語辞典ファイルからデータを読み込むとします。 このストアド プロシージャは、類義語辞典ファイルを更新した後に便利です。 実行**sp_fulltext_load_thesaurus_file**により、指定された LCID の類義語辞典を使用して、フルテキスト クエリの再コンパイルします。  
@@ -37,7 +38,6 @@ ms.locfileid: "65983017"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]   
 ```  
   
@@ -45,7 +45,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  類義語辞典 XML 定義の対応する言語のロケール識別子 (LCID) を対応する整数。 サーバー インスタンスで使用可能な言語の Lcid を取得する、 [sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)カタログ ビューです。  
   
- **@loadOnlyIfNotLoaded** = *アクション*  
+ **@loadOnlyIfNotLoaded**  = *アクション*  
  既に読み込まれている場合でも、内部の類義語辞典テーブルに類義語辞典ファイルが読み込まれるかどうかを指定します。 *アクション*の 1 つです。  
   
 |値|定義|  
@@ -74,23 +74,19 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. 類義語辞典ファイルが既に読み込まれている場合でも類義語辞典ファイルを読み込む  
  次の例では、解析して、英語の類義語辞典ファイルを読み込みます。  
   
-```  
-EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
-GO  
+```sql
+EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 ```  
   
 ### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>B. 類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込む。  
  次の例では、解析して、既に読み込まれていない限り、アラビア語の類義語辞典ファイルを読み込みます。  
   
+```sql
+EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
-EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;  
-GO  
-```  
-  
-## <a name="see-also"></a>参照  
- [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [構成して、フルテキスト検索の類義語辞典ファイルを管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  
-  
-  
+
+## <a name="see-also"></a>参照
+
+[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
+[システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+[フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)

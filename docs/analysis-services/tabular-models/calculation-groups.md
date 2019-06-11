@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 表形式モデルで計算グループ |Microsoft Docs
-ms.date: 06/05/2019
+ms.date: 06/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58e845965bb9cd4eeba46ad30193c79b436da569
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719865"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822690"
 ---
 # <a name="calculation-groups-preview"></a>計算グループ (プレビュー)
  
-[!INCLUDE[ssas-appliesto-sql2019](../../includes/ssas-appliesto-sql2019.md)]
+[!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-として一般的なメジャーの式をグループ化して冗長なメジャーの数を大幅に短縮できます計算グループ*計算アイテム*します。 1470 以降の SQL Server Analysis Services 2019 表形式モデルで計算グループがサポートされている[互換性レベル](compatibility-level-for-tabular-models-in-analysis-services.md)します。 1470 の互換性レベル モデルでは、現在では**プレビュー**します。  
+として一般的なメジャーの式をグループ化して冗長なメジャーの数を大幅に短縮できます計算グループ*計算アイテム*します。 Azure Analysis Services で計算グループがサポートされているし、SQL Server Analysis Services 2019 表形式モデル、1470 以降[互換性レベル](compatibility-level-for-tabular-models-in-analysis-services.md)します。 1470 の互換性レベル モデルでは、現在では**プレビュー**します。  
 
 この記事では、以下について説明します。 
 

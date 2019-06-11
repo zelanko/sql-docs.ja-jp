@@ -7,14 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: lle
+author: lrtoyou1223
+ms.openlocfilehash: d86d71a3d62ca94eed2da5ad91fbdd60ee4989f4
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250186"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822970"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>タスク 3:Excel ファイルからドメイン値をインポートする
+
   ここでは、Excel ファイルのワークシートから **State** ドメインの値をインポートします。  
   
 1.  **[ドメイン リスト]** から **State**ドメインをクリックします。  
@@ -36,6 +39,6 @@ ms.locfileid: "63250186"
      ![ドメインの値にのみ新しいチェック ボックスを表示する](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "ドメインの値にのみ新しいチェック ボックスを表示します。")  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 4:ドメイン ルールを設定](../../2014/tutorials/task-4-setting-domain-rules.md)  
+ [タスク 4: ドメイン ルールを設定](../../2014/tutorials/task-4-setting-domain-rules.md)  
   
   

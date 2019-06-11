@@ -3,7 +3,7 @@ title: チュートリアル:Linux 上の SQL Server の AD 認証を使用し�
 titleSuffix: SQL Server
 description: このチュートリアルでは、SQL Server on Linux 用の AD 認証の構成手順を提供します。
 author: Dylan-MSFT
-ms.author: Dylan.Gray
+ms.author: dygray
 ms.reviewer: rothja
 ms.date: 04/01/2019
 manager: craigg
@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 3ab6fd05b0cf9486ded5b0e550101a374669be11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 5e9d7ee2c086f188041fbf6c42448d21953b008d
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097241"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822779"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用します。
 
@@ -54,7 +54,7 @@ Active Directory ドメイン コント ローラーで、SQL Server Linux ホ�
 ## <a id="createuser"></a> AD のユーザー (または MSA) を作成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN の設定
 
 > [!NOTE]
-> 使用して、次の手順、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)します。 使用している場合**Azure**、する必要があります**[作成](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 続行する前にします。
+> 使用して、次の手順、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)します。 使用している場合**Azure**、する必要があります **[作成](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 続行する前にします。
 
 1. ドメイン コント ローラーで実行、 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx)パスワードを無期限で新しい AD ユーザーを作成する PowerShell コマンド。 次の例では、アカウントの名前が`mssql`がアカウント名には、どのようなを指定できます。 アカウントの新しいパスワードを入力するように促されます。
 
@@ -361,4 +361,4 @@ CONTOSO.COM = {
 次に、その他のセキュリティのシナリオについて調べる for SQL Server on Linux。
 
 > [!div class="nextstepaction"]
->[SQL Server on Linux への接続の暗号化](sql-server-linux-encrypted-connections.md)
+> [SQL Server on Linux への接続の暗号化](sql-server-linux-encrypted-connections.md)

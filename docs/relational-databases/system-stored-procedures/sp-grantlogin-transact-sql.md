@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grantlogin
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: def5041286ade754020a5c84e8d2ac91fc79afa3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+author: VanMSFT
+ms.openlocfilehash: efed12f21dd3413108849124d1326d7ec2c8540c
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62796572"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822750"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
@@ -37,7 +39,6 @@ ms.locfileid: "62796572"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_grantlogin [@loginame=] 'login'  
 ```  
   
@@ -58,7 +59,7 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="examples"></a>使用例  
  次の例では`CREATE LOGIN`を作成する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows ユーザーのログインを`Corporate\BobJ.`これは推奨される方法です。  
   
-```  
+```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  
 GO  
 ```  

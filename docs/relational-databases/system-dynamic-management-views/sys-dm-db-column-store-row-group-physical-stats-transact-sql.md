@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1460ef53098a9cdd7cf8bb1672c45cfd27adff57
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62742048"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822738"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   すべての現在のデータベースで列ストア インデックスに関する現在の行グループ レベルの情報を提供します。  
@@ -42,7 +43,7 @@ ms.locfileid: "62742048"
 |**partition_number**|**int**|保持するテーブルのパーティションの ID *row_group_id*します。 この DMV を sys.partitions に結合するには、partition_number を使用できます。|  
 |**row_group_id**|**int**|この行グループの ID です。 パーティション分割されたテーブルの場合、パーティション内で一意です。<br /><br /> メモリ内の末尾に達すると-1 です。|  
 |**delta_store_hobt_id**|**bigint**|デルタ ストアの行グループの hobt_id でします。<br /><br /> 行グループがデルタ ストアにない場合は NULL です。<br /><br /> メモリ内のテーブルの末尾の NULL を表します。|  
-|**state**|**tinyint**|関連付けられている ID 番号*state_description*します。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN <br /><br /> 2 = CLOSED <br /><br /> 3 = COMPRESSED<br /><br /> 4 = 廃棄 (TOMBSTONE)<br /><br /> 圧縮は、メモリ内のテーブルに適用する唯一の状態です。|  
+|**state**|**tinyint**|関連付けられている ID 番号*state_description*します。<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED<br /><br /> 4 = 廃棄 (TOMBSTONE)<br /><br /> 圧縮は、メモリ内のテーブルに適用する唯一の状態です。|  
 |**state_desc**|**nvarchar(60)**|行グループの状態の説明。<br /><br /> 非表示の行グループが構築されています。 以下に例を示します。 <br />列ストア行グループは、データが圧縮されるときに、非表示です。 圧縮のメタデータのスイッチの変更が完了すると、列ストア行の状態グループから非表示に圧縮、および [終了] から廃棄 (tombstone) に、デルタストア行グループの状態。<br /><br /> 開く - デルタストア行グループを新しい行を受け入れます。 OPEN の行グループは、行ストア形式のままであり、列ストア形式に圧縮されていません。<br /><br /> 終了 - 行の最大数を格納し、列ストアに圧縮する組ムーバー プロセスが待機しているデルタ ストア行グループ。<br /><br /> 圧縮の行グループを列ストア圧縮で圧縮され、列ストアに格納されています。<br /><br /> 廃棄 (tombstone) には、以前は、デルタストアを不要になった行グループが使用されます。|  
 |**total_rows**|**bigint**|物理的な行の数が、行グループに格納されています。 圧縮された行グループの場合は、削除とマークされている行が含まれます。|  
 |**deleted_rows**|**bigint**|圧縮された行グループに物理的に保存、削除対象としてマークされた行の数。<br /><br /> デルタ ストア行グループは 0 です。|  
@@ -55,7 +56,8 @@ ms.locfileid: "62742048"
 |**生成**|BIGINT|この行グループに関連付けられている行グループの生成。|  
 |**created_time**|datetime2|この行グループの作成時のクロック時間。<br /><br /> メモリ内のテーブルに列ストア インデックス - NULL。|  
 |**closed_time**|datetime2|この行グループが閉じられたときのクロック時間。<br /><br /> メモリ内のテーブルに列ストア インデックス - NULL。|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="results"></a>[結果]  
  現在のデータベース内には、それぞれの行グループの 1 つの行を返します。  
   
@@ -80,7 +82,7 @@ SELECT i.object_id,
     i.index_id,   
     i.type_desc,   
     CSRowGroups.*,  
-    100*(ISNULL(deleted_rows,0))/total_rows AS 'Fragmentation'  
+    100*(ISNULL(deleted_rows,0))/NULLIF(total_rows,0) AS 'Fragmentation'
 FROM sys.indexes AS i  
 JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups  
     ON i.object_id = CSRowGroups.object_id AND i.index_id = CSRowGroups.index_id   

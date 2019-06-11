@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8dfacac19be656187925e8646a60fc3014f94d42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+author: VanMSFT
+manager: jrothj
+ms.openlocfilehash: 81aeb41fdf7c8c17d5035347d384e7175bbd891b
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656807"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822669"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   プロキシには、セキュリティ プリンシパルのアクセスを付与します。  
@@ -35,7 +37,6 @@ ms.locfileid: "62656807"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_grant_login_to_proxy   
      { [ @login_name = ] 'login_name'   
      | [ @fixed_server_role = ] 'fixed_server_role'   
@@ -44,15 +45,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @login_name = ] 'login_name'` アクセスを許可するログイン名。 *Login_name*は**nvarchar (256)**、既定値は NULL です。 いずれかの**@login_name**、 **@fixed_server_role**、または**@msdb_role**を指定するストアド プロシージャは失敗します。  
+`[ @login_name = ] 'login_name'` アクセスを許可するログイン名。 *Login_name*は**nvarchar (256)** 、既定値は NULL です。 いずれかの **@login_name** 、 **@fixed_server_role** 、または **@msdb_role** を指定するストアド プロシージャは失敗します。  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` アクセスを許可する固定サーバー ロール。 *@Fixed_server_role*は**nvarchar (256)**、既定値は NULL です。 いずれかの**@login_name**、 **@fixed_server_role**、または**@msdb_role**を指定するストアド プロシージャは失敗します。  
+`[ @fixed_server_role = ] 'fixed_server_role'` アクセスを許可する固定サーバー ロール。 *@Fixed_server_role*は**nvarchar (256)** 、既定値は NULL です。 いずれかの **@login_name** 、 **@fixed_server_role** 、または **@msdb_role** を指定するストアド プロシージャは失敗します。  
   
-`[ @msdb_role = ] 'msdb_role'` データベース ロール、 **msdb**データベース アクセス権を付与します。 *Msdb_role*は**nvarchar (256)**、既定値は NULL です。 いずれかの**@login_name**、 **@fixed_server_role**、または**@msdb_role**を指定するストアド プロシージャは失敗します。  
+`[ @msdb_role = ] 'msdb_role'` データベース ロール、 **msdb**データベース アクセス権を付与します。 *Msdb_role*は**nvarchar (256)** 、既定値は NULL です。 いずれかの **@login_name** 、 **@fixed_server_role** 、または **@msdb_role** を指定するストアド プロシージャは失敗します。  
   
-`[ @proxy_id = ] id` アクセス権を与えるプロキシの識別子。 *Id*は**int**、既定値は NULL です。 いずれかの**@proxy_id**または**@proxy_name**を指定するストアド プロシージャは失敗します。  
+`[ @proxy_id = ] id` アクセス権を与えるプロキシの識別子。 *Id*は**int**、既定値は NULL です。 いずれかの **@proxy_id** または **@proxy_name** を指定するストアド プロシージャは失敗します。  
   
-`[ @proxy_name = ] 'proxy_name'` アクセス権を与えるプロキシの名前。 *Proxy_name*は**nvarchar (256)**、既定値は NULL です。 いずれかの**@proxy_id**または**@proxy_name**を指定するストアド プロシージャは失敗します。  
+`[ @proxy_name = ] 'proxy_name'` アクセス権を与えるプロキシの名前。 *Proxy_name*は**nvarchar (256)** 、既定値は NULL です。 いずれかの **@proxy_id** または **@proxy_name** を指定するストアド プロシージャは失敗します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -66,7 +67,7 @@ sp_grant_login_to_proxy
 ## <a name="examples"></a>使用例  
  次の例では、ログイン `adventure-works\terrid` に対してプロキシ `Catalog application proxy` の使用を許可します。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

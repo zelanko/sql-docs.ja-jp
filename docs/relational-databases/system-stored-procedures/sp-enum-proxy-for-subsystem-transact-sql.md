@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
+author: VanMSFT
 manager: craigg
-ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d521a16fa7c18e67e1929cb0e38aecf862d6c18a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62723824"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822646"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシがサブシステムにアクセスするための権限を一覧表示します。  
@@ -34,7 +36,6 @@ ms.locfileid: "62723824"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_enum_proxy_for_subsystem  
     [ @proxy_id = ] proxy_id,  
     [ @proxy_name = ] 'proxy_name',  
@@ -62,6 +63,7 @@ sp_enum_proxy_for_subsystem
 |**subsystem_name**|**sysname**|サブシステムの名前です。|  
 |**proxy_id**|**int**|プロキシ識別番号。|  
 |**proxy_name**|**sysname**|プロキシの名前。|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>コメント  
  パラメーターが指定されていないときに**sp_enum_proxy_for_subsystem**各サブシステムのインスタンス内のすべてのプロキシに関する情報を一覧表示します。  
@@ -80,7 +82,7 @@ sp_enum_proxy_for_subsystem
 ### <a name="a-listing-all-associations"></a>A. すべての関連付けを一覧表示する  
  次の例では、現在のインスタンスに対し、プロキシとサブシステムの間に確立されているすべての権限を一覧表示します。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -91,7 +93,7 @@ GO
 ### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. プロキシは、特定のサブシステムにアクセスを決定します。  
  場合、次の例は、行を返しますプロキシ`Catalog application proxy`にアクセスする、`ActiveScripting`サブシステム。 それ以外の場合、空の結果セットが返されます。  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

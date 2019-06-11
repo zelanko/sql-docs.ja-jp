@@ -8,18 +8,19 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ef6f58e2-0162-4bb2-951a-a786da7453e4
-aauthor: ronortloff
-ms.author: rortloff
-manager: craigg
+aauthor: julieMSFT
+ms.author: jrasnick
+manager: jroth
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e4e84dc262cd03de74433c2e713b3a7b4cda0faa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: ef736003be3c07fb1e48520fbaf2186181735427
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583286"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822350"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
  このトピックで、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]と[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]カタログ ビューです。  
@@ -66,7 +67,7 @@ ms.locfileid: "59583286"
 [sys.workload_management_workload_classifiers &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (プレビュー)
 
 > [!Note]
-> ワークロードの分類は、SQL Data Warehouse Gen2 のプレビューで使用できます。 ワークロード管理の分類と重要度のプレビューは 2019 年 4 月 9 日、またはそれ以降のリリース日でビルドです。  ユーザーは、ワークロード管理のテストの前にこの日付よりもビルドの使用を避ける必要があります。  ビルドがワークロードの管理ができるかどうかを決定、実行 select @@version SQL Data Warehouse インスタンスに接続されている場合。
+> SQL Data Warehouse Gen2 上でワークロードの分類のプレビュー版が使用可能です。 ワークロード管理の分類および重要性のプレビューは、リリース日が 2019 年 4 月 9 日以降のビルドに対応しています。  ワークロード管理テストでは、この日付より前のビルドは使用しないでください。  ビルドがワークロード管理に対応しているかどうかを確認するには、SQL Data Warehouse インスタンスに接続しているときに select @@version を実行してください。
  
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログ ビュー  
  次のカタログ ビューに適用[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]のみ。
