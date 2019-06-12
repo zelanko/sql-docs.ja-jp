@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 652ec06981996e9ef17b955c58f27b975c6e3946
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 66c9072f10165b520120b80a9264a828a4e037db
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581065"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499887"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>レポートとサブスクリプションの処理を無効化または一時停止する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポートやサブスクリプションの処理を無効化または一時停止するには、複数の方法があります。 このトピックで説明する範囲は、サブスクリプションの無効化から、データ ソース接続の中断までです。 両方の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードですべての方法を使用することはできません。次の表は、方法とサポートされる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー モードをまとめたものです。  
@@ -129,7 +129,7 @@ ForEach ($subscription in $subscriptions)
   
  データ ソースが使用できない場合でも、レポートは読み込まれることに注意してください。 レポートにはデータは含まれていませんが、適切な権限を持ったユーザーは、レポートに関連付けられたプロパティ ページ、セキュリティ設定、レポート履歴、およびサブスクリプション情報にアクセスできます。  
   
--   **SharePoint モード:** SharePoint モードのレポート サーバーで共有データ ソースを無効にするには、データ ソースを含むドキュメント ライブラリに移動します。 ![共有データ ソースのアイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン") データ ソースをクリックし、**[このデータ ソースを有効にする]** チェック ボックスをオフにします。  
+-   **SharePoint モード:** SharePoint モードのレポート サーバーで共有データ ソースを無効にするには、データ ソースを含むドキュメント ライブラリに移動します。 ![共有データ ソースのアイコン](../../reporting-services/report-data/media/hlp-16datasource.png "共有データ ソースのアイコン") データ ソースをクリックし、 **[このデータ ソースを有効にする]** チェック ボックスをオフにします。  
   
 -   **ネイティブ モード:** ネイティブ モードのレポート サーバーで共有データ ソースを無効にするには、レポート マネージャーでデータ ソースを開き、 **[このデータ ソースを有効にする]** チェック ボックスをオフにします。  
   
@@ -156,9 +156,9 @@ ForEach ($subscription in $subscriptions)
   
 -   SharePoint ライブラリ (SharePoint 統合モードのレポート サーバーと統合された SharePoint サイトからのみ利用可能)  
   
- 電子メール配信は使用前に構成する必要があります。 構成が済んでいない場合、使用できません。 詳細については、「[電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)」をご覧ください。  
+ 電子メール配信は使用前に構成する必要があります。 構成が済んでいない場合、使用できません。 詳細については、次を参照してください。[電子メールの設定 - Reporting Services ネイティブ モード (構成マネージャー)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)します。  
   
- 特定の拡張機能を無効にするには、 **RSReportServer.config** ファイルから拡張機能のエントリを削除します。 詳細については、 [「Reporting Services 構成ファイル」](../../reporting-services/report-server/reporting-services-configuration-files.md) および [「電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)」](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)を参照してください。  
+ 特定の拡張機能を無効にするには、 **RSReportServer.config** ファイルから拡張機能のエントリを削除します。 詳細については、次を参照してください。 [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)と[電子メールの設定 - Reporting Services ネイティブ モード (構成マネージャー)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)します。  
   
  配信拡張機能の削除後は、この機能はレポート マネージャーまたは SharePoint サイトで使用できなくなります。 配信拡張機能を削除すると、サブスクリプションが無効になることがあります。 配信拡張機能を削除する前に、このようなサブスクリプションを削除するか、または別の配信拡張機能を使用するように構成する必要があります。  
   

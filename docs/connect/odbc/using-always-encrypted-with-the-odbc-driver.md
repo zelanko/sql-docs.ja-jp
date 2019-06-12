@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: ab53bcc4885ab91c3c9d022ffc3ba3bd72e2c5be
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198034"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801739"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

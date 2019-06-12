@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab7b884e79b3ffe32415bde6aa6b64c57d12bc6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7dc1817f8cf46edf8639ff5ad2abeb33235086f9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662715"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770256"
 ---
 # <a name="caching-result-set-data-sample"></a>結果セットのデータ サンプルのキャッシング
 
@@ -45,7 +45,7 @@ Statement オブジェクトに含まれるクエリを実行し、データが�
 このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../connect/jdbc/using-the-jdbc-driver.md)します。
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。
+> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、「[JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。
 
 ## <a name="example"></a>例
 

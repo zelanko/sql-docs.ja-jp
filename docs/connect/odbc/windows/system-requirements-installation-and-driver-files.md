@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd37c097873b104f3f53e9ca92e50b6f7c1acafe
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
-ms.translationtype: MTE75
+manager: jroth
+ms.openlocfilehash: 6ff03713555f73a26e48f9760f87cb281b4a98ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464768"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797715"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>インストール、ドライバー ファイルの基本的なシステム要件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -58,13 +58,13 @@ ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とサイド バイ サイドでインストールできます。  
 
-`msodbcsql.msi` を呼び出すと、既定ではクライアント コンポーネントのみがインストールされます。 クライアント コンポーネントは、ドライバーを使用して開発されたアプリケーションの実行をサポートするファイルです。 SDK コンポーネントをインストールするには、コマンド ラインで `ADDLOCAL=ALL` を指定します。 例 :  
+`msodbcsql.msi` を呼び出すと、既定ではクライアント コンポーネントのみがインストールされます。 クライアント コンポーネントは、ドライバーを使用して開発されたアプリケーションの実行をサポートするファイルです。 SDK コンポーネントをインストールするには、コマンド ラインで `ADDLOCAL=ALL` を指定します。 例:  
   
 ```  
 msiexec /i msodbcsql.msi ADDLOCAL=ALL  
 ```  
   
- `/passive`、`/qn`、`/qb`、または `/qr` オプションを使用してインストールする場合は、`IACCEPTMSODBCSQLLICENSETERMS=YES` を指定してエンド ユーザー ライセンスの条項に同意します。 このオプションは、すべて大文字で指定する必要があります。 例 :  
+ `/passive`、`/qn`、`/qb`、または `/qr` オプションを使用してインストールする場合は、`IACCEPTMSODBCSQLLICENSETERMS=YES` を指定してエンド ユーザー ライセンスの条項に同意します。 このオプションは、すべて大文字で指定する必要があります。 例:  
   
 ```  
 msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES ADDLOCAL=ALL  
@@ -76,7 +76,7 @@ msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES AD
 msiexec /quiet /passive /qn /uninstall msodbcsql.msi  
 ```  
   
-アプリケーションでは、ドライバーを使用する場合、`APPGUID` インストール オプションを使ってドライバーに依存していることを示す必要があります。 これにより、ドライバーのインストーラーは、アンインストールの前に依存するアプリケーションに通知できます。 ドライバーの依存関係を指定するには、ドライバーのサイレント インストールを行うときに `APPGUID` コマンド ライン パラメーターをご利用の製品コードに設定します  (Microsoft インストーラーを使用してアプリケーションのセットアップ プログラムをバンドルするときは、製品コードを作成する必要があります)。例 :  
+アプリケーションでは、ドライバーを使用する場合、`APPGUID` インストール オプションを使ってドライバーに依存していることを示す必要があります。 これにより、ドライバーのインストーラーは、アンインストールの前に依存するアプリケーションに通知できます。 ドライバーの依存関係を指定するには、ドライバーのサイレント インストールを行うときに `APPGUID` コマンド ライン パラメーターをご利用の製品コードに設定します (Microsoft インストーラーを使用してアプリケーションのセットアップ プログラムをバンドルするときは、製品コードを作成する必要があります)。例:  
   
 ```  
 msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }  

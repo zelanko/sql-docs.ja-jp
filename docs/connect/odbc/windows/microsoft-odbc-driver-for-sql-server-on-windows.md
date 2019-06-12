@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 059c949b11c0cd571fdf3c6ff2575476c477ef04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 8c7dc2a48414d4ea9cc74d2672442e1a11b7a50d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788079"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797753"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ Microsoft ODBC Driver for SQL Server を使用して、新しいアプリケー�
 
 ## <a name="summary"></a>[概要]
 
-| [バージョンのオプション]       | サポートされている機能      |
+| バージョン       | サポートされている機能      |
 | ------------- |---------------| 
 | Microsoft ODBC Driver 17 for SQL Server | <ul><li>BCP API の Always Encrypted サポート</li><li>新しい接続文字列属性 UseFMTONLY により、一時テーブルを必要とする特別なケースで以前のメタデータがドライバーで使用されます</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>AlwaysOn 可用性グループ (AG)</li></ul>   | 

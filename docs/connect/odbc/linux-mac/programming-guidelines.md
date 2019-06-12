@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042371"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798753"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -86,7 +86,7 @@ ODBC Driver 17 の場合、次のいずれかの文字セット/エンコード�
 |CP949|韓国語、EUC-KR|
 |CP950|繁体字中国語、Big5|
 |CP1251|キリル文字|
-|CP1253|ギリシャ語|
+|CP1253|Greek|
 |CP1256|アラビア語|
 |CP1257|バルト語|
 |CP1258|ベトナム語|
@@ -98,7 +98,7 @@ ODBC Driver 17 の場合、次のいずれかの文字セット/エンコード�
 |ISO-8859-6|ラテン/アラビア語|
 |ISO-8859-7|ラテン/ギリシャ語|
 |ISO-8859-8 / CP1255|ヘブライ語|
-|ISO-8859-9 / CP1254|トルコ語|
+|ISO-8859-9 / CP1254|Turkish|
 |ISO-8859-13|ラテン-7|
 |ISO-8859-15|ラテン-9|
 

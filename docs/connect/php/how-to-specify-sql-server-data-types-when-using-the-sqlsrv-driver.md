@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce11cfca3416796f24299c722c65e755d64f4d4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d4727029dbb1ba4fbfdbdd10abf6b1cd0812790
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643850"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799658"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ SQL Server データ型を指定するには、データを挿入または更新
   
 3.  クエリを準備または実行するときに使用する *$params* 配列を構築します。 SQL Server データ型を指定するときに、 *$params* 配列の各要素も配列にする必要があります。  
   
-4.  目的の SQL Server データ型を指定するには、*$params* 配列の各サブ配列の 4 番目のパラメーターとして、適切な **SQLSRV_SQLTYPE_&#42;** 定数を使用します。 **SQLSRV_SQLTYPE_&#42;** 定数の完全な一覧については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」の SQLTYPE セクションを参照してください。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
+4.  目的の SQL Server データ型を指定するには、 *$params* 配列の各サブ配列の 4 番目のパラメーターとして、適切な **SQLSRV_SQLTYPE_&#42;** 定数を使用します。 **SQLSRV_SQLTYPE_&#42;** 定数の完全な一覧については、「[定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」の SQLTYPE セクションを参照してください。 たとえば、下のコードで、 *$changeDate*、 *$rate*、および *$payFrequency* は、 **$params**配列に、それぞれ SQL Server 型 **datetime**、 **money** 、および *tinyint* として指定されています。 *$employeeId* には SQL Server 型が指定されておらず、整数に初期化されているため、既定の SQL Server 型の **integer** が使用されます。  
   
     ```  
     $employeeId = 5;  

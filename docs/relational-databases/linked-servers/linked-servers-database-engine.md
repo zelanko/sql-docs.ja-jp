@@ -1,7 +1,7 @@
 ---
 title: リンク サーバー (データベース エンジン) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -20,16 +20,24 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f9e1a278e51c2ace53932fcc48ef3759baa307d
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512727"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354372"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスの外に存在する OLE DB データ ソースに対し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からコマンドを実行できるようにするには、リンク サーバーを構成します。 通常、リンク サーバーを構成する目的は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスまたは別のデータベース製品 (Oracle など) のテーブルを含んだ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から実行できるようにすることです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] の Access や Excel など、さまざまな種類の OLE DB データ ソースをリンク サーバーとして構成できます。 リンク サーバーには次の利点があります。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+  リンク サーバーを使用すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) では、リモート データ ソースからデータを読み取ったり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの外部にあるリモート データベース サーバー (たとえば、OLE DB データ ソース) に対してコマンドを実行することができます。 通常、リンク サーバーを構成する目的は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスまたは別のデータベース製品 (Oracle など) のテーブルを含んだ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から実行できるようにすることです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel、Azure CosmosDB など、さまざまな種類の OLE DB データ ソースをリンク サーバーとして構成できます。
+
+> [!NOTE]
+> リンク サーバーは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および Azure SQL Database Managed Instance で使用できます。 Azure SQL Database シングルトンおよびエラスティック プールでは使用できません。 [Managed Instance には、ここに示されるいくつかの制限](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers)があります。 
+
+## <a name="when-to-use-linked-servers"></a>リンク サーバーを使用する場合
+
+  リンク サーバーを使用すると、他のデータベース内のデータをフェッチおよび更新できる分散データベースを実装することができます。 これらは、カスタム アプリケーション コードを作成したりリモート データ ソースから直接読み込むことなく、データベース シャーディングを実装する必要があるシナリオで適切なソリューションです。 リンク サーバーには次の利点があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部のデータにアクセスできる。  
   
@@ -48,7 +56,7 @@ ms.locfileid: "51512727"
   
 *OLE DB プロバイダー* は、特定のデータ ソースを管理し、相互運用する DLL です。 *OLE DB データ ソース* は、OLE DB を使用してアクセスできる特定のデータベースを識別します。 リンク サーバーの定義を使用してクエリが行われるデータ ソースは通常はデータベースですが、さまざまなファイルやファイル形式用の OLE DB プロバイダーが存在します。 これには、テキスト ファイル、ワークシートのデータ、およびフルテキスト検索の結果が含まれます。  
   
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー (PROGID: SQLNCLI11) は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の公式の OLE DB プロバイダーです。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー (PROGID: SQLNCLI11) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用の公式の OLE DB プロバイダーです。  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散クエリは、必要な OLE DB インターフェイスを実装しているすべての OLE DB プロバイダーで処理できるように設計されています。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーなど、特定のプロバイダーに対してのみテストが行われています。  
@@ -82,7 +90,7 @@ ms.locfileid: "51512727"
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、リンク サーバーを定義することもできます。 オブジェクト エクスプローラーで **[サーバー オブジェクト]** を右クリックし、 **[新規作成]** をポイントして、 **[リンク サーバー]** をクリックします。 リンク サーバー名を右クリックして **[削除]** をクリックすると、リンク サーバーの定義を削除できます。  
   
- リンク サーバーに対して分散クエリを実行する場合は、クエリを実行するデータ ソースごとに 4 つの部分で構成される完全修飾テーブル名を指定します。 この 4 つの部分で構成される名前は、<_リンク サーバー名>.<カタログ_>**.**<_スキーマ_>**.**<_オブジェクト名_> という形式にする必要があります。  
+ リンク サーバーに対して分散クエリを実行する場合は、クエリを実行するデータ ソースごとに 4 つの部分で構成される完全修飾テーブル名を指定します。 この 4 つの部分で構成される名前は、<_リンク サーバー名>.<カタログ_> **.** <_スキーマ_> **.** <_オブジェクト名_> という形式にする必要があります。  
   
 > [!NOTE]  
 > リンク サーバーは、どのサーバーで定義されたかを示す (ループ バックする) ように定義することができます。 ループバック サーバーは、単一のサーバー ネットワークで分散クエリを使用するアプリケーションをテストする際に最も有効です。 ループバック リンク サーバーはテスト用であり、分散トランザクションなどの多くの操作ではサポートされていません。  

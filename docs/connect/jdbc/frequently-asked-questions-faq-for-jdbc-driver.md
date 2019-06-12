@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c60b0c86d1356dd4d15d2854184d0116316b823c
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: bebfb6270d334305ae5684d7cca0c9e6571217e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671258"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781825"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver のよくあるご質問 (FAQ)
 
@@ -98,7 +98,7 @@ JDBC Driver 4.1、4.2、6.0、6.2、6.4、および 7.0 を再配布できます
 
 |             |                                       |
 | ----------- | ------------------------------------- |
-| プラットフォーム    | 認証                        |
+| プラットフォーム    | [認証]                        |
 | Windows 以外 | ピュア Java Kerberos                    |
 | Windows 以外 | SQL Server                            |
 | Windows 以外 | Azure Active Directory 認証 |
@@ -109,7 +109,7 @@ JDBC Driver 4.1、4.2、6.0、6.2、6.4、および 7.0 を再配布できます
 | Windows     | Azure Active Directory 認証 |
 
 **ドライバーは、インターネット プロトコル バージョン 6 (IPv6) のアドレスをサポートしていますか。**  
-はい。 ドライバーでは、IPv6 アドレスの使用がサポートされます。 接続プロパティのコレクションと serverName 接続文字列のプロパティを使用します。 詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」をご覧ください。
+可能。 ドライバーでは、IPv6 アドレスの使用がサポートされます。 接続プロパティのコレクションと serverName 接続文字列のプロパティを使用します。 詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」をご覧ください。
 
 **アダプティブ バッファリングとは何ですか。**  
 アダプティブ バッファリングは、Microsoft SQL Server 2005 JDBC Driver バージョン 1.2 から導入されました。 これは、サーバー カーソルのオーバーヘッドを発生させることなく、あらゆる種類の大きな値のデータを取得できるように設計されています。 Microsoft SQL Server JDBC Driver のアダプティブ バッファリング機能には接続文字列プロパティ responseBuffering があり、これを "adaptive" または "full" に設定できます。 バージョン 1.2 リリースでは、"full" が既定のバッファリング モードであるため、アプリケーションから明示的にアダプティブ バッファリング モードを設定する必要があります。 JDBC Driver 2.0 以降では、ドライバーの既定の動作は "adaptive" です。 したがって、アプリケーションから明示的に要求しなくても、アダプティブ バッファリングの動作が適用されます。 詳細については、「[アダプティブ バッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)」とブログ「[What is adaptiveresponse buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575)」 (アダプティブ レスポンス バッファリングの概要とこれを使用する理由) を参照してください。
