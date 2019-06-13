@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583225"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033394"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>クイック スタート: 入力と出力を SQL Server での Python の使用を処理します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 既定値を見てみましょう sp_execute_external_script の入力と出力の変数:`InputDataSet`と`OutputDataSet`します。
 
-1. R スクリプトの入力としてテーブルからデータを取得できます。 次のステートメントを実行します。 テーブルからデータを取得、R ランタイムのラウンド トリップ、および列の名前で値を返します*NewColName*します。
+1. Python スクリプトへの入力としてテーブルからデータを取得できます。 次のステートメントを実行します。 テーブルからデータを取得、ラウンド トリップを Python ランタイム、および列の名前で値を返します*NewColName*します。
 
-    クエリによって返されるデータは、データ フレームとして SQL Database にデータを返す R ランタイムに渡されます。 WITH RESULT SETS 句では、SQL Database の返されたデータ テーブルのスキーマを定義します。
+    クエリによって返されるデータは、pandas データ フレームとして SQL Database にデータを返す Python ランタイムに渡されます。 WITH RESULT SETS 句では、SQL Database の返されたデータ テーブルのスキーマを定義します。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ SELECT * FROM PythonTestData
 
     ![テーブルからデータを返す Python スクリプトの出力](./media/python-output-pythontestdata.png)
 
-2. 入力または出力変数の名前を変更してみましょう。 上記のスクリプトは既定の入力を使用し、出力変数名は、 _InputDataSet_と_OutputDataSet_します。 関連付けられている入力データを定義する_InputDatSet_を使用する、 *@input_data_1*変数。
+2. 入力または出力変数の名前を変更してみましょう。 上記のスクリプトは既定の入力を使用し、出力変数名は、 _InputDataSet_と_OutputDataSet_します。 関連付けられている入力データを定義する_InputDataSet_を使用する、 *@input_data_1* 変数。
 
     このスクリプトでは、ストアド プロシージャの出力と入力変数の名前に変更されましたが*SQL_out*と*SQL_in*:
 
@@ -92,7 +92,7 @@ SELECT * FROM PythonTestData
 
     `WITH RESULT SETS`ステートメントは、SQL Server で使用されるデータのスキーマを定義します。 Python から返す列ごとに SQL 互換のデータ型を提供する必要があります。 スキーマ定義を使用して、新しい列名を提供する Python data.frame の列名を使用する必要はありませんので。
 
-3. Python スクリプトを使用して値を生成し、入力クエリ文字列のままにできますも_@input_data_1_空白。
+3. Python スクリプトを使用して値を生成し、入力クエリ文字列のままにできますも _@input_data_1_ 空白。
 
     ```sql
     EXECUTE sp_execute_external_script
