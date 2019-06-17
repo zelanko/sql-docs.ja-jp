@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63243791"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS フォワーダーを使用して、Analytics Platform System で非アプライアンス DNS 名を解決するのには
@@ -66,7 +66,7 @@ Microsoft パブリック WSUS リポジトリで更新プログラムを検索�
   
 3.  [接続の一覧で**VMSEthernet**、] をクリックし、**プロパティ**します。  
   
-4.  選択**インターネット プロトコル バージョン 4 (Tcp/ipv4)**、 をクリックし、**プロパティ**します。  
+4.  選択**インターネット プロトコル バージョン 4 (Tcp/ipv4)** 、 をクリックし、**プロパティ**します。  
   
 5.  **代替 DNS サーバー**ボックスで、顧客のネットワーク管理者によって提供される IP アドレスを追加します。  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1151b2e4cd8c51caca3bae4d97e9d616720fda0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481282"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
@@ -70,7 +70,7 @@ ms.locfileid: "65481282"
   
 |操作|説明|関連トピック|  
 |------------|-----------------|--------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを実行する|DQSInstaller.exe ファイルを実行します。 DQSInstaller.exe ファイルを実行すると、次の操作が行われます。<br /><br /> DQS_MAIN, DQS_PROJECTS, および DQS_STAGING_DATA データベースが作成されます。<br /><br /> ##MS_dqs_db_owner_login## ログインと ##MS_dqs_service_login## ログインが作成されます。<br /><br /> DQS_MAIN データベースに dqs_administrator, dqs_kb_editor ロールと dqs_kb_operator ロールが作成されます。<br /><br /> DQInitDQS_MAIN ストアド プロシージャがマスター データベースに作成されます。<br /><br /> DQS_install.log ファイルは通常 C:\Program files \microsoft の SQL Server\MSSQL12 で作成されます。*< Instance_name >* \MSSQL\Log フォルダー。 このファイルには、DQSInstaller.exe ファイルの実行時に行われた操作に関する情報が含まれます。<br /><br /> マスター データ サービス データベースが [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]と同じ SQL Server インスタンス上に存在する場合は、マスター データ サービス ログインにマップされたユーザーが作成され、DQS_MAIN データベースに対する dqs_administrator ロールが付与されます。<br /><br /> <br /><br /> これにより [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールが完了します。|[DQS サーバーのインストールを完了するための DQSInstaller.exe の実行](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを実行する|DQSInstaller.exe ファイルを実行します。 DQSInstaller.exe ファイルを実行すると、次の操作が行われます。<br /><br /> DQS_MAIN, DQS_PROJECTS, および DQS_STAGING_DATA データベースが作成されます。<br /><br /> ##MS_dqs_db_owner_login## ログインと ##MS_dqs_service_login## ログインが作成されます。<br /><br /> DQS_MAIN データベースに dqs_administrator, dqs_kb_editor ロールと dqs_kb_operator ロールが作成されます。<br /><br /> DQInitDQS_MAIN ストアド プロシージャがマスター データベースに作成されます。<br /><br /> DQS_install.log ファイルは通常 C:\Program files \microsoft の SQL Server\MSSQL12 で作成されます。 *< Instance_name >* \MSSQL\Log フォルダー。 このファイルには、DQSInstaller.exe ファイルの実行時に行われた操作に関する情報が含まれます。<br /><br /> マスター データ サービス データベースが [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]と同じ SQL Server インスタンス上に存在する場合は、マスター データ サービス ログインにマップされたユーザーが作成され、DQS_MAIN データベースに対する dqs_administrator ロールが付与されます。<br /><br /> <br /><br /> これにより [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールが完了します。|[DQS サーバーのインストールを完了するための DQSInstaller.exe の実行](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
 |ユーザーに DQS ロールを付与する|ログオンする[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]を使用して[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]、ユーザーは、DQS_MAIN データベースに対する次の 3 つのロールのいずれかをいる必要があります: **dqs_administrator**、 **dqs_kb_editor**、または**dqs_kb_演算子**します。 既定では、ユーザー アカウントが sysadmin 固定サーバー ロールのメンバーである場合、DQS ロールがユーザー アカウントに付与されていない場合でも [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] を使用して [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] にログオンできます。 3 つの DQS ロールの詳細については、「 [DQS のセキュリティ](../dqs-security.md)」を参照してください。<br /><br /> 注:DQS_PROJECTS および DQS_STAGING_DATA データベースについては、3 つの DQS ロールは使用できません。|[ユーザーに DQS ロールを付与する](grant-dqs-roles-to-users.md)|  
 |データに対する DQS 操作を可能にする|ソース データにアクセスして DQS 操作を実行できることと、処理後のデータをデータベース内のテーブルにエクスポートできることを確認します。|[DQS 操作のためのデータへのアクセス](access-data-for-the-dqs-operations.md)|  
   

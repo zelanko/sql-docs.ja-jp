@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ccdd085b4beb757e0f16e973ad02c9e27a3dafb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107108"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI の接続の種類 (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66107108"
   
 -   SAP Portals 6.40 サポート パッケージ 20  
   
--   7.0 のポータル サポート パッケージ 11 を SAP します。  
+-   7\.0 のポータル サポート パッケージ 11 を SAP します。  
   
 -   SAP Duet 1.0  
   
@@ -108,7 +108,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|レベルのキーを返します。|  
 |`LevelNumber`|`Integer`|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
 |`ParentUniqueName`|`String`|親子階層の場合は、親レベルの完全修飾名を返します。|  
-|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、`UniqueName`従業員の値は *[0D_Company]. [10D_Department]。[11]*.|  
+|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、`UniqueName`従業員の値は *[0D_Company]. [10D_Department]。[11]* .|  
   
  フィールドおよびフィールド プロパティを式で使用する方法について詳しくは、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」をご覧ください。  
   

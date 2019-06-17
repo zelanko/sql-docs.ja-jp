@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779032"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>[フルテキスト インデックスのプロパティ] ([スケジュール] ページ)
@@ -45,7 +45,7 @@ ms.locfileid: "62779032"
  **[新規作成]**  
  フルテキスト インデックスの作成スケジュールを新規作成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フルテキスト インデックス作成ウィザードを使用してください。](../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [フルテキスト インデックスの作成](../relational-databases/search/populate-full-text-indexes.md)  
   

@@ -23,10 +23,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02f1d456e7b2e6849bd179a4cb42d862e3d06d03
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725138"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (TRANSACT-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "65725138"
 |**max_plans_per_query**|**bigint**|ストアド プランの最大数を制限します。 既定値は**200**します。 最大値に達すると、クエリ ストアは、そのクエリの新しいプランをキャプチャを停止します。 0 に設定には、キャプチャしたプランの数に関して制限が削除されます。<br /><br /> 使用して、変更、`ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)`ステートメント。|  
 |**query_capture_mode**|**smallint**|現在アクティブなクエリ キャプチャ モード:<br /><br /> **1** = すべて - すべてのクエリがキャプチャされます。 これは、既定の構成値 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 2 = 自動 - 実行の数とリソースの消費量に基づいて関連するクエリをキャプチャします。 これは、既定の構成値の[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]します。<br /><br /> 3 = なし - 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリのキャプチャされない可能性がありますので、この構成を注意深く使用します。|  
 |**query_capture_mode_desc**|**nvarchar(60)**|クエリ ストアの実際のキャプチャ モードの説明テキスト。<br /><br /> すべて (既定値を[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> **自動**(既定値を[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> なし|  
-|**size_based_cleanup_mode**|**smallint**|かどうかのクリーンアップが自動的にアクティブ化最大サイズに近いデータの総量を取得したときを制御します。<br /><br /> 0 = OFF - サイズに基づくクリーンアップを自動的にアクティブ化されません。<br /><br /> **1** = 自動 - サイズに基づくクリーンアップはディスク上のサイズに達すると自動的にアクティブ**90%** の*max_storage_size_mb*します。 これは既定の構成値です。<br /><br />サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 約停止した**80%** の*max_storage_size_mb*に到達します。|  
+|**size_based_cleanup_mode**|**smallint**|データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。<br /><br /> 0 = OFF - サイズに基づくクリーンアップを自動的にアクティブ化されません。<br /><br /> **1** = 自動 - サイズに基づくクリーンアップはディスク上のサイズに達すると自動的にアクティブ**90%** の*max_storage_size_mb*します。 これは既定の構成値です。<br /><br />サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 約停止した**80%** の*max_storage_size_mb*に到達します。|  
 |**size_based_cleanup_mode_desc**|**nvarchar(60)**|クエリ ストアの実際のサイズに基づくクリーンアップ モードの説明テキスト。<br /><br /> OFF <br /> **自動**(既定値)|  
 |**wait_stats_capture_mode**|**smallint**|クエリ ストア待機統計情報のキャプチャを実行するかどうかを制御します。 <br /><br /> 0 = OFF <br /> **1** = ON<br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|
 |**wait_stats_capture_mode_desc**|**nvarchar(60)**|実際の待機統計情報のキャプチャ モードの説明テキスト。 <br /><br /> OFF <br /> **ON** (既定値)<br /> **適用対象**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 

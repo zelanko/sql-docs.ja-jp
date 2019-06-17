@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078372"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>レッスン 8: 主要業績評価指標の作成
@@ -29,7 +29,7 @@ ms.locfileid: "66078372"
   
 #### <a name="to-create-an-internet-current-quarter-sales-performance-kpi"></a>Internet Current Quarter Sales Performance KPI を作成するには  
   
-1.  モデル デザイナーで、**[Internet Sales]** テーブル (タブ) をクリックします。  
+1.  モデル デザイナーで、 **[Internet Sales]** テーブル (タブ) をクリックします。  
   
 2.  メジャー グリッドで、空のセルをクリックします。  
   
@@ -41,11 +41,11 @@ ms.locfileid: "66078372"
   
      このメジャーは、KPI のベース メジャーとして機能します。  
   
-4.  メジャー グリッドで、 **Internet Current Quarter Sales Performance** メジャーを右クリックし、**[KPI の作成]** をクリックします。  
+4.  メジャー グリッドで、 **Internet Current Quarter Sales Performance** メジャーを右クリックし、 **[KPI の作成]** をクリックします。  
   
      **[主要業績評価指標]** ダイアログ ボックスが開きます。  
   
-5.  **[主要業績評価指標]** ダイアログ ボックスの **[ターゲット値の定義]** で、**[絶対値]** オプションを選択します。  
+5.  **[主要業績評価指標]** ダイアログ ボックスの **[ターゲット値の定義]** で、 **[絶対値]** オプションを選択します。  
   
 6.  **絶対値**フィールドに「 `1.1`、し、ENTER キーを押します。  
   
@@ -70,15 +70,15 @@ ms.locfileid: "66078372"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-3.  メジャー グリッドで、 **Internet Current Quarter Margin Performance** メジャーを右クリックし、**[KPI の作成]** をクリックします。  
+3.  メジャー グリッドで、 **Internet Current Quarter Margin Performance** メジャーを右クリックし、 **[KPI の作成]** をクリックします。  
   
-4.  **[主要業績評価指標]** ダイアログ ボックスの **[ターゲット値の定義]** で、**[絶対値]** オプションを選択します。  
+4.  **[主要業績評価指標]** ダイアログ ボックスの **[ターゲット値の定義]** で、 **[絶対値]** オプションを選択します。  
   
 5.  **絶対値**フィールドに「`1.25`します。  
   
 6.  **[ステータスのしきい値の定義]** で、左 (下) のスライダー フィールドをスライドして「 **0.8**」と表示させ、右 (上) のスライダー フィールドをスライドして「 **1.03**」と表示させます。  
   
-7.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、**[OK]** をクリックします。  
+7.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、 **[OK]** をクリックします。  
   
 ## <a name="next-step"></a>次の手順  
  このチュートリアルを続行するには、次のレッスンに移動します。[レッスン 9:パースペクティブを作成する](lesson-8-create-perspectives.md)します。  

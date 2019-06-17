@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 323f352ba3208ed0de7ec910df7e2b23105f2534
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488978"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>変更セットと承認 (Excel 用 MDS アドイン)
@@ -26,7 +26,7 @@ ms.locfileid: "65488978"
   
  エンティティの変更に承認が必要な場合は、保留中の変更を変更セットに保存して送信し、承認を受ける必要があります。 詳細については、「[承認が必要 (マスター データ サービス)](../../master-data-services/approval-required-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更セット (マスター データ サービス)](../../master-data-services/changesets-master-data-services.md)  
   
   

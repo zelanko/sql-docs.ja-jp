@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187930"
 ---
 # <a name="metadata-visibility-configuration"></a>メタデータ表示の構成
@@ -63,7 +63,7 @@ GO
   
 -   OBJECTPROPERTYEX などのメタデータ生成組み込み関数を実行すると、NULL 値が返されることがあります。  
   
--    [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** ストアド プロシージャを実行しても、行のサブセットまたは NULL 値しか返されないことがあります。  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** ストアド プロシージャを実行しても、行のサブセットまたは NULL 値しか返されないことがあります。  
   
  ストアド プロシージャやトリガーなどの SQL モジュールは、呼び出し元のセキュリティ コンテキストで実行されるので、メタデータへのアクセスが制限されます。 たとえば次のコードでは、ストアド プロシージャから、呼び出し元に権限のないテーブル `myTable` のメタデータへのアクセスが試行されると、空の結果セットが返されます。 以前のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では行が返されます。  
   
@@ -187,7 +187,7 @@ GO
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   

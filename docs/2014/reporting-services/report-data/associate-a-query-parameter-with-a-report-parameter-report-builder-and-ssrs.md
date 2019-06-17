@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 697a8bbfa77a8afcabfdf00deef93620ff607233
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107468"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>クエリ パラメーターのレポート パラメーターへの関連付け (レポート ビルダーおよび SSRS)
@@ -30,10 +30,10 @@ ms.locfileid: "66107468"
   
 ### <a name="to-associate-a-query-parameter-with-a-report-parameter"></a>クエリ パラメーターをレポート パラメーターに関連付けるには  
   
-1.  レポート データ ペインでデータセットを右クリックし、**[データセットのプロパティ]** をクリックして、**[パラメーター]** をクリックします。  
+1.  レポート データ ペインでデータセットを右クリックし、 **[データセットのプロパティ]** をクリックして、 **[パラメーター]** をクリックします。  
   
     > [!NOTE]  
-    >  レポート データ ペインが表示されていない場合は、**[表示]** メニューの **[レポート データ]** をクリックします。  
+    >  レポート データ ペインが表示されていない場合は、 **[表示]** メニューの **[レポート データ]** をクリックします。  
   
 2.  **[パラメーター名]** 列で、クエリ パラメーターの名前を探します。 パラメーター名は、クエリに基づいて自動的に設定されます。 クエリを変更するたびに、新しいクエリ パラメーターがチェックされます。 手動で作成したクエリ パラメーターは、クエリが変更されても変更されません。  
   

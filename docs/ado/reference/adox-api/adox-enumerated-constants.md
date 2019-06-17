@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d71009c7e4f2c9b717a41f10ca4dc8b9f815ad30
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66708427"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX の列挙定数
@@ -38,6 +38,6 @@ ms.locfileid: "66708427"
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|ときに従うルールを指定します、**キー**は削除されます。|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|インデックス付き列の並べ替え順序を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

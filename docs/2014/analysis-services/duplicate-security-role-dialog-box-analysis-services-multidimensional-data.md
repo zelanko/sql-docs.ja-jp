@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081496"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>[Analysis Services のセキュリティ ロールの複製] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -28,7 +28,7 @@ ms.locfileid: "66081496"
 |----------|----------------|  
 |**新しいロール名**|オブジェクト エクスプローラーで選択したロールと同じメンバーと権限で作成される、新しいロールの名前を入力します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [セキュリティ ロール (Analysis Services - 多次元データ)](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   

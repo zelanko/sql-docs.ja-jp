@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0aaa1be07dcd5857585e7db3dbd4a78a44d41ff3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659725"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>タイム シリーズ モデルの式の表示 (データ マイニング)
@@ -79,7 +79,7 @@ ms.locfileid: "62659725"
     > [!NOTE]  
     >  ARIMA モデルと ARTXP モデルの両方を使用する混在モデルのコンテンツを参照すると、2 つのモデルは別のツリーにあり、モデルを表すルート ノードで結合されています。 ARIMA モデルと ARTXP モデルは便宜上 1 つのビューアーで表示されますが、式と同様に構造はまったく異なり、結合も比較もできません。 ARTXP ツリーはデシジョン ツリーにより近く、ARIMA ツリーは一連の移動平均を表します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   

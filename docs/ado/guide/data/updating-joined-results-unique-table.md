@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 56c7e93af35f312dbcd2c8229cc01a6ac8ee3605
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699903"
 ---
 # <a name="updating-joined-results-unique-table"></a>JOINed の結果の更新: Unique Table
 ADO では、一意テーブルの動的プロパティを使用して複数のベース テーブルに対して結合操作をで形成されたレコード セット内の特定のベース テーブルに密接にコントロール変更できます。 一意テーブルの使用に関する詳細については、一意のテーブルと更新プログラムが再同期の動的プロパティを ADO プログラマー リファレンス トピックを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バッチ モード](../../../ado/guide/data/batch-mode.md)

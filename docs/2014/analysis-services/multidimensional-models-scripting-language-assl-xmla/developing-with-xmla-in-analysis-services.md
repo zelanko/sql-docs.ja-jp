@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00cb50fe4c71ad853e88ebd86b0891ca4bc24604
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727236"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Analysis Services での XMLA による開発
@@ -60,7 +60,7 @@ ms.locfileid: "62727236"
 ## <a name="namespace-and-schema"></a>名前空間とスキーマ  
   
 ### <a name="namespace"></a>Namespace  
- この仕様で定義されたスキーマが XML 名前空間を使用して https://schemas.microsoft.com/AnalysisServices/2003/Engineと標準の省略形"DDL"にします。  
+ この仕様で定義されたスキーマが XML 名前空間を使用して https://schemas.microsoft.com/AnalysisServices/2003/Engine と標準の省略形"DDL"にします。  
   
 ### <a name="schema"></a>スキーマ  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義言語の XML Schema Definition Language (XSD) スキーマの定義は、このセクションのスキーマ要素および階層の定義に基づいています。  

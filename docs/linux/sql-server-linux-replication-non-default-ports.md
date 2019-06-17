@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4fd7c819af4c700af17a4b85fad2a4cc75e3e820
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705135"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>既定以外のポートでレプリケーションを構成します。
@@ -35,7 +35,7 @@ Network.tcpport mssql conf の設定で構成した任意のポートでリッ�
 exec sp_adddistributor @distributor = 'Server1,1500'
 ```
 
-'Server1' は、Linux 上のポート 1500 でリッスンします。 ディストリビューターのパブリッシャーを構成するには、次のように実行します。`sp_adddistpublisher`で`@publisher`します。 以下に例を示します。
+'Server1' は、Linux 上のポート 1500 でリッスンします。 ディストリビューターのパブリッシャーを構成するには、次のように実行します。`sp_adddistpublisher`で`@publisher`します。 例 :
 
 ```sql
 exec sp_adddistpublisher @publisher = 'Server1,1500' ,  ,  
@@ -47,7 +47,7 @@ exec sp_adddistpublisher @publisher = 'Server1,1500' ,  ,
 exec sp_addsubscription @subscriber = 'Server2,6549' ,  ,  
 ```
 
-'Server3' は、Server3 のサーバー名とインスタンス名 MSSQL2017 の Windows 上のポート 6549 でリッスンします。 'Server3' をサブスクライバーとして構成するには、実行、`sp_addsubscription`で`@subscriber`します。 例 :
+'Server3' は、Server3 のサーバー名とインスタンス名 MSSQL2017 の Windows 上のポート 6549 でリッスンします。 'Server3' をサブスクライバーとして構成するには、実行、`sp_addsubscription`で`@subscriber`します。 以下に例を示します。
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  

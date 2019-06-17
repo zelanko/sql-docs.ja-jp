@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068659"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>[テーブルの表示] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -41,7 +41,7 @@ ms.locfileid: "66068659"
  **[フィルター]**  
  表示するオブジェクトを限定するために使用するフィルターを入力した後、ボタンをクリックすると、 **[他に表示するテーブルを選択します。]** に表示されるテーブルがフィルター選択されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [データ ソース ビュー&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [データ ソース ビュー&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  

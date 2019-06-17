@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e0c4f543f349d166962e65ea91338595d25308ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800960"
 ---
 # <a name="mssqlctl-cluster-config-section"></a>mssqlctl クラスターの構成セクション
@@ -46,7 +46,7 @@ mssqlctl cluster config section show --config-file custom-config.json  --json-pa
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--json-path -j`
-構成ファイル、つまり key1.key2.key3 から目的の値のセクションに出ている json のキー パス。 Jsonpath クエリ言語を使用して https://github.com/h2non/jsonpath-ng、たとえば:-j ' $spec.pools [でしょうか。 (。@.spec.type "Master"= =)].エンドポイント
+構成ファイル、つまり key1.key2.key3 から目的の値のセクションに出ている json のキー パス。 Jsonpath クエリ言語を使用して https://github.com/h2non/jsonpath-ng 、たとえば:-j ' $spec.pools [でしょうか。 (。@.spec.type "Master"= =)].エンドポイント
 #### `--config-file -c`
 クラスター構成ファイルのパス。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
@@ -113,7 +113,7 @@ mssqlctl cluster config section set --config-file custom-config.json --patch ./p
 #### `--json-values -j`
 値 json パスのキーと値のペアの一覧: key1.subkey1=value1,key2.subkey2=value2 します。 インライン化する json 値など: キー ='{「種類」:「クラスター、」"name":"test cluster"}' または key=./values.json などのファイル パスを指定します。 条件文を必要とする値を設定する場合は、$ でパスを開始することで、jsonpath 表記を使用してください。 これができるように、$-j などの条件付きの操作を行います key1.key2 [でしょうか。 (。@.key3'someValue' = =] .key4 = 値。 次の例を参照してください可能性があります。 追加のヘルプを参照してください。 https://jsonpath.com/
 #### `--patch-file -p`
-Jsonpatch ライブラリに基づく修正プログラムの json ファイルへのパス:http://jsonpatch.com/します。 "Patch"、値が patch 操作をする場合の配列と呼ばれるキーを使用して、修正プログラムの json ファイルを開始する必要があります。 Patch 操作のパス、key1.key2 ほとんどの操作など、ドット表記を使用することがあります。 置換の操作を実行するには、条件文を必要となる配列の値を置換する場合は、$ でパスを開始することで、jsonpath 表記を使用してください。 これができるように、$ などの条件付きの操作を行います key1.key2 [でしょうか。 (。@.key3'someValue' = =] .key4 します。 次の例を参照してください。 追加のヘルプを参照してください:https://jsonpath.com/します。
+Jsonpatch ライブラリに基づく修正プログラムの json ファイルへのパス: http://jsonpatch.com/ します。 "Patch"、値が patch 操作をする場合の配列と呼ばれるキーを使用して、修正プログラムの json ファイルを開始する必要があります。 Patch 操作のパス、key1.key2 ほとんどの操作など、ドット表記を使用することがあります。 置換の操作を実行するには、条件文を必要となる配列の値を置換する場合は、$ でパスを開始することで、jsonpath 表記を使用してください。 これができるように、$ などの条件付きの操作を行います key1.key2 [でしょうか。 (。@.key3'someValue' = =] .key4 します。 次の例を参照してください。 追加のヘルプを参照してください: https://jsonpath.com/ します。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するログの詳細度を向上します。

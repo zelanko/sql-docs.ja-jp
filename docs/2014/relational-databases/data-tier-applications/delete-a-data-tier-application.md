@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872721"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
   データ層アプリケーションの削除ウィザードまたは Windows PowerShell スクリプトを使用して、データ層アプリケーションを削除できます。 関連付けられたデータベースの保持、デタッチ、または削除を指定することができます。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **DAC のアップグレード:**[データ層アプリケーションの登録ウィザードの使用](#UsingDeleteDACWizard)、[PowerShell の使用](#DeleteDACPowerShell)  
+-   **DAC のアップグレード:** [データ層アプリケーションの登録ウィザードの使用](#UsingDeleteDACWizard)、[PowerShell の使用](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
  データ層アプリケーション (DAC) インスタンスを削除する場合、3 つのオプションのいずれかを選択して、データ層アプリケーションに関連付けられたデータベースの処理を指定します。 どのオプションを選択した場合も、DAC 定義のメタデータが削除されます。 各オプションは、データ層アプリケーションに関連付けられたデータベースの処理方法が異なります。 DAC またはデータベースに関連付けられたインスタンスレベルのオブジェクト (ログインなど) が、ウィザードによって削除されることはありません。  
@@ -67,7 +67,7 @@ ms.locfileid: "62872721"
   
 3.  **[データ層アプリケーション]** ノードを展開します。  
   
-4.  削除する DAC を右クリックし、**[データ層アプリケーションの削除]** をクリックします。  
+4.  削除する DAC を右クリックし、 **[データ層アプリケーションの削除]** をクリックします。  
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62872721"
   
  **[次回からこのページを表示しない]** : 今後このページを表示しないようにするには、このチェック ボックスをオンにします。  
   
- **[次へ >]**: **[方法の選択]** ページに進みます。  
+ **[次へ >]** : **[方法の選択]** ページに進みます。  
   
  **[キャンセル]** : データ層アプリケーションもデータベースも削除することなくウィザードを終了します。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62872721"
   
  **\< [戻る]** : **方法の選択** ページに戻り、別の削除方法を選択します。  
   
- **[次へ >]**: 前のページで選択した方法で DAC インスタンスを削除して、**[データ層アプリケーションの削除]** ページに進みます。  
+ **[次へ >]** : 前のページで選択した方法で DAC インスタンスを削除して、 **[データ層アプリケーションの削除]** ページに進みます。  
   
  **[キャンセル]** : DAC インスタンスを削除することなくウィザードを終了します。  
   
@@ -218,7 +218,7 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データ層アプリケーション]](data-tier-applications.md)   
  [[データ層アプリケーション]](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)   

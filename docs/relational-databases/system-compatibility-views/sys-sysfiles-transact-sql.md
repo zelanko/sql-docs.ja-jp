@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c2c139a914b511ab7ee80a0fdd180bab5654205a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047144"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (TRANSACT-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "63047144"
 |**growth**|**int**|データベースのサイズを増加します。 いずれかのページ数またはの値に応じて、ファイル サイズの割合を指定できます**状態**します。<br /><br /> 0 = ファイル サイズが拡張しないことを表します。|  
 |**status**|**int**|ステータス ビットです、**成長**メガバイト (MB) またはキロバイト (KB) のいずれかの値。<br /><br /> 0x2 = ディスク ファイル。<br /><br /> 0x40 = ログ ファイル。<br /><br /> 0x100000 = 拡張します。 この値は、割合とページ数ではありません。|  
 |**perf**|**int**|予約済み。|  
-|**name**|**sysname**|ファイルの論理名。|  
+|**name**|**sysname**|ファイルの論理名です。|  
 |**filename**|**nvarchar(260)**|物理デバイスの名前です。 これには、ファイルの完全なパスが含まれます。|  
   
 ## <a name="see-also"></a>参照  

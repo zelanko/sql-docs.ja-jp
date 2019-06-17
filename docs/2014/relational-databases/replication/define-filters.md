@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7b82b3450727d36a36186453e366625ebecbde2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721394"
 ---
 # <a name="define-filters"></a>[フィルターの定義]
@@ -26,7 +26,7 @@ ms.locfileid: "62721394"
   
 ## <a name="options"></a>および  
  **[演算子]**  
- フィルターで使用する演算子 (たとえば、 **[次の値以下]**) を選択します。  
+ フィルターで使用する演算子 (たとえば、 **[次の値以下]** ) を選択します。  
   
  **ReplTest1**  
  フィルターの値を入力します。 ほとんどの演算子は 1 番目の **[値]** 列に値を入力するだけで済みますが、 **[次の値の間]** と **[次の値の範囲外]** の操作は、2 つの **[値]** 列に値を入力する必要があります。  

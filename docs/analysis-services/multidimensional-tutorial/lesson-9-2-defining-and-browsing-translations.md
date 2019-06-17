@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dfa0021eb23620c4950949094e661f100aa4ac6f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403484"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>レッスン 9-2-定義と翻訳の表示
@@ -41,13 +41,13 @@ ms.locfileid: "65403484"
   
     新しい言語列が表示されるので、フランス語の翻訳をその列で定義します。  
   
-5.  **Date** ディメンションの **Caption** オブジェクトの行で、**[スペイン語 (スペイン)]** 翻訳列に「**Fecha**」と入力し、**[フランス語 (フランス)]** 翻訳列に「**Temps**」と入力します。  
+5.  **Date** ディメンションの **Caption** オブジェクトの行で、 **[スペイン語 (スペイン)]** 翻訳列に「**Fecha**」と入力し、 **[フランス語 (フランス)]** 翻訳列に「**Temps**」と入力します。  
   
 6.  **Month Name** 属性の **Caption** オブジェクトの行で、 **[スペイン語 (スペイン)]** 翻訳列に「 **Mes del Año** 」と入力し、 **[フランス語 (フランス)]** 翻訳列に「 **Mois d'Année** 」と入力します。  
   
-    これらの翻訳を省略記号を入力すると (**.**) が表示されます。 この参照ボタンをクリックすると、属性階層の各メンバーの翻訳を入力する基になるテーブルの列を指定できます。  
+    これらの翻訳を省略記号を入力すると ( **.** ) が表示されます。 この参照ボタンをクリックすると、属性階層の各メンバーの翻訳を入力する基になるテーブルの列を指定できます。  
   
-7.  省略記号をクリックします (**.**) の**スペイン語 (スペイン)** の翻訳、 **Month Name**属性。  
+7.  省略記号をクリックします ( **.** ) の**スペイン語 (スペイン)** の翻訳、 **Month Name**属性。  
   
     **[属性データの翻訳]** ダイアログ ボックスが表示されます。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65403484"
   
     ![属性データの翻訳 ダイアログ ボックス](../media/l9-translations-4.gif "属性データの翻訳 ダイアログ ボックス")  
   
-9. をクリックして**OK**、クリックして、省略記号 (**...**) の**フランス語 (フランス)** の翻訳、 **Month Name**属性。  
+9. をクリックして**OK**、クリックして、省略記号 ( **...** ) の**フランス語 (フランス)** の翻訳、 **Month Name**属性。  
   
 10. **[翻訳列]** ボックスの一覧で **[FrenchMonthName]** をクリックして、 **[OK]** をクリックします。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65403484"
   
 6.  メタデータ ペインで、 **[Cantidad de las Ventas del Internet]** を右クリックし、 **[クエリに追加]** をクリックします。  
   
-7.  メタデータ ペインで、 **[Fecha]**、 **[Fecha.Calendar Date]** の順に展開し、 **[Fecha.Calendar Date]** を右クリックして、 **[フィルターに追加]** をクリックします。  
+7.  メタデータ ペインで、 **[Fecha]** 、 **[Fecha.Calendar Date]** の順に展開し、 **[Fecha.Calendar Date]** を右クリックして、 **[フィルターに追加]** をクリックします。  
   
 8.  **フィルター** ペインで、フィルター式として **[CY 2007]** を選択します。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "65403484"
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 10:管理ロールの定義](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Dimension Translations](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
 [キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)  
 [Analysis Services での翻訳のサポート](../translation-support-in-analysis-services.md)  

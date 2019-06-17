@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7b3c15af012675bfccecad7e8f74f99882fed11
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480832"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS のナレッジ ベースとドメイン
@@ -65,7 +65,7 @@ ms.locfileid: "65480832"
 ### <a name="case-insensitivity-in-dqs"></a>DQS での大文字と小文字の区別  
  DQS では、値の大文字と小文字は区別されません。 つまり、DQS は、ナレッジ検出、ドメイン管理、または照合を実行するとき、大文字と小文字で値を区別しません。 値の管理で大文字と小文字の使い分けだけが異なる複数の値を追加した場合、それらは同じ値と見なされ、シノニムとは見なされません。 大文字と小文字の使い分けだけが異なる 2 つの値を照合プロセスで比較した場合、それらは完全に一致しているものと見なされます。  
   
- ただし、クレンジングの結果でエクスポートする値では、大文字と小文字を制御できます。 そのためには、**[形式の出力先]** ドメイン プロパティを設定し (「[ドメインのプロパティの設定](../../2014/data-quality-services/set-domain-properties.md)」を参照)、クレンジング結果をエクスポートするときに **[出力の標準化]** チェック ボックスを使います (「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」を参照)。  
+ ただし、クレンジングの結果でエクスポートする値では、大文字と小文字を制御できます。 そのためには、 **[形式の出力先]** ドメイン プロパティを設定し (「[ドメインのプロパティの設定](../../2014/data-quality-services/set-domain-properties.md)」を参照)、クレンジング結果をエクスポートするときに **[出力の標準化]** チェック ボックスを使います (「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」を参照)。  
   
 ##  <a name="Domains"></a> ドメインの管理  
  データ スチュワードはドメイン管理で、コンピューター支援型のナレッジ検出アクティビティによって生成されたメタデータを、対話形式で変更および拡張できます。 各変更はナレッジ ベースのドメインに対して行われます。 ドメイン管理アクティビティでは、次の操作を実行できます。  

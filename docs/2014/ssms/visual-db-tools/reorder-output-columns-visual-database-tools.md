@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63063068"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>列の出力順の変更 (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "63063068"
   
 2.  行セレクター ボタンにポインターを置き、行を新しい場所にドラッグします。  
   
-     - または -  
+     \- または -  
   
      [SQL ペイン](sql-pane-visual-database-tools.md)で列名の順序を編集します。  
   

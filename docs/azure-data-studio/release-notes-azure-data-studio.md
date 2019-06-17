@@ -12,10 +12,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
 ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798094"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
@@ -88,7 +88,7 @@ ms.locfileid: "66798094"
 
 | [変更] | 詳細 |
 | :----- | :------ |
-| 1.5.1 で発見されたいくつかの問題を修正しました。 | 参照してください[GitHub の修正プログラムのリリースでは、年 3 月](https://github.com/Microsoft/azuredatastudio/milestone/28)します。<br/> <br/>&bull; &nbsp; ユーザーとダッシュ ボードに「ノートブックを開く」のタスクから開かれた notebook が終了できなかった問題を修正しました <br/>&bull; &nbsp; Notebook の JSON に余分ながある問題を修正しました} 保存後 <br/>&bull; &nbsp; Notebook のグリッドがテーマの変更に応答しない、問題を修正しました <br/>&bull; &nbsp; タブ ヘッダーで notebook の完全なパスが示すように問題を修正しました。 ファイル名のみが表示されるようになりました。 |
+| 1\.5.1 で発見されたいくつかの問題を修正しました。 | 参照してください[GitHub の修正プログラムのリリースでは、年 3 月](https://github.com/Microsoft/azuredatastudio/milestone/28)します。<br/> <br/>&bull; &nbsp; ユーザーとダッシュ ボードに「ノートブックを開く」のタスクから開かれた notebook が終了できなかった問題を修正しました <br/>&bull; &nbsp; Notebook の JSON に余分ながある問題を修正しました} 保存後 <br/>&bull; &nbsp; Notebook のグリッドがテーマの変更に応答しない、問題を修正しました <br/>&bull; &nbsp; タブ ヘッダーで notebook の完全なパスが示すように問題を修正しました。 ファイル名のみが表示されるようになりました。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>3 月 2019
@@ -147,7 +147,7 @@ ms.locfileid: "66798094"
 
 | [変更] | 詳細 |
 | :----- | :------ |
-| 1.3.8 で発見されたいくつかの問題を修正しました。 | 参照してください[GitHub での 1 月の修正プログラム リリース](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)します。<br/><br/>詳細についてを参照してください。<br/>&bull; &nbsp; [変更ログは、GitHub の](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)します。<br/>&bull; &nbsp; [GitHub でのリリース](https://github.com/Microsoft/azuredatastudio/releases)します。 |
+| 1\.3.8 で発見されたいくつかの問題を修正しました。 | 参照してください[GitHub での 1 月の修正プログラム リリース](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)します。<br/><br/>詳細についてを参照してください。<br/>&bull; &nbsp; [変更ログは、GitHub の](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)します。<br/>&bull; &nbsp; [GitHub でのリリース](https://github.com/Microsoft/azuredatastudio/releases)します。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="january-2019"></a>2019 年 1 月

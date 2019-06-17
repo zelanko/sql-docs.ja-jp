@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091329"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema でユーザー定義関数が許可されない
@@ -54,7 +54,7 @@ ms.locfileid: "66091329"
   
 4.  参照を置き換える**system_function_schema**で**dbo**でユーザー定義関数 DDL ステートメントが含まれているすべてのスクリプト。  
   
-5.  2 つの部分名 dbo を使用するこれらの関数を呼び出すスクリプトを変更して **.**_function_name_、または 3 つの部分名_database_name_**.** dbo します。*function_name*します。  
+5.  2 つの部分名 dbo を使用するこれらの関数を呼び出すスクリプトを変更して **.** _function_name_、または 3 つの部分名_database_name_ **.** dbo します。*function_name*します。  
   
  詳細については、SQL Server オンライン ブックの次のトピックを参照してください。  
   

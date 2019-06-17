@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011915"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート
@@ -55,7 +55,7 @@ ms.locfileid: "66011915"
  使用してエクスポート データを一括するときに、 **-V80**切り替えるには、 `nvarchar(max)`、 `varchar(max)`、 `varbinary(max)`、XML、およびネイティブ モードの UDT データは、同様の 4 バイトのプレフィックスを使用して格納されます`text`、 `image`、および`ntext`、データの既定値は 8 バイトのプレフィックスではなく[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョン。  
   
 ## <a name="copying-date-values"></a>日付値のコピー  
- **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[*.f...*]) を使用します。  
+ **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]) を使用します。  
   
  **Bcp**コマンドでは、ODBC の既定形式を使用して、文字形式データ ファイルをエクスポートします。`datetime`と`smalldatetime`値。 たとえば、日付 `12 Aug 1998` が含まれた `datetime` 型の列は、文字列 `1998-08-12 00:00:00.000` としてデータ ファイルに一括コピーされます。  
   

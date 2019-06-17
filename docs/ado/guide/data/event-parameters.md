@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700768"
 ---
 # <a name="event-parameters"></a>イベント パラメーター
@@ -87,7 +87,7 @@ End Sub
   
  設定する必要がこれに対し、 *adStatus*に**adStatusUnwantedEvent**を要求に 1 回だけことがなく、イベント ハンドラー、 **adReason**パラメーター停止の受信イベント通知します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [イベント ハンドラーの連携](../../../ado/guide/data/how-event-handlers-work-together.md)   

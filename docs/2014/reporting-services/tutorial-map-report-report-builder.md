@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098861"
 ---
 # <a name="tutorial-map-report-report-builder"></a>チュートリアル:マップ レポート (レポート ビルダー)
@@ -191,7 +191,7 @@ ms.locfileid: "66098861"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。  
+9. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。  
   
      結果セットには、7 つの列が表示されます。StoreKey、StoreName、SellingArea、City、County、Sales、および SpatialLocation します。 このデータは、消費者向けの商品を販売している New York 州内の店舗を表しています。 結果セットの各行には、店舗識別子、店舗名、商品の展示に使用できる面積、店舗の所在地の市および郡、売上合計、および所在地の経度と緯度が含まれています。 展示面積の範囲は 455 ～ 1125 平方フィートです。  
   
@@ -318,7 +318,7 @@ ms.locfileid: "66098861"
   
 4.  **[表示]** をクリックします。  
   
-5.  **透明度 (%)**、型**30**します。  
+5.  **透明度 (%)** 、型**30**します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

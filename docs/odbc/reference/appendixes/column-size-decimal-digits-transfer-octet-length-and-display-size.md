@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213303"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列のサイズ、10 進数字は、転送オクテット長、および ODBC のサイズを表示
@@ -48,7 +48,7 @@ ms.locfileid: "63213303"
   
  これらの記述子フィールドの詳細については、次を参照してください。 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。  
   
- 関連項目:   
+ 関連項目:  
   
 -   [列サイズ](../../../odbc/reference/appendixes/column-size.md)  
 -   [10 進数字](../../../odbc/reference/appendixes/decimal-digits.md)  

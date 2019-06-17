@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d225fa7af71b905ebe2de383af92156ba12fc74c
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718150"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 構文のインデックス
@@ -28,7 +28,7 @@ ADO メソッドとプロパティを呼び出す構文は、開発環境によ�
   
 -   [#Import の Visual C 構文のインデックス用の ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)を使用する場合は、ADO のプロパティとメソッドをについて説明します、 **#import** Microsoft Visual c のコンパイラ ディレクティブ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Visual Basic で ADO を使用します。](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Microsoft Visual C で ADO を使用します。](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [スクリプト言語で ADO を使用する](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

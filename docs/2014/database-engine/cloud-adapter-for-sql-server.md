@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2ddaf87aa91e62cc422bf5a4558232f03339121
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065152"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server のクラウド アダプター
@@ -95,7 +95,7 @@ ms.locfileid: "66065152"
 |証明書 [{サムプリント}] の有効期限が切れています。|45565|構成ファイルから参照される期限切れの証明書。|有効な証明書を追加し、サムプリントを使用して構成ファイルを更新します。|  
 |Web サービス エラー:{0}します。|45571|例外で説明されています。|ExposeExceptionDetails を有効にし、例外の拡張情報を使用します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Azure Virtual Machine への SQL Server データベースの配置](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
   
   

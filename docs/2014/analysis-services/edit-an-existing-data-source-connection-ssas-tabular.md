@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081447"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>既存のデータ ソース接続の編集 (SSAS テーブル)
@@ -45,7 +45,7 @@ ms.locfileid: "66081447"
   
 4.  **[保存]** をクリックしてから、 **[閉じる]** をクリックします。  
   
-5.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]**、 **[処理]** の順にクリックしてから、 **[すべて処理]** をクリックします。  
+5.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]** 、 **[処理]** の順にクリックしてから、 **[すべて処理]** をクリックします。  
   
      新しいデータ ソースと元のデータ選択を使用して、テーブルが再処理されます。  
   

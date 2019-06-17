@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054509"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>パッケージ エクスプローラーでパッケージ オブジェクトを表示する
@@ -30,7 +30,7 @@ ms.locfileid: "66054509"
   
 2.  **[パッケージ エクスプローラー]** タブをクリックします。  
   
-3.  **[変数]**、 **[優先順位制約]**、 **[イベント ハンドラー]**、 **[接続マネージャー]**、 **[ログ プロバイダー]**、または **[実行可能ファイル]** フォルダーの内容を表示するには、各フォルダーを展開します。  
+3.  **[変数]** 、 **[優先順位制約]** 、 **[イベント ハンドラー]** 、 **[接続マネージャー]** 、 **[ログ プロバイダー]** 、または **[実行可能ファイル]** フォルダーの内容を表示するには、各フォルダーを展開します。  
   
 4.  パッケージの構造に基づき、次の任意のレベルのフォルダーを展開します。  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072817"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
@@ -138,13 +138,13 @@ ms.locfileid: "66072817"
   
 3.  次のイベントを選択します。  
   
-    -   処理の開始時刻と停止時刻を表示するには、**[コマンド開始]** と **Commと End** to show when processing starts と stops  
+    -   処理の開始時刻と停止時刻を表示するには、 **[コマンド開始]** と **Commと End** to show when processing starts と stops  
   
-    -   すべてのエラーをキャプチャするには、**[エラー]**   
+    -   すべてのエラーをキャプチャするには、 **[エラー]**  
   
-    -   処理の状態をレポートし、データを取得するために使用した SQL クエリを表示するには、**[進行状況レポートの開始]**, **[進行状況レポートの現在の状態]**、および **[進行状況レポートの終了]**   
+    -   処理の状態をレポートし、データを取得するために使用した SQL クエリを表示するには、 **[進行状況レポートの開始]** , **[進行状況レポートの現在の状態]** 、および **[進行状況レポートの終了]**  
   
-    -   キューブの計算を表示するには、**[MDX スクリプトの実行の開始]** および **[MDX スクリプトの実行の終了]**   
+    -   キューブの計算を表示するには、 **[MDX スクリプトの実行の開始]** および **[MDX スクリプトの実行の終了]**  
   
     -   処理に関連するパフォーマンスの問題を診断する場合は、必要に応じて、ロック イベントを追加する  
   

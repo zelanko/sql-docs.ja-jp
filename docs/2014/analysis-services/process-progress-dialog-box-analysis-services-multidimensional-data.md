@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070679"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>[処理の進行状況] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -24,7 +24,7 @@ ms.locfileid: "66070679"
   
 ## <a name="options"></a>および  
  **状態ツリー ビュー**  
- 開始時刻、停止時刻、および進行状況情報を含む、処理中のオブジェクトに関する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスからの状態メッセージを表示します。 アイテムを右クリックして **[コピー]** を選択し、状態メッセージの詳細をクリップボードにコピーするか、アイテムをダブルクリックして、**[詳細表示]** ダイアログ ボックスを表示します。 **[詳細表示]** ダイアログ ボックスの詳細については、「[[詳細表示] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](view-details-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
+ 開始時刻、停止時刻、および進行状況情報を含む、処理中のオブジェクトに関する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスからの状態メッセージを表示します。 アイテムを右クリックして **[コピー]** を選択し、状態メッセージの詳細をクリップボードにコピーするか、アイテムをダブルクリックして、 **[詳細表示]** ダイアログ ボックスを表示します。 **[詳細表示]** ダイアログ ボックスの詳細については、「[[詳細表示] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](view-details-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **状態の説明**  
  処理中の操作の現在の処理状態を表示します。  

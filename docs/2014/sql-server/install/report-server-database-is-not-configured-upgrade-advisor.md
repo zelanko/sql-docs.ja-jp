@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 813319309e489943cfdd94e13f300990b72e94be
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092722"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>レポート サーバー データベースが構成されていない (アップグレード アドバイザー)
@@ -30,7 +30,7 @@ ms.locfileid: "66092722"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>説明  
- セットアップでアップグレードできるのは、完全に構成されているレポート サーバー インスタンスだけです。 続けるには、する必要がありますか、構成、レポート サーバー データベースまたは使用する Microsoft Windows**コントロール パネルの **からレポート サーバー機能を削除する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールします。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を削除すると、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアップグレードできるようになります。  
+ セットアップでアップグレードできるのは、完全に構成されているレポート サーバー インスタンスだけです。 続けるには、する必要がありますか、構成、レポート サーバー データベースまたは使用する Microsoft Windows**コントロール パネルの** からレポート サーバー機能を削除する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールします。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を削除すると、その他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアップグレードできるようになります。  
   
 ## <a name="corrective-action"></a>修正措置  
  レポート サーバー データベースを構成していない場合、レポート サーバーは使用できないので、アップグレード前に削除する必要があります。  

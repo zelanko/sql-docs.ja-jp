@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd0d28a37a8080bcd44c521b2fc3b83192f61837
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020175"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP アーキテクチャについて
@@ -46,7 +46,7 @@ ms.locfileid: "63020175"
  ![小さいファイル フォルダー アイコン](../../../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン")**国際化に関する考慮事項**  
  [Analysis Services のグローバリゼーションのシナリオ](../../../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テクニカル リファレンス](../../../analysis-services/powershell/technical-reference-ssas.md)  
   
   

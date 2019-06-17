@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994117"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>マスター データ サービスのイントールと構成
@@ -60,7 +60,7 @@ ms.locfileid: "65994117"
   
 1.  Setup.exe をダブルクリックして、インストール ウィザードの手順を実行します。  
   
-2.  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [機能の選択] **ページで、** [共有機能] **の [**] を選択します。  
+2.  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [機能の選択] **ページで、** [共有機能] **の [** ] を選択します。  
   
      これは [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]、アセンブリ、Windows PowerShell スナップインのほか、Web アプリケーションおよび Web サービス用のフォルダーおよびファイルがインストールされます。  
   
@@ -84,18 +84,18 @@ ms.locfileid: "65994117"
   
      ![mds_AddRolesFeaturesWizard_ServerSelectionPage](../master-data-services/media/mds-addrolesfeatureswizard-serverselectionpage.png) 
   
-8. **[サーバーの役割]** ページで、**[Web サーバー]** をクリックし、**[次へ]** をクリックします。 
+8. **[サーバーの役割]** ページで、 **[Web サーバー]** をクリックし、 **[次へ]** をクリックします。 
 
    ![mds_AddRolesFeaturesWizard_ServerRolesPage](../master-data-services/media/mds-addrolesfeatureswizard-serverrolespage.png)
    
-9. **[機能]** ページで、次の機能が選択されていることを確認し、**[次へ]** をクリックします。 これらの機能は、[!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] の [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] に必要です。
+9. **[機能]** ページで、次の機能が選択されていることを確認し、 **[次へ]** をクリックします。 これらの機能は、[!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)] の [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] に必要です。
   
     |機能のインストール|機能のインストール|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. 左側のウィンドウで **[Web サーバーの役割 (IIS)]** をクリックし、**[役割サービス]** をクリックします。
-11. **[役割サービス]** ページで、次の機能が選択されていることを確認し、**[次へ]** をクリックします。 これらのサービスは、[!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] に必要です。
+10. 左側のウィンドウで **[Web サーバーの役割 (IIS)]** をクリックし、 **[役割サービス]** をクリックします。
+11. **[役割サービス]** ページで、次の機能が選択されていることを確認し、 **[次へ]** をクリックします。 これらのサービスは、[!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)] の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] に必要です。
 
     > [!WARNING]  
     >  [WebDAV 発行] 役割サービスをインストールしないでください。 WebDAV 発行は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]と互換性がありません。  
@@ -142,11 +142,11 @@ ms.locfileid: "65994117"
     >ユーザーの Azure SQL Database マネージ インスタンスのメンバーである必要があります、`sysadmin`固定サーバー ロール。
 
     > [!NOTE]  
-    >  認証の種類に **[現在のユーザー - 統合セキュリティ]** を選択すると、**[ユーザー名]** ボックスは読み取り専用で、コンピューターにログオンした Windows ユーザー アカウント名が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、**[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
+    >  認証の種類に **[現在のユーザー - 統合セキュリティ]** を選択すると、 **[ユーザー名]** ボックスは読み取り専用で、コンピューターにログオンした Windows ユーザー アカウント名が表示されます。 Azure 仮想マシン (VM) 上で [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] が実行されている場合、 **[ユーザー名]** ボックスに、VM の名前と、VM 上のローカル管理者アカウントのユーザー名が表示されます。 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  **[データベース名]** フィールドに名前を入力します。 必要に応じて、Windows 照合順序を選択して、**[SQL Server の既定の照合順序]** チェック ボックスをオフにし、**[大文字小文字を区別する]** などの利用可能なオプションを 1 つ以上クリックします。 **[次へ]** をクリックします。
+4.  **[データベース名]** フィールドに名前を入力します。 必要に応じて、Windows 照合順序を選択して、 **[SQL Server の既定の照合順序]** チェック ボックスをオフにし、 **[大文字小文字を区別する]** などの利用可能なオプションを 1 つ以上クリックします。 **[次へ]** をクリックします。
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -158,13 +158,13 @@ ms.locfileid: "65994117"
   
 6.  **[次へ]** をクリックして、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの設定の概要を表示し、 **[次へ]** をもう一度クリックしてデータベースを作成します。 **[続行して完了する]** ページが表示されます。
 
-7. データベースが作成され、構成されたら、**[完了]** をクリックします。  
+7. データベースが作成され、構成されたら、 **[完了]** をクリックします。  
   
      **データベースの作成ウィザード**の設定の詳細については、「[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)」を参照してください。  
   
-7.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の **[データベース構成]** ページで、**[データベースの選択]** をクリックします。  
+7.  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の **[データベース構成]** ページで、 **[データベースの選択]** をクリックします。  
   
-8.  **[接続]** をクリックして、手順 7 で作成した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、**[OK]** をクリックします。 
+8.  **[接続]** をクリックして、手順 7 で作成した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、 **[OK]** をクリックします。 
 
     ![mds_2016ConfigManager_SelectDatabaseButton_ConnectToDatabaseDialog](../master-data-services/media/mds-2016configmanager-selectdatabasebutton-connecttodatabasedialog.png)  
   
@@ -174,7 +174,7 @@ ms.locfileid: "65994117"
   
 9. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の左ペインで、 **[Web の構成]** をクリックします。  
   
-10. **[Web サイト]** リスト ボックスで、**[既定の Web サイト]****[作成]** の順にクリックして、Web アプリケーションを作成します。  
+10. **[Web サイト]** リスト ボックスで、 **[既定の Web サイト]** **[作成]** の順にクリックして、Web アプリケーションを作成します。  
   
     > [!NOTE]  
     >  **[既定の Web サイト]** を選択した場合、Web アプリケーションを作成する必要があります。 リスト ボックスで **[新しい Web サイトの作成]** を選択した場合、アプリケーションが自動的に作成されます。  
@@ -195,7 +195,7 @@ ms.locfileid: "65994117"
   
      **[Web アプリケーションの作成]** ダイアログ ボックスの詳細については、「[[Web アプリケーションの作成] ダイアログ ボックス (マスター データ サービス構成マネージャー)](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)」を参照してください。  
   
-12. **[Web アプリケーション]** ボックスの **[Web 構成]** ページで、作成したアプリケーションをクリックして、**[アプリケーションとデータベースの関連付け]** セクションで **[選択]** をクリックします。  
+12. **[Web アプリケーション]** ボックスの **[Web 構成]** ページで、作成したアプリケーションをクリックして、 **[アプリケーションとデータベースの関連付け]** セクションで **[選択]** をクリックします。  
   
 13. **[接続]** をクリックして、Web アプリケーションと関連付けする必要がある [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを選択し、 **[OK]** をクリックします。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "65994117"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のデータの構造を構築するモデルとエンティティを使用する方法の概要については、「[マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
     
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービス データベース](../master-data-services/master-data-services-database.md)   
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)   
  [[データベース構成] ページ &#40;マスター データ サービス構成マネージャー&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

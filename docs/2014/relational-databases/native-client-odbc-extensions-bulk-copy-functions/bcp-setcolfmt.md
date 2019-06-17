@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63226241"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
@@ -106,7 +106,7 @@ cbValue
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- 呼び出しごとに**bcp_setcolfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](bcp-columns.md)**(5)** を呼び出して**bcp_setcolfmt**の 5 回これらの呼び出しの 3 つのカスタム形式を設定します。 残りの 2 つの呼び出しでは、BCP_FMT_TYPE を 0 に設定し、BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN を設定し、 *cbValue* 0、SQL_VARLEN_DATA、0 とそれぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ 呼び出しごとに**bcp_setcolfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](bcp-columns.md) **(5)** を呼び出して**bcp_setcolfmt**の 5 回これらの呼び出しの 3 つのカスタム形式を設定します。 残りの 2 つの呼び出しでは、BCP_FMT_TYPE を 0 に設定し、BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN を設定し、 *cbValue* 0、SQL_VARLEN_DATA、0 とそれぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
  **Bcp_columns**関数を呼び出す前に呼び出す必要があります**bcp_setcolfmt**します。  
   

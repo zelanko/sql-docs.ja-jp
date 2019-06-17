@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813225"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 におけるデータベース エンジン機能の重大な変更
@@ -64,7 +64,7 @@ ms.locfileid: "62813225"
   
 |表示|説明|  
 |----------|-----------------|  
-|sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|sys.data_spaces と sys.partition_functions に、新しい列 (is_system) が追加されました  (sys.partition_schemes と sys.filegroups は、sys.data_spaces の列を継承します)。<br /><br /> この列では、値 1 は、そのオブジェクトがフルテキスト インデックス フラグメントに使用されることを示します。<br /><br /> sys.partition_functions、sys.partition_schemes、および sys.filegroups では、この新しい列は末尾の列ではありません。 これらのカタログ ビューから返される列の順序に依存する既存のクエリを修正してください。|  
+|sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|sys.data_spaces と sys.partition_functions に、新しい列 (is_system) が追加されました (sys.partition_schemes と sys.filegroups は、sys.data_spaces の列を継承します)。<br /><br /> この列では、値 1 は、そのオブジェクトがフルテキスト インデックス フラグメントに使用されることを示します。<br /><br /> sys.partition_functions、sys.partition_schemes、および sys.filegroups では、この新しい列は末尾の列ではありません。 これらのカタログ ビューから返される列の順序に依存する既存のクエリを修正してください。|  
   
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>SQL CLR データ型 (geometry、geography、および hierarchyid)  
  アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされましたが、空間データ型と、hierarchyid 型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  

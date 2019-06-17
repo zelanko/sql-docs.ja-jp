@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484902"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>タスク 1:データ品質プロジェクトを作成する
@@ -33,6 +33,6 @@ ms.locfileid: "65484902"
      ![新しいデータ品質プロジェクト ページ - クレンジングが選択されている](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "新しいデータ品質プロジェクト ページ - クレンジングが選択されています。")  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2:DQS ドメインを Excel 列のマッピング](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
+ [タスク 2: DQS ドメインを Excel 列のマッピング](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
   
   

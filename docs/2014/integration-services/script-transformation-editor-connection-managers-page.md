@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056201"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>[スクリプト変換エディター] ([接続マネージャー] ページ)
@@ -34,7 +34,7 @@ ms.locfileid: "66056201"
  接続を表す一意な名前を入力します。  
   
  **接続マネージャー**  
- 使用できる接続マネージャーの一覧から選択するか、[**\<新しい接続>**] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
+ 使用できる接続マネージャーの一覧から選択するか、[ **\<新しい接続>** ] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
   
  **[説明]**  
  接続の説明を入力します。  

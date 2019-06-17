@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702693"
 ---
 # <a name="calculations"></a>[新しい名前付きセット]
@@ -45,7 +45,7 @@ ms.locfileid: "62702693"
  計算されるメンバーを作成するには、使用、**計算**キューブ デザイナーのタブ。 詳細については、次を参照してください[計算されるメンバーの作成。](../multidimensional-models/create-calculated-members.md)  
   
 ## <a name="named-sets"></a>名前付きセット  
- 名前付きセットとは、セットを返す CREATE SET MDX ステートメント式であり、 MDX 式は、キューブの定義の一部として保存[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 名前付きセットは、多次元式 (MDX) クエリで再使用するために作成されます。 名前付きセットを使用すると、ビジネス ユーザーは、クエリを簡素化し、複雑で頻繁に使用されるセット式にセット式ではなくセット名を使用できます。 **関連トピック:**[名前付きセットの作成](../multidimensional-models/create-named-sets.md)  
+ 名前付きセットとは、セットを返す CREATE SET MDX ステートメント式であり、 MDX 式は、キューブの定義の一部として保存[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 名前付きセットは、多次元式 (MDX) クエリで再使用するために作成されます。 名前付きセットを使用すると、ビジネス ユーザーは、クエリを簡素化し、複雑で頻繁に使用されるセット式にセット式ではなくセット名を使用できます。 **関連トピック:** [名前付きセットの作成](../multidimensional-models/create-named-sets.md)  
   
 ## <a name="script-commands"></a>スクリプト コマンド  
  スクリプト コマンドは、キューブの定義の一部として含まれる MDX スクリプトです。 スクリプト コマンドを使用すると、キューブの一部のみに対する計算のスコープ割り当てなど、MDX でサポートされるほとんどすべてのアクションをキューブで実行できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、MDX スクリプトは、キューブ全体またはスクリプトの実行中の特定の時点で、キューブの特定のセクションのいずれかを適用できます。 既定のスクリプト コマンドである CALCULATE ステートメントを実行すると、既定の範囲に基づいて、キューブのセルに集計データが設定されます。  

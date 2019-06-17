@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032834"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>アプリケーションの旧バージョンとの互換性のためのマッピング置換関数
@@ -454,9 +454,9 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |[ColumnName]|"" (空の文字列)|  
 |*NameLengthPtr|0|  
 |*DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|\* ColumnSizePtr|4|  
+|\* DecimalDigitsPtr|0|  
+|\* NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  ODBC 3 時にします。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーは、次の呼び出しを**SQLGetData**ブックマークを取得します。  

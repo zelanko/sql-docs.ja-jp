@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075398"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>データ ソース ビューの定義 (Analysis Services)
@@ -84,7 +84,7 @@ ms.locfileid: "66075398"
 > [!NOTE]  
 >  代わりに、ディメンションとキューブを最初に構築し、その後にスキーマ生成ウィザードを使用してモデルに対応する DSV を生成することもできます。 詳細については、「[スキーマ生成ウィザード (Analysis Services)](schema-generation-wizard-analysis-services.md)」を参照してください。  
   
-1.  ソリューション エクスプローラーで、[データ ソース ビュー] フォルダーを右クリックし、**[新しいデータ ソース ビュー]** をクリックします。  
+1.  ソリューション エクスプローラーで、[データ ソース ビュー] フォルダーを右クリックし、 **[新しいデータ ソース ビュー]** をクリックします。  
   
 2.  外部リレーショナル データベースへの接続情報を提供する、新規または既存のデータ ソース オブジェクトを指定します (ウィザード内で選択できるデータ ソースは 1 つのみです)。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66075398"
 > [!NOTE]  
 >  データ ソース ビュー ウィザードを完了したら、データ ソース ビュー デザイナーのスキーマ ペインでリレーションシップを追加または削除できます。 詳細については、「[データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [データ ソース ビューでの論理主キーの定義 (Analysis Services)](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)   

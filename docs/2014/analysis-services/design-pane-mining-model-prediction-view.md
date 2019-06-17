@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081850"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>[デザイン] ペイン ([マイニング モデル予測] ビュー)
@@ -29,11 +29,11 @@ ms.locfileid: "66081850"
 > [!NOTE]  
 >  クエリに手動で何らかの変更を加えた場合、デザイン ビューに戻ると変更は失われます。 DMX クエリを保存するには、Windows クリップボードにクエリをコピーしてからテキスト ファイルに貼り付けます。  
   
- **詳細情報。**[データ マイニング クエリ](data-mining/data-mining-queries.md)  
+ **詳細情報。** [データ マイニング クエリ](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>および  
  **クエリ結果ビューに切り替え**  
- クリックすると、ビューを順に **[デザイン]**、 **[クエリ]**、 **[結果]** ペインに切り替えます。 **[結果]** ペインに切り替えると、クエリが実行されます。  
+ クリックすると、ビューを順に **[デザイン]** 、 **[クエリ]** 、 **[結果]** ペインに切り替えます。 **[結果]** ペインに切り替えると、クエリが実行されます。  
   
  **クエリ結果を保存します。**  
  **[データ マイニングのクエリ結果を保存]** ダイアログ ボックスを開きます。  

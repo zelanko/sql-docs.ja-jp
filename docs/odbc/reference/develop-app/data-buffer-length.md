@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57f4fd34cfe3896bb29ed31f02906ce675e4b854
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640500"
 ---
 # <a name="data-buffer-length"></a>データ バッファーの長さ
-アプリケーションでは、データ バッファーのバイトの長さを渡すという名前を引数にドライバー *BufferLength*または類似する名前。 たとえば、以下でを呼び出す**SQLBindCol**、アプリケーションがの長さを指定します、 *ValuePtr*バッファー (**sizeof (***ValuePtr***)**):  
+アプリケーションでは、データ バッファーのバイトの長さを渡すという名前を引数にドライバー *BufferLength*または類似する名前。 たとえば、以下でを呼び出す**SQLBindCol**、アプリケーションがの長さを指定します、 *ValuePtr*バッファー (**sizeof (***ValuePtr***)** ):  
   
 ```  
 SQLCHAR      ValuePtr[50];  

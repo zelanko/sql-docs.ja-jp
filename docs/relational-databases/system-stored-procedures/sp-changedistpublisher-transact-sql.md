@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997811"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (TRANSACT-SQL)
@@ -45,7 +45,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 指定されたパブリッシャーを変更するプロパティです。 *プロパティ*は**sysname**これらの値のいずれかを指定できます。  
   
-`[ @value = ] 'value'` 指定されたプロパティの値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
+`[ @value = ] 'value'` 指定されたプロパティの値です。 *値*は**nvarchar (255)** 、既定値は NULL です。  
   
 `[ @storage_connection_string = ] 'storage_connection_string'` SQL Database マネージ インスタンスに必要なは、Azure SQL Database の記憶域ボリュームのアクセス キーが一致する必要があります。 
 

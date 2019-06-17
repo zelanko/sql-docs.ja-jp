@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84008ec923ef5203ede7e4bd8827e21eb475720e
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945901"
 ---
 # <a name="sysxmlschemafacets-transact-sql"></a>sys.xml_schema_facets (TRANSACT-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "64945901"
 |**facet_id**|**int**|ファセット、コンポーネント id 内で一意の ID (1 から始まる序数) にします。|  
 |**kind**|**char(2)**|ファセットの種類。<br /><br /> LG 長を =<br /><br /> LN = 最小の長さ<br /><br /> LX = 最大の長さ<br /><br /> PT = パターン (正規表現)<br /><br /> EU = 列挙<br /><br /> IN = 最小の包含値<br /><br /> IX = 最大の包含値<br /><br /> EN = 最小の排他値<br /><br /> EX = 最大の排他値<br /><br /> DT = 総桁数<br /><br /> DF 小数桁を =<br /><br /> WS = 空白の正規化|  
 |**kind_desc**|**Nvarchar (60)**|ファセットの種類の説明。<br /><br /> LENGTH<br /><br /> MINIMUM_LENGTH<br /><br /> MAXIMUM_LENGTH<br /><br /> パターン<br /><br /> ENUMERATION<br /><br /> MINIMUM_INCLUSIVE_VALUE<br /><br /> MAXIMUM_INCLUSIVE_VALUE<br /><br /> MINIMUM_EXCLUSIVE_VALUE<br /><br /> MAXIMUM_EXCLUSIVE_VALUE<br /><br /> TOTAL_DIGITS<br /><br /> FRACTION_DIGITS<br /><br /> WHITESPACE_NORMALIZATION|  
-|**is_fixed**|**bit**|1 = ファセットには事前に指定された固定値があります。<br /><br /> 0 = 固定値はありません  (既定値)。|  
+|**is_fixed**|**bit**|1 = ファセットには事前に指定された固定値があります。<br /><br /> 0 = 固定値はありません (既定値)。|  
 |**value**|**nvarchar (4000)**|ファセットの固定、事前に指定された値。|  
   
 ## <a name="permissions"></a>アクセス許可  
