@@ -3,17 +3,17 @@ title: SQL Server Machine Learning Services の MicrosoftML の R 関数ライ�
 description: SQL Server 2016 R Services で R と SQL Server 2017 Machine Learning Services の MicrosoftML 関数ライブラリの概要
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641823"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140486"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server での R ライブラリ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ Api の内部の machine learning のアプリケーション、Microsoft によ
 
 関数の**MicrosoftML**ストアド プロシージャにカプセル化された R コードで呼び出すことができます。 ほとんどの開発者がビルド**MicrosoftML**ソリューションをローカルにし、完成した R コードをデプロイの手順としてストアド プロシージャに移行します。
 
-**MicrosoftML** R がインストールされている「アウトの-使える」SQL Server 2017 でのパッケージ化します。 インスタンスの R コンポーネントをアップグレードする場合にも SQL Server 2016 で使用可能です。[バインドを使用して SQL Server のインスタンスをアップグレードします。](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+**MicrosoftML** R がインストールされている「アウトの-使える」SQL Server 2017 でのパッケージ化します。 インスタンスの R コンポーネントをアップグレードする場合にも SQL Server 2016 で使用可能です。[バインドを使用して SQL Server のインスタンスをアップグレードします。](../install/upgrade-r-and-python.md)
 
 既定では、パッケージが読み込まれていません。 最初の手順として読み込み、 **MicrosoftML**をパッケージ化し、読み込む**RevoScaleR**かどうかは、リモート コンピューティング コンテキストまたは関連する接続またはデータ ソース オブジェクトを使用する必要があります。 次に、必要がある個々 の関数を参照します。
 

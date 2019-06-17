@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620599"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037829"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server のレポート ビルダー
 
@@ -48,12 +48,12 @@ ms.locfileid: "65620599"
   
 -   **既存のレポートを変更します。** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]を使用すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで作成されたレポートをカスタマイズおよび更新できます。  
   
--   データのフィルター選択、グループ化と並べ替え、または数式や式の追加によって、**データを変更します。**   
--   データをビジュアルな形式でまとめ、大量の集計情報がひとめでわかるようにするため、**グラフ、ゲージ、スパークライン、およびインジケーターを追加します。**   
+-   データのフィルター選択、グループ化と並べ替え、または数式や式の追加によって、**データを変更します。**  
+-   データをビジュアルな形式でまとめ、大量の集計情報がひとめでわかるようにするため、**グラフ、ゲージ、スパークライン、およびインジケーターを追加します。**  
   
 -   ドキュメント マップ、表示/非表示を切り替えるボタン、サブレポートおよび詳細レポートへのドリルスルー リンクなど、**対話機能を追加します** 。 パラメーターとフィルターを使用すると、カスタマイズされたビューのデータをフィルター処理できます。  
   
--   外部コンテンツなど、**画像やその他のリソースを埋め込んだり参照したりします。**   
+-   外部コンテンツなど、**画像やその他のリソースを埋め込んだり参照したりします。**  
   
 ##  <a name="ManageRpt"></a> レポートの管理  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65620599"
  [レポートの計画 (レポート ビルダー)](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  レポートを作成する前の考慮事項について説明します。  
   
- [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のドキュメント全体で使用する主要な概念について説明します。  
   
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)  
