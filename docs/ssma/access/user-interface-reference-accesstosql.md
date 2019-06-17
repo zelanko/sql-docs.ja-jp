@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299424"
 ---
 # <a name="user-interface-reference-accesstosql"></a>ユーザー インターフェイス リファレンス (AccessToSQL)
@@ -50,7 +50,7 @@ ms.locfileid: "63299424"
 |[プロジェクトの設定 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|SQL Azure のページを使用して、**プロジェクト設定** ダイアログ ボックスを指定するデータベースのサフィックスと、ハートビートのタイムアウト間隔。|  
 |[メタデータの保存&#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|**メタデータの保存**メタデータが不足しているプロジェクトを保存するときに、ダイアログ ボックスが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server Migration Assistant for Access の概要&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)  
 [SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

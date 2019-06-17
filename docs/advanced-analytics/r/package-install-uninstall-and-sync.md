@@ -3,17 +3,17 @@ title: R パッケージとファイル システム - SQL Server Machine Learni
 description: SQL Server での R ライブラリは、ファイル システムにインストールされている新しいバージョンに更新します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 57677e8d7573411be2e77baa7ffd8564ec9cbeb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6782acd011242cfd9b8ed4fe24a11fba85e932c
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642742"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140518"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server の R パッケージの同期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ SQL Server 2017 に含まれる RevoScaleR のバージョンには、ファイ�
 
 この機能は、SQL Server 2017 CTP 2 で使用できる、またはそれ以降です。
 
-SQL Server 2016 のインスタンスには Microsoft r です。 最新バージョンを使用するインスタンスをアップグレードすることでこの機能を追加することができます。詳細については、次を参照してください。 [SQL Server R Services のアップグレードを使用して SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
+SQL Server 2016 のインスタンスには Microsoft r です。 最新バージョンを使用するインスタンスをアップグレードすることでこの機能を追加することができます。詳細については、次を参照してください。 [SQL Server R Services のアップグレードを使用して SqlBindR.exe](../install/upgrade-r-and-python.md)します。
 
 ### <a name="enable-the-package-management-feature"></a>パッケージの管理機能を有効にします。
 
@@ -69,7 +69,7 @@ SQL Server 2016 のインスタンスには Microsoft r です。 最新バー�
 
 + としてマークされているパッケージを同期する**プライベート**、パッケージまたは管理者の所有者は、関数を実行する必要がありますいずれかと、パッケージはプライベートである必要があります。
 
-+ 他のユーザーに代わってパッケージを同期する、所有者必要があります bhe のメンバー、 **db_owner**データベース ロール。
++ 所有者を他のユーザーに代わってパッケージを同期するのメンバーである必要があります、 **db_owner**データベース ロール。
 
 ## <a name="how-package-synchronization-works"></a>パッケージの同期のしくみ
 

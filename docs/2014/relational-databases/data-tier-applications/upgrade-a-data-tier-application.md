@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872658"
 ---
 # <a name="upgrade-a-data-tier-application"></a>データ層アプリケーションのアップグレード
   データ層アプリケーションのアップグレード ウィザードまたは Windows PowerShell スクリプトを使用すると、現在配置されているデータ層アプリケーション (DAC) のスキーマとプロパティを、新しいバージョンの DAC で定義されているスキーマとプロパティに一致するように変更できます。  
   
--   **作業を開始する準備:**[DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、[制限事項と制約事項](#LimitationsRestrictions)、[前提条件](#Prerequisites)、[セキュリティ](#Security)、[権限](#Permissions)  
+-   **作業を開始する準備:** [DAC アップグレード オプションの選択](#ChoseDACUpgOptions)、[制限事項と制約事項](#LimitationsRestrictions)、[前提条件](#Prerequisites)、[セキュリティ](#Security)、[権限](#Permissions)  
   
--   **DAC のアップグレード:**[データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、[PowerShell の使用](#UpgradeDACPowerShell)  
+-   **DAC のアップグレード:** [データ層アプリケーションのアップグレード ウィザードの使用](#UsingDACUpgradeWizard)、[PowerShell の使用](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  DAC アップグレードは、既存のデータベースのスキーマを新しい DAC バージョンで定義されているスキーマに一致するように変更するインプレース アップグレードです。 新しい DAC バージョンは、DAC パッケージ ファイルで提供されます。 DAC パッケージの作成の詳細については、「 [データ層アプリケーション](data-tier-applications.md)」を参照してください。  
@@ -83,7 +83,7 @@ ms.locfileid: "62872658"
   
 2.  **[管理]** ノードを展開し、 **[データ層のアプリケーション]** ノードを展開します。  
   
-3.  アップグレードする DAC のノードを右クリックしてから、**[データ層アプリケーションのアップグレード]** を選択します。  
+3.  アップグレードする DAC のノードを右クリックしてから、 **[データ層アプリケーションのアップグレード]** を選択します。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62872658"
   
  **\< 以前**-の初期状態に戻り、**パッケージの選択**ページ。  
   
- **[次へ >]**: **[パッケージの選択]** ページの最終状態に進みます。  
+ **[次へ >]** : **[パッケージの選択]** ページの最終状態に進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "62872658"
   
  **\< 以前**-に戻り、**アップグレード計画の確認**ページ。  
   
- **[次へ]** : DAC を配置し、**[DAC のアップグレード]** ページに結果を表示します。  
+ **[次へ]** : DAC を配置し、 **[DAC のアップグレード]** ページに結果を表示します。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   

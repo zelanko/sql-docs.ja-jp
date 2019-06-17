@@ -3,17 +3,17 @@ title: 新しい R 言語パッケージ - SQL Server Machine Learning Services 
 description: SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) に新しい R パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994208"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140584"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server に新しい R パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,8 +88,7 @@ R 開発者は、中央に配置されたライブラリが手付かずの状態
 
 コンピューターが個別にデータベース内分析 (SQL Server 2017 Machine Learning Services および SQL Server 2016 R Services) だけでなく SQL Server 2017 Microsoft Machine Learning Server (スタンドアロン) または SQL Server 2016 R Server (スタンドアロン) をインストールした場合ごとに、重複をすべての R ツールとライブラリの R のインストール。
 
-R_SERVER ライブラリにインストールされているパッケージは、スタンドアロン サーバーでのみ使用され、SQL Server (In-database) のインスタンスではアクセスできません。 常に使用して、`R_SERVICES`ライブラリで SQL Server データベースでを使用するパッケージをインストールするときにします。 パスの詳細については、次を参照してください。[ライブラリの場所をパッケージ化](installing-and-managing-r-packages.md#package-library-location)します。
-
+R_SERVER ライブラリにインストールされているパッケージは、スタンドアロン サーバーでのみ使用され、SQL Server (In-database) のインスタンスではアクセスできません。 常に使用して、`R_SERVICES`ライブラリで SQL Server データベースでを使用するパッケージをインストールするときにします。 パスの詳細については、次を参照してください。[ライブラリの場所をパッケージ化](../package-management/default-packages.md)します。
 
 ## <a name="see-also"></a>関連項目
 

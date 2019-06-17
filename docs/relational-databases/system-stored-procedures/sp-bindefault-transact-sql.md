@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996287"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (TRANSACT-SQL)
@@ -46,11 +46,11 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @defname = ] 'default'` CREATE DEFAULT で作成される既定の名前です。 *既定*は**nvarchar (776)**、既定値はありません。  
+`[ @defname = ] 'default'` CREATE DEFAULT で作成される既定の名前です。 *既定*は**nvarchar (776)** 、既定値はありません。  
   
-`[ @objname = ] 'object_name'` テーブルと列、または既定値がバインドされる別名データ型の名前です。 *object_name*は**nvarchar (776)** 既定値はありません。 *object_name*を定義することはできません、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、または CLRユーザー定義の型。  
+`[ @objname = ] 'object_name'` テーブルと列、または既定値がバインドされる別名データ型の名前です。 *object_name*は**nvarchar (776)** 既定値はありません。 *object_name*を定義することはできません、 **varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、 **xml**、または CLRユーザー定義の型。  
   
- 場合*object_name*は 1 つの要素名では、別名データ型として解決されます。 テーブルおよび列として解決はまず 2 または 3 つの部分名の場合、この解決が失敗した場合、別名データ型として解決されます。 既定では、既存の別名データ型の列を継承*既定*既定値を直接その列にバインドしない限り、します。 既定値をバインドできません、**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、**varbinary (max)**、 **xml**、**タイムスタンプ**、または CLR ユーザー定義型の列、IDENTITY プロパティを持つ列、計算列、または列を既定の制約を既に持っています。  
+ 場合*object_name*は 1 つの要素名では、別名データ型として解決されます。 テーブルおよび列として解決はまず 2 または 3 つの部分名の場合、この解決が失敗した場合、別名データ型として解決されます。 既定では、既存の別名データ型の列を継承*既定*既定値を直接その列にバインドしない限り、します。 既定値をバインドできません、**テキスト**、 **ntext**、**イメージ**、 **varchar (max)** 、 **nvarchar (max)** 、**varbinary (max)** 、 **xml**、**タイムスタンプ**、または CLR ユーザー定義型の列、IDENTITY プロパティを持つ列、計算列、または列を既定の制約を既に持っています。  
   
 > [!NOTE]  
 >  *object_name*角かっこを含めることができます **:operator[]** 区切られた識別子として。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
@@ -113,7 +113,7 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   

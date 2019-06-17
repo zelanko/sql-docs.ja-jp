@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0b259bcb9228cbc42c2626ce6f750918073af65d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699620"
 ---
 # <a name="programming-with-ado-md"></a>ADO MD を使用したプログラミング
 開発ツールでの ADO MD を使用するには、ADO MD のタイプ ライブラリへの参照を確立する必要があります。 ADO MD ライブラリの説明は、Microsoft ActiveX データ オブジェクト (多次元) ライブラリです。 ADO MD ライブラリのファイル名は msadomd.dll で、プログラム ID (ProgID) は"ADOMD"です。 ライブラリへの参照を確立する方法の詳細については、開発ツールのドキュメントを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [多次元スキーマとデータの概要](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [ADO MD と ADO の併用](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   

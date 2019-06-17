@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484305"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>ドメインへのクレンジング プロジェクトの値のインポート
@@ -62,7 +62,7 @@ ms.locfileid: "65484305"
   
 7.  ドメイン内にあるすべての値を表示するには、 **[新規のみ表示]** の選択を解除します。  
   
-8.  正しい値、エラー値、または無効な値のみを選択して表示するには、 **[適切]**、 **[エラー]**、 **[無効]** を選択します。  
+8.  正しい値、エラー値、または無効な値のみを選択して表示するには、 **[適切]** 、 **[エラー]** 、 **[無効]** を選択します。  
   
 9. 特定の文字列を検索するには、 **[検索]** ボックスに文字列を入力します。 検索条件を満たす値を 1 つずつ調べるには、上矢印または下矢印をクリックします。 これらのは黄色で強調表示されます。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "65484305"
   
 -   プロジェクトから値をインポートできるのは、ナレッジ ベースが作業中の状態になっていて、インポートしているユーザーがナレッジ ベースをロックしている場合だけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ クレンジング](../../2014/data-quality-services/data-cleansing.md)   
  [DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

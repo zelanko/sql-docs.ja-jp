@@ -21,17 +21,17 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775033"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services のアップグレード
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアップグレードします。 アップグレードに関する詳細情報の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SharePoint モードを参照してください。 [PowerPivot for SharePoint のアップグレード](upgrade-power-pivot-for-sharepoint.md)します。 既存の SQL Server のアップグレードの詳細については、インスタンスは、「[インストール ウィザードを SQL Server 2014 を使用するアップグレード&#40;セットアップ&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)します。  
   
 ## <a name="known-upgrade-issues"></a>アップグレードに関する既知の問題  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]にアップグレードする前に、次のトピックを確認してください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]にアップグレードする前に、次のトピックを確認してください。  
   
 -   [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62775033"
 -   Analysis Services を新しいハードウェア上にインストールし、既存のデータベースをそのサーバーへ移行することもできます。  
   
 ## <a name="in-place-upgrade"></a>インプレース アップグレード  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, auの既存のインスタンスをmatically migrate existing databases from the old instance の既存のインスタンスを the new instance. メタデータおよびバイナリ データは 2 つのバージョン間で互換性があるため、アップグレード後もそのまま使用できます。手動でデータを移行する必要はありません。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and, as part of the upgrade process, auの既存のインスタンスをmatically migrate existing databases from the old instance の既存のインスタンスを the new instance. メタデータおよびバイナリ データは 2 つのバージョン間で互換性があるため、アップグレード後もそのまま使用できます。手動でデータを移行する必要はありません。  
   
  既存のインスタンスをアップグレードするには、セットアップを実行し、新しいインスタンスの名前として既存のインスタンス名を指定します。  
   

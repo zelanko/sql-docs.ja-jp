@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: 45cb553dc1f83e42afee5d54951e598fc6df8d1a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645484"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768111"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server の概要
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、Azure SQL Database を含む SQL Server 2005 以降のバージョンにデータ アクセスを提供する、PHP 拡張機能です。 拡張機能は、SQLSRV ドライバーを使用した手順に従ったインターフェイス、Express、SQL Server 2005 以降を含む、SQL Server のすべてのバージョンのデータにアクセスするため、PDO_SQLSRV ドライバーでのオブジェクト指向のインターフェイスを提供します。 3.1 とドライバーの以降のバージョンのサポートは、SQL Server 2008 で開始します。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] API には、Windows 認証、トランザクション、パラメーター バインディング、ストリーミング、メタデータ アクセス、およびエラー処理のサポートが含まれています。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、Azure SQL Database を含む SQL Server 2005 以降のバージョンにデータ アクセスを提供する、PHP 拡張機能です。 拡張機能は、SQLSRV ドライバーを使用した手順に従ったインターフェイス、Express、SQL Server 2005 以降を含む、SQL Server のすべてのバージョンのデータにアクセスするため、PDO_SQLSRV ドライバーでのオブジェクト指向のインターフェイスを提供します。 3\.1 とドライバーの以降のバージョンのサポートは、SQL Server 2008 で開始します。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] API には、Windows 認証、トランザクション、パラメーター バインディング、ストリーミング、メタデータ アクセス、およびエラー処理のサポートが含まれています。  
   
 使用する、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、SQL Server Native Client の正しいバージョンが必要または PHP の同じコンピューターにインストールされている Microsoft ODBC ドライバーが実行されています。  詳細については、次を参照してください。 [Microsoft Drivers for PHP for SQL Server のシステム要件](../../connect/php/system-requirements-for-the-php-sql-driver.md)します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "58645484"
 
 ## <a name="see-also"></a>参照
 
-[概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e2d1f4630228d4c59487c2a5f9de891e87ece5
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537378"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 関数
@@ -55,7 +55,7 @@ SQLRETURN SQLGetCursorName(
  場合*カーソル名*が null の場合、 *NameLengthPtr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*カーソル名*します。  
   
  *BufferLength*  
- [入力]長さ\**カーソル名*、文字数。 場合の値*\*カーソル名*は Unicode 文字列です (呼び出し時に**SQLGetCursorNameW**)、 *BufferLength*引数は偶数である必要があります。  
+ [入力]長さ\**カーソル名*、文字数。 場合の値 *\*カーソル名*は Unicode 文字列です (呼び出し時に**SQLGetCursorNameW**)、 *BufferLength*引数は偶数である必要があります。  
   
  *NameLengthPtr*  
  [出力]文字 (null 終了文字を除く) の合計数を返すメモリへのポインターで返される使用可能な\**カーソル名*します。 返すに使用できる文字数がより大きいかに等しい場合*BufferLength*でカーソル名\**カーソル名*に切り捨てられます*BufferLength*null 終了文字の長さマイナスです。  

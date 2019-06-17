@@ -15,13 +15,13 @@ helpviewer_keywords:
 - InsertRow method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6119e1c6d646d77105824fe9fcb2072416250e1a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8acbcf78a7f8e3e108b93076d5596c0f09edd226
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601459"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761485"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,10 +62,10 @@ HRESULT InsertRow(
  E_UNEXPECTED  
  既に [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドによって無効になっている一括コピー行セットに対して呼び出されました。  
   
- DB_E_BADACCESSORHANDLE   
+ DB_E_BADACCESSORHANDLE  
  コンシューマーが指定した *hAccessor* 引数が無効でした。  
   
- DB_E_BADACCESSORTYPE   
+ DB_E_BADACCESSORTYPE  
  指定されたアクセサーが行アクセサーではなかったか、コンシューマー所有のメモリが指定されませんでした。  
   
 ## <a name="remarks"></a>Remarks  

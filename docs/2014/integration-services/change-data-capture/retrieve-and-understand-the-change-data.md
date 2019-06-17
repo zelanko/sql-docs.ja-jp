@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76635a5c1f1140bb66adf1d9ac40885c3dc43269
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771248"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>変更データを取得および理解する
@@ -57,6 +57,6 @@ ms.locfileid: "62771248"
 ## <a name="next-step"></a>次の手順  
  変更データを取得するように OLE DB ソースを構成したら、次の手順で、パッケージのデータ フローのデザインを開始します。  
   
- **次のトピック:**[挿入、更新、および削除を処理する](process-inserts-updates-and-deletes.md)  
+ **次のトピック:** [挿入、更新、および削除を処理する](process-inserts-updates-and-deletes.md)  
   
   

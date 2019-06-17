@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538029"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 関数
@@ -256,7 +256,7 @@ SQLRETURN SQLBulkOperations(
  アプリケーションを呼び出す場合**SQLCancel**ドライバーでは、実行時データ列のデータが引き続き必要があります、中にドライバーが操作をキャンセルします。 アプリケーションを呼び出して**SQLBulkOperations**もう一度; 取り消すには影響しません、カーソルの状態または現在のカーソル位置。  
   
 ## <a name="row-status-array"></a>行の状態の配列  
- 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**します。 ドライバーは、呼び出しの後にこの配列の状態の値を設定**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations**。 この配列は、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性を指しています。 行の状態配列内の要素の数は、(、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で定義) された行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)します。  
+ 行の状態配列が呼び出しの後に、行セット内のデータの行ごとの状態の値を含む**SQLBulkOperations**します。 ドライバーは、呼び出しの後にこの配列の状態の値を設定**SQLFetch**、 **SQLFetchScroll**、 **SQLSetPos**、または**SQLBulkOperations**. この配列は、最初にへの呼び出しによって設定されます**SQLBulkOperations**場合**SQLFetch**または**SQLFetchScroll**が前に呼び出されていない**SQLBulkOperations。** . この配列は、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性を指しています。 行の状態配列内の要素の数は、(、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で定義) された行セット内の行の数に等しくなければなりません。 この行の状態配列については、次を参照してください。 [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)します。  
   
 ## <a name="code-example"></a>コード例  
  次の例では、Customers テーブルから、一度に 10 行のデータをフェッチします。 次にユーザーのアクションを実行するように求めます。 ネットワーク トラフィックを減らすためには、例のバッファーは更新、削除、およびローカル バインドの配列では、以前の行セットのデータのオフセット位置に挿入します。 コードがオフセットが適切にバインドを設定し、呼び出すユーザーは、更新、削除、送信することを選択し、データ ソースに挿入、 **SQLBulkOperations**します。 わかりやすくするため、ユーザーは、10 個を超える更新、削除、または挿入バッファーことはできません。  

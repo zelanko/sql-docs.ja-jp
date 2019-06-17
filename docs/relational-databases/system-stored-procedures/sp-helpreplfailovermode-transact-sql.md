@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865284"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` フェールオーバー モードの整数値を返し、、**出力**パラメーター。 *failover_mode_id*は、 **tinyint** 、既定値は**0**します。 返します**0**即時更新と**1**のキュー更新します。  
   
- [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
+ [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
  サブスクライバーでデータ変更が行われるモードを返します。 *failover_mode*は、 **nvarchar (10)** 既定値は NULL です。 **出力**パラメーター。  
   
 |値|説明|  

@@ -32,10 +32,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065059"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>ウィザードを使用した拡張イベント セッションの作成 (オブジェクト エクスプローラー)
@@ -72,7 +72,7 @@ ms.locfileid: "66065059"
   
 -   新規セッション ウィザードの **[説明]** ページで、 **[次へ]** をクリックします。  
   
-     このウィザードを複数回使用する場合で、なおかつウィザードの起動時に毎回同じ説明を読む必要がない場合は、**[次回からこのページを表示しない]** チェック ボックスをオンにします。  
+     このウィザードを複数回使用する場合で、なおかつウィザードの起動時に毎回同じ説明を読む必要がない場合は、 **[次回からこのページを表示しない]** チェック ボックスをオンにします。  
   
 ##  <a name="BKMK_SetSessionProperties"></a> セッションのプロパティを設定します。  
  **[セッションのプロパティの設定]** ページで、次の手順に従います。  

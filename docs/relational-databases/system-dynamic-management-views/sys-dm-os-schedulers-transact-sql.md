@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626771"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
@@ -62,10 +62,10 @@ ms.locfileid: "65626771"
 |memory_object_address|**varbinary(8)**|スケジューラのメモリ オブジェクトのメモリ アドレス。 Null を許容しません。|  
 |task_memory_object_address|**varbinary(8)**|タスクのメモリ オブジェクトのメモリ アドレス。 NULL 値は許可されません。 詳細については、次を参照してください。 [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)します。|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]SQLOS によって使用されるスケジューラ クォンタムを公開します。|  
-| total_cpu_usage_ms |**bigint**|**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降 <br><br> 非プリエンプティブ ワーカーによって報告された、このスケジューラによって消費される合計 cpu 使用率。 NULL 値は許可されません。|
+| total_cpu_usage_ms |**bigint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降 <br><br> 非プリエンプティブ ワーカーによって報告された、このスケジューラによって消費される合計 cpu 使用率。 NULL 値は許可されません。|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 基づいた制限を示します[サービス レベル目標](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)のバージョンの Azure 以外の場合は 0 が必ず[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 NULL 値が許可されます。|
-|total_scheduler_delay_ms|**bigint**|**適用対象**:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]以降 <br><br> 1 つのワーカーの切り替えと切り替えもう 1 つまでの時間。 プリエンプティブ ワーカーが、[次へ] の非プリエンプティブ ワーカーのまたは他のプロセスからのスレッドのスケジューリング、OS のためにスケジュール設定を行うことによって発生することができます。 NULL 値は許可されません。|
-|ideal_workers_limit|**int**|**適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]以降 <br><br> ワーカーの数は、スケジューラになければなりませんが理想的です。 現在のワーカーがアイドル状態になった後、不均衡なタスクの負荷によって制限を超える場合は、除去されます。 NULL 値は許可されません。|
+|total_scheduler_delay_ms|**bigint**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降 <br><br> 1 つのワーカーの切り替えと切り替えもう 1 つまでの時間。 プリエンプティブ ワーカーが、[次へ] の非プリエンプティブ ワーカーのまたは他のプロセスからのスレッドのスケジューリング、OS のためにスケジュール設定を行うことによって発生することができます。 NULL 値は許可されません。|
+|ideal_workers_limit|**int**|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降 <br><br> ワーカーの数は、スケジューラになければなりませんが理想的です。 現在のワーカーがアイドル状態になった後、不均衡なタスクの負荷によって制限を超える場合は、除去されます。 NULL 値は許可されません。|
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可

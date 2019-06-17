@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cf62d09de1180687598d817ff9199d7098008829
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299140"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>変数値ファイル (DB2ToSQL) の作成
@@ -22,7 +22,7 @@ ms.locfileid: "63299140"
   
 > [!NOTE]  
 > 1.  変数の名前はプレフィックスし、$ (ドル) 記号が付いています。 変数は、変数値ファイルで値が割り当てられていない場合はその結果、コンソールの実行プロセスを停止するスクリプト ファイルの解析中にエラーが発生します。  
-> 2.  エスケープ文字**$** は **$$** します。 パラメーターの変数または静的な値の値を含むかどうか**$** し (ドル) シンボル**$$** 変数ではなく文字として扱うことを指定する必要があります。  
+> 2.  エスケープ文字 **$** は **$$** します。 パラメーターの変数または静的な値の値を含むかどうか **$** し (ドル) シンボル **$$** 変数ではなく文字として扱うことを指定する必要があります。  
 > 3.  保守容易性のために、内部で変数を宣言できます`'variable-group'`ユーザーの論理的な分離の要素は、変数を定義します。  この要素の使用は必須ではありません。  
   
 **使用例:**  

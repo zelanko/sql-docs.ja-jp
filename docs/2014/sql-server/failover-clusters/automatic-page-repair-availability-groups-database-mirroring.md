@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137515"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>ページの自動修復 (可用性グループとデータベース ミラーリング)
@@ -88,7 +88,7 @@ ms.locfileid: "63137515"
   
 
   
-##  <a name="ViewAPRattempts"></a> 操作方法：ページの自動修復の試行の表示  
+##  <a name="ViewAPRattempts"></a> 方法:ページの自動修復の試行の表示  
  以下の動的管理ビューは、特定の可用性データベースまたはミラー化された特定のデータベースに対して最近試行されたページの自動修復に対応する行を返します (データベースあたり最大 100 行)。  
   
 -   **AlwaysOn 可用性グループ:**  
@@ -105,7 +105,7 @@ ms.locfileid: "63137515"
   
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

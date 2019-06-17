@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b45d519b8abc40709780f21721e38927f96a06dc
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403704"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>レッスン 1:Analysis Services プロジェクト内でのデータ ソース ビューの定義
@@ -39,7 +39,7 @@ ms.locfileid: "65403704"
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 2:定義と、キューブの配置](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [多次元モデルのデータ ソース ビュー](../multidimensional-models/data-source-views-in-multidimensional-models.md)   
 
 [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)   

@@ -1,20 +1,20 @@
 ---
 title: リリース ノート (SSRS) の 2017 以降 |Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283295"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037856"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 以降のリリース ノート
 
@@ -86,7 +86,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | pageHeight が 0.5 インチ未満の場合、テキストのサイズが拡大縮小しない。 | &nbsp; |
 | CRM と共に使用するときに、SSRS カタログ データベースでデッドロックが発生します。 | &nbsp; |
 | レポートを下にスクロールするとき、垂直方向に整列された列見出しが正しく表示されない。 | &nbsp; |
-| SCOM レポートの役割に追加されたユーザーが、SSRS Web ポータルへのアクセスをブロックされる。 | &nbsp; |
+| System Center Operations Manager Reporting ロールに追加されたユーザーがアクセスに SSRS web ポータルにブロックされています。 | &nbsp; |
 | タイ語文字は、正しく PDF にエクスポートされません。 | &nbsp; |
 | ブラウザーの役割の動作の変更。 | &nbsp; |
 | Express エディションで rc:Toolbar=false が機能しない。 | &nbsp; |

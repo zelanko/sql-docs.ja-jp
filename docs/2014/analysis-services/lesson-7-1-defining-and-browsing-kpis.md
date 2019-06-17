@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27508ec35e6d7d061a278859a0a9bf38e63a95e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078382"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI の定義と表示
@@ -69,9 +69,9 @@ ms.locfileid: "66078382"
   
 3.  **名前**ボックスに「 `Reseller Revenue`、し、 **Reseller Sales**で、**関連付けられたメジャー グループ**一覧。  
   
-4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
+4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]** 、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
   
-5.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Sales Quotas]** の順に展開します。次に、 **Sales Amount Quota** メジャーを **[目標式]** ボックスにドラッグします。  
+5.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]** 、 **[Sales Quotas]** の順に展開します。次に、 **Sales Amount Quota** メジャーを **[目標式]** ボックスにドラッグします。  
   
 6.  **[状態インジケーター]** ボックスの一覧で **[ゲージ]** が選択されていることを確認します。次に、以下の MDX 式を **[状態式]** ボックスに入力します。  
   
@@ -146,13 +146,13 @@ ms.locfileid: "66078382"
   
 5.  **[KPI ブラウザー]** ペイン内の任意の場所をクリックすると、 **Reseller Revenue KPI**の値が更新されます。  
   
-     KPI の **[値]**、 **[目標]**、および **[状態]** セクションに新しい期間の値が反映されていることがわかります。  
+     KPI の **[値]** 、 **[目標]** 、および **[状態]** セクションに新しい期間の値が反映されていることがわかります。  
   
 ## <a name="defining-the-product-gross-profit-margin-kpi"></a>Product Gross Profit Margin KPI の定義  
   
 1.  **[KPI]** タブのツール バーの **[フォーム ビュー]** ボタンをクリックして、 **[新しい KPI]** ボタンをクリックします。  
   
-2.  **名前**ボックスに「 `Product Gross Profit Margin`、ことを確認します**\<すべて >** に表示されます、**関連付けられたメジャー グループ**一覧。  
+2.  **名前**ボックスに「 `Product Gross Profit Margin`、ことを確認します **\<すべて >** に表示されます、**関連付けられたメジャー グループ**一覧。  
   
 3.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **Total GPM** メジャーを **[値式]** ボックスにドラッグします。  
   
