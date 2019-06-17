@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224606"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>マーケット バスケット モデルの検証 (中級者向けデータ マイニング チュートリアル)
@@ -137,7 +137,7 @@ ms.locfileid: "63224606"
 ##  <a name="bkmk_Rules"></a> [規則] タブ  
  **ルール** タブには、アルゴリズムの検索ルールに関連する次の情報が表示されます。  
   
--   **確率:***尤度*ルールの右辺のアイテムの左側にある項目を指定した確率として定義されているのです。  
+-   **確率:** *尤度*ルールの右辺のアイテムの左側にある項目を指定した確率として定義されているのです。  
   
 -   **重要:** ルールの有用性の測定結果。 この値が大きいほどルールの有効性が高くなります。  
   

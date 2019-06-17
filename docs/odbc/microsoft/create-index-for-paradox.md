@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15e16fb311bf3c9acb2823772247e0fc16eabeef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63232298"
 ---
 # <a name="create-index-for-paradox"></a>Paradox の CREATE INDEX
@@ -30,7 +30,7 @@ ODBC Paradox ドライバーの CREATE INDEX ステートメントの構文で�
   
  **(** *column-identifier* **[ASC]**  
   
- [**、** *列識別子***[ASC]**...**)**  
+ [ **、** *列識別子* **[ASC]** ... **)**  
   
  ODBC Paradox ドライバーはサポートしていません、 **DESC** CREATE INDEX ステートメントの ODBC SQL 文法のキーワード。 *テーブル名*引数は、テーブルの完全なパスを指定できます。  
   

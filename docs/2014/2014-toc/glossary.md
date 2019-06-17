@@ -15,10 +15,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504783"
 ---
 # <a name="glossary"></a>用語集
@@ -606,7 +606,7 @@ ms.technology:
 |実行プラン ペイン (Execution Plan pane)|タブの 1 つ。SQLServer で使用される予測プランまたは実際の実行プランの出力が表示されます。|  
 |実行ツリー (execution tree)|変換元から変換を経由した変換先までの、SQL Server 2005 Integration Services パッケージのデータ フロー内のデータのパス。|  
 |終了モジュール (exit module)|発行された証明書の Active Directory へのパブリケーションなど、証明書の発効後の処理を実行する Certificate Services コンポーネント。|  
-|expiration |オブジェクトがキャッシュのタイムアウト値を超えるポイント。 オブジェクトは、期限切れになると削除されます。|  
+|expiration|オブジェクトがキャッシュのタイムアウト値を超えるポイント。 オブジェクトは、期限切れになると削除されます。|  
 |明示的なキャップ (explicit cap)|派生階層構造の最上位として使用される明示的階層。|  
 |明示的階層 (explicit hierarchy)|マスター データ サービスで、統合メンバーを使用して、その他の統合メンバーやリーフ メンバーをグループ化する階層。|  
 |明示的な読み込み (explicit loading)|読み込みのパターンの 1 つ。このパターンでは、関連するオブジェクトは、ナビゲーション プロパティの Load メソッドを使用して明示的に要求されるまで読み込まれません。|  

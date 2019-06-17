@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067729"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -38,7 +38,7 @@ ms.locfileid: "63067729"
 |列名|説明|  
 |-----------------|-----------------|  
 |DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)** データ型。|  
-|TYPE_NAME|"Varchar"、"varbinary"または"nvarchar"を返します、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** データ型。|  
+|TYPE_NAME|"Varchar"、"varbinary"または"nvarchar"を返します、 **varchar (max)** 、 **varbinary (max)** 、および**nvarchar (max)** データ型。|  
 |COLUMN_SIZE|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)** 列のサイズが制限されることを示すデータ型。|  
 |BUFFER_LENGTH|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)** バッファーのサイズが制限されることを示すデータ型。|  
 |SQL_DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)** データ型。|  
