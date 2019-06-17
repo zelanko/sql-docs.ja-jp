@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011317"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>セマンティック検索による類似および関連したドキュメントの取得
@@ -24,7 +24,7 @@ ms.locfileid: "66011317"
   
 ##  <a name="BasicsQuerySimilar"></a> 類似または関連ドキュメントの検索  
   
-###  <a name="HowToQuerySimilar"></a> 操作方法：類似または関連ドキュメントを SEMANTICSIMILARITYTABLE で見つける  
+###  <a name="HowToQuerySimilar"></a> 方法:類似または関連ドキュメントを SEMANTICSIMILARITYTABLE で見つける  
  特定の列で類似または関連したドキュメントを識別するには、[semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) 関数を使用してクエリを実行します。  
   
  **SEMANTICSIMILARITYTABLE** は、指定されたドキュメントに意味が似ているコンテンツを指定された列に持っている行 (0 行、1 行、または複数の行) から成るテーブルを返します。 この行セット関数は、標準のテーブル名のように、SELECT ステートメントの FROM 句で参照できます。  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> ドキュメントが類似または関連する方法に関する情報の入手  
   
-###  <a name="HowToQuerySimilarity"></a> 操作方法：ドキュメントは、類似または関連 semanticsimilaritydetailstable の各使用方法に関する情報を確認します。  
+###  <a name="HowToQuerySimilarity"></a> 方法:ドキュメントは、類似または関連 semanticsimilaritydetailstable の各使用方法に関する情報を確認します。  
  ドキュメントが類似または関連する原因となっているキー フレーズに関する情報を表示するには、[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 関数を使用してクエリを実行します。  
   
  **SEMANTICSIMILARITYDETAILSTABLE** は、意味が似たコンテンツを持つ 2 つのドキュメント (ソース ドキュメントと一致するドキュメント) に共通するキー フレーズの 0 行、1 行、または複数の行から成るテーブルを返します。 この行セット関数は、標準のテーブル名のように、SELECT ステートメントの FROM 句で参照できます。  

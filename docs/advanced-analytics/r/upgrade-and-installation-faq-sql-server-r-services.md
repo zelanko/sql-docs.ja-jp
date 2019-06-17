@@ -3,17 +3,17 @@ title: アップグレードとインストールよく寄せられる質問 (FA
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
 manager: cgronlun
-ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642320"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140367"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning の R Server のアップグレードとインストールに関する FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ SQL Server のバージョンをアップグレードするには、セットア
 + [インストール ウィザードを使用して SQL Server をアップグレードします。](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 コンポーネントのバインドと呼ばれるプロセスを使用して学習マシンだけをアップグレードできます。 
-+ [SqlBindR を使用して、machine learning コンポーネントをアップグレードするには](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [SqlBindR を使用して、machine learning コンポーネントをアップグレードするには](../install/upgrade-r-and-python.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>プレリリース バージョンからのインプレース アップグレードのサポートの終了
 
@@ -95,11 +95,11 @@ SQL Server のプレリリース バージョンをアンインストールす�
 
 Microsoft R Server のプレリリース版がインストールされている場合は、それをアンインストールしてから新しいバージョンにアップグレードする必要があります。
 
-1.  **[コントロール パネル]** を開き、**[プログラムの追加と削除]** をクリックし、 `Microsoft SQL Server 2016 <version number>`を選択します。
+1.  **[コントロール パネル]** を開き、 **[プログラムの追加と削除]** をクリックし、 `Microsoft SQL Server 2016 <version number>`を選択します。
 
-2.  コンポーネントに対する **[追加]**、**[修復]**、または **[削除]** オプションを含むダイアログ ボックスが表示されたら、**[削除]** を選択します。
+2.  コンポーネントに対する **[追加]** 、 **[修復]** 、または **[削除]** オプションを含むダイアログ ボックスが表示されたら、 **[削除]** を選択します。
   
-3.  **[機能の選択]** ページの **[共有機能]** で **[R Server (スタンドアロン)]** を選択します。 **[次へ]** をクリックし、**[完了]** をクリックして、選択したコンポーネントのみをアンインストールします。
+3.  **[機能の選択]** ページの **[共有機能]** で **[R Server (スタンドアロン)]** を選択します。 **[次へ]** をクリックし、 **[完了]** をクリックして、選択したコンポーネントのみをアンインストールします。
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services と R Server (スタンドアロン) のサイド バイ サイドでのエラー 
 

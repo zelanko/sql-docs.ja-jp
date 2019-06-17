@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757777"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded インターフェイス
@@ -109,7 +109,7 @@ HRESULT GetStreamIdentifier (
 |DBPROPVAL_EMBED_EMBEDDED|0x01|現在のアプリケーションには埋め込みデータベースが含まれています。|  
 |DBPROPVAL_EMBED_LINKED|0x02|埋め込みデータベースはリモート アプリケーション (SharePoint Server など) でホストされています。|  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  コンテナー URL の設定中にエラーが発生しました。  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  フラグの設定中にエラーが発生しました。  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  パスの設定中にエラーが発生しました。  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -217,7 +217,7 @@ HRESULT Cancel ( void )
  現在の埋め込みデータベース操作を取り消します。  
   
 #### <a name="parameters"></a>パラメーター  
- なし。  
+ [なし] :  
   
 #### <a name="return-value"></a>戻り値  
  `S_OK`  
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  埋め込み操作の取り消し中にエラーが発生しました。  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>ソース  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   

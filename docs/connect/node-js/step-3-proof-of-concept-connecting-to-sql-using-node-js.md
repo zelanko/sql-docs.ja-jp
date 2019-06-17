@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7f4ebdc95ec105b4905ae9886abc59afe68a1f40
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834141"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800499"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>ステップ 3: Node.js を使用した SQL への接続を概念実証する
 
 ![ダウンロード下方向丸](../../ssdt/media/download.png)[Node.js SQL ドライバーのダウンロード](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-この例は、のみの概念実証を検討してください。  サンプル コードがわかりやすくするために、簡略化し、Microsoft によって推奨されるベスト プラクティスに表すとは限りません。 重要な同じ関数を使用するその他の例は、Github で入手できます。
+この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。 重要な同じ関数を使用するその他の例は、Github で入手できます。
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>手順 1: 接続  
+## <a name="step-1-connect"></a>手順 1: 接続する  
   
 **新しい接続**関数を使用して、SQL Database に接続します。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47834141"
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>手順 2: クエリの実行  
+## <a name="step-2--execute-a-query"></a>手順 2: クエリを実行する  
   
   
 使用してすべての SQL ステートメントが実行される、**新しい Request()** 関数。 ステートメントは、select ステートメントなどの行を返す場合取得するを使用して、 **request.on()** 関数。 行が存在しない場合、request.on() 関数は空のリストを返します。  
@@ -96,9 +96,9 @@ ms.locfileid: "47834141"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入します。  
+## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入する  
   
-実行する方法がわかります。 この例では、[挿入](../../t-sql/statements/insert-transact-sql.md)ステートメントが安全に、からアプリケーションを保護するパラメーターを渡す[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
+この例では、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
   
   
 ```javascript  

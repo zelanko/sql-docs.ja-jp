@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209892"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>メニュー コマンドやその他のショートカット キー (OracleToSQL)
@@ -197,6 +197,6 @@ ms.locfileid: "63209892"
 |クイック ヒントを起動します。|CTRL + SHIFT + スペース|  
 |宣言に移動します。|F12|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ショートカット キー&#40;To SQL、Oracle&#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   

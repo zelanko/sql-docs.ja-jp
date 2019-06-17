@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 83159d1c6b66019aad196e2d05337f06c11f390f
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66709916"
 ---
 # <a name="ado-md-collections"></a>ADO MD のコレクション
@@ -33,7 +33,7 @@ ms.locfileid: "66709916"
 |[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|含まれています、**メンバー**レベル、または軸に沿った位置からのオブジェクト。|  
 |[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|含まれています、**位置**軸の位置を定義するオブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD のコード例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD の列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

@@ -30,10 +30,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678062"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
@@ -74,7 +74,7 @@ ms.locfileid: "62678062"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ノード セットで位置の選択は実行されません。たとえば、XPath クエリ `Customer[3]` は 3 番目の顧客を意味しますが、このような位置の選択は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサポートされていません。 ノードではそのため、-設定-に-**文字列**またはノードの設定-に-**数**XPath 仕様での説明に従って、変換は実装されていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XPath 仕様で "先頭" の意味で指定されているものが "任意" の意味として扱われます。 W3C XPath 仕様に XPath クエリに基づいて、たとえば、 `Order[OrderDetail/@UnitPrice > 10.0]` 、最初にそれらの注文を選択**OrderDetail**は、 **[単価]** 10.0 よりも大きい。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、次の XPath クエリでこれらの注文を選択する**OrderDetail**は、 **[単価]** 10.0 よりも大きい。  
   
- 変換**ブール**、存在検査が生成されますテスト。 したがって、XPath クエリ`Products[@Discontinued=true()]`が SQL 式と同じ"products.discontinued is null でない"、SQL 式ではありません"Products.Discontinued = 1" です。 クエリを後者の SQL 式に相当するためには、以外を最初にノード セットを変換**ブール**などの入力**数**します。 たとえば、 `Products[number(@Discontinued) = true()]`のようにします。  
+ 変換**ブール**、存在検査が生成されますテスト。 したがって、XPath クエリ`Products[@Discontinued=true()]`が SQL 式と同じ"products.discontinued is null でない"、SQL 式ではありません"Products.Discontinued = 1" です。 クエリを後者の SQL 式に相当するためには、以外を最初にノード セットを変換**ブール**などの入力**数**します。 たとえば、`Products[number(@Discontinued) = true()]` のようにします。  
   
  大半の演算子は、ノード セット内の 1 つ以上のノードに対して TRUE であれば TRUE となるように定義されているので、これらの演算はノード セットが空の場合は常に FALSE となります。 したがって、A が空の場合、`A = B` と `A != B` は両方とも FALSE になり、`not(A=B)` と `not(A!=B)` は TRUE になります。  
   

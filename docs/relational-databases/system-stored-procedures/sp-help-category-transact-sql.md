@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62797814"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -51,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**アラートを生成します。**|警告カテゴリに関する情報を提供します。|  
 |**演算子**|オペレーター カテゴリに関する情報|  
   
-`[ @type = ] 'type'` 情報を要求する対象のカテゴリの種類。 *型*は**varchar (12)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @type = ] 'type'` 情報を要求する対象のカテゴリの種類。 *型*は**varchar (12)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -67,7 +67,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ときに**@suffix**は**0**、 **sp_help_category**次の結果セットを返します。  
+ ときに **@suffix** は**0**、 **sp_help_category**次の結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -75,7 +75,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチ サーバー<br /><br /> **3** = なし|  
 |**name**|**sysname**|カテゴリ名|  
   
- ときに**@suffix**は**1**、 **sp_help_category**次の結果セットを返します。  
+ ときに **@suffix** は**1**、 **sp_help_category**次の結果セットを返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

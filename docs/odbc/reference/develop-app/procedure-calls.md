@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284574"
 ---
 # <a name="procedure-calls"></a>プロシージャ呼び出し
 A*プロシージャ*はデータ ソースに格納されている実行可能オブジェクトです。 これは通常、プリコンパイルされた 1 つ以上の SQL ステートメントです。 プロシージャの呼び出しのエスケープ シーケンスは、します。  
   
- **{****[?=]****call** *procedure-name*[**(**[*parameter*][**,**[*parameter*]]...**)**]**}**  
+ **{** **[?=]** **call** *procedure-name*[ **(** [*parameter*][ **,** [*parameter*]]... **)** ] **}**  
   
  場所*プロシージャ名*プロシージャの名前を指定し、*パラメーター*プロシージャのパラメーターを指定します。  
   

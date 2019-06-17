@@ -2,17 +2,17 @@
 title: ユーザー ライブラリ - SQL Server Machine Learning Services にインストールされている R パッケージの使用に関するヒント
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642286"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140512"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server で R パッケージを使用するためのヒント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ R パッケージは、複数のコンピューティング プラットフォ�
 
 何もインストールする前に以前のコンピューター上の R 環境を変更した場合は必ず、R 環境変数`.libPath`は 1 つのパスを使用します。
 
-このパスは、インスタンスの R_SERVICES フォルダーを指定する必要があります。 詳細については、どのパッケージが既にインストールされているかを決定する方法などを参照してください。 [SQL Server の既定の R と Python のパッケージ](installing-and-managing-r-packages.md)します。
+このパスは、インスタンスの R_SERVICES フォルダーを指定する必要があります。 詳細については、どのパッケージが既にインストールされているかを決定する方法などを参照してください。 [SQL Server の既定の R と Python のパッケージ](../package-management/default-packages.md)します。
 
 ## <a name="new-to-sql-server"></a>SQL server
 
@@ -73,7 +73,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + R パッケージまたは R ライブラリのパスへの直接参照を削除するコードを更新します。 
 
-+ パッケージ ライブラリは、インスタンスに関連付けられています。 詳細については、次を参照してください。 [SQL Server の既定の R と Python のパッケージ](installing-and-managing-r-packages.md)します。
++ パッケージ ライブラリは、インスタンスに関連付けられています。 詳細については、次を参照してください。 [SQL Server の既定の R と Python のパッケージ](../package-management/default-packages.md)します。
 
 ## <a name="see-also"></a>関連項目
 

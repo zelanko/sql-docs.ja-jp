@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013015"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0 の DiffGram の概要
@@ -57,7 +57,7 @@ ms.locfileid: "66013015"
  省略可能なブロックです。DiffGram の処理ロジックでは無視されます。  
   
 ## <a name="diffgram-annotations"></a>DiffGram の注釈  
- これらの注釈は DiffGram 名前空間で定義されている **"urn:schemas-microsoft-com:xml-diffgram-01"**:  
+ これらの注釈は DiffGram 名前空間で定義されている **"urn:schemas-microsoft-com:xml-diffgram-01"** :  
   
  **id**  
  この属性を使用して要素のペアを **\<する前に >** と **\<DataInstance >** ブロックします。  

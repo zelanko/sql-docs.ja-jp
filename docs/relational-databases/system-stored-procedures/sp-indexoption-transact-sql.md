@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62961060"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (TRANSACT-SQL)
@@ -47,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @IndexNamePattern = ] 'table_or_index_name'` ユーザー定義テーブルまたはインデックスの修飾付きまたは修飾なしの名前です。 *table_or_index_name*は**nvarchar (1035)**、既定値はありません。 引用符は、インデックスまたはテーブルの修飾名が指定されている場合にのみ必要です。 データベース名も含めてフル パスで指定した場合は、そのデータベース名は現在のデータベース名である必要があります。 インデックスのないテーブル名を指定すると場合、指定したオプションの値でクラスター化インデックスが存在しない場合のテーブルとテーブル自体の設定のすべてのインデックスされます。  
+`[ @IndexNamePattern = ] 'table_or_index_name'` ユーザー定義テーブルまたはインデックスの修飾付きまたは修飾なしの名前です。 *table_or_index_name*は**nvarchar (1035)** 、既定値はありません。 引用符は、インデックスまたはテーブルの修飾名が指定されている場合にのみ必要です。 データベース名も含めてフル パスで指定した場合は、そのデータベース名は現在のデータベース名である必要があります。 インデックスのないテーブル名を指定すると場合、指定したオプションの値でクラスター化インデックスが存在しない場合のテーブルとテーブル自体の設定のすべてのインデックスされます。  
   
-`[ @OptionName = ] 'option_name'` インデックスのオプション名です。 *option_name*は**varchar (35)**、既定値はありません。 *option_name*値は次のいずれかであることができます。  
+`[ @OptionName = ] 'option_name'` インデックスのオプション名です。 *option_name*は**varchar (35)** 、既定値はありません。 *option_name*値は次のいずれかであることができます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|TRUE の場合、行ロックは使用されません。 FALSE の場合、インデックスにアクセスするときに行ロックが許可されます。 いつ行ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって決定されます。|  
 |**DisAllowPageLocks**|TRUE の場合、ページ ロックは使用されません。 FALSE の場合、インデックスへのアクセス時にページ ロックが許可されます。 いつページ ロックを使用するかは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって決定されます。|  
   
-`[ @OptionValue = ] 'value'` 指定するかどうか、 *option_name*設定が有効になっている (TRUE、ON、はい、または 1) か無効 (FALSE、OFF、いいえ、または 0)。 *値*は**varchar (12)**、既定値はありません。  
+`[ @OptionValue = ] 'value'` 指定するかどうか、 *option_name*設定が有効になっている (TRUE、ON、はい、または 1) か無効 (FALSE、OFF、いいえ、または 0)。 *値*は**varchar (12)** 、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 0 (失敗) より大きい  

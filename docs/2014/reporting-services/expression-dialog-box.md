@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109196"
 ---
 # <a name="expression-dialog-box"></a>[式] ダイアログ ボックス
@@ -27,7 +27,7 @@ ms.locfileid: "66109196"
   
  式には、簡単なものも複雑なものもあります。 簡単な式は、デザイン画面またはダイアログ ボックスにあるテキスト ボックスに直接入力できます。 複雑な式を作成するには、使用、**式** ダイアログ ボックス。 作成できる式は一度に 1 つだけです。 詳細については、「[式 (レポート ビルダーおよび SSRS)](report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
- **[式]** ダイアログ ボックスを開くには、ダイアログ ボックスの式 (**[fx]**) ボタンをクリックするか、ショートカット メニューまたは [プロパティ] ペインのドロップダウン リストの **[式]** を選択します。 詳細については、次を参照してください。[レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)します。  
+ **[式]** ダイアログ ボックスを開くには、ダイアログ ボックスの式 ( **[fx]** ) ボタンをクリックするか、ショートカット メニューまたは [プロパティ] ペインのドロップダウン リストの **[式]** を選択します。 詳細については、次を参照してください。[レポートで式を使用して&#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)します。  
   
  **[式]** ダイアログ ボックスには、コード ウィンドウ、カテゴリ ツリー、カテゴリ アイテム、説明ペイン、およびサンプル ペインが含まれています。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66109196"
 ## <a name="expression-constructs"></a>式の構成  
  式は等号 (=) で始まり、定数、リテラル、演算子に加え、組み込みフィールド、組み込みコレクション、組み込み関数、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ランタイム ライブラリ関数、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 共通言語ランタイム クラス、およびカスタム関数への参照を含むことができます。 式に追加できるカテゴリおよび値を次に示します。  
   
- **式を設定します。**_\<PropertyName>_  
+ **式を設定します。** _\<PropertyName>_  
  式を定義するプロパティの名前です。 このプロパティは、[プロパティ] ペインで名前を指定して設定することもできます。  
   
  **定数**  

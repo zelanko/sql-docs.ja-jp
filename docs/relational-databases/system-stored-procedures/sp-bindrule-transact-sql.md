@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995671"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -48,7 +48,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="arguments"></a>引数  
 `[ @rulename = ] 'rule'` CREATE RULE ステートメントで作成されたルールの名前です。 *ルール*、 **nvarchar(776)** の既定値はありません。  
   
-`[ @objname = ] 'object_name'` テーブルと列、または別名データ型は、ルールのバインド先となります。 **text**、**ntext**、**image**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは、計算列にバインドできません。  
+`[ @objname = ] 'object_name'` テーブルと列、または別名データ型は、ルールのバインド先となります。 **text**、**ntext**、**image**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、CLR ユーザー定義型、**timestamp** の列には、ルールをバインドできません。 ルールは、計算列にバインドできません。  
   
  *object_name*は**nvarchar (776)** 既定値はありません。 場合*object_name*は 1 つの要素名では、別名データ型として解決されます。 テーブルおよび列として解決が最初に 2 または 3 つの要素名の場合は、この解決が失敗した場合、エイリアス データ型として解決します。 既存の別名データ型の列を継承する既定では、*ルール*ルールを直接その列にバインドしない限り、します。  
   
@@ -118,7 +118,7 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

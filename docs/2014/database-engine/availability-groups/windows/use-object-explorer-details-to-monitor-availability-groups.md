@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788325"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 (SQL Server Management Studio)
@@ -29,9 +29,9 @@ ms.locfileid: "62788325"
 > [!NOTE]  
 >  [オブジェクト エクスプローラーの詳細] ペインの使用方法の詳細については、「 [[オブジェクト エクスプローラーの詳細] ペイン](../../../ssms/object/object-explorer-details-pane.md)」を参照してください。  
   
--   **作業を開始する準備:**[前提条件](#Prerequisites)  
+-   **作業を開始する準備:** [前提条件](#Prerequisites)  
   
--   **可用性グループを監視するを使用します。**[SQL Server Management Studio](#SSMSProcedure)  
+-   **可用性グループを監視するを使用します。** [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **オブジェクト エクスプローラーの詳細:**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62788325"
  **[可用性グループ]** の詳細画面には、次の列が表示されます。  
   
  **名前**  
- 選択した可用性グループの **[可用性レプリカ]**、 **[可用性データベース]**、および **[可用性グループ]** リスナー フォルダーが表示されます。  
+ 選択した可用性グループの **[可用性レプリカ]** 、 **[可用性データベース]** 、および **[可用性グループ]** リスナー フォルダーが表示されます。  
   
 ##  <a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
  **[可用性レプリカ]** の詳細画面には、次の列が表示されます。  
@@ -80,7 +80,7 @@ ms.locfileid: "62788325"
  可用性レプリカをホストするサーバー インスタンス名と、サーバー インスタンスからローカル サーバー インスタンスへの現在の接続状態を示すアイコンが表示されます。  
   
  **ロール**  
- 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]**) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
+ 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]** ) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
  **[セカンダリ ロールの接続モード]**  
  セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 特定の可用性レプリカのデータベースがクライアントから接続を受け入れることができるかどうかを示します。  
@@ -142,7 +142,7 @@ ms.locfileid: "62788325"
 > [!NOTE]  
 >  可用性データベースのパフォーマンス カウンターの詳細については、「 [SQL Server、Database Replica](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [AlwaysOn ダッシュ ボードを使用して、 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [可用性グループのプロパティの表示 &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)   

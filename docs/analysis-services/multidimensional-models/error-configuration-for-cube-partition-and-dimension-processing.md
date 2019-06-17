@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357353"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>キューブ、パーティション、およびディメンションの処理のエラーの構成
@@ -176,7 +176,7 @@ ms.locfileid: "65357353"
   
  既定の NULL 処理動作を変更するかどうかを決定します。 既定では、文字列型の列の NULL は空の値として処理されますが、数値列の NULL はゼロとして処理されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログのプロパティ](../../analysis-services/server-properties/log-properties.md)   
  [不明なメンバーと NULL 処理のプロパティの定義](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   

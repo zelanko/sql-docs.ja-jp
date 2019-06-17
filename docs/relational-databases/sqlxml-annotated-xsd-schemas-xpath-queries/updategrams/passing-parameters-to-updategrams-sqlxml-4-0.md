@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63007304"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "63007304"
  アップデートグラムでは、パラメーター値として NULL を渡すことができます。 指定した、NULL パラメーターの値を渡すため、 **nullvalue**属性。 割り当てられている値、 **nullvalue**属性は、パラメーター値として指定します。 アップデートグラムでは、この値は NULL として扱われます。  
   
 > [!NOTE]  
->   **\<Sql:header >** と **\<updg:header >**、指定する必要があります、 **nullvalue**として修飾されていない一方で、  **。\<updg:sync >** を指定する、 **nullvalue**として修飾 (たとえば、 **updg:nullvalue**)。  
+>  **\<Sql:header >** と **\<updg:header >** 、指定する必要があります、 **nullvalue**として修飾されていない一方で、  **。\<updg:sync >** を指定する、 **nullvalue**として修飾 (たとえば、 **updg:nullvalue**)。  
   
 ## <a name="examples"></a>使用例  
  次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要があります[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
