@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c5871c6e33947f744dde571c329e8025b4a0813
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: f7b7daefb0f5e9514372fadd9377b05c84784e34
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993444"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140275"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の新機能新機能
 
@@ -33,6 +33,7 @@ ms.locfileid: "65993444"
 
 | リリース | 機能更新プログラム |
 |---------|----------------|
+| CTP 3.0 | 変更はありません。 |
 | CTP 2.5 | 変更はありません。 |
 | CTP 2.4 | Linux サポート[外部ライブラリの作成 (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) R および Python。 |
 | CTP 2.3 | Windows の場合のみでの Python コードを外部ライブラリを使用して、アクセスできる、[外部ライブラリの作成 (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md)ステートメント。 |

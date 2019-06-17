@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270770"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate クラス
@@ -36,7 +36,7 @@ ms.locfileid: "63270770"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、SHA サムプリントの検証  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [暗号化階層](../../security/encryption/encryption-hierarchy.md)  
   
   

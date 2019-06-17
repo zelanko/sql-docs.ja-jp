@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815727"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>可用性グループへのデータベース追加ウィザードの使用 (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "62815727"
   
      [Security](#Security)  
   
--   **データベースの追加に使用します。**[データベースを可用性グループ ウィザード (SQL Server Management Studio) に追加します。](#SSMSProcedure)  
+-   **データベースの追加に使用します。** [データベースを可用性グループ ウィザード (SQL Server Management Studio) に追加します。](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  可用性グループにデータベースを追加しない場合は、「可用性データベース」のセクションを参照してください[前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)します。  
@@ -112,7 +112,7 @@ ms.locfileid: "62815727"
   
      詳細については、次を参照してください。[既存のセカンダリ レプリカ ページへの接続&#40;のレプリカ追加ウィザードおよびデータベース追加ウィザード&#41;](connect-to-existing-secondary-replicas-page.md)します。  
   
-7.  **[検証]** ページでは、このウィザードで指定した値が、新しい可用性グループ ウィザードの要件を満たしているかどうかが確認されます。 変更が必要な場合は、 **[戻る]** をクリックして前のウィザード ページに戻り、値を変更できます。 その後、**[次へ]** をクリックして **[検証]** ページに戻り、**[検証の再実行]** をクリックします。  
+7.  **[検証]** ページでは、このウィザードで指定した値が、新しい可用性グループ ウィザードの要件を満たしているかどうかが確認されます。 変更が必要な場合は、 **[戻る]** をクリックして前のウィザード ページに戻り、値を変更できます。 その後、 **[次へ]** をクリックして **[検証]** ページに戻り、 **[検証の再実行]** をクリックします。  
   
      詳細については、次を参照してください。[検証ページ&#40;AlwaysOn 可用性グループ ウィザード&#41;](validation-page-always-on-availability-group-wizards.md)します。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62815727"
   
      選択内容に問題がなければ、[スクリプト] をクリックして、ウィザードが実行する手順のスクリプトを作成することもできます。 新しい可用性グループを作成して構成するには、 **[完了]** をクリックします。  
   
-9. 可用性グループの作成手順 (エンドポイントの構成、可用性グループの作成、グループへのセカンダリ レプリカの参加) の進行状況が、**[進行状況]** ページに表示されます。  
+9. 可用性グループの作成手順 (エンドポイントの構成、可用性グループの作成、グループへのセカンダリ レプリカの参加) の進行状況が、 **[進行状況]** ページに表示されます。  
   
      詳細については、次を参照してください。[進行状況 ページ&#40;AlwaysOn 可用性グループ ウィザード&#41;](progress-page-always-on-availability-group-wizards.md)します。  
   

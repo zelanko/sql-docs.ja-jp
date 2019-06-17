@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1cef52f066a07032240d17f88297b02ba3f7e5fb
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65995120"
 ---
 # <a name="sysexternallanguages-transact-sql"></a>sys.external_languages (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このカタログ ビューでは、データベースの外部の言語の一覧を示します。 **R**と**Python**予約済みの名前は、その特定の名前を持つ外部の言語を作成できません。
+このカタログ ビューでは、データベースの外部の言語の一覧を示します。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。
 
 ## <a name="sysexternallanguages"></a>sys.external_languages
 

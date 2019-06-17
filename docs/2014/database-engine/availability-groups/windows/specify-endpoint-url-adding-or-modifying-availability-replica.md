@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788463"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>可用性レプリカを追加または変更する場合のエンドポイント URL の指定 (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "62788463"
 ##  <a name="SyntaxOfURL"></a> エンドポイント URL の構文  
  エンドポイント URL の構文は、次のような形式になります。  
   
- TCP<strong>://</strong>*\<system-address>*<strong>:<strong>*\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:<strong> *\<port>*  
   
  パラメーターの説明  
   
@@ -47,15 +47,15 @@ ms.locfileid: "62788463"
   
     -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターのノードが同じドメイン内にある場合、コンピューター システムの名前 ( `SYSTEM46`など) を使用できます。  
   
-    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、**[**_<IPv6_address>_**]** のように、角かっこで囲む必要があります。  
+    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、 **[** _<IPv6_address>_ **]** のように、角かっこで囲む必要があります。  
   
          システムの IP アドレスを参照するには、Windows コマンド プロンプトで、 **ipconfig** コマンドを入力します。  
   
     -   完全修飾ドメイン名は動作が保証されています。 これは、場所によって異なる形式を使用するローカルに定義されたアドレス文字列です。 常にではありませんが多くの場合、完全修飾ドメイン名は、次の形式のようにコンピューター名、およびピリオド区切りの一連のドメイン セグメントを含む複合名になります。  
   
-         _computer_name_ **など) を使用できます。** _domain_segment_[...**.**_domain_segment_]  
+         _computer_name_ **など) を使用できます。** _domain_segment_[... **.** _domain_segment_]  
   
-         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[...**.**_domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
+         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[... **.** _domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
   
          ドメイン セグメントの内容と数は、会社内または組織内で決定されます。 詳細については、このトピックの「 [完全修飾ドメイン名の検索](#Finding_FQDN)」を参照してください。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62788463"
   
  **IPCONFIG /ALL**  
   
- 完全修飾ドメイン名を作成するには、次に示すように、*<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
+ 完全修飾ドメイン名を作成するには、次に示すように、 *<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
   
  _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   

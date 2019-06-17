@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769018"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
@@ -90,7 +90,7 @@ ms.locfileid: "62769018"
   
 9. スクリプト コンポーネントをデータ フローに追加し、変換として構成します。 フラット ファイル ソースの出力をスクリプト コンポーネントに接続します。  
   
-10. スクリプト コンポーネントをダブルクリックし、**[スクリプト変換エディター]** を表示します。  
+10. スクリプト コンポーネントをダブルクリックし、 **[スクリプト変換エディター]** を表示します。  
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
@@ -249,7 +249,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 9. スクリプト コンポーネントをデータ フローに追加し、変換として構成します。 フラット ファイル ソースの出力をスクリプト コンポーネントに接続します。  
   
-10. スクリプト コンポーネントをダブルクリックし、**[スクリプト変換エディター]** を表示します。  
+10. スクリプト コンポーネントをダブルクリックし、 **[スクリプト変換エディター]** を表示します。  
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
@@ -267,7 +267,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord、文字列型 [DT_STR]、長さ 50  
   
-14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックします。 `ScriptMain` クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックします。 `ScriptMain` クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 15. SQL Server 変換先をデータ フローに追加します。 スクリプト コンポーネントの ParentRecords 出力をこの変換先に接続します。OLE DB 接続マネージャーと Parents テーブルを使用するように構成します。  
   

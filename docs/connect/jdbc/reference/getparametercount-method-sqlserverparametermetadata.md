@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7dbbdacb-74ef-42e7-9bdc-a3229505dad8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: baf38dfef9eb3a843fa368461daf6225af30af9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 41e72d9e711a33e2a6027f0e27fd058f6f9450e7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827710"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771564"
 ---
 # <a name="getparametercount-method-sqlserverparametermetadata"></a>getParameterCount メソッド (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public int getParameterCount()
   
 ## <a name="see-also"></a>参照  
  [SQLServerParameterMetaData のメソッド](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
- ph id="ph1" xmlns="urn:oasis:names:tc:xliff:document:1.2"> </ph>[SQLServerParameterMetaData のメンバー](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)  
+ [SQLServerParameterMetaData のメンバー](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData クラス](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
   
   

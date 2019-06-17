@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63156945"
 ---
 # <a name="transparent-data-encryption"></a>透過的なデータ暗号化
@@ -244,7 +244,7 @@ DMK がアップグレードまたは置換の VM が実行されたアプライ
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-アップグレード中に、ユーザー データベースが暗号化されており、DMK パスワードが指定されていない場合、アップグレード アクションは失敗します。 置換、中に、DMK が存在する場合は、正しいパスワードが指定されていない操作がその DMK 復旧手順をスキップします。 その他のすべての手順は、アクションを追加の手順が必要なことを示すために、最後にエラーが報告されますが、置換 VM アクションの最後に完了できません。 セットアップ ログで (である**\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< タイムスタンプ > \Detail-Setup**)、末尾付近に次の警告が表示されます。  
+アップグレード中に、ユーザー データベースが暗号化されており、DMK パスワードが指定されていない場合、アップグレード アクションは失敗します。 置換、中に、DMK が存在する場合は、正しいパスワードが指定されていない操作がその DMK 復旧手順をスキップします。 その他のすべての手順は、アクションを追加の手順が必要なことを示すために、最後にエラーが報告されますが、置換 VM アクションの最後に完了できません。 セットアップ ログで (である **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup\\< タイムスタンプ > \Detail-Setup**)、末尾付近に次の警告が表示されます。  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   

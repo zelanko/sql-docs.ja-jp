@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ad4a7791f7bda19c7bec1887ca45d92943c04e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827970"
 ---
 # <a name="create-infopackage"></a>インフォパッケージの作成
-  SAP Netweaver BW システムで新しいインフォパッケージを作成するには、**[インフォパッケージの作成]** ダイアログ ボックスを使用します。  
+  SAP Netweaver BW システムで新しいインフォパッケージを作成するには、 **[インフォパッケージの作成]** ダイアログ ボックスを使用します。  
   
  **[インフォパッケージの作成]** ダイアログ ボックスは、 **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページから開くことができます。 SAP BW 変換先の詳細については、「 [SAP BW Destination](sap-bw-destination.md)」を参照してください。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62827970"
  **保存と有効化**  
  新しいインフォパッケージを保存してアクティブ化します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

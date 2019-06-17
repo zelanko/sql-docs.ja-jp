@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: dfae657f6ab7d8f0cefbdec729e6e836c4f7e4d8
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175279"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR を使って R で MDX クエリを作成する方法
@@ -182,7 +182,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>指定したディメンションと階層のすべてのメンバーを取得するには
 
-ソースを定義してハンドルを作成した後、取得するキューブ、ディメンション、および階層を指定します。 戻り値の結果が付いている項目に**->** 前のメンバーの子を表します。
+ソースを定義してハンドルを作成した後、取得するキューブ、ディメンション、および階層を指定します。 戻り値の結果が付いている項目に **->** 前のメンバーの子を表します。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"

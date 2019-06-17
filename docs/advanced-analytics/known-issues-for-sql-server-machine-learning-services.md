@@ -2,17 +2,17 @@
 title: R 言語と Python の統合 - SQL Server Machine Learning Services の既知の問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
-ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
+ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64906160"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140731"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning サービスの既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -136,7 +136,7 @@ R コードを実行すると、SQL Server 2016 の計算コンテキスト、�
 + クライアント コンピューターのセットアップ ウィザードを使用して R Server (スタンドアロン) をインストールした[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]します。
 + 使用して Microsoft R Server がインストールされている、 [Windows インストーラーを区切る](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)します。
 
-サーバーとクライアントが使用する必要があります、同じバージョンを使用することを確認する_バインド_、SQL Server 2016 のインスタンスで R コンポーネントをアップグレードするには、Microsoft R Server 9.0 とそれ以降のリリースではサポートされています。 あるかどうかを R のサービスのバージョンを参照してください、アップグレードを使用できます[SqlBindR.exe を使用して R Services のインスタンスをアップグレード](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
+サーバーとクライアントが使用する必要があります、同じバージョンを使用することを確認する_バインド_、SQL Server 2016 のインスタンスで R コンポーネントをアップグレードするには、Microsoft R Server 9.0 とそれ以降のリリースではサポートされています。 あるかどうかを R のサービスのバージョンを参照してください、アップグレードを使用できます[SqlBindR.exe を使用して R Services のインスタンスをアップグレード](install/upgrade-r-and-python.md)します。
 
 **適用対象:** SQL Server 2016 R Services、バージョン 9.0.0 の R Server の以前のバージョン
 
@@ -484,7 +484,7 @@ go
 
 SQL Server 2017 CU2 以降では、次のメッセージが表示される場合でも、それ以外の場合の Python コードが正常に実行します。
 
-> *外部スクリプトからの STDERR メッセージ:*
+> *外部スクリプトからの STDERR メッセージ:* 
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state はグローバル宣言の前に使用*
 

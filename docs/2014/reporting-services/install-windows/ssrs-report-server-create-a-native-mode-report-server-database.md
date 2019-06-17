@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108679"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー)
@@ -61,7 +61,7 @@ ms.locfileid: "66108679"
   
 1.  リモートの [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを使用している場合は、データベース サーバーにログオンして、TCP/IP 接続を確認するか有効にします。  
   
-2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 3.  **[SQL Server ネットワークの構成]** を開きます。  
   

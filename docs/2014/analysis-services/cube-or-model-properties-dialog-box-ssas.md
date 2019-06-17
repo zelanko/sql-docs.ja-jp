@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086599"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>[キューブのプロパティ] または [モデルのプロパティ] ダイアログ ボックス (SSAS)
@@ -41,7 +41,7 @@ ms.locfileid: "66086599"
 |**[スキーマの最終更新]**|キューブまたはモデルのメタデータが最後に更新された日時が表示されます。|  
 |**スクリプト キャッシュ処理モード**|キューブまたはモデルのスクリプト キャッシュに使用する処理モードを選択します。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>」を参照してください。|  
 |**処理モード**|キューブまたはモデルに対して使用する処理モードを選択します。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>」を参照してください。|  
-|**記憶域の場所**|キューブまたはモデルに関連付けられたメジャー グループおよびパーティションで使用する既定のストレージの場所を入力します。または、参照ボタン (**[...]**) をクリックして、**[リモート フォルダーの参照]** ダイアログ ボックスを開いてフォルダーを選択します。 **[リモート フォルダーの参照]** ダイアログ ボックスの詳細については、「[[リモート フォルダーの参照] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。<br /><br /> このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>」を参照してください。|  
+|**記憶域の場所**|キューブまたはモデルに関連付けられたメジャー グループおよびパーティションで使用する既定のストレージの場所を入力します。または、参照ボタン ( **[...]** ) をクリックして、 **[リモート フォルダーの参照]** ダイアログ ボックスを開いてフォルダーを選択します。 **[リモート フォルダーの参照]** ダイアログ ボックスの詳細については、「[[リモート フォルダーの参照] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。<br /><br /> このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>」を参照してください。|  
 |**State**|キューブまたはモデルの処理状態が表示されます。 このプロパティの値の詳細については、「<xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>」を参照してください。|  
 |**LastProcessed**|キューブまたはモデルが最後に処理された日時が表示されます。|  
   

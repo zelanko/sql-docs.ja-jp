@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 047fee5360df9a5e403f9684c62f8453a8c43a38
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945946"
 ---
 # <a name="sysxmlschemaattributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "64945946"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**\<列を継承 >**|--|継承[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)します。|  
-|**is_default_fixed**|**bit**|1 = 既定値は固定値です。 XML インスタンスでは、この値をオーバーライドできません。<br /><br /> 0 = デフォルト値は属性の固定値ではありません  (既定値)。|  
-|**must_be_qualified**|**bit**|1 = 属性には明示的に名前空間の修飾名を追加する必要があります。<br /><br /> 0 = 属性には暗黙的に名前空間の修飾名を追加できます  (既定値)。|  
+|**is_default_fixed**|**bit**|1 = 既定値は固定値です。 XML インスタンスでは、この値をオーバーライドできません。<br /><br /> 0 = デフォルト値は属性の固定値ではありません (既定値)。|  
+|**must_be_qualified**|**bit**|1 = 属性には明示的に名前空間の修飾名を追加する必要があります。<br /><br /> 0 = 属性には暗黙的に名前空間の修飾名を追加できます (既定値)。|  
 |**default_value**|**nvarchar**<br /><br /> **(4000)**|属性の既定値。 既定値が指定されていない場合は NULL です。|  
   
 ## <a name="permissions"></a>アクセス許可  

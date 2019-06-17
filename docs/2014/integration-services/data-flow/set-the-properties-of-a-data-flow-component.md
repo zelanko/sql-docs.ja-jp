@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc360da93b905bed20f118812898b5c029c570cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770748"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
@@ -26,7 +26,7 @@ ms.locfileid: "62770748"
   
 -   **[プロパティ]** ウィンドウでは、各要素のコンポーネントレベルのカスタム プロパティ、およびすべてのデータ フロー要素との共通プロパティの一覧が表示されます。  
   
--   **[詳細エディター]** ダイアログ ボックスでは、各コンポーネントのカスタム プロパティにアクセスできます。 また、**[詳細エディター]** ダイアログ ボックスを使用すると、すべてのデータ フロー コンポーネントの共通プロパティである、入力、出力、エラー出力、列、および外部列のプロパティにもアクセスできます。  
+-   **[詳細エディター]** ダイアログ ボックスでは、各コンポーネントのカスタム プロパティにアクセスできます。 また、 **[詳細エディター]** ダイアログ ボックスを使用すると、すべてのデータ フロー コンポーネントの共通プロパティである、入力、出力、エラー出力、列、および外部列のプロパティにもアクセスできます。  
   
 ### <a name="to-set-the-properties-of-a-data-flow-component-by-using-a-component-editor"></a>コンポーネント エディターを使用してデータ フロー コンポーネントのプロパティを設定するには  
   

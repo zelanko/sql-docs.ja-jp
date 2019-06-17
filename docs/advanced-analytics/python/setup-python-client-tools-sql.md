@@ -3,17 +3,17 @@ title: Python 開発 - SQL Server Machine Learning のデータ サイエンス 
 description: Python を使用した SQL Server Machine Learning サービスへのリモート接続用の Python のローカル環境 (Jupyter Notebook または PyCharm) を設定します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0ca592d98f9bb69586c537006fd14d4230b661b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642801"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140634"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での Python 開発用のデータ サイエンス クライアントの設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ SSMS は、個別のダウンロード、作成して、Python コードを格�
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py) Microsoft Python パッケージのバージョン 9.2.1 をインストールします。 このバージョンは、既定の SQL Server 2017 インスタンスに対応します。 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) Microsoft Python パッケージのバージョンが 9.3 をインストールします。 リモート SQL Server 2017 インスタンスの場合、このバージョンは適して[Machine Learning Server 9.3 にバインドされている](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) Microsoft Python パッケージのバージョンが 9.3 をインストールします。 リモート SQL Server 2017 インスタンスの場合、このバージョンは適して[Machine Learning Server 9.3 にバインドされている](../install/upgrade-r-and-python.md)します。
 
 2. 管理者特権での管理者権限で PowerShell ウィンドウを開き (右クリックして**管理者として実行**)。
 
@@ -107,7 +107,7 @@ Anaconda には、Jupyter Notebook が含まれています。 次の手順と�
 
 3. 入力`import revoscalepy`Microsoft 固有のライブラリのいずれかの読み込みを行うコマンドを実行します。
 
-4. 入力し、実行`print(revoscalepy.__version__)`バージョン情報を返します。 9.2.1 または 9.3.0 を表示する必要があります。 これらのバージョンのいずれかを使用することができます[サーバーで revoscalepy](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers)します。 
+4. 入力し、実行`print(revoscalepy.__version__)`バージョン情報を返します。 9\.2.1 または 9.3.0 を表示する必要があります。 これらのバージョンのいずれかを使用することができます[サーバーで revoscalepy](../package-management/installed-package-information.md)します。 
 
 4. 複雑な一連のステートメントを入力します。 この例では、概要統計情報を使用して生成されます[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)ローカル データ セットに対して。 その他の関数は、サンプル データの場所を取得し、ローカルの .xdf ファイルのデータ ソース オブジェクトを作成します。
 

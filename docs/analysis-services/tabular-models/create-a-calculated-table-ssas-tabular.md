@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 199096efcdf9212e19e1055f1276079eddfb1a75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62469374"
 ---
 # <a name="create-a-calculated-table"></a>計算テーブルを作成します。 
@@ -33,7 +33,7 @@ ms.locfileid: "62469374"
   
 2.  データ ビューに切り替えます。 ダイアグラム ビューでは計算テーブルを作成できません。  
   
-3.  **[テーブル]** > **[新しい計算テーブル]** の順に選択します。  
+3.  **[テーブル]**  >  **[新しい計算テーブル]** の順に選択します。  
   
 4.  DAX 式を入力するか貼り付けます (以下を参考にしてください)。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62469374"
 =CROSSJOIN(DimProductCategory, DimCurrency)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services の Data Analysis Expressions (DAX)](http://msdn.microsoft.com/library/abb336c9-3346-4cab-b91b-90f93f4575e5)   
  [表形式モデルで DAX を理解します。](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)  

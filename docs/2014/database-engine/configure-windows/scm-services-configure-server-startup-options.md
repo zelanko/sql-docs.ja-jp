@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810370"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>サーバーのスタートアップ オプションの構成 (SQL Server 構成マネージャー)
@@ -56,7 +56,7 @@ ms.locfileid: "62810370"
     > -   **Windows 8**:  
     >          開くには[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager で、**検索**チャームの**アプリ**、型**SQLServerManager\<バージョン > .msc** など`SQLServerManager12.msc`、キーを押しますと**Enter**します。  
   
-2.  右ペインで、**SQL Server (***<instance_name>***)** を右クリックし、**[プロパティ]** をクリックします。  
+2.  右ペインで、**SQL Server (***<instance_name>***)** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  **[起動時のパラメーター]** タブの **[起動時のパラメーターの指定]** ボックスにパラメーターを入力し、 **[追加]** をクリックします。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62810370"
     > [!WARNING]  
     >  起動時のパラメーター ボックスでのシングル ユーザー モードでの使用が終了したら、選択、`-m`パラメーター、**既存のパラメーター**ボックスをクリックして**削除**します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] を再起動すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が通常のマルチユーザー モードに戻ります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シングル ユーザー モードでの SQL Server の起動](start-sql-server-in-single-user-mode.md)   
  [システム管理者がロックアウトされた場合の SQL Server への接続](connect-to-sql-server-when-system-administrators-are-locked-out.md)   
  [SQL Server エージェント サービスの開始、停止、または一時停止](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

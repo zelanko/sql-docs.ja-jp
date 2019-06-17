@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e7f2221f511d48acc68c379dce72e7708819b1aa
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66709037"
 ---
 # <a name="members-collection-ado-md"></a>Members コレクション (ADO MD)
@@ -49,6 +49,6 @@ ms.locfileid: "66709037"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メンバーの例 (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

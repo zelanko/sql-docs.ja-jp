@@ -21,12 +21,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b78f2d8fdc34743e4e74d1e27346651c7adc443
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 3ecc0e4c4b2f5fdc1d6cad7ad068d9a1da440393
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66076732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046621"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多次元モデルの計算
   キューブ デザイナーの **[計算]** タブを使用して、計算されるメンバー、名前付きセット、およびその他の多次元式 (MDX) 計算を作成します。  
@@ -40,10 +40,10 @@ ms.locfileid: "66076732"
 -   計算式ペインでは、フォーム ビューおよびスクリプト ビューがサポートされています。  
   
 > [!NOTE]  
->  MDX スクリプティングの詳細については、次を参照してください[Microsoft SQL Server 2005 における MDX スクリプトの概要](https://go.microsoft.com/fwlink/?LinkId=81892)、に関するその他のリソース セクションを参照し、 [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853)ページで、。Microsoft TechNet Web サイトです。 キューブ デザインに関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](https://go.microsoft.com/fwlink/?LinkId=81621)」を参照してください。  
+>  MDX スクリプティングの詳細については、次を参照してください[Microsoft SQL Server 2005 における MDX スクリプトの概要](https://go.microsoft.com/fwlink/?LinkId=81892)、に関するその他のリソース セクションを参照し、 [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853)ページで、。Microsoft TechNet Web サイトです。 キューブ デザインに関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](http://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc)」を参照してください。  
   
 ## <a name="creating-a-new-calculation"></a>新しい計算の作成  
- 新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]**、 **[新しい名前付きセット]**、または **[新しいスクリプト コマンド]** をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](create-calculated-members.md)」、「 [名前付きセットの作成](create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](define-assignments-and-other-script-commands.md)」を参照してください。  
+ 新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]** 、 **[新しい名前付きセット]** 、または **[新しいスクリプト コマンド]** をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](create-calculated-members.md)」、「 [名前付きセットの作成](create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](define-assignments-and-other-script-commands.md)」を参照してください。  
   
 ## <a name="editing-scripts"></a>スクリプトの編集  
  **[計算]** タブの計算式ペインでスクリプトを編集します。計算式ペインには、スクリプト ビューとフォーム ビューの 2 つのビューがあります。 フォーム ビューには、1 つのコマンドの式およびプロパティが表示されます。 MDX スクリプトを編集する場合、式ボックスがフォーム ビュー全体に表示されます。  

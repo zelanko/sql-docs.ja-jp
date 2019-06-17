@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891550"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6:参照変換の追加と構成
@@ -124,7 +124,7 @@ ms.locfileid: "62891550"
   
 9. **[詳細設定]** ページで、キャッシュ オプションを確認します。  
   
-10. **[OK]** をクリックして、**[データ フロー]** デザイン画面に戻ります。  
+10. **[OK]** をクリックして、 **[データ フロー]** デザイン画面に戻ります。  
   
 11. [Lookup Date Key] 変換を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62891550"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 7:追加して、OLE DB 変換先の構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

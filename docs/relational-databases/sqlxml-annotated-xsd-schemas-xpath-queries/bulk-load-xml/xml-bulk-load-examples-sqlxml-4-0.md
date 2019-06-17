@@ -34,10 +34,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2da7e9873c2c4bb2f0f12a980159dd05fbb9cef9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62521288"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 一括読み込みの例 (SQLXML 4.0)
@@ -202,7 +202,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 複数テーブルでの XML データの一括読み込み  
- XML ドキュメントから成る、この例では、 **\<顧客 >** と**\<順序 >** 要素。  
+ XML ドキュメントから成る、この例では、 **\<顧客 >** と **\<順序 >** 要素。  
   
 ```xml  
 <ROOT>  
@@ -233,7 +233,7 @@ End Function
   
 -   CustOrder (OrderID、CustomerID)  
   
- 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップを指定します、 **\<顧客 >** と**\<順序 >** 要素。  
+ 次の XSD スキーマでは、これらのテーブルの XML ビューが定義されています。 スキーマ間の親子リレーションシップを指定します、 **\<顧客 >** と **\<順序 >** 要素。  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -385,7 +385,7 @@ End Function
 </xsd:schema>  
 ```  
   
- スキーマを指定します、 **\<順序 >** を持つ要素を**\<製品 >** 子要素。 **\<順序 >** 要素は、Ord テーブルにマップし、 **\<製品 >** 要素は、データベースの Product テーブルにマップされます。 指定されたチェーン リレーションシップでは、 **\<製品 >** 要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
+ スキーマを指定します、 **\<順序 >** を持つ要素を **\<製品 >** 子要素。 **\<順序 >** 要素は、Ord テーブルにマップし、 **\<製品 >** 要素は、データベースの Product テーブルにマップされます。 指定されたチェーン リレーションシップでは、 **\<製品 >** 要素は、OrderDetail テーブルで表される M:N リレーションシップを識別します。 つまり、1 つの注文には複数の製品が含まれ、1 つの製品は複数の注文に含まれるという関係です。  
   
  このスキーマで XML ドキュメントの一括読み込みを行うと、Ord テーブル、Product テーブル、および OrderDetail テーブルにレコードが追加されます。  
   
@@ -847,7 +847,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各**\<顧客 >** 要素は、この列に追加されます。  
+ このスキーマでは、Cust テーブルにオーバーフロー列 (OverflowColumn) が指定されています。 その結果、すべての未使用 XML データの各 **\<顧客 >** 要素は、この列に追加されます。  
   
 > [!NOTE]  
 >  すべての abstract 要素 (要素の**抽象 ="true"** が指定されて)、すべての属性が禁止されています (対象の属性**禁止されています ="true"** が指定されて) XML の一括でオーバーフローと解釈ロード テストとは、指定されている場合は、オーバーフロー列に追加されます。 それ以外の場合は無視されます。  

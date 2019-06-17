@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796185"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
-`[ @operation = ] 'operation'` 指定したジョブの有効な操作です。 *操作*は**varchar (64)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @operation = ] 'operation'` 指定したジョブの有効な操作です。 *操作*は**varchar (64)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -68,11 +68,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|ターゲット サーバーでシステム クロックとマルチサーバー ドメインとの同期化を行うためのサーバー操作。 これは非常に時間のかかる操作なので、頻繁に実行しないでください。限られた場合にだけ、実行するようにしてください。|  
 |**UPDATE**|ジョブだけを更新する操作、 **sysjobs**ジョブ ステップまたはスケジュールではない、ジョブの情報。 によって自動的に呼び出される**sp_update_job**します。|  
   
-`[ @object_type = ] 'object_type'` 指定したジョブのオブジェクトの型。 *object_type*は**varchar (64)**、既定値は NULL です。 *object_type*ジョブまたはサーバーのいずれかにすることができます。 有効なの詳細については*object_type*値を参照してください[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)します。  
+`[ @object_type = ] 'object_type'` 指定したジョブのオブジェクトの型。 *object_type*は**varchar (64)** 、既定値は NULL です。 *object_type*ジョブまたはサーバーのいずれかにすることができます。 有効なの詳細については*object_type*値を参照してください[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)します。  
   
 `[ @object_name = ] 'object_name'` オブジェクトの名前。 *object_name*は**sysname**、既定値は NULL です。 場合*object_type*ジョブ、 *object_name*ジョブの名前します。 場合*object_type*サーバー、 *object_name*サーバーの名前を指定します。  
   
-`[ @target_server = ] 'target_server'` 対象サーバーの名前。 *target_server*は**nvarchar (128)**、既定値は NULL です。  
+`[ @target_server = ] 'target_server'` 対象サーバーの名前。 *target_server*は**nvarchar (128)** 、既定値は NULL です。  
   
 `[ @has_error = ] has_error` ジョブがエラーを肯定するかどうか。 *has_error*は**tinyint**の既定値は NULL には、エラーを肯定しないことを示します。 **1**すべてのエラーを肯定することを示します。  
   

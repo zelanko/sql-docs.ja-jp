@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 1f3e311b0f7d27b6a0ca2d12ae510960859ae80d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125842"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797505"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server への接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-サーバーに接続するために、必要に応じてプロトコルとポートを指定することができます。 たとえば、 **Server = tcp:**_servername_**, 12345**します。 Linux と macOS のドライバーでサポートされている唯一のプロトコルは`tcp`します。
+サーバーに接続するために、必要に応じてプロトコルとポートを指定することができます。 たとえば、 **Server = tcp:** _servername_ **, 12345**します。 Linux と macOS のドライバーでサポートされている唯一のプロトコルは`tcp`します。
 
 静的ポートの名前付きインスタンスに接続するには、<b>Server=</b>*servername*,**port_number** を使用します。 動的ポートへの接続はサポートされていません。  
 

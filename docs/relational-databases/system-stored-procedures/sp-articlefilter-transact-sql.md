@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 698a5941bc8e9920942e7ec7c962144b4ab24b62
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998281"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
@@ -48,7 +48,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
-`[ @filter_name = ] 'filter_name'` 作成されるフィルター ストアド プロシージャの名前を指定します、 *filter_name*します。 *filter_name*は**nvarchar (386)**、既定値は NULL です。 アーティクルのフィルターの一意の名前を指定する必要があります。  
+`[ @filter_name = ] 'filter_name'` 作成されるフィルター ストアド プロシージャの名前を指定します、 *filter_name*します。 *filter_name*は**nvarchar (386)** 、既定値は NULL です。 アーティクルのフィルターの一意の名前を指定する必要があります。  
   
 `[ @filter_clause = ] 'filter_clause'` 制限は、水平方向のフィルターを定義する (、) where 句。 制限句を入力するときに、キーワードを省略する場所。 *filter_clause*は**ntext**、既定値は NULL です。  
   
@@ -89,7 +89,7 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_articlefilter**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [静的行フィルターの定義と変更](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9a548f25d9114e9032f2462bbc97bda637abd6d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251532"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
@@ -37,7 +37,7 @@ Wtd( [ Member_Expression ] )
   
  **Wtd**関数のショートカット関数では、 [PeriodsToDate](../mdx/periodstodate-mdx.md)レベルに設定されている関数*週間*します。 つまり、`Wtd(Member_Expression)`と等価`PeriodsToDate(Week_Level_Expression,Member_Expression)`します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
  [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
  [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   

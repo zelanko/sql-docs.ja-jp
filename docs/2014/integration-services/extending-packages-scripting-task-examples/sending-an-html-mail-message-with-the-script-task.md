@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 254f1fcb701fd11b22e35def915b09b537c4b33a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894991"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>スクリプト タスクによる HTML メール メッセージの送信
@@ -36,7 +36,7 @@ ms.locfileid: "62894991"
   
 1.  `HtmlEmailTo`、`HtmlEmailFrom`、および `HtmlEmailSubject` という名前の文字列変数を作成し、これらに適切な値を割り当てて、有効なテスト メッセージを用意します。  
   
-2.  `HtmlEmailBody` という名前の文字列変数を作成し、HTML マークアップの文字列を割り当てます。 以下に例を示します。  
+2.  `HtmlEmailBody` という名前の文字列変数を作成し、HTML マークアップの文字列を割り当てます。 例 :  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  
@@ -152,7 +152,7 @@ public void Main()
   
 ![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メール送信タスク](../control-flow/send-mail-task.md)  
   
   

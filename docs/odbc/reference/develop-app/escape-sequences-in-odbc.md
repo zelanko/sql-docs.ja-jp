@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942975"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC でのエスケープ シーケンス
@@ -47,9 +47,9 @@ ms.locfileid: "62942975"
  エスケープ シーケンスが認識され、ドライバーで、エスケープ シーケンスを置き換えます DBMS 固有の文法で解析します。 エスケープ シーケンスの構文の詳細については、次を参照してください[ODBC エスケープ シーケンス](../../../odbc/reference/appendixes/odbc-escape-sequences.md)付録 c:。SQL 文法。  
   
 > [!NOTE]  
->  ODBC 2。*x*、これは、エスケープ シーケンスの標準の構文: **--(\*仕入先 (**_仕入先名_**)、製品 (** _製品名_**)**_拡張子_  **\*)--**  
+>  ODBC 2。*x*、これは、エスケープ シーケンスの標準の構文: **--(\*仕入先 (** _仕入先名_ **)、製品 (** _製品名_ **)** _拡張子_  **\*)--**  
 >   
->  フォームのに加えて、この構文は、略式の構文が定義された: **{**_拡張子_**}**  
+>  フォームのに加えて、この構文は、略式の構文が定義された: **{** _拡張子_ **}**  
 >   
 >  ODBC 3。*x*、長い形式のエスケープ シーケンスは非推奨とされました、および短い形式を排他的に使用されます。  
   

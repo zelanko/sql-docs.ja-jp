@@ -3,17 +3,17 @@ title: グラフやプロットの SQL と R 関数の SQL Server Machine Learni
 description: グラフや SQL Server で R 言語の関数を使用してプロットを作成する方法を示すチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513169"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140385"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>グラフやプロットの SQL と R (チュートリアル) を使用して作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "58513169"
     + で始まる行`plot`R クライアントを表示できるように、実行、表示されたデータがローカルの R 環境にシリアル化します。
 
     > [!NOTE]
-    > Azure の仮想マシンで SQL Server を使用する場合は、この時点でエラーを取得可能性があります。 Azure での既定のファイアウォール規則は、R コードでネットワーク アクセスをブロックした場合、エラーが発生します。 このエラーを解決する方法の詳細については、[Azure VM での Machine Learning のインストール (R) サービス](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)を参照してください。
+    > Azure の仮想マシンで SQL Server を使用する場合は、この時点でエラーを取得可能性があります。 Azure での既定のファイアウォール規則は、R コードでネットワーク アクセスをブロックした場合、エラーが発生します。 このエラーを解決する方法の詳細については、次を参照してください。 [Azure VM での Machine Learning のインストール (R) サービス](../install/sql-machine-learning-azure-virtual-machine.md)します。
 
 4. 出力プロットは次の図のようになります。 乗車場所が赤い点でマップ上に追加されます。 イメージは異なる場所の数が使用したデータ ソースによってになります。
 

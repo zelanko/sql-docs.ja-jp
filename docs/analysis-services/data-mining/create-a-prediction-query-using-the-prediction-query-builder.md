@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a112efd8fdfe2b8108d2b6005028f10abf4a706
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740212"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>予測クエリ ビルダーを使用した予測クエリの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、**[予測クエリの作成]** オプションを選択して、作成することもできます。  
+  予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、 **[予測クエリの作成]** オプションを選択して、作成することもできます。  
   
  **予測クエリ ビルダー** には、次の 3 種類のデザイン モードがあります。これらのモードを切り替えるには、左上隅のアイコンをクリックします。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62740212"
   
 8.  **[マイニング モデル予測]** タブのツール バーにある最初のボタンをクリックし、 **[結果]** を選択して、クエリを実行します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング デザイナーでの単一クエリの作成](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   

@@ -1,17 +1,17 @@
 ---
 title: srv_pfield (拡張ストアド プロシージャ API) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-api_name:
+apiname:
 - srv_pfield
-api_location:
+apilocation:
 - opends60.dll
-topic_type:
-- apiref
+apitype: DLLExport
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,13 +21,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 822e8608939d7fb3dbef6872ec92da37e7621865
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62936810"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (拡張ストアド プロシージャ API)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -48,7 +49,6 @@ field
 int *  
 len  
 );  
-  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -87,6 +87,6 @@ len
  SRV_PROC 構造体にある指定されたフィールドの現在値を格納した NULL 終端文字列へのポインターを返します。 フィールドが空の場合は空文字列への有効なポインターが返され、*len* は 0 になります。 フィールドが指定されていない場合は NULL を返し、*len* は -1 になります。  
   
 > [!IMPORTANT]  
->  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認とテストについては、「[セキュリティ TechCenter](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)」をご覧ください。  
+>  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認とテストについては、「[セキュリティ TechCenter](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)」をご覧ください。  
   
   

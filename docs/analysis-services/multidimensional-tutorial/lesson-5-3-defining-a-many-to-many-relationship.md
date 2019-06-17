@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d3bf9211fb62db1452f48306e682638fd17041b8
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404064"
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>レッスン 5-3-多対多リレーションシップを定義します。
@@ -134,7 +134,7 @@ ms.locfileid: "65404064"
   
     **Sales Reason** ディメンションには、 **Internet Sales Reason** メジャー グループで定義されている標準のリレーションシップがあります。ただし、 **Internet Sales** メジャー グループおよび **Reseller Sales** メジャー グループで定義されたリレーションシップはありません。 また、 **Internet Sales Order Details** ディメンションには **Internet Sales Reason** ディメンションで定義されている標準のリレーションシップがあり、 **Internet Sales** メジャー グループとの **ファクト リレーションシップ** があります。 このディメンションが存在しなかった場合 (または **Internet Sales Reason** メジャー グループおよび **Internet Sales** メジャー グループとのリレーションシップを持つ別のディメンションが存在しなかった場合)、多対多のリレーションシップを定義することはできません。  
   
-2.  **Internet Sales** メジャー グループと **Sales Reason** ディメンションが交差する位置にあるセルをクリックし、参照ボタン (**[...]**) をクリックします。  
+2.  **Internet Sales** メジャー グループと **Sales Reason** ディメンションが交差する位置にあるセルをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 3.  **[リレーションシップの定義]** ダイアログ ボックスで、 **[リレーションシップの種類の選択]** ボックスの一覧から **[多対多]** を選択します。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "65404064"
   
 4.  **Sales Reason** ディメンションの **Sales Reasons** ユーザー定義階層を、データ ペインの行領域に追加します。  
   
-5.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]** の順にクリックし、 **[Queensland]** を右クリックして **[フィルターに追加]** をクリックします。  
+5.  メタデータ ペインで、 **[Customer]** 、 **[Location]** 、 **[Customer Geography]** 、 **[Members]** 、 **[All Customers]** 、 **[Australia]** の順にクリックし、 **[Queensland]** を右クリックして **[フィルターに追加]** をクリックします。  
   
 6.  **Sales Reason Type** レベルの各メンバーを展開し、クイーンズランドの顧客がインターネット経由で [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品を購入した理由と、その売上金額を確認します。  
   

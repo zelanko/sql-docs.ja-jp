@@ -3,22 +3,22 @@ title: R 言語と Python 機能の統合 - SQL Server Machine Learning サー�
 description: R 言語とデータ サイエンスと統計モデリング、機械学習モデル、予測分析、データの視覚化などのリレーショナル データとの統合、SQL Server での Python 機能。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf7d8a7cddcfbe0d47d4808f82abc0a47efade2c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 921ffc0188623335ac7e7206a02095cc11469327
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512456"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140328"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 での machine Learning サービス (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 Machine Learning Services とは、データベース エンジン インスタンス、SQL Server で R と Python のコードを実行するためのアドオンです。 この機能が含まれています[Microsoft R と Python のパッケージ](#components)高パフォーマンスの予測分析と機械学習します。 コア エンジンのプロセスから分離されたが、R または Python のステートメントを含む T-SQL スクリプトまたは R または Python のコードを含む T-SQL ストアド プロシージャとしてのリレーショナル データを完全に使用可能な機能拡張フレームワークでコードが実行されます。 
+Machine Learning サービスは、データベース内の R と Python スクリプトを実行するために使用される、SQL Server の機能です。 この機能が含まれています[Microsoft R と Python のパッケージ](#components)高パフォーマンスの予測分析と機械学習します。 含む T-SQL の R と Python コードまたはストアド プロシージャ、T-SQL スクリプトが R と Python のステートメントを含む R と Python スクリプトで、リレーショナル データを使用できます。
 
 使用していた場合[SQL Server 2016 R Services](r/sql-server-r-services.md)、SQL Server 2017 での Machine Learning サービスは、基本の R で RevoScaleR の MicrosoftML の更新バージョンでの R のサポートの次世代および他のライブラリは、2016年で導入されました。 
 
@@ -52,7 +52,7 @@ SQL Server 2017 では、R と Python がサポートされています。 次�
 | Python ツール | 組み込みの Python のコマンド ライン ツールは、アドホック テストとタスクに適しています。  |
 | Anaconda | Anaconda とは、Python と重要なパッケージのオープン ソース ディストリビューションです。 |
 | Python のサンプルとスクリプト | R と Python には、組み込みのデータ セットとスクリプトが含まれています。  |
-| R および Python で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 モデルでは、Machine Learning のサービスで実行しますが、SQL Server セットアップでインストールすることはできません。 詳細については、[インストール事前トレーニング済みの機械学習では、SQL Server のモデル](install/sql-pretrained-models-install.md)を参照してください。 |
+| R および Python で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 モデルでは、Machine Learning のサービスで実行しますが、SQL Server セットアップでインストールすることはできません。 詳細については、次を参照してください。[インストール事前トレーニング済みの機械学習では、SQL Server のモデル](install/sql-pretrained-models-install.md)します。 |
 
 ## <a name="using-sql-mls"></a>SQL MLS を使用します。
 
@@ -78,7 +78,7 @@ SQL Server 2017 では、R と Python がサポートされています。 次�
 
 ![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 
-+ **必要に応じて IDE を使用して**します。 任意の開発ツールには、R と Python ライブラリをリンクできます。 詳細については、[R tools セットアップ](r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](python/setup-python-client-tools-sql.md)を参照してください。  
++ **必要に応じて IDE を使用して**します。 任意の開発ツールには、R と Python ライブラリをリンクできます。 詳細については、次を参照してください。 [R tools セットアップ](r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](python/setup-python-client-tools-sql.md)します。  
 
 + **リモートまたはローカルでの作業**します。 データ サイエンティストは、SQL Server に接続し、ローカルの分析のため、クライアントにデータを通常どおりさせます。 ただしより優れたソリューションは、使用する、 **RevoScaleR**または**revoscalepy** SQL Server コンピューターに計算をプッシュ Api にコストのかかる安全でないデータ移動を回避します。
 
@@ -127,7 +127,7 @@ SQL Server で、リソース管理とセキュリティ機能の活用、展開
 + セキュリティを設定して、特定のタスクで使用されるパッケージのロックダウン
 + リソース ガバナンスが (Enterprise edition が必要) を有効にします。
 
-詳細については、[R 用のリソース ガバナンス](r/resource-governance-for-r-services.md)と[SQL Server の R パッケージ管理](r/install-additional-r-packages-on-sql-server.md)を参照してください。
+詳細については、次を参照してください。 [R 用のリソース ガバナンス](r/resource-governance-for-r-services.md)と[SQL Server の R パッケージ管理](r/install-additional-r-packages-on-sql-server.md)します。
 
 ## <a name="version-history"></a>バージョン履歴
 
@@ -140,7 +140,7 @@ SQL Server 2017 Machine Learning Services とは、Python 拡張により、SQL 
 | SQL Server 2016 R Services (In-database) | R Server 9.1  | 2017 年 7 月  |
 | SQL Server 2016 R Server (スタンドアロン)  |  R Server 9.1 | 2017 年 7 月 |
 
-リリースでは、パッケージのバージョンのマップにバージョンを参照してください。[アップグレード R および Python コンポーネント](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)します。
+リリースでは、パッケージのバージョンのマップにバージョンを参照してください。[アップグレード R および Python コンポーネント](install/upgrade-r-and-python.md#version-map)します。
 
 ## <a name="portability-and-related-products"></a>移植性および関連製品
 

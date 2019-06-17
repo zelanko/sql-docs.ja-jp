@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b8648b9166ffa192ca21233ab6add38260a7dea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871159"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>データベース スナップショットの表示 (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62871159"
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.   **[データベース]** を展開します。  
+2.  **[データベース]** を展開します。  
   
 3.  **[データベース スナップショット]** を展開し、表示するスナップショットを選択します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62871159"
   
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   
   

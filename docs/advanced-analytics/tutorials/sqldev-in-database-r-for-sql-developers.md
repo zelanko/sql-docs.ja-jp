@@ -3,24 +3,24 @@ title: R で SQL Server Machine Learning を使用してデータベース内分
 description: R プログラミング言語のコードでは、SQL Server のストアド プロシージャおよび T-SQL 関数を埋め込む方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511219"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140761"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの R データの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 構築し、R ベースの machine learning を使用してソリューションを展開する R の統合について説明します SQL プログラマ向けのこのチュートリアルでは、 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server データベース。 T-SQL、SQL Server Management Studio、および [Machine Learning のサービス] で、データベース エンジンのインスタンスを使用します ([Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)と R 言語のサポート
 
-このチュートリアルでは、ワークフローをモデル化データで使用される R 関数を紹介します。 手順には、データの探索、ビルドして二項分類モデルとモデルのデプロイが含まれます。 ビルドがモデルでは、旅行を日、しかも、距離、乗車場所の時間に基づくヒントに可能性があるかどうかを予測します。 
+このチュートリアルでは、ワークフローをモデル化データで使用される R 関数を紹介します。 手順には、データの探索、ビルドして二項分類モデルとモデルのデプロイが含まれます。 ビルドがモデルでは、乗車の日の時刻、距離、乗車場所に基づいてヒントに可能性があるかどうかを予測します。 
 
 このチュートリアルで使用する R コードのすべては、作成して、Management Studio で実行するストアド プロシージャにラップされます。
 
@@ -55,7 +55,7 @@ Machine learning ソリューションを構築するプロセスをいくつか
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)または[有効になっている R を使用した SQL Server 2017 Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R ライブラリ](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [R ライブラリ](../package-management/installed-package-information.md)
 
 + [権限](../security/user-permission.md)
 

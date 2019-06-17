@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076237"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services プロジェクトの作成 (SSDT)
@@ -58,7 +58,7 @@ ms.locfileid: "66076237"
   
 5.  新しいプロジェクトを既存のソリューションに追加するには、 **[ソリューション]** の一覧から **[ソリューションに追加する]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      新規のソリューションを作成するには、 **[ソリューション]** の一覧で **[新しいソリューションを作成する]** をクリックします。 新しいソリューション用に新規のフォルダーを作成するには、 **[ソリューションのディレクトリを作成]** をクリックします。 **[ソリューション名]** に、新しいソリューションの名前を入力します。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "66076237"
 ||[ディメンション]|ディメンション ウィザードを起動して、新しいデータベース ディメンションを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
 ||[マイニング構造]|データ マイニング ウィザードを起動して、新しいマイニング構造と関連マイニング モデルを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Analysis Services プロジェクトのビルド &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  

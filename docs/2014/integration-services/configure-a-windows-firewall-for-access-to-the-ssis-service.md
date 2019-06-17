@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060852"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS サービスにアクセスするように Windows ファイアウォールを構成する
@@ -71,7 +71,7 @@ ms.locfileid: "66060852"
   
 4.  **[例外]** タブで、 **[ポートの追加]** をクリックします。  
   
-5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)**」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
+5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)** 」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは常にポート 135 を使用します。 別のポートを指定することはできません。  
@@ -87,7 +87,7 @@ ms.locfileid: "66060852"
     > [!NOTE]  
     >  Windows ファイアウォールを構成するために、この手順では、コントロール パネルの **[Windows ファイアウォール]** を使用します。 **[Windows ファイアウォール]** では、現在のネットワークの場所のプロファイルに対してのみファイアウォールを構成できます。 ただし、Windows ファイアウォールは、 **netsh** コマンド ライン ツール、またはセキュリティが強化された Windows ファイアウォールの [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール (MMC) スナップインを使用して構成することもできます。 これらのツールの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービスの構成 (SSIS サービス)](service/integration-services-service-ssis-service.md)   
  [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)  
   

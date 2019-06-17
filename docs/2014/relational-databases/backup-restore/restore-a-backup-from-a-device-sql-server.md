@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f5e272dde5ca7a3c0ff7246d42131f1e70331689
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921956"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>デバイスからのバックアップ復元 (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "62921956"
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をクリックします。  
   
-4.  実行する復元操作の種類 (**[データベース]**、 **[ファイルとファイル グループ]**、または **[トランザクション ログ]**) をクリックします。 対応する復元ダイアログ ボックスが開きます。  
+4.  実行する復元操作の種類 ( **[データベース]** 、 **[ファイルとファイル グループ]** 、または **[トランザクション ログ]** ) をクリックします。 対応する復元ダイアログ ボックスが開きます。  
   
 5.  **[全般]** ページの **[復元用のソース]** セクションで、 **[デバイスから]** をクリックします。  
   

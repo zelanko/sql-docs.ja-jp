@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62923012"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>ファイルおよびファイル グループのバックアップ (SQL Server)
@@ -120,9 +120,9 @@ ms.locfileid: "62923012"
   
 14. **[信頼性]** セクションで、必要に応じて以下のチェック ボックスをオンにします。  
   
-    -   **[完了時にバックアップを検証する]**。  
+    -   **[完了時にバックアップを検証する]** 。  
   
-    -   **[メディアに書き込む前にチェックサムを行う]**、および、必要に応じて、 **[チェックサム エラーのまま続行する]**。 チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
+    -   **[メディアに書き込む前にチェックサムを行う]** 、および、必要に応じて、 **[チェックサム エラーのまま続行する]** 。 チェックサムの詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
   
 15. **[全般]** ページの **[バックアップ先]** セクションで、テープ ドライブにバックアップするように指定した場合は、 **[バックアップ後にテープをアンロードする]** チェック ボックスがアクティブになります。 このオプションをオンにすると、 **[アンロードの前にテープを巻き戻す]** オプションが有効になります。  
   
@@ -151,20 +151,20 @@ ms.locfileid: "62923012"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ } [ **,**...*f* ]  
+     { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ } [ **,** ...*f* ]  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
     |オプション|説明|  
     |------------|-----------------|  
     |*database*|トランザクション ログ、データベースの一部、またはデータベース全体をバックアップする場合の、バックアップ元となるデータベースを指定します。|  
-    |FILE **=**_logical_file_name_|ファイル バックアップに含めるファイルの論理名を指定します。|  
-    |FILEGROUP **=**_logical_filegroup_name_|ファイル バックアップに含めるファイル グループの論理名を指定します。 単純復旧モデルでは、ファイル グループのバックアップは、読み取り専用のファイル グループに対してのみ使用できます。|  
-    |[ **,**...*f* ]|複数のファイルおよびファイル グループを指定できることを示すプレースホルダーです。 ファイルまたはファイル グループの数は無制限です。|  
-    |*backup_device* [ **,**...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|  
-    |WITH *with_options* [ **,**...*o* ]|必要に応じて、1 つ以上の追加オプション (DIFFERENTIAL など) を指定します。<br /><br /> 注:ファイルの差分バックアップを行うには、差分のベースとなる完全ファイル バックアップが必要です。 詳細については、「[データベースの差分バックアップの作成 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)」を参照してください。|  
+    |FILE **=** _logical_file_name_|ファイル バックアップに含めるファイルの論理名を指定します。|  
+    |FILEGROUP **=** _logical_filegroup_name_|ファイル バックアップに含めるファイル グループの論理名を指定します。 単純復旧モデルでは、ファイル グループのバックアップは、読み取り専用のファイル グループに対してのみ使用できます。|  
+    |[ **,** ...*f* ]|複数のファイルおよびファイル グループを指定できることを示すプレースホルダーです。 ファイルまたはファイル グループの数は無制限です。|  
+    |*backup_device* [ **,** ...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)の別のインスタンスで作成された場合、これは必須です。|  
+    |WITH *with_options* [ **,** ...*o* ]|必要に応じて、1 つ以上の追加オプション (DIFFERENTIAL など) を指定します。<br /><br /> 注:ファイルの差分バックアップを行うには、差分のベースとなる完全ファイル バックアップが必要です。 詳細については、「[データベースの差分バックアップの作成 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)」を参照してください。|  
   
 2.  完全復旧モデルでは、トランザクション ログもバックアップする必要があります。 ファイルの完全バックアップの完全なセットを使用してデータベースを復元するには、最初のファイル バックアップの先頭から、すべてのファイル バックアップにわたって十分なログ バックアップが必要です。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)でミラー データベースを準備する方法について説明します。  
   

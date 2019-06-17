@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150449"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server エラー ログの表示 (SQL Server Management Studio)
@@ -30,6 +30,6 @@ ms.locfileid: "63150449"
   
 1.  **オブジェクト エクスプ ローラー**展開し、サーバーを展開し、**管理**、順に展開**SQL Server ログ**します。  
   
-2.  ログを右クリックし、**[SQL Server ログの表示]** をクリックします。  
+2.  ログを右クリックし、 **[SQL Server ログの表示]** をクリックします。  
   
   

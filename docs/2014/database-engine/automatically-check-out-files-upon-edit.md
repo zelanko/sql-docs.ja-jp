@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791742"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>編集するファイルの自動的なチェックアウト
@@ -31,7 +31,7 @@ ms.locfileid: "62791742"
   
 3.  **編集**ボックスで、**自動的にチェック アウト**、 をクリックし、 **OK**。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ファイルをチェック アウト](../../2014/database-engine/check-out-files.md)   
  [チェックアウトの管理](../../2014/database-engine/manage-checkouts.md)  
   

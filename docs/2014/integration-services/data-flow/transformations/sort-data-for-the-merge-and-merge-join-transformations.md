@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900338"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
@@ -38,7 +38,7 @@ ms.locfileid: "62900338"
   
      並べ替え変換では Windows 照合順序を使用して文字列値を並べ替えます。  
   
-     - または -  
+     \- または -  
   
 -   Transact-SQL の CAST 演算子を使用して最初に `varchar` 値を `nvarchar` 値にキャストし、次に Transact-SQL ORDER BY 句を使用してデータを並べ替えます。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62900338"
   
 5.  **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
-6.  クリックして**\<コンポーネント名 > 出力**、設定、`IsSorted`プロパティを`True`します。  
+6.  クリックして **\<コンポーネント名 > 出力**、設定、`IsSorted`プロパティを`True`します。  
   
     > [!NOTE]  
     >  出力の `IsSorted` プロパティを手動で `True` に設定したにもかかわらず、データが並べ替えられない場合、パッケージの実行時に、下流の結合変換またはマージ結合変換で、データの欠落、または不良データの比較が生じている可能性があります。  

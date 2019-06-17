@@ -3,17 +3,17 @@ title: R の開発 - SQL Server Machine Learning Services のデータ サイエ
 description: SQL Server へのリモート接続用の開発ワークステーションにローカルの R ライブラリとツールをインストールします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b18844e6899615ac978e63cefa6c712f8f194ea
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641879"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140345"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server での R 開発用データ サイエンス クライアントのセットアップします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -199,9 +199,9 @@ R Client で R 処理は 2 つのスレッドとメモリ内のデータに制�
 
 使用する場合[RStudio](https://www.rstudio.com/)、R ライブラリとリモートの SQL Server 上に対応する実行可能ファイルを使用する環境を構成することができます。
 
-1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、次を参照してください。[取得の R パッケージ情報](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)します。
+1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、次を参照してください。[取得の R パッケージ情報](../package-management/installed-package-information.md)します。
 
-1. Microsoft R Client または RevoScaleR と SQL Server インスタンスで使用される基本の R ディストリビューションを含め、その他の R パッケージを追加するスタンドアロン サーバー オプションのいずれかをインストールします。 レベル以下で、同じバージョンを選択します (パッケージは、旧バージョンと互換性のある) サーバー上と同じパッケージのバージョンを提供します。 バージョンについては、この記事ではマップのバージョンを参照してください。[R と Python のコンポーネントをアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。
+1. Microsoft R Client または RevoScaleR と SQL Server インスタンスで使用される基本の R ディストリビューションを含め、その他の R パッケージを追加するスタンドアロン サーバー オプションのいずれかをインストールします。 レベル以下で、同じバージョンを選択します (パッケージは、旧バージョンと互換性のある) サーバー上と同じパッケージのバージョンを提供します。 バージョンについては、この記事ではマップのバージョンを参照してください。[R と Python のコンポーネントをアップグレード](../install/upgrade-r-and-python.md)します。
 
 1. Rstudio に、 [R パスを更新](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)RevoScaleR、Microsoft R Open、およびその他の Microsoft パッケージを提供する R 環境を指すようにします。 
 

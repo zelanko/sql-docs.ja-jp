@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: de89d59c6205dd2ab0789492a746b925fa74b5c6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486034"
 ---
 # <a name="notifications-master-data-services"></a>通知 (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65486034"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] を構成できます。  
   
 ## <a name="how-notifications-are-sent"></a>通知の送信方法  
- [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の通知を構成します。  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のインスタンスでデータベース メールを使用することで、通知により電子メール メッセージが送信されます。 データベース メールの詳細については、 [オンライン ブックの「](../relational-databases/database-mail/database-mail-configuration-objects.md) データベース メール構成オブジェクト [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 」を参照してください。  
+ [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]の通知を構成します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] のインスタンスでデータベース メールを使用することで、通知により電子メール メッセージが送信されます。 データベース メールの詳細については、 [オンライン ブックの「](../relational-databases/database-mail/database-mail-configuration-objects.md) データベース メール構成オブジェクト [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 」を参照してください。  
   
 ## <a name="when-notifications-are-sent"></a>通知の送信タイミング  
  通知を構成すると、以降は次のインスタンスで自動の電子メール通知を送信できます。  

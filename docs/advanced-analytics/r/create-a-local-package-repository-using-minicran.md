@@ -3,17 +3,17 @@ title: MiniCRAN - SQL Server Machine Learning Services を使用してローカ�
 description: MiniCran を使用して、検出、アセンブル、および 1 つの統合パッケージ R パッケージの依存関係をインストールします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d9154bc1c01bdf9bd7bdfd7a4032b4ed173464d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83d73bb9d075825472cda96a7dcd54e25549de5e
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642606"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140628"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>MiniCRAN を使用してローカルの R パッケージ リポジトリを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ local_repo <- "C:/mylocalrepo"
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. ローカル リポジトリを作成します。 SQL Server インスタンスにインストールされているバージョンに必要な場合、R のバージョンを変更してください。 3.2.2 のバージョンが SQL Server 2016 では、バージョン 3.3 が SQL Server 2017 にします。 コンポーネントのアップグレードを実行した場合、バージョンが新しい場合があります。 詳細については、次を参照してください。[パッケージ情報の取得の R と Python](determine-which-packages-are-installed-on-sql-server.md)します。
+3. ローカル リポジトリを作成します。 SQL Server インスタンスにインストールされているバージョンに必要な場合、R のバージョンを変更してください。 3\.2.2 のバージョンが SQL Server 2016 では、バージョン 3.3 が SQL Server 2017 にします。 コンポーネントのアップグレードを実行した場合、バージョンが新しい場合があります。 詳細については、次を参照してください。[パッケージ情報の取得の R と Python](../package-management/installed-package-information.md)します。
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -159,8 +159,5 @@ pdb[, c("Package", "Version", "License")]
 
 ## <a name="see-also"></a>関連項目
 
-+ [パッケージ情報の取得](determine-which-packages-are-installed-on-sql-server.md)
++ [パッケージ情報の取得](../package-management/installed-package-information.md)
 + [R のチュートリアル](../tutorials/sql-server-r-tutorials.md)
-+ [操作方法ガイド](sql-server-machine-learning-tasks.md)
-
-

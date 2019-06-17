@@ -3,17 +3,17 @@ title: 有効にするか、リモート R パッケージの管理 - SQL Server
 description: リモート SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) での R パッケージの管理を有効にします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee52fd9b7a116156f794303b828a83e9b06de6ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4ce25830c3899ca0973fafe30c86489bfcdc949a
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641812"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140496"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>有効にするか、SQL Server のリモート パッケージの管理を無効にします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,8 +94,8 @@ ms.locfileid: "62641812"
 
     このコマンドは、インスタンスからパッケージの管理機能を削除します。 手動で変更を表示するには、もう一度、スタート パッド サービスを再起動する必要があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [RevoScaleR を使用して、新しい R パッケージをインストールするには](use-revoscaler-to-manage-r-packages.md)
 + [R パッケージをインストールするためのヒント](packages-installed-in-user-libraries.md)
-+ [既定のパッケージ](installing-and-managing-r-packages.md)
++ [既定のパッケージ](../package-management/default-packages.md)

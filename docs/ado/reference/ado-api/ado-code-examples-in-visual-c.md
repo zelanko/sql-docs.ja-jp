@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66696885"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ での ADO のコード例
@@ -146,7 +146,7 @@ ms.locfileid: "66696885"
   
 -   [ADO イベント モデルの例](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Basic での ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO のコード例の VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

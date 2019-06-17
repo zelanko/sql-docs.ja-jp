@@ -13,12 +13,12 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 903afa9ef25afcba7818862bc73dc33bf677b47a
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62892944"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140818"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>相互運用性と共存 (Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) は [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services と共存できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "62892944"
   
 |機能|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|開発環境|[以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools for Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|開発環境|[以前のリリースの SQL Server Data Tools (SSDT と SSDT-BI)](https://docs.microsoft.com/sql/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi?view=sql-server-2014)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools for Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence for Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |管理環境|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |パッケージの格納に使用する msdb のメイン システム テーブル|sysssispackages|sysssispackages|sysssispackages|  
 |パッケージの実行に使用するメイン コマンド プロンプト ユーティリティ|**dtexec** (dtexec.exe)、2014 バージョン|**dtexec** (dtexec.exe)、2012 バージョン|**dtexec** (dtexec.exe)、2008 バージョン|  
@@ -62,6 +62,6 @@ ms.locfileid: "62892944"
   
      [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]のインスタンスでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスとの間で、パッケージをインポートすることも、エクスポートすることもできません。  
   
--   **パッケージを実行する。**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services パッケージを実行するには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンまたは **dtexec** ユーティリティまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で開発したパッケージを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Integration Services ツールで読み込む場合、パッケージは常に、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] で使用されるパッケージ形式にメモリ内で一時的に変換されます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージまたは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] パッケージが問題により正常に変換できない場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services ツールでは、その問題が解決されるまでパッケージを実行できません。 詳細については、「 [Upgrade Integration Services Packages](upgrade-integration-services-packages.md)」を参照してください。  
+-   **パッケージを実行する。** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services パッケージを実行するには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンまたは **dtexec** ユーティリティまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で開発したパッケージを [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Integration Services ツールで読み込む場合、パッケージは常に、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] で使用されるパッケージ形式にメモリ内で一時的に変換されます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージまたは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] パッケージが問題により正常に変換できない場合、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services ツールでは、その問題が解決されるまでパッケージを実行できません。 詳細については、「 [Upgrade Integration Services Packages](upgrade-integration-services-packages.md)」を参照してください。  
   
   

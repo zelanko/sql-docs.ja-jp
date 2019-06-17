@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 255cf7d05fad66976a0196b78212af2b9a780a94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942861"
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO プログラミング - Visual C# .NET の概要
@@ -29,7 +29,7 @@ ms.locfileid: "62942861"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SMO アセンブリは C:\Program files \microsoft SQL Server\130\SDK\Assemblies\ フォルダーにあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
   
   

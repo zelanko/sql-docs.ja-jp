@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080751"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>[影響分析] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -50,7 +50,7 @@ ms.locfileid: "66080751"
  **プロセス オブジェクト**  
  処理操作の対象となる依存オブジェクトを選択します。 選択されていない依存オブジェクトは、処理操作が完了した後に処理する必要があります。 処理しないと、それらのオブジェクトは使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [[プロセス] ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   

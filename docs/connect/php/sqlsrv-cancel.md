@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad06888895e863760cfde3589475a230e33f9a06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6c5b4c9120eca9ed37dd1e7824c630c72ee91313
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615260"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797014"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_cancel( resource $stmt)
 ブール値: 操作が成功した場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="example"></a>例  
-次の例では、[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースを使用してクエリを実行し、変数 *$salesTotal* が、指定した値に達するまで結果を消費してカウントします。 残りのクエリ結果は破棄されます。 この例では、ローカル コンピューターに SQL Server および AdventureWorks データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースを使用してクエリを実行し、変数 *$salesTotal* が、指定した値に達するまで結果を消費してカウントします。 残りのクエリ結果は破棄されます。 この例では、ローカル コンピューターに SQL Server および AdventureWorks データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

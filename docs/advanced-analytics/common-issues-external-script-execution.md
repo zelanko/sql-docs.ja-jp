@@ -2,17 +2,17 @@
 title: スタート パッド サービスと SQL Server Machine Learning サービス - 外部スクリプトの実行に関する一般的な問題
 ms.prod: sql
 ms.technology: ''
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509699"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140211"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>スタート パッド サービスと SQL Server の外部スクリプトの実行に関する一般的な問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ SQL Server Machine Learning サービスのセットアップ中に、Windows �
 
 問題を解決するには、グループ **SQLRUserGroup** に**ローカルのログオンを許可する**システム権限があることを確認します。
 
-詳細については、[構成 Windows サービス アカウントとアクセス許可](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)を参照してください。
+詳細については、次を参照してください。[構成 Windows サービス アカウントとアクセス許可](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)します。
 
 ## <a name="permissions-to-run-external-scripts"></a>外部スクリプトを実行するアクセス許可
 
@@ -71,7 +71,7 @@ SQL Server Management studio で、問題を解決するには、セキュリテ
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
-詳細については、[GRANT (TRANSACT-SQL](../t-sql/statements/grant-transact-sql.md)を参照してください。
+詳細については、次を参照してください。 [GRANT (TRANSACT-SQL](../t-sql/statements/grant-transact-sql.md)します。
 
 ## <a name="common-launchpad-errors"></a>スタート パッドの一般的なエラー
 
@@ -95,7 +95,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     * *セキュリティ ログは、NT サービス アカウントがログオンできなかったことを示します*
 
-このユーザー グループに必要なアクセス許可を付与する方法については、[SQL Server の 2016 R Services をインストール](install/sql-r-services-windows-install.md)を参照してください。
+このユーザー グループに必要なアクセス許可を付与する方法については、次を参照してください。 [SQL Server の 2016 R Services をインストール](install/sql-r-services-windows-install.md)します。
 
 > [!NOTE]
 > SQL ログインを利用し、リモート ワークステーションから R スクリプトを実行する場合、この制限は適用されません。
@@ -155,7 +155,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 - スタート パッドには、外部のクエリを実行するが不足している外部ユーザーがあります。 たとえば、同時に、20 を超える外部クエリを実行するいるし、20 の既定ユーザーのみが、1 つまたは複数のクエリが失敗します。
 
-- メモリ不足が R タスクを処理します。 このエラーは、SQL Server を使用して、コンピューターのリソースの最大 70%、既定の環境でほとんどの場合は発生します。 R でリソースの大きい使用をサポートするために、サーバーの構成を変更する方法については、[R コードの運用](r/operationalizing-your-r-code.md)を参照してください。
+- メモリ不足が R タスクを処理します。 このエラーは、SQL Server を使用して、コンピューターのリソースの最大 70%、既定の環境でほとんどの場合は発生します。 R でリソースの大きい使用をサポートするために、サーバーの構成を変更する方法については、次を参照してください。 [R コードの運用](r/operationalizing-your-r-code.md)します。
 
 ## <a name="cant-find-package"></a>「パッケージを見つけることができません」
 
@@ -185,7 +185,7 @@ EXEC sp_execute_external_script @language = N'R',
 問題を解決するには、SQL Server インスタンスのライブラリにパッケージを再インストールする必要があります。
 
 >[!NOTE]
->Microsoft R の最新バージョンを使用する SQL Server 2016 のインスタンスをアップグレードした場合、既定のライブラリの場所は異なります。 詳細については、[R Services のインスタンスをアップグレードする使用 SqlBindR](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)を参照してください。
+>Microsoft R の最新バージョンを使用する SQL Server 2016 のインスタンスをアップグレードした場合、既定のライブラリの場所は異なります。 詳細については、次を参照してください。 [R Services のインスタンスをアップグレードする使用 SqlBindR](install/upgrade-r-and-python.md)します。
 
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Dll が一致しないため、スタート パッドをシャット ダウン
 
@@ -212,7 +212,7 @@ EXEC sp_execute_external_script @language = N'R',
 > * SQL Server 2016 SP1 CU1.[SQL Server の累積更新プログラム 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)します。
 > * SQL Server 2016 RTM、累積的な更新プログラム 3、およびそのこの[修正プログラム](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3)オンデマンドで提供されています。
 
-R を使用した互換性のため、SQL Server 2016 R Services (In-database) を使用して短いファイル名の作成をサポートするために、機能がインストールされているドライブが必要な*8dot3 表記*します。 8.3 ファイル名とも呼ばれますが、*短いファイル名*、または長いファイル名の代替として Microsoft Windows の以前のバージョンと互換性のため使用されます。
+R を使用した互換性のため、SQL Server 2016 R Services (In-database) を使用して短いファイル名の作成をサポートするために、機能がインストールされているドライブが必要な*8dot3 表記*します。 8\.3 ファイル名とも呼ばれますが、*短いファイル名*、または長いファイル名の代替として Microsoft Windows の以前のバージョンと互換性のため使用されます。
 
 R をインストールしているボリュームが短いファイル名をサポートしていない場合は、SQL Server から R を起動するプロセスでは、適切な実行可能ファイルを検索できない可能性があり、スタート パッドは開始されません。
 
@@ -220,7 +220,7 @@ R をインストールしているボリュームが短いファイル名をサ
 
 1. 8dot3 表記を有効にするで fsutil ユーティリティを実行、 *8dot3name*引数」の説明に従って: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx)します。
 
-2. RLauncher.config ファイルを開き、8dot3 表記が有効にした後のプロパティに注意してください`WORKING_DIRECTORY`します。 このファイルを検索する方法については、[Machine Learning のトラブルシューティングのためのデータ収集](data-collection-ml-troubleshooting-process.md)を参照してください。
+2. RLauncher.config ファイルを開き、8dot3 表記が有効にした後のプロパティに注意してください`WORKING_DIRECTORY`します。 このファイルを検索する方法については、次を参照してください。 [Machine Learning のトラブルシューティングのためのデータ収集](data-collection-ml-troubleshooting-process.md)します。
 
 3. Fsutil ユーティリティを使用して、*ファイル*WORKING_DIRECTORY に指定されているフォルダーの短いファイル パスを指定する引数。
 

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 167e799c873d586b06300a7e9433324391968d32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827930"
 ---
 # <a name="create-infocube-for-transaction-data"></a>[トランザクション データのインフォキューブの作成]
@@ -80,7 +80,7 @@ ms.locfileid: "62827930"
  **Iobject - 削除**  
  インフォオブジェクトと現在の行のデータ フロー列との関連付けを削除します。 関連付けを削除するには、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

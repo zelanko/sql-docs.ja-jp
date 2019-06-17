@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779800"
 ---
 # <a name="features-in-sql-server-management-studio"></a>SQL Server Management Studio の機能
@@ -84,7 +84,7 @@ ms.locfileid: "62779800"
   
  マイクロソフトでは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の拡張機能を適用した [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のインストールをサポートしていません。そのため、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の拡張機能をインストール済みの場合は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の問題に関してマイクロソフト カスタマー サポートにお問い合わせいただく前に、それらを削除する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Management Studio の使用 [SQL Server]](../database-engine/use-sql-server-management-studio.md)  
   
   

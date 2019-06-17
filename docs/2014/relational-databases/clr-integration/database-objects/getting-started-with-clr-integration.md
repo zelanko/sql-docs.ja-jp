@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874122"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
@@ -174,7 +174,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
    drop assembly helloworld  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR ストアド プロシージャ](../../../database-engine/dev-guide/clr-stored-procedures.md)   
  [SQL Server のインプロセス固有の拡張 ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)   
  [CLR データベース オブジェクトのデバッグ](../debugging-clr-database-objects.md)   

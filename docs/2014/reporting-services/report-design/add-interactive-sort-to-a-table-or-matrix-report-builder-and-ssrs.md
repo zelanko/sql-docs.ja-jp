@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 961a2a76f2a839ccc9fa8fb90027bec180d870d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106643"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)
@@ -132,7 +132,7 @@ ms.locfileid: "66106643"
   
 5.  **[名前]** で、グループ化する複数のグループを指定する名前で、既定の名前を置換します。  
   
-6.  **[グループ式]** の **[グループ化の条件]** で、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
+6.  **[グループ式]** の **[グループ化の条件]** で、式 ( **[fx]** ) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
   
 7.  グループ化するすべてのフィールドを指定する式を入力します。 たとえば、グループ式 `=Fields!Color.Value & Fields!Size.Value`では、Color というフィールドと Size というフィールドが組み合わされます。  
   

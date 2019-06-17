@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f7ebe0c0c5d23210a5111e8b4daaa69f8c73bb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62836389"
 ---
 # <a name="creating-a-package-programmatically"></a>プログラムを使用したパッケージ作成
@@ -63,7 +63,7 @@ Module Module1
 End Module  
 ```  
   
- サンプルをコンパイルして実行するには、Visual Studio で F5 キーを押します。 C# コンパイラ **csc.exe** を使用してコードを作成し、コマンド プロンプトからコンパイルするには、次のコマンドおよびファイル参照を使用します。*\<filename>* は .cs または .vb ファイルの名前に置き換えて、任意の *\<outputfilename>* を付けます。  
+ サンプルをコンパイルして実行するには、Visual Studio で F5 キーを押します。 C# コンパイラ **csc.exe** を使用してコードを作成し、コマンド プロンプトからコンパイルするには、次のコマンドおよびファイル参照を使用します。 *\<filename>* は .cs または .vb ファイルの名前に置き換えて、任意の *\<outputfilename>* を付けます。  
   
  **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
