@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea0776247555b9a5b63e2bbaa9ae9243abf6863c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62766432"
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
@@ -80,7 +80,7 @@ ms.locfileid: "62766432"
 >  パラメーターを使用できるのは、プロジェクトの配置モデル用に開発したプロジェクトに対してのみです。 したがって、プロジェクト配置モデルを使用するように構成されているプロジェクトの一部であるパッケージに対してのみ、[パラメーター] タブが表示されます。  
   
 ### <a name="event-handlers-tab"></a>[イベント ハンドラー] タブ  
- パッケージ内にイベントを構築するには、 **[イベント ハンドラー]** タブのデザイン画面を使用します。**[イベント ハンドラー]** タブで、イベント ハンドラーを作成するパッケージまたはパッケージ オブジェクトを選択し、次にイベント ハンドラーに関連付けるイベントを選択します。 イベント ハンドラーには制御フローと、オプションでデータ フローが含まれます。  
+ パッケージ内にイベントを構築するには、 **[イベント ハンドラー]** タブのデザイン画面を使用します。 **[イベント ハンドラー]** タブで、イベント ハンドラーを作成するパッケージまたはパッケージ オブジェクトを選択し、次にイベント ハンドラーに関連付けるイベントを選択します。 イベント ハンドラーには制御フローと、オプションでデータ フローが含まれます。  
   
  詳細については、「 [Add an Event Handler to a Package](../../2014/integration-services/add-an-event-handler-to-a-package.md)」を参照してください。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62766432"
   
 -   [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のユーザー インターフェイス](integration-services-user-interface.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 4b2f02fc81b969f8633a5a951483745c1d2635b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744612"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799641"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP を読み込む
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -84,7 +84,7 @@ PHP の起動時に SQLSRV ドライバーを読み込むには、まずドラ�
 **php.ini** ディレクティブの詳細については、[コア php.ini ディレクティブ](https://php.net/manual/en/ini.core.php)に関するページを参照してください。  
   
 ## <a name="see-also"></a>参照  
-[概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Microsoft SQL Server 用 Drivers for PHP のシステム要件](../../connect/php/system-requirements-for-the-php-sql-driver.md)
 

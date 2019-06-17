@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: craigg
-ms.openlocfilehash: 58248a2772377ccecba0c701d03276025785c964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698060"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797736"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>[SQL Server ログイン] ダイアログ ボックス (ODBC)
 
-ドライバーが SQL Server に接続するのに十分な情報を指定せずに ODBC 接続を呼び出すと、ODBC ドライバーにより、**[SQL Server ログイン]** ダイアログ ボックスが表示されます。
+ドライバーが SQL Server に接続するのに十分な情報を指定せずに ODBC 接続を呼び出すと、ODBC ドライバーにより、 **[SQL Server ログイン]** ダイアログ ボックスが表示されます。
 
-## <a name="options"></a>[変数]
+## <a name="options"></a>オプション
 
 ### <a name="server"></a>[サーバー]
 
-ネットワーク上には、SQL Server のインスタンスの名前。 一覧から server\instance 形式の名前を選択するか、**[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、**[サーバー]** ボックスにその名前を入力することができます。
+ネットワーク上には、SQL Server のインスタンスの名前。 一覧から server\instance 形式の名前を選択するか、 **[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、 **[サーバー]** ボックスにその名前を入力することができます。
 
 SQL Server と同じコンピューターを使用している場合は、「(local)」と入力することができます。 その後、ネットワークに接続されていない SQL Server を実行している場合でも、SQL Server のローカル インスタンスに接続することができます。
 
@@ -53,15 +53,15 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 
 ### <a name="password"></a>パスワード
 
-場合に、接続に使用される SQL Server または Azure Active Directory のログイン ID のパスワードを指定します**認証モード**に設定されている**SQL Server**または**Active Directory パスワード**。 それ以外の場合、**パスワード**ボックスが無効になります。
+場合に、接続に使用される SQL Server または Azure Active Directory のログイン ID のパスワードを指定します**認証モード**に設定されている**SQL Server**または**Active Directory パスワード。** . それ以外の場合、**パスワード**ボックスが無効になります。
 
-### <a name="options"></a>[変数]
+### <a name="options"></a>オプション
 
-**[オプション]** グループを表示または非表示にします。 **[オプション]** ボタンは、**[サーバー]** に値が設定されている場合に有効になります。
+**[オプション]** グループを表示または非表示にします。 **[オプション]** ボタンは、 **[サーバー]** に値が設定されている場合に有効になります。
 
 ### <a name="change-password"></a>パスワードの変更
 
-このチェック ボックスをオンにすると、**[新しいパスワード]** ボックスと **[新しいパスワードの確認入力]** ボックスが表示されます。
+このチェック ボックスをオンにすると、 **[新しいパスワード]** ボックスと **[新しいパスワードの確認入力]** ボックスが表示されます。
 
 ### <a name="new-password"></a>[新しいパスワード]
 

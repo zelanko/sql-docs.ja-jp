@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714719"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
@@ -137,7 +137,7 @@ ms.locfileid: "62714719"
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   
- <sup>1</sup>からイベントをトレースしている場合、 **osql**ユーティリティまたは**sqlcmd**ユーティリティでは、常に追加**%** でフィルターする、 **TextData**データ列。  
+ <sup>1</sup>からイベントをトレースしている場合、 **osql**ユーティリティまたは**sqlcmd**ユーティリティでは、常に追加 **%** でフィルターする、 **TextData**データ列。  
   
  セキュリティ対策として、SQL トレースは、パスワードに影響を与えるセキュリティ関連ストアド プロシージャの情報をトレースの対象から自動的に除外します。 このセキュリティ メカニズムは変更不可能で、常に有効な状態になっています。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上でのすべての動作状況をトレースする権限を持たないユーザーがパスワードを取得するのを防ぎます。  
   

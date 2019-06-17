@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636107"
 ---
 # <a name="writing-odbc-3x-drivers"></a>ODBC 3.x ドライバーの作成
@@ -28,7 +28,7 @@ ms.locfileid: "62636107"
   
 |関数|Supported<br /><br /> で、<br /><br /> ODBC 3。*x*<br /><br /> ドライバーですか。|Supported<br /><br /> で、<br /><br /> ODBC 3。*x*<br /><br /> アプリケーションか。|マップされている/サポートされています<br /><br /> ODBC 3。*x*<br /><br /> ドライバー マネージャー<br /><br /> ODBC 3 の場合。*x*ドライバーですか?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|いいえ|No[1]|はい|  
+|**SQLAllocConnect**|いいえ|No[1]|[はい]|  
 |**SQLAllocEnv**|いいえ|No[1]|はい|  
 |**SQLAllocHandle**|はい|[はい]|いいえ|  
 |**SQLAllocStmt**|いいえ|No[1]|はい|  
@@ -50,17 +50,17 @@ ms.locfileid: "62636107"
 |**SQLDescribeParam**|はい|[はい]|いいえ|  
 |**SQLDisconnect**|はい|[はい]|いいえ|  
 |**SQLDriverConnect**|はい|[はい]|いいえ|  
-|**SQLDrivers**|いいえ|はい|はい|  
+|**SQLDrivers**|いいえ|はい|[はい]|  
 |**SQLEndTran**|はい|[はい]|いいえ|  
 |**SQLError**|いいえ|No[1]|はい|  
 |**SQLExecDirect**|はい|[はい]|いいえ|  
-|**SQLExecute**|はい|[はい]|いいえ|  
+|**SQLExecute**|[はい]|[はい]|いいえ|  
 |**SQLExtendedFetch**|はい|いいえ|いいえ|  
 |**SQLFetch**|はい|[はい]|いいえ|  
 |**SQLFetchScroll**|はい|[はい]|いいえ|  
 |**SQLForeignKeys**|はい|[はい]|いいえ|  
 |**SQLFreeConnect**|いいえ|[はい] [1]|はい|  
-|**SQLFreeEnv**|いいえ|[はい] [1]|はい|  
+|**SQLFreeEnv**|いいえ|[はい] [1]|[はい]|  
 |**SQLFreeHandle**|はい|[はい]|いいえ|  
 |**SQLFreeStmt**|はい|[はい]|いいえ|  
 |**SQLGetConnectAttr**|はい|[はい]|いいえ|  
@@ -69,10 +69,10 @@ ms.locfileid: "62636107"
 |**SQLGetData**|はい|[はい]|いいえ|  
 |**SQLGetDescField**|はい|[はい]|いいえ|  
 |**SQLGetDescRec**|はい|[はい]|いいえ|  
-|**SQLGetDiagField**|はい|[はい]|いいえ|  
+|**SQLGetDiagField**|[はい]|[はい]|いいえ|  
 |**SQLGetDiagRec**|はい|[はい]|いいえ|  
 |**SQLGetEnvAttr**|はい|[はい]|いいえ|  
-|**SQLGetFunctions**|No[6]|はい|はい|  
+|**SQLGetFunctions**|No[6]|[はい]|はい|  
 |**SQLGetInfo**|はい|[はい]|いいえ|  
 |**SQLGetStmtAttr**|はい|[はい]|いいえ|  
 |**SQLGetStmtOption**|No[5]|No[1]|はい|  
@@ -80,8 +80,8 @@ ms.locfileid: "62636107"
 |**SQLMoreResults**|はい|[はい]|いいえ|  
 |**SQLNativeSql**|はい|[はい]|いいえ|  
 |**SQLNumParams**|はい|[はい]|いいえ|  
-|**SQLNumResultCols**|はい|[はい]|いいえ|  
-|**SQLParamData**|はい|[はい]|いいえ|  
+|**SQLNumResultCols**|[はい]|[はい]|いいえ|  
+|**SQLParamData**|[はい]|[はい]|いいえ|  
 |**SQLParamOptions**|いいえ|いいえ|はい|  
 |**SQLPrepare**|はい|[はい]|いいえ|  
 |**SQLPrimaryKeys**|はい|[はい]|いいえ|  
@@ -98,7 +98,7 @@ ms.locfileid: "62636107"
 |**SQLSetPos**|はい|[はい]|いいえ|  
 |**SQLSetParam**|いいえ|いいえ|はい|  
 |**SQLSetScrollOption**|はい|[はい]|いいえ|  
-|**SQLSetStmtAttr**|はい|[はい]|いいえ|  
+|**SQLSetStmtAttr**|[はい]|[はい]|いいえ|  
 |**SQLSetStmtOption**|No[5]|No[1]|はい|  
 |**SQLSpecialColumns**|はい|[はい]|いいえ|  
 |**SQLStatistics**|はい|[はい]|いいえ|  

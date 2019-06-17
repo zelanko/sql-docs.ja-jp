@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683980"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (TRANSACT-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` ディストリビューション エージェントが実行している場合**sp_table_validation**検証の完了後、ディストリビューション エージェント、直ちにシャットかどうかを指定します。 *shutdown_agent*は**ビット**、既定値は**0**します。 場合**0**、レプリケーション エージェントがシャット ダウンされません。 場合**1**レプリケーション エージェントがシャット ダウンにシグナル状態、エラー 20578 が発生します。 このパラメーターは無視されますと**sp_table_validation**ユーザーが直接実行されます。  
   
-`[ @table_name = ] table_name` 出力メッセージ用に使用されるビューのテーブル名です。 *table_name*は**sysname**、既定値は **@table**します。  
+`[ @table_name = ] table_name` 出力メッセージ用に使用されるビューのテーブル名です。 *table_name*は**sysname**、既定値は **@table** します。  
   
-`[ @column_list = ] 'column_list'` チェックサム関数で使用される列の一覧を示します。 *column_list*は**nvarchar (4000)**、既定値は NULL です。 マージ アーティクルを検証する場合は、計算列とタイムスタンプ列を除く列リストを指定します。  
+`[ @column_list = ] 'column_list'` チェックサム関数で使用される列の一覧を示します。 *column_list*は**nvarchar (4000)** 、既定値は NULL です。 マージ アーティクルを検証する場合は、計算列とタイムスタンプ列を除く列リストを指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  表に、チェックサム、チェックサムの検証と予想されるチェックサムを実行すると等しい場合**sp_table_validation**テーブルがチェックサムの検証を渡すことのメッセージが返されます。 それ以外の場合、テーブルは同期が取れません、予期されると実際の行の数の違いをレポートのメッセージを返します。  
@@ -93,7 +93,7 @@ sp_table_validation [ @table = ] 'table'
 ## <a name="permissions"></a>アクセス許可  
  実行する**sp_table_validation**、検証対象のテーブルに対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チェックサム&#40;TRANSACT-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   

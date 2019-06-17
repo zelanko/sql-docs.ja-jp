@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cae79be898c326b395e781db741c87578edfe7ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721284"
 ---
 # <a name="generate-filters"></a>[フィルターの生成]
@@ -48,7 +48,7 @@ ms.locfileid: "62721284"
   
  ステートメントが解析された後で、レプリケーションによって必要な結合フィルターが作成されます。 このウィザードが実行されているパブリッシャーにディストリビューターを構成していない場合、ディストリビューターを構成するように要求されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Publication](publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
  [パブリッシュされたデータのフィルター選択](publish/filter-published-data.md)   

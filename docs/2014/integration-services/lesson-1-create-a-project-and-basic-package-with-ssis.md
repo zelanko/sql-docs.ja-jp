@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767504"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>レッスン 1:プロジェクトと基本パッケージの作成
@@ -84,7 +84,7 @@ ms.locfileid: "62767504"
   
 -   [手順 2:フラット ファイル接続マネージャーの追加と構成](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [手順 3:追加して、OLE DB 接続マネージャーの構成](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [ステップ 3:追加して、OLE DB 接続マネージャーの構成](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [手順 4:データ フロー タスクをパッケージに追加します。](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   

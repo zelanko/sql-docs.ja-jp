@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e8b98135d07ecc51ce2570a481fac4924266668
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771139"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>変更をキャプチャするために選択したテーブルに対する変更
@@ -49,7 +49,7 @@ ms.locfileid: "62771139"
   
  **"キャプチャ インスタンス"** フィールドに、キャプチャ インスタンスの名前を入力します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](how-to-create-the-sql-server-change-database-instance.md)   
  [Oracle のテーブルおよび列の選択](select-oracle-tables-and-columns.md)  
   

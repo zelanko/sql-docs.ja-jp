@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b44a9b4a863de7d3c7b37ec3b8b53837e6acf953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740549"
 ---
 # <a name="running-stored-procedures"></a>ストアド プロシージャの実行
@@ -34,7 +34,7 @@ ms.locfileid: "62740549"
   
      1 つの実行可能なプロシージャとしてプリコンパイルされた 1 つ以上の SQL ステートメント。  
   
--   拡張ストアド プロシージャ :   
+-   拡張ストアド プロシージャ :  
   
      拡張ストアド プロシージャ用の SQL Server オープン データ サービス API に記述された、C または C++ のダイナミック リンク ライブラリ (DLL)。 オープン データ サービス API によりストアド プロシージャの機能が拡張され、C または C++ のコードを実装できるようになります。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62740549"
   
 -   [ストアド プロシージャの結果の処理](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [ストアド プロシージャの操作方法に関するトピックを実行している&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   

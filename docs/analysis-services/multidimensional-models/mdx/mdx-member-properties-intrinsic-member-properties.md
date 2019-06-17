@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740252"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX メンバー プロパティ - 固有メンバー プロパティ
@@ -32,7 +32,7 @@ ms.locfileid: "62740252"
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 以外のプロバイダーは、この他にも追加の固有メンバー プロパティをサポートする場合があります。 他のプロバイダーによってサポートされる固有メンバー プロパティについての詳細は、各プロバイダーに付属の資料を参照してください。  
   
 ## <a name="types-of-member-properties"></a>メンバー プロパティの種類  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] がサポートする固有メンバー プロパティには、次の 2 種類があります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] がサポートする固有メンバー プロパティには、次の 2 種類があります。  
   
  状況依存メンバー プロパティ  
  この種類のメンバー プロパティは、特定の階層またはレベルのコンテキストで使用する必要があり、特定のディメンションまたはレベルの各メンバーに関する値を提供します。  
@@ -203,7 +203,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [PeriodsToDate &#40;MDX&#41;](../../../mdx/periodstodate-mdx.md)   
  [Children &#40;MDX&#41;](../../../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   

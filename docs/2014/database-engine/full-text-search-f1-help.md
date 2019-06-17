@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62778953"
 ---
 # <a name="full-text-search-f1-help"></a>フルテキスト検索の F1 ヘルプ
@@ -29,7 +29,7 @@ ms.locfileid: "62778953"
 |[フルテキスト インデックス プロパティ&#40;[全般] ページ&#41;](../../2014/database-engine/full-text-index-properties-general-page.md)|[検索プロパティ リスト エディター](../../2014/database-engine/search-property-list-editor.md)|  
 |[フルテキスト インデックス プロパティ&#40;列 ページ&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フルテキスト検索](../relational-databases/search/full-text-search.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   

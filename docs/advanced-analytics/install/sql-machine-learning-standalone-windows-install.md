@@ -10,10 +10,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62747074"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Machine Learning Server (スタンドアロン) または SQL Server セットアップを使用して R Server (スタンドアロンを) インストールします。
@@ -84,11 +84,11 @@ SQL server 2016 ののみ。SQL Server の前提条件としてインストー�
     > 
     > これらの理由から、一般的な推奨 SQL Server Machine Learning サービスから別のコンピューターには、Machine Learning Server (スタンドアロン) をインストールすることです。
 
-5.  ダウンロードとインストール ベース言語のディストリビューションに関するライセンス条項に同意します。 **[同意する]** ボタンが使用できない状態になっている場合は、**[次へ]** をクリックします。 
+5.  ダウンロードとインストール ベース言語のディストリビューションに関するライセンス条項に同意します。 **[同意する]** ボタンが使用できない状態になっている場合は、 **[次へ]** をクリックします。 
 
      ![Python の使用許諾契約書](media/2017setup-python-license.png "Python の使用許諾契約書")
 
-6.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
+6.  **[インストールの準備完了]** ページで、選択内容を確認し、 **[インストール]** をクリックします。
 
 インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、次を参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
 ::: moniker-end
@@ -121,9 +121,9 @@ SQL server 2016 ののみ。SQL Server の前提条件としてインストー�
     > 
     > 一般的な推奨 R Server (スタンドアロン) をインストールする別のコンピューターから SQL Server R Services (In-database)。
 
-5.  ダウンロードとインストール ベース言語のディストリビューションに関するライセンス条項に同意します。 **[同意する]** ボタンが使用できない状態になっている場合は、**[次へ]** をクリックします。 
+5.  ダウンロードとインストール ベース言語のディストリビューションに関するライセンス条項に同意します。 **[同意する]** ボタンが使用できない状態になっている場合は、 **[次へ]** をクリックします。 
 
-6.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
+6.  **[インストールの準備完了]** ページで、選択内容を確認し、 **[インストール]** をクリックします。
 
 インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、次を参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
 ::: moniker-end

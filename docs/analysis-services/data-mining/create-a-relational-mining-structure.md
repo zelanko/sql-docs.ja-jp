@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a808cfe9e5cd48ba689eac0bc4cb63123c4ef13a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740132"
 ---
 # <a name="create-a-relational-mining-structure"></a>Create a Relational Mining Structure
@@ -118,7 +118,7 @@ ms.locfileid: "62740132"
 > [!WARNING]  
 >  ドリルスルーを使用するには、マイニング構造の作成時にドリルスルーを有効にする必要があります。 モデルのドリルスルーはモデルのプロパティを設定することで後から有効にできますが、マイニング構造のこのオプションは最初に設定する必要があります。 詳細については、「[ドリルスルー クエリ (データ マイニング)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](../../analysis-services/data-mining/data-mining-designer.md)   
  [データ マイニング ウィザード (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   

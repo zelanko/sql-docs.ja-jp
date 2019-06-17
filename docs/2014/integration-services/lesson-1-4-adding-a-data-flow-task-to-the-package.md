@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891803"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>手順 4:パッケージへのデータ フロー タスクの追加
@@ -41,7 +41,7 @@ ms.locfileid: "62891803"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 5: フラット ファイル ソースの追加と構成](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データ フロー タスク]](control-flow/data-flow-task.md)  
   
   

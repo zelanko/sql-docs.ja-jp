@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62699203"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
@@ -89,7 +89,7 @@ ms.locfileid: "62699203"
 |||3rd quarter|6119|1444|4675|Sep-30-99|9 月 ~ 18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
- キューブを定義した後、新しい集計を作成したり、既存の集計を変更して、集計を処理時に事前計算するかクエリ時に計算するかなどを指定するオプションを設定することができます。 **関連トピック:**[集計と集計デザイン](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)します。  
+ キューブを定義した後、新しい集計を作成したり、既存の集計を変更して、集計を処理時に事前計算するかクエリ時に計算するかなどを指定するオプションを設定することができます。 **関連トピック:** [集計と集計デザイン](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)します。  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>メジャー、属性、および階層のマッピング  
  キューブの例のメジャー、属性、および階層は、キューブのファクト テーブルおよびディメンション テーブルの次の列から派生します。  
@@ -119,9 +119,9 @@ ms.locfileid: "62699203"
   
  上記の表に、同じ値では、各行の**RouteKey**、 **SourceKey**、および**TimeKey**これらの行が同じキューブ セルに貢献することを示す列。  
   
- ここで示す例は、非常に単純なキューブを表します。つまり、キューブに 1 つのメジャー グループがあり、すべてのディメンション テーブルがスター スキーマのファクト テーブルに結合されています。 別の一般的なスキーマとして、スノーフレーク スキーマがあります。このスキーマでは、1 つ以上のディメンション テーブルがファクト テーブルに直接結合されるのではなく、それぞれ別のディメンション テーブルに結合されます。 **関連トピック:**[ディメンション&#40;Analysis Services - 多次元データ&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)します。  
+ ここで示す例は、非常に単純なキューブを表します。つまり、キューブに 1 つのメジャー グループがあり、すべてのディメンション テーブルがスター スキーマのファクト テーブルに結合されています。 別の一般的なスキーマとして、スノーフレーク スキーマがあります。このスキーマでは、1 つ以上のディメンション テーブルがファクト テーブルに直接結合されるのではなく、それぞれ別のディメンション テーブルに結合されます。 **関連トピック:** [ディメンション&#40;Analysis Services - 多次元データ&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)します。  
   
- ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:**[ディメンション リレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)します。  
+ ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:** [ディメンション リレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)します。  
   
 ## <a name="see-also"></a>参照  
  [多次元モデル データベース &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  

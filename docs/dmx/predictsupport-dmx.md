@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658858"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
@@ -32,7 +32,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  スカラー列です。  
   
 ## <a name="return-type"></a>戻り値の型  
- 指定された型のスカラー値 *\<* スカラー列参照*>* します。  
+ 指定された型のスカラー値 *\<* スカラー列参照 *>* します。  
   
 ## <a name="remarks"></a>コメント  
  予測された状態が省略されている場合、省略した状態バケットを除いて、最も予測可能性が高い状態が使用されます。 省略した状態バケットを含めるには設定、\<予測状態 > に**INCLUDE_** します。  

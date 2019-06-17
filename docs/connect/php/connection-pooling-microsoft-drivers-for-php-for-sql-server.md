@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6dc56d020af182d657ec2766d996601e5442686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: de58a006717a64d400e40ba2126eebcdb138aa3f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624990"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796239"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>接続のプール (Microsoft SQL Server 用 Drivers for PHP)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47624990"
 接続文字列から *ConnectionPooling* 属性を省略する場合、あるいは **true** (または 1) に設定する場合、同等の接続が接続プールに存在しないときにのみ、ドライバーは新しい接続を構築します。  
   
 その他の接続属性の詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
-### <a name="linux-and-macos"></a>Linux および macOS
+### <a name="linux-and-macos"></a>Linux と macOS
 *ConnectionPooling*属性を使用して、接続プールを有効または無効にすることはできません。 
 
 接続プール有効/無効にできます odbcinst.ini の構成ファイルを編集します。 ドライバーを有効にする変更を再読み込みする必要があります。

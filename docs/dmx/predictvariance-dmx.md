@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 876923763d6aad1319b0409143dd5fca6e23e92a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658779"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -32,7 +32,7 @@ PredictVariance(<scalar column reference>)
  スカラー列です。  
   
 ## <a name="return-type"></a>戻り値の型  
- 指定された型のスカラー値*\<スカラー列参照 >* します。  
+ 指定された型のスカラー値 *\<スカラー列参照 >* します。  
   
 ## <a name="remarks"></a>コメント  
  列参照が不連続で場合**PredictVariance**不連続の値から分散を計算することはできませんので、0 を返します。  

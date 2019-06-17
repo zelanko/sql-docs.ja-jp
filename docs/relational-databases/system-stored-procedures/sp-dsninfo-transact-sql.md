@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724023"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -42,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dsn = ] 'dsn'` ODBC DSN または OLE DB リンク サーバーの名前です。 *dsn*は**varchar (128)**、既定値はありません。  
+`[ @dsn = ] 'dsn'` ODBC DSN または OLE DB リンク サーバーの名前です。 *dsn*は**varchar (128)** 、既定値はありません。  
   
-`[ @infotype = ] 'info_type'` 返される情報の種類です。 場合*検査*が指定されていないか、NULL を指定すると、あらゆる種類の情報が返されます。 *検査*は**varchar (128)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @infotype = ] 'info_type'` 返される情報の種類です。 場合*検査*が指定されていないか、NULL を指定すると、あらゆる種類の情報が返されます。 *検査*は**varchar (128)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|データベース名を指定します。|  
 |**SQL_SUBSCRIBER**|サブスクライバーに指定できるデータ ソースを指定します。|  
   
-`[ @login = ] 'login'` データ ソースのログインです。 データ ソースには、ログインが含まれている場合は、NULL を指定またはパラメーターを省略します。 *ログイン*は**varchar (128)**、既定値は NULL です。  
+`[ @login = ] 'login'` データ ソースのログインです。 データ ソースには、ログインが含まれている場合は、NULL を指定またはパラメーターを省略します。 *ログイン*は**varchar (128)** 、既定値は NULL です。  
   
-`[ @password = ] 'password'` ログインのパスワードです。 データ ソースには、ログインが含まれている場合は、NULL を指定またはパラメーターを省略します。 *パスワード*は**varchar (128)**、既定値は NULL です。  
+`[ @password = ] 'password'` ログインのパスワードです。 データ ソースには、ログインが含まれている場合は、NULL を指定またはパラメーターを省略します。 *パスワード*は**varchar (128)** 、既定値は NULL です。  
   
 `[ @dso_type = ] dso_type` データ ソースの型です。 *ス*は**int**、これらの値のいずれかを指定できます。  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91b4edcd65f972adb98cf1a4f6c62a81ebb184f8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600143"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772787"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$dsn*: プレフィックス名 (常に `sqlsrv`)、コロン、および、Server キーワードを含む文字列です。 たとえば、`"sqlsrv:server=(local)"` のようにします。 オプションで他の接続キーワードを指定することも可能です。 Server キーワードおよびその他の接続キーワードの詳細については、「 [Connection Options](../../connect/php/connection-options.md) 」を参照してください。 *$dsn* は全体が引用符で囲まれているので、各接続キーワードは個別に囲まないようにする必要があります。  
+*$dsn*: プレフィックス名 (常に `sqlsrv`)、コロン、および、Server キーワードを含む文字列です。 たとえば、`"sqlsrv:server=(local)"` のようになります。 オプションで他の接続キーワードを指定することも可能です。 Server キーワードおよびその他の接続キーワードの詳細については、「 [Connection Options](../../connect/php/connection-options.md) 」を参照してください。 *$dsn* は全体が引用符で囲まれているので、各接続キーワードは個別に囲まないようにする必要があります。  
   
 *$username*: 省略可です。 ユーザー名を含む文字列です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続する場合、ログイン ID を指定します。 Windows 認証を使用して接続するには、 `""`を指定します。  
   

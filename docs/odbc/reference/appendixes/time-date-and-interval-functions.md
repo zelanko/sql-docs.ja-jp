@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1303ca724ef6790ae7bcf218ab8ed0e5da4ed38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62735088"
 ---
 # <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数
@@ -39,11 +39,11 @@ ms.locfileid: "62735088"
 |関数|説明|  
 |--------------|-----------------|  
 |**CURRENT_DATE( )** (ODBC 3.0)|現在の日付を返します。|  
-|**CURRENT_TIME [(** *時間精度* **)]** (ODBC 3.0)|現在の現地時刻を返します。 *時間精度*引数は、戻り値の秒の有効桁数を決定します。|  
+|**CURRENT_TIME [(** *時間精度* **)]** (ODBC 3.0)|現在のローカル時間を返します。 *時間精度*引数は、戻り値の秒の有効桁数を決定します。|  
 |**CURRENT_TIMESTAMP**<br /> **[(** *タイムスタンプ精度* **)]** (ODBC 3.0)|タイムスタンプの値として、現在の日付と現地時刻を返します。 *タイムスタンプ精度*引数は、タイムスタンプの秒の有効桁数を決定します。|  
 |**CURDATE( )** (ODBC 1.0)|現在の日付を返します。|  
-|**CURTIME( )** (ODBC 1.0)|現在の現地時刻を返します。|  
-|**DAYNAME(** *date_exp* **)** (ODBC 2.0)|(たとえば、Sunday ~ Saturday または Sun 1 日のデータ ソースに固有の名前を含む文字列を返しますです。 を通じて Sat.、 ドイツ語を使ったデータ ソースの英語版、または Sonntag ~ 場合を使用するデータ ソース) 用の日の部分の*date_exp*します。|  
+|**CURTIME( )** (ODBC 1.0)|現在のローカル時間を返します。|  
+|**DAYNAME(** *date_exp* **)** (ODBC 2.0)|(たとえば、Sunday ~ Saturday または Sun 1 日のデータ ソースに固有の名前を含む文字列を返しますです。 \- Sat. ドイツ語を使ったデータ ソースの英語版、または Sonntag ~ 場合を使用するデータ ソース) 用の日の部分の*date_exp*します。|  
 |**DAYOFMONTH(** *date_exp* **)** (ODBC 1.0)|月のフィールドに基づき、月の通算日を返す*date_exp* 1 ~ 31 の範囲の整数値として。|  
 |**DAYOFWEEK(** *date_exp* **)** (ODBC 1.0)|週に基づく週の通算日を返す*date_exp*の範囲の整数値として 1 ~ 7、ここで、1 は日曜日を表します。|  
 |**DAYOFYEAR(** *date_exp* **)** (ODBC 1.0)|[Year] フィールドに基づき、年の通算日を返す*date_exp* 1 ~ 366 の範囲の整数値として。|  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754413"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム:ミラーリング監視サーバーがデータベースの可用性 (データベース ミラーリング) に与える影響
@@ -65,7 +65,7 @@ ms.locfileid: "62754413"
   
     -   ミラー サーバーが失われ、プリンシパル サーバーとミラーリング監視サーバーがクォーラムを保持します。  
   
-         この場合、プリンシパル サーバーによってプリンシパル データベースが DISCONNECTED に設定され、ミラーリングが SUSPENDED の状態でプリンシパル サーバーが実行されます  (この状態は、データベースが現在ミラー化されていないので、*不安定な実行*と呼ばれます。)ミラー サーバーがセッションに再度参加すると、ミラーとしてクォーラムを再度獲得し、データベースのコピーの再同期を開始します。  
+         この場合、プリンシパル サーバーによってプリンシパル データベースが DISCONNECTED に設定され、ミラーリングが SUSPENDED の状態でプリンシパル サーバーが実行されます (この状態は、データベースが現在ミラー化されていないので、*不安定な実行*と呼ばれます。)ミラー サーバーがセッションに再度参加すると、ミラーとしてクォーラムを再度獲得し、データベースのコピーの再同期を開始します。  
   
     -   プリンシパル サーバーが失われ、ミラーリング監視サーバーとミラー サーバーがクォーラムを保持します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62754413"
   
  シナリオ 2 では、ミラーリング監視サーバーがクォーラムを失いますが、 **Partner_A** と **Partner_B**のパートナーが互いにクォーラムを保持し、データベースをオンライン状態に保ちます。 次に、両パートナーもクォーラムを失い、データベースがオフラインになります。 その後、プリンシパル サーバーである **Partner_A**がミラーリング監視サーバーに再接続し、クォーラムを取り戻します。 ミラーリング監視サーバーは、 **Partner_A** がまだプリンシパル ロールを保持していることを確認し、 **Partner_A** がデータベースをオンラインに戻します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ミラーリングの動作モード](database-mirroring-operating-modes.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング監視サーバー](database-mirroring-witness.md)   

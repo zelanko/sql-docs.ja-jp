@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667889"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>トランザクション レプリケーションの待機時間の計測および接続の検証
@@ -88,7 +88,7 @@ ms.locfileid: "62667889"
   
 3.  **[トレーサーの挿入]** をクリックします。  
   
-4.  次の列にトレーサー トークンの経過時間を表示します。**[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)**、**[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)**、**[合計待機時間]**。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
+4.  次の列にトレーサー トークンの経過時間を表示します。 **[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)** 、 **[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)** 、 **[合計待機時間]** 。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>以前に挿入したトレーサー トークンの情報を表示するには  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62667889"
   
 3.  **[挿入された時間]** ボックスで時間を選択します。  
   
-4.  次の列にトレーサー トークンの経過時間を表示します。**[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)**、**[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)**、**[合計待機時間]**。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
+4.  次の列にトレーサー トークンの経過時間を表示します。 **[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)** 、 **[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)** 、 **[合計待機時間]** 。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
   
     > [!NOTE]  
     >  トレーサー トークン情報は、ディストリビューション データベースの履歴保持期間の制約を受けるその他の履歴データと同じ期間保持されます。 ディストリビューション データベースのプロパティの変更方法の詳細については、「[ディストリビューターとパブリッシャーのプロパティの表示および変更](../view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
@@ -111,21 +111,21 @@ ms.locfileid: "62667889"
   
 2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、[sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) を実行します。 サブスクリプションが存在すること、および状態がアクティブであることを確認します。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql) を実行して、**@publication** を指定します。 **@tracer_token_id** 出力パラメーターの値をメモします。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql) を実行して、 **@publication** を指定します。 **@tracer_token_id** 出力パラメーターの値をメモします。  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>待機時間を決定し、トランザクション パブリケーションの接続を確認するには  
   
 1.  上述の手順を使用して、トレーサー トークンをパブリケーションに通知します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、**@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの目的の **tracer_id** を確認します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 **@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの目的の **tracer_id** を確認します。  
   
-3.  パブリッシャー側のパブリケーション データベースで、**@publication** を指定し、**@tracer_id** に手順 2 のトレーサー トークン ID を指定して、[sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql) を実行します。 選択したトレーサー トークンの待機情報が返されます。  
+3.  パブリッシャー側のパブリケーション データベースで、 **@publication** を指定し、 **@tracer_id** に手順 2 のトレーサー トークン ID を指定して、[sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql) を実行します。 選択したトレーサー トークンの待機情報が返されます。  
   
 #### <a name="to-remove-tracer-tokens"></a>トレーサー トークンを削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、**@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの削除するトレーサー トークンの **tracer_id** を確認します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 **@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの削除するトレーサー トークンの **tracer_id** を確認します。  
   
-2.  パブリッシャー側のパブリケーション データベースで、**@publication** を指定し、**@tracer_id** に手順 2 の削除するトレーサー トークン ID を指定して、[sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) を実行します。  
+2.  パブリッシャー側のパブリケーション データベースで、 **@publication** を指定し、 **@tracer_id** に手順 2 の削除するトレーサー トークン ID を指定して、[sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) を実行します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トレーサー トークン レコードを通知し、返された通知済みトレーサー トークンの ID を使用して待機時間情報を表示します。  

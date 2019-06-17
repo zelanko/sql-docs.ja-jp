@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768088"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
@@ -93,7 +93,7 @@ ms.locfileid: "62768088"
   
 -   パッケージへのアクセスを制御するために、db_ssisadmin、db_ssisltduser、および db_ssisoperator という 3 つの固定データベース レベル ロールを新しく作成します。 db_dtsadmin、db_dtsltduser、および db_dtsoperator という [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ロールは削除されませんが、対応する新しいロールのメンバーになります。  
   
--   場合、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア (で管理されているファイル システムの場所は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス) が既定の場所で**\SQL Server\90**、 **\SQL Server\100**、または**\SQL Server\110**下で新しい既定の場所にそれらのパッケージを移動**\SQL Server\120**します。  
+-   場合、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア (で管理されているファイル システムの場所は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス) が既定の場所で **\SQL Server\90**、 **\SQL Server\100**、または **\SQL Server\110**下で新しい既定の場所にそれらのパッケージを移動 **\SQL Server\120**します。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアップグレード済みのインスタンスを指すように [!INCLUDE[ssDE](../../includes/ssde-md.md)]サービス構成ファイルを更新します。  
   

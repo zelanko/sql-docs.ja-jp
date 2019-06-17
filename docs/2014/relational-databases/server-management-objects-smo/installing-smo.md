@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753634"
 ---
 # <a name="installing-smo"></a>SMO のインストール
@@ -26,7 +26,7 @@ ms.locfileid: "62753634"
   
  SMO アセンブリは、既定で [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] ディレクトリにインストールされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 2014 のクイックスタート インストール](../../getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

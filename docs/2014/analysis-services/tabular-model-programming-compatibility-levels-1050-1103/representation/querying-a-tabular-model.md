@@ -1,23 +1,23 @@
 ---
 title: 表形式モデルのクエリ |Microsoft Docs
-ms.date: 05/07/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: tabular-models
 ms.topic: reference
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 author: minewiskan
-manager: kfile
+ms.author: owend
+manager: craigg
 ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757743"
 ---
 # <a name="querying-a-tabular-model"></a>テーブル モデルのクエリ
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   テーブル モデルのクエリを実行することは、テーブル データベースからデータを取得することを意味します。この目的を達成する方法は 2 つあります。DAX 内の表形式クエリを使用する方法と、MDX を使用して、キューブから取得するような形でデータを取得する方法です。 ただし、テーブル モデルの基になるモードによっては、DAX 表形式クエリしか使用できない場合があります。DirectQuery モードでは、DAX 表形式クエリを使用する必要があります。  
   
 ## <a name="querying-with-adomdnet"></a>ADOMD.NET を使用したクエリ  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736943"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788426"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて」を参照してください。
 
@@ -74,17 +74,17 @@ ms.locfileid: "55736943"
 
 MS DTC サービスは、Service Manager で **[自動]** とマークされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始時に実行されている必要があります。 XA トランザクションで使用するために MS DTC を有効にするには、次の手順を実行する必要があります。  
   
-Windows Vista 以降の場合:   
+Windows Vista 以降の場合:  
   
-1. **[スタート]** ボタンをクリックして、**[検索の開始]** ボックスに「**dcomcnfg**」と入力し、Enter キーを押して、**[コンポーネント サービス]** を開きます。 **[検索の開始]** ボックスに「%windir%\system32\comexp.msc」と入力して **[コンポーネント サービス]** を開くこともできます。  
+1. **[スタート]** ボタンをクリックして、 **[検索の開始]** ボックスに「**dcomcnfg**」と入力し、Enter キーを押して、 **[コンポーネント サービス]** を開きます。 **[検索の開始]** ボックスに「%windir%\system32\comexp.msc」と入力して **[コンポーネント サービス]** を開くこともできます。  
   
 2. [コンポーネント サービス]、[コンピューター]、[マイ コンピューター]、[分散トランザクション コーディネーター] の順に展開します。  
   
-3. **[ローカル DTC]** を右クリックし、**[プロパティ]** を選択します。  
+3. **[ローカル DTC]** を右クリックし、 **[プロパティ]** を選択します。  
   
 4. **[ローカル DTC のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブをクリックします。  
   
-5. **[XA トランザクションを有効にする]** チェック ボックスをオンにし、**[OK]** をクリックします。 これにより、MS DTC サービスが再開されます。
+5. **[XA トランザクションを有効にする]** チェック ボックスをオンにし、 **[OK]** をクリックします。 これにより、MS DTC サービスが再開されます。
   
 6. 再度 **[OK]** をクリックして **[プロパティ]** ダイアログ ボックスを閉じ、次に **[コンポーネント サービス]** を閉じます。  
   
@@ -118,7 +118,7 @@ Windows Vista 以降の場合:
 ### <a name="BKMK_ServerSide"></a> 準備されていないトランザクションを自動ロールバックするためのサーバー側のタイムアウト設定を構成します。  
 
 > [!WARNING]  
-> このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることをご確認ください。 クライアント側のタイムアウトの設定について詳しくは、「[XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」をご覧ください。  
+> このサーバー側のオプションは、Microsoft JDBC Driver 4.2 (以降) for SQL Server の新機能です。 このように動作を更新するには、サーバー上の sqljdbc_xa.dll が更新されていることを確認してください。 クライアント側のタイムアウトの設定について詳しくは、「[XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)」をご覧ください。  
 
 分散トランザクションのタイムアウトの動作を制御する 2 つのレジストリ設定 (DWORD 値) があります。  
   

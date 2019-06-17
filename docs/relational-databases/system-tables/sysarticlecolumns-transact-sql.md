@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714189"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (TRANSACT-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62714189"
 |**colid**|**smallint**|アーティクル内の列を識別します。|  
 |**is_udt**|**bit**|列がユーザー定義データ型 (UDT) 列であるかどうかを示します。 値**1** UDT 列を示します。|  
 |**is_xml**|**bit**|列は、かどうかを示す、 **xml**列。 値**1** xml 列を示します。|  
-|**is_max**|**bit**|列が大きな値データ型の列かどうかを示します**varchar (max)**、 **nvarchar (max)**、および**varbinary (max)** します。 値**1**大きな値の列を示します。|  
+|**is_max**|**bit**|列が大きな値データ型の列かどうかを示します**varchar (max)** 、 **nvarchar (max)** 、および**varbinary (max)** します。 値**1**大きな値の列を示します。|  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

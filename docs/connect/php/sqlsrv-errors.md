@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47403e17df946ada2fe5a5ed913d9e16c8b62271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9284b6148fecd96f881778ef82dec45b40acf178
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640730"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796888"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +58,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>パラメーター  
 *$errorsAndOrWarnings* (省略可能): 定義済みの定数。 このパラメーターには、次の表に示すいずれかの値を指定できます。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  
@@ -71,7 +71,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
   
 |Key|[説明]|  
 |-------|---------------|  
-|SQLSTATE|ODBC ドライバー由来のエラーの場合、ODBC が返す SQLSTATE。 ODBC の SQLSTATE 値については、「[ODBC Error Codes (ODBC エラー コード)](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、IMSSP の SQLSTATE。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来の警告の場合、01SSP の SQLSTATE。|  
+|SQLSTATE|ODBC ドライバー由来のエラーの場合、ODBC が返す SQLSTATE。 ODBC の SQLSTATE 値については、「 [ODBC Error Codes (ODBC エラー コード)](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)」を参照してください。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、IMSSP の SQLSTATE。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来の警告の場合、01SSP の SQLSTATE。|  
 |コード|SQL Server 由来のエラーの場合、SQL Server のネイティブ エラー コード。<br /><br />ODBC ドライバー由来のエラーの場合、ODBC が返すエラー コード。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]由来のエラーの場合、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] のエラー コード。 詳細については、「 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)」を参照してください。|  
 |message|エラーの説明です。|  
   

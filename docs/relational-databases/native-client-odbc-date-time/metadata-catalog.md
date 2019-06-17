@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0f816c6207b6f94d918f2e1d3d8329b51caad14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738859"
 ---
 # <a name="metadata---catalog"></a>メタデータ - カタログ
@@ -68,7 +68,7 @@ ms.locfileid: "62738859"
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メタデータ&#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

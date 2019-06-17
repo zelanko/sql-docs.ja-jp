@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721784"
 ---
 # <a name="article-properties---ltarticlegt"></a>アーティクルのプロパティ - &lt;Article&gt;
@@ -53,7 +53,7 @@ ms.locfileid: "62721784"
   
 -   各スキーマについて、そのスキーマと同じ名前を持つユーザーをサブスクリプション データベースに追加します。  
   
- **[XML を NTEXT に変換]**、 **[MAX データ型を NTEXT と IMAGE に変換]**、 **[新しい datetime を NVARCHAR に変換]**、 **[FILESTREAM を MAX データ型に変換]**、 **[大きな CLR を MAX データ型に変換]**、 **[hierarchyId を MAX データ型に変換]**、および **[spatial を MAX データ型に変換]**  
+ **[XML を NTEXT に変換]** 、 **[MAX データ型を NTEXT と IMAGE に変換]** 、 **[新しい datetime を NVARCHAR に変換]** 、 **[FILESTREAM を MAX データ型に変換]** 、 **[大きな CLR を MAX データ型に変換]** 、 **[hierarchyId を MAX データ型に変換]** 、および **[spatial を MAX データ型に変換]**  
  名前に示されているようにデータ型と属性を変換するかどうかを指定します。 このようなデータ型を以前のバージョンの **にレプリケートする場合には、** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を指定します。 これにより、このデータ型をサブスクライバーで適切に処理できるようになります。  
   
  **[対象オブジェクト名]**  
@@ -88,7 +88,7 @@ ms.locfileid: "62721784"
  このオプションは、ストアド プロシージャにのみ適用されます。 ストアド プロシージャの定義 (CREATE PROCEDURE ステートメント) またはその実行をレプリケートするかどうかを指定します。 プロシージャの実行をレプリケートする場合、サブスクリプションが開始されたときにプロシージャの定義がサブスクライバーにレプリケートされます。プロシージャがパブリッシャー上で実行されると、サブスクライバー上の対応するプロシージャが実行されます。 これにより、大規模なバッチ操作を実行する場合のパフォーマンスが大幅に向上します。 詳細については、「 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)」を参照してください。  
   
 ## <a name="options-for-merge-publications"></a>マージ パブリケーションのオプション  
- マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。**[プロパティ]** と **[競合回避モジュール]** です。  
+ マージ パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。 **[プロパティ]** と **[競合回避モジュール]** です。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[同期の方向]**  
@@ -96,9 +96,9 @@ ms.locfileid: "62721784"
   
 -   **[双方向]** (既定) : 変更をサブスクライバーにダウンロードし、パブリッシャーにアップロードすることができます。  
   
--   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を禁止する]**: 変更をサブスクライバーにダウンロードできますが、パブリッシャーにアップロードすることはできません。 トリガーにより、サブスクライバーで変更が作成されなくなります。  
+-   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を禁止する]** : 変更をサブスクライバーにダウンロードできますが、パブリッシャーにアップロードすることはできません。 トリガーにより、サブスクライバーで変更が作成されなくなります。  
   
--   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を許可する]**: 変更をサブスクライバーにダウンロードできますが、パブリッシャーにアップロードすることはできません。  
+-   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を許可する]** : 変更をサブスクライバーにダウンロードできますが、パブリッシャーにアップロードすることはできません。  
   
  詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62721784"
  **[追跡レベル]**  
  同じ行または同じ列に対する変更を競合として扱うかどうかを指定します。  
   
- **[INSERT 権限の確認]**、 **[UPDATE 権限の確認]**、 **[DELETE 権限の確認]**  
+ **[INSERT 権限の確認]** 、 **[UPDATE 権限の確認]** 、 **[DELETE 権限の確認]**  
  パブリケーション データベースにパブリッシュされたテーブルに対する INSERT 権限、UPDATE 権限、または DELETE 権限がサブスクライバーのログインにあるかどうか、同期中にチェックするかどうかを指定します。 マージ レプリケーションではこのような権限を許可する必要がないため、既定では **[False]** になっています。パブリッシュされたテーブルへのアクセスは、パブリケーション アクセス リスト (PAL) により制御されます。 PAL の詳細については、「[パブリッシャーのセキュリティ保護](security/secure-the-publisher.md)」を参照してください。  
   
  パブリッシュされたデータに対する特定の変更だけをアップロードするように 1 つ以上のサブスクライバーに許可する場合、権限をチェックするように要求できます。 たとえば、あるサブスクライバーを PAL に追加しながら、パブリケーション データベース内のテーブルに対する権限をそのサブスクライバーに与えないことができます。 その後で [DELETE 権限の確認] を **[True]** に設定すると、そのサブスクライバーでは挿入と更新のアップロードができますが、削除はできなくなります。  
@@ -135,7 +135,7 @@ ms.locfileid: "62721784"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] の提供する COM ベース競合回避モジュールはすべて署名済みです。 このオプションを選択すると、同期の際に競合回避モジュールが有効かどうか確認されます。  
   
 ## <a name="options-for-oracle-publications"></a>Oracle パブリケーションのオプション  
- Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。**[プロパティ]** と **[データのマッピング ]** です。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
+ Oracle パブリケーションの **[アーティクルのプロパティ]** ダイアログ ボックスには、2 つのタブがあります。 **[プロパティ]** と **[データのマッピング ]** です。 Oracle パブリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションでサポートされるプロパティの一部がサポートされません。 詳細については、「 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)」を参照してください。  
   
 ### <a name="properties-tab"></a>[プロパティ] タブ  
  **[INSERT、UPDATE、DELETE ストアド プロシージャのコピー]**  

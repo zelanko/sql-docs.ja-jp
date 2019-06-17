@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724864"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>予測クエリの入力データの選択およびマップ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  マイニング モデルから予測を作成する場合は、一般に新しいデータをモデルに供給することでこの操作を行います  (例外はタイム シリーズ モデルで、履歴データのみに基づいて予測を行うことができます)。モデルに新しいデータを提供するには、データがデータ ソース ビューの一部として使用可能であることを確認する必要があります。 予測に使用するデータがあらかじめわかっている場合は、モデルの作成に使用するデータ ソース ビューにそのデータを含めることができます。 それ以外の場合は、新しいデータ ソース ビューを作成する必要があります。 詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
+  マイニング モデルから予測を作成する場合は、一般に新しいデータをモデルに供給することでこの操作を行います (例外はタイム シリーズ モデルで、履歴データのみに基づいて予測を行うことができます)。モデルに新しいデータを提供するには、データがデータ ソース ビューの一部として使用可能であることを確認する必要があります。 予測に使用するデータがあらかじめわかっている場合は、モデルの作成に使用するデータ ソース ビューにそのデータを含めることができます。 それ以外の場合は、新しいデータ ソース ビューを作成する必要があります。 詳細については、「 [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
   
  必要なデータが一対多の結合で複数の表に含まれている場合があります。 これはデータがアソシエーション モデルまたはシーケンス クラスター モデルに使用されるケースであり、製品またはトランザクションの詳細を含む入れ子になったテーブルにリンクしているケース テーブルを使用します。 モデルでケースが入れ子になったテーブル構造を使用する場合は、予測に使用するデータにもケースが入れ子になったテーブル構造が必要です。  
   

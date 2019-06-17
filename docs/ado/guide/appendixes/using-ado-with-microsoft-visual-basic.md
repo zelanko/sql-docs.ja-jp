@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: abbdbeec81a029716ac6516f9436373e91365a23
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702777"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>アプリケーションの Microsoft Visual Basic および Visual Basic と ADO の併用
@@ -59,7 +59,7 @@ ADO のプロジェクトを設定し、ADO コードの記述は似ています
 
     -   Microsoft Access 8.0 オブジェクト ライブラリ (またはそれ以降)
 
-    -   3.5 DAO オブジェクト ライブラリ (またはそれ以降)
+    -   3\.5 DAO オブジェクト ライブラリ (またはそれ以降)
 
 4.  **[OK]** をクリックします。
 

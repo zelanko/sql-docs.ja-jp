@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9d2ee9e659e9cae8bb93a1ea50b0f2d8e355701
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719993"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>ロケーション パスの指定 (SQLXML 4.0)
@@ -52,9 +52,9 @@ ms.locfileid: "62719993"
   
 -   **ノード テスト**  
   
-     ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、および**セルフ**) 主ノード型があります。 **属性**軸の主ノード型は**\<属性 >** します。 **親**、**子**、および**セルフ**軸の場合、主ノード型は**\<要素 >** します。  
+     ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (**子**、**親**、**属性**、および**セルフ**) 主ノード型があります。 **属性**軸の主ノード型は **\<属性 >** します。 **親**、**子**、および**セルフ**軸の場合、主ノード型は **\<要素 >** します。  
   
-     たとえば、次の場所のパスを指定します**child::customer**、 **\<顧客 >** コンテキスト ノードの子要素を選択します。 **子**軸に**\<要素 >** 、主ノード型と、ノード テスト Customer 場合は、TRUE 顧客、 **\<要素 >** ノード。  
+     たとえば、次の場所のパスを指定します**child::customer**、 **\<顧客 >** コンテキスト ノードの子要素を選択します。 **子**軸に **\<要素 >** 、主ノード型と、ノード テスト Customer 場合は、TRUE 顧客、 **\<要素 >** ノード。  
   
 -   **選択述語 (0 個以上)**  
   

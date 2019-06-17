@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721794"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -84,7 +84,7 @@ ms.locfileid: "62721794"
     > [!NOTE]  
     >  複数のファイルを選択するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら各ファイルをクリックします。  
   
-8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
+8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、 **[OK]** をクリックします。  
   
 9. **[表示]** メニューの **[コード]** をクリックします。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62721794"
     > [!NOTE]  
     >  複数のファイルを選択するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら各ファイルをクリックします。  
   
-8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
+8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、 **[OK]** をクリックします。  
   
 9. **[表示]** メニューの **[コード]** をクリックします。  
   

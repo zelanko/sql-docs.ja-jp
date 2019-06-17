@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62748644"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>クライアント アプリケーションからの接続 (Analysis Services)
@@ -82,7 +82,7 @@ ms.locfileid: "62748644"
   
      負荷分散クラスター内に配置するサーバーの場合は、クラスターに割り当てた仮想サーバー名を使用します。  
   
-2.  Excel での接続を設定するときに、データ接続ウィザードの最後のページで、Excel Services の認証設定を指定できます。 Excel Services が存在する SharePoint サーバーにブックをアップロードするときには、これらの設定を使用してブックのプロパティが設定されます。 この設定は、データ更新操作で使用されます。 オプションとしては、 **[Windows 認証]**、 **[Secure Store Service]** (SSS)、 **[なし]** があります。  
+2.  Excel での接続を設定するときに、データ接続ウィザードの最後のページで、Excel Services の認証設定を指定できます。 Excel Services が存在する SharePoint サーバーにブックをアップロードするときには、これらの設定を使用してブックのプロパティが設定されます。 この設定は、データ更新操作で使用されます。 オプションとしては、 **[Windows 認証]** 、 **[Secure Store Service]** (SSS)、 **[なし]** があります。  
   
      **[なし]** を選択することは避けてください。 Analysis Services では、接続先のサーバーが HTTP アクセス用に構成されていないと、ユーザー名とパスワードを接続文字列に指定できません。 同様に、Analysis Services データベースに対するユーザー アクセス権を持った一連の Windows ユーザーの資格情報に SSS ターゲット アプリケーション ID がマップされていることがわかっている場合を除き、SSS は使用しないでください。 既定のオプションは Windows 認証であり、Excel から Analysis Services に接続するほとんどのシナリオに最適な選択肢です。  
   

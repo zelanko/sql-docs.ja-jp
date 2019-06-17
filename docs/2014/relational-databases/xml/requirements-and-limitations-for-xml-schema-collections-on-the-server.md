@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241258"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>サーバー上の XML スキーマ コレクションの要件と制限
@@ -38,10 +38,10 @@ ms.locfileid: "63241258"
 |----------|----------------|  
 |**minOccurs** と **maxOccurs**|**minOccurs** 属性と **maxOccurs** 属性の値は、4 バイトの整数に収める必要があります。 これに違反するスキーマはサーバーで拒否されます。|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**minOccurs** 属性値に 0 を指定してパーティクルを定義していない限り、子のない **\<xsd:choice>** パーティクルを持つスキーマは拒否します。|  
-|**\<xsd:include>**|現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの要素をサポートしません。 この要素を含む XML スキーマはサーバーによって拒否されます。<br /><br /> 解決方法として、**\<xsd:include>** ディレクティブを含む XML スキーマに前処理を行い、インクルードされるすべてのスキーマの内容をコピーおよびマージして 1 つのスキーマにすることで、サーバーにアップロードできます。 詳細については、「 [含まれているスキーマをマージするためのスキーマの前処理](preprocess-a-schema-to-merge-included-schemas.md)」を参照してください。|  
-|**\<xsd:key>**、**\<xsd:keyref>**、および **\<xsd:unique>**|現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、一意性の強制や、キーおよびキー参照の確立を行うための、これらの XSD ベースの制約はサポートしません。 これらの要素を含む XML スキーマは登録できません。|  
+|**\<xsd:include>**|現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの要素をサポートしません。 この要素を含む XML スキーマはサーバーによって拒否されます。<br /><br /> 解決方法として、 **\<xsd:include>** ディレクティブを含む XML スキーマに前処理を行い、インクルードされるすべてのスキーマの内容をコピーおよびマージして 1 つのスキーマにすることで、サーバーにアップロードできます。 詳細については、「 [含まれているスキーマをマージするためのスキーマの前処理](preprocess-a-schema-to-merge-included-schemas.md)」を参照してください。|  
+|**\<xsd:key>** 、 **\<xsd:keyref>** 、および **\<xsd:unique>**|現在、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、一意性の強制や、キーおよびキー参照の確立を行うための、これらの XSD ベースの制約はサポートしません。 これらの要素を含む XML スキーマは登録できません。|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの要素をサポートしません。 スキーマを更新するための別の方法については、「 [&#60;xsd:redefine&#62; 要素](the-xsd-redefine-element.md)で機能するように XSD スキーマを変更するためのガイドラインを示しています。|  
-|**\<xsd:simpleType>** 値|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、`xs:time` および `xs:dateTime` 以外の秒部分を含む単純型はミリ秒単位の精度までしかサポートされず、`xs:time` および `xs:dateTime` は 100 ナノ秒単位の精度までサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、認識されるすべての XSD 単純型の列挙に制限を適用します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**\<xsd:simpleType>** 宣言での "NaN" 値の使用はサポートしません。<br /><br /> 詳細については、「[&#60;xsd:simpleType&#62; 宣言の値](values-for-xsd-simpletype-declarations.md)で機能するように XSD スキーマを変更するためのガイドラインを示しています。|  
+|**\<xsd:simpleType>** 値|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、`xs:time` および `xs:dateTime` 以外の秒部分を含む単純型はミリ秒単位の精度までしかサポートされず、`xs:time` および `xs:dateTime` は 100 ナノ秒単位の精度までサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、認識されるすべての XSD 単純型の列挙に制限を適用します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **\<xsd:simpleType>** 宣言での "NaN" 値の使用はサポートしません。<br /><br /> 詳細については、「[&#60;xsd:simpleType&#62; 宣言の値](values-for-xsd-simpletype-declarations.md)で機能するように XSD スキーマを変更するためのガイドラインを示しています。|  
 |**xsi:schemaLocation** と **xsi:noNamespaceSchemaLocation**|`xml` データ型の列や変数に挿入された XML インスタンス データにこれらの属性が含まれている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれらの属性が無視されます。|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML スキーマ制約要素を使用している **xs:QName** から派生した型はサポートしません。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メンバー要素に **xs:QName** を指定した共用体型はサポートしません。<br /><br /> 詳細については、「 [The xs:QName Type](the-xs-qname-type.md)」を参照してください。|  
 |既存の置換グループへのメンバーの追加|XML スキーマ コレクション内の既存の置換グループにメンバーを追加することはできません。 XML スキーマの置換グループは先頭要素のみで使用するように制限されているので、同じ CREATE XML SCHEMA COLLECTION ステートメントまたは ALTER XML SCHEMA COLLECTION ステートメントで置換グループのすべてのメンバー要素を定義する必要があります。|  

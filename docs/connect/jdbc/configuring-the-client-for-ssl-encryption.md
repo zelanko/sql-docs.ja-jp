@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d80c9d8103e7a0a0eeea766487e1fc013ae5e100
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f5ec4a56beb5595353671c0f2aab18bf30e5f87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726630"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797471"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>SSL 暗号化のためのクライアントの構成
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -66,7 +66,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
  この例では、"caCert.cer" というファイルが証明書ファイルとして使用されています。 この証明書ファイルをサーバーから入手する必要があります。 次の手順は、サーバー証明書をファイルにエクスポートする方法を示しています。  
   
-1.  [スタート] ボタンをクリックし、[ファイル名を指定して実行] をクリックして「MMC」と入力します  (MMC は Microsoft 管理コンソールの略称です)。  
+1.  [スタート] ボタンをクリックし、[ファイル名を指定して実行] をクリックして「MMC」と入力します (MMC は Microsoft 管理コンソールの略称です)。  
   
 2.  MMC で、[証明書] を開きます。  
   
