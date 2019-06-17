@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266822"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services と Power View ブラウザー サポートの計画 (Reporting Services 2014)
@@ -35,7 +35,7 @@ ms.locfileid: "63266822"
   
 ##  <a name="bkmk_powerview"></a> Power View のブラウザーのシナリオ
 
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] でサポートされているブラウザーとそのバージョンの一覧は、開くドキュメントの種類によって異なります。 Excel 2013 ブックと"**.rdlx**"ファイルは、さまざまなコンポーネントを利用します。  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] でサポートされているブラウザーとそのバージョンの一覧は、開くドキュメントの種類によって異なります。 Excel 2013 ブックと" **.rdlx**"ファイルは、さまざまなコンポーネントを利用します。  
   
 |ドキュメントの種類|環境|ブラウザー サポート|  
 |-------------------|-----------------|---------------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "63266822"
   
 - この表は、SharePoint 2010 と SharePoint 2013 に適用されます。  
   
-- SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
+- SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx) します。  
   
-- SharePoint 2010 のブラウザー サポートの詳細については、次を参照してください。 [(SharePoint Server 2010) のブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.14\).aspx)(https://technet.microsoft.com/library/cc263526(office.14).aspx)します。  
+- SharePoint 2010 のブラウザー サポートの詳細については、次を参照してください。 [(SharePoint Server 2010) のブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.14\).aspx)(https://technet.microsoft.com/library/cc263526(office.14).aspx) します。  
   
 |**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -65,13 +65,13 @@ ms.locfileid: "63266822"
   
 #### <a name="inprivate-browsing-feature-in-internet-explorer"></a>Internet Explorer での InPrivate ブラウズ機能
 
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] では、[!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 および Internet Explorer 9 の InPrivate ブラウズ機能はサポートされていません。 InPrivate ブラウズの詳細については、次を参照してください[InPrivate ブラウズとは何ですか?。](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing)。  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] では、[!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 および Internet Explorer 9 の InPrivate ブラウズ機能はサポートされていません。 InPrivate ブラウズの詳細については、次を参照してください[InPrivate ブラウズとは何ですか?。](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) 。  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Excel Services または SharePoint Online の Excel Web App の power View
 
  次の表は、Excel Services を実行している SharePoint Server で、Power View シートが含まれた Excel 2013 ブックをユーザーが開く場合に、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] でサポートされるブラウザーのバージョンをまとめたものです。  
   
--   SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx)します。  
+-   SharePoint 2013 のブラウザー サポートの詳細については、次を参照してください。 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)(https://technet.microsoft.com/library/cc263526(office.15).aspx) します。  
   
 |**ブラウザー**|**Windows 8 および 8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -191,9 +191,9 @@ ms.locfileid: "63266822"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```
   
- Internet Explorer の互換モードの詳細については、次を参照してください。[ドキュメント互換性の定義](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380)します。  
+ Internet Explorer の互換モードの詳細については、次を参照してください。[ドキュメント互換性の定義](https://go.microsoft.com/fwlink/?LinkId=180380)(https://go.microsoft.com/fwlink/?LinkId=180380) します。  
   
- ReportViewer コントロールの使用の詳細については、次を参照してください。[展開レポートと ReportViewer コントロール](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx)します。  
+ ReportViewer コントロールの使用の詳細については、次を参照してください。[展開レポートと ReportViewer コントロール](https://msdn.microsoft.com/library/ms251723.aspx)(https://msdn.microsoft.com/library/ms251723.aspx) します。  
   
 ## <a name="next-steps"></a>次の手順
 

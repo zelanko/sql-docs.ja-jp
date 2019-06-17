@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011666"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "66011666"
 |**bcp**|**-c**|により、 **bcp**ユーティリティが文字データを使用する<sup>。1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|データの一括インポート時に文字形式を使用します。|  
   
- <sup>1</sup>文字を読み込めません (**-c**) の旧バージョンと互換性のある形式にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントを使用して、 **-v**スイッチします。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
+ <sup>1</sup>文字を読み込めません ( **-c**) の旧バージョンと互換性のある形式にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントを使用して、 **-v**スイッチします。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
   
  詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   

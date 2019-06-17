@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 840f73d0732d0789d378c6f1bceb100c58e01bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625846"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>テスト ケースのレポートの表示 (SybaseToSQL)
@@ -45,7 +45,7 @@ ms.locfileid: "62625846"
 **終了処理**  
 としての実行の状態を表示**成功**または**エラー**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースを実行している&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

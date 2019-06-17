@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061604"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>[Analysis Services DDL 実行タスク エディター] ([DDL] ページ)
@@ -28,7 +28,7 @@ ms.locfileid: "66061604"
   
 ## <a name="static-options"></a>静的オプション  
  **Connection**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧で選択するか、\<**[新しい接続...]**> をクリックして **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧で選択するか、\< **[新しい接続...]** > をクリックして **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
  **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  
   
@@ -49,13 +49,13 @@ ms.locfileid: "66061604"
   
 ### <a name="sourcetype--file-connection"></a>[SourceType] = [ファイル接続]  
  **Source**  
- 一覧でファイル接続を選択するか、\<**[新しい接続...]**> をクリックし、**[ファイル接続マネージャー]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ 一覧でファイル接続を選択するか、\< **[新しい接続...]** > をクリックし、 **[ファイル接続マネージャー]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>[SourceType] = [変数]  
  **Source**  
- 一覧で変数を選択するか、\<**[新しい変数...]**> をクリックし、**[変数の追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ 一覧で変数を選択するか、\< **[新しい変数...]** > をクリックし、 **[変数の追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   

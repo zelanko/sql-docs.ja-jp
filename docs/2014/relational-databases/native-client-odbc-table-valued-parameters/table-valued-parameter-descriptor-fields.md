@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63228963"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>テーブル値パラメーターの記述子フィールド
@@ -50,7 +50,7 @@ ms.locfileid: "63228963"
   
  SQL_CA_SS_TYPE_CATALOG_NAME および SQL_CA_SS_TYPE_SCHEMA_NAME を使用すると、CLR ユーザー定義型パラメーターに関連付けられたカタログとスキーマも取得できます。 これらは、CLR ユーザー定義型の既存の型固有のカタログ スキーマの属性の代わりに使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル値パラメーター &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

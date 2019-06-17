@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127832"
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
@@ -37,7 +37,7 @@ SET COLLATE TO cSequenceName
 |および|[言語]|  
 |-------------|--------------|  
 |オランダ語|オランダ語|  
-|[全般]|英語、フランス語、ドイツ語、最新のスペイン語、ポルトガル語、およびその他の西ヨーロッパ言語|  
+|GENERAL|英語、フランス語、ドイツ語、最新のスペイン語、ポルトガル語、およびその他の西ヨーロッパ言語|  
 |ドイツ語|ドイツの電話帳順序 (DIN)|  
 |アイスランド|アイスランド語|  
 |マシン|マシン (以前のバージョンの FoxPro の既定の照合順序)|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077970"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>データの手動処理 (SSAS テーブル)
@@ -61,7 +61,7 @@ ms.locfileid: "66077970"
 3.  [パーティション] リストで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
 ##  <a name="bkmk_data_process_progress"></a> データ処理の進行状況  
- **[データ処理の進行状況]** ダイアログ ボックスを使用すると、外部ソースからモデルにインポートしたデータの処理を監視できます。 このダイアログ ボックスにアクセスするには、 **[モデル]** メニューの **[パーティションの処理]**、 **[テーブルの処理]** 、または **[すべて処理]** をクリックします。  
+ **[データ処理の進行状況]** ダイアログ ボックスを使用すると、外部ソースからモデルにインポートしたデータの処理を監視できます。 このダイアログ ボックスにアクセスするには、 **[モデル]** メニューの **[パーティションの処理]** 、 **[テーブルの処理]** 、または **[すべて処理]** をクリックします。  
   
  **ステータス**  
  処理の操作が正常に行われたかどうかを示します。  

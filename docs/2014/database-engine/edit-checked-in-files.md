@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779606"
 ---
 # <a name="edit-checked-in-files"></a>チェックインされているファイルの編集
@@ -33,7 +33,7 @@ ms.locfileid: "62779606"
   
 3.  をクリックして**チェックイン項目の編集を許可する**、順にクリックします**OK**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チェックインを管理します。](../../2014/database-engine/manage-checkins.md)   
  [チェックアウトの管理](../../2014/database-engine/manage-checkouts.md)  
   

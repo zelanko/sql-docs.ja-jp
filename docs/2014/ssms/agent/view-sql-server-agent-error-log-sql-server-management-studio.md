@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245605"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server エージェントのエラー ログの表示 (SQL Server Management Studio)
@@ -70,7 +70,7 @@ ms.locfileid: "63245605"
   
 4.  表示するエラー ログを右クリックし、 **[エージェント ログの表示]** を選択します。  
   
-     **[ログ ファイルの表示 -**_サーバー名_] ダイアログ ボックスでは、次のオプションを使用できます。  
+     **[ログ ファイルの表示 -** _サーバー名_] ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **[ログの読み込み]**  
      読み込むログ ファイルを指定できるダイアログ ボックスが開きます。  

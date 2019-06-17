@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273160"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>データ ソースの作成 (基本的なデータ マイニング チュートリアル)
@@ -46,7 +46,7 @@ ms.locfileid: "63273160"
   
 8.  **[次へ]** をクリックします。  
   
-9. **権限借用情報**] ページで [**サービス アカウントを使用して、**、順にクリックします **[次へ]** します。  
+9. **権限借用情報**] ページで [**サービス アカウントを使用して、** 、順にクリックします **[次へ]** します。  
   
      **ウィザードの完了** ページで、既定では、データ ソースがという名前の Adventure Works DW 2012 に注意してください。  
   

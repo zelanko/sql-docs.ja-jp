@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266574"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
@@ -70,9 +70,9 @@ ms.locfileid: "63266574"
 ### <a name="enabling-partition-switching"></a>パーティション切り替えの有効化  
  トランザクション パブリケーションの次のプロパティを使用すると、レプリケーション環境でのパーティション切り替えの動作を制御できます。  
   
--   **@allow_partition_switch**、に設定すると`true`、パブリケーション データベースに対して SWITCH PARTITION を実行することができます。  
+-   **@allow_partition_switch** 、に設定すると`true`、パブリケーション データベースに対して SWITCH PARTITION を実行することができます。  
   
--   **@replicate_partition_switch** は、SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートするかどうかを決定します。 このオプションは、有効な場合にのみ**@allow_partition_switch**に設定されている`true`します。  
+-   **@replicate_partition_switch** は、SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートするかどうかを決定します。 このオプションは、有効な場合にのみ **@allow_partition_switch** に設定されている`true`します。  
   
  これらのプロパティは、パブリケーションの作成時に [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を使用するか、パブリケーションの作成後に [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を使用することによって設定できます。 既に述べたとおり、マージ レプリケーションではパーティション切り替えがサポートされません。 マージ レプリケーションが有効になっているテーブルで SWITCH PARTITION を実行するには、パブリケーションからテーブルを削除します。  
   

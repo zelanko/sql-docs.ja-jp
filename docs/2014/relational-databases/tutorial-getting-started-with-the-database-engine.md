@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524335"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>チュートリアル:データベース エンジンの概要
@@ -44,7 +44,7 @@ ms.locfileid: "62524335"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]をインストールしたユーザーを対象にしています。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行してインストールできます。または、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=144346)からダウンロードしてインストールできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [チュートリアル:SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

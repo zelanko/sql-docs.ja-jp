@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056826"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>パッケージ インストール ウィザードの UI リファレンス
@@ -56,7 +56,7 @@ ms.locfileid: "66056826"
  **[構成ファイル]**  
  一覧からファイルを選択して、構成ファイルの内容を編集します。  
   
- **関連項目:**[パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)  
+ **関連項目:** [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)  
   
  **[パス]**  
  構成するプロパティのパスを表示します。  
@@ -168,7 +168,7 @@ ms.locfileid: "66056826"
  **完了**  
  **[完了]** をクリックすると、ウィザードが終了します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bcadc041fd1f2c4fd708fbc79ab52d0c0472956
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479577"
 ---
 # <a name="delete-an-entity-master-data-services"></a>エンティティを削除する (マスター データ サービス)
@@ -49,7 +49,7 @@ ms.locfileid: "65479577"
   
 7.  追加の確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)   
  [エンティティを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-entity-master-data-services.md)  
   

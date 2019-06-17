@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2888f34c1e4c4103845d07e569a0dbabeb2e4caa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63225542"
 ---
 # <a name="bulk-copy-functions"></a>一括コピー関数
@@ -67,7 +67,7 @@ ms.locfileid: "63225542"
   
 -   [bcp_writefmt](bcp-writefmt.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server ドライバーの拡張機能](../../database-engine/dev-guide/sql-server-driver-extensions.md)   
  [一括コピー操作を実行する&#40;ODBC&#41;](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   

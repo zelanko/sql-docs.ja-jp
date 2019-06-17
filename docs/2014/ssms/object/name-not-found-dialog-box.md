@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62999551"
 ---
 # <a name="name-not-found-dialog-box"></a>[名前が見つかりません] ダイアログ ボックス
@@ -26,7 +26,7 @@ ms.locfileid: "62999551"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[この情報を訂正して再検索する]**  
- 選択すると、 **[このオブジェクトの種類を選択してください]**、 **[オブジェクトの種類]**、および **[オブジェクト名を入力してください]** 領域が利用可能になります。  
+ 選択すると、 **[このオブジェクトの種類を選択してください]** 、 **[オブジェクトの種類]** 、および **[オブジェクト名を入力してください]** 領域が利用可能になります。  
   
  **[このオブジェクトの種類を選択してください]**  
  **[オブジェクトの種類]** ボタンを使用して選択されたオブジェクトの種類を表示します。  

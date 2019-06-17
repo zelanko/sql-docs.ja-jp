@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
 ms.openlocfilehash: 11441e0866904742985c55d535e8398802b206fa
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775044"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
@@ -178,7 +178,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 テキスト ボックスに日付または数値のみが含まれる場合の代わりに書式設定を適用するテキスト ボックスの Format プロパティを使用する必要があります、`Format`テキスト ボックス内の関数。  
 
--   `Right`、 `Len`、および`InStr`関数は、サブストなどを返すに便利*ドメイン*\\*username*ユーザー名だけです。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (*) より右側の部分のみが返されます。  
+-   `Right`、 `Len`、および`InStr`関数は、サブストなどを返すに便利*ドメイン*\\*username*ユーザー名だけです。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (* ) より右側の部分のみが返されます。  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -524,7 +524,7 @@ End Function
 
 実行時例外の発生はこのようにして防ぐことができます。 テキスト ボックスの `Color` プロパティで `=IIF(Me.Value < 0, "red", "black")` のような式を使用し、その値が 0 より大きいか小さいかの条件に基づいて、テキストを表示できるようになりました。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)
 - [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)

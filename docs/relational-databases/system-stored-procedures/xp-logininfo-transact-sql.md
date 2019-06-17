@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099958"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (TRANSACT-SQL)
@@ -44,10 +44,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="arguments"></a>引数  
 `[ @acctname = ] 'account_name'` Windows ユーザーまたはグループへのアクセス許可の名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 *account_name*は**sysname**、既定値は NULL です。 場合*account_name*が指定されていない、すべての Windows グループと明示的に設定されている Windows ユーザー ログイン権限が与え報告されます。 *account_name*完全修飾である必要があります。 たとえば、advwks4、または「builtin \administrators'。  
   
- **'all'** | **'members'**  
- アカウントの場合、または Windows グループのメンバーに関する情報を報告するすべての権限のパスに関する情報を報告するかどうかを指定します。 **@option** **varchar (10)**、既定値は NULL です。 しない限り、**すべて**を指定すると、最初の権限のパスのみが表示されます。  
+ **'all'**  |  **'members'**  
+ アカウントの場合、または Windows グループのメンバーに関する情報を報告するすべての権限のパスに関する情報を報告するかどうかを指定します。 **@option** **varchar (10)** 、既定値は NULL です。 しない限り、**すべて**を指定すると、最初の権限のパスのみが表示されます。  
   
-`[ @privilege = ] variable_name` 指定された Windows アカウントの特権レベルが返す出力パラメーターです。 *variable_name*は**varchar (10)**、既定値は 'Not wanted' です。 特権レベルが返される**ユーザー**、**管理者**、または**null**します。  
+`[ @privilege = ] variable_name` 指定された Windows アカウントの特権レベルが返す出力パラメーターです。 *variable_name*は**varchar (10)** 、既定値は 'Not wanted' です。 特権レベルが返される**ユーザー**、**管理者**、または**null**します。  
   
  OUTPUT  
  指定した場合、配置*variable_name*出力パラメーター。  
@@ -86,7 +86,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

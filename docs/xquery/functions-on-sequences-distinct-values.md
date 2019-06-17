@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 48b338416b7bd464a69c424354f4029c719fef33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62939095"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>シーケンスの関数 - distinct-values
@@ -94,7 +94,7 @@ select @x.query('
   
 -   照合順序を指定する構文オプションはサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

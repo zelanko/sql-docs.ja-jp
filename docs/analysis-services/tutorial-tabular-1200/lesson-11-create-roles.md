@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6ba289eed3e700034ed73d3f45ca3e0d963e385
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404484"
 ---
 # <a name="lesson-11-create-roles"></a>レッスン 11:ロールの作成
@@ -72,7 +72,7 @@ ms.locfileid: "65404484"
     行フィルター式は、ブール値 (TRUE/FALSE) に解決される必要があります。 この数式では、「米国」Country Region Code 値を持つ行のみがユーザーに表示されることを指定します。  
     ![as-tabular-lesson11-role-filter](media/as-tabular-lesson11-role-filter.png) 
   
-6.  省略可能:**[メンバー]** タブをクリックし、 **[追加]** をクリックします。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。  
+6.  省略可能: **[メンバー]** タブをクリックし、 **[追加]** をクリックします。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。  
   
 #### <a name="to-create-an-administrator-user-role"></a>管理者ユーザー ロールを作成するには  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65404484"
   
 3.  このロールを付与**管理者**権限。  
   
-4.  省略可能:**[メンバー]** タブをクリックし、 **[追加]** をクリックします。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。 
+4.  省略可能: **[メンバー]** タブをクリックし、 **[追加]** をクリックします。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。 
   
   
 ## <a name="whats-next"></a>次の操作

@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12d93e72a3b7dabc05a6b34e4c671a8ce1da028e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090399"
 ---
 # <a name="manage-code-formatting"></a>コードの書式設定の管理
@@ -53,7 +53,7 @@ ms.locfileid: "66090399"
   
     -   **None**。 カーソルは次の行の先頭に移動します。  
   
-    -   **[ブロック]**。 次行のインデントは前行に合わせて設定されます。  
+    -   **[ブロック]** 。 次行のインデントは前行に合わせて設定されます。  
   
     -   **[スマート]** (既定)。 適切なインデント スタイルが言語サービスによって決定されます。  
   

@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035421"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
@@ -123,7 +123,7 @@ ms.locfileid: "63035421"
   
  1 = NTFS 圧縮を使用します。  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  診断データの収集を開始する日時は、  
   
  YYYYMMDD_HH:MM:SS の形式で指定します。  
@@ -138,7 +138,7 @@ ms.locfileid: "63035421"
   
  **SQLdiag** は、ユーティリティが実行されているコンピューター上のローカル時間を使用することに注意してください。  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  診断データの収集を停止する日時は、  
   
  YYYYMMDD_HH:MM:SS の形式で指定します。  
@@ -158,7 +158,7 @@ ms.locfileid: "63035421"
   
  *SQLdiag_application_name* を使用すると、 **SQLdiag** サービスの特定のインスタンスを開始または停止できます。  
   
- 以下に例を示します。  
+ 例 :  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
@@ -221,11 +221,11 @@ ms.locfileid: "63035421"
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** サービスを開始または停止します。 **STOP_ABORT** は、現在実行されている診断収集が終了していなくても、できるだけ早く強制的にサービスをシャットダウンします。  
   
- このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 以下に例を示します。  
+ このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 例 :  
   
  **SQLDIAG START**  
   
- **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 以下に例を示します。  
+ **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例 :  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
@@ -365,7 +365,7 @@ SQLDIAG START /A Instance1
 > [!NOTE]  
 >  クラスター化された [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] インスタンスから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] トレース情報を収集するには、管理共有 (ADMIN$) をクラスター上で有効にする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

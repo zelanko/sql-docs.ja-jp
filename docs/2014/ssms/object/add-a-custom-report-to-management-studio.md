@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62510426"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>Management Studio へのカスタム レポートの追加
@@ -25,7 +25,7 @@ ms.locfileid: "62510426"
   
 ### <a name="to-create-a-simple-report-saved-as-an-rdl-file"></a>簡単なレポートを作成し、.rdl ファイルとして保存するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server データ ツール]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server データ ツール]** をクリックします。  
   
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62510426"
   
     2.  **[最近使用したファイルの一覧]** の数を調整します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Management Studio におけるカスタム レポート](custom-reports-in-management-studio.md)   
  [オブジェクト エクスプ ローラー ノード プロパティを持つカスタム レポートを使用します。](use-custom-reports-with-object-explorer-node-properties.md)   
  [カスタム レポート実行の警告を抑制します。](unsuppress-run-custom-report-warnings.md)   

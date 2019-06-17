@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918192"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
   ウィザードまたは PowerShell スクリプトを使用して、データ層アプリケーション (DAC) パッケージから[!INCLUDE[ssDE](../../includes/ssde-md.md)]または [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の既存のインスタンスに DAC を配置できます。 配置プロセスでは、 **msdb** システム データベース (**では** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース) に DAC 定義を格納することで DAC インスタンスを登録し、データベースを作成して、DAC で定義されたすべてのデータベース オブジェクトをそのデータベースに設定します。  
   
--   **作業を開始する準備:**[SQL Server ユーティリティ](#SQLUtility)、[オプションと設定をデータベース](#DBOptSettings)、[事項と制約事項](#LimitationsRestrictions)、[の前提条件](#Prerequisites)、[セキュリティ](#Security)、[アクセス許可](#Permissions)  
+-   **作業を開始する準備:** [SQL Server ユーティリティ](#SQLUtility)、[オプションと設定をデータベース](#DBOptSettings)、[事項と制約事項](#LimitationsRestrictions)、[の前提条件](#Prerequisites)、[セキュリティ](#Security)、[アクセス許可](#Permissions)  
   
--   **DAC の配置に使用します。**[データ層アプリケーションのウィザードの展開](#UsingDeployDACWizard)、 [PowerShell](#DeployDACPowerShell)  
+-   **DAC の配置に使用します。** [データ層アプリケーションのウィザードの展開](#UsingDeployDACWizard)、 [PowerShell](#DeployDACPowerShell)  
   
 ##  <a name="BeforeBegin"></a> はじめに  
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
@@ -68,7 +68,7 @@ ms.locfileid: "62918192"
   
 1.  **オブジェクト エクスプローラー**で、DAC を配置するインスタンスのノードを展開します。  
   
-2.  **[データベース]** ノードを右クリックし、**[データ層アプリケーションの配置]** をクリックします。  
+2.  **[データベース]** ノードを右クリックし、 **[データ層アプリケーションの配置]** をクリックします。  
   
 3.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "62918192"
   
  **[次回からこのページを表示しない]** : 今後このページを表示しないようにするには、このチェック ボックスをオンにします。  
   
- **[次へ >]**: **[DAC パッケージの選択]** ページに進みます。  
+ **[次へ >]** : **[DAC パッケージの選択]** ページに進みます。  
   
- **[キャンセル]**: DAC を配置せずにウィザードを終了します。  
+ **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
 ##  <a name="Select_dac_package"></a> DAC パッケージ ページを選択します。  
  このページでは、配置するデータ層アプリケーションを含む DAC パッケージを指定できます。 このページは、3 つの状態を遷移します。  
@@ -120,7 +120,7 @@ ms.locfileid: "62918192"
   
  **\< 以前**-の初期状態に戻り、**パッケージの選択**ページ。  
   
- **[次へ >]**: **[パッケージの選択]** ページの最終状態に進みます。  
+ **[次へ >]** : **[パッケージの選択]** ページの最終状態に進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62918192"
   
  **\< 以前**-を返します、**パッケージの選択**ページ。  
   
- **[次へ >]**: **[構成の更新]** ページに進みます。  
+ **[次へ >]** : **[構成の更新]** ページに進みます。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62918192"
   
  **\< 以前**-に戻り、**更新の構成**ページの選択を変更します。  
   
- **[次へ >]**: DAC を配置し、**[DAC の配置]** ページに結果を表示します。  
+ **[次へ >]** : DAC を配置し、 **[DAC の配置]** ページに結果を表示します。  
   
  **[キャンセル]** : DAC を配置せずにウィザードを終了します。  
   

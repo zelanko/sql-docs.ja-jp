@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62672072"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能
@@ -76,7 +76,7 @@ ms.locfileid: "62672072"
 ## <a name="change-data-capture-and-alwayson"></a>変更データ キャプチャと AlwaysON  
  AlwaysON を使用する場合、セカンダリ レプリケーションに対して変更の列挙を行うことにより、プライマリへのディスク負荷を減らす必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更データ キャプチャの管理と監視 &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

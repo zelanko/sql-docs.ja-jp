@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d15b7ca5ed84f2cc828696c6a7fe8b8771e8a374
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781048"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo (OLE DB)
@@ -26,11 +26,11 @@ ms.locfileid: "62781048"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|メソッド|説明|  
+|方法|説明|  
 |------------|-----------------|  
 |[Isqlservererrorinfo::geterrorinfo &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの詳細情報を保持している、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの SSERRORINFO 構造体へのポインターを返します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インターフェイス&#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/interfaces-ole-db.md)   
  [SQL Server エラーの詳細](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
   

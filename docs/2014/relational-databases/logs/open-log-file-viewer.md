@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144498"
 ---
 # <a name="open-log-file-viewer"></a>[ログ ファイルの表示] を開く
@@ -88,13 +88,13 @@ ms.locfileid: "63144498"
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>監査コレクションに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで、 **[セキュリティ]**、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
+-   オブジェクト エクスプローラーで、 **[セキュリティ]** 、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
   
      ログには、 **監査コレクション** と **Windows NT**が含まれます。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>監査コレクションに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで、 **[セキュリティ]**、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
+-   オブジェクト エクスプローラーで、 **[セキュリティ]** 、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
   
      ログには、 **監査コレクション** と **Windows NT**が含まれます。  
   

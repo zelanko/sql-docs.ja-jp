@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251448"
 ---
 # <a name="working-with-empty-values"></a>空の値の操作
@@ -143,7 +143,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  

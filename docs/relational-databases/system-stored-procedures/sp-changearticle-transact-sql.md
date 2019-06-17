@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997951"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -59,7 +59,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**creation_script**||パスと対象テーブルの作成に使用されるアーティクル スキーマ スクリプトの名前。 既定値は NULL です。|  
 |**del_cmd**||実行する DELETE ステートメントです。指定しないと、ログから作成されます。|  
 |**description**||アーティクルの新しい説明エントリします。|  
-|**dest_object**||旧バージョンとの互換性のために用意されています。 使用**dest_table**します。|  
+|**dest_object**||これは旧バージョンとの互換性のために用意されています。 使用**dest_table**します。|  
 |**dest_table**||新しい変換先テーブルです。|  
 |**destination_owner**||対象オブジェクトの所有者の名前です。|  
 |**フィルター (filter)**||テーブルをフィルターによって選択 (行方向のフィルター選択) するために使用される新しいストアド プロシージャです。 既定値は NULL です。 ピア ツー ピア レプリケーションのパブリケーションに対しては変更できません。|  
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|インデックスをレプリケート**xml**列。|  
 ||**0x8000000**|サブスクライバーにまだ存在しないスキーマを作成します。|  
 ||**0x10000000**|変換します**xml**列**ntext**サブスクライバーにします。|  
-||**0x20000000**|変換の大きなオブジェクトのデータ型 (**nvarchar (max)**、 **varchar (max)**、および**varbinary (max)**) で導入された[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]はサポートされているデータ型に[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。|  
+||**0x20000000**|変換の大きなオブジェクトのデータ型 (**nvarchar (max)** 、 **varchar (max)** 、および**varbinary (max)** ) で導入された[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]はサポートされているデータ型に[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。|  
 ||**0x40000000**|アクセス許可をレプリケートします。|  
 ||**0x80000000**|パブリケーションの一部ではない任意のオブジェクトに対する依存関係を削除しようとしてください。|  
 ||**0x100000000**|このオプションを使用して、指定されている場合は、FILESTREAM 属性をレプリケートする**varbinary (max)** 列。 テーブルをレプリケートする場合は、このオプションを指定しない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]サブスクライバー。 FILESTREAM 列を持つテーブルをレプリケート[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サブスクライバーがサポートされていません、このスキーマ オプションを設定する方法に関係なく、します。<br /><br /> 関連するオプションを参照してください。 **0x800000000**します。|  

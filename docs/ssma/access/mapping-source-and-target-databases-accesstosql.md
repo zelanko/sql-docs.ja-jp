@@ -19,17 +19,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299197"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>ソースとターゲット データベース (AccessToSQL) のマッピング
 接続すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の移行のターゲット データベースを指定する必要があります。 複数データベースにアクセスした場合も複数とそれらにマップできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース (またはスキーマ) または接続されている SQL Azure データベースで複数のスキーマにします。  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server または SQL Azure データベースのスキーマ  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分割します。 たとえば、ライブラリのデータベースでという名前の 3 つのスキーマを使用して**ブックの「**、**オーディオ**、および**ビデオ**から他の書籍オーディオ、およびビデオのオブジェクトを分離しますします。 既定では、access データベースにマップされて**マスター**データベースと**dbo**でスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続されているデータベースと**dbo** SQL Azure でのスキーマ。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分割します。 たとえば、ライブラリのデータベースでという名前の 3 つのスキーマを使用して**ブックの「** 、**オーディオ**、および**ビデオ**から他の書籍オーディオ、およびビデオのオブジェクトを分離しますします。 既定では、access データベースにマップされて**マスター**データベースと**dbo**でスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続されているデータベースと**dbo** SQL Azure でのスキーマ。  
   
 各アクセス データベースの間のマッピングをカスタマイズしない限り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースおよびスキーマを SSMA は、すべてのスキーマとマップされている既定のデータベースに access データベースに関連付けられているデータが移行されます。  
   
@@ -70,6 +70,6 @@ Access データベースの間のマッピングをカスタマイズする場�
 ## <a name="next-step"></a>次の手順  
 移行プロセスでは、次の手順は[データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184297"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>イベントの終了時刻に基づいたフィルターでのイベントの選択 (SQL Server Profiler)
@@ -44,7 +44,7 @@ ms.locfileid: "63184297"
   
 6.  展開**より大きい**または**未満**、入力と、`datetime`比較演算子の下に表示されるフィールドの値。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[SQL Server Profiler]](sql-server-profiler.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

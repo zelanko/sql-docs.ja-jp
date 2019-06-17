@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105530"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66105530"
 |式でサポート|ReportItems の集計|データセットの集計 (スコープがデータセット名であること)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
 |レポート本文のテキスト ボックス|はい|いいえ|  
-|&PageNumber|[はい]|いいえ|  
+|&PageNumber|はい|いいえ|  
 |&TotalPages|はい|いいえ|  
 |集計関数|可能。 例を次に示します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|可能。 例を次に示します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |ページ上のアイテムのフィールド コレクション|間接的。 例を次に示します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例を次に示します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
@@ -126,7 +126,7 @@ ms.locfileid: "66105530"
   
  詳細については、「 [Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)で操作できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートへの画像の埋め込み (レポート ビルダーおよび SSRS)](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [四角形と線 (レポート ビルダーおよび SSRS)](rectangles-and-lines-report-builder-and-ssrs.md)  
   

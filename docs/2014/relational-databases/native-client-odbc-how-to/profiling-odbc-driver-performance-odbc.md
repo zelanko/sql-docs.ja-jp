@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200285"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>ODBC ドライバーのパフォーマンスをプロファイルする方法に関するトピック (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "63200285"
   
 -   [ログ クエリの実行時間の長い&#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の使用法に関するトピック](odbc-how-to-topics.md)  
   
   

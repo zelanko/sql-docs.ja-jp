@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072850"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
@@ -122,7 +122,7 @@ ms.locfileid: "66072850"
      **[サイズ (MB)]**  
      パーティションのサイズ (MB) が表示されます。  
   
-5.  必要に応じて、リモート パーティションの場所を変更します。**[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
+5.  必要に応じて、リモート パーティションの場所を変更します。 **[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
   
     > [!NOTE]  
     >  このページは、同期元の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの指定されたデータベースによって 1 つ以上のリモート パーティションが管理されている場合にのみ表示されます。  

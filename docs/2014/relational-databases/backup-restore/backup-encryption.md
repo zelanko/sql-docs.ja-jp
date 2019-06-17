@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922173"
 ---
 # <a name="backup-encryption"></a>バックアップの暗号化
@@ -86,9 +86,9 @@ ms.locfileid: "62922173"
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用  
  次のいずれかのダイアログ ボックスを使用して、データベース バックアップの作成時にバックアップを暗号化することができます。  
   
-1.  [データベースのバックアップ &#40;[バックアップ オプション] ページ&#41;](back-up-database-backup-options-page.md): **[バックアップ オプション]** ページで、**[暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書または非対称キーを指定します。  
+1.  [データベースのバックアップ &#40;[バックアップ オプション] ページ&#41;](back-up-database-backup-options-page.md): **[バックアップ オプション]** ページで、 **[暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書または非対称キーを指定します。  
   
-2.  [メンテナンス プラン ウィザードの使用](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure): **[データベースのバックアップ () タスクの定義]** ページの **[オプション]** タブでバックアップ タスクを選択する場合は、**[バックアップの暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書またはキーを指定することができます。  
+2.  [メンテナンス プラン ウィザードの使用](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure): **[データベースのバックアップ () タスクの定義]** ページの **[オプション]** タブでバックアップ タスクを選択する場合は、 **[バックアップの暗号化]** を選択し、暗号化に使用する暗号化アルゴリズムと証明書またはキーを指定することができます。  
   
 ### <a name="using-transact-sql"></a>Transact-SQL の使用  
  バックアップ ファイルを暗号化するためのサンプル Transact-SQL ステートメントを次に示します。  

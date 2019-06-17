@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679467"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>マイニング モデルのコピーの作成
@@ -32,7 +32,7 @@ ms.locfileid: "62679467"
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     - または -  
+     \- または -  
   
      モデルを選択します。 **[マイニング モデル]** メニューの **[新しいマイニング モデル]** をクリックします。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62679467"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデルのフィルター (Analysis Services - データ マイニング)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [マイニング モデルからのフィルターの削除](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  

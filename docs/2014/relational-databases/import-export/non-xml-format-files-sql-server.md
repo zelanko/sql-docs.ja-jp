@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011880"
 ---
 # <a name="non-xml-format-files-sql-server"></a>XML 以外のフォーマット ファイル (SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "66011880"
   
 |フォーマット ファイル フィールド|説明|  
 |------------------------|-----------------|  
-|バージョン|このバージョン番号は **ではなく**bcp [!INCLUDE[tsql](../../includes/tsql-md.md)]だけで認識されます。 **bcp** ユーティリティのバージョン番号です。次の値があります。<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注:バージョン、 **bcp**と、同じまたはそれ以降のバージョンを使用しているフォーマット ファイルの作成に使用されたフォーマット ファイルの読み取りに使用されるユーティリティ (Bcp.exe) 必要があります。 たとえば、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] の **bcp** によって生成されるバージョン 12.0 のフォーマット ファイルを読み取ることができません。|  
+|バージョン|このバージョン番号は **ではなく**bcp [!INCLUDE[tsql](../../includes/tsql-md.md)]だけで認識されます。 **bcp** ユーティリティのバージョン番号です。次の値があります。<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注:フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] の **bcp** によって生成されるバージョン 12.0 のフォーマット ファイルを読み取ることができません。|  
 |列の数|データ ファイルのフィールドの数。 この数は、すべての行で同じである必要があります。|  
   
  他のフォーマット ファイル フィールドには、一括インポートまたは一括エクスポートされるデータ フィールドが記述されます。 各データ フィールドは、フォーマット ファイル内に個別の行を必要とします。 フォーマット ファイルの各行には、次の表で示すフォーマット ファイル フィールドの値が含まれます。  

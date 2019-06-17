@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241203"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML データの取得および XML データに対するクエリの実行
@@ -27,7 +27,7 @@ ms.locfileid: "63241203"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XML インスタンスの内容は保持されますが、XML データ モデルで重要と見なされない側面は保持されません。 つまり、取得した XML インスタンスは、サーバーに格納されたインスタンスと同一とは限りませんが、含まれている情報は同じです。  
   
 ### <a name="xml-declaration"></a>XML 宣言  
- インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 以下に例を示します。  
+ インスタンスをデータベースに格納する場合は、そのインスタンスの XML 宣言は保持されません。 例 :  
   
 ```  
 CREATE TABLE T1 (Col1 int primary key, Col2 xml)  
@@ -79,7 +79,7 @@ SELECT @x.query('/*')
 GO  
 ```  
   
- 結果の名前空間プレフィックスは、異なる可能性があります。 以下に例を示します。  
+ 結果の名前空間プレフィックスは、異なる可能性があります。 例 :  
   
 ```  
 <p1:root xmlns:p1="abc"><p1:SomeElement/></p1:root>  

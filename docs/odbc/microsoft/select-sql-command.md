@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127876"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL コマンド
@@ -281,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>ドライバーの解説  
  アプリケーションでは、ODBC SQL ステートメント を選択をデータ ソースに送信するときに Visual FoxPro ODBC ドライバーは、コマンドには、ODBC エスケープ シーケンスが含まれていない場合、翻訳しないで Visual FoxPro 選択コマンドにコマンドを変換します。 ODBC エスケープ シーケンスで囲まれた項目は、Visual FoxPro 構文に変換されます。 ODBC を使用しての詳細については、エスケープ シーケンスは、「[時刻および日付関数](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)し、 *Microsoft ODBC プログラマ リファレンス*、を参照してください[odbc エスケープ シーケンス](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE TABLE - SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [セットの ANSI](../../odbc/microsoft/set-ansi-command.md)   

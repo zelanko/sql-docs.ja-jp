@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083114"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
@@ -145,7 +145,7 @@ FROM
   
  階層的な行セットを処理できないプロバイダーを使用している場合は、予測クエリ内で FLATTEN キーワードを使用して結果をフラット化することができます。 フラットな行セットの例などの詳細については、「[SELECT &#40;DMX&#41;](/sql/dmx/select-dmx)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテンツ クエリ &#40;データ マイニング&#41;](content-queries-data-mining.md)   
  [データ定義クエリ &#40;データ マイニング&#41;](data-definition-queries-data-mining.md)  
   

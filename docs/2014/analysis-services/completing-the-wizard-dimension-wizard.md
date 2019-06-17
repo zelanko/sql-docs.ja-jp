@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087596"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>[ウィザードの完了] (ディメンション ウィザード)
@@ -43,7 +43,7 @@ ms.locfileid: "66087596"
  選択すると、ディメンションをサポートするために必要なスキーマを生成します。 このオプションを選択すると、スキーマ生成ウィザードが開きます。  
   
 > [!NOTE]  
->  このオプションは、**[作成方法の選択]** ページで **[データ ソースに時間テーブルを生成]** または **[データ ソースに時間テーブル以外のテーブルを生成]** をクリックした場合にのみ表示されます。 詳細については、「[[作成方法の選択] (ディメンション ウィザード)](select-creation-method-dimension-wizard.md)」を参照してください。  
+>  このオプションは、 **[作成方法の選択]** ページで **[データ ソースに時間テーブルを生成]** または **[データ ソースに時間テーブル以外のテーブルを生成]** をクリックした場合にのみ表示されます。 詳細については、「[[作成方法の選択] (ディメンション ウィザード)](select-creation-method-dimension-wizard.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   

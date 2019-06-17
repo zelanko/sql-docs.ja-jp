@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7204d2f20c7c299a2bcefcc66409182c8846affc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755444"
 ---
 # <a name="sql-writer-service"></a>SQL ライター サービス
@@ -49,7 +49,7 @@ ms.locfileid: "62755444"
 ## <a name="permissions"></a>アクセス許可  
  SQL ライター サービスは、 **ローカル システム** アカウントで実行する必要があります。 SQL ライター サービスは、 **に接続するために** NT Service\SQLWriter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを使用します。 **NT Service\SQLWriter** ログインを使用すると、SQL ライター プロセスは **ログインなし**と指定されたアカウントを通じた低い特権レベルで実行され、その結果、脆弱性を制限することになります。 SQL ライター サービスが無効になっている場合は、System Center Data Protection Manager や他のいくつかのサード パーティ製品のように VSS スナップショットに依存する任意のユーティリティは動作に失敗するか、より悪い場合は、一貫性のないデータベースのバックアップを取得するリスクが生じます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行するシステムと、ホスト システム (仮想マシンの場合) のどちらも、 [!INCLUDE[tsql](../../includes/tsql-md.md)] によるバックアップのみを必要とし、それ以外のバックアップを何も必要としない場合は、SQL ライター サービスを無効にしてログインを削除しても安全です。  バックアップが直接的なスナップショット ベースであるかどうかにかかわりなく、SQL ライター サービスはシステム レベルとボリューム レベルどちらのバックアップからも開始できることに注意してください。 いくつかのシステム バックアップ製品は、開いているファイルやロックされているファイルがブロックされることを防止するために VSS を使用します。 SQL ライター サービスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのすべての I/O を短時間にわたって停止するため、自らが動作する目的で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内で昇格された権限を必要とします。  
   
-## <a name="features"></a>機能  
+## <a name="features"></a>機能のインストール  
  SQL ライターは次の機能をサポートしています。  
   
 -   フルテキスト カタログなど、データベースの完全バックアップおよび復元  

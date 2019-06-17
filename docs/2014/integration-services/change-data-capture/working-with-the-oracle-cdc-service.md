@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771182"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service の使用
@@ -94,7 +94,7 @@ ms.locfileid: "62771182"
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる Oracle データベースの名前。|  
 |config_version|対応する CDC データベースの **xdbcdc_config** テーブルで行われた最後の変更のタイムスタンプ (UTC)、またはこのテーブルの現在の行のタイムスタンプ (UTC)。<br /><br /> UPDATE トリガーでは、このアイテムの GETUTCDATE() の値が適用されます。 CDC サービスでは**config_version** を使用して、構成の変更や有効化/無効化について確認する必要がある CDC インスタンスを識別できます。|  
 |cdc_service_name|選択された Oracle データベースを処理する Oracle CDC Service を示します。|  
-|enabled|Oracle CDC インスタンスがアクティブ (1) か無効 (0) かを示します。 Oracle CDC Service の起動時には、有効 (1) とマークされたインスタンスだけが開始されます。<br /><br /> **注意**:Oracle CDC インスタンスは、再試行できないエラーが原因で無効になることがあります。 この場合は、エラーを解決してからインスタンスを手動で再起動する必要があります。|  
+|enabled|Oracle CDC インスタンスがアクティブ (1) か無効 (0) かを示します。 Oracle CDC Service の起動時には、有効 (1) とマークされたインスタンスだけが開始されます。<br /><br /> **注**:Oracle CDC インスタンスは、再試行できないエラーが原因で無効になることがあります。 この場合は、エラーを解決してからインスタンスを手動で再起動する必要があります。|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  このテーブルには、ホスト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関連付けられている CDC サービスが表示されます。 このテーブルは、ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス用に構成された CDC サービスを特定するために CDC デザイナー コンソールで使用されます。 また、特定の Oracle CDC Service を処理している実行中の Windows サービスが 1 つだけであることを確認するために CDC サービスで使用されます。  
@@ -205,7 +205,7 @@ ms.locfileid: "62771182"
   
 ```  
   
- 各項目の意味は次のとおりです。  
+ 各要素の説明は次のとおりです。  
   
  **cdc-service-name** には、更新する CDC サービスの名前を指定します。 これは必須パラメーターです。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "62771182"
   
  **sql-username**と **sql-password** には、更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証資格情報を指定します。 sqlacct のユーザー名とパスワードをどちらも指定しなかった場合は、Windows 認証を使用して Oracle CDC Service から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続されます。  
   
- **注意**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
+ **注**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ###  <a name="BKMK_create"></a> 作成  
  `Create` は、Oracle CDC Service をスクリプトで作成する場合に使用します。 このコマンドを実行できるのはコンピューターの管理者だけです。 `Create` コマンドの例を次に示します。  
@@ -231,7 +231,7 @@ ms.locfileid: "62771182"
      [sqlacct <sql-username> <sql-password>]  
 ```  
   
- 各項目の意味は次のとおりです。  
+ 各要素の説明は次のとおりです。  
   
  **cdc-service-name** には、新しく作成するサービスの名前を指定します。 この名前のサービスが既にある場合、プログラムからエラーが返されます。 長い名前やスペースを含む名前は使用しないでください。 文字 "/" および "\\" は、サービス名には使用できません。 これは必須パラメーターです。  
   
@@ -243,7 +243,7 @@ ms.locfileid: "62771182"
   
  **sql-username**と **sql-password** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続に使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアカウント名とパスワードを指定します。 これらのどちらのパラメーターも指定しなかった場合は、Windows 認証を使用して CDC Service for Oracle から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続されます。  
   
- **注意**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
+ **注**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ###  <a name="BKMK_delete"></a> Del  
  `Delete` は、Oracle CDC Service をスクリプトで完全に削除する場合に使用します。 このコマンドを実行できるのはコンピューターの管理者だけです。 `Delete` コマンドの例を次に示します。  
@@ -254,11 +254,11 @@ ms.locfileid: "62771182"
   
 ```  
   
- 各項目の意味は次のとおりです。  
+ 各要素の説明は次のとおりです。  
   
  **cdc-service-name** には、削除する CDC サービスの名前を指定します。  
   
- **注意**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
+ **注**:スペースや二重引用符が含まれる場合は、パラメーターを二重引用符 (") で囲む必要があります。 また、二重引用符を埋め込む場合は、二重引用符を 2 つ入力する必要があります (たとえば、 **"A#B" D** というパスワードを使用する場合は **""A#B"" D"** と入力します)。  
   
 ## <a name="see-also"></a>関連項目  
  [CDC Service のコマンド ライン インターフェイスを使用する方法](how-to-use-the-cdc-service-command-line-interface.md)   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484660"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>タスク 2:Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする
@@ -34,9 +34,9 @@ ms.locfileid: "65484660"
   
     1.  選択**新しい接続を作成**、 をクリック**新規**ボタンをクリックします。  
   
-    2.  **新しい接続の追加**ダイアログ ボックスに「**ローカル MDS サーバー**の**説明**と**http://localhost/MDS**の**MDS サーバー アドレス**、 をクリック**OK**ダイアログ ボックスを閉じます。  
+    2.  **新しい接続の追加**ダイアログ ボックスに「**ローカル MDS サーバー**の**説明**と **http://localhost/MDS** の**MDS サーバー アドレス**、 をクリック**OK**ダイアログ ボックスを閉じます。  
   
-6.  **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS)、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
+6.  **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS) 、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
   
 7.  クリックして**Connect** MDS サーバーに接続します。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "65484660"
 15. 保持**Excel**を開きます。  
   
 ## <a name="next-task"></a>次の作業  
- [タスク 3:マスター データ マネージャーでデータを検証します。](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [タスク 3: マスター データ マネージャーでデータを検証します。](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

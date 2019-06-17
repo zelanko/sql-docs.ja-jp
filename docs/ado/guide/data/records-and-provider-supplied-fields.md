@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700449"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
@@ -77,6 +77,6 @@ ms.locfileid: "66700449"
 |RESOURCE_DISPLAYNAME|AdVarWChar|読み取り専用。 リソースの表示名を示します。|  
 |RESOURCE_ISROOT|adBoolean|読み取り専用。 リソース コレクションまたは構造化されたドキュメントのルートである場合は true。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

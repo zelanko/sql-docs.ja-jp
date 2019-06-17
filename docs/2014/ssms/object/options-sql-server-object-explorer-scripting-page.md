@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63031936"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>オプション (SQL Server オブジェクト エクスプ ローラー-スクリプト作成 ページ)
@@ -39,7 +39,7 @@ ms.locfileid: "63031936"
   
 ### <a name="general-scripting-options"></a>[全般スクリプト作成オプション]  
  **[各ステートメントを区切る]**  
- バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、次を参照してください。[移動&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)します。  
+ バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]** / **[オプション]** / **[クエリ実行]** / **[SQL Server]** / **[全般]** / **[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、次を参照してください。[移動&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)します。  
   
  **[説明用ヘッダーを含める]**  
  スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、次を参照してください。[コメント&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql)します。  

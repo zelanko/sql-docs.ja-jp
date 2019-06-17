@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184442"
 ---
 # <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
@@ -50,7 +50,7 @@ ms.locfileid: "63184442"
 -   これらの種類のいずれかに基づいている、すべてのユーザー定義データ型 (別名型) です。  
   
  **Precision**  
- `decimal` データ型または `numeric` データ型については、有効桁数を指定します  (小数点以下桁数は常に 0 です)。  
+ `decimal` データ型または `numeric` データ型については、有効桁数を指定します (小数点以下桁数は常に 0 です)。  
   
  **[開始値]**  
  シーケンス オブジェクトによって返される最初の値です。 **START** 値は、シーケンス オブジェクトの最小値以上および最大値以下にする必要があります。 新しいシーケンス オブジェクトの既定の開始値は、昇順のシーケンス オブジェクトの最小値および降順のシーケンス オブジェクトの最大値です。  
@@ -86,7 +86,7 @@ ms.locfileid: "63184442"
 ## <a name="permissions"></a>アクセス許可  
  SCHEMA に対する **CREATE SEQUENCE**権限、 **ALTER**権限、または **CONTROL** 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

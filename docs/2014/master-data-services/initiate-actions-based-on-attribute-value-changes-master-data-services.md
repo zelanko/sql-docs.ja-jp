@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: deaa7ca2225d6de503ceb3d5d901a5a51d11aa68
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479363"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>属性値の変更に基づいてアクションを開始する (マスター データ サービス)
@@ -72,7 +72,7 @@ ms.locfileid: "65479363"
   
 19. **[戻る]** をクリックします。  
   
-20. 必要に応じて、 **[ビジネス ルールのメンテナンス]** ページで、ビジネス ルールを含む行の **[名前]**、 **[説明]**、または **[通知]** 列のセルをダブルクリックして値を更新します。  
+20. 必要に応じて、 **[ビジネス ルールのメンテナンス]** ページで、ビジネス ルールを含む行の **[名前]** 、 **[説明]** 、または **[通知]** 列のセルをダブルクリックして値を更新します。  
   
     > [!NOTE]  
     >  通知は、検証アクションを含むルールに対してのみ送信されます。  

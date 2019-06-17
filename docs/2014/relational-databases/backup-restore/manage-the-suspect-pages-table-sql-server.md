@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921958"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
@@ -126,7 +126,7 @@ ms.locfileid: "62921958"
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
-2.  **[システム データベース]**、 **[msdb]**、 **[テーブル]**、 **[システム テーブル]** の順に展開します。  
+2.  **[システム データベース]** 、 **[msdb]** 、 **[テーブル]** 、 **[システム テーブル]** の順に展開します。  
   
 3.  **[dbo.suspect_pages]** を展開し、 **[上位 200 行の編集]** を右クリックします。  
   
@@ -160,7 +160,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

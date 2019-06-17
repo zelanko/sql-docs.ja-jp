@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774956"
 ---
 # <a name="open-projects-from-source-control"></a>ソース管理からプロジェクトを開く
@@ -42,7 +42,7 @@ ms.locfileid: "62774956"
   
 6.  **ソリューションを開く** ダイアログ ボックスを開くには、をクリックしてプロジェクトを選択します。**開く**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理からソリューションとプロジェクトを開く](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)   
  [ソース管理からソリューションを開く](../../2014/database-engine/open-solutions-from-source-control.md)  
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035251"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>SQL Server Profiler でのトレースへのフィルターの適用
@@ -31,7 +31,7 @@ ms.locfileid: "63035251"
   
  [トレース内のイベントへのフィルターの適用 &#40;SQL Server Profiler&#41;](filter-events-in-a-trace-sql-server-profiler.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレースへのフィルターの適用](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

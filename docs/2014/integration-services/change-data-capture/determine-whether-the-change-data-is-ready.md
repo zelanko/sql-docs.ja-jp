@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4aa1420edc1cb627940aca6c6c2aed9d18a390
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771428"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
@@ -173,9 +173,9 @@ ms.locfileid: "62771428"
   
     3.  **[式]** に「`@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
-4.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、**[User::DelaySeconds]** 整数変数を一覧から選択します。  
+4.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、 **[User::DelaySeconds]** 整数変数を一覧から選択します。  
   
 5.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "62771428"
         System.Threading.Thread.Sleep((int)Dts.Variables["DelaySeconds"].Value * 1000);  
         ```  
   
-         \- または -  
+         \- - または -  
   
     -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]でプログラミングしている場合は、次のコード行を入力します。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "62771428"
   
     3.  **[式]** に「 `@DataReady == 0`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "62771428"
   
     3.  **[式]** に「`@DataReady == 1 || @DataReady == 5`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   
@@ -334,6 +334,6 @@ ms.locfileid: "62771428"
 ## <a name="next-step"></a>次の手順  
  変更データが準備できていると判断したら、次に変更データのクエリを準備します。  
   
- **次のトピック:**[変更データのクエリを準備する](prepare-to-query-for-the-change-data.md)  
+ **次のトピック:** [変更データのクエリを準備する](prepare-to-query-for-the-change-data.md)  
   
   

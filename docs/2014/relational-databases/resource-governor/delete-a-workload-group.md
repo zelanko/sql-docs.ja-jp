@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63215807"
 ---
 # <a name="delete-a-workload-group"></a>ワークロード グループの削除
   ワークロード グループまたはリソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **ワークロード グループの削除に使用するもの:**[オブジェクト エクスプローラー](#DelWGObjEx)、[リソース ガバナーのプロパティ](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
+-   **ワークロード グループの削除に使用するもの:** [オブジェクト エクスプローラー](#DelWGObjEx)、[リソース ガバナーのプロパティ](#DelWGRGProp)、[Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  アクティブなセッションが含まれている場合は、ワークロード グループを削除できません。  

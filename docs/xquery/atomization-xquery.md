@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047596"
 ---
 # <a name="atomization-xquery"></a>アトミック化 (XQuery)
@@ -50,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   OrignialLaborHours 属性の構築では、(`$WC/@LaborHours`) によって返される単一シーケンスにアトミック化が暗黙的に適用されます。 LaborHours 属性の型指定された値が、OrignialLaborHours に代入されます。  
   
--   UpdatedLaborHoursV1 属性の構築では、算術演算子がアトミック値を必要とします。 そのため、 **data()** によって返される LaborHours 属性に暗黙的に適用されます (`$WC/@LaborHours`)。 アトミック値 1 は、これには追加されます。 UpdatedLaborHoursV2 属性の構築の明示的な適用を示しています。 **data()**、がは必要ありません。  
+-   UpdatedLaborHoursV1 属性の構築では、算術演算子がアトミック値を必要とします。 そのため、 **data()** によって返される LaborHours 属性に暗黙的に適用されます (`$WC/@LaborHours`)。 アトミック値 1 は、これには追加されます。 UpdatedLaborHoursV2 属性の構築の明示的な適用を示しています。 **data()** 、がは必要ありません。  
   
 ```  
 SELECT Instructions.query('  
@@ -77,7 +77,7 @@ where ProductModelID=7
   
  アトミック化は、関数、関数によって返される値に渡される比較式のパラメーターにも発生**cast()** 式、および by 句の順序で渡される順序式。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery の基礎](../xquery/xquery-basics.md)   
  [比較式&#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062956"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>アクション フォーム エディター (キューブ デザイナーの [アクション] タブ) (Analysis Services - 多次元データ)
@@ -71,7 +71,7 @@ ms.locfileid: "66062956"
  実行するクライアント アプリケーションに対して、アクションによって返される文字列を返す多次元式 (MDX) を入力します。  
   
  **[追加のプロパティ]**  
- **[呼び出し]**、 **[アプリケーション]**、 **[説明]**、 **[キャプション]**、および **[キャプションに MDX を使用]** オプションの表示を拡張します。  
+ **[呼び出し]** 、 **[アプリケーション]** 、 **[説明]** 、 **[キャプション]** 、および **[キャプションに MDX を使用]** オプションの表示を拡張します。  
   
  **[呼び出し]**  
  いつアクションを実行する必要があるかを設定します。  

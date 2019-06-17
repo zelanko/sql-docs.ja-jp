@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2101277aecd3ca9c844fb447f5ab772847d77020
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721108"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>トランザクション サブスクリプションのバックアップからの初期化 (レプリケーション Transact-SQL プログラミング)
@@ -34,7 +34,7 @@ ms.locfileid: "62721108"
   
     -   この値が **1**の場合、パブリケーションはこの機能をサポートしています。  
   
-    -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値を指定**allow_initialize_from_backup**の**@property**の値と`true`の **@value**します。  
+    -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値を指定**allow_initialize_from_backup**の **@property** の値と`true`の **@value** します。  
   
 2.  新しいパブリケーションの場合、パブリッシャー側のパブリケーション データベースに対して [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 値を指定`true`の**allow_initialize_from_backup**します。 詳細については、「 [Create a Publication](publish/create-a-publication.md)」を参照してください。  
   

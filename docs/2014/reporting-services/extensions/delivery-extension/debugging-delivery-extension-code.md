@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d289b3d4c4177ed885a3153bb758d0052286bec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164335"
 ---
 # <a name="debugging-delivery-extension-code"></a>配信拡張機能のコードのデバッグ
@@ -34,11 +34,11 @@ ms.locfileid: "63164335"
   
 4.  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] および配信拡張機能のプロジェクトに移動し、コードにブレーク ポイントを設定します。  
   
-5.  配信拡張機能プロジェクトのウィンドウをアクティブにしたまま、**[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。  
+5.  配信拡張機能プロジェクトのウィンドウをアクティブにしたまま、 **[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。  
   
      **[プロセスにアタッチ]** ダイアログが開きます。  
   
-6.  プロセスの一覧から aspnet_wp.exe プロセス (アプリケーションを IIS 6.0 に配置している場合は w3wp.exe ) を選択し、**[アタッチ]** をクリックします。  
+6.  プロセスの一覧から aspnet_wp.exe プロセス (アプリケーションを IIS 6.0 に配置している場合は w3wp.exe ) を選択し、 **[アタッチ]** をクリックします。  
   
 7.  配信拡張機能を使用して新しいサブスクリプションを定義します。 通常は、レポート マネージャーまたは SOAP API を使用します。 これにより、デバッガーが呼び出され、ブレーク ポイントに対応するコードが実行されます。  
   

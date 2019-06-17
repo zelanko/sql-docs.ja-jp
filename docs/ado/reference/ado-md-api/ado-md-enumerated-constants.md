@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6018cc0d5b4c74e15cf39c5b57e71ce57d1a39ec
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66709877"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD の列挙定数
@@ -29,7 +29,7 @@ ms.locfileid: "66709877"
   
 -   [MemberTypeEnum](../../../ado/reference/ado-md-api/membertypeenum.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD のコード例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   

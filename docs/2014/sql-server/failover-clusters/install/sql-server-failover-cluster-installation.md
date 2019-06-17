@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067648"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server フェールオーバー クラスターのインストール
@@ -79,7 +79,7 @@ ms.locfileid: "63067648"
 ##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスター  
  クラスター上のノードが別々のサブネットにある場合、OR 依存関係を設定できます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターの各ノードが、指定されている 1 つ以上の IP アドレスの実行可能な所有者である必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フェールオーバー クラスタリングをインストールする前に](before-installing-failover-clustering.md)   
  [新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [コマンド プロンプトから SQL Server 2014 をインストールします。](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   

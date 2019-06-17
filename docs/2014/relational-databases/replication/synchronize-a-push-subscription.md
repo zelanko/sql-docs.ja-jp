@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745882"
 ---
 # <a name="synchronize-a-push-subscription"></a>プッシュ サブスクリプションの同期
@@ -40,7 +40,7 @@ ms.locfileid: "62745882"
   
 4.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
-5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
+5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
 6.  **[閉じる]** をクリックします。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62745882"
   
 4.  ディストリビューターへの接続の確立に関するメッセージが表示されます。 **[OK]** をクリックします。  
   
-5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
+5.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
 6.  **[閉じる]** をクリックします。  
   
@@ -270,7 +270,7 @@ REM -- The following command must be supplied without line breaks.
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション管理オブジェクトの概念](concepts/replication-management-objects-concepts.md)   
  [データの同期](synchronize-data.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  

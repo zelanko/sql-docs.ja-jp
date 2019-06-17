@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c03cd9c54ca7315a9d6d8b7b9c99fe46f1be93a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714839"
 ---
 # <a name="database-dimensions---modify-or-delete-a-database-dimension-in-solution-explorer"></a>データベース ディメンション - 変更またはソリューション エクスプ ローラーでデータベース ディメンションを削除します。
@@ -24,7 +24,7 @@ ms.locfileid: "62714839"
   
 1.  ソリューション エクスプローラーで、変更するディメンションを右クリックし、 **[開く]** をクリックします。  
   
-2.  **[ディメンション構造]** タブの **[属性]**、**[階層]**、または **[データ ソース ビュー]** のいずれかのペインで、変更するアイテムをクリックして変更します。  
+2.  **[ディメンション構造]** タブの **[属性]** 、 **[階層]** 、または **[データ ソース ビュー]** のいずれかのペインで、変更するアイテムをクリックして変更します。  
   
      実行できる変更の種類の詳細については、「[多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   

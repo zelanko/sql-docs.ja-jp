@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106630"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダー)
@@ -90,7 +90,7 @@ ms.locfileid: "66106630"
 ### <a name="value"></a>値  
  [値] 式は、フィルター式の最後の部分を指定します。 レポート プロセッサは、[式] で指定されたデータにフィルターの通過を許可するかどうかを判断する際、評価対象の式を指定のデータ型に変換した後、フィルター式全体を評価します。  
   
- 標準の CLR データ型以外の型に変換するためには、特定のデータ型へと明示的に変換するように、式を修正する必要があります。 この変換には、 **[式]** ダイアログ ボックス ( **[共通の関数]** の **[変換]**) に表示される変換関数を使用できます。 たとえば、 `ListPrice` データ ソースの **money** 型として格納されたデータを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] というフィールドがあるとします。データ処理拡張機能は、このフィールドの値を <xref:System.Decimal> 型として返します。 このとき、レポートの通貨で **$50000.00** を超える値だけを使用するようにフィルターを設定するには、 `=CDec(50000.00)`という式を使って、この値を Decimal 型に変換します。  
+ 標準の CLR データ型以外の型に変換するためには、特定のデータ型へと明示的に変換するように、式を修正する必要があります。 この変換には、 **[式]** ダイアログ ボックス ( **[共通の関数]** の **[変換]** ) に表示される変換関数を使用できます。 たとえば、 `ListPrice` データ ソースの **money** 型として格納されたデータを表す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] というフィールドがあるとします。データ処理拡張機能は、このフィールドの値を <xref:System.Decimal> 型として返します。 このとき、レポートの通貨で **$50000.00** を超える値だけを使用するようにフィルターを設定するには、 `=CDec(50000.00)`という式を使って、この値を Decimal 型に変換します。  
   
  フィルターに使用する値をユーザーが対話形式で選択できるように、この値にパラメーター参照を含めることもできます。  
   

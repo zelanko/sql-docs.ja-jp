@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83ead8522e506fcf4ab81d2e904c354424cdb6fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66080154"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046674"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
   このトピックでは、接続文字列プロパティについて説明します。接続文字列プロパティは、いずれかのデザイナー ツールまたは管理ツールで設定できます。また、Analysis Services データに接続および照会するクライアント アプリケーションによって作成された接続文字に表示されることもあります。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
@@ -82,7 +82,7 @@ ms.locfileid: "66080154"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`Application Name`|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、アプリケーション名を追加 = 'test'、接続文字列 'test' を SQL Server Profiler トレースに表示する次のスクリーン ショットに示すようにします。<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、`sspropinitAppName` および `AppName` があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](https://go.microsoft.com/fwlink/?LinkId=301699)」をご覧ください。|  
+|`Application Name`|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、アプリケーション名を追加 = 'test'、接続文字列 'test' を SQL Server Profiler トレースに表示する次のスクリーン ショットに示すようにします。<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、`sspropinitAppName` および `AppName` があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](https://www.connectionstrings.com/use-application-name-sql-server/)」をご覧ください。|  
 |`AutoSyncPeriod`|クライアントとサーバーのキャッシュを同期する頻度 (ミリ秒単位) を設定します。 ADOMD.NET には、最小限のメモリ オーバーヘッドが発生する、よく使用されるオブジェクトのために、クライアント キャッシュが用意されています。 これは、サーバーへのラウンド トリップを減らすのに役立ちます。 既定値は 10,000 ミリ秒 (10 秒) です。 null または 0 に設定した場合、自動同期は無効になります。|  
 |`Character Encoding`|要求での文字をエンコードする方法を定義します。 有効な値は、Default または UTF-8 (これらは同じです) と、UTF-16 です。|  
 |`CompareCaseSensitiveStringFlags`|指定されたロケールの大文字と小文字を区別する文字列の比較を調整します。 このプロパティの設定の詳細については、「 [CompareCaseSensitiveStringFlags プロパティ](https://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)」をご覧ください。|  

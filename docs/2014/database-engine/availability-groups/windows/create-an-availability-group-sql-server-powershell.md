@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790671"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>可用性グループの作成 (SQL Server PowerShell)
@@ -45,7 +45,7 @@ ms.locfileid: "62790671"
 ###  <a name="SummaryPSStatements"></a> 作業の概要および対応する PowerShell コマンドレット  
  次の表は、可用性グループの構成に伴う基本的な作業の一覧です。一覧には PowerShell コマンドレットによってサポートされる作業が示されています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関連したこれらの作業は、この表に示されている順に実行する必要があります。  
   
-|タスク|PowerShell コマンドレット (利用可能な場合) または Transact SQL ステートメント|タスクを実行する場所**<sup>*</sup>**|  
+|タスク|PowerShell コマンドレット (利用可能な場合) または Transact SQL ステートメント|タスクを実行する場所 **<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
 |データベース ミラーリング エンドポイントを作成する ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに 1 回)|`New-SqlHadrEndPoint`|データベース ミラーリング エンドポイントが欠落している各サーバー インスタンスで実行します。<br /><br /> 注:既存のデータベース ミラーリング エンドポイントを変更するには、使用`Set-SqlHadrEndpoint`します。|  
 |可用性グループを作成する|まず、`New-SqlAvailabilityReplica` コマンドレットに `-AsTemplate` パラメーターを指定し、可用性グループに追加する予定の 2 つの可用性レプリカのそれぞれについて、インメモリの可用性レプリカ オブジェクトを作成します。<br /><br /> 次に、`New-SqlAvailabilityGroup` コマンドレットを使用し、可用性レプリカ オブジェクトを参照して、可用性グループを作成します。|初期プライマリ レプリカをホストするサーバー インスタンスで実行します。|  
@@ -88,7 +88,7 @@ ms.locfileid: "62790671"
 > [!NOTE]  
 >  複数のサーバー インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントが、それぞれ異なるドメイン ユーザー アカウントで実行されている場合、それぞれのサーバー インスタンス上に、もう一方のサーバー インスタンス用のログインを作成し、そのログインにローカルのデータベース ミラーリング エンドポイントへの CONNECT 権限を付与します。  
   
-##  <a name="ExampleConfigureGroup"></a> 例:PowerShell を使用して可用性グループを作成するには  
+##  <a name="ExampleConfigureGroup"></a> 例:PowerShell を使用した可用性グループの作成  
  以下の PowerShell スクリプトは、2 つの可用性レプリカと 1 つの可用性データベースから成る `MyAG` という名前の単純な可用性グループを作成、構成する例です。 この例では、次の処理を実行します。  
   
 1.  `MyDatabase` とそのトランザクション ログをバックアップします。  

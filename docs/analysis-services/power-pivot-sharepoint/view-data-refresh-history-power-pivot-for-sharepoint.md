@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509946"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>データ更新履歴の表示 (Power Pivot for SharePoint)
@@ -58,7 +58,7 @@ ms.locfileid: "62509946"
 |アイテム|説明|  
 |----------|-----------------|  
 |名前|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが含まれている Excel ブックのファイル名を示します。|  
-|現在の状態|値は、 **[スケジュール]**、 **[更新中]**、 **[成功]**、 **[失敗]** のいずれかです。<br /><br /> **[スケジュール]** は、初めてスケジュールを作成するときに表示されます。 データ更新が初めて実行された後は、この状態メッセージは表示されなくなります。<br /><br /> **[更新中]** は、データ更新が進行中であることを示します。 要求が処理キューにあるか、サーバーで現在実行中です。<br /><br /> **[成功]** は、前回のデータ更新操作が完了したことを示しており、更新後のブックは SharePoint ライブラリにチェックインされて戻されます。<br /><br /> **[失敗]** は、前回のデータ更新操作が成功しなかったことを示します。 更新後のデータは保存されませんでした。 ブックには、データ更新が開始される前と同じデータが含まれています。|  
+|現在の状態|値は、 **[スケジュール]** 、 **[更新中]** 、 **[成功]** 、 **[失敗]** のいずれかです。<br /><br /> **[スケジュール]** は、初めてスケジュールを作成するときに表示されます。 データ更新が初めて実行された後は、この状態メッセージは表示されなくなります。<br /><br /> **[更新中]** は、データ更新が進行中であることを示します。 要求が処理キューにあるか、サーバーで現在実行中です。<br /><br /> **[成功]** は、前回のデータ更新操作が完了したことを示しており、更新後のブックは SharePoint ライブラリにチェックインされて戻されます。<br /><br /> **[失敗]** は、前回のデータ更新操作が成功しなかったことを示します。 更新後のデータは保存されませんでした。 ブックには、データ更新が開始される前と同じデータが含まれています。|  
 |成功した前回の更新|前回のデータ更新が正常に完了した日付を示します。|  
 |スケジュールされている次回の更新|次回のデータ更新の実行がスケジュールされている日付を示します。<br /><br /> **[スケジュールの構成]** リンクから、スケジュール定義ページに移動できます。 ブックに対する投稿権限がある場合、このリンクをクリックして、ブック内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する自動データ更新を制御するスケジュール情報を表示および変更することができます。|  
 |Started|履歴の詳細セクション内の **[開始]** は、実際の処理時間を示します。 実際の処理時間は、スケジュールとは異なることもあります。 処理が開始されるのは、サーバー上に使用可能なメモリが十分にあるときです。 サーバーの負荷が高い場合、指定した開始時刻よりも数時間遅れて処理が開始されることもあります。|  
@@ -66,7 +66,7 @@ ms.locfileid: "62509946"
 |Time|データ更新が開始されてから完了するまでの累積時間を示します。|  
 |状態|更新操作が成功したか失敗したかの履歴レコードを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [データ更新のスケジュール (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Power Pivot データ更新](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  

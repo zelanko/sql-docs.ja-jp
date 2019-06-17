@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312623"
 ---
 # <a name="set-the-startup-options"></a>起動オプションの設定
@@ -30,13 +30,13 @@ ms.locfileid: "63312623"
   
     -   **オブジェクト エクスプローラー**を開きます。 既定のオプションです。  
   
-    -   **[新しいクエリ ウィンドウを開く]**。  
+    -   **[新しいクエリ ウィンドウを開く]** 。  
   
-    -   **[オブジェクト エクスプローラーと新しいクエリを開く]**。  
+    -   **[オブジェクト エクスプローラーと新しいクエリを開く]** 。  
   
-    -   **[オブジェクト エクスプローラーと利用状況モニターを開く]**。  
+    -   **[オブジェクト エクスプローラーと利用状況モニターを開く]** 。  
   
-    -   **[空の環境を開く]**。  
+    -   **[空の環境を開く]** 。  
   
 3.  必要なオプションをクリックし、 **[OK]** をクリックします。  
   

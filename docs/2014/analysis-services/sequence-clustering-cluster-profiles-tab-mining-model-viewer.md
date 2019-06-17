@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069101"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスターのプロファイル] タブ (マイニング モデル ビューアー)
@@ -24,7 +24,7 @@ ms.locfileid: "66069101"
   
  モデルによって検出されたシーケンスがどのようにグループ化されるかを簡単に確認するには、シーケンス クラスター モデルのこのビューを使用します。 長いシーケンスと短いシーケンスをひとめで確認できます。 クラスターをクリックして **[マイニング凡例]** を表示することで、各シーケンスの色が表している状態を正確に知ることもできます。  
   
- **詳細情報。**[Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **詳細情報。** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -51,12 +51,12 @@ ms.locfileid: "66069101"
   
 -   **\<属性名 > <attribute>.samples**:この行のヒストグラムは、各クラスターの代表するアイテムのシーケンスを示します。 DMX 用語では、これらは各クラスターのサンプル ケースです。  
   
--   **\<属性名 >**:この行のヒストグラムには、クラスターに含まれるすべてのアイテムとその全体的な分布について説明します。 **[マイニング凡例]** が表示されているときにヒストグラムをクリックすると、それぞれの数値を確認できます。  
+-   **\<属性名 >** :この行のヒストグラムには、クラスターに含まれるすべてのアイテムとその全体的な分布について説明します。 **[マイニング凡例]** が表示されているときにヒストグラムをクリックすると、それぞれの数値を確認できます。  
   
  **状態**  
  グラフのこの列はオプションです。 **[凡例の表示]** をクリックすることで、表示または削除できます。 **[状態]** 列は、どの状態が対応するクラスターのヒストグラム内のどの色で表現されているかを示すガイドとなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md)   
  [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   

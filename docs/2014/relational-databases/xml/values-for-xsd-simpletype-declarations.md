@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193076"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 宣言の値
   次の表に、認識されるすべての XSD 単純型を列挙して、適用される制限の概要を示します。  
   
- また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**\<xsd:simpleType>** 宣言で NaN 値がサポートされません。 NaN 値を含むスキーマはサーバーで拒否されます。  
+ また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **\<xsd:simpleType>** 宣言で NaN 値がサポートされません。 NaN 値を含むスキーマはサーバーで拒否されます。  
   
 |単純型|制限事項|  
 |-----------------|----------------|  

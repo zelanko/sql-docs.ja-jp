@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199085"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData を使用した出力パラメーターの取得
@@ -30,7 +30,7 @@ ODBC 3.8、前に、アプリケーションは、バインドされた出力バ
  この機能は ODBC 3.8 アプリケーションで使用できるまたは ODBC を再コンパイル 3.x と ODBC 2.x アプリケーションでは、これらのアプリケーションに、ODBC 3.8 をサポートするドライバーを使用して出力パラメーターを取得する必要があります**SQLGetData**と ODBC 3.8 ドライバーマネージャー。 ODBC の新しい機能を使用する古いアプリケーションを有効にする方法については、次を参照してください。[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)します。  
   
 ## <a name="usage-example"></a>使用例  
- たとえば、ストアド プロシージャでは、実行する **{呼び出し sp_f(?,?)}**、場所として SQL_PARAM_OUTPUT_STREAM、両方のパラメーターがバインドされているし、ストアド プロシージャが結果セットを返さない (このトピックの後半が見つかったらより複雑なシナリオ)。  
+ たとえば、ストアド プロシージャでは、実行する **{呼び出し sp_f(?,?)}** 、場所として SQL_PARAM_OUTPUT_STREAM、両方のパラメーターがバインドされているし、ストアド プロシージャが結果セットを返さない (このトピックの後半が見つかったらより複雑なシナリオ)。  
   
 1.  パラメーターごとに、呼び出す**SQLBindParameter**で*InputOutputType* SQL_PARAM_OUTPUT_STREAM に設定し、 *ParameterValuePtr*パラメーター番号などのトークンに設定、、のデータへのポインターまたは入力パラメーターをバインドするアプリケーションが使用する構造体へのポインター。 この例では、パラメーターの序数をトークンとして使用します。  
   

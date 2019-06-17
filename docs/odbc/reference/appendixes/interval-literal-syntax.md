@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188819"
 ---
 # <a name="interval-literal-syntax"></a>Interval のリテラルの構文
 次の構文は、ODBC で interval のリテラルに使用されます。  
   
- *間隔リテラル:: = 間隔*[+*&#124;*-]*間隔文字列間隔修飾子*  
+ *間隔リテラル:: = 間隔*[+ *&#124;* -]*間隔文字列間隔修飾子*  
   
  *間隔文字列*:: =*見積もり*{*年-月-リテラル*&#124; です。*日付時刻リテラル*}*見積もり*  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 253841e26ab7ecbeafb2cfeeed8c090c91650d14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805866"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC エラー コード)
@@ -28,7 +28,7 @@ ms.locfileid: "62805866"
   
  状態エラー コードの詳細については、次のトピックを参照してください。  
   
--   [付録 a:ODBC エラー コード](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [付録 A: ODBC エラー コード](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [SQLSTATE マッピング](https://go.microsoft.com/fwlink/?LinkId=89355)  
   

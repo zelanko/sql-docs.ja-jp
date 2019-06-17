@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800264"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>クイック スタート: 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]に接続して、Azure SQL Data Warehouse のデータの照会
@@ -139,7 +139,7 @@ SQL データ ウェアハウスをもっていない場合は [SQL データ �
    ![結果を選択します。](media/quickstart-sql-dw/select-results.png)
 
 
-## <a name="clean-up-resources"></a>リソースをクリーンアップします。
+## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
 このコレクション内の他の記事では、このクイック スタートに基づいて構築します。 引き続きクイック スタートで作業する場合は、このクイック スタートで作成したリソースをクリーンアップしないでください。 続行する予定がない場合、次の手順を使用して、Azure portal でこのクイック スタートで作成したリソースを削除します。
 不要になったリソース グループを削除することによって、リソースをクリーンアップします。 詳細については、次を参照してください。[リソースをクリーンアップする](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)します。

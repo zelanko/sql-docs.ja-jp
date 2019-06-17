@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711059"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手動でのテーブルの結合 (Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "62711059"
   
  [SQL ペイン](sql-pane-visual-database-tools.md)のステートメントに INNER JOIN 句が追加されます。 結合の種類を外部結合に変更できます。 詳細については、「[外部結合の作成 (Visual Database Tools)](create-outer-joins-visual-database-tools.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結合を使用したクエリ (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

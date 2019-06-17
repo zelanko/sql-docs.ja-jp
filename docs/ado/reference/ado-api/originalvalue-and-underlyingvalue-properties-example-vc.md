@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 4c299416eeed65fcefbb0eaad750ed356d803bf3
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66706995"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue および UnderlyingValue プロパティの例 (vc++)
@@ -220,7 +220,7 @@ void PrintComError(_com_error &e) {
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**    
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)
