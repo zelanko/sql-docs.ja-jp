@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9deaa92f28e6ca0f0e7c32144a0a42e67234df47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8b72d754299554e44a61a6239b0755e634429de1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642330"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799420"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>query governor cost limit サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47642330"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して query governor cost limit オプションを構成するには:**  
   
@@ -41,9 +41,9 @@ ms.locfileid: "47642330"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [query governor cost limit オプションを構成した後](#FollowUp)  
+-   **補足情報:**[query governor cost limit オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47642330"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `query governor cost limit` オプションの値を `120` 秒に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `query governor cost limit` オプションの値を `120` 秒に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -92,9 +92,9 @@ GO
   
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: query governor cost limit オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: query governor cost limit オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

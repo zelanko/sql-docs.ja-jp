@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b70487d9d9f89defb77eeed4adc9633b734cc40a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a4a038d29aeaacdfd75b71600443df8ea0c3f1db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733240"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799408"
 ---
 # <a name="change-server-authentication-mode"></a>サーバーの認証モードの変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47733240"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **サーバーの認証モードを変更する方法:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47733240"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
  sa アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 sa アカウントは、アプリケーションで必要とならない限り、有効にしないでください。 sa ログインには、複雑なパスワードを使用することが非常に重要です。  
@@ -73,15 +73,27 @@ ms.locfileid: "47733240"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、sa ログインを有効にし、新しいパスワードを設定します。  
+3.  次のいずれかの例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 
+
+
+    -  次の例では、sa ログインを有効にし、新しいパスワードを設定します。  
   
-    ```  
-    ALTER LOGIN sa ENABLE ;  
-    GO  
-    ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
-    GO  
-  
-    ```  
+       ```sql  
+       ALTER LOGIN sa ENABLE ;  
+       GO  
+       ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
+       GO  
+       ```  
+    -  次の例では、サーバー認証を混合モード (Windows + SQL) から Windows のみに変更します。
+
+       ```sql
+       USE [master]
+       GO
+       EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', 
+                                 N'Software\Microsoft\MSSQLServer\MSSQLServer',      
+                                 N'LoginMode', REG_DWORD, 1
+       GO
+       ```
   
 ## <a name="see-also"></a>参照  
  [強力なパスワード](../../relational-databases/security/strong-passwords.md)   

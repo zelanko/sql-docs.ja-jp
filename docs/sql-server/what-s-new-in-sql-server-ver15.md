@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198194"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810285"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -53,12 +53,14 @@ Community Technology Preview (CTP) 3.0 は、[!INCLUDE[sql-server-2019](../inclu
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
+|SQL Server 言語拡張機能 - [Java 言語拡張機能](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|[Microsoft SQL Server 用の Microsoft Extensibility SDK for Java](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) がオープン ソース化され、[GitHub で入手可能](https://github.com/microsoft/sql-server-language-extensions)になりました。|
 |外部言語を登録する|新しい DDL `CREATE EXTERNAL LANGUAGE` では、Java などの外部の言語を SQL Server に登録します。 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) に関するページを参照してください。 |
 |Java に対してサポートされるデータ型の追加|[Java のデータ型](../language-extensions/how-to/java-to-sql-data-types.md)に関するページを参照してください。|
 |クエリ ストア用のカスタム キャプチャ ポリシー|有効にすると、新しいクエリ ストアのキャプチャ ポリシーの設定で、特定のサーバーでのデータ収集を微調整するための追加のクエリ ストアを使用できるようになります。 詳しくは、「[ALTER DATABASE SET オプション](../t-sql/statements/alter-database-transact-sql-set-options.md)」をご覧ください。|
 |[メモリ内データベース](../relational-databases/in-memory-database.md)により、ハイブリッド バッファー プールを制御する新しい DDL 構文が追加されました。 <sup>2</sup>|[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md)を使用すると、永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされます。|
 |新しいメモリ内データベース機能のメモリ最適化 tempdb メタデータが追加されました。|「[メモリ最適化 tempdb メタデータ](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」を参照してください。|
 |リンク サーバーでは UTF-8 文字エンコードがサポートされます。 |[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md) |
+|SQL Server セットアップには、文書化されているガイドラインに従う MaxDOP の推奨事項が含まれています。 |[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |並列処理の次数とクエリ プランのメモリ許可に関する詳細が `sys.dm_exec_query_plan_stats` によって返されます。 |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
 
@@ -171,7 +173,7 @@ Community Technology Preview (CTP) 3.0 は、[!INCLUDE[sql-server-2019](../inclu
 |間接チェックポイントのスケーラビリティの向上 |[間接チェックポイントのスケーラビリティの向上](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |BIN2 照合順序 (`UTF8_BIN2`) で UTF-8 文字エンコードを使用するためのサポートの追加 |[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md) |
 |グラフ データベースでのエッジ制約で連鎖削除操作を定義する |[エッジ制約](../relational-databases/tables/graph-edge-constraints.md) |
-|新しいデータベース スコープ構成を使用して `LIGHTWEIGHT_QUERY_PROFILING` を有効化または無効化する |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+|新しいデータベース スコープ構成を使用して `LIGHTWEIGHT_QUERY_PROFILING` を有効化または無効化する |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### <a name="tools"></a>ツール
@@ -433,7 +435,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> 上記の構文を使用しなくても、Azure SQL DB でこの機能を使用できます。この機能は、[パブリック プレビュー中、要求に応じて有効にされます](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period)。 この機能は、有効にされた後は、既定でオンになります。
+> 上記の構文を使用しなくても、Azure SQL DB でこの機能を使用できます。この機能は、[パブリック プレビュー中、要求に応じて有効にされます](/azure/sql-database/sql-database-accelerated-database-recovery)。 この機能は、有効にされた後は、既定でオンになります。
 
 大規模なトランザクションの多いクリティカルなデータベースがある場合は、プレビュー期間中にこの機能を試してください。 フィードバックを[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]チーム](<https://aka.ms/sqlfeedback>)にお送りください。
 
@@ -777,7 +779,7 @@ FROM sys.dm_exec_requests AS d
 
 - [**SQL Server PowerShell モジュール**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): SQL Server の開発者、管理者、BI 専門家は、SqlServer PowerShell モジュールを使用して、データベースの配置とサーバーの管理を自動化できます。
 
-  - 21.0 から 21.1 にアップグレードして SMO v150 をサポートします。
+  - 21\.0 から 21.1 にアップグレードして SMO v150 をサポートします。
   - AS/IS/RS グループを表示するように SQL Server プロバイダー (SQLRegistration) が更新されました。
   - SQL Server 2014 を対象にしたときの `New-SqlAvailabilityGroup` コマンドレットの問題を修正しました。
   - `Set-SqlAvailabilityReplica` と `New-SqlAvailabilityReplica` に `–LoadBalancedReadOnlyRoutingList` パラメーターが追加されました。

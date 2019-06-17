@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 779cd10fa83fdc4d1ec44079ca08ee8dd480468c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55f13de3ecfb6d78219812734d0c559430a914be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647780"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799087"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>scan for startup procs サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47647780"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して scan for startup procs オプションを構成するには:**  
   
@@ -39,9 +39,9 @@ ms.locfileid: "47647780"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [[スタートアップ プロシージャのスキャン] オプションを構成した後](#FollowUp)  
+-   **補足情報:**[scan for startup procs オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47647780"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `scan for startup procs` オプションの値を `1`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `scan for startup procs` オプションの値を `1`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -88,7 +88,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 補足情報: scan for startup procs オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: scan for startup procs オプションを構成した後  
  設定を有効にするには、サーバーを再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

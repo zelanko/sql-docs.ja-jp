@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2d081a9c7969ce20617a5f10850baf9d378a49b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 786c25d8f151b034c51de8c7167fa0c476898ab4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665492"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803304"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47665492"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して two digit year cutoff オプションを構成するには:**  
   
@@ -40,9 +40,9 @@ ms.locfileid: "47665492"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報**  [two digit year cutoff オプションを構成した後](#FollowUp)  
+-   **補足情報:**[two digit year cutoff オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -75,7 +75,7 @@ ms.locfileid: "47665492"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `two digit year cutoff` オプションの値を `2030`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `two digit year cutoff` オプションの値を `2030`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -91,9 +91,9 @@ GO
   
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: two digit year cutoff オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: two digit year cutoff オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

@@ -24,15 +24,18 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: a9fbef681f2b6202c973f31c8c7dd4489133556a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 41acbbf99bc84f96803a296d19c6f63a32761d8e
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993930"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744189"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL ドキュメントのハブ ページに関するご意見を共有してください。](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 SQL Server Management Studio (SSMS) は、SQL Server から Azure SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS には、SQL Server とデータベースのインスタンスを構成、監視、および管理するためのツールが備わっています。 SSMS を使用して、アプリケーションで使われるデータ層コンポーネントを配置、監視、アップグレードしたり、クエリとスクリプトを作成したりすることもできます。
 
@@ -64,7 +67,7 @@ SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS �
 
 SSMS の今回のリリースは、次の言語でインストールできます。
 
-SQL Server Management Studio 18.0 (GA): <br>
+SQL Server Management Studio 18.0 (GA):<br>
 [中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
 SQL Server Management Studio 18.0 アップグレード パッケージ (18.0 へのアップグレード):<br>

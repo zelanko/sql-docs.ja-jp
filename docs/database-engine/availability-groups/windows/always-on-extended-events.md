@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860633"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789649"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 可用性グループの拡張イベントを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860633"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Alwayson_health セッション](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [デバッグ用の拡張イベント](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Always On 可用性グループの拡張イベントのリファレンス](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health セッション  
  可用性グループを作成し、可用性グループ関連のイベントのサブセットをキャプチャすると、alwayson_health 拡張イベント セッションが自動的に作成されます。 このセッションは、可用性グループをトラブルシューティングする際にすぐに開始することができる有効かつ便利なツールとしてあらかじめ構成されています。 可用性グループの作成ウィザードでは、このウィザードで構成されたすべての参加中の可用性レプリカに対してセッションを自動的に開始します。  
   
@@ -91,7 +85,7 @@ alwayson_health でカバーされているイベントの一部については�
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_replica_state_change|  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|運用|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -122,7 +116,7 @@ GO
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_group_lease_expired|  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|運用|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -150,7 +144,7 @@ GO
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |availability_replica_automatic_failover_validation||  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|分析|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -250,7 +244,7 @@ GO
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|data_movement_suspend_resume|  
-|カテゴリ|Alwayson|  
+|カテゴリ|Always on|  
 |Channel|運用|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -293,7 +287,7 @@ GO
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|alwayson_ddl_execution|  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|分析|  
   
 #### <a name="event-fields"></a>イベント フィールド  
@@ -302,8 +296,8 @@ GO
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
-|ddl_action|alwayson_ddl_action|REATE、ALTER、DROP といった DDL アクションの種類を示します。|  
-|ddl_phase|ddl_opcode|BEGIN、COMMIT、ROLLBACK といった DDL 操作のフェーズを示しす。|  
+|ddl_action|alwayson_ddl_action|REATE、ALTER、DROP といった DDL アクションのCREATE、ALTER、または DROP。|  
+|ddl_phase|ddl_opcode|BEGIN、COMMIT、ROLLBACK といった DDL 操作のBEGIN、COMMIT、または ROLLBACK。|  
 |ステートメントから削除してください。|unicode_string|実行されたステートメントのテキスト。|  
   
 #### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
@@ -326,7 +320,7 @@ GO
 |[列]|[説明]|  
 |------------|-----------------|  
 |[オブジェクト名]|availability_replica_manager_state_change|  
-|カテゴリ|alwayson|  
+|カテゴリ|always on|  
 |Channel|運用|  
   
 #### <a name="event-fields"></a>イベント フィールド  

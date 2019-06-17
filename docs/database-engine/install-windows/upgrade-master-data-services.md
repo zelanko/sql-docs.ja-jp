@@ -10,13 +10,13 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b287e4f806f02f2b86493813f29776e118017fb8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: dc39108ea476947e95f237bdccf1fb64a70bd36a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405127"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794728"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
 
@@ -113,7 +113,7 @@ ms.locfileid: "52405127"
   
  **データベース エンジンをアップグレードしてアップグレードするには**  
   
-1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**: **[コントロール パネル]** > **[プログラムと機能]** の順に開き、Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をアンインストールします。  
+1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**:**[コントロール パネル]** > **[プログラムと機能]** の順に開き、Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をアンインストールします。  
   
 2.  データベース エンジンを [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] にアップグレードします。 詳細については、「 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "52405127"
 3.  MDS データベース スキーマをアップグレートして、Web アプリケーションを作成し、新しい Web アプリケーションとアップグレードされた MDS データベースを関連付けます。 手順については、「 [データベース エンジンのアップグレードを伴わないアップグレード](#noengine)」の手順 2 ～ 4 を参照してください。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
- **問題:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web アプリケーションを開くと、"クライアントのバージョンがデータベースのバージョンと互換性がない" ことを示すエラー メッセージが表示される。  
+ **問題点:**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web アプリケーションを開くと、"クライアントのバージョンがデータベースのバージョンと互換性がない" ことを示すエラー メッセージが表示される。  
   
  **解決方法:** この問題は、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のマスター データ マネージャー Web アプリケーションが、[!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] マスター データ サービスにアップグレードされたデータベースにアクセスしようとするときに発生します。 代わりに、[!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web アプリケーションを使用する必要があります。  
   

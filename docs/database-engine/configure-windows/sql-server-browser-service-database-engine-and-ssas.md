@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: 6be7286056ce59e9080e58fa9706370481fb5fce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616942"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775435"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser サービス (データベース エンジンと SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "52616942"
  非表示インスタンスは、共有メモリ接続のみをサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は、 `HideInstance` Browser がこのサーバー インスタンスに関する情報を返さないことを示すために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フラグを設定します。  
   
 ### <a name="using-a-firewall"></a>ファイアウォールの使用  
- ファイアウォールの背後にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスと通信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される TCP ポート (1433 など) のほかに UDP ポート 1434 も開きます。 ファイアウォールの使用方法については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスのためのファイアウォールの設定」を参照してください。  
+ ファイアウォールの背後にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスと通信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される TCP ポート (1433 など) のほかに UDP ポート 1434 も開きます。 ファイアウォールの使用方法については、次をご覧ください。「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアクセス用にファイアウォールを構成する」([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブック)  
   
 ## <a name="see-also"></a>参照  
  [ネットワーク プロトコルとネットワーク ライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)  

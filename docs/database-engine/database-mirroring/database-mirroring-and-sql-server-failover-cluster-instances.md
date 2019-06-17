@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00397c644e2e9cffd04026d4cc4beb4ade4b69c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ce3c4df7141f6bf31c02e4376001a280135db5a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830861"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774733"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47830861"
   
  ![クラスターでのフェールオーバー](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "クラスターでのフェールオーバー")  
   
- ミラーリング セッションを構成する 3 つのサーバー インスタンスが、それぞれ異なるクラスター **Cluster_A**、 **Cluster_B**、および **Cluster_C**に配置されています。 各クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスとして実行されています。 ミラーリング セッションが開始されると、 **Cluster_A** のフェールオーバー クラスター インスタンスはプリンシパル サーバー、 **Cluster_B** のフェールオーバー クラスター インスタンスはミラー サーバー、 **Cluster_C** のフェールオーバー クラスター インスタンスはミラーリング監視サーバーとして機能します。 ここで、 **Cluster_A** でのアクティブなノードで障害が発生し、プリンシパル サーバーが利用できなくなったとします。  
+ ミラーリング セッションを構成する 3 つのサーバー インスタンスが、それぞれ異なる次のクラスターに配置されています: **Cluster_A**、**Cluster_B**、**Cluster_C**。 各クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスとして実行されています。 ミラーリング セッションが開始されると、 **Cluster_A** のフェールオーバー クラスター インスタンスはプリンシパル サーバー、 **Cluster_B** のフェールオーバー クラスター インスタンスはミラー サーバー、 **Cluster_C** のフェールオーバー クラスター インスタンスはミラーリング監視サーバーとして機能します。 ここで、 **Cluster_A** でのアクティブなノードで障害が発生し、プリンシパル サーバーが利用できなくなったとします。  
   
  クラスターがフェールオーバーを行う前に、ミラーリング監視サーバーを併用することにより、プリンシパル サーバーが使用できなくなったことがミラー サーバーによって検出されます。 ミラー サーバーは、可能な限り短時間でこのサーバーにあるデータベースをロールフォワードし、プリンシパル データベースとしてこれをオンラインにします。 **Cluster_A** のフェールオーバーが完了すると、これまでのプリンシパル サーバーは現在はミラー サーバーになり、このサーバーのデータベースが **Cluster_B**の現在のプリンシパル データベースと同期されます。  
   

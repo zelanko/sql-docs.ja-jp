@@ -12,52 +12,35 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 30cdbd1624e2fd8cd17ca4d0cf36cb8cb8f93b92
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 409c6a27b03eb4a7f84038df005a8c625b4011ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974421"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793523"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) を使用した Always On 可用性グループの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 機能を有効にする [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のインスタンス上で可用性グループを作成および構成するために [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
   
 > [!NOTE]  
->  可用性グループの概要については、「 [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
-  
--   **作業を開始する準備:**  
-  
-     [前提条件](#PrerequisitesRestrictions)  
-  
-     [セキュリティ](#Security)  
-  
-     [作業の概要および対応する Transact-SQL ステートメント](#SummaryTsqlStatements)  
-  
--   **可用性グループを作成して構成するには、次に従います。**[Transact-SQL](#TsqlProcedure)  
-  
--   **例:**[Windows 認証を使用した可用性グループの構成](#ExampleConfigAGWinAuth)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
+>  可用性グループの概要については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)]の代わりに、可用性グループの作成ウィザードまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用する方法もあります。 詳細については、「 [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)」、「 [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)」、または「 [可用性グループの作成 &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)」を参照してください。  
+
   
-##  <a name="BeforeYouBegin"></a> はじめに  
- 可用性グループを初めて作成する場合は、あらかじめこのセクションに目を通しておくことを強くお勧めします。  
+## <a name="PrerequisitesRestrictions"></a> 前提条件、制限事項、および推奨事項  
   
-###  <a name="PrerequisitesRestrictions"></a> 前提条件、制限事項、および推奨事項  
+-   可用性グループを作成する前に、可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが同じ Windows Server フェールオーバー クラスタリング (WSFC) フェールオーバー クラスター内の別の WSFC ノードに存在していることを確認します。 また、各サーバー インスタンスが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他のすべての前提条件を満たしていることも確認します。 詳細については、「[Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照することを強くお勧めします。  
   
--   可用性グループを作成する前に、可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスが同じ Windows Server フェールオーバー クラスタリング (WSFC) フェールオーバー クラスター内の別の WSFC ノードに存在していることを確認します。 また、各サーバー インスタンスが [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他のすべての前提条件を満たしていることも確認します。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
   
+##  <a name="TsqlProcedure"></a> Transact-SQL を使用した可用性グループの作成と構成 
+
 ###  <a name="SummaryTsqlStatements"></a> 作業の概要および対応する Transact-SQL ステートメント  
  次の表は、可用性グループの作成と構成に伴う基本的な作業と、これらの作業に使用する [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの一覧です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関連したこれらの作業は、この表に示されている順に実行する必要があります。  
   
@@ -69,10 +52,9 @@ ms.locfileid: "57974421"
 |セカンダリ データベースを準備する|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) および [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md)|プライマリ レプリカをホストするサーバー インスタンスでバックアップを作成します。<br /><br /> セカンダリ レプリカをホストする各サーバー インスタンス上で、RESTORE WITH NORECOVERY を使用してバックアップを復元します。|  
 |各セカンダリ データベースを可用性グループに参加させてデータ同期を開始する|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|セカンダリ レプリカをホストする各サーバー インスタンスで実行します。|  
   
- *ここに記載されたサーバー インスタンスに接続して作業を実行します。  
-  
-##  <a name="TsqlProcedure"></a> Transact-SQL を使用した可用性グループの作成と構成  
-  
+ *ここに記載されたサーバー インスタンスに接続して作業を実行します。   
+ 
+### <a name="using-transact-sql"></a>Transact-SQL の使用 
 > [!NOTE]  
 >  これらの各 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントのコード例が使用された構成手順の例については、「[例:Windows 認証を使用した可用性グループの構成](#ExampleConfigAGWinAuth)」を参照してください。  
   

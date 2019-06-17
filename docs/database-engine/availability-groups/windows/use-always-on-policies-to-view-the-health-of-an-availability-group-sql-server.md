@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f658ae1bfbfca7a487157c0129d67a12e890a2e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 0c01218cf7303653464814a554771d2ea386f1fb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523537"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803451"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn ポリシーを使用した可用性グループの正常性の確認 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,19 +27,9 @@ ms.locfileid: "52523537"
 > [!IMPORTANT]  
 >  AlwaysOn ポリシーでは、カテゴリの名前が ID として使用されます。 AlwaysOn カテゴリの名前を変更すると、正常性評価の機能を使用できなくなります。 このため、AlwaysOn カテゴリの名前は変更しないでください。  
   
--   **作業を開始する準備:** [セキュリティ](#Security)  
   
--   **AlwaysOn ポリシーを使用して可用性グループの正常性を確認する場合に使用するツール:**  
   
-     [AlwaysOn ダッシュボード](#SSMSProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
-  
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  CONNECT、VIEW SERVER STATE、および VIEW ANY DEFINITION 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> AlwaysOn ダッシュボードの使用  
@@ -129,9 +119,9 @@ ms.locfileid: "52523537"
   
 -   [パート 2: 高度なコマンドレットの使用方法](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
   
--   [パート 3: 単純な監視アプリケーション](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+-   [パート 3: シンプルな監視アプリケーション](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
   
--   [パート 4: SQL Server エージェントの統合](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+-   [パート 4: SQL Server エージェントとの統合](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

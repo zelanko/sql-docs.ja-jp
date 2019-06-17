@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a3fba818dbedfe7d21f3b3a9527ed3b83f085ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63055157"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>PowerPivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2016)
@@ -54,7 +54,7 @@ ms.locfileid: "63055157"
 > [!NOTE]  
 >  Analysis Services データ プロバイダーは、 **spPowerPivot16.msi**を使用して SharePoint 2016 サーバーにインストールする必要があります。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Feature Pack に用意されている他のインストーラー パッケージには、この環境でデータ プロバイダーが必要とする SharePoint 2016 サポート ファイルが含まれていないため、これらのパッケージはサポートされていません。  
   
- **構成ツール:**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] SharePoint サーバーの 1 つのみで構成ツールが必要です。 ただし、ベスト プラクティスとして、マルチサーバー ファームでは少なくとも 2 台のサーバーに構成ツールをインストールし、一方のサーバーがオフラインの場合でも構成ツールにアクセスできるようにしておくことをお勧めします。  
+ **構成ツール:** [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] SharePoint サーバーの 1 つのみで構成ツールが必要です。 ただし、ベスト プラクティスとして、マルチサーバー ファームでは少なくとも 2 台のサーバーに構成ツールをインストールし、一方のサーバーがオフラインの場合でも構成ツールにアクセスできるようにしておくことをお勧めします。  
   
 ##  <a name="bkmk_prereq"></a> 要件と前提条件  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63055157"
 6.  **[インストール]** を選択してインストールし、インストールを終了します。  
   
 ### <a name="command-line-installation"></a>コマンド ライン インストール  
- コマンド ライン インストールでは、管理権限でコマンド プロンプトを開き、 **spPowerPivot16.msi**を実行します。 以下に例を示します。  
+ コマンド ライン インストールでは、管理権限でコマンド プロンプトを開き、 **spPowerPivot16.msi**を実行します。 例 :  
   
  `Msiexec.exe /i spPowerPivot16.msi`」を参照してください。  
   
@@ -145,7 +145,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADO
   
  **構成ツールを起動するには、次の手順を実行します。**  
   
- Windows のスタート画面から「power」と、アプリの検索結果で選択**[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]構成**します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップによって SharePoint 2013 と SharePoint 2016 のそれぞれの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールがインストールされるため、検索結果には 2 つのリンクが含まれる場合があることに注意してください。 必ず [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 構成ツールを起動してください。  
+ Windows のスタート画面から「power」と、アプリの検索結果で選択 **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]構成**します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップによって SharePoint 2013 と SharePoint 2016 のそれぞれの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールがインストールされるため、検索結果には 2 つのリンクが含まれる場合があることに注意してください。 必ず [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 構成ツールを起動してください。  
   
  ![PowerPivot for SharePoint 2016 構成](../../../analysis-services/instances/install-windows/media/powerpivot-for-sharepoint-2016-configuration.png "PowerPivot for SharePoint 2016 構成")  
   
@@ -157,7 +157,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADO
   
 3.  **[構成ツール]** を選択します。  
   
-4.  **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] の構成]** を選択します。  
+4.  **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] の構成**を選択します。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」をご覧ください。  
   

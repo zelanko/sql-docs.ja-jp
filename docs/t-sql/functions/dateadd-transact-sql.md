@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943682"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469642"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ DATEADD (datepart , number , date )
 *date* の場合、`DATEADD` では、列式、式、文字列リテラル、ユーザー定義の変数が受け入れられます。 文字列リテラル値は **datetime** に解決する必要があります。 あいまいさの問題を排除するために、4 桁の西暦を使用してください。 2 桁の西暦については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-*date* 引数データ型は、文字列リテラル *date* 値を除き、`DATEADD` 戻り値データ型になります。 文字列リテラルの場合、`DATEADD` は **datetime** 値を返します。 `DATEADD` は、文字列リテラルの秒の小数点以下桁数 (.nnn) が 3 を超えるか、文字列リテラルにタイム ゾーン オフセット部分が含まれる場合、エラーを出します。
+
+このメソッドの戻り値のデータ型は動的です。 戻り値の型は、`date` に与えられた引数によって異なります。 `date` の値が文字列リテラル日付であれば、`DATEADD` からは **datetime** 値が返されます。 別の有効な入力データ型が `date` に指定された場合、`DATEADD` からは同じデータ型が返されます。 `DATEADD` は、文字列リテラルの秒の小数点以下桁数 (.nnn) が 3 を超えるか、文字列リテラルにタイム ゾーン オフセット部分が含まれる場合、エラーを出します。
   
 ## <a name="return-value"></a>戻り値  
   

@@ -1,5 +1,5 @@
 ---
-title: 証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL) | Microsoft Docs
+title: 例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e095d56a6b68e581a7d6f9184581575fac9f6c4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 06d8ddd5710b41a80a41643bc2df194ad9c3981c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542733"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795474"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>証明書を使用したデータベース ミラーリングの設定の例 (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   この例では、証明書ベースの認証を使用してデータベース ミラーリング セッションを作成するために必要なすべての段階について説明します。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  
   

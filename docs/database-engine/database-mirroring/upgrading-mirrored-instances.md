@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aad8a5ee94f9d4cc2320b8c31a7d32d44dea57f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d7335d16f428af13813cea36de6a7de79e1faf95
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515986"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795133"
 ---
 # <a name="upgrading-mirrored-instances"></a>ミラー化されたインスタンスのアップグレード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "52515986"
 ## <a name="prerequisites"></a>Prerequisites  
  作業を開始する前に、次の重要な情報を確認してください。  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 自分のバージョンの Windows オペレーティング システムと SQL Server から SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
+-   [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md):使用している Windows オペレーティング システムと SQL Server のバージョンから SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
   
--   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): サポートされるバージョンとエディションのアップグレードに基づいて、適切なアップグレードの方法と手順を選択します。また、自分の環境にインストールされているその他のコンポーネントに基づいて、正しい順序でコンポーネントをアップグレードします。  
+-   [データベース エンジンのアップグレード方法の選択](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md):サポートされるバージョンとエディションのアップグレードを確認して、適切なアップグレードの方法と手順を選択します。また、環境にインストールされているその他のコンポーネントに基づいて、正しい順序でコンポーネントをアップグレードします。  
   
--   [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
+-   [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md):リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
   
--   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]をインストールするためのソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
+-   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストールにおけるソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
   
 ## <a name="recommended-preparation-best-practices"></a>推奨される準備 (ベスト プラクティス)  
  ローリング アップグレードを開始する前に以下を実行することをお勧めします。  
@@ -92,13 +92,13 @@ ms.locfileid: "52515986"
 1.  ミラーリング セッションにミラーリング監視サーバーが存在する場合は、ローリング アップグレードの実行前にミラーリング監視サーバーを削除しておくことをお勧めします。 そうしないと、ミラー サーバー インスタンスをアップグレードする際のデータベースの可用性が、プリンシパル サーバー インスタンスに接続されたミラーリング監視サーバーに依存することになります。 削除したミラーリング監視サーバーは、ローリング アップグレード プロセス中にいつでもアップグレードでき、また、そうすることでデータベースのダウンタイムを最小限に抑えることができます。  
   
     > [!NOTE]  
-    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
     -   [データベース ミラーリング セッションからのミラーリング監視サーバーの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>ローリング アップグレードを実行するには  
   
-1.  ローリング アップグレードを開始する際は、ダウンタイムを最小限に抑えるため、すべてのミラーリング セッションにおいてミラー サーバーとして機能しているミラーリング パートナーから先に更新することをお勧めします。 場合によっては、この時点で複数のサーバー インスタンスを更新する必要があります。  
+1.  ダウンタイムを最小限に抑えるため、次をお勧めします: ローリング アップグレードを開始する際は、すべてのミラーリング セッションにおいてミラー サーバーとして機能しているミラーリング パートナーから先に更新します。 場合によっては、この時点で複数のサーバー インスタンスを更新する必要があります。  
   
     > [!NOTE]  
     >  ミラーリング監視サーバーは、ローリング アップグレード プロセス中、いつでもアップグレードできます。 たとえば、セッション 1 ではミラー サーバーとして、セッション 2 ではミラーリング監視サーバーとして機能しているサーバー インスタンスであれば、今すぐにアップグレードすることもできます。  
@@ -140,9 +140,9 @@ ms.locfileid: "52515986"
   
 1.  必要に応じて、高パフォーマンス モードに戻す場合は、次のいずれかの方法を使用します。  
   
-    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページで、 [[動作モード]](../../relational-databases/databases/database-properties-mirroring-page.md) オプションを **[高パフォーマンス (非同期)]** に変更します。  
+    -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページで、[[動作モード]](../../relational-databases/databases/database-properties-mirroring-page.md) オプションを **[高パフォーマンス (非同期)]** に変更します。  
   
-    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)を使用してトランザクションの安全性を OFF に設定します。  
+    -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) を使用してトランザクションの安全性を OFF に設定します。  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>ミラーリング監視サーバーをミラーリング セッションに戻すには  
   

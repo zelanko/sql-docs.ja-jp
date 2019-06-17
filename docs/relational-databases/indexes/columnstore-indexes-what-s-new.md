@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4601435dcaf7cbc82cb4fb6e6e00ea911ef12f9f
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 34a8cc218cac621a678ae32ced63166ead9ffef0
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044389"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749126"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "55044389"
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] での新機能は次のとおりです。
 
 ### <a name="functional"></a>機能
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] は、クラスター化列ストア インデックス内の保存されない計算列をサポートします。 保存される計算列は、クラスター化列ストア インデックスではサポートされません。計算列を含む列ストア インデックスに非クラスター化インデックスを作成することはできません。 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] は、クラスター化列ストア インデックス内の保存されない計算列をサポートします。 保存される計算列は、クラスター化列ストア インデックス内ではサポートされません。 計算列が含まれる列ストア インデックスに非クラスター化インデックスを作成することはできません。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、パフォーマンスと列ストア インデックスの柔軟性を向上させるために重要な機能強化が追加されます。 これらの機能強化により、データ ウェアハウスのシナリオが強化され、リアルタイムの運用分析が可能になります。  

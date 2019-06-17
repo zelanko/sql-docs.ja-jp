@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3e8497e4f5a8b5e74b7bb0b5d9c01cef78e275d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017170"
 ---
 # <a name="change-the-membership-of-a-job-category"></a>Change the Membership of a Job Category
@@ -56,13 +56,13 @@ ms.locfileid: "63017170"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  **server_name**__ ダイアログ ボックスで、編集するジョブ カテゴリを選択し、 **ジョブの表示**をクリックします。  
+4.  **_server_name_** ダイアログ ボックスで、編集するジョブ カテゴリを選択し、 **ジョブの表示**をクリックします。  
   
 5.  **[すべてのジョブを表示]** チェック ボックスをオンにします。  
   
 6.  カテゴリにジョブを追加するには、メイン グリッドで、ジョブに対応する **[選択]** 列のチェック ボックスをオンにします。 カテゴリからジョブを削除するには、チェック ボックスをオフにします。 完了したら、 **[OK]** をクリックします。  
   
-7.  **&lt;server_name&gt;**__ ダイアログ ボックスを閉じます。  
+7.  **[ジョブ カテゴリの管理 - _<server_name>_ ]** ダイアログ ボックスを閉じます。  
   
 ##  <a name="TSQL"></a> Transact-SQL の使用  
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0cbe80b602b0882604df23b2f7fa3f6fcdf633b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2692fc27400a5da76e05ce3931502b8b492eca8c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740910"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799461"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47740910"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して index create memory オプションを構成するには:**  
   
@@ -41,9 +41,9 @@ ms.locfileid: "47740910"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [index create memory オプションを構成した後](#FollowUp)  
+-   **補足情報:**[index create memory オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47740910"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `index create memory` オプションの値を `4096`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `index create memory` オプションの値を `4096`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -100,9 +100,9 @@ RECONFIGURE;
 GO  
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: index create memory オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: index create memory オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

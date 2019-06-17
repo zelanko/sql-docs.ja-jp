@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fccd4169245421dd33cb5f41bac85861679de823
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088610"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 ハイブリッド クラウドの概要
@@ -99,7 +99,7 @@ ms.locfileid: "66088610"
  
  通常、Azure 仮想マシンを実行している SQL Server をオンプレミスの SQL Server からデータベースを移動する方法は、これらのパスのいずれかです。 
  
--  **データベースのみの移動。** いくつかのツールと Azure Virtual Machines における SQL Server への既存のオンプレミス データベースの移動に使用できる手法があります。 ガイドラインと Azure Virtual Machines における SQL Server への移行に関する推奨事項は、次を参照してください[Azure Virtual Machines における SQL Server に移行する準備を行う](https://msdn.microsoft.com/library/dn133142.aspx)また[Azure 仮想マシンで SQL Server への移行。](https://msdn.microsoft.com/library/jj156165.aspx). 
+-  **データベースのみの移動。** いくつかのツールと Azure Virtual Machines における SQL Server への既存のオンプレミス データベースの移動に使用できる手法があります。 ガイドラインと Azure Virtual Machines における SQL Server への移行に関する推奨事項は、次を参照してください[Azure Virtual Machines における SQL Server に移行する準備を行う](https://msdn.microsoft.com/library/dn133142.aspx)また[Azure 仮想マシンで SQL Server への移行](https://msdn.microsoft.com/library/jj156165.aspx)。 
  
    さらに、SQL Server 2014 以降で、新しいウィザードでは、 [Microsoft Azure 仮想マシンに SQL Server データベースのデプロイ](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)Azure 仮想マシンで実行されている別の SQL Server インスタンスにデータベースを配置することができます。 
  

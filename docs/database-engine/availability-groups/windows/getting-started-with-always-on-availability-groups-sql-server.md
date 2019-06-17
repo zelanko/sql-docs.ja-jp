@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c99d04b216a4e8255c4e03b7cb30906ca15661b8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 834a12c24195da635782f00e1bc3c7c4e7b6cc57
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213471"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800786"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Always On 可用性グループの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] をサポートするように [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のインスタンスを構成する手順と可用性グループを作成、管理、および監視する手順について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="RecommendedReading"></a> 推奨トピック  
+##  <a name="RecommendedReading"></a> 推奨トピック  
  可用性グループを初めて作成する場合は、あらかじめ次のトピックに目を通しておくことをお勧めします。  
   
 -   [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
@@ -49,7 +48,7 @@ ms.locfileid: "53213471"
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|**可用性グループを作成します。** 可用性グループに追加するデータベースをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで可用性グループを作成します。<br /><br /> 可用性グループを作成する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで、少なくとも初期プライマリ レプリカを作成します。 1 ～ 4 個のセカンダリ レプリカを指定できます。 可用性グループとレプリカのプロパティについては、「[CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)」をご覧ください。<br /><br /> [可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)を作成することを強くお勧めします。<br /><br /> **前提条件:** 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスは、同じ WSFC クラスターの別のノードに存在する必要があります。 唯一の例外は、別の WSFC クラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。<br /><br /> その他の前提条件については、「 [AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)を有効にする:|可用性グループを作成する場合は、次のツールを使用できます。<br /><br /> [新しい可用性グループ ウィザード](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [SQL Server PowerShell](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|**セカンダリ レプリカの可用性グループへの参加** セカンダリ レプリカをホストしている [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の各インスタンスに接続し、ローカル セカンダリ レプリカを可用性グループに参加させます。|[可用性グループへのセカンダリ レプリカの参加](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> ヒント:新しい可用性グループ ウィザードを使用すると、この手順が自動化されます。|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|**セカンダリ データベースを準備する:** セカンダリ レプリカをホストしている各サーバー インスタンスで、RESTORE WITH NORECOVERY を使用してプライマリ データベースのバックアップを復元します。|[セカンダリ データベースの手動準備](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> ヒント:新しい可用性グループ ウィザードを使用して、セカンダリ データベースを自動的に準備できます。 詳細については、「[[最初のデータの同期を選択] ページ &#40;AlwaysOn 可用性グループ ウィザード&#41;](../../../database-engine/availability-groups/windows/select-initial-data-synchronization-page-always-on-availability-group-wizards.md)」の「初期データの完全同期を使用するための前提条件」を参照してください。|  
-|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|**セカンダリ データベースを可用性グループに参加させる:** セカンダリ レプリカをホストしている各サーバー インスタンスで、各ローカル セカンダリ データベースを可用性グループに参加させます。 可用性グループに参加すると、セカンダリ データベースは対応するプライマリ データベースとのデータ同期を開始します。|[可用性グループへのセカンダリ データベースの参加](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> ヒント:各セカンダリ レプリカにそれぞれセカンダリ データベースが存在する場合は、新しい可用性グループ ウィザードでこの手順を実行できます。|  
+|![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|**セカンダリ データベースを可用性グループに参加させる:** セカンダリ レプリカをホストしている各サーバー インスタンスで、各ローカル セカンダリ データベースを可用性グループに参加させます。 可用性グループに参加すると、セカンダリ データベースは対応するプライマリ データベースとのデータ同期を開始します。|[可用性グループへのセカンダリ データベースの参加](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> ヒント:各セカンダリ レプリカにそれぞれセカンダリ データベースが存在する場合は、新しい可用性グループ ウィザードでこの手順を行うことができます。|  
 ||**[可用性グループ リスナーの作成]**  可用性グループ リスナーをまだ作成していない場合、可用性グループを作成するときにこの手順を実行する必要があります。|[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|**アプリケーション開発者にリスナーの DNS ホスト名を伝えます。**  開発者は、可用性グループ リスナーに接続要求を送信するために、接続文字列でこの DNS 名を指定する必要があります。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。|「[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」の「補足情報:可用性グループ リスナーの作成後」|  
 |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|**バックアップ ジョブを実行する場所を構成します。**  セカンダリ データベースでバックアップを実行する場合は、自動バックアップ設定を考慮に入れてバックアップ ジョブのスクリプトを作成する必要があります。 可用性グループの可用性レプリカをホストする各サーバー インスタンスで、可用性グループのデータベースごとにスクリプトを作成します。|「[可用性レプリカでのバックアップの構成 &#40;SQLServer&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)」の「補足情報: セカンダリ レプリカでバックアップを構成した後」|  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415252"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772230"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 接続構成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -57,29 +57,29 @@ RECONFIGURE
   
  Hadoop の接続設定とそれに対応してサポートされる Hadoop データ ソースがあります。 一度に 1 つの設定だけを有効にすることができます。 オプション 1、4、および 7 では、複数の種類の外部データ ソースを作成して、サーバー上のすべてのセッションで使用することができます。  
   
--   オプション 0: Hadoop 接続の無効化  
+-   オプション 0:Hadoop 接続の無効化  
   
--   オプション 1: Windows Server 上の Hortonworks HDP 1.3  
+-   オプション 1:Windows Server 上の Hortonworks HDP 1.3  
   
--   オプション 1: Azure BLOB ストレージ (WASB[S])  
+-   オプション 1:Azure BLOB ストレージ (WASB[S])  
   
--   オプション 2: Linux 上の Hortonworks HDP 1.3  
+-   オプション 2:Linux 上の Hortonworks HDP 1.3  
   
--   オプション 3: Linux 上の Cloudera CDH 4.3  
+-   オプション 3:Linux 上の Cloudera CDH 4.3  
   
--   オプション 4: Windows Server 上の Hortonworks HDP 2.0  
+-   オプション 4:Windows Server 上の Hortonworks HDP 2.0  
   
--   オプション 4: Azure BLOB ストレージ (WASB[S])  
+-   オプション 4:Azure BLOB ストレージ (WASB[S])  
   
--   オプション 5: Linux 上の Hortonworks HDP 2.0  
+-   オプション 5:Linux 上の Hortonworks HDP 2.0  
   
--   オプション 6: Linux 上の Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11、5.12、5.13  
+-   オプション 6:Linux 上の Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11、5.12、5.13  
   
--   オプション 7: Linux 上の Hortonworks 2.1、2.2、2.3、2.4、2.5、2.6、3.0  
+-   オプション 7:Linux 上の Hortonworks 2.1、2.2、2.3、2.4、2.5、2.6、3.0  
   
--   オプション 7: Windows Server 上の Hortonworks 2.1、2.2、および 2.3  
+-   オプション 7:Windows Server 上の Hortonworks 2.1、2.2、2.3  
   
--   オプション 7: Azure BLOB ストレージ (WASB[S])  
+-   オプション 7:Azure BLOB ストレージ (WASB[S])  
   
  **RECONFIGURE**  
  構成値 (config_value) と一致するように、実行値 (run_value) を更新します。 run_value と config_value の定義については、「 [結果セット](#ResultSets) 」を参照してください。 sp_configure で設定されている新しい構成値は、実行値が RECONFIGURE ステートメントで設定されるまで有効になりません。  

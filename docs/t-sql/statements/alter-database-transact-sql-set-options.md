@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a13bc9ae6b49d4623c405a2501f2e7574f79aba
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198329"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785119"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -210,7 +210,7 @@ SET
     | MAX_STORAGE_SIZE_MB = number
     | INTERVAL_LENGTH_MINUTES = number
     | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
-    | QUERY_CAPTURE_MODE = { ALL | AUTO | NONE }
+    | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
     | MAX_PLANS_PER_QUERY = number
     | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
     | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
@@ -218,10 +218,10 @@ SET
 
 <query_capture_policy_option_list> :: =
 {
-    EXECUTION_COUNT = number
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
-    | TOTAL_EXECUTION_CPU_TIME_MS = number
-    | STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | TOTAL_EXECUTION_CPU_TIME_MS = number      
 }
 
 <recovery_option> ::=
@@ -322,7 +322,7 @@ AUTO_CLOSE オプションを使用すると、データベース ファイル�
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
 ON         
-クエリ プランを改善してクエリのパフォーマンスを向上させるために、クエリ オプティマイザーが必要に応じてクエリ述語内の列に対して 1 列ずつ統計を作成します。 これらの統計は、クエリ オプティマイザーがクエリをコンパイルするときに作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
+クエリ プランを改善してクエリのパフォーマンスを向上させるために、クエリ オプティマイザーが必要に応じてクエリ述語内の列に対して 1 列ずつ統計を作成します。 これらの 1 列ずつの統計は、クエリ オプティマイザーがクエリをコンパイルする場合に作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
 
 既定値は ON です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
 
@@ -361,9 +361,9 @@ OFF
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
 ON         
-クエリで使用される統計が古くなっている可能性がある場合にクエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
+クエリで使用される場合、および統計が古くなっている可能性がある場合に、クエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
-クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 この情報は、クエリがコンパイルされる前に判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
+クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、古くなっている可能性がある統計を判断するため、クエリ述語内の列、テーブル、およびインデックス付きビューが使用されます。 この情報は、クエリがコンパイルされる前にクエリ オプティマイザーによって判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
 
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計、クエリ述語内の列に対して 1 列ずつ作成された統計、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。
 
@@ -372,7 +372,7 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
 統計を同期的に更新するか非同期的に更新するかを指定するには、AUTO_UPDATE_STATISTICS_ASYNC オプションを使用します。
 
 OFF         
-統計がクエリで使用されるときに、クエリ オプティマイザーによって統計が更新されません。 また、統計が古くなっている可能性がある場合でも、クエリオプティマイザーによって更新されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
+統計がクエリで使用されるときに、クエリ オプティマイザーによって統計が更新されないことを指定します。 また、統計が古くなっている可能性がある場合は、クエリオプティマイザーによって更新されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_update_stats_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAutoUpdateStatistics プロパティを調べて状態を確認することもできます。
 
@@ -380,11 +380,11 @@ OFF
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
 ON         
-AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。
+AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待たずにクエリをコンパイルします。
 
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを ON に設定しても、効果はありません。
 
-既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは OFF に設定されており、クエリ オプティマイザーによる統計の更新は同期更新になります。
+既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは OFF に設定されており、クエリ オプティマイザーによる統計は同期更新となります。
 
 OFF         
 AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。
@@ -540,7 +540,7 @@ EMERGENCY
 データベースは READ_ONLY に設定され、ログ記録が無効になり、アクセスが sysadmin 固定サーバー ロールのメンバーに制限されます。 EMERGENCY は、主にトラブルシューティングの目的で使用されます。 たとえば、破損したログ ファイルが原因で問題ありとマークされたデータベースを EMERGENCY 状態に設定できます。 この設定で、システム管理者はデータベースに読み取り専用でアクセスできるようになります。 sysadmin 固定サーバー ロールのメンバーのみが、データベースを EMERGENCY 状態に設定できます。
 
 > [!NOTE]
-> **権限:** データベースを OFFLINE または EMERGENCY 状態に変更するには、サブジェクト データベースに対する ALTER DATABASE 権限が必要です。 データベースを OFFLINE から ONLINE にするには、サーバー レベルの ALTER ANY DATABASE 権限が必要です。
+> **Permissions:** データベースを OFFLINE または EMERGENCY 状態に変更するには、サブジェクト データベースに対する `ALTER DATABASE` 権限が必要です。 データベースを OFFLINE から ONLINE にするには、サーバー レベルの `ALTER ANY DATABASE` 権限が必要です。
 
 このオプションの状態を確認するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの state and state_desc 列を調べてください。 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の Status プロパティを調べて状態を確認することもできます。 詳細については、「 [データベースの状態](../../relational-databases/databases/database-states.md)」を参照してください。
 
@@ -1367,8 +1367,9 @@ SET QUERY_STORE = ON
       WAIT_STATS_CAPTURE_MODE = ON,
       QUERY_CAPTURE_MODE = CUSTOM,
       QUERY_CAPTURE_POLICY = (
-        EXECUTION_COUNT = 30
-        TOTAL_COMPILE_CPU_TIME_MS = 1000
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
         TOTAL_EXECUTION_CPU_TIME_MS = 100 
       )
     );
@@ -1540,26 +1541,34 @@ SET
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。
+*database_name*         
+変更するデータベースの名前です。
 
-CURRENT `CURRENT` を指定すると、現在のデータベースでアクションが実行されます。 `CURRENT` は、すべてのコンテキスト内のすべてのオプションでサポートされるわけではありません。 `CURRENT` でエラーが発生した場合は、データベース名を指定してください。
+CURRENT         
+`CURRENT` を指定すると、現在のデータベースでアクションが実行されます。 `CURRENT` は、すべてのコンテキスト内のすべてのオプションでサポートされるわけではありません。 `CURRENT` でエラーが発生した場合は、データベース名を指定してください。
 
 **\<auto_option> ::=**
 
 自動オプションを制御します。
-<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }: ON: クエリ プランを改善してクエリのパフォーマンスを向上するために必要な場合、クエリ オプティマイザーによってクエリ述語内の列に対して 1 列ずつ統計が作成されます。 これらの統計は、クエリ オプティマイザーがクエリをコンパイルするときに作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
+<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
+ON         
+クエリ プランを改善してクエリのパフォーマンスを向上させるために、クエリ オプティマイザーでは、必要に応じてクエリ述語内の列に対して 1 列ずつ統計を作成します。 これらの統計は、クエリ オプティマイザーがクエリをコンパイルするときに作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
 
 既定値は ON です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
 
-OFF: クエリ オプティマイザーがクエリをコンパイルするときにクエリ述語内の列の 1 列ずつの統計が作成されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
+OFF         
+クエリ オプティマイザーでは、クエリをコンパイルするときにクエリ述語内の列に対して 1 列ずつ統計を作成しません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_create_stats_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAutoCreateStatistics プロパティを調べて状態を確認することもできます。
 
 詳細については、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-INCREMENTAL = ON | OFF AUTO_CREATE_STATISTICS を ON に設定し、INCREMENTAL を ON に設定します。 増分統計がサポートされている場合、この設定で、自動的に作成される統計情報は、常に増分として作成されます。 既定値は OFF です。 詳しくは、「[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
+INCREMENTAL = ON | OFF         
+AUTO_CREATE_STATISTICS を ON に設定し、INCREMENTAL を ON に設定します。 増分統計がサポートされている場合、この設定で、自動的に作成される統計情報は、常に増分として作成されます。 既定値は OFF です。 詳しくは、「[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
 
-<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }: ON: データベース ファイルが定期的な圧縮の対象になります。
+<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }         
+ON         
+データベース ファイルを定期的な圧縮処理の対象とします。
 
 データ ファイルとログ ファイルの両方を、自動的に圧縮できます。 AUTO_SHRINK では、データベースを単純復旧モデルに設定している場合、またはログをバックアップしている場合にのみ、トランザクション ログのサイズが圧縮されます。 OFF: 未使用領域の定期チェックの際に、データベース ファイルは自動的に圧縮されません。
 
@@ -1570,14 +1579,17 @@ AUTO_SHRINK オプションを使用すると、ファイル領域の 25% を超
 
 読み取り専用データベースは圧縮できません。
 
-OFF: データベース ファイルは、未使用領域の定期的なチェックの際に、自動的に圧縮されません。
+OFF         
+データベース ファイルは、未使用領域の定期的なチェックの際に、自動的に圧縮されません。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_shrink_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAutoShrink プロパティを調べて状態を確認することもできます。
 
 > [!NOTE]
 > AUTO_SHRINK オプションは、包含データベースでは使用できません。
 
-<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }: ON: クエリで使用される統計が古くなっている可能性があると、クエリ オプティマイザーによって統計が更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
+ON         
+クエリで使用される統計が古くなっている可能性がある場合にクエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
 クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 この情報は、クエリがコンパイルされる前に判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
 
@@ -1587,19 +1599,23 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
 
 統計を同期的に更新するか非同期的に更新するかを指定するには、AUTO_UPDATE_STATISTICS_ASYNC オプションを使用します。
 
-OFF: 統計がクエリで使用されるときに、クエリ オプティマイザーによって統計が更新されません。 また、統計が古くなっている可能性がある場合でも、クエリオプティマイザーによって更新されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
+OFF         
+統計がクエリで使用されるときに、クエリ オプティマイザーによって統計が更新されません。 また、統計が古くなっている可能性がある場合でも、クエリオプティマイザーによって更新されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_update_stats_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAutoUpdateStatistics プロパティを調べて状態を確認することもできます。
 
 詳細については、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }: ON: AUTO UPDATE STATISTICS オプションの統計の更新が非同期になります。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。
+<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
+ON         
+AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。
 
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを ON に設定しても、効果はありません。
 
 既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは OFF に設定されており、クエリ オプティマイザーによる統計の更新は同期更新になります。
 
-OFF: AUTO_UPDATE_STATISTICS オプションの統計の更新が同期されます。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。
+OFF         
+AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。
 
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを OFF に設定しても、効果はありません。
 
@@ -1607,50 +1623,70 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
-**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
+**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 [自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)に関する自動オプションを制御します。
 
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO 自動調整の値を AUTO に設定すると、自動調整に Azure 構成の既定値が適用されます。
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }         
+AUTO         
+自動チューニングの値を AUTO に設定すると、自動チューニングに Azure 構成の既定値が適用されます。
 
-INHERIT 値 INHERIT を使用すると、親サーバーから既定の構成が継承されます。 親サーバー上の自動調整の構成をカスタマイズする必要があり、これらのカスタム設定を継承 (INHERIT) する、このようなサーバー上にデータベースがすべて存在する場合に特に便利です。 継承が機能するために、3 つの個別の調整オプションである FORCE_LAST_GOOD_PLAN、CREATE_INDEX、DROP_INDEX をデータベース上で DEFAULT に設定する必要があることに注意してください。
+INHERIT         
+値 INHERIT を使用すると、親サーバーから既定の構成が継承されます。 親サーバー上の自動調整の構成をカスタマイズする必要があり、これらのカスタム設定を継承 (INHERIT) する、このようなサーバー上にデータベースがすべて存在する場合に特に便利です。 継承が機能するために、3 つの個別の調整オプションである FORCE_LAST_GOOD_PLAN、CREATE_INDEX、DROP_INDEX をデータベース上で DEFAULT に設定する必要があることに注意してください。
 
-CUSTOM 値 CUSTOM を使用すると、データベース上で利用可能なそれぞれの自動調整オプションを手動でカスタムに構成する必要があります。
+CUSTOM         
+値 CUSTOM を使用すると、データベース上で利用可能なそれぞれの自動チューニング オプションを手動でカスタムに構成する必要があります。
 
 [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動インデックス管理 `CREATE_INDEX` オプションを有効または無効になります。
 
-CREATE_INDEX = { DEFAULT | ON | OFF } 既定 サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
+CREATE_INDEX = { DEFAULT | ON | OFF }         
+DEFALT         
+サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
 
-ON 有効にすると、不足しているインデックスがデータベース上で自動的に生成されます。 インデックスの作成に従って、ワークロードのパフォーマンスの向上が確認されます。 このような作成されたインデックスでこれ以上ワークロード パフォーマンスに利点が提供されなくなると、自動的に元に戻されます。 自動的に作成されたインデックスは、システムで生成されたインデックスとしてフラグが設定されます。
+ON         
+有効にすると、不足しているインデックスがデータベース上で自動的に生成されます。 インデックスの作成に従って、ワークロードのパフォーマンスの向上が確認されます。 このような作成されたインデックスでこれ以上ワークロード パフォーマンスに利点が提供されなくなると、自動的に元に戻されます。 自動的に作成されたインデックスは、システムで生成されたインデックスとしてフラグが設定されます。
 
-OFF: データベース上で不足しているインデックスが自動的に生成されません。
+OFF         
+データベース上で不足しているインデックスが自動的に生成されません。
 
 [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動インデックス管理 `DROP_INDEX` オプションを有効または無効になります。
 
-DROP_INDEX = { DEFAULT | ON | OFF }: DEFAULT: 既定 サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
+DROP_INDEX = { DEFAULT | ON | OFF }         
+DEFAULT         
+サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
 
-ON パフォーマンス ワークロードに対する重複または不要になったインデックスが自動的にドロップされます。
+ON         
+パフォーマンス ワークロードに対する重複または不要になったインデックスが自動的にドロップされます。
 
-OFF: データベース上で不足しているインデックスが自動的にドロップされません。
+OFF         
+データベース上で不足しているインデックスが自動的にドロップされません。
 
 [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動プラン修正 `FORCE_LAST_GOOD_PLAN` オプションを有効または無効になります。
 
-FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }: DEFAULT: サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }         
+DEFAULT         
+サーバーから既定の設定が継承されます。 この場合、個別の自動調整を有効または無効にするオプションは、サーバー レベルで定義されます。
 
-ON: 新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
+ON         
+新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
 
-OFF: [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
+OFF         
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
 
-**\<change_tracking_option> ::=**
+**\<change_tracking_option> ::=**         
 
 変更の追跡のオプションを制御します。 変更の追跡の有効化、オプションの設定、オプションの変更、および変更の追跡の無効化が可能です。 例については、後の「例」のセクションをご覧ください。
 
-ON: データベースの変更の追跡が有効になります。 変更の追跡を有効にすると、AUTO CLEANUP オプションと CHANGE RETENTION オプションも設定できます。
+ON         
+データベースの変更の追跡を有効にします。 変更の追跡を有効にすると、AUTO CLEANUP オプションと CHANGE RETENTION オプションも設定できます。
 
-AUTO_CLEANUP = { ON | OFF }: ON: 指定した保有期間を過ぎると、変更追跡情報が自動的に削除されます。
+AUTO_CLEANUP = { ON | OFF }         
+ON         
+指定した保有期間を過ぎると、変更追跡情報が自動的に削除されます。
 
-OFF: 変更追跡データはデータベースから削除されません。
+OFF         
+変更追跡データはデータベースから削除されません。
 
 CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }: データベースに変更追跡情報を保持する最低限の期間を指定します。 データは、AUTO_CLEANUP の値が ON のときにのみ削除されます。
 
@@ -1658,123 +1694,158 @@ CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }: データベー
 
 既定の保有期間は 2 日です。 最小保有期間は 1 分です。 保有期間の既定の型は DAYS です。
 
-OFF: データベースの変更の追跡は無効になります。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
+OFF         
+データベースの変更の追跡を無効にします。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
 
 **\<cursor_option> ::=**
 
 カーソル オプションを制御します。
 
-CURSOR_CLOSE_ON_COMMIT { ON | OFF }: ON: トランザクションをコミットまたはロール バックしたときに開いていたカーソルはすべて閉じられます。
+CURSOR_CLOSE_ON_COMMIT { ON | OFF }         
+ON         
+トランザクションをコミットまたはロール バックしたときに開いていたカーソルはすべて閉じられます。
 
-OFF: トランザクションがコミットされても、カーソルは開いたままになります。トランザクションをロールバックすると、INSENSITIVE または STATIC として定義されているカーソルを除き、すべてのカーソルが閉じます。
+OFF         
+トランザクションがコミットされても、カーソルは開いたままになります。トランザクションをロールバックすると、INSENSITIVE または STATIC として定義されているカーソルを除き、すべてのカーソルが閉じます。
 
 SET ステートメントを使用した接続レベルの設定は、CURSOR_CLOSE_ON_COMMIT の既定のデータベース設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、セッションの CURSOR_CLOSE_ON_COMMIT を OFF に設定する接続レベルの SET ステートメントを発行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続すると、クライアントはステートメントを実行します。 詳しくは、「[SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)」をご覧ください。
 
-sys.databases カタログ ビューの is_cursor_close_on_commit_on 列、または DATABASEPROPERTYEX 関数の IsCloseCursorsOnCommitEnabled プロパティを調べることで、このオプションの状態を確認できます。 接続が切断されたときだけカーソルが暗黙的に割り当てを解除されます。 詳しくは、「[DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
+sys.databases カタログ ビューの is_cursor_close_on_commit_on 列、または DATABASEPROPERTYEX 関数の `IsCloseCursorsOnCommitEnabled` プロパティを調べることで、このオプションの状態を確認できます。 接続が切断されたときだけカーソルが暗黙的に割り当てを解除されます。 詳しくは、「[DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
 
-**\<db_encryption_option> ::=**
+**\<db_encryption_option> ::=**         
 
 データベース暗号化の状態を制御します。
 
-ENCRYPTION {ON | OFF}: データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
+ENCRYPTION {ON | OFF}         
+データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
 
 データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに **READ ONLY** に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
 データベースの暗号化の状態を確認するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使用します。
 
-**\<db_update_option> ::=**
+**\<db_update_option> ::=**         
 
 データベースで更新を許可するかどうかを制御します。
 
-READ_ONLY: ユーザーは、データベースのデータを読み取ることができますが、変更はできません。
+READ_ONLY         
+ユーザーは、データベースのデータを読み取ることができますが、変更はできません。
 
 > [!NOTE]
 >クエリのパフォーマンスを向上させるには、データベースを READ_ONLY に設定する前に統計を更新します。 データベースを READ_ONLY に設定した後に追加の統計が必要な場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって統計が tempdb に作成されます。 読み取り専用データベースの統計について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。
 
-READ_WRITE: データベースに対して読み取りおよび書き込み操作を行うことができます。
+READ_WRITE         
+データベースに対して読み取りおよび書き込み操作を行うことができます。
 
 この状態を変更するには、データベースに対する排他的アクセスが必要になります。 詳細については、SINGLE_USER 句をご覧ください。
 
 > [!NOTE]
 > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のフェデレーション データベースでは、SET {READ_ONLY | READ_WRITE} は無効です。
 
-**\<db_user_access_option> ::=**
+**\<db_user_access_option> ::=**         
 
 データベースへのユーザー アクセスを制御します。
 
-RESTRICTED_USER RESTRICTED_USER では、db_owner 固定データベース ロールと、dbcreator 固定サーバー ロールおよび sysadmin 固定サーバー ロールのメンバーのみが、データベースに接続できます。ただし、接続ユーザー数に制限はありません。 データベースに対するすべての接続は、ALTER DATABASE ステートメントの終了句で指定した時間枠内に接続解除されます。 データベースが RESTRICTED_USER 状態に移行すると、資格のないユーザーによる接続の試みは拒否されます。 **RESTRICTED_USER** は、SQL Database マネージド インスタンスでは変更できません。
+RESTRICTED_USER         
+RESTRICTED_USER モードでは、db_owner 固定データベース ロールと、dbcreator および sysadmin の固定サーバー ロールのメンバーのみが、データベースに接続できますが、その数に制限はありません。 データベースに対するすべての接続は、ALTER DATABASE ステートメントの終了句で指定した時間枠内に接続解除されます。 データベースが RESTRICTED_USER 状態に移行すると、資格のないユーザーによる接続の試みは拒否されます。 **RESTRICTED_USER** は、SQL Database マネージド インスタンスでは変更できません。
 
-MULTI_USER: データベースに接続するための適切な権限を持つすべてのユーザーが許可されます。
+MULTI_USER         
+データベースに接続するための適切な権限を持つすべてのユーザーが許可されます。
 
 sys.databases カタログ ビューの user_access 列、または DATABASEPROPERTYEX 関数の UserAccess プロパティを調べることで、このオプションの状態を確認できます。
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=**         
 
 トランザクションを完全持続性または遅延持続性のどちらとしてコミットするかどうかを制御します。
 
-DISABLED: SET DISABLED 以後のトランザクションはすべて完全持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+DISABLED         
+SET DISABLED 以後のトランザクションはすべて完全持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
-ALLOWED: SET ALLOWED 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
+ALLOWED         
+SET ALLOWED 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
 
-FORCED: 以後のトランザクションはすべて遅延持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+FORCED         
+SET FORCED 以後のトランザクションはすべて遅延持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
-**\<PARAMETERIZATION_option> ::=**
+**\<PARAMETERIZATION_option> ::=**         
 
 パラメーター化オプションを制御します。
 
-PARAMETERIZATION { SIMPLE | FORCED }: SIMPLE: データベースの既定の動作に基づいてクエリがパラメーター化されます。
+PARAMETERIZATION { SIMPLE | FORCED }         
+SIMPLE         
+クエリは、データベースの既定の動作に基づいてパラメーター化されます。
 
-FORCED: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、データベースのすべてのクエリがパラメーター化されます。
+FORCED         
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、データベース内にあるすべてのクエリをパラメーター化します。
 
-このオプションの現在の設定を確認するには、sys.databases カタログ ビューの is_parameterization_forced 列を調べてください。
+このオプションの現在の設定を確認するには、`sys.databases` カタログ ビューの `is_parameterization_forced` 列を調べてください。
 
 **\<query_store_options> ::=**
 
-ON | OFF | CLEAR [ ALL ]: このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。
+ON | OFF | CLEAR [ ALL ]         
+このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。
 
-ON: クエリ ストアが有効になります。
+ON         
+クエリのストアを有効にします。
 
-OFF: クエリ ストアが無効になります。 これが既定値です。
+OFF         
+クエリのストアを無効にします。 これが既定値です。
 
-CLEAR: クエリ ストアの内容が削除されます。
+CLEAR         
+クエリ ストアの内容を削除します。
 
-OPERATION_MODE: クエリ ストアの操作モードを表します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集および保持されます。 READ_ONLY モードでは、クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
+OPERATION_MODE         
+クエリのストアの操作モードをについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集および保持されます。 READ_ONLY モードでは、クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
 
-CLEANUP_POLICY: クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS は、クエリ ストアにクエリの情報が保持される日数を示します。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
+CLEANUP_POLICY         
+クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS は、クエリ ストアにクエリの情報が保持される日数を示します。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
 
-DATA_FLUSH_INTERVAL_SECONDS: クエリ ストアに書き込まれるデータがディスクに永続化される頻度を示します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。
+DATA_FLUSH_INTERVAL_SECONDS         
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。
 
-MAX_STORAGE_SIZE_MB: クエリ ストアに割り当てられる領域を示します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。
+MAX_STORAGE_SIZE_MB         
+クエリ ストアに割り当てられた領域を確認します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。
 
-INTERVAL_LENGTH_MINUTES: クエリのストアにランタイムの実行の統計データを集計する時間間隔を示します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。
+INTERVAL_LENGTH_MINUTES         
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。
 
-SIZE_BASED_CLEANUP_MODE: データの総量が最大サイズに近づいたときにクリーンアップを自動的にアクティブにするかどうかを制御します。
+SIZE_BASED_CLEANUP_MODE         
+データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。
 
-OFF: サイズ ベースのクリーンアップは自動的にアクティブ化されません。
+OFF         
+サイズ ベースのクリーンアップは自動的にアクティブ化されません。
 
-AUTO: ディスクのサイズが **max_storage_size_mb** の 90% に達すると、サイズ ベースのクリーンアップが自動的にアクティブ化されます。 サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 **max_storage_size_mb** の約 80% で停止します。 これは既定の構成値です。
+AUTO         
+ディスクのサイズが **max_storage_size_mb** の 90% に達すると、サイズ ベースのクリーンアップが自動的にアクティブ化されます。 サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 **max_storage_size_mb** の約 80% で停止します。 これは既定の構成値です。
 
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
-QUERY_CAPTURE_MODE: 現在アクティブなクエリのキャプチャ モードを指定します。
+QUERY_CAPTURE_MODE         
+現在アクティブなクエリのキャプチャ モードを指定します。
 
-ALL すべてのクエリがキャプチャされます。 これは既定の構成値です。
+ALL         
+すべてのクエリがキャプチャされます。 これは既定の構成値です。
 
-AUTO: 実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。これは [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] の既定の構成値です。
+AUTO         
+実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。これは [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] の既定の構成値です。
 
-NONE 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
+なし         
+新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
 QUERY_CAPTURE_MODE は **nvarchar** 型です。
 
-MAX_PLANS_PER_QUERY: 各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。
+max_plans_per_query         
+各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。
 
-**\<snapshot_option> ::=**
+**\<snapshot_option> ::=**         
 
 トランザクション分離レベルを示します。
 
-ALLOW_SNAPSHOT_ISOLATION { ON | OFF }: ON: データベース レベルでのスナップショット オプションが有効になります。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、トランザクションで SNAPSHOT トランザクション分離レベルを指定できます。 SNAPSHOT 分離レベルでトランザクションが実行されると、すべてのステートメントはトランザクション開始時のデータのスナップショットを参照します。 SNAPSHOT 分離レベルで実行されているトランザクションが複数のデータベースのデータにアクセスする場合は、すべてのデータベースで ALLOW_SNAPSHOT_ISOLATION が ON に設定されている必要があります。ALLOW_SNAPSHOT_ISOLATION が OFF になっているデータベース内のテーブルにアクセスする場合は、トランザクション内の各ステートメントで、FROM 句内のすべての参照に対してロック ヒントを使用する必要があります。
+ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
+ON         
+データベース レベルでのスナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、トランザクションで SNAPSHOT トランザクション分離レベルを指定できます。 SNAPSHOT 分離レベルでトランザクションが実行されると、すべてのステートメントはトランザクション開始時のデータのスナップショットを参照します。 SNAPSHOT 分離レベルで実行されているトランザクションが複数のデータベースのデータにアクセスする場合は、すべてのデータベースで ALLOW_SNAPSHOT_ISOLATION が ON に設定されている必要があります。ALLOW_SNAPSHOT_ISOLATION が OFF になっているデータベース内のテーブルにアクセスする場合は、トランザクション内の各ステートメントで、FROM 句内のすべての参照に対してロック ヒントを使用する必要があります。
 
-OFF: データベース レベルでのスナップショット オプションが無効になります。 トランザクションでは、SNAPSHOT トランザクション分離レベルを指定できません。
+OFF         
+データベース レベルでのスナップショット オプションを無効にします。 トランザクションでは、SNAPSHOT トランザクション分離レベルを指定できません。
 
 ALLOW_SNAPSHOT_ISOLATION を新しい状態に (ON から OFF へ、または OFF から ON へ) 設定した場合、ALTER DATABASE は、データベース内にあるすべての既存のトランザクションがコミットされるまで、呼び出し元に制御を返しません。 データベースが既に ALTER DATABASE ステートメントで指定した状態にある場合には、制御は呼び出し元に直ちに返されます。 ALTER DATABASE ステートメントがすぐに制御を返さない場合には、[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) を使用して、長時間実行されているトランザクションがあるかどうかを確認できます。 ALTER DATABASE ステートメントが取り消された場合、データベースは、ALTER DATABASE が開始された時点での状態に留まります。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューに、データベース内のスナップショット分離トランザクションの状態が表示されます。 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON の場合、ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF は 6 秒間待ってから、操作を再試行します。
 
@@ -1788,9 +1859,12 @@ master および msdb データベースでは、このオプションは既定�
 
 このオプションの現在の設定を確認するには、sys.databases カタログ ビューの snapshot_isolation_state 列を調べてください。
 
-READ_COMMITTED_SNAPSHOT { ON | OFF }: ON: データベース レベルでの Read Committed スナップショット オプションが有効になります。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ_COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
+READ_COMMITTED_SNAPSHOT { ON | OFF }         
+ON         
+データベース レベルでの Read Committed スナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ_COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
 
-OFF: データベース レベルでの Read Committed スナップショット オプションが無効になります。 READ COMMITTED 分離レベルを指定しているトランザクションは、ロックを使用します。
+OFF         
+データベース レベルでの Read Committed スナップショット オプションを無効にします。 READ COMMITTED 分離レベルを指定しているトランザクションは、ロックを使用します。
 
 READ_COMMITTED_SNAPSHOT を ON または OFF に設定するには、ALTER DATABASE コマンドを実行している接続以外にデータベースへのアクティブな接続が存在しないようにする必要があります。 データベースがシングル ユーザー モードになっている必要はありません。 データベースが OFFLINE の場合には、このオプションの状態は変更できません。
 
@@ -1801,29 +1875,33 @@ master、tempdb、または msdb システム データベースでは、READ_CO
 このオプションの現在の設定を確認するには、sys.databases カタログ ビューの is_read_committed_snapshot_on 列を調べてください。
 
 > [!WARNING]
->**DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、**READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。
+> `DURABILITY = SCHEMA_ONLY` でテーブルを作成した後に、`ALTER DATABASE` を使用して **READ_COMMITTED_SNAPSHOT** を変更すると、テーブル内のデータが失われます。
 
-MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }
+MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }         
+ON         
+トランザクション分離レベルが SNAPSHOT より低い分離レベルに設定されている場合は、メモリ最適化テーブル上で解釈されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が SNAPSHOT 分離レベルで実行されます。 SNAPSHOT よりも低い分離レベルの例として、READ COMMITTED、READ UNCOMMITTEDREAD があります。 このような操作は、トランザクション分離レベルがセッション レベルで明示的に設定されているか、既定値が暗黙的に使用されるかに関係なく実行されます。
 
-ON: トランザクション分離レベルが SNAPSHOT より低い分離レベルに設定されている場合は、メモリ最適化テーブル上で解釈されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が SNAPSHOT 分離レベルで実行されます。 SNAPSHOT よりも低い分離レベルの例として、READ COMMITTED、READ UNCOMMITTEDREAD があります。 このような操作は、トランザクション分離レベルがセッション レベルで明示的に設定されているか、既定値が暗黙的に使用されるかに関係なく実行されます。
-
-OFF: メモリ最適化テーブル上で解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作のトランザクション分離レベルは引き上げられません。
+OFF         
+メモリ最適化テーブル上で解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作のトランザクション分離レベルは引き上げられません。
 
 データベースが OFFLINE の場合には、MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT の状態を変更できません。
 
-既定では、このオプションは OFF になっています。
+既定値は OFF です。
 
 このオプションの現在の設定を確認するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **is_memory_optimized_elevate_to_snapshot_on** 列を調べてください。
 
-**\<sql_option> ::=**
+**\<sql_option> ::=**         
 
 ANSI 準拠のオプションをデータベース レベルで制御します。
 
-ANSI_NULL_DEFAULT { ON | OFF }: CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで NULL を許可するかどうかが明示的に定義されていない場合に、列または [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)の既定値を NULL と NOT NULL のどちらにするかを指定します。 制約によって定義された列は、この設定に関係なく制約のルールに従います。
+ANSI_NULL_DEFAULT { ON | OFF }         
+CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで NULL を許可するかどうかが明示的に定義されていない場合に、列または [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)の既定値を NULL と NOT NULL のどちらにするかを指定します。 制約によって定義された列は、この設定に関係なく制約のルールに従います。
 
-ON: 既定値は NULL になります。
+ON         
+既定値は NULL です。
 
-OFF: 既定値は NULL ではありません。
+OFF         
+既定値は NOT NULL です。
 
 SET ステートメントを使用した接続レベルの設定は、ANSI_NULL_DEFAULT に関するデータベースレベルの既定の設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、セッションの ANSI_NULL_DEFAULT を ON に設定する接続レベルの SET ステートメントを発行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続すると、クライアントはステートメントを実行します。 詳しくは、「[SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)」をご覧ください。
 
@@ -1831,9 +1909,12 @@ ANSI 互換性を確保するために、データベース オプション ANSI
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_null_default_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAnsiNullDefault プロパティを調べて状態を確認することもできます。
 
-ANSI_NULLS { ON | OFF }: ON: NULL 値との比較結果はすべて UNKNOWN になります。
+ANSI_NULLS { ON | OFF }         
+ON         
+null 値との比較結果は、すべて UNKNOWN になります。
 
-OFF: UNICODE 以外の値と NULL 値の比較結果は、両方の値が NULL であると TRUE になります。
+OFF         
+UNICODE 以外の値と null 値の比較結果は、両方の値が NULL である場合には TRUE になります。
 
 > [!IMPORTANT]
 > 今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ANSI_NULLS が常に ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
@@ -1844,9 +1925,12 @@ SET ANSI_NULLS は、計算列やインデックス付きビューのインデ�
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_nulls_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAnsiNullsEnabled プロパティを調べて状態を確認することもできます。
 
-ANSI_PADDING { ON | OFF }: ON: 比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、**varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
+ANSI_PADDING { ON | OFF }         
+ON         
+比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、**varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
 
-OFF: 文字値の末尾にある空白を **varchar** 型または **nvarchar** 型の列に挿入します。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 はそのまま残されます。 列の長さに合わせるためにパディングされることはありません。
+OFF         
+文字値の末尾にある空白を **varchar** 型または **nvarchar** 型の列に挿入します。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 はそのまま残されます。 列の長さに合わせるためにパディングされることはありません。
 
 OFF を指定した場合、この設定は新しい列の定義にのみ影響します。
 
@@ -1859,9 +1943,12 @@ OFF を指定した場合、この設定は新しい列の定義にのみ影響�
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_padding_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAnsiPaddingEnabled プロパティを調べて状態を確認することもできます。
 
-ANSI_WARNINGS { ON | OFF }: ON: 0 除算などの状態になったときに、エラーまたは警告が発行されます。 集計関数に NULL 値が出現した場合にも、エラーと警告が発行されます。
+ANSI_WARNINGS { ON | OFF }         
+ON         
+0 除算などの状態になったときに、エラーまたは警告が発行されます。 集計関数に NULL 値が出現した場合にも、エラーと警告が発行されます。
 
-OFF: 0 除算などの条件が発生しても、警告は発行されず、NULL 値が返されます。
+OFF         
+0 除算などの条件が発生しても、警告は発行されず、NULL 値が返されます。
 
 SET ANSI_WARNINGS は、計算列やインデックス付きビューのインデックスを作成または変更する場合には、ON に設定する必要があります。
 
@@ -1869,19 +1956,26 @@ SET ANSI_WARNINGS は、計算列やインデックス付きビューのイン�
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_warnings_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAnsiWarningsEnabled プロパティを調べて状態を確認することもできます。
 
-ARITHABORT { ON | OFF }: ON: クエリ実行中にオーバーフロー エラーまたは 0 除算エラーが発生した場合に、クエリを終了します。
+ARITHABORT { ON | OFF }         
+ON         
+クエリ実行中にオーバーフロー エラーまたは 0 除算エラーが発生した場合に、クエリを終了します。
 
-OFF: このようなエラーのいずれかが発生した場合に警告メッセージが表示されます。 警告が表示された場合でも、クエリ、バッチ、またはトランザクションは、エラーが発生しなかったかのように処理を続行します。
+OFF         
+このようなエラーのいずれかが発生した場合に警告メッセージが表示されます。 警告が表示された場合でも、クエリ、バッチ、またはトランザクションは、エラーが発生しなかったかのように処理を続行します。
 
 SET ARITHABORT は、計算列やインデックス付きビューのインデックスを作成または変更する場合には、ON に設定する必要があります。
 
-  このオプションの状態を確認するには、sys.databases カタログ ビューの is_arithabort_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsArithmeticAbortEnabled プロパティを調べて状態を確認することもできます。
+  このオプションの状態を確認するには、sys.databases カタログ ビューの is_arithabort_on 列を調べてください。 DATABASEPROPERTYEX 関数の `IsArithmeticAbortEnabled` プロパティを調べて状態を確認することもできます。
 
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }: 詳細については、[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)に関するページを参照してください。
+COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }         
+詳しくは、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。
 
-CONCAT_NULL_YIELDS_NULL { ON | OFF }: ON: オペランドのいずれかが NULL の場合、連結操作の結果は NULL になります。 たとえば、文字列 "This is" と NULL を連結すると、結果は "This is" ではなく NULL になります。
+CONCAT_NULL_YIELDS_NULL { ON | OFF }         
+ON         
+オペランドのいずれかが NULL の場合、連結操作の結果は NULL になります。 たとえば、文字列 "This is" と NULL を連結すると、結果は "This is" ではなく NULL になります。
 
-OFF: null 値は空の文字列として扱われます。
+OFF         
+null 値は空の文字列として扱われます。
 
 CONCAT_NULL_YIELDS_NULL は、計算列やインデックス付きビューのインデックスを作成または変更する場合には、ON に設定する必要があります。
 
@@ -1892,11 +1986,14 @@ SET ステートメントを使用した接続レベルの設定は、CONCAT_NUL
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_concat_null_yields_null_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsNullConcat プロパティを調べて状態を確認することもできます。
 
-QUOTED_IDENTIFIER { ON | OFF }: ON: 識別子を囲む二重引用符を使用できます。
+QUOTED_IDENTIFIER { ON | OFF }         
+ON         
+識別子を囲む二重引用符を使用できます。
 
 二重引用符で囲まれた文字列はすべて、オブジェクト識別子として解釈されます。 引用符で囲まれた識別子は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子の規則に従う必要はありません。 キーワードを含めることができます。また、[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子には使用できない文字を含めることもできます。 単一引用符 (') がリテラル文字列の一部になっている場合は、それを二重引用符 (") で表記できます。
 
-OFF: 識別子を引用符で囲むことができず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
+OFF         
+識別子を引用符で囲むことができず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では識別子を角かっこ ([ ]) で囲むこともできます。 角かっこで囲まれた識別子は、QUOTED_IDENTIFIER 設定に関係なくいつでも使用できます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 
@@ -1906,47 +2003,59 @@ SET ステートメントを使用した接続レベルの設定は、QUOTED_IDE
 
   このオプションの状態を確認するには、sys.databases カタログ ビューの is_quoted_identifier_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsQuotedIdentifiersEnabled プロパティを調べて状態を確認することもできます。
 
-NUMERIC_ROUNDABORT { ON | OFF }: ON: 式で有効桁数の損失が発生する場合にエラーが生成されます。
+NUMERIC_ROUNDABORT { ON | OFF }         
+ON         
+式で有効桁数の損失が発生する場合にエラーが生成されます。
 
-OFF: 有効桁数の損失が発生してもエラー メッセージが生成されず、結果を格納する列または変数の有効桁数に丸められます。
+OFF         
+有効桁数の損失が発生してもエラー メッセージが生成されず、結果を格納する列または変数の有効桁数に丸められます。
 
 NUMERIC_ROUNDABORT は、計算列やインデックス付きビューのインデックスを作成または変更する場合は、OFF に設定する必要があります。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_numeric_roundabort_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsNumericRoundAbortEnabled プロパティを調べて状態を確認することもできます。
 
-RECURSIVE_TRIGGERS { ON | OFF }: ON: AFTER トリガーの再帰呼び出しを実行できるようになります。
+RECURSIVE_TRIGGERS { ON | OFF }         
+ON         
+AFTER トリガーの再帰呼び出しを実行できるようになります。
 
-OFF: sys.databases カタログ ビューの is_recursive_triggers_on 列を調べることで、このオプションの状態を確認できます。 DATABASEPROPERTYEX 関数の IsRecursiveTriggersEnabled プロパティを調べて状態を確認することもできます。
+OFF         
+このオプションの状態を確認するには、sys.databases カタログ ビューの is_recursive_triggers_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsRecursiveTriggersEnabled プロパティを調べて状態を確認することもできます。
 
 > [!NOTE]
->RECURSIVE_TRIGGERS に OFF に設定されている場合、直接再帰呼び出しのみが回避されます。 間接再帰呼び出しを無効にするには、nested triggers サーバー オプションを 0 に設定する必要があります。
+> RECURSIVE_TRIGGERS に OFF に設定されている場合、直接再帰呼び出しのみが回避されます。 間接再帰呼び出しを無効にするには、nested triggers サーバー オプションを 0 に設定する必要があります。
 
 sys.databases カタログ ビューの is_recursive_triggers_on 列、または DATABASEPROPERTYEX 関数の IsRecursiveTriggersEnabled プロパティを調べることで、このオプションの状態を確認できます。
 
-**\<target_recovery_time_option> ::=**
+**\<target_recovery_time_option> ::=**         
 
 間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は 1 分であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time*: クラッシュが発生した場合に、指定したデータベースを復旧にかかる時間の上限を指定します。
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
+*target_recovery_time*         
+クラッシュが発生した場合、指定したデータベースが復旧に要する時間の上限を指定します。
 
-SECONDS: *target_recovery_time* が秒単位で表されていることを示します。
+SECONDS         
+*target_recovery_time* が秒単位で表されていることを示します。
 
-MINUTES: *target_recovery_time* が秒単位で表されていることを示します。
+MINUTES         
+*target_recovery_time* が分単位で表されていることを示します。
 
 間接的なチェックポイントについて詳しくは、「[データベース チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md)」をご覧ください。
 
-**WITH \<termination> ::=**
+**WITH \<termination> ::=**         
 
 データベースの状態が変更されるときに、未完了のトランザクションをいつロールバックするかを指定します。 データベースがロックされている場合に終了句を省略すると、ALTER DATABASE ステートメントが無限に待機します。 指定できる終了句は 1 つのみであり、SET 句の後に指定します。
 
 > [!NOTE]
 > すべてのデータベース オプションで WITH \<termination> 句が使用できるわけではありません。 詳細については、この記事の「解説」セクションの「[オプションの設定](#SettingOptions)」にある表をご覧ください。
 
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE: ロールバックを指定した秒数の後に実行するか、直ちに実行するかを指定します。
+ROLLBACK AFTER "*整数*" [SECONDS] | ROLLBACK IMMEDIATE         
+指定した秒数の後、または直ちにロールバックするかどうかを指定します。
 
-NO_WAIT: 要求されたデータベースの状態またはオプションの変更がすぐに完了しない場合に、要求が失敗するように指定します。 すぐに完了とは、トランザクションが自身のコミットまたはロール バック処理を待機しないことを意味します。
+NO_WAIT         
+要求されたデータベースの状態またはオプションの変更がすぐに完了しない場合に、要求が失敗するように指定します。 すぐに完了とは、トランザクションが自身のコミットまたはロール バック処理を待機しないことを意味します。
 
-## <a name="SettingOptions"></a> オプションの設定
+## <a name="SettingOptions"></a> オプションの設定         
 
 データベース オプションの現在の設定を取得するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューまたは [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) を使用します。
 
@@ -1976,7 +2085,6 @@ NO_WAIT: 要求されたデータベースの状態またはオプションの�
 ## <a name="examples"></a>使用例
 
 ### <a name="a-setting-the-database-to-readonly"></a>A. データベースを READ_ONLY に設定する
-
 データベースまたはファイル グループの状態を READ_ONLY または READ_WRITE に変更するには、データベースに対する排他的アクセスが必要です。 次の例では、アクセスを制限するために、データベースを `RESTRICTED_USER` モードに設定します。 次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの状態を `READ_ONLY` に設定し、データベースへのアクセス権をすべてのユーザーに戻します。
 
 ```sql
@@ -1995,7 +2103,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. データベースの SNAPSHOT 分離を有効にする
-
 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対する SNAPSHOT 分離フレームワーク オプションを有効にします。
 
 ```sql
@@ -2012,7 +2119,6 @@ SELECT name, snapshot_isolation_state,
 FROM sys.databases
 WHERE name = N'AdventureWorks2012';
 GO
-
 ```
 
 結果セットは、SNAPSHOT 分離フレームワークが有効であることを示しています。
@@ -2208,26 +2314,35 @@ SET
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。
+*database_name*         
+変更するデータベースの名前です。
 
-CURRENT `CURRENT` を指定すると、現在のデータベースでアクションが実行されます。 `CURRENT` は、すべてのコンテキスト内のすべてのオプションでサポートされるわけではありません。 `CURRENT` でエラーが発生した場合は、データベース名を指定してください。
+CURRENT         
+`CURRENT` を指定すると、現在のデータベースでアクションが実行されます。 `CURRENT` は、すべてのコンテキスト内のすべてのオプションでサポートされるわけではありません。 `CURRENT` でエラーが発生した場合は、データベース名を指定してください。
 
-**\<auto_option> ::=**
+**\<auto_option> ::=**         
 
 自動オプションを制御します。
-<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }: ON: クエリ プランを改善してクエリのパフォーマンスを向上するために必要な場合、クエリ オプティマイザーによってクエリ述語内の列に対して 1 列ずつ統計が作成されます。 これらの統計は、クエリ オプティマイザーがクエリをコンパイルするときに作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
+
+<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
+ON         
+クエリ プランを改善してクエリのパフォーマンスを向上させるために、クエリ オプティマイザーでは、必要に応じてクエリ述語内の列に対して 1 列ずつ統計を作成します。 これらの統計は、クエリ オプティマイザーがクエリをコンパイルするときに作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
 
 既定値は ON です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
 
-OFF: クエリ オプティマイザーがクエリをコンパイルするときにクエリ述語内の列の 1 列ずつの統計が作成されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
+OFF         
+クエリ オプティマイザーでは、クエリをコンパイルするときにクエリ述語内の列に対して 1 列ずつ統計を作成しません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_create_stats_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAutoCreateStatistics プロパティを調べて状態を確認することもできます。
 
 詳細については、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-INCREMENTAL = ON | OFF AUTO_CREATE_STATISTICS を ON に設定し、INCREMENTAL を ON に設定します。 増分統計がサポートされている場合、この設定で、自動的に作成される統計情報は、常に増分として作成されます。 既定値は OFF です。 詳しくは、「[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
+INCREMENTAL = ON | OFF         
+AUTO_CREATE_STATISTICS を ON に設定し、INCREMENTAL を ON に設定します。 増分統計がサポートされている場合、この設定で、自動的に作成される統計情報は、常に増分として作成されます。 既定値は OFF です。 詳しくは、「[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
 
-<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }: ON: データベース ファイルが定期的な圧縮の対象になります。
+<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }         
+ON         
+データベース ファイルを定期的な圧縮処理の対象とします。
 
 データ ファイルとログ ファイルの両方を、自動的に圧縮できます。 AUTO_SHRINK では、データベースを単純復旧モデルに設定している場合、またはログをバックアップしている場合にのみ、トランザクション ログのサイズが圧縮されます。 OFF: 未使用領域の定期チェックの際に、データベース ファイルは自動的に圧縮されません。
 
@@ -2238,14 +2353,17 @@ AUTO_SHRINK オプションを使用すると、ファイル領域の 25% を超
 
 読み取り専用データベースは圧縮できません。
 
-OFF: データベース ファイルは、未使用領域の定期的なチェックの際に、自動的に圧縮されません。
+OFF         
+データベース ファイルは、未使用領域の定期的なチェックの際に、自動的に圧縮されません。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_shrink_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAutoShrink プロパティを調べて状態を確認することもできます。
 
 > [!NOTE]
 > AUTO_SHRINK オプションは、包含データベースでは使用できません。
 
-<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }: ON: クエリで使用される統計が古くなっている可能性があると、クエリ オプティマイザーによって統計が更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
+ON         
+クエリで使用される統計が古くなっている可能性がある場合にクエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
 クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、クエリ述語内の列、テーブル、およびインデックス付きビューを使用して古くなっている可能性がある統計が判断されます。 この情報は、クエリがコンパイルされる前に判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
 
@@ -2255,19 +2373,23 @@ AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成
 
 統計を同期的に更新するか非同期的に更新するかを指定するには、AUTO_UPDATE_STATISTICS_ASYNC オプションを使用します。
 
-OFF: 統計がクエリで使用されるときに、クエリ オプティマイザーによって統計が更新されません。 また、統計が古くなっている可能性がある場合でも、クエリオプティマイザーによって更新されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
+OFF         
+統計がクエリで使用されるときに、クエリ オプティマイザーによって統計が更新されません。 また、統計が古くなっている可能性がある場合でも、クエリオプティマイザーによって更新されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_update_stats_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAutoUpdateStatistics プロパティを調べて状態を確認することもできます。
 
 詳細については、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }: ON: AUTO UPDATE STATISTICS オプションの統計の更新が非同期になります。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。
+<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
+ON         
+AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。
 
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを ON に設定しても、効果はありません。
 
 既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは OFF に設定されており、クエリ オプティマイザーによる統計の更新は同期更新になります。
 
-OFF: AUTO_UPDATE_STATISTICS オプションの統計の更新が同期されます。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。
+OFF         
+AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。
 
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを OFF に設定しても、効果はありません。
 
@@ -2275,144 +2397,188 @@ AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプ�
 
 統計の同期更新と非同期更新をそれぞれどのような場合に使用するのかについては、「[統計](../../relational-databases/statistics/statistics.md)」の「データベース全体の統計オプションの使用」セクションを参照してください。
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
-**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
+**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 `FORCE_LAST_GOOD_PLAN` [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)オプションを有効または無効にします。
 
-FORCE_LAST_GOOD_PLAN = { ON | OFF }: ON: [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して最後の既知の正常なプランが自動的に適用されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
-OFF: [!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
+FORCE_LAST_GOOD_PLAN = { ON | OFF }         
+ON         
+新しい SQL プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しい SQL プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。 
+
+OFF         
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューの SQL プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
 
 **\<change_tracking_option> ::=**
 
 変更の追跡のオプションを制御します。 変更の追跡の有効化、オプションの設定、オプションの変更、および変更の追跡の無効化が可能です。 例については、後の「例」のセクションをご覧ください。
 
-ON: データベースの変更の追跡が有効になります。 変更の追跡を有効にすると、AUTO CLEANUP オプションと CHANGE RETENTION オプションも設定できます。
+ON         
+データベースの変更の追跡を有効にします。 変更の追跡を有効にすると、AUTO CLEANUP オプションと CHANGE RETENTION オプションも設定できます。
 
-AUTO_CLEANUP = { ON | OFF }: ON: 指定した保有期間を過ぎると、変更追跡情報が自動的に削除されます。
+AUTO_CLEANUP = { ON | OFF }         
+ON         
+指定した保有期間を過ぎると、変更追跡情報が自動的に削除されます。
 
-OFF: 変更追跡データはデータベースから削除されません。
+OFF         
+変更追跡データはデータベースから削除されません。
 
-CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }: データベースに変更追跡情報を保持する最低限の期間を指定します。 データは、AUTO_CLEANUP の値が ON のときにのみ削除されます。
+CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }         
+データベースに変更追跡情報を保持する最低限の期間を指定します。 データは、AUTO_CLEANUP の値が ON のときにのみ削除されます。
 
 *retention_period* は、保有期間の数値部分を指定する整数です。
 
 既定の保有期間は 2 日です。 最小保有期間は 1 分です。 保有期間の既定の型は DAYS です。
 
-OFF: データベースの変更の追跡は無効になります。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
+OFF         
+データベースの変更の追跡を無効にします。 データベースの変更の追跡を無効にする前に、すべてのテーブルで変更の追跡を無効にしてください。
 
-**\<cursor_option> ::=**
+**\<cursor_option> ::=**         
 
 カーソル オプションを制御します。
 
-CURSOR_CLOSE_ON_COMMIT { ON | OFF }: ON: トランザクションをコミットまたはロール バックしたときに開いていたカーソルはすべて閉じられます。
+CURSOR_CLOSE_ON_COMMIT { ON | OFF }         
+ON         
+トランザクションをコミットまたはロール バックしたときに開いていたカーソルはすべて閉じられます。
 
-OFF: トランザクションがコミットされても、カーソルは開いたままになります。トランザクションをロールバックすると、INSENSITIVE または STATIC として定義されているカーソルを除き、すべてのカーソルが閉じます。
+OFF         
+トランザクションがコミットされても、カーソルは開いたままになります。トランザクションをロールバックすると、INSENSITIVE または STATIC として定義されているカーソルを除き、すべてのカーソルが閉じます。
 
 SET ステートメントを使用した接続レベルの設定は、CURSOR_CLOSE_ON_COMMIT の既定のデータベース設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、セッションの CURSOR_CLOSE_ON_COMMIT を OFF に設定する接続レベルの SET ステートメントを発行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続すると、クライアントはステートメントを実行します。 詳しくは、「[SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)」をご覧ください。
 
 sys.databases カタログ ビューの is_cursor_close_on_commit_on 列、または DATABASEPROPERTYEX 関数の IsCloseCursorsOnCommitEnabled プロパティを調べることで、このオプションの状態を確認できます。 接続が切断されたときだけカーソルが暗黙的に割り当てを解除されます。 詳しくは、「[DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
 
-**\<db_encryption_option> ::=**
+**\<db_encryption_option> ::=**         
 
 データベース暗号化の状態を制御します。
 
-ENCRYPTION {ON | OFF}: データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
+ENCRYPTION { ON | OFF }         
+データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
 
 データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに **READ ONLY** に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
 データベースの暗号化の状態を確認するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使用します。
 
-**\<db_update_option> ::=**
+**\<db_update_option> ::=**         
 
 データベースで更新を許可するかどうかを制御します。
 
-READ_ONLY: ユーザーは、データベースのデータを読み取ることができますが、変更はできません。
+READ_ONLY         
+ユーザーは、データベースのデータを読み取ることができますが、変更はできません。
 
 > [!NOTE]
->クエリのパフォーマンスを向上させるには、データベースを READ_ONLY に設定する前に統計を更新します。 データベースを READ_ONLY に設定した後に追加の統計が必要な場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって統計が tempdb に作成されます。 読み取り専用データベースの統計について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。
+> クエリのパフォーマンスを向上させるには、データベースを READ_ONLY に設定する前に統計を更新します。 データベースを READ_ONLY に設定した後に追加の統計が必要な場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって統計が tempdb に作成されます。 読み取り専用データベースの統計について詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。
 
-READ_WRITE: データベースに対して読み取りおよび書き込み操作を行うことができます。
+READ_WRITE         
+データベースに対して読み取りおよび書き込み操作を行うことができます。
 
 この状態を変更するには、データベースに対する排他的アクセスが必要になります。
 
-**\<db_user_access_option> ::=**
+**\<db_user_access_option> ::=**         
 
 データベースへのユーザー アクセスを制御します。
 
-RESTRICTED_USER RESTRICTED_USER では、db_owner 固定データベース ロールと、dbcreator 固定サーバー ロールおよび sysadmin 固定サーバー ロールのメンバーのみが、データベースに接続できます。ただし、接続ユーザー数に制限はありません。 データベースに対するすべての接続は、ALTER DATABASE ステートメントの終了句で指定した時間枠内に接続解除されます。 データベースが RESTRICTED_USER 状態に移行すると、資格のないユーザーによる接続の試みは拒否されます。 **RESTRICTED_USER** は、SQL Database マネージド インスタンスでは変更できません。
+RESTRICTED_USER         
+RESTRICTED_USER モードでは、db_owner 固定データベース ロールと、dbcreator および sysadmin の固定サーバー ロールのメンバーのみが、データベースに接続できますが、その数に制限はありません。 データベースに対するすべての接続は、ALTER DATABASE ステートメントの終了句で指定した時間枠内に接続解除されます。 データベースが RESTRICTED_USER 状態に移行すると、資格のないユーザーによる接続の試みは拒否されます。 **RESTRICTED_USER** は、SQL Database マネージド インスタンスでは変更できません。
 
-MULTI_USER: データベースに接続するための適切な権限を持つすべてのユーザーが許可されます。
+MULTI_USER         
+データベースに接続するための適切な権限を持つすべてのユーザーが許可されます。
 
 sys.databases カタログ ビューの user_access 列、または DATABASEPROPERTYEX 関数の UserAccess プロパティを調べることで、このオプションの状態を確認できます。
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=**         
 
 トランザクションを完全持続性または遅延持続性のどちらとしてコミットするかどうかを制御します。
 
-DISABLED: SET DISABLED 以後のトランザクションはすべて完全持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+DISABLED         
+SET DISABLED 以後のトランザクションはすべて完全持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
-ALLOWED: SET ALLOWED 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
+ALLOWED         
+SET ALLOWED 以後のトランザクションはすべて、ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションに応じて、完全持続性または遅延持続性になります。
 
-FORCED: 以後のトランザクションはすべて遅延持続性になります。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
+FORCED         
+SET FORCED 以後のトランザクションはすべて遅延持続性です。 ATOMIC ブロックまたは COMMIT ステートメントで設定された持続性オプションは無視されます。
 
-**\<PARAMETERIZATION_option> ::=**
+**\<PARAMETERIZATION_option> ::=**         
 
 パラメーター化オプションを制御します。
 
-PARAMETERIZATION { SIMPLE | FORCED }: SIMPLE: データベースの既定の動作に基づいてクエリがパラメーター化されます。
+PARAMETERIZATION { SIMPLE | FORCED }         
+SIMPLE         
+クエリは、データベースの既定の動作に基づいてパラメーター化されます。
 
-FORCED: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、データベースのすべてのクエリがパラメーター化されます。
+FORCED         
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、データベース内にあるすべてのクエリをパラメーター化します。
 
 このオプションの現在の設定を確認するには、sys.databases カタログ ビューの is_parameterization_forced 列を調べてください。
 
-**\<query_store_options> ::=**
+**\<query_store_options> ::=**         
 
-ON | OFF | CLEAR [ ALL ]: このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。
+ON | OFF | CLEAR [ ALL ]         
+このデータベースでクエリ ストアを有効にするかどうかを制御します。また、クエリ ストアの内容の削除も制御します。
 
-ON: クエリ ストアが有効になります。
+ON         
+クエリのストアを有効にします。
 
-OFF: クエリ ストアが無効になります。 これが既定値です。
+OFF         
+クエリのストアを無効にします。 これが既定値です。
 
-CLEAR: クエリ ストアの内容が削除されます。
+CLEAR         
+クエリ ストアの内容を削除します。
 
-OPERATION_MODE: クエリ ストアの操作モードを表します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集および保持されます。 READ_ONLY モードでは、クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
+OPERATION_MODE         
+クエリのストアの操作モードをについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集および保持されます。 READ_ONLY モードでは、クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
 
-CLEANUP_POLICY: クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS は、クエリ ストアにクエリの情報が保持される日数を示します。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
+CLEANUP_POLICY         
+クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS は、クエリ ストアにクエリの情報が保持される日数を示します。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
 
-DATA_FLUSH_INTERVAL_SECONDS: クエリ ストアに書き込まれるデータがディスクに永続化される頻度を示します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。
+DATA_FLUSH_INTERVAL_SECONDS         
+クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送の頻度は、DATA_FLUSH_INTERVAL_SECONDS 引数を使用して構成します。 DATA_FLUSH_INTERVAL_SECONDS は **bigint** 型です。
 
-MAX_STORAGE_SIZE_MB: クエリ ストアに割り当てられる領域を示します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。
+MAX_STORAGE_SIZE_MB         
+クエリ ストアに割り当てられた領域を確認します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。
 
-INTERVAL_LENGTH_MINUTES: クエリのストアにランタイムの実行の統計データを集計する時間間隔を示します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。
+INTERVAL_LENGTH_MINUTES         
+クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。
 
-SIZE_BASED_CLEANUP_MODE: データの総量が最大サイズに近づいたときにクリーンアップを自動的にアクティブにするかどうかを制御します。
+SIZE_BASED_CLEANUP_MODE         
+データの総量が最大サイズに近づいたときに、クリーンアップを自動的にアクティブにするかどうかを制御します。
 
-OFF: サイズ ベースのクリーンアップは自動的にアクティブ化されません。
+OFF         
+サイズ ベースのクリーンアップは自動的にアクティブ化されません。
 
-AUTO: ディスクのサイズが **max_storage_size_mb** の 90% に達すると、サイズ ベースのクリーンアップが自動的にアクティブ化されます。 サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 **max_storage_size_mb** の約 80% で停止します。 これは既定の構成値です。
+AUTO         
+ディスクのサイズが **max_storage_size_mb** の 90% に達すると、サイズ ベースのクリーンアップが自動的にアクティブ化されます。 サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 **max_storage_size_mb** の約 80% で停止します。 これは既定の構成値です。
 
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
-QUERY_CAPTURE_MODE: 現在アクティブなクエリのキャプチャ モードを指定します。
+QUERY_CAPTURE_MODE         
+現在アクティブなクエリのキャプチャ モードを指定します。
 
-ALL すべてのクエリがキャプチャされます。 これは既定の構成値です。
+ALL         
+すべてのクエリがキャプチャされます。 これは既定の構成値です。
 
-AUTO: 実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。これは [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] の既定の構成値です。
+AUTO         
+実行の数とリソースの消費量に基づいて関連するクエリがキャプチャされます。これは [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] の既定の構成値です。
 
-NONE 新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
+なし         
+新しいクエリのキャプチャを停止します。 クエリ ストアは、既にキャプチャされたクエリのコンパイルと実行時の統計情報を収集し続けます。 重要なクエリがキャプチャされない可能性があるため、この構成は慎重に使用してください。
 
 QUERY_CAPTURE_MODE は **nvarchar** 型です。
 
-MAX_PLANS_PER_QUERY: 各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。
+max_plans_per_query         
+各クエリに対して保持の計画の最大数を表す整数。 既定値は 200 です。
 
-**\<snapshot_option> ::=**
+**\<snapshot_option> ::=**         
 
 トランザクション分離レベルを示します。
 
-ALLOW_SNAPSHOT_ISOLATION { ON | OFF }: ON: データベース レベルでのスナップショット オプションが有効になります。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、トランザクションで SNAPSHOT トランザクション分離レベルを指定できます。 SNAPSHOT 分離レベルでトランザクションが実行されると、すべてのステートメントはトランザクション開始時のデータのスナップショットを参照します。 SNAPSHOT 分離レベルで実行されているトランザクションが複数のデータベースのデータにアクセスする場合は、すべてのデータベースで ALLOW_SNAPSHOT_ISOLATION が ON に設定されている必要があります。ALLOW_SNAPSHOT_ISOLATION が OFF になっているデータベース内のテーブルにアクセスする場合は、トランザクション内の各ステートメントで、FROM 句内のすべての参照に対してロック ヒントを使用する必要があります。
+ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
+ON         
+データベース レベルでのスナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、トランザクションで SNAPSHOT トランザクション分離レベルを指定できます。 SNAPSHOT 分離レベルでトランザクションが実行されると、すべてのステートメントはトランザクション開始時のデータのスナップショットを参照します。 SNAPSHOT 分離レベルで実行されているトランザクションが複数のデータベースのデータにアクセスする場合は、すべてのデータベースで ALLOW_SNAPSHOT_ISOLATION が ON に設定されている必要があります。ALLOW_SNAPSHOT_ISOLATION が OFF になっているデータベース内のテーブルにアクセスする場合は、トランザクション内の各ステートメントで、FROM 句内のすべての参照に対してロック ヒントを使用する必要があります。
 
-OFF: データベース レベルでのスナップショット オプションが無効になります。 トランザクションでは、SNAPSHOT トランザクション分離レベルを指定できません。
+OFF         
+データベース レベルでのスナップショット オプションを無効にします。 トランザクションでは、SNAPSHOT トランザクション分離レベルを指定できません。
 
 ALLOW_SNAPSHOT_ISOLATION を新しい状態に (ON から OFF へ、または OFF から ON へ) 設定した場合、ALTER DATABASE は、データベース内にあるすべての既存のトランザクションがコミットされるまで、呼び出し元に制御を返しません。 データベースが既に ALTER DATABASE ステートメントで指定した状態にある場合には、制御は呼び出し元に直ちに返されます。 ALTER DATABASE ステートメントがすぐに制御を返さない場合には、[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) を使用して、長時間実行されているトランザクションがあるかどうかを確認できます。 ALTER DATABASE ステートメントが取り消された場合、データベースは、ALTER DATABASE が開始された時点での状態に留まります。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューに、データベース内のスナップショット分離トランザクションの状態が表示されます。 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON の場合、ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF は 6 秒間待ってから、操作を再試行します。
 
@@ -2426,9 +2592,12 @@ master および msdb データベースでは、このオプションは既定�
 
 このオプションの現在の設定を確認するには、sys.databases カタログ ビューの snapshot_isolation_state 列を調べてください。
 
-READ_COMMITTED_SNAPSHOT { ON | OFF }: ON: データベース レベルでの Read Committed スナップショット オプションが有効になります。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ_COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
+READ_COMMITTED_SNAPSHOT { ON | OFF }         
+ON         
+データベース レベルでの Read Committed スナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ_COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
 
-OFF: データベース レベルでの Read Committed スナップショット オプションが無効になります。 READ COMMITTED 分離レベルを指定しているトランザクションは、ロックを使用します。
+OFF         
+データベース レベルでの Read Committed スナップショット オプションを無効にします。 READ COMMITTED 分離レベルを指定しているトランザクションは、ロックを使用します。
 
 READ_COMMITTED_SNAPSHOT を ON または OFF に設定するには、ALTER DATABASE コマンドを実行している接続以外にデータベースへのアクティブな接続が存在しないようにする必要があります。 データベースがシングル ユーザー モードになっている必要はありません。 データベースが OFFLINE の場合には、このオプションの状態は変更できません。
 
@@ -2441,27 +2610,31 @@ master、tempdb、または msdb システム データベースでは、READ_CO
 > [!WARNING]
 >**DURABILITY = SCHEMA_ONLY** でテーブルが作成される場合、**READ_COMMITTED_SNAPSHOT** がその後 **ALTER DATABASE** を使用して変更されると、テーブル内のデータは失われます。
 
-MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }
+MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }         
+ON         
+トランザクション分離レベルが SNAPSHOT より低い分離レベルに設定されている場合は、メモリ最適化テーブル上で解釈されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が SNAPSHOT 分離レベルで実行されます。 SNAPSHOT よりも低い分離レベルの例として、READ COMMITTED、READ UNCOMMITTEDREAD があります。 このような操作は、トランザクション分離レベルがセッション レベルで明示的に設定されているか、既定値が暗黙的に使用されるかに関係なく実行されます。
 
-ON: トランザクション分離レベルが SNAPSHOT より低い分離レベルに設定されている場合は、メモリ最適化テーブル上で解釈されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作が SNAPSHOT 分離レベルで実行されます。 SNAPSHOT よりも低い分離レベルの例として、READ COMMITTED、READ UNCOMMITTEDREAD があります。 このような操作は、トランザクション分離レベルがセッション レベルで明示的に設定されているか、既定値が暗黙的に使用されるかに関係なく実行されます。
-
-OFF: メモリ最適化テーブル上で解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作のトランザクション分離レベルは引き上げられません。
+OFF         
+メモリ最適化テーブル上で解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作のトランザクション分離レベルは引き上げられません。
 
 データベースが OFFLINE の場合には、MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT の状態を変更できません。
 
-既定では、このオプションは OFF になっています。
+既定値は OFF です。
 
 このオプションの現在の設定を確認するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **is_memory_optimized_elevate_to_snapshot_on** 列を調べてください。
 
-**\<sql_option> ::=**
+**\<sql_option> ::=**         
 
 ANSI 準拠のオプションをデータベース レベルで制御します。
 
-ANSI_NULL_DEFAULT { ON | OFF }: CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで NULL を許可するかどうかが明示的に定義されていない場合に、列または [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)の既定値を NULL と NOT NULL のどちらにするかを指定します。 制約によって定義された列は、この設定に関係なく制約のルールに従います。
+ANSI_NULL_DEFAULT { ON | OFF }         
+CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで NULL を許可するかどうかが明示的に定義されていない場合に、列または [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)の既定値を NULL と NOT NULL のどちらにするかを指定します。 制約によって定義された列は、この設定に関係なく制約のルールに従います。
 
-ON: 既定値は NULL になります。
+ON         
+既定値は NULL です。
 
-OFF: 既定値は NULL ではありません。
+OFF         
+既定値は NOT NULL です。
 
 SET ステートメントを使用した接続レベルの設定は、ANSI_NULL_DEFAULT に関するデータベースレベルの既定の設定をオーバーライドします。 既定では、ODBC クライアントと OLE DB クライアントは、セッションの ANSI_NULL_DEFAULT を ON に設定する接続レベルの SET ステートメントを発行します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続すると、クライアントはステートメントを実行します。 詳しくは、「[SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)」をご覧ください。
 
@@ -2469,9 +2642,12 @@ ANSI 互換性を確保するために、データベース オプション ANSI
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_null_default_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAnsiNullDefault プロパティを調べて状態を確認することもできます。
 
-ANSI_NULLS { ON | OFF }: ON: NULL 値との比較結果はすべて UNKNOWN になります。
+ANSI_NULLS { ON | OFF }         
+ON         
+null 値との比較結果は、すべて UNKNOWN になります。
 
-OFF: UNICODE 以外の値と NULL 値の比較結果は、両方の値が NULL であると TRUE になります。
+OFF         
+UNICODE 以外の値と null 値の比較結果は、両方の値が NULL である場合には TRUE になります。
 
 > [!IMPORTANT]
 > 今後のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ANSI_NULLS が常に ON になり、このオプションを明示的に OFF に設定するすべてのアプリケーションでエラーが発生します。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。
@@ -2482,9 +2658,12 @@ SET ANSI_NULLS は、計算列やインデックス付きビューのインデ�
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_nulls_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAnsiNullsEnabled プロパティを調べて状態を確認することもできます。
 
-ANSI_PADDING { ON | OFF }: ON: 比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、**varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
+ANSI_PADDING { ON | OFF }         
+ON         
+比較を行う前に、文字列が同じ長さになるようにパディングされます。 また、**varchar** または **nvarchar** データ型に挿入される前にも、同じ長さになるようにパディングされます。
 
-OFF: 文字値の末尾にある空白を **varchar** 型または **nvarchar** 型の列に挿入します。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 はそのまま残されます。 列の長さに合わせるためにパディングされることはありません。
+OFF         
+文字値の末尾にある空白を **varchar** 型または **nvarchar** 型の列に挿入します。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 はそのまま残されます。 列の長さに合わせるためにパディングされることはありません。
 
 OFF を指定した場合、この設定は新しい列の定義にのみ影響します。
 
@@ -2497,9 +2676,12 @@ OFF を指定した場合、この設定は新しい列の定義にのみ影響�
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_padding_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAnsiPaddingEnabled プロパティを調べて状態を確認することもできます。
 
-ANSI_WARNINGS { ON | OFF }: ON: 0 除算などの状態になったときに、エラーまたは警告が発行されます。 集計関数に NULL 値が出現した場合にも、エラーと警告が発行されます。
+ANSI_WARNINGS { ON | OFF }         
+ON         
+0 除算などの状態になったときに、エラーまたは警告が発行されます。 集計関数に NULL 値が出現した場合にも、エラーと警告が発行されます。
 
-OFF: 0 除算などの条件が発生しても、警告は発行されず、NULL 値が返されます。
+OFF         
+0 除算などの条件が発生しても、警告は発行されず、NULL 値が返されます。
 
 SET ANSI_WARNINGS は、計算列やインデックス付きビューのインデックスを作成または変更する場合には、ON に設定する必要があります。
 
@@ -2507,19 +2689,26 @@ SET ANSI_WARNINGS は、計算列やインデックス付きビューのイン�
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_ansi_warnings_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAnsiWarningsEnabled プロパティを調べて状態を確認することもできます。
 
-ARITHABORT { ON | OFF }: ON: クエリ実行中にオーバーフロー エラーまたは 0 除算エラーが発生した場合に、クエリを終了します。
+ARITHABORT { ON | OFF }         
+ON         
+クエリ実行中にオーバーフロー エラーまたは 0 除算エラーが発生した場合に、クエリを終了します。
 
-OFF: このようなエラーのいずれかが発生した場合に警告メッセージが表示されます。 警告が表示された場合でも、クエリ、バッチ、またはトランザクションは、エラーが発生しなかったかのように処理を続行します。
+OFF         
+このようなエラーのいずれかが発生した場合に警告メッセージが表示されます。 警告が表示された場合でも、クエリ、バッチ、またはトランザクションは、エラーが発生しなかったかのように処理を続行します。
 
 SET ARITHABORT は、計算列やインデックス付きビューのインデックスを作成または変更する場合には、ON に設定する必要があります。
 
   このオプションの状態を確認するには、sys.databases カタログ ビューの is_arithabort_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsArithmeticAbortEnabled プロパティを調べて状態を確認することもできます。
 
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }: 詳細については、[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)に関するページを参照してください。
+COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }         
+詳しくは、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。
 
-CONCAT_NULL_YIELDS_NULL { ON | OFF }: ON: オペランドのいずれかが NULL の場合、連結操作の結果は NULL になります。 たとえば、文字列 "This is" と NULL を連結すると、結果は "This is" ではなく NULL になります。
+CONCAT_NULL_YIELDS_NULL { ON | OFF }         
+ON         
+オペランドのいずれかが NULL の場合、連結操作の結果は NULL になります。 たとえば、文字列 "This is" と NULL を連結すると、結果は "This is" ではなく NULL になります。
 
-OFF: null 値は空の文字列として扱われます。
+OFF         
+null 値は空の文字列として扱われます。
 
 CONCAT_NULL_YIELDS_NULL は、計算列やインデックス付きビューのインデックスを作成または変更する場合には、ON に設定する必要があります。
 
@@ -2530,11 +2719,14 @@ SET ステートメントを使用した接続レベルの設定は、CONCAT_NUL
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_concat_null_yields_null_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsNullConcat プロパティを調べて状態を確認することもできます。
 
-QUOTED_IDENTIFIER { ON | OFF }: ON: 識別子を囲む二重引用符を使用できます。
+QUOTED_IDENTIFIER { ON | OFF }         
+ON         
+識別子を囲む二重引用符を使用できます。
 
 二重引用符で囲まれた文字列はすべて、オブジェクト識別子として解釈されます。 引用符で囲まれた識別子は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子の規則に従う必要はありません。 キーワードを含めることができます。また、[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子には使用できない文字を含めることもできます。 単一引用符 (') がリテラル文字列の一部になっている場合は、それを二重引用符 (") で表記できます。
 
-OFF: 識別子を引用符で囲むことができず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
+OFF         
+識別子を引用符で囲むことができず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では識別子を角かっこ ([ ]) で囲むこともできます。 角かっこで囲まれた識別子は、QUOTED_IDENTIFIER 設定に関係なくいつでも使用できます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 
@@ -2544,41 +2736,52 @@ SET ステートメントを使用した接続レベルの設定は、QUOTED_IDE
 
   このオプションの状態を確認するには、sys.databases カタログ ビューの is_quoted_identifier_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsQuotedIdentifiersEnabled プロパティを調べて状態を確認することもできます。
 
-NUMERIC_ROUNDABORT { ON | OFF }: ON: 式で有効桁数の損失が発生する場合にエラーが生成されます。
+NUMERIC_ROUNDABORT { ON | OFF }         
+ON         
+式で有効桁数の損失が発生する場合にエラーが生成されます。
 
-OFF: 有効桁数の損失が発生してもエラー メッセージが生成されず、結果を格納する列または変数の有効桁数に丸められます。
+OFF         
+有効桁数の損失が発生してもエラー メッセージが生成されず、結果を格納する列または変数の有効桁数に丸められます。
 
 NUMERIC_ROUNDABORT は、計算列やインデックス付きビューのインデックスを作成または変更する場合は、OFF に設定する必要があります。
 
 このオプションの状態を確認するには、sys.databases カタログ ビューの is_numeric_roundabort_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsNumericRoundAbortEnabled プロパティを調べて状態を確認することもできます。
 
-RECURSIVE_TRIGGERS { ON | OFF }: ON: AFTER トリガーの再帰呼び出しを実行できるようになります。
+RECURSIVE_TRIGGERS { ON | OFF }         
+ON         
+AFTER トリガーの再帰呼び出しを実行できるようになります。
 
-OFF: sys.databases カタログ ビューの is_recursive_triggers_on 列を調べることで、このオプションの状態を確認できます。 DATABASEPROPERTYEX 関数の IsRecursiveTriggersEnabled プロパティを調べて状態を確認することもできます。
+OFF         
+このオプションの状態を確認するには、sys.databases カタログ ビューの is_recursive_triggers_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsRecursiveTriggersEnabled プロパティを調べて状態を確認することもできます。
 
 > [!NOTE]
 > RECURSIVE_TRIGGERS に OFF に設定されている場合、直接再帰呼び出しのみが回避されます。 間接再帰呼び出しを無効にするには、nested triggers サーバー オプションを 0 に設定する必要があります。
 
 sys.databases カタログ ビューの is_recursive_triggers_on 列、または DATABASEPROPERTYEX 関数の IsRecursiveTriggersEnabled プロパティを調べることで、このオプションの状態を確認できます。
 
-**\<target_recovery_time_option> ::=**
+**\<target_recovery_time_option> ::=**         
 
 間接的なチェックポイントの生成頻度をデータベースごとに指定します。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、新しいデータベースに対する既定値は 1 分であり、これはデータベースが間接チェックポイントを使用することを示します。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定によって異なります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ほとんどのシステムに対して 1 分をお勧めします。
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time*: クラッシュが発生した場合に、指定したデータベースを復旧にかかる時間の上限を指定します。
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
+*target_recovery_time*         
+クラッシュが発生した場合、指定したデータベースが復旧に要する時間の上限を指定します。
 
-SECONDS: *target_recovery_time* が秒単位で表されていることを示します。
+SECONDS         
+*target_recovery_time* が秒単位で表されていることを示します。
 
-MINUTES: *target_recovery_time* が秒単位で表されていることを示します。
+MINUTES         
+*target_recovery_time* が分単位で表されていることを示します。
 
 間接的なチェックポイントについて詳しくは、「[データベース チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md)」をご覧ください。
 
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE: ロールバックを指定した秒数の後に実行するか、直ちに実行するかを指定します。
+ROLLBACK AFTER "*整数*" [SECONDS] | ROLLBACK IMMEDIATE         
+指定した秒数の後、または直ちにロールバックするかどうかを指定します。
 
-NO_WAIT: 要求されたデータベースの状態またはオプションの変更がすぐに完了しない場合に、要求が失敗するように指定します。 すぐに完了とは、トランザクションが自身のコミットまたはロール バック処理を待機しないことを意味します。
+NO_WAIT         
+要求されたデータベースの状態またはオプションの変更がすぐに完了しない場合に、要求が失敗するように指定します。 すぐに完了とは、トランザクションが自身のコミットまたはロール バック処理を待機しないことを意味します。
 
-## <a name="SettingOptions"></a> オプションの設定
-
+## <a name="SettingOptions"></a> オプションの設定         
 データベース オプションの現在の設定を取得するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューまたは [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) を使用します。
 
 データベース オプションを設定すると、変更は直ちに有効になります。
@@ -2588,7 +2791,6 @@ NO_WAIT: 要求されたデータベースの状態またはオプションの�
 ## <a name="examples"></a>使用例
 
 ### <a name="a-setting-the-database-to-readonly"></a>A. データベースを READ_ONLY に設定する
-
 データベースまたはファイル グループの状態を READ_ONLY または READ_WRITE に変更するには、データベースに対する排他的アクセスが必要です。 次の例では、アクセスを制限するために、データベースを `RESTRICTED_USER` モードに設定します。 次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの状態を `READ_ONLY` に設定し、データベースへのアクセス権をすべてのユーザーに戻します。
 
 ```sql
@@ -2607,7 +2809,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. データベースの SNAPSHOT 分離を有効にする
-
 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対する SNAPSHOT 分離フレームワーク オプションを有効にします。
 
 ```sql
@@ -2624,7 +2825,6 @@ SELECT name, snapshot_isolation_state,
 FROM sys.databases
 WHERE name = N'AdventureWorks2012';
 GO
-
 ```
 
 結果セットは、SNAPSHOT 分離フレームワークが有効であることを示しています。
@@ -2634,7 +2834,6 @@ GO
 |AdventureWorks2012 |1| ON |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 変更の追跡を有効化、変更、および無効化する
-
 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで変更の追跡を有効にし、保有期間を `2` 日に設定します。
 
 ```sql
@@ -2658,7 +2857,6 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. クエリ ストアを有効にする
-
 次の例では、クエリ ストアを有効にし、クエリ ストアのパラメーターを構成します。
 
 ```sql
@@ -2726,17 +2924,17 @@ RESULT_SET_CACHING { ON | OFF}
 
 自動オプションを制御します。
 
-**アクセス許可**:以下のアクセス許可が必要です。
+**Permissions**: 次の権限が必要です。
 
 - サーバー レベル プリンシパル ログイン (プロビジョニング処理で作成されたもの) または
-- dbmanager データベース ロールのメンバー。
+- `dbmanager` データベース ロールのメンバー。
 
 所有者が dbmanager ロールのメンバーである場合を除き、データベースの所有者はデータベースを変更することはできません。
 
 > [!Note]
 > この機能をすべてのリージョンにロールアウトしながら、ご利用にインスタンスにデプロイされたバージョンと、機能の可用性に関する最新の[ Azure SQL DW リリースノート](/azure/sql-data-warehouse/release-notes-10-0-10106-0)を確認してください。
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } (Gen2 のプレビュー): このコマンドは、マスター データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という名前の新しい列が sys.databases に導入され、データベースの結果キャッシュ設定を示します。  
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } (Azure SQL Data Warehouse Gen2 のプレビュー): このコマンドは、マスター データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という名前の新しい列が sys.databases に導入され、データベースの結果キャッシュ設定を示します。  
 
 ON: このデータベースから返されたクエリの結果セットは Azure SQL Data Warehouse ストレージにキャッシュされます。
 
@@ -2770,7 +2968,7 @@ SET RESULT_SET_CACHING OFF;
 ### <a name="check-result-set-caching-setting-for-a-database"></a>データベースに対する結果セットのキャッシュを確認する
 
 ```sql
-SELECT name, is_result_set_caching  
+SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
@@ -2802,7 +3000,7 @@ If
 FROM sys.dm_pdw_request_steps  
 WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
 SELECT 1 as is_cache_hit  
-ELSE 
+ELSE
 SELECT 0 as is_cache_hit;
 ```
 

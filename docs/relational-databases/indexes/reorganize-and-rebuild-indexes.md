@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802606"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749191"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>インデックスの再構成と再構築
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +94,13 @@ ms.locfileid: "56802606"
 ### <a name="Security"></a> セキュリティ  
   
 #### <a name="Permissions"></a> Permissions  
-テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
+テーブルまたはビューに対する ALTER 権限が必要です。 ユーザーは次のロールの少なくとも 1 つのメンバーである必要があります。
+
+* **db_ddladmin** データベース ロール <sup>1</sup> 
+* **db_owner** データベース ロール
+* **sysadmin** サーバー ロール  
+
+<sup>1</sup>**db_ddladmin** データベース ロールには[最も低い特権レベル](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)が設定されています。
   
 ## <a name="SSMSProcedureFrag"></a> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を利用してインデックスの断片化を確認する  
   
@@ -161,7 +167,7 @@ ms.locfileid: "56802606"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -255,7 +261,7 @@ ms.locfileid: "56802606"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -275,7 +281,7 @@ ms.locfileid: "56802606"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -292,7 +298,7 @@ ms.locfileid: "56802606"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、 `Employee` テーブルで単一のインデックスを再構築します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 次の例では、 `Employee` テーブルで単一のインデックスを再構築します。  
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a11d29e7cd8a44f052ad5e0b9ed9278d79174b39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e79323684bff589f54d3247d2feb710d97ceebe8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208681"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798212"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 可用性グループの強制手動フェールオーバーの実行 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,37 +49,8 @@ ms.locfileid: "53208681"
 > [!NOTE]  
 >  フェールオーバーを強制する場合の前提条件と推奨事項の詳細、および強制フェールオーバーを使用して重大なエラーから復旧するシナリオの例については、この記事の後半にある「[サンプル シナリオ: 重大なエラーから復旧するための強制フェールオーバーの使用](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)」を参照してください。  
   
--   **作業を開始する準備:**  
   
-     [制限事項と制約事項](#Restrictions)  
-  
-     [前提条件](#Prerequisites)  
-  
-     [推奨事項](#Recommendations)  
-  
-     [クォーラム強制後のデータ損失を回避できる方法](#WaysToAvoidDataLoss)  
-  
-     [セキュリティ](#Security)  
-  
--   **次のものを使用して強制フェールオーバー (データ損失の可能性あり) を実行するには:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **補足情報:**[強制フェールオーバー後の必須タスク](#FollowUp)  
-  
--   **サンプル シナリオ:**[致命的なエラーから復旧するための強制フェールオーバーの使用](#ExampleRecoveryFromCatastrophy)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
-  
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+##  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   強制フェールオーバーは、Windows server フェールオーバー クラスタリング (WSFC) にクォーラムが存在しない場合のみ実行できません。  
   
@@ -94,13 +65,13 @@ ms.locfileid: "53208681"
     > [!NOTE]  
     >  複数のデータベースにまたがるトランザクションと分散トランザクションのサポートは、SQL Server とオペレーティング システムのバージョンによって異なります。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+##  <a name="Prerequisites"></a> 前提条件  
   
 -   WSFC クラスターにクォーラムがあること。 クラスターにクォーラムが存在しない場合は、「 [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)の PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。  
   
 -   ロールが SECONDARY または RESOLVING 状態であるレプリカをホストするサーバー インスタンスに接続できる必要があります。  
   
-###  <a name="Recommendations"></a> 推奨事項  
+##  <a name="Recommendations"></a> 推奨事項  
   
 -   プライマリ レプリカが実行中である間は、強制フェールオーバーを実行しないでください。  
   
@@ -113,7 +84,7 @@ ms.locfileid: "53208681"
   
 -   クライアントが元のプライマリに接続できる場合は、強制フェールオーバーによってスプリット ブレイン動作のリスクが発生します。 強制フェールオーバーを実行する前に、クライアントが元のプライマリ レプリカにアクセスできないようにすることを強くお勧めします。 そうしないと、強制フェールオーバーの実行後に元のプライマリ データベースと現在のプライマリ データベースがそれぞれ、他方とは無関係に更新されることがあります。  
   
-###  <a name="WaysToAvoidDataLoss"></a> クォーラム強制後のデータ損失を回避できる方法  
+##  <a name="WaysToAvoidDataLoss"></a> クォーラム強制後のデータ損失を回避できる方法  
  クォーラムが失われた後のエラー状態中は、以下に示すように、データ損失を回避できます。  
   
 -   **元のプライマリ レプリカがオンラインになる場合**  
@@ -140,9 +111,8 @@ ms.locfileid: "53208681"
     > [!NOTE]  
     >  セカンダリ レプリカに対して強制フェールオーバーを実行する場合、データ損失の量は、フェールオーバー ターゲットがどの程度プライマリ レプリカより遅れているかによって決まります。 残念ながら、WSFC クラスターにクォーラムが存在しない、またはクォーラムが強制されている場合は、失われる可能性があるデータの量を評価できません。 ただし、WSFC クラスターが正常なクォーラムを再取得した後、データ損失の可能性を追跡できます。 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)の PowerShell を使用して、AlwaysOn 可用性グループに対する強制フェールオーバー (データ損失の可能性あり) を実行する方法について説明します。  
   
-###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -359,7 +329,7 @@ ms.locfileid: "53208681"
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server ユーザー諮問チームのホワイト ペーパー](https://sqlcat.com/)  
+     [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

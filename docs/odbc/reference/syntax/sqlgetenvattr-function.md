@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d09182bc39d99a99f3d03957e296c91101b0fe5
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538133"
 ---
 # <a name="sqlgetenvattr-function"></a>SQLGetEnvAttr 関数
@@ -62,7 +62,7 @@ SQLRETURN SQLGetEnvAttr(
  [入力]場合*ValuePtr*文字の文字列をポイントして、この引数の長さである必要があります\* *ValuePtr*します。 場合\* *ValuePtr*整数*BufferLength*は無視されます。 場合 *\*ValuePtr*は Unicode 文字列です (呼び出し時に**SQLGetEnvAttrW**)、 *BufferLength*引数は偶数である必要があります。 属性値が文字の文字列でない場合*BufferLength*は使用されません。  
   
  *StringLengthPtr*  
- [出力]\(Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な *\*ValuePtr*します。 場合*ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きいまたは等しい場合*BufferLength*、内のデータ\* *ValuePtr*に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
+ [出力] (Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な *\*ValuePtr*します。 場合*ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きいまたは等しい場合*BufferLength*、内のデータ\* *ValuePtr*に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE。  

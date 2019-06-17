@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7051c94e4883c57daab4d5706feb073323e1c371
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538048"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 関数
@@ -51,7 +51,7 @@ SQLRETURN SQLGetConnectAttr(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *属性*  
  [入力]取得する属性。  
@@ -75,7 +75,7 @@ SQLRETURN SQLGetConnectAttr(
 -   場合 *\*ValuePtr* 、固定長データ型を含む*BufferLength* SQL_IS_INTEGER または SQL_IS_UINTEGER のいずれかを適切なは。  
   
  *StringLengthPtr*  
- [出力]\(Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*します。 場合\* *ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きい場合*BufferLength* null 終了文字のデータの長さマイナス *\*ValuePtr*に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
+ [出力] (Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*します。 場合\* *ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きい場合*BufferLength* null 終了文字のデータの長さマイナス *\*ValuePtr*に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE。  

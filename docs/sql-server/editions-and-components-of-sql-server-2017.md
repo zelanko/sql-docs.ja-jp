@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560108"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744173"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 の各エディションとサポートされている機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [SQL ドキュメントのハブ ページに関するご意見を共有してください。](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 このトピックでは、SQL Server 2017 のさまざまなエディションでサポートされている機能の詳細を説明します。 
 
@@ -123,7 +125,7 @@ ms.locfileid: "65560108"
 |-------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の主要マニュアル。| 
 
-**Developer Edition と Evaluation Edition**   
+**Developer Edition と Evaluation Edition **  
 Developer Edition と Evaluation Edition でサポートされている機能については、下の表に記載されている SQL Server Enterprise Edition の機能をご覧ください。
 
 Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md) のクライアントを 1 つだけサポートします。 
@@ -196,7 +198,7 @@ Developer Edition は引き続き [SQL Server Distributed Replay](../tools/distr
 |複数の Filestream コンテナー|はい|はい|はい|はい|はい|
 |NUMA 対応のラージ ページ メモリとバッファー配列の割り当て|はい|いいえ|いいえ|いいえ|いいえ|
 |バッファー プール拡張|はい|はい|いいえ|いいえ|いいえ|
-|IO リソース管理|はい|いいえ|いいえ|いいえ|いいえ|  
+|I/O リソース管理|はい|いいえ|いいえ|いいえ|いいえ|  
 |先行読み取り|はい|いいえ|いいえ|いいえ|いいえ|
 |拡張スキャン|はい|いいえ|いいえ|いいえ|いいえ|
 |遅延持続性|はい|はい|はい|はい|はい|

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 34e5533d442dbbc91807a533ba53ebcc8b115d19
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508699"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775339"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>シングル ユーザー モードでの SQL Server の起動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "52508699"
   
 4.  クラスター アドミニストレーターまたはフェールオーバー クラスター管理コンソールから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがまだオフライン状態にあるかどうかを確認します。  
   
-5.  ここで、次のコマンドを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、必要な操作を行います: SQLCMD -E -S\<servername>  
+5.  ここで、次のコマンドを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、必要な操作を行います: SQLCMD -E -S\<servername>。  
   
 6.  操作が完了したら、コマンド プロンプトを閉じ、クラスター アドミニストレーターから SQL および他のリソースをオンラインに戻します。  
   

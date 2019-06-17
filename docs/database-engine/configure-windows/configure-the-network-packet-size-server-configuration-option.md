@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 46de327bcc6a08d27291622fd190812919444873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 90cef82fd04294022e6ab41ec07526deb8c438cc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613580"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802475"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47613580"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して network packet size オプションを構成するには:**  
   
@@ -47,9 +47,9 @@ ms.locfileid: "47613580"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [network packet size オプションを構成した後](#FollowUp)  
+-   **補足情報:**[network packet size オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47613580"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `network packet size` オプションの値を `6500` バイトに設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `network packet size` オプションの値を `6500` バイトに設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -106,9 +106,9 @@ GO
   
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: network packet size オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: network packet size オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

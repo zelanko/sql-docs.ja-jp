@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e60756b2b8980825fdd61e0e589f36fc29c0b579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 46098bd775dba93adf89b1504c582f4aa0233240
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727356"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803839"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>fill factor サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47727356"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して fill factor オプションを構成するには:**  
   
@@ -39,9 +39,9 @@ ms.locfileid: "47727356"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [fill factor オプションを構成した後](#FollowUp)  
+-   **補足情報:**[fill factor オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47727356"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `fill factor` オプションの値を `100`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `fill factor` オプションの値を `100`に設定する方法を示します。  
   
 ```sql  
 Use AdventureWorks2012;  
@@ -85,9 +85,9 @@ RECONFIGURE;
 GO  
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: fill factor オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: fill factor オプションを構成した後  
  設定を有効にするには、サーバーを再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

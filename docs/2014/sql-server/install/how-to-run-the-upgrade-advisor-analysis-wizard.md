@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1464b55724e4305f2833ddce34e27170c7afd484
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094826"
 ---
 # <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>操作方法:アップグレード アドバイザー分析ウィザードを実行する
@@ -29,7 +29,7 @@ ms.locfileid: "66094826"
   
 1.  アップグレード アドバイザーの開始 ページで、**アップグレード アドバイザー分析ウィザードを起動**します。  
   
-2.   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネント** ページで、スキャン サーバーの名前を入力、**サーバー名**ボックスをクリックして**検出**します。 サーバー名については次のガイドラインに従ってください。  
+2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネント** ページで、スキャン サーバーの名前を入力、**サーバー名**ボックスをクリックして**検出**します。 サーバー名については次のガイドラインに従ってください。  
   
     -   クラスター化されていないインスタンスをスキャンするには、コンピューター名を入力します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66094826"
     > [!WARNING]  
     >  アップグレード アドバイザーは、クライアント接続に標準ポート (1433) を使用するように設定されていない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには接続できません。 標準ポート (1433) を使用していない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するには、IP アドレスとポートを使用して別名を作成します。 クライアント プロトコルの構成と別名の作成の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを参照してください[Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)します。  
     >   
-    >  ない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップグレード アドバイザーを実行しているコンピューターにインストール をクリックして**開始**、し、実行`cliconfg`します。 開き、  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント ネットワーク ユーティリティ** ダイアログ ボックス。 使用して、**エイリアス**タブは、エイリアスを作成します。  
+    >  ない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アップグレード アドバイザーを実行しているコンピューターにインストールをクリックして**開始**、し、実行`cliconfg`します。 開き、  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント ネットワーク ユーティリティ** ダイアログ ボックス。 使用して、**エイリアス**タブは、エイリアスを作成します。  
   
 3.  検出されたコンポーネントの一覧を確認に、必要に応じて、選択内容を変更してクリックして**次**します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66094826"
 8.  分析が完了したら、クリックして**レポートの起動**検出されたアップグレードの問題を表示します。  
   
 ## <a name="see-also"></a>参照  
- [方法: アップグレード アドバイザーを起動します。](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [方法:アップグレード アドバイザーを起動します。](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [アップグレード アドバイザーを実行している&#40;ユーザー インターフェイス&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

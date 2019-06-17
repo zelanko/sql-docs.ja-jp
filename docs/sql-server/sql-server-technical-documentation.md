@@ -18,20 +18,24 @@ helpviewer_keywords:
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b17e6b799bf3ff35b441286fd1205ca5382b207
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.author: jroth
+manager: craigg
+monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 93d36f922d3cd66cd8b617afbdb3e9bf80d79e22
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836168"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744161"
 ---
 # <a name="sql-server-documentation"></a>SQL Server のドキュメント
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+> [!div class="nextstepaction"]
+> [SQL ドキュメントのハブ ページに関するご意見を共有してください。](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
+
+::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server は Microsoft データ プラットフォームの中心部です。 SQL Server は、オペレーション データベース管理システム (ODBMS) 業界のリーダーといえる製品です。 このドキュメントは、Windows および Linux の両方での SQL Server のインストール、構成、使用の際に役立ちます。 コンテンツには、エンド ツー エンドの例、コード サンプル、およびビデオが含まれています。 SQL Server 言語のトピックについては、「[言語リファレンス](../t-sql/language-reference.md)」を参照してください。
 ::: moniker-end
 
@@ -52,6 +56,7 @@ SQL Server 2014、および SQL Server 2005 などのさらに古いバージョ
 |[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 リリース ノート](../sql-server/sql-server-ver15-release-notes.md)        |
 |[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server **2014** のドキュメントは、[こちら](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)で入手できます。
 ::: moniker-end
@@ -61,6 +66,7 @@ SQL Server 2014、および SQL Server 2005 などのさらに古いバージョ
 |新機能  | リリース ノート  |
 |---------|---------|
 |[SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 リリース ノート](../sql-server/sql-server-ver15-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ::: moniker-end
 
@@ -69,6 +75,7 @@ SQL Server 2014、および SQL Server 2005 などのさらに古いバージョ
 |新機能  | リリース ノート  |
 |---------|---------|
 |[SQL Server 2017 の新機能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > SQL Server 2019 のプレビューがご利用いただけるようになりました。 詳細については、「[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)」(SQL Server 2019 の新機能) を参照してください。
@@ -79,6 +86,7 @@ SQL Server 2014、および SQL Server 2005 などのさらに古いバージョ
 |新機能  | リリース ノート  |
 |---------|---------|
 |[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 リリース ノート](../sql-server/sql-server-2016-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ::: moniker-end
 
@@ -140,9 +148,13 @@ SQL Server 2014、および SQL Server 2005 などのさらに古いバージョ
 - [SQL Server 2016 の AdventureWorks サンプル データベースとスクリプト](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [GitHub の SQL Server サンプル](https://github.com/Microsoft/sql-server-samples)
 
-## <a name="previous-versions-gm66"></a> SQL Server 2014、2012、2008、2005
+## <a name="previous-versions-gm66"></a> SQL Server の以前のバージョン (2014、2012、2008、2005)
 
 [!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
+<!--
+The following includes/ files contain their own H2 headers.
+-->
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

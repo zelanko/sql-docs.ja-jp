@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 574045de5626d3f573988b96dd3c40b3d08df03b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534077"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795468"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>役割の交代中に発生するサービスの中断時間の算出 (データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52534077"
  フェールオーバー時間の内訳は、以前のミラー サーバーが再実行キューに残っているすべてのログをロールフォワードするために必要な時間を主とし、これにわずかな時間を加えたものです (ミラー サーバーでログ レコードが処理される方法の詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください)。 フェールオーバー時間の測定方法の詳細については、このトピックの「フェールオーバーの再実行速度の測定」を参照してください。  
   
 > [!IMPORTANT]  
->  インデックスまたはテーブルを作成し、変更するトランザクション中にフェールオーバーが発生した場合、フェールオーバーには通常より長い時間がかかる可能性があります。  たとえば、BEGIN TRANSACTION、テーブルに対する CREATE INDEX、SELECT INTO という一連の操作では、フェールオーバーの時間が増加する場合があります。 このようなトランザクションでは、COMMIT TRANSACTION ステートメントまたは ROLLBACK TRANSACTION ステートメントを使用してトランザクションを完了するまで、フェールオーバーの時間が増加する可能性は残ります。  
+>  インデックスまたはテーブルを作成し、変更するトランザクション中にフェールオーバーが発生した場合、フェールオーバーには通常より長い時間がかかる可能性があります。  たとえば、次の一連の操作の間のフェールオーバーでは、フェールオーバーの時間が増加する場合があります: BEGIN TRANSACTION、テーブルに対する CREATE INDEX、テーブルに対する SELECT INTO。 このようなトランザクションでは、COMMIT TRANSACTION ステートメントまたは ROLLBACK TRANSACTION ステートメントを使用してトランザクションを完了するまで、フェールオーバーの時間が増加する可能性は残ります。  
   
 ### <a name="the-redo-queue"></a>再実行キュー  
  データベースのロールフォワードでは、現在ミラー サーバー上の再実行キューにあるすべてのログ レコードが適用されます。 *再実行キュー* は、ミラー サーバー上のディスクに再実行用として書き込まれていて、ミラー データベースへはロールフォワードされていないログ レコードで構成されています。  

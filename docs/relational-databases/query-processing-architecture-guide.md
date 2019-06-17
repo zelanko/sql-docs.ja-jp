@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161689"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462716"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -356,7 +356,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 `NOEXPAND` をビューに対して指定した場合、ビューに定義されたインデックスを使用することがクエリ オプティマイザーにより検討されます。 `NOEXPAND` をオプションの `INDEX()` 句で指定すると、クエリ オプティマイザーの判断で指定されたインデックスが強制的に使用されます。 `NOEXPAND` を指定できるのはインデックス付きビューに対してのみであり、インデックスのないビューには指定できません。
 
-ビューを含んだクエリで `NOEXPAND` と `EXPAND VIEWS` のいずれも指定しない場合、基になるテーブルにアクセスするためにビューが拡張されます。 ビューを構成するクエリにテーブル ヒントが含まれている場合、基になるテーブルにヒントが反映されます  (この処理の詳細については、「ビューの解決」を参照してください)。ビューの基になるテーブルに存在するヒントのセットがテーブル間で同一であれば、クエリはインデックス付きビューと一致する可能性があります。 ほとんどの場合、ヒントはビューから直接継承されるので双方のヒントは一致します。 ただし、クエリの参照先がビューではなくテーブルであり、参照先テーブルに直接適用されているヒントがテーブルによって異なる場合、そのようなクエリはインデックス付きビューと一致しません。 ビューの展開後、 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`、 `XLOCK` のいずれかのヒントがクエリの参照先テーブルに適用される場合、クエリはインデックス付きビューと一致しません。
+ビューを含んだクエリで `NOEXPAND` と `EXPAND VIEWS` のいずれも指定しない場合、基になるテーブルにアクセスするためにビューが拡張されます。 ビューを構成するクエリにテーブル ヒントが含まれている場合、基になるテーブルにヒントが反映されます (この処理の詳細については、「ビューの解決」を参照してください)。ビューの基になるテーブルに存在するヒントのセットがテーブル間で同一であれば、クエリはインデックス付きビューと一致する可能性があります。 ほとんどの場合、ヒントはビューから直接継承されるので双方のヒントは一致します。 ただし、クエリの参照先がビューではなくテーブルであり、参照先テーブルに直接適用されているヒントがテーブルによって異なる場合、そのようなクエリはインデックス付きビューと一致しません。 ビューの展開後、 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`、 `XLOCK` のいずれかのヒントがクエリの参照先テーブルに適用される場合、クエリはインデックス付きビューと一致しません。
 
 `INDEX (index_val[ ,...n] )` という形式のテーブル ヒントでクエリ内のビューを参照しているときに、 `NOEXPAND` ヒントを指定しない場合、インデックス ヒントは無視されます。 特定のインデックスを使用するように指定するには `NOEXPAND` を使用します。 
 
@@ -535,7 +535,7 @@ WHERE ProductSubcategoryID = 4;
 
 パラメーターを使用して [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと定数を切り離すと、同一のプランをリレーショナル エンジンが認識できるようになります。 パラメーターは、次の方法で使用できます。 
 
-* [!INCLUDE[tsql](../includes/tsql-md.md)] では、`sp_executesql` を次のように使用します:  
+* [!INCLUDE[tsql](../includes/tsql-md.md)] では、`sp_executesql` を次のように使用します: 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -625,7 +625,7 @@ WHERE ProductSubcategoryID = 4;
 * ストアド プロシージャ、トリガー、またはユーザー定義関数の本体内のステートメント。 これらのルーチンのクエリ プランは既に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により再利用されています。
 * クライアント側のアプリケーションで既にパラメーター化されている、準備されたステートメント。
 * XQuery メソッド呼び出しを含んでいるステートメントを、 `WHERE` 句など通常は引数がパラメーター化されるコンテキストで使用した場合。 引数がパラメーター化されないコンテキストでこのメソッドを使用した場合は、ステートメントの残りの部分がパラメーター化されます。
-* [!INCLUDE[tsql](../includes/tsql-md.md)] カーソル内のステートメント  (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
+* [!INCLUDE[tsql](../includes/tsql-md.md)] カーソル内のステートメント。 (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
 * 非推奨のクエリ構造。
 * `ANSI_PADDING` または `ANSI_NULLS` が `OFF`に設定されている状態で実行されているステートメント。
 * パラメーター化が可能なリテラルが 2,097 を超えるステートメント。
@@ -729,6 +729,8 @@ WHERE ProductID = 63;
 -  sp_executesql 経由で送信されたクエリ 
 -  準備されたクエリ
 
+不適切なパラメーター スニッフィング問題のトラブルシューティングについては、「[Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues)」 (パラメーター依存のクエリ実行プランの問題を解決する) を参照してください。
+
 > [!NOTE]
 > `RECOMPILE` ヒントを利用するクエリの場合、パラメーター値とローカル変数の現在の値の両方がスニッフィングされます。 (パラメーターとローカル変数の) スニッフィングされた値は、バッチの中で、`RECOMPILE` ヒントのあるステートメントの手前に存在する値です。 特に、パラメーターの場合、バッチ呼び出しで共に与えられた値はスニッフィングされません。
 
@@ -751,7 +753,7 @@ WHERE ProductID = 63;
 >   カーソルについて詳しくは、「[DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
 > - **再帰クエリ**    
 >   再帰について詳しくは、「[再帰共通テーブル式の定義および使用に関するガイドライン](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)」および「[Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)」(T-SQL での再帰) をご覧ください。
-> - **テーブル値関数 (TVF)**    
+> - **テーブル値関数 (TVF)**     
 >   TVF について詳しくは、「[ユーザー定義関数の作成 (データベース エンジン)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」をご覧ください。
 > - **TOP キーワード**    
 >   詳しくは、「[TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)」をご覧ください。

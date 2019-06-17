@@ -15,14 +15,14 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0b932c1fa3aa8575f8f12ef5f164841788f74c1a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 7e2c9ee878b49065a040865bc32d62837e8b8e25
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65948746"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781019"
 ---
-# <a name="set-result-set-caching-transact-sql"></a>結果セット キャッシュの設定 (Transact-SQL)
+# <a name="set-result-set-caching-transact-sql-preview-for-azure-sql-data-warehouse-gen2"></a>結果セット キャッシュの設定 (Transact-SQL) (Azure SQL Data Warehouse Gen2 のプレビュー)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -85,7 +85,7 @@ SET RESULT_SET_CACHING OFF;
 ### <a name="check-result-set-caching-setting-for-a-database"></a>データベースに対する結果セットのキャッシュを確認する
 
 ```sql
-SELECT name, is_result_set_caching  
+SELECT name, is_result_set_caching_on  
 FROM sys.databases
 ```
 

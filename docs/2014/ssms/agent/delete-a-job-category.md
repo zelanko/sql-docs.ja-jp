@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4d1ecf24b8bde6ed02557a2a0d4de722240f754
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62523928"
 ---
 # <a name="delete-a-job-category"></a>ジョブ カテゴリの削除
@@ -50,13 +50,13 @@ ms.locfileid: "62523928"
   
 3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  **&lt;server_name&gt;**__ ダイアログ ボックスで、削除するジョブ カテゴリを選択します。  
+4.  **_server_name_** ダイアログ ボックスで、削除するジョブ カテゴリを選択します。  
   
 5.  **[削除]** をクリックします。  
   
 6.  **[ジョブ カテゴリ]** ダイアログ ボックスで **[はい]** をクリックします。  
   
-7.  **&lt;server_name&gt;**__ ダイアログ ボックスを閉じます。  
+7.  **[ジョブ カテゴリの管理 - _<server_name>_ ]** ダイアログ ボックスを閉じます。  
   
 
   

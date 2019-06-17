@@ -16,50 +16,29 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c56c6586330830c0dbda3ece592db7a3bc71d4f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213156"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799285"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 可用性グループへのセカンダリ レプリカの参加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、Always On 可用性グループにセカンダリ レプリカを参加させる方法について説明します。 Always On 可用性グループにセカンダリ レプリカを追加したら、セカンダリ レプリカを可用性グループに参加させる必要があります。 レプリカの参加操作は、セカンダリ レプリカをホストしている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上で実行する必要があります。  
+
   
--   **作業を開始する準備:**  
+##  <a name="Prerequisites"></a> 前提条件  
   
-     [前提条件](#Prerequisites)  
-  
-     [セキュリティ](#Security)  
-  
--   **以下を使用してセカンダリ データベースを準備するには:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **補足情報:**[セカンダリ データベースの構成](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
-  
-###  <a name="Prerequisites"></a> 前提条件  
-  
--   可用性グループのプライマリ レプリカが現在オンラインになっている必要があります。  
-  
--   可用性グループへの参加が済んでいないセカンダリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
-  
+-   可用性グループのプライマリ レプリカが現在オンラインになっている必要があります。    
+-   可用性グループへの参加が済んでいないセカンダリ レプリカをホストするサーバー インスタンスに接続されている必要があります。    
 -   プライマリ レプリカをホストしているサーバー インスタンスのデータベース ミラーリング エンドポイントに対してローカル サーバー インスタンスが接続できる必要があります。  
   
 > [!IMPORTANT]  
 >  いずれかの前提条件が満たされていない場合、参加操作は失敗します。 参加操作が失敗した場合は、プライマリ レプリカをホストしているサーバー インスタンスに接続し、セカンダリ レプリカを削除して再度追加した後で、可用性グループに参加させる必要があります。 詳細については、「[可用性グループからのセカンダリ レプリカの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)」および「[可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  

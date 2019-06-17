@@ -10,13 +10,13 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872262"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794997"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +45,11 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
 -   高可用性 (HA) 構成のない開発環境。  
   
 -   ダウンタイムを許容でき、最新のハードウェアとソフトウェアで実行されている非ミッション クリティカル運用環境。 ダウンタイムの長さは、データベースのサイズと、I/O サブシステムの速度によって異なります。 メモリ最適化テーブルを使用している場合、SQL Server 2014 をアップグレードすると、余分な時間がかかることがあります。 詳細については、「 [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)」を参照してください。  
-  
+
+> [!NOTE]
+> Microsoft がこの方法をどのように使用するかの例については、次のブログ記事を参照してください: 「[To upgrade or not to upgrade](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/)」 (アップグレードするか、アップグレードしないか)。 
+
+
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムの実行中に、アップグレード前チェックの実行の一部として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが停止し、再起動します。  
   

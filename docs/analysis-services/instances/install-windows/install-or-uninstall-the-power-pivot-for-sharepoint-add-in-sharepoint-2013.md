@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fdc41aaaad19317db3b3795cc63d137b19600c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63055269"
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013"></a>Power Pivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
@@ -58,7 +58,7 @@ ms.locfileid: "63055269"
 > [!NOTE]  
 >  Analysis Services データ プロバイダーは、 **spPowerPivot.msi**を使用して SharePoint 2013 サーバーにインストールする必要があります。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Feature Pack に用意されている他のインストーラー パッケージには、この環境でデータ プロバイダーが必要とする SharePoint 2013 サポート ファイルが含まれていないため、これらのパッケージはサポートされていません。  
   
- **構成ツール:**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 構成ツールは、SharePoint サーバーの 1 つのみで必要です。 ただし、ベスト プラクティスとして、マルチサーバー ファームでは少なくとも 2 台のサーバーに構成ツールをインストールし、一方のサーバーがオフラインの場合でも構成ツールにアクセスできるようにしておくことをお勧めします。  
+ **構成ツール:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 構成ツールは、SharePoint サーバーの 1 つのみで必要です。 ただし、ベスト プラクティスとして、マルチサーバー ファームでは少なくとも 2 台のサーバーに構成ツールをインストールし、一方のサーバーがオフラインの場合でも構成ツールにアクセスできるようにしておくことをお勧めします。  
   
 ##  <a name="bkmk_prereq"></a> 要件と前提条件  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63055269"
   
 -   内のサーバー[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]モード。 Excel Services では、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サーバーとして SQL Server Analysis Services インスタンスを使用します。 Analysis Services は、ローカル コンピューターでもリモート コンピューターでも実行できます。  
   
--   **権限:**[!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
+-   **権限:** [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] をインストールするには、現在のユーザーがコンピューターの管理者であり、SharePoint ファーム管理者グループのメンバーである必要があります。  
   
 -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] の要件と前提条件の詳細については、「 [SharePoint モードの Analysis Service サーバーのハードウェア要件とソフトウェア要件](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)」を参照してください。  
   
@@ -163,7 +163,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
 3.  **[構成ツール]** をクリックします。  
   
-4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 の構成]** をクリックします。  
+4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 の構成**をクリックします。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

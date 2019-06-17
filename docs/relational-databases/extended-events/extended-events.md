@@ -1,7 +1,7 @@
 ---
 title: 拡張イベントの概要 - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 0ea8f2a0202793380d80c09694a2a844e6859af9
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175667"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744009"
 ---
 # <a name="extended-events-overview"></a>拡張イベントの概要
 
@@ -103,7 +103,10 @@ ms.locfileid: "66175667"
 |拡張イベントを Event Tracing for Windows と共に使用してシステムの使用状況を監視する方法について説明します。|[拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | 拡張イベントに対するカタログ ビューと動的管理ビュー (DMV) の使用。 | [SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
-  
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL Database では、コード例が異なる可能性があります。
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## <a name="see-also"></a>参照  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [SQL Server オブジェクトとバージョンの DAC サポート](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
@@ -111,4 +114,5 @@ ms.locfileid: "66175667"
  [データ層アプリケーションの監視](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [拡張イベント カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite: XEL ファイルまたはライブ SQL ストリームから XEvents を読み取るためのクロスプラットフォーム ライブラリ](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)、2019 年 5 月リリース。  
+ [XELite: XEL ファイルまたはライブ SQL ストリームから XEvents を読み取るためのクロスプラットフォーム ライブラリ](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)、2019 年 5 月リリース。   
+ [Read-SQLXEvent PowerShell コマンドレット](https://www.powershellgallery.com/packages/SqlServer.XEvent)、2019 年 6 月リリース。

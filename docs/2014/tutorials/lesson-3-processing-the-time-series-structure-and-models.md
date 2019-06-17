@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042878"
 ---
 # <a name="lesson-3-processing-the-time-series-structure-and-models"></a>レッスン 3: 時系列構造と時系列モデルの処理
@@ -78,7 +78,7 @@ OPENQUERY (<source data definition>)
   
 #### <a name="to-process-the-mining-structure-and-related-mining-models-by-using-insert-into"></a>INSERT INTO を使用してマイニング構造とそれに関連するマイニング モデルを処理するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -151,6 +151,6 @@ OPENQUERY (<source data definition>)
 ## <a name="see-also"></a>参照  
  [処理の要件および注意事項&#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;ソース データ クエリ&#62;](/sql/dmx/source-data-query)   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](/sql/dmx/source-data-query-openquery)  
+ [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)  
   
   

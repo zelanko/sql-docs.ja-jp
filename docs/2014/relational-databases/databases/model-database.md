@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916948"
 ---
 # <a name="model-database"></a>model データベース
@@ -56,9 +56,9 @@ ms.locfileid: "62916948"
 |ANSI_WARNINGS|OFF|はい|  
 |ARITHABORT|OFF|はい|  
 |AUTO_CLOSE|OFF|はい|  
-|AUTO_CREATE_STATISTICS|ON|はい|  
-|AUTO_SHRINK|OFF|はい|  
-|AUTO_UPDATE_STATISTICS|ON|はい|  
+|AUTO_CREATE_STATISTICS|ON|[はい]|  
+|AUTO_SHRINK|OFF|[はい]|  
+|AUTO_UPDATE_STATISTICS|ON|[はい]|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
 |CHANGE_TRACKING|OFF|いいえ|  
 |CONCAT_NULL_YIELDS_NULL|OFF|はい|  
@@ -78,7 +78,7 @@ ms.locfileid: "62916948"
 |Service Broker のオプション|DISABLE_BROKER|いいえ|  
 |TRUSTWORTHY|OFF|いいえ|  
   
- <sup>1</sup>データベースの現在の復旧モデルを確認するを参照してください[表示または変更、データベースの復旧モデル&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)または[sys.databases &#40;TRANSACT-SQL&#41; 。](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>データベースの現在の復旧モデルを確認するを参照してください[表示または変更、データベースの復旧モデル&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)または[sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   

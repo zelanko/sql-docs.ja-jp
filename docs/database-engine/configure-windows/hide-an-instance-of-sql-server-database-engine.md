@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d6d01272a88f4a529e55959e12d87dd33c01cd5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 5401e5b731f09de89dedeef8308b7118299fbc9b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406189"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785267"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server データベース エンジンのインスタンスの非表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52406189"
  詳細については、「[クライアントが使用するサーバーの別名の作成または削除 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)」を参照してください。  
   
  クラスター化された名前付きインスタンスを非表示にすると、**LastConnect** レジストリ キー (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) のポートが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリッスンしているポートと異なる場合、クラスター サービスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続できなくなる可能性があります。 クラスター サービスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続できない場合、次のようなエラーが表示されることがあります:  
-**イベント ID: 1001: イベント名: フェールオーバー クラスタリング リソース デッドロック**  
+**イベント ID:1001:イベント名:フェールオーバー クラスタリング リソース デッドロック。**  
   
 ## <a name="see-also"></a>参照  
  [サーバー ネットワークの構成](../../database-engine/configure-windows/server-network-configuration.md)   

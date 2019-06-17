@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 298e0639aad54384b3586e27fcbd5d6223e646de
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 6e0cecaa342ed4db01536812cbb59b065a850360
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578432"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789722"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On クライアント接続 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "57578432"
   
 |Driver|マルチサブネット フェールオーバー|アプリケーションの目的|読み取り専用ルーティング|マルチサブネット フェールオーバー:より高速な単一サブネット エンドポイント フェールオーバー|マルチサブネット フェールオーバー:SQL クラスター インスタンスの名前付きインスタンスの解決|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|可|[はい]|[はい]|[はい]|可|  
-|SQL Native Client 11.0 OLEDB|いいえ|はい|[はい]|いいえ|いいえ|  
-|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム*|可|[はい]|[はい]|[はい]|可|  
-|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム**|可|[はい]|[はい]|[はい]|可|  
-|Microsoft JDBC Driver 4.0 for SQL Server|可|[はい]|[はい]|[はい]|可| 
-|Microsoft OLE DB Driver for SQL Server|可|[はい]|[はい]|[はい]|可| 
+|SQL Native Client 11.0 ODBC|はい|はい|はい|はい|はい|  
+|SQL Native Client 11.0 OLEDB|いいえ|はい|はい|いいえ|いいえ|  
+|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム*|はい|はい|はい|はい|はい|  
+|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム**|はい|はい|はい|はい|はい|  
+|Microsoft JDBC Driver 4.0 for SQL Server|はい|はい|はい|はい|はい| 
+|Microsoft OLE DB Driver for SQL Server|はい|はい|はい|はい|はい| 
   
  * ADO .NET with .NET Framework 4.0 用の接続性に関する修正プログラムをダウンロードしてください ([https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211))。  
   

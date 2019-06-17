@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e15ad7915b33c67e09325a38b7975430c5c8ce85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e982071f1d975b74f1c0c1cab1d6113293773d4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784460"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761742"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>default language サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47784460"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して default language オプションを構成するには:**  
   
@@ -39,9 +39,9 @@ ms.locfileid: "47784460"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [default language オプションを構成した後](#FollowUp)  
+-   **補足情報:**[default language オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47784460"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `default language` オプションをフランス語 (`2`) に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `default language` オプションをフランス語 (`2`) に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -83,9 +83,9 @@ RECONFIGURE ;
 GO  
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: default language オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: default language オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 00ae511095e046623df080e7cc6f9704aedc87ef
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712927"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>SQL Server Linux (RHEL) でのフェールオーバー クラスター インスタンスを構成します。
@@ -132,7 +132,7 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
 
    > 組み込みの高可用性構成がない別のファイアウォールを使用している場合、次のポートが、クラスター内の他のノードと通信できる Pacemaker 用に開かれる必要があります。
    >
-   > * [TCP]: ポート、2224 3121、21064
+   > * TCP: ポート、2224 3121、21064
    > * UDP:ポート 5405
 
 1. 各ノードに Pacemaker パッケージをインストールします。

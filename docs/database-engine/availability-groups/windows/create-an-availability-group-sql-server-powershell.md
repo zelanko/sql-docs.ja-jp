@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53f91ef270d9e4ea255a1cf71250dcc21c88346a
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 6bc6fcad5f667b0c1224c4d1e897ae9fc30642d0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974331"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793524"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>PowerShell による Always On 可用性グループの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,39 +27,21 @@ ms.locfileid: "57974331"
 > [!NOTE]  
 >  可用性グループの概要については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  
   
--   **作業を開始する準備:**  
-  
-     [前提条件、制限事項、および推奨事項](#PrerequisitesRestrictions)  
-  
-     [セキュリティ](#Security)  
-  
-     [作業の概要および対応する PowerShell コマンドレット](#SummaryPSStatements)  
-  
-     [SQL Server PowerShell プロバイダーを設定して使用するには](#PsProviderLinks)  
-  
--   **可用性グループを作成して構成するには、次に従います。**[PowerShell を使用した可用性グループの作成と構成](#PowerShellProcedure)  
-  
--   **使用例:**[PowerShell による可用性グループの作成](#ExampleConfigureGroup)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
-  
 > [!NOTE]  
 >  PowerShell のコマンドレットの代わりに、可用性グループの作成ウィザードや [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用する方法もあります。 詳細については、「 [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) 」または「 [可用性グループの作成 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
- 可用性グループを初めて作成する場合は、あらかじめこのセクションに目を通しておくことを強くお勧めします。  
   
-###  <a name="PrerequisitesRestrictions"></a> 前提条件、制限事項、および推奨事項  
+##  <a name="PrerequisitesRestrictions"></a> 前提条件、制限事項、および推奨事項  
   
 -   可用性グループを作成する前に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各ホスト インスタンスが、同じ Windows Server Failover Clustering (WSFC) フェールオーバー クラスタリングのそれぞれ異なる WSFC ノードに存在していることを確認します。 また、使用するサーバー インスタンスが、他のサーバー インスタンスの前提条件を満たしていることと、他の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の要件がすべて満たされていること、さらに、自分自身も推奨事項を認識していることを確認してください。 詳細については、「[Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照することを強くお勧めします。  
   
-###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
   
+  
+##  <a name="PowerShellProcedure"></a> PowerShell を使用した可用性グループの作成と構成  
+
 ###  <a name="SummaryPSStatements"></a> 作業の概要および対応する PowerShell コマンドレット  
  次の表は、可用性グループの構成に伴う基本的な作業の一覧です。一覧には PowerShell コマンドレットによってサポートされる作業が示されています。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に関連したこれらの作業は、この表に示されている順に実行する必要があります。  
   
@@ -77,9 +59,7 @@ ms.locfileid: "57974331"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [SQL Server PowerShell のヘルプの参照](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
-##  <a name="PowerShellProcedure"></a> PowerShell を使用した可用性グループの作成と構成  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 > [!NOTE]  
 >  特定のコマンドレットの構文や例を表示するには、 **PowerShell 環境で** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
@@ -106,7 +86,7 @@ ms.locfileid: "57974331"
 > [!NOTE]  
 >  複数のサーバー インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントが、それぞれ異なるドメイン ユーザー アカウントで実行されている場合、それぞれのサーバー インスタンス上に、もう一方のサーバー インスタンス用のログインを作成し、そのログインにローカルのデータベース ミラーリング エンドポイントへの CONNECT 権限を付与します。  
   
-##  <a name="ExampleConfigureGroup"></a> 例:PowerShell による可用性グループの作成  
+##  <a name="ExampleConfigureGroup"></a> 例:PowerShell を使用した可用性グループの作成  
  以下の PowerShell スクリプトは、2 つの可用性レプリカと 1 つの可用性データベースから成る `MyAG` という名前の単純な可用性グループを作成、構成する例です。 この例では、次の処理を実行します。  
   
 1.  `MyDatabase` とそのトランザクション ログをバックアップします。  

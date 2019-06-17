@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00f2dd9628419bf517c683358bfae89d8625c702
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+manager: jroth
+ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65936361"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794143"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "65936361"
 
 ||||
 |----------------|-----------------|-----------------|
-|単一の NUMA ノードを持つサーバー|16 未満の論理プロセッサ|MAXDOP を論理プロセッサ数以下に保つ|
-|単一の NUMA ノードを持つサーバー|16 を超える論理プロセッサ|最大値を 16 として、MAXDOP を論理プロセッサ数の半分に保つ|
-|複数の NUMA ノードを持つサーバー|NUMA ノードあたり 16 未満の論理プロセッサ|MAXDOP を NUMA ノードあたりの論理プロセッサ数以下に保つ|
+|単一の NUMA ノードを持つサーバー|8 以下の論理プロセッサ|MAXDOP を論理プロセッサ数以下に保つ|
+|単一の NUMA ノードを持つサーバー|8 を超える論理プロセッサ|MAXDOP を 8 に保つ|
+|複数の NUMA ノードを持つサーバー|NUMA ノードあたり 16 以下の論理プロセッサ|MAXDOP を NUMA ノードあたりの論理プロセッサ数以下に保つ|
 |複数の NUMA ノードを持つサーバー|NUMA ノードあたり 16 を超える論理プロセッサ|最大値を 16 として、MAXDOP を NUMA ノードあたりの論理プロセッサ数の半分に保つ|
   
 > [!NOTE]
@@ -67,9 +67,9 @@ ms.locfileid: "65936361"
 
 ||||
 |----------------|-----------------|-----------------|
-|単一の NUMA ノードを持つサーバー|8 未満の論理プロセッサ|MAXDOP を論理プロセッサ数以下に保つ|
+|単一の NUMA ノードを持つサーバー|8 以下の論理プロセッサ|MAXDOP を論理プロセッサ数以下に保つ|
 |単一の NUMA ノードを持つサーバー|8 を超える論理プロセッサ|MAXDOP を 8 に保つ|
-|複数の NUMA ノードを持つサーバー|NUMA ノードあたり 8 未満の論理プロセッサ|MAXDOP を NUMA ノードあたりの論理プロセッサ数以下に保つ|
+|複数の NUMA ノードを持つサーバー|NUMA ノードあたり 8 以下の論理プロセッサ|MAXDOP を NUMA ノードあたりの論理プロセッサ数以下に保つ|
 |複数の NUMA ノードを持つサーバー|NUMA ノードあたり 8 を超える論理プロセッサ|MAXDOP を 8 に保つ|
   
 ###  <a name="Security"></a> セキュリティ  
@@ -95,7 +95,7 @@ ms.locfileid: "65936361"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `max degree of parallelism` オプションを `8`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `max degree of parallelism` オプションを `8`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

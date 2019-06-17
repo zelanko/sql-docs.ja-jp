@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9748ef0f82fc62fd194efa9093f00032fd1d8cdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8e704a75a25849009e51a3e7f2c03fee535b7bbf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789710"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780735"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47789710"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して min memory per query オプションを構成するには:**  
   
@@ -45,9 +45,9 @@ ms.locfileid: "47789710"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報**  [min memory per query オプションを構成した後](#FollowUp)  
+-   **補足情報:**[min memory per query オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47789710"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `min memory per query` オプションの値を `3500` KB に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `min memory per query` オプションの値を `3500` KB に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -101,7 +101,7 @@ RECONFIGURE;
 GO    
 ```  
   
-##  <a name="FollowUp"></a> 補足情報: min memory per query オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: min memory per query オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

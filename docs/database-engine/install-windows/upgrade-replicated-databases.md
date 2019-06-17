@@ -1,5 +1,5 @@
 ---
-title: レプリケートされたデータベースのアップグレード | Microsoft Docs
+title: レプリケートされたデータベースのアップグレードまたは修正プログラム | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124612"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794714"
 ---
-# <a name="upgrade-replicated-databases"></a>レプリケートされたデータベースのアップグレード
+# <a name="upgrade-or-patch-replicated-databases"></a>レプリケートされたデータベースのアップグレードまたは修正プログラム
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ SQL Server へのアップグレード パスは、配置のパターンによ�
 
 レプリケーション トポロジのサイド バイ サイド アップグレードに対して採用されてきた一般的なアプローチは、トポロジ全体を移動するのではなく、パブリッシャーとサブスクライバーのペアを個別に新しいサイド バイ サイド環境に移動するというものです。 この段階的アプローチは、ダウンタイムを管理し、レプリケーションに依存するビジネスの特定の範囲に影響を最小限に抑えるのに役立ちます。  
 
-
-> [!NOTE]  
-> **SQL 2016 へのレプリケーション トポロジについて詳しくは、ブログ投稿「[Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)」(SQL Server 2016 へのレプリケーション トポロジのアップグレード) をご覧ください**。 
+この記事の多くは、SQL Server のバージョンのアップグレードを対象としています。 ただし、Service Pack または累積更新プログラムで SQL Server を修正するときには、インプレース アップグレード プロセスも同様に使用する必要があります。 
 
  >[!WARNING]
  > レプリケーション トポロジのアップグレードは、複数のステップから成るプロセスです。 テスト環境でレプリケーション トポロジのレプリカをアップグレードしてみてから、実際の運用環境でアップグレードを実行することをお勧めします。 これは、実際のアップグレード プロセス中に高価で長いダウンタイムを発生させずに、アップグレードを円滑に処理するために必要な運用ドキュメントの問題を解決するのに役立ちます。 レプリケーション トポロジをアップグレードするときに、運用環境で Always On 可用性グループや SQL Server フェールオーバー クラスター インスタンスを使用することで、ダウンタイムが大幅に減った事例があります。 また、アップグレードを試みる前に、MSDB、マスター、ディストリビューション データベースと、レプリケーションに参加しているユーザー データベースを含む、すべてのデータベースのバックアップを行うことをお勧めします。
