@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af98bd8f16d7278b932ad89f1c81c58ddb1fb54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127862"
 ---
 # <a name="set-ansi-command"></a>SET ANSI コマンド
@@ -57,6 +57,6 @@ SET ANSI ON | OFF
 ## <a name="string-order"></a>文字列の順序  
  SQL コマンドの 2 つの文字列比較では左から右の順序は irrelevantswitching = の一方の側から文字列を = = または演算子には、比較の結果に影響しません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SELECT - SQL コマンド](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT コマンド](../../odbc/microsoft/set-exact-command.md)

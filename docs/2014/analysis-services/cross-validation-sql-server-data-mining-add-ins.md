@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086650"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>クロス検証 (SQL Server データ マイニング アドイン)
@@ -135,7 +135,7 @@ ms.locfileid: "66086650"
   
  クラスター モデルには、モデルの作成に使用した方法に応じて 2 種類のクラスター メンバーシップがあります。 一部のモデルでは、K-Means アルゴリズムに基づいて、新しいケースは 1 つのクラスターのみに属すると予想されます。 ただし、Microsoft クラスタリング アルゴリズムでは既定で Expectation Maximization 手法が使用され、この手法では新しいケースが任意のクラスターに属する可能性があることも想定されます。 したがって、これらのモデルではケースに複数の `CaseLikelihood` 値が含まれる可能性がありますが、既定で報告されるのは、新しいケースに最も適合するクラスターに属するケースの確率値になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデルの検証と予測用モデルの使用&#40;データ マイニング Excel 用アドイン&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

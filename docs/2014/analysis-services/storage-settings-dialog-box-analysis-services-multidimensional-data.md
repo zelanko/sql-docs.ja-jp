@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068029"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>[ストレージ設定] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [ストレージ設定] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、ディメンション、キューブ、メジャー グループ、およびパーティションのプロアクティブ キャッシュ、ストレージ、および通知設定を指定できます。 **で** [ストレージ設定] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを表示するには、次の手順に従います。  
   
--   省略記号ボタンをクリックすると (**.**) の`ProactiveCaching`ディメンション、キューブ、メジャー グループ、またはパーティションのプロパティの値、**プロパティ**のウィンドウ[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。  
+-   省略記号ボタンをクリックすると ( **.** ) の`ProactiveCaching`ディメンション、キューブ、メジャー グループ、またはパーティションのプロパティの値、**プロパティ**のウィンドウ[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。  
   
 -   **キューブ デザイナー** の **[パーティション]** タブでメジャー グループを展開し、 **[ストレージ設定]** をクリックします。  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956164"
 ---
 # <a name="add-existing-items-to-a-project"></a>既存の項目をプロジェクトに追加する
@@ -45,7 +45,7 @@ ms.locfileid: "62956164"
      このオプションを使用すると、表示するファイルとフォルダーをフィルター選択できます。 フィルター選択するファイル名またはファイル名の一部を入力します。ワイルドカードとしてアスタリスク (`*`) を使用できます。  
   
     > [!NOTE]  
-    >  Web およびネットワークの場所に移動するには、 **[ファイル名]** ボックスに URL またはネットワーク パスを入力します。 たとえば、「**http://mywebsite**」と入力した場合は、"mywebsite" という Web の場所で利用可能なファイルが表示され、「**\\\myserver\myshare**」と入力した場合は、"myserver" の "myshare" という場所で利用可能なファイルが表示されます。  
+    >  Web およびネットワークの場所に移動するには、 **[ファイル名]** ボックスに URL またはネットワーク パスを入力します。 たとえば、「 **http://mywebsite** 」と入力した場合は、"mywebsite" という Web の場所で利用可能なファイルが表示され、「 **\\ \myserver\myshare**」と入力した場合は、"myserver" の "myshare" という場所で利用可能なファイルが表示されます。  
   
      **ファイルの種類**  
      ファイルの拡張子に基づいてファイルをフィルター選択するときに、このオプションを使用します。 各製品について、最も一般的なファイルの種類を対象とする既定のフィルターが一覧表示されます。  
@@ -65,7 +65,7 @@ ms.locfileid: "62956164"
   
 4.  ファイルがプロジェクトの **[クエリ]** または **[その他]** フォルダーに追加されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション エクスプ ローラー](solution-explorer.md)   
  [新しい項目をプロジェクトに追加します。](add-new-items-to-a-project.md)   
  [アイテムやプロジェクトのクリアまたは削除](remove-or-delete-an-item-or-project.md)  

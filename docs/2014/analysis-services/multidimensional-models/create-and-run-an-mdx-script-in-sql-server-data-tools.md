@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6451e2a02bbaf7ef8a58b63c75838023433ff563
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076209"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>SQL Server データ ツールでの MDX スクリプトの作成および実行
@@ -34,7 +34,7 @@ ms.locfileid: "66076209"
   
 4.  MDX スクリプトを実行するには、MDX スクリプトの新しい変更を反映した状態でキューブを配置および処理します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [基本的な MDX スクリプト &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
  [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX スクリプト ステートメント &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)  

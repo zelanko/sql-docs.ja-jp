@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 206ba778a5c131ac4f9260ed37de63b29de86820
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025680"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>トレース結果のファイルへの保存 (SQL Server Profiler)
@@ -38,7 +38,7 @@ ms.locfileid: "63025680"
   
      **[名前を付けて保存]** ダイアログ ボックスが表示されます。  
   
-4.  **[名前を付けて保存]** ダイアログ ボックスでパスとファイル名を指定します。  **[保存]** をクリックします。  
+4.  **[名前を付けて保存]** ダイアログ ボックスでパスとファイル名を指定します。 **[保存]** をクリックします。  
   
     > [!NOTE]  
     >  SQL Server サービスに、指定したディレクトリのファイルに対して書き込めるアクセス許可があることを確認します。  
@@ -54,7 +54,7 @@ ms.locfileid: "63025680"
         > [!NOTE]  
         >  **[サーバーがトレース データを処理する]** チェック ボックスをオフにすると、イベントを記録することが原因でパフォーマンスが大幅に低下する場合、イベントは記録されなくなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

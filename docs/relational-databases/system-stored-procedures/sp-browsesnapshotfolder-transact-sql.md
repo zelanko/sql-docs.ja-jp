@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2ace8d02997b7c0647be0b7abe26ff098849905
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996266"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (TRANSACT-SQL)
@@ -65,7 +65,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_browsesnapshotfolder**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

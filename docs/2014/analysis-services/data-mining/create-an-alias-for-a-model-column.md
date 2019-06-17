@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085315"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>モデル列の別名の作成
@@ -36,7 +36,7 @@ ms.locfileid: "66085315"
   
 2.  画面の右側の **[プロパティ]** ウィンドウで、Name プロパティの横のセルをクリックし、現在の値を削除します。 列の新しい名前を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデルのプロパティ](mining-model-properties.md)  
   

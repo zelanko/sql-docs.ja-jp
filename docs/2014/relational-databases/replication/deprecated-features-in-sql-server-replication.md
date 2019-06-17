@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42538053b80565005e86e82a32b6c04bae1aa360
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721480"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server レプリケーションの非推奨の機能
@@ -29,7 +29,7 @@ ms.locfileid: "62721480"
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|レプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エンドポイントが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンの 2 つのメジャー バージョンに存在する場合にサポートされます。 そのため、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]との相互間でレプリケーションがサポートされません。|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|レプリケーションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エンドポイントが現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンの 2 つのメジャー バージョンに存在する場合にサポートされます。 そのため、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]との相互間でレプリケーションがサポートされません。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションの旧バージョンとの互換性](replication-backward-compatibility.md)  
   
   

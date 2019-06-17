@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062620"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>[分析サーバーのプロパティ] ダイアログ ボックス (Analysis Services)
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[分析サーバーのプロパティ]** ダイアログ ボックスを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスの全般的な設定、言語と照合順序の設定、およびセキュリティ設定を行うことができます。 **オブジェクト エクスプローラー**の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを右クリックし、ショートカット メニューの **[プロパティ]** を選択することによって、**[分析サーバーのプロパティ]** ダイアログ ボックスを表示できます。 **[分析サーバーのプロパティ]** ダイアログ ボックスには、次のプロパティが含まれます。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[分析サーバーのプロパティ]** ダイアログ ボックスを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスの全般的な設定、言語と照合順序の設定、およびセキュリティ設定を行うことができます。 **オブジェクト エクスプローラー**の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを右クリックし、ショートカット メニューの **[プロパティ]** を選択することによって、 **[分析サーバーのプロパティ]** ダイアログ ボックスを表示できます。 **[分析サーバーのプロパティ]** ダイアログ ボックスには、次のプロパティが含まれます。  
   
 ## <a name="information-properties"></a>情報プロパティ  
  このページを使用すると、サーバーのモード、バージョン、互換性レベルを表示できます。 各インスタンスは、テーブル サーバー モードまたは多次元サーバー モードでインストールされ、テーブル モデルまたは多次元モデルを読み込むことができます。 両方のモードをサポートする場合は、インスタンスを 2 つインストールする必要があります。  
@@ -71,7 +71,7 @@ ms.locfileid: "66062620"
      このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には関連する言語またはアルファベットの辞書で定義されている並べ替えおよび比較ルールが使用されます。  
   
     > [!NOTE]  
-    >  このオプションが選択されている場合、 **[大文字と小文字を区別する]**、 **[アクセントを区別する]**、 **[かなを区別する]**、および **[文字幅を区別する]** オプションは無効になります。  
+    >  このオプションが選択されている場合、 **[大文字と小文字を区別する]** 、 **[アクセントを区別する]** 、 **[かなを区別する]** 、および **[文字幅を区別する]** オプションは無効になります。  
   
 -   **[バイナリ 2]** 。このオプションを使用すると、文字ごとに定義されたビット パターンに基づいて Unicode データの並べ替えと比較を行います。 バイナリの並べ替え順では大文字と小文字が区別されるため、小文字は大文字より前に配置されます。また、アクセントも区別されます。 これは、最速の並べ替え順です。  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959667"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (TRANSACT-SQL)
@@ -43,9 +43,9 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @article_resolver = ] 'article_resolver'` 登録を解除するカスタム ビジネス ロジックの名前を指定します。 *article_resolver*は**nvarchar (255)**、既定値はありません。 削除されるビジネス ロジックが COM コンポーネントの場合は、このパラメーターは、コンポーネントのフレンドリ名です。 ビジネス ロジックがある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリでは、このパラメーターは、アセンブリの名前。  
+`[ @article_resolver = ] 'article_resolver'` 登録を解除するカスタム ビジネス ロジックの名前を指定します。 *article_resolver*は**nvarchar (255)** 、既定値はありません。 削除されるビジネス ロジックが COM コンポーネントの場合は、このパラメーターは、コンポーネントのフレンドリ名です。 ビジネス ロジックがある場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework アセンブリでは、このパラメーターは、アセンブリの名前。  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 指定されたカスタム ビジネス ロジックの名前に関連付けられている COM オブジェクトの CLSID 値は、 *article_resolver*パラメーター。 *resolver_clsid*は**nvarchar (50)**、既定値は NULL です。  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 指定されたカスタム ビジネス ロジックの名前に関連付けられている COM オブジェクトの CLSID 値は、 *article_resolver*パラメーター。 *resolver_clsid*は**nvarchar (50)** 、既定値は NULL です。  
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 登録されているカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**ビット**、既定値は 0。 **1**登録されているカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**0**は COM コンポーネントであることを示します。  
   

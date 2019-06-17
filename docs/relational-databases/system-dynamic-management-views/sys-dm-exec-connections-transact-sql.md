@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013491"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (TRANSACT-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "63013491"
 |most_recent_session_id|**int**|この接続に関連付けられた最新の要求のセッション ID。 (SOAP 接続は別のセッションで使用できます)。NULL 値が許可されます。|  
 |connect_time|**datetime**|接続が確立されたタイムスタンプ。 NULL 値は許可されません。|  
 |net_transport|**nvarchar(40)**|常に返します**セッション**接続で複数のアクティブな結果セット (MARS) を有効にします。<br /><br /> **注:** この接続で使用される物理的な転送プロトコルをについて説明します。 NULL 値は許可されません。|  
-|protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類を指定します。 TDS (TSQL) と SOAP が現在区別します。 NULL 値が許可されます。|  
+|protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類を指定します。 現在、これによって TDS (TSQL) と SOAP が区別されています。 NULL 値が許可されます。|  
 |protocol_version|**int**|この接続に関連付けられたデータ アクセス プロトコルのバージョン。 NULL 値が許可されます。|  
 |endpoint_id|**int**|接続の種類を表す識別子です。 この endpoint_id は sys.endpoints ビューのクエリに使用できます。 NULL 値が許可されます。|  
 |encrypt_option|**nvarchar(40)**|この接続で暗号化が有効かどうかを表すブール値。 NULL 値は許可されません。|  

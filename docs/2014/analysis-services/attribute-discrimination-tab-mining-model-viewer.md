@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063131"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>[属性の識別] タブ (マイニング モデル ビューアー)
-  入力属性の状態を比較して、それが結果属性とどのように関連しているかを確認するには、**[属性の識別]** タブを使用します。 2 つの選択された予測可能属性の間で最も違いの大きい属性値が、一覧の先頭に表示されます。  
+  入力属性の状態を比較して、それが結果属性とどのように関連しているかを確認するには、 **[属性の識別]** タブを使用します。 2 つの選択された予測可能属性の間で最も違いの大きい属性値が、一覧の先頭に表示されます。  
   
- **詳細情報。**[Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **詳細情報。** [Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -50,8 +50,8 @@ ms.locfileid: "66063131"
 |-----------|-----------------|  
 |**Attributes**|マイニング モデルの入力属性です。|  
 |**値**|**[属性]** に表示される属性の状態です。|  
-|**優先\<値 1 >**|バーは、現在の属性と値が、**[値 1]** で選択した対象となる結果を優先するかどうかを示します。|  
-|**優先\<値 2 >**|バーは、現在の属性と値が、**[値 2]** で選択した対象となる結果を優先するかどうかを示します。|  
+|**優先\<値 1 >**|バーは、現在の属性と値が、 **[値 1]** で選択した対象となる結果を優先するかどうかを示します。|  
+|**優先\<値 2 >**|バーは、現在の属性と値が、 **[値 2]** で選択した対象となる結果を優先するかどうかを示します。|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

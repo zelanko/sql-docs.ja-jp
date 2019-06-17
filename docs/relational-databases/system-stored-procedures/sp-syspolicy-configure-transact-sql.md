@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b9ae7fdde89c9f927fbc56a9ca395138c264e931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63001414"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (TRANSACT-SQL)
@@ -109,7 +109,7 @@ EXEC msdb.dbo.sp_syspolicy_configure @name = N'LogOnSuccess'
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_enabled &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043115"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>時系列モデルの要件について (中級者向けデータ マイニング チュートリアル)
@@ -31,7 +31,7 @@ ms.locfileid: "63043115"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>予測モデルの時間キーを特定するには  
   
-1.  ウィンドウで、 **SalesByRegion.dsv [Design]**、vTimeSeries テーブルを右クリックし、**データの探索**します。  
+1.  ウィンドウで、 **SalesByRegion.dsv [Design]** 、vTimeSeries テーブルを右クリックし、**データの探索**します。  
   
      新しいタブが開き、「 **vTimeSeries テーブルの探索**します。  
   

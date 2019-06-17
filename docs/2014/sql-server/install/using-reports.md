@@ -36,10 +36,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091229"
 ---
 # <a name="using-reports"></a>レポートの使用
@@ -82,9 +82,9 @@ ms.locfileid: "66091229"
  他のユーザーと情報を共有するには、XML レポートを他のユーザーに送信できます。 また、レポートをコンマ区切り形式のファイルにエクスポートすれば、スプレッドシート、テキスト ファイル、電子メール メッセージなどを別のアプリケーションで作成できます。  
   
 ## <a name="see-also"></a>参照  
- [方法: アップグレード アドバイザー レポートを表示します。](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [方法: レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)   
- [方法: レポートのフィルター](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [方法:アップグレード アドバイザー レポートを表示します。](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [方法:レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [方法:レポートのフィルター](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   

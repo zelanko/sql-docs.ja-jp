@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62955820"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>クエリに関連付けられた接続の変更
@@ -31,7 +31,7 @@ ms.locfileid: "62955820"
   
 2.  **[データベース エンジンへの接続]** ダイアログ ボックスで、新しい接続情報を入力し、 **[接続]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション エクスプ ローラー](solution-explorer.md)   
  [プロジェクト内の接続とクエリを関連付け](associate-a-query-with-a-connection-in-a-project.md)   
  [プロジェクト内の接続のプロパティを表示または変更する方法](view-or-change-the-properties-of-a-connection-in-a-project.md)  

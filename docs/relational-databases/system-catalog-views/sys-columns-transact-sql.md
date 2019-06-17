@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668966"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -54,7 +54,7 @@ ms.locfileid: "62668966"
 |column_id|**int**|列の ID です。 オブジェクト内で一意です。<br /><br /> 列 ID は連続した値にならないことがあります。|  
 |system_type_id|**tinyint**|列のシステム型の ID。|  
 |user_type_id|**int**|ユーザーが定義した列の型の ID です。<br /><br /> 型の名前を返すには、この列で [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)カタログ ビューに結合します。|  
-|max_length|**smallint**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**します。<br /><br /> **テキスト**列、max_length の値は 16 か、sp_tableoption 'text in row' によって設定された値になります。|  
+|max_length|**smallint**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、または**xml**します。<br /><br /> **テキスト**列、max_length の値は 16 か、sp_tableoption 'text in row' によって設定された値になります。|  
 |有効桁数 (precision)|**tinyint**|数値ベースの場合は、列の有効桁数です。それ以外の場合は、0 です。|  
 |scale|**tinyint**|数値に基づく場合は列の小数点以下桁数それ以外の場合、0 を返します。|  
 |collation_name|**sysname**|文字ベースの場合は、列の照合順序の名前です。それ以外の場合は、NULL です。|  

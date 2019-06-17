@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017769"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (TRANSACT-SQL)
@@ -38,7 +38,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @source_object = ] 'source_object'` ソース オブジェクトの名前です。 *source_object*は**nvarchar (386)**、既定値はありません。  
+`[ @source_object = ] 'source_object'` ソース オブジェクトの名前です。 *source_object*は**nvarchar (386)** 、既定値はありません。  
   
 `[ @rowguid = ] 'rowguid'` 行識別子です。 *rowguid*は**uniqueidentifier**、既定値はありません。  
   

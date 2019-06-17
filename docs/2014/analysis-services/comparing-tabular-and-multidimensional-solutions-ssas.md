@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087769"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparing Tabular and Multidimensional Solutions (SSAS)
@@ -116,7 +116,7 @@ ms.locfileid: "66087769"
 |ユーザー定義階層|[はい](multidimensional-models/user-defined-hierarchies-create.md)|はい|  
 |[書き戻し]|[はい](multidimensional-models/set-partition-writeback.md)|いいえ|  
   
- * 場合は、ソリューションが、非常に多数の個別のカウント (何百万顧客 Id) などをサポートする必要がありますまず Tabular してみてください。 このシナリオでは、パフォーマンスが向上する傾向があります。 ホワイト ペーパーでは、個別のカウントについてのセクションを参照して[Analysis Services ケース スタディ。大規模な商用ソリューションにおける表形式モデルを使用して](https://msdn.microsoft.com/library/dn751533.aspx)します。  
+ \* 場合は、ソリューションが、非常に多数の個別のカウント (何百万顧客 Id) などをサポートする必要がありますまず Tabular してみてください。 このシナリオでは、パフォーマンスが向上する傾向があります。 ホワイト ペーパーでは、個別のカウントについてのセクションを参照して[Analysis Services ケース スタディ。大規模な商用ソリューションにおける表形式モデルを使用して](https://msdn.microsoft.com/library/dn751533.aspx)します。  
   
 ##  <a name="bkmk_modelsize"></a> モデルのサイズ  
  モデルのサイズ (オブジェクトの総数) は、ソリューションの種類によって変わりません。 ただし、各ソリューションを作成するためのデザイン ツールで、大量のオブジェクトの処理に対応する程度は異なります。 大規模なモデルは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で作成すると比較的簡単です。オブジェクト エクスプローラーやソリューション エクスプローラーでオブジェクトを種類別にダイアグラム化したり一覧表示したりするための機能が豊富に揃っているからです。  

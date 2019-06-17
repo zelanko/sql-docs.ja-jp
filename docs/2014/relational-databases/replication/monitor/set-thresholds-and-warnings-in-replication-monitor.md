@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667185"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>レプリケーション モニターのしきい値と警告の設定
@@ -61,7 +61,7 @@ ms.locfileid: "62667185"
   
 2.  **[警告]** タブをクリックします。このタブの各オプションに関する情報を表示するには、メニュー バーの **[ヘルプ]** をクリックしてください。  
   
-3.  適切なチェック ボックスをオンにして警告を有効にします。**[サブスクリプションの有効期限がしきい値内で切れる場合に警告します]** または **[待機時間がしきい値を超えた場合に警告します]**。  
+3.  適切なチェック ボックスをオンにして警告を有効にします。 **[サブスクリプションの有効期限がしきい値内で切れる場合に警告します]** または **[待機時間がしきい値を超えた場合に警告します]** 。  
   
 4.  **[しきい値]** 列で警告のしきい値を設定します。 たとえば、手順 3. で **[待機時間がしきい値を超えた場合に警告します]** チェック ボックスをオンにした場合、 **[しきい値]** 列で **60 秒** の待機時間を選択します。  
   

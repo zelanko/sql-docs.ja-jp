@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026584"
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 文法の選択
 使用するには、どの文法は、SQL ステートメントを構築するときに最初に決定します。 Open Group、ANSI、および ISO など、さまざまな標準化団体から使用可能な文法だけでなくは、ほぼすべての DBMS ベンダーは、標準と若干異なりますそれぞれの独自の文法を定義します。  
   
- [付録 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)、すべての ODBC ドライバーのサポートが必要な SQL 文法について説明します。 この文法には、SQL 92 のエントリ レベルのサブセットです。 ドライバーは、中間、Full、または、sql-92 での FIPS 127-2 過渡期のレベルの定義に準拠するその他の文法をサポート可能性があります。 詳細については、次を参照してください[SQL 最小文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)付録 c:。SQL の文法と sql-92 します。  
+ [付録 C: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)、すべての ODBC ドライバーのサポートが必要な SQL 文法について説明します。 この文法には、SQL 92 のエントリ レベルのサブセットです。 ドライバーは、中間、Full、または、sql-92 での FIPS 127-2 過渡期のレベルの定義に準拠するその他の文法をサポート可能性があります。 詳細については、次を参照してください[SQL 最小文法](../../../odbc/reference/appendixes/sql-minimum-grammar.md)付録 c:。SQL の文法と sql-92 します。  
   
  付録 C も定義*エスケープ シーケンス*外部結合などの一般的な言語機能の標準的な文法を格納しているをでカバーされていない SQL 92 文法。 詳細については、次を参照してください[ODBC エスケープ シーケンス](../../../odbc/reference/appendixes/odbc-escape-sequences.md)付録 c:。SQL の文法と[エスケープ シーケンス](../../../odbc/reference/develop-app/escape-sequences.md)、このセクションで後述します。  
   

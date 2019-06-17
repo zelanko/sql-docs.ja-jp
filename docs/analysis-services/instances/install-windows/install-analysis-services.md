@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054540"
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services をインストールします。
@@ -73,7 +73,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
 |POWERPIVOT|この値は省略可能です。 実際には、 **ROLE** パラメーターを設定した場合、サーバー モードは自動的に 1 に設定され、SharePoint のインストール時に **の** ASSERVERMODE [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] が省略可能になります。 詳細については、「 [コマンド プロンプトからの Power Pivot のインストール](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)」を参照してください。|  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services インスタンスのサーバー モードの決定](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [テーブル モデリング](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   

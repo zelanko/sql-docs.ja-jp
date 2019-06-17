@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065452"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>[詳細表示] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -30,7 +30,7 @@ ms.locfileid: "66065452"
  **詳細**  
  選択したメッセージまたは操作についての追加情報を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [プロセスの進行状況 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)   
  [多次元モデル オブジェクトの処理](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

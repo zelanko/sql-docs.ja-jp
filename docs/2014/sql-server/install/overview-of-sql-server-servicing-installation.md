@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093591"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server サービスのインストールの概要
@@ -133,7 +133,7 @@ ms.locfileid: "66093591"
  次に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムのセットアップの実行前に終了したアプリケーションを再起動します。 インストールが正常に終了した直後に、アップグレード後の `master` データベース、`msdb` データベース、および `model` データベースをバックアップすることもお勧めします。  
   
 ## <a name="uninstalling-updates-from-includesscurrentincludessscurrent-mdmd"></a>更新プログラムのアンインストール [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累積更新プログラムおよびサービス パックのアンインストールは、コントロール パネルの **[プログラムと機能]** で行うことができます。 インストールされた更新プログラムの一覧を表示するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックします。 **[プログラム]**、 **[プログラムと機能]**、 **[インストールされた更新プログラムを表示]** の順にクリックして、[インストールされた更新プログラム] を開きます。 各累積更新プログラムは、個別に表示されています。 ただし、累積更新プログラムより新しいサービス パックがインストールされていると、累積更新プログラムの項目が表示されなくなるため、サービス パックをアンインストールしないと個別の項目を利用できません。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累積更新プログラムおよびサービス パックのアンインストールは、コントロール パネルの **[プログラムと機能]** で行うことができます。 インストールされた更新プログラムの一覧を表示するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックします。 **[プログラム]** 、 **[プログラムと機能]** 、 **[インストールされた更新プログラムを表示]** の順にクリックして、[インストールされた更新プログラム] を開きます。 各累積更新プログラムは、個別に表示されています。 ただし、累積更新プログラムより新しいサービス パックがインストールされていると、累積更新プログラムの項目が表示されなくなるため、サービス パックをアンインストールしないと個別の項目を利用できません。  
   
  サービス パックおよび更新プログラムをアンインストールするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに適用されている最新のものから古いものへと順番に処理していってください。 以下の各例では、サービス パックおよび更新プログラムをアンインストールすることによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Cumulative Update 1 の状態になります。  
   

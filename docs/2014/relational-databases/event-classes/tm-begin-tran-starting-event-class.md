@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649ab6329c0bdc2f059b8be0e282e0e68f33e2d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061359"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting イベント クラス
@@ -47,7 +47,7 @@ ms.locfileid: "63061359"
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`ntext`|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
-|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
+|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|[はい]|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   
 ## <a name="see-also"></a>参照  

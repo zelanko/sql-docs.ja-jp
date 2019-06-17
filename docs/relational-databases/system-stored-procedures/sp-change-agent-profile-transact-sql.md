@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62993888"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
@@ -44,7 +44,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 `[ @property = ] 'property'` プロパティの名前です。 *プロパティ*は**sysname**、既定値はありません。  
   
-`[ @value = ] 'value'` プロパティの新しい値です。 *値*は**nvarchar (3000)**、既定値はありません。  
+`[ @value = ] 'value'` プロパティの新しい値です。 *値*は**nvarchar (3000)** 、既定値はありません。  
   
  このテーブルには、変更可能なプロファイルのプロパティについて説明します。  
   
@@ -61,7 +61,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_change_agent_profile**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
  [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   

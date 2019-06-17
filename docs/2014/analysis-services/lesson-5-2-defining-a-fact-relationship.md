@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078573"
 ---
 # <a name="defining-a-fact-relationship"></a>ファクト リレーションシップの定義
@@ -65,7 +65,7 @@ ms.locfileid: "66078573"
   
 14. **属性**のディメンション デザイナーのペイン、 **Internet Sales Order Details**ディメンションで、 **Sales Order Number**、し、変更、 **名前**をプロパティ ウィンドウでプロパティ `Item Description.`  
   
-15. **NameColumn**プロパティ セルで、[参照] ボタンをクリックします **([...])。**.**[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
+15. **NameColumn**プロパティ セルで、[参照] ボタンをクリックします **([...])。** . **[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
   
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66078573"
   
      以下のアイコンが示すように、 **Internet Sales Order Details** キューブ ディメンションがファクト リレーションシップを保持するよう、自動的に構成されます。  
   
-2.  [参照] ボタンをクリックします (**.**) で、 **Item Description**の交差する位置のセル、 **Internet Sales**メジャー グループと**Internet Sales Order Details**ディメンションにはファクト リレーションシップのプロパティを確認します。  
+2.  [参照] ボタンをクリックします ( **.** ) で、 **Item Description**の交差する位置のセル、 **Internet Sales**メジャー グループと**Internet Sales Order Details**ディメンションにはファクト リレーションシップのプロパティを確認します。  
   
      **[リレーションシップの定義]** ダイアログ ボックスが開きます。 構成できるプロパティはありません。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66078573"
   
 3.  データ ペインからすべてのメジャーと階層を消去します。次に、データ ペインのデータ領域に **Internet Sales-Sales Amount** メジャーを追加します。  
   
-4.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]** の順にクリックし、 **[Adam Powell]** を右クリックして **[フィルターに追加]** をクリックします。  
+4.  メタデータ ペインで、 **[Customer]** 、 **[Location]** 、 **[Customer Geography]** 、 **[Members]** 、 **[All Customers]** 、 **[Australia]** 、 **[Queensland]** 、 **[Brisbane]** 、 **[4000]** の順にクリックし、 **[Adam Powell]** を右クリックして **[フィルターに追加]** をクリックします。  
   
      フィルタリングを使用し、1 顧客から返される販売注文数を制限すると、クエリ パフォーマンスを大幅に犠牲にすることなく、基となる詳細情報を大規模なファクト テーブルから検索できます。  
   

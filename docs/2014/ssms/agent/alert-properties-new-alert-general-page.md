@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63062150"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>アラートのプロパティ-新しいアラート ([全般] ページ)
@@ -77,7 +77,7 @@ ms.locfileid: "63062150"
  **クエリ**  
  警告が応答するイベントを識別する WQL ステートメントを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Alerts](alerts.md)   
  [WMI provider for Server Events の WQL の使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [エラー番号を使用して通知を作成します。](create-an-alert-using-an-error-number.md)   

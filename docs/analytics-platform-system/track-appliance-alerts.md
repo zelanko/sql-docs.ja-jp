@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63156986"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Analytics Platform System でアプライアンスの警告を追跡します。
@@ -70,7 +70,7 @@ ORDER BY
     aa.[pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
 [アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

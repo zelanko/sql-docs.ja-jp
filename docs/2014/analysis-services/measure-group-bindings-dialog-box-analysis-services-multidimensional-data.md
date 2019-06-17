@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077854"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>[メジャー グループのバインド] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -45,7 +45,7 @@ ms.locfileid: "66077854"
 |**メジャー グループ列**|**[ディメンションから継承しました]** を選択してディメンションから継承されたメジャー グループのリレーションシップを使用するか、メジャー グループが基づくファクト テーブルの列を選択してリレーションシップを明示的に定義します。|  
 |**Null の処理**|属性に対する NULL 処理オプションを選択します。 NULL 処理オプションの詳細については、「[NullProcessing 要素 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リレーションシップ ダイアログ ボックスを定義する&#40;Analysis Services - 多次元データ&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

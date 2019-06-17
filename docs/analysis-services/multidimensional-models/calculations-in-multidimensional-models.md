@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c72d43c95013074051356c690ac2d7abf0a575e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62990510"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多次元モデルの計算
@@ -30,7 +30,7 @@ ms.locfileid: "62990510"
   
   
 ## <a name="creating-a-new-calculation"></a>新しい計算の作成  
- 新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]**、 **[新しい名前付きセット]**、または **[新しいスクリプト コマンド]** をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)」、「 [名前付きセットの作成](../../analysis-services/multidimensional-models/create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)」を参照してください。  
+ 新しい計算を作成するには、キューブ デザイナーの **[計算]** タブの **[キューブ]** メニューで、作成する計算の種類に応じて、 **[新しい計算されるメンバー]** 、 **[新しい名前付きセット]** 、または **[新しいスクリプト コマンド]** をクリックします。 また、ツール バーで対応するいずれかのボタンをクリックするか、 **[スクリプト オーガナイザー]** ペイン内を右クリックし、ショートカット メニューのいずれかのコマンドをクリックすることもできます。 この操作により、新しい計算が **[スクリプト オーガナイザー]** ペインに追加され、計算式ペインの計算フォームにそのフィールドが表示されます。 新しいスクリプトを作成すると、この操作により計算式ペインに [スクリプト ビュー] が開きます。 3 種類の計算を作成する方法の詳細については、「 [計算されるメンバーの作成](../../analysis-services/multidimensional-models/create-calculated-members.md)」、「 [名前付きセットの作成](../../analysis-services/multidimensional-models/create-named-sets.md)」、および「 [割り当てとその他のスクリプト コマンドの定義](../../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)」を参照してください。  
   
 ## <a name="editing-scripts"></a>スクリプトの編集  
  **[計算]** タブの計算式ペインでスクリプトを編集します。計算式ペインには、スクリプト ビューとフォーム ビューの 2 つのビューがあります。 フォーム ビューには、1 つのコマンドの式およびプロパティが表示されます。 MDX スクリプトを編集する場合、式ボックスがフォーム ビュー全体に表示されます。  

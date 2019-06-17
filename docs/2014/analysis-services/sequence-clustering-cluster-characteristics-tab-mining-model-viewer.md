@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069167"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスターの特性] タブ (マイニング モデル ビューアー)
@@ -24,7 +24,7 @@ ms.locfileid: "66069167"
   
  クラスターの内容をドリル ダウンし、クラスターの代表となるシーケンスを確認するには、シーケンス クラスター モデルのこのビューを使用します。  
   
- **詳細情報。**[Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **詳細情報。** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  

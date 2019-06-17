@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086055"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Microsoft ニューラル ネットワーク ビューアーを使用したモデルの参照
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ニューラル ネットワーク ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、複数の入力と出力を分析できる分類および回帰マイニング モデルを作成します。このアルゴリズムは、制限のない分析と探索に非常に役立ちます。 このアルゴリズムの詳細については、「 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ニューラル ネットワーク ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムでは、複数の入力と出力を分析できる分類および回帰マイニング モデルを作成します。このアルゴリズムは、制限のない分析と探索に非常に役立ちます。 このアルゴリズムの詳細については、「 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)」を参照してください。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ニューラル ネットワーク ビューアーを使用してモデルを調べる場合、通常は対象の属性と状態を選択してから、ビューアーを使用して入力属性が結果に与える影響を確認します。  
   

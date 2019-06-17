@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069661"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>[ケース レベル列の選択] (データ マイニング ウィザード)
@@ -25,7 +25,7 @@ ms.locfileid: "66069661"
 > [!NOTE]  
 >  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合にのみ表示されます。  
   
- **詳細情報。**[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。** [データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **関連する属性およびメジャー**  

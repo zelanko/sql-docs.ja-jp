@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080354"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services スクリプト プロジェクト
@@ -56,7 +56,7 @@ ms.locfileid: "66080354"
 ## <a name="analysis-services-templates"></a>Analysis Services テンプレート  
  新しい MDX、DMX、または XMLA スクリプトを Analysis Services スクリプト プロジェクトに追加する場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テンプレートの参照にテンプレート エクスプローラーを必要に応じて使用してください。このテンプレートは、具体的なアクションの実行方法を例示した事前定義済みのスクリプトまたはステートメントのコレクションです。 テンプレート エクスプローラーには、 **[表示]** メニューからアクセスでき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssEW](../../includes/ssew-md.md)]のテンプレートが含まれています。 詳細については、「 [SQL Server Management Studio での Analysis Services テンプレートの使用](use-analysis-services-templates-in-sql-server-management-studio.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server データ ツール &#40;SSDT&#41; を使用した多次元モデルの作成](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [多次元式 &#40;MDX&#41; リファレンス](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   

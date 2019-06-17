@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063788"
 ---
 # <a name="search-documents-interactively"></a>ドキュメントの対話形式の検索
@@ -55,7 +55,7 @@ ms.locfileid: "66063788"
   
 5.  **[置換]** をクリックし、最後のファイル内で最後に見つかった検索結果の置換が完了するまで **[置換]** のクリックを続けます。 検索結果を置換しないでスキップする場合は、 **[次を検索]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      **[すべて置換]** をクリックしてすべての検索結果を置換します。 置換の総数を示すメッセージ ボックスが表示されます。  
   

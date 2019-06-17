@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070745"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>[処理] ダイアログ ボックス (Analysis Services - 多次元データ)
   **と** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [処理] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを処理できます。 **で** [処理] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを表示するには、次の手順に従います。  
   
--   **ソリューション エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクト、キューブ、ディメンション、またはマイニング構造を右クリックし、**[処理]** をクリックします。  
+-   **ソリューション エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクト、キューブ、ディメンション、またはマイニング構造を右クリックし、 **[処理]** をクリックします。  
   
 -   **キューブ デザイナー** の各ページ、 **ディメンション デザイナー**の各ページ、または **マイニング モデル デザイナー**の **[マイニング構造]** ページおよび **[マイニング モデル]** ページでツール バーの **[処理]** をクリックします。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66070745"
   
  **SQL Server Management Studio** で **[処理]** ダイアログ ボックスを表示するには、次の手順に従います。  
   
--   **オブジェクト エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、キューブ、メジャー グループ、パーティション、ディメンション、マイニング構造、またはマイニング モデルを右クリックし、**[処理]** を選択します。  
+-   **オブジェクト エクスプローラー**で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、キューブ、メジャー グループ、パーティション、ディメンション、マイニング構造、またはマイニング モデルを右クリックし、 **[処理]** を選択します。  
   
 ## <a name="options"></a>および  
  **[オブジェクト一覧]**  

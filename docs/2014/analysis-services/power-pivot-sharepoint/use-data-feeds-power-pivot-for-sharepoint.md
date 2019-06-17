@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070906"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>データ フィードの使用 (PowerPivot for SharePoint)
@@ -37,7 +37,7 @@ ms.locfileid: "66070906"
 ##  <a name="prereq"></a> 前提条件  
  データ フィードを Excel 2010 にインポートするには、PowerPivot for Excel が必要です。  
   
- Atom 1.0 形式のデータを提供する Web サービスまたはデータ サービスが必要です。  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と SharePoint 2010 では、この形式のデータを提供できます。  
+ Atom 1.0 形式のデータを提供する Web サービスまたはデータ サービスが必要です。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と SharePoint 2010 では、この形式のデータを提供できます。  
   
  SharePoint リストをデータ フィードとしてエクスポートする前に、ADO.NET Data Services を SharePoint サーバーにインストールする必要があります。 詳細については、「 [SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール方法](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)」を参照してください。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66070906"
   
     1.  **[ベース URL]** は省略可能です。 データ サービス ドキュメントが複数のフィードを提供する場合はベース URL を指定してください。 ベース URL には、すべてのフィードに共通する URL の部分 (サーバー名とサイトなど) を指定します。 Reporting Services レポートにデータ サービス ドキュメントを作成している場合、ベース URL はレポート サーバーの URL とレポートになります。  
   
-    2.  **[Web サービス URL]** は必須です。 ベース URL を指定しない場合、この値のアドレスには http:// または https:// を含める必要があります。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL は http://adventure-works/inventory/today.aspx、ベース URL になります。 http://adventure-works/inventory、および Web サービスの URL は/today.aspx になります。  
+    2.  **[Web サービス URL]** は必須です。 ベース URL を指定しない場合、この値のアドレスには http:// または https:// を含める必要があります。 ベース URL を指定した場合、Web サービス URL はベース URL の後に続く部分になります。 たとえば、完全な URL は http://adventure-works/inventory/today.aspx 、ベース URL になります。 http://adventure-works/inventory 、および Web サービスの URL は/today.aspx になります。  
   
          Web サービス URL には、データのサブセットを除外または選択するパラメーターを含めることができます。 フィードを提供するアプリケーションまたはサービスは、URL に指定するパラメーターをサポートしている必要があります。  
   

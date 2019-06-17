@@ -13,14 +13,14 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 0f5588e897c730663540ba2e4aa1fa60bbb3fe13
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089321"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>オプション (クエリ結果の分析サーバーの [全般] ページ)
-  このページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリに対するクエリ結果ウィンドウの既定の動作を設定できます。 これらの設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックします。 **[クエリ結果]** フォルダー内で **[分析サーバー]** サブフォルダーを展開し、**[全般]** を選択します。  
+  このページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クエリに対するクエリ結果ウィンドウの既定の動作を設定できます。 これらの設定を表示するには、 **[ツール]** メニューの **[オプション]** をクリックします。 **[クエリ結果]** フォルダー内で **[分析サーバー]** サブフォルダーを展開し、 **[全般]** を選択します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **別々 のタブのグリッドを表示します。**  

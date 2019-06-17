@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073680"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>メンバー、組、およびセットの操作 (MDX)
@@ -125,7 +125,7 @@ FROM [Adventure Works]
 ## <a name="string-functions"></a>文字列関数  
  文字列関数は、MDX 式に対して操作を実行して文字列を返します。 たとえば、[UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx) 関数は、ディメンション、階層、レベル、メンバーの一意の名前を格納した文字列値を返します。 文字列関数の詳細については、「[MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX の主な概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  

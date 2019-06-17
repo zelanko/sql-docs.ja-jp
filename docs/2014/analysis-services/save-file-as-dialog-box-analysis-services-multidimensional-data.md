@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070049"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>[ファイル名を付けて保存] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -36,7 +36,7 @@ ms.locfileid: "66070049"
  **[ファイル名]**  
  **[フォルダーの選択]** から選択したファイルを変更するか、 **[フォルダーの選択]** に一覧表示されていないファイルを選択するために、入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [[データベース] ダイアログ ボックスをバックアップ&#40;Analysis Services - 多次元データ&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   

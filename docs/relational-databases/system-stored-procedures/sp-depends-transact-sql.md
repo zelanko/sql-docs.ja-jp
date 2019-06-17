@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047171"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (TRANSACT-SQL)
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  オブジェクトが所属するスキーマの名前を指定します。  
   
  *object_name*  
- 依存関係を確認するデータベース オブジェクトです。 オブジェクトは、テーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、またはトリガーできます。 o*bject_name*は**nvarchar (776)**、既定値はありません。  
+ 依存関係を確認するデータベース オブジェクトです。 オブジェクトは、テーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、またはトリガーできます。 o*bject_name*は**nvarchar (776)** 、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -64,7 +64,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果セット  
  **sp_depends** 2 つの結果セットが表示されます。  
   
- 次の結果セットをオブジェクトを表示する*\<オブジェクト >* によって異なります。  
+ 次の結果セットをオブジェクトを表示する *\<オブジェクト >* によって異なります。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_depends [ @objname = ] '<object>'
 |**selected**|**nvarchar(8)**|かどうか、項目は、SELECT ステートメントで使用されます。|  
 |**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
- 次の結果セットに依存するオブジェクトを表示する*\<オブジェクト >* します。  
+ 次の結果セットに依存するオブジェクトを表示する *\<オブジェクト >* します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

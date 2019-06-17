@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ed44f70a49c1cf221a9ef74b19030512273b1480
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017977"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (TRANSACT-SQL)
@@ -58,7 +58,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  NULL 値を含むプロパティは、返されるセットに含まれません。  
   
 ## <a name="example"></a>例  
- 次の例では`sp_help_spatial_geography_index_xml`空間インデックスを調査する**SIndx_SpatialTable_geography_col2**テーブルで定義された**geography_col**で指定されたクエリ サンプルの**@qs**. この例では、選択したプロパティの値と名前を表示する XML フラグメントで指定したインデックスの主要プロパティを返します。  
+ 次の例では`sp_help_spatial_geography_index_xml`空間インデックスを調査する**SIndx_SpatialTable_geography_col2**テーブルで定義された**geography_col**で指定されたクエリ サンプルの **@qs** . この例では、選択したプロパティの値と名前を表示する XML フラグメントで指定したインデックスの主要プロパティを返します。  
   
  [XQuery](../../xquery/xquery-basics.md)結果セットに、特定のプロパティを返すことが実行されます。  
   
@@ -76,7 +76,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
 ## <a name="requirements"></a>必要条件  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間インデックス ストアド プロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   

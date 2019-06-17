@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743218"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>データベースのターゲットの復旧時間の変更 (SQL Server)
@@ -23,7 +23,7 @@ ms.locfileid: "62743218"
 > [!NOTE]  
 >  ターゲットの復旧時間の設定によって特定のデータベースに対して指定された上限は、実行時間の長いトランザクションによって UNDO が過度に繰り返される場合には超過することがあります。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
   
 -   **ターゲットの復旧時間を変更するには:** [SQL Server Management Studio](#SSMSProcedure) または [Transact-SQL](#TsqlProcedure) を使用  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62743218"
   
 2.  次の [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)ステートメントを、次のように使用します。  
   
-     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      0 (既定値) より大きい値の場合は、指定されたデータベースでクラッシュが発生したときの復旧時間に上限を指定します。  
@@ -74,7 +74,7 @@ ms.locfileid: "62743218"
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
     ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース チェックポイント &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   

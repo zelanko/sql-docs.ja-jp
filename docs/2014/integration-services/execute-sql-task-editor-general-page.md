@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058989"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>[SQL 実行タスク エディター] ([全般] タブ)
@@ -49,15 +49,15 @@ ms.locfileid: "66058989"
  このプロパティを `Allowed` に設定すると、SQL 実行タスクは出力パラメーターとクエリ結果を結果が割り当てられている変数のデータ型に変換します。 この機能は、結果セットの種類が **単一行** の場合に適用されます。  
   
  **[ResultSet]**  
- SQL ステートメントの実行によって予測される結果の型を指定します。 **[単一行]**、 **[完全な結果セット]**、 **[XML]**、または **[なし]** から選択します。  
+ SQL ステートメントの実行によって予測される結果の型を指定します。 **[単一行]** 、 **[完全な結果セット]** 、 **[XML]** 、または **[なし]** から選択します。  
   
  **ConnectionType**  
- データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]**、 **[ODBC]**、 **[ADO]**、 **[ADO.NET]** 、および **[SQLMOBILE]** です。  
+ データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]** 、 **[ODBC]** 、 **[ADO]** 、 **[ADO.NET]** 、および **[SQLMOBILE]** です。  
   
  **関連トピック:** [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)、[ODBC 接続マネージャー](connection-manager/odbc-connection-manager.md)、[ADO 接続マネージャー](connection-manager/ado-connection-manager.md)、[ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 接続マネージャー](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
- 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...**>] を選択します。  
+ 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...** >] を選択します。  
   
  **[SQLSourceType]**  
  タスクが実行する SQL ステートメントのソースの種類を選択します。  
@@ -95,23 +95,23 @@ ms.locfileid: "66058989"
   
 ### <a name="sqlsourcetype--direct-input"></a>[SQLSourceType] = [直接入力]  
  **[SQLStatement]**  
- 実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、**[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
+ 実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、 **[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
   
  **関連トピック:** [クエリ ビルダー](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>[SQLSourceType] = [ファイル接続]  
  **[FileConnection]**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>[SQLSourceType] = [変数]  
  **[SourceVariable]**  
- 既存の変数を選択するか、\<**新しい変数...**> をクリックして新しい変数を作成します。  
+ 既存の変数を選択するか、\<**新しい変数...** > をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [SQL 実行タスク エディター&#40;パラメーター マッピング ページ&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [SQL 実行タスク エディター&#40;結果セット ページ&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

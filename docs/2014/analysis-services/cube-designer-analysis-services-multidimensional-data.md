@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086606"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>キューブ デザイナー (Analysis Services - 多次元データ)
@@ -42,7 +42,7 @@ ms.locfileid: "66086606"
 |**翻訳**|キューブに含まれる、メジャー グループ、メジャー、キューブ ディメンション、パースペクティブ、KPI、アクション、名前付きセット、および計算されるメンバーに対する翻訳の作成と変更を行います。 このタブの詳細については、「[Translations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)」([翻訳] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
 |**ブラウザー**|キューブのデータおよびメタデータを参照します。 このタブの詳細については、「[Browser &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)」([ブラウザー] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

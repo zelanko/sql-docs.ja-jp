@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dc17f3f7e1b58c871a6a1efead6338f4f0c3243
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090506"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense の構成 (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "66090506"
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]** を展開し、 **[すべての言語]**、 **[Transact-SQL]**、 **[XML]** のいずれかを展開して、 **[全般]** をクリックします。  
+2.  **[テキスト エディター]** を展開し、 **[すべての言語]** 、 **[Transact-SQL]** 、 **[XML]** のいずれかを展開して、 **[全般]** をクリックします。  
   
 3.  入力候補オプションのうち、使用しないオプションのチェック ボックスをオフにし、 **[OK]** をクリックします。  
   

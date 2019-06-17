@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044207"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
@@ -50,7 +50,7 @@ ms.locfileid: "63044207"
   
 1.  **オブジェクト エクスプローラー**で、ポケットベルに送信する警告を含むサーバーをプラス記号をクリックして展開します。  
   
-2.   **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
   
 3.  **[ページの選択]** の **[警告システム]** を選択します。  
   

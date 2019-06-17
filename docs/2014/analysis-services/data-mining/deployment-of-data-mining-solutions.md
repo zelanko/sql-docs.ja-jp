@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084721"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>データ マイニング ソリューションの配置
@@ -50,7 +50,7 @@ ms.locfileid: "66084721"
 ##  <a name="bkmk_Reqs"></a> データ マイニング ソリューションの配置の要件  
  ソリューションの配置先となる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、多次元オブジェクトとデータ マイニング オブジェクトをサポートするモードで実行されている必要があります。つまり、テーブル モデルや PowerPivot データをホストするインスタンスにデータ マイニング オブジェクトを配置することはできません。  
   
- したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、**[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
+ したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
   
  ソリューションを配置すると、データ マイニングに使用されるオブジェクトが、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに作成されます。作成先は、ソリューション ファイルと同じ名前のデータベースになります。  
   

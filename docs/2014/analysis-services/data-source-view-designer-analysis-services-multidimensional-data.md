@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9153a2d07653872ca6ce1f90e39c90f32da21fba
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082522"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>データ ソース ビュー デザイナー (Analysis Services - 多次元データ)
@@ -51,7 +51,7 @@ ms.locfileid: "66082522"
 |基になるデータを探索し、モデル オブジェクトによって表される実際のデータ値を表示します。<br /><br /> データ探索では、基になるディメンション テーブルやクエリから返されるデータを視覚的に検査し、コピーすることができます。 既定では、データ探索には上から順に取得するサンプリング方法が使用され、サンプル数は 5,000 ですが、これらの設定は変更できます。|[データ ソース ビューでのデータの検索 (Analysis Services)](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
 |DSV のテーブルとリレーションシップのすべてまたは一部の図示|[データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   

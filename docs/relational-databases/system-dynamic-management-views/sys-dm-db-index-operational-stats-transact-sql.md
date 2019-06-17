@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684291"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|インデックスまたはヒープで開始された範囲スキャンとテーブル スキャンの累積数。|    
 |**singleton_lookup_count**|**bigint**|インデックスまたはヒープから取得した単一行の累積数。|    
 |**forwarded_fetch_count**|**bigint**|前方向レコードを介してフェッチされた行の数。<br /><br /> 0 = インデックス|    
-|**lob_fetch_in_pages**|**bigint**|LOB_DATA アロケーション ユニットから取得したラージ オブジェクト (LOB) ページの累積数。 これらのページには、型の列に格納されているデータが含まれて**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、および**xml**します。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|    
+|**lob_fetch_in_pages**|**bigint**|LOB_DATA アロケーション ユニットから取得したラージ オブジェクト (LOB) ページの累積数。 これらのページには、型の列に格納されているデータが含まれて**テキスト**、 **ntext**、**イメージ**、 **varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、および**xml**します。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。|    
 |**lob_fetch_in_bytes**|**bigint**|取得した LOB データの累積バイト数。|    
 |**lob_orphan_create_count**|**bigint**|一括操作用に作成された、孤立した LOB 値の累積数。<br /><br /> 0 = 非クラスター化インデックス|    
 |**lob_orphan_insert_count**|**bigint**|一括操作中に挿入された、孤立した LOB 値の累積数。<br /><br /> 0 = 非クラスター化インデックス|    
-|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA アロケーション ユニットから取得した行オーバーフロー データ ページの累積数。<br /><br /> これらのページには、型の列に格納されているデータが含まれて**varchar (n)**、 **nvarchar (n)**、 **varbinary (n)**、および**sql_variant**されました。行外にプッシュします。|    
+|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA アロケーション ユニットから取得した行オーバーフロー データ ページの累積数。<br /><br /> これらのページには、型の列に格納されているデータが含まれて**varchar (n)** 、 **nvarchar (n)** 、 **varbinary (n)** 、および**sql_variant**されました。行外にプッシュします。|    
 |**row_overflow_fetch_in_bytes**|**bigint**|取得した行オーバーフロー データの累積バイト数。|    
 |**column_value_push_off_row_count**|**bigint**|挿入または更新された行をページ内に収めるため、行外に出された LOB データおよび行オーバーフロー データに対する列値の累積数。|    
 |**column_value_pull_in_row_count**|**bigint**|行内に取り込まれた LOB データおよび行オーバーフロー データに対する列値の累積数。 これは、更新操作によりレコード内の領域が解放され、LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニットから IN_ROW_DATA アロケーション ユニットに 1 つ以上の行外値を取り込めるようになったときに発生します。|    

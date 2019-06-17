@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059569"
 ---
 # <a name="derived-column-transformation-editor"></a>派生列変換エディター
@@ -64,7 +64,7 @@ ms.locfileid: "66059569"
  **[エラー出力の構成]**  
  [[エラー出力の構成]](../../2014/integration-services/configure-error-output.md) ダイアログ ボックスを使用して、エラーの処理方法を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [派生列変換を使用して列の値を取得する](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084827"
 ---
 # <a name="data-mining-tools"></a>データ マイニング ツール
@@ -42,7 +42,7 @@ ms.locfileid: "66084827"
 ## <a name="data-mining-wizard"></a>では、  
  データ マイニング ウィザードを使用して、データ マイニング ソリューションの作成を開始します。 このウィザードはすぐに簡単に使用でき、データ マイニング構造および初期関連マイニング モデルを順を追って作成する方法が示されます。また、アルゴリズムの種類やデータ ソースの選択と、分析に使用されるケース データの定義も行うことができます。  
   
- **詳細情報。**[データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining-wizard-analysis-services-data-mining.md)  
+ **詳細情報。** [データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  データ マイニング ウィザードを使用してマイニング構造およびマイニング モデルを作成したら、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のデータ マイニング デザイナーを使用して、既存のモデルと構造に対する操作を行うことができます。  
@@ -61,7 +61,7 @@ ms.locfileid: "66084827"
   
 -   既存のマイニング モデルに対する予測とコンテンツ クエリの作成。 1 回限りのクエリの作成、または外部データのテーブル全体の予測を生成するクエリの設定。  
   
- **詳細情報。**[データ マイニング デザイナー](data-mining-designer.md)  
+ **詳細情報。** [データ マイニング デザイナー](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  マイニング モデルを作成してサーバーに配置したら、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、データ マイニング オブジェクトをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを管理できます。 また、モデルの調査、新しいデータの処理、予測の作成など、モデルを使用するタスクの実行を続けることもできます。  
@@ -79,7 +79,7 @@ ms.locfileid: "66084827"
   
 -   パラメーターで渡されたモデルの自動生成。  
   
- ただし、他のプロセスへの入力として、パッケージ ワークフローのデータ マイニングを使用することもできます。 例 :  
+ ただし、他のプロセスへの入力として、パッケージ ワークフローのデータ マイニングを使用することもできます。 以下に例を示します。  
   
 -   モデルで生成された確率値の使用。テキスト マイニングまたは他の分類タスクのスコアを重み付けします。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66084827"
   
 -   新たな顧客をリスク別にセグメント化する、ロジスティック回帰の使用。  
   
- **詳細情報。**[データ マイニング ソリューションの関連プロジェクト](data-mining-solutions.md)  
+ **詳細情報。** [データ マイニング ソリューションの関連プロジェクト](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   

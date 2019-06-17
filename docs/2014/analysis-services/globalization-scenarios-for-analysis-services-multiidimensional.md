@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb6f1072396b957dc9d4b1e9b7d1089e30c739c4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080886"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多次元のグローバル化のシナリオ
@@ -74,7 +74,7 @@ ms.locfileid: "66080886"
 |[通貨換算&#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|ビジネス インテリジェンス ウィザードを使用して通貨換算を定義します。|  
 |[グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)|多言語データに関連した問題を回避するために役立ついくつかの設計およびコーディング手法について説明しています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows アプリケーションの国際化](/windows/desktop/Intl/international-support)   
  [Microsoft グローバリゼーションのドキュメント](/globalization/)   
  [ロケールに基づくアダプティブ デザインを使用した Windows ストア アプリの作成](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   

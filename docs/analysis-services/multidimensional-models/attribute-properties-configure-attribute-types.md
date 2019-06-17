@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745663"
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>属性のプロパティ - 属性の種類を構成する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、属性の型を使用して、ビジネス機能で属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、属性の型を使用して、ビジネス機能で属性を分類できます。 属性の型は多数用意されており、そのほとんどは属性の表示やサポートのためにクライアント アプリケーションで使用されています。 ただし、属性の型の中には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で特定の意味を持つものもあります。 たとえば、時間ディメンションのさまざまなカレンダーで時刻を表す属性を識別する属性の型がいくつか用意されています。  
   
 ##  <a name="setting_attibute_types"></a> 属性の型の設定  
  属性の型は、その属性の **Type** プロパティの値によって決まります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のいくつかのウィザードでは、ディメンションまたは属性の定義時に属性の型を設定します。 これらの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ウィザードでは、ウィザードによってディメンションに機能が追加された場合にも属性の型を設定します。 たとえば、ビジネス インテリジェンス ウィザードでは、ディメンション内の勘定科目の名前、コード、番号、構造を含んでいる属性を識別するための勘定科目インテリジェンスの追加時に、ディメンション内の属性に複数の属性の型を適用します。 また、ビジネス インテリジェンス ウィザードでは、通貨換算などにも属性の型を使用します。 詳細については、「 [通貨ディメンションの作成](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)」を参照してください。  
@@ -298,7 +298,7 @@ ms.locfileid: "62745663"
 |**WinterSummerSeason**|その日が冬期か夏期かを表します。|  
 |**Years**|年数を表します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性と属性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   

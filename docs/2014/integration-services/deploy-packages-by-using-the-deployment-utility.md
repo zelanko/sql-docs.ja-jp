@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059623"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>配置ユーティリティを使用してパッケージを配置する
@@ -54,7 +54,7 @@ ms.locfileid: "66059623"
   
 3.  **[SSIS パッケージの配置]** ページで、 **[SQL Server に配置]** オプションを選択します。  
   
-4.  必要に応じて、ターゲット サーバーにパッケージがインストールされた後で検証を行う場合は、**[インストール後にパッケージを検証する]** を選択します。  
+4.  必要に応じて、ターゲット サーバーにパッケージがインストールされた後で検証を行う場合は、 **[インストール後にパッケージを検証する]** を選択します。  
   
 5.  **[インストール先の SQL Server の指定]** ページで、パッケージをインストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定し、認証モードを選択します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を選択する場合は、ユーザー名とパスワードを入力する必要があります。  
   

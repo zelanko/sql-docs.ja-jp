@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994399"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -46,7 +46,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] 'dbname'` 確認するデータベースを指定します。 *dbname*は**sysname**します。  
   
-`[ @autofix = ] 'auto'` システム管理者に、データベースとすべてのデータベース オブジェクトの所有権を与え、ユーザーが作成したデータベース ユーザーと既定以外の権限を削除します。 *自動*は**nvarchar (4)**、既定値は NULL です。  
+`[ @autofix = ] 'auto'` システム管理者に、データベースとすべてのデータベース オブジェクトの所有権を与え、ユーザーが作成したデータベース ユーザーと既定以外の権限を削除します。 *自動*は**nvarchar (4)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

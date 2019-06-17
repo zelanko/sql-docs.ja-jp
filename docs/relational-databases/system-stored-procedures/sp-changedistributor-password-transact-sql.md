@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38ef611dd7dd181b164bd0eec459d68c49c6b5df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997022"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
@@ -52,7 +52,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changedistributor_password**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションのセキュリティ設定の表示および変更](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [ディストリビューターのセキュリティ保護](../../relational-databases/replication/security/secure-the-distributor.md)   
  [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   

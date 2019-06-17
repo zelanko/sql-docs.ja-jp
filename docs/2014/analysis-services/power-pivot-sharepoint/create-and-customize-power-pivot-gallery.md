@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1a7cc26edb726952e71e25deb271ef1dd997d18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071526"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot ギャラリーの作成およびカスタマイズ
@@ -70,7 +70,7 @@ ms.locfileid: "66071526"
   
     3.  [ライブラリ] の **[PowerPivot ギャラリー]** をクリックします。  
   
-    1.  **SharePoint 2013**:設定アイコンをクリックして![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")します。  **[サイト コンテンツ]** をクリックします。  
+    1.  **SharePoint 2013**:設定アイコンをクリックして![SharePoint 設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")します。 **[サイト コンテンツ]** をクリックします。  
   
     2.  **[アプリケーションの追加]** をクリックします。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66071526"
   
 3.  **SharePoint 2010:** カスタム ビュー で次のようにクリックします。**このビューを変更する**します。  
   
-     **SharePoint 2013:****ビューの管理**、 をクリックして**ビューの変更**します。  
+     **SharePoint 2013:** **ビューの管理**、 をクリックして**ビューの変更**します。  
   
 4.  [並べ替え] で、一覧でのブックの表示方法を決定するために使用される基準を指定します。 既定では、ドキュメントは追加された順序で表示されます。  
   

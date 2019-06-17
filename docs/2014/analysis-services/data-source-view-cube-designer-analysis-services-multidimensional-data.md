@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082527"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[データ ソース ビュー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
@@ -136,7 +136,7 @@ ms.locfileid: "66082527"
  **Properties**  
  選択したリレーションシップの **[プロパティ]** ウィンドウを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] に表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ツールバー&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [メジャー&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   

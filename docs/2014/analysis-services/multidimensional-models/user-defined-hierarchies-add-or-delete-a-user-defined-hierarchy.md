@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072588"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>ユーザー定義階層の追加または削除
@@ -53,11 +53,11 @@ ms.locfileid: "66072588"
   
 -   **[ディメンション構造]** タブの **[階層]** ペインで、削除するユーザー定義階層をクリックします。 ツール バーの **[削除]** をクリックします。  
   
-     - - または -  
+     - \- または -  
   
 -   **[階層]** ペインで、削除するユーザー定義階層を右クリックし、 **[削除]** をクリックします。  
   
-     - - または -  
+     - \- または -  
   
 -   ユーザー定義階層をデザイン画面外にドラッグします。  
   

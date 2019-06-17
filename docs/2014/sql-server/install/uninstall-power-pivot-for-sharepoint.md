@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989867"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint のアンインストール
@@ -80,11 +80,11 @@ ms.locfileid: "62989867"
   
 2.  **[機能、サービス、アプリケーション、およびソリューションの削除]** を選択し、 **[OK]** をクリックします。  
   
-3.  必要に応じて、ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
+3.  必要に応じて、ウィンドウを最大化します。 ウィンドウの下部に **[検証]** 、 **[実行]** 、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
 4.  タスク一覧内の各アクションの機能を確認します。  
   
-      **[PowerPivot Service アプリケーションの削除]** では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、PowerPivot for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 PowerPivot ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
+     **[PowerPivot Service アプリケーションの削除]** では、サービス アプリケーションに関連付けられたアプリケーション データを削除することを選択できます。 アプリケーション データは、データ更新スケジュール、データベース インスタンス情報、使用状況データ、PowerPivot for SharePoint によって使用されるその他のデータを格納するためにサービス アプリケーションを使って作成された SQL Server データベースです。 PowerPivot ブックなどのユーザー ファイルは格納されません。 (たとえば、データ更新またはデータ アクセスに関連するデータ保持ポリシーに従うなど) アプリケーション データを保持する特定の理由がある場合を除き、SharePoint ユーザーによって作成または保存されたファイルを削除することなく、アプリケーション データベースを削除できます。  
   
      データベースを削除するには、 **[PowerPivot Service アプリケーションの削除]** を選択し、 **[このサービス アプリケーションに関連付けられているアプリケーション データを削除します]** を選択します。  
   
@@ -120,7 +120,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  既存の配置について、**[種類]** が "取り消し" または "展開" であり、**[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
+3.  既存の配置について、 **[種類]** が "取り消し" または "展開" であり、 **[ファイル]** が powerpivotwebapp.wsp または powerpivotfarm.wsp であることを確認します。  
   
 4.  デプロイまたは取り消しの場合、PowerPivot ソリューションに関連するコピーの GUID 値**JobId**次のコマンドに貼り付けます (GUID をコピーします [シェルの編集] メニュー、マーク、コピー、および貼り付けコマンドを使用)。  
   
@@ -181,7 +181,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      一方で、PowerPivot System サービスで自動生成された個々の対象アプリケーションは、PowerPivot のアンインストール時に自動的に削除されます。  
   
-4.  コントロール パネルで、 **[プログラム]**、 **[プログラムのアンインストール]** の順にクリックします。使用しなくなった Analysis Services クライアント ライブラリをアンインストールします。 Analysis Services ADOMD.NET と Microsoft SQL Server Analysis 管理オブジェクトは、PowerPivot for SharePoint をアンインストールしても削除されません。 ライブラリは、Analysis Services データを使用する他のプログラムで使用されることがあるので、SQL Server セットアップではこれらは自動的にはアンインストールされません。 クライアント ライブラリが不要になった場合には、これらを個別にアンインストールする必要があります。  
+4.  コントロール パネルで、 **[プログラム]** 、 **[プログラムのアンインストール]** の順にクリックします。使用しなくなった Analysis Services クライアント ライブラリをアンインストールします。 Analysis Services ADOMD.NET と Microsoft SQL Server Analysis 管理オブジェクトは、PowerPivot for SharePoint をアンインストールしても削除されません。 ライブラリは、Analysis Services データを使用する他のプログラムで使用されることがあるので、SQL Server セットアップではこれらは自動的にはアンインストールされません。 クライアント ライブラリが不要になった場合には、これらを個別にアンインストールする必要があります。  
   
      SQL Server Reporting Services SharePoint 2010 アドインは、そのアンインストールを具体的に指示するトラブルシューティングまたはインストール手順に従う場合以外はアンインストールしないでください。 Reporting Services アドインは Access Services で使用されます。 これは SharePoint 製品準備ツールでインストールされ、SharePoint に必要な機能をサポートするためにシステムに残しておく必要があります。  
   

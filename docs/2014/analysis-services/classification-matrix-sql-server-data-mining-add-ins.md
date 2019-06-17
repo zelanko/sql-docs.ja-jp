@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087967"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>分類マトリックス (SQL Server データ マイニング アドイン)
@@ -87,7 +87,7 @@ ms.locfileid: "66087967"
 ### <a name="known-issues"></a>既知の問題  
  SQL Server 2012 および SQL Server 2014 では、内部のテスト データ セットをモデルにマップする機能はなく操作、**分類マトリックス**ツール。 ただし、外部データ セットを指定して、元のデータ セットのエラーを特定するための入力としてトレーニング セットを選択することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデルの検証と予測用モデルの使用&#40;データ マイニング Excel 用アドイン&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [データの探索&#40;SQL Server データ マイニング アドイン&#41;](explore-data-sql-server-data-mining-add-ins.md)   
  [カテゴリの検出&#40;Excel 用テーブル分析ツール&#41;](detect-categories-table-analysis-tools-for-excel.md)  

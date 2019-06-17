@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 07d813587dc530924becbb187a970f78022e5476
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63136090"
 ---
 # <a name="subset-mdx"></a>Subset (MDX)
@@ -32,7 +32,7 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇*  
+ *[開始]*  
  返す最初の組の位置を指定する有効な数値式です。  
   
  *Count*  

@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082798"
 ---
 # <a name="testing-and-validation-data-mining"></a>テストおよび検証 (データ マイニング)
@@ -90,7 +90,7 @@ ms.locfileid: "66082798"
 |[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]で用意されている精度チャートの種類について学ぶ|[リフト チャート (Analysis Services - データ マイニング)](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート (Analysis Services - データ マイニング)](profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 (Analysis Services - データ マイニング)](scatter-plot-analysis-services-data-mining.md)|  
 |真陽性、偽陽性、真陰性、および偽陰性の実際の数値を評価する分類マトリックス (混同マトリックスと呼ばれることもある) の作成方法について学びます。|[分類マトリックス &#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ツール](data-mining-tools.md)   
  [データ マイニング ソリューション](data-mining-solutions.md)   
  [テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)  

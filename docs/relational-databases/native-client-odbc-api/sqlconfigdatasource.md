@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ce4eb57a5dbce0e34052b6b7124e79f76626fec8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014564"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
@@ -30,7 +30,7 @@ ms.locfileid: "63014564"
   
  使用できるキーワードの一覧については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを参照してください[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLConfigDataSource 関数](https://go.microsoft.com/fwlink/?LinkId=59337)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

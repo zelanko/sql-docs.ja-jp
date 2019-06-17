@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088006"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>[クラスター ダイアグラム] タブ マイニング モデル ビューアー)
   **[クラスター ダイアグラム]** タブでは、クラスター モデルに含まれているすべてのクラスターがグラフィックで表示されます。  
   
- **詳細情報。**[Microsoft クラスタ リング アルゴリズム](data-mining/microsoft-clustering-algorithm.md)、 [Microsoft クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **詳細情報。** [Microsoft クラスタ リング アルゴリズム](data-mining/microsoft-clustering-algorithm.md)、 [Microsoft クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  

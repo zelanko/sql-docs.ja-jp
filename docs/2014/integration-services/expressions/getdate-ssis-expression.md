@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 83d8d4126ff7dbcd6e0d5b114626cd8acb1b8d20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769031"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (SSIS 式)
@@ -59,7 +59,7 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [GETUTCDATE (SSIS 式)](getutcdate-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   

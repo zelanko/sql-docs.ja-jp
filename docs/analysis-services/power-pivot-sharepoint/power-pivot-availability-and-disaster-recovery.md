@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956874"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot の可用性と災害復旧
@@ -82,7 +82,7 @@ ms.locfileid: "62956874"
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の同期ミラーリングを同じファーム内で行うことによる可用性の確保|サポートはされますが、推奨はされません。 同期 - コミット モードで Always On を使用することをお勧めします。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 同期コミット モードの|サポートされ、なおかつ推奨されます。|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同期ミラーリングまたはログ配布を別のファームとの間で行うことによるディザスター リカバリー|サポートされています。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー |サポートされている|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] と非同期コミットによるディザスター リカバリー|サポートされている|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
