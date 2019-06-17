@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004158"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (TRANSACT-SQL)
@@ -59,16 +59,16 @@ sp_special_columns [ @table_name = ] 'table_name'
  テーブル修飾子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
  [ @col_type=] '*col_type*'  
- 列の型です。 *col_type*は**char (** 1 **)**、既定値は r です種類 R 最適な列または列のセットを返します、または複数の列から値を取得することによって、指定した任意の行では、。一意に識別するテーブル。 列には、この目的では、または、列またはテーブルの一意のインデックスの列用にデザインされた疑似をすることができます。 V の型を返します、列、指定したテーブルであれば、任意のトランザクションによって行の任意の値が更新されたときに、データ ソースによって自動的に更新されます。  
+ 列の型です。 *col_type*は**char (** 1 **)** 、既定値は r です種類 R 最適な列または列のセットを返します、または複数の列から値を取得することによって、指定した任意の行では、。一意に識別するテーブル。 列には、この目的では、または、列またはテーブルの一意のインデックスの列用にデザインされた疑似をすることができます。 V の型を返します、列、指定したテーブルであれば、任意のトランザクションによって行の任意の値が更新されたときに、データ ソースによって自動的に更新されます。  
   
  [ @scope=] '*scope*'  
- ROWID の最低限必要な範囲です。 *スコープ*は**char (** 1 **)**、既定値は t です。 範囲 C には、、ROWID がその行に配置されている場合にのみ有効であることを指定します。 範囲 T は、ROWID がトランザクションに対して有効であることを指定します。  
+ ROWID の最低限必要な範囲です。 *スコープ*は**char (** 1 **)** 、既定値は t です。 範囲 C には、、ROWID がその行に配置されている場合にのみ有効であることを指定します。 範囲 T は、ROWID がトランザクションに対して有効であることを指定します。  
   
  [ @nullable=] '*null 許容*'  
- 特別列に NULL 値を認めるかどうかを示します。 *null 許容*は**char (** 1 **)**、既定値は u です。 O には、null 値を許容しない特別列を指定します。 U は部分的に null を許容する列を指定します。  
+ 特別列に NULL 値を認めるかどうかを示します。 *null 許容*は**char (** 1 **)** 、既定値は u です。 O には、null 値を許容しない特別列を指定します。 U は部分的に null を許容する列を指定します。  
   
  [ @ODBCVer=] '*ODBCVer*'  
- 使用する ODBC のバージョンを指定します。 *ODBCVer*は**int (** 4 **)**、既定値は 2 です。 既定値は ODBC Version 2.0 を示します。 ODBC version 2.0 と ODBC version 3.0 の違いの詳細については、ODBC version 3.0 の ODBC SQLSpecialColumns 仕様を参照してください。  
+ 使用する ODBC のバージョンを指定します。 *ODBCVer*は**int (** 4 **)** 、既定値は 2 です。 既定値は ODBC Version 2.0 を示します。 ODBC version 2.0 と ODBC version 3.0 の違いの詳細については、ODBC version 3.0 の ODBC SQLSpecialColumns 仕様を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -82,7 +82,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|ODBC SQL データ型します。|  
 |TYPE_NAME|**sysname**|データ ソースに依存するデータ型名です。たとえば、 **char**、 **varchar**、 **money**、または**テキスト**します。|  
 |PRECISION|**Int**|データ ソースの列の有効桁数。 このフィールドは、常に値を返します。|  
-|LENGTH|**Int**|データ ソース内のバイナリ形式でのデータ型の長さ (バイト単位) の必須の 10 **char (** 10 **)**、4 の**整数**、および 2 の**smallint**.|  
+|LENGTH|**Int**|データ ソース内のバイナリ形式でのデータ型の長さ (バイト単位) の必須の 10 **char (** 10 **)** 、4 の**整数**、および 2 の**smallint**.|  
 |SCALE|**smallint**|データ ソースの列の小数点以下桁数。 データ型に対して NULL が返されますの小数点以下桁数は適用されません。|  
 |PSEUDO_COLUMN|**smallint**|その列が疑似列であるかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 1 を返します。<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

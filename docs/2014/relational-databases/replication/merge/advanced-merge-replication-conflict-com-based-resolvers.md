@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240210"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
@@ -44,7 +44,7 @@ ms.locfileid: "63240210"
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ダウンロード専用競合回避モジュール|入力なし。|パブリッシャーにアップロードされた変更は拒否されます。変更はサブスクライバーにダウンロードされます。|全種類の競合を対象とします。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLServer ストアド プロシージャ競合回避モジュール|競合を処理するために競合回避モジュールが呼び出すストアド プロシージャの名前。|競合の回避は、指定したストアド プロシージャのロジックに依存します。|更新の競合を対象とします。 詳細については、「[Implement a Custom Conflict Resolver for a Merge Article](../implement-a-custom-conflict-resolver-for-a-merge-article.md)」 (マージ アーティクルのカスタム競合回避モジュールの実装) を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)  
   

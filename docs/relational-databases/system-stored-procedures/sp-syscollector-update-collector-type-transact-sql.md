@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d3529d01966c7f9780183d663823d8f4033f47a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63001362"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
@@ -62,7 +62,7 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
  メンバーシップが必要です、 **dc_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
   
 ## <a name="example"></a>例  
- 次の例では、ジェネリック T-SQL Query コレクター型を更新します  (この例では、ジェネリック T-SQL Query コレクター型の既定のスキーマを使用しています)。  
+ 次の例では、ジェネリック T-SQL Query コレクター型を更新します (この例では、ジェネリック T-SQL Query コレクター型の既定のスキーマを使用しています)。  
   
 ```  
 USE msdb;  

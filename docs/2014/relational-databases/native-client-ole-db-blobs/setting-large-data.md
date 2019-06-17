@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140621"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
@@ -717,7 +717,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BLOB と OLE オブジェクト](blobs-and-ole-objects.md)   
  [大きな値の型の使用](../native-client/features/using-large-value-types.md)  
   
