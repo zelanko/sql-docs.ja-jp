@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2157462ca1f9509034f33208cce7aed2983ae4f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62644788"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (TRANSACT-SQL)
@@ -49,7 +49,7 @@ xp_sqlmaint 'switch_string'
  **-でしょうか。** スイッチで有効でない**xp_sqlmaint**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- なし。 エラーが返されます、 **sqlmaint**ユーティリティが失敗します。  
+ [なし] : エラーが返されます、 **sqlmaint**ユーティリティが失敗します。  
   
 ## <a name="remarks"></a>コメント  
  この手順は、SQL Server の認証でログオンしたユーザーによって呼び出される場合、 **-u"***login_id***"** と **-p"***パスワード***"** スイッチ前に付加されます*switch_string*実行前にします。 Windows 認証では、ユーザーがログインしている場合*switch_string*への変更なしで渡される**sqlmaint**します。  

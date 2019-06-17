@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632772"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時刻および日付関数 (Visual FoxPro ODBC ドライバー)
@@ -61,7 +61,7 @@ ms.locfileid: "62632772"
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- この構文で、 **d**ことを示します*値*の日付、 *- yyyy-mm-dd*形式と**ts**ことを示します*値*のタイムスタンプは、 *- yyyy-mm-dd hh:mm:ss*[.*f.*] 形式。 日付とタイムスタンプのデータの略式の構文は次のとおりです。  
+ この構文で、 **d**ことを示します*値*の日付、 *- yyyy-mm-dd*形式と**ts**ことを示します*値*のタイムスタンプは、 *- yyyy-mm-dd hh:mm:ss*[.*f.* ] 形式。 日付とタイムスタンプのデータの略式の構文は次のとおりです。  
   
 ```  
 {d 'value'}  

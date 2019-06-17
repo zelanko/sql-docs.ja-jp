@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997032"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
@@ -241,7 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  指定されたプロファイルに定義されているどのようなパラメーターを表示するには、次のように実行します。 **sp_help_agent_profile**とに注意してください、 *profile_name*に関連付けられている、 *profile_id*します。 適切な*profile_id*、次回の実行**sp_help_agent_parameters**を使用している*profile_id*プロファイルに関連付けられたパラメーターを表示します。 パラメーターは、実行することによって、プロファイルに追加できます[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)します。  
   
-`[ @parameter_value = ] 'parameter_value'` 新しいパラメーターの値です。 *parameter_value*は**nvarchar (255)**、既定値はありません。  
+`[ @parameter_value = ] 'parameter_value'` 新しいパラメーターの値です。 *parameter_value*は**nvarchar (255)** 、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

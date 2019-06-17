@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62861532"
 ---
 # <a name="procedure-parameters"></a>プロシージャのパラメーター
 プロシージャ呼び出しのパラメーター入力として使用できる、入力/出力、または出力パラメーター。 これは、すべての他の SQL ステートメントで、入力パラメーターでは常にパラメーターと異なります。  
   
- プロシージャに値を送信する入力パラメーターが使用されます。 たとえば、部品テーブルに PartID、説明、および価格の列があるとします。 InsertPart プロシージャ、テーブル内の各列の入力パラメーターがあります。 以下に例を示します。  
+ プロシージャに値を送信する入力パラメーターが使用されます。 たとえば、部品テーブルに PartID、説明、および価格の列があるとします。 InsertPart プロシージャ、テーブル内の各列の入力パラメーターがあります。 例 :  
   
 ```  
 {call InsertPart(?, ?, ?)}  

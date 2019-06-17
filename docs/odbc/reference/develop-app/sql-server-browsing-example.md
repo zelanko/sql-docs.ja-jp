@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149322"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server の参照の例
@@ -77,7 +77,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- ドライバーによって返される最終的な接続文字列は、それぞれのキーワードの後にわかりやすい名前を含まないも、アプリケーションで指定されていない省略可能なキーワードを含んでいるか。 アプリケーションでは、この文字列を使用します。 **SQLDriverConnect** (切断) 後の現在の接続ハンドル上のデータ ソースに再接続するか、異なる接続ハンドルのデータ ソースに接続します。 以下に例を示します。  
+ ドライバーによって返される最終的な接続文字列は、それぞれのキーワードの後にわかりやすい名前を含まないも、アプリケーションで指定されていない省略可能なキーワードを含んでいるか。 アプリケーションでは、この文字列を使用します。 **SQLDriverConnect** (切断) 後の現在の接続ハンドル上のデータ ソースに再接続するか、異なる接続ハンドルのデータ ソースに接続します。 例 :  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  
