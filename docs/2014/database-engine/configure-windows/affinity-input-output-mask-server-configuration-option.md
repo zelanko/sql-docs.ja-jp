@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813680"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask サーバー構成オプション
@@ -48,7 +48,7 @@ ms.locfileid: "62813680"
   
  affinity I/O パターンで 1 が設定されているビットは、対応する CPU で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O 操作を実行できることを示します。また、0 が設定されているビットは、対応する CPU に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O 操作のスケジュールを設定できないことを示します。 すべてのビットがゼロに設定されているか、 **affinity I/O mask** が指定されていない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク I/O は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスレッドを処理できるすべての CPU にスケジュール設定されます。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** オプションの設定は特殊な操作なので、特に必要な場合にのみこのオプションを使用することをお勧めします。 通常は、Windows 2000 または Windows 2003 の既定の関係 (affinity) で、最適なパフォーマンスが得られます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** オプションの設定は特殊な操作なので、特に必要な場合にのみこのオプションを使用することをお勧めします。 通常は、Windows 2000 または Windows 2003 の既定の関係 (affinity) で、最適なパフォーマンスが得られます。  
   
  **affinity I/O mask** オプションを指定する場合は、 **affinity mask** 構成オプションと共に使用する必要があります。 **affinity I/O mask** スイッチと **affinity mask** オプションの両方で同じ CPU を有効にしないようにしてください。 各 CPU に対応するビットは、次の 3 つの状態のうちのいずれかに設定します。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62813680"
 > [!CAUTION]  
 >  Windows オペレーティング システムでの CPU 関係の構成と、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での関係マスクの構成は、同時に行わないようにしてください。 この 2 つの設定は、同じ効果をねらったものであり、これらの構成間に一貫性がない場合は、予期しない結果を招く可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 関係を構成する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `sp_configure` オプションを使用する方法が最適です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

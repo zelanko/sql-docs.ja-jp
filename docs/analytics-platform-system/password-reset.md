@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639957"
 ---
 # <a name="password-reset---analytics-platform-system"></a>パスワード リセット - Analytics Platform System
@@ -40,7 +40,7 @@ ms.locfileid: "62639957"
 ドメイン管理者の資格情報とシステム管理者の資格情報の両方は、資格情報の種類ごとにパスワードの強度のポリシーに準拠します。 ドメインに新しいパスワードが更新ドメイン管理者の資格情報を変更するときに SQL Server PDW 全体で必要な場所。  
   
 > [!IMPORTANT]  
-> SQL Server PDW はドル記号をサポートしていません (**$**) で、ドメイン管理者またはローカル管理者パスワード。 文字 **^ % &** は、PowerShell は、これらの特殊文字が、パスワードで許可されています。 これらの文字は、システム管理者または SQL Server のパスワードで使用されている場合**sa**アカウント (、 **AdminPassword**と**PdwSAPassword**時にパラメーターセットアップ) をセットアップしなどのインストール、アップグレード、REPLACENODE、および、修正プログラムの適用は失敗します。 現在のパスワードには、サポートされていない文字が含まれている場合は、アップグレードの成功を確実に、アップグレードを実行する前にこのような文字がないように、これらのパスワードを変更します。 アップグレードの完了後は、元の値にこれらのパスワードを設定できます。 パスワードの要件の詳細については、次を参照してください。 [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)します。  
+> SQL Server PDW はドル記号をサポートしていません ( **$** ) で、ドメイン管理者またはローカル管理者パスワード。 文字 **^ % &** は、PowerShell は、これらの特殊文字が、パスワードで許可されています。 これらの文字は、システム管理者または SQL Server のパスワードで使用されている場合**sa**アカウント (、 **AdminPassword**と**PdwSAPassword**時にパラメーターセットアップ) をセットアップしなどのインストール、アップグレード、REPLACENODE、および、修正プログラムの適用は失敗します。 現在のパスワードには、サポートされていない文字が含まれている場合は、アップグレードの成功を確実に、アップグレードを実行する前にこのような文字がないように、これらのパスワードを変更します。 アップグレードの完了後は、元の値にこれらのパスワードを設定できます。 パスワードの要件の詳細については、次を参照してください。 [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)します。  
   
 ## <a name="to-reset-a-password"></a>パスワードをリセットするには  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62639957"
   
     ![SQL Server DWConfig パスワード](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [ディレクトリ サービス復元モードで AD ノードにログオンするための管理者パスワードを設定&#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

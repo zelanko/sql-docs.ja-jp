@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2ad81b1d92bb45d9ab15ca11897804cc0d333a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63001752"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
@@ -57,7 +57,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="remarks"></a>コメント  
  いずれか*collection_set_id*または*名前*する必要があります値を持つ、どちらも NULL をすることはできません。  
   
- この手順は、コレクションを開始し、アップロード ジョブが、指定されたコレクションが設定され、コレクション セットがある場合、コレクション エージェント ジョブはすぐに開始、 **@collection_mode**非キャッシュ (1) に設定します。 詳細については、「 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)します。  
+ この手順は、コレクションを開始し、アップロード ジョブが、指定されたコレクションが設定され、コレクション セットがある場合、コレクション エージェント ジョブはすぐに開始、 **@collection_mode** 非キャッシュ (1) に設定します。 詳細については、「 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)します。  
   
  sp_sycollector_run_collection_set は、スケジュールを持たないコレクション セットの実行にも使用できます。  
   
@@ -73,7 +73,7 @@ GO
 EXEC sp_syscollector_run_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   

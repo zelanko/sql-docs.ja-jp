@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894593"
 ---
 # <a name="using-variables-in-the-script-task"></a>スクリプト タスクでの変数の使用
@@ -35,7 +35,7 @@ ms.locfileid: "62894593"
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> クラスの <xref:Microsoft.SqlServer.Dts.Runtime.Variable> プロパティのデータ型は `Object` です。 スクリプト タスクでは `Option Strict` が有効なので、使用する前に、<xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> プロパティを適切な型にキャストする必要があります。  
   
- 既存の変数は、**[スクリプト タスク エディター]** の <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> の一覧および <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> の一覧に追加することにより、カスタム スクリプトで使用できるようになります。 変数名の大文字と小文字は区別されることに注意してください。 スクリプト内では、`Dts` オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを介して、両方の種類の変数にアクセスできます。 `Value` プロパティを使用して、各変数に対する読み取りおよび書き込みを行います。 スクリプト タスクは、スクリプトが変数の値を読み取ったり変更するときに、ユーザーに意識させずにロックを管理します。  
+ 既存の変数は、 **[スクリプト タスク エディター]** の <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> の一覧および <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> の一覧に追加することにより、カスタム スクリプトで使用できるようになります。 変数名の大文字と小文字は区別されることに注意してください。 スクリプト内では、`Dts` オブジェクトの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> プロパティを介して、両方の種類の変数にアクセスできます。 `Value` プロパティを使用して、各変数に対する読み取りおよび書き込みを行います。 スクリプト タスクは、スクリプトが変数の値を読み取ったり変更するときに、ユーザーに意識させずにロックを管理します。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> プロパティによって返される <xref:Microsoft.SqlServer.Dts.Runtime.Variables> コレクションの <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> メソッドを使用すると、変数をコードで使用する前に、その変数の存在を確認できます。  
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659513"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での外部スクリプトの同時実行のスケール
@@ -47,11 +47,11 @@ ms.locfileid: "62659513"
 
 各ユーザー アカウントに関連付けられるパスワードはランダムに生成されますが、アカウントの作成後に変更することもできます。
 
-1. SQL Server 構成マネージャーを開き、**[SQL Server のサービス]** をクリックします。
+1. SQL Server 構成マネージャーを開き、 **[SQL Server のサービス]** をクリックします。
 2. SQL Server スタート パッド サービスをダブルクリックし、サービスが実行されている場合は、サービスを停止します。
 3.  **[サービス]** タブで、[開始モード] が [自動] に設定されていることを確認します。 スタート パッドが実行されていない場合、外部スクリプトを開始できません。
-4.  **[詳細設定]** タブをクリックし、必要であれば、**[外部ユーザーの数]** の値を編集します。 この設定を制御異なる SQL ユーザーの数できます外部スクリプト実行セッションを同時にします。 既定では 20 個のアカウントです。 ユーザーの最大数は、100 です。
-5. パスワードを定期的に変更するポリシーが組織で実施されている場合は、オプションで、**[外部ユーザーのパスワードのリセット]** を _[はい]_ に設定できます。 これを行うと、ユーザー アカウントに対してスタート パッドが保持している暗号化パスワードが再生成されます。 詳しくは、「[パスワード ポリシーの実施](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)」をご覧ください。
+4.  **[詳細設定]** タブをクリックし、必要であれば、 **[外部ユーザーの数]** の値を編集します。 この設定を制御異なる SQL ユーザーの数できます外部スクリプト実行セッションを同時にします。 既定では 20 個のアカウントです。 ユーザーの最大数は、100 です。
+5. パスワードを定期的に変更するポリシーが組織で実施されている場合は、オプションで、 **[外部ユーザーのパスワードのリセット]** を _[はい]_ に設定できます。 これを行うと、ユーザー アカウントに対してスタート パッドが保持している暗号化パスワードが再生成されます。 詳しくは、「[パスワード ポリシーの実施](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy)」をご覧ください。
 6.  スタート パッド サービスを再起動します。
 
 ## <a name="managing-workloads"></a>ワークロードの管理
@@ -64,7 +64,7 @@ ms.locfileid: "62659513"
 
 Python または R スクリプトで使用できるリソースは、SQL Server によって管理されます。 SQL Server の DMV を使用してリソースの使用状況を監視するか、または関連する Windows ジョブ オブジェクトのパフォーマンス カウンターを見て、サーバー メモリの使用量を必要に応じて調整することをお勧めします。 SQL Server Enterprise Edition がある場合は、構成することで、外部スクリプトを実行するために使用されるリソースを割り当てることができます、[外部リソース プール](how-to-create-a-resource-pool.md)します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 容量を構成する方法の詳細については、次の記事を参照してください。
 

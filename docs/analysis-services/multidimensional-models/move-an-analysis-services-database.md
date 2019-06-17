@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62930904"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services データベースの移動
@@ -49,7 +49,7 @@ ms.locfileid: "62930904"
   
 6.  右クリックし、**データベース**フォルダーと選択**アタッチしています.**  
   
-7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 また、[参照] ボタンを使用することができます (**.**) データベース フォルダーを検索します。  
+7.  **[フォルダー]** テキスト ボックスに、データベース フォルダーの移動先を入力します。 また、[参照] ボタンを使用することができます ( **.** ) データベース フォルダーを検索します。  
   
 8.  データベースの **ReadWrite** モードを選択します。  
   

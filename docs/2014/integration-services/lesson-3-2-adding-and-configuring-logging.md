@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892438"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>手順 2:ログ機能の追加と設定
@@ -34,7 +34,7 @@ ms.locfileid: "62892438"
   
 5.  必要に応じて、 **[説明]** の内容を修正します。  
   
-6.  **構成**列で、をクリックして**\<新しい接続 >** ログ情報を書き込む先を指定します。  
+6.  **構成**列で、をクリックして **\<新しい接続 >** ログ情報を書き込む先を指定します。  
   
      **[ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[使用法の種類]** ボックスの一覧から **[ファイルの作成]** を選択し、 **[参照]** をクリックします。 既定では、 **[ファイルの選択]** ダイアログ ボックスにこのプロジェクトのフォルダーが表示されますが、ログ情報を別の場所に保存することもできます。  
   

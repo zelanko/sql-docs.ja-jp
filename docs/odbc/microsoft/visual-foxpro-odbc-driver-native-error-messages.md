@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065109"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC ドライバーのネイティブのエラー メッセージ
@@ -296,7 +296,7 @@ ms.locfileid: "63065109"
 |901|関数の引数の値、型、または数が無効です。|  
 |902|式エバリュエーターが失敗しました。|  
 |903|合わせて文字列が長すぎます。|  
-|904|* * または ^ ドメイン エラーが発生します。|  
+|904|\* * または ^ ドメイン エラーが発生します。|  
 |905|LOG():0 または負の値が引数として使用します。|  
 |906|SQRT() 引数を負の値にすることはできません。|  
 |912|[全般] フィールドの操作が正しくありません。|  

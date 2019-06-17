@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891711"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>手順 1:配置バンドルのコピー
@@ -28,9 +28,9 @@ ms.locfileid: "62891711"
   
      既定の場所を使用した場合、配置バンドルは Deployment Tutorial フォルダーの Bin\Deployment フォルダーにあります。  
   
-2.  Deployment フォルダーを右クリックし、**[コピー]** をクリックします。  
+2.  Deployment フォルダーを右クリックし、 **[コピー]** をクリックします。  
   
-3.  ターゲット コンピューターで、フォルダーをコピーするパブリック共有を探し、**[貼り付け]** をクリックします。  
+3.  ターゲット コンピューターで、フォルダーをコピーするパブリック共有を探し、 **[貼り付け]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 2:パッケージ インストール ウィザードの実行](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042330"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>ダウンロードおよび Analytics Platform System の Microsoft 更新プログラムを適用
@@ -107,7 +107,7 @@ ms.locfileid: "63042330"
   
 1.  開始する前に開いて、[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)、 をクリックして、**アプライアンスの状態は**タブをクリックし、いることを確認、 **クラスター**と**ネットワーク**列緑色の表示 (NA) のすべてのノード。 すべてのアラートは、これらの列のいずれかに存在する場合、アプライアンスは正常に更新プログラムをインストールできる可能性がありますいないです。 既存のすべてのアラートに対処、**クラスター**と**ネットワーク**続行する前に列。  
   
-2.  ログオン、 _< domain_name >_**-HST01** Fabric ドメイン管理者としてのノード。  
+2.  ログオン、 _< domain_name >_ **-HST01** Fabric ドメイン管理者としてのノード。  
   
 3.  WSUS が承認されたすべての更新を適用するには、更新プログラムを実行します。 参照してください[更新プログラムを実行](#RunUpdateWizard)以下の手順についてはします。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "63042330"
   
 5.  **状態**ドロップダウン メニューで、**任意**クリック**更新**。  
   
-6.  展開**サービス更新**、 *<appliance name>*- VMM では、**更新**、**すべての更新プログラム**ここで、  *<appliance name>* アプライアンスの名前を指定します。  
+6.  展開**サービス更新**、 *<appliance name>* - VMM では、**更新**、**すべての更新プログラム**ここで、  *<appliance name>* アプライアンスの名前を指定します。  
   
 7.  **すべての更新プログラム**ウィンドウ セット**承認**に**拒否を除く任意**します。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "63042330"
   
 1.  HST01 ノード Fabric ドメイン管理者としてログインしていることを確認します。  
   
-2.  コマンド プロンプト ウィンドウを開き、次のコマンドを入力します。 置換*<parameter>* 指定された情報を使用します。  
+2.  コマンド プロンプト ウィンドウを開き、次のコマンドを入力します。 置換 *<parameter>* 指定された情報を使用します。  
   
 **Microsoft Update を実行します。**  
   
