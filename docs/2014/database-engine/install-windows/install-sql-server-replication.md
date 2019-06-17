@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775295"
 ---
 # <a name="install-sql-server-replication"></a>SQL Server レプリケーションのインストール
@@ -41,7 +41,7 @@ ms.locfileid: "62775295"
   
 -   参照してください[コマンド プロンプトから SQL Server 2014 インストール](install-sql-server-from-the-command-prompt.md)します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 2014 をインストールします。](install-sql-server.md)   
  [コマンド プロンプトから SQL Server 2014 をインストールします。](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77f98e86a5ac4b03d4a21b0242a2324c61b2081a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768818"
 ---
 # <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
@@ -41,7 +41,7 @@ ms.locfileid: "62768818"
 |&#124;&#124;|論理和|左から右|  
 |? :|条件式|右から左|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [演算子 (SSIS 式)](operators-ssis-expression.md)  
   
   

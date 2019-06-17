@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fec409bf6f391e14dd5e1a2b8b102df2fd00cfd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921757"
 ---
 # <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>例:プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する (完全復旧モデル)
@@ -57,7 +57,7 @@ RESTORE LOG adb FROM tailLogBackup WITH RECOVERY
   
  復元しないファイルは、自動的にオンラインになります。 これで、すべてのファイル グループがオンラインになります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [ファイルの復元 &#40;完全復旧モデル&#41;](file-restores-full-recovery-model.md)   

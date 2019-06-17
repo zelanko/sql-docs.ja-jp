@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918041"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
@@ -61,7 +61,7 @@ ms.locfileid: "62918041"
   
 3.  データベース名を右クリックします。  
   
-4.  **[タスク]** をクリックし、**[データ層アプリケーションのエクスポート]** を選択します。  
+4.  **[タスク]** をクリックし、 **[データ層アプリケーションのエクスポート]** を選択します。  
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62918041"
   
  **[次へ]** : **[DAC パッケージの選択]** ページに進みます。  
   
- **[キャンセル]**: 操作を取り消し、ウィザードを閉じます。  
+ **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
 ##  <a name="Export_settings"></a> [エクスポートの設定] ページ  
  このページを使用して、BACPAC ファイルを作成する場所を指定します。  

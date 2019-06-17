@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767634"
 ---
 # <a name="integration-services-transactions"></a>Integration Services のトランザクション
@@ -44,7 +44,7 @@ ms.locfileid: "62767634"
   
 -   www.mssqltips.com のブログ [「SQL Server Integration Services (SSIS) でトランザクションを使用する方法」](https://go.microsoft.com/fwlink/?LinkId=157783)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トランザクションの継承](../../2014/integration-services/inherited-transactions.md)   
  [複数のトランザクション](../../2014/integration-services/multiple-transactions.md)  
   

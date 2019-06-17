@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788064"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)
@@ -64,7 +64,7 @@ ms.locfileid: "62788064"
   
 2.  **[AlwaysOn 高可用性]** ノードを展開します。  
   
-3.  **[可用性グループ]** ノードを右クリックし、**[新しい可用性グループ]** コマンドを選択します。  
+3.  **[可用性グループ]** ノードを右クリックし、 **[新しい可用性グループ]** コマンドを選択します。  
   
 4.  **[新しい可用性グループ]** ダイアログ ボックスが開きます。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "62788064"
   
 -   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   

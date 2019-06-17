@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63050952"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit イベント クラス
@@ -45,7 +45,7 @@ ms.locfileid: "63050952"
 |ObjectID|`int`|システムによって割り当てられた、キャッシュ内のストアド プロシージャの ID。|22|はい|  
 |ObjectName|`nvarchar`|キャッシュ内のオブジェクトの名前。 ObjectName に値が設定されている場合、TextData に値は設定されません。|34|はい|  
 |ObjectType|`int`|イベントに関係するオブジェクトの種類を表す値。 この値は sys.objects カタログ ビューの type 列に対応します。 値については、「 [ObjectType トレース イベント列](objecttype-trace-event-column.md)」を参照してください。|28|はい|  
-|RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
+|RequestID|`int`|ステートメントが含まれている要求の ID。|49|[はい]|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  

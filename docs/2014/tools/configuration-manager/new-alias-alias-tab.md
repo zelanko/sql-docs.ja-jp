@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a64d4a3cc46a68a06367d51a3cf3511191c6232
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62912957"
 ---
 # <a name="new-alias-alias-tab"></a>[別名 - 新規] ダイアログ ボックス ([別名] タブ)
@@ -25,7 +25,7 @@ ms.locfileid: "62912957"
  **[別名]**  
  この接続を参照するために使用する名前 (別名) です。  
   
- **[パイプ名]** / **[ポート番号]**  
+ **[パイプ名]**  /  **[ポート番号]**  
  接続文字列の追加要素です。 このボックスの名前は、選択したプロトコルによって異なります。  
   
  **[プロトコル]**  

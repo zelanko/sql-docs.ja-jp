@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827225"
 ---
 # <a name="excel-destination"></a>Excel 変換先
@@ -111,7 +111,7 @@ ms.locfileid: "62827225"
   
 -   ブログ エントリ「 [Integration Services における Excel、3 の第 3 部。問題と代替策](https://go.microsoft.com/fwlink/?LinkId=217676)、dougbert.com します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel ソース](excel-source.md)   
  [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
  [データ フロー](data-flow.md)   

@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd861c50523e218bc1cf0ed6e538e66eeb3671f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756314"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780372"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>ステップ 3: pyodbc を使用した SQL への接続を概念実証する
 
-この例は、のみの概念実証を検討してください。  サンプル コードがわかりやすくするために、簡略化し、Microsoft によって推奨されるベスト プラクティスに表すとは限りません。  
+この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
 
 **次のサンプル スクリプトを実行**である test.py という名前のファイルを作成し、移動すると、各コード スニペットを追加します。 
 
@@ -28,7 +28,7 @@ ms.locfileid: "47756314"
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>手順 1: 接続  
+## <a name="step-1--connect"></a>手順 1: 接続する  
   
 ```python
 
@@ -61,9 +61,9 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入します。  
+## <a name="step-3--insert-a-row"></a>手順 3: 行を挿入する  
   
-実行する方法がわかります。 この例では、[挿入](../../../t-sql/statements/insert-transact-sql.md)ステートメントが安全に、からアプリケーションを保護するパラメーターを渡す[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)値。    
+この例では、[INSERT](../../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
   
   
 ```python

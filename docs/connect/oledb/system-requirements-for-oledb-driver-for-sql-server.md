@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 5e509014412bb89995602141d596ff34fa7f3572
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744432"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795859"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のシステム要件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "56744432"
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
 |CLR UDT (> 8 Kb)|varbinary|udt|udt|image|  
-|日付|varchar|日付|日付|Varchar|  
+|date|varchar|date|date|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  

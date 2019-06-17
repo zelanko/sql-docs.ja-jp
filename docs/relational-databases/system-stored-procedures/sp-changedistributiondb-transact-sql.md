@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997048"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (TRANSACT-SQL)
@@ -51,7 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|ディストリビューションの最小保有期間。|  
 |NULL (既定値)|使用可能なすべて*プロパティ*値が出力されます。|  
   
-`[ @value = ] 'value'` 指定したプロパティの新しい値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
+`[ @value = ] 'value'` 指定したプロパティの新しい値です。 *値*は**nvarchar (255)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

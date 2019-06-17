@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774304"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>ログ配布とレプリケーション (SQL Server)
@@ -113,7 +113,7 @@ ms.locfileid: "62774304"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションはクライアント サブスクリプションまたはサーバー サブスクリプション (以前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。 詳細については、「 [データの同期](../../relational-databases/replication/synchronize-data.md)」を参照してください。   
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)   
  [ログ配布について &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-replication-sql-server.md)  

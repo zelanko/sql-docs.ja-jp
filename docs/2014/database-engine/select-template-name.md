@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089801"
 ---
 # <a name="select-template-name"></a>[テンプレート名の選択]
@@ -31,7 +31,7 @@ ms.locfileid: "66089801"
  **テンプレート名**  
  新しいテンプレート名を入力するか、一覧からテンプレート名を選択します。 テンプレートをエクスポートする場合は、一覧からのみテンプレート名を選択できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   

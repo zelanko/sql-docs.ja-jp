@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017589"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -56,13 +56,13 @@ ms.locfileid: "63017589"
   
 4.  ステップを変更するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ -** _<ジョブ名>]_ ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。  
+5.  **[ジョブのプロパティ -** _<ジョブ名>]_ ダイアログ ボックスで、 **[ページの選択]** の **[ステップ]** を選択します。  
   
-6.  クリックして**編集**を開く、**ジョブ ステップのプロパティ -**_job_step_name_  ダイアログ ボックス。 このダイアログ ボックスで使用可能なオプションの詳細については、次を参照してください。[ジョブ ステップのプロパティ。新しいジョブ ステップ&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)と[ジョブ ステップのプロパティ。新しいジョブ ステップ&#40;[詳細] ページ&#41;](job-step-properties-new-job-step-advanced-page.md)します。  
+6.  クリックして**編集**を開く、**ジョブ ステップのプロパティ -** _job_step_name_  ダイアログ ボックス。 このダイアログ ボックスで使用可能なオプションの詳細については、次を参照してください。[ジョブ ステップのプロパティ。新しいジョブ ステップ&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)と[ジョブ ステップのプロパティ。新しいジョブ ステップ&#40;[詳細] ページ&#41;](job-step-properties-new-job-step-advanced-page.md)します。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   
-8.  **ジョブのプロパティ -**_job_name_ダイアログ ボックスで、をクリックして**OK**します。  
+8.  **ジョブのプロパティ -** _job_name_ダイアログ ボックスで、をクリックして**OK**します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

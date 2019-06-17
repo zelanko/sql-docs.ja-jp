@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790661"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On クライアント接続 (SQL Server)
@@ -37,13 +37,13 @@ ms.locfileid: "62790661"
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|はい|[はい]|[はい]|[はい]|はい|  
 |SQL Native Client 11.0 OLEDB|いいえ|はい|[はい]|いいえ|いいえ|  
-|ADO.NET with .NET Framework 4.0 の接続の修正プログラムと**<sup>*</sup>**|はい|[はい]|[はい]|[はい]|はい|  
-|.NET Framework 3.5 sp1 の ADO.NET と接続性に関する修正プログラム **<sup>**</sup>**|はい|[はい]|[はい]|[はい]|はい|  
-|Microsoft JDBC Driver 4.0 for SQL Server|はい|[はい]|[はい]|[はい]|はい|  
+|ADO.NET with .NET Framework 4.0 の接続の修正プログラムと **<sup>*</sup>**|はい|[はい]|[はい]|[はい]|はい|  
+|.NET Framework 3.5 sp1 の ADO.NET と接続性に関する修正プログラム **<sup>** </sup>**|はい|[はい]|[はい]|[はい]|はい|  
+|Microsoft JDBC Driver 4.0 for SQL Server|はい|[はい]|[はい]|[はい]|[はい]|  
   
  **<sup>*</sup>**  ADO .NET with .NET Framework 4.0 用接続の修正プログラムのダウンロード: [ https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)します。  
   
- **<sup>**</sup>* * ADO.NET with .NET Framework 3.5 SP1 用接続の修正プログラムのダウンロード: [ https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)します。  
+ **<sup>** </sup>* * ADO.NET with .NET Framework 3.5 SP1 用接続の修正プログラムのダウンロード: [ https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)します。  
   
 > [!IMPORTANT]  
 >  クライアントは、可用性グループ リスナーに接続するために、TCP 接続文字列を使用する必要があります。  

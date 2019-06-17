@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e111345276fdf2895b7eb4d056b046efe20b32e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740522"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>新しいリレーショナル マイニング構造の作成
@@ -30,7 +30,7 @@ ms.locfileid: "62740522"
   
 3.  **[定義方法の選択]** ページで、 **[既存のリレーショナル データベースまたはデータ ウェアハウスを使用する]** を選択して **[次へ]** をクリックします。  
   
-4.  **[データ マイニング技法の選択]** ページで、使用するデータ マイニング アルゴリズムを選択して、**[次へ]** をクリックします。  
+4.  **[データ マイニング技法の選択]** ページで、使用するデータ マイニング アルゴリズムを選択して、 **[次へ]** をクリックします。  
   
      データ マイニング アルゴリズムの詳細については、「[データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)」をご覧ください。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "62740522"
 9. **[列のコンテンツおよびデータ型の指定]** ページの **[マイニング モデル構造]** では、各列のコンテンツの種類とデータ型を調整できます。  
   
     > [!NOTE]  
-    >  **[検出]** をクリックすると、連続データまたは不連続なデータを含む列を自動的に検出できます。 このボタンをクリックすると、**[コンテンツの種類]** と **[データ型]** 列で、列の内容とデータ型が更新されます。 コンテンツの種類とデータ型の詳細については、「[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)」および「[データ型 (データ マイニング)](../../analysis-services/data-mining/data-types-data-mining.md)」をご覧ください。  
+    >  **[検出]** をクリックすると、連続データまたは不連続なデータを含む列を自動的に検出できます。 このボタンをクリックすると、 **[コンテンツの種類]** と **[データ型]** 列で、列の内容とデータ型が更新されます。 コンテンツの種類とデータ型の詳細については、「[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)」および「[データ型 (データ マイニング)](../../analysis-services/data-mining/data-types-data-mining.md)」をご覧ください。  
   
 10. **[次へ]** をクリックします。  
   
 11. **[ウィザードの完了]** ページで、作成するマイニング構造とそれに関連した初期マイニング モデルの名前を指定し、 **[完了]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

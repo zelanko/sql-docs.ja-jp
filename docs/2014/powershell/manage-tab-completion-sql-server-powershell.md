@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922953"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>タブ補完の管理 (SQL Server PowerShell)
@@ -33,7 +33,7 @@ ms.locfileid: "62922953"
  **$SqlServerMaximumChildItems =** *n*  
  **Get-ChildItem**で表示されるオブジェクトの最大数を指定します。 **n** を超える数のオブジェクトが含まれるパス ノードで *Get-ChildItem* を実行した場合、一覧が *n*件までで切り捨てられます。 *n* は整数です。 既定の設定は 0 で、これは一覧表示されるオブジェクトの数に制限がないことを示します。  
   
- **$SqlServerIncludeSystemObjects =** { **$True** | **$False** }  
+ **$SqlServerIncludeSystemObjects =** { **$True** |  **$False** }  
  **$True**の場合、タブ補完と **Get-ChildItem**でシステム オブジェクトが表示されます。 **$False**の場合、システム オブジェクトは表示されません。 既定の設定は **$False**です。  
   
 ## <a name="set-the-sql-server-tab-completion-variables"></a>SQL Server のタブ補完変数の設定  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62896188"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>スクリプト コンポーネントによる ODBC 変換先の作成
@@ -35,7 +35,7 @@ ms.locfileid: "62896188"
   
 -   マネージド コードから ODBC 接続マネージャーの `AcquireConnection` メソッドを呼び出すことはできません。このメソッドを呼び出すと、ネイティブ オブジェクトが返されます。 そのため、この例では、接続マネージャーの接続文字列を使用して、マネージド ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーで直接データ ソースに接続しています。  
   
--   `OdbcCommand` には、位置パラメーターが必要です。 パラメーターの位置は、コマンドのテキストの疑問符 (?) で示されます  (一方、`SqlCommand` では名前付きパラメーターが必要です)。  
+-   `OdbcCommand` には、位置パラメーターが必要です。 パラメーターの位置は、コマンドのテキストの疑問符 (?) で示されます (一方、`SqlCommand` では名前付きパラメーターが必要です)。  
   
  この例では、**AdventureWorks** サンプル データベースの **Person.Address** テーブルを使用します。 この例では、このテーブルの第 1 列と第 4 列、つまり **int*AddressID*** 列と **nvarchar(30)City** 列をデータ フローに渡します。 「[特定の種類のスクリプト コンポーネントの開発](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」の変換元、変換、および変換先の例でも、同じデータが使用されます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62896188"
   
 3.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。  
   
-4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (ソースは変換せず、先に直接接続できます)。このサンプルを機能させるには、上流コンポーネントの出力に、**AdventureWorks** サンプル データベースの **Person.Address** テーブルにある **AddressID** 列と **City** 列を最低限含める必要があります。  
+4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換を介さずに変換元を直接変換先に接続することもできます)。このサンプルを機能させるには、上流コンポーネントの出力に、**AdventureWorks** サンプル データベースの **Person.Address** テーブルにある **AddressID** 列と **City** 列を最低限含める必要があります。  
   
 5.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 列と **City** 列を選択します。  
   

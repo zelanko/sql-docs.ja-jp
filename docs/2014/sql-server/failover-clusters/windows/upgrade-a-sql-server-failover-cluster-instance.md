@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62913726"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>SQL Server フェールオーバー クラスターのアップグレード
@@ -45,7 +45,7 @@ ms.locfileid: "62913726"
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターのアップグレード  
  非-複数のサブネットに直接アップグレードできません[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバー クラスターを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]マルチ サブネット フェールオーバー クラスター。 詳細については、「[SQL Server フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サポートされているバージョンとエディションのアップグレード](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [SQL Server フェールオーバー クラスター インスタンスのアップグレード&#40;セットアップ&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)   
  [コマンド プロンプトからの SQL Server 2014 のインストール](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  

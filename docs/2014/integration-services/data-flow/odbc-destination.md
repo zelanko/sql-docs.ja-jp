@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771028"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
@@ -52,7 +52,7 @@ ms.locfileid: "62771028"
  また、同一テーブルへの同時読み込みの場合、標準のレコード ロックのためにパフォーマンスが低下することがある点についても理解しておく必要があります。 これは、読み込まれているデータとテーブルの編成によって異なります。  
   
 ## <a name="troubleshooting-the-odbc-destination"></a>ODBC 入力先のトラブルシューティング  
- ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ODBC 入力先による外部データ ソースへのデータ保存に関するトラブルシューティングを行うことができます。 ODBC 入力先による外部データ プロバイダーの呼び出しをログに記録するには、ODBC ドライバー マネージャーによるトレースを有効にします。 詳細については、「 *ODBC で ODBC トレースを生成する方法 (データ ソース管理者向け)*」 の Microsoft のドキュメントを参照してください。  
+ ODBC 入力元による外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、ODBC 入力先による外部データ ソースへのデータ保存に関するトラブルシューティングを行うことができます。 ODBC 入力先による外部データ プロバイダーの呼び出しをログに記録するには、ODBC ドライバー マネージャーによるトレースを有効にします。 詳細については、「 *ODBC で ODBC トレースを生成する方法 (データ ソース管理者向け)* 」 の Microsoft のドキュメントを参照してください。  
   
 ## <a name="configuring-the-odbc-destination"></a>ODBC 入力先の構成  
  ODBC 入力先は、プログラムによって、または SSIS デザイナーを使用して構成できます。  

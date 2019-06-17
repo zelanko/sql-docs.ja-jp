@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306130"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789327"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL Database への接続
 
@@ -77,13 +77,13 @@ shutdown /r /t 1
 
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>接続文字列内の UserId へのサーバー名の追加  
 
-Version 4.0 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に、接続文字列内の UserId にサーバー名を追加する必要がありました。 たとえば、user@servername のようにします。 Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続文字列内の UserId に @servername を追加する必要がなくなりました。  
+Version 4.0 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に、接続文字列内の UserId にサーバー名を追加する必要がありました。 たとえば、user@servername のようになります。 Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続文字列内の UserId に @servername を追加する必要がなくなりました。  
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>暗号化の使用に必要な hostNameInCertificate の設定
 
-7.2 バージョンの前に、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]に接続するときに、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を指定する必要があります**hostNameInCertificate**を指定する場合 **encrypt=true** (この場合、サーバー接続の名前文字列が*shortName*.*domainName*、設定、 **hostNameInCertificate**プロパティを\*.*domainName*。)。 このプロパティは、ドライバーのバージョン 7.2 の時点で省略可能です。
+7\.2 バージョンの前に、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]に接続するときに、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を指定する必要があります**hostNameInCertificate**を指定する場合**暗号化 = true** (この場合、サーバー接続の名前文字列が*shortName*.*domainName*、設定、 **hostNameInCertificate**プロパティを\*.*domainName*。)。 このプロパティは、ドライバーのバージョン 7.2 の時点で省略可能です。
 
-例 :
+例:
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;

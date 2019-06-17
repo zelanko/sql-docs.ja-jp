@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891404"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>手順 3:エラー フロー リダイレクトの追加
@@ -30,7 +30,7 @@ ms.locfileid: "62891404"
   
 ### <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   
-1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。**[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
+1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。 **[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
   
 2.  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスで、 **[変換]** をクリックし、 **[OK]** をクリックします。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62891404"
   
 10. **スクリプト** ページで、いることを確認、`LocaleID`プロパティに設定されて**英語 (米国。**  
   
-11.  **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 `Input0_ProcessInputRow` メソッドに、次のコードを入力するか貼り付けます。  
+11. **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 `Input0_ProcessInputRow` メソッドに、次のコードを入力するか貼り付けます。  
   
      [Visual Basic]  
   

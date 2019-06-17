@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8799a77817b7e01b8c3391a9b2ed06fd6bbd3c0
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744372"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796206"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP をダウンロードする
 
@@ -31,7 +31,7 @@ ms.locfileid: "56744372"
 - [Microsoft SQL Server 用 Drivers 4.3 for PHP](https://www.microsoft.com/download/details.aspx?id=55642)
 - [Microsoft SQL Server 用 Drivers 4.0、3.2、3.1、and 3.0 for PHP](https://www.microsoft.com/download/details.aspx?id=20098)
 
-## <a name="linux-and-macos"></a>Linux および macOS
+## <a name="linux-and-macos"></a>Linux と macOS
 
 PHP 用のドライバーでは、簡単にダウンロードされ、PECL を使用して、Linux と macOS でインストールします。 参照してください、 [Linux と macOS のインストールのチュートリアル](installation-tutorial-linux-mac.md)詳細についてはします。 Linux と macOS での PHP のドライバーを手動でインストールする必要がある場合は、次のバージョンをダウンロードできます。
 
@@ -42,7 +42,7 @@ PHP 用のドライバーでは、簡単にダウンロードされ、PECL を�
 
 ## <a name="see-also"></a>参照
 
-[概要 Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server の概要](getting-started-with-the-php-sql-driver.md)
 
 [Microsoft SQL Server 用 Drivers for PHP のシステム要件](system-requirements-for-the-php-sql-driver.md)
 

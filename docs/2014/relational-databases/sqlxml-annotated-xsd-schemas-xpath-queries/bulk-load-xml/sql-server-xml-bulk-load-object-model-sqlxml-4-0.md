@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013293"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 一括読み込みオブジェクト モデル (SQLXML 4.0)
@@ -68,12 +68,12 @@ ms.locfileid: "66013293"
   
  ConnectionString と ConnectionCommand プロパティを使用する場合、XML 一括読み込みは、最後の指定したプロパティを使用します。  
   
- 既定値は、NULL です。  
+ 既定値は NULL です。  
   
  ConnectionString  
  データベース インスタンスへの接続の確立に必要な情報を提供する OLE DB 接続文字列を指定します。 ConnectionString と ConnectionCommand プロパティを使用する場合、XML 一括読み込みは、最後の指定したプロパティを使用します。  
   
- 既定値は、NULL です。  
+ 既定値は NULL です。  
   
  ErrorLogFile  
  XML 一括読み込みでエラーとメッセージを記録するログ ファイル名を指定します。 既定値は空文字列で、この場合ログは記録されません。  

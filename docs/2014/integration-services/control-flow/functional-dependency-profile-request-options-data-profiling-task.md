@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cab0f3edc080e6f2f174e3393548620c65f9176
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831548"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>[機能依存プロファイル要求] のオプション (データ プロファイル タスク)
@@ -44,7 +44,7 @@ ms.locfileid: "62831548"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[機能依存プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]**( **[DeterminantColumns]** オプション、 **[DependentColumn]** オプションなど)  
+-   **[データ]** ( **[DeterminantColumns]** オプション、 **[DependentColumn]** オプションなど)  
   
 -   **全般**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62831548"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -119,7 +119,7 @@ ms.locfileid: "62831548"
  **[MaxNumberOfViolations]**  
  出力で報告する機能依存違反の最大数を指定します。 このプロパティの既定値は 100 です。 **[ThresholdSetting]** で **[Exact]** が選択されている場合、このオプションは無効です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
  [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
   

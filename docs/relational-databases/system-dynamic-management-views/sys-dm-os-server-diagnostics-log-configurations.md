@@ -23,10 +23,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9a3e03058b42e256991a525a70d6c1fe57e061e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62939680"
 ---
 # <a name="sysdmosserverdiagnosticslogconfigurations"></a>sys.dm_os_server_diagnostics_log_configurations
@@ -37,7 +37,7 @@ ms.locfileid: "62939680"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |is_enabled|**bit**|ログ記録がオンまたはオフになっているかどうかを示します。<br /><br /> 1 = 診断ログはオンです。<br /><br /> 0 = 診断ログを無効に|  
-|max_size|**int**|各診断ログを拡張できるメガバイト単位で最大サイズ。 既定では 100 MB です。|  
+|max_size|**int**|各診断ログを拡張できるメガバイト単位で最大サイズ。 既定値は 100 MB です。|  
 |max_files|**int**|新しい診断ログの再利用される前に、コンピューターに格納できる診断のログ ファイルの最大数。|  
 |path|**nvarchar(260)**|診断ログの場所を示すパス。 既定の場所は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのインストール フォルダー内の \<\MSSQL\Log> です。|  
   
@@ -58,7 +58,7 @@ FROM sys.dm_os_server_diagnostics_log_configurations;
 |-----------------|----------|---------------|----------------|  
 |1|\<C:\Program Files\Microsoft SQL Server\MSSQL13\MSSQL\Log>|10|10|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フェールオーバー クラスター インスタンスの診断ログを表示して読む方法](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
   
   

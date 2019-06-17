@@ -1,17 +1,17 @@
 ---
 title: srv_alloc (拡張ストアド プロシージャ API) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-api_name:
+apiname:
 - srv_alloc
-api_location:
+apilocation:
 - opends60.dll
-topic_type:
-- apiref
+apitype: DLLExport
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,13 +21,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8677bb878094bf2345f00b7c6838a43b653faac6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62939642"
 ---
 # <a name="srvalloc-extended-stored-procedure-api"></a>srv_alloc (拡張ストアド プロシージャ API)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
@@ -41,7 +42,6 @@ ms.locfileid: "62939642"
 void * srv_alloc ( DBINT  
 size  
 );  
-  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -55,6 +55,6 @@ size
  **srv_alloc** 関数は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows API の **GlobalAlloc** 関数に相当します。 拡張ストアド プロシージャ API アプリケーションでは、通常の Windows API C ランタイムのメモリ管理関数を使用できます。  
   
 > [!IMPORTANT]  
->  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
+>  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)をご覧ください。  
   
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760240"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (TRANSACT-SQL)
@@ -58,7 +58,7 @@ ms.locfileid: "62760240"
 |データ型を修正、 **collection_package_path**列、値が null 許容であることを示す説明を更新します。|  
 |データ型を修正、 **upload_package_path**列、値が null 許容であることを示す説明を更新します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  

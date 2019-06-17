@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740382"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>行フィルターを使用した動的なセキュリティの実装
@@ -28,7 +28,7 @@ ms.locfileid: "62740382"
   
  このレッスンを完了するまでに時間を推定するには。**30 分**  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この補足のレッスンのトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 この補足のレッスンの作業を実行する前に、前のレッスンをすべて完了している必要があります。  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>AW Internet Sales Tabular Model プロジェクトへの dimSalesTerritory テーブルの追加  
@@ -56,7 +56,7 @@ ms.locfileid: "62740382"
   
      新しいテーブルがモデル ワークスペースに追加されます。 ソースの dimSalesTerritory テーブルのオブジェクトおよびデータが AW Internet Sales Tabular Model の新しい Sales Territory テーブルにインポートされます。  
   
-9. テーブルのインポートが完了したら、**[閉じる]** をクリックします。  
+9. テーブルのインポートが完了したら、 **[閉じる]** をクリックします。  
   
 ## <a name="give-the-columns-friendly-names"></a>列の表示名の指定  
  この作業では表示名を指定して、Sales Territory テーブルの列の名前を変更します。 テーブルや列の表示名の指定は必ずしも必要ではありません。ただし、名前を変更することで、モデル デザイナー内のモデル プロジェクトでも、またクライアント アプリケーションのフィールド リストでユーザーがモデル オブジェクトやデータを参照する際にも、移動が行いやすくなります。  
@@ -96,7 +96,7 @@ ms.locfileid: "62740382"
   
 5.  ワークシートで、従業員データを含むすべてのセルをヘッダーと共に選択し、選択したデータを右クリックし、 **[コピー]** をクリックします。  
   
-6.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[編集]** メニューをクリックし、**[貼り付け]** をクリックします。  
+6.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[編集]** メニューをクリックし、 **[貼り付け]** をクリックします。  
   
      [貼り付け] がグレー表示されている場合は、モデル デザイナー ウィンドウの任意のテーブルの任意の列をクリックし、 **[編集]** メニューの **[貼り付け]** をクリックします。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62740382"
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory ユーザー ロールを作成するには  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[モデル]** メニューをクリックし、**[ロール]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[モデル]** メニューをクリックし、 **[ロール]** をクリックします。  
   
 2.  **[ロール マネージャー]** ダイアログ ボックスで **[新規]** をクリックします。  
   
@@ -144,9 +144,9 @@ ms.locfileid: "62740382"
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、 **[読み取り]** 権限を選択します。  
   
-5.  **[メンバー]** タブをクリックし、**[追加]** をクリックします。  
+5.  **[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
   
-6.  **[ユーザーまたはグループの選択]** ダイアログ ボックスの **[選択するオブジェクト名を入力してください]** に、Employee Security テーブルの作成で使用した最初のサンプル ユーザー名を入力します。 **[名前の確認]** をクリックしてユーザー名が有効であることを確認し、**[OK]** をクリックします。  
+6.  **[ユーザーまたはグループの選択]** ダイアログ ボックスの **[選択するオブジェクト名を入力してください]** に、Employee Security テーブルの作成で使用した最初のサンプル ユーザー名を入力します。 **[名前の確認]** をクリックしてユーザー名が有効であることを確認し、 **[OK]** をクリックします。  
   
      この手順を繰り返して、Employee Security テーブルの作成で使用した他のサンプル ユーザー名を追加します。  
   
@@ -177,13 +177,13 @@ ms.locfileid: "62740382"
   
 #### <a name="to-test-the-sales-employees-by-territory-user-role"></a>Sales Employees by Territory ユーザー ロールをテストするには  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、**[モデル]** メニューの **[Excel で分析]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[モデル]** メニューの **[Excel で分析]** をクリックします。  
   
 2.  **[Excel で分析]** ダイアログ ボックスの **[モデルへの接続に使用するユーザー名またはロールの指定]** で、 **[その他の Windows ユーザー]** をクリックし、 **[参照]** をクリックします。  
   
 3.  **[ユーザーまたはグループの選択]** ダイアログ ボックスの **[選択するオブジェクト名を入力してください]** に、Employee テーブルに追加したいずれかのユーザー名を入力し、 **[名前の確認]** をクリックします。  
   
-4.  **[OK]** をクリックして **[ユーザーまたはグループの選択]** ダイアログ ボックスを閉じ、**[OK]** をクリックして **[Excel で分析]** ダイアログ ボックスを閉じます。  
+4.  **[OK]** をクリックして **[ユーザーまたはグループの選択]** ダイアログ ボックスを閉じ、 **[OK]** をクリックして **[Excel で分析]** ダイアログ ボックスを閉じます。  
   
      Excel で新しいブックが開きます。 ピボット テーブルが自動的に作成されます。 [ピボットテーブルのフィールド リスト] には、新しいモデルで使用できるほとんどのデータ フィールドが表示されます。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "62740382"
   
      このユーザーは、自分が属する区域以外の区域のインターネット販売データを参照したり、クエリを実行することはできません。これは、Sales Employees by Territory ユーザー ロールで Sales Territory テーブルに定義された行フィルターによって、他の販売区域に関連するすべてのデータが効果的に保護されているためです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
  [LOOKUPVALUE 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
  [CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  

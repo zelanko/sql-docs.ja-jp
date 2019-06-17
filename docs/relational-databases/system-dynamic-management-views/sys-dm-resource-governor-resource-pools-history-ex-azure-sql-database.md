@@ -22,10 +22,10 @@ ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: d585f1f1245457aa9051f25bca696cf4495d93ed
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66743923"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (TRANSACT-SQL)
@@ -133,7 +133,7 @@ select snapshot_time, name, cap_vcores_used_percent,
     from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [翻訳ログ レートのガバナンス](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [エラスティック プール DTU のリソース制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)

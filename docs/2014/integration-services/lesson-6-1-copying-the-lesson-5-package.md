@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62890758"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>手順 1:レッスン 5 のパッケージのコピー
@@ -48,7 +48,7 @@ ms.locfileid: "62890758"
   
 3.  [既存のパッケージのコピーを追加] ダイアログ ボックスの [パッケージの場所] で、[ファイル システム] をクリックします。  
   
-4.  参照ボタン ([...]) をクリックし、コンピューター上の Lesson 5.dtsx に移動して、**[開く]** をクリックします。  
+4.  参照ボタン ([...]) をクリックし、コンピューター上の Lesson 5.dtsx に移動して、 **[開く]** をクリックします。  
   
      このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   

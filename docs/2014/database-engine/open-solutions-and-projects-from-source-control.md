@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774782"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>ソース管理からソリューションやプロジェクトを開く方法
@@ -32,7 +32,7 @@ ms.locfileid: "62774782"
 |[ソース管理からソリューションを開く](../../2014/database-engine/open-solutions-from-source-control.md)|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境を使用してソリューションをソース管理から直接開く方法を説明しています。|  
 |[ソース管理からプロジェクトを開く](../../2014/database-engine/open-projects-from-source-control.md)|プロジェクトのファイルをチェックアウトして変更できるようにするため、ソース管理からプロジェクトを開く方法を説明しています。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理へのソリューションとプロジェクトの追加](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

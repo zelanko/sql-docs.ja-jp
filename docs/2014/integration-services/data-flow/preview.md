@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0b0f81c5de267d6e85525714d19999920ba9c71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770968"
 ---
 # <a name="preview"></a>[プレビュー]
@@ -51,7 +51,7 @@ ms.locfileid: "62770968"
   
  このダイアログ ボックスに他のオプションはありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SAP BW ソース エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   

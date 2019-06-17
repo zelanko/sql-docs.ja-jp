@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768415"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
@@ -200,10 +200,10 @@ To open Help, press F1.
  スクリプト タスク プロジェクトには、既定の `ScriptMain` アイテム以外のアイテムを格納できます。 プロジェクトには、クラス、モジュール、およびコード ファイルを追加できます。 また、フォルダーを使用してアイテムのグループを整理できます。 追加したすべてのアイテムは、パッケージ内部に保存されます。  
   
 ### <a name="references-in-the-script-task-project"></a>スクリプト タスク プロジェクトの参照  
- 参照をマネージド アセンブリに追加するには、**[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、**[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
+ 参照をマネージド アセンブリに追加するには、 **[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、 **[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
   
 > [!NOTE]  
->  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、**[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
+>  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、 **[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>スクリプト タスク内でのパッケージとの対話  
  スクリプト タスクは、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのインスタンスであるグローバル オブジェクト `Dts`、およびそのメンバーを使用して、内部のパッケージや [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムとやり取りします。  
@@ -247,7 +247,7 @@ To open Help, press F1.
   
 ![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] が提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スクリプティング ソリューションでの他のアセンブリの参照](../referencing-other-assemblies-in-scripting-solutions.md)   
  [スクリプト タスク エディターでのスクリプト タスクの構成](configuring-the-script-task-in-the-script-task-editor.md)  
   

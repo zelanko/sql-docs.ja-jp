@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38734544ac3accb3ddfdbcae8ae92f67b252e54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805856"
 ---
 # <a name="error-messages"></a>エラー メッセージ
@@ -40,7 +40,7 @@ ms.locfileid: "62805856"
  [Microsoft][SQL Server Native Client][[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
  このヘッダーに関連するエラーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で発生しています。 エラー メッセージの残りの部分は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー メッセージのテキストです。 *PfNative*これらのエラーと共に返されるコードはエラー番号から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 によって返されるエラー メッセージ (および番号) の一覧の詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、説明とエラー列の表示、 **sysmessages**システム テーブルに、**マスター**データベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとメッセージの処理](handling-errors-and-messages.md)  
   
   

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62902448"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
@@ -222,7 +222,7 @@ ms.locfileid: "62902448"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
-|DT_CY|smallmoney、money|smallmoney、money|通貨||||  
+|DT_CY|smallmoney、money|smallmoney、money|Currency||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||日付|日付|日付|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
@@ -238,7 +238,7 @@ ms.locfileid: "62902448"
 |DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|10 進数|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|REAL|REAL|単一||real|real|  
+|DT_R4|REAL|REAL|Single||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
@@ -255,7 +255,7 @@ ms.locfileid: "62902448"
 ## <a name="related-content"></a>関連コンテンツ  
  blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://go.microsoft.com/fwlink/?LinkId=220823)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー内のデータ](data-in-data-flows.md)  
   
   

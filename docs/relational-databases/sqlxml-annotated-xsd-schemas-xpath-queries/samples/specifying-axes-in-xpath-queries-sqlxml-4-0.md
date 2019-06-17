@@ -21,10 +21,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 820542c25947157b9e062608f1134e4bdeaa702a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737692"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
@@ -93,7 +93,7 @@ ms.locfileid: "62737692"
 /child::Customer/child::Order  
 ```  
   
- クエリで`child`は、軸と`Customer`と`Order`はノード テストです (顧客と注文がある場合、これらのノード テストは TRUE **\<要素 >** ノード、ため、  **\<要素 >** ノードは、プライマリ ノードの**子**軸) です。 一致する各ノードに対して**\<顧客 >**、一致するノード**\<注文 >** 結果に追加されます。 のみ**\<順序 >** が結果セットに返されます。  
+ クエリで`child`は、軸と`Customer`と`Order`はノード テストです (顧客と注文がある場合、これらのノード テストは TRUE **\<要素 >** ノード、ため、  **\<要素 >** ノードは、プライマリ ノードの**子**軸) です。 一致する各ノードに対して **\<顧客 >** 、一致するノード **\<注文 >** 結果に追加されます。 のみ **\<順序 >** が結果セットに返されます。  
   
  **子**軸は既定値。 そのため、クエリは、として指定できます。  
   
@@ -162,10 +162,10 @@ ms.locfileid: "62737692"
 </ROOT>  
 ```  
   
- XPath クエリが指定されている場合`Customer/Order/OrderDetail`、一致する各ノードから**\<顧客 >** に移動する、クエリ、 **\<順序 >** 要素。 一致する各ノードに対して**\<順序 >**、クエリには、ノードが追加されます **\<OrderDetail >** 結果にします。 のみ **\<OrderDetail >** が結果セットに返されます。  
+ XPath クエリが指定されている場合`Customer/Order/OrderDetail`、一致する各ノードから **\<顧客 >** に移動する、クエリ、 **\<順序 >** 要素。 一致する各ノードに対して **\<順序 >** 、クエリには、ノードが追加されます **\<OrderDetail >** 結果にします。 のみ **\<OrderDetail >** が結果セットに返されます。  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して  parent 軸を指定する  
- 次のクエリでは、すべてを取得、 **\<順序 >** 要素の親が**\<顧客 >** を持つ要素を**CustomerID**属性1 の値。 クエリを使用して、**子**の親を検索する述語内の軸、 **\<順序 >** 要素。  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して parent 軸を指定する  
+ 次のクエリでは、すべてを取得、 **\<順序 >** 要素の親が **\<顧客 >** を持つ要素を**CustomerID**属性1 の値。 クエリを使用して、**子**の親を検索する述語内の軸、 **\<順序 >** 要素。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -184,7 +184,7 @@ ms.locfileid: "62737692"
 ```  
   
 > [!NOTE]  
->  XPath クエリ`/Order[../@CustomerID="1"]`の親が存在しないため、エラーが返されます**\<順序 >** します。 含まれているマッピング スキーマ内の要素である可能性がありますが**\<順序 >**、XPath ですこれらのいずれかで開始していないその結果、 **\<順序 >** と見なされます、。ドキュメントの最上位の要素の型。  
+>  XPath クエリ`/Order[../@CustomerID="1"]`の親が存在しないため、エラーが返されます **\<順序 >** します。 含まれているマッピング スキーマ内の要素である可能性がありますが **\<順序 >** 、XPath ですこれらのいずれかで開始していないその結果、 **\<順序 >** と見なされます、。ドキュメントの最上位の要素の型。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   

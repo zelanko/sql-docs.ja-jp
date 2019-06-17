@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62926692"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
@@ -102,7 +102,7 @@ ms.locfileid: "62926692"
 ## <a name="debug-windows"></a>デバッグ ウィンドウ  
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] には、ブレークポイントの処理、およびブレークポイントが含まれるパッケージのデバッグに使用できる多数のウィンドウがあります。 各ウィンドウの詳細については、ウィンドウを開いて F1 キーを押し、目的のウィンドウのヘルプを参照してください。  
   
- [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]** をポイントします。次に、 **[ブレークポイント]**、 **[出力]**、または **[イミディエイト]** をクリックします。  
+ [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]** をポイントします。次に、 **[ブレークポイント]** 、 **[出力]** 、または **[イミディエイト]** をクリックします。  
   
  次の表は、各ウィンドウについて説明しています。  
   

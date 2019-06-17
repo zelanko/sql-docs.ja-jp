@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792005"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>フェールオーバー クラスタリングと AlwaysOn 可用性グループ (SQL Server)
@@ -76,7 +76,7 @@ ms.locfileid: "62792005"
  **可用性グループのフェールオーバー ポリシー設定は、スタンドアロン インスタンスと FCI インスタンスのどちらでホストされているかに関係なく、すべてのレプリカに適用されます。  
   
 > [!NOTE]  
->  詳細については**ノード数**フェールオーバー クラスタ リング内と**AlwaysOn 可用性グループ**の各エディションの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[でサポートされる機能、SQL Server 2012 の各エディション](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473)します。  
+>  詳細については**ノード数**フェールオーバー クラスタ リング内と**AlwaysOn 可用性グループ**の各エディションの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を参照してください[でサポートされる機能、SQL Server 2012 の各エディション](https://go.microsoft.com/fwlink/?linkid=232473)(https://go.microsoft.com/fwlink/?linkid=232473) します。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI で可用性レプリカをホストする場合の考慮事項  
   

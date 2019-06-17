@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780699"
 ---
 # <a name="program-exception-message-box"></a>例外メッセージ ボックスのプログラミング
@@ -99,7 +99,7 @@ ms.locfileid: "62780699"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo> -表示**はい**と**なし**ボタン。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -表示 **[はい]**、**いいえ**と**キャンセル**ボタン。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -表示 **[はい]** 、**いいえ**と**キャンセル**ボタン。  
   
 5.  (省略可) カスタム ボタンを使用する場合は、<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> メソッドのオーバーロードの 1 つを呼び出し、最多で 5 つのカスタム ボタンのテキストを指定します。  
   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: 998b07cdd8bbe2e01d2b550526b900e254b933e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66788003"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS の参照データ サービス
@@ -35,11 +35,11 @@ ms.locfileid: "66788003"
 -   Windows Azure Marketplace から、またはサード パーティ参照データ プロバイダーから直接、参照データを使用することができます。  
   
 ##  <a name="Marketplace"></a> Windows Azure Marketplace から参照データを使用する  
- DQS では、Windows Azure Marketplace の参照データを使用して、Marketplace を通じたコンテンツ プロバイダーからの参照データ サービスの提供を有効化することができます。 Marketplace は、高品質データおよびアプリケーションの単一のマーケットプレイスと配信チャネルをクラウド サービスとして提供するマイクロソフトのサービスです。 Marketplace の詳細については、次を参照してください。 [Microsoft Azure Marketplace について](https://azuremarketplace.microsoft.com/about)(https://azuremarketplace.microsoft.com/about)します。
+ DQS では、Windows Azure Marketplace の参照データを使用して、Marketplace を通じたコンテンツ プロバイダーからの参照データ サービスの提供を有効化することができます。 Marketplace は、高品質データおよびアプリケーションの単一のマーケットプレイスと配信チャネルをクラウド サービスとして提供するマイクロソフトのサービスです。 Marketplace の詳細については、次を参照してください。 [Microsoft Azure Marketplace について](https://azuremarketplace.microsoft.com/about)(https://azuremarketplace.microsoft.com/about) します。
   
  Marketplace と DQS のシームレスな統合により、DQS 内からのデータ品質プロジェクトに関する情報の検出、検索、および取得に関連付けられている手順が簡素化されます。 このデータは DQS から使用され、DQS ユーザーはこのデータを使用して DQS、Marketplace、および参照データ サービス プロバイダーを革新的な方法で 1 つにまとめて、データの品質を高めることができます。  
   
- DQS でクレンジング アクティビティに Marketplace の参照データを使用するには、Marketplace アカウント キーが必要です。 Marketplace アカウント キーの作成は無料です。有料のデータセットをサブスクライブする場合にのみ料金がかかります。 無料のデータセットのサブスクライブと使用には料金はかかりません。 Marketplace のアカウント キーの作成方法の詳細については、[アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=212936)に関するページ (https://go.microsoft.com/fwlink/?LinkId=212936)) を参照してください。  
+ DQS でクレンジング アクティビティに Marketplace の参照データを使用するには、Marketplace アカウント キーが必要です。 Marketplace アカウント キーの作成は無料です。有料のデータセットをサブスクライブする場合にのみ料金がかかります。 無料のデータセットのサブスクライブと使用には料金はかかりません。 Marketplace のアカウント キーの作成方法の詳細については、[アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=212936)に関するページ (https://go.microsoft.com/fwlink/?LinkId=212936) ) を参照してください。  
   
  また、DQS 内から次の Marketplace アクティビティを実行できます。  
   

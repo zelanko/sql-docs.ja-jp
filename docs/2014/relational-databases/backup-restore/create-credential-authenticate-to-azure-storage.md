@@ -1,27 +1,25 @@
 ---
 title: 資格情報の作成- Azure ストレージに対する認証 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.backuptourl.createcred.f1
+- sql12.swb.backuptourl.createcred.f1
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2c5428611c67315407ed31478fbb60ccca1b6dd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921872"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>資格情報の作成- Azure ストレージに対する認証
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[Backup To URL - 資格情報の作成]** ダイアログ ボックスを使用すると、新しい SQL 資格情報を作成できます。  
   
  このダイアログ ボックスを使用して資格情報を作成する場合、サブスクリプションとストレージ アカウント情報を検証するために、ローカル証明書ストアに追加した Windows Azure 管理証明書、またはコンピューターにダウンロードした公開プロファイルを指定する必要があります。  

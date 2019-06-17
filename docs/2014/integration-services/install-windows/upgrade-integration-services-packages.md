@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768998"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services パッケージのアップグレード
@@ -81,14 +81,14 @@ ms.locfileid: "62768998"
   
 -   DTExecUI.exe.config  
   
- 使用する[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を含むパッケージのデザインを[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]と[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]にある devenv.exe.config ファイルを変更する必要があるカスタム コンポーネントは、 *\<ドライブ >*: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE します。  
+ 使用する[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]を含むパッケージのデザインを[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]と[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]にある devenv.exe.config ファイルを変更する必要があるカスタム コンポーネントは、 *\<ドライブ >* : \Program Files\Microsoft Visual Studio 10.0\Common7\IDE します。  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のランタイムで構築された顧客アプリケーションでこれらのパッケージを使用するには、実行可能ファイルに対応する *.exe.config ファイルの configuration セクションにリダイレクト ルールを含めます。 これらのルールにより、ランタイム アセンブリが Version 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) にリダイレクトされます。 アセンブリ バージョン リダイレクトについて詳しくは、「[\<runtime> の \<assemblyBinding> 要素](https://msdn.microsoft.com/library/twy1dw1e.aspx)」をご覧ください。  
   
 ### <a name="locating-the-assemblies"></a>アセンブリの場所  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 \<*ドライブ*>:\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
   
- 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは *\<ドライブ>*:\Program Files\Microsoft SQL Server\100\SDK\Assemblies にあります。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは *\<ドライブ>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies にあります。  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>SQL Server パッケージのアップグレード結果について  
  パッケージのアップグレード プロセス中に、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージ内のほとんどのコンポーネントと機能が、現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対応するコンポーネントと機能にシームレスに変換されます。 ただし、いくつかのコンポーネントと機能については、アップグレードされないか、アップグレード結果に注意が必要です。 それらのコンポーネントと機能を次の表に示します。  
@@ -98,7 +98,7 @@ ms.locfileid: "62768998"
   
 |コンポーネントまたは機能|アップグレード結果|  
 |--------------------------|---------------------|  
-|接続文字列|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージでは、特定のプロバイダーの名前が変更されているため、接続文字列の値を変更する必要があります。 接続文字列を更新するには、次のいずれかの手順を実行します。<br /><br /> [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してパッケージをアップグレードし、**[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[オプション] ダイアログ ボックスの [全般] ページにある **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。 このオプションの詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開き、ConnectionString プロパティのテキストを手動で変更します。<br /><br /> 注:前の手順を使用して、構成ファイルまたはデータ ソース ファイルでは、いずれかで接続文字列が格納されている場合、または式を設定すると接続文字列を更新することはできません、`ConnectionString`プロパティ。 このような場合に接続文字列を更新するには、ファイルまたは式を手動で更新する必要があります。<br /><br /> 使用できるデータ ソースの詳細については、「[データ ソース](../connection-manager/data-sources.md)」を参照してください。|  
+|接続文字列|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージでは、特定のプロバイダーの名前が変更されているため、接続文字列の値を変更する必要があります。 接続文字列を更新するには、次のいずれかの手順を実行します。<br /><br /> [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ アップグレード ウィザードを使用してパッケージをアップグレードし、 **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[オプション] ダイアログ ボックスの [全般] ページにある **[新しいプロバイダー名を使用した接続文字列に更新する]** オプションを選択します。 このオプションの詳細については、「 [General Page](../general-page-of-integration-services-designers-options.md)」を参照してください。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開き、ConnectionString プロパティのテキストを手動で変更します。<br /><br /> 注:前の手順を使用して、構成ファイルまたはデータ ソース ファイルでは、いずれかで接続文字列が格納されている場合、または式を設定すると接続文字列を更新することはできません、`ConnectionString`プロパティ。 このような場合に接続文字列を更新するには、ファイルまたは式を手動で更新する必要があります。<br /><br /> 使用できるデータ ソースの詳細については、「[データ ソース](../connection-manager/data-sources.md)」を参照してください。|  
 |参照変換|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]パッケージ、アップグレード プロセスに自動的にアップグレード参照変換の現在のリリース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 ただし、現在のリリースのこのコンポーネントには、それ以外にも利用できる機能がいくつか追加されています。<br /><br /> 詳細については、「 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)」を参照してください。|  
 |スクリプト タスクとスクリプト コンポーネント|スクリプト タスクおよびスクリプト コンポーネント内のスクリプトは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] パッケージのアップグレード プロセスで VSA から VSTA に自動的に移行されます。<br /><br /> 移行前に必要となる可能性があるスクリプトへの変更やスクリプトの変換エラーに関する詳細については、「[VSTA へのスクリプトの移行](../../sql-server/install/migrate-scripts-to-vsta.md)」を参照してください。|  
   

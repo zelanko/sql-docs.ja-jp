@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d0a12d7fad2deb138d2dac445492ffce55f1493a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62911295"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>新規の OLAP マイニング構造の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードを使用して、多次元モデルのデータを使用するマイニング構造を作成できます。 OLAP キューブに基づくマイニング モデルでは、ファクト テーブルの列と値、ディメンション、およびメジャー グループを分析の属性として使用できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードを使用して、多次元モデルのデータを使用するマイニング構造を作成できます。 OLAP キューブに基づくマイニング モデルでは、ファクト テーブルの列と値、ディメンション、およびメジャー グループを分析の属性として使用できます。  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>新規の OLAP マイニング構造を作成するには  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62911295"
   
 4.  **[データ マイニング構造の作成]** ページで、マイニング構造のみを作成するか、マイニング構造および関連するマイニング モデルを 1 つ作成するかを決定します。 一般には、必要な列を含めるよう求めるプロンプトが表示されるように、マイニング モデルを同時に作成する方が簡単です。  
   
-     マイニング モデルを作成する場合は、使用するデータ マイニング アルゴリズムを選択して、**[次へ]** をクリックします。 アルゴリズムの選択方法の詳細については、「[データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。  
+     マイニング モデルを作成する場合は、使用するデータ マイニング アルゴリズムを選択して、 **[次へ]** をクリックします。 アルゴリズムの選択方法の詳細については、「[データ マイニング アルゴリズム (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。  
   
 5.  **[ソース キューブ ディメンションの選択]** ページの **[ソース キューブ ディメンションの選択]** で、ケース データの大半を含むディメンションを探します。  
   

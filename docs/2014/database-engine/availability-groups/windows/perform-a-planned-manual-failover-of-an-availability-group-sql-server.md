@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789343"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "62789343"
   
 2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
-3.  フェールオーバーする [可用性グループ] ノードを右クリックし、**[フェールオーバー]** を選択します。  
+3.  フェールオーバーする [可用性グループ] ノードを右クリックし、 **[フェールオーバー]** を選択します。  
   
 4.  可用性グループのフェールオーバー ウィザードが起動します。 詳細については、「[可用性グループのフェールオーバー ウィザードの使用 &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)」を参照してください。  
   

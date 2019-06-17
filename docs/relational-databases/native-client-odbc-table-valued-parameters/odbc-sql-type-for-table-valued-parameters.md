@@ -15,10 +15,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de2c1a2b101775a3a7e97ecd4d89e32aefc4d3c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738488"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>テーブル値パラメーター用の ODBC SQL 型
@@ -44,7 +44,7 @@ ms.locfileid: "62738488"
   
  テーブル値パラメーター列に SQL_DEFAULT_PARAM を使用できない*StrLen_or_IndPtr*テーブル値パラメーターの行ごとの既定値はサポートされていません。 代わりに、アプリケーションで列の属性 SQL_CA_SS_COL_HAS_DEFAULT_VALUE を 1 に設定できます。 つまり、この列にすべての行の既定値が含まれます。 場合*StrLen_or_IndPtr*設定を SQL_DEFAULT_PARAM SQLExecute、SQLExecDirect または SQL_ERROR を返し、診断レコードは、sqlstate ステートメントに追加されます = HY090 と"無効な文字列長またはバッファー長"のメッセージ。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

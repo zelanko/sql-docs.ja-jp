@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875631"
 ---
 # <a name="restore-database-options-page"></a>[データベースの復元] \([オプション] ページ)
@@ -108,7 +108,7 @@ ms.locfileid: "62875631"
   
 -   次のバックアップが完全バックアップまたは差分バックアップの場合は、 **[データベースの復元]** タスクを再度使用します。  
   
--   次のバックアップがファイル バックアップの場合は、**[ファイルおよびファイル グループの復元]** タスクを使用します。 詳細については、「[ファイルとファイル グループの復元 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)」を参照してください。  
+-   次のバックアップがファイル バックアップの場合は、 **[ファイルおよびファイル グループの復元]** タスクを使用します。 詳細については、「[ファイルとファイル グループの復元 &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)」を参照してください。  
   
 -   次のバックアップがログ バックアップの場合は、 **[トランザクション ログの復元]** タスクを使用します。 トランザクション ログの復元による復元シーケンスの再開については、「 [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)」を参照してください。  
   

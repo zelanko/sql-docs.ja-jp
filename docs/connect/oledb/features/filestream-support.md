@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: afc794e19ecc93f7275427760df78004a0f1fb13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: ebaaf0da2a051106b690f80d4524e675358450c4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211551"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777784"
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "53211551"
 
 FILESTREAM を使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を経由するか、Windows ファイル システムに直接アクセスすることで、大きなバイナリ値の格納やアクセスが可能になります。 大きなバイナリ値とは、2 ギガバイト (GB) よりも大きい値です。 強化された FILESTREAM のサポートの詳細については、次を参照してください。 [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)します。  
   
-データベース接続を開くと、**@@TEXTSIZE** が既定で -1 (無制限) に設定されます。  
+データベース接続を開くと、 **@@TEXTSIZE** が既定で -1 (無制限) に設定されます。  
   
 Windows ファイル システムの API を使用して、FILESTREAM 列にアクセスし、更新することもできます。  
   
@@ -55,7 +55,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下位互換性  
-SQL server、OLE DB Driver を使用してコンパイルしたクライアントと、アプリケーションに接続する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])、し**varbinary (max)** 動作と互換性のある動作導入された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client に[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]します。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。 
+SQL server、OLE DB Driver を使用してコンパイルしたクライアントと、アプリケーションに接続する場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])、し**varbinary (max)** 動作と互換性のある動作導入された[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client に[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]します。 返されるデータの最大サイズが 2 GB に制限されます。 戻り値が 2 GB より大きい場合は切り捨てが行われ、"文字列データの右側が切り捨てられました" という警告が返されます。 
   
 データ型の互換性が 80 に設定されている場合は、クライアントの動作で下位クライアントとの互換性が維持されます。  
   

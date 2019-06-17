@@ -3,24 +3,24 @@ title: 新しい Python 言語のパッケージの SQL Server Machine Learning 
 description: SQL Server 2017 の Machine Learning Services (In-database)、および Machine Learning Server (スタンドアロン) するには、新しい Python パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510299"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140718"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server に新しい Python パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server 2017 Machine Learning Services のインスタンスに新しい Python パッケージをインストールする方法について説明します。 一般に、新しいパッケージをインストールするプロセスは、標準的な Python 環境のと似ています。 ただし、サーバーには、インターネット接続がない場合は、追加の手順が必要です。
 
-パッケージの場所とインストール パスの詳細については、[パッケージ情報を取得する R または Python](../r/determine-which-packages-are-installed-on-sql-server.md)を参照してください。
+パッケージの場所とインストール パスの詳細については、次を参照してください。[パッケージ情報を取得する R または Python](../package-management/installed-package-information.md)します。
 
 ## <a name="prerequisites"></a>前提条件
 

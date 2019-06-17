@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892660"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
@@ -1243,7 +1243,7 @@ ms.locfileid: "62892660"
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|取得した接続にアクセスできません。|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|列数が正しくありません。|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|列 "%1" がデータ ソースに見つかりません。|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|OLE DB レコードを使用できます。  ソース: "%1"  Hresult: 0x%2!8.8X!   説明: "%3"。|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|OLE DB レコードを使用できます。  ソース: "%1"  Hresult: 0x%2!8.8X!  説明: "%3"。|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS エラー コード DTS_E_OLEDBERROR。  OLE DB エラーが発生しました。 エラー コード:0x%1!8.8X!。|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|コンポーネントの接続は完了しています。 コンポーネントに接続する前に、接続を切断する必要があります。|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|プロパティ "%1" の値が正しくありません。|  

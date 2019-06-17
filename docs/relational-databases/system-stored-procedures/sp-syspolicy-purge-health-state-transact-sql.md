@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000791"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (TRANSACT-SQL)
@@ -40,7 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 正常性状態をクリアするオブジェクト エクスプ ローラーでノードを表します。 *target_tree_root_with_id* is **nvarchar(400)**, with a default of NULL.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 正常性状態をクリアするオブジェクト エクスプ ローラーでノードを表します。 *target_tree_root_with_id* is **nvarchar(400)** , with a default of NULL.  
   
  msdb.dbo.syspolicy_system_health_state システム ビューの target_query_expression_with_id 列から値を指定できます。  
   

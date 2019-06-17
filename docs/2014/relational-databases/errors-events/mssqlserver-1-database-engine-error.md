@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc558a0a0f5b8bd05f2ff461cc45a73aafa6da23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916399"
 ---
 # <a name="mssqlserver-1"></a>MSSQLSERVER_-1
@@ -32,7 +32,7 @@ ms.locfileid: "62916399"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名||  
-|メッセージ テキスト|サーバーへの接続を確立中にエラーが発生しました。  接続先が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] である場合、既定の設定では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート接続を許可していないために、このエラーが発生した可能性があります  (プロバイダー:SQL Network Interfaces、エラー:28-サーバーが要求されたプロトコルをサポートしていません) (Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー:-1)|  
+|メッセージ テキスト|サーバーへの接続を確立中にエラーが発生しました。  接続先が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] である場合、既定の設定では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート接続を許可していないために、このエラーが発生した可能性があります (プロバイダー:SQL Network Interfaces、エラー:28-サーバーが要求されたプロトコルをサポートしていません) (Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー:-1)|  
   
 ## <a name="explanation"></a>説明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントがサーバーに接続できません。 このエラーは、次のいずれかの原因により起こる可能性があります。  

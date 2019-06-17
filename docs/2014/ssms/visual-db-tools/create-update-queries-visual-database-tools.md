@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47951e101a5f8f480496c8570a22cd1a950b3309
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270581"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>更新クエリの作成 (Visual Database Tools)
@@ -62,7 +62,7 @@ WHERE (pub_id = '0766')
     > [!CAUTION]  
     >  クエリおよびビュー デザイナーは、値の長さが更新する列の長さの範囲内であるかどうかをチェックできません。 指定した値が長すぎる場合、予告なしに切り捨てられることがあります。 たとえば、 `name` 列の長さが 20 文字である場合に 25 文字の更新値を指定すると、最後の 5 文字は切り捨てられることがあります。  
   
-5.  更新する行を定義するために、**[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)」を参照してください。  
+5.  更新する行を定義するために、 **[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)」を参照してください。  
   
      検索条件を指定しない場合は、指定されたテーブルのすべての行が更新されます。  
   

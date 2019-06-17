@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 415e1a46734eeed97457a6235a0d9912b17e232b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745274"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>クライアント接続でのサービス プリンシパル名 (SPN) のサポート
@@ -51,7 +51,7 @@ ms.locfileid: "62745274"
 |シナリオ|説明|  
 |--------------|-----------------|  
 |レガシ アプリケーションで SPN が指定されない。|この互換性のシナリオでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で作成されたアプリケーションの動作が変更されないことが保証されます。 SPN が指定されていない場合、アプリケーションは生成された SPN を使用し、どの認証方法が使用されるかは認識しません。|  
-|現在のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用するクライアント アプリケーションで、接続文字列に含まれる SPN が、ドメイン ユーザー アカウント、コンピューター アカウント、インスタンス固有の SPN、またはユーザー定義文字列として指定される。|プロバイダー文字列、初期化文字列、または接続文字列で **ServerSPN** キーワードを使用することで、次の操作が可能になります。<br /><br /> - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが接続に使用するアカウントを指定できます。 これにより、Kerberos 認証へのアクセスが簡単になります。 Kerberos キー配布センター (KDC) が存在し、かつ正しいアカウントが指定された場合は、NTLM よりも Kerberos 認証が使用される可能性が高くなります。 KDC は通常、ドメイン コントローラーと同じコンピューターに存在します。<br /><br /> - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するための SPN を指定できます。 この目的で使用できる既定の SPN が、すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに 2 つずつ生成されます。 ただし、これらのキーが Active Directory に存在することは保証されないため、この状況では Kerberos 認証は保証されません。<br /><br /> - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するために使用される SPN を指定できます。 これは、サービス アカウントにマップされる任意のユーザー定義文字列でかまいません。 この場合は、キーを手動で KDC に登録する必要があり、キーがユーザー定義 SPN の規則を満たしていることも必要です。<br /><br /> **FailoverPartnerSPN** キーワードを使用すると、フェールオーバー パートナー サーバーの SPN を指定できます。 アカウントおよび Active Directory キーの値の範囲は、プリンシパル サーバーに指定できる値と同じです。|  
+|現在のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client を使用するクライアント アプリケーションで、接続文字列に含まれる SPN が、ドメイン ユーザー アカウント、コンピューター アカウント、インスタンス固有の SPN、またはユーザー定義文字列として指定される。|プロバイダー文字列、初期化文字列、または接続文字列で **ServerSPN** キーワードを使用することで、次の操作が可能になります。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが接続に使用するアカウントを指定できます。 これにより、Kerberos 認証へのアクセスが簡単になります。 Kerberos キー配布センター (KDC) が存在し、かつ正しいアカウントが指定された場合は、NTLM よりも Kerberos 認証が使用される可能性が高くなります。 KDC は通常、ドメイン コントローラーと同じコンピューターに存在します。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するための SPN を指定できます。 この目的で使用できる既定の SPN が、すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに 2 つずつ生成されます。 ただし、これらのキーが Active Directory に存在することは保証されないため、この状況では Kerberos 認証は保証されません。<br /><br /> \- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのサービス アカウントを参照するために使用される SPN を指定できます。 これは、サービス アカウントにマップされる任意のユーザー定義文字列でかまいません。 この場合は、キーを手動で KDC に登録する必要があり、キーがユーザー定義 SPN の規則を満たしていることも必要です。<br /><br /> **FailoverPartnerSPN** キーワードを使用すると、フェールオーバー パートナー サーバーの SPN を指定できます。 アカウントおよび Active Directory キーの値の範囲は、プリンシパル サーバーに指定できる値と同じです。|  
 |ODBC アプリケーションで、SPN がプリンシパル サーバーまたはフェールオーバー パートナー サーバーの接続属性として指定される。|接続属性 **SQL_COPT_SS_SERVER_SPN** を使用して、プリンシパル サーバーへの接続用の SPN を指定できます。<br /><br /> 接続属性 **SQL_COPT_SS_FAILOVER_PARTNER_SPN** を使用して、フェールオーバー パートナー サーバーの SPN を指定できます。|  
 |OLE DB アプリケーションで、SPN がプリンシパル サーバーまたはフェールオーバー パートナー サーバーのデータ ソース初期化プロパティとして指定される。|**SSPROP_INIT_SERVER_SPN** プロパティ セット内の接続プロパティ **DBPROPSET_SQLSERVERDBINIT** を使用して、接続用の SPN を指定できます。<br /><br /> **SSPROP_INIT_FAILOVER_PARTNER_SPN** 内の接続プロパティ **DBPROPSET_SQLSERVERDBINIT** を使用して、フェールオーバー パートナー サーバーの SPN を指定できます。|  
 |ユーザーが、サーバーまたはフェールオーバー パートナー サーバーの SPN を ODBC データ ソース名 (DSN) で指定する。|SPN は、DSN を設定するダイアログ ボックスを使用して ODBC DSN に指定できます。|  
@@ -112,7 +112,7 @@ ms.locfileid: "62745274"
   
  この機能を説明するサンプル アプリケーションについては、「 [SQL Server データ プログラミング サンプル](https://msftdpprodsamples.codeplex.com/)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
 [Kerberos 接続用のサービス プリンシパル名の登録](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

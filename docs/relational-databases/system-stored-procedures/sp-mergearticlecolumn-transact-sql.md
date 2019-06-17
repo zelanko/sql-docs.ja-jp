@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627815"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` 垂直方向のパーティションを作成する列を識別します。 *列*は**sysname**、既定値は NULL です。 値が NULL で `@operation = N'add'` の場合、既定ではソース テーブルのすべての列がアーティクルに追加されます。 *列*ときに、NULL にすることはできません*操作*に設定されている**ドロップ**します。 アーティクルから列を除外するには実行**sp_mergearticlecolumn**指定と*列*と`@operation = N'drop'`を削除するには、各列の指定した*記事*.  
   
-`[ @operation = ] 'operation'` レプリケーションの状態です。 *操作*は**nvarchar (4)**、既定値は ADD です。 **追加**レプリケーションする列をマークします。 **drop**列をクリアします。  
+`[ @operation = ] 'operation'` レプリケーションの状態です。 *操作*は**nvarchar (4)** 、既定値は ADD です。 **追加**レプリケーションする列をマークします。 **drop**列をクリアします。  
   
-`[ @schema_replication = ] 'schema_replication'` マージ エージェントの実行時にスキーマ変更が反映されることを指定します。 *schema_replication*は**nvarchar (5)**、既定値は FALSE。  
+`[ @schema_replication = ] 'schema_replication'` マージ エージェントの実行時にスキーマ変更が反映されることを指定します。 *schema_replication*は**nvarchar (5)** 、既定値は FALSE。  
   
 > [!NOTE]  
 >  のみ**FALSE**はサポートされて*schema_replication*します。  
@@ -87,7 +87,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_mergearticlecolumn**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マージ アーティクル間の結合フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   

@@ -11,24 +11,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775776"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Server Core への SQL Server 2014 のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 または [!INCLUDE[win8srv](../../includes/win8srv-md.md)]の Server Core インストールにインストールできます。 このトピックでは、Server Core に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールする場合のセットアップに固有の詳細について説明します。  
   
- [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] または [!INCLUDE[win8srv](../../includes/win8srv-md.md)] オペレーティング システムの Server Core インストール オプションでは、特定のサーバー ロールを実行するための最低限の環境が提供されます。 これにより、必要な保守と管理が減り、これらのサーバー ロールに対する攻撃の危険性が軽減されます。 実装された Server Core の詳細については[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]を参照してください[サーバーの Windows Server 2008 R2 Core](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439)します。 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] に実装された Server Core の詳細については、[Windows Server 2012 の Server Core](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) に関するページ (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) を参照してください。  
+ [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] または [!INCLUDE[win8srv](../../includes/win8srv-md.md)] オペレーティング システムの Server Core インストール オプションでは、特定のサーバー ロールを実行するための最低限の環境が提供されます。 これにより、必要な保守と管理が減り、これらのサーバー ロールに対する攻撃の危険性が軽減されます。 実装された Server Core の詳細については[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]を参照してください[サーバーの Windows Server 2008 R2 Core](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439) します。 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] に実装された Server Core の詳細については、[Windows Server 2012 の Server Core](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) に関するページ (https://msdn.microsoft.com/library/hh846323(VS.85).aspx) を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
   
 |要件|インストール方法|  
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 および [!INCLUDE[win8srv](../../includes/win8srv-md.md)]の Server Core インストールに含まれています。 有効になっていない場合、セットアップにおいて既定で有効になります。<br /><br /> コンピューター上で Version 2.0、3.0、および 3.5 を同時に実行することはできません。 .NET Framework 3.5 SP1 をインストールすると、2.0 と 3.0 のレイヤーが自動的に取得されます。|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 の Server Core インストールに含まれています。 有効になっていない場合、セットアップにおいて既定で有効になります。<br /><br /> Windows サーバー オペレーティング システム搭載のコンピューターで、.NET 3.5 SP1 に依存するコンポーネントをインストールするには、セットアップを実行する前に .NET Framework 3.5 SP1 をダウンロードしてインストールする必要があります。<br /><br /> 取得し、での .NET Framework 3.5 を有効化する方法の詳細については、推奨事項とガイダンスについて[!INCLUDE[win8srv](../../includes/win8srv-md.md)]を参照してください[Microsoft .NET Framework 3.5 展開に関する考慮事項](https://msdn.microsoft.com/library/windows/hardware/hh975396)(https://msdn.microsoft.com/library/windows/hardware/hh975396)します。|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を除く [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のすべてのエディションのセットアップで、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile が前提条件としてインストールされます。<br /><br /> [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]、ダウンロード、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]から 4 の Server Core Profile [Server Core 用の Microsoft .NET Framework 4 (スタンドアロン インストーラー)](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467)、し、セットアップを続行する前にインストールします。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 の Server Core インストールに含まれています。 有効になっていない場合、セットアップにおいて既定で有効になります。<br /><br /> Windows サーバー オペレーティング システム搭載のコンピューターで、.NET 3.5 SP1 に依存するコンポーネントをインストールするには、セットアップを実行する前に .NET Framework 3.5 SP1 をダウンロードしてインストールする必要があります。<br /><br /> 取得し、での .NET Framework 3.5 を有効化する方法の詳細については、推奨事項とガイダンスについて[!INCLUDE[win8srv](../../includes/win8srv-md.md)]を参照してください[Microsoft .NET Framework 3.5 展開に関する考慮事項](https://msdn.microsoft.com/library/windows/hardware/hh975396)(https://msdn.microsoft.com/library/windows/hardware/hh975396) します。|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を除く [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]のすべてのエディションのセットアップで、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile が前提条件としてインストールされます。<br /><br /> [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]、ダウンロード、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]から 4 の Server Core Profile [Server Core 用の Microsoft .NET Framework 4 (スタンドアロン インストーラー)](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467) 、し、セットアップを続行する前にインストールします。|  
 |Windows インストーラー 4.5|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 および [!INCLUDE[win8srv](../../includes/win8srv-md.md)]の Server Core インストールに付属します。|  
 |Windows PowerShell 2.0|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 および [!INCLUDE[win8srv](../../includes/win8srv-md.md)]の Server Core インストールに付属します。|  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62775776"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[はい]|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|いいえ|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|いいえ|  
-|クライアント ツール接続|はい|  
+|クライアント ツール接続|[はい]|  
 |Integration Services Server<sup>[1]</sup>|はい|  
 |クライアント ツールの旧バージョンとの互換性|いいえ|  
 |クライアント ツール SDK|いいえ|  
@@ -61,7 +61,7 @@ ms.locfileid: "62775776"
   
  <sup>[2]</sup>の Server Core でのこれらの機能のインストールはサポートされていません。 これらのコンポーネントは、 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 または [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core ではない別のサーバーにインストールし、Server Core にインストールされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] サービスに接続できます。  
   
- <sup>[3]</sup>Microsoft Sync Framework が記載されていない、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インストール パッケージです。 Sync Framework の適切なバージョンをダウンロードするにはこれから[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788)ページしの Server Core インストールを実行しているコンピューターにインストールして[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 または[!INCLUDE[win8srv](../../includes/win8srv-md.md)]します。  
+ <sup>[3]</sup>Microsoft Sync Framework が記載されていない、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インストール パッケージです。 Sync Framework の適切なバージョンをダウンロードするにはこれから[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) ページしの Server Core インストールを実行しているコンピューターにインストールして[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 または[!INCLUDE[win8srv](../../includes/win8srv-md.md)] します。  
   
 ## <a name="supported-scenario-matrix"></a>サポートされるシナリオのマトリックス  
  次の表では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の Server Core インストールに [!INCLUDE[win8srv](../../includes/win8srv-md.md)]をインストールする場合のサポートされるシナリオのマトリックスを示します。  
@@ -267,7 +267,7 @@ ms.locfileid: "62775776"
 ## <a name="configuring-remote-access-of-includessnoversionincludesssnoversion-mdmd-running-on-server-core"></a>Server Core で実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のリモート アクセスの構成  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 または [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] の Server Core インストールで実行されている [!INCLUDE[win8srv](../../includes/win8srv-md.md)] インスタンスのリモート アクセスを構成するには、以下で説明する処理を実行します。  
   
-### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-remote-connections-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  リモート接続を有効にするには、SQLCMD.exe をローカルで使用して、Server Core インスタンスに対して次のステートメントを実行します。  
   
 -   `EXEC sys.sp_configure N'remote access', N'1'`  
@@ -290,14 +290,14 @@ ms.locfileid: "62775776"
 ### <a name="create-exceptions-in-windows-firewall"></a>Windows ファイアウォールで例外を作成する  
  Windows ファイアウォールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスの例外を作成するには、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」で指定されている手順に従います。  
   
-### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 以下の操作を行ってください。  
   
 1.  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 または [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core を実行しているコンピューターで、タスク マネージャーを起動します。  
   
 2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
   
-3.  **[新しいタスクの作成]** ダイアログ ボックスで、**[開く]** フィールドに **sqlps.exe** と入力して、**[OK]** をクリックします。 **[[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウが開きます。  
+3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[開く]** フィールドに **sqlps.exe** と入力して、 **[OK]** をクリックします。 **[[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell]** ウィンドウが開きます。  
   
 4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   
@@ -330,7 +330,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 > 2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
 > 3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[名前]** フィールドに「 **cmd** 」と入力して、 [!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Sql Server 2014 の構成ファイルの使用](install-sql-server-using-a-configuration-file.md)   
  [コマンド プロンプトから SQL Server 2014 をインストールします。](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 2014 のエディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

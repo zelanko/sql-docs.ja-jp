@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917088"
 ---
 # <a name="database-properties-options-page"></a>[データベースのプロパティ] \([オプション] ページ)
@@ -27,10 +27,10 @@ ms.locfileid: "62917088"
  データベースの照合順序を一覧から選択して指定します。 詳細については、「 [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md)」を参照してください。  
   
  **復旧モデル**  
- データベースを復旧するための、次のいずれかのモデルを指定します。**[完全]**、**[一括ログ]**、**[単純]**。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)」をご覧ください。  
+ データベースを復旧するための、次のいずれかのモデルを指定します。 **[完全]** 、 **[一括ログ]** 、 **[単純]** 。 復旧モデルの詳細については、「[復旧モデル &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)」をご覧ください。  
   
  **互換性レベル**  
- データベースがサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンを指定します。 指定できる値は、  **[SQL Server 2014 (120)]**、  **[SQL Server 2012 (110)]**、 **[SQL Server 2008 (100)]** です。 SQL Server 2005 データベースを SQL Server 2014 にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます。  互換性レベル 90 は SQL Server 2014 ではサポートされていません。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。  
+ データベースがサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンを指定します。 指定できる値は、  **[SQL Server 2014 (120)]** 、  **[SQL Server 2012 (110)]** 、 **[SQL Server 2008 (100)]** です。 SQL Server 2005 データベースを SQL Server 2014 にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます。  互換性レベル 90 は SQL Server 2014 ではサポートされていません。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)」を参照してください。  
   
  **[コンテインメントの種類]**  
  これが包含データベースであるかどうかを指定するには、[なし] または [部分] を指定します。 包含データベースの詳細については、「 [Contained Databases](contained-databases.md)」をご覧ください。 データベースを包含データベースとして構成するには、 **[包含データベースの有効化]** サーバー プロパティを **TRUE** に設定しておく必要があります。  
@@ -154,7 +154,7 @@ ms.locfileid: "62917088"
   
 ## <a name="recovery"></a>復旧  
  **[ページ確認]**  
- ディスク I/O エラーによる不完全な I/O トランザクションを検出し、報告する場合に使用されるオプションを指定します。 指定できる値は、 **[None]**、 **[TornPageDetection]**、および **[Checksum]** です。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
+ ディスク I/O エラーによる不完全な I/O トランザクションを検出し、報告する場合に使用されるオプションを指定します。 指定できる値は、 **[None]** 、 **[TornPageDetection]** 、および **[Checksum]** です。 詳細については、「 [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)を使用してページを復元する方法について説明します。  
   
  **[ターゲットの復旧時間 (秒)]**  
  クラッシュが発生した場合、指定したデータベースが復旧に要する時間の上限を秒単位で指定します。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](../logs/database-checkpoints-sql-server.md)」をご覧ください。  

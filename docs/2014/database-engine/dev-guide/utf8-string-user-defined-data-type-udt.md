@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 824a722c527b600fd09c8f68725ad033ab1a1b8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780169"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 文字列ユーザー定義データ型 (UDT)
   SQL Server の UTF8String サンプルでは、ユーザー定義データ型の実装について示しています。 このサンプルでは、データベースの型システムを拡張して UTF-8 でエンコードされた値のストレージを提供する UTF-8 ユーザー定義データ型の実装について示します。 このデータ型では、Unicode 文字列と UTF-8 との変換を行うコードの実装も行います。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
@@ -905,7 +905,7 @@ DROP ASSEMBLY UTF8String;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

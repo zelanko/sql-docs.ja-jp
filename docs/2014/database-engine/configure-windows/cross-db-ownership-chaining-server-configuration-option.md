@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5630579e787a3bfcb5d64ee3bcf0ec5bee368611
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782397"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining サーバー構成オプション
-   **cross db ownership chaining** オプションは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対して、複数データベースの組み合わせ所有権を構成するために使用します。  
+  **cross db ownership chaining** オプションは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに対して、複数データベースの組み合わせ所有権を構成するために使用します。  
   
  このサーバー オプションを使用すると、次に示すように、データベース レベルで複数データベースの組み合わせ所有権を制御したり、すべてのデータベースに複数データベースの組み合わせ所有権を許可できるようになります。  
   

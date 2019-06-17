@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a34e5f5af82103709b1e08c22860b1f87288422e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832568"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>[列長分布プロファイル要求] のオプション (データ プロファイル タスク)
@@ -30,7 +30,7 @@ ms.locfileid: "62832568"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列長分布プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
+-   **[データ]** ( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
 -   **全般**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62832568"
  詳細については、このトピックの「[TableorView] のオプション」を参照してください。  
   
  **[Column]**  
- プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、**[(\*)]** を選択します。  
+ プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、 **[(\*)]** を選択します。  
   
  詳細については、このトピックの「[列] のオプション」を参照してください。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62832568"
  **[IgnoreTrailingSpaces]**  
  プロファイルが文字列値を比較する際に、末尾の空白を無視するかどうかを指定します。 このオプションの既定値は **[true]** です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
  [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
   

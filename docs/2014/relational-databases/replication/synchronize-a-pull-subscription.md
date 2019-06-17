@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63186232"
 ---
 # <a name="synchronize-a-pull-subscription"></a>プル サブスクリプションの同期
@@ -38,7 +38,7 @@ ms.locfileid: "63186232"
   
 3.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
-4.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
+4.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
 5.  **[閉じる]** をクリックします。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63186232"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63186232"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
@@ -232,7 +232,7 @@ ms.locfileid: "63186232"
   
  [!code-vb[HowTo#rmo_vb_SyncMergePullSub_NoJobWebSync](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepullsub_nojobwebsync)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データの同期](synchronize-data.md)   
  [プル サブスクリプションの作成](create-a-pull-subscription.md)   
  [レプリケーション セキュリティの推奨事項](security/replication-security-best-practices.md)  

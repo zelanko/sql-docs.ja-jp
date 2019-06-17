@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55f61d9255d19f22fffb7380785a2ada1a2763
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087896"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>[クラスターの識別] タブ (マイニング モデル ビューアー)
   **[クラスターの識別]** タブを使用すると、クラスター モデルに存在する 2 つのクラスターを比較できます。 異なる属性と値の組み合わせが、クラスター内でどのように表されているかを確認できます。  
   
- **詳細情報。**[Microsoft クラスタ リング アルゴリズム](data-mining/microsoft-clustering-algorithm.md)、 [Microsoft クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **詳細情報。** [Microsoft クラスタ リング アルゴリズム](data-mining/microsoft-clustering-algorithm.md)、 [Microsoft クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -47,8 +47,8 @@ ms.locfileid: "66087896"
 |-|-|  
 |**変数**|マイニング モデルの属性です。|  
 |**値**|**[変数]** で選択された属性の値。|  
-|**優先\<クラスター 1 >**|左側の棒グラフは、選択した属性と値のペアが、**[クラスター 1]** で選択したクラスターの代表である確率を表します。 バーの上にマウス ポインターを置くことで、パーセントで表現された値を確認できます。 値が 0 の場合でも属性値は、クラスターから不足するいるとは限りませんだけ、配布は、もう一方の 1 つのクラスターを厳密に優先とは限りませんに注意してください。|  
-|**優先\<クラスター 2 >**|右側の棒グラフは、選択した属性と値のペアが、**[クラスター 2]** で選択したクラスターの代表である確率を表します。|  
+|**優先\<クラスター 1 >**|左側の棒グラフは、選択した属性と値のペアが、 **[クラスター 1]** で選択したクラスターの代表である確率を表します。 バーの上にマウス ポインターを置くことで、パーセントで表現された値を確認できます。 値が 0 の場合でも属性値は、クラスターから不足するいるとは限りませんだけ、配布は、もう一方の 1 つのクラスターを厳密に優先とは限りませんに注意してください。|  
+|**優先\<クラスター 2 >**|右側の棒グラフは、選択した属性と値のペアが、 **[クラスター 2]** で選択したクラスターの代表である確率を表します。|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

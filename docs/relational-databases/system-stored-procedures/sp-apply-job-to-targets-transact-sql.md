@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998025"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
-`[ @target_server_groups = ] 'target_server_groups'` 指定したジョブが適用される対象サーバー グループのコンマ区切りの一覧。 *target_server_groups*は**nvarchar (2048)**、既定値は NULL です。  
+`[ @target_server_groups = ] 'target_server_groups'` 指定したジョブが適用される対象サーバー グループのコンマ区切りの一覧。 *target_server_groups*は**nvarchar (2048)** 、既定値は NULL です。  
   
-`[ @target_servers = ] 'target_servers'` 指定したジョブが適用される対象サーバーのコンマ区切りの一覧。 *target_servers*は**nvarchar (2048)**、既定値は NULL です。  
+`[ @target_servers = ] 'target_servers'` 指定したジョブが適用される対象サーバーのコンマ区切りの一覧。 *target_servers*は**nvarchar (2048)** 、既定値は NULL です。  
   
-`[ @operation = ] 'operation'` 指定したジョブに適用または指定した対象サーバーまたは対象サーバー グループから削除するかどうか。 *操作*は**varchar (7)**、既定値は APPLY です。 有効な操作は**適用**と**削除**します。  
+`[ @operation = ] 'operation'` 指定したジョブに適用または指定した対象サーバーまたは対象サーバー グループから削除するかどうか。 *操作*は**varchar (7)** 、既定値は APPLY です。 有効な操作は**適用**と**削除**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

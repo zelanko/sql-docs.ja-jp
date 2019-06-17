@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790221"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性グループのプロパティ:新しい可用性グループ ([バックアップの設定] ページ)
@@ -58,7 +58,7 @@ ms.locfileid: "62790221"
  **[レプリカの除外]**  
  バックアップの実行時にこの可用性レプリカを選択しない場合に選択します。 これは、たとえば、バックアップをフェールオーバーすることがないリモート可用性レプリカのような場合に便利です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アクティブなセカンダリ:セカンダリ レプリカ (AlwaysOn 可用性グループ) でのバックアップ](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)  
   

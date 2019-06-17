@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994275"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
@@ -53,9 +53,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>引数  
 `[ @database = ] 'database'` プライマリ サーバー上のデータベースの名前です。 *primary_database*は**sysname**、既定値はありません。  
   
-`[ @backup_directory = ] 'backup_directory'` プライマリ サーバー上のバックアップ フォルダーのパスです。 *backup_directory*は**nvarchar (500)**、既定値はありません、NULL にすることはできません。  
+`[ @backup_directory = ] 'backup_directory'` プライマリ サーバー上のバックアップ フォルダーのパスです。 *backup_directory*は**nvarchar (500)** 、既定値はありません、NULL にすることはできません。  
   
-`[ @backup_share = ] 'backup_share'` プライマリ サーバー上のバックアップ ディレクトリへのネットワーク パスです。 *backup_share*は**nvarchar (500)**、既定値はありません、NULL にすることはできません。  
+`[ @backup_share = ] 'backup_share'` プライマリ サーバー上のバックアップ ディレクトリへのネットワーク パスです。 *backup_share*は**nvarchar (500)** 、既定値はありません、NULL にすることはできません。  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` プライマリ サーバー上のバックアップ ディレクトリにログ バックアップ ファイルを保持する分単位の時間の長さです。 *backup_retention_period*は**int**、既定値はありません、NULL にすることはできません。  
   
@@ -128,7 +128,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ,@backup_compression = 1;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  

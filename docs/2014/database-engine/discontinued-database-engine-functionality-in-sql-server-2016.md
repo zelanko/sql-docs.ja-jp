@@ -34,23 +34,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779876"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 で廃止されたデータベース エンジンの機能
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で削除された機能を次の表に示します。  
   
 |カテゴリ|提供が中止された機能|代替|  
 |--------------|--------------------------|-----------------|  
 |互換性レベル|互換性レベル 90|データベースを互換性レベル 100 以上に設定する必要があります。 互換性レベル 100 未満のデータベースを [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] にアップグレードすると、データベースの互換性レベルはアップグレード操作中に 100 に設定されます。|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で削除された機能を次の表に示します。  
   
 |カテゴリ|提供が中止された機能|代替|  
@@ -75,7 +75,7 @@ ms.locfileid: "62779876"
 |システム テーブル|sys.database_principal_aliases|別名の代わりにロールを使用してください。|  
 |Transact-SQL|`RAISERROR` という形式の `RAISERROR integer 'string'` は廃止されました。|現在使用してステートメントを書き直してください**raiserror (...)** 構文。|  
 |Transact-SQL 構文|`COMPUTE / COMPUTE BY`|`ROLLUP` を使用してください。|  
-|Transact-SQL 構文|使用**\* =** と **=&#42;**|ANSI 結合構文を使用してください。 詳細については、次を参照してください。 [(TRANSACT-SQL) から。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|Transact-SQL 構文|使用 **\* =** と **=&#42;**|ANSI 結合構文を使用してください。 詳細については、次を参照してください。 [(TRANSACT-SQL) から。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvent|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change、database_file_size_change で置換<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **XEvent の追加変更します。**  

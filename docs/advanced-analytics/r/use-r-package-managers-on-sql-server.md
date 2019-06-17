@@ -3,17 +3,17 @@ title: SQL Server Machine Learning Services の R パッケージ マネージ�
 description: SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) に新しい R パッケージを追加するのにには、install.packages などの標準の R コマンドを使用します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642262"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140774"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>SQL Server に R パッケージをインストールするのに R パッケージ マネージャーを使用します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "62642262"
 
 ## <a name="install-a-package-using-rgui"></a>RGui を使用してパッケージをインストールします。
 
-1. [インスタンスのライブラリの場所を特定](installing-and-managing-r-packages.md)します。 R tools がインストールされているフォルダーに移動します。 たとえば、SQL Server 2017 の既定のインスタンスの既定のパスはとおりです。 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [インスタンスのライブラリの場所を特定](../package-management/default-packages.md)します。 R tools がインストールされているフォルダーに移動します。 たとえば、SQL Server 2017 の既定のインスタンスの既定のパスはとおりです。 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. RGui.exe を右クリックして**管理者として実行**します。 必要なアクセス許可がない、データベース管理者に問い合わせてくださいし、必要なパッケージの一覧を提供します。
 

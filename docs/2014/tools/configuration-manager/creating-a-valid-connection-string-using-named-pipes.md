@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065550"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>名前付きパイプを使用した有効な接続文字列の作成
@@ -118,7 +118,7 @@ Server             .
 > [!NOTE]  
 >  としてネットワーク プロトコルを指定する、 **sqlcmd**パラメーターを参照してください"する方法。接続に sqlcmd.exe を使用して、データベース エンジン"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [共有メモリ プロトコルを使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [TCP/IP を使用した有効な接続文字列の作成](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [ネットワーク プロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  

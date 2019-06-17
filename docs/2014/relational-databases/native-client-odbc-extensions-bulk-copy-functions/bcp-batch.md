@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62631386"
 ---
 # <a name="bcpbatch"></a>bcp_batch
@@ -50,7 +50,7 @@ hdbc
   
  呼び出すことができます**bcp_batch**したらすべて*n*行 (製品利用統計情報のアプリケーション) のように、受信データ転送がある場合またはします。 アプリケーションが要求されていない場合**bcp_batch**一括コピーされた行がコミットされた場合にのみ**bcp_done**が呼び出されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [一括コピー関数](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   
