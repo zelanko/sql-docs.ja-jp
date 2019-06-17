@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4438dc445a9e1fc72fdb48b0863b75f041e2253f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753029"
 ---
 # <a name="summary-solutions-and-script-projects"></a>まとめ:ソリューションおよびスクリプト プロジェクト
@@ -23,7 +23,7 @@ ms.locfileid: "62753029"
 ## <a name="return-to-sql-server-tools-tutorials-portal"></a>SQL Server ツールのチュートリアル ポータルに戻る  
  [チュートリアル: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 2014 チュートリアル](tutorial-sql-server-management-studio.md)   
  [データベース エンジンのチュートリアル](../../relational-databases/database-engine-tutorials.md)   
  [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  

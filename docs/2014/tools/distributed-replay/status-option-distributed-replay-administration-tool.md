@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e06144f35ab2db8f124dddff74fb836b6d9c4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150354"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>status オプション (Distributed Replay 管理ツール)
@@ -54,7 +54,7 @@ dreplay status -m localhost -f 60
   
  詳細については、「 [Distributed Replay Security](distributed-replay-security.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)  
   

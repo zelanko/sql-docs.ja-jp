@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a0830e5db32fcc651b59114e1a2dad870e48d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705242"
 ---
 # <a name="import-policies-dialog-box"></a>[ポリシーのインポート] ダイアログ ボックス
@@ -24,7 +24,7 @@ ms.locfileid: "62705242"
   
 ## <a name="options"></a>および  
  **[インポートするファイル]**  
- XML ファイルからポリシーをインポートするには、ファイルのパスと名前を入力するか、参照ボタン (**[...]**) を使用します。  
+ XML ファイルからポリシーをインポートするには、ファイルのパスと名前を入力するか、参照ボタン ( **[...]** ) を使用します。  
   
  **[インポートされるアイテムと重複部分を置き換える]**  
  この [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに同じ名前のポリシーまたは条件が既に存在する場合、その既存のポリシーまたは条件が上書きされます。 依存ポリシーを使用している条件は、依存ポリシーも上書きしない限り上書きできません。 このオプションを選択していない場合は、同じ条件式を使用している既存の条件によってエラーが発生することはありません。  

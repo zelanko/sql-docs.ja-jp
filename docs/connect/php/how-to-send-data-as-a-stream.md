@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 289647915666437cbb0aed8bff7dd2bba2ba89a9
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+manager: jroth
+ms.openlocfilehash: 73b30ff0ed4f4173f13fff518b6578e3d041f3b1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227144"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780733"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>方法: ストリームとしてデータを送信する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57227144"
 3 番目の例では、PDO_SQLSRV ドライバーを使用して、サーバーにストリーム データを送信する方法を示します。  
   
 ## <a name="example-sending-stream-data-at-execution"></a>例: 実行時の Stream データの送信
-次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルに行を挿入します。 顧客のコメント (*$comments*) は、PHP の [fopen](https://php.net/manual/en/function.fopen.php) 関数でストリームとして開かれ、クエリの実行時にサーバーにストリームされます。  
+次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルに行を挿入します。 顧客のコメント ( *$comments*) は、PHP の [fopen](https://php.net/manual/en/function.fopen.php) 関数でストリームとして開かれ、クエリの実行時にサーバーにストリームされます。  
   
 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 すべての出力がコンソールに書き込まれます。  
   

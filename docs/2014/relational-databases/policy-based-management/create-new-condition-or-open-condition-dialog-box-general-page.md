@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057763"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [全般] ページ
@@ -39,7 +39,7 @@ ms.locfileid: "63057763"
  この式の比較演算子を選択します。 演算子には、=、!=、>、>=、<、<=、[NOT]LIKE、[NOT]IN があります。 プロパティによっては、使用できない演算子もあります。  
   
  **[値]**  
- この式の値の設定。 許容値は、ファセットによって異なります。 値は、TRUE/FALSE、文字列、または数値です。 文字列値は、たとえば単一引用符で囲む必要があります。**'AdventureWorks'** します。 プロパティによっては、使用できない演算子もあります。  
+ この式の値の設定。 許容値は、ファセットによって異なります。 値は、TRUE/FALSE、文字列、または数値です。 文字列値は、たとえば単一引用符で囲む必要があります。 **'AdventureWorks'** します。 プロパティによっては、使用できない演算子もあります。  
   
 ## <a name="group-clauses"></a>句のグループ化  
  句をグループ化すると、クエリの他の部分とは別個の、単一のまとまりとして操作できます。これは、数式や論理ステートメントで式の前後をかっこで囲むのと似ています。 句のグループ化は、複雑なクエリを作成するときに役立ちます。  

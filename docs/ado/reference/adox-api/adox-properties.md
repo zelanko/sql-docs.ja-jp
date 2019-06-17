@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 1a6e149c81345cae00d5fdc918fa4366685bfd58
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66708619"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
@@ -50,6 +50,6 @@ ms.locfileid: "66708619"
 |[[一意]](../../../ado/reference/adox-api/unique-property-adox.md)|インデックス キーが一意である必要があるかどうかを示します。|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|主キーが更新されたときに実行されるアクションを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

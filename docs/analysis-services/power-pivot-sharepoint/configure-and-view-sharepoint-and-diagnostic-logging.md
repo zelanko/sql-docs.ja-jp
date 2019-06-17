@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988648"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>構成し、SharePoint と診断ログを表示
@@ -124,7 +124,7 @@ ms.locfileid: "62988648"
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|Web フロント エンド|"詳細"|リダイレクトの要求、 \< *PowerPivotdata ソース*> を[!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]します。|要求は [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)]に転送されました。|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス|[要求の処理]|"詳細"|ユーザー名の要求をリダイレクトする\<*SharePoint ユーザー*> データベースへ|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データ ソースへの権限を借用した接続が、SharePoint ユーザーの代わりに作成されました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power Pivot 使用状況データ収集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [使用状況データ収集の構成 &#40;対象は Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  

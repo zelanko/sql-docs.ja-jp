@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035388"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -135,10 +135,10 @@ ms.locfileid: "63035388"
   
  **-P** オプションの後に複数の引数があると、エラー メッセージが生成され、プログラムが終了します。  
   
- **-S** [*protocol*:]*server*[**\\**_instance_name_][**,**_port_]  
+ **-S** [*protocol*:]*server*[ **\\** _instance_name_][ **,** _port_]  
  接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 このオプションにより、`sqlcmd` スクリプト変数 SQLCMDSERVER が設定されます。  
   
- そのサーバー コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続するには、*server_name* を指定します。 そのサーバー コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、*server_name* [ **\\**_instance_name_ ] を指定します。 サーバー コンピューターを指定しない場合、`sqlcmd` は、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 このオプションは、実行するときに必要な`sqlcmd`ネットワーク上のリモート コンピューターから。  
+ そのサーバー コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続するには、*server_name* を指定します。 そのサーバー コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、*server_name* [ **\\** _instance_name_ ] を指定します。 サーバー コンピューターを指定しない場合、`sqlcmd` は、ローカル コンピューター上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続します。 このオプションは、実行するときに必要な`sqlcmd`ネットワーク上のリモート コンピューターから。  
   
  *プロトコル*できる`tcp`(TCP/IP) `lpc` (共有メモリ)、または`np`(名前付きパイプ)。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "63035388"
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **入力または出力のオプション**  
-  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
+  **-f** _codepage_ | **i:** _codepage_[ **,o:** _codepage_] | **o:** _codepage_[ **,i:** _codepage_]  
  入力と出力のコード ページを指定します。 コード ページ番号は、インストールされた Windows コード ページを指定する数値です。  
   
  コード ページには次の変換規則があります。  
@@ -183,7 +183,7 @@ ms.locfileid: "63035388"
   
  Cmd.exe のコード ページを確認するには、コマンド プロンプトに「`chcp`」と入力します。  
   
- **-i** _input_file_[**」、「**_input_file2_...]  
+ **-i** _input_file_[ **」、「** _input_file2_...]  
  SQL ステートメントまたはストアド プロシージャのバッチを含むファイルを指定します。 複数のファイルを指定すると、それらのファイルは順番に読み取られて処理されます。 ファイル名とファイル名の間には空白を使用しないでください。 `sqlcmd` により、最初に、指定したすべてのファイルが存在しているかどうかがチェックされます。 1 つ以上のファイルが存在していない場合は、`sqlcmd` は終了します。 -i と -Q/-q オプションは同時に使用できません。  
   
  パスの例:  
@@ -266,7 +266,7 @@ ms.locfileid: "63035388"
 >  実際のタイムアウト値は、指定した *time_out* 値より数秒異なる場合があります。  
   
  **-vvar =** _value_[ **var =** _value_...]  
- 作成、`sqlcmd`で使用できるスクリプトの変数を`sqlcmd`スクリプト。 値に空白が含まれる場合は、値を引用符で囲みます。 複数を指定する **_var_**=**"*`values`*"** 値。 指定した値にエラーが生じた場合は、`sqlcmd` は、エラー メッセージを生成してから終了します。  
+ 作成、`sqlcmd`で使用できるスクリプトの変数を`sqlcmd`スクリプト。 値に空白が含まれる場合は、値を引用符で囲みます。 複数を指定する **_var_** = **" *`values`* "** 値。 指定した値にエラーが生じた場合は、`sqlcmd` は、エラー メッセージを生成してから終了します。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -353,7 +353,7 @@ ms.locfileid: "63035388"
  **-c** _batch_terminator_  
  バッチ ターミネータを指定します。 既定では、"GO" だけが入力されている行があると、コマンドが終了したと見なされ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に送られます。 バッチ ターミネータをリセットする場合、[!INCLUDE[tsql](../includes/tsql-md.md)] の予約キーワードやオペレーティング システムで特別な意味を持つ文字は、先頭に円記号が付いているかどうかに関係なく、使用しないでください。  
   
- **-L****[c]**  
+ **-L** **[c]**  
  ローカルに構成されたサーバー コンピューターと、ネットワーク上でブロードキャストしているサーバー コンピューター名の一覧を表示します。 このパラメーターは、他のパラメーターと組み合わせて使用することはできません。 一覧表示できるサーバー コンピューターの最大数は 3,000 です。 バッファーのサイズが原因でサーバーの一覧が切り捨てられる場合は、警告メッセージが表示されます。  
   
 > [!NOTE]  
@@ -361,7 +361,7 @@ ms.locfileid: "63035388"
   
  省略可能なパラメーター **c** を指定すると、出力結果には Servers: ヘッダー行が含まれません。このため、各サーバー行は、先頭に空白がない状態で一覧表示されます。 これは、クリーン アウトプットとも呼ばれます。 クリーン アウトプットを使用すると、スクリプト言語の処理パフォーマンスが向上します。  
   
- **-p****[1]**  
+ **-p** **[1]**  
  すべての結果セットのパフォーマンス統計を出力します。 次は、パフォーマンス統計の形式の例です。  
   
  `Network packet size (bytes): n`  
@@ -386,7 +386,7 @@ ms.locfileid: "63035388"
   
  省略可能なパラメーターが任意の値以外に設定されている場合**1**、エラーが生成および`sqlcmd`が終了します。  
   
- `-X`**[1]**  
+ `-X` **[1]**  
  `sqlcmd` がバッチ ファイルから実行される場合に、システムのセキュリティを損なう可能性のあるコマンドを無効にします。 無効なコマンドも認識されます。`sqlcmd` は警告メッセージを表示して継続します。 場合は省略可能なパラメーター **1**が指定されている`sqlcmd`エラー メッセージを生成し、終了します。 `-X` オプションを使用した場合に無効になるコマンドは次のとおりです。  
   
 -   **ED**  
@@ -446,9 +446,9 @@ ms.locfileid: "63035388"
 |SQLCMDEDITOR||R/W|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- SQLCMDUSER、SQLCMDPASSWORD、および SQLCMDSERVER は、**:Connect**  
+ SQLCMDUSER、SQLCMDPASSWORD、および SQLCMDSERVER は、 **:Connect**  
   
-  が使用されているときに設定されます。  
+ が使用されているときに設定されます。  
   
  R は、その値がプログラムの初期化時に一度だけ設定できることを示します。  
   
@@ -474,7 +474,7 @@ ms.locfileid: "63035388"
 -   GO を除くすべての `sqlcmd` コマンドは、コロン (:) によってプレフィックス指定する必要があります。  
   
     > [!IMPORTANT]  
-    >  既存の **osql** スクリプトとの互換性を保つために、一部のコマンドはコロンなしで認識されます。 これは、**[:]** によって示されています。  
+    >  既存の **osql** スクリプトとの互換性を保つために、一部のコマンドはコロンなしで認識されます。 これは、 **[:]** によって示されています。  
   
 -   `sqlcmd` コマンドが認識されるのは、コマンドが行の先頭にある場合のみです。  
   
@@ -499,7 +499,7 @@ ms.locfileid: "63035388"
  ステートメント キャッシュの内容を出力します。  
   
  **変数**  
-  **:Setvar** \<**var**> [ **"*`value`*"** ]  
+  **:Setvar** \<**var**> [ **" *`value`* "** ]  
  `sqlcmd` スクリプト変数を定義します。 スクリプト変数は `$(VARNAME)`という形式になります。  
   
  変数名では大文字と小文字が区別されません。  
@@ -531,7 +531,7 @@ ms.locfileid: "63035388"
   
  **出力コマンド**  
   **:Error**   
- **_\<_** _filename_  **_>|_ STDERR|STDOUT**  
+ ** _\<_ ** _filename_  ** _>|_ STDERR|STDOUT**  
  すべてのエラー出力を、 *file name*によって指定されたファイル、または **stderr** や **stdout**にリダイレクトします。 **Error** コマンドは、スクリプト内で複数回使用できます。 既定では、エラー出力は **stderr**に送られます。  
   
  *ファイル名*  
@@ -543,10 +543,10 @@ ms.locfileid: "63035388"
  **STDOUT**  
  エラー出力を **stdout** ストリームに切り替えます。 ストリームがリダイレクトされている場合は、ストリームがリダイレクトされた対象がエラー出力を受信します。  
   
- **:Out \<** _filename_ **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
  すべてのクエリ結果を、 *file name*によって指定されたファイル、または **stderr** や **stdout**に作成してリダイレクトします。 既定では、出力は **stdout**に送られます。 ファイルが既に存在している場合は、ファイルは 0 バイトに切り詰められます。 **Out** コマンドは、スクリプト内で複数回使用できます。  
   
- **:Perftrace \<** _filename_ **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
  すべてのパフォーマンス トレース情報を、 *file name*によって指定されたファイル、または **stderr** や **stdout**に作成してリダイレクトします。 既定では、パフォーマンス トレース出力は **stdout**に送られます。 ファイルが既に存在している場合は、ファイルは 0 バイトに切り詰められます。 **Perftrace** コマンドは、スクリプト内で複数回使用できます。  
   
  **実行制御コマンド**  
@@ -560,7 +560,7 @@ ms.locfileid: "63035388"
  **[:]** **QUIT**  
  `sqlcmd` が終了します。  
   
- **[:]** **EXIT**[ **(*`statement`*)** ]  
+ **[:]** **EXIT**[ **( *`statement`* )** ]  
  SELECT ステートメントの結果からの戻り値として使用できます`sqlcmd`します。 数値の場合、結果行の最終行の第 1 列は、4 バイトの (長) 整数に変換されます。 MS-DOS は、下位バイトを親プロセスやオペレーティング システムのエラー レベルに渡します。 Windows 200x では、4 バイトの整数全体を渡します。 構文は次のとおりです。  
   
  `:EXIT(query)`  
@@ -591,7 +591,7 @@ ms.locfileid: "63035388"
   
  クエリを含むバッチを実行し、クエリの結果を返して終了します。  
   
- 内で RAISERROR を使用する場合、`sqlcmd`スクリプトと、状態 127 が発生すると、`sqlcmd`は終了し、クライアントにメッセージ ID を返します。 以下に例を示します。  
+ 内で RAISERROR を使用する場合、`sqlcmd`スクリプトと、状態 127 が発生すると、`sqlcmd`は終了し、クライアントにメッセージ ID を返します。 例 :  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -625,7 +625,7 @@ ms.locfileid: "63035388"
  **:Serverlist**  
  ローカルに構成されたサーバーと、ネットワーク上でブロードキャストしているサーバー名の一覧を表示します。  
   
- **:Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect** _server_name_[ **\\** _instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続します。 また、現在の接続を終了します。  
   
  タイムアウト オプション :  
@@ -652,7 +652,7 @@ ms.locfileid: "63035388"
  `:connect $(myservername) $(myusername)`  
   
  **[:]** **!!** \< *コマンド*>  
- オペレーティング システムのコマンドを実行します。 オペレーティング システムのコマンドを実行するには、行頭に 2 つの感嘆符 (**!!**) を入力し、続けてオペレーティング システムのコマンドを入力します。 以下に例を示します。  
+ オペレーティング システムのコマンドを実行します。 オペレーティング システムのコマンドを実行するには、行頭に 2 つの感嘆符 ( **!!** ) を入力し、続けてオペレーティング システムのコマンドを入力します。 例 :  
   
  `:!! Dir`  
   
@@ -668,11 +668,11 @@ ms.locfileid: "63035388"
 ### <a name="sqlcmd-file-names"></a>sqlcmd のファイル名  
  `sqlcmd` 入力ファイルで指定できます、 **-i**オプションまたは **: r**コマンド。 出力ファイルは **-o** オプションまたは **:Error**、 **:Out** 、および **:Perftrace** コマンドで指定できます。 指定するファイルについてのガイドラインを次に示します。  
   
--   **: エラー**、 **: アウト**と **::perftrace**個別**< *`filename`* >**. 場合同じ**< *`filename`* >** が使用すると、コマンドからの入力が混在可能性があります。  
+-   **: エラー**、 **: アウト**と **::perftrace**個別 **< *`filename`* >** . 場合同じ **< *`filename`* >** が使用すると、コマンドからの入力が混在可能性があります。  
   
 -   ローカル コンピューターの `sqlcmd` からリモート サーバー上の入力ファイルが呼び出され、ファイルに :out c:\OutputFile.txt のようにドライブ パスが含まれていると、 出力ファイルはリモート サーバーではなく、ローカル コンピューター上に作成されます。  
   
--   有効なファイル パスは次のとおりです。C:\\**<*`filename`*>**、 \\ \\< Server\>\\< Share$ >\\**< *`filename`* >** と"C:\Some フォルダー\\  **<  *`file name`*>**". パスに空白が含まれる場合は、引用符を使用します。  
+-   有効なファイル パスは次のとおりです。C:\\ **< *`filename`* >** 、 \\ \\< Server\>\\< Share$ >\\ **< *`filename`* >** と"C:\Some フォルダー\\  **<  *`file name`* >** ". パスに空白が含まれる場合は、引用符を使用します。  
   
 -   各新規 `sqlcmd` セッションは同じ名前の既存のファイルを上書きします。  
   
@@ -750,7 +750,7 @@ ms.locfileid: "63035388"
   
 -   バッチまたはクエリ実行のタイムアウト値を、推定所要時間よりも長めに設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sqlcmd ユーティリティの起動](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [sqlcmd を使用した Transact-SQL スクリプト ファイルの実行](../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [sqlcmd ユーティリティの使用](../relational-databases/scripting/sqlcmd-use-the-utility.md)   

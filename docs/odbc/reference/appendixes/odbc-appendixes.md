@@ -12,22 +12,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181292"
 ---
 # <a name="odbc-appendixes"></a>ODBC の付録
 次の付録では、Microsoft ODBC インターフェイスに関連する技術的な詳細が含まれています。  
   
--   [付録 a:ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [付録 A: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [付録 b:ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [付録 B: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [付録 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [付録 C: SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [付録 D: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
 -   [付録 e:スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   

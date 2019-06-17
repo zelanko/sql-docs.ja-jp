@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019047"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムの適用
@@ -32,7 +32,7 @@ ms.locfileid: "63019047"
   
 -   アプライアンスの状態を監視する管理コンソールにアクセスする権限を持つ、Analytics Platform System ログインします。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   接続に Fabric ドメイン管理者アカウントのサポート技術情報、 _< domain_name >_**-HST01**ノード。  
+-   接続に Fabric ドメイン管理者アカウントのサポート技術情報、 _< domain_name >_ **-HST01**ノード。  
   
 ## <a name="HowToInstallPDW"></a>Analytics Platform System の修正プログラムを適用するには  
 Microsoft 更新プログラムとは異なり、Analytics Platform System のソフトウェアの修正プログラムが WSUS を介しては処理されません。 別のワークフローがあり、修正プログラム パッケージを実行してインストールされます。  

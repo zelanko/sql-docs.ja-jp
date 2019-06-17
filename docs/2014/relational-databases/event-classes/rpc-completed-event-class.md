@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046767"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed イベント クラス
@@ -47,7 +47,7 @@ ms.locfileid: "63046767"
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |ObjectName|`nvarchar`|参照されているオブジェクトの名前。|34|はい|  
-|Reads|`bigint`|リモート プロシージャ コールによって実行されたページ読み取りの回数。|16|はい|  
+|Reads|`bigint`|リモート プロシージャ コールによって実行されたページ読み取りの回数。|16|[はい]|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |RowCounts|`bigint`|RPC バッチに含まれる行数。|48|はい|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26||  
@@ -55,7 +55,7 @@ ms.locfileid: "63046767"
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`ntext`|リモート プロシージャ コールのテキスト。|1|はい|  
-|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
+|TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|[はい]|  
 |Writes|`bigint`|リモート プロシージャ コールによって実行されたページ書き込みの回数。|17|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   

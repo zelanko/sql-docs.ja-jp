@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065186"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>データベース エンジン エラーの原因と解決方法
@@ -26,7 +26,7 @@ ms.locfileid: "66065186"
 ## <a name="reference"></a>リファレンス  
  [データベース エンジン エラーについて](../relational-databases/native-client-ole-db-errors/errors.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジンのイベントとエラー](../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

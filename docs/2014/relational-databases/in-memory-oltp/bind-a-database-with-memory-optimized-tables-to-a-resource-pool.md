@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158802"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>メモリ最適化テーブルを持つデータベースのリソース プールへのバインド
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の最小値の決定  
  メモリ最適化テーブルに必要なメモリを確認したら、使用可能なメモリの何パーセントが必要になるかを特定し、メモリの割合をその値以上に設定する必要があります。  
   
- **例:**   
+ **例:**    
 この例では、計算の結果、メモリ最適化テーブルおよびインデックスに 16 GB のメモリが必要であると確認されたものとします。 また、使用できるメモリとして 32 GB がコミットされていると想定します。  
   
  一見すると、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT は 50 (16 は 32 の 50%) に設定する必要があるように思われます。  しかし、それではメモリ最適化テーブルに十分なメモリが与えられません。 後に示す表 (「[メモリ最適化テーブルおよびインデックスで使用可能なメモリの割合](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)」) によると、コミットされたメモリが 32 GB の場合、メモリ最適化テーブルとインデックスで使用できるのはその 80% だけです。  このため、最小と最大の割合は、コミットされたメモリではなく使用可能なメモリに基づいて計算します。  

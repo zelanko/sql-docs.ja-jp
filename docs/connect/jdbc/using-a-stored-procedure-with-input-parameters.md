@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2b85c7ff9943f2c83109b18000adf7c2456b7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f14589bfdf5197bdb80e535e00d0fdbeba913529
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635050"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790398"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>入力パラメーターがあるストアド プロシージャの使用
 
@@ -31,7 +31,7 @@ JDBC ドライバーを使用して IN パラメーターがあるストアド �
 > [!NOTE]  
 > SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。
 
-`call` エスケープ シーケンスを作成する場合、IN パラメーターは?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャに渡されるパラメーター値のプレースホルダーになります。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドのいずれかを使用できます。 使用できる setter メソッドは、IN パラメーターのデータ型で決まります。
+`call` エスケープ シーケンスを作成する場合、IN パラメーターは? (疑問符) 文字で指定します。 この文字は、ストアド プロシージャに渡されるパラメーター値のプレースホルダーになります。 パラメーターの値を指定するには、SQLServerPreparedStatement クラスの setter メソッドのいずれかを使用できます。 使用できる setter メソッドは、IN パラメーターのデータ型で決まります。
 
 setter メソッドに値を渡す場合は、パラメーターで使用する実際の値だけでなく、ストアド プロシージャ内のパラメーターの順序も指定する必要があります。 たとえば、ストアド プロシージャに IN パラメーターが 1 つ存在する場合、その序数値は 1 になります。 ストアド プロシージャに 2 つのパラメーターが存在する場合、1 つ目の序数値は 1 に、2 つ目の序数値は 2 になります。
 

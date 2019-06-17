@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033660"
 ---
 # <a name="update-statistics"></a>統計の更新
@@ -58,7 +58,7 @@ ms.locfileid: "63033660"
   
 5.  更新する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **統計のプロパティ -**_statistics_name_ダイアログ ボックスで、**これらの列の統計を更新**チェック ボックスをオンにして **[ok]**.  
+6.  **統計のプロパティ -** _statistics_name_ダイアログ ボックスで、**これらの列の統計を更新**チェック ボックスをオンにして **[ok]** .  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
