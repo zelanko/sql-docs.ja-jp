@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4013dbd3de9b0866aff0dd8d1256be0839299235
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738834"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
@@ -128,7 +128,7 @@ RETCODE bcp_colfmt (
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- 呼び出しごとに**bcp_colfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** を呼び出して**bcp_colfmt**で 5 回、これらの 3 つは、独自の形式の設定を呼び出します。 残りの 2 つの呼び出しでは、設定*eUserDataType*を 0 に設定し*cbIndicator*、 *cbUserData*、および*cbUserDataTerm*を 0 に SQL_VARLEN(_D)、0、それぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ 呼び出しごとに**bcp_colfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** を呼び出して**bcp_colfmt**で 5 回、これらの 3 つは、独自の形式の設定を呼び出します。 残りの 2 つの呼び出しでは、設定*eUserDataType*を 0 に設定し*cbIndicator*、 *cbUserData*、および*cbUserDataTerm*を 0 に SQL_VARLEN(_D)、0、それぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
  *CbIndicator*、大きな値の型を示す 8 の値は有効です。 フィールドにプレフィックスを指定し、そのフィールドに対応する列が新しい max 型である場合、この値は 8 にしか設定できません。 詳細については、次を参照してください。 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)します。  
   

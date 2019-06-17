@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871214"
 ---
 # <a name="shrink-a-file"></a>ファイルの圧縮
@@ -70,7 +70,7 @@ ms.locfileid: "62871214"
   
 2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
   
-3.  **[タスク]**、 **[圧縮]** の順にポイントし、 **[ファイル]** をクリックします。  
+3.  **[タスク]** 、 **[圧縮]** の順にポイントし、 **[ファイル]** をクリックします。  
   
      **[データベース]**  
      選択しているデータベースの名前が表示されます。  

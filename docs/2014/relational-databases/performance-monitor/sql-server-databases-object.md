@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250646"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases オブジェクト
@@ -60,7 +60,7 @@ ms.locfileid: "63250646"
 |**Transactions/sec**|1 秒間にデータベースに対して開始されたトランザクションの数。<br /><br /> **Transactions/sec** は、XTP のみのトランザクション (ネイティブ コンパイル ストアド プロシージャによって開始されたトランザクション) はカウントしません。|  
 |**Write Transactions/sec**|最後の 1 秒間にデータベースに書き込んでコミットしたトランザクションの数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソースの利用状況の監視 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server、Database Replica](sql-server-database-replica.md)  
   

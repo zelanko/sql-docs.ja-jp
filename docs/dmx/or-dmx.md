@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a57d0b1c7f1fa75504e786712029326fc958135
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62501813"
 ---
 # <a name="or-dmx"></a>OR (DMX)
@@ -50,7 +50,7 @@ Expression1 OR Expression2
 |FALSE|TRUE|TRUE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [論理演算子&#40;DMX&#41;](../dmx/operators-logical.md)   
  [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)  

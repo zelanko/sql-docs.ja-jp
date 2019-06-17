@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080808"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>[グリッド] (キューブ デザイナーの [ディメンションの使用法] タブ) (Analysis Services - 多次元データ)
@@ -26,7 +26,7 @@ ms.locfileid: "66080808"
 |------------|----------------|  
 |**メジャー グループ**|メジャー グループを選択して、 **[グリッド]** ペインに列として表示します。 **[(すべて表示)]** を選択すると、利用可能なメジャー グループがすべて表示されます。<br /><br /> メジャー グループの名前を変更するには、メジャー グループの列ヘッダーを選択してクリックします。|  
 |**Dimensions**|キューブ ディメンションを選択して、 **[グリッド]** ペインに行として表示します。 **[(すべて表示)]** を選択すると、利用可能なキューブ ディメンションがすべて表示されます。<br /><br /> キューブ ディメンションの名前を変更するには、ディメンションの行ヘッダーを選択してクリックします。|  
-|**(セル)**|セルを選択して参照ボタン (**[...]**) をクリックし、 **[リレーションシップの定義]** ダイアログ ボックスを表示して、キューブ ディメンションとメジャー グループ間のディメンション リレーションシップを定義します。 **[リレーションシップの定義]** ダイアログ ボックスの詳細については、「[[リレーションシップの定義] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**(セル)**|セルを選択して参照ボタン ( **[...]** ) をクリックし、 **[リレーションシップの定義]** ダイアログ ボックスを表示して、キューブ ディメンションとメジャー グループ間のディメンション リレーションシップを定義します。 **[リレーションシップの定義]** ダイアログ ボックスの詳細については、「[[リレーションシップの定義] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
   
 ## <a name="context-menu"></a>コンテキスト メニュー  
  次に、 **[グリッド]** ペインを右クリックして表示されるショートカット メニューで、使用可能なオプションを示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "66080808"
 |**Rename**|選択したキューブ ディメンション、メジャー グループ、またはディメンションのリレーションシップの名前を変更します。|  
 |**Properties**|選択したキューブ ディメンション、メジャー グループ、またはディメンションのリレーションシップのプロパティを、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウに表示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [ディメンションの使用法&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   

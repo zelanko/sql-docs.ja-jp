@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62732474"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
@@ -78,7 +78,7 @@ DAX のようなキャスト関数はありませんが、多くの比較演算�
 -   ブール値は、比較において、および EXACT、AND、OR、 &amp;&amp;、または || で使用されるときは、常に論理値として扱われます。  
   
 **文字列からブールへのキャスト**  
-インメモリおよび DirectQuery モデルでは、キャストはこれらの文字列のみから許可をブール値には: **""** (空の文字列)、 **"true"**、 **"false"** が空の文字列。false の値にキャストします。  
+インメモリおよび DirectQuery モデルでは、キャストはこれらの文字列のみから許可をブール値には: **""** (空の文字列)、 **"true"** 、 **"false"** が空の文字列。false の値にキャストします。  
   
 他のすべての文字列からブール データ型へのキャストはエラーになります。  
   

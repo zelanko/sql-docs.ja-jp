@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737033"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775970"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を利用した接続
 
@@ -27,7 +27,7 @@ ms.locfileid: "55737033"
 Azure SQL Database v12 に接続するメカニズムである Azure Active Directory (AAD) 認証を使用する Azure Active Directory id を使用します。 Azure Active Directory 認証は、データベース ユーザーの ID を一元管理するという目的で使用でき、SQL Server 認証に代わる方法となります。 JDBC ドライバーでは、Azure SQL DB への接続に JDBC 接続文字列で、Azure Active Directory の資格情報を指定できます。 Azure Active Directory 認証を構成する方法については、次を参照してください。 [SQL データベースを Azure Active Directory 認証を使用する接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)します。 
 
 SQL Server 用 Microsoft JDBC Driver では Azure Active Directory 認証をサポートするために、接続のプロパティは次のとおりです。
-*   **認証**このプロパティを使用して、接続に使用する SQL 認証方法を指定します。 有効な値は次のとおりです。 
+*   **認証**: このプロパティを使用して、接続に使用する SQL 認証方法を指定します。 有効な値は次のとおりです。 
     * **ActiveDirectoryMSI**
         * ドライバーのバージョン以降でサポート**v7.2**、`authentication=ActiveDirectoryMSI`から Azure SQL Database/data Warehouse、Azure リソースの内部で"Identity"のサポートが有効に接続するために使用できます。 必要に応じて、 **msiClientId**と共にこの認証モードを取得するために使用するのには、管理対象サービス Id のクライアント ID を含める必要があります接続/データ ソース プロパティで指定することも、 **accessToken**接続を確立します。
     * **ActiveDirectoryIntegrated**
@@ -39,7 +39,7 @@ SQL Server 用 Microsoft JDBC Driver では Azure Active Directory 認証をサ�
     * **NotSpecified**
         * 使用`authentication=NotSpecified`または上記のどの認証方法が必要な場合、既定値をそのままです。
 
-*   **/AccessToken:** この接続プロパティを使用して、アクセス トークンを使用して SQL Database に接続します。 accessToken は、ドライバー マネージャー クラスで getConnection() メソッドのプロパティのパラメーターを使用してのみ設定できます。 これは、接続 URL で使用できません。  
+*   **accessToken**: この接続プロパティを使用してアクセス トークンを使用して SQL Database に接続します。 accessToken は、ドライバー マネージャー クラスで getConnection() メソッドのプロパティのパラメーターを使用してのみ設定できます。 これは、接続 URL で使用できません。  
 
 詳細についてでの認証プロパティを参照してください、[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)ページ。  
 
@@ -47,7 +47,7 @@ SQL Server 用 Microsoft JDBC Driver では Azure Active Directory 認証をサ�
 ## <a name="client-setup-requirements"></a>クライアントのセットアップ要件
 **ActiveDirectoryMSI**認証を以下のコンポーネントは、クライアント コンピューターにインストールする必要があります。
 * Java 8 以降
-* 7.2 (またはそれ以降) の Microsoft JDBC Driver for SQL Server
+* 7\.2 (またはそれ以降) の Microsoft JDBC Driver for SQL Server
 * クライアント環境では、Azure リソースである必要があり、"Identity"機能のサポートが有効になっている必要があります。
 * Azure リソースのシステム割り当てられている管理対象 Id またはユーザー割り当て管理対象 Id、または、MSI が属するグループのいずれかを表す包含データベース ユーザーは、ターゲット データベースに存在する必要があります、CONNECT 権限を必要とします。
 
@@ -164,7 +164,7 @@ Kerberos チケットが、現在のユーザーを Windows ドメイン アカ�
 #### <a name="windows"></a>Windows
 JDK が付属して`kinit`、Azure Active Directory とフェデレーションされているマシンを参加させるドメイン TGT をキー配布センター (KDC) から取得するために使用できます。
 
-##### <a name="step-1-ticket-granting-ticket-retrieval"></a>手順 1:チケット保証チケットの取得
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>手順 1: チケット保証チケットの取得
 - **上で実行**: Windows
 - **アクション**:
   - コマンドを使用して`kinit username@DOMAIN.COMPANY.COM`を KDC から TGT を取得し、ように求められます。 ドメイン パスワード。
@@ -179,7 +179,7 @@ JDK が付属して`kinit`、Azure Active Directory とフェデレーション�
 Kerberos ドメイン コント ローラーのクエリを実行する Windows ドメインに参加しているコンピューターへのアクセス。
 
 ##### <a name="step-1-find-kerberos-kdc"></a>手順 1: Kerberos KDC を検索します。
-- データベース参照または接続を選択して実行Windows コマンドライン****
+- データベース参照または接続を選択して実行Windows コマンドライン ****
 - **アクション**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` ("DOMAIN.COMPANY.COM"は、ドメインの名前にマップ)
 - **サンプル出力**
   ```
@@ -190,9 +190,9 @@ Kerberos ドメイン コント ローラーのクエリを実行する Windows 
   ```
 - **情報を抽出する**DC 名、ここで `co1-red-dc-33.domain.company.com`
 
-##### <a name="step-2-configuring-kdc-in-krb5conf"></a>手順 2:Krb5.conf の KDC を構成します。
-- データベース参照または接続を選択して実行Linux または Mac****
-- **アクション**:好みのエディターで/etc/krb5.conf を編集します。 次のキーを構成します。
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>手順 2: krb5.conf の KDC を構成します。
+- データベース参照または接続を選択して実行Linux または Mac ****
+- **アクション**: 任意のエディターで/etc/krb5.conf を編集します。 次のキーを構成します。
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM
@@ -207,8 +207,8 @@ Kerberos ドメイン コント ローラーのクエリを実行する Windows 
 > [!NOTE]
 >  ドメインは、すべて大文字である必要があります。
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>手順 3:チケット保証チケットの取得をテスト
-- データベース参照または接続を選択して実行Linux または Mac****
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>手順 3: テストのチケット保証チケットの取得
+- データベース参照または接続を選択して実行Linux または Mac ****
 - **アクション**:
   - コマンドを使用して`kinit username@DOMAIN.COMPANY.COM`を KDC から TGT を取得し、ように求められます。 ドメイン パスワード。
   - 使用`klist`に利用可能なチケットを参照してください。 Kinit に成功した場合は、krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM からチケットが表示されます。

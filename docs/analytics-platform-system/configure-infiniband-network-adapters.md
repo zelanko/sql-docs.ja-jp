@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057199"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワーク アダプターを構成します。
@@ -84,7 +84,7 @@ SQLCTL01 を使用すると、Analytics Platform System の DNS は、コント�
   
     未使用の IP アドレスを検索するには、コマンド ウィンドウを開き、アプライアンスのアドレスの範囲内の IP アドレスに対して ping を実行します。 この例では、TeamIB1 ネットワークの IP アドレスは、172.16.14.30 が。 使用されていない 172.16.14 で始まる IP アドレスを検索します。 たとえば、コマンドラインから"ping 172.16.14.254"入力します。 Ping 要求が成功しなかった場合は、IP アドレスを使用します。  
   
-8.  TeamIB2 のプロパティには、同じ操作を行います。 * ネットワーク接続 ウィンドウでは、チーム IB2 を右クリックし、プロパティを選択します。  
+8.  TeamIB2 のプロパティには、同じ操作を行います。 \* ネットワーク接続 ウィンドウでは、チーム IB2 を右クリックし、プロパティを選択します。  
   
 9. インターネット プロトコル バージョン 4 (Tcp/ipv4) のプロパティ ウィンドウからには、TeamIB2 の IP アドレスとサブネット マスクの値を書き留めます。  
   

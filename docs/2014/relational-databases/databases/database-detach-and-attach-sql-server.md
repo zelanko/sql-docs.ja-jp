@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762421"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "62762421"
 > [!NOTE]  
 >  アタッチ中のプライマリ データ ファイルが読み取り専用の場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ではデータベースが読み取り専用であると想定されます。  
   
- 暗号化されたデータベースが最初のインスタンスに接続とき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベース所有者は、次のステートメントを実行して、データベースのマスター_キーを開く必要があります。OPEN MASTER KEY 暗号化解除パスワードによって = **'*`password`*'** します。 次のステートメントを実行して、マスター _ キーの自動暗号化解除を有効にすることをお勧めします。ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
+ 暗号化されたデータベースが最初のインスタンスに接続とき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データベース所有者は、次のステートメントを実行して、データベースのマスター_キーを開く必要があります。OPEN MASTER KEY 暗号化解除パスワードによって = **' *`password`* '** します。 次のステートメントを実行して、マスター _ キーの自動暗号化解除を有効にすることをお勧めします。ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 詳細については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)」を参照してください。  
   
  次に示すように、ログ ファイルをアタッチするための要件の一部は、データベースが読み書き可能か読み取り専用かによって異なります。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "62762421"
   
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ファイルとファイル グループ](database-files-and-filegroups.md)  
   
   

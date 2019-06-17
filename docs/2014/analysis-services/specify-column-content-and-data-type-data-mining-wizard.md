@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068466"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>[列のコンテンツおよびデータ型の指定] (データ マイニング ウィザード)
@@ -24,7 +24,7 @@ ms.locfileid: "66068466"
   
  データ型では、列に格納されるデータの型に関する追加の詳細と、そのデータがトレーニング中にどのように使用されるかを指定します。 コンテンツの種類によっては特定のデータ型が必要とされることも、この逆の場合もあります。 マイニング モデルの作成時に使用するアルゴリズムによっては、特定のデータ型を指定する必要が生じる場合もあります。 マイニング モデルとマイニング構造におけるコンテンツの種類とデータ型については、「[コンテンツの種類 (データ マイニング)](data-mining/content-types-data-mining.md)」を参照してください。  
   
- **詳細情報。**[マイニング構造&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、 [リレーショナル マイニング構造を作成します。](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。** [マイニング構造&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、 [リレーショナル マイニング構造を作成します。](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **マイニング モデルの構造**  

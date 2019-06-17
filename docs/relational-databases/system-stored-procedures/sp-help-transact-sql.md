@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017758"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'name'` 任意のオブジェクトの名前は、 **sysobjects**に任意のユーザー定義データ型、または、 **systypes**テーブル。 *名前*は**nvarchar (** 776 **)**、既定値は NULL です。 データベース名は受け付けられません。  'Person.AddressType' や [Person.AddressType] など、2 つまたは 3 つの部分名を区切る必要があります。   
+`[ @objname = ] 'name'` 任意のオブジェクトの名前は、 **sysobjects**に任意のユーザー定義データ型、または、 **systypes**テーブル。 *名前*は**nvarchar (** 776 **)** 、既定値は NULL です。 データベース名は受け付けられません。  'Person.AddressType' や [Person.AddressType] など、2 つまたは 3 つの部分名を区切る必要があります。   
    
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -93,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(** 128 **)**|列名|  
         |**型**|**nvarchar(** 128 **)**|列のデータを入力します。|  
         |**計算**|**varchar(** 35 **)**|列の値を計算するかどうかを示します。イエスかノーか答えてください。|  
-        |**Length**|**int**|列の長さ (バイト単位)。<br /><br /> 注:列のデータ型が大きな値の型 (**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**)、値は-1 として表示されます。|  
+        |**Length**|**int**|列の長さ (バイト単位)。<br /><br /> 注:列のデータ型が大きな値の型 (**varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、または**xml**)、値は-1 として表示されます。|  
         |**prec**|**char(** 5 **)**|列の有効桁数。|  
         |**Scale**|**char(** 5 **)**|列の小数点以下桁数です。|  
         |**NULL 値の使用**|**varchar(** 35 **)**|列で NULL 値を許容するかどうかを示します。イエスかノーか答えてください。|  

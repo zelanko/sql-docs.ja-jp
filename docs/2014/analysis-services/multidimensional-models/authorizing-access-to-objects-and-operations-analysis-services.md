@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077020"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>オブジェクトと操作へのアクセスの承認 (Analysis Services)
@@ -37,7 +37,7 @@ ms.locfileid: "66077020"
 ## <a name="list-roles-defined-for-your-database"></a>データベースに対して定義されたロールの一覧表示  
  管理者は、SQL Server Management Studio から簡単な DMV クエリを実行することにより、サーバー上で定義されたすべてのロールの一覧を取得できます。  
   
-1.  SSMS でデータベースを右クリックし、 **[新しいクエリ]** | **[MDX]** の順に選択します。  
+1.  SSMS でデータベースを右クリックし、 **[新しいクエリ]**  |  **[MDX]** の順に選択します。  
   
 2.  次のクエリを入力し、F5 キーを押して実行します。  
   

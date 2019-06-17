@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 2acf2dca7b383d6ab579f46e33b10c10e541b88c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209915"
 ---
 # <a name="user-interface-reference-oracletosql"></a>ユーザー インターフェイス リファレンス (OracleToSQL)
@@ -48,7 +48,7 @@ SSMA のダイアログ ボックスを次の表に示します。
 |[データベースからの更新&#40;OracleToSQL&#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|使用して、**データベースからの更新** ダイアログ ボックス、Oracle データベースから更新するオブジェクトを選択します。|  
 |[メタデータの保存&#40;OracleToSQL&#41;](../../ssma/oracle/save-metadata-oracletosql.md)|**メタデータの保存**メタデータが不足しているプロジェクトを保存するときに、ダイアログ ボックスが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Ssma for Oracle 作業の開始&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
