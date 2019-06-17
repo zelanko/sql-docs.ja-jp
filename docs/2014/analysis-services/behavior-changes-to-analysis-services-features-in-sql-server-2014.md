@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064336"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 における Analysis Services 機能の動作の変更
@@ -39,7 +39,7 @@ ms.locfileid: "66064336"
   
 |問題点|説明|  
 |-----------|-----------------|  
-|SQL Server 2008 R2 PowerPivot ブックを SQL Server 2012 SP1 PowerPivot for SharePoint 2013 で使用しているとき、モデルのアップグレードおよび更新が自動的に行われません。 そのため、SQL Server 2008 R2 PowerPivot ブックの定期データ更新が機能しません。|2008 R2 ブックは、 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]で開きますが、定期更新は機能しません。 更新履歴を確認すると、次のようなエラー メッセージが表示されます。<br /> "ブックには、サポートされていない PowerPivot モデルが含まれています。 ブックの PowerPivot モデルは、SQL Server 2008 R2 PowerPivot for Excel 2010 形式です。 サポートされている PowerPivot モデルは、 <br />SQL Server 2012 PowerPivot for Excel 2010 <br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **ブックをアップグレードする方法。** ブックを 2012年ブックにアップグレードするまで定期更新は行われません。 ブックとブックに含まれるモデルをアップグレードするには、次のいずれかの手順を実行します。<br /><br /> SQL Server 2012 PowerPivot for Excel アドインがインストールされた Microsoft Excel 2010 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> Microsoft Excel 2013 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> <br /><br /> ブックのアップグレードの詳細については、次を参照してください。[ブックのアップグレードと定期データ更新&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)します。|  
+|SQL Server 2008 R2 PowerPivot ブックを SQL Server 2012 SP1 PowerPivot for SharePoint 2013 で使用しているとき、モデルのアップグレードおよび更新が自動的に行われません。 そのため、SQL Server 2008 R2 PowerPivot ブックの定期データ更新が機能しません。|2008 R2 ブックは、 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]で開きますが、定期更新は機能しません。 更新履歴を確認すると、次のようなエラー メッセージが表示されます。<br /> "ブックには、サポートされていない PowerPivot モデルが含まれています。 ブックの PowerPivot モデルは、SQL Server 2008 R2 PowerPivot for Excel 2010 形式です。 サポートされている PowerPivot モデルは、 <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **ブックをアップグレードする方法。** ブックを 2012年ブックにアップグレードするまで定期更新は行われません。 ブックとブックに含まれるモデルをアップグレードするには、次のいずれかの手順を実行します。<br /><br /> SQL Server 2012 PowerPivot for Excel アドインがインストールされた Microsoft Excel 2010 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> Microsoft Excel 2013 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> <br /><br /> ブックのアップグレードの詳細については、次を参照してください。[ブックのアップグレードと定期データ更新&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)します。|  
 |DAX [ALL Function](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)の動作の変更|[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、タイム インテリジェンスでの使用のために "日付テーブルとしてマーク" で [Date] 列を指定した場合に、この [Date] 列が ALL 関数の引数として渡され、さらに CALCULATE 関数のフィルターとして渡されると、日付列のスライサーに関係なく、テーブルのすべての列に対してすべてのフィルターが無視されました。<br /><br /> 例えば以下のようにします。<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、ALL の引数として渡された [Date] 列に関係なく、DateTable のすべての列に対してすべてのフィルターが無視されます。<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] および PowerPivot in Excel 2013 では、ALL の引数として渡された指定の列に対してのみ、フィルターが無視されます。<br /><br /> この新しい動作に対処するには、つまりテーブル全体のフィルターとしてすべての列を無視するには、次のように引数から [Date] を除外します。<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> これにより、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンと同じ動作になります。|  
   
 ##  <a name="bkmk_sql2012"></a> 動作の変更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  

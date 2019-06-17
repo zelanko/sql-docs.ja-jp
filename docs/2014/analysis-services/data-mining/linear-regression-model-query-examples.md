@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084297"
 ---
 # <a name="linear-regression-model-query-examples"></a>線形回帰モデルのクエリ例
@@ -92,7 +92,7 @@ FROM LR_PredictIncome.CONTENT
 |Age|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
- 一方、**[マイニング凡例]** では、回帰式は次のように表示されます。  
+ 一方、 **[マイニング凡例]** では、回帰式は次のように表示されます。  
   
  Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)  
   

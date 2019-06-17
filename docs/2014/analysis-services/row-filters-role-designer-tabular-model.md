@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070133"
 ---
 # <a name="row-filters-role-designertabular-model"></a>行フィルター (ロール デザイナー) (テーブル モデル)
@@ -35,7 +35,7 @@ ms.locfileid: "66070133"
  **DAX フィルター - \<tablename >**  
  ブール条件に評価される DAX 式を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル モデル ロール&#40;SSAS 表形式&#41;](tabular-models/roles-ssas-tabular.md)   
  [SSMS を使用したロールの管理 (SSAS テーブル)](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   

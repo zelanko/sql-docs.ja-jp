@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d28d829280e205028a99afd9fec2e019bf567ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089479"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 の非推奨の SQL Server 機能
@@ -31,7 +31,7 @@ ms.locfileid: "66089479"
 ### <a name="slipstream-functionality"></a>スリップストリーム機能  
  製品の更新プログラム機能は、 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1 で使用できたスリップストリーム機能に代わるものです。 したがって、スリップストリーム機能に関するコマンド ライン パラメーター /*PCUSource* および /*CUSource*は、使用できなくなりました。 これらのパラメーターは引き続き動作しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップの将来のリリースでは削除される可能性があります。 /*UpdateSource* パラメーターは、スリップストリームのパラメーター /*PCUSource* および /*CUSource*の機能を結合します。  
   
- 使用できたスリップ ストリーム機能の詳細については[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1 を参照してください[SQL Server 更新プログラムをスリップ ストリーム](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945)します。  
+ 使用できたスリップ ストリーム機能の詳細については[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]PCU1 を参照してください[SQL Server 更新プログラムをスリップ ストリーム](https://go.microsoft.com/fwlink/?LinkId=219945)(https://go.microsoft.com/fwlink/?LinkId=219945) します。  
   
 ## <a name="see-also"></a>参照  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)  
