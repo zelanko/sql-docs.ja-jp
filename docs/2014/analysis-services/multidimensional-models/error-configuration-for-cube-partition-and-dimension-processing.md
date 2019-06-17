@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075101"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>キューブ、パーティション、およびディメンションに関する処理のエラー構成 (SSAS - 多次元)
@@ -180,7 +180,7 @@ ms.locfileid: "66075101"
   
  既定の NULL 処理動作を変更するかどうかを決定します。 既定では、文字列型の列の NULL は空の値として処理されますが、数値列の NULL はゼロとして処理されます。 属性に対して NULL 処理を設定する手順については、「 [不明なメンバーと NULL 処理のプロパティの定義](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログのプロパティ](../server-properties/log-properties.md)   
  [不明なメンバーと NULL 処理のプロパティの定義](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   

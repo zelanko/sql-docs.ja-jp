@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191694"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理
@@ -45,7 +45,7 @@ ms.locfileid: "63191694"
   
      ツリー ビューの **[配置済みのデータ層アプリケーション]** ノードを右クリックして、フィルターの設定にアクセスしたり、リスト ビューのデータを更新したりします。  
   
--   ツリー ビューの **[マネージド インスタンス]** ノードをクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのコンテンツ ウィンドウ内のリスト ビューのデータにアクセスします。 コンテンツ ウィンドウの下部にある詳細タブでは、CPU 使用率および記憶域ボリューム使用率に関するデータが表示されるだけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにある個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスに関するポリシーの定義やプロパティの詳細へのアクセスが可能になります。 詳細については、「[マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](../../database-engine/managed-instance-details-sql-server-utility.md)」を参照してください。  
+-   ツリー ビューの **[マネージド インスタンス]** ノードをクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのコンテンツ ウィンドウ内のリスト ビューのデータにアクセスします。 コンテンツ ウィンドウの下部にある詳細タブでは、CPU 使用率および記憶域ボリューム使用率に関するデータが表示されるだけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにある個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスに関するポリシーの定義やプロパティの詳細へのアクセスが可能になります。 詳細については、「[マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)」を参照してください。  
   
      ツリー ビューの **[マネージド インスタンス]** ノードを右クリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスの追加、フィルター設定へのアクセス、またはリスト ビューのデータの更新を行います。  
   

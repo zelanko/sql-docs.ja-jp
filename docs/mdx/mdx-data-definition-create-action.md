@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63233623"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX データ操作 - CREATE ACTION
@@ -121,7 +121,7 @@ FOR
  スコープの設定  
  アクションは、セットのみに適用されます。 名前、 **ActionParameterSet**は、アクションの式の中のアプリケーションで使用するために予約されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

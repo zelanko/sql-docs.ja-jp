@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5fad76cca594595a5efbf16a334975869684a039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 175f3e33f77d5f4d082ae8b98780b9f7bcafaa43
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624870"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798453"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>updateNCharacterStream (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  この updateNCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateNCharacterStream メソッドによって指定されます。  
   
- このメソッドは、選択するリーダー オブジェクトから Unicode 文字を渡します**nchar**、 **nvarchar (max)**、 **ntext**、および**xml**列。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
+ このメソッドは、選択するリーダー オブジェクトから Unicode 文字を渡します**nchar**、 **nvarchar (max)** 、 **ntext**、および**xml**列。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

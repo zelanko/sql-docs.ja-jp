@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208474"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol の使用
@@ -35,7 +35,7 @@ ms.locfileid: "63208474"
   
  たとえば、次のコードでは、販売員と CustID 列に変数をバインドします。 列のデータが返されます*販売員*と*CustID*します。 *販売員*文字バッファーには、ドライバーは、データを切り捨てるかどうかを確認できるように、アプリケーションは、バイトの長さ (11) を指定します。 返されたのバイト長のタイトルまたは NULL であるかどうかで返される*SalesPersonLenOrInd*。  
   
- *CustID*整数型の変数し、が固定長のバイトの長さを指定する必要はありません。 ドライバーであると**sizeof (** SQLUINTEGER **)**。 返された顧客のバイト長のデータを ID または NULL であるかどうかに返されます*CustIDInd*します。 バイトの長さが常にあるために、アプリケーションが、給与が NULL であるかのみを求めていることに注意してください。 **sizeof (** SQLUINTEGER **)** します。  
+ *CustID*整数型の変数し、が固定長のバイトの長さを指定する必要はありません。 ドライバーであると**sizeof (** SQLUINTEGER **)** 。 返された顧客のバイト長のデータを ID または NULL であるかどうかに返されます*CustIDInd*します。 バイトの長さが常にあるために、アプリケーションが、給与が NULL であるかのみを求めていることに注意してください。 **sizeof (** SQLUINTEGER **)** します。  
   
 ```  
 SQLCHAR       SalesPerson[11];  

@@ -7,17 +7,18 @@ ms.prod_service: connectivity
 ms.reviewer: craigg
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
+author: MightyPen
+ms.author: genemi
 manager: kenvh
-ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: d710bb6e83d6f9761f7926afac3280a2c33d2bec
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618279"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822235"
 ---
 # <a name="fips-mode"></a>FIPS モード
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Microsoft JDBC Driver for SQL Server のサポートとして構成されている Jvm で実行されている*FIPS 140 に準拠している*します。
@@ -90,7 +91,7 @@ FIPS 準拠モードでは、JDBC ドライバーを実行するには、次の�
 |TrustServerCertificate|boolean ["true / false"]|"false"|ユーザーは、FIPS のため、ユーザーが使用する必要があります、証明書チェーンを検証する必要があります **"false"** このプロパティの値。 ||
 |trustStore|String|null|証明書をインポートする、Java Keystore ファイル パス。 証明書をインストールするには、システム上に何も渡す必要はありません。 場合、 ドライバーは、cacerts または jssecacerts ファイルを使用します。||
 |trustStorePassword|String|null|trustStore データの整合性を確認するために使用するパスワードです。||
-|fips|boolean ["true / false"]|"false"|このプロパティは、FIPS 対応 JVM**は true。**|6.1.4 で追加された (安定版 6.2.2 をリリース)||
-|fipsProvider|String|null|JVM で構成されている FIPS プロバイダー。 たとえば、BCFIPS または SunPKCS11 NSS |6.1.2 で追加 (安定した 6.2.2 をリリース)、詳細を参照してください - 6.4.0 で非推奨と[ここ](https://github.com/Microsoft/mssql-jdbc/pull/460)します。|
-|trustStoreType|String|JKS|FIPS モード セット信頼ストアの種類の PKCS12 または型プロバイダーによって定義された FIPS |6.1.2 で追加された (安定版 6.2.2 をリリース)||
+|fips|boolean ["true / false"]|"false"|このプロパティは、FIPS 対応 JVM**は true。**|6\.1.4 で追加された (安定版 6.2.2 をリリース)||
+|fipsProvider|String|null|JVM で構成されている FIPS プロバイダー。 たとえば、BCFIPS または SunPKCS11 NSS |6\.1.2 で追加 (安定した 6.2.2 をリリース)、詳細を参照してください - 6.4.0 で非推奨と[ここ](https://github.com/Microsoft/mssql-jdbc/pull/460)します。|
+|trustStoreType|String|JKS|FIPS モード セット信頼ストアの種類の PKCS12 または型プロバイダーによって定義された FIPS |6\.1.2 で追加された (安定版 6.2.2 をリリース)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

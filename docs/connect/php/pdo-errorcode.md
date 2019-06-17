@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 152b8f1f0792f0680f7602a2d2f0f18c70ad9781
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: bd430e026d29d0637e3b9a1543b8a89bed556bd9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604788"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798365"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

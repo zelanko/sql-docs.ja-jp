@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc8bf49f6d25c4e00c2d5693ff6a9cf48d5450ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208753"
 ---
 # <a name="comment---mdx-operator-reference"></a>コメントの MDX 演算子リファレンス
@@ -33,7 +33,7 @@ ms.locfileid: "63208753"
  コメントのテキストを含む文字列です。  
   
 ## <a name="remarks"></a>コメント  
- コメントは、個別の行に挿入された、多次元式 (MDX) スクリプトの行の末尾で入れ子にまたは MDX ステートメント内で入れ子になったことができます。 サーバーでは、コメントは評価されません。  
+ コメントは、個別の行に挿入された、多次元式 (MDX) スクリプトの行の末尾で入れ子にまたは MDX ステートメント内で入れ子になったことができます。 サーバーはコメントを評価しません。  
   
  1 行のコメントまたは入れ子にしたコメントには、この演算子を使用します。 -- によって挿入するコメントは、改行文字で区切ります。  
   

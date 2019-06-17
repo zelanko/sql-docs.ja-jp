@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ae073d5adbc5a24b0afbb011bd4792cf09a5a94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 504cd4431c0f80ebac426db97b7ac44144a1c8d4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809900"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798704"
 ---
 # <a name="settrustmanagerclass-method-sqlserverdatasource"></a>setTrustManagerClass メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736993"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798596"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続」を参照してください。
 
@@ -195,7 +195,7 @@ Krb5.conf ファイルで設定 default_realm にユーザーが属している�
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Unix コンピューターからの Kerberos 認証を使用して、同じドメイン
 
-このガイドには、Kerberos のセットアップが既に存在する作業が想定しています。 前述の項目が true のかどうかを確認する Kerberos 認証を使用する Windows コンピューターでは、次のコードを実行します。 コードが印刷されます"認証スキーム。成功した場合、コンソールに"KERBEROS。 追加の実行時フラグ、依存関係、またはドライバーの設定は必要ありません外部提供されているものです。 同じコード ブロックは、成功した接続を検証し、Linux で実行できます。
+このガイドには、Kerberos のセットアップが既に存在する作業が想定しています。 前述の項目が true のかどうかを確認する Kerberos 認証を使用する Windows コンピューターでは、次のコードを実行します。 コードは、"認証スキーム:: KERBEROS"を成功した場合、コンソールに出力されます。 追加の実行時フラグ、依存関係、またはドライバーの設定は必要ありません外部提供されているものです。 同じコード ブロックは、成功した接続を検証し、Linux で実行できます。
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

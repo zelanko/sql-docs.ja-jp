@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 546dc71fad06fc69d816d16c1d6c2d67f59f968b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dcffcb15493c5f7587999a41fc2bdf545b377cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773210"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801951"
 ---
 # <a name="understanding-data-type-differences"></a>データ型の違いについて
 
@@ -56,7 +56,7 @@ JDBC の真数型は、対応する SQL Server 型に直接マップされます
 | INTEGER  | JDBC の **INTEGER** 型は、符号付きの 32 ビット整数を表します。 これにマップする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int**型。                                                                                                                                                                                                                                                                                                                                           |
 | bigint   | JDBC の **BIGINT** 型は、符号付きの 64 ビット整数を表します。 これにマップを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bigint**型。                                                                                                                                                                                                                                                                                                                                         |
 | NUMERIC  | JDBC の **NUMERIC** 型は、同一有効桁数の値を保持する固定長の有効桁数の 10 進値を表します。 **数値**型にマップされます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **数値**型。                                                                                                                                                                                                                                                                   |
-| [DECIMAL]  | JDBC の **DECIMAL** 型は、指定された有効桁数以上の値を保持する固定長の有効桁数の 10 進値を表します。 **DECIMAL**型にマップされます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal**型。<br /><br /> JDBC の **DECIMAL** 型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **money** 型と **smallmoney** 型にもマップされます。これらはそれぞれ、8 バイトと 4 バイトで格納される固定長の有効桁数の decimal 型です。 |
+| DECIMAL  | JDBC の **DECIMAL** 型は、指定された有効桁数以上の値を保持する固定長の有効桁数の 10 進値を表します。 **DECIMAL**型にマップされます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal**型。<br /><br /> JDBC の **DECIMAL** 型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **money** 型と **smallmoney** 型にもマップされます。これらはそれぞれ、8 バイトと 4 バイトで格納される固定長の有効桁数の decimal 型です。 |
   
 ## <a name="approximate-numeric-types"></a>概数型
 

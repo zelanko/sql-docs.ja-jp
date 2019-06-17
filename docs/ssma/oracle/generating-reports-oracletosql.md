@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192385"
 ---
 # <a name="generating-reports-oracletosql"></a>レポートの生成 (OracleToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "63192385"
   
 レポートを生成するのにには、次の手順を使用します。  
   
-1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み**&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
+1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み **&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
   
     レポートの vis-比べて-vis コマンドは次のとおりです。  
   

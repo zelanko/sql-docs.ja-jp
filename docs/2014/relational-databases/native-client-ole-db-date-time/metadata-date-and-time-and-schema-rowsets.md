@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63238010"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日付と時刻、およびスキーマ行セット
@@ -90,7 +90,7 @@ ms.locfileid: "63238010"
   
  OLE DB では、MINIMUM_SCALE と MAXIMUM_SCALE が numeric 型および decimal 型用にしか定義されないため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client でこれらの列を time、datetime2、および datetimeoffset で使用することは標準的ではありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メタデータ&#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

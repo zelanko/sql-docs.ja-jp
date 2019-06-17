@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63274383"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
@@ -137,19 +137,19 @@ ms.locfileid: "63274383"
   
 -   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ **@destination_owner** 」および「 **@destination_table**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   アーティクルのプロパティ **@destination_owner** 」および「 **@destination_table** ) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
 
 -   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーションのプロパティを**@allow_initialize_from_backup**の値が必要です`true`します。  
+-   パブリケーションのプロパティを **@allow_initialize_from_backup** の値が必要です`true`します。  
   
--   アーティクルのプロパティ**@replicate_ddl**の値が必要です`true`;**@identityrangemanagementoption**の値が必要です`manual`; と**@status**そのオプションが必要です**24**設定されます。  
+-   アーティクルのプロパティ **@replicate_ddl** の値が必要です`true`; **@identityrangemanagementoption** の値が必要です`manual`; と **@status** そのオプションが必要です**24**設定されます。  
   
--   アーティクルのプロパティの値**@ins_cmd**、 **@del_cmd**、および**@upd_cmd**に設定することはできません`SQL`します。  
+-   アーティクルのプロパティの値 **@ins_cmd** 、 **@del_cmd** 、および **@upd_cmd** に設定することはできません`SQL`します。  
   
--   サブスクリプション プロパティ**@sync_type**の値が必要です`none`または`automatic`します。  
+-   サブスクリプション プロパティ **@sync_type** の値が必要です`none`または`automatic`します。  
   
 ### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  次のアクションを実行する場合は、システムを停止する必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  

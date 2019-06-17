@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250584"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
@@ -78,8 +78,8 @@ ms.locfileid: "63250584"
  **-?**  
  使用できるすべてのパラメーターを表示します。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- パブリッシャーの名前です。 サーバー上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。 サーバー上の _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ パブリッシャーの名前です。 サーバー上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-Publication** _publication_  
  パブリケーションの名前です。 このパラメーターは、新規または再初期化されたサブスクリプションのスナップショットを常に利用できるようにパブリケーションを設定している場合にのみ有効です。  
@@ -93,10 +93,10 @@ ms.locfileid: "63250584"
  **-DefinitionFile** _def_path_and_file_name_  
  エージェント定義ファイルのパスです。 エージェント定義ファイルには、エージェントのコマンド ライン引数が含まれます。 ファイルの内容は実行可能ファイルとして解析されます。 二重引用符 (") を使用して、任意の文字を含む引数値を指定します。  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  デッドロックが発生した場合のディストリビューターへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
 |DistributorDeadlockPriority の値|説明|  
@@ -215,7 +215,7 @@ ms.locfileid: "63250584"
  **-PublisherDB** _publisher_database_  
  パブリケーション データベースの名前です。 *このパラメーターは、Oracle パブリッシャーについてはサポートされません。*  
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  デッドロックが発生した場合のパブリッシャーへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
 |PublisherDeadlockPriority の値|説明|  
@@ -224,7 +224,7 @@ ms.locfileid: "63250584"
 |**0** (既定値)|優先度は割り当てられません。|  
 |**1**|パブリッシャー側でデッドロックが発生した場合、スナップショット エージェントが優先されます。|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  パブリケーション データベースとのデータベース ミラーリング セッションに参加する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー パートナー インスタンスを指定します。 詳細については、「 [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」をご覧ください。  
   
  **-PublisherLogin** _publisher_login_  

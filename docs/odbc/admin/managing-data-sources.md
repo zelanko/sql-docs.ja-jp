@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198760"
 ---
 # <a name="managing-data-sources"></a>データ ソースの管理
@@ -30,7 +30,7 @@ ms.locfileid: "63198760"
 > [!NOTE]  
 >  64 ビット プラットフォームでの 32 ビット ドライバーに接続するデータ ソースを管理するには、c:\windows\sysWOW64\odbcad32.exe を使用します。 64 ビット ドライバーに接続するデータ ソースを管理するには、c:\windows\system32\odbcad32.exe を使用します。 **管理ツール**64 ビットの Windows 8 オペレーティング システムでは、32 ビットと 64 ビットの両方のアイコンは**ODBC データ ソース アドミニストレーター**  ダイアログ ボックス。  
   
- 場合は、64 ビット odbcad32.exe を使用して、構成や削除など、32 ビット ドライバーに接続する DSN**ドライバーは Microsoft Access (\*.mdb)**、次のエラー メッセージが表示されます。  
+ 場合は、64 ビット odbcad32.exe を使用して、構成や削除など、32 ビット ドライバーに接続する DSN**ドライバーは Microsoft Access (\*.mdb)** 、次のエラー メッセージが表示されます。  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

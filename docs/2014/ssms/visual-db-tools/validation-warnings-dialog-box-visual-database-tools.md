@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83fde7d8d43086114b2aae4350ce374b713ff4ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204660"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>[評価に関する警告] ダイアログ ボックス (Visual Database Tools)
@@ -52,7 +52,7 @@ ms.locfileid: "63204660"
  **[テキスト ファイルを保存]**  
  **[名前を付けて保存]** ダイアログ ボックスを表示し、警告リストを含むテキスト ファイルの保存場所を指定できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルのデザイン&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

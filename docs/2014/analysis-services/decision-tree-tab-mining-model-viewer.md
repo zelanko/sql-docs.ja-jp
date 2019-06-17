@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082300"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>[デシジョン ツリー] タブ (マイニング モデル ビューアー)
   **[デシジョン ツリー]** ペインは、デシジョン ツリー モデルで作成されたデシジョン ルールをビジュアルに表示します。 デシジョン ルールは、特定の結果に至るパスを記述します。  
   
- **詳細情報。**[Microsoft デシジョン ツリー アルゴリズム](data-mining/microsoft-decision-trees-algorithm.md)、 [Microsoft ツリー ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **詳細情報。** [Microsoft デシジョン ツリー アルゴリズム](data-mining/microsoft-decision-trees-algorithm.md)、 [Microsoft ツリー ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  

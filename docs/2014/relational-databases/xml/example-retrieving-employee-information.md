@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287838"
 ---
 # <a name="example-retrieving-employee-information"></a>例:従業員情報の取得
@@ -129,7 +129,7 @@ FOR XML EXPLICIT;
   
  この処理が、行セット内の残りの行に対して繰り返されます。 FOR XML EXPLICIT で行セットを順に処理して、必要な XML を生成できるようにするには、ユニバーサル テーブル内の行の並び順が重要になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)  
   
   

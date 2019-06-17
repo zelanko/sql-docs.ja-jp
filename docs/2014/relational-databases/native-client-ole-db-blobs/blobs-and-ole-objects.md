@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63195220"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、し、xml データ型とバイナリ ラージ オブジェクト (Blob). **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **ISequentialStream**コンシューマーへのアクセスをサポートするインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**、**テキスト**、**イメージ**、 **varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、し、xml データ型とバイナリ ラージ オブジェクト (Blob). **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
   
  この機能を示すサンプルについては、次を参照してください。[大量のデータを設定&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63195220"
   
  大きな値のデータ型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが型での想定サイズのチェック**IRowset**や DDL インターフェイス。 持つ列**varchar**、 **nvarchar**、および**varbinary**最大サイズが無制限に設定を持つデータ型は、スキーマ行セットとのインターフェイスを通じて ISLONG と表されます列のデータ型を返します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **varchar (max)**、 **varbinary (max)** と**nvarchar (max)** 型 DBTYPE_STR、DBTYPE_BYTES、および DBTYPE_ としてWSTR それぞれします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **varchar (max)** 、 **varbinary (max)** と**nvarchar (max)** 型 DBTYPE_STR、DBTYPE_BYTES、および DBTYPE_ としてWSTR それぞれします。  
   
  アプリケーションではこれらの型を使用するには、次のオプションがあります。  
   

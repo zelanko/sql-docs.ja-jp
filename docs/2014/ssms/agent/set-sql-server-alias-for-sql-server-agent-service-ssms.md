@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245939"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>トレース フィルターの設定 (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "63245939"
   
 ### <a name="to-set-a-trace-filter"></a>トレース フィルターを設定するには  
   
-1.  トレースが既に実行中の場合は、**@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
+1.  トレースが既に実行中の場合は、 **@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
 2.  **sp_trace_setfilter** を実行して、トレース中のイベントに関して取得する情報の種類を構成します。  
   

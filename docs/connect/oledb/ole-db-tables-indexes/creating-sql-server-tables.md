@@ -16,13 +16,13 @@ helpviewer_keywords:
 - CreateTable function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9ffa0d562346770aa31b5394576453f3b7860b87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4f0368ba6f5fe72cc5fa52e65d2c0ebb0757ee9d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655440"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801286"
 ---
 # <a name="creating-sql-server-tables"></a>SQL Server テーブルの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47655440"
   
 |プロパティ ID|[説明]|  
 |-----------------|-----------------|  
-|DBPROP_COL_AUTOINCREMENT|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br></br>説明 : 作成された列に ID プロパティを設定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ID プロパティをテーブル内の 1 つの列に設定できます。 複数の列でこのプロパティを VARIANT_TRUE に設定すると、OLE DB Driver for SQL Server がサーバーでテーブルの作成を試みた時点でエラーが発生します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の ID プロパティは、**integer** 型、**numeric** 型、および小数点以下桁数が 0 の **decimal** 型の場合のみ有効です。 他のデータ型の列でこのプロパティを VARIANT_TRUE に設定すると、OLE DB Driver for SQL Server がサーバーでテーブルの作成を試みた時点でエラーが発生します。<br /><br /> DBPROP_COL_AUTOINCREMENT と DBPROP_COL_NULLABLE の両方が VARIANT_TRUE で、DBPROP_COL_NULLABLE の *dwOption* が DBPROPOPTIONS_REQUIRED ではない場合、OLE DB Driver for SQL Server は DB_S_ERRORSOCCURRED を返します。 DBPROP_COL_AUTOINCREMENT と DBPROP_COL_NULLABLE の両方が VARIANT_TRUE で、DBPROP_COL_NULLABLE の *dwOption* が DBPROPOPTIONS_REQUIRED の場合、DB_E_ERRORSOCCURRED が返されます。 列は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の ID プロパティで定義され、DBPROP_COL_NULLABLE の *dwStatus* メンバーが DBPROPSTATUS_CONFLICTING に設定されます。|  
+|DBPROP_COL_AUTOINCREMENT|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE&lt;br&gt;&lt;/br&gt;説明 : 作成された列に ID プロパティを設定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、ID プロパティをテーブル内の 1 つの列に設定できます。 複数の列でこのプロパティを VARIANT_TRUE に設定すると、OLE DB Driver for SQL Server がサーバーでテーブルの作成を試みた時点でエラーが発生します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の ID プロパティは、**integer** 型、**numeric** 型、および小数点以下桁数が 0 の **decimal** 型の場合のみ有効です。 他のデータ型の列でこのプロパティを VARIANT_TRUE に設定すると、OLE DB Driver for SQL Server がサーバーでテーブルの作成を試みた時点でエラーが発生します。<br /><br /> DBPROP_COL_AUTOINCREMENT と DBPROP_COL_NULLABLE の両方が VARIANT_TRUE で、DBPROP_COL_NULLABLE の *dwOption* が DBPROPOPTIONS_REQUIRED ではない場合、OLE DB Driver for SQL Server は DB_S_ERRORSOCCURRED を返します。 DBPROP_COL_AUTOINCREMENT と DBPROP_COL_NULLABLE の両方が VARIANT_TRUE で、DBPROP_COL_NULLABLE の *dwOption* が DBPROPOPTIONS_REQUIRED の場合、DB_E_ERRORSOCCURRED が返されます。 列は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の ID プロパティで定義され、DBPROP_COL_NULLABLE の *dwStatus* メンバーが DBPROPSTATUS_CONFLICTING に設定されます。|  
 |DBPROP_COL_DEFAULT|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明 : 列に対して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の DEFAULT 制約を作成します。<br /><br /> DBPROP の *vValue* メンバーには、さまざまなデータ型のいずれかを指定できます。 *vValue.vt* メンバーでは、列のデータ型と互換性のある型を指定する必要があります。 たとえば、DBTYPE_WSTR で定義された列の既定値として BSTR N/A を定義した場合は互換性の要件が満たされます。 DBTYPE_R8 として定義された列に同じ既定値を定義すると、OLE DB Driver for SQL Server がサーバーでテーブルの作成を試みた時点でエラーが発生します。|  
 |DBPROP_COL_DESCRIPTION|R/W: 読み取り/書き込み<br /><br /> 既定値: なし<br /><br /> 説明: DBPROP_COL_DESCRIPTION 列プロパティは、OLE DB Driver for SQL Server では実装されません。<br /><br /> コンシューマーがこのプロパティ値の書き込みを試みた時点で、DBPROP 構造体の *dwStatus* メンバーは DBPROPSTATUS_NOTSUPPORTED を返します。<br /><br /> プロパティを設定するものではありません、致命的なエラー OLE DB driver for SQL Server。 他のすべてのパラメーター値が有効であれば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のテーブルが作成されます。|  
 |DBPROP_COL_FIXEDLENGTH|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: コンシューマーが DBCOLUMNDESC の *wType* メンバーを使用して列のデータ型を定義すると、OLE DB Driver for SQL Server は DBPROP_COL_FIXEDLENGTH を使用して、データ型のマッピングを判断します。 詳細については、次を参照してください。 [ITableDefinition でのデータ型マッピング](../../oledb/ole-db-data-types/data-type-mapping-in-itabledefinition.md)します。|  

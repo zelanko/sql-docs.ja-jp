@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273507"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server への接続 (MySQLToSQL)
@@ -50,7 +50,7 @@ MySQL データベースのオブジェクトを SQL Server の構文に変換�
   
 2.  接続ダイアログ ボックスで入力するか、SQL Server のインスタンスの名前を選択します。  
   
-    -   ローカル コンピューターの既定のインスタンスに接続する場合は、入力**localhost**またはドット (**.**)。  
+    -   ローカル コンピューターの既定のインスタンスに接続する場合は、入力**localhost**またはドット ( **.** )。  
   
     -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   
@@ -115,6 +115,6 @@ SQL Server データベースに関するメタデータは、自動的に更新
   
 -   これらのタスクを実行する必要はありません場合、MySQL データベースのオブジェクトの定義を SQL Server オブジェクトの定義に変換できます。 詳細については、次を参照してください[MySQL データベースを変換する&#40;MySQLToSQL。&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4e06fe371602956b6b43714038f41d8486cf2ae0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253642"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
@@ -127,7 +127,7 @@ ms.locfileid: "63253642"
 ### <a name="using-a-firewall"></a>ファイアウォールの使用  
  ファイアウォールの背後にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスと通信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用される TCP ポート (1433 など) のほかに UDP ポート 1434 も開きます。 ファイアウォールの使用については、次を参照してください。"する方法。ファイアウォールの構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセス"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネットワーク プロトコルとネットワーク ライブラリ](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  
   
   

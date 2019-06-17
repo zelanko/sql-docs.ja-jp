@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4622c75f7185fae2ad03f64a898e6625af680329
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 6f9f14911589b45a1b27cd5ad3d8f46867ebe253
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605012"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799199"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,7 +74,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](https://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
+> 値を [10 進数列または数値列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
 
 ## <a name="see-also"></a>参照  
 [PDOStatement クラス](../../connect/php/pdostatement-class.md)

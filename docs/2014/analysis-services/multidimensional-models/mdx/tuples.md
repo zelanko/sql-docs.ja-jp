@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073766"
 ---
 # <a name="tuples"></a>Tuples
@@ -40,7 +40,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  クエリでセット (ここでは、1 つの組から構成されます) の軸を指定するときは、行の軸のセットを指定する前に列の軸のセットを指定する必要があります。 列の軸は、*axis(0)*、または単に *0* とも表現できます。 MDX クエリの詳細については、「[MDX の基本的なクエリ (MDX)](mdx-query-the-basic-query.md)」を参照してください。  
+>  クエリでセット (ここでは、1 つの組から構成されます) の軸を指定するときは、行の軸のセットを指定する前に列の軸のセットを指定する必要があります。 列の軸は、*axis(0)* 、または単に *0* とも表現できます。 MDX クエリの詳細については、「[MDX の基本的なクエリ (MDX)](mdx-query-the-basic-query.md)」を参照してください。  
   
 ### <a name="tuples-as-values-or-member-references"></a>値またはメンバー参照としての組  
  上記の例のように、クエリで組を使用して、その組が参照しているセルの値を取得できます。 また、式で組を使用して、組で指定されているメンバーを明示的に参照できます。 組を取得または使用する関数をクエリまたは式で使用できます。 組を使用して、組で指定されているセルの値を参照できます。また、関数内で使用する場合はメンバーの組み合わせを指定できます。  
@@ -62,7 +62,7 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  属性メンバーは、メンバー名またはメンバー キーで参照できます。 上記の例で、[CY 2004] への参照を &[2004] としてもかまいません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX の主な概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](cube-space.md)   
  [Autoexists](autoexists.md)   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c726ca33df6b0cd9f79e336c7b056062a578236d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63233669"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET における入れ子になった FOR XML クエリの使用
@@ -90,7 +90,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  .aspx アプリケーションを c:\inetpub\wwwroot directory に保存します (GetSalesOrderInfo.aspx)。  
   
-3.  アプリケーションの実行 (http://server/GetSalesOrderInfo.aspx)します。  
+3.  アプリケーションの実行 (http://server/GetSalesOrderInfo.aspx) します。  
   
 ## <a name="see-also"></a>参照  
  [入れ子になった FOR XML クエリの使用](use-nested-for-xml-queries.md)  

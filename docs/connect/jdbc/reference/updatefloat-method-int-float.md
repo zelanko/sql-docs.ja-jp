@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3be5fd03283c4a98d81f7bd10a4968fdaf022f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e7867e05c90e7aa369e3d32be122feb3785ac095
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597991"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804176"
 ---
 # <a name="updatefloat-method-int-float"></a>updateFloat (int, float) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

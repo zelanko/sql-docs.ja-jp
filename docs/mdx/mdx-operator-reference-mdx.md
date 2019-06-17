@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187597"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 演算子リファレンス (MDX)
@@ -34,7 +34,7 @@ ms.locfileid: "63187597"
 |[&#40;分割&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|1 つの数値を別の数値で除算する算術演算を実行します。|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|別の数が 1 つの数値演算を実行します。|  
 |[コメント &#40;MDX&#41;](../mdx/comment-mdx.md)|コメントのテキストは、ユーザーによって提供されることを示します。|  
-|[(コメント) (MDX)](../mdx/comment-mdx-double-slash.md)|ユーザー指定のテキストを示します。|  
+|[(コメント) (MDX)](../mdx/comment-mdx-double-slash.md)|ユーザーが入力したテキストを示します。|  
 |[:&#40;範囲&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|自然な順序で並べたセットを返すセット演算を実行します。指定された 2 つのメンバーが終端になり、その 2 つのメンバーの間にあるすべてのメンバーがセットのメンバーに含まれます。|  
 |[+&#40;追加&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|2 つの数値を加算する算術演算を実行します。|  
 |[+&#40;正&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|数値式の正の値を返す単項演算を実行します。|  
@@ -52,7 +52,7 @@ ms.locfileid: "63187597"
 |[OR &#40;MDX&#41;](../mdx/or-mdx.md)|2 つの数値式の論理和を実行します。|  
 |[XOR &#40;MDX&#41;](../mdx/xor-mdx.md)|2 つの数値式の排他的論理和演算を実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

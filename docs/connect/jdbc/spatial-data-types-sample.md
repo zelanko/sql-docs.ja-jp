@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29d141d9dd2eaf889eb5c4597c3fd0dd853ec31d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b05182b5dbed154aafd86feec9f73e433f569791
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743630"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798346"
 ---
 # <a name="spatial-data-types-sample"></a>空間データ型のサンプル
 
@@ -34,7 +34,7 @@ ms.locfileid: "47743630"
 このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../connect/jdbc/using-the-jdbc-driver.md)します。  
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。  
+> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、「[JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例
 

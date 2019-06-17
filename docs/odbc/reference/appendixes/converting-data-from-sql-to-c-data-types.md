@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224483"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>SQL から C データ型へのデータ変換
@@ -33,7 +33,7 @@ ms.locfileid: "63224483"
   
  次の表は、ODBC SQL からサポートされている変換にデータ型を ODBC C データ型を示します。 塗りつぶされた円は、SQL データ型の既定の変換を示します (をデータが変換されるときに、C データ型の値*TargetType* SQL_C_DEFAULT が)。 白抜きの円では、サポートされている変換を示します。  
   
- ODBC 3 の場合、*.x* ODBC 2 を使用するアプリケーション *。x*ドライバー、ドライバー固有のデータ型がサポートされていない可能性がありますから変換します。  
+ ODBC 3 の場合、 *.x* ODBC 2 を使用するアプリケーション *。x*ドライバー、ドライバー固有のデータ型がサポートされていない可能性がありますから変換します。  
   
  変換後のデータの形式は、Windows® 国設定の影響を受けません。  
   

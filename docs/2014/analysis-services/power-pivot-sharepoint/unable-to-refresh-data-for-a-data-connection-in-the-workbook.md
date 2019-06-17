@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070942"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブック内のデータ接続に関するデータを更新できません。 再試行するか、システム管理者に問い合わせてください。 次の接続の更新に失敗しました:[PowerPivot データ]
@@ -54,7 +54,7 @@ ms.locfileid: "66070942"
   
  PowerPivot for SharePoint を実行するサーバーは、更新された OLE DB データ プロバイダーを自動的に取得します。 同じコンピューター上の PowerPivot for SharePoint を使用しない、スタンドアロン インスタンスの Excel Services など、その他のサーバーは、新しいクライアント ライブラリを使用するために、更新プログラムを適用する必要があります。 「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。  
   
- **シナリオ 3:ドメイン コント ローラーは使用できません。**  
+ **シナリオ 3: ドメイン コント ローラーは使用できません。**  
   
  ユーザー ID の検証にドメイン コントローラーを使用できないことが原因である場合があります。 Windows トークン サービスに対するクレームにより各接続で SharePoint ユーザーを認証するには、ドメイン コントローラーが必要です。 Windows トークン サービスに対するクレームでは、キャッシュされた資格情報は使用されません。 接続ごとにユーザー ID が検証されます。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66070942"
   
  PowerPivot for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 PowerPivot をオフラインで使用する方法の詳細については、ブログ エントリを参照してください「"PowerPivot サーバーをネットワークから切断を取り入れること」 [ http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)します。  
   
- **シナリオ 4:不安定なサーバー**  
+ **シナリオ 4: 不安定なサーバー**  
   
  1 つ以上のサービスが一貫性のない状態にある可能性があります。 IISRESET を実行すると問題が解決することがあります。  
   

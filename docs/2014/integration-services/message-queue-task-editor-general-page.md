@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057627"
 ---
 # <a name="message-queue-task-editor-general-page"></a>[メッセージ キュー タスク エディター] ([全般] ページ)
@@ -40,7 +40,7 @@ ms.locfileid: "66057627"
  Message Queuing (MSMQ) の 2000 形式を使用するかどうかを指定します。 既定値は `False` です。  
   
  **[MSMQConnection]**  
- 既存の MSMQ 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして、新しい接続マネージャーを作成します。  
+ 既存の MSMQ 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして、新しい接続マネージャーを作成します。  
   
  **関連トピック:** [MSMQ 接続マネージャー](connection-manager/msmq-connection-manager.md)、[MSMQ 接続マネージャー エディター](../../2014/integration-services/msmq-connection-manager-editor.md)  
   

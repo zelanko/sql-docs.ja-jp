@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c506b72f48206f5a68dc10d0b236aa7fb934435
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067089"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>列の非表示または固定 (SSAS テーブル)
@@ -34,7 +34,7 @@ ms.locfileid: "66067089"
   
 1.  モデル デザイナーで、非表示にする列が含まれるテーブルを選択します。  
   
-2.  列を右クリックして **[列を表示しない]** をクリックし、 **[デザイナーとレポートから]**、 **[レポートから]**、 **[デザイナーから]** のいずれかをクリックします。  
+2.  列を右クリックして **[列を表示しない]** をクリックし、 **[デザイナーとレポートから]** 、 **[レポートから]** 、 **[デザイナーから]** のいずれかをクリックします。  
   
 ### <a name="to-hide-multiple-columns"></a>複数の列を非表示にするには  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66067089"
     > [!NOTE]  
     >  固定された列は、デザイナーのテーブルの左側 (前) に移動されます。 列の固定を解除しても、元の場所には戻りません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルと列 &#40;SSAS テーブル&#41;](tables-and-columns-ssas-tabular.md)   
  [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)   
  [ロール (SSAS テーブル)](roles-ssas-tabular.md)  

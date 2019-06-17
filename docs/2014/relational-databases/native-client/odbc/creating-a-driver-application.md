@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205267"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>SQL Server Native Client ODBC ドライバー アプリケーションの作成
@@ -66,7 +66,7 @@ ms.locfileid: "63205267"
   
 -   一括コピー操作を実行します。  
   
--   大規模なデータの管理 (**では**、 **nvarchar(max)**、および**varbinary(max)** 列) の操作  
+-   大規模なデータの管理 (**では**、 **nvarchar(max)** 、および**varbinary(max)** 列) の操作  
   
 -   データベース ミラーリングが構成されているときにフェールオーバーを容易にするための再接続ロジックの使用  
   
@@ -115,7 +115,7 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
 -   [マルチスレッド アプリケーション](creating-a-driver-application-multithreaded-applications.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)  
   
   

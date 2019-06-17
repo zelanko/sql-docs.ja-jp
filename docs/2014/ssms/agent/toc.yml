@@ -146,7 +146,7 @@
     - name: イベントの監視と応答
       href: monitor-and-respond-to-events.md
       items:
-        - name: オブジェクト エクスプローラーには
+        - name: 警告
           href: alerts.md
           items:
             - name: Create a WMI Event Alert
@@ -170,7 +170,7 @@
               href: send-sql-server-agent-error-messages.md
             - name: Disable or Reactivate an Alert
               href: disable-or-reactivate-an-alert.md
-        - name: 演算子
+        - name: オペレーター
           href: operators.md
           items:
             - name: オペレーターの作成
@@ -309,7 +309,7 @@
       href: operator-properties-new-operator-general-page.md
     - name: '[オペレーターのプロパティ]:[新しいオペレーター] ([通知] ページ)'
       href: operator-properties-new-operator-notifications-page.md
-    - name: '[<OperatorName> のプロパティ] \([履歴] ページ)'
+    - name: '[<OperatorName> のプロパティ] ([履歴] ページ)'
       href: operator-properties-history-page.md
     - name: Delete 操作
       href: delete-operator.md
@@ -325,7 +325,7 @@
       href: sql-server-agent-properties-alert-system-page.md
     - name: '[SQL Server エージェントのプロパティ] ダイアログ ボックス ([ジョブ システム] ページ)'
       href: sql-server-agent-properties-job-system-page.md
-    - name: '[SQL Server エージェントのプロパティ]\([接続] ページ)'
+    - name: '[SQL Server エージェントのプロパティ] ([接続] ページ)'
       href: sql-server-agent-properties-connection-page.md
     - name: 'SQL Server エージェントのプロパティ ([履歴] ページ)'
       href: sql-server-agent-properties-history-page.md

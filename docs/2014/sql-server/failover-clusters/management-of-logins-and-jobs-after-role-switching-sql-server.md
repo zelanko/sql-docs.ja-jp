@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63252854"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>役割の交代後のログインとジョブの管理 (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "63252854"
  元のプライマリ/プリンシパル サーバー インスタンスが使用できる場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のそのインスタンスで元のジョブを削除する必要があります。 現在のミラー データベースのジョブは RESTORING 状態であるため失敗し、使用できなくなります。  
   
 > [!NOTE]  
->   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを、別のドライブ文字などを使用して別に構成できます。 パートナーごとのジョブは、このような違いを考慮する必要があります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを、別のドライブ文字などを使用して別に構成できます。 パートナーごとのジョブは、このような違いを考慮する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   

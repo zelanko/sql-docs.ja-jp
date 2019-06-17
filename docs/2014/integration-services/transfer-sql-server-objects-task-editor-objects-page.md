@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054864"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>[SQL Server オブジェクトの転送タスク エディター] ([オブジェクト] ページ)
@@ -29,13 +29,13 @@ ms.locfileid: "66054864"
   
 ## <a name="static-options"></a>静的オプション  
  **SourceConnection**  
- SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
   
  **[SourceDatabase]**  
  オブジェクトのコピー元の転送元サーバー上のデータベースを選択します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
   
  **[DestinationDatabase]**  
  オブジェクトのコピー先の転送先サーバー上のデータベースを選択します。  

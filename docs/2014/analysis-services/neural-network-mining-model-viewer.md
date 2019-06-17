@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072316"
 ---
 # <a name="neural-network-mining-model-viewer"></a>ニューラル ネットワーク (マイニング モデル ビューアー)
   **ニューラル ネットワーク** ビューアーを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムまたは [!INCLUDE[msCoName](../includes/msconame-md.md)] ロジスティック回帰アルゴリズムに基づくマイニング モデルを調べることができます。  
   
- **詳細情報。**[Microsoft ニューラル ネットワーク アルゴリズム](data-mining/microsoft-neural-network-algorithm.md)、 [Microsoft ロジスティック回帰アルゴリズム](data-mining/microsoft-logistic-regression-algorithm.md)、[Microsoft ニューラル ネットワーク ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **詳細情報。** [Microsoft ニューラル ネットワーク アルゴリズム](data-mining/microsoft-neural-network-algorithm.md)、 [Microsoft ロジスティック回帰アルゴリズム](data-mining/microsoft-logistic-regression-algorithm.md)、[Microsoft ニューラル ネットワーク ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -39,7 +39,7 @@ ms.locfileid: "66072316"
   
 |値|説明|  
 |-----------|-----------------|  
-|**属性**|一覧から入力属性を選択します。 既定で選択した場合**\<すべて >** グラフには、すべての入力属性、予測可能な属性に与える影響順の一覧が表示されます。|  
+|**属性**|一覧から入力属性を選択します。 既定で選択した場合 **\<すべて >** グラフには、すべての入力属性、予測可能な属性に与える影響順の一覧が表示されます。|  
 |**[値]**|入力属性の値を選択します。|  
   
  **出力**  

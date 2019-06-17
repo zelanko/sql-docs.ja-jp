@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 823177f8fef91dda8cf879f6be84ef6706224fad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49522e397789c5193ed8f218a5fdf776ba62f001
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600240"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799362"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>ステップ 1: Node.js 開発用に開発環境を構成する
 SQL Server 用 Node.js ドライバーを使用してアプリケーションを開発するために、前提条件、開発環境を構成する必要があります。  ノード パッケージ マネージャー (npm) を使用して、面倒なモジュールをインストールする最も一般的な方法がダウンロードできるは面倒なモジュールに直接[Github](https://github.com/pekim/tedious)したい場合。  

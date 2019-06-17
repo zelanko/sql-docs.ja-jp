@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069110"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスター ダイアグラム] タブ (マイニング モデル ビューアー)
@@ -24,7 +24,7 @@ ms.locfileid: "66069110"
   
  ドリルスルーが有効な場合に、各クラスターからサポートするケースをドリルスルーには、シーケンス クラスター モデルのこのビューを使用します。 クラスターにわかりやすい名前を割り当てておき、シェーディング変数を変更することで値の分布をひとめで評価することもできます。  
   
- **詳細情報。**[Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **詳細情報。** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -52,7 +52,7 @@ ms.locfileid: "66069110"
  画面の大きさに合うようにダイアグラム全体を縮小します。  
   
  **ノードを検索します。**  
- グラフ内のクラスターにフィルターを適用して特定のクラスターを簡単に検索するには、**[ノードの検索]** ダイアログ ボックスを使用します。 詳細については、「[[ノードの検索] ダイアログ ボックス (マイニング モデル ビューアー)](find-node-dialog-box-mining-model-viewer.md)」を参照してください。  
+ グラフ内のクラスターにフィルターを適用して特定のクラスターを簡単に検索するには、 **[ノードの検索]** ダイアログ ボックスを使用します。 詳細については、「[[ノードの検索] ダイアログ ボックス (マイニング モデル ビューアー)](find-node-dialog-box-mining-model-viewer.md)」を参照してください。  
   
  このコンテキストでは、検索はクラスターの名前でのみ実行でき、クラスター内の属性は使用できません。したがって、このオプションは、クラスターにわかりやすい名前を割り当てている場合に最も役に立ちます。 ビューアーに表示されているクラスターを右クリックし、 **[名前の変更]** をクリックすることで、クラスターに名前を割り当てることができます。  
   

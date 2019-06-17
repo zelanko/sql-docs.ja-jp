@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054277"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
@@ -51,11 +51,11 @@ ms.locfileid: "66054277"
  **Source**  
  **[ソース]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[ソース]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[ソース]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[ソース]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[**\<新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[ソース]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[ **\<新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66054277"
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
  **変換先**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -112,11 +112,11 @@ ms.locfileid: "66054277"
  **[SecondOperand]**  
  **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -130,11 +130,11 @@ ms.locfileid: "66054277"
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
  **変換先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -158,11 +158,11 @@ ms.locfileid: "66054277"
  **[SecondOperand]**  
  **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -176,11 +176,11 @@ ms.locfileid: "66054277"
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
  **変換先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -204,11 +204,11 @@ ms.locfileid: "66054277"
  **[SecondOperand]**  
  **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -239,11 +239,11 @@ ms.locfileid: "66054277"
  **[XPathStringSource]**  
  **[XPathStringSourceType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[XPathStringSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[XPathStringSourceType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[XPathStringSourceType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
@@ -256,11 +256,11 @@ ms.locfileid: "66054277"
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
  **変換先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -284,11 +284,11 @@ ms.locfileid: "66054277"
  **[SecondOperand]**  
  **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
@@ -331,11 +331,11 @@ ms.locfileid: "66054277"
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
  **変換先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -359,11 +359,11 @@ ms.locfileid: "66054277"
  **[SecondOperand]**  
  **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
@@ -377,11 +377,11 @@ ms.locfileid: "66054277"
  対象となるファイルまたは変数を上書きするかどうかを指定します。  
   
  **変換先**  
- **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[DestinationType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[DestinationType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)。  
   
@@ -405,11 +405,11 @@ ms.locfileid: "66054277"
  **[SecondOperand]**  
  **[SecondOperandType]** が **[直接入力]** に設定されている場合は、XML コードを指定するか、省略記号ボタン **[...]** をクリックしてから **[ドキュメント ソース エディター]** ダイアログ ボックスを使用して XML を指定します。  
   
- **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ **[SecondOperandType]** が **[ファイル接続]** に設定されている場合は、ファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ **[SecondOperandType]** が **[変数]** に設定されている場合は、既存の変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   

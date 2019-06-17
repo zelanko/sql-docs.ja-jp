@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 94c7f34ebf66f4bf33acf51e44397a74de2367e0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610754"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801722"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>透過的なネットワーク IP の解決の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -47,7 +47,7 @@ Keyword|値|既定
 
 `SQL_COPT_SS_TNIR`接続前の属性により、アプリケーションがプログラムでこの設定を制御します。
 
-接続属性|   サイズやタイプ|  既定| ReplTest1| [説明]
+接続属性|   サイズ/型|  既定| [値]| [説明]
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` または `SQL_IS_UINTEGER`| `SQL_IS_ON`(1)、`SQL_IS_OFF`(0)|`SQL_IS_ON`|有効または TNIR を無効にします。
 

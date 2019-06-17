@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: df1608fd078aa4c95bd50249eef59d4650a4889f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298520"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>呼び出し順序のカスタマイズ (SybaseToSQL)
@@ -28,6 +28,6 @@ ms.locfileid: "63298520"
 ## <a name="next-step"></a>次の手順  
 [テスト_ケースの準備の終了&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

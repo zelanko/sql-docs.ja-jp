@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0106bc32724bbe4e2e2faed4ead5750440508d7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191910"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のインポート (SQL Server Management Studio)
@@ -40,7 +40,7 @@ ms.locfileid: "63191910"
 3.  **[登録済みサーバーのインポート]** ダイアログ ボックスで、インポートする登録済みサーバーのファイルをクリックし、 **[OK]** をクリックします。  
   
      **[インポート ファイル]**  
-     インポート ファイルの名前をテキスト ボックスに入力します。または、参照ボタン (**[...]**) をクリックし、クライアント コンピューター上のインポート ファイルを指定します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 あらかじめエクスポートされた登録済みサーバー ファイルだけを、インポート ファイルとして使用できます。 登録済みサーバー ファイルは、拡張子 .regsrvr を持ちます。  
+     インポート ファイルの名前をテキスト ボックスに入力します。または、参照ボタン ( **[...]** ) をクリックし、クライアント コンピューター上のインポート ファイルを指定します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 あらかじめエクスポートされた登録済みサーバー ファイルだけを、インポート ファイルとして使用できます。 登録済みサーバー ファイルは、拡張子 .regsrvr を持ちます。  
   
      **[インポート先のサーバー グループを選択]**  
      ファイル内の登録済みサーバーのエントリのインポート先のルート ノード、または特定のサーバー グループを選択します。 エクスポート ファイルには、すべての登録済みサーバー、特定のサーバー グループ内の登録済みサーバー、または単独の登録済みサーバーをインポートできます。 インポート機能は再帰的です。たとえば、サーバー グループ A にサーバー グループ B が含まれており、サーバー グループ B にサーバー グループ C および D が含まれている場合、サーバー グループ A をインポートすると、A、B、C、および D 内のすべてのエントリがエクスポートされます。  
@@ -51,7 +51,7 @@ ms.locfileid: "63191910"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するサーバー登録は、パスワードをユーザーごとに格納します。 ユーザーは、サーバー登録をインポートした後、それぞれのサーバーに初めて接続するときにパスワードを入力して、登録済みサーバーの一覧にパスワードを保存する必要があります。 Windows 認証を使用して登録されるサーバーの場合は、この操作は必要ありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーの登録変更&#40;SQL Server Management Studio&#41; ](change-a-server-s-registration-sql-server-management-studio.md) [登録済みサーバー情報をエクスポート&#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
  [新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   

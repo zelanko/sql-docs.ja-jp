@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060588"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>[SSIS ログの構成] ダイアログ ボックス
@@ -73,9 +73,9 @@ ms.locfileid: "66060588"
  [説明] フィールドは編集可能です。 クリックして、ログの既定の説明を変更します。  
   
  **Configuration**  
- 既存の接続マネージャーを一覧から選択するか、**[\<新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
+ 既存の接続マネージャーを一覧から選択するか、 **[\<新しい接続>]** をクリックして新しい接続マネージャーを作成します。 ログ プロバイダーの種類によっては、OLE DB 接続マネージャーやファイル接続マネージャーを構成できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows イベント ログ用のログ プロバイダーの場合、接続は不要です。  
   
- 関連項目:[OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) マネージャー、[File Connection Manager](connection-manager/file-connection-manager.md)  
+ 関連トピック:[OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) マネージャー、[File Connection Manager](connection-manager/file-connection-manager.md)  
   
  **削除**  
  ログ プロバイダーを選択して、 **[削除]** をクリックします。  

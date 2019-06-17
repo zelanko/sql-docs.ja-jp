@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241431"
 ---
 # <a name="c-to-sql-timestamp"></a>C から SQL へ: Timestamp
@@ -41,6 +41,6 @@ Timestamp ODBC C データ型の識別子です。
   
  SQL_C_TIMESTAMP 構造で有効な値については、次を参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)、この付録で以前のバージョン。  
   
- C のタイムスタンプ データは、SQL データの文字に変換するときに、結果の文字データは、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"の形式。  
+ C のタイムスタンプ データは、SQL データの文字に変換するときに、結果の文字データは、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.* ]"の形式。  
   
  ドライバーでは、タイムスタンプ C データ型からデータを変換するとき長さ/インジケーター値を無視し、データ バッファーのサイズがタイムスタンプ C データ型のサイズであると仮定します。 長さまたはインジケーターの値が渡さ、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー、 *StrLen_or_IndPtr* 引数**SQLBindParameter**します。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.

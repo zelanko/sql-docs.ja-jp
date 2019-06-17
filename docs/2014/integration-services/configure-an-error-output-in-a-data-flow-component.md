@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060814"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>データ フロー コンポーネントでエラー出力を構成する
@@ -82,7 +82,7 @@ ms.locfileid: "66060814"
   
 4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
-5.  **[入力プロパティと出力プロパティ]** タブをクリックして、**[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
+5.  **[入力プロパティと出力プロパティ]** タブをクリックして、 **[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
   
 6.  列をクリックして、プロパティを更新します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66060814"
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データのエラー処理](data-flow/error-handling-in-data.md)  
   
   

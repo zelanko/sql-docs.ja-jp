@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63265857"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>カスタム レポート アイテムの実行時コンポーネントの作成
@@ -146,7 +146,7 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム レポート アイテムのアーキテクチャ](custom-report-item-architecture.md)   
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)   

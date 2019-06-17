@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078786"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>レッスン 4:日付テーブルとしてマーク
@@ -33,7 +33,7 @@ ms.locfileid: "66078786"
   
 1.  モデル デザイナーで、 **Date** テーブル (タブ) をクリックします。  
   
-2.  **[テーブル]** メニュー、**[日付]** **[日付テーブルとしてマーク]** の順にクリックします。  
+2.  **[テーブル]** メニュー、 **[日付]** **[日付テーブルとしてマーク]** の順にクリックします。  
   
 3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意の識別子として **[Date]** 列を選択します。  
   

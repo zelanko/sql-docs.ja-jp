@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae175665c2a62caa2d3b7b845c68fefebcfd4c32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181527"
 ---
 # <a name="comparison-operators"></a>比較演算子
@@ -36,7 +36,7 @@ ms.locfileid: "63181527"
 |[< (より小さい)](../mdx/less-than-mdx.md)|Null 以外の引数の左辺の引数が右辺の引数より小さい値を持つ場合に TRUE を返しますそれ以外の場合、FALSE です。<br /><br /> いずれかまたは両方の引数は、null 値に評価される、演算子は null 値を返します。|  
 |[<= (以下)](../mdx/less-than-or-equal-to-mdx.md)|NULL 以外の引数について、左の引数の値が右の引数の値以下である場合に TRUE を返します。そうでない場合は、FALSE を返します。<br /><br /> いずれかまたは両方の引数は、null 値に評価される、演算子は null 値を返します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [演算子&#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
   

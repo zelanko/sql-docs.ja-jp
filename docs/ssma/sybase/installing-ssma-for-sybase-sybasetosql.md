@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b859c3b9841945241ac0ec9c5238a479a5ba3343
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63302818"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE (SybaseToSQL) のインストール
@@ -35,5 +35,5 @@ SAP ASE の SSMA の以前のバージョンからプロジェクトを開く場
 |[SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|インスタンスに拡張機能パックをインストールするための情報と手順を提供します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |[SSMA for SAP ASE のコンポーネントの削除&#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|クライアントをアンインストールする方法についてのプログラムと拡張機能パックを提供します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server - Azure SQL Database への移行の SAP ASE データベース&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

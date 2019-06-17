@@ -10,10 +10,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014249"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -181,7 +181,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  @g1 と @g2 はどちらも同じ外部境界リング (半径 5 の円) を使用し、内部リングに正方形を使用しています。  しかし、インスタンス @g1 は有効ですが、インスタンス @g2 は無効です。  @g2 が無効な理由は、外部リングによって範囲指定された内部空間が内部リングによって 4 つの別個の領域に分割されているためです。  この状況を次の図に示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   

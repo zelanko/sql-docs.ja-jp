@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193249"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML での RAW モードの使用
@@ -49,7 +49,7 @@ ms.locfileid: "63193249"
   
 -   [例: XML 型の列のクエリ](example-querying-xmltype-columns.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [FOR XML での AUTO モードの使用](use-auto-mode-with-for-xml.md)   
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)   

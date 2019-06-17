@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63222940"
 ---
 # <a name="adding-indentation"></a>インデントの追加
@@ -48,7 +48,7 @@ ms.locfileid: "63222940"
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]**、 **[すべての言語]** の順に展開し、 **[タブ]** をクリックして、適切なインデント幅を設定します。 インデント幅とタブのサイズを変更できるほか、タブをスペースに変換するかどうかも指定できます。  
+2.  **[テキスト エディター]** 、 **[すべての言語]** の順に展開し、 **[タブ]** をクリックして、適切なインデント幅を設定します。 インデント幅とタブのサイズを変更できるほか、タブをスペースに変換するかどうかも指定できます。  
   
      ![[タブ] ダイアログ ボックスの表示](media/tabsdialog.gif "[タブ] ダイアログ ボックスの表示")  
   

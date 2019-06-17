@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192469"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>レプリケーション エージェントを起動および停止する (SQL Server Management Studio)
@@ -55,7 +55,7 @@ ms.locfileid: "63192469"
   
 2.  **[SQL Server エージェント]** フォルダーを展開して、 **[ジョブ]** フォルダーを展開します。  
   
-3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キュー リーダー エージェントのジョブの名前は、**[\<ディストリビューター>].\<整数>** という形式になっています。  
+3.  エージェントのジョブを右クリックして **[ジョブの開始]** または **[ジョブの停止]** をクリックします。 キュー リーダー エージェントのジョブの名前は、 **[\<ディストリビューター>].\<整数>** という形式になっています。  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>レプリケーション モニターからスナップショット エージェント、ログ リーダー エージェント、またはキュー リーダー エージェントを開始および停止するには  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63192469"
   
 3.  エージェントを右クリックして **[エージェントの開始]** または **[エージェントの停止]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーションの監視](../monitoring-replication.md)   
  [レプリケーション エージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](replication-agents-overview.md)  

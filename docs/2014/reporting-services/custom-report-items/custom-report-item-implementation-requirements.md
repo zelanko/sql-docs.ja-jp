@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce2ecf5e44b18298823240519c99eccb80d016e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63264814"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>カスタム レポート アイテムの実装要件
@@ -48,7 +48,7 @@ ms.locfileid: "63264814"
 ## <a name="see-also"></a>参照  
  [カスタム レポート アイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)   
- [方法: カスタム レポート アイテムを配置します。](how-to-deploy-a-custom-report-item.md)   
+ [方法:カスタム レポート アイテムを配置します。](how-to-deploy-a-custom-report-item.md)   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)  
   
   

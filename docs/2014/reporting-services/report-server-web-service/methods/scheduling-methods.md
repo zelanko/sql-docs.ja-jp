@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99dac71ba0be4f4c3f3ff669f838b0409b996f06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63283454"
 ---
 # <a name="scheduling-methods"></a>メソッドのスケジュール設定
@@ -42,7 +42,7 @@ ms.locfileid: "63283454"
 |<xref:ReportService2010.ReportingService2010.SetCacheRefreshPlanProperties%2A>|キャッシュ更新計画のプロパティを設定します。|  
 |<xref:ReportService2010.ReportingService2010.SetScheduleProperties%2A>|共有スケジュールのプロパティ値を設定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [レポート サーバー Web サービス](../report-server-web-service.md)   
  [レポート サーバー Web サービス メソッド](report-server-web-service-methods.md)   

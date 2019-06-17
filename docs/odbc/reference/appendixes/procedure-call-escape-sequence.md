@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188499"
 ---
 # <a name="procedure-call-escape-sequence"></a>プロシージャ呼び出しのエスケープ シーケンス
 ODBC では、プロシージャ呼び出しのエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
   
- **{**[? =]**呼び出す** *プロシージャ名*[**(**[*パラメーター*] [、[*パラメーター*].**)**] **}**   
+ **{** [? =]**呼び出す** *プロシージャ名*[ **(** [*パラメーター*] [、[*パラメーター*]. **)** ] **}**  
   
  BNF 表記では、構文がとおりです。  
   

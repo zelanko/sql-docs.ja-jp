@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240488"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>トレース テーブルの再生 (SQL Server Profiler)
@@ -37,7 +37,7 @@ ms.locfileid: "63240488"
   
     -   **[ファイルに保存]** : 再生の保存先となるファイルを指定します。  
   
-    -   **[テーブルに保存]**: 再生の保存先となるデータベース テーブルを指定します。  
+    -   **[テーブルに保存]** : 再生の保存先となるデータベース テーブルを指定します。  
   
 5.  **[トレースされた順番にイベントを再生します。このオプションはデバッグを有効にします。]** または **[複数のスレッドを使用してイベントを再生します。このオプションはパフォーマンスを最適にし、デバッグを無効にします。]** のいずれかを選択します。 次の表では、これらの設定の違いについて説明します。  
   

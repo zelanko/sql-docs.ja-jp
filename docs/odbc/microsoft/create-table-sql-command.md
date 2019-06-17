@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63232291"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL コマンド
@@ -55,7 +55,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  長い名前は、最大 128 文字を含めることができ、データベース内の短いファイル名の代わりに使用できます。  
   
- 無料  
+ FREE  
  テーブルが開いているデータベースに追加されませんを指定します。 FREE は、データベースが開いていない場合に必要はありません。  
   
  *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  

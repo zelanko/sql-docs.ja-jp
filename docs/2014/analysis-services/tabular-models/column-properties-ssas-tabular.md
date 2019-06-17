@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2773c2b837aa9344e2e8427c6f960fa098fa2408
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067607"
 ---
 # <a name="column-properties-ssas-tabular"></a>Column Properties (SSAS Tabular)
@@ -48,7 +48,7 @@ ms.locfileid: "66067607"
 |--------------|---------------------|-----------------|  
 |[既定の画像]|False|行データを表す画像を提供する列 (たとえば、従業員レコードの写真 ID) を指定します。|  
 |既定のラベル|False|行データを表す表示名を提供する列 (たとえば、従業員レコードの従業員名) を指定します。|  
-|[画像の URL]/[データ カテゴリ] (SP1)|False|サーバー上の画像へのハイパーリンクとして、この列の値を指定します。 たとえば、 http://localhost/images/image1.jpgのようにします。|  
+|[画像の URL]/[データ カテゴリ] (SP1)|False|サーバー上の画像へのハイパーリンクとして、この列の値を指定します。 たとえば、 http://localhost/images/image1.jpg のようにします。|  
 |[一意の行を保持]|False|重複している場合でも一意として扱う必要のある値を提供する列を指定します (たとえば、2 人以上の従業員が同じ名前を持つ可能性がある場合の従業員の姓名)。|  
 |[行識別子 (ROWID)]|False|一意の値のみ含む列を指定します。その列を内部グループ化キーとして使用できます。|  
 |集計の方法|既定値|この列がフィールドの一覧に追加されたとき、列の計算に集計関数 SUM を適用するレポート クライアント ツールを指定します。 既定の計算を変更するには、ドロップダウン リストから選択します。 このプロパティは、集計が可能な種類の列にのみ適用されます。|  
@@ -60,7 +60,7 @@ ms.locfileid: "66067607"
   
 2.  **[プロパティ]** ウィンドウで、プロパティをクリックして値を入力するか、下矢印をクリックして設定オプションを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power View レポート プロパティ (SSAS テーブル)](properties-ssas-tabular.md)   
  [列の非表示または固定 (SSAS テーブル)](hide-or-freeze-columns-ssas-tabular.md)   
  [列のテーブルへの追加 (SSAS テーブル)](add-columns-to-a-table-ssas-tabular.md)  

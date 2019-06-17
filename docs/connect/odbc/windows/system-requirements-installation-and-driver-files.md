@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 6ff03713555f73a26e48f9760f87cb281b4a98ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: HT
+ms.openlocfilehash: 9b48188cbc1eb25774bc127246514d82ca5ef475
+ms.sourcegitcommit: 40e55e55a73e39d447da87d9178f2b6067f39c6f
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797715"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66841088"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>インストール、ドライバー ファイルの基本的なシステム要件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,9 @@ ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 上記に加え、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の ODBC Driver 13 および 13.1 では SQL Server 2016 をサポートしています。 
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の ODBC Driver 17 は上記すべてと、SQL Server 2017 もサポートしています。
-  
+
+ODBC Driver 17 for SQL Server には、SQL Server の 2019 ドライバー バージョン 17.3 以降がサポートされています。
+
 接続文字列で指定するドライバー名は `ODBC Driver 11 for SQL Server` または `ODBC Driver 13 for SQL Server` (13 と 13.1 の両方) または `ODBC Driver 17 for SQL Server` です。
   
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム

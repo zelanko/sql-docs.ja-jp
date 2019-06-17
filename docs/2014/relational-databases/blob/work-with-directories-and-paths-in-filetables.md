@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66009880"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
   FileTable 内でファイルが格納されるディレクトリ構造について説明します。  
   
-##  <a name="HowToDirectories"></a> 操作方法：FileTable 内のディレクトリとパスの操作  
+##  <a name="HowToDirectories"></a> 方法:FileTable 内のディレクトリとパスの操作  
  次の 3 つの関数を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で FileTable ディレクトリを操作することができます。  
   
 |目的|使用する関数|  
@@ -31,7 +31,7 @@ ms.locfileid: "66009880"
 |FileTable 内のファイルまたはディレクトリの絶対 UNC パスまたは相対 UNC パスを取得する。|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |パスを指定して、FileTable 内の指定されたファイルまたはディレクトリのパス ロケーター ID 値を取得する。|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 操作方法：移植可能なコードの相対パスを使用します。  
+##  <a name="BestPracticeRelativePaths"></a> 方法:相対パスを使用して移植可能なコードを実現する  
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、以下の例に示すように [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 関数および [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 関数を併用して、実行時にファイルの完全なパスを取得します。 既定では、`GetFileNamespacePath` 関数はデータベースのルート パスにあるファイルの相対パスを返します。  
   
 ```sql  
@@ -108,7 +108,7 @@ GO
   
 -   ファイル システム API を介した FILESTREAM または FileTable データへのすべてのアクセスでは、コンピューター名ではなく VNN を使用する必要があります。 詳細については、「[FILESTREAM および FileTable と AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)   
  [FileTable の作成、変更、および削除](create-alter-and-drop-filetables.md)   
  [Transact SQL を使用した FileTable へのアクセス](access-filetables-with-transact-sql.md)   

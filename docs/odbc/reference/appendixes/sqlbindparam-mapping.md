@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199712"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam のマッピング
@@ -39,5 +39,5 @@ SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    
   
  参照してください[ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)場合、アプリケーションが 64 ビットのオペレーティング システムで実行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)

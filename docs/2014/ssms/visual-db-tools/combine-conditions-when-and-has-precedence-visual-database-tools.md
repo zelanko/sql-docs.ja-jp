@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63225807"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63225807"
   
 -   入社日が 5 年以上前で、かつ職務レベルが 100 の従業員  
   
-     - または -  
+     \- または -  
   
 -   職務レベルが 200 の従業員  
   
