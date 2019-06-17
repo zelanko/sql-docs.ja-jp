@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03c0d26ae97be2ca22b341c40b01cf0e5c558399
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724642"
 ---
 # <a name="validating-a-data-flow-component"></a>データ フロー コンポーネントの検証
@@ -43,7 +43,7 @@ ms.locfileid: "65724642"
   
  値 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> は、コンポーネントにエラーがあるが、デザイナーで編集することにより修復できることを示します。 このエラーが発生するのは、通常、カスタム プロパティまたは必要な接続が指定されていない、または正しく設定されていないためです。  
   
- 値 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT> は、パッケージ XML の編集、またはオブジェクト モデルの使用により、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> プロパティが直接修正された場合にのみ発生するエラーがコンポーネントで見つかったことを示します。 たとえば、コンポーネントに入力が 1 つしか追加されていないのに、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> に複数の入力が存在することが検証で確認された場合、この種のエラーが発生します。 この戻り値を生成するエラーを修正するには、**[詳細エディター]** ダイアログ ボックスで **[リセット]** をクリックして、コンポーネントをリセットするしか方法がありません。  
+ 値 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT> は、パッケージ XML の編集、またはオブジェクト モデルの使用により、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> プロパティが直接修正された場合にのみ発生するエラーがコンポーネントで見つかったことを示します。 たとえば、コンポーネントに入力が 1 つしか追加されていないのに、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> に複数の入力が存在することが検証で確認された場合、この種のエラーが発生します。 この戻り値を生成するエラーを修正するには、 **[詳細エディター]** ダイアログ ボックスで **[リセット]** をクリックして、コンポーネントをリセットするしか方法がありません。  
   
  戻り値としてエラーを返す以外に、検証中に警告やエラーを通知し、コンポーネントにフィードバックを送信する方法もあります。 このメカニズムは、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> メソッドによって提供されます。 これらのメソッドが呼び出されると、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] の **[エラー一覧]** ウィンドウにイベントが表示されます。 コンポーネント開発者は、発生したエラーに関するフィードバックや、必要に応じて、修正方法を直接ユーザーに通知することもできます。  
   

@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77179188b7f1d56e85b4122a327bac4c5df0d817
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095774"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>ジョブ ステップのプロパティ - [新しいジョブ ステップ] \([全般] ページ)
@@ -29,7 +29,7 @@ ms.locfileid: "65095774"
 
 このページでは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップのプロパティを表示または変更します。新しいジョブ ステップを定義することもできます。  
   
-このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]**、 **[挿入]**、または **[編集]** をクリックします。  
+このページに移動するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを展開します。次に **[ジョブ]** を右クリックし、 **[新しいジョブ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** をクリックします。 または、オブジェクト エクスプローラーでジョブを右クリックし、 **[プロパティ]** をクリックして **[ステップ]** ページを選択し、 **[新規作成]** 、 **[挿入]** 、または **[編集]** をクリックします。  
   
 ## <a name="options"></a>および  
 **[ステップ名]**  

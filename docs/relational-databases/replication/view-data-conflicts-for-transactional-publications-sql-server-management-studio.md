@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0df33614cbb10708c6438db69807a1ec3c78d4c3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129873"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047936"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>トランザクション パブリケーションのデータの競合の表示 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +58,9 @@ ms.locfileid: "54129873"
   
     -   上のグリッドで複数の行を選択し、 **[削除]** をクリックして、競合メタデータ テーブルから行を削除する。  
   
-    -   プロパティ ボタン (**[...]**) をクリックし、競合に関係のある列の詳細情報を表示する。  
+    -   プロパティ ボタン ( **[...]** ) をクリックし、競合に関係のある列の詳細情報を表示する。  
   
-    -   **[この競合の詳細をログに記録する]** を選択して、競合のデータをログ ファイルに記録する。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、または参照ボタン (**[...]**) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを閉じます。  
+    -   **[この競合の詳細をログに記録する]** を選択して、競合のデータをログ ファイルに記録する。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、または参照ボタン ( **[...]** ) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを閉じます。  
   
 6.  レプリケーション競合表示モジュールを閉じます。  
   

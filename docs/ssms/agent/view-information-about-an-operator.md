@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c34ab77bdb69282d271a82cd69e4e26d2a66a6ca
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103195"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
@@ -71,7 +71,7 @@ ms.locfileid: "65103195"
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  表示するオペレーターを右クリックし、**[プロパティ]** をクリックします。  
+4.  表示するオペレーターを右クリックし、 **[プロパティ]** をクリックします。  
   
     _operator_name_**のプロパティ** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65103195"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- reports information about operator François Ajenstat   

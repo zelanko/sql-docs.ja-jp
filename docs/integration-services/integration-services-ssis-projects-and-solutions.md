@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39401de76578ede9bb9ec1d30bc16f1fb933ce57
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723557"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS) プロジェクトとソリューション
@@ -87,7 +87,7 @@ ms.locfileid: "65723557"
 ## <a name="version-targeting-in-integration-services-projects"></a>Integration Services プロジェクトの対象バージョン  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]では、SQL Server 2016、SQL Server 2014 または SQL Server 2012 を対象とするパッケージを実行、作成、および管理できます。  
   
- ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、**[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
+ ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
   
  ![[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ](../integration-services/media/targetserverversion2.png "[プロジェクトのプロパティ] ダイアログ ボックスの TargetServerVersion プロパティ")  
  
@@ -97,7 +97,7 @@ ms.locfileid: "65723557"
   
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** ペインで、**[Integration Services プロジェクト]** テンプレートを選択します。  
+3.  **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** ペインで、 **[Integration Services プロジェクト]** テンプレートを選択します。  
   
      **[Integration Services プロジェクト]** テンプレートでは、空のパッケージを 1 つ含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが作成されます。  
   
@@ -105,13 +105,13 @@ ms.locfileid: "65723557"
   
      ソリューション名は、プロジェクト名と一致するように自動的に更新されます。  
   
-5.  ソリューション ファイル用に別のフォルダーを作成するには、**[ソリューションのディレクトリを作成]** を選択します。 既定のオプションです。  
+5.  ソリューション ファイル用に別のフォルダーを作成するには、 **[ソリューションのディレクトリを作成]** を選択します。 既定のオプションです。  
   
-6.  ソース管理ソフトウェアがコンピューターにインストールされている場合、プロジェクトをソース管理に関連付けるには、**[ソース管理に追加]** を選択します。  
+6.  ソース管理ソフトウェアがコンピューターにインストールされている場合、プロジェクトをソース管理に関連付けるには、 **[ソース管理に追加]** を選択します。  
   
-7.  ソース管理ソフトウェアが [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe の場合、**[Visual SourceSafe ログイン]** ダイアログ ボックスが開きます。 **[Visual SourceSafe ログイン]** ダイアログ ボックスで、ユーザー名、パスワード、および [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe データベースの名前を指定します。 データベースを探すには、**[参照]** をクリックします。  
+7.  ソース管理ソフトウェアが [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe の場合、 **[Visual SourceSafe ログイン]** ダイアログ ボックスが開きます。 **[Visual SourceSafe ログイン]** ダイアログ ボックスで、ユーザー名、パスワード、および [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe データベースの名前を指定します。 データベースを探すには、 **[参照]** をクリックします。  
   
-    > **注:** 選択したソース管理プラグインを表示、変更したり、ソース管理の環境を構成するには、**[ツール]** メニューの **[オプション]** をクリックし、**[ソース管理]** ノードを展開します。  
+    > **注:** 選択したソース管理プラグインを表示、変更したり、ソース管理の環境を構成するには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[ソース管理]** ノードを展開します。  
   
 8.  **[OK]** をクリックしてソリューションを**ソリューション エクスプローラー**に追加し、プロジェクトをソリューションに追加します。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "65723557"
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>プロジェクトのインポート ウィザードで既存のプロジェクトをインポートする
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、 **[ファイル]** > **メニューの** [新規作成] **[プロジェクト]** をクリックします。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、 **[ファイル]**  > **メニューの** [新規作成] **[プロジェクト]** をクリックします。  
   
 2.  **[新しいプロジェクト]** ウィンドウの **[インストールされているテンプレート]** 領域で **[ビジネス インテリジェンス]** を展開し、 **[Integration Services]** をクリックします。  
   
@@ -164,11 +164,11 @@ ms.locfileid: "65723557"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの追加先となるソリューションを開き、次のいずれかの操作を行います。  
   
-    -   ソリューションを右クリックして **[追加]** をクリックし、**[新しいプロジェクト]** をクリックします。  
+    -   ソリューションを右クリックして **[追加]** をクリックし、 **[新しいプロジェクト]** をクリックします。  
   
-    -   **[ファイル]** メニューの **[追加]** をポイントし、**[新しいプロジェクト]** をクリックします。  
+    -   **[ファイル]** メニューの **[追加]** をポイントし、 **[新しいプロジェクト]** をクリックします。  
   
-2.  **[新しいプロジェクトの追加]** ダイアログ ボックスの **[テンプレート]** ペインで、**[Integration Services プロジェクト]** をクリックします。  
+2.  **[新しいプロジェクトの追加]** ダイアログ ボックスの **[テンプレート]** ペインで、 **[Integration Services プロジェクト]** をクリックします。  
   
 3.  必要に応じて、プロジェクトの名前と場所を変更します。  
   
@@ -178,11 +178,11 @@ ms.locfileid: "65723557"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、既存の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを追加するソリューションを開き、次のいずれかの操作を行います。  
   
-    -   ソリューションを右クリックして **[追加]** をポイントし、**[既存のプロジェクト]** をクリックします。  
+    -   ソリューションを右クリックして **[追加]** をポイントし、 **[既存のプロジェクト]** をクリックします。  
   
-    -   **[ファイル]** メニューの **[追加]** をクリックし、**[既存のプロジェクト]** をクリックします。  
+    -   **[ファイル]** メニューの **[追加]** をクリックし、 **[既存のプロジェクト]** をクリックします。  
   
-2.  **[既存プロジェクトの追加]** ダイアログ ボックスで、追加するプロジェクトを選択して、**[開く]** をクリックします。  
+2.  **[既存プロジェクトの追加]** ダイアログ ボックスで、追加するプロジェクトを選択して、 **[開く]** をクリックします。  
   
 3.  選択したプロジェクトが、**ソリューション エクスプローラー**のソリューション フォルダーに追加されます。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "65723557"
    
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを削除する対象となるソリューションを開きます。  
   
-2.  ソリューション エクスプローラーでプロジェクトを右クリックし、**[プロジェクトのアンロード]** をクリックします。  
+2.  ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクトのアンロード]** をクリックします。  
   
 3.  **[OK]** をクリックして変更を確認します。  
 
@@ -214,9 +214,9 @@ ms.locfileid: "65723557"
   
 2.  コピー元のプロジェクトとアイテム フォルダーを展開します。  
   
-3.  アイテムを右クリックし、**[コピー]** をクリックします。  
+3.  アイテムを右クリックし、 **[コピー]** をクリックします。  
   
-4.  コピー先の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを右クリックし、**[貼り付け]** をクリックします。  
+4.  コピー先の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを右クリックし、 **[貼り付け]** をクリックします。  
   
      アイテムが適切なフォルダーに自動的にコピーされます。 パッケージではない [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトにアイテムをコピーする場合は、アイテムが **[その他]** フォルダーにコピーされます。  
      

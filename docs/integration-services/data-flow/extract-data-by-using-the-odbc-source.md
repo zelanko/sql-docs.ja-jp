@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0140a11c9b9b4c161deb01d4439e9fb52eda63af
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726835"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 入力元を使用したデータ抽出
@@ -37,11 +37,11 @@ ms.locfileid: "65726835"
   
 5.  データのアクセス方法を選択します。  
   
-    -   **[テーブル名]**: データベースのテーブルまたはビューを選択するか、正規表現を入力して、ODBC 接続マネージャーの接続先のテーブルを指定します。  
+    -   **[テーブル名]** : データベースのテーブルまたはビューを選択するか、正規表現を入力して、ODBC 接続マネージャーの接続先のテーブルを指定します。  
   
          この一覧には、最初の 1,000 個のテーブルのみが含まれます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。  
   
-    -   **[SQL コマンド]**: SQL コマンドを入力するか、**[参照]** をクリックしてテキスト ファイルから SQL クエリを読み込みます。  
+    -   **[SQL コマンド]** : SQL コマンドを入力するか、 **[参照]** をクリックしてテキスト ファイルから SQL クエリを読み込みます。  
   
 6.  **[プレビュー]** をクリックすると、ODBC 入力元によって抽出されるデータを最大 200 行表示できます。  
   

@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0580c61bae4fdca1d311e4ccaee88f05a8b6ecd0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726284"
 ---
 # <a name="aggregate-transformation"></a>集計変換
@@ -72,9 +72,9 @@ ms.locfileid: "65726284"
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
  集計変換には、変換のパフォーマンスが向上するように設定できる、プロパティのセットが含まれています。  
   
--   **グループ化** 操作を実行する場合は、コンポーネントとコンポーネント出力の Keys プロパティまたは KeysScale プロパティを設定します。 Keys を使用すると、変換で処理されるキーの正確な数を指定できます  (ここでは、Keys は、**グループ化**操作の結果として予想されるグループの数を示します)。KeysScale を使用すると、キーの概数を指定できます。 Keys または KeysScale に適切な値を指定すると、変換時にキャッシュされるデータ用に十分なメモリが割り当てられるようになるため、パフォーマンスが向上します。  
+-   **グループ化** 操作を実行する場合は、コンポーネントとコンポーネント出力の Keys プロパティまたは KeysScale プロパティを設定します。 Keys を使用すると、変換で処理されるキーの正確な数を指定できます (ここでは、Keys は、**グループ化**操作の結果として予想されるグループの数を示します)。KeysScale を使用すると、キーの概数を指定できます。 Keys または KeysScale に適切な値を指定すると、変換時にキャッシュされるデータ用に十分なメモリが割り当てられるようになるため、パフォーマンスが向上します。  
   
--   **個別のカウント** 操作を実行するときは、コンポーネントの CountDistinctKeys プロパティまたは CountDistinctScale プロパティを設定します。 CountDistinctKeys を使用すると、変換時に個別のカウント操作で処理されるキーの正確な数を指定できます  (ここでは、CountDistinctKeys は、**個別のカウント**操作の結果として予想される個別の値の数を示します)。CountDistinctScale を使用すると、個別のカウントの操作で処理するキーの概数を指定できます。 CountDistinctKeys または CountDistinctScale に適切な値を指定すると、変換時にキャッシュされるデータ用に十分なメモリが割り当てられるようになるため、パフォーマンスが向上します。  
+-   **個別のカウント** 操作を実行するときは、コンポーネントの CountDistinctKeys プロパティまたは CountDistinctScale プロパティを設定します。 CountDistinctKeys を使用すると、変換時に個別のカウント操作で処理されるキーの正確な数を指定できます (ここでは、CountDistinctKeys は、**個別のカウント**操作の結果として予想される個別の値の数を示します)。CountDistinctScale を使用すると、個別のカウントの操作で処理するキーの概数を指定できます。 CountDistinctKeys または CountDistinctScale に適切な値を指定すると、変換時にキャッシュされるデータ用に十分なメモリが割り当てられるようになるため、パフォーマンスが向上します。  
   
 ## <a name="aggregate-transformation-configuration"></a>集計変換の構成  
  集計変換は、変換、出力、および列の各レベルで構成します。  

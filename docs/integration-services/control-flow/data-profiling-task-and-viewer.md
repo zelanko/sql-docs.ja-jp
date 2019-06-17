@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6301066549a8008512bef934f9d887349a6b765b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727771"
 ---
 # <a name="data-profiling-task-and-viewer"></a>データ プロファイル タスクとビューアー
@@ -63,12 +63,12 @@ ms.locfileid: "65727771"
  **ステップ 1:データ プロファイル タスクの設定**  
  データ プロファイル タスクは、計算するプロファイルを構成するために使用するタスクです。 データ プロファイル タスクが含まれているパッケージを実行して、プロファイルを計算します。 このタスクによって、XML 形式のプロファイル出力がファイルまたはパッケージ変数に保存されます。  
   
- **詳細:**[データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
+ **詳細:** [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
   
  **手順 2:データ プロファイル タスクで計算されたプロファイルの確認**  
  データ プロファイル タスクで計算されたデータ プロファイルを表示するには、出力をファイルに送信して Data Profile Viewer を使用します。 このビューアーは、サマリ形式とオプションのドリル ダウン機能を使用した詳細形式の両方でプロファイル出力を表示するスタンドアロンのユーティリティです。  
   
- **詳細:**[Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
+ **詳細:** [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>データ プロファイル ワークフローへの条件ロジックの追加  
  データ プロファイル タスクには、プロファイルの出力に基づいてこのタスクを下流のタスクに接続するための条件ロジックを使用できるようにする機能が組み込まれていません。 ただし、スクリプト タスクで少量のプログラミングを行って、このロジックを簡単に追加することができます。 たとえば、スクリプト タスクでは、データ プロファイル タスクの出力ファイルに対して XPath クエリを実行できます。 このクエリによって、特定の列の NULL 値の比率が特定のしきい値を超えていないかどうかを判断できます。 比率がしきい値を超えている場合は、パッケージを中断し、ソース データの問題を解決してから続行することができます。 詳細については、「 [パッケージ ワークフローでデータ プロファイル タスクを使用する](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)」を参照してください。  

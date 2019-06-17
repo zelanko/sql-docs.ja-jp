@@ -15,10 +15,10 @@ ms.author: mathoma
 manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66772230"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 接続構成 (Transact-SQL)
@@ -46,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@configname=** ] **'**_option\_name_**'**  
- 構成オプションの名前を指定します。 *option_name* は **varchar(35)**、既定値は NULL です。 指定しない場合、オプションの完全な一覧が返されます。  
+ [ **@configname=** ] **'** _option\_name_ **'**  
+ 構成オプションの名前を指定します。 *option_name* は **varchar(35)** 、既定値は NULL です。 指定しない場合、オプションの完全な一覧が返されます。  
   
- [ **@configvalue=** ] **'**_value_**'**  
+ [ **@configvalue=** ] **'** _value_ **'**  
  新しい構成設定を指定します。 *value* のデータ型は **int**で、既定値は NULL です。 最大値はオプションごとに異なります。  
   
  **'hadoop connectivity'**  
