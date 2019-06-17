@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0b73e699141e598115f9ce178b74d10cbf22b0f5
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66719154"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize プロパティ - 動的 (ADO)
@@ -50,7 +50,7 @@ fld.Properties("Optimize") = False   'Delete an index
 ## <a name="applies-to"></a>適用対象  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Optimize プロパティの例 (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
  [Optimize プロパティの例 (vc++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   

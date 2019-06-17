@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489126"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>タスク 5:Excel ファイルにクレンジングの結果をエクスポートする
@@ -42,7 +42,7 @@ ms.locfileid: "65489126"
   
     3.  検索**Los Angeles**ことを確認し、**状態**に設定されている**CA**します。  
   
-    4.  条件がないことを確認します。 **co.**、 **Corp.**、と**Inc.** します。  
+    4.  条件がないことを確認します。 **co.** 、 **Corp.** 、と**Inc.** します。  
   
     5.  削除、 **Address Validation**列、スプレッドシートから、excel ファイルを保存します。 この追加列は Address Validation 複合ドメインに対応します。  
   

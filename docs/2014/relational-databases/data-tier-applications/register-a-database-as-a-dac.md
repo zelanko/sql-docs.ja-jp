@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918134"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
   いずれかを使用して、**登録データ層アプリケーションのウィザード**または既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成するスクリプトを作成し、にDAC定義が登録は、WindowsPowerShell`msdb`システム データベース (**マスター**で[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **DAC のアップグレード:**[データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)、[PowerShell の使用](#RegisterDACPowerShell)  
+-   **DAC のアップグレード:** [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)、[PowerShell の使用](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
  登録プロセスでデータベース オブジェクトを定義する DAC 定義を作成します。 DAC の定義とデータベースを組み合わせたものが DAC インスタンスになります。 データベース エンジンのマネージド インスタンス上で DAC としてデータベースを登録した場合は、SQL Server ユーティリティ コレクション セットをこのインスタンスからユーティリティ コントロール ポイントへ次に送信するときに、登録した DAC が SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
@@ -52,7 +52,7 @@ ms.locfileid: "62918134"
   
 2.  **[データベース]** ノードを展開します。  
   
-3.  登録するデータベースを右クリックし、**[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
+3.  登録するデータベースを右クリックし、 **[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -96,16 +96,16 @@ ms.locfileid: "62918134"
   
  **\< 以前**-に戻り、**プロパティの設定**エントリを変更するページ。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
 ### <a name="validating-objects"></a>オブジェクトの検証  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_**.**_ObjectName_ は、現在検証されているオブジェクトを示します。  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_ **.** _ObjectName_ は、現在検証されているオブジェクトを示します。  
   
  **\< 以前**-に戻り、**プロパティの設定**エントリを変更するページ。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62918134"
   
  **\< 以前**-に戻り、**プロパティの設定**エントリを変更するページ。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
@@ -162,7 +162,7 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ層アプリケーション](data-tier-applications.md)  
   
   

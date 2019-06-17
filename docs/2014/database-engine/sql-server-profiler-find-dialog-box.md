@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088856"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>[SQL Server Profiler] - [検索] ダイアログ ボックス
@@ -31,7 +31,7 @@ ms.locfileid: "66088856"
  検索するテキストを入力します。 指定した文字列を含むすべての文字列が検索されます。 たとえば、検索文字列として "Completed" を指定すると、一致する文字列として "SQL:BatchCompleted" が検索されます。 ワイルドカード文字 (*、? など) はサポートされません。  
   
  **[検索する列]**  
- 検索するデータ列をクリックします。トレース内のすべてのデータ列を検索するには、**\<すべての列>** をクリックします。  
+ 検索するデータ列をクリックします。トレース内のすべてのデータ列を検索するには、 **\<すべての列>** をクリックします。  
   
  **[大文字と小文字を区別する]**  
  **[検索する文字列]** ボックスで指定したテキストと、大文字と小文字の違いまで一致するテキストを検索します。 このチェック ボックスをオフにすると、大文字と小文字の違いが一致しないテキストも含めてトレースを検索します。  

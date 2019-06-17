@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63001575"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (TRANSACT-SQL)
@@ -44,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name = ] '*instance_name*'  
  インスタンス名を指定します。 *instance_name*は**sysname**既定値は NULL の場合は、ローカルのインスタンス。  
   
-> **注:**_instance_name_インスタンスの完全修飾名は、コンピューター名と形式でインスタンス名で構成される必要があります*computerName* \\ *instanceName*します。    
+> **注:** _instance_name_インスタンスの完全修飾名は、コンピューター名と形式でインスタンス名で構成される必要があります*computerName* \\ *instanceName*します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

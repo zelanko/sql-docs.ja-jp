@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004264"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
@@ -49,12 +49,12 @@ sp_stop_job
   
 `[ @job_id = ] job_id` 停止するジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
-`[ @originating_server = ] 'master_server'` マスター サーバーの名前。 指定した場合、すべてのマルチサーバー ジョブが停止します。 *master_server*は**nvarchar (128)**、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**をターゲット サーバーにします。  
+`[ @originating_server = ] 'master_server'` マスター サーバーの名前。 指定した場合、すべてのマルチサーバー ジョブが停止します。 *master_server*は**nvarchar (128)** 、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**をターゲット サーバーにします。  
   
 > [!NOTE]  
 >  最初の 3 つのパラメーターは、いずれか 1 つだけを指定できます。  
   
-`[ @server_name = ] 'target_server'` マルチ サーバー ジョブを停止する特定の対象サーバーの名前。 *target_server*は**nvarchar (128)**、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**マルチ サーバー ジョブのマスター サーバーでします。  
+`[ @server_name = ] 'target_server'` マルチ サーバー ジョブを停止する特定の対象サーバーの名前。 *target_server*は**nvarchar (128)** 、既定値は NULL です。 呼び出すときにのみ、このパラメーターを指定**sp_stop_job**マルチ サーバー ジョブのマスター サーバーでします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

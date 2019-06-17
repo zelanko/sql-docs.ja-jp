@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047794"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
@@ -42,7 +42,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` 状態の確認をピア ツー ピア トポロジ内のパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
-`[ @description = ] 'description'` 個々 の状態要求を識別するために使用できるユーザー定義情報。 *説明*は**nvarchar (4000)**、既定値は NULL です。  
+`[ @description = ] 'description'` 個々 の状態要求を識別するために使用できるユーザー定義情報。 *説明*は**nvarchar (4000)** 、既定値は NULL です。  
   
 `[ @request_id = ] request_id` 新しい要求の ID を返します。 *request_id*は**int**は出力パラメーター。 実行するときに、この値を使用できます[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)状態要求に応答するすべての表示にします。  
   

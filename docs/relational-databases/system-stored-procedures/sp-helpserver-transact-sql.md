@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635889"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>引数  
 `[ @server = ] 'server'` サーバーに関する情報が報告されます。 ときに*server*が指定されていないすべてのサーバーに関するレポート**master.sys.servers**します。 *server*は**sysname**、既定値は NULL です。  
   
-`[ @optname = ] 'option'` サーバーを説明するオプション。 *オプション*は**varchar (** 35 **)**、既定値は null の場合、これらの値のいずれかを指定する必要があります。  
+`[ @optname = ] 'option'` サーバーを説明するオプション。 *オプション*は**varchar (** 35 **)** 、既定値は null の場合、これらの値のいずれかを指定する必要があります。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**use remote collation**|ローカル サーバーの代わりに、リモート列の照合順序を使用します。|  
   
-`[ @show_topology = ] 'show_topology'` 他のサーバーに指定されたサーバーのリレーションシップです。 *show_topology*は**varchar (** 1 **)**、既定値は NULL です。 場合*show_topology*が等しくない**t**が null の場合、または**sp_helpserver**結果セット セクションに示されている列を返します。 場合*show_topology*と等しい**t**、結果セットには、示されている列だけでなく**sp_helpserver**も返します**topx**と**topy**情報。  
+`[ @show_topology = ] 'show_topology'` 他のサーバーに指定されたサーバーのリレーションシップです。 *show_topology*は**varchar (** 1 **)** 、既定値は NULL です。 場合*show_topology*が等しくない**t**が null の場合、または**sp_helpserver**結果セット セクションに示されている列を返します。 場合*show_topology*と等しい**t**、結果セットには、示されている列だけでなく**sp_helpserver**も返します**topx**と**topy**情報。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)。  
@@ -103,7 +103,7 @@ GO
 EXEC sp_helpserver 'SEATTLE2';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   

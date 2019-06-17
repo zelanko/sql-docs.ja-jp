@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 225d0cd15aa170edc146eda0615a708ab0fe3ce2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63195157"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>グローバル設定 (ログ) (MySQLToSQL)
@@ -51,7 +51,7 @@ ms.locfileid: "63195157"
 |**デバッグ**|デバッグ ログにメッセージを含む、すべてのメッセージを記述します。|  
   
 **ログ ファイルのパス**  
-ファイルのパスと SSMA のログ ファイルの名前。 別の名前を指定する、現在のパス をクリックし、クリックし、参照 (**.**) ボタンをクリックします。  
+ファイルのパスと SSMA のログ ファイルの名前。 別の名前を指定する、現在のパス をクリックし、クリックし、参照 ( **.** ) ボタンをクリックします。  
   
 **ログ ファイルのサイズ**  
 サポート技術情報のログ ファイルの最大サイズ。 最小のサイズは 10 KB です。 既定のサイズは 10240 KB です。  

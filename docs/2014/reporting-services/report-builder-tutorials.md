@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107970"
 ---
 # <a name="tutorials-report-builder"></a>チュートリアル (レポート ビルダー)
@@ -67,7 +67,7 @@ ms.locfileid: "66107970"
  [チュートリアル: 式の概要](tutorial-introducing-expressions.md)  
  このチュートリアルの手順に従い、式を使用してフィールド値を連結、計算、および参照し、レポートに表示する方法を学習します。 また、式を使用して、条件によって異なる画像およびインジケーターの状態を表示する方法も学習します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート デザイン ビュー (レポート ビルダー)](report-builder/report-design-view-report-builder.md)   
  [SQL Server 2014 のレポート ビルダー](report-builder/report-builder-in-sql-server-2016.md)   
  [チュートリアル: オフラインのクイック グラフ レポートの作成&#40;レポート ビルダー&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  

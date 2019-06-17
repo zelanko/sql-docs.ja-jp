@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2bff82764256eebb02141bf2e1fafd86dce026e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666654"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する (レプリケーション Transact-SQL プログラミング)
@@ -35,9 +35,9 @@ ms.locfileid: "62666654"
   
 1.  (省略可) パブリッシャーのパブリケーション データベースで [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)を実行します。 **@publication** および **@article** を指定します。 結果セットの **article id** の値を確認します。  
   
-2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)を実行します。 (省略可) 手順 1. のアーティクル ID を **@article_id**」を参照してください。 (省略可) パブリケーション データベースの ID を **@publisher_database_id**に指定します。この ID は、 **sys.databases** カタログ ビューの [database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列で確認できます。  
+2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)を実行します。 (省略可) 手順 1. のアーティクル ID を **@article_id** 」を参照してください。 (省略可) パブリケーション データベースの ID を **@publisher_database_id** に指定します。この ID は、 **sys.databases** カタログ ビューの [database_id](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列で確認できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../monitoring-replication.md)  
   
   

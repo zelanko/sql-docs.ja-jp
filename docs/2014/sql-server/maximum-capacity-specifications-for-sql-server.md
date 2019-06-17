@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711447"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
@@ -116,7 +116,7 @@ ms.locfileid: "62711447"
 |データベースごとのログ ファイル数|1|1|  
 |コンピューターごとのボリューム数|3|3|  
   
- * のマネージ インスタンスの最大数[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でサポートされている[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ユーティリティは、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントがすべてのエディションでご利用いただけません[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ \* のマネージ インスタンスの最大数[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でサポートされている[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ユーティリティは、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントがすべてのエディションでご利用いただけません[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション オブジェクト  
  次の表に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション (DAC) でテストされた各種オブジェクトの最大サイズと最大数を示します。  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070847"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 での PowerPivot データ更新
@@ -204,7 +204,7 @@ ms.locfileid: "66070847"
   
  表示された場合**Integrated Security = SSPI**接続文字列では、接続文字列の資格情報をオーバーライドすることはできません。 接続では常に現在のユーザーが使用されます。 指定した資格情報は無視されます。  
   
- 表示された場合**Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*、UserID =\<userlogin >**、接続文字列、資格情報のオーバーライドを許可する必要があります。 接続文字列に表示される資格情報 (UserID や Password など) は、Windows 資格情報ではなく、対象のデータ ソースに対して有効なデータベース ログインまたはその他のサインイン アカウントです。  
+ 表示された場合**Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*、UserID =\<userlogin >** 、接続文字列、資格情報のオーバーライドを許可する必要があります。 接続文字列に表示される資格情報 (UserID や Password など) は、Windows 資格情報ではなく、対象のデータ ソースに対して有効なデータベース ログインまたはその他のサインイン アカウントです。  
   
  **接続文字列の資格情報を上書きする方法**  
   

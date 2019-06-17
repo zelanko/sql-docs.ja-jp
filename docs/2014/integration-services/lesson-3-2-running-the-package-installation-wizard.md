@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891580"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>手順 2:パッケージ インストール ウィザードの実行
@@ -42,7 +42,7 @@ ms.locfileid: "62891580"
   
 7.  **[暗号化をサーバー ストレージに依存する]** チェック ボックスがオフになっていることを確認します。  
   
-8.   **[次へ]** をクリックします。  
+8.  **[次へ]** をクリックします。  
   
 9. [インストール フォルダーの選択] ページの **[参照]** をクリックします。  
   

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 48c9955733672699e16cb4a00e28fa2f59717b80
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600472"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797093"
 ---
 # <a name="support-for-localdb"></a>LocalDB のサポート
 
@@ -60,7 +60,7 @@ LocalDB は、LocalDB をインストールして、LocalDB インスタンス�
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、`sqlcmd -S (localdb)\v11.0` のようにします。 (で IIS を実行するときは、コマンドライン; で実行したときと同じ結果を取得する適切なアカウントで実行する必要がありますを参照してください[を使用して完全 IIS と共に LocalDB、パート 2: インスタンスの所有権](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)詳細についてはします。)。
+必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、`sqlcmd -S (localdb)\v11.0` のようになります。 (で IIS を実行するときは、コマンドライン; で実行したときと同じ結果を取得する適切なアカウントで実行する必要がありますを参照してください[を使用して完全 IIS と共に LocalDB、パート 2: インスタンスの所有権](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)詳細についてはします。)。
 
 次に、接続文字列の例、SQLSRV ドライバーを使用して名前付きインスタンスの myInstance と呼ばれる、LocalDB のデータベースに接続します。
 

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688368"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
@@ -44,10 +44,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>引数  
  [ @table_name= ] '*table_name*'  
- カタログ情報を返すために使用するテーブルを指定します。 *table_name*は**nvarchar (** 384 **)**、既定値はありません。 ワイルドカードによるパターン照合はサポートされています。  
+ カタログ情報を返すために使用するテーブルを指定します。 *table_name*は**nvarchar (** 384 **)** 、既定値はありません。 ワイルドカードによるパターン照合はサポートされています。  
   
  [ @table_owner= ] '*table_owner*'  
- カタログ情報を返すために使用するテーブルのテーブル所有者です。 *table_owner*は**nvarchar (** 384 **)**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。 所有者が指定されていない場合は、基になる DBMS の既定のテーブル可視性規則が適用されます。  
+ カタログ情報を返すために使用するテーブルのテーブル所有者です。 *table_owner*は**nvarchar (** 384 **)** 、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。 所有者が指定されていない場合は、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
  現在のユーザーが指定した名前のテーブルを所有している場合は、そのテーブルの列が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*名前*、この手順は、指定したテーブルを探します*table_name*によって所有されている、データベース所有者です。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
@@ -88,7 +88,7 @@ EXEC sp_table_privileges
    @table_name = 'Contact%';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
