@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056421"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools でのパッケージの実行
@@ -31,7 +31,7 @@ ms.locfileid: "66056421"
   
 ### <a name="to-run-a-package-in-sql-server-data-tools"></a>SQL Server Data Tools でパッケージを実行するには  
   
-1.  ソリューションに複数のプロジェクトが含まれている場合は、ソリューション エクスプローラーで、パッケージを含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを右クリックし、**[スタートアップ オブジェクトに設定]** をクリックしてスタートアップ プロジェクトを設定します。  
+1.  ソリューションに複数のプロジェクトが含まれている場合は、ソリューション エクスプローラーで、パッケージを含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを右クリックし、 **[スタートアップ オブジェクトに設定]** をクリックしてスタートアップ プロジェクトを設定します。  
   
 2.  プロジェクトに複数のパッケージが含まれている場合は、ソリューション エクスプローラーで、パッケージの 1 つを右クリックし、 **[スタートアップ オブジェクトに設定]** をクリックしてスタートアップ パッケージを設定します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66056421"
   
 1.  ソリューション エクスプローラーで、実行するパッケージが含まれる [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト フォルダーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  [**\<プロジェクト名> プロパティ ページ**] ダイアログ ボックスで、**[ビルド]** をクリックします。  
+2.  [ **\<プロジェクト名> プロパティ ページ**] ダイアログ ボックスで、 **[ビルド]** をクリックします。  
   
 3.  OutputPath プロパティの値を更新して、デザイン時配置用に使用するフォルダーを指定し、 **[OK]** をクリックします。  
   

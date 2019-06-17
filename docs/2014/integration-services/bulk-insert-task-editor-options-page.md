@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061188"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>[一括挿入タスク エディター] ([オプション] ページ)
@@ -60,7 +60,7 @@ ms.locfileid: "66061188"
 > [!NOTE]  
 >  一括読み込み操作でインポートできない行は、1 つのエラーとしてカウントされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [一括挿入タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [一括挿入タスク エディター &#40;[接続] ページ&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   

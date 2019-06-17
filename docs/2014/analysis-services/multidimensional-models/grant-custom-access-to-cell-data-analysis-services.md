@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074977"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>セル データへのカスタム アクセス権の付与 (Analysis Services)
@@ -61,7 +61,7 @@ ms.locfileid: "66074977"
      この式は、ユーザーに表示されるメジャーを明示的に特定します。 このロールで接続しているユーザーは、それ以外のメジャーを使用することはできません。 [CurrentMember (MDX)](/sql/mdx/current-mdx) でコンテキストが設定され、その後に許可されるメジャーが続くことに注意してください。 この式の効果として、現在のメンバーに **Reseller Sales Amount** と **Reseller Total Product Cost** のどちらかが含まれている場合は、値が表示されます。 それ以外の場合、アクセスが拒否されます。 式には複数の要素があり、各要素はかっこで囲まれています。 `OR` 演算子は、複数のメジャーを指定するために使用します。  
   
 ## <a name="deny-access-to-specific-measures"></a>特定のメジャーへのアクセスの拒否  
- 次の MDX 式が **[ロールの作成]** | **[セル データ]** | **[キューブ コンテンツの読み取りを許可する]** でも指定されていると、反対の効果、つまり特定のメジャーが利用できなくなります。 この例で**Discount Amount**と**Discount Percentage**利用不可を使用して、`NOT`と`AND`演算子。 他のすべてのメジャーは、このロールで接続しているユーザーに表示されます。  
+ 次の MDX 式が **[ロールの作成]**  |  **[セル データ]**  |  **[キューブ コンテンツの読み取りを許可する]** でも指定されていると、反対の効果、つまり特定のメジャーが利用できなくなります。 この例で**Discount Amount**と**Discount Percentage**利用不可を使用して、`NOT`と`AND`演算子。 他のすべてのメジャーは、このロールで接続しているユーザーに表示されます。  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Discount Amount]) AND (NOT Measures.CurrentMember IS [Measures].[Discount Percentage])  
@@ -74,7 +74,7 @@ ms.locfileid: "66074977"
 ## <a name="set-read-permissions-on-calculated-measures"></a>計算メジャーに対する Read 権限の設定  
  計算メジャーに対する権限は、メジャーの構成要素とは関係なく設定できます。 計算メジャーとその従属メジャーとの間で権限を調整する場合は、Read-Contingent に関する次のセクションに進んでください。  
   
- 計算メジャーに対して Read 権限がどのように機能するかを理解するために、AdventureWorks での **Reseller Gross Profit** について検討します。 その派生元は、 **Reseller Sales Amount** メジャーおよび **Reseller Total Product Cost** メジャーです。 ロールに **Reseller Gross Profit** セルに対する Read 権限がある限り、他のメジャーに対して権限が明示的に拒否されている場合でも、このメジャーは表示できます。 示されているように、以下の MDX 式を **[ロールの作成]** | **[セル データ]** | **[キューブ コンテンツの読み取りを許可する]** にコピーします。  
+ 計算メジャーに対して Read 権限がどのように機能するかを理解するために、AdventureWorks での **Reseller Gross Profit** について検討します。 その派生元は、 **Reseller Sales Amount** メジャーおよび **Reseller Total Product Cost** メジャーです。 ロールに **Reseller Gross Profit** セルに対する Read 権限がある限り、他のメジャーに対して権限が明示的に拒否されている場合でも、このメジャーは表示できます。 示されているように、以下の MDX 式を **[ロールの作成]**  |  **[セル データ]**  |  **[キューブ コンテンツの読み取りを許可する]** にコピーします。  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Reseller Sales Amount])  
@@ -86,7 +86,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  ![Excel の表を利用し、使用できない cellls](../media/ssas-permscalculatedcells.png "でき、使用できない cellls を Excel テーブル")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>計算メジャーに対する Read-Contingent 権限の設定  
- セルのセキュリティには、計算に参加する関連セルに権限を設定するための代替手段として Read-Contingent が用意されています。 もう一度 **Reseller Gross Profit** の例を検討します。 前のセクションで示されていたのと同じ MDX 式を入力します。今回は、 **[ロールの作成]** | **[セル データ]** ダイアログ ボックスの 2 つ目のテキスト領域 ( **[セルのセキュリティでセル コンテンツの条件の読み取りを許可する]** の下のテキスト領域) に入力します。結果は Excel で表示したときにわかります。 **Reseller Gross Profit** は **Reseller Sales Amount** および **Reseller Total Product Cost**に基づくため、総利益の構成要素にアクセスできず、そのためこの時点では総利益にアクセスできません。  
+ セルのセキュリティには、計算に参加する関連セルに権限を設定するための代替手段として Read-Contingent が用意されています。 もう一度 **Reseller Gross Profit** の例を検討します。 前のセクションで示されていたのと同じ MDX 式を入力します。今回は、 **[ロールの作成]**  |  **[セル データ]** ダイアログ ボックスの 2 つ目のテキスト領域 ( **[セルのセキュリティでセル コンテンツの条件の読み取りを許可する]** の下のテキスト領域) に入力します。結果は Excel で表示したときにわかります。 **Reseller Gross Profit** は **Reseller Sales Amount** および **Reseller Total Product Cost**に基づくため、総利益の構成要素にアクセスできず、そのためこの時点では総利益にアクセスできません。  
   
 > [!NOTE]  
 >  同じロール内のセルに Read 権限と Read-Contingent 権限の両方を設定するとどうなりますか。 ロールによって、セルに対する Read 権限は設定されますが、Read-Contingent 権限は設定されません。  
@@ -96,7 +96,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 ## <a name="set-readwrite-permissions-on-a-cell"></a>セルに対する読み取り/書き込み権限の設定  
  セルに対する読み取り/書き込み権限は、メンバーがキューブ自体に対する読み取り/書き込み権限を持っている場合に限り、書き戻しを有効にするために使用します。 セル レベルで付与される権限は、キューブ レベルで付与される権限以下になる必要があります。 詳細については、 [「パーティションの書き戻しの設定」](set-partition-writeback.md) を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX ビルダー (Analysis Services - 多次元データ)](../mdx-builder-analysis-services-multidimensional-data.md)   
  [基本的な MDX スクリプト (MDX)](mdx/the-basic-mdx-script-mdx.md)   
  [処理権限の付与 (Analysis Services)](grant-process-permissions-analysis-services.md)   

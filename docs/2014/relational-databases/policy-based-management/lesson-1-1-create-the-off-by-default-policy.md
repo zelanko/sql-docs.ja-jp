@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064302"
 ---
 # <a name="create-the-off-by-default-policy"></a>"既定でオフ" ポリシーの作成
@@ -22,13 +22,13 @@ ms.locfileid: "66064302"
   
 ### <a name="to-create-the-mail-off-condition"></a>"メールをオフ" 条件を作成するには  
   
-1.  オブジェクト エクスプローラーで、 **[管理]**、 **[ポリシー管理]**、 **[ファセット]** の順に展開し、 **[セキュリティ構成]** を右クリックして **[新しい条件]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[管理]** 、 **[ポリシー管理]** 、 **[ファセット]** の順に展開し、 **[セキュリティ構成]** を右クリックして **[新しい条件]** をクリックします。  
   
 2.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **メールをオフ**」と入力します。  
   
 3.  **[ファセット]** ボックスで、 **[セキュリティ構成]** ファセットが選択されていることを確認します。  
   
-4.  **[式]** 領域の **[フィールド]** ボックスで **@DatabaseMailEnabled** を選択し、**[演算子]** ボックスで **=** を選択し、**[値]** ボックスで **[False]** を選択します。  
+4.  **[式]** 領域の **[フィールド]** ボックスで **@DatabaseMailEnabled** を選択し、 **[演算子]** ボックスで **=** を選択し、 **[値]** ボックスで **[False]** を選択します。  
   
 5.  **[説明]** ページで条件の説明を入力し、 **[OK]** をクリックして条件を作成します。  
   

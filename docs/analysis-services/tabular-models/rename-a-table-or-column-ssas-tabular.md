@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472181"
 ---
 # <a name="rename-a-table-or-column"></a>テーブルまたは列名の変更 
@@ -53,7 +53,7 @@ ms.locfileid: "62472181"
   
  名前が変更されたテーブルを使用するか、名前を変更したテーブルから列を使用する計算も更新する必要があります、およびこれらの計算から派生したデータの更新し再計算する必要があります。 影響を受けるテーブルと計算の数によっては、完了までに時間がかかることがあります。 このため、テーブル名を変更するタイミングとしては、インポート処理時か、複雑なリレーションシップや計算を構築する前が最適です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルと列](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [Power Pivot からのインポート](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
  [Analysis Services からのインポート](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  

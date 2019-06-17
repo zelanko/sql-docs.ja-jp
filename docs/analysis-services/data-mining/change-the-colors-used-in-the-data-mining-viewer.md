@@ -1,33 +1,30 @@
 ---
 title: データ マイニング ビューアーで使用する色の変更 |Microsoft Docs
-ms.custom: ''
-ms.date: 06/14/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
 ms.topic: conceptual
-f1_keywords:
-- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
-ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: f9bf7df74e5a247b7608ac603465fe579b4ab68e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670505"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>データ マイニング ビューアーで使用する色の変更
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   データ マイニング ビューアーでデータ系列、ノード、またはクラスターを表示する際に使用する色を変更できます。 これを行うには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオプションを設定します。 設定を変更すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して表示するすべてのモデルに色の選択が適用されます。ただし、新しい色を表示するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を閉じて、ビューアーでモデルを再度開く必要があります。  
   
 ### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>データ マイニング ビューアーで使用する色を変更するには  
   
 1.  **または** の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [ツール] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]メニューの **[オプション]** をクリックします。  
   
-2.  **[オプション]** ダイアログ ボックスで、 **[デザイナー]**、 **[データ マイニング ビューアー]** の順に展開します。  
+2.  **[オプション]** ダイアログ ボックスで、 **[デザイナー]** 、 **[データ マイニング ビューアー]** の順に展開します。  
   
 3.  変更するビューアー プロパティを探して、現在の色の選択をクリックします。  
   

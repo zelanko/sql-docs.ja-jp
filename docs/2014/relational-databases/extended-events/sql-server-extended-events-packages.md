@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62638745"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
@@ -40,7 +40,7 @@ ms.locfileid: "62638745"
   
 -   対象サーバー  
   
--   Actions  
+-   アクション  
   
 -   型  
   
@@ -96,7 +96,7 @@ where name = 'keyword_map'
 ### <a name="targets"></a>ターゲット  
  ターゲットは、イベントのコンシューマーです。 ターゲットは、イベントを開始したスレッド上で同期的に、またはシステムによって提供されたスレッド上で非同期的に、イベントを処理します。 拡張イベントには、複数のターゲットが用意されており、イベント出力を転送する目的で必要に応じて使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](../../database-engine/sql-server-extended-events-targets.md)」を参照してください。  
   
-### <a name="actions"></a>Actions  
+### <a name="actions"></a>アクション  
  アクションは、プログラムがイベントに呼応して実行する特定の (または一連の) 応答です。 アクションはイベントに関連付けられます。各イベントには、それぞれ異なる一連のアクションが関連付けられる場合もあります。  
   
 > [!NOTE]  
@@ -213,7 +213,7 @@ where name = 'lock_mode'
   
  たとえば、このテーブルに mode という名前の列があり、その値が 5 であると仮定します。 このテーブルによると、5 は X に対応しており、そこからロックの種類が Exclusive であることがわかります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 拡張イベント セッション](sql-server-extended-events-sessions.md)   
  [SQL Server 拡張イベント エンジン](sql-server-extended-events-engine.md)   
  [SQL Server 拡張イベント ターゲット](../../database-engine/sql-server-extended-events-targets.md)  

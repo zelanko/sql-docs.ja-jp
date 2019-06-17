@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3525f28864c3260bd2b50d98f441f6ed5072accb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808573"
 ---
 # <a name="connect-to-windows-azure-storage"></a>Windows Azure ストレージへの接続
@@ -29,7 +29,7 @@ ms.locfileid: "62808573"
   
 2.  **[アカウント キー]** : 指定したストレージ アカウントのアカウント キーを指定します。  
   
-3.  **[セキュリティ保護されたエンドポイントを使用する (HTTPS)]**: 暗号化された通信とネットワーク Web サーバーのセキュア ID を利用します。  
+3.  **[セキュリティ保護されたエンドポイントを使用する (HTTPS)]** : 暗号化された通信とネットワーク Web サーバーのセキュア ID を利用します。  
   
 4.  **[アカウント キーを保存する]** : 暗号化されたファイルにパスワードが保存されます。  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083533"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
@@ -63,7 +63,7 @@ ms.locfileid: "66083533"
 >  式を表示するには、リーフ ノードのレベルで完全な回帰式を取得します。中間のノードやルート ノードでは取得できません。  
   
 ### <a name="structure-of-an-arima-model"></a>ARIMA モデルの構造  
- ARIMA アルゴリズムが 1 つのデータ系列の組み合わせごとの情報を作成します (など **[Region]**) と予測可能な属性 (など **[Sales Amount]**)-を表す式、時間の経過と共に、予測可能属性を変更します。  
+ ARIMA アルゴリズムが 1 つのデータ系列の組み合わせごとの情報を作成します (など **[Region]** ) と予測可能な属性 (など **[Sales Amount]** )-を表す式、時間の経過と共に、予測可能属性を変更します。  
   
  各系列の式は、複数の構成要素から導き出されます。これらの構成要素は、データ内で検出された周期構造ごとに 1 つずつあります。 たとえば、1 か月ごとに収集される売上データがある場合には、月、四半期、年などの周期構造がアルゴリズムによって検出される可能性があります。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66083533"
  NODE_SUPPORT  
  このノードをサポートするケースの数。  
   
- **ARTXP:****(すべて)** ノードは、分岐に含まれるタイム スライスの合計数を示します。  
+ **ARTXP:** **(すべて)** ノードは、分岐に含まれるタイム スライスの合計数を示します。  
   
  末端のノードの場合は、NODE_CAPTION によって表される範囲に含まれるタイム スライスの数を表します。 末端のノードのタイム スライスの数を合計すると、常に分岐の **[(すべて)]** ノードの NODE_SUPPORT 値になります。  
   

@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507268"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL データベース)
@@ -68,6 +68,6 @@ class  class_desc        major_id    minor_id    dependency
 |[オーダー]|影響を受けるオブジェクト|修正措置|  
 |-----------|---------------------|-----------------------|  
 |1|**[インデックス]**|識別されるインデックスを再構築**sys.dm_db_objects_impacted_on_version_change**例。  `ALTER INDEX ALL ON <table> REBUILD`<br />または<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Object**|識別されるすべての制約**sys.dm_db_objects_impacted_on_version_change**基になるテーブル内の geometry と geography データが再計算した後に再検証する必要があります。 制約、ALTER TABLE を使用して再検証します。 <br />例: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />または<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|2|**Object**|識別されるすべての制約**sys.dm_db_objects_impacted_on_version_change**基になるテーブル内の geometry と geography データが再計算した後に再検証する必要があります。 制約、ALTER TABLE を使用して再検証します。 <br />例 : <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />または<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

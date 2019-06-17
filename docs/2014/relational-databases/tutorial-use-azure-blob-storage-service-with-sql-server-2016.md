@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62523896"
 ---
-# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>チュートリアル:Windows Azure ストレージ サービスでは、SQL Server データ ファイル
+# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>チュートリアル:Windows Azure Storage サービス内の SQL Server データ ファイル
   Windows Azure ストレージ サービス内の SQL Server データ ファイルのチュートリアルにようこそ。 このチュートリアルにより、Windows Azure BLOB ストレージ サービスに SQL Server データ ファイルを直接格納する方法について把握できます。  
   
  Windows Azure BLOB ストレージ サービスに対する SQL Server 統合のサポートは、SQL Server 2014 の拡張機能です。 この機能を使用する利点と機能の概要については、次を参照してください。 [Windows Azure での SQL Server データ ファイル](databases/sql-server-data-files-in-microsoft-azure.md)します。  

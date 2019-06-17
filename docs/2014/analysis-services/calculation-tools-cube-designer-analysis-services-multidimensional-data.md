@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088279"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>計算ツール (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
@@ -68,7 +68,7 @@ ms.locfileid: "66088279"
 > [!NOTE]  
 >  このオプションは、 **[メタデータ]** が選択されている場合にのみ表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;計算 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [スクリプト オーガナイザー&#40;計算 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

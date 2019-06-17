@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f89ba75ab8d13960b3c86193862f5061f6727bb6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079939"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 のインストール
@@ -65,12 +65,12 @@ ms.locfileid: "66079939"
   
 5.  レビュー [Hardware and Software Requirements の SharePoint モードで Analysis Services サーバー &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)します。  
   
-6.  リリース ノートを確認して[SQL Server 2012 Service Pack 1 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389)します。  
+6.  リリース ノートを確認して[SQL Server 2012 Service Pack 1 リリース ノート](https://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389) します。  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server エディションの要件  
  ビジネス インテリジェンス機能は、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のすべてのエディションで利用できるわけではありません。 詳細については、次を参照してください。 [SQL Server 2012 の各エディションでサポートされる機能 (https://go.microsoft.com/fwlink/?linkid=232473) ](https://go.microsoft.com/fwlink/?linkid=232473)と[エディションと SQL Server 2014 のコンポーネントの](../../../sql-server/editions-and-components-of-sql-server-2016.md)します。  
   
- 現在のリリース ノートをご覧[SQL Server 2012 SP1 リリース ノート](ttp://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389)します。  
+ 現在のリリース ノートをご覧[SQL Server 2012 SP1 リリース ノート](ttp://go.microsoft.com/fwlink/?LinkID=248389)(https://go.microsoft.com/fwlink/?LinkID=248389) します。  
   
  [Microsoft SQL Server 2012 リリース ノート (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893)します。  
   
@@ -249,7 +249,7 @@ ms.locfileid: "66079939"
  PowerPivot の以前のバージョンで作成したブックのアップグレードに必要な手順は、そのブックを作成した PowerPivot のバージョンによって異なります。 詳細については、「 [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
   
 ##  <a name="bkmk_multiple_servers"></a> シングル サーバー インストールで PowerPivot for Microsoft SharePoint を超える  
- **Web フロント エンド (WFE)** または**中間層:**:使用する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インストーラー パッケージを実行、ファームに PowerPivot の追加機能をインストールして大規模な SharePoint ファームで SharePoint モードのサーバー **spPowerPivot.msi**各 SharePoint サーバー上でします。 spPowerPivot.msi では、必要なデータ プロバイダーと PowerPivot for SharePoint 2013 の構成ツールをインストールします。  
+ **Web フロント エンド (WFE)** または**中間層:** :使用する、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インストーラー パッケージを実行、ファームに PowerPivot の追加機能をインストールして大規模な SharePoint ファームで SharePoint モードのサーバー **spPowerPivot.msi**各 SharePoint サーバー上でします。 spPowerPivot.msi では、必要なデータ プロバイダーと PowerPivot for SharePoint 2013 の構成ツールをインストールします。  
   
  中間層のインストールと構成の詳細については、以下を参照してください。  
   
@@ -261,11 +261,11 @@ ms.locfileid: "66079939"
   
  **冗長性とサーバー負荷:** インストール、1 秒以上[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]SharePoint モードのサーバーでの冗長性が実現、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]サーバーの機能。 サーバーを追加すると、サーバー間の負荷分散も行われます。 詳細については、以下を参照してください。  
   
--   [Excel Services でのデータ モデルを処理するための Analysis Services を構成する](https://technet.microsoft.com/library/jj614437\(v=office.15\))(https://technet.microsoft.com/library/jj614437(v=office.15))します。  
+-   [Excel Services でのデータ モデルを処理するための Analysis Services を構成する](https://technet.microsoft.com/library/jj614437\(v=office.15\))(https://technet.microsoft.com/library/jj614437(v=office.15)) します。  
   
--   [Excel Services データ モデルの設定 (SharePoint Server 2013) を管理](https://technet.microsoft.com/library/jj219780\(v=office.15\))(https://technet.microsoft.com/library/jj219780(v=office.15))します。  
+-   [Excel Services データ モデルの設定 (SharePoint Server 2013) を管理](https://technet.microsoft.com/library/jj219780\(v=office.15\))(https://technet.microsoft.com/library/jj219780(v=office.15)) します。  
   
- ![SharePoint の設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)します。  
+ ![SharePoint の設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) します。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2013 への PowerPivot を移行します。](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b402c71a2501fa15f98ccaf1b0d89d2c3dac40ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636771"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (Visual FoxPro ODBC ドライバー)
@@ -26,7 +26,7 @@ ms.locfileid: "62636771"
   
  サポート:[完全]  
   
- ODBC API 準拠:レベル 2  
+ ODBC API 準拠:[レベル 2]  
   
  多くの結果が保留中かどうかを決定します。 あるステートメント ハンドルで*hstmt*SELECT、UPDATE、INSERT、または DELETE ステートメントを含む、および、そうである場合は、それらの結果の処理を初期化します。  
   

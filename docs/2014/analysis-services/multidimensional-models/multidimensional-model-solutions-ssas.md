@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073569"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>多次元モデル ソリューション (SSAS)
@@ -44,6 +44,6 @@ ms.locfileid: "66073569"
  既存のリレーショナル スキーマを使用せずに多次元データベース オブジェクトを設計する方法について説明します。  
   
  [Analysis Services のパーソナル化拡張機能](extending-olap/analysis-services-personalization-extensions.md)  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の Personalization Extensions をデザインする方法について説明します。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の Personalization Extensions をデザインする方法について説明します。  
   
   

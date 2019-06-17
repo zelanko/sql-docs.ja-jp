@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660782"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -60,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  か、特定のジョブを表示する*job_id*または*job_name*指定する必要があります。  どちらも省略*job_id*と*job_name*すべてのジョブに関する情報を返します。
   
-`[ @job_aspect = ] 'job_aspect'` 表示するジョブ属性。 *job_aspect*は**varchar (9)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @job_aspect = ] 'job_aspect'` 表示するジョブ属性。 *job_aspect*は**varchar (9)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -70,11 +70,11 @@ sp_help_job { [ @job_id = ] job_id
 |**手順**|ジョブ ステップ情報|  
 |**ターゲット**|表示対象情報|  
   
-`[ @job_type = ] 'job_type'` レポートに含めるジョブの種類。 *job_type*は**varchar (12)**、既定値は NULL です。 *job_type*できる**ローカル**または**MULTI-SERVER**します。  
+`[ @job_type = ] 'job_type'` レポートに含めるジョブの種類。 *job_type*は**varchar (12)** 、既定値は NULL です。 *job_type*できる**ローカル**または**MULTI-SERVER**します。  
   
 `[ @owner_login_name = ] 'login_name'` ジョブの所有者のログイン名。 *login_name*は**sysname**、既定値は NULL です。  
   
-`[ @subsystem = ] 'subsystem'` サブシステムの名前。 *サブシステム*は**nvarchar (40)**、既定値は NULL です。  
+`[ @subsystem = ] 'subsystem'` サブシステムの名前。 *サブシステム*は**nvarchar (40)** 、既定値は NULL です。  
   
 `[ @category_name = ] 'category'` カテゴリの名前。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
@@ -92,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|一時中断。|  
 |**7**|完了操作の実行中。|  
   
-`[ @date_comparator = ] 'date_comparison'` 比較に使用する比較演算子*date_created*と*date_modified*します。 *date_comparison*は**char (1)**、できますが、=、 \<、または >。  
+`[ @date_comparator = ] 'date_comparison'` 比較に使用する比較演算子*date_created*と*date_modified*します。 *date_comparison*は**char (1)** 、できますが、=、 \<、または >。  
   
 `[ @date_created = ] date_created` ジョブが作成された日付。 *date_created*は**datetime**、既定値は NULL です。  
   
 `[ @date_last_modified = ] date_modified` ジョブの最終変更日。 *date_modified*は**datetime**、既定値は NULL です。  
   
-`[ @description = ] 'description_pattern'` ジョブの説明。 *description_pattern*は**nvarchar (512)**、既定値は NULL です。 *description_pattern*パターン マッチングの SQL Server のワイルドカード文字を含めることができます。  
+`[ @description = ] 'description_pattern'` ジョブの説明。 *description_pattern*は**nvarchar (512)** 、既定値は NULL です。 *description_pattern*パターン マッチングの SQL Server のワイルドカード文字を含めることができます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

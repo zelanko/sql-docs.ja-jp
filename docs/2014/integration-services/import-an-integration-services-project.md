@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058172"
 ---
 # <a name="import-an-integration-services-project"></a>Integration Services プロジェクトのインポート
@@ -22,7 +22,7 @@ ms.locfileid: "66058172"
   
 ### <a name="to-import-a-project"></a>プロジェクトをインポートするには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、 **[ファイル]** > **メニューの** [新規作成] **[プロジェクト]** をクリックします。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、 **[ファイル]**  > **メニューの** [新規作成] **[プロジェクト]** をクリックします。  
   
 2.  **[新しいプロジェクト]** ウィンドウの **[インストールされているテンプレート]** 領域で **[ビジネス インテリジェンス]** を展開し、 **[Integration Services]** をクリックします。  
   

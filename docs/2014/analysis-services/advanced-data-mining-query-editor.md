@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a633bd4c6a9ffe91a74858641b0b0305577922af
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062798"
 ---
 # <a name="advanced-data-mining-query-editor"></a>詳細データ マイニング クエリ エディター
@@ -49,11 +49,11 @@ ms.locfileid: "66062798"
  **入力を選択します。**  
  マイニング モデルへの入力として使用するデータを選択できます。 データ ソースが指定されていない場合は、クリックすることも、 **\<入力 >** 赤色で強調表示されている、リンク、 **DMX クエリ**ウィンドウ。  
   
- 選択**@InputRowset**を開くドロップダウン リストから、 **InputRowset**  ダイアログ ボックスし、既存の入力を変更します。  
+ 選択 **@InputRowset** を開くドロップダウン リストから、 **InputRowset**  ダイアログ ボックスし、既存の入力を変更します。  
   
  選択**入力の追加**を開く、**入力の追加** ダイアログ ボックスし、新しいデータ ソースを指定します。  
   
- クリックして、既存の入力を変更することも、 **@InputRowset**リンクは、DMX クエリ ペインで赤色で強調表示されています。  
+ クリックして、既存の入力を変更することも、 **@InputRowset** リンクは、DMX クエリ ペインで赤色で強調表示されています。  
   
  **列のマップ**  
  マイニング モデルの列を選択し、これらの列を外部データ ソースの列にマップします。  
@@ -71,7 +71,7 @@ ms.locfileid: "66062798"
  **[入力列]**  
  入力として追加された外部データ ソースの列を一覧表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリ&#40;SQL Server データ マイニング アドイン&#41;](query-sql-server-data-mining-add-ins.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067957"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View レポートのレポート プロパティの構成
@@ -88,7 +88,7 @@ ms.locfileid: "66067957"
   
 3.  **[既定のフィールド セット]** ダイアログ ボックスの **[テーブル内のフィールド]** ボックスの一覧で、Ctrl キーを押しながら次のフィールドをクリックし、 **[追加]** をクリックします。  
   
-     **[Birth Date]**、 **[Customer Alternate Id]**、 **[First Name]**、 **[Last Name]**。  
+     **[Birth Date]** 、 **[Customer Alternate Id]** 、 **[First Name]** 、 **[Last Name]** 。  
   
 4.  **[既定のフィールド (並べ替え順)]** ウィンドウで、[上へ移動] と [下へ移動] を使用して次の順序に並べます。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "66067957"
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Adventure Works Internet Sales 表形式モデルを再配置するには  
   
--   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[ビルド]** メニューをクリックし、**[Adventure Works Internet Sales Model の配置]** をクリックします。  
+-   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[ビルド]** メニューをクリックし、 **[Adventure Works Internet Sales Model の配置]** をクリックします。  
   
      **[配置]** ダイアログ ボックスが表示され、メタデータの配置状況と、モデルに含まれる各テーブルが表示されます。  
   

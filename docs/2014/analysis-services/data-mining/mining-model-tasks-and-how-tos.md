@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083491"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>マイニング モデル タスクと操作方法
@@ -55,7 +55,7 @@ ms.locfileid: "66083491"
   
 -   [データ マイニング ディメンションの作成](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)   
  [マイニング モデル (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)   
  [データ マイニングの概念](data-mining-concepts.md)  

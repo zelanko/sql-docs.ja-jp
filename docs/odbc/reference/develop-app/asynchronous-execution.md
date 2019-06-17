@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbc6e6fe3c45a6395620e017decef285ae9dd51a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62672520"
 ---
 # <a name="asynchronous-execution"></a>非同期実行
@@ -25,5 +25,5 @@ ODBC では、ステートメントと接続の両方の操作に対して非同
   
 2.  [非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ステートメントの実行 (ODBC)](../../../odbc/reference/develop-app/executing-statements-odbc.md)

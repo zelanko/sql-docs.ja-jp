@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7ac7238d643165bc093a8a1cabd5d1dac662dfc
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011139"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
@@ -25,7 +25,7 @@ ms.locfileid: "66011139"
   
 ## <a name="installing-semantic-search"></a>セマンティック検索のインストール  
   
-###  <a name="HowToCheckInstalled"></a> 操作方法：セマンティック検索がインストールされているかどうかを確認します。  
+###  <a name="HowToCheckInstalled"></a> 方法:セマンティック検索がインストールされているかどうかを確認します。  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) メタデータ関数の **IsFullTextInstalled** プロパティに対してクエリを実行します。  
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索がインストールされていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索がインストールされていないことを示します。  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> 操作方法：セマンティック検索のインストール  
+###  <a name="BasicsSemanticSearch"></a> 方法:セマンティック検索のインストール  
  セマンティック検索をインストールするには、セットアップ中、 **[インストールする機能]** ページで **[検索のためのフルテキスト抽出とセマンティック抽出]** を選択します。  
   
  セマンティック検索はフルテキスト検索に依存します。 この [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の 2 つのオプション機能は一緒にインストールされます。  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>セマンティック言語統計データベースをインストールまたは削除する  
  セマンティック検索は、別途、"セマンティック言語統計データベース" と呼ばれる外部の機能に依存しています。 このデータベースには、セマンティック検索で必要な統計的言語モデルが含まれています。 1 つのセマンティック言語統計データベースには、セマンティック インデックス作成でサポートされるすべての言語の言語モデルが含まれています。  
   
-###  <a name="HowToCheckDatabase"></a> 操作方法：セマンティック言語統計データベースがインストールされているかどうかを確認します。  
+###  <a name="HowToCheckDatabase"></a> 方法:セマンティック言語統計データベースがインストールされているかどうかを確認します。  
  カタログ ビュー [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql) に対してクエリを実行します。  
   
  実行対象のインスタンスにセマンティック言語統計データベースがインストールされ登録されている場合、クエリ結果には、そのデータベースに関する単一行から成る情報が格納されています。  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> 操作方法：インストール、アタッチ、および、セマンティック言語統計データベースを登録します。  
+###  <a name="HowToInstallModel"></a> 方法:インストール、アタッチ、および、セマンティック言語統計データベースを登録します。  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のセットアップ プログラムでは、セマンティック言語統計データベースはインストールされません。 セマンティック インデックス作成の前提条件であるセマンティック言語統計データベースをセットアップするには、次の作業を実行します。  
   
  **1.セマンティック言語統計データベースをインストールします。**  
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> 操作方法：登録を解除、デタッチ、およびセマンティック言語統計データベースを削除  
+###  <a name="HowToUnregister"></a> 方法:登録を解除、デタッチ、およびセマンティック言語統計データベースを削除  
  **セマンティック言語統計データベースの登録を解除します。**  
  ストアド プロシージャ [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) を呼び出します。 セマンティック言語統計データベースは 1 つのインスタンスにつき 1 つしか存在しないため、データベースの名前を指定する必要はありません。  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>新しいドキュメントの種類のオプション サポートをインストールする  
   
-###  <a name="office"></a> 操作方法：Microsoft Office およびその他の Microsoft ドキュメントの種類用の最新のフィルターをインストールします。  
+###  <a name="office"></a> 方法:Microsoft Office およびその他の Microsoft ドキュメントの種類用の最新のフィルターをインストールします。  
  このリリースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] の最新のワード ブレーカーとステマーがインストールされますが、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office ドキュメントおよびその他の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ドキュメントの種類の最新のフィルターはインストールされません。 これらのフィルターは、最新バージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office およびその他の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] アプリケーションで作成されたドキュメントのインデックスを作成するために必要です。 最新のフィルターをダウンロードするには、「 [Microsoft Office 2010 フィルター パック](https://go.microsoft.com/fwlink/?LinkId=218293)」を参照してください。  
   
   

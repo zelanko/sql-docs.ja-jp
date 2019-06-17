@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637580"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML データのシリアル化の定義
@@ -31,7 +31,7 @@ ms.locfileid: "62637580"
 ## <a name="serialization-encoding"></a>シリアル化のエンコード  
  SQL の対象型が VARBINARY の場合、結果は UTF-16 バイト順マークを前に付け、XML 宣言を付けずに、UTF-16 でシリアル化されます。 対象型が小さすぎる場合は、エラーが発生します。  
   
- 例:  
+ 例 :  
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
@@ -59,7 +59,7 @@ select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))
   
  SQL の対象型が VARCHAR または NCHAR の場合、結果はバイト順マークまたは XML 宣言を付けずに、データベースの照合順序のコード ページに対応するエンコードでシリアル化されます。 対象型が小さすぎるか、または対象の照合順序のコード ページに値をマップできない場合、エラーが発生します。  
   
- 例:  
+ 以下に例を示します。  
   
 ```  
 select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
@@ -87,7 +87,7 @@ select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))
   
 -   空白文字だけが含まれているテキスト ノードを保護するために、空白文字の 1 つ (通常は最後の空白文字) が数字参照としてエンティティ変換されます。 このようにすると、解析時の空白文字の処理の設定とは無関係に、再解析時に空白文字のテキスト ノードが保持されます。  
   
- 例:  
+ 以下に例を示します。  
   
 ```  
 declare @u NVARCHAR(50)  
@@ -149,7 +149,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  これは、文字列値 13.4 を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery での型キャストの規則](/sql/xquery/type-casting-rules-in-xquery)   
  [CAST と CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   

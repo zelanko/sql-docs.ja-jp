@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fa7904ab168755a8258f0ad1d6dbb790646b552a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62501886"
 ---
 # <a name="--negative-dmx"></a>-(負号) (DMX)
@@ -35,7 +35,7 @@ ms.locfileid: "62501886"
 ## <a name="return-value"></a>戻り値  
  指定されたパラメーターのデータ型を持つ値です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)   
  [単項演算子&#40;DMX&#41;](../dmx/operators-unary.md)  

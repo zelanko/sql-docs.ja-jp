@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013447"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みのガイドラインと制限 (SQLXML 4.0)
@@ -89,7 +89,7 @@ ms.locfileid: "66013447"
   
      この場合は、XML 一括読み込みは無視されます、  **\<AllCustomers >** 要素にマッピングして、 **\<顧客 >** 要素。 XML ドキュメントに存在していてもスキーマに記述されていない要素は無視されます。  
   
-     含む別の XML ソース データ ファイル**\<順序 >** 要素。 この要素はマッピング スキーマには記述されていません。  
+     含む別の XML ソース データ ファイル **\<順序 >** 要素。 この要素はマッピング スキーマには記述されていません。  
   
     ```  
     <AllCustomers>  
@@ -105,7 +105,7 @@ ms.locfileid: "66013447"
     </AllCustomers>  
     ```  
   
-     XML 一括読み込みでは、これらは無視されます**\<順序 >** 要素。 使用する場合は、`sql:overflow-field`注釈によりオーバーフロー列、XML 一括読み込み、列を識別するために、スキーマでは、このコラムですべての未使用データを格納します。  
+     XML 一括読み込みでは、これらは無視されます **\<順序 >** 要素。 使用する場合は、`sql:overflow-field`注釈によりオーバーフロー列、XML 一括読み込み、列を識別するために、スキーマでは、このコラムですべての未使用データを格納します。  
   
 -   CDATA セクションとエンティティ参照は、データベースに保存される前に、同等の文字列に変換されます。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66013447"
     </Schema>  
     ```  
   
-     この XML データで、 **HireDate**属性は、2 番目の見つからない**\<顧客 >** 要素。 XML 一括読み込みで 2 つ目を挿入するとき**\<顧客 >** 要素がデータベースに、スキーマで指定されている既定値を使用します。  
+     この XML データで、 **HireDate**属性は、2 番目の見つからない **\<顧客 >** 要素。 XML 一括読み込みで 2 つ目を挿入するとき **\<顧客 >** 要素がデータベースに、スキーマで指定されている既定値を使用します。  
   
     ```  
     <ROOT>  

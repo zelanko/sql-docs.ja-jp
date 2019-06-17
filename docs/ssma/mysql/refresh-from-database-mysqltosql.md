@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473898"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>データベースからの更新 (MySQLToSQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62473898"
   
 |||  
 |-|-|  
-|**項目**|**[定義]**|  
+|**項目**|**定義**|  
 |**折りたたみ (-)**|個々 のオブジェクトを非表示にするすべてのオブジェクト グループを折りたたみます。|  
 |**展開 (+)**|個々 のオブジェクトを表示するすべてのオブジェクト グループを展開します。|  
 |**等しいオブジェクトを表示/非表示**|オブジェクトのメタデータが、MySQL データベースと SSMA で同じである場合は、一覧からオブジェクトを非表示にします。|  

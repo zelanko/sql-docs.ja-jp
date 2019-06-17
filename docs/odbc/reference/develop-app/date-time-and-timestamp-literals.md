@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641025"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日付、時刻、およびタイムスタンプのリテラル
@@ -31,7 +31,7 @@ ms.locfileid: "62641025"
 |---------------------|-------------|-----------------------|  
 |**d**|date|*yyyy*-*mm*-*dd*|  
 |**t**|時間 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*][1]|  
+|**ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
   
  [秒コンポーネントを含むリテラル、時刻、またはタイムスタンプ間隔で小数点の右側にある数字の 1] の番号は SQL_DESC_PRECISION の記述子フィールドに含まれる秒の有効桁数に依存します。 (詳細については、次を参照してください[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)。  
   

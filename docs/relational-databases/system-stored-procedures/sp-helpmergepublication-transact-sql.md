@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660803"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication**=** ] **'**_publication_**'**  
- パブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は**%**、現在のデータベース内のすべてのマージ パブリケーションに関する情報が返されます。  
+ [ @publication **=** ] **'** _publication_ **'**  
+ パブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は **%** 、現在のデータベース内のすべてのマージ パブリケーションに関する情報が返されます。  
   
- [ @found**=** ] **'***found***'** OUTPUT  
+ [ @found **=** ] **'***found***'** OUTPUT  
  行を返すことを示すフラグ。 *見つかった*は**int**は出力パラメーター、既定値は NULL です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
   
- [ @publication_id**=**] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  パブリケーション識別番号です。 *publication_id*は**uniqueidentifier**は出力パラメーター、既定値は NULL です。  
   
- [ @reserved**=**] **'***reserved***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *予約済み*は**nvarchar (20)**、既定値は NULL です。  
+ [ @reserved **=** ] **'***reserved***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *予約済み*は**nvarchar (20)** 、既定値は NULL です。  
   
- [ @publisher**=** ] **'***publisher***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  パブリッシャーの名前。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。  
   
 ## <a name="result-sets"></a>結果セット  

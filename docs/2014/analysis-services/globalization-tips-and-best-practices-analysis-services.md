@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080859"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>グローバリゼーションのヒントとベスト プラクティス (Analysis Services)
@@ -102,7 +102,7 @@ ms.locfileid: "66080859"
   
 -   接続文字列に `Locale Identifier=1036` を追加します。 ファイルを保存して閉じます。  
   
--   Excel で、 **[データ]** | **[既存の接続]** の順に開きます。 リストをフィルター処理し、対象のコンピューター上の接続ファイルのみにします。 Adventure Works 用の接続を検索します (名前を注意深く探します。複数ある場合もあります)。 接続を開きます。  
+-   Excel で、 **[データ]**  |  **[既存の接続]** の順に開きます。 リストをフィルター処理し、対象のコンピューター上の接続ファイルのみにします。 Adventure Works 用の接続を検索します (名前を注意深く探します。複数ある場合もあります)。 接続を開きます。  
   
      Adventure Works サンプル データベースのフランス語翻訳が表示されるはずです。  
   
@@ -112,9 +112,9 @@ ms.locfileid: "66080859"
   
  Management Studio で、サーバー接続のロケール ID を指定できます。  
   
--   オブジェクト エクスプローラーで、 **[接続]** | **[Analysis Services]** | **[オプション]** の順に移動し、 **[追加の接続パラメーター]** タブをクリックします。  
+-   オブジェクト エクスプローラーで、 **[接続]**  |  **[Analysis Services]**  |  **[オプション]** の順に移動し、 **[追加の接続パラメーター]** タブをクリックします。  
   
--   `Local Identifier=1036` と入力し、**[接続]** をクリックします。  
+-   `Local Identifier=1036` と入力し、 **[接続]** をクリックします。  
   
 -   Adventure Works データベースに対して、MDX クエリを実行します。 クエリ結果は、フランス語翻訳になるはずです。  
   

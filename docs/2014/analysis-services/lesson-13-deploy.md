@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079136"
 ---
 # <a name="lesson-14-deploy"></a>レッスン 14:配置
@@ -49,7 +49,7 @@ ms.locfileid: "66079136"
   
 #### <a name="to-deploy-the-adventure-works-internet-sales-tabular-model"></a>Adventure Works Internet Sales テーブル モデルを配置するには  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、**[ビルド]** メニューをクリックし、**[AW Internet Sales Tabular Model の配置]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[ビルド]** メニューをクリックし、 **[AW Internet Sales Tabular Model の配置]** をクリックします。  
   
      [配置] ダイアログ ボックスが表示され、メタデータの配置状況と、モデルに含まれる各テーブルが表示されます。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66079136"
 ## <a name="additional-resources"></a>その他のリソース  
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] レポートをサポートするテーブル モデル プロパティの詳細については、[「Power View レポート プロパティ (SSAS テーブル)」](tabular-models/properties-ssas-tabular.md) を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DirectQuery モード &#40;SSAS テーブル&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
  [既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [表形式モデルのデータベース (SSAS 表形式)](tabular-models/tabular-model-databases-ssas-tabular.md)  

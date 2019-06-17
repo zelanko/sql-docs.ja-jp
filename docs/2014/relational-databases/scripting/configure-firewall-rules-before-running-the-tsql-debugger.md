@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064188"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL デバッガーの構成
@@ -158,7 +158,7 @@ ms.locfileid: "66064188"
 
 * サーバーとクライアントが RPC 経由で通信をしている必要があります。 サービスが実行されている SQL Server が実行がアカウントでは、クライアントへのアクセス許可を認証します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Transact-SQL デバッガー](transact-sql-debugger.md)   
  [Transact-SQL デバッガーの実行](run-the-transact-sql-debugger.md)   
  [Transact-SQL コードのステップ実行](step-through-transact-sql-code.md)   

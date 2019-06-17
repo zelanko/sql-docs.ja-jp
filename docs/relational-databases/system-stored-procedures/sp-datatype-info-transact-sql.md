@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62506976"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (TRANSACT-SQL)
@@ -55,8 +55,8 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS に依存するデータを入力します。|  
 |DATA_TYPE|**smallint**|このデータ型のすべての列がマップされる ODBC 型のコードです。|  
 |PRECISION|**int**|データ ソースでのデータ型の最大有効桁数です。 有効桁数が適用されていないデータ型に NULL が返されます。 PRECISION 列の戻り値は 10 進表記です。|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|文字または文字定数の前に使用します。 単一引用符など (**'**) の文字型とバイナリ 0 x。|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|文字または文字の定数を終了するために使用します。 単一引用符など (**'**) の文字型とバイナリには引用符です。|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|文字または文字定数の前に使用します。 単一引用符など ( **'** ) の文字型とバイナリ 0 x。|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|文字または文字の定数を終了するために使用します。 単一引用符など ( **'** ) の文字型とバイナリには引用符です。|  
 |CREATE_PARAMS|**varchar(** 32 **)**|このデータ型の作成パラメーターの説明です。 たとえば、 **10 進**は"precision, scale"、 **float**が null の場合と**varchar**は"max_length"。|  
 |NULLABLE|**smallint**|Null 値許容属性を指定します。<br /><br /> 1 = null 値を許可します。<br /><br /> 0 = は null 値を許可します。|  
 |CASE_SENSITIVE|**smallint**|大文字と小文字を区別するかどうかを示します。<br /><br /> 1 = この型のすべての列では、大文字と小文字を区別します (照合の場合)。<br /><br /> 0 = すべて大文字と小文字はこの型の列。|  

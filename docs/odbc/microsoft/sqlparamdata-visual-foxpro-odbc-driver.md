@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a29b9502fcadf77075f6ee1d49b021233f07ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636741"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData (Visual FoxPro ODBC ドライバー)
@@ -26,7 +26,7 @@ ms.locfileid: "62636741"
   
  サポート:[完全]  
   
- ODBC API 準拠:レベル 1  
+ ODBC API 準拠:[レベル 1]  
   
  組み合わせて使用[SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md)ステートメントの実行時にパラメーターのデータを指定します。  
   

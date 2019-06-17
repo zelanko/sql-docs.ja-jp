@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081371"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>[エラーの構成] ([マイニング構造] ダイアログ ボックス) (Analysis Services - 多次元データ)
@@ -88,7 +88,7 @@ ms.locfileid: "66081371"
  **[エラー ログのパス]**  
  エラー ログ ファイルの完全なパスとファイル名を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造のプロパティ ダイアログ ボックス&#40;Analysis Services - データ マイニング&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
  [一般的な&#40;マイニング構造 ダイアログ ボックス&#41; &#40;Analysis Services - データ マイニング&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   

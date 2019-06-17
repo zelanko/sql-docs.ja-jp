@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639966"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>モニターは、Parallel Data Warehouse に読み込みます
@@ -26,7 +26,7 @@ ms.locfileid: "62639966"
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
 負荷を監視するために使用する方法に関係なく、ログインは、基になるデータ ソースにアクセスする権限が必要です。 
 
 <!-- MISSING LINKS

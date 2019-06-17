@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057316"
 ---
 # <a name="odata-source-editor-connection-page"></a>[OData ソース エディター] ([接続] ページ)
@@ -54,9 +54,9 @@ ms.locfileid: "66057316"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 以下に例を示します。Employees  
+ リソースのパスを入力します。 例 :Employees  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OData ソース エディター ([列] ページ)](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [OData ソース エディター ([エラー出力] ページ)](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [OData Connection Manager](connection-manager/odata-connection-manager.md)  

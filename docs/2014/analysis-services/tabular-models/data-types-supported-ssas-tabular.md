@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067282"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>サポートされているデータ型 (SSAS 表形式)
@@ -73,7 +73,7 @@ ms.locfileid: "66067282"
 ##  <a name="bkmk_implicit"></a> DAX 数式の暗黙的なデータ型変換と明示的なデータ型変換  
  各 DAX 関数には、入力および出力として使用するデータ型について固有の要件があります。 たとえば、一部の関数は、特定の引数に整数や日付の指定が必要です。テキストやテーブルの指定が必要な関数もあります。  
   
- 引数として指定する列内のデータと、関数が受け取るデータ型との互換性がない場合、DAX では多くの場合エラーが返されます。 ただし、DAX は可能な限り、必要なデータ型への暗黙的な変換を試行します。 以下に例を示します。  
+ 引数として指定する列内のデータと、関数が受け取るデータ型との互換性がない場合、DAX では多くの場合エラーが返されます。 ただし、DAX は可能な限り、必要なデータ型への暗黙的な変換を試行します。 例 :  
   
 -   数値、たとえば「123」, は、文字列として入力できます。 DAX はこの文字列を解析し、数値データ型として指定しようとします。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66067282"
   
  特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](https://msdn.microsoft.com/library/ee634396.aspx)」セクションの各 DAX 関数のトピックを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   
  [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055482"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>[SQL 変換先エディター] ([マッピング] ページ)
@@ -39,7 +39,7 @@ ms.locfileid: "66055482"
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [SQL 変換先エディター ([接続マネージャー] ページ)](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [[SQL 変換先エディター] ([詳細設定] ページ)](../../2014/integration-services/sql-destination-editor-advanced-page.md)   

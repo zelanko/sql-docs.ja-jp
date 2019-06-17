@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060228"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -45,7 +45,7 @@ ms.locfileid: "66060228"
   
 2.  プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、**[配置ユーティリティ]** をクリックします。  
+3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、 **[配置ユーティリティ]** をクリックします。  
   
 4.  パッケージが配置されている場合は、パッケージの構成を更新するには、設定**AllowConfigurationChanges**に`True`します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66060228"
   
 9. ビルドの進捗状況とエラーが **[出力]** ウィンドウに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
  [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)   
  [配置ユーティリティを使用してパッケージを配置する](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   

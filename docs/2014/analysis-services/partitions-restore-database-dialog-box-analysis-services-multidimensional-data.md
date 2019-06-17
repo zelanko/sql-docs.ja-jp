@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072111"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>[パーティション] ([データベースの復元] ダイアログ ボックス) (Analysis Services - 多次元データ)
@@ -66,7 +66,7 @@ ms.locfileid: "66072111"
 |**パーティション**|ローカル パーティションの名前が表示されます。|  
 |**[サイズ (MB)]**|ローカル パーティションのサイズ (MB) が表示されます。|  
 |**元のフォルダー**|ローカル パーティションが収められていた元のフォルダーの名前が表示されます。|  
-|**復元フォルダー**|ローカル パーティションの復元フォルダーの名前を入力するか、参照ボタン (**[...]**) をクリックして **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、使用するフォルダーのパスを選択します。 **[リモート フォルダーの参照]** ダイアログ ボックスの詳細については、「[[リモート フォルダーの参照] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**復元フォルダー**|ローカル パーティションの復元フォルダーの名前を入力するか、参照ボタン ( **[...]** ) をクリックして **[リモート フォルダーの参照]** ダイアログ ボックスを表示し、使用するフォルダーのパスを選択します。 **[リモート フォルダーの参照]** ダイアログ ボックスの詳細については、「[[リモート フォルダーの参照] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
   
  **リモート パーティションを復元します。**  
  選択すると、リモート バックアップ ファイルに保存されているリモート パーティションを復元します。  
@@ -80,10 +80,10 @@ ms.locfileid: "66072111"
 |------------|-----------------|  
 |**[サーバー]**|リモート パーティションを管理する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの名前が表示されます。|  
 |**Data Source**|バックアップ ファイル内のデータ ソースの名前が表示されます。これは、リモート パーティションを含むデータベースを表します。|  
-|**バックアップ ファイル**|使用するリモート バックアップ ファイルの完全なパスとファイル名を入力するか、参照ボタン (**[...]**) をクリックして **[データベース ファイルの検索]** ダイアログ ボックスを表示し、使用するリモート バックアップ ファイルのパスとファイル名を選択します。 **[データベース ファイルの検索]** ダイアログ ボックスの詳細については、「[[データベース ファイルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
-|**[...]**|クリックすると、**[リモート パーティション - 詳細設定]** ダイアログ ボックスが表示され、リモート パーティションの復元に使用するデータ ソースの接続文字列などの詳細なオプションを変更できます。 **[リモート パーティション - 詳細設定]** ダイアログ ボックスの詳細については、「[[リモート パーティション - 詳細設定] ダイアログ ボックス (Analysis Services - 多次元データ)](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**バックアップ ファイル**|使用するリモート バックアップ ファイルの完全なパスとファイル名を入力するか、参照ボタン ( **[...]** ) をクリックして **[データベース ファイルの検索]** ダイアログ ボックスを表示し、使用するリモート バックアップ ファイルのパスとファイル名を選択します。 **[データベース ファイルの検索]** ダイアログ ボックスの詳細については、「[[データベース ファイルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**[...]**|クリックすると、 **[リモート パーティション - 詳細設定]** ダイアログ ボックスが表示され、リモート パーティションの復元に使用するデータ ソースの接続文字列などの詳細なオプションを変更できます。 **[リモート パーティション - 詳細設定]** ダイアログ ボックスの詳細については、「[[リモート パーティション - 詳細設定] ダイアログ ボックス (Analysis Services - 多次元データ)](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データベースの復元] ダイアログ ボックス (Analysis Services - 多次元データ)](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [一般的な&#40;データベースの復元 ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services データベースのバックアップと復元](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

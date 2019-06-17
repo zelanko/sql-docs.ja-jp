@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 705428d2c2a6671452a1d95e06e500f4860574e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472304"
 ---
 # <a name="create-a-calculated-column"></a>計算列の作成
@@ -34,7 +34,7 @@ ms.locfileid: "62472304"
   
     -   等号に続けて DAX 関数、その後に関数に必要な引数やパラメーターを入力します。  
   
-    -   関数ボタン (**[fx]**) をクリックし、 **[関数の挿入]** ダイアログ ボックスでカテゴリおよび関数を選択してから、 **[OK]** をクリックします。 数式バーで、関数に必要な残りの引数とパラメーターを入力します。  
+    -   関数ボタン ( **[fx]** ) をクリックし、 **[関数の挿入]** ダイアログ ボックスでカテゴリおよび関数を選択してから、 **[OK]** をクリックします。 数式バーで、関数に必要な残りの引数とパラメーターを入力します。  
   
 3.  Enter キーを押して数式を確定します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62472304"
 > [!TIP]  
 >  DAX 数式のオートコンプリート機能は、関数が入れ子になっている既存の数式の途中で使用できます。 挿入ポイントの直前のテキストが、ドロップダウン リストに値を表示するために使用されます。挿入ポイントより後ろのすべてのテキストは変更されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [計算列](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   

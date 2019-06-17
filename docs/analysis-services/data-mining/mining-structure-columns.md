@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbdcd14127cdf45eb35dd7a24652be4f7c4d613
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509974"
 ---
 # <a name="mining-structure-columns"></a>マイニング構造列
@@ -27,13 +27,13 @@ ms.locfileid: "62509974"
   
  マイニング構造列の定義には、次の情報を含める必要があります。  
   
--   **[ID]**:通常、名前と同じ列の一意の名前。 マイニング構造の作成後、名前は変更することができますが、ID は変更できません。  
+-   **[ID]** :通常、名前と同じ列の一意の名前。 マイニング構造の作成後、名前は変更することができますが、ID は変更できません。  
   
--   **[名前]**:名前または列の別名。  
+-   **[名前]** :名前または列の別名。  
   
 -   **コンテンツ**:データが不連続または連続がかどうかを説明する列挙です。  
   
--   **[種類]**:一般的なデータ型を示す列挙体。  
+-   **[種類]** :一般的なデータ型を示す列挙体。  
   
 -   **配布**:予想される値の分布を表す列挙体。 分布は列が連続している場合に含まれます。  
   

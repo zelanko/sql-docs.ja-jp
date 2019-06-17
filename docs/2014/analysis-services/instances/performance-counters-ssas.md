@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079710"
 ---
 # <a name="performance-counters-ssas"></a>パフォーマンス カウンター (SSAS)
@@ -24,7 +24,7 @@ ms.locfileid: "66079710"
   
  パフォーマンス モニターでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のリモート インスタンスとローカル インスタンスを監視できます。 詳細については、「 [パフォーマンス モニターを使用する](https://technet.microsoft.com/library/cc749115.aspx)」を参照してください。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるカウンターの説明をパフォーマンス モニターに表示するには、 **[カウンターの追加]** ダイアログ ボックスを開き、パフォーマンス オブジェクトを選択して **[説明を表示する]** をクリックします。 最も重要なカウンターは、CPU の使用率、メモリの使用量、ディスクの入出力レートです。 最初はこれらの重要なカウンターを使用することから始めて、監視によってその他のものが改善される見込みが立った場合に、より詳細なカウンターの利用に移ることをお勧めします。 使用できるカウンターの詳細については、「 [SQL Server 2008 R2 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で使用できるカウンターの説明をパフォーマンス モニターに表示するには、 **[カウンターの追加]** ダイアログ ボックスを開き、パフォーマンス オブジェクトを選択して **[説明を表示する]** をクリックします。 最も重要なカウンターは、CPU の使用率、メモリの使用量、ディスクの入出力レートです。 最初はこれらの重要なカウンターを使用することから始めて、監視によってその他のものが改善される見込みが立った場合に、より詳細なカウンターの利用に移ることをお勧めします。 使用できるカウンターの詳細については、「 [SQL Server 2008 R2 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  カウンターは、関連カウンターをより簡単に見つけることができるようにグループ化されます。  
   

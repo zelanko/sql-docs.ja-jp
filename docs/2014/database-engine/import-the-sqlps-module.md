@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 303d4cb75ad678ddd0c0f49e204566fc8a0d2c2c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064731"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS モジュールのインポート
   PowerShell から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を管理する方法としては、`sqlps` モジュールを Windows PowerShell 2.0 環境にインポートする方法を推奨します。 このモジュールによって、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスナップインと管理アセンブリが読み込まれ、登録されます。  
   
-1.  **はじめに:**[Security](#Security)  
+1.  **はじめに:** [Security](#Security)  
   
-2.  **モジュールを読み込めません。**[Sqlps モジュールの読み込み](#LoadSqlps)  
+2.  **モジュールを読み込めません。** [Sqlps モジュールの読み込み](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>はじめに  
  `sqlps` モジュールを Windows PowerShell にインポートした後は、次のことができます。  

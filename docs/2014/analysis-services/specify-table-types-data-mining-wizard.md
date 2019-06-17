@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068134"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>[テーブルの種類の指定] (データ マイニング ウィザード)
@@ -25,7 +25,7 @@ ms.locfileid: "66068134"
 > [!NOTE]  
 >  後から、**データ マイニング デザイナー**の **[マイニング構造]** タブでテーブルを追加できます。  
   
- **詳細情報。**[入れ子になったテーブル&#40;Analysis Services - データ マイニング&#41;](data-mining/nested-tables-analysis-services-data-mining.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。** [入れ子になったテーブル&#40;Analysis Services - データ マイニング&#41;](data-mining/nested-tables-analysis-services-data-mining.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **テーブル**  

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62675671"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムをアンインストールします。 
@@ -26,13 +26,13 @@ ms.locfileid: "62675671"
   
 -   アプライアンスの監視を管理コンソールにアクセスする権限を持つ、Analytics Platform System ログインします。  
   
--   ドメイン管理者アカウントにログインを<em>< appliance_domain ></em>**-HST01**ノード。  
+-   ドメイン管理者アカウントにログインを<em>< appliance_domain ></em> **-HST01**ノード。  
   
 -   アンインストールする修正プログラムのサポート技術情報記事番号。  
   
 ## <a name="HowToUninstallPDW"></a>SQL Server PDW の修正プログラムをアンインストールするには  
   
-1.  ログオン、 <em>< appliance_domain ></em>**-HST01** Fabric ドメイン管理者としてのノード。  
+1.  ログオン、 <em>< appliance_domain ></em> **-HST01** Fabric ドメイン管理者としてのノード。  
   
 2.  管理者として実行を使用して、コマンド プロンプトを開きます。  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835744"
 ---
 # <a name="manage-a-cdc-service"></a>CDC サービスの管理
@@ -42,7 +42,7 @@ ms.locfileid: "62835744"
   
  **[すべてのインスタンスの停止]** をクリックして、サービスのすべてのインスタンスの変更データ キャプチャを停止します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 変更データベース インスタンスを作成する方法](how-to-create-the-sql-server-change-database-instance.md)   
  [CDC デザイナー コンソールから CDC サービスを管理する方法](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Use the New Instance Wizard](use-the-new-instance-wizard.md)  
