@@ -12,10 +12,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9161815d886594c21a69739aee88c1893bda7007
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821345"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>スクリプト生成ウィザードでサポートされるオブジェクト
@@ -33,7 +33,7 @@ ms.locfileid: "65821345"
 |CLR (共通言語ランタイム) ストアド プロシージャ*|インデックス|テーブル|ユーザー定義テーブル||  
 |CLR ユーザー定義関数|Rule|ユーザー**|ユーザー定義型||  
   
- * 暗号化されずにパブリッシュされます。  
+ \* 暗号化されずにパブリッシュされます。  
   
  ** データベースに存在するシステム ユーザー以外のユーザーはすべてロールとしてパブリッシュされます。  
   

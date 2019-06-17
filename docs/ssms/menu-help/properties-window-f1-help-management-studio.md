@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ad01e2691f76fea00a5531834918b7fbe5d2382e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096398"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)
@@ -42,7 +42,7 @@ ms.locfileid: "65096398"
 現在選択している 1 つまたは複数のオブジェクトを一覧に表示します。 アクティブなエディターまたはデザイナーのオブジェクトのみが表示されます。  
   
 **項目別**  
-選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目別に表示します。 項目を折りたたんで、表示するプロパティの数を少なくすることができます。 カテゴリの展開したり折りたたんだりすると、各カテゴリ名の左側に正符号 (**+**) または負符号 (**-**) が表示されます。 項目はアルファベット順に表示されます。  
+選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目別に表示します。 項目を折りたたんで、表示するプロパティの数を少なくすることができます。 カテゴリの展開したり折りたたんだりすると、各カテゴリ名の左側に正符号 ( **+** ) または負符号 ( **-** ) が表示されます。 項目はアルファベット順に表示されます。  
   
 **アルファベット順**  
 選択したオブジェクトのデザイン時のすべてのプロパティおよびイベントをアルファベット順に並べ替えます。  

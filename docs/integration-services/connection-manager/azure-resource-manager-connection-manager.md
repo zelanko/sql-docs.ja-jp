@@ -15,10 +15,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.openlocfilehash: e601113995e3bbcc16e84dbabcb221f7730b11fb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728349"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure Resource Manager 接続マネージャー
@@ -32,7 +32,7 @@ ms.locfileid: "65728349"
 
 **Azure Resource Manager 接続マネージャー**を作成して構成するには、以下の手順のようにします。
 
-1. **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureResourceManager]** を選び、**[追加]** をクリックします。
-2. **[Azure Resource Manager Connection Manager Editor]\(Azure Resource Manager 接続マネージャー エディター\)** ダイアログ ボックスで、サービス プリンシパルの **[Application ID]\(アプリケーション ID\)**、**[Application Key]\(アプリケーション キー\)**、**[Tenant ID]\(テナント ID\)** を指定します。 これらのプロパティについて詳しくは、[こちら](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)の記事をご覧ください。
+1. **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureResourceManager]** を選び、 **[追加]** をクリックします。
+2. **[Azure Resource Manager Connection Manager Editor]\(Azure Resource Manager 接続マネージャー エディター\)** ダイアログ ボックスで、サービス プリンシパルの **[Application ID]\(アプリケーション ID\)** 、 **[Application Key]\(アプリケーション キー\)** 、 **[Tenant ID]\(テナント ID\)** を指定します。 これらのプロパティについて詳しくは、[こちら](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)の記事をご覧ください。
 3. **[OK]** をクリックして、ダイアログ ボックスを閉じます。
 4. 作成した接続マネージャーのプロパティは、 **[プロパティ]** ウィンドウに表示されます。

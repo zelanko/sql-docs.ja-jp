@@ -33,10 +33,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5a9b49b743ed95766bfbd8d310bba40c6bfe396
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719969"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
@@ -499,7 +499,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、**[配置ユーティリティ]** をクリックします。  
+3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、 **[配置ユーティリティ]** をクリックします。  
   
 4.  パッケージの配置時にパッケージの構成を更新するには、 **[AllowConfigurationChanges]** を **True**に設定します。  
   
@@ -545,7 +545,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 3.  **[SSIS パッケージの配置]** ページで、 **[SQL Server に配置]** オプションを選択します。  
   
-4.  必要に応じて、ターゲット サーバーにパッケージがインストールされた後で検証を行う場合は、**[インストール後にパッケージを検証する]** を選択します。  
+4.  必要に応じて、ターゲット サーバーにパッケージがインストールされた後で検証を行う場合は、 **[インストール後にパッケージを検証する]** を選択します。  
   
 5.  **[インストール先の SQL Server の指定]** ページで、パッケージをインストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定し、認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択する場合は、ユーザー名とパスワードを入力する必要があります。  
   
@@ -591,7 +591,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成ファイル]**  
  一覧からファイルを選択して、構成ファイルの内容を編集します。  
   
- **関連項目:**[パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)  
+ **関連項目:** [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)  
   
  **[パス]**  
  構成するプロパティのパスを表示します。  

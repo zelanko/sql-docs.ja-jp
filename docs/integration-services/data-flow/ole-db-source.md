@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f666a224c2e41fb50a1a62748e7d8f1666d0beb9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726645"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
@@ -127,7 +127,7 @@ ms.locfileid: "65726645"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 以前のバージョンを使用するデータ ソースからデータを読み込むには、Excel ソースを使用します。 詳細については、「[[Excel ソース エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)」を参照してください。  
   
 > [!NOTE]  
->  OLE DB ソースの **CommandTimeout** プロパティは、**[OLE DB ソース エディター]** ではアクセスできませんが、**[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
+>  OLE DB ソースの **CommandTimeout** プロパティは、 **[OLE DB ソース エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
   
 ### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>OLE DB ソース エディターを開く ([接続マネージャー] ページ)  
   
@@ -150,7 +150,7 @@ ms.locfileid: "65726645"
 |オプション|[説明]|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|OLE DB データベースのテーブルまたはビューからデータを取得します。|  
-|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:**[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |[SQL コマンド]|SQL クエリを使用して、OLE DB データ ソースからデータを取得します。|  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   
@@ -216,7 +216,7 @@ ms.locfileid: "65726645"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:**[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  

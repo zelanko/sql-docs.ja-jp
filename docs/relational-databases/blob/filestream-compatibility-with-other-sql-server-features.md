@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2b2f9e434e1e88d893478c558078c8139e1bb0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094251"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM と SQL Server のその他の機能との互換性
@@ -68,7 +68,7 @@ ms.locfileid: "65094251"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> レプリケーション  
- パブリッシャーで FILESTREAM 属性が有効になっている **varbinary(max)** 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、**[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、[sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) または [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の @schema_option パラメーターを使用します。 FILESTREAM 属性を持たない **varbinary(max)** 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合以外は、FILESTREAM 属性をレプリケートすることをお勧めします。 指定するスキーマ オプションに関係なく、FILESTREAM 列を含むテーブルを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サブスクライバーにレプリケートすることはサポートされていません。  
+ パブリッシャーで FILESTREAM 属性が有効になっている **varbinary(max)** 列は、FILESTREAM 属性を含めてサブスクライバーにレプリケートすることも、含めずにレプリケートすることもできます。 列をレプリケートする方法を指定するには、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスを使用するか、[sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) または [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の @schema_option パラメーターを使用します。 FILESTREAM 属性を持たない **varbinary(max)** 列にレプリケートされるデータは、このデータ型の制限 (2 GB) を超えないようにする必要があります。この制限を超えると実行時エラーが発生します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にデータをレプリケートする場合以外は、FILESTREAM 属性をレプリケートすることをお勧めします。 指定するスキーマ オプションに関係なく、FILESTREAM 列を含むテーブルを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] サブスクライバーにレプリケートすることはサポートされていません。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] から [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] サブスクライバーにレプリケートできるデータ値の大きさは、最大 256 MB に制限されています。 詳細については、「 [最大容量仕様](https://go.microsoft.com/fwlink/?LinkId=103810)」を参照してください。  

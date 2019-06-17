@@ -34,10 +34,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7db64289b031851629c0627bd324eba752fd8554
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503483"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -758,7 +758,7 @@ VALUES ('Environmental Impact', 'Engineering');
 GO  
 ```  
   
-#### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O.  OPENDATASOURCE 関数を使用してリモート テーブルにデータを挿入する  
+#### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. OPENDATASOURCE 関数を使用してリモート テーブルにデータを挿入する  
  次の例では、[OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 行セット関数を指定してリモート テーブルに行を挿入します。 *server_name* または *server_name\instance_name* という形式を使用して、データ ソースの有効なサーバー名を指定します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -808,7 +808,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 ###  <a name="BulkLoad"></a> テーブルまたはデータ ファイルのデータを一括読み込みする  
  このセクションの例では、INSERT ステートメントを使用してテーブルにデータを一括読み込みする 2 つの方法を示します。  
   
-#### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q.  最小ログ記録を行ってヒープにデータを挿入する  
+#### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. 最小ログ記録を行ってヒープにデータを挿入する  
  次の例では、新しいテーブル (ヒープ) を作成し、最小ログ記録を使用して、別のテーブルのデータをそのテーブルに挿入します。 この例では、`AdventureWorks2012` データベースの復旧モデルが FULL に設定されていると想定しています。 したがって、最小ログ記録が使用されるようにするために、行を挿入する前に `AdventureWorks2012` データベースの復旧モデルを BULK_LOGGED に設定し、INSERT INTO...SELECT ステートメントの後に FULL に戻しています。 また、対象テーブル `Sales.SalesHistory` に TABLOCK ヒントが指定されています。 これにより、ステートメントが使用するトランザクション ログの領域が最小化され、ステートメントが効率的に実行されるようになります。  
   
 ```sql
@@ -851,7 +851,7 @@ SET RECOVERY FULL;
 GO  
 ```  
   
-#### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R.  OPENROWSET 関数を BULK を指定して使用し、テーブルにデータを一括読み込みする  
+#### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. OPENROWSET 関数を BULK を指定して使用し、テーブルにデータを一括読み込みする  
  次の例は、OPENROWSET 関数を指定することによって、テーブルにデータ ファイルからの行を挿入します。 パフォーマンスを最適化するために、IGNORE_TRIGGERS テーブル ヒントを指定しています。 他の例については、「[BULK INSERT または OPENROWSET&#40;BULK...&#41; を使用した一括データのインポート &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)」をご覧ください。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -871,7 +871,7 @@ FROM OPENROWSET (
 > [!CAUTION]  
 >  通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーでは、クエリにとって最適な実行プランが選択されるため、ヒントは、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。  
   
-#### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S.  TABLOCK ヒントを使用してロック手法を指定する  
+#### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S. TABLOCK ヒントを使用してロック手法を指定する  
  次の例では、Production.Location テーブルに対して排他 (X) ロックを使用することと、このロックを INSERT ステートメントの終了まで保持することを指定します。  
   
 **適用対象**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
@@ -885,7 +885,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 ###  <a name="CaptureResults"></a> INSERT ステートメントの結果をキャプチャする  
  このセクションの例では、[OUTPUT 句](../../t-sql/queries/output-clause-transact-sql.md)を使用して、INSERT ステートメントの影響を受ける各行の情報や、それらに基づく式を返す方法を示します。 これらの結果は処理アプリケーションに返され、確認メッセージの表示、アーカイブ化、その他のアプリケーション要件で使用することができます。  
   
-#### <a name="t-using-output-with-an-insert-statement"></a>T.  OUTPUT を INSERT ステートメントで使用する  
+#### <a name="t-using-output-with-an-insert-statement"></a>T. OUTPUT を INSERT ステートメントで使用する  
  次の例では、`ScrapReason` テーブルに 1 行を挿入し、`OUTPUT` 句を使用してステートメントの結果を `@MyTableVar` テーブル変数に返します。 `ScrapReasonID` 列が `IDENTITY` プロパティで定義されているため、`INSERT` ステートメントではこの列の値を指定していません。 ただし、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってこの列用に生成された値が、`OUTPUT` 句で `INSERTED.ScrapReasonID` 列に返されます。  
   
 ```sql
@@ -904,7 +904,7 @@ SELECT ScrapReasonID, Name, ModifiedDate
 FROM Production.ScrapReason;  
 ```  
   
-#### <a name="u-using-output-with-identity-and-computed-columns"></a>U.  ID 列と計算列で OUTPUT を使用する  
+#### <a name="u-using-output-with-identity-and-computed-columns"></a>U. ID 列と計算列で OUTPUT を使用する  
  次の例では、`EmployeeSales` テーブルを作成し、INSERT ステートメントを使用してこのテーブルに複数行を挿入します。基になるテーブルからデータを取得するため、SELECT ステートメントも使用します。 `EmployeeSales` テーブルには、ID 列 (`EmployeeID`) および計算列 (`ProjectedSales`) があります。 これらの値は[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって挿入操作中に生成されるため、いずれの列も `@MyTableVar` で定義できません。  
   
 ```sql
@@ -941,7 +941,7 @@ SELECT EmployeeID, LastName, FirstName, CurrentSales, ProjectedSales
 FROM dbo.EmployeeSales;  
 ```  
   
-#### <a name="v-inserting-data-returned-from-an-output-clause"></a>V.  OUTPUT 句から返されたデータを挿入する  
+#### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. OUTPUT 句から返されたデータを挿入する  
  次の例では、MERGE ステートメントの OUTPUT 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 MERGE ステートメントは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SalesOrderDetail` テーブル内で処理される注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が 0 になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
 ```sql

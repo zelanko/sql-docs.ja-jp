@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9253eca362352a86baeac943eaf524b4b3f4c04f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726150"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS クレンジング変換
@@ -106,9 +106,9 @@ ms.locfileid: "65726150"
   
  有効な値は次のとおりです。  
   
--   **[エラー コンポーネント]**: 変換に失敗したこと、およびデータが Data Quality Services データベースに挿入されていないことを示します。 これが既定値です。  
+-   **[エラー コンポーネント]** : 変換に失敗したこと、およびデータが Data Quality Services データベースに挿入されていないことを示します。 これが既定値です。  
   
--   **[行のリダイレクト]**: 入力データが Data Quality Services データベースに挿入されていないために、エラー出力にリダイレクトされることを示します。  
+-   **[行のリダイレクト]** : 入力データが Data Quality Services データベースに挿入されていないために、エラー出力にリダイレクトされることを示します。  
   
 ###  <a name="mapping"></a> [マッピング] タブのオプションの設定  
  複合ドメインに列をマップする方法については、「 [複合ドメインへの列のマップ](../../../integration-services/data-flow/transformations/map-columns-to-composite-domains.md)」を参照してください。  

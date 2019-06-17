@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c73c9df155d1e09552fbf5774ac4599bf9cdbdf9
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65779158"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>[テーブル作成 SQL ステートメント] (SQL Server インポートおよびエクスポート ウィザード)
@@ -40,7 +40,7 @@ ms.locfileid: "65779158"
  **SQL ステートメント**  
 自動生成された SQL ステートメントが表示され、編集できます。
  
-既定の CREATE TABLE コマンドを変更する場合は、**[列マッピング]** ダイアログ ボックスに戻るときに、関連付けられている列マッピングの変更が必要になることもあります。  
+既定の CREATE TABLE コマンドを変更する場合は、 **[列マッピング]** ダイアログ ボックスに戻るときに、関連付けられている列マッピングの変更が必要になることもあります。  
   
 SQL ステートメントのテキストにキャリッジ リターンを含めるには、Ctrl キーを押しながら Enter キーを押します。 Enter キーだけを押すと、ダイアログ ボックスが閉じます。  
   

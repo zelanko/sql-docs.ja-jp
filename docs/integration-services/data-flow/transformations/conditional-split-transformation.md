@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71ecd9b7eb0dc1f1371d31d4e97c230536249168
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726226"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
@@ -91,7 +91,7 @@ ms.locfileid: "65726226"
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[演算子 &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、[関数 &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **関連項目:** [Integration Services &#40;SSIS&#41; 式](../../../integration-services/expressions/integration-services-ssis-expressions.md)、[演算子 &#40;SSIS 式&#41;](../../../integration-services/expressions/operators-ssis-expression.md)、[関数 &#40;SSIS 式&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **[既定の出力名]**  
  既定の出力の名前を入力するか、既定を使用します。  

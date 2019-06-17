@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 490b00717d16e4ca101ea591c22e71a2d228e659
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774972"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase を使用した型マッピング
@@ -36,7 +36,7 @@ PolyBase を使用して外部テーブルを作成する場合、データ型�
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
 | TINYINT       | Byte                      | TINYINT        | ByteWritable          | 符号なし数値の場合のみです。     |
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
-| ssNoversion           | Int32                     | ssNoversion            | IntWritable           |
+| INT           | Int32                     | INT            | IntWritable           |
 | BIGINT        | Int64                     | BIGINT         | LongWritable          |
 | bit           | Boolean                   | boolean        | BooleanWritable       |
 | FLOAT         | Double                    | double         | DoubleWritable        |

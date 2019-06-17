@@ -11,10 +11,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718763"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
@@ -32,7 +32,7 @@ Scale Out Manager は 2 つの方法で開くことができます。
 ### <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1.SQL Server Management Studio から Scale Out Manager を開く
 SQL Server Management Studio (SSMS) を開き、Scale Out Master の SQL Server インスタンスに接続します。
 
-オブジェクト エクスプローラーで、**[SSISDB]** を右クリックして、**[スケール アウトの管理]** を選択します。
+オブジェクト エクスプローラーで、 **[SSISDB]** を右クリックして、 **[スケール アウトの管理]** を選択します。
 
 ![スケール アウトの管理](media/manage-scale-out.PNG)
 
@@ -41,7 +41,7 @@ SQL Server Management Studio (SSMS) を開き、Scale Out Master の SQL Server 
 
 ### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2.ManagementTool.exe を実行して Scale Out Manager を開く
 
-`%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` の下で `ManagementTool.exe` を見つけます。 **ManagementTool.exe** を右クリックし、**[管理者として実行]** を選択します。 
+`%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` の下で `ManagementTool.exe` を見つけます。 **ManagementTool.exe** を右クリックし、 **[管理者として実行]** を選択します。 
 
 Scale Out Manager を開いたら、Scale Out Master の SQL Server インスタンス名を入力し、それに接続し、スケール アウト環境を管理します。
 
@@ -51,24 +51,24 @@ Scale Out Manager を開いたら、Scale Out Master の SQL Server インスタ
 Scale Out Manager で、次の操作を実行できます。
 
 ### <a name="enable-scale-out"></a>スケール アウトの有効化
-SQL Server に接続した後で、Scale Out が有効になっていない場合、**[有効]** を選択して有効にできます。
+SQL Server に接続した後で、Scale Out が有効になっていない場合、 **[有効]** を選択して有効にできます。
 
 ![ポータルで Scale Out を有効にする](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>Scale Out Master の状態を表示する
-Scale Out Master の状態は、**[ダッシュボード]** ページに表示されます。
+Scale Out Master の状態は、 **[ダッシュボード]** ページに表示されます。
 
 ![ポータルのダッシュボード](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Scale Out Worker の状態を表示する
-Scale Out Worker の状態は、**[ワーカー マネージャー]** ページに表示されます。 各ワーカーを選択すると、個別の状態を表示できます。
+Scale Out Worker の状態は、 **[ワーカー マネージャー]** ページに表示されます。 各ワーカーを選択すると、個別の状態を表示できます。
 
 ![ポータルのワーカー マネージャー](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Scale Out Worker を追加する
 Scale Out Worker を追加するには、Scale Out Worker リストの下部にある **[+]** を選択します。 
 
-追加する Scale Out Worker のコンピューター名を入力し、**[検証]** をクリックします。 Scale Out Manager によって、現在のユーザーが Scale Out Master と Scale Out Worker のコンピューター上の証明書ストアにアクセスできるかどうかがチェックされます。
+追加する Scale Out Worker のコンピューター名を入力し、 **[検証]** をクリックします。 Scale Out Manager によって、現在のユーザーが Scale Out Master と Scale Out Worker のコンピューター上の証明書ストアにアクセスできるかどうかがチェックされます。
 
 ![ワーカーの接続](media/connect-worker-new.PNG)
 
@@ -90,16 +90,16 @@ Scale Out Worker を追加するには、Scale Out Worker リストの下部に�
 
 ![ポータルの追加の確認 2](media/portal-add-confirm2-new.PNG)
 
-**[確認]** チェックボックスを選択し、**[OK]** を選択し、Scale Out Worker の追加を開始します。
+**[確認]** チェックボックスを選択し、 **[OK]** を選択し、Scale Out Worker の追加を開始します。
 
 ### <a name="delete-a-scale-out-worker"></a>Scale Out Worker を削除する
 Scale Out Worker を削除するには、Scale Out Worker を選択し、Scale Out Worker リストの下部にある **[-]** を選択します。
 
 ### <a name="enable-or-disable-a-scale-out-worker"></a>Scale Out Worker を有効または無効にする
-Scale Out Worker を有効または無効にするには、Scale Out Worker を選択し、**[ワーカーの有効化]** または **[ワーカーの無効化]** を選択します。 ワーカーがオフラインではない場合、Scale Out Manager に表示されるワーカーの状態が適宜変更されます。
+Scale Out Worker を有効または無効にするには、Scale Out Worker を選択し、 **[ワーカーの有効化]** または **[ワーカーの無効化]** を選択します。 ワーカーがオフラインではない場合、Scale Out Manager に表示されるワーカーの状態が適宜変更されます。
 
 ## <a name="edit-a-scale-out-worker-description"></a>Scale Out Worker の説明を編集する
-Scale Out Worker の説明を編集するには、Scale Out Worker を選択し、**[編集]** を選択します。 説明の編集が終わったら、**[保存]** を選択します。
+Scale Out Worker の説明を編集するには、Scale Out Worker を選択し、 **[編集]** を選択します。 説明の編集が終わったら、 **[保存]** を選択します。
 
 ![ポータルのワーカーの保存](media/portal-save-worker-new.PNG)
 

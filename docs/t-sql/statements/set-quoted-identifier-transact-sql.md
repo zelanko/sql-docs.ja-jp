@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77828ab512373c93313c8b0602423a9eaa38a426
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939795"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -59,7 +59,7 @@ SET QUOTED_IDENTIFIER ON
 
 SET QUOTED_IDENTIFIER が ON の場合は、識別子を二重引用符で区切ることができます。リテラルは単一引用符で区切る必要があります。 SET QUOTED_IDENTIFIER が OFF の場合、識別子を引用符で区切ることはできません。識別子に関しては [!INCLUDE[tsql](../../includes/tsql-md.md)] のすべての規則に従う必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
 
-SET QUOTED_IDENTIFIER が ON (既定値) の場合、二重引用符で区切られた文字列はすべてオブジェクト識別子として解釈されます。 したがって、引用符で区切られた識別子は、識別子に関する [!INCLUDE[tsql](../../includes/tsql-md.md)] の規則に従う必要はありません。 このような識別子では予約済みキーワードを使用でき、通常は [!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子として許可されない文字を含めることもできます。 リテラル文字列式を二重引用符で区切ることはできません。リテラル文字列を区切るには、単一引用符を使用する必要があります。 単一引用符 (**'**) がリテラル文字列の一部に含まれている場合は、2 つの連続する単一引用符 (**''**) を使用してください。 データベース内のオブジェクト名に対して予約済みキーワードを使用する場合は、SET QUOTED_IDENTIFIER を ON にする必要があります。
+SET QUOTED_IDENTIFIER が ON (既定値) の場合、二重引用符で区切られた文字列はすべてオブジェクト識別子として解釈されます。 したがって、引用符で区切られた識別子は、識別子に関する [!INCLUDE[tsql](../../includes/tsql-md.md)] の規則に従う必要はありません。 このような識別子では予約済みキーワードを使用でき、通常は [!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子として許可されない文字を含めることもできます。 リテラル文字列式を二重引用符で区切ることはできません。リテラル文字列を区切るには、単一引用符を使用する必要があります。 単一引用符 ( **'** ) がリテラル文字列の一部に含まれている場合は、2 つの連続する単一引用符 ( **''** ) を使用してください。 データベース内のオブジェクト名に対して予約済みキーワードを使用する場合は、SET QUOTED_IDENTIFIER を ON にする必要があります。
 
 SET QUOTED_IDENTIFIER が OFF (既定値) の場合、式の内部のリテラル文字列は、単一引用符と二重引用符のどちらで区切ることもできます。 リテラル文字列を二重引用符で区切る場合は、文字列の内部でアポストロフィなどの埋め込み単一引用符を使用できます。
 
@@ -89,7 +89,7 @@ SET QUOTED_IDENTIFIER は解析時に有効であり、解析に対してのみ�
 
 sp_executesql または exec() を使う入れ子になったバッチの場合、解析はセッションの QUOTED_IDENTIFIER の設定を使って開始します。 入れ子になったバッチがストアド プロシージャの内部にある場合は、解析はストアド プロシージャの QUOTED_IDENTIFIER の設定を使って開始します。 入れ子になったバッチが解析される過程で、SET QUOTED_IDENTIFIER が出現すると、それ以降の解析動作が変更されますが、セッションの QUOTED_IDENTIFIER の設定は更新されません。
 
-識別子を区切るための角かっこ (**[** および **]**) の使用は、QUOTED_IDENTIFIER オプションの設定に影響されません。
+識別子を区切るための角かっこ ( **[** および **]** ) の使用は、QUOTED_IDENTIFIER オプションの設定に影響されません。
 
 この設定の現在の設定を表示するには、次のクエリを実行します。
 

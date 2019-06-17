@@ -15,11 +15,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f19be799e47d734b2d645bdf5885a234fd6feb3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973801"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716256"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,9 +33,9 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
 
 ##  <a name="setting"></a> サービス アカウントの設定  
   
-1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、**[SQL Server 2016 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、 **[SQL Server 2016 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server 構成マネージャー]** で、 **[SQL Server のサービス]** をクリックし、 **[SQL フルテキスト フィルター デーモン ランチャー (**_インスタンス名_**)]** を右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server 構成マネージャー]** で、 **[SQL Server のサービス]** をクリックし、 **[SQL フルテキスト フィルター デーモン ランチャー (** _インスタンス名_ **)]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  ダイアログ ボックスの **[ログオン]** タブをクリックし、SQL フルテキスト フィルター デーモン ランチャー サービスが開始するプロセスを実行するアカウントを選択または入力します。  
   

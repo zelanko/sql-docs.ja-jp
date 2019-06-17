@@ -20,11 +20,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 510025046d0509c1ef074ecafaab0a0c78e2bf81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047442"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>プッシュ サブスクリプションのプロパティの表示または変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,15 +72,15 @@ ms.locfileid: "54136042"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのプッシュ サブスクリプションのプロパティを表示するには  
   
-1.  パブリッシャーのパブリケーション データベースで [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)を実行します。 **@publication**、**@subscriber** を指定し、**@article** に **all** を指定します。  
+1.  パブリッシャーのパブリケーション データベースで [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)を実行します。 **@publication** 、 **@subscriber** を指定し、 **@article** に **all** を指定します。  
   
-2.  パブリッシャーのパブリケーション データベースで [@subscriber](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)を指定して **@subscriber**ダイアログ ボックス。  
+2.  パブリッシャーのパブリケーション データベースで [@subscriber](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)を指定して **@subscriber** ダイアログ ボックス。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのプッシュ サブスクリプションのプロパティを変更するには  
   
 1.  パブリッシャーのパブリケーション データベースで [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)を指定して **@subscriber** を指定し、さらに、変更対象とするサブスクライバー プロパティのパラメーターをすべて指定します。  
   
-2.  パブリッシャーのパブリケーション データベースで [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)を実行します。 **@publication**、**@subscriber**、**@destination_db** を指定し、**@article** に **all** を、**@property** に変更するサブスクリプション プロパティを、**@value** に新しい値を指定します。 これにより、プッシュ サブスクリプションのセキュリティ設定が変更されます。  
+2.  パブリッシャーのパブリケーション データベースで [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)を実行します。 **@publication** 、 **@subscriber** 、 **@destination_db** を指定し、 **@article** に **all** を、 **@property** に変更するサブスクリプション プロパティを、 **@value** に新しい値を指定します。 これにより、プッシュ サブスクリプションのセキュリティ設定が変更されます。  
   
 3.  (省略可) サブスクリプションのデータ変換サービス (DTS) パッケージのプロパティを変更するには、サブスクライバーのサブスクリプション データベースで [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) を実行します。 **@jobid** にディストリビューション エージェント ジョブの ID を指定し、さらに、次の DTS パッケージ プロパティを指定します。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "54136042"
   
 1.  パブリッシャーのパブリケーション データベースで [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)を実行します。 **@publication** と **@subscriber** を指定します。  
   
-2.  パブリッシャーで、 [@subscriber](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)を指定して **@subscriber**ダイアログ ボックス。  
+2.  パブリッシャーで、 [@subscriber](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)を指定して **@subscriber** ダイアログ ボックス。  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションのプッシュ サブスクリプションのプロパティを変更するには  
   
-1.  パブリッシャーのパブリケーション データベースで [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)を実行します。 **@publication**、**@subscriber**、**@subscriber_db** を指定し、**@property** に変更するサブスクリプション プロパティを、**@value** に新しい値を指定します。  
+1.  パブリッシャーのパブリケーション データベースで [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)を実行します。 **@publication** 、 **@subscriber** 、 **@subscriber_db** を指定し、 **@property** に変更するサブスクリプション プロパティを、 **@value** に新しい値を指定します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
   

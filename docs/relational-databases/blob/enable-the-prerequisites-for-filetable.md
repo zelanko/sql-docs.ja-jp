@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: 79de94cb3474a49e47ff6eee9fcd13a54ff73de9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094345"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable の前提条件の有効化

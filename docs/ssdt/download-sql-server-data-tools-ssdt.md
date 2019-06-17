@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65368345"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
@@ -70,7 +70,7 @@ AS、IS、RS プロジェクト サポートをインストールするには、
 
 > [!IMPORTANT]
 > - SSDT for Visual Studio 2017 (15.9.1) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
-> - Teradata のソース/変換先を含む SSIS パッケージを設計する場合は、Visual Studio 2017 (15.8.0) 以前のバージョン用の SSDT を使用してください。 15.8.0 より後の Visual Studio 2017 用の SSDT では、Attunity による Teradata のソース/変換先を含む SSIS パッケージを設計できません。
+> - Teradata のソース/変換先を含む SSIS パッケージを設計する場合は、Visual Studio 2017 (15.8.0) 以前のバージョン用の SSDT を使用してください。 15\.8.0 より後の Visual Studio 2017 用の SSDT では、Attunity による Teradata のソース/変換先を含む SSIS パッケージを設計できません。
 
 
 **バージョン情報**  

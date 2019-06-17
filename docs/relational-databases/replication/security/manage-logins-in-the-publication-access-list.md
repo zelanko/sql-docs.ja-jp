@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d0c686bcc52732f1fa25a4e4b4b83b776bb8633
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026733"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>パブリケーション アクセス リストのログインの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "54124332"
   
 #### <a name="to-manage-logins-in-the-pal"></a>PAL のログインを管理するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[パブリケーション アクセス リスト]** ページでは、**[追加]**、**[削除]**、および **[すべて削除]** の各ボタンを使用して、PAL のログインやグループを追加および削除します。 PAL から **distributor_admin** を削除しないでください。 このアカウントはレプリケーションで使用されます。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[パブリケーション アクセス リスト]** ページでは、 **[追加]** 、 **[削除]** 、および **[すべて削除]** の各ボタンを使用して、PAL のログインやグループを追加および削除します。 PAL から **distributor_admin** を削除しないでください。 このアカウントはレプリケーションで使用されます。  
   
     > [!NOTE]  
     >  リモート ディストリビューターを使用する場合、PAL 内のアカウントは、パブリッシャーとディストリビューターの両方で使用できる必要があります。 このアカウントは、どちらのサーバーでも定義されているドメイン アカウントまたはローカル アカウントにする必要があります。 両方のログインに関連付けられているパスワードは、同じにする必要があります。  
@@ -66,11 +66,11 @@ ms.locfileid: "54124332"
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>グループおよびログインを PAL に追加するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)を実行します。 **@publication** には、パブリケーション名を指定し、**@login** には、追加するログインまたはグループの名前を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)を実行します。 **@publication** には、パブリケーション名を指定し、 **@login** には、追加するログインまたはグループの名前を指定します。  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>グループおよびログインを PAL から削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)を実行します。 **@publication** には、パブリケーション名を指定し、**@login** には、削除するログインまたはグループの名前を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)を実行します。 **@publication** には、パブリケーション名を指定し、 **@login** には、削除するログインまたはグループの名前を指定します。  
   
 ## <a name="see-also"></a>参照  
  [パブリケーション アクセス リストのログインの管理](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   

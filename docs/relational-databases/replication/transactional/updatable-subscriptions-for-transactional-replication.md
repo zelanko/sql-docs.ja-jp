@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669667"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>トランザクション レプリケーションの更新可能なサブスクリプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54132992"
   
 -   **text**、 **ntext** または **image** 値は、レプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることができないため、サブスクライバーはこれらを更新または挿入できません。 同様に、 **WRITETEXT** や **UPDATETEXT** を使用すると、サブスクライバーは **text** 値や **image** 値を更新したり挿入したりすることができません。これらのデータはパブリッシャーによって上書きされるからです。 ただし、 **text** 列と **image** 列を別々のテーブルに分けて、トランザクション内で 2 つのテーブルを変更することはできます。  
   
-     サブスクライバーで大きなオブジェクト更新するには、 **text**、 **ntext**、 **image** のデータ型の代わりに、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** のデータ型をそれぞれに使用します。  
+     サブスクライバーで大きなオブジェクト更新するには、 **text**、 **ntext**、 **image** のデータ型の代わりに、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** のデータ型をそれぞれに使用します。  
   
 -   一意なキー (主キーを含む) に対する更新によって重複が生じる場合 (たとえば、 `UPDATE <column> SET <column> =<column>+1` などの形式による更新)、その更新を行うことはできません。その更新は一意性違反のため拒否されます。 これは、サブスクライバーで行われた SET 更新が、レプリケーションによって、影響される各行に対する個々の **UPDATE** ステートメントとして反映されるからです。  
   

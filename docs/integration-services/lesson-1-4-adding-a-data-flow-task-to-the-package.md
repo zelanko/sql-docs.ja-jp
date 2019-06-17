@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723326"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>レッスン 1-4:データ フロー タスクをパッケージに追加する
@@ -33,12 +33,12 @@ ms.locfileid: "65723326"
   
 1.  **[制御フロー]** タブを選択します。  
   
-2.  **[SSIS ツールボックス]** ペインで **[お気に入り]** を展開し、**[データ フロー タスク]** を **[制御フロー]** タブのデザイン画面上にドラッグします。  
+2.  **[SSIS ツールボックス]** ペインで **[お気に入り]** を展開し、 **[データ フロー タスク]** を **[制御フロー]** タブのデザイン画面上にドラッグします。  
   
     > [!NOTE]  
-    > SSIS ツールボックスが表示されていない場合は、**[SSIS]** メニューを選択してから、**[SSIS ツールボックス]** を選択して SSIS ツールボックスを表示します。  
+    > SSIS ツールボックスが表示されていない場合は、 **[SSIS]** メニューを選択してから、 **[SSIS ツールボックス]** を選択して SSIS ツールボックスを表示します。  
 
-3.  **[制御フロー]** デザイン画面で、新しい**データ フロー タスク**を右クリックし、**[名前の変更]** を選択して、名前を「**Extract Sample Currency Data**」に変更します。  
+3.  **[制御フロー]** デザイン画面で、新しい**データ フロー タスク**を右クリックし、 **[名前の変更]** を選択して、名前を「**Extract Sample Currency Data**」に変更します。  
   
     デザイン画面に追加するすべてのコンポーネントに一意な名前を付けます。 使いやすさと管理しやすさを考慮し、各コンポーネントの機能がわかるような名前を付けます。 このような方法で名前を付けておけば、自己文書化された [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを作成できます。 パッケージを文書化するには、注釈を使用する方法もあります。 注釈の詳細については、「[パッケージで注釈を使用する](../integration-services/use-annotations-in-packages.md)」を参照してください。  
   

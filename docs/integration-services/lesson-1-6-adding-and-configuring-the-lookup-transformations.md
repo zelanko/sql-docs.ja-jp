@@ -11,10 +11,10 @@ ms.author: janinez
 manager: craigg
 ms.reviewer: ''
 ms.openlocfilehash: c605d2f0e42f34a8f1b4c7a01ea7ffce43d23f9e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723179"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>レッスン 1-6:参照変換を追加し、構成する
@@ -38,11 +38,11 @@ ms.locfileid: "65723179"
   
 ## <a name="add-and-configure-the-lookup-currency-key-transformation"></a>Lookup Currency Key 変換を追加し、構成する  
   
-1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[参照]** を **[データ フロー]** タブのデザイン画面にドラッグします。**[参照]** を **[Extract Sample Currency Data]** ソースのすぐ下に置きます。  
+1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[参照]** を **[データ フロー]** タブのデザイン画面にドラッグします。 **[参照]** を **[Extract Sample Currency Data]** ソースのすぐ下に置きます。  
   
 2.  **[Extract Sample Currency Data]** フラット ファイル ソースを選択し、青色の矢印を、新しく追加した **[参照]** 変換までドラッグしてこの 2 つのコンポーネントを接続します。  
   
-3.  **[データ フロー]** デザイン画面で、**[参照]** 変換の **[参照]** を選択し、名前を「**Lookup Currency Key**」に変更します。  
+3.  **[データ フロー]** デザイン画面で、 **[参照]** 変換の **[参照]** を選択し、名前を「**Lookup Currency Key**」に変更します。  
   
 4.  **Lookup Currency Key** 変換をダブルクリックし、**参照変換エディター**を表示します。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "65723179"
   
     2.  **[使用できる参照列]** ボックスの一覧で、 **[CurrencyKey]** の左側のチェック ボックスをオンにします。  
   
-8.  **[OK]** を選択し、**[データ フロー]** デザイン画面に戻ります。  
+8.  **[OK]** を選択し、 **[データ フロー]** デザイン画面に戻ります。  
   
-9. [Lookup Currency Key] 変換を右クリックし、**[プロパティ]** を選択します。  
+9. [Lookup Currency Key] 変換を右クリックし、 **[プロパティ]** を選択します。  
   
-10. **[プロパティ]** ウィンドウで、**[LocaleID]** プロパティが **[英語 (米国)]** に、**[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
+10. **[プロパティ]** ウィンドウで、 **[LocaleID]** プロパティが **[英語 (米国)]** に、 **[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
   
 ## <a name="add-and-configure-the-lookup-date-key-transformation"></a>Lookup Date Key 変換を追加し、構成する  
   
@@ -85,7 +85,7 @@ ms.locfileid: "65723179"
   
 2.  **[Lookup Currency Key]** 変換を選択し、青色の矢印を新しい **[参照]** 変換までドラッグし、この 2 つのコンポーネントを接続します。  
   
-3.  **[入出力の選択]** ダイアログの **[出力]** ボックスの一覧で **[参照の一致出力]** を選択し、**[OK]** を選択します。  
+3.  **[入出力の選択]** ダイアログの **[出力]** ボックスの一覧で **[参照の一致出力]** を選択し、 **[OK]** を選択します。  
   
 4.  **[データ フロー]** デザイン画面で、新しく追加した **[参照]** 変換の名前 **[参照]** を選択し、名前を「**Lookup Date Key**」に変更します。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "65723179"
   
     1.  **[OLEDB 接続マネージャー]** ダイアログに、確実に **localhost.AdventureWorksDW2012** が表示されているようにします。  
   
-    2.  **[テーブルまたはビューを使用]** ボックスで、**[dbo].[DimDate]** を選択するか、入力します。  
+    2.  **[テーブルまたはビューを使用]** ボックスで、 **[dbo].[DimDate]** を選択するか、入力します。  
   
 8.  **[列]** ページで、以下の選択を行います。  
   
@@ -107,11 +107,11 @@ ms.locfileid: "65723179"
   
 9. **[詳細設定]** ページで、キャッシュ オプションを確認します。  
   
-10. **[OK]** を選択し、**[データ フロー]** デザイン画面に戻ります。  
+10. **[OK]** を選択し、 **[データ フロー]** デザイン画面に戻ります。  
   
-11. **[Lookup Date Key]** 変換を右クリックし、**[プロパティ]** を選択します。
+11. **[Lookup Date Key]** 変換を右クリックし、 **[プロパティ]** を選択します。
   
-12. **[プロパティ]** ウィンドウで、**[LocaleID]** プロパティが **[英語 (米国)]** に、**[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
+12. **[プロパティ]** ウィンドウで、 **[LocaleID]** プロパティが **[英語 (米国)]** に、 **[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
   
 ## <a name="go-to-next-task"></a>次の実習に進む
 [手順 7:OLE DB 変換先を追加し、構成する](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  

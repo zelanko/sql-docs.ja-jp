@@ -25,11 +25,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973851"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716099"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "57973851"
 4. **[ワード ブレーカーの言語]。** ドロップダウン リストから言語を選択します。 この選択は、インデックスに適したワード ブレーカーを識別するために使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ワード ブレーカーを使用してフルテキスト インデックス付きデータ内の単語の境界を識別します。  
   
 5.  **[型列]。** フルテキスト インデックスの付いた列の文書型を保持する列の名前を選択します。  
-> **注:** **[型列]** は、**[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image** である場合のみ有効です。  
+> **注:** **[型列]** は、 **[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image** である場合のみ有効です。  
   
 6. **[統計的セマンティクス]。** 選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "57973851"
  10. **[カタログの新規作成]**
  - [フルテキスト カタログの選択]。  
   
-    A. **名前**  
+    A. **[名前]**  
      新しいフルテキスト カタログの名前を入力します。  
   
      B. **[既定のカタログとして設定する]**  

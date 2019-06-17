@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2c2b659cf2763bf0710a1088e8add3722a0c6398
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095350"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーでの移動 (Visual Database Tools)
@@ -79,7 +79,7 @@ ms.locfileid: "65095350"
 詳細については、「[抽出条件ペイン (Visual Database Tools)](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)」を参照してください。  
   
 ## <a name="sql-pane"></a>SQL ペイン  
-SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]**、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
+SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]** 、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
   
 > [!NOTE]  
 > テキストの挿入だけができます。上書きモードはありません。  

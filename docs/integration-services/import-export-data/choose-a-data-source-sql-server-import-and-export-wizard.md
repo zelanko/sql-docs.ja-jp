@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 302cb0b4f041c674eda5af46bec91ca768d8f822
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724012"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
@@ -44,7 +44,7 @@ ms.locfileid: "65724012"
 
 -   **データ ソースで ODBC ドライバーを使用している場合は**、.NET Framework Data Provider for ODBC を選択します。 ドライバー固有の情報を入力します。 ODBC ドライバーは、データ ソースのドロップダウン リストに記載されていません。 .NET Framework Data Provider for ODBC は ODBC ドライバーのラッパーとして機能します。 詳細については、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。
 
--   **データ ソースに使用できるプロバイダーが複数存在する可能性があります。** 通常、ソースで使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます  (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
+-   **データ ソースに使用できるプロバイダーが複数存在する可能性があります。** 通常、ソースで使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
 
 ## <a name="my-data-source-isnt-in-the-list"></a>データ ソースがリストにない
 -   Microsoft またはサード パーティから**データ プロバイダーをダウンロードする必要があります**。 **[データ ソース]** のリストに表示される、使用できるデータ プロバイダーのリストに含まれているのは、コンピューターにインストールされているプロバイダーのみです。 使用できるデータ ソースの詳細については、「 [どのようなデータ ソースと変換先を使用できるでしょうか。](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
@@ -57,7 +57,7 @@ ms.locfileid: "65724012"
 > 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
 ## <a name="after-you-choose-a-data-source"></a>データ ソースの選択後
-データソースを選択した後、**[データ ソースを選ぶ]** ページ プロパティの残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
+データソースを選択した後、 **[データ ソースを選ぶ]** ページ プロパティの残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
 
 よく使われるデータ ソースに接続するには、次のいずれかのページをご覧ください。
 -   [SQL Server への接続](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)

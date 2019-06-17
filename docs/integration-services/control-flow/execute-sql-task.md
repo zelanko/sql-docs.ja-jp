@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727722"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
@@ -141,15 +141,15 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  このプロパティを **Allowed**に設定すると、SQL 実行タスクは出力パラメーターとクエリ結果を結果が割り当てられている変数のデータ型に変換します。 この機能は、結果セットの種類が **単一行** の場合に適用されます。  
   
  **[ResultSet]**  
- SQL ステートメントの実行によって予測される結果の型を指定します。 **[単一行]**、 **[完全な結果セット]**、 **[XML]**、または **[なし]** から選択します。  
+ SQL ステートメントの実行によって予測される結果の型を指定します。 **[単一行]** 、 **[完全な結果セット]** 、 **[XML]** 、または **[なし]** から選択します。  
   
  **ConnectionType**  
- データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]**、 **[ODBC]**、 **[ADO]**、 **[ADO.NET]** 、および **[SQLMOBILE]** です。  
+ データ ソースへの接続に使用する接続マネージャーの種類を選択します。 使用可能な接続の種類は、 **[OLE DB]** 、 **[ODBC]** 、 **[ADO]** 、 **[ADO.NET]** 、および **[SQLMOBILE]** です。  
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)、[ODBC 接続マネージャー](../../integration-services/connection-manager/odbc-connection-manager.md)、[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)、[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)、[SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **[接続]**  
- 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...**>] を選択します。  
+ 定義済みの接続マネージャーの一覧から接続を選択します。 新しい接続を作成するには、[\<**新しい接続...** >] を選択します。  
   
  **[SQLSourceType]**  
  タスクが実行する SQL ステートメントのソースの種類を選択します。  
@@ -185,19 +185,19 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
 #### <a name="sqlsourcetype--direct-input"></a>[SQLSourceType] = [直接入力]  
  **[SQLStatement]**  
- 実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、**[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
+ 実行する SQL ステートメントをオプション ボックスに入力するか、参照ボタン ([...]) をクリックして **[SQL クエリの入力]** ダイアログ ボックスに SQL ステートメントを入力するか、 **[クエリの作成]** をクリックして **[クエリ ビルダー]** ダイアログ ボックスでステートメントを作成します。  
   
  **関連トピック:** [クエリ ビルダー](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>[SQLSourceType] = [ファイル接続]  
  **[FileConnection]**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>[SQLSourceType] = [変数]  
  **[SourceVariable]**  
- 既存の変数を選択するか、\<**新しい変数...**> をクリックして新しい変数を作成します。  
+ 既存の変数を選択するか、\<**新しい変数...** > をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -206,7 +206,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
   
 ### <a name="options"></a>オプション  
  **[変数名]**  
- **[追加]** をクリックしてパラメーター マッピングを追加した後で、システム変数またはユーザー定義変数を一覧から選択するか、[\<**新しい変数...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
+ **[追加]** をクリックしてパラメーター マッピングを追加した後で、システム変数またはユーザー定義変数を一覧から選択するか、[\<**新しい変数...** >] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -245,7 +245,7 @@ Transact-SQL クエリ言語の詳細については、「[Transact-SQL リフ�
  
   
  **[変数名]**  
- 変数を選択して変数に結果セットをマップするか、[\<**新しい変数...**>] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
+ 変数を選択して変数に結果セットをマップするか、[\<**新しい変数...** >] をクリックして **[変数の追加]** ダイアログ ボックスで新しい変数を追加します。  
   
  **[追加]**  
  結果セットのマッピングを追加します。  
@@ -352,7 +352,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> - または -<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> \- または -<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   
  データが適切な入力パラメーターまたは出力パラメーターに格納されないと、パッケージは失敗します。  
@@ -552,7 +552,7 @@ SQL ステートメントとストアド プロシージャでは多くの場合
   
 5.  SQL 実行タスクをダブルクリックします。  
   
-6.  **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページで、 **[単一行]**、 **[完全な結果セット]**、 **[XML]** のいずれかの種類の結果セットを選択します。  
+6.  **[SQL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページで、 **[単一行]** 、 **[完全な結果セット]** 、 **[XML]** のいずれかの種類の結果セットを選択します。  
 
 7.  **[結果セット]** をクリックします。  
   

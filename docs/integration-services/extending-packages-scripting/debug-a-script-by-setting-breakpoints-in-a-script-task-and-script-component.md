@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cf18c8a549a53c1e872d456e28625b7ec0ffa95c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724153"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする
@@ -28,7 +28,7 @@ ms.locfileid: "65724153"
 
   この手順では、スクリプト タスクとスクリプト コンポーネントで使用するスクリプトに、ブレークポイントを設定する方法について説明します。  
   
- スクリプトにブレークポイントを設定すると、**[ブレークポイントの設定 - \<オブジェクト名>]** ダイアログ ボックスに、組み込みブレークポイントと共に、設定したブレークポイントの一覧が表示されるようになります。  
+ スクリプトにブレークポイントを設定すると、 **[ブレークポイントの設定 - \<オブジェクト名>]** ダイアログ ボックスに、組み込みブレークポイントと共に、設定したブレークポイントの一覧が表示されるようになります。  
   
 > [!IMPORTANT]  
 >  状況によっては、スクリプト タスクおよびスクリプト コンポーネント内のブレークポイントは無視されます。 詳細については、「[スクリプト タスクのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)」の「**スクリプト タスクのデバッグ**」セクションおよび「[スクリプト コンポーネントのコーディングおよびデバッグ](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」の「**スクリプト コンポーネントのデバッグ**」セクションを参照してください。  
@@ -39,13 +39,13 @@ ms.locfileid: "65724153"
   
 2.  ブレークポイントを設定するスクリプトを含むパッケージをダブルクリックします。  
   
-3.  スクリプト タスクを開くには、**[制御フロー]** タブをクリックして、スクリプト タスクをダブルクリックします。  
+3.  スクリプト タスクを開くには、 **[制御フロー]** タブをクリックして、スクリプト タスクをダブルクリックします。  
   
-4.  スクリプト コンポーネントを開くには、**[データ フロー]** タブをクリックして、スクリプト コンポーネントをダブルクリックします。  
+4.  スクリプト コンポーネントを開くには、 **[データ フロー]** タブをクリックして、スクリプト コンポーネントをダブルクリックします。  
   
-5.  **[スクリプト]** をクリックし、**[スクリプトの編集]** をクリックします。  
+5.  **[スクリプト]** をクリックし、 **[スクリプトの編集]** をクリックします。  
   
-6.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) で、ブレークポイントを設定するスクリプト行を探して右クリックします。**[ブレークポイント]** をポイントし、**[ブレークポイントの挿入]** をクリックします。  
+6.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) で、ブレークポイントを設定するスクリプト行を探して右クリックします。 **[ブレークポイント]** をポイントし、 **[ブレークポイントの挿入]** をクリックします。  
   
      ブレークポイントを表すアイコンがコード行に表示されます。  
   

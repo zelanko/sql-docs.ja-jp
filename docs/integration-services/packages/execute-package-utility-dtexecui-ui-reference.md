@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 195291c878f0529d24fe05a1b806974f61fa6df9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719902"
 ---
 # <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
@@ -211,7 +211,7 @@ ms.locfileid: "65719902"
  パッケージのチェックポイントが有効な場合、使用されるパッケージのチェックポイント ファイルを一覧表示します。  
   
  **[参照]**  
- パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、**[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
+ パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、 **[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
   
  **[再開オプションをオーバーライドする]**  
  パッケージのチェックポイントが有効な場合、再開オプションをオーバーライドするかどうかを示します。  

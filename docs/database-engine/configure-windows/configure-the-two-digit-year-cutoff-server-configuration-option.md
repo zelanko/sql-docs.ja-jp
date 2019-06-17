@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 786c25d8f151b034c51de8c7167fa0c476898ab4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803304"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff サーバー構成オプションの構成
@@ -40,7 +40,7 @@ ms.locfileid: "66803304"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[two digit year cutoff オプションを構成した後](#FollowUp)  
+-   **補足情報:** [two digit year cutoff オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66803304"
   
 2.  **[その他のサーバーの設定]** ノードをクリックします。  
   
-3.  **[2 桁の年のサポート]** の **[2 桁の年を****以下の間にある年として解釈]** ボックスに、期間の終了する年を入力または選択します。  
+3.  **[2 桁の年のサポート]** の **[2 桁の年を** **以下の間にある年として解釈]** ボックスに、期間の終了する年を入力または選択します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66803304"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `two digit year cutoff` オプションの値を `2030`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `two digit year cutoff` オプションの値を `2030`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

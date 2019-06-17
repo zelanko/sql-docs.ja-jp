@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6c75a745928a9bb8b912c507415e3233515f0ff4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717371"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用して SSIS パッケージを実行する
@@ -46,7 +46,7 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -68,15 +68,15 @@ SQL Server Management Studio を使って、SSIS カタログへの接続を確�
 
 3. **[接続]** をクリックします。 SSMS で [オブジェクト エクスプローラー] ウィンドウが開きます。 
 
-4. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
+4. オブジェクト エクスプローラーで、 **[Integration Services カタログ]** 、 **[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
 ## <a name="run-a-package"></a>パッケージの実行
 
 1. オブジェクト エクスプローラーで、実行するパッケージを選択します。
 
-2. 右クリックして、**[実行]** を選択します。 **[パッケージの実行]** ダイアログ ボックスが開きます。
+2. 右クリックして、 **[実行]** を選択します。 **[パッケージの実行]** ダイアログ ボックスが開きます。
 
-3.  [パッケージの実行] ダイアログ ボックスの **[パラメーター]** タブ、**[接続マネージャー]** タブ、**[詳細設定]** タブの設定を使用して、パッケージの実行を構成します。
+3.  [パッケージの実行] ダイアログ ボックスの **[パラメーター]** タブ、 **[接続マネージャー]** タブ、 **[詳細設定]** タブの設定を使用して、パッケージの実行を構成します。
 
 4.  [OK] をクリックしてパッケージを実行します。
 

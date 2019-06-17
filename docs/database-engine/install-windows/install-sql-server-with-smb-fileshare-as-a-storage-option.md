@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: 7945dd9b6ed8ffada7defa2808f6bbe482dec9c5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794865"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB ファイル共有ストレージを使用して SQL Server をインストールする
@@ -87,7 +87,7 @@ ms.locfileid: "66794865"
 |オペレーティング システム|SMB2 プロトコルのバージョン|に対するメリット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|従来のバージョンの SMB よりもパフォーマンスに優れています。<br /><br /> 持続性が高いため、一時的なネットワーク障害もスムーズに復旧できます。|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1 (Server Core を含む)|2.1|大きい MTU をサポートするため、SQL のバックアップや復元など、大規模なデータ転送が高速化されます。 この機能を使用するには、ユーザーが機能を有効にする必要があります。 この機能を有効にする方法の詳細については、「[What's New in SMB](https://go.microsoft.com/fwlink/?LinkID=237319)」(SMB の新機能) (https://go.microsoft.com/fwlink/?LinkID=237319)) を参照してください。<br /><br /> 大幅なパフォーマンス向上。特に、SQL OLTP スタイルのワークロードに対して効果的です。 パフォーマンスを向上するには、修正プログラムを適用する必要があります。 この修正プログラムの詳細については、[こちら](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320) を参照してください。|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1 (Server Core を含む)|2.1|大きい MTU をサポートするため、SQL のバックアップや復元など、大規模なデータ転送が高速化されます。 この機能を使用するには、ユーザーが機能を有効にする必要があります。 この機能を有効にする方法の詳細については、「[What's New in SMB](https://go.microsoft.com/fwlink/?LinkID=237319)」(SMB の新機能) (https://go.microsoft.com/fwlink/?LinkID=237319) ) を参照してください。<br /><br /> 大幅なパフォーマンス向上。特に、SQL OLTP スタイルのワークロードに対して効果的です。 パフォーマンスを向上するには、修正プログラムを適用する必要があります。 この修正プログラムの詳細については、[こちら](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320) を参照してください。|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)](Server Core を含む)|3.0|ファイル サーバー クラスター構成の SQL DBA またはファイル サーバー管理者に必要な、ファイル共有の透過的フェールオーバー (管理者の操作が不要でダウンタイムが発生しないフェールオーバー) をサポートします。<br /><br /> 複数のネットワーク インターフェイスを同時使用する IO をサポートします。また、ネットワーク インターフェイスの障害に対する耐性も優れています。<br /><br /> RDMA 機能を備えたネットワーク インターフェイスをサポートします。<br /><br /> これらの機能およびサーバー メッセージ ブロックの詳細については、「[Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174)」(サーバー メッセージ ブロックの概要) (https://go.microsoft.com/fwlink/?LinkId=253174) を参照してください。<br /><br /> 継続的可用性機能を備えたスケールアウト ファイル サーバー (SoFS) をサポートします。|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 (Server Core を含む)|3.2|ファイル サーバー クラスター構成の SQL DBA またはファイル サーバー管理者に必要な、ファイル共有の透過的フェールオーバー (管理者の操作が不要でダウンタイムが発生しないフェールオーバー) をサポートします。<br /><br /> 複数のネットワーク インターフェイスを同時使用する IO をサポートします。また、ネットワーク インターフェイスの障害に対する耐性も優れています (SMB マルチチャネルを使用した場合)。<br /><br /> RDMA 機能を備えたネットワーク インターフェイスをサポートします (SMB ダイレクトを使用した場合)。<br /><br /> これらの機能およびサーバー メッセージ ブロックの詳細については、「[Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174)」(サーバー メッセージ ブロックの概要) (https://go.microsoft.com/fwlink/?LinkId=253174) を参照してください。<br /><br /> 継続的可用性機能を備えたスケールアウト ファイル サーバー (SoFS) をサポートします。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP に共通する小規模なランダム読み取り/書き込み I/O 向けに最適化されます。<br /><br /> 最大転送単位 (MTU) が既定で有効になっています。これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ウェアハウス、データベースのバックアップと復元など、大規模なシーケンシャル転送のパフォーマンスが大幅に向上します。|  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 617fed01d22eebba515966a0c820824d6fd39896
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62859957"
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ EXECUTE ('SELECT @mycol FROM Production.Product;');
 ## <a name="user-action"></a>ユーザーの操作  
 SQL スクリプトで使用する変数がスクリプト内の別の場所で事前に宣言されていることを確認します。  
   
-外部で宣言された EXECUTE ステートメント内の変数を参照しないようにスクリプトを修正します。 例 :  
+外部で宣言された EXECUTE ステートメント内の変数を参照しないようにスクリプトを修正します。 例:  
   
 USE AdventureWorks2012;  
   

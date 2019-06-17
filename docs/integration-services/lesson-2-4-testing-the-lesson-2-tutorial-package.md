@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722460"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>レッスン 2 から 4:レッスン 2 で作成したチュートリアル パッケージのテスト
@@ -42,11 +42,11 @@ Foreach ループ コンテナーとフラット ファイル接続マネージ�
   
 ## <a name="test-the-lesson-2-tutorial-package"></a>レッスン 2 で作成したチュートリアル パッケージのテスト  
   
-1.  **ソリューション エクスプローラー**で **[Lesson 2.dtsx]** を右クリックし、**[パッケージの実行]** を選択します。  
+1.  **ソリューション エクスプローラー**で **[Lesson 2.dtsx]** を右クリックし、 **[パッケージの実行]** を選択します。  
   
-    パッケージが実行されます。 各ループのステータスは **[出力]** ウィンドウで確認できます。または、**[進行状況]** タブを選択しても確認できます。たとえば、ファイル Currency_VEB.txt から 1,097 個の行が宛先のテーブルに追加されたことがわかります。  
+    パッケージが実行されます。 各ループのステータスは **[出力]** ウィンドウで確認できます。または、 **[進行状況]** タブを選択しても確認できます。たとえば、ファイル Currency_VEB.txt から 1,097 個の行が宛先のテーブルに追加されたことがわかります。  
   
-2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="go-to-next-lesson"></a>次のレッスンに進む  
 [レッスン 3:SSIS でのログ記録の追加](../integration-services/lesson-3-add-logging-with-ssis.md)  

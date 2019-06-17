@@ -25,10 +25,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8332f52a9b5826c1b45788aa359652b6d3803c83
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104532"
 ---
 # <a name="alerts"></a>警告
@@ -97,7 +97,7 @@ ms.locfileid: "65104532"
   
 -   **[警告カウンター]** および **[値]**  
   
-    警告およびそれを生成する動作のしきい値です。 しきい値は数値です。 動作は、 **[設定値未満]**、 **[設定値に等しい]**、 **[設定値を超える]** のいずれかになります。 **[値]** は、パフォーマンス状況の警告カウンターの基準となる数値です。 たとえば、パフォーマンス オブジェクト **SQLServer:Locks** で、 **Lock Wait Time** が 30 分を超えると警告が発生するように設定するには、 **[設定値を超える]** を選択し、 **[値] を 30 に指定**します。  
+    警告およびそれを生成する動作のしきい値です。 しきい値は数値です。 動作は、 **[設定値未満]** 、 **[設定値に等しい]** 、 **[設定値を超える]** のいずれかになります。 **[値]** は、パフォーマンス状況の警告カウンターの基準となる数値です。 たとえば、パフォーマンス オブジェクト **SQLServer:Locks** で、 **Lock Wait Time** が 30 分を超えると警告が発生するように設定するには、 **[設定値を超える]** を選択し、 **[値] を 30 に指定**します。  
   
     別の例として、 **tempdb** の空き領域が 1,000 KB を下回った場合にパフォーマンス オブジェクト **SQLServer:Transactions** に対して警告が発生するように指定できます。 このように設定するには、カウンター **[Free space in tempdb (KB)]** を選択し **[設定値未満]** を選択します。さらに、 **[値]** を **1000**に設定します。  
   

@@ -12,11 +12,11 @@ author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63221967"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration での SQL Server をインストールする
 
@@ -26,7 +26,7 @@ ms.locfileid: "54031708"
 * マルチユーザー モードで SQL Server をバックアップします。
 * テストします。 
 
-さらに悪いことは、インストール全体への信頼が揺らぐことです。 "他に何か忘れていないか?"  自問するのではないでしょうか。
+さらに悪いことは、インストール全体への信頼が揺らぐことです。 "他に何か忘れていないか?" 自問するのではないでしょうか。
 
 [PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview) に関するページを参照してください。 DSC を使用して、数百、数千のサーバーで再利用できる 1 つの構成テンプレートをビルドします。 ビルドによっては、いくつかの設定パラメーターを調整する必要があります。 ただし、すべての標準設定を適切に維持できるため、これは重要な問題ではありません。 この場合、重要なパラメーターの入力を忘れるという可能性は排除されます。
 

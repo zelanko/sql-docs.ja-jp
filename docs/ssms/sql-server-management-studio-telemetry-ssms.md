@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0810533a3488043ef4b3d8db9c0de4f3174b4ba8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102614"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS の使用状況および診断データの収集のローカル監査
@@ -28,8 +28,8 @@ SQL Server Management Studio (SSMS) には、機能使用状況および診断�
 SSMS で収集される機能の使用状況データを表示するには、次の手順を実行します。
 
 1.  SSMS を起動します。
-2.  メインメニューで **[ビュー]**、**[出力]** の順にクリックし、**[出力]** ウィンドウを表示します。 
-3.  **[出力]** ウィンドウが表示されたら、**[出力元の表示:]** メニューで **[テレメトリ]** を選択します。
+2.  メインメニューで **[ビュー]** 、 **[出力]** の順にクリックし、 **[出力]** ウィンドウを表示します。 
+3.  **[出力]** ウィンドウが表示されたら、 **[出力元の表示:]** メニューで **[テレメトリ]** を選択します。
 
 SSMS を使用してデータベースと対話している間に、収集されたデータが **[出力]** ウィンドウに表示されます。
 

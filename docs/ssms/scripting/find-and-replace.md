@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aa8c5e7d8722599df81163486c9383e450f525a0
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820909"
 ---
 # <a name="find-and-replace"></a>[検索と置換]
@@ -76,7 +76,7 @@ ms.locfileid: "65820909"
  **[検索オプション]** セクションは、展開したり折りたたんだりできます。 次のオプションをオンまたはオフに設定できます。  
   
  **[大文字と小文字を区別する]**  
- このチェック ボックスをオンにすると、検索結果ウィンドウには、 **[検索する文字列]** で指定した文字列に大文字と小文字の違いを含めて完全に一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、**[大文字と小文字を区別する]** チェック ボックスをオンにした状態で " **MyObject** " を検索すると、"myobject" や "MYOBJECT" ではなく "MyObject" のみが返されます。  
+ このチェック ボックスをオンにすると、検索結果ウィンドウには、 **[検索する文字列]** で指定した文字列に大文字と小文字の違いを含めて完全に一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、 **[大文字と小文字を区別する]** チェック ボックスをオンにした状態で " **MyObject** " を検索すると、"myobject" や "MYOBJECT" ではなく "MyObject" のみが返されます。  
   
  **[単語単位]**  
  このチェック ボックスをオンにすると、 **[検索する文字列]** で指定した文字列に、単語単位で一致するインスタンスのみが検索結果ウィンドウに表示されます。 たとえば、「 **MyObject** 」を検索すると、"CMyObject" や "MyObjectC" ではなく "MyObject" のみが返されます。  

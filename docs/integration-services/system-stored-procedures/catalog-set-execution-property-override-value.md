@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a12576e083a30a939964803687198ae0842fb73
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715849"
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
@@ -50,7 +50,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  値が 1 のとき、プロパティはセンシティブで、格納されるときに暗号化されます。 値が 0 のとき、プロパティはセンシティブではなく、値はプレーンテキストで格納されます。 *sensitive* 引数は **bit** です。  
   
 ## <a name="remarks"></a>Remarks  
- このプロシージャは、**[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションと同じ機能を実行します。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
+ このプロシージャは、 **[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションと同じ機能を実行します。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  

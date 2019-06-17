@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8253108732aab7379e319156abf4af8f4114fc3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724106"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>スクリプト タスク エディターでのスクリプト タスクの構成
@@ -29,7 +29,7 @@ ms.locfileid: "65724106"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  スクリプト タスクにカスタム コードを記述する前に、**[スクリプト タスク エディター]** の 3 つのページで、主要なプロパティを設定します。 スクリプト タスクに対して一意でない追加のタスク プロパティは、[プロパティ] ウィンドウを使用して設定できます。  
+  スクリプト タスクにカスタム コードを記述する前に、 **[スクリプト タスク エディター]** の 3 つのページで、主要なプロパティを設定します。 スクリプト タスクに対して一意でない追加のタスク プロパティは、[プロパティ] ウィンドウを使用して設定できます。  
   
 > [!NOTE]  
 >  スクリプトをプリコンパイルするかどうかを指定できた以前のバージョンとは異なり、[!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] 以降ではすべてのスクリプトがプリコンパイルされます。  
@@ -41,9 +41,9 @@ ms.locfileid: "65724106"
  **[スクリプト タスク エディター]** の **[スクリプト]** ページには、スクリプト タスクのカスタム プロパティが表示されます。  
   
 ### <a name="scriptlanguage-property"></a>ScriptLanguage プロパティ  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# の両方のプログラミング言語がサポートされます。 スクリプト タスクにスクリプトを作成した後で、**[ScriptLanguage]** プロパティの値を変更することはできません。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) では、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# の両方のプログラミング言語がサポートされます。 スクリプト タスクにスクリプトを作成した後で、 **[ScriptLanguage]** プロパティの値を変更することはできません。  
   
- スクリプト タスクとスクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[ScriptLanguage]** プロパティを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
+ スクリプト タスクとスクリプト コンポーネントの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[ScriptLanguage]** プロパティを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
 ### <a name="entrypoint-property"></a>EntryPoint プロパティ  
  **EntryPoint** プロパティは、スクリプト タスク コードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムが呼び出す、VSTA プロジェクトの **ScriptMain** クラスのメソッドを指定します。 **ScriptMain** クラスは、スクリプト テンプレートによって生成される既定のクラスです。  

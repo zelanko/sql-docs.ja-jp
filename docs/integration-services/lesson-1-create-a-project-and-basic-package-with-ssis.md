@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722567"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>レッスン 1:SSIS によるプロジェクトと基本パッケージの作成
@@ -40,7 +40,7 @@ ms.locfileid: "65722567"
 
     2.  **[ダウンロード]** ボタンを選択します。
 
-    3.  **Creating a Simple ETL Package.zip** ファイルを選択し、**[次へ]** を選択します。
+    3.  **Creating a Simple ETL Package.zip** ファイルを選択し、 **[次へ]** を選択します。
 
     4.  ファイルのダウンロード後、そのコンテンツを解凍し、ローカル ディレクトリに置きます。  
 
@@ -81,7 +81,7 @@ SampleCurrencyData.txt ファイルのソース データの例:
 |--------------------|--------------|---------------|-------------|  
 |0|FactCurrencyRate|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|日付|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>このレッスンの作業  

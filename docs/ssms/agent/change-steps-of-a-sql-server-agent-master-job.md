@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 39e43b52575b8f500b68c61eda2cb12c68406db9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106280"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -63,13 +63,13 @@ ms.locfileid: "65106280"
   
 4.  ステップを変更するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ - _job\_name_]** ダイアログ ボックスで、**[ページの選択]** の **[ステップ]** を選択します。  
+5.  **[ジョブのプロパティ - _job\_name_]** ダイアログ ボックスで、 **[ページの選択]** の **[ステップ]** を選択します。  
   
-6.  **[編集]** をクリックし、**[ジョブ ステップのプロパティ - _job\_step\_name_]** ダイアログ ボックスを開きます。 このダイアログ ボックスで利用できるオプションの詳細については、「[[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)](../../ssms/agent/job-step-properties-new-job-step-general-page.md)」と「[[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)」を参照してください。  
+6.  **[編集]** をクリックし、 **[ジョブ ステップのプロパティ - _job\_step\_name_]** ダイアログ ボックスを開きます。 このダイアログ ボックスで利用できるオプションの詳細については、「[[ジョブ ステップのプロパティ] - [新しいジョブ ステップ] ([全般] ページ)](../../ssms/agent/job-step-properties-new-job-step-general-page.md)」と「[[ジョブ ステップのプロパティ]/[新しいジョブ ステップ] ([詳細設定] ページ)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)」を参照してください。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   
-8.  **[ジョブのプロパティ - _job\_name_]** ダイアログ ボックスで、**[OK]** をクリックします。  
+8.  **[ジョブのプロパティ - _job\_name_]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL の使用  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65106280"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- changes the number of retry attempts for the first step

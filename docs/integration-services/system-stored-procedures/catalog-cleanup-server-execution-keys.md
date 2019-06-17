@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af4f827babe48f9feef07d3572d9758049bb5ee0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717210"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys 
@@ -70,9 +70,9 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="remarks"></a>Remarks  
  SQL Server 2012 Service Pack 2 により、SERVER_OPERATION_ENCRYPTION_LEVEL プロパティが **internal.catalog_properties** テーブルに追加されました。 このプロパティには、次の 2 つの有効値があります。  
   
--   **PER_EXECUTION (1)**: 機密性の高い実行パラメーターと実行ログを保護する証明書と対称キーが実行するたびに作成されます。 これが既定値です。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、メンテナンス ジョブの失敗など) が発生する可能性があります。 ただしこの設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  
+-   **PER_EXECUTION (1)** : 機密性の高い実行パラメーターと実行ログを保護する証明書と対称キーが実行するたびに作成されます。 これが既定値です。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、メンテナンス ジョブの失敗など) が発生する可能性があります。 ただしこの設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  
   
--   **PER_PROJECT (2)**: 実行のたびに証明書と対称キーが作成されます。これらは機密性の高いパラメーターを保護するために使用されます。 これは、キーと証明書が実行ごとではなく、プロジェクトに対して 1 回生成されるため、PER_EXECUTION レベルより優れたパフォーマンスを提供します。  
+-   **PER_PROJECT (2)** : 実行のたびに証明書と対称キーが作成されます。これらは機密性の高いパラメーターを保護するために使用されます。 これは、キーと証明書が実行ごとではなく、プロジェクトに対して 1 回生成されるため、PER_EXECUTION レベルより優れたパフォーマンスを提供します。  
   
  SERVER_OPERATION_ENCRYPTION_LEVEL を 1 から 2 (または) 2 から 1 に変更するには、事前に [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) ストアド プロシージャを実行する必要があります。 このストアド プロシージャを実行する前に、次の操作を行う必要があります。  
   

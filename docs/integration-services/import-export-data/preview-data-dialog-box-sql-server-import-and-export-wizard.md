@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28d2381c82bc8c1dfe324b396431397a8cea1694
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723803"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>[データのプレビュー] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード)
@@ -35,14 +35,14 @@ ms.locfileid: "65723803"
  **ソース**  
 ウィザードがデータ ソースからデータを読み込むために使用しているクエリが表示されます。
 
-コピーするテーブルを選択すると、**[ソース]** フィールドに、テーブル名の代わりに `SELECT * FROM <table>` クエリが表示されます。 
+コピーするテーブルを選択すると、 **[ソース]** フィールドに、テーブル名の代わりに `SELECT * FROM <table>` クエリが表示されます。 
   
  **サンプル データ グリッド**  
  クエリから返されたデータ ソースのサンプル データが最大 200 行表示されます。  
 
 
 ## <a name="thats-not-right-i-want-to-change-something"></a>これは不正で、何かを変更したいです
-データをプレビューした後で、ウィザードの前のページで選択したオプションを変更してもかまいません。 これらの変更を行うには、**[OK]** をクリックして **[コピー元のテーブルおよびビューを選択]** ページに戻り、**[戻る]** をクリックし、選択の変更が可能な前のページに戻ります。
+データをプレビューした後で、ウィザードの前のページで選択したオプションを変更してもかまいません。 これらの変更を行うには、 **[OK]** をクリックして **[コピー元のテーブルおよびビューを選択]** ページに戻り、 **[戻る]** をクリックし、選択の変更が可能な前のページに戻ります。
 
 ## <a name="whats-next"></a>次の操作  
  コピーするデータをプレビューしたら、 **[OK]** をクリックします。 **[データのプレビュー]** ダイアログ ボックスから、 **[コピー元のテーブルおよびビューを選択]** ページまたは **[フラット ファイルの変換先の構成]** ページに戻ります。 詳細については、「 [[コピー元のテーブルおよびビューを選択]](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 」または「 [[フラット ファイルの変換先の構成]](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  

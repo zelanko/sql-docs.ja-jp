@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 168e53dde51641d79569eb3ef6a1930d0084d10f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723976"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
@@ -55,7 +55,7 @@ PostgreSQL ODBC ドライバーを使用して PostgreSQL に接続するには�
 > 適切な接続文字列をアセンブルするヘルプを参照してください。 または、接続文字列を提供する代わりに、既存の DSN (データ ソース名) を提供するか、新しく作成します。 これらのオプションの詳細については、「[Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」 (ODBC データ ソースに接続する) を参照してください。
 
 **[ドライバー]**  
-ODBC ドライバーの名前 - **[PostgreSQL ODBC Driver(UNICODE)]** または **[PostgreSQL ODBC Driver(ANSI)]**。
+ODBC ドライバーの名前 - **[PostgreSQL ODBC Driver(UNICODE)]** または **[PostgreSQL ODBC Driver(ANSI)]** 。
 
 **[サーバー]**  
 PostgreSQL サーバーの名前。 
@@ -66,7 +66,7 @@ PostgreSQL サーバーに接続するためのポート。
 **[データベース]**  
 PostgreSQL データベースの名前。
 
-**[Uid]** と **[Pwd]**   
+**[Uid]** と **[Pwd]**    
 接続する **Uid** (ユーザー id) と **Pwd** (パスワード)。
 
 ### <a name="connection-string-format"></a>接続文字列の形式
@@ -77,7 +77,7 @@ PostgreSQL データベースの名前。
     ```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
-**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、**[ConnectionString]** フィールドに接続文字列を入力するか、**[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
+**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 次の例では、この接続文字列を使用しています。
 

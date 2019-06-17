@@ -20,10 +20,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b4cca30125bd6b8fb69893332924d18fbb461cd9
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66706917"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
@@ -326,7 +326,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>シリアル化可能なトランザクションの使用例  
- **Org_BreadthFirst** インデックスによって、**@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションでチェックできるその他のエラーの場合だけでなく、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を追加しようとしていることを示します。したがって、 **@last_child** を再計算する必要があります。 次のコードは、シリアル化可能なトランザクションと幅優先のインデックスを使用して、新しいノード値を計算します。  
+ **Org_BreadthFirst** インデックスによって、 **@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションでチェックできるその他のエラーの場合だけでなく、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を追加しようとしていることを示します。したがって、 **@last_child** を再計算する必要があります。 次のコードは、シリアル化可能なトランザクションと幅優先のインデックスを使用して、新しいノード値を計算します。  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -510,7 +510,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> サブツリーの移動  
- もう 1 つの一般的な操作は、サブツリーの移動です。 次の手順では、 **@oldMgr** のサブツリーを取得し、それ ( **@oldMgr**を含む) を **@newMgr**を使用した方がはるかに高速です。  
+ もう 1 つの一般的な操作は、サブツリーの移動です。 次の手順では、 **@oldMgr** のサブツリーを取得し、それ ( **@oldMgr** を含む) を **@newMgr** を使用した方がはるかに高速です。  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

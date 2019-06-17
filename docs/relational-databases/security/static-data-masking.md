@@ -12,10 +12,10 @@ ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580979"
 ---
 # <a name="static-data-masking"></a>静的データ マスク
@@ -105,11 +105,11 @@ NULL 値での置換を実行するマスク機能では、マスク前データ
  
  ![テーブルのドロップダウン](../../relational-databases/security/media/sql-static-data-masking/ui_dropdown_column.png)
  
-4. マスクするすべての列と、適用するマスク機能を選択します。 使用可能なマスクの種類は、**[Shuffle]\(シャッフル\)** マスク、**[Group Shuffle]\(グループ シャッフル\)** マスク、**[Single Value]\(単一値\)** マスク、**[NULL]** マスク、**[String Composite]\(文字列合成\)** マスクです。 
+4. マスクするすべての列と、適用するマスク機能を選択します。 使用可能なマスクの種類は、 **[Shuffle]\(シャッフル\)** マスク、 **[Group Shuffle]\(グループ シャッフル\)** マスク、 **[Single Value]\(単一値\)** マスク、 **[NULL]** マスク、 **[String Composite]\(文字列合成\)** マスクです。 
  
  ![マスク機能ドロップダウン](../../relational-databases/security/media/sql-static-data-masking/masking_functions.PNG)
  
- 注:これらのマスク機能のほとんどには、追加の構成パラメーターがあります。 シャッフル マスクについては、既定のパラメーターが提供されています。 グループ シャッフル マスク、単一値マスク、文字列合成マスクについては、ユーザーが構成パラメーターを指定する必要があります。 構成パラメーターを変更または指定するには、**[構成...]** オプションをクリックし、ポップアップ表示されるダイアログ ボックスでパラメーターの (代替) 値を指定します。 各マスク機能について詳しくは、「[マスク機能](#masking-functions)」をご覧ください。
+ 注:これらのマスク機能のほとんどには、追加の構成パラメーターがあります。 シャッフル マスクについては、既定のパラメーターが提供されています。 グループ シャッフル マスク、単一値マスク、文字列合成マスクについては、ユーザーが構成パラメーターを指定する必要があります。 構成パラメーターを変更または指定するには、 **[構成...]** オプションをクリックし、ポップアップ表示されるダイアログ ボックスでパラメーターの (代替) 値を指定します。 各マスク機能について詳しくは、「[マスク機能](#masking-functions)」をご覧ください。
  
  ![マスク機能の構成ボタン](../../relational-databases/security/media/sql-static-data-masking/masking_functions_configure.png)
  
@@ -123,7 +123,7 @@ NULL 値での置換を実行するマスク機能では、マスク前データ
  
  ![検証メカニズムの警告](../../relational-databases/security/media/sql-static-data-masking/validation_warning.PNG)
  
-5. 完全なマスク構成を XML ファイルに保存して、後で使用することができます。  マスク機能の構成は、Azure SQL データベースとオンプレミスのデータベースで同じですが、保存される他のプロパティ (バックアップ ファイルのパスなど) にはわずかな違いがあります。 構成を保存するには、**[Save Config]\(構成の保存\)** をクリックして、ファイル名を入力し、[保存] をクリックします。  ユーザーは、**[Load Config]\(構成の読み込み\)** を使用して、既存の構成ファイルを後で読み込むことができます。列の数が多いテーブルには構成ファイルの使用をお勧めします。 
+5. 完全なマスク構成を XML ファイルに保存して、後で使用することができます。  マスク機能の構成は、Azure SQL データベースとオンプレミスのデータベースで同じですが、保存される他のプロパティ (バックアップ ファイルのパスなど) にはわずかな違いがあります。 構成を保存するには、 **[Save Config]\(構成の保存\)** をクリックして、ファイル名を入力し、[保存] をクリックします。  ユーザーは、 **[Load Config]\(構成の読み込み\)** を使用して、既存の構成ファイルを後で読み込むことができます。列の数が多いテーブルには構成ファイルの使用をお勧めします。 
  
  ![[構成ファイル]](../../relational-databases/security/media/sql-static-data-masking/load_save_config.PNG)
  
@@ -140,14 +140,14 @@ NULL マスクでは、列のすべての値が NULL に置き換えられます
 
 ### <a name="single-value-masking"></a>単一値マスク
 
-単一値マスクでは、列のすべての値が 1 つの固定値に置き換えられます。この値はユーザーが指定します。 入力の形式は、選択した列の型が何であっても変換できるものでなければなりません。 値を指定するには、**[構成...]** をクリックして、値を指定し、**[OK]** をクリックします。 
+単一値マスクでは、列のすべての値が 1 つの固定値に置き換えられます。この値はユーザーが指定します。 入力の形式は、選択した列の型が何であっても変換できるものでなければなりません。 値を指定するには、 **[構成...]** をクリックして、値を指定し、 **[OK]** をクリックします。 
 
 ![単一値マスクのパラメーター](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 
 
 ### <a name="shuffle-masking"></a>シャッフル マスク
 
-列のすべての値が、新しい行にシャッフルされます。 新しいデータは生成されません。 シャッフル マスクでは、列の NULL エントリを保持するオプションが提供されます。 これを行うには、**[構成]** をクリックして、[Maintain NULL positions]\(NULL の位置を保持する\) ボックスをオンにします。
+列のすべての値が、新しい行にシャッフルされます。 新しいデータは生成されません。 シャッフル マスクでは、列の NULL エントリを保持するオプションが提供されます。 これを行うには、 **[構成]** をクリックして、[Maintain NULL positions]\(NULL の位置を保持する\) ボックスをオンにします。
 
 ![シャッフル マスクのパラメーター](../../relational-databases/security/media/sql-static-data-masking/shuffle_parameter.PNG)
 
@@ -167,7 +167,7 @@ NULL マスクでは、列のすべての値が NULL に置き換えられます
 | 612-72-1026  | 116-30-8733  | 209-36-1971 |  
 
 ### <a name="group-shuffle-masking"></a>グループ シャッフル マスク
-グループ シャッフルでは、複数の列がシャッフル グループにバインドされます。 シャッフル グループ内の列はまとめてシャッフルされます。 ユーザーは、**[構成]** オプションを使用してシャッフル グループの名前を指定する必要があります。
+グループ シャッフルでは、複数の列がシャッフル グループにバインドされます。 シャッフル グループ内の列はまとめてシャッフルされます。 ユーザーは、 **[構成]** オプションを使用してシャッフル グループの名前を指定する必要があります。
 
 ![グループ シャッフル マスクのパラメーター](../../relational-databases/security/media/sql-static-data-masking/group_shuffle_parameter.PNG)
 

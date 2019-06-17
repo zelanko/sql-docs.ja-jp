@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: ca18e2b1a58da7d270d8352cddf15dc0f5281cc7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794547"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
@@ -85,7 +85,7 @@ ms.locfileid: "66794547"
  ログ配布は主にディザスター リカバリー ソリューションであるため、最も単純で一般的なシナリオは、プライマリ インスタンスを適切にアップグレードすることです。データベースはこのアップグレード中は使用できなくなります。 サーバーのアップグレードが完了すると、データベースが自動的にオンラインに戻り、データベースのアップグレードが行われます。 データベースのアップグレードが完了すると、ログ配布ジョブが再開されます。  
   
 > [!NOTE]  
->  ログ配布では、[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)のオプションもサポートしています。また、[プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)もできます。  ただし、ログ配布が高可用性ソリューションとして構成されることは今後ほとんどないため (新しいオプションの方が堅牢性がかなり高い)、フェールオーバーでは通常ダウンタイムが最小化されません。フェールオーバーではシステム データベース オブジェクトが同期されず、昇格したセカンダリを見つけて接続しやすくするためのクライアントを有効にする方が難しいためです。  
+>  ログ配布では、[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)のオプションもサポートしています。また、[プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)もできます。 ただし、ログ配布が高可用性ソリューションとして構成されることは今後ほとんどないため (新しいオプションの方が堅牢性がかなり高い)、フェールオーバーでは通常ダウンタイムが最小化されません。フェールオーバーではシステム データベース オブジェクトが同期されず、昇格したセカンダリを見つけて接続しやすくするためのクライアントを有効にする方が難しいためです。  
   
 ## <a name="see-also"></a>参照  
  [インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
