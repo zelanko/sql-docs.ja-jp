@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d871fb9ce1c163ba3a099f70050447537a03909e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774081"
 ---
 # <a name="breaking-changes-to-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 における SQL Server 機能の重大な変更
@@ -23,7 +23,7 @@ ms.locfileid: "62774081"
 ## <a name="breaking-changes-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] における重大な変更  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] には、重大な変更はありません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)  
   
   

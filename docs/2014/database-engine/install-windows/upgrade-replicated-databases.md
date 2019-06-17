@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775324"
 ---
 # <a name="upgrade-replicated-databases"></a>レプリケートされたデータベースのアップグレード
@@ -88,7 +88,7 @@ ms.locfileid: "62775324"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>以前のバージョンからレプリケートされたデータベースの復元  
  以前のバージョンからレプリケートされたデータベースのバックアップを復元するときにレプリケーション設定が保持されるようにするには、バックアップが作成されたサーバーおよびデータベースと同じ名前のサーバーおよびデータベースに復元します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション管理に関する FAQ](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [レプリケーションの下位互換性](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

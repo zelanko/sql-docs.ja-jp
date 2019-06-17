@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806854"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>役割の交代中に発生するサービスの中断時間の算出 (データベース ミラーリング)
@@ -74,7 +74,7 @@ ms.locfileid: "62806854"
   
  ![エラー検出とフェールオーバー時間](../media/dbm-failovauto-time.gif "エラー検出とフェールオーバー時間")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングの動作モード](database-mirroring-operating-modes.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  

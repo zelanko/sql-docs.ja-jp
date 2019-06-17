@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086218"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>マイニング モデルへのフィルターの適用
@@ -46,7 +46,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     - または -  
+     \- または -  
   
      モデルを選択します。 次に、 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   

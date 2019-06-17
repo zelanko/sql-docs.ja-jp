@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ab8c48b9c02f7bcf9f2c9457b56cb2533125756
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105976"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66105976"
 |データの取得方法|メイン レポートと同時にデータを取得|詳細レポートごとにデータを取得|メイン レポートと同時にすべてのデータを取得|  
 |処理と表示のタイミング|メイン レポートと同時|リンクがクリックされたとき|メイン レポートと同時|  
 |パフォーマンス|低速 (メイン レポートと同時にすべてのデータを取得)|高速 (メイン レポートとは別にデータを取得)|高速 (メイン レポートと同時にすべてのデータを取得)|  
-|パラメーターを使用するかどうか|はい|[はい]|いいえ|  
+|パラメーターを使用するかどうか|[はい]|[はい]|いいえ|  
 |再利用できるかどうか|レポート、または他のレポートのサブレポートか詳細レポートとして再利用可|レポート、または他のレポートのサブレポートか詳細レポートとして再利用可|再利用不可|  
 |置かれる場所|メイン レポートの外部、同じまたは別のレポート サーバー|メイン レポートの外部、同じレポート サーバー|メイン レポートの内部|  
 |表示される場所|メイン レポート内|別のレポート内|メイン レポート内|  

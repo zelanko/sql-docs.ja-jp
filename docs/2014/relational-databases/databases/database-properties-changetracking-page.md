@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871855"
 ---
 # <a name="database-properties-changetracking-page"></a>[データベースのプロパティ] \([変更の追跡] ページ)
@@ -38,7 +38,7 @@ ms.locfileid: "62871855"
  既定値は 2 です。  
   
  **[保有期間の単位]**  
- 保有期間の値の単位を指定します。 **[日]**、 **[時間]**、または **[分]** を選択できます。 既定値は **[日]** です。  
+ 保有期間の値の単位を指定します。 **[日]** 、 **[時間]** 、または **[分]** を選択できます。 既定値は **[日]** です。  
   
  最小保有期間は 1 分です。 最大保有期間はありません。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62871855"
   
  **[自動クリーンアップ]** を有効にすると、以前のカスタム保有期間はすべて既定の保有期間 (2 日) にリセットされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   

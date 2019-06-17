@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0b27ad8b4eddabca20be239c1126e4e6acc44737
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 6733882d34d8f7afe880728d27051aa25abe5b55
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574983"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500140"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)
 
@@ -21,7 +21,7 @@ ms.locfileid: "65574983"
   
  このアプライアンスでは、複数の物理ノードにわたる大規模なデータベース テーブルを分割し、各ノードが SQL Server の独自のインスタンスを実行するようにします。 レポートが [!INCLUDE[ssDW](../../includes/ssdw-md.md)] に接続してレポート データを取得するときには、クエリの処理を管理する、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] アプライアンス内の管理ノードに接続します。 接続が確立すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境内にある [!INCLUDE[ssDW](../../includes/ssdw-md.md)] のインスタンスに対する操作と、この環境外にある  のインスタンスに対する操作の区別が付かなくなります。  
   
-  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスの種類に該当するレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスのデータ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]からのデータに接続し、そのデータを取得します。  
+ [!INCLUDE[ssDW](../../includes/ssdw-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスの種類に該当するレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスのデータ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]からのデータに接続し、そのデータを取得します。  
   
  このデータ拡張機能は、接続文字列とは個別に管理される、複数の値を持つパラメーター、サーバー集計、および資格情報をサポートしています。  
   
@@ -38,7 +38,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  また、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用して、ユーザー名やパスワードなどの資格情報を入力します。 `User Id` オプションと `Password` オプションは、接続文字列に自動的に付加されます。これらを接続文字列の一部として入力する必要はありません。 このユーザー インターフェイスには、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] アプライアンス内の管理ノードの IP アドレスとポート番号を指定するオプションもあります。 既定のポート番号は 17000 です。 ポートは管理者が変更できるので、接続文字列で別のポート番号を使用することもあります。  
   
- 接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
+ 接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="Credentials"></a> [資格情報]  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ユーザー名とパスワードを実装および保存するための独自のセキュリティ技術が用意されています。 Windows 認証は使用できません。 Windows 認証を使用して [!INCLUDE[ssDW](../../includes/ssdw-md.md)] に接続しようとすると、エラーが発生します。  
@@ -51,7 +51,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、msdn.microsoft.com で [Reporting Services に関するドキュメント](https://go.microsoft.com/fwlink/?linkid=121312)の「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
- 詳しくは、「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
+ 詳細については、次を参照してください[データ接続、データ ソース、および接続文字列&#40;レポート ビルダーおよび SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)または[資格情報の指定と接続情報のレポート データ ソース](specify-credential-and-connection-information-for-report-data-sources.md)。.  
   
   
 ##  <a name="Query"></a> クエリ  
@@ -97,7 +97,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- ツール バーの **[実行]** ボタン (**!**) をクリックすると、クエリが実行され、結果セットが表示されます。  
+ ツール バーの **[実行]** ボタン ( **!** ) をクリックすると、クエリが実行され、結果セットが表示されます。  
   
  このクエリをパラメーター化するには、クエリ パラメーターを追加します。 たとえば、WHERE 句を次の構文に変更します。  
   
@@ -142,7 +142,7 @@ WHERE EmployeeID = (@EmpID)
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  データ接続とデータ ソースについて説明します。  
   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

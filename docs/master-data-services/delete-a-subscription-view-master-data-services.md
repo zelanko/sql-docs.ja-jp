@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0409df7157705d5e2c8b5ea0fdfe18ef4fd0e4c2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478643"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>サブスクリプション ビューを削除する (マスター データ サービス)
@@ -46,7 +46,7 @@ ms.locfileid: "65478643"
   
 5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)   
  [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)  
   

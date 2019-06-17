@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833110"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
@@ -27,7 +27,7 @@ ms.locfileid: "62833110"
   
 -   右クリック**接続マネージャー**フォルダーで、**ソリューション エクスプ ローラー**  をクリック**新しい接続マネージャー**します。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
--   右クリックし、**接続マネージャー**パッケージ デザイナー、および select の下部にあるウィンドウ**新しい接続.**.**[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
+-   右クリックし、**接続マネージャー**パッケージ デザイナー、および select の下部にあるウィンドウ**新しい接続.** . **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
 ## <a name="connection-manager-authentication"></a>接続マネージャーの認証  
  OData 接続マネージャーでは、2 つの認証モードがサポートされています。  

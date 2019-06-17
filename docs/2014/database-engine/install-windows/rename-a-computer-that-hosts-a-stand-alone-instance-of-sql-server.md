@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775011"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
@@ -109,7 +109,7 @@ ms.locfileid: "62775011"
   
  **クライアントのエイリアス** - 名前付きパイプを使用するクライアントのエイリアスはコンピューター名の変更操作の影響を受けます。 たとえば、SRVR1 に対するエイリアス "PROD_SRVR" が作成され、名前付きパイプのプロトコルが使用されている場合、パイプ名は `\\SRVR1\pipe\sql\query`のようになります。 コンピューター名が変更された後は、名前付きパイプのパスは無効になります。 名前付きパイプの詳細については、「 [名前付きパイプを使用した有効な接続文字列の作成](https://go.microsoft.com/fwlink/?LinkId=111063)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482636"
 ---
 # <a name="navigational-access-master-data-services"></a>ナビゲーション アクセス (マスター データ サービス)
@@ -41,7 +41,7 @@ ms.locfileid: "65482636"
   
  コレクションに権限を割り当てた場合、名前、コード、説明、および所有者 ID の読み取りまたは更新を実行できます。 また、モデル名を読み取ることもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [権限の決定方法 (マスター データ サービス)](how-permissions-are-determined-master-data-services.md)  
   
   

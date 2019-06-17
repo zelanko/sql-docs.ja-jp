@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812758"
 ---
 # <a name="change-source-control"></a>ソース管理の変更
@@ -75,7 +75,7 @@ ms.locfileid: "62812758"
   
 |**Option**|**[説明]**|  
 |----------------|---------------------|  
-|有効です|項目は、その項目が属するサーバー フォルダーに正しくバインドされ、接続されています。|  
+|有効|項目は、その項目が属するサーバー フォルダーに正しくバインドされ、接続されています。|  
 |ライセンスが無効|項目は、その項目が属するフォルダーに正しくバインドされていないか、接続が切断されています。 使用して、**ソース管理に追加**コマンドの代わりに**バインド**この項目。|  
 |Unknown|ソース管理下にある項目の状態がまだ決定されていません。|  
 |[制御しない]|項目がソース管理下にありません。|  
@@ -83,7 +83,7 @@ ms.locfileid: "62812758"
  **バインド解除します。**  
  表示、**ソース管理** ダイアログ ボックスを選択した項目をソース管理から削除し、永続的に、現在のフォルダーから項目の関連付けを解除できるようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション エクスプローラーのソース管理](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

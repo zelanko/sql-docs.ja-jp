@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a4b2cdefeecc56c331224cd7453e861defafb8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687970"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761624"
 ---
 # <a name="working-with-a-connection"></a>接続の操作
 
@@ -40,7 +40,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 この手法では、渡された URL で正常に接続できるドライバーを示す一覧から、最初の使用可能なドライバーを使用して、データベース接続を作成します。
 
 > [!NOTE]  
-> sqljdbc4.jar クラス ライブラリを使用する場合は、アプリケーションから Class.forName メソッドを使用してドライバーの登録または読み込みを明示的に行う必要はありません。 DriverManager クラスの getConnection メソッドが呼び出されたときに、一連の登録済みの JDBC ドライバーから適切なドライバーがあります。 詳細については、「JDBC ドライバーの使用」を参照してください。
+> sqljdbc4.jar クラス ライブラリを使用する場合は、アプリケーションから Class.forName メソッドを使用してドライバーの登録または読み込みを明示的に行う必要はありません。 DriverManager クラスの getConnection メソッドが呼び出されると、登録されている一連の JDBC ドライバーから適切なドライバーが検出されます。 詳細については、「JDBC ドライバーの使用」を参照してください。
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>SQLServerDriver クラスを使用した接続の作成
 

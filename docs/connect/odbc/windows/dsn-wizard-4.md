@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724370"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797769"
 ---
 # <a name="data-source-wizard-screen-4"></a>データ ソース ウィザード画面 4
 
 SQL Server メッセージに使用する言語、文字セットの翻訳、および ODBC Driver for SQL Server で地域設定を使用するかどうかを指定します。 また、実行時間の長いクエリのログ記録、およびドライバー統計情報の設定を制御することもできます。
 
-## <a name="options"></a>[変数]
+## <a name="options"></a>オプション
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>[SQL Server のシステム メッセージを以下の言語に変更する]
 
@@ -48,7 +48,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>[実行時間が長いクエリを以下のログ ファイルに保存する]
 
-ドライバーが、保存するクエリの**最短所用時間**の値よりも長い時間がかかっているすべてのクエリをログに記録するように指定します。 実行時間の長いクエリのログは、指定されたファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、**[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
+ドライバーが、保存するクエリの**最短所用時間**の値よりも長い時間がかかっているすべてのクエリをログに記録するように指定します。 実行時間の長いクエリのログは、指定されたファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、 **[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
 
 ### <a name="long-query-time-milliseconds"></a>[保存するクエリの最短所要時間 (ミリ秒)]
 
@@ -56,7 +56,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>[ODBC ドライバーの統計情報ログを以下のログ ファイルに保存する]
 
-統計情報がログに記録されるよう指定します。 統計情報のログは、指定したファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、**[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
+統計情報がログに記録されるよう指定します。 統計情報のログは、指定したファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、 **[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
 
 統計情報ログはタブで区切られており、タブ区切りのファイルをサポートする Microsoft Excel やその他のアプリケーションで分析できます。
 

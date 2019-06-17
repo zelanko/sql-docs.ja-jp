@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 232ee51614a668b07263c3e3a4182f23652135bf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099869"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>[Reporting Services ログイン] ダイアログ ボックス (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66099869"
  **Password**  
  Web サービスへのログインに使用するパスワードを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [資格情報とレポート データ ソースに関する接続情報を指定](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)[レポート デザイナーの F1 ヘルプ](report-designer-f1-help.md)  
   

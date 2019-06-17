@@ -11,10 +11,10 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64877620"
 ---
 # <a name="create-key-performance-indicators"></a>主要業績評価指標の作成
@@ -78,7 +78,7 @@ ms.locfileid: "64877620"
   
 5.  左 (下) のスライダー フィールドに、スライド、フィールドが表示されるまで**0.8**と右 (高) のスライダー フィールドに、フィールドが表示されるまでスライドし**1.03**します。  
   
-6.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、**[OK]** をクリックします。  
+6.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、 **[OK]** をクリックします。  
   
 ## <a name="whats-next"></a>次の操作
 

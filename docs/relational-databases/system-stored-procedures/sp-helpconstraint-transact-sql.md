@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796081"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'table'` テーブルの制約に関する情報が返されます。 指定したテーブルは現在のデータベースに対してローカルである必要があります。 *テーブル*は**nvarchar (776)**、既定値はありません。  
+`[ @objname = ] 'table'` テーブルの制約に関する情報が返されます。 指定したテーブルは現在のデータベースに対してローカルである必要があります。 *テーブル*は**nvarchar (776)** 、既定値はありません。  
   
-`[ @nomsg = ] 'no_message'` テーブル名を出力する省略可能なパラメーターです。 *no_message*は**varchar (5)**、既定値は**msg**します。**nomsg**印刷を抑制します。  
+`[ @nomsg = ] 'no_message'` テーブル名を出力する省略可能なパラメーターです。 *no_message*は**varchar (5)** 、既定値は**msg**します。**nomsg**印刷を抑制します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

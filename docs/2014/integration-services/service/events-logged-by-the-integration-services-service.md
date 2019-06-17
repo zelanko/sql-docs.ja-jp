@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dedffe0f30c62399e4d694f7ee1bf5247222e87d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62889276"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services サービスによってログに記録されるイベント
@@ -33,10 +33,10 @@ ms.locfileid: "62889276"
   
 |イベント ID|シンボル名|テキスト|メモ|  
 |--------------|-------------------|----------|-----------|  
-|256|DTS_MSG_SERVER_STARTING| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを開始しています。|サービスが開始されようとしています。|  
+|256|DTS_MSG_SERVER_STARTING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを開始しています。|サービスが開始されようとしています。|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスが開始されました。|サービスが開始されました。|  
 |260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを開始できませんでした。%nエラー: %1|サービスを開始できませんでした。 開始できないのは、インストールが破損したか、サービス アカウントが適切でないことが原因である可能性があります。|  
-|258|DTS_MSG_SERVER_STOPPING| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを停止しています。%n%n実行中のパッケージはサーバー終了時にすべて停止します: %1|サービスを停止しています。また、パッケージを停止するようにサービスを構成している場合は、実行中のパッケージもサービスによってすべて停止されます。 構成ファイルで true 値または false 値を設定して、サービスの停止時に実行中のパッケージを停止するかどうかを指定できます。 このイベントのメッセージには、この設定値が含まれています。|  
+|258|DTS_MSG_SERVER_STOPPING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを停止しています。%n%n実行中のパッケージはサーバー終了時にすべて停止します: %1|サービスを停止しています。また、パッケージを停止するようにサービスを構成している場合は、実行中のパッケージもサービスによってすべて停止されます。 構成ファイルで true 値または false 値を設定して、サービスの停止時に実行中のパッケージを停止するかどうかを指定できます。 このイベントのメッセージには、この設定値が含まれています。|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスが停止しました。%nサーバーのバージョン %1|サービスが停止しました。|  
   
 ## <a name="messages-about-the-configuration-file"></a>構成ファイルに関するメッセージ  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd9f92b0128bd6280654885f79f8231570f721de
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105627"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>行の挿入または削除 (レポート ビルダーおよび SSRS)
@@ -49,7 +49,7 @@ ms.locfileid: "66105627"
   
 ### <a name="to-insert-a-row-in-a-group-in-a-selected-data-region"></a>選択したデータ領域のグループに行を挿入するには  
   
--   Tablix データ領域の行グループ領域で、行の挿入位置の行グループのセルを右クリックし、 **[行を挿入]** をクリックした後、 **[上 - 外側のグループ]**、 **[上 - 内側のグループ]**、 **[下 - 内側のグループ]**、または **[下 - 外側のグループ]** をクリックします。  
+-   Tablix データ領域の行グループ領域で、行の挿入位置の行グループのセルを右クリックし、 **[行を挿入]** をクリックした後、 **[上 - 外側のグループ]** 、 **[上 - 内側のグループ]** 、 **[下 - 内側のグループ]** 、または **[下 - 外側のグループ]** をクリックします。  
   
      クリックした行グループのセルに対応するグループの内側または外側に行が追加されます。  
   

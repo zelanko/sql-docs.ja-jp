@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875081"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "62875081"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足の推奨事項。**[復旧モデルを変更した後](#FollowUp)  
+-   **補足の推奨事項。** [復旧モデルを変更した後](#FollowUp)  
   
 -   [関連タスク](#RelatedTasks)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62875081"
   
 5.  **[復旧モデル]** ボックスの一覧に現在の復旧モデルが表示されています。  
   
-6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]**、 **[一括ログ]**、 **[単純]** のいずれかです。  
+6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]** 、 **[一括ログ]** 、 **[単純]** のいずれかです。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,7 +160,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [メンテナンス プラン](../maintenance-plans/maintenance-plans.md) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

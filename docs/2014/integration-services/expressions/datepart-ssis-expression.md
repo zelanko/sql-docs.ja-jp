@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769339"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 式)
@@ -80,7 +80,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DATEADD &#40;SSIS 式&#41;](dateadd-ssis-expression.md)   
  [DATEDIFF (SSIS 式)](datediff-ssis-expression.md)   
  [DAY (SSIS 式)](day-ssis-expression.md)   

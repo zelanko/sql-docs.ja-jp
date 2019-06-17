@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774745"
 ---
 # <a name="password-expired"></a>[パスワードの有効期限が切れました]
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバー接続するときに、入力したパスワードが正しくてもそのパスワードの有効期限が切れている場合に表示されます。 また、 **[ユーザーは次回ログイン時にパスワードを変更する]** オプションを使用して作成された新しいアカウントでサーバーに接続した場合にも表示されます。 **[パスワードの有効期限が切れました]** ダイアログ ボックスを使用すると、この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログインのパスワードを変更できます。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用してサーバー接続するときに、入力したパスワードが正しくてもそのパスワードの有効期限が切れている場合に表示されます。 また、 **[ユーザーは次回ログイン時にパスワードを変更する]** オプションを使用して作成された新しいアカウントでサーバーに接続した場合にも表示されます。 **[パスワードの有効期限が切れました]** ダイアログ ボックスを使用すると、この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証ログインのパスワードを変更できます。  
   
 ## <a name="options"></a>および  
  **Login**  

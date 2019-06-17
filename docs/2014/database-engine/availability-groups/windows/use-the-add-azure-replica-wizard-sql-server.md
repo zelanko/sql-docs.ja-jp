@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788130"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure のレプリカ追加ウィザードの使用 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62788130"
   
      [Security](#Security)  
   
--   **レプリカを追加するには (次を使用):**[Azure のレプリカ追加ウィザード (SQL Server Management Studio)](#SSMSProcedure)  
+-   **レプリカを追加するには (次を使用):** [Azure のレプリカ追加ウィザード (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  可用性グループにない可用性レプリカを追加した場合、「サーバー インスタンス」と「可用性グループとレプリカ」セクションを参照してください[前提条件、制限事項、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)します。  

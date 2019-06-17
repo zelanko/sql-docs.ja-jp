@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600512"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761978"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -119,7 +119,7 @@ $stmt = null;
 ```
 
 ## <a name="example"></a>例
-このコード サンプルのテーブルを作成する方法を示しています。 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)型と、挿入されたデータをフェッチします。
+このコード例では、[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 型のテーブルを作成し、挿入されたデータをフェッチする方法を示しています。
 
 ```
 <?php

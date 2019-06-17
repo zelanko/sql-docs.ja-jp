@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810423"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
@@ -43,7 +43,7 @@ ms.locfileid: "62810423"
   
  DAC を使用して接続できるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin ロールのメンバーのみです。  
   
- DAC は、 **sqlcmd** コマンド プロンプト ユーティリティで特殊な管理者スイッチ (**-A**) を指定することによって使用できます。 **sqlcmd** を使用する方法については、「[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。 プレフィックスとして接続することもできます`admin:`形式でインスタンス名に**sqlcmd-sadmin:**_< instance_name >。_ DAC を開始することも、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に接続してクエリ エディター `admin:` \< *instance_name*>。  
+ DAC は、 **sqlcmd** コマンド プロンプト ユーティリティで特殊な管理者スイッチ ( **-A**) を指定することによって使用できます。 **sqlcmd** を使用する方法については、「[sqlcmd でのスクリプト変数の使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)」を参照してください。 プレフィックスとして接続することもできます`admin:`形式でインスタンス名に**sqlcmd-sadmin:** _< instance_name >。_ DAC を開始することも、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に接続してクエリ エディター `admin:` \< *instance_name*>。  
   
 ## <a name="restrictions"></a>制限  
  DAC の唯一の目的は、ごくまれな状況でサーバーの問題を診断することであるので、この接続には次のようないくつかの制限があります。  
@@ -76,7 +76,7 @@ ms.locfileid: "62810423"
   
 -   DBCC FREEPROCCACHE、DBCC FREESYSTEMCACHE、DBCC DROPCLEANBUFFERS、DBCC SQLPERF などの基本的な DBCC コマンド。`,` **DBCC** CHECKDB、DBCC DBREINDEX、DBCC SHRINKDATABASE などのリソースを集中的に消費するコマンドは実行しないでください。  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>* コマンド。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の状態によっては、KILL コマンドは必ずしも成功しません。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動するしか方法がありません。 次に一般的なガイドラインをいくつか示します。  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* コマンド。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の状態によっては、KILL コマンドは必ずしも成功しません。この場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動するしか方法がありません。 次に一般的なガイドラインをいくつか示します。  
   
     -   `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`というクエリを実行し、SPID が実際に強制終了されたかどうかを確認します。 行が返されなかった場合は、セッションが強制終了されたことを示します。  
   

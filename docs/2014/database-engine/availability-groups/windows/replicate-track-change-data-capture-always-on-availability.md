@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814058"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ (SQL Server)
@@ -156,7 +156,7 @@ ms.locfileid: "62814058"
   
      可用性グループ リスナー名または明示的なノード名を使用してセカンダリ レプリカを検索できます。 可用性グループ リスナー名を使用すると、アクセスは適切なセカンダリ レプリカに送られます。  
   
-     ときに`sp_addlinkedserver`セカンダリにアクセスするリンク サーバーを作成するために使用、 *@datasrc* 、可用性グループ リスナー名または明示的なサーバー名、パラメーターを使用し、  *@provstr*パラメーターを使用して読み取り専用の目的を指定します。  
+     ときに`sp_addlinkedserver`セカンダリにアクセスするリンク サーバーを作成するために使用、 *@datasrc* 、可用性グループ リスナー名または明示的なサーバー名、パラメーターを使用し、  *@provstr* パラメーターを使用して読み取り専用の目的を指定します。  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -249,7 +249,7 @@ ms.locfileid: "62814058"
   
 -   [変更の追跡のしくみ &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

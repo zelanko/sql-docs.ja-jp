@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726900"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768595"
 ---
 # <a name="data-source-objects-ole-db"></a>データ ソース オブジェクト (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

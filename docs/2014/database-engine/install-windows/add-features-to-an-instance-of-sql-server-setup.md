@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779373"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>SQL Server 2014 のインスタンスへの機能の追加 (セットアップ)
@@ -45,13 +45,13 @@ ms.locfileid: "62779373"
   
 3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 詳細を表示するには、 **[詳細の表示]** をクリックします。 続行するには、 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。  
+4.  [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。  
   
 5.  [セットアップ ファイルのインストール] ページのセットアップには、セットアップ ファイルのダウンロード、抽出、およびインストールの進行状況が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの更新プログラムが検出され、含まれるように指定されている場合は、その更新プログラムもインストールされます。 セットアップ サポート ファイルをインストールするには、 **[インストール]** をクリックします。  
   
 6.  セットアップを続行する前に、システム構成チェッカーによってコンピューターのシステムの状態が確認されます。  
   
-7.  [インストールの種類] ページで、**[既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスに機能を追加する]** オプションを選択し、更新するインスタンスを選択します。  
+7.  [インストールの種類] ページで、 **[既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インスタンスに機能を追加する]** オプションを選択し、更新するインスタンスを選択します。  
   
 8.  [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、右側のウィンドウに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../../sql-server/editions-and-components-of-sql-server-2016.md)します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定のインスタンスに各コンポーネントをインストールできるのは、一度だけです。 複数のコンポーネントをインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の追加のインスタンスをインストールする必要があります。  
   

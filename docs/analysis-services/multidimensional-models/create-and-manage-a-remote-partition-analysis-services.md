@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 32c687ee8bb2d3c7efc323f71652c511c0272c42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62867218"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>リモート パーティションの作成と管理 (Analysis Services)
@@ -42,7 +42,7 @@ ms.locfileid: "62867218"
 -   ディザスター リカバリー計画がリモート パーティションのバックアップと復元に対応していることを確認する必要があります。 リモート パーティションを使用すると、バックアップ操作と復元操作が複雑になる場合があります。 必要なデータを復元できるように、計画を十分にテストしてください。  
   
 ## <a name="configure-remote-partitions"></a>リモート パーティションの構成  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを実行している異なる 2 台のコンピューターはそれぞれ、1 台をマスター サーバー、もう 1 台を下位サーバーとして指定するリモート パーティションの配置を作成するために必要です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを実行している異なる 2 台のコンピューターはそれぞれ、1 台をマスター サーバー、もう 1 台を下位サーバーとして指定するリモート パーティションの配置を作成するために必要です。  
   
  次の手順では、マスター サーバーにキューブ データベースが配置されている、2 つのサーバー インスタンスがあることを前提としています。 この手順では、キューブ データベースを db-master と呼びます。 リモート パーティションが含まれているストレージ データベースを db-storage と呼びます。  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62867218"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>キューブの配置に有効なサーバー名を指定する (SSDT)  
   
-1.  マスター サーバー。ソリューション エクスプ ローラーでソリューション名を右クリックし、選択**プロパティ**します。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]**、 **[配置]**、 **[サーバー]** の順にクリックし、マスター サーバーの名前を設定します。  
+1.  マスター サーバー。ソリューション エクスプ ローラーでソリューション名を右クリックし、選択**プロパティ**します。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]** 、 **[配置]** 、 **[サーバー]** の順にクリックし、マスター サーバーの名前を設定します。  
   
-2.  下位サーバー。ソリューション エクスプ ローラーでソリューション名を右クリックし、選択**プロパティ**します。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]**、 **[配置]**、 **[サーバー]** の順にクリックし、下位サーバーの名前を設定します。  
+2.  下位サーバー。ソリューション エクスプ ローラーでソリューション名を右クリックし、選択**プロパティ**します。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]** 、 **[配置]** 、 **[サーバー]** の順にクリックし、下位サーバーの名前を設定します。  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>セカンダリ データベースを作成および配置する (SSDT)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "62867218"
 > [!NOTE]  
 >  リモート パーティションの格納専用のデータベースは、スキーマ行セットに対して公開されていませんが、分析管理オブジェクト (AMO) を使用するアプリケーションは、Analysis Discover コマンドの XML を使用して専用データベースを検出できます。 TCP または HTTP クライアントを使用して専用データベースに直接送信された CREATE コマンドまたは DELETE コマンドは成功しますが、操作によりこの厳密管理データベースが損傷する可能性があることを示す警告がサーバーにより返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パーティション (Analysis Services - 多次元データ)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

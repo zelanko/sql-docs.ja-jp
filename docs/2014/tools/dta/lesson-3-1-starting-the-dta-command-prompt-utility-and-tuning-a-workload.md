@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110156"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング
@@ -28,7 +28,7 @@ ms.locfileid: "66110156"
   
 ### <a name="to-start-the-dta-command-prompt-utility-and-view-help"></a>dta コマンド プロンプト ユーティリティを起動してヘルプを表示するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントして、 **[コマンド プロンプト]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[アクセサリ]** の順にポイントして、 **[コマンド プロンプト]** をクリックします。  
   
 2.  コマンド プロンプトで以下を入力し、Enter キーを押します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110156"
 3.  データベース エンジン チューニング アドバイザーによるワークロードのチューニングが完了すると、チューニング セッションが正常に完了したことを知らせるメッセージが表示されます。 チューニング結果を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して MySession2OutputScript.sql および MySession2Output.xml を開きます。 また、データベース エンジン チューニング アドバイザーの GUI でチューニング セッション MySession2 を開き、その推奨設定とレポートを表示する方法もあります。これは、「 [チューニング推奨設定の表示](lesson-1-2-viewing-tuning-recommendations.md) 」および「 [チューニング レポートの表示](lesson-1-3-viewing-tuning-reports.md)」で行った操作と同様です。  
   
 ## <a name="summary"></a>まとめ  
- **dta** ユーティリティを使用し、コマンド プロンプトから簡単なワークロードをチューニングしました。 このツールには、これ以外にも多数のチューニング オプションがあります。 詳細については、ヘルプ (**dta -?**) および関連項目「 [dta ユーティリティ](dta-utility.md) 」を参照してください。  
+ **dta** ユーティリティを使用し、コマンド プロンプトから簡単なワークロードをチューニングしました。 このツールには、これ以外にも多数のチューニング オプションがあります。 詳細については、ヘルプ (**dta -?** ) および関連項目「 [dta ユーティリティ](dta-utility.md) 」を参照してください。  
   
 ## <a name="after-you-finish-this-tutorial"></a>このチュートリアルが終了したら  
  このチュートリアルのレッスンが終了したら、次のトピックを参照し、データベース エンジン チューニング アドバイザーの詳細を学習してください。  

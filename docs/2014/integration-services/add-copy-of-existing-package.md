@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62772248"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
@@ -41,9 +41,9 @@ ms.locfileid: "62772248"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  
- パッケージのパスを入力するか、**[...]** をクリックしてコピーするパッケージを指定します。  
+ パッケージのパスを入力するか、 **[...]** をクリックしてコピーするパッケージを指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[パッケージのコピーの保存]](../../2014/integration-services/save-copy-of-package.md)   
  [[パッケージのインポート] ダイアログ ボックスの UI リファレンス](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
