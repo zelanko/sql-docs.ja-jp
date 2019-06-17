@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea98438694963986c31f0dbb7dddecfb5caa9da6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4af5769f5187fd70387f89aebf07625117da9a49
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610830"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790339"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>出力パラメーターがあるストアド プロシージャの使用
 
@@ -31,7 +31,7 @@ JDBC ドライバーを使用してこの種類のストアド プロシージ�
 > [!NOTE]  
 > SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。
 
-`call` エスケープ シーケンスを作成する場合、OUT パラメーターは ?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 OUT パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
+`call` エスケープ シーケンスを作成する場合、OUT パラメーターは ? (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 OUT パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
 
 registerOutParameter メソッドで OUT パラメーターに指定する値は、java.sql.Types に含まれる JDBC データ型のいずれかである必要があります。この値は、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の 1 つに順にマップされます。 JDBC の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データ型を参照してください[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)します。
 

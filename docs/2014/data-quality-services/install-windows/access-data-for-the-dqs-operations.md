@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480518"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 操作のためのデータへのアクセス
@@ -40,7 +40,7 @@ ms.locfileid: "65480518"
   
 4.  **[ログインのプロパティ]** ダイアログ ボックスの左ペインで **[ユーザー マッピング]** をクリックします。  
   
-5.  右ウィンドウで、**[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、**[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ウィンドウで次のロールを選択します。  
+5.  右ウィンドウで、 **[DQS_STAGING_DATA]** データベースの **[マップ]** 列のチェック ボックスをオンにし、 **[DQS_STAGING_DATA のデータベース ロール メンバーシップ]** ウィンドウで次のロールを選択します。  
   
     -   **db_datareader**:テーブル/ビューからのデータの読み取り。  
   

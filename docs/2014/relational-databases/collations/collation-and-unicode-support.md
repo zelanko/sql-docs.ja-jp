@@ -28,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918958"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 `char` や `varchar` などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については「[sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 `char` や `varchar` などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については「[sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)」を参照してください。  
   
  サーバー、データベース、列、または式の照合順序を選択すると、データベースのさまざまな操作の結果に影響を与える特定の特性がデータに割り当てられます。 たとえば、ORDER BY を使用してクエリを構築する場合、結果セットの並べ替え順序は、データベースに適用される照合順序、またはクエリの式レベルで COLLATE 句に指定される照合順序に依存します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62918958"
 |------------|-----------------|  
 |大文字と小文字を区別する (_CS)|大文字と小文字を区別します。 このオプションを選択すると、大文字より先に小文字が並べ替えられます。 このオプションを選択しないと、照合順序で大文字と小文字が区別されなくなります。 つまり、大文字と小文字は、並べ替えを行う際に同じものと見なされます。 大文字と小文字を区別しないことを明示的に選択するには、_CI と指定します。|  
 |アクセントを区別する (_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、' a' と等しい ' '。 このオプションを選択しないと、照合順序でアクセントが区別されなくなります。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、_AI と指定します。|  
-|かなを区別する (_KS)|2 つの種類の日本語のかな文字を区別します。ひらがなとカタカナ。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|  
+|かなを区別する (_KS)|次の 2 種類の日本語かな文字を区別します。ひらがなとカタカナ。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|  
 |文字幅を区別する (_WS)|全角文字と半角文字を区別します。 このオプションを選択しないと、同じ文字の全角表現と半角表現は、並べ替えを行う際に同じものと見なされます。 文字幅を区別しないように指定する唯一の方法は、このオプションを省略することです。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の照合順序のセットをサポートしています。  
@@ -129,9 +129,9 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  さまざまな状況で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は他のサーバーまたはクライアントとやり取りし、組織ではアプリケーションやサーバー インスタンス間で複数のデータ アクセス標準を使用する可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントは次の 2 つの主要タイプのいずれかになります。  
   
--   OLE DB および Open Database Connectivity (ODBC) Version 3.7 以降のバージョンを使用する**Unicode クライアント**   
+-   OLE DB および Open Database Connectivity (ODBC) Version 3.7 以降のバージョンを使用する**Unicode クライアント**  
   
--   DB ライブラリおよび ODBC Version 3.6 以前のバージョンを使用する**非 Unicode クライアント**   
+-   DB ライブラリおよび ODBC Version 3.6 以前のバージョンを使用する**非 Unicode クライアント**  
   
  以下の表は、Unicode 型サーバーと非 Unicode 型サーバーの各種の組み合わせにおける多言語データの使用に関する情報を示しています。  
   
@@ -216,7 +216,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  [Unicode コンソーシアムの Web サイト](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [包含データベースの照合順序](../databases/contained-database-collations.md)   
  [フルテキスト インデックス作成時の言語の選択](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  

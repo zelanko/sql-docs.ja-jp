@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7ac049dd49c447925a0205c50691465035abb5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150470"
 ---
 # <a name="change-the-name-of-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>登録済みサーバーまたは登録済みサーバー グループの名前の変更 (SQL Server Management Studio)
@@ -30,13 +30,13 @@ ms.locfileid: "63150470"
   
 #### <a name="to-change-the-name-of-a-server"></a>サーバーの名前を変更するには  
   
-1.  [登録済みサーバー] でサーバーまたはサーバー グループを右クリックし、**[編集]** をポイントして、**[サーバーの登録プロパティ]** をクリックします。  
+1.  [登録済みサーバー] でサーバーまたはサーバー グループを右クリックし、 **[編集]** をポイントして、 **[サーバーの登録プロパティ]** をクリックします。  
   
 2.  **[登録済みサーバーの名前]** ボックスにサーバーの新しい登録名を入力し、 **[保存]** をクリックします。  
   
 #### <a name="to-change-the-name-of-a-server-group"></a>サーバー グループの名前を変更するには  
   
-1.  [登録済みサーバー] でサーバーまたはサーバー グループを右クリックし、**[編集]** をポイントして、**[サーバー グループのプロパティ]** をクリックします。  
+1.  [登録済みサーバー] でサーバーまたはサーバー グループを右クリックし、 **[編集]** をポイントして、 **[サーバー グループのプロパティ]** をクリックします。  
   
 2.  **[サーバー グループ名]** ボックスにサーバー グループの新しい名前を入力し、 **[保存]** をクリックします。  
   

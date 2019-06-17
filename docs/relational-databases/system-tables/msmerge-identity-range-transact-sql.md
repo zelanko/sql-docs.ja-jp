@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27906e593020d45a9fb5e79be6ac53bc0e7fafcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62904794"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (TRANSACT-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "62904794"
 |**is_pub_range**|**bit**|値**1** id 範囲がパブリケーションに割り当てられている場合。|  
 |**max_used**|**numeric(38)**|割り当てることができる最大 id 値です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

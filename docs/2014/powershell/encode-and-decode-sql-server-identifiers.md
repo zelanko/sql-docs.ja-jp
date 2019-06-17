@@ -10,22 +10,22 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57cab8512adb2f0377c932fbeb0140f1482ae454
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 46dbf6654b557d612bac6dd2b2a79da114603414
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62922920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775056"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
   SQL Server の区切られた識別子には、Windows PowerShell パスでサポートされない文字が含まれる場合があります。 これらの文字は、16 進数値にエンコードすることによって指定できます。  
   
-1.  **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)  
+1.  **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)  
   
-2.  **特殊文字を処理します。**[識別子のエンコード](#EncodeIdent)、[識別子のデコード](#DecodeIdent)  
+2.  **特殊文字を処理します。** [識別子のエンコード](#EncodeIdent)、[識別子のデコード](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>はじめに  
- Windows PowerShell パス名でサポートされない文字は、"**%** xx" のように、"%" 文字の後に文字を表すビット パターンの 16 進値を付加して表す、つまりエンコードすることができます。 エンコードは、Windows PowerShell パスでサポートされない文字を処理する場合にいつでも使用できます。  
+ Windows PowerShell パス名でサポートされない文字は、" **%** xx" のように、"%" 文字の後に文字を表すビット パターンの 16 進値を付加して表す、つまりエンコードすることができます。 エンコードは、Windows PowerShell パスでサポートされない文字を処理する場合にいつでも使用できます。  
   
  **Encode-SqlName** コマンドレットは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を入力として受け取ります。 また、Windows PowerShell 言語ではサポートされないすべての文字が "%xx" でエンコードされた文字列を出力します。 **Decode-SqlName** コマンドレットは、エンコードされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を入力として受け取り、元の識別子を返します。  
   

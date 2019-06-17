@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8fb38cb068aca480756db7d962540137c8d4bfac
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489203"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>タスク 4:SQL Server Data Tools を使用して SSIS プロジェクトを作成する
@@ -39,6 +39,6 @@ ms.locfileid: "65489203"
 7.  型**CleanseAndCurate.dtsx**キーを押します**ENTER**します。 確認、**拡張子**まま **.dtsx**します。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 5:データ フロー タスクの追加](task-5-adding-data-flow-task.md)  
+ [タスク 5: データ フロー タスクの追加](task-5-adding-data-flow-task.md)  
   
   

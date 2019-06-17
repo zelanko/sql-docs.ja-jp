@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789877"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 (SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62789877"
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")||はい|はい|**ローカル レプリカへのフェールオーバーを高速化**|WSFC ノードで Windows Server 2008 R2 Service Pack 1 (SP1) を実行している場合は、サポート技術情報の記事 2687741 に記載されている修正プログラムがインストールされていることを確認します。<br /><br /> この修正プログラムにより、ローカル レプリカへの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバーのパフォーマンスが向上します。|KB 2687741:[Windows Server 2008 R2 の SQL Server 2012 の「AlwaysOn 可用性グループ」機能のパフォーマンスを向上させる修正プログラムがあります。](https://support.microsoft.com/KB/2687741)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**非対称の記憶域のフェールオーバー クラスター インスタンス (Fci)**|[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] に対してフェールオーバー クラスター インスタンス (FCI) が有効になっている場合は、Windows Server 2008 修正プログラム 976097 をインストールします。<br /><br /> この修正プログラムは、一部の WSFC ノードのみで使用できる非対称の記憶域共有ディスクをサポートするために、フェールオーバー クラスター管理 Microsoft 管理コンソール (MMC) スナップイン、できます。|KB 976097:[Windows Server 2008 または Windows Server 2008 R2 を実行しているフェールオーバー クラスターのフェールオーバー クラスターの管理 MMC スナップインに非対称ストレージのサポートを追加する修正プログラム](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn アーキテクチャ ガイド:フェールオーバー クラスター インスタンスと可用性グループの使用による高可用性およびディザスター リカバリー ソリューションの構築](https://technet.microsoft.com/library/jj215886.aspx)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|はい|適用なし|**インターネット プロトコル セキュリティ (IPsec)**|環境で IPsec 接続を使用する場合、クライアント コンピューターが仮想ネットワーク名 (このコンテキストでは可用性グループ リスナー) への IPsec 接続を再確立するときに、長時間 (約 2 ～ 3 分) の遅延が発生する可能性があります。 IPsec 接続を使用する場合は、サポート技術情報の記事 (KB 980915) に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。|KB 980915:[長時間の遅延は、Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7、または Windows Server 2008 R2 を実行しているコンピューターからの IPSec 接続を再接続するときに発生します。](https://support.microsoft.com/kb/980915)|  
-|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**IPv6**|IPv6 を使用する場合は、Windows Server オペレーティング システムに応じて、サポート技術情報の記事 2578103 または 2578113 に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。<br /><br /> Windows Server トポロジが IP version 6 (IPv6) を使用する場合、WSFC クラスター サービスが IPv6 IP アドレスのフェールオーバーに約 30 秒かかります。 このため、クライアントは IPv6 IP アドレスに再接続するまでに、約 30 秒待機することになります。|KB 2578103 (Windows Server 2008):[クラスター サービスは、Windows Server 2008 で IPv6 IP アドレスのフェールオーバーに約 30 秒](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2): **Windows Server 2008 R2:**[クラスター サービスは、Windows Server 2008 R2 で IPv6 IP アドレスのフェールオーバーに約 30 秒](https://support.microsoft.com/kb/2578113)|  
+|![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**IPv6**|IPv6 を使用する場合は、Windows Server オペレーティング システムに応じて、サポート技術情報の記事 2578103 または 2578113 に詳細が記載されている特定のシナリオについてお読みになることをお勧めします。<br /><br /> Windows Server トポロジが IP version 6 (IPv6) を使用する場合、WSFC クラスター サービスが IPv6 IP アドレスのフェールオーバーに約 30 秒かかります。 このため、クライアントは IPv6 IP アドレスに再接続するまでに、約 30 秒待機することになります。|KB 2578103 (Windows Server 2008):[クラスター サービスは、Windows Server 2008 で IPv6 IP アドレスのフェールオーバーに約 30 秒](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2): **Windows Server 2008 R2:** [クラスター サービスは、Windows Server 2008 R2 で IPv6 IP アドレスのフェールオーバーに約 30 秒](https://support.microsoft.com/kb/2578113)|  
 |![チェック ボックス](../../media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|はい|[はい]|はい|**いない間にルーターがクラスターとアプリケーション サーバー**|フェールオーバー クラスターとアプリケーション サーバー間にルーターがない場合に、クラスター サービスのネットワーク関連リソースのフェールオーバー操作が遅くなります。 これにより、可用性グループがフェールオーバーした後でクライアントの再接続が遅延します。 ルーターがない場合は、サポート技術情報の記事 2582281 に詳細が記載されている特定のシナリオについてお読みになり、環境に該当する場合は修正プログラムをインストールすることをお勧めします。|KB 2582281:[クラスターとアプリケーション サーバー間にルーターがない場合にフェールオーバー操作が遅い](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> 可用性レプリカをホストするコンピューターに関する推奨事項 (Windows システム)  
@@ -99,7 +99,7 @@ ms.locfileid: "62789877"
   
 3.  `Get-ClusterResource` コマンドレットを使用してネットワーク名リソースを検索し、次に `Set-ClusterParameter` コマンドレットを使用して `HostRecordTTL` 値を設定します。次に例を示します。  
   
-     Get-ClusterResource "*\<NetworkResourceName>*" | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      次に示す PowerShell の例では、"`SQL Network Name (SQL35)`" というネットワーク名リソースの HostRecordTTL を 300 秒に設定します。  
   
@@ -330,7 +330,7 @@ ms.locfileid: "62789877"
   
 -   セカンダリ データベースのファイル パス (ドライブ文字を含む) が、対応するプライマリ データベースのパスと異なる場合、次の制限が適用されます。  
   
-    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:****[完全]** オプションはサポートされません ([[最初のデータの同期を選択]](select-initial-data-synchronization-page-always-on-availability-group-wizards.md) ページ)、  
+    -   **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]/[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]:** **[完全]** オプションはサポートされません ([[最初のデータの同期を選択]](select-initial-data-synchronization-page-always-on-availability-group-wizards.md) ページ)、  
   
     -   **RESTORE WITH MOVE:** セカンダリ データベースを作成するには、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンス上で、WITH MOVE を使用してデータベース ファイルを復元する必要があります。  
   

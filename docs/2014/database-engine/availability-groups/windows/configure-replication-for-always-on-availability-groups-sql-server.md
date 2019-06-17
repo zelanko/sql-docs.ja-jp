@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814711"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ用のレプリケーションの構成 (SQL Server)
@@ -70,7 +70,7 @@ ms.locfileid: "62814711"
   
  **元のパブリッシャーでのパブリッシャーの構成**  
   
-1.  リモート ディストリビューションを構成します。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、`sp_adddistributor` を実行します。 同じ値を指定*@password*とき`sp_adddistrbutor`が実行された、ディストリビューターでディストリビューションを設定します。  
+1.  リモート ディストリビューションを構成します。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、`sp_adddistributor` を実行します。 同じ値を指定 *@password* とき`sp_adddistrbutor`が実行された、ディストリビューターでディストリビューションを設定します。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -133,7 +133,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- セカンダリ レプリカの各ホストで、ディストリビューションを構成します。 リモート ディストリビューターには、元のパブリッシャーのディストリビューターを指定します。 パスワードは、ディストリビューターで最初に `sp_adddistributor` を実行したときと同じものを使用します。 ディストリビューションの構成ストアド プロシージャを使用する場合、 *@password*パラメーターの`sp_adddistributor`パスワードを指定するために使用します。  
+ セカンダリ レプリカの各ホストで、ディストリビューションを構成します。 リモート ディストリビューターには、元のパブリッシャーのディストリビューターを指定します。 パスワードは、ディストリビューターで最初に `sp_adddistributor` を実行したときと同じものを使用します。 ディストリビューションの構成ストアド プロシージャを使用する場合、 *@password* パラメーターの`sp_adddistributor`パスワードを指定するために使用します。  
   
 ```  
 EXEC sp_adddistributor   
@@ -220,7 +220,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループ:相互運用性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   

@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487726"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>データベース ログイン、ユーザー、およびロール (マスター データ サービス)
@@ -35,7 +35,7 @@ ms.locfileid: "65487726"
   
 |Login|説明|  
 |-----------|-----------------|  
-|**mds_dlp_login**|UNSAFE アセンブリを作成できます。 詳細については、「 [アセンブリの作成](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」を参照してください。<br /><br /> - ランダムに生成されたパスワードでのログインは無効です。<br /><br /> - [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの場合は、dbo にマップされます。<br /><br /> - msdb の場合は、mds_clr_user がこのログインにマップされます。|  
+|**mds_dlp_login**|UNSAFE アセンブリを作成できます。 詳細については、「 [アセンブリの作成](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」を参照してください。<br /><br /> \- ランダムに生成されたパスワードでのログインは無効です。<br /><br /> \- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの場合は、dbo にマップされます。<br /><br /> \- msdb の場合は、mds_clr_user がこのログインにマップされます。|  
 |**mds_email_login**|通知に使用されるログインは有効です。<br /><br /> msdb および [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの場合は、mds_email_user がこのログインにマップされます。|  
   
 ## <a name="msdb-users"></a>msdb ユーザー  
@@ -43,15 +43,15 @@ ms.locfileid: "65487726"
 |ユーザー|説明|  
 |----------|-----------------|  
 |**mds_clr_user**|使用されていません。 mds_dlp_login にマップされます。|  
-|**mds_email_user**|通知に使用します。<br /><br /> - mds_email_login にマップされます。<br /><br /> - DatabaseMailUserRole ロールのメンバーです。|  
+|**mds_email_user**|通知に使用します。<br /><br /> \- mds_email_login にマップされます。<br /><br /> \- DatabaseMailUserRole ロールのメンバーです。|  
   
 ## <a name="master-data-services-database-users"></a>マスター データ サービス データベース ユーザー  
   
 |ユーザー|説明|  
 |----------|-----------------|  
-|**mds_email_user**|通知に使用します。<br /><br /> - mdm スキーマに対する SELECT 権限があります。<br /><br /> - mdm.MemberGetCriteria ユーザー定義テーブル型に対する EXECUTE 権限があります。<br /><br /> - mdm.udpNotificationQueueActivate ストアド プロシージャに対する EXECUTE 権限があります。|  
+|**mds_email_user**|通知に使用します。<br /><br /> \- mdm スキーマに対する SELECT 権限があります。<br /><br /> \- mdm.MemberGetCriteria ユーザー定義テーブル型に対する EXECUTE 権限があります。<br /><br /> \- mdm.udpNotificationQueueActivate ストアド プロシージャに対する EXECUTE 権限があります。|  
 |**mds_schema_user**|mdm スキーマと mdq スキーマを所有します。 既定のスキーマは mdm です。<br /><br /> ログインはマップされません。|  
-|**mds_ssb_user**|Service Broker タスクを実行するために使用します。<br /><br /> - すべてのスキーマに対する DELETE、INSERT、REFERENCES、SELECT、および UPDATE 権限があります。<br /><br /> - ログインはマップされません。|  
+|**mds_ssb_user**|Service Broker タスクを実行するために使用します。<br /><br /> \- すべてのスキーマに対する DELETE、INSERT、REFERENCES、SELECT、および UPDATE 権限があります。<br /><br /> \- ログインはマップされません。|  
   
 ## <a name="master-data-services-database-role"></a>マスター データ サービス データベース ロール  
   

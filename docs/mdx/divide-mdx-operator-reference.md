@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63248179"
 ---
 # <a name="divide---mdx-operator-reference"></a>除算の MDX 演算子リファレンス
@@ -41,7 +41,7 @@ Dividend / Divisor
 ## <a name="remarks"></a>コメント  
  によって返される実際の値、 **/(除算)** 演算子が 2 番目の式で除算する最初の式の商を表します。  
   
- 1 つの式は、その他の式のデータ型に暗黙的に変換できる必要がありますか、同じデータ型の両方の式があります。 場合*除数*エラー、オペレーターが発生、null 値に評価します。 両方*除数*と*被除数*評価、演算子、null の値に null 値を返します。  
+ 両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 場合*除数*エラー、オペレーターが発生、null 値に評価します。 両方*除数*と*被除数*評価、演算子、null の値に null 値を返します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、この演算子の使用を示します。  
@@ -99,7 +99,7 @@ WHERE
   
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   

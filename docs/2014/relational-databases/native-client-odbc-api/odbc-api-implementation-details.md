@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62715089"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 実装の詳細
@@ -131,7 +131,7 @@ ms.locfileid: "62715089"
   
 -   [SQLTables](sqltables.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;リファレンス](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [SQL Server Native Client を使用したアプリケーションのビルド](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   

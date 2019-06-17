@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057818"
 ---
 # <a name="what-is-polybase"></a>PolyBase とは
@@ -32,7 +32,7 @@ AP 上の PolyBase では、Hadoop (HDFS) ファイル システムと Azure Blo
 > [!NOTE] 
 > PolyBase の残りの部分は、APS 2016 (AU6) 以降、PolyBase を構成する方法を記事に示しますに関連します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

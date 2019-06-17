@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916746"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>ヒープ サイズの見積もり
@@ -105,7 +105,7 @@ ms.locfileid: "62916746"
   
      スパース列の領域要件については、「 [スパース列の使用](../tables/use-sparse-columns.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ヒープ &#40;クラスター化インデックスなしのテーブル&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   
  [クラスター化インデックスと非クラスター化インデックスの概念](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [クラスター化インデックスの作成](../indexes/create-clustered-indexes.md)   

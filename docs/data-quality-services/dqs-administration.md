@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: 1efdebf5ee4dd81e7b4ae9039d7062a87ad5e7f1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66772705"
 ---
 # <a name="dqs-administration"></a>DQS 管理
@@ -84,7 +84,7 @@ ms.locfileid: "66772705"
 |DQS データベースのバックアップと復元の方法について説明します。|[DQS データベースのバックアップと復元](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS データベースをデタッチおよびアタッチする方法について説明します。|[DQS データベースのデタッチとアタッチ](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DQS の参照データ サービス](../data-quality-services/reference-data-services-in-dqs.md)   
  [DQS ログ ファイルの管理](../data-quality-services/manage-dqs-log-files.md)   
  [DQS データベースの管理](../data-quality-services/manage-dqs-databases.md)  

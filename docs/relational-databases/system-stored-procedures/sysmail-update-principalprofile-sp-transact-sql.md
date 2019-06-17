@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63472158"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
@@ -63,7 +63,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  アソシエーションのプリンシパル名の場合は**パブリック**、アソシエーションのプリンシパル id がまたは**0**、このストアド プロシージャは、パブリック プロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
   
- ときに**@is_default**は '**1**' と、プリンシパルが 1 つ以上のプロファイルに関連付けられた、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 プロファイルされていた既定のプロファイルも、プリンシパルに関連付けられてが、既定のプロファイルではなくなりました。  
+ ときに **@is_default** は '**1**' と、プリンシパルが 1 つ以上のプロファイルに関連付けられた、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 プロファイルされていた既定のプロファイルも、プリンシパルに関連付けられてが、既定のプロファイルではなくなりました。  
   
  ストアド プロシージャ**sysmail_update_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   

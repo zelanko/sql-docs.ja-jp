@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833711"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する
@@ -168,7 +168,7 @@ ms.locfileid: "62833711"
   
 9. 子パッケージで、キャッシュ接続マネージャーを作成します。その場合、 **[接続マネージャー]** 領域内を右クリックして **[新しい接続]** をクリックし、 **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[CACHE] を選択し** 、 **[追加]** をクリックします。  
   
-     **デザイナーの** [制御フロー] **タブ、**[データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
+     **デザイナーの** [制御フロー] **タブ、** [データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
   
 10. **[キャッシュ接続マネージャー エディター]** の **[全般]** タブで、次のオプションを設定して選択したキャッシュ ファイルからデータを読み取るようにキャッシュ接続マネージャーを構成します。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "62833711"
   
 2.  **[接続マネージャー]** 領域内を右クリックし、 **[新しい接続]** をクリックします。  
   
-     **デザイナーの** [制御フロー] **タブ、**[データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
+     **デザイナーの** [制御フロー] **タブ、** [データ フロー] **タブ、および**[イベント ハンドラー] **タブの下部に、** [接続マネージャー] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 領域が表示されます。  
   
 3.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[CACHE]** を選択し、 **[追加]** をクリックしてキャッシュ接続マネージャーを追加します。  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106392"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems コレクションの参照 (レポート ビルダーおよび SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66106392"
 ## <a name="using-the-reportitems-value-property"></a>ReportItems の Value プロパティの使用  
  内のアイテム、`ReportItems`コレクションがある 1 つのプロパティ。Value。 `ReportItems` アイテムの値を使用すると、レポート内の別のフィールドのデータを表示または計算できます。 現在のテキスト ボックスの値にアクセスするには、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] に組み込まれたグローバルの Me.Value を使用するか、単なる Value を使用します。 First 関数や集計関数などのレポート関数では、完全修飾された構文を使用してください。  
   
- 例 :  
+ 以下に例を示します。  
   
 -   テキスト ボックスで次の式を使用すると、`Textbox1` という名前の `ReportItem` テキスト ボックスの値が表示されます。  
   

@@ -2,24 +2,24 @@
 title: RevoScaleR 関数を使用して、見つからないか、SQL Server Machine Learning Services の R パッケージをインストールする方法
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d5ba43e913f91ab93f80249cae3d0c8cf8e1740
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642339"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140407"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 関数を使用して、検索、または SQL Server に R パッケージをインストールする方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-9.0.1 RevoScaleR と SQL Server のコンピューティング コンテキストの R パッケージ管理関数後を含まれています。 これらの関数は、サーバーへの直接アクセスせず、SQL Server にパッケージをインストールする管理者以外のリモートで使用できます。
+9\.0.1 RevoScaleR と SQL Server のコンピューティング コンテキストの R パッケージ管理関数後を含まれています。 これらの関数は、サーバーへの直接アクセスせず、SQL Server にパッケージをインストールする管理者以外のリモートで使用できます。
 
-SQL Server 2017 Machine Learning サービスには、RevoScaleR の新しいバージョンが既に含まれています。 SQL Server 2016 R Services のお客様が行う必要があります、[コンポーネントのアップグレード](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)RevoScaleR パッケージの管理機能を取得します。 取得する方法については、バージョンとコンテンツ パッケージを参照してください[パッケージ情報を取得](determine-which-packages-are-installed-on-sql-server.md)します。
+SQL Server 2017 Machine Learning サービスには、RevoScaleR の新しいバージョンが既に含まれています。 SQL Server 2016 R Services のお客様が行う必要があります、[コンポーネントのアップグレード](../install/upgrade-r-and-python.md)RevoScaleR パッケージの管理機能を取得します。 取得する方法については、バージョンとコンテンツ パッケージを参照してください[パッケージ情報を取得](../package-management/installed-package-information.md)します。
 
 ## <a name="revoscaler-functions-for-package-management"></a>パッケージの管理用の RevoScaleR 関数
 
@@ -38,7 +38,7 @@ SQL Server 2017 Machine Learning サービスには、RevoScaleR の新しいバ
 
 + [リモート SQL Server での R パッケージの管理を有効にします。](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR のバージョンは、クライアントとサーバーの両方の環境で同じである必要があります。 詳細については、次を参照してください。[パッケージ情報を取得](determine-which-packages-are-installed-on-sql-server.md)します。
++ RevoScaleR のバージョンは、クライアントとサーバーの両方の環境で同じである必要があります。 詳細については、次を参照してください。[パッケージ情報を取得](../package-management/installed-package-information.md)します。
 
 + R コマンドを実行して、サーバーおよびデータベースに接続するためのアクセス許可。 指定したインスタンスとデータベースにパッケージをインストールできるようにするデータベース ロールのメンバーがあります。
 
@@ -212,4 +212,4 @@ exec sp_execute_external_script
 + [リモートの R パッケージ管理を有効にする](r-package-how-to-enable-or-disable.md)
 + [R パッケージの同期](package-install-uninstall-and-sync.md)
 + [R パッケージをインストールするためのヒント](packages-installed-in-user-libraries.md)
-+ [既定のパッケージ](installing-and-managing-r-packages.md)
++ [既定のパッケージ](../package-management/default-packages.md)

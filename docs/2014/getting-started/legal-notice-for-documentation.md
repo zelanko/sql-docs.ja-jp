@@ -17,10 +17,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62837522"
 ---
 # <a name="legal-notice-for-documentation"></a>ドキュメントの免責事項
@@ -30,7 +30,7 @@ ms.locfileid: "62837522"
   
  このドキュメントは、Microsoft 製品の無体財産権に関する法的な権利をお客さまに許諾するものではありません。 内部的な参照目的に限り、このドキュメントを複製して使用することができます。  
   
- © 2013 Microsoft.  All rights reserved.  
+ © 2013 Microsoft. All rights reserved.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server のサポートおよびアップグレードに関するドキュメント ポリシー  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ソフトウェア マニュアルには、マイクロソフトによって発行された [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の Microsoft オンライン ブック、インストール マニュアル、デベロッパー向けリファレンス マニュアル、チュートリアル、Readme ファイル、既知の問題、サンプル コード、サンプル データベース、サポート技術情報などがあり、それらすべてに SQL Server の特徴および機能に関する内容が含まれています。 このサポートおよびアップグレードに関するポリシーは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースおよびサービス パックの Readme ファイルを含む [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ドキュメントに適用されます。Readme は、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] オンライン ブックの追加ファイルとして扱われます。  
