@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098876"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー)
@@ -148,7 +148,7 @@ ms.locfileid: "66098876"
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  **[クエリのデザイン]** ページのメタデータ ペインで、**[ (...) ]** ボタンをクリックします。  
+1.  **[クエリのデザイン]** ページのメタデータ ペインで、 **[ (...) ]** ボタンをクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66098876"
   
 3.  Product ディメンションから Product Subcategory Name をデータ ペインにドラッグして、Product Category Name の右側に配置します。  
   
-4.  メタデータ ペインで、 **[メジャー]**、Sales の順に展開します。  
+4.  メタデータ ペインで、 **[メジャー]** 、Sales の順に展開します。  
   
 5.  Sales Amount メジャーをデータ ペインにドラッグして、Product Subcategory Name の右側に配置します。  
   
@@ -315,7 +315,7 @@ ms.locfileid: "66098876"
   
 2.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-3.  「 **Sales and Returns for Category:**」と入力します。  
+3.  「 **Sales and Returns for Category:** 」と入力します。  
   
 4.  右クリックして **[プレースホルダーの作成]** をクリックします。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "66098876"
   
 1.  レポート データ ペインで **[パラメーター]** を展開します。  
   
-2.  \@ProductProductCategoryName を右クリックし、**[パラメーターのプロパティ]** をクリックします。  
+2.  \@ProductProductCategoryName を右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
     > [!NOTE]  
     >  名前の横の \@ 文字は、これがパラメーターであることを示しています。  
@@ -507,7 +507,7 @@ ms.locfileid: "66098876"
   
 5.  **[計算されるメンバー]** を右クリックし、 **[新しい計算されるメンバー]** をクリックします。  
   
-6.  メタデータ ペインで、 **[メジャー]**、Sales の順に展開します。  
+6.  メタデータ ペインで、 **[メジャー]** 、Sales の順に展開します。  
   
 7.  Sales Amount メジャーを **[式]** ボックスにドラッグし、マイナス記号 (-) を入力します。次に、Sales Return Amount メジャーを **[式]** ボックスにドラッグして、マイナス記号の後に配置します。  
   
@@ -598,7 +598,7 @@ ms.locfileid: "66098876"
   
 3.  **[アクション]** タブをクリックします。  
   
-4.   **[レポートに移動する]** を選択します。  
+4.  **[レポートに移動する]** を選択します。  
   
 5.  **[レポートの指定]** で、 **[参照]** をクリックして、ResellerVSOnlineDrillthrough という名前の詳細レポートを指定します。  
   
@@ -684,7 +684,7 @@ ms.locfileid: "66098876"
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「**2009 Product Category Sales:Online and Reseller Category:**」と入力します。  
+2.  「**2009 Product Category Sales:Online and Reseller Category:** 」と入力します。  
   
 3.  入力したテキストを選択します。  
   

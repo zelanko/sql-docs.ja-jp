@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326503"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836347"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>引数  
  *Key_name*  
- 対称キーをデータベースで認識するための、一意の名前を指定します。 一時キーの名前は、シャープ (#) 記号で始める必要があります。 たとえば、**#temporaryKey900007** のように指定します。 2 つ以上の # で始まる名前の対称キーは作成できません。 EKM プロバイダーを使用して一時対称キーを作成することはできません。  
+ 対称キーをデータベースで認識するための、一意の名前を指定します。 _key_name_ が 1 つのシャープ記号 (#) で始まる場合、一時キーを指定します。 たとえば、**#temporaryKey900007** のように指定します。 2 つ以上の # で始まる名前の対称キーは作成できません。 EKM プロバイダーを使用して一時対称キーを作成することはできません。  
   
  AUTHORIZATION *owner_name*  
  対称キーを所有するデータベース ユーザーまたはアプリケーション ロールの名前を指定します。  

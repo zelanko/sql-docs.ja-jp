@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012908"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836394"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > インポートおよびエクスポート ウィザードに関連するコンテンツについては、「[SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)」(SQL Server インポートおよびエクスポート ウィザード) を参照してください。
 
-フラット ファイルのインポート ウィザードを使用すると、フラット ファイル (.csv、.txt) のデータをコピー先に簡単にコピーできます。 この概要では、このウィザードを使用する理由、このウィザードを見つける方法、実行が簡単な例について説明します。
+フラット ファイルのインポート ウィザードを使用すると、フラット ファイル (.csv、.txt) からデータベース内の新しいテーブルにデータを簡単にコピーできます。 この概要では、このウィザードを使用する理由、このウィザードを見つける方法、実行が簡単な例について説明します。
 
 ## <a name="why-would-i-use-this-wizard"></a>このウィザードを使用する理由
 このウィザードは、Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)) と呼ばれるインテリジェント フレームワークを利用して現在のインポート操作を改善するために作成されました。 特殊なドメインの知識を持っていないユーザーの場合、データのインポートは複雑で、間違いやすく、面倒な作業になりがちです。 このウィザードでは、インポート プロセスが入力ファイルと一意のテーブル名を選択するだけの簡単な操作に整理され、後の処理は PROSE フレームワークが行います。

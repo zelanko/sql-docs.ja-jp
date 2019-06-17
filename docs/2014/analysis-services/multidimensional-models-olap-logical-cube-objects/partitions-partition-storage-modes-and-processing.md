@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727578"
 ---
 # <a name="partition-storage-modes-and-processing"></a>パーティションのストレージ モードおよび処理
@@ -44,7 +44,7 @@ ms.locfileid: "62727578"
 ## <a name="molap"></a>[MOLAP]  
  MOLAP ストレージ モードを使用した場合は、パーティションの処理時、パーティションの集計とそのソース データのコピーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の多次元構造に格納されます。 この MOLAP 構造は、クエリのパフォーマンスを最大限に高めるために高度に最適化されています。 ストレージの場所は、パーティションが定義されているコンピューター上、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行している別のコンピューター上に配置できます。 ソース データのコピーは多次元構造に存在するため、パーティションのソース データにアクセスしないでクエリを解決できます。 集計を使用すればクエリの応答時間を大幅に削減できます。 パーティションの MOLAP 構造の現在のデータは、最新のパーティションの処理によって決まります。  
   
- ソース データの変更に伴い、MOLAP ストレージ内のオブジェクトを定期的に処理して、その変更内容を組み込み、ユーザーが使用できるようにする必要があります。 処理することで、MOLAP 構造のデータは完全または段階的に更新されます。 ある処理から次の処理までの間に待機時間が発生し、その間は OLAP オブジェクトのデータがソース データと一致しない場合があります。 MOLAP ストレージのオブジェクトは、パーティションまたはキューブをオフラインにすることなく、段階的または完全に更新できます。 ただし、キューブをオフラインにして、OLAP オブジェクトへの特定の構造の変更を処理する必要がある場合があります。 MOLAP ストレージの更新に必要なダウンタイムを最小限に抑えるには、ステージング サーバーでキューブの更新と処理を行い、データベースの同期化を使用して、処理したオブジェクトを実稼働サーバーにコピーします。 また、プロアクティブ キャッシュを使用して、MOLAP ストレージのパフォーマンス面の利点を維持しながら、待機時間を最小限に抑えて可用性を最大限に高めることもできます。 詳細については、次を参照してください[プロアクティブ キャッシュ&#40;パーティション&#41;](partitions-proactive-caching.md)、 [Analysis Services データベースの同期](../multidimensional-models/synchronize-analysis-services-databases.md)、および[多次元モデル オブジェクト処理。](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ ソース データの変更に伴い、MOLAP ストレージ内のオブジェクトを定期的に処理して、その変更内容を組み込み、ユーザーが使用できるようにする必要があります。 処理することで、MOLAP 構造のデータは完全または段階的に更新されます。 ある処理から次の処理までの間に待機時間が発生し、その間は OLAP オブジェクトのデータがソース データと一致しない場合があります。 MOLAP ストレージのオブジェクトは、パーティションまたはキューブをオフラインにすることなく、段階的または完全に更新できます。 ただし、キューブをオフラインにして、OLAP オブジェクトへの特定の構造の変更を処理する必要がある場合があります。 MOLAP ストレージの更新に必要なダウンタイムを最小限に抑えるには、ステージング サーバーでキューブの更新と処理を行い、データベースの同期化を使用して、処理したオブジェクトを実稼働サーバーにコピーします。 また、プロアクティブ キャッシュを使用して、MOLAP ストレージのパフォーマンス面の利点を維持しながら、待機時間を最小限に抑えて可用性を最大限に高めることもできます。 詳細については、次を参照してください[プロアクティブ キャッシュ&#40;パーティション&#41;](partitions-proactive-caching.md)、 [Analysis Services データベースの同期](../multidimensional-models/synchronize-analysis-services-databases.md)、および[多次元モデル オブジェクト処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
 ## <a name="rolap"></a>[ROLAP]  
  ROLAP ストレージ モードでは、パーティションの集計はパーティションのデータ ソース内で指定されたリレーショナル データベースのインデックス付きビューに格納されます。 MOLAP ストレージ モードとは異なり、ROLAP ではソース データのコピーが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ フォルダーに格納されません。 代わりに、クエリ キャッシュから結果を取得できない場合は、クエリに応答するためにデータ ソースのインデックス付きビューへのアクセスが行われます。 通常、ROLAP ストレージ モードでは、MOLAP または HOLAP ストレージ モードよりもクエリ応答が遅くなります。 一般的に処理時間も遅くなります。 しかし、ROLAP によってユーザーはリアルタイムでデータを表示し、履歴だけのデータなど、クエリの頻度が低い大きなデータセットを使用して作業するときにストレージ領域を節約することができます。  

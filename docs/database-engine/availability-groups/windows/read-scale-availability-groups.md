@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 914fb9a73839580ebc96d30f406c3c66442726ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3e7c367acff65aa61e43f2ea00cde98a54d5cc94
+ms.sourcegitcommit: acef7bf9f3f4c93920191919992aee2b41c2c8e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801051"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131821"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 可用性グループで読み取りスケールを使用する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "66801051"
 プライマリ レプリカで実行されるミッションクリティカルなワークロードのためにリソースを確保しておく必要がある場合、読み取り専用のルーティングを利用するか、読み取り可能セカンダリ レプリカに直接接続できます。 何らかのクラスタリング技術との統合に頼る必要はありません。 この新しい技術は、Windows プラットフォームと Linux プラットフォームの両方を実行している SQL Server 2017 で利用できます。
 
 >[!IMPORTANT]
->これは高可用性設定ではありません。 障害検出と自動フェールオーバーを監視し、調整するためのインフラストラクチャはありません。 クラスターがない場合、SQL Server は自動化された 高可用性ソリューションで提供される、短い目標回復時間 (RTO) を提供することはできません。 高可用性機能が必要な場合は、クラスター マネージャー (Windows の Windows Server フェールオーバー クラスタリングまたは Linux の Pacemaker) をご利用ください。
+>これは高可用性設定ではありません。 障害検出と自動フェールオーバーを監視し、調整するためのインフラストラクチャはありません。 クラスターがない場合、SQL Server は自動化された 高可用性ソリューションで提供される、短い目標回復時間 (RTO) を提供することはできません。 高可用性機能が必要な場合は、クラスター マネージャー (Windows の Windows Server フェールオーバー クラスター、または Linux の Pacemaker) をご利用ください。
 >
 >読み取りスケール可用性グループは、ディザスター リカバリー機能を提供できます。 読み取り専用レプリカが同期コミット モードになっている場合、回復ポイントの目標 (RPO) がゼロになります。 読み取りスケール可用性グループのフェールオーバーについては、[読み取りスケール可用性グループのプライマリ レプリカのフェールオーバー](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)に関するページをご覧ください。
 

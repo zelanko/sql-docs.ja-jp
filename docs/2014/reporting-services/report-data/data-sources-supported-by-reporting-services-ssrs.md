@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 247dd2950365a1b75a3b911fe6dfda1a4dd044df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107369"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
@@ -93,13 +93,13 @@ ms.locfileid: "66107369"
   
 -   データ処理拡張機能/データ プロバイダーの名前:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能または選択された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類に対応する他のデータ プロバイダー。 この列では、データ ソースの種類を選択したときに、どのデータ処理拡張機能またはデータ プロバイダーが使用されるかがわかります。  
   
--   基になるデータ プロバイダーのバージョン (省略可):データ ソースの種類によっては複数のデータ プロバイダーをサポートします。 たとえば、同じプロバイダーに異なるバージョンが存在する場合や、特定の種類のデータ プロバイダーとして複数のサードパーティによる実装が存在する場合があります。 プロバイダー名は、データ ソースを構成した後の接続文字列に含まれることがよくあります。 この列では、データ ソースの種類を選択した後に、**[接続プロパティ]** ダイアログ ボックスで選択するべきデータ プロバイダーがわかります。  
+-   基になるデータ プロバイダーのバージョン (省略可):データ ソースの種類によっては複数のデータ プロバイダーをサポートします。 たとえば、同じプロバイダーに異なるバージョンが存在する場合や、特定の種類のデータ プロバイダーとして複数のサードパーティによる実装が存在する場合があります。 プロバイダー名は、データ ソースを構成した後の接続文字列に含まれることがよくあります。 この列では、データ ソースの種類を選択した後に、 **[接続プロパティ]** ダイアログ ボックスで選択するべきデータ プロバイダーがわかります。  
   
--   データ ソース *\<プラットフォーム>*:対象データ ソースのデータ処理拡張機能またはデータ プロバイダーによりサポートされるデータ ソースのプラットフォーム。 この列では、このデータ処理拡張機能またはこのデータ プロバイダーが、この種類のプラットフォームのデータ ソースからデータを取得できるかどうかがわかります。  
+-   データ ソース *\<プラットフォーム>* :対象データ ソースのデータ処理拡張機能またはデータ プロバイダーによりサポートされるデータ ソースのプラットフォーム。 この列では、このデータ処理拡張機能またはこのデータ プロバイダーが、この種類のプラットフォームのデータ ソースからデータを取得できるかどうかがわかります。  
   
 -   データ ソースのバージョン:DPE またはデータ プロバイダーでサポートされている対象データ ソースのバージョン。 この列では、このデータ処理拡張機能またはこのデータ プロバイダーが、このバージョンのデータ ソースからデータを取得できるかどうかがわかります。  
   
--   RS *\<プラットフォーム>*:カスタムの DPE またはデータ プロバイダーをインストールできる、レポート サーバーおよびレポート作成クライアントのプラットフォーム。 組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、インストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に含まれています。 カスタムのデータ処理拡張機能または [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定のプラットフォーム用にネイティブにコンパイルする必要があります。 この列では、このデータ処理拡張機能またはこのデータ プロバイダーを、この種類のプラットフォームにインストールできるかどうかがわかります。  
+-   RS *\<プラットフォーム>* :カスタムの DPE またはデータ プロバイダーをインストールできる、レポート サーバーおよびレポート作成クライアントのプラットフォーム。 組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、インストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に含まれています。 カスタムのデータ処理拡張機能または [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定のプラットフォーム用にネイティブにコンパイルする必要があります。 この列では、このデータ処理拡張機能またはこのデータ プロバイダーを、この種類のプラットフォームにインストールできるかどうかがわかります。  
   
 ###  <a name="DataSourcesTable"></a> データ ソースの種類  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66107369"
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]では、このデータ拡張機能に関連付けられているグラフィカル クエリ デザイナーは、 [リレーショナル クエリ デザイナーのユーザー インターフェイス](../relational-query-designer-user-interface.md)です。 [Microsoft SQL Server](../../ssms/visual-db-tools/visual-database-tool-designers.md) のデータ ソースの種類と共に使用する **Visual Database Tools デザイナー** ではありません。  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自動的に区別**[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** と**Microsoft SQL Server**データ ソースの種類し、データ ソースの種類に関連付けられているグラフィカル クエリ デザイナーを開きます。  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 自動的に区別 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** と**Microsoft SQL Server**データ ソースの種類し、データ ソースの種類に関連付けられているグラフィカル クエリ デザイナーを開きます。  
   
  クエリ デザイナーをグラフィカル モードで使用すると、クエリが分析され、再作成される場合があります。 クエリの作成に、テキスト ベースのクエリ デザイナーを使用することもできます。 クエリに使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文を制御するには、テキストベースのクエリ デザイナーを使用します。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。  
   
@@ -184,9 +184,9 @@ ms.locfileid: "66107369"
   
  このデータ プロバイダーは、ADOMD.NET オブジェクト モデルを使用して、XML for Analysis (XMLA) Version 1.1 を使用したクエリを作成します。 結果はフラット化された行セットとして返されます。 詳細については、「[MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)」、「[DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)」、「[Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス](analysis-services-mdx-query-designer-user-interface.md)」、および「[Analysis Services の DMX クエリ デザイナーのユーザー インターフェイス](analysis-services-dmx-query-designer-user-interface.md)」を参照してください。  
   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、複数値パラメーターがサポートされ、セルおよびメンバーのプロパティが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でサポートされる拡張プロパティにマップされます。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに接続する場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、複数値パラメーターがサポートされ、セルおよびメンバーのプロパティが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でサポートされる拡張プロパティにマップされます。 詳細については、「[Analysis Services データベースに対する拡張フィールド プロパティ &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)」を参照してください。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースからモデルを作成することもできます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースからモデルを作成することもできます。  
   
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB データ処理拡張機能では、レポートで使用するデータ ソースのバージョンに基づいて、追加のデータ プロバイダー レイヤーを選択する必要があります。 特定のデータ プロバイダーを選択しなかった場合は、既定値が使用されます。 **[データ ソース]** または **[共有データ ソース]** ダイアログ ボックスで、 [[編集]](../data-source-properties-dialog-box-general.md) ボタンをクリックし、 [[接続プロパティ]](../shared-data-source-properties-dialog-box-general.md) ダイアログ ボックスで特定のデータ プロバイダーを選択します。  
@@ -203,7 +203,7 @@ ms.locfileid: "66107369"
  [データ ソースの表に戻る](#DataSourcesTable)  
   
 ####  <a name="OLEDBAS9"></a> Analysis services 9.0 OLE DB  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に接続するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [[OLE DB]] Provider for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 9.0に接続するには、 the data source type **[OLE DB]** を選択してから、基になるデータ プロバイダーを名前で選択します。 このデータ処理拡張機能とデータ プロバイダーの組み合わせは、x86 および x64 プラットフォーム用にネイティブでコンパイルされ、これらのプラットフォームで動作します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に接続するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [[OLE DB]] Provider for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 9.0に接続するには、 the data source type **[OLE DB]** を選択してから、基になるデータ プロバイダーを名前で選択します。 このデータ処理拡張機能とデータ プロバイダーの組み合わせは、x86 および x64 プラットフォーム用にネイティブでコンパイルされ、これらのプラットフォームで動作します。  
   
 > [!NOTE]  
 >  このデータ処理拡張機能では、サーバー集計、拡張フィールド プロパティの自動マッピング、およびクエリ パラメーターはサポートされません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースのデータ プロバイダーとしては、 **Microsoft SQL Server Analysis Services**をお勧めします。  

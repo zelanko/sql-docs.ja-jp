@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768034"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを実行する
@@ -31,19 +31,19 @@ ms.locfileid: "62768034"
   
 -   **開始**メニューで、**すべてのプログラム**、 をポイント**Microsoft SQL Server** 、順にクリックします**データ インポートおよびエクスポート**します。  
   
-     - または -  
+     \- または -  
   
      [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を右クリックし、 **SSIS パッケージ**フォルダー、およびクリック**SSISImport およびエクスポート ウィザード**します。  
   
-     - または -  
+     \- または -  
   
-     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の**プロジェクト**] メニューのをクリックして**SSISImport およびエクスポート ウィザード**します。  
+     [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の**プロジェクト** メニューのをクリックして**SSISImport およびエクスポート ウィザード**します。  
   
-     - または -  
+     \- または -  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続、[!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーの種類のデータベースを展開し、データベースを右クリックをポイントして**タスク**、] をクリックし、**データのインポート**または**データをエクスポート**.  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続、[!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーの種類のデータベースを展開し、データベースを右クリックをポイントして**タスク**、 をクリックし、**データのインポート**または**データをエクスポート**.  
   
-     - または -  
+     \- または -  
   
      コマンド プロンプト ウィンドウで、C:\Program Files\Microsoft SQL Server\100\DTS\Binn にある DTSWizard.exe を実行します。  
   

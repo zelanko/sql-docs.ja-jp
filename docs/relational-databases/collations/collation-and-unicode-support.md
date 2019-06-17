@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775031"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836377"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,12 +62,12 @@ ms.locfileid: "64775031"
     
 |オプション|[説明]|    
 |------------|-----------------|    
-|大文字と小文字を区別する (_CS)|大文字と小文字を区別します。 このオプションを選択すると、大文字より先に小文字が並べ替えられます。 このオプションを選択しないと、照合順序で大文字と小文字が区別されません。 つまり、大文字と小文字は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 大文字と小文字を区別しないことを明示的に選択するには、_CI と指定します。|    
-|アクセントを区別する (_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、"a" と "&#xE1;" は等しくありません。 このオプションを選択しないと、照合順序でアクセントが区別されません。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、_AI と指定します。|    
-|かなを区別する (_KS)|次の 2 種類の日本語かな文字を区別します。ひらがなとカタカナ。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|    
-|文字幅を区別する (_WS)|全角文字と半角文字を区別します。 このオプションを選択しないと、同じ文字の全角表現と半角表現は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 文字幅を区別しないように指定する唯一の方法は、このオプションを省略することです。|    
-|バリエーションの選択を区別する (_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]から導入された日本語の照合順序 Japanese_Bushu_Kakusu_140 と Japanese_XJIS_140 で多様な表意文字のバリエーションの選択を区別します。 バリエーションのシーケンスは、基本文字と追加のバリエーションの選択で構成されます。 この _VSS オプションが選択されていない場合、照合順序はバリエーションの選択が区別されず、バリエーションの選択は比較で考慮されません。 つまり、SQL Server では、並べ替えが同じになるように、バリエーションの選択が異なる同じ基本文字に基づいて構築された文字を考慮しています。 [「Unicode Ideographic Variation Database」](https://www.unicode.org/reports/tr37/)(Unicode 表意文字のバリエーション データベース) も参照してください。 <br/><br/> 異体字セレクターを区別する (_VSS) 照合順序は、全文検索インデックスではサポートされていません。 全文検索インデックスでは、アクセントを区別する (_AS)、かなを区別する (_KS)、文字幅を区別する (_WS) オプションのみがサポートされます。 SQL Server XML と CLR のエンジンでは、(_VSS) 異体字セレクターはサポートされていません。
-|UTF-8 (_UTF8)|UTF-8 でエンコードされたデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納できるようにします。 このオプションを選択しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、適用可能なデータ型に対して既定の非 Unicode エンコード形式が使用されます。| 
+|大文字と小文字を区別する (\_CS)|大文字と小文字を区別します。 このオプションを選択すると、大文字より先に小文字が並べ替えられます。 このオプションを選択しないと、照合順序で大文字と小文字が区別されません。 つまり、大文字と小文字は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 大文字と小文字を区別しないことを明示的に選択するには、\_CI と指定します。|    
+|アクセントを区別する (\_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、"a" と "&#xE1;" は等しくありません。 このオプションを選択しないと、照合順序でアクセントが区別されません。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、\_AI と指定します。|    
+|かなを区別する (\_KS)|次の 2 種類の日本語かな文字を区別します。ひらがなとカタカナ。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|    
+|文字幅を区別する (\_WS)|全角文字と半角文字を区別します。 このオプションを選択しないと、同じ文字の全角表現と半角表現は、並べ替えを行う際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって同じものと見なされます。 文字幅を区別しないように指定する唯一の方法は、このオプションを省略することです。|    
+|異体字の選択を区別する (\_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]から導入された日本語の照合順序 Japanese_Bushu_Kakusu_140 と Japanese_XJIS_140 で多様な表意文字のバリエーションの選択を区別します。 バリエーションのシーケンスは、基本文字と追加のバリエーションの選択で構成されます。 この \_VSS オプションを選択しない場合、照合順序で異体字の選択が区別されず、比較において異体字の選択が考慮されることはありません。 つまり、SQL Server では、並べ替えが同じになるように、バリエーションの選択が異なる同じ基本文字に基づいて構築された文字を考慮しています。 [「Unicode Ideographic Variation Database」](https://www.unicode.org/reports/tr37/)(Unicode 表意文字のバリエーション データベース) も参照してください。 <br/><br/> 異体字セレクターを区別する (\_VSS) 照合順序は、全文検索インデックスではサポートされていません。 フルテキスト検索インデックスでは、アクセントを区別する (\_AS)、かなを区別する (\_KS)、文字幅を区別する (\_WS) オプションのみがサポートされます。 SQL Server XML と CLR のエンジンでは、(\_VSS) 異体字セレクターはサポートされていません。
+|UTF-8 (\_UTF8)|UTF-8 でエンコードされたデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納できるようにします。 このオプションを選択しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、適用可能なデータ型に対して既定の非 Unicode エンコード形式が使用されます。| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の照合順序のセットをサポートしています。    
     
