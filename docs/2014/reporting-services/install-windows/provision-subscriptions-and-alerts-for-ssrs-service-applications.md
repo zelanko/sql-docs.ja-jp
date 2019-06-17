@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108720"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
@@ -69,7 +69,7 @@ ms.locfileid: "66108720"
   
 4.  **[状態の表示]** 領域で、SQL Server エージェントが実行中であることを確認します。  
   
-5.  **[スクリプトのダウンロード]** をクリックして、SQL Server Management Studio 内で実行することにより権限を構成できる Transact-SQL スクリプトをダウンロードします。 作成されるスクリプト ファイル名には、Reporting Services サービス アプリケーションの名前が使用されます (例: **[サービス アプリケーションの名前]**-GrantRights.sql)。  
+5.  **[スクリプトのダウンロード]** をクリックして、SQL Server Management Studio 内で実行することにより権限を構成できる Transact-SQL スクリプトをダウンロードします。 作成されるスクリプト ファイル名には、Reporting Services サービス アプリケーションの名前が使用されます (例: **[サービス アプリケーションの名前]** -GrantRights.sql)。  
   
 ### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>PowerShell を使用して Transact-SQL ステートメントを生成するには  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66108720"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
-    -    **[サーバーの種類]** ボックスの一覧で、 **[データベース エンジン]** をクリックします。  
+    -   **[サーバーの種類]** ボックスの一覧で、 **[データベース エンジン]** をクリックします。  
   
     -   **[サーバー名]** で、SQL Server エージェントの構成対象となる SQL Server インスタンスの名前を入力します。  
   

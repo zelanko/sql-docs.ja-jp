@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095223"
 ---
 # <a name="feature-selection"></a>機能の選択
@@ -45,7 +45,7 @@ ms.locfileid: "66095223"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -ネイティブ|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードには、表形式、マトリックス形式、グラフィカル形式、および自由形式のレポートを作成、管理、配置するためのサーバー コンポーネントとクライアント コンポーネントが含まれます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、レポート アプリケーション開発用の拡張可能プラットフォームとしても使用できます。|  
   
 > [!IMPORTANT]
->  1.  セットアップでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スケールアウト配置の複数ノードに対して負荷分散と単一 URL アドレス指定が構成されません。 スケールアウト配置を完了するには、Windows Server、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center、またはサード パーティ製クラスター管理ソフトウェアを使用する必要があります。 Web ファーム配置のセットアップの詳細については、次を参照してください。 [Reporting Services のスケール アウト配置構成](https://go.microsoft.com/fwlink/?LinkId=199448)(https://go.microsoft.com/fwlink/?LinkId=199448)します。  
+>  1.  セットアップでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] スケールアウト配置の複数ノードに対して負荷分散と単一 URL アドレス指定が構成されません。 スケールアウト配置を完了するには、Windows Server、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center、またはサード パーティ製クラスター管理ソフトウェアを使用する必要があります。 Web ファーム配置のセットアップの詳細については、次を参照してください。 [Reporting Services のスケール アウト配置構成](https://go.microsoft.com/fwlink/?LinkId=199448)(https://go.microsoft.com/fwlink/?LinkId=199448) します。  
 > 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのブラウザーの要件については、「[Reporting Services と Power View のブラウザー サポートの計画 &#40;Reporting Services 2014&#41;](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
 > 3.  64 ビット プラットフォームと、64 ビット サーバーの 32 ビット サブシステム (WOW64) 上では、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を並列構成で同時に実行することはできません。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66095223"
   
  既定では、共有コンポーネントは %Program Files%Microsoft SQL Server\\にインストールされます。 インストール パスを変更するには、 **[参照]** ボタンをクリックします。 1 つの共有コンポーネントのインストール パスを変更すると、他の共有コンポーネントのパスも変更されます。 以降のインストールでは、最初のインストールと同じ場所に共有コンポーネントがインストールされます。  
   
- **[インスタンス ルート ディレクトリ]**: 既定では、インスタンス ルート ディレクトリは、C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\ になります。 既定以外のルート ディレクトリを指定するには、 **[参照]** ボタンをクリックするか、パス名を入力します。  
+ **[インスタンス ルート ディレクトリ]** : 既定では、インスタンス ルート ディレクトリは、C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\ になります。 既定以外のルート ディレクトリを指定するには、 **[参照]** ボタンをクリックするか、パス名を入力します。  
   
  x64 ベースのオペレーティング システムでは、64 ビット コンポーネントのインストール先と、32 ビット コンポーネントの WOW64 サブシステム上のインストール先を指定できます。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "66095223"
 -   他のファイルやアプリケーションを移動して、指定したドライブ上の空き領域を増やします。  
   
 ## <a name="installing-adventureworks-sample-databases"></a>AdventureWorks サンプル データベースのインストール  
- 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 サンプル データベースとサンプル コードのインストールの詳細については、次を参照してください。、 [Microsoft SQL Server コミュニティのプロジェクトとサンプル](https://go.microsoft.com/fwlink/?LinkId=87843)(https://go.microsoft.com/fwlink/?LinkId=87843)します。  
+ 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にサンプル データベースとサンプル コードはインストールされません。 サンプル データベースとサンプル コードのインストールの詳細については、次を参照してください。、 [Microsoft SQL Server コミュニティのプロジェクトとサンプル](https://go.microsoft.com/fwlink/?LinkId=87843)(https://go.microsoft.com/fwlink/?LinkId=87843) します。  
   
- サンプルの詳細については、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールした後で確認できます。 **開始** メニューのをクリックして**すべてのプログラム**、をクリックして**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**、をクリックして**マニュアルとチュートリアル**をクリックして **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サンプルの概要**します。  
+ サンプルの詳細については、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] をインストールした後で確認できます。 **開始** メニューのをクリックして**すべてのプログラム**、をクリックして **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 、をクリックして**マニュアルとチュートリアル**をクリックして **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サンプルの概要**します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 のエディションとコンポーネント](../editions-and-components-of-sql-server-2016.md)  

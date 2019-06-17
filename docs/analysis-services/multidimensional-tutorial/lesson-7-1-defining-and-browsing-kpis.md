@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e62f0d3ddada34c9ead59a362e9ed6339f00a9c7
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403844"
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>レッスン 7-1-定義と Kpi を表示
@@ -54,7 +54,7 @@ ms.locfileid: "65403844"
   
 ## <a name="defining-the-reseller-revenue-kpi"></a>Reseller Revenue KPI の定義  
   
-1.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーを開いて、**[KPI]** タブをクリックします。  
+1.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーを開いて、 **[KPI]** タブをクリックします。  
   
     **[KPI]** タブにはいくつかのペインがあります。 タブの左側には **[KPI オーガナイザー]** ペインと **[計算ツール]** ペインがあります。 **[KPI オーガナイザー]** ペインで KPI を選択すると、その KPI の詳細が中央の表示ペインに表示されます。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "65403844"
   
 3.  **[名前]** ボックスに「 **Reseller Revenue**」と入力し、 **[関連付けられたメジャー グループ]** ボックスの一覧の **[Reseller Sales]** をクリックします。  
   
-4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
+4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]** 、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
   
-5.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Sales Quotas]** の順に展開します。次に、 **Sales Amount Quota** メジャーを **[目標式]** ボックスにドラッグします。  
+5.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]** 、 **[Sales Quotas]** の順に展開します。次に、 **Sales Amount Quota** メジャーを **[目標式]** ボックスにドラッグします。  
   
 6.  **[状態インジケーター]** ボックスの一覧で **[ゲージ]** が選択されていることを確認します。次に、以下の MDX 式を **[状態式]** ボックスに入力します。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "65403844"
   
 ## <a name="browsing-the-cube-by-using-the-reseller-revenue-kpi"></a>Reseller Revenue KPI を使用したキューブの表示  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の **[ビルド]** メニューで、**[Analysis Services Tutorial の配置]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の **[ビルド]** メニューで、 **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[ブラウザー ビュー]** ボタンをクリックし、 **[再接続]** をクリックします。  
   
@@ -147,13 +147,13 @@ ms.locfileid: "65403844"
   
 5.  **[KPI ブラウザー]** ペイン内の任意の場所をクリックすると、 **Reseller Revenue KPI**の値が更新されます。  
   
-    KPI の **[値]**、 **[目標]**、および **[状態]** セクションに新しい期間の値が反映されていることがわかります。  
+    KPI の **[値]** 、 **[目標]** 、および **[状態]** セクションに新しい期間の値が反映されていることがわかります。  
   
 ## <a name="defining-the-product-gross-profit-margin-kpi"></a>Product Gross Profit Margin KPI の定義  
   
-1.  **[KPI]** タブのツール バーの **[フォーム ビュー]** ボタンをクリックして、**[新しい KPI]** ボタンをクリックします。  
+1.  **[KPI]** タブのツール バーの **[フォーム ビュー]** ボタンをクリックして、 **[新しい KPI]** ボタンをクリックします。  
   
-2.  **[名前]** ボックスに「**Product Gross Profit Margin**」と入力し、**[関連付けられたメジャー グループ]** ボックスに **[<All>]** と表示されていることを確認します。  
+2.  **[名前]** ボックスに「**Product Gross Profit Margin**」と入力し、 **[関連付けられたメジャー グループ]** ボックスに **[<All>]** と表示されていることを確認します。  
   
 3.  **[計算ツール]** ペインの **[メタデータ]** タブで、**Total GPM** メジャーを **[値式]** ボックスにドラッグします。  
   

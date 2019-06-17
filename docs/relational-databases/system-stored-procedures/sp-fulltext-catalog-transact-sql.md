@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983116"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact SQL)
@@ -48,7 +48,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>引数  
 `[ @ftcat = ] 'fulltext_catalog_name'` フルテキスト カタログの名前です。 カタログ名は、データベースごとに一意である必要があります。 *fulltext_catalog_name*は**sysname**します。  
   
-`[ @action = ] 'action'` 実行する操作です。 *アクション*は**varchar (20)**、これらの値のいずれかを指定できます。  
+`[ @action = ] 'action'` 実行する操作です。 *アクション*は**varchar (20)** 、これらの値のいずれかを指定できます。  
   
 > [!NOTE]  
 >  フルテキスト カタログの作成、削除、および必要に応じて変更します。 複数のカタログで同時にスキーマを変更することは避けてください。 使用してこれらのアクションを実行できる、 **sp_fulltext_table**ストアド プロシージャは、これは推奨される方法です。  
@@ -77,7 +77,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>コメント  
  **Start_full**でフルテキスト データの完全なスナップショットを作成するアクションが使用される*fulltext_catalog_name*します。 **Start_incremental**アクションは、データベースで変更された行のみのインデックスを再作成するために使用します。 テーブル型の列がある場合にのみ、増分作成を適用できる**タイムスタンプ**します。 フルテキスト カタログ内のテーブルには、型の列が含まれていない場合**タイムスタンプ**テーブルには完全作成が行われます。  
   
- フルテキスト カタログおよびインデックス データは、フルテキスト カタログ ディレクトリに作成したファイルに格納されます。 フルテキスト カタログ ディレクトリで指定されたディレクトリのサブディレクトリとして作成**@path**またはサーバーの既定のフルテキスト カタログ ディレクトリに場合**@path**はありません指定します。 フルテキスト カタログ ディレクトリの名前は、サーバー上で一意でことが保証する方法で構築されています。 そのため、サーバー上のすべてのフルテキスト カタログ ディレクトリは、同じパスを共有できます。  
+ フルテキスト カタログおよびインデックス データは、フルテキスト カタログ ディレクトリに作成したファイルに格納されます。 フルテキスト カタログ ディレクトリで指定されたディレクトリのサブディレクトリとして作成 **@path** またはサーバーの既定のフルテキスト カタログ ディレクトリに場合 **@path** はありません指定します。 フルテキスト カタログ ディレクトリの名前は、サーバー上で一意でことが保証する方法で構築されています。 そのため、サーバー上のすべてのフルテキスト カタログ ディレクトリは、同じパスを共有できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元がのメンバーであるために必要な**db_owner**ロール。 によって要求された操作、呼び出し元が拒否されていない ALTER または CONTROL 権限 (が**db_owner**が)、ターゲット、フルテキスト カタログ。  
@@ -134,7 +134,7 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'drop';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 48607533df2b1a5b5411dc539f07204a2ed11c4a
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403824"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>レッスン 2:キューブの定義と配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトでデータ ソース ビューを定義すると、最初の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブをいつでも定義できるようになります。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトでデータ ソース ビューを定義すると、最初の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブをいつでも定義できるようになります。  
   
 キューブ ウィザードでは、キューブとそのディメンションを一度に定義できます。 1 つ以上のディメンションを定義してから、キューブ ウィザードを使用して、そのディメンションを使用するキューブを定義することもできます。 複雑なソリューションを設計する場合は、通常、ディメンションの定義から始めます。 詳細については、[「多次元モデル内のディメンション」](../multidimensional-models/dimensions-in-multidimensional-models.md) または [「多次元モデルのキューブ」](../multidimensional-models/cubes-in-multidimensional-models.md) を参照してください。  
   

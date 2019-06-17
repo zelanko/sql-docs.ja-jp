@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107422"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>レポートのデータ ソースのプロパティを構成する (レポート マネージャー)
@@ -30,7 +30,7 @@ ms.locfileid: "66107422"
   
 2.  レポート マネージャーで **[コンテンツ]** ページに移動します。 レポート固有のデータ ソースを構成するレポートに移動し、そのレポートを開きます。  
   
-3.  **[プロパティ]** タブをクリックします。**[全般]** プロパティ ページが開きます。  
+3.  **[プロパティ]** タブをクリックします。 **[全般]** プロパティ ページが開きます。  
   
 4.  **[データ ソース]** タブをクリックします。レポートの [データ ソース] プロパティ ページが開きます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66107422"
   
  資格情報の構成の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。 自動実行アカウントについては、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[コンテンツ] ページ (レポート マネージャー)](../contents-page-report-manager.md)   
  [[新しいデータ ソース] ページ (レポート マネージャー)](../new-data-source-page-report-manager.md)   
  [共有データ ソースを作成、変更、および削除する (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)   

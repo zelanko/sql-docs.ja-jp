@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 127eeec7f3abe52e247dadb284a5ca7b91ed1cad
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110091"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>まとめ:階層テーブルでのデータの管理
@@ -25,7 +25,7 @@ ms.locfileid: "66110091"
 ## <a name="return-to-the-start-of-the-tutorial"></a>チュートリアルの先頭へ戻る  
  [チュートリアル: hierarchyid データ型の使用](tutorial-using-the-hierarchyid-data-type.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層データ&#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
  [hierarchyid データ型メソッド リファレンス](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   

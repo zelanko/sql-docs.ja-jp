@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095700"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト:PowerPivot for SharePoint 2010 のマルチサーバー インストール
@@ -90,7 +90,7 @@ ms.locfileid: "66095700"
   
     5.  クリックして**SQL Server サービス**します。  
   
-    6.  右クリックして**SQL Server (MSSQLSERVER)**、 をクリック**再起動**します。  
+    6.  右クリックして**SQL Server (MSSQLSERVER)** 、 をクリック**再起動**します。  
   
 3.  Windows ファイアウォールを経由したデータベース サーバーへの入力方向のアクセスを有効にします。 これにより、ファーム内の SharePoint サーバーが SharePoint データベースに接続できるようになります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」をご参照ください。  
   

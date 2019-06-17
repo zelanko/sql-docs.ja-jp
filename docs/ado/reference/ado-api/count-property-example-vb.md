@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cba540af0557c96cb265abefc2a6144530ea390d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695755"
 ---
 # <a name="count-property-example-vb"></a>Count プロパティの例 (VB)
@@ -97,5 +97,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

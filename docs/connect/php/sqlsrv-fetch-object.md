@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40a2cdd68017ff4b3e232fba1d6b63e46a3aa103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a82dec9fe68eb4220710d773d700c43751b7f18d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770870"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802268"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$ctorParams* [省略可能]: *$className* パラメーターで指定されたクラスのコンストラクターに渡される値を含む配列。 指定したクラスのコンストラクターがパラメーター値を受け取る場合、 *$ctorParams* object **sqlsrv_fetch_object**パラメーターを使用する必要があります。  
   
-*row* [省略可能]: 次の値のいずれかで、スクロール可能なカーソルを使用して結果セットにアクセスする行を指定します。 (*row* が指定されている場合、*$className* と *$ctorParams* に null を指定しなければならない場合でも、*$className* と *$ctorParams* を明示的に指定する必要があります。)  
+*row* [省略可能]: 次の値のいずれかで、スクロール可能なカーソルを使用して結果セットにアクセスする行を指定します。 (*row* が指定されている場合、 *$className* と *$ctorParams* に null を指定しなければならない場合でも、 *$className* と *$ctorParams* を明示的に指定する必要があります。)  
   
 -   SQLSRV_SCROLL_NEXT  
   

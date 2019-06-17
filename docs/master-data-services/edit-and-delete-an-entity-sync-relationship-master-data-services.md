@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a3de4051ff43ebf0155571235890a28a28d24788
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487577"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>エンティティの同期関係の編集と削除 (マスター データ サービス)
@@ -63,13 +63,13 @@ ms.locfileid: "65487577"
   
 1.  マスター データ マネージャーで、 **[システム管理]** をクリックします。  
   
-2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして、 **[Entity Sync]**(エンティティの同期) をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして、 **[Entity Sync]** (エンティティの同期) をクリックします。  
   
 3.  **[Entity Sync Maintenance]** (エンティティの同期のメンテナンス) ページで、グリッド内の同期関係を選択します。  
   
 4.  **[編集]** をクリックします。 右側にパネルが表示されます。  
   
-5.  **[頻度]** を変更します。 **[Sync On Demand]**(オンデマンドで同期) を選択するか、 **[Auto Sync]** (自動同期) を選択して頻度を設定します。  
+5.  **[頻度]** を変更します。 **[Sync On Demand]** (オンデマンドで同期) を選択するか、 **[Auto Sync]** (自動同期) を選択して頻度を設定します。  
   
 6.  **[保存]** をクリックします。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "65487577"
   
 1.  マスター データ マネージャーで、 **[システム管理]** をクリックします。  
   
-2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして、 **[Entity Sync]**(エンティティの同期) をクリックします。  
+2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして、 **[Entity Sync]** (エンティティの同期) をクリックします。  
   
 3.  **[Entity Sync Maintenance]** (エンティティの同期のメンテナンス) ページで、グリッド内の同期関係を選択します。  
   

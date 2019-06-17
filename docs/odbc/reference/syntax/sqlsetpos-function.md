@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536317"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 関数
@@ -216,7 +216,7 @@ SQLRETURN SQLSetPos(
  データが削除されると、ドライバーは sql_row_deleted になります (または SQL_ROW_ERROR) に該当する行の実装の行の状態配列内の値を変更します。  
   
 ## <a name="updating-data-using-sqlsetpos"></a>SQLSetPos によるデータの更新  
- バインドされたデータ バッファーまたは 1 つまたは複数の呼び出しで、アプリケーションは、列の値を渡すことができます**SQLPutData**します。 列のデータが渡される**SQLPutData**と呼ばれます*実行時データ**列*します。 これらは、SQL_LONGVARBINARY データ型と SQL_LONGVARCHAR 列のデータの送信によく使用され、他の列とを混在させることができます。  
+ バインドされたデータ バッファーまたは 1 つまたは複数の呼び出しで、アプリケーションは、列の値を渡すことができます**SQLPutData**します。 列のデータが渡される**SQLPutData**と呼ばれます*実行時データ* *列*します。 これらは、SQL_LONGVARBINARY データ型と SQL_LONGVARCHAR 列のデータの送信によく使用され、他の列とを混在させることができます。  
   
 #### <a name="to-update-data-with-sqlsetpos-an-application"></a>SQLSetPos、アプリケーションでデータを更新します。  
   

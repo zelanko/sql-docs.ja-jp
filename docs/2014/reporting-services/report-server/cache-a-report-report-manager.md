@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec41aae3ada2281fab9b75517ecf75def517e1be
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104234"
 ---
 # <a name="cache-a-report-report-manager"></a>レポートのキャッシュ (レポート マネージャー)
@@ -44,11 +44,11 @@ ms.locfileid: "66104234"
   
     -   キャッシュされたコピーが、特定の期間が過ぎた後で有効期限が切れるように構成するには、**レポートの一時コピーをキャッシュします。レポートのコピーの有効期限は数分後に切れます** をクリックします。 レポートの有効期限を分単位で入力します。  
   
-    -   キャッシュされたコピーが、スケジュールに基づいて有効期限が切れるように構成するには、**[レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの有効期限は切れます。]** をクリックします。 **[構成]** をクリックするか、レポートの有効期限を制御する共有スケジュールを選択します。  
+    -   キャッシュされたコピーが、スケジュールに基づいて有効期限が切れるように構成するには、 **[レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの有効期限は切れます。]** をクリックします。 **[構成]** をクリックするか、レポートの有効期限を制御する共有スケジュールを選択します。  
   
 7.  **[適用]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート処理プロパティの設定](set-report-processing-properties.md)   
  [レポートのキャッシュ (SSRS)](caching-reports-ssrs.md)  
   

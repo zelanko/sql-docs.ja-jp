@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a49f56c4e898b0189ce0f8bf5008873e13dc6223
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099556"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>[サーバーのプロパティ]\([セキュリティ] ページ) - Reporting Services
@@ -37,7 +37,7 @@ ms.locfileid: "66099556"
   
  この機能を無効にすることで、悪意のあるユーザーによる `LoadReportDefinition` 要求でレポート サーバーが過負荷になるサービス拒否攻撃の脅威を軽減することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   
  [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [資格情報とレポート データ ソースの接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md[のレポート サーバーの Management Studio の F1 ヘルプ](report-server-in-management-studio-f1-help.md)  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101926"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトのレポート サーバー アイテムに対する権限の付与
@@ -58,7 +58,7 @@ ms.locfileid: "66101926"
  サーバー管理者またはサイト コレクション管理者は、他のサイト所有者が権限を設定できるかどうかを決定するオプションを設定できます。 持っている権限のレベルによっては、SharePoint グループや権限レベルの作成やカスタマイズを行えない場合があります。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>定義済み SharePoint グループと権限レベルの使用  
-  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 製品マニュアルでは、標準の SharePoint グループ ( *Site name* **所有者**, *Site name* **メンバー**、および *Site name* **閲覧者**) を使用し、サイト レベルで権限を割り当てることが推奨されています。 権限を割り当てるユーザーのほとんどは、" *Site name* **閲覧者** " グループまたは " *Site name* **メンバー** "グループのメンバーになるはずです。 親サイトの権限は、サイト階層全体に継承されます。 制限を追加する必要がある特定のアイテムに対しては、権限の継承を無効にできます。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 製品マニュアルでは、標準の SharePoint グループ ( *Site name* **所有者**, *Site name* **メンバー**、および *Site name* **閲覧者**) を使用し、サイト レベルで権限を割り当てることが推奨されています。 権限を割り当てるユーザーのほとんどは、" *Site name* **閲覧者** " グループまたは " *Site name* **メンバー** "グループのメンバーになるはずです。 親サイトの権限は、サイト階層全体に継承されます。 制限を追加する必要がある特定のアイテムに対しては、権限の継承を無効にできます。  
   
  定義済みの SharePoint グループと、対応する権限レベルを次に示します。  
   

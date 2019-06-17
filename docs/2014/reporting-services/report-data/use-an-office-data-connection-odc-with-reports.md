@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106960"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)
@@ -92,7 +92,7 @@ ms.locfileid: "66106960"
   
 10. レポートでカスタム データ ソース情報を使用する場合は、 **[共有]** をクリックします。  
   
-11. **[データ ソース リンク]** で、参照ボタン (**[...]**) をクリックします。  
+11. **[データ ソース リンク]** で、参照ボタン ( **[...]** ) をクリックします。  
   
 12. アップロードする .odc ファイルを選択します。  
   

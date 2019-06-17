@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109632"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)
@@ -33,7 +33,7 @@ ms.locfileid: "66109632"
   
 1.  ライブラリ リボンで、 **[ドキュメント]** タブをクリックします。  
   
-2.   **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
+2.  **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
   
     > [!NOTE]  
     >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efdea595034f91497befdc7f7b12adacef8d73ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109551"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする
@@ -128,7 +128,7 @@ ms.locfileid: "66109551"
 </Render>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RSReportServer 構成ファイル](report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 構成ファイル](report-server/rsreportdesigner-configuration-file.md)   
  [CSV デバイス情報設定](csv-device-information-settings.md)   

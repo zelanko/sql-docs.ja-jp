@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d64015e0b1756033f3a3a0b7caf90262d7d43f9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101336"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプションの設定 (Reporting Services の SharePoint 統合モード)
@@ -88,7 +88,7 @@ ms.locfileid: "66101336"
   
 2.  下矢印をクリックし、 **[処理の管理のオプション]** をクリックします。  
   
-3.  レポート サーバー レベルで指定された値を使用する必要がある場合は、 **[処理のタイムアウト]** で **[サイトの既定の設定を使用する]** をクリックします。 タイムアウトなしにするか、別のタイムアウト値にオーバーライドする必要がある場合は、**[レポート処理をタイムアウトしない]** または **[レポート処理を次の時間 (秒) に制限する]** を選択します。  
+3.  レポート サーバー レベルで指定された値を使用する必要がある場合は、 **[処理のタイムアウト]** で **[サイトの既定の設定を使用する]** をクリックします。 タイムアウトなしにするか、別のタイムアウト値にオーバーライドする必要がある場合は、 **[レポート処理をタイムアウトしない]** または **[レポート処理を次の時間 (秒) に制限する]** を選択します。  
   
 ##  <a name="bkmk_set_report_history"></a> レポート履歴のオプションと制限を設定するには  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66101336"
   
 1.  Windows PowerShell を使用すると、SharePoint レポート サーバーのデータベースのタイムアウト値を設定できます。 詳細については、「[Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」の「Reporting Service アプリケーション データベースのプロパティの取得と設定」セクションを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート処理プロパティの設定](report-server/set-report-processing-properties.md)   
  [レポートのキャッシュ (SSRS)](report-server/caching-reports-ssrs.md)   
  [レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  

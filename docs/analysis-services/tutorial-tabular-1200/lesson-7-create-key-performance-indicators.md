@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21767c239ed3498e0e593e221203b1cde3b7ae69
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403874"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>レッスン 7: 主要業績評価指標の作成
@@ -75,7 +75,7 @@ ms.locfileid: "65403874"
   
 5.  **[ステータスのしきい値の定義]** で、左 (下) のスライダー フィールドをスライドして「 **0.8**」と表示させ、右 (上) のスライダー フィールドをスライドして「 **1.03**」と表示させます。  
   
-6.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、**[OK]** をクリックします。  
+6.  **[アイコンのスタイルの選択]** で、ひし形 (赤)、三角形 (黄)、円 (緑) のアイコンの種類を選択し、 **[OK]** をクリックします。  
   
 ## <a name="whats-next"></a>次の操作
 次のレッスンに移動します。[レッスン 8: パースペクティブを作成する](lesson-8-create-perspectives.md)します。

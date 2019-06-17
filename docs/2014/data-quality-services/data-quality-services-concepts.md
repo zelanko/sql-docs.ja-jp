@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ad52c1f1d431e1ded8f63728bf17c951196c406d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480716"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
@@ -89,7 +89,7 @@ ms.locfileid: "65480716"
   
  DQS 管理の詳細については、「 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  
   
   

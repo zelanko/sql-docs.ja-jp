@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480958"
 ---
 # <a name="create-a-domain"></a>ドメインの作成
@@ -61,7 +61,7 @@ ms.locfileid: "65480958"
     > [!NOTE]  
     >  ドメインのプロパティの詳細については、「 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)」を参照してください。  
   
-2.  **[データ型]** の一覧で、ドメイン内の値に対するデータ型を選択します。 データ型には、 **[String]** (既定値)、 **[Date]**、 **[Integer]**、または **[Decimal]** を指定できます。  
+2.  **[データ型]** の一覧で、ドメイン内の値に対するデータ型を選択します。 データ型には、 **[String]** (既定値)、 **[Date]** 、 **[Integer]** 、または **[Decimal]** を指定できます。  
   
 3.  シノニムの値ではなく、シノニムのグループの先頭の値が出力されることを指定する場合は、 **[先頭の値を使用]** をオンにします。 各シノニムの値が正しいフォームまたは修正されたフォームで出力され、そのグループの先頭の値で置き換えられないことを指定する場合は、 **[先頭の値を使用]** をオフにします。  
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105538"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>マップ ウィザードおよびマップ レイヤー ウィザードのページ (レポート ビルダーおよび SSRS)
@@ -84,9 +84,9 @@ ms.locfileid: "66105538"
   
     -   **マップの視覚エフェクトを選択します。ポイント**  
   
-4.  **[データ ソースへの接続の選択]**: マップに表示する分析データが含まれている外部データ ソースへのデータ ソース接続を選択するか作成します。  
+4.  **[データ ソースへの接続の選択]** : マップに表示する分析データが含まれている外部データ ソースへのデータ ソース接続を選択するか作成します。  
   
-5.  **[クエリのデザイン]**: 分析データを指定するクエリを作成します。  
+5.  **[クエリのデザイン]** : 分析データを指定するクエリを作成します。  
   
 6.  [[分析データセットの選択]](#AnalyticalData): 分析データのデータ ソースを指定します。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66105538"
  マップ ギャラリーを拡張するには、マップ ギャラリー ディレクトリのレポートを追加または削除したり、マップを整理するためのフォルダーを追加したりします。 詳細については、「 [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)をクリックします。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI シェープファイルは、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 通常、ファイルのセットには、空間データが格納されている *\<filename>*.shp ファイルと、サポート ファイルの *\<filename>*.dbf が含まれます。  
+ ESRI シェープファイルは、Environmental Systems Research Institute, Inc. (ESRI) シェープファイル空間データ形式に準拠するデータが格納されたファイルのセットです。 通常、ファイルのセットには、空間データが格納されている *\<filename>* .shp ファイルと、サポート ファイルの *\<filename>* .dbf が含まれます。  
   
  シェープファイルを空間データ ソースとして指定し、このファイルがローカル コンピューター上にある場合は、空間データが自動的にレポートに埋め込まれます。 ESRI ファイルの空間データを動的に使用するには、次の操作を行う必要があります。  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66105538"
   
  ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [マップ レポートの計画 &#40;レポート ビルダーおよび SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [マップ (レポート ビルダーおよび SSRS)](maps-report-builder-and-ssrs.md)  

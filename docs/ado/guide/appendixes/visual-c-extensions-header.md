@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ac2dbb1b1bd120710909ebe42b362430bae998d6
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701117"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions のヘッダー
@@ -208,6 +208,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C 拡張機能の例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Visual C++ Extensions を使用する](../../../ado/guide/appendixes/using-visual-c-extensions.md)

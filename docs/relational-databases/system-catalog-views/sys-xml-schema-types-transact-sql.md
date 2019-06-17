@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ce5530e160fe6473ff84fca0978b5fc467fe688
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945860"
 ---
 # <a name="sysxmlschematypes-transact-sql"></a>sys.xml_schema_types (TRANSACT-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "64945860"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**\<列を継承 >**||列を継承[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)します。|  
-|**is_abstract**|**bit**|1 = 型が抽象型。 この型の要素のすべてのインスタンスを使用する必要があります**xsi:type**を抽象でない派生型を示します。<br /><br /> 0 = 型は abstract ではありません  (既定値)。|  
+|**is_abstract**|**bit**|1 = 型が抽象型。 この型の要素のすべてのインスタンスを使用する必要があります**xsi:type**を抽象でない派生型を示します。<br /><br /> 0 = 型は abstract ではありません (既定値)。|  
 |**allows_mixed_content**|**bit**|1 = 混合コンテンツを許可<br /><br /> 0 = 混合コンテンツは許可されません。 (既定値)。|  
 |**is_extension_blocked**|**bit**|1 = block 属性、ときに、インスタンスで、型の拡張による置き換えはブロック、 **complexType**定義または**blockDefault**属性の先祖の\<スキーマ >要素情報項目は、"extension"または"#all"に設定されます。<br /><br /> 0 = 拡張による置き換えはブロックされません。|  
-|**is_restriction_blocked**|**bit**|1 = block 属性、ときに、インスタンスで、型の制約による置き換えはブロック、 **complexType**定義または**blockDefault**属性の先祖の\<スキーマ >要素情報項目は、"restriction"または"#all"に設定されます。<br /><br /> 0 = 制約による置き換えはブロックされません  (既定値)。|  
-|**is_final_extension**|**bit**|1、型の拡張による派生を = がブロックされている場合、final 属性、 **complexType**定義または**finalDefault**の先祖の属性\<スキーマ > 要素情報項目は、"extension"または"#all"に設定されます。<br /><br /> 0 = 拡張は許可されます  (既定値)。|  
-|**is_final_restriction**|**bit**|1、型の制約による派生を = がブロックされている場合、単純な final 属性、または**complexType**定義または**finalDefault**属性の先祖の\<スキーマ > 要素情報項目は、"restriction"または"#all"に設定されます。<br /><br /> 0 = 制約は許可されます  (既定値)。|  
-|**is_final_list_member**|**bit**|1 = この単純型は、リスト項目の型として使用できません。<br /><br /> 0 = この型は複合型、またはリスト項目の型として使用できます  (既定値)。|  
+|**is_restriction_blocked**|**bit**|1 = block 属性、ときに、インスタンスで、型の制約による置き換えはブロック、 **complexType**定義または**blockDefault**属性の先祖の\<スキーマ >要素情報項目は、"restriction"または"#all"に設定されます。<br /><br /> 0 = 制約による置き換えはブロックされません (既定値)。|  
+|**is_final_extension**|**bit**|1、型の拡張による派生を = がブロックされている場合、final 属性、 **complexType**定義または**finalDefault**の先祖の属性\<スキーマ > 要素情報項目は、"extension"または"#all"に設定されます。<br /><br /> 0 = 拡張は許可されます (既定値)。|  
+|**is_final_restriction**|**bit**|1、型の制約による派生を = がブロックされている場合、単純な final 属性、または**complexType**定義または**finalDefault**属性の先祖の\<スキーマ > 要素情報項目は、"restriction"または"#all"に設定されます。<br /><br /> 0 = 制約は許可されます (既定値)。|  
+|**is_final_list_member**|**bit**|1 = この単純型は、リスト項目の型として使用できません。<br /><br /> 0 = この型は複合型、またはリスト項目の型として使用できます (既定値)。|  
 |**is_final_union_member**|**bit**|1 = この単純型を共用体型のメンバーの種類として使用することはできません。<br /><br /> 0 = この型は複合型。 または、その共用体メンバーの型として使用できます。 (既定値)。|  
   
 ## <a name="permissions"></a>アクセス許可  

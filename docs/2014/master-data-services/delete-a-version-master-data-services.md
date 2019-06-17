@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1e9f8d65e1a835af954952a64322f21a484a16f3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483340"
 ---
 # <a name="delete-a-version-master-data-services"></a>バージョンを削除する (マスター データ サービス)
@@ -52,7 +52,7 @@ ms.locfileid: "65483340"
     > [!NOTE]  
     >  Web アプリケーションに変更が反映されるまで数分かかる場合があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   
  [バージョンをコピーする (マスター データ サービス)](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   

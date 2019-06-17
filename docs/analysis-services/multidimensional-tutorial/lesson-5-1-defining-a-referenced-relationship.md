@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ee5fe8ac1b56a1ef45a63cac5bf85b43ce75d008
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404134"
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>レッスン 5-1-参照リレーションシップの定義
@@ -47,7 +47,7 @@ ms.locfileid: "65404134"
   
     現在、 **Geography** キューブ ディメンションには、 **Internet Sales** メジャー グループ、または **Reseller Sales** メジャー グループとのリレーションシップがありません。  
   
-8.  省略記号ボタンをクリックします (**.**) で、**フル_ネーム**の交差するセルに、**顧客**ディメンションと**Internet Sales**メジャー グループです。  
+8.  省略記号ボタンをクリックします ( **.** ) で、**フル_ネーム**の交差するセルに、**顧客**ディメンションと**Internet Sales**メジャー グループです。  
   
     **[リレーションシップの編集]** ダイアログ ボックスが表示されます。設定内容を確認すると、 **DimCustomer** ディメンション テーブルと **FactInternetSales** メジャー グループ テーブルの間には、これら 2 つのテーブルの **CustomerKey** 列に基づいて " **標準** " リレーションシップが定義されていることがわかります。 これまでに定義したリレーションシップは、すべて "標準" リレーションシップです。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65404134"
   
 9. **[キャンセル]** をクリックします。  
   
-10. 省略記号ボタンをクリックします (**.**) 交差する位置の名称未設定セルで、 **Geography**ディメンションと**Reseller Sales**メジャー グループです。  
+10. 省略記号ボタンをクリックします ( **.** ) 交差する位置の名称未設定セルで、 **Geography**ディメンションと**Reseller Sales**メジャー グループです。  
   
     **[リレーションシップの定義]** ダイアログ ボックスを確認すると、現在のところ、Geography キューブ ディメンションと Reseller Sales メジャー グループの間には、リレーションシップが何も定義されていません。 Geography ディメンションのディメンション テーブルと Reseller Sales メジャー グループのファクト テーブルの間には直接的なリレーションシップがないため、"標準" リレーションシップは定義できません。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65404134"
   
     Reseller ディメンションの Geography Key 属性は、Geography ディメンションを Reseller Sales ファクト テーブルにリンクするためにのみ使用されます。 Geography Key 属性は表示しないため、この属性階層の表示を定義する値はありません。 また、この属性階層の並べ替えや最適化を行っても、処理パフォーマンスを低下させるだけです。 しかし、2 つのディメンション間を結ぶリンクとしてのみ機能するように、この属性を有効にする必要があります。  
   
-4.  キューブ デザイナーに切り替え、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial キューブは、をクリックして、**ディメンションの使用法**] タブの [、省略記号ボタンをクリックして (**.**) 交差する位置の**Reseller Sales**メジャー グループと**Geography**キューブ ディメンションです。  
+4.  キューブ デザイナーに切り替え、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial キューブは、をクリックして、**ディメンションの使用法**] タブの [、省略記号ボタンをクリックして ( **.** ) 交差する位置の**Reseller Sales**メジャー グループと**Geography**キューブ ディメンションです。  
   
 5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "65404134"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [ファクト リレーションシップの定義](lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [属性リレーションシップ](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
 [参照リレーションシップと参照リレーションシップのプロパティの定義](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   

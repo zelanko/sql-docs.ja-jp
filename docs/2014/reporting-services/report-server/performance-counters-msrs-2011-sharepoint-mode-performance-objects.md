@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d994fa563870f01f4a9ca8824b5372587eca804b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103697"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>MSRS 2014 Web Service SharePoint Mode と MSRS 2014 Windows Service SharePoint Mode パフォーマンス オブジェクトのパフォーマンス カウンター (SharePoint モード)
@@ -135,7 +135,7 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 (get-counter -listset "MSRS 2014 Windows Service SharePoint Mode").paths  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバーのパフォーマンスの監視](monitoring-report-server-performance.md)   
  [MSRS 2014 Web Service と MSRS 2014 Windows Service パフォーマンス オブジェクトのパフォーマンス カウンター&#40;ネイティブ モード&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
   

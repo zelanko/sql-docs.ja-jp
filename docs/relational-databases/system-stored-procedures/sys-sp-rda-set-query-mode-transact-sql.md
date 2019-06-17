@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aa168f3bbac37e34730d5ee0ab348f5fd7d1743d
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982881"
 ---
 # <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (TRANSACT-SQL)
@@ -73,7 +73,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
      実行すると[sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)リモート Azure データベースに再接続すると、この操作が自動的にリセットされたクエリ モード LOCAL_AND_REMOTE で、既定の動作のを Stretch Database。 つまり、クエリは、ローカルとリモートの両方のデータから結果を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sp_rda_deauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   

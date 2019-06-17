@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478985"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)
@@ -46,7 +46,7 @@ ms.locfileid: "65478985"
   
 5.  **[属性に次の値を設定]** ボックスの一覧で、次の操作を実行します。  
   
-    -   ワークシートの値を使用するには、**[選択した列]** をクリックします。 選択した列の値を使用して、新しいエンティティと新しいステージング テーブルが作成されます。  
+    -   ワークシートの値を使用するには、 **[選択した列]** をクリックします。 選択した列の値を使用して、新しいエンティティと新しいステージング テーブルが作成されます。  
   
     -   既存のエンティティの値を使用するには、エンティティの名前を選択します。  
   

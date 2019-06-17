@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e93b254e42b117f97ea6bc2d71afe5487f6a5197
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357415"
 ---
 # <a name="configure-measure-properties"></a>メジャーのプロパティの構成
@@ -38,7 +38,7 @@ ms.locfileid: "65357415"
 |**Source**|必須。 メジャーがバインドされるデータ ソース ビューの列を指定します。 詳細については、「[データ ソースとバインド &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)」を参照してください。|  
 |**[表示]**|クライアント アプリケーションでメジャーの表示/非表示を決定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メジャー グループのプロパティの構成](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
  [メジャーの変更](../multidimensional-tutorial/lesson-3-1-modifying-measures.md)  
   

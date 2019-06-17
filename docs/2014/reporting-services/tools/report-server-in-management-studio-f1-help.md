@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100076"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio のレポート サーバーの F1 ヘルプ
@@ -56,7 +56,7 @@ ms.locfileid: "66100076"
   
 -   [[ユーザー ロールのプロパティ]](user-role-properties-management-studio.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [機能リファレンス (Reporting Services)](../feature-reference-reporting-services.md)   
  [SQL Server Management Studio の概要](../../ssms/sql-server-management-studio-ssms.md)  
   

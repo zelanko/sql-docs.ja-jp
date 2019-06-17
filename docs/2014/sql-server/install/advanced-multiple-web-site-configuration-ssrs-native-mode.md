@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096827"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>高度な複数 Web サイト構成 (SSRS ネイティブ モード)
@@ -45,7 +45,7 @@ ms.locfileid: "66096827"
      複数のカードがある場合は、それぞれに IP アドレスが割り当てられます。 この値のみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。  
   
  **[ポート]**  
- レポート サーバーが要求を監視するポートを指定します。 既定のポートは、ポート 80 です。 ポート 80 を使用する場合は、URL にポートを含める必要はありません。 その他の任意のポート番号を使用する場合をする必要がありますに含める URL (たとえば、 http://localhost:8181/reports)します。  
+ レポート サーバーが要求を監視するポートを指定します。 既定のポートは、ポート 80 です。 ポート 80 を使用する場合は、URL にポートを含める必要はありません。 その他の任意のポート番号を使用する場合をする必要がありますに含める URL (たとえば、 http://localhost:8181/reports) します。  
   
  **ホスト ヘッダー**  
  コンピューターに解決されるホスト ヘッダーをドメイン ネーム サーバーに既に定義している場合は、レポート サーバー アクセス用に構成する URL にそのホスト ヘッダーを指定できます。  

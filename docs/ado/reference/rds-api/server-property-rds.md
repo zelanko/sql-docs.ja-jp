@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 7b23466adb660f2aa18cb44a20d189f456c3bb3c
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66697546"
 ---
 # <a name="server-property-rds"></a>Server プロパティ (RDS)
@@ -123,7 +123,7 @@ DataControl.Server=""
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー プロパティの例 (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [接続プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [SQL プロパティ](../../../ado/reference/rds-api/sql-property.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108396"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>レッスン 7: 親レポートにドリルスルー アクションを追加する
@@ -28,7 +28,7 @@ ms.locfileid: "66108396"
   
 3.  テキスト ボックスを右クリックし、をクリックし、**テキスト ボックスのプロパティ**します。  
   
-4.  **[アクション]** タブに移動し、**[レポートに移動する]** オプションを選択します。  
+4.  **[アクション]** タブに移動し、 **[レポートに移動する]** オプションを選択します。  
   
 5.  **[レポートの指定]** セクションで、子レポートの名前を入力します。  
   

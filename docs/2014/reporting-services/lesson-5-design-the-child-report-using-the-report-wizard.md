@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108438"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して子レポートを設計する
@@ -38,9 +38,9 @@ ms.locfileid: "66108438"
   
 6.  **[フィールドの配置]** ページで、次の操作を行います。  
   
-    1.  **[ProductID]**、 **[PurchaseOrderID]**、 **[PurchaseOrderDetailID]**、 **[OrderQty]**、 **[ReceivedQty]**、 **[RejectedQty]**、および **[StockedQty]** を、 **[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
+    1.  **[ProductID]** 、 **[PurchaseOrderID]** 、 **[PurchaseOrderDetailID]** 、 **[OrderQty]** 、 **[ReceivedQty]** 、 **[RejectedQty]** 、および **[StockedQty]** を、 **[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
   
-    2.  矢印をクリックして**Sum(ProductID)**、 **Sum(PurchaseOrderID)**、 **Sum(PurchaseOrderDetailID)**、 **Sum(OrderQty)**、 **Sum(ReceivedQty)**、 **Sum(RejectedQty)**、および**Sum(StockedQty)** をオフにし、**合計**選択します。  
+    2.  矢印をクリックして**Sum(ProductID)** 、 **Sum(PurchaseOrderID)** 、 **Sum(PurchaseOrderDetailID)** 、 **Sum(OrderQty)** 、 **Sum(ReceivedQty)** 、 **Sum(RejectedQty)** 、および**Sum(StockedQty)** をオフにし、**合計**選択します。  
   
 7.  をクリックして **[次へ]** 2 回クリックして**完了**を閉じる、**レポート ウィザード**します。  
   

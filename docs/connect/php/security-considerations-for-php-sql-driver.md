@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622360"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797054"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>セキュリティに関する考慮事項、Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47622360"
   
 Windows 認証でサーバーに接続する方法については、「 [方法: Windows 認証を使用した接続](../../connect/php/how-to-connect-using-windows-authentication.md)」を参照してください。  
   
-Windows 認証を使用して接続する場合、SQL Server が Kerberos 認証プロトコルを使用できるように、お客様の環境を構成することをお勧めします。 詳細については、「[SQL Server 2005 のインスタンスへのリモート接続を作成するときに、Kerberos 認証を使用していることを確認する方法](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c)」または「[Kerberos 認証と SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)」を参照してください。  
+Windows 認証を使用して接続する場合、SQL Server が Kerberos 認証プロトコルを使用できるように、お客様の環境を構成することをお勧めします。 詳細については、「 [SQL Server 2005 のインスタンスへのリモート接続を作成するときに、Kerberos 認証を使用していることを確認する方法](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) 」または「 [Kerberos 認証と SQL Server](https://msdn.microsoft.com/library/cc280744.aspx)」を参照してください。  
   
 ## <a name="use-encrypted-connections-when-transferring-sensitive-data"></a>重要なデータの転送時に暗号化された接続を使用する  
 重要なデータを送信するとき、または SQL Server から取得するときは、暗号化された接続を使用する必要があります。 暗号化された接続を有効にする方法の詳細については、「[データベース エンジンへの暗号化接続を有効にする方法 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。 セキュリティで保護された接続を [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]と確立するには、サーバーに接続するときに暗号化接続の属性を使用します。 接続属性の詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
@@ -42,7 +42,7 @@ Windows 認証を使用して接続する場合、SQL Server が Kerberos 認証
 ## <a name="use-parameterized-queries"></a>パラメーター化クエリの使用  
 パラメーター化クエリを使用して、SQL インジェクション攻撃のリスクを軽減します。 パラメーター化クエリを実行する例については、「 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)」を参照してください。  
   
-SQL インジェクション攻撃および関連するセキュリティの考慮事項の詳細については、「[SQL インジェクション](https://msdn.microsoft.com/library/ms161953.aspx)」を参照してください。  
+SQL インジェクション攻撃および関連するセキュリティの考慮事項の詳細については、「 [SQL インジェクション](https://msdn.microsoft.com/library/ms161953.aspx)」を参照してください。  
   
 ## <a name="do-not-accept-server-or-connection-string-information-from-end-users"></a>エンド ユーザーからのサーバーまたは接続文字列の情報を許可しない  
 エンド ユーザーがアプリケーションにサーバーまたは接続文字列の情報を送信できないように、アプリケーションを作成します。 サーバーと接続文字列の情報に対する厳密な制御を維持すると、悪意のある活動の危険を回避できます。  

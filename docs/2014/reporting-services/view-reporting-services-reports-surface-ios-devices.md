@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3937f227d025da054a28f73fffde4a57dc365c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098656"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface デバイスと Apple iOS デバイスでの Reporting Services レポートの表示
@@ -130,13 +130,13 @@ iPad でレポートを表示する方法の例をご覧ください。
   
  Microsoft Business Intelligence およびモバイル デバイスの詳細については、以下を参照してください。  
   
--   [モバイル デバイスと SharePoint 2013 の概要](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161351(v=office.15).aspx)します。  
+-   [モバイル デバイスと SharePoint 2013 の概要](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161351(v=office.15).aspx) します。  
   
--   [SharePoint 2013 でサポートされているモバイル デバイス ブラウザー](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx)します。  
+-   [SharePoint 2013 でサポートされているモバイル デバイス ブラウザー](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx) します。  
   
--   [Apple iPad デバイス (SharePoint Server 2010) でレポートとスコアカードの表示](https://technet.microsoft.com/library/hh697482.aspx)(https://technet.microsoft.com/library/hh697482.aspx)します。  
+-   [Apple iPad デバイス (SharePoint Server 2010) でレポートとスコアカードの表示](https://technet.microsoft.com/library/hh697482.aspx)(https://technet.microsoft.com/library/hh697482.aspx) します。  
   
--   [IPad (ビデオ) で Reporting Services レポートの表示](https://technet.microsoft.com/sqlserver/jj873792.aspx)(https://technet.microsoft.com/sqlserver/jj873792.aspx)します。  
+-   [IPad (ビデオ) で Reporting Services レポートの表示](https://technet.microsoft.com/sqlserver/jj873792.aspx)(https://technet.microsoft.com/sqlserver/jj873792.aspx) します。  
   
 -   [Microsoft Surface RT デバイスの (ビデオ) で Reporting Services レポートを表示します。](https://technet.microsoft.com/sqlserver/dn146017)  
   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 905d9c00776dc2c97b6772d6ea5ce0acfd4023fa
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65477340"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>マスター データ サービスとデータ品質サービス機能のサポート
@@ -28,7 +28,7 @@ ms.locfileid: "65477340"
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース|はい||||||はい|  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーション|はい||||||はい|  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーション|はい||||||[はい]|  
 |Data Quality Services|はい||||||はい|  
 
 

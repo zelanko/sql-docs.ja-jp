@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109611"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>共有データ ソースを作成、削除、または変更する (レポート マネージャー)
@@ -70,7 +70,7 @@ ms.locfileid: "66109611"
     > [!NOTE]  
     >  [接続テスト] ボタンは、XML データ ソースの種類ではサポートされません。  
   
-10.  **[OK]** をクリックします。  
+10. **[OK]** をクリックします。  
   
 ### <a name="to-modify-a-shared-data-source"></a>共有データ ソースを変更するには  
   

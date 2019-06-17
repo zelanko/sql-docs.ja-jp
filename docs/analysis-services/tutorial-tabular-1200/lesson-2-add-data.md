@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e5a4d0ec80da5c29d513e74df1becca2d5cbb84
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404874"
 ---
 # <a name="lesson-2-add-data"></a>レッスン 2:データを追加する
@@ -161,7 +161,7 @@ ms.locfileid: "65404874"
   
 #### <a name="to-save-the-model-project"></a>モデル プロジェクトを保存するには  
   
--   Click **[ファイル]** > **[すべてを保存]**」を参照してください。  
+-   Click **[ファイル]**  >  **[すべてを保存]** 」を参照してください。  
   
 ## <a name="whats-next"></a>次の操作
 次のレッスンに移動します。[レッスン 3:日付テーブルとしてマーク](lesson-3-mark-as-date-table.md)します。

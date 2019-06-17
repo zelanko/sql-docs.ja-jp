@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3a4dc8e890f2b23319afcc02c628410d5264c6a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108018"
 ---
 # <a name="planning"></a>計画
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]について十分に理解するには、次の各トピックをご覧ください。 ニーズに最も合った [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境をインストールおよび構成する方法について学習してください。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]について十分に理解するには、次の各トピックをご覧ください。 ニーズに最も合った [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境をインストールおよび構成する方法について学習してください。  
   
  ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**全般的な Reporting Services の機能の計画とアーキテクチャ**  
  [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  

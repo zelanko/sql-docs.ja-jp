@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85791ac61d35d9c5651a4df02b15e5ee1fc896a6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485815"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス)
@@ -81,7 +81,7 @@ ms.locfileid: "65485815"
   
 -   SSL (Secure Sockets Layer) を使用してコンテンツを暗号化する必要がある場合は、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションをホストする Web サイトで HTTPS バインドを使用するように構成します。 Web サーバー用にサーバー証明書を構成し、サイト用に HTTP バインドと SSL 設定を構成するには、IIS マネージャーなどのインターネット インフォメーション サービス (IIS) ツールを使用する必要があります。 詳細については、「 [マスター データ マネージャー Web アプリケーションのセキュリティ保護](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

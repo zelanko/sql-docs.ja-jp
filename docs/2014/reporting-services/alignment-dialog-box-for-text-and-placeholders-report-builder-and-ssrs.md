@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110036"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>テキストとプレースホルダーの [配置] ダイアログ ボックス (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66110036"
   
 ## <a name="options"></a>および  
  **水平方向**  
- 値を指定するか、選択したセルまたはデータ領域内でのテキストの横方向の位置に評価される式を入力します。 式を編集するには、 **式** (*[fx]*) ボタンをクリックします。  
+ 値を指定するか、選択したセルまたはデータ領域内でのテキストの横方向の位置に評価される式を入力します。 式を編集するには、 **式** ( *[fx]* ) ボタンをクリックします。  
   
 -   **[全般]**   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]によって計算されたテキストを表示します。 標準のテキストの配置を計算する方法の詳細については、「[テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)」を参照してください。  
   

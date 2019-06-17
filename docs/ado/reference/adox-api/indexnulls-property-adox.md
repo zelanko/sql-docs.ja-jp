@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5b6fbb2dd87568f0d40705b6ab76e83cd825afbf
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66706606"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls プロパティ (ADOX)
@@ -39,5 +39,5 @@ ms.locfileid: "66706606"
 ## <a name="applies-to"></a>適用対象  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IndexNulls プロパティの例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)

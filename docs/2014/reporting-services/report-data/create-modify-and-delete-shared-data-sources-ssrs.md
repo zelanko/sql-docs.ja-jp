@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107398"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
@@ -68,7 +68,7 @@ ms.locfileid: "66107398"
   
  共有データ ソースの削除操作を元に戻すことはできません。 ただし、共有データ ソースをうっかり削除してしまったとしても、削除したデータ ソースと同じプロパティ値で新たに作成し直すことは可能です。 レポート、モデル、またはデータ ドリブン サブスクリプションを 1 つずつ開いて、共有データ ソースと、それを使用しているアイテムとを再バインドする必要はありますが、データ ソースのプロパティが以前と同じであれば、引き続き以前と同じようにそれらを使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [レポート データ ソースを管理する](manage-report-data-sources.md)   

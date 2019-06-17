@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ce48c964ec756668aa12566c494d9ae9a1e5372
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099582"
 ---
 # <a name="server-properties-history-page"></a>[サーバーのプロパティ]\([履歴] ページ)
@@ -37,7 +37,7 @@ ms.locfileid: "66099582"
   
  これから指定するレポート履歴の制限を超えてから、既存のレポート履歴を制限した場合、既存のレポート履歴が新しい制限値まで削減されます。 最初に、最も古いレポート スナップショットが削除されます。 レポート履歴が空であるか、制限を超えていない場合は、新しいレポート スナップショットが追加されます。 制限に達すると、新しいレポート スナップショットが追加されたときに最も古いスナップショットが削除されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバーのプロパティを設定する (Management Studio)](set-report-server-properties-management-studio.md)   
  [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)  

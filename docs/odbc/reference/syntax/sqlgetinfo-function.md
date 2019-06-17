@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af4b2b5546e8b084afbdd769fb93c416964b0c13
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537989"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 関数
@@ -48,7 +48,7 @@ SQLRETURN SQLGetInfo(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *情報の種類*  
  [入力]情報の種類。  

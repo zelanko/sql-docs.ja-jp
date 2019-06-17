@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b46bd2e1f314d447b6b4a2f10b0470879bfbcea5
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65560055"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>パーティション (Analysis Services - 多次元データ)
@@ -28,7 +28,7 @@ ms.locfileid: "65560055"
   
  パーティションは、キューブのビジネス ユーザーには表示されません。 ただし、管理者は、パーティションの構成、追加、または削除を行うことができます。 各パーティションは、個別のファイル セットに格納されます。 各パーティションの集計データは、そのパーティションが定義されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス、別の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス、またはそのパーティションの変換元データを提供するために使用される同じデータ ソースに格納できます。 パーティションを使用すると、キューブの変換元データと集計データを複数のハード ディスク ドライブと複数のサーバー コンピューターに分散できます。 中規模から大規模のキューブでは、パーティションによってクエリのパフォーマンスや読み込みのパフォーマンスが大幅に向上し、キューブのメンテナンスが容易になります。  
   
- 各パーティションのストレージ モードは、メジャー グループの他のパーティションとは別個に構成できます。 各パーティションは、変換元データの場所、ストレージ モード、プロアクティブ キャッシュ、集計デザインを自由に組み合わせて格納できます。 リアルタイム OLAP およびプロアクティブ キャッシュのオプションを使用すると、パーティションをデザインするときにクエリの速度と遅延のバランスを取ることができます。 ストレージ オプションは、関連するディメンションだけでなく、メジャー グループのファクトにも適用できます。 この柔軟性により、ユーザーのニーズに応じてキューブの格納方法を設計することが可能になります。 詳細については、次を参照してください[パーティション ストレージ モードおよび処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)、[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)と[プロアクティブ キャッシュ&#40;パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
+ 各パーティションのストレージ モードは、メジャー グループの他のパーティションとは別個に構成できます。 各パーティションは、変換元データの場所、ストレージ モード、プロアクティブ キャッシュ、集計デザインを自由に組み合わせて格納できます。 リアルタイム OLAP およびプロアクティブ キャッシュのオプションを使用すると、パーティションをデザインするときにクエリの速度と遅延のバランスを取ることができます。 ストレージ オプションは、関連するディメンションだけでなく、メジャー グループのファクトにも適用できます。 この柔軟性により、ユーザーのニーズに応じてキューブの格納方法を設計することが可能になります。 詳細については、次を参照してください[パーティション ストレージ モードおよび処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)、[集計と集計デザイン](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)と[プロアクティブ キャッシュ&#40;パーティション&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="partition-structure"></a>パーティションの構造  
  パーティションの構造は、そのメジャー グループの構造と一致する必要があります。つまり、メジャー グループを定義しているメジャーも、すべての関連ディメンションと共に、パーティションにおいて定義する必要があります。 このため、パーティションを作成すると、メジャー グループに定義したのと同じメジャーおよび関連するディメンションのセットが自動的に継承されます。  

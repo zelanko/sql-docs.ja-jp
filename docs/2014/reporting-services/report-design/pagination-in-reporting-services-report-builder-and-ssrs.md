@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105475"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services の改ページ (レポート ビルダーおよび SSRS)
@@ -71,7 +71,7 @@ ms.locfileid: "66105475"
   
 -   ResetPageNumber は、改ページが生じたときにページ番号を 1 にリセットするかどうかを指定します。 このプロパティによって True に評価された場合、ページ番号はリセットされます。  
   
- **[Tablix のプロパティ]**、 **[四角形のプロパティ]**、または **[グループのプロパティ]** ダイアログ ボックスの BreakLocation プロパティを設定できますが、レポート ビルダーのプロパティ ペインで Disabled、ResetPageNumber、および PageName の各プロパティを設定する必要があります。 プロパティ ペインのプロパティがカテゴリごとに整理されている場合、これらのプロパティは **PageBreak** カテゴリ内にあります。 グループの場合、 **PageBreak** カテゴリは、 **Group** カテゴリ内にあります。  
+ **[Tablix のプロパティ]** 、 **[四角形のプロパティ]** 、または **[グループのプロパティ]** ダイアログ ボックスの BreakLocation プロパティを設定できますが、レポート ビルダーのプロパティ ペインで Disabled、ResetPageNumber、および PageName の各プロパティを設定する必要があります。 プロパティ ペインのプロパティがカテゴリごとに整理されている場合、これらのプロパティは **PageBreak** カテゴリ内にあります。 グループの場合、 **PageBreak** カテゴリは、 **Group** カテゴリ内にあります。  
   
  定数と、単純型または複合型の式を使用して、Disabled および ResetPageNumber プロパティの値を設定します。 ただし、BreakLocation プロパティを持つ式は使用できません。 式の記述と使用の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)」をご覧ください。  
   

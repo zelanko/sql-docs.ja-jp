@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478890"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>ショートカット クエリ ファイルの電子メールでの送信 (Excel 用 MDS アドイン)
@@ -37,7 +37,7 @@ ms.locfileid: "65478890"
   
 -   ショートカット クエリ ファイルを開くには、電子メールの受信者は [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] をインストールしておく必要があります。 受信者は、ファイルをダブルクリックして開くことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

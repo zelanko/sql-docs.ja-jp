@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 83e65825f098dbcabe9fa6cbb67513e1c9654f9f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483635"
 ---
 # <a name="business-rule-actions-master-data-services"></a>ビジネス ルール アクション (マスター データ サービス)
@@ -68,7 +68,7 @@ ms.locfileid: "65483635"
 |-----------------|-----------------|  
 |**がワークフローで始まる**|外部ワークフローを開始します。 このアクションが実行される原因となったデータはワークフローに渡されます。 詳細については、「 [SharePoint ワークフローとマスター データ サービスとの統合](https://msdn.microsoft.com/library/gg690195.aspx)」を参照してください。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルール条件 (マスター データ サービス)](business-rule-conditions-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)   
  [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

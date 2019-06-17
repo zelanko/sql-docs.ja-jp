@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13a67a94f6478c085995142085a93fa85bb27d89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106712"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーの追加、変更、または削除 (レポート ビルダーおよび SSRS)
@@ -77,7 +77,7 @@ ms.locfileid: "66106712"
   
 1.  マップ ペインが表示されるまでマップをクリックします。  
   
-2.  ツール バーの **[レイヤーの追加]** をクリックし、ドロップダウン リストで、追加するレイヤーの種類(**[ポイント]**、**[線]**、または **[多角形]**) をクリックします。  
+2.  ツール バーの **[レイヤーの追加]** をクリックし、ドロップダウン リストで、追加するレイヤーの種類( **[ポイント]** 、 **[線]** 、または **[多角形]** ) をクリックします。  
   
     > [!NOTE]  
     >  マップ レイヤーを追加してから手動で構成することもできますが、新規レイヤーの追加にはマップ レイヤー ウィザードを使用することをお勧めします。 マップ ペインのツール バーからこのウィザードを起動するには、[レイヤー ウィザード] ボタンをクリックします (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))。  
@@ -250,6 +250,6 @@ ms.locfileid: "66106712"
   
      条件付きでレイヤーを非表示にすることもできます。 詳細については、「[アイテムを非表示にする (レポート ビルダーおよび SSRS)](../report-builder/hide-an-item-report-builder-and-ssrs.md)」を参照してください。  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
