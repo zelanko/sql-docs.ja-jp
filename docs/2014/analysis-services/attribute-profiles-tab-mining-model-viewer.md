@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063171"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>[属性のプロファイル] タブ (マイニング モデル ビューアー)
-  Naive Bayes モデルにおける入力値の分布と、結果の属性の状態との関係を確認するには、**[属性のプロファイル]** タブを使用します。 値の分布はカラー ヒストグラムで表示され、すべての分布は値を簡単に比較できるように表形式で提示されます。  
+  Naive Bayes モデルにおける入力値の分布と、結果の属性の状態との関係を確認するには、 **[属性のプロファイル]** タブを使用します。 値の分布はカラー ヒストグラムで表示され、すべての分布は値を簡単に比較できるように表形式で提示されます。  
   
- **詳細情報。**[Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **詳細情報。** [Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  

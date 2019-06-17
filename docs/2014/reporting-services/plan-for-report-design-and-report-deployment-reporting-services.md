@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6104bfc97d2f66652ffa9b16e9ff0ae8f9b0550
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108047"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>レポート デザインとレポート配置の計画 (Reporting Services 2014)
@@ -116,7 +116,7 @@ ms.locfileid: "66108047"
   
 -   [ReportViewer コントロールの追加と構成](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services ツール](tools/reporting-services-tools.md)   
  [レポート定義言語 (SSRS)](reports/report-definition-language-ssrs.md)  

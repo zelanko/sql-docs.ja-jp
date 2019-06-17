@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b33feb8075babd50f67b6c01da5afadcd1c33e0b
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700521"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>介在する COMPUTE コマンドを含むパラメーター化されたコマンド
@@ -30,5 +30,5 @@ ms.locfileid: "66700521"
   
  介在するを作成するためのコマンドは、この機能を shapeCOMPUTE の能力をグループ化および集計関数を呼び出す一般的な使用**Recordset**子に関する分析情報を持つオブジェクト**レコード セット**. さらに、これはパラメーター化された図形コマンドであるため、毎回、親のチャプター列は、新しい子**Recordset**を取得できます。 間のレベルは、子から派生した、ため、これらも再計算されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)

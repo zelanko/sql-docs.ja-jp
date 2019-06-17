@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e71447143e08ebf117b6fe0eab002569ec48d020
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66694881"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
@@ -47,7 +47,7 @@ ms.locfileid: "66694881"
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ReadyState プロパティの例 (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
  [Cancel メソッド (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [ExecuteOptions プロパティ (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)

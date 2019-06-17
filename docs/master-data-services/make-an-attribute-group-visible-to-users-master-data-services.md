@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6ef13b4a6ad3ed6ba04fec471876f8c93e7cee56
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488281"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>属性グループのユーザーへの表示 (マスター データ サービス)
@@ -45,7 +45,7 @@ ms.locfileid: "65488281"
   
 4.  **[属性グループ]** をクリックします。  
   
-5.  **[属性グループの管理]** ページで、 **[メンバーの種類]** ドロップダウン リスト ボックスからメンバーの種類を選択し、表示するグループの種類に応じて **[リーフ]**、 **[統合]** 、 **[コレクション]** を展開します。  
+5.  **[属性グループの管理]** ページで、 **[メンバーの種類]** ドロップダウン リスト ボックスからメンバーの種類を選択し、表示するグループの種類に応じて **[リーフ]** 、 **[統合]** 、 **[コレクション]** を展開します。  
   
 6.  編集する属性グループをグリッドから選択し、 **[編集]** をクリックします。  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754675"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62754675"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[ミラーリング監視サーバーを削除した後](#FollowUp)  
+-   **補足情報:** [ミラーリング監視サーバーを削除した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62754675"
   
 -   [データベース ミラーリング監視サーバーを追加または置き換える方法 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 16130f9e96dfc70ef464e3ff48301c9f71c0bb06
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66704336"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>IIS での仮想サーバーの構成
@@ -30,7 +30,7 @@ Internet Information Services 4.0 での仮想サーバーを作成するとき�
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

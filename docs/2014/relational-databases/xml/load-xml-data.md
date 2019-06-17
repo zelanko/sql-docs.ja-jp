@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241288"
 ---
 # <a name="load-xml-data"></a>XML データの読み込み
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 以下に例を示します。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 例 :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの [n]text 型または image 型の列にデータが含まれている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用してテーブルをインポートできます。 ALTER TABLE ステートメントを使用して列の型を XML に変更します。  
   
@@ -62,14 +62,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>文字列エンコードの非互換性  
- XML をコピーし、文字列リテラルとして [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに貼り付けると、[N]VARCHAR 文字列エンコードの非互換性の問題が発生する可能性があります。 この問題が発生するかどうかは、XML インスタンスのエンコードによって決まります。 多くの場合、XML 宣言の削除が必要になります。 以下に例を示します。  
+ XML をコピーし、文字列リテラルとして [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに貼り付けると、[N]VARCHAR 文字列エンコードの非互換性の問題が発生する可能性があります。 この問題が発生するかどうかは、XML インスタンスのエンコードによって決まります。 多くの場合、XML 宣言の削除が必要になります。 例 :  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema ...  
 ```  
   
- 続いて、N を指定し、XML インスタンスを Unicode 形式のインスタンスにします。 以下に例を示します。  
+ 続いて、N を指定し、XML インスタンスを Unicode 形式のインスタンスにします。 例 :  
   
 ```  
 -- Assign XML instance to a variable.  
@@ -81,7 +81,7 @@ INSERT INTO T VALUES (N'...')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データ &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

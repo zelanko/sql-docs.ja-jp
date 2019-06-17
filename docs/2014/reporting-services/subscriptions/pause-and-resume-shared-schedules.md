@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c30dfdd78ed6f420bee7c6bbba449ba40a2a137a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100788"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
@@ -39,7 +39,7 @@ ms.locfileid: "66100788"
 -   [共有スケジュールの一時停止と再開 (SharePoint モード)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> 共有スケジュールの一時停止と再開 (ネイティブ モード)  
- 共有スケジュールを一時停止または再開するには、レポート マネージャーの [スケジュール] ページを使用します。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]は使用できません。これには、スケジュールを一時停止または再開するためのオプションは用意されていません。 詳細については、「 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)」をご覧ください。  
+ 共有スケジュールを一時停止または再開するには、レポート マネージャーの [スケジュール] ページを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]は使用できません。これには、スケジュールを一時停止または再開するためのオプションは用意されていません。 詳細については、「 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)」をご覧ください。  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>共有スケジュールを一時停止または再開するには  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098721"
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
@@ -81,7 +81,7 @@ ms.locfileid: "66098721"
 |*DockToolBar*|レポート ビューアー Web パーツのツールバーを上部または下部にドッキングするかどうかを制御します。 有効値は `Top` および `Bottom` です。 既定値は `Top` です。<br /><br /> <br /><br /> `SharePoint` モードで、下部にツール バーをドッキングする例。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom`|  
 |*ToolBarItemsDisplayMode*|表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。  既定値は `-1` です。すべてのツール バー項目を表示します。 有効な値は、<br /><br /> 1 (0x1): **[戻る]** ボタン<br /><br /> 2 (0x2): テキスト検索コントロール<br /><br /> 4 (0x4): ページ ナビゲーション コントロール<br /><br /> 8 (0x8): **[更新]** ボタン<br /><br /> 16 (0x10): **[ズーム]** ボックスの一覧<br /><br /> 32 (0x20): **[Atom フィード]** ボタン<br /><br /> 64 (0x40): **[アクション]** の **[印刷]** メニュー オプション<br /><br /> 128 (0x80): **[アクション]** の **[エクスポート]** サブメニュー<br /><br /> 256 (0x100): **[アクション]** の **[レポート ビルダーで開く]** メニュー オプション<br /><br /> 512 (0x200): **[アクション]** の **[サブスクライブ]** メニュー オプション<br /><br /> 1024 (0x400): **[アクション]** の **[新しいデータの警告]** メニュー オプション<br /><br /> たとえば、`SharePoint`モードのみを表示する、**戻る**ボタン、テキスト検索コントロール、ページ ナビゲーション コントロールと**更新**ボタン。<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15`|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767434"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>手順 3:フラット ファイル接続マネージャーの変更
@@ -30,7 +30,7 @@ ms.locfileid: "62767434"
   
 3.  **プロパティ式エディター**  ダイアログ ボックスで、**プロパティ**列、入力または選択`ConnectionString`します。  
   
-4.  **[式]** 列の参照ボタン **[...]** をクリックし、**[式ビルダー]** ダイアログ ボックスを開きます。  
+4.  **[式]** 列の参照ボタン **[...]** をクリックし、 **[式ビルダー]** ダイアログ ボックスを開きます。  
   
 5.  **[式ビルダー]** ダイアログ ボックスで **[変数]** ノードを展開します。  
   

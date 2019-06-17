@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6b538767f62a3d80b9cf2cd9b558f14c5de91549
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712471"
 ---
 # <a name="handler-property-rds"></a>Handler プロパティ (RDS)
@@ -55,7 +55,7 @@ DataControl.Handler = String
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Handler プロパティの例 (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

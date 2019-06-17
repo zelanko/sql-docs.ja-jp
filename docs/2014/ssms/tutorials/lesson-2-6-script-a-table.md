@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316394"
 ---
 # <a name="script-a-table"></a>テーブルのスクリプト作成
@@ -26,9 +26,9 @@ ms.locfileid: "63316394"
   
 #### <a name="to-create-the-insert-script-for-a-table"></a>テーブルの挿入スクリプトを作成するには  
   
-1.  オブジェクト エクスプローラーでサーバーを展開し、 **[データベース]**、[ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]]、 **[テーブル]** の順に展開します。次に、 **[HumanResources.Employee]** を右クリックし、 **[テーブルをスクリプト化]** をポイントします。  
+1.  オブジェクト エクスプローラーでサーバーを展開し、 **[データベース]** 、[ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]]、 **[テーブル]** の順に展開します。次に、 **[HumanResources.Employee]** を右クリックし、 **[テーブルをスクリプト化]** をポイントします。  
   
-2.  ショートカット メニューには、7 つの使用可能なスクリプト作成オプションがあります。**作成**、**ドロップして、**、 **DROP および CREATE**、**を**、**に挿入**、 **への更新**、および**削除**します。 **[データ更新]** をポイントし、 **[新しいクエリ エディター ウィンドウ]** をクリックします。  
+2.  ショートカット メニューには、7 つの使用可能なスクリプト作成オプションがあります。**作成**、**ドロップして、** 、 **DROP および CREATE**、**を**、**に挿入**、 **への更新**、および**削除**します。 **[データ更新]** をポイントし、 **[新しいクエリ エディター ウィンドウ]** をクリックします。  
   
 3.  新しいクエリ エディター ウィンドウが開き、接続が確立され、更新ステートメント全体が表示されます。  
   

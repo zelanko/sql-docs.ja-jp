@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 10f531b601e44f346e27b52e40e6591457055ee8
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66698452"
 ---
 # <a name="count-property-ado"></a>Count プロパティ (ADO)
@@ -48,7 +48,7 @@ ms.locfileid: "66698452"
 |[Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Count プロパティの例 (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Count プロパティの例 (vc++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

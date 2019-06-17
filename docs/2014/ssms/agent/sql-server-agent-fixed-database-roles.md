@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245992"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server エージェントの固定データベース ロール
@@ -100,7 +100,7 @@ ms.locfileid: "63245992"
   
  **SQLAgentOperatorRole** のメンバーは、ローカル ジョブおよびスケジュールに関する追加の権限を持っています。 すべてのローカル ジョブを実行、停止、または開始したり、サーバー上のローカル ジョブのジョブ履歴を削除できます。 また、サーバー上のすべてのローカル ジョブおよびスケジュールを、有効または無効にすることもできます。 ローカル ジョブまたはスケジュールを有効または無効にするには、このロールのメンバーはストアド プロシージャ **sp_update_job** および **sp_update_schedule**を使用する必要があります。 **SQLAgentOperatorRole** のメンバーは、ジョブまたはスケジュールの名前か ID を指定するパラメーターと **@enabled** パラメーターのみを指定できます。 他のパラメーターを指定すると、ストアド プロシージャの実行は失敗します。 **SQLAgentOperatorRole** のメンバーは、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることはできません。  
   
- **SQLAgentOperatorRole**のメンバーに対しては、 **オブジェクト エクスプローラーには**[ジョブ] **ノード、**[警告] **ノード、** [オペレーター] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ノード、および **[プロキシ]** ノードのみが表示されます。 このロールのメンバーに表示されないのは、 **[エラー ログ]** ノードだけです。  
+ **SQLAgentOperatorRole**のメンバーに対しては、 **オブジェクト エクスプローラーには**[ジョブ] **ノード、** [警告] **ノード、** [オペレーター] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ノード、および **[プロキシ]** ノードのみが表示されます。 このロールのメンバーに表示されないのは、 **[エラー ログ]** ノードだけです。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**エージェント データベース ロール**のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください **。** **SQLAgentOperatorRole** のメンバーは、自動的に **SQLAgentUserRole** および **SQLAgentReaderRole**のメンバーになります。 つまり、 **SQLAgentOperatorRole** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgentUserRole **または** SQLAgentReaderRole **に対して許可されたすべての** エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
@@ -123,9 +123,9 @@ ms.locfileid: "63245992"
   
  <sup>2</sup>ジョブの所有権を変更することはできません。  
   
- <sup>3</sup> **SQLAgentOperatorRole**メンバーは有効にしたり、ストアド プロシージャを使用して、所有していないローカル ジョブを無効にする**sp_update_job**の値を指定して、  **@enabled**と**@job_id** (または**@job_name**) パラメーター。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。  
+ <sup>3</sup> **SQLAgentOperatorRole**メンバーは有効にしたり、ストアド プロシージャを使用して、所有していないローカル ジョブを無効にする**sp_update_job**の値を指定して、  **@enabled** と **@job_id** (または **@job_name** ) パラメーター。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。  
   
- <sup>4</sup> **SQLAgentOperatorRole**メンバーは有効にしたり、ストアド プロシージャを使用して、所有していないスケジュールを無効にする**sp_update_schedule**の値を指定して、 **@enabled** と**@schedule_id** (または**@name**) パラメーター。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。  
+ <sup>4</sup> **SQLAgentOperatorRole**メンバーは有効にしたり、ストアド プロシージャを使用して、所有していないスケジュールを無効にする**sp_update_schedule**の値を指定して、 **@enabled** と **@schedule_id** (または **@name** ) パラメーター。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。  
   
 ## <a name="assigning-users-multiple-roles"></a>ユーザーへの複数のロールの割り当て  
  固定サーバー ロール **sysadmin** のメンバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのすべての機能にアクセスできます。 **sysadmin** ロールのメンバーではないが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの複数の固定データベース ロールのメンバーであるユーザーの場合、これらのロールの同心構造権限モデルについて覚えておくことが重要です。 特権レベルの高いロールには常に、そのロールよりも特権レベルが低いロールの権限がすべて含まれているため、複数のロールのメンバーであるユーザーは、そのユーザーがメンバーとして属しているロールの中で、最も特権レベルの高いロールに関連付けられた権限を自動的に持っていることになります。  

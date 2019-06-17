@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077670"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>[マイニング構造] ビュー (データ マイニング モデル デザイナー)
@@ -30,7 +30,7 @@ ms.locfileid: "66077670"
   
 -   [入れ子になったテーブル キー列 ダイアログ ボックスをオンに&#40;マイニング構造 ビュー&#41;](select-a-nested-table-key-column-dialog-box-mining-structure-view.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデル ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
  [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   

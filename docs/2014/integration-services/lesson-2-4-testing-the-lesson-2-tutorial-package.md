@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767488"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>手順 4:レッスン 2 のチュートリアル パッケージのテスト
@@ -47,7 +47,7 @@ ms.locfileid: "62767488"
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 5: パッケージ配置モデルのパッケージ構成の追加](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72b426c504532f9c112eaaa1222b0349f3e5d814
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832593"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>[列の NULL 比プロファイル要求] のオプション (データ プロファイル タスク)
@@ -30,7 +30,7 @@ ms.locfileid: "62832593"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列の NULL 比要求]** のオプション グループは次のとおりです。  
   
--   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
+-   **[データ]** ( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
 -   **全般**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62832593"
  詳細については、このトピックの「[TableorView] のオプション」を参照してください。  
   
  **[Column]**  
- プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、**[(\*)]** を選択します。  
+ プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、 **[(\*)]** を選択します。  
   
  詳細については、このトピックの「[列] のオプション」を参照してください。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62832593"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
  [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
   

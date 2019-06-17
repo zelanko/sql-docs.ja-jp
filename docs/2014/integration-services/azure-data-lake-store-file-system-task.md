@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 69a521cb72e68141f5706f5187a0288a3f44f241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061374"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store ファイル システム タスク
@@ -39,12 +39,12 @@ ms.locfileid: "66061374"
 
 * **LocalDirectory:** アップロードするファイルを含むソース ディレクトリを指定します。
 * **FileNamePattern:** ソース ファイルのファイル名フィルターを指定します。 名前、指定したパターンに一致するファイルのみがアップロードされます。 ワイルドカードの `*` と `?` がサポートされています。
-* **SearchRecursively:** 再帰的にアップロードするファイルのソース ディレクトリ内で検索するかどうかを指定します。
-* **AzureDataLakeDirectory:** ファイルをアップロードする ADLS 先ディレクトリを指定します。
+* **SearchRecursively:** アップロードするファイルのソース ディレクトリ内で再帰的に検索するかどうかを指定します。
+* **AzureDataLakeDirectory:** ファイルのアップロード先となる ADLS ディレクトリを指定します。
 * **FileExpiry:** このプロパティをファイルが無期限することを示す空白のままに、ADLS にアップロードされたファイルの有効期限日時を指定します。
 
 ## <a name="copyfromadls"></a>CopyFromADLS
 
 * **AzureDataLakeDirectory:** ダウンロードするファイルを含む ADLS ソース ディレクトリを指定します。
-* **SearchRecursively:** 再帰的にダウンロードするファイルのソース ディレクトリ内で検索するかどうかを指定します。
-* **LocalDirectory:** ダウンロードしたファイルの保存先のディレクトリを指定します。
+* **SearchRecursively:** ダウンロードするファイルのソース ディレクトリ内で再帰的に検索するかどうかを指定します。
+* **LocalDirectory:** ダウンロードしたファイルの格納先となるディレクトリを指定します。

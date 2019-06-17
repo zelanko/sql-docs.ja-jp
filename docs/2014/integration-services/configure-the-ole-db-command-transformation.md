@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060561"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>OLE DB コマンド変換を構成する
@@ -37,7 +37,7 @@ ms.locfileid: "66060561"
   
 6.  **[接続マネージャー]** タブで、 **[接続マネージャー]** 一覧から OLE DB 接続マネージャーを選択します。 詳細については、「 [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
-7.  **[コンポーネントのプロパティ]** タブをクリックし、**[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
+7.  **[コンポーネントのプロパティ]** タブをクリックし、 **[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
   
 8.  **[文字列値エディター]** で、各パラメーターのパラメーター マーカーとして疑問符 (?) を使用して、パラメーター化 SQL ステートメントを入力します。  
   

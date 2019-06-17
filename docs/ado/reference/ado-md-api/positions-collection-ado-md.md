@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: aa5c6dc2517a05fb25ccdb2ab7f5cd58976ac4e6
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66708752"
 ---
 # <a name="positions-collection-ado-md"></a>Positions コレクション (ADO MD)
@@ -41,7 +41,7 @@ ms.locfileid: "66708752"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [軸オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

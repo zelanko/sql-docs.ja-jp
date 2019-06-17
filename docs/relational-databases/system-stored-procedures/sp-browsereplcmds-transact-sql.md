@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996365"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (TRANSACT-SQL)
@@ -45,9 +45,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` 返す最小の値を持つの正確なシーケンス番号を指定します。 *xact_seqno_start*は**nchar (22)**、既定値は 0x00000000000000000000 です。  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 返す最小の値を持つの正確なシーケンス番号を指定します。 *xact_seqno_start*は**nchar (22)** 、既定値は 0x00000000000000000000 です。  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` 返される最大の正確なシーケンス番号を指定します。 *xact_seqno_end*は**nchar (22)**、既定値は 0 xffffffffffffffffffff です。  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 返される最大の正確なシーケンス番号を指定します。 *xact_seqno_end*は**nchar (22)** 、既定値は 0 xffffffffffffffffffff です。  
   
 `[ @originator_id = ] 'originator_id'` 場合を指定します。 指定したコマンド*originator_id*が返されます。 *originator_id*は**int**、既定値は NULL です。  
   
@@ -89,7 +89,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールのメンバーや、 **db_owner**または**replmonitor** を実行できるは、ディストリビューションデータベースの固定データベースロール**sp_browsereplcmds**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

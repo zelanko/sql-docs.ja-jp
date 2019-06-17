@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c88d8dd92fcedac2facff27f52492be5ccb74269
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103609"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>レポート サーバーのサービス プリンシパル名 (SPN) の登録
@@ -25,9 +25,9 @@ ms.locfileid: "66103609"
   
  SPN を作成するには、 **SetSPN** コマンド ライン ユーティリティを使用します。 詳細については、以下を参照してください。  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx)。  
+-   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx) 。  
   
--   [サービス プリンシパル名 (SPN) SetSPN の構文 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)。  
+-   [サービス プリンシパル名 (SPN) SetSPN の構文 (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) 。  
   
  このユーティリティをドメイン コントローラーで実行するには、ドメイン管理者であることが必要です。  
   

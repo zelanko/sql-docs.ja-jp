@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b893dcd86ffcfa68c55057796c431e694903c46a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740062"
 ---
 # <a name="mdx-named-sets---building-named-sets"></a>MDX 名前付きセット - 名前付きセットの構築
@@ -32,7 +32,7 @@ ms.locfileid: "62740062"
   
      CREATE SET ステートメントを使用してセッションでの名前付きセットを作成する方法の詳細については、「[セッション スコープの名前付きセットの作成 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SELECT ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [CREATE SET ステートメント (MDX)](../../../mdx/mdx-data-definition-create-set.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  

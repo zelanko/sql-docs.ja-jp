@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: f37e6cf355e035044e25979f4e76256936b7e240
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66708794"
 ---
 # <a name="parent-property-ado-md"></a>Parent プロパティ (ADO MD)
@@ -36,5 +36,5 @@ ms.locfileid: "66708794"
 ## <a name="applies-to"></a>適用対象  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Children プロパティ (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679166"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([起動時のパラメーター] タブ)
@@ -51,7 +51,7 @@ ms.locfileid: "62679166"
  master データベースを移動する方法の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「システム データベースの移動」を参照してください。  
   
 ## <a name="optional-parameters"></a>省略可能なパラメーター  
- サポートされている、すべての起動時のパラメーターについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」で説明されています。 起動時のパラメーターの -T*trace#* は、指定された有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace#*) を使用して*のインスタンスを起動することを指定します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 トレース フラグの詳細については、[!INCLUDE[tsql](../../includes/tsql-md.md)]オンライン ブックの「トレース フラグ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )」を参照してください。  
+ サポートされている、すべての起動時のパラメーターについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのスタートアップ オプションの使用」で説明されています。 起動時のパラメーターの -T*trace#* は、指定された有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace# *) を使用して*のインスタンスを起動することを指定します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 トレース フラグの詳細については、[!INCLUDE[tsql](../../includes/tsql-md.md)]オンライン ブックの「トレース フラグ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )」を参照してください。  
   
 > [!CAUTION]  
 >  ドキュメントに未記載の起動時のパラメーターとトレース フラグについては、インターネット上で追加の説明を読むことができます。 ドキュメントに未記載の起動時のパラメーターとトレース フラグは、一般的ではない問題の解決またはテストに必要な特定の条件の適用のために作成されます。 ドキュメントに未記載の起動時のパラメーターを使用すると、予期しない結果になる場合があります。 マイクロソフト カスタマー サポート サービスから指示されない限り、ドキュメントに未記載のパラメーターを使用しないでください。  

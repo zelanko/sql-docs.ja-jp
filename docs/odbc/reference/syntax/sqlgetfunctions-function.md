@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538020"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 関数
@@ -46,7 +46,7 @@ SQLRETURN SQLGetFunctions(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *FunctionId*  
  [入力]A **#define** ; 目的の ODBC 関数を識別する値**SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**します。 **SQL_API_ODBC3_ALL_FUNCTIONS** 、ODBC 3 を使って *.x* ODBC 3 のサポートを確認するアプリケーション *.x*と以前の関数。 **SQL_API_ALL_FUNCTIONS** ODBC 2 を使って *.x* ODBC 2 のサポートを確認するアプリケーション *.x*と以前の関数。  

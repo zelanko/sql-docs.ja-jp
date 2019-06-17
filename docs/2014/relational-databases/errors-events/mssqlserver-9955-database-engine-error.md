@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761634"
 ---
 # <a name="mssqlserver9955"></a>MSSQLSERVER_9955
@@ -38,7 +38,7 @@ ms.locfileid: "62761634"
 ## <a name="user-action"></a>ユーザーの操作  
  このエラーを解決するには、実行中のフルテキスト フィルター デーモン プロセスをすべて終了し、必要に応じて SQL Server 構成マネージャーを使用してフルテキスト デーモン ホスト アカウントを再構成します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 構成マネージャー](../sql-server-configuration-manager.md)   
  [フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [フルテキスト検索](../search/full-text-search.md)  

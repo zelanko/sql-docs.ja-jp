@@ -1,5 +1,5 @@
 ---
-title: 'バックアップと復元: 相互運用性と共存 (SQL Server) |Microsoft Docs'
+title: 'バックアップと復元: 相互運用性と共存 (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922437"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>バックアップと復元: 相互運用性と共存 (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62922437"
   
  データベースの起動中に問題が発生した場合、復旧は失敗し、データベースは SUSPECT に設定されます。 問題のファイルを特定できる場合、データベース管理者は、それらのファイルをオフラインにし、データベースの再起動を試行できます。 ファイルをオフラインにするには、次の [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントを使用します。  
   
- ALTER DATABASE *database_name*ファイルの変更 (名前 **='*`filename`*'**、オフライン)  
+ ALTER DATABASE *database_name*ファイルの変更 (名前 **=' *`filename`* '** 、オフライン)  
   
  起動に成功した場合、オフライン ファイルが含まれるファイル グループはすべてオフライン状態で維持されます。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8708bd3f4375179638ce5e86a0619a1e1ccf4d77
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066254"
 ---
 # <a name="workspace-database-ssas-tabular"></a>ワークスペース データベース (SSAS テーブル)
@@ -59,7 +59,7 @@ ms.locfileid: "66066254"
  ワークスペース データベースのプロパティは、モデルのプロパティに含まれます。 モデルのプロパティを表示するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **ソリューション エクスプローラー**で **Model.bim** ファイルをクリックします。 モデルのプロパティは **[プロパティ]** ウィンドウを使用して構成できます。 ワークスペース データベース固有のプロパティには、次のものが含まれます。  
   
 > [!NOTE]  
->  **[ワークスペース サーバー]**、 **[ワークスペースの保有期間]**、および **[データ バックアップ]** の各プロパティには、新しいモデル プロジェクトを作成するときに既定の設定が適用されます。 [ツール] メニューから開く [オプション] ダイアログ ボックスで、 **[分析サーバー]** 設定の **[データ モデリング]** ページを使用して、新しいモデル プロジェクトの既定の設定を変更できます。 他のプロパティと同様に、これらのプロパティは **[プロパティ]** ウィンドウでモデル プロジェクトごとに設定することもできます。 既定の設定の変更は、作成済みのモデル プロジェクトには適用されません。 詳細については、「[既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)」を参照してください。  
+>  **[ワークスペース サーバー]** 、 **[ワークスペースの保有期間]** 、および **[データ バックアップ]** の各プロパティには、新しいモデル プロジェクトを作成するときに既定の設定が適用されます。 [ツール] メニューから開く [オプション] ダイアログ ボックスで、 **[分析サーバー]** 設定の **[データ モデリング]** ページを使用して、新しいモデル プロジェクトの既定の設定を変更できます。 他のプロパティと同様に、これらのプロパティは **[プロパティ]** ウィンドウでモデル プロジェクトごとに設定することもできます。 既定の設定の変更は、作成済みのモデル プロジェクトには適用されません。 詳細については、「[既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)」を参照してください。  
   
 |プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "66066254"
 |-----------|-----------------|  
 |[モデルのプロパティ (SSAS テーブル)](model-properties-ssas-tabular.md)|説明と構成手順モデルのワークスペース データベースのプロパティ。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [プロジェクトのプロパティ &#40;SSAS テーブル&#41;](properties-ssas-tabular.md)  
   

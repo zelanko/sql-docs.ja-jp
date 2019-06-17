@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7dae06129ee5dc9962538e8d025dca9966325f5d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106190"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>改ページ、見出し、列、および行の制御 (レポート ビルダーおよび SSRS)

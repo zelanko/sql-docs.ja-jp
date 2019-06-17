@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960871"
 ---
 # <a name="delete-an-article"></a>アーティクルの削除
@@ -41,7 +41,7 @@ ms.locfileid: "62960871"
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>アーティクルをマージ パブリケーションから削除するには  
   
-1.  削除するアーティクルを **@article** に指定し、削除元のパブリケーションを **@publication** に指定して、[sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) を実行してアーティクルを削除します。 必要に応じて、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を指定し、 **@force_invalidate_snapshot** に **@force_reinit_subscription**」を参照してください。  
+1.  削除するアーティクルを **@article** に指定し、削除元のパブリケーションを **@publication** に指定して、[sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) を実行してアーティクルを削除します。 必要に応じて、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を指定し、 **@force_invalidate_snapshot** に **@force_reinit_subscription** 」を参照してください。  
   
 2.  (省略可) パブリッシュされたオブジェクトをデータベースから完全に削除するには、パブリッシャーのパブリケーション データベースに対して `DROP <objectname>` コマンドを実行します。  
   

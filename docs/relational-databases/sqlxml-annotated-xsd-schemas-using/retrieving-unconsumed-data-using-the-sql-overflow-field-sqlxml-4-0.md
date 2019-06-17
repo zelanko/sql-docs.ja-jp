@@ -20,15 +20,15 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf5a92c2deaf8fc6867c183e17db8992a39bfd1b
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980764"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field を使用した、未使用データの取得 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 関数を使用して XML ドキュメントからデータベースにレコードを挿入するときに、ソース XML ドキュメントのすべての未使用データを 1 つの列に格納することができます。 注釈付きスキーマを使用して、データベースからデータを取得するときに指定できます、 **sql:overflow-フィールド**オーバーフロー データが格納されているテーブル内の列を識別する属性。 **Sql:overflow-フィールド**属性に指定できる**\<要素 >** します。  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 関数を使用して XML ドキュメントからデータベースにレコードを挿入するときに、ソース XML ドキュメントのすべての未使用データを 1 つの列に格納することができます。 注釈付きスキーマを使用して、データベースからデータを取得するときに指定できます、 **sql:overflow-フィールド**オーバーフロー データが格納されているテーブル内の列を識別する属性。 **Sql:overflow-フィールド**属性に指定できる **\<要素 >** します。  
   
  データは次のように取得されます。  
   

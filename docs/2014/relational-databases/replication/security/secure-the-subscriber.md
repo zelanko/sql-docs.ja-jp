@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960833"
 ---
 # <a name="secure-the-subscriber"></a>サブスクライバーのセキュリティ保護
@@ -53,7 +53,7 @@ ms.locfileid: "62960833"
  詳細については、「[トランザクション パブリケーションの更新可能なサブスクリプションの作成](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)」および「[レプリケーションのセキュリティ設定の表示および変更](view-and-modify-replication-security-settings.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_**_\<HexadecimalNumber>_ の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
+>  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_** _\<HexadecimalNumber>_ の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
   
 ## <a name="queued-updating-subscriptions"></a>キュー更新サブスクリプション  
  キュー更新サブスクリプションを構成する際には、セキュリティに関して、以下の 2 点に注意してください。  

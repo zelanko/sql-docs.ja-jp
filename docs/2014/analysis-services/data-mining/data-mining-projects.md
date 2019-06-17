@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3aa9d5ef81c32f7bb1f4235e4362533f3fac656d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085056"
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
@@ -26,7 +26,7 @@ ms.locfileid: "66085056"
 ##  <a name="bkmk_Overview"></a> データ マイニング プロジェクトの作成  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、" **OLAP およびデータ マイニング プロジェクト**" テンプレートを使用して、データ マイニング プロジェクトを作成します。 AMO を使用して、プログラムでデータ マイニング プロジェクトを作成することもできます。 個々のデータ マイニング オブジェクトは、Analysis Services スクリプト言語 (ASSL) を使用してスクリプト化できます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
   
- 既存のソリューション内にデータ マイニング オブジェクトを作成する場合、既定では、データ マイニング オブジェクトはソリューション ファイルと同じ名前の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに配置されます。 この名前およびターゲット サーバーは、**[プロジェクトのプロパティ]** ダイアログ ボックスを使用して変更できます。 詳細については、「[Configure Analysis Services Project Properties (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」(Analysis Services プロジェクトのプロパティの構成 (SSDT)) を参照してください。  
+ 既存のソリューション内にデータ マイニング オブジェクトを作成する場合、既定では、データ マイニング オブジェクトはソリューション ファイルと同じ名前の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに配置されます。 この名前およびターゲット サーバーは、 **[プロジェクトのプロパティ]** ダイアログ ボックスを使用して変更できます。 詳細については、「[Configure Analysis Services Project Properties (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」(Analysis Services プロジェクトのプロパティの構成 (SSDT)) を参照してください。  
   
 > [!WARNING]  
 >  プロジェクトを正常に作成して配置するには、OLAP/データ マイニング モードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにアクセスできる必要があります。 テーブル モデルをサポートする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスでは、データ マイニング ソリューションを開発または配置することはできません。また、PowerPivot ブックのデータまたはメモリ内データ ストアを使用するテーブル モデルのデータを直接使用することもできません。 使用する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスがデータ マイニングをサポートできるかどうかを判断するには、「 [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」(Analysis Services インスタンスのサーバー モードの決定) を参照してください。  

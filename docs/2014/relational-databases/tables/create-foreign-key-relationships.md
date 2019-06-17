@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761614"
 ---
 # <a name="create-foreign-key-relationships"></a>外部キーのリレーションシップの作成
@@ -71,7 +71,7 @@ ms.locfileid: "62761614"
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>テーブル デザイナーで外部キー リレーションシップを作成するには  
   
-1.  オブジェクト エクスプローラーで、リレーションシップの外部キー側となるテーブルを右クリックして、**[デザイン]** をクリックします。  
+1.  オブジェクト エクスプローラーで、リレーションシップの外部キー側となるテーブルを右クリックして、 **[デザイン]** をクリックします。  
   
      **テーブル デザイナー**にテーブルが表示されます。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62761614"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、テーブルを作成し、`Sales.SalesReason` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `TempID` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、`Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、テーブルを作成し、`Sales.SalesReason` テーブル内の `SalesReasonID` 列を参照する外部キー制約を `TempID` 列に定義します。 ON DELETE CASCADE 句および ON UPDATE CASCADE 句を使用することによって、`Sales.SalesReason` テーブルに対する変更が自動的に `Sales.TempSalesReason` テーブルにも反映されるようにしています。  
   
     ```  
     USE AdventureWorks2012;  
@@ -122,7 +122,7 @@ ms.locfileid: "62761614"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、`TempID` 列に外部キーを作成し、`Sales.SalesReason` テーブルの `SalesReasonID` 列を参照します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、`TempID` 列に外部キーを作成し、`Sales.SalesReason` テーブルの `SalesReasonID` 列を参照します。  
   
     ```  
     USE AdventureWorks2012;  

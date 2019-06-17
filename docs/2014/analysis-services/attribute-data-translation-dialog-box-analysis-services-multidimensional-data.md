@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063065"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>[属性データの翻訳] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -50,7 +50,7 @@ ms.locfileid: "66063065"
  このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には関連する言語またはアルファベットの辞書で定義されている並べ替えおよび比較ルールが使用されます。  
   
 > [!NOTE]  
->  このオプションが選択されている場合、 **[大文字と小文字を区別する]**、 **[アクセントを区別する]**、 **[かなを区別する]**、および **[文字幅を区別する]** オプションは無効になります。  
+>  このオプションが選択されている場合、 **[大文字と小文字を区別する]** 、 **[アクセントを区別する]** 、 **[かなを区別する]** 、および **[文字幅を区別する]** オプションは無効になります。  
   
  **大文字小文字を区別**  
  このオプションを選択すると、関連する言語またはアルファベットに適用される辞書のルールに基づいてデータの並べ替えと比較を行い、大文字と小文字による区別を行います。  
@@ -72,7 +72,7 @@ ms.locfileid: "66063065"
   
  このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は同じ文字の 1 バイト表現と 2 バイト表現を同じものと見なします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [翻訳の詳細&#40;[翻訳] タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   

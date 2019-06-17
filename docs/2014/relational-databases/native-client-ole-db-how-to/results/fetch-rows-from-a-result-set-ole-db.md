@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ea6619eede506326cdbb1442f86dc76c44e1765
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63225512"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>結果セットからの行のフェッチ (OLE DB)
@@ -375,7 +375,7 @@ int ProcessResultSet() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結果を処理する方法に関するトピック &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

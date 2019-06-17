@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063048"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>[属性の特性] タブ (マイニング モデル ビューアー)
-  Naïve Bayes モデルの結果と入力属性との関係を調べるには、**[属性の特性]** ペインを使用します。 対象となる属性の値を選択した後、結果に対する影響が最も大きい入力属性の一覧を確認できます。  
+  Naïve Bayes モデルの結果と入力属性との関係を調べるには、 **[属性の特性]** ペインを使用します。 対象となる属性の値を選択した後、結果に対する影響が最も大きい入力属性の一覧を確認できます。  
   
- **詳細情報。**[Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **詳細情報。** [Microsoft Naive Bayes アルゴリズム](data-mining/microsoft-naive-bayes-algorithm.md)、 [Microsoft Naive Bayes ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  

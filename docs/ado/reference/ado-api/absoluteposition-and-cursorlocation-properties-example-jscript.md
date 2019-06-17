@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: af101791b9ca921bfd5c638d3e7e4fd6002efeb6
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66704077"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition および CursorLocation プロパティの例 (JScript)
@@ -128,7 +128,7 @@ BODY {
 <!-- EndAbsolutePositionJS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [CursorLocation プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

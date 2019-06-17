@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774586"
 ---
 # <a name="configure-log-shipping-sql-server"></a>ログ配布の構成 (SQL Server)
@@ -78,7 +78,7 @@ ms.locfileid: "62774586"
   
 8.  **[バックアップ ジョブ]** の **[スケジュール]** ボックスに、バックアップ スケジュールの一覧が表示されます。 スケジュールをカスタマイズする場合は、 **[スケジュール]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 ログ配布構成を作成するときに、次のオプションのいずれかを選択してログ バックアップのバックアップ圧縮動作を制御できます。**既定のサーバー設定を使用して、**、**バックアップを圧縮**、または**バックアップを圧縮しない**します。 詳細については、「 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)」をご覧ください。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 ログ配布構成を作成する際には、次のオプションのいずれかを選択して、ログ バックアップのバックアップ圧縮動作を制御することができます: **既定のサーバー設定を使用する**、**バックアップを圧縮する**、**バックアップを圧縮しない**。 詳細については、「 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)」をご覧ください。  
   
 10. **[OK]** をクリックします。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62774586"
   
 -   [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [ログ配布テーブルとストアド プロシージャ](log-shipping-tables-and-stored-procedures.md)  
   

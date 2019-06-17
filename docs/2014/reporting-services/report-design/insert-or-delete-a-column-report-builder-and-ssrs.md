@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1d5f5d846a690676942e0d4ffcba0475a35595a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105677"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>列の挿入または削除 (レポート ビルダーおよび SSRS)
@@ -49,7 +49,7 @@ ms.locfileid: "66105677"
   
 ### <a name="to-insert-a-column-in-a-group-in-a-selected-data-region"></a>選択したデータ領域のグループに列を挿入するには  
   
--   Tablix データ領域の列グループ領域で、列の挿入位置にある列グループ セルを右クリックし、 **[列の挿入]** をクリックした後、 **[左 - 外側のグループ]**、 **[左 - 内側のグループ]**、 **[右 - 内側のグループ]**、または **[右 - 外側のグループ]** をクリックします。  
+-   Tablix データ領域の列グループ領域で、列の挿入位置にある列グループ セルを右クリックし、 **[列の挿入]** をクリックした後、 **[左 - 外側のグループ]** 、 **[左 - 内側のグループ]** 、 **[右 - 内側のグループ]** 、または **[右 - 外側のグループ]** をクリックします。  
   
      クリックした列グループのセルに対応するグループの内側または外側に列が追加されます。  
   

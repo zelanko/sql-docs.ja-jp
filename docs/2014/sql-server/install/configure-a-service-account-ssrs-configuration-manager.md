@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096095"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>サービス アカウントの構成 (SSRS 構成マネージャー)
@@ -48,7 +48,7 @@ ms.locfileid: "66096095"
   
 5.  対称キーをバックアップするかどうかを確認するメッセージが表示されたら、対称キーのバックアップ用のファイル名と場所を入力し、ファイルをロックおよびロック解除するためのパスワードを入力して **[OK]** をクリックします。  
   
-6.  レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
+6.  レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
   
 7.  対称キーを復元するかどうかを確認するメッセージが表示されたら、手順 5. で指定したパスワードを入力し、 **[OK]** をクリックします。  
   

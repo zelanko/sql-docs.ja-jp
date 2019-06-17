@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0faff73e9b823ab46073137e67c5dfc511404330
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404074"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>レッスン 4-7-不明なメンバーと Null 処理のプロパティを定義します。
@@ -90,7 +90,7 @@ ms.locfileid: "65404074"
   
 9. **[属性]** ペインで、この新しい属性の名前を「 **Category**」に変更します。  
   
-10. プロパティ ウィンドウでクリックして、 **NameColumn**プロパティ フィールドで、参照 をクリックし、(**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
+10. プロパティ ウィンドウでクリックして、 **NameColumn**プロパティ フィールドで、参照 をクリックし、( **.** ) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 11. **[基になる列]** ボックスの一覧で **[EnglishProductCategoryName]** を選択し、 **[OK]** をクリックします。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "65404074"
   
 6.  **Product** ディメンションのディメンション デザイナーで、 **[ブラウザー]** タブをクリックします。次に、 **[再接続]** をクリックします。  
   
-7.  **[階層]** ボックスの一覧に **[Product Model Lines]** が表示されていることを確認し、 **[All Products]**、 **[Components]** の順に展開します。  
+7.  **[階層]** ボックスの一覧に **[Product Model Lines]** が表示されていることを確認し、 **[All Products]** 、 **[Components]** の順に展開します。  
   
-8.  **[階層]** ボックスの一覧から **[Product Categories]** を選択し、 **[All Products]**、 **[Components]** の順に展開します。  
+8.  **[階層]** ボックスの一覧から **[Product Categories]** を選択し、 **[All Products]** 、 **[Components]** の順に展開します。  
   
     アセンブリ部品は何も表示されません。  
   

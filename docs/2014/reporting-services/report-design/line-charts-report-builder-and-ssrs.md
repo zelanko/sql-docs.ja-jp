@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0f6380144faaa138e558d0118b6620aa22a095e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105576"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折れ線グラフ (レポート ビルダーおよび SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66105576"
   
 -   線で描画される系列は、グラフ領域内であまり場所を取りません。  そのため、折れ線グラフは、縦棒グラフなどの他の種類のグラフと組み合わせることがよくあります。 ただし、折れ線グラフは、横棒、極座標、円、または図形のグラフと組み合わせることはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [横棒グラフ (レポート ビルダーおよび SSRS)](bar-charts-report-builder-and-ssrs.md)   
  [縦棒グラフ (レポート ビルダーおよび SSRS)](column-charts-report-builder-and-ssrs.md)   
  [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)   

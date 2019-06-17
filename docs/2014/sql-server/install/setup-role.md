@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092230"
 ---
 # <a name="setup-role"></a>セットアップ ロール
@@ -42,7 +42,7 @@ ms.locfileid: "66092230"
   
  オペレーティング システムがドメイン コントローラーでない場合、既定ではデータベース エンジンおよび Reporting Services は NTAUTHORITY\NETWORK SERVICE アカウントを、Integration Services は NTAUTHORITY\NETWORK SERVICE アカウントを、SQL フルテキスト フィルター デーモン ランチャーは NTAUTHORITY\LOCAL SERVICE アカウントを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerPivot for SharePoint インストール](https://go.microsoft.com/fwlink/?LinkId=206906)   
  [ハードウェアとソフトウェア要件 (PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [機能の選択](../../../2014/sql-server/install/feature-selection.md)  

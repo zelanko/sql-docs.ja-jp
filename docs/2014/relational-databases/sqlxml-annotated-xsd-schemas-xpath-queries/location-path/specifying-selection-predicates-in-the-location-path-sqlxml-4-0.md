@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012579"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>ロケーション パスでの選択述語の指定 (SQLXML 4.0)
@@ -71,7 +71,7 @@ child::Customer[child::ContactName]
   
  この例では、  **\<ContactName >** の子要素には、 **\<顧客 >** と呼ばれる XML ドキュメント内の要素*要素中心のマッピング*注釈付き XSD スキーマです。  
   
- この XPath 式では、`child` が軸名で、 `Customer` ノード テストです (場合に TRUE を`Customer`は、 **\<要素 >** ノード、ため**\<要素 >** のプリンシパル ノード型は、`child`軸) です。 `child::ContactName` は述語です。 述語では、`child`は、軸と`ContactName`はノード テストです (TRUE の場合`ContactName`は、 **\<要素 >** ノード)。  
+ この XPath 式では、`child` が軸名で、 `Customer` ノード テストです (場合に TRUE を`Customer`は、 **\<要素 >** ノード、ため **\<要素 >** のプリンシパル ノード型は、`child`軸) です。 `child::ContactName` は述語です。 述語では、`child`は、軸と`ContactName`はノード テストです (TRUE の場合`ContactName`は、 **\<要素 >** ノード)。  
   
  この式だけを返す、 **\<顧客 >** を持つコンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
   
@@ -82,7 +82,7 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>選択述語。例 4  
- 次の XPath 式を選択します**\<顧客 >** がない、コンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
+ 次の XPath 式を選択します **\<顧客 >** がない、コンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
   
 ```  
 child::Customer[not(child::ContactName)]  

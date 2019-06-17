@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2e1b4751d21b9aea4f80561909910d81abbc3756
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725747"
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
@@ -102,7 +102,7 @@ ms.locfileid: "62725747"
   
 8.  必要なテーブルがない場合は、ダイアログ ボックスを閉じ、対象のテーブルを含む新しいデータ ソース ビューを作成します。 データソースビューの作成方法については、「[データ ソース ビューの定義 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)」を参照してください。  
   
-9. マイニング モデルに入れ子になったテーブルが含まれている場合は、**[入れ子になったテーブルの選択]** をクリックし、データ ソース ビューのテーブルの一覧から入れ子になったテーブルを選択します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. マイニング モデルに入れ子になったテーブルが含まれている場合は、 **[入れ子になったテーブルの選択]** をクリックし、データ ソース ビューのテーブルの一覧から入れ子になったテーブルを選択します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 10. 変更するマッピングの結合線を選択し、 **[接続の変更]** をクリックします。  
   

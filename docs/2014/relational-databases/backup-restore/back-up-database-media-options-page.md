@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876819"
 ---
 # <a name="back-up-database-media-options-page"></a>[データベースのバックアップ]\([メディア オプション] ページ)
@@ -40,7 +40,7 @@ ms.locfileid: "62876819"
 ### <a name="overwrite-media"></a>[メディアに上書きします]  
  **[メディアに上書きします]** パネルのオプションでは、バックアップをメディアに書き込む方法を制御します。 [データベースのバックアップ] ダイアログ ボックスの [全般] ページでバックアップ先として [URL]\(Windows Azure ストレージ) を選択した場合、[メディアに上書きします] セクションのオプションは無効になります。 Transact-SQL の `BACKUP TO URL.. WITH FORMAT` ステートメントを使用してバックアップを上書きすることもできます。 詳細については、「 [SQL Server Backup to URL](sql-server-backup-to-url.md)」を参照してください。  
   
- 暗号化オプションとの併用がサポートされているのは、 **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプションのみです。 **[既存のメディア セットにバックアップする]** セクションのオプションを選択すると、**[バックアップ オプション]** ページの暗号化オプションが無効になります。  
+ 暗号化オプションとの併用がサポートされているのは、 **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]** オプションのみです。 **[既存のメディア セットにバックアップする]** セクションのオプションを選択すると、 **[バックアップ オプション]** ページの暗号化オプションが無効になります。  
   
 > [!NOTE]  
 >  メディア セットの詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)のインスタンスが動作しているコンピューターにテープ ドライブが装着されている場合のみ使用できます。  
@@ -86,7 +86,7 @@ ms.locfileid: "62876819"
  エラーが 1 回以上発生しても、バックアップ操作を続行します。  
   
 ### <a name="transaction-log"></a>[トランザクション ログ]  
- **[トランザクション ログ]** パネルのオプションでは、トランザクション ログ バックアップの動作を制御します。 これらのオプションは、完全復旧モデルと一括ログ復旧モデルにのみ適用されます。 これらのオプションは、**[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../integration-services/general-page-of-integration-services-designers-options.md) ページにある **[バックアップの種類]** フィールドで **[トランザクション ログ]** を選択した場合のみアクティブになります。  
+ **[トランザクション ログ]** パネルのオプションでは、トランザクション ログ バックアップの動作を制御します。 これらのオプションは、完全復旧モデルと一括ログ復旧モデルにのみ適用されます。 これらのオプションは、 **[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../integration-services/general-page-of-integration-services-designers-options.md) ページにある **[バックアップの種類]** フィールドで **[トランザクション ログ]** を選択した場合のみアクティブになります。  
   
 > [!NOTE]  
 >  トランザクション ログのバックアップの詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)」を参照してください。  
@@ -100,7 +100,7 @@ ms.locfileid: "62876819"
  このオプションを選択することは、[BACKUP](/sql/t-sql/statements/backup-transact-sql) ステートメント ([!INCLUDE[tsql](../../includes/tsql-md.md)]) で WITH NO_TRUNCATE および NORECOVERY を指定することと同じです。 詳細については、「[ログ末尾のバックアップ &#40;SQL Server&#41;](tail-log-backups-sql-server.md)」を参照してください。  
   
 ### <a name="tape-drive"></a>[テープ ドライブ]  
- **[テープ ドライブ]** パネルのオプションでは、バックアップ操作時のテープ管理を制御します。 これらのオプションは、**[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../integration-services/general-page-of-integration-services-designers-options.md) ページにある **[バックアップ先]** パネルで **[テープ]** を選択した場合のみアクティブになります。  
+ **[テープ ドライブ]** パネルのオプションでは、バックアップ操作時のテープ管理を制御します。 これらのオプションは、 **[データベースのバックアップ]** ダイアログ ボックスの [[全般]](../../integration-services/general-page-of-integration-services-designers-options.md) ページにある **[バックアップ先]** パネルで **[テープ]** を選択した場合のみアクティブになります。  
   
 > [!NOTE]  
 >  テープ デバイスの使用方法については、「[バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)」を参照してください。  

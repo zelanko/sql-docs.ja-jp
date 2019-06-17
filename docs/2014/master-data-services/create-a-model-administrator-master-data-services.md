@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483403"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>モデル管理者を作成する (マスター データ サービス)
@@ -59,7 +59,7 @@ ms.locfileid: "65483403"
   
  1 つの例外が発生: 場合は、ユーザーがある**Update**階層に割り当てられた権限**ルート**上、**階層メンバー**  タブで、ユーザーがモデルと見なされますが管理者です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [管理者 (マスター データ サービス)](administrators-master-data-services.md)   
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [階層メンバーの権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259258"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL から C へ: Timestamp
@@ -51,4 +51,4 @@ ms.locfileid: "63259258"
   
  [f] これは、対応する C データ型のサイズです。  
 
-SQL のタイムスタンプ データが文字データに変換されると、結果の文字列は、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"形式、秒の小数部の最大で 9 桁の数字を使用できます。 この形式は、Windows® 国設定の影響を受けません。 (、小数点と秒の小数部を除く全体の書式設定する必要があります使用、タイムスタンプの SQL データ型の有効桁数に関係なく)。
+SQL のタイムスタンプ データが文字データに変換されると、結果の文字列は、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.* ]"形式、秒の小数部の最大で 9 桁の数字を使用できます。 この形式は、Windows® 国設定の影響を受けません。 (、小数点と秒の小数部を除く全体の書式設定する必要があります使用、タイムスタンプの SQL データ型の有効桁数に関係なく)。

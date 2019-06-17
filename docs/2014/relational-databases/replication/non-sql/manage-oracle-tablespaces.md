@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022298"
 ---
 # <a name="manage-oracle-tablespaces"></a>Oracle テーブルスペースの管理
@@ -25,21 +25,21 @@ ms.locfileid: "63022298"
   
  Oracle パブリケーションの一部としてテーブルを構成する場合、必要に応じて、レプリケーション ログ情報を格納するときに既存の Oracle テーブルスペースを使用するように指定できます。 指定しない場合、レプリケーション オブジェクトのテーブルスペースは、パブリッシャーの構成時に構成したレプリケーション管理ユーザー スキーマに関連付けられた既定のテーブルスペースとなります。  
   
- **アーティクルのログ テーブルのテーブルスペースを指定するには**   
+ **アーティクルのログ テーブルのテーブルスペースを指定するには**  
   
 -   **[アーティクルのプロパティ]** ダイアログ ボックスでテーブルスペースを指定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../publish/view-and-modify-publication-properties.md)」を参照してください。  
   
 -   [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) を使用します。 **sp_changearticle**を使用するには、以下を指定します。  
   
-    -   パラメーター **@publisher**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@publisher** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
-    -   パラメーター **@publication**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@publication** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
-    -   パラメーター **@article**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@article** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
-    -   パラメーター **@property**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@property** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
-    -   パラメーター **@value**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@value** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   

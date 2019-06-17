@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f0235f14366667dbce21af92cf0418bb6fa1e0e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63248209"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
@@ -62,7 +62,7 @@ DistinctCount(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

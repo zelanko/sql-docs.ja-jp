@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62df5e05019b8b00fa5297bc3c7c3291a6c0f918
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072176"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>[新しいマイニング モデル] ダイアログ ボックス ([マイニング構造] ビュー)
@@ -29,7 +29,7 @@ ms.locfileid: "66072176"
  **アルゴリズム名**  
  新しいマイニング モデルの基になるアルゴリズムを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造 ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [既存のマイニング構造へのマイニング モデルの追加](data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   

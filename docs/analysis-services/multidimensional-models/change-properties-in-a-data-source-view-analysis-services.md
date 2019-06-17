@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec8840a9d4f66247c41466a6d32c7dd6eee7de6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988101"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>データ ソース ビューのプロパティの変更 (Analysis Services)
@@ -72,7 +72,7 @@ ms.locfileid: "62988101"
 |長さ|基になるテーブルまたはビュー内の列のデータに基づいて、列の最大長を指定します。|  
 |名前|基になる列の名前、または名前付き計算の名前を指定します。 **Name** プロパティは、名前付き計算を基にして属性を定義するときに、OLAP およびデータ マイニング オブジェクトによって使用されます。 このプロパティは、名前付き計算に対してのみ編集できます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

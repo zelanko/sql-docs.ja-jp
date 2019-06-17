@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072938"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>パーティション スライス プロパティの設定 (Analysis Services)
@@ -45,7 +45,7 @@ ms.locfileid: "66072938"
 >   
 >  複雑なスライスを定義する必要がある場合は、XMLA Alter スクリプトを使用して、スライスで組を定義することをお勧めします。 続けて、ascmd コマンド ライン ツールまたは SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) タスクを使用してスクリプトを実行し、指定したメンバーのセットをパーティション処理の直前に作成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ローカル パーティションの作成と管理 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)  
   
   

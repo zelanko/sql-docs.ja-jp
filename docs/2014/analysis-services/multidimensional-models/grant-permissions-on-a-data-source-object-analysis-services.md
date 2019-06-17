@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074999"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>データ ソース オブジェクトに対する権限の付与 (Analysis Services)
@@ -53,7 +53,7 @@ ms.locfileid: "66074999"
   
      OLE DB またはその他のクライアント コンポーネントの権限借用レベル プロパティを通じての権限借用をクライアントが許可していない場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、基になるデータ ソースに匿名接続しようとします。 リモート データ ソースへの匿名接続が成功することはほとんどありません。これは、大部分のデータ ソースで匿名アクセスが許可されないためです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース](data-sources-in-multidimensional-models.md)   
  [接続文字列プロパティ &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   

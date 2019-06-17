@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108736"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>レポート サーバーの初期化 (SSRS 構成マネージャー)
@@ -70,7 +70,7 @@ ms.locfileid: "66108736"
 ## <a name="how-to-confirm-a-report-server-initialization"></a>レポート サーバーの初期化の確認方法  
  レポート サーバーの初期化を確認するには、コマンド ウィンドウで「**http://\<サーバー名>/reportserver**」と入力し、レポート サーバー Web サービスに対して ping を実行します。 `RSReportServerNotActivated` エラーが発生した場合は、初期化が失敗しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
