@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014267"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
@@ -62,7 +62,7 @@ ms.locfileid: "66014267"
   
 11. **[空間]** ページで、インデックスの空間プロパティに対して使用する値を指定します。  
   
-     インデックスを作成するとき、`geometry`型の列を指定する必要がある、 **(*`X-min`*、*`Y-min`*)** と **(*`X-max`*、*`Y-max`*)** 境界ボックスの座標。 インデックスの場合、`geography`型の列で、境界ボックスのフィールド読み取り専用に指定した後、**地理グリッド**テセレーション スキーム、地理グリッド テセレーション スキームは境界ボックスを使用しないためです。  
+     インデックスを作成するとき、`geometry`型の列を指定する必要がある、 **( *`X-min`* 、 *`Y-min`* )** と **( *`X-max`* 、 *`Y-max`* )** 境界ボックスの座標。 インデックスの場合、`geography`型の列で、境界ボックスのフィールド読み取り専用に指定した後、**地理グリッド**テセレーション スキーム、地理グリッド テセレーション スキームは境界ボックスを使用しないためです。  
   
      また、 **[オブジェクトごとのセル数]** フィールドに既定以外の値を指定したり、テセレーション スキームの任意のレベルのグリッド密度を指定したりすることもできます。 オブジェクトごとのセル数の既定値は、 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] では 16、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降では 8 で、 **のグリッド密度の既定値は** [中] [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]です。  
   

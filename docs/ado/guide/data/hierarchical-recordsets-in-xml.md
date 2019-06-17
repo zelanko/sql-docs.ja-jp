@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 71b28233d8b687eff803a5897b31b2bc59bbd4e2
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700629"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML での階層レコードセット
@@ -125,5 +125,5 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   子レコードには、複数の親レコードへの参照がある場合は、レコード セットをもう一度開こう子レコード セットが重複レコードを含みます。 ただし、これらの重複は場合にのみ表示、ユーザーが基になる子行セットを直接操作します。 子レコード セット (つまり ADO 内を移動する唯一の方法) を移動するチャプターを使用する場合は、重複部分は表示されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

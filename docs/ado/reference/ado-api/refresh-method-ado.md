@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0fee14a397104f8320fc01ce29f8364384151922
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66711714"
 ---
 # <a name="refresh-method-ado"></a>Refresh メソッド (ADO)
@@ -66,7 +66,7 @@ collection.Refresh
 |[プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション](../../../ado/reference/adox-api/tables-collection-adox.md)|[ユーザー コレクション](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views コレクション](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Refresh メソッドの例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh メソッドの例 (vc++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057894"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
@@ -52,7 +52,7 @@ ms.locfileid: "66057894"
  **[出力の別名]**  
  各参照列の出力の別名を入力します。 既定では参照列の名前が使用されますが、一意なわかりやすい名前を自由に付けることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[参照変換エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [参照変換エディター ([接続] ページ)](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [参照変換エディター ([詳細設定] ページ)](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   

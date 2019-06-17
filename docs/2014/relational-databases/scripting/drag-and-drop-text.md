@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c103672bbc8dcb6028190a624c1f9ecdb3caf3d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064141"
 ---
 # <a name="drag-and-drop-text"></a>テキストのドラッグ アンド ドロップ
@@ -43,7 +43,7 @@ ms.locfileid: "66064141"
   
  テキストをドラッグすると、テキストが移動します。つまり、テキストが元の場所から消去されて新しい場所に移動します。 Ctrl キーを押しながらテキストをドラッグすると、テキストが新しい場所にコピーされます。 オブジェクト エクスプローラーからオブジェクトをドラッグする場合は例外で、オブジェクト エクスプローラーからオブジェクト名は削除されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コード内とテキスト内の移動](navigate-code-and-text.md)  
   
   

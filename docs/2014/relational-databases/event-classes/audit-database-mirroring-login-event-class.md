@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711826"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login イベント クラス
@@ -64,7 +64,7 @@ ms.locfileid: "62711826"
 |5|Authentication Failure|Authentication Failure イベントは、データベース ミラーリング エンドポイントがエラーのために接続を認証できないことを報告するイベントです。 Windows 認証の場合は、データベース ミラーリング エンドポイントが Windows 認証を使用できないことを示しています。 証明書ベースの認証の場合は、データベース ミラーリング エンドポイントが証明書にアクセスできないことを示しています。|  
 |6|Authorization Failure|Authorization Failure イベントは、データベース ミラーリング エンドポイントが接続の認証を拒否したことを報告するイベントです。 Windows 認証の場合は、接続のセキュリティ ID に一致するデータベース ユーザーが見つからないことを示しています。 証明書ベースの認証の場合は、メッセージにより渡された公開キーが **master** データベース内の証明書に対応していないことを示しています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

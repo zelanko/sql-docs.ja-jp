@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724572"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (TRANSACT-SQL)
@@ -52,7 +52,7 @@ sp_cursorfetch cursor
 |0x0001|FIRST|最初のバッファーをフェッチ*nrows*行。 場合*nrows*が 0 と等しい、カーソルが結果セットの前に、行は返されません。|  
 |0x0002|NEXT|次のバッファーをフェッチ*nrows*行。|  
 |0x0004|[前へ]|以前のバッファーをフェッチ*nrows*行。<br /><br /> 注:FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返します、FORWARD_ONLY カーソルに対して PREV を使用します。|  
-|0x0008|前の|最後のバッファーをフェッチ*nrows*行。 場合*nrows*が 0 と等しい、カーソルが結果セットし、行は返されません。<br /><br /> 注:FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返します、FORWARD_ONLY カーソルに対して LAST を使用します。|  
+|0x0008|LAST|最後のバッファーをフェッチ*nrows*行。 場合*nrows*が 0 と等しい、カーソルが結果セットし、行は返されません。<br /><br /> 注:FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返します、FORWARD_ONLY カーソルに対して LAST を使用します。|  
 |0x10|ABSOLUTE|バッファーをフェッチ*nrows*で始まる行、 *rownum*行。<br /><br /> 注:FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返す動的カーソルまたは FORWARD_ONLY カーソルに対して ABSOLUTE を使用します。|  
 |0x20|RELATIVE|バッファーをフェッチ*nrows*として指定されている行で始まる行、 *rownum*現在のブロックの最初の行からの行の値。 ここで*rownum*負の数を指定できます。<br /><br /> 注:FORWARD_ONLY がのみ 1 つの方向のスクロールをサポートしているために、エラー メッセージを返します、FORWARD_ONLY カーソルに対して RELATIVE を使用します。|  
 |0x80|更新|基になるテーブルのデータをバッファーに再読み込みします。|  

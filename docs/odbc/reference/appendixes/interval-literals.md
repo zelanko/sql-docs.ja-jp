@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188806"
 ---
 # <a name="interval-literals"></a>Interval のリテラル
@@ -76,7 +76,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{間隔 '3261' DAY(4)}|3261 日の間隔を指定します。 先頭の有効桁数の間隔は 4 です。|  
 |{間隔 '163' HOUR(3)}|163 日の間隔を指定します。 先頭の有効桁数の間隔は 3 です。|  
 |{間隔 '163' MINUTE(3)}|163 分の間隔を指定します。 先頭の有効桁数の間隔は 3 です。|  
-|{間隔 '223.16' SECOND(3,2)}|223.16 秒の間隔を指定します。 間隔の先頭有効桁数は 3 で、秒の有効桁数は 2 です。|  
+|{間隔 '223.16' SECOND(3,2)}|223\.16 秒の間隔を指定します。 間隔の先頭有効桁数は 3 で、秒の有効桁数は 2 です。|  
 |{0} か月に間隔 ' 163-11"YEAR(3)}|163 年 11 月の間隔を指定します。 先頭の有効桁数の間隔は 3 です。|  
 |{INTERVAL 163 ' 12' 時間に DAY(3)}|163 日 12 時間の間隔を指定します。 先頭の有効桁数の間隔は 3 です。|  
 |{間隔 '163 12時 39分' DAY(3) 分}|163 日 12 時間 39 分の間隔を指定します。 先頭の有効桁数の間隔は 3 です。|  
