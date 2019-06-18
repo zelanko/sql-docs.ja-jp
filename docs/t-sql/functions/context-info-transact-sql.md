@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014dee25c2e2237f7c9b72b79f78aa2a0abb4e47
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948147"
 ---
 # <a name="contextinfo--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
@@ -47,7 +47,7 @@ CONTEXT_INFO()
   
 **Context_info** は設定されませんでした: 場合
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
--   * * -[!INCLUDE[ssSDS](../../includes/sssds-md.md)] で  、一意のセッション固有 GUID.* * を返します。  
+-   \* * -[!INCLUDE[ssSDS](../../includes/sssds-md.md)] で  、一意のセッション固有 GUID.* * を返します。  
   
 ## <a name="remarks"></a>Remarks  
 複数のアクティブな結果セット (MARS) 機能によって、アプリケーションは複数のバッチまたは要求を同じ接続上で同時に実行できます。 `CONTEXT_INFO` 関数が SET ステートメントと同じバッチで実行される場合、MARS 接続バッチの 1 つで SET CONTEXT_INFO を実行すると、`CONTEXT_INFO` 関数は新しいコンテキスト値を返します。 `CONTEXT_INFO` 関数が他の 1 つ以上の接続バッチで実行されている場合、SET ステートメントを実行したバッチの完了後にバッチが開始されない限り、`CONTEXT_FUNCTION` は新しい値を返しません。

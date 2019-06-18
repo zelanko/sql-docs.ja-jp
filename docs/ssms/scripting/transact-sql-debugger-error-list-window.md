@@ -17,15 +17,15 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d0f91e6f0bd6e7192201540bbaef764a9394c941
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821765"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL デバッガー - [エラー一覧] ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[エラー一覧]** には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[エラー一覧]** には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
   
 ## <a name="features-of-the-error-list"></a>[エラー一覧] の機能  
  **[エラー一覧]** は、次の機能を提供します。  

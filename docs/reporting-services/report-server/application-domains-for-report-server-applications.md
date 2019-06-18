@@ -12,10 +12,10 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574794"
 ---
 # <a name="application-domains-for-report-server-applications"></a>レポート サーバー アプリケーションのアプリケーション ドメイン
@@ -56,7 +56,7 @@ ms.locfileid: "65574794"
   
  レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションでは、リサイクル処理を引き起こした条件に応じて、アプリケーション ドメインのリサイクル処理がそれぞれ別個に実行される場合と、まとめて実行される場合とがあります。  
   
--    [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって開始されたリサイクル処理は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーション (つまり、レポート サーバー Web サービスおよびレポート マネージャー) にのみ影響します。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] は、監視対象のファイルが変更されたかどうかに基づいて、アプリケーション ドメインをリサイクルします。 通常、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって開始されたリサイクル処理は、バックグラウンド処理アプリケーションのリサイクル処理とは無関係に実行されます。  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって開始されたリサイクル処理は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーション (つまり、レポート サーバー Web サービスおよびレポート マネージャー) にのみ影響します。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] は、監視対象のファイルが変更されたかどうかに基づいて、アプリケーション ドメインをリサイクルします。 通常、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] によって開始されたリサイクル処理は、バックグラウンド処理アプリケーションのリサイクル処理とは無関係に実行されます。  
   
 -   通常、レポート サーバーによって開始されたリサイクル処理は、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションに影響します。 リサイクル処理は、構成設定の変更時やサービスの再起動時に実行されます。  
   

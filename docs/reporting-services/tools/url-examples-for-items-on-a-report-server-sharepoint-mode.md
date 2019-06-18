@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574017"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>レポート サーバー上のアイテムの URL の例 - SharePoint モード
@@ -49,7 +49,7 @@ ms.locfileid: "65574017"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint Server サイトまたはサブサイトの URL  
  レポートまたはレポート データ ソースを配置する場合は、SharePoint サイトおよびサブサイト (ある場合) の URL を使用する必要があります。 URL では、サーバー名のすぐ後に、`https://*servername/site*` や `https://*servername/site/subsite*` のような形式のサイト名が表示されます。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web アプリケーションでは、サイトおよびサブサイトは一般的にメイン サイトのタブに対応します。 サイト名またはサブサイト名を見つけるには、 **[ホーム]** をクリックし、次に **[すべてのサイト コンテンツの表示]** をクリックします。 末尾までスクロールして **[サイトとワークスペース]** を選択します。 このセクションにサイトの一覧が表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web アプリケーションでは、サイトおよびサブサイトは一般的にメイン サイトのタブに対応します。 サイト名またはサブサイト名を見つけるには、 **[ホーム]** をクリックし、次に **[すべてのサイト コンテンツの表示]** をクリックします。 末尾までスクロールして **[サイトとワークスペース]** を選択します。 このセクションにサイトの一覧が表示されます。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint ライブラリの URL  
  レポートまたは関連アイテムを SharePoint ライブラリに配置する場合は、SharePoint ライブラリの URL を使用する必要があります。 ライブラリに使用する URL は、使用している SharePoint のバージョンによって異なります。  

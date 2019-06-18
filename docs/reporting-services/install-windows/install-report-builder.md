@@ -8,10 +8,10 @@ ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d0d991e088a9bd06c322c3d0c8839b0c9c29fc52
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502953"
 ---
 # <a name="install-report-builder"></a>レポート ビルダーをインストールする
@@ -30,7 +30,7 @@ ms.locfileid: "65502953"
   
 ### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>統合された SharePoint サイト: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトで、 **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]**、 **[レポート ビルダーのモデル]**、および **[レポート データ ソース]** が表示されない場合は、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトで、 **[新しいドキュメント]** メニューに **[レポート ビルダー レポート]** 、 **[レポート ビルダーのモデル]** 、および **[レポート データ ソース]** が表示されない場合は、それらのコンテンツの種類を SharePoint ライブラリに追加する必要があります。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。  
 
 ::: moniker-end
  
@@ -84,7 +84,7 @@ ms.locfileid: "65502953"
   
 3.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-4.   **[開く]** ボックスに「 **cmd.**」と入力します。  
+4.  **[開く]** ボックスに「 **cmd.** 」と入力します。  
   
 5.  コマンド プロンプト ウィンドウで、ReportBuilder3.msi を保存したフォルダーに移動します。  
   
@@ -100,13 +100,13 @@ ms.locfileid: "65502953"
   
 ## <a name="set-includessrbnoversionincludesssrbnoversionmd-defaults"></a>[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 既定値を設定する  
   
--   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]のインストール後に、一部の既定のオプションを設定できます。 **[ファイル]** > **[オプション]** をクリックします。  
+-   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]のインストール後に、一部の既定のオプションを設定できます。 **[ファイル]**  >  **[オプション]** をクリックします。  
   
      既定の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルまたは SharePoint サイトを設定することをお勧めします。 詳細については、「 [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md)」を参照してください。  
   
 -   **[レポート ビルダー]** をクリックします。  
   
-     既存のサーバーのリストにレポート サーバーが表示されない場合は、**[レポートを開く]** ダイアログ ボックスを閉じ、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の下部の **[接続]** をクリックしてサーバーに接続します。  
+     既存のサーバーのリストにレポート サーバーが表示されない場合は、 **[レポートを開く]** ダイアログ ボックスを閉じ、[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の下部の **[接続]** をクリックしてサーバーに接続します。  
   
 ## <a name="see-also"></a>参照  
  [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)   

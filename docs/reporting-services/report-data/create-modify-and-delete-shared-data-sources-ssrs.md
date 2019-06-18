@@ -17,10 +17,10 @@ ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573208"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
@@ -70,7 +70,7 @@ ms.locfileid: "65573208"
   
  **Web ポータルで共有データ ソースを作成するには**  
   
-1.  Web ポータルで、**[新規]** > **[データ ソース]** の順に選択します。 
+1.  Web ポータルで、 **[新規]**  >  **[データ ソース]** の順に選択します。 
   
 4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : \@ & = + , $ / * < > | " /.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65573208"
   
 1.  Web ポータルで、共有データ ソースに移動します。  
   
-2.  共有データ ソースの右上隅にある省略記号 (...)、**[管理]** の順に選択します。   
+2.  共有データ ソースの右上隅にある省略記号 (...)、 **[管理]** の順に選択します。   
 
     **[プロパティ]** ページを開きます。
   
@@ -122,7 +122,7 @@ ms.locfileid: "65573208"
   
 1. Web ポータルで、共有データ ソースに移動します。  
   
-2.  共有データ ソースの右上隅にある省略記号 (...)、**[管理]** の順に選択します。    
+2.  共有データ ソースの右上隅にある省略記号 (...)、 **[管理]** の順に選択します。    
     **[プロパティ]** ページを開きます。
   
 3. **[削除]** をクリックして、 **[OK]** をクリックします。  
@@ -158,7 +158,7 @@ ms.locfileid: "65573208"
   
 1.  ライブラリ リボンで、 **[ドキュメント]** タブをクリックします。  
   
-2.   **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
+2.  **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
   
     > [!NOTE]  
     >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。  

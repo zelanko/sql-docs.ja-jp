@@ -1,19 +1,19 @@
 ---
 title: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 06ac6b8fb0c24751439d955b32eb93d9447bdf7c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
-ms.translationtype: HT
+ms.openlocfilehash: 81b323f869aa28312911bf744e359def819029fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62514411"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
 
@@ -21,7 +21,7 @@ ms.locfileid: "53328842"
   
 ## <a name="initial-configuration"></a>初期構成
 
- レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 このサービスは、ドメイン ユーザー アカウントまたは **Virtual Service Account**などのビルトイン アカウントで実行できます。 既定のアカウントはありません。インストール ウィザードの [**Service Accounts**] ページで指定するアカウントが、レポート サーバー サービスの初期アカウントになります。  
+ レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 このサービスは、ドメイン ユーザー アカウントまたは **Virtual Service Account**などのビルトイン アカウントで実行できます。 既定のアカウントはありません。インストール ウィザードの **[Service Accounts]** ページで指定するアカウントが、レポート サーバー サービスの初期アカウントになります。  
   
 > [!IMPORTANT]  
 > レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] は異なる [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、同一のレポート サーバー プロセス ID の単一のサービス アーキテクチャで実行されます。
@@ -60,7 +60,7 @@ ms.locfileid: "53328842"
   
 5. 対称キーをバックアップするかどうかを確認するメッセージが表示されたら、対称キーのバックアップ用のファイル名と場所を入力し、ファイルをロックおよびロック解除するためのパスワードを入力して **[OK]** をクリックします。  
   
-6. レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
+6. レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
   
 7. 対称キーを復元するかどうかを確認するメッセージが表示されたら、手順 5. で指定したパスワードを入力し、 **[OK]** をクリックします。  
   

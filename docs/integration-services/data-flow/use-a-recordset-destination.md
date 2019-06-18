@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba05390afed4b4c2a9f3753523f4afe31bee69c0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725718"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
@@ -103,7 +103,7 @@ ms.locfileid: "65725718"
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、データ フロー タスクをデザイン画面に追加します。  
   
-2.   **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]** を開きます。  
+2.  **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]** を開きます。  
   
 3.  エディターの **[接続マネージャー]** ページで、次の設定を使用してソースを構成します。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "65725718"
   
     5.  **[MessageSourceType]** に対して **[直接入力]** を選択します。  
   
-5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン (**[...]**) をクリックして **[プロパティ式エディター]** を開きます。  
+5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン ( **[...]** ) をクリックして **[プロパティ式エディター]** を開きます。  
   
 6.  **[プロパティ式エディター]** で、次の情報を入力します。  
   

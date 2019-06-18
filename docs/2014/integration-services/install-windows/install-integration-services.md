@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768222"
 ---
 # <a name="install-integration-services"></a>Integration Services のインストール
@@ -33,7 +33,7 @@ ms.locfileid: "62768222"
  セットアップの開始、セットアップ ウィザードの使用、またはコマンド ラインからのセットアップの実行の手順については、ここでは扱いません。 インストールするには、セットアップと選択のコンポーネントを起動する方法の詳しい手順については、「 [SQL Server 2014 インストールのクイック スタート](../../getting-started/quick-start-installation-of-sql-server-2014.md)します。 インストールするためのコマンド ライン オプションについて[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を参照してください[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
   
 ## <a name="preparing-to-install-integration-services"></a>Integration Services をインストールする準備  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする前に、次の要件を確認してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]をインストールする前に、次の要件を確認してください。  
   
 -   [SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

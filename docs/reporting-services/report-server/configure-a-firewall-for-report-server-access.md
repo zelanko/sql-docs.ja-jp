@@ -12,10 +12,10 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb2676b2cc06b2a3ab774b467759c7e26c58e3a
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175569"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>レポート サーバー アクセスに対するファイアウォールの構成
@@ -40,11 +40,11 @@ ms.locfileid: "66175569"
   
 2.  **[詳細な設定]** をクリックします。  
   
-3.   **[受信の規則]** をクリックします。  
+3.  **[受信の規則]** をクリックします。  
   
 4.  **[操作]** ウィンドウで **[新しい規則]** をクリックします。  
   
-5.   **[ポート]** の **[規則の種類]** をクリックします。  
+5.  **[ポート]** の **[規則の種類]** をクリックします。  
   
 6.  **[次へ]** をクリックします。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66175569"
   
 13. **[次へ]** をクリックします。  
   
-14.  **[名前]** ページで、「**ReportServer (TCP on port 80)** 」という名前を入力します。  
+14. **[名前]** ページで、「**ReportServer (TCP on port 80)** 」という名前を入力します。  
   
 15. **[完了]** をクリックします。  
   

@@ -14,10 +14,10 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503094"
 ---
 # <a name="feature-reference-reporting-services"></a>機能リファレンス (Reporting Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65503094"
  レポート サーバー インスタンスの配置と管理に使用される [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成ツールのヘルプについて説明します。  
   
  [Management Studio のレポート サーバーの F1 ヘルプ](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]でレポートおよびレポート サーバーの管理に使用されるダイアログ ボックスのヘルプについて説明します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]でレポートおよびレポート サーバーの管理に使用されるダイアログ ボックスのヘルプについて説明します。  
   
  [HTML ビューアーとレポート ツール バー](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  Web ブラウザーでレポートを表示する場合に使用される HTML ビューアー コンポーネントのヘルプについて説明します。  

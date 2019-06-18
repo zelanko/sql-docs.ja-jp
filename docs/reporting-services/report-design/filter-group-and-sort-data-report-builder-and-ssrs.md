@@ -18,10 +18,10 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576529"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)
@@ -112,7 +112,7 @@ ms.locfileid: "65576529"
 ### <a name="sorting-data-in-a-dataset-query"></a>データセット クエリのデータの並べ替え  
  データセット クエリで並べ替え順序を指定し、レポートのデータが取得される前にデータを事前に並べ替えます。 クエリのデータを並べ替えることによって、レポート プロセッサではなく、データ ソースによって並べ替えが実行されます。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの種類の場合、ORDER BY 句をデータセット クエリに追加できます。 たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリは、 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`のように、Sales 列および Region 列を Sales を基準にテーブル SalesOrders から降順で並べ替えます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの種類の場合、ORDER BY 句をデータセット クエリに追加できます。 たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリは、 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`のように、Sales 列および Region 列を Sales を基準にテーブル SalesOrders から降順で並べ替えます。  
   
 > [!NOTE]  
 >  すべてのデータ ソースでクエリの並べ替え順序を指定できるわけではありません。  
