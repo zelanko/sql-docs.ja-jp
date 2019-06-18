@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62686230"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (TRANSACT-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "62686230"
 |filename|**nvarchar (256)**|パスとサービスの実行可能ファイルのファイル名。 null にすることはできません。|  
 |is_clustered|**nvarchar(1)**|クラスター化されたサーバーのリソースとして、サービスがインストールされているかどうかを示します。 null にすることはできません。|  
 |cluster_nodename|**nvarchar (256)**|サービスがインストールされているクラスター ノードの名前。 NULL 値が許可されます。|
-|instant_file_initialization_enabled|**nvarchar(1)**|ファイルの瞬時初期化が有効になっているかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービス。<br /><br />Y = サービスのファイルの瞬時初期化を有効にします。<br /><br />N = サービスのファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用対象:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
+|instant_file_initialization_enabled|**nvarchar(1)**|ファイルの瞬時初期化が有効になっているかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービス。<br /><br />Y = サービスのファイルの瞬時初期化を有効にします。<br /><br />N = サービスのファイルの瞬時初期化が無効になっています。<br /><br /> NULL 値が許可されます。<br /><br /> **注:** SQL Server エージェントなどの他のサービスには適用されません。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4、および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
 
 ## <a name="security"></a>セキュリティ  
   

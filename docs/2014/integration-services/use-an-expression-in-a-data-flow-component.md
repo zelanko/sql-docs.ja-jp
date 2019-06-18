@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054820"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>データ フロー コンポーネントで式を使用する
@@ -48,7 +48,7 @@ ms.locfileid: "66054820"
   
 7.  左側のペインで **[変数]** を展開し、システム変数およびユーザー定義変数を表示します。また、 **[列]** を展開して、変換の入力列を表示します。  
   
-8.  右側のペインで **[数学関数]**、 **[文字列関数]**、 **[日付/時刻関数]**、 **[NULL 関数]**、 **[型キャスト]**、および **[演算子]** を展開して、式の文法で用意されている関数、キャスト、および演算子にアクセスします。  
+8.  右側のペインで **[数学関数]** 、 **[文字列関数]** 、 **[日付/時刻関数]** 、 **[NULL 関数]** 、 **[型キャスト]** 、および **[演算子]** を展開して、式の文法で用意されている関数、キャスト、および演算子にアクセスします。  
   
 9. 変換に応じて、次のいずれかの操作を実行し、式を作成します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66054820"
     > [!NOTE]  
     >  式が有効でない場合、式に文法エラーがあることを示す警告が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)   
  [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
  [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   

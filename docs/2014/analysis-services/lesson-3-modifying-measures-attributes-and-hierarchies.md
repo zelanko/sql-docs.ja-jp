@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078776"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>レッスン 3: メジャー、属性、および階層の修正
@@ -40,7 +40,7 @@ ms.locfileid: "66078776"
  [配置したキューブの表示](lesson-3-5-browsing-the-deployed-cube.md)  
  この実習では、キューブ デザイナーのブラウザーを使用してキューブ データを表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のチュートリアル シナリオ](analysis-services-tutorial-scenario.md)   
  [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187650"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX データ操作ステートメント (MDX)
@@ -31,7 +31,7 @@ ms.locfileid: "63187650"
 |[SELECT ステートメント (MDX)](../mdx/mdx-data-manipulation-select.md)|指定されたキューブからデータを取得します。|  
 |[UPDATE CUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新します。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX ステートメント リファレンス&#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  

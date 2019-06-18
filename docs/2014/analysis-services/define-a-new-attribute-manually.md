@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082339"
 ---
 # <a name="define-a-new-attribute-manually"></a>新しい属性の手動による定義
@@ -33,13 +33,13 @@ ms.locfileid: "66082339"
   
 3.  最後のグリッドの行をスクロールし、クリックして **\<新しい属性 >** します。  
   
-4.  属性の名前を入力して `Name` プロパティを設定し、&amp;lt;localizedText&amp;gt;Enter&amp;lt;/localizedText&amp;gt; キーを押します。  
+4.  属性の名前を入力して `Name` プロパティを設定し、&lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押します。  
   
      属性の使用法、種類、キー列、および名前列は、既定値を受け入れるか、ドロップダウン リストから新しい値を選択できます。  
   
 5.  属性を右クリックし、をクリックし、**プロパティ**その他のプロパティを構成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [ディメンションの属性のプロパティの参照](multidimensional-models/dimension-attribute-properties-reference.md)  
   
