@@ -118,7 +118,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>参照
-[IsDescendantOf & #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf &#40;データベース エンジン&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [階層データ (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
