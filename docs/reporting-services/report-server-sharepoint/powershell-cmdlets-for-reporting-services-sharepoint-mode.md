@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 998e0e4b400815767135ee81442c4e210aa3ba47
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580618"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モード用の PowerShell コマンドレット
@@ -34,7 +34,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
 
 ## <a name="cmdlet-summary"></a>コマンドレットの概要
 
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、Reporting Services サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)** ) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)) を使用することもできます。 次のコマンドレット概要では、サービス アプリケーション "データベース" への参照は、Reporting Services サービス アプリケーションによって作成および使用されたすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
@@ -71,7 +71,7 @@ SQL Server 2016 Reporting Services SharePoint モードをインストールす�
   
 |コマンドレット|[説明]|  
 |------------|-----------------|  
-|Install-SPRSService|Reporting Services 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server Reporting Services がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> - Reporting Services サービスがファームにインストールされます。<br /><br /> - Reporting Services サービス インスタンスが現在のコンピューターにインストールされます。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br /><br /> - Reporting Services サービスが現在のコンピューターからアンインストールされます。<br /><br /> - Reporting Services サービスがファームからアンインストールされます。<br /><br /> <br /><br /> Reporting Services サービスがインストールされているファーム内に他のコンピューターが存在する場合や Reporting Services サービス アプリケーションがファーム内で引き続き実行されている場合は、警告メッセージが表示されます。|  
+|Install-SPRSService|Reporting Services 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server Reporting Services がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> \- Reporting Services サービスがファームにインストールされます。<br /><br /> \- Reporting Services サービス インスタンスが現在のコンピューターにインストールされます。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br /><br /> \- Reporting Services サービスが現在のコンピューターからアンインストールされます。<br /><br /> \- Reporting Services サービスがファームからアンインストールされます。<br /><br /> <br /><br /> Reporting Services サービスがインストールされているファーム内に他のコンピューターが存在する場合や Reporting Services サービス アプリケーションがファーム内で引き続き実行されている場合は、警告メッセージが表示されます。|  
 |Install-SPRSServiceProxy|SharePoint ファーム内で Reporting Services サービス プロキシをインストールして登録するか、アンインストールします。|  
 |Get-SPRSProxyUrl|Reporting Services サービスにアクセスするための URL を取得します。|  
 |Get-SPRSServiceApplicationServers|Reporting Services 共有サービスのインストールを含む、ローカル SharePoint ファーム内のすべてのサーバーを取得します。 このコマンドレットは、どのサーバーで共有サービスを実行していてアップグレードする必要があるかを調べる目的に適しており、Reporting Services のアップグレードに役立ちます。|  

@@ -12,10 +12,10 @@ ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd958c0bbe781f7c39c2a2e00ecbc0ccfde7164e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573252"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>レポートを共有データ ソースにバインドする (SSRS)
@@ -26,13 +26,13 @@ ms.locfileid: "65573252"
   
 ## <a name="to-bind-a-report-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>ネイティブ モードで実行されているレポート サーバー上の共有データ ソースにレポートをバインドするには  
   
-1.  Web ポータルで、レポート タイルの右上隅にある省略記号 (...)、**[管理]** の順にクリックします。  
+1.  Web ポータルで、レポート タイルの右上隅にある省略記号 (...)、 **[管理]** の順にクリックします。  
 
 2.  **[データ ソース]** をクリックします。  
   
 3.  **[共有データ ソース]** をクリックし、レポートをバインドするデータ ソースに移動します。  
   
-4.  データ ソースを選択し、**[保存]** をクリックします。  
+4.  データ ソースを選択し、 **[保存]** をクリックします。  
   
 5.  **[適用]** をクリックします。  
   

@@ -9,10 +9,10 @@ ms.assetid: 81fd4a1f-79a9-4967-86d6-6229413c0995
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1ac0bc269bfe0b7b443270fcc0eb6bdcc3e09a40
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582108"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>外部の画像の追加 (レポート ビルダーおよび SSRS)
@@ -33,13 +33,13 @@ ms.locfileid: "65582108"
   
 5.  **[画像ソースの選択]** で、 **[外部]** を選択します。  
   
-     ネイティブ モードのレポート サーバーにある画像を指定する場合は、**[次の画像を使用]** ボックスに画像の相対パスを入力します (例: ../images/image1.jpg)。  
+     ネイティブ モードのレポート サーバーにある画像を指定する場合は、 **[次の画像を使用]** ボックスに画像の相対パスを入力します (例: ../images/image1.jpg)。  
   
-     SharePoint 統合モードのレポート サーバーまたはその他の Web サイトにある画像を指定する場合は、**[次の画像を使用]** ボックスに画像への完全な URL を入力します (例: https://\<SharePoint サーバー名>/\<サイト>/Documents/images/image1.jpg)。  
+     SharePoint 統合モードのレポート サーバーまたはその他の Web サイトにある画像を指定する場合は、 **[次の画像を使用]** ボックスに画像への完全な URL を入力します (例: https://\<SharePoint サーバー名>/\<サイト>/Documents/images/image1.jpg)。  
   
      詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
-6.  (省略可) 画像レポート アイテムのその他のプロパティを設定するには、 **[サイズ]**、 **[表示]**、 **[アクション]**、または **[罫線]** を選択します。  
+6.  (省略可) 画像レポート アイテムのその他のプロパティを設定するには、 **[サイズ]** 、 **[表示]** 、 **[アクション]** 、または **[罫線]** を選択します。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

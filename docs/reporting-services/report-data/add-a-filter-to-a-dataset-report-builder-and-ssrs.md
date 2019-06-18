@@ -9,10 +9,10 @@ ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c42f6cf00329129ea1137ecba4228a92f9665319
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571754"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "65571754"
   
 4.  **[追加]** をクリックします。 新しい空のフィルター式が表示されます。  
   
-5.  **[式]** で、フィルター処理の対象となるフィールドの式を入力するか、選択します。 式を編集するには、式 (*[fx]*) ボタンをクリックします。  
+5.  **[式]** で、フィルター処理の対象となるフィールドの式を入力するか、選択します。 式を編集するには、式 ( *[fx]* ) ボタンをクリックします。  
   
 6.  リスト ボックスから、手順 5. で作成した式のデータ型と同じデータ型を選択します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65571754"
   
 4.  **[追加]** をクリックします。 新しい空のフィルター式が表示されます。  
   
-5.  **[式]** で、フィルター処理の対象となるフィールドの式を入力するか、選択します。 式を編集するには、式 (*[fx]*) ボタンをクリックします。  
+5.  **[式]** で、フィルター処理の対象となるフィールドの式を入力するか、選択します。 式を編集するには、式 ( *[fx]* ) ボタンをクリックします。  
   
 6.  ドロップダウン ボックスから、手順 5. で作成した式のデータ型と同じデータ型を選択します。  
   

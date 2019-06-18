@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571575"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
@@ -114,7 +114,7 @@ ms.locfileid: "65571575"
   
 20. 必要に応じて、 **[件名]** ボックスで、警告メッセージの件名行を更新します。  
   
-     既定の件名は、**"\<データ警告名> に関するデータの警告"** です。  
+     既定の件名は、 **"\<データ警告名> に関するデータの警告"** です。  
   
 21. 必要に応じて、 **[説明]** ボックスに警告メッセージの説明を入力します。  
   

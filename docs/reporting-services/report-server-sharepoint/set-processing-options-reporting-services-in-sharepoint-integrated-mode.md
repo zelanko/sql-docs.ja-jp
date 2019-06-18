@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 986ae6e89727b0cef59e4d6b3bf7e5d92bd5342b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580546"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>処理オプションの設定 (Reporting Services の SharePoint 統合モード)
@@ -74,7 +74,7 @@ ms.locfileid: "65580546"
   
 2.  下矢印をクリックし、 **[処理の管理のオプション]** をクリックします。  
   
-3.  レポート サーバー レベルで指定された値を使用する必要がある場合は、 **[処理のタイムアウト]** で **[サイトの既定の設定を使用する]** をクリックします。 タイムアウトなしにするか、別のタイムアウト値にオーバーライドする必要がある場合は、**[レポート処理をタイムアウトしない]** または **[レポート処理を次の時間 (秒) に制限する]** を選択します。  
+3.  レポート サーバー レベルで指定された値を使用する必要がある場合は、 **[処理のタイムアウト]** で **[サイトの既定の設定を使用する]** をクリックします。 タイムアウトなしにするか、別のタイムアウト値にオーバーライドする必要がある場合は、 **[レポート処理をタイムアウトしない]** または **[レポート処理を次の時間 (秒) に制限する]** を選択します。  
   
 ## <a name="set-report-history-options-and-limits"></a>レポート履歴のオプションと制限数の設定
   

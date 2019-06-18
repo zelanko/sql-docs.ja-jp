@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f2f0cbac8ccc6ebbf53227622b4b3650aa72dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624307"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712303"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>トレース ファイルまたはトレース テーブルからのテンプレートの作成 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47624307"
   
 1.  テンプレートの基になるトレース ファイルまたはトレース テーブルを開きます。 詳細については、「[トレース ファイルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)」または「[トレース テーブルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)」を参照してください。  
   
-2.  **[ファイル]** メニューの **[名前を付けて保存]** をポイントし、**[トレース テンプレート]** をクリックします。  
+2.  **[ファイル]** メニューの **[名前を付けて保存]** をポイントし、 **[トレース テンプレート]** をクリックします。  
   
 3.  名前を入力するか、または一覧から選択します。 **[OK]** をクリックします。  
   

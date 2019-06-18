@@ -20,10 +20,10 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577987"
 ---
 # <a name="report-design-view-report-builder"></a>レポート デザイン ビュー (レポート ビルダー)
@@ -72,7 +72,7 @@ ms.locfileid: "65577987"
  デザイン画面のサイズは、レポートを印刷する際に指定するページ サイズの印刷領域とは異なる場合があります。 デザイン画面のサイズを変更しても、レポートの印刷領域は変わりません。 レポートの印刷領域に設定したサイズに関係なく、デザイン領域全体のサイズは変わりません。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
 > [!TIP]  
->  ルーラーを表示するには、**[表示]** タブの **[ルーラー]** チェック ボックスをオンにします。  
+>  ルーラーを表示するには、 **[表示]** タブの **[ルーラー]** チェック ボックスをオンにします。  
   
   
 ##  <a name="ReptDataPane"></a> The Report Data Pane  

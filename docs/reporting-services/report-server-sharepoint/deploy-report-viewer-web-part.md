@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579991"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
@@ -76,11 +76,11 @@ SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019
 
 ## <a name="activate-feature"></a>機能のアクティブ化
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、**[サイトの設定]** を選びます。
+1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[サイトの設定]** を選びます。
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
-    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>*」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
+    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>* 」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
 
 3. **[サイト コレクションの管理]** で **[サイト コレクションの機能]** をクリックします。
 
@@ -106,7 +106,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
 SharePoint サーバーの全体管理でソリューションの取り消しを実行できますが、インストールや修正プログラムの配置に関する問題のトラブルシューティングを体系的に行う場合を除いて、**ReportViewerWebPart.wsp** ファイルを取り消す必要はありません。
 
-1. SharePoint サーバーの全体管理で、**[システム設定]** の **[ファーム ソリューションの管理]** をクリックします。
+1. SharePoint サーバーの全体管理で、 **[システム設定]** の **[ファーム ソリューションの管理]** をクリックします。
 
 2. **[ReportViewerWebPart.wsp]** を選択します。
 
@@ -116,11 +116,11 @@ SharePoint サーバーの全体管理でソリューションの取り消しを
 
 ソリューションを取り消しても、SharePoint サイト内の Web パーツ一覧からレポート ビューアー Web パーツは削除されません。 レポート ビューアー Web パーツを削除するには、次を実行します。
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、**[サイトの設定]** を選びます。
+1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[サイトの設定]** を選びます。
 
     ![歯車アイコンを使用したサイトの設定。](media/sharepoint-site-settings.png)
 
-    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>*」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
+    既定では、SharePoint Web アプリケーションへのアクセスにはポート 80 が使用されます。 したがって、多くの場合、「*https://<computer name>* 」と入力してルート サイト コレクションを開くことで SharePoint サイトにアクセスできます。
 
 2. **[Web デザイナー ギャラリー]** の **[Web パーツ]** を選択します。
 

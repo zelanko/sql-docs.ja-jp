@@ -11,11 +11,11 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: 4735ead33dc7c3a6d633e3b23ff1da97eeae4962
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62853266"
 ---
 # <a name="sql-server-login-dialog-box"></a>[SQL Server ログイン] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "56744874"
 ## <a name="options"></a>オプション
 |オプション|[説明]|
 |---   |---        |
-|[サーバー]|ネットワーク上には、SQL Server のインスタンスの名前。 一覧から server\instance 形式の名前を選択するか、**[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、**[サーバー]** ボックスにその名前を入力することができます。 <br/><br/>SQL Server と同じコンピューターを使用している場合は、「(local)」と入力することができます。 その後、ネットワークに接続されていない SQL Server を実行している場合でも、SQL Server のローカル インスタンスに接続することができます。<br/><br/>ネットワークのさまざまな種類のサーバー名の詳細については、次を参照してください。 [SQL Server のインストール](https://go.microsoft.com/fwlink/?linkid=2067541)します。|
+|[サーバー]|ネットワーク上には、SQL Server のインスタンスの名前。 一覧から server\instance 形式の名前を選択するか、 **[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、 **[サーバー]** ボックスにその名前を入力することができます。 <br/><br/>SQL Server と同じコンピューターを使用している場合は、「(local)」と入力することができます。 その後、ネットワークに接続されていない SQL Server を実行している場合でも、SQL Server のローカル インスタンスに接続することができます。<br/><br/>ネットワークのさまざまな種類のサーバー名の詳細については、次を参照してください。 [SQL Server のインストール](https://go.microsoft.com/fwlink/?linkid=2067541)します。|
 |認証モード|ドロップダウン リストから、次の認証オプションを選択できます。<br/><ul><li>`Windows Authentication:` 現在のログイン ユーザーの Windows アカウントの資格情報を使用して SQL server 認証。</li><li>`SQL Server Authentication:` ログイン ID とパスワードを使用して SQL server 認証。</li><li>`Active Directory - Integrated:` 統合認証は、現在のログイン ユーザーの Windows アカウントの資格情報を使用します。</li><li>`Active Directory - Password:` Active Directory の認証ログイン ID とパスワードを使用します。</li></ul>|
 |サーバー SPN|セキュリティ接続を使用する場合、サーバーのサービス プリンシパル名 (SPN) を指定できます。|
 |Login ID|接続に使用するログイン ID を指定します。 ログイン ID テキスト ボックスが場合にのみ有効になって`Authentication Mode`に設定されている`SQL Server Authentication`または`Active Directory - Password`します。|
 |パスワード|接続に使用されるパスワードを指定します。 パスワード テキスト ボックスは、場合にのみ`Authentication Mode`に設定されている`SQL Server Authentication`または`Active Directory - Password`します。|
-|オプション|**[オプション]** グループを表示または非表示にします。 **[オプション]** ボタンは、**[サーバー]** に値が設定されている場合に有効になります。|
+|オプション|**[オプション]** グループを表示または非表示にします。 **[オプション]** ボタンは、 **[サーバー]** に値が設定されている場合に有効になります。|
 |パスワードの変更|により、選択した場合、**新しいパスワード**と**新しいパスワードの確認**テキスト ボックス。|
 |[新しいパスワード]|新しいパスワードを指定します。|
 |[新しいパスワードの確認入力]|確認のために、新しいパスワードをもう一度指定します。|

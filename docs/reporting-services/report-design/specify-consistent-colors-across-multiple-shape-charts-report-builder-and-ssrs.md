@@ -9,10 +9,10 @@ ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578458"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "65578458"
   
 4.  図形グラフ上を右クリックし、 **[系列のプロパティ]** を選択します。  
   
-5.  **[塗りつぶし]** の **式** (*[fx]*) ボタンをクリックして、 **Color** プロパティの式を編集します。  
+5.  **[塗りつぶし]** の **式** ( *[fx]* ) ボタンをクリックして、 **Color** プロパティの式を編集します。  
   
 6.  次の式を入力します。ここで、"MyCategoryField" は、 **[カテゴリ グループ]** 領域に表示されるフィールドです。  
   

@@ -9,10 +9,10 @@ ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619686"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
@@ -27,7 +27,7 @@ ms.locfileid: "65619686"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、スケジュールを開始する際に使用され、新しいデータベース インスタンスで再作成されます。 このジョブを新しいコンピューターに移動する必要はありませんが、そのコンピューターで今後使用しないジョブは削除することをお勧めします。  
   
--   サブスクリプション、キャッシュされたレポート、およびスナップショットは、移動したデータベースに保持されます。 データベースの移動後にスナップショットが更新されたデータを取得していない場合は、スナップショット オプションを解除し、**[適用]** を選択して変更を保存します。次に、スケジュールを再作成し、もう一度 **[適用]** を選択して変更を保存します。  
+-   サブスクリプション、キャッシュされたレポート、およびスナップショットは、移動したデータベースに保持されます。 データベースの移動後にスナップショットが更新されたデータを取得していない場合は、スナップショット オプションを解除し、 **[適用]** を選択して変更を保存します。次に、スケジュールを再作成し、もう一度 **[適用]** を選択して変更を保存します。  
   
 -   reportservertempdb に格納される一時的なレポートとユーザー セッション データは、データベースを移動すると保存されます。  
   

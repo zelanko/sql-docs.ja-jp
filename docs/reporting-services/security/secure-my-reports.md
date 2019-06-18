@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570698"
 ---
 # <a name="secure-my-reports"></a>個人用レポートをセキュリティで保護する
@@ -32,7 +32,7 @@ ms.locfileid: "65570698"
   
  **個人用レポート** ロールの割り当ては、次の要素で構成されています。  
   
--   Users フォルダー\\*\<ユーザー名>* \個人用レポート フォルダーにある、ユーザーの [個人用レポート] フォルダー。  
+-   Users フォルダー\\ *\<ユーザー名>* \個人用レポート フォルダーにある、ユーザーの [個人用レポート] フォルダー。  
   
 -   [個人用レポート] フォルダーをアクティブ化するときに判別されたユーザー アカウント。 フォルダーがアクティブ化されるのは、ユーザーがレポート マネージャーの [個人用レポート] フォルダーをクリックするか、レポート デザイナーから [個人用レポート] フォルダーにレポートをパブリッシュしたときです。 ユーザーが [個人用レポート] リンクでプロパティを要求する場合も、このフォルダーはアクティブ化されます。  
   

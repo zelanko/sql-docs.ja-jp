@@ -9,10 +9,10 @@ ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578836"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>マトリックスとグラフでの同じデータの表示 (レポート ビルダー)
@@ -45,13 +45,13 @@ ms.locfileid: "65578836"
   
      既定で、グループ値の計算には、集計関数 Sum が使用されます。 マトリックス内の集計関数を変更した場合は、グラフの集計関数も変更する必要があります。  
   
-6.  マトリックスで、データが含まれたセルを右クリックして、 **[テキスト ボックスのプロパティ]**、 **[数値]** の順にクリックします。 データセット フィールド値の適切な形式を選択します。  
+6.  マトリックスで、データが含まれたセルを右クリックして、 **[テキスト ボックスのプロパティ]** 、 **[数値]** の順にクリックします。 データセット フィールド値の適切な形式を選択します。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 8.  手順 3. で選択したのと同じデータセット フィールドをグラフの **[値]** 領域にドラッグします。  
   
-9. グラフで Y 軸を右クリックして、 **[軸のプロパティ]**、 **[数値]** の順にクリックします。 手順 4. で使用したのと同じデータ形式を選択します。  
+9. グラフで Y 軸を右クリックして、 **[軸のプロパティ]** 、 **[数値]** の順にクリックします。 手順 4. で使用したのと同じデータ形式を選択します。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -14,11 +14,11 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211491"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637448"
 ---
 # <a name="data-classification"></a>データ分類
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -79,7 +79,7 @@ SQLGetDescField する呼び出しの成功時に、バッファーによって�
 
  `nn nn [n sensitivityprops]`
 
-各列に対して *(c)*、 *n* 4 バイト*`sensitivityprops`* が存在します。
+各列に対して *(c)* 、 *n* 4 バイト *`sensitivityprops`* が存在します。
 
  `ss ss tt tt`
 

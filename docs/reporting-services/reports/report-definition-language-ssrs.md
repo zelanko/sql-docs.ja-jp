@@ -18,10 +18,10 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 25a6872cd74faae521f9687d20d54541ef1798a6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579998"
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
@@ -78,7 +78,7 @@ ms.locfileid: "65579998"
   
 |**CLR 型**|**対応するデータ型**|  
 |-----------------------|---------------------------------|  
-|ブール値|Boolean|  
+|Boolean|Boolean|  
 |DateTime、DateTimeOffset|DateTime|  
 |Int16、Int32、UInt16、Byte、SByte|Integer|  
 |Single、Double|float|  

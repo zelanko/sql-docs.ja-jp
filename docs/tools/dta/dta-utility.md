@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63001097"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** _database_name_  
- ワークロードをチューニングするときに、 **dta** が最初に接続するデータベースを指定します。 この引数で指定できるデータベースは 1 つだけです。 例 :  
+ ワークロードをチューニングするときに、 **dta** が最初に接続するデータベースを指定します。 この引数で指定できるデータベースは 1 つだけです。 例:  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -227,7 +227,7 @@ dta -d AdventureWorks2012 ...
  チューニングの入力として使用するワークロード ファイルのパスとファイルの名前を指定します。 ファイルは、.trc (SQL Server Profiler トレース ファイル)、.sql (SQL ファイル)、.log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース ファイル) のいずれかの形式になっている必要があります。 ワークロード ファイル、またはワークロード テーブルを 1 つ指定する必要があります。  
   
  **-it** _workload_trace_table_name_  
- チューニングのワークロード トレースを含むテーブルの名前を指定します。 名前は *[database_name*]**.**[*owner_name*]**.**_table_name_ の形式で指定します。  
+ チューニングのワークロード トレースを含むテーブルの名前を指定します。 名前は *[database_name*] **.** [*owner_name*] **.** _table_name_ の形式で指定します。  
   
  次の表は、各パラメーターの既定値を示しています。  
   
@@ -344,14 +344,14 @@ dta -iq -I 48
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- この引数は、コマンド プロンプトでテーブルの一覧 (**-Tl**) を入力する代わりに使用します。 **-Tl**を使用する場合は、テーブルの一覧ファイル ( **-Tf**) を使用しないでください。 両方の引数を使用すると、 **dta** は失敗し、エラーを返します。  
+ この引数は、コマンド プロンプトでテーブルの一覧 ( **-Tl**) を入力する代わりに使用します。 **-Tl**を使用する場合は、テーブルの一覧ファイル ( **-Tf**) を使用しないでください。 両方の引数を使用すると、 **dta** は失敗し、エラーを返します。  
   
  **-Tf** 引数および **-Tl** 引数を省略した場合、指定されたデータベース内のすべてのユーザー テーブルをチューニングするものと見なされます。  
   
  **-Tl** _table_list_  
  コマンド プロンプトでチューニングするテーブルの一覧を指定します。 テーブル名の間にコンマを挿入して区切ります。 **-D** 引数で 1 つのデータベースのみを指定する場合、テーブル名をデータベース名で修飾する必要はありません。 それ以外の場合、各テーブルには *database_name.schema_name.table_name* の形式で、完全修飾名が必要となります。  
   
- この引数は、テーブルの一覧ファイル (**-Tf**) の代わりに使用します。 **-Tl** と **-Tf** の両方を使用すると、 **dta** は失敗し、エラーを返します。  
+ この引数は、テーブルの一覧ファイル ( **-Tf**) の代わりに使用します。 **-Tl** と **-Tf** の両方を使用すると、 **dta** は失敗し、エラーを返します。  
   
  **-U** _login_id_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続に使用されるログイン ID を指定します。  

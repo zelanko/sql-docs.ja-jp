@@ -11,11 +11,11 @@ author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190576"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 
@@ -38,7 +38,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="173-february-2019"></a>17.3、2019 年 2 月
 
-| [新しい項目] | 詳細 |
+| 新しい項目 | 詳細 |
 | :------- | :------ |
 | 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory マネージド サービス ID (システムおよびユーザー割り当て) 認証モード。 | 「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」を参照してください。 |
@@ -48,7 +48,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="172-july-2018"></a>17.2、2018 年 7 月
 
-| [新しい項目] | 詳細 |
+| 新しい項目 | 詳細 |
 | :------- | :------ |
 | 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; Ubuntu 18.04 |
 | Azure SQL Database と SQL Server のデータ分類。 | 「[データ分類](../data-classification.md)」を参照してください。 |
@@ -61,7 +61,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="171-march-2018"></a>17.1、2018 年 3 月
 
-| [新しい項目] | 詳細 |
+| 新しい項目 | 詳細 |
 | :------- | :------ |
 | `SQL_COPT_SS_CEKCACHETTL` および `SQL_COPT_SS_TRUSTEDCMKPATHS` 接続属性のサポート。 | &bull; &nbsp; &nbsp; `SQL_COPT_SS_CEKCACHETTL` を使用すると、列暗号化キーのローカル キャッシュが存在する時間の制御とフラッシュを行うことができます。<br/><br/>&bull; &nbsp; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS` を使用すると、アプリケーションで、指定したリストの列マスター キーのみを使用するように Always Encrypted 操作を制限できます。<br/><br/>「[SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する](../using-always-encrypted-with-the-odbc-driver.md)」を参照してください。 |
 | 既定の場所から `.rll` を読み込む処理のサポート。 | [インストール ドキュメントの「リソース ファイルの読み込み」セクション](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading)を参照してください。 |

@@ -11,10 +11,10 @@ ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573194"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>ページ分割されたレポートのデータ ソースのプロパティを構成する
@@ -26,7 +26,7 @@ ms.locfileid: "65573194"
   
 1.  Web ポータルで、レポート固有のデータ ソースを構成するレポートに移動します。  
   
-3.  右上隅の省略記号 (**[...]**)、**[管理]** の順に選択します。  
+3.  右上隅の省略記号 ( **[...]** )、 **[管理]** の順に選択します。  
   
 4.  **[データ ソース]** タブをクリックします。レポートの [データ ソース] プロパティ ページが開きます。  
   

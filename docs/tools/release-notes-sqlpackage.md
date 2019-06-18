@@ -11,11 +11,11 @@ author: pensivebrian
 ms.author: broneill
 manager: kenvh
 ms.openlocfilehash: 411a2cf4c9a3170e9fb3a3dc7709d8b3882f066b
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63183700"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe のリリース ノート
 
@@ -40,7 +40,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp; 2019 年 4 月 15 日  
 ビルド: &nbsp; 15.0.4384.2 
 
-### <a name="features"></a>機能
+### <a name="features"></a>[機能]
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -50,7 +50,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| 修正 | 詳細 |
+| Fix | 詳細 |
 | :-- | :------ |
 | サポートされていないクエリ ヒントの使用に起因する SQL Server 2016 RTM データベースのリバース エンジニア リングが修正されました。 | &nbsp; |
 | filegroup ステートメントの作成前に発生するように auto close alter ステートメントの配置順序が修正されました。 | &nbsp; |
@@ -65,7 +65,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ビルド: &nbsp; 15.0.4316.1  
 プレビュー リリース。
 
-### <a name="features"></a>機能
+### <a name="features"></a>[機能]
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -77,7 +77,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| 修正 | 詳細 |
+| Fix | 詳細 |
 | :-- | :------ |
 | リバース エンジニアリング クエリでのレガシ カーディナリティ推定機能を使用するためのパフォーマンスが改善されました。 | &nbsp; |
 | スクリプトを生成する際のスキーマ比較での顕著なパフォーマンス問題が修正されました。 | &nbsp; |
@@ -102,7 +102,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp; 2018 年 10 月 24 日  
 ビルド: &nbsp; 15.0.4200.1
 
-### <a name="features"></a>機能
+### <a name="features"></a>[機能]
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -117,7 +117,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| 修正 | 詳細 |
+| Fix | 詳細 |
 | :-- | :------ |
 | グラフ テーブルの解決されない擬似列が修正されました。 | &nbsp; |
 | メモリ最適化テーブル使用時のメモリ最適化されたファイル グループによるデータベースの作成が修正されました。 | &nbsp; |
@@ -129,7 +129,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp; 2018 年 6 月 22 日  
 ビルド: &nbsp; 14.0.4079.2
 
-### <a name="features"></a>機能
+### <a name="features"></a>[機能]
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -139,7 +139,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| 修正 | 詳細 |
+| Fix | 詳細 |
 | :-- | :------ |
 | SQL 2017 以降での XML 列セットのリバース エンジニアリング問題が修正されました。 | &nbsp; |
 | データベース互換性レベル 140 のスクリプトが Azure SQL Database で無視される問題が修正されました。 | &nbsp; |
@@ -150,7 +150,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp; 2018 年 1 月 25 日  
 ビルド: &nbsp; 14.0.3917.1
 
-### <a name="features"></a>機能
+### <a name="features"></a>[機能]
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -160,7 +160,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| 修正 | 詳細 |
+| Fix | 詳細 |
 | :-- | :------ |
 | Azure SQL Database の .bacpac をオンプレミス インスタンスにインポートする際の "_このバージョンの SQL Server ではパスワードがないデータベース マスター キーはサポートされていない_" ことに起因するエラーが修正されました。 | &nbsp; |
 | グラフ テーブルの解決されない擬似列エラーが修正されました。 | &nbsp; |
@@ -172,7 +172,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 リリース日: &nbsp; 2017 年 12 月 12 日  
 ビルド: &nbsp; 14.0.3881.1
 
-### <a name="features"></a>機能
+### <a name="features"></a>[機能]
 
 | 機能 | 詳細 |
 | :------ | :------ |
@@ -183,7 +183,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 ### <a name="fixes"></a>修正
 
-| 修正 | 詳細 |
+| Fix | 詳細 |
 | :-- | :------ |
 | 認識できないデータベース互換性レベルに遭遇してもブロックは行われません。 | 代わりに、最新の Azure SQL Database またはオンプレミスのプラットフォームであるとみなされます。 |
 | &nbsp; | &nbsp; |

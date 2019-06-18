@@ -8,10 +8,10 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502671"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
@@ -87,7 +87,7 @@ ms.locfileid: "65502671"
   
 1.  SharePoint 2013/2016 サーバーの全体管理を実行するコンピューターで、次を実行します。  
   
-    1.  管理者特権を使用して、SharePoint 2013/2016 管理シェルを開きます。 アイコンを右クリックし、**[管理者として実行]** をクリックします。 シェルから次の 3 つのコマンドレットを実行します。  
+    1.  管理者特権を使用して、SharePoint 2013/2016 管理シェルを開きます。 アイコンを右クリックし、 **[管理者として実行]** をクリックします。 シェルから次の 3 つのコマンドレットを実行します。  
   
     2.  ```  
         Install-SPRSService  
@@ -208,10 +208,10 @@ ms.locfileid: "65502671"
   
 2.  コマンド ウィンドウを開き、コマンド プロンプトで次のコマンドを入力します。  
   
-    -   **run \<** *.NET 4.0 Framework のディレクトリ* **>\InstallUtil.exe \<***レポート サーバーの Bin ディレクトリ***>\ReportingServicesLibrary.dll**  
+    -   **run \<** *.NET 4.0 Framework のディレクトリ* **>\InstallUtil.exe \<** *レポート サーバーの Bin ディレクトリ* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  \<*.NET 4.0 Framework ディレクトリ*> は .NET Framework 4.0 ファイルの物理パス、\<*レポート サーバーの Bin ディレクトリ*> はレポート サーバーの bin ファイルの物理パスに置き換えます。  
+        >  \< *.NET 4.0 Framework ディレクトリ*> は .NET Framework 4.0 ファイルの物理パス、\<*レポート サーバーの Bin ディレクトリ*> はレポート サーバーの bin ファイルの物理パスに置き換えます。  
   
 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスを再開します。  
   

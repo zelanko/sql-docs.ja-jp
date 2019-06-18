@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581384"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
@@ -101,9 +101,9 @@ ms.locfileid: "65581384"
 ## <a name="previous-versions"></a>以前のバージョン
 
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]の以前のリリースでは、複数のトレース ログ ファイル (アプリケーションごとに 1 つ) が存在しました。 次のファイルは廃止されており、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以上のバージョンでは作成されなくなりました。
-+ ReportServerWebApp_*\<timestamp>*.log
-+ ReportServer_*\<timestamp>*.log
-+ ReportServerService_main_*\<timestamp>*.log
++ ReportServerWebApp_ *\<timestamp>* .log
++ ReportServer_ *\<timestamp>* .log
++ ReportServerService_main_ *\<timestamp>* .log
   
 ## <a name="see-also"></a>参照
 

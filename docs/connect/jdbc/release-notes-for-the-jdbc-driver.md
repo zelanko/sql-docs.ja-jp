@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8f5f520be226d74c2c6530aacee7916aa381dc06
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778148"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver のリリース ノート
@@ -33,7 +33,7 @@ ms.locfileid: "66778148"
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
 | JDBC Driver 7.2 用の最新の更新のダウンロード。 | &bull; &nbsp; [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [7.2.2 (GitHub)](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| JDBC API 仕様 4.2 への完全準拠。 | 7.2 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、7.2 パッケージの mssql-jdbc-7.2.2.jre11.jar ファイルは、Java 11 で使用する必要があります。 |
+| JDBC API 仕様 4.2 への完全準拠。 | 7\.2 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、7.2 パッケージの mssql-jdbc-7.2.2.jre11.jar ファイルは、Java 11 で使用する必要があります。 |
 | Java Development Kit (JDK) バージョン 11.0 および JDK 1.8 と互換性があります。 | Microsoft JDBC Driver 7.2 for SQL Server は、JDK 1.8 に加え、Java Development Kit (JDK) バージョン 11.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
@@ -42,7 +42,7 @@ ms.locfileid: "66778148"
 >
 > ドライバーに対して他の更新も行われ、ActivityID が適切に変更されないという問題が修正されました。 新しい jar (バージョン 7.2.2) は、2019 年 4 月 16 日にリリースされました。
 > 
-> 7.2.2 リリースの jar を使用するようにプロジェクトを更新することをお勧めします。 詳細については、[7.2.1 (GitHub)](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) と [7.2.2 (GitHub)](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2) のリリース ノートをご覧ください。
+> 7\.2.2 リリースの jar を使用するようにプロジェクトを更新することをお勧めします。 詳細については、[7.2.1 (GitHub)](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) と [7.2.2 (GitHub)](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2) のリリース ノートをご覧ください。
 
 ### <a name="active-directory-managed-service-identity-msi-authentication"></a>Azure Active Directory "_マネージド サービス ID_" (MSI) 認証
 
@@ -96,7 +96,7 @@ ms.locfileid: "66778148"
 
 ## <a name="70"></a>7.0
 
-Microsoft JDBC Driver 7.0 for SQL Server は、JDBC API 仕様 4.2 に完全に準拠しています。 7.0 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされます。 たとえば、7.0 パッケージの mssql-jdbc-7.0.0.jre10.jar ファイルは、Java 10 で使用する必要があります。
+Microsoft JDBC Driver 7.0 for SQL Server は、JDBC API 仕様 4.2 に完全に準拠しています。 7\.0 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされます。 たとえば、7.0 パッケージの mssql-jdbc-7.0.0.jre10.jar ファイルは、Java 10 で使用する必要があります。
 
 ### <a name="support-for-jdk-10"></a>JDK 10 のサポート
 
@@ -153,7 +153,7 @@ Microsoft JDBC Driver 7.0 for SQL Server では、"Java 用 Microsoft Azure Acti
 
 ## <a name="64"></a>6.4
 
-Microsoft JDBC Driver 6.4 for SQL Server は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 6.4 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。 たとえば、6.4 パッケージの mssql-jdbc-6.4.0.jre8.jar ファイルは、Java 8 で使用する必要があります。
+Microsoft JDBC Driver 6.4 for SQL Server は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 6\.4 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。 たとえば、6.4 パッケージの mssql-jdbc-6.4.0.jre8.jar ファイルは、Java 8 で使用する必要があります。
 
 ### <a name="support-for-jdk-9"></a>JDK 9 のサポート
 
@@ -209,14 +209,14 @@ SQL Server 用 Microsoft JDBC Driver 7.0 では、"Microsoft Azure Active Direct
 
 ## <a name="62"></a>6.2
 
-SQL Server 用 Microsoft JDBC Driver 6.2 は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 6.2 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。 たとえば、6.2 パッケージの mssql-jdbc-6.2.2.jre8.jar ファイルは、Java 8 で使用することが推奨されています。
+SQL Server 用 Microsoft JDBC Driver 6.2 は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 6\.2 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。 たとえば、6.2 パッケージの mssql-jdbc-6.2.2.jre8.jar ファイルは、Java 8 で使用することが推奨されています。
 
 > [!NOTE]  
 > 2017 年 6 月 29 日にリリースされた JDBC 6.2 RTW で、メタデータのキャッシュの機能強化に問題があることがわかりました。 この機能強化はロールバックされ、2017 年 7 月 17 日に新しい jar (バージョン 6.2.1) がリリースされました。 
 >
 > 別の機能強化として、Azure Key Vault に依存するライブラリのバージョンが 1.0.0 にアップグレードされ、2017 年 10 月 19 日に新しい jar (バージョン 6.2.2) がリリースされました。
 >
-> JDBC Driver 6.2 の最新の更新を [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460)、[GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) および [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) からダウンロードしてください。 6.2.2 リリースの jar を使用するようにプロジェクトを更新してください。 詳細については、[6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) および [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) のリリース ノートをご覧ください。
+> JDBC Driver 6.2 の最新の更新を [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460)、[GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) および [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) からダウンロードしてください。 6\.2.2 リリースの jar を使用するようにプロジェクトを更新してください。 詳細については、[6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) および [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) のリリース ノートをご覧ください。
 
 ### <a name="azure-ad-support-for-linux"></a>Linux での Azure AD のサポート
 
@@ -247,7 +247,7 @@ Microsoft JDBC Driver 6.1 for SQL Server は、JDBC 仕様 4.1 および 4.2 に
 
 ## <a name="60"></a>6.0
 
-Microsoft JDBC Driver 6.0 for SQL Server は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 6.0 パッケージ内の Jar は、JDBC API のバージョンの準拠に従って名前付けされています。 たとえば、6.0 パッケージの sqljdbc42.jar ファイルは、JDBC API 4.2 準拠です。 同様に、sqljdbc41.jar ファイルは、JDBC API 4.1 準拠です。
+Microsoft JDBC Driver 6.0 for SQL Server は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 6\.0 パッケージ内の Jar は、JDBC API のバージョンの準拠に従って名前付けされています。 たとえば、6.0 パッケージの sqljdbc42.jar ファイルは、JDBC API 4.2 準拠です。 同様に、sqljdbc41.jar ファイルは、JDBC API 4.1 準拠です。
 
 適切な sqljdbc42.jar または sqljdbc41.jar ファイルがあることを確認するには、次のコード行を実行します。 出力が "Driver version: 6.0.7507.100" であれば、JDBC Driver 6.0 パッケージがあります。
 
@@ -284,7 +284,7 @@ TVP は、複数行のデータをクライアント アプリケーションか
 
 ## <a name="42"></a>4.2
 
-Microsoft JDBC Driver 4.2 for SQL Server は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 4.2 パッケージ内の Jar は、JDBC API のバージョンの準拠に従って名前付けされています。 たとえば、4.2 パッケージの sqljdbc42.jar ファイルは、JDBC API 4.2 準拠です。 同様に、sqljdbc41.jar ファイルは、JDBC API 4.1 準拠です。
+Microsoft JDBC Driver 4.2 for SQL Server は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 4\.2 パッケージ内の Jar は、JDBC API のバージョンの準拠に従って名前付けされています。 たとえば、4.2 パッケージの sqljdbc42.jar ファイルは、JDBC API 4.2 準拠です。 同様に、sqljdbc41.jar ファイルは、JDBC API 4.1 準拠です。
 
 適切な sqljdbc42.jar または sqljdbc41.jar ファイルがあることを確認するには、次のコード行を実行します。 出力が "Driver version: 4.2.6420.100" であれば、JDBC Driver 4.2 パッケージがあります。
 

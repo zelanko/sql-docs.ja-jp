@@ -9,10 +9,10 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574474"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)
@@ -136,7 +136,7 @@ ms.locfileid: "65574474"
   
 -   **透明度 :** 透明度は、各マップ レイヤーに対して別々に指定することができます。 透明度の既定値は、レイヤーの追加方法によって異なります。 透明度 0% は、そのレイヤーが不透明であり、他のレイヤー データは一切透けて見えないことを意味します。 既存のレイヤーをとおして他のデータが透けて見えるようにするには、思うような効果が得られるまで、このパーセンテージを大きくします。  
   
--   **表示 :** レイヤーの表示は、マップ ビューポートのズーム レベルに基づいて、 **[表示]**、 **[非表示]**、 or **[ZoomBased]**、 based on the zoom level of the map viewport. ズーム レベルには、最大と最小の範囲を指定することもできます。 いずれかの値に評価されるような式を使って表示を制御することができます。  
+-   **表示 :** レイヤーの表示は、マップ ビューポートのズーム レベルに基づいて、 **[表示]** 、 **[非表示]** 、 or **[ZoomBased]** 、 based on the zoom level of the map viewport. ズーム レベルには、最大と最小の範囲を指定することもできます。 いずれかの値に評価されるような式を使って表示を制御することができます。  
   
     > [!TIP]  
     >  マップ ペインでは各レイヤーの表示/非表示を切り替えることができます。 各レイヤーをデザインする際、それ以外のすべてのレイヤーをオフにすることで、問題の原因が個々のレイヤーにあるのか、レイヤー間の透明度の問題なのかを特定することができます。  

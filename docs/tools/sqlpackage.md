@@ -10,11 +10,11 @@ author: pensivebrian
 ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269916"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "58527594"
   
 **SqlPackage.exe** コマンド ラインでは、これらの操作と共に、操作固有のパラメーターおよびプロパティを指定できます。  
 
-**[最新バージョンをダウンロード](sqlpackage-download.md)** します。 最新リリースに関する詳細については、次を参照してください。、[リリース ノート](release-notes-sqlpackage.md)します。
+**[最新バージョンをダウンロード](sqlpackage-download.md)** します。 最新リリースに関する詳細については、[リリース ノート](release-notes-sqlpackage.md)をご覧ください。
   
 ## <a name="command-line-syntax"></a>コマンド ライン構文
 

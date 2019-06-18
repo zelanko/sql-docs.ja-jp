@@ -13,10 +13,10 @@ ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574946"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>レポートで Office Data Connection (.odc) を使用する
@@ -56,7 +56,7 @@ ms.locfileid: "65574946"
   
 4.  **[Microsoft OLE DB Provider for SQL Server]** を選択し、 **[次へ]** をクリックします。  
   
-5.  サーバー名 (既定ではコンピューターのネットワーク名)、および有効なログインとデータベース権限が与えられたユーザー アカウントを入力します。 [**次へ**] をクリックします。  
+5.  サーバー名 (既定ではコンピューターのネットワーク名)、および有効なログインとデータベース権限が与えられたユーザー アカウントを入力します。 **[次へ]** をクリックします。  
   
 6.  データベースを選択して **[OK]** をクリックし、 **[データ リンク]** ダイアログ ボックスを閉じます。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65574946"
   
 10. レポートでカスタム データ ソース情報を使用する場合は、 **[共有]** をクリックします。  
   
-11. **[データ ソース リンク]** で、参照ボタン (**[...]**) をクリックします。  
+11. **[データ ソース リンク]** で、参照ボタン ( **[...]** ) をクリックします。  
   
 12. アップロードする .odc ファイルを選択します。  
   

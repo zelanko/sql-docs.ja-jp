@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: bebfb6270d334305ae5684d7cca0c9e6571217e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66781825"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver のよくあるご質問 (FAQ)
@@ -94,7 +94,7 @@ JDBC Driver 4.1、4.2、6.0、6.2、6.4、および 7.0 を再配布できます
 バージョン 1.2 以降のドライバーは、Secure Sockets Layer (SSL) 暗号化をサポートしています。 詳細については、「[SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)」をご覧ください。
 
 **Microsoft SQL Server 用 JDBC Driver ではどのような認証がサポートされていますか。**  
-次の表は、使用可能な認証オプションを示しています。 4.0 リリース以降のドライバーでは、ピュア Java Kerberos 認証が使用可能です。
+次の表は、使用可能な認証オプションを示しています。 4\.0 リリース以降のドライバーでは、ピュア Java Kerberos 認証が使用可能です。
 
 |             |                                       |
 | ----------- | ------------------------------------- |

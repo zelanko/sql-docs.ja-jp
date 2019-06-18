@@ -10,11 +10,11 @@ ms.reviewer: maghan
 author: RhysSchmidtke
 ms.author: rhys
 ms.openlocfilehash: d6d4da6d5574288fa66ea18a9c63b1488a6abcca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226004"
 ---
 # <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>WebForms および WinForms の SSRS にレポート ビューアー コントロールのリリース ノート
 

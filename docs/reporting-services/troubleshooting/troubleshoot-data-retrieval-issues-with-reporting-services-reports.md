@@ -9,10 +9,10 @@ ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574423"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services レポートのデータ取得に関する問題のトラブルシューティング
@@ -40,7 +40,7 @@ ms.locfileid: "65574423"
 パスワードに特殊文字が使用されていないことを確認してください。 パスワードを変更できない場合は、データベース管理者と連携して、適切な資格情報をシステム ODBC データ ソース名 (DSN) の一部としてローカルおよびサーバーに格納します。 詳細については、MSDN の .NET Framework SDK ドキュメントの「OdbcConnection.ConnectionString」を参照してください。   
   
 > [!NOTE]  
->パスワードなどのログイン情報を接続文字列に追加しないことをお勧めします。 レポート デザイナーでは、**[データ ソースのプロパティ]** ダイアログ ボックスまたは **[共有データ ソース プロパティ]** ダイアログ ボックスの **[資格情報]** ページから、資格情報を入力できます。 ここで入力した資格情報は、レポート作成コンピューター上に安全に保管されます。  
+>パスワードなどのログイン情報を接続文字列に追加しないことをお勧めします。 レポート デザイナーでは、 **[データ ソースのプロパティ]** ダイアログ ボックスまたは **[共有データ ソース プロパティ]** ダイアログ ボックスの **[資格情報]** ページから、資格情報を入力できます。 ここで入力した資格情報は、レポート作成コンピューター上に安全に保管されます。  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>クエリ デザイナーでクエリを実行してもデータが表示されない  
 データセットを作成すると、データセット フィールド コレクションがレポート データ ペインに表示されます。 場合によっては、データセット フィールド コレクションが想定どおりに表示されないことがあります。   

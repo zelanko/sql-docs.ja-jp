@@ -12,10 +12,10 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570612"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>SharePoint サイト上のレポート サーバー アイテムに対する権限の設定
@@ -55,7 +55,7 @@ ms.locfileid: "65570612"
   
 5.  **[アクション]** をクリックします。  
   
-6.  **[権限を編集]** をクリックします。 [**OK**] をクリックします。  
+6.  **[権限を編集]** をクリックします。 **[OK]** をクリックします。  
   
 7.  **[新規作成]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65570612"
   
 11. **[フル コントロール]** をクリックします。  
   
-12. [**OK**] をクリックします。 特定のモデルの権限の管理権限が与えられたユーザーは、モデルを開いて、モデル内の権限を編集できます。  
+12. **[OK]** をクリックします。 特定のモデルの権限の管理権限が与えられたユーザーは、モデルを開いて、モデル内の権限を編集できます。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバー アイテムに対して Windows SharePoint Services の組み込みのセキュリティを使用する](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   

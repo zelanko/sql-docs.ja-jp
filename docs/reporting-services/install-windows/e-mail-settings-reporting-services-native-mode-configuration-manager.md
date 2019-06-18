@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c371558070ee6ef41afe167e3be2ed4adbd80cc4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513604"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
 Reporting Services にはメール配信拡張機能があり、メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。
@@ -66,7 +66,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
      
      - **[ユーザー名とパスワード (基本)]** では、メール サーバーに接続するためのユーザー名とパスワードを指定できます。 **[セキュリティで保護された接続を使用]** を選んで、暗号化された接続でメール サーバーに接続することもできます。
      
-          このオプションを選ぶと、rsreportserver.config で `<SendUsing>` の値が **2** に、 `<SMTPAuthenticate>` の値が **1** に設定されます。**[セキュリティで保護された接続を使用]** を選ぶと、`SMTPUseSSL` が **True** に設定されます。 **[ユーザー名]** は暗号化された値として `<SendUserName>` に設定されます。 **[パスワード]** は暗号化された値として `<SendPassword>` に設定されます。
+          このオプションを選ぶと、rsreportserver.config で `<SendUsing>` の値が **2** に、 `<SMTPAuthenticate>` の値が **1** に設定されます。 **[セキュリティで保護された接続を使用]** を選ぶと、`SMTPUseSSL` が **True** に設定されます。 **[ユーザー名]** は暗号化された値として `<SendUserName>` に設定されます。 **[パスワード]** は暗号化された値として `<SendPassword>` に設定されます。
      
      - **[レポート サーバー サービス アカウント (NTLM)]** では、レポート サーバー用に指定したサービス アカウントが使用されます。 認証用にレポート サーバー サービス アカウントを使用する場合は、そのサービス アカウントに SMTP サーバー上での **Send As** アクセス許可があることを確認します。
      

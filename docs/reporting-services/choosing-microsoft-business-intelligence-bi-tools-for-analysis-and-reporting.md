@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: ff8293e5fa891ddcf0c5ab980e8c63799fbce9ce
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937944"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft ビジネス インテリジェンス (BI) ツールでの分析とレポート
@@ -48,4 +48,4 @@ ms.locfileid: "65937944"
 |セルフサービスの予測分析の実行||||||[Excel 用データ マイニング アドイン](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |データ マイニング アルゴリズムの使用||||||[Analysis Services 内でのデータ マイニング](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R サービス](https://msdn.microsoft.com/library/mt604845.aspx)|  
   
- * Reporting Services には、最新のページ分割されたレポートなど、運用レポートとカスタム レポートの配信をサポートする多数の機能があります。
+ \* Reporting Services には、最新のページ分割されたレポートなど、運用レポートとカスタム レポートの配信をサポートする多数の機能があります。

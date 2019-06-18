@@ -9,10 +9,10 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580866"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65580866"
 |RDL 型|CLR 型|  
 |--------------|---------------|  
 |String|既定値: String<br /><br /> Chart、GUID、Timespan|  
-|ブール値|既定値: Boolean|  
+|Boolean|既定値: Boolean|  
 |Integer|既定値: Int64<br /><br /> Int16、Int32、Uint16、Uint64、Byte、Sbyte|  
 |DateTime|既定値: DateTime<br /><br /> DateTimeOffset|  
 |float|既定値: Double<br /><br /> Single、Decimal|  

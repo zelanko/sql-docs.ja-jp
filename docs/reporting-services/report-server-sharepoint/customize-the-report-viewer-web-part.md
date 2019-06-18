@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0974e9bd7e2e4c2306a5ada0a3a41f657073a267
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580006"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
@@ -55,7 +55,7 @@ ms.locfileid: "65580006"
 
  プロパティを設定することで、Web ページ内のレポート ビューアーを調整することができます。 レポート ビューアーが含まれているページと同じスタイルと色をレポート ビューアーにも使用できます。 ツール バー、ドキュメント マップ、およびパラメーター領域の一部または全体を非表示にすることで、割り当てられた領域内でレポートの表示領域を最大限に広げることができます。 常にレポートでは、作成時に定義したスタイルを使用します。 SharePoint ライブラリにパブリッシュした後に、レポートの外観をカスタマイズすることはできません。  
   
- Web ページにレポート ビューアー Web パーツを埋め込む場合は、**[レポート URL]** プロパティに特定のレポートを設定する必要があります。 この操作を行わないと、レポートへのリンクを求めるメッセージがレポート ビューアーに表示されます。 このメッセージのカスタマイズや削除はできません。  
+ Web ページにレポート ビューアー Web パーツを埋め込む場合は、 **[レポート URL]** プロパティに特定のレポートを設定する必要があります。 この操作を行わないと、レポートへのリンクを求めるメッセージがレポート ビューアーに表示されます。 このメッセージのカスタマイズや削除はできません。  
   
 ### <a name="custom-properties-of-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタム プロパティ
 

@@ -9,10 +9,10 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582087"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65582087"
   
     2.  カスケード型パラメーターごとに 1 つのクエリ パラメーター。 クエリ パラメーターは、クエリに含める特定の値またはクエリから除外する特定の値を指定することによって、データ ソースから取得するデータを制限します。 通常、クエリ パラメーターはクエリの制約句で使用されます。 たとえば [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントでは、クエリ パラメーターは WHERE 句で使用されます。  
   
-6.  **[実行]** (**!**) をクリックします。 クエリ パラメーターを指定し、クエリを実行したら、クエリ パラメーターに対応するレポート パラメーターが自動的に作成されます。  
+6.  **[実行]** ( **!** ) をクリックします。 クエリ パラメーターを指定し、クエリを実行したら、クエリ パラメーターに対応するレポート パラメーターが自動的に作成されます。  
   
     > [!NOTE]  
     >  最初にクエリを実行したときのクエリ パラメーターの順序によって、クエリ パラメーターがレポート内で作成される順序が決まります。 順序を変更するには、「[レポート パラメーターの順序の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)」を参照してください。  
@@ -70,7 +70,7 @@ ms.locfileid: "65582087"
   
      SELECT DISTINCT コマンドは、指定したテーブルの指定した列から一意の各値を取得できるように、結果セットから重複する値を削除します。  
   
-     **[実行]** (**!**) をクリックします。 結果セットには、この最初のパラメーターに使用可能な値が表示されます。  
+     **[実行]** ( **!** ) をクリックします。 結果セットには、この最初のパラメーターに使用可能な値が表示されます。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

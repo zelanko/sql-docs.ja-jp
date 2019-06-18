@@ -9,10 +9,10 @@ ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580891"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
@@ -58,11 +58,11 @@ ms.locfileid: "65580891"
   
 ### <a name="to-add-the-word-page-before-the-page-number"></a>ページ番号の前に "ページ" という語を追加するには  
   
-1.  [&PageNumber] が含まれているテキスト ボックスを右クリックし、**[式]** をクリックします。  
+1.  [&PageNumber] が含まれているテキスト ボックスを右クリックし、 **[式]** をクリックします。  
   
      **[式の設定: 値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
   
-2.  = (等号) の後ろにカーソルを置き、「**"ページ " &**」と入力します。  
+2.  = (等号) の後ろにカーソルを置き、「 **"ページ " &** 」と入力します。  
   
      式は、="ページ "&Globals!PageNumber となります。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65580891"
   
 1.  式が含まれているテキスト ボックスを右クリックし、 **[式]** をクリックします。  
   
-2.  式の末尾に「**&"/"&**」と入力します。  
+2.  式の末尾に「 **&"/"&** 」と入力します。  
   
 3.  [カテゴリ] ペインで、 **[組み込みフィールド]** を展開し、 **[TotalPages]** をダブルクリックします。  
   
