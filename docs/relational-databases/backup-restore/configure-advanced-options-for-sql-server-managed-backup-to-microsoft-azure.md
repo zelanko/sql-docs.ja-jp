@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6bcf893e719a2501fcf2084331b21de6f6a491c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478499"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure への SQL Server マネージド バックアップの詳細設定オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "59241750"
 ## <a name="configure-a-custom-backup-schedule"></a>カスタム バックアップ スケジュールの構成  
  次の手順では、ストアド プロシージャ [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) を使用して、カスタム スケジュールを設定する方法を示します。  
   
-1.  **完全バックアップの頻度を決定する:**:データベースの完全バックアップを実行する頻度を決定します。 完全バックアップを '毎日' または '毎週' 実行するか選択できます。  
+1.  **完全バックアップの頻度を決定する:** :データベースの完全バックアップを実行する頻度を決定します。 完全バックアップを '毎日' または '毎週' 実行するか選択できます。  
   
 2.  **ログ バックアップの頻度を決定する:** ログ バックアップを実行する頻度を決定します。 この値は、分または時間単位です。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "59241750"
   
     ```  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>Next Steps  
  高度なオプションとカスタム スケジュールを構成したら、ターゲット データベースまたは SQL Server インスタンスで [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を有効にする必要があります。 詳細については、「 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

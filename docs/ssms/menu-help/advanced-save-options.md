@@ -16,15 +16,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 186a78bbd2b887875bf6f5fc8594ffb714fb3ec7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088823"
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、**[ファイル]** メニューの **[名前を付けて** <query name>**.sql を保存]** をクリックします。**[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、**[保存]** ボタンにある下矢印をクリックして、**[エンコード付きで保存]** をクリックします。  
+このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[名前を付けて** <query name> **.sql を保存]** をクリックします。 **[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、 **[保存]** ボタンにある下矢印をクリックして、 **[エンコード付きで保存]** をクリックします。  
   
 ## <a name="options"></a>オプション  
 **[エンコード]**  

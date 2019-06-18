@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767944"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -42,7 +42,7 @@ ms.locfileid: "62767944"
  個々 のテーブルの変換情報を表示するには、このテーブルを選択**テーブル**グリッド。 内の列に、選択したテーブルの変換情報が表示されます、**データ型のマッピング グリッド**ページの下部にあります。  
   
 ### <a name="data-type-mapping-list"></a>[データ型マッピング] の一覧  
- 下部にある、**データ型の問題の確認**ページは、**データ型マッピング**一覧。 このグリッドには、**[テーブル]** の一覧で選択したテーブルの列についての詳細な変換情報が表示されます。 次の表では、この一覧の列について説明します。  
+ 下部にある、**データ型の問題の確認**ページは、**データ型マッピング**一覧。 このグリッドには、 **[テーブル]** の一覧で選択したテーブルの列についての詳細な変換情報が表示されます。 次の表では、この一覧の列について説明します。  
   
 |[列]|説明|  
 |------------|-----------------|  

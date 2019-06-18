@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4959473b120a3a8a0c289ff3cd8f91e89df44b86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640392"
 ---
 # <a name="partitions---proactive-caching"></a>パーティション - プロアクティブ キャッシュ
@@ -33,7 +33,7 @@ ms.locfileid: "62640392"
 ### <a name="maximizing-performance"></a>パフォーマンスの最大化  
  待機時間を削減する一方でパフォーマンスを最適化するために、現在の MOLAP オブジェクトを削除せずにキャッシュを使用することもできます。 クエリは、データが新しいキャッシュに読み込まれ、処理されている間に MOLAP オブジェクトに対して続行されます。 この方法では、パフォーマンスは向上しますが、新しいキャッシュが構築されている間に、クエリが古いデータを返す場合があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ディメンションのストレージ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [パーティション ストレージの設定 (Analysis Services - 多次元)](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   

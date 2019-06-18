@@ -26,11 +26,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5f852bcf9a1cf195df6ebf05738cc63536ee4941
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62687109"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "53588106"
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスのプロパティを変更するテーブルを右クリックし、**[デザイン]** を選択します。  
+3.  インデックスのプロパティを変更するテーブルを右クリックし、 **[デザイン]** を選択します。  
   
 4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   

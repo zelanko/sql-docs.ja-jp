@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767524"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>手順 2:Foreach ループ コンテナーの追加と構成
@@ -73,7 +73,7 @@ ms.locfileid: "62767524"
   
 1.  **[変数のマッピング]** をクリックします。  
   
-2.  **[変数のマッピング]** ページで、**[変数]** 列の空いているセルをクリックし、**\<新しい変数...>** をクリックします。  
+2.  **[変数のマッピング]** ページで、 **[変数]** 列の空いているセルをクリックし、 **\<新しい変数...>** をクリックします。  
   
 3.  **変数の追加** ダイアログ ボックスの**名前**、型`varFileName`します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62767524"
 ## <a name="next-lesson-task"></a>次のレッスンの作業  
  [手順 3:フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Foreach ループ コンテナーを構成する](control-flow/foreach-loop-container.md)   
  [パッケージで変数を使用する](use-variables-in-packages.md)  
   

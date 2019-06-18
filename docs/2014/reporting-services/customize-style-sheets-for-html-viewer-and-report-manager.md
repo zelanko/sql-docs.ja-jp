@@ -1,24 +1,20 @@
 ---
 title: HTML ビューアーおよびレポート マネージャーのスタイル シートのカスタマイズ |Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- style sheets [Reporting Services]
-ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264861"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568266"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>HTML ビューアーとレポート マネージャーのスタイル シートのカスタマイズに関する記事 (ページ、サイトなどの場合もあります)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 既定のカスケード スタイル シート (.css) ファイルがスタイルを定義する提供、**レポート**HTML ビューアーおよびレポート マネージャーのツールバー。 Web 開発者、またはカスケード スタイル シート作成に関する専門知識を持つユーザーであれば、各自の責任で既定のスタイルを変更し、色、フォント、およびツール バーやレポート マネージャーのレイアウトを変えることができます。 このリリースでは、既定のスタイル シートについても、そのスタイル シートの変更手順についても説明していません。  
@@ -37,9 +33,6 @@ ms.locfileid: "63264861"
 |-----------------|-----------------|  
 |Htmlviewer.css|HTML ビューアーの **[レポート]** ツール バーのカスタム スタイルを作成するためにテンプレートとして使用できるサンプル スタイル シートを提供します。<br /><br /> HTML ビューアーが使用する既定のスタイルは、レポート サーバーにコンパイルされます。 Htmlviewer.css ファイルは、ビューアーが使用するスタイルのサンプルを提供します。|  
 |ReportingServices.css|レポート マネージャーのスタイルを定義します。|  
-  
-> [!NOTE]  
->  次のスタイル シートは、レポート マネージャーのオンライン ドキュメントが使用され、変更しないでください。Sql.css および Mailto.css します。 その他のスタイル シートは、SharePoint Web パーツで開くレポートおよびレポート マネージャーのスタイルを定義します。 このようなスタイル シートには、Rswebparts.css、Sp_full.css、Sp_small.css などがあります。 SharePoint スタイル シートは変更しないようにしてください。 Web パーツの使用方法の詳細については、次を参照してください。[ビューと探索ネイティブ モードのレポートを使用して SharePoint Web パーツ&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)します。  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>カスタム スタイル シートを使用するための Reporting Services の構成  
  スタイル シートは、有効なカスケード スタイル シート (.css) ファイルであり、Styles フォルダーに格納されていることが必要です。 既定では、Styles フォルダーにある\<*ドライブ*>: SQL server \mssql \Program Files\Microsoft *。n*\Reporting Services\ReportServer\Styles します。  

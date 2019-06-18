@@ -19,11 +19,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e697adb4df3127468e5e74d5e5c4cbbebbae6615
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508336"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "54135802"
 
  データの検証は、3 つの部分で構成されるプロセスです。  
   
-1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが検証対象として *マーク* されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーと **[ローカル サブスクリプション]** フォルダーから使用できる、**[サブスクリプションの検証]**、**[サブスクリプションの検証]** および **[すべてのサブスクリプションの検証]** の各ダイアログ ボックスで検証対象のサブスクリプションにマークを付けます。 また、 **[すべてのサブスクリプション]** タブ、 **[サブスクリプション ウォッチ リスト]** タブ、およびレプリケーション モニターのパブリケーション ノードでもサブスクリプションにマークを付けることができます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが検証対象として *マーク* されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーと **[ローカル サブスクリプション]** フォルダーから使用できる、 **[サブスクリプションの検証]** 、 **[サブスクリプションの検証]** および **[すべてのサブスクリプションの検証]** の各ダイアログ ボックスで検証対象のサブスクリプションにマークを付けます。 また、 **[すべてのサブスクリプション]** タブ、 **[サブスクリプション ウォッチ リスト]** タブ、およびレプリケーション モニターのパブリケーション ノードでもサブスクリプションにマークを付けることができます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 2.  サブスクリプションは、ディストリビューション エージェント (トランザクション レプリケーションの場合) またはマージ エージェント (マージ レプリケーションの場合) による次回の同期時に検証されます。 ディストリビューション エージェントは、通常は連続して実行されるので、検証はすぐに実行されます。マージ エージェントは、通常は要求時に実行されるので、エージェントを実行した後で検証が実行されます。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54135802"
 
 #### <a name="all-articles"></a>すべてのアーティクル 
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md) を実行します。 **@publication** を指定し、**@rowcount_only** に次のいずれかの値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md) を実行します。 **@publication** を指定し、 **@rowcount_only** に次のいずれかの値を指定します。  
   
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
@@ -119,7 +119,7 @@ ms.locfileid: "54135802"
   
 #### <a name="single-article"></a>単一のアーティクル  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) を実行します。 **@publication** を指定し、**@article** にアーティクルの名前を、**@rowcount_only** に次のいずれかの値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) を実行します。 **@publication** を指定し、 **@article** にアーティクルの名前を、 **@rowcount_only** に次のいずれかの値を指定します。  
   
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
@@ -133,9 +133,9 @@ ms.locfileid: "54135802"
 #### <a name="single-subscriber"></a>単一のサブスクライバー 
   
 1.  パブリッシャーのパブリケーション データベースで、[BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md) を使用して明示的なトランザクションを開始します。    
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md) を実行します。 **@publication** にパブリケーションを、**@subscriber** にサブスクライバーの名前を、**@destination_db** にサブスクリプション データベースの名前を指定します。    
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md) を実行します。 **@publication** にパブリケーションを、 **@subscriber** にサブスクライバーの名前を、 **@destination_db** にサブスクリプション データベースの名前を指定します。    
 3.  (省略可) 検証の対象となる各サブスクリプションについて、手順 2. を繰り返します。    
-4.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) を実行します。 **@publication** を指定し、**@article** にアーティクルの名前を、**@rowcount_only** に次のいずれかの値を指定します。    
+4.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) を実行します。 **@publication** を指定し、 **@article** にアーティクルの名前を、 **@rowcount_only** に次のいずれかの値を指定します。    
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
   
@@ -213,7 +213,7 @@ ms.locfileid: "54135802"
     3.  **[同期の履歴]** タブの **[選択されたセッションの最終メッセージ]** テキスト領域に情報が表示されます。  
 
 ### <a name="using-transact-sql"></a>Transact-SQL の使用
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md) を実行します。 **@publication** を指定し、**@subscriber** にサブスクライバーの名前を、**@subscriber_db** にサブスクリプション データベースの名前を、**@level** に次のいずれかの値を指定します。   
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md) を実行します。 **@publication** を指定し、 **@subscriber** にサブスクライバーの名前を、 **@subscriber_db** にサブスクリプション データベースの名前を、 **@level** に次のいずれかの値を指定します。   
     -   **1** - 行数の検証のみ    
     -   **3** - 行数とバイナリ チェックサムの検証  
   
@@ -240,7 +240,7 @@ ms.locfileid: "54135802"
     3.  **[同期の履歴]** タブの **[選択されたセッションの最終メッセージ]** テキスト領域に情報が表示されます。 
   
 ### <a name="using-transact-sql"></a>Transact-SQL の使用
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md) を実行します。 **@publication** を指定し、**@level** に次のいずれかの値を指定します。    
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md) を実行します。 **@publication** を指定し、 **@level** に次のいずれかの値を指定します。    
     -   **1** - 行数の検証のみ   
     -   **3** - 行数とバイナリ チェックサムの検証  
   

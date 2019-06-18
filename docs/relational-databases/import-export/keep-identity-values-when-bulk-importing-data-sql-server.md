@@ -17,10 +17,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 14f5a9ce1733c1e60ccc37d5a321fbce1fdaa679
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946598"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>データの一括インポート時の ID 値の保持 (SQL Server)
@@ -246,7 +246,7 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
+### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_identity_fmt"></a>
 **KEEPIDENTITY** テーブル ヒントと **FORMATFILE** 引数。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```sql
 USE TestDatabase;
@@ -266,7 +266,7 @@ WITH (KEEPIDENTITY)
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
  
-### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
+### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_default_fmt"></a>
 既定値と **FORMATFILE** 引数を使用します。  Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) で次の Transact-SQL を実行します。
 ```sql
 USE TestDatabase;

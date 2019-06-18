@@ -19,11 +19,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d782f8f612d8d4e9eb86a25ddf96e3d147a2f024
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034876"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定的関数と非決定的関数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47639410"
 ||||  
 |-|-|-|  
 |ABS|DATEDIFF|POWER|  
-|ACOS|[DAY]|RADIANS|  
+|ACOS|DAY|RADIANS|  
 |ASIN|DEGREES|[ROUND]|  
 |ATAN|EXP|SIGN|  
 |ATN2|FLOOR|SIN|  
@@ -51,7 +51,7 @@ ms.locfileid: "47639410"
 |COALESCE|ISNUMERIC|SQRT|  
 |COS|LOG|TAN|  
 |COT|LOG10|[YEAR]|  
-|DATALENGTH|[MONTH]||  
+|DATALENGTH|MONTH||  
 |[DATEADD]|NULLIF||  
   
  次の関数は必ず決定的関数になるとは限りませんが、決定的な方法で指定されている場合は、インデックス付きビューまたは計算列のインデックスで使用できます。  

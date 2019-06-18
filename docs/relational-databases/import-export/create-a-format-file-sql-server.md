@@ -15,10 +15,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946229"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "64946229"
 > [!NOTE]  
 >  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** によって生成されるバージョン 11.0 のフォーマット ファイルを読み取ることができません。  
   
- このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション (**-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
+ このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション ( **-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
   
 ## <a name="creating-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの作成  
  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには、次に示す **-f** オプションが必要です。  
@@ -197,7 +197,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
-|**-t** `,`|コンマ (**,**) をフィールド ターミネータとして指定します。<br /><br /> 注: データ ファイルで既定のフィールド ターミネータ (`\t`) が使用されている場合、**-t** スイッチは不要です。|  
+|**-t** `,`|コンマ ( **,** ) をフィールド ターミネータとして指定します。<br /><br /> 注: データ ファイルで既定のフィールド ターミネータ (`\t`) が使用されている場合、 **-t** スイッチは不要です。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  

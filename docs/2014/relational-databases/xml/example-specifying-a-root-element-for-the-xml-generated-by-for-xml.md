@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288377"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>例:FOR XML で生成される XML のルート要素の指定
@@ -45,7 +45,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)  
   
   

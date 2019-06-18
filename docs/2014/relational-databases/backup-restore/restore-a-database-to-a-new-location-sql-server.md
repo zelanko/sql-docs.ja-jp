@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921181"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>データベースを新しい場所に復元する (SQL Server)
@@ -94,7 +94,7 @@ ms.locfileid: "62921181"
   
     1.  **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
+         参照ボタン ( **[...]** ) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "62921181"
   
      詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)」の「バックアップ セットの指定」を参照してください。  
   
-     MOVE **'*`logical_file_name_in_backup`*'** TO **'*`operating_system_file_name`*'** [ `,`...*n* ]  
+     MOVE **' *`logical_file_name_in_backup`* '** TO **' *`operating_system_file_name`* '** [ `,`...*n* ]  
      *logical_file_name_in_backup* で指定されるデータまたはログ ファイルが、 *operating_system_file_name*で指定される位置に復元されることを指定します。 バックアップ セットから新しい位置に復元する論理ファイルごとに、MOVE ステートメントを指定してください。  
   
     |オプション|Description|  

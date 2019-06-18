@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780682"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SQL-DMO の SMO へのマッピング
@@ -105,7 +105,7 @@ ms.locfileid: "62780682"
 |UserDefinedFunction オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunctionParameter> オブジェクト。|  
 |View オブジェクトおよび View2 オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.View> オブジェクト。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

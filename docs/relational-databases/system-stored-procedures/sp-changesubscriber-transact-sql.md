@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997801"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (TRANSACT-SQL)
@@ -92,7 +92,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
   
@@ -117,7 +117,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date` ディストリビューション タスクを停止した日付スケジュールに yyyymmdd です。 *active_end_date*は**int**、既定値は NULL です。  
   
-`[ @description = ] 'description'` オプションの説明テキストです。 *説明*は**nvarchar (255)**、既定値は NULL です。  
+`[ @description = ] 'description'` オプションの説明テキストです。 *説明*は**nvarchar (255)** 、既定値は NULL です。  
   
 `[ @security_mode = ] security_mode` 実装されているセキュリティ モードです。 *security_mode*は**int**、これらの値のいずれかを指定できます。  
   
@@ -140,7 +140,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changesubscriber**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   

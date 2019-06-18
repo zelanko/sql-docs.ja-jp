@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad53ba3fa02107d4902c43084beadda7a420e586
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62735303"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption のマッピング
@@ -56,4 +56,4 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
   
  アプリケーションを呼び出すと**SQLSetStmtAttr** SQL_ATTR_USE_BOOKMARKS を SQL_UB_ON、ODBC 3 に設定する *.x*ドライバー、SQL_ATTR_USE_BOOKMARKS ステートメントの属性が SQL_UB_FIXED に設定します。 SQL_UB_ON は、SQL_UB_FIXED として同じ定数です。 ドライバー マネージャーは、ドライバーを通じて SQL_UB_FIXED を渡します。 ODBC 3 SQL_UB_FIXED が非推奨とされました *.x*が、ODBC 3 *.x*ドライバーは ODBC 2 と連動するように実装する必要があります *。x*固定長のブックマークを使用するアプリケーション。  
   
- ODBC 3 の場合、*.x*ドライバー、ドライバー マネージャーは不要になったかどうかを確認します*オプション*SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きい。
+ ODBC 3 の場合、 *.x*ドライバー、ドライバー マネージャーは不要になったかどうかを確認します*オプション*SQL_STMT_OPT_MIN と SQL_STMT_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きい。

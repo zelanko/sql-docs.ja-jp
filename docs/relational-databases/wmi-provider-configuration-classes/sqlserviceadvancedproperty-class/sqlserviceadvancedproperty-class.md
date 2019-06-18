@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6c76d14e4c3027d4b2b758755ae4dedcffad32f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62704448"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty クラス
@@ -33,7 +33,7 @@ ms.locfileid: "62704448"
   
  [の開始と停止サービス](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)クラスは、サービスに固有のプロパティを表します。 関連付けられているプロパティの一覧でこれらのプロパティは、 [SqlService クラス](https://technet.microsoft.com/library/ms186497.aspx)クラス。 [SqlServiceAdvancedProperty クラス](https://technet.microsoft.com/library/ms182447.aspx)クラスは、文字列、数値、またはブール プロパティの表記を使用できます。 このクラスを使用すると、指定したサービスに固有のプロパティを表示できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サービスの開始、停止、および一時停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

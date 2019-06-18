@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067458"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>[制約のチェック] ダイアログ ボックス (Visual Database Tools)
@@ -48,10 +48,10 @@ ms.locfileid: "63067458"
  選択した CHECK 制約の名前を表示します。 この制約の名前を変更するには、プロパティ フィールドに直接テキストを入力します。  
   
  **[説明]**  
- この CHECK 制約の説明を記述します。 プロパティ フィールドに入力することで説明を編集できます。またプロパティ フィールドの右側に表示されている省略記号ボタン ( **[...]** ) をクリックすると、**[説明のプロパティ]** ダイアログ ボックスで説明を編集できます。  
+ この CHECK 制約の説明を記述します。 プロパティ フィールドに入力することで説明を編集できます。またプロパティ フィールドの右側に表示されている省略記号ボタン ( **[...]** ) をクリックすると、 **[説明のプロパティ]** ダイアログ ボックスで説明を編集できます。  
   
  **[テーブル デザイナー] カテゴリ**  
- 展開して **[作成時または再度有効化するときに既存データを確認]**、 **[INSERTs および UPDATEs に適用]**、および **[レプリケーションに対して適用]** の各プロパティを表示します。  
+ 展開して **[作成時または再度有効化するときに既存データを確認]** 、 **[INSERTs および UPDATEs に適用]** 、および **[レプリケーションに対して適用]** の各プロパティを表示します。  
   
  **Check Existing Data On Creation or Re-Enabling**  
  既存のすべてのデータ (制約を作成する前からテーブルに存在しているデータ) を制約で検証するかどうかを指定します。  

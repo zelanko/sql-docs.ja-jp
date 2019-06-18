@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a171eafc35446f588d64c74457792912dcebe75a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641116"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)
@@ -57,7 +57,7 @@ ms.locfileid: "62641116"
   
 6.  変更したデータ ソース ビューを保存します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [「多次元モデルのデータ ソース ビュー」](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

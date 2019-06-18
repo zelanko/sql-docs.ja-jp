@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3a6f3daadf8d26da15a5ef0d9a01cb7f491d974e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253264"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>SQL Server への接続 (MySQLToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63253264"
 **サーバー名**  
 入力するかに接続する SQL Server のインスタンスを選択します。 既定では、最後に接続されているインスタンスが表示されます。  
   
--   ローカル コンピューターの既定のインスタンスに接続する場合、いずれかを入力する**localhost**またはドット (**.**)。  
+-   ローカル コンピューターの既定のインスタンスに接続する場合、いずれかを入力する**localhost**またはドット ( **.** )。  
   
 -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62626059"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>移行されたデータベース オブジェクトのテスト (OracleToSQL)
@@ -45,7 +45,7 @@ SSMA のテスト担当者は、Oracle との対応をテストするために�
 > [!NOTE]  
 > 注意してください。 実稼働システムでの SSMA Tester を使用しないでください。 テストの実行中に、送信元スキーマとデータは変更されます。 その一方で、元の状態の完全な復元はテストされるコードの種類によっては可能でない可能性があります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
 SSMA Tester を使用する場合は、SSMA Oracle 拡張機能パックをインストール、**テスター データベースのインストール**オプションがオンにします。  
   
 結果として得られるテーブル データの比較を有効にするには次のように設定します。、**生成 ROWID 列**オプションを**はい**スキーマの変換を開始する前にします。 SSMA の実行中にすべてのテーブルに ROWID 列を追加するが、**スキーマの変換**コマンド。  

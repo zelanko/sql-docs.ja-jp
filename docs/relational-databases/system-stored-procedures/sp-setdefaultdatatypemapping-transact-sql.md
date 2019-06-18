@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714349"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (TRANSACT-SQL)

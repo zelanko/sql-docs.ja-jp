@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 93cbdf74f8917492a2007d48ad27863440869092
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62693285"
 ---
 # <a name="modify-columns-database-engine"></a>列の変更 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47749680"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **列のデータ型を変更する方法:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47749680"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   

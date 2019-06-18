@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088504"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (TRANSACT-SQL)
@@ -43,9 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ \@tsql = ] 'Transact-SQL\_batch'` 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (**_n_**)** または**nvarchar (max)** します。  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (** _n_ **)** または**nvarchar (max)** します。  
   
-`[ \@params = ] N'parameters'` \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (**_n_**)** または**nvarchar (max)** します。  
+`[ \@params = ] N'parameters'` \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、sp_executesql と同様に動作します。 *パラメーター*あります**nvarchar (** _n_ **)** または**nvarchar (max)** します。  
   
  1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む*Transact SQL_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 n は、追加のパラメーター定義を示すプレースホルダーです。 TRANSACT-SQL ステートメントまたはステートメント内のバッチが、パラメーターが含まれない場合\@params は必要ありません。 このパラメーターの既定値は、NULL です。  
   
@@ -196,11 +196,11 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **numeric (38, 19)** -その他の numeric または decimal データ型は考慮されません。  
   
-    -   **varchar (8000)**、 **varchar (max)**、 **nvarchar (4000)**、および**nvarchar (max)** - その他の文字列データ型 (など**テキスト**、 **char (8000)**、 **nvarchar (30)** など) とは見なされません。  
+    -   **varchar (8000)** 、 **varchar (max)** 、 **nvarchar (4000)** 、および**nvarchar (max)** - その他の文字列データ型 (など**テキスト**、 **char (8000)** 、 **nvarchar (30)** など) とは見なされません。  
   
-    -   **varbinary (8000)** と**varbinary (max)** -その他のバイナリ データ型は考慮されません (など**イメージ**、 **binary(8000)**、 **varbinary(30)** など。)。  
+    -   **varbinary (8000)** と**varbinary (max)** -その他のバイナリ データ型は考慮されません (など**イメージ**、 **binary(8000)** 、 **varbinary(30)** など。)。  
   
-    -   **日付**、 **time (7)**、 **smalldatetime**、 **datetime**、 **datetime2 (7)**、 **datetimeoffset (7)** - その他の日付し、時刻のなどの種類、 **time(4)** とは見なされません。  
+    -   **日付**、 **time (7)** 、 **smalldatetime**、 **datetime**、 **datetime2 (7)** 、 **datetimeoffset (7)** - その他の日付し、時刻のなどの種類、 **time(4)** とは見なされません。  
   
     -   **sql_variant**  
   
@@ -233,7 +233,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      このルールは、ルール 1 に該当するすべてのデータ型と、最高位の優先順位を持つデータ型との間に暗黙的な変換がある場合にのみ適用されます。 暗黙的な変換がない場合、データ型の推論はエラーで失敗します。 たとえば、クエリで`SELECT @p FROM t`、任意のデータの型のためのデータ型の推論は失敗\@p は同等になります。 たとえばからの暗黙的変換がない**int**に**xml**します。  
   
-3.  かどうかのような 2 つのデータ型にリンク付けルール 1、たとえば**varchar (8000)** と**varchar (max)**、小さい方のデータ型 (**varchar (8000)**) が選択されます。 同じ原則に適用されます**nvarchar**と**varbinary**データ型。  
+3.  かどうかのような 2 つのデータ型にリンク付けルール 1、たとえば**varchar (8000)** と**varchar (max)** 、小さい方のデータ型 (**varchar (8000)** ) が選択されます。 同じ原則に適用されます**nvarchar**と**varbinary**データ型。  
   
 4.  ルール 1 のために、型推論アルゴリズムでは、特定の変換が他の変換よりも優先されます。 変換の優先順序は、次のとおりです。  
   
@@ -245,7 +245,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  その他の変換。  
   
- たとえば、クエリ`SELECT * FROM t WHERE [Col_varchar(30)] > @p`、 **varchar (8000)** 変換 (a) が最適なために選択します。 クエリの`SELECT * FROM t WHERE [Col_char(30)] > @p`、 **varchar (8000)** 、(b) の型変換が発生するため、まだ選択別の選択肢 (など**varchar(4000)**) 変換の種類 (d) になります。  
+ たとえば、クエリ`SELECT * FROM t WHERE [Col_varchar(30)] > @p`、 **varchar (8000)** 変換 (a) が最適なために選択します。 クエリの`SELECT * FROM t WHERE [Col_char(30)] > @p`、 **varchar (8000)** 、(b) の型変換が発生するため、まだ選択別の選択肢 (など**varchar(4000)** ) 変換の種類 (d) になります。  
   
  最後の例として、クエリを指定`SELECT NULL + @p`、 **int**選択\@p (c) の型変換の結果となるためです。  
   

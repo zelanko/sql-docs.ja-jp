@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0eb11e0952f2a6ceef45fe9d0db52ac8c4d9c1f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737501"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath の例で使用する注釈付き XSD スキーマのサンプル (SQLXML 4.0)

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299152"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>プロジェクトの設定 (変換) (AccessToSQL)
@@ -111,6 +111,6 @@ SSMA により、オブジェクト識別子の名前が変更されたときに
   
 -   **フル モード**:True  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ユーザー インターフェイスの Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

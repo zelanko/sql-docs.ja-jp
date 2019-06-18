@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c956c5ad3e58c7d4aee84295b3cf2a7d6862e6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62507669"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>静的行フィルターの定義および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47647490"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -90,11 +90,11 @@ ms.locfileid: "47647490"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
+5.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 #### <a name="to-modify-a-static-row-filter"></a>静的行フィルターを変更するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[編集]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[編集]** をクリックします。  
   
 2.  **[フィルターの編集]** ダイアログ ボックスで、フィルターを変更します。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "47647490"
   
 #### <a name="to-delete-a-static-row-filter"></a>静的行フィルターを削除するには  
   
-1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、**[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、**[削除]** をクリックします。  
+1.  パブリケーションの新規作成ウィザードの **[テーブル行のフィルター選択]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[行のフィルター選択]** ページで、 **[フィルター選択されたテーブル]** ペイン内のフィルターを選択し、 **[削除]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  テーブルのアーティクルを作成するとき、WHERE 句を定義することで、アーティクルから特定の行をフィルター選択できます。 いったん行フィルターを定義した後で、そのフィルターを変更することもできます。 静的行フィルターは、レプリケーションのストアド プロシージャを使用してプログラムから作成したり変更したりできます。  
@@ -111,15 +111,15 @@ ms.locfileid: "47647490"
   
 1.  フィルターを適用するアーティクルを定義します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を実行します。 **@article** にアーティクル名を、**@publication** にパブリケーション名を、**@filter_name** にフィルター名を、**@filter_clause** にフィルター句 (`WHERE` は含めない) を指定します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を実行します。 **@article** にアーティクル名を、 **@publication** にパブリケーション名を、 **@filter_name** にフィルター名を、 **@filter_clause** にフィルター句 (`WHERE` は含めない) を指定します。  
   
-3.  列フィルターも定義する必要がある場合は、「 [列フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」を参照してください。 それ以外の場合、[sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行します。 **@publication** にパブリケーション名を、**@article** にフィルター選択の対象アーティクル名を、**@filter_clause** に手順 2 で指定したフィルター句を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
+3.  列フィルターも定義する必要がある場合は、「 [列フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)」を参照してください。 それ以外の場合、[sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行します。 **@publication** にパブリケーション名を、 **@article** にフィルター選択の対象アーティクル名を、 **@filter_clause** に手順 2 で指定したフィルター句を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの静的行フィルターを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を実行します。 **@article** にアーティクル名を、**@publication** にパブリケーション名を、**@filter_name** に新しいフィルター名を、**@filter_clause** に新しいフィルター句 (`WHERE` は含めない) を指定します。 この変更によって既存のサブスクリプションのデータが無効になるため、 **@force_reinit_subscription** に **@force_reinit_subscription**を使用して、静的行フィルターを定義および変更する方法について説明します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を実行します。 **@article** にアーティクル名を、 **@publication** にパブリケーション名を、 **@filter_name** に新しいフィルター名を、 **@filter_clause** に新しいフィルター句 (`WHERE` は含めない) を指定します。 この変更によって既存のサブスクリプションのデータが無効になるため、 **@force_reinit_subscription** に **@force_reinit_subscription** を使用して、静的行フィルターを定義および変更する方法について説明します。  
   
-2.  パブリッシャー側のパブリケーション データベースで、[sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行します。 **@publication** にパブリケーション名を、**@article** にフィルター選択の対象アーティクル名を、**@filter_clause** に手順 1 で指定したフィルター句を指定します。 この結果、フィルター選択の対象アーティクルを定義するビューが再作成されます。  
+2.  パブリッシャー側のパブリケーション データベースで、[sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) を実行します。 **@publication** にパブリケーション名を、 **@article** にフィルター選択の対象アーティクル名を、 **@filter_clause** に手順 1 で指定したフィルター句を指定します。 この結果、フィルター選択の対象アーティクルを定義するビューが再作成されます。  
   
 3.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "47647490"
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの静的行フィルターを削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を実行します。 **@article** にアーティクル名を、**@publication** にパブリケーション名を、**@filter_name** に NULL を、**@filter_clause** に NULL を指定します。 この変更によって既存のサブスクリプションのデータが無効になるため、 **@force_reinit_subscription** に **@force_reinit_subscription**を使用して、静的行フィルターを定義および変更する方法について説明します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を実行します。 **@article** にアーティクル名を、 **@publication** にパブリケーション名を、 **@filter_name** に NULL を、 **@filter_clause** に NULL を指定します。 この変更によって既存のサブスクリプションのデータが無効になるため、 **@force_reinit_subscription** に **@force_reinit_subscription** を使用して、静的行フィルターを定義および変更する方法について説明します。  
   
 2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "47647490"
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>マージ パブリケーションの静的行フィルターを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **@publication** にパブリケーション名を、**@article** にフィルター選択の対象アーティクル名を、**@property** に **subset_filterclause** を、**@value** に新しいフィルター選択句 (`WHERE` は含めない) を指定します。 この変更によって既存のサブスクリプションのデータが無効になるため、 **@force_reinit_subscription**を使用して、静的行フィルターを定義および変更する方法について説明します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **@publication** にパブリケーション名を、 **@article** にフィルター選択の対象アーティクル名を、 **@property** に **subset_filterclause** を、 **@value** に新しいフィルター選択句 (`WHERE` は含めない) を指定します。 この変更によって既存のサブスクリプションのデータが無効になるため、 **@force_reinit_subscription** を使用して、静的行フィルターを定義および変更する方法について説明します。  
   
 2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   

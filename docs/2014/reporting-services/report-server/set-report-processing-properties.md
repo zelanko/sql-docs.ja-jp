@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103238"
 ---
 # <a name="set-report-processing-properties"></a>レポート処理プロパティの設定
@@ -59,7 +59,7 @@ ms.locfileid: "66103238"
  [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [レポートの実行プロパティを構成する &#40;レポート マネージャー&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services の概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [方法: レポート履歴にスナップショットを追加します。](add-a-snapshot-to-report-history-report-manager.md)   
+ [方法:レポート履歴にスナップショットを追加します。](add-a-snapshot-to-report-history-report-manager.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebe4438e48f14c1adba3b56d30cc772549f9ee7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034849"
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52526443"
   
 ## <a name="allowed-alter-table-operations"></a>許可される ALTER TABLE 操作  
   
-|演算|現在|履歴|  
+|演算|Current|履歴|  
 |---------------|-------------|-------------|  
 |**ALTER TABLE...REBUILD**|許可 (非依存)|許可 (非依存)|  
 |**CREATE INDEX**|許可 (非依存)|許可 (非依存)|  

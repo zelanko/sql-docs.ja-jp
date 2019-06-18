@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 414a391591577d554d88b6b5b5aac901834e8509
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737411"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での論理関数の指定 (SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "62737411"
 ## <a name="examples"></a>使用例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. not() 論理関数を指定する  
- このクエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素を持たない**\<順序 >** 子要素。  
+ このクエリでは、すべてを返します、 **\<顧客 >** コンテキスト ノードの子要素を持たない **\<順序 >** 子要素。  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -80,7 +80,7 @@ ms.locfileid: "62737411"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. true() 論理関数と false() 論理関数を指定する  
- このクエリはすべて返します**\<顧客 >** がない、コンテキスト ノードの要素の子**\<順序 >** 子要素。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
+ このクエリはすべて返します **\<顧客 >** がない、コンテキスト ノードの要素の子 **\<順序 >** 子要素。 具体的には、このクエリでは、発注していないすべての顧客が返されます。  
   
 ```  
 /child::Customer[child::Order=false()]  

@@ -9,10 +9,10 @@ ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0e377fc94559600a98ee2cd03daadd59a5f3c2eb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500083"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI の接続の種類 (SSRS)

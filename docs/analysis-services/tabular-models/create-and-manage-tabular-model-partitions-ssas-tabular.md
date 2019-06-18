@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472294"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>テーブル モデル パーティション作成し、管理
@@ -57,7 +57,7 @@ ms.locfileid: "62472294"
   
 -   **[パーティション]** ダイアログ ボックスの **[パーティション]** ボックスの一覧で、削除するパーティションを選択し、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル モデル パーティション](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
  [プロセスのテーブル モデル パーティション](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   

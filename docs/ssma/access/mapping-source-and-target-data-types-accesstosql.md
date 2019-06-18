@@ -17,10 +17,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740982"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>ソースとターゲットのデータ型 (AccessToSQL) のマッピング
@@ -66,7 +66,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
     4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
-        一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]**。  
+        一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]** 。  
   
 3.  データ型のマッピングを編集するには、次の操作を行います。  
   
@@ -80,7 +80,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
     4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
-        一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]**。  
+        一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]** 。  
   
 4.  データ型のマッピングを削除するには、次の操作を行います。  
   

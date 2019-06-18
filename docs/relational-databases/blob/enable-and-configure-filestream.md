@@ -9,15 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-manager: craigg
-ms.openlocfilehash: 6c01393866ae90c800afbbc7f55e5cb63bfb7554
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jroth
+ms.openlocfilehash: 9c2b248e89b3aa822de79dd26970931fea4aaebd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65094292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822814"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FILESTREAM の使用を開始するには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで FILESTREAM を有効にする必要があります。 このトピックでは、SQL Server 構成マネージャーを使用して FILESTREAM を有効にする方法について説明します。  
   
@@ -25,7 +28,7 @@ ms.locfileid: "65094292"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>FILESTREAM の設定の有効化と変更  
   
-1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 2.  サービスの一覧で、 **[SQL Server のサービス]** を右クリックし、 **[開く]** をクリックします。  
   
@@ -80,6 +83,7 @@ ms.locfileid: "65094292"
 |RAID 5|標準|標準|[非常に良い]|パフォーマンスは、1 台のディスクまたは JBOD よりも高く、RAID 0 またはストライピング機能を備えた RAID 5 よりも低くなります。|  
 |RAID 0|[非常に良い]|[非常に良い]|なし||  
 |RAID 5 + ストライピング|[非常に良い]|[非常に良い]|[非常に良い]|最も高価なオプションです。|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a> 物理的なデータベース設計  

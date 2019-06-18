@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796583"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -58,7 +58,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ときに**@legacy_format**は**0**、 **sp_help_alert**次の結果セットが生成されます。  
+ ときに **@legacy_format** は**0**、 **sp_help_alert**次の結果セットが生成されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -92,7 +92,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**wmi_query**|**nvarchar(512)**|場合**型**は**3**、この列は、WMI イベントのクエリを示しています。|  
 |**type**|**int**|イベントの種類:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イベント警告<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パフォーマンス警告<br /><br /> **3** = WMI イベント警告|  
   
- ときに**@legacy_format**は**1**、 **sp_help_alert**次の結果セットが生成されます。  
+ ときに **@legacy_format** は**1**、 **sp_help_alert**次の結果セットが生成されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -119,9 +119,9 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|ジョブ識別番号。|  
 |**job_name**|**sysname**|警告に応答して実行するオンデマンド ジョブ。|  
 |**has_notification**|**int**|1 つまたは複数の演算子はこのアラートの通知を受け取る場合は 0 以外の値。 値は次のとおりです。複数の場合は OR で表されます。<br /><br /> **1**= 電子メールによる通知<br /><br /> **2**= ポケットベルによる通知<br /><br /> **4**= が**net send**通知します。|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 。|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]。|  
 |**performance_condition**|**nvarchar(512)**|場合**型**は**2**、この列は、パフォーマンス条件の定義を示しています。 場合**型**は**3**、この列は、WMI イベントのクエリを示しています。 それ以外の場合、列が NULL です。|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 常に '**[未分類]**' の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 常に ' **[未分類]** ' の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0。|  
 |**type**|**int**|アラートの種類:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イベント警告<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パフォーマンス警告<br /><br /> **3** = WMI イベント警告|  
   
 ## <a name="remarks"></a>コメント  

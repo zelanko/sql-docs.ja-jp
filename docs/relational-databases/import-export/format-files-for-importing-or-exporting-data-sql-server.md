@@ -17,10 +17,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a75df7439f91355104a2c3ae9a6a62094bac1b2
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945539"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)
@@ -110,7 +110,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   終了文字またはプレフィックス長がデータ ファイルの列によって異なる場合。  
   
 > [!NOTE]  
->  フォーマット ファイルが存在しない場合に、 **bcp** コマンドで data-format スイッチ (**-n**、 **-c**、 **-w**、または **-N**) を指定するか、BULK INSERT 操作で DATAFILETYPE オプションを指定すると、指定したデータ形式がデータ ファイルのフィールドを解釈するための既定の方法として使用されます。  
+>  フォーマット ファイルが存在しない場合に、 **bcp** コマンドで data-format スイッチ ( **-n**、 **-c**、 **-w**、または **-N**) を指定するか、BULK INSERT 操作で DATAFILETYPE オプションを指定すると、指定したデータ形式がデータ ファイルのフィールドを解釈するための既定の方法として使用されます。  
   
   
 ##  <a name="RelatedTasks"></a> 関連タスク  

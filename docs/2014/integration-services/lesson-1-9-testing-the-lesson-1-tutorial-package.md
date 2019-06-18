@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767611"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>手順 9:レッスン 1 のチュートリアル パッケージのテスト
@@ -50,7 +50,7 @@ ms.locfileid: "62767611"
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 2:ループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [プロジェクトとパッケージの実行](packages/run-integration-services-ssis-packages.md)  
   
   

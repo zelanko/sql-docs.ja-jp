@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e18ce61356947754423cfb878cf47f90534b40f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62869222"
 ---
 # <a name="mssqlserver233"></a>MSSQLSERVER_233
@@ -40,7 +40,7 @@ ms.locfileid: "62869222"
 ## <a name="user-action"></a>ユーザーの操作  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー ツールを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリモート接続を許可できるようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネットワーク プロトコルとネットワーク ライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [クライアント ネットワーク構成](../../database-engine/configure-windows/client-network-configuration.md)   
  [クライアント プロトコルを構成します。](../../database-engine/configure-windows/configure-client-protocols.md)   

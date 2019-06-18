@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2dc3cd6f52d0c43903cb663ec6e6aa6d8bd60f3
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946143"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "64946143"
   フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp** コマンドを実行すると、フィールド長、既定のフィールド長、 **char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>フィールド長を要求する bcp プロンプト  
- 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、**-c**、**-w** または **-N**) のどちらも付けずに **in** または **out** オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
+ 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f**) またはデータ形式スイッチ ( **-n**、 **-c**、 **-w** または **-N**) のどちらも付けずに **in** または **out** オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
   
  `Enter length of field <field_name> [<default>]:`  
   

@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1e2df18e14fea713dae58fa080256210e97c3c7c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093827"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>AND が優先する場合の条件を結合する (Visual Database Tools)
@@ -32,7 +32,7 @@ AND で条件を結合するには、クエリに対して列を 2 回 (各条�
   
 -   入社日が 5 年以上前で、かつ職務レベルが 100 の従業員  
   
-    - または -  
+    \- または -  
   
 -   職務レベルが 200 の従業員  
   

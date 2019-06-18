@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40620b839b7bf7df14d1beddd90315b51d32d0bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013660"
 ---
 # <a name="cursor-properties"></a>カーソルのプロパティ
@@ -32,11 +32,11 @@ ms.locfileid: "63013660"
   
 -   [カーソルの行セット サイズ](../../../relational-databases/native-client-odbc-cursors/properties/cursor-rowset-size.md)  
   
--   [カーソルのコンカレンシー &amp;#40;ODBC&amp;#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
+-   [カーソルのコンカレンシー &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
   
 -   [カーソルのトランザクション分離レベル](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルを使用して&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

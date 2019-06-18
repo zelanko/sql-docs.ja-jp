@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997062"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (TRANSACT-SQL)
@@ -50,7 +50,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] 'dbnam_ '` サーバーに接続するデータベースの名前です。 名前は一意である必要があります。 *dbname*は**sysname**、既定値は NULL です。  
   
-`[ @filename1 = ] 'filename_n'` データベース ファイルのパスを含む、物理名です。 *filename_n*は**nvarchar (260)**、既定値は NULL です。 ファイル名は 16 個まで指定できます。 最初のパラメーター名**@filename1**にインクリメント **@filename16**します。 ファイル名の一覧は、少なくともプライマリ ファイルを含める必要があります。 プライマリ ファイルには、データベース内の他のファイルをポイントしているシステム テーブルが含まれています。 一覧には、データベースをデタッチした後で移動したファイルも指定する必要があります。  
+`[ @filename1 = ] 'filename_n'` データベース ファイルのパスを含む、物理名です。 *filename_n*は**nvarchar (260)** 、既定値は NULL です。 ファイル名は 16 個まで指定できます。 最初のパラメーター名 **@filename1** にインクリメント **@filename16** します。 ファイル名の一覧は、少なくともプライマリ ファイルを含める必要があります。 プライマリ ファイルには、データベース内の他のファイルをポイントしているシステム テーブルが含まれています。 一覧には、データベースをデタッチした後で移動したファイルも指定する必要があります。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  

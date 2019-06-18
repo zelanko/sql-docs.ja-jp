@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62860681"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>ヒープ サイズの見積もり
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53591766"
   
 3.  NULL ビットマップと呼ばれる行の部分は、列の NULL 値の許容を管理するために予約されています。 このサイズは次のように計算します。  
   
-     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
   
      この式の計算結果は、整数部分だけを使用します。 小数部分は無視してください。  
   
@@ -55,30 +55,30 @@ ms.locfileid: "53591766"
   
      テーブル内に可変長列が存在する場合、次の式を使用して、行内でそれらの列を格納するために使用する領域を計算します。  
   
-     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      **_Max_Var_Size_** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。 この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて **_Max_Var_Size_** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
     > [!NOTE]  
     >  定義済みのテーブルの合計サイズが 8,060 バイトを超える **varchar**、 **nvarchar**、 **varbinary**、または **sql_variant** 列の連結が可能です。 この場合も、**varchar**、**nvarchar、varbinary**、または **sql_variant** 列では、8,000 バイトの制限内に各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
   
-     可変長列が存在しない場合は、**_Variable_Data_Size_** に 0 を設定します。  
+     可変長列が存在しない場合は、 **_Variable_Data_Size_** に 0 を設定します。  
   
 5.  次の式で行サイズの合計を計算します。  
   
-     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
+     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
   
      上記の式の 4 という値は、データ行の行ヘッダー オーバーヘッドです。  
   
 6.  次の式で、1 ページあたりの行数を計算します (1 ページあたりの空きバイト数は 8,096 です)。  
   
-     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
   
      行は複数のページにまたがらないので、計算結果の端数は切り捨ててください。 上記の式の 2 という値は、ページのスロット配列内の行のエントリのためのものです。  
   
 7.  次の式で、すべての行を格納するために必要なページ数を計算します。  
   
-     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
+     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
   
      算出したページ数の端数は切り上げてください。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53591766"
   
 -   ラージ オブジェクト (LOB) の値  
   
-     LOB データ型の **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntextxml**、および **image** の値を格納するのに使用する領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、予想される LOB 値の平均サイズを合計し、ヒープの合計サイズに加算するだけで十分です。  
+     LOB データ型の **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntextxml**、および **image** の値を格納するのに使用する領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、予想される LOB 値の平均サイズを合計し、ヒープの合計サイズに加算するだけで十分です。  
   
 -   圧縮  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256477"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672361"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
 

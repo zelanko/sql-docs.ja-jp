@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637570"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の拒否
@@ -188,7 +188,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)   
  [XML スキーマ コレクション &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   
  [サーバー上の XML スキーマ コレクションの要件と制限](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

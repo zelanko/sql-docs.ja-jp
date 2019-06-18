@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63473077"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
@@ -76,7 +76,7 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

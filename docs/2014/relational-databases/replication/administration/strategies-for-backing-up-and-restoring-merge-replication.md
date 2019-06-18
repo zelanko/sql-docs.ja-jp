@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688913"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>マージ レプリケーションのバックアップと復元の方式
@@ -56,7 +56,7 @@ ms.locfileid: "62688913"
 > [!IMPORTANT]  
 >  パブリケーション データベースとサブスクリプション データベースを同期することによって、復元対象のパブリッシュされたテーブルを、バックアップから復元されたパブリッシュされていないテーブルよりも新しい状態にすることができます。  
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションはクライアント サブスクリプションまたはサーバー サブスクリプション (前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションはクライアント サブスクリプションまたはサーバー サブスクリプション (前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。  
   
  サブスクリプションを同期するには、「 [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) 」および「 [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)」を参照してください。  
   

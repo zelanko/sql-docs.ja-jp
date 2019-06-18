@@ -16,11 +16,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ba81029a195bcee0e747bfe517fa5d6b27e4ead1
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686909"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>インデックスの FILL FACTOR の指定
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "53588381"
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、**[デザイン]** を選択します。  
+3.  インデックスの FILL FACTOR を指定するテーブルを右クリックし、 **[デザイン]** を選択します。  
   
 4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   

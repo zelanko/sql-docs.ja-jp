@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 80b6c00b0abcd09d4712b82df1d0d138cb37a390
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653165"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>非クラスター化インデックスのサイズの算出
 
@@ -250,7 +250,7 @@ ms.locfileid: "51559179"
   
 -   ラージ オブジェクト (LOB) の値  
   
-     LOB データ型の **varchar(max)**、 **varbinary(max)**、 **nvarchar(max)**、 **text**、 **ntext**、 **xml**、および **image** の値を格納するのに使用する領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、想定される LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、非クラスター化インデックスの合計サイズに加算するだけで十分です。  
+     LOB データ型の **varchar(max)** 、 **varbinary(max)** 、 **nvarchar(max)** 、 **text**、 **ntext**、 **xml**、および **image** の値を格納するのに使用する領域を正確に特定するためのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、想定される LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、非クラスター化インデックスの合計サイズに加算するだけで十分です。  
   
 -   圧縮  
   

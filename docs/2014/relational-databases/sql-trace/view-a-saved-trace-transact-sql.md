@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 16adeb7225df27d571e3c8ea30daa44151f3c19c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63285578"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>保存されているトレースの表示 (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "63285578"
   
  サーバーの ALTER TRACE  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql)   
  [SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)  
   

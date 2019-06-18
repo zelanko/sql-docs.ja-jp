@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69956f6a24ec6f373343cebb4e60fa4ad9fea320
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740469"
 ---
 # <a name="replay-traces"></a>トレースの再生
@@ -45,7 +45,7 @@ ms.locfileid: "62740469"
 |[再生オプション &#40;SQL Server Profiler&#41;](replay-options-sql-server-profiler.md)|**の** [構成の再生] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ダイアログ ボックスで設定できるオプションについて説明します。|  
 |[トレースの再生に関する注意点 &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で再生できないトレース イベント、およびトレースの再生によるサーバー パフォーマンスへの影響について説明します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)  
   
   

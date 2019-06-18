@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015711"
 ---
 # <a name="attribute-properties---group-attribute-members"></a>属性のプロパティ - 属性メンバーをグループ化する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  メンバー グループは、連続したディメンション メンバーが含まれている、システムによって生成されたコレクションです。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、分離と呼ばれるプロセスにより、1 つの属性のメンバーを複数のメンバー グループに分割できます。 階層内のレベルには、メンバー グループまたはメンバーのどちらかが含まれています。 メンバー グループが属するレベルをビジネス ユーザーが参照すると、メンバー グループの名前とセル値が表示されます。 メンバー グループをサポートするために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって生成されたメンバーはグループ化メンバーと呼ばれ、通常のメンバーと同じように表示されます。  
+  メンバー グループは、連続したディメンション メンバーが含まれている、システムによって生成されたコレクションです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、分離と呼ばれるプロセスにより、1 つの属性のメンバーを複数のメンバー グループに分割できます。 階層内のレベルには、メンバー グループまたはメンバーのどちらかが含まれています。 メンバー グループが属するレベルをビジネス ユーザーが参照すると、メンバー グループの名前とセル値が表示されます。 メンバー グループをサポートするために [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって生成されたメンバーはグループ化メンバーと呼ばれ、通常のメンバーと同じように表示されます。  
   
  属性の **DiscretizationMethod** プロパティは、メンバーがどのようにグループ化されるかを定義します。  
   

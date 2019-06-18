@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9237872d09667f0b67dc90b48cc813cb5b3197d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025602"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>デバイスからのバックアップ復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47641610"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **デバイスからバックアップを復元する方法:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47641610"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47641610"
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をクリックします。  
   
-4.  実行する復元操作の種類 (**[データベース]**、 **[ファイルとファイル グループ]**、または **[トランザクション ログ]**) をクリックします。 対応する復元ダイアログ ボックスが開きます。  
+4.  実行する復元操作の種類 ( **[データベース]** 、 **[ファイルとファイル グループ]** 、または **[トランザクション ログ]** ) をクリックします。 対応する復元ダイアログ ボックスが開きます。  
   
 5.  **[全般]** ページの **[復元用のソース]** セクションで、 **[デバイスから]** をクリックします。  
   

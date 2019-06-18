@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670578"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>変更データ キャプチャの有効化と無効化 (SQL Server)
@@ -55,7 +55,7 @@ GO
  データベースの無効化の例については、データベースでの変更データ キャプチャの無効化のテンプレートを参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]**、 **[テンプレート エクスプローラー]**、 **[SQL Server テンプレート]** の順にクリックします。 **Change Data Capture** は、このトピックで参照されるすべてのテンプレートを含んだサブフォルダーです。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]** 、 **[テンプレート エクスプローラー]** 、 **[SQL Server テンプレート]** の順にクリックします。 **Change Data Capture** は、このトピックで参照されるすべてのテンプレートを含んだサブフォルダーです。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
   
 ```sql  
 -- =======  
@@ -72,13 +72,13 @@ GO
   
  キャプチャ インスタンスの作成時に、次のオプションを指定できます。  
   
- `Columns in the source table to be captured` 。  
+ `Columns in the source table to be captured`。  
   
  既定では、ソース テーブルのすべての列がキャプチャ対象列として識別されます。 プライバシーやパフォーマンス上の理由で、列のサブセットのみを追跡する場合は、 *@captured_column_list* パラメーターを使用して列のサブセットを指定します。  
   
  `A filegroup to contain the change table.`  
   
- 既定では、変更テーブルはデータベースの既定のファイル グループにあります。 データベース所有者が個々の変更テーブルの場所を制御するには、 *@filegroup_name* パラメーターを使用して、キャプチャ インスタンスに関連付けられている変更テーブルに対して特定のファイル グループを指定します。 指定するファイル グループはあらかじめ存在している必要があります。 通常、変更テーブルはソース テーブルとは別のファイル グループに配置することをお勧めします。 参照してください、`Enable a Table Specifying Filegroup Option`テンプレートの使用方法を示す例については、 *@filegroup_name*パラメーター。  
+ 既定では、変更テーブルはデータベースの既定のファイル グループにあります。 データベース所有者が個々の変更テーブルの場所を制御するには、 *@filegroup_name* パラメーターを使用して、キャプチャ インスタンスに関連付けられている変更テーブルに対して特定のファイル グループを指定します。 指定するファイル グループはあらかじめ存在している必要があります。 通常、変更テーブルはソース テーブルとは別のファイル グループに配置することをお勧めします。 参照してください、`Enable a Table Specifying Filegroup Option`テンプレートの使用方法を示す例については、 *@filegroup_name* パラメーター。  
   
 ```sql  
 -- =========  

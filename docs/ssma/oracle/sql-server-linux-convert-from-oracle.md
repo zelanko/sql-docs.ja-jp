@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62629811"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant を使った Linux 上の SQL Server 2017 への Oracle スキーマを移行します。
@@ -28,7 +28,7 @@ ms.locfileid: "62629811"
 > * サンプル HR スキーマを変換します。
 > * データを移行します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - Oracle 12c の (12.2.0.1.0) を持つインスタンス、 **HR**スキーマがインストールされています。
 - Linux 上の SQL Server の作業用インスタンス
@@ -124,7 +124,7 @@ SSMA for Oracle では、既定では、Oracle のサンプル スキーマを�
 
    ![データ移行レポート](./media/sql-server-linux-convert-from-oracle/DataMigrationReport.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 複雑な Orcale スキーマ、変換プロセスの詳細の時間、テスト、およびクライアント アプリケーションへの変更、します。 このチュートリアルの目的では、全体的な移行プロセスの一部として、Oracle の SSMA を使用する方法を説明します。
 

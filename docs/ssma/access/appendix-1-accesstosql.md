@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 521c94fe15c8409377997edfc0b5821f92bed34d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62759631"
 ---
 # <a name="appendix---1-accesstosql"></a>付録 - 1 (AccessToSQL)
@@ -31,6 +31,6 @@ SSMA コンソールのコマンド ライン オプションを簡単に確認�
 |7|-p/securepassword|いいえ|-a/add {<server_id> [,...n] &#124; all} -c&#124;serverconnection  <server-connection-file> [-v&#124;variable <variable-value-file>] [-o/overwrite]<br /><br />または<br /><br />-a/add {<server_id> [,...n] &#124; all} -s&#124;script <script-file> [-v&#124;variable <variable-value-file>] [-o/overwrite]<br /><br />-r/remove {<server_id> [, ...n] &#124; all}<br /><br />-l/list<br /><br />-e/export {<server-id> [, ...n] &#124; all} <encrypted-password -file><br /><br />-i/import {<server-id> [, ...n] &#124; all} <encrypted-password-file>|指定した場合、このオプションをその他のオプションと組み合わされていない必要があります。<br /><br />サーバー id:サーバー {文字列} に指定された一意の ID<br /><br />サーバー接続ファイル: サーバーの定義ファイル (serverconnectionfile または scriptfile)。<br /><br />変数の値のファイル:変数の定義ファイルし、サーバー接続ファイルで使用します。<br /><br />暗号化されたパスワード ファイルに:サーバー パスワード ファイルがユーザーが指定したパス フレーズを使用して暗号化することをお勧めします。|  
 |8|-?|いいえ|該当なし|該当なし|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [SSMA コンソール (アクセス) の実行](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

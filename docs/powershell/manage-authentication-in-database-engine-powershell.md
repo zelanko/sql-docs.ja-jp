@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a589502fd502b49e82d6458f163bccac45345b64
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672477"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>データベース エンジン PowerShell での認証の管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Invoke-Sqlcmd を使用する SQL Server 認証  
  **SQL Server 認証で Invoke-Sqlcmd を使用するには**  
   
-1.  **-Username** パラメーターでログイン ID を指定し、**-Password** パラメーターで関連付けられているパスワードを指定します。  
+1.  **-Username** パラメーターでログイン ID を指定し、 **-Password** パラメーターで関連付けられているパスワードを指定します。  
   
 ### <a name="example-invoke-sqlcmd"></a>例 (Invoke-Sqlcmd)  
  この例では、read-host コマンドレットを使用してユーザーにパスワードの入力を求め、SQL Server 認証を使用して接続します。  

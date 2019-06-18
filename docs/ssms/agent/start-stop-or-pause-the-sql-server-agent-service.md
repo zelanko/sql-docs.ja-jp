@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 46b9c2bacfe9dc4e35b2326053df39008e910ab1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089574"
 ---
 # <a name="start-stop-or-pause-the-sql-server-agent-service"></a>Start, Stop, or Pause the SQL Server Agent Service
@@ -72,7 +72,7 @@ ms.locfileid: "65089574"
   
 1.  **オブジェクト エクスプ ローラー**で、プラス記号をクリックして、管理する SQL Server エージェント サービスを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[開始]**、 **[停止]**、または **[再起動]** を選択します。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[開始]** 、 **[停止]** 、または **[再起動]** を選択します。  
   
 3.  **[ユーザー アカウント制御]** ダイアログ ボックスで、 **[はい]** をクリックします。  
   

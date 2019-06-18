@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044057"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>ターゲット サーバーからのマスター サーバーのポーリングの強制
@@ -30,9 +30,9 @@ ms.locfileid: "63044057"
 > [!NOTE]  
 >  ターゲット サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
   
--   **ターゲット サーバーからマスター サーバーにポーリングさせるのにを使用します。**[SQL Server Management Studio](#SSMS)  
+-   **ターゲット サーバーからマスター サーバーにポーリングさせるには、次を使用します。** [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -49,6 +49,6 @@ ms.locfileid: "63044057"
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーの管理]** をクリックします。  
   
-3.  ターゲット サーバーをクリックし、**[強制的にポーリング]** をクリックします。  
+3.  ターゲット サーバーをクリックし、 **[強制的にポーリング]** をクリックします。  
   
   

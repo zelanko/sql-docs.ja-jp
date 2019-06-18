@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 1a1218e5d27abd72acef7967e0a71284384fed89
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380303"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62629138"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53380303"
   
  簡易パラメーター化と強制パラメーター化の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** カウンターを次に示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** カウンターを次に示します。  
   
 |SQL Server SQL Statistics カウンター|[説明]|  
 |----------------------------------------|-----------------|  

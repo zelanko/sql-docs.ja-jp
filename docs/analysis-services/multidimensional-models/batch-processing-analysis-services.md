@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6d2f72dd0c7b380391a7b500d494d5aac83c4c6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62717689"
 ---
 # <a name="batch-processing-analysis-services"></a>バッチ処理 (Analysis Services)
@@ -57,7 +57,7 @@ ms.locfileid: "62717689"
   
     -   **[影響を受けたオブジェクト]** の **[影響を受けたオブジェクトを処理する]** チェック ボックスをオンにします。  
   
-10. **[ディメンション キーのエラー]** タブをクリックします。**[既定のエラー構成を使用する]** が選択されていることを確認します。  
+10. **[ディメンション キーのエラー]** タブをクリックします。 **[既定のエラー構成を使用する]** が選択されていることを確認します。  
   
 11. **[OK]** をクリックし、 **[設定の変更]** 画面を閉じます。  
   

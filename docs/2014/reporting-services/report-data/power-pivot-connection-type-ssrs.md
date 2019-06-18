@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107187"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot の接続の種類 (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66107187"
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
   
 ## <a name="connection-string"></a>[接続文字列]  
- 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxします。  
+ 接続文字列は、SharePoint の PowerPivot ギャラリーまたはその他のライブラリにパブリッシュされた PowerPivot ブックへの URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx します。  
   
 ## <a name="credentials"></a>[資格情報]  
  PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳しくは、「[データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)に関する記事を参照してください。  

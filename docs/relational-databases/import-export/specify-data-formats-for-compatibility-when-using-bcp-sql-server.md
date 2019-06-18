@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 929a6a40b7203147ed59e045bb359c464c248850
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946158"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp を使用した互換性のためのデータ形式の指定 (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "64946158"
   
   
 ##  <a name="FieldSpecificPrompts"></a> フィールド固有のプロンプトの概要  
- 対話的な **bcp** コマンドに **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合は、ソース テーブルとターゲット テーブルの各列で、上記の属性について順番に問い合わせが行われます。 問い合わせが行われる際は、 **bcp** コマンドにより、テーブル列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいてそれぞれ既定値が表示されます。 すべての問い合わせに対して既定値を受け入れることは、コマンド ラインでネイティブ形式 (**-n**) を指定するのと同じ結果になります。 各プロンプトには、[*default*] のように既定値が角かっこ付きで表示されます。 表示される既定値を受け入れるには、Enter キーを押します。 既定値以外を指定するには、プロンプトで新しい値を入力します。  
+ 対話的な **bcp** コマンドに **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ ( **-f**) またはデータ形式スイッチ ( **-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合は、ソース テーブルとターゲット テーブルの各列で、上記の属性について順番に問い合わせが行われます。 問い合わせが行われる際は、 **bcp** コマンドにより、テーブル列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいてそれぞれ既定値が表示されます。 すべての問い合わせに対して既定値を受け入れることは、コマンド ラインでネイティブ形式 ( **-n**) を指定するのと同じ結果になります。 各プロンプトには、[*default*] のように既定値が角かっこ付きで表示されます。 表示される既定値を受け入れるには、Enter キーを押します。 既定値以外を指定するには、プロンプトで新しい値を入力します。  
   
 ### <a name="example"></a>例  
  次の例では、 **bcp** コマンドを使用して、 `HumanResources.myTeam` テーブルから `myTeam.txt` ファイルに、データを対話的に一括エクスポートします。 このテーブルを作成しないと、例を実行できません。 テーブルの詳細とテーブルを作成する方法については、「[HumanResources.myTeam サンプル テーブル &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md)」を参照してください。  

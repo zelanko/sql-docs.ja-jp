@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079558"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>[アイテムセット] タブ (マイニング モデル ビューアー)
   **[アイテムセット]** ペインを使用すると、アソシエーション ルール マイニング モデルに含まれる、よく使用されるアイテムセットを表示できます。 アソシエーション モデルには多数のアイテムセットが含まれる可能性があるので、ビューアーには、ビューアーに表示するアイテムセットを絞り込むためのコントロールが用意されています。  
   
- **詳細情報。**[Microsoft アソシエーション アルゴリズム](data-mining/microsoft-association-algorithm.md)、 [Microsoft アソシエーション ルール ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **詳細情報。** [Microsoft アソシエーション アルゴリズム](data-mining/microsoft-association-algorithm.md)、 [Microsoft アソシエーション ルール ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  

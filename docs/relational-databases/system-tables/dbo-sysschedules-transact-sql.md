@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470714"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
@@ -65,7 +65,7 @@ ms.locfileid: "62470714"
 |**64** (SQL Server エージェント サービスの起動時に開始します)|**freq_interval**は使用されません (**0**)|  
 |**128** (コンピューターがアイドル状態のときに実行されます)|**freq_interval**は使用されません (**0**)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [では&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

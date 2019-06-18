@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62728558"
 ---
 # <a name="dimension-types"></a>ディメンションの種類
@@ -60,7 +60,7 @@ ms.locfileid: "62728558"
 |Channel|属性がチャネル情報を表すディメンションです。|  
 |Promotion|属性がマーケティング関連のプロモーション情報を表すディメンションです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [既存のテーブルを使用したディメンションを作成します。](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [ディメンション &#40;Analysis Services - 多次元データ&#41;](dimensions-analysis-services-multidimensional-data.md)  
   

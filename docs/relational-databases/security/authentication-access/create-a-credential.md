@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e55e29f428185f195b65ae046df3aa63b8c35c3a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716069"
 ---
 # <a name="create-a-credential"></a>資格情報の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52539661"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **資格情報を作成する方法:**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52539661"
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[資格情報]** フォルダーを右クリックし、**[新しい資格情報...]** をクリックします。  
+2.  **[資格情報]** フォルダーを右クリックし、 **[新しい資格情報...]** をクリックします。  
   
 3.  **[新しい資格情報]** ダイアログ ボックスで、 **[資格情報名]** ボックスに資格情報の名前を入力します。  
   

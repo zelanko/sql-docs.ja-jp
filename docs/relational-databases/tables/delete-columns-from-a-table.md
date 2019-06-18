@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9d0dcecd83c38dcd42bc7512bd416bd70d743ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515942"
 ---
 # <a name="delete-columns-from-a-table"></a>テーブルからの列の削除
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47712190"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブルから列を削除する方法:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47712190"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  CHECK 制約がある列を削除することはできません。 最初に制約を削除する必要があります。  
@@ -66,7 +66,7 @@ ms.locfileid: "47712190"
   
 2.  **オブジェクト エクスプローラー**で、列を削除するテーブルを探し、展開して列名を表示します。 
 
-3.  削除する列を右クリックして、**[削除]** を選びます。  
+3.  削除する列を右クリックして、 **[削除]** を選びます。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   

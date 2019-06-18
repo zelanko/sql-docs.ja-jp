@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626269"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715899"
 ---
 # <a name="create-a-database-schema"></a>データベース スキーマの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "53626269"
 > **Azure SQL Database** または **Azure SQL Data Warehouse** に対する SSMS を使用してスキーマを作成している場合、ダイアログ ボックスは表示されません。 生成されたスキーマ テンプレート作成 T-SQL ステートメントを実行する必要があります。
   
 ### <a name="additional-options"></a>追加オプション  
- **[スキーマ - 新規作成]** ダイアログ ボックスには次の 2 つのページもあり、それぞれにオプションが用意されています:**[権限]**、**[拡張プロパティ]**。  
+ **[スキーマ - 新規作成]** ダイアログ ボックスには次の 2 つのページもあり、それぞれにオプションが用意されています: **[権限]** 、 **[拡張プロパティ]** 。  
   
 -   **[権限]** ページには、すべてのセキュリティ保護可能なリソースと、ログインに付与できる、セキュリティ保護可能なリソースに対する権限が一覧表示されます。  
   

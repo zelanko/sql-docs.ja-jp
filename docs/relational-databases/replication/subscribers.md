@@ -17,11 +17,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 508abbeac89bb374fbfb68e368e68988218e0e91
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521871"
 ---
 # <a name="subscribers"></a>[サブスクライバー]
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "53207397"
   
 -   選択したパブリケーションのパブリッシャーが、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンである。  
   
- **[サブスクライバーの追加]** をクリックすると、**[SQL Server サブスクライバーの追加]** と **[SQL Server 以外のサブスクライバーの追加]** という 2 つの選択肢を持つメニューが表示されます。 Oracle または IBM DB2 のサブスクライバーを追加するには、 **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
+ **[サブスクライバーの追加]** をクリックすると、 **[SQL Server サブスクライバーの追加]** と **[SQL Server 以外のサブスクライバーの追加]** という 2 つの選択肢を持つメニューが表示されます。 Oracle または IBM DB2 のサブスクライバーを追加するには、 **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
  **[SQL Server サブスクライバーの追加]**  
  サブスクライバーとして有効にできるサーバーの一覧に、サーバーを追加します。 このボタンは、次のいずれかの条件が満たされた場合に表示されます。  

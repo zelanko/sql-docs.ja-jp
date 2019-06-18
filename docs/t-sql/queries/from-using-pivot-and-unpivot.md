@@ -26,11 +26,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928682"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT および UNPIVOT の使用
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -204,7 +204,7 @@ VendorID    Employee    Orders
   
 `UNPIVOT` 関係演算子の動作は `PIVOT` 関係演算子の動作と正反対ではないことに注意してください。 `PIVOT` 関係演算子を実行すると集計が行われ、複数である可能性のある行が出力では 1 つの行にマージされます。 `UNPIVOT` 関係演算子を実行しても、行が既にマージされているので、最初のテーブル値式の結果を再現することはできません。 さらに、`UNPIVOT` の入力に含まれる NULL 値は、出力には表示されません。 値が表示されない場合、それは `PIVOT` 操作の前の入力に、NULL 値が含まれている可能性があることを示しています。  
   
-[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースのビュー `Sales.vSalesPersonSalesByFiscalYears` では、`PIVOT` 関係演算子を使用して会計年度別に販売員ごとの総売上を返します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でビューをスクリプト化するには、**オブジェクト エクスプローラー**の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの **[ビュー]** フォルダーで、スクリプト化するビューを探します。 ビュー名を右クリックし、**[ビューをスクリプト化]** をクリックします。  
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースのビュー `Sales.vSalesPersonSalesByFiscalYears` では、`PIVOT` 関係演算子を使用して会計年度別に販売員ごとの総売上を返します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でビューをスクリプト化するには、**オブジェクト エクスプローラー**の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの **[ビュー]** フォルダーで、スクリプト化するビューを探します。 ビュー名を右クリックし、 **[ビューをスクリプト化]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
 [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   

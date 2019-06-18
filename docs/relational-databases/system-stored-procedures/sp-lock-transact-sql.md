@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960100"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
@@ -52,7 +52,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
  成功した場合は 0 を返します。  
   
 ## <a name="result-sets"></a>結果セット  
- **Sp_lock**で指定したセッションによって保持されている各ロックに 1 行が結果セットに含まれています、 **@spid1**と**@spid2**パラメーター。 どちらの場合**@spid1**も**@spid2**を指定すると、結果セットのレポート、ロックのすべてのセッションのインスタンスで現在アクティブな[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
+ **Sp_lock**で指定したセッションによって保持されている各ロックに 1 行が結果セットに含まれています、 **@spid1** と **@spid2** パラメーター。 どちらの場合 **@spid1** も **@spid2** を指定すると、結果セットのレポート、ロックのすべてのセッションのインスタンスで現在アクティブな[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

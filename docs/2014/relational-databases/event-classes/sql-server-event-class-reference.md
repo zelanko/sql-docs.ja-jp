@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3c5048dd8c545026b7499b78f7404fda7fe59593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62643370"
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server イベント クラスの参照
@@ -53,7 +53,7 @@ ms.locfileid: "62643370"
 |[TSQL イベント カテゴリ](tsql-event-category.md) には、クライアントから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに渡された Transact-SQL ステートメントの実行によって生成されるイベント クラスが含まれます。|[Exec Prepared SQL イベント クラス](exec-prepared-sql-event-class.md)<br /><br /> [Prepare SQL イベント クラス](prepare-sql-event-class.md)<br /><br /> [SQL:BatchCompleted イベント クラス](sql-batchcompleted-event-class.md)<br /><br /> [SQL:BatchStarting イベント クラス](sql-batchstarting-event-class.md)<br /><br /> [SQL:StmtCompleted イベント クラス](sql-stmtcompleted-event-class.md)<br /><br /> [SQL:StmtRecompile イベント クラス](sql-stmtrecompile-event-class.md)<br /><br /> [SQL:StmtStarting イベント クラス](sql-stmtstarting-event-class.md)<br /><br /> [Unprepare SQL イベント クラス](unprepare-sql-event-class.md)<br /><br /> [XQuery Static Type イベント クラス](xquery-static-type-event-class.md)|  
 |[User-Configurable イベント カテゴリ](user-configurable-event-category.md) には、ユーザーが定義できるイベント クラスが含まれています。|[User configurable イベント クラス](user-configurable-event-class.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

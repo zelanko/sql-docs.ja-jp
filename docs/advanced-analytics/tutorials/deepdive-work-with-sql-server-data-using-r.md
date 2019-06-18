@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 2ed5d6e7ef3b0d6e8ac5ebaa3533c6bebce5e856
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641101"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>データベースとアクセス許可 (SQL Server と RevoScaleR チュートリアルを) 作成します。
@@ -118,7 +118,7 @@ GO
 
     また、EXECUTE ANY EXTERNAL SCRIPT、アクセス許可を付与する管理者を依頼します。 リモートかどうか、またはを使用して R スクリプトの実行に必要な`sp_execute_external_script`します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [RxSqlServerData を使用して SQL Server のデータ オブジェクトを作成する](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

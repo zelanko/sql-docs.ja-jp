@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753954"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 の非推奨の管理ツール機能
@@ -35,7 +35,7 @@ ms.locfileid: "62753954"
 |ポケットベルによる通知 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント)|告知|  
 |ActiveX サブシステム ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント)|告知|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)  
   
   

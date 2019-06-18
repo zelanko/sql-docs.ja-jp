@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960809"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead イベント クラス
@@ -57,7 +57,7 @@ ms.locfileid: "62960809"
 |TextData|`nvarchar`|OLE DB 呼び出しで送受信されるパラメーター。|1|いいえ|  
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Transact-SQL での OLE オートメーション オブジェクト](../stored-procedures/ole-automation-objects-in-transact-sql.md)  

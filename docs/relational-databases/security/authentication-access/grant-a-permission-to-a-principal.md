@@ -15,11 +15,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb89c5bd1d3c1f40e03de60041dc3d22cc56f661
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540408"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645459"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>プリンシパルに対する権限の許可
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52540408"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **プリンシパルに権限を与える方法:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "52540408"
   
 4.  ストアド プロシージャを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ストアド プロシージャのプロパティ - _stored\_procedure\_name_]** ダイアログ ボックスの [ページの選択] で、**[権限]** を選択します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
+5.  **[ストアド プロシージャのプロパティ - _stored\_procedure\_name_]** ダイアログ ボックスの [ページの選択] で、 **[権限]** を選択します。 このページを使用して、ユーザーまたはロールをストアド プロシージャに追加し、追加したユーザーまたはロールが所有する権限を指定します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

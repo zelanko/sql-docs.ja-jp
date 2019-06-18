@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 07f168c018c33d5078dd47b0f8a38d07ddfdcdf5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095654"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>外部結合の作成 (Visual Database Tools)
@@ -31,7 +31,7 @@ ms.locfileid: "65095654"
   
 1.  結合を自動または手動で作成します。 詳細については、「[テーブルの自動結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)」または「[手動でのテーブルの結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)」を参照してください。  
   
-2.  ダイアグラム ペインで結合線を選択し、**[クエリ デザイナー]** メニューの **[<tablename> からすべての行を選択]** をクリックして、結合する行が含まれるテーブルを結合するコマンドを実行します。  
+2.  ダイアグラム ペインで結合線を選択し、 **[クエリ デザイナー]** メニューの **[<tablename> からすべての行を選択]** をクリックして、結合する行が含まれるテーブルを結合するコマンドを実行します。  
   
     -   左外部結合を作成するには、最初のテーブルを選択します。  
   

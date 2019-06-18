@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524062"
 ---
 # <a name="create-clr-functions"></a>CLR 関数の作成
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内部には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) で作成されたアセンブリの形式でプログラミングされたデータベース オブジェクトを作成できます。 共通言語ランタイムが提供する豊富なプログラミング モデルを利用できるデータベース オブジェクトには、集計関数、関数、ストアド プロシージャ、トリガー、型などがあります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内部には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (共通言語ランタイム) で作成されたアセンブリの形式でプログラミングされたデータベース オブジェクトを作成できます。 共通言語ランタイムが提供する豊富なプログラミング モデルを利用できるデータベース オブジェクトには、集計関数、関数、ストアド プロシージャ、トリガー、型などがあります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の CLR 関数を作成するには、次の手順に従います。  
   

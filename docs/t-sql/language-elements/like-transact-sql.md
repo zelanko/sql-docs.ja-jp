@@ -33,11 +33,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1e26632a80efce073df66f3d4fd564d513e4b28e
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62758702"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +181,7 @@ GO
 ## <a name="using-wildcard-characters-as-literals"></a>リテラルとしてのワイルドカード文字の使用  
  ワイルドカード パターン検索文字をリテラル文字として使用できます。 ワイルドカード文字をリテラル文字として使用するには、ワイルドカード文字をかっこで囲みます。 次の表は、LIKE キーワードと [ ] ワイルドカード文字の使用例を示しています。  
   
-|記号|意味|  
+|Symbol|意味|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
 |LIKE '[_]n'|_n|  
@@ -197,7 +197,7 @@ GO
   
  LIKE パターンでエスケープ文字の後に文字がない場合、そのパターンは無効になり、LIKE は FALSE を返します。 エスケープ文字の後にある文字がワイルドカード文字ではない場合、このパターンの中ではエスケープ文字は破棄され、次の文字は通常の文字として扱われます。 これらの文字には、2 つの角かっこ ([ ]) に囲まれたパーセント記号 (%)、アンダースコア (_)、および左角かっこ ([) の各ワイルドカード文字が含まれます。 エスケープ文字は、キャレット (^)、ハイフン (-)、または右大かっこ (]) をエスケープする場合などに、二重大かっこ ([]) で囲んで使用できます。  
   
- 0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、LIKE に含めることができません。  
+ 0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、LIKE に含めることができません。  
   
 ## <a name="examples"></a>使用例  
   
@@ -330,7 +330,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. NOT LIKE を % ワイルドカード文字と共に使用する  
- 次の例では、`DimEmployee` テーブルで `612` 以外で始まるすべての電話番号を検索します。  .  
+ 次の例では、`DimEmployee` テーブルで `612` 以外で始まるすべての電話番号を検索します。  。  
   
 ```sql  
 -- Uses AdventureWorks  
