@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4f9dc06cb17b0135f6368824235e264bfcddddb2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725790"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
@@ -70,7 +70,7 @@ ms.locfileid: "65725790"
 |参照用語|Windows, Windows 7 Professional|  
 |[出力]|Windows|  
   
- 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
+ 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
   
 ## <a name="data-types"></a>データ型  
  用語参照変換で使用できる列は、DT_WSTR または DT_NTEXT データ型のどちらかの列のみです。 列にテキストが含まれていても、これらのデータ型ではない場合、データ変換の変換では、DT_WSTR または DT_NTEXT データ型の列をデータ フローに追加し、列の値を新しい列にコピーできます。 その後、データ変換の変換からの出力を、用語参照変換への入力として使用できます。 詳細については、「 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  

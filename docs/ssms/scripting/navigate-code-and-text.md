@@ -23,10 +23,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23e1560bff7515f99e10588003b7b9b3d1935376
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821364"
 ---
 # <a name="navigate-code-and-text"></a>コード内とテキスト内の移動
@@ -66,7 +66,7 @@ ms.locfileid: "65821364"
 -   Ctrl キーを押しながら上方向キーまたは下方向キーを押すと、カーソルの位置を変えずにテキストをスクロールできます。  
   
 ## <a name="go-to-command"></a>[ジャンプ] コマンド  
- **[ｼﾞｬンプ]** コマンドを使用して、特定の行番号にジャンプできます。 行番号を表示するには、 **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]**、 **[すべての言語]**、 **[全般]** の順にクリックし、 **[行番号]** チェック ボックスをオンにします。  
+ **[ｼﾞｬンプ]** コマンドを使用して、特定の行番号にジャンプできます。 行番号を表示するには、 **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]** 、 **[すべての言語]** 、 **[全般]** の順にクリックし、 **[行番号]** チェック ボックスをオンにします。  
   
  **特定の行番号にジャンプするには**  
   

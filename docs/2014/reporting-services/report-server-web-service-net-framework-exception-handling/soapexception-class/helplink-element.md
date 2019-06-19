@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046026"
 ---
 # <a name="helplink-element"></a>HelpLink 要素
   **Detail** プロパティの **HelpLink** 要素は、レポート サーバーで生成される URL 文字列です。 この URL は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ヘルプとサポートで管理されている Web ページを指し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生する特定のエラーに関するヘルプとサポート技術情報の記事を提供します。 URL の構文は、次のようになっています。  
   
- **http://** www.microsoft.com**/** 製品**/** ee**/** transform.aspx**でしょうか。EvtSrc**=_値_**& 情報が必要な**=_値_**& ProdName** =_値_**& ProdVer**=_値_  
+ **http://** www.microsoft.com **/** 製品 **/** ee **/** transform.aspx**でしょうか。EvtSrc**=_値_ **& 情報が必要な**=_値_ **& ProdName** =_値_ **& ProdVer**=_値_  
   
  次の表は、**HelpLink** URL の引数を示しています。  
   

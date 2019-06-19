@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25b7f1be157d6557842e9d482db2404c2705e932
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58913297"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62632135"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "58913297"
   
 ##  <a name="BestPractices"></a> ベスト プラクティス  
   
--    [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [リリース ノート](https://go.microsoft.com/fwlink/?LinkId=296445)を確認する  
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [リリース ノート](https://go.microsoft.com/fwlink/?LinkId=296445)を確認する  
   
 -   前提条件となるソフトウェアをインストールします。 セットアップで [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のインストールまたはアップグレードを行う前に、以下に示す前提条件となるソフトウェアをインストールすると、インストール時間を短縮できます。 各フェールオーバー クラスター ノードでの前提条件となるソフトウェアのインストール、およびその後のノードの再起動は、セットアップを実行する前に 1 回だけ行います。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "58913297"
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 ビット)|はい|はい|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (64 ビット)|はい|はい|可**|可**|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 ビット)|はい|はい|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 ビット)|はい|[はい]|[はい]|はい|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 ビット)|はい|はい|はい|はい|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32 ビット)|はい|はい|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスターは、WOW モードではサポートされません。 これには、WOW で最初にインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの以前のバージョンからのアップグレードが含まれます。 この場合に使用できる唯一のアップグレード オプションは、新しいバージョンをサイド バイ サイドでインストールしてから移行することです。  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27b5fd7de403e252967d0d2a9b8073eafbe0c959
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726704"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>クエリ パラメーターをデータ フロー コンポーネントの変数にマップする
@@ -48,7 +48,7 @@ ms.locfileid: "65726704"
   
 7.  **[パラメーター]** をクリックします。  
   
-8.  **[クエリ パラメーターの設定]** ダイアログ ボックスで、**[パラメーター]** 一覧にある各パラメーターを、**[変数]** 一覧の変数にマップするか、**[\<新しい変数>]** をクリックして新しい変数を作成します。 **[OK]** をクリックします。  
+8.  **[クエリ パラメーターの設定]** ダイアログ ボックスで、 **[パラメーター]** 一覧にある各パラメーターを、 **[変数]** 一覧の変数にマップするか、 **[\<新しい変数>]** をクリックして新しい変数を作成します。 **[OK]** をクリックします。  
   
     > [!NOTE]  
     >  マッピングで使用できる変数は、パッケージのスコープ内、Foreach ループなどの親コンテナーのスコープ内、またはデータ フロー コンポーネントが含まれるデータ フロー タスクのスコープ内にある、システム変数およびユーザー定義変数だけです。 変数のデータ型は、パラメーターが割り当てられる WHERE 句の列と互換性がある必要があります。  

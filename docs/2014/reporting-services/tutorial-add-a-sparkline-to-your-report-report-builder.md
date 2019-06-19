@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099042"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー)
@@ -57,7 +57,7 @@ ms.locfileid: "66099042"
   
 #### <a name="to-create-a-report"></a>レポートを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
      **Getting Started**  ダイアログ ボックスが表示されます。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66099042"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  クエリ デザイナーのツール バーで、[実行]\(**!**) をクリックします。  
+4.  クエリ デザイナーのツール バーで、[実行]\( **!** ) をクリックします。  
   
      **SalesDate**、 **Subcategory**、 **Product**、 **Sales**、および **Quantity**の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "66099042"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **[名前]** に入力されている既定の名前を「 **Product Sales**」に置き換えます。  
   

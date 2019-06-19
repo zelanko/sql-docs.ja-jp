@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f8f497019dea80bbe79903c60531f506d7950371
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62741985"
 ---
 # <a name="sysdmcryptographicproviderproperties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "62741985"
 ## <a name="remarks"></a>コメント  
  sys.dm_cryptographic_provider_properties ビューはパブリックに表示できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   

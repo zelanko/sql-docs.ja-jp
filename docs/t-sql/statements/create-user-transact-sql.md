@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae453fa3cc9d51fae7402469989c3a25fc782e1c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488316"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -177,7 +177,7 @@ CREATE USER user_name
  データベース内でユーザーを識別する名前を指定します。 *user_name* は、**sysname** です。 半角 128 文字まで指定できます。 Windows プリンシパルに基づいてユーザーを作成する場合、別のユーザー名を指定しないと、Windows プリンシパル名がユーザー名になります。  
   
  LOGIN *login_name*  
- 作成するデータベース ユーザーのログインを指定します。 *login_name* は、サーバーで有効なログインである必要があります。 Windows プリンシパルに基づくログイン (ユーザーまたはグループ) か、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したログインを指定できます。 この SQL Server ログインをデータベースに対して入力すると、データベースでは、作成されるデータベース ユーザーの名前と ID が取得されます。 Windows プリンシパルからマップされたログインを作成する場合は、**[**_\<domainName\>_**\\**_\<loginName\>_**]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。  
+ 作成するデータベース ユーザーのログインを指定します。 *login_name* は、サーバーで有効なログインである必要があります。 Windows プリンシパルに基づくログイン (ユーザーまたはグループ) か、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したログインを指定できます。 この SQL Server ログインをデータベースに対して入力すると、データベースでは、作成されるデータベース ユーザーの名前と ID が取得されます。 Windows プリンシパルからマップされたログインを作成する場合は、 **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。  
   
  CREATE USER ステートメントが SQL のバッチ内の唯一のステートメントである場合、Windows Azure SQL Database では WITH LOGIN 句がサポートされます。 CREATE USER ステートメントが SQL のバッチ内の唯一のステートメントではない場合、または動的 SQL 内で実行される場合、WITH LOGIN 句はサポートされません。  
   
@@ -185,7 +185,7 @@ CREATE USER user_name
  このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。  
   
  '*windows_principal*'  
- データベース ユーザーを作成する Windows プリンシパルを指定します。 *windows_principal* には、Windows ユーザーまたは Windows グループを指定できます。 *windows_principal* がログインを持たない場合でも、ユーザーは作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに、*windows_principal* がログインを持たない場合、ログインを持つ Windows グループのメンバーシップを介して [!INCLUDE[ssDE](../../includes/ssde-md.md)] で Windows プリンシパルを認証するか、または接続文字列で包含データベースを初期カタログとして指定する必要があります。 Windows プリンシパルからユーザーを作成する場合は、**[**_\<domainName\>_**\\**_\<loginName\>_**]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。 Active Directory ユーザーに基づくユーザーは、21 文字未満の名前に制限されます。
+ データベース ユーザーを作成する Windows プリンシパルを指定します。 *windows_principal* には、Windows ユーザーまたは Windows グループを指定できます。 *windows_principal* がログインを持たない場合でも、ユーザーは作成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに、*windows_principal* がログインを持たない場合、ログインを持つ Windows グループのメンバーシップを介して [!INCLUDE[ssDE](../../includes/ssde-md.md)] で Windows プリンシパルを認証するか、または接続文字列で包含データベースを初期カタログとして指定する必要があります。 Windows プリンシパルからユーザーを作成する場合は、 **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** という形式を使用します。 例については、「[構文の概要](#SyntaxSummary)」を参照してください。 Active Directory ユーザーに基づくユーザーは、21 文字未満の名前に制限されます。
   
  '*Azure_Active_Directory_principal*'  
  **適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  
@@ -259,7 +259,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
   
  WITHOUT LOGIN 句でユーザーを作成する場合、ユーザーは SQL Server ログインにマップされず、 他のデータベースには guest として接続できます。 ログインのないこのユーザーには権限を割り当てることができます。セキュリティ コンテキストがログインのないユーザーに変更されると、元のユーザーはログインのないユーザーの権限を受け取ります。 例については、「[D. ログインのないユーザーを作成して使用する](#withoutLogin)」を参照してください。  
   
- Windows プリンシパルに割り当てられているユーザーにのみ、円記号 (**\\**) を含めることができます。
+ Windows プリンシパルに割り当てられているユーザーにのみ、円記号 ( **\\** ) を含めることができます。
   
  guest ユーザーは各データベース内に既に存在しているため、CREATE USER を使用して guest ユーザーを作成することはできません。 guest ユーザーは、次のように CONNECT 権限を与えることで有効にできます。  
   

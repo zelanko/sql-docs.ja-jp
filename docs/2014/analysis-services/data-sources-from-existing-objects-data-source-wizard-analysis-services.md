@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082376"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>[既存のオブジェクトのデータ ソース] (データ ソース ウィザード) (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66082376"
  **プロジェクト**  
  新しいデータ ソースで参照するプロジェクトを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソース ウィザードの F1 ヘルプ&#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [多次元モデルのデータ ソース](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [サポートされるデータ ソース&#40;SSAS 多次元&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  

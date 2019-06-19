@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 138a5ec08ae7ca427352f8c0332b2012e6c0ea3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725083"
 ---
 # <a name="olap-engine-server-components"></a>OLAP エンジンのサーバー コンポーネント
@@ -55,13 +55,13 @@ ms.locfileid: "62725083"
   
 |Port|説明|  
 |----------|-----------------|  
-|2383| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の既定のインスタンスです。|  
-|2382| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
-|サーバーの起動時に動的に割り当てられます。| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
+|2383|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の既定のインスタンスです。|  
+|2382|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
+|サーバーの起動時に動的に割り当てられます。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
   
  参照してください[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)の詳細。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトの名前付け規則&#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
  [物理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](understanding-microsoft-olap-physical-architecture.md)   
  [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  

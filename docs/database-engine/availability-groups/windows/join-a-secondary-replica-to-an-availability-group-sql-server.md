@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799285"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 可用性グループへのセカンダリ レプリカの参加
@@ -46,7 +46,7 @@ ms.locfileid: "66799285"
   
 1.  オブジェクト エクスプローラーで、セカンダリ レプリカをホストするサーバー インスタンスに接続し、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  [**AlwaysOn 高可用性**] ノードと [**可用性グループ**] ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  接続先のセカンダリ レプリカの可用性グループを選択します。  
   

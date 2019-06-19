@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108846"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
@@ -79,7 +79,7 @@ ms.locfileid: "66108846"
  [レポート サーバーの複数インスタンス配置における URL 予約 &#40;SSRS 構成マネージャー&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  1 台のコンピューターに複数の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスをインストールすると、URL 登録時に URL の重複が発生する可能性が高くなります。 このエラーを回避するには、このトピックの推奨事項に従ってインスタンス固有の URL 予約を作成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [URL の構成 &#40;SSRS 構成マネージャー&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Web サービスの URL &#40;SSRS ネイティブ モード&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   

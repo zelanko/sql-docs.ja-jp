@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 747cf2bb865fb9b3fcdb11a43e410f574556dcc5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723887"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
@@ -41,9 +41,9 @@ Excel ファイルに接続するために追加のファイルのダウンロ�
 **[Excel ファイル パス]**  
  Excel ファイルのパスとファイル名を指定します。 例:
 -   ローカル コンピューター上の上のファイルの場合、**C:\\MyData.xlsx** です。
--   ネットワーク共有上のファイルの場合、**\\\\Sales\\Database\\Northwind.xlsx** です。
+-   ネットワーク共有上のファイルの場合、 **\\\\Sales\\Database\\Northwind.xlsx** です。
 
-または、**[参照]** をクリックします。  
+または、 **[参照]** をクリックします。  
   
  **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、ワークシートを検索します。  

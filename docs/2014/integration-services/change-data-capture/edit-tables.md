@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c80f562b36e775ebcbbb3dd30a97fdb0bf61cb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771338"
 ---
 # <a name="edit-tables"></a>テーブルの編集
@@ -25,11 +25,11 @@ ms.locfileid: "62771338"
  **テーブルの一覧**  
  テーブルの一覧には、次の 3 列が含まれています。  
   
--   **[Oracle テーブル名]**: テーブル スキーマを含むテーブルの名前です。  
+-   **[Oracle テーブル名]** : テーブル スキーマを含むテーブルの名前です。  
   
--   **[キャプチャ インスタンス]**: インスタンス固有の変更データ キャプチャ オブジェクトを識別するために使用されるキャプチャ インスタンスの名前です。 キャプチャ インスタンスは NULL にできません。 指定しなかった場合、ソース スキーマ名とソース テーブル名に基づいて、 `<schema-name>_<table-name>.` 形式の名前が付けられます。キャプチャ インスタンスの名前に指定できる文字数の上限は 100 文字です。また、データベース内で一意であることが必要です。 この列のセルをクリックすると、 **capture_instance**を手動で編集できます。  
+-   **[キャプチャ インスタンス]** : インスタンス固有の変更データ キャプチャ オブジェクトを識別するために使用されるキャプチャ インスタンスの名前です。 キャプチャ インスタンスは NULL にできません。 指定しなかった場合、ソース スキーマ名とソース テーブル名に基づいて、 `<schema-name>_<table-name>.` 形式の名前が付けられます。キャプチャ インスタンスの名前に指定できる文字数の上限は 100 文字です。また、データベース内で一意であることが必要です。 この列のセルをクリックすると、 **capture_instance**を手動で編集できます。  
   
--   **[セキュリティ ロール]**: 変更データへのアクセスの取得に使用するデータベース ロールの名前です。 この列のセルをクリックすると、 **security_role**を手動で編集できます。  
+-   **[セキュリティ ロール]** : 変更データへのアクセスの取得に使用するデータベース ロールの名前です。 この列のセルをクリックすると、 **security_role**を手動で編集できます。  
   
  **テーブルの追加**  
  **[テーブルの追加]** をクリックすると、 [CDC へのテーブルの追加](add-tables-to-a-cdc-instance.md)を行うことができる [テーブル選択] ダイアログ ボックスが開きます。 このセッションが Oracle データベースへの初回のアクセスである場合、 [Connect to Oracle](connect-to-oracle.md)を行う必要があります。  
@@ -43,7 +43,7 @@ ms.locfileid: "62771338"
  **[削除]**  
  一覧からテーブルを選択して **[削除]** をクリックすると、CDC インスタンスからテーブルを削除できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](how-to-edit-the-cdc-instance-properties.md)   
  [Oracle のテーブルおよび列の選択](select-oracle-tables-and-columns.md)  
   

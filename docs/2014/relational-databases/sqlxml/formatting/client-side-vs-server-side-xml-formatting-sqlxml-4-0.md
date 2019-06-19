@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012349"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>クライアント側とサーバー側の XML 書式設定 (SQLXML 4.0)
@@ -179,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- サーバー上で XML の書式設定が行われた場合 (**クライアント側の xml「0」を =**)、dbobject クエリを実行 (指定したエイリアスがある場合) 場合でも実際のテーブルおよび列の名前が返されるを取得する列の別名を使用することができます。 たとえば、次のテンプレートが、クエリを実行し、サーバーで行われる XML の書式設定 (、**クライアント側の xml**オプションが指定されていないと、**クライアントで実行**のオプションが選択されていない、仮想ルート)。 このクエリでは、クライアント側の NESTED モードではなく AUTO モードも指定されています。  
+ サーバー上で XML の書式設定が行われた場合 (**クライアント側の xml「0」を =** )、dbobject クエリを実行 (指定したエイリアスがある場合) 場合でも実際のテーブルおよび列の名前が返されるを取得する列の別名を使用することができます。 たとえば、次のテンプレートが、クエリを実行し、サーバーで行われる XML の書式設定 (、**クライアント側の xml**オプションが指定されていないと、**クライアントで実行**のオプションが選択されていない、仮想ルート)。 このクエリでは、クライアント側の NESTED モードではなく AUTO モードも指定されています。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

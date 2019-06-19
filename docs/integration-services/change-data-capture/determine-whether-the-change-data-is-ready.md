@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1e3f616b0de021d5c8ac967b630a6bf9ca9bc50
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728972"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
@@ -178,9 +178,9 @@ ms.locfileid: "65728972"
   
     3.  **[式]** に「`@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
-4.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、**[User::DelaySeconds]** 整数変数を一覧から選択します。  
+4.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、 **[User::DelaySeconds]** 整数変数を一覧から選択します。  
   
 5.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "65728972"
   
     3.  **[式]** に「 `@DataReady == 0`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   
@@ -270,7 +270,7 @@ ms.locfileid: "65728972"
   
     3.  **[式]** に「`@DataReady == 1 || @DataReady == 5`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   
@@ -339,6 +339,6 @@ ms.locfileid: "65728972"
 ## <a name="next-step"></a>次の手順  
  変更データが準備できていると判断したら、次に変更データのクエリを準備します。  
   
- **次のトピック:**[変更データのクエリを準備する](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **次のトピック:** [変更データのクエリを準備する](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

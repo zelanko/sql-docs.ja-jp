@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075352"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>パーティションおよびロールの配置オプションの指定
@@ -61,15 +61,15 @@ ms.locfileid: "66075352"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行し、 **[パーティションとロールのオプションの指定]** ページで、パーティションおよびロールの新しい配置オプションを指定します。  
   
-     - または -  
+     \- または -  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 (応答ファイル モードの詳細については、「 [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)」を参照してください。)  
   
-     - または -  
+     \- または -  
   
 -   開く、 \<*プロジェクト名*> >.deploymentoptions 任意のテキスト エディターを手動でオプションを変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インストール先の指定](deployment-script-files-specifying-the-installation-target.md)   
  [ソリューションの配置に関する構成設定の指定](deployment-script-files-solution-deployment-config-settings.md)   
  [処理オプションの指定](deployment-script-files-specifying-processing-options.md)  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099550"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>配置プロパティを設定する (Reporting Services)
@@ -37,7 +37,7 @@ ms.locfileid: "66099550"
   
 1.  レポート プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-2.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスの **[構成]** ボックスの一覧で、編集する構成をクリックします。 一般的な構成は、 **[DebugLocal]**、 **[Debug]**、および **[Release]** です。  
+2.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスの **[構成]** ボックスの一覧で、編集する構成をクリックします。 一般的な構成は、 **[DebugLocal]** 、 **[Debug]** 、および **[Release]** です。  
   
     > [!NOTE]  
     >  複数の構成を使用すると、異なるレポート サーバー間または設定間ですばやく切り替えることができます。  
@@ -63,7 +63,7 @@ ms.locfileid: "66099550"
     > [!NOTE]  
     >  ネイティブ モードで実行されているレポート サーバー上のフォルダーにレポートをパブリッシュするには、そのフォルダーに対する **パブリッシュ** 権限が必要です。 パブリッシュ権限は、ロールの割り当てを使用し、パブリッシュ操作を含むロールにユーザー アカウントをマップすることによって設定します。 詳細については、「 [ロールの割り当てを作成および管理する](../security/create-and-manage-role-assignments.md)」を参照してください。 SharePoint 統合モードで実行されているレポート サーバーの場合は、SharePoint サイトへの **メンバー** 権限または **所有者** 権限が必要です。 詳細については、「 [レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)」を参照してください。  
   
-10. **[TargetServerURL]** ボックスに、対象レポート サーバーの URL を入力します。 レポートをパブリッシュする前に、このプロパティを有効なレポート サーバーの URL に設定する必要があります。 ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します (たとえば、http:*//server/reportserver* 、または https:*//server/reportserver*)。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。  
+10. **[TargetServerURL]** ボックスに、対象レポート サーバーの URL を入力します。 レポートをパブリッシュする前に、このプロパティを有効なレポート サーバーの URL に設定する必要があります。 ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します (たとえば、http: *//server/reportserver* 、または https: *//server/reportserver*)。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。  
   
      SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイト (http://*servername*、 http://*servername*/*site* 、 http://*servername*/*site*/*subsite*など) が使用されます。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66099550"
     > [!NOTE]  
     >  **[ビルド]** をオンにした場合、レポート デザイナーにより、レポート プロジェクトがビルドされ、プレビュー前またはレポート サーバーにパブリッシュする前にエラーが確認されます。 **[配置]** をオンにした場合、配置プロパティで定義されている方法で、レポート デザイナーによってレポート サーバーにレポートがパブリッシュされます。 **[配置]** をオフにした場合、レポート デザイナーにより、ローカルのプレビュー ウィンドウに **[StartItem]** プロパティで指定したレポートが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソースとレポートのパブリッシュ](../reports/publishing-data-sources-and-reports.md)   
  [レポートのプレビュー](../reports/previewing-reports.md)   
  [レポート デザイナーの F1 ヘルプ](report-designer-f1-help.md)   
