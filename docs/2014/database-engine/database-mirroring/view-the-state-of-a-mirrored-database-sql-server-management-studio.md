@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f5e61bd8ef63baa9a087bcae912b04f653f63b54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753884"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>ミラー化されたデータベースの状態の確認 (SQL Server Management Studio)
@@ -42,7 +42,7 @@ ms.locfileid: "62753884"
     |[フェールオーバー]|プリンシパル サーバー インスタンスで手動フェールオーバー (役割の交代) を開始しましたが、まだミラーが受け入れていません。|  
     |同期済み|ミラー データベースとプリンシパル データベースには、同一のデータが含まれています。 同期完了の状態のとき *だけ* 、手動および自動フェールオーバーを実行できます。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ミラーリング状態 &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   
   

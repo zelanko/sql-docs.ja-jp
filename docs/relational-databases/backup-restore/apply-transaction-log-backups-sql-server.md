@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478533"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ ms.locfileid: "59240592"
 
 [!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- **代替手順 1:データベースの最新の完全バックアップを使用したデータベースの復元**  
+ **代替手順 1: データベースの最新の完全バックアップを使用したデータベースの復元**  
   
 1.  障害発生時点にアクティブなトランザクション ログのログ末尾のバックアップを作成します。  
   
 2.  午前 8 時に作成した 復元よりも処理に時間がかかります。 代わりに、より近い時刻の午後 6 時の データベースの完全バックアップを復元してから、午後 8 時の ログ バックアップとログ末尾のバックアップを適用します。  
   
- **代替手順 2:データベースの以前の完全バックアップを使用したデータベースの復元**  
+ **代替手順 2: データベースの以前の完全バックアップを使用したデータベースの復元**  
   
 > この代替手順は、問題が生じて午後 6 時の 復元よりも処理に時間がかかります。 この方法では、午後 6 時のデータベースの完全バックアップからの 復元よりも処理に時間がかかります。  
   

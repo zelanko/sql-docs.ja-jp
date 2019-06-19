@@ -17,16 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107732"
 ---
 # <a name="report-builder-f1-help"></a>レポート ビルダーの F1 ヘルプ
   このセクションには、レポート ビルダーのウィザード、ビュー、ペイン、およびダイアログ ボックスに関するヘルプが含まれています。 F1 キーを押すか、ダイアログ ボックスで [ヘルプ] ボタンをクリックしてヘルプを開くこともできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ダイアログ ボックス、ペイン、およびウィザード (F1) のヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)[レポート デザイン ビュー&#40;レポート ビルダー&#41;](report-design-view-report-builder.md)   
  [マップ ウィザードおよびマップ レイヤー ウィザードのページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [レポート ビルダーのトラブルシューティング](../troubleshoot-report-builder.md)  

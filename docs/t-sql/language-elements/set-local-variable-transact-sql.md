@@ -20,10 +20,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 20febb0b33e0da08d8620232195e183c7c5162f3
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981761"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -68,7 +68,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>引数  
 **@** _local_variable_  
-**cursor**、**text**、**ntext**、**image**、または **table** を除く任意の型の変数の名前。 変数名の先頭には 1 つのアット マーク ( **@** ) を指定します。 変数名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
+**cursor**、**text**、**ntext**、**image**、または **table** を除く任意の型の変数の名前。 変数名の先頭には 1 つのアット マーク (**@**) を指定します。 変数名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
 *property_name*  
 ユーザー定義型のプロパティ。  
@@ -80,9 +80,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 共通言語ランタイム (CLR) ユーザー定義型の名前。  
   
 `{ . | :: }`  
-CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド ( **.** ) を使用します。 静的メソッドでは、2 つのコロン ( **::** ) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
+CLR ユーザー定義型のメソッドを指定します。 静的メソッド以外のインスタンス メソッドでは、ピリオド (**.**) を使用します。 静的メソッドでは、2 つのコロン (**::**) を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
-_method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
+_method_name_ **(** _argument_ [ **,**... *n* ] **)**  
 ユーザー定義型のメソッド。このメソッドでは、ある型のインスタンスの状態を変更するために、1 つ以上の引数を受け取ります。 静的メソッドはパブリックであることが必要です。  
   
 **@** _SQLCLR_local_variable_  
@@ -167,14 +167,14 @@ READ ONLY
 このカーソルによる更新を禁止します。 UPDATE または DELETE ステートメントの WHERE CURRENT OF 句で、このカーソルを参照することはできません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。 このキーワードは、以前は READ_ONLY と表記していましたが、今後は、READ と ONLY の間にアンダースコアではなくスペースを指定するようになりました。  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-カーソル内で更新できる列を定義します。 OF *column_name* [ **,** ...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
+カーソル内で更新できる列を定義します。 OF *column_name* [**,**...*n*] を指定した場合は、指定した列に対してのみ更新ができます。 一覧を指定しないと、カーソルを READ ONLY として定義していない限り、すべての列を更新できます。  
   
 ## <a name="remarks"></a>Remarks  
 変数は宣言後、NULL に初期化されます。 宣言された変数に NULL 以外の値を代入するには、SET ステートメントを使用します。 変数に値を代入する SET ステートメントでは、1 つの値が返されます。 複数の変数を初期化する場合は、各ローカル変数に対して 1 つずつ、SET ステートメントを使用してください。  
   
 変数は式の内部だけで使用でき、オブジェクト名やキーワードの代わりに使用することはできません。 動的 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成するには、EXECUTE を使用します。  
   
-SET **@** _cursor_variable_ の構文規則に、LOCAL キーワードと GLOBAL キーワードは含まれません。 SET **@** _cursor_variable_ = CURSOR... 構文を使用すると、カーソルは default to local cursor データベース オプションの設定に応じて、GLOBAL または LOCAL として作成されます。  
+SET **@**_cursor_variable_ の構文規則に、LOCAL キーワードと GLOBAL キーワードは含まれません。 SET **@**_cursor_variable_ = CURSOR... 構文を使用すると、カーソルは default to local cursor データベース オプションの設定に応じて、GLOBAL または LOCAL として作成されます。  
   
 カーソル変数は、グローバル カーソルを参照する場合でも、常にローカルです。 カーソル変数でグローバル カーソルを参照する場合、カーソルに対してグローバル カーソル参照とローカル カーソル参照の両方が行われます。 詳細については、例 C を参照してください。  
   
@@ -185,7 +185,7 @@ SET **@** _cursor_variable_ の構文規則に、LOCAL キーワードと GLOBAL
 SELECT ステートメントで、値を連結する目的で (つまり、集計値を計算する目的で) 変数を使用しないでください。 予期しないクエリ結果が生じる可能性があります。 これは、(代入を含め) SELECT リスト内のすべての式は、出力行ごとに 1 回のみ実行されるとは限らないためです。 詳細については、[サポート技術情報の資料](https://support.microsoft.com/kb/287515)を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
-public ロールのメンバーシップが必要です。 すべてのユーザーは、SET **@** _local_variable_ を使用できます。  
+public ロールのメンバーシップが必要です。 すべてのユーザーは、SET **@**_local_variable_ を使用できます。  
   
 ## <a name="examples"></a>使用例  
   

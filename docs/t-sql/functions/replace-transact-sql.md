@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fad23cc2ecd044b300ee80366f06d2f5c54b80ae
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948784"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -63,7 +63,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 ## <a name="remarks"></a>Remarks  
  REPLACE は、入力の照合順序に基づいて比較を行います。 特定の照合順序で比較を行うには、[COLLATE](~/t-sql/statements/collations.md) を使用して、入力に明示的な照合順序を適用します。  
   
- 0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、REPLACE に含めることができません。  
+ 0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、REPLACE に含めることができません。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`abcdefghi` にある文字列 `cde` を `xxx` に置換します。  

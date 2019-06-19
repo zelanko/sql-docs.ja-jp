@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079402"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>[KPI オーガナイザー] (キューブ デザイナーの [KPIs] タブ) (Analysis Services - 多次元データ)
@@ -41,7 +41,7 @@ ms.locfileid: "66079402"
 |**[下へ移動]**|選択した KPI を **[KPI オーガナイザー]** 内で下へ 1 つ移動し、 **KPI ブラウザー**に表示される KPI の表示順を決定します。<br /><br /> 注:さらに、選択した KPI を移動できない場合は、このオプションが無効です。|  
 |**削除**|選択した KPI を削除します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Kpi&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー &#40;[Kpi] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   

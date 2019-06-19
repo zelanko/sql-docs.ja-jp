@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63276110"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスのネットワーク構成
@@ -58,6 +58,6 @@ Dell のアプライアンスの詳細についてを参照してください。
   
 -   PDU の**Dell Rack PDU を従量制課金**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e7fd4ca761d87df2a98a8c88ab0848ddff2e4faa
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948846"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -56,7 +56,7 @@ EOMONTH ( start_date [, month_to_add ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-eomonth-with-explicit-datetime-type"></a>A. 明示的な datetime 型を使用する EOMONTH  
+### <a name="a-eomonth-with-explicit-datetime-type"></a>A.  明示的な datetime 型を使用する EOMONTH  
   
 ```  
 DECLARE @date DATETIME = '12/1/2011';  
@@ -73,7 +73,7 @@ Result
 (1 row(s) affected)  
 ```  
 
-### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>B. 文字列パラメーターと暗黙的な変換を使用する EOMONTH  
+### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>B.  文字列パラメーターと暗黙的な変換を使用する EOMONTH  
   
 ```  
 DECLARE @date VARCHAR(255) = '12/1/2011';  
@@ -91,7 +91,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. month_to_add パラメーターを使用する EOMONTH と使用しない EOMONTH  
+### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C.  month_to_add パラメーターを使用する EOMONTH と使用しない EOMONTH  
   
 注: これらの結果セットに示されている値は、実行日を含む期間を反映します。
         

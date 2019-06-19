@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083568"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
@@ -260,7 +260,7 @@ ORDER BY Count(*) DESC
   
  モデル コンテンツのクエリを実行して検出されたパスの一覧を取得する方法、およびシーケンス クラスター モデルのクエリのその他の例については、「 [シーケンス クラスター モデルのクエリの例](clustering-model-query-examples.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
  [シーケンス クラスター モデルのクエリの例](clustering-model-query-examples.md)  

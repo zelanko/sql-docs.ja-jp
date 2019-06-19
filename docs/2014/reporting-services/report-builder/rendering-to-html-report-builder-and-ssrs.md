@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107718"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "66107718"
   
 -   その他すべての行と列は、各レポート アイテムのサイズに応じて拡張できます。  
   
--   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
+-   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0\.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
   
 ##  <a name="Interactivity"></a> 対話性  
  HTML では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  

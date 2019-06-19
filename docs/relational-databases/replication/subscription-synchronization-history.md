@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3b19c1a55e81973ee5f0ad196d6ba5c9cd89f8a4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751465"
 ---
 # <a name="subscription-synchronization-history"></a>サブスクリプション、[同期の履歴]
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "54134652"
  **[アーティクル]**  
  パブリケーション内の各アーティクルの名前です。パブリケーション全体に対して以下の処理フェーズがあります。  
   
--   **[初期化]**。 マージ エージェントを開始することを示しています。スナップショットの適用が行われるサブスクリプションの初期化とは同期しません。  
+-   **[初期化]** 。 マージ エージェントを開始することを示しています。スナップショットの適用が行われるサブスクリプションの初期化とは同期しません。  
   
--   **[スキーマの変更と一括挿入]**。  
+-   **[スキーマの変更と一括挿入]** 。  
   
--   **[パブリッシャーへの変更のアップロード]**。  
+-   **[パブリッシャーへの変更のアップロード]** 。  
   
--   **[サブスクライバーへの変更のダウンロード]**。  
+-   **[サブスクライバーへの変更のダウンロード]** 。  
   
  これらのフェーズを含めることにより、選択されたセッションで各フェーズにかかった時間と合計時間に対する割合をグリッドに表示できます。  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99624a05ba543e59e6c85ea616c200c246371488
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087564"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>[ウィザードの完了] (Analysis Services データベースのインポート ウィザード)
@@ -26,7 +26,7 @@ ms.locfileid: "66087564"
  **(進行状況)**  
  データベース内の各オブジェクトを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトにインポートする際の、ウィザードの進行状況を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インポート Analysis Services データベース ウィザードの F1 ヘルプ](import-analysis-services-database-wizard-f1-help.md)   
  [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   

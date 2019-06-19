@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057976"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services プロジェクト変換ウィザード
@@ -219,7 +219,7 @@ ms.locfileid: "66057976"
  また、 **[パラメーターの詳細の設定]** ダイアログ ボックスには、パラメーター値のデータ型や元のパラメーターが一覧表示されます。  
   
 ##  <a name="review"></a> [確認] ページのオプションの設定  
- プロジェクトの変換に関して選択したオプションを確認するには、**[確認]** ページを使用します。  
+ プロジェクトの変換に関して選択したオプションを確認するには、 **[確認]** ページを使用します。  
   
  **前へ**  
  オプションを変更する場合にクリックします。  
@@ -241,7 +241,7 @@ ms.locfileid: "66057976"
  **[レポートの保存]**  
  プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3bb152b749041451cdb3a3294c24d8b172c49a99
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108449"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4:レポートへのテーブルの追加 (Reporting Services)
@@ -27,7 +27,7 @@ ms.locfileid: "66108449"
 1.  **[ツールボックス]** で **[表]** をクリックし、デザイン画面内をクリックして、マウスをドラッグします。 デザイン画面の中央に 3 列のテーブル データ領域が作成されます。  
   
     > [!NOTE]  
-    >  **[レポート データ]** ペインの左側に **[ツールボックス]** タブが表示されます。 **[ツールボックス]** を開くには、ポインターを **[ツールボックス]** タブの上に移動させます。**[ツールボックス]** が表示されない場合は、**[表示]** メニューの **[ツールボックス]** をクリックします。  
+    >  **[レポート データ]** ペインの左側に **[ツールボックス]** タブが表示されます。 **[ツールボックス]** を開くには、ポインターを **[ツールボックス]** タブの上に移動させます。 **[ツールボックス]** が表示されない場合は、 **[表示]** メニューの **[ツールボックス]** をクリックします。  
   
 2.  **レポート データ**ウィンドウで、展開、 **AdventureWorksDataset**データセット フィールドを表示します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66108449"
 ## <a name="next-steps"></a>次の手順  
  [テーブル] データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次は、列ヘッダー、日付、および通貨の値の書式を設定します。 「[レッスン 5:レポートの書式設定 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   

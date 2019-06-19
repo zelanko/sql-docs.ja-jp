@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfca4f9367a15cf5c418b8d671ae968260323898
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948497"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
@@ -63,10 +63,10 @@ TEXTPTR ( column )
   
 |関数またはステートメント|[説明]|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
-|DATALENGTH<b>(</b>_expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
+|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
+|DATALENGTH<b>(</b>_expression_**)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
   
 ## <a name="examples"></a>使用例  
   

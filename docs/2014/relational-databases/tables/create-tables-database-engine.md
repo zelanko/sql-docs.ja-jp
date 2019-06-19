@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761602"
 ---
 # <a name="create-tables-database-engine"></a>テーブルの作成 (データベース エンジン)
@@ -64,7 +64,7 @@ ms.locfileid: "62761602"
   
 5.  他のプロパティ (ID 列または計算列の値など) を指定するには、列をクリックし、列のプロパティ タブで適切なプロパティを選択します。 列のプロパティの詳細については、「[テーブル列のプロパティ &#40;SQL Server Management Studio&#41;](table-column-properties-sql-server-management-studio.md)」を参照してください。  
   
-6.  列を主キーとして指定するには、列を右クリックし、**[主キーの設定]** をクリックします。 詳細については、「 [Create Primary Keys](../tables/create-primary-keys.md)」を参照してください。  
+6.  列を主キーとして指定するには、列を右クリックし、 **[主キーの設定]** をクリックします。 詳細については、「 [Create Primary Keys](../tables/create-primary-keys.md)」を参照してください。  
   
 7.  外部キーのリレーションシップ、CHECK 制約、またはインデックスを作成するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、一覧からオブジェクトを選択します。  
   

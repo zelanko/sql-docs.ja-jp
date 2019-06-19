@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087082"
 ---
 # <a name="connect-to-database-dialog-box"></a>[データベースへの接続] ダイアログ ボックス
@@ -31,7 +31,7 @@ ms.locfileid: "66087082"
 |**ソリューションに追加します。**|現在のソリューションにデータベースを追加するには、このオプションを選択します。|  
 |**ソリューションを閉じる**|新しいソリューションにデータベースを追加するには、このオプションを選択します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068419"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>[列マッピングの指定] ダイアログ ボックス (マイニング精度チャート)
   **[列マッピングの指定]** タブを使用して、外部データ ソースからテーブルを選択し、列をデータ マイニング モデルにマッピングします。 次に外部データを使用してマイニング モデルの精度をテストして、その結果を精度チャートに表示します。  
   
- **詳細:**[テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
+ **詳細:** [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>および  
  **マイニング構造**  

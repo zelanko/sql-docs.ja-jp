@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c449e323c87f55d1cbc334d41916a26863cfccd1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078216"
 ---
 # <a name="defining-and-browsing-perspectives"></a>パースペクティブの定義と表示
@@ -72,17 +72,17 @@ ms.locfileid: "66078216"
   
     -   **Large Resellers** 名前付きセット  
   
-    -   計算されるメンバー**Total Sales Amount**   
+    -   計算されるメンバー**Total Sales Amount**  
   
-    -   計算されるメンバー**Total Product Cost**   
+    -   計算されるメンバー**Total Product Cost**  
   
-    -   計算されるメンバー**Reseller GPM**   
+    -   計算されるメンバー**Reseller GPM**  
   
-    -   計算されるメンバー**Total GPM**   
+    -   計算されるメンバー**Total GPM**  
   
-    -   計算されるメンバー**Reseller Sales Ratio to All Products**   
+    -   計算されるメンバー**Reseller Sales Ratio to All Products**  
   
-    -   計算されるメンバー**Total Sales Ratio to All Products**   
+    -   計算されるメンバー**Total Sales Ratio to All Products**  
   
      これらのオブジェクトはインターネット販売とは関係がありません。  
   
@@ -113,17 +113,17 @@ ms.locfileid: "66078216"
   
     -   **Internet Sales Details Drillthrough Action** ドリルスルー アクション  
   
-    -   計算されるメンバー**Total Sales Amount**   
+    -   計算されるメンバー**Total Sales Amount**  
   
-    -   計算されるメンバー**Total Product Cost**   
+    -   計算されるメンバー**Total Product Cost**  
   
-    -   計算されるメンバー**Internet GPM**   
+    -   計算されるメンバー**Internet GPM**  
   
-    -   計算されるメンバー**Total GPM**   
+    -   計算されるメンバー**Total GPM**  
   
-    -   計算されるメンバー**Internet Sales Ratio to All Products**   
+    -   計算されるメンバー**Internet Sales Ratio to All Products**  
   
-    -   計算されるメンバー**Total Sales Ratio to All Products**   
+    -   計算されるメンバー**Total Sales Ratio to All Products**  
   
      これらのオブジェクトは再販業者の販売とは関係がありません。  
   

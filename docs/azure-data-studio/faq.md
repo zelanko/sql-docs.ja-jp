@@ -12,10 +12,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800748"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
@@ -116,7 +116,7 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |[結果をファイルに出力]||はい|
 |[結果をテキストで表示]||はい|
 |空間ビューアー||はい|
-|sqlcmd||[はい]|
+|sqlcmd||はい|
 |T-SQL デバッガー||はい|
 
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート

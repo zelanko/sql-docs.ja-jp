@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9475ee323222b800a9c4b9a86e737fdd161e7a60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102763"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services サイト コレクション機能
@@ -29,7 +29,7 @@ ms.locfileid: "66102763"
 |**レポート サーバーの統合機能**|次のものを使用して、豊富なレポート機能を有効にします。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> この機能は、既定でアクティブになっています。|  
 |**Power View の統合機能**|PowerPivot ブックおよび Analysis Services の表形式のデータベースに対する対話形式のデータ探索と視覚的な表示を有効にします。<br /><br /> この機能には、次のデータ ソースのコンテキスト メニューからアクセスできます。<br /><br /> .rdlx<br /><br /> .rsds<br /><br /> .bism 接続ファイル<br /><br /> <br /><br /> [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] がコンテキスト メニューに表示されない場合は、**Power View の統合機能**がアクティブになっていることを確認してください。<br /><br /> この機能は、既定で非アクティブになっています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint でのレポート サーバーと Power View の統合機能のアクティブ化](activate-the-report-server-and-power-view-integration-features-in-sharepoint.md)   
  [Reporting Services のサイト設定とサイト機能 &#40;SharePoint モード&#41;](../../2014/reporting-services/reporting-services-site-settings-and-site-features-sharepoint-mode.md)   
  [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  

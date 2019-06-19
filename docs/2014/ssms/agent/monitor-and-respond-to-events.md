@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720126"
 ---
 # <a name="monitor-and-respond-to-events"></a>イベントの監視と応答
@@ -38,7 +38,7 @@ ms.locfileid: "62720126"
  [ユーザー定義イベントの作成](create-a-user-defined-event.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によってあらかじめ定義されているイベント以外のイベントを作成する方法について説明します。  
   
- [演算子](operators.md)  
+ [オペレーター](operators.md)  
  ジョブが失敗または成功したときに通知を送信するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用できる、管理者の別名の作成について説明します。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>イベントの監視と応答について  
@@ -67,7 +67,7 @@ ms.locfileid: "62720126"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、イベントのソースが何であっても、イベントの警告で指定されたタスクを実行することによりそのイベントに応答します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_altermessage &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

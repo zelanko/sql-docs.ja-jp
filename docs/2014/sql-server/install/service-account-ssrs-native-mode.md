@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092178"
 ---
 # <a name="service-account-ssrs-native-mode"></a>サービス アカウント (SSRS ネイティブ モード)
@@ -33,7 +33,7 @@ ms.locfileid: "66092178"
   
 ## <a name="options"></a>および  
  **ビルトイン アカウントを使用します。**  
- 一覧から **[ネットワーク サービス]**、 **[ローカル システム]**、または **[ローカル サービス]** を選択します。 推奨されるのは **[ネットワーク サービス]** だけですが、使用可能な任意のアカウントを使用するようにアカウントを構成できます。  
+ 一覧から **[ネットワーク サービス]** 、 **[ローカル システム]** 、または **[ローカル サービス]** を選択します。 推奨されるのは **[ネットワーク サービス]** だけですが、使用可能な任意のアカウントを使用するようにアカウントを構成できます。  
   
  **別のアカウントを使用して、**  
  Windows ユーザー アカウントを指定する場合は、このオプションを選択します。 ローカル Windows ユーザー アカウントまたはドメイン ユーザー アカウントを入力できます。 この形式でドメイン アカウントを指定: *\<ドメイン >\\< ユーザー\>* します。 この形式でローカル Windows ユーザー アカウントを指定: *\<コンピューター名 >\\< ユーザー\>* します。 このとき選択できるのは、既存のアカウントのみです。[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成で新しいアカウントを作成することはできません。  

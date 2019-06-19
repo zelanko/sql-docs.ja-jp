@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980423"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -49,7 +49,7 @@ PRINT msg_str | @local_variable | string_expr
  文字列または Unicode 文字列の定数です。 詳細については、「[定数 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)」を参照してください。  
   
  **@** *local_variable*  
- 任意の有効な文字型の変数を指定します。 **@** _local\_variable_ は、**char**、**nchar**、**varchar**、または **nvarchar** であるか、これらのデータ型に暗黙的に変換できる必要があります。  
+ 任意の有効な文字型の変数を指定します。 **@**_local\_variable_ は、**char**、**nchar**、**varchar**、または **nvarchar** であるか、これらのデータ型に暗黙的に変換できる必要があります。  
   
  *string_expr*  
  文字列を返す式を指定します。 連結したリテラル値、関数、および変数を含むことができます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  

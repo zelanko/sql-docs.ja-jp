@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017823"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -41,7 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server_name = ] 'server_name'` 情報を返す対象のサーバーの名前。 *server_name*は**nvarchar (30)**、既定値は NULL です。  
+`[ @server_name = ] 'server_name'` 情報を返す対象のサーバーの名前。 *server_name*は**nvarchar (30)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

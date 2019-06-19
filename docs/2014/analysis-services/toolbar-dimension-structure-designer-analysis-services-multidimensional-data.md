@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066048"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
@@ -40,7 +40,7 @@ ms.locfileid: "66066048"
   
 -   グリッド  
   
-     現在のディメンションの属性の詳細な一覧を表示します。これには、 **[名前]**、 **[使用法]**、 **[種類]** の各プロパティ、キー列がある場合はそのデータ型、名前列がキー列に一致するかどうかなどが表示されます。  
+     現在のディメンションの属性の詳細な一覧を表示します。これには、 **[名前]** 、 **[使用法]** 、 **[種類]** の各プロパティ、キー列がある場合はそのデータ型、名前列がキー列に一致するかどうかなどが表示されます。  
   
  下矢印をクリックして、3 つのオプションから 1 つを選択します。  
   

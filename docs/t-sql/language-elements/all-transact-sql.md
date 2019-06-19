@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983233"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **ブール値**  
   
 ## <a name="result-value"></a>結果の値  
- 指定された比較が (_scalar_expression_ **,** _x)_ の任意の組で TRUE の場合、TRUE を返します。ここで、*x* は単一列セットの中の値です。 それ以外の場合は、FALSE を返します。  
+ 指定された比較が (_scalar_expression_**,**_x)_ の任意の組で TRUE の場合、TRUE を返します。ここで、*x* は単一列セットの中の値です。 それ以外の場合は、FALSE を返します。  
   
 ## <a name="remarks"></a>Remarks  
  ALL の場合、*scalar_expression* ではサブクエリによって返されるすべての値に対し肯定的な比較を行う必要があります。 たとえば、サブクエリによって値 2 と 3 が返される場合、*scalar_expression* <= ALL (subquery) は、*scalar_expression* が 2 の場合、TRUE と評価されます。 サブクエリによって値 2 と値 3 が返される場合、*scalar_expression* = ALL (subquery) は FALSE と評価されます。これは、サブクエリのいくつかの値 (値 3) が式の条件を満たさないためです。  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080268"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services のアクセスを許可するための Windows ファイアウォールの構成
@@ -87,7 +87,7 @@ ms.locfileid: "66080268"
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]** 、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
 2.  **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66080268"
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]** 、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
 2.  SQL Server Browser サービスへのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66080268"
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]** 、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
 2.  Analysis Services へのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   

@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f36faf136a97d185cf1461f7affc414370b813f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102608"
 ---
 # <a name="ssms-utility"></a>Ssms ユーティリティ
@@ -59,7 +59,7 @@ Ssms
  [**-d** _databasename_]  
   データベース名  
 
- **[-G]** Azure Active Directory 認証を使用して接続します。 接続の種類は、**-P** および/または **-U** が含まれるかどうかで決まります。
+ [**-G**] Azure Active Directory 認証を使用して接続します。 接続の種類は、**-P** および/または **-U** が含まれるかどうかで決まります。
  - **-U** も **-P** も含まれて*いない*場合は、**[Active Directory - 統合]** が使用され、ダイアログは表示されません。
  - **-U** と **-P** の両方が含まれている場合は、**[Active Directory - パスワード]** が使用されます。 このオプションを使用することは**お勧めできません**。コマンドライン上にクリア テキスト パスワードを指定する必要があり、これが推奨されないためです。
  - **-U** が含まれており、**-P** は含まれていない場合、認証ダイアログはポップアップ表示されますが、ログインの試みはすべて失敗します。 
@@ -72,16 +72,16 @@ Ssms
 [**-P** _password_]  
  'SQL 認証' または 'Active Directory - パスワード' で接続するときのパスワード
   
-**[-E]**  
+[**-E**]  
  Windows 認証を使用した接続  
   
-**[-nosplash]**  
+[**-nosplash**]  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開くとき、スプラッシュ スクリーンのグラフィックを表示しません。 限られた帯域幅を使用した接続では、ターミナル サービスを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動しているコンピューターへ接続する場合に、このオプションを使用してください。 この引数では、大文字と小文字は区別されず、他の引数の前後どちらにも指定できます。  
   
 [**-log**_[filename]?_]  
  トラブルシューティング用に指定したファイルに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のアクティビティを記録します。  
   
-**[-?]**  
+[**-?**]  
  コマンド ライン ヘルプを表示します。  
   
 ## <a name="remarks"></a>Remarks  

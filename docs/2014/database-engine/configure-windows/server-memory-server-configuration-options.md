@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810066"
 ---
 # <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
@@ -34,7 +34,7 @@ ms.locfileid: "62810066"
  **min server memory** の既定の設定は 0 MB で、 **max server memory** の既定の設定は 2,147,483,647 MB です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
   
 > [!NOTE]  
->  **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、**-f** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)」を参照してください。  
+>  **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、 **-f** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)」を参照してください。  
   
  メモリを動的に使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
   
@@ -134,9 +134,9 @@ ms.locfileid: "62810066"
 |-|-------------|-------------|  
 |コンベンショナル メモリ|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでプロセス仮想アドレス空間制限まで:<br /><br /> 2 GB<br /><br /> 3 GB **3 gb**パラメーター * の起動<br /><br /> 4 GB wow64\*\*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでプロセス仮想アドレス空間制限まで:<br /><br /> 8 TB (x64 アーキテクチャの場合)|  
   
- ***/3gb** は、オペレーティング システムのブート パラメーターです。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
+ * **/3gb** は、オペレーティング システムのブート パラメーターです。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
   
- * * WOW64 (Windows on Windows 64) は 32 ビット モードであり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は 64 ビットのオペレーティング システムで実行されます。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
+ \* * WOW64 (Windows on Windows 64) は 32 ビット モードであり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は 64 ビットのオペレーティング システムで実行されます。 詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -167,7 +167,7 @@ process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65536532"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 関数
@@ -49,7 +49,7 @@ SQLRETURN SQLNativeSql(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *InStatementText*  
  [入力]SQL 翻訳されるテキストを指定する文字列。  

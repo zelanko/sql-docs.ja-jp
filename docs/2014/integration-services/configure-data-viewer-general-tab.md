@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060667"
 ---
 # <a name="configure-data-viewer-general-tab"></a>[データ ビューアーの構成] ([全般] タブ)
@@ -36,7 +36,7 @@ ms.locfileid: "66060667"
  **[説明]**  
  サンプル グラフを表示し、その後ろに説明を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ビューアーの構成&#40;縦棒グラフ タブ&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [データ ビューアーの構成&#40;グリッド タブ&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [データ ビューアーの構成&#40;ヒストグラム タブ&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

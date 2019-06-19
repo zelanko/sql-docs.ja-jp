@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d1e10db6b9bb123bf82c0790cbc8be10388dddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62915219"
 ---
 # <a name="mssqlserver2"></a>MSSQLSERVER_2
@@ -40,7 +40,7 @@ ms.locfileid: "62915219"
 ## <a name="user-action"></a>ユーザーの操作  
  サーバーが起動していることを確認します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン サービスの管理](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [クライアント プロトコルを構成します。](../../database-engine/configure-windows/configure-client-protocols.md)   
  [ネットワーク プロトコルとネットワーク ライブラリ](../../sql-server/install/network-protocols-and-network-libraries.md)   
