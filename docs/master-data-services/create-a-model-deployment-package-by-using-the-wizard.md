@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21303e8b4fbf6f1d03fa2487a31457355febc2a7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487434"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの作成
@@ -59,7 +59,7 @@ ms.locfileid: "65487434"
   
 -   [ウィザードを使用したモデルの配置パッケージの展開](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
   
   

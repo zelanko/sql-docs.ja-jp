@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0ddaae66e60f77156b2d7c7e975875bb78d56cb
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537329"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 関数
@@ -79,7 +79,7 @@ SQLRETURN SQLFreeHandle(
 |--------------|-----------|-----------------|  
 |HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY010|関数のシーケンス エラー|(DM)、 *HandleType*引数を sql_handle_env として、少なくとも 1 つの接続が、割り当てられたまたは接続されている状態ででした。 **SQLDisconnect**と**SQLFreeHandle**で、 *HandleType*呼び出す前に、各接続の sql_handle_dbc として呼び出す必要がある**SQLFreeHandle**で、*HandleType* sql_handle_env としての。<br /><br /> (DM)、 *HandleType*引数が sql_handle_dbc として、および関数が呼び出す前に呼び出された**SQLDisconnect**接続します。<br /><br /> (DM)、 *HandleType*引数が sql_handle_dbc として。 非同期的に実行中の関数が呼び出されました*処理*関数は、この関数が呼び出されたときにまだ実行中だったとします。<br /><br /> (DM)、 *HandleType*引数が sql_handle_stmt として。 **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**が、ステートメント ハンドルで呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、 *HandleType*引数が sql_handle_stmt として。 ステートメント ハンドルで、または関連付けられている接続ハンドルで非同期的に実行中の関数が呼び出された、この関数が呼び出されたとき、関数が実行されています。<br /><br /> (DM)、 *HandleType*引数が SQL_HANDLE_DESC します。 関連付けられている接続ハンドル; で非同期的に実行中の関数が呼び出されましたこの関数が呼び出されたとき、関数が実行されています。<br /><br /> (DM) ハンドルのすべての関連会社とその他のリソースが解放されていない前に、 **SQLFreeHandle**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかが呼び出された、*処理**HandleType*を sql_handle_stmt として設定されたまたは SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE が返されます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
+|HY010|関数のシーケンス エラー|(DM)、 *HandleType*引数を sql_handle_env として、少なくとも 1 つの接続が、割り当てられたまたは接続されている状態ででした。 **SQLDisconnect**と**SQLFreeHandle**で、 *HandleType*呼び出す前に、各接続の sql_handle_dbc として呼び出す必要がある**SQLFreeHandle**で、*HandleType* sql_handle_env としての。<br /><br /> (DM)、 *HandleType*引数が sql_handle_dbc として、および関数が呼び出す前に呼び出された**SQLDisconnect**接続します。<br /><br /> (DM)、 *HandleType*引数が sql_handle_dbc として。 非同期的に実行中の関数が呼び出されました*処理*関数は、この関数が呼び出されたときにまだ実行中だったとします。<br /><br /> (DM)、 *HandleType*引数が sql_handle_stmt として。 **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**が、ステートメント ハンドルで呼び出され、SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、 *HandleType*引数が sql_handle_stmt として。 ステートメント ハンドルで、または関連付けられている接続ハンドルで非同期的に実行中の関数が呼び出された、この関数が呼び出されたとき、関数が実行されています。<br /><br /> (DM)、 *HandleType*引数が SQL_HANDLE_DESC します。 関連付けられている接続ハンドル; で非同期的に実行中の関数が呼び出されましたこの関数が呼び出されたとき、関数が実行されています。<br /><br /> (DM) ハンドルのすべての関連会社とその他のリソースが解放されていない前に、 **SQLFreeHandle**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかが呼び出された、*処理* *HandleType*を sql_handle_stmt として設定されたまたは SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE が返されます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
 |HY013|メモリ管理エラー|*HandleType*引数が sql_handle_stmt としてまたは SQL_HANDLE_DESC、および基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY017|自動的に割り当てられた記述子ハンドルの使い方が正しくありません。|(DM)、*処理*引数は、自動的に割り当てられた記述子ハンドルに設定されました。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  

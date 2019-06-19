@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7da43cc6b21f5d99aa58f152898211af805275a7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103219"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
@@ -70,11 +70,11 @@ ms.locfileid: "65103219"
   
 4.  **[Windows アプリケーション イベント ログに書き込む]** チェック ボックスをオンにし、次のいずれかを選択します。  
   
-    -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、**[ジョブ成功時]** をクリックします。  
+    -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、 **[ジョブ成功時]** をクリックします。  
   
-    -   ジョブが異常終了したときにジョブの状態をログに記録する場合は、**[ジョブ失敗時]** をクリックします。  
+    -   ジョブが異常終了したときにジョブの状態をログに記録する場合は、 **[ジョブ失敗時]** をクリックします。  
   
-    -   終了の状態にかかわらずジョブの状態をログに記録する場合は、**[ジョブ完了時]** をクリックします。  
+    -   終了の状態にかかわらずジョブの状態をログに記録する場合は、 **[ジョブ完了時]** をクリックします。  
   
 ## <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
 **ジョブの状態を Windows アプリケーション ログに書き込むには**  
