@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c13a761087cb263983a8d99b27514fcb225d93a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721450"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>レッスン 4-4:フラット ファイル変換先を追加する
@@ -54,7 +54,7 @@ Lookup Currency Key 変換でエラーが出力されると、参照に失敗し
   
     ソース データ ファイルからの列に加え、3 つの新しい列、ErrorCode、ErrorColumn、ErrorDescription があります。 これらの列は、Lookup Currency Key 変換のエラー出力と Get Error Description 変換のスクリプトです。 これらの列は、失敗した行の問題を解決するために使用できます。  
   
-12. **[OK]** を選択します。  
+12. [ **OK**] を選択します。  
   
 13. **[フラット ファイル変換先エディター]** で、 **[ファイル内のデータを上書きする]** チェック ボックスをオフにします。  
   
@@ -62,7 +62,7 @@ Lookup Currency Key 変換でエラーが出力されると、参照に失敗し
   
 14. **[フラット ファイル変換先エディター]** の **[マッピング]** を選択し、すべての列が正しいことを確認します。 必要に応じて、変換先の列の名前を変更できます。  
   
-15. **[OK]** を選択します。  
+15. [ **OK**] を選択します。  
   
 ## <a name="go-to-next-task"></a>次の実習に進む
 [手順 5:レッスン 4 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  

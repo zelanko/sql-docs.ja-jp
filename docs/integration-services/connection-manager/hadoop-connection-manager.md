@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5bc5e0d93cfb657612e1806bee52d242392604
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728219"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 接続マネージャー
@@ -29,7 +29,7 @@ ms.locfileid: "65728219"
   
 ## <a name="configure-the-hadoop-connection-manager"></a>Hadoop 接続マネージャーの構成  
   
-1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[Hadoop]** > **[追加]** の順に選択します。 **[Hadoop Connection Manager Editor]** (Hadoop Connection 接続マネージャー エディター) ダイアログ ボックスが表示されます。  
+1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[Hadoop]**  >  **[追加]** の順に選択します。 **[Hadoop Connection Manager Editor]** (Hadoop Connection 接続マネージャー エディター) ダイアログ ボックスが表示されます。  
   
 2.  関連する Hadoop クラスター情報を構成するには、左側のウィンドウで **[WebHCat]** または **[WebHDFS]** タブを選択します。
   
@@ -37,7 +37,7 @@ ms.locfileid: "65728219"
   
     1.  **[WebHCat ホスト]** に、WebHCat サービスをホストするサーバーを入力します。  
   
-    2.  **[WebHCat Port]**(WebHCat ポート) に、WebHCat サービスのポートを入力します (既定値は 50111 です)。  
+    2.  **[WebHCat Port]** (WebHCat ポート) に、WebHCat サービスのポートを入力します (既定値は 50111 です)。  
   
     3.  WebHCat サービスにアクセスするときに使用する **認証** 方法を選択します。 使用できる値は、 **[基本]** と **[Kerberos]** です。  
   
@@ -45,19 +45,19 @@ ms.locfileid: "65728219"
   
          ![Kerberos 認証が指定された Hadoop 接続マネージャー エディターのスクリーンショット](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Kerberos 認証が指定された Hadoop 接続マネージャー エディター")  
   
-    4.  **[WebHCat User]**(WebHCat ユーザー) に、WebHCat へのアクセスが許可されている **ユーザー** を入力します。  
+    4.  **[WebHCat User]** (WebHCat ユーザー) に、WebHCat へのアクセスが許可されている **ユーザー** を入力します。  
   
     5.  **[Kerberos]** 認証を選択した場合は、ユーザーの **パスワード** と **ドメイン**を入力します。  
   
 4.  HDFS との間でデータをコピーするために **WebHDFS** オプションを有効にする場合は、次の操作を行います。 
   
-    1.  **[WebHDFS Host]**(WebHDFS ホスト) に、WebHDFS サービスをホストするサーバーを入力します。  
+    1.  **[WebHDFS Host]** (WebHDFS ホスト) に、WebHDFS サービスをホストするサーバーを入力します。  
   
-    2.  **[WebHDFS Port]**(WebHDFS ポート) に、WebHDFS サービスのポートを入力します (既定値は 50070 です)。  
+    2.  **[WebHDFS Port]** (WebHDFS ポート) に、WebHDFS サービスのポートを入力します (既定値は 50070 です)。  
   
     3.  WebHDFS サービスにアクセスするときに使用する **認証** 方法を選択します。 使用できる値は、 **[基本]** と **[Kerberos]** です。  
   
-    4.  **[WebHDFS User]**(WebHDFS ユーザー) に、HDFS へのアクセスが許可されているユーザーを入力します。  
+    4.  **[WebHDFS User]** (WebHDFS ユーザー) に、HDFS へのアクセスが許可されているユーザーを入力します。  
   
     5.  **[Kerberos]** 認証を選択した場合は、ユーザーの **パスワード** と **ドメイン**を入力します。  
   
@@ -174,9 +174,9 @@ KDC サーバー:
 
 3.  Kerberos で使用する暗号化アルゴリズムを選択します。
 
-    1. **[サーバー マネージャー]** > **[グループ ポリシーの管理]** > **[ドメイン]** の順に選択します。 次に、**[グループ ポリシー オブジェクト]** > **[Default or Active Domain Policy]\(既定またはアクティブなドメイン ポリシー\)** > **[編集]** の順に選択します。
+    1. **[サーバー マネージャー]**  >  **[グループ ポリシーの管理]**  >  **[ドメイン]** の順に選択します。 次に、 **[グループ ポリシー オブジェクト]**  >  **[Default or Active Domain Policy]\(既定またはアクティブなドメイン ポリシー\)**  >  **[編集]** の順に選択します。
 
-    2. **グループ ポリシー管理エディター**のポップアップ ウィンドウで、**[コンピューターの構成]** > **[ポリシー]** > **[Windows の設定]** の順に選択します。 次に、**[セキュリティ設定]** > **[ローカル ポリシー]** > **[セキュリティ オプション]** の順に選択します。 **[ネットワーク セキュリティ: Kerberos で許可する暗号化の種類を構成する]** を構成します。
+    2. **グループ ポリシー管理エディター**のポップアップ ウィンドウで、 **[コンピューターの構成]**  >  **[ポリシー]**  >  **[Windows の設定]** の順に選択します。 次に、 **[セキュリティ設定]**  >  **[ローカル ポリシー]**  >  **[セキュリティ オプション]** の順に選択します。 **[ネットワーク セキュリティ: Kerberos で許可する暗号化の種類を構成する]** を構成します。
 
     3. KDC への接続に使用する暗号化アルゴリズムを選択します。 通常は任意のオプションを選択できます。
 
@@ -188,11 +188,11 @@ KDC サーバー:
 
 4.  Windows ドメインで Kerberos プリンシパルを使用するには、ドメイン アカウントと Kerberos プリンシパル間のマッピングを作成します。
 
-    1. **[管理ツール]** > **[Active Directory ユーザーとコンピューター]** の順に選択します。
+    1. **[管理ツール]**  >  **[Active Directory ユーザーとコンピューター]** の順に選択します。
 
-    2. **[表示]** > **[高度な機能]** の順に選択して、高度な機能を構成します。
+    2. **[表示]**  >  **[高度な機能]** の順に選択して、高度な機能を構成します。
 
-    3. マッピングを作成するアカウントを見つけ、右クリックして **[名前のマッピング]** を表示し、**[Kerberos 名]** タブを選択します。
+    3. マッピングを作成するアカウントを見つけ、右クリックして **[名前のマッピング]** を表示し、 **[Kerberos 名]** タブを選択します。
 
     4. 領域からプリンシパルを追加します。
 

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779171"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>可用性グループの監視 (Transact-SQL)
@@ -170,7 +170,7 @@ ms.locfileid: "66779171"
 >  プライマリ レプリカの場所は、可用性グループに対して権限を持つソースです。  
   
 > [!NOTE]  
->  可用性データベースの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] パフォーマンス カウンター ( **SQLServer:Database Replica** パフォーマンス オブジェクト) の詳細については、「 [SQL Server、データベース レプリカ](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。 また、可用性データベースのトランザクション ログ アクティビティを監視するには、**SQLServer:Databases** パフォーマンス オブジェクトのカウンター、**Log Flush Write Time (ms)** 、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec**、**Log Pool Requests/sec** です。詳しくは、「 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)」をご覧ください。  
+>  可用性データベースの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] パフォーマンス カウンター ( **SQLServer:Database Replica** パフォーマンス オブジェクト) の詳細については、「 [SQL Server、データベース レプリカ](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。 また、可用性データベースのトランザクション ログ アクティビティを監視するには、**SQLServer:Databases** パフォーマンス オブジェクトのカウンター、**Log Flush Write Time (ms)**、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec**、**Log Pool Requests/sec** です。詳しくは、「 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)」をご覧ください。  
   
 ##  <a name="AGlisteners"></a> 可用性グループ リスナーの監視  
  WSFC クラスターのサブネット上の可用性グループ リスナーを監視するには、次のビューを使用します。  

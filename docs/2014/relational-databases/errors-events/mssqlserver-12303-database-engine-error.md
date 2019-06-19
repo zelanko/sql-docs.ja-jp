@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f9a6b3f963522c6e26fbc88fc6d970c1361b308
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62915873"
 ---
 # <a name="mssqlserver12303"></a>MSSQLSERVER_12303
@@ -35,7 +35,7 @@ ms.locfileid: "62915873"
 ## <a name="user-action"></a>ユーザーの操作  
  'number' 句は使用しないでください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

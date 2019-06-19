@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722430"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>レッスン 2-1 - 配置ユーティリティの構築
@@ -41,7 +41,7 @@ ms.locfileid: "65722430"
   
 5.  **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスの右側のペインで、 **AllowConfigurationChanges** が **true**に設定されていることを確認し、 **CreateDeploymentUtility** を **true**に設定し、 **DeploymentOutputPath**の既定値を必要に応じて更新します。  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
 ### <a name="to-build-the-deployment-utility"></a>配置ユーティリティを構築するには  
   

@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101914"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
@@ -712,8 +712,8 @@ SqlPackage.exe と DacFx API を使用すると、配置レポートと配置ス
 
 SqlPackage の発行アクションとスクリプト アクションには、2 つの新しい引数が追加されました。
 
-* DeployScriptPath (省略名: dsp):  これは、配置スクリプトの書き込み先のパスです (省略可能)。 Azure の配置では、DB を作成または変更するための TSQL コマンドがある場合に、マスター スクリプトが同じパスに書き込まれますが、出力ファイル名として "Filename_Master.sql" が使用されます。
-* DeployReportPath (省略名: drp):  これは、配置レポートの書き込み先のパスです (省略可能)。
+* DeployScriptPath (省略名: dsp): これは、配置スクリプトの書き込み先のパスです (省略可能)。 Azure の配置では、DB を作成または変更するための TSQL コマンドがある場合に、マスター スクリプトが同じパスに書き込まれますが、出力ファイル名として "Filename_Master.sql" が使用されます。
+* DeployReportPath (省略名: drp): これは、配置レポートの書き込み先のパスです (省略可能)。
 
 スクリプト アクションの場合は、既存の出力パス引数または新しいスクリプト/レポート固有の引数を使用する必要があります。ただし、両方を使用することはできません。
 

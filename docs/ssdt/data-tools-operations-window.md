@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 012afa885490bb180b9ba0cae7b8ad435cf70e58
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099370"
 ---
 # <a name="data-tools-operations-window"></a>[データ ツール操作] ウィンドウ
@@ -26,7 +26,7 @@ ms.locfileid: "65099370"
 > [!WARNING]  
 > 一部の操作 (公開など) では自動的にウィンドウが開きます。 また別の操作では、ウィンドウが開いていることを確認する必要があります。 このオプションをオフにするには、[ツール] > [オプション] > [SQL Server ツール] > [全般] にある **[優先度の高い操作のデータ ツール操作を表示する]** をオフにします。  
   
-**[データ ツール操作]** ウィンドウを表示するには、 **[表示]** メニューの **[その他のウィンドウ]** をポイントし、 **[データ ツール操作]** をクリックします。  
+**[データ ツール操作]** ウィンドウを表示するには、**[表示]** メニューの **[その他のウィンドウ]** をポイントし、**[データ ツール操作]** をクリックします。  
   
 **[データ ツール操作]** ウィンドウには、次の操作を実行するときに進捗状況が表示されます。  
   

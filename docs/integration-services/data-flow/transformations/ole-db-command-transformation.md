@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91ea18d66129f5450e20bf7e9412380aeb47611e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725936"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB コマンド変換
@@ -101,7 +101,7 @@ ms.locfileid: "65725936"
   
     -   **[列マッピング]** をクリックし、 **[使用できる入力列]** 一覧の列を **[使用できる変換先列]** 一覧のパラメーターにマップします。  
   
-14. **[OK]** をクリックします。  
+14. [**OK**] をクリックします。  
   
 15. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[保存]** をクリックします。  
   

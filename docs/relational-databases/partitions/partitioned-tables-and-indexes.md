@@ -18,10 +18,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713317"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
@@ -54,7 +54,7 @@ ms.locfileid: "65713317"
 パーティション関数のパーティションを一連のファイル グループにマップするデータベース オブジェクト。 パーティションを別々のファイル グループに配置する主な理由は、パーティションのバックアップ操作を個別に実行できるようにすることです。 これは、バックアップを個別のファイル グループで実行できるからです。  
   
 ### <a name="partitioning-column"></a>パーティション分割列  
-パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 **timestamp**型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 、または **varbinary(max)** データ型を指定することはできません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
+パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 **timestamp**型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)**、 **nvarchar(max)**、または **varbinary(max)** データ型を指定することはできません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
   
 ### <a name="aligned-index"></a>固定されたインデックス  
 対応するテーブルと同じパーティション構成に基づいて構築されたインデックス。 テーブルとインデックスが固定されている状態では、両者のパーティション構造を保ったまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパーティションをすばやく効率的に切り替えることができます。 ベース テーブルに固定させるために、インデックスを同じ名前のパーティション関数に加える必要はありません。 ただし、インデックスとベース テーブルのパーティション関数が次の点で基本的に同じでなければなりません。

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721970"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>レッスン 3-2 - パッケージ インストール ウィザードの実行
@@ -58,7 +58,7 @@ ms.locfileid: "65721970"
     > [!IMPORTANT]  
     > この名前は、構成が使用する環境変数の値で参照されます。 フォルダーと参照の名前が一致しなければ、パッケージを実行できません。  
   
-12. **[OK]** をクリックします。  
+12. [**OK**] をクリックします。  
   
 13. [インストール フォルダーの選択] ページで、[フォルダー] ボックスに **C:\DeploymentTutorialInstall** と表示されていることを確認し、 **[次へ]** をクリックします。  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720818"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>レッスン 6-4:レッスン 6 のパッケージを配置する
@@ -67,7 +67,7 @@ ms.locfileid: "65720818"
   
 6.  **[フォルダーの参照]** ダイアログ ボックスで、この SSIS Tutorial プロジェクトを含むフォルダーに移動し、**[OK]** を選択します。  
   
-7.  **[次へ]** を選択します。  
+7.  [ **次へ**] を選択します。  
   
 8.  [パッケージの選択] ページに SSIS Tutorial の 6 つパッケージがすべて表示されます。 **[パッケージ]** の一覧で、**[Lesson 6.dtsx]** を選択し、**[次へ]** を選択します。  
   

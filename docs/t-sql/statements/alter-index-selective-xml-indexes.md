@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b3f15837f71e920c7b604e95039c94fd3383b0f7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65504034"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選択的 XML インデックス)
@@ -125,7 +125,7 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ]  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
  インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文については、「[WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)」をご覧ください。  
   
  FOR **(** \<promoted_node_path_action_list> **)**  
@@ -135,7 +135,7 @@ identifier
   
 -   **パスを削除 (REMOVE) します。** パスを削除 (REMOVE) する場合、パスの作成時にパスに付けられた名前を指定します。  
   
- [WITH **(** \<index_options> **)** ]  
+ [WITH **(** \<index_options> **)**]  
  \<index_options> は、ALTER INDEX を FOR 句なしで使用する場合にのみ、指定することができます。 ALTER INDEX を使用して、インデックスにパスを追加または削除する場合、インデックス オプションは有効な引数ではありません。 インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  

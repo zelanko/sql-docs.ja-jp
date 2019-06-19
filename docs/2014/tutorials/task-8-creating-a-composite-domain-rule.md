@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489625"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>タスク 8:複合ドメイン ルールを作成する
-  このタスクでのルールを作成する、 **Address Validation**複合ドメイン。 クロス ドメイン ルールを定義する: 場合**市区町村**は**Los Angeles**、**状態**必要があります**CA**場所**市区町村****状態**は 2 つのドメイン。  
+  このタスクでのルールを作成する、 **Address Validation**複合ドメイン。 クロス ドメイン ルールを定義する: 場合**市区町村**は**Los Angeles**、**状態**必要があります**CA**場所**市区町村** **状態**は 2 つのドメイン。  
   
 1.  右側のウィンドウに切り替えると、 **CD のルール**タブ。  
   

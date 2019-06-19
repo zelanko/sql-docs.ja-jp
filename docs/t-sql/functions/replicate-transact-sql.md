@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 558d1a1f3d5d0cbb204c5dfd80833ce82a02d0c0
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945841"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
@@ -46,7 +46,7 @@ REPLICATE ( string_expression ,integer_expression )
  文字列またはバイナリ データ型の式です。 *string_expression* 文字またはバイナリ データのいずれかを指定できます。  
   
 > [!NOTE]  
->  場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)** , 、戻り値が 8,000 バイトで切り捨てられます。 8,000 バイトの場合より大きい値を返す *string_expression* 適切な大きな値のデータ型に明示的にキャストする必要があります。  
+>  場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)**, 、戻り値が 8,000 バイトで切り捨てられます。 8,000 バイトの場合より大きい値を返す *string_expression* 適切な大きな値のデータ型に明示的にキャストする必要があります。  
   
  *integer_expression*  
  **bigint** を含む、整数型の式を指定します。 場合 *であれば、任意* は負の場合、NULL が返されます。  

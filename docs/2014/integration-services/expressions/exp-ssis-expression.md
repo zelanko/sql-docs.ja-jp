@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 366a938b2e90ce448cbcba2775f0eb7f327aab61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62898057"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 式)
@@ -49,13 +49,13 @@ EXP(numeric_expression)
 EXP(74)  
 ```  
   
- 1.373382979540176E+32 が返されます。  
+ 1\.373382979540176E+32 が返されます。  
   
 ```  
 EXP(-27)  
 ```  
   
- 1.879528816539083E-12 が返されます。  
+ 1\.879528816539083E-12 が返されます。  
   
 ```  
 EXP(0)  

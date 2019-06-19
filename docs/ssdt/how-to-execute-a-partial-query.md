@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090172"
 ---
 # <a name="how-to-execute-a-partial-query"></a>方法:部分クエリを実行する
@@ -26,9 +26,9 @@ Transact\-SQL エディターでは、スクリプトの一部を選択し、そ
   
 ### <a name="to-partially-execute-a-query"></a>クエリを部分的に実行するには  
   
-1.  **SQL Server オブジェクト エクスプローラー**で、 **[ビュー]** の下にある **PerishableFruits** をダブルクリックし、Transact\-SQL エディターで開きます。  
+1.  **SQL Server オブジェクト エクスプローラー**で、**[ビュー]** の下にある **PerishableFruits** をダブルクリックし、Transact\-SQL エディターで開きます。  
   
-2.  コード内の「`SELECT p.Id, p.Name FROM dbo.Product p`」という部分を選択し、右クリックして、 **[クエリの実行]** をクリックします。  
+2.  コード内の「`SELECT p.Id, p.Name FROM dbo.Product p`」という部分を選択し、右クリックして、**[クエリの実行]** をクリックします。  
   
 3.  `Products` テーブル内のすべての行の指定されたフィールドが、**結果**ペインに返されます。  
   

@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d6d18a4654fc14aa5c0997734184ec700fad3162
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095511"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
@@ -32,9 +32,9 @@ ms.locfileid: "65095511"
 
 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログをセットアップする方法について説明します。  
   
--   **作業を開始する準備:** [セキュリティ](#Security)  
+-   **作業を開始する準備:**[セキュリティ](#Security)  
   
--   **ジョブ履歴ログをセットアップするには、次を使用します。** [SQL Server Management Studio](#SSMS)  
+-   **ジョブ履歴ログをセットアップするには、次を使用します。**[SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   

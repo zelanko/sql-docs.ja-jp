@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec51fbd40031f330a85e8b1c0613c05ce90ae0e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055314"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS アップグレード ウィザード (SSIS パッケージ アップグレード ウィザード)
@@ -30,7 +30,7 @@ ms.locfileid: "66055314"
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、このようこそページをスキップします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f419fa11c27f912f9e020c83ec8c2164a7b4b13f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725397"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 式)
@@ -64,7 +64,7 @@ FLOOR(-123.45)
 FLOOR(0.00)  
 ```  
   
- 0.00 を返します。  
+ 0\.00 を返します。  
   
 ## <a name="see-also"></a>参照  
  [CEILING (SSIS 式)](../../integration-services/expressions/ceiling-ssis-expression.md)   

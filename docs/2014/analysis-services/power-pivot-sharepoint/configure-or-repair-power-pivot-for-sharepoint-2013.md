@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 808543b2a9e0f770eaf47966bb8d6a08fecabcc8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071781"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>PowerPivot for SharePoint 2013 の構成または修復 (PowerPivot 構成ツール)
@@ -70,13 +70,13 @@ ms.locfileid: "66071781"
 ##  <a name="bkmk_steps"></a> 構成手順  
  構成ツールへのリンクは、PowerPivot for SharePoint 2013 がローカル サーバーにインストールされている場合にのみ表示されます。  
   
-1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[PowerPivot For SharePoint 2013 の構成]** の順にクリックします。  
+1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** 、 **[PowerPivot For SharePoint 2013 の構成]** の順にクリックします。  
   
 2.  **[PowerPivot for SharePoint の構成または修復]** をクリックします。  
   
-3.  ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
+3.  ウィンドウを最大化します。 ウィンドウの下部に **[検証]** 、 **[実行]** 、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
-4.  **既定のアカウント:**[パラメーター] タブのドメイン ユーザー アカウントを入力、**アカウントのユーザー名の既定の**します。 このアカウントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プールなどの重要なサービスを準備する場合に使用されます。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
+4.  **既定のアカウント:** [パラメーター] タブのドメイン ユーザー アカウントを入力、**アカウントのユーザー名の既定の**します。 このアカウントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プールなどの重要なサービスを準備する場合に使用されます。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
   
      **パスフレーズ:** パスフレーズを入力します。 SharePoint ファームが新しい場合、SharePoint ファームに新しいサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66071781"
 ||パスフレーズ|ユーザー入力|データ暗号化に使用されるマスター キー。 既定では、キーの生成に使用されるパスフレーズは、ファーム内の新しいサーバーの準備に使用されるパスフレーズと同じです。 既定のパスフレーズを一意のパスフレーズに置き換えることができます。|  
 |**DataRefresh の自動アカウントの作成**|ターゲット アプリケーションの ID|既定 (必要な場合)|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新の資格情報を格納する対象アプリケーションを作成します。<br /><br /> アプリケーション ID は、説明的なテキストにすることができます。|  
 ||ターゲット アプリケーションのフレンドリ名|既定 (必要な場合)||  
-||自動アカウントのユーザー名とパスワード|既定 (必要な場合)|対象アプリケーションで自動データ更新の実行に使用される Windows ユーザー アカウントの資格情報を入力します。 詳細については、次を参照してください。 [SharePoint Server 2013 で無人サービス アカウントを使用して、Excel Services の構成データを更新](https://technet.microsoft.com/library/hh525344\(office.15\).aspx)(https://technet.microsoft.com/library/hh525344(office.15).aspx)します。|  
+||自動アカウントのユーザー名とパスワード|既定 (必要な場合)|対象アプリケーションで自動データ更新の実行に使用される Windows ユーザー アカウントの資格情報を入力します。 詳細については、次を参照してください。 [SharePoint Server 2013 で無人サービス アカウントを使用して、Excel Services の構成データを更新](https://technet.microsoft.com/library/hh525344\(office.15\).aspx)(https://technet.microsoft.com/library/hh525344(office.15).aspx) します。|  
 ||サイト URL|既定 (必要な場合)|ターゲット アプリケーションが関連付けられるサイト コレクションのサイト URL を入力します。 追加のサイト コレクションに関連付けるには、SharePoint サーバーの全体管理を使用します。|  
 |**Excel Services サービス アプリケーションの作成**|サービス アプリケーション名|既定 (必要な場合)|サービス アプリケーションの名前を入力します。 同じ名前のサービス アプリケーション データベースは、SharePoint ファームのデータベース サーバーに作成されます。|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの構成**|サービス アプリケーション名|既定 (必要な場合)|前のページで入力したサービス アプリケーションの名前。|  
@@ -200,7 +200,7 @@ ms.locfileid: "66071781"
  後でデータ ストレージや処理能力を追加する必要が生じた場合は、SharePoint モードで Analysis Services が実行されているサーバーをファームに追加できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 の場合、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを SharePoint モードでインストールして、Excel Services を構成します。 詳細については、の「シングル サーバー インストール"ではないセクションを参照してください。 [PowerPivot for SharePoint 2013 インストール](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)します。  
   
 ## <a name="additional-resources"></a>その他のリソース  
- ![SharePoint の設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)します。  
+ ![SharePoint の設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) します。  
   
 ## <a name="see-also"></a>参照  
  [For SharePoint アドインの PowerPivot のアンインストールをインストールまたは&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   

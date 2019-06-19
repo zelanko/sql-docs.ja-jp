@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011178"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
@@ -226,7 +226,7 @@ GO
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
  [フルテキスト検索の概要](get-started-with-full-text-search.md)   
  [フルテキスト インデックスの作成と管理](create-and-manage-full-text-indexes.md)   

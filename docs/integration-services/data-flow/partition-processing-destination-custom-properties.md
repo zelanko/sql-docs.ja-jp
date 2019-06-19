@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a54e6ef3c7ede32f9a9d04a841e40d06667b5b0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726579"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>パーティション処理変換先のカスタム プロパティ
@@ -39,7 +39,7 @@ ms.locfileid: "65726579"
 |NullKeyConvertedToUnknown|Integer (列挙)|UseDefaultConfiguration が **False**の場合、不明な値に変換された NULL キーの処理方法を示す値。 指定できる値は **IgnoreError** (0)、 **ReportAndContinue** (1)、 **ReportAndStop** (2) です。 このプロパティの既定値は **IgnoreError** (0) です。|  
 |NullKeyNotAllowed|Integer (列挙)|UseDefaultConfiguration が **False**である場合、許容されない NULL を処理する方法を示す値。 指定できる値は **IgnoreError** (0)、 **ReportAndContinue** (1)、 **ReportAndStop** (2) です。 このプロパティの既定値は **ReportAndContinue** (1) です。|  
 |processType|Integer (列挙)|変換が使用するパーティション処理の種類。 指定できる値は **ProcessAdd** (1) (インクリメンタル)、 **ProcessFull** (0)、 **ProcessUpdate** (2) です。|  
-|UseDefaultConfiguration|ブール値|変換が既定のエラー構成を使用するかどうかを指定する値。 このプロパティが **False**の場合、変換は、この表の一覧で示されている、KeyDuplicate や KeyDuplicate などのエラー処理のカスタム プロパティの値を使用します。|  
+|UseDefaultConfiguration|Boolean|変換が既定のエラー構成を使用するかどうかを指定する値。 このプロパティが **False**の場合、変換は、この表の一覧で示されている、KeyDuplicate や KeyDuplicate などのエラー処理のカスタム プロパティの値を使用します。|  
   
  パーティション処理変換先の入力および入力列には、カスタム プロパティはありません。  
   

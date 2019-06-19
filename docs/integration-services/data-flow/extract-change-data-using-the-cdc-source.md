@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92a2d442803d8d6268cce71e202f2e912ed707b8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726854"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC ソースを使用した変更データ抽出
@@ -73,7 +73,7 @@ ms.locfileid: "65726854"
   
 14. **[プレビュー]** をクリックすると、CDC ソースによって抽出されるデータを最大 200 行表示できます。  
   
-15. **[OK]** をクリックします。  
+15. [**OK**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [[CDC ソース エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   

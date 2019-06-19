@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 057d3f820ac0f580a6109d5b5c04ea43e8eabd9c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62507515"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>マージ サブスクライバーのパーティション情報の検証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

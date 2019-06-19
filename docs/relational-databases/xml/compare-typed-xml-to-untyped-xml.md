@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510919"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62760697"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
