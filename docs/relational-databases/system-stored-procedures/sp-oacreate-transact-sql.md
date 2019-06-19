@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450023"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -41,14 +41,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>引数  
  *progid*  
- 作成する OLE オブジェクトのプログラム ID (ProgID) を指定します。 この文字の文字列は OLE オブジェクトのクラスをについて説明し、フォーム。**'**_OLEComponent_**.**_オブジェクト_**'**  
+ 作成する OLE オブジェクトのプログラム ID (ProgID) を指定します。 この文字の文字列は OLE オブジェクトのクラスをについて説明し、フォーム。 **'** _OLEComponent_ **.** _オブジェクト_ **'**  
   
  *OLEComponent* 、OLE オートメーション サーバーのコンポーネントの名前と*オブジェクト*OLE オブジェクトの名前を指定します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイス。  
   
  たとえば、SQLDMO です。Sql Server は、SQL-DMO の ProgID **SQLServer**オブジェクト。 SQL-DMO は SQLDMO のコンポーネント名、 **SQLServer**オブジェクトが、有効であり (すべての SQL-DMO のようなオブジェクト)、 **SQLServer**オブジェクト サポート**IDispatch**します。  
   
  *clsid*  
- 作成する OLE オブジェクトのクラス ID (CLSID) を指定します。 この文字の文字列が OLE オブジェクトのクラスをについて説明し、フォーム: **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'** します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイス。  
+ 作成する OLE オブジェクトのクラス ID (CLSID) を指定します。 この文字の文字列が OLE オブジェクトのクラスをについて説明し、フォーム: **' {** _nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_ **}'** します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイス。  
   
  たとえば、{00026BA1-0000-0000-C000-000000000046} には、SQL-DMO の CLSID **SQLServer**オブジェクト。  
   

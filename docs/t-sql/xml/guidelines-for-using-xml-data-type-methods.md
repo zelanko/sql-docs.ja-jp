@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928978"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml データ型メソッドの使用に関するガイドライン
 
@@ -61,7 +61,7 @@ Msg errorNumber, Level levelNumber, State stateNumber:
 XQuery [database.table.method]: description_of_error
 ```
 
-例 :
+例:
 
 ```
 Msg 2396, Level 16, State 1:
@@ -70,7 +70,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>シングルトンの確認
 
-実行時にシングルトンであることが確実かどうかをコンパイラで判断できない場合、シングルトンを必要とするロケーション ステップ、関数パラメーター、および演算子はエラーを返します。 型指定されていないデータではこの問題が頻繁に発生します。 たとえば、属性の参照には単一の親要素が必要ですが、 単一の親ノードを選択する序数があれば十分です。 **node()**-**value()** の組み合わせを評価して属性値を抽出するときは、序数を指定する必要がない場合もあります。 次の例を参照してください。
+実行時にシングルトンであることが確実かどうかをコンパイラで判断できない場合、シングルトンを必要とするロケーション ステップ、関数パラメーター、および演算子はエラーを返します。 型指定されていないデータではこの問題が頻繁に発生します。 たとえば、属性の参照には単一の親要素が必要ですが、 単一の親ノードを選択する序数があれば十分です。 **node()** -**value()** の組み合わせを評価して属性値を抽出するときは、序数を指定する必要がない場合もあります。 次の例を参照してください。
 
 ### <a name="example-known-singleton"></a>例:既知のシングルトン
 

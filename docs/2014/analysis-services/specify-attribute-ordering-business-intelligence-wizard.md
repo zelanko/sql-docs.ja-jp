@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068542"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>[属性の順序の指定] (ビジネス インテリジェンス ウィザード)
@@ -29,7 +29,7 @@ ms.locfileid: "66068542"
  **属性の順序**  
  対応する **[属性]** の順序を並べ替えるために使用する属性を選択します。 同じ属性を指定することができます。  
   
- 新しい順序付け属性を作成するには、選択 **\<新しい属性 >**、し、**列を選択** ダイアログ ボックスで、新しい属性が基づいている列を選択します。  
+ 新しい順序付け属性を作成するには、選択 **\<新しい属性 >** 、し、**列を選択** ダイアログ ボックスで、新しい属性が基づいている列を選択します。  
   
  **条件**  
  対応する **[属性]** のメンバーの順序を並べ替えるために使用する条件を、 **[属性の並べ替え]** から指定します。 次の表に、使用できる条件を示します。  

@@ -12,11 +12,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e2d5c2e408b6899520aa3ec1185808ef6b0c2d8
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716639"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "58305870"
 |ベンガル語|ben|1093|  
 |ブルガリア語|bgr|1026|  
 |カタロニア語|cat|1027|  
-|スペイン語|esn|3082|  
+|Spanish|esn|3082|  
 |フランス語|fra|1036|  
 |グジャラート語|guj|1095|  
 |ヘブライ語|heb|1037|  
@@ -71,7 +71,7 @@ ms.locfileid: "58305870"
 |クロアチア語|hrv|1050|  
 |インドネシア語|ind|1057|  
 |アイスランド語|isl|1039|  
-|イタリア語|ita|1040|  
+|Italian|ita|1040|  
 |カンナダ語|kan|1099|  
 |リトアニア語|lth|1063|  
 |ラトビア語|lvi|1062|  
@@ -88,7 +88,7 @@ ms.locfileid: "58305870"
 |スロベニア語|slv|1060|  
 |セルビア語 (キリル)|srb|3098|  
 |セルビア語 (ラテン)|srl|2074|  
-|スウェーデン語|sve|1053|  
+|Swedish|sve|1053|  
 |タミール語|tam|1097|  
 |テルグ語|tel|1098|  
 |ウクライナ語|ukr|1058|  
@@ -132,10 +132,10 @@ ms.locfileid: "58305870"
 |[言語]|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
 |--------------|---------------------------------------|----------|  
 |アラビア語|ara|1025|  
-|ドイツ語|deu|1031|  
-|日本語|jpn|1041|  
+|German|deu|1031|  
+|Japanese|jpn|1041|  
 |オランダ語|nld|1043|  
-|ロシア語|rus|1049|  
+|Russian|rus|1049|  
   
  この表は、省略形の列を基準としてアルファベット順に並べられています。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "58305870"
   
 |[言語]|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
 |--------------|---------------------------------------|----------|  
-|簡体字中国語|chs|2052|  
+|Simplified Chinese|chs|2052|  
 |繁体字中国語|cht|1028|  
 |タイ語|tha|1054|  
 |繁体字中国語|zh-hk|3076|  

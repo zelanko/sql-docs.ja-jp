@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d464ba2cd7b3b5b3cb2ac687f9f9e1b3ae8023b0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098443"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>方法:SQL Server の単体テストを開いて編集する
@@ -28,7 +28,7 @@ SQL Server の単体テストを作成したら、**SQL Server 単体テスト �
   
 ### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-solution-explorer"></a>ソリューション エクスプローラーから SQL Server の単体テストのソース コード ファイルを開くには  
   
--   **ソリューション エクスプローラー**で、SQL Server 単体テストを含むソース コード ファイルを右クリックし、 **[コードの表示]** をクリックします。  
+-   **ソリューション エクスプローラー**で、SQL Server 単体テストを含むソース コード ファイルを右クリックし、**[コードの表示]** をクリックします。  
   
     ファイルが開くと、単体テストのテスト メソッドが Visual Studio のメイン編集ウィンドウに表示されます。  
   
@@ -36,7 +36,7 @@ SQL Server の単体テストを作成したら、**SQL Server 単体テスト �
   
 1.  単体テストを実行します。 詳しくは、「[チュートリアル:SQL Server の単体テストの作成と実行](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)」の「SQL Server の単体テストの実行」セクションをご覧ください。  
   
-2.  [テスト ビュー] ウィンドウで、テストを右クリックし、 **[テストを開く]** をクリックします。  
+2.  [テスト ビュー] ウィンドウで、テストを右クリックし、**[テストを開く]** をクリックします。  
   
     ファイルが開くと、単体テストのテスト メソッドが Visual Studio のメイン編集ウィンドウに表示されます。  
   

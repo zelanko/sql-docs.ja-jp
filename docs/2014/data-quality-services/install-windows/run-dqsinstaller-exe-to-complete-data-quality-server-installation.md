@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88b80e0eeba26e1a2c03f795d7ae3ce6fa796f10
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480481"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
@@ -32,9 +32,9 @@ ms.locfileid: "65480481"
   
 1.  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールするコンピューターで、次のうち適切ないずれかを使用して DQSInstaller.exe ファイルを実行します。  
   
-    -   **[スタート] 画面**: **[スタート]** 画面で、**[Data Quality Server Installer]** をクリックします。  
+    -   **[スタート] 画面**: **[スタート]** 画面で、 **[Data Quality Server Installer]** をクリックします。  
   
-    -   **[スタート] メニュー**: タスク バーで、次のようにクリックします。**開始**、] をポイント**すべてのプログラム**、] をクリック**Microsoft SQL Server 2014**します。 **Microsoft SQL Server 2014**、をクリックして**Data Quality Services**、をクリックし、 **Data Quality Server インストーラー。**  
+    -   **スタート メニュー**: タスク バーで、次のようにクリックします。**開始**、 をポイント**すべてのプログラム**、 をクリック**Microsoft SQL Server 2014**します。 **Microsoft SQL Server 2014**、をクリックして**Data Quality Services**、をクリックし、 **Data Quality Server インストーラー。**  
   
     -   **Windows エクスプローラー**: DQSInstaller.exe ファイルを探します。 SQL Server の既定のインスタンスをインストールした場合、DQSInstaller.exe ファイルは C:\Program files \microsoft SQL Server\MSSQL12 でご利用いただけますになります。MSSQLSERVER\MSSQL\Binn します。 DQSInstaller.exe ファイルをダブルクリックします。  
   

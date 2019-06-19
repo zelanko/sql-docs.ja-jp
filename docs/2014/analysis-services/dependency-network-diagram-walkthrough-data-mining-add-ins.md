@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081970"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>依存関係ネットワーク ダイアグラムのチュートリアル (データ マイニング アドイン)
@@ -122,7 +122,7 @@ ms.locfileid: "66081970"
 > [!WARNING]  
 >  アドインの以前のバージョンで使用できた依存ノードの強調表示などのショートカット メニュー オプションは、Office 2013 では機能しません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visio データ マイニング図形のトラブルシューティング&#40;SQL Server データ マイニング アドイン&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

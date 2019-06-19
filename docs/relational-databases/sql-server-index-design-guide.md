@@ -24,11 +24,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985179"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server のインデックスのアーキテクチャとデザイン ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -123,7 +123,7 @@ XML インデックスの詳細については、[XML インデックスの概�
   
 -   クラスター化インデックスのインデックス キー長は長くならないようにします。 また、クラスター化インデックスは一意列や非 NULL 列に作成すると効率的です。  
   
--   **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)**、および **varbinary(max)** データ型の列を、インデックス キー列として指定することはできません。 ただし、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、および **xml** データ型は、インデックスの非キー列として非クラスター化インデックスに含めることができます。 詳細については、このガイドの ['付加列インデックス'](#Included_Columns)に関するセクションを参照してください。  
+-   **ntext**、 **text**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** データ型の列を、インデックス キー列として指定することはできません。 ただし、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、および **xml** データ型は、インデックスの非キー列として非クラスター化インデックスに含めることができます。 詳細については、このガイドの ['付加列インデックス'](#Included_Columns)に関するセクションを参照してください。  
   
 -   **xml** データ型は、XML インデックスでのみキー列にできます。 詳細については、「[XML インデックス &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)」をご覧ください。 SQL Server 2012 SP1 では、選択的 XML インデックスと呼ばれる新しい種類の XML インデックスが導入されています。 この新しいインデックスを使用すると、SQL Server に XML 形式で格納されたデータに対するクエリのパフォーマンスが向上するため、XML データの大量のワークロードに対するインデックスの設定がはるかに高速になります。また、インデックス自体のストレージ コストを削減できるため、スケーラビリティも向上します。 詳細については、「[選択的 XML インデックス &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
@@ -464,7 +464,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   1 ページに収まるインデックス行が少なくなります。 これにより、ディスク I/O が増加しキャッシュ効率が低下します。  
   
--   インデックスを格納するために、さらに多くのディスク領域が必要になります。 特に、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、または **xml** のデータ型を非キー インデックス列として追加すると、必要なディスク領域が大幅に増加します。 これは、列の値がインデックスのリーフ レベルにコピーされるためです。 そのため、列の値がインデックスとベース テーブルの両方に存在します。  
+-   インデックスを格納するために、さらに多くのディスク領域が必要になります。 特に、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、または **xml** のデータ型を非キー インデックス列として追加すると、必要なディスク領域が大幅に増加します。 これは、列の値がインデックスのリーフ レベルにコピーされるためです。 そのため、列の値がインデックスとベース テーブルの両方に存在します。  
   
 -   インデックスのメンテナンスによって、基になるテーブルやインデックス付きビューに対する変更、挿入、更新、削除にかかる時間が長くなる場合があります。  
   

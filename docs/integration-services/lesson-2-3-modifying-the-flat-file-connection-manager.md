@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722547"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>レッスン 2-3:フラット ファイル接続マネージャーの変更
@@ -32,21 +32,21 @@ ms.locfileid: "65722547"
   
 1.  **接続マネージャー** ペインで、 **[Sample Flat File Source Data]** を右クリックして **[プロパティ]** をクリックします。  
 
-2.  **[プロパティ]** ウィンドウで、**PackagePath** が **\Package.Connections** で始まっていることを確認します。 該当しない場合は、**[接続マネージャー]** ウィンドウで、**[Sample Flat File Source Data]\(サンプル フラット ファイル ソース データ\)** を右クリックし、**[プロパティ]** をクリックします。
+2.  **[プロパティ]** ウィンドウで、**PackagePath** が **\Package.Connections** で始まっていることを確認します。 該当しない場合は、 **[接続マネージャー]** ウィンドウで、 **[Sample Flat File Source Data]\(サンプル フラット ファイル ソース データ\)** を右クリックし、 **[プロパティ]** をクリックします。
   
 3.  **[プロパティ]** ウィンドウの **[式]** で、空のセルを選択し、参照ボタン **[...]** を選択します。  
   
 4.  **[プロパティ式エディター]** ダイアログの **[プロパティ]** 列で **ConnectionString** を選択します。  
   
-5.  **[式]** 列の参照ボタン **[...]** を選択し、**[式ビルダー]** ダイアログ ボックスを開きます。  
+5.  **[式]** 列の参照ボタン **[...]** を選択し、 **[式ビルダー]** ダイアログ ボックスを開きます。  
   
 6.  **[式ビルダー]** ダイアログで **[変数]** ノードを展開します。  
   
 7.  **User::varFileName** 変数を **[式]** ボックスにドラッグします。  
   
-8.  **[OK]** を選択し、**[式ビルダー]** ダイアログを閉じます。  
+8.  **[OK]** を選択し、 **[式ビルダー]** ダイアログを閉じます。  
   
-9.  再度 **[OK]** を選択し、**[プロパティ式エディター]** ダイアログを閉じます。  
+9.  再度 **[OK]** を選択し、 **[プロパティ式エディター]** ダイアログを閉じます。  
   
 ## <a name="go-to-next-task"></a>次の実習に進む  
 [手順 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

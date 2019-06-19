@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109883"
 ---
 # <a name="choose-link-page-report-manager"></a>[リンクの選択] ページ (レポート マネージャー)
@@ -42,7 +42,7 @@ ms.locfileid: "66109883"
  **ツリー ビュー**  
  レポート サーバーのフォルダー階層にあるすべてのフォルダーが表示されます。 ツリー ビューを使用して **[場所]** フィールドに入力するには、レポート名をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [新しいリンク レポート ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  

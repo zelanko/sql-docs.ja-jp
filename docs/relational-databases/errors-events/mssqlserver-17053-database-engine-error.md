@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07c215c0ae360a5b386909cd64e9f3dfb2893bcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62859135"
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47809570"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|OS_ERROR|  
-|メッセージ テキスト|%ls: オペレーティング システム エラー %ls が発生しました。|  
+|メッセージ テキスト|%ls:オペレーティング システム エラー %ls が発生しました。|  
   
 ## <a name="explanation"></a>説明  
 一般的なオペレーティング システム エラーが発生しました。  結果の状態については明らかではありません。  

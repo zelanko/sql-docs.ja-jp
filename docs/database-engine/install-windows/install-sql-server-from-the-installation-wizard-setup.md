@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: 1c907d719e139cd2d6d0cda3623cbaf668d09461
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794952"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
@@ -60,7 +60,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインストールを作成するには、左側のナビゲーション領域の **[インストール]** をクリックし、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
+2.  インストール ウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール センターが実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインストールを作成するには、左側のナビゲーション領域の **[インストール]** をクリックし、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** をクリックします。  
 
 3.  [プロダクト キー] ページで、オプションを選択して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の無償のエディション、または PID キーを持つ製品版のどちらをインストールするかを指定します。 詳しくは、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
   
@@ -71,7 +71,7 @@ The following item is for SQL Server 2019 or greater
 -->
   
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-4.  [ライセンス条項] ページで使用許諾契約書を確認し、同意する場合は **[ライセンス条項と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)に同意します]** チェック ボックスをオンにして、 **[次へ]** をクリックします。  
+4.  [ライセンス条項] ページで使用許諾契約書を確認し、同意する場合は **[ライセンス条項と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)に同意します]** チェック ボックスをオンにして、**[次へ]** をクリックします。  
 
 ::: moniker-end
 
@@ -95,11 +95,11 @@ The following item is for SQL Server 2016-2017
 
 8.  [セットアップ ファイルのインストール] ページのセットアップには、セットアップ ファイルのダウンロード、抽出、およびインストールの進行状況が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの更新プログラムが検出され、含まれるように指定されている場合は、その更新プログラムもインストールされます。 更新プログラムが見つからない場合、セットアップが自動的に進行します。 
   
-9. **[インストール ルール]** で、SQL Server セットアップはセットアップの実行中に発生する可能性がある潜在的な問題を特定するためのチェックを行います。 エラーが発生した場合は、詳細な情報を得るため、 **[状態]** 列をクリックします。 それ以外の場合は、 **[次へ]** をクリックします。 
+9. **[インストール ルール]** で、SQL Server セットアップはセットアップの実行中に発生する可能性がある潜在的な問題を特定するためのチェックを行います。 エラーが発生した場合は、詳細な情報を得るため、**[状態]** 列をクリックします。 それ以外の場合は、**[次へ]** をクリックします。 
 
-10. SQL Server をマシンに初めてインストールする場合は、 **[インストールの種類]** ページがスキップされて、直接 **[機能の選択]** ページに移動します。 ただし、SQL Server がシステムに既にインストール済みの場合は、 **[インストールの種類]** で、新規インストールを実行するか、既存のインストール環境に機能を追加するかを選択します。 **[次へ]** をクリックします。 
+10. SQL Server をマシンに初めてインストールする場合は、**[インストールの種類]** ページがスキップされて、直接 **[機能の選択]** ページに移動します。 ただし、SQL Server がシステムに既にインストール済みの場合は、**[インストールの種類]** で、新規インストールを実行するか、既存のインストール環境に機能を追加するかを選択します。 [**次へ**] をクリックします。 
   
-11. **[機能の選択]** ページで、インストールするコンポーネントを選択します。 たとえば、SQL Server データベース エンジンの新しいインスタンスをインストールするには、 **[データベース エンジン サービス]** を選択します。
+11. **[機能の選択]** ページで、インストールするコンポーネントを選択します。 たとえば、SQL Server データベース エンジンの新しいインスタンスをインストールするには、**[データベース エンジン サービス]** を選択します。
 
     機能名を選択すると、 **[機能の説明]** ペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできます。 詳細については、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2016.md)」および「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。
   
@@ -142,7 +142,7 @@ The following item is for SQL Server 2016-2017
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
     
     > [!NOTE]
-    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで[データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、 *[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]* ボックスを選択します。
+    > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービス アカウントで[データベースのファイル瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を使用するには、*[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]* ボックスを選択します。
   
      [サーバーの構成 - 照合順序] ページを使用して、[!INCLUDE[ssDE](../../includes/ssde-md.md)] および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に既定以外の照合順序を指定します。 詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   

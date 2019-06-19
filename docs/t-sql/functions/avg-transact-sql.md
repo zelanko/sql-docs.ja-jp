@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9df4e39b1d0689294c597053f3cdbfac55f76b75
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945880"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
@@ -54,13 +54,13 @@ DISTINCT
 *式 (expression)*  
 **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 集計関数とサブクエリは使用できません。
   
-OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
 *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 *order_by_clause* 操作が実行される論理的順序を決定します。 *order_by_clause* が必要です。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>戻り値の型
 *expression* の評価結果によって、戻り値の型が決まります。
   
-|式の結果|の戻り値の型 :|  
+|式の結果|の戻り値の型 : |  
 |---|---|
 |**tinyint**|**int**|  
 |**smallint**|**int**|  

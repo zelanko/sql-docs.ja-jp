@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d311a07eb11f1c5119a3c20d7536b5a2986b49
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719889"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>データベースのバックアップ、復元、および同期 (XMLA)
@@ -138,7 +138,7 @@ ms.locfileid: "62719889"
   
  使用することができます、**場所**ROLAP オブジェクトを同期する同期コマンド内の要素。 各**場所**、データ ソースを配置する場合に使用される要素、 **%datasourcetype**プロパティ明示的に設定する必要があります*ローカル*します。 . 設定する必要も、 **ConnectionString**のプロパティ、**場所**要素を新しい場所の接続文字列。 同期中に、**同期**コマンドによって識別されるデータ ソースの接続文字列に置き換わります、 **DataSourceID**のプロパティ、**場所**値を持つ要素、 **ConnectionString**のプロパティ、**場所**要素。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Backup 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
  [Restore 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
  [Synchronize 要素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   

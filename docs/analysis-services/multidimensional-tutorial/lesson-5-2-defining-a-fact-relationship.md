@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d82ca352c574d02a5b0631df5c9448df12a5acc
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404004"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>レッスン 5-2-ファクト リレーションシップの定義
@@ -66,7 +66,7 @@ ms.locfileid: "65404004"
   
 14. **[属性]** ディメンションのディメンション デザイナーの **[属性]** ペインで **[Sales Order Number]** をクリックします。次に、[プロパティ] ウィンドウで、 **Name** プロパティを **Item Description**に変更します。  
   
-15. **NameColumn**プロパティ セルで、[参照] ボタンをクリックします **([...])。**.**[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
+15. **NameColumn**プロパティ セルで、[参照] ボタンをクリックします **([...])。** . **[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
   
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65404004"
   
     以下のアイコンが示すように、 **Internet Sales Order Details** キューブ ディメンションがファクト リレーションシップを保持するよう、自動的に構成されます。  
   
-2.  [参照] ボタンをクリックします (**.**) で、 **Item Description**の交差する位置のセル、 **Internet Sales**メジャー グループと**Internet Sales Order Details**ディメンションにはファクト リレーションシップのプロパティを確認します。  
+2.  [参照] ボタンをクリックします ( **.** ) で、 **Item Description**の交差する位置のセル、 **Internet Sales**メジャー グループと**Internet Sales Order Details**ディメンションにはファクト リレーションシップのプロパティを確認します。  
   
     **[リレーションシップの定義]** ダイアログ ボックスが開きます。 構成できるプロパティはありません。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "65404004"
   
 3.  データ ペインからすべてのメジャーと階層を消去します。次に、データ ペインのデータ領域に **Internet Sales-Sales Amount** メジャーを追加します。  
   
-4.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]** の順にクリックし、 **[Adam Powell]** を右クリックして **[フィルターに追加]** をクリックします。  
+4.  メタデータ ペインで、 **[Customer]** 、 **[Location]** 、 **[Customer Geography]** 、 **[Members]** 、 **[All Customers]** 、 **[Australia]** 、 **[Queensland]** 、 **[Brisbane]** 、 **[4000]** の順にクリックし、 **[Adam Powell]** を右クリックして **[フィルターに追加]** をクリックします。  
   
     フィルタリングを使用し、1 顧客から返される販売注文数を制限すると、クエリ パフォーマンスを大幅に犠牲にすることなく、基となる詳細情報を大規模なファクト テーブルから検索できます。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65404004"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [多対多関係の定義](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](../multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

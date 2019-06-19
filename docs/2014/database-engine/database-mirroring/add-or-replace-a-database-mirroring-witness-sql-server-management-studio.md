@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807460"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>データベース ミラーリング監視サーバーを追加または置き換える方法 (SQL Server Management Studio)
@@ -54,7 +54,7 @@ ms.locfileid: "62807460"
   
     -   すべてのサーバー インスタンスで同じサービス アカウントを使用する場合は、これらのフィールドを空白のままにします。  
   
-    -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、 **[プリンシパル]**、 **[ミラー]**、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
+    -   ミラーリング監視サーバー インスタンスで、どちらかのパートナーと異なるサービス アカウントを使用する場合は、 **[プリンシパル]** 、 **[ミラー]** 、および **[ミラーリング監視]** の各フィールドに、次のようにしてアカウント名を指定します。  
   
          *DOMAINNAME* **\\** *username*  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62807460"
   
      ミラーリング監視サーバーを有効にし、自動フェールオーバーを伴う高い安全性モードにセッションを変更するには、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング監視サーバー](database-mirroring-witness.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

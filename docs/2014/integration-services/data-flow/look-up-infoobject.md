@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771118"
 ---
 # <a name="look-up-infoobject"></a>[インフォオブジェクトの参照]
@@ -78,7 +78,7 @@ ms.locfileid: "62771118"
   
  使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、変換先で関連するオプションに必要な値が設定されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[トランザクション データのインフォキューブの作成]](create-infocube-for-transaction-data.md)   
  [[インフォソースの作成]](create-infosource.md)   
  [[トランザクション データのインフォソースの作成]](create-infosource-for-transaction-data.md)   

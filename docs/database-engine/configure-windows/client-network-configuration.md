@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: bd28758b2f5cb0c5e98ea8b24784369386e7bdce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799536"
 ---
 # <a name="client-network-configuration"></a>クライアント ネットワーク構成
@@ -44,7 +44,7 @@ ms.locfileid: "66799536"
   
 -   DB-Library クライアント  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** コマンド プロンプト ユーティリティや DB-Library に書き込まれるクライアントなどです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DB-Library を使用したクライアント アプリケーションに対するサポートは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 限定の機能です。  
+      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** コマンド プロンプト ユーティリティや DB-Library に書き込まれるクライアントなどです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DB-Library を使用したクライアント アプリケーションに対するサポートは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 限定の機能です。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では、DB-Library および Embedded SQL API を使用した既存アプリケーションからの接続が引き続きサポートされますが、これらの API を使用するアプリケーションでのプログラミング作業に必要なファイルやドキュメントは含まれません。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の今後のバージョンでは、DB-Library アプリケーションや Embedded SQL アプリケーションからの接続はサポートされなくなります。 新しいアプリケーションの開発には DB-Library や Embedded SQL を使用しないでください。 DB-Library や Embedded SQL への依存関係は、既存アプリケーションを変更するときに削除してください。 これらの API の代わりに、SQLClient 名前空間または OLE DB や ODBC などの API を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、これらのアプリケーションの実行に必要な DB-Library DLL は含まれていません。 DB-Library アプリケーションまたは Embedded SQL アプリケーションを実行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 6.5、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0、または [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]から DB-Library DLL を入手する必要があります。  

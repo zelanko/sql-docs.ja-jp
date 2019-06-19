@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1c68ace0ccbd49b63404aaf52419a06dda297f8d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088714"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>SQL Server の単体テストの結果の解釈
-SQL Server 単体テストを実行すると、テスト結果が自動的に生成されて、ディスクに保存され、 **[テスト結果]** ウィンドウに概要が表示されます。 テストの実行を開始するとすぐに、 **[テスト結果]** ウィンドウが表示され、テスト実行の進行状況が表示されます。 この表示には、実行中のテストと完了したテストが含まれます。  
+SQL Server 単体テストを実行すると、テスト結果が自動的に生成されて、ディスクに保存され、**[テスト結果]** ウィンドウに概要が表示されます。 テストの実行を開始するとすぐに、**[テスト結果]** ウィンドウが表示され、テスト実行の進行状況が表示されます。 この表示には、実行中のテストと完了したテストが含まれます。  
   
-テスト結果に関する詳細情報を表示するには、 **[テスト結果]** ウィンドウでテスト結果をダブルクリックして、 **[テスト結果の詳細]** ページを表示します。 テスト結果の詳細を表示するには、テスト結果をダブルクリックします。  
+テスト結果に関する詳細情報を表示するには、**[テスト結果]** ウィンドウでテスト結果をダブルクリックして、**[テスト結果の詳細]** ページを表示します。 テスト結果の詳細を表示するには、テスト結果をダブルクリックします。  
   
 **[テスト結果]** ウィンドウの表示を変更する方法について詳しくは、「[How to:Add or Remove Columns in Test Windows (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx)」 (方法: テスト ウィンドウで列を追加または削除する (Visual Studio 2010)) または「[How to:Add or Remove Columns in Test Windows (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx)」 (方法: テスト ウィンドウで列を追加または削除する (Visual Studio 2012)) をご覧ください。  
   

@@ -28,10 +28,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b80668cadd7ea2b2b721f93d41c79a08290c3370
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821977"
 ---
 # <a name="manage-code-formatting"></a>コードの書式設定の管理
@@ -55,7 +55,7 @@ ms.locfileid: "65821977"
   
     -   **None**。 カーソルは次の行の先頭に移動します。  
   
-    -   **[ブロック]**。 次行のインデントは前行に合わせて設定されます。  
+    -   **[ブロック]** 。 次行のインデントは前行に合わせて設定されます。  
   
     -   **[スマート]** (既定)。 適切なインデント スタイルが言語サービスによって決定されます。  
   

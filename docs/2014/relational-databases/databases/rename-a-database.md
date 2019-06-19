@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916772"
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
@@ -37,7 +37,7 @@ ms.locfileid: "62916772"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[データベースの名前を変更した後](#FollowUp)  
+-   **補足情報:** [データベースの名前を変更した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -84,7 +84,7 @@ GO
 ##  <a name="FollowUp"></a>補足情報: データベースの名前を変更した後  
  データベースの名前を変更した後は、 **master** データベースをバックアップします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [データベース識別子](database-identifiers.md)  
   

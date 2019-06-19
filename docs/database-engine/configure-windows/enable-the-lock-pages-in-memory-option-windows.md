@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: ed3ab4323780401226d58c1eaffd47616f1f42f2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66783667"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory オプションの有効化 (Windows)
@@ -43,7 +43,7 @@ ms.locfileid: "66783667"
   
 5.  詳細ペインで、 **[メモリ内のページのロック]** をダブルクリックします。  
   
-6.  **[ローカル セキュリティの設定 - メモリ内のページのロック]** ダイアログ ボックスで、 **[ユーザーまたはグループの追加]** をクリックします。  
+6.  **[ローカル セキュリティの設定 - メモリ内のページのロック]** ダイアログ ボックスで、**[ユーザーまたはグループの追加]** をクリックします。  
   
 7.  **[Select Users, Service Accounts, or Groups]\(ユーザー、サービス アカウント、またはグループの選択\)** ダイアログ ボックスで、SQL Server サービス アカウントを選択します。  
   

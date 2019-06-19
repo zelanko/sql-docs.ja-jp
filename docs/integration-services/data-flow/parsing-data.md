@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 86100d0a94030cc7db8f7a5b9574c22cec58903e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726591"
 ---
 # <a name="parsing-data"></a>データの解析
@@ -200,7 +200,7 @@ ms.locfileid: "65726591"
   
 4.  [プロパティ] ウィンドウで **[カスタム プロパティ]** ノードを展開し、 **FastParse** プロパティを **True**に設定します。  
   
-5.  **[OK]** をクリックします。  
+5.  [**OK**] をクリックします。  
 
 ## <a name="standard-parse"></a>標準解析
 標準解析は、ロケール依存型の解析ルーチンのセットであり、Oleaut32.dll と Ole2dsip.dll で使用できるオートメーション データ型変換の API が提供する、すべてのデータ型変換がサポートされています。 標準解析は、OLE DB 解析 API に相当します。  

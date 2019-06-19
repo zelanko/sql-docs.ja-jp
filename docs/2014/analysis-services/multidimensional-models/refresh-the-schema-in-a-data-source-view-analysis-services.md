@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32c9db875afff68125fcc14ef1587c7c4f80302e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073250"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>データ ソース ビューでのスキーマの更新 (Analysis Services)
@@ -55,11 +55,11 @@ ms.locfileid: "66073250"
  更新は、基になるオブジェクトの名前に完全に基づいています。 そのため、データ ソースの基になるオブジェクトの名前を変更する場合、データ ソース ビュー デザイナーは、2 つ別の操作を削除および追加として名前が変更されたオブジェクトを扱います。 この場合、名前が変更されたオブジェクトをデータ ソース ビューに手動で追加し直すことが必要な場合があります。 また、リレーションシップまたは論理主キーを再作成することが必要な場合もあります。  
   
 > [!IMPORTANT]  
->  データ ソースでテーブルの名前が変更されたことがわかっている場合は、**[テーブルの置換]** コマンドを使用して、データ ソース ビューを更新する前に、テーブルを名前変更後のテーブルで置換することが必要な場合があります。 詳細については、「[データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)」をご覧ください。  
+>  データ ソースでテーブルの名前が変更されたことがわかっている場合は、 **[テーブルの置換]** コマンドを使用して、データ ソース ビューを更新する前に、テーブルを名前変更後のテーブルで置換することが必要な場合があります。 詳細については、「[データ ソース ビュー内のテーブルまたは名前付きクエリの置換 (Analysis Services)](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)」をご覧ください。  
   
  レポートの確認後は、変更内容を受け入れるか、更新を取り消して変更内容を拒否することができます。 すべての変更はまとめて受け入れるか拒否する必要があります。 一覧の個々のアイテムを選択することはできません。 また、変更内容のレポートを保存することもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [「多次元モデルのデータ ソース ビュー」](data-source-views-in-multidimensional-models.md)  
   
   
