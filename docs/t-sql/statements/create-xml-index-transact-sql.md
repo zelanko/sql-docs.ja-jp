@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e07f3083f29d40f67b8ecf7716aae7a68979bfb
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502801"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
@@ -108,7 +108,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  USING XML INDEX *xml_index_name*  
  セカンダリ XML インデックスの作成でプライマリ XML インデックスを使用します。  
   
- FOR { VALUE | PATH | PROPERTY }   
+ FOR { VALUE | PATH | PROPERTY }  
  セカンダリ XML インデックスの種類を指定します。  
   
  Value  
