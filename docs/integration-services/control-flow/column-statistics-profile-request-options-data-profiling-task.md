@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b88ac613067f4921bc2dfdbc0ccf7fc26e60719
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727858"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>[列統計プロファイル要求] のオプション (データ プロファイル タスク)
@@ -35,7 +35,7 @@ ms.locfileid: "65727858"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列統計プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
+-   **[データ]** ( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
 -   **全般**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65727858"
  詳細については、このトピックの「[TableorView] のオプション」を参照してください。  
   
  **[Column]**  
- プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、**[(\*)]** を選択します。  
+ プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、 **[(\*)]** を選択します。  
   
  詳細については、このトピックの「[列] のオプション」を参照してください。  
   

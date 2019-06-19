@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ffcb2612d84a7cd29044062ab264d6b40e3dfd64
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943705"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE ステートメント - REWINDONLY (Transact-SQL)
@@ -69,7 +69,7 @@ FROM <backup_device> [ ,...n ]
   
  UNC 名 (マシン名を含む必要があります) を持つネットワークサーバーを使用している場合は、ディスクのデバイスの種類を指定します。 UNC 名の使用の詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   
- RESTORE 操作を実行するには、Microsoft SQL Server を実行するアカウントに、リモート コンピューターまたはネットワーク サーバーへの読み取りアクセス権が与えられている必要があります。  
+ RESTORE 操作を実行するには、Microsoft SQL&#xA0;Server を実行するアカウントに、リモート コンピューターまたはネットワーク サーバーへの読み取りアクセス権が与えられている必要があります。  
   
  *n*  
  複数のバックアップ デバイスと論理バックアップ デバイスを指定できることを示すプレースホルダーです。 **64** 個までのバックアップ デバイスまたは論理バックアップ デバイスを指定できます。  

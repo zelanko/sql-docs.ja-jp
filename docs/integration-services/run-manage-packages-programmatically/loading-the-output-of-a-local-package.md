@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 385fd9fe4224c754af7546ffe2737316aaaf62fe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719269"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>ローカル パッケージの出力の読み込み
@@ -29,7 +29,7 @@ ms.locfileid: "65719269"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションの重要な点は、**System.Data** 名前空間からの **IDbConnection**、**IDbCommand**、および **IDbDataParameter** の各インターフェイスを特別に実装した **Microsoft.SqlServer.Dts.DtsClient** 名前空間です。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、**%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。  
+  クライアント アプリケーションは、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先に出力が保存された場合、または **System.IO** 名前空間のクラスを使用してフラット ファイル変換先に出力が保存された場合に、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの出力を読み取ることができます。 ただし、メモリから直接、パッケージの出力を読み取ることもできます。その際、データを保持するための中間手段を必要としません。 このソリューションの重要な点は、**System.Data** 名前空間からの **IDbConnection**、**IDbCommand**、および **IDbDataParameter** の各インターフェイスを特別に実装した **Microsoft.SqlServer.Dts.DtsClient** 名前空間です。 既定では、アセンブリ Microsoft.SqlServer.Dts.DtsClient.dll は、 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** にインストールされています。  
 
 > [!IMPORTANT]
 > この記事で説明する、`DtsClient` ライブラリを使用する手順は、パッケージ配置モデル (つまり、`/SQL`、`/DTS`、または`/File` オプション) で配置されているパッケージに対してのみ使用できます。 サーバー配置モデル (つまり、`/ISServer` オプション) で配置されているパッケージに対しては、この手順は使用できません。 サーバー配置モデル (つまり、`/ISServer` オプション) で配置されているローカル パッケージの出力を使用するには、この記事で説明されている手順ではなく、[Data Streaming Destination](../data-flow/data-streaming-destination.md) を使用します。
@@ -53,7 +53,7 @@ ms.locfileid: "65719269"
   
 4.  前に作成した **DtsConnection** を使用する **DtsClient.DtsCommand** という種類のオブジェクトを作成し、その **CommandText** プロパティに、パッケージ内の DataReader 変換先の名前を設定します。 次に、コマンド オブジェクトの **ExecuteReader** メソッドを呼び出して、パッケージの結果を新しい DataReader に読み込みます。  
   
-5.  必要に応じて、**DtsCommand** オブジェクトで **DtsDataParameter** オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 クライアント アプリケーションから **DtsDataParameter** オブジェクトとこれらの変数を使用するには、あらかじめ **DtsClient** 名前空間でパッケージに変数を定義しておく必要があります  (**[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックすると、**[名前空間]** 列が表示されます)。クライアント コードで、**DtsDataParameter** を **DtsCommand** の **Parameters** コレクションに追加する場合、変数名からの DtsClient 名前空間参照を省略してください。 例:  
+5.  必要に応じて、**DtsCommand** オブジェクトで **DtsDataParameter** オブジェクトのコレクションを使用して、パッケージに定義された変数に値を渡すことによって、パッケージの出力を間接的にパラメーター化できます。 パッケージ内では、これらの変数をクエリ パラメーターとして、または式で使用して、DataReader 変換先に返される結果に影響を与えることができます。 クライアント アプリケーションから **DtsDataParameter** オブジェクトとこれらの変数を使用するには、あらかじめ **DtsClient** 名前空間でパッケージに変数を定義しておく必要があります ( **[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックすると、 **[名前空間]** 列が表示されます)。クライアント コードで、**DtsDataParameter** を **DtsCommand** の **Parameters** コレクションに追加する場合、変数名からの DtsClient 名前空間参照を省略してください。 例:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
@@ -77,7 +77,7 @@ ms.locfileid: "65719269"
   
 1.  新しい [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを作成します。 サンプル コードでは、パッケージの名前として "DtsClientWParamPkg.dtsx" が使用されています。  
   
-2.  DtsClient 名前空間に文字列型の変数を追加します。 サンプル コードでは、変数の名前として Country が使用されています  (**[名前空間]** 列を表示するには、**[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。  
+2.  DtsClient 名前空間に文字列型の変数を追加します。 サンプル コードでは、変数の名前として Country が使用されています ( **[名前空間]** 列を表示するには、 **[変数]** ウィンドウの **[変数列の選択]** ツール バー ボタンをクリックする必要がある場合があります)。  
   
 3.  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースに接続する OLE DB 接続マネージャーを追加します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65719269"
     SELECT * FROM Sales.vIndividualCustomer WHERE CountryRegionName = ?  
     ```  
   
-6.  **[パラメーター]** をクリックし、**[クエリ パラメーターの設定]** ダイアログ ボックスで、クエリの単一入力パラメーター Parameter0 を DtsClient::Country 変数にマップします。  
+6.  **[パラメーター]** をクリックし、 **[クエリ パラメーターの設定]** ダイアログ ボックスで、クエリの単一入力パラメーター Parameter0 を DtsClient::Country 変数にマップします。  
   
 7.  データ フローに集計変換を追加し、OLE DB ソースの出力を変換に接続します。 集計変換エディターを開いて、すべての入力列 (*) で "すべてのカウント" 操作が実行され、集計された値が CustomerCount の別名で出力されるように構成します。  
   

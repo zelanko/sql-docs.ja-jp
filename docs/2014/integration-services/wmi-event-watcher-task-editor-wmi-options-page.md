@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52ca90b38975c8db762ec0937b265a91b03c5cb2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054379"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>[WMI イベント監視タスク エディター] ([WMI オプション] ページ)
@@ -28,7 +28,7 @@ ms.locfileid: "66054379"
   
 ## <a name="static-options"></a>静的オプション  
  **[WMIConnectionName]**  
- WMI 接続マネージャーを一覧から選択するか、[\<**新しい WMI 接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ WMI 接続マネージャーを一覧から選択するか、[\<**新しい WMI 接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [WMI 接続マネージャー](connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -63,21 +63,21 @@ ms.locfileid: "66054379"
   
 ### <a name="wqlquerysource--direct-input"></a>[WQLQuerySource] = [直接入力]  
  **[WQLQuerySource]**  
- クエリを指定します。または、参照ボタン ( [...] ) をクリックし、**[WQL クエリ]** ダイアログ ボックスを使用してクエリを入力します。  
+ クエリを指定します。または、参照ボタン ( [...] ) をクリックし、 **[WQL クエリ]** ダイアログ ボックスを使用してクエリを入力します。  
   
 ### <a name="wqlquerysource--file-connection"></a>[WQLQuerySource] = [ファイル接続]  
  **[WQLQuerySource]**  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysource--variable"></a>[WQLQuerySource] = [変数]  
  **[WQLQuerySource]**  
- 一覧で変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 一覧で変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[WMI イベント監視タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
  [[式] ページ](expressions/expressions-page.md)   

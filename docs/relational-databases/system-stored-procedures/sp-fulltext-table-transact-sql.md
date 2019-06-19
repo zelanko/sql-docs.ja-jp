@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 870f12fa569eb0c6046377472a6122d69cd35d6e
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982962"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
@@ -50,9 +50,9 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @tabname = ] 'qualified_table_name'` 1 つまたは 2 つの部分のテーブル名です。 テーブルは、現在のデータベース内に存在している必要があります。 *qualified_table_name*は**nvarchar (517)**、既定値はありません。  
+`[ @tabname = ] 'qualified_table_name'` 1 つまたは 2 つの部分のテーブル名です。 テーブルは、現在のデータベース内に存在している必要があります。 *qualified_table_name*は**nvarchar (517)** 、既定値はありません。  
   
-`[ @action = ] 'action'` 実行する操作です。 *アクション*は**nvarchar (50)**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+`[ @action = ] 'action'` 実行する操作です。 *アクション*は**nvarchar (50)** , で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -128,7 +128,7 @@ EXEC sp_fulltext_table 'Production.Document', 'drop';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   

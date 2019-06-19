@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057047"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>[OLE DB ソース エディター] ([接続マネージャー] ページ)
@@ -55,7 +55,7 @@ ms.locfileid: "66057047"
 |オプション|説明|  
 |------------|-----------------|  
 |[テーブルまたはビュー]|OLE DB データベースのテーブルまたはビューからデータを取得します。|  
-|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:**[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
+|[テーブル名またはビュー名の変数]|テーブル名またはビュー名を変数で指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
 |[SQL コマンド]|SQL クエリを使用して、OLE DB データ ソースからデータを取得します。|  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   

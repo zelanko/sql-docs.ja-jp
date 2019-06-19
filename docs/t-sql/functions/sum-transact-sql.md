@@ -27,10 +27,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90dc7e15fdbe450eb57642b7a4f7be0bb834c063
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943256"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
@@ -66,7 +66,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>戻り値の型  
  最も有効桁数の大きい *expression* のデータ型で、すべての *expression* 値の合計を返します。  
   
-|式の結果|の戻り値の型 : |  
+|式の結果|の戻り値の型 :|  
 |-----------------------|-----------------|  
 |**tinyint**|**int**|  
 |**smallint**|**int**|  

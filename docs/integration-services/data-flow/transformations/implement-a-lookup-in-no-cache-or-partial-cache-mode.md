@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01ceb28c3f1b52318f7099a4a1225a0b24219da3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726055"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
@@ -65,11 +65,11 @@ ms.locfileid: "65726055"
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成します。  
   
-         - または -  
+         \- または -  
   
          **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** で用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         - または -  
+         \- または -  
   
          **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
@@ -106,9 +106,9 @@ ms.locfileid: "65726055"
      ステートメントにパラメーターが含まれている場合は、 **[パラメーター]** をクリックしてパラメーターを入力列にマップします。  
   
     > [!NOTE]  
-    >  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。  
+    >  このページで指定するオプションの SQL ステートメントは、 **[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。  
   
-13. エラー出力を構成するには、**[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
+13. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
   
 14. **[OK]** をクリックして参照変換への変更を保存し、パッケージを実行します。  
   

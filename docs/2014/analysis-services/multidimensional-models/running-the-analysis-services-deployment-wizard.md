@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073038"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Analysis Services 配置ウィザードの実行
@@ -36,14 +36,14 @@ ms.locfileid: "66073038"
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-interactively"></a>Analysis Services 配置ウィザードを対話的に実行するには  
   
--   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[Analysis Services]** の順にポイントして、 **[配置ウィザード]** をクリックします。  
+-   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[Analysis Services]** の順にポイントして、 **[配置ウィザード]** をクリックします。  
   
-     - または -  
+     \- または -  
   
--   **プロジェクト**のフォルダー、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトで、ダブルクリックして、 *\<プロジェクト名 >*.asdatabase ファイル。  
+-   **プロジェクト**のフォルダー、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]プロジェクトで、ダブルクリックして、 *\<プロジェクト名 >* .asdatabase ファイル。  
   
     > [!NOTE]  
-    >  見つからない場合、 *\<プロジェクト名 >*.asdatabase ファイルは「*.asdatabase を指定して検索を使用してみてください。  
+    >  見つからない場合、 *\<プロジェクト名 >* .asdatabase ファイルは「*.asdatabase を指定して検索を使用してみてください。  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>コマンド プロンプトでの Analysis Services 配置ウィザードの実行  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードは、コマンド プロンプトで実行することもできます。 コマンド プロンプトを使用する場合は、.asdatabase ファイルへの完全パスを指定し、次のいずれかのモードでウィザードを実行します。  

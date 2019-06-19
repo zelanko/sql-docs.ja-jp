@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc976451c29c6d0b1656fec456b2a46b1f4f5f1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727482"
 ---
 # <a name="select-a-package"></a>[パッケージの選択]
@@ -35,7 +35,7 @@ ms.locfileid: "65727482"
   
 |ReplTest1|[説明]|  
 |-----------|-----------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。 この値を選択すると、動的オプションの [パッケージ名]、 **[サーバー]**、 **[Windows 認証を使用する]**、 **[SQL Server 認証を使用する]**、 **[ユーザー名]**、および **[パスワード]** が表示されます。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。 この値を選択すると、動的オプションの [パッケージ名]、 **[サーバー]** 、 **[Windows 認証を使用する]** 、 **[SQL Server 認証を使用する]** 、 **[ユーザー名]** 、および **[パスワード]** が表示されます。|  
 |[DTSX ファイル]|DTSX ファイルの場所を設定します。 この値を選択すると、動的オプションの **[ファイル名]** が表示されます。|  
   
 ## <a name="location-dynamic-options"></a>[Location] の動的オプション  

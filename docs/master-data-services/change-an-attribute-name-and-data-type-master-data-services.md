@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: fde69d6570b5a69f79e2f8f81d2d4d90c1c47777
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488997"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>属性名とデータ型を変更する (マスター データ サービス)
@@ -59,7 +59,7 @@ ms.locfileid: "65488997"
   
 9. **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テキスト属性を作成する (マスター データ サービス)](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [属性を削除する (マスター データ サービス)](../master-data-services/delete-an-attribute-master-data-services.md)   
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  

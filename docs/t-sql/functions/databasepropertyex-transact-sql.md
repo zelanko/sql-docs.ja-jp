@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 690ed4abb406abc63be259241ba8c1c346bcf512
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943769"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
@@ -91,7 +91,7 @@ DATABASEPROPERTYEX ( database , property )
 |MaxSizeInBytes|最大データベース サイズ (バイト単位)。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: データベースは開始していません<br /><br /> 基本データ型: **bigint** 型|  
 |復旧|データベース復旧モデル|FULL: 完全復旧モデル<br /><br /> BULK_LOGGED: 一括ログ モデル<br /><br /> SIMPLE: 単純復旧モデル<br /><br /> 基本データ型: **nvarchar(128)**|  
 |ServiceObjective|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] または [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] のデータベースのパフォーマンス レベルについて説明します。|次のいずれかです。<br /><br /> Null: データベースが開始されていません<br /><br /> Shared (Web/Business エディション向け)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> System (マスター DB 向け)<br /><br /> 基本データ型: **nvarchar(32)**|  
-|ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] のサービス目標の ID です。|* * **uniqueidentifier** * * をサービス目標を識別します。|  
+|ServiceObjectiveId|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] のサービス目標の ID です。|\* * **uniqueidentifier** * * をサービス目標を識別します。|  
 |SQLSortOrder|以前のバージョンの SQL Server でサポートされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並べ替え順 ID です。|0:データベースが Windows 照合順序を使用します<br /><br /> >0: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並べ替え順 ID<br /><br /> NULL: 無効な入力、またはデータベースが開始していません<br /><br /> 基本データ型: **tinyint**|  
 |状態|データベースの状態です。|ONLINE: データベースをクエリに使用できます。<br /><br /> **注:** データベースが開いていてまだ復旧されていないとき、ONLINE ステータスが返されることがあります。 照合順序プロパティをクエリに、データベースが接続を受け入れるときを特定するには、* * * * **DATABASEPROPERTYEX** です。 データベースは、データベースの照合順序から NULL 以外の値が返されたときに接続を受け入れることができます。 AlwaysOn データベースの場合、`sys.dm_hadr_database_replica_states` の database_state または database_state_desc 列にクエリを実行します。<br /><br /> OFFLINE: データベースが明示的にオフラインになりました。<br /><br /> RESTORING: データベース復旧が開始しています。<br /><br /> RECOVERING: データベース復旧が開始したところで、データベースはまだクエリに対応していません。<br /><br /> SUSPECT: データベースは復旧されませんでした。<br /><br /> EMERGENCY: データベースは読み取り専用の緊急モードです。 sysadmin メンバーのみにアクセスが制限されます。<br /><br /> 基本データ型: **nvarchar(128)**|  
 |Updateability|データを変更できるかどうかを示します。|READ_ONLY: データベースでは、データを読み取れますが、修正できません。<br /><br /> READ_WRITE: データベースでは、データを読み取れ、修正できます。<br /><br /> 基本データ型: **nvarchar(128)**|  

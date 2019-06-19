@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479991"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>ファイル属性を作成する (マスター データ サービス)
@@ -66,7 +66,7 @@ ms.locfileid: "65479991"
   
 13. **[エンティティのメンテナンス]** ページで **[エンティティの保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)   
  [属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   

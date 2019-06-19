@@ -25,10 +25,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40dbcb56406719b88324f4c0a53278f720a2cc8f
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820775"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
@@ -125,7 +125,7 @@ ms.locfileid: "65820775"
  また、 **[表示]** メニューの **[ツール バー]** を選択し、 **[SQL エディター]** を選択して、SQL エディター ツール バーを追加することもできます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターのウィンドウが開いていない状態で SQL エディター ツール バーを追加した場合、ボタンは使用できません。  
   
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]**、 **[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]** 、 **[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
   
  **Continue**  
  ブレークポイントに達するまで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウ内のコードを実行します。  

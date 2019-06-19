@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068388"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>[ディメンションのキーおよび種類を指定] (ディメンション ウィザード)
@@ -35,7 +35,7 @@ ms.locfileid: "66068388"
  **これは、変化するディメンション**  
  ディメンションが緩やかに変化するディメンションであることを示します。 このオプションを選択すると、時間経過と共にディメンションの階層内でメンバーが移動するのを追跡するために使用できる追加の列および属性が作成されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション ウィザードの F1 ヘルプ](dimension-wizard-f1-help.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  

@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805260"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージの実行
@@ -55,8 +55,8 @@ ms.locfileid: "65805260"
 |**dtexecui**<br /><br /> 詳細については、「[パッケージ実行ユーティリティ &#40;DtExecUI&#41; の UI リファレンス](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)」を参照してください。|いいえ|はい|はい|  
 |**SQL Server エージェント**<br /><br /> パッケージのスケジュールを設定するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを使用します。<br /><br /> 詳細については、「 [パッケージに対する SQL Server エージェント ジョブ](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)」を参照してください。|はい|はい|はい|  
 |**組み込みのストアド プロシージャ**<br /><br /> 詳細については、「[catalog.start_execution &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)」を参照してください。|はい|いいえ|いいえ|  
-|**API (**<xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の型およびメンバーを使用)|はい|いいえ|いいえ|  
-|**API (**<xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の型およびメンバーを使用)|現時点ではいいえ|はい|はい|  
+|**API (** <xref:Microsoft.SqlServer.Management.IntegrationServices> 名前空間の型およびメンバーを使用)|はい|いいえ|いいえ|  
+|**API (** <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間の型およびメンバーを使用)|現時点ではいいえ|はい|はい|  
 
 ## <a name="execution-and-logging"></a>実行とログ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージではログ記録を有効にできるので、実行時情報をログ ファイルに保存できます。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
@@ -86,7 +86,7 @@ ms.locfileid: "65805260"
   
 1.  ソリューション エクスプローラーで、実行するパッケージが含まれる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト フォルダーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  [**\<プロジェクト名> プロパティ ページ**] ダイアログ ボックスで、**[ビルド]** をクリックします。  
+2.  [ **\<プロジェクト名> プロパティ ページ**] ダイアログ ボックスで、 **[ビルド]** をクリックします。  
   
 3.  OutputPath プロパティの値を更新して、デザイン時配置用に使用するフォルダーを指定し、 **[OK]** をクリックします。  
 
@@ -108,7 +108,7 @@ ms.locfileid: "65805260"
   
 5.  **[OK]** をクリックしてパッケージを実行します。  
   
-     - または -  
+     \- または -  
   
      ストアド プロシージャを使用してパッケージを実行します。 **[スクリプト]** をクリックして、実行のインスタンスを作成し、実行のインスタンスを開始する Transact-SQL ステートメントを生成します。 ステートメントには catalog.create_execution、catalog.set_execution_parameter_value、および catalog.start_execution の各ストアド プロシージャの呼び出しが含まれています。 これらのストアド プロシージャの詳細については、「[catalog.create_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)」、「[catalog.set_execution_parameter_value (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)」、および「[catalog.start_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)」をご覧ください。  
 
@@ -143,7 +143,7 @@ ms.locfileid: "65805260"
   
 4.  実行するパッケージを含むフォルダーを展開します。  
   
-5.  パッケージを右クリックし、**[実行]** をクリックします。  
+5.  パッケージを右クリックし、 **[実行]** をクリックします。  
   
 ###  <a name="general"></a> [全般] ページのオプションの設定  
  **[環境]** を選択して、実行するパッケージに適用される環境を指定します。  
@@ -157,7 +157,7 @@ ms.locfileid: "65805260"
 ###  <a name="advanced"></a> [詳細設定] タブのオプションの設定  
  [詳細設定] タブを使用して、プロパティとその他のパッケージの設定を管理します。  
   
- **[追加]**、 **[編集]**、 **[削除]**  
+ **[追加]** 、 **[編集]** 、 **[削除]**  
  クリックしてプロパティを追加、編集、または削除します。  
   
  **ログ記録レベル**  
@@ -170,7 +170,7 @@ ms.locfileid: "65805260"
  パッケージが 32 ビット システムで実行されるように指定します。  
   
 ###  <a name="script"></a> [パッケージの実行] ダイアログ ボックスのオプションのスクリプト作成  
- **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、**[パッケージの実行]** ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ [catalog.start_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) が呼び出されます。 このスクリプトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の新しいスクリプト ウィンドウに表示されます。  
+ **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、 **[パッケージの実行]** ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ [catalog.start_execution (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) が呼び出されます。 このスクリプトは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の新しいスクリプト ウィンドウに表示されます。  
 
 ## <a name="see-also"></a>参照  
  [dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)   

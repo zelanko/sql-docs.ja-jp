@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4d0fdc777715dc7077fc3396e533c5e6336a675
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728650"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>変更データのクエリを準備する
@@ -66,7 +66,7 @@ ms.locfileid: "65728650"
   
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、次のオプションを選択します。  
   
-    1.  **[ReadOnlyVariables]** で **[User::DataReady]**、 **[User::ExtractStartTime]**、および **[User::ExtractEndTime]** を一覧から選択します。  
+    1.  **[ReadOnlyVariables]** で **[User::DataReady]** 、 **[User::ExtractStartTime]** 、および **[User::ExtractEndTime]** を一覧から選択します。  
   
     2.  **[ReadWriteVariables]** で [User::SqlDataQuery] を一覧から選択します。  
   
@@ -203,6 +203,6 @@ ms.locfileid: "65728650"
 ## <a name="next-step"></a>次の手順  
  クエリ文字列を準備してデータ フロー タスクを構成したら、次にデータベースから変更データを取得するテーブル値関数を作成します。  
   
- **次のトピック:**[変更データを取得する関数を作成する](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+ **次のトピック:** [変更データを取得する関数を作成する](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   

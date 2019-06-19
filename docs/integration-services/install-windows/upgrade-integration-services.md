@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 1c5e56d0ed0d422770311ba8135992c4254370a0
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805396"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
@@ -55,9 +55,9 @@ ms.locfileid: "65805396"
 ## <a name="upgrading-integration-services"></a>Integration Services のアップグレード  
  次の方法のいずれかを使用してアップグレードできます。  
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行し、**[SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] からのアップグレード]** を選択します。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップを実行し、 **[SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] からのアップグレード]** を選択します。  
   
--   コマンド プロンプトで **setup.exe** を実行し、**/ACTION=upgrade** オプションを指定します。 詳細については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール スクリプト」セクションを参照してください。  
+-   コマンド プロンプトで **setup.exe** を実行し、 **/ACTION=upgrade** オプションを指定します。 詳細については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の「[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール スクリプト」セクションを参照してください。  
   
  アップグレードでは、次の操作は実行できません。  
   

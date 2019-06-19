@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983065"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (TRANSACT-SQL)
@@ -55,7 +55,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列に格納されているテキスト データのフルテキスト インデックスを作成できます**varbinary (max)** または**イメージ**データ型。 画像と画像はインデックス作成されません。  
   
-`[ @action = ] 'action'` 実行する操作です。 *アクション*は**varchar (20)**, で、なし、既定値は、次の値のいずれかを指定します。  
+`[ @action = ] 'action'` 実行する操作です。 *アクション*は**varchar (20)** , で、なし、既定値は、次の値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  

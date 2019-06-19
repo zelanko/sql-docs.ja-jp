@@ -9,17 +9,17 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 582267d58a3e1ac87d64f52727bab7977882bb0a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102744"
 ---
 # <a name="options-environment---startup-page"></a>[オプション] ([環境] - [スタートアップ] ページ)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、**[環境]** フォルダーを展開して **[スタートアップ]** をクリックします。
+**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して **[スタートアップ]** をクリックします。
 
 ## <a name="uielement-list"></a>UI 要素の一覧
 
@@ -31,7 +31,7 @@ ms.locfileid: "65102744"
 
 - **[新しいクエリ ウィンドウを開く]** 。接続を要求してから SQL クエリ エディターを開きます。
 
-- **[オブジェクト エクスプローラーとクエリ ウィンドウを開く]**。接続を要求してから、その接続を使用してオブジェクト エクスプローラーおよび SQL クエリ エディターの両方を開きます。
+- **[オブジェクト エクスプローラーとクエリ ウィンドウを開く]** 。接続を要求してから、その接続を使用してオブジェクト エクスプローラーおよび SQL クエリ エディターの両方を開きます。
 
 - **[オブジェクト エクスプローラーと利用状況モニターを開く]**
 

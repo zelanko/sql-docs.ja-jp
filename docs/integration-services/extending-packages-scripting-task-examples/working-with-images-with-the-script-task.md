@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43b91f4afcedf7348919758fa2ce691b6a457d72
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724224"
 ---
 # <a name="working-with-images-with-the-script-task"></a>スクリプト タスクによる画像の操作
@@ -173,7 +173,7 @@ End Function
   
 1.  Foreach ループ コンテナー内にスクリプト タスクを入れます。  
   
-2.  **[Foreach ループ エディター]** の **[コレクション]** ページで、**[列挙子]** として **[Foreach File 列挙子]** を選択し、次に、ソース ファイルのパスおよびファイル マスク ("*.jpg" など) を指定します。  
+2.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[列挙子]** として **[Foreach File 列挙子]** を選択し、次に、ソース ファイルのパスおよびファイル マスク ("*.jpg" など) を指定します。  
   
 3.  **[変数のマッピング]** ページで、`CurrentImageFile` 変数をインデックス 0 にマップします。 この変数は、列挙子が繰り返されるたびに、現在のファイル名をスクリプト タスクに渡します。  
   

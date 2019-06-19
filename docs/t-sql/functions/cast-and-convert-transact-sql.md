@@ -37,10 +37,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942892"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
@@ -111,8 +111,8 @@ date または time データ型の *expression* の場合、*style* には次�
 |**1**|**101**|米国|  1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
 |**2**|**102**|ANSI|  2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
 |**3**|**103**|イギリス/フランス|  3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
-|**4**|**104**|ドイツ語|  4 = dd.mm.yy<br /> 104 = dd.mm.yyyy|  
-|**5**|**105**|イタリア語|  5 = dd-mm-yy<br /> 105 = dd-mm-yyyy|  
+|**4**|**104**|German|  4 = dd.mm.yy<br /> 104 = dd.mm.yyyy|  
+|**5**|**105**|Italian|  5 = dd-mm-yy<br /> 105 = dd-mm-yyyy|  
 |**6**|**106** <sup>(1)</sup>|-|  6 = dd mon yy<br /> 106 = dd mon yyyy|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mon dd, yy<br /> 107 = Mon dd, yyyy|  
 |**8**|**108**|-|hh:mi:ss|  
@@ -144,7 +144,7 @@ date または time データ型の *expression* の場合、*style* には次�
 
 <sup>6</sup> 文字データを **datetime** または **smalldatetime** 型にキャストする場合のみサポートされます。 日付部分または時刻部分のみを表す文字データを、**datetime** または **smalldatetime** データ型にキャストするとき、時刻部分が指定されていないと 00:00:00.000 に設定され、日付部分が指定されていないと 1900-01-01 に設定されます。
   
-<sup>7</sup> タイム ゾーン インジケーター **Z** は省略可能です。これを使用すると、タイム ゾーン情報が含まれる XML の **datetime** 値から、タイム ゾーン情報が含まれない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 値へのマップが容易になります。 Z は、タイム ゾーン UTC-0 を示します。 + または - 方向の HH:MM オフセットは、他のタイム ゾーンを示します。 例: `2006-12-12T23:45:12-08:00`」を参照してください。
+<sup>7</sup> タイム ゾーン インジケーター **Z** は省略可能です。これを使用すると、タイム ゾーン情報が含まれる XML の **datetime** 値から、タイム ゾーン情報が含まれない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 値へのマップが容易になります。 Z は、タイム ゾーン UTC-0 を示します。 \+ または - 方向の HH:MM オフセットは、他のタイム ゾーンを示します。 例: `2006-12-12T23:45:12-08:00`」を参照してください。
   
 **smalldatetime** を文字データに変換する場合、秒またはミリ秒を含むスタイルではそれらの位置に 0 が表示されます。 **datetime** または **smalldatetime** の値から変換するときは、適切な **char** または **varchar** データ型の長さを使用して、日付の不要な部分を切り捨てます。
   

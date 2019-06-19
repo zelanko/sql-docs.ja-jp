@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47e228c3494c03e86ffa7208f7caf5c1fe150a95
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727738"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
@@ -192,7 +192,7 @@ ms.locfileid: "65727738"
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
  **[接続]**  
- OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
+ OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "65727738"
   
 ##### <a name="location--file-system"></a>Location = ファイル システム  
  **[接続]**  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)  
   

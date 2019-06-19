@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101969"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage プロバイダーでの MSDeploy の使用
@@ -47,15 +47,15 @@ MS-Deploy 動詞は、MS-Deploy コマンド ラインに **-verb** スイッチ
   
 |動詞|[説明]|  
 |--------|---------------|  
-|ダンプ (dump)|.dacpac ファイルに含まれるソース データベースに関する名前、バージョン番号、説明などの情報を提供します。 ソース データベースは、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
-|sync|dbSqlPackage 操作は、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />sync 動詞の有効なソースおよびターゲットのパラメーターの詳細については、以下のセクションを参照してください。|  
+|ダンプ (dump)|.dacpac ファイルに含まれるソース データベースに関する名前、バージョン番号、説明などの情報を提供します。 ソース データベースは、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
+|sync|dbSqlPackage 操作は、コマンド ラインで次の形式を使用して指定します。<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />sync 動詞の有効なソースおよびターゲットのパラメーターの詳細については、以下のセクションを参照してください。|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage ソース  
 **dbSqlPackage** は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルのパスのどちらかを入力として取得します。  プロバイダーの入力ソースを指定する構文は次のとおりです。  
   
 |入力|既定|[説明]|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/A**|*input* は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルのパスです。<br /><br />**注:** 入力ソースとして接続文字列を使用する場合、サポートされる接続文字列プロパティは *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* および *ConnectionTimeout* のみです。|  
+|**-source:dbSqlPackage=** {*input*}|**N/A**|*input* は、有効な SQL Server または SQL Azure 接続文字列か、ディスク上にある .dacpac ファイルのパスです。<br /><br />**注:** 入力ソースとして接続文字列を使用する場合、サポートされる接続文字列プロパティは *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* および *ConnectionTimeout* のみです。|  
   
 入力ソースがライブ SQL Server/Azure データベースへの接続文字列の場合、**dbSqlPackage** はライブ SQL Server/Azure データベースから .dacpac ファイルの形式でデータベース スナップショットを抽出します。  
   

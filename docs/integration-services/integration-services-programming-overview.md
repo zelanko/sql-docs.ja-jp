@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 85f77404989b1f088ef780b0cbfcdd7d5450f8d9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723650"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services プログラミングの概要
@@ -65,7 +65,7 @@ ms.locfileid: "65723650"
 ## <a name="locating-assemblies"></a>アセンブリの場所  
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アセンブリが .NET 4 にアップグレードされました。 \<*ドライブ*>:\Windows\Microsoft.NET\assembly に、.NET 4 用の別のグローバル アセンブリ キャッシュが用意されています。 すべての [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アセンブリは、通常、このパスの GAC_MSIL フォルダーにあります。  
   
- 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは *\<ドライブ>*:\Program Files\Microsoft SQL Server\100\SDK\Assemblies にあります。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と同様に、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のコア機能拡張 .dll ファイルは *\<ドライブ>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies にあります。  
   
 ## <a name="commonly-used-assemblies"></a>通常使用されるアセンブリ  
  次の表は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用する [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] をプログラムするときに頻繁に使用されるアセンブリの一覧です。  

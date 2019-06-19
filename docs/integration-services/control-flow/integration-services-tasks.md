@@ -28,10 +28,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6fede95f6d1a0a9b9ca2d8ea0324d5787c87d7b0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727591"
 ---
 # <a name="integration-services-tasks"></a>Integration Services タスク
@@ -39,11 +39,11 @@ ms.locfileid: "65727591"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  タスクとは、パッケージ制御フローで実行される作業の単位を定義する、制御フローの要素のことです。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、1 つ以上のタスクで構成されます。 パッケージに複数のタスクが含まれる場合、それらのタスクは優先順位制約によって順序が決定され、制御フロー内で連結されます。  
+  タスクとは、パッケージ制御フローで実行される作業の単位を定義する、制御フローの要素のことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、1 つ以上のタスクで構成されます。 パッケージに複数のタスクが含まれる場合、それらのタスクは優先順位制約によって順序が決定され、制御フロー内で連結されます。  
   
  また、COM をサポートする Visual Basic などのプログラミング言語や、C# などの .NET プログラミング言語を使用して、カスタム タスクを記述することもできます。  
   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、パッケージを操作するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のグラフィック ツールであり、パッケージ制御フローを作成するためのデザイン画面、およびタスクを構成するためのカスタム エディターが用意されています。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラムし、プログラムによってパッケージを作成することもできます。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、パッケージを操作するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のグラフィック ツールであり、パッケージ制御フローを作成するためのデザイン画面、およびタスクを構成するためのカスタム エディターが用意されています。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラムし、プログラムによってパッケージを作成することもできます。  
   
 ## <a name="types-of-tasks"></a>タスクの種類  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、次の種類のタスクが含まれます。  

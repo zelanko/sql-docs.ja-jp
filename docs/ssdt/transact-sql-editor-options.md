@@ -29,14 +29,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102056"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL エディターのオプション
-このトピックでは、Transact-SQL エディターのいくつかのオプションについて説明します。 これらのオプションを設定するには、**[ツール] > [オプション]** を選択して、**[オプション]** ダイアログ ボックスに移動します。  
+このトピックでは、Transact-SQL エディターのいくつかのオプションについて説明します。 これらのオプションを設定するには、 **[ツール] > [オプション]** を選択して、 **[オプション]** ダイアログ ボックスに移動します。  
   
 [クエリの実行](#QueryExecution)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "65102056"
 |**SET CURSOR_CLOSE_ON_COMMIT**|トランザクションをコミットするときにカーソルを閉じるかどうかを制御します。 詳しくは、「[SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)」をご覧ください。|  
 |**SET ANSI_PADDING**|**char**、 **varchar**、 **binary**、 **varbinary** 型のデータにおいて、列の定義サイズより短い値や末尾に空白がある値を格納する方法を制御します。 詳しくは、「[SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)」をご覧ください。|  
 |**SET ANSI_WARNINGS**|いくつかのエラー条件に対して SQL-92 標準の動作を実行することを指定します。詳しくは、「[SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)」をご覧ください。|  
-|**SET ANSI_NULLS**|等号 (**=**) 比較演算子と不等号 (**<>**) 比較演算子を NULL 値に対して使用した場合の、SQL-92 準拠動作を指定します。詳しくは、「[SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)」をご覧ください。|  
+|**SET ANSI_NULLS**|等号 ( **=** ) 比較演算子と不等号 ( **<>** ) 比較演算子を NULL 値に対して使用した場合の、SQL-92 準拠動作を指定します。詳しくは、「[SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)」をご覧ください。|  
   
 ## <a name="QueryResults"></a>クエリの結果  
   

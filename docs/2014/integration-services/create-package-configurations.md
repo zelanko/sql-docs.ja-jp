@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060165"
 ---
 # <a name="create-package-configurations"></a>パッケージ構成を作成する
@@ -116,7 +116,7 @@ ms.locfileid: "66060165"
   
 -   ブログ エントリ「 [API のサンプル - がプログラムによって構成ファイル パッケージに追加](https://go.microsoft.com/fwlink/?LinkId=217664)、blogs.msdn.com します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
  [パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
  [プログラムによる変数の使用](building-packages-programmatically/working-with-variables-programmatically.md)  

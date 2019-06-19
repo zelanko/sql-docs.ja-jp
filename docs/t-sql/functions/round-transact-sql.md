@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97e6792bcd9ed9ea106e93e65c1c8bbdef70ec88
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947393"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -54,7 +54,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 ## <a name="return-types"></a>戻り値の型  
  次のデータ型を返します。  
   
-|式の結果|の戻り値の型 : |  
+|式の結果|の戻り値の型 :|  
 |-----------------------|-----------------|  
 |**tinyint**|**int**|  
 |**smallint**|**int**|  
@@ -77,7 +77,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |--------------|------------|  
 |ROUND (748.58, -1)|750.00|  
 |ROUND (748.58, -2)|700.00|  
-|ROUND(748.58, -3)|748.58 の既定値は decimal(5,2) となり、1000.00 を返すことができないため、結果は算術オーバーフローになります。|  
+|ROUND(748.58, -3)|748\.58 の既定値は decimal(5,2) となり、1000.00 を返すことができないため、結果は算術オーバーフローになります。|  
 |4 桁までに丸めるには、入力のデータ型を変更します。 例:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>使用例  

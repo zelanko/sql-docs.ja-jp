@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e532985c10c5fd53e4f041a2c72b675efc9d8794
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945076"
 ---
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
@@ -63,7 +63,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**[Exclusive]**||  
   
-* このロック モードは他のロック モードの組み合わせであり、sp_getapplock で明示的に取得することはできません。
+\* このロック モードは他のロック モードの組み合わせであり、sp_getapplock で明示的に取得することはできません。
   
 ## <a name="function-properties"></a>関数のプロパティ
 **非決定的**

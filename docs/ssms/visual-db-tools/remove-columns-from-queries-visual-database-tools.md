@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9a59362473ad977da4a29ab03bdd158da7825425
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098138"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>クエリからの列の削除 (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "65098138"
   
 -   **抽出条件ペイン**で、削除する列を含むグリッド行を選択し、Del キーを押します。  
   
-    - または -  
+    \- または -  
   
 -   [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)の列に対するすべての参照を削除します。  
   

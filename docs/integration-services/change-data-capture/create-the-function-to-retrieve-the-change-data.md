@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728978"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
@@ -224,6 +224,6 @@ go
 ## <a name="next-step"></a>次の手順  
  変更データをクエリで取得するテーブル値関数を作成したら、次の手順で、パッケージのデータ フローのデザインを開始します。  
   
- **次のトピック:**[変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
+ **次のトピック:** [変更データを取得および理解する](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
   

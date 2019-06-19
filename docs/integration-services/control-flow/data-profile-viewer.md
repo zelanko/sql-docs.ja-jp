@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: feacddee000b296e5a0687e63deb1cb75fe1b04c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727810"
 ---
 # <a name="data-profile-viewer"></a>Data Profile Viewer (Data Profile Viewer)
@@ -38,7 +38,7 @@ ms.locfileid: "65727810"
   
 -   **デザイナーの** [データ プロファイル] [!INCLUDE[ssIS](../../includes/ssis-md.md)] でタスクを右クリックし、 **[編集]** をクリックします。 **データ プロファイル タスク エディター** の **[全般]** ページで、 **[プロファイル ビューアーを開く]** をクリックします。  
   
--   *\<ドライブ>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーの DataProfileViewer.exe を実行します。  
+-   *\<ドライブ>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーの DataProfileViewer.exe を実行します。  
   
  このビューアーでは、複数のペインを使用して、要求したプロファイルと計算結果が表示されます。また、詳細情報を表示するための機能やドリル ダウン機能をオプションで使用できます。  
   

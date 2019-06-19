@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 138dd405df110c42e8f5b754ebd64a96b133bba9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724081"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>スクリプト タスクでのデータ ソースへの接続
@@ -50,7 +50,7 @@ ms.locfileid: "65724081"
 > [!IMPORTANT]  
 >  スクリプト タスクのマネージド コードでは、OLE DB 接続マネージャーや Excel 接続マネージャーなど、アンマネージド オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出すことはできません。 ただし、これらの接続マネージャーの ConnectionString プロパティを読み取り、**System.Data.OleDb** 名前空間の **OledbConnection** と共に接続文字列を使用することにより、コード内でデータ ソースに直接接続することができます。  
 >   
->  アンマネージ オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出す必要がある場合は、[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーを使用してください。 OLE DB プロバイダーを使用するように [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーを構成すると、接続には [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB が使用されます。 この場合、AcquireConnection メソッドは、アンマネージ オブジェクトではなく **System.Data.OleDb.OleDbConnection** を返します。 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーで Excel データ ソースを使用するように構成するには、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet を選択して Excel ファイルを指定し、**[接続マネージャー]** ダイアログ ボックスの **[すべて]** ページにある **[拡張プロパティ]** の値に「`Excel 8.0`」(Excel 97 以降の場合) と入力します。  
+>  アンマネージ オブジェクトを返す接続マネージャーの AcquireConnection メソッドを呼び出す必要がある場合は、[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーを使用してください。 OLE DB プロバイダーを使用するように [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーを構成すると、接続には [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB が使用されます。 この場合、AcquireConnection メソッドは、アンマネージ オブジェクトではなく **System.Data.OleDb.OleDbConnection** を返します。 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーで Excel データ ソースを使用するように構成するには、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for Jet を選択して Excel ファイルを指定し、 **[接続マネージャー]** ダイアログ ボックスの **[すべて]** ページにある **[拡張プロパティ]** の値に「`Excel 8.0`」(Excel 97 以降の場合) と入力します。  
   
 ## <a name="connections-example"></a>接続の例  
  次の例では、スクリプト タスク内での接続マネージャーへのアクセス方法を示します。 このサンプルでは、**Test ADO.NET Connection** という名前の [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーと **Test Flat File Connection** という名前のフラット ファイル接続マネージャーが作成および構成済みであることを前提にしています。 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 接続マネージャーは、データ ソースに接続するときにすぐに使用できる **SqlConnection** オブジェクトを返します。 これに対し、フラット ファイル接続マネージャーは、パスとファイル名が含まれる文字列のみを返します。 フラット ファイルを開いて作業するには、**System.IO** 名前空間のメソッドを使用する必要があります。  

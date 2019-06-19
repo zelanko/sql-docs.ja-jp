@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa4eca66eaab6abf6b6bf4332dce1c48bb5835cd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727310"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
@@ -124,7 +124,7 @@ Select * FROM Win32_QuickFixEngineering
   
 ### <a name="static-options"></a>静的オプション  
  **[WMIConnectionName]**  
- WMI 接続マネージャーを一覧から選択するか、[\<**新しい WMI 接続...**>] をクリックして新しい接続マネージャーを作成します。  
+ WMI 接続マネージャーを一覧から選択するか、[\<**新しい WMI 接続...** >] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [WMI 接続マネージャー](../../integration-services/connection-manager/wmi-connection-manager.md)、[WMI 接続マネージャー エディター](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
@@ -155,17 +155,17 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--direct-input"></a>[WQLQuerySourceType] = [直接入力]  
  **[WQLQuerySource]**  
- クエリを指定します。または、参照 ( [...] ) をクリックし、**[WQL クエリ]** ダイアログ ボックスを使用してクエリを入力します。  
+ クエリを指定します。または、参照 ( [...] ) をクリックし、 **[WQL クエリ]** ダイアログ ボックスを使用してクエリを入力します。  
   
 #### <a name="wqlquerysourcetype--file-connection"></a>[WQLQuerySourceType] = [ファイル接続]  
  **[WQLQuerySource]**  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysourcetype--variable"></a>[WQLQuerySourceType] = [変数]  
  **[WQLQuerySource]**  
- 一覧で変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 一覧で変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -173,13 +173,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="destinationtype--file-connection"></a>[DestinationType] = [ファイル接続]  
  **変換先**  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="destinationtype--variable"></a>[DestinationType] = [変数]  
  **変換先**  
- 一覧で変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 一覧で変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

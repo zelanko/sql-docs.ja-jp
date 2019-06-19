@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728945"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service の作成と編集
@@ -61,14 +61,14 @@ ms.locfileid: "65728945"
   
      ローカルまたはドメインの Windows アカウントをサービス アカウントに使用できます。 この場合、アカウントの **[パスワード]** を入力する必要があります。 このアカウントは、ローカル ホストまたはドメイン アカウント用にすることができます。 パスワードが変更されたときは、必ず Windows のコントロール パネルのローカル サービスを使用してパスワードを更新します。  
   
- **[サーバー名]**: 接続先となる対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します (例: **\\\\<コンピューター名>\\<インスタンス名>**)。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
+ **[サーバー名]** : 接続先となる対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します (例: **\\\\<コンピューター名>\\<インスタンス名>** )。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
  **[認証]**  
  次のいずれかを選択します。  
   
--   **[Windows 認証]**:このオプションを選択した場合、Oracle CDC Service はサービス アカウント ID を使用して対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが異なるコンピューターで実行されている場合、Windows 認証をドメイン アカウントと共に使用する必要があります。  
+-   **[Windows 認証]** :このオプションを選択した場合、Oracle CDC Service はサービス アカウント ID を使用して対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが異なるコンピューターで実行されている場合、Windows 認証をドメイン アカウントと共に使用する必要があります。  
   
--   **[SQL Server 認証]**: このオプションを選択する場合、使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの **[ユーザー名]** と **[パスワード]** を入力する必要があります。 Oracle CDC Service は、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するときに、これらの資格情報を使用します。  
+-   **[SQL Server 認証]** : このオプションを選択する場合、使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの **[ユーザー名]** と **[パスワード]** を入力する必要があります。 Oracle CDC Service は、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続するときに、これらの資格情報を使用します。  
   
  Oracle CDC Service によって使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、public 固定サーバー ロールのメンバーであることだけが必要です。その他の権限は不要です。 新しい Oracle CDC インスタンスが追加されると、そのログインには、関連付けられている **CDC データベースへの** db_owner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスが与えられます。  
   
@@ -79,13 +79,13 @@ ms.locfileid: "65728945"
  **[オプション]**  
  矢印をクリックして、構成するオプションを表示します。 これらのオプションを既定値のままにすることもできます。 使用可能なオプションは次のとおりです。  
   
--   **[接続タイムアウト]**: CDC Service for Oracle が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は **15**です。  
+-   **[接続タイムアウト]** : CDC Service for Oracle が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は **15**です。  
   
--   **[実行タイムアウト]**: Oracle CDC Windows Service がコマンドの実行を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は、 **30**です。  
+-   **[実行タイムアウト]** : Oracle CDC Windows Service がコマンドの実行を待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウトとなります。既定値は、 **30**です。  
   
--   **[暗号化接続]**: Oracle CDC Service とターゲットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの間の暗号化された接続を使用した通信に対しては、**[暗号化接続]** を選択します。  
+-   **[暗号化接続]** : Oracle CDC Service とターゲットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの間の暗号化された接続を使用した通信に対しては、 **[暗号化接続]** を選択します。  
   
--   **[詳細設定]**:必要に応じて、追加の接続プロパティを入力します。  
+-   **[詳細設定]** :必要に応じて、追加の接続プロパティを入力します。  
   
  **[マスター パスワード]**  
  Oracle CDC Windows Service によって Oracle のログ マイニング資格情報を保護するために使用されるパスワードを入力します。  

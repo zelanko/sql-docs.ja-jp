@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783eb070efcbafa2b8ec3685d66b080c420cc768
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946782"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - トリガー関数 (Transact-SQL)
@@ -52,7 +52,7 @@ UPDATE ( column )
  INSERT 動作または UPDATE 動作をテストする列の名前です。 トリガーの ON 句にテーブル名が指定されているため、列名の前にテーブル名を含めないでください。 この列の[データ型](../../t-sql/data-types/data-types-transact-sql.md)は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサポートしているものであれば、どのようなデータ型でもかまいません。 ただし、計算列を使用することはできません。  
   
 ## <a name="return-types"></a>戻り値の型  
- ブール値  
+ Boolean  
   
 ## <a name="remarks"></a>Remarks  
  INSERT または UPDATE が成功するかどうかにかかわらず、UPDATE() は TRUE を返します。  

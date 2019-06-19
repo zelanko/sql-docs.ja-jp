@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84e76dba19f57024e22b459927624bcd0207e95d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724120"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>スクリプト タスクのコーディングおよびデバッグ
@@ -46,7 +46,7 @@ ms.locfileid: "65724120"
 > [!NOTE]  
 >  パッケージをデザインしてスクリプトをデバッグする際、スクリプト コードは一時的にプロジェクト ファイルに書き込まれます。 機密情報をファイルに保存することはセキュリティ上危険であるため、パスワードなどの重要な情報はスクリプト コードに書き込まないことをお勧めします。  
   
- 既定では、**[Option Strict]** が IDE で無効になっています。  
+ 既定では、 **[Option Strict]** が IDE で無効になっています。  
   
 ## <a name="script-task-project-structure"></a>スクリプト タスク プロジェクトの構造  
  スクリプト タスクに格納されているスクリプトを作成または変更する場合、VSTA は空の新しいプロジェクトを開くか、または既存のプロジェクトを再度開きます。 この VSTA プロジェクトを作成しても、パッケージの配置に影響はありません。このプロジェクトはパッケージ ファイル内部に保存され、スクリプト タスクは追加ファイルを作成しないためです。  
@@ -205,10 +205,10 @@ To open Help, press F1.
  スクリプト タスク プロジェクトには、既定の **ScriptMain** アイテム以外のアイテムを格納できます。 プロジェクトには、クラス、モジュール、およびコード ファイルを追加できます。 また、フォルダーを使用してアイテムのグループを整理できます。 追加したすべてのアイテムは、パッケージ内部に保存されます。  
   
 ### <a name="references-in-the-script-task-project"></a>スクリプト タスク プロジェクトの参照  
- 参照をマネージド アセンブリに追加するには、**[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、**[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
+ 参照をマネージド アセンブリに追加するには、 **[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、 **[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
   
 > [!NOTE]  
->  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、**[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
+>  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、 **[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>スクリプト タスク内でのパッケージとの対話  
  スクリプト タスクは、<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> クラスのインスタンスであるグローバル オブジェクト **Dts**、およびそのメンバーを使用して、内部のパッケージや [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイムとやり取りします。  

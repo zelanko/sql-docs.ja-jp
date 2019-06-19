@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2026e33a9e31f437615e8270c61681ec95b287b2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728108"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
@@ -35,7 +35,7 @@ ms.locfileid: "65728108"
   
 -   **ソリューション エクスプローラー** で **[接続マネージャー]** を右クリックし、 **[新しい接続マネージャー]** をクリックします。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
--   パッケージ デザイナーの下部にある **[接続マネージャー]** ペインを右クリックし、**[新しい接続]** を選択します。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
+-   パッケージ デザイナーの下部にある **[接続マネージャー]** ペインを右クリックし、 **[新しい接続]** を選択します。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
 ## <a name="connection-manager-authentication"></a>接続マネージャーの認証  
  OData 接続マネージャーでは、5 つの認証モードがサポートされています。  
@@ -52,7 +52,7 @@ ms.locfileid: "65728108"
   
 匿名アクセスを使用するには、[Windows 認証] オプションを選択します。  
 
-Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、**[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。
+Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、 **[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。
   
 ### <a name="specifying-and-securing-credentials"></a>資格情報の指定とセキュリティ保護  
  OData サービスで基本認証が必要とされる場合は、 [OData Connection Manager Editor](../../integration-services/connection-manager/odata-connection-manager-editor.md)でユーザー名とパスワードを指定できます。 エディターに入力した値は、パッケージ内に保存されます。 パスワードの値は、パッケージの保護レベルに応じて暗号化されます。  
@@ -78,7 +78,7 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
  接続マネージャーの名前です。  
   
  **サービス ドキュメントの場所**  
- OData サービスに対応する URL。 例: https://services.odata.org/V3/Northwind/Northwind.svc/」を参照してください。  
+ OData サービスに対応する URL。 例: https://services.odata.org/V3/Northwind/Northwind.svc/ 」を参照してください。  
   
  **[認証]**  
 以下のオプションの 1 つを選択します。
@@ -90,7 +90,7 @@ Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続�
 
 Windows 認証以外のオプションを選択する場合は、**ユーザー名**と**パスワード**を入力します。 
 
-Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、**[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。
+Microsoft Dynamics AX Online または Microsoft Dynamics CRM Online に接続する場合、 **[Microsoft Online Services]** 認証オプションを使用することはできません。 また、多要素認証に構成されているオプションを使用することもできません。
 
  **[接続テスト]**  
  OData ソースへの接続をテストするには、このボタンをクリックします。  

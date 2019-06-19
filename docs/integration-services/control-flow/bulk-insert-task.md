@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728009"
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
@@ -126,7 +126,7 @@ ms.locfileid: "65728009"
   
 ### <a name="options"></a>オプション  
  **[接続]**  
- OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして新しい接続を作成します。  
+ OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...** >] をクリックして新しい接続を作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "65728009"
 |**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションの **[RowDelimiter]** および **[ColumnDelimiter]** が表示されます。|  
   
  **[最近使ったファイル]**  
- ファイル接続マネージャーまたはフラット ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...**>] をクリックして新しい接続を作成します。  
+ ファイル接続マネージャーまたはフラット ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...** >] をクリックして新しい接続を作成します。  
   
  このファイルの場所は、このタスクの接続マネージャーに指定されている SQL Server データベース エンジンを基準とする相対パスです。 SQL Server データベース エンジンは、サーバーのローカル ハード ドライブ、共有、または SQL Server にマップされたドライブでこのテキスト ファイルにアクセスできる必要があります。 SSIS ランタイムはこのファイルにアクセスしません。  
   
