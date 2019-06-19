@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098384"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>方法:Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする
@@ -129,7 +129,7 @@ SQL Server 単体テスト フレームワークでは、いくつかの型名�
 |`ExecutionResult`|`SqlExecutionResult`|  
   
 ## <a name="ApplytheNewRegistrationProcess"></a>アップグレード済みのテスト条件をインストールする  
-以前のバージョンのデータベース単体テストでは、テスト条件の情報をグローバル アセンブリ キャッシュにインストールするか、アセンブリ情報を含む XML ファイルを作成することが要求される場合がありました。 SQL Server 単体テストでは、この追加の処理が必要なくなりました  (詳しくは、「[プロジェクトをコンパイルしてテスト条件をインストールする](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx)」をご覧ください。  
+以前のバージョンのデータベース単体テストでは、テスト条件の情報をグローバル アセンブリ キャッシュにインストールするか、アセンブリ情報を含む XML ファイルを作成することが要求される場合がありました。 SQL Server 単体テストでは、この追加の処理が必要なくなりました (詳しくは、「[プロジェクトをコンパイルしてテスト条件をインストールする](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx)」をご覧ください。  
   
 参照を更新したら、アセンブリが署名され、コンパイルされていることを確認します。  
   

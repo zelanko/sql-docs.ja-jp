@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3d6fe74ecf361392da9000286427679194e15de9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404044"
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>レッスン 2-5-Analysis Services プロジェクトの配置
@@ -36,7 +36,7 @@ ms.locfileid: "65404044"
     プロジェクトの配置プロパティを確認します。 既定では、" [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト" テンプレートにより、次のように [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトが構成されます。まず、ローカル コンピューターの既定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに、すべてのプロジェクトが順次配置されます。プロジェクトと同じ名前の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースが作成され、配置の完了後は既定の処理オプションに基づいてプロジェクトが処理されます。 詳細については、「[Configure Analysis Services Project Properties (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」(Analysis Services プロジェクトのプロパティの構成 (SSDT)) を参照してください。  
   
     > [!NOTE]  
-    > プロジェクトの名前付きインスタンスをデプロイする[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ローカル コンピューターまたはリモート サーバー上のインスタンスには、変更、 **Server**プロパティを適切なインスタンス名など、 \< *ServerName**>\\<** InstanceName * * >* します。  
+    > プロジェクトの名前付きインスタンスをデプロイする[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ローカル コンピューターまたはリモート サーバー上のインスタンスには、変更、 **Server**プロパティを適切なインスタンス名など、 \< *ServerName **>\\<** InstanceName * * >* します。  
   
 3.  **[OK]** をクリックします。  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c147014aa6554612a51be0ed2369aba053c8c68a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723686"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] \(SQL Server インポートおよびエクスポート ウィザード)
@@ -54,7 +54,7 @@ ms.locfileid: "65723686"
 ## <a name="why-isnt-the-copy-option-available"></a>[コピー] オプションはどうして利用できないのですか?    
  ウィザードで **データ プロバイダーを使用してデータ ソースに接続する場合、** [1 つ以上のテーブルまたはビューからデータをコピーする] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] オプションを使用できないことがあります。 データ ソースからテーブルおよびビューの一覧を要求するために必要なデータ プロバイダーに関する十分な情報がウィザードにない場合に、このような問題が起こります。 
  
-通常、SQL クエリを記述しない場合でも、エクスポートするテーブルの名前がわかっている限り、**[クエリを記述する]** オプションを使用できます。 **[次へ]** をクリックした後に表示される **[基になるクエリの指定]** ダイアログ ボックスで、`SELECT * FROM <name of table>` としてクエリを入力します。 テーブルの名前にスペースや特殊文字が含まれる場合は、角かっこで名を囲みます。`SELECT * FROM [<name of table>]`
+通常、SQL クエリを記述しない場合でも、エクスポートするテーブルの名前がわかっている限り、 **[クエリを記述する]** オプションを使用できます。 **[次へ]** をクリックした後に表示される **[基になるクエリの指定]** ダイアログ ボックスで、`SELECT * FROM <name of table>` としてクエリを入力します。 テーブルの名前にスペースや特殊文字が含まれる場合は、角かっこで名を囲みます。`SELECT * FROM [<name of table>]`
 
 ### <a name="more-info"></a>詳細
  **[1 つ以上のテーブルまたはビューからデータをコピーする]** オプションは、ProviderDescriptors.xml ファイルに ProviderDescription セクションがあるプロバイダーでのみ使用できます。 (既定では、このファイルは、\<*ドライブ*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors に格納されています)。このファイルの各 ProviderDescription セクションには、対応するプロバイダーからメタデータを取得するのに必要な情報が含まれています。    

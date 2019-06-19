@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a7c7daef9e60ae969e282d148649f0505653f9ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956466"
 ---
 # <a name="shortcut-keys-mysqltosql"></a>ショートカット キー (MySQLToSQL)
@@ -22,6 +22,6 @@ SSMA アプリケーション内を移動するキーボード ショートカ�
   
 -   [メニュー コマンドやその他のショートカット キー &#40;MySQLToSQL&#41;](../../ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Ssma for MySQL 作業の開始&#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   

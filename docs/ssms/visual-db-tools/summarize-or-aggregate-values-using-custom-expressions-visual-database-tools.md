@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1ff87212e4666630dc4042317ee5e4fc499bdcd5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105636"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>カスタム式を使用して値を要約または集計する (Visual Database Tools)
@@ -33,11 +33,11 @@ ms.locfileid: "65105636"
   
 1.  検索するグループを指定します。 詳しくは、「[クエリ結果内の行のグループ化 (Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)」をご覧ください。  
   
-2.  抽出条件ペインの空白行に移動し、**[列]** 列に式を入力します。  
+2.  抽出条件ペインの空白行に移動し、 **[列]** 列に式を入力します。  
   
     クエリ出力にわかりやすい列ヘッダーを作成できるように、[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)により、式に列の別名が自動的に割り当てられます。 詳細については、「[列の別名の作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)」を参照してください。  
   
-3.  式の **[グループ化]** 列で、**[式]** をクリックします。  
+3.  式の **[グループ化]** 列で、 **[式]** をクリックします。  
   
 4.  クエリを実行します。  
   

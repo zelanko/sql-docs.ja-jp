@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483277"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス (Master Data Services 構成マネージャー)
@@ -40,7 +40,7 @@ ms.locfileid: "65483277"
 |**電子メール アドレス**|アカウントの電子メール アドレスの名前を入力します。 これは、電子メールの送信元の電子メール アドレスで、 *email_name*@*domain_name*の形式にする必要があります。 例の電子メール アドレスは sales@contoso.com です。|  
 |**表示名**|この設定は省略可能です。 このアカウントから送信する電子メール メッセージに表示する名前を入力します。 たとえば、表示名は Contoso Sales Group のようになります。|  
 |**[返信用電子メール アドレス]**|この設定は省略可能です。 このアカウントから送信した電子メール メッセージに対する返信に使用する電子メール アドレスを入力します。 例の返信用電子メール アドレスは admin@contoso.com です。|  
-|**[SMTP サーバー]**|アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 たとえば、SMTP サーバーの形式は`smtp.` *< company_name >*`.com`します。 詳細については、電子メールの管理者に問い合わせてください。|  
+|**[SMTP サーバー]**|アカウントが電子メールの送信に使用する SMTP サーバーの名前または IP アドレスを入力します。 たとえば、SMTP サーバーの形式は`smtp.` *< company_name >* `.com`します。 詳細については、電子メールの管理者に問い合わせてください。|  
 |**[ポート番号]**|このアカウントで使用する SMTP サーバーのポート番号を入力します。 既定の SMTP ポートは 25 です。|  
 |**[このサーバーはセキュリティで保護された接続 (SSL) を必要とする]**|SSL (Secure Sockets Layer) を使用して通信を暗号化します。|  
   

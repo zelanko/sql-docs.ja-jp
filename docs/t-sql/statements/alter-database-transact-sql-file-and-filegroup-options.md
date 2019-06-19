@@ -44,11 +44,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201704"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) の File および Filegroup オプション
 
@@ -64,7 +64,7 @@ ms.locfileid: "56828382"
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />マネージド インスタンス](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -144,13 +144,13 @@ REMOVE FILE *logical_file_name*: [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
 変更するファイルを指定します。 一度に 1 つの \<filespec> プロパティだけを変更できます。 変更するファイルを識別するには、\<filespec> に NAME を指定する必要があります。 SIZE を指定する場合、ファイルの現在のサイズより新しいサイズの方が大きくなければなりません。
 
-データ ファイルまたはログ ファイルの論理名を変更するには、変更するファイルの論理名を `NAME` 句で指定し、`NEWNAME` 句にそのファイルの新しい論理名を指定します。 例 :
+データ ファイルまたはログ ファイルの論理名を変更するには、変更するファイルの論理名を `NAME` 句で指定し、`NEWNAME` 句にそのファイルの新しい論理名を指定します。 例:
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-データ ファイルまたはログ ファイルを別の場所に移動するには、`NAME` 句にファイルの現在の論理名を指定し、`FILENAME` 句に新しいパスとオペレーティング システム ファイル名を指定します。 例 :
+データ ファイルまたはログ ファイルを別の場所に移動するには、`NAME` 句にファイルの現在の論理名を指定し、`FILENAME` 句に新しいパスとオペレーティング システム ファイル名を指定します。 例:
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -179,7 +179,7 @@ NEWNAME *new_logical_file_name*: ファイルの新しい論理名を指定し�
 
 *new_logical_file_name*: 既存の論理ファイル名と置換する新しい名前を指定します。 論理ファイル名は、データベース内で一意であり、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 この名前は、文字定数、Unicode 定数、標準の識別子、区切られた識別子のいずれでもかまいません。
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**}: オペレーティング システムの (物理) ファイル名を指定します。
+FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** }: オペレーティング システムの (物理) ファイル名を指定します。
 
 ' *os_file_name* ': 標準の (ROWS) ファイル グループの場合、ファイルの作成時にオペレーティング システムで使用されるパスとファイル名を指定します。 ファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているサーバー上に存在する必要があります。 ALTER DATABASE ステートメントを実行するには、指定したパスが実際に存在するパスであることが必要です。
 
@@ -192,12 +192,12 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_mem
 
 ファイルが未処理のパーティション上にある場合、*os_file_name* には、未処理になっている既存のパーティションのドライブ文字のみを指定する必要があります。 未処理の各パーティションに配置できるファイルは、それぞれ 1 ファイルだけです。
 
-**'** *filestream_path* **'**: FILESTREAM ファイル グループの場合、FILENAME は FILESTREAM データが格納されるパスを参照します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。 たとえば、パス `C:\MyFiles\MyFilestreamData` を指定する場合は、ALTER DATABASE を実行する前に、`C:\MyFiles` が存在している必要がありますが、`MyFilestreamData` フォルダーは存在できません。
+**'** *filestream_path* **'** : FILESTREAM ファイル グループの場合、FILENAME は FILESTREAM データが格納されるパスを参照します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。 たとえば、パス `C:\MyFiles\MyFilestreamData` を指定する場合は、ALTER DATABASE を実行する前に、`C:\MyFiles` が存在している必要がありますが、`MyFilestreamData` フォルダーは存在できません。
 
 > [!NOTE]
 > SIZE プロパティおよび FILEGROWTH プロパティは、FILESTREAM ファイル グループには適用されません。
 
-**'** *memory_optimized_data_path* **'**: メモリ最適化ファイル グループでは、FILENAME はメモリ最適化データが格納されるパスを示します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。 たとえば、パス `C:\MyFiles\MyData` を指定する場合は、ALTER DATABASE を実行する前に、`C:\MyFiles` が存在している必要がありますが、`MyData` フォルダーは存在できません。
+**'** *memory_optimized_data_path* **'** : メモリ最適化ファイル グループでは、FILENAME はメモリ最適化データが格納されるパスを示します。 最後のフォルダーまでのパスが存在する必要がありますが、最後のフォルダーは存在できません。 たとえば、パス `C:\MyFiles\MyData` を指定する場合は、ALTER DATABASE を実行する前に、`C:\MyFiles` が存在している必要がありますが、`MyData` フォルダーは存在できません。
 
 ファイル グループとファイル (`<filespec>`) は、同じステートメントで作成する必要があります。
 
@@ -241,7 +241,7 @@ FILEGROWTH *growth_increment*: ファイルを自動拡張するときの増加�
 
 FILEGROWTH が指定されていない場合、既定値は次のとおりです。
 
-|[バージョンのオプション]|[既定値]|
+|バージョン|[既定値]|
 |-------------|--------------------|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|
@@ -279,7 +279,7 @@ REMOVE FILEGROUP *filegroup_name*: データベースからファイルグルー
 > [!NOTE]
 > FILESTREAM ガベージ コレクターによって FILESTREAM コンテナーからすべてのファイルが削除されない限り、`ALTER DATABASE REMOVE FILE` 操作で FILESTREAM コンテナーを削除する試みは失敗し、エラーが返されます。 このトピックの「[FILESTREAM コンテナーの削除](#removing-a-filestream-container)」セクションを参照してください。
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。
 
 \<filegroup_updatability_option>: ファイル グループに読み取り専用、または読み取り/書き込みのプロパティを設定します。
 
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />マネージド インスタンス \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\* SQL Database<br />マネージド インスタンス \*_ **<br />&nbsp;|
 
 &nbsp;
 
@@ -812,7 +812,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 
 REMOVE FILEGROUP *filegroup_name*: データベースからファイルグループを削除します。 ファイル グループが空でない場合は削除できません。 最初に、ファイル グループからすべてのファイルを削除してください。 詳細については、前の「REMOVE FILE *logical_file_name*」を参照してください。
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } ファイル グループに変更を加えます。ここでは、状態を READ_ONLY または READ_WRITE に設定したり、ファイル グループをデータベースの既定のファイル グループに指定したり、ファイル グループ名を変更することができます。
 
 \<filegroup_updatability_option>: ファイル グループに読み取り専用、または読み取り/書き込みのプロパティを設定します。
 

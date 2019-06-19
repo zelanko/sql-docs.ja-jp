@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e58b9b54de57225ee7e2c2ac2ff11afcba4a5a23
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089346"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
@@ -62,7 +62,7 @@ ms.locfileid: "65089346"
   
 3.  プラス記号をクリックして **[警告]** フォルダーを展開します。  
   
-4.  表示する情報がある警告を右クリックし、**[プロパティ]** を選択します。  
+4.  表示する情報がある警告を右クリックし、 **[プロパティ]** を選択します。  
   
     _[alert\_name_ **警告のプロパティ]** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "65089346"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

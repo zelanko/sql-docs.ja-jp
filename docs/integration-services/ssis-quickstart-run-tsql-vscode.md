@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7e2f45d7204790d9d6db2ce58d94ddc7a4bfacc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717349"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS パッケージを実行する
@@ -49,14 +49,14 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 
 2. ステータス バーの右下隅にある **[プレーン テキスト]** をクリックします。
 
-3. 開いた **[言語モードの選択]** ドロップダウン メニューで、**[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
+3. 開いた **[言語モードの選択]** ドロップダウン メニューで、 **[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
 
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -71,7 +71,7 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
 
 2. 「**sqlcon**」と入力し、**Enter** キーを押します。
 
-3. **Enter** キーを押して、**[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
+3. **Enter** キーを押して、 **[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
 
 4. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してから、**Enter** キーを押して続行します。 
 
@@ -92,7 +92,7 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
 ## <a name="run-the-t-sql-code"></a>T-SQL コードを実行する
 SSIS パッケージを実行するには、次の Transact-SQL コードを実行します。
 
-1. **エディター** ウィンドウで、空のクエリ ウィンドウに次のクエリを入力します  (このコードは、SSMS の **[パッケージ実行]** ダイアログ ボックスの **[スクリプト]** オプションによって生成されたコードです)。
+1. **エディター** ウィンドウで、空のクエリ ウィンドウに次のクエリを入力します (このコードは、SSMS の **[パッケージ実行]** ダイアログ ボックスの **[スクリプト]** オプションによって生成されたコードです)。
 
 2. システムの `catalog.create_execution` ストアド プロシージャ内のパラメーター値を更新します。
 

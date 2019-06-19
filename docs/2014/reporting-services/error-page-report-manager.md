@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109218"
 ---
 # <a name="error-page-report-manager"></a>[エラー] ページ (レポート マネージャー)
@@ -30,7 +30,7 @@ ms.locfileid: "66109218"
   
 -   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラー メッセージが含まれる場合、テキスト「このエラーに関する詳細については、ローカル サーバー コンピューターでは、レポート サーバーに移動またはリモート エラーを有効にする」を参照してください。[リモート エラーを有効にする&#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート マネージャーの構成 &#40;ネイティブ モード&#41;](report-server/configure-web-portal.md)   
  [エラーとイベントのリファレンス (Reporting Services)](troubleshooting/errors-and-events-reference-reporting-services.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -25,10 +25,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b96e70f0ddf57e826bce4cefb085376aa074a0c2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106249"
 ---
 # <a name="change-an-operator39s-availability"></a>オペレーターの可用性の変更
@@ -70,7 +70,7 @@ ms.locfileid: "65106249"
   
 4.  有効または無効にするオペレーターを右クリックし、 **[プロパティ]** を選択した後、 **[全般]** タブをクリックします。  
   
-5.  _[operator\_name_ **のプロパティ]** ダイアログ ボックスで、**[有効]** チェック ボックスをオンまたはオフにします。  
+5.  _[operator\_name_ **のプロパティ]** ダイアログ ボックスで、 **[有効]** チェック ボックスをオンまたはオフにします。  
   
 6.  **[OK]** をクリックします。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65106249"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     -- disables the 'François Ajenstat' operator  

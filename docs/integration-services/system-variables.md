@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed952b3e9d275d54c751aa64c6544653511667c3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715459"
 ---
 # <a name="system-variables"></a>システム変数
@@ -45,11 +45,11 @@ ms.locfileid: "65715459"
 |**CreatorName**|String|パッケージの構築者の名前です。|  
 |**ExecutionInstanceGUID**|String|実行中のパッケージのインスタンスの一意識別子です。|  
 |**FailedConfigurations**|String|失敗したパッケージ構成の名前。|  
-|**IgnoreConfigurationsOnLoad**|ブール値|パッケージを読み込むときにパッケージ構成を無視するかどうかを示します。|  
-|**InteractiveMode**|ブール値|パッケージが対話モードで実行されているかどうかを示します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを実行中の場合、このプロパティは **True**に設定されます。 **DTExec** コマンド プロンプト ユーティリティを使用してパッケージを実行中の場合、プロパティは **False**に設定されます。|  
+|**IgnoreConfigurationsOnLoad**|Boolean|パッケージを読み込むときにパッケージ構成を無視するかどうかを示します。|  
+|**InteractiveMode**|Boolean|パッケージが対話モードで実行されているかどうかを示します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを実行中の場合、このプロパティは **True**に設定されます。 **DTExec** コマンド プロンプト ユーティリティを使用してパッケージを実行中の場合、プロパティは **False**に設定されます。|  
 |**LocaleId**|Int32|パッケージで使用するロケールです。|  
 |**MachineName**|String|パッケージが実行されているコンピューターの名前です。|  
-|**OfflineMode**|ブール値|パッケージがオフライン モードかどうかを示します。 オフライン モードでは、データ ソースへの接続は取得されません。|  
+|**OfflineMode**|Boolean|パッケージがオフライン モードかどうかを示します。 オフライン モードでは、データ ソースへの接続は取得されません。|  
 |**PackageID**|String|パッケージの一意識別子です。|  
 |**PackageName**|String|パッケージの名前です。|  
 |**StartTime**|DateTime|パッケージの実行を開始した時刻です。|  
@@ -84,17 +84,17 @@ ms.locfileid: "65715459"
   
 |システム変数|データ型|[説明]|イベント ハンドラー|  
 |---------------------|---------------|-----------------|-------------------|  
-|**キャンセル**|ブール値|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
+|**キャンセル**|Boolean|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
 |**ErrorCode**|Int32|エラー識別子です。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  
 |**ErrorDescription**|String|エラーの説明。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  
-|**ExecutionStatus**|ブール値|現在の実行ステータスです。|OnExecStatusChanged イベント ハンドラー|  
+|**ExecutionStatus**|Boolean|現在の実行ステータスです。|OnExecStatusChanged イベント ハンドラー|  
 |**ExecutionValue**|DBNull|実行値です。|OnTaskFailed イベント ハンドラー|  
 |**LocaleId**|Int32|イベント ハンドラーが使用するロケールです。|すべてのイベント ハンドラー|  
 |**PercentComplete**|Int32|完了済みの作業の割合です。|OnProgress イベント ハンドラー|  
 |**ProgressCountHigh**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の上位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressCountLow**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の下位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressDescription**|String|進行状況の説明です。|OnProgress イベント ハンドラー|  
-|**Propagate**|ブール値|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注:変数 **Propagate** の値は、パッケージの検証中は無視されます。 子パッケージ内で **Propagate** を **False** に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
+|**Propagate**|Boolean|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注:変数 **Propagate** の値は、パッケージの検証中は無視されます。 子パッケージ内で **Propagate** を **False** に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
 |**SourceDescription**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの説明です。|すべてのイベント ハンドラー|  
 |**[SourceID]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの一意識別子です。|すべてのイベント ハンドラー|  
 |**[SourceName]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの名前です。|すべてのイベント ハンドラー|  

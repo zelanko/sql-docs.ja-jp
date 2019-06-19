@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b166ceafd545952039d9c1929dc8aea6dc538d24
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724499"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
@@ -100,7 +100,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **エラー メッセージ。** 型 'System.__ComObject' の COM オブジェクトをインターフェイス型 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' にキャストできません。 IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' が指定されたインターフェイスの COM コンポーネント上での QueryInterface 呼び出しのときに次のエラーが発生したため、この操作に失敗しました: インターフェイスがサポートされていません。(HRESULT からの例外: 0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、**[相互運用機能型の埋め込み]** プロパティの値を **False** に設定します。
+**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、 **[相互運用機能型の埋め込み]** プロパティの値を **False** に設定します。
 
 ![相互運用機能型の埋め込み](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

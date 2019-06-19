@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a8b92add29a1f18f085baa25cd41e82eb08d6c1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725859"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
@@ -43,7 +43,7 @@ ms.locfileid: "65725859"
   
      並べ替え変換では Windows 照合順序を使用して文字列値を並べ替えます。  
   
-     - または -  
+     \- または -  
   
 -   Transact-SQL の CAST 演算子を使用して最初に **varchar** 値を **nvarchar** 値にキャストし、次に Transact-SQL ORDER BY 句を使用してデータを並べ替えます。  
   

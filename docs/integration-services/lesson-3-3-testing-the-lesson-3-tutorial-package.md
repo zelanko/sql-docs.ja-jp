@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722090"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>レッスン 3-3:レッスン 3 で作成したチュートリアル パッケージのテスト
@@ -24,7 +24,7 @@ ms.locfileid: "65722090"
 
 
 
-この実習では、**Lesson 3.dtsx** パッケージを実行します。 パッケージが実行されると、**[ログ イベント]** ウィンドウに、SSIS によってログ ファイルに書き込まれるログ エントリがログ プロバイダー別に一覧表示されます。 パッケージ実行が完了したら、ログ ファイルの内容を閲覧できます。  
+この実習では、**Lesson 3.dtsx** パッケージを実行します。 パッケージが実行されると、 **[ログ イベント]** ウィンドウに、SSIS によってログ ファイルに書き込まれるログ エントリがログ プロバイダー別に一覧表示されます。 パッケージ実行が完了したら、ログ ファイルの内容を閲覧できます。  
   
 ## <a name="check-the-package-layout"></a>パッケージ レイアウトを確認する  
 パッケージをテストする前に、次の図に示すオブジェクトがレッスン 3 のパッケージの制御フローとデータ フローに似ていることを確認します。 この制御フローはレッスン 2 と同じに、データ フローはレッスン 1 および 2 と同じになるはずです。  
@@ -43,13 +43,13 @@ ms.locfileid: "65722090"
   
 2.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
   
-3.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+3.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="examine-the-generated-log-file"></a>生成されたログ ファイルを検証する  
   
 -   メモ帳などのテキスト エディターを使用し、TutorialLog.log ファイルを開きます。  
   
--   **PipelineExecutionPlan** イベントと **PipelineExecutionTrees** イベントに対して生成される情報について完全に説明することは、このチュートリアルの範囲を超えています。  ログ ファイルでは、**[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブに指定されている情報フィールドが最初の行に一覧表示されます。 また、Foreach ループが繰り返されるたびに、選択した 2 つのイベント、**PipelineExecutionPlan** と **PipelineExecutionTrees** が [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で記録されていることも確認できます。  
+-   **PipelineExecutionPlan** イベントと **PipelineExecutionTrees** イベントに対して生成される情報について完全に説明することは、このチュートリアルの範囲を超えています。  ログ ファイルでは、 **[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブに指定されている情報フィールドが最初の行に一覧表示されます。 また、Foreach ループが繰り返されるたびに、選択した 2 つのイベント、**PipelineExecutionPlan** と **PipelineExecutionTrees** が [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で記録されていることも確認できます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 4:SSIS でエラー フロー リダイレクションを追加する](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

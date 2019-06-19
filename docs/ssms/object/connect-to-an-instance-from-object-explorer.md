@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fa363c2715057a0f81a691911a7e06b5104c5501
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088753"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server または Azure SQL Database への接続
@@ -27,11 +27,11 @@ ms.locfileid: "65088753"
   
 ## <a name="connecting-to-a-server"></a>サーバーへの接続  
 
-1. **オブジェクト エクスプローラー**で、**[接続]、[データベース エンジン]** の順にクリックします。
+1. **オブジェクト エクスプローラー**で、 **[接続]、[データベース エンジン]** の順にクリックします。
 
    ![connect](../media/connect-to-server/connect-db-engine.png)
 
-1. **[サーバーへの接続]** フォームに必要事項を入力し、**[接続]** をクリックします。
+1. **[サーバーへの接続]** フォームに必要事項を入力し、 **[接続]** をクリックします。
 
    ![サーバーへの接続](../media/connect-to-server/connect.png)
 
@@ -43,7 +43,7 @@ ms.locfileid: "65088753"
 
    ![ファイアウォール](../media/connect-to-server/new-firewall-rule.png)
 
-1. ファイアウォール規則を作成して、サーバーに接続するには、**[OK]** をクリックします。
+1. ファイアウォール規則を作成して、サーバーに接続するには、 **[OK]** をクリックします。
 
 1. 接続が正常に行われると、**オブジェクト エクスプローラー**にサーバー表示されます。
 

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ebfc24eef8919ffa43824447ae32773d106158f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723971"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
@@ -41,7 +41,7 @@ ms.locfileid: "65723971"
 
 -   **変換先で ODBC ドライバーを使用している場合は**、.NET Framework Data Provider for ODBC を選択します。 ドライバー固有の情報を入力します。 ODBC ドライバーは、変換先のドロップダウン リストに記載されていません。 .NET Framework Data Provider for ODBC は ODBC ドライバーのラッパーとして機能します。 詳細については、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。
 
--   **変換先として使用できるプロバイダーが複数存在する可能性があります。** 通常、変換先で使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます  (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
+-   **変換先として使用できるプロバイダーが複数存在する可能性があります。** 通常、変換先で使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
 
 ## <a name="my-destination-isnt-in-the-list"></a>変換先がリストに表示されない
 -   Microsoft またはサード パーティから**データ プロバイダーをダウンロードする必要があります**。 **[変換先]** のリストに表示される、使用できるデータ プロバイダーのリストに含まれているのは、コンピューターにインストールされているプロバイダーのみです。 使用できる変換先の詳細については、「[使用できるデータ ソースと変換先](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
@@ -54,7 +54,7 @@ ms.locfileid: "65723971"
 > 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
 ## <a name="after-you-choose-a-destination"></a>変換先の選択後
-変換先を選択した後、**[変換先の選択]** ページ の残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
+変換先を選択した後、 **[変換先の選択]** ページ の残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
 
 よく使われる変換先に接続するには、次のいずれかのページをご覧ください。
 -   [SQL Server への接続](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)

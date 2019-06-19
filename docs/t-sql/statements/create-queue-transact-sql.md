@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503242"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -77,7 +77,7 @@ CREATE QUEUE <object>
  *queue_name*  
  作成するキューの名前を指定します。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子のガイドラインに従っている必要があります。  
   
- STATUS (Queue)   
+ STATUS (Queue)  
  キューが使用可能 (ON) か、使用不可能 (OFF) かを指定します。 キューが使用不可能な場合、キューにメッセージを追加したり、キューからメッセージを削除することはできません。 ALTER QUEUE ステートメントによってキューが使用可能になるまでキューにメッセージが届かないようにする場合は、キューを使用不可能な状態で作成できます。 この句を省略すると、既定値の ON が使用され、キューは使用可能になります。  
   
  RETENTION  

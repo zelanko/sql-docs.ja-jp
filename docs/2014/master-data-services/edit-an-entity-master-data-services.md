@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483884"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>エンティティ名を変更する (マスター データ サービス)
@@ -48,7 +48,7 @@ ms.locfileid: "65483884"
   
 7.  クリックして**エンティティの保存**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エンティティを作成する&#40;マスター データ サービス&#41;](create-an-entity-master-data-services.md)   
  [エンティティを削除する (マスター データ サービス)](delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](entities-master-data-services.md)  

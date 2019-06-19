@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726241"
 ---
 # <a name="character-map-transformation"></a>文字マップ変換
@@ -51,8 +51,8 @@ ms.locfileid: "65726241"
 |カタカナ|ひらがなをカタカナにマップします。|  
 |言語の文字種|システム規則ではなく言語の文字種を適用します。 言語の文字種は、Win32 API が提供する、チュルク語や他のロケールの Unicode 単純文字種のマップに関する機能を基準とします。|  
 |小文字|文字を小文字に変換します。|  
-|簡体字中国語|繁体字中国語文字を簡体字中国語文字にマップします。|  
-|繁体字中国語|簡体字中国語文字を繁体字中国語文字にマップします。|  
+|Simplified Chinese|繁体字中国語文字を簡体字中国語文字にマップします。|  
+|Traditional Chinese|簡体字中国語文字を繁体字中国語文字にマップします。|  
 |大文字|文字を大文字に変換します。|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>相互に排他的なマップ操作  
@@ -63,7 +63,7 @@ ms.locfileid: "65726241"
 |小文字|大文字|  
 |ひらがな|カタカナ|  
 |半角|全角|  
-|繁体字中国語|簡体字中国語|  
+|Traditional Chinese|Simplified Chinese|  
 |小文字|ひらがな、カタカナ、半角、全角|  
 |大文字|ひらがな、カタカナ、半角、全角|  
   
@@ -119,8 +119,8 @@ ms.locfileid: "65726241"
 |半角|全角文字を半角文字に変換します。|  
 |全角|半角文字を全角文字に変換します。|  
 |言語の文字種|システムのルールではなく、言語の文字種による規則 (チュルク語などのロケールにおける Unicode の文字種の単純な割り当て) を適用します。|  
-|簡体字中国語|繁体字中国語の文字を簡体字中国語に変換します。|  
-|繁体字中国語|簡体字中国語の文字を繁体字中国語に変換します。|  
+|Simplified Chinese|繁体字中国語の文字を簡体字中国語に変換します。|  
+|Traditional Chinese|簡体字中国語の文字を繁体字中国語に変換します。|  
   
  **[出力の別名]**  
  各出力列の別名を入力します。 既定では、入力列の名前の後に " **のコピー** " が追加された別名になりますが、固有のわかりやすい名前を選択することもできます。  

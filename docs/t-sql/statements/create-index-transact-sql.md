@@ -56,10 +56,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626700"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
@@ -1086,7 +1086,7 @@ ALTER INDEX test_idx on test_table RESUME
 ALTER INDEX test_idx on test_table ABORT
 ```
 
-### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O.  現在のデータベース内のテーブルに非クラスター化インデックスを作成する
+### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. 現在のデータベース内のテーブルに非クラスター化インデックスを作成する
 
 次の例では、`ProductVendor` テーブルの `VendorID` 列に非クラスター化インデックスを作成します。
 

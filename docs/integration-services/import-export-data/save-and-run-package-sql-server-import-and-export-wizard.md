@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8326920e557d6ed304414f96a7da040de0093dd0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723728"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -45,7 +45,7 @@ ms.locfileid: "65723728"
 パッケージを保存するオプションを選択できるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 以上のエディションをインストールしている場合のみです。   
   
 > [!NOTE]
-> ウィザードを終了し、操作を実行したが、実行が完了する前に操作が停止した場合は、**[SSIS パッケージの保存]** チェック ボックスをオンにしていても、パッケージは保存されません。  
+> ウィザードを終了し、操作を実行したが、実行が完了する前に操作が停止した場合は、 **[SSIS パッケージの保存]** チェック ボックスをオンにしていても、パッケージは保存されません。  
 
 ### <a name="if-you-started-the-wizard-from-visual-studio"></a>Visual Studio からウィザードを起動した場合
 SQL Server Data Tools (SSDT) がインストールされている Visual Studio で Integration Services プロジェクトからウィザードを起動した場合:
@@ -79,7 +79,7 @@ SQL Server Data Tools (SSDT) がインストールされている Visual Studio 
  パスワードを再度入力します。  
   
 > [!NOTE]
-> このパスワード オプションは、パスワードが必要な **[パッケージの保護レベル]** を指定した場合 (つまり、**[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** を指定した場合) にのみ使用できます。  
+> このパスワード オプションは、パスワードが必要な **[パッケージの保護レベル]** を指定した場合 (つまり、 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** を指定した場合) にのみ使用できます。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>パッケージを保存するためのオプションの 2 つのページについて  
  **[パッケージの保存および実行]** ページは、SSIS パッケージを保存するためのオプションを選択する 2 つのページの 1 つです。  

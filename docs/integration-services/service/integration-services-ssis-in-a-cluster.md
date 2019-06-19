@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7332f70144194bcddca0c2729b4615252a39e7e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717903"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>クラスターにおける Integration Services (SSIS)
@@ -103,7 +103,7 @@ ms.locfileid: "65717903"
   
 4.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[リソース]** をクリックします。  
   
-5.  リソース ウィザードの **[新しいリソース]** ページで、名前を入力し、**[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
+5.  リソース ウィザードの **[新しいリソース]** ページで、名前を入力し、 **[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
   
 6.  **[実行可能な所有者]** ページで、リソースの実行可能な所有者として、クラスターのノードを追加または削除し、 **[次へ]** をクリックします。  
   

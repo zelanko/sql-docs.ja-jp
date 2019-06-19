@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054593"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2013)
@@ -29,7 +29,7 @@ ms.locfileid: "63054593"
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 構成ツールのインストールについては、「[PowerPivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Power Pivot for SharePoint 2013 の構成の実行  
- **注:**[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]セットアップ ウィザードの 2 つの異なる構成ツールをインストールする[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]します。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
+ **注:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]セットアップ ウィザードの 2 つの異なる構成ツールをインストールする[!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]します。 これらのツールはそれぞれ異なるバージョンの SharePoint をサポートします。  
   
 |名前|説明|  
 |----------|-----------------|  
@@ -42,11 +42,11 @@ ms.locfileid: "63054593"
   
  SharePoint のインストール時に使用したアカウントでログインするか、SharePoint サーバーの全体管理サイトのプライマリ管理者としてセットアップ アカウントを構成します。  
   
-1.  **[スタート]** メニューの **[すべてのプログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、**[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 の構成**をクリックします。 ツールは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
+1.  **[スタート]** メニューの **[すべてのプログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] For SharePoint 2013 の構成**をクリックします。 ツールは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
   
-2.  **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の構成または修復]** をクリックし、**[OK]** をクリックします。  
+2.  **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の構成または修復]** をクリックし、 **[OK]** をクリックします。  
   
-3.  このツールでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の現在の状態と構成を完了するために必要な手順を確認するための検証が実行されます。 ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
+3.  このツールでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の現在の状態と構成を完了するために必要な手順を確認するための検証が実行されます。 ウィンドウを最大化します。 ウィンドウの下部に **[検証]** 、 **[実行]** 、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
 4.  **[パラメーター]** タブで、次の操作を行います。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63054593"
   
 1.  サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** をクリックします。  
   
-2.  サービス アプリケーションの状態が **[開始済み]** になっていることを確認します。 既定の名前は、**[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** です。  
+2.  サービス アプリケーションの状態が **[開始済み]** になっていることを確認します。 既定の名前は、 **[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** です。  
   
      サービス アプリケーションの名前をクリックして、このサービス アプリケーションの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "63054593"
   
 5.  **[OK]** をクリックします。  
   
- データのトラブルシューティングの更新の詳細については、次を参照してください。 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)します。  
+ データのトラブルシューティングの更新の詳細については、次を参照してください。 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) します。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

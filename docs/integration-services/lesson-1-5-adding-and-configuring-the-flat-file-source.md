@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723084"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>レッスン 1-5:フラット ファイルの変換元を追加し、構成する
@@ -29,13 +29,13 @@ ms.locfileid: "65723084"
   
 ## <a name="add-a-flat-file-source-component"></a>フラット ファイル ソース コンポーネントを追加する  
   
-1.  **[データ フロー]** デザイナーを開くには、**[Extract Sample Currency Data]** データ フローをダブルクリックするか、**[データ フロー]** タブを選択します。  
+1.  **[データ フロー]** デザイナーを開くには、 **[Extract Sample Currency Data]** データ フローをダブルクリックするか、 **[データ フロー]** タブを選択します。  
   
 2.  **[SSIS ツールボックス]** で **[その他の変換元]** を展開し、 **[フラット ファイル ソース]** を **[データ フロー]** タブのデザイン画面にドラッグします。  
   
-3.  **[データ フロー]** デザイン画面で、新しく追加した **[フラット ファイル ソース]** を右クリックし、**[名前の変更]** を選択し、名前を「**Extract Sample Currency Data**」に変更します。  
+3.  **[データ フロー]** デザイン画面で、新しく追加した **[フラット ファイル ソース]** を右クリックし、 **[名前の変更]** を選択し、名前を「**Extract Sample Currency Data**」に変更します。  
   
-4.  このフラット ファイル ソースをダブルクリックし、**[フラット ファイル ソース エディター]** ダイアログを開きます。  
+4.  このフラット ファイル ソースをダブルクリックし、 **[フラット ファイル ソース エディター]** ダイアログを開きます。  
   
 5.  **[フラット ファイル接続マネージャー]** フィールドで **[Sample Flat File Source Data]** を選択します。  
   
@@ -43,9 +43,9 @@ ms.locfileid: "65723084"
   
 7.  **[OK]** を選択します。  
   
-8.  [フラット ファイル ソース] を右クリックし、**[プロパティ]** を選択します。  
+8.  [フラット ファイル ソース] を右クリックし、 **[プロパティ]** を選択します。  
   
-9. **[プロパティ]** ウィンドウで、**[LocaleID]** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
+9. **[プロパティ]** ウィンドウで、 **[LocaleID]** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
 ## <a name="go-to-next-task"></a>次の実習に進む
 [手順 6:参照変換を追加し、構成する](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

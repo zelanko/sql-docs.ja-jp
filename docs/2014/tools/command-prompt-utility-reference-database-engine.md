@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab9eca571a9cf9381e7c6a18207155ddf86ce272
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035987"
 ---
 # <a name="command-prompt-utility-reference-database-engine"></a>コマンド プロンプト ユーティリティ リファレンス (データベース エンジン)
@@ -62,7 +62,7 @@ ms.locfileid: "63035987"
 |*斜体*|ユーザーが指定するパラメーター|  
 |**太字**|示されたとおりに入力する必要があるコマンド、パラメーター、およびその他の構文|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ディストリビューション エージェント](../relational-databases/replication/agents/replication-distribution-agent.md)   
  [レプリケーション ログ リーダー エージェント](../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [レプリケーション マージ エージェント](../relational-databases/replication/agents/replication-merge-agent.md)   

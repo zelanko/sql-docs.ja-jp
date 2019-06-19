@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874486"
 ---
 # <a name="clr-user-defined-functions"></a>CLR ユーザー定義関数
@@ -39,7 +39,7 @@ ms.locfileid: "62874486"
  [CLR ユーザー定義集計](clr-user-defined-aggregates.md)  
  ユーザー定義集計の実装方法と使用方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー定義関数](../user-defined-functions/user-defined-functions.md)  
   
   

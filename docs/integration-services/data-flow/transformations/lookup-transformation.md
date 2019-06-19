@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725999"
 ---
 # <a name="lookup-transformation"></a>参照変換
@@ -186,7 +186,7 @@ ms.locfileid: "65725999"
  **[新規作成]**  
  新しい接続を作成するには、 **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスを使用します。  
   
- **[参照変換エディター]** ダイアログ ボックスの [全般] ページで **[フル キャッシュ]**、 **[部分キャッシュ]**、 **[キャッシュなし]**、および **[OLE DB 接続マネージャー]** を選択すると、次のオプションを使用できます。  
+ **[参照変換エディター]** ダイアログ ボックスの [全般] ページで **[フル キャッシュ]** 、 **[部分キャッシュ]** 、 **[キャッシュなし]** 、および **[OLE DB 接続マネージャー]** を選択すると、次のオプションを使用できます。  
   
  **[キャッシュなし]**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
@@ -270,7 +270,7 @@ ms.locfileid: "65725999"
  参照データセットを生成するために使用される SQL ステートメントを変更します。  
   
 > [!NOTE]  
->  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。 詳細については、「 [[参照変換エディター] &#40;[接続] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)」を参照してください。  
+>  このページで指定するオプションの SQL ステートメントは、 **[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。 詳細については、「 [[参照変換エディター] &#40;[接続] ページ&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)」を参照してください。  
   
  **[パラメーターの設定]**  
  **[クエリ パラメーターの設定]** ダイアログ ボックスを使用して、入力列をパラメーターにマップします。  

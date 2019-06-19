@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094802"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>操作方法:アップグレード アドバイザーのレポートを表示する
@@ -73,8 +73,8 @@ ms.locfileid: "66094802"
 >  レポートには、検出不可能な問題に対する項目が含まれる場合があります。 これらは、検出できない問題か、または誤って検出された結果が大量に生成される問題です。 をクリックして、**この問題と解決方法に関する詳細情報を表示する**コンポーネントの検出できない問題の一覧を表示するリンク。  
   
 ## <a name="see-also"></a>参照  
- [方法: レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)   
- [方法: アップグレード アドバイザー分析ウィザードを実行します。](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [方法:レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [方法:アップグレード アドバイザー分析ウィザードを実行します。](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [アップグレード アドバイザーの操作方法に関するトピック](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

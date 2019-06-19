@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723323"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>レッスン 1-1:新しい Integration Services プロジェクトを作成する
@@ -37,19 +37,19 @@ ms.locfileid: "65723323"
   
 1.  Windows の **[スタート]** メニューで、**Visual Studio (SSDT)** を検索して選択します。  
   
-2.  Visual Studio で、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択して、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成します。  
+2.  Visual Studio で、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** の順に選択して、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成します。  
   
-3.  **[新しいプロジェクト]** ダイアログ ボックスの **[インストール済み]** で **[ビジネス インテリジェンス]** を展開し、**[テンプレート]** ペインで **[Integration Services プロジェクト]** を選択します。  
+3.  **[新しいプロジェクト]** ダイアログ ボックスの **[インストール済み]** で **[ビジネス インテリジェンス]** を展開し、 **[テンプレート]** ペインで **[Integration Services プロジェクト]** を選択します。  
   
-4.  **[名前]** ボックスに表示されている既定の名前を「 **SSIS Tutorial**」に変更します。 既に存在するフォルダーを使用するには、**[ソリューションのディレクトリを作成]** チェック ボックスをオフにします。  
+4.  **[名前]** ボックスに表示されている既定の名前を「 **SSIS Tutorial**」に変更します。 既に存在するフォルダーを使用するには、 **[ソリューションのディレクトリを作成]** チェック ボックスをオフにします。  
   
-5.  既定の場所をそのまま使用するか、**[参照]** を選択して使用するフォルダーを指定します。 **[プロジェクトの場所]** ダイアログ ボックスで、フォルダーを選択し、**[フォルダーの選択]** を選択します。  
+5.  既定の場所をそのまま使用するか、 **[参照]** を選択して使用するフォルダーを指定します。 **[プロジェクトの場所]** ダイアログ ボックスで、フォルダーを選択し、 **[フォルダーの選択]** を選択します。  
   
 6.  **[OK]** を選択します。  
   
     既定では、**Package.dtsx** という名前の空のパッケージが作成され、**SSIS パッケージ**の下のプロジェクトに追加されます。  
   
-7.  **ソリューション エクスプローラー**で **[Package.dtsx]** を右クリックし、**[名前の変更]** を選択して、既定のパッケージ名を **Lesson 1.dtsx** に変更します。  
+7.  **ソリューション エクスプローラー**で **[Package.dtsx]** を右クリックし、 **[名前の変更]** を選択して、既定のパッケージ名を **Lesson 1.dtsx** に変更します。  
   
 ## <a name="go-to-next-task"></a>次の実習に進む
 [手順 2:フラット ファイル接続マネージャーを追加し、構成する](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  

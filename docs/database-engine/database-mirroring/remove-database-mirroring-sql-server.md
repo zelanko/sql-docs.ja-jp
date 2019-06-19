@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 3a80688d458b70f470643830406668ac2a056498
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795280"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>データベース ミラーリングの削除 (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "66795280"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[データベース ミラーリングを削除した後](#FollowUp)  
+-   **補足情報:** [データベース ミラーリングを削除した後](#FollowUp)  
   
 -   [関連タスク](#RelatedTasks)  
   

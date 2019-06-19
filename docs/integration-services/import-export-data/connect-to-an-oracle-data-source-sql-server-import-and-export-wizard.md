@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04a7354fac044a835ab5d5649d56c01e72e6e995
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723884"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Oracle データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
@@ -65,7 +65,7 @@ ODBC ドライバーの名前、**Oracle 用 Microsoft ODBC**。
 **[サーバー]**  
 Oracle サーバーの名前。 
 
-**[Uid]** と **[Pwd]**   
+**[Uid]** と **[Pwd]**    
 接続するユーザー ID とパスワード。
 
 ### <a name="connection-string-format"></a>接続文字列の形式
@@ -76,7 +76,7 @@ Oracle サーバーの名前。
     ```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
-**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、**[ConnectionString]** フィールドに接続文字列を入力するか、**[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
+**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 接続文字列を入力した後に表示される画面を次に示します。
 

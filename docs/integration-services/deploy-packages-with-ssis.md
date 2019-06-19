@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6be73e7253bc0be8d8dde9766f9fcb8be0a2dfa
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725750"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS によるパッケージの配置
@@ -59,7 +59,7 @@ ms.locfileid: "65725750"
 
 配置バンドルを作成するコンピューターには、**次のコンポーネントがインストールされている必要があります。**
 
-- SQL Server :  ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
+- SQL Server : ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
 
 - サンプル データ、完成したパッケージ、構成、Readme。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。 Zip ファイル内のファイルのほとんどは、意図しない変更を回避するために読み取り専用になっています。 ファイルに出力を書き込んだり、ファイルを変更したりするには、ファイルのプロパティで読み取り専用属性をオフにする必要がある場合があります。
 
@@ -73,7 +73,7 @@ ms.locfileid: "65725750"
 
 パッケージを配置するコンピューターには、 **次のコンポーネントがインストールされている必要があります。**    
     
-- SQL Server :  ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
+- SQL Server : ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
 
 - サンプル データ、完成したパッケージ、構成、Readme。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。 Zip ファイル内のファイルのほとんどは、意図しない変更を回避するために読み取り専用になっています。 ファイルに出力を書き込んだり、ファイルを変更したりするには、ファイルのプロパティで読み取り専用属性をオフにする必要がある場合があります。
 

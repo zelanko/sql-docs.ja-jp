@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726423"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
@@ -84,7 +84,7 @@ ms.locfileid: "65726423"
   
 -   選択したオプションで、データの読み込みをテストします。  
   
- 変換先が呼び出す RFC 関数のログを有効にすることもできます  (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換先が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)」を参照してください。  
+ 変換先が呼び出す RFC 関数のログを有効にすることもできます (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換先が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   

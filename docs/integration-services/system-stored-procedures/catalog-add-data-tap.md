@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a4e4dc5e53f4e45c558b5d709073900b6e724f1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717106"
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap 
@@ -43,14 +43,14 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  パッケージを含む実行の実行 ID。 *execution_id* は **bigint** です。  
   
  [ @task_package_path = ] *task_package_path*  
- データ フロー タスクのパッケージ パス。 データ フロー タスクの **PackagePath** プロパティはパスを指定します。 パスの大文字と小文字は区別されます。 パッケージ パスを特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でデータ フロー タスクを右クリックし、**[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[PackagePath]** プロパティが表示されます。  
+ データ フロー タスクのパッケージ パス。 データ フロー タスクの **PackagePath** プロパティはパスを指定します。 パスの大文字と小文字は区別されます。 パッケージ パスを特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でデータ フロー タスクを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、 **[PackagePath]** プロパティが表示されます。  
   
  *task_package_path* は **nvarchar (max)** です。  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 パスの **IdentificationString** プロパティは文字列を指定します。  
   
- 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、**[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[IdentificationString]** プロパティが表示されます。  
+ 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、 **[IdentificationString]** プロパティが表示されます。  
   
  *dataflow_path_id_string* は **nvarchar (4000)** です。  
   

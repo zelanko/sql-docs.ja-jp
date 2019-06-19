@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726382"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
@@ -31,7 +31,7 @@ ms.locfileid: "65726382"
   
 -   **[プロパティ]** ウィンドウでは、各要素のコンポーネントレベルのカスタム プロパティ、およびすべてのデータ フロー要素との共通プロパティの一覧が表示されます。  
   
--   **[詳細エディター]** ダイアログ ボックスでは、各コンポーネントのカスタム プロパティにアクセスできます。 また、**[詳細エディター]** ダイアログ ボックスを使用すると、すべてのデータ フロー コンポーネントの共通プロパティである、入力、出力、エラー出力、列、および外部列のプロパティにもアクセスできます。  
+-   **[詳細エディター]** ダイアログ ボックスでは、各コンポーネントのカスタム プロパティにアクセスできます。 また、 **[詳細エディター]** ダイアログ ボックスを使用すると、すべてのデータ フロー コンポーネントの共通プロパティである、入力、出力、エラー出力、列、および外部列のプロパティにもアクセスできます。  
   
 ## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>コンポーネント エディターを使用してデータ フロー コンポーネントのプロパティを設定する  
   
@@ -108,7 +108,7 @@ ms.locfileid: "65726382"
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
 ## <a name="common-properties-of-data-flow-components"></a>データ フロー コンポーネントの共通プロパティ
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
  ここでは、データ フロー オブジェクトの共通プロパティを一覧で示し、それぞれについて説明します。  
   
@@ -135,12 +135,12 @@ ms.locfileid: "65726382"
 |[説明]|String|データ フロー コンポーネントの説明。 このプロパティの既定値は、データ フロー コンポーネントの名前です。|  
 |ID|Integer|コンポーネントのこのインスタンスを一意に識別する値。|  
 |[IdentificationString]|String|コンポーネントを識別します。|  
-|IsDefaultLocale|ブール値|コンポーネントが、それ自体が属するデータ フロー タスクのロケールを使用するかどうかを示します。|  
+|IsDefaultLocale|Boolean|コンポーネントが、それ自体が属するデータ フロー タスクのロケールを使用するかどうかを示します。|  
 |LocaleID|Integer|パッケージを実行する際、データ フロー コンポーネントが使用するロケール。 データ フロー コンポーネントでは、すべての Windows ロケールが使用できます。|  
 |[オブジェクト名]|String|データ フロー コンポーネントの名前。|  
 |PipelineVersion|Integer|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
-|UsesDispositions|ブール値|コンポーネントにエラー出力があるかどうかを示します。|  
-|[ValidateExternalMetadata]|ブール値|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True**です。|  
+|UsesDispositions|Boolean|コンポーネントにエラー出力があるかどうかを示します。|  
+|[ValidateExternalMetadata]|Boolean|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True**です。|  
 |バージョン|Integer|コンポーネントのバージョン。|  
   
 ###  <a name="inputs"></a> 入力プロパティ  
@@ -153,10 +153,10 @@ ms.locfileid: "65726382"
 |[説明]|String|入力の説明。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
-|HasSideEffects|ブール値|コンポーネントが下流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
+|HasSideEffects|Boolean|コンポーネントが下流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
 |ID|Integer|入力を一意に識別する値。|  
 |[IdentificationString]|String|入力を識別する文字列。|  
-|IsSorted|ブール値|入力のデータを並べ替えるかどうかを示します。|  
+|IsSorted|Boolean|入力のデータを並べ替えるかどうかを示します。|  
 |[オブジェクト名]|String|入力の名前。|  
 |SourceLocale|Integer|入力データのロケール ID (LCID)。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 です。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
@@ -194,16 +194,16 @@ ms.locfileid: "65726382"
   
 |プロパティ|データ型|[説明]|  
 |--------------|---------------|-----------------|  
-|DeleteOutputOnPathDetached|ブール値|出力がパスに接続されていない場合に、データ フロー エンジンが出力を削除するかどうかを指定する値。|  
+|DeleteOutputOnPathDetached|Boolean|出力がパスに接続されていない場合に、データ フロー エンジンが出力を削除するかどうかを指定する値。|  
 |[説明]|String|出力を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
 |ExclusionGroup|Integer|相互排他的な出力のグループを識別する値。|  
-|HasSideEffects|ブール値|コンポーネントが上流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
+|HasSideEffects|Boolean|コンポーネントが上流コンポーネントにアタッチされていない場合や、 **RunInOptimizedMode** が **true**の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
 |ID|Integer|出力を一意に識別する値。|  
 |[IdentificationString]|String|出力を識別する文字列。|  
-|IsErrorOut|ブール値|出力がエラー出力かどうかを示します。|  
-|IsSorted|ブール値|出力を並べ替えるかどうかを示します。 既定値は **False**です。<br /><br /> **\*\* 重要 \*\*** **IsSorted** プロパティの値を **True** に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
+|IsErrorOut|Boolean|出力がエラー出力かどうかを示します。|  
+|IsSorted|Boolean|出力を並べ替えるかどうかを示します。 既定値は **False**です。<br /><br /> **\*\* 重要 \*\*** **IsSorted** プロパティの値を **True** に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
 |[オブジェクト名]|String|出力の名前。|  
 |SynchronousInputID|Integer|出力に同期する入力の ID。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は **Fail component**、 **Ignore failure**、 **Redirect row**|  
@@ -316,7 +316,7 @@ ms.locfileid: "65726382"
   
 7.  左側のペインで **[変数]** を展開し、システム変数およびユーザー定義変数を表示します。また、 **[列]** を展開して、変換の入力列を表示します。  
   
-8.  右側のペインで **[数学関数]**、 **[文字列関数]**、 **[日付/時刻関数]**、 **[NULL 関数]**、 **[型キャスト]**、および **[演算子]** を展開して、式の文法で用意されている関数、キャスト、および演算子にアクセスします。  
+8.  右側のペインで **[数学関数]** 、 **[文字列関数]** 、 **[日付/時刻関数]** 、 **[NULL 関数]** 、 **[型キャスト]** 、および **[演算子]** を展開して、式の文法で用意されている関数、キャスト、および演算子にアクセスします。  
   
 9. 変換に応じて、次のいずれかの操作を実行し、式を作成します。  
   
