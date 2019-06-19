@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
 ms.date: 05/28/2019
-ms.prod: sql-server-2019
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
-ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
+ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66810285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836301"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 以前のリリースを基にして構築された [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムを選択できるプラットフォームとしての SQL Server がいっそう成長しています。 この記事では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]の新機能をまとめます。
 
@@ -60,6 +60,7 @@ Community Technology Preview (CTP) 3.0 は、[!INCLUDE[sql-server-2019](../inclu
 |[メモリ内データベース](../relational-databases/in-memory-database.md)により、ハイブリッド バッファー プールを制御する新しい DDL 構文が追加されました。 <sup>2</sup>|[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md)を使用すると、永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされます。|
 |新しいメモリ内データベース機能のメモリ最適化 tempdb メタデータが追加されました。|「[メモリ最適化 tempdb メタデータ](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」を参照してください。|
 |リンク サーバーでは UTF-8 文字エンコードがサポートされます。 |[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md) |
+|BIN2_UTF8 照合順序名は、Latin1_General_100_BIN2_UTF8 に変更されます。 |[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md) |
 |SQL Server セットアップには、文書化されているガイドラインに従う MaxDOP の推奨事項が含まれています。 |[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |並列処理の次数とクエリ プランのメモリ許可に関する詳細が `sys.dm_exec_query_plan_stats` によって返されます。 |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
@@ -779,7 +780,7 @@ FROM sys.dm_exec_requests AS d
 
 - [**SQL Server PowerShell モジュール**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): SQL Server の開発者、管理者、BI 専門家は、SqlServer PowerShell モジュールを使用して、データベースの配置とサーバーの管理を自動化できます。
 
-  - 21\.0 から 21.1 にアップグレードして SMO v150 をサポートします。
+  - 21.0 から 21.1 にアップグレードして SMO v150 をサポートします。
   - AS/IS/RS グループを表示するように SQL Server プロバイダー (SQLRegistration) が更新されました。
   - SQL Server 2014 を対象にしたときの `New-SqlAvailabilityGroup` コマンドレットの問題を修正しました。
   - `Set-SqlAvailabilityReplica` と `New-SqlAvailabilityReplica` に `–LoadBalancedReadOnlyRoutingList` パラメーターが追加されました。
