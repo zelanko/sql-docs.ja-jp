@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 163cdb0de7c41961e0646e38a5a208ec842f11b9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723757"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -47,7 +47,7 @@ ms.locfileid: "65723757"
 
 ## <a name="screen-shot---save-the-package-in-sql-server"></a>スクリーン ショット - SQL Server にパッケージを保存する
 
- 次のスクリーンショットは、**[パッケージの保存および実行]** ページで **[SQL Server]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
+ 次のスクリーンショットは、 **[パッケージの保存および実行]** ページで **[SQL Server]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
   
 ![インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ](../../integration-services/import-export-data/media/save-package2.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
 
@@ -73,14 +73,14 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
     
 ## <a name="screen-shot---save-the-package-in-the-file-system"></a>スクリーン ショット - ファイル システムにパッケージを保存する
  
-次のスクリーンショットは、**[パッケージの保存および実行]** ページで **[ファイル システム]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
+次のスクリーンショットは、 **[パッケージの保存および実行]** ページで **[ファイル システム]** を選択した場合のウィザードの **[SSIS パッケージの保存]** ページです。 
   
 ![インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ](../../integration-services/import-export-data/media/save-package1.png "インポートおよびエクスポート ウィザードの [SSIS パッケージの保存] ページ")  
 
 ## <a name="options-to-specify-target--file-system"></a>指定するオプション (ターゲット = ファイル システム)
 
  **[ファイル名]**  
- 保存先ファイルのパスとファイル名を入力するか、**[参照]** ボタンを使用して保存先を指定します。  
+ 保存先ファイルのパスとファイル名を入力するか、 **[参照]** ボタンを使用して保存先を指定します。  
   
 > [!TIP]
 > 保存先フォルダーは、入力するか参照して、必ず指定してください。 ファイル名のみを入力し、パスを入力しないと、ウィザードがパッケージをどこに保存するかわかりません。 また、ウィザードはユーザーがファイル保存権限を持っていない場所にパッケージを保存しようとして、エラーが発生する可能性があります。  
@@ -88,7 +88,7 @@ SQL Server 認証を指定した場合は、パスワードを入力します。
 >  パッケージ ファイルの保存場所を忘れないでください。  
   
  **[参照]**  
- 必要に応じて、**[パッケージの保存]** ダイアログ ボックスで保存先ファイルのパスを参照して選択します。  
+ 必要に応じて、 **[パッケージの保存]** ダイアログ ボックスで保存先ファイルのパスを参照して選択します。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>パッケージを保存するためのオプションの 2 つのページについて  
  **[SSIS パッケージの保存]** ページは、SSIS パッケージを保存するためのオプションを選択する 2 つのページの 1 つです。  

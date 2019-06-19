@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ace708cc4ee09295380b814bbf21f5a1c350974
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075707"
 ---
 # <a name="define-cube-hierarchy-properties"></a>キューブ階層のプロパティの定義
@@ -30,7 +30,7 @@ ms.locfileid: "66075707"
 |`OptimizedState`|階層に適用される最適化のレベルを決定します。 このプロパティは、以下の値をとります。<br /><br /> `FullyOptimized`:インスタンスは、階層のインデックスを構築し、クエリ パフォーマンスを改善します。 これが既定値です。<br /><br /> `NotOptimized`:インスタンスは追加のインデックスを構築しません。|  
 |`Visible`|キューブ階層の表示を決定します。 既定値は `True` です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー階層](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)  
   
   

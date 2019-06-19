@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0e2cb6de46a20f185819f42825576ee529e0198
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108056"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードの PowerShell コマンドレット
-   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
   
 -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスおよびプロキシのインストール。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66108056"
   
 ##  <a name="bkmk_cmdlet_sum"></a> コマンドレットの概要  
 
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)**) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)) を使用することもできます。 サービス アプリケーション「データベース」への参照を次のコマンドレット概要では、すべてのデータベースによって作成および使用を参照してください、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)** ) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)) を使用することもできます。 サービス アプリケーション「データベース」への参照を次のコマンドレット概要では、すべてのデータベースによって作成および使用を参照してください、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービス アプリケーション。 これには、構成、警告、および一時データベースが含まれます。  
 
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
@@ -74,7 +74,7 @@ ms.locfileid: "66108056"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 詳細については、次を参照してください。 [SharePoint 2013 を管理する Windows PowerShell を使用して](https://technet.microsoft.com/library/ee806878.aspx)(https://technet.microsoft.com/library/ee806878.aspx)します。  
+ 詳細については、次を参照してください。 [SharePoint 2013 を管理する Windows PowerShell を使用して](https://technet.microsoft.com/library/ee806878.aspx)(https://technet.microsoft.com/library/ee806878.aspx) します。  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 管理シェルを開いてコマンドレットを実行するには  
   
@@ -178,7 +178,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  作成したプロキシを既定のプロキシ グループに追加する。  
   
-3.  ポート 80 の Web アプリケーションのコンテンツ データベースに、サービス アプリケーション アクセス権を付与する。 スクリプトには、サイトが前提としています"http://sitename"既に存在します。  
+3.  ポート 80 の Web アプリケーションのコンテンツ データベースに、サービス アプリケーション アクセス権を付与する。 スクリプトには、サイトが前提としています"http://sitename "既に存在します。  
   
 ```  
 # Create service application and service application proxy  

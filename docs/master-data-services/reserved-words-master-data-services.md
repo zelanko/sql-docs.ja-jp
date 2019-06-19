@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f12b95a192535b037f01a601146a0bba544d8fae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485963"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
@@ -80,7 +80,7 @@ ms.locfileid: "65485963"
 ##  <a name="members"></a> メンバー  
  メンバーの場合、 **MDMMemberStatus**、 **MDMUnused**、または **ROOT** を **Code** 属性値として使用することはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1d9d1f61302d33bf038c9dbbde7c30a6aaf41282
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104290"
 ---
 # <a name="registered-servers-f1-help"></a>[登録済みサーバー] の F1 ヘルプ
@@ -118,7 +118,7 @@ ms.locfileid: "65104290"
   
 ### <a name="options"></a>および  
  **サーバーの種類**  
- [登録済みサーバー] でサーバーを登録する場合は、 **[サーバーの種類]** ボックスは読み取り専用になっており、そのサーバーは [登録済みサーバー] に表示されるサーバーの種類に一致します。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]**, **[データベース エンジン]**, **[分析サーバー]**, **[Reporting Services]**、**[SQL Server Compact]** **[Edition]**、または **[Integration Services]** をクリックします。  
+ [登録済みサーバー] でサーバーを登録する場合は、 **[サーバーの種類]** ボックスは読み取り専用になっており、そのサーバーは [登録済みサーバー] に表示されるサーバーの種類に一致します。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]** , **[データベース エンジン]** , **[分析サーバー]** , **[Reporting Services]** 、 **[SQL Server Compact]** **[Edition]** 、または **[Integration Services]** をクリックします。  
   
  **サーバー名**  
  接続先のサーバーを選択します。 既定では、最後に接続していたサーバーが表示されます。  
