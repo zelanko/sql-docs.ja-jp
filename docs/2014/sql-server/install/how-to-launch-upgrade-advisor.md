@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094904"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>操作方法:アップグレード アドバイザーを起動する
@@ -27,7 +27,7 @@ ms.locfileid: "66094904"
   
 ### <a name="to-launch-upgrade-advisor"></a>アップグレード アドバイザーを起動するには  
   
--   アップグレード アドバイザーを起動する をクリックして**開始**、 をクリックして**すべてのプログラム**、 をクリックして **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**、 をクリックし、 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**.  
+-   アップグレード アドバイザーを起動する をクリックして**開始**、 をクリックして**すべてのプログラム**、 をクリックして **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 、 をクリックし、 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**.  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーを実行している&#40;ユーザー インターフェイス&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 1a3610cddb39db4930bfb401fc9be7351f4f7223
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66761762"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>cursor threshold サーバー構成オプションの構成
@@ -41,7 +41,7 @@ ms.locfileid: "66761762"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[cursor threshold オプションを構成した後](#FollowUp)  
+-   **補足情報:** [cursor threshold オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66761762"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `cursor threshold` オプションを `0` に設定して、カーソル キーセットを非同期に生成する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して `cursor threshold` オプションを `0` に設定して、カーソル キーセットを非同期に生成する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

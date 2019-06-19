@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069135"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスターの識別] タブ (マイニング モデル ビューアー)
@@ -24,7 +24,7 @@ ms.locfileid: "66069135"
   
  2 つのクラスターを比較して、異なっている状態と遷移を確認するには、シーケンス クラスター モデルのこのビューを使用します。  
   
- **詳細情報。**[Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **詳細情報。** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -53,7 +53,7 @@ ms.locfileid: "66069135"
 |-----------|-----------------|  
 |**変数**|マイニング モデルの属性です。|  
 |**値**|**[変数]** に一覧表示される属性の状態です。|  
-|**優先\<クラスター 1 >**|**[変数]** および **[値]** に示された属性および状態が、**[クラスター 1]** で選択されたクラスターでどの程度優位であるかを示す色つきのバーを表示します。|  
+|**優先\<クラスター 1 >**|**[変数]** および **[値]** に示された属性および状態が、 **[クラスター 1]** で選択されたクラスターでどの程度優位であるかを示す色つきのバーを表示します。|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

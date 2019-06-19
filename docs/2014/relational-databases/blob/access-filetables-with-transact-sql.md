@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010428"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact SQL を使用した FileTable へのアクセス
@@ -68,7 +68,7 @@ ms.locfileid: "66010428"
   
 -   **last_access_time** の値が **last_write_time** や **creation_time**よりも前に来ることはできません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable へのファイルの読み込み](load-files-into-filetables.md)   
  [FileTable 内のディレクトリとパスの操作](work-with-directories-and-paths-in-filetables.md)   
  [ファイル I/O API を使用した FileTable へのアクセス](access-filetables-with-file-input-output-apis.md)   

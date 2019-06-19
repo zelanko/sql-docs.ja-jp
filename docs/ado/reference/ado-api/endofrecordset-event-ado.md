@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 414094da95076a7fb3781877645c5d43a03e6a7f
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66698219"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset イベント (ADO)
@@ -53,6 +53,6 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
  末尾を越えた移動を試行したときに、このイベント ハンドラーが呼び出されます、 **Recordset**呼び出しの結果などのオブジェクト**MoveNext**します。 ただし、このイベント中にデータベースから複数のレコードを取得してそれらの末尾に追加、 **Recordset**します。 この場合は、 *fMoreData* 、VARIANT_TRUE とからの戻り値に**EndOfRecordset**します。 呼び出して**MoveNext**新しく取得したレコードにアクセスするには、もう一度です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

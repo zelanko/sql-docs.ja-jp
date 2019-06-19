@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63239002"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer コントロールの使用
@@ -30,7 +30,7 @@ ms.locfileid: "63239002"
   
      既存の Windows アプリケーション プロジェクトを開いて新しいフォームを追加します。  
   
-2.  **ツールボックス**で ReportViewer コントロールを探します。 **ツールボックス**が表示されていない場合は、**[表示]** メニューの **[ツールボックス]** をクリックするとアクセスできます。  
+2.  **ツールボックス**で ReportViewer コントロールを探します。 **ツールボックス**が表示されていない場合は、 **[表示]** メニューの **[ツールボックス]** をクリックするとアクセスできます。  
   
      ![ReportViewer コントロールを選択する](../../../2014/reporting-services/media/windowsapp-toolboxreportviewer.png "ReportViewer コントロールを選択する")  
   
@@ -38,13 +38,13 @@ ms.locfileid: "63239002"
   
      reportViewer1 という名前の ReportViewer コントロールがフォームに追加されます。  
   
- コントロールがフォームに追加されると、**[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。  
+ コントロールがフォームに追加されると、 **[ReportViewer タスク]** スマート タグが表示され、レポートの選択を求めるメッセージが表示されます。  
   
- 表示するレポートがレポート サーバーに配置されている場合は、**[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 後に、 **\<サーバー レポート >** オプションが選択されている場合、2 つの追加プロパティが表示されます。**レポート サーバーの Url**と**レポート パス**します。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、**[レポートのパス]** は表示するレポートへの完全なパスです。  
+ 表示するレポートがレポート サーバーに配置されている場合は、 **[レポートの選択]** ドロップダウン リストから **[\<サーバー レポート>]** を選択します。 後に、 **\<サーバー レポート >** オプションが選択されている場合、2 つの追加プロパティが表示されます。**レポート サーバーの Url**と**レポート パス**します。 **[レポート サーバー URL]** はレポート サーバーのアドレスで、 **[レポートのパス]** は表示するレポートへの完全なパスです。  
   
  ![サーバー レポートの選択](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "サーバー レポートの選択")  
   
- レポートをローカル モードで表示する場合は、**[新しいレポートのデザイン]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。  
+ レポートをローカル モードで表示する場合は、 **[新しいレポートのデザイン]** オプションを選択してレポート デザイナーを起動するか、または既存のプロジェクトに既に含まれているレポートを選択します。  
   
  ![ローカル レポートの選択](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "ローカル レポートの選択")  
   
@@ -160,9 +160,9 @@ End Class
   
      ![Sales Order Detail レポート](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Sales Order Detail レポート")  
   
-5.  ソリューション エクスプローラーで Sales Order Detail.rdl ファイルを右クリックし、**[名前の変更]** を選択します。 レポートの名前を **Sales Order Detail.rdlc** に変更し、Enter キーを押します。  
+5.  ソリューション エクスプローラーで Sales Order Detail.rdl ファイルを右クリックし、 **[名前の変更]** を選択します。 レポートの名前を **Sales Order Detail.rdlc** に変更し、Enter キーを押します。  
   
-     ソリューション エクスプローラーが表示されていない場合は、**[表示]** メニューの **[ソリューション エクスプローラー]** を選択して開くことができます。  
+     ソリューション エクスプローラーが表示されていない場合は、 **[表示]** メニューの **[ソリューション エクスプローラー]** を選択して開くことができます。  
   
     > [!NOTE]  
     >  ファイルの拡張子を rdl から rdlc に変更することによって、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] のレポート デザイナーでレポートを編集できるようになります。  
@@ -171,7 +171,7 @@ End Class
   
      ![出力にコピーの設定を構成する](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "出力にコピーの設定を構成する")  
   
-     **[プロパティ]** ウィンドウが表示されていない場合は、**[表示]** メニューから **[プロパティ ウィンドウ]** を選択して開くことができます。  
+     **[プロパティ]** ウィンドウが表示されていない場合は、 **[表示]** メニューから **[プロパティ ウィンドウ]** を選択して開くことができます。  
   
  次のコード例では、販売注文データのデータセットが作成され、Sales Order Detail レポートがローカル モードで表示されます。  
   
@@ -501,7 +501,7 @@ Public Class Form1
 End Class  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ReportViewer コントロールを使用した Reporting Services の統合](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068161"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>列を指定する&#39;s コンテンツおよびデータ型 (データ マイニング ウィザード)
   **[列のコンテンツおよびデータ型の指定]** ページを使用すると、ウィザードで既に設定されている列型およびコンテンツの種類を変更できます。 ウィザードは、ソース列のデータ型および選択されているアルゴリズムの機能を使用して、各列の既定のデータ型およびコンテンツの種類を決定します。  
   
- **詳細情報。**[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。** [データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **[列]**  

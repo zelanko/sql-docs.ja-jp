@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62961914"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -83,7 +83,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |ORDINAL_POSITION|**int**|インデックス内の列の序数です。 インデックスの最初の列には 1 です。 この列は常に値が返されます。|  
 |COLUMN_NAME|**sysname**|返される TABLE_NAME の各列の対応する列の名前です。|  
 |ASC_OR_DESC|**varchar**|順序は、照合順序で使用されます。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に A を返します。|  
-|カーディナリティ|**int**|テーブル内の行数またはインデックス内の一意な値の個数です。|  
+|CARDINALITY|**int**|テーブル内の行数またはインデックス内の一意な値の個数です。|  
 |PAGES|**int**|インデックスまたはテーブルを格納するページの数です。|  
 |FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
   
@@ -100,7 +100,7 @@ EXEC sp_indexes @table_server = 'Seattle1',
    @table_catalog = 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [分散クエリ ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   

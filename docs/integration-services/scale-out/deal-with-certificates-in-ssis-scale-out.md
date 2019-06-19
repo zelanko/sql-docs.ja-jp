@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 12f67e7a17ba253ab49b1e61fe3de33a45e0cb55
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718729"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out の証明書を管理する
@@ -36,7 +36,7 @@ SQL Server インストール ウィザードの **[Integration Services Scale O
 
 **新しい証明書**。 証明書に対して特別な要件がない場合は、新しい自己署名 SSL 証明書の作成を選択できます。 さらに、証明書で CN を指定できます。 後で Scale Out Worker によって使用されるマスター エンドポイントのホスト名が CN に含まれていることを確認してください。 既定では、マスター ノードの IP アドレスとコンピューターの名前が含まれます。 
 
-**既存の証明書**。 既存の証明書を使用することを選択する場合は、**[参照]** をクリックし、ローカル コンピューターの**ルート**証明書ストアから SSL 証明書を選択します。
+**既存の証明書**。 既存の証明書を使用することを選択する場合は、 **[参照]** をクリックし、ローカル コンピューターの**ルート**証明書ストアから SSL 証明書を選択します。
 
 ### <a name="change-the-scale-out-master-certificate"></a>Scale Out Master 証明書の変更
 

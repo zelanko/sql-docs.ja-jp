@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032745"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (TRANSACT-SQL)
@@ -47,15 +47,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @procedure_name = ] 'name'` カタログ情報を返すために使用するプロシージャの名前です。 *名前*は**nvarchar (** 390 **)**% の既定値は、現在のデータベース内のすべてのテーブルを意味します。 ワイルドカードによるパターン照合はサポートされています。  
+`[ @procedure_name = ] 'name'` カタログ情報を返すために使用するプロシージャの名前です。 *名前*は**nvarchar (** 390 **)** % の既定値は、現在のデータベース内のすべてのテーブルを意味します。 ワイルドカードによるパターン照合はサポートされています。  
   
-`[ @procedure_owner = ] 'owner'` プロシージャの所有者の名前です。 *所有者*は**nvarchar (** 384 **)**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。 場合*所有者*が指定されていない、基になる DBMS の既定のプロシージャの可視性規則が適用されます。  
+`[ @procedure_owner = ] 'owner'` プロシージャの所有者の名前です。 *所有者*は**nvarchar (** 384 **)** 、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。 場合*所有者*が指定されていない、基になる DBMS の既定のプロシージャの可視性規則が適用されます。  
   
  現在のユーザーに指定した名前のプロシージャが所有している場合は、そのプロシージャに関する情報が返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定した名前を持つプロシージャを所有していない**sp_sproc_columns**データベースの所有者によって所有されている指定の名前を持つプロシージャを探します。 プロシージャが存在する場合は、その列の情報が返されます。  
   
 `[ @procedure_qualifier = ] 'qualifier'` プロシージャ修飾子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このパラメーターは、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
-`[ @column_name = ] 'column_name'` 1 つの列は、カタログ情報の 1 つだけの列が必要なときに使用されます。 *column_name*は**nvarchar (** 384 **)**、既定値は NULL です。 場合*column_name*は省略すると、すべての列が返されます。 ワイルドカードによるパターン照合はサポートされています。 相互運用性を最大に、ゲートウェイのクライアントが、ISO 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定してください。  
+`[ @column_name = ] 'column_name'` 1 つの列は、カタログ情報の 1 つだけの列が必要なときに使用されます。 *column_name*は**nvarchar (** 384 **)** 、既定値は NULL です。 場合*column_name*は省略すると、すべての列が返されます。 ワイルドカードによるパターン照合はサポートされています。 相互運用性を最大に、ゲートウェイのクライアントが、ISO 標準のパターン照合 (% と _ ワイルドカード文字) のみを想定してください。  
   
 `[ @ODBCVer = ] 'ODBCVer'` ODBC のバージョンは使用されています。 *ODBCVer*は**int**を既定値は 2 には、ODBC version 2.0 を示します。 ODBC version 2.0 と ODBC version 3.0 の違いの詳細については、ODBC を参照してください**SQLProcedureColumns** ODBC version 3.0 の仕様  
   

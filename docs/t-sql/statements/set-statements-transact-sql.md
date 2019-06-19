@@ -27,10 +27,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: bc660aeb0ca4e7b56cae69a8eb294c6681b1765c
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620330"
 ---
 # <a name="set-statements-transact-sql"></a>SET ステートメント (Transact-SQL)
@@ -93,4 +93,4 @@ SET ステートメントを使用したローカル変数の設定について�
   これらのオプションのうち 1 つでも正しく設定しなかった場合は、インデックス付きビューに対して、または計算列にインデックスが含まれているテーブルに対して INSERT、UPDATE、DELETE、DBCC CHECKDB、DBCC CHECKTABLE を実行すると操作は失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが発生し、正しく設定されなかったすべてのオプションが一覧表示されます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このようなテーブルやインデックス付きビューに対して SELECT ステートメントを実行すると、計算列またはビューにインデックスが存在しないものとして処理されます。 
 
 - SET RESULT_SET_CACHING が ON の場合、現在のクライアント セッションの結果のキャッシュ機能が有効になります。   Result_set_caching がデータベース レベルで OFF にされていた場合、これをセッションで ON にすることはできません。    SET RESULT_SET_CACHING が OFF の場合、現在のクライアント セッションの結果セットのキャッシュ機能が無効になります。 この設定を変更するには、public ロールのメンバーシップが必要です。
-適用対象Azure SQL Data Warehouse Gen2
+適用対象:Azure SQL Data Warehouse Gen2

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779972"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
@@ -33,7 +33,7 @@ ms.locfileid: "62779972"
   
 -   サンプルをインストールしてデモ ワークロードを実行するための[前提条件](#Prerequisites)  
   
--    [AdventureWorksに基づくインメモリOLTPサンプルのインストール](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
+-   [AdventureWorksに基づくインメモリOLTPサンプルのインストール](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
   
 -   [サンプル テーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures)-テーブルおよびプロシージャによって AdventureWorks に追加の説明が含まれるこの、[!INCLUDE[hek_2](../includes/hek-2-md.md)]の移行に関する考慮事項とサンプルについては、AdventureWorks のテーブルに、元の一部メモリ最適化  
   
@@ -227,7 +227,7 @@ ms.locfileid: "62779972"
   
 -   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
--   *"UNIQUE 制約"*, *Check* 、および *"外部キー制約"* are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem 、および "外部キー制約" Product.usp_DeleteProduct_inmem can be used to insert 、および "外部キー制約" delete products; these procedures validate domain 、および "外部キー制約" referential integrity, 、および "外部キー制約" will fail if integrity is violated. 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
+-   *"UNIQUE 制約"* , *Check* 、および *"外部キー制約"* are accounted for in two ways: the stored procedures Product.usp_InsertProduct_inmem 、および "外部キー制約" Product.usp_DeleteProduct_inmem can be used to insert 、および "外部キー制約" delete products; these procedures validate domain 、および "外部キー制約" referential integrity, 、および "外部キー制約" will fail if integrity is violated. 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
   
     ```  
     DECLARE @o int = object_id(N'Production.Product')  

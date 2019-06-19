@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: SQL Server Management Studio components and configuration'
+title: チュートリアル:SQL Server Management Studio のコンポーネントと構成
 description: SQL Server Management Studio 環境のコンポーネントと基本的な構成オプションについて説明するチュートリアルです。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,14 +11,15 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 10be7a0bcc588961321713e365819a5f699bcbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662686"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822273"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>チュートリアル:SQL Server Management Studio のコンポーネントと構成
+
 このチュートリアルでは、SQL Server Management Studio (SSMS) 内のさまざまなウィンドウ コンポーネントと、ワークスペースに関する基本的な構成オプションについて説明します。 この記事では、次の方法を学習します。 
 
 > [!div class="checklist"]
@@ -38,14 +39,14 @@ ms.locfileid: "56662686"
 このセクションでは、ワークスペースで利用できるさまざまなウィンドウ コンポーネントとその使用方法について説明します。 
 
 - ウィンドウを閉じるには、タイトル バーの右隅にある **[X]** を選択します。 
-- ウィンドウをもう一度開くには、**[表示]** メニューでウィンドウを選択します。 
+- ウィンドウをもう一度開くには、 **[表示]** メニューでウィンドウを選択します。 
 
     ![[表示] メニュー](media/ssms-configuration/viewmenu.png)
 
 - **オブジェクト エクスプローラー** (F8):オブジェクト エクスプローラーには、サーバー上のすべてのデータベース オブジェクトがツリー形式で表示されます。 このビューには、SQL Server Database Engine、SQL Server Analysis Services、SQL Server Reporting Services、SQL Server Integration Services のデータベースが含まれています。 オブジェクト エクスプローラーには、それに接続されているすべてのサーバーの情報が含まれています。 
     
     ![オブジェクト エクスプローラー](media/ssms-configuration/objectexplorer.png)
-- **クエリ ウィンドウ** (Ctrl + N):**[新しいクエリ]** を選択したら、このウィンドウに Transact-SQL (T-SQL) クエリを入力します。 クエリの結果もここに表示されます。
+- **クエリ ウィンドウ** (Ctrl + N): **[新しいクエリ]** を選択したら、このウィンドウに Transact-SQL (T-SQL) クエリを入力します。 クエリの結果もここに表示されます。
     
     ![[新しいクエリ] ウィンドウ](media/ssms-configuration/newquery.png)
 
@@ -87,11 +88,11 @@ ms.locfileid: "56662686"
 
       ![垂直タブ グループの例](media/ssms-configuration/verticaltabgroup.png)
         
-    - タブをマージするには、クエリのタイトルを右クリックし、**[前のタブ グループへ移動]** または **[次のタブ グループへ移動]** を選択します。
+    - タブをマージするには、クエリのタイトルを右クリックし、 **[前のタブ グループへ移動]** または **[次のタブ グループへ移動]** を選択します。
     
       ![クエリ タブをマージする](media/ssms-configuration/mergetabgroups.png)
 
-- 既定の環境レイアウトに戻すには、**[ウィンドウ]** メニューで **[ウィンドウ レイアウトのリセット]** を選択します。
+- 既定の環境レイアウトに戻すには、 **[ウィンドウ]** メニューで **[ウィンドウ レイアウトのリセット]** を選択します。
  
     ![元のウィンドウ レイアウトに戻す](media/ssms-configuration/resetwindowlayout.png)
     
@@ -106,27 +107,27 @@ ms.locfileid: "56662686"
 
 
 ## <a name="change-basic-settings"></a>基本設定を変更する
-このセクションでは、**[ツール]** メニューから SSMS の基本設定を一部変更する方法について説明します。
+このセクションでは、 **[ツール]** メニューから SSMS の基本設定を一部変更する方法について説明します。
 
   ![[ツール] メニュー](media/ssms-configuration/tools.png)
 
 
-- 強調表示されているツール バーを変更するには、**[ツール]** > **[カスタマイズ]** の順に選択します。
+- 強調表示されているツール バーを変更するには、 **[ツール]**  >  **[カスタマイズ]** の順に選択します。
 
     ![ツール バーのカスタマイズ](media/ssms-configuration/toolbar.png)
 
 ### <a name="change-the-font"></a>フォントを変更する
-- フォントを変更するには、**[ツール]** > **[オプション]** > **[フォントおよび色]** の順に選択します。
+- フォントを変更するには、 **[ツール]**  >  **[オプション]**  >  **[フォントおよび色]** の順に選択します。
 
      ![フォントと色を変更する](media/ssms-configuration/fontsandcolors.png)
 
 ### <a name="change-startup-options"></a>スタートアップ オプションの変更
-- SSMS を初めて開いたときのワークスペースの外観は、スタートアップ オプションによって決まります。 スタートアップ オプションを変更するには、**[ツール]** > **[オプション]** > **[スタートアップ]** の順に選択します。
+- SSMS を初めて開いたときのワークスペースの外観は、スタートアップ オプションによって決まります。 スタートアップ オプションを変更するには、 **[ツール]**  >  **[オプション]**  >  **[スタートアップ]** の順に選択します。
  
     ![スタートアップ オプションの変更](media/ssms-configuration/startup.png)
 
 ### <a name="reset-settings-to-the-default"></a>設定をリセットして既定値に戻す
-- メニューからすべての設定をインポートまたはエクスポートできます。 設定をインポートまたはエクスポートするには、あるいは既定の設定に戻すには、**[ツール]** > **[設定のインポートとエクスポート]** の順に選択します。 
+- メニューからすべての設定をインポートまたはエクスポートできます。 設定をインポートまたはエクスポートするには、あるいは既定の設定に戻すには、 **[ツール]**  >  **[設定のインポートとエクスポート]** の順に選択します。 
 
     ![設定のインポートとエクスポート](media/ssms-configuration/settings.png)
 

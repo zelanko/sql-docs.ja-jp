@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 418921c7ce0f37cbbf7953f6b8023a717f8ae54b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726780"
 ---
 # <a name="hdfs-file-destination"></a>HDFS ファイル変換先
@@ -62,8 +62,8 @@ Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイ
 5. **[変数名]** に「`JAVA_HOME`」と入力します。
 6. **[ディレクトリの参照]** を選択し、解凍したフォルダーに移動し、`jre` サブフォルダーを選択します。
    **[OK]** を選択すると、**変数の値**が自動的に入力されます。
-7. **[OK]** を選択し、**[新しいシステム変数]** ダイアログ ボックスを閉じます。
-8. **[OK]** を選択し、**[環境変数]** ダイアログ ボックスを閉じます。
+7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。
+8. **[OK]** を選択し、 **[環境変数]** ダイアログ ボックスを閉じます。
 9. **[OK]** を選択して **[システム プロパティ]** ダイアログ ボックスを閉じます。
 
 ### <a name="set-up-oracles-java-se-runtime-environment"></a>Oracle の Java SE Runtime Environment を設定する

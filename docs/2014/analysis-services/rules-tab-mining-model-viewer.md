@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070098"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>[ルール] タブ (マイニング モデル ビューアー)
@@ -27,7 +27,7 @@ ms.locfileid: "66070098"
 > [!WARNING]  
 >  既定では、 **[最小の確率]** に定義された確率のしきい値を上回るルールだけがビューアーに表示されます。 ルールの出力に対する確率のしきい値はモデルの作成時に決定されるので、ビューアーでこの値を小さくすることはできません。 詳細については、「 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](data-mining/microsoft-association-algorithm-technical-reference.md)」を参照してください。  
   
- **詳細情報。**[Microsoft アソシエーション アルゴリズム](data-mining/microsoft-association-algorithm.md)、 [Microsoft アソシエーション ルール ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **詳細情報。** [Microsoft アソシエーション アルゴリズム](data-mining/microsoft-association-algorithm.md)、 [Microsoft アソシエーション ルール ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -86,7 +86,7 @@ ms.locfileid: "66070098"
   
  列見出しをクリックすることで、ルールのテキストで並べ替えることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063800"
 ---
 # <a name="spatial-results-window"></a>[空間結果] ウィンドウ
@@ -33,7 +33,7 @@ ms.locfileid: "66063800"
  クエリで Point インスタンスのみが返される場合は、このオプションを使用できません。  
   
  **[投影の選択]**  
- 4 つの投影の 1 つの geography 型のデータを表示します。正距円筒図法、メルカトル図法、ロビンソン図法、または幸運を祈ります。  
+ geography 型のデータを、4 つの投影法のいずれかで表示します:正距円筒図法、メルカトル図法、ロビンソン図法、ボンヌ図法。  
   
  このオプションは、geometry 型のデータには使用できません。  
   

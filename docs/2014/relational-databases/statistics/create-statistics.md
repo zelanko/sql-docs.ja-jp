@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033658"
 ---
 # <a name="create-statistics"></a>統計の作成
@@ -67,7 +67,7 @@ ms.locfileid: "63033658"
   
 3.  プラス記号をクリックして、新しい統計を作成するテーブルを展開します。  
   
-4.  **[統計]** フォルダーを右クリックし、**[新しい統計]** を選択します。  
+4.  **[統計]** フォルダーを右クリックし、 **[新しい統計]** を選択します。  
   
      **テーブル名**  **ダイアログ ボックスの**_全般_ ページで次のプロパティが表示されます。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "63033658"
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-7.  **[テーブルの新しい統計 - _テーブル名_]** ダイアログ ボックスで、**[OK]** をクリックします。  
+7.  **[テーブルの新しい統計 - _テーブル名_]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

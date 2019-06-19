@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8e7090865428be5da4e917b9894c940ef5975b2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723956"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>[フラット ファイルの変換先の構成] (SQL Server インポートおよびエクスポート ウィザード)
@@ -24,7 +24,7 @@ ms.locfileid: "65723956"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  フラット ファイルの変換先を選択した場合、テーブルをコピーするように指定した後で、またはクエリを指定した後で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、**[フラット ファイルの変換先の構成]** が表示されます。 このページで、宛先のフラット ファイルの書式設定オプションを指定します 必要に応じて、個々の列のマッピングを確認し、サンプル データをプレビューします。  
+  フラット ファイルの変換先を選択した場合、テーブルをコピーするように指定した後で、またはクエリを指定した後で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[フラット ファイルの変換先の構成]** が表示されます。 このページで、宛先のフラット ファイルの書式設定オプションを指定します 必要に応じて、個々の列のマッピングを確認し、サンプル データをプレビューします。  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>[フラット ファイル変換先の構成] ページのスクリーン ショット  
  次のスクリーン ショットは、ウィザードの **[フラット ファイルの変換先の構成]** ページのサンプルです。
@@ -72,14 +72,14 @@ ms.locfileid: "65723956"
 ## <a name="optionally-review-column-mappings-and-preview-data"></a>必要に応じて、列マッピングとプレビュー データをレビューします。
 
 **マッピングの編集**   
-必要に応じて、**[マッピングの編集]** をクリックして、選択したテーブルに対する **[列マッピング]** ダイアログ ボックスを表示します。 **[列マッピング]** ダイアログ ボックスを使用して、次のことを行います。
+必要に応じて、 **[マッピングの編集]** をクリックして、選択したテーブルに対する **[列マッピング]** ダイアログ ボックスを表示します。 **[列マッピング]** ダイアログ ボックスを使用して、次のことを行います。
 -   変換元と変換先の間の個々の列のマッピングを確認します。
 -   列のサブセットのみをコピーするには、コピーしない列について **[無視]** を選択します。
 
 詳細については、「 [列マッピング](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)」を参照してください。  
 
 **プレビュー**  
-必要に応じて、**[プレビュー]** をクリックして、**[データのプレビュー]** ダイアログ ボックスで、最大 200 行のサンプル データをプレビューします。 プレビューで、コピーしたいデータがウィザードによってコピーされることを確認します。 詳細については、 [データのプレビュー](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)に関するページを参照してください。  
+必要に応じて、 **[プレビュー]** をクリックして、 **[データのプレビュー]** ダイアログ ボックスで、最大 200 行のサンプル データをプレビューします。 プレビューで、コピーしたいデータがウィザードによってコピーされることを確認します。 詳細については、 [データのプレビュー](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)に関するページを参照してください。  
   
 データをプレビューした後で、ウィザードの前のページで選択したオプションを変更してもかまいません。 これらの変更を行うには、 **[フラット ファイルの変換先の構成]** ページに戻り、 **[戻る]** をクリックし、選択の変更が可能な前のページに戻ります。  
 

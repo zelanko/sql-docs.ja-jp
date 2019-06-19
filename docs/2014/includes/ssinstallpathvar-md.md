@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4fe9c9ad1088ffdca3710b06bbf4009c28f45458
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
-ms.translationtype: MT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65819326"
 ---
 \<*ドライブ*\>:\\Program Files\\Microsoft SQL Server\\120\\

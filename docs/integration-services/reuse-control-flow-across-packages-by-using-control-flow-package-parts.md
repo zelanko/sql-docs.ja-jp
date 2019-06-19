@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15ba5f56b5a23b77fae66d8e4032e91a67f6a1f5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719573"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>制御フロー パッケージ パーツを使用することによりパッケージ間で制御フローを再利用する
@@ -113,9 +113,9 @@ ms.locfileid: "65719573"
   
  右側のウィンドウのテーブルに構成対象のプロパティが一覧表示されます。  
   
--   **[プロパティのパス]**。 プロパティのプロパティ パスです。  
+-   **[プロパティのパス]** 。 プロパティのプロパティ パスです。  
   
--   **[プロパティの型]**。 プロパティのデータ型。  
+-   **[プロパティの型]** 。 プロパティのデータ型。  
   
 -   **値**。 構成された値です。 この値は既定値をオーバーライドします。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "65719573"
   
  右側のウィンドウのリストに、選択した接続マネージャーのプロパティが一覧表示されます。  
   
--   **[設定]**。 オンの場合、パーツ インスタンスのプロパティが構成されます。  
+-   **[設定]** 。 オンの場合、パーツ インスタンスのプロパティが構成されます。  
   
 -   **[プロパティ名]** プロパティの名前。  
   

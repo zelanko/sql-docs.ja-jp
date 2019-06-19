@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767451"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>手順 1:レッスン 3 のパッケージのコピー
@@ -22,7 +22,7 @@ ms.locfileid: "62767451"
   
 ### <a name="to-create-the-lesson-4-package"></a>レッスン 4 のパッケージを作成するには  
   
-1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server Data Tools]** をクリックします。  
+1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server Data Tools]** をクリックします。  
   
 2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[SSIS Tutorial]** フォルダーをクリックして **[開く]** をクリックした後、 **SSIS Tutorial.sln**をダブルクリックします。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62767451"
   
 7.  [プロパティ] ウィンドウでは、更新、`Name`プロパティを`Lesson 4`します。  
   
-8.  ボックスをクリックして、 **ID**プロパティ、一覧でクリック **\<Generate New ID >**。  
+8.  ボックスをクリックして、 **ID**プロパティ、一覧でクリック **\<Generate New ID >** 。  
   
 ### <a name="to-add-the-completed-lesson-3-package"></a>レッスン 3 を完了した状態のパッケージを追加するには  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767451"
   
 3.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、 **[ファイル システム]** をクリックします。  
   
-4.  参照ボタン **[...]** をクリックし、コンピューター上の Lesson 3.dtsx に移動して、**[開く]** をクリックします。  
+4.  参照ボタン **[...]** をクリックし、コンピューター上の Lesson 3.dtsx に移動して、 **[開く]** をクリックします。  
   
      このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   

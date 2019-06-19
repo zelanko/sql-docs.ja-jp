@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7203740ba7f52dfc2cd3793a20fed9fecf5f9468
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102994"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services の旧バージョンとの互換性
@@ -34,7 +34,7 @@ ms.locfileid: "66102994"
 |[SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をアップグレードする場合に発生する可能性のある問題について説明します。|  
 |[SQL Server 2014 における SQL Server Reporting Services の動作変更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]で変更されている機能について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)   
  [Analysis Services の旧バージョンとの互換性](../../2014/analysis-services/analysis-services-backward-compatibility.md)  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842579"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Windows Azure への SQL Server マネージド バックアップのトラブルシューティング
@@ -105,8 +105,8 @@ ms.locfileid: "62842579"
   
      SQL Server が応答を停止した場合は、イベント ログが管理チャネルに記録されます。  イベント ログの例を次に示します。  
   
-     *Sql エラー (エンジン応答していないか、sqlException を取得します。SqlException:*   
-     *エラー コード、メッセージおよびスタック トレースがような追加の情報と共に、管理者チャネル xevent で表示されます。*   
+     *Sql エラー (エンジン応答していないか、sqlException を取得します。SqlException:*    
+     *エラー コード、メッセージおよびスタック トレースがような追加の情報と共に、管理者チャネル xevent で表示されます。*    
     *"SQL Server と接続に問題が発生して可能性があります。現在のイテレーションでデータベースをスキップしています"*  
   
 -   **SQL エージェントが応答を停止または動作を停止[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が実行されています。**  
@@ -115,7 +115,7 @@ ms.locfileid: "62842579"
   
      SQL エージェントが応答を停止した場合、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]はバックアップ操作を継続できず、イベント ログが管理チャネルに記録されます。 イベント ログの例を次に示します。  
   
-     *ジョブを停止: xevent 管理チャネルを参照してください。*   
+     *ジョブを停止: xevent 管理チャネルを参照してください。*    
     *"進行状況の更新での SQL Server から受信していません以上の"+ Constants.DBBackupInfoMsgMaxWaitTime +"データベースのバックアップの時間です。 SSM クラウド バックアップは引き続き待機します。"*  
   
  電子メール通知を有効にした場合を含む通知を受信は**バックアップ ループの数**と**保有期間のループの数**します。 これらの列の一方または両方について、通知に示されている値がゼロであれば、システムが応答していない可能性があります。  

@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794997"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
@@ -29,7 +29,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
   
 -   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]をダウンロードするには、  **[評価センター](https://www.microsoft.com/evalcenter/evaluate-sql-server)** に移動してください。  
   
--   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、**[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** にアクセスして、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition がインストール済みの仮想マシンをすぐにご利用いただけます。  
+-   Azure アカウントをすでにお持ちですか?  既にお持ちの場合は、 **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** にアクセスして、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 > [!NOTE]  
 >  また、アップグレード計画の一環として、Azure SQL Database のアップグレードや SQL Server 環境の仮想化を考慮する場合もあります。 これらの記事はここでは範囲外ですが、いくつかのリンクを示します。

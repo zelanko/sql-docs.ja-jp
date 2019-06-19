@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 95bf8da81caa71b3f095e7143292cd60e807b585
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108633"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
@@ -112,7 +112,7 @@ ms.locfileid: "66108633"
   
 -   IIS で既存の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 仮想ディレクトリに任意のカスタマイズをバックアップします。  
   
--   無効な SSL 証明書を削除します。  これには、有効期限が切れており、Reporting Services をアップグレードする前に更新する予定のない証明書が含まれます。  無効な証明書と、アップグレードが失敗して、次のようなエラー メッセージは、Reporting Services のログ ファイルに書き込みます。**Microsoft.ReportingServices.WmiProvider.WMIProviderException:Web サイトでは、Secure Sockets Layer (SSL) 証明書が構成されていません。**.  
+-   無効な SSL 証明書を削除します。  これには、有効期限が切れており、Reporting Services をアップグレードする前に更新する予定のない証明書が含まれます。  無効な証明書と、アップグレードが失敗して、次のようなエラー メッセージは、Reporting Services のログ ファイルに書き込みます。**Microsoft.ReportingServices.WmiProvider.WMIProviderException:Web サイトでは、Secure Sockets Layer (SSL) 証明書が構成されていません。** .  
   
  実稼働環境をアップグレードする前に、必ず実稼働環境と同じ構成をしている実稼動前の環境でアップグレード テストを実行してください。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "66108633"
   
  **終了環境:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010 または SharePoint 2013。  
   
--   **SharePoint 2010:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインプレース アップグレードはサポートされていますが、このアップグレード シナリオでは、SharePoint 環境のダウンタイムが発生します。  
+-   **SharePoint 2010:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインプレース アップグレードはサポートされていますが、このアップグレード シナリオでは、SharePoint 環境のダウンタイムが発生します。  
   
      終了環境で SharePoint 2013 も実行する場合は、SharePoint 2010 から SharePoint 2013 へのデータベース アタッチ アップグレードを完了する必要があります。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "66108633"
  ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **開始環境。**[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2、SharePoint 2007。  
+ **開始環境。** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2、SharePoint 2007。  
   
  **終了環境:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "66108633"
 -   > [!WARNING]  
     >  SharePoint のアップグレードの後、レポート サービス環境は SQL Server がアップグレードされるまで非動作状態になります。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードします。 SQL Server インストール ウィザードを実行すると、**[SQL Server Reporting Services SharePoint モード認証]** ダイアログに関するダイアログが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスがインストールされ、認証ページの資格情報を使用して新しい SharePoint アプリケーション プールが作成されます。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードします。 SQL Server インストール ウィザードを実行すると、 **[SQL Server Reporting Services SharePoint モード認証]** ダイアログに関するダイアログが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスがインストールされ、認証ページの資格情報を使用して新しい SharePoint アプリケーション プールが作成されます。  
   
  ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   
@@ -304,11 +304,11 @@ ms.locfileid: "66108633"
 > [!NOTE]  
 >  SharePoint データベース アタッチ アップグレードの詳細については、以下を参照してください。  
   
--   [SharePoint 2013 へのアップグレード プロセスの概要](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688)します。  
+-   [SharePoint 2013 へのアップグレード プロセスの概要](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688) します。  
   
--   [SharePoint 2013 へアップグレードする前に環境をクリーンアップする](https://go.microsoft.com/fwlink/p/?LinkId=256689)(https://go.microsoft.com/fwlink/p/?LinkId=256689)します。  
+-   [SharePoint 2013 へアップグレードする前に環境をクリーンアップする](https://go.microsoft.com/fwlink/p/?LinkId=256689)(https://go.microsoft.com/fwlink/p/?LinkId=256689) します。  
   
--   [SharePoint 2010 から SharePoint 2013 までデータベースをアップグレード](https://go.microsoft.com/fwlink/p/?LinkId=256690)(https://go.microsoft.com/fwlink/p/?LinkId=256690)します。  
+-   [SharePoint 2010 から SharePoint 2013 までデータベースをアップグレード](https://go.microsoft.com/fwlink/p/?LinkId=256690)(https://go.microsoft.com/fwlink/p/?LinkId=256690) します。  
   
  ![上部のリンクに戻る で使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このトピックで。](#bkmk_top)  
   

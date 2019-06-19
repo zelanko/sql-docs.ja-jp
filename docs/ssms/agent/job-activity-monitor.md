@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 63491a3ba15f9a52e7180597bce7f6295927961f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096399"
 ---
 # <a name="job-activity-monitor"></a>[ジョブの利用状況モニター]
@@ -35,9 +35,9 @@ ms.locfileid: "65096399"
 ジョブの名前。  
   
 **有効**  
-ジョブが有効 (**[はい]**) か無効 (**[いいえ]**) かを示します。  
+ジョブが有効 ( **[はい]** ) か無効 ( **[いいえ]** ) かを示します。  
   
-**[状態]***  
+**[状態]** *  
 ジョブの現在の状態です。  
   
 **[最終実行の結果]**  
@@ -46,7 +46,7 @@ ms.locfileid: "65096399"
 **[最終実行]**  
 サーバーのローカル時刻に基づき、ジョブが最後に実行された日付と時刻を示します。  
   
-**[次の実行]***  
+**[次の実行]** *  
 サーバーのローカル時刻に基づき、ジョブが次に実行される予定の日付と時刻を示します。  
   
 **カテゴリ**  
@@ -58,7 +58,7 @@ ms.locfileid: "65096399"
 **[スケジュール]**  
 ジョブがジョブ スケジュールに割り当てられている場合は **[はい]** 、ジョブにスケジュールがない場合は **[いいえ]** になります。  
   
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の sysadmin 固定サーバー ロールおよびサーバー管理者グループのメンバーのみがこの列の値を表示できます。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
+\* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の sysadmin 固定サーバー ロールおよびサーバー管理者グループのメンバーのみがこの列の値を表示できます。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
   
 #### <a name="to-open-the-job-activity-monitor"></a>[ジョブの利用状況モニター] を開くには  
   

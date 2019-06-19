@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084227"
 ---
 # <a name="logistic-regression-model-query-examples"></a>ロジスティック回帰モデルのクエリ例
@@ -207,7 +207,7 @@ NATURAL PREDICTION JOIN
 > [!NOTE]  
 >  ニューラル ネットワーク モデルとロジスティック回帰モデルの場合、[PredictSupport (DMX)](/sql/dmx/predictsupport-dmx) 関数はモデル全体のトレーニング セットのサイズを表す 1 つの値を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング クエリ](data-mining-queries.md)   
  [Microsoft ロジスティック回帰アルゴリズム](microsoft-logistic-regression-algorithm.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)   

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042575"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>データ型の dwloader の Parallel Data Warehouse の変換規則
@@ -21,7 +21,7 @@ ms.locfileid: "63042575"
    
   
 ## <a name="InsertBinaryTypes"></a>リテラル型のバイナリに挿入します。  
-次の表は、許可されたリテラル型、形式、および SQL Server PDW 型の列にリテラル値を読み込むための変換規則を定義します**バイナリ**(*n*) または**varbinary。**(*n*)。  
+次の表は、許可されたリテラル型、形式、および SQL Server PDW 型の列にリテラル値を読み込むための変換規則を定義します**バイナリ**(*n*) または**varbinary。** (*n*)。  
   
 |入力データ型|入力データの例|Binary、varbinary データ型への変換|  
 |-------------------|-----------------------|-----------------------------------------------|  
@@ -166,7 +166,7 @@ Dwloader のでは、SQL Server PDW に読み込むには、入力データの�
 次の表では、文字列型を使用する SQL Server PDW の列にリテラル値を読み込むための既定の形式と変換の規則を定義します。  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char、varchar、nchar、nvarchar データ型  
-次の表は、既定の形式と型の列にリテラル値を読み込むためのルールを定義します**char**、 **varchar**、 **nchar**と**nvarchar。**. データ ソースの長さは、データ型の指定されたサイズを超えることはできません。 データ ソースの長さがのサイズより小さい場合、 **char**または**nchar**データ型、データが埋め込まれたデータ型のサイズに到達する空白文字の右側にします。  
+次の表は、既定の形式と型の列にリテラル値を読み込むためのルールを定義します**char**、 **varchar**、 **nchar**と**nvarchar。** . データ ソースの長さは、データ型の指定されたサイズを超えることはできません。 データ ソースの長さがのサイズより小さい場合、 **char**または**nchar**データ型、データが埋め込まれたデータ型のサイズに到達する空白文字の右側にします。  
   
 |入力データ型|入力データの例|文字データ型への変換|  
 |---------------|-------------------|----------------------------------|  

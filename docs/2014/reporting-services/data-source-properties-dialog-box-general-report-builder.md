@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109466"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>[全般] ([データ ソースのプロパティ] ダイアログ ボックス) (レポート ビルダー)
@@ -55,7 +55,7 @@ ms.locfileid: "66109466"
  データ処理拡張機能を選択します。 一覧には、登録されているすべての拡張機能が表示されます。  
   
  **[接続文字列]**  
- データ ソースの接続文字列を入力します。 **[構築]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、 **式** (*[fx]*) ボタンをクリックします。  
+ データ ソースの接続文字列を入力します。 **[構築]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、 **式** ( *[fx]* ) ボタンをクリックします。  
   
  **クエリの処理時に、1 つのトランザクションを使用します。**  
  このデータ ソースを使用するデータセットが、データベースに対する単一のトランザクションで処理されるように指定する場合は、このオプションを選択します。 同じデータ ソースを使用するサブレポートのトランザクションを含めるには、そのサブレポートを選択し、[プロパティ] ペインで **[MergeTransactions]** を **[True]** に設定します。  

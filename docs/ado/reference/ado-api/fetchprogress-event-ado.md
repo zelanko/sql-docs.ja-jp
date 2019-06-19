@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9f7b31524a6c54846072fdce8cca76189c7034ad
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66698088"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress イベント (ADO)
@@ -53,6 +53,6 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
 > [!NOTE]
 >  使用する**FetchProgress** Microsoft Visual Basic、Visual Basic 6.0 以降が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

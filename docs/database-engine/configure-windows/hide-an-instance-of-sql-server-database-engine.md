@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 5401e5b731f09de89dedeef8308b7118299fbc9b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66785267"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server データベース エンジンのインスタンスの非表示
@@ -29,7 +29,7 @@ ms.locfileid: "66785267"
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>SQL Server データベース エンジンのインスタンスを非表示にするには  
   
-1.  **SQL Server 構成マネージャー**で、**[SQL Server ネットワークの構成]** を展開し、*\<server instance>* の**プロトコル**を右クリックします。次に **[プロパティ]** を選びます。  
+1.  **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 *\<server instance>* の**プロトコル**を右クリックします。次に **[プロパティ]** を選びます。  
   
 2.  **[フラグ]** タブで **[HideInstance]** ボックスの一覧の **[はい]** を選択し、 **[OK]** をクリックしてダイアログ ボックスを閉じます。 この変更は、新しい接続ですぐに有効になります。  
   

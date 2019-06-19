@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771220"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
@@ -105,9 +105,9 @@ ms.locfileid: "62771220"
 ## <a name="next-step"></a>次の手順  
  変更の範囲の開始時点と終了時点を計算したら、次の手順で、変更データが準備できているかどうかを判断します。  
   
- **次のトピック:**[変更データの準備ができているかどうかを判断する](determine-whether-the-change-data-is-ready.md)  
+ **次のトピック:** [変更データの準備ができているかどうかを判断する](determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージで変数を使用する](../use-variables-in-packages.md)   
  [Integration Services (SSIS) 式](../expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../control-flow/execute-sql-task.md)   

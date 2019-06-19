@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1c9e39e4ccec7ab54229a8bbd0bf51b1d751207
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726666"
 ---
 # <a name="odata-source"></a>OData ソース
@@ -109,7 +109,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
  リソースのパスを入力します。 例:Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
-  出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、**[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
+  出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、 **[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
   
 ### <a name="options"></a>オプション  
  **使用できる外部列**  
@@ -134,7 +134,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:**[データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  

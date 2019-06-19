@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62895491"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>スクリプト コンポーネントによるエラー出力の強化
@@ -43,7 +43,7 @@ ms.locfileid: "62895491"
   
 3.  上流コンポーネントからのエラー出力を新しいスクリプト コンポーネントに接続します。  
   
-4.  **[スクリプト変換エディター]** を開き、**[スクリプト]** ページの **[ScriptLanguage]** プロパティでスクリプト言語を選択します。  
+4.  **[スクリプト変換エディター]** を開き、 **[スクリプト]** ページの **[ScriptLanguage]** プロパティでスクリプト言語を選択します。  
   
 5.  **[スクリプトの編集]** をクリックして [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開き、以下に示すサンプル コードを追加します。  
   
