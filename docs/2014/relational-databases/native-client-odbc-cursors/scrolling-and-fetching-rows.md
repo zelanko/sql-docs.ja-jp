@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0c0f7f2cad7eaecc212e2283fab7fc7d69f2ee7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63207124"
 ---
 # <a name="scrolling-and-fetching-rows"></a>行のスクロールとフェッチ
@@ -49,7 +49,7 @@ ms.locfileid: "63207124"
 |1 画面分上へ移動 (PageUp)|SQL_FETCH_PRIOR|  
 |1 画面分下へ移動 (PageDown)|SQL_FETCH_NEXT|  
 |1 行上へ移動|指定したを-1 に FetchOffset SQL_FETCH_RELATIVE|  
-|1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE |  
+|1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE|  
 |スクロール ボックスを先頭に移動|SQL_FETCH_FIRST|  
 |スクロール ボックスを末尾に移動|SQL_FETCH_LAST|  
 |スクロール ボックスを任意の位置に移動|SQL_FETCH_ABSOLUTE|  

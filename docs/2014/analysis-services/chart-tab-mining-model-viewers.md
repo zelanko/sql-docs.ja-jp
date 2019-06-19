@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088175"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>[グラフ] タブ (マイニング モデル ビューアー)
-  タイム シリーズ モデルのトレーニングで使用する履歴データを、予測される値と共に表示するには、**[グラフ]** ペインを使用します。 グラフの縦軸はタイム シリーズの値を表し、横軸は時間を表します。 将来の予測は、点線によって表します。  
+  タイム シリーズ モデルのトレーニングで使用する履歴データを、予測される値と共に表示するには、 **[グラフ]** ペインを使用します。 グラフの縦軸はタイム シリーズの値を表し、横軸は時間を表します。 将来の予測は、点線によって表します。  
   
- **詳細情報。**[Microsoft タイム シリーズ アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [Microsoft タイム シリーズ ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **詳細情報。** [Microsoft タイム シリーズ アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [Microsoft タイム シリーズ ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  

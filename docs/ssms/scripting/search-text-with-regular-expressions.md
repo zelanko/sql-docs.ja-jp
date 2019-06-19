@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ddb6a3b343e89f5f844e54788ce88658a1a76e6
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820745"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
@@ -31,7 +31,7 @@ ms.locfileid: "65820745"
   
 ## <a name="find-using-regular-expressions"></a>正規表現を使用して検索を行う  
   
-1.  **[クイック検索]**、**[フォルダーを指定して検索]**、 **[クイック置換]**、 **[フォルダーを指定して置換]** の各操作を実行するときに **[検索する文字列]** フィールドで正規表現が使用できるようにするには、 **[検索オプション]** の下の **[条件]** をオンにし、 **[正規表現]** を選択します。  
+1.  **[クイック検索]** 、 **[フォルダーを指定して検索]** 、 **[クイック置換]** 、 **[フォルダーを指定して置換]** の各操作を実行するときに **[検索する文字列]** フィールドで正規表現が使用できるようにするには、 **[検索オプション]** の下の **[条件]** をオンにし、 **[正規表現]** を選択します。  
   
 2.  **[検索する文字列]** フィールドの横にある三角形の **参照一覧** ボタンが使用可能になります。 このボタンをクリックすると、一般的に使用される正規表現の一覧が表示されます。 正規表現ビルダーから項目を選択すると、その項目が **[検索する文字列]** の文字列に挿入されます。  
   

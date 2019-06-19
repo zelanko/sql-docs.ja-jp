@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 966cd899d5a3d6019febd4ba939f360c16c9cd78
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095221"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
@@ -36,7 +36,7 @@ ms.locfileid: "65095221"
   
 -   オブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、 **[カスタム レポート]** を左クリックします。 **[ファイルを開く]** ダイアログ ボックスで .rdl ファイルを含むフォルダーを見つけ、適切なレポート ファイルを開きます。  
   
--   オブジェクト エクスプローラーでノードを右クリックして、 **[レポート]**、 **[カスタム レポート]** の順にポイントし、最近使用したファイル一覧からカスタム レポートを選択します。  
+-   オブジェクト エクスプローラーでノードを右クリックして、 **[レポート]** 、 **[カスタム レポート]** の順にポイントし、最近使用したファイル一覧からカスタム レポートを選択します。  
   
 ## <a name="limitations"></a>制限事項  
 カスタム レポートを操作する場合は、次の制限事項に注意してください。  

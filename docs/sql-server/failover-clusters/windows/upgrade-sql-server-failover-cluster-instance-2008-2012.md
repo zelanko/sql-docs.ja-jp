@@ -12,11 +12,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63243377"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
 
@@ -46,7 +46,7 @@ ms.locfileid: "58872252"
 
 |                                   | すべてのサーバー オブジェクトと VNN が必要 | すべてのサーバー オブジェクトと VNN が必要 | サーバー オブジェクト/VNN は不要\* | サーバー オブジェクト/VNN は不要\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_可用性グループ(Y/N)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
+| **_可用性グループ(Y/N)_ **                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **クラスターで SQL FCI のみを使用**         | [シナリオ 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [シナリオ 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [シナリオ 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [シナリオ 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **クラスターでスタンドアロン インスタンスを使用** | [シナリオ 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [シナリオ 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [シナリオ 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [シナリオ 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
@@ -185,7 +185,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
 10. この時点で、各 SQL FCI ロールの名前を変更した Server Name リソースのみをオンラインに戻します。
 
-11. この時点で、並列スタンドアロン インスタンスで、コンピューターの名前を元のスタンドアロン コンピューター名に変更します  (古いサーバー名を削除し、ローカル パラメーターを使用して新しいサーバー名を追加します)。指示に従って、コンピューターを再起動します。
+11. この時点で、並列スタンドアロン インスタンスで、コンピューターの名前を元のスタンドアロン コンピューター名に変更します (古いサーバー名を削除し、ローカル パラメーターを使用して新しいサーバー名を追加します)。指示に従って、コンピューターを再起動します。
 
 12. 再起動後に、各スタンドアロン コンピューターをターゲットの Windows Server フェールオーバー クラスターに結合します。
 
@@ -223,7 +223,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
 11. この時点で、各 SQL FCI ロールの名前を変更した Server Name リソースのみをオンラインに戻します。
 
-12. この時点で、並列スタンドアロン インスタンスで、コンピューターの名前を元のスタンドアロン コンピューター名に変更します  (SQL のサーバー名を削除して追加します)。指示に従って、コンピューターを再起動します。
+12. この時点で、並列スタンドアロン インスタンスで、コンピューターの名前を元のスタンドアロン コンピューター名に変更します (SQL のサーバー名を削除して追加します)。指示に従って、コンピューターを再起動します。
 
 13. 再起動後に、各スタンドアロン コンピューターをターゲットの Windows Server フェールオーバー クラスターに結合します。
 

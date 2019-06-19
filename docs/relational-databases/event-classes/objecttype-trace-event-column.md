@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8694a7b02ffc55cfebbac6466b2ff46d9d9f973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645070"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType トレース イベント列
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47618240"
   
 ## <a name="object-type-column-values"></a>ObjectType 列の値  
   
-|ReplTest1|定義|  
+|[値]|定義|  
 |-----------|----------------|  
 |8259|CHECK 制約|  
 |8260|既定値 (制約またはスタンドアロン)|  

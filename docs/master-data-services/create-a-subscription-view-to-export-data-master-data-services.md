@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485062"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
@@ -48,7 +48,7 @@ ms.locfileid: "65485062"
   
 5.  **[モデル]** ボックスの一覧からモデルを選択します。  
   
-6.  **[Include soft-deleted members]**(論理削除済みメンバーを含める) を選択して、論理削除済みメンバーをビューに含めます。  
+6.  **[Include soft-deleted members]** (論理削除済みメンバーを含める) を選択して、論理削除済みメンバーをビューに含めます。  
   
 7.  **[バージョンのオプション]** で **[バージョン]** または **[バージョン フラグ]** のいずれかを選択し、対応する一覧から選択します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65485062"
   
 -   **更新日時**:ビューが最後に更新された日時。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを削除する &#40;マスター データ サービス&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [バージョン フラグを作成する (マスター データ サービス)](../master-data-services/create-a-version-flag-master-data-services.md)  

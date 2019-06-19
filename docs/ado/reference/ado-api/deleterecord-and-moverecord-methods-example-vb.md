@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 08e201db8406354662948e4da3d2047746780eba
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695365"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord および MoveRecord メソッドの例 (VB)
@@ -149,7 +149,7 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DeleteRecord メソッド (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Flush メソッド (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren メソッド (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   

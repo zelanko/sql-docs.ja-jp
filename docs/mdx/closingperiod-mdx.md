@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6c9dea03a4b09ae4dcbe66e6712a542b1920ce0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181583"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
@@ -46,7 +46,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
  **ClosingPeriod**関数は、次の MDX ステートメントと同等です。  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)` 。  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`。  
   
 > [!NOTE]  
 >  [OpeningPeriod](../mdx/openingperiod-mdx.md)機能に似ています、 **ClosingPeriod**関数点を除いて、 **OpeningPeriod**最後ではなく、最初の兄弟を返します兄弟です。  

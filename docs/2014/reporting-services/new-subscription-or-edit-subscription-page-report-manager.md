@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 968362b2835c0e76f2a44c44e6cd427af863e8e4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108141"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>[新しいサブスクリプション] ページまたは [サブスクリプションの編集] ページ (レポート マネージャー)
@@ -65,7 +65,7 @@ ms.locfileid: "66108141"
  **パラメーターの値を入力します**  
  パラメーターを使用するレポートをサブスクライブしている場合にこのオプションを使用します。 このオプションは、パラメーター化されたレポートにのみ使用できます。 パラメーター化されたレポートをサブスクライブしている場合、サブスクリプションを使用して配信されるバージョンのレポートを作成するときに使用するパラメーター値を指定できます。 たとえば、地域コードを指定して特定の地域の売上データを選択できます。 値を指定しない場合は、既定値が使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   

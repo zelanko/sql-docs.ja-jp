@@ -12,10 +12,10 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: fbffcdd5de49cadd3e18ab3db0a5da7ff6a042e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63252974"
 ---
 <div id="main" class="v2">
@@ -97,7 +97,7 @@ ms.locfileid: "63252974"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>フルテキスト検索 </h3>
+                                                    <h3>フルテキスト検索</h3>
                                                     <p>フルテキスト インデックスに含まれるのは、テーブル内の 1 つ以上の文字ベースの列です。フルテキスト検索ではそれらに対するクエリを実行できます。</p>
                                                 </div>
                                             </div>

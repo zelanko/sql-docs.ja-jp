@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fc5fc211d0f0c843ad16fb377fad2082bcf02c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791945"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの有効化と無効化 (SQL Server)
@@ -129,9 +129,9 @@ ms.locfileid: "62791945"
   
 1.  対象の (AlwaysOn 可用性グループを有効にする) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスがホストされている Windows Server フェールオーバー クラスタリング (WSFC) ノードに接続します。  
   
-2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-3.  **SQL Server 構成マネージャー**、 をクリックして**SQL Server サービス**、SQL サーバーを右クリックして (**<*`instance name`*>)** ここで、 **< *`instance name`* >** AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前を指定し、クリックして**プロパティ。**  
+3.  **SQL Server 構成マネージャー**、 をクリックして**SQL Server サービス**、SQL サーバーを右クリックして ( **< *`instance name`* >)** ここで、 **< *`instance name`* >** AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前を指定し、クリックして**プロパティ。**  
   
 4.  **[AlwaysOn 高可用性]** タブを選択します。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "62791945"
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
-####  <a name="ExmplEnable-SqlHadrServic"></a> 例:Enable-sqlalwayson  
+####  <a name="ExmplEnable-SqlHadrServic"></a> 例:Enable-SqlAlwaysOn  
  次の PowerShell コマンドは、SQL Server のインスタンス ( [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Computer*Instance*\\ *) の*を有効にします。  
   
 ```  
@@ -176,7 +176,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
     -   [PowerShell](#PScmd3Procedure)  
   
--   **補足情報:**[AlwaysOn を無効にした後](#FollowUp)  
+-   **補足情報:** [AlwaysOn を無効にした後](#FollowUp)  
   
 > [!IMPORTANT]  
 >  AlwaysOn を無効にできるサーバー インスタンスは一度に 1 つだけです。 AlwaysOn 可用性グループを無効にした後は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスが再起動するまで待ってから、次のサーバー インスタンスを有効にしてください。  
@@ -193,9 +193,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  対象の (AlwaysOn 可用性グループを無効にする) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスがホストされている Windows Server フェールオーバー クラスタリング (WSFC) ノードに接続します。  
   
-2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-3.  **SQL Server 構成マネージャー**、 をクリックして**SQL Server サービス**、SQL サーバーを右クリックして (**<*`instance name`*>)** ここで、 **< *`instance name`* >** AlwaysOn 可用性グループを無効にするローカル サーバー インスタンスの名前を指定し、クリックして**プロパティ**します。  
+3.  **SQL Server 構成マネージャー**、 をクリックして**SQL Server サービス**、SQL サーバーを右クリックして ( **< *`instance name`* >)** ここで、 **< *`instance name`* >** AlwaysOn 可用性グループを無効にするローカル サーバー インスタンスの名前を指定し、クリックして**プロパティ**します。  
   
 4.  **[AlwaysOn 高可用性]** タブで、 **[AlwaysOn 可用性グループを有効にする]** チェック ボックスをオフにし、 **[OK]** をクリックします。  
   

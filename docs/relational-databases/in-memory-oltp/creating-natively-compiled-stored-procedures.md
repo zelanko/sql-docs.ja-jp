@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1bb3879e8f411dc8fa82fe8344df693e8cdaef2a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672901"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047903"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51672901"
   
     -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
   
-    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"**; -- *(値に初期化する必要があります。)*  
+    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(値に初期化する必要があります。)*  
   
     -   SET @myVarchar **= null**; -- *(コンパイルされますが実行時に失敗します。)*  
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63305725"
 ---
 # <a name="types-of-applications"></a>アプリケーションの種類
@@ -52,7 +52,7 @@ ODBC アプリケーションは、次のように分類できます。
   
 -   **純粋な ODBC 3.0 アプリケーション**32 ビット アプリケーションです。  
   
-    -   3.0 のヘッダーと共にコンパイルされます。  
+    -   3\.0 のヘッダーと共にコンパイルされます。  
   
     -   場合によっては非推奨のものも含めて、すべての ODBC 3.0 関数を呼び出します。  
   

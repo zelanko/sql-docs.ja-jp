@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079358"
 ---
 # <a name="creating-an-analysis-services-project"></a>Analysis Services プロジェクトの作成
@@ -22,9 +22,9 @@ ms.locfileid: "66079358"
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Analysis Services プロジェクトを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server 2012]** の順にポイントし、 **[SQL Server データ ツール]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server 2012]** の順にポイントし、 **[SQL Server データ ツール]** をクリックします。  
   
-      [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の開発環境が開きます。  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の開発環境が開きます。  
   
 2.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]のスタート ページで、 **[新しいプロジェクト]** をクリックします。  
   

@@ -48,10 +48,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bf05845ce09fab783692d6b5c63f60fd91a98997
-ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66036905"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
@@ -1489,7 +1489,7 @@ CREATE TABLE t1
 );
 ```
 
-### <a name="t-create-an-inline-index"></a>T.  インライン インデックスの作成
+### <a name="t-create-an-inline-index"></a>T. インライン インデックスの作成
 ディスク ベース テーブルで NONCLUSTERED インラインを使用する方法を次に示します。
 
 ```sql
@@ -1513,7 +1513,7 @@ CREATE TABLE t3
 );
 ```
 
-### <a name="u-create-a-temporary-table-with-an-anonymously-named-compound-primary-key"></a>U.  匿名で名前付けされた複合主キーを持つ一時テーブルを作成します
+### <a name="u-create-a-temporary-table-with-an-anonymously-named-compound-primary-key"></a>U. 匿名で名前付けされた複合主キーを持つ一時テーブルを作成します
 匿名で名前付けされた複合主キーを持つテーブルを作成します。 これは、(それぞれが別のセッションにある) 2 つのセッション スコープの一時テーブルが、同じ制約の名前を使用している場合に、実行時の競合を回避するのに役立ちます。
 
 ```sql
@@ -1537,7 +1537,7 @@ Could not create constraint or index. See previous errors.
 
 一時テーブルの名前が一意であるのに対して、制約の名前が一意ではないことが原因で、問題が発生しています。
 
-### <a name="v-using-global-temporary-tables-in-azure-sql-database"></a>V.  Azure SQL Database でのグローバル一時テーブルの使用
+### <a name="v-using-global-temporary-tables-in-azure-sql-database"></a>V. Azure SQL Database でのグローバル一時テーブルの使用
 セッション A は、グローバル一時テーブル ##test を [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 に作成し、1 行を追加します
 
 ```sql

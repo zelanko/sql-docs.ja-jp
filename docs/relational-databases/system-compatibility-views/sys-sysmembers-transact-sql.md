@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5672c6b027e001e2aaf2a344c2710d2a28e62e9e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63018647"
 ---
 # <a name="syssysmembers-transact-sql"></a>sys.sysmembers (TRANSACT-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "63018647"
 |**memberuid**|**smallint**|ロールのメンバーのユーザー ID。 オーバーフローまたはユーザーおよびロールの数が 32,767 を超える場合は NULL を返します。|  
 |**groupuid**|**smallint**|ロールのユーザー ID。 オーバーフローまたはユーザーおよびロールの数が 32,767 を超える場合は NULL を返します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a590e66bbbe205a7aa218ce03b0d88ed9f940318
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538053"
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField 関数
@@ -78,7 +78,7 @@ SQLRETURN SQLGetDescField(
 -   場合 *\*ValuePtr*はし、固定長データ型を含む*BufferLength*に応じて SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT、または SQL_IS_USMALLINT は、します。  
   
  *StringLengthPtr*  
- [出力]\(Null 終端文字のために必要なバイト数を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な **ValuePtr*します。  
+ [出力](Null 終端文字のために必要なバイト数を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な **ValuePtr*します。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_NO_DATA、または SQL_INVALID_HANDLE します。  

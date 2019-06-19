@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 545204349cf895dd0592f1a2dcba66de4cb054ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043374"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>データ ソース ビューの定義 (Analysis Services)
@@ -79,7 +79,7 @@ ms.locfileid: "63043374"
 > [!NOTE]  
 >  代わりに、ディメンションとキューブを最初に構築し、その後にスキーマ生成ウィザードを使用してモデルに対応する DSV を生成することもできます。 詳細については、「[スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)」を参照してください。  
   
-1.  ソリューション エクスプローラーで、[データ ソース ビュー] フォルダーを右クリックし、**[新しいデータ ソース ビュー]** をクリックします。  
+1.  ソリューション エクスプローラーで、[データ ソース ビュー] フォルダーを右クリックし、 **[新しいデータ ソース ビュー]** をクリックします。  
   
 2.  外部リレーショナル データベースへの接続情報を提供する、新規または既存のデータ ソース オブジェクトを指定します (ウィザード内で選択できるデータ ソースは 1 つのみです)。  
   

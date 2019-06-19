@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999608"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "53590236"
   
 3.  **[データベース]** ノードを展開します。  
   
-4.  配置するデータベースを右クリックして **[タスク]** を選択し、**[SQL Azure へのデータベースの配置...]** をクリックします。  
+4.  配置するデータベースを右クリックして **[タスク]** を選択し、 **[SQL Azure へのデータベースの配置...]** をクリックします。  
   
 5.  ウィザードの各ダイアログを完了します。  
   
@@ -92,22 +92,22 @@ ms.locfileid: "53590236"
   
 -   **[次へ]** : **[配置設定]** ページに進みます。  
   
--   **[キャンセル]**: 操作を取り消し、ウィザードを閉じます。  
+-   **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
 ##  <a name="Deployment_settings"></a> [配置設定] ページ  
  このページを使用して、配置先サーバーと、新しいデータベースの詳細を指定します。  
   
  **[ローカル ホスト]**  
   
--   **[サーバー接続]**: サーバー接続の詳細を指定し、**[接続]** をクリックして接続を検証します。  
+-   **[サーバー接続]** : サーバー接続の詳細を指定し、 **[接続]** をクリックして接続を検証します。  
   
--   **[新しいデータベース名]**: 新しいデータベースの名前を指定します。  
+-   **[新しいデータベース名]** : 新しいデータベースの名前を指定します。  
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] データベースの設定:**  
   
 -   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディション**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディションをドロップダウン メニューから選択します。  
   
--   **[データベースの最大サイズ (GB)]**: データベースの最大サイズをドロップダウン メニューから選択します。  
+-   **[データベースの最大サイズ (GB)]** : データベースの最大サイズをドロップダウン メニューから選択します。  
   
  **その他の設定:**  
   

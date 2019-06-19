@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025463"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +63,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>特定のマークの時点へ復旧するための Transact-SQL 構文  
  マークされたトランザクションを [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで指定する場合、次のいずれかの句を使用して、マークに到達した時点またはマークの直前まで復旧できます。  
   
--   WITH STOPATMARK = **'**_<mark_name>_**'** 句を使用して、マークされたトランザクションが復旧ポイントであることを指定します。  
+-   WITH STOPATMARK = **'** _<mark_name>_ **'** 句を使用して、マークされたトランザクションが復旧ポイントであることを指定します。  
   
      STOPATMARK では、マークまでロールフォワードされます。ロールフォワードには、マークされたトランザクションも含まれます。  
   
--   WITH STOPBEFOREMARK = **'**_<mark_name>_**'** 句を使用して、マークの直前のログ レコードが復旧ポイントであることを指定します。  
+-   WITH STOPBEFOREMARK = **'** _<mark_name>_ **'** 句を使用して、マークの直前のログ レコードが復旧ポイントであることを指定します。  
   
      STOPBEFOREMARK では、マークまでロールフォワードされますが、マークされたトランザクションは含まれません。  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020059"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え
@@ -40,7 +40,7 @@ ms.locfileid: "63020059"
   
 4.  オブジェクト エクスプ ローラーで右クリックし、**データベース**フォルダーと選択**アタッチしています.**  
   
-5.  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 また、[参照] ボタンを使用することができます (**.**) データベース フォルダーを検索します。  
+5.  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 また、[参照] ボタンを使用することができます ( **.** ) データベース フォルダーを検索します。  
   
 6.  データベースの読み取り/書き込みモードを選択します。  
   

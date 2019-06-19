@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18cbed174a5be656079ef232ba70cba3599d2815
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090292"
 ---
 # <a name="print-code-and-results"></a>コードと結果の印刷
@@ -29,7 +29,7 @@ ms.locfileid: "66090292"
   
  エディターで行番号表示を有効にしている場合でも、 **[ファイル]** メニューの **[印刷]** ダイアログ ボックスで **[行番号を入れる]** をオンにしない限り、行番号は印刷されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フォントの色、サイズ、スタイルを変更する方法](change-font-color-size-and-style.md)  
   
   

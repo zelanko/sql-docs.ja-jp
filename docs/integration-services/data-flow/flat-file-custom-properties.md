@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e2e2fffae3b6c57e0251fdd5b851160824de0f8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726791"
 ---
 # <a name="flat-file-custom-properties"></a>フラット ファイルのカスタム プロパティ
@@ -32,7 +32,7 @@ ms.locfileid: "65726791"
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
 |FileNameColumnName|String|ファイル名を格納する出力列の名前。 名前が指定されていない場合、ファイル名を格納する出力列は生成されません。<br /><br /> 注:このプロパティは、**フラット ファイル ソース エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
-|RetainNulls|ブール値|データ変換のパイプライン エンジンによってデータが処理される際に、ソース ファイルの NULL 値を NULL 値として保持するかどうかを示す値。 このプロパティの既定値は **False**です。|  
+|RetainNulls|Boolean|データ変換のパイプライン エンジンによってデータが処理される際に、ソース ファイルの NULL 値を NULL 値として保持するかどうかを示す値。 このプロパティの既定値は **False**です。|  
   
  フラット ファイル ソースの出力には、カスタム プロパティがありません。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "65726791"
   
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
-|FastParse|ブール値|列の解析に、DTS が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 このプロパティの既定値は **False**です。<br /><br /> 注:このプロパティは、**フラット ファイル ソース エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
+|FastParse|Boolean|列の解析に、DTS が提供するロケール非依存型の高速な解析ルーチンを使用するか、またはロケール依存型の標準的な解析ルーチンを使用するかを示す値。 詳細については、「 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 」および「 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)」を参照してください。 このプロパティの既定値は **False**です。<br /><br /> 注:このプロパティは、**フラット ファイル ソース エディター**では使用できませんが、**詳細エディター**を使用して設定できます。|  
   
  詳細については、「 [フラット ファイル ソース](../../integration-services/data-flow/flat-file-source.md)」を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "65726791"
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
 |[ヘッダー]|String|データが書き込まれる前にファイルに挿入される、テキストのブロック。<br /><br /> このプロパティの値は、プロパティ式を使用して指定することができます。|  
-|Overwrite|ブール値|同じ名前の既存の変換先ファイルに対して、上書きまたは追加のどちらを実行するかを指定する値。 このプロパティの既定値は **True**です。|  
+|Overwrite|Boolean|同じ名前の既存の変換先ファイルに対して、上書きまたは追加のどちらを実行するかを指定する値。 このプロパティの既定値は **True**です。|  
   
  フラット ファイル変換先の入力および入力列には、カスタム プロパティはありません。  
   

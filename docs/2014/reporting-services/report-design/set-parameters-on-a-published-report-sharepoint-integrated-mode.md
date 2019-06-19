@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105015"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>パブリッシュ済みレポートのパラメーターの設定 (Reporting Services の SharePoint 統合モード)
@@ -65,7 +65,7 @@ ms.locfileid: "66105015"
   
     1.  レポートの作成時に定義された既定値を使用するには、 **[レポート定義で指定されている値式を使用]** を選択します。 レポート定義で既定値が指定されていない場合、このオプションは使用できません。  
   
-    2.  レポート定義の既定値を置き換える値を指定するには、**[レポートの既定値をオーバーライド]** を選択します。 NULL 値が許可されるレポート パラメーターについては、 **[Null]** チェック ボックスをオンにすることで、そのパラメーターに基づくフィルター処理を無効にすることができます。  
+    2.  レポート定義の既定値を置き換える値を指定するには、 **[レポートの既定値をオーバーライド]** を選択します。 NULL 値が許可されるレポート パラメーターについては、 **[Null]** チェック ボックスをオンにすることで、そのパラメーターに基づくフィルター処理を無効にすることができます。  
   
     3.  レポートが処理される前に各ユーザーが値を指定できるようにするには、 **[パラメーターは既定値を持たない]** を選択します。 このオプションを選択した場合、ユーザーに値の指定を求めるための表示設定を行う必要があります。  
   

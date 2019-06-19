@@ -14,16 +14,17 @@ helpviewer_keywords:
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
-ms.author: mikeray"
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 921f004a64a7a107ceb8fc66be3f68934aaba37e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 66af409c92de623d4470b066f59f7fd7bab6aa5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65094322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822344"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable 機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているファイル データに対して Windows ファイル名前空間のサポートと Windows アプリケーションとの互換性を提供します。 FileTable により、アプリケーションは、ストレージとデータ管理コンポーネントを統合し、非構造化データおよびメタデータに対する統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス (フルテキスト検索、セマンティック検索など) を提供できます。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "65094322"
   
 -   各行には次のアイテムが含まれます。 FileTable のスキーマの詳細については、「 [FileTable スキーマ](../../relational-databases/blob/filetable-schema.md)」を参照してください。  
   
-    -   ストリーム データ用の **file_stream** 列、および **stream_id** (GUID) 識別子  ( **file_stream** 列はディレクトリでは NULL です)。  
+    -   ストリーム データ用の **file_stream** 列、および **stream_id** (GUID) 識別子 ( **file_stream** 列はディレクトリでは NULL です)。  
   
     -   現在のアイテム (ファイルまたはディレクトリ) 、およびディレクトリ階層を表して保持するための、**path_locator** 列と **parent_path_locator** 列の両方。  
   
