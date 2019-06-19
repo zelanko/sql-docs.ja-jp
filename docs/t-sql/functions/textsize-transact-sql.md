@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1e984427188eb90b751735de25d3b32039747e6b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948446"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "65948446"
  **整数 (integer)**  
   
 ## <a name="examples"></a>使用例  
- 次の例では使用 `SELECT` を表示する、 `@@TEXTSIZE` 値を変更した後と前に、 `SET``TEXTSIZE` ステートメントです。   
+ 次の例では使用 `SELECT` を表示する、 `@@TEXTSIZE` 値を変更した後と前に、 `SET``TEXTSIZE` ステートメントです。  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  

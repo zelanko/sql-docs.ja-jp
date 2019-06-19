@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084358"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>アソシエーション ルール モデルのアイテムセットのフィルター選択
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 **アソシエーション ルール ビューアーの** [アイテムセット] [!INCLUDE[msCoName](../../includes/msconame-md.md)] タブに表示されるアイテムセットをフィルター選択できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 **アソシエーション ルール ビューアーの** [アイテムセット] [!INCLUDE[msCoName](../../includes/msconame-md.md)] タブに表示されるアイテムセットをフィルター選択できます。  
   
 ### <a name="to-filter-an-itemset"></a>アイテムセットをフィルター選択するには  
   

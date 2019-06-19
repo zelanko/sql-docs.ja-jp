@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099199"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)
@@ -69,7 +69,7 @@ ms.locfileid: "66099199"
   
 #### <a name="to-create-a-new-chart-report"></a>新しいグラフ レポートを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66099199"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  (省略可) [実行] ボタン (**!**) をクリックして、グラフの基になるデータを確認します。  
+8.  (省略可) [実行] ボタン ( **!** ) をクリックして、グラフの基になるデータを確認します。  
   
 9. **[次へ]** をクリックします。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66099199"
   
 2.  **[横棒]** をクリックし、 **[次へ]** をクリックします。  
   
-     **[グラフのフィールドの配置]** ページでは、**[使用できるフィールド]** ペインに 4 つのフィールドFirstName、LastName、SalesYear2009、および SalesYear2008 します。  
+     **[グラフのフィールドの配置]** ページでは、 **[使用できるフィールド]** ペインに 4 つのフィールドFirstName、LastName、SalesYear2009、および SalesYear2008 します。  
   
 3.  LastName をカテゴリ ペインにドラッグします。  
   
@@ -299,7 +299,7 @@ ms.locfileid: "66099199"
   
 8.  **[演算子]** で、ドロップダウン リストから **[上位 N]** を選択します。  
   
-9.  **[値]** に式「 **=5**」を入力します。  
+9. **[値]** に式「 **=5**」を入力します。  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -348,7 +348,7 @@ ms.locfileid: "66099199"
 ## <a name="next-steps"></a>次の手順  
  これで、「レポートへの横棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「[グラフ (レポート ビルダーおよび SSRS)](report-design/charts-report-builder-and-ssrs.md)」と「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)   
  [SQL Server 2014 のレポート ビルダー](report-builder/report-builder-in-sql-server-2016.md)  
   

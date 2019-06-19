@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792082"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>可用性グループに対するセカンダリ データベースの手動準備 (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "62792082"
   
 -   [関連するバックアップおよび復元のタスク](#RelatedTasks)  
   
--   **補足情報:**[セカンダリ データベースを準備した後](#FollowUp)  
+-   **補足情報:** [セカンダリ データベースを準備した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62792082"
   
 3.  セカンダリ レプリカをホストするサーバー インスタンスで、プライマリ データベースの完全バックアップ (および必要に応じて差分バックアップ)、それ以降のすべてのログ バックアップの順で復元します。  
   
-     **[RESTORE DATABASE オプション]** ページで、**[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます ] (RESTORE WITH NORECOVERY)** を選択します。  
+     **[RESTORE DATABASE オプション]** ページで、 **[データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます ] (RESTORE WITH NORECOVERY)** を選択します。  
   
      プライマリ データベースとセカンダリ データベースのファイル パスが異なる場合、たとえばプライマリ データベースはドライブ "F:" にあり、セカンダリ レプリカをホストするサーバー インスタンスに F: ドライブがない場合は、WITH 句に MOVE オプションを含めてください。  
   

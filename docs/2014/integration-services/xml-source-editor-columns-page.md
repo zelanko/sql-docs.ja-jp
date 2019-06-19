@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403e9394f23ba0d6ce503dbea3e46ad7f37b9cd9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054316"
 ---
 # <a name="xml-source-editor-columns-page"></a>[XML ソース エディター] ([列] ページ)
@@ -36,7 +36,7 @@ ms.locfileid: "66054316"
  **出力列**  
  各出力列の一意な名前を表示します。 既定では選択された外部 (変換元) 列の名前になりますが、一意でわかりやすい名前を付けることもできます。 指定された名前は、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[XML ソース エディター] ([接続マネージャー] ページ)](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
  [XML ソース エディター ([エラー出力] ページ)](../../2014/integration-services/xml-source-editor-error-output-page.md)   

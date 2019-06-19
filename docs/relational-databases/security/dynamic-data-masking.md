@@ -12,10 +12,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 06a6ef378e621d055d039d22ea023d8d0d68f25b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088985"
 ---
 # <a name="dynamic-data-masking"></a>動的なデータ マスキング
@@ -61,7 +61,7 @@ ms.locfileid: "65088985"
   
 -   列にマスクを作成しても、その列に対する更新を妨げることはありません。 マスクされた列にクエリを実行すると、ユーザーはマスクされたデータを受け取りますが、書き込みアクセス許可があるユーザーは、データを更新できます。 更新する許可を制限するために、適切なアクセス制御ポリシーを使用する必要があります。  
   
--   	`SELECT INTO` または `INSERT INTO` を使用して、マスクされた列を別のテーブルにコピーすると、対象のテーブルにマスクされたデータが表示されます。  
+-   `SELECT INTO` または `INSERT INTO` を使用して、マスクされた列を別のテーブルにコピーすると、対象のテーブルにマスクされたデータが表示されます。  
   
 -   動的データ マスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートとエクスポートを実行すると適用されます。 マスクされた列を含むデータベースは、マスクされたデータを含むエクスポートされたデータ ファイルを生成し (**UNMASK** 特権がないユーザーがエクスポートしたことを前提とします)、インポートされたデータベースは、マスクされたデータを静的に格納します。  
   

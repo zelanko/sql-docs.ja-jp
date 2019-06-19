@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66883f42947ba54205a5f272bb6bbfd5a90376f9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106575"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66106575"
   
 2.  **[名前]** に、グループの名前を入力します。  
   
-3.  **[グループ式]** で、式を入力するか式ボタン (**[fx]**) をクリックして、式を作成します。  
+3.  **[グループ式]** で、式を入力するか式ボタン ( **[fx]** ) をクリックして、式を作成します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66106575"
   
 3.  **[名前]** ボックスに、グループの名前を入力します。  
   
-4.  **[グループ式]** で、単純な式を入力または選択するか、式ボタン (**[fx]**) をクリックして、グループ式を作成します。  
+4.  **[グループ式]** で、単純な式を入力または選択するか、式ボタン ( **[fx]** ) をクリックして、グループ式を作成します。  
   
 5.  **[追加]** をクリックして追加の式を作成します。 指定するすべての式が論理 AND を使用して結合され、このグループのデータを指定します。  
   

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 020825afe9abf5abf121f9521668c1edd1670bbd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795295"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>クォーラム:データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)
@@ -67,7 +67,7 @@ ms.locfileid: "66795295"
   
     -   ミラー サーバーが失われ、プリンシパル サーバーとミラーリング監視サーバーがクォーラムを保持します。  
   
-         この場合、プリンシパル サーバーによってプリンシパル データベースが DISCONNECTED に設定され、ミラーリングが SUSPENDED の状態でプリンシパル サーバーが実行されます  (この状態は、データベースが現在ミラー化されていないので、*不安定な実行*と呼ばれます。)ミラー サーバーがセッションに再度参加すると、ミラーとしてクォーラムを再度獲得し、データベースのコピーの再同期を開始します。  
+         この場合、プリンシパル サーバーによってプリンシパル データベースが DISCONNECTED に設定され、ミラーリングが SUSPENDED の状態でプリンシパル サーバーが実行されます (この状態は、データベースが現在ミラー化されていないので、*不安定な実行*と呼ばれます。)ミラー サーバーがセッションに再度参加すると、ミラーとしてクォーラムを再度獲得し、データベースのコピーの再同期を開始します。  
   
     -   プリンシパル サーバーが失われ、ミラーリング監視サーバーとミラー サーバーがクォーラムを保持します。  
   

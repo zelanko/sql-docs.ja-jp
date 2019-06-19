@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1ff09c90aece19ea306ec91b8d5cb0d95da937c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727230"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET カスタム プロパティ
@@ -33,7 +33,7 @@ ms.locfileid: "65727230"
 |-------------------|---------------|-----------------|  
 |CommandTimeOut|String|SQL コマンドがタイムアウトになる時間を秒数で指定する値です。値が 0 の場合、コマンドはタイムアウトになりません。|  
 |SqlCommand|String|ADO NET ソースがデータの抽出に使用する SQL ステートメントです。<br /><br /> パッケージを読み込むときに、ADO NET ソースが使用する SQL ステートメントでこのプロパティを動的に更新できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」および「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」をご覧ください。|  
-|AllowImplicitStringConversion|ブール値|次の処理を実行するかどうかを示す値です。<br /><br /> - 外部メタデータの型と文字列型である出力列の型が一致しない場合に、検証エラーを生成しない (DT_WSTR または DT_NTEXT)。<br /><br /> - 外部メタデータの型を、出力列が使用する文字列データ型に暗黙的に変換する。<br /><br /> <br /><br /> 既定値は TRUE です。<br /><br /> 詳しくは、「 [ADO NET ソース](../../integration-services/data-flow/ado-net-source.md)」をご覧ください。|  
+|AllowImplicitStringConversion|Boolean|次の処理を実行するかどうかを示す値です。<br /><br /> \- 外部メタデータの型と文字列型である出力列の型が一致しない場合に、検証エラーを生成しない (DT_WSTR または DT_NTEXT)。<br /><br /> \- 外部メタデータの型を、出力列が使用する文字列データ型に暗黙的に変換する。<br /><br /> <br /><br /> 既定値は TRUE です。<br /><br /> 詳しくは、「 [ADO NET ソース](../../integration-services/data-flow/ado-net-source.md)」をご覧ください。|  
   
  ADO NET ソースの出力および出力列には、カスタム プロパティがありません。  
   

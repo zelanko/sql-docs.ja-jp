@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: a951fa18e10a5472f03ff9d37d63499e539584a2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795271"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "66795271"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[ミラーリング監視サーバーを削除した後](#FollowUp)  
+-   **補足情報:** [ミラーリング監視サーバーを削除した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081172"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>[フィルター] ダイアログ ボックス (マイニング精度チャート)
@@ -32,7 +32,7 @@ ms.locfileid: "66081172"
   
  フィルターを新しいデータセットに適用した場合、データセット内で条件を満たすケースのみを評価するために、既存のデータ マイニング モデルが使用されます。 ただし、フィルターをマイニング モデル自体に適用した場合、モデルの精度はマイニング モデル内で条件を満たすケースについてのみ評価されます。  
   
- **詳細:**[テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
+ **詳細:** [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>および  
  **条件**  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1831108732e6be88e9a21f71c4a2cba2b83d449f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728405"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 接続マネージャー
@@ -45,7 +45,7 @@ ms.locfileid: "65728405"
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続する場合、認証モードを指定します。  
 
 > [!NOTE]    
->  Azure Data Factory (ADF) で SSIS を使用していて、Azure Analysis Services (AAS) インスタンスに接続する場合は、Multi-Factor Authentication (MFA) が有効になっているアカウントを使用することはできません。代わりに、対話機能/MFA を必要としないアカウント、またはサービス プリンシパルを使用する必要があります。 サービス プリンシパルを使用するには、[ここ](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)を参照してサービス プリンシパルを作成し、サーバー管理者ロールを割り当てます。その後、**[特定のユーザー名とパスワードを使用する]** を選択して、接続マネージャーでサーバーにログオンし、最後に「`User name: app:YourApplicationID`」と「`Password: YourAuthorizationKey`」を入力します。
+>  Azure Data Factory (ADF) で SSIS を使用していて、Azure Analysis Services (AAS) インスタンスに接続する場合は、Multi-Factor Authentication (MFA) が有効になっているアカウントを使用することはできません。代わりに、対話機能/MFA を必要としないアカウント、またはサービス プリンシパルを使用する必要があります。 サービス プリンシパルを使用するには、[ここ](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal)を参照してサービス プリンシパルを作成し、サーバー管理者ロールを割り当てます。その後、 **[特定のユーザー名とパスワードを使用する]** を選択して、接続マネージャーでサーバーにログオンし、最後に「`User name: app:YourApplicationID`」と「`Password: YourAuthorizationKey`」を入力します。
   
 -   接続マネージャーから作成される接続を、実行時に保持するかどうかを指定します。  
   

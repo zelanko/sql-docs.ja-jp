@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078580"
 ---
 # <a name="lesson-5-create-relationships"></a>レッスン 5: [リレーションシップの作成]
@@ -30,7 +30,7 @@ ms.locfileid: "66078580"
   
 #### <a name="to-review-existing-relationships"></a>既存のリレーションシップを確認するには  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、**[モデル]** メニューをクリックし、**[モデル ビュー]** をポイントして、**[ダイアグラム ビュー]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
   
      モデル デザイナーがダイアグラム ビューで表示されます。このグラフィカルな形式では、インポートしたすべてのテーブルが、それらを結ぶ線と共に表示されます。 テーブル間の線は、データのインポート時に自動的に作成されたリレーションシップを表します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66078580"
      **Customer** テーブル内の **Geography Id** 列と **Geography** テーブル内の **Geography Id** 列が、どちらもボックス内に表示されます。 これは、これらがリレーションシップに使用される列であるということを示しています。 リレーションシップのプロパティに表示されます、**プロパティ**ウィンドウ。  
   
     > [!TIP]  
-    >  ダイアグラム ビューのモデル デザイナーを使用することに加え、**[リレーションシップの管理]** ダイアログ ボックスを使用して、すべてのテーブル間のリレーションシップをテーブル形式で表示することもできます。 **[テーブル]** メニューをクリックし、**[リレーションシップの管理]** をクリックします。 **[リレーションシップの管理]** ダイアログ ボックスに、データのインポート時に自動的に作成されたリレーションシップが表示されます。  
+    >  ダイアグラム ビューのモデル デザイナーを使用することに加え、 **[リレーションシップの管理]** ダイアログ ボックスを使用して、すべてのテーブル間のリレーションシップをテーブル形式で表示することもできます。 **[テーブル]** メニューをクリックし、 **[リレーションシップの管理]** をクリックします。 **[リレーションシップの管理]** ダイアログ ボックスに、データのインポート時に自動的に作成されたリレーションシップが表示されます。  
   
 3.  ダイアグラム ビューのモデル デザイナーか、または **[リレーションシップの管理]** ダイアログ ボックスを使用して、各テーブルが AdventureWorksDW データベースからインポートされた際に、次のリレーションシップが作成されたことを確認します。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "66078580"
     |------------|-----------|--------------------------|  
     |はい|**Customer [Geography Id]**|**Geography [Geography Id]**|  
     |はい|**製品 [製品のサブカテゴリの Id]**|**Product Subcategory [製品のサブカテゴリの Id]**|  
-    |はい|**Product Subcategory [製品カテゴリ Id]**|**製品カテゴリの [製品カテゴリ Id]**|  
-    |[はい]|**Internet Sales [Customer Id]**|**Customer [Customer Id]**|  
-    |[はい]|**Internet Sales [Product Id]**|**製品 [Product Id]**|  
+    |[はい]|**Product Subcategory [製品カテゴリ Id]**|**製品カテゴリの [製品カテゴリ Id]**|  
+    |はい|**Internet Sales [Customer Id]**|**Customer [Customer Id]**|  
+    |はい|**Internet Sales [Product Id]**|**製品 [Product Id]**|  
   
  上記のテーブル内のリレーションシップのいずれかが存在しない場合は、モデルには、次の表が含まれることを確認します。Customer、日付、Geography、Product、Product Category、Product Subcategory、および Internet Sales。 同じデータ ソース接続からのテーブルが複数回インポートされた場合、それらのテーブル間のリレーションシップは作成されず、手動で作成する必要があります。  
   

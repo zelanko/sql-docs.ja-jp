@@ -1,5 +1,5 @@
 ---
-Title: SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
+title: SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
 description: SQL Server Management Studio を使用し、基本的な T-SQL クエリを実行して SQL Server インスタンスに接続するためのクイックスタート チュートリアルです。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -12,12 +12,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 0300594d64bd1bc973cc5f1a0376ab8a325521ce
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 2cd8f0ad109f7ad780c78a8ee98afe40d14fba4c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822804"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>クイック スタート: SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
 

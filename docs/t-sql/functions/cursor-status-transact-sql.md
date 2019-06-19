@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d9a981cb1302b8edb1776a5808221eaddd2263b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943840"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
@@ -72,7 +72,7 @@ CURSOR_STATUS
 |-2|該当なし。|次のいずれかの可能性があります。<br /><br /> 以前に呼び出されたプロシージャでは、この OUTPUT 変数にカーソルが割り当てられませんでした。<br /><br /> 以前に割り当てられたプロシージャによって、この OUTPUT 変数にカーソルが割り当てられましたが、プロシージャの終了時点ではカーソルはクローズした状態でした。 このため、カーソルの割り当てが解除され、呼び出し元のプロシージャに返されません。<br /><br /> 宣言されたカーソル変数にはカーソルが割り当てられていません。|  
 |-3|指定された名前のカーソルは存在しません。|指定された名前のカーソル変数は存在しません。あるいは、存在しているとしても、それにはカーソルがまだ割り当てられていません。|  
   
-* 動的カーソルがこのような結果を返すことはありません。
+\* 動的カーソルがこのような結果を返すことはありません。
   
 ## <a name="examples"></a>使用例  
 この例では、`CURSOR_STATUS` 関数を使用し、カーソルの宣言後、そのオープン後、そのクローズ後の状態を示しています。

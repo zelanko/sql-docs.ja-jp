@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: fa1beab7acbdb4eb2b522596b8854e4bc714c640
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795519"
 ---
 # <a name="database-mirroring-operating-modes"></a>データベース ミラーリングの動作モード
@@ -241,7 +241,7 @@ ms.locfileid: "66795519"
 |自動フェールオーバーを伴わない高い安全性モード|FULL|NULL (ミラーリング監視サーバーなし)|  
 |自動フェールオーバーを伴う高い安全性モード*|FULL|CONNECTED|  
   
- * ミラーリング監視サーバーが切断された場合は、そのミラーリング監視サーバー インスタンスが使用できるようになるまで、WITNESS を OFF に設定することをお勧めします。  
+ \* ミラーリング監視サーバーが切断された場合は、そのミラーリング監視サーバー インスタンスが使用できるようになるまで、WITNESS を OFF に設定することをお勧めします。  
   
  ** ミラーリング監視サーバーが高パフォーマンス モードで存在する場合、このミラーリング監視サーバーはセッションに参加しません。 ただし、データベースを使用できるようにするには、少なくとも 2 つのサーバー インスタンスが接続された状態にしておく必要があります。 そのため、高パフォーマンス モードのセッションでは、WITNESS プロパティを OFF に設定しておくことをお勧めします。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   

@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cf52fc972fbaca8ad9de558d8a515f1f927c33d8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093840"
 ---
 # <a name="general-user-interface-elements"></a>一般的なユーザー インターフェイス要素
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、**[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
+[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、 **[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [[バージョン情報] ダイアログ ボックス](../ssms/about-dialog-box.md)  

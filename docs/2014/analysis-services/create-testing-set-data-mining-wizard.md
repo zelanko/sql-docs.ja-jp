@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086788"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>テスト セットの作成 (データ マイニング ウィザード)
@@ -34,7 +34,7 @@ ms.locfileid: "66086788"
   
 -   入れ子になったテーブルに格納されている値を予測しようとしている場合、データをパーティション分割することはできません。  
   
- **詳細情報。**[テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)、[リレーショナル マイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)、[基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **詳細情報。** [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)、[リレーショナル マイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)、[基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>および  
  **テスト用データの割合**  

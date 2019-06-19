@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a6f6f8c8699cc911d747d07edd9655fd363d667
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66696978"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
@@ -63,7 +63,7 @@ PATINDEX では、入力の照合順序に基づいて比較が行われます�
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
 SC の照合順序を使用する場合、戻り値では、*expression* パラメーターの UTF-16 サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
-0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、PATINDEX に含めることができません。  
+0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、PATINDEX に含めることができません。  
   
 ## <a name="examples"></a>使用例  
   

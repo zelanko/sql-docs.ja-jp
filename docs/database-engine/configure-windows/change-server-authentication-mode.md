@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: a4a038d29aeaacdfd75b71600443df8ea0c3f1db
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799408"
 ---
 # <a name="change-server-authentication-mode"></a>サーバーの認証モードの変更
@@ -60,7 +60,7 @@ ms.locfileid: "66799408"
   
 #### <a name="to-enable-the-sa-login"></a>sa ログインを有効にするには  
   
-1.  オブジェクト エクスプローラーで、 **[セキュリティ]**、[ログイン] の順に展開し、 **[sa]** を右クリックして **[プロパティ]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[セキュリティ]** 、[ログイン] の順に展開し、 **[sa]** を右クリックして **[プロパティ]** をクリックします。  
   
 2.  **[全般]** ページで、ログインのパスワード作成と確認が必要になる場合があります。  
   

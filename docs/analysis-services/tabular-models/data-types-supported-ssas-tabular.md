@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62472201"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>表形式モデルでサポートされるデータ型
@@ -65,7 +65,7 @@ ms.locfileid: "62472201"
   
  各 DAX 関数には、入力および出力として使用するデータ型について固有の要件があります。 たとえば、一部の関数は、特定の引数に整数や日付の指定が必要です。テキストやテーブルの指定が必要な関数もあります。  
   
- 引数として指定した列のデータは、関数に必要なデータ型と互換性が、DAX では、多くの場合はエラーを返します。 ただし、可能な DAX の試行を暗黙的に任意の場所は、データを必要なデータ型に変換します。 以下に例を示します。  
+ 引数として指定した列のデータは、関数に必要なデータ型と互換性が、DAX では、多くの場合はエラーを返します。 ただし、可能な DAX の試行を暗黙的に任意の場所は、データを必要なデータ型に変換します。 例 :  
   
 -   数値、たとえば「123」, は、文字列として入力できます。 DAX は、文字列を解析し、数値データ型として指定しようとしています。  
   

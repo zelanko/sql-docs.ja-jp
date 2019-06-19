@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 2692fc27400a5da76e05ce3931502b8b492eca8c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799461"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory サーバー構成オプションの構成
@@ -41,7 +41,7 @@ ms.locfileid: "66799461"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[index create memory オプションを構成した後](#FollowUp)  
+-   **補足情報:** [index create memory オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66799461"
   
 -   **index create memory** オプションは自動的に設定されるので、通常は調整する必要がありません。 ただし、インデックスを正常に作成できない場合は、必要に応じて、このオプションの値を実行値より大きくしてください。  
 
--   通常、稼働中のシステムではインデックス作成は頻度の少ない作業であり、多くの場合、閑散時に実行が予定されるジョブです。 したがって、インデックスの作成が頻繁でなく、閑散時に行われる場合、**index create memory** を増やすとインデックス作成のパフォーマンスが向上できます。 ただし、**[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 構成オプションの値は小さい数にします。そうすれば、要求したすべてのメモリが利用できない場合でも、インデックス作成ジョブは起動します。
+-   通常、稼働中のシステムではインデックス作成は頻度の少ない作業であり、多くの場合、閑散時に実行が予定されるジョブです。 したがって、インデックスの作成が頻繁でなく、閑散時に行われる場合、**index create memory** を増やすとインデックス作成のパフォーマンスが向上できます。 ただし、 **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 構成オプションの値は小さい数にします。そうすれば、要求したすべてのメモリが利用できない場合でも、インデックス作成ジョブは起動します。
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66799461"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `index create memory` オプションの値を `4096`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `index create memory` オプションの値を `4096`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

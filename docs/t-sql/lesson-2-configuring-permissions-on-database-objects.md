@@ -14,11 +14,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 56f98831db725a04d7399a49fbe8f6803cbe510c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478714"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>レッスン 2:データベース オブジェクトに対するアクセス許可の構成
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,10 +45,10 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
   
 ### <a name="create-a-new-windows-account"></a>新しい Windows アカウントの作成  
   
-1.  **[スタート]** ボタン、**[ファイル名を指定して実行]** の順にクリックし、**[名前]** ボックスに「 **%SystemRoot%\system32\compmgmt.msc /s**」と入力して、**[OK]** をクリックします。コンピューターの管理プログラムが開きます。 
-2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開し、**[ユーザー]** を右クリックして、**[新しいユーザー]** をクリックします。    
+1.  **[スタート]** ボタン、 **[ファイル名を指定して実行]** の順にクリックし、 **[名前]** ボックスに「 **%SystemRoot%\system32\compmgmt.msc /s**」と入力して、 **[OK]** をクリックします。コンピューターの管理プログラムが開きます。 
+2.  **[システム ツール]** の **[ローカル ユーザーとグループ]** を展開し、 **[ユーザー]** を右クリックして、 **[新しいユーザー]** をクリックします。    
 3.  **[ユーザー名]** ボックスに、「 **Mary**」と入力します。    
-4.  **[パスワード]** および **[パスワードの確認入力]** ボックスに強力なパスワードを入力し、**[作成]** をクリックして、新しいローカルの Windows ユーザーを作成します。  
+4.  **[パスワード]** および **[パスワードの確認入力]** ボックスに強力なパスワードを入力し、 **[作成]** をクリックして、新しいローカルの Windows ユーザーを作成します。  
   
 ### <a name="create-a-sql-login"></a>SQL ログインの作成  
 

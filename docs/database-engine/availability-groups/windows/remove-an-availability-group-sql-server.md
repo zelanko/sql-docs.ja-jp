@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: f450978ec1709bf765642f51c9d7b47864d0d5b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787946"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>可用性グループの削除 (SQL Server)
@@ -47,11 +47,11 @@ ms.locfileid: "66787946"
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続するか (可能な場合)、可用性グループの適切なセキュリティ資格情報を持つ WSFC ノード上の AlwaysOn 可用性グループに対して有効な別のサーバー インスタンスに接続します。 サーバー ツリーを展開します。  
   
-2.  [**AlwaysOn 高可用性**] ノードと [**可用性グループ**] ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  削除する可用性グループが複数であるか単独であるかによって、次のように実行する手順が異なります。  
   
-    -   (プライマリ レプリカが接続先のサーバー インスタンスにある) 複数の可用性グループを削除するには、**[オブジェクト エクスプローラーの詳細]** ペインを使用して、削除するすべての可用性グループを表示し、選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md) を参照してください。  
+    -   (プライマリ レプリカが接続先のサーバー インスタンスにある) 複数の可用性グループを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して、削除するすべての可用性グループを表示し、選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md) を参照してください。  
   
     -   単独の可用性グループを削除するには、 **[オブジェクト エクスプローラー]** ペインまたは **[オブジェクト エクスプローラーの詳細]** ペインで目的の可用性グループを選択します。  
   

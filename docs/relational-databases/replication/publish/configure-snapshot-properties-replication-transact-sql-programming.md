@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661069"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>スナップショットのプロパティの構成 (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "54134212"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションを作成するときにスナップショットのプロパティを構成するには  
   
-1.  パブリッシャーで [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)を実行します。 このとき、 **@publication**にパブリケーション名を、 **@repl_freq** に **snapshot** と **@repl_freq**のいずれかの値を指定し、次のスナップショット関連のパラメーターを少なくとも 1 つ指定します。  
+1.  パブリッシャーで [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)を実行します。 このとき、 **@publication** にパブリケーション名を、 **@repl_freq** に **snapshot** と **@repl_freq** のいずれかの値を指定し、次のスナップショット関連のパラメーターを少なくとも 1 つ指定します。  
   
     -   **@alt_snapshot_folder** - このパブリケーションのスナップショットが既定のスナップショット フォルダー以外の場所 (または既定のスナップショット フォルダーに追加された場所) に保存されている場合のパスを指定します。    
     -   **@compress_snapshot** - 代替スナップショット フォルダー内のスナップショット ファイルを **CAB ファイル形式で圧縮する場合は** true [!INCLUDE[msCoName](../../../includes/msconame-md.md)] を指定します。    
@@ -40,7 +40,7 @@ ms.locfileid: "54134212"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>マージ パブリケーションを作成するときにスナップショットのプロパティを構成するには  
   
-1.  パブリッシャーで [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)を実行します。 このとき、 **@publication**にパブリケーション名を、 **@repl_freq** に **snapshot** と **@repl_freq**のいずれかの値を指定し、次のスナップショット関連のパラメーターを少なくとも 1 つ指定します。  
+1.  パブリッシャーで [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)を実行します。 このとき、 **@publication** にパブリケーション名を、 **@repl_freq** に **snapshot** と **@repl_freq** のいずれかの値を指定し、次のスナップショット関連のパラメーターを少なくとも 1 つ指定します。  
   
     -   **@alt_snapshot_folder** - このパブリケーションのスナップショットが既定のスナップショット フォルダー以外の場所 (または既定のスナップショット フォルダーに追加された場所) に保存されている場合のパスを指定します。    
     -   **@compress_snapshot** - 代替スナップショット フォルダー内のスナップショット ファイルを **CAB ファイル形式で圧縮する場合は** を指定します。   
@@ -52,9 +52,9 @@ ms.locfileid: "54134212"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>既存のスナップショット パブリケーションまたはトランザクション パブリケーションに対してスナップショットのプロパティを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)を実行します。 このとき、 **@force_invalidate_snapshot** と **@force_invalidate_snapshot** を指定し、次のいずれかの値を **@property**に指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)を実行します。 このとき、 **@force_invalidate_snapshot** と **@force_invalidate_snapshot** を指定し、次のいずれかの値を **@property** に指定します。  
   
-    -   **alt_snapshot_folder** - **@value**を実行します。    
+    -   **alt_snapshot_folder** - **@value** を実行します。    
     -   **compress_snapshot** - 代替スナップショット フォルダー内のスナップショット ファイルを CAB ファイル形式で圧縮するかを示す **CAB ファイル形式で圧縮する場合は** に **false** と **@value** に指定します。    
     -   **pre_snapshot_script** - 初期化時、初期スナップショットが適用される前にサブスクライバー側で実行される **@value** ファイルのファイル名と完全パスを **.sql** ファイルのファイル名と完全パスを指定します。    
     -   **post_snapshot_script** - 初期化時、初期スナップショットが適用される前にサブスクライバー側で実行される **@value** ファイルのファイル名と完全パスを **.sql** ファイルのファイル名と完全パスを指定します。    
@@ -69,9 +69,9 @@ ms.locfileid: "54134212"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>既存のマージ パブリケーションに対してスナップショットのプロパティを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 このとき、 **@force_invalidate_snapshot** と **@force_invalidate_snapshot** を指定し、次のいずれかの値を **@property**に指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 このとき、 **@force_invalidate_snapshot** と **@force_invalidate_snapshot** を指定し、次のいずれかの値を **@property** に指定します。  
   
-    -   **alt_snapshot_folder** - **@value**を実行します。    
+    -   **alt_snapshot_folder** - **@value** を実行します。    
     -   **compress_snapshot** - 代替スナップショット フォルダー内のスナップショット ファイルを CAB ファイル形式で圧縮するかを示す **CAB ファイル形式で圧縮する場合は** に **false** と **@value** に指定します。    
     -   **pre_snapshot_script** - 初期化時、初期スナップショットが適用される前にサブスクライバー側で実行される **@value** ファイルのファイル名と完全パスを **.sql** ファイルのファイル名と完全パスを指定します。    
     -   **post_snapshot_script** - 初期化時、初期スナップショットが適用される前にサブスクライバー側で実行される **@value** ファイルのファイル名と完全パスを **.sql** ファイルのファイル名と完全パスを指定します。    

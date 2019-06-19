@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6015de3f6c300e8a96d16ad6b0a322754d882945
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729426"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
@@ -46,7 +46,7 @@ ms.locfileid: "65729426"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、パスワードを指定します。  
   
  **[パッケージのパス]**  
- パッケージのパスを入力するか、**[...]** をクリックしてコピーするパッケージを指定します。  
+ パッケージのパスを入力するか、 **[...]** をクリックしてコピーするパッケージを指定します。  
   
 ## <a name="see-also"></a>参照  
  [[パッケージのコピーの保存]](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   

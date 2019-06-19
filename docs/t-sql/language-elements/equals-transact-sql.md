@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f60995e7741dd0ed7f420a07c7cd2aa2199ed3c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982371"
 ---
 # <a name="-equals-transact-sql"></a>= (等しい) (Transact-SQL)
@@ -47,7 +47,7 @@ expression = expression
  任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 2 つの式のデータ型が異なる場合、1 つの式のデータ型がもう一方の式のデータ型に暗黙的に変換可能である必要があります。 変換は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)のルールに基づいています。  
   
 ## <a name="result-types"></a>戻り値の型  
- ブール値  
+ Boolean  
   
 ## <a name="remarks"></a>Remarks  
  NULL 式を使用して比較した場合、結果は `ANSI_NULLS` の設定に応じて以下のように異なります。  

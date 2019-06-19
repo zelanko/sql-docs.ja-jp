@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65801349"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>スクリプト コンポーネントによる変換先の作成
@@ -124,7 +124,7 @@ ms.locfileid: "65801349"
   
 3.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。  
   
-4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (変換なしで直接変換元を変換先に接続することもできます)。この出力には、サンプル データベース **AdventureWorks** の **Person.Address** テーブルから、少なくとも **AddressID** 列および **City** 列を含むデータが供給される必要があります。  
+4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換なしで直接変換元を変換先に接続することもできます)。この出力には、サンプル データベース **AdventureWorks** の **Person.Address** テーブルから、少なくとも **AddressID** 列および **City** 列を含むデータが供給される必要があります。  
   
 5.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 入力列と **City** 入力列を選択します。  
   
@@ -241,7 +241,7 @@ public class ScriptMain:
   
 2.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。  
   
-3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (変換なしで直接変換元を変換先に接続することもできます)。この出力には、サンプル データベース **AdventureWorks** サンプル データベースの **Person.Address** テーブルから、少なくとも **AddressID** 列および **City** 列を含むデータが渡される必要があります。  
+3.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換なしで直接変換元を変換先に接続することもできます)。この出力には、サンプル データベース **AdventureWorks** サンプル データベースの **Person.Address** テーブルから、少なくとも **AddressID** 列および **City** 列を含むデータが渡される必要があります。  
   
 4.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 列と **City** 列を選択します。  
   

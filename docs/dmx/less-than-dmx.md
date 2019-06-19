@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54983c849e88a71f7256fa864866c1e97fd6a646
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62503143"
 ---
 # <a name="lt-less-than-dmx"></a>&lt; (より小さい)(DMX)
@@ -35,7 +35,7 @@ DMX_Expression < DMX_Expression
 ## <a name="return-value"></a>戻り値  
  両方のパラメーターが NULL 以外であり、1 番目のパラメーターの値が 2 番目のパラメーターの値よりも小さい場合、TRUE を含むブール値です。 両方のパラメーターが NULL 以外であり、1 番目のパラメーターの値が 2 番目のパラメーターの値以上の場合、FALSE を含むブール値です。 ブール値には、いずれかまたは両方のパラメーターが null 値に評価される場合、null 値が含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [比較演算子&#40;DMX&#41;](../dmx/operators-comparison.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)  

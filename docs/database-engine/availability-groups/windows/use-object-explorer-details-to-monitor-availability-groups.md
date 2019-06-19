@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803438"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視
@@ -41,7 +41,7 @@ ms.locfileid: "66803438"
   
 2.  オブジェクト エクスプローラーで、可用性グループを監視する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続し、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-3.  [**AlwaysOn 高可用性**] ノードと [**可用性グループ**] ノードを展開します。  
+3.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 4.  **[オブジェクト エクスプローラーの詳細]** ペインに、接続したサーバー インスタンスがそのレプリカをホストしている可用性グループが表示されます。 それぞれの可用性グループについて、 **[サーバー インスタンス (プライマリ)]** 列に、プライマリ レプリカを現在ホストしているサーバー インスタンス名が表示されます。  特定の可用性グループの詳細を表示するには、オブジェクト エクスプ ローラーでそのグループを選択します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66803438"
  **[可用性グループ]** の詳細画面には、次の列が表示されます。  
   
  **[名前]**  
- 選択した可用性グループの **[可用性レプリカ]**、 **[可用性データベース]**、および **[可用性グループ]** リスナー フォルダーが表示されます。  
+ 選択した可用性グループの **[可用性レプリカ]** 、 **[可用性データベース]** 、および **[可用性グループ]** リスナー フォルダーが表示されます。  
   
 ##  <a name="AvReplicaDetails"></a> 可用性レプリカの詳細  
  **[可用性レプリカ]** の詳細画面には、次の列が表示されます。  
@@ -68,7 +68,7 @@ ms.locfileid: "66803438"
  可用性レプリカをホストするサーバー インスタンス名と、サーバー インスタンスからローカル サーバー インスタンスへの現在の接続状態を示すアイコンが表示されます。  
   
  **ロール**  
- 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]**) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
+ 可用性レプリカの現在のロール ( **[プライマリ]** または **[セカンダリ]** ) を示します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のロールについては、「[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
  **[セカンダリ ロールの接続モード]**  
  セカンダリ ロールを実行している (つまりセカンダリ レプリカとして機能している) 特定の可用性レプリカのデータベースがクライアントから接続を受け入れることができるかどうかを示します。  

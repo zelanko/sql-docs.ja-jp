@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62844100"
 ---
 # <a name="new-full-text-catalog-general-page"></a>[新しいフルテキスト カタログ] ([全般] ページ)
@@ -38,7 +38,7 @@ ms.locfileid: "62844100"
  このカタログを新しいフルテキスト カタログの既定のカタログに設定する場合にオンにします。  
   
  **[アクセントの区別]**  
- チルダ (**~**)、アキュート アクセント記号 (**´**)、ウムラウト (**¨**) などの分音記号をカタログで区別するかしないかを指定します。 **[区別しない]** を選択した場合、このフルテキスト カタログに関連付けられているフルテキスト インデックスで分音記号は無視されます。 分音記号の詳細については、次を参照してください。[分音記号](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster web サイトにします。  
+ チルダ ( **~** )、アキュート アクセント記号 (**´**)、ウムラウト (**¨**) などの分音記号をカタログで区別するかしないかを指定します。 **[区別しない]** を選択した場合、このフルテキスト カタログに関連付けられているフルテキスト インデックスで分音記号は無視されます。 分音記号の詳細については、次を参照してください。[分音記号](https://www.merriam-webster.com/dictionary/diacritic)Merriam Webster web サイトにします。  
   
 ## <a name="see-also"></a>参照  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085685"
 ---
 # <a name="classified-columns-data-mining"></a>分類済みの列 (データ マイニング)
@@ -58,7 +58,7 @@ ms.locfileid: "66085685"
  **SUPPORT**  
  この列の値は、関連付けられている値の重み (ケース レプリケーション係数) です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)   
  [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
  [データ型 (データ マイニング)](data-types-data-mining.md)  

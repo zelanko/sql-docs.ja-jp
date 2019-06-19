@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013672"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship を使用した、リレーションシップの指定 (SQLXML 4.0)
@@ -238,7 +238,7 @@ ms.locfileid: "66013672"
 </xsd:schema>  
 ```  
   
- 名前付きリレーションシップを指定する代わりに、匿名のリレーションシップを指定することもできます。 ここでのコンテンツ全体 **\<注釈 >** . **\</annotation >**、2 つのリレーションシップについて説明しますの子要素として表示される **\<製品 >** します。  
+ 名前付きリレーションシップを指定する代わりに、匿名のリレーションシップを指定することもできます。 ここでのコンテンツ全体 **\<注釈 >** . **\</annotation >** 、2 つのリレーションシップについて説明しますの子要素として表示される **\<製品 >** します。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- スキーマの両方、  **\<Emp1 >** 要素と **\<Emp2 >** 要素は型`EmpType`します。 型`EmpType`について説明します、 **\<順序 >** 子要素と、対応する **\<sql:relationship >** します。 この場合、指定できる 1 つの親はありません **\<sql:relationship >** を使用して、**親**属性。 指定しないこのような状況で、**親**属性 **\<sql:relationship >**、**親**から属性情報を取得、スキーマ内の階層。  
+ スキーマの両方、  **\<Emp1 >** 要素と **\<Emp2 >** 要素は型`EmpType`します。 型`EmpType`について説明します、 **\<順序 >** 子要素と、対応する **\<sql:relationship >** します。 この場合、指定できる 1 つの親はありません **\<sql:relationship >** を使用して、**親**属性。 指定しないこのような状況で、**親**属性 **\<sql:relationship >** 、**親**から属性情報を取得、スキーマ内の階層。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   

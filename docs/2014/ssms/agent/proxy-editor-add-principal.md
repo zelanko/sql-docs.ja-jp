@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650498"
 ---
 # <a name="proxy-editor-and--add-principal"></a>プロキシ エディターおよび [プリンシパルの追加]
@@ -32,7 +32,7 @@ ms.locfileid: "62650498"
  **名前**  
  アクセス権を与える対象プリンシパルの名前を選択するか、 **[名前]** を選択して一覧内のすべてのプリンシパルにアクセス権を与えます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server エージェント プロキシの作成](create-a-sql-server-agent-proxy.md)  
   
   
