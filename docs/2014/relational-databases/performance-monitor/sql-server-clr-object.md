@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2e939e27263f52dc3a6ac607bc59cd8db6c1806
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250711"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server: CLR オブジェクト
-   **SQLServer:CLR** オブジェクトには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での CLR (共通言語ランタイム) の実行を監視するカウンターが用意されています。  
+  **SQLServer:CLR** オブジェクトには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での CLR (共通言語ランタイム) の実行を監視するカウンターが用意されています。  
   
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** カウンターを示します。  
   

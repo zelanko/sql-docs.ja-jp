@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: fe8dd1ebcc6604b8cff514cff3628abc23275517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287249"
 ---
 # <a name="creating-script-files-oracletosql"></a>スクリプト ファイルの作成 (OracleToSQL)
@@ -320,7 +320,7 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
     </...All commands...>  
     ```  
   
-10. **暗号化されたパスワードをオーバーライドします。**'True' の場合、サーバー接続ファイルのサーバー定義のセクションで、またはスクリプト ファイルに上書きの場合は、保護されたストレージに格納されている暗号化されたパスワードが存在するクリア テキスト パスワードが指定されました。 クリア テキストでパスワードが指定されていない場合は、パスワードの入力を求められます。  
+10. **暗号化されたパスワードをオーバーライドします。** 'True' の場合、サーバー接続ファイルのサーバー定義のセクションで、またはスクリプト ファイルに上書きの場合は、保護されたストレージに格納されている暗号化されたパスワードが存在するクリア テキスト パスワードが指定されました。 クリア テキストでパスワードが指定されていない場合は、パスワードの入力を求められます。  
   
     ここでは 2 つのケースが生じます。  
   

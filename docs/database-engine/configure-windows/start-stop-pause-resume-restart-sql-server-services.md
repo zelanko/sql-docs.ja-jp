@@ -42,10 +42,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 9325820ea71c94bb1e43828998ebbf810fb11c10
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775266"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server サービスの開始、停止、一時停止、再開、再起動
@@ -196,7 +196,7 @@ ms.locfileid: "66775266"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     - または -  
+     \- または -  
   
      **net start MSSQLSERVER**  
   
@@ -206,7 +206,7 @@ ms.locfileid: "66775266"
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     - または -  
+     \- または -  
   
      **net start MSSQL$** *instancename*  
   
@@ -216,7 +216,7 @@ ms.locfileid: "66775266"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     - または -  
+     \- または -  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -229,7 +229,7 @@ ms.locfileid: "66775266"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     - または -  
+     \- または -  
   
      **net start SQLSERVERAGENT**  
   
@@ -239,7 +239,7 @@ ms.locfileid: "66775266"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     - または -  
+     \- または -  
   
      **net start SQLAgent$** *instancename*  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66775266"
   
      **net start "SQL Server Browser"**  
   
-     - または -  
+     \- または -  
   
      **net start SQLBrowser**  
   

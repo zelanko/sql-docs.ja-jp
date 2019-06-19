@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726467"
 ---
 # <a name="resolve-column-reference-editor"></a>列参照解決エディター
@@ -34,16 +34,16 @@ ms.locfileid: "65726467"
  すべての列参照が解決された後、他のデータ パス エラーが存在しなければ、データ パスの横にエラー アイコンが表示されなくなります。  
   
 ## <a name="options"></a>オプション  
- **マップ解除された出力列 (変換元)**    
+ **マップ解除された出力列 (変換元)**     
  現在マップされていない上流パスの列。  
   
-**マップされた列 (変換元)**    
+**マップされた列 (変換元)**     
  下流パスから列にマップされた上流パスの列。  
   
-**マップされた列 (変換先)**    
+**マップされた列 (変換先)**     
  下流パスから列にマップされた上流パスの列。  
   
-**マップ解除された入力列 (変換先)**    
+**マップ解除された入力列 (変換先)**     
  現在マップされていない下流パスの列。  
   
 **[マップ解除された入力列の削除]**  

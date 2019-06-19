@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108432"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5: レポートの書式設定 (Reporting Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66108432"
   
 1.  **[デザイン]** タブをクリックします。  
   
-2.  `[Date]` フィールド式が入力されているセルを右クリックし、**[テキスト ボックスのプロパティ]** をクリックします。  
+2.  `[Date]` フィールド式が入力されているセルを右クリックし、 **[テキスト ボックスのプロパティ]** をクリックします。  
   
 3.  クリックして**数**、し、**カテゴリ**フィールドで、`Date`します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66108432"
   
 #### <a name="to-format-a-currency-field"></a>通貨フィールドを書式設定するには  
   
-1.  `[LineTotal]` フィールド式が入力されているセルを右クリックし、**[テキスト ボックスのプロパティ]** をクリックします。  
+1.  `[LineTotal]` フィールド式が入力されているセルを右クリックし、 **[テキスト ボックスのプロパティ]** をクリックします。  
   
 2.  **[数値]** をクリックし、 **[Category]** フィールドで **[通貨]** を選択します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66108432"
   
 4.  [ **位取り区切り記号 (,) を使用する]** を選択します。  
   
-     "**$12,345.00**" というサンプル テキストが表示されている場合、正しい設定が行われています。  
+     " **$12,345.00**" というサンプル テキストが表示されている場合、正しい設定が行われています。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66108432"
 ## <a name="next-steps"></a>次の手順  
  ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 「[レッスン 6:グループと合計の追加 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

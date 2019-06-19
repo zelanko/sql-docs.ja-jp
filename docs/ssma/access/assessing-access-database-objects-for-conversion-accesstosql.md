@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650980"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>変換 (AccessToSQL) のための Access データベース オブジェクトの評価
@@ -60,6 +60,6 @@ SSMA 変換を選択した Access データベース オブジェクトで、評
 ## <a name="next-step"></a>次の手順  
 [Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

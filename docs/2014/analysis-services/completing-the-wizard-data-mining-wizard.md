@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087708"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>[ウィザードの完了] (データ マイニング ウィザード)
@@ -27,7 +27,7 @@ ms.locfileid: "66087708"
 > [!NOTE]  
 >  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のリレーショナル データベースまたはデータ ウェアハウスを使用する]** または **[既存のキューブを使用する]** のどちらを選択したかによって異なります。  
   
- **詳細情報。**[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[データ マイニング デザイナー](data-mining/data-mining-designer.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。** [データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[データ マイニング デザイナー](data-mining/data-mining-designer.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **マイニング構造名**  
@@ -59,7 +59,7 @@ ms.locfileid: "66087708"
 > [!NOTE]  
 >  このオプションは、 **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合、およびウィザードの現在のページの **[マイニング モデル ディメンションを作成する]** を選択した場合にのみ使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [データ ソース ビューを選択します&#40;データ マイニング ウィザード。&#41;](select-data-source-view-data-mining-wizard.md)   
  [トレーニング データの指定&#40;データ マイニング ウィザード&#41;](specify-the-training-data-data-mining-wizard.md)  

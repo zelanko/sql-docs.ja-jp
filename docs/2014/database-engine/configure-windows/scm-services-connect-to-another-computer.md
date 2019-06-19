@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810350"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>別のコンピューターへの接続 (SQL Server 構成マネージャー)
@@ -59,7 +59,7 @@ ms.locfileid: "62810350"
   
 8.  **[スナップインの追加と削除]** ウィンドウで **[OK]** をクリックします。  
   
-9. **[コンピューターの管理 (***\<コンピューター名>***)]**、**[サービスとアプリケーション]** の順に展開します。  
+9. **[コンピューターの管理 (***\<コンピューター名>***)]** 、 **[サービスとアプリケーション]** の順に展開します。  
   
 10. **[SQL Server 構成マネージャー]** を右クリックして、 **[ここから新しいウィンドウ]** をクリックします。  
   

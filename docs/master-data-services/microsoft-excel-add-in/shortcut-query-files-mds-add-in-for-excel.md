@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c02c20f55e6d814d2b1a95087f94da3824de57b2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486075"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>ショートカット クエリ ファイル (Excel 用 MDS アドイン)
@@ -41,7 +41,7 @@ ms.locfileid: "65486075"
 ## <a name="queryopener-application"></a>QueryOpener アプリケーション  
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] をインストールすると、QueryOpener というアプリケーションが必ずインストールされます。 このアプリケーションを使用して、 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]でショートカット クエリ ファイルを開きます。 ショートカット クエリ ファイルをダブルクリックすると、このアプリケーションが自動的に使用され、アドインでファイルが開きます。  
   
- このアプリケーションでショートカット クエリ ファイルを開くときに、接続を "安全な" 接続にするように求めるメッセージが表示されます。これは、この場所からの内容を信頼することを意味します。 (プロンプト ウィンドウで **[このアドレスへの接続を常に許可する]** を選択すると、安全に接続できます。)接続を安全としてマークするたびに、接続がリストに追加されます。 このリストをクリアする場合は、**[設定]** ダイアログ ボックスを開き、**[セーフ リストに追加されたサーバー]** セクションで **[すべてクリア]** をクリックします。  
+ このアプリケーションでショートカット クエリ ファイルを開くときに、接続を "安全な" 接続にするように求めるメッセージが表示されます。これは、この場所からの内容を信頼することを意味します。 (プロンプト ウィンドウで **[このアドレスへの接続を常に許可する]** を選択すると、安全に接続できます。)接続を安全としてマークするたびに、接続がリストに追加されます。 このリストをクリアする場合は、 **[設定]** ダイアログ ボックスを開き、 **[セーフ リストに追加されたサーバー]** セクションで **[すべてクリア]** をクリックします。  
   
  アプリケーションの既定の場所は *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe です。  
   

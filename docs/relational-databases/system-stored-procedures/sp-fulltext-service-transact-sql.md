@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c43d969f56619109cfb6ebe09b8a416824f59638
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982974"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
@@ -59,9 +59,9 @@ sp_fulltext_service [ [@action=] 'action'
 |**master_merge_dop**|**int**|マスター マージ プロセスで使用されるスレッドの数を指定します。 この値が使用可能な Cpu または CPU の数を超えないコアです。<br /><br /> サービスを使用して、4、または使用可能な Cpu または CPU の数より小さくこの引数が指定されていない場合のコア。|  
 |**pause_indexing**|**int**|現在一時停止している場合は、かどうか、フルテキスト インデックス作成する必要がありますが現在実行されている場合、一時停止または再開されるを指定します。<br /><br /> 0 = サーバー インスタンスのフルテキスト インデックス作成を再開する<br /><br /> 1 = サーバー インスタンスのフルテキスト インデックス作成アクティビティの一時停止します。|  
 |**resource_usage**|**int**|関数を持たない[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンは無視されます。|  
-|**update_languages**|NULL|フルテキスト検索に登録された言語の一覧を更新します。 インデックスやフルテキスト クエリで構成するときに、言語が指定されます。 などのデータ型で格納されている .docx などの対応するファイル形式からテキストの情報を抽出するフィルターを使用して、フィルター デーモン ホスト**varbinary**、 **varbinary (max)**、**イメージ**、または**xml**、フルテキスト インデックス作成。<br /><br /> 詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。|  
+|**update_languages**|NULL|フルテキスト検索に登録された言語の一覧を更新します。 インデックスやフルテキスト クエリで構成するときに、言語が指定されます。 などのデータ型で格納されている .docx などの対応するファイル形式からテキストの情報を抽出するフィルターを使用して、フィルター デーモン ホスト**varbinary**、 **varbinary (max)** 、**イメージ**、または**xml**、フルテキスト インデックス作成。<br /><br /> 詳細については、「 [登録済みのフィルターおよびワード ブレーカーの表示または変更](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)」を参照してください。|  
 |**upgrade_option**|**int**|データベースを [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からそれより新しいバージョンにアップグレードする際のフルテキスト インデックスの移行方法を制御します。 このプロパティは、データベースのインポート、データベース バックアップの復元、ファイル バックアップの復元、またはデータベース コピー ウィザードを使用したデータベースのコピーによってアップグレードする場合に適用されます。<br /><br /> 次のいずれかです。<br /><br /> 0 = フルテキスト カタログは、新しい強化されたワード ブレーカーを使用して再構築されます。 インデックスの再構築には時間がかかり、アップグレード後にかなりの量の CPU とメモリが必要になる可能性があります。<br /><br /> 1 = フルテキスト カタログがリセットされます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログ ファイルは削除されますが、フルテキスト カタログのメタデータおよびフルテキスト インデックスは保持されます。 アップグレード後、すべてのフルテキスト インデックスで変更の追跡は無効化されており、クロールは自動的には開始されません。 アップグレードの完了後、手動で完全作成を実行するまで、カタログは空のままになります。<br /><br /> 2 = フルテキスト カタログがインポートされます。 通常、インポートの方が再構築よりもかなり高速に処理されます。 たとえば、CPU を 1 つだけ使用している場合、インポートは、再構築の約 10 倍の速さで実行されます。 ただし、最終的にフルテキスト カタログの再構築するため、インポートされたフルテキスト カタログは、新しい強化されたワード ブレーカーを使用できません。<br /><br /> 注:再構築はマルチスレッド モードで実行できます。10 を超える CPU が使用可能な場合に、再構築でそれらの CPU をすべて使用できるようにすると、再構築の方がインポートよりも高速に実行されることがあります。<br /><br /> フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 このオプションは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースでのみ使用できます。<br /><br /> フルテキスト アップグレード オプションの選択については、「[フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」をご覧ください。<br /><br /> 注:このプロパティを設定する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して、**フルテキスト アップグレード オプション**プロパティ。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。|  
-|**verify_signature**|**int**|署名付きバイナリのみがフルテキスト エンジンによって読み込まれるかどうかを示します。 信頼できるのみ、既定では、署名付きバイナリが読み込まれます。<br /><br /> 1 = 信頼された署名付きバイナリのみを確認して読み込む (既定値)<br /><br /> 0 = バイナリが署名付きかどうかを確認しない|  
+|**verify_signature**|**int**|署名付きバイナリのみがフルテキスト エンジンによって読み込まれるかどうかを示します。 既定では、信頼された署名付きバイナリのみが読み込まれます。<br /><br /> 1 = 信頼された署名付きバイナリのみを確認して読み込む (既定値)<br /><br /> 0 = バイナリが署名付きかどうかを確認しない|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -90,7 +90,7 @@ EXEC sp_fulltext_service @action='upgrade_option', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

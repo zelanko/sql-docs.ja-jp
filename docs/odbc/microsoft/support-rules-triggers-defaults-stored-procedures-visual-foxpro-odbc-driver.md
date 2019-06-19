@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269862"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>ルール、トリガー、既定値、およびストアド プロシージャのサポート (Visual FoxPro ODBC ドライバー)
@@ -44,7 +44,7 @@ Visual FoxPro ルール、トリガー、既定値、または、Visual FoxPro O
  ルール、トリガー、既定値にデータをやり取りするアプリケーションまたはストアド プロシージャを呼び出す他の Visual FoxPro コマンドまたは関数は、ドライバーはエラーを生成します。 参照してください[サポートされていない Visual FoxPro コマンドと関数](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)コマンドと、ドライバーによってサポートされていない関数の一覧についてはします。  
   
 > [!TIP]  
->  使用することができます、ルール、トリガー、または、ドライバーによって呼び出されたときに実行するコマンドを決定するストアド プロシージャに条件付きのコードを挿入する場合、**バージョン ()** 関数。 **バージョン ()** 関数が返される"Visual FoxPro ODBC ドライバー *\<バージョン >*"ドライバーによって呼び出されるとします。  
+>  使用することができます、ルール、トリガー、または、ドライバーによって呼び出されたときに実行するコマンドを決定するストアド プロシージャに条件付きのコードを挿入する場合、**バージョン ()** 関数。 **バージョン ()** 関数が返される"Visual FoxPro ODBC ドライバー *\<バージョン >* "ドライバーによって呼び出されるとします。  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro コマンドと規則、トリガー、既定値、およびストアド プロシージャでサポートされる関数  
   

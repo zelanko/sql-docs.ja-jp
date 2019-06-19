@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079200"
 ---
 # <a name="lesson-11-create-partitions"></a>レッスン 11:パーティションの作成
@@ -136,7 +136,7 @@ ms.locfileid: "66079200"
     ```  
   
 ## <a name="process-partitions"></a>パーティションの処理  
- **[パーティション マネージャー]** ダイアログ ボックスで、新たに作成した各パーティションのパーティション名の隣にアスタリスク (**\***) が表示されます。 これは、パーティションがまだ処理 (更新) されていないことを示します。 新しいパーティションを作成したら、"パーティションの処理" または "テーブルの処理" 操作を実行して、それらのパーティション内のデータを更新する必要があります。  
+ **[パーティション マネージャー]** ダイアログ ボックスで、新たに作成した各パーティションのパーティション名の隣にアスタリスク ( **\*** ) が表示されます。 これは、パーティションがまだ処理 (更新) されていないことを示します。 新しいパーティションを作成したら、"パーティションの処理" または "テーブルの処理" 操作を実行して、それらのパーティション内のデータを更新する必要があります。  
   
 #### <a name="to-process-internet-sales-partitions"></a>Internet Sales パーティションを処理するには  
   

@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62955901"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>サーバー接続の F1 ヘルプ (SQL Server Management Studio)
-  ここでは、 **の** [サーバーへの接続] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
+  ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバーへの接続]** ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
   
  [[サーバーの参照] ([ローカル サーバー])](../../database-engine/browse-for-servers-local-servers.md)  
   

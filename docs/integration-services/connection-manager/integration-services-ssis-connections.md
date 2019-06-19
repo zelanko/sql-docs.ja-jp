@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd0a6810290d3f7becd6e03cb061b5052b544d17
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728246"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
@@ -96,7 +96,7 @@ ms.locfileid: "65728246"
 |FTP|FTP サーバーに接続します。|[FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)|  
 |HTTP|Web サーバーに接続します。|[HTTP 接続マネージャー](../../integration-services/connection-manager/http-connection-manager.md)|  
 |MSMQ (MSMQ)|メッセージ キューに接続します。|[MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)|  
-|MSOLAP100| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに接続します。|[Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
+|MSOLAP100|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに接続します。|[Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
 |MULTIFILE|複数のファイルおよびフォルダーに接続します。|[複数ファイル接続マネージャー](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|複数のデータ ファイルおよびフォルダーに接続します。|[複数フラット ファイル接続マネージャー](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
 |OLEDB|OLE DB プロバイダーを使用して、データ ソースに接続します。|[OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
@@ -126,12 +126,12 @@ ms.locfileid: "65728246"
   
  新しいパッケージを作成する際に接続マネージャーを自動的に作成して構成する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用できます。 このウィザードは、接続マネージャーを使用する変換元および変換先の作成と構成を行う場合に役立ちます。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](../../integration-services/create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
- 手動で新しい接続マネージャーを作成して既存のパッケージに追加するには、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、**[データ フロー]** タブ、および **[イベント ハンドラー]** タブに表示される **[接続マネージャー]** 領域を使用します。 **[接続マネージャー]** 領域で、作成する接続マネージャーの種類を選択し、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されているダイアログ ボックスを使用して、接続マネージャーのプロパティを設定します。 詳細については、後の「[接続マネージャー] 領域の使用」を参照してください。  
+ 手動で新しい接続マネージャーを作成して既存のパッケージに追加するには、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブに表示される **[接続マネージャー]** 領域を使用します。 **[接続マネージャー]** 領域で、作成する接続マネージャーの種類を選択し、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されているダイアログ ボックスを使用して、接続マネージャーのプロパティを設定します。 詳細については、後の「[接続マネージャー] 領域の使用」を参照してください。  
   
  パッケージに接続マネージャーを追加すると、タスク、Foreach ループ コンテナー、変換元、変換、および変換先で使用できます。 詳細については、「[Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)」、「[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」、および「[データ フロー](../../integration-services/data-flow/data-flow.md)」を参照してください。  
   
 ### <a name="using-the-connection-managers-area"></a>[接続マネージャー] 領域の使用  
- 接続マネージャーは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、**[データ フロー]** タブ、または **[イベント ハンドラー]** タブがアクティブなときに作成できます。  
+ 接続マネージャーは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブがアクティブなときに作成できます。  
   
  次の図は、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ上にある **[接続マネージャー]** 領域を示しています。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "65728246"
   
     -   パッケージに追加する接続マネージャーの種類をクリックします。  
   
-         - または -  
+         \- または -  
   
     -   追加する種類が一覧にない場合は、 **[新しい接続]** をクリックして **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開き、接続マネージャーの種類を選択してから **[OK]** をクリックします。  
   

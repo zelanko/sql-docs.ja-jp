@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bb77f2da026e085aa14260c06648dd93f8b161c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723781"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -37,7 +37,7 @@ ms.locfileid: "65723781"
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>クエリを指定して構文を確認する
 **SQL ステートメント**  
- ソース データベースから特定のデータ行と列を取得する SELECT クエリを入力します。 保存されたクエリのテキストを貼り付けるか、**[参照]** をクリックしてファイルからクエリを読み込むこともできます。 
+ ソース データベースから特定のデータ行と列を取得する SELECT クエリを入力します。 保存されたクエリのテキストを貼り付けるか、 **[参照]** をクリックしてファイルからクエリを読み込むこともできます。 
   
  たとえば、次のクエリは、歩合率が 1.5% より高い販売担当者の **SalesPersonID**、**SalesQuota**、および **SalesYTD** を AdventureWorks サンプル データベースから取得します。  
   
@@ -66,7 +66,7 @@ WHERE CommissionPct > 0.015
 > Excel ファイルへの接続、および Excel から、または Excel へのデータの読み込みに関する制限事項と既知の問題については、「[Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)」 (SQL Server Integration Services (SSIS) を使用して Excel から、または Excel にデータを読み込む) を参照してください。
 
 クエリに使用できる Excel オブジェクトは 3 種類あります。
--   **ワークシート。** ワークシートをクエリするには、シート名の末尾に $ 文字を付加し、文字列を区切り文字で囲みます (例: **[Sheet1$]**)。
+-   **ワークシート。** ワークシートをクエリするには、シート名の末尾に $ 文字を付加し、文字列を区切り文字で囲みます (例: **[Sheet1$]** )。
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -78,7 +78,7 @@ WHERE CommissionPct > 0.015
     SELECT * FROM MyDataRange
     ```
 
--   **名前のない範囲。** 名前のないセルの範囲を指定するには、シート名の末尾に $ 文字を付加し、範囲の指定を追加し、文字列を区切り文字で囲みます (例: **[Sheet1$A1:B4]**)。
+-   **名前のない範囲。** 名前のないセルの範囲を指定するには、シート名の末尾に $ 文字を付加し、範囲の指定を追加し、文字列を区切り文字で囲みます (例: **[Sheet1$A1:B4]** )。
 
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
@@ -89,6 +89,6 @@ WHERE CommissionPct > 0.015
   
 -   ほとんどの宛先では、次のページは **[コピー元のテーブルおよびビューを選択]** になります。 このページで、指定したクエリを確認し、オプションでコピーする列を選択し、サンプル データをプレビューします。 詳細については、「 [コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」を参照してください。  
   
--   宛先がフラット ファイルの場合、次のページは **[フラット ファイルの変換先の構成]** になります。 このページで、宛先のフラット ファイルの書式設定オプションを指定します  (フラット ファイルを構成した後、次に表示されるページは **[コピー元のテーブルおよびビューを選択]** になります)。詳細については、「[フラット ファイルの変換先の構成](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  
+-   宛先がフラット ファイルの場合、次のページは **[フラット ファイルの変換先の構成]** になります。 このページで、宛先のフラット ファイルの書式設定オプションを指定します (フラット ファイルを構成した後、次に表示されるページは **[コピー元のテーブルおよびビューを選択]** になります)。詳細については、「[フラット ファイルの変換先の構成](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  
 
 

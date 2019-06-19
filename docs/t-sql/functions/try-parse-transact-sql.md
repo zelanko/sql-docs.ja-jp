@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946888"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
@@ -76,7 +76,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |数値|Decimal|Decimal|NumberStyles.Number|  
 |数値|NUMERIC|Decimal|NumberStyles.Number|  
 |数値|FLOAT|Double|NumberStyles.Float|  
-|数値|REAL|単一|NumberStyles.Float|  
+|数値|REAL|Single|NumberStyles.Float|  
 |数値|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |数値|money|Decimal|NumberStyles.Currency|  
 |日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -100,7 +100,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Español|Spanish|3082|es-ES|  
 |Italiano|Italian|1040|it-IT|  
 |Nederlands|Dutch|1043|nl-NL|  
-|Norsk|Norwegian|2068|nn-NO|  
+|Norsk|ノルウェー語|2068|nn-NO|  
 |Português|Portuguese|2070|pt-PT|  
 |Suomi|Finnish|1035|fi|  
 |Svenska|Swedish|1053|sv-SE|  
@@ -115,7 +115,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |български|Bulgarian|1026|bg-BG|  
 |русский|Russian|1049|Ru-RU|  
 |Türkçe|Turkish|1055|Tr-TR|  
-|British|British English|2057|en-GB|  
+|British|英語 (U.K.)|2057|en-GB|  
 |eesti|Estonian|1061|Et-EE|  
 |latviešu|Latvian|1062|lv-LV|  
 |lietuvių|Lithuanian|1063|lt-LT|  

@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53f613bd2a791eb210d908e3e84f8f09098db977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715879"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>セキュリティ ログへの SQL サーバー監査イベントの書き込み  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ Windows の監査ポリシーは、Windows セキュリティ ログに書き込
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はシステムがイベントをセキュリティ ログに記録できないことを検出できないため、監査イベントが失われる場合があります。  
 -   ボックス管理者によってセキュリティ ログが修復されると、ログ動作は正常に戻ります。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者は、セキュリティ ログのローカル設定がドメイン ポリシーによって上書きされることを理解している必要があります。 この場合、ドメイン ポリシーによってサブカテゴリ設定 (**auditpol /get /subcategory:"application generated"**) が上書きされる可能性があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査対象であるイベントが記録されないことを検出する方法がない場合、これがイベントをログに記録する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能に影響します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者は、セキュリティ ログのローカル設定がドメイン ポリシーによって上書きされることを理解している必要があります。 この場合、ドメイン ポリシーによってサブカテゴリ設定 (**auditpol /get /subcategory:"application generated"** ) が上書きされる可能性があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査対象であるイベントが記録されないことを検出する方法がない場合、これがイベントをログに記録する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能に影響します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -56,7 +56,7 @@ Windows の監査ポリシーは、Windows セキュリティ ログに書き込
   
 1.  管理権限を使用してコマンド プロンプトを開きます。  
   
-    1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントします。次に、 **[コマンド プロンプト]** を右クリックし、 **[管理者として実行]** をクリックします。  
+    1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[アクセサリ]** の順にポイントします。次に、 **[コマンド プロンプト]** を右クリックし、 **[管理者として実行]** をクリックします。  
   
     2.  **[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、 **[続行]** をクリックします。  
   
@@ -74,7 +74,7 @@ Windows の監査ポリシーは、Windows セキュリティ ログに書き込
   
 2.  「 **secpol.msc** 」と入力し、 **[OK]** をクリックします。 **[ユーザー アクセス制御]** ダイアログ ボックスが表示されたら、 **[続行]** をクリックします。  
   
-3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]**、 **[ローカル ポリシー]** の順に展開し、 **[ユーザー権利の割り当て]** をクリックします。  
+3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]** 、 **[ローカル ポリシー]** の順に展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   
 4.  結果ペインで **[セキュリティ監査の生成]** をダブルクリックします。  
   
@@ -94,7 +94,7 @@ Windows の監査ポリシーは、Windows セキュリティ ログに書き込
   
 2.  「 **secpol.msc** 」と入力し、 **[OK]** をクリックします。 **[ユーザー アクセス制御]** ダイアログ ボックスが表示されたら、 **[続行]** をクリックします。  
   
-3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]**、 **[ローカル ポリシー]** の順に展開し、 **[監査ポリシー]** をクリックします。  
+3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]** 、 **[ローカル ポリシー]** の順に展開し、 **[監査ポリシー]** をクリックします。  
   
 4.  結果ペインで、 **[オブジェクト アクセスの監査]** をダブルクリックします。  
   
