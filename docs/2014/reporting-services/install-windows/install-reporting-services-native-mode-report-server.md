@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108811"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーのインストール
@@ -97,7 +97,7 @@ ms.locfileid: "66108811"
 |要素|説明|  
 |----------|-----------------|  
 |Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|  
-|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 レポート サーバーが、 http:// を含め、コンピューターに解決されるあらゆるホスト名の指定のポートですべての HTTP 要求を受け入れることを指定します\<computername >/reportserver、 http://localhost/reportserver、または http://\<IPAddress >/reportserver です。|  
+|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 レポート サーバーが、 http:// を含め、コンピューターに解決されるあらゆるホスト名の指定のポートですべての HTTP 要求を受け入れることを指定します\<computername >/reportserver、 http://localhost/reportserver 、または http://\< IPAddress >/reportserver です。|  
 |Port|既定のポートは 80 です。 80 以外のポートを使用する場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web アプリケーションをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があるので注意してください。|  
 |仮想ディレクトリ|既定では、reportserver _ の形式で仮想ディレクトリが作成\<*instance_name*> レポート サーバー Web サービスの場合は reports _\<*instance_name*>レポート マネージャー。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 レポート マネージャーの既定の仮想ディレクトリは、 **reports**です。|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66108811"
   
 -   http://+:80/reportserver は、レポート サーバーへのアクセスを提供します。  
   
--   http://+:80/reports、レポート マネージャーへのアクセスを提供します。  
+-   http://+:80/reports 、レポート マネージャーへのアクセスを提供します。  
   
 ##  <a name="bkmk_installwithwizard"></a> SQL Server のインストール ウィザードによるネイティブ モードをインストールします。  
  次に示すのは、SQL Server インストール ウィザードで選択する  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 固有の手順とオプションです。 ここでは、インストール ウィザードに表示されるそれぞれのページではなく、ネイティブ モードのインストールに含まれる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連のページについてのみ説明します。  
@@ -116,7 +116,7 @@ ms.locfileid: "66108811"
   
 2.  **[機能の選択]** ページで、次のオプションを選択します。  
   
-    -   **[データベース エンジン サービス]**(データベース エンジンのインスタンスがまだインストールされていない場合)。  
+    -   **[データベース エンジン サービス]** (データベース エンジンのインスタンスがまだインストールされていない場合)。  
   
     -   **Reporting Services-ネイティブ**します。  
   

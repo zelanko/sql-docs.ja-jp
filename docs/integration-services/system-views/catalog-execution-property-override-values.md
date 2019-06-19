@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 922d55e335c8310cec3cf4db8967cadc2affd1f3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714868"
 ---
 # <a name="catalogexecutionpropertyoverridevalues"></a>catalog.execution_property_override_values 
@@ -36,7 +36,7 @@ ms.locfileid: "65714868"
 |sensitive|**bit**|値が 1 のとき、プロパティはセンシティブで、格納されるときに暗号化されます。 値が 0 のとき、プロパティはセンシティブではなく、値はプレーンテキストで格納されます。|  
   
 ## <a name="remarks"></a>Remarks  
- このビューには、**[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションを使用してプロパティ値がオーバーライドされた実行ごとに行が表示されます。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
+ このビューには、 **[パッケージの実行]** ダイアログの **[詳細設定]** タブの **[プロパティのオーバーライド]** セクションを使用してプロパティ値がオーバーライドされた実行ごとに行が表示されます。 プロパティのパスは、パッケージ タスクの **[パッケージのパス]** プロパティから取得されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このビューには、次の権限のいずれかが必要です。  

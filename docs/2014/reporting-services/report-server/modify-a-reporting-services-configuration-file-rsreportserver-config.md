@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103760"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -90,14 +90,14 @@ ms.locfileid: "66103760"
   
 6.  トレース ログ ファイルを見て、エラーが発生していないことを確認します。 エラー状態が記録されていた場合は、設定またはその値が正しく指定されていません。 「 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) 」を参照し、エラーの原因となっている設定について有効な値を確認してください。 トレース ログの表示方法の詳細については、「[レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RSReportServer 構成ファイル](rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 構成ファイル](reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 構成ファイル](rsreportdesigner-configuration-file.md)   
  [データ処理拡張機能の配置](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [配信拡張機能の配置](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [表示拡張機能の配置](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [方法: カスタム レポート アイテムを配置します。](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [方法:カスタム レポート アイテムを配置します。](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Reporting Services 構成ファイル](reporting-services-configuration-files.md)  
   
   

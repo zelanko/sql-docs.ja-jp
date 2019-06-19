@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d8660aa65699e6abd22c73e13c3673903ff6bfb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713539"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>SQL Server 2017 の Integration Services の新機能
@@ -64,7 +64,7 @@ Visual Studio 2017 または Visual Studio 2015 で SQL Server バージョン 2
 -   スケール アウト ワーカーの実行ログのフェールオーバー処理が改善されました。 Scale Out Worker が予期せず停止した場合、実行ログはローカル ディスクに保存されます。 後で worker が再起動すると、保存されているログを再度読み込んで、SSISDB への保存を続けます。
 -   ストアド プロシージャ **[catalog].[create_execution]** の *runincluster* パラメーターは、一貫性とわかりやすさを理由に、名前が *runinscaleout* に変更されました。 このパラメーター名の変更には、次の影響があります。
     -   Scale Out でパッケージを実行する既存のスクリプトがある場合は、スクリプトが RC1 で動作するように、パラメーター名を *runincluster* から *runinscaleout* に変更します。
-    -   SQL Server Management Studio (SSMS) 17.1 とそれより前のバージョンでは、RC1 の Scale Out でパッケージの実行をトリガーできません。 エラー メッセージ: "*@runincluster* はプロシージャ **create_execution** のパラメーターではありません。" この問題は、SSMS の次のリリースであるバージョン 17.2 で解決されています。 SSMS のバージョン 17.2 以降では、新しいパラメーター名と Scale Out でのパッケージ実行がサポートされています。SSMS バージョン 17.2 が利用可能になるまでは、回避策として、既存バージョンの SSMS を使用してパッケージ実行スクリプトを生成し、そのスクリプトで *runincluster* パラメーターの名前を *runinscaleout* に変更したうえで、スクリプトを実行します。
+    -   SQL Server Management Studio (SSMS) 17.1 とそれより前のバージョンでは、RC1 の Scale Out でパッケージの実行をトリガーできません。 エラー メッセージ: " *@runincluster* はプロシージャ **create_execution** のパラメーターではありません。" この問題は、SSMS の次のリリースであるバージョン 17.2 で解決されています。 SSMS のバージョン 17.2 以降では、新しいパラメーター名と Scale Out でのパッケージ実行がサポートされています。SSMS バージョン 17.2 が利用可能になるまでは、回避策として、既存バージョンの SSMS を使用してパッケージ実行スクリプトを生成し、そのスクリプトで *runincluster* パラメーターの名前を *runinscaleout* に変更したうえで、スクリプトを実行します。
 -   SSIS カタログに、SSIS パッケージを実行する既定のモードを指定するための新しいグローバル プロパティが追加されました。 *runinscaleout* パラメーターを null に設定して **[catalog].[create_execution]** ストアド プロシージャを呼び出すと、この新しいプロパティが適用されます。 このモードは、SSIS SQL エージェント ジョブにも適用されます。 新しいグローバル プロパティは、SSMS の SSISDB ノードの [プロパティ] ダイアログ ボックスで、または次のコマンドで設定できます。
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1

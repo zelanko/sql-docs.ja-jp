@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 89c414c684ee41e7b7607acc1142d01c961566a1
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66708415"
 ---
 # <a name="adox-objects"></a>ADOX オブジェクト
@@ -40,7 +40,7 @@ ms.locfileid: "66708415"
   
  各オブジェクトは、対応するコレクションに格納できます。 たとえば、**テーブル**オブジェクトを含めることができます、[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクション。 詳細については、次を参照してください。 [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md) 」、または特定のコレクション。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX のコレクション](../../../ado/reference/adox-api/adox-collections.md)   
  [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)   
