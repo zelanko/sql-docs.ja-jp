@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148137"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263161"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "50148137"
  この例では、テーブル モデル データベースをデータ ソースとして使用することで、SQL Server Management Studio で MDX クエリを作成する方法を示しています。 お使いのコンピューターでこの例を繰り返すには、 [Adventureworks テーブル モデル サンプル プロジェクトをダウンロード](http://go.microsoft.com/fwlink/?LinkId=231183)してください。  
   
 > [!WARNING]  
->  直接クエリ モードで配置されているテーブル モデルに対して MDX クエリを使用することはできません。 ただし、EVALUATE コマンドと DAX テーブル クエリを使用して、同等のクエリを送信することができます。 詳細については、「 [DAX クエリのパラメーター](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544)」を参照してください。  
+>  直接クエリ モードで配置されているテーブル モデルに対して MDX クエリを使用することはできません。 ただし、EVALUATE コマンドと DAX テーブル クエリを使用して、同等のクエリを送信することができます。 詳細については、「 [DAX クエリのパラメーター](/dax/dax-queries#parameters-in-dax-queries)」を参照してください。  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>MDX クエリをテンプレートから作成する  
   
@@ -60,7 +60,7 @@ ms.locfileid: "50148137"
   
     1.  置換\<row_axis, mdx_set > を **[Product Category]. [Product Category Name]** します。  
   
-    2.  置換\<column_axis, mdx_set > を **[Date] です [。Calendar Year] です。[Calendar Year]**.  
+    2.  置換\<column_axis, mdx_set > を **[Date] です [。Calendar Year] です。[Calendar Year]** .  
   
     3.  置換\<from_clause, mdx_name > を **[Internet Sales]** します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "50148137"
   
  使いやすさのために、スキーマ行セットの多くが動的管理ビュー (DMV) としても公開されています。 対応する DMV を使用することで、Transact-SQL などの構文を使用してスキーマ行セットのクエリを実行できます。 たとえば、次のクエリは同じ結果を返しますが、1 つは XML 形式で、1 つはテーブル形式で返されます。 DMV の詳細については、「[動的管理ビュー (DMV) を使用した Analysis Services の監視](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)」をご覧ください。  
   
- DMV として使用できるすべてのスキーマ行セットの一覧を返す DMV:   
+ DMV として使用できるすべてのスキーマ行セットの一覧を返す DMV:  
   
 ```  
 SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS  
@@ -156,9 +156,9 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |カテゴリ|項目テンプレート|説明|  
 |--------------|-------------------|-----------------|  
-|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示します*\<モデル >* します。指定されたマイニング モデルのマイニング モデル スキーマ行セットの内容を取得するコンテンツのステートメント。|  
-||連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントを DMX **RangeMin**と**RangeMax**関数のセットを取得するには指定されたマイニング モデルの連続列から指定した範囲の値。|  
-||不連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントは、指定されたマイニング モデルの不連続列から値の完全なセットを取得します。|  
+|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示します *\<モデル >* します。指定されたマイニング モデルのマイニング モデル スキーマ行セットの内容を取得するコンテンツのステートメント。|  
+||連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します *\<モデル >* ステートメントを DMX **RangeMin**と**RangeMax**関数のセットを取得するには指定されたマイニング モデルの連続列から指定した範囲の値。|  
+||不連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します *\<モデル >* ステートメントは、指定されたマイニング モデルの不連続列から値の完全なセットを取得します。|  
 ||ドリルスルー クエリ|DMX SELECT * FROM Model.CASES ステートメントを DMX IsInNode 関数と共に使用してドリルスルー クエリを実行する方法を示します。|  
 ||モデル属性|DMX System.GetModelAttributes 関数を使用して、モデルで使用される属性の一覧を返す方法を示します。|  
 ||PMML コンテンツ|DMX の SELECT を使用する方法を示します\*FROM *\<モデル >* します。PMML ステートメントを使用して、この機能をサポートするアルゴリズム、マイニング モデルの Predictive Model Markup Language (PMML) 表記を取得します。|  
@@ -179,9 +179,9 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||モデルのトレーニング|DMX INSERT INTO MINING MODEL ステートメントを使用して、以前にトレーニングした構造の内部のマイニング モデルをトレーニングする方法を示します。|  
 ||入れ子になった構造のトレーニング|DMX INSERT INTO MINING STRUCTURE ステートメントを SHAPE ソース データ クエリと組み合わせ、クエリを使用して既存のデータ ソースから取得した、入れ子になったテーブルを含んでいるデータで、入れ子になった列を含んでいるマイニング モデルをトレーニングする方法を示します。|  
 ||構造のトレーニング|DMX INSERT INTO MINING STRUCTURE 構造と OPENQUERY ソース データ クエリを組み合わせ、マイニング構造をトレーニングする方法を示します。|  
-|DMX\予測クエリ|基本予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを OPENQUERY ソース データ クエリからクエリを使用して取り出したデータを使用してマイニング モデルに対して予測クエリを実行する、既存のデータ ソース。|  
-||入れ子になった予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを SHAPE および OPENQUERY ソース データ クエリを含む入れ子になったデータを使用してマイニング モデルに対して予測クエリを実行するにはこのテーブルを使用して、既存のデータ ソースからクエリを使用して取得します。|  
-||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します*\<モデル >* 列で、予測クエリで明示的に指定された、1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前、マイニング モデル内の列に一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブル内の値のセットを含むです。|  
+|DMX\予測クエリ|基本予測|DMX SELECT FROM を結合する方法を示します *\<モデル >* PREDICTION JOIN ステートメントを OPENQUERY ソース データ クエリからクエリを使用して取り出したデータを使用してマイニング モデルに対して予測クエリを実行する、既存のデータ ソース。|  
+||入れ子になった予測|DMX SELECT FROM を結合する方法を示します *\<モデル >* PREDICTION JOIN ステートメントを SHAPE および OPENQUERY ソース データ クエリを含む入れ子になったデータを使用してマイニング モデルに対して予測クエリを実行するにはこのテーブルを使用して、既存のデータ ソースからクエリを使用して取得します。|  
+||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します *\<モデル >* 列で、予測クエリで明示的に指定された、1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前、マイニング モデル内の列に一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブル内の値のセットを含むです。|  
 ||単一予測|DMX SELECT FROM を使用する方法を示します\<model > NATURAL PREDICTION JOIN ステートメントを名前の列に一致する列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行するにはマイニング モデルです。|  
 ||ストアド プロシージャ コール|DMX CALL ステートメントを使用してストアド プロシージャを呼び出す方法を示します。|  
 |MDX\式|移動平均 - 固定|MDX の **ParallelPeriod** 関数および **CurrentMember** 関数を自然な順序のセットと共に使用して、時間ディメンションの階層の一定期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|  
@@ -213,7 +213,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||トレース|XMLA の **Discover** メソッドを使用して、DISCOVER_TRACES スキーマ行セットの内容を取得する方法を示します。|  
 ||トランザクション|XMLA の **Discover** メソッドを使用して、DISCOVER_TRANSACTION スキーマ行セットの内容を取得する方法を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元式 (MDX) リファレンス](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services スクリプト言語 &#40;XMLA 用 ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   

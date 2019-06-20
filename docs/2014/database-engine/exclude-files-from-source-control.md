@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779902"
 ---
 # <a name="exclude-files-from-source-control"></a>ソース管理からのファイルの除外
@@ -31,7 +31,7 @@ ms.locfileid: "62779902"
   
 2.  **ファイル**メニューで、**ソース管理**、 をクリックし、**除外** *\<ファイル名 >* **からソース管理**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)   
  [ソース管理オプションを設定します。](../../2014/database-engine/set-source-control-options.md)   
  [ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)  

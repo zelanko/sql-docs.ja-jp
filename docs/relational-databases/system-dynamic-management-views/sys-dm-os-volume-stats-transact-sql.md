@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 954cb83176ea64be11bd37b44303091f15604dcd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802562"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (TRANSACT-SQL)
@@ -41,7 +41,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ##  <a name="Arguments"></a> 引数  
  *database_id*  
- データベースの ID です。 *database_id* は **int**, 、既定値はありません。 NULL 値は許容されません。  
+ データベースの ID です。 *database_id* は** int**, 、既定値はありません。 NULL 値は許容されません。  
   
  *file_id*  
  ファイルの ID です。 *file_id*は**int**、既定値はありません。 NULL 値は許容されません。  

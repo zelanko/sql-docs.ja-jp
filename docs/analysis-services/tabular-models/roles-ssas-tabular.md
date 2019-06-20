@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6c42615115ae486d14112a1a1dbd7f05d6328eb
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472135"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263296"
 ---
 # <a name="roles"></a>ロール
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -84,8 +84,8 @@ ms.locfileid: "62472135"
   
 |関数|説明|  
 |--------------|-----------------|  
-|[USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|現在ログオンしているユーザーの domain\username を返します。|  
-|[CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|接続文字列の CustomData プロパティを返します。|  
+|[USERNAME 関数 (DAX)](/dax/username-function-dax)|現在ログオンしているユーザーの domain\username を返します。|  
+|[CUSTOMDATA 関数 (DAX)](/dax/customdata-function-dax)|接続文字列の CustomData プロパティを返します。|  
   
  LOOKUPVALUE 関数を使用すると、USERNAME 関数で返されるユーザー名または CustomData 関数で返される文字列と同じ Windows ユーザー名を含む列の値が返されます。 同じテーブルまたは関連テーブルの中で、LOOKUPVALUE で返された値と一致する値だけが照会されるように制限できます。  
   
@@ -128,8 +128,8 @@ ms.locfileid: "62472135"
 ## <a name="see-also"></a>参照  
  [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [[Excel で分析]](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE 関数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [CUSTOMDATA 関数 (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME 関数 (DAX)](/dax/username-function-dax)   
+ [LOOKUPVALUE 関数 (DAX)](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 関数 (DAX)](/dax/customdata-function-dax)  
   
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62746634"
 ---
 # <a name="attribute-properties---define-a-default-member"></a>属性のプロパティ - 既定のメンバーを定義する
@@ -28,7 +28,7 @@ ms.locfileid: "62746634"
  属性階層に既定のメンバーが指定されておらず、属性階層が集計可能な場合 (属性の **IsAggregatable** プロパティが **True**に設定されている場合)、(All) メンバーが既定のメンバーです。 既定のメンバーが指定されておらず、属性階層が集計可能でない場合 (属性の **IsAggregatable** プロパティが **False**に設定されている場合)、既定のメンバーは属性階層の最上位から選択されます。  
   
 ## <a name="specifying-the-default-member"></a>既定のメンバーの指定  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションの各属性には既定のメンバーが含まれており、属性の **DefaultMember** プロパティを使用して指定できます。 この設定は、属性がクエリに含まれていない場合、式の評価に使用されます。 クエリがディメンションの階層を指定する場合は、階層にある属性の既定のメンバーは無視されます。 クエリがディメンションの階層を指定しない場合は、ディメンション属性の **DefaultMember** 設定が有効になります。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションの各属性には既定のメンバーが含まれており、属性の **DefaultMember** プロパティを使用して指定できます。 この設定は、属性がクエリに含まれていない場合、式の評価に使用されます。 クエリがディメンションの階層を指定する場合は、階層にある属性の既定のメンバーは無視されます。 クエリがディメンションの階層を指定しない場合は、ディメンション属性の **DefaultMember** 設定が有効になります。  
   
  属性の **DefaultMember** 設定が空白で、その **IsAggregatable** プロパティが **True**に設定されている場合、既定のメンバーは All メンバーです。 **IsAggregatable** プロパティが **False**に設定されている場合、既定のメンバーは最初の表示可能レベルの最初のメンバーです。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62746634"
   
  階層のレベルが自動的に集計される場合は、階層の他の属性に関係なく、階層のどの属性にも既定のメンバーを定義できます。 たとえば、国-地域-市の階層で、[市区町村] など、City の既定のメンバーを定義できます。[Montreal] 状態または Country の既定のメンバーを定義することがなく。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性階層の &#40;All&#41; レベルの構成](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181529"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX データ操作 - CREATE KPI
@@ -71,7 +71,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |KPI グラフィックの状態の数|これらの状態の値|  
 |--------------------------------------|---------------------------|  
-|3|悪い =-1-0.5 ~<br /><br /> -0.4999 を = OK 0.4999<br /><br /> 0.50 ~ 1 の良い =|  
+|3|悪い =-1-0.5 ~<br /><br /> -0.4999 を = OK 0.4999<br /><br /> 0\.50 ~ 1 の良い =|  
 |5|悪い = -1 ～ -0.75<br /><br /> リスク-0.25 に-0.7499 を =<br /><br /> [Ok] を 0.2499-0.2499 を =<br /><br /> 上昇 = 0.25 ～ 0.7499<br /><br /> 良い = 0.75 ～ 1|  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |傾向|反転した状態の矢印|5|  
 |傾向|顔|3|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DROP KPI ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

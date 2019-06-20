@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5b8d0b377be4282bdbdef8805b8e8683cb59cbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63055252"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Power Pivot の構成とソリューションの配置 (SharePoint 2016)
@@ -35,11 +35,11 @@ ms.locfileid: "63055252"
   
  SharePoint のインストール時に使用したアカウントでログインするか、SharePoint サーバーの全体管理サイトのプライマリ管理者としてセットアップ アカウントを構成します。  
   
-1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 の構成**の順にクリックします。 ツールは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
+1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]]、 **[構成ツール]** 、 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 の構成**の順にクリックします。 ツールは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint がローカル サーバーにインストールされている場合にのみ表示されます。  
   
-2.  **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の構成または修復]** をクリックして、**[OK]** をクリックします。  
+2.  **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint の構成または修復]** をクリックして、 **[OK]** をクリックします。  
   
-3.  このツールでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の現在の状態と構成を完了するために必要な手順を確認するための検証が実行されます。 ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
+3.  このツールでは、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の現在の状態と構成を完了するために必要な手順を確認するための検証が実行されます。 ウィンドウを最大化します。 ウィンドウの下部に **[検証]** 、 **[実行]** 、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
 4.  **[パラメーター]** タブで、次の操作を行います。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63055252"
   
 1.  サーバーの全体管理で、 **[アプリケーション構成の管理]** の **[サービス アプリケーションの管理]** を選択します。  
   
-2.  サービス アプリケーションの状態が **[開始済み]** になっていることを確認します。 既定の名前は、**[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** です。  
+2.  サービス アプリケーションの状態が **[開始済み]** になっていることを確認します。 既定の名前は、 **[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** です。  
   
      サービス アプリケーションの名前を選択して、このサービス アプリケーションの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "63055252"
   
 5.  **[OK]** を選択します。  
   
- データのトラブルシューティングの更新の詳細については、次を参照してください。 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)します。  
+ データのトラブルシューティングの更新の詳細については、次を参照してください。 [Power Pivot データ更新のトラブルシューティング](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) します。  
   
  構成ツールの詳細については、「 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

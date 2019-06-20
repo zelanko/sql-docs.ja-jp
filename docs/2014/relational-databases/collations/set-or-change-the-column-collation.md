@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918971"
 ---
 # <a name="set-or-change-the-column-collation"></a>列の照合順序の設定または変更
   `char` 型、`varchar` 型、`text` 型、`nchar` 型、`nvarchar` 型、および `ntext` 型のデータのデータベース照合順序は、テーブルの列ごとに異なる照合順序を指定し、次のいずれかを使用することでオーバーライドできます。  
   
--   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) と [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)の COLLATE 句。 以下に例を示します。  
+-   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) と [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)の COLLATE 句。 例 :  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -81,7 +81,7 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- 上記の例では、 **tempdb** データベースで Latin1_General_CS_AS 照合順序が使用され、 `TestDB` と `TestTab.Col1` では `Estonian_CS_AS` 照合順序が使用されます。 以下に例を示します。  
+ 上記の例では、 **tempdb** データベースで Latin1_General_CS_AS 照合順序が使用され、 `TestDB` と `TestTab.Col1` では `Estonian_CS_AS` 照合順序が使用されます。 例 :  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  

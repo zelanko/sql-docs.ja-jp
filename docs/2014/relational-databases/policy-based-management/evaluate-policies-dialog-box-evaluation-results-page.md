@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705140"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ
@@ -41,7 +41,7 @@ ms.locfileid: "62705140"
  **ターゲットの詳細:メッセージ**  
  エラーが発生した場合に役立つ情報へのリンク。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)   
  [[ポリシーの評価] ダイアログ ボックスの [ポリシーの選択] ページ](evaluate-policies-dialog-box-policy-selection-page.md)   
  [[結果の詳細ビュー] ダイアログ ボックス](results-detailed-view-dialog-box.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637c60fd6d7ba53087a145135d7152066983b644
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63130612"
 ---
 # <a name="smo-object-model"></a>SMO オブジェクト モデル
@@ -30,7 +30,7 @@ ms.locfileid: "63130612"
   
  SMO オブジェクト モデルは、複数の名前空間で構成されています。 詳細については、「[SMO 名前空間](smo-object-model-namespaces.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SMO オブジェクト モデル ダイアグラム](smo-object-model-diagram.md)   
  [SMO 名前空間](smo-object-model-namespaces.md)   
  [構成管理用の WMI プロバイダーの概念](../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

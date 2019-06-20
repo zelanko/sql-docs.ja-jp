@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666789"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
@@ -66,7 +66,7 @@ ms.locfileid: "62666789"
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
   
-3.  **SQL Server エージェントのプロパティ -**_server_name_ダイアログ ボックスで、**エラー ログ**上、**全般**ページで、ユーザー名を入力またはメッセージがエラーを送信するコンピューター名、 **Net send 受信者**ボックス。  
+3.  **SQL Server エージェントのプロパティ -** _server_name_ダイアログ ボックスで、**エラー ログ**上、**全般**ページで、ユーザー名を入力またはメッセージがエラーを送信するコンピューター名、 **Net send 受信者**ボックス。  
   
 4.  **[OK]** をクリックします。  
   

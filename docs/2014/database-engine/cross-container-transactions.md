@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807426"
 ---
 # <a name="cross-container-transactions"></a>複数コンテナーにまたがるトランザクション
@@ -82,7 +82,7 @@ commit
  安定性では、読み取られたデータについてシステムからトランザクション T への提供が保証されます。  
  安定性は、トランザクションの読み取りが反復可能かどうかを参照します。 したがって、読み取りが反復された場合、同じ行や行バージョンが返されるかということになります。  
   
- 特定の保証では、トランザクションの論理的な終了時刻を参照します。 一般に、論理的な終了時刻は、トランザクションがデータベースにコミットされる時間です。 メモリ最適化テーブルにトランザクションからアクセスする場合、論理的な終了時刻は、理論的には検証フェーズの開始時です  (詳細については、トランザクション有効期間の説明を参照してください。[メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
+ 特定の保証では、トランザクションの論理的な終了時刻を参照します。 一般に、論理的な終了時刻は、トランザクションがデータベースにコミットされる時間です。 メモリ最適化テーブルにトランザクションからアクセスする場合、論理的な終了時刻は、理論的には検証フェーズの開始時です (詳細については、トランザクション有効期間の説明を参照してください。[メモリ最適化テーブルでのトランザクション](../relational-databases/in-memory-oltp/memory-optimized-tables.md)です。  
   
  分離レベルに関係なく、トランザクション (T) は常に自己の更新を確認します。  
   

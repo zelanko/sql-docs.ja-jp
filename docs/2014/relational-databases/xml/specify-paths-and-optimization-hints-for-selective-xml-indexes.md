@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679800"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
@@ -360,7 +360,7 @@ WHERE T.xmldata.exist('
 |-----------------------|----------------------------|--------------------------|  
 |**node()**|はい|いいえ|  
 |**SINGLETON**|いいえ|はい|  
-|**DATA TYPE**|はい|はい|  
+|**DATA TYPE**|はい|[はい]|  
 |**MAXLENGTH**|はい|はい|  
   
 ### <a name="optimization-hints-and-data-types"></a>最適化ヒントとデータ型  
@@ -371,7 +371,7 @@ WHERE T.xmldata.exist('
 |**node()**|はい|いいえ|  
 |**SINGLETON**|はい|はい|  
 |**DATA TYPE**|はい|いいえ|  
-|**MAXLENGTH**|はい|いいえ|  
+|**MAXLENGTH**|[はい]|いいえ|  
   
 ### <a name="node-optimization-hint"></a>node() 最適化ヒント  
  適用対象XQuery のデータ型  
@@ -437,7 +437,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [選択的 XML インデックス &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md)   
  [選択的 XML インデックスの作成、変更、および削除](../xml/create-alter-and-drop-selective-xml-indexes.md)  
   

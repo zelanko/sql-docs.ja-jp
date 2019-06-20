@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62634927"
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
@@ -126,7 +126,7 @@ ms.locfileid: "62634927"
   
  SQL Server Management Studio または AMO PowerShell を使用して、サーバー レベルの既定の言語または照合順序を変更することができます。 または、変更、 **\<言語 >** と **\<CollationName >** 言語の LCID を指定する、msmdsrv.ini ファイルで設定します。  
   
-1.  Management Studio で、サーバー名を右クリックして、 **[プロパティ]** | **[言語/照合順序]** と選択します。  
+1.  Management Studio で、サーバー名を右クリックして、 **[プロパティ]**  |  **[言語/照合順序]** と選択します。  
   
 2.  並べ替えオプションを選択します。 **[バイナリ]** または **[バイナリ 2]** のいずれかを選択するには、まず **[アクセントの区別]** のチェック ボックスをオフにします。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62634927"
   
  XMLA を使用して、既存のデータベースを変更するには、データベースとそれをビルドするために使用するソース ファイルの間の相違点がないことを確認します。 たとえば、XMLA を使用して、概念実証のテストで言語や照合順序をすばやく変更した後、ソース ファイルの変更によるフォローアップをし (「 [キューブの言語または照合順序を変更します。](#bkmk_cube)」を参照)、既に存在する運用手順を使用してソリューションを再展開するということが考えられます。  
   
-1.  Management Studio で、該当データベースを右クリックし、 **[データベースをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]** と選択します。  
+1.  Management Studio で、該当データベースを右クリックし、 **[データベースをスクリプト化]**  |  **[ALTER]**  |  **[新しいクエリ エディター ウィンドウ]** と選択します。  
   
 2.  既存の言語または照合順序を検索して別の値に置き換えます。  
   

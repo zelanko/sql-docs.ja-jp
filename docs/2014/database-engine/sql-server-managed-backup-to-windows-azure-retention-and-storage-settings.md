@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773549"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Windows Azure への SQL Server マネージド バックアップ - 保有期間とストレージの設定
@@ -83,7 +83,7 @@ ms.locfileid: "62773549"
   
 -   Windows Azure ストレージ アカウントへの認証に使用する SQL 資格情報。  
   
--   暗号化を使用しないように指定するか*@encryption_algorithm*  =  **NO_ENCRYPTION**またはサポートされている暗号化アルゴリズムを指定します。 暗号化の詳細については、「 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
+-   暗号化を使用しないように指定するか *@encryption_algorithm*  =  **NO_ENCRYPTION**またはサポートされている暗号化アルゴリズムを指定します。 暗号化の詳細については、「 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
   
  データベース レベル構成の [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、Transact-SQL でのみサポートされます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62773549"
   
 -   **TRANSACT-SQL を使用します。**  
   
-     有効にする場合[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]必要なパラメーターは、最初に: *@database_name*、 *@credential_name*、 *@encryption_algorithm*、 *@enable_backup**@storage_url*パラメーターは省略可能です。 値を指定しない場合、 @storage_url SQL 資格情報のストレージ アカウント情報を使用して、パラメーターの値を派生します。 ストレージ URL を指定する場合、指定する必要があるのはストレージ アカウントのルート URL のみです。この値は、指定した SQL 資格情報と一致する必要があります。  
+     有効にする場合[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]必要なパラメーターは、最初に: *@database_name* 、 *@credential_name* 、 *@encryption_algorithm* 、 *@enable_backup* *@storage_url* パラメーターは省略可能です。 値を指定しない場合、 @storage_url SQL 資格情報のストレージ アカウント情報を使用して、パラメーターの値を派生します。 ストレージ URL を指定する場合、指定する必要があるのはストレージ アカウントのルート URL のみです。この値は、指定した SQL 資格情報と一致する必要があります。  
   
     1.  [!INCLUDE[ssDE](../includes/ssde-md.md)]に接続します。  
   
@@ -135,13 +135,13 @@ ms.locfileid: "62773549"
 ##  <a name="InstanceConfigure"></a> 既定の構成の有効化と[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]インスタンスの設定  
  有効にし、既定値を構成できる[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]2 つの方法で、インスタンス レベルで設定します。システムを使用してストアド プロシージャ`smart_backup.set_instance_backup`または**SQL Server Management Studio**します。 これら 2 つの方法について以下で説明します。  
   
- **smart_backup.set_instance_backup:** 値を指定して**1**の*@enable_backup*パラメーター、バックアップを有効にし、既定の構成を設定できます。 これらの既定の設定は、インスタンス レベルで適用すると、このインスタンスに追加されるすべての新しいデータベースに適用されます。  初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を有効にする場合は、インスタンスでの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の有効化に加えて、次の情報の指定が必要です。  
+ **smart_backup.set_instance_backup:** 値を指定して**1**の *@enable_backup* パラメーター、バックアップを有効にし、既定の構成を設定できます。 これらの既定の設定は、インスタンス レベルで適用すると、このインスタンスに追加されるすべての新しいデータベースに適用されます。  初めて [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を有効にする場合は、インスタンスでの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] の有効化に加えて、次の情報の指定が必要です。  
   
 -   保有期間。  
   
 -   Windows Azure ストレージ アカウントへの認証に使用する SQL 資格情報。  
   
--   暗号化オプション。 暗号化を使用しないように指定するか*@encryption_algorithm*  =  **NO_ENCRYPTION**またはサポートされている暗号化アルゴリズムを指定します。 暗号化の詳細については、「 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
+-   暗号化オプション。 暗号化を使用しないように指定するか *@encryption_algorithm*  =  **NO_ENCRYPTION**またはサポートされている暗号化アルゴリズムを指定します。 暗号化の詳細については、「 [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md)」を参照してください。  
   
  有効にすると、これらの設定は保持されます。 構成を変更する場合は、データベース名と変更する設定のみが必要です。 指定がなければ、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では既存値がそのまま使用されます。  
   
@@ -202,7 +202,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
 >  既定の設定を構成した後に新しいデータベースを作成すると、データベースが既定の設定で構成されるまで最大 15 分かかる場合があります。 これは、復旧モデルが **Simple** から **Full** または **Bulk-Logged** に変更されるデータベースにも適用されます。  
   
 ##  <a name="DatabaseDisable"></a> データベースに対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を無効にする  
- 無効にできます[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定を使用して、`sp_set_db_backup`システム ストアド プロシージャ。 *@enableparameter*有効および無効にするために使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]1 と 0 が構成設定を無効に、特定のデータベースを構成します。  
+ 無効にできます[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]設定を使用して、`sp_set_db_backup`システム ストアド プロシージャ。 *@enableparameter* 有効および無効にするために使用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]1 と 0 が構成設定を無効に、特定のデータベースを構成します。  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>特定のデータベースに対して [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] を無効にするには  
   

@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8e50253b7c7fb6c59b4303c528c1ef7267ccf644
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62706074"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE と SQL Server データ型とのマッピング (SybaseToSQL)
@@ -78,7 +78,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
     4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のデータ型。  
   
-        一部の種類には、対象のデータ型の長さが必要です。 必要な場合は、入力内の新しいデータ長、**で置き換えます**ボックスをクリックして **[ok]**。  
+        一部の種類には、対象のデータ型の長さが必要です。 必要な場合は、入力内の新しいデータ長、**で置き換えます**ボックスをクリックして **[ok]** 。  
   
 4.  カスタム データ型のマッピングを削除するには、次の操作を行います。  
   

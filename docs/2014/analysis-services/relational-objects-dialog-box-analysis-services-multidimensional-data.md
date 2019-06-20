@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070352"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>[リレーショナル オブジェクト] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -32,7 +32,7 @@ ms.locfileid: "66070352"
  **システム オブジェクトを表示します。**  
  選択すると、データ ソースのシステム オブジェクトが **[プロアクティブ キャッシュを設定するリレーショナル オブジェクトを選択します。]** に表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [通知&#40;ストレージのオプション ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e52d6b6ef2a98089f17fe83a55d50b7693dbbc1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404014"
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>レッスン 1-2-データ ソースの定義
@@ -37,13 +37,13 @@ ms.locfileid: "65404014"
   
 5.  **[サーバー名]** ボックスに「 **localhost**」と入力します。  
   
-    ローカル コンピューター上の名前付きインスタンスに接続する場合は、「 **localhost\\<instance name>**」を参照してください。 ローカル コンピューターではなく指定のコンピューターに接続するには、コンピューター名または IP アドレスを入力します。  
+    ローカル コンピューター上の名前付きインスタンスに接続する場合は、「 **localhost\\<instance name>** 」を参照してください。 ローカル コンピューターではなく指定のコンピューターに接続するには、コンピューター名または IP アドレスを入力します。  
   
 6.  **[Windows 認証を使用]** が選択されていることを確認します。 **[データベースの選択または入力]** ボックスの一覧で、 **[AdventureWorksDW2012]** を選択します。  
   
 7.  **[接続テスト]** をクリックして、データベースへの接続をテストします。  
   
-8.  **[OK]** をクリックし、**[次へ]** をクリックします。  
+8.  **[OK]** をクリックし、 **[次へ]** をクリックします。  
   
 9. ウィザードの **[権限借用情報]** ページでは、データ ソースへの接続時に使用する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のセキュリティ資格情報を定義します。 権限借用は、Windows 認証が選択されている場合に、データ ソースへの接続に使用される Windows アカウントに関連する機能です。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、OLAP オブジェクトを処理するための権限借用はサポートされていません。 **[サービス アカウントを使用する]** をクリックし、 **[次へ]** をクリックします。  
   

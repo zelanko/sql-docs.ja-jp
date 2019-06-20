@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185644"
 ---
 # <a name="market-basket-dmx-tutorial"></a>マーケット バスケット DMX のチュートリアル
@@ -45,7 +45,7 @@ ms.locfileid: "63185644"
   
  このチュートリアルの目標は、カスタム アプリケーションで使用する DMX クエリを設定することです。  
   
- **詳細:**[データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **詳細:** [データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>マイニング構造とマイニング モデル  
  DMX ステートメントを作成するにあたっては、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がマイニング モデルの作成に使用する主なオブジェクトを理解しておくことが重要です。 *マイニング構造*はマイニング モデルの作成元となるデータ ドメインを定義するデータ構造です。 1 つのマイニング構造に複数含めることができます*マイニング モデル*同じドメインを共有します。 マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。  

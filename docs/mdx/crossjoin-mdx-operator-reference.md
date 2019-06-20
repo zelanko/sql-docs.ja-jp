@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63249621"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin - MDX 演算子リファレンス
@@ -36,7 +36,7 @@ Set_Expression * Set_Expression
  指定したパラメーターを両方のクロス積を含むセット。  
   
 ## <a name="remarks"></a>コメント  
-  **\* (クロス積)** 演算子は機能的に等価、 [Crossjoin](../mdx/crossjoin-mdx.md)関数。  
+ **\* (クロス積)** 演算子は機能的に等価、 [Crossjoin](../mdx/crossjoin-mdx.md)関数。  
   
 ## <a name="examples"></a>使用例  
  次の例では、この演算子の使用を示します。  

@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62669450"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間データの sys.dm_db_objects_disabled_on_compatibility_level_change
@@ -51,7 +51,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
 |**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスのインデックスとヒープ|  
-|**major_id**|**int**|制約の OBJECT ID <br /><br /> インデックスとヒープを含んでいるテーブルのオブジェクト ID|  
+|**major_id**|**int**|制約の OBJECT ID<br /><br /> インデックスとヒープを含んでいるテーブルのオブジェクト ID|  
 |**minor_id**|**int**|制約の場合は NULL<br /><br /> インデックスとヒープの場合は Index_id|  
 |**dependency**|**nvarchar(60)**|制約またはインデックスを無効にする原因となっている依存関係の説明です。 同じの値は、アップグレード中に発生した警告にも使用されます。 次の例に示します。<br /><br /> 組み込みの「領域」<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
   

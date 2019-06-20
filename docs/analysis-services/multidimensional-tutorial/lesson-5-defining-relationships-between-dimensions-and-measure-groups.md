@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a78e3eed7baebee02e0fb7da97f25d9fdbb400b5
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403764"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>レッスン 5: ディメンションおよびメジャー グループ間のリレーションシップの定義
@@ -43,7 +43,7 @@ ms.locfileid: "65403764"
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 6:計算の定義](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Analysis Services のチュートリアル シナリオ](analysis-services-tutorial-scenario.md)  
 [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   

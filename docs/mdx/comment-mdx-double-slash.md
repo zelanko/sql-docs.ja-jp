@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6570694bc38eb6f32f660006f1ed1b6797793b7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63306337"
 ---
 # <a name="comment-mdx-double-slash"></a>MDX 二重スラッシュのコメント
 
 
-  ユーザー指定のテキストを示します。  
+  ユーザーが入力したテキストを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63306337"
  コメントのテキストを含む文字列です。  
   
 ## <a name="remarks"></a>コメント  
- コメントは、個別の行に挿入された、多次元式 (MDX) スクリプトの行の末尾で入れ子にまたは MDX ステートメント内で入れ子になったことができます。 サーバーでは、コメントは評価されません。  
+ コメントは、個別の行に挿入された、多次元式 (MDX) スクリプトの行の末尾で入れ子にまたは MDX ステートメント内で入れ子になったことができます。 サーバーはコメントを評価しません。  
   
  単一行のみのコメントには、// を使用します。 // を使用して挿入するコメントは、改行文字で区切ります。  
   

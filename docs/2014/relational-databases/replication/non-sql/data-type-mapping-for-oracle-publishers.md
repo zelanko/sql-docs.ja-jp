@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022641"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle パブリッシャーのデータ型マッピング
@@ -39,7 +39,7 @@ ms.locfileid: "63022641"
 |INT|NUMERIC(38)|はい|  
 |INTERVAL|DATETIME|はい|  
 |LONG|VARCHAR(MAX)|はい|  
-|LONG RAW|IMAGE|はい|  
+|LONG RAW|IMAGE|[はい]|  
 |NCHAR([1-1000])|NCHAR([1-1000])|いいえ|  
 |NCLOB|NVARCHAR(MAX)|はい|  
 |NUMBER|[FLOAT]|はい|  
@@ -54,7 +54,7 @@ ms.locfileid: "63022641"
 |TIMESTAMP(8-9)|DATETIME|はい|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|はい|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|いいえ|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|はい|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|[はい]|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|いいえ|  
 |UROWID|CHAR(18)|いいえ|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|はい|  

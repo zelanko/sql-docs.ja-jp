@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773890"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database での Transparent Data Encryption
@@ -52,7 +52,7 @@ ms.locfileid: "62773890"
   
 1.  Azure ポータルにアクセスする[ https://portal.azure.com ](https://portal.azure.com)と、Azure 管理者または共同作成者アカウントでサインインします。  
   
-2.  左側のバナーで、 **[参照]**、 **[SQL データベース]** の順にクリックします。  
+2.  左側のバナーで、 **[参照]** 、 **[SQL データベース]** の順にクリックします。  
   
 3.  左側のウィンドウで選択した **SQL データベース** で、ご使用のユーザー データベースをクリックします。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62773890"
   
 1.  Azure ポータルにアクセスする[ https://portal.azure.com ](https://portal.azure.com)と、Azure 管理者または共同作成者アカウントでサインインします。  
   
-2.  左側のバナーで、 **[参照]**、 **[SQL データベース]** の順にクリックします。  
+2.  左側のバナーで、 **[参照]** 、 **[SQL データベース]** の順にクリックします。  
   
 3.  左側のウィンドウで選択した **SQL データベース** で、ご使用のユーザー データベースをクリックします。  
   

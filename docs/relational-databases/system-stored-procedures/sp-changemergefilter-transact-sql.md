@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997044"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -52,7 +52,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 変更するプロパティの名前です。 *プロパティ*は**sysname**、既定値はありません。  
   
-`[ @value = ] 'value'` 指定したプロパティの新しい値です。 *値*は**nvarchar (1000)**、既定値はありません。  
+`[ @value = ] 'value'` 指定したプロパティの新しい値です。 *値*は**nvarchar (1000)** 、既定値はありません。  
   
  このテーブルには、記事、これらのプロパティの値のプロパティについて説明します。  
   
@@ -85,7 +85,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>コメント  
  **sp_changemergefilter**はマージ レプリケーションで使用します。  
   
- マージ アーティクルのフィルターを変更すると、再作成する、存在する場合、スナップショットが必要です。 これには、実行するには、 **@force_invalidate_snapshot**に**1**します。 また、このアーティクルに対するサブスクリプションがある場合、サブスクリプションを再初期化する必要があります。 これは、設定で、 **@force_reinit_subscription**に**1**します。  
+ マージ アーティクルのフィルターを変更すると、再作成する、存在する場合、スナップショットが必要です。 これには、実行するには、 **@force_invalidate_snapshot** に**1**します。 また、このアーティクルに対するサブスクリプションがある場合、サブスクリプションを再初期化する必要があります。 これは、設定で、 **@force_reinit_subscription** に**1**します。  
   
  論理レコードを使用するには、パブリケーションとアーティクルが多くの要件を満たしている必要があります。 詳細については、「[Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   

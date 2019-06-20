@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 49a3c276aa17d8f2bd7f48296eeecb69ad91d04d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718367"
 ---
 # <a name="xml-persistence-format"></a>XML 保存形式
@@ -71,5 +71,5 @@ xmlns:z="#RowsetSchema">
   
  [データ] セクションでは、運送会社に関する情報を含む 3 つの行があります。 [データ] セクションが空である空の行セットが、 \<rs: データ > タグが存在する必要があります。 データのない、書き込めるのタグの短縮形単に\<rs: データ/>。 "Rs"の付いた任意のタグは、urn: スキーマによって定義された名前空間内にあることを示します-microsoft-com:rowset します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

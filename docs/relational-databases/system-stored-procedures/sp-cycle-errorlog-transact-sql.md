@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 565cc98059c056dbb4fc73f3e0734229754aad93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724197"
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
@@ -46,7 +46,7 @@ sp_cycle_errorlog
  なし  
   
 ## <a name="remarks"></a>コメント  
- 毎回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始されると、現在のエラー ログを変更する **'errorlog.1'**;**'errorlog.1'** なります**errorlog.2**、 **errorlog.2**なります**errorlog.3**など。 **sp_cycle_errorlog**を停止して、サーバーを起動せず、エラー ログ ファイルを循環することができます。  
+ 毎回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始されると、現在のエラー ログを変更する **'errorlog.1'** ; **'errorlog.1'** なります**errorlog.2**、 **errorlog.2**なります**errorlog.3**など。 **sp_cycle_errorlog**を停止して、サーバーを起動せず、エラー ログ ファイルを循環することができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限**sp_cycle_errorlog**のメンバーに制限されます、 **sysadmin**固定サーバー ロール。  
@@ -59,7 +59,7 @@ EXEC sp_cycle_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_cycle_agent_errorlog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
   

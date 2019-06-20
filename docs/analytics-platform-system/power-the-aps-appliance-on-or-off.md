@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678630"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System の電源をオンまたはオフのアプライアンス
@@ -39,7 +39,7 @@ SQL Server PDW ノードへの接続は、ノードとの間に割り当てら�
 > [!WARNING]  
 > 正確な順序ですべての手順を実行する必要があり、各手順は次の手順を実行すると、前に明記されない限り、完了する必要があります。 誤順序のまたは各手順を完了するを待たずに手順を実行すると、後で、アプライアンスの電源投入時にエラーが発生することができます。  
   
-1.  PDW 管理ノードに接続 (**_PDW_region_-CTL01** )、Analytics Platform System appliance ドメイン管理者アカウントを使用してログインします。  
+1.  PDW 管理ノードに接続 ( **_PDW_region_-CTL01** )、Analytics Platform System appliance ドメイン管理者アカウントを使用してログインします。  
   
 2.  実行`C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe`を開く、 **Configuration Manager**します。  
   

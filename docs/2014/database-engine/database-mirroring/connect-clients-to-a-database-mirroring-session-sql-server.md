@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755341"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
@@ -241,7 +241,7 @@ Server=123.34.45.56,4724;
 |データベース管理者がミラー化を停止し (クライアントの接続を切断)、Partner_A を Partner_C に置き換えて、ミラー化を再開|Partner_B|Partner_C|クライアントは Partner_A への接続を試行して失敗します。その後、Partner_B (現在のプリンシパル サーバー) への接続を試行して成功します。 データ アクセス プロバイダーは現在のミラー サーバー名である Partner_C をダウンロードし、現在のフェールオーバー パートナー名としてキャッシュに保存します。|  
 |サービスを手動で Partner_C にフェールオーバー (クライアントの接続を切断)|Partner_C|Partner_B|クライアントはまず Partner_A に接続してから Partner_B に接続しようとします。 どちらの名前でも接続に失敗し、最終的には接続要求がタイムアウトになって失敗します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング中に発生する可能性のあるエラー](possible-failures-during-database-mirroring.md)  
   

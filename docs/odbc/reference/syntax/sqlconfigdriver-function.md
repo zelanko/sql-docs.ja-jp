@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20316f2a7932768951633ae24e1b1e180c1dfb49
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537580"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 関数
@@ -109,7 +109,7 @@ BOOL SQLConfigDriver(
   
  ときに**SQLConfigDriver**を使用して呼び出した*起こり*ODBC_INSTALL_DRIVER または ODBC_REMOVE_DRIVER に設定すると、ドライバー マネージャー、適切なドライバーのセットアップ DLL と読み込みの呼び出し、 **ConfigDriver**関数。 ときに**SQLConfigDriver**を呼び出すと、*起こり*ODBC_CONFIG_DRIVER のすべての処理が、ODBC インストーラーの実行、ドライバーのセットアップ DLL が読み込まれる必要があるないようにします。  
   
-## <a name="messages"></a>メッセージ  
+## <a name="messages"></a>Messages  
  ドライバーのセットアップ ルーチンは、アプリケーション内の null で終わる文字列としてテキスト メッセージを送信することができます、 *lpszMsg*バッファー。 メッセージに切り捨てられます*cbMsgMax*によって null 終了文字マイナス、 **ConfigDriver**する以上の場合は機能*cbMsgMax*文字。  
   
 ## <a name="related-functions"></a>関連する関数  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251443"
 ---
 # <a name="using-member-expressions"></a>メンバー式の使用
@@ -21,7 +21,7 @@ ms.locfileid: "63251443"
 
   メンバー式には、メンバー識別子、メンバー関数の場合、またはメンバーに変換できる式が含まれています。  
   
- メンバー識別子には、さまざまな形式があります。 メンバー識別子の最も単純な形式は、メンバーの名前で構成されます。 以下に例を示します。  
+ メンバー識別子には、さまざまな形式があります。 メンバー識別子の最も単純な形式は、メンバーの名前で構成されます。 例 :  
   
 ```  
 SELECT Amount ON 0  

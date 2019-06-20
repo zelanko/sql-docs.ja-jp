@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127054"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio のキーボード ショートカット
@@ -371,10 +371,10 @@ ms.locfileid: "63127054"
 |現在選択しているテキストの前の出現箇所を検索する|Ctrl + Shift + F3|Ctrl + Shift + F3|  
 |**[フォルダーを指定して置換]** ダイアログ ボックスを表示する|Ctrl + Shift + H|Ctrl + Shift + H|  
 |インクリメンタル検索を反転して、ファイルの末尾から上に向かって検索する|Ctrl + Shift + I|Ctrl + Shift + I|  
-| **[検索と置換]** の **[上へ検索]** オプションをオンまたはオフにする|Alt + F3、B|Alt + F3、B|  
+|**[検索と置換]** の **[上へ検索]** オプションをオンまたはオフにする|Alt + F3、B|Alt + F3、B|  
 |**[フォルダーを指定して検索]** による検索を停止する|Alt + F3、S|Alt + F3、S|  
-| **[検索と置換]** の **[単語単位]** オプションをオンまたはオフにする|Alt + F3、W|Alt + F3、W|  
-| **[検索と置換]** の **[ワイルドカード]** オプションをオンまたはオフにする|Alt + F3、P|Alt + F3、P|  
+|**[検索と置換]** の **[単語単位]** オプションをオンまたはオフにする|Alt + F3、W|Alt + F3、W|  
+|**[検索と置換]** の **[ワイルドカード]** オプションをオンまたはオフにする|Alt + F3、P|Alt + F3、P|  
 |[標準] ツール バーの [検索/コマンド] ボックスにキャレットを配置する|Ctrl + /|同等の機能がありません|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>切り取りと貼り付けのキーボード ショートカット  
@@ -435,13 +435,13 @@ ms.locfileid: "63127054"
 |操作|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |現在実行中のクエリを取り消すか停止する|Ctrl + T|Ctrl + T|  
-| **クエリ デザイナー**のダイアグラム ペインを表示する|Ctrl + 1|Ctrl + 1|  
-| **クエリ デザイナー**の条件ペインを表示する|Ctrl + 2|Ctrl + 2|  
-| **クエリ デザイナー**の SQL ペインを表示する|Ctrl + 3|Ctrl + 3|  
-| **クエリ デザイナー**の結果ペインを表示する|Ctrl + 4|Ctrl + 4|  
-| **クエリ デザイナー**で指定されているクエリを実行する|Ctrl + R|Ctrl + R|  
+|**クエリ デザイナー**のダイアグラム ペインを表示する|Ctrl + 1|Ctrl + 1|  
+|**クエリ デザイナー**の条件ペインを表示する|Ctrl + 2|Ctrl + 2|  
+|**クエリ デザイナー**の SQL ペインを表示する|Ctrl + 3|Ctrl + 3|  
+|**クエリ デザイナー**の結果ペインを表示する|Ctrl + 4|Ctrl + 4|  
+|**クエリ デザイナー**で指定されているクエリを実行する|Ctrl + R|Ctrl + R|  
 |結果ペインで、デザイナーの下部にドッキングされているツール ストリップにフォーカスを移動する|Ctrl + G|Ctrl + G|  
-| **クエリ デザイナー**で JOIN モードを有効にする|Ctrl + Shift + J|Ctrl + Shift + J|  
+|**クエリ デザイナー**で JOIN モードを有効にする|Ctrl + Shift + J|Ctrl + Shift + J|  
   
 ## <a name="designer-keyboard-shortcuts"></a>デザイナーのキーボード ショートカット  
   
@@ -459,7 +459,7 @@ ms.locfileid: "63127054"
 |ページ上の前のコントロールに移動する|Shift + Tab|同等の機能がありません|  
 |デザイン画面にグリッドを表示する|Enter|同等の機能がありません|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メニューとショートカット キーのカスタマイズ](customize-menus-and-shortcut-keys.md)  
   
   

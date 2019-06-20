@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762372"
 ---
 # <a name="mssqlserver8651"></a>MSSQLSERVER_8651
@@ -72,7 +72,7 @@ ms.locfileid: "62762372"
   
  問題が解決しない場合は、さらに調査します。ワークロードの軽減が必要になる場合もあります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DBCC FREESYSTEMCACHE &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesystemcache-transact-sql)   
  [DBCC FREESESSIONCACHE &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freesessioncache-transact-sql)   
  [DBCC FREEPROCCACHE &#40;TRANSACT-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql)   

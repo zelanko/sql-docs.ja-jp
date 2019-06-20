@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055798"
 ---
 # <a name="set-the-properties-of-a-package"></a>パッケージのプロパティを設定する
-  この手順では、**[プロパティ]** ウィンドウを使用してパッケージのプロパティを構成する方法について説明します。  
+  この手順では、 **[プロパティ]** ウィンドウを使用してパッケージのプロパティを構成する方法について説明します。  
   
 > [!NOTE]  
 >  パッケージを構成するために設定するプロパティを [プロパティ] ウィンドウで一覧表示するには、パッケージを SSIS デザイナーで開く必要があります。  

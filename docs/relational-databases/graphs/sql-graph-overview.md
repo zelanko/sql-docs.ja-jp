@@ -16,10 +16,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502499"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 ノードとエッジ テーブルとして格納されます。  
 
 ### <a name="query-language-extensions"></a>クエリ言語の拡張機能  
-新しい`MATCH`パターン マッチングと graph を通じて、マルチホップ ナビゲーションをサポートするために句が導入されました。 `MATCH`関数はパターン マッチングの ASCII アート形式の構文を使用します。 以下に例を示します。  
+新しい`MATCH`パターン マッチングと graph を通じて、マルチホップ ナビゲーションをサポートするために句が導入されました。 `MATCH`関数はパターン マッチングの ASCII アート形式の構文を使用します。 例 :  
 
 ```   
 -- Find friends of John

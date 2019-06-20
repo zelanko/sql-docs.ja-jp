@@ -16,18 +16,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a29577d6027c43fd35a8b27db8b402123c89a4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035669"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server リソースへの依存関係の追加
   このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) リソースに依存関係を追加する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
--   **作業を開始する準備:**[制限事項と制約](#Restrictions)、[の前提条件](#Prerequisites)  
+-   **作業を開始する準備:** [制限事項と制約](#Restrictions)、[の前提条件](#Prerequisites)  
   
--   **SQL Server リソースに依存関係を追加するを使用します。**[Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
+-   **SQL Server リソースに依存関係を追加するを使用します。** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635869"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (TRANSACT-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'object_statement'` 現在のデータベースまたはレポートへのアクセス許可のあるステートメント内のオブジェクトの名前です。 *object_statement*は**nvarchar (776)** の既定値は NULL には、すべてのオブジェクトとステートメントの権限が返されます。 値がオブジェクト (テーブル、ビュー、ストアド プロシージャ、または拡張ストアド プロシージャ) の場合、現在のデータベースで有効なオブジェクトがあります。 オブジェクト名は、フォームで、所有者の修飾子を含めることができます_所有者_**.**_オブジェクト_します。  
+`[ @name = ] 'object_statement'` 現在のデータベースまたはレポートへのアクセス許可のあるステートメント内のオブジェクトの名前です。 *object_statement*は**nvarchar (776)** の既定値は NULL には、すべてのオブジェクトとステートメントの権限が返されます。 値がオブジェクト (テーブル、ビュー、ストアド プロシージャ、または拡張ストアド プロシージャ) の場合、現在のデータベースで有効なオブジェクトがあります。 オブジェクト名は、フォームで、所有者の修飾子を含めることができます_所有者_ **.** _オブジェクト_します。  
   
  場合*object_statement*ステートメント、CREATE ステートメントであることができます。  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` アクセス許可を付与するプリンシパルの名前です。 *権限の許可者*は**sysname**の既定値は NULL には、データベース内のすべてのプリンシパルにより許可された権限のすべての情報が返されます。  
   
-`[ @permissionarea = ] 'type'` オブジェクトのアクセス許可を表示するかどうかを示す文字の文字列 (文字の文字列**o**)、ステートメント権限 (文字の文字列**s**)、またはその両方 (**os**)。 *型*は**varchar (10)**、既定値は**os**します。 *型*の任意の組み合わせは、 **o**と**s**、または間の空白またはコンマなし**o**と**s**します。  
+`[ @permissionarea = ] 'type'` オブジェクトのアクセス許可を表示するかどうかを示す文字の文字列 (文字の文字列**o**)、ステートメント権限 (文字の文字列**s**)、またはその両方 (**os**)。 *型*は**varchar (10)** 、既定値は**os**します。 *型*の任意の組み合わせは、 **o**と**s**、または間の空白またはコンマなし**o**と**s**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779226"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルでのインデックス使用のガイドライン
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  列 c1 にインデックスがない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、テーブル t 全体をスキャンして、条件 c1=1 を満たす行をフィルター処理する必要があります。 一方、列 c1 にインデックスがある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、値 1 を直接シークして行を取得できます。  
   
- テーブルの 1 個以上の列について、特定の値または値の範囲を持つレコードを検索する場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではそれらの列のインデックスを使用することで、対応するレコードを迅速に検索できます。 ディスク ベースのテーブルおよびメモリ最適化テーブルのいずれの場合でも、インデックスの利点が得られます。 ただし、インデックス構造間には、メモリ最適化テーブルを使用する場合に考慮する必要がある一定の相違点があります  (メモリ最適化されたテーブルのインデックスは、メモリ最適化インデックスと呼ばれます)。主な違いの一部を次に示します。  
+ テーブルの 1 個以上の列について、特定の値または値の範囲を持つレコードを検索する場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではそれらの列のインデックスを使用することで、対応するレコードを迅速に検索できます。 ディスク ベースのテーブルおよびメモリ最適化テーブルのいずれの場合でも、インデックスの利点が得られます。 ただし、インデックス構造間には、メモリ最適化テーブルを使用する場合に考慮する必要がある一定の相違点があります (メモリ最適化されたテーブルのインデックスは、メモリ最適化インデックスと呼ばれます)。主な違いの一部を次に示します。  
   
 -   メモリ最適化インデックスを作成する必要があります[CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)します。 ディスク ベース インデックスは、`CREATE TABLE` および `CREATE INDEX` を使用して作成できます。  
   
