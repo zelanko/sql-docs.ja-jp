@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62717379"
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI ウィザード - ディメンションへのカスタム集計の追加
@@ -34,6 +34,6 @@ ms.locfileid: "62717379"
 ## <a name="adding-custom-aggregation-unary-operator"></a>カスタム集計 (単項演算子) の追加  
  **[単項演算子の指定]** の次のページで、カスタム集計の親属性と、単項演算子のディメンション テーブル内の基になる列を指定します。 **[親属性]** には、 **Usage** プロパティが **Parent**に設定されている属性が一覧表示されます。 複数の親属性が存在する場合は、使用する親子リレーションシップに対応する親属性を選択します。 親属性が一覧に含まれていない場合、ディメンションには有効な親子階層が存在していません。  
   
- **[基になる列]** で、単項演算子を含む文字列の列を選択します  (この選択によって、親属性の **UnaryOperatorColumn** プロパティが設定されます)。ディメンション テーブルには、単項ロールアップ演算子を指定する文字列の列も必要です。 この列の文字列値には、有効な集計演算子が含まれている必要があります。 行が空の場合は、対応するメンバーが普通に計算されます。 列の式が有効でない場合は、そのメンバーを使用するセル値が取得されたときに実行時エラーが発生します。 詳細については、 [「親子ディメンションの単項演算子」](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)を参照してください。  
+ **[基になる列]** で、単項演算子を含む文字列の列を選択します (この選択によって、親属性の **UnaryOperatorColumn** プロパティが設定されます)。ディメンション テーブルには、単項ロールアップ演算子を指定する文字列の列も必要です。 この列の文字列値には、有効な集計演算子が含まれている必要があります。 行が空の場合は、対応するメンバーが普通に計算されます。 列の式が有効でない場合は、そのメンバーを使用するセル値が取得されたときに実行時エラーが発生します。 詳細については、 [「親子ディメンションの単項演算子」](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)を参照してください。  
   
   

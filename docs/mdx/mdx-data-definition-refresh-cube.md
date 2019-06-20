@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dafc13dda1f8ecab1400a88d1ca66eff5f317e43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63285079"
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>MDX データ操作 - REFRESH CUBE
@@ -40,7 +40,7 @@ REFRESH CUBECube_Name
 > [!IMPORTANT]  
 >  サーバーに保存されている名前付きセットは更新されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

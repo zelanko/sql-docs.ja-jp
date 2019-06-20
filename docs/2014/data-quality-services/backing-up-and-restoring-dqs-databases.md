@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481152"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
@@ -60,7 +60,7 @@ ms.locfileid: "65481152"
   
 10. オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]** をクリックします。  
   
-11. クエリ エディター ウィンドウに次の SQL ステートメントをコピーし、*\<PASSWORD>* を DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードで置き換えます。  
+11. クエリ エディター ウィンドウに次の SQL ステートメントをコピーし、 *\<PASSWORD>* を DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードで置き換えます。  
   
     ```  
     USE [DQS_MAIN]  

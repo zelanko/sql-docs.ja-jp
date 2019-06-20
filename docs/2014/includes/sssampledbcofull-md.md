@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 698287df5a221d2a19e5be9bd096632097dc276a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65817025"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232772"
 ---
 Adventure Works Cycles

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519122"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>カスタム アプリケーション内での RSClientPrint コントロールの使用
@@ -51,7 +51,7 @@ ms.locfileid: "62519122"
  この ActiveX コントロールとそのメソッドおよびプロパティにプログラムからアクセスするには、**RSClientPrint** オブジェクトを使用します。 このコントロールでは、印刷プレビュー用のモーダル ダイアログが提供されます。  
   
 ### <a name="specifying-default-values"></a>既定値の指定  
- **[印刷]** ダイアログ ボックスに、レポートの余白やページの各値を初期設定することができます。 既定では、**[印刷]** ダイアログ ボックスはレポート定義の値で初期化されます。 既定値を使用することも、オブジェクトのプロパティを設定して異なる値を指定することもできます。  
+ **[印刷]** ダイアログ ボックスに、レポートの余白やページの各値を初期設定することができます。 既定では、 **[印刷]** ダイアログ ボックスはレポート定義の値で初期化されます。 既定値を使用することも、オブジェクトのプロパティを設定して異なる値を指定することもできます。  
   
  サイズはすべて mm 単位で設定されます。 **Culture** および **UICulture** がメートル法を使わないロケールに設定されている場合は、実行時に単位が変換されます。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62519122"
   
 |引数|I/O|型|説明|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|レポート サーバーの仮想ディレクトリを指定します (たとえば、 https://adventure-works/reportserver)します。|  
+|ServerPath|In|String|レポート サーバーの仮想ディレクトリを指定します (たとえば、 https://adventure-works/reportserver) します。|  
 |ReportPathParameters|In|String|パラメーターを含む、レポート サーバー フォルダー名前空間内のレポートの完全な名前を指定します。 レポートは、URL にアクセスすることによって取得されます。 例:"/AdventureWorks サンプル レポート/Employee Sales Summary & EmpID = 1234」|  
 |ReportName|In|String|レポートの短縮名です (上の例では、短縮名は「Employee Sales Summary」です)。 ここで設定した内容は、[印刷] ダイアログ ボックスと印刷キューに表示されます。|  
   

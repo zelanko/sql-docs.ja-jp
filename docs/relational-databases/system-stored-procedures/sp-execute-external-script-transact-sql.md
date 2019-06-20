@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531044"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046715"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 
@@ -124,7 +124,7 @@ sp_execute_external_script
 
  SQL Server の 2019 で現在パブリック プレビュー中パラメーターを設定できます 2 つ追加パーティションは 1 つに基づいてまたは位置を論理パーティションに自然なセグメントのデータ セットを提供する多くの列が作成し、使用して、パーティション分割されたデータのモデリングを有効にします。スクリプトの実行中にのみ 年齢、性別、地域、日付や時刻などの繰り返しの値を含む列は、パーティション分割されたデータ セットに役立つ、いくつかの例を示します。
  
- 2 つのパラメーターが**input_data_1_partition_by_columns**と**input_data_1_order_by_columns**2 番目のパラメーターが、結果セットの並べ替えに使用されます。 入力として渡されたパラメーター`sp_execute_external_script`外部スクリプトの実行に 1 回のすべてのパーティション。 詳細と例については、次を参照してください。[チュートリアル。パーティション ベースのモデルを作成する](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)します。
+ 2 つのパラメーターが**input_data_1_partition_by_columns**と**input_data_1_order_by_columns**2 番目のパラメーターが、結果セットの並べ替えに使用されます。 入力として渡されたパラメーター`sp_execute_external_script`外部スクリプトの実行に 1 回のすべてのパーティション。 詳細と例については、次を参照してください。[チュートリアル。パーティション ベースのモデルを作成する](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition)します。
 
  並列でスクリプトを実行するには指定することによって`@parallel=1`します。 設定する必要がある場合は、入力クエリを並列化できる、`@parallel=1`に渡す引数の一部として`sp_execute_external_script`します。 既定では、クエリ オプティマイザーがの下で稼働`@parallel=1`このスクリプトにはでこれを明示的に処理する場合は、256 個を超える行を持つテーブルには示されているように、パラメーターが含まれています。
 
@@ -210,7 +210,7 @@ GO
 次の例を使用するストアド プロシージャを作成する**sp_execute_external_script**を虹彩のモデルを生成し、モデルを返す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
 
 > [!NOTE]
->  この例では、e1071 パッケージの事前インストールが必要です。 詳細については、[SQL Server に追加の R パッケージをインストール](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)を参照してください。
+>  この例では、e1071 パッケージの事前インストールが必要です。 詳細については、次を参照してください。 [SQL Server に追加の R パッケージをインストール](../../advanced-analytics/r/install-additional-r-packages-on-sql-server.md)します。
 
 ```sql
 DROP PROC IF EXISTS generate_iris_model;

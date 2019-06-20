@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 99009d961baf3d1f870783f565cb93c628eb85c7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480159"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web アプリケーションの要件 (マスター データ サービス)
@@ -48,7 +48,7 @@ ms.locfileid: "65480159"
  
  
 > [!IMPORTANT]  
->**動的なコンテンツ圧縮** は既定で有効になっています。 CPU 使用率は増加しますが、XML 応答サイズを大幅に縮小し、ネットワーク I/O を節約できます。  詳細については、「[マスター データ サービス &#40;MDS&#41; の新機能](../../master-data-services/what-s-new-in-master-data-services-mds.md)」の「**[CTP 2.0] パフォーマンスの向上**」を参照してください。   
+>**動的なコンテンツ圧縮** は既定で有効になっています。 CPU 使用率は増加しますが、XML 応答サイズを大幅に縮小し、ネットワーク I/O を節約できます。  詳細については、「[マスター データ サービス &#40;MDS&#41; の新機能](../../master-data-services/what-s-new-in-master-data-services-mds.md)」の「 **[CTP 2.0] パフォーマンスの向上**」を参照してください。  
   
 ||  
 |-|  

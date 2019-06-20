@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0152594c213196860e80ff5d5267356977404b7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771193"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC インスタンス
@@ -42,7 +42,7 @@ ms.locfileid: "62771193"
   
 -   **復旧の処理**: Oracle CDC インスタンスが起動すると、その内部状態が **xdbcdc_state** テーブルおよび **xdbcdc_staged_transactions** テーブルから復元されます。 状態が復元されると、CDC インスタンスは通常どおり実行されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラー処理](error-handling.md)  
   
   

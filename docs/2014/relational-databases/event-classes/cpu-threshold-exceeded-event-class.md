@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663485"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded イベント クラス
@@ -34,7 +34,7 @@ ms.locfileid: "62663485"
 |CPU|`int`|CPU 使用率 (ミリ秒単位)。|18|はい|  
 |EventClass|`int`|214|27|いいえ|  
 |EventSubClass|`int`|CPU 制限違反。|21|はい|  
-|GroupID|`int`|違反が発生したグループ ID。|66|はい|  
+|GroupID|`int`|違反が発生したグループ ID。|66|[はい]|  
 |OwnerID|`int`|違反の原因となったプロセスの SPID。|58|はい|  
 |SPID|`int`|このイベントを発生させたサーバー プロセスの ID。<br /><br /> 注:システム スレッドがバック グラウンド タスクとして CPU 使用率を検証する場合の実際のユーザー SPID これとは異なることができます。|12|はい|  
 |StartTime|`datetime`|このイベントが発生した時刻。|14|はい|  

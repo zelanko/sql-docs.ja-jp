@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 254215318a79971e384ab8e08e3e7a17959b58d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502584"
 ---
 # <a name="operators---logical"></a>演算子 - 論理
@@ -25,9 +25,9 @@ ms.locfileid: "62502584"
   
 |演算子|説明|  
 |--------------|-----------------|  
-|[&AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|2 つの数値式の論理積演算を実行します。|  
-|[いない&AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|1 つの数値式の論理否定を実行します。|  
-|[または&AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|2 つの数値式の論理和を実行します。|  
+|[AND&#40;DMX&#41;](../dmx/and-dmx.md)|2 つの数値式の論理積演算を実行します。|  
+|[NOT&#40;DMX&#41;](../dmx/not-dmx.md)|1 つの数値式の論理否定を実行します。|  
+|[OR&#40;DMX&#41;](../dmx/or-dmx.md)|2 つの数値式の論理和を実行します。|  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   

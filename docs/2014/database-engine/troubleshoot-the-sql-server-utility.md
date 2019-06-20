@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842528"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server ユーティリティのトラブルシューティング
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   UCP の SQL Server Browser サービスを開始して、自動的に開始するように構成する必要があります。 組織の方針で SQL Server Browser サービスを使用できない場合は、次の手順を実行して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスから UCP に接続できるようにします。  
   
-    1.  マネージ インスタンス上の Windows タスク バー [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 をクリックして**開始**、 をクリックし、**を実行しています.**.  
+    1.  マネージ インスタンス上の Windows タスク バー [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 をクリックして**開始**、 をクリックし、**を実行しています.** .  
   
     2.  該当するボックスに「cliconfg.exe」と入力し、 **[OK]** をクリックします。  
   
-    3.  "SQL クライアント設定ユーティリティ EXE" の起動を許可するように求めるメッセージが表示されたら、**[続行]** をクリックします。  
+    3.  "SQL クライアント設定ユーティリティ EXE" の起動を許可するように求めるメッセージが表示されたら、 **[続行]** をクリックします。  
   
-    4.  **SQL Server クライアント ネットワーク ユーティリティ**ダイアログ ボックスで、**エイリアス** タブの  をクリックし、**追加しています.**.  
+    4.  **SQL Server クライアント ネットワーク ユーティリティ**ダイアログ ボックスで、**エイリアス** タブの  をクリックし、**追加しています.** .  
   
     5.  **[ネットワーク ライブラリ設定の追加]** ダイアログ ボックスで、次の操作を行います。  
   
@@ -154,7 +154,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスが Windows Server 2003 コンピューター上でホストされている場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービス アカウントは、Performance Monitor Users セキュリティ グループまたはローカルの Administrators グループに属している必要があります。 属していない場合は、アクセス拒否エラーが発生してデータ収集が失敗します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービス アカウントを Performance Monitor Users セキュリティ グループに追加するには、次の手順を実行します。  
   
-    1.  **[コンピューターの管理]** を開き、 **[ローカル ユーザーとグループ]**、 **[グループ]** の順に展開します。  
+    1.  **[コンピューターの管理]** を開き、 **[ローカル ユーザーとグループ]** 、 **[グループ]** の順に展開します。  
   
     2.  **[Performance Monitor Users]** を右クリックし、 **[グループに追加]** をクリックします。  
   

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096669"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>データベースの変更ウィザード (SSRS ネイティブ モード)
@@ -62,7 +62,7 @@ ms.locfileid: "66096669"
  別のレポート サーバー データベースを選択する場合は、現在のデータベースの使用方法がわかるように、現在のデータベースのモードが表示されます。  
   
  **資格情報**  
- レポート サーバーがレポート サーバー データベースへの接続に使用するアカウントを指定します。 指定できる値は、レポート サーバー Web サービスのサービス アカウント、レポート サーバーのホストに使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで定義されている [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベース ログイン、または Windows アカウントです。 Windows アカウントを使用している場合は、ローカル アカウントを指定できます (*\<computername >\\< ユーザー名\>*) 場合は、レポート サーバーとデータベースが同じコンピューターまたはドメイン ユーザーにはアカウント (*\<ドメイン >\\< ユーザー名\>*) 同じドメイン内の異なるコンピューター上にある場合。  
+ レポート サーバーがレポート サーバー データベースへの接続に使用するアカウントを指定します。 指定できる値は、レポート サーバー Web サービスのサービス アカウント、レポート サーバーのホストに使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで定義されている [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベース ログイン、または Windows アカウントです。 Windows アカウントを使用している場合は、ローカル アカウントを指定できます ( *\<computername >\\< ユーザー名\>* ) 場合は、レポート サーバーとデータベースが同じコンピューターまたはドメイン ユーザーにはアカウント ( *\<ドメイン >\\< ユーザー名\>* ) 同じドメイン内の異なるコンピューター上にある場合。  
   
  レポート サーバーはデータベース ログインを作成し、指定したアカウントにデータベース権限を割り当てます。  
   

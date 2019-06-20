@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287807"
 ---
 # <a name="examples-using-auto-mode"></a>例 :AUTO モードの使用
@@ -203,7 +203,7 @@ FOR XML AUTO, BINARY BASE64;
   
  既定では、AUTO モードを使用してバイナリ データを取得すると、バイナリ データではなく、クエリが実行されたデータベースの仮想ルートからの相対 URL への参照が返されます。 BINARY BASE64 オプションを指定しないと、相対 URL への参照が返されます。  
   
- 大文字と小文字が区別されないデータベースでは、クエリで指定したテーブル名や列名がデータベース内のテーブル名や列名と一致しない場合でも、AUTO モードによりバイナリ データへの URL 参照が返されると、クエリが実行されます。 ただし、参照として返される文字列が大文字であるか小文字であるかは一貫性がありません。 以下に例を示します。  
+ 大文字と小文字が区別されないデータベースでは、クエリで指定したテーブル名や列名がデータベース内のテーブル名や列名と一致しない場合でも、AUTO モードによりバイナリ データへの URL 参照が返されると、クエリが実行されます。 ただし、参照として返される文字列が大文字であるか小文字であるかは一貫性がありません。 例 :  
   
 ```  
 SELECT ProductPhotoID, ThumbnailPhoto  

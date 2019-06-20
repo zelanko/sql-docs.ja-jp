@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 6d615ad3d0642d2e738359089f2ea51159e7f1b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63223475"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>SSMA for Oracle のインストール (OracleToSQL)
@@ -33,6 +33,6 @@ SSMA for Oracle の以降のバージョンにアップグレードする場合�
 |[SQL Server での SSMA コンポーネントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|インスタンスに拡張機能パックをインストールするための情報と手順を提供します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |[SSMA for Oracle コンポーネントの削除&#40;OracleToSQL&#41;](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|クライアントをアンインストールする方法についてのプログラムと拡張機能パックを提供します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 578192fa982b8bbf65527f4ff1d71b6595a2400d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251642"
 ---
 # <a name="using-tuple-functions"></a>組関数の使用
@@ -23,7 +23,7 @@ ms.locfileid: "63251642"
   
  組関数は、メンバー関数や集合関数と同様に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で使用される多次元構造を操作するために不可欠です。  
   
-  MDX では、次の 3 つの組関数がある[Current&#40;MDX&#41;](../mdx/current-mdx.md)、[Item&#40;組&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)と[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). 次のクエリは、それぞれの使用方法を示しています。  
+ MDX では、次の 3 つの組関数がある[Current&#40;MDX&#41;](../mdx/current-mdx.md)、[Item&#40;組&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)と[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). 次のクエリは、それぞれの使用方法を示しています。  
   
  `WITH`  
   

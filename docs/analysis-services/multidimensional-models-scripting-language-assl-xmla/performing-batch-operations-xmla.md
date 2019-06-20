@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261648"
 ---
 # <a name="performing-batch-operations-xmla"></a>バッチ操作の実行 (XMLA)
@@ -109,7 +109,7 @@ ms.locfileid: "63261648"
     > [!IMPORTANT]  
     >  A**プロセス**コマンドを含めることはできません、**バインド**、 **DataSource**、 **DataSourceView**、または**ErrorConfiguration**プロパティ場合、**プロセス**にコマンドが含まれている、**バッチ**コマンド。 これらのプロパティを指定する必要があります場合、**プロセス**コマンドで、対応するプロパティのために必要な情報を提供、**バッチ**コマンドが含まれている**プロセス**コマンド。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [要素をバッチ&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla)   
  [要素を処理&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)   
  [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

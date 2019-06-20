@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53de714a7db50b653a24fa42662fc7e0aeffa88d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472082"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263401"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>日付テーブルとしてマーク タイム インテリジェンスで使用するための指定します。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "62472082"
   
 1.  モデル デザイナーで、日付テーブルをクリックします。  
   
-2.   **[テーブル]** メニュー、 **[日付]**、 **Mark as [日付] [テーブル]** の順にクリックします。  
+2.  **[テーブル]** メニュー、 **[日付]** 、 **Mark as [日付] [テーブル]** の順にクリックします。  
   
 3.  **[日付テーブルとしてマーク]** ダイアログ ボックスの **[日付]** ボックスの一覧で、一意識別子として使用する列を選択します。 この列は、一意の値を含んでいる必要があり、Date データ型である必要があります。 以下に例を示します。  
   
@@ -50,8 +50,8 @@ ms.locfileid: "62472082"
   
 4.  必要に応じて、ファクト テーブルと日付テーブルの間のリレーションシップを作成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [計算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [タイム インテリジェンス関数 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [タイム インテリジェンス関数 (DAX)](/dax/time-intelligence-functions-dax)  
   
   

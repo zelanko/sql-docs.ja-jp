@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b8043bb8f95ea67dbc3dceedc9cfd0154b033d51
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109047"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
@@ -71,7 +71,7 @@ ms.locfileid: "66109047"
 ## <a name="credentials"></a>[資格情報]  
  資格情報は、データ ソースにアクセスできるユーザー名とパスワードの値です。 資格情報を指定した後、 **[レポートの表示]** をクリックしてデータを取得します。 ユーザーのログオンが必要なレポートの場合、ユーザーが参照することを許可されたデータは、別のユーザーが参照するデータとは異なる場合があります。 つまり、2 人のユーザーが同じレポートを実行しても、異なる結果が得られる場合があります。 さらに、レポートによっては非表示の内容が含まれている場合があり、その内容はユーザーのログオン資格情報またはレポートで選択された内容に基づいて開示されます。 レポートで非表示になっている領域は検索操作の対象から除外されるため、すべての情報が表示された状態のレポートに検索を行った場合とは異なる検索結果が返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  

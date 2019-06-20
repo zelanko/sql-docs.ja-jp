@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209837"
 ---
 # <a name="new-project-oracletosql"></a>新しいプロジェクト (OracleToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63209837"
 **名前**  
 プロジェクトの名前を入力します。 SSMA は、ファイル拡張子を追加します。  
   
-**[場所]**  
+**場所**  
 入力するか、フォルダーまたはプロジェクトを保存するネットワークの場所を参照します。  
   
 **移行します。**  

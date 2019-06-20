@@ -13,14 +13,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478852"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>マスター データ サービスの [サーバーの構成] ページ (構成マネージャー)
-  ローカル サーバー コンピューターの構成情報を表示するには、**[サーバーの構成]** ページを使用します。  
+  ローカル サーバー コンピューターの構成情報を表示するには、 **[サーバーの構成]** ページを使用します。  
   
 ## <a name="server-configuration"></a>[サーバーの構成]  
   

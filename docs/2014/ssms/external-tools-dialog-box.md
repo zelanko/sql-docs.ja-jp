@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245629"
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
@@ -73,7 +73,7 @@ ms.locfileid: "63245629"
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**引数**|-A|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [外部ツールの引数](menu-help/external-tools.md)   
  [一般的なユーザー インターフェイス要素](general-user-interface-elements.md)  
   

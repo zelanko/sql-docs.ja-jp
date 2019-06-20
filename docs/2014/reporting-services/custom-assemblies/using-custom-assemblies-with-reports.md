@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e79f48f4e4a2eb5fbc83c353461709658caf2509
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63265662"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>レポートでのカスタム アセンブリの使用
@@ -43,7 +43,7 @@ ms.locfileid: "63265662"
  [カスタム アセンブリ オブジェクトの初期化](initializing-custom-assembly-objects.md)  
  レポートから呼び出されたカスタム アセンブリ オブジェクトの値を初期化する方法について説明します。  
   
- [方法: カスタム アセンブリをデバッグします。](how-to-debug-custom-assemblies.md)  
+ [方法:カスタム アセンブリをデバッグします。](how-to-debug-custom-assemblies.md)  
  カスタム アセンブリ コードのデバッグ方法について説明します。  
   
 ## <a name="see-also"></a>参照  

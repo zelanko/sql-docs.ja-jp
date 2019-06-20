@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0544e7e7d552098806d4c3d93751631d03520139
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714799"
 ---
 # <a name="database-storage-location"></a>データベースの格納場所
@@ -34,7 +34,7 @@ ms.locfileid: "62714799"
  **DbStorageLocation** は、すべてのデータベースのデータ ファイルとメタデータ ファイルが存在するフォルダーを指定します。一方、 **StorageLocation** は、キューブのパーティションが存在するフォルダーを指定します。 **StorageLocation** は、 **DbStorageLocation**とは別に設定できます。 これは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA が予想した結果に基づいて決定します。また、どちらか一方のプロパティが何度も重複して使用されます。  
   
 ## <a name="dbstoragelocation-usage"></a>DbStorageLocation の使用方法  
- **DbStorageLocation** データベース プロパティは、 **Detach** Attach **データベース コマンド シーケンス、**/**Backup** Restore **データベース コマンド シーケンス、**/**Synchronize** データベース コマンドの **Create** データベース コマンドの一部として使用されます。 **DbStorageLocation** データベース プロパティの変更は、データベース オブジェクトの構造の変更と見なされます。 つまり、すべてのメタデータを再作成し、データを再処理する必要があります。  
+ **DbStorageLocation** データベース プロパティは、 **Detach** Attach **データベース コマンド シーケンス、** /**Backup** Restore **データベース コマンド シーケンス、** /**Synchronize** データベース コマンドの **Create** データベース コマンドの一部として使用されます。 **DbStorageLocation** データベース プロパティの変更は、データベース オブジェクトの構造の変更と見なされます。 つまり、すべてのメタデータを再作成し、データを再処理する必要があります。  
   
 > [!IMPORTANT]  
 >  **Alter** コマンドを使用して、データベースの格納場所を変更しないでください。 代わりに、 **Detach**/**Attach** データベース コマンド シーケンスを使用することをお勧めします (「 [Analysis Services データベースの移動](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)」および「 [Analysis Services データベースのインポートとデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)」を参照してください)。  

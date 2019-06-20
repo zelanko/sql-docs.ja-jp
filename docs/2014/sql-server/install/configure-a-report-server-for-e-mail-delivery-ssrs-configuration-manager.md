@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 196bfdc78ea29b1d334660a732f087a50ae9c2ee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096120"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)
@@ -108,7 +108,7 @@ ms.locfileid: "66096120"
 
   
 ##  <a name="bkmk_setting_TO_field"></a> 設定の構成オプションに。フィールドを設定するための構成オプション  
- **"個別のサブスクリプションを管理"** タスクで与えられる権限に従って作成されたユーザー定義サブスクリプションには、ドメイン ユーザー アカウントに基づく定義済みのユーザー名が含まれます。 ユーザーがサブスクリプションを作成すると、**[宛先]** フィールドの受信者名は、サブスクリプションの作成者のドメイン ユーザー アカウントを使用して自動的に指定されます。  
+ **"個別のサブスクリプションを管理"** タスクで与えられる権限に従って作成されたユーザー定義サブスクリプションには、ドメイン ユーザー アカウントに基づく定義済みのユーザー名が含まれます。 ユーザーがサブスクリプションを作成すると、 **[宛先]** フィールドの受信者名は、サブスクリプションの作成者のドメイン ユーザー アカウントを使用して自動的に指定されます。  
   
  使用している SMTP サーバーまたはフォワーダーで、ドメイン ユーザー アカウントとは別の電子メール アカウントを利用している場合、SMTP サーバーからそのユーザーにレポートの配信が試行されたときに配信が失敗します。  
   

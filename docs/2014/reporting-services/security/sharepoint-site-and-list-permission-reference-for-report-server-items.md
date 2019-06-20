@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e97899fb58049b04860a564b3769feb13217fc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101525"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>レポート サーバー アイテムの SharePoint サイトおよびリスト権限のリファレンス
@@ -72,7 +72,7 @@ ms.locfileid: "66101525"
 |リモート インターフェイスの使用|SOAP、Web DAV、または SharePoint デザイナー インターフェイスを使用して Web サイトにアクセスします。|x|X|x|レポート サーバーに対する URL プロキシ エンドポイントを呼び出すために使用します。|  
 |[ファイル]|Web サイト、リスト、またはフォルダーを開き、これらのコンテナー内のアイテムにアクセスします。|x|X|x|スケジュールおよびアイテム プロパティを読み取ります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Reporting Services と SharePoint グループの役割とタスクの比較とアクセス許可](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

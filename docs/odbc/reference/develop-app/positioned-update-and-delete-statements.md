@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312491"
 ---
 # <a name="positioned-update-and-delete-statements"></a>位置指定の UPDATE および DELETE ステートメント
@@ -34,7 +34,7 @@ ms.locfileid: "63312491"
   
  [**WHERE** *search-condition*]  
   
- **FOR UPDATE OF** [*列名*[**、** *列名*]...]  
+ **FOR UPDATE OF** [*列名*[ **、** *列名*]...]  
   
  次に、アプリケーションは、更新または削除する行にカーソルを位置付けます。 呼び出してそのこの**SQLFetchScroll**必要な行を格納していると、呼び出しの行セットを取得する**SQLSetPos**をその行に行セットのカーソルを配置します。 その後、アプリケーションは、結果セットで使用されているステートメントよりも別のステートメントで、位置指定の update または delete ステートメントを実行します。 これらのステートメントの構文です。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63312491"
   
  **設定** *列識別子*  **=** {*式* &#124; です。**NULL**}  
   
- [**、** *列識別子* **=** {*式*&#124; です。**NULL**}].  
+ [ **、** *列識別子* **=** {*式*&#124; です。**NULL**}].  
   
  **WHERE CURRENT OF** *カーソル名*  
   

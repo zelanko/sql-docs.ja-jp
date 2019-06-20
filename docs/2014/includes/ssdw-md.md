@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 792e3c3a5414d9c2ab31081cac963756a3e66276
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820175"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232241"
 ---
 SQL Server PDW

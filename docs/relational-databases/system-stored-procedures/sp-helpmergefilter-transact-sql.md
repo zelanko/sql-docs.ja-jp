@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502803"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
-`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値は**%**、すべてのアーティクルの名前が返されます。  
+`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値は **%** 、すべてのアーティクルの名前が返されます。  
   
-`[ @filtername = ] 'filtername'` に関する情報を返すフィルターの名前です。 *filtername*は**sysname**、既定値は**%**、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報が返されます。  
+`[ @filtername = ] 'filtername'` に関する情報を返すフィルターの名前です。 *filtername*は**sysname**、既定値は **%** 、アーティクルまたはパブリケーションで定義されているすべてのフィルターに関する情報が返されます。  
   
 ## <a name="result-sets"></a>結果セット  
   

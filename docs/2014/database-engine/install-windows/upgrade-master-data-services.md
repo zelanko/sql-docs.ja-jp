@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774660"
 ---
 # <a name="upgrade-master-data-services"></a>マスター データ サービスのアップグレード
@@ -105,7 +105,7 @@ ms.locfileid: "62774660"
   
  この作業を実行するには、次の手順を実行します。  
   
-1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみ**:開いている**コントロール パネルの [** > **プログラムと機能**と Microsoft のアンインストール[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]します。  
+1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**:**[コントロール パネル]** > **[プログラムと機能]** の順に開き、Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]をアンインストールします。  
   
 2.  データベース エンジンを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードします。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62774660"
   
     4.  ウィザードを完了します。  
   
-3.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]のみ**:アップグレードが完了したら、追加、 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 機能します。  
+3.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] の場合のみ**:アップグレードが完了したら、追加、 ** [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] **機能します。  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを開きます。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62774660"
   
     4.  **インストールの種類**、ウィザードのページ、**既存のインスタンスに機能を追加**オプション、および MDS データベースがインストールされているインスタンスを選択します。  
   
-    5.  **機能の選択**] ページ [**共有機能**を選択します **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** します。  
+    5.  **機能の選択**] ページ [**共有機能**を選択します** [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** します。  
   
     6.  ウィザードを完了します。  
   
