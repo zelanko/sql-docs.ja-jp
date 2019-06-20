@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010717"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
@@ -161,7 +161,7 @@ ms.locfileid: "66010717"
   
  XPath クエリが指定されている場合`Customer/Order/OrderDetail`、一致する各ノードから **\<顧客 >** に移動する、クエリ、 **\<順序 >** 要素。 一致する各ノードに対して **\<順序 >** 、クエリには、ノードが追加されます **\<OrderDetail >** 結果にします。 のみ **\<OrderDetail >** が結果セットに返されます。  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して  parent 軸を指定する  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して parent 軸を指定する  
  次のクエリでは、すべてを取得、 **\<順序 >** 要素の親が **\<顧客 >** を持つ要素を**CustomerID**属性1 の値。 クエリを使用して、`child`の親を検索する述語内の軸、 **\<順序 >** 要素。  
   
 ```  

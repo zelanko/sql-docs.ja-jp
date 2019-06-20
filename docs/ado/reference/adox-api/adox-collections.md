@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5f83ebd3e5db8cbed888a9b30a3ab2e44187b608
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66708438"
 ---
 # <a name="adox-collections"></a>ADOX のコレクション
@@ -34,7 +34,7 @@ ms.locfileid: "66708438"
 |[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)|すべてを含む保存**ユーザー**カタログまたはグループのオブジェクト。|  
 |[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)|すべてを含む**ビュー**カタログのオブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)   

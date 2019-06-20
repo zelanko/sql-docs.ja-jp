@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065306"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA クエリ エディター (Analysis Services - 多次元データ)
@@ -56,11 +56,11 @@ ms.locfileid: "66065306"
   
 |項目|定義|  
 |----------|----------------|  
-|**クエリ エディター ウィンドウ**|XMLA クエリ エディターで実行される XMLA ステートメントおよびスクリプトを入力します。<br /><br /> クエリ エディターのコンテキスト メニューには、次のオプションがあります。<br /><br /> **[切り取り]**:現在選択している部分をクリップボードにコピーし、その部分をクエリ エディター ウィンドウから削除します。<br />**[コピー]**:現在選択している部分をクリップボードにコピーします。<br />**[貼り付け]**:クリップボードの内容を現在の選択位置に貼り付けます。<br />**[接続]**:**インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。<br />**[接続解除]**:現在のクエリ エディターと [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの接続を解除します。<br />**[すべてのクエリの切断]**:開いているクエリ エディターの接続をすべて解除します。<br />**[接続の変更]**:別の **インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。<br />**[オブジェクト エクスプローラーでサーバーを開く]**:[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクト エクスプローラー **で、現在のクエリ エディターの接続先の**インスタンスを開きます。<br />**[実行]**:選択されているコードを実行します。コードが選択されていない場合は、現在のクエリ エディター内のコード全体を実行します。<br />**[プロパティ]** ウィンドウ:現在のクエリ ウィンドウの **に** [プロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ウィンドウを表示します。<br />**[クエリ オプション]**:**[クエリ オプション]** ダイアログ ボックスを表示します。|  
+|**クエリ エディター ウィンドウ**|XMLA クエリ エディターで実行される XMLA ステートメントおよびスクリプトを入力します。<br /><br /> クエリ エディターのコンテキスト メニューには、次のオプションがあります。<br /><br /> **[切り取り]** :現在選択している部分をクリップボードにコピーし、その部分をクエリ エディター ウィンドウから削除します。<br />**[コピー]** :現在選択している部分をクリップボードにコピーします。<br />**[貼り付け]** :クリップボードの内容を現在の選択位置に貼り付けます。<br />**[接続]** :**インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。<br />**[接続解除]** :現在のクエリ エディターと [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスの接続を解除します。<br />**[すべてのクエリの切断]** :開いているクエリ エディターの接続をすべて解除します。<br />**[接続の変更]** :別の **インスタンスへの接続を確立するための** [サーバーへの接続] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ダイアログ ボックスを開きます。<br />**[オブジェクト エクスプローラーでサーバーを開く]** :[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクト エクスプローラー **で、現在のクエリ エディターの接続先の**インスタンスを開きます。<br />**[実行]** :選択されているコードを実行します。コードが選択されていない場合は、現在のクエリ エディター内のコード全体を実行します。<br />**[プロパティ]** ウィンドウ:現在のクエリ ウィンドウの **に** [プロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ウィンドウを表示します。<br />**[クエリ オプション]** : **[クエリ オプション]** ダイアログ ボックスを表示します。|  
 |**結果ウィンドウ**|XMLA ステートメントまたはスクリプトの結果がテキスト形式で表示されます。|  
 |**[メッセージ] ウィンドウ**|XMLA ステートメントまたはスクリプトの実行に関する情報が表示されます。 たとえば、実行中に発生したエラーや、実行後に取得されたセルの数などが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
  [DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](dmx-query-editor-analysis-services-data-mining.md)   
  [クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   

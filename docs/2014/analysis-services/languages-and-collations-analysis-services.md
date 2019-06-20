@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079379"
 ---
 # <a name="languages-and-collations-analysis-services"></a>言語および照合順序 (Analysis Services)
@@ -142,7 +142,7 @@ ms.locfileid: "66079379"
   
  SQL Server Management Studio または AMO PowerShell を使用して、サーバー レベルの既定の言語または照合順序を変更することができます。 または、変更、 **\<言語 >** と **\<CollationName >** 言語の LCID を指定する、msmdsrv.ini ファイルで設定します。  
   
-1.  Management Studio で、サーバー名を右クリックして、 **[プロパティ]** | **[言語/照合順序]** と選択します。  
+1.  Management Studio で、サーバー名を右クリックして、 **[プロパティ]**  |  **[言語/照合順序]** と選択します。  
   
 2.  並べ替えオプションを選択します。 **[バイナリ]** または **[バイナリ 2]** のいずれかを選択するには、まず **[アクセントの区別]** のチェック ボックスをオフにします。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66079379"
   
  XMLA を使用して、既存のデータベースを変更するには、データベースとそれをビルドするために使用するソース ファイルの間の相違点がないことを確認します。 たとえば、XMLA を使用して、概念実証のテストで言語や照合順序をすばやく変更した後、ソース ファイルの変更によるフォローアップをし (「 [キューブの言語または照合順序を変更します。](#bkmk_cube)」を参照)、既に存在する運用手順を使用してソリューションを再展開するということが考えられます。  
   
-1.  Management Studio で、該当データベースを右クリックし、 **[データベースをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]** と選択します。  
+1.  Management Studio で、該当データベースを右クリックし、 **[データベースをスクリプト化]**  |  **[ALTER]**  |  **[新しいクエリ エディター ウィンドウ]** と選択します。  
   
 2.  既存の言語または照合順序を検索して別の値に置き換えます。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079379"
 ##  <a name="bkmk_gb18030"></a> Analysis Services での GB18030 のサポート  
  GB18030 は中華人民共和国が単独で中国語の文字のエンコードに使用している標準規格です。 GB18030 文字の長さは 1 バイト、2 バイト、4 バイトのいずれかです。 Analysis Services では、外部ソースからデータを処理する場合、データ変換はありません。 データは Unicode として格納されます。 クエリ時に、クライアント OS の設定に基づいてテキスト データがクエリの結果として返されると、Analysis Services クライアント ライブラリ (具体的には MSOLAP.dll OLE DB プロバイダー) を介して GB18030 変換が実行されます。 データベース エンジンは、GB18030 もサポートしています。 詳細については、「 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services 多次元のグローバリゼーションのシナリオ](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  

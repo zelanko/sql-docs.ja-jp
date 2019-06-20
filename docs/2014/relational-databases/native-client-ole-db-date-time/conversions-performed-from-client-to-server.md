@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63237966"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
@@ -66,7 +66,7 @@ ms.locfileid: "63237966"
 |15|前の変換セマンティクス[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]の`datetime`が保持されます。 秒は、1/300 秒単位に丸められます。|  
 |16|SSVARIANT クライアントの構造体に埋め込まれた (特定の型の) 値の変換動作は、SSVARIANT クライアントの構造体に埋め込まれていない場合の同一の値および型の動作と同じです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バインドと変換 &#40;OLE DB&#41;](conversions-ole-db.md)  
   
   

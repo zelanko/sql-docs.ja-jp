@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982877"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure のサーバーの完全修飾アドレス。  
   
--   値を指定する場合**@database_name**、指定されたデータベースで Stretch 対応はありませんが、その値を指定する必要がある **@server_address**します。  
+-   値を指定する場合 **@database_name** 、指定されたデータベースで Stretch 対応はありませんが、その値を指定する必要がある **@server_address** します。  
   
--   値を指定する場合 **@database_name**の値を指定する必要はありませんし、指定されたデータベースが Stretch 有効になっている **@server_address**します。 値を指定する場合**@server_address**Stretch 対応データベースに関連付けられている既存の Azure サーバーを既に使用や、ストアド プロシージャでは無視されます。  
+-   値を指定する場合 **@database_name** の値を指定する必要はありませんし、指定されたデータベースが Stretch 有効になっている **@server_address** します。 値を指定する場合 **@server_address** Stretch 対応データベースに関連付けられている既存の Azure サーバーを既に使用や、ストアド プロシージャでは無視されます。  
   
  @azure_username = N'*azure_username*  
  リモート Azure サーバーのユーザー名。  

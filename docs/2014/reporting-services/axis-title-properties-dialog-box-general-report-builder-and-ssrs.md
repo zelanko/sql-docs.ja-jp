@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109972"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([軸のタイトルのプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66109972"
   
 -   **[遠く]** 2 つの軸の交点から離れた場所に軸のタイトルを表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

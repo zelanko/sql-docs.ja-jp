@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484737"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>タスク 2:照合ポリシーをテストおよびパブリッシュする
@@ -24,7 +24,7 @@ ms.locfileid: "65484737"
   
 2.  リスト ボックスのすべての一致レコードと照合スコアを確認します。 持つレコードを**緑**関連付けられているアイコンはその前にあるピボット レコードと重複しています。 いくつかの例を次に示します。  
   
-    1.  レコードを**レコード ID:1000005**のレコードを一致**レコード Id:1000004**で**スコア。100%** 、両方のレコードの同じ値があるため、 **SupplierID (前提条件)**、 **Supplier Name**、および**ContactEmailAddress 列**します。 DQS はクラスターのピボット レコードとしてレコードをランダムに選択します。  
+    1.  レコードを**レコード ID:1000005**のレコードを一致**レコード Id:1000004**で**スコア。100%** 、両方のレコードの同じ値があるため、 **SupplierID (前提条件)** 、 **Supplier Name**、および**ContactEmailAddress 列**します。 DQS はクラスターのピボット レコードとしてレコードをランダムに選択します。  
   
     2.  レコード**1000023**一致するレコードの**1000022**と照合スコア。93% であるため、2 つのレコードが同じ値を持つこと**SupplierID (前提条件)** と**Supplier Name** 、列の値が異なる、 **ContactEmailAddress**列です。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "65484737"
 7.  SQL Server Data Quality Services ダイアログ ボックスで、**発行** をクリック**OK**メッセージ ボックス。 定義した照合ポリシーを公開するようになりました、 **Suppliers**ナレッジ ベース。 このナレッジ ベースを使用して、入力ファイルに対して照合プロセスを実行し、重複を特定および削除できます。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 3:作成と一致するデータ品質プロジェクトを実行](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [タスク 3: 作成と一致するデータ品質プロジェクトを実行](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

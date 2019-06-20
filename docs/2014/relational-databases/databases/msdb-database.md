@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871713"
 ---
 # <a name="msdb-database"></a>msdb データベース
@@ -52,7 +52,7 @@ ms.locfileid: "62871713"
 |ANSI_NULLS|OFF|はい|  
 |ANSI_PADDING|OFF|はい|  
 |ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
+|ARITHABORT|OFF|[はい]|  
 |AUTO_CLOSE|OFF|はい|  
 |AUTO_CREATE_STATISTICS|ON|はい|  
 |AUTO_SHRINK|OFF|はい|  
@@ -62,7 +62,7 @@ ms.locfileid: "62871713"
 |CONCAT_NULL_YIELDS_NULL|OFF|はい|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
 |CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> [はい]|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|ON|はい|  
 |ENCRYPTION|OFF|いいえ|  
@@ -72,7 +72,7 @@ ms.locfileid: "62871713"
 |QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
 |RECOVERY|SIMPLE|はい|  
-|RECURSIVE_TRIGGERS|OFF|はい|  
+|RECURSIVE_TRIGGERS|OFF|[はい]|  
 |Service Broker のオプション|ENABLE_BROKER|はい|  
 |TRUSTWORTHY|ON|はい|  
   

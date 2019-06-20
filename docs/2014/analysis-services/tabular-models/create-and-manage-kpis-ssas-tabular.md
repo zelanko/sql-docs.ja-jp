@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067506"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>KPI の作成および管理 (SSAS テーブル)
@@ -82,7 +82,7 @@ ms.locfileid: "66067506"
 |[説明]|Alt + D|  
 |傾向|Alt + T|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [KPI &#40;SSAS テーブル&#41;](kpis-ssas-tabular.md)   
  [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)   
  [メジャーを作成および管理する &#40;SSAS テーブル&#41;](create-and-manage-measures-ssas-tabular.md)  

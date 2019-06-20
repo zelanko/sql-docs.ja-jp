@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d3ed68462736058ae386d8b5b6ad874f6fde8c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813981"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>可用性グループの削除 (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "62813981"
   
 -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターにクォーラムがない場合は、可用性グループを削除しないでください。 クラスターのクォーラムがないときに可用性グループを削除すると、クラスターに格納されているメタデータ可用性グループは削除されません。 クラスターのクォーラムが再取得された後、WSFC クラスターから削除するために、可用性グループをもう一度削除する必要があります。  
   
--   セカンダリ レプリカについては、DROP AVAILABILITY GROUP は緊急の目的だけに使用してください。 理由は、可用性グループを削除すると可用性グループがオフラインになるためです。 セカンダリ レプリカから可用性グループを削除した場合、プライマリ レプリカは、OFFLINE 状態がクォーラム損失、強制フェールオーバー、または DROP AVAILABILITY GROUP コマンドのどの原因で発生したのかを特定できません。 スプリット ブレイン状況の発生を防ぐために、プライマリ レプリカは RESTORING 状態に遷移します。 詳細については、「[How It Works:DROP AVAILABILITY GROUP の動作](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)(CSS SQL Server エンジニアのブログ)。  
+-   セカンダリ レプリカについては、DROP AVAILABILITY GROUP は緊急の目的だけに使用してください。 理由は、可用性グループを削除すると可用性グループがオフラインになるためです。 セカンダリ レプリカから可用性グループを削除した場合、プライマリ レプリカは、OFFLINE 状態がクォーラム損失、強制フェールオーバー、または DROP AVAILABILITY GROUP コマンドのどの原因で発生したのかを特定できません。 スプリット ブレイン状況の発生を防ぐために、プライマリ レプリカは RESTORING 状態に遷移します。 詳細については、「[How It Works:DROP AVAILABILITY GROUP Behaviors](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)」 (動作方法: DROP AVAILABILITY GROUP の動作) (CSS SQL Server エンジニアのブログ) を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62813981"
   
 3.  削除する可用性グループが複数であるか単独であるかによって、次のように実行する手順が異なります。  
   
-    -   (プライマリ レプリカが接続先のサーバー インスタンスにある) 複数の可用性グループを削除するには、**[オブジェクト エクスプローラーの詳細]** ペインを使用して、削除するすべての可用性グループを表示し、選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md) を参照してください。  
+    -   (プライマリ レプリカが接続先のサーバー インスタンスにある) 複数の可用性グループを削除するには、 **[オブジェクト エクスプローラーの詳細]** ペインを使用して、削除するすべての可用性グループを表示し、選択します。 詳細については、「[[オブジェクト エクスプローラーの詳細] を使用した可用性グループの監視 &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md) を参照してください。  
   
     -   単独の可用性グループを削除するには、 **[オブジェクト エクスプローラー]** ペインまたは **[オブジェクト エクスプローラーの詳細]** ペインで目的の可用性グループを選択します。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62813981"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [動作方法:DROP AVAILABILITY GROUP の動作](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx)(CSS SQL Server エンジニアのブログ)  
+-   [動作方法:DROP AVAILABILITY GROUP の動作](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (CSS SQL Server エンジニアのブログ)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

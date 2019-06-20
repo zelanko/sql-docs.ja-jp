@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702001"
 ---
 # <a name="formal-shape-grammar"></a>Shape の正式文法
@@ -68,7 +68,7 @@ ms.locfileid: "66702001"
 |\<string>|unicode char [unicode 文字...]|  
 |\<expression>|アプリケーションの式オペランドが同じ行の場合は、他の非計算列用の Visual Basic の場合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層レコード セット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [データ シェイプの概要](../../../ado/guide/data/data-shaping-overview.md)   
  [データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   

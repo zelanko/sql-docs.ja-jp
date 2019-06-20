@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081916"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 に含まれている非推奨の Analysis Services 機能
@@ -47,7 +47,7 @@ ms.locfileid: "66081916"
 |多次元モデル|リンク ディメンション|[なし] : 別のモデル内にあるディメンションにリンクする代わりに、追加のモデルにディメンションをコピーすることを検討してください。|  
 |MDX (MDX)|Non_Empty_Behavior プロパティ|[なし] : 計算されるメンバーを作成するときにこのプロパティを設定すると、無効な結果を返す可能性が大きくなります。 OLAP エンジンへの最近の最適化により、スパース データセットに対する操作が改善され、このプロパティの関連性は低くなりました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services の旧バージョンとの互換性](analysis-services-backward-compatibility.md)   
  [SQL Server 2014 で提供が中止された Analysis Services の機能](discontinued-analysis-services-functionality-in-sql-server-2014.md)  
   

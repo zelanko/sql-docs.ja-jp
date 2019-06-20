@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 55081a05169ac91da2a54e27ea5869a19bd5b329
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66706597"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes コレクションのプロパティ、メソッド、およびイベント
@@ -36,5 +36,5 @@ ms.locfileid: "66706597"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

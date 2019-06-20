@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 755f2955e7bcd12ac022b29e6e4d3c7cf3aa80be
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061844"
 ---
 # <a name="add-new-source-dialog-box"></a>[新しいソースの追加] ダイアログ ボックス
@@ -25,7 +25,7 @@ ms.locfileid: "66061844"
 |オプション|説明|  
 |------------|-----------------|  
 |型|接続先のソースの種類を選択します。|  
-|接続マネージャー|既存の接続マネージャーを選択するか、**[\<新規作成>]** をクリックして新しい接続マネージャーを作成します。|  
+|接続マネージャー|既存の接続マネージャーを選択するか、 **[\<新規作成>]** をクリックして新しい接続マネージャーを作成します。|  
 |インストールされているもののみを表示する|インストールされているソースのみを表示するかどうかを指定します。|  
 |[OK]|変更を保存し、後続のダイアログ ボックスを開いてその他のオプションを構成する場合にクリックします。|  
   

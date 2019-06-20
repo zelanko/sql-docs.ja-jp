@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077622"
 ---
 # <a name="model-tab-mining-model-viewers"></a>[モデル] タブ (マイニング モデル ビューアー)
@@ -24,7 +24,7 @@ ms.locfileid: "66077622"
   
  時系列分析に関する有用な情報を抽出するには、グラフの式、ARIMA 期間、および係数を含むタイム シリーズ モデルのこのビューを使用します。  
   
- **詳細情報。**[Microsoft タイム シリーズ アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [、Microsoft タイム シリーズ ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [Microsoft タイム シリーズ アルゴリズム](data-mining/microsoft-time-series-algorithm.md)  
+ **詳細情報。** [Microsoft タイム シリーズ アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [、Microsoft タイム シリーズ ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)、 [Microsoft タイム シリーズ アルゴリズム](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187059"
 ---
 # <a name="sqlps-utility"></a>sqlps ユーティリティ
@@ -69,9 +69,9 @@ ms.locfileid: "63187059"
  実行する PowerShell コマンドのブロックを指定します。ブロックは中かっこ {} で囲む必要があります。 *Script_block*場合にのみ指定することができます、`sqlps`ユーティリティは、いずれかから呼び出される**PowerShell**別または`sqlps`ユーティリティ セッション。 *argument_array* は、 *script_block*内の PowerShell コマンドの引数を含む PowerShell 変数の配列です。  
   
  *string* [ *command_parameters* ]  
- 実行する PowerShell コマンドを含む文字列を指定します。 形式を使用して **"& {*`command`*}"** します。 引用符は文字列と、呼び出し演算子 (&) エラーの原因を示す、`sqlps`ユーティリティをコマンドを実行します。  
+ 実行する PowerShell コマンドを含む文字列を指定します。 形式を使用して **"& { *`command`* }"** します。 引用符は文字列と、呼び出し演算子 (&) エラーの原因を示す、`sqlps`ユーティリティをコマンドを実行します。  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  `sqlps` ユーティリティ オプションの構文の概要を表示します。  
   
 ## <a name="remarks"></a>コメント  

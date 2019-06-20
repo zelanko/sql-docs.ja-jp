@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245439"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
@@ -68,6 +68,6 @@ ms.locfileid: "63245439"
   
 3.  **SQL Server エージェントのプロパティ -**_server_name_ダイアログ ボックスで、**エラー ログ**で、**全般**ページで、選択、 **実行トレース メッセージを含める**チェック ボックスをオンします。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
   

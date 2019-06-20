@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3c8eda71783e7211011bd6f67d9acf638c8946a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062521"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
@@ -61,7 +61,7 @@ ms.locfileid: "66062521"
 |表形式のインスタンスとデータベース|ローカルおよびリモート管理でサポートされます。<br /><br /> 詳細については、、2011 年 8 月のブログを参照してください。[表形式モデルを使用して PowerShell の管理](https://go.microsoft.com/fwlink/?linkID=227685)します。|  
 |PowerPivot for SharePoint のインスタンスとデータベース|制限付きでサポートされます。 HTTP 接続と SQLAS プロバイダーを使用して、インスタンスとデータベースの情報を表示できます。<br /><br /> ただし、コマンドレットの使用はサポートされていません。 インメモリ PowerPivot データベースのバックアップと復元に Analysis Services PowerShell は使用しないでください。また、ロールの追加や削除、データの処理、任意の XMLA スクリプトの実行にも使用しないでください。<br /><br /> PowerPivot for SharePoint には、構成のために個別に提供される組み込みの PowerShell サポートがあります。 詳細については、次を参照してください。 [PowerPivot for SharePoint 用 PowerShell リファレンス](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)します。|  
 |ローカル キューブへのネイティブ接続<br /><br /> "データ Source=c:\backup\test.cub"|サポートされていません。|  
-|SharePoint 内の BI セマンティック モデル (.bism) 接続ファイルへの HTTP 接続<br /><br /> "データ ソース =http://server/shared_docs/name.bism"|サポートされていません。|  
+|SharePoint 内の BI セマンティック モデル (.bism) 接続ファイルへの HTTP 接続<br /><br /> "データ ソース =http://server/shared_docs/name.bism "|サポートされていません。|  
 |PowerPivot データベースへの埋め込み接続<br /><br /> "データ ソース = $embedded$"|サポートされていません。|  
 |Analysis Services ストアド プロシージャ内のローカル サーバーのコンテキスト<br /><br /> "データ ソース = *"|サポートされていません。|  
   
@@ -203,7 +203,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  HTTP 接続は、このトピックの手順を使用して HTTP アクセス用にサーバーを構成した場合に便利です。[インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- サーバーの URL と仮定すると http://localhost/olap/msmdpump.dll接続は、次のようになります。  
+ サーバーの URL と仮定すると http://localhost/olap/msmdpump.dll 接続は、次のようになります。  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489270"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>タスク 4 (オプション):新しいデータ セットを結合、照合、およびパブリッシュする
@@ -26,7 +26,7 @@ ms.locfileid: "65489270"
   
 3.  をクリックして**Connect**リボンで、**接続と読み込み**グループへの接続に、 **MDS サーバー**。 この接続は、このレッスンの前の手順で構成しました。  
   
-     ![Excel - エクスプ ローラー ボタンを表示するマスター データ ボタンで](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - [マスター データ] ボタン エクスプ ローラー ボタンを表示します。")  
+     ![Excel - エクスプ ローラー ボタンを表示するマスター データ ボタンで](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - [マスター データ] ボタン エクスプ ローラー] ボタンを表示します。")  
   
 4.  表示する必要があります、**マスター データ エクスプ ローラー**右側のウィンドウ。 マスター データ エクスプ ローラーが表示されない場合はクリックして**エクスプ ローラーの**リボンのボタンをクリックします。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "65489270"
   
      ![Excel - 照合結果](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - 照合結果")  
   
-27. 選択、**重複する行 (オレンジ)**、右クリックしをクリックします**削除**行を削除します。  
+27. 選択、**重複する行 (オレンジ)** 、右クリックしをクリックします**削除**行を削除します。  
   
 28. 削除、 **CLUSTER_ID**列ため、もはや必要はありません。  
   
@@ -111,6 +111,6 @@ ms.locfileid: "65489270"
 34. これで、閉じる**Book1 - Microsoft Excel**ファイルを保存せずにウィンドウ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 5:Excel からドメイン ベースの属性を作成します。](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [タスク 5: Excel からドメイン ベースの属性を作成します。](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

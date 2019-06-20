@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 619d35c084884aa72de63ff221d5a6f61ea86196
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108487"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2:レポート データ ソースのプロパティの変更
@@ -91,7 +91,7 @@ ms.locfileid: "66108487"
   
 ##  <a name="bkmk_add_reportparameter"></a> レポート パラメーターを追加し、レポートを再パブリッシュ  
   
-1.   **レポート データ** ペインで、 **[新規作成]** をクリックし、 **[パラメーター]** をクリックします。  
+1.  **レポート データ** ペインで、 **[新規作成]** をクリックし、 **[パラメーター]** をクリックします。  
   
 2.  **[名前]** に「 `OrderNumber`」と入力します。  
   

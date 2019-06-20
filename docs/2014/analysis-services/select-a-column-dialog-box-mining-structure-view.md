@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069914"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>[列の選択] ダイアログ ボックス ([マイニング構造] ビュー)
@@ -45,7 +45,7 @@ ms.locfileid: "66069914"
   
  このオプションは、OLAP マイニング モデルにのみ使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造 ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [マイニング構造への列の追加](data-mining/add-columns-to-a-mining-structure.md)  
   

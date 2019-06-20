@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108496"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2:親レポートのデータ接続とデータ テーブルを定義する
@@ -32,7 +32,7 @@ ms.locfileid: "66108496"
   
 4.  **データ接続の選択**] ページで [**新しい接続**します。  
   
-5.  Visual Studio で初めてデータ ソースを作成する場合は、**[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
+5.  Visual Studio で初めてデータ ソースを作成する場合は、 **[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
   
 6.  **[接続の追加]** ダイアログ ボックスで、次の手順を実行します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66108496"
   
 9. **コマンドの種類を選択**] ページで、[ **SQL ステートメントを使用**、順にクリックします**次**します。  
   
-10. **SQL ステートメントを入力します**ページで、データを取得する次の TRANSACT-SQL クエリを入力、 **AdventureWorks2008**データベースをクリックして **[次へ]**。  
+10. **SQL ステートメントを入力します**ページで、データを取得する次の TRANSACT-SQL クエリを入力、 **AdventureWorks2008**データベースをクリックして **[次へ]** 。  
   
     ```  
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  

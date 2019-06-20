@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538119"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 関数
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
 -   場合 *\*DiagInfoPtr* 、固定長データ型を含む*BufferLength*に応じて SQL_IS_INTEGER、SQL_IS_UINTEGER、SQL_IS_SMALLINT、または SQL_IS_USMALLINT は、します。  
   
  *StringLengthPtr*  
- [出力]\(Null 終端文字のために必要なバイト数を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *DiagInfoPtr*、文字データ。 返される使用可能なバイト数がより大きいかに等しい場合*BufferLength*、内のテキスト\* *DiagInfoPtr*に切り捨てられます*BufferLength*マイナスnull 終了文字の長さ。  
+ [出力](Null 終端文字のために必要なバイト数を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *DiagInfoPtr*、文字データ。 返される使用可能なバイト数がより大きいかに等しい場合*BufferLength*、内のテキスト\* *DiagInfoPtr*に切り捨てられます*BufferLength*マイナスnull 終了文字の長さ。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_NO_DATA します。  
@@ -161,7 +161,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="header-fields"></a>ヘッダー フィールド  
  次の表に示されているヘッダー フィールドに含まれる、 *DiagIdentifier*引数。  
   
-|DiagIdentifier|の戻り値の型 : |戻り値|  
+|DiagIdentifier|の戻り値の型 :|戻り値|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|このフィールドには、カーソル内の行の数が含まれています。 そのセマンティクスが異なります、 **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2、SQL_KEYSET_CURSOR_ATTRIBUTES2、および SQL_STATIC_CURSOR_ATTRIBUTES2、いることを示す情報の種類行カウントは各カーソルの種類 (SQL_CA2_CRC_EXACT と SQL_CA2_CRC_APPROXIMATE ビット) で使用できます。<br /><br /> ステートメント ハンドルののみとにした場合のみ、このフィールドの内容が定義された**SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**が呼び出されました。 呼び出す**SQLGetDiagField**で、 *DiagIdentifier*ハンドルには、ステートメント以外で SQL_DIAG_CURSOR_ROW_COUNT の SQL_ERROR が返されます。|  
 |SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR *|これは、基になる関数が実行される SQL ステートメントを記述する文字列です。 (特定の値をこのセクションで後で「動的関数のフィールドの値」を参照してください)。ステートメント ハンドルとへの呼び出し後にのみ、このフィールドの内容が定義された**SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**します。 呼び出す**SQLGetDiagField**で、 *DiagIdentifier*ハンドルには、ステートメント以外で SQL_DIAG_DYNAMIC_FUNCTION の SQL_ERROR が返されます。 呼び出す前にこのフィールドの値は未定義**SQLExecute**または**SQLExecDirect**します。|  
@@ -173,7 +173,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="record-fields"></a>レコードのフィールド  
  次の表に示されているレコード フィールドに含まれる、 *DiagIdentifier*引数。  
   
-|DiagIdentifier|の戻り値の型 : |戻り値|  
+|DiagIdentifier|の戻り値の型 :|戻り値|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CLASS_ORIGIN|SQLCHAR *|このレコードの SQLSTATE 値のクラス部分を定義するドキュメントを示す文字列。 その値が、Open Group と ISO コールレベル インターフェイスによって定義されたすべての SQLSTATEs"ISO 9075"。 (これらすべてが SQLSTATE クラスは、"IM") に固有の ODBC SQLSTATEs、その値は"ODBC 3.0" です。|  
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|SQL_DIAG_ROW_NUMBER フィールドが、行セットまたは一連のパラメーターの有効な行番号の場合は、このフィールドには、結果セット内の列番号またはパラメーターのセット内のパラメーター数を表す値が含まれています。 結果セット列の番号は常に 1 から開始この状態レコードは、ブックマーク列に関係している場合、フィールドは 0 にすることができます。 パラメーター番号は、1 から始まります。 値 SQL_NO_COLUMN_NUMBER 状態レコードは、列の数またはパラメーターの番号に関連付けられていない場合があります。 ドライバーが、列の数またはこのレコードが関連付けられているパラメーターの数を判別できない場合、このフィールドは SQL_COLUMN_NUMBER_UNKNOWN 値を持ちます。<br /><br /> このフィールドの内容は、ステートメント ハンドルに対してのみ定義されます。|  
