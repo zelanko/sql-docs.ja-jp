@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 17196f4e9a6deaadca09e77e94e2cf393f4af237
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922898"
 ---
 # <a name="escape-sql-server-identifiers"></a>SQL Server 識別子のエスケープ
@@ -36,7 +36,7 @@ cd SQLSERVER:\SQL\MyComputer\MyInstance\MyDatabase\MySchema\`#MyTempTable
 Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

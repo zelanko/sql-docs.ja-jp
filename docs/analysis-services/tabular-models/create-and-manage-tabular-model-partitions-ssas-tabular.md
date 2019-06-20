@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a23d2753f6fe1d94fcccab648766c3471581906
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472294"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263386"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>テーブル モデル パーティション作成し、管理
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "62472294"
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 モデル作成時にあるモデルのために定義されたパーティションが、配置済みモデルで複製されます。 いったん配置されると、 **の** [パーティション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ダイアログ ボックスまたはスクリプトを使用して、それらのパーティションを管理できます。 このトピックで説明するタスクで、配置済みモデル用のパーティションを作成、管理する方法を示します。  
   
   > [!NOTE]  
->  1400 互換性レベルで作成された表形式モデルでパーティションを定義するには、M のクエリ ステートメントを使用します。 詳細についてを参照してください。 [M リファレンス](https://msdn.microsoft.com/library/mt211003.aspx)します。 
+>  1400 互換性レベルで作成された表形式モデルでパーティションを定義するには、M のクエリ ステートメントを使用します。 詳細についてを参照してください。 [M リファレンス](/powerquery-m/power-query-m-reference)します。 
 >
   
 ## <a name="tasks"></a>処理手順  

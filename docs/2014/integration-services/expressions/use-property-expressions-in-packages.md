@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768855"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
@@ -69,7 +69,7 @@ ms.locfileid: "62768855"
   
  ![プロパティ式のユーザー インターフェイス](../media/ssis-propertyexpressionui.gif "プロパティ式のユーザー インターフェイス")  
   
- **[プロパティ]** ウィンドウおよび **[式]** ページでは、**[式]** コレクション レベルの参照ボタン **[...]** をクリックして **[プロパティ式エディター]** ダイアログ ボックスを開きます。 プロパティ式エディターでは、プロパティを式にマップし、プロパティ式を入力できます。 グラフィカルな式ツールを使用して式を作成してから検証する場合は、式レベルの参照ボタン **[...]** をクリックして **[式ビルダー]** ダイアログ ボックスを開き、式を作成または変更します。その後、必要に応じて式を検証します。  
+ **[プロパティ]** ウィンドウおよび **[式]** ページでは、 **[式]** コレクション レベルの参照ボタン **[...]** をクリックして **[プロパティ式エディター]** ダイアログ ボックスを開きます。 プロパティ式エディターでは、プロパティを式にマップし、プロパティ式を入力できます。 グラフィカルな式ツールを使用して式を作成してから検証する場合は、式レベルの参照ボタン **[...]** をクリックして **[式ビルダー]** ダイアログ ボックスを開き、式を作成または変更します。その後、必要に応じて式を検証します。  
   
  **[式ビルダー]** ダイアログ ボックスは、 **[プロパティ式エディター]** ダイアログ ボックスから開くこともできます。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62768855"
   
 -   social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パッケージで変数を使用する](../use-variables-in-packages.md)  
   
   

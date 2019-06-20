@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873013"
 ---
 # <a name="row-compression-implementation"></a>「行の圧縮の実装」
@@ -44,7 +44,7 @@ ms.locfileid: "62873013"
 |`int`|はい|必要なバイトのみを使用します。 たとえば、値を 1 バイトに格納できる場合、ストレージでは 1 バイトしか消費されません。|  
 |`bigint`|はい|必要なバイトのみを使用します。 たとえば、値を 1 バイトに格納できる場合、ストレージでは 1 バイトしか消費されません。|  
 |`decimal`|はい|このストレージは、vardecimal ストレージ形式とまったく同じです。|  
-|`numeric`|はい|このストレージは、vardecimal ストレージ形式とまったく同じです。|  
+|`numeric`|[はい]|このストレージは、vardecimal ストレージ形式とまったく同じです。|  
 |`bit`|はい|メタデータのオーバーヘッドにより、これは 4 ビットになります。|  
 |`smallmoney`|はい|4 バイト整数を使用して、整数データ表現を使用します。 通貨値には 10,000 が乗算され、その結果の整数値は、小数点以下桁数をすべて削除して格納されます。 この型では、整数型と同様にストレージを最適化します。|  
 |`money`|はい|8 バイト整数を使用して、整数データ表現を使用します。 通貨値には 10,000 が乗算され、その結果の整数値は、小数点以下桁数をすべて削除して格納されます。 この型の範囲は、`smallmoney` より大きくなります。 この型では、整数型と同様にストレージを最適化します。|  
@@ -74,7 +74,7 @@ ms.locfileid: "62873013"
 |ユーザー定義データ型|いいえ|これは、内部では `varbinary` として表されます。|  
 |FILESTREAM|いいえ|これは、内部では `varbinary` として表されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データの圧縮](data-compression.md)   
  [ページの圧縮の実装](page-compression-implementation.md)  
   

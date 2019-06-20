@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a36bd28efd128a76246297995d712b417d7f230d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66782104"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>HDFS のビッグ データの SQL Server クラスター上の階層制御の構成します。
@@ -73,4 +73,4 @@ Azure Data Lake ストレージ Gen2 および Amazon S3 への接続がサポ�
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか。](big-data-cluster-overview.md)。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。

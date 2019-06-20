@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070649"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>[処理およびストレージの場所] (パーティション ウィザード)
@@ -47,7 +47,7 @@ ms.locfileid: "66070649"
  **[...]**  
  **[指定のフォルダー]** のフォルダーを選択する、 **[リモート フォルダーの参照]** ダイアログ ボックスを表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パーティション ウィザードの F1 ヘルプ&#40;Analysis Services - 多次元データ&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [パーティション &#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [リモート フォルダ ダイアログ ボックスの [参照] &#40;Analysis Services - 多次元データ&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
