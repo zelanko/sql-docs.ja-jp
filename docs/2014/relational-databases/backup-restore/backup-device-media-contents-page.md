@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876694"
 ---
 # <a name="backup-device-media-contents-page"></a>[バックアップ デバイス] \([メディアの内容] ページ)
@@ -58,7 +58,7 @@ ms.locfileid: "62876694"
 |[ヘッダー]|値|  
 |------------|------------|  
 |**名前**|バックアップ セットの名前です。|  
-|**型**|オブジェクトのバックアップ:データベース、ファイル、または*\<空白 >* (トランザクション ログ用)。|  
+|**型**|オブジェクトのバックアップ:データベース、ファイル、または *\<空白 >* (トランザクション ログ用)。|  
 |**コンポーネント**|実行するバックアップの種類: 差分バックアップまたはトランザクション ログはいっぱいです。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  

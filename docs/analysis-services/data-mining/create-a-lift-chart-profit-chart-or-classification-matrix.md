@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988428"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>リフト チャート、利益チャート、または分類マトリックスの作成
@@ -67,7 +67,7 @@ ms.locfileid: "62988428"
   
     -   マイニング構造の予約データ セットの一部として定義されたテスト ケースの完全なセットを使用するには、 **[マイニング モデルのテスト ケースを使用する]** オプションを選択します。  
   
-    -   外部データを使用する場合は、 **[別のデータセットを指定する]** オプションを選択します。  データ セットは、データ ソース ビューとして使用可能である必要があります。   [参照] をクリックして (**.**) ボタンを精度チャートに使用するデータ テーブルを選択します。 詳細については、「 [モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)」を参照してください。  
+    -   外部データを使用する場合は、 **[別のデータセットを指定する]** オプションを選択します。  データ セットは、データ ソース ビューとして使用可能である必要があります。   [参照] をクリックして ( **.** ) ボタンを精度チャートに使用するデータ テーブルを選択します。 詳細については、「 [モデルのテスト データの選択およびマップ](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)」を参照してください。  
   
          外部データセットを使用する場合、必要に応じて入力データセットをフィルター選択できます。 詳細については、「 [モデルのテスト データへのフィルターの適用](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)」を参照してください。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62988428"
   
 3.  **分類マトリックス**の場合は、 **[分類マトリックス]** タブをクリックします。それ以上の設定は不要です。グラフは、選択した入力データおよびモデルに基づいて自動的に生成されます。  
   
-4.  **利益チャート**の場合は、まず **[リフト チャート]** タブをクリックします。**[グラフの種類]** ボックスの一覧から **[利益チャート]** を選択します。  
+4.  **利益チャート**の場合は、まず **[リフト チャート]** タブをクリックします。 **[グラフの種類]** ボックスの一覧から **[利益チャート]** を選択します。  
   
      **[利益チャートの設定]** ダイアログ ボックスで次の設定を入力します。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62988428"
      **[個人ごとの収益]**  
      成功した各販売に関連する収益です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リフト チャート &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
  [分類マトリックス &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
