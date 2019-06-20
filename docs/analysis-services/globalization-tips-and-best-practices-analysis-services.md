@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659496"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>グローバリゼーションのヒントとベスト プラクティス (Analysis Services)
@@ -97,7 +97,7 @@ ms.locfileid: "62659496"
   
 -   オブジェクト エクスプローラーで、 **[接続]** | **[Analysis Services]** | **[オプション]** の順に移動し、 **[追加の接続パラメーター]** タブをクリックします。  
   
--   `Local Identifier=1036` と入力し、**[接続]** をクリックします。  
+-   `Local Identifier=1036` と入力し、[ **接続**] をクリックします。  
   
 -   Adventure Works データベースに対して、MDX クエリを実行します。 クエリ結果は、フランス語翻訳になるはずです。  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138835"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>変数値ファイル (AccessToSQL) の作成
@@ -22,7 +22,7 @@ ms.locfileid: "63138835"
   
 > [!NOTE]  
 > -  変数の名前はプレフィックスし、$ (ドル) 記号が付いています。 変数に変数値ファイルの値が割り当てられていない場合、スクリプト ファイルの解析中にエラーが発生、失速、コンソールの実行プロセスの結果として得られる。  
-> -  エスケープ文字**$** は **$$** します。 パラメーターの変数または静的な値の値が含まれている場合、 **$** し (ドル) シンボル**$$** 変数ではなく文字として扱うことを指定する必要があります。  
+> -  エスケープ文字 **$** は **$$** します。 パラメーターの変数または静的な値の値が含まれている場合、 **$** し (ドル) シンボル **$$** 変数ではなく文字として扱うことを指定する必要があります。  
 > -  保守容易性のために、内部で変数を宣言できます`'variable-group'`ユーザー定義変数の論理的な分離の要素。  この要素の使用は必須ではありません。  
   
 **使用例:**  
@@ -94,6 +94,6 @@ ms.locfileid: "63138835"
 ## <a name="next-step"></a>次の手順  
 コンソールの運用には、次の手順は[サーバー接続ファイルを作成する&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [サーバー接続ファイル (アクセス) を作成します。](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

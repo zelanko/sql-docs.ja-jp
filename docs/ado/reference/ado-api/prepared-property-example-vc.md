@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9ba223de6cbfa7227ce35130629744fb17475f70
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66703143"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared プロパティの例 (VC++)
@@ -144,6 +144,6 @@ void PrintComError(_com_error &e) {
  **パフォーマンスの結果:**  
 **準備されていません。0.016 秒**  
 **準備。    0.016 秒**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared プロパティ (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

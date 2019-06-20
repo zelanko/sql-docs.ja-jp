@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22109f1cd7f3ebce652ae4c006473866321f7f0e
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472201"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263422"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>表形式モデルでサポートされるデータ型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "62472201"
 >  131,072 文字を超える文字列を含む **varchar(max)** 列からインポートすることはできません。  
   
 ### <a name="table-data-type"></a>テーブルのデータ型  
- また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)」を参照してください。  
+ また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](/dax/dax-function-reference)」を参照してください。  
   
 ##  <a name="bkmk_implicit"></a> DAX の数式で暗黙的および明示的なデータ型の変換
   
@@ -136,7 +136,7 @@ ms.locfileid: "62472201"
  たとえば、除算演算で整数を通貨値と組み合わせて使用する場合、両方の値が実数に変換され、結果も実数になります。  
   
 #### <a name="comparison-operators"></a>比較演算子  
-比較演算の組み合わせを混合のデータ型の制限のセットのみがサポートされています。 詳細については、「 [DAX 演算子リファレンス](https://msdn.microsoft.com/library/ee634237.aspx)」を参照してください。  
+比較演算の組み合わせを混合のデータ型の制限のセットのみがサポートされています。 詳細については、「 [DAX 演算子リファレンス](/dax/dax-operator-reference)」を参照してください。  
   
 ## <a name="bkmk_hand_blanks"></a> 空白、空の文字列、およびゼロ値の処理  
  次の表は、空白が処理されるように DAX と Microsoft excel での違いをまとめたものです。  
@@ -157,5 +157,5 @@ ms.locfileid: "62472201"
 |BLANK OR BLANK|空白|[エラー]|  
 |BLANK AND BLANK|空白|[エラー]|  
   
- 特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)」セクションの各 DAX 関数のトピックを参照してください。  
+ 特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](/dax/dax-function-reference)」セクションの各 DAX 関数のトピックを参照してください。  
   

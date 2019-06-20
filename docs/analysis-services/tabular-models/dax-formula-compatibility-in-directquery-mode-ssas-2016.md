@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019229"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263332"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery モードでの DAX 数式の互換性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,10 +45,10 @@ DirectQuery モードでテーブル 1200 以降モデルで以前のバージ�
 
 特定の関数が DirectQuery 向けに最適化されていない理由は、基になるリレーショナル エンジンが、xVelocity エンジンによって実行されるものと同等の計算を実行できないか、数式を同等の SQL 式に変換できないことです。 その他のケースとしては、変換された式のパフォーマンスとその結果の計算が受け入れられないことが考えられます。
 
-すべての DAX 関数の詳細については、[DAX 関数の参照] を参照してください。(https://msdn.microsoft.com/library/ee634396.aspx)
+すべての DAX 関数については、次を参照してください。、 [DAX 関数リファレンス](/dax/dax-function-reference)します。
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery モードでの DAX 演算子
-すべての DAX の比較および算術演算子は、DirectQuery モードで完全にサポートします。 詳細については、「 [DAX 演算子リファレンス](https://msdn.microsoft.com/library/ee634237.aspx)」を参照してください。
+すべての DAX の比較および算術演算子は、DirectQuery モードで完全にサポートします。 詳細については、「 [DAX 演算子リファレンス](/dax/dax-operator-reference)」を参照してください。
 
 
  
@@ -107,7 +107,7 @@ DAX のようなキャスト関数はありませんが、多くの比較演算�
 -   ブール値は、比較において、および EXACT、AND、OR、 &amp;&amp;、または || で使用されるときは、常に論理値として扱われます。  
   
 **文字列からブールへのキャスト**  
-インメモリおよび DirectQuery モデルでは、キャストはこれらの文字列のみから許可をブール値には: **""** (空の文字列)、 **"true"** 、 **"false"** が空の文字列。false の値にキャストします。  
+インメモリおよび DirectQuery モデルでは、キャストはこれらの文字列のみから許可をブール値には: **""** (空の文字列)、 **"true"**、 **"false"** が空の文字列。false の値にキャストします。  
   
 他のすべての文字列からブール データ型へのキャストはエラーになります。  
   
@@ -160,7 +160,7 @@ SQL Server では、NULL と空白の処理が xVelocity エンジンとは異�
   
 他の対数関数に同じ制限が適用されます。LOG10 および LN にも適用されます。  
   
-DAX での **blank** データ型の詳細については、「 [DAX 構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)」を参照してください。  
+DAX での **blank** データ型の詳細については、「 [DAX 構文のリファレンス](/dax/dax-syntax-reference)」を参照してください。  
   
 **0 での除算とブランクでの除算**  
 DirectQuery モードでは、ゼロ (0) による除算または BLANK による除算は常にエラーになります。 SQL Server は無限大の表記をサポートしていず、0 による除算の自然な結果は無限大なので、結果はエラーになります。 ただし、SQL Server は NULL による除算はサポートしており、結果は常に NULL になります。  

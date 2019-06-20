@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127908"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini ファイル (テキスト ファイル ドライバー)
@@ -56,7 +56,7 @@ ms.locfileid: "63127908"
 |----------------------|------------------|---------------------------------|  
 |**タブ区切り**|ファイル内のフィールドはタブで区切られます。|形式 TabDelimited を =|  
 |**CSV の区切り**|ファイル内のフィールドはコンマ (コンマ区切り値) で区切られます。|形式 = CSVDelimited|  
-|**区切り文字**|ファイル内のフィールドは、ダイアログ ボックスへの入力に選択した任意の文字で区切られます。 二重引用符 (") 以外のすべてが許可されている、空白を含むです。|Format=Delimited(*custom character*)<br /><br /> - または -<br /><br /> 区切り記号なしで次のように指定します。<br /><br /> Format=Delimited( )|  
+|**区切り文字**|ファイル内のフィールドは、ダイアログ ボックスへの入力に選択した任意の文字で区切られます。 二重引用符 (") 以外のすべてが許可されている、空白を含むです。|Format=Delimited(*custom character*)<br /><br /> \- または -<br /><br /> 区切り記号なしで次のように指定します。<br /><br /> Format=Delimited( )|  
 |**固定長**|ファイル内のフィールドでは、固定長です。|形式 FixedLength を =|  
   
 ## <a name="specifying-the-fields"></a>フィールドの指定  

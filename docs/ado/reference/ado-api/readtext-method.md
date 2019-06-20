@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5e7f9a484ecb873a141f9b91a88c64f65ff25336
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712207"
 ---
 # <a name="readtext-method"></a>ReadText メソッド
@@ -47,7 +47,7 @@ String = Stream.ReadText ( NumChars)
 > [!NOTE]
 >  **ReadText**メソッドは、テキスト ストリームの使用 ([型](../../../ado/reference/ado-api/type-property-ado-stream.md)は**adTypeText**)。 バイナリ ストリームの (**型**は**adTypeBinary**) を使用して、[読み取り](../../../ado/reference/ado-api/read-method.md)します。  
   
- クエリから返される XML データの量が大きくなる、 **ReadText** ActiveX データ オブジェクト (ADO) Stream オブジェクトのメソッドは、これを行う COM + コンポーネントから呼び出された場合; を実行する時間を大幅にかかる場合があります、ASP ページで、ユーザーのセッション タイムアウトになる可能性があります。ADO から utf-8 エンコードが Unicode; に Stream オブジェクト データを変換します一度に大量のデータの変換に関連するメモリが頻繁に再割り当てが非常に時間がかかります。 を解決することを繰り返し呼び出す、 **ReadText** ADO のメソッド、オブジェクトのコマンドし、より小さい文字数を指定します。 128 K (131,072) と等価の値が最適な表示がテストされます。 この値が減少すると、応答時間が減少します。 詳細については、サポート技術情報記事 280067 を参照してください。"[prb]。ADO のストリーム オブジェクトの ReadText メソッドを使用して SQL Server 2000 から非常に大きな XML ドキュメントを取得する場合があります"、Microsoft サポート技術情報で https://support.microsoft.comします。  
+ クエリから返される XML データの量が大きくなる、 **ReadText** ActiveX データ オブジェクト (ADO) Stream オブジェクトのメソッドは、これを行う COM + コンポーネントから呼び出された場合; を実行する時間を大幅にかかる場合があります、ASP ページで、ユーザーのセッション タイムアウトになる可能性があります。ADO から utf-8 エンコードが Unicode; に Stream オブジェクト データを変換します一度に大量のデータの変換に関連するメモリが頻繁に再割り当てが非常に時間がかかります。 を解決することを繰り返し呼び出す、 **ReadText** ADO のメソッド、オブジェクトのコマンドし、より小さい文字数を指定します。 128 K (131,072) と等価の値が最適な表示がテストされます。 この値が減少すると、応答時間が減少します。 詳細については、サポート技術情報記事 280067 を参照してください。"[prb]。ADO のストリーム オブジェクトの ReadText メソッドを使用して SQL Server 2000 から非常に大きな XML ドキュメントを取得する場合があります"、Microsoft サポート技術情報で https://support.microsoft.com します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

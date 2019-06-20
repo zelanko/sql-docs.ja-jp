@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 434c27f5e2da0208ba5141664ccc69accfc2fbb2
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66704250"
 ---
 # <a name="rds-object-model-summary"></a>RDS オブジェクト モデルの概要
@@ -31,7 +31,7 @@ ms.locfileid: "66704250"
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバー プログラムを表します。 既定の RDS のデータの取得と更新動作を実行します。<br /><br /> **DataFactory**オブジェクトは、スクリプトを実行することはありません。|  
 |[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|このオブジェクトは自動的に呼び出すことができます、 **rds.DataSpace**と**RDSServer.DataFactory**オブジェクト。<br /><br /> このオブジェクトを使用して、既定の RDS のデータの取得や更新プログラムの動作を呼び出します。<br /><br /> このオブジェクトは、ビジュアル コントロールへのアクセス、返されたにするための手段も用意されています。 **Recordset**オブジェクト。<br /><br /> **DataControl**オブジェクトがスクリプトを実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   

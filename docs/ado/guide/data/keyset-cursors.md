@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b349838788a3c442ea9c32fc5b8a7ebbd0240e37
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702087"
 ---
 # <a name="keyset-cursors"></a>Keyset カーソル
@@ -38,7 +38,7 @@ ms.locfileid: "66702087"
   
  キーセット ドリブン カーソルでは、多くのさまざまな状況依存の重大度データの変更を上記で説明したように正しく使用する困難です。 ただし、アプリケーションでは同時実行更新に関係していない、誤ったキーをプログラムで処理することができます、特定のキー付きの行に直接アクセスする必要がある場合、キーセット ドリブン カーソルが適しています。 使用して、 **adOpenKeyset CursorTypeEnum**を ADO でキーセット カーソルを使用することを示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [順方向専用カーソル](../../../ado/guide/data/forward-only-cursors.md)   
  [静的カーソル](../../../ado/guide/data/static-cursors.md)   
  [動的カーソル](../../../ado/guide/data/dynamic-cursors.md)

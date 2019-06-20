@@ -23,10 +23,10 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b9d6f7aafe405b29db5457f470a99efac2e23e92
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64945685"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (TRANSACT-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "64945685"
 |**fulltext_catalog_id**|**int**|フルテキスト インデックスが存在するフルテキスト カタログの ID です。|  
 |**is_enabled**|**bit**|1 = フルテキスト インデックスが現在有効になっています。|  
 |**change_tracking_state**|**char(1)**|変更の追跡の状態。<br /><br /> M = 手動<br /><br /> A = 自動<br /><br /> O = オフ|  
-|**change_tracking_state_desc**|**nvarchar(60)**|変更の追跡の状態に関する説明です。<br /><br /> 手動<br /><br /> AUTO<br /><br /> OFF|  
+|**change_tracking_state_desc**|**nvarchar(60)**|変更の追跡の状態に関する説明です。<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|フルテキスト インデックスが完了した最新のクロール (作成) です。|  
 |**crawl_type**|**char(1)**|現在または最近のクロールの種類です。<br /><br /> F = フル クロール<br /><br /> I = タイムスタンプに基づく増分クロール<br /><br /> U = 通知に基づく更新クロール<br /><br /> P = フル クロールが一時停止された状態|  
 |**crawl_type_desc**|**nvarchar(60)**|現在または最新のクロールの種類に関する説明です。<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  

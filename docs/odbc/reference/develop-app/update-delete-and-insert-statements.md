@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632480"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、INSERT ステートメント
@@ -33,15 +33,15 @@ SQL ベースのアプリケーションでは、テーブルに変更を加え�
   
  **設定** _列識別子_  **=** {*式* &#124; です。**NULL**}  
   
- [**、** _列識別子_ **=** {*式*&#124; です。**NULL**}].  
+ [ **、** _列識別子_ **=** {*式*&#124; です。**NULL**}].  
   
  [**WHERE** _search-condition_]  
   
  **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** _table-name_[**(** _column-identifier_ [**,** _column-identifier_]...**)**]  
+ **INSERT INTO** _table-name_[ **(** _column-identifier_ [ **,** _column-identifier_]... **)** ]  
   
- {*query-specification* &#124; **VALUES (** _insert-value_ [**,** _insert-value_]...**)**}  
+ {*query-specification* &#124; **VALUES (** _insert-value_ [ **,** _insert-value_]... **)** }  
   
  なお、*クエリ仕様*要素は、コアと拡張 SQL 文法とでのみ有効ですが、*式*と*検索条件*要素の詳細になりますコアと拡張 SQL 文法で複雑です。  
   

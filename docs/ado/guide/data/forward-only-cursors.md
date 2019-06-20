@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 15d11b8882e8e39a03ffb7509526a4f66b6553b3
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700705"
 ---
 # <a name="forward-only-cursors"></a>順方向専用カーソル
@@ -30,7 +30,7 @@ ms.locfileid: "66700705"
   
  場合は、アプリケーションでは、結果セットのスクロールは必要ありませんが、順方向専用カーソルは、最小限のオーバーヘッドで迅速にデータを取得する最適な方法です。 使用して、 **adOpenForwardOnly CursorTypeEnum** ADO では順方向専用カーソルを使用することを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [静的カーソル](../../../ado/guide/data/static-cursors.md)   
  [Keyset カーソル](../../../ado/guide/data/keyset-cursors.md)   
  [動的カーソル](../../../ado/guide/data/dynamic-cursors.md)

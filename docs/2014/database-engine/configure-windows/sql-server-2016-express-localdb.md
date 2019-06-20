@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62756992"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -97,7 +97,7 @@ REM Gather information about the instance of LocalDB
 |インスタンス パイプ名|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
   
 > [!NOTE]  
->  名前付きパイプに直接接続する場合は、アプリケーションで .net 4.0.2 より前に、のバージョンを使用する必要があります、`LocalDB`します。 インスタンス パイプ名の値は、名前付きパイプのインスタンス`LocalDB`がリッスンします。 LOCALDB # は各変更後にインスタンス パイプ名の一部のインスタンスの時間`LocalDB`が開始します。 インスタンスに接続する`LocalDB`を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、インスタンス パイプ名を入力、**サーバー名**のボックス、**への接続[!INCLUDE[ssDE](../../includes/ssde-md.md)]**   ダイアログ ボックス。 インスタンスへの接続を確立するカスタム プログラム`LocalDB`ような接続文字列を使用します。 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`  
+>  名前付きパイプに直接接続する場合は、アプリケーションで .net 4.0.2 より前に、のバージョンを使用する必要があります、`LocalDB`します。 インスタンス パイプ名の値は、名前付きパイプのインスタンス`LocalDB`がリッスンします。 LOCALDB # は各変更後にインスタンス パイプ名の一部のインスタンスの時間`LocalDB`が開始します。 インスタンスに接続する`LocalDB`を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、インスタンス パイプ名を入力、**サーバー名**のボックス、**への接続[!INCLUDE[ssDE](../../includes/ssde-md.md)]**  ダイアログ ボックス。 インスタンスへの接続を確立するカスタム プログラム`LocalDB`ような接続文字列を使用します。 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`  
   
 ### <a name="connecting-to-a-shared-instance-of-localdb"></a>LocalDB の共有インスタンスへの接続  
  共有インスタンスに接続する`LocalDB`追加 **.\\** (ドット + 円記号) を共有インスタンス用に予約されている名前空間を参照する接続文字列。 たとえばの共有インスタンスに接続するため`LocalDB`という名前`AppData`接続文字列を使用します。`(localdb)\.\AppData`接続文字列の一部として。 共有インスタンスに接続するユーザー`LocalDB`ユーザーが所有していないことと、Windows 認証が必要または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログイン。  
@@ -111,7 +111,7 @@ REM Gather information about the instance of LocalDB
 > [!NOTE]  
 >  `LocalDB` ユーザーのセキュリティ コンテキストで常に実行されます。つまり、`LocalDB`ローカル管理者グループからの資格情報で実行されません。 つまり、すべてのデータベースで使用されるファイル、`LocalDB`インスタンスは、ローカルの Administrators グループのメンバーシップを考慮せず、所有するユーザーの Windows アカウントを使用してアクセス可能である必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SqlLocalDB ユーティリティ](../../tools/sqllocaldb-utility.md)  
   
   

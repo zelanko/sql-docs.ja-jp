@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f211a7300dceb542235538e0e7067e8dd989fe6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011527"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046749"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for[!INCLUDE[msCoName](../../../includes/msconame-md.md)]により、Azure Key Vault[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]として、Azure Key Vault サービスを利用する暗号化、[拡張キー管理&#40;EKM&#41; ](extensible-key-management-ekm.md)を保護するプロバイダー、暗号化キー。  
@@ -34,7 +34,7 @@ ms.locfileid: "63011527"
   
 -   [手順 2:SQL Server コネクタをインストールします。](#Step2)  
   
--   [手順 3:Key Vault の EKM プロバイダーを使用する SQL Server の構成します。](#Step3)  
+-   [ステップ 3:Key Vault の EKM プロバイダーを使用する SQL Server の構成します。](#Step3)  
   
 -   [例 a:Key Vault からの非対称キーを使用して transparent Data Encryption](#ExampleA)  
   
@@ -51,8 +51,8 @@ ms.locfileid: "63011527"
   
  ![Azure Key Vault を使用した SQL Server EKM](../../../database-engine/media/ekm-using-azure-key-vault.png "Azure Key Vault を使用した SQL Server EKM")  
   
-##  <a name="Step1">手順 1:</a> SQL Server で使用する Key Vault の設定  
- 次の手順では、暗号化キーを保護するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] で使用する資格情報コンテナーを設定する方法について説明します。 コンテナーは、組織内で既に使用中になっていることもあります。 資格情報コンテナーが存在しない場合は、暗号化キーを管理するように指名された組織内の Azure 管理者がコンテナーを作成し、コンテナー内に非対称キーを生成し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によるキー使用を許可します。 Key Vault サービスについて習熟するため、「 [Azure Key Vault の使用を開始する](https://go.microsoft.com/fwlink/?LinkId=521402)」と、PowerShell の「 [Azure Key Vault のコマンドレット](/powershell/module/azurerm.keyvault/) 」をご確認ください。  
+##  <a name="Step1"></a> ステップ 1:SQL Server で使用する Key Vault の設定  
+ 次の手順では、暗号化キーを保護するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] で使用する資格情報コンテナーを設定する方法について説明します。 コンテナーは、組織内で既に使用中になっていることもあります。 資格情報コンテナーが存在しない場合は、暗号化キーを管理するように指名された組織内の Azure 管理者がコンテナーを作成し、コンテナー内に非対称キーを生成し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によるキー使用を許可します。 Key Vault サービスについて習熟するため、「 [Azure Key Vault の使用を開始する](https://go.microsoft.com/fwlink/?LinkId=521402)」と、PowerShell の「 [Azure Key Vault のコマンドレット](https://docs.microsoft.com/powershell/module/azurerm.keyvault) 」をご確認ください。  
   
 > [!IMPORTANT]  
 >  複数の Azure サブスクリプションがある場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を含むサブスクリプションを使用する必要があります。  
@@ -75,9 +75,9 @@ ms.locfileid: "63011527"
   
 3.  **Azure Active Directory のサービス プリンシパルに SQL Server を使用するを取得します。** Microsoft クラウド サービスにサインアップする時点で、組織は Azure Active Directory を取得します。 **が資格情報コンテナーにアクセスする時に (Azure Active Directory に対して自身を認証するために) 使用する** サービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を Azure Active Directory 内に作成します。  
   
-    -   **で**暗号化を使用するよう構成するときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者が資格情報コンテナーにアクセスするために、1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。  
+    -   **で暗号化を使用するよう構成するときに** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理者が資格情報コンテナーにアクセスするために、1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。  
   
-    -   **の**暗号化で使用するラップ解除キーを取得するために [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] が資格情報コンテナーにアクセスするときに、もう 1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。  
+    -   **の暗号化で使用するラップ解除キーを取得するために** [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] が資格情報コンテナーにアクセスするときに、もう 1 つのサービス プリンシパル [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が必要になります。  
   
      アプリケーションを登録してサービス プリンシパルを生成する方法の詳細については、「 **Azure Key Vault の使用を開始する** 」の「 [アプリケーションを Azure Active Directory に登録する](https://go.microsoft.com/fwlink/?LinkId=521402)」セクションをご覧ください。 この登録プロセスからは、Azure Active Directory の **サービス プリンシパル** ごとに、 **アプリケーション ID**( **クライアント ID** とも呼ばれる) および **認証キー**( **シークレット**とも呼ばれる) が返されます。 使用すると、`CREATE CREDENTIAL`ステートメントでは、ハイフンをから削除する必要があります、**クライアント ID**します。 以下のスクリプトで使用するために、これらの情報を記録しておきます。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63011527"
   
     -   [Azure Key Vault の使用を開始する](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   PowerShell の [Azure Key Vault コマンドレット](https://go.microsoft.com/fwlink/?LinkId=521403) のリファレンス  
+    -   PowerShell の [Azure Key Vault コマンドレット](https://docs.microsoft.com/powershell/module/azurerm.keyvault) のリファレンス  
   
-##  <a name="Step2"></a>手順 2: SQL Server コネクタのインストール  
+##  <a name="Step2"></a> ステップ 2:SQL Server コネクタのインストール  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのダウンロードとインストールは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行います。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)からダウンロードして入手できます。  " **SQL Server Connector for Microsoft Azure Key Vault**" を検索して、詳細やシステム要件、インストール方法を確認し、コネクタのダウンロードを選択し、 **[実行]** を使用してインストールを開始します。 ライセンスを確認し、ライセンスに同意して続行します。  
   
  既定では、コネクタは **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**にインストールされています。 この場所は、セットアップ中に変更することができます。 (変更した場合は、以下のスクリプトを調整してください。)  
@@ -113,7 +113,7 @@ ms.locfileid: "63011527"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのインストールでは、必要に応じて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化で使用するサンプル スクリプトをダウンロードすることもできます。  
   
-##  <a name="Step3"></a> 手順 3:EKM プロバイダーを Key Vault に使用する SQL Server の構成  
+##  <a name="Step3"></a> ステップ 3:EKM プロバイダーを Key Vault に使用する SQL Server の構成  
   
 ###  <a name="Permissions"></a> Permissions  
  このプロセス全体を完了するには、CONTROL SERVER 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 特定のアクションで必要な権限は次のとおりです。  

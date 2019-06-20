@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 626ee1de57fdcecdf53d20263b1717df25480c40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313430"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access ドライバー)
@@ -116,9 +116,9 @@ ms.locfileid: "63313430"
   
  [自動増分]  
   
- バイナリ  
+ BINARY  
   
- ブール値  
+ BOOLEAN  
   
  BYTE  
   
@@ -142,7 +142,7 @@ ms.locfileid: "63313430"
   
  FLOAT8  
   
- [全般]  
+ GENERAL  
   
  IEEEDOUBLE  
   

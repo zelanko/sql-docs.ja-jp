@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edc7f035c816afa941feab9cb05ddaed27ff0529
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450151"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>データ マイニングのチュートリアル (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "65450151"
   
 [DMX チュートリアル (SQL Server 2014)](https://msdn.microsoft.com/library/bb895168(v=sql.120).aspx) - データ マイニング拡張機能 (DMX) クエリ言語の構文は、SQL の構文に似ていますが、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に格納された予測モデルの作成、クエリ、および管理に使用できます。 これらのチュートリアルは、DMX 言語を使用して新しいマイニング構造およびマイニング モデルを作成する方法、およびアプリケーションで使用するための DMX 予測クエリを作成する方法を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [データ マイニング ソリューション](../data-mining/data-mining-solutions.md)  
 [Microsoft SQL Server データ マイニング リソース](http://go.microsoft.com/fwlink/?LinkId=97965)  
 [DMX を使用したデータ マイニング モデルのクエリの作成と:チュートリアル&#40;Analysis Services - データ マイニング&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0)  

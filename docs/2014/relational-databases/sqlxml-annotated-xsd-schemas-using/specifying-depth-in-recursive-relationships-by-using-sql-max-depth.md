@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013655"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth を使用した、再帰リレーションシップの深さの指定
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  このリレーションシップは再帰的なので、何らかの方法でスキーマ内の再帰の深さを指定する必要があります。 指定しない場合、結果は無限再帰となり、従業員から次の従業員へと無限に報告を行うことになります。 `sql:max-depth` 注釈を使用すと、再帰の深さを指定できます。 この例の場合、`sql:max-depth` の値を指定するには、その企業の管理階層の深さを知っておく必要があります。  
   
 > [!NOTE]  
->  このスキーマでは `sql:limit-field` 注釈が指定されていますが、`sql:limit-value` 注釈は指定されていません。 これにより、結果として生成される階層の一番上のノードは、だれにも報告しない従業員だけになります  (ReportsTo は NULL です)。ここでは `sql:limit-field` 注釈を指定し、`sql:limit-value` 注釈を指定しない (既定で NULL に設定される) ことにより、このような階層が実現されます。 結果の XML に、可能な報告ツリー (テーブル内の各従業員の報告ツリー) をすべて含める場合は、スキーマから `sql:limit-field` 注釈を削除します。  
+>  このスキーマでは `sql:limit-field` 注釈が指定されていますが、`sql:limit-value` 注釈は指定されていません。 これにより、結果として生成される階層の一番上のノードは、だれにも報告しない従業員だけになります (ReportsTo は NULL です)。ここでは `sql:limit-field` 注釈を指定し、`sql:limit-value` 注釈を指定しない (既定で NULL に設定される) ことにより、このような階層が実現されます。 結果の XML に、可能な報告ツリー (テーブル内の各従業員の報告ツリー) をすべて含める場合は、スキーマから `sql:limit-field` 注釈を削除します。  
   
 > [!NOTE]  
 >  次の手順では、tempdb データベースを使用します。  
@@ -283,7 +283,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>非再帰要素  
  再帰のないスキーマ内の要素に `sql:max-depth` 注釈が指定されている場合、その注釈は無視されます。 次のスキーマで、  **\<Emp >** 要素から成る、 **\<定数 >** これには子要素、  **\<Emp >** 子要素。  
   
- このスキーマで、`sql:max-depth`で指定されている注釈、 **\<定数 >** 間に再帰がないために、要素は無視されます、  **\<Emp >** 親と **\<定数 >** 子要素。 間に再帰があるが、  **\<Emp >** 先祖と **\<Emp >** 子。 このスキーマでは先祖と子の両方に `sql:max-depth` 注釈が指定されています。 そのため、 `sql:max-depth` 、先祖に対して指定されている注釈 (**\<Emp >** 監督) が優先されます。  
+ このスキーマで、`sql:max-depth`で指定されている注釈、 **\<定数 >** 間に再帰がないために、要素は無視されます、  **\<Emp >** 親と **\<定数 >** 子要素。 間に再帰があるが、  **\<Emp >** 先祖と **\<Emp >** 子。 このスキーマでは先祖と子の両方に `sql:max-depth` 注釈が指定されています。 そのため、 `sql:max-depth` 、先祖に対して指定されている注釈 ( **\<Emp >** 監督) が優先されます。  
   
 #### <a name="example-c"></a>例 C  
   

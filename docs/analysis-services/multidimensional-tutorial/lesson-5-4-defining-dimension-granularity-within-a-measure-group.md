@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e6dadcc53120ce112ad3e9044e38bf14a525fded
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404084"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>レッスン 5-4-メジャー グループ内のディメンションの粒度の定義
@@ -77,9 +77,9 @@ ms.locfileid: "65404084"
   
 1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーで **[ブラウザー]** タブをクリックし、**[再接続]** ボタンをクリックします。  
+2.  配置が正常に完了したら、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーで **[ブラウザー]** タブをクリックし、 **[再接続]** ボタンをクリックします。  
   
-3.  Excel ショートカットをクリックし、**[有効化]** をクリックします。  
+3.  Excel ショートカットをクリックし、 **[有効化]** をクリックします。  
   
 4.  ピボットテーブル フィールド リストで **[Sales Quotas]** メジャー グループを展開し、 **Sales Amount Quota** メジャーを値領域にドラッグします。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "65404084"
   
     **Employee** および **Date** キューブ ディメンションは、通常のリレーションシップを介して **Sales Quotas** および Sales Quotas 1 メジャー グループにリンクしています。 また、 **Sales Territory** キューブ ディメンションはどちらのメジャー グループにもリンクしていません。  
   
-4.  交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas**メジャー グループと、参照ボタンをクリックして (**.**).**[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+4.  交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas**メジャー グループと、参照ボタンをクリックして ( **.** ). **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
 5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "65404084"
   
 10. **[OK]** をクリックします。  
   
-11. 交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas 1**メジャー グループと、参照ボタンをクリックして (**.**).**[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+11. 交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas 1**メジャー グループと、参照ボタンをクリックして ( **.** ). **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
 12. **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "65404084"
   
     **Order Date** キューブ ディメンションの名前を **Date** に変更することにより、同キューブ ディメンションがこのキューブのプライマリ日付ディメンションとしての機能を持っていることを把握しやすくなります。  
   
-20. [参照] ボタンをクリックします (**.**) の交差部分にあるセルで、 **Sales Quotas**メジャー グループと**日付**ディメンション。  
+20. [参照] ボタンをクリックします ( **.** ) の交差部分にあるセルで、 **Sales Quotas**メジャー グループと**日付**ディメンション。  
   
 21. **[リレーションシップの定義]** ダイアログ ボックスで、 **[リレーションシップの種類の選択]** ボックスの一覧から **[標準]** を選択します。  
   
@@ -223,7 +223,7 @@ ms.locfileid: "65404084"
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 6:計算の定義](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](../multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](../multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

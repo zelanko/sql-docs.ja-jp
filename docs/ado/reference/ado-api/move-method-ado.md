@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c7b99a0848101ca0fad4844c51e44f1ccc628cd6
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66707604"
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
@@ -46,9 +46,9 @@ recordset.Move NumRecords, Start
   
  場合、 *NumRecords*引数に 0 を超えると、現在のレコードの位置を前方に移動 (の終了に向けて、 **Recordset**)。 場合*NumRecords* 0、現在のレコードの位置は後方に移動します未満です (の先頭に向かって、 **Recordset**)。  
   
- 場合、**移動**呼び出しは、最初のレコードの前に、のポイントに現在のレコードの位置を移動、ADO レコード セット内の最初のレコードの前に位置する現在のレコードを設定する ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。** ). 旧バージョンとのときに移動しよう、 **BOF**プロパティが既に**True**エラーが生成されます。  
+ 場合、**移動**呼び出しは、最初のレコードの前に、のポイントに現在のレコードの位置を移動、ADO レコード セット内の最初のレコードの前に位置する現在のレコードを設定する ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 旧バージョンとのときに移動しよう、 **BOF**プロパティが既に**True**エラーが生成されます。  
   
- 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO レコード セットの最後のレコードの後に、現在のレコードを位置に設定する ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。** ). 転送時に移動しよう、 **EOF**プロパティが既に**True**エラーが生成されます。  
+ 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO レコード セットの最後のレコードの後に、現在のレコードを位置に設定する ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 転送時に移動しよう、 **EOF**プロパティが既に**True**エラーが生成されます。  
   
  呼び出す、**移動**メソッド空から**レコード セット**オブジェクト、エラーが発生します。  
   

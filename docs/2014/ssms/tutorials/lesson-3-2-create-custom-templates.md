@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805573"
 ---
 # <a name="create-custom-templates"></a>カスタム テンプレートの作成
@@ -67,7 +67,7 @@ ms.locfileid: "62805573"
   
 10. クエリ エディターに「 **EXECUTE dbo.WorkOrdersForBlade**」と入力し、F5 キーを押してクエリを実行します。 **結果**ペインに、ブレードに対する作業命令の一覧が返されていることを確認します。  
   
-11. テンプレート スクリプト (手順 7 でスクリプト) を編集して、製品名 Blade をパラメーターに置き換えて <strong>*<* product_name</strong>、 `nvarchar(50)`、<strong>名前*>*</strong>  、4 つの場所にします。  
+11. テンプレート スクリプト (手順 7 でスクリプト) を編集して、製品名 Blade をパラメーターに置き換えて <strong> *<* product_name</strong>、 `nvarchar(50)`、<strong>名前 *>* </strong> 、4 つの場所にします。  
   
     > [!NOTE]  
     >  パラメーターには、置き換えるパラメーターの名前、パラメーターのデータ型、パラメーターの既定値の 3 つの要素が必要です。  
@@ -97,7 +97,7 @@ ms.locfileid: "62805573"
   
 #### <a name="to-test-the-custom-template"></a>カスタム テンプレートをテストするには  
   
-1.  テンプレート エクスプローラーで **[Stored Procedure]**、 **[Custom]** の順に展開し、 **[WorkOrderProc]** をダブルクリックします。  
+1.  テンプレート エクスプローラーで **[Stored Procedure]** 、 **[Custom]** の順に展開し、 **[WorkOrderProc]** をダブルクリックします。  
   
 2.  **[データベース エンジンへの接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **WorkOrderProc** テンプレートの内容が表示されます。  
   

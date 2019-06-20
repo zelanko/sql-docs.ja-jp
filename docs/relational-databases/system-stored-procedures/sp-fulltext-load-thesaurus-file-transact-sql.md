@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822764"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -45,7 +45,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  類義語辞典 XML 定義の対応する言語のロケール識別子 (LCID) を対応する整数。 サーバー インスタンスで使用可能な言語の Lcid を取得する、 [sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)カタログ ビューです。  
   
- **@loadOnlyIfNotLoaded**  = *アクション*  
+ **@loadOnlyIfNotLoaded** = *アクション*  
  既に読み込まれている場合でも、内部の類義語辞典テーブルに類義語辞典ファイルが読み込まれるかどうかを指定します。 *アクション*の 1 つです。  
   
 |値|定義|  

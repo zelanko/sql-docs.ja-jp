@@ -10,12 +10,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2df295b62ca76dfb46e767ed206180a52493255a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66102969"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046744"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services の概念 (SSRS)
   このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
@@ -76,7 +76,7 @@ ms.locfileid: "66102969"
  **レポートおよびレポート定義**  
  **RDL。** レポート定義は、レポート定義言語 (RDL) と呼ばれる XML 文法に準拠した XML ファイルです。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポート ビルダーやレポート デザイナーなどのツールでレポート定義を作成します。 レポート定義には、データ ソース接続、データ取得に使用するクエリ、式、パラメーター、画像、テキスト ボックス、表、デザイン時のその他のレイアウトなどを定義する要素が含まれています。 詳細については、「[レポート定義言語 (SSRS)](reports/report-definition-language-ssrs.md)」を参照してください。  
   
- **RDLX します。** RDLX のレポート定義は、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] の見やすさを高める内部拡張機能が含まれた RDL ファイルです。 詳細については、「 [Power View Overview](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)」をご覧ください。  
+ **RDLX します。** RDLX のレポート定義は、 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] の見やすさを高める内部拡張機能が含まれた RDL ファイルです。 詳細については、「 [Power View Overview](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684)」をご覧ください。  
   
  **RDLC します。** Visual Studio のレポート デザイナーでは、ReportViewer コントロールで使用する、XML 形式のクライアント レポート定義 (.rdlc) ファイルが生成されます。  
   

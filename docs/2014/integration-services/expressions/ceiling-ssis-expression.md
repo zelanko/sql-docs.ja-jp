@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769428"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 式)
@@ -61,7 +61,7 @@ CEILING(0.00)
   
  0.00 を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FLOOR &#40;SSIS 式&#41;](floor-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   

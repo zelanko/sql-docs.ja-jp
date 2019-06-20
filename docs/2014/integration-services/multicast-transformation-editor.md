@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057616"
 ---
 # <a name="multicast-transformation-editor"></a>マルチキャスト変換エディター
@@ -33,7 +33,7 @@ ms.locfileid: "66057616"
  **Properties**  
  表示されている出力プロパティの **[名前]** および **[説明]** 以外はすべて読み取り専用です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [条件分割変換](data-flow/transformations/conditional-split-transformation.md)  
   

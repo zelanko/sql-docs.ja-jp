@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 97cc3f748f5d5b94a65eddcbcb54b9d407c7bed6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484230"
 ---
 # <a name="create-a-changeset-master-data-services"></a>変更セットを作成する (マスター データ サービス)
@@ -48,7 +48,7 @@ ms.locfileid: "65484230"
   
 2.  **[エンティティ]** メニューでエンティティをクリックします。  
   
-3.  エンティティに変更を加え、**[OK]** をクリックします。  
+3.  エンティティに変更を加え、 **[OK]** をクリックします。  
   
 4.  **[[Choose A changeset]]** (変更セットの選択) ダイアログ ボックスが表示されます。  
   

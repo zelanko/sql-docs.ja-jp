@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 38d4b1e7f9bd3e76c00bb4228e53e09416ed8557
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488091"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>ユーザーのアクセス許可のテスト (マスター データ サービス)
@@ -26,7 +26,7 @@ ms.locfileid: "65488091"
   
 ### <a name="to-test-a-users-security"></a>ユーザーのセキュリティをテストするには  
   
-1.  Internet Explorer 7 以降で、 **[ツール]**、 **[インターネット オプション]** の順にクリックして、 **[セキュリティ]** タブをクリックします。  
+1.  Internet Explorer 7 以降で、 **[ツール]** 、 **[インターネット オプション]** の順にクリックして、 **[セキュリティ]** タブをクリックします。  
   
 2.  **[ローカル イントラネット]** をクリックして、 **[レベルのカスタマイズ]** ボタンをクリックします。  
   

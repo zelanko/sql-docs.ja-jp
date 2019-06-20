@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: edc42dc5746e551913395249cd029e41132f8f0e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486396"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
@@ -53,7 +53,7 @@ ms.locfileid: "65486396"
 ## <a name="master-data-services-super-user"></a>マスター データ サービスのスーパー ユーザー  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、スーパー ユーザー機能領域にユーザー権限を割り当てることができます。 スーパー ユーザー機能領域に対する権限を持つユーザーは、実質的にすべてのモデルに対する管理者権限を持ち、その他のすべての機能領域に対する権限を持ちます。 機能領域に対する権限については、「[機能領域権限について (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
- 既定のスーパー ユーザーは、[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) を使用して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成するときに、**[管理者アカウント]** に指定されます。  
+ 既定のスーパー ユーザーは、[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) を使用して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成するときに、 **[管理者アカウント]** に指定されます。  
   
  スーパー ユーザーは、次の操作を行うことができます。  
   

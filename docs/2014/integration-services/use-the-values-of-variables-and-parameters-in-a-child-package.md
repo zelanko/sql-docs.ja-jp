@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054730"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>子パッケージでの変数およびパラメーターの値の使用
@@ -89,11 +89,11 @@ ms.locfileid: "66054730"
   
     -   **[構成の場所を環境変数に格納する]** を選択し、 **[環境変数]** ボックスの一覧で、変数の名前を含む環境変数を選択します。  
   
-7.  **[次へ]** をクリックします。  
+7.  [**次へ**] をクリックします。  
   
 8.  [対象になるプロパティの選択] ページで、 **[変数]** ノードを展開し、構成する変数の **[プロパティ]** ノードを展開した後、構成によって設定されるプロパティをクリックします。  
   
-9. **[次へ]** をクリックします。  
+9. [**次へ**] をクリックします。  
   
 10. [ウィザードの完了] ページで、必要に応じて、構成の既定の名前を変更し、構成情報を確認します。  
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ebfa31e2d40d4d041db83696496fe12d778e8982
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484459"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>[マスター データ サービス データベースへの接続] ダイアログ ボックス
@@ -44,7 +44,7 @@ ms.locfileid: "65484459"
 |**Connect**|指定した資格情報を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに接続します。|  
 |**[マスター データ サービス データベース]**|次の基準に基づいて、指定した [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンス内の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースが表示されます。<br /><br /> ユーザーがそのインスタンスの **sysadmin** サーバー ロールのメンバーである場合は、そのインスタンス内の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースがすべて表示されます。<br /><br /> ユーザーがそのインスタンスに含まれるいずれかの **データベースの** db_owner [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース ロールのメンバーである場合は、それらの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースが表示されます。<br /><br/> SQL Server ロールの詳細については、「 [サーバー レベルのロール](../relational-databases/security/authentication-access/server-level-roles.md) 」および「 [データベース レベルのロール](../relational-databases/security/authentication-access/database-level-roles.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 
 [マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)

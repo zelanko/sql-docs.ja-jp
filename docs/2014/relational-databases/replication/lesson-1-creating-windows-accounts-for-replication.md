@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721159"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>レッスン 1:レプリケーション用アカウントの Windows の作成
@@ -64,7 +64,7 @@ ms.locfileid: "62721159"
 ## <a name="next-steps"></a>次の手順  
  ここでは、レプリケーション エージェントを実行するための Windows アカウントを作成しました。 次はスナップショット フォルダーを設定します。 「[レッスン 2:スナップショット フォルダーの準備](lesson-2-preparing-the-snapshot-folder.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   
   

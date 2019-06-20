@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 2768449e242b7da66406b9c1a5b95084e0f04949
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072399"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263379"
 ---
 # <a name="calculated-columns"></a>計算列
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072399"
   
 -   計算列の名前を変更する場合、その列に依存する数式をすべて手動で更新する必要があります。 手動更新モードでない場合、数式の結果の更新は自動的に実行されます。 ただし、この処理には時間がかかることがあります。  
   
--   列名に使用できない文字がいくつかあります。 詳しくは、「 [DAX 構文の仕様](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)」の「名前付けに関する要件」をご覧ください。  
+-   列名に使用できない文字がいくつかあります。 詳しくは、「 [DAX 構文の仕様](/dax/dax-syntax-reference)」の「名前付けに関する要件」をご覧ください。  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  計算列で使用される数式は、メジャーで使用される数式よりリソースを大量に消費する可能性があります。 その理由の 1 つとして、計算列の結果が常にテーブルのすべての行を対象に計算されるのに対し、メジャーはレポート、ピボットテーブル、またはピボットグラフに使用されているフィルターで定義されたセルのみを対象として計算されることが挙げられます。 たとえば、テーブルに 100 万行含まれている場合、計算列には必ず 100 万個の結果が含まれるため、それだけパフォーマンスにも影響します。 ただし、ピボットテーブルでは、通常、行見出しおよび列見出しを適用してデータをフィルター処理します。したがって、メジャーは、ピボットテーブルの各セルに含まれているデータのサブセットのみを対象として計算されます。  

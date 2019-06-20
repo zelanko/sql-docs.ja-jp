@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489077"
 ---
 # <a name="task-4-setting-domain-rules"></a>タスク 4:ドメイン ルールを設定する
@@ -44,9 +44,9 @@ ms.locfileid: "65489077"
   
      ![ドメイン ルール ダイアログ ボックスのテスト](../../2014/tutorials/media/et-settingdomainrules-04.jpg "ドメイン ルール ダイアログ ボックスのテスト")  
   
-9. 型**frank7@adventure-works.com** (有効な値) で、 **Contact Email**列。  
+9. 型 **frank7@adventure-works.com** (有効な値) で、 **Contact Email**列。  
   
-10. 追加する 2 つ前の手順を繰り返して**joe2@adventure-work.com** (のない無効な値の ')。  
+10. 追加する 2 つ前の手順を繰り返して **joe2@adventure-work.com** (のない無効な値の ')。  
   
 11. 最後のボタンをクリックします (**すべての用語でドメイン ルールをテスト**)、ルールに対して入力データをテストするツールバーです。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "65489077"
 13. クリックして**閉じます**を閉じる、**ドメイン ルールのテスト** ダイアログ ボックス。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 5:ベースのリレーションを設定](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [タスク 5: ベースのリレーションを設定](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

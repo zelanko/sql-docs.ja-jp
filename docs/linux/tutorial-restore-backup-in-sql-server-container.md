@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 ms.openlocfilehash: f688a95135716a41ae37cb86b50bcb90fc6cce5e
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712819"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker コンテナーでの SQL Server データベースを復元します。
@@ -204,7 +204,7 @@ ms.locfileid: "66712819"
    docker cp wwi.bak sql1:/var/opt/mssql/backup
    ```
 
-## <a name="restore-the-database"></a>データベースを復元します
+## <a name="restore-the-database"></a>データベースを復元する
 
 バックアップ ファイルは、コンテナー内にあるようになりました。 バックアップを復元する前に、論理ファイル名と、バックアップ内のファイルの種類を知っておく必要です。 次の TRANSACT-SQL コマンドは、バックアップを検査し、復元を使用して、実行**sqlcmd**コンテナー。
 

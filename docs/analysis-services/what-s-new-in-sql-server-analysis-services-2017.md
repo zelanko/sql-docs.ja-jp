@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 711b577b737b48012e1bed0a52ba599cf17b3d8f
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 1f322b395f897780f3693d1186767aeef7dbfd4a
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685759"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263270"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services の新機能新機能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -85,14 +85,14 @@ SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースから�
 
 ![AS_Ragged_Hierarchy](../analysis-services/media/as-ragged-hierarchy.png)
 
-このリリースでは、 **[Hide Members]** (メンバーを隠す) プロパティが導入されました。 階層の **[Hide Members]** (メンバーを隠す) プロパティを **[Hide blank members]**(空白のメンバーを隠す) に設定できます。
+このリリースでは、 **[Hide Members]** (メンバーを隠す) プロパティが導入されました。 階層の **[Hide Members]** (メンバーを隠す) プロパティを **[Hide blank members]** (空白のメンバーを隠す) に設定できます。
 
 ![AS_Hide_Blank_Members](../analysis-services/media/as-hide-blank-members.png)
 
  >[!NOTE]
  > モデルの空白のメンバーは、空白の文字列ではなく DAX の空白値で表されます。
 
-**[Hide blank members]**(空白のメンバーを隠す) に設定し、モデルを展開すると、Excel のように、レポート クライアントに読みやすいバージョンの階層が表示されます。
+**[Hide blank members]** (空白のメンバーを隠す) に設定し、モデルを展開すると、Excel のように、レポート クライアントに読みやすいバージョンの階層が表示されます。
 
 ![AS_Non_Ragged_Hierarchy](../analysis-services/media/as-non-ragged-hierarchy.png)
 
@@ -111,7 +111,7 @@ SQL Server Data Tools (SSDT) を表形式モデルにデータ ソースから�
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 関数は、詳細行式でよく使用します。 次の例では、サンプル Adventure Works テーブル モデルの Internet Sales テーブルの行について返される列を定義しています。
+[SELECTCOLUMNS](/dax/selectcolumns-function-dax) DAX 関数は、詳細行式でよく使用します。 次の例では、サンプル Adventure Works テーブル モデルの Internet Sales テーブルの行について返される列を定義しています。
 
 ```
 SELECTCOLUMNS(
@@ -179,9 +179,9 @@ db.Update(UpdateOptions.ExpandFull);
 [MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)の向上は、この DMV には、メジャーの次元を表示するさまざまなクライアント ツールで使用されるために含まれています。 たとえば、Excel ピボット テーブルの探索機能により、ユーザーが選択されているメジャーに関連付けられたディメンションをクロス ドリルします。 このリリースでは、正しくない値が表示されていた以前基数の列を修正します。
 
 ## <a name="dax-enhancements"></a>DAX の機能強化
-このリリースには、新しい DAX 関数と機能のサポートが含まれています。 を利用するためには、最新バージョンの SSDT を使用する必要があります。 詳細についてを参照してください。[新しい DAX 関数](https://msdn.microsoft.com/library/mt704075.aspx)します。
+このリリースには、新しい DAX 関数と機能のサポートが含まれています。 を利用するためには、最新バージョンの SSDT を使用する必要があります。 詳細についてを参照してください。[新しい DAX 関数](/dax/new-dax-functions)します。
 
-DAX の新しい機能の最も重要な情報の 1 つでは、新しい[IN 演算子/関数の CONTAINSROW](https://msdn.microsoft.com/library/mt842621.aspx)の DAX 式。 これは、 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 句で複数の値を指定するために一般的に使用されている `WHERE` 演算子と似ています。
+DAX の新しい機能の最も重要な情報の 1 つでは、新しい[IN 演算子/関数の CONTAINSROW](/dax/in-operator-containsrow-function)の DAX 式。 これは、 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 句で複数の値を指定するために一般的に使用されている `WHERE` 演算子と似ています。
 
 以前は、次のメジャー式のように、論理 `OR` 演算子を使用して複数値フィルターを指定するのが一般的でした。
 
