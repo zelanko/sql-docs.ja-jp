@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1da8384bb51360178e1735d13f6c6b706e8b7ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659060"
 ---
 # <a name="verify-analysis-services-cumulative-update-build-version"></a>Analysis Services 累積更新プログラムのビルド バージョンの確認
@@ -31,7 +31,7 @@ SQL Server 2017 以降では、Analysis Services のビルド バージョン番
 3. **For SQL Server 2017 の累積的な更新 (#)** 記事で、**パッケージ情報の累積的な更新**セクションで、展開**累積更新プログラム パッケージのファイル情報**.
 4. **SQL Server 2017 Analysis Services**テーブル、ファイルのバージョンを確認してください、 **msmdsrv.exe**コンポーネント ファイル。 CU が適用されている場合、ファイルのバージョン番号は、コンピューターにインストールされている msmdsrv.exe ファイルと一致する必要があります。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [SQL Server サービス更新プログラムのインストール](../../database-engine/install-windows/install-sql-server-servicing-updates.md)  
 

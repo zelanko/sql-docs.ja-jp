@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6eb91bb43407311a58e495b5f9391186821d3a67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251426"
 ---
 # <a name="value-mdx"></a>Value (MDX)
@@ -53,7 +53,7 @@ SELECT {[Date].[Calendar].[July 1, 2001]} ON 0
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
  [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [Name&#40;MDX&#41;](../mdx/name-mdx.md)   

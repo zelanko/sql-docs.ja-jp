@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769068"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 式)
@@ -61,7 +61,7 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [EXP &#40;SSIS 式&#41;](exp-ssis-expression.md)   
  [LN &#40;SSIS 式&#41;](ln-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  

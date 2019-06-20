@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87aca78d68921b2f90cde68d52eff06df7044a4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832894"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 制御タスクのカスタム プロパティ
@@ -32,7 +32,7 @@ ms.locfileid: "62832894"
 |StateTable|String|CDC のコンテキスト状態が格納されているテーブルの名前を指定します。 このテーブルは、このコンポーネントに対して構成されている接続を使用してアクセスする必要があります。 このテーブルには、 **name** および **state**という名前の varchar 列が必要です ( **state** 列は少なくとも 256 文字であることが必要です)。<br /><br /> このプロパティは、 **AutomaticStatePersistence** を **true**に設定する場合のみ適用されます。|  
 |CommandTimeOut|整数 (integer)|この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信する際に使用されるタイムアウト (秒単位) を示します。 この値は、データベースからの応答時間が非常に遅い場合に使用されるため、既定値 (30 秒) では不十分です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC Control Task](cdc-control-task.md)   
  [CDC Control Task Editor](../cdc-control-task-editor.md)  
   

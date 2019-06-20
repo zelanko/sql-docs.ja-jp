@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481313"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>タスク 1:照合ポリシーを定義する
@@ -57,7 +57,7 @@ ms.locfileid: "65481313"
   
 12. 追加する 2 つ前の手順を繰り返して**Contact Email**を持つドメイン**30**の**重み**。  
   
-13. 注意して、**最小照合スコア**に設定されている**80%**、これは、値で参照してください、**全般**のタブ、**構成**のページ**DQS 管理**します。 このスコアは、しきい値より大きな値に増やすことだけができます。  
+13. 注意して、**最小照合スコア**に設定されている**80%** 、これは、値で参照してください、**全般**のタブ、**構成**のページ**DQS 管理**します。 このスコアは、しきい値より大きな値に増やすことだけができます。  
   
 14. 注意**重複するクラスター**オプションを選択します。 このオプションを使用すると、レコードを複数のクラスターに表示できます。 [重複しないクラスター] に設定を変更すると、共通のレコードを持つクラスターが 1 つのクラスターに結合されます。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "65481313"
 16. をクリックして**次**に切り替える、**照合結果**ページ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2:テストと一致するポリシーを公開](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [タスク 2: テストと一致するポリシーを公開](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   
