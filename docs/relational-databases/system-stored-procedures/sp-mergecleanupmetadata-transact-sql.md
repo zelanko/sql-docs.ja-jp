@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017848"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (TRANSACT-SQL)
@@ -39,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、すべてのパブリケーションのメタデータをクリーンアップします。 明示的に指定されている場合、パブリケーションが既に存在します。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、すべてのパブリケーションのメタデータをクリーンアップします。 明示的に指定されている場合、パブリケーションが既に存在します。  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` サブスクライバーを再初期化するかどうかを指定します。 *サブスクライバー*は**nvarchar (5)**、できる**TRUE**または**FALSE**、既定値は**TRUE**します。 場合**TRUE**サブスクリプションが再初期化のマークを付けます。 場合**FALSE**サブスクリプションが再初期化のマークされていません。  
+`[ @reinitialize_subscriber = ] 'subscriber'` サブスクライバーを再初期化するかどうかを指定します。 *サブスクライバー*は**nvarchar (5)** 、できる**TRUE**または**FALSE**、既定値は**TRUE**します。 場合**TRUE**サブスクリプションが再初期化のマークを付けます。 場合**FALSE**サブスクリプションが再初期化のマークされていません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  後**sp_mergecleanupmetadata**既定に格納されているメタデータが存在するパブリケーションのサブスクライバーのすべてのサブスクリプションで実行される**MSmerge_genhistory**、 **MSmerge_contents**と**MSmerge_tombstone**マークは、再初期化のサブスクライバーの保留中の変更は失われ、現在のスナップショットに不使用とマークされている場合は。  
 > 
 > [!NOTE]
->  かどうか、データベースに対する複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーションの保有期間を使用して (**@retention**=**0**)、実行中**sp_mergecleanupmetadata**クリーンアップ、マージ レプリケーション変更の追跡データベースのメタデータがありません。 このため、無期限のパブリケーション保有期間は注意して使用してください。  
+>  かどうか、データベースに対する複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーションの保有期間を使用して ( **@retention** =**0**)、実行中**sp_mergecleanupmetadata**クリーンアップ、マージ レプリケーション変更の追跡データベースのメタデータがありません。 このため、無期限のパブリケーション保有期間は注意して使用してください。  
   
- これを実行するストアド プロシージャをときに、サブスクライバーを再初期化を設定するかどうかを選択、 **@reinitialize_subscriber**パラメーターを**TRUE** (既定値) または**FALSE**. 場合**sp_mergecleanupmetadata**を実行すると、 **@reinitialize_subscriber**パラメーターに設定**TRUE**サブスクリプションがいた場合でも、サブスクライバーでスナップショットが再適用されます初期スナップショット (たとえば場合、スナップショット データとスキーマが手動で適用またはサブスクライバーに既に存在していた) なしで作成します。 パラメーターを設定する**FALSE**パブリケーションが再初期化されていない場合、パブリッシャーとサブスクライバーでデータが同期されていることを確認する必要がありますので注意が必要ですで使用する必要があります。  
+ これを実行するストアド プロシージャをときに、サブスクライバーを再初期化を設定するかどうかを選択、 **@reinitialize_subscriber** パラメーターを**TRUE** (既定値) または**FALSE**. 場合**sp_mergecleanupmetadata**を実行すると、 **@reinitialize_subscriber** パラメーターに設定**TRUE**サブスクリプションがいた場合でも、サブスクライバーでスナップショットが再適用されます初期スナップショット (たとえば場合、スナップショット データとスキーマが手動で適用またはサブスクライバーに既に存在していた) なしで作成します。 パラメーターを設定する**FALSE**パブリケーションが再初期化されていない場合、パブリッシャーとサブスクライバーでデータが同期されていることを確認する必要がありますので注意が必要ですで使用する必要があります。  
   
- 値に関係なく**@reinitialize_subscriber**、 **sp_mergecleanupmetadata**マージ パブリッシャーまたは再パブリッシュ サブスクライバーに変更をアップロードしようとしているプロセスを継続的ながある場合は失敗ストアド プロシージャが呼び出された時刻。  
+ 値に関係なく **@reinitialize_subscriber** 、 **sp_mergecleanupmetadata**マージ パブリッシャーまたは再パブリッシュ サブスクライバーに変更をアップロードしようとしているプロセスを継続的ながある場合は失敗ストアド プロシージャが呼び出された時刻。  
   
  **Sp_mergecleanupmetadata の実行@reinitialize_subscriber= TRUE:**  
   

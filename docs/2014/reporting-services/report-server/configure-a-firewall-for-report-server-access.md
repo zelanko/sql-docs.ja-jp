@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104160"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>レポート サーバー アクセスに対するファイアウォールの構成
@@ -39,15 +39,15 @@ ms.locfileid: "66104160"
   
 #### <a name="to-open-port-80-on-windows-7-windows-server-2008-r2-windows-server-2012-and-2012-r2"></a>Windows 7、Windows Server 2008 R2、Windows Server 2012 および 2012 R2 でポート 80 を開くには  
   
-1.  **[スタート]** メニューの **[コントロール パネル]** をクリックし、 **[システムとセキュリティ]**、 **[Windows ファイアウォール]** の順にクリックします。 コントロール パネルの表示方法が [カテゴリ] 以外の場合は、単に **[Windows ファイアウォール]** を選択するだけでかまいません。  
+1.  **[スタート]** メニューの **[コントロール パネル]** をクリックし、 **[システムとセキュリティ]** 、 **[Windows ファイアウォール]** の順にクリックします。 コントロール パネルの表示方法が [カテゴリ] 以外の場合は、単に **[Windows ファイアウォール]** を選択するだけでかまいません。  
   
 2.  **[詳細な設定]** をクリックします。  
   
-3.   **[受信の規則]** をクリックします。  
+3.  **[受信の規則]** をクリックします。  
   
 4.  **[操作]** ウィンドウで **[新しい規則]** をクリックします **。**  
   
-5.   **[ポート]** の **[規則の種類]** をクリックします。  
+5.  **[ポート]** の **[規則の種類]** をクリックします。  
   
 6.  **[次へ]** をクリックします。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66104160"
   
 13. **[次へ]** をクリックします。  
   
-14.  **[名前]** ページで、「**ReportServer (TCP on port 80)**」という名前を入力します。  
+14. **[名前]** ページで、「**ReportServer (TCP on port 80)** 」という名前を入力します。  
   
 15. **[完了]** をクリックします。  
   

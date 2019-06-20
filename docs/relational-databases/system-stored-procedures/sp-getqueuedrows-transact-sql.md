@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62500429"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
@@ -44,7 +44,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` サブスクリプションの所有者です。 *所有者*は**sysname**、既定値は NULL です。  
   
-`[ @tranid = ] 'transaction_id'` 出力をトランザクション ID でフィルター処理できます。 *transaction_id*は**nvarchar (70)**、既定値は NULL です。 指定した場合は、キューに登録されたコマンドに関連付けられたトランザクション ID が表示されます。 NULL の場合、キュー内のすべてのコマンドが表示されます。  
+`[ @tranid = ] 'transaction_id'` 出力をトランザクション ID でフィルター処理できます。 *transaction_id*は**nvarchar (70)** 、既定値は NULL です。 指定した場合は、キューに登録されたコマンドに関連付けられたトランザクション ID が表示されます。 NULL の場合、キュー内のすべてのコマンドが表示されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -67,7 +67,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="permissions"></a>アクセス許可  
  **sp_getqueuedrows**で指定されたテーブルに対する SELECT 権限が必要です*tablename*します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [キュー更新における競合の検出と解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

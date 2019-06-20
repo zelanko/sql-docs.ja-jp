@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989075"
 ---
 # <a name="filter-published-data"></a>パブリッシュされたデータのフィルター選択
@@ -131,7 +131,7 @@ ms.locfileid: "62989075"
   
  行フィルターは、データベース間で動作するようには設計されていません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(フィルターが実行される) `sp_replcmds` の実行が意図的にデータベース所有者 (`dbo`) に制限されています。 `dbo` には、データベース間の権限がありません。 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] に CDC (Change Data Capture) が追加されたことで、`sp_replcmds` のロジックは、ユーザーが戻って照会できる情報を変更追跡テーブルに設定します。 セキュリティ上の理由から、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]このロジックの実行を制限できるように、悪意のある`dbo`この実行パスを乗っ取ることができません。 たとえば、悪意のある `dbo` が CDC テーブルのトリガーを追加すると、その後、`sp_replcmds` を呼び出すユーザーのコンテキスト (この場合はログ リーダー エージェント) でテーブルが実行されます。  エージェントを実行しているアカウントの権限が高い場合、悪意のある `dbo` は自身の特権を引き上げます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データとデータベース オブジェクトのパブリッシュ](publish-data-and-database-objects.md)  
   
   

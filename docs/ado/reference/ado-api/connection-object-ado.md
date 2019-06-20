@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 701ced4f5e0ad511f4a1c5b39c9775e285d1f751
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695788"
 ---
 # <a name="connection-object-ado"></a>Connection オブジェクト (ADO)
@@ -64,7 +64,7 @@ ms.locfileid: "66695788"
 >  この機能を使用しない (でネイティブ メソッドがあるかのように、名前付きコマンドまたはストアド プロシージャを呼び出す、**接続**オブジェクト)、Microsoft® .NET Framework アプリケーションのため、機能の競合の基になる実装方法と、.NET Framework に com 相互運用します。  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>接続オブジェクトのネイティブ メソッドとしてコマンドを実行します。  
- コマンドを実行するコマンドを指定の名前を使用して、**コマンド**オブジェクト[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティ。 設定、 **ActiveConnection**のプロパティ、**コマンド**オブジェクトに接続します。 メソッドがあるかのように、コマンド名が使用されているステートメントを発行し、**接続**任意のパラメーターの前に、オブジェクトと**レコード セット**オブジェクトのかどうか、すべての行が返されます。 設定、 **Recordset**プロパティ、その結果をカスタマイズする**レコード セット**します。 例 :  
+ コマンドを実行するコマンドを指定の名前を使用して、**コマンド**オブジェクト[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティ。 設定、 **ActiveConnection**のプロパティ、**コマンド**オブジェクトに接続します。 メソッドがあるかのように、コマンド名が使用されているステートメントを発行し、**接続**任意のパラメーターの前に、オブジェクトと**レコード セット**オブジェクトのかどうか、すべての行が返されます。 設定、 **Recordset**プロパティ、その結果をカスタマイズする**レコード セット**します。 以下に例を示します。  
   
 ```  
 Dim cnn As New ADODB.Connection  

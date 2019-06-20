@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 622fa9e74ca4195363220f00dfa7dd7875f5ba47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109505"
 ---
 # <a name="data-alert-messages"></a>データ警告メッセージ
@@ -62,7 +62,7 @@ ms.locfileid: "66109505"
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   

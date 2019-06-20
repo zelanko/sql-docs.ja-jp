@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60b6b0387aea5475d74c314a10e4fa437fadc005
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62657662"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
@@ -34,7 +34,7 @@ ms.locfileid: "62657662"
 |**GetDescription**|エラー メッセージを説明する文字列を返します。|  
 |**GetGUID**|エラーを定義したインターフェイスの GUID を返します。|  
 |**GetHelpContext**|サポートされていません。 常に 0 を返します。|  
-|**GetHelpFile**|サポートされていません。 常に NULL を返します。|  
+|**GetHelpFile**|サポートされていません。 常に NULL が返されます。|  
 |**GetSource**|文字列 "Microsoft SQL Server Native Client" を返します。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コンシューマーが使用できるサポート**IErrorRecords**メンバー関数を次のようにします。  

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619585"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
@@ -94,7 +94,7 @@ ms.locfileid: "65619585"
 -   圧縮されたバックアップから復元するときに、次のエラーが表示される場合があります。  
   
     -   **SqlException 3284 が発生しました。重大度:16、状態:5**  
-        **デバイス上のファイルマークをメッセージ 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' が無効です。バックアップ セットの作成に使用される同じブロック サイズでは、Restore ステートメント再実行してください。使用可能な値をなどの '65536' です。**  
+        **デバイス上のファイルマークをメッセージ 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' が無効です。バックアップ セットの作成に使用される同じブロック サイズでは、Restore ステートメント再実行してください。使用可能な値をなどの '65536' です。**  
   
          このエラーを解決するには、`BACKUP` を指定した `BLOCKSIZE = 65536` ステートメントを再実行してください。  
   
@@ -117,15 +117,15 @@ ms.locfileid: "65619585"
   
  プロキシ サーバーで、1 分あたりの接続数を制限する設定が使用されている場合があります。 Backup to URL プロセスはマルチスレッド プロセスであるため、この制限を超える可能性があります。 制限を超えた場合、プロキシ サーバーは接続を切断します。 この問題を解決するには、プロキシ設定を変更し、SQL Server がプロキシを使用しないようにします。   エラー ログに表示される可能性のある種類またはエラー メッセージの例を次に示します。  
   
--   上の書き込み"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"が失敗しました。Backup to URL は、リモート エンドポイントから例外を受け取りました。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続が閉じられました。  
+-   上の書き込み"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak "が失敗しました。Backup to URL は、リモート エンドポイントから例外を受け取りました。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続が閉じられました。  
   
--   ファイル "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" で回復できない I/O エラーが発生しました。リモート エンドポイントからエラーを収集できませんでした。  
+-   ファイル "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " で回復できない I/O エラーが発生しました。リモート エンドポイントからエラーを収集できませんでした。  
   
      メッセージ 3013、レベル 16、状態 1、行 2  
   
      バックアップ データベースが異常終了しています。  
   
--   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイス 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続が閉じられました。  
+-   BackupIoRequest::ReportIoError::reportioerror: バックアップ デバイス 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '。 Backup to URL がリモート エンドポイントから例外を受け取ったオペレーティング システム エラーです。 例外メッセージ:トランスポート接続からデータを読み取ることができません。接続が閉じられました。  
   
  トレース フラグ 3051 を使用して詳細ログを有効にすると、ログに次のメッセージが表示される場合もあります。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619585"
   
  **選択されていない既定のプロキシ設定:**  
   
- 既定の設定が選択されていないことが原因で、次のようなプロキシ認証エラーが発生する場合があります。*"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" ファイルで回復できない I/O エラーが発生しました: Backup to URL がリモート エンドポイントから例外を受け取りました。例外メッセージ:リモート サーバーがエラーを返しました: (407)* **プロキシ認証のために必要な**します。  
+ 既定の設定が選択されていないことが原因で、次のようなプロキシ認証エラーが発生する場合があります。 *"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " ファイルで回復できない I/O エラーが発生しました: Backup to URL がリモート エンドポイントから例外を受け取りました。例外メッセージ:リモート サーバーがエラーを返しました: (407)* **プロキシ認証のために必要な**します。  
   
  この問題を解決するには、次の手順に従って、Backup to URL プロセスで既定のプロキシ設定を使用できるようにするための構成ファイルを作成します。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "65619585"
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Windows Azure への SQL Server マネージド バックアップのトラブルシューティング  
  SQL Server マネージド バックアップは Backup to URL の上に構築されるので、前のセクションで説明したトラブルシューティングのヒントは、SQL Server マネージド バックアップを使用するデータベースまたはインスタンスに適用されます。  SQL Server Managed Backup to Windows Azure のトラブルシューティングに関する情報がで詳しく説明されている[トラブルシューティング SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Windows Azure に格納されたバックアップからの復元](restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

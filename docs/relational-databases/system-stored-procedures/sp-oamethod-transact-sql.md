@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450109"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
   
  出力パラメーターの戻り値を取得する*パラメーター*適切なデータ型のローカル変数にする必要がありますと**出力**指定する必要があります。 定数パラメーターが指定されている場合、または場合**出力**が指定されていない、戻り値出力パラメーターからは無視されます。  
   
- 指定した場合*parametername*の名前を指定する必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]名前付きパラメーター。 なお**@**_parametername_is されません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ローカル変数。 アット マーク (**@**) が削除されると*parametername*パラメーター名として OLE オブジェクトに渡されます。 すべての名前付きのパラメーターは、位置で決まるパラメーターをすべて指定した後で指定する必要があります。  
+ 指定した場合*parametername*の名前を指定する必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]名前付きパラメーター。 なお **@** _parametername_is されません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ローカル変数。 アット マーク ( **@** ) が削除されると*parametername*パラメーター名として OLE オブジェクトに渡されます。 すべての名前付きのパラメーターは、位置で決まるパラメーターをすべて指定した後で指定する必要があります。  
   
  *n*  
  複数のパラメーターを指定できることを示すプレース ホルダーです。  

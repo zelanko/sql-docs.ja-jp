@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b72d0a263010cc82abab38ea2d6149d3492ed7b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108940"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
@@ -63,7 +63,7 @@ ms.locfileid: "66108940"
 |HTTP.SYS の URL 予約|[URL]|説明|  
 |---------------------------------|---------|-----------------|  
 |http://+:80/reportserver|http://\<computername>/reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|この URL 予約では、ポート 80 でワイルドカード (+) を指定しています。 これにより、ポート 80 のレポート サーバー コンピューターに解決されるホストが指定されているすべての受信要求がレポート サーバー キューに送られます。 この URL 予約を使用すると、任意の数の URL を使用してレポート サーバーにアクセスできます。<br /><br /> ほとんどのオペレーティング システムでは、これが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの既定の URL 予約です。|  
-|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL の予約 http:// でレポート サーバーへの要求\<computername >/reportserver または http://localhost/reportserverは失敗します。|  
+|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL の予約 http:// でレポート サーバーへの要求\<computername >/reportserver または http://localhost/reportserver は失敗します。|  
   
 ##  <a name="DefaultURLs"></a> 既定の URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールすると、レポート サーバー Web サービスとレポート マネージャーの URL が自動的に予約されます。 これらの既定値は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL 予約を定義するときにも使用できます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] をインストールした場合や、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を名前付きインスタンスとしてインストールした場合は、既定の URL にインスタンス名が含まれます。  
@@ -115,7 +115,7 @@ ms.locfileid: "66108940"
   
 -   SharePoint 製品およびテクノロジでも URL 予約が定義されていますが、サーバーへのパブリッシュの際にはそれらを無視できます。 SharePoint Web アプリケーションの URL 予約は内部操作です。  
   
--   使用することはできません、統合レポート サーバーと SharePoint テクノロジのインスタンスが同じコンピューターにインストールされている 1 台のサーバー展開の場合、 http://localhost/reportserverします。 場合 http://localhostは、SharePoint Web アプリケーションにアクセスするために使用する必要がありますまたは使用する既定以外の Web サイトの一意のポートの割り当てをレポート サーバーにアクセスします。 さらに、レポート サーバーが SharePoint ファームと統合されている場合は、リモート コンピューターにインストールされている配置内のノードではレポート サーバーへの localhost アクセスは解決されません。  
+-   使用することはできません、統合レポート サーバーと SharePoint テクノロジのインスタンスが同じコンピューターにインストールされている 1 台のサーバー展開の場合、 http://localhost/reportserver します。 場合 http://localhost は、SharePoint Web アプリケーションにアクセスするために使用する必要がありますまたは使用する既定以外の Web サイトの一意のポートの割り当てをレポート サーバーにアクセスします。 さらに、レポート サーバーが SharePoint ファームと統合されている場合は、リモート コンピューターにインストールされている配置内のノードではレポート サーバーへの localhost アクセスは解決されません。  
   
 -   レポート マネージャーの URL 予約と URL エンドポイントは、SharePoint 統合モードで実行されているレポート サーバーに対しては構成できません。 構成した場合、SharePoint 統合モードでレポート サーバーを配置した後で機能しなくなります。 レポート マネージャーは SharePoint 統合モードではサポートされません。  
   

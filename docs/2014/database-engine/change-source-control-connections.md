@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812791"
 ---
 # <a name="change-source-control-connections"></a>ソース管理接続の変更
@@ -33,7 +33,7 @@ ms.locfileid: "62812791"
   
 1.  **ファイル**メニューで、**ソース管理**、 をクリックし、**起動 Microsoft Visual SourceSafe**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)   
  [ソース管理オプションを設定します。](../../2014/database-engine/set-source-control-options.md)   
  [ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)  

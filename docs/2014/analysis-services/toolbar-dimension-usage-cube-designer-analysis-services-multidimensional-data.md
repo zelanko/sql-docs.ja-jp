@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4205cc3a99e5ce5fb9e4309813531a451e7bd92
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066016"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [ディメンションの使用法] タブ) (Analysis Services - 多次元データ)
-  ツール バー ペインを使用すると、キューブ デザイナーの **[ディメンションの使用法]** タブでキューブ **ディメンションの追加**やキューブの処理などの一般的な操作を実行できます。   
+  ツール バー ペインを使用すると、キューブ デザイナーの **[ディメンションの使用法]** タブでキューブ **ディメンションの追加**やキューブの処理などの一般的な操作を実行できます。  
   
 ## <a name="options"></a>および  
   

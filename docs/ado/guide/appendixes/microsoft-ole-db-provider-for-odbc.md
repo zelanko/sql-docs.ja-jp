@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701331"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
@@ -203,26 +203,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|はい|[はい]|[はい]|はい|
 |[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|[はい]|[はい]|はい|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|はい|[はい]|[はい]|はい|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|はい|[はい]|[はい]|はい|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|はい|[はい]|[はい]|[はい]|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|はい|[はい]|[はい]|[はい]|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|いいえ|いいえ|はい|はい|
 |[Close](../../../ado/reference/ado-api/close-method-ado.md)|はい|[はい]|[はい]|はい|
 |[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|[はい]|[はい]|はい|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|[はい]|[はい]|[はい]|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|[はい]|[はい]|はい|
 |[Move](../../../ado/reference/ado-api/move-method-ado.md)|はい|[はい]|[はい]|はい|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|[はい]|[はい]|はい|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|[はい]|はい|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|[はい]|[はい]|はい|
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|[はい]|はい|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|はい|[はい]|[はい]|はい|
-|[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[はい]|[はい]|[はい]|はい|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|[はい]|[はい]|はい|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|[はい]|[はい]|[はい]|[はい]|
+|[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|[はい]|[はい]|はい|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|[はい]|[はい]|[はい]|
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|いいえ|いいえ|はい|はい|
-|[Supports](../../../ado/reference/ado-api/supports-method.md)|[はい]|[はい]|[はい]|はい|
-|[Update](../../../ado/reference/ado-api/update-method.md)|[はい]|[はい]|[はい]|はい|
+|[Supports](../../../ado/reference/ado-api/supports-method.md)|はい|[はい]|[はい]|はい|
+|[Update](../../../ado/reference/ado-api/update-method.md)|はい|[はい]|[はい]|はい|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|はい|[はい]|[はい]|はい|
 
- * Microsoft Access データベースはサポートされていません。
+ \* Microsoft Access データベースはサポートされていません。
 
 ## <a name="dynamic-properties"></a>動的プロパティ
  Microsoft OLE DB Provider for ODBC にいくつかの動的プロパティの挿入、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。

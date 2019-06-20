@@ -12,10 +12,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
 ms.openlocfilehash: 8f5b935636c4d00f39324e4a343419e3da68284b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108576"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 製品用 Reporting Services アドインの検索場所
@@ -41,9 +41,9 @@ SharePoint 製品およびテクノロジ (rsSharePoint.msi) 用 [!INCLUDE[msCoN
   
  アドインをダウンロードしてインストールするには、以下の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターを参照してください。  
   
--   **SP1 アドイン:**[Microsoft® SQL Server® 2012 SP1 Reporting Services アドインの Microsoft® SharePoint® 用](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583)します。  
+-   **SP1 アドイン:** [Microsoft® SQL Server® 2012 SP1 Reporting Services アドインの Microsoft® SharePoint® 用](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583) します。  
   
--   **SP 1:**[Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906)します。  
+-   **SP 1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906) します。  
   
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 製品用 Reporting Services アドイン  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースから、アドインは [機能の選択] ページで SQL Server インストール ウィザードの一部としてインストールできるようになりました。 アドインを別途ダウンロードしてインストールする場合、このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft® SharePoint® テクノロジ 2010 用 Microsoft® SQL Server® 2012 Reporting Services アドイン](https://go.microsoft.com/fwlink/?LinkID=207242) 」ページからオンラインで入手できます。  

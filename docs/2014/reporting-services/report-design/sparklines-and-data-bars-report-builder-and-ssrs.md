@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28b981dfe725a42228f287bc7a02df836030f3d0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104963"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バー (レポート ビルダーおよび SSRS)
@@ -107,4 +107,4 @@ ms.locfileid: "66104963"
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [チュートリアル: レポートにスパーク ラインを追加&#40;レポート ビルダー&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [スパーク ライン、横棒グラフ、およびレポート ビルダー (ビデオ) インジケーター](https://technet.microsoft.com/bi/video/ff877165)   
- [方法: (ビデオ) テーブルにスパーク ラインを作成します。](https://go.microsoft.com/fwlink/?LinkId=197092)  
+ [方法:(ビデオ) テーブルにスパーク ラインを作成します。](https://go.microsoft.com/fwlink/?LinkId=197092)  

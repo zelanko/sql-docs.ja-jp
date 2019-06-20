@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269894"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>クエリ結果のコピー (Visual Database Tools)
@@ -50,7 +50,7 @@ ms.locfileid: "63269894"
   
 5.  右クリックして **[コピー]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結果ペインのデータの操作 (Visual Database Tools)](visual-database-tools.md)  
   
   

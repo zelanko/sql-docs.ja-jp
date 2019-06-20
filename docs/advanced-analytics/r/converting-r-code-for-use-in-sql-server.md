@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: a3348058b03ff1441256cc8298ddc1b5b2216b0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642785"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server (In-database) のインスタンスで実行される R コードを変換します。
@@ -26,7 +26,7 @@ R Studio または別の環境から SQL Server に R コードを移動する�
 
 + ネットワークにアクセスするか、SQL Server をインストールすることはできません、R ライブラリを使用するとします。
 + コードは、Excel ワークシート、共有のファイルおよびその他のデータベースなど、SQL Server の外部データ ソースに個別の呼び出しです。 
-+ コードを実行する、 *@script*パラメーターの[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)もストアド プロシージャをパラメーター化します。
++ コードを実行する、 *@script* パラメーターの[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)もストアド プロシージャをパラメーター化します。
 + 元のソリューションには、データの準備やトレーニング、スコア付け、またはレポート モデルと特徴エンジニア リングなど、独立して実行する場合は、運用環境でより効率的になる可能性がある複数のステップが含まれています。
 + 強化するライブラリを変更する、並列実行を使用して、または SQL Server にいくつかの処理をオフロードしてパフォーマンスを最適化します。 
 

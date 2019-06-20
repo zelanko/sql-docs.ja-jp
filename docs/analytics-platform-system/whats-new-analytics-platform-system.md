@@ -10,10 +10,10 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175050"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System、スケール アウトの MPP データ ウェアハウスの新機能新機能
@@ -28,7 +28,7 @@ ms.locfileid: "66175050"
 APS CU7.4 以降、お客様は 32 KB (32,768 バイト) よりも大きいテーブルに行を読み込む新しい dwloader を使用できるようになります。 新しい dwloader は 32768 バイト単位で 33554432 までの整数値を 32 KB を超える行を読み込むには、-l スイッチをサポートします。 このオプションは、このスイッチは、クライアントとサーバーでより多くのメモリを割り当てるし、読み込みが低下する可能性があります (32 KB より大きい) サイズの大きい行を読み込むときにのみ使用します。 新しい dwloader をダウンロードする[ダウンロード サイト](https://www.microsoft.com/download/details.aspx?id=57472)します。  
 
 ### <a name="hdp-30-and-31-support-with-polybase"></a>HDP 3.0 と PolyBase を使用した 3.1 のサポート
-AP 上の PolyBase は、HDP 3.0 と 3.1 では、この更新プログラムをサポートします。 3.x の HDP バージョンには、オプション 7 を使用します。 詳細については、次を参照してください。 [PolyBase 接続](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql)ページ。
+AP 上の PolyBase は、HDP 3.0 と 3.1 では、この更新プログラムをサポートします。 3\.x の HDP バージョンには、オプション 7 を使用します。 詳細については、次を参照してください。 [PolyBase 接続](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql)ページ。
 
 ### <a name="utf16-file-support-with-polybase"></a>PolyBase を使用した UTF16 ファイルのサポート
 PolyBase は、UTF16 (LE) がエンコードされている区切りテキスト ファイルの読み取りをサポートします。 参照してください[外部ファイル形式を作成する](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql)セットアップの詳細について。 

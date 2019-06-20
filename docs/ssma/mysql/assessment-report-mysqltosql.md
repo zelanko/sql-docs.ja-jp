@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 72b6171864c0ab801e89d3eba5a19ff61031a81e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253288"
 ---
 # <a name="assessment-report-mysqltosql"></a>評価レポート (MySQLToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "63253288"
   
 |||  
 |-|-|  
-|**項目**|**[定義]**|  
+|**項目**|**定義**|  
 |**変換の統計情報**|ステートメントの種類別の変換の統計を示します。 このウィンドウが表示されるは、スキーマなどのグループ オブジェクトまたは左側のウィンドウでコードがないオブジェクトを選択します。|  
 |**カテゴリ別のオブジェクト**|カテゴリ別のオブジェクトの数を示します。 このウィンドウが表示されるは、スキーマなどのグループ オブジェクト場合にのみまたは左側のウィンドウでコードがないオブジェクトを選択します。|  
 |**統計**|選択したオブジェクトの変換の統計情報を示します。 このペインは、コードの個々 のオブジェクトが左側のウィンドウで選択したときにだけ表示されます。 展開する必要があります**統計**をすぐに、**ソース**ウィンドウで、このウィンドウを表示します。|  

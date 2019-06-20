@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fa59ef399b9c63b765825fea37eca6428099c83c
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699344"
 ---
 # <a name="running-the-address-book-sample-application"></a>アドレス帳のサンプル アプリケーションの実行
@@ -42,7 +42,7 @@ ms.locfileid: "66699344"
   
 3.  「プログラム マネージャー」というタイトルのすべてのユーザーの一覧を表示する自分の電子メール名に基づく人を検索または編集の既存のレコードなど、アドレス帳のサンプル アプリケーションでさまざまなシナリオを試行できます。 クリックして**検索**データ グリッドを使用可能なすべての名前を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アドレス帳のデータ バインディング オブジェクト](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

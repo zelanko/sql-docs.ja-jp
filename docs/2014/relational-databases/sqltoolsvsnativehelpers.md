@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 992f8288018fb248b14db13b2ed1104aeecab04d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63285568"
 ---
 # <a name="sqltoolsvsnativehelpers"></a>SqlToolsVSNativeHelpers
@@ -30,7 +30,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID /*lpReserved*/)
 ## <a name="return-value"></a>戻り値  
  ブール値。DLL エントリ ポイントが適切に初期化されている場合は `True`、それ以外の場合は `False` です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)  
   
   

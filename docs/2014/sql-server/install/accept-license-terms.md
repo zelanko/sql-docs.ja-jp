@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096834"
 ---
 # <a name="accept-license-terms"></a>使用許諾条件への同意
@@ -99,9 +99,9 @@ ms.locfileid: "66096834"
   
  エラー レポートを有効にしている場合に重大なエラーが発生すると、そのエラーに関する [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事を示す [!INCLUDE[msCoName](../../includes/msconame-md.md)] からの応答が Windows イベント ログに表示されることがあります。  
   
- セットアップが完了した後で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とそのコンポーネントのすべてのインスタンスについて、エラー レポートと機能の使用状況レポートを無効にするには、**[エラーと使用状況レポートの設定]** ダイアログ ボックスで、**機能の使用状況レポート**のチェック ボックスをオフにします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のコンポーネント ([!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および共有コンポーネント) で**エラー レポート**が有効になっている場合は、エラー レポート機能を 1 つのコンポーネントのインスタンスごとに無効にできます。さらに、**[その他]** と表示されている共有コンポーネントも無効にすることができます。  
+ セットアップが完了した後で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とそのコンポーネントのすべてのインスタンスについて、エラー レポートと機能の使用状況レポートを無効にするには、 **[エラーと使用状況レポートの設定]** ダイアログ ボックスで、**機能の使用状況レポート**のチェック ボックスをオフにします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のコンポーネント ([!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、および共有コンポーネント) で**エラー レポート**が有効になっている場合は、エラー レポート機能を 1 つのコンポーネントのインスタンスごとに無効にできます。さらに、 **[その他]** と表示されている共有コンポーネントも無効にすることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server の使用許諾条件について](../../../2014/getting-started/about-the-sql-server-license-terms.md)  
   
   

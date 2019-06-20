@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779009"
 ---
 # <a name="get-dialog-box-source-control"></a>[取得] ダイアログ ボックス ([ソース管理])
@@ -55,7 +55,7 @@ ms.locfileid: "62779009"
  **ツリー ビュー**  
  取得する項目のフォルダーおよびファイル階層を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ファイルを取得します。](../../2014/database-engine/retrieve-files.md)   
  [ソリューション エクスプローラーのソース管理](../../2014/database-engine/solution-explorer-source-control.md)  
   

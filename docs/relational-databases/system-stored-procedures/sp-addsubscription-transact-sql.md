@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998307"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (TRANSACT-SQL)
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|サブスクリプションを初期化する必要があります。 場合、このオプションが設定の値*sync_type*は自動です。|  
   
  [ @subscription_type=] '*subscription_type*'  
- サブスクリプションの種類です。 *subscription_type*は**nvarchar (4)**、既定値は push です。 push または pull に設定できます。 プッシュ サブスクリプションのディストリビューション エージェントがディストリビューターに存在し、プル サブスクリプションのディストリビューション エージェントはサブスクライバーに存在します。 *subscription_type*プル、パブリッシャーにとって既知名前付きプル サブスクリプションを作成することができます。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」をご覧ください。  
+ サブスクリプションの種類です。 *subscription_type*は**nvarchar (4)** 、既定値は push です。 push または pull に設定できます。 プッシュ サブスクリプションのディストリビューション エージェントがディストリビューターに存在し、プル サブスクリプションのディストリビューション エージェントはサブスクライバーに存在します。 *subscription_type*プル、パブリッシャーにとって既知名前付きプル サブスクリプションを作成することができます。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」をご覧ください。  
   
 > [!NOTE]  
 >  匿名サブスクリプションは、このストアド プロシージャを使用する必要はありません。  
   
  [ @update_mode=] '*update_mode*'  
- 更新プログラムの種類です。*update_mode*は**nvarchar (30)**、これらの値のいずれかを指定できます。  
+ 更新プログラムの種類です。*update_mode*は**nvarchar (30)** 、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -130,7 +130,7 @@ sp_addsubscription [ @publication = ] 'publication'
  値 synctran および queued tran は使用できないことにサブスクライブされるパブリケーションが DTS を許可する場合に注意してください。  
   
  [ @loopback_detection=] '*loopback_detection*'  
- ディストリビューション エージェントがサブスクライバーに戻す、サブスクライバーで発生したトランザクションを送信するかどうかを指定します。 *loopback_detection*は**nvarchar (5)**、これらの値のいずれかを指定できます。  
+ ディストリビューション エージェントがサブスクライバーに戻す、サブスクライバーで発生したトランザクションを送信するかどうかを指定します。 *loopback_detection*は**nvarchar (5)** 、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -162,7 +162,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |1|First|  
 |2|第 2 週|  
-|4|第 3 週|  
+|4|サードパーティ|  
 |8|4 番目|  
 |16|Last|  
 |NULL (既定値)||  
@@ -197,13 +197,13 @@ sp_addsubscription [ @publication = ] 'publication'
  ディストリビューション エージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は NULL です。  
   
  [ @optional_command_line=] '*optional_command_line*'  
- 省略可能なコマンド プロンプトが実行されます。 *optional_command_line*は**nvarchar (4000)**、既定値は NULL です。  
+ 省略可能なコマンド プロンプトが実行されます。 *optional_command_line*は**nvarchar (4000)** 、既定値は NULL です。  
   
  [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- サブスクリプションを介した同期が可能かどうかは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 False の場合、サブスクリプションは Windows 同期マネージャーに登録されていません。 true の場合、サブスクリプションは Windows 同期マネージャーに登録され、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を起動せずに同期させることができます。 Oracle パブリッシャーに対してはサポートされていません。  
+ サブスクリプションを介した同期が可能かどうかは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)** 、既定値は FALSE。 False の場合、サブスクリプションは Windows 同期マネージャーに登録されていません。 true の場合、サブスクリプションは Windows 同期マネージャーに登録され、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を起動せずに同期させることができます。 Oracle パブリッシャーに対してはサポートされていません。  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
  エージェントをリモートから起動できることを指定します。 *remote_agent_activation*は**ビット**既定値は 0。  
@@ -224,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  場合は、パスワードを指定する必要があります*dts_package_name*を指定します。  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は DISTRIBUTOR です。 パッケージの場所としては、distributor または subscriber を指定できます。  
+ パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)** 、既定値は DISTRIBUTOR です。 パッケージの場所としては、distributor または subscriber を指定できます。  
   
  [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *パブリッシャー*を指定しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
  [ @backupdevicetype= ] '*backupdevicetype*'  
- バックアップからサブスクライバーを初期化する際に使用するバックアップ デバイスの種類を指定します。 *backupdevicetype*は**nvarchar (20)**、これらの値のいずれかを指定できます。  
+ バックアップからサブスクライバーを初期化する際に使用するバックアップ デバイスの種類を指定します。 *backupdevicetype*は**nvarchar (20)** 、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype*場合のみ使用*sync_method*initialize_with_backup に設定されます。  
   
  [ @backupdevicename= ] '*backupdevicename*'  
- バックアップからサブスクライバーを初期化する際に使用するデバイスの名前を指定します。 *backupdevicename*は**nvarchar (1000)**、既定値は NULL です。  
+ バックアップからサブスクライバーを初期化する際に使用するデバイスの名前を指定します。 *backupdevicename*は**nvarchar (1000)** 、既定値は NULL です。  
   
  [ @mediapassword= ] '*mediapassword*'  
  メディア セットのパスワードを指定します (メディアをフォーマットしたときにパスワードを設定した場合)。 *mediapassword*は**sysname**既定値は NULL です。  

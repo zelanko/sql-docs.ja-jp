@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7d7ab8fee8dfb9aabd32922d297f61ae493a5bd0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480915"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>参照データ (外部) のナレッジを使用したデータのクレンジング
@@ -54,7 +54,7 @@ ms.locfileid: "65480915"
   
 1.  データ品質プロジェクトを作成し、 **[クレンジング]** アクティビティを選択します。 「 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)」を参照してください。  
   
-2.  **[マップ]** ページで、**Address Line**、**City**、**State**、および **Zip** の 4 つのドメインをソース データの適切な列にマップします。 **[次へ]** をクリックします。  
+2.  **[マップ]** ページで、**Address Line**、**City**、**State**、および **Zip** の 4 つのドメインをソース データの適切な列にマップします。 [**次へ**] をクリックします。  
   
     > [!NOTE]  
     >  **Address Verification** 複合ドメイン内の 4 つのドメインをすべてマップしているため、データ クレンジングは、個々のドメイン レベルではなく、複合ドメイン レベルで実行されます。  

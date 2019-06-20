@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108412"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループ化と集計 (Reporting Services) を追加します。
@@ -40,13 +40,13 @@ ms.locfileid: "66108412"
   
 2.  表示されない場合、**行グループ**ウィンドウがデザイン サーフェイスを右クリックし、クリックして**ビュー**順にクリックします**グループ化**します。  
   
-3.  **レポート データ**ウィンドウで、ドラッグ、`Date`フィールドを**行グループ**ウィンドウ。 **(詳細)** 行の上に配置します。  
+3.  **[レポート データ]** ウィンドウから、`Date` フィールドを **[行グループ]** ウィンドウにドラッグします。 **(詳細)** 行の上に配置します。  
   
      グループを示す角かっこが行ハンドルに表示されます。 テーブルにも 2 つの日付列が表示されます (点線の両側に 1 つずつ)。  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  **レポート データ**ウィンドウで、ドラッグ、`Order`フィールドを**行グループ**ウィンドウ。 **(詳細)** の上、Date の下に配置します。  
+4.  **[レポート データ]** ウィンドウから、`Order` フィールドを **[行グループ]** ウィンドウにドラッグします。 **(詳細)** の上、Date の下に配置します。  
   
      2 つのグループを示す 2 個の角かっこが行ハンドルに表示されます。 テーブルに 2 つ`Order`列、すぎます。  
   

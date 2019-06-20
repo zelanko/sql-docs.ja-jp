@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6b354cbb09a61e5fdd2444afaff0e6c8e0bb5b7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106908"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>グラフへの枠線の追加 (レポート ビルダーおよび SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66106908"
 4.  (省略可) グラフの周囲に外枠として描く線の色を指定します。  
   
     > [!NOTE]  
-    >  **[線の色]** ボックスの一覧には一般的な色が含まれています。 他の色を選択するには、一覧の **[その他の色]** をクリックし、一覧の横にある式 (**[fx]**) ボタンをクリックして **[式]** エディターを表示します。  
+    >  **[線の色]** ボックスの一覧には一般的な色が含まれています。 他の色を選択するには、一覧の **[その他の色]** をクリックし、一覧の横にある式 ( **[fx]** ) ボタンをクリックして **[式]** エディターを表示します。  
   
 5.  (省略可) 罫線の幅を指定します。 有効な値は 0.25pt から 20pt までです。 優れた視覚効果を得るには、罫線のサイズを 1pt から 3pt までの間に維持することを検討してください。  
   

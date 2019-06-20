@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922133"
 ---
 # <a name="copy-only-backups-sql-server"></a>コピーのみのバックアップ (SQL Server)
@@ -45,21 +45,21 @@ ms.locfileid: "62922133"
   
 ###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-1.  **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページで、**[バックアップのみコピーする]** オプションを選択します。  
+1.  **[データベースのバックアップ]** ダイアログ ボックスの **[全般]** ページで、 **[バックアップのみコピーする]** オプションを選択します。  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  必須の [!INCLUDE[tsql](../../../includes/tsql-md.md)] 構文は次のとおりです。  
   
 -   コピーのみの完全バックアップの場合:  
   
-     データベースのバックアップ*database_name* TO \<backup_device*>* .WITH COPY_ONLY.  
+     データベースのバックアップ*database_name* TO \<backup_device *>* .WITH COPY_ONLY.  
   
     > [!NOTE]  
     >  COPY_ONLY は、DIFFERENTIAL オプションと共に指定した場合には機能しません。  
   
 -   コピーのみのログ バックアップの場合:  
   
-     BACKUP LOG *database_name* TO *\<* backup_device*>* .WITH COPY_ONLY.  
+     BACKUP LOG *database_name* TO *\<* backup_device *>* .WITH COPY_ONLY.  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62922133"
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [バックアップと復元によるデータベースのコピー](../databases/copy-databases-with-backup-and-restore.md)   

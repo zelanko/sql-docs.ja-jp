@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049525"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>クラスター クォーラムの NodeWeight の設定の構成
   このトピックでは、Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のメンバー ノードに NodeWeight 設定を構成する方法について説明します。 NodeWeight 設定は、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのディザスター リカバリーとマルチサブネットのシナリオをサポートするためのクォーラムの投票時に使用されます。  
   
--   **開始前の準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
+-   **開始前の準備: **[前提条件](#Prerequisites)、[セキュリティ](#Security)  
   
--   **クォーラムの NodeWeight 設定を表示する方法:** [Powershell を使用して](#PowerShellProcedure)、 [Cluster.exe の使用](#CommandPromptProcedure)  
+-   **クォーラムの NodeWeight 設定を表示する方法: **[Powershell を使用して](#PowerShellProcedure)、 [Cluster.exe の使用](#CommandPromptProcedure)  
   
 -   [関連コンテンツ](#RelatedContent)  
   

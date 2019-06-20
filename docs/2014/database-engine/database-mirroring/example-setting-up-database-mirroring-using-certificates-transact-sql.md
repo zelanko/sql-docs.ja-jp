@@ -1,5 +1,5 @@
 ---
-title: 例:データベース ミラーリング (TRANSACT-SQL) を使用して証明書を設定する |Microsoft Docs
+title: 例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806753"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL)
@@ -257,7 +257,7 @@ ms.locfileid: "62806753"
     ```  
   
     > [!NOTE]  
-    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、FULL (既定の設定) にトランザクションの安全性設定をそのまま使用し、2 番目の SET PARTNER を実行した後、できるだけ早く、ミラーリング監視サーバーを追加 **'*`partner_server`*'** ステートメント。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
+    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、FULL (既定の設定) にトランザクションの安全性設定をそのまま使用し、2 番目の SET PARTNER を実行した後、できるだけ早く、ミラーリング監視サーバーを追加 **' *`partner_server`* '** ステートメント。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   

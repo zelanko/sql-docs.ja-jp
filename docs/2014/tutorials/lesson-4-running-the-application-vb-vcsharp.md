@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137480"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>レッスン 4:アプリケーションを実行する (VB -VC#)
@@ -43,7 +43,7 @@ ms.locfileid: "63137480"
   
 2.  GetPropertiesSample を閉じるには、何らかのキーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties%2A>   
  [Visual Basic または Visual C を使用してレポート サーバー Web サービスにアクセスする&#35; &#40;SSRS チュートリアル&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273019"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>プロジェクトの設定 (変換) (DB2ToSQL)
@@ -99,7 +99,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句の後に、式に式を変�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** はい  
+**既定/オプティミスティック/フル モード:** [はい]  
   
 ### <a name="convert-count-function-to-countbig"></a>COUNT 関数を COUNT_BIG に変換します。  
 かどうか、COUNT 関数が返す値の 2,147, 483,647 を超える可能性がありますです 2<sup>31</sup>-1、COUNT_BIG 関数に変換する必要があります。  
@@ -125,7 +125,7 @@ SSMA が PL/SQL コレクションの要素で FORALL ループを処理する�
   
 **既定/オプティミスティック モード:** いいえ  
   
-**フル モード:** はい  
+**フル モード:** [はい]  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>ある列の参照操作を NULL に設定された外部キーの変換は NOT NULL します。  
 DB2 を NULL に設定アクションを実行できませんでした可能性があります参照先の列で null 値が許可されていないため、外部キー制約を作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このような外部キーの構成は許可されません。  
@@ -260,7 +260,7 @@ SSMA は、DB2 TO_CHAR(date, format) を sysdb データベースからのプロ
   
 -   選択した場合**を使用して TO_CHAR_DATE 関数**、SSMA TO_CHAR_DATE 関数を使用して英語の言語の変換のために、TO_CHAR (日付、形式) を変換します。  
   
--   選択した場合**を使用して TO_CHAR_DATE_LS 関数 (NLS ケア)**、SSMA TO_CHAR_DATE_LS 関数を使用してセッションの言語の変換のために、TO_CHAR (日付、形式) を変換します  
+-   選択した場合**を使用して TO_CHAR_DATE_LS 関数 (NLS ケア)** 、SSMA TO_CHAR_DATE_LS 関数を使用してセッションの言語の変換のために、TO_CHAR (日付、形式) を変換します  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
@@ -322,7 +322,7 @@ INTO 句を伴う SELECT ステートメントは、行を返さない、DB2 NO_
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:**[エラー]  
+**既定/オプティミスティック/フル モード:** [エラー]  
   
 ### <a name="generate-rowid-column"></a>ROWID の列を生成します。  
 SSMA が内のテーブルを作成するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ROWID 列を作成できます。 データが移行されると、各行は、newid() 関数によって生成される新しい UNIQUEIDENTIFIER 値を取得します。  

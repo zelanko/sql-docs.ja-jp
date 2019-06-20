@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659008"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
@@ -32,7 +32,7 @@ PredictStdev(<scalar column reference>)
  スカラー列です。  
   
 ## <a name="return-type"></a>戻り値の型  
- 指定された型のスカラー値*\<スカラー列参照 >* します。  
+ 指定された型のスカラー値 *\<スカラー列参照 >* します。  
   
 ## <a name="remarks"></a>コメント  
  列参照が不連続で場合**PredictStdev**不連続の値から標準偏差を計算できないため、0 を返します。  

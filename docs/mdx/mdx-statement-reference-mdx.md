@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6155fa549918a9bb17d93c268681826d07581123
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63048496"
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX ステートメント リファレンス (MDX)
@@ -29,7 +29,7 @@ ms.locfileid: "63048496"
 |[MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|多次元オブジェクトの作成、削除、操作を行う MDX データ定義ステートメントについて説明します。|  
 |[MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|MDX データ操作ステートメントを取得し、多次元オブジェクトからのデータの操作について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

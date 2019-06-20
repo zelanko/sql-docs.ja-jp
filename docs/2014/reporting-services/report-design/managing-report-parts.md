@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105588"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
@@ -58,7 +58,7 @@ ms.locfileid: "66105588"
 |CreatedBy|レポート パーツをレポート サーバー データベースに追加したユーザーの ID です。 正確な形式は、認証の方法によって異なります。 たとえば、一部の認証方法では、CreatedBy フィールドおよび ModifiedBy フィールドに完全なドメインとユーザー名が表示されます。|はい|  
 |CreationDate|レポート パーツが最初に作成された日付です。<br /><br /> ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
 |ModifiedBy|ModifiedBy はレポート パーツを最後に変更したユーザーの ID です。|はい|  
-|ModifiedDate|サーバー上でレポート パーツが最後に変更された日付です。<br /><br /> このフィールドは、レポート パーツがサーバー側でいつ更新されているかを判断するためのロジックの一部として使用されます。 詳細については、この表の ComponentID の説明を参照してください。|はい|  
+|ModifiedDate|サーバー上でレポート パーツが最後に変更された日付です。<br /><br /> このフィールドは、レポート パーツがサーバー側でいつ更新されているかを判断するためのロジックの一部として使用されます。 詳細については、この表の ComponentID の説明を参照してください。|[はい]|  
 |SubType (*)|SubType は検索するレポート パーツの種類を示す "Tablix" や "Chart" などの文字列です。|はい|  
 |ComponentID (*)|ComponentID はレポート パーツの一意の識別子です。 これは、カタログに新たに追加されたフィールドであり、サーバー側、およびレポート ビルダーなどのレポート作成アプリケーションの両方で表示されます。<br /><br /> このフィールドは、レポート パーツの更新がないかどうかをサーバーでチェックする場合に、クライアント アプリケーションで使用されます。 クライアント アプリケーションは、現在のクライアント側レポートにある ComponentID をサーバーで検索します。 ComponentID が一致すると、ModifiedDate がレポート アイテムのクライアント側 SyncDate と比較されます。|N0|  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66105588"
   
 -   レポート パーツでは、既存のアイテムの種類である "リソース" と同じ権限ポリシーが使用されます。 フォルダー内では、セキュリティ継承の観点からは、従来のリソース アイテムとレポート パーツとの区別はありません。 レポート パーツは、同じフォルダー内にある画像と同じ権限ポリシーを継承します。 この区別が必要な場合は、レポート パーツに対してアイテム レベルのセキュリティを構成できます。 または、適切な権限が構成されている別々のフォルダーにレポート パーツを保存することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [[全般] プロパティ ページ、レポート パーツ&#40;レポート マネージャー&#41;](../general-properties-page-report-parts-report-manager.md)   
  [[アイテム] ページの移動&#40;レポート マネージャー&#41;](../move-items-page-report-manager.md)   
