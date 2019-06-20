@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63182985"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server: Transactions オブジェクト
-  Microsoft **の** Transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスでアクティブになっているトランザクションの数を監視するカウンターと、スナップショット分離による **tempdb**への行バージョン ストアなど、アクティブなトランザクションによるリソースへの影響を監視するためのカウンターを提供します。 トランザクションは、論理的な 1 つの作業単位です。つまり、一連の操作であり、すべて成功するか、データの論理的な整合性を維持するためにデータベースからすべて消去されるかのいずれかの結果になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のデータへの変更は、すべてトランザクションで行われます。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Transactions** オブジェクトは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスでアクティブになっているトランザクションの数を監視するカウンターと、スナップショット分離による **tempdb**への行バージョン ストアなど、アクティブなトランザクションによるリソースへの影響を監視するためのカウンターを提供します。 トランザクションは、論理的な 1 つの作業単位です。つまり、一連の操作であり、すべて成功するか、データの論理的な整合性を維持するためにデータベースからすべて消去されるかのいずれかの結果になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のデータへの変更は、すべてトランザクションで行われます。  
   
  スナップショット分離レベルを使用できるようにデータベースを設定している場合は、データベース内の各行に加えられた変更の記録を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で管理する必要があります。 行が変更されるたびに、変更前の状態の行のコピーが **tempdb**内の行バージョン ストアに記録されます。 **Transaction** オブジェクトの多くのカウンターは、 **tempdb**内の行バージョン ストアのサイズと増加率の監視に使用できます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63182985"
 |**Version Store unit creation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスの起動後に、スナップショット分離のバージョン ストアで作成されたアロケーション ユニットの数。|  
 |**Version Store unit truncation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの起動後に、スナップショット分離のバージョン ストアから削除されたアロケーション ユニットの数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

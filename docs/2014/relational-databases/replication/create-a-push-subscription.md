@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721734"
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
@@ -71,7 +71,7 @@ ms.locfileid: "62721734"
   
 3.  **[ローカル サブスクリプション]** フォルダーを右クリックし、 **[新しいサブスクリプション]** をクリックします。  
   
-4.  サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、**[パブリッシャー]** ボックスの一覧から **[\<SQL Server パブリッシャーの検索>]** または **[\<Oracle パブリッシャーの検索>]** を選択します。  
+4.  サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、 **[パブリッシャー]** ボックスの一覧から **[\<SQL Server パブリッシャーの検索>]** または **[\<Oracle パブリッシャーの検索>]** を選択します。  
   
 5.  **[サーバーへの接続]** ダイアログ ボックスでパブリッシャーに接続します。  
   
@@ -91,20 +91,20 @@ ms.locfileid: "62721734"
   
     -   **allow_push** の値が **1**の場合、プッシュ サブスクリプションがサポートされます。  
   
-    -   場合の値**allow_push**は**0**、実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を指定して**allow_push**の **@property**と`true`の **@value**します。  
+    -   場合の値**allow_push**は**0**、実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を指定して**allow_push**の **@property** と`true`の **@value** します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションを更新する方法については、次を参照してください[Create an Updatable Subscription to Transactional Publication。](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)を実行します。 **@publication** 、 **@subscriber** 、および **@destination_db** を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションを更新する方法については、次を参照してください[Create an Updatable Subscription to Transactional Publication。](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)を実行します。 次の指定を行います。  
   
-    -   ディストリビューターで実行されるディストリビューション エージェントが使用する **@subscriber**、 **@subscriber_db**パラメーター、および **@publication** パラメーター。  
+    -   ディストリビューターで実行されるディストリビューション エージェントが使用する **@subscriber** 、 **@subscriber_db** パラメーター、および **@publication** パラメーター。  
   
-    -   ディストリビューターで実行されるディストリビューション エージェントが使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報。 **@job_login** に **@job_password**」を参照してください。  
+    -   ディストリビューターで実行されるディストリビューション エージェントが使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報。 **@job_login** に **@job_password** 」を参照してください。  
   
         > [!NOTE]  
-        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** 」および「 **@job_password**を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
+        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** 」および「 **@job_password** を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
-    -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password**」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
+    -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password** 」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
   
     -   このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。 詳細については、「 [Specify Synchronization Schedules](specify-synchronization-schedules.md)」を参照してください。  
   
@@ -117,30 +117,30 @@ ms.locfileid: "62721734"
   
     -   **allow_push** の値が **1**の場合、パブリケーションでプッシュ サブスクリプションがサポートされます。  
   
-    -   場合の値**allow_push**ない**1**、実行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を指定して**allow_push**の**@property** と`true`の **@value**します。  
+    -   場合の値**allow_push**ない**1**、実行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を指定して**allow_push**の **@property** と`true`の **@value** します。  
   
 2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)を実行します。次のパラメーターを指定します。  
   
-    -   **@publication**」を参照してください。 これはパブリケーションの名前です。  
+    -   **@publication** 」を参照してください。 これはパブリケーションの名前です。  
   
-    -   **@subscriber_type**」を参照してください。 クライアント サブスクリプションの場合は **local** を指定し、サーバー サブスクリプションの場合は **global**を指定します。  
+    -   **@subscriber_type** 」を参照してください。 クライアント サブスクリプションの場合は **local** を指定し、サーバー サブスクリプションの場合は **global**を指定します。  
   
-    -   **@subscription_priority**」を参照してください。 サーバー サブスクリプションの場合、サブスクリプションの優先度 (**0.00** ～ **99.99**) を指定します。  
+    -   **@subscription_priority** 」を参照してください。 サーバー サブスクリプションの場合、サブスクリプションの優先度 (**0.00** ～ **99.99**) を指定します。  
   
          詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)を実行します。 次の指定を行います。  
   
-    -   手順 1. で作成した、サブスクライバーに対する **@subscriber**、 **@subscriber_db**、 **@publication** の各パラメーター。  
+    -   手順 1. で作成した、サブスクライバーに対する **@subscriber** 、 **@subscriber_db** 、 **@publication** の各パラメーター。  
   
-    -   ディストリビューターで実行されるマージ エージェントが使用する Windows 資格情報。 **@job_login** に **@job_password**」を参照してください。  
+    -   ディストリビューターで実行されるマージ エージェントが使用する Windows 資格情報。 **@job_login** に **@job_password** 」を参照してください。  
   
         > [!NOTE]  
-        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password**」を参照してください。 マージ エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
+        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password** 」を参照してください。 マージ エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
-    -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password**」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
+    -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password** 」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
   
-    -   (省略可) **0** を、 **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@publisher_login** に **@publisher_password**」を参照してください。 パブリッシャーに接続するときに SQL Server 認証を使用する必要がある場合、これらの値を指定します。  
+    -   (省略可) **0** を、 **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@publisher_login** に **@publisher_password** 」を参照してください。 パブリッシャーに接続するときに SQL Server 認証を使用する必要がある場合、これらの値を指定します。  
   
     -   このサブスクリプションでのマージ エージェント ジョブのスケジュール。 詳細については、「 [Specify Synchronization Schedules](specify-synchronization-schedules.md)」を参照してください。  
   

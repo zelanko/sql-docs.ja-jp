@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 31c5fa6b3ca1f42ea87fc1514f55ce325f8a021a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101986"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)
@@ -43,7 +43,7 @@ ms.locfileid: "66101986"
   
 -   このタスクを他のユーザーに委任する場合は、ユーザー アカウントをコンテンツ マネージャー ロールとシステム管理者ロールにマップするためのロール割り当てを作成します。 コンテンツ マネージャーとシステム管理者の権限を与えられたユーザーは、レポート サーバーにユーザーを追加できます。  
   
--    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、システム ロールおよびユーザー ロールに対して定義されているロールを確認し、それぞれのロールにどのようなタスクが含まれているかを確認します。 レポート マネージャーではタスクの説明が表示されません。そのため、ユーザーを追加する前に、各ロールについて理解しておく必要があります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、システム ロールおよびユーザー ロールに対して定義されているロールを確認し、それぞれのロールにどのようなタスクが含まれているかを確認します。 レポート マネージャーではタスクの説明が表示されません。そのため、ユーザーを追加する前に、各ロールについて理解しておく必要があります。  
   
 -   必要であれば、ロールをカスタマイズするか、新しいロールを定義して必要なタスクを追加します。 たとえば、個々のアイテムにカスタム セキュリティ設定を使用する場合は、フォルダーの閲覧権限を付与した新しいロール定義を作成する必要があります。  
   

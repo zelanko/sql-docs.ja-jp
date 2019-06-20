@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d14aeb7b261959ab0c95bda6a2ef4435a5b68e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078609"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>不明なメンバーと NULL 処理のプロパティの定義
@@ -89,7 +89,7 @@ ms.locfileid: "66078609"
   
 9. **属性** ウィンドウで、この名前が新しい属性を変更`Category`します。  
   
-10. プロパティ ウィンドウでクリックして、 **NameColumn**プロパティ フィールドで、参照 をクリックし、(**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
+10. プロパティ ウィンドウでクリックして、 **NameColumn**プロパティ フィールドで、参照 をクリックし、( **.** ) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 11. **[基になる列]** ボックスの一覧で **[EnglishProductCategoryName]** を選択し、 **[OK]** をクリックします。  
   

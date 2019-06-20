@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e7b629b93e0c79a003019a2e024388d54b12b76
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065212"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 におけるデータベース エンジン機能の動作の変更
@@ -35,7 +35,7 @@ ms.locfileid: "66065212"
  [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql)置き換えが実際にクエリを実行せずに、応答の形式を決定するためのオプション[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql)、 [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)、 [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)、および[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)します。  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>SQL Server エージェント タスクのスクリプト作成における動作の変更  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、既存のジョブからスクリプトをコピーして新しいジョブを作成した場合、新しいジョブが既存のジョブに悪影響を与える可能性があります。 既存のジョブからスクリプトを使用して新しいジョブを作成するパラメーターを手動で削除*@schedule_uid*は通常、既存のジョブでジョブのスケジュールを作成するセクションの最後のパラメーター。 これにより、既存のジョブに影響することなく、新しいジョブ用に別に新しいスケジュールが作成されます。  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、既存のジョブからスクリプトをコピーして新しいジョブを作成した場合、新しいジョブが既存のジョブに悪影響を与える可能性があります。 既存のジョブからスクリプトを使用して新しいジョブを作成するパラメーターを手動で削除 *@schedule_uid* は通常、既存のジョブでジョブのスケジュールを作成するセクションの最後のパラメーター。 これにより、既存のジョブに影響することなく、新しいジョブ用に別に新しいスケジュールが作成されます。  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>CLR ユーザー定義関数およびメソッドの定数たたみ込み  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] では、次のユーザー定義 CLR オブジェクトがたたみ込み可能になりました。  

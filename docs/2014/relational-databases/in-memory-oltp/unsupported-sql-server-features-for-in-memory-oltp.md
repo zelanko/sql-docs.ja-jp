@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157237"
 ---
 # <a name="supported-sql-server-features"></a>サポートされる SQL Server の機能
@@ -39,7 +39,7 @@ ms.locfileid: "63157237"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト。 詳細については、「[インメモリ OLTP に対する SQL Server 管理オブジェクトのサポート](sql-server-management-objects-support-for-in-memory-oltp.md)」を参照してください。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。 詳細については、「[SQL Server Management Studio によるインメモリ OLTP のサポート](sql-server-management-studio-support-for-in-memory-oltp.md)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 詳細については、「[SQL Server Management Studio によるインメモリ OLTP のサポート](sql-server-management-studio-support-for-in-memory-oltp.md)」を参照してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 詳細については、「 [SQL Server PowerShell の概要](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)」を参照してください。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "63157237"
 |Resource データベース、および tempdb|はい|シングル ユーザー データベース以外に resource データベースと tempdb のみを使用する複数のデータベースにまたがるトランザクションに関する制限はありません。|  
 |master|読み取り専用|インメモリ OLTP と master データベースを使用する複数のデータベースにまたがるトランザクションは、master データベースへの書き込みが含まれる場合にコミットに失敗します。 master に対して読み取り操作のみを実行し、ユーザー データベースを 1 つだけ使用する複数のデータベースにまたがるトランザクションは許可されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server によるインメモリ OLTP のサポート](sql-server-support-for-in-memory-oltp.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754827"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
@@ -81,7 +81,7 @@ ms.locfileid: "62754827"
 |**[復元比率]**|トランザクションがミラー データベースに復元される速度 (KB/秒) です。|  
 |**[ミラー コミットのオーバーヘッド]**|トランザクションあたりの平均遅延時間をミリ秒で表します (同期モードのみ)。 この遅延時間は、ミラー サーバー インスタンスによってトランザクションのログ レコードが再実行キューに書き込まれるのをプリンシパル サーバー インスタンスが待機している間、発生したオーバーヘッドの量になります。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

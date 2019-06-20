@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107288"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
@@ -148,7 +148,7 @@ CELL PROPERTIES
   
  これにより、データ ソースの元の整数データ型に基づいてフィールドの値が並べ替えられます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fb6460ed28c856ef6b5ceea8bf89c7bf33f54f2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62982186"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>ディメンション関数、階層関数、およびレベル関数の使用
@@ -21,7 +21,7 @@ ms.locfileid: "62982186"
 
   ディメンション関数、階層関数、およびレベル関数は、Analysis Services で検出された多次元階層をスキャンする際に役立ちます。 通常は、ディメンション、階層、またはレベルのメンバーに関する情報を得るために、これらの関数を他の関数と共に使用します。  
   
- 次の例を使用する方法を示しています、 **.Dimension** 、 **.Hierarchy** 、および **.Level** 関数。   
+ 次の例を使用する方法を示しています、 **.Dimension** 、 **.Hierarchy** 、および **.Level** 関数。  
   
  `WITH`  
   

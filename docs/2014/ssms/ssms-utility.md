@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127000"
 ---
 # <a name="ssms-utility"></a>Ssms ユーティリティ
@@ -51,16 +51,16 @@ ms.locfileid: "63127000"
  *solutionfile*  
  開くソリューションを指定します。 パラメーターには、ソリューション ファイルへの完全パスを含める必要があります。  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
  サーバー名  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
  データベース名  
   
- [**-U** _username_]  
+ [ **-U** _username_]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用して接続するときのユーザー名です。  
   
- [**-P** _password_]  
+ [ **-P** _password_]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用して接続するときのパスワードです。  
   
  **[-E]**  
@@ -69,7 +69,7 @@ ms.locfileid: "63127000"
  **[-nosplash]**  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開くとき、スプラッシュ スクリーンのグラフィックを表示しません。 限られた帯域幅を使用した接続では、ターミナル サービスを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動しているコンピューターへ接続する場合に、このオプションを使用してください。 この引数では、大文字と小文字は区別されず、他の引数の前後どちらにも指定できます。  
   
- [**-log**_[filename]?_]  
+ [ **-log** _[filename]?_ ]  
  トラブルシューティング用に指定したファイルに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のアクティビティを記録します。  
   
  **[-?]**  

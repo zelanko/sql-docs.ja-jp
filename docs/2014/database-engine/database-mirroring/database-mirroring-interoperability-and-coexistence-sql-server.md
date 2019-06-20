@@ -1,5 +1,5 @@
 ---
-title: データベース ミラーリング:相互運用性と共存 (SQL Server) |Microsoft Docs
+title: 'データベース ミラーリング: 相互運用性と共存 (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807308"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>データベース ミラーリング:相互運用性と共存 (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>データベース ミラーリング: 相互運用性と共存 (SQL Server)
   データベース ミラーリングは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
   
 -   [AlwaysOn フェールオーバー クラスター インスタンス (SQL Server フェールオーバー クラスタ リング)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "62807308"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

@@ -22,10 +22,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c7f65ad3957280953faa58792ea39e48ce16f20e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089716"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server エージェントの固定データベース ロール
@@ -51,7 +51,7 @@ ms.locfileid: "65089716"
 **SQLAgentUserRole** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのうち、最も低い特権レベルが設定されています。 オペレーター、ローカル ジョブ、ジョブ スケジュールのみに対する権限があります。 **SQLAgentUserRole** のメンバーは、所有しているローカル ジョブおよびジョブ スケジュールのみに対する権限を持っています。 このメンバーが、マルチサーバー ジョブ (マスター サーバーとターゲット サーバーのジョブ) を使用することはできません。また、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることもできません。 **SQLAgentUserRole** のメンバーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ジョブ ステップのプロパティ]** ダイアログ ボックスでのみ、使用できるプロキシのリストを表示できます。 **SQLAgentUserRole** のメンバーに対しては、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーには **[ジョブ]** ノードだけが表示されます。  
   
 > [!IMPORTANT]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]****Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentReaderRole** および **SQLAgentOperatorRole** は、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** および **SQLAgentOperatorRole** のメンバーは、 **SQLAgentUserRole** に許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentReaderRole** および **SQLAgentOperatorRole** は、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** および **SQLAgentOperatorRole** のメンバーは、 **SQLAgentUserRole** に許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
   
 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オブジェクトに対する **SQLAgentUserRole** の権限の概要を示します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "65089716"
 **SQLAgentReaderRole** には、すべての **SQLAgentUserRole** の権限、および使用できるマルチサーバー ジョブのリスト、ジョブのプロパティ、およびジョブの履歴を表示する権限が含まれています。 このロールのメンバーは、所有しているジョブとジョブ スケジュールだけでなく、使用できるすべてのジョブとジョブ スケジュール、およびそのプロパティのリストを表示することもできます。 **SQLAgentReaderRole** のメンバーは、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることはできません。 **SQLAgentReaderRole** のメンバーに対しては、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーには **[ジョブ]** ノードだけが表示されます。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**** **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentReaderRole** のメンバーは、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** のメンバーは、 **SQLAgentUserRole** に対して許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **** **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentReaderRole** のメンバーは、自動的に **SQLAgentUserRole**のメンバーになります。 つまり、 **SQLAgentReaderRole** のメンバーは、 **SQLAgentUserRole** に対して許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
   
 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オブジェクトに対する **SQLAgentReaderRole** の権限の概要を示します。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65089716"
   
 **SQLAgentOperatorRole** のメンバーは、ローカル ジョブおよびスケジュールに関する追加の権限を持っています。 すべてのローカル ジョブを実行、停止、または開始したり、サーバー上のローカル ジョブのジョブ履歴を削除できます。 また、サーバー上のすべてのローカル ジョブおよびスケジュールを、有効または無効にすることもできます。 ローカル ジョブまたはスケジュールを有効または無効にするには、このロールのメンバーはストアド プロシージャ **sp_update_job** および **sp_update_schedule**を使用する必要があります。 **SQLAgentOperatorRole** のメンバーは、ジョブまたはスケジュールの名前か ID を指定するパラメーターと **@enabled** パラメーターのみを指定できます。 他のパラメーターを指定すると、ストアド プロシージャの実行は失敗します。 **SQLAgentOperatorRole** のメンバーは、ジョブの所有権を変更して、所有していないジョブへのアクセス権を得ることはできません。  
   
-**SQLAgentOperatorRole**のメンバーに対しては、 **オブジェクト エクスプローラーには**[ジョブ] **ノード、**[警告] **ノード、** [オペレーター] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ノード、および **[プロキシ]** ノードのみが表示されます。 このロールのメンバーに表示されないのは、 **[エラー ログ]** ノードだけです。  
+**SQLAgentOperatorRole**のメンバーに対しては、 **オブジェクト エクスプローラーには**[ジョブ] **ノード、** [警告] **ノード、** [オペレーター] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ノード、および **[プロキシ]** ノードのみが表示されます。 このロールのメンバーに表示されないのは、 **[エラー ログ]** ノードだけです。  
   
 > [!IMPORTANT]  
 > **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** の **Agentdatabaseroles** のメンバーに対してプロキシへのアクセスを許可する前に、セキュリティ上の影響について検討してください。 **SQLAgentOperatorRole** のメンバーは、自動的に **SQLAgentUserRole** および **SQLAgentReaderRole**のメンバーになります。 つまり、 **SQLAgentOperatorRole** のメンバーは、 **SQLAgentUserRole** または **SQLAgentReaderRole** に対して許可されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシにアクセスし、これらのプロキシを使用できることになります。  
@@ -102,7 +102,7 @@ ms.locfileid: "65089716"
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
 |作成/変更/削除|いいえ|いいえ|可 (所有しているジョブのみ)<br /><br />ジョブの所有権は変更できません。|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
 |リストの表示 (列挙)|はい|はい<br /><br />**sp_notify_operator** および Management Studio の **[ジョブのプロパティ]** ダイアログ ボックスで使用できるオペレーターのリストを取得できます。|はい|はい|はい|はい|  
-|有効化/無効化|いいえ|いいえ|はい<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_job** を使用し、 **@enabled** および **@job_id** (または **@job_name**) パラメーターの値を指定することにより、所有していないローカル ジョブを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|いいえ|はい<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_schedule** を使用し、 **@enabled** および **@schedule_id** (または **@name**) パラメーターの値を指定することにより、所有していないローカル ジョブを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|適用なし|  
+|有効化/無効化|いいえ|いいえ|はい<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_job** を使用し、 **@enabled** および **@job_id** (または **@job_name** ) パラメーターの値を指定することにより、所有していないローカル ジョブを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|いいえ|はい<br /><br />**SQLAgentOperatorRole** のメンバーは、ストアド プロシージャ **sp_update_schedule** を使用し、 **@enabled** および **@schedule_id** (または **@name** ) パラメーターの値を指定することにより、所有していないローカル ジョブを有効または無効にできます。 このロールのメンバーが、このストアド プロシージャに対して他のパラメーターを指定した場合、プロシージャの実行は失敗します。|適用なし|  
 |プロパティの表示|はい|はい|はい|はい|はい|はい|  
 |プロパティの編集|いいえ|いいえ|可 (所有しているジョブのみ)|いいえ|可 (所有しているスケジュールのみ)|いいえ|  
 |実行/停止/開始|適用なし|適用なし|はい|いいえ|適用なし|適用なし|  

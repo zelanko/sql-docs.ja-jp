@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 095a69523d3383034689f62c45744f1e7fa0e908
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091572"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>アップグレード アドバイザーの前提条件
@@ -43,6 +43,6 @@ ms.locfileid: "66091572"
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom をインストールするための前提条件は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザーでは、アップグレード アドバイザー セットアップではインストールされません。 セットアップでは、ダウンロードしてインストールする必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]から ScriptDom、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack。  
   
 ## <a name="see-also"></a>参照  
- [方法: アップグレード アドバイザーをインストールします。](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
+ [方法:アップグレード アドバイザーをインストールします。](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
   
   

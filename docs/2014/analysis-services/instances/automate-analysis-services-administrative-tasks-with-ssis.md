@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080332"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>SSIS による Analysis Services 管理タスクの自動化
@@ -26,7 +26,7 @@ ms.locfileid: "66080332"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、データ処理タスク時のデータのクリーンアップと、異なるデータ ソースからのデータの統合を実行できるように設計されています。 キューブおよびマイニング モデルを使用して作業する場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、非数値データを数値データに変換し、データ値を期待される範囲内に収めることができます。したがって、ファクト テーブルとディメンションに設定するためのクリーンなデータを作成できます。  
   
 ## <a name="integration-services-tasks"></a>Integration Services タスク  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のタスクまたはジョブには、制御フロー要素とデータ フロー要素という 2 つの要素があります。 制御フロー要素では、優先順位制約を適用することによってジョブ進行の論理的な順序を定義します。 データ フロー要素は、コンポーネントの出力から後続コンポーネントの入力への接続と、その間でデータに対して行われるデータ変換に関係しています。 データの行き先に関する決定は、優先順位制約に含まれる論理によってどのコンポーネントが出力を受け取るかが指定されます。  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タスクには、DDL 実行タスク、Analysis Services 処理タスク、およびデータ マイニング クエリ タスクがあります。 これらの各タスクでは、メール送信タスクを使用して、タスク結果を含む電子メール メッセージを管理者に送信できます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のタスクまたはジョブには、制御フロー要素とデータ フロー要素という 2 つの要素があります。 制御フロー要素では、優先順位制約を適用することによってジョブ進行の論理的な順序を定義します。 データ フロー要素は、コンポーネントの出力から後続コンポーネントの入力への接続と、その間でデータに対して行われるデータ変換に関係しています。 データの行き先に関する決定は、優先順位制約に含まれる論理によってどのコンポーネントが出力を受け取るかが指定されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タスクには、DDL 実行タスク、Analysis Services 処理タスク、およびデータ マイニング クエリ タスクがあります。 これらの各タスクでは、メール送信タスクを使用して、タスク結果を含む電子メール メッセージを管理者に送信できます。  
   
 ## <a name="the-execute-ddl-task"></a>DDL 実行タスク  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の DDL 実行タスクを使用すると、DDL スクリプトを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに直接送信して、自動的に実行できます。 これによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、バックアップ、復元、または同期の操作を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内から実行できます。 パッケージは、前に説明した制御フロー要素とデータ フロー要素で構成されています。これらの要素は、タスクに追加できる他の DDL ステートメントと同様に、すべて **定期的に実行**される必要があります。 ここで説明したタスクは夜間に実行される場合が多いため、任意のスケジューリング アプリケーションから簡単に実行できるパッケージを作成すると特に便利です。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エージェントを使用すると、パッケージを任意の時刻に実行するようにスケジュールできます。 このタスクの実装方法については、「 [Analysis Services DDL 実行タスク](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)」を参照してください。  

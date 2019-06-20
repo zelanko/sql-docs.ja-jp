@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0f2de1f7003e61dbdc8e82f7a9b549fd42c77fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917272"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>データまたはログ ファイルのデータベースからの削除
@@ -52,7 +52,7 @@ ms.locfileid: "62917272"
   
 4.  **[データベース ファイル]** グリッドで、削除するファイルをクリックし、 **[削除]** をクリックします。  
   
-5.  **[OK]** をクリックします。  
+5.  [**OK**] をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62917272"
   
  詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースの圧縮](shrink-a-database.md)   
  [データベースに対するデータ ファイルまたはログ ファイルの追加](add-data-or-log-files-to-a-database.md)  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c85b1f9db4667c64bed7cf87189e48b507e5f75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63055077"
 ---
 # <a name="managing-transactions-xmla"></a>トランザクションの管理 (XMLA)
@@ -46,7 +46,7 @@ ms.locfileid: "63055077"
 ## <a name="rolling-back-a-transaction"></a>トランザクションのロールバック  
  **RollbackTransaction**コマンドはロールバック後に実行されたコマンドの結果、 **BeginTransaction**コマンドが現在のセッションで実行されました。 **RollbackTransaction**コマンドは、現在のトランザクション参照カウントに関係なく、アクティブなトランザクションをロールバックし、トランザクション参照カウントを 0 に設定します。 アクティブなトランザクションが存在しない場合 (つまり、現在のセッションのトランザクション参照カウントは既にゼロに設定)、 **RollbackTransaction**コマンド エラーが発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services での XMLA による開発](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

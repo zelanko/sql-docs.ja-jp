@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015647"
 ---
 # <a name="delete-a-stored-procedure"></a>ストアド プロシージャの削除
     
 ##  <a name="Top"></a> このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを削除する方法について説明します。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
   
--   **プロシージャを削除するを使用します。**[SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **プロシージャを削除するを使用します。** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 8496868bc3b5b6ee42ac4f222724e859797662a4
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776091"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263341"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>補足のレッスン: 動的なセキュリティ
 
@@ -25,7 +25,7 @@ ms.locfileid: "64776091"
   
 動的なセキュリティを実装するには、モデルに接続し、モデル オブジェクトとデータを参照できるユーザーのユーザー名を含むモデルにテーブルを追加します。 このチュートリアルを使用して作成するモデルは Adventure Works; のコンテキストで、します。ただし、このレッスンを完了するには、独自のドメインからユーザーを含むテーブルを追加する必要があります。 追加されたユーザー名のパスワードが不要です。 を独自のドメインからユーザーの小規模なサンプルでは、EmployeeSecurity テーブルを作成するには、機能を使用する、貼り付け、Excel スプレッドシートから従業員データの貼り付けします。 実際のシナリオでは、ユーザー名を含むテーブルは通常である必要の実際のデータベースのテーブルをデータ ソースとしてたとえば、実際の DimEmployee テーブルです。  
   
-動的なセキュリティを実装するには、2 つの DAX 関数を使用します。[USERNAME 関数 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)と[LOOKUPVALUE 関数 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 LOOKUPVALUE 関数を使用すると、数式は EmployeeSecurity テーブルの値を指定します。 数式にログオンしたユーザーのユーザー名を指定する USERNAME 関数に値がこのロールに属していることを渡します。 ユーザーは、ロールの行フィルターで指定されたデータのみを参照できます。 このシナリオでは、営業部の従業員がインターネットに属している販売区域の売上データを参照できますのみを指定します。  
+動的なセキュリティを実装するには、2 つの DAX 関数を使用します。[USERNAME 関数 (DAX)](/dax/username-function-dax)と[LOOKUPVALUE 関数 (DAX)](/dax/lookupvalue-function-dax)します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 LOOKUPVALUE 関数を使用すると、数式は EmployeeSecurity テーブルの値を指定します。 数式にログオンしたユーザーのユーザー名を指定する USERNAME 関数に値がこのロールに属していることを渡します。 ユーザーは、ロールの行フィルターで指定されたデータのみを参照できます。 このシナリオでは、営業部の従業員がインターネットに属している販売区域の売上データを参照できますのみを指定します。  
   
 この Adventure Works テーブル モデルに固有の作業が実際のシナリオに必ずしも適用されない場合には、そのように記載されています。 各作業には、作業の目的を表す追加情報が含まれています。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "64776091"
 
     レッスン 2 で使用した場合、ダイアログ ボックスが表示されたら、権限借用の資格情報は、権限借用の資格情報を入力します。データを追加します。
   
-2.  ナビゲーターで、選択、 **DimSalesTerritory**テーブル、およびクリックして **[ok]**。    
+2.  ナビゲーターで、選択、 **DimSalesTerritory**テーブル、およびクリックして **[ok]** 。    
   
 3.  クエリ エディターで、クリックして、 **DimSalesTerritory**クエリ、および削除し、 **SalesTerritoryAlternateKey**列。  
   
@@ -133,7 +133,7 @@ FactInternetSales、DimGeography、および DimSalesTerritory テーブルす�
   
 5.  をクリックして、**メンバー**タブをクリックし、をクリックし、**追加**します。  
   
-6.  **[ユーザーまたはグループ**] ダイアログ ボックスで**を選択するオブジェクト名を入力します。**、EmployeeSecurity テーブルを作成するときに使用した最初のサンプル ユーザー名を入力します。 **[名前の確認]** をクリックしてユーザー名が有効であることを確認し、 **[OK]** をクリックします。  
+6.  **[ユーザーまたはグループ**] ダイアログ ボックスで**を選択するオブジェクト名を入力します。** 、EmployeeSecurity テーブルを作成するときに使用した最初のサンプル ユーザー名を入力します。 **[名前の確認]** をクリックしてユーザー名が有効であることを確認し、 **[OK]** をクリックします。  
   
     その他のサンプル ユーザー名を追加、EmployeeSecurity テーブルの作成時に使用した、この手順を繰り返します。  
   
@@ -186,8 +186,8 @@ FactInternetSales、DimGeography、および DimSalesTerritory テーブルす�
     使用した有効なユーザー名が属している 1 つの地域のインターネット販売成績のみが表示されていることに注意してください。 行ラベル フィールドとして DimGeography テーブルの City など、別の列を選択した場合、有効なユーザーが属する販売区域の都市のみが表示されます。  
     このユーザーは、参照または区域に属している以外の区域のインターネット販売データをクエリできません。 この制限は、Sales Employees by Territory ユーザー ロールで DimSalesTerritory テーブルに、他の販売区域に関連するすべてのデータの保護行フィルターが定義されているためにです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
-[USERNAME Function (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE Function (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[CUSTOMDATA 関数 (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[USERNAME Function (DAX)](/dax/username-function-dax)  
+[LOOKUPVALUE Function (DAX)](/dax/lookupvalue-function-dax)  
+[CUSTOMDATA 関数 (DAX)](/dax/customdata-function-dax)  

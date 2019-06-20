@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082898"
 ---
 # <a name="security-overview-data-mining"></a>セキュリティの概要 (データ マイニング)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のセキュリティ保護は、複数レベルで行われます。 まず [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスと、そのデータ ソースのセキュリティを保護して、認証されたユーザーのみが、選択されたディメンション、マイニング モデル、およびデータ ソースに対する読み取り、または読み取り/書き込み権限を持つことを確認する必要があります。 基になるデータ ソースのセキュリティを保護して、権限のないユーザーが機密のビジネス情報を悪意で危険にさらすことを防ぐ必要もあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのセキュリティを保護するプロセスは、次のトピックで説明しています。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のセキュリティ保護は、複数レベルで行われます。 まず [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各インスタンスと、そのデータ ソースのセキュリティを保護して、認証されたユーザーのみが、選択されたディメンション、マイニング モデル、およびデータ ソースに対する読み取り、または読み取り/書き込み権限を持つことを確認する必要があります。 基になるデータ ソースのセキュリティを保護して、権限のないユーザーが機密のビジネス情報を悪意で危険にさらすことを防ぐ必要もあります。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスのセキュリティを保護するプロセスは、次のトピックで説明しています。  
   
 ##  <a name="bkmk_Architecture"></a> セキュリティのアーキテクチャ  
  次のリソースを参照して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Windows 認証を使用してユーザーのアクセスを認証する方法なども含めて、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスの基本的なセキュリティ アーキテクチャを理解してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "66082898"
   
  Integration Services パッケージを使用してデータのクリーンアップ、マイニング モデルの更新、または予測の作成を行う場合は、モデルが格納されているデータベースに対する適切な権限、およびソース データに対する適切な権限が Integration Services サービスにあることを確認する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ロールと権限 &#40;Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

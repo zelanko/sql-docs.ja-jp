@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bff66ca0f644f862b7cdcfb534b55c4e8ebdd888
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104088"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>ネットワーク負荷分散クラスターにおけるレポート サーバーの構成
@@ -37,7 +37,7 @@ ms.locfileid: "66104088"
 |----------|-----------------|----------------------|  
 |1|NLB クラスター内のサーバー ノードに Reporting Services をインストールする前に、スケールアウト配置の要件を確認します。|[ネイティブ モード レポート サーバーのスケール アウト配置構成&#40;SSRS 構成マネージャー&#41; ](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブック|  
 |2|NLB クラスターを構成し、正常に動作することを確認します。<br /><br /> 必ずホスト ヘッダー名を NLB クラスターの仮想サーバー IP にマップしてください。 ホスト ヘッダー名は、レポート サーバーの URL で使用されます。IP アドレスに比べて容易に記憶でき、入力も簡単です。|詳細については、実行する Windows オペレーティング システムのバージョンの Windows Server の製品マニュアルを参照してください。|  
-|3|Windows レジストリに格納されている **BackConnectionHostNames** のリストに、ホスト ヘッダーの完全修飾ドメイン名 (FQDN) および NetBIOS 名を追加します。 」の手順に従って**方法 2。ホスト名を指定**で[KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861)、次のように調整します。 サポート技術情報の資料の「レジストリ エディターを終了し、IISAdmin サービスを再開します」という**手順 7** の 代わりに、変更が有効になるようにコンピューターを再起動します。<br /><br /> たとえば、ホスト ヘッダー名 \<MyServer> が Windows コンピューター名 "contoso" の仮想名である場合は、FQDN 形式を "contoso.domain.com" として参照できる可能性があります。 ホスト ヘッダー名 (MyServer) と FQDN 名 (contoso.domain.com) の両方を **BackConnectionHostNames**の一覧に追加する必要があります。|この手順は、サーバー環境のローカル コンピューターで NTLM 認証が行われていて、ループ バック接続が作成されている場合に必要になります。<br /><br /> この場合、レポート マネージャーとレポート サーバー間の要求が 401 (権限がありません) で失敗します。|  
+|3|Windows レジストリに格納されている **BackConnectionHostNames** のリストに、ホスト ヘッダーの完全修飾ドメイン名 (FQDN) および NetBIOS 名を追加します。 」の手順に従って**方法 2。ホスト名を指定**で[KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861) 、次のように調整します。 サポート技術情報の資料の「レジストリ エディターを終了し、IISAdmin サービスを再開します」という**手順 7** の 代わりに、変更が有効になるようにコンピューターを再起動します。<br /><br /> たとえば、ホスト ヘッダー名 \<MyServer> が Windows コンピューター名 "contoso" の仮想名である場合は、FQDN 形式を "contoso.domain.com" として参照できる可能性があります。 ホスト ヘッダー名 (MyServer) と FQDN 名 (contoso.domain.com) の両方を **BackConnectionHostNames**の一覧に追加する必要があります。|この手順は、サーバー環境のローカル コンピューターで NTLM 認証が行われていて、ループ バック接続が作成されている場合に必要になります。<br /><br /> この場合、レポート マネージャーとレポート サーバー間の要求が 401 (権限がありません) で失敗します。|  
 |4|既に NLB クラスターの一部であるノードにファイルのみのモードで [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールし、スケールアウト配置のレポート サーバー インスタンスを構成します。<br /><br /> ここで構成したスケールアウトでは、仮想サーバー IP に送信される要求に応答できない場合があります。 仮想サーバー IP を使用するようにスケールアウトを構成する手順は、この後でビュー ステート検証を構成してから行います。|[ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|ビュー ステート検証を構成します。<br /><br /> 最適な結果を得るには、この手順は、スケールアウト配置を構成した後、仮想サーバー IP を使用するようにレポート サーバー インスタンスを構成する前に行います。 ビュー ステート検証を先に構成することによって、ユーザーによる対話型レポートへのアクセス時に、ステート検証の失敗に関する例外を回避できます。|このトピックの「[ビュー ステート検証を構成する方法](#ViewState) 」|  
 |6|NLB クラスターの仮想サーバー IP を使用するように `Hostname` と `UrlRoot` を構成します。|このトピックの「[Hostname と UrlRoot を構成する方法](#SpecifyingVirtualServerName) 」|  
@@ -96,7 +96,7 @@ ms.locfileid: "66104088"
 6.  スケールアウト配置内の各レポート サーバーの RSReportServer.config ファイルごとに、これらの手順を繰り返します。  
   
 ##  <a name="Verify"></a> レポート サーバーへのアクセスの確認  
- 仮想サーバーの名前を使って、スケール アウト配置にアクセスできることを確認します (たとえば、 https://MyVirtualServerName/reportserverと https://MyVirtualServerName/reports)します。  
+ 仮想サーバーの名前を使って、スケール アウト配置にアクセスできることを確認します (たとえば、 https://MyVirtualServerName/reportserver と https://MyVirtualServerName/reports) します。  
   
  レポート サーバーのログ ファイルを参照するか、または RS の実行ログを確認して、どのノードが実際にレポートを処理しているのかを確認できます (実行ログ テーブルには、 **InstanceName** という列があり、特定の要求がどのインスタンスによって処理されたのかを示しています)。 詳細については、 [オンライン ブックの「](../report-server/reporting-services-log-files-and-sources.md) Reporting Services のログ ファイルとソース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
   

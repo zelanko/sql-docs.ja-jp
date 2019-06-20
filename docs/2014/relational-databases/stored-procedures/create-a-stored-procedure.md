@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63016043"
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
@@ -65,7 +65,7 @@ ms.locfileid: "63016043"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |[Default_Value_For_Param2]|NULL|  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
 7.  **クエリ エディター**で、SELECT ステートメントを次のステートメントに置き換えます。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "63016043"
     ```  
   
 ##  <a name="PowerShellProcedure"></a>   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

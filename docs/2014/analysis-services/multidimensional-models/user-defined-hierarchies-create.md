@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a1106c4b374b34351e3375adae102686f7e41fe
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072571"
 ---
 # <a name="create-user-defined-hierarchies"></a>ユーザー定義階層の作成
@@ -27,7 +27,7 @@ ms.locfileid: "66072571"
 > [!NOTE]  
 >  ユーザー定義階層のデザインと構成に関連するパフォーマンスの問題の詳細については、「 [SQL Server 2005 Analysis Services パフォーマンス ガイド](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー階層プロパティ](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [レベル プロパティ&#91;機能強化&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md)   
  [親子階層](parent-child-dimension.md)  

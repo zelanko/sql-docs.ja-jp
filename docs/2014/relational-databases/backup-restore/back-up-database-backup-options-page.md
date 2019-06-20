@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876865"
 ---
 # <a name="back-up-database-backup-options-page"></a>[データベースのバックアップ] \([バックアップ オプション] ページ)
@@ -86,7 +86,7 @@ ms.locfileid: "62876865"
 >   
 >  拡張キー管理 (EKM) に存在するキーのみがサポートされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

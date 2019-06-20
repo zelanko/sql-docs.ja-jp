@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2883a9092f7b84e8dd18954cec631b90a8bbe0e9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076250"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>多次元モデル内のメジャーおよびメジャー グループの作成
@@ -39,7 +39,7 @@ ms.locfileid: "66076250"
   
 |||  
 |-|-|  
-|キューブ ウィザード|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でキューブ ウィザードを実行してキューブを作成します。<br /><br /> ソリューション エクスプローラーで **[キューブ]** を右クリックし、**[新しいキューブ]** を選択します。 これらの手順については、「[多次元モデリング (Adventure Works チュートリアル)](../multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。<br /><br /> 既存のデータ ウェアハウスのテーブルに基づいてキューブを作成すると、メジャーおよびメジャー グループの定義がキューブの作成プロセスの一部として具体化されます。 ウィザードで、キューブ内のメジャーとメジャー グループのオブジェクトのベースとして使用するファクトとファクト テーブルを選択します。|  
+|キューブ ウィザード|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でキューブ ウィザードを実行してキューブを作成します。<br /><br /> ソリューション エクスプローラーで **[キューブ]** を右クリックし、 **[新しいキューブ]** を選択します。 これらの手順については、「[多次元モデリング (Adventure Works チュートリアル)](../multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。<br /><br /> 既存のデータ ウェアハウスのテーブルに基づいてキューブを作成すると、メジャーおよびメジャー グループの定義がキューブの作成プロセスの一部として具体化されます。 ウィザードで、キューブ内のメジャーとメジャー グループのオブジェクトのベースとして使用するファクトとファクト テーブルを選択します。|  
 |[新しいメジャー] ダイアログ|キューブが既に [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に存在していることを前提に、キューブ デザイナーでソリューション エクスプローラー内のキューブ名をダブルクリックして開きます。 [メジャー] ペインで、ソース テーブル、列、集計の型を指定し、最上位のノードを右クリックして新しいメジャー グループまたは新しいメジャーを作成します。 この方法を使用するには、構築済みの関数の固定リストから集計の方法を選択することが必要です。 より一般的に使用されている集計の説明については、「 [Use Aggregate Functions](use-aggregate-functions.md) 」を参照してください。|  
 |計算されるメンバー|計算されるメンバーについては、いつどのように作成するかを制御できるため、それにより [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でキューブに柔軟性と分析機能が追加されます。 ユーザー セッションの期間中、または調査の一部としての Management Studio では、一時的にのみメジャーが必要になることがあります。<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、[計算] タブを開いて計算されるメンバーを新規作成します。<br /><br /> メジャーを MDX 式のベースにする場合は、この方法を選択します。 詳細については次のトピックを参照してください。[MDX でのメジャーを構築](mdx/mdx-building-measures.md)、[計算](../multidimensional-models-olap-logical-cube-objects/calculations.md)、[多次元モデルの計算](calculations-in-multidimensional-models.md)と[MDX スクリプティングの基礎&#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX または XMLA|計算される新しいメジャーを含めるには、SQL Server Management Studio で、MDX または XMLA を実行してデータベースを変更します。 この方法は、ソリューションをサーバーに配置した後の、データのアドホック テストに役立ちます。 「 [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md)」を参照してください。|  
@@ -84,7 +84,7 @@ ms.locfileid: "66076250"
   
  キューブ デザイナーの **[ディメンションの使用法]** タブを使用すると、特定のディメンションに関してメジャー グループの粒度を指定できます。 ディメンションのリレーションシップの詳細については、「 [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのキューブ](cubes-in-multidimensional-models.md)   
  [メジャーおよびメジャー グループ](measures-and-measure-groups.md)  
   

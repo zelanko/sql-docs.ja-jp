@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773690"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>テーブル デザイナーでの作業を保存する (Visual Database Tools)
@@ -41,7 +41,7 @@ ms.locfileid: "62773690"
 > [!NOTE]  
 >  テーブル、ビュー、ストアド プロシージャなど、開いているすべてのアイテムへの変更を保存するには、 **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テーブルのプロパティ (Visual Database Tools)](../ssms/visual-db-tools/visual-database-tools.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfd6d077d80093821346be030ee0dd9c2af0fc9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100598"
 ---
 # <a name="text-based-query-designer-user-interface"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス
@@ -40,7 +40,7 @@ ms.locfileid: "66100598"
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 すべての種類のデータ ソースでグラフィカル クエリ デザイナーがサポートされているとは限りません。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
 |![クエリを実行する](../analysis-services/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、その結果セットを結果ペインに表示します。|  
-|**[コマンドの種類]**|**[Text]**、 **[StoredProcedure]**、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。 ストアド プロシージャが 1 つ以上の結果セットを返す場合に、データセットを作成する最初の結果セットのみが使用することに注意してください。<br /><br /> サポートされるコマンドの種類は、データ ソースの種類によって異なります。 たとえば、 **[TableDirect]** がサポートされるのは、OLE DB と ODBC だけです。|  
+|**[コマンドの種類]**|**[Text]** 、 **[StoredProcedure]** 、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。 ストアド プロシージャが 1 つ以上の結果セットを返す場合に、データセットを作成する最初の結果セットのみが使用することに注意してください。<br /><br /> サポートされるコマンドの種類は、データ ソースの種類によって異なります。 たとえば、 **[TableDirect]** がサポートされるのは、OLE DB と ODBC だけです。|  
   
 ### <a name="command-type-text"></a>コマンドの種類 (Text)  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データセットを作成するとき、レポート デザイナーには既定によりグラフィカル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。  
@@ -89,7 +89,7 @@ uspGetEmployeeManagers;
   
  作成するのと同じテーブル名 Sales.Customer を入力するときに、[!INCLUDE[tsql](../includes/tsql-md.md)]ステートメント`SELECT * FROM Sales.Customer;`します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [SQL Server の接続の種類 &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   

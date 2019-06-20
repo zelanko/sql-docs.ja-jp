@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088957"
 ---
 # <a name="ring-buffer-target"></a>リング バッファー ターゲット
@@ -74,7 +74,7 @@ WHERE xe.name = 'session_name'
 ```
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)

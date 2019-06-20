@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaa80c3b66d7991414033c9c05c79b12681d4ef4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488030"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
@@ -26,7 +26,7 @@ ms.locfileid: "65488030"
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] のデータを整理する方法の概要については、[マスター データ サービスの概要](../master-data-services/master-data-services-overview-mds.md)を参照してください。 
   
- **マスター データ サービスをインストールし、データベースと Web サイトをセットアップして、サンプル モデルをデプロイするには、「**[Master Data Services Overview (MDS) (マスター データ サービスの概要 (MDS))](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
+ **マスター データ サービスをインストールし、データベースと Web サイトをセットアップして、サンプル モデルをデプロイするには、「** [Master Data Services Overview (MDS) (マスター データ サービスの概要 (MDS))](../master-data-services/master-data-services-overview-mds.md)」を参照してください。  
   
  **ダウンロード**  
   
@@ -232,7 +232,7 @@ ms.locfileid: "65488030"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービスと SQL Server 2016 のエディションでサポートされるデータ品質サービス機能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [非推奨のマスター データ サービス機能](../master-data-services/deprecated-master-data-services-features.md)  
  [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)

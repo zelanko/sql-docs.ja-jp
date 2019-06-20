@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645500"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (TRANSACT-SQL)
@@ -53,9 +53,9 @@ ms.locfileid: "62645500"
 |**file_guid**|**uniqueidentifier**|ファイルの一意の識別子。|  
 |**read_only_lsn**|**numeric(25,0)**|このファイルを含むファイル グループが、前回読み書き可能から読み取り専用に変更されたときのログ シーケンス番号。 NULL にすることができます。|  
 |**read_write_lsn**|**numeric(25,0)**|このファイルを含むファイル グループが、前回読み取り専用から読み書き可能に変更されたときのログ シーケンス番号。 NULL にすることができます。|  
-|**differential_base_lsn**|**numeric(25,0)**|差分バックアップのベース ログ シーケンス番号。 差分バックアップには、データ エクステントをログ シーケンス番号以上になるだけが含まれます。 **differential_base_lsn**します。<br /><br /> その他のバックアップの種類、値は NULL です。|  
-|**differential_base_guid**|**uniqueidentifier**|差分バックアップの場合、ファイルの差分ベースとなる最新のデータ バックアップの一意識別子。この値が NULL の場合、ファイルは差分バックアップに含まれますが、ベースの作成後に追加されています。<br /><br /> その他のバックアップの種類、値は NULL です。|  
-|**backup_size**|**numeric(20,0)**|(バイト単位) には、このファイルのバックアップのサイズ。|  
+|**differential_base_lsn**|**numeric(25,0)**|差分バックアップのベース ログ シーケンス番号。 差分バックアップには、データ エクステントをログ シーケンス番号以上になるだけが含まれます。 **differential_base_lsn**します。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
+|**differential_base_guid**|**uniqueidentifier**|差分バックアップの場合、ファイルの差分ベースとなる最新のデータ バックアップの一意識別子。この値が NULL の場合、ファイルは差分バックアップに含まれますが、ベースの作成後に追加されています。<br /><br /> その他の種類のバックアップの場合、この値は NULL です。|  
+|**backup_size**|**numeric(20,0)**|このファイルのバックアップ サイズ (バイト単位)。|  
 |**filegroup_guid**|**uniqueidentifier**|ファイル グループの ID。 Backupfilegroup テーブルでのファイル グループ情報を見つけるには使用**filegroup_guid**で**backup_set_id**します。|  
 |**is_readonly**|**bit**|1 = ファイルは読み取り専用です。|  
 |**is_present**|**bit**|1 = ファイルはバックアップ セットに含まれる。|  

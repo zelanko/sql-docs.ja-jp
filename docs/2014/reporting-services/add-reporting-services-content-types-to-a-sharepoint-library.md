@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110007"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>レポート サーバー コンテンツの種類をライブラリに追加する (Reporting Services の SharePoint 統合モード)
@@ -85,7 +85,7 @@ ms.locfileid: "66110007"
   
 5.  コンテンツの種類を管理できるようにするには、 **[コンテンツ タイプ]** の **[はい]** をクリックします。  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
 ##  <a name="bkmk_add_single"></a> Reporting Services のコンテンツの種類を追加するには (SharePoint 2013)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66110007"
   
 5.  コンテンツの種類を管理できるようにするには、 **[コンテンツ タイプ]** の **[はい]** をクリックします。  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
 ##  <a name="bkmk_add_single_2010"></a> レポート サーバーのコンテンツの種類を追加するには (SharePoint 2010)  
   

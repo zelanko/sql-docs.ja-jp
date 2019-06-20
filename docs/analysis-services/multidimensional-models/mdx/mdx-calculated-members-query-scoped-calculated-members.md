@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dd315d5c7c7cc2e3cc9839c8831c5356fa3e8ac5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62802679"
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 計算されるメンバー - クエリ スコープの計算されるメンバー
@@ -87,7 +87,7 @@ WHERE [Product].[Category].[Bikes]
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
  [SELECT ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
  [セッション スコープの計算されるメンバーの作成 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  

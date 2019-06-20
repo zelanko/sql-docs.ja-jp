@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62843736"
 ---
 # <a name="set-source-control-options"></a>ソース管理のオプションの設定
@@ -111,7 +111,7 @@ ms.locfileid: "62843736"
      **リセット**  
      ソース管理確認ダイアログ ボックスを既定の設定にリセットします。 例では、選択した場合、**次回からこのダイアログ ボックスを表示しない**ソース コントロールのダイアログ ボックスでは、チェック ボックスを選択すると、**リセット**オプションは、そのアクションを反転させます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)   
  [ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)   
  [ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)  

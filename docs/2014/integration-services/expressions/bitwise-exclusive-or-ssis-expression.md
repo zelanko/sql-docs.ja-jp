@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b5153a210c1d276b481cea240e1f28b77751ad4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769508"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (ビット演算排他的 OR) (SSIS 式)
@@ -92,7 +92,7 @@ ReorderPoint ^ SafetyStockLevel
   
  00000110  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [&#124;&#124; (論理 OR) (SSIS 式)](logical-or-ssis-expression.md)   
  [&#124; (ビット演算包含的 OR) (SSIS 式)](bitwise-inclusive-or-ssis-expression.md)   
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   

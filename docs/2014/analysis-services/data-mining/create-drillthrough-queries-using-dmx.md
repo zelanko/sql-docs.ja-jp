@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085238"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>DMX を使用したドリルスルー クエリの作成
@@ -43,7 +43,7 @@ WHERE [Model Region] = 'M200 Pacific'
   
  この例では、別名を使用して構造列の名前が変更されています。 構造列に別名を割り当てないと、'Expression' という名前で列が返されます。 これはすべての名前のない列に対する既定の動作です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドリルスルー クエリ (データ マイニング)](drillthrough-queries-data-mining.md)   
  [マイニング構造でのドリルスルー](drillthrough-on-mining-structures.md)  
   

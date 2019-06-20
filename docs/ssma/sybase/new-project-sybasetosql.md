@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 853483d2149cc159395fae9fda10f6f84a245151
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63278838"
 ---
 # <a name="new-project-sybasetosql"></a>新しいプロジェクト (SybaseToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63278838"
 **名前**  
 プロジェクトの名前を入力します。 SSMA は、ファイル拡張子を追加します。  
   
-**[場所]**  
+**場所**  
 入力するか、フォルダーまたはプロジェクトを保存するネットワークの場所を参照します。  
   
 **移行します。**  

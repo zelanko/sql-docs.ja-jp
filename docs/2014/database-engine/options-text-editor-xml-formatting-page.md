@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089851"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>[オプション] ([テキスト エディター]/[XML]/[書式設定] ページ)
@@ -22,7 +22,7 @@ ms.locfileid: "66089851"
 このダイアログ ボックスでは、XML エディターの書式設定を指定できます。 **[ツール]** メニューから **[オプション]** ダイアログ ボックスにアクセスできます。  
   
 > [!NOTE]  
-> 次の設定は、**[テキスト エディター]** フォルダーを展開し、**[XML]** フォルダーを展開して、**[オプション]** ダイアログ ボックスの **[書式設定]** オプションを選択したときに利用可能になります。  
+> 次の設定は、 **[テキスト エディター]** フォルダーを展開し、 **[XML]** フォルダーを展開して、 **[オプション]** ダイアログ ボックスの **[書式設定]** オプションを選択したときに利用可能になります。  
   
 ## <a name="attributes"></a>属性  
  **手動による属性の書式設定を保持します。**  

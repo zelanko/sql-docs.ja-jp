@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62919016"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR データベース オブジェクトのデバッグ
@@ -50,7 +50,7 @@ ms.locfileid: "62919016"
   
 1.  Microsoft Visual Studio を開き、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロジェクトを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでデータベースへの接続を確立します。  
   
-2.  新しい型を作成します。 **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、選択**追加**と**新しい項目.****新しい項目の追加**ウィンドウで、**ストアド プロシージャの**、**ユーザー定義関数**、**ユーザー定義型**、 **トリガー**、**集計**、または**クラス**します。 新しい型のソース ファイルの名前を指定し、クリックして**追加**します。  
+2.  新しい型を作成します。 **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、選択**追加**と**新しい項目.** **新しい項目の追加**ウィンドウで、**ストアド プロシージャの**、**ユーザー定義関数**、**ユーザー定義型**、 **トリガー**、**集計**、または**クラス**します。 新しい型のソース ファイルの名前を指定し、クリックして**追加**します。  
   
 3.  テキスト エディターに新しい型のコードを追加します。 ストアド プロシージャの例のサンプル コードについては、後のセクションを参照してください。  
   

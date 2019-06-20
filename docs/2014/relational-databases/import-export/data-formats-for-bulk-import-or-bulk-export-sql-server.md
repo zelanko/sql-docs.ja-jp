@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012081"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>一括インポートまたは一括エクスポートのデータ形式 (SQL Server)
@@ -36,10 +36,10 @@ ms.locfileid: "66012081"
 |---------------|------------|--------------------|---------------|-----------------------|  
 |拡張文字や 2 バイト文字セット (DBCS) の文字を含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。 フォーマット ファイルを使用する場合を除いて、これらのテーブルは同じように定義されている必要があります。|可<sup>1</sup>|-|-|-|  
 |文字形式や Unicode 形式とは異なり、ネイティブ データ形式では各 `sql_variant` 値のメタデータが保持されるので、`sql_variant` 列ではネイティブ データ形式を使用することが最も適しています。|はい|-|-|-|  
-|拡張文字や DBCS 文字を含むデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|[はい]|-|-|  
+|拡張文字や DBCS 文字を含むデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|はい|-|-|  
 |別のプログラムで生成されたテキスト ファイルからデータを一括インポートします。|-|-|はい|-|  
 |別のプログラムで使用するテキスト ファイルにデータを一括エクスポートします。|-|-|はい|-|  
-|Unicode データを含み、拡張文字や DBCS 文字は含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|-|-|[はい]|  
+|Unicode データを含み、拡張文字や DBCS 文字は含まないデータ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送します。|-|-|-|はい|  
   
  <sup>1</sup>からのデータの一括エクスポートするための最も簡単な方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用する場合**bcp**します。  
   

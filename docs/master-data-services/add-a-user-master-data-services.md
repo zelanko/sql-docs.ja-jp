@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11c4a53fc29e23a41ac2d7f16109bd41a0cc34c1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484828"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
@@ -48,7 +48,7 @@ ms.locfileid: "65484828"
   
 -   [機能領域の権限を割り当てる (マスター データ サービス)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
   
   

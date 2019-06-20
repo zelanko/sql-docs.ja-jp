@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780219"
 ---
 # <a name="udt-utilities"></a>UDT ユーティリティ
   UDT Utilities サンプルには、さまざまなユーティリティ関数が含まれています。 Transact-SQL へアセンブリ メタデータを公開するための関数、アセンブリ内の型をテーブルとして返すサンプル ストリーミング テーブル値関数、およびユーザー定義データ型のフィールド、メソッド、プロパティを返す関数などがあります。 例示されているテクノロジは、ストリーミング テーブル値関数、.NET Framework リフレクション API、Transact-SQL からのテーブル値関数の呼び出しなどです。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  

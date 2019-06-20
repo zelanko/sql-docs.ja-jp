@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106394"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)
@@ -71,7 +71,7 @@ ms.locfileid: "66106394"
   
  式で変数を参照するには、 `=Variables!GroupDescription.Value`などのグローバル コレクション構文を使用します。 デザイン画面では、この値が `<<Expr>>`としてテキスト ボックスに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](built-in-collections-in-expressions-report-builder.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

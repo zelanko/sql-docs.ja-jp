@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086300"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>データ マイニング ウィザードの F1 ヘルプ (Analysis Services - データ マイニング)
@@ -48,7 +48,7 @@ ms.locfileid: "66086300"
   
 -   マイニング モデル列の内容とデータ型を指定します。  
   
--   モデルのトレーニングに使用するデータをフィルター処理します  (OLAP のみ)。  
+-   モデルのトレーニングに使用するデータをフィルター処理します (OLAP のみ)。  
   
 -   データをトレーニング セットとテスト セットにパーティション分割します。  
   

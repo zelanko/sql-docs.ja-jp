@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d3dd0bf00f9ca0917e94e2d942dcb929ef35055
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480742"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
@@ -59,7 +59,7 @@ ms.locfileid: "65480742"
  **Configuration**  
  参照データ サービス アカウント (Windows Azure Marketplace 経由と参照データ サービス直接の両方)、一般設定 (対話形式のクレンジング、照合、プロファイリング)、およびログの重大度設定に対する構成プロパティが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DQS のナレッジ ベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [データ品質プロジェクト &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
  [DQS 管理](../../2014/data-quality-services/dqs-administration.md)  

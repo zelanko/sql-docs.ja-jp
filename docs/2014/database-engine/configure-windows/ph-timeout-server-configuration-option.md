@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25a89c00466cf4a702202f6a6fb4959f1d845c41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781340"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>PH timeout サーバー構成オプション
@@ -31,7 +31,7 @@ ms.locfileid: "62781340"
   
  データ行をフェッチすると、指定した時間内にプロトコル ハンドラーが SQL Server に接続できない場合、その行に対するタイムアウト エラーが報告されます。 その行のフェッチは、後でフルテキストの Gatherer により再試行されます。 フルテキストの Gatherer の詳細については、「 [フルテキスト インデックスの作成](../../relational-databases/indexes/indexes.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

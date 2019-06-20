@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce60db3b720b046c44d7507d3164c2f2e6c9173f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091262"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>アップグレード アドバイザーを使用したアップグレードの準備
@@ -74,7 +74,7 @@ ms.locfileid: "66091262"
   
  アップグレード アドバイザーをインストールした後からを開くことができます、**開始**メニュー。  
   
--   クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリックします**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**します。  
+-   クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリックします **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**します。  
   
  詳細については、アップグレード アドバイザーのダウンロードおよび [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリリース ノートに収録されているアップグレード アドバイザーのドキュメントを参照してください。  
   

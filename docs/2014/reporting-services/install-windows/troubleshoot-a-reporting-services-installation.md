@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a27cbad6803c2106c0af4cbe4060e72cc8ee970
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108664"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
   セットアップ中にエラーが発生して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインストールできない場合は、このトピックで示す手順に従って、インストール エラーの原因として最も可能性が高い状況に対処してください。  
   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の問題の最新情報については、「 [Reporting Services SQL Server 2012 の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=221297)」を参照してください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の問題の最新情報については、「 [Reporting Services SQL Server 2012 の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=221297)」を参照してください。  
   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に関連するその他のエラーや問題については、「 [SSRS の問題とエラーのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)」を参照してください。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に関連するその他のエラーや問題については、「 [SSRS の問題とエラーのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)」を参照してください。  
   
  発生した問題がリリース ノートに記載されている場合があるので、 [オンライン リリース ノート](https://go.microsoft.com/fwlink/?linkid=236893) を参照してください。  
   
@@ -251,12 +251,12 @@ ms.locfileid: "66108664"
   
  この問題を回避するには次の方法があります。  
   
--    [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をコンピューター上の既定のインスタンスとして実行する必要がある場合は、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスを [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] インスタンスの前にインストールする必要があります。  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をコンピューター上の既定のインスタンスとして実行する必要がある場合は、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスを [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] インスタンスの前にインストールする必要があります。  
   
 -   場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インスタンスが既定のインスタンスにする必要はありませんをインストールすることができます、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インスタンスをインストールした後に、名前付きインスタンスとして、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]インスタンス。  
   
 ###  <a name="WindowsAuthBreaksAfterUpgrade"></a> SQL Server 2005 から SQL Server 2012 へのアップグレード後に Windows 認証を使用するときに 401-エラー  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]にアップグレードする場合に、レポート サーバー サービス アカウントにビルトイン アカウントを使用して NTLM 認証を使用していると、アップグレード後にレポート サーバーやレポート マネージャーにアクセスするときに "401 - 権限がありません" エラーが表示される場合があります。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] から [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]にアップグレードする場合に、レポート サーバー サービス アカウントにビルトイン アカウントを使用して NTLM 認証を使用していると、アップグレード後にレポート サーバーやレポート マネージャーにアクセスするときに "401 - 権限がありません" エラーが表示される場合があります。  
   
  この問題が発生するのは、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] で Windows 認証の既定の構成が変更されているためです。 レポート サーバー サービス アカウントが NetworkService または LocalSystem である場合はネゴシエートが構成され、 レポート サーバー サービス アカウントがこれらのビルトイン アカウントではない場合は NTLM が構成されます。 アップグレード後にこの問題を修正するには、RSReportServer.config ファイルを編集して `AuthenticationType` を `RSWindowsNTLM` に設定します。 詳細については、「 [レポート サーバーで Windows 認証を構成する](../security/configure-windows-authentication-on-the-report-server.md)」を参照してください。  
   
@@ -277,6 +277,6 @@ ms.locfileid: "66108664"
   
 -   [フォーラム:SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![SharePoint の設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)します。  
+ ![SharePoint の設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) します。  
   
   

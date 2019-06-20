@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5cf9a81134af8d6e90a1b869f8cc011a17a4b93a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482923"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>マスター データ サービスを使用した Data Quality Services 統合の有効化
@@ -38,7 +38,7 @@ ms.locfileid: "65482923"
   
 5.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel 用 MDS アドインでのデータ品質照合](../microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [Microsoft Excel 用マスター データ サービス アドイン](../microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [マスター データ サービスのインストール](install-master-data-services.md)  

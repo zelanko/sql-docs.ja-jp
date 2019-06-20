@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068698"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>DirectQuery の優先接続方法の設定または変更
@@ -40,7 +40,7 @@ ms.locfileid: "66068698"
   
     -   **DirectQuery で InMemory**:このオプションを使用する場合は、モデルが展開されているが、モデルに対するクエリを実行する前にキャッシュを処理する必要があります。  
   
-    -   **DirectQuery (インメモリあり)**:このオプションを使用する場合は、既に処理された場合、キャッシュがクライアントで使用できるようなります。 この設定でモデルを配置し、キャッシュを処理しない場合、一部のクライアントではモデルに接続しようとするとエラーが発生します。  
+    -   **DirectQuery (インメモリあり)** :このオプションを使用する場合は、既に処理された場合、キャッシュがクライアントで使用できるようなります。 この設定でモデルを配置し、キャッシュを処理しない場合、一部のクライアントではモデルに接続しようとするとエラーが発生します。  
   
     -   **DirectQuery のみ**:このオプションを使用する場合は、メタデータが展開されているがモデルにデータがありません。 インメモリ モードを使用して接続しようとするクライアントでは、モデルが存在しないか処理されていないことを示すエラーが発生します。  
   

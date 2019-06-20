@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055431"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>[SQL Server Compact Edition 接続マネージャー エディター] ([接続] ページ)
@@ -36,7 +36,7 @@ ms.locfileid: "66055431"
  **[データベースのパスワードを入力]**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact データベースのパスワードを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[SQL Server Compact Edition 接続マネージャー エディター] &#40;[すべて] ページ&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   

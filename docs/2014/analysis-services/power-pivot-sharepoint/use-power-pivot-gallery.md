@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070881"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot ギャラリーの使用
@@ -69,13 +69,13 @@ ms.locfileid: "66070881"
   
 1.  ファイルを保存します。  
   
-2.  1.  **Excel 2010:**[ファイル] メニューで、次のようにクリックします。**保存と送信**します。  
+2.  1.  **Excel 2010:** [ファイル] メニューで、次のようにクリックします。**保存と送信**します。  
   
     2.  **[SharePoint に保存]** をクリックします。  
   
     3.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[発行オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   
-    1.  **Excel 2013:**[ファイル] メニューで、次のようにクリックします。**保存**します。  
+    1.  **Excel 2013:** [ファイル] メニューで、次のようにクリックします。**保存**します。  
   
     2.  パブリッシュする個々のシートまたはパラメーターを [Excel Services のオプション] を使用して選択する場合は、 **[ブラウザー ビュー オプション]** をクリックします。 たとえば、[Excel Services のオプション] の [パラメーター] タブでは、パブリッシュしたブックに表示するスライサーを選択できます。  
   

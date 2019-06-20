@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076291"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、ソース データベースに使用できる時間テーブルがない場合に、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して時間ディメンションを作成できます。 この操作を行うには、 **[作成方法の選択]** ページで次のいずれかのオプションを選択します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、ソース データベースに使用できる時間テーブルがない場合に、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して時間ディメンションを作成できます。 この操作を行うには、 **[作成方法の選択]** ページで次のいずれかのオプションを選択します。  
   
 -   **[データ ソースに時間テーブルを生成]** 基になるデータ ソースにオブジェクトを作成する権限がある場合に、このオプションを選択します。 ウィザードによって時間テーブルが生成され、このテーブルがデータ ソースに格納されます。 次に、ウィザードによってこの時間テーブルから時間ディメンションが作成されます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66076291"
 ## <a name="completing-the-dimension-wizard"></a>ディメンション ウィザードの完了  
  **[ウィザードの完了]** ページで、ウィザードによって作成された属性と階層を確認し、時間ディメンションに名前を付けます。 **[完了]** をクリックしてウィザードを終了し、ディメンションを作成します。 ディメンションが完成したら、ディメンション デザイナーを使用してそのディメンションを変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
  [日付型ディメンションの作成](database-dimensions-create-a-date-type-dimension.md)   
  [データベース ディメンション プロパティ](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   

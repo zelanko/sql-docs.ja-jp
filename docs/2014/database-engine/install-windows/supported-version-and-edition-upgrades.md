@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775224"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>サポートされるバージョンとエディションのアップグレード
@@ -59,7 +59,7 @@ ms.locfileid: "62775224"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 ビット エディションは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 ビット サーバーにのみアップグレードできます。  
   
 > [!NOTE]  
->  アップグレードすると[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の以前のバージョンから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition、Enterprise Edition を選択します。コア ベース ライセンスと Enterprise Edition。 これらの Enterprise Edition は、ライセンス モードとサポートされるコアの最大数のみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
+>  アップグレードすると[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の以前のバージョンから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise edition、Enterprise Edition を選択します。コアベース ライセンスの Enterprise エディションのいずれかを選ぶことができます。 これらの Enterprise Edition は、ライセンス モードとサポートされるコアの最大数のみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、次のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からのアップグレードがサポートされます。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62775224"
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]2014 を使用して [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] に接続します。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のデータベース互換性レベルの有効な値は 100、110、120 です。)[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のデータベース互換性レベルの有効な値は 100、110、120 です。)[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
   
  上記の一覧で説明されていないどのシナリオもサポートされていませんが、以下のシナリオに限定されるものではありません。  
   

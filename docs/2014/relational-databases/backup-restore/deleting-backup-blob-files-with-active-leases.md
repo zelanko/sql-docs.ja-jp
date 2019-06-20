@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876172"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>アクティブなリースを保持しているバックアップ BLOB ファイルの削除
@@ -39,7 +39,7 @@ ms.locfileid: "62876172"
 3.  **Blob の削除。** アクティブなリースを保持している BLOB を削除するには、先にリースを終了する必要があります。  
   
 ###  <a name="Code_Example"></a> PowerShell スクリプトの例  
- **\*\* 重要な\* \***  PowerShell 2.0 を実行している場合、Microsoft WindowsAzure.Storage.dll アセンブリの読み込みに関する問題があります。 この問題を解決するには、PowerShell 3.0 にアップグレードすることをお勧めします。 また、PowerShell 2.0 では次の回避策を使用することもできます。  
+ **\*\* 重要な\* \* ** PowerShell 2.0 を実行している場合、Microsoft WindowsAzure.Storage.dll アセンブリの読み込みに関する問題があります。 この問題を解決するには、PowerShell 3.0 にアップグレードすることをお勧めします。 また、PowerShell 2.0 では次の回避策を使用することもできます。  
   
 -   次のスクリプトを使用して実行時に .NET 2.0 アセンブリと .NET 4.0 アセンブリを読み込むように powershell.exe.config ファイルを作成または変更する:  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066629"
 ---
 # <a name="roles-ssas-tabular"></a>ロール (SSAS テーブル)
@@ -75,7 +75,7 @@ ms.locfileid: "66066629"
   
  行フィルターを定義できるのは、読み取りおよび読み取りと処理の権限を持つロールに対してだけです。 既定では、ある特定のテーブルに対して行フィルターが定義されていない場合、読み取り権限または読み取りと処理の権限を持つロールのメンバーは、別のテーブルからのクロスフィルター処理が適用されていない限り、テーブル内のすべての行を照会できます。  
   
- ある特定のテーブルに対して行フィルターが定義されると、DAX 式 (これは TRUE/FALSE 値に評価される必要がある) によりその特定のロールのメンバーが照会できる行が定義されます。 DAX 式に含まれていない行は照会できません。 たとえば、Sales ロールのメンバーの場合、次の行を持つ Customers テーブル フィルター、式、 *= Customers [Country] ="USA"*、Sales ロールのメンバーは、米国内の顧客を参照してください。 できます。  
+ ある特定のテーブルに対して行フィルターが定義されると、DAX 式 (これは TRUE/FALSE 値に評価される必要がある) によりその特定のロールのメンバーが照会できる行が定義されます。 DAX 式に含まれていない行は照会できません。 たとえば、Sales ロールのメンバーの場合、次の行を持つ Customers テーブル フィルター、式、 *= Customers [Country] ="USA"* 、Sales ロールのメンバーは、米国内の顧客を参照してください。 できます。  
   
  行フィルターは、指定行と関連行に適用されます。 1 つのテーブルに複数のリレーションシップがある場合、フィルターによりセキュリティがアクティブなリレーションシップに適用されます。 行フィルターには、関連テーブルに対して定義された他の行フィルターと類似する点があります。次に例を示します。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66066629"
 |-----------|-----------------|  
 |[ロールの作成および管理 &#40;SSAS テーブル&#41;](create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パースペクティブ &#40;SSAS テーブル&#41;](perspectives-ssas-tabular.md)   
  [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)   
  [USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   

@@ -14,10 +14,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088633"
 ---
 # <a name="about-the-sql-server-license-terms"></a>SQL Server の使用許諾条件について
@@ -35,7 +35,7 @@ ms.locfileid: "66088633"
   
 -   ENT の Enterprise Edition:サーバー/クライアント アクセス ライセンス (CAL) ライセンス  
   
--   ENTCORE の Enterprise Edition:コア ベース ライセンス  
+-   ENTCORE の Enterprise Edition:Core-based Licensing  
   
 -   BI - Business Intelligence  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66088633"
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ライセンス オプション  
  詳細については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]価格およびライセンス オプションを参照してください、 [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (https://www.microsoft.com/sqlserver/sql-server-2014.aspx) Web サイト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のライセンスに関する考慮事項](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   
  [Microsoft SQL Server のプライバシーに関する声明](../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [ドキュメントの免責事項](../../2014/getting-started/legal-notice-for-documentation.md)  

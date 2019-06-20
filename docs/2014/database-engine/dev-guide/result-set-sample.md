@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782145"
 ---
 # <a name="result-set-sample"></a>結果セットのサンプル
@@ -25,7 +25,7 @@ ms.locfileid: "62782145"
   
  このクラスの API は、結果セット内を前後に移動できる点を除いてデータ リーダーと同じであるため、結果セットが開かれている場合でも他のコマンドを接続上で実行することができます。この実装は非常に単純化されているため、このサンプルを簡単に理解することができます。 より効率的な実装を行うと、複数の行がフェッチされるため、データベースにかかるフェッチ行あたりの負荷を回避することができます。 このクラスを使用すると、クエリの結果すべてをデータセットに設定する場合に比べ、メモリの使用量を圧倒的に少なくすることができます。このことは、サーバー側プログラミングで非常に重要です。 また、このサンプルでは、AllowPartiallyTrustedCallers 属性を使用して、ResultSet アセンブリが他のアセンブリから安全に呼び出されるライブラリであることを指定する方法を示します。 この方法はやや複雑ですが、UNSAFE 権限を使用して呼び出し側のアセンブリを登録する方法よりはるかに安全性に優れています。 呼び出し側のアセンブリを safe として登録することで、そのアセンブリがサーバー外部のリソースに与える影響が制限されるため、サーバーの整合性が維持されます。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  

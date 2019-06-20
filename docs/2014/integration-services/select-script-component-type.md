@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055976"
 ---
 # <a name="select-script-component-type"></a>[スクリプト コンポーネントの種類を選択]
@@ -25,9 +25,9 @@ ms.locfileid: "66055976"
  スクリプト コンポーネントの詳細については、「 [スクリプトコンポーネント](data-flow/transformations/script-component.md) 」および「 [スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
 ## <a name="options"></a>および  
- **[変換元]**、 **[変換先]**、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
+ **[変換元]** 、 **[変換先]** 、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [スクリプト変換エディター &#40;[入力および出力] ページ&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   

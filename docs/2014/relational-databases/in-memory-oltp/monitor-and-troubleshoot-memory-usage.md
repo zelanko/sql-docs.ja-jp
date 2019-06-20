@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63073897"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
@@ -122,7 +122,7 @@ ms.locfileid: "63073897"
   
 2.  オブジェクト エクスプローラーで、レポートが必要なデータベースを右クリックします。  
   
-3.  コンテキスト メニューで、 **[レポート]** -> **Standard [レポート]** -> **[メモリ最適化オブジェクトによるメモリ使用量]** の順にクリックします。  
+3.  コンテキスト メニューで、 **[レポート]**  -> **Standard [レポート]**  ->  **[メモリ最適化オブジェクトによるメモリ使用量]** の順にクリックします。  
   
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

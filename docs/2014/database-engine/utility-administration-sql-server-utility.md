@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773754"
 ---
 # <a name="utility-administration-sql-server-utility"></a>ユーティリティの管理 (SQL Server ユーティリティ)
@@ -104,7 +104,7 @@ ms.locfileid: "62773754"
 ## <a name="see-also"></a>関連項目  
  [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [マネージド インスタンスの詳細 &amp;amp;#40;SQL Server ユーティリティ&amp;amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

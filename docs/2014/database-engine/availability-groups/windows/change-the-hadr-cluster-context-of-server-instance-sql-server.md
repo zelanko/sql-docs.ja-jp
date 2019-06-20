@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815405"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>サーバー インスタンスの HADR クラスター コンテキストの変更 (SQL Server)
@@ -160,7 +160,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループ (SQL Server)](always-on-availability-groups-sql-server.md) [Windows Server フェールオーバー クラスタ リング&#40;WSFC&#41;と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   

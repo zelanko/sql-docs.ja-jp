@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187641"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX データ操作 - SELECT
@@ -463,7 +463,7 @@ WHERE
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX の主な概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX データ操作ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [クエリ軸とスライサー軸によるクエリの制限 &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088467"
 ---
 # <a name="browsing-an-association-rules-model"></a>アソシエーション ルール モデルの参照
@@ -150,7 +150,7 @@ ms.locfileid: "66088467"
   
 -   **アイテム セット:** 生成されるアイテムセットの数は、モデルの作成時に、MINIMUM_PROBABILITY パラメーターに値を割り当てることによって制御することもできます。 このパラメーターは、アルゴリズム パラメーター ダイアログ ボックスで使用できます。  
   
--   **ルール:**[!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、確率値を使用して、生成されるルールの数を制限します。 ルールの数を制御するには、`MINIMUM_PROBABILITY` パラメーターまたは `MINIMUM _IMPORTANCE` パラメーターを設定します。  
+-   **ルール:** [!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、確率値を使用して、生成されるルールの数を制限します。 ルールの数を制御するには、`MINIMUM_PROBABILITY` パラメーターまたは `MINIMUM _IMPORTANCE` パラメーターを設定します。  
   
  高度なパラメーターを構成する方法の詳細については、次を参照してください。[データ マイニング アルゴリズム&#40;SQL Server データ マイニング アドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)します。  
   

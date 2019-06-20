@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 524ad97d02192a19198891c79c07f875a738fc30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094529"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>SharePoint 2010 用 Reporting Services の SharePoint モードのインストール
@@ -84,7 +84,7 @@ ms.locfileid: "66094529"
   
 8.  選択**SQL Server 機能のインストール**上、**セットアップ ロール**ページ。  
   
-      **[次へ]** をクリックします。  
+     **[次へ]** をクリックします。  
   
      ![セットアップ ロールの SQL Server 機能のインストール](../../../2014/sql-server/install/media/rs-setuprole.gif "セットアップ ロールの SQL Server 機能のインストール")  
   
@@ -181,7 +181,7 @@ ms.locfileid: "66094529"
 3.  [新規作成] メニューで、 **[SQL Server Reporting Services サービス アプリケーション]** をクリックします。  
   
     > [!WARNING]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オプションが一覧に表示されない場合は、**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共有サービスがインストールされていない**ことを示しています。 前のセクションの、PowerShell コマンドレットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスをインストールする方法を確認してください。  
+    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] オプションが一覧に表示されない場合は、 **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共有サービスがインストールされていない**ことを示しています。 前のセクションの、PowerShell コマンドレットを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービスをインストールする方法を確認してください。  
   
 4.  **[SQL Server Reporting Services サービス アプリケーションの作成]** ページで、アプリケーションの名前を入力します。 複数の Reporting Services サービス アプリケーションを作成する場合わかりやすい名前または名前付け規則を整理することが、管理操作。  
   
@@ -240,7 +240,7 @@ ms.locfileid: "66094529"
 
   
 ### <a name="add-reporting-services-content-types"></a>Reporting Services のコンテンツの種類を追加  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用されるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用されるコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]** 、 **[レポート モデル]** 、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
   
 
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058518"
 ---
 # <a name="foreach-loop-editor-general-page"></a>[Foreach ループ エディター] ([全般] ページ)
@@ -34,7 +34,7 @@ ms.locfileid: "66058518"
  **[説明]**  
  Foreach ループ コンテナーの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach ループ エディター&#40;コレクション ページ&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach ループ エディター&#40;変数マッピング ページ&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   

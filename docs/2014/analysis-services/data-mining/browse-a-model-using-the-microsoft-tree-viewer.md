@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085938"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Microsoft ツリー ビューアーを使用したモデルの参照
@@ -103,7 +103,7 @@ ms.locfileid: "66085938"
   
  [トップに戻る](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)   
  [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](../mining-model-viewers-data-mining-model-designer.md)   
  [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   

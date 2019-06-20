@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082318"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>[データベースのプロパティ] ダイアログ ボックス (SSAS - 多次元)
@@ -37,7 +37,7 @@ ms.locfileid: "66082318"
 |**推定サイズ**|データベースの推定サイズが表示されます。|  
 |**記憶域の場所**|データベースの場所を指定します。 データベースが既定のデータ ディレクトリにある場合は、この値は空になります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [多次元モデル データベース (SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   

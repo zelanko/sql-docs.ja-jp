@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089718"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - [構成の再生] ([再生オプションの基本設定])
@@ -51,7 +51,7 @@ ms.locfileid: "66089718"
  **[再生結果を表示する]**  
  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]に再生結果を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレース テーブルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [トレースの再生](../tools/sql-server-profiler/replay-traces.md)  

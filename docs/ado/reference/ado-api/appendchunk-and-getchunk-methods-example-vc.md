@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 4adc655e670bd44e4c0e3aba32d21d3bdb4beae9
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66696467"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk および GetChunk メソッドの例 (VC++)
@@ -266,7 +266,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AppendChunk メソッド (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk メソッド (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

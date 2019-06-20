@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30162cbc63d64f9c5224fd2d030e1dbc50f5dae1
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63456579"
 ---
 # <a name="-positive-mdx"></a>+ (正号) (MDX)
@@ -35,7 +35,7 @@ ms.locfileid: "63456579"
 ## <a name="return-value"></a>戻り値  
  指定されているパラメーターのデータ型を持つ正の値です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

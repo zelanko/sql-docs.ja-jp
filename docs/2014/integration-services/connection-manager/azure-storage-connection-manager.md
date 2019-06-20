@@ -14,16 +14,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833560"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 接続マネージャー
   Azure Storage 接続マネージャーでは、プロパティを指定する値を使用して、Azure Storage アカウントに接続する SSIS パッケージが有効にします。接続することを可能にします。  
   
-1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureStorage]**(AzureStorage) を選択し、 **[追加]** をクリックします。  
+1.  **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[AzureStorage]** (AzureStorage) を選択し、 **[追加]** をクリックします。  
   
 2.  Azure Storage 接続マネージャー エディター ダイアログ ボックスで、インターネット経由で Azure Storage サービスに接続する場合は **[Use Azure account]** (Azure アカウントを使用する) を選択し、Azure Storage エミュレーターによってホストされているローカル サービスに接続する場合は **[Use local developer account]** (ローカル開発者アカウントを使用する) を選択します。  
   

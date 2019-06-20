@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 664f0cdc9f01bf27e8f20c6799097948b0c100c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067464"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>ロールの作成および管理 (SSAS テーブル)
@@ -63,7 +63,7 @@ ms.locfileid: "66067464"
   
 9. **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ロール &#40;SSAS テーブル&#41;](roles-ssas-tabular.md)   
  [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)   
  [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)   

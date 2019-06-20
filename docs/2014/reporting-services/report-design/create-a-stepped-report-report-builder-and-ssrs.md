@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106128"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>階段状レポートの作成 (レポート ビルダーおよび SSRS)
@@ -97,13 +97,13 @@ ms.locfileid: "66106128"
   
     2.  **[Tablix のグループ]** ダイアログ ボックスで、名前を入力します。  
   
-    3.  **[グループ式]** で、式を入力するか、グループ化の対象となるデータセット フィールドを選択します。 式を作成するには、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
+    3.  **[グループ式]** で、式を入力するか、グループ化の対象となるデータセット フィールドを選択します。 式を作成するには、式 ( **[fx]** ) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
   
     4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 3.  グループ データを表示するセルの埋め込みを変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   

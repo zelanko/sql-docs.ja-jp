@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 14dea0c618f754024a18ca24d64b98b08aa99f64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789284"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>可用性グループの作成と構成 (SQL Server)
@@ -111,7 +111,7 @@ ms.locfileid: "62789284"
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの管理 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [AlwaysOn ポリシーの運用上の問題と AlwaysOn 可用性グループ (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)   

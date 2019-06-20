@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f32e23be700f17fee88cc6354f8652bb1333a12c
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537351"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 関数
@@ -49,7 +49,7 @@ BOOL SQLReadFileDSN(
   
 ## <a name="arguments"></a>引数  
  *lpszFileName*  
- [入力].Dsn ファイルの名前を含むデータ バッファーへのポインター。 .Dsn 拡張子は .dsn 拡張機能がまだないすべてのファイル名に追加されます。 値*\*場合*null で終わる文字列にする必要があります。  
+ [入力].Dsn ファイルの名前を含むデータ バッファーへのポインター。 .Dsn 拡張子は .dsn 拡張機能がまだないすべてのファイル名に追加されます。 値 *\*場合*null で終わる文字列にする必要があります。  
   
  *lpszAppName*  
  [入力]アプリケーションの名前を含むデータ バッファーへのポインター。 これは、ODBC のセクションの"ODBC"です。 値 *\*lpszAppName* null で終わる文字列にする必要があります。  
@@ -60,7 +60,7 @@ BOOL SQLReadFileDSN(
  *lpszString*  
  [出力]読み取るキーに関連付けられた文字列を含むデータ バッファーへのポインター。  
   
- 場合*\*場合*有効 .dsn ファイルの名前ですが、 *lpszAppName*引数が null ポインター、 *lpszKeyName*引数が null ポインターの場合は、 *\*lpszString*有効なアプリケーションの一覧が含まれています。 場合*\*場合*有効 .dsn ファイルの名前を指定し、  *\*lpszAppName*は有効なアプリケーションの名前ですが、 *lpszKeyName*引数が nullポインターの場合、  *\*lpszString*セミコロンで区切られた、DSN ファイルの適切なセクションでは有効の予約済みキーワードの一覧が含まれています。 場合*\*場合*は有効な .dsn ファイル名が *\*lpszAppName* null ポインター、 *lpszKeyName*引数が null ポインターの場合は、 *\*lpszString* DSN ファイルで、セミコロンで区切られたセクションの一覧が含まれています。  
+ 場合 *\*場合*有効 .dsn ファイルの名前ですが、 *lpszAppName*引数が null ポインター、 *lpszKeyName*引数が null ポインターの場合は、 *\*lpszString*有効なアプリケーションの一覧が含まれています。 場合 *\*場合*有効 .dsn ファイルの名前を指定し、  *\*lpszAppName*は有効なアプリケーションの名前ですが、 *lpszKeyName*引数が nullポインターの場合、  *\*lpszString*セミコロンで区切られた、DSN ファイルの適切なセクションでは有効の予約済みキーワードの一覧が含まれています。 場合 *\*場合*は有効な .dsn ファイル名が *\*lpszAppName* null ポインター、 *lpszKeyName*引数が null ポインターの場合は、 *\*lpszString* DSN ファイルで、セミコロンで区切られたセクションの一覧が含まれています。  
   
  *cbString*  
  [入力]長さ、  *\*lpszString*バッファー。  

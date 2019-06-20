@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106249"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
@@ -147,7 +147,7 @@ ms.locfileid: "66106249"
  [グラフのトラブルシューティング &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  グラフを操作する際に役立つヒントについて説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054859"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>[Master ストアド プロシージャ転送タスク エディター] ([ストアド プロシージャ] ページ)
@@ -29,10 +29,10 @@ ms.locfileid: "66054859"
   
 ## <a name="options"></a>および  
  **SourceConnection**  
- SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
   
  **[IfObjectExists]**  
  コピー先のサーバーの **master** データベースに存在する名前と同じ名前を持つ、ユーザー定義ストアド プロシージャの処理方法を選択します。  
