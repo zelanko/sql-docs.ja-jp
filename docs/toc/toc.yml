@@ -8215,12 +8215,12 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: リソース
           items:
+            - name: よく寄せられる質問
+              href: ../azure-data-studio/faq.md
             - name: Azure Data Studio の GitHub リポジトリ >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
             - name: SQL Server ブログ >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: よく寄せられる質問
-              href: ../azure-data-studio/faq.md
             - name: 問題の報告とご提案 >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: コマンド プロンプト ユーティリティ

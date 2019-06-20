@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2e8a49866e54a491dd8a79e59b7c8c4fdc34c5ba
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65817957"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67208658"
 ---
 新しい可用性グループ ウィザード
