@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4114610833d9e661e72e80db4bbe529e0ec39493
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066188"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>ツール バー ([集計] タブ、キューブ デザイナー)
@@ -32,7 +32,7 @@ ms.locfileid: "66066188"
 |**新しい集計デザイン**|クリックすると、 **[新しい集計デザイン]** ダイアログ ボックスが表示されます。 空の集計デザインを作成するか、既存の集計デザインのコピーを作成できます。<br /><br /> 注:このオプションは、集計デザイナーの詳細ビューでのみ表示されます。|  
 |**削除**|クリックすると、選択した集計デザインが削除されます。  集計デザイナーの詳細ビューでは、このオプションを使用して集計デザインから集計を削除することもできます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [集計&#40;キューブのデザイン&#41;](aggregations-cube-design.md)  
   
   

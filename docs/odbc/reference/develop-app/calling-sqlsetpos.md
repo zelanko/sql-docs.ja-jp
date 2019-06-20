@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199447"
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos の呼び出し
@@ -34,7 +34,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- ODBC 2 行の状態のポインターを変更する方法がない場合、エラーが生成されます。*x*呼び出しの間で**SQLExtendedFetch**します。 ODBC 2 を使用する場合に、ドライバー マネージャーが、次の手順を実行する代わりに、*.x*ドライバー。  
+ ODBC 2 行の状態のポインターを変更する方法がない場合、エラーが生成されます。*x*呼び出しの間で**SQLExtendedFetch**します。 ODBC 2 を使用する場合に、ドライバー マネージャーが、次の手順を実行する代わりに、 *.x*ドライバー。  
   
 1.  内部のドライバー マネージャーのフラグを初期化します*fSetPosError*を TRUE にします。  
   

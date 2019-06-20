@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb769db0de0e962c52d042e19134b849b3c1c3d
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011344"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>セマンティック検索を使用したドキュメント内のキー フレーズの検索
@@ -24,7 +24,7 @@ ms.locfileid: "66011344"
   
 ##  <a name="BasicsQueryKey"></a> ドキュメント内のキー フレーズの検索  
   
-###  <a name="howtofind"></a> 操作方法：SEMANTICKEYPHRASETABLE を使用したドキュメント内のキー フレーズを検索します。  
+###  <a name="howtofind"></a> 方法:SEMANTICKEYPHRASETABLE を使用したドキュメント内のキー フレーズを検索します。  
  特定のドキュメントに含まれるキー フレーズや特定のキー フレーズを含むドキュメントを識別するには、[semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 関数を使用してクエリを実行します。  
   
  SEMANTICKEYPHRASETABLE は、指定されたテーブル内の列に関連付けられているこれらのキー フレーズに対し、0 行以上の行を含むテーブルを返します。 この行セット関数は、標準のテーブル名のように、SELECT ステートメントの FROM 句で参照できます。  

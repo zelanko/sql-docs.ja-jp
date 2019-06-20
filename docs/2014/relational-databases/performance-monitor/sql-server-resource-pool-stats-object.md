@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183020"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer:Resource Pool Stats オブジェクト
@@ -50,7 +50,7 @@ ms.locfileid: "63183020"
 |Disk Write Bytes/sec|最後の 1 秒間にディスクに書き込まれたバイト数。|  
 |Avg Disk Write IO (ms)|ディスクへの書き込み操作の平均時間 (秒単位)。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソースの利用状況の監視 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
  [SQLServer:Workload Group Stats オブジェクト](sql-server-workload-group-stats-object.md)   
  [リソース ガバナー](../resource-governor/resource-governor.md)  

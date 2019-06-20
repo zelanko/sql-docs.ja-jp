@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059435"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>[ディメンション処理変換先エディター] ([接続マネージャー] ページ)
@@ -45,7 +45,7 @@ ms.locfileid: "66059435"
 |**[完全]**|ディメンションの完全処理を実行します。|  
 |**Update**|ディメンションの更新処理を実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [ディメンション処理変換先エディター ([マッピング] ページ)](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
  [ディメンション処理変換先エディター ([詳細設定] ページ)](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  

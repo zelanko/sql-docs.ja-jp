@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074517"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>MDX でのセル計算の作成 (MDX)
@@ -42,7 +42,7 @@ ms.locfileid: "66074517"
   
      CREATE CELL CALCULATION または ALTER CUBE ステートメントを使用してセッションでの計算されるセルを作成する方法の詳細については、「 [セッション スコープの計算されるセルの作成](mdx-cell-calculations-session-scoped-calculated-cells.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER CUBE ステートメント (MDX)](/sql/mdx/mdx-data-definition-alter-cube)   
  [CREATE CELL CALCULATION ステートメント (MDX)](/sql/mdx/mdx-data-definition-create-cell-calculation)   
  [クエリ スコープのセル計算の作成 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   

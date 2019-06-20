@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106036"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
@@ -82,7 +82,7 @@ ms.locfileid: "66106036"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

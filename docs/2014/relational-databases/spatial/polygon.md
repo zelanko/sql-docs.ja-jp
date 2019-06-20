@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014078"
 ---
 # <a name="polygon"></a>Polygon
@@ -144,7 +144,7 @@ SELECT @g.ToString()
   
  上の例で返されるジオメトリ インスタンスは `Point(1 3)`です。  `Polygon` が `POLYGON((1 3, 1 5, 1 3, 1 3))` の場合、 `MakeValid()` は `LINESTRING(1 3, 1 5)`を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STArea &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
  [STExteriorRing &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
  [STNumInteriorRing &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   

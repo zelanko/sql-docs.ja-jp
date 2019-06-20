@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091767"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>分散再生の既存のインスタンスのアンインストール
@@ -28,7 +28,7 @@ ms.locfileid: "66091767"
   
 ### <a name="to-uninstall-an-instance-of-distributed-replay"></a>分散再生のインスタンスをアンインストールするには  
   
-1.  **開始**] メニューのをクリックして**コントロール パネルの [**、し、ダブルクリック**プログラム追加と削除**します。  
+1.  **開始**] メニューのをクリックして**コントロール パネルの [** 、し、ダブルクリック**プログラム追加と削除**します。  
   
      選択[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で、**のアンインストールまたは変更するプログラム**ウィンドウで、し、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ダイアログ ボックスで、 をクリックして**削除**します。  
   

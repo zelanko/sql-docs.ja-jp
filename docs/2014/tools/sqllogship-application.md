@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035071"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
@@ -88,7 +88,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 > [!NOTE]  
 >  バックアップ ディレクトリおよびコピー ディレクトリのパスを検索するには、**sp_help_log_shipping_secondary_database** ストアド プロシージャを実行するか、**msdb** の **log_shipping_secondary** テーブルを参照します。 バックアップ ディレクトリおよびコピー先ディレクトリのパスはそれぞれ、 **backup_source_directory** 列および **backup_destination_directory** 列にあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   

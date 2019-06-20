@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877061"
 ---
 # <a name="back-up-database-general-page"></a>[データベースのバックアップ] \([全般] ページ)
@@ -119,7 +119,7 @@ ms.locfileid: "62877061"
  **[URL プレフィックス]**  
  これは、SQL 資格情報に格納されているストレージ アカウント情報と、指定した Azure ストレージ コンテナー名に基づいて自動的に生成されます。 **\<storage account>.blob.core.windows.net** 以外の形式を使ったドメインを使用している場合を除き、このフィールドの情報は編集しないことをお勧めします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

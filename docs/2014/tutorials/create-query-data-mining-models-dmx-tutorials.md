@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63180555"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>DMX を使用したデータ マイニング モデルの作成とクエリチュートリアル (Analysis Services - データ マイニング)
@@ -53,7 +53,7 @@ ms.locfileid: "63180555"
   
      このチュートリアルは複数の個別のレッスンをまとめたもので、それぞれのレッスンで異なる種類のモデルについて説明します。 各レッスンで、モデルを作成し、そのモデルを検証してから、モデルをカスタマイズして予測クエリを作成するまでの一連の手順について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [データ マイニング ツール](../../2014/analysis-services/data-mining/data-mining-tools.md)   
  [データ マイニング プロジェクト](../../2014/analysis-services/data-mining/data-mining-projects.md)  

@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049443"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>フェールオーバー クラスター インスタンスの管理とメンテナンス
@@ -62,7 +62,7 @@ ms.locfileid: "63049443"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの障害から復旧する手順について説明します。|[フェールオーバー クラスター インスタンス障害からの復旧](recover-from-failover-cluster-instance-failure.md)|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスの IP アドレス リソースを変更する手順について説明します。|[フェールオーバー クラスター インスタンスの IP アドレスの変更](change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [HealthCheckTimeout プロパティ設定の構成](configure-healthchecktimeout-property-settings.md)   
  [FailureConditionLevel プロパティ設定の構成](configure-failureconditionlevel-property-settings.md)   
  [フェールオーバー クラスター インスタンスの診断ログを表示して読む方法](view-and-read-failover-cluster-instance-diagnostics-log.md)  

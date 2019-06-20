@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980749"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth を使用した、再帰リレーションシップの深さの指定
@@ -99,7 +99,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  このリレーションシップは再帰的なので、何らかの方法でスキーマ内の再帰の深さを指定する必要があります。 指定しない場合、結果は無限再帰となり、従業員から次の従業員へと無限に報告を行うことになります。 **Sql:max-深さ**注釈では、すと、再帰の深さを指定できます。 値を指定する、この例では**sql:max-深さ**会社の深さの管理の階層がおく必要があります。  
   
 > [!NOTE]  
->  スキーマを指定します、 **sql:limit-フィールド**注釈が指定されていません、 **sql:limit-値**注釈。 これにより、結果として生成される階層の一番上のノードは、だれにも報告しない従業員だけになります  (ReportsTo は NULL です)。指定する**sql:limit-フィールド**を指定していない**sql:limit-値**(既定では NULL) 注釈では、これを実現します。 ツリー (テーブル内のすべての従業員のレポートのツリー) を削除する場合は、結果の XML に含めるすべての可能な報告、 **sql:limit-フィールド**スキーマから注釈。  
+>  スキーマを指定します、 **sql:limit-フィールド**注釈が指定されていません、 **sql:limit-値**注釈。 これにより、結果として生成される階層の一番上のノードは、だれにも報告しない従業員だけになります (ReportsTo は NULL です)。指定する**sql:limit-フィールド**を指定していない**sql:limit-値**(既定では NULL) 注釈では、これを実現します。 ツリー (テーブル内のすべての従業員のレポートのツリー) を削除する場合は、結果の XML に含めるすべての可能な報告、 **sql:limit-フィールド**スキーマから注釈。  
   
 > [!NOTE]  
 >  次の手順では、tempdb データベースを使用します。  
@@ -286,7 +286,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>非再帰要素  
  場合、 **sql:max-深さ**注釈が指定されて、再帰が発生しないスキーマ内の要素、それは無視されます。 次のスキーマで、  **\<Emp >** 要素から成る、 **\<定数 >** これには子要素、  **\<Emp >** 子要素。  
   
- このスキーマで、 **sql:max-深さ**で指定されている注釈、 **\<定数 >** 間に再帰がないために、要素は無視されます、  **\<Emp>** 親と**\<定数 >** 子要素。 間に再帰があるが、  **\<Emp >** 先祖と **\<Emp >** 子。 スキーマを指定します、 **sql:max-深さ**両方での注釈。 そのため、 **sql:max-深さ**、先祖に対して指定されている注釈 (**\<Emp >** 監督) が優先されます。  
+ このスキーマで、 **sql:max-深さ**で指定されている注釈、 **\<定数 >** 間に再帰がないために、要素は無視されます、  **\<Emp>** 親と **\<定数 >** 子要素。 間に再帰があるが、  **\<Emp >** 先祖と **\<Emp >** 子。 スキーマを指定します、 **sql:max-深さ**両方での注釈。 そのため、 **sql:max-深さ**、先祖に対して指定されている注釈 ( **\<Emp >** 監督) が優先されます。  
   
 #### <a name="example-c"></a>例 C  
   
@@ -330,9 +330,9 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  このスキーマをテストするには、このトピックの例 A の手順に従ってください。  
   
 ## <a name="complex-types-derived-by-restriction"></a>制限により派生する複合型  
- により派生する複合型がある場合**\<制限 >**、対応する基本複合型の要素が指定することはできません、 **sql:max-深さ**注釈。 このような場合、 **sql:max-深さ**派生型の要素に注釈を追加できます。  
+ により派生する複合型がある場合 **\<制限 >** 、対応する基本複合型の要素が指定することはできません、 **sql:max-深さ**注釈。 このような場合、 **sql:max-深さ**派生型の要素に注釈を追加できます。  
   
- その一方、により派生する複合型があれば**\<拡張機能 >**、対応する基本複合型の要素を指定できます、 **sql:max-深さ**注釈。  
+ その一方、により派生する複合型があれば **\<拡張機能 >** 、対応する基本複合型の要素を指定できます、 **sql:max-深さ**注釈。  
   
  次の XSD スキーマがエラーを生成するため、たとえば、 **sql:max-深さ**基本データ型の注釈が指定されています。 この注釈は、派生した型ではサポートされていません **\<制限 >** 別の型から。 この問題を解決するには、スキーマを変更し、を指定する必要があります、 **sql:max-深さ**派生型の要素の注釈。  
   
@@ -378,7 +378,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- スキーマで**sql:max-深さ**が指定されて、 **CustomerBaseType**複合型。 指定する**\<顧客 >** 型の要素**CustomerType**から派生**CustomerBaseType**します。 このようなスキーマで指定された XPath クエリのため、エラーが生成されます**sql:max-深さ**制限基本型で定義されている要素でサポートされていません。  
+ スキーマで**sql:max-深さ**が指定されて、 **CustomerBaseType**複合型。 指定する **\<顧客 >** 型の要素**CustomerType**から派生**CustomerBaseType**します。 このようなスキーマで指定された XPath クエリのため、エラーが生成されます**sql:max-深さ**制限基本型で定義されている要素でサポートされていません。  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>深い階層のスキーマ  
  要素に子要素が含まれ、その子要素にさらに別の子要素が含まれるというような深い階層のスキーマの場合は、 場合、 **sql:max-深さ**(レベル 1、その子をレベル 2、およびの最上位要素) で 500 個を超えるレベルの階層を含む XML ドキュメントを生成するようなスキーマで指定されている注釈のエラーが返されます。  

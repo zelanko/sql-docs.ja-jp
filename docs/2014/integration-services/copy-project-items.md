@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef503e88e66bd6f89cac8d235f7175fb4cefe4e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060338"
 ---
 # <a name="copy-project-items"></a>プロジェクト アイテムをコピーする
@@ -33,13 +33,13 @@ ms.locfileid: "66060338"
   
 2.  コピー元のプロジェクトとアイテム フォルダーを展開します。  
   
-3.  アイテムを右クリックし、**[コピー]** をクリックします。  
+3.  アイテムを右クリックし、 **[コピー]** をクリックします。  
   
-4.  コピー先の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを右クリックし、**[貼り付け]** をクリックします。  
+4.  コピー先の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを右クリックし、 **[貼り付け]** をクリックします。  
   
      アイテムが適切なフォルダーに自動的にコピーされます。 パッケージではない [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトにアイテムをコピーする場合は、アイテムが **[その他]** フォルダーにコピーされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; パッケージ](../../2014/integration-services/integration-services-ssis-packages.md)   
  [パッケージ オブジェクトをコピーする](../../2014/integration-services/copy-package-objects.md)  
   

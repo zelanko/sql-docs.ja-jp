@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: db02b92ffead56451e72c7a1d564c2c9956d2ecc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059775"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター] ([出力] タブ)
@@ -49,7 +49,7 @@ ms.locfileid: "66059775"
  **[出力テーブルを削除して、再作成する]**  
  予測クエリで、出力先のテーブルを削除して再作成することにより、テーブルの内容を上書きするかどうかを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [データ マイニング クエリ タスク エディター ([マイニング モデル] タブ)](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [データ マイニング クエリ タスク エディター ([クエリ] タブ)](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   

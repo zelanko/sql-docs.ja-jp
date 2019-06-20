@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067478"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>テキスト データと画像データの一括コピー
@@ -27,7 +27,7 @@ ms.locfileid: "63067478"
   
  **bcp_moretext**列を識別するためにパラメーターがありません。 複数の場合**テキスト**、 **ntext**、または**イメージ**、行内の列**bcp_moretext**で動作、**テキスト**、 **ntext**、または**イメージ**列序数が最も低い、最高の序数の列に進みますから始まる列。 **bcp_moretext**送信されるデータの長さの合計が最新で指定された長さと等しい場合は、次 1 つの列からが**bcp_collen**または**bcp_bind**現在の列。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピー操作を実行する&#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

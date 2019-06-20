@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: abe73fd789a74d358c0573b6c0778a15612532a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192399"
 ---
 # <a name="global-settings-logging-oracletosql"></a>グローバル設定 (ログ) (OracleToSQL)
@@ -52,7 +52,7 @@ ms.locfileid: "63192399"
 |**デバッグ**|デバッグ ログにメッセージを含む、すべてのメッセージを記述します。|  
   
 **ログ ファイルのパス**  
-ファイルのパスと SSMA のログ ファイルの名前。 別の名前を指定する、現在のパス をクリックし、クリックし、参照 (**.**) ボタンをクリックします。  
+ファイルのパスと SSMA のログ ファイルの名前。 別の名前を指定する、現在のパス をクリックし、クリックし、参照 ( **.** ) ボタンをクリックします。  
   
 **ログ ファイルのサイズ**  
 サポート技術情報のログ ファイルの最大サイズ。 最小のサイズは 10 KB です。 既定のサイズは 10240 KB です。  

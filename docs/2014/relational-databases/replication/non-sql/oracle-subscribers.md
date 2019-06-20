@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022226"
 ---
 # <a name="oracle-subscribers"></a>Oracle サブスクライバー
@@ -85,7 +85,7 @@ ms.locfileid: "63022226"
   
     -   パブリッシュされたテーブルに空の文字列が列値として挿入されないようにする。  
   
-    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 (**-SkipErrors1400**) を指定します。  
+    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 ( **-SkipErrors1400**) を指定します。  
   
     -   生成されたテーブルの作成スクリプトを変更して、空の文字列が関連付けられている文字型の列から NOT NULL 属性を削除する。さらに、 @creation_script sp_addarticle [の](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)パラメーターを使用して、アーティクルのカスタム作成スクリプトとして変更済みスクリプトを指定する。  
   

@@ -35,10 +35,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917361"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 (SQL Server)

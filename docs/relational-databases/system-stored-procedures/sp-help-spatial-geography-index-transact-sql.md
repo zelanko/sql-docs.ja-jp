@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ec690eb615ed86ea5c99b34a91a11dad4fbd2716
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017833"
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (TRANSACT-SQL)
@@ -54,7 +54,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>コメント  
   
 ## <a name="example"></a>例  
- 次の例では`sp_help_spatial_geography_index`を調査、 **geography**空間インデックス**SIndx_SpatialTable_geography_col2**テーブルで定義された**geography_col**指定されたクエリ サンプルの **@qs**します。 この例では、指定したインデックスの主要プロパティのみを返します。  
+ 次の例では`sp_help_spatial_geography_index`を調査、 **geography**空間インデックス**SIndx_SpatialTable_geography_col2**テーブルで定義された**geography_col**指定されたクエリ サンプルの **@qs** します。 この例では、指定したインデックスの主要プロパティのみを返します。  
   
 ```  
 declare @qs geography  

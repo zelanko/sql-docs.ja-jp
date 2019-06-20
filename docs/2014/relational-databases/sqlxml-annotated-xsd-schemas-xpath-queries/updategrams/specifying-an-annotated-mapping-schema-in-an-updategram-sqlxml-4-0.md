@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014666"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>アップデートグラムでの注釈付きマッピング スキーマの指定 (SQLXML 4.0)
@@ -115,7 +115,7 @@ ms.locfileid: "66014666"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. マッピング スキーマに指定されている親子リレーションシップを使用して、レコードを挿入する  
  スキーマ要素は関連付けることができます。 **\<Sql:relationship >** 要素がスキーマ要素間の親子リレーションシップを指定します。 この情報は、主キー/外部キーのリレーションシップがある対応するテーブルを更新するときに使用されます。  
   
- 次のマッピング スキーマ (SampleSchema.xml) は、2 つの要素で構成されます **\<順序 >** と **\<OD >**:  
+ 次のマッピング スキーマ (SampleSchema.xml) は、2 つの要素で構成されます **\<順序 >** と **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

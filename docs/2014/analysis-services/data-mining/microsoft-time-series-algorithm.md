@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083769"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズム
@@ -152,7 +152,7 @@ ms.locfileid: "66083769"
   
 -   ドリルスルーがサポートされています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012146"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
@@ -112,7 +112,7 @@ ms.locfileid: "66012146"
   
 1.  次の方法で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client がインストールされていること確認します。  
   
-    1.  **開始** メニューの 作成 をポイント**設定**、 をクリックし、**コントロール パネルの **。  
+    1.  **開始** メニューの 作成 をポイント**設定**、 をクリックし、**コントロール パネルの** 。  
   
     2.  [コントロール パネル] を開くには**の追加とプログラムの削除**  
   

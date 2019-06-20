@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47711a7e974373e9da4ac8068295029d88accaf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181303"
 ---
 # <a name="numeric-functions"></a>数値関数
@@ -40,7 +40,7 @@ ms.locfileid: "63181303"
 |**ACOS(** _float_exp_ **)**  (ODBC 1.0)|アーク コサインを返します*float_exp*ラジアンの角度で表されます。|  
 |**ASIN(** _float_exp_ **)**  (ODBC 1.0)|アークサインを返します*float_exp*ラジアンの角度で表されます。|  
 |**ATAN(** _float_exp_ **)**  (ODBC 1.0)|アーク タンジェントを返します*float_exp*ラジアンの角度で表されます。|  
-|**ATAN2(** _float_exp1_, _float_exp2_**)**  (ODBC 2.0)|アーク タンジェントを返します、 *x*と*y*によって指定された座標*float_exp1*と*float_exp2*、それぞれの角度で、ラジアンで表されます。|  
+|**ATAN2(** _float_exp1_, _float_exp2_ **)**  (ODBC 2.0)|アーク タンジェントを返します、 *x*と*y*によって指定された座標*float_exp1*と*float_exp2*、それぞれの角度で、ラジアンで表されます。|  
 |**CEILING(** _numeric_exp_ **)**  (ODBC 1.0)|大きいまたは等しい最小整数を返します*numeric_exp*します。 戻り値は入力パラメーターと同じデータ型です。|  
 |**COS(** _float_exp_ **)**  (ODBC 1.0)|コサインを返します*float_exp*ここで、 *float_exp*ラジアンを角度のことです。|  
 |**COT(** _float_exp_ **)**  (ODBC 1.0)|コタンジェントを返します*float_exp*ここで、 *float_exp*ラジアンを角度のことです。|  
@@ -49,14 +49,14 @@ ms.locfileid: "63181303"
 |**FLOOR(** _numeric_exp_ **)**  (ODBC 1.0)|等しいまたはそれより小さい最大整数を返します*numeric_exp*します。 戻り値は入力パラメーターと同じデータ型です。|  
 |**LOG(** _float_exp_ **)**  (ODBC 1.0)|自然対数を返します*float_exp*します。|  
 |**LOG10(** _float_exp_ **)**  (ODBC 2.0)|底が 10 を返します。 対数*float_exp*します。|  
-|**MOD(** _integer_exp1_, _integer_exp2_**)**  (ODBC 1.0)|(剰余) の残りの部分を返します*integer_exp1*で割った値*integer_exp2*します。|  
+|**MOD(** _integer_exp1_, _integer_exp2_ **)**  (ODBC 1.0)|(剰余) の残りの部分を返します*integer_exp1*で割った値*integer_exp2*します。|  
 |**PI()** (ODBC 1.0)|Π の定数値を浮動小数点値として返します。|  
-|**POWER(** _numeric_exp_, _integer_exp_**)**  (ODBC 2.0)|値を返します*numeric_exp*のべき乗に*integer_exp*します。|  
+|**POWER(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|値を返します*numeric_exp*のべき乗に*integer_exp*します。|  
 |**RADIANS(** _numeric_exp_ **)**  (ODBC 2.0)|変換されたラジアン単位の数を返します*numeric_exp*度。|  
-|**RAND(**[*integer_exp*]**)**  (ODBC 1.0)|使用して、ランダムな浮動小数点値を返します*integer_exp*省略可能なシード値として。|  
-|**ROUND(** _numeric_exp_, _integer_exp_**)**  (ODBC 2.0)|返します*numeric_exp*に丸められます*integer_exp*小数点の右側に配置します。 場合*integer_exp*が負の値、 *numeric_exp*に丸められます&#124; *integer_exp* &#124;小数点の左側に配置します。|  
+|**RAND(** [*integer_exp*] **)**  (ODBC 1.0)|使用して、ランダムな浮動小数点値を返します*integer_exp*省略可能なシード値として。|  
+|**ROUND(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|返します*numeric_exp*に丸められます*integer_exp*小数点の右側に配置します。 場合*integer_exp*が負の値、 *numeric_exp*に丸められます&#124; *integer_exp* &#124;小数点の左側に配置します。|  
 |**SIGN(** _numeric_exp_ **)**  (ODBC 1.0)|符号を示すインジケーターを返す*numeric_exp*します。 場合*numeric_exp*が 0、-1 未満ですが返されます。 場合*numeric_exp*が 0 に等しい、0 が返されます。 場合*numeric_exp*はゼロより大きく、1 が返されます。|  
 |**SIN(** _float_exp_ **)**  (ODBC 1.0)|サインを返します*float_exp*ここで、 *float_exp*ラジアンを角度のことです。|  
 |**SQRT(** _float_exp_ **)**  (ODBC 1.0)|平方根を返します*float_exp*します。|  
 |**TAN(** _float_exp_ **)**  (ODBC 1.0)|タンジェントを返します*float_exp*ここで、 *float_exp*ラジアンを角度のことです。|  
-|**TRUNCATE(** _numeric_exp_, _integer_exp_**)**  (ODBC 2.0)|返します*numeric_exp*に切り捨てられます*integer_exp*小数点の右側に配置します。 場合*integer_exp*が負の値、 *numeric_exp*に切り捨てられます&#124; *integer_exp* &#124;小数点の左側に配置します。|
+|**TRUNCATE(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|返します*numeric_exp*に切り捨てられます*integer_exp*小数点の右側に配置します。 場合*integer_exp*が負の値、 *numeric_exp*に切り捨てられます&#124; *integer_exp* &#124;小数点の左側に配置します。|

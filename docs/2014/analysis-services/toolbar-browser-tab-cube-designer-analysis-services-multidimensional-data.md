@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe356d15c0602f33ec9c59ee463a69783686899b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066148"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
@@ -56,13 +56,13 @@ ms.locfileid: "66066148"
 |オプション|説明|  
 |------------|-----------------|  
 |**[処理]**|クリックすると、 **[処理]** ダイアログ ボックスを表示して、キューブを処理できます。 **[処理]** ダイアログ ボックスの詳細については、「[[処理] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
-|**ユーザーの変更**|**[セキュリティ コンテキスト]** ダイアログ ボックスを表示し、**[ブラウザー]** タブで使用されているユーザーおよびロールを変更します。**[セキュリティ コンテキスト]** ダイアログ ボックスの詳細については、「[[セキュリティ コンテキスト] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**ユーザーの変更**|**[セキュリティ コンテキスト]** ダイアログ ボックスを表示し、 **[ブラウザー]** タブで使用されているユーザーおよびロールを変更します。 **[セキュリティ コンテキスト]** ダイアログ ボックスの詳細については、「[[セキュリティ コンテキスト] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
 |**再接続**|接続が失われたりタイムアウトしたりしたために **[ブラウザー]** タブに対するセッションが切断された場合に、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [計算] **タブを** インスタンスおよびキューブを含むデータベースに再接続します。|  
 |**更新**|**[メタデータ]** ペインおよび **[レポート]** ペインの表示を最新の情報に更新します。|  
-|**[昇順で並べ替え]**|**[レポート]** ペイン内の選択行の兄弟を、**[言語]** で指定された言語に対して昇順で並べ替えます。<br /><br /> **注** このオプションは、**[レポート]** ペイン内のセルが選択されている場合にのみ有効です。|  
+|**[昇順で並べ替え]**|**[レポート]** ペイン内の選択行の兄弟を、 **[言語]** で指定された言語に対して昇順で並べ替えます。<br /><br /> **注** このオプションは、 **[レポート]** ペイン内のセルが選択されている場合にのみ有効です。|  
 |**[降順で並べ替え]**|**[レポート]** ペイン内の選択行の兄弟を、 **[言語]** で指定された言語に対して降順で並べ替えます。<br /><br /> 注:セルの場合にのみ、このオプションが有効になっている、**レポート**ペインが選択されています。|  
 |**自動フィルター**|**[結果]** ペイン内の結果を自動的にフィルター処理します。|  
-|**上/下ののみを表示します。**|値またはパーセントを選択し、選択されたメジャーに基づいて、**[レポート]** ペイン内の最上位や最下位の数またはパーセントのみを表示します。<br /><br /> このオプションの詳細については、「[TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx)」、「[TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx)」、「[BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx)」、および「[BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx)」を参照してください。|  
+|**上/下ののみを表示します。**|値またはパーセントを選択し、選択されたメジャーに基づいて、 **[レポート]** ペイン内の最上位や最下位の数またはパーセントのみを表示します。<br /><br /> このオプションの詳細については、「[TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx)」、「[TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx)」、「[BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx)」、および「[BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx)」を参照してください。|  
 |**小計の表示 します。**|小計を表示します。|  
 |**すべてのアイテムの合計**|すべてのメンバーに関する合計を **[レポート]** ペイン内に表示します。|  
 |**空のセルの表示**|空のセルを **[レポート]** ペイン内に表示します。|  

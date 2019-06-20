@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63131789"
 ---
 # <a name="link-to-programming-samples"></a>プログラミング サンプルへのリンク
@@ -34,20 +34,20 @@ ms.locfileid: "63131789"
 |DatabaseSearch|データベース内のすべてのオブジェクトを表示します。|  
 |DependencyExplorer|依存関係ツリーとプロパティ表示ウィンドウを実装します。|  
 |IndexSizes|選択されたデータベースのインデックス名およびサイズを表示します。|  
-|LoadRegAssembly |読み込みし、登録する方法を示します、[!INCLUDE[msCoName](../../includes/msconame-md.md)]に .NET アセンブリ[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 UtilityConversion アセンブリを使用します。|  
+|LoadRegAssembly|読み込みし、登録する方法を示します、[!INCLUDE[msCoName](../../includes/msconame-md.md)]に .NET アセンブリ[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 UtilityConversion アセンブリを使用します。|  
 |ManageDatabases|データベースの作成、変更、および削除を行う方法を示します。 新しいファイル グループとログ ファイルの追加を含みます。|  
 |ManageDatabaseUsers|ユーザーの追加、変更、および削除を行う方法を示します。|  
 |ManageTables|テーブルの作成、変更、および削除を行う方法を示します。|  
 |ScriptJobs|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの削除および作成をスクリプトで行う方法を示します。|  
 |ScriptTable|テーブルの削除、または作成をスクリプトで行う方法を示します。|  
-|ServerConnect |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムへの接続方法を示します。|  
-|ServerInfo |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバーと接続のプロパティのリストを表示します。|  
-|SMOPing |選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへ接続し、選択したプロパティをダンプするコンソール アプリケーションです。 確認に使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続します。|  
+|ServerConnect|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムへの接続方法を示します。|  
+|ServerInfo|選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバーと接続のプロパティのリストを表示します。|  
+|SMOPing|選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへ接続し、選択したプロパティをダンプするコンソール アプリケーションです。 確認に使用できる、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続します。|  
 |SQLServerList|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用可能なインスタンスの一覧を列挙します。|  
-|SQLService |開始、停止、一時停止、および再開が可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを表示します。|  
+|SQLService|開始、停止、一時停止、および再開が可能な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを表示します。|  
 |Tracer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからトレース情報の読み込みと表示を行います。|  
 |トリガー|データベース トリガーが表示されます。|  
-|UtilityConversion |`LoadRegAssembly` で使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共に使用するための共通言語ランタイム (CLR) 関数の使用方法も含まれています。|  
+|UtilityConversion|`LoadRegAssembly` で使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と共に使用するための共通言語ランタイム (CLR) 関数の使用方法も含まれています。|  
 |VerifyBackup|データがデータベースの復元に使用できることを確認するため、バックアップ デバイスのバックアップを確認します。|  
   
   

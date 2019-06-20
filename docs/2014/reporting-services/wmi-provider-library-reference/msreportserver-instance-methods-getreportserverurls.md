@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66097189"
 ---
 # <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>GetReportServerUrls メソッド (WMI MSReportServer_Instance)
@@ -55,7 +55,7 @@ public void GetReportServerUrls(out string[] applicationName,
 ## <a name="requirements"></a>必要条件  
  **名前空間:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

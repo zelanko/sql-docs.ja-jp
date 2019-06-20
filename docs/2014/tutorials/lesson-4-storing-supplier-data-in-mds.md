@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489718"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>レッスン 4:MDS に仕入先データを格納する
@@ -28,7 +28,7 @@ ms.locfileid: "65489718"
   
  MDS 内の派生階層は、モデル内に存在するドメイン ベースの属性のリレーションシップにから派生します。 このチュートリアルでは、Supplier エンティティと State エンティティ間の派生階層を作成します。 派生階層を作成すると、マスター データ マネージャーのブラウザーに状態の一覧が表示されます。 一覧から状態をクリックすると、選択した状態の仕入先が右ペインに表示されます。 このリレーションシップに基づいて派生階層を後で作成します。 参照してください[派生階層](../master-data-services/derived-hierarchies-master-data-services.md)の詳細。  
   
- DQS でナレッジ ベースを作成し、仕入先データのクレンジングと照合に使用して、結果を Cleansed and Matched Supplier Data.xls ファイルに保存しました。 このレッスンでは、クレンジングおよび照合済みのデータを MDS にアップロードします。 DQS にはデータ (メタデータ) に関するナレッジだけが含まれ、MDS はデータ自体 (マスター セット) を保存します。 例 :DQS は、複数の仕入先に関する知識を必要がありますが、MDS は会社が使用する仕入先のみを管理します。  
+ DQS でナレッジ ベースを作成し、仕入先データのクレンジングと照合に使用して、結果を Cleansed and Matched Supplier Data.xls ファイルに保存しました。 このレッスンでは、クレンジングおよび照合済みのデータを MDS にアップロードします。 DQS にはデータ (メタデータ) に関するナレッジだけが含まれ、MDS はデータ自体 (マスター セット) を保存します。 以下に例を示します。DQS は、複数の仕入先に関する知識を必要がありますが、MDS は会社が使用する仕入先のみを管理します。  
   
  このレッスンでは、次のタスクを行います。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "65489718"
 8.  作成し、ドメイン ベースの属性リレーションシップを使用して派生階層を使用して、 **Supplier**エンティティと**状態**(Supplier エンティティの State 属性は State エンティティの種類のエンティティ) を使用して**マスター データ マネージャー**します。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 1:マスター データ マネージャーを使用して Suppliers モデルを作成します。](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [タスク 1: マスター データ マネージャーを使用して Suppliers モデルを作成します。](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

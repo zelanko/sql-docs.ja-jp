@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077826"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>[パーティションのマージ] ダイアログ ボックス (Analysis Services - 多次元データ)
@@ -46,7 +46,7 @@ ms.locfileid: "66077826"
 |**[パーティション名]**|基になるパーティションの名前を表示します。|  
 |**最後に処理されました。**|基になるパーティションが最後に処理された日時を表示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パーティション &#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Analysis Services でのパーティションのマージ (SSAS - 多次元)](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   

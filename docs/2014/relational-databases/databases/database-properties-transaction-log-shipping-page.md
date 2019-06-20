@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83ac357d01b616a0010b9c2132f77bbcf89b479b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917003"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] \([トランザクション ログの配布] ページ)
@@ -61,7 +61,7 @@ ms.locfileid: "62917003"
 > [!IMPORTANT]  
 >  セカンダリ データベースの設定スクリプトを生成するには、 **[セカンダリ データベースの設定]** ダイアログ ボックスを呼び出す必要があります。 このダイアログ ボックスを呼び出すことにより、セカンダリ サーバーに接続して、スクリプトの生成に必要なセカンダリ データベースの現在の設定を取得できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql)   
  [ログ配布テーブル &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-tables-transact-sql)  
   

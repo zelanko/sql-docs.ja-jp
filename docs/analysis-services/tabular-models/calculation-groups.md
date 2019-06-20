@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 表形式モデルで計算グループ |Microsoft Docs
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822690"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263440"
 ---
 # <a name="calculation-groups-preview"></a>計算グループ (プレビュー)
  
@@ -64,7 +64,7 @@ ms.locfileid: "66822690"
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) - コンテキスト内にあるメジャーはメジャーの一覧で指定されたかを決定する計算アイテムの式で使用されます。
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) - コンテキスト内にあるメジャーの書式指定文字列を取得する項目を計算の式で使用されます。
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) - コンテキスト内にあるメジャーの書式指定文字列を取得する項目を計算の式で使用されます。
 
 ### <a name="time-intelligence-example"></a>タイム インテリジェンスの使用例
 
@@ -195,11 +195,11 @@ CALCULATETABLE (
 
 ### <a name="dynamic-format-strings-for-time-intelligence"></a>タイム インテリジェンスの動的な書式指定文字列
 
-除くすべての計算が項目上に示した例では、タイム インテリジェンスを見る場合**の前年比 %** コンテキストで現在のメジャーの形式を使用する必要があります。 たとえば、 **YTD** Sales ベース メジャーの計算は currency である必要があります。 これが注文のベース メジャーの計算グループの場合、数値書式になります。 **前年比 %** 、ただしの形式に関係なく、ベース メジャーの割合をする必要があります。
+除くすべての計算が項目上に示した例では、タイム インテリジェンスを見る場合**の前年比 %** コンテキストで現在のメジャーの形式を使用する必要があります。 たとえば、 **YTD** Sales ベース メジャーの計算は currency である必要があります。 これが注文のベース メジャーの計算グループの場合、数値書式になります。 **前年比 %**、ただしの形式に関係なく、ベース メジャーの割合をする必要があります。
 
-**の前年比 %** 、形式の文字列式のプロパティを設定して、書式指定文字列を無効にできます**0.00;-0.00; 0.00%** します。 書式設定文字列式のプロパティの詳細については、次を参照してください。 [MDX セル プロパティ - 文字列の内容を形式](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values)します。
+**の前年比 %**、形式の文字列式のプロパティを設定して、書式指定文字列を無効にできます**0.00;-0.00; 0.00%** します。 書式設定文字列式のプロパティの詳細については、次を参照してください。 [MDX セル プロパティ - 文字列の内容を形式](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values)します。
 
-このマトリックス ビジュアルを Power BI で確認**現在/前年比の売上**と**注文現在/前年比**それぞれのベース メジャーの書式指定文字列を保持します。 **販売の前年比 %** と**注文の前年比 %** 、ただし、使用する書式指定文字列を上書き*割合*形式。
+このマトリックス ビジュアルを Power BI で確認**現在/前年比の売上**と**注文現在/前年比**それぞれのベース メジャーの書式指定文字列を保持します。 **販売の前年比 %** と**注文の前年比 %**、ただし、使用する書式指定文字列を上書き*割合*形式。
 
 ![マトリックス ビジュアルでタイム インテリジェンス](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-形式の文字列式では、スカラーの文字列を返す必要があります。 これは、新しい[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax)フィルターのコンテキストで複数の通貨がある場合は、ベース メジャーの書式指定文字列に戻す関数。
+形式の文字列式では、スカラーの文字列を返す必要があります。 これは、新しい[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax)フィルターのコンテキストで複数の通貨がある場合は、ベース メジャーの書式指定文字列に戻す関数。
 
 次のアニメーションの動的形式の通貨換算を示しています、 **Sales**レポート内のメジャー。
 
@@ -407,8 +407,6 @@ YTD CALCULATE() 関数の引数は、YTD の計算アイテムで既に定義さ
 [オブジェクト レベル セキュリティ](object-level-security.md)(OLS) は、計算で定義されているグループのテーブルがサポートされていません。 ただし、ツールは、同じモデル内の他のテーブルで定義できます。 OLS セキュリティで保護されたオブジェクトの計算アイテムを参照して、一般的なエラーが返されます。
 
 [行レベルのセキュリティ](roles-ssas-tabular.md#bkmk_rowfliters)(RLS) はサポートされていません。 (直接または間接的に)、計算グループ自体ではなく、同じモデル内のテーブルで RLS を定義することができます。
-
-[行の式について詳しく説明](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)計算グループではサポートされません。
 
 ## <a name="see-also"></a>関連項目  
 

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08d78fc30dbdafa8d65ac01943e729b6cf0d890d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109791"
 ---
 # <a name="complete-the-report-wizard"></a>レポート ウィザードを完了する
@@ -32,7 +32,7 @@ ms.locfileid: "66109791"
  **レポートのプレビュー**  
  作成したレポートをプレビューする場合は、このオプションを選択します。 このオプションを選択しなかった場合、レポートはデザイン ビューで表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート ウィザードのヘルプ](../../2014/reporting-services/report-wizard-help.md)  
   
   

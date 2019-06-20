@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072380"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)
@@ -88,7 +88,7 @@ ms.locfileid: "66072380"
   
  この問題を回避するには、最終的な調整を行う前に、最初にすべてのテーブルを追加します。 この場合は、後でダイアグラムを再度開くときに、オブジェクトは自らの位置を保持しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
  [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   

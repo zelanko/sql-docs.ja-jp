@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63023889"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started イベント クラス
@@ -39,7 +39,7 @@ ms.locfileid: "63023889"
 |**TextData**|**ntext**|フルテキスト クロールの種類です。 値は、Full、Incremental、Manual、または Auto です。|1|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

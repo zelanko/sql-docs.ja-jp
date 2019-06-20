@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a82ef5c249dd1bc15bc91e9ccc502ebffe3f1728
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060121"
 ---
 # <a name="create-connection-managers"></a>接続マネージャーを作成する
@@ -30,12 +30,12 @@ ms.locfileid: "66060121"
   
  新しいパッケージを作成する際に接続マネージャーを自動的に作成して構成する場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用できます。 このウィザードは、接続マネージャーを使用する変換元および変換先の作成と構成を行う場合に役立ちます。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
- 手動で新しい接続マネージャーを作成して既存のパッケージに追加するには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、**[データ フロー]** タブ、および **[イベント ハンドラー]** タブに表示される **[接続マネージャー]** 領域を使用します。 **[接続マネージャー]** 領域で、作成する接続マネージャーの種類を選択し、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで用意されているダイアログ ボックスを使用して、接続マネージャーのプロパティを設定します。 詳細については、後の「[接続マネージャー] 領域の使用」を参照してください。  
+ 手動で新しい接続マネージャーを作成して既存のパッケージに追加するには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブに表示される **[接続マネージャー]** 領域を使用します。 **[接続マネージャー]** 領域で、作成する接続マネージャーの種類を選択し、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで用意されているダイアログ ボックスを使用して、接続マネージャーのプロパティを設定します。 詳細については、後の「[接続マネージャー] 領域の使用」を参照してください。  
   
  パッケージに接続マネージャーを追加すると、タスク、Foreach ループ コンテナー、変換元、変換、および変換先で使用できます。 詳細については、「[Integration Services タスク](control-flow/integration-services-tasks.md)」、「[Foreach ループ コンテナー](control-flow/foreach-loop-container.md)」、および「[データ フロー](data-flow/data-flow.md)」を参照してください。  
   
 ## <a name="using-the-connection-managers-area"></a>[接続マネージャー] 領域の使用  
- 接続マネージャーは、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、**[データ フロー]** タブ、または **[イベント ハンドラー]** タブがアクティブなときに作成できます。  
+ 接続マネージャーは、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブがアクティブなときに作成できます。  
   
  次の図は、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ上にある **[接続マネージャー]** 領域を示しています。  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012360"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats イベント クラス
@@ -49,10 +49,10 @@ ms.locfileid: "63012360"
 |**NTDomainName**|**nvarchar**|ユーザーが所属する Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**Exchange Spill**|**int**|システムによって割り当てられたオブジェクト ID。|22|はい|  
-|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
+|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|[はい]|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
-|**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
+|**SPID**|**int**|イベントが発生したセッションの ID。|12|[はい]|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**成功**|**int**|0 = エラー。<br /><br /> 1 = 成功。<br /><br /> 2 = サーバーの絞込みによりスキップ (MSDE)。|23|はい|  
 |**TextData**|**ntext**|この列の内容は、統計が同期的に更新されたのか、または非同期に更新されたのかによって異なります。同期更新の場合**EventSubClass** は 1、非同期更新の場合**EventSubClass** は 2、3、または 4 になります。<br /><br /> 1:一覧を更新または作成された統計<br /><br /> 2、3、または 4:NULL です。**IndexID**列が更新された統計のインデックス/統計 ID が格納されます。|1|はい|  

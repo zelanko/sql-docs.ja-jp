@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537355"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 関数
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*開始する前に*|1|  
 |*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + 複合カーソル*[1]|  
-|*CurrRowsetStart + 複合カーソル*[1]*> LastResultRow*|*終了後*|  
+|*CurrRowsetStart + 複合カーソル*[1] *> LastResultRow*|*終了後*|  
 |*終了後*|*終了後*|  
   
  [1] 行をフェッチする前に呼び出した後、行セット サイズが変わっている場合は、前の呼び出しで使用されていた行セット サイズになります。  

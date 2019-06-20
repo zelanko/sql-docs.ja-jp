@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbc5e58b95ffb4eebc5dfa0400a566868ae5cba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63165213"
 ---
 # <a name="delivery-extensions-overview"></a>配信拡張機能の概要
@@ -55,7 +55,7 @@ Reporting Services の配信拡張機能アーキテクチャ
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# や [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET など、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 言語による開発経験があること。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [配信拡張機能の実装](../delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../reporting-services-extension-library.md)  
   

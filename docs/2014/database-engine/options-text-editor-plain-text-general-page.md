@@ -11,17 +11,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089276"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>[オプション] ([テキスト エディター]/[テキスト形式]/[全般] ページ)
   特定の開発言語に関連付けられていないドキュメントを編集するときには、テキスト エディターが使用されます。このダイアログ ボックスを使用すると、テキスト エディターの全般的な編集の動作を変更できます。 この設定を表示するには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[テキスト エディター]** フォルダーを展開し、さらに **[テキスト形式]** を展開して、 **[全般]** をクリックします。  
   
 ## <a name="setting-options-in-multiple-locations"></a>複数の場所でのオプション設定  
- テキスト形式エディターのオプションは、**[すべての言語] の [全般]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用してテキスト形式エディターのオプションを設定し直す必要があります。  
+ テキスト形式エディターのオプションは、 **[すべての言語] の [全般]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用してテキスト形式エディターのオプションを設定し直す必要があります。  
   
 ## <a name="statement-completion"></a>[入力候補]  
  **自動メンバー表示**  

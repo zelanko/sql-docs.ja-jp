@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062055"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>データ フロー パフォーマンス カウンターのログを追加する
@@ -35,7 +35,7 @@ ms.locfileid: "66062055"
   
 3.  **[パフォーマンス]** ダイアログ ボックスで、 **[パフォーマンス ログと警告]** を展開して、 **[カウンター ログ]** を右クリックし、 **[新しいログの設定]** をクリックします。 ログの名前を入力します。 たとえば、「 **MyLog**」のように入力します。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
 5.  **[MyLog]** ダイアログ ボックスで、 **[カウンターの追加]** をクリックします。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66062055"
   
 12. カウンターを追加するには、手順 5. ～ 10. を繰り返します。  
   
-13. **[OK]** をクリックします。  
+13. [**OK**] をクリックします。  
   
     > [!NOTE]  
     >  [パフォーマンス ログと警告] サービスは、Administrators グループのメンバーであるローカル アカウントまたはドメイン アカウントを使用して起動する必要があります。  

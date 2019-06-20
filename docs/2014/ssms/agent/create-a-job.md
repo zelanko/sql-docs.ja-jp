@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63131522"
 ---
 # <a name="create-a-job"></a>ジョブの作成
@@ -69,7 +69,7 @@ ms.locfileid: "63131522"
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
-3.  **[ジョブ]** フォルダーを右クリックし、**[新しいジョブ]** を選択します。  
+3.  **[ジョブ]** フォルダーを右クリックし、 **[新しいジョブ]** を選択します。  
   
 4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティと新しいジョブ&#40;[全般] ページ。&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059184"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
@@ -51,7 +51,7 @@ ms.locfileid: "66059184"
   
 4.  実行するパッケージを含むフォルダーを展開します。  
   
-5.  パッケージを右クリックし、**[実行]** をクリックします。  
+5.  パッケージを右クリックし、 **[実行]** をクリックします。  
   
 ##  <a name="general"></a> [全般] ページのオプションの設定  
  **[環境]** を選択して、実行するパッケージに適用される環境を指定します。  
@@ -65,7 +65,7 @@ ms.locfileid: "66059184"
 ##  <a name="advanced"></a> [詳細設定] タブのオプションの設定  
  [詳細設定] タブを使用して、プロパティとその他のパッケージの設定を管理します。  
   
- **[追加]**、 **[編集]**、 **[削除]**  
+ **[追加]** 、 **[編集]** 、 **[削除]**  
  クリックしてプロパティを追加、編集、または削除します。  
   
  **ログ記録レベル**  
@@ -78,6 +78,6 @@ ms.locfileid: "66059184"
  パッケージが 32 ビット システムで実行されるように指定します。  
   
 ##  <a name="script"></a> [パッケージの実行] ダイアログ ボックスのオプションのスクリプト作成  
- **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、**[パッケージの実行]** ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ [catalog.start_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) が呼び出されます。 このスクリプトは、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の新しいスクリプト ウィンドウに表示されます。  
+ **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、 **[パッケージの実行]** ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ [catalog.start_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) が呼び出されます。 このスクリプトは、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の新しいスクリプト ウィンドウに表示されます。  
   
   

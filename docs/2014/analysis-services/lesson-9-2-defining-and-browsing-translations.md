@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a685158e83569cd7d53e4b7da9edf3fa38436109
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078210"
 ---
 # <a name="defining-and-browsing-translations"></a>翻訳の定義と表示
@@ -44,9 +44,9 @@ ms.locfileid: "66078210"
   
 6.  行内の**キャプション**オブジェクト、 **Month Name**属性に、入力`Mes del Año`で、**スペイン語 (スペイン)** 翻訳列と`Mois d'Année`で、**フランス語 (フランス)** 翻訳列。  
   
-     これらの翻訳を省略記号を入力すると (**.**) が表示されます。 この参照ボタンをクリックすると、属性階層の各メンバーの翻訳を入力する基になるテーブルの列を指定できます。  
+     これらの翻訳を省略記号を入力すると ( **.** ) が表示されます。 この参照ボタンをクリックすると、属性階層の各メンバーの翻訳を入力する基になるテーブルの列を指定できます。  
   
-7.  省略記号をクリックします (**.**) の**スペイン語 (スペイン)** の翻訳、 **Month Name**属性。  
+7.  省略記号をクリックします ( **.** ) の**スペイン語 (スペイン)** の翻訳、 **Month Name**属性。  
   
      **[属性データの翻訳]** ダイアログ ボックスが表示されます。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66078210"
   
      ![属性データの翻訳 ダイアログ ボックス](../../2014/tutorials/media/l9-translations-4.gif "属性データの翻訳 ダイアログ ボックス")  
   
-9. をクリックして**OK**、クリックして、省略記号 (**...**) の**フランス語 (フランス)** の翻訳、 **Month Name**属性。  
+9. をクリックして**OK**、クリックして、省略記号 ( **...** ) の**フランス語 (フランス)** の翻訳、 **Month Name**属性。  
   
 10. **[翻訳列]** ボックスの一覧で **[FrenchMonthName]** をクリックして、 **[OK]** をクリックします。  
   

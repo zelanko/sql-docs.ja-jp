@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022515"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
@@ -149,7 +149,7 @@ ms.locfileid: "63022515"
   
 -   スナップショット エージェントおよびログ リーダー エージェントがディストリビューターからパブリッシャーへの接続に使用するアカウントは、次のいずれかの方法で指定されます。  
   
-    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) の **@security_mode** パラメーター (Oracle 認証が使用される場合、**@login** と **@password** にも値を指定します)  
+    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) の **@security_mode** パラメーター (Oracle 認証が使用される場合、 **@login** と **@password** にも値を指定します)  
   
     -   SQL Server Management Studio の **[サーバーへの接続]** ダイアログ ボックス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーを構成するときに、これを使用します。  
   

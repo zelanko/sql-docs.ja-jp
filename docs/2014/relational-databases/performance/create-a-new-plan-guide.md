@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151196"
 ---
 # <a name="create-a-new-plan-guide"></a>新しいプラン ガイドの作成
@@ -62,7 +62,7 @@ ms.locfileid: "63151196"
   
 1.  プラス記号をクリックして、作成するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
-2.  右クリックし、**のプラン ガイド**フォルダーと選択**新しいプラン ガイドしています.**.  
+2.  右クリックし、**のプラン ガイド**フォルダーと選択**新しいプラン ガイドしています.** .  
   
 3.  **[新しいプラン ガイド]** ダイアログ ボックスの **[名前]** ボックスに、プラン ガイドの名前を入力します。  
   

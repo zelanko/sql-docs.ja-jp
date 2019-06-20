@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058434"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>[FTP タスク エディター] ([ファイル転送] ページ)
@@ -51,8 +51,8 @@ ms.locfileid: "66058434"
   
 |ReplTest1|説明|  
 |-----------|-----------------|  
-|**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
-|**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
+|**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]** 、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
+|**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]** 、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
 |**ローカル ディレクトリの作成**|ローカル ディレクトリを作成します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]** が表示されます。|  
 |**リモート ディレクトリの作成**|リモート ディレクトリを作成します。 この値を選択すると、動的オプションの **[RemoteVariable]** および **[RemotePath]** が表示されます。|  
 |**ローカル ディレクトリの削除**|ローカル ディレクトリを削除します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]** が表示されます。|  
@@ -67,13 +67,13 @@ ms.locfileid: "66058434"
   
 ### <a name="isremotepathvariable--true"></a>[IsRemotePathVariable] = [True]  
  **[RemoteVariable]**  
- 既存のユーザー定義変数を選択するか、[\<**新しい変数...**>] をクリックしてユーザー定義変数を作成します。  
+ 既存のユーザー定義変数を選択するか、[\<**新しい変数...** >] をクリックしてユーザー定義変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、変数の追加  
   
 ### <a name="isremotepathvariable--false"></a>[IsRemotePathVariable] = [False]  
  **[RemotePath]**  
- 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして接続マネージャーを作成します。  
   
  **関連トピック:** [FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -81,13 +81,13 @@ ms.locfileid: "66058434"
   
 ### <a name="islocalpathvariable--true"></a>[IsLocalPathVariable] = [True]  
  **[LocalVariable]**  
- 既存のユーザー定義変数を選択するか、[\<**新しい変数...**>] をクリックして変数を作成します。  
+ 既存のユーザー定義変数を選択するか、[\<**新しい変数...** >] をクリックして変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、変数の追加  
   
 ### <a name="islocalpathvariable--false"></a>[IsLocalPathVariable] = [False]  
  **[LocalPath]**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして、接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして、接続マネージャーを作成します。  
   
  **関連トピック:** [フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
