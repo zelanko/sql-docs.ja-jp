@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3a6bc5ecbd1c59a5dc03f9c28d36d2816e6a8d92
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102028"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
@@ -48,7 +48,7 @@ ms.locfileid: "66102028"
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio を使用して master システム データベースに RSExecRole を作成するには  
   
-1.   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../../includes/ssde-md.md)] インスタンスに接続します。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../../includes/ssde-md.md)] インスタンスに接続します。  
   
 2.  **[データベース]** を開きます。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66102028"
   
 11. **[オブジェクトの種類]** をクリックします。  
   
-12.  **[ストアド プロシージャ]** をクリックします。  
+12. **[ストアド プロシージャ]** をクリックします。  
   
 13. **[OK]** をクリックします。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66102028"
   
 22. **[オブジェクトの種類]** をクリックします。  
   
-23.  **[テーブル]** をクリックします。  
+23. **[テーブル]** をクリックします。  
   
 24. **[OK]** をクリックします。  
   

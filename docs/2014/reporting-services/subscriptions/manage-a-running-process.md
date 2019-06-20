@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100821"
 ---
 # <a name="manage-a-running-process"></a>Manage a Running Process
@@ -109,7 +109,7 @@ ms.locfileid: "66100821"
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前を見つけてクリックし、アプリケーションの管理ページを開きます。  
   
-3.   **[ジョブの管理]** をクリックします。  
+3.  **[ジョブの管理]** をクリックします。  
   
 4.  **[ジョブ ID]** をクリックして、ジョブの詳細を表示します。  
   

@@ -10,10 +10,10 @@ ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
 ms.openlocfilehash: c359f709b2c0a1ba779111a007843dd249b5d7b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261296"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
@@ -170,13 +170,13 @@ ms.locfileid: "63261296"
   
     -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] リリース用に作成したカスタム認証拡張機能は再コンパイルする必要があります。  
   
-    -    [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能は、表示オブジェクト モデル (ROM) を使用して記述し直す必要があります。  
+    -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能は、表示オブジェクト モデル (ROM) を使用して記述し直す必要があります。  
   
     -   HTML 3.2 レンダラーおよび HTML OWC レンダラーは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。  
   
     -   それ以外のカスタム アセンブリを再コンパイルする必要はありません。  
   
-2.  アセンブリを新しいレポート サーバーおよびレポート マネージャーの \bin フォルダーに移動します。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、既定の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスにおけるレポート サーバーのバイナリは次の場所にあります。  
+2.  アセンブリを新しいレポート サーバーおよびレポート マネージャーの \bin フォルダーに移動します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、既定の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスにおけるレポート サーバーのバイナリは次の場所にあります。  
   
      `\Program files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63261296"
   
     1.  [カスタム アセンブリの配置](../custom-assemblies/deploying-a-custom-assembly.md)  
   
-    2.  [方法: カスタム レポート アイテムを配置する](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
+    2.  [方法:カスタム レポート アイテムを配置する](../custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
     3.  [データ処理拡張機能の配置](../extensions/data-processing/deploying-a-data-processing-extension.md)  
   
@@ -231,7 +231,7 @@ ms.locfileid: "63261296"
 |リモート インスタンス上のレポート マネージャー|[レポート マネージャーの構成&#40;ネイティブ モード&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Windows サービス グループとセキュリティ ACL  
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]には、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows サービス グループという 1 つのサービス グループがあります。このサービス グループは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と共にインストールされたすべてのレジストリ キー、ファイル、およびフォルダーのセキュリティ ACL を作成するために使用されます。 この Windows グループ名は SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> という形式で表示されます。 このグループは、2 つの Windows サービス グループに行わ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。 いずれかに関連付けられたカスタム Acl がある場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で新しいレポート サーバー インスタンス用の新しいグループにこれらの Acl を適用する必要がある Windows グループ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]には、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows サービス グループという 1 つのサービス グループがあります。このサービス グループは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と共にインストールされたすべてのレジストリ キー、ファイル、およびフォルダーのセキュリティ ACL を作成するために使用されます。 この Windows グループ名は SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> という形式で表示されます。 このグループは、2 つの Windows サービス グループに行わ[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。 いずれかに関連付けられたカスタム Acl がある場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で新しいレポート サーバー インスタンス用の新しいグループにこれらの Acl を適用する必要がある Windows グループ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]します。  
   
 ##  <a name="bkmk_verify"></a> 配置の確認  
   

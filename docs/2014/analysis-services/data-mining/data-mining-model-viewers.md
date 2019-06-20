@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085046"
 ---
 # <a name="data-mining-model-viewers"></a>データ マイニング モデル ビューアー
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でデータ マイニング モデルをトレーニングした後、そのモデルを調査して、興味深い傾向を探すことができます。 マイニング モデルの結果は複雑で、生データの形式では理解しにくいので、通常は視覚的なデータを調査することで、アルゴリズムによってデータ内で発見されたルールや関係を最も簡単に理解できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でデータ マイニング モデルをトレーニングした後、そのモデルを調査して、興味深い傾向を探すことができます。 マイニング モデルの結果は複雑で、生データの形式では理解しにくいので、通常は視覚的なデータを調査することで、アルゴリズムによってデータ内で発見されたルールや関係を最も簡単に理解できます。  
   
  モデルの作成に使用する各アルゴリズムからは、異なる種類の結果が返されます。 このため、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] にはアルゴリズムごとに個別のビューアーが用意されています。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でマイニング モデルを参照すると、モデルに適したビューアーを使用して、データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブにモデルが表示されます。  
   
