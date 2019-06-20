@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 811db11aecb5e6c0f4c68d272040aea3f8e38ca4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184539"
 ---
 # <a name="surface-area-configuration"></a>セキュリティ構成
@@ -35,7 +35,7 @@ ms.locfileid: "63184539"
   
 #### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを起動するには  
   
-1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
     -   コンポーネントを起動して自動開始オプションを構成するには、 **[SQL Server のサービス]** 領域を使用します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63184539"
   
 2.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[ファセット]** をクリックします。  
   
-3.  **[ファセットの表示]** ダイアログ ボックスで、 **[ファセット]** の一覧を展開し、適切な **[セキュリティ構成]** ファセット (**[セキュリティ構成]**、 **[Analysis Services のセキュリティ構成]**、または **[Reporting Services のセキュリティ構成]**) を選択します。  
+3.  **[ファセットの表示]** ダイアログ ボックスで、 **[ファセット]** の一覧を展開し、適切な **[セキュリティ構成]** ファセット ( **[セキュリティ構成]** 、 **[Analysis Services のセキュリティ構成]** 、または **[Reporting Services のセキュリティ構成]** ) を選択します。  
   
 4.  **[ファセットのプロパティ]** 領域で、それぞれのプロパティに使用する値を選択します。  
   

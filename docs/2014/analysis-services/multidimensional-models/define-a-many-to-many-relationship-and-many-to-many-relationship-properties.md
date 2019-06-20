@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075776"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
@@ -142,15 +142,15 @@ ms.locfileid: "66075776"
   
 1.  プロジェクトを配置し、キューブを参照して、集計が有効であることを確認します。  
   
-2.  Excel で、**[データ]**  |  **[その他のデータソース]**  |  **[Analysis Services]** をクリックします。 サーバーの名前を入力し、データベースとキューブを選択します。  
+2.  Excel で、 **[データ]**  |  **[その他のデータソース]**  |  **[Analysis Services]** をクリックします。 サーバーの名前を入力し、データベースとキューブを選択します。  
   
 3.  次のものを使用するピボットテーブルを作成します。  
   
-    -   値として**Sales Amount**   
+    -   値として**Sales Amount**  
   
-    -   列で**Sales Reason Name**   
+    -   列で**Sales Reason Name**  
   
-    -   行で**Sales Order Number**   
+    -   行で**Sales Order Number**  
   
 4.  結果を分析します。 サンプル データを使用しているため、最初は、すべての販売注文が同じ値になっているという印象を受けます。 ただし、下へスクロールすると、データに差異があることに気が付きます。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66075776"
   
  [チュートリアル: SQL Server Analysis Services の多対多ディメンションの例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)   
  [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   

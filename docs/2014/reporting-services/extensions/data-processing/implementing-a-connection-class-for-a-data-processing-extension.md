@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fbd293c156f373de0cdad53b4419633ded15af8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164134"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>データ処理拡張機能の Connection クラスの実装
@@ -41,7 +41,7 @@ ms.locfileid: "63164134"
   
  <xref:Microsoft.ReportingServices.Interfaces.IExtension> を実装するクラスは、残りのデータ処理拡張機能のクラスが読み込まれていない場合は、メモリから読み込まれません。 このため、**Extension** クラスを使用して、相互接続状態の情報を格納することや、キャッシュできるデータをメモリに格納することができます。 **Extension** クラスは、レポート サーバーを実行中はメモリに残ります。  
   
- <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> を実装することによって、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の資格情報のサポートを含むように **Connection** クラスを拡張できます。 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> インターフェイスの <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A>、および <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> の各プロパティを実装する場合は、レポート デザイナーの **[データ ソース]** ダイアログ ボックスで **[統合セキュリティ]** チェック ボックスをオンにし、**[ユーザー名]** ボックスと **[パスワード]** ボックスに必要な情報を入力します。 これによって、レポート デザイナーは承認をサポートするデータ ソースの資格情報を格納および取得できます。 資格情報は、セキュリティによって保護されて格納され、プレビュー モードでレポートを表示する場合に使用されます。  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> を実装することによって、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の資格情報のサポートを含むように **Connection** クラスを拡張できます。 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> インターフェイスの <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A>、および <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> の各プロパティを実装する場合は、レポート デザイナーの **[データ ソース]** ダイアログ ボックスで **[統合セキュリティ]** チェック ボックスをオンにし、 **[ユーザー名]** ボックスと **[パスワード]** ボックスに必要な情報を入力します。 これによって、レポート デザイナーは承認をサポートするデータ ソースの資格情報を格納および取得できます。 資格情報は、セキュリティによって保護されて格納され、プレビュー モードでレポートを表示する場合に使用されます。  
   
 > [!NOTE]  
 >  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> を暗黙的に実装するには、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスと <xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスのメンバーを実装する必要があります。  

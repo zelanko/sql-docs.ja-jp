@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011949"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)
@@ -110,7 +110,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   終了文字またはプレフィックス長がデータ ファイルの列によって異なる場合。  
   
 > [!NOTE]  
->  フォーマット ファイルが存在しない場合に、 **bcp** コマンドで data-format スイッチ (**-n**、 **-c**、 **-w**、または **-N**) を指定するか、BULK INSERT 操作で DATAFILETYPE オプションを指定すると、指定したデータ形式がデータ ファイルのフィールドを解釈するための既定の方法として使用されます。  
+>  フォーマット ファイルが存在しない場合に、 **bcp** コマンドで data-format スイッチ ( **-n**、 **-c**、 **-w**、または **-N**) を指定するか、BULK INSERT 操作で DATAFILETYPE オプションを指定すると、指定したデータ形式がデータ ファイルのフィールドを解釈するための既定の方法として使用されます。  
   
  
   
@@ -128,7 +128,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
  [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

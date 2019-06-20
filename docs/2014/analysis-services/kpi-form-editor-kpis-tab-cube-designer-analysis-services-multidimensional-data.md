@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079446"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI フォーム エディター (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
@@ -85,7 +85,7 @@ ms.locfileid: "66079446"
 >  -1 より、1 以上の値が考えられますが正しく解釈されないサード パーティ製のクライアント アプリケーションによって。  
   
  **[追加のプロパティ]**  
- 展開すると、 **[フォルダーの表示]**、 **[親 KPI]**、 **[現在の時間メンバー]**、 **[加重]**、 **[説明]** のオプションが表示されます。  
+ 展開すると、 **[フォルダーの表示]** 、 **[親 KPI]** 、 **[現在の時間メンバー]** 、 **[加重]** 、 **[説明]** のオプションが表示されます。  
   
  **表示フォルダー**  
  表示のためにクライアント アプリケーションで使用される KPI の分類を入力します。  

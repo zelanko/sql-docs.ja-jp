@@ -17,16 +17,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32047da9a95190f0099d1a84bceef13540143223
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047606"
 ---
 # <a name="comments-in-xquery"></a>XQuery のコメント
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery にコメントを追加することができます。 使用して、コメントの文字列が追加されて、"`(:`「と」`:)`"区切り記号。 以下に例を示します。  
+  XQuery にコメントを追加することができます。 使用して、コメントの文字列が追加されて、"`(:`「と」`:)`"区切り記号。 例 :  
   
 ```  
 declare @x xml  

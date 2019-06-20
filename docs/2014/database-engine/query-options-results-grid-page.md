@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089004"
 ---
 # <a name="query-options-results-grid-page"></a>[クエリ オプション] の [結果] ([グリッド] ページ)
@@ -48,7 +48,7 @@ ms.locfileid: "66089004"
   
  **[XML データ]**  
   
- **[1 MB]**、 **[2 MB]**、または **[5 MB]** を選択します。 すべての文字を取得する場合は、 **[無制限]** を選択します。  
+ **[1 MB]** 、 **[2 MB]** 、または **[5 MB]** を選択します。 すべての文字を取得する場合は、 **[無制限]** を選択します。  
   
  **既定値にリセット**  
  このページ上のすべての値を元の既定値にリセットします。  

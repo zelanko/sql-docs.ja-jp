@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53d9bfbb7418a3bc6727ccc7160a5364bac39f58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768778"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 式)
@@ -64,7 +64,7 @@ RTRIM(FirstName + " " + LastName)
 RTRIM(@FirstName)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [LTRIM (SSIS 式)](trim-ssis-expression.md)   
  [TRIM (SSIS 式)](trim-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  

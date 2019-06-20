@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754461"
 ---
 # <a name="register-mirrored-database"></a>[ミラー化されたデータベースの登録]
@@ -46,7 +46,7 @@ ms.locfileid: "62754461"
   
 |列名|説明|  
 |-----------------|-----------------|  
-|**[登録]**|登録する各データベースのチェック ボックスをオンにします。 現在監視されているデータベースのチェック ボックスはオンに設定され、変更することはできません。<br /><br /> 注:データベースの登録を解除する閉じる、**ミラー化データベースの登録**ダイアログ ボックスで、ナビゲーション ツリーでデータベースを選択および選択**登録解除**から、**アクション**メニュー。|  
+|**[登録]**|登録する各データベースのチェック ボックスをオンにします。 現在監視されているデータベースのチェック ボックスはオンに設定され、変更することはできません。<br /><br /> 注:データベースの登録を解除するには、 **[ミラー化されたデータベースの登録]** ダイアログ ボックスを閉じ、ナビゲーション ツリーでデータベースを選択して、 **[アクション]** メニューの **[登録解除]** をクリックします。|  
 |**[データベース]**|選択されたサーバー インスタンスでミラー化されたデータベースの名前です。|  
 |**[現在のロール]**|選択されているサーバー インスタンスのデータベースについて、現在のミラーリング ロール ([プリンシパル] または [ミラー]) が表示されます。|  
 |**[パートナー (接続するユーザー)]**|データベースのフェールオーバー パートナーの名前です。 **[コンソール ユーザーの Windows 認証]** または **['***\<ログイン名>***' の SQL Server 認証]** が、かっこで囲まれて表示されます。 これは、既に追加されたインスタンスの場合は、現在使用されている認証情報を、まだモニターに追加されていないインスタンスの場合は、これから使用される認証情報を表します。|  
@@ -61,7 +61,7 @@ ms.locfileid: "62754461"
  **[適用]**  
  このボタンをクリックすると、ダイアログ ボックスを開いた状態で、選択したデータベースを登録し、パートナー サーバー インスタンスの資格情報を保存できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

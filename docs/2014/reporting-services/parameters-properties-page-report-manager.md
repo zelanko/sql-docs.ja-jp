@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108117"
 ---
 # <a name="parameters-properties-page-report-manager"></a>[パラメーター] プロパティ ページ (レポート マネージャー)
@@ -33,7 +33,7 @@ ms.locfileid: "66108117"
   
 3.  ドロップダウン メニューの **[管理]** をクリックします。 この操作により、レポートの [全般] プロパティ ページが開きます。  
   
-4.  **[パラメーター]** タブをクリックします。**[パラメーター]** タブが非表示の場合は、そのレポートにパラメーターはありません。  
+4.  **[パラメーター]** タブをクリックします。 **[パラメーター]** タブが非表示の場合は、そのレポートにパラメーターはありません。  
   
 ## <a name="options"></a>および  
  **[パラメーター名]**  
@@ -68,7 +68,7 @@ ms.locfileid: "66108117"
  **テキストを表示します。**  
  パラメーター テキスト ボックスの隣に表示するテキスト文字列を指定します。 この文字列により、ラベルまたは説明のテキストが表示されます。 文字列の長さに制限はありません。 長いテキスト文字列は、表示領域内で折り返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   

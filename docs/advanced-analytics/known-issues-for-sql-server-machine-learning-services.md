@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "67140731"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning サービスの既知の問題

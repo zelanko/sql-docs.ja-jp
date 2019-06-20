@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737421"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath クエリでの明示変換関数の指定 (SQLXML 4.0)
@@ -33,7 +33,7 @@ ms.locfileid: "62737421"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 明示変換関数を使用する  
  **Number()** 関数の引数を数値に変換します。  
   
- 値と仮定すると**ContactID**は数値型以外は、次のクエリに変換します**ContactID**を数値と値 4 を比較します。 クエリが、すべてを返します**\<従業員 >** 、コンテキスト ノードの子要素、 **ContactID** 4 の数値の値を持つ属性。  
+ 値と仮定すると**ContactID**は数値型以外は、次のクエリに変換します**ContactID**を数値と値 4 を比較します。 クエリが、すべてを返します **\<従業員 >** 、コンテキスト ノードの子要素、 **ContactID** 4 の数値の値を持つ属性。  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -82,7 +82,7 @@ ms.locfileid: "62737421"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 明示変換関数を使用する  
  **String()** 関数の引数を文字列に変換します。  
   
- 次のクエリに変換します**ContactID**文字列値「4」文字列を比較します。 クエリでは、すべてを返します**\<従業員 >** 、コンテキスト ノードの子要素を**ContactID** 「4」の文字列値を持つ。  
+ 次のクエリに変換します**ContactID**文字列値「4」文字列を比較します。 クエリでは、すべてを返します **\<従業員 >** 、コンテキスト ノードの子要素を**ContactID** 「4」の文字列値を持つ。  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

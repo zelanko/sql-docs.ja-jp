@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091783"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>PowerPivot for SharePoint インストールのトラブルシューティング
@@ -39,6 +39,6 @@ ms.locfileid: "66091783"
   
 4.  確認**PowerPivot 機能の統合サイト コレクション**は**Active**します。  
   
- この問題の原因を追加を参照してください。 [PowerPivot ギャラリーには、代わりのアイコンに赤い x が表示されます。](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559)します。  
+ この問題の原因を追加を参照してください。 [PowerPivot ギャラリーには、代わりのアイコンに赤い x が表示されます。](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559) します。  
   
   

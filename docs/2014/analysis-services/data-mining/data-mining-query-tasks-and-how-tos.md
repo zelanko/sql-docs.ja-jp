@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084946"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>データ マイニングのクエリ タスクと操作方法
@@ -57,7 +57,7 @@ ms.locfileid: "66084946"
  [XMLA を使用したデータ マイニング クエリの作成](create-a-data-mining-query-by-using-xmla.md)  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の XMLA テンプレートを使用して、マイニング モデル コンテンツに対するクエリを作成する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリと式言語のリファレンス (Analysis Services)](https://msdn.microsoft.com/library/gg492188(SQL.130).aspx)   
  [データ マイニングのストアド プロシージャ (Analysis Services - データ マイニング)](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   

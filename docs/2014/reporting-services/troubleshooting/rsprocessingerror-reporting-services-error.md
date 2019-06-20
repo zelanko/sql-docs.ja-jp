@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099142"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
@@ -102,7 +102,7 @@ ms.locfileid: "66099142"
   
 -   *\<property name>* を評価できませんでした。  
   
--   *\<property name>* を評価できませんでした。 次のエラーを含んでいるデータセット フィールドを参照しています。*\<error string>*。  
+-   *\<property name>* を評価できませんでした。 次のエラーを含んでいるデータセット フィールドを参照しています。 *\<error string>* 。  
   
  詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -111,20 +111,20 @@ ms.locfileid: "66099142"
   
  特定のスコープの名前を集計関数に渡すこともできます。 スコープでは、データセットの名前、データ領域、またはデータ階層のより上位のスコープの名前を参照できます。 これは、次のメッセージに当てはまります。  
   
--   *\<report item type>* '*\<report item name>*' のスコープ "*\<scope name>*" が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
+-   *\<report item type>* ' *\<report item name>* ' のスコープ " *\<scope name>* " が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
   
--   *\<report item type>* '*\<report item name>*' の *\<property name>* 式に集計関数では使用できないスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
+-   *\<report item type>* ' *\<report item name>* ' の *\<property name>* 式に集計関数では使用できないスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
   
  累計を計算する集計関数 (`Previous`、`RunningValue`、または `RowNumber`) の場合、行グループ名または列グループ名をスコープのパラメーターに指定できますが、両方を指定することはできません。 これは、次のエラー メッセージに当てはまります。  
   
--   `Previous`、`RunningValue`または`RowNumber`集計関数のデータ セルで使用される、 *\<レポート アイテムの種類 >* '*\<レポート項目名 >*' グループ化スコープを参照してください列と行の両方で、 *\<レポート アイテムの種類 >* します。 すべてのスコープ パラメーター `Previous`、`RunningValue`と`RowNumber`集計関数内で、 *\<レポート アイテムの種類 >* 行グループまたはデータ列のグループが、両方を参照できます。  
+-   `Previous`、`RunningValue`または`RowNumber`集計関数のデータ セルで使用される、 *\<レポート アイテムの種類 >* ' *\<レポート項目名 >* ' グループ化スコープを参照してください列と行の両方で、 *\<レポート アイテムの種類 >* します。 すべてのスコープ パラメーター `Previous`、`RunningValue`と`RowNumber`集計関数内で、 *\<レポート アイテムの種類 >* 行グループまたはデータ列のグループが、両方を参照できます。  
   
  詳細については、「[合計、集計、および組み込みコレクションの式のスコープについて (レポート ビルダー 3.0 および SSRS)](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」および「[式での組み込みコレクションの使用 (レポート ビルダー 3.0 および SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>最上位レベル テキスト ボックスの既定のデータセット スコープ  
  レポートに複数のデータセットがある場合、レポート デザイン画面に追加したテキスト ボックスの既定のスコープは使用できません。 スコープとしてデータセットの名前を含む式と、集計関数を使用してください。 たとえば、 `=First(Fields!FieldName.Value, "DataSet2")`のようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式 (レポート ビルダーおよび SSRS)](../report-design/expressions-report-builder-and-ssrs.md)   
  [集計関数リファレンス &#40;レポート ビルダーおよび SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../report-design/expression-examples-report-builder-and-ssrs.md)   

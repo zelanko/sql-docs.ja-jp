@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071233"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 での PowerPivot データ更新
@@ -112,11 +112,11 @@ ms.locfileid: "66071233"
   
  **構成手順の概要** ローカル サーバーで **[オペレーティング システムの一部として機能]** 権限を構成するには  
   
-1.  SharePoint モードで実行されている Analysis Services サーバーで、**[オペレーティング システムの一部として機能]** 権限に Analysis Services のサービス アカウントを追加します。  
+1.  SharePoint モードで実行されている Analysis Services サーバーで、 **[オペレーティング システムの一部として機能]** 権限に Analysis Services のサービス アカウントを追加します。  
   
     1.  実行"`secpol.msc`"  
   
-    2.  **[ローカル セキュリティ ポリシー]**、 **[ローカル ポリシー]**、 **[ユーザー権利の割り当て]** の順にクリックします。  
+    2.  **[ローカル セキュリティ ポリシー]** 、 **[ローカル ポリシー]** 、 **[ユーザー権利の割り当て]** の順にクリックします。  
   
     3.  サービス アカウントを追加します。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66071233"
   
 -   手順に沿った図を参照してください。  
   
-1.  SharePoint ドキュメント ライブラリでは、クリックして、**メニューを開く** (**.**) PowerPivot ブックの。  
+1.  SharePoint ドキュメント ライブラリでは、クリックして、**メニューを開く** ( **.** ) PowerPivot ブックの。  
   
 2.  2 番目の **[開くメニュー]** をクリックし、 **[PowerPivot データ更新の管理]** をクリックします。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66071233"
  ![データ更新のコンテキスト メニューを管理](../media/as-manage-datarefresh-sharepoint2013.gif "データ更新のコンテキスト メニューの管理")  
   
 > [!TIP]  
->  SharePoint からオンライン ブックの更新方法の詳細については、次を参照してください。 [SharePoint Online (ホワイト ペーパー) からの埋め込み PowerPivot モデルを使用した更新の Excel ブック](https://technet.microsoft.com/library/jj992650.aspx)(https://technet.microsoft.com/library/jj992650.aspx)します。  
+>  SharePoint からオンライン ブックの更新方法の詳細については、次を参照してください。 [SharePoint Online (ホワイト ペーパー) からの埋め込み PowerPivot モデルを使用した更新の Excel ブック](https://technet.microsoft.com/library/jj992650.aspx)(https://technet.microsoft.com/library/jj992650.aspx) します。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 の定期データ更新のアーキテクチャ  
  次の図は、SharePoint 2013 および SQL Server 2012 SP1 のデータ更新のアーキテクチャをまとめたものです。  
@@ -200,7 +200,7 @@ ms.locfileid: "66071233"
   
  ログ エントリには次のものがあります。  
   
--   **[PowerPivot サービス]** の **[エリア]**。  
+-   **[PowerPivot サービス]** の **[エリア]** 。  
   
 -   **[データ更新]** のカテゴリ。  
   
@@ -209,11 +209,11 @@ ms.locfileid: "66071233"
 ##  <a name="datarefresh_additional_authentication"></a> 認証に関するその他の注意点  
  Excel 2013 の **[Excel Services の認証設定]** ダイアログ ボックスの設定によって、Excel Services および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がデータ更新に使用する Windows ID が決まります。  
   
--   **認証されたユーザーのアカウントを使用して、**:Excel Services は、現在ログインしているユーザーの ID でデータ更新を実行します。  
+-   **認証されたユーザーのアカウントを使用して、** :Excel Services は、現在ログインしているユーザーの ID でデータ更新を実行します。  
   
--   **保存されたアカウントを使用して、**:SharePoint の Secure Store Service アプリケーションの ID が必要です。この ID を Excel Services で使用して、データ更新認証を認証するためのユーザー名とパスワードを取得します。  
+-   **保存されたアカウントを使用して、** :SharePoint の Secure Store Service アプリケーションの ID が必要です。この ID を Excel Services で使用して、データ更新認証を認証するためのユーザー名とパスワードを取得します。  
   
--   **[なし]**:Excel Services**無人サービス アカウント**使用されます。 サービス アカウントは、Secure Store プロキシに関連付けられます。 **[外部データ]** セクションの **[Excel Services アプリケーションの設定]** ページの設定を構成します。  
+-   **[なし]** :Excel Services**無人サービス アカウント**使用されます。 サービス アカウントは、Secure Store プロキシに関連付けられます。 **[外部データ]** セクションの **[Excel Services アプリケーションの設定]** ページの設定を構成します。  
   
  認証の設定のダイアログを開くには  
   

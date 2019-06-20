@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798058"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
@@ -44,7 +44,7 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
 1. インストールが完了したら、依存関係、Azure Data Studio を閉じて。 **SQL Server のビッグ データ クラスター**接続の種類は、Azure Data Studio を再起動するまでは使用できません。
 
-## <a name="changes-in-release-0121"></a>0.12.1 のリリースでの変更
+## <a name="changes-in-release-0121"></a>0\.12.1 のリリースでの変更
 
 * **SQL Server のビッグ データ クラスター**接続の種類はこのリリースで削除されました。 SQL Server のビッグ データ クラスター接続から以前に使用可能なすべての機能は、SQL Server の接続でご利用いただけます。
 * HDFS の参照は、「、 **Data Services**フォルダー

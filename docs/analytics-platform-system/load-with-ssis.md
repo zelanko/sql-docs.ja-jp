@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213371"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Parallel Data Warehouse に Integration Services を使用してデータを読み込む
@@ -222,11 +222,11 @@ id,city,lastUpdateDate,orderDate
   
     イーサネット接続の場合は、**サーバー名**:コントロールのノードのクラスター、コンマ、ポート 17001 の IP アドレスを入力します。 たとえば、10.192.63.134,17001 します。  
   
-    **ユーザー:**`user1`  
+    **ユーザー:** `user1`  
   
-    **パスワード:**`password1`  
+    **パスワード:** `password1`  
   
-    **転送先データベース。**`LoadExampleDB`  
+    **転送先データベース。** `LoadExampleDB`  
   
 6.  変換先テーブルを選択します:`Orders`します。  
   

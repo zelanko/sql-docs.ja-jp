@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198320"
 ---
 # <a name="driver-specification-subkeys"></a>ドライバーの仕様のサブキー
@@ -33,7 +33,7 @@ ODBC ドライバーのサブキーの一覧の各ドライバーでは、独自
 |CreateDSN|REG_SZ|*ドライバーの説明*|  
 |Driver|REG_SZ|*ドライバー DLL のパス*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *file-extension1*[**,\*.** *ファイル extension2*].|  
+|FileExtns|REG_SZ|**\*.** *file-extension1*[ **,\*.** *ファイル extension2*].|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |セットアップ|REG_SZ|*セットアップ DLL へのパス*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  

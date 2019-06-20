@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108320"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>[全般] ([マップの色のルールのプロパティ] ダイアログ ボックス)
@@ -39,7 +39,7 @@ ms.locfileid: "66108320"
  独自の色のリストを指定して、分析データを視覚化します。  
   
  **データ フィールド**  
- このオプションは、**[ビジュアライズデータ]** オプションのいずれかを選択すると表示されます。  
+ このオプションは、 **[ビジュアライズデータ]** オプションのいずれかを選択すると表示されます。  
   
  使用する分析データ フィールドをドロップダウン リストから選択します。 リストには、空間データのソースに応じて、空間データ ソースからのフィールドと、空間データと分析データ間のリレーションシップを持つレポート データセットからのフィールドが表示されます。 このようなリレーションシップを作成するには、選択したマップ レイヤーの [分析データ] ページでデータ オプションを設定します。  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df58b5c7f6da05700f00b4ec5fd46b81926dd3bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150167"
 ---
 # <a name="set-operators"></a>セット演算子
@@ -30,7 +30,7 @@ ms.locfileid: "63150167"
 |[:(範囲)](../mdx/range-mdx.md)|エンドポイントとして指定した 2 つのメンバーと、すべてのメンバー、セットのメンバーとして含まれている 2 つの指定したメンバーの間の自然順序のセットを返します。|  
 |[+ (和集合)](../mdx/union-mdx-operator-reference.md)|重複するメンバーを除く、2 つのセットの和集合を返します。<br /><br /> この演算子は機能的に等価、[共用体&#40;MDX&#41; ](../mdx/union-mdx.md)関数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [演算子&#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  

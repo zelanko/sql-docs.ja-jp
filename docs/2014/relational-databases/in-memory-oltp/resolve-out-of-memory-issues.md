@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468355"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
@@ -24,12 +24,12 @@ ms.locfileid: "62468355"
   
 |トピック|概要|  
 |-----------|--------------|  
-| [OOM によるデータベース復元の障害を解決する](#resolve-database-restore-failures-due-to-oom) |"リソース プール '*\<resourcePoolName>*' 内のメモリ不足が原因で、データベース '*\<databaseName>*' の復元操作に失敗しました" というエラー メッセージが表示された場合の対処方法。|  
+| [OOM によるデータベース復元の障害を解決する](#resolve-database-restore-failures-due-to-oom) |"リソース プール ' *\<resourcePoolName>* ' 内のメモリ不足が原因で、データベース ' *\<databaseName>* ' の復元操作に失敗しました" というエラー メッセージが表示された場合の対処方法。|  
 | [低メモリまたは OOM 状態によるワークロードへの影響を解決する](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|低メモリの問題によるパフォーマンス低下が見つかった場合の対処方法。|  
-| [十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |"リソース プール '*\<resourcePoolName>*' のメモリが不足しているため、データベース '*\<databaseName>*' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|  
+| [十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |"リソース プール ' *\<resourcePoolName>* ' のメモリが不足しているため、データベース ' *\<databaseName>* ' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>OOM によるデータベース復元の障害を解決する  
- データベースを復元しようとしたときに、エラー メッセージを表示する可能性があります。"復元操作に失敗しました '*\<databaseName >*'により、リソース プールでメモリ不足'*\<resourcePoolName >*'."データベースを正しく復元するには、先に使用可能なメモリを増やして、メモリ不足の問題を解決する必要があります。  
+ データベースを復元しようとしたときに、エラー メッセージを表示する可能性があります。"復元操作に失敗しました ' *\<databaseName >* 'により、リソース プールでメモリ不足' *\<resourcePoolName >* '."データベースを正しく復元するには、先に使用可能なメモリを増やして、メモリ不足の問題を解決する必要があります。  
   
  OOM による復旧エラーを解決するには、次の方法のいずれかまたはすべてを使用して、復旧操作で使用できるメモリを一時的に増やします。  
   
@@ -135,7 +135,7 @@ GO
 > トピックを参照して[ベスト プラクティス。VM 環境でのインメモリ OLTP を使用して](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)詳細についてはします。  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する  
- エラー メッセージが発生した場合"データベースのページ割り当てが許可 '*\<databaseName >*'により、リソース プールでメモリ不足'*\<resourcePoolName >*'. 参照してください '<https://go.microsoft.com/fwlink/?LinkId=330673>' 詳細についてはします"。 エラー ログに記録される場合は、原因として、リソース ガバナーが無効になっている可能性があります。 リソース ガバナーが無効になっていると、MEMORYBROKER_FOR_RESERVE によって擬似的なメモリ不足が引き起こされます。  
+ エラー メッセージが発生した場合"データベースのページ割り当てが許可 ' *\<databaseName >* 'により、リソース プールでメモリ不足' *\<resourcePoolName >* '. 参照してください '<https://go.microsoft.com/fwlink/?LinkId=330673>' 詳細についてはします"。 エラー ログに記録される場合は、原因として、リソース ガバナーが無効になっている可能性があります。 リソース ガバナーが無効になっていると、MEMORYBROKER_FOR_RESERVE によって擬似的なメモリ不足が引き起こされます。  
   
  これを解決するには、リソース ガバナーを有効にする必要があります。  
   

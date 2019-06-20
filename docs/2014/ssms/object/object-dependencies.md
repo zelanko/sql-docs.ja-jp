@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032420"
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
@@ -27,10 +27,10 @@ ms.locfileid: "63032420"
  このダイアログ ボックスを使用すると、選択されているオブジェクトを変更または削除する前に依存関係について理解できます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
- **オブジェクトに依存する**_\<選択したオブジェクト >_  
+ **オブジェクトに依存する** _\<選択したオブジェクト >_  
  このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトに依存するオブジェクトの一覧が表示されます。  
   
- **対象のオブジェクト**_\<選択したオブジェクト >_**依存**  
+ **対象のオブジェクト** _\<選択したオブジェクト >_ **依存**  
  このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトが依存するオブジェクトの一覧が表示されます。  
   
  **依存関係**  

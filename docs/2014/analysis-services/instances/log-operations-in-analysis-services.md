@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079760"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
@@ -109,7 +109,7 @@ ms.locfileid: "66079760"
   
 2.  Analysis Services のサービス アカウントに、データベースに対する十分なアクセス許可を付与します。 アカウントには、テーブルの作成、テーブルへの書き込み、テーブルからの読み取りの権限が必要です。  
   
-3.  SQL Server Management Studio で、 **[Analysis Services]** | **[プロパティ]** | **[全般]** の順にクリックして、 **[CreateQueryLogTable]** を [true] に設定します。  
+3.  SQL Server Management Studio で、 **[Analysis Services]**  |  **[プロパティ]**  |  **[全般]** の順にクリックして、 **[CreateQueryLogTable]** を [true] に設定します。  
   
 4.  (省略可能) クエリを異なるレートでサンプリングする場合、またはテーブルに異なる名前を使用する場合は、 **QueryLogSampling** または **QueryLogTableName** を変更します。  
   

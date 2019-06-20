@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108388"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
@@ -41,7 +41,7 @@ ms.locfileid: "66108388"
   
 4.  **式**フィールドで、をクリックして`ProductID`ドロップダウン リストから。 これは、フィルターを適用する列です。  
   
-5.  [等しい] をクリックして (**=**) 内の演算子、**演算子**ドロップダウン リスト。  
+5.  [等しい] をクリックして ( **=** ) 内の演算子、**演算子**ドロップダウン リスト。  
   
 6.  次の式ボタンをクリックして、**値**フィールドに、をクリックして**パラメーター**で、**カテゴリ**領域、およびダブルクリック`productid`で、 **値**領域。 **式の設定。値**フィールドのような式に表示するようになりました**パラメーターを =! productid します。値**します。  
   

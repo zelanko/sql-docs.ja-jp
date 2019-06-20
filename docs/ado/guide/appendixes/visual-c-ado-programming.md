@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702619"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ での ADO プログラミング
@@ -103,7 +103,7 @@ rs->Fields->GetItem(long(2))->PutValue("value");
 rs->Fields->GetItem("au_fname")->PutValue("value");  
 ```
   
- - または - (の代替構文を**値**もプロパティが表示されます)  
+ \- または - (の代替構文を**値**もプロパティが表示されます)  
   
 ```cpp
 rs->Fields->Item[long(2)]->Value = "value";  
@@ -223,7 +223,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- - または -  
+ \- または -  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -242,14 +242,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- - または -  
+ \- または -  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- - または -  
+ \- または -  
   
 ```cpp
 _RecordsetPtr  rs;  

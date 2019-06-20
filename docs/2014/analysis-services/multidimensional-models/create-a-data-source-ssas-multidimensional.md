@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076519"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
@@ -97,7 +97,7 @@ ms.locfileid: "66076519"
         >   
         >  この動作は、データベースが a) Analysis Services サーバー インスタンスに保存され、b) リレーショナル データを更新または処理するために SQL Server 認証を使用する場合にのみ適用されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でセットアップする、セッションの期間内だけ使用されるデータ ソース接続には、適用されません。 既に保存されているパスワードを削除する方法はありませんが、異なる資格情報または Windows 認証を使用して、現在データベースで保存されているユーザー情報を上書きできます。  
   
-    3.  データベースを指定するには、**[データベース名の選択または入力]** または **[データベース ファイルの添付]** を使用します。  
+    3.  データベースを指定するには、 **[データベース名の選択または入力]** または **[データベース ファイルの添付]** を使用します。  
   
     4.  ダイアログ ボックスの左側で **[すべて]** をクリックして、このプロバイダーのすべての既定の設定など、この接続の追加の設定を表示します。  
   
@@ -111,9 +111,9 @@ ms.locfileid: "66076519"
   
      権限借用のオプションを選択するためのガイドラインは、データ ソースをどのように使用するかによって異なります。 処理タスクの場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスは、データ ソースへの接続の際に、そのサービス アカウントまたは指定されたユーザー アカウントのいずれかのセキュリティ コンテキストで実行する必要があります。  
   
-    -   最小特権資格情報の一意のセットを指定する場合は、**[特定の Windows ユーザー名とパスワードを使用する]** 。  
+    -   最小特権資格情報の一意のセットを指定する場合は、 **[特定の Windows ユーザー名とパスワードを使用する]** 。  
   
-    -   サービス ID を使用してデータを処理する場合は、**[サービス アカウントを使用する]** 。  
+    -   サービス ID を使用してデータを処理する場合は、 **[サービス アカウントを使用する]** 。  
   
      指定するアカウントは、データ ソースに対する読み取り権限を持っている必要があります。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "66076519"
   
 5.  追加したテーブルを探し、選択します。 テーブルを右クリックし、 **[新しいリレーションシップ]** を選択します。 一致するデータを含む、基になる列と対象になる列を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サポートされるデータ ソース&#40;SSAS 多次元&#41;](supported-data-sources-ssas-multidimensional.md)   
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)  
   

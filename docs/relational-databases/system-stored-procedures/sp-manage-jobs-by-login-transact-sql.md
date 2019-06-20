@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62957157"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (TRANSACT-SQL)
@@ -43,7 +43,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @action = ] 'action'` 指定されたログインに対して実行するアクション。 *アクション*は**varchar (10)**、既定値はありません。 ときに*アクション*は**削除**、 **sp_manage_jobs_by_login**によって所有されているすべてのジョブを削除*current_owner_login_name*します。 ときに*アクション*は**再割り当て**に割り当てられているすべてのジョブ*new_owner_login_name*します。  
+`[ @action = ] 'action'` 指定されたログインに対して実行するアクション。 *アクション*は**varchar (10)** 、既定値はありません。 ときに*アクション*は**削除**、 **sp_manage_jobs_by_login**によって所有されているすべてのジョブを削除*current_owner_login_name*します。 ときに*アクション*は**再割り当て**に割り当てられているすべてのジョブ*new_owner_login_name*します。  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` 現在のジョブ所有者のログイン名。 *current_owner_login_name* is **sysname**, with no default.  
   

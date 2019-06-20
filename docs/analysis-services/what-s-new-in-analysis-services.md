@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de2ac80a10e66ed7673a65428c4bfa011d31b534
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210191"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263281"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services の新機能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -60,7 +60,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
 ### <a name="bi-directional-cross-filtering"></a>双方向のクロス フィルター処理
 このリリースでは、表形式モデルで双方向のクロス フィルターを有効にするための組み込みアプローチが新たに導入されています。これにより、テーブル リレーションシップ間でフィルター コンテキストを伝達するために DAX 式を手動で作成する必要がなくなります。 フィルターは、方向を高い確実性で確立できた場合にのみ自動生成されます。 テーブル リレーションシップで複数のクエリ パスの形式にあいまいさがある場合、フィルターは自動的に作成されません。 詳細については、「 [SQL Server 2016 Analysis Services における表形式モデルの双方向のクロス フィルター](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 」を参照してください。
  ### <a name="translations"></a>翻訳    
- 翻訳されたメタデータを表形式モデル 1200 に保存できるようになりました。 モデル内のメタデータには、 **Culture**のフィールド、翻訳されたキャプション、および翻訳された説明が含まれます。 翻訳を追加するには、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[モデル]** > **[翻訳]** の順にコマンドを使用します。 詳細については、「[表形式モデルでの翻訳 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)」を参照してください。    
+ 翻訳されたメタデータを表形式モデル 1200 に保存できるようになりました。 モデル内のメタデータには、 **Culture**のフィールド、翻訳されたキャプション、および翻訳された説明が含まれます。 翻訳を追加するには、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[モデル]**  >  **[翻訳]** の順にコマンドを使用します。 詳細については、「[表形式モデルでの翻訳 &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md)」を参照してください。    
  ### <a name="pasted-tables"></a>貼り付けられたテーブル    
  モデルに貼り付けられたテーブルが含まれる場合、表形式モデルを 1100 または 1103 から 1200 にアップグレードできるようになりました。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]を使用することをお勧めします。 SSDT では、 **CompatibilityLevel** を 1200 に設定して、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスに展開します。 詳細については、「 [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 」を参照してください。    
  ### <a name="calculated-tables-in-ssdt"></a>SSDT の計算テーブル    
@@ -76,7 +76,7 @@ SQL Server 2016 Service SP1 Analysis Services は、Non-Uniform Memory Access (N
  ### <a name="administer-tabular-1200-models-in-ssms"></a>SSMS での表形式モデル 1200 の管理    
  このリリースでは、表形式サーバー モードの Analysis Services インスタンスが、表形式モデルを任意の互換性レベル (1100、1103、1200) で実行できます。 最新の [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) は、プロパティを表示し、互換性レベル 1200 の表形式モデルのデータベース モデル管理を提供するように更新されています。    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>表形式モデルでの複数のテーブル パーティションの並列処理    
- このリリースには、処理パフォーマンスを強化する、2 つ以上のパーティションを持つテーブルへの新しい並行処理機能が含まれます。 この機能には、構成設定はありません。 パーティションを構成して、テーブルの処理の詳細については、[テーブル モデル パーティション](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)を参照してください。    
+ このリリースには、処理パフォーマンスを強化する、2 つ以上のパーティションを持つテーブルへの新しい並行処理機能が含まれます。 この機能には、構成設定はありません。 パーティションを構成して、テーブルの処理の詳細については、次を参照してください。[テーブル モデル パーティション](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)します。    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>SSMS の管理者としてコンピューター アカウントを追加する    
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理者は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理者グループのメンバーにするコンピューター アカウントを構成できるようになりました。 **[ユーザーまたはグループの選択]** ダイアログ ボックスで、コンピューター ドメインの **[場所]** を設定して、 **[コンピューター]** のオブジェクトの種類を追加します。 詳細については、「 [Analysis Services インスタンスにサーバー管理者権限を付与する](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)」を参照してください。    
  ### <a name="dbcc-for-analysis-services"></a>Analysis Services 用 DBCC    
@@ -133,9 +133,9 @@ refresh|オブジェクトを処理します。 ASSL では PROCESS に相当し
 数式バーの更新プログラムでは、関数、フィールド、および構文の色を区別して、より簡単に数式を記述することができます。これは、インテリジェント関数やフィールドの候補を提供し、DAX 式に間違っている部分がある場合はエラーの *波線*を使用して示します。 複数の行 (Alt + Enter) とインデント (Tab) も使用できます。 数式バーもできるようになりました、メジャーの一部としてコメントを作成、入力するだけにする"//"と同じ行にこれらの文字がコメントを考慮する後のすべて。
 
 ### <a name="dax-variables"></a>DAX の変数    
-このリリースでは、DAX の変数のサポートが追加されました。 変数は、式の結果を名前付きの変数として保存できるようになりました。これは、他のメジャーの式に引数として渡すことができます。 結果の値が可変式に対して計算されると、その変数が別の式で参照される場合でも、それらの値は変更されません。 詳細については、「 [VAR 関数](http://msdn.microsoft.com/library/mt243785.aspx)」を参照してください。    
+このリリースでは、DAX の変数のサポートが追加されました。 変数は、式の結果を名前付きの変数として保存できるようになりました。これは、他のメジャーの式に引数として渡すことができます。 結果の値が可変式に対して計算されると、その変数が別の式で参照される場合でも、それらの値は変更されません。 詳細については、「 [VAR 関数](/dax/var-dax)」を参照してください。    
 ### <a name="new-dax-functions"></a>DAX の新しい関数
-このリリースでは、計算を高速化し、Power BI での視覚化機能を強化する 50 以上の新しい関数が DAX に導入されました。 詳細については、「 [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)」 (DAX の新しい関数) を参照してください。
+このリリースでは、計算を高速化し、Power BI での視覚化機能を強化する 50 以上の新しい関数が DAX に導入されました。 詳細については、「 [New DAX Functions](/dax/new-dax-functions)」 (DAX の新しい関数) を参照してください。
 ### <a name="save-incomplete-measures"></a>不完全なメジャーを保存する
 不完全な DAX メジャーを表形式 1200 のモデル プロジェクトに直接保存できるようになりました。作業を続ける準備ができたときに、もう一度選択することができます。
 ### <a name="additional-dax-enhancements"></a>DAX の追加の拡張機能

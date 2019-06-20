@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5e93d3e46dcad5331b765fbfa440297c34bbb98
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108756"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
@@ -45,9 +45,9 @@ ms.locfileid: "66108756"
 |オブジェクト|スクリプト化の可否|コメント|  
 |------------|---------------------|--------------|  
 |[レポート]|はい|移行後にデータソースのパスワードを再入力します。|  
-|データソース|はい|移行後にレポートとデータソースとの間のリンクを再設定します。|  
+|データソース|[はい]|移行後にレポートとデータソースとの間のリンクを再設定します。|  
 |モデル|はい||  
-|[データセット]|[はい]||  
+|[データセット]|はい||  
 |レポート パーツ||移行後にレポート パーツへのパスを確認または更新します。|  
 |Schedules|はい|ListSchedules メソッドに関する説明 (「 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)」) を参照してください。|  
 |サブスクリプション|はい|Listsubscriptions メソッドを参照してください[Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)と ChangeSubscriptionOwner メソッド。 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  

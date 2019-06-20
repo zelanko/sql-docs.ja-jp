@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a6d3c7971f6d5e117ae923ee8697a4ec51e1a34e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721472"
 ---
 # <a name="distributor-password"></a>[ディストリビューター パスワード]
@@ -29,7 +29,7 @@ ms.locfileid: "62721472"
  **[パスワードの確認入力]**  
  正しく入力されたことを確認するために、パスワードを再入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ディストリビューションの構成]](configure-distribution.md)   
  [パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)  
   
