@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157963"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>メモリ最適化テーブルのメモリ必要量の推定
@@ -173,7 +173,7 @@ SELECT * FROM t_hk
 ##  <a name="bkmk_MemoryForGrowth"></a> 成長に対応するメモリ  
  上記の各計算では、現在存在しているテーブルに対応するメモリ必要量を推定しています。 このメモリに加えて、テーブルが成長することを推定し、その成長を収容するために十分なメモリを用意する必要があります。  たとえば、10% の成長を予測している場合は、上記の結果に 1.1 を掛けて、テーブルで必要とされる合計メモリを得ることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インメモリ OLTP への移行](migrating-to-in-memory-oltp.md)  
   
   

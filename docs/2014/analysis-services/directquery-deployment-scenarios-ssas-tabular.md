@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081651"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery の配置シナリオ (SSAS テーブル)
@@ -111,8 +111,8 @@ ms.locfileid: "66081651"
   
 |||  
 |-|-|  
-|**キャッシュなしの DirectQuery**|キャッシュにデータは読み込まれません。 モデルは処理できません。<br /><br /> モデルは、DAX クエリをサポートするクライアントを使用してクエリのみ行うことができます。 クエリ結果は、常に元のデータ ソースから返されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]** = **[DirectQuery]**|  
-|**キャッシュのみに対するクエリと DirectQuery**|配置が失敗します。 この構成はサポートされていません。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]** = **In-Memory**|  
+|**キャッシュなしの DirectQuery**|キャッシュにデータは読み込まれません。 モデルは処理できません。<br /><br /> モデルは、DAX クエリをサポートするクライアントを使用してクエリのみ行うことができます。 クエリ結果は、常に元のデータ ソースから返されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]**  =  **[DirectQuery]**|  
+|**キャッシュのみに対するクエリと DirectQuery**|配置が失敗します。 この構成はサポートされていません。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]**  = **In-Memory**|  
   
  **ハイブリッド モード**  
  モデルをハイブリッド モードで配置すると多くの利点があります。必要に応じて SQL Server データ ソースから最新データを取得できますが、キャッシュを保持すると、レポートのデザインまたはモデルのテスト時にメモリ内のデータをより高いパフォーマンスで操作できます。  
@@ -123,8 +123,8 @@ ms.locfileid: "66081651"
   
 |||  
 |-|-|  
-|**キャッシュ優先のハイブリッド モード**|モデルを処理することができ、データをキャッシュに読み込むことができます。 クエリでは、既定でキャッシュが使用されます。  クライアントで DirectQuery ソースを使用する場合は、接続文字列にパラメーターを挿入する必要があります。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]** = **In-Memory with DirectQuery**|  
-|**DirectQuery 優先のハイブリッド モード**|モデルは処理され、データをキャッシュに読み込むことができます。 ただし、既定ではクエリで DirectQuery が使用されます。 クライアントでキャッシュ データを使用する場合は、接続文字列にパラメーターを挿入する必要があります。 モデル内のテーブルがパーティション分割されている場合は、キャッシュのプリンシパル パーティションも **[In-Memory (DirectQuery あり)]** に設定されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]** = **[DirectQuery (In-Memory あり)]**|  
+|**キャッシュ優先のハイブリッド モード**|モデルを処理することができ、データをキャッシュに読み込むことができます。 クエリでは、既定でキャッシュが使用されます。  クライアントで DirectQuery ソースを使用する場合は、接続文字列にパラメーターを挿入する必要があります。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]**  = **In-Memory with DirectQuery**|  
+|**DirectQuery 優先のハイブリッド モード**|モデルは処理され、データをキャッシュに読み込むことができます。 ただし、既定ではクエリで DirectQuery が使用されます。 クライアントでキャッシュ データを使用する場合は、接続文字列にパラメーターを挿入する必要があります。 モデル内のテーブルがパーティション分割されている場合は、キャッシュのプリンシパル パーティションも **[In-Memory (DirectQuery あり)]** に設定されます。<br /><br /> **DirectQueryMode** = `On`<br /><br /> **[[QueryMode]]**  =  **[DirectQuery (In-Memory あり)]**|  
   
 ## <a name="see-also"></a>参照  
  [DirectQuery モード &#40;SSAS テーブル&#41;](tabular-models/directquery-mode-ssas-tabular.md)   

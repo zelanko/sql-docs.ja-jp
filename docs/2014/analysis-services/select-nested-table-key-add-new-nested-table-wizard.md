@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6af62200b5d640c67321165eae941986e18892
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069347"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>[入れ子になったテーブル キーの選択] (入れ子になっている新しいテーブルの追加ウィザード)
@@ -28,7 +28,7 @@ ms.locfileid: "66069347"
  **Attributes**  
  入れ子になったテーブルのキー列となる属性を選択します。 選択したすべての属性に階層を設定するか、属性階層を有効にする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [メジャー グループ ディメンションの選択&#40;入れ子になったテーブルの新規作成ウィザードの追加&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
  [入れ子になったテーブル列を選択&#40;入れ子になったテーブルの新規作成ウィザードの追加&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)  

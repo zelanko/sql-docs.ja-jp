@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20106b002eba07a3eb9e2877c84dacb9a98b87b1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068316"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>[入れ子になった結合の指定] ダイアログ ボックス ([マイニング精度チャート] ビュー)
@@ -31,7 +31,7 @@ ms.locfileid: "66068316"
  **リレーションシップを削除します。**  
  クリックすると、 **[ダイアグラム]** ペインで選択したリレーションシップが削除されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [リレーションシップ ダイアログ ボックスを作成または&#40;Analysis Services - 多次元データ&#41;](create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md)  

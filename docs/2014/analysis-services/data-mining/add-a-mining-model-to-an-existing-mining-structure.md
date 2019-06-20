@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086378"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>既存のマイニング構造へのマイニング モデルの追加
@@ -34,7 +34,7 @@ ms.locfileid: "66086378"
   
 3.  **[アルゴリズム名]** で、マイニング モデルを作成するアルゴリズムを選択します。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
  新しいマイニング モデルが **[マイニング モデル]** タブに表示されます。モデルでは、構造内に存在する既定の列が使用されます。 列を変更する方法については、「 [マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)」を参照してください。  
   

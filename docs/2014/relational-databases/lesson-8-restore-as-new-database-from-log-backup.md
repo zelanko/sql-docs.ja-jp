@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 9:  Windows Azure ストレージからデータベースを復元 |Microsoft Docs'
+title: 'レッスン 9: Windows Azure ストレージからデータベースを復元 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 41fbe4cefb6a759befd8b96ded8487ff54b0a1c6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090645"
 ---
-# <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>レッスン 9:  Windows Azure ストレージからデータベースを復元する
+# <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>レッスン 9: Windows Azure ストレージからデータベースを復元する
   このレッスンでは、Windows Azure ストレージにあるデータベース バックアップ ファイルを内部設置型または Windows Azure の仮想マシンに存在するデータベースに復元する方法を学習します。 このレッスンを続行するには、レッスン 4、5、6、7 および 8 を実行する必要はありません。  
   
  このレッスンでは、次の手順が既に完了したことを前提としています。  

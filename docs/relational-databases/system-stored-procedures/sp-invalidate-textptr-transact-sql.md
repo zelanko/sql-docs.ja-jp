@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960927"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (TRANSACT-SQL)
@@ -40,7 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @TextPtrValue = ] textptr_value` 行内テキスト ポインターは無効にします。 *textptr_value*は**varbinary (** 16 **)**、既定値は NULL です。 NULL の場合、 **sp_invalidate_textptr**トランザクション内のすべての行内テキスト ポインターが無効になります。  
+`[ @TextPtrValue = ] textptr_value` 行内テキスト ポインターは無効にします。 *textptr_value*は**varbinary (** 16 **)** 、既定値は NULL です。 NULL の場合、 **sp_invalidate_textptr**トランザクション内のすべての行内テキスト ポインターが無効になります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

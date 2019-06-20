@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb7e3caa1fedf1e8a398a1c5abd91fdaa2263ba2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101318"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>[全般] ([共有データ ソース プロパティ] ダイアログ ボックス)
@@ -30,7 +30,7 @@ ms.locfileid: "66101318"
  データ処理拡張機能を選択します。 一覧には、登録されているすべての拡張機能が表示されます。  
   
  **[接続文字列]**  
- データ ソースの接続文字列を入力します。 **[編集]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、式 (**[fx]**) ボタンをクリックします。  
+ データ ソースの接続文字列を入力します。 **[編集]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、式 ( **[fx]** ) ボタンをクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   

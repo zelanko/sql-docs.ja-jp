@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787041"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff サーバー構成オプションの構成
@@ -37,7 +37,7 @@ ms.locfileid: "62787041"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[Two digit year cutoff オプションを構成した後](#FollowUp)  
+-   **補足情報:** [two digit year cutoff オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62787041"
   
 2.  **[その他のサーバーの設定]** ノードをクリックします。  
   
-3.  **[2 桁の年のサポート]** の **[2 桁の年を****以下の間にある年として解釈]** ボックスに、期間の終了する年を入力または選択します。  
+3.  **[2 桁の年のサポート]** の **[2 桁の年を** **以下の間にある年として解釈]** ボックスに、期間の終了する年を入力または選択します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -88,7 +88,7 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: Two digit year cutoff オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: two digit year cutoff オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

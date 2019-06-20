@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076426"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>ディメンション ウィザードを使用したディメンションの作成
@@ -45,7 +45,7 @@ ms.locfileid: "66076426"
   
          **[キー列]** ボックスの一覧に複数のキー列が含まれている場合、キー属性のメンバー値を提供する名前列を指定する必要があります。 この操作を行うには、データ ソース ビューで名前付き計算を作成し、それを名前列として使用します。  
   
-    5.  **[次へ]** をクリックします。  
+    5.  [**次へ**] をクリックします。  
   
 4.  **[関連テーブルの選択]** ページで、ディメンションに含める関連テーブルを選択し、 **[次へ]** をクリックします。  
   

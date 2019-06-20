@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056180"
 ---
 # <a name="script-task-editor-general-page"></a>[スクリプト タスク エディター] \([全般] ページ)
@@ -36,7 +36,7 @@ ms.locfileid: "66056180"
  **[説明]**  
  スクリプト タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[スクリプト タスク エディター] ([スクリプト] ページ)](../../2014/integration-services/script-task-editor-script-page.md)   
  [[式] ページ](expressions/expressions-page.md)   

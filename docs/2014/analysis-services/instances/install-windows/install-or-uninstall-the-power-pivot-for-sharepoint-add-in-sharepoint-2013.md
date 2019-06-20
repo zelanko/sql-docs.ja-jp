@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1fb1e718f8b2ab0257651ff47674d293a9e6a95
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079882"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>PowerPivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
@@ -100,7 +100,7 @@ ms.locfileid: "66079882"
   
 4.  **[機能の選択]** ページでは、すべての機能が既定で選択されています。  
   
-5.  **[次へ]** をクリックします。  
+5.  [**次へ**] をクリックします。  
   
 6.  **[インストール]** をクリックしてインストールを実行し、インストールを終了します。  
   

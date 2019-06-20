@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 058a3318f98d294d7c6c7ba2cf69becdf218b48f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079968"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する
@@ -28,7 +28,7 @@ ms.locfileid: "66079968"
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **このトピックの「**:ダイアグラムの領域に、目次に対応して、次の文字の項目です。 ダイアグラムでは、次を説明します。  
+ **このトピックの「** :ダイアグラムの領域に、目次に対応して、次の文字の項目です。 ダイアグラムでは、次を説明します。  
   
 |||  
 |-|-|  

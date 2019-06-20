@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082920"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
@@ -215,7 +215,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
  シーケンス クラスター モデルの予測クエリでは、他のクラスター モデルで使用される予測関数の多くを使用できます。 さらに、特別な予測関数 [PredictSequence (DMX)](/sql/dmx/predictsequence-dmx)を使用すると、提案や次の状態についての予測を行うことができます。  
   
 ###  <a name="bkmk_Query4"></a> サンプル クエリ 4:次の状態を予測します。  
-  [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 関数を使用すると、ある値に対して、最も可能性の高い次の状態を予測できます。 また、複数の次の状態を予測することもできます。たとえば、顧客が購入する可能性のある上位 3 製品の一覧を取得して、推奨製品一覧を提供することができます。  
+ [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 関数を使用すると、ある値に対して、最も可能性の高い次の状態を予測できます。 また、複数の次の状態を予測することもできます。たとえば、顧客が購入する可能性のある上位 3 製品の一覧を取得して、推奨製品一覧を提供することができます。  
   
  次のサンプル クエリは、上位 5 つの予測とその確率を返す単一予測クエリです。 入れ子になったテーブルがモデルに含まれているため、予測の実行時には、入れ子になったテーブル `[v Assoc Seq Line Items]`を列参照として使用する必要があります。 また、入れ子になった SELECT ステートメントに示されているように、入力として値を指定するときは、ケース テーブルと入れ子になったテーブルの両方の列を結合する必要があります。  
   

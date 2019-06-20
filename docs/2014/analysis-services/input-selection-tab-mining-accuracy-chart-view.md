@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080421"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>[入力の選択] タブ ([マイニング精度チャート] ビュー)
   **[マイニング精度チャート]** デザイナーの **[入力の選択]** タブを使用すると、モデルのテストや精度チャートの作成に使用するデータのソースを指定できます。  
   
- **詳細:**[テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
+ **詳細:** [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>および  
  **予測列と** **値の同期**  
@@ -67,7 +67,7 @@ ms.locfileid: "66080421"
  **開いているフィルター エディター**  
  **[データセット フィルター]** ダイアログ ボックスを開きます。このダイアログ ボックスでは、外部テーブルの選択やケース テーブル列への条件の設定を行うことができます。さらに、 **[フィルター]** ダイアログ ボックスを使用して、選択されているテーブルの個々の列または入れ子になったテーブルの列に適用する条件を作成できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [マイニング モデルにフィルターを適用します。](data-mining/apply-a-filter-to-a-mining-model.md)   

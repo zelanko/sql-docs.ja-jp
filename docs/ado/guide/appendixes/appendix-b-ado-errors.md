@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ea4af6a527ce7a45bb9c654676f1a27a16a09a85
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702805"
 ---
 # <a name="appendix-b-ado-error-codes"></a>付録 B:ADO エラー コード
@@ -31,5 +31,5 @@ ms.locfileid: "66702805"
 
 -   [インターネット インフォメーション サービスのエラー コード](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md) [ADO コレクション](../../../ado/reference/ado-api/ado-collections.md) [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md) [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ADO イベント](../../../ado/reference/ado-api/ado-events.md) [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md) [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md) [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ADO のプロパティ](../../../ado/reference/ado-api/ado-properties.md)

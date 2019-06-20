@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 55fcb4e145481f98b0cba065ddab75e7cfa0a538
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641979"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio でカスタム レポートを使用して Machine Learning Services を監視する
@@ -65,7 +65,7 @@ Management Studio でレポートを一般的な概要については、次を�
 ### <a name="step-3-run-the-reports"></a>手順 3. レポートの実行
 
 5. Management Studio で、レポートを実行するインスタンスの **[データベース]** ノードを右クリックします。
-6. **[レポート]**、 **[カスタム レポート]** の順にクリックします。
+6. **[レポート]** 、 **[カスタム レポート]** の順にクリックします。
 7. **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーを見つけます。
 8. ダウンロードした RDL ファイルを選択し、 **[開く]** をクリックします。
 

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645182"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "62645182"
 |**filegroup_id**|**int**|ファイル グループの IDデータベース内で一意です。 対応する**data_space_id**で**sys.filegroups**します。|  
 |**filegroup_guid**|**uniqueidentifier**|ファイル グループのグローバル一意識別子。 NULL にすることができます。|  
 |**type**|**char(2)**|コンテンツの種類のいずれか:<br /><br /> FG ="Rows"ファイル グループ<br /><br /> SL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル グループ|  
-|**type_desc**|**nvarchar(60)**|関数の種類のいずれかの説明です。<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP |  
+|**type_desc**|**nvarchar(60)**|関数の種類のいずれかの説明です。<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|既定のファイル グループ、CREATE TABLE または CREATE INDEX でファイル グループが指定されていない場合に使用します。|  
 |**is_readonly**|**bit**|1 = ファイル グループは読み取り専用です。|  
 |**log_filegroup_guid**|**uniqueidentifier**|NULL にすることができます。|  

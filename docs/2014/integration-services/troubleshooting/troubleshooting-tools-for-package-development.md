@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62886462"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
@@ -88,7 +88,7 @@ ms.locfileid: "62886462"
 ## <a name="troubleshooting-errors-without-a-description"></a>説明のないエラーのトラブルシューティング  
  パッケージ開発中、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] エラー番号に対応する説明のないエラーが発生した場合は、その説明を「 [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)」で確認できます。 現時点では、この一覧にトラブルシューティング情報は含まれていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージ実行のトラブルシューティング ツール](troubleshooting-tools-for-package-execution.md)   
  [データ フロー パフォーマンス機能](../data-flow/data-flow-performance-features.md)  
   

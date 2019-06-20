@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481241"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>タスク 1:ナレッジ ベースとドメインを作成する
@@ -63,6 +63,6 @@ ms.locfileid: "65481241"
     -   Zip  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2:ドメイン値を手動で追加します。](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [タスク 2: ドメイン値を手動で追加します。](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

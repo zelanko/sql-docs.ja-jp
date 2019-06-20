@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151045"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
@@ -87,7 +87,7 @@ WHERE s.ticket = r.ticket AND s.type = 'toy' AND r.date = '2013-12-19';
   
  この動作は変更されました。 現在の新しいカーディナリティ推定機能のロジックは、s.type が r.date に相関しないことを想定しています。 つまり、玩具の返品は特定の 1 日ではなく、毎日発生することを想定しています。 この例では、新しいカーディナリティ推定機能は、以前のカーディナリティ推定機能未満の数を推定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パフォーマンスの監視とチューニング](monitor-and-tune-for-performance.md)  
   
   
