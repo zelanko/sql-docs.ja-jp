@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 56883144-26a0-4f45-ad36-4f616369af3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6f6fe21d01cd57dc329d38a9d9e289c7481340d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3557c60f36ea48a8cb03f58997bc2d8093f432e0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787309"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>updateBinaryStream (java.lang.String, java.io.InputStream) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateBinaryStream メソッドは、java.sql.ResultSet インターフェイスの updateBinaryStream メソッドによって指定されます。  
+ この updateBinaryStream メソッドは、java.sql.ResultSet インターフェイスの updateBinaryStream メソッドで規定されています。  
   
  このメソッドを使用して、**イメージ**、**テキスト**、および**ntext** SQL Server データ型、パフォーマンスに影響を与える可能性があります。  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 87221173fc919244eca5a9df153ac1975f6d12ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66767162"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>getDriverName メソッド (SQLServerDatabaseMetaData)
@@ -42,7 +42,7 @@ public java.lang.String getDriverName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getUserName メソッドは、java.sql.DatabaseMetaData インターフェイスの getUserName メソッドで規定されています。  
+ この getDriverName メソッドは、java.sql.DatabaseMetaData インターフェイスの getDriverName メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

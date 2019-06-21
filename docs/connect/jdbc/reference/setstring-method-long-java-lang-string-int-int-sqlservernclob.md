@@ -1,5 +1,5 @@
 ---
-title: setString メソッド (long, java.lang.String, int, int) - NClob |Microsoft Docs
+title: setString メソッド (long, java.lang.String, int, int) - NClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58a26b71787e154acec6add71ecc868b438c2dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ad49b4a5e675d4ff6635583e0b64a1e57434ff22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762273"
 ---
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>setString (long, java.lang.String, int, int) メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ int setString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setString メソッドは、java.sql.NClob インターフェイスで、setString メソッドによって指定されます。  
+ この setString メソッドは、java.sql.NClob インターフェイスの setString メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

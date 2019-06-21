@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801726"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC ドライバーでの Azure Active Directory の使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ Microsoft ODBC Driver for SQL Server バージョン 13.1 以上により SQL Az
 
 |[オブジェクト名]|値|既定|[説明]|
 |-|-|-|-|
-|`Authentication`|(設定しません) (空の文字列)、 `SqlPassword`、 `ActiveDirectoryPassword`、 `ActiveDirectoryIntegrated`、 `ActiveDirectoryInteractive`、 `ActiveDirectoryMsi` |(未設定)|認証モードを制御します。<table><tr><th>[値]<th>[説明]<tr><td>(未設定)<td>認証モードの他のキーワード (既存のレガシ接続オプション) によって決まります<tr><td>(空の文字列)<td>接続文字列: "{0}"オーバーライド設定を解除し、`Authentication`値、DSN に設定します。<tr><td>`SqlPassword`<td>ユーザー名とパスワードを使用して SQL Server インスタンスに直接認証します。<tr><td>`ActiveDirectoryPassword`<td>ユーザー名とパスワードを使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows ドライバーのみ_します。 統合認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryInteractive`<td>_Windows ドライバーのみ_します。 対話型認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryMsi`<td>管理対象サービス id の認証を使用して id を Azure Active Directory で認証します。 ユーザー割り当て id、UID は、ユーザー idenity のオブジェクト ID に設定されます。</table>|
+|`Authentication`|(設定しません) (空の文字列)、 `SqlPassword`、 `ActiveDirectoryPassword`、 `ActiveDirectoryIntegrated`、 `ActiveDirectoryInteractive`、 `ActiveDirectoryMsi` |(未設定)|認証モードを制御します。<table><tr><th>[値]<th>[説明]<tr><td>(未設定)<td>認証モードの他のキーワード (既存のレガシ接続オプション) によって決まります<tr><td>(空の文字列)<td>接続文字列オーバーライド設定を解除し、`Authentication`値、DSN に設定します。<tr><td>`SqlPassword`<td>ユーザー名とパスワードを使用して SQL Server インスタンスに直接認証します。<tr><td>`ActiveDirectoryPassword`<td>ユーザー名とパスワードを使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryIntegrated`<td>_Windows ドライバーのみ_します。 統合認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryInteractive`<td>_Windows ドライバーのみ_します。 対話型認証を使用して id を Azure Active Directory で認証します。<tr><td>`ActiveDirectoryMsi`<td>管理対象サービス id の認証を使用して id を Azure Active Directory で認証します。 ユーザー割り当て ID の場合、UID はユーザー ID のオブジェクト ID に設定されます。</table>|
 |`Encrypt`|(未設定)、`Yes`、`No`|(説明を参照してください)|接続の暗号化を制御します。 場合の前の属性値、`Authentication`の設定が_none_ 、DSN または接続文字列は、既定値は`Yes`します。 それ以外の場合、既定値は `No` です。 場合、属性`SQL_COPT_SS_AUTHENTICATION`の前の属性値を上書き`Authentication`、明示的に DSN または接続文字列または接続属性での暗号化の値を設定します。 暗号化の前の属性値が`Yes`値が設定されている場合`Yes`DSN または接続文字列にします。|
 
 ## <a name="new-andor-modified-connection-attributes"></a>接続の新規作成または変更された属性
@@ -105,7 +105,7 @@ SQL Azure への Azure Active Directory 統合認証の場合: `Authentication=A
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. AAD 管理対象サービス Id の認証には、接続を設定する認証システムによって割り当てられたか、ユーザー割り当ての id が使用されます。 ユーザー割り当て id、UID は、ユーザー id のオブジェクト ID に設定されます。<br>
+8. AAD 管理対象サービス Id の認証には、接続を設定する認証システムによって割り当てられたか、ユーザー割り当ての id が使用されます。 ユーザー割り当て ID の場合、UID はユーザー ID のオブジェクト ID に設定されます。<br>
 システムによって割り当てられた ID の場合:<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 MyObjectId と等しいオブジェクト ID を持つユーザー割り当て id の<br>
@@ -168,7 +168,7 @@ Azure Active Directory 対話型認証で使用する接続文字列の例は、
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-Azure Active Directory 管理対象サービス Id の認証で使用する接続文字列の例は、次のです。 ユーザー割り当て id のユーザー id のオブジェクト ID には UID が設定されていることに注意してください。
+Azure Active Directory 管理対象サービス Id の認証で使用する接続文字列の例は、次のです。 ユーザー割り当て ID に対して、UID がユーザー ID のオブジェクト ID に設定されていることに注意してください。
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"

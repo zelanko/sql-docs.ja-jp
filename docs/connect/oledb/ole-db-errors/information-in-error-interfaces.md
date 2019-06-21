@@ -17,13 +17,13 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: c80013249af94a2ad94c221bc6155dca7c7d2664
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7b87011fc8d95d617562bb72ce6a3a6ee49ae0c5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798132"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51606762"
 |---------------------|-----------------|  
 |**GetDescription**|エラー メッセージを説明する文字列を返します。|  
 |**GetGUID**|エラーを定義したインターフェイスの GUID を返します。|  
-|**GetHelpContext**|サポートされていません。 常に 0 を返します。|  
+|**GetHelpContext**|サポートされていません。 常にゼロが返されます。|  
 |**GetHelpFile**|サポートされていません。 常に NULL が返されます。|  
 |**GetSource**|文字列 "Microsoft OLE DB Driver for SQL Server"。|  
   

@@ -1,5 +1,5 @@
 ---
-title: setByte メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: setByte メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 39c5ca20-d5f0-40dd-a853-29c3b8cd38e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac6ce42d8ec4ae03404a7850a486e68cb63e1549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 71c05b441eb7dd12ddf02ba9c24a6778f8b4d079
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797654"
 ---
 # <a name="setbyte-method-sqlserverpreparedstatement"></a>setByte メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

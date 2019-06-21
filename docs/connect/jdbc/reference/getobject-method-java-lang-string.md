@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26c09cca4f63f80cdbbb80386304ed7c4cdceda9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 56fc766c22751ea0a1465f9d1a447653b096b8f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787469"
 ---
 # <a name="getobject-method-javalangstring"></a>getObject (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.lang.Object getObject(java.lang.String sCol)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getObject メソッドは、java.sql.CallableStatement インターフェイスの getObject メソッドで指定されています。  
+ この getObject メソッドは、java.sql.CallableStatement インターフェイスの getObject メソッドで規定されています。  
   
  このメソッドは、指定された列の値を Java オブジェクトとして返します。 この Java オブジェクトの型は、JDBC 仕様に指定されている組み込み型のマッピングに基づく、列の SQL 型に対応する既定の Java オブジェクト型です。 値が SQL NULL の場合、ドライバーは Java の null を返します。  
   

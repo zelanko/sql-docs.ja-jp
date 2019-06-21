@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770271"
 ---
 # <a name="building-the-connection-url"></a>接続 URL の構築
@@ -97,7 +97,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  sqljdbc_auth.dll ファイルは次の場所にインストールされています。  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
+ \<"*インストール ディレクトリ*">\sqljdbc_\<"*バージョン*">\\<"*言語*">\auth\  
   
  サポートされている任意のオペレーティング システムの[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を参照してください[を使用した Kerberos 統合認証を SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)で追加された機能の説明の[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]アプリケーションに接続できるようにする、データベース タイプ 4 の Kerberos 統合認証を使用します。  
   

@@ -1,5 +1,5 @@
 ---
-title: カーソルの種類 (SQLSRV ドライバー) |Microsoft Docs
+title: カーソルの種類 (SQLSRV ドライバー) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801492"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>カーソルの種類 (SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -124,7 +124,7 @@ sqlsrv_close( $conn );
   
 クライアント側のカーソルは、小規模から中規模の結果セットに対して使用する必要があります。 大きな結果セットのサーバー側カーソルを使用します。  
   
-クエリは、バッファーが結果セット全体を保持するために十分な大きさでない場合は false を返します。 PHP メモリの上限に達するまでバッファー サイズを増やすことができます。  
+クエリは、バッファーが結果セット全体を保持するために十分な大きさでない場合は false を返します。 バッファーのサイズは PHP メモリの上限まで増やすことができます。  
   
 SQLSRV ドライバーを使用して、ClientBufferMaxKBSize の設定を使用して結果セットを保持するバッファーのサイズを構成することができます[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)します。 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) ClientBufferMaxKBSize の値を返します。 Sqlsrv で php.ini ファイルの最大バッファー サイズを設定することもできます。ClientBufferMaxKBSize (sqlsrv など。ClientBufferMaxKBSize = 1024)。  
   

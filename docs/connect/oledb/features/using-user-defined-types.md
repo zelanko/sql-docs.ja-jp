@@ -21,13 +21,13 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1cab9f8d7810216fff9e56fc9bab99cf1b58c92e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802861"
 ---
 # <a name="using-user-defined-types"></a>ユーザー定義型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "52396356"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
   
- <sup>1</sup>**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合、ステートメントの実行時にエラー (DB_E_ERRORSOCCURRED) が発生します (パラメーターの状態は DBSTATUS_E_BADACCESSOR になります)。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT がパラメーターのデータ型に暗黙的に変換されないことを示すエラーが返されます。  
+ <sup>1</sup>**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合、ステートメントの実行時にエラー (DB_E_ERRORSOCCURRED) が発生します (パラメーターの状態は DBSTATUS_E_BADACCESSOR になります)。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT からパラメーターのデータ型への暗黙的な変換がないことを示すエラーが返されます。  
   
  <sup>2</sup>この記事での説明の対象外です。  
   

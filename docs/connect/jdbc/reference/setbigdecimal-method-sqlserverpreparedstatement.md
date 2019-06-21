@@ -1,5 +1,5 @@
 ---
-title: setBigDecimal メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: setBigDecimal メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f73daf4d612193db273f525a34720771cd80dee7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d232b5c103c43d9a8856982fd084e460bb521c6e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66764859"
 ---
 # <a name="setbigdecimal-method-sqlserverpreparedstatement"></a>setBigDecimal メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

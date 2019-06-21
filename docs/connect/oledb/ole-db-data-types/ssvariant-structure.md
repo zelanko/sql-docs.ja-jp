@@ -14,13 +14,13 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: cf9141d77b1dc510a6653e94166c4b6f3c1ccfe4
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: d956aab8a82dc0387317578964b1796a685f24c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769529"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 構造体
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|では、 **datetime2** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**バイト**) の有効桁数を指定*tsDataTimeVal*値。|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|では、 **datetimeoffset** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**バイト**) の有効桁数を指定*tsoDateTimeOffsetVal*値。|  
 |NCharVal|対応する OLE DB 型インジケーターはありません。|**構造体 _NCharVal**|**VT_SS_WVARSTRING、**<br /><br /> **VT_SS_WSTRING**|では、 **nchar**と**nvarchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**短い**) を文字列の実際の長さを指定します*pwchNCharVal*ポイント。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (**短い**) を文字列の最大長を指定します*pwchNCharVal*ポイント。<br /><br /> *pwchNCharVal* (**WCHAR** \*) 文字列へのポインター。<br /><br /> 使用されないメンバー: *rgbReserved*、 *dwReserved*、および*pwchReserved*します。|  
-|CharVal|対応する OLE DB 型インジケーターはありません。|**構造体 _CharVal**|**VT_SS_STRING、**<br /><br /> **VT_SS_VARSTRING**|では、 **char**と**varchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**短い**) を文字列の実際の長さを指定します*pchCharVal*ポイント。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (**短い**) を文字列の最大長を指定します*pchCharVal*ポイント。<br /><br /> *pchCharVal* (**CHAR** \*) 文字列へのポインター。<br /><br /> 使用されないメンバー : <br /><br /> *rgbReserved*、 *dwReserved*、および*pwchReserved*します。|  
+|CharVal|対応する OLE DB 型インジケーターはありません。|**構造体 _CharVal**|**VT_SS_STRING、**<br /><br /> **VT_SS_VARSTRING**|では、 **char**と**varchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**短い**) を文字列の実際の長さを指定します*pchCharVal*ポイント。 末尾の 0 は含まれません。<br /><br /> *sMaxLength* (**短い**) を文字列の最大長を指定します*pchCharVal*ポイント。<br /><br /> *pchCharVal* (**CHAR** \*) 文字列へのポインター。<br /><br /> 使用されないメンバー :<br /><br /> *rgbReserved*、 *dwReserved*、および*pwchReserved*します。|  
 |BinaryVal|対応する OLE DB 型インジケーターはありません。|**構造体 _BinaryVal**|**VT_SS_VARBINARY、**<br /><br /> **VT_SS_BINARY**|では、**バイナリ**と**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型。<br /><br /> 次のメンバーを含みます。<br /><br /> *sActualLength* (**短い**) しているデータの実際の長さを指定します*prgbBinaryVal*ポイント。<br /><br /> *sMaxLength* (**短い**) しているデータの最大長を指定します*prgbBinaryVal*ポイント。<br /><br /> *prgbBinaryVal* (**バイト** \*) バイナリ データへのポインター。<br /><br /> 使用されないメンバー: *dwReserved*します。|  
 |UnknownType|未使用|未使用|未使用|未使用|  
 |BLOBType|未使用|未使用|未使用|未使用|  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e0efc0b3-4da4-45fc-9e8d-5edd9da7a42d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b70f122de7d13982b00b227a2cbe9b7e9d0e14c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd481b231c60c6bf9bba49ad039ece294d14a11a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778831"
 ---
 # <a name="gettime-method-javalangstring-sqlserverresultset"></a>getTime (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public java.sql.Time getTime(java.lang.String columnName)
  このメソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な時間部分が返されます。日付部分は、Java のベースラインの日付である 1970/01/01 に設定されます。  
   
 ## <a name="see-also"></a>参照  
- [getTime メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [getTime メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

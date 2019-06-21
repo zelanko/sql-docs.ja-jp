@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c1cfbda2b7ac6530242cfb4ff6191fd733865d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ea5c5001c3fe3bd73d464a0dbc41cc8decd022b3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66767015"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>setTimestamp (int, java.sql.Timestamp, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ public final void setTimestamp(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setTimestamp メソッドは、java.sql.PreparedStatement インターフェイスの setTimestamp メソッドによって指定されます。  
+ この setTimestamp メソッドは、java.sql.PreparedStatement インターフェイスの setTimestamp メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [setTimestamp メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   

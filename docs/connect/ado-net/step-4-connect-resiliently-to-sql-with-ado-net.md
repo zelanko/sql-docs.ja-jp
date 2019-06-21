@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fceeefd7c9dd0d3bd7df761273f69355c4e6024a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+manager: jroth
+ms.openlocfilehash: b3f7fc6d2d7ab6872bd7100fa51f05a9d9b957c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770603"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>ステップ 4: ADO.NET で SQL に弾性的に接続する
 
@@ -50,7 +50,7 @@ ms.locfileid: "58342869"
 次の手順でサンプルをコンパイルすることができます。  
   
 1. [無料の Visual Studio Community edition](https://www.visualstudio.com/products/visual-studio-community-vs)、C# コンソール アプリケーション テンプレートから新しいプロジェクトを作成します。  
-    - ファイル > 新規 > プロジェクト > インストール > テンプレート > Visual C# > Windows > クラシック デスクトップ > コンソール アプリケーション  
+    - ファイル > 新規 > プロジェクト > インストール > テンプレート > Visual c# > Windows > クラシック デスクトップ > コンソール アプリケーション  
     - プロジェクトに名前を**RetryAdo2**します。  
 2. ソリューション エクスプ ローラー ウィンドウを開きます。  
     - プロジェクトの名前を参照してください。  

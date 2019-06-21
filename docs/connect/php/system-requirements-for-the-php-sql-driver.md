@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 0cea4c62c7976e1f6d84dc046abc1046179ef125
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803907"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のシステム要件
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このドキュメントは、SQL Server または Azure SQL Database を使用して、データにアクセスするシステムにインストールする必要があります、コンポーネントを一覧表示、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]します。
 
-3.1 と Microsoft PHP Drivers for SQL Server 以降のバージョンが公式にサポートされています。 サポート ライフ サイクルと以前のバージョンの PHP ドライバーなどの要件の詳細については、次を参照してください。、[サポート マトリックス](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md)します。
+3\.1 と Microsoft PHP Drivers for SQL Server 以降のバージョンが公式にサポートされています。 サポート ライフ サイクルと以前のバージョンの PHP ドライバーなどの要件の詳細については、次を参照してください。、[サポート マトリックス](../../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md)します。
 
 ## <a name="php"></a>PHP (PHP)
 
@@ -41,7 +41,7 @@ ms.locfileid: "58658415"
 |5.5|       |       |       |       |       |5.5.16+ |5.5.16+ |
 |5.4|       |       |       |       |       |5.4.32  |5.4.32  |
 
-1. 7.2.1 のバージョン、Windows でバージョン 7.2.0 中に後でサポートされ、後で、Linux と macOS でサポートされます。
+1. 7\.2.1 のバージョン、Windows でバージョン 7.2.0 中に後でサポートされ、後で、Linux と macOS でサポートされます。
 
 -   ドライバー ファイルのバージョンは、PHP 拡張機能ディレクトリにあります。 参照してください[ドライバー バージョン](#driver-versions)については、別のドライバー ファイル。  ドライバーをダウンロードするには、「[Download the Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md)」 (Microsoft SQL Server 用 Drivers for PHP をダウンロードする) を参照してください。 PHP のドライバーを構成する方法については、「[Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)」 (Microsoft SQL Server 用 Drivers for PHP を読み込む) を参照してください。
 
@@ -58,7 +58,7 @@ PHP が実行されているコンピューターに Microsoft ODBC Driver for S
 
 Windows のバージョンの Windows の 64 ビット バージョンのドライバーをダウンロードする場合は、ODBC 64 ビットのインストーラーには、32 ビットと 64 ビットの両方の ODBC ドライバーがインストールされます。 Windows の 32 ビット バージョンを使用する場合は、x86 の ODBC を使用してインストーラー。 Windows 以外のプラットフォームでのみ、64 ビット バージョンのドライバーは使用できます。
 
-|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595;ODBC ドライバーのバージョン|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
+|SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; ODBC ドライバーのバージョン|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC ドライバー 17 以降 |Y|Y|Y| | | | |
 |ODBC ドライバー 13.1|Y|Y|Y|Y|Y| | |
@@ -81,7 +81,7 @@ Azure SQL Database がサポートされています。 詳細については、
 |SQL Server 2014           |Y|Y|Y|Y|Y|Y|Y|
 |SQL Server 2012           |Y|Y|Y|Y|Y|Y|Y|
 |SQL Server 2008 R2        |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008:           | | | | |Y|Y|Y|
+|SQL Server 2008           | | | | |Y|Y|Y|
 
 ## <a name="operating-systems"></a>オペレーティング システム
 ドライバーのバージョンごとにサポートされるオペレーティング システムは次のとおりです。
@@ -276,7 +276,7 @@ Windows では、次のバージョンのドライバーは含まれています
 |php_sqlsrv_55_ts.dll<br />php_pdo_sqlsrv_55_ts.dll|5.5|はい|php5ts.dll|  
 
 ## <a name="see-also"></a>参照  
-[概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 

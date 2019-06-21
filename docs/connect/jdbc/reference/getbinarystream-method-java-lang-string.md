@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 85f46fb35979bcf7111e2596b4d12c48160ebcdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 90527a6bfe0b943441f723fd22862832f136c6ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799802"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>getBinaryStream (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBinaryStream メソッドは、java.sql.ResultSet インターフェイスの getBinaryStream メソッドによって指定されます。  
+ この getBinaryStream メソッドは、java.sql.ResultSet インターフェイスの getBinaryStream メソッドで規定されています。  
   
  このメソッドを使用できる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型は、binary、varbinary、varbinary(max)、および image だけです。 他のデータ型で使用すると、例外がスローされます。  
   

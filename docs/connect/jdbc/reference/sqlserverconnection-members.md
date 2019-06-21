@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77065f64067ef505714bbd5e831d63abf41337bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4612b0762d8a0d619a19b61b8bb10ef6a68d1ba0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803074"
 ---
 # <a name="sqlserverconnection-members"></a>SQLServerConnection のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47804970"
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|準備された現在未解決の数を返すステートメント unprepare アクション。|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|値を返します**enablePrepareOnFirstPreparedStatementCall**接続プロパティです。|
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを使用して作成された [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の保持機能を取得します。|  
-|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) オブジェクトが表す接続の接続先データベースについてのメタデータを含む [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを取得します。|  
+|[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|この [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトが表す接続の接続先データベースについてのメタデータを含む [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) オブジェクトを取得します。|  
 |[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|値を返します**serverPreparedStatementDiscardThreshold**接続プロパティです。|  
 |[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|プールされた準備されたステートメント ハンドルの現在の数を返します。|  
 |[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|この接続の準備されたステートメント キャッシュのサイズを返します。|  

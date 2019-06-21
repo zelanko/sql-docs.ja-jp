@@ -12,13 +12,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b5c071a36cebacc8ce0dea5c1633bf3f92b28599
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409609"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795979"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大きな CLR ユーザー定義型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52409609"
   
  次の表に、パラメーターおよび行セットでのデータ型のマッピングを示します。  
   
-|SQL Server データ型|OLE DB データ型|メモリ レイアウト|ReplTest1|  
+|SQL Server データ型|OLE DB データ型|メモリ レイアウト|[値]|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE[](バイト配列\)|132 (oledb.h)|  
   
@@ -59,15 +59,15 @@ ms.locfileid: "52409609"
 |パラメーターの型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|"DBTYPE_UDT"|*n*|未定義|未定義|クリア|  
-|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|"DBTYPE_UDT"|~ 0|未定義|未定義|セット (set)|  
+|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|"DBTYPE_UDT"|~0|未定義|未定義|セット (set)|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  DBPARAMBINDINFO 構造体で提供される情報は、次の表に準拠する必要があります。  
   
-|パラメーターの型|*して*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|パラメーターの型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|無視|無視|パラメーターが DBTYPE_IUNKNOWN を使用して渡される場合に設定する必要があります。|  
-|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~ 0|無視|無視|無視|  
+|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|無視|無視|無視|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
  アプリケーションでは、**ISSCommandWithParameters** を使用して、「パラメーターのプロパティ」セクションで定義されているパラメーターのプロパティを取得または設定します。  
@@ -78,7 +78,7 @@ ms.locfileid: "52409609"
 |列の型|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
 |DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~ 0|NULL|NULL|オン|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|NULL|NULL|オン|DB_ALL_EXCEPT_LIKE|0|  
   
  UDT には次の列も定義されています。  
   
@@ -94,8 +94,8 @@ ms.locfileid: "52409609"
   
 |パラメーターの型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|~ 0|~ 0|Clear|  
-|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~ 0|~ 0|~ 0|オン|  
+|DBTYPE_UDT<br /><br /> (8,000 バイト以下の長さ)|DBTYPE_UDT|*n*|~0|~0|Clear|  
+|DBTYPE_UDT<br /><br /> (8,000 バイトを超える長さ)|DBTYPE_UDT|~0|~0|~0|オン|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>COLUMNS 行セット (スキーマ行セット)  
  UDT 型に対して返される列値を次に示します。  
@@ -133,7 +133,7 @@ ms.locfileid: "52409609"
   
 ### <a name="key-to-symbols"></a>記号の説明  
   
-|記号|意味|  
+|Symbol|意味|  
 |------------|-------------|  
 |1|**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合は、ステートメントの実行時にエラーが発生します。  発生するエラーは DB_E_ERRORSOCCURRED、パラメーターの状態は DBSTATUS_E_BADACCESSOR です。<br /><br /> UDT ではないサーバー パラメーターに UDT 型のパラメーターを指定すると、エラーになります。|  
 |2|データが 16 進数文字列からバイナリ データに変換されます。|  

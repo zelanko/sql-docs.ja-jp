@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769310"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>クライアントからサーバーへの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "47827030"
   
  Icommandwithparameters::setparameterinfo を呼び出さない場合場合と同様に DBTYPE_DBTIMESTAMP バインドは変換**datetime2**します。  
   
-|変換先 -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
+|To -><br /><br /> From|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
-|[DATE]|1、2|1、3、4|4、12|1、12|1、12|1、12|1、5、12|1、12|1、12|1、12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1、6|1、6|1、6|1、5、6|1、10|1、10|1<br /><br /> 日付|  
+|DATE|1、2|1、3、4|4、12|1、12|1、12|1、12|1、5、12|1、12|1、12|1、12<br /><br /> datetime2(0)|  
+|DBDATE|1|-|-|1、6|1、6|1、6|1、5、6|1、10|1、10|1<br /><br /> date|  
 |DBTIME|-|1|1|1、7|1、7|1、7|1、5、7|1、10|1、10|1<br /><br /> Time(0)|  
 |DBTIME2|-|1、3|1|1、7、10、14|1、7、10、15|1、7、10|1、5、7、10|1、10、11|1、10、11|1<br /><br /> Time(7)|  
 |DBTIMESTAMP|1、2|1、3、4|1、4、10|1、10、14|1、10、15|1、10|1、5、10|1、10、11|1、10、11|1、10<br /><br /> datetime2(7)|  
@@ -50,7 +50,7 @@ ms.locfileid: "47827030"
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
-|記号|意味|  
+|Symbol|意味|  
 |------------|-------------|  
 |-|変換はサポートされていません。 Iaccessor::createaccessor が呼び出されたときに、バインドが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION がで返されます*rgStatus*します。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
 |なし|該当なし。|  
@@ -74,9 +74,9 @@ ms.locfileid: "47827030"
 ||||  
 |-|-|-|  
 |型|長さ (文字数)|Scale|  
-|DBTIME2|8、10..18|0, 1..9|  
-|DBTIMESTAMP|19、21..29|0, 1..9|  
-|DBTIMESTAMPOFFSET|26、28..36|0, 1..9|  
+|DBTIME2|8、10..18|0、1..9|  
+|DBTIMESTAMP|19、21..29|0、1..9|  
+|DBTIMESTAMPOFFSET|26、28..36|0、1..9|  
   
 ## <a name="see-also"></a>参照  
  [バインドと変換 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  

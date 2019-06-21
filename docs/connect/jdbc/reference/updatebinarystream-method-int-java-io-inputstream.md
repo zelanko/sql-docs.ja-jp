@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1db3a975-c108-45d1-8c0d-14a094f391bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ee42a7b0941fb3d485aae708a709a4f741d9825
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c2e02e83b778dd6e7804c2f86bd4fea0539a8a5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798849"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream"></a>updateBinaryStream (int, java.io.InputStream) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public void updateBinaryStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateBinaryStream メソッドは、java.sql.ResultSet インターフェイスの updateBinaryStream メソッドによって指定されます。  
+ この updateBinaryStream メソッドは、java.sql.ResultSet インターフェイスの updateBinaryStream メソッドで規定されています。  
   
  このメソッドを使用して、**イメージ**、**テキスト**、および**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型、パフォーマンスに影響を与える可能性があります。  
   

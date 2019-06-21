@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48c4497dfa8974fe5fd59747d4b7023002d3f762
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58646419"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797081"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のリリース ノート
 
@@ -44,7 +44,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## <a name="whats-new-in-version-56"></a>バージョン 5.6 の新機能
 
-| [新しい項目] | 詳細 |
+| 新しい項目 | 詳細 |
 | :------- | :------ |
 | PHP 7.3 のサポート。 | &nbsp; |
 | PHP 7.0 のドロップのサポート。 | &nbsp; |
@@ -74,13 +74,13 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - バージョン 17 は、すべてのプラットフォームで既定ではようになりました
 - Ubuntu 17.10、Debian 9、および Suse Enterprise Linux 12 のサポート
 - Ubuntu 15.10 のドロップのサポート
-- Windows での CRUD 機能を持つ Always Encrypted をサポートします。 詳細については、次を参照してください[SQL Server 用 PHP ドライバーと共に Always Encrypted を使用。](../../connect/php/using-always-encrypted-php-drivers.md)
+- Windows での CRUD 機能を持つ Always Encrypted をサポートします。 詳しくは、「[SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する](../../connect/php/using-always-encrypted-php-drivers.md)」をご覧ください
   - Windows 証明書ストアのサポート
   - 以降では、Microsoft ODBC Driver 17 は常に暗号化がサポートのみ
 - Linux と macOS での非 UTF8 ロケールのサポート
   - Microsoft ODBC Driver 17 以降、Linux と macOS での非 UTF8 ロケールはのみサポートされています
 - Azure SQL Data Warehouse のサポート
-- Azure SQL マネージ インスタンス (延長プライベート プレビュー) のサポート
+- Azure SQL Managed Instance (延長されたプライベート プレビュー) のサポート
 
 ## <a name="whats-new-in-version-43"></a>バージョン 4.3 の新機能
 

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 155b9189-cb97-4264-b42c-bbda1c7d624f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cd9e5e7d0c51ac69ca63abf7f924587d0701316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0e00abb9a2590f0e3fe34608e89280df7a50fad7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771513"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799382"
 ---
 # <a name="updateshort-method-int-short"></a>updateShort (int, short) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public void updateShort(int index,
   
  *x*  
   
- A**短い**値。  
+ **short** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

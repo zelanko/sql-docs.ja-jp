@@ -30,13 +30,13 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391459"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796067"
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -217,7 +217,7 @@ ms.locfileid: "52391459"
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange インターフェイス  
  コンシューマーは、列の XML インスタンスを 2 とおりの方法で更新できます。 1 つ目の方法では、プロバイダーで作成されるストレージ オブジェクト **ISequentialStream** を使用します。 コンシューマーは **ISequentialStream::Write** メソッドを呼び出して、プロバイダーから返された XML インスタンスを直接更新できます。  
   
- 2 つ目の方法では、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを使用します。 この方法では、コンシューマーのバッファーに格納されている XML インスタンスを DBTYPE_BSTR 型、DBTYPE_WSTR 型、DBTYPE_VARIANT 型、DBTYPE_XML 型、または DBTYPE_IUNKNOWN 型のバインドで指定できます。  
+ 2 つ目の方法では、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを使用します。 この方法では、コンシューマーのバッファーにある XML インスタンスを DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、または DBTYPE_IUNKNOWN 型のバインドで指定できます。  
   
  DBTYPE_BSTR、DBTYPE_WSTR、または DBTYPE_VARIANT が指定されている場合、コンシューマーのバッファーに存在する XML インスタンスがプロバイダーによって適切な列に格納されます。  
   

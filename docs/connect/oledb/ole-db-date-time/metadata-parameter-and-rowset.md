@@ -12,13 +12,13 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2f25a79e503560ebf027b5bb002584b646c08783
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769246"
 ---
 # <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47834600"
   
 |パラメーターの型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|日付|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -56,10 +56,10 @@ ms.locfileid: "47834600"
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>ICommandWithParameters::SetParameterInfo と暗黙のパラメーターの型  
  DBPARAMBINDINFO 構造体で提供される情報は、次の表に準拠する必要があります。  
   
-|*して*<br /><br /> (プロバイダー固有)|*して*<br /><br /> (OLE DB 汎用)|*ulParamSize*|*bScale*|  
+|*pwszDataSourceType*<br /><br /> (プロバイダー固有)|*pwszDataSourceType*<br /><br /> (OLE DB 汎用)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|無視|  
-|日付|DBTYPE_DBDATE|6|無視|  
+|date|DBTYPE_DBDATE|6|無視|  
 ||DBTYPE_DBTIME|10|無視|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|無視|  
@@ -73,10 +73,10 @@ ms.locfileid: "47834600"
   
  Icommandwithparameters::setparameterinfo が呼び出されていない場合、プロバイダーは iaccessor::createaccessor で指定されたバインドの種類からサーバーの種類をとおり意味します。  
   
-|バインドの種類|*して*<br /><br /> (プロバイダー固有)|  
+|バインドの種類|*pwszDataSourceType*<br /><br /> (プロバイダー固有)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|日付|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -87,7 +87,7 @@ ms.locfileid: "47834600"
   
 |列の型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|日付|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -121,7 +121,7 @@ ms.locfileid: "47834600"
   
 |パラメーターの型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|日付|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  

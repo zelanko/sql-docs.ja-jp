@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803806"
 ---
 # <a name="rowset-properties-and-behaviors"></a>行セットのプロパティと動作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "47754830"
 |プロパティ ID|[説明]|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティで中止操作後の行セットの動作が決まります。<br /><br /> VARIANT_FALSE: 中止操作後は、行セットが、OLE DB Driver for SQL Server に無効にします。 行セット オブジェクトの機能は、ほぼ失われます。 サポートされるのは、**IUnknown** 操作、および未処理の行とアクセサー ハンドルの解放のみです。<br /><br /> Variant_true の場合は、OLE DB Driver for SQL Server では、有効な行セットを保持します。|  
-|DBPROP_ACCESSORDER|R/W: 読み取り/書き込み<br /><br /> 既定値 : DBPROPVAL_AO_RANDOM <br /><br /> 説明 : アクセスの順序です。 行セット内の列にアクセスする順序を指定します。<br /><br /> DBPROPVAL_AO_RANDOM: 任意の順序で列にアクセスできます。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: ストレージ オブジェクトとしてバインドされている列は、列序数で決まるシーケンシャルな順序でしかアクセスできません。<br /><br /> DBPROPVAL_AO_SEQUENTIAL: すべての列には、列序数で決まるシーケンシャルな順序でアクセスする必要があります。|  
+|DBPROP_ACCESSORDER|R/W: 読み取り/書き込み<br /><br /> 既定値 : DBPROPVAL_AO_RANDOM<br /><br /> 説明 : アクセスの順序です。 行セット内の列にアクセスする順序を指定します。<br /><br /> DBPROPVAL_AO_RANDOM: 任意の順序で列にアクセスできます。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS: ストレージ オブジェクトとしてバインドされている列は、列序数で決まるシーケンシャルな順序でしかアクセスできません。<br /><br /> DBPROPVAL_AO_SEQUENTIAL: すべての列には、列序数で決まるシーケンシャルな順序でアクセスする必要があります。|  
 |DBPROP_APPENDONLY|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: OLE DB Driver の SQL Server ストレージ オブジェクトのブロックが他の行セット メソッドを使用します。|  
 |DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : OLE DB Driver for SQL Server は、DBPROP_BOOKMARKS または DBPROP_LITERALBOOKMARKS が VARIANT_TRUE のとき、行セットの行 ID のブックマークをサポートします。<br /><br /> いずれかのプロパティを VARIANT_TRUE に設定しても、ブックマークによる行セットの位置指定が有効になるわけではありません。 ブックマークによる行セットの位置指定をサポートする行セットを作成するには、DBPROP_IRowsetLocate または DBPROP_IRowsetScroll を VARIANT_TRUE に設定します。<br /><br /> OLE DB Driver for SQL Server を使用して、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ブックマークを含む行セットをサポートするカーソル。 詳細については、「[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。<br /><br /> 注: これらのプロパティ設定と、OLE DB Driver for SQL Server のその他のカーソル定義プロパティ設定の間に一貫性がないと、エラーが発生します。 たとえば、DBPROP_OTHERINSERT が VARIANT_TRUE のときに、DBPROP_BOOKMARKS を VARIANT_TRUE に設定すると、コンシューマーが行セットを開く時点でエラーが発生します。|  
 |DBPROP_BOOKMARKSKIPPED|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : ブックマークが設定された行セットの位置指定または検索を実行する際に、コンシューマーが無効なブックマークを報告した場合、OLE DB Driver for SQL Server は DB_E_BADBOOKMARK を返します。|  
-|DBPROP_BOOKMARKTYPE|R/W: 読み取り専用<br /><br /> 既定値 : DBPROPVAL_BMK_NUMERIC <br /><br /> 説明: SQL Server の OLE DB Driver は、数値ブックマークのみを実装します。 OLE DB Driver for SQL Server のブックマークでは、32 ビット符号なし整数、DBTYPE_UI4 を入力します。|  
+|DBPROP_BOOKMARKTYPE|R/W: 読み取り専用<br /><br /> 既定値 : DBPROPVAL_BMK_NUMERIC<br /><br /> 説明: SQL Server の OLE DB Driver は、数値ブックマークのみを実装します。 OLE DB Driver for SQL Server のブックマークでは、32 ビット符号なし整数、DBTYPE_UI4 を入力します。|  
 |DBPROP_CACHEDEFERRED|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: OLE DB Driver for SQL Server は、旧バージョンとのフェッチと連番でない行セットでスクロールをサポートします。 OLE DB Driver for SQL Server は、DBPROP_CANFETCHBACKWARDS と DBPROP_CANSCROLLBACKWARDS のいずれかが VARIANT_TRUE のとき、カーソル対応の行セットを作成します。 詳細については、「[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。|  
 |DBPROP_CANHOLDROWS|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : 現在の行セット内の行に対して保留中の変更が存在する場合に、コンシューマーがその行セットに関してさらに多くの行を取得しようとすると、OLE DB Driver for SQL Server は、既定では DB_E_ROWSNOTRELEASED を返します。 この動作を変更できます。<br /><br /> DBPROP_CANHOLDROWS と DBPROP_IRowsetChange の両方が VARIANT_TRUE の場合は、ブックマークが設定された行セットになります。 この 2 つのプロパティが VARIANT_TRUE の場合、行セットでは **IRowsetLocate** インターフェイスを使用でき、DBPROP_BOOKMARKS と DBPROP_LITERALBOOKMARKS の両方が VARIANT_TRUE になります。<br /><br /> サポートされている OLE DB Driver for SQL Server 行セットを含むブックマーク[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]カーソル。|  
@@ -71,7 +71,7 @@ ms.locfileid: "47754830"
 |DBPROP_MAYWRITECOLUMN|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_MEMORYUSAGE|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_NOTIFICATIONGRANULARITY|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
-|DBPROP_NOTIFICATIONPHASES|R/W: 読み取り専用<br /><br /> 既定値: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> 説明: OLE DB Driver for SQL Server では、すべての通知フェーズをサポートしています。|  
+|DBPROP_NOTIFICATIONPHASES|R/W: 読み取り専用<br /><br /> 既定値: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> 説明: OLE DB Driver for SQL Server では、すべての通知フェーズをサポートしています。|  
 |DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|R/W: 読み取り専用<br /><br /> 既定値: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> 説明: 要求された行セットの変更を実行する前に、OLE DB Driver for SQL Server の通知フェーズをキャンセルできます。 OLE DB Driver for SQL Server では、実行が完了した後フェーズのキャンセルはサポートされません。|  
 |DBPROP_ORDEREDBOOKMARKS|SQL Server の OLE DB ドライバーによって、この行セット プロパティが実装されていません。 このプロパティ値の読み取りまたは書き込みを行うと、エラーが発生します。|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 変更の表示プロパティを設定すると、OLE DB Driver for SQL Server は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルを使用して行セットをサポートします。 詳細については、「[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。|  
@@ -82,7 +82,7 @@ ms.locfileid: "47754830"
 |DBPROP_RETURNPENDINGINSERTS|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: 行をフェッチするメソッドが呼び出されたときに、OLE DB Driver for SQL Server は、挿入が保留中になっている行を返しません。|  
 |DBPROP_ROWRESTRICT|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: OLE DB Driver for SQL Server の行セットは、行に基づくアクセス権をサポートしていません。 行セットで **IRowsetChange** インターフェイスが公開されている場合、**SetData** メソッドをコンシューマーから呼び出すことができます。|  
 |DBPROP_ROWSET_ASYNCH|R/W: 読み取り/書き込み<br /><br /> 既定値: 0<br /><br /> 説明 : 行セットの非同期処理を提供します。 このプロパティは、Rowset プロパティ グループおよび DBPROPSET_ROWSET プロパティ セットに含まれています。 型は VT_14 です。<br /><br /> SQL Server が OLE DB ドライバーによってサポートされるビットマスク内の値のみ**DBPROPVAL_ASYNCH_INITIALIZE**します。|  
-|DBPROP_ROWTHREADMODEL|R/W: 読み取り専用<br /><br /> 既定値 : DBPROPVAL_RT_FREETHREAD <br /><br /> 説明: OLE DB Driver for SQL Server では、1 つのコンシューマーに関する複数の実行スレッドから、プロバイダーのオブジェクトへアクセスできます。|  
+|DBPROP_ROWTHREADMODEL|R/W: 読み取り専用<br /><br /> 既定値 : DBPROPVAL_RT_FREETHREAD<br /><br /> 説明: OLE DB Driver for SQL Server では、1 つのコンシューマーに関する複数の実行スレッドから、プロバイダーのオブジェクトへアクセスできます。|  
 |DBPROP_SERVERCURSOR|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : このプロパティを設定すると、行セットのサポートに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルが使われます。 詳細については、「[行セットと SQL Server カーソル](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)」を参照してください。|  
 |DBPROP_SERVERDATAONINSERT|R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : 挿入時にサーバー データを使用するかどうか。<br /><br /> VARIANT_TRUE: 挿入要求がサーバーに転送される時点で、プロバイダーがデータをサーバーから取得して、ローカルの行キャッシュを更新します。<br /><br /> VARIANT_FALSE: プロバイダーは新しく行を挿入するためにサーバーの値を取得しません。|  
 |DBPROP_STRONGIDENTITY|R/W: 読み取り専用<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明 : 厳密な行 ID を使用するかどうか。 行セットに対して挿入が許可されていて (**IRowsetChange** または **IRowsetUpdate** が TRUE)、DBPROP_UPDATABILITY が InsertRows をサポートするように設定されている場合、DBPROP_STRONGIDENTITY の値は DBPROP_CHANGEINSERTEDROWS プロパティの値により決まります (DBPROP_CHANGEINSERTEDROWS プロパティの値が VARIANT_FALSE の場合は VARIANT_FALSE になります)。|  
@@ -94,15 +94,15 @@ ms.locfileid: "47754830"
   
 |プロパティ ID|[説明]|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|列 : ColumnID <br /><br /> R/W: 読み取り専用<br /><br /> 型: VT_U12 &#124; VT_ARRAY<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明 :  現在の [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT ステートメント内にある COMPUTE 句の結果列の序数位置 (1 から始まります) を表す整数値の配列。 これは、OLE DB Driver for SQL Server ODBC SQL_CA_SS_COLUMN_ID 属性に相当です。|  
+|SSPROP_COLUMN_ID|列 : ColumnID<br /><br /> R/W: 読み取り専用<br /><br /> 型: VT_U12 &#124; VT_ARRAY<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明 :  現在の [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT ステートメント内にある COMPUTE 句の結果列の序数位置 (1 から始まります) を表す整数値の配列。 これは、OLE DB Driver for SQL Server ODBC SQL_CA_SS_COLUMN_ID 属性に相当です。|  
 |SSPROP_DEFERPREPARE|列 : なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: VARIANT_TRUE: 準備実行では、**ICommand::Execute** が呼び出されるか、メタプロパティ操作が実行されるまで、コマンド操作が遅延されます。 プロパティが次の値に設定されている場合は、ステートメントの準備が行われます。<br /><br /> VARIANT_FALSE: **ICommandPrepare::Prepare** が実行される時点で、ステートメントが準備されます。|  
 |SSPROP_IRowsetFastLoad|列 : なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: このプロパティを VARIANT_TRUE に設定すると、**IOpenRowset::OpenRowset** から行セットを高速に読み込んで開くことができます。 **ICommandProperties::SetProperties** でこのプロパティを設定することはできません。|  
 |SSPROP_ISSAsynchStatus|列: なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: このプロパティを VARIANT_TRUE に設定すると、[ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) インターフェイスを使用した非同期操作を実行できます。|  
 |SSPROP_MAXBLOBLENGTH|列 : なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_I4<br /><br /> 既定値 : プロバイダーは、サーバーから返されるテキストのサイズを制限しません。このプロパティの値は、サーバーの最大値に設定されます。 たとえば、2147483647 に設定されます。<br /><br /> 説明: OLE DB Driver for SQL Server は SET TEXTSIZE ステートメントを実行して、SELECT ステートメントで返されるバイナリ ラージ オブジェクト (BLOB) データのサイズを制限します。|  
-|SSPROP_NOCOUNT_STATUS|列 : NoCount <br /><br /> R/W: 読み取り専用<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SET NOCOUNT ON/OFF の状態を表すブール値です。<br /><br /> VARIANT_TRUE: SET NOCOUNT ON の場合<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF の場合|  
+|SSPROP_NOCOUNT_STATUS|列 : NoCount<br /><br /> R/W: 読み取り専用<br /><br /> 型 : VT_BOOL<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SET NOCOUNT ON/OFF の状態を表すブール値です。<br /><br /> VARIANT_TRUE: SET NOCOUNT ON の場合<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF の場合|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|列 : なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_BSTR (許可される文字数 : 1 ～ 2,000 文字)<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知のメッセージ テキストです。 これはユーザーが定義するので、定義済みの書式はありません。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|列 : なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知オプションです。 これらは `name=value` 形式の文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。 クエリ通知オプションの構文を次に示します。<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 例 :<br /><br /> `service=mySSBService;local database=mydb`|  
-|SSPROP_QP_NOTIFICATION_TIMEOUT|列 : なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_UI4 <br /><br /> 既定値 : 432,000 秒 (5 日)<br /><br /> 最小値 : 1 秒<br /><br /> 最大値 : 2^31-1 秒<br /><br /> 説明 : クエリ通知をアクティブのままにしておく秒数です。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|列 : なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_BSTR<br /><br /> 既定値 : 空文字列<br /><br /> 説明 : クエリ通知オプションです。 これらは `name=value` 形式の文字列で指定されます。 ユーザーがサービスを作成して、キューから通知を読み取る必要があります。 クエリ通知オプションの構文を次に示します。<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 例:<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_TIMEOUT|列 : なし<br /><br /> R/W: 読み取り/書き込み<br /><br /> 型 : VT_UI4<br /><br /> 既定値 : 432,000 秒 (5 日)<br /><br /> 最小値 : 1 秒<br /><br /> 最大値 : 2^31-1 秒<br /><br /> 説明 : クエリ通知をアクティブのままにしておく秒数です。|  
   
 ## <a name="see-also"></a>参照  
  [行セット](../../oledb/ole-db-rowsets/rowsets.md)  

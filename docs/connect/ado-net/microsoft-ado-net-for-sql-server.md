@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770662"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![ダウンロード下方向丸](../../ssdt/media/download.png)[ADO.NET をダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET をダウンロードするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET は、.NET 言語の主要なデータ アクセス テクノロジです。 System.Data.SqlClient 名前空間を使って SQL Server にアクセスするか、他のサプライヤーのプロバイダーを使ってそのストアにアクセスします。 System.Data.Odbc や System.Data.Oledb を使って、.NET 言語から他のデータ アクセス テクノロジを活用するデータにアクセスします。 クライアント アプリケーション内のオフライン データ キャッシュが必要な場合は、System.Data.Dataset を使います。 Web サービスで活用できるローカル保存と XML 機能も提供します。  
   

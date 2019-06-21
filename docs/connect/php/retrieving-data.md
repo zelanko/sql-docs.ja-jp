@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797066"
 ---
 # <a name="retrieving-data"></a>データの取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "56676060"
 |[方向パラメーターを使用する](../../connect/php/using-directional-parameters.md)|ストアド プロシージャを呼び出す際に、方向パラメーターを使用する方法について説明します。|  
 |[カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|任意の順序でアクセスできる行を含む結果セットを作成する方法を示します。|  
 |[方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する方法について説明します。|  
-|[方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|PDO_SQLSRV ドライバーを使用してオブジェクトとしての日付と時刻型を取得する方法について説明します。|  
+|[方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|PDO_SQLSRV ドライバーを使用して日付/時刻型をオブジェクトとして取得する方法について説明します。|  
 |[SQLSRV ドライバーを使用した 10 進数値の文字列を書式設定](../../connect/php/formatting-decimals-sqlsrv-driver.md)|SQLSRV ドライバーを使用して、10 進数または money の値の書式設定する方法を示します。|  
 |[PDO_SQLSRV ドライバーを使用した 10 進数値の文字列を書式設定](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|PDO_SQLSRV ドライバーを使用して、10 進数または money の値の書式設定する方法を示します。|  
   

@@ -1,5 +1,5 @@
 ---
-title: getColumnCount メソッド (SQLServerResultSetMetaData) |Microsoft Docs
+title: getColumnCount メソッド (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a1fc3f50-3635-4fc5-b570-94d2c5a1873c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5eec79d83a1e9fbc2888fb5a187b41ddeda9b3d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 81ad2209ae8d155274df62ac9dd1c88c761359f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66763508"
 ---
 # <a name="getcolumncount-method-sqlserverresultsetmetadata"></a>getColumnCount メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public int getColumnCount()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getColumnCount メソッドは、java.sql.ResultSetMetaData インターフェイスで getColumnCount メソッドによって指定されます。  
+ この getColumnCount メソッドは、java.sql.ResultSetMetaData インターフェイスの getColumnCount メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

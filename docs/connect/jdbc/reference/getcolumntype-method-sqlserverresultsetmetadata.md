@@ -1,5 +1,5 @@
 ---
-title: getColumnType メソッド (SQLServerResultSetMetaData) |Microsoft Docs
+title: getColumnType メソッド (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 81815a41-9265-4574-a4d8-f6341a68d9fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd8ab860f466361822ca3c8156eca8e3aee0a4aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 05cbfe9914dd43718a41a3ad543cc02948a5c5e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66763326"
 ---
 # <a name="getcolumntype-method-sqlserverresultsetmetadata"></a>getColumnType メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public int getColumnType(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getColumnType メソッドは、java.sql.ResultSetMetaData インターフェイスで getColumnType メソッドによって指定されます。  
+ この getColumnType メソッドは、java.sql.ResultSetMetaData インターフェイスの getColumnType メソッドで規定されています。  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 では、DATA_TYPE 列の動作が変更されています。 詳細については、[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) を参照してください。  
   

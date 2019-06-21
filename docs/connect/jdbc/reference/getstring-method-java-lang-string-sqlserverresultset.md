@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a153811c723875da51e747a4d9cff24a57ace75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 13dd4f2bd18ef3bde6b920be0e5e562dc9aef956
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66773810"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>getString (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.lang.String getString(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getString メソッドは、java.sql.ResultSet インターフェイスの getString メソッドによって指定されます。  
+ この getString メソッドは、java.sql.ResultSet インターフェイスの getString メソッドで規定されています。  
   
  SQL Server 内のすべての列を、文字列として返すことができます。 つまり、数値ベースと文字ベースのすべての型の **String** 表現、および binary、varbinary、varbinary(max)、image、timestamp、uniqueidentifier などのバイナリ列の 16 進形式の文字列表現を返すことができます。  
   

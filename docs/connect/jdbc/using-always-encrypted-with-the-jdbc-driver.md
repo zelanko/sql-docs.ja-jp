@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790279"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52510719"
 Always Encrypted を使用すると、クライアントは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Microsoft JDBC Driver 6.0 for SQL Server 以降など、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この動作を実行します。 ドライバーはクエリを自動的に決定します。 パラメーターは、Always Encrypted データベース列に対応と SQL Server または Azure SQL Database にそれらを送信する前に、これらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、次を参照してください。 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)と[API リファレンスを常に、JDBC ドライバーは暗号化](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)します。
 
 ## <a name="prerequisites"></a>Prerequisites
-- 6.0 (またはそれ以降) ことを確認の Microsoft JDBC Driver for SQL Server が開発用コンピューターにインストールされています。 
+- 6\.0 (またはそれ以降) ことを確認の Microsoft JDBC Driver for SQL Server が開発用コンピューターにインストールされています。 
 - Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files (JCE 管轄ポリシーファイル (無制限強度)) をダウンロードしてインストールします。  インストール手順、および考えられるエクスポート/インポート問題に関する詳細について、zip ファイルに含まれる Readme を必ず読んでください。  
 
     - mssql-jdbc-X.X.X.jre7.jar または sqljdbc41.jar を使用している場合は、[Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 7 Download](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html) からポリシー ファイルをダウンロードできます。
@@ -46,8 +46,8 @@ Microsoft JDBC Driver for SQL Server、次の組み込み列マスター キー 
 | クラス                                                 | [説明]                                        | プロバイダー (検索) 名  | 事前登録されているか。 |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
 | **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Azure Key Vault のキーストアのプロバイダー。 | AZURE_KEY_VAULT         | いいえ                 |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 証明書ストアのプロバイダー。      | MSSQL_CERTIFICATE_STORE | [ユーザー アカウント制御]                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java キーストアのプロバイダー                   | MSSQL_JAVA_KEYSTORE     | [ユーザー アカウント制御]                |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Windows 証明書ストアのプロバイダー。      | MSSQL_CERTIFICATE_STORE | はい                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Java キーストアのプロバイダー                   | MSSQL_JAVA_KEYSTORE     | はい                |
 
 事前登録されたキーストア プロバイダーの場合は、これらのプロバイダーを使用し、次の項目に注意してくださいアプリケーションのコード変更を加える必要はありません。
 
@@ -99,7 +99,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  Azure Key Vault のキーストア プロバイダーを使用する場合、アプリケーションに含める必要がありますが (GitHub) からのこれらのライブラリに依存している JDBC ドライバーの Azure Key Vault 実装。
 >
->  [azure sdk for java](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
 >  [azure active directory-ライブラリ-用の java ライブラリ](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
@@ -360,14 +360,14 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-Always Encrypted は、個々のクエリに対しても有効にすることができます。 詳細については、次を参照してください。 [Always Encrypted のパフォーマンスに与える影響を制御する](#controlling-the-performance-impact-of-always-encrypted)します。 暗号化または暗号化解除を正常に行うには、Always Encrypted を有効にするだけでは不十分です。 次のことを確認する必要もあります。
+Always Encrypted は、個々のクエリに対しても有効にすることができます。 詳細については、「[Always Encrypted のパフォーマンスの影響を制御する](#controlling-the-performance-impact-of-always-encrypted)」をご覧ください。 暗号化または暗号化解除を正常に行うには、Always Encrypted を有効にするだけでは不十分です。 次のことを確認する必要もあります。
 - アプリケーションが、データベース内の Always Encrypted キーに関するメタデータへのアクセスに必要な *VIEW ANY COLUMN MASTER KEY DEFINITION* および *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* データベース権限を持っている。 詳細については、[「Always Encrypted (データベース エンジン)」のページで権限に関するセクション](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)を参照してください。
 - アプリケーションが、列暗号化キーを保護する列マスター キーにアクセスでき、クエリされたデータベース列を暗号化する。 Java キー ストア プロバイダーを使用するには、接続文字列に追加の資格情報を提供する必要があります。 詳細については、次を参照してください。[を使用する Java キー ストア プロバイダー](#using-java-key-store-provider)します。
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time の値をサーバーに送信する方法の構成
 java.sql.Time 値のサーバーへの送信方法を構成するために、**sendTimeAsDatetime** 接続プロパティを使用します。 時刻の値は false に設定すると、SQL Server 時の型として送信されます。 値が datetime 型として送信された時刻を true に設定するとします。 Time 列が暗号化されている場合、**で sendTimeAsDatetime**暗号化された列は、時間から datetime への変換をサポートしないプロパティが false に設定する必要があります。 このプロパティは、暗号化された列を使用する場合は、false に設定する必要がありますので、既定値は true にも注意してください。 それ以外の場合、ドライバーは、例外をスローします。 プログラムでこのプロパティの値を構成する 2 つのメソッドを SQLServerConnection クラスは、ドライバーのバージョン 6.0 以降、あります。
  
-* public void setSendTimeAsDatetime (ブール sendTimeAsDateTimeValue)
+* public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
 
 このプロパティの詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](configuring-how-java-sql-time-values-are-sent-to-the-server.md)します。
@@ -384,8 +384,8 @@ Always Encrypted が有効でない場合、暗号化された列をターゲッ
 
 | クエリの特性                                                                           | Always Encrypted が有効になっており、アプリケーションがキーとキー メタデータにアクセスできる                                                                                                                        | Always Encrypted が有効になっており、アプリケーションがキーまたはキー メタデータにアクセスできない | Always Encrypted が無効になっている                                                                                        |
 | :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
-| 暗号化された列をターゲットとするパラメーターを含むクエリ。                                           | パラメーター値は透過的に暗号化されます。                                                                                                                                                           | [エラー]                                                                             | [エラー]                                                                                                               |
-| 暗号化された列をターゲットとするパラメーターを含まず、暗号化された列からデータを取得するクエリ。 | 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションは、暗号化された列用に構成された SQL Server 型に対応する、JDBC データ型のプレーンテキスト値を受け取ります。 | [エラー]                                                                             | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列 (byte[]) として受け取ります。 |
+| 暗号化された列をターゲットとするパラメーターを含むクエリ。                                           | パラメーター値は透過的に暗号化されます。                                                                                                                                                           | Error                                                                             | Error                                                                                                               |
+| 暗号化された列をターゲットとするパラメーターを含まず、暗号化された列からデータを取得するクエリ。 | 暗号化された列の結果は透過的に暗号化解除されます。 アプリケーションは、暗号化された列用に構成された SQL Server 型に対応する、JDBC データ型のプレーンテキスト値を受け取ります。 | Error                                                                             | 暗号化された列の結果は暗号化解除されません。 アプリケーションは、暗号化された値をバイト配列 (byte[]) として受け取ります。 |
 
 ### <a name="inserting-and-retrieving-encrypted-data-examples"></a>挿入して、暗号化されたデータの例を取得します。
 

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbb50cd617ba1ce85851c08764f3f80cd90cbe67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: edebe0f57ed09acbf9faa338355314e0bc6199d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774429"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

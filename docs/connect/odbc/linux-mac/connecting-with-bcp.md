@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789864"
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,7 +47,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>利用可能なオプション
 現在のリリースでは、次の構文およびオプションを使用できます。  
 
-[_データベース_**.**]_スキーマ_**.**_テーブル_**で**_データ\_ファイル_ | **アウト**_データ\_ファイル_
+[_データベース_ **.** ]_スキーマ_ **.** _テーブル_**で**_データ\_ファイル_ | **アウト**_データ\_ファイル_
 
 - -a *packet_size*  
 サーバーとの間で送信されるネットワーク パケットごとのバイト数を指定します。  
@@ -79,7 +79,7 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
 一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。  
   
 - -l  
-ログインのタイムアウトを指定します。 - l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。
+ログインのタイムアウトを指定します。 \- l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。
   
 - -L *last_row*  
 テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。  

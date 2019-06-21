@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499982"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint リストの接続の種類 (SSRS)
@@ -71,7 +71,7 @@ Microsoft SharePoint リストのデータをレポートに含めるには、�
   
  Microsoft BI スタックにおける要求認証サポートの詳細については、「 [Microsoft BI スタックにおける要求認証の使用](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)」を参照してください。  
   
- 詳細については、「[データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」、「[レポート ビルダーでの資格情報の指定](specify-credential-and-connection-information-for-report-data-sources.md)」、および「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
+ 詳細については、「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」、「[レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」、および「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」をご覧ください。  
   
 ##  <a name="Query"></a> クエリ  
  クエリを設計するには、データ ソースから新規データセットを作成し、関連するクエリ デザイナーを開きます。 詳細については、「 [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)」を参照してください。  

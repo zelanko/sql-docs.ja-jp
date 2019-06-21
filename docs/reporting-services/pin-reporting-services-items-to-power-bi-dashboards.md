@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500028"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Power BI のダッシュボードへの Reporting Services のページ分割されたレポート アイテムのピン留め
@@ -40,7 +40,7 @@ ms.locfileid: "66500028"
   
 -   ピン留めしたアイテムを更新する場合は、保存された資格情報を使用するようにレポートを構成する必要があります。  アイテムをピン留めすると、ダッシュボードでのアイテムのデータ更新を管理するために、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションが自動的に作成されます。  レポートで保存された資格情報を使用していない場合、サブスクリプションの実行時に、 **[個人用サブスクリプション]** ページに次のようなエラー メッセージが表示されます。  
   
-    PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報か。"
+    "PowerBI 配信エラー: ダッシュ ボード: IT 支払い分析のサンプル、ビジュアル: Chart2、エラー: 現在のアクションを完了できません。 ユーザー データ ソースの資格情報が、このレポートまたは共有データセットを実行するための要件を満たしていません。 ユーザー データ ソースの資格情報か。"
  
     資格情報を保存する方法の詳細については、「 [Reporting Services データ ソースに資格情報を保存する](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)」の「レポート固有のデータ ソース用の保存された資格情報を構成する (ネイティブ モード)」を参照してください。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66500028"
   
 ##  <a name="bkmk-troubleshoot"></a> 問題のトラブルシューティング  
   
--   **レポート ビューアー ツール バーに [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ボタンがない:**  これは、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] と統合されていないことを示しています。 詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。  
+-   **レポート ビューアー ツール バーに [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ボタンがない:**  このメッセージは、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] と統合されていないことを示しています。 詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。  
   
 - **ピン留めできない**: アイテムをピン留めしようとすると、次のエラー メッセージが表示されます。「 [ピン留めできるアイテム](#bkmk_supported_items)」を参照してください。  
   

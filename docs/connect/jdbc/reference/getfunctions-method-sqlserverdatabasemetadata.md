@@ -1,5 +1,5 @@
 ---
-title: getFunctions メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getFunctions メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6032cd14cf93d75714d46bfc825d53ecc68d39b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe24a26956a295ccfd00f8d782611057cf019308
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774619"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public ResultSet getFunctions(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getFunctions メソッドは、java.sql.DatabaseMetaData インターフェイスで getFunctions メソッドによって指定されます。  
+ この getFunctions メソッドは、java.sql.DatabaseMetaData インターフェイスの getFunctions メソッドで規定されています。  
   
  このメソッドは、指定されたスキーマ名および関数名に一致するシステム関数およびユーザー関数だけを返します。  
   

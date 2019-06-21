@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec09d5aa1862be0cd16ea33a90755532fd37fbfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 89b4d7bedb2572c0396c3de80f000fdccdd1a2cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803009"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47605720"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) この Statement オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの文字およびバイナリの列値に対して返される最大バイト数を取得します。|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) この Statement オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトが含むことのできる最大行数を取得します。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|[SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) オブジェクトを取得します。このオブジェクトには、この Statement オブジェクトの実行時に返される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの列に関する情報が含まれます。|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。このステートメントのオブジェクトの次の結果に移動します。|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) このステートメントのオブジェクトの次の結果に移動します。|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|この Statement オブジェクトのパラメーターの数、型、およびプロパティを取得します。|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの応答バッファリング モードを取得します。|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] がこの Statement オブジェクトの実行を待つ秒数を取得します。|  
@@ -79,7 +79,7 @@ ms.locfileid: "47605720"
 |[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された byte 配列に設定します。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された Reader オブジェクトに設定します。|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、渡された Clob オブジェクトに設定します。|  
-|[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) SQL カーソル名を、指定された文字列に設定します。この文字列は、後に続く実行 (execute) メソッドによって使用されます。|  
+|[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) SQL カーソル名を、指定された文字列に設定します。これは、後に続く実行 (execute) メソッドによって使用されます。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された日付の値に設定します。|  
 |[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|指定した列の値を設定、 [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値。|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された **double** の値に設定します。|  

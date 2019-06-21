@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14f32e68272dfc6dd8f26c5020d1e18a5e4e5d8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b95a22911f1b7e49f6310e9c06a7ea4ef4a899fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784463"
 ---
 # <a name="getnclob-method-javalangstring"></a>getNClob (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
  パラメーターの名前を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- ANClobobject します。  
+ NClob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

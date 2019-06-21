@@ -11,11 +11,11 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180274"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server のサポート マトリックス
 
@@ -31,23 +31,23 @@ ms.locfileid: "58645504"
 
 次の Microsoft PHP Driver は、表示されているサポートの終了日までサポートされます。
 
-|ドライバー名|ドライバー パッケージのバージョン|メイン ストリーム サポートの終了|
+|ドライバー名|ドライバー パッケージのバージョン|メインストリーム サポートの終了|
 |-|:-:|-|
 |SQL Server 用 Microsoft PHP ドライバー 5.6|5.6|2024 年 2 月 21日|
-|SQL Server 用 Microsoft PHP ドライバー 5.3|5.3|2023 年 7 月 20日|
-|SQL Server 用 Microsoft PHP ドライバー 5.2|5.2|2023 年 2 月 9日|
+|SQL Server 用 Microsoft PHP ドライバー 5.3|5.3|2023 年 7 月 20 日|
+|SQL Server 用 Microsoft PHP ドライバー 5.2|5.2|2023 年 2 月 9 日|
 |SQL Server 用 Microsoft PHP ドライバー 4.3|4.3|2022 年 7 月 6 日|
 |SQL Server 用 Microsoft PHP ドライバー 4.0|4.0|2021 年 7 月 11 日|
-|Microsoft PHP Drivers 3.2 for SQL Server|3.2|2020 年 3 月 9日に|
-|Microsoft PHP Drivers 3.1 for SQL Server|3.1|2019 年 12 月 12日|
+|SQL Server 用 Microsoft PHP ドライバー 3.2|3.2|2020 年 3 月 9日に|
+|SQL Server 用 Microsoft PHP ドライバー 3.1|3.1|2019 年 12 月 12日|
 | &nbsp; | &nbsp; | &nbsp; |
 
 次の Microsoft PHP ドライバーはサポートされなくなりました。
 
-|ドライバー名|ドライバー パッケージのバージョン|メイン ストリーム サポートの終了|
+|ドライバー名|ドライバー パッケージのバージョン|メインストリーム サポートの終了|
 |-|:-:|-|
-|Microsoft PHP Drivers 3.0 for SQL Server|3.0|2017 年 3 月 6 日|
-|Microsoft PHP Drivers 2.0 for SQL Server|2.0|2015 年 8 月 10 日|
+|SQL Server 用 Microsoft PHP ドライバー 3.0|3.0|2017 年 3 月 6 日|
+|SQL Server 用 Microsoft PHP ドライバー 2.0|2.0|2015 年 8 月 10 日|
 |SQL Server 用 Microsoft PHP ドライバー 1.0|1.0|2014 年 4 月 28 日|
 | &nbsp; | &nbsp; | &nbsp; |
 
@@ -56,14 +56,14 @@ ms.locfileid: "58645504"
 
 |SQL Server ドライバーのバージョンの PHP&#8594;<br />&#8595; SQL Server のバージョン|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Managed Instance<br/> (延長プライベート プレビュー)|Y|Y|Y|Y| | | | | |
+|Azure SQL Managed Instance<br/> (延長されたプライベート プレビュー)|Y|Y|Y|Y| | | | | |
 |Azure SQL Data Warehouse|Y|Y|Y|Y| | | | | |
 |SQL Server 2017         |Y|Y|Y|Y| | | | | |
 |SQL Server 2016         |Y|Y|Y|Y|Y| | | | |
 |SQL Server 2014         |Y|Y|Y|Y|Y|Y|Y| | |
 |SQL Server 2012         |Y|Y|Y|Y|Y|Y|Y|Y| |
 |SQL Server 2008 R2      |Y|Y|Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008:         | | | | |Y|Y|Y|Y|Y|
+|SQL Server 2008         | | | | |Y|Y|Y|Y|Y|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="php-version-support"></a>PHP バージョンのサポート
@@ -83,7 +83,7 @@ Microsoft PHP ドライバーの一覧表示されているバージョンでは
 |5.2|                |                |                |       |       |        |        |        |5.2.4<br />5.2.13|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-1. 7.2.1 のバージョン、Windows でバージョン 7.2.0 中に後でサポートされ、後で、Linux と macOS でサポートされます。
+1. 7\.2.1 のバージョン、Windows でバージョン 7.2.0 中に後でサポートされ、後で、Linux と macOS でサポートされます。
 
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム
 

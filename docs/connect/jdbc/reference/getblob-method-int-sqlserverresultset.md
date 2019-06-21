@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2447a116ba7cafaa2299aa46c7a55e10a4114fd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ee489b856dc75bc2fbd09b843de77f42cefbef0b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799743"
 ---
 # <a name="getblob-method-int-sqlserverresultset"></a>getBlob (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,10 +47,10 @@ public java.sql.Blob getBlob(int i)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBlob メソッドは、java.sql.ResultSet インターフェイスの getBlob メソッドによって指定されます。  
+ この getBlob メソッドは、java.sql.ResultSet インターフェイスの getBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getBlob メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+ [getBlob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

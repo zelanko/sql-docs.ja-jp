@@ -1,5 +1,5 @@
 ---
-title: getDate メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: getDate メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a4a969e7-e72c-4ac8-8b8c-ae2281e4e705
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fdee4bfa9f5cc0e8a35bcac3214bab3415541b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b20b5b8d8577ce768f35e99f4422ac7f0005ba34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66777185"
 ---
 # <a name="getdate-method-sqlservercallablestatement"></a>getDate メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06c132bf4300f6ee696c18604c973191d8d86a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd66bf9996ce01435c8243a13c86c65d11072fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66791878"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +41,13 @@ public short getShort(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- A**短い**値。  
+ **short** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getShort メソッドは、java.sql.ResultSet インターフェイスの getShort メソッドによって指定されます。  
+ この getShort メソッドは、java.sql.ResultSet インターフェイスの getShort メソッドで規定されています。  
   
  このメソッドは、smallint、tinyint、bit などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   

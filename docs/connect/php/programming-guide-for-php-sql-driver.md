@@ -1,5 +1,5 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server のプログラミング ガイド |Microsoft Docs
+title: SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 10269896b8c145293d5733a3fb34b2ac645a5e43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781003"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47776500"
 ## <a name="see-also"></a>参照  
 [Microsoft SQL Server 用 Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)
 
-[概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)
 

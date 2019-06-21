@@ -1,5 +1,5 @@
 ---
-title: setLong メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: setLong メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d0c1383ddbd9f86089095e90a218f991a4591b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7fad26cdb5ad139ba247cb474f24e71b75b18a26
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794240"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>setLong メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setLong(int n,
   
  *x*  
   
- **長い**値。  
+ **long** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

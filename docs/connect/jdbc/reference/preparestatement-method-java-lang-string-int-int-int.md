@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b3979628c2676b6a3780536a217885e8547d42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7c01717f734a4bbf2d9df35b8f2c3ce2e40baa19
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762329"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement (java.lang.String, int, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  SQL ステートメントを含む**文字列**です。  
   
- *%n タイプ*  
+ *nType*  
   
  結果セットの種類を示す **int** です。  
   

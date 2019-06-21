@@ -1,5 +1,5 @@
 ---
-title: getNClob メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: getNClob メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9a86daeb-03b2-45ef-82d3-495f33fb0113
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9d4c8eaec57a46287ffcb4bf39de2a8364c6c3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 89680823c75d680ce3ef7e4d967e91ad0d171ee8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762834"
 ---
 # <a name="getnclob-method-sqlservercallablestatement"></a>getNClob メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

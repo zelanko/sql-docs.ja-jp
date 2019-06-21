@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 91e498a1db30df380d7f2009f0fe34a9b4541467
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778031"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server での接続文字列キーワードの使用
@@ -106,7 +106,7 @@ ms.locfileid: "66778031"
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|ときに、OLE DB Driver for SQL Server ログインの検証に Windows 認証モードを使用するを"yes"のように指示します。 それ以外の場合は、OLE DB Driver for SQL Server に対して、ログイン検証で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザー名とパスワードを使用するように指示し、UID キーワードと PWD キーワードの指定が必要になります。|  
 |**TrustServerCertificate**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 "yes" と "no" を値として受け取ります。 既定値は "no" です。これはサーバー証明書が検証されることを示します。|  
 |**UID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン名。|  
-|**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] は  以上に接続する場合のメタデータの取得方法を制御します。 有効値は、"yes" および "no" です。 既定値は "no" です。<br /><br />既定で、OLE DB Driver for SQL Server を使用して[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)と[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)ストアド プロシージャのメタデータを取得します。 これらのストアド プロシージャにいくつかの制限があります (例: が失敗した一時テーブル上で動作している場合)。 設定**UseFMTONLY**を"yes"を使用して、ドライバーに指示[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)メタデータの取得の代わりにします。|  
+|**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] およびそれ以降に接続する場合のメタデータの取得方法を制御します。 有効値は、"yes" および "no" です。 既定値は "no" です。<br /><br />既定で、OLE DB Driver for SQL Server を使用して[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)と[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)ストアド プロシージャのメタデータを取得します。 これらのストアド プロシージャにいくつかの制限があります (例: が失敗した一時テーブル上で動作している場合)。 設定**UseFMTONLY**を"yes"を使用して、ドライバーに指示[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)メタデータの取得の代わりにします。|  
 |**UseProcForPrepare**|SSPROP_INIT_USEPROCFORPREP|このキーワードは非推奨し、SQL Server OLE DB ドライバーによってその設定は無視されます。|  
 |**WSID**|SSPROP_INIT_WSID|ワークステーションの識別子です。|  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66778031"
 |**Server SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server の既定のプロバイダーで生成された SPN を使用するとします。|  
 |**Trust Server Certificate**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 "true" と "false" を値として受け取ります。 既定値は "false" です。これはサーバー証明書が検証されることを示します。|  
 |**Use Encryption for Data**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 指定できる値は "true" と "false" です。 既定値は "false" です。|  
-|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] は  以上に接続する場合のメタデータの取得方法を制御します。 指定できる値は "true" と "false" です。 既定値は "false" です。<br /><br />既定で、OLE DB Driver for SQL Server を使用して[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)と[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)ストアド プロシージャのメタデータを取得します。 これらのストアド プロシージャにいくつかの制限があります (例: が失敗した一時テーブル上で動作している場合)。 設定**FMTONLY の使用**"true"を使用して、ドライバーに指示する[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)メタデータの取得の代わりにします。|  
+|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] およびそれ以降に接続する場合のメタデータの取得方法を制御します。 指定できる値は "true" と "false" です。 既定値は "false" です。<br /><br />既定で、OLE DB Driver for SQL Server を使用して[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)と[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)ストアド プロシージャのメタデータを取得します。 これらのストアド プロシージャにいくつかの制限があります (例: が失敗した一時テーブル上で動作している場合)。 設定**FMTONLY の使用**"true"を使用して、ドライバーに指示する[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)メタデータの取得の代わりにします。|  
 |**[ユーザー ID]**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン名。|  
 |**Workstation ID**|SSPROP_INIT_WSID|ワークステーションの識別子です。|  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66778031"
 |**Server SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列は、OLE DB Driver for SQL Server の既定のプロバイダーで生成された SPN を使用するとします。|  
 |**Trust Server Certificate**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 "true" と "false" を値として受け取ります。 既定値は "false" です。これはサーバー証明書が検証されることを示します。|  
 |**Use Encryption for Data**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 指定できる値は "true" と "false" です。 既定値は "false" です。|  
-|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] は  以上に接続する場合のメタデータの取得方法を制御します。 指定できる値は "true" と "false" です。 既定値は "false" です。<br /><br />既定で、OLE DB Driver for SQL Server を使用して[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)と[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)ストアド プロシージャのメタデータを取得します。 これらのストアド プロシージャにいくつかの制限があります (例: が失敗した一時テーブル上で動作している場合)。 設定**FMTONLY の使用**"true"を使用して、ドライバーに指示する[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)メタデータの取得の代わりにします。|  
+|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] およびそれ以降に接続する場合のメタデータの取得方法を制御します。 指定できる値は "true" と "false" です。 既定値は "false" です。<br /><br />既定で、OLE DB Driver for SQL Server を使用して[sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)と[sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)ストアド プロシージャのメタデータを取得します。 これらのストアド プロシージャにいくつかの制限があります (例: が失敗した一時テーブル上で動作している場合)。 設定**FMTONLY の使用**"true"を使用して、ドライバーに指示する[SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md)メタデータの取得の代わりにします。|  
 |**[ユーザー ID]**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン名。|  
 |**Workstation ID**|SSPROP_INIT_WSID|ワークステーションの識別子です。|  
   

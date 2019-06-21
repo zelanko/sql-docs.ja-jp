@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.date: 03/14/2017
-ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 06/06/2019
+ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826908"
 ---
 # <a name="configure-report-builder-access"></a>レポート ビルダーへのアクセスの構成
 レポート ビルダーは、ネイティブ モードまたは SharePoint 統合モード用に構成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに付属しているカスタム レポート ツールです。  
@@ -28,29 +28,29 @@ ms.locfileid: "65580374"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-レポート ビルダーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](~/sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
+レポート ビルダーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
 
-クライアント コンピューターには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 がインストールされている必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
+クライアント コンピューターが必要、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6、または 4.6.1 がそれぞれ SSRS 2016 および 2017 をインストールします。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 以降を使用する必要があります。  
+使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)]Internet Explorer 11 以降、または他の最新ブラウザー。  
 
 レポート ビルダーは、常に完全信頼モードで実行されます。部分信頼モードで実行されるように構成することはできません。 以前のリリースでは、レポート ビルダーを部分信頼モードで実行できましたが、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンではこのオプションはサポートされていません。  
 
 ## <a name="enabling-and-disabling-report-builder"></a>レポート ビルダーの有効化と無効化  
 
-レポート ビルダーは既定で有効になっています。 レポート サーバー管理者は、レポート サーバー システム プロパティ **EnableReportDesignClientDownload** を **false**に設定することによって、レポート ビルダー機能を無効にすることができます。 このプロパティを設定すると、そのレポート サーバーでレポート ビルダーのダウンロードが無効になります。  
+レポート ビルダーは既定で有効になっています。 レポート サーバー管理者は、レポート サーバーのシステム プロパティ **ShowDownloadMenu** を **false** に設定することで、レポート ビルダー機能を無効にすることができます。 このプロパティを設定すると、レポート ビルダーでは、Mobile Report Publisher が無効になり、そのレポート サーバーの Power BI Mobile をダウンロードします。  
 
-レポート サーバーのシステム プロパティを設定するには、Management Studio またはスクリプトを使用します。  
+ レポート サーバーのシステム プロパティを設定するには、Management Studio またはスクリプトを使用します。   
 
-- Management Studio を使用するには、レポート サーバーに接続し、[詳細なサーバー プロパティ] ページを使用して **EnableReportDesignClientDownload** を **false**に設定します。 このページを開く方法の詳細については、「[レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)」を参照してください。  
+ - Management Studio を使用するには、レポート サーバーに接続し、[詳細なサーバー プロパティ] ページを使用して **ShowDownloadMenu** を **false** に設定します。 このページを開く方法の詳細については、「[レポート サーバーのプロパティを設定する &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)」を参照してください。      
 
-- レポート サーバーのプロパティを設定するサンプル スクリプトを表示する方法は、「 [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)」(配置タスクおよび管理タスクのスクリプト作成) を参照してください。  
+ - レポート サーバーのプロパティを設定するサンプル スクリプトを表示する方法は、「 [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)」(配置タスクおよび管理タスクのスクリプト作成) を参照してください。  
 
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーにおけるレポート ビルダーへのアクセスを許可するロールの割り当て  
 
 ネイティブ モードのレポート サーバーでは、レポート ビルダーを使用するためのタスクを含むユーザー ロールの割り当てを作成します。 アイテムおよびサイト レベルでのロールの定義およびロールの割り当てを作成または変更できるのは、コンテンツ マネージャーとシステム管理者だけです。  
 
-次に示す手順では、定義済みロールを使用しているものとします。 ロールの定義を変更した場合や SQL Server 2000 からアップグレードした場合は、ロールに必要なタスクが含まれていることを確認してください。 ロール割り当ての作成方法の詳細については、「[レポート サーバーへのデータベース アクセスの許可 &#40;レポート マネージャー&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)」を参照してください。  
+次に示す手順では、定義済みロールを使用しているものとします。 ロールの定義を変更した場合や SQL Server 2000 からアップグレードした場合は、ロールに必要なタスクが含まれていることを確認してください。 ロール割り当ての作成について詳しくは、「[レポート サーバーへのユーザー アクセスを許可する](../../reporting-services/security/grant-user-access-to-a-report-server.md)」をご覧ください。
 
 ロールの割り当てを作成すると、次の操作を行う権限がユーザーに許可されます。  
 
@@ -100,7 +100,7 @@ ms.locfileid: "65580374"
 
     3. [名前] に「 **レポート ビルダー**」と入力します。  
 
-    4. [説明] に、レポート マネージャーのユーザーがロールの目的を把握できるようにするためのロールの説明を入力します。  
+    4. [説明] に、Web ポータルのユーザーがロールの目的を把握できるようにするためのロールの説明を入力します。  
 
     5. **[レポートの使用]** 、 **[レポートの表示]** 、 **[モデルの表示]** 、 **[リソースの表示]** 、 **[フォルダーの表示]** 、 **[個別のサブスクリプションを管理]** の各タスクを追加します。  
 
@@ -108,9 +108,10 @@ ms.locfileid: "65580374"
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>レポート ビルダーへのアクセスを許可するロールの割り当てを作成するには  
 
-1. レポート マネージャーを起動します。  
+1. Web ポータルを起動します。  
 
-2. **[サイトの設定]** をクリックします。  
+2. 上にある歯車アイコンをクリックし、web ポータルのホーム ページの右**サイト設定**ドロップ ダウン メニューから。  
+![web ポータルの歯車アイコンとメニュー](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. **[セキュリティ]** をクリックします。  
 
@@ -150,5 +151,6 @@ SharePoint 統合モードのレポート サーバーでは、レポート ビ�
 - [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)
-- [レポート マネージャー  &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../web-portal-ssrs-native-mode.md)
+- [Management Studio でレポート サーバーに接続する](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [レポート サーバーのシステム プロパティ](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

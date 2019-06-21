@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55047216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800491"
 ---
 # <a name="custom-keystore-providers"></a>カスタム キーストア プロバイダー
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -83,7 +83,7 @@ typedef struct CEKeystoreProvider {
 
 |フィールド名|[説明]|
 |:--|:--|
-|`Name`|キーストア プロバイダーの名前。 以前にこのライブラリに存在するか、ドライバーが読み込まれたキーストア プロバイダーと同じできません。 Null で終わる、ワイド-文字 * 文字列。|
+|`Name`|キーストア プロバイダーの名前。 以前にこのライブラリに存在するか、ドライバーが読み込まれたキーストア プロバイダーと同じできません。 null 値で終わる、ワイド文字列 (*) です。|
 |`Init`|初期化関数。 初期化関数が必要ない場合、このフィールドは null にあります。|
 |`Read`|プロバイダーは read 関数です。 必要でない場合は null にすることがあります。|
 |`Write`|プロバイダーの書き込み関数。 読み取りが null でないかどうかに必要です。 必要でない場合は null にすることがあります。|
@@ -140,8 +140,8 @@ ECEK 復号化プロバイダーによって定義された関数のプレース
 |:--|:--|
 |`ctx`|[入力]操作コンテキスト。|
 |`onError`|[入力]エラー報告の関数。|
-|`keyPath`|[入力]値、 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md)特定 ECEK によって参照されている CMK のメタデータ属性。 Null で終わるワイド-文字 * 文字列。 これは、このプロバイダーによって処理される CMK を識別するものです。|
-|`alg`|[入力]値、[アルゴリズム](../../t-sql/statements/create-column-encryption-key-transact-sql.md)特定 ECEK のメタデータ属性。 Null で終わるワイド-文字 * 文字列。 これは、指定された ECEK の暗号化に使用される暗号化アルゴリズムを識別するものです。|
+|`keyPath`|[入力]値、 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md)特定 ECEK によって参照されている CMK のメタデータ属性。 null 値で終わるワイド文字列 (*) です。 これは、このプロバイダーによって処理される CMK を識別するものです。|
+|`alg`|[入力]値、[アルゴリズム](../../t-sql/statements/create-column-encryption-key-transact-sql.md)特定 ECEK のメタデータ属性。 null 値で終わるワイド文字列 (*) です。 これは、指定された ECEK の暗号化に使用される暗号化アルゴリズムを識別するものです。|
 |`ecek`|[入力]暗号化を解除する ECEK へのポインター。|
 |`ecekLen`|[入力]ECEK の長さ。|
 |`cekOut`|[出力]プロバイダーは暗号化解除された ECEK のメモリを割り当てるものとし、そのアドレスを cekOut を指すポインターに書き込みます。 メモリを使用するには、このブロックを解放できる必要があります、 [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) または (Linux または Mac) 関数を解放します。 プロバイダーを設定するものとそれ以外の場合、またはエラーのために割り当てられたメモリがない場合、* cekOut を null ポインター。|
@@ -157,8 +157,8 @@ CEK の暗号化プロバイダーによって定義された関数のプレー�
 |:--|:--|
 |`ctx`|[入力]操作コンテキスト。|
 |`onError`|[入力]エラー報告の関数。|
-|`keyPath`|[入力]値、 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md)特定 ECEK によって参照されている CMK のメタデータ属性。 Null で終わるワイド-文字 * 文字列。 これは、このプロバイダーによって処理される CMK を識別するものです。|
-|`alg`|[入力]値、[アルゴリズム](../../t-sql/statements/create-column-encryption-key-transact-sql.md)特定 ECEK のメタデータ属性。 Null で終わるワイド-文字 * 文字列。 これは、指定された ECEK の暗号化に使用される暗号化アルゴリズムを識別するものです。|
+|`keyPath`|[入力]値、 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md)特定 ECEK によって参照されている CMK のメタデータ属性。 null 値で終わるワイド文字列 (*) です。 これは、このプロバイダーによって処理される CMK を識別するものです。|
+|`alg`|[入力]値、[アルゴリズム](../../t-sql/statements/create-column-encryption-key-transact-sql.md)特定 ECEK のメタデータ属性。 null 値で終わるワイド文字列 (*) です。 これは、指定された ECEK の暗号化に使用される暗号化アルゴリズムを識別するものです。|
 |`cek`|[入力]CEK を暗号化するへのポインター。|
 |`cekLen`|[入力]CEK の長さ。|
 |`ecekOut`|[出力]プロバイダーは暗号化された CEK のメモリを割り当てるものとし、そのアドレスを ecekOut を指すポインターに書き込みます。 メモリを使用するには、このブロックを解放できる必要があります、 [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) または (Linux または Mac) 関数を解放します。 プロバイダーを設定するものとそれ以外の場合、またはエラーのために割り当てられたメモリがない場合、* ecekOut を null ポインター。|
@@ -187,10 +187,10 @@ void (*Free)();
 |引数|[説明]|
 |:--|:--|
 |`ctx`|[入力]エラーを報告するコンテキスト。|
-|`msg`|[入力]レポートにエラー メッセージ。 Null で終わるワイド文字列です。 存在するパラメーター化された情報を許可するのには、この文字列がで受け入れられる形式のシーケンスを挿入の書式設定を含めることができます、 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)関数。 拡張機能は、以下に示すようにこのパラメーターで指定できます。|
+|`msg`|[入力]レポートにエラー メッセージ。 null 値で終わるワイド文字列です。 存在するパラメーター化された情報を許可するのには、この文字列がで受け入れられる形式のシーケンスを挿入の書式設定を含めることができます、 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)関数。 拡張機能は、以下に示すようにこのパラメーターで指定できます。|
 |[...]|[入力]必要に応じて、メッセージの書式指定子に合わせて追加の可変個引数パラメーター。|
 
-エラーが発生した日時を報告するには、コンテキスト パラメーターを指定して、プロバイダーの呼び出し onError は、ドライバーとに書式設定する省略可能な追加のパラメーターと共にエラー メッセージによってプロバイダー関数に渡します。 プロバイダーは、1 つのプロバイダー関数の呼び出し内で連続して複数のエラー メッセージを投稿するこの関数複数回を呼び出すことができます。 例 :
+エラーが発生した日時を報告するには、コンテキスト パラメーターを指定して、プロバイダーの呼び出し onError は、ドライバーとに書式設定する省略可能な追加のパラメーターと共にエラー メッセージによってプロバイダー関数に渡します。 プロバイダーは、1 つのプロバイダー関数の呼び出し内で連続して複数のエラー メッセージを投稿するこの関数複数回を呼び出すことができます。 例:
 
 ```
     if (!doSomething(...))

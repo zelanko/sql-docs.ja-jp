@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 143bff3e-2b5c-485d-9529-1c2387560094
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6c5cc380d626152a494cc61c238d163f0188c24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 7a359f078ce42c1bf9a11637db1281c2257c1bfc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527845"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797201"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-long"></a>updateAsciiStream (int, java.io.InputStream, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public void updateAsciiStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateAsciiStream メソッドは、java.sql.ResultSet インターフェイスの updateAsciiStream メソッドによって指定されます。  
+ この updateAsciiStream メソッドは、java.sql.ResultSet インターフェイスの updateAsciiStream メソッドで規定されています。  
   
  このメソッドは、ASCII 文字 (バイト) を、InputStream オブジェクトから変換可能な文字型の列へ渡します。これは、Unicode の ASCII の範囲 [0x00 - 0x7F] と、874、932、936、949、950、1250 から 1258 のコード ページです。 このメソッドは、対象となる照合順序ページへの変換を実行します。 変換できない変換先列を更新しようとすると、例外がスローされます。 バイナリ列の場合、そのままのバイトが渡されます。  
   

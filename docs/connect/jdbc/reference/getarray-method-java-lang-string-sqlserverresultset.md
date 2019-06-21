@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a98d159b-1fae-482a-9465-5411ce60f901
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94e5e3ef55787dffaa433e20d948950febc48e20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6cab84fd4ea0ae1e22ff175da1cd198e45a1b3a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800081"
 ---
 # <a name="getarray-method-javalangstring-sqlserverresultset"></a>getArray (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +41,16 @@ public java.sql.Array getArray(java.lang.String colName)
  列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- 配列オブジェクト。  
+ Array オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getArray メソッドは、java.sql.ResultSet インターフェイスの getArray メソッドによって指定されます。  
+ この getArray メソッドは、java.sql.ResultSet インターフェイスの getArray メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getArray メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
+ [getArray メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2d1beec5-fc50-4563-81da-835e4b392874
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4c5b5afc6f3324fd2b5b9e5430183bf4df672da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 74b31873d0986ca229805b6d1129701290c0afe5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793240"
 ---
 # <a name="getlong-method-int-sqlserverresultset"></a>getLong (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public long getLong(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- A**長い**値。  
+ **long** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

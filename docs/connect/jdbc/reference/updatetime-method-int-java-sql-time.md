@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43256aa2725a56286ce083b613092421bdd15274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7c5b8d73641e787906c52f32f705dc32ef26d261
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802690"
 ---
 # <a name="updatetime-method-int-javasqltime"></a>updateTime (int, java.sql.Time) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public void updateTime(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateTime メソッドは、java.sql.ResultSet インターフェイスの updateTime メソッドによって指定されます。  
+ この updateTime メソッドは、java.sql.ResultSet インターフェイスの updateTime メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateTime メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   

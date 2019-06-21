@@ -10,11 +10,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522036"
 ---
 # <a name="idle-connection-resiliency"></a>アイドル状態の接続の回復性
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,8 +25,8 @@ ms.locfileid: "58305920"
 
 |Keyword|値|既定|[説明]|
 |-|-|-|-|
-|**ConnectRetryCount**| 0 ~ 255 (両端を含む) の整数|1|を行う前に切断された接続を再確立を試みるの最大数。 既定では、発生した場合に、接続を再確立するため 1 回の試行が行われます。 値の 0 の場合は、再接続は試行されません。|
-|**ConnectRetryInterval**| 1 ~ 60 (包括) の整数|1| 時間 (秒単位) の間には、接続が再確立を試行します。 アプリケーションで、途切れた接続を検出するとすぐに再接続を試みますあり待機し**ConnectRetryInterval**してから再試行するまでの秒。 場合、このキーワードは無視されます**ConnectRetryCount**が 0 です。
+|**ConnectRetryCount**| 0 から 255 までの整数|1|を行う前に切断された接続を再確立を試みるの最大数。 既定では、発生した場合に、接続を再確立するため 1 回の試行が行われます。 値の 0 の場合は、再接続は試行されません。|
+|**ConnectRetryInterval**| 1 から 60 までの整数|1| 時間 (秒単位) の間には、接続が再確立を試行します。 アプリケーションで、途切れた接続を検出するとすぐに再接続を試みますあり待機し**ConnectRetryInterval**してから再試行するまでの秒。 場合、このキーワードは無視されます**ConnectRetryCount**が 0 です。
 
 場合、製品の**ConnectRetryCount**を乗算して**ConnectRetryInterval**よりも大きい**LoginTimeout**、1 回の接続を試みているクライアントが停止し、 **LoginTimeout**に達するまで再接続しようとするそれ以外の場合、これは引き続き**ConnectRetryCount**に到達します。
 

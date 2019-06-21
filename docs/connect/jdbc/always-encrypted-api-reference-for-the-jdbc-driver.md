@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+manager: jroth
+ms.openlocfilehash: 36ccbdddde5276bedffe3271a541875f1e555df3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770479"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC ドライバーの Always Encrypted API のリファレンス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -161,7 +161,7 @@ ms.locfileid: "54361672"
   
  **SQLServerStatementColumnEncryptionSetting 列挙型**  
   
- 暗号化された列を読み書きするときにデータを送受信する方法を指定します。 に応じて、特定のクエリには、Always Encrypted ドライバーの処理、暗号化されていない列が使用されているときにバイパスすることによってパフォーマンスの影響を軽減する可能性があります。 暗号化を回避したり、プレーンテキスト データにアクセスしたりするためにこれらの設定値を使用することはできません。  
+ 暗号化された列を読み書きするときにデータを送受信する方法を指定します。 クエリによっては、暗号化されていない列を使用する場合に Always Encrypted ドライバーの処理をバイパスすることにより、パフォーマンスの影響が軽減される可能性があります。 暗号化を回避したり、プレーンテキスト データにアクセスしたりするためにこれらの設定値を使用することはできません。  
   
  **構文**  
   

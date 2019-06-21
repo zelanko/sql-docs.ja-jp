@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3e316f6adb9e9ca0ca0b07bef7428ace03e0d6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ab08146bcda8d9cfa57021f141f309cacde549b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774296"
 ---
 # <a name="getcharacterstream-method-int"></a>getCharacterStream (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.io.Reader getCharacterStream(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getCharacterStream メソッドは、java.sql.ResultSet インターフェイスの getCharacterStream メソッドによって指定されます。  
+ この getCharacterStream メソッドは、java.sql.ResultSet インターフェイスの getCharacterStream メソッドで規定されています。  
   
  このメソッドでは、nchar、nvarchar、nvarchar(max)、ntext などの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の Unicode 文字データ型のみが読み取られます。 ASCII 文字型などのその他のデータ型では、例外がスローされます。 ASCII データ型を読み取るには、[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) メソッドを使用します。  
   

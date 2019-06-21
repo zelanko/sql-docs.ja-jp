@@ -12,13 +12,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 3309e0b5e878f4923faf31069ae1e29220fdbd97
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2e4291d32de1b18edb65560e21d16c76eb692f3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416251"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769552"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "52416251"
 |-----------------------|---------------------------|  
 |DATETIME|8|  
 |smalldatetime|4|  
-|日付|3|  
+|date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -84,7 +84,7 @@ ms.locfileid: "52416251"
 ## <a name="bcp-types-in-msoledbsqlh"></a>Msoledbsql.h 内の BCP 型  
  次の種類は、msoledbsql.h で定義されます。 これらの型が渡され、 *eUserDataType* ibcpsession::bcpcolfmt OLE DB でのパラメーター。  
   
-|ファイル ストレージ型|ホスト ファイル データ型|Msoledbsql.h ibcpsession::bcpcolfmt で使用するために入力します。|ReplTest1|  
+|ファイル ストレージ型|ホスト ファイル データ型|Msoledbsql.h ibcpsession::bcpcolfmt で使用するために入力します。|[値]|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
@@ -98,7 +98,7 @@ ms.locfileid: "52416251"
   
  **OLE DB に関するメモ** 次の変換は、IBCPSession によって実行されます。 IRowsetFastLoad で定義されている OLE DB 変換を使用して[サーバーにクライアントから変換](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)します。 次に示すクライアントでの変換が実行されると、datetime 値は 1/300 秒単位に丸められ、smalldatetime 値の秒は 0 に設定されます。 datetime の丸め処理は、時間と分に適用されますが、日付には適用されません。  
   
-|変換先 --><br /><br /> From|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|To --><br /><br /> From|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |date|1|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
 |Time|なし|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
@@ -113,7 +113,7 @@ ms.locfileid: "52416251"
   
 #### <a name="key-to-symbols"></a>記号の説明  
   
-|記号|意味|  
+|Symbol|意味|  
 |------------|-------------|  
 |-|変換はサポートされていません。<br />|  
 |1|指定したデータが有効でない場合、エラーが通知されます。 datetimeoffset 値の場合は、UTC への変換が必要なくても、時刻部分は UTC への変換後の範囲内に収まっている必要があります。 TDS とサーバーは datetimeoffset 値の時刻を常に UTC 用に正規化するためです。 したがって、クライアントは、時刻部分が、UTC への変換後にサポートされる範囲内に収まっていることを確認する必要があります。|  

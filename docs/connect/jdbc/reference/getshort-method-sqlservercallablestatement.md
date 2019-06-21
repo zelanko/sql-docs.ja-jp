@@ -1,5 +1,5 @@
 ---
-title: getShort メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: getShort メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bc8b2b05e795299836c479d50aca91e8675975e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 339f5cb3876df2eb9da0052c8d9e714c919a509f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796676"
 ---
 # <a name="getshort-method-sqlservercallablestatement"></a>getShort メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

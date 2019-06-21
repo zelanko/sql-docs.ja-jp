@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801158"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>テーブル値パラメーターへのデータの挿入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,15 +54,15 @@ ms.locfileid: "51604592"
   
  プル モデルを使用するには、コンシューマーが行セット オブジェクトを独自に実装する必要があります。 コンシューマーが必要に、プロバイダーが、ITableDefinitionWithConstraints を通じて公開するテーブル値パラメーター行セット オブジェクトを集計するテーブル値パラメーター行セット (CLSID_ROWSET_TVP) でのプル モデルを使用する場合。CreateTableWithConstraints メソッドまたは iopenrowset::openrowset メソッド。 コンシューマー オブジェクトに期待されるのは、IRowset インターフェイスの実装をオーバーライドすることだけです。 次の関数をオーバーライドする必要があります。  
   
--   Irowset::getnextrows  
+-   IRowset::GetNextRows  
   
 -   IRowset::AddRefRows  
   
 -   Irowset::getdata  
   
--   :Releaserows  
+-   IRowset::ReleaseRows  
   
--   Irowset::restartposition  
+-   IRowset::RestartPosition  
   
  OLE DB Driver for SQL Server では、コンシューマーの行セット オブジェクトから一度に 1 つ以上の行を読み取り、テーブル値パラメーターのストリーミング動作をサポートします。 たとえば、ユーザーは、(メモリではなく) ディスクにテーブル値パラメーターの行セットのデータを保持し、OLE DB Driver for SQL Server から要求されたときにディスクからデータを読み取る機能を実装する場合があります。  
   

@@ -1,5 +1,5 @@
 ---
-title: getScale メソッド (SQLServerResultSetMetaData) |Microsoft Docs
+title: getScale メソッド (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dcf18fb7f4f1ee658c09807a4042460975519810
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 37fa8f723b9d008651d98e850c794955a54b0c1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697205"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801934"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>getScale メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9ac737c528701baca47b8ffd592389cef3fad45
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: c535f7f09505eee1ceb3485d2ccfaebb16885949
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801977"
 ---
 # <a name="understanding-cursor-types"></a>カーソルの種類について
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52396336"
 -   結果セット内のデータベース データに対して他のユーザーが行った変更をさまざまなレベルで表示できます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルの種類の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「カーソルの種類 (データベース エンジン)」を参照してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のカーソルの種類について詳しくは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「カーソルの種類 (データベース エンジン)」を参照してください。  
   
  JDBC の仕様では、他のジョブによって行われた変更を認識する、または認識しない順方向専用およびスクロール可能なカーソルや、読み取り専用または更新可能なカーソルがサポートされています。 この機能は、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] の [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスによって提供されます。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52396336"
   
  順方向カーソルと動的カーソルでは、フェッチ バッファー内でカーソルにアクセスできる間だけ、削除された行を同様の方法で参照することができます。 順方向カーソルの場合は単純です。 動的カーソルの場合は、フェッチ サイズが 1 より大きい場合に複雑になります。 アプリケーションでは、フェッチ バッファーによって定義された範囲内でカーソルを前後に移動できますが、更新が行われた元のフェッチ バッファーが移動した場合には、削除された行が参照できなくなります。 アプリケーションで、一時的に削除された行を動的カーソルを使用して参照しない場合は、FETCH RELATIVE (0) を使用する必要があります。  
   
- TYPE_SS_SCROLL_KEYSET または TYPE_SCROLL_SENSITIVE カーソル行のキー値がカーソルによって更新されると、更新された行がカーソルの選択基準を満たすかどうかにかかわらず、結果セット内でその行の元の位置が維持されます。 行がカーソルの外部で更新されると、削除された行がその行の元の位置に現れます。ただし、行がカーソル内に現れるのは、新しいキー値を持ちカーソル内にもともと存在していた別の行が、その時点で削除されている場合だけです。  
+ TYPE_SS_SCROLL_KEYSET または TYPE_SCROLL_SENSITIVE カーソル行のキー値がカーソルによって更新されると、更新された行がカーソルの選択基準を満たすかどうかにかかわらず、結果セット内でその行の元の位置が維持されます。 行がカーソルの外部で更新されると、削除された行がその行の元の位置に現れます。ただし、その行がカーソル内に現れるのは、新しいキー値を持ちカーソル内にもともと存在していた別の行が、その時点で削除されている場合だけです。  
   
  動的カーソルの場合は、更新された行は、フェッチ バッファーで定義された範囲が移動するまでは、フェッチ バッファー内での位置が維持されます。 更新された行はその後結果セット内の異なる場所に再度現れるか、または完全に削除されます。 結果セット内での一時的な不整合を回避する必要のあるアプリケーションでは、フェッチ サイズを 1 にする必要があります (既定では、CONCUR_SS_SCROLL_LOCKS のコンカレンシーの場合は 8 行、その他のコンカレンシーの場合は 128 行です)。  
   

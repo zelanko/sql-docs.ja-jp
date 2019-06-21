@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 59a975e8-bea8-42fe-8f34-5f18f2bbd415
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd2b58566a427d1666ba42cfafa69074f6780da5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b250b6dc7f0b9322a3e0c638042c4d8077186f96
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787535"
 ---
 # <a name="getobject-method-javalangstring-sqlserverresultset"></a>getObject (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.lang.Object getObject(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getObject メソッドは、java.sql.ResultSet インターフェイスの getObject メソッドによって指定されます。  
+ この getObject メソッドは、java.sql.ResultSet インターフェイスの getObject メソッドで規定されています。  
   
  このメソッドは、指定された列の値を Java オブジェクトとして返します。 この Java オブジェクトの型は、JDBC 仕様に指定されている組み込み型のマッピングに基づく、列の SQL 型に対応する既定の Java オブジェクト型です。 値が SQL NULL の場合、ドライバーは Java の null を返します。  
   

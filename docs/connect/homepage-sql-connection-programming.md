@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182204"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>クライアントの Microsoft SQL server プログラミングのホーム ページ
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server に対するクライアント プログラミングのホーム ページ
 
 
 クライアントは、Microsoft SQL Server とクラウドでの Azure SQL Database を操作するプログラミングの詳細について、ホーム ページへようこそ。 この記事では、次の情報を提供します。
@@ -54,7 +54,7 @@ ms.locfileid: "51289902"
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![C# のロゴ][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM の Entity Framework、.NET Framework の][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java のロゴ][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js のロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp ビッグ プラス][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP のロゴ][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Node.js のロゴ][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP のロゴ][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Python ロゴ][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby のロゴ][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -191,7 +191,7 @@ SQL Server 用 Node.js 接続ドライバーは、JavaScript に実装されま�
 
 #### <a name="code-example"></a>コードの例
 
-- [ODBC を使用して、C++ のコード例](../odbc/reference/sample-odbc-program.md)
+- [ODBC を使用する C++ コードの例](../odbc/reference/sample-odbc-program.md)
 
 #### <a name="documentation-outline"></a>ドキュメント アウトライン
 
@@ -208,7 +208,7 @@ SQL Server 用 Node.js 接続ドライバーは、JavaScript に実装されま�
 | [概念とリファレンス](../odbc/reference/index.md) | &nbsp; | 従来の参照だけでなく、ODBC インターフェイスに関する概念情報。 |
 | &nbsp; " | [付録](../odbc/reference/appendixes/index.md)    | 状態遷移テーブル、ODBC カーソル ライブラリ、および詳細。 |
 | &nbsp; " | [アプリを開発します。](../odbc/reference/develop-app/index.md)  | 関数、ハンドル、およびその他。 |
-| &nbsp; " | [ドライバーを開発します。](../odbc/reference/develop-driver/index.md) | 特殊なデータ ソースがある場合は、ODBC ドライバーを開発する方法。 |
+| &nbsp; " | [ドライバーの開発](../odbc/reference/develop-driver/index.md) | 特殊なデータ ソースがある場合は、ODBC ドライバーを開発する方法。 |
 | &nbsp; " | [インストール](../odbc/reference/install/index.md) | ODBC のインストール、サブキー、および詳細。 |
 | &nbsp; " | [構文](../odbc/reference/syntax/index.md)   | セットアップ、インストーラー、翻訳、およびデータ アクセス用の Api。 |
 | &nbsp; | &nbsp; | <br /> |

@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57fa8d097b2a6cedc5bf96dc4ee75471c7d27266
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: a5d2db7479e3a8cdce00dca62f04bf2c64989b48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737023"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798498"
 ---
 # <a name="using-table-valued-parameters"></a>テーブル値パラメーターの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-テーブル値パラメーターは、複数行のデータをクライアント アプリケーションから SQL Server に簡単にマーシャリングするための手段です。複数のラウンド トリップや、データ処理用の特別なサーバー側ロジックは必要ありません。 テーブル値パラメーターを使用すると、クライアント アプリケーションで複数行のデータをカプセル化してサーバーに送信する処理を 1 つのパラメーター化コマンドで実行できます。 受信データ行は、TRANSACT-SQL を使用してで操作できるテーブル変数に格納されます。  
+テーブル値パラメーターは、複数行のデータをクライアント アプリケーションから SQL Server に簡単にマーシャリングするための手段です。複数のラウンド トリップや、データ処理用の特別なサーバー側ロジックは必要ありません。 テーブル値パラメーターを使用すると、クライアント アプリケーションで複数行のデータをカプセル化してサーバーに送信する処理を 1 つのパラメーター化コマンドで実行できます。 受信データ行はテーブル変数に格納され、Transact-SQL を使用して操作できます。  
   
 テーブル値パラメーター列の値は、標準の TRANSACT-SQL SELECT ステートメントを使用してアクセスできます。 テーブル値パラメーターが厳密に型指定し、その構造が自動的に検証します。 テーブル値パラメーターのサイズは、サーバーのメモリによってのみ制限されます。  
   

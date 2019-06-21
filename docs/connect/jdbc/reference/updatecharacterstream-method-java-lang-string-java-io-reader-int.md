@@ -1,5 +1,5 @@
 ---
-title: updateCharacterStream メソッド (java.io.Reader, int) | Microsoft Docs
+title: updateCharacterStream (java.io.Reader, int) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 08cfc4e0-83f0-4f2f-ac55-b381f34fe67f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84eb71761702fe48fd8001f7789fea5a5e47f586
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e50f69e169604822a11b8386c470d3fe1f245219
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784148"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-int"></a>updateCharacterStream (java.lang.String, java.io.Reader, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +56,7 @@ public void updateCharacterStream(java.lang.String columnName,
 ## <a name="remarks"></a>Remarks  
  この updateCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateCharacterStream メソッドによって指定されます。  
   
- このメソッドは、Unicode 文字を Reader オブジェクトから選択したテキストおよびバイナリ列に渡します。 これには、すべてのテキスト列と **binary**、**varbinary**、**varbinary(max)**、**image**、**xml** の各列が含まれますが、**udt** 列は含まれません。  
+ このメソッドは、Unicode 文字を Reader オブジェクトから選択したテキストおよびバイナリ列に渡します。 これには、すべてのテキスト列と **binary**、**varbinary**、**varbinary(max)** 、**image**、**xml** の各列が含まれますが、**udt** 列は含まれません。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

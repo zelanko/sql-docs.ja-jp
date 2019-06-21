@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db62f127b5f955de24186c3625d72860eac49f90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 74dea806465d8f1d011f5318eb4ed1571a6ba734
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800512"
 ---
 # <a name="sqlserverdatasource-members"></a>SQLServerDataSource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47794210"
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|値を返します、 **applicationIntent**接続プロパティです。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|アプリケーション名を返します。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) オブジェクトが示すデータ ソースとの接続の確立を試みます。|  
-|[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|データベース名を返します。|  
+|[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|データベース名が返されます。|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|値を返します**disableStatementPooling**接続プロパティです。 この設定は、ステートメントのプールが有効になっているかどうか、またはこの接続ではなくを制御します。|  
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|値を返します**enablePrepareOnFirstPreparedStatementCall**接続プロパティです。|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|encrypt プロパティが有効であるかどうかを示す **Boolean** 値を返します。|  

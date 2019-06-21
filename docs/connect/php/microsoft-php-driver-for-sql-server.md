@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3da1afcd34e530b96a9be091c3f5ffe3aa247f48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800247"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP
 
@@ -37,13 +37,13 @@ Microsoft Drivers for PHP for SQL Server は、PHP アプリケーションの S
 * [セキュリティに関する考慮事項](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>コミュニティ  
-* [Microsoft Drivers for PHP for SQL Server リソースをサポート](support-resources-for-the-php-sql-driver.md)
+* [Microsoft Drivers for PHP for SQL Server 向けのサポート リソース](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>ダウンロード  
 * ![ダウンロード下方向丸](../../ssdt/media/download.png)[for PHP sql ドライバーをダウンロードするには](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>サンプル  
-* [Microsoft drivers for PHP for SQL Server コード サンプル](code-samples-for-php-sql-driver.md)
+* [SQL Server 用 Microsoft Drivers for PHP のコード サンプル](code-samples-for-php-sql-driver.md)
 * [Windows 上の PHP の概要](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [PHP を使用した macOS で作業を開始](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Ubuntu 上で PHP を使用した作業の開始](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

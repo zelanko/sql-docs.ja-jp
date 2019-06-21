@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+manager: jroth
+ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801839"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver
 
@@ -28,9 +28,9 @@ Microsoft JDBC Driver for SQL Server は、IBM WebSphere や SAP NetWeaver な�
   
 ## <a name="getting-started"></a>作業の開始  
 
-* [ステップ 1: Java 開発用の開発環境を構成します。](step-1-configure-development-environment-for-java-development.md)  
-* [手順 2:Java 開発用の SQL database を作成します。](step-2-create-a-sql-database-for-java-development.md)  
-* [手順 3:Java を使用した sql 接続の概念実証](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [ステップ 1: Java 開発用に開発環境を構成する](step-1-configure-development-environment-for-java-development.md)  
+* [ステップ 2: Java 開発用に SQL データベースを作成する](step-2-create-a-sql-database-for-java-development.md)  
+* [ステップ 3: Java を使用した SQL への接続を概念実証する](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>ドキュメント  
 
@@ -45,7 +45,7 @@ Microsoft JDBC Driver for SQL Server は、IBM WebSphere や SAP NetWeaver な�
   
 ## <a name="community"></a>コミュニティ
 
-[フィードバックやその他の JDBC ドライバー情報の検索](finding-additional-jdbc-driver-information.md)  
+[フィードバックと JDBC ドライバーの追加情報の検索](finding-additional-jdbc-driver-information.md)  
   
 ## <a name="download"></a>ダウンロード
 

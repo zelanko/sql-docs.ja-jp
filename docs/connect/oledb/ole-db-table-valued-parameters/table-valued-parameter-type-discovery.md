@@ -12,20 +12,20 @@ helpviewer_keywords:
 - table-valued parameters, type discovery
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: aab78327d575858675ade3bbc5d652cce5db12a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: c45b5f6b00c15dee35d263447f5b95c8e31b986f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801111"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>テーブル値パラメーターの型の検出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  コンシューマー、つまり OLE DB Driver for SQL Server を使用するクライアント アプリケーションでは、コマンド テキストが OLE DB プロバイダーに提供されている場合は、各コマンド パラメーターの型を検出できます。 テーブル値パラメーターの型がわかったら、コンシューマーはテーブル値パラメーターの個別の列ごとにメタデータ情報を検出できます。  
+  コンシューマー、つまり OLE DB Driver for SQL Server を使用するクライアント アプリケーションでは、OLE DB プロバイダーに対してコマンド テキストが指定されている場合、各コマンド パラメーターの型を検出できます。 テーブル値パラメーターの型がわかったら、コンシューマーはテーブル値パラメーターの個別の列ごとにメタデータ情報を検出できます。  
   
  プロシージャのパラメーターの型情報はサポートされて icommandwithparameters::getparameterinfo でほとんどのパラメーターの型。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降では、ユーザー定義型および **xml** データ型の導入に伴い、ICommandWithParameters によりユーザー定義型の情報 (名前、スキーマ、およびカタログ) を提供することができなくなったため、GetParameterInfo メソッドは十分に目的を果たしていませんでした。 ISSCommandWithParameters の新しいインターフェイスは、拡張型情報を提供する定義されました。  
   

@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream メソッド (SQLServerClob) |Microsoft Docs
+title: getCharacterStream メソッド (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f467bfe19eb01f0771e747c0c6da1d2527174ef5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2baeb3fcebeac4f95a1c3d63ca8752275b2ac0e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775681"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>getCharacterStream メソッド (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

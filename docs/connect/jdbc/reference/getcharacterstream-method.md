@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 70a5a8c8-791a-43f9-8a0e-1c390f30857c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e4ee34cb5206ebcda3134c137d4ba09e5a6a8f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: deed81383c6fc813d971019ee0843b8098f2e400
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789230"
 ---
 # <a name="getcharacterstream-method-"></a>getCharacterStream () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +36,13 @@ public java.io.Reader getCharacterStream()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 含むリーダー オブジェクトを**CLOB**データ。  
+ **CLOB** データを含む Reader オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getCharacterStream メソッドは、java.sql.Clob インターフェイスで、getCharacterStream メソッドによって指定されます。  
+ この getCharacterStream メソッドは、java.sql.Clob インターフェイスの getCharacterStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerClob のメソッド](../../../connect/jdbc/reference/sqlserverclob-methods.md)   

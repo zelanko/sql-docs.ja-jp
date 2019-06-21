@@ -11,10 +11,10 @@ ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506640"
 ---
 # <a name="create-a-linked-report"></a>リンク レポートを作成する
@@ -32,7 +32,7 @@ ms.locfileid: "66506640"
 
 2. **管理<reportname>**  ] ページで、[**リンク レポートの作成**です。  
   
-3. 新規リンク レポートの名前を入力します。 必要に応じて説明を入力します。  
+3. 新しいリンク レポートの名前を入力します。 必要に応じて説明を入力します。  
   
 4. レポートの別のフォルダーを選択するには、右側にある省略記号ボタン (…) を選択します。***場所***します。  新しいフォルダーを選択してレポートに移動**選択**します。 別のフォルダーを選択しない場合は、リンク レポートが現在のフォルダーに作成されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: setCharacterStream メソッド (SQLServerNClob) |Microsoft Docs
+title: setCharacterStream メソッド (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 081da23826951c5c8c4d4872de1c28a771a2958b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dbddcadfec0ed7b2bab9573717d0079240443a94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795692"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>setCharacterStream メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.io.Writer setCharacterStream(long pos)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setCharacterStream メソッドは、setCharacterStream、java.sql.NClob インターフェイスのメソッドでによって指定されます。  
+ この setCharacterStream メソッドは、java.sql.NClob インターフェイスの setCharacterStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8aa3b6b211095f3c27693928dab6518a6a2e895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790090"
 ---
 # <a name="using-basic-data-types"></a>基本データ型の使用
 
@@ -34,15 +34,15 @@ ms.locfileid: "47759410"
 | binary             | BINARY                                             | byte[]                       |
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
-| 日付               | [DATE]                                               | java.sql.Date                |
+| date               | DATE                                               | java.sql.Date                |
 | DATETIME           | timestamp                                          | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
-| Decimal            | [DECIMAL]                                            | java.math.BigDecimal         |
-| FLOAT              | DOUBLE                                             | 倍精度浮動小数点                       |
+| Decimal            | DECIMAL                                            | java.math.BigDecimal         |
+| FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
-| ssNoversion                | INTEGER                                            | ssNoversion                          |
-| money              | [DECIMAL]                                            | java.math.BigDecimal         |
+| INT                | INTEGER                                            | INT                          |
+| money              | DECIMAL                                            | java.math.BigDecimal         |
 | NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
 | NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
@@ -51,7 +51,7 @@ ms.locfileid: "47759410"
 | REAL               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
-| SMALLMONEY         | [DECIMAL]                                            | java.math.BigDecimal         |
+| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
 | TIMESTAMP          | BINARY                                             | byte[]                       |

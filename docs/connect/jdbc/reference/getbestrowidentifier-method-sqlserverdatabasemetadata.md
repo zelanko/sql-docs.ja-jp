@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b08c8ffed61f90260617395f3c4df89b64dd6e0e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730326"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799942"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -83,8 +83,8 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 |COLUMN_NAME|String|列の名前です。|  
 |DATA_TYPE|short|java.sql.Types の SQL データ型です。|  
 |TYPE_NAME|String|データ型の名前です。|  
-|COLUMN_SIZE|ssNoversion|列の完全桁数です。|  
-|BUFFER_LENGTH|ssNoversion|バッファーの長さです。|  
+|COLUMN_SIZE|INT|列の完全桁数です。|  
+|BUFFER_LENGTH|INT|バッファーの長さです。|  
 |DECIMAL_DIGITS|short|列の小数点以下の桁数です。|  
 |PSEUDO_COLUMN|short|列が擬似列かどうかを示します。 次のいずれかの値を指定できます。<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81bcb5406a491d0e7b73ec098b160008c1a11c4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8386d896391405777648ee3ec27b188b313c737c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66788957"
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47795540"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|指定された部分文字列のコピーを取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
 |[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|内の文字数を取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
-|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|指定した文字位置を取得**java.sql.NClob**オブジェクトまたはサブスト リングので、 **java.sql.NClob**指定された開始位置に基づいて。|  
+|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|指定された開始位置に基づいて、指定された **java.sql.NClob** オブジェクトまたは **java.sql.NClob** の substring の文字位置を取得します。|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|この **java.sql.NClob** オブジェクトが表す **NCLOB** 値の指定された位置から ASCII 文字を書き込むために使用するストリームを取得します。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|この **java.sql.NClob** オブジェクトが表す **NCLOB** 値の指定された位置から Unicode 文字のストリームを書き込むために使用するストリームを取得します。|  
 |[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|書き込み、指定した**文字列**を**NCLOB**の指定した位置から始まります。|  

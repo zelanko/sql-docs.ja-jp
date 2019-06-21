@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499618"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
@@ -168,7 +168,7 @@ ms.locfileid: "66499618"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリの場合、データ ソースごとに異なるパラメーター構文がサポートされています。 サポートは、位置または名前によってクエリ内で識別されるパラメーターに応じて異なります。 詳細については、「[レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」で特定の外部データ ソースのトピックを参照してください。 リレーショナル クエリ デザイナーで、フィルターのパラメーター オプションを選択してパラメーター化クエリを作成する必要があります。 詳細については、「[リレーショナル クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)」を参照してください。  
   
--   Microsoft SQL Server Analysis Services、SAP NetWeaver BI、Hyperion Essbase などの多次元データ ソースに基づくクエリの場合は、クエリ デザイナーで指定したフィルターに基づくパラメーターを作成するかどうかを指定できます。 詳細については、「[クエリ デザイナー (レポート ビルダー)](../report-data/query-design-tools-ssrs.md)」で、データ拡張機能に対応するクエリ デザイナーのトピックを参照してください。  
+-   Microsoft SQL Server Analysis Services、SAP NetWeaver BI、Hyperion Essbase などの多次元データ ソースに基づくクエリの場合は、クエリ デザイナーで指定したフィルターに基づくパラメーターを作成するかどうかを指定できます。 詳細については、「[クエリ デザイン ツール &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)」に記載されている、データ拡張機能に対応するクエリ デザイナーのトピックをご覧ください。  
   
 ##  <a name="bkmk_Manage_Parameters"></a> パブリッシュ済みレポートのパラメーターの管理  
  レポートをデザインするときは、レポート パラメーターはレポート定義に保存されます。 レポートをパブリッシュするときは、レポート パラメーターはレポート定義とは別に保存され管理されます。  

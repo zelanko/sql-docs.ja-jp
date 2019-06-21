@@ -1,5 +1,5 @@
 ---
-title: getSchemaName メソッド (SQLServerResultSetMetaData) |Microsoft Docs
+title: getSchemaName メソッド (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31356684d8f00cdc6f3043c523859051099a6ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4eacabb1cfd618d789ff7e21de497a40e4ea292f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66792209"
 ---
 # <a name="getschemaname-method-sqlserverresultsetmetadata"></a>getSchemaName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

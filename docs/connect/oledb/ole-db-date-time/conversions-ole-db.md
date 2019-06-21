@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9eca16e0908bac5134d459414cbd43ee19a4665a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 19c732a38c5237811f4f2219292ab4589018f4e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724960"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769407"
 ---
 # <a name="conversions-ole-db"></a>変換 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47724960"
   
 -   形式**datetime**と**datetimeoffset**文字列です。  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*] [± *hh*:*mm*]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   **time** 型の文字列の形式は次のとおりです。  
   

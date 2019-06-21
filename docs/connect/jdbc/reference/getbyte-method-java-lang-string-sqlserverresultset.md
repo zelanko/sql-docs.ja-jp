@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 069c68ff-442d-4104-917f-3445a3ad264a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3676612dbb690939a5bcf01b60ca29b20ba8aede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ee07768e1d92cf39f7dc773b68b118406742f8f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765691"
 ---
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>getByte (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public byte getByte(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getByte メソッドは、java.sql.ResultSet インターフェイスの getByte メソッドによって指定されます。  
+ この getByte メソッドは、java.sql.ResultSet インターフェイスの getByte メソッドで規定されています。  
   
  このメソッドは、tinyint や bit などのバイト値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされています。 その他のデータ型では例外がスローされます。  
   

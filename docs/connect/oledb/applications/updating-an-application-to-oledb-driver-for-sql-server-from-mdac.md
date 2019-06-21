@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 72f4406c4da07a1ddec422f09512dfe7cb28a028
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778089"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>MDAC から OLE DB Driver for SQL Server へのアプリケーションの更新
@@ -91,7 +91,7 @@ ms.locfileid: "66778089"
 
 -   MDAC アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続すると、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータ型は、次の表に示すような、[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] と互換性を持つデータ型として扱われます。  
 
-    |SQL Server 2005 の型|SQL Server 2005 の型|  
+    |SQL Server 2005 の型|SQL Server 2000 の型|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  

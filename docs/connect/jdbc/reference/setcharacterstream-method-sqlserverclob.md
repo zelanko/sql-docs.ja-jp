@@ -1,5 +1,5 @@
 ---
-title: setCharacterStream メソッド (SQLServerClob) |Microsoft Docs
+title: setCharacterStream メソッド (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60bd9b666a6be9baf358ad2358c3ccbab251c675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8650ffe29710670bae8d3a934cd4caceaf74f723
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795658"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream メソッド (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.io.Writer setCharacterStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- SetCharacterStream メソッドは、setCharacterStream、java.sql.Clob インターフェイスのメソッドで規定します。  
+ この setCharacterStream メソッドは、java.sql.Clob インターフェイスの setCharacterStream メソッドで規定されています。  
   
  CLOB の文字データは指定された開始位置からライターによって上書きされ、CLOB の初期データの長さをオーバーランすることができます。 開始位置に CLOB の長さ + 1 の値を指定すると、文字が追加されます。 開始位置に CLOB の長さ + 2 以上 (または 0 以下) の値を指定すると、位置エラーがスローされます。  
   

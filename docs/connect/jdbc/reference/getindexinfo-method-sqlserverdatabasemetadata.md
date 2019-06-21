@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7d66a175522cd89cf4bd0aca567779244b0a385
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774351"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736823"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790370"
 ---
 # <a name="using-advanced-data-types"></a>高度なデータ型の使用
 

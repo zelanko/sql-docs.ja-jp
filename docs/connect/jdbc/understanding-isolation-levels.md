@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9341004225f619f4b15aabb1a641a8a39a2329b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800166"
 ---
 # <a name="understanding-isolation-levels"></a>分離レベルについて
 
@@ -48,9 +48,9 @@ ms.locfileid: "47764860"
   
 | [分離レベル]  | ダーティ リード | 反復不能読み取り | ファントム |
 | ---------------- | ---------- | ------------------- | ------- |
-| READ UNCOMMITTED | [ユーザー アカウント制御]        | はい                 | [ユーザー アカウント制御]     |
-| READ COMMITTED   | いいえ         | はい                 | [ユーザー アカウント制御]     |
-| REPEATABLE READ  | いいえ         | いいえ                  | [ユーザー アカウント制御]     |
+| READ UNCOMMITTED | はい        | はい                 | はい     |
+| READ COMMITTED   | いいえ         | はい                 | はい     |
+| REPEATABLE READ  | いいえ         | いいえ                  | はい     |
 | スナップショット         | いいえ         | いいえ                  | いいえ      |
 | Serializable     | いいえ         | いいえ                  | いいえ      |
   

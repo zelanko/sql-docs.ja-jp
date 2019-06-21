@@ -1,5 +1,5 @@
 ---
-title: setObject メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: setObject メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7110f6c5-4af3-4b50-a4d4-1bae1876c70d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 107b130fe6aab9c630d659b154679def6862dc04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6ee0bca5c0b92c21aabffe0253a00a0cdb17ae1e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66788113"
 ---
 # <a name="setobject-method-sqlservercallablestatement"></a>setObject メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

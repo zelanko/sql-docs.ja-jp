@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796226"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>定数 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,11 +68,11 @@ PDO::SQLSRV_ATTR_DIRECT_QUERY 属性を使用して、直接クエリの実行�
 ### <a name="handling-numeric-fetches"></a>数値の処理をフェッチします。
 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、(ビット、整数、smallint、tinyint、float と real) の数値の SQL 型の列からの数値のフェッチを処理するために使用できます。 SQL のフローティングし、レアルが浮動小数点数として表される、int、として表されます PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 整数型の列からの結果は true に設定した場合。 この属性で設定できます[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)します。 
 
-PDO::SQLSRV_ATTR_FORMAT_DECIMALS と PDO::SQLSRV_ATTR_DECIMAL_PLACES 属性を持つ既定の動作を 10 進数に書式設定を変更することができます。 これらの属性の動作は、SQLSRV 側で対応するオプションと同じです (**FormatDecimals**と**DecimalPlaces**)、書式設定するための出力パラメーターはサポートされていません。 接続またはステートメントのいずれかのレベルでこれらの属性を設定することがあります[pdo::setattribute](../../connect/php/pdo-setattribute.md)または[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)、任意のステートメント属性は、対応するオーバーライドされますが、接続属性です。 詳細については、次を参照してください。 [10 進数値文字列の書式設定および通貨値 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)します。
+PDO::SQLSRV_ATTR_FORMAT_DECIMALS と PDO::SQLSRV_ATTR_DECIMAL_PLACES 属性を持つ既定の動作を 10 進数に書式設定を変更することができます。 これらの属性の動作は、SQLSRV 側で対応するオプションと同じです (**FormatDecimals**と**DecimalPlaces**)、書式設定するための出力パラメーターはサポートされていません。 接続またはステートメントのいずれかのレベルでこれらの属性を設定することがあります[pdo::setattribute](../../connect/php/pdo-setattribute.md)または[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)、任意のステートメント属性は、対応するオーバーライドされますが、接続属性です。 詳細については、「[10 進数文字列と金額の書式設定 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)」をご覧ください。
 
 ### <a name="handling-date-and-time-fetches"></a>日付と時刻のフェッチの処理
 
-日付と時刻の型として取得するかどうかを指定する、PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE [PHP DateTime](http://php.net/manual/en/class.datetime.php)オブジェクト。 False のままにした場合、既定の動作では、文字列として返すことです。 接続またはステートメントのいずれかのレベルでこの属性を設定することがあります[pdo::setattribute](../../connect/php/pdo-setattribute.md)または[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)、対応するステートメント属性が上書きされますが、接続属性です。 詳細については、次を参照してください。[方法: 取得日付と時刻型として PHP DateTime オブジェクトを使用して、PDO_SQLSRV ドライバー](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)します。
+日付と時刻の型として取得するかどうかを指定する、PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE [PHP DateTime](http://php.net/manual/en/class.datetime.php)オブジェクト。 false のままにすると、文字列として返すことが既定の動作となります。 接続またはステートメントのいずれかのレベルでこの属性を設定することがあります[pdo::setattribute](../../connect/php/pdo-setattribute.md)または[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)、対応するステートメント属性が上書きされますが、接続属性です。 詳細については、「[方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)」を参照してください。
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV ドライバーの定数  
 次のセクションでは、SQLSRV ドライバーが使用する定数を一覧表示します。  
@@ -178,7 +178,7 @@ PDO::SQLSRV_ATTR_FORMAT_DECIMALS と PDO::SQLSRV_ATTR_DECIMAL_PLACES 属性を�
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|ssNoversion|  
+|SQLSRV_SQLTYPE_INT|INT|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  

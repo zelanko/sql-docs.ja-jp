@@ -1,5 +1,5 @@
 ---
-title: '方法: SQLSRV ドライバーを使用して I/O パラメーターを取得 |Microsoft Docs'
+title: '方法: SQLSRV ドライバーを使用して I/O パラメーターを取得する | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c865207156703d87ae827a3274e788b7b8bda270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799318"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用して入力/出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47629930"
 > [!NOTE]  
 > *$vacationHrs* を 4 に初期化すると、返される PHPTYPE が整数に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に入力/出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
-ストアド プロシージャは 2 つの結果を返すため、ストアド プロシージャが実行された後に [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) を呼び出して出力パラメーターの値を使用できるようにする必要があります。 **sqlsrv_next_result** の呼び出しの後、*$vacationHrs* にはストアド プロシージャによって返される出力パラメーターの値が含まれます。  
+ストアド プロシージャは 2 つの結果を返すため、ストアド プロシージャが実行された後に [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) を呼び出して出力パラメーターの値を使用できるようにする必要があります。 **sqlsrv_next_result** の呼び出しの後、 *$vacationHrs* にはストアド プロシージャによって返される出力パラメーターの値が含まれます。  
   
 > [!NOTE]  
 > 正規の構文を使用してストアド プロシージャを呼び出すことをお勧めします。 正規の構文の詳細については、「[ストアド プロシージャの呼び出し](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)」を参照してください。  

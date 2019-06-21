@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: getBigDecimal メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad30b6d99037946d0395d6604a02f103cb7897f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b4184dd39fa016f4379cf24c83e78488e3f9c2ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799865"
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>getBigDecimal メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

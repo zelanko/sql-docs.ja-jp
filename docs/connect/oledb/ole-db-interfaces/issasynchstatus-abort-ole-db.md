@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 662aa55260c2fe4f09eaab3e91eb7c8e70a61aa6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 36a8f97580176b4999d8429fb18c9b20da9285d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789739"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ HRESULT Abort(
  *eOperation*[in]  
  中止する操作。 次の値を使用する必要があります。  
   
- DBASYNCHOP_OPEN を設定する必要があります。キャンセル要求は、非同期に行セットを開いたり、非同期に行セットのデータを設定する場合、または非同期にデータ ソース オブジェクトを初期化する場合に適用されます。  
+ DBASYNCHOP_OPEN。キャンセル要求が適用されるのは、行セットを非同期で開くか設定する場合、またはデータ ソース オブジェクトを非同期で初期化する場合です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -67,7 +67,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **IDBInitialize::Initialize** が呼び出されていないか、完了していないデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。  
   
- または、**IDBInitialize::Initialize** が呼び出されたものの、その後初期化前に取り消されたか、タイムアウトになったデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。データ ソース オブジェクトはまだ初期化されていないことになります。  
+ または、**IDBInitialize::Initialize** が呼び出されたものの、その後初期化前に取り消されたか、タイムアウトになったデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。データ ソース オブジェクトはまだ初期化されていません。  
   
  以前に **ITransaction::Commit** または **ITransaction::Abort** が呼び出された行セットに対して **ISSAsynchStatus::Abort** が呼び出された場合もこの値が返されます。この行セットはコミットまたはアボートの後に保持されず、ゾンビ状態になります。  
   

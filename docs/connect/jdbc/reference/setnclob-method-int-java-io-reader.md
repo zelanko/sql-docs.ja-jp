@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a25a3d95086d6368d7375920dab79059c690576d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 34888d11cfdf88936b65aedc210d49e1a049bbc6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800426"
 ---
 # <a name="setnclob-method-int-javaioreader"></a>setNClob (int, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public final void setNClob(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setNClob メソッドは、java.sql.PreparedStatement インターフェイスの setNClob メソッドによって指定されます。  
+ この setNClob メソッドは、java.sql.PreparedStatement インターフェイスの setNClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [setNClob メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   

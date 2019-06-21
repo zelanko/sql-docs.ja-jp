@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef5c7aee0daef073ff22494162d8024201b2f97c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600827"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770523"
 ---
-# <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス」を参照してください。
+# <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>拡張イベント ログの診断情報へのアクセス
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] では、トレース ([ドライバー操作のトレース](../../connect/jdbc/tracing-driver-operation.md)) が更新されました。サーバーの接続リング バッファーおよび拡張イベント ログ内のアプリケーション パフォーマンス情報から、接続エラーなどの診断情報にクライアント イベントを関連付けやすくなっています。 拡張イベント ログを表示する方法については、「[イベント セッション データの表示](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx)」を参照してください。  
   
 ## <a name="details"></a>詳細  
- 接続操作では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によってクライアント接続 ID が送信されます。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)) にアクセスし、**ClientConnectionID** フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます  (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は 16 バイトの GUID です。 また、**client_connection_id** 操作を拡張イベント セッションのイベントに追加すると、拡張イベントのターゲット出力でクライアント接続 ID を検索することもできます。 クライアント ドライバーの詳しい診断サポートが必要な場合は、トレースを有効にして、接続コマンドを再実行し、トレース内の **ClientConnectionID** フィールドを調べます。  
+ 接続操作では、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によってクライアント接続 ID が送信されます。 接続に失敗した場合は、接続リング バッファー ([接続リング バッファーによる SQL Server 2008 での接続トラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=207752)) にアクセスし、**ClientConnectionID** フィールドを見つけて、接続エラーに関する診断情報を取得することができます。 クライアント接続 ID は、エラーが発生した場合にのみリング バッファーに記録されます (ログイン前のパケットを送信する前に接続に失敗した場合、クライアント接続 ID は生成されません)。クライアント接続 ID は 16 バイトの GUID です。 また、**client_connection_id** 操作を拡張イベント セッションのイベントに追加すると、拡張イベントのターゲット出力でクライアント接続 ID を検索することもできます。 クライアント ドライバーの詳しい診断サポートが必要な場合は、トレースを有効にして、接続コマンドを再実行し、トレース内の **ClientConnectionID** フィールドを調べます。  
   
  クライアントを取得する接続 ID を使用してプログラムで[ISQLServerConnection インターフェイス](../../connect/jdbc/reference/isqlserverconnection-interface.md)します。 接続 ID は接続関連の例外にも含まれます。  
   

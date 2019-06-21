@@ -16,13 +16,13 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a2477e18f1ae9aa78d195a45f28494b4b909934d
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 6778b08e106416a009e854c3b88c3f7a13efc88a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66768578"
 ---
 # <a name="initialization-and-authorization-properties"></a>初期化プロパティと承認プロパティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "56744522"
 |DBPROP_INIT_ASYNCH|SQL Server の OLE DB Driver は、非同期の開始に使用をサポートします。<br /><br /> DBPROPVAL_ASYNCH_INITIALIZE ビットを DBPROP_INIT_ASYNCH プロパティに設定すると、**IDBInitialize::Initialize** は非ブロッキング呼び出しになります。 詳細については、次を参照してください。[非同期操作を実行する](../../oledb/features/performing-asynchronous-operations.md)します。|  
 |DBPROP_INIT_CATALOG|接続先の既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース名です。|  
 |DBPROP_INIT_DATASOURCE|[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスを実行するサーバーのネットワーク名。 コンピューター上で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の複数のインスタンスが実行されている場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の特定のインスタンスに接続するために、DBPROP_INIT_DATASOURCE の値が *\\\ServerName\InstanceName* として指定されます。 エスケープ シーケンスの \\\ は、円記号を表すために使用されます。|  
-|DBPROP_INIT_GENERALTIMEOUT|データ ソースの初期化とコマンドの実行以外の要求がタイムアウトするまでの秒数を示します。値 0 は、タイムアウトしないことを表します。プロバイダーがネットワーク接続経由で動作している場合、または分散シナリオやトランザクション シナリオで実行されている場合、このプロパティをサポートすることで、実行時間の長い要求が発生した際に、参加しているコンポーネントに対してタイムアウトするよう指示できます。 データ ソースの初期化とコマンド実行のタイムアウトについては、それぞれ DBPROP_INIT_TIMEOUT と DBPROP_COMMANDTIMEOUT で指定されます。<br /><br /> DBPROP_INIT_GENERALTIMEOUT は読み取り専用です。値の設定が試みられると、DBPROPSTATUS_NOTSETTABLE の *dwstatus* エラーが返されます。|  
+|DBPROP_INIT_GENERALTIMEOUT|データ ソースの初期化とコマンドの実行以外の要求がタイムアウトになるまでの秒数を示します。値 0 は、タイムアウトしないことを表します。プロバイダーがネットワーク接続経由で動作している場合、または分散シナリオやトランザクション シナリオで実行されている場合、このプロパティをサポートすることで、実行時間の長い要求が発生した際に、参加しているコンポーネントに対してタイムアウトするよう指示できます。 データ ソースの初期化とコマンド実行のタイムアウトについては、それぞれ DBPROP_INIT_TIMEOUT と DBPROP_COMMANDTIMEOUT で指定されます。<br /><br /> DBPROP_INIT_GENERALTIMEOUT は読み取り専用です。値の設定が試みられると、DBPROPSTATUS_NOTSETTABLE の *dwstatus* エラーが返されます。|  
 |DBPROP_INIT_HWND|呼び出し元アプリケーションのウィンドウ ハンドルです。 初期化プロパティに入力要求が許可されている場合は、初期化ダイアログ ボックスを表示するために、有効なウィンドウ ハンドルが必要です。|  
 |DBPROP_INIT_IMPERSONATION_LEVEL|SQL Server の OLE DB Driver は、権限借用レベルの調整をサポートしていません。<br /><br /> OLE DB Driver for SQL Server では、プロパティ値を設定しようとすると、DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_INIT_LCID|OLE DB Driver for SQL Server でロケール ID が確認され、ロケール ID がサポートされていないか、クライアントにインストールされていない場合はエラーが返されます。|  
@@ -73,9 +73,9 @@ ms.locfileid: "56744522"
 |SSPROP_INIT_NETWORKADDRESS|型 : VT_BSTR<br /><br /> R/W: 読み取り/書き込み<br /><br /> 説明: DBPROP_INIT_DATASOURCE プロパティで指定されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを実行するサーバーのネットワーク アドレスです。|  
 |SSPROP_INIT_NETWORKLIBRARY|型 : VT_BSTR<br /><br /> R/W: 読み取り/書き込み<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスとの通信に使われるネットワーク ライブラリ (DLL) の名前です。 この名前には、パスやファイル拡張子 (.dll) は含めません。<br /><br /> 既定値は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアント構成ユーティリティを使用してカスタマイズできます。<br /><br /> 注: このプロパティでサポートされるのは、TCP および名前付きパイプのみです。 このプロパティにプレフィックスを使用した場合、プレフィックスが二重になりエラーが発生します。これは、内部でこのプロパティを使用してプレフィックスが生成されるためです。|  
 |SSPROP_INIT_PACKETSIZE|型 : VT_I4<br /><br /> R/W: 読み取り/書き込み<br /><br /> 説明: ネットワーク パケットのバイト単位のサイズです。 このパケット サイズ プロパティの値は 512 ～ 32,767 にする必要があります。 SQL Server のネットワーク パケット サイズの既定の OLE DB Driver は、4,096 です。|  
-|SSPROP_INIT_TAGCOLUMNCOLLATION|型: BOOL <br /><br /> R/W: 書き込み<br /><br /> 既定値: FALSE <br /><br /> 説明: サーバー側カーソルが使用されているとき、データベースの更新中に使用されます。 このプロパティは、クライアントのコード ページではなく、サーバーから取得した照合順序情報を使用してデータにタグを付けます。 現在、このプロパティは、分散クエリ プロセスでしか使われていません。これは、分散クエリ プロセスでは変換先データの照合順序が認識されていて、データが適切に変換されるためです。|  
+|SSPROP_INIT_TAGCOLUMNCOLLATION|型: BOOL<br /><br /> R/W: 書き込み<br /><br /> 既定値: FALSE<br /><br /> 説明: サーバー側カーソルが使用されているとき、データベースの更新中に使用されます。 このプロパティは、クライアントのコード ページではなく、サーバーから取得した照合順序情報を使用してデータにタグを付けます。 現在、このプロパティは、分散クエリ プロセスでしか使われていません。これは、分散クエリ プロセスでは変換先データの照合順序が認識されていて、データが適切に変換されるためです。|  
 |SSPROP_INIT_TRUST_SERVER_CERTIFICATE<a href="#table1_1"><sup>**1**</sup></a>|型 : VT_BOOL<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明: サーバー証明書の検証の有効化または無効化に使用されます。 このプロパティは読み取り/書き込みですが、接続の確立後にこの値の設定が試みられると、エラーが発生します。<br /><br /> このプロパティは、クライアントが証明書の検証を要求するよう構成されている場合は、無視されます。 ただし、アプリケーションは、このプロパティを SSPROP_INIT_ENCRYPT と共に使用して、クライアントが暗号化を要求するよう構成されておらず、証明書がクライアント側に準備されていない場合でも、アプリケーションとサーバー間の接続が確実に暗号化されるようにすることができます。<br /><br /> クライアント アプリケーションでは、接続を開いた後にこの属性をクエリして、実際に使用されている暗号化と検証の設定を判断できます。<br /><br /> 注: 証明書の検証なしで暗号化を使用する場合、パケット スニッフィングに対してある程度の保護は実現できますが、中間者攻撃に対しては保護できません。 この場合、サーバー証明書を検証せずに、サーバーに送られるログインとデータの暗号化が行われます。<br /><br /> 詳細については、「[検証を伴わない暗号化の使用](../../oledb/features/using-encryption-without-validation.md)」を参照してください。|  
-|SSPROP_INIT_USEPROCFORPREP|型 : VT_I4<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値: SSPROPVAL_USEPROCFORPREP_ON <br /><br /> 説明: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを使用するかどうか。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の一時ストアド プロシージャを使用して **ICommandPrepare** インターフェイスをサポートすることを定義します。 このプロパティは SQL Server 6.5 に接続するときに限り意味がありました。 これ以降のバージョンでは、このプロパティは無視されます。<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF: コマンドを準備するときには、一時ストアド プロシージャが作成されません。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON: コマンドを準備するときに、一時ストアド プロシージャが作成されます。 セッションが解放されると、作成された一時ストアド プロシージャは削除されます。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP: コマンドを準備するときに、一時ストアド プロシージャが作成されます。 コマンドが **ICommandPrepare::Unprepare** を使用して準備されていない場合、**ICommandText::SetCommandText** を使用してコマンド オブジェクトに新しいコマンドが指定されたとき、またはコマンドへのアプリケーション参照がすべて解放されたときに、プロシージャは削除されます。|  
+|SSPROP_INIT_USEPROCFORPREP|型 : VT_I4<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値: SSPROPVAL_USEPROCFORPREP_ON<br /><br /> 説明: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを使用するかどうか。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の一時ストアド プロシージャを使用して **ICommandPrepare** インターフェイスをサポートすることを定義します。 このプロパティは SQL Server 6.5 に接続するときに限り意味がありました。 これ以降のバージョンでは、このプロパティは無視されます。<br /><br /> SSPROPVAL_USEPROCFORPREP_OFF: コマンドを準備するときには、一時ストアド プロシージャが作成されません。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON: コマンドを準備するときに、一時ストアド プロシージャが作成されます。 セッションが解放されると、作成された一時ストアド プロシージャは削除されます。<br /><br /> SSPROPVAL_USEPROCFORPREP_ON_DROP: コマンドを準備するときに、一時ストアド プロシージャが作成されます。 コマンドが **ICommandPrepare::Unprepare** を使用して準備されていない場合、**ICommandText::SetCommandText** を使用してコマンド オブジェクトに新しいコマンドが指定されたとき、またはコマンドへのアプリケーション参照がすべて解放されたときに、プロシージャは削除されます。|  
 |SSPROP_INIT_WSID|型 : VT_BSTR<br /><br /> R/W: 読み取り/書き込み<br /><br /> 説明: ワークステーションを識別する文字列です。|  
   
 
@@ -84,7 +84,7 @@ ms.locfileid: "56744522"
  プロバイダー固有のプロパティ セット DBPROPSET_SQLSERVERDATASOURCEINFO には、OLE DB Driver for SQL Server が追加のプロパティを定義します。参照してください[データ ソース情報プロパティ](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)詳細についてはします。  
   
 ## <a name="the-ole-db-driver-for-sql-server-string"></a>OLE DB Driver for SQL Server の文字列  
- SQL Server の OLE DB Driver は、プロバイダー文字列のプロパティの値で、ODBC のような構文を認識します。 プロバイダーの文字列プロパティは、OLE DB データ ソースへの接続が確立される時点で、OLE DB 初期化プロパティ DBPROP_INIT_PROVIDERSTRING の値として提供されます。 このプロパティは、OLE DB データ ソースへの接続の実装に必要な OLE DB プロバイダー固有の接続データを示します。 この文字列内では、要素がセミコロンを使用して区切られます。 文字列の最後の要素には、セミコロンを付けて、終端を示す必要があります。 各要素は、キーワード、等号文字、初期化時に渡される値で構成されます。 例 :  
+ SQL Server の OLE DB Driver は、プロバイダー文字列のプロパティの値で、ODBC のような構文を認識します。 プロバイダーの文字列プロパティは、OLE DB データ ソースへの接続が確立される時点で、OLE DB 初期化プロパティ DBPROP_INIT_PROVIDERSTRING の値として提供されます。 このプロパティは、OLE DB データ ソースへの接続の実装に必要な OLE DB プロバイダー固有の接続データを示します。 この文字列内では、要素がセミコロンを使用して区切られます。 文字列の最後の要素には、セミコロンを付けて、終端を示す必要があります。 各要素は、キーワード、等号文字、初期化時に渡される値で構成されます。 例:  
   
 ```  
 Server=MyServer;UID=MyUserName;  

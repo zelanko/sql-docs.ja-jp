@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba5046a2036b88c3ec55499a6e86609d8b050f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762234"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString (long, java.lang.String, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +62,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この setString メソッドは、java.sql.Clob インターフェイスで、setString メソッドによって指定されます。  
+ この setString メソッドは、java.sql.Clob インターフェイスの setString メソッドで規定されています。  
   
  文字データは、指定された開始位置から上書きされ、CLOB の初期データの長さを上書きできます。 開始位置に CLOB の長さ + 1 の値を指定すると、文字列が追加されます。 開始位置に CLOB の長さ + 2 以上 (または 0 以下) の値を指定すると、位置エラーがスローされます。  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6959aec6b60713ed22e138c44139e0581f6e0ac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795932"
 ---
 # <a name="stored-procedures---calling"></a>ストアド プロシージャ - 呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,9 +96,9 @@ ms.locfileid: "47740630"
   
  ODBC CALL エスケープ シーケンスを使用してプロシージャを呼び出す場合の一般的な構文は、次のとおりです。  
   
- {**[? =]****呼び出す**_プロシージャ\_名前_[**(**[*パラメーター*] [**、**[_パラメーター_].**)**]}  
+ { **[?=]** **call**_procedure\_name_[ **(** [*parameter*][ **,** [_parameter_]]... **)** ]}  
   
- 例 :  
+ 例:  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
