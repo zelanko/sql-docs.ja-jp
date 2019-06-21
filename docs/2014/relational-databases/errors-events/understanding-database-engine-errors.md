@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761680"
 ---
 # <a name="understanding-database-engine-errors"></a>データベース エンジン エラーについて
@@ -36,7 +36,7 @@ ms.locfileid: "62761680"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内のすべてのシステム エラー メッセージおよびユーザー定義のエラー メッセージは、 **sys.messages** カタログ ビューに含まれています。 RAISERROR ステートメントを使用すると、アプリケーションにユーザー定義エラーを返すことができます。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 名前空間、ActiveX Data Objects (ADO)、OLE DB、Open Database Connectivity (ODBC) などのデータベース API はすべて、基本的なエラー属性を報告します。 この情報には、エラー番号およびメッセージ文字列が含まれています。 ただし、すべての API で他のすべてのエラー属性が報告されるわけではありません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 名前空間、ActiveX Data Objects (ADO)、OLE DB、Open Database Connectivity (ODBC) などのデータベース API はすべて、基本的なエラー属性を報告します。 この情報には、エラー番号およびメッセージ文字列が含まれています。 ただし、すべての API で他のすべてのエラー属性が報告されるわけではありません。  
   
  TRY...CATCH 構造の TRY ブロックの適用範囲内で発生したエラーの詳細は、関連付けられた CATCH ブロックの適用範囲内で ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE などの関数を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードで取得することができます。 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)」を参照してください。  
   
@@ -56,7 +56,7 @@ SELECT
   
  詳細については、「 [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)   
  [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd4c6f3729d4d090854a48a65ce6d6a2465a98e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721211"
 ---
 # <a name="filter-settings"></a>[フィルターの設定]
@@ -27,7 +27,7 @@ ms.locfileid: "62721211"
  フィルター選択する列の名前を選択します。 1 つ以上の列をフィルター処理の基にすることができます。  
   
  **[等しい]**  
- フィルターで使用する演算子 (たとえば、 **[次の値以下]**) を選択します。  
+ フィルターで使用する演算子 (たとえば、 **[次の値以下]** ) を選択します。  
   
  **[値 1]** および **[値 2]**  
  フィルターの値を入力または選択します。 ほとんどの演算子は **[値 1]** 列に値を入力するだけで済みますが、 **[次の値の間]** と **[次の値の範囲外]** の操作は、 **[値 2]** 列にも値を入力する必要があります。  

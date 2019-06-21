@@ -13,12 +13,12 @@ ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 664f0cdc9f01bf27e8f20c6799097948b0c100c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067464"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284900"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>ロールの作成および管理 (SSAS テーブル)
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 モデル プロジェクトのロールは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義します。 モデルが配置されると、データベース管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してロールを管理することができます。  
@@ -67,7 +67,7 @@ ms.locfileid: "66067464"
  [ロール &#40;SSAS テーブル&#41;](roles-ssas-tabular.md)   
  [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)   
  [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 関数&#40;DAX&#41;](/dax/username-function-dax)   
+ [CUSTOMDATA 関数&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

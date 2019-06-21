@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770859"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
@@ -132,7 +132,7 @@ ms.locfileid: "62770859"
 ## <a name="related-content"></a>関連コンテンツ  
  sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RAW ファイル ソース](raw-file-source.md)   
  [データ フロー](data-flow.md)  
   

@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1fffca14e9c30c5fd01cff88b7bb90608eb9d30d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185337"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
@@ -104,7 +104,7 @@ ms.locfileid: "63185337"
   
  `Restricting Data Access to Selected Data Elements`  
   
--    [ビュー](../views/views.md) と [プロシージャ](../stored-procedures/stored-procedures-database-engine.md)を使用したデータ アクセスの制限  
+-   [ビュー](../views/views.md) と [プロシージャ](../stored-procedures/stored-procedures-database-engine.md)を使用したデータ アクセスの制限  
   
 -   [行レベルのセキュリティ](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
@@ -136,7 +136,7 @@ ms.locfileid: "63185337"
   
  **カスタム監査の実装**  
   
--    [DDL Triggers](../triggers/ddl-triggers.md) と [DML Triggers](../triggers/dml-triggers.md)の作成  
+-   [DDL Triggers](../triggers/ddl-triggers.md) と [DML Triggers](../triggers/dml-triggers.md)の作成  
   
  ![小さいファイル フォルダー アイコン](../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**コンプライアンス**  
  **SQL Server**  

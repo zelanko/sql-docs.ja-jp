@@ -10,12 +10,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067282"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284935"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>サポートされているデータ型 (SSAS 表形式)
   このトピックでは、テーブル モデルで使用できるデータ型について説明し、データが計算される場合または Data Analysis Expressions (DAX) の数式で使用される場合の暗黙的な変換についても解説します。  
@@ -68,7 +68,7 @@ ms.locfileid: "66067282"
 >  131,072 文字を超える文字列を含む **varchar(max)** 列からインポートすることはできません。  
   
 ### <a name="table-data-type"></a>table データ型  
- また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](https://msdn.microsoft.com/library/ee634396.aspx)」を参照してください。  
+ また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](/dax/dax-function-reference)」を参照してください。  
   
 ##  <a name="bkmk_implicit"></a> DAX 数式の暗黙的なデータ型変換と明示的なデータ型変換  
  各 DAX 関数には、入力および出力として使用するデータ型について固有の要件があります。 たとえば、一部の関数は、特定の引数に整数や日付の指定が必要です。テキストやテーブルの指定が必要な関数もあります。  
@@ -188,9 +188,9 @@ ms.locfileid: "66067282"
 |BLANK OR BLANK|空白|[エラー]|  
 |BLANK AND BLANK|空白|[エラー]|  
   
- 特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](https://msdn.microsoft.com/library/ee634396.aspx)」セクションの各 DAX 関数のトピックを参照してください。  
+ 特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](/dax/dax-function-reference)」セクションの各 DAX 関数のトピックを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   
  [データのインポート &#40;SSAS テーブル&#41;](../import-data-ssas-tabular.md)  
   

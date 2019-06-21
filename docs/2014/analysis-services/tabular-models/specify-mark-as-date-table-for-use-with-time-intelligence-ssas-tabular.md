@@ -10,12 +10,12 @@ ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a39cbc319b7b0a62f31b55ded8adfe60a49314b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066559"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284884"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル)
   DAX 数式のタイム インテリジェンス機能を使用するには、日付テーブルと Date データ型の一意の識別子 (datetime) の列を指定する必要があります。 日付テーブルの列が一意の識別子として指定されている場合は、日付テーブル内の列と任意のファクト テーブルのリレーションシップを作成できます。  
@@ -52,6 +52,6 @@ ms.locfileid: "66066559"
   
 ## <a name="see-also"></a>参照  
  [計算 (SSAS テーブル)](calculations-ssas-tabular.md)   
- [タイム インテリジェンス関数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
+ [タイム インテリジェンス関数&#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

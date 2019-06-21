@@ -10,12 +10,12 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 063e68b8efad6227643d6309f08bcf3c6bf9c38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479321"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284989"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>[統合管理] 機能領域 (マスター データ マネージャー)
   [統合管理] 機能領域では、管理者はステージング テーブルからデータをインポートして、システムをサブスクライブするためのサブスクリプション ビューを作成できます。 管理者の詳細については、「[管理者 (マスター データ サービス)](administrators-master-data-services.md)」を参照してください。  
@@ -25,7 +25,7 @@ ms.locfileid: "65479321"
   
  [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](add-update-and-delete-data-master-data-services.md)  
   
- [ステージング処理を使用して明示的階層メンバーの移動&#40;マスター データ サービス&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [ステージング処理を使用して明示的階層メンバーの移動&#40;マスター データ サービス&#41;](add-update-and-delete-data-master-data-services.md)  
   
  [ステージング処理中に発生するエラーを表示する&#40;マスター データ サービス&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   

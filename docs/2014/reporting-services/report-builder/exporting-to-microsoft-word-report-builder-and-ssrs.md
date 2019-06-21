@@ -10,17 +10,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107876"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285029"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
   Word 表示拡張機能は、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 のネイティブ形式でレポートを表示します。 形式は、Office Open XML です。  
   
- Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックによって、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 と互換性があります。 互換機能パックの詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](https://go.microsoft.com/fwlink/?LinkID=205622)」を参照してください。  
+ Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックによって、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 および [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 と互換性があります。 
   
  このレンダラーによって生成されるファイルのコンテンツ タイプは **application/vnd.openxmlformats-officedocument.wordprocessingml.document** で、ファイルのファイル拡張子は .docx です。  
   

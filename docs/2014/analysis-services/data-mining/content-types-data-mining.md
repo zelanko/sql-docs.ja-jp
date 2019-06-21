@@ -27,14 +27,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085658"
 ---
 # <a name="content-types-data-mining"></a>コンテンツの種類 (データ マイニング)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
   
  *データ型* により、マイニング モデルを作成するときにその列に含まれるデータをアルゴリズムでどのように処理するかが決定されます。 列のデータ型を定義することで、列に含まれるデータの型に関する情報と、データの処理方法がアルゴリズムに通知されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の各データ型では、データ マイニング向けに 1 つまたは複数のコンテンツの種類がサポートされます。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66085658"
 ## <a name="classified"></a>分類済み  
  すべてのモデルで共通して使用される上記のコンテンツの種類の他にも、分類済みの列を使用して、一部のデータ型に対してコンテンツの種類を定義できます。 分類済みの列の詳細については、「[分類済みの列 (データ マイニング)](classified-columns-data-mining.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテンツの種類 (DMX)](/sql/dmx/content-types-dmx)   
  [データ型 (データ マイニング)](data-types-data-mining.md)   
  [データ型 &#40;DMX&#41;](/sql/dmx/data-types-dmx)   

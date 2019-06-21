@@ -10,19 +10,19 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ce4f0a9735c14aed6289527b47f76995e1c10d2
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740382"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285019"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>行フィルターを使用した動的なセキュリティの実装
   この補足のレッスンでは、動的なセキュリティを実装する追加のロールを作成します。 動的なセキュリティには、現在ログオンしているユーザーのユーザー名またはログイン ID に基づいた行レベルのセキュリティが用意されています。 詳細については、「[ロール (SSAS テーブル)](../analysis-services/tabular-models/roles-ssas-tabular.md)」 を参照してください。  
   
  動的なセキュリティを実装するには、データ ソースとしてのモデルへの接続を作成し、モデル オブジェクトとデータを参照できるユーザーの Windows ユーザー名を含むテーブルを、モデルに追加する必要があります。 このチュートリアルで作成するモデルは Adventure Works Corp. のコンテキスト内にありますが、このレッスンを完了するには、自分のドメインのユーザーが含まれているテーブルを追加する必要があります。 追加するユーザー名のパスワードは必要ありません。 自分のドメインの小人数のサンプル ユーザーを使用して Employee Security テーブルを作成するには、貼り付け機能を使用して、Excel スプレッドシートから従業員データを貼り付けます。 実際のシナリオでは、モデルに追加するユーザー名が含まれたテーブルは通常、実際のデータベースのテーブル (たとえば、実際の dimEmployee テーブルなど) をデータ ソースとして使用します。  
   
- 動的なセキュリティを実装するのには、2 つの新しい DAX 関数を使用します。[USERNAME 関数&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)と[LOOKUPVALUE 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 数式では LOOKUPVALUE 関数を使用して Employee Security テーブルの値を指定し、その値を USERNAME 関数に渡します。この関数は、ログオンしているユーザーのユーザー名がこのロールに属することを指定します。 ユーザーは、ロールの行フィルターで指定されたデータのみを参照できます。 このシナリオでは、販売担当者がインターネット上で自分の販売区域の売上データのみを参照できるように指定します。  
+ 動的なセキュリティを実装するのには、2 つの新しい DAX 関数を使用します。[USERNAME 関数&#40;DAX&#41; ](/dax/username-function-dax)と[LOOKUPVALUE 関数&#40;DAX&#41;](/dax/lookupvalue-function-dax)します。 行フィルター式に適用されるこれらの関数は、新しいロールで定義されています。 数式では LOOKUPVALUE 関数を使用して Employee Security テーブルの値を指定し、その値を USERNAME 関数に渡します。この関数は、ログオンしているユーザーのユーザー名がこのロールに属することを指定します。 ユーザーは、ロールの行フィルターで指定されたデータのみを参照できます。 このシナリオでは、販売担当者がインターネット上で自分の販売区域の売上データのみを参照できるように指定します。  
   
  この補足のレッスンを完了するには、一連の作業を行います。 この Adventure Works テーブル モデルに固有の作業が実際のシナリオに必ずしも適用されない場合には、そのように記載されています。 各作業には、作業の目的を表す追加情報が含まれています。  
   
@@ -198,8 +198,8 @@ ms.locfileid: "62740382"
      このユーザーは、自分が属する区域以外の区域のインターネット販売データを参照したり、クエリを実行することはできません。これは、Sales Employees by Territory ユーザー ロールで Sales Territory テーブルに定義された行フィルターによって、他の販売区域に関連するすべてのデータが効果的に保護されているためです。  
   
 ## <a name="see-also"></a>参照  
- [USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 関数&#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE 関数&#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 関数&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

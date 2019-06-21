@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066456"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284858"
 ---
 # <a name="tabular-model-data-access"></a>テーブル モデル データ アクセス
   Analysis Services のテーブル モデル データベースは、多次元モデルからデータまたはメタデータを取得するときとほぼ同じクライアント、インターフェイス、および言語でアクセスできます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
@@ -65,7 +65,7 @@ ms.locfileid: "66066456"
   
  また、XMLA EXECUTE コマンド ステートメントのコンテキスト内で DAX 式を使用し、DirectQuery モードで配置されているテーブル モデルにクエリを送信することもできます。  
   
- テーブル モデルに対して DAX を使用してクエリを実行する例については、「 [DAX クエリ構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)」を参照してください。  
+ DAX を使用して表形式モデルに対するクエリの例についてを参照してください [DAX クエリ構文のリファレンス] (/dax dax の構文のリファレンス
   
 ### <a name="mdx"></a>MDX (MDX)  
  メモリ内キャッシュを優先クエリ方式とするテーブル モデル (DirectQuery モードで配置されていないモデル) に対しては、MDX を使用してクエリを作成できます。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] などのクライアントでは、集計を実行する場合もモデルをデータ ソースとしてクエリする場合も DAX が使用されますが、MDX に慣れている方は、MDX の方が簡単にサンプル クエリを作成できる場合があります。「 [MDX 内でのメジャーの作成](../multidimensional-models/mdx/mdx-building-measures.md)」を参照してください。  

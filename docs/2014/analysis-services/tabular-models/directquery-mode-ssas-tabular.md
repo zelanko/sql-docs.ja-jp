@@ -12,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067227"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284871"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery モード (SSAS テーブル)
   Analysis Services では、データを取得し、リレーショナル データベース システムから直接データと集計を取得することによって、表形式モデルからレポートを作成できます。 を使用して*DirectQuery モード*します。 ここでは、メモリにのみ存在する標準テーブル モデルと、リレーショナル データ ソースにクエリを実行できるテーブル モデルの違いを紹介し、DirectQuery モードで使用するモデルを作成および配置する方法について説明します。  
@@ -82,7 +82,7 @@ ms.locfileid: "66067227"
   
 -   **クライアントの制限:** モデルが DirectQuery モードでは、ときに、DAX を使用してのみ照会できます。 MDX を使用してクエリを作成することはできません。 つまり、Excel では MDX を使用するため Excel PivotClient を使用できません。  
   
-     ただしでの DirectQuery モデルに対するクエリを作成できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]詳細については、XMLA Execute ステートメントの一部として DAX テーブル クエリを使用する場合は、次を参照してください。 [DAX クエリ構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)します。  
+     ただしでの DirectQuery モデルに対するクエリを作成できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]詳細については、XMLA Execute ステートメントの一部として DAX テーブル クエリを使用する場合は、[DAX クエリ構文のリファレンス] を参照してください (/dax dax の構文のリファレンス
   
  デザインの問題をすべて解決し、モデルをテストすると、配置の準備ができます。 この時点では、モデルに対するクエリに応答するための推奨される方法を設定できます。 ユーザーがキャッシュにアクセスできるようにしますか。または常にリレーショナル データ ソースのみ使用するようにしますか。  
   

@@ -27,18 +27,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831452"
 ---
 # <a name="integration-services-tasks"></a>Integration Services タスク
-  タスクとは、パッケージ制御フローで実行される作業の単位を定義する、制御フローの要素のことです。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、1 つ以上のタスクで構成されます。 パッケージに複数のタスクが含まれる場合、それらのタスクは優先順位制約によって順序が決定され、制御フロー内で連結されます。  
+  タスクとは、パッケージ制御フローで実行される作業の単位を定義する、制御フローの要素のことです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、1 つ以上のタスクで構成されます。 パッケージに複数のタスクが含まれる場合、それらのタスクは優先順位制約によって順序が決定され、制御フロー内で連結されます。  
   
  また、COM をサポートする Visual Basic などのプログラミング言語や、C# などの .NET プログラミング言語を使用して、カスタム タスクを記述することもできます。  
   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、パッケージを操作するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のグラフィック ツールであり、パッケージ制御フローを作成するためのデザイン画面、およびタスクを構成するためのカスタム エディターが用意されています。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラムし、プログラムによってパッケージを作成することもできます。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーは、パッケージを操作するための [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のグラフィック ツールであり、パッケージ制御フローを作成するためのデザイン画面、およびタスクを構成するためのカスタム エディターが用意されています。 また、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラムし、プログラムによってパッケージを作成することもできます。  
   
 ## <a name="types-of-tasks"></a>タスクの種類  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、次の種類のタスクが含まれます。  

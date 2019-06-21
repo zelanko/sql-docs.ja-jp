@@ -10,12 +10,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066629"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284857"
 ---
 # <a name="roles-ssas-tabular"></a>ロール (SSAS テーブル)
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 各ロールには、Windows ユーザー名または Windows グループ別のメンバー、および権限 (読み取り、処理、および管理者) があります。 ロールのメンバーは、ロール権限によって定義されたとおりにモデル上で各種操作を実行できます。 読み取り権限を付与して定義されたロールでは、行レベル フィルターを使用して行レベルでのセキュリティを向上させることもできます。  
@@ -96,8 +96,8 @@ ms.locfileid: "66066629"
   
 |関数|説明|  
 |--------------|-----------------|  
-|[USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|現在ログオンしているユーザーの domain\username を返します。|  
-|[CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|接続文字列の CustomData プロパティを返します。|  
+|[USERNAME 関数&#40;DAX&#41;](/dax/username-function-dax)|現在ログオンしているユーザーの domain\username を返します。|  
+|[CUSTOMDATA 関数&#40;DAX&#41;](/dax/customdata-function-dax)|接続文字列の CustomData プロパティを返します。|  
   
  LOOKUPVALUE 関数を使用すると、USERNAME 関数で返されるユーザー名または CustomData 関数で返される文字列と同じ Windows ユーザー名を含む列の値が返されます。 同じテーブルまたは関連テーブルの中で、LOOKUPVALUE で返された値と一致する値だけが照会されるように制限できます。  
   
@@ -137,11 +137,11 @@ ms.locfileid: "66066629"
 |-----------|-----------------|  
 |[ロールの作成および管理 &#40;SSAS テーブル&#41;](create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パースペクティブ &#40;SSAS テーブル&#41;](perspectives-ssas-tabular.md)   
  [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 関数&#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE 関数&#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 関数&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   
