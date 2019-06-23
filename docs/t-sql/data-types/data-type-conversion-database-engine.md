@@ -89,13 +89,13 @@ CAST ( $157.27 AS VARCHAR(10) )
 |--------------------------|----------------------------|  
 |**char**、**varchar**、**text**、**nvarchar**、**ntext**|**String**|  
 |**decimal**、**numeric**|**String**|  
-|**bit**|**ブール値**|  
+|**bit**|**Boolean**|  
 |**binary**、**varbinary**、**image**|1 次元 **Byte()** 配列|  
 |**int**|**Long**|  
 |**smallint**|**Integer**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
-|**real**|**単一**|  
+|**real**|**Single**|  
 |**money**、 **smallmoney**|**Currency**|  
 |**datetime**、**smalldatetime**|**Date**|  
 |上記以外は NULL に設定|null 値に設定された **Variant**|  
