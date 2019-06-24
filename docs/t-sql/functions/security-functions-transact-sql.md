@@ -29,7 +29,7 @@ ms.locfileid: "65945321"
 # <a name="security-functions-transact-sql"></a>セキュリティ関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  次の関数は、セキュリティの管理に役立つ情報を返します。 追加の関数については、「[暗号化機能と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/cryptographic-functions-transact-sql.md).  
+  次の関数は、セキュリティの管理に役立つ情報を返します。 追加となる関数[暗号化関数&#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)の下にリストされています。  
   
 |||  
 |-|-|  
