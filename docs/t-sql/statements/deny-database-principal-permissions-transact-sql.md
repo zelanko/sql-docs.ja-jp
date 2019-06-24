@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327683"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644576"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (データベース プリンシパルの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +71,15 @@ DENY permission [ ,...n ]
  データベース プリンシパルで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  USER ::*database_user*  
- 権限を拒否するユーザーのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するユーザーのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  ROLE ::*database_role*  
- 権限を拒否するロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  APPLICATION ROLE ::*application_role*  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 権限を拒否するアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  

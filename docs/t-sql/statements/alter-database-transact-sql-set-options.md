@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826927"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -2934,7 +2934,7 @@ RESULT_SET_CACHING { ON | OFF}
 > [!Note]
 > この機能をすべてのリージョンにロールアウトしながら、ご利用にインスタンスにデプロイされたバージョンと、機能の可用性に関する最新の[ Azure SQL DW リリースノート](/azure/sql-data-warehouse/release-notes-10-0-10106-0)を確認してください。
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } (Azure SQL Data Warehouse Gen2 のプレビュー): このコマンドは、マスター データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という名前の新しい列が sys.databases に導入され、データベースの結果キャッシュ設定を示します。  
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } Azure SQL Data Warehouse Gen2 のみに適用 (プレビュー) このコマンドは、マスター データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という名前の新しい列が sys.databases に導入され、データベースの結果キャッシュ設定を示します。  
 
 ON: このデータベースから返されたクエリの結果セットは Azure SQL Data Warehouse ストレージにキャッシュされます。
 

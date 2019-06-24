@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 866600d2400dc84e597999eaaf88db08f65f9e89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045411"
 ---
 # <a name="mssqlserver2518"></a>MSSQLSERVER_2518
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47855630"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_NO_EXPRESSION_EVAL_CLR_DISABLED|  
-|メッセージ テキスト|オブジェクト ID O_ID (オブジェクト "O_NAME") : 共通言語ランタイム (CLR) が無効になっているので、このオブジェクトでは計算列とユーザー定義型を確認できません。|  
+|メッセージ テキスト|オブジェクト ID O_ID (オブジェクト "O_NAME"):共通言語ランタイム (CLR) が無効になっているので、このオブジェクトでは計算列とユーザー定義型を確認できません。|  
   
 ## <a name="explanation"></a>説明  
 この情報メッセージは、クエリ プロセッサが、計算列と共通言語ランタイム (CLR) のユーザー定義型を評価するための内部オブジェクトを DBCC に提供できなかったことを示しています。 この問題は、いずれかの列に CLR が関係しているにもかかわらず、CLR が有効化されていないために発生しました。 内部オブジェクトはすべての列に及んでいます。 このため、1 つの列を評価できないと、内部オブジェクトの作成ができなくなります。 つまり、計算列の正当性チェックが行われなかったり、DBCC でインデックスとベース テーブルの整合性をチェックする際に計算列が使用されないことを意味します。  

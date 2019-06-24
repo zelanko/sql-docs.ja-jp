@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 453c1a2aad80b9aa607a9d948660a78b5195c314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045221"
 ---
 # <a name="mssqlserver2574"></a>MSSQLSERVER_2574
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47720910"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のページ P_ID が空です。 これは、B-Tree のレベル LEVEL では許可されません。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のページ P_ID が空です。 これは、B-Tree のレベル LEVEL では許可されません。|  
   
 ## <a name="explanation"></a>説明  
 指定されたインデックスのリーフ レベルより上位の B-Tree ページが空であり、行がありません。 この動作は、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] のリーフ レベル ページでは可能ですが、各ツリー レベルでは一切許可されていません。  

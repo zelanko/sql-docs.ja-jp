@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a32b7c56eeeef071319e1e08010113e5924ae6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838420"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694395"
 ---
 # <a name="mssqlserver7907"></a>MSSQLSERVER_7907
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47838420"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー : パーティション ID PN_ID のディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
+|メッセージ テキスト|テーブル エラー:パーティション ID PN_ID のディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
   
 ## <a name="explanation"></a>説明  
 列ディレクトリの名前は、パーティションのリレーショナル エンジン列 ID です。 列ディレクトリ名を列 ID に変換できない場合、このディレクトリは有効な列ディレクトリではありません。  

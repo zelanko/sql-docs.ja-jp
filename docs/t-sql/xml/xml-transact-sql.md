@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a61816e39947bede45fff894facab912617b49be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62859878"
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
   
 ## <a name="arguments"></a>引数  
  CONTENT  
- **xml** インスタンスを整形式の XML フラグメントに制限します。 XML データの最上位レベルには、0 個以上の要素を複数含めることができ、 テキスト ノードも許可されます。  
+ **xml** インスタンスを整形式の XML フラグメントに制限します。 XML データの最上位レベルには、0 個以上の要素を複数含めることができ、 最上位レベルにはテキスト ノードも許可されます。  
   
  これは既定の動作です。  
   

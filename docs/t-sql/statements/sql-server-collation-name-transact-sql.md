@@ -19,11 +19,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f08564eb8821df4d25bf352ae3afce8afbc7dae
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928669"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 照合順序名 (Transact-SQL)
 
@@ -71,7 +71,7 @@ WHERE name LIKE 'SQL%';
 ```
 
 > [!NOTE]
-> 並べ替え順 ID 80 では、コード ページ 1250 およびバイナリ順の任意の Window 照合順序を使用します。 例 :Albanian_BIN、Croatian_BIN、Czech_BIN、Romanian_BIN、Slovak_BIN、Slovenian_BIN。
+> 並べ替え順 ID 80 では、コード ページ 1250 およびバイナリ順の任意の Window 照合順序を使用します。 例:Albanian_BIN、Croatian_BIN、Czech_BIN、Romanian_BIN、Slovak_BIN、Slovenian_BIN。
 
 ## <a name="see-also"></a>参照
 

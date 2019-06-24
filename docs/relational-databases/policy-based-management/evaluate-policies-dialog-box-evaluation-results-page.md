@@ -14,33 +14,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ff79f1ad81a492452404324d20e92c2251b2d4f8
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63007798"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このダイアログ ボックスを使用すると、ポリシーの評価結果を表示したり、ポリシーに準拠していない対象セットにポリシー ベースの管理ポリシーを適用したりできます。  
   
-## <a name="options"></a>[変数]  
- **[結果: ポリシー]**  
+## <a name="options"></a>オプション  
+ **結果:ポリシー**  
  評価されるポリシーの名前。 このボックスは読み取り専用です。  
   
- **[結果: メッセージ]**  
+ **結果:メッセージ**  
  エラーが発生した場合に役立つ情報へのリンク。  
   
- **[対象の詳細: サーバー]**  
+ **対象の詳細:サーバー**  
  ポリシーが評価される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス。  
   
- **[対象の詳細: 対象]**  
+ **対象の詳細:対象**  
  ポリシーが評価される対象。  
   
- **[対象の詳細: 詳細]**  
+ **対象の詳細:詳細**  
  ポリシーの評価に関する詳細が表示される **[結果の詳細ビュー]** ダイアログ ボックスへのリンク。  
   
- **[対象の詳細: メッセージ]**  
+ **対象の詳細:メッセージ**  
  エラーが発生した場合に役立つ情報へのリンク。  
   
 ## <a name="see-also"></a>参照  

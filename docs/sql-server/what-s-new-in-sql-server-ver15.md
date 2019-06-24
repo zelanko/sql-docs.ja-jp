@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
+ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836301"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298224"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -233,7 +233,6 @@ Community Technology Preview (CTP) 3.0 は、[!INCLUDE[sql-server-2019](../inclu
 |クエリの実行を続行する前に `SELECT` が、統計更新の同期操作の完了を待機している場合は、動的管理ビュー `sys.dm_exec_requests` の `command` 列に `SELECT (STATMAN)` が表示されます。 | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |新しい待機の種類 `WAIT_ON_SYNC_STATISTICS_REFRESH` は `sys.dm_os_wait_stats` 動的管理ビューに表示されます。 これには、統計更新の同期操作に費やされたインスタンス レベルの累積時間が表示されます。|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |ハイブリッド バッファー プールとは、永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされるという、SQL Server データベース エンジンの新しい機能です。|[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では静的データ マスクが導入されています。 静的データ マスクを使用することで、SQL Server データベースのコピー内の機密データをサニタイズすることができます。|[静的データ マスク](../relational-databases/security/static-data-masking.md) |
 |グラフ一致クエリで派生テーブルまたはビューの別名を使用する |[グラフ エッジ制約](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: afe254580b59dbfea6d486b2999f97642c145d7f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62735120"
 ---
 # <a name="mssqlserver605"></a>MSSQLSERVER_605
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51667451"
   
 -   オペレーティング システムから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に、処理が途中であるにもかかわらず I/O 操作が完了したことが通知された場合。実際のデータの破損がない場合でも、エラー メッセージが表示されます。  
   
-オプティマイザー ヒント NOLOCK を使用してクエリを実行しているか、トランザクション分離レベルを READ UNCOMMITTED に設定している場合。 NOLOCK または READ UNCOMMITTED を使用するクエリで、別のユーザーによる移動または変更が実行中であるデータを読み取ろうとすると、605 エラーが発生します。 一時的な 605 エラーかどうかを確認するには、後でクエリを再実行してください。 詳細については、サポート技術情報の資料 [235880](https://support.microsoft.com/kb/235880/en-us): 「SQL Server で、オプティマイザー ヒント NOLOCK を指定してクエリを実行したり、分離レベルを READ UNCOMMITTED に設定すると、エラー 605 が表示される」を参照してください。  
+オプティマイザー ヒント NOLOCK を使用してクエリを実行しているか、トランザクション分離レベルを READ UNCOMMITTED に設定している場合。 NOLOCK または READ UNCOMMITTED を使用するクエリで、別のユーザーによる移動または変更が実行中であるデータを読み取ろうとすると、605 エラーが発生します。 一時的な 605 エラーかどうかを確認するには、後でクエリを再実行してください。 詳細については、サポート技術情報 [235880](https://support.microsoft.com/kb/235880/en-us) の「SQL Server で、オプティマイザー ヒント NOLOCK を指定してクエリを実行したり、分離レベルを READ UNCOMMITTED に設定したりすると、エラー 605 が表示される」を参照してください。  
   
 一般的に、データ アクセス中にエラーが発生しても、後に続く DBCC CHECKDB 操作がエラーなしで完了した場合、605 エラーは一時的なエラーであったと考えられます。  
   

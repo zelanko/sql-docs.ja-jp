@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644379"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  共通テーブル式は、SELECT、INSERT、UPDATE、CREATE VIEW の各ステートメントでも使用できます。 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  削除するランダムな行数または比率 (%) を指定します。 *expression* は行数または行の比率 (%) にすることができます。 INSERT、UPDATE、または DELETE を使用する TOP 式で参照される行は、順序付けされません。 詳細については、「[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)」を参照してください。  
   
  FROM  
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  カーソル変数の名前を指定します。 カーソル変数は、更新可能なカーソルを参照する必要があります。  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のステートメント処理をカスタマイズするためのオプティマイザー ヒントを示すキーワードです。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  

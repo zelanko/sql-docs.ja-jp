@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62706734"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 内の SQL Server データ ファイル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "57579510"
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure で SQL Server データ ファイルを使用する理由 
   
--   **容易で迅速な移行の利点:** この機能を用いると、オンプレミスのコンピューターの間でも、またオンプレミス環境とクラウド環境の間でも、アプリケーションを変更することなくデータベースを 1 つずつ移動するため、移行プロセスが容易になります。 このため、既存の内部設置型のインフラストラクチャを維持しつつ、インクリメンタルな移行を行うことができます。 さらに、内部設置型の環境の複数拠点でアプリケーションを実行する必要がある場合も、集中管理されたデータ ストレージにアクセスできることで、アプリケーション ロジックが簡素化されます。 場合によっては、地理的に分散している各地にコンピューター センターを短期間でセットアップし、多種多様なソースからデータを収集することもできます。 この新しい機能強化を使用することにより、データをある場所から別の場所に移動する代わりに、多数のデータベースを Microsoft Azure BLOB として格納しておき、Transact-SQL スクリプトを実行して、ローカル コンピューターまたは仮想マシンにデータベースを作成することができます。  
+-   **容易で迅速な移行の利点:** この機能を使うと、オンプレミスのコンピューターの間でも、またオンプレミス環境とクラウド環境の間でも、アプリケーションを変更することなくデータベースを 1 つずつ移動するため、移行プロセスが容易になります。 このため、既存の内部設置型のインフラストラクチャを維持しつつ、インクリメンタルな移行を行うことができます。 さらに、内部設置型の環境の複数拠点でアプリケーションを実行する必要がある場合も、集中管理されたデータ ストレージにアクセスできることで、アプリケーション ロジックが簡素化されます。 場合によっては、地理的に分散している各地にコンピューター センターを短期間でセットアップし、多種多様なソースからデータを収集することもできます。 この新しい機能強化を使用することにより、データをある場所から別の場所に移動する代わりに、多数のデータベースを Microsoft Azure BLOB として格納しておき、Transact-SQL スクリプトを実行して、ローカル コンピューターまたは仮想マシンにデータベースを作成することができます。  
   
 -   **コストと無制限のストレージの利点:** この機能を使用すると、オンプレミスのコンピューティング リソースを活用しつつ、Microsoft Azure のオフサイト ストレージを無制限に確保できます。 格納場所として Microsoft Azure を使用すると、ハードウェア管理のオーバーヘッドがなく、アプリケーション ロジックに専念することが容易になります。 内部設置型のコンピューティング ノードが失われた場合は、データを移動することなく新しいノードをセットアップできます。  
   
@@ -102,7 +102,7 @@ ON
   
 -   この機能の現在のリリースでは、Azure Storage に **FileStream** データを格納することはできません。 **FileStream** データは、Azure Storage に格納されているデータ ファイルを含むデータベースに格納することも可能ですが、FileStream のデータ ファイルはすべてローカルのストレージに格納する必要があります。  FileStream データはローカルのストレージに存在する必要があるので、それを Azure Storage を使用するコンピューター間で移動することはできません。そのため、FileStream に関連付けられているデータを別のコンピューターに移動するには、[従来の手法](../../relational-databases/blob/move-a-filestream-enabled-database.md)を使用することをお勧めします。  
   
--   現在、この新しい機能強化では、Azure Storage 内の同じデータベース ファイルに複数の SQL Server インスタンスで同時にアクセスすることはできません。 ServerA がアクティブなデータベース ファイルとオンライン接続されているときに、誤って起動された ServerB に同じデータ ファイルを指すデータベースがある場合、2 番目のサーバーでは、次のエラーでデータベースの起動に失敗します。エラー コード **5120 物理ファイル "%.\*ls" を開けません。オペレーティング システム エラー %d: "%ls"**。  
+-   現在、この新しい機能強化では、Azure Storage 内の同じデータベース ファイルに複数の SQL Server インスタンスで同時にアクセスすることはできません。 ServerA がアクティブなデータベース ファイルとオンライン接続されているときに、誤って起動された ServerB に同じデータ ファイルを指すデータベースがある場合、2 番目のサーバーでは、次のエラーでデータベースの起動に失敗します。エラー コード **5120 物理ファイル "%.\*ls" を開けません。オペレーティング システム エラー %d: "%ls"** 。  
   
 -   Azure 機能で SQL Server データ ファイルを使用して Azure Storage 内に格納できるのは、.mdf、.ldf、.ndf ファイルのみです。  
   
@@ -128,9 +128,9 @@ ON
  SQL Server 2014 以降では、Azure Storage 機能内の SQL Server データ ファイルと組み合わせて使用する目的で、1 つの新しい SQL Server オブジェクトが追加されました。 新しい SQL Server オブジェクトは [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) と呼ばれます。これをシステム モニターで使用すると、SQL Server を Microsoft Azure Storage と共に使用する場合のアクティビティを監視できます。  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio のサポート  
- SQL Server Management Studio では、複数のダイアログ ウィンドウでこの機能を使用することができます。 たとえば、ストレージ コンテナーの URL パスを入力します (たとえば、 https://teststorageaccnt.blob.core.windows.net/testcontainer/)。
+ SQL Server Management Studio では、複数のダイアログ ウィンドウでこの機能を使用することができます。 たとえば、ストレージ コンテナーの URL パスを入力します (たとえば、 https://teststorageaccnt.blob.core.windows.net/testcontainer/ )。
  
- **[新しいデータベース]** 、 **[データベースのアタッチ]**、 **[データベースの復元]** などの複数のダイアログ ウィンドウの **[パス]** として入力できます。 詳細については、「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
+ **[新しいデータベース]** 、 **[データベースのアタッチ]** 、 **[データベースの復元]** などの複数のダイアログ ウィンドウの **[パス]** として入力できます。 詳細については、「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
 ### <a name="sql-server-management-objects-smo-support"></a>SQL Server 管理オブジェクト (SMO) のサポート  
  Azure 機能で SQL Server データ ファイルを使用する場合は、すべての SQL Server 管理オブジェクト (SMO) がサポートされます。 SMO オブジェクトにファイル パスが必要であれば、ローカル ファイル パスの代わりに BLOB の URL 形式 ( `https://teststorageaccnt.blob.core.windows.net/testcontainer/`など) を使用します。 SQL Server 管理オブジェクト (SMO) の詳細については、SQL Server オンライン ブックの「[SQL Server 管理オブジェクト &#40;SMO&#41; プログラミング ガイド](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) 」をご覧ください。  
@@ -147,14 +147,14 @@ ON
   
  **認証エラー**  
   
--   *資格情報 '%.\*ls' を削除できません。この資格情報は、アクティブなデータベース ファイルで使用されています。*   
+-   *資格情報 '%.\*ls' を削除できません。この資格情報は、アクティブなデータベース ファイルで使用されています。*    
     解決方法:Azure Storage にあるアクティブなデータベース ファイルで使用中の資格情報を削除しようとすると、このエラーが発生することがあります。 資格情報を削除するには、まずこのデータベース ファイルのある関連 BLOB を削除する必要があります。 アクティブなリースを保持している BLOB を削除するには、先にリースを終了する必要があります。  
   
--   *コンテナーに対して Shared Access Signature が正しく作成されていません。*   
+-   *コンテナーに対して Shared Access Signature が正しく作成されていません。*    
      解決方法:コンテナーに対して Shared Access Signature が正しく作成されていることを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」をご覧ください。  
   
--   *SQL Server 資格情報が正しく作成されていません。*   
-    解決方法:**[ID]** フィールドに 'Shared Access Signature' を使用して、シークレットが正しく作成されたことを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-3-database-backup-to-url.md)」をご覧ください。  
+-   *SQL Server 資格情報が正しく作成されていません。*    
+    解決方法: **[ID]** フィールドに 'Shared Access Signature' を使用して、シークレットが正しく作成されたことを確認します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../lesson-3-database-backup-to-url.md)」をご覧ください。  
   
  **BLOB リース エラー**  
   
@@ -168,8 +168,8 @@ ON
 2.  *ALTER ステートメントの実行中にエラーが発生しました*   
     解決方法:ALTER DATABASE ステートメントは、必ずデータベースがオンライン状態のときに実行してください。 データ ファイルを Azure Storage にコピーするときは常に、ブロック BLOB ではなくページ BLOB を作成します。 そうしないと、ALTER DATABASE は失敗します。 「[チュートリアル:Microsoft Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
   
-3.  *エラー コード 5120 物理ファイル "%.\*ls" を開けません。オペレーティング システム エラー %d: "%ls"*   
-    解決方法:現在、この新しい機能強化では、Azure Storage 内の同じデータベース ファイルに複数の SQL Server インスタンスで同時にアクセスすることはできません。 ServerA がアクティブなデータベース ファイルとオンライン接続されているときに、誤って起動された ServerB に同じデータ ファイルを指すデータベースがある場合、2 番目のサーバーでは、次のエラーでデータベースの起動に失敗します。エラー コード *5120 物理ファイル "%.\*ls" を開けません。オペレーティング システム エラー %d: "%ls"*。  
+3.  *エラー コード 5120 物理ファイル "%.\*ls" を開けません。オペレーティング システム エラー %d: "%ls"*    
+    解決方法:現在、この新しい機能強化では、Azure Storage 内の同じデータベース ファイルに複数の SQL Server インスタンスで同時にアクセスすることはできません。 ServerA がアクティブなデータベース ファイルとオンライン接続されているときに、誤って起動された ServerB に同じデータ ファイルを指すデータベースがある場合、2 番目のサーバーでは、次のエラーでデータベースの起動に失敗します。エラー コード *5120 物理ファイル "%.\*ls" を開けません。オペレーティング システム エラー %d: "%ls"* 。  
   
      この問題を解決するには、まず、Azure Storage 内のデータベース ファイルに ServerA からアクセスする必要があるかどうかを決定します。 必要ない場合は、Azure Storage 内のデータベース ファイルと ServerA との間の接続を削除します。 これを行うには、次の手順を実行します。  
   

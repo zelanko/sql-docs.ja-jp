@@ -16,17 +16,17 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047576"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>インメモリ OLTP (インメモリ最適化)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、トランザクション処理、データの取り込み、データの読み込みのパフォーマンス、および一時的なデータのシナリオを大幅に向上させることができます。  独自のメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャをすばやくテストするために必要な基本的なコードと知識については、
- -  「[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」をご覧ください。  
+ -  [クイック スタート 1:Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」を参照してください。  
  
 インメモリ OLTP について説明し、パフォーマンス上の利点を示す 17 分の動画:
 
@@ -55,7 +55,7 @@ ms.locfileid: "52506884"
   
 |トピック|[説明]|  
 |-----------|-----------------|  
-|[クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|インメモリ OLTP について深く掘り下げて考えます|
+|[クイック スタート 1:Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|インメモリ OLTP について深く掘り下げて考えます|
 |[概要と使用シナリオ](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|インメモリ OLTP の内容、およびパフォーマンス上の利点を活用するシナリオの概要です。|
 |[メモリ最適化テーブルを使用するための要件](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|メモリ最適化テーブルを使用するためのハードウェア要件、ソフトウェア要件、およびガイドラインについて説明します。|  
 |[インメモリ OLTP のコード サンプル](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|メモリ最適化テーブルを作成して使用する方法を示すコード例が記載されています。|  

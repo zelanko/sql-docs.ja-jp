@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62707127"
 ---
 # <a name="control-transaction-durability"></a>トランザクションの持続性の制御
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52513750"
     
  次のような場合は、トランザクションの遅延持続性の利用が適しています。    
     
- **ある程度のデータ損失を許容できる場合。**    
+ **ある程度のデータ損失を許容できる場合。**     
  ある程度のデータ損失を許容できる場合 (データの大部分を確保できていれば個々のレコードがそれほど重要ではない場合など) は、遅延持続性の使用を検討することができます。 一切のデータ損失を許容できない場合は、トランザクションの遅延持続性は使用しないでください。    
     
- **トランザクション ログの書き込みでボトルネックが発生している場合。**    
+ **トランザクション ログの書き込みでボトルネックが発生している場合。**     
  パフォーマンスの問題がトランザクション ログの書き込みにおける待機時間によるものであれば、トランザクションの遅延持続性を使用することがアプリケーションにとってのメリットになる可能性があります。    
     
- **ワークロードの競合率が高い場合。**    
+ **ワークロードの競合率が高い場合。**     
  競合レベルの高いワークロードがシステムに存在する場合、ロックの解放待ちに多くの時間が消費されます。 トランザクションの遅延持続性を使用すると、コミット時間を短縮できるため、早くロックを解放でき、結果として高いスループットにつながります。    
     
  ### <a name="delayed-transaction-durability-guarantees"></a>トランザクションの遅延持続性での保証   
@@ -135,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>表 1: ATOMIC ブロックの持続性    
+### <a name="table-1-durability-in-atomic-blocks"></a>表 1:ATOMIC ブロックの持続性    
     
 |ATOMIC ブロックの持続性オプション|既存のトランザクションが存在しない場合|処理中の (完全持続性または遅延持続性) トランザクションが存在する場合|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    

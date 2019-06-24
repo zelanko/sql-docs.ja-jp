@@ -15,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060089"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316663"
 ---
 # <a name="custom-messages-for-logging"></a>ログ記録用のカスタム メッセージ
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージや多くのタスクのログ エントリを書き込むための豊富なカスタム イベントが用意されています。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  
@@ -258,12 +258,8 @@ ms.locfileid: "66060089"
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
-|`XMLOperation`|タスクで実行される操作に関する情報を提供します。|  
+|`XMLOperation`|タスクで実行される操作に関する情報を提供します。|   
   
-## <a name="related-content"></a>関連コンテンツ  
- dougbert.com のブログ [「Integration Services タスクのカスタム イベントのログ記録」](https://go.microsoft.com/fwlink/?LinkId=150580)。  
-  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)  
-  
   

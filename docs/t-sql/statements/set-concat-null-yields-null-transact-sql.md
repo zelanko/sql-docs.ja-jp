@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fa91003f0afd18372119864175806b4a8b9b6655
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639329"
 ---
 # <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ SET CONCAT_NULL_YIELDS_NULL ON
 > [!NOTE]  
 >  SET CONCAT_NULL_YIELDS_NULL は、ALTER DATABASE の CONCAT_NULL_YIELDS_NULL 設定と同じ設定です。  
   
- SET CONCAT_NULL_YIELDS_NULL は、解析時ではなく実行時に設定されます。  
+ SET CONCAT_NULL_YIELDS_NULL の設定は、解析時ではなく実行時に設定されます。  
 
 インデックス付きビュー、計算列のインデックス、フィルター選択されたインデックス、または空間インデックスを作成または変更する場合は、SET CONCAT_NULL_YIELDS_NULL を **ON** に設定する必要があります。 SET CONCAT_NULL_YIELDS_NULL が **OFF** の場合、計算列にインデックスが設定されているテーブル、フィルター選択されたインデックス、空間インデックス、またはインデックス付きビューに対する CREATE、UPDATE、INSERT、および DELETE ステートメントはすべて失敗します。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)」の「SET ステートメントの使用に関する留意事項」を参照してください。
   

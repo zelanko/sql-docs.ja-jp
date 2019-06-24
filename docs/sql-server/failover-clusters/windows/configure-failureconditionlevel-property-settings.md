@@ -11,17 +11,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de1f8d1a64a7db68780509c27c8ceb219ce0917f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037266"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel プロパティ設定の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FailureConditionLevel プロパティを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) がフェールオーバーまたは再起動するための状態を設定します。 このプロパティへの変更はすぐに適用され、Windows Server フェールオーバー クラスター サービス (WSFC) または FCI リソースの再起動を必要としません。  
   
--   **作業を開始する準備:**  [FailureConditionLevel プロパティの設定](#Restrictions)、 [セキュリティ](#Security)  
+-   **作業を開始する準備:** [FailureConditionLevel プロパティの設定](#Restrictions)、[セキュリティ](#Security)  
   
 -   **FailureConditionLevel プロパティ設定の構成に使用する機能:** [PowerShell](#PowerShellProcedure)、 [フェールオーバー クラスター マネージャー](#WSFC)、 [Transact-SQL](#TsqlProcedure)  
   

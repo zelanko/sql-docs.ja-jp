@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a2dae52947d736ccc371e1cdc675924149c67cf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939811"
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,8 +53,8 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (以下の例外を参照)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
-|Del|OPEN|UPDATE|  
-|DROP|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
+|DELETE|OPEN|UPDATE|  
+|DROP|。|。|  
   
  OFF の場合、前の T-SQL ステートメントはそれぞれ目に見えない BEGIN TRANSACTION と目に見えない COMMIT TRANSACTION ステートメントによってバインドされます。 OFF の場合、トランザクション モードは "*オートコミット*" です。 T-SQL コードが明確に BEGIN TRANSACTION を発行する場合、トランザクション モードは "*明示的*" です。  
   

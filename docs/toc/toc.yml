@@ -214,9 +214,9 @@
             - name: ストレージ
               items:
                 - name: mssqlctl クラスターの記憶域プール
-                  href: ../big-data-cluster/reference-mssqlctl-storage.md
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
                 - name: mssqlctl クラスターの記憶域プールのマウント
-                  href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
 - name: ビジネス継続性
   items:
     - name: 概要
@@ -1382,7 +1382,7 @@
             - name: '[インデックスのプロパティ] の F1 ヘルプ'
               href: ../relational-databases/indexes/index-properties-f1-help.md
         - name: 列ストア インデックス
-          hrefe: ../relational-databases/indexes/columnstore-indexes-overview.md
+          href: ../relational-databases/indexes/columnstore-indexes-overview.md
           items:
             - name: 新機能
               href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md

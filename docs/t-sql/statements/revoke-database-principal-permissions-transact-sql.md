@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327403"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033841"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (データベース プリンシパルの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  データベース プリンシパルで取り消すことのできる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  USER ::*database_user*  
- 権限を取り消すユーザーのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すユーザーのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  ROLE ::*database_role*  
- 権限を取り消すロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  APPLICATION ROLE ::*application_role*  
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 権限を取り消すアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  GRANT OPTION  
  指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
@@ -124,7 +124,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="database-user-permissions"></a>データベース ユーザー権限  
- データベース ユーザーは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、データベース ユーザーで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ データベース ユーザーは、データベース レベルでセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、データベース ユーザーで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |データベース ユーザー権限|権限が含まれるデータベース ユーザー権限|権限が含まれるデータベース権限|  
 |------------------------------|-----------------------------------------|------------------------------------|  

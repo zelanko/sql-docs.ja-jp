@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab781712c96eeb473a85096c360a6101d6b1133c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033761"
 ---
 # <a name="drop-resource-pool-transact-sql"></a>DROP RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザー定義のリソース ガバナー リソース プールを削除します。  
+  ユーザー定義の Resource Governor リソース プールを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
@@ -49,7 +49,7 @@ DROP RESOURCE POOL pool_name
   
  リソース ガバナーの既定のプールや内部プールを削除することはできません。  
   
- DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
+ DDL ステートメントを実行する場合、Resource Governor の状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   

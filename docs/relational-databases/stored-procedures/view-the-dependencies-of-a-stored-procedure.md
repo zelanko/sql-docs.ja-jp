@@ -16,20 +16,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a4f5357e9645eb5ab1e55db96ae0138144ded8b9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639169"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>ストアド プロシージャの依存関係の表示
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャの依存関係を表示する方法について説明します。  
   
 ##  <a name="Top"></a>   
--   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [セキュリティ](#Security)  
+-   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
   
--   **プロシージャの依存関係を表示するのに使用するもの:**  [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
+-   **プロシージャの依存関係の表示に使用するもの:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   

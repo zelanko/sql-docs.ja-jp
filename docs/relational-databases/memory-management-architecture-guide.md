@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015484"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 
@@ -76,13 +76,13 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のメモリ管理の変更点
 
 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、次の 5 つの異なるメカニズムを利用してメモリが割り当てられていました。
--  **SPA (Single-page Allocator/単一ページ アロケータ)**。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで 8KB 以下のメモリ割り当てのみ含む。 構成オプションの *max server memory (MB)* と *min server memory (MB)* によって、SPA が利用する物理メモリの上限が決められていました。 同時にバッファー プールが SPA のメカニズムであり、これが単一ページ割り当てを最も多く利用していました。
--  **MPA (Multi-Page Allocator/複数ページ アロケータ)**。8KB より多くを要求するメモリ割り当て用。
+-  **SPA (Single-page Allocator/単一ページ アロケータ)** 。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで 8KB 以下のメモリ割り当てのみ含む。 構成オプションの *max server memory (MB)* と *min server memory (MB)* によって、SPA が利用する物理メモリの上限が決められていました。 同時にバッファー プールが SPA のメカニズムであり、これが単一ページ割り当てを最も多く利用していました。
+-  **MPA (Multi-Page Allocator/複数ページ アロケータ)** 。8KB より多くを要求するメモリ割り当て用。
 -  **CLR アロケータ**。CLR 初期化中に作成される SQL CLR ヒープとそのグローバル割り当てを含む。
--  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスの**[スレッド スタック](../relational-databases/memory-management-architecture-guide.md#stacksizes)** のメモリ割り当て。
--  **DWA (Direct Windows allocations/直接 Windows 割り当て)**。Windows に直接行われるメモリ割り当て要求。 モジュールによって行われ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスに読み込まれる、Windows のヒープ使用量と直接仮想割り当てが含まれます。 このようなメモリ割り当ての例としては、たとえば、拡張ストアド プロシージャ DLL からの割り当て、オートメーション プロシージャ (sp_OA 呼び出し) で作成されたオブジェクト、リンク サーバー プロバイダーからの割り当てがあります。
+-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスの **[スレッド スタック](../relational-databases/memory-management-architecture-guide.md#stacksizes)** のメモリ割り当て。
+-  **DWA (Direct Windows allocations/直接 Windows 割り当て)** 。Windows に直接行われるメモリ割り当て要求。 モジュールによって行われ、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスに読み込まれる、Windows のヒープ使用量と直接仮想割り当てが含まれます。 このようなメモリ割り当ての例としては、たとえば、拡張ストアド プロシージャ DLL からの割り当て、オートメーション プロシージャ (sp_OA 呼び出し) で作成されたオブジェクト、リンク サーバー プロバイダーからの割り当てがあります。
 
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、SPA、MPA、CLR 割り当てがすべて統合され、**"あらゆるサイズの" ページ アロケータ**になります。これは、構成オプションの *max server memory (MB)* と *min server memory (MB)* によって制御されるメモリ上限に含まれます。 この変更によって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーを通過するすべてのメモリ要件において、より正確にサイズを調整できるようになりました。 
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、SPA、MPA、CLR 割り当てがすべて統合され、 **"あらゆるサイズの" ページ アロケータ**になります。これは、構成オプションの *max server memory (MB)* と *min server memory (MB)* によって制御されるメモリ上限に含まれます。 この変更によって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーを通過するすべてのメモリ要件において、より正確にサイズを調整できるようになりました。 
 
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] ～ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードしたら、現在の *max server memory (MB)* 構成と *min server memory (MB)* 構成を注意深く見直してください。 これは、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降は、以前のバージョンに比べ、このような構成に含まれるメモリ割り当てが多くなっているためです。 この変更は [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] と [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] の 32 ビット バージョンと 64 ビット バージョン、[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] ～ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の 64 ビット バージョンに適用されます。
@@ -91,13 +91,13 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 |メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
-|単一ページ割り当て|可|はい。"あらゆるサイズの" ページ割り当てに統合。|
+|単一ページ割り当て|はい|はい。"あらゆるサイズの" ページ割り当てに統合。|
 |複数ページ割り当て|いいえ|はい。"あらゆるサイズの" ページ割り当てに統合。|
-|CLR 割り当て|いいえ|可|
+|CLR 割り当て|いいえ|はい|
 |スレッド スタック メモリ|いいえ|いいえ|
 |Windows からの直接割り当て|いいえ|いいえ|
 
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory 設定に指定されている値より多いメモリを割り当てる場合があります。 そのような動作は、**_Total Server Memory (KB)_** の値が (max server memory によって指定される) **_Target Server Memory (KB)_** の設定に既に到達しているときに発生することがあります。 メモリの断片化によって、複数ページ メモリ要求 (8 KB 超) を満たすだけの連続した空き容量がない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はメモリ要求を拒否せず、オーバーコミットを実行できます。 
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、max server memory 設定に指定されている値より多いメモリを割り当てる場合があります。 そのような動作は、 **_Total Server Memory (KB)_ ** の値が (max server memory によって指定される) **_Target Server Memory (KB)_ ** の設定に既に到達しているときに発生することがあります。 メモリの断片化によって、複数ページ メモリ要求 (8 KB 超) を満たすだけの連続した空き容量がない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はメモリ要求を拒否せず、オーバーコミットを実行できます。 
 
 この割り当ての実行直後、バックグラウンド タスクの*リソース モニター*がすべてのメモリ コンシューマーに信号を送り、割り当てられているメモリの解放を求め、*Total Server Memory (KB)* が *Target Server Memory (KB)* 仕様を下回るようにします。 そのため、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ使用量が短い時間だけ max server memory 設定を超えることがあります。 このような状況では、*Total Server Memory (KB)* パフォーマンス カウンター読み取り値が max server memory 設定と *Target Server Memory (KB)* 設定を超えます。
 
@@ -109,7 +109,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降の "memory_to_reserve" の変更点
-以前のバージョンの SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーは、**複数ページ アロケータ (MPA)**、**CLR アロケータ**、SQL Server プロセスの**スレッド スタック**のメモリ割り当て、**直接 Windows 割り当て (DWA)** で使用するために、プロセス VAS (Virtual Address Space/仮想アドレス空間) の一部を予約しました。 仮想アドレス空間のこの部分は、"Mem-To-Leave" または "non-Buffer Pool" 領域とも呼ばれています。
+以前のバージョンの SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーは、**複数ページ アロケータ (MPA)** 、**CLR アロケータ**、SQL Server プロセスの**スレッド スタック**のメモリ割り当て、**直接 Windows 割り当て (DWA)** で使用するために、プロセス VAS (Virtual Address Space/仮想アドレス空間) の一部を予約しました。 仮想アドレス空間のこの部分は、"Mem-To-Leave" または "non-Buffer Pool" 領域とも呼ばれています。
 
 このような割り当てのために予約される仮想アドレス空間は、構成オプション _**memory\_to\_reserve**_ によって決定されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用される初期値は 256 MB です。 初期値をオーバーライドするには、スタートアップ パラメーターの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* を使用します。 スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。
 
@@ -120,17 +120,17 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 |メモリ割り当ての種類| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降|
 |-------|-------|-------|
 |単一ページ割り当て|いいえ|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
-|複数ページ割り当て|可|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
-|CLR 割り当て|可|可|
-|スレッド スタック メモリ|可|可|
-|Windows からの直接割り当て|可|可|
+|複数ページ割り当て|はい|いいえ。"あらゆるサイズの" ページ割り当てに統合。|
+|CLR 割り当て|はい|はい|
+|スレッド スタック メモリ|はい|はい|
+|Windows からの直接割り当て|はい|はい|
 
 ## <a name="dynamic-memory-management"></a> 動的メモリ管理
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の既定のメモリ管理動作では、システムでメモリ不足を発生させることなく、必要な量のメモリを獲得します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、Microsoft Windows の Memory Notification API を使用してこれを実現しています。
 
 メモリを動的に使用する場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
   
-**[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のメモリ割り当て、コンパイル メモリ、すべてのキャッシュ (バッファー プールを含む)、[クエリ実行メモリ許可](#effects-of-min-memory-per-query)、[ロック マネージャー メモリ](#memory-used-by-sql-server-objects-specifications)、CLR<sup>1</sup> メモリ (基本的に、**[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** で見つかったメモリ クラーク) を制御します。 
+**[max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のメモリ割り当て、コンパイル メモリ、すべてのキャッシュ (バッファー プールを含む)、[クエリ実行メモリ許可](#effects-of-min-memory-per-query)、[ロック マネージャー メモリ](#memory-used-by-sql-server-objects-specifications)、CLR<sup>1</sup> メモリ (基本的に、 **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** で見つかったメモリ クラーク) を制御します。 
 
 <sup>1</sup>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降、CLR メモリは max_server_memory 割り当ての下で管理されます。
 

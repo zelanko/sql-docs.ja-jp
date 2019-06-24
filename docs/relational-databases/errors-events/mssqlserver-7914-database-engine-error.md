@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7993d5fcf8f9eacd4631abb65deb0d73d15d2ece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62865913"
 ---
 # <a name="mssqlserver7914"></a>MSSQLSERVER_7914
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47701140"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_REPAIR_ALLOCATION_PAGE_REBUILT|  
-|メッセージ テキスト|修復: P_ID の PAGE_TYPE ページが再構築されました。|  
+|メッセージ テキスト|修復:P_ID の PAGE_TYPE ページが再構築されました。|  
   
 ## <a name="explanation"></a>説明  
 PFS ページ データを使用して GAM ページまたは SGAM ページのいずれかを再構築したことを示す、REPAIR からの情報メッセージです。  

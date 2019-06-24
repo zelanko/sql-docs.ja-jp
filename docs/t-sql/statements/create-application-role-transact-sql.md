@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d78cd012d2a66dff8b3cfb2a4d3fba5745dfbe36
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051707"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  アプリケーション ロールの名前を指定します。 この名前は、データベース内のどのプリンシパルへの参照にも使用されていない名前である必要があります。  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  データベース ユーザーがアプリケーション ロールのアクティブ化に使用するパスワードを指定します。 複雑なパスワードの使用をお勧めします。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
- DEFAULT_SCHEMA **=**_schema\_name_  
+ DEFAULT_SCHEMA **=** _schema\_name_  
  このロール用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 DEFAULT_SCHEMA が定義されていない場合、アプリケーション ロールでは既定のスキーマとして DBO が使用されます。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
 ## <a name="remarks"></a>Remarks  

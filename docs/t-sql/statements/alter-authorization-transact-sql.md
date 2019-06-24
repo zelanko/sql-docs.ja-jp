@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421229"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026109"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -156,7 +156,7 @@ ALTER AUTHORIZATION ON
  エンティティの所有者となるセキュリティ プリンシパルの名前。 データベース オブジェクトはデータベース プリンシパル (データベース ユーザーまたはデータベース ロール) が所有する必要があります。 サーバー オブジェクト (データベースなど) はサーバー プリンシパル (ログイン) が所有する必要があります。 **SCHEMA OWNER** を *principal_name* として指定して、オブジェクトのスキーマを所有するプリンシパルがオブジェクトを所有する必要があることを示します。    
     
 ## <a name="remarks"></a>Remarks    
- ALTER AUTHORIZATION は、所有者が存在するエンティティの所有権を変更するときに使用できます。 データベースに含まれるエンティティの所有権は、データベース レベルのプリンシパルに譲渡できます。 サーバー レベルのエンティティの所有権は、サーバー レベルのプリンシパルだけに譲渡できます。    
+ ALTER AUTHORIZATION は、所有者が存在するエンティティの所有権を変更するときに使用できます。 データベースに含まれるエンティティの所有権は、任意のデータベース レベルのプリンシパルに譲渡できます。 サーバー レベルのエンティティの所有権は、サーバー レベルのプリンシパルのみに譲渡できます。    
     
 > [!IMPORTANT]    
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、ユーザーは他のデータベース ユーザーが所有するスキーマに含まれる OBJECT または TYPE を所有できます。 これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の動作から変更されています。 詳しくは、「[OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)」および「[TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)」をご覧ください。    
@@ -167,12 +167,12 @@ ALTER AUTHORIZATION ON
     
  セキュリティ保護可能なリソース クラス (サーバー、ログイン、ユーザー、アプリケーション ロール、および列) のメンバーの所有権は譲渡できません。    
     
- SCHEMA OWNER オプションは、スキーマに含まれるエンティティの所有権を譲渡する場合にのみ有効です。 SCHEMA OWNER を使用すると、エンティティの所有権は、所属するスキーマの所有者に譲渡されます。 スキーマに含まれるのは、OBJECT、TYPE、または XML SCHEMA COLLECTION クラスのエンティティだけです。    
+ SCHEMA OWNER オプションは、スキーマに含まれるエンティティの所有権を譲渡する場合にのみ有効です。 SCHEMA OWNER を使用すると、エンティティの所有権は、所属するスキーマの所有者に譲渡されます。 スキーマに含まれるのは、OBJECT、TYPE、または XML SCHEMA COLLECTION クラスのエンティティのみです。    
     
  対象のエンティティがデータベース以外であり、エンティティを新しい所有者に譲渡する場合は、すべての権限が削除されます。    
     
 > [!CAUTION]    
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でのスキーマの動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されました。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 以下の DDL ステートメントが使用されているデータベースでは、sysobjects などの古いカタログ ビューを使用してはいけません:CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 このようなデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。    
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でのスキーマの動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されました。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 以下の DDL ステートメントが使用されているデータベースでは、sysobjects などの古いカタログ ビューを使用してはいけません:CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 これらのいずれかのステートメントが使用されたデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。    
     
  また、次の点も注意してください。    
     
@@ -180,7 +180,7 @@ ALTER AUTHORIZATION ON
 >  オブジェクトの所有者を調べる唯一の信頼性のある方法は、**sys.objects** カタログ ビューに対するクエリを実行する方法です。 型の所有者を調べる唯一の信頼性のある方法は、TYPEPROPERTY 関数を使用する方法です。    
     
 ## <a name="special-cases-and-conditions"></a>特殊ケースと条件    
- 次の表は、権限を変更する際の特殊ケースと例外、および条件の一覧です。    
+ 次の表は、権限を変更する場合の特殊ケースと例外、および条件の一覧です。    
     
 |クラス|条件|    
 |-----------|---------------|    
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a> データベースに対する ALTER AUTHORIZATION  
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
 ### <a name="for-sql-server"></a>SQL Server の場合:  
-**新しい所有者の要件:**   
+**新しい所有者の要件:**    
 新しい所有者プリンシパルは、次のいずれかである必要があります。  
 
 -   SQL サーバー認証ログイン。  
@@ -206,7 +206,7 @@ ALTER AUTHORIZATION ON
 **sysadmin** 固定サーバー ロールのメンバーではないユーザーの場合は、データベースに対する TAKE OWNERSHIP アクセス許可以上と、新しい所有者ログインに対する IMPERSONATE アクセス許可が必要です。   
 
 ### <a name="for-azure-sql-database"></a>Azure SQL Database の場合:  
-**新しい所有者の要件:**   
+**新しい所有者の要件:**    
 新しい所有者プリンシパルは、次のいずれかである必要があります。  
 
 -   SQL サーバー認証ログイン。  
@@ -261,11 +261,11 @@ Azure AD ユーザーをデータベースの個人所有者として使う代�
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  データベースを所有する Azure AD グループを作成し、そのグループをユーザー データベースにユーザーとして追加します。 例 :  
+2.  データベースを所有する Azure AD グループを作成し、そのグループをユーザー データベースにユーザーとして追加します。 例:  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  ユーザー データベースで、Azure AD グループを表すユーザーを、**db_owner** 固定データベース ロールに追加します。 例 :  
+3.  ユーザー データベースで、Azure AD グループを表すユーザーを、**db_owner** 固定データベース ロールに追加します。 例:  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -303,7 +303,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- オブジェクトのスキーマがステートメントの一部として含まれない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] はユーザーの既定のスキーマでオブジェクトを検索します。 例 :    
+ オブジェクトのスキーマがステートメントの一部として含まれない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] はユーザーの既定のスキーマでオブジェクトを検索します。 例:    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
@@ -327,7 +327,7 @@ GO
 ```    
     
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. エンドポイントの所有権を SQL Server ログインに譲渡する    
- 次の例では、エンドポイント `CantabSalesServer1` の所有権を `JaePak` に譲渡します。 エンドポイントはサーバー レベルのセキュリティ保護可能なリソースであるため、エンドポイントを譲渡できるのはサーバー レベルのプリンシパルだけです。    
+ 次の例では、エンドポイント `CantabSalesServer1` の所有権を `JaePak` に譲渡します。 エンドポイントはサーバー レベルでセキュリティ保護可能なリソースであるため、エンドポイントを譲渡できるのはサーバー レベルのプリンシパルのみです。    
     
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]    
     

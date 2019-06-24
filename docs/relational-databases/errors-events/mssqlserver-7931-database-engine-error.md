@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 330ea355feb3d200173a727c8308ac66cddb6591
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797212"
 ---
 # <a name="mssqlserver7931"></a>MSSQLSERVER_7931
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47729330"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|メッセージ テキスト|データベース エラー: パーティションの FILESTREAM ディレクトリ ID F_ID が 2 回出現しました。|  
+|メッセージ テキスト|データベース エラー:パーティションの FileStream ディレクトリ ID F_ID が 2 回出現しました。|  
   
 ## <a name="explanation"></a>説明  
 FILESTREAM ディレクトリの同じパーティション ID がメタデータで検出されました。  

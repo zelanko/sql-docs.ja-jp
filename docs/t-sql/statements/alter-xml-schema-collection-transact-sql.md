@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664591"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +188,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
  CREATE XML SCHEMA COLLECTION には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で認識されるスキーマ コンポーネントだけが格納されます。XML スキーマ内のすべての要素がデータベースに格納されるわけではありません。 したがって、XML スキーマ コレクションを、提供されたときと同じ状態に戻す場合は、データベース列またはコンピューター上の他のフォルダーに XML スキーマを保存することをお勧めします。  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. スキーマ コレクションに複数のスキーマ名前空間を指定する  
- XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例 :  
+ XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例:  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  

@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729450"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263496"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SQL Server Analysis Services 2017 には、表形式モデルの多くの機能�
 - 表形式モデルでの **1400 互換性レベル**のサポート。 新規の 1400 互換性レベルの表形式モデル プロジェクトを作成するか、既存の表形式モデル プロジェクトを 1400 互換性レベルにアップグレードするには、[SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939) をダウンロードしてインストールします。 (CTP 1.1)
 - 1400 互換性レベルの表形式モデルでの、最新の**データ取得**エクスペリエンス。 [分析サービス チームのブログ](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)を参照してください。 (CTP 1.1)
 - 不規則階層で空のメンバーを非表示にする、**メンバーを隠す**プロパティ。 (CTP 1.1)
-- 集計情報の**詳細を表示**する、新しい**詳細行**エンドユーザー アクション。 詳細行の式を作成するための [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) および **DETAILROWS** 関数。 (CTP 1.1)
+- 集計情報の**詳細を表示**する、新しい**詳細行**エンドユーザー アクション。 詳細行の式を作成するための [SELECTCOLUMNS](/dax/selectcolumns-function-dax) および **DETAILROWS** 関数。 (CTP 1.1)
 - 複数の値を指定するための DAX **IN** 演算子。 (CTP 1.1)
 
 詳細については、「[What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)」 (SQL Server Analysis Services 2017 の新機能) を参照してください。

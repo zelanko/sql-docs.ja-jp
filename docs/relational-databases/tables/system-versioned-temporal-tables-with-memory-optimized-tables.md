@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751623"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>メモリ最適化テーブルでのシステム バージョン管理されたテンポラル テーブル
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "51658078"
 ## <a name="the-internal-memory-optimized-staging-table"></a>内部メモリ最適化ステージング テーブル  
  内部メモリ最適化ステージング テーブルは、DML の操作を最適化するためにシステムによって作成される内部オブジェクトです。  
   
--   テーブル名は、**Memory_Optimized_History_Table_<object_id>** という形式で生成されます。*<object_id>* は、現在のテンポラル テーブルの識別子です。  
+-   テーブル名は次の形式で生成されます。**Memory_Optimized_History_Table_<object_id>** 。この *<object_id>* は現在のテンポラル テーブルの識別子です。  
   
 -   テーブルは、現在のテンポラル テーブルのスキーマに加えて、1 つの BIGINT 列をレプリケートします。 この追加される列により、内部履歴バッファーに移動される行の一意性が保証されます。  
   
--   追加列の名前は、**Change_ID[_< suffix>]** という形式です。*_\<suffix>* はオプションであり、*Change_ID* 列がテーブルに既にある場合に追加されます。  
+-   追加列の名前は次の形式です。**Change_ID[_< suffix>]** 。この *_\<suffix>* は省略可能であり、*Change_ID* 列がテーブルに既にある場合に追加されます。  
   
 -   システム バージョン管理されたメモリ最適化テーブルの最大行サイズは、ステージング テーブルに追加される BIGINT 列のため、8 バイトだけ小さくなります。 新しい最大値は、8052 バイトです。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51658078"
  データ フラッシュは、現在実行している最も古いトランザクションより古いメモリ内内部バッファーからすべてのレコードを削除して、ディスク ベースの履歴テーブルにこれらのレコードを移動します。  
   
  データ フラッシュを強制的に実行するには、 [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) を呼び出して、スキーマとテーブル名   
-(**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**) を指定します。 このユーザー実行コマンドを使用すると、内部スケジュールでシステムによってデータ フラッシュ タスクが呼び出されるときと同じデータ移動プロセスが呼び出されます。  
+(**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name** ) を指定します。 このユーザー実行コマンドを使用すると、内部スケジュールでシステムによってデータ フラッシュ タスクが呼び出されるときと同じデータ移動プロセスが呼び出されます。  
   
 ## <a name="see-also"></a>参照  
  [テンポラル テーブル](../../relational-databases/tables/temporal-tables.md)   

@@ -16,12 +16,12 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 80c63fa27f1ba85882b18f47910f38c06dd09f51
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db9c48686a6292f4a2fcd6ef85501fb1b715241d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140645"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>可用性グループ ウィザードを使用して Always On 可用性グループにデータベースを追加する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,10 @@ ms.locfileid: "66800142"
      データベースにデータベース マスター キーが含まれている場合、 **[パスワード]** 列にデータベース マスター キーのパスワードを入力します。  
   
 5.  **[最初のデータの同期を選択]** ページで、新しいセカンダリ データベースを作成して可用性グループに参加させる方法を選択します。 次のいずれかのオプションを選択します。  
+
+    - **自動シード処理**
+      
+      自動シード処理を使用するには、このオプションを選択します。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 これにより、データベースのバックアップがセカンダリ レプリカ上に復元されます。手動でこれを行う必要はありません。 自動シード処理の詳細については、[自動シード処理](automatic-seeding-secondary-replicas.md)に関するページをご覧ください
   
     -   **Full**  
   

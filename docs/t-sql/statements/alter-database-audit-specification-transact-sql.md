@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd843cfe70aeaaac866398339e35089615eb44a2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326693"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62961250"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  この仕様が適用される監査の名前。  
   
  *audit_action_specification*  
- データベース レベルの 1 つ以上の監査可能なアクションの名前。 監査アクション グループの一覧については、「[SQL Server 監査のアクション グループとアクション](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
+ データベースレベルの 1 つ以上の監査可能なアクションの名前。 監査アクション グループの一覧については、「[SQL Server 監査のアクション グループとアクション](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
   
  *audit_action_group_name*  
  データベース レベルの 1 つ以上の監査可能なアクション グループの名前。 監査アクション グループの一覧については、「[SQL Server 監査のアクション グループとアクション](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
@@ -90,7 +90,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY DATABASE AUDIT 権限を持つユーザーは、データベース監査仕様を変更し、任意の監査にバインドできます。  
   
- データベース監査の仕様を作成すると後、は、プリンシパルは、CONTROL SERVER または ALTER ANY DATABASE AUDIT 権限、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルが表示できます。  
+ データベース監査仕様の作成後は、CONTROL SERVER または ALTER ANY DATABASE AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルで表示できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`HIPAA_Audit_DB_Specification` ユーザーによる `SELECT` ステートメントを監査する、`dbo` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査の `HIPAA_Audit` というデータベース監査仕様を変更します。  

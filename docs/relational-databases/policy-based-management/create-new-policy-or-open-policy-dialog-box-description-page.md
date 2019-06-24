@@ -12,30 +12,30 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6315784a4092f73f9243c49902eb40ea905edcf4
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009087"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーに説明と詳細情報を追加できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **カテゴリ**  
  新しいポリシーを作成する場合は、ポリシー カテゴリを選択します。  
   
  **[説明]**  
  ポリシーの説明を入力します。  
   
- **[追加のヘルプ ハイパーリンク: 表示するテキスト]**  
+ **追加のヘルプ ハイパーリンク:表示するテキスト**  
  ポリシーを実行している場合は、 **[結果の詳細ビュー]** ページに追加のヘルプ ハイパーリンクが表示されます。 ハイパーリンクとして表示するテキストを入力します。  
   
- **[追加のヘルプ ハイパーリンク: アドレス]**  
+ **追加のヘルプ ハイパーリンク:アドレス**  
  ユーザーが **[結果の詳細ビュー]** ページに表示されるハイパーリンク テキストをクリックしたときに開く Web ページのハイパーリンクを入力します。  
   
- **[追加のヘルプ ハイパーリンク: リンクのテスト]**  
+ **追加のヘルプ ハイパーリンク:テスト リンク**  
  クリックすると、リンクの有効性をテストするハイパーリンクが開きます。  
   
  **作成日**  

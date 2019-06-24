@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4375d7b0ce19c5bb0f44a0be3b55e7b105b5a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794111"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145419"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -127,7 +127,7 @@ REM Gather information about the instance of LocalDB
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>LocalDB の共有インスタンスへの接続
 
-LocalDB の共有インスタンスに接続するには、`.\` (ドット + 円記号) を接続文字列に追加して、共有インスタンス用に予約されている名前空間を参照します。 たとえば、`AppData` という名前の LocalDB の共有インスタンスに接続するには、接続文字列の一部として `(localdb).AppData` などの接続文字列を使用します。 自身のものではない LocalDB の共有インスタンスに接続するユーザーには、Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインが必要です。
+LocalDB の共有インスタンスに接続するには、`\.\` (円記号 + ドット + 円記号) を接続文字列に追加して、共有インスタンス用に予約されている名前空間を参照します。 たとえば、`AppData` という名前の LocalDB の共有インスタンスに接続するには、接続文字列の一部として `(localdb)\.\AppData` などの接続文字列を使用します。 自身のものではない LocalDB の共有インスタンスに接続するユーザーには、Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインが必要です。
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 

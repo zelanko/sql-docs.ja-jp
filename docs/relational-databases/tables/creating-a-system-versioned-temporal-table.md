@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409619"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515989"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>システム バージョン管理されたテンポラル テーブルの作成
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   匿名履歴テーブルは、現在のテーブルまたはテンポラル テーブルと同じスキーマで自動的に作成されます。  
   
--   匿名履歴テーブル名の形式は、*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* です。 サフィックスは省略可能であり、テーブル名の最初の部分が一意ではない場合にのみ追加されます。  
+-   匿名履歴テーブルの名前は次の形式になります。*MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* 。 サフィックスは省略可能であり、テーブル名の最初の部分が一意ではない場合にのみ追加されます。  
   
 -   履歴テーブルは、行ストア テーブルとして作成されます。 可能な場合はページの圧縮が適用されます。不可能な場合は、履歴テーブルは圧縮されません。 たとえば、スパース列などの一部のテーブル構成では、圧縮は許可されません。  
   

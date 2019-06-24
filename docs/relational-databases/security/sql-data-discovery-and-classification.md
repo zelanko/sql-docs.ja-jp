@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539136"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316686"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,11 @@ ms.locfileid: "52539136"
 * ラベル - 列に格納されるデータの機密レベルを定義するために使用される、主な分類属性です。  
 * 情報の種類 - 列に格納されるデータの種類をさらに細分化します。
 
-<br>
 **SQL Server データベースを分類するには:**
 
 1. SQL Server Management Studio (SSMS) で、SQL Server に接続します。
 
-2. SSMS オブジェクト エクスプローラーで、分類するデータベースを右クリックして、**[タスク]** > **[データの分類]** の順に選択します。
+2. SSMS オブジェクト エクスプローラーで、分類するデータベースを右クリックして、 **[タスク]**  >  **[データの分類]** の順に選択します。
 
     ![ナビゲーション ウィンドウ][1]
 

@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5763042dd9fa0bb757b66727f9e04b4b81aee85c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037378"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "56020073"
   
  @@IDENTITY と SCOPE_IDENTITY は、現在のセッション内の任意のテーブルで生成された最後の ID 値を返します。 ただし、SCOPE_IDENTITY が返す値は、現在のスコープの範囲内に限られます。@@IDENTITY の場合は、特定のスコープに限定されません。  
   
- IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT は、任意のセッションとスコープの特定のテーブルに対して生成された ID 値を返します。 詳細については、を参照してください。 [IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT は、任意のセッションおよび任意のスコープ内の特定のテーブルに対して生成された ID 値を返します。 詳細については、を参照してください。 [IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/ident-current-transact-sql.md).  
   
  @@IDENTITY 関数のスコープは、実行されるローカル サーバーの現在のセッションです。 この関数は、リモート サーバーまたはリンク サーバーには適用できません。 別のサーバーで ID 値を取得するには、そのリモート サーバーまたはリンク サーバーでストアド プロシージャを実行し、(リモート サーバーまたはリンク サーバーのコンテキスト内で実行されている) そのストアド プロシージャが ID 値を収集し、ローカル サーバー上の呼び出し元の接続にこれを返すようにします。  
   

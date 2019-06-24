@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5fe880e39b2ace4b23356fbd9ab77b37193cc838
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028605"
 ---
 # <a name="userid-transact-sql"></a>USER_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ USER_ID ( [ 'user' ] )
   
 ## <a name="arguments"></a>引数  
  *user*  
- 使用するユーザー名を指定します。 *ユーザー* は **nchar**です。 場合、 **char** 値を指定すると、暗黙的に変換されます **nchar**です。 かっこで囲む必要があります。  
+ 使用するユーザー名を指定します。 *ユーザー* は **nchar**です。 場合、 **char** 値を指定すると、暗黙的に変換されます **nchar**です。 かっこが必要です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -59,7 +59,7 @@ USER_ID ( [ 'user' ] )
   
  特定のデータベース ユーザーにマップされない Windows プリンシパルがグループのメンバーシップでデータベースにアクセスした場合、USER_ID では 0 (public の ID) が返されます。 このプリンシパルがスキーマを指定せずにオブジェクトを作成した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では Windows プリンシパルにマップされた暗黙のユーザーとスキーマが作成されます。 このときに作成されたユーザーを使用して、データベースに接続することはできません。 暗黙のユーザーにマップされた Windows プリンシパルが USER_ID を呼び出すと、暗黙のユーザーの ID が返されます。  
   
- USER_ID は、選択リスト、WHERE 句、また、式を使える所ならどこにでも使用できます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
+ USER_ID は、選択リストの中、WHERE 句の中、また式を使える所ならどこにでも使用できます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`AdventureWorks2012` ユーザー `Harold` の ID 番号が返されます。  

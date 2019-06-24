@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 129e2db1eaf71111c23b018c64df6921c0cde2d0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639103"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE (対称キーの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  権限を取り消す対称キーを指定します。 スコープ修飾子 (::) が必要です。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  

@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140799"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -127,6 +127,8 @@ WITH ( LANGUAGE = 'R' )
 特定のプラットフォーム用のパッケージのコンテンツを指定します。 プラットフォームごとに 1 つのファイル成果物のみがサポートされます。
 
 ファイルは、ローカル パスまたはネットワーク パスの形式で指定することができます。
+
+**<client_library_specifier>** で指定したファイルにアクセスしようとすると、SQL Server では現在の Windows ログインのセキュリティ コンテキストの権限が借用されます。 **<client_library_specifier>** でネットワーク上の場所 (UNC パス) を指定した場合は、委任制限があり、現在のログインの権限借用範囲はネットワーク上の場所まで拡大されません。 この場合、アクセスは SQL Server サービス アカウントのセキュリティ コンテキストを使って行われます。 詳しくは、「[資格情報 (データベース エンジン)](../../relational-databases/security/authentication-access/credentials-database-engine.md)」をご覧ください。
 
 必要に応じて、ファイルの OS プラットフォームを指定できます。 特定の言語またはランタイムの OS プラットフォームごとに 1 つのファイル成果物またはコンテンツのみが許可されます。
 

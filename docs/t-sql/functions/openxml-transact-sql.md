@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520708"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  XML ドキュメントに対して行セット ビューを提供します。 OPENXML は行セット プロバイダーなので、テーブル、ビュー、または OPENROWSET 関数など、行セット プロバイダーを指定できる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で使用できます。  
+  OPENXML は XML ドキュメントに対して行セット ビューを提供します。 OPENXML は行セット プロバイダーなので、テーブル、ビュー、または OPENROWSET 関数など、行セット プロバイダーを指定できる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中で使用できます。  
   
  ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|XML_ATTRIBUTES または XML_ELEMENTS と組み合わせる (論理和) ことができます。 取得のコンテキストにおいて、このフラグは、使用したデータをオーバーフロー プロパティ **\@mp:xmltext** にコピーしないことを示します。|  
   
  _SchemaDeclaration_  
- スキーマ定義を次の形式で指定します。_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ スキーマ定義を次の形式で指定します。_ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  行セット内の列名を指定します。  
@@ -76,7 +76,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *ColPattern* で指定する標準 XPath パターンでは、メタプロパティもサポートされます。  
   
  *MetaProperty*  
- OPENXML で提供されるメタプロパティの 1 つを指定します。 *MetaProperty* を指定すると、メタプロパティで提供される情報が列に格納されます。 これらのメタプロパティによって、XML ノードの情報 (相対的な位置や名前空間の情報など) を抽出でき、 これらのメタプロパティにより、テキストとして表示されている情報よりも多くの情報が表示されます。  
+ OPENXML で提供されるメタプロパティの 1 つを指定します。 *MetaProperty* を指定すると、メタプロパティで提供される情報が列に格納されます。 メタプロパティによって、XML ノードの情報 (相対的な位置や名前空間の情報など) を抽出できます。 これらのメタプロパティにより、テキストとして表示されている情報よりも多くの情報が表示されます。  
   
  *TableName*  
  目的のスキーマを備えたテーブルが既に存在し、列パターンが必要ない場合は、*SchemaDeclaration* の代わりにテーブル名を指定できます。  
@@ -90,7 +90,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素の ID 値は 0 です。 負の ID 値は予約済みです。|  
 |**parentid**|**bigint**|ノードの親の識別子。 この ID によって識別される親は、必ずしも親要素ではなく、ノードの NodeType に依存します。その親は、この ID によって識別されます。 たとえば、ノードがテキスト ノードである場合、その親は属性ノードである場合もあります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  
-|**nodetype**|**int**|ノードの型の識別子。 XML DOM ノードの型番号に対応する整数です。<br /><br /> ノードの型は次のとおりです。<br /><br /> 1 = 要素ノード<br /><br /> 2 = 属性ノード<br /><br /> 3 = テキスト ノード|  
+|**nodetype**|**int**|ノードの型を識別します。 XML DOM ノードの型番号に対応する整数です。<br /><br /> ノードの型は次のとおりです。<br /><br /> 1 = 要素ノード<br /><br /> 2 = 属性ノード<br /><br /> 3 = テキスト ノード|  
 |**localname**|**nvarchar**|要素または属性のローカル名。 DOM オブジェクトに名前がない場合は NULL になります。|  
 |**プレフィックス**|**nvarchar**|ノード名の名前空間のプレフィックス。|  
 |**namespaceuri**|**nvarchar**|ノードの名前空間 URI。 値が NULL の場合、名前空間はありません。|  

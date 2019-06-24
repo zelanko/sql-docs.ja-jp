@@ -23,12 +23,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7756482734dac8d4d5982b0ab6d5d58942065697
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620517"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263534"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のチュートリアル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的
 
     このチュートリアルでは、データベースやクエリなどのさまざまなオブジェクトのスクリプトを SSMS で作成する方法を学習します。 
 
-- [チュートリアル: SSMS でテンプレートを使用する](templates-ssms.md)
+- [チュートリアル: SSMS でテンプレートを使用する](../template/templates-ssms.md)
    
     このチュートリアルでは、SSMS で構築済みのテンプレートを使う方法を学習します。 テンプレートは、さまざまなデータベース管理タスクの Transact-SQL コード スニペットを多数格納している機能ですが、あまり知られていません。 
 

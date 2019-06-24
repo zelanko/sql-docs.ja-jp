@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927743"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   次のいずれかの状態を表す **bit** 型を返します。  
   
--   1 (True)。クエリ内の XQuery 式により、空以外の結果が返されたことを示します。 つまり、少なくとも 1 つの XML ノードが返されます。  
+-   クエリ内の XQuery 式により、空以外の結果が返された場合は 1 (True)。 つまり、少なくとも 1 つの XML ノードが返されます。  
   
--   0 (False)。クエリ内の XQuery 式により、空の結果が返されたことを示します。  
+-   これにより、空の結果が返された場合は 0 (False)。  
   
 -   NULL の場合、**xml**クエリの実行対象となるデータ型のインスタンスには、NULL が含まれています。  
   

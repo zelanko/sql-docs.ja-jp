@@ -12,11 +12,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62465704"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -116,11 +116,11 @@ GO
   
 #### <a name="to-turn-on-line-numbers"></a>行番号を表示するには  
   
-1.  SSDT の **[explain]** タブに出力が表示されている状態で、**[ツール]** メニューの **[オプション]** を選択します。  
+1.  SSDT の **[explain]** タブに出力が表示されている状態で、 **[ツール]** メニューの **[オプション]** を選択します。  
   
-2.  **[テキスト エディター]** セクションを拡大して **XML** を展開し、**[全般]** をクリックします。  
+2.  **[テキスト エディター]** セクションを拡大して **XML** を展開し、 **[全般]** をクリックします。  
   
-3.  **[表示]** 領域で、**[行番号]** をオンにします。  
+3.  **[表示]** 領域で、 **[行番号]** をオンにします。  
   
 4.  **[OK]** をクリックします。  
   

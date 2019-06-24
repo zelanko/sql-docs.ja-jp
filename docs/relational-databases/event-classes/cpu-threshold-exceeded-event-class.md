@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 569b085d28a0339927049fca0d758286dd1b6e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686096"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47737250"
   
 |データ列名|データ型|[説明]|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|CPU|**int**|CPU 使用率 (ミリ秒単位)。|18|[ユーザー アカウント制御]|  
+|CPU|**int**|CPU 使用率 (ミリ秒単位)。|18|はい|  
 |EventClass|**int**|214|27|いいえ|  
-|EventSubClass|**int**|CPU 制限違反。|21|[ユーザー アカウント制御]|  
-|GroupID|**int**|違反が発生したグループ ID。|66|[ユーザー アカウント制御]|  
-|OwnerID|**int**|違反の原因となったプロセスの SPID。|58|[ユーザー アカウント制御]|  
-|SPID|**int**|このイベントを発生させたサーバー プロセスの ID。<br /><br /> 注: システム スレッドが CPU 使用率をバックグラウンド タスクとして検証する場合は、この ID が実際のユーザー SPID と異なることがあります。|12|[ユーザー アカウント制御]|  
-|StartTime|**datetime**|このイベントが発生した時刻。|14|[ユーザー アカウント制御]|  
+|EventSubClass|**int**|CPU 制限違反。|21|はい|  
+|GroupID|**int**|違反が発生したグループ ID。|66|はい|  
+|OwnerID|**int**|違反の原因となったプロセスの SPID。|58|はい|  
+|SPID|**int**|このイベントを発生させたサーバー プロセスの ID。<br /><br /> 注:システム スレッドが CPU 使用率をバックグラウンド タスクとして検証する場合は、この ID が実際のユーザー SPID と異なることがあります。|12|はい|  
+|StartTime|**datetime**|このイベントが発生した時刻。|14|はい|  
   
 ## <a name="see-also"></a>参照  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

@@ -20,12 +20,12 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55867a7740bd0a37d789a870ef043350b22e5376
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: bea5d805294216b796f36f3f0762b564162924dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64776274"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ GO
  次の例では、秘密キーからパスワード保護を削除し、データベースのマスター キーで保護します。  
   
 ```  
-OPEN MASTER KEY;  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  
 GO  

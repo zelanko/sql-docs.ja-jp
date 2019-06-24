@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a97a63633dd2d1260cf83de6236bd4924af02f6d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62636268"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT (型の権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  型で許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- 権限を許可する型を指定します。 スコープ修飾子 (**::**) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (**.**) が必要です。  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ 権限を許可する型を指定します。 スコープ修飾子 ( **::** ) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 ( **.** ) が必要です。  
   
  TO \<database_principal> 権限を許可するプリンシパルを指定します。  
   
@@ -104,7 +104,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  型は、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。  
   
 > [!IMPORTANT]  
->  **GRANT**、**DENY,**、**REVOKE** の各権限は、システム型には適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型について詳しくは、「[SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)」をご覧ください。  
+>  **GRANT**、**DENY,** 、**REVOKE** の各権限は、システム型には適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型について詳しくは、「[SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)」をご覧ください。  
   
  次の表に、型で許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   

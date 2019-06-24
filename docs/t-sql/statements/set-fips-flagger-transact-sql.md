@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4dd2c65a885e7619c9ddcd92ed7849981453e838
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939738"
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  *level* の値には次のいずれかを指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
-|ENTRY|ISO エントリレベルの準拠性の標準チェック|  
+|ENTRY|ISO エントリレベルの準拠性の標準チェック。|  
 |FULL|ISO 完全準拠性の標準チェック|  
-|INTERMEDIATE|ISO 中間レベルの準拠性の標準チェック|  
-|OFF|標準チェックなし|  
+|INTERMEDIATE|ISO 中間レベルの準拠性の標準チェック。|  
+|OFF|標準チェックなし。|  
   
 ## <a name="remarks"></a>Remarks  
  `SET FIPS_FLAGGER` は、実行時ではなく解析時に設定されます。 解析時に設定されるということは、SET ステートメントがバッチまたはストアド プロシージャ内に指定されている場合は、コードが実際にその場所まで実行されるかどうかに関係なく、設定が有効になることを意味します。つまり他のどのステートメントが実行されるよりも前に、`SET` ステートメントは有効になります。 たとえば、絶対に実行されることのない `IF...ELSE` ステートメント ブロックに `SET` ステートメントが指定されていたとしても、`IF...ELSE` ステートメント ブロックは解析されるので、`SET` ステートメントは有効になります。  

@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334809"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467005"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -211,9 +211,9 @@ WHERE CONTAINS(Description, @SearchWord);
 >  アジアの一部の言語などのフレーズでは、語句を構成するときに単語間にスペースを挿入しないものがあります。  
   
 \<simple_term>  
-単語または語句に対する完全一致を指定します。 有効な単純語の例には、"blue berry"、blueberry、および "Microsoft SQL Server" などがあります。 語句は二重引用符 ("") で囲みます。 語句内の単語は、*\<contains_search_condition>* の指定と同じ順序で、データベース列に含まれている必要があります。 単語または語句内の文字の検索では、大文字と小文字は区別されません。 フルテキスト インデックス化された列の a、and、the などのノイズ ワード ([ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) は、フルテキスト インデックスには格納されません。 1 つの単語の検索にノイズ ワードを使用した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクエリにノイズ ワードだけが指定されていることを示すエラーが返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスのディレクトリ \Mssql\Binn\FTERef にノイズ ワードの標準リストがあります。  
+単語または語句に対する完全一致を指定します。 有効な単純語の例には、"blue berry"、blueberry、および "Microsoft SQL Server" などがあります。 語句は二重引用符 ("") で囲みます。 語句内の単語は、 *\<contains_search_condition>* の指定と同じ順序で、データベース列に含まれている必要があります。 単語または語句内の文字の検索では、大文字と小文字は区別されません。 フルテキスト インデックス化された列の a、and、the などのノイズ ワード ([ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) は、フルテキスト インデックスには格納されません。 1 つの単語の検索にノイズ ワードを使用した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクエリにノイズ ワードだけが指定されていることを示すエラーが返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスのディレクトリ \Mssql\Binn\FTERef にノイズ ワードの標準リストがあります。  
   
- 句読点は無視されます。 したがって、`CONTAINS(testing, "computer failure")` は、"Where is my computer?  Failure to find it would be expensive." がある行に一致します。 ワード ブレーカーの動作の詳細については、「[検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
+ 句読点は無視されます。 したがって、`CONTAINS(testing, "computer failure")` は、"Where is my computer? Failure to find it would be expensive." がある行に一致します。 ワード ブレーカーの動作の詳細については、「[検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
  \<prefix_term>  
  指定のテキストで始まる単語または語句の一致を指定します。 プレフィックス語句を二重引用符 ("") で囲み、後ろの二重引用符の前にアスタリスク (\*) を挿入すると、アスタリスクの前に指定された文字列で始まるすべてのテキストが照合されます。 句は、`CONTAINS (column, '"text*"')` のように指定してください。 アスタリスクは、一致する文字がないか、1 つまたはそれ以上の文字に一致します。その単語または語句を語根とする文字も対象になります。 テキストとアスタリスクが二重引用符で区切られていないと、述語が読み取る内容は `CONTAINS (column, 'text*')` となり、フルテキスト検索でアスタリスクが文字と見なされ、`text*` への完全一致が検索されます。 単語区切りでは通常このような文字は無視されるため、アスタリスク (\*) 文字が付いた文字はフルテキスト エンジンによって検索されません。  
@@ -316,12 +316,12 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  *\<weighted_term>* キーワードを指定します。  
   
  WEIGHT(*weight_value*)  
- 0.0 から 1.0 の間で重み値を指定します。 *\<weighted_term>* 内の各コンポーネントには、*weight_value* を含めることができます。 *weight_value* は、クエリのさまざまな部分に影響を与える、クエリに一致する各行に割り当てられる順位値を変更することです。 WEIGHT は CONTAINS クエリの結果に影響しませんが、WEIGHT は [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリ内のランクに影響します。  
+ 0\.0 から 1.0 の間で重み値を指定します。 *\<weighted_term>* 内の各コンポーネントには、*weight_value* を含めることができます。 *weight_value* は、クエリのさまざまな部分に影響を与える、クエリに一致する各行に割り当てられる順位値を変更することです。 WEIGHT は CONTAINS クエリの結果に影響しませんが、WEIGHT は [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリ内のランクに影響します。  
   
 > [!NOTE]  
 >  小数点区切り文字は、オペレーティング システムのロケールにかかわらず常にピリオドです。  
   
- { AND | & } | { AND NOT | &! } | { OR | | }   
+ { AND | & } | { AND NOT | &! } | { OR | | }  
  2 つの contains 検索条件の間の論理演算を指定します。  
   
  { AND | & }  

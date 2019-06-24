@@ -23,16 +23,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bdd5a0a3b65c941631f2cbeaa83175c1b48f482c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037277"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (関数) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  INTO を伴う SELECT ステートメントでのみ使用 *テーブル* 句を新しいテーブルに id 列を挿入します。 IDENTITY 関数は、CREATE TABLE と ALTER TABLE で使用される IDENTITY プロパティと似ていますが、同じものではありません。  
+  INTO を伴う SELECT ステートメントでのみ使用 *テーブル* 句を新しいテーブルに id 列を挿入します。 似ていますが、IDENTITY 関数は CREATE TABLE と ALTER TABLE で使用される IDENTITY プロパティではありません。  
   
 > [!NOTE]  
 >  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  

@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09927ba3835b1a5e633adfec6e865600386336e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638645"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE (XML スキーマ コレクションの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,11 +58,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  XML スキーマ コレクションで取り消すことができる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_ **.** ] *XML_schema_collection_name*  
  権限を取り消す XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  

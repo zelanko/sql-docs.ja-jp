@@ -14,11 +14,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63002378"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ SQL Server 2012 の開始方法およびインストール方法の詳細につ�
   
 2.  コントローラー サービスがインストールされているコントローラー コンピューターで、コマンド プロンプトから、「dcomcnfg」と入力します。  
   
-3.  [コンポーネント サービス] ウィンドウで、 **[コンソール ルート]** -> **[コンポーネント サービス]** -> **[コンピューター]** -> **[マイ コンピューター]** -> **[Dconfig]** ->**[DReplayController]** の順に移動します。  
+3.  [コンポーネント サービス] ウィンドウで、 **[コンソール ルート]**  ->  **[コンポーネント サービス]**  ->  **[コンピューター]**  ->  **[マイ コンピューター]**  ->  **[Dconfig]**  -> **[DReplayController]** の順に移動します。  
   
 4.  **[DReplayController]** を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -60,7 +60,7 @@ SQL Server 2012 の開始方法およびインストール方法の詳細につ�
 10. SQL Server 分散再生コントローラー サービスを開始します。  
   
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 SQL Server Browser サービスを開始しようとすると、SQL Server セットアップが失敗する場合がある  
-**問題点:** SQL Server Browser サービスを開始しようとすると、次のようなエラーが表示され、SQL Server セットアップが失敗する場合があります。  
+**問題点:** SQL Server Browser サービスを開始しようとすると、次のようなエラーが表示され、SQL Server のセットアップが失敗する場合があります。  
   
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
@@ -70,7 +70,7 @@ Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed act
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**回避策:** SQL Server エンジンまたは Analysis Services のインストールに失敗したときに、このエラーが発生する場合があります。 この問題を解決するには、SQL Server セットアップ ログを参照して、SQL Server エンジンと Analysis Services のエラーをトラブルシューティングします。 詳細については、「SQL Server セットアップ ログ ファイルの表示と読み取り」をご覧ください。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
+**回避策:** このエラーは、SQL Server エンジンまたは Analysis Services のインストールに失敗したとき発生する場合があります。 この問題を解決するには、SQL Server セットアップ ログを参照して、SQL Server エンジンと Analysis Services のエラーをトラブルシューティングします。 詳細については、「SQL Server セットアップ ログ ファイルの表示と読み取り」をご覧ください。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 SQL Server 2008 または 2008 R2 の Analysis Services フェールオーバー クラスターのネットワーク名の変更後に SQL Server 2012 へのアップグレードが失敗する場合がある  
 **問題点:** Windows クラスター アドミニストレーター ツールを使用して Microsoft SQL Server 2008 または 2008 R2 の Analysis Services フェールオーバー クラスターの名前を変更した後でアップグレードを実行すると、処理が失敗する場合があります。  
@@ -93,9 +93,9 @@ SQL Server を Windows Server 2008 R2 Server Core SP1 にインストールす�
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 セマンティック検索を使用するには、依存する追加項目のインストールが必要になる  
 **問題点:** 統計的セマンティック検索には、追加の前提条件として、セマンティック言語統計データベースが必要です。これは、SQL Server セットアップ プログラムでインストールされません。  
   
-**回避策:** セマンティック インデックス作成の前提条件として、セマンティック言語統計データベースをセットアップするには、次のタスクを実行してください。  
+**回避策:** セマンティック インデックスの作成の前提条件として、セマンティック言語統計データベースをセットアップするには、次のタスクを実行してください。  
   
-1.  SQL Server インストール メディアにある SemanticLanguageDatabase.msi という名前の Windows インストーラー パッケージを実行して、データベースを抽出します。 SQL Server 2012 Express の場合は、セマンティック言語統計データベースを [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582)) からダウンロードした後、Windows インストーラー パッケージを実行してください。  
+1.  SQL Server インストール メディアにある SemanticLanguageDatabase.msi という名前の Windows インストーラー パッケージを実行して、データベースを抽出します。 SQL Server 2012 Express の場合は、セマンティック言語統計データベースを [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ) からダウンロードした後、Windows インストーラー パッケージを実行してください。  
   
 2.  適切なデータ フォルダーにデータベースを移動します。 データベースを既定の場所に残しておく場合、正しくアタッチするには、権限を変更する必要があります。  
   
@@ -121,7 +121,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         **Windows Server 2008 R2 SP1 で .NET Framework 3.5 SP1 を有効にするには、次のいずれかの方法を使用します。**  
   
-        方法 1: サーバー マネージャーの使用  
+        方法 1:サーバー マネージャーの使用  
   
         1.  サーバー マネージャーで **[機能の追加]** をクリックし、使用できる機能の一覧を表示します。  
   
@@ -135,7 +135,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         方法 2:Windows PowerShell の使用  
   
-        1.  **[スタート]** | **[すべてのプログラム]** | **[アクセサリ]** の順にクリックします。  
+        1.  **[スタート]**  |  **[すべてのプログラム]**  |  **[アクセサリ]** の順にクリックします。  
   
         2.  **[Windows PowerShell]** を展開し、 **[Windows PowerShell]** を右クリックして、 **[管理者として実行]** をクリックします。 **[ユーザー アカウント制御]** ボックスで **[はい]** をクリックします。  
   
@@ -148,7 +148,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         **Windows 7 SP1 で .NET Framework 3.5 SP1 を有効にするには、次の方法を使用します。**  
   
-        1.  **[スタート]** ボタンをクリックし、 | **[コントロール パネル]** | **[プログラム]**、**[Windows の機能の有効化または無効化]** の順にクリックします。 管理者のパスワードの入力または確認入力を求めるメッセージが表示されたら、パスワードを入力するか、確認入力を行います。  
+        1.  **[スタート]** ボタンをクリックし、 |  **[コントロール パネル]**  |  **[プログラム]** 、 **[Windows の機能の有効化または無効化]** の順にクリックします。 管理者のパスワードの入力または確認入力を求めるメッセージが表示されたら、パスワードを入力するか、確認入力を行います。  
   
         2.  **Microsoft .NET Framework 3.5.1**を有効にするには、この機能の横にあるチェック ボックスをオンにします。 Windows の機能を無効化するには、チェック ボックスをオフにします。  
   
@@ -198,12 +198,12 @@ A semantic language statistics database is not registered. Full-text indexes usi
 SQL Server 2012 は、Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1、および Windows 7 SP1 の各オペレーティング システムでサポートされています。  
   
 ### <a name="19-sync-framework-is-not-included-in-the-installation-package"></a>1.9 Sync Framework がインストール パッケージに含まれていない  
-**問題点:** Sync Framework は SQL Server 2012 インストール パッケージに含まれていません。  
+**問題点:** Sync Framework は SQL Server 2012 のインストール パッケージには含まれていません。  
   
 **回避策:** Sync Framework の適切なバージョンは、[この Microsoft ダウンロード センター ページ](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)からダウンロードしてインストールできます。  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 Visual Studio 2010 Service Pack 1 をアンインストールした場合、特定のコンポーネントを復元するために SQL Server 2012 インスタンスの修復が必要  
-**問題:**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] インストールは、Visual Studio 2010 Service Pack 1 の一部のコンポーネントに依存します。 Service Pack 1 をアンインストールすると、共有コンポーネントの一部が元のバージョンにダウングレードされ、残りのコンポーネントの一部は、コンピューターから完全に削除されます。  
+**問題:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] インストールは、Visual Studio 2010 Service Pack 1 の一部のコンポーネントに依存します。 Service Pack 1 をアンインストールすると、共有コンポーネントの一部が元のバージョンにダウングレードされ、残りのコンポーネントの一部は、コンピューターから完全に削除されます。  
   
 **回避策:** 元のソース メディアまたはネットワークのインストール場所の [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインスタンスを修復します。  
   
@@ -243,16 +243,16 @@ SQL Server のインスタンスを修復する方法の詳細については、
 **回避策:** アップグレードする前に、データベースおよびそのファイルとファイル グループが読み取り/書き込み可能に設定されていることをご確認ください。  
   
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 同じ IP アドレスを使用すると SQL Server フェールオーバー クラスターのインスタンスの再インストールに失敗する  
-**問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に不適切な IP アドレスを指定すると、インストールは失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
+**問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に不正な IP アドレスを指定すると、インストールは失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
   
-**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストールする前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。  
+**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストール前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="AS"></a>2.0 Analysis Services  
   
 ### <a name="21-sql-editor-and-as-editor-cannot-connect-to-their-respective-server-instances-in-the-same-ssms-instance"></a>2.1 SQL エディターおよび AS エディターから同じ SSMS インスタンス内の対応するサーバー インスタンスに接続できない  
-**問題点:** SQL エディターが Analysis Services サーバーに既に接続している場合、MDX/DMX エディターを使用して Analysis Services サーバーに接続することができません。  
+**問題点:** SQL エディターが Analysis Services サーバーに既に接続されている場合、MDX/DMX エディターを使用して Analysis Services サーバーに接続できません。  
   
 SQL Server Management Studio 2012 (SSMS) を使用しているときに、エディターで開いている .sql ファイルが SQL Server インスタンスに接続されている場合、同じ SSMS インスタンス内で開いた MDX ファイルまたは DMX ファイルから AS サーバー インスタンスに接続できません。 同様に、SSMS のエディターで既に開いている MDX ファイルまたは DMX ファイルが AS サーバー インスタンスに接続されている場合、同じ SSMS インスタンス内で開いた .sql ファイルから SQL Server インスタンスに接続できません。  
   
@@ -276,7 +276,7 @@ SQL Server Management Studio 2012 (SSMS) を使用しているときに、エデ
 ### <a name="23-ssis-components-for-as-tabular-models-do-not-work-as-expected"></a>2.3 AS テーブル モデル用の SSIS コンポーネントが予期したとおりに動作しない  
 Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポーネントが、テーブル モデルに対して予期したとおりに動作しません。 テーブル モデルを扱うための SSIS パッケージを作成する場合、次のような既知の問題があります。  
   
-**問題点:** AS 接続マネージャーは、データ ソースと同じソリューションでテーブル モデルを使用できません。  
+**問題点:** AS 接続マネージャーが、データ ソースと同じソリューションでテーブル モデルを使用できません。  
   
 **回避策:** AS 処理タスクまたは AS DDL 実行タスクを構成する前に、明示的に AS サーバーに接続する必要があります。  
   
@@ -284,7 +284,7 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
   
 **問題点:** データベース、テーブル、およびパーティションの代わりに、キューブ、メジャー グループ、およびディメンションが表示されます。 これは、タスクの制限事項です。  
   
-**回避策:** キューブ/メジャー グループ/ディメンションの構造を使用して、テーブル モデルを処理することもできます。  
+**回避策:** キューブ、メジャー グループ、ディメンションの構造を使用して、テーブル モデルを処理することもできます。  
   
 **問題点:** テーブル モードで実行する AS でサポートされるいくつかの処理オプションが、AS 処理タスクで表示されません ([デフラグの処理] など)。  
   
@@ -321,17 +321,17 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
 ## <a name="DQS"></a>4.0 Data Quality Services  
   
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 クラスターでサポートされていない DQS  
-**問題点:** DQS は、SQL Server フェールオーバー クラスターのインストールではサポートされていません。 SQL Server のクラスター インスタンスをインストールする場合は、 **[機能の選択]** ページで **[Data Quality Services]** チェック ボックスと **[Data Quality Client]** チェック ボックスをオンにしないでください。 クラスター インスタンスのインストール時にこれらのチェック ボックスがオンになっている場合 (および DQSInstaller.exe ファイルを実行して Data Quality Server のインストールを完了している場合)、DQS は、このノードにインストールされますが、クラスターにノードを追加しても追加のノードでは使用できません。そのため、DQS は追加のノードで動作しません。  
+**問題点:** DQS は、SQL Server クラスターのインストールではサポートされていません。 SQL Server のクラスター インスタンスをインストールする場合は、 **[機能の選択]** ページで **[Data Quality Services]** チェック ボックスと **[Data Quality Client]** チェック ボックスをオンにしないでください。 クラスター インスタンスのインストール時にこれらのチェック ボックスがオンになっている場合 (および DQSInstaller.exe ファイルを実行して Data Quality Server のインストールを完了している場合)、DQS は、このノードにインストールされますが、クラスターにノードを追加しても追加のノードでは使用できません。そのため、DQS は追加のノードで動作しません。  
   
-**回避策:** この問題を回避するには、SQL Server 2012 Cumulative Update 1 をインストールします。 手順については、「[https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817)」を参照してください。  
+**回避策:** この問題を回避するには、SQL Server 2012 累積更新プログラム 1 をインストールします。 手順については、「[https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817)」を参照してください。  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 Data Quality Server を再インストールするには Data Quality Server をアンインストールしてから DQS オブジェクトを削除する必要がある  
 **問題点:** Data Quality Server をアンインストールしても、DQS オブジェクト (DQS データベース、DQS ログイン、および DQS ストアド プロシージャ) は SQL Server インスタンスから削除されません。  
   
-**回避策:** 同じコンピューターの同じ DQS Server インスタンスに Data Quality Server を再インストールするには、SQL Server インスタンスから手動で DQS オブジェクトを削除する必要があります。 さらに、Data Quality Server を再インストールする前に、そのコンピューターの C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA フォルダーから DQS データベース (DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA) ファイルも削除する必要があります。 この操作を行わないと、Data Quality Server のインストールが失敗します。 ナレッジ ベースやデータ品質プロジェクトなどのデータを残しておく場合は、データベース ファイルを削除せずに別の場所に移動します。 アンインストール プロセスの完了後に DQS オブジェクトを削除する方法の詳細については、「 [Data Quality Server オブジェクトの削除](https://msdn.microsoft.com/library/hh231667.aspx)」をご覧ください。  
+**回避策:** 同じコンピューターの同じ SQL Server インスタンスに Data Quality Server を再インストールするには、SQL Server インスタンスから手動で DQS オブジェクトを削除する必要があります。 さらに、Data Quality Server を再インストールする前に、そのコンピューターの C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA フォルダーから DQS データベース (DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA) ファイルも削除する必要があります。 この操作を行わないと、Data Quality Server のインストールが失敗します。 ナレッジ ベースやデータ品質プロジェクトなどのデータを残しておく場合は、データベース ファイルを削除せずに別の場所に移動します。 アンインストール プロセスの完了後に DQS オブジェクトを削除する方法の詳細については、「 [Data Quality Server オブジェクトの削除](https://msdn.microsoft.com/library/hh231667.aspx)」をご覧ください。  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 ナレッジ検出アクティビティや対話的なクレンジング アクティビティの終了通知が遅れる  
-**問題点:** 管理者がアクティビティを [アクティビティの監視] 画面で終了した場合、ナレッジ検出、ドメイン管理、または対話的なクレンジングのアクティビティを実行しているインタラクティブ ユーザーには、そのユーザーが次に操作を実行するまで、アクティビティが終了されたことが通知されません。  
+**問題点:** 管理者がアクティビティを [アクティビティの監視] 画面で終了した場合、ナレッジ検出、ドメイン管理、または対話的なクレンジングのアクティビティを実行しているインタラクティブ ユーザーには、そのユーザーが次に操作を実行するまで、アクティビティが終了したことが通知されません。  
   
 **回避策:** なし  
   
@@ -341,7 +341,7 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
 **回避策:** これを回避するには、ナレッジ ベースに保存しておく必要のある作業は、新しいアクティビティを開始する前にパブリッシュしてください。  
   
 ### <a name="45-controls-do-not-scale-properly-on-large-font-sizes"></a>4.5 大きなフォント サイズで、コントロールのサイズが正しく調整されない  
-**問題点:**(Windows Server 2008 または Windows 7 で) テキストのサイズを [大 - 150%] に変更した場合、または (Windows 7 で) [カスタム DPI] の設定を [200%] に変更した場合は、**[新しいナレッジ ベース]** ページの **[キャンセル]** ボタンおよび **[作成]** ボタンにアクセスできません。  
+**問題点:** (Windows Server 2008 または Windows 7 で) テキストのサイズを [大 - 150%] に変更した場合、または (Windows 7 で) [カスタム DPI] の設定を [200%] に変更した場合は、 **[新しいナレッジ ベース]** ページの **[キャンセル]** ボタンおよび **[作成]** ボタンにアクセスできません。  
   
 **回避策:** この問題を解決するには、フォントを小さいサイズに設定します。  
   
@@ -354,12 +354,12 @@ Analysis Services (AS) 用の SQL Server Integration Services (SSIS) コンポ�
 **問題点:** ソース データ内の列が **bigint** データ型である場合は、この列を DQS の **integer** データ型ではなく、**decimal** データ型のドメインにマップする必要があります。 これは、 **int** データ型よりも **decimal** データ型の方が表現できる値の範囲の値が広く、格納できる値も大きいためです。  
   
 ### <a name="48-nvarcharmax-and-varcharmax-data-types-are-not-supported-in-the-dqs-cleansing-component-in-integration-services"></a>4.8 NVARCHAR(MAX) および VARCHAR(MAX) データ型が、Integration Services の DQS クレンジング コンポーネントでサポートされない  
-**問題点:****nvarchar(max)** データ型および **varchar(max)** データ型のデータ列が、Integration Services の DQS クレンジング コンポーネントでサポートされていません。 したがって、これらのデータ列は、DQS クレンジング変換エディターの [マッピング] タブでのマッピングで使用できないため、クレンジングすることができません。  
+**問題点:** **nvarchar(max)** データ型および **varchar(max)** データ型のデータ列が、Integration Services の DQS クレンジング コンポーネントでサポートされていません。 したがって、これらのデータ列は、DQS クレンジング変換エディターの [マッピング] タブでのマッピングで使用できないため、クレンジングすることができません。  
   
 **回避策:** DQS クレンジング コンポーネントを使用してこれらのデータ列を処理する前に、データ変換の変換を使用して、これらの列を **DT_STR** データ型または **DT_WSTR** データ型に変換する必要があります。  
   
 ### <a name="49-the-item-to-run-dqsinstallerexe-on-the-start-menu-is-overwritten-on-new-sql-server-instance-installation"></a>4.9 [スタート] メニューの DQSInstaller.exe を実行するアイテムが新しい SQL Server インスタンスのインストールで上書きされる  
-**問題点:** SQL Server インスタンスに Data Quality Services をインストールすることを選択した場合、SQL Server セットアップの完了後に、**[スタート]** メニューの **[Data Quality Services]** プログラム グループに **[Data Quality Server インストーラー]** というアイテムが作成されます。 ただし、同じコンピューターに複数の SQL Server インスタンスをインストールした場合でも、 **[スタート]** メニューに作成される **[Data Quality Server インストーラー]** アイテムは 1 つです。 このアイテムをクリックすると、最後にインストールされた SQL Server インスタンスの DQSInstaller.exe ファイルが実行されます。  
+**問題点:** SQL Server インスタンスに Data Quality Services をインストールすることを選択した場合、SQL Server セットアップの完了後に、 **[スタート]** メニューの **[Data Quality Services]** プログラム グループに **[Data Quality Server インストーラー]** というアイテムが作成されます。 ただし、同じコンピューターに複数の SQL Server インスタンスをインストールした場合でも、 **[スタート]** メニューに作成される **[Data Quality Server インストーラー]** アイテムは 1 つです。 このアイテムをクリックすると、最後にインストールされた SQL Server インスタンスの DQSInstaller.exe ファイルが実行されます。  
   
 ### <a name="410-activity-monitoring-displays-incorrect-status-for-failed-integration-services-cleansing-activities"></a>4.10 [アクティビティ監視] 画面に、失敗した Integration Services クレンジング アクティビティについて正しくないステータスが表示される  
 [アクティビティ監視] 画面の **[現在の状態]** 列に、失敗した Integration Services クレンジング アクティビティに対しても **[成功]** と表示されます。  
@@ -371,7 +371,7 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
 クレンジング データ品質プロジェクトで、ソース データ内のフィールドを、日付データ型の子ドメインを持つ複合ドメインにマップした場合、クレンジング結果内の子ドメイン出力に正しくない日付形式があり、データベースへのエクスポート操作が失敗します。  
   
 ### <a name="413-error-when-mapping-to-an-excel-sheet-that-contains-a--semicolon-in-its-name"></a>4.13 名前に ; (セミコロン) を含む Excel シートへのマップ時のエラー  
-**問題点:** Data Quality Client の任意の DQS アクティビティの **[マップ]** ページで、その名前に ; (セミコロン) が含まれるソース Excel シートにマップした場合、**[マップ]** ページで **[次へ]** をクリックすると、処理されていない例外メッセージが表示されます。  
+**問題点:** Data Quality Client の任意の DQS アクティビティの **[マップ]** ページで、その名前に ; (セミコロン) が含まれるソース Excel シートにマップした場合、 **[マップ]** ページで **[次へ]** をクリックすると、処理されていない例外メッセージが表示されます。  
   
 **回避策:** マップするソース データを格納している Excel ファイルのシート名から ; (セミコロン) を削除し、再試行してください。  
   
@@ -462,7 +462,7 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
 -   または、32 ビットの Windows PowerShell 2.0 プロンプトから SQLPS モジュールをインポートします。  
   
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 スクリプト生成ウィザードでの移動時にエラーが発生することがある  
-**問題点:****[スクリプトの保存またはパブリッシュ]** をクリックしてスクリプトの生成ウィザードでスクリプトを生成してから、**[オプションの選択]** または **[スクリプト作成オプションの設定]** をクリックして移動するか、**[スクリプトの保存またはパブリッシュ]** を再度クリックすると、次のエラーが発生することがあります。  
+**問題点:** **[スクリプトの保存またはパブリッシュ]** をクリックしてスクリプトの生成ウィザードでスクリプトを生成してから、 **[オプションの選択]** または **[スクリプト作成オプションの設定]** をクリックして移動するか、 **[スクリプトの保存またはパブリッシュ]** を再度クリックすると、次のエラーが発生することがあります。  
   
 <a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
@@ -501,11 +501,11 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
   
 |Driver|マルチサブネット フェールオーバー|アプリケーションの目的|読み取り専用ルーティング|マルチサブネット フェールオーバー:より高速な単一サブネット エンドポイント フェールオーバー|マルチサブネット フェールオーバー:SQL クラスター インスタンスの名前付きインスタンスの解決|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|はい|[はい]|[はい]|[はい]|はい|  
-|SQL Native Client 11.0 OLEDB|いいえ|はい|[はい]|いいえ|いいえ|  
-|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム**\&#42;**|はい|[はい]|[はい]|[はい]|[ユーザー アカウント制御]|  
-|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム **\&#42;\&#42;**|はい|[はい]|[はい]|[はい]|はい|  
-|Microsoft JDBC Driver 4.0 for SQL Server|はい|[はい]|[はい]|[はい]|はい|  
+|SQL Native Client 11.0 ODBC|はい|はい|はい|はい|はい|  
+|SQL Native Client 11.0 OLEDB|いいえ|はい|はい|いいえ|いいえ|  
+|ADO.NET with .NET Framework 4.0 と接続性に関する修正プログラム **\&#42;**|はい|はい|はい|はい|[ユーザー アカウント制御]|  
+|ADO.NET with .NET Framework 3.5 SP1 と接続性に関する修正プログラム **\&#42;\&#42;**|はい|はい|はい|はい|はい|  
+|Microsoft JDBC Driver 4.0 for SQL Server|はい|はい|はい|はい|はい|  
   
 **\&#42;** ADO .NET with .NET Framework 4.0 用の接続性に関する修正プログラムをダウンロードしてください ([https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211))。  
   
@@ -529,19 +529,19 @@ MultiSubnetFailover は、SQL Server 2012 の AlwaysOn 可用性グループお�
   
 **.NET Framework 3.5 および OLEDB で MultiSubnetFailover=True はサポートされない**  
   
-**問題点:** 異なるサブネットからの複数の IP アドレスに応じて可用性グループまたはフェールオーバー クラスター インスタンスにリスナー名 (ネットワーク名または WSFC クラスター マネージャーのクライアント アクセス ポイント) がある場合、ADO.NET with .NET Framework 3.5SP1 または SQL Native Client 11.0 OLEDB を使用している場合は、可用性グループ リスナーに対するクライアント接続要求の 50% が接続タイムアウトに達する可能性があります。  
+**問題点:** 可用性グループまたはフェールオーバー クラスター インスタンスのリスナー名 (ネットワーク名または WSFC クラスター マネージャーのクライアント アクセス ポイント) が、異なるサブネットの複数の IP アドレスを使用したものであるとき、ADO.NET with .NET Framework 3.5SP1 または SQL Native Client 11.0 OLEDB を使用している場合、可用性グループ リスナーに対するクライアント接続要求の 50% が接続タイムアウトに達する可能性があります。  
   
 **回避策:** 次のいずれかのタスクを実行することをお勧めします。  
   
 -   クラスター リソースを操作する権限がない場合は、接続タイムアウトを 30 秒に設定します (この値は結果として、20 秒の TCP タイムアウトと 10 秒のバッファーになります)。  
   
-    **長所:**:クロスサブネット フェールオーバーが発生した場合、クライアントの復旧時間が短くなります。  
+    **長所:** :クロスサブネット フェールオーバーが発生した場合、クライアントの復旧時間が短くなります。  
   
     **短所**:半数のクライアント接続に 20 秒以上要します。  
   
 -   クラスター リソースを操作する権限がある場合は、可用性グループ リスナーのネットワーク名を **RegisterAllProvidersIP**=0 に設定する手法をお勧めします。 詳細については、後の「RegisterAllProvidersIP を無効にし、TTL を短縮する PowerShell サンプル スクリプト」をご覧ください。  
   
-    **長所:** クライアント接続のタイムアウト値を大きくする必要がありません。  
+    **長所:** クライアント接続のタイムアウト値を大きくする必要はありません。  
   
     **短所:** クロスサブネット フェールオーバーが発生した場合、HostRecordTTL 設定およびクロスサイト DNS/AD レプリケーション スケジュールの設定によっては、クライアントの復旧時間が 15 分以上になる可能性があります。  
   
@@ -597,7 +597,7 @@ CDC Service for Oracle は、Oracle トランザクション ログをスキャ�
 ## <a name="MDS"></a>7.0 マスター データ サービス  
   
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 クラスター内で MDS のインストールを修復する  
-**問題点:****[マスター データ サービス]** チェック ボックスをオンにした状態で、SQL Server 2012 の RTM バージョンのクラスター化されたインスタンスをインストールすると、MDS は 1 つのノードにインストールされますが、クラスターに追加した他のノードでは、使用できなくなり、動作しなくなります。  
+**問題点:** **[マスター データ サービス]** チェック ボックスをオンにした状態で、SQL Server 2012 の RTM バージョンのクラスター化されたインスタンスをインストールすると、MDS は 1 つのノードにインストールされますが、クラスターに追加した他のノードでは、使用できなくなり、動作しなくなります。  
   
 **回避策**:この問題を解決するには、次の手順を実行して、SQL Server 2012 Cumulative Release 1 (CU1) をインストールする必要があります。  
   

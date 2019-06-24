@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e15b2614b64b6c5161e8648574f88700d4fd6d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797040"
 ---
 # <a name="mssqlserver802---database-engine-error"></a>MSSQLSERVER_802 - データベース エンジン エラー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47787416"
   
 1.  このサーバー上で、他のアプリケーションやサービスによってメモリが消費されていないか確認します。 重要度の低いアプリケーションやサービスのメモリ消費量が少なくなるように、構成を変更します。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Buffer Manager** および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Memory Manager** のパフォーマンス モニター カウンターを確認します。  
+2.  次のパフォーマンス モニター カウンターの収集を開始します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Buffer Manager**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Memory Manager**。  
   
 3.  次に示す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ構成パラメーターを確認します。  
   
