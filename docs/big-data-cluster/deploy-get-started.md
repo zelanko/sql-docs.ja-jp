@@ -5,16 +5,16 @@ description: 手順と SQL Server 2019 ビッグ データ クラスター (プ�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797907"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388830"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターを概要します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "66797907"
 
 ## <a name="deploy-a-big-data-cluster"></a>ビッグ データ クラスターをデプロイする
 
-ビッグ データ クラスターをデプロイする Kubernetes を構成した後、`mssqlctl cluster create`コマンド。 を展開する場合は、いくつかの方法を実行できます。
+ビッグ データ クラスターをデプロイする Kubernetes を構成した後、`mssqlctl bdc create`コマンド。 を展開する場合は、いくつかの方法を実行できます。
 
 - 開発/テスト環境に展開する場合は、いずれかを使用することもできます、[既定の構成](deployment-guidance.md#deploy)によって提供される**mssqlctl**します。
 

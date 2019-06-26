@@ -5,16 +5,16 @@ description: Mssqlctl コマンドに関する参照記事です。
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779241"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388673"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,9 +26,11 @@ ms.locfileid: "66779241"
 |     |     |
 | --- | --- |
 |[mssqlctl アプリ](reference-mssqlctl-app.md) | 作成、削除、実行、およびアプリケーションを管理します。 |
-|[mssqlctl クラスター](reference-mssqlctl-cluster.md) | 選択、管理、およびクラスターを操作します。 |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | 選択、管理、および SQL Server のビッグ データ クラスターを操作します。 |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | HDFS モジュールでは、ファイル システムのコマンドは、HDFS へのアクセスを提供します。 |
 [mssqlctl login](#mssqlctl-login) | クラスターのコント ローラーのエンドポイントにログインします。
 [mssqlctl logout](#mssqlctl-logout) | クラスターからログアウトします。
+|[mssqlctl sql](reference-mssqlctl-sql.md) | SQL DB の CLI には、T-SQL を使用して SQL Server との対話をユーザーができます。 |
 ## <a name="mssqlctl-login"></a>mssqlctl login
 使用する必要があります、展開中にコント ローラー エンドポイントが一覧表示、クラスターを展開するときにログインします。  コント ローラー エンドポイントがわからない場合、システムの既定の場所で、クラスターの kube 構成することでログイン<user home>/.kube/config または、KUBECONFIG 環境変数を使用して、つまり KUBECONFIG=path/to/.kube/config をエクスポートします。
 ```bash

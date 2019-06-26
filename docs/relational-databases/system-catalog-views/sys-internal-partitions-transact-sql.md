@@ -1,7 +1,7 @@
 ---
 title: sys.internal_partitions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,31 +14,32 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537903"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388338"
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ディスク ベース テーブルで列ストア インデックスの内部データを追跡するそれぞれの行セットの 1 つの行を返します。 これらの行セットでは、列ストア インデックスに内部し、トラックが削除された行、行グループのマッピング、およびデルタは、行グループを格納します。 データを追跡ごとに各テーブル パーティション。すべてのテーブルには、少なくとも 1 つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 再、行セットを列ストア インデックスを再構築するたびに作成されます。   
+  ディスク ベース テーブルで列ストア インデックスの内部データを追跡する各の行セットの 1 つの行を返します。 これらの行セットは列ストア インデックスに内部し、トラックが削除された行、行グループのマッピング、およびデルタ行グループを格納します。 各テーブル パーティションのそれぞれのデータを追跡します。すべてのテーブルでは、少なくとも 1 つのパーティションがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 再、行セットを列ストア インデックスを再構築するたびに作成されます。   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|このパーティションのパーティションの ID です。 データベース内で一意です。|  
+|partition_id|**bigint**|このパーティションのパーティションの ID。 データベース内で一意です。|  
 |object_id|**int**|パーティションを含むテーブルのオブジェクト ID。|  
-|index_id|**int**|テーブルで定義された列ストア インデックスのインデックスの ID。<br /><br /> 1 = クラスター化列ストア インデックス<br /><br /> 2 = 非クラスター化列ストア インデックス|  
-|partition_number|**int**|パーティションの数です。<br /><br /> 1 = パーティション分割されたテーブルの最初のパーティションまたは非パーティション テーブルの 1 つのパーティションです。<br /><br /> 2 = 2 番目のパーティションとなどです。|  
-|internal_object_type|**tinyint**|列ストア インデックスの内部データを追跡するための行セット オブジェクトです。<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP - このビットマップのインデックスは、列ストアから削除済みとしてマークされている行を追跡します。 ビットマップは、パーティションは、複数の行グループ内の行を持つことができますので、すべての行グループは。 行は、列ストアにも物理的に存在し、領域を占有にあります。<br /><br /> COLUMN_STORE_DELTA_STORE - 行のグループをストアには、カラム型ストレージに圧縮されていないを行グループと呼ばれます。 各テーブル パーティションでは、0 個以上のデルタストアの行グループを持つことができます。<br /><br /> COLUMN_STORE_DELETE_BUFFER - 更新可能な非クラスター化列ストア インデックスの削除を維持するためです。 クエリを基になる行ストア テーブルから行を削除すると、削除のバッファーは、列ストアから、削除を追跡します。 削除された行の数が 1048576 を超えた場合にバック グラウンド スレッドの組ムーバーによって、または明示的な再編成コマンドによって、削除のビットマップにマージされます。  任意の特定の時点では、delete ビットマップ、および削除のバッファーの和集合は、すべて削除された行を表します。<br /><br /> COLUMN_STORE_MAPPING_INDEX - クラスター化列ストア インデックスがセカンダリ非クラスター化インデックスを持つ場合にのみ使用します。 これは、非クラスター化インデックスのキーは、適切な行グループと列ストア行 ID にマップします。 のみを格納します。 別の行グループに移動する行のキーこれは、マージ操作で、次の 2 つの異なる行をグループからの行をマージして、デルタ行グループは、列ストアに圧縮されたときに発生します。|  
-|Row_group_id|**int**|デルタストアの行グループの ID。 各テーブル パーティションでは、0 個以上のデルタストアの行グループを持つことができます。|  
-|hobt_id|**bigint**|内部行セット オブジェクトの ID。 これは、適切なキーの詳細については、内部の行セットの物理的な特性を取得するには、その他の Dmv を使用したに参加するためです。|  
+|index_id|**int**|テーブルで定義された列ストア インデックスのインデックス ID。<br /><br /> 1 = クラスター化列ストア インデックス<br /><br /> 2 = 非クラスター化列ストア インデックス|  
+|partition_number|**int**|パーティションの数です。<br /><br /> 1 = パーティション分割されたテーブルの最初のパーティションまたは非パーティション テーブルの 1 つのパーティション。<br /><br /> 2 番目のパーティションし、などです。|  
+|internal_object_type|**tinyint**|列ストア インデックスの内部データを追跡するための行セット オブジェクト。<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP - このビットマップのインデックスは、列ストアから削除済みとしてマークされている行を追跡します。 パーティションは、複数の行グループ内の行を持つことができますので、ビットマップはすべての行グループは。 行は、列ストアにも物理的に存在する領域を占有してをあります。<br /><br /> COLUMN_STORE_DELTA_STORE - 行のグループをストアには、カラム型ストレージに圧縮されていないを行グループと呼ばれます。 各テーブル パーティションには、0 個以上のデルタストア行グループを持つことができます。<br /><br /> COLUMN_STORE_DELETE_BUFFER - 更新可能な非クラスター化列ストア インデックスの削除を維持するためです。 クエリでは、基になる行ストア テーブルから行を削除、削除バッファーは、列ストアから削除を追跡します。 削除された行の数が 1048576 を超えた場合にバック グラウンド スレッドの組ムーバーによって、または明示的な再編成コマンドによって、削除のビットマップにマージされます。  特定の時点で、削除のビットマップと削除バッファーの和集合がすべて削除された行を表します。<br /><br /> COLUMN_STORE_MAPPING_INDEX - クラスター化列ストア インデックスがセカンダリ非クラスター化インデックスを持つ場合にのみ使用します。 これにより、非クラスター化インデックス キーが、適切な行グループと列ストア行 ID にマップされます。 別の行グループに移動する行のキーを格納するだけこれは、デルタ行グループは、列ストアに圧縮するときに、マージ操作で、2 つの異なる行をグループから行をマージするときに発生します。|  
+|Row_group_id|**int**|デルタストア行グループの ID。 各テーブル パーティションには、0 個以上のデルタストア行グループを持つことができます。|  
+|hobt_id で|**bigint**|内部行セット オブジェクトの ID。 これは、内部の行セットの物理的な特性についての詳細を取得するには、その他の Dmv を使用したに参加するための適切なキーです。|  
 |rows|**bigint**|このパーティション内の行の概数です。|  
-|data_compression|**tinyint**|行セットの圧縮の状態。<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
+|data_compression|**tinyint**|行セットの圧縮の状態。<br /><br /> 0 = NONE<br /><br /> 1 行を =<br /><br /> 2 ページを =|  
 |data_compression_desc|**nvarchar(60)**|各パーティションの圧縮の状態。 行ストア テーブルに指定できる値は、NONE、ROW、および PAGE です。 列ストア テーブルに指定できる値は COLUMNSTORE および COLUMNSTORE_ARCHIVE です。|  
+|optimize_for_sequential_key|**bit**|1 = パーティションが最後のページの挿入の最適化を有効にします。<br><br>0 = 既定値。 パーティションは、最後のページの挿入の最適化を無効になっているのです。|
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
@@ -49,7 +50,7 @@ ms.locfileid: "52537903"
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. すべてのテーブルの内部の行セットの表示します。  
- この例では、すべてのテーブルの内部列ストア行セットを返します。 詳細については、特定の行セットを検索するのに hobt_id でを使用することもできます。  
+ この例では、すべてのテーブルの内部列ストア行セットを返します。 詳細については、特定の行セットに hobt_id でを使用することもできます。  
   
 ```  
 SELECT i.object_id, i.index_id, i.name, p.hobt_id, p.internal_object_type_id, p.internal_object_type_desc  

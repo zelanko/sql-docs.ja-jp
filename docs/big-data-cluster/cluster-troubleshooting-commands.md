@@ -5,17 +5,17 @@ description: この記事では、監視、および SQL Server 2019 ビッグ �
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800736"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388723"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>監視とビッグ データの SQL Server クラスターのトラブルシューティング
 
@@ -116,12 +116,11 @@ kubectl get svc -n mssql-cluster
 |---|---|
 | **master-svc-external** | マスター インスタンスへのアクセスを提供します。<br/>(**EXTERNAL-IP、31433**と**SA**ユーザー) |
 | **controller-svc-external** | ツールと、クラスターを管理するクライアントをサポートしています。 |
-| **mgmtproxy-svc-external** | アクセスできるように、[クラスター管理ポータル](cluster-admin-portal.md)します。<br/>(https://**EXTERNAL-IP**: 30777/ポータル) |
 | **gateway-svc-external** | HDFS/Spark ゲートウェイへのアクセスを提供します。<br/>(**EXTERNAL-IP**と**ルート**ユーザー) |
 | **appproxy-svc-external** | アプリケーションの展開シナリオをサポートします。 |
 
 > [!TIP]
-> これでサービスを表示する方法は、 **kubectl**を使用することも、`mssqlctl cluster endpoint list`これらのエンドポイントを表示するコマンド。 詳細については、次を参照してください。[ビッグ データ クラスター エンドポイントを取得](deployment-guidance.md#endpoints)します。
+> これでサービスを表示する方法は、 **kubectl**を使用することも、`mssqlctl bdc endpoint list`これらのエンドポイントを表示するコマンド。 詳細については、次を参照してください。[ビッグ データ クラスター エンドポイントを取得](deployment-guidance.md#endpoints)します。
 
 ## <a name="get-service-details"></a>サービスを詳細します。
 
@@ -224,10 +223,6 @@ kubectl get pods <pod_name> -o yaml -n <namespace_name> | grep hostIP
 ```bash
 kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
-
-## <a name="cluster-administration-portal"></a>クラスターの管理ポータル
-
-使用して、[クラスター管理ポータル](cluster-admin-portal.md)ビッグ データ クラスターの状態を監視します。 たとえば、配置時を使えば、**展開**タブ。待機しなければ、 **mgmtproxy svc-外部**展開の開始時に利用できないようにするために、このポータルにアクセスする前に開始するサービス。
 
 ## <a name="kubernetes-dashboard"></a>Kubernetes ダッシュ ボード
 

@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 504559fab3078b03ea3b8aea923035654f60ce47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782139"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388790"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>マウント ADLS Gen2 の HDFS のビッグ データ クラスター内の階層化する方法
 
@@ -112,10 +112,10 @@ Azure portal で ADLS アカウントを取得できるアクセス キーの使
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl クラスター記憶域プールのマウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
+1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl bdc 記憶域プールのマウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ Azure portal で ADLS アカウントを取得できるアクセス キーの使
 ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 HDFS 内の特定のパスでのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> マウントを削除します。
 
-マウントを削除するには使用、 **mssqlctl クラスター記憶域プールのマウント delete**コマンド、および HDFS のマウント パスを指定します。
+マウントを削除するには使用、 **mssqlctl bdc 記憶域プールのマウント delete**コマンド、および HDFS のマウント パスを指定します。
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>次のステップ

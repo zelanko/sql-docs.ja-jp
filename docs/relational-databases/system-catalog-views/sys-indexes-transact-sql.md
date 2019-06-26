@@ -1,7 +1,7 @@
 ---
 title: sys.indexes (Transact SQL) |マイクロソフトのドキュメント
 ms.custom: ''
-ms.date: 04/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f65371e31362524a5a909d1fdda4a047b2525966
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff8fb876ace87e26522cc19ffdc97359a9216844
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004244"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387978"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,12 +54,14 @@ ms.locfileid: "63004244"
 |**has_filter**|**bit**|1 = インデックスにフィルターがあり、フィルター定義を満たす行だけが含まれます。<br /><br /> 0 = インデックスにフィルターはありません。|  
 |**filter_definition**|**nvarchar(max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。<br /><br /> ヒープまたはフィルター選択されたインデックス以外のインデックスの場合は、NULL です。|  
 |**auto_created**|**bit**|1 = 自動チューニングによってインデックスが作成されました。<br /><br />0 = ユーザーによってインデックスが作成されました。
+|**optimize_for_sequential_key**|**bit**|1 = インデックスが最後のページの挿入の最適化を有効にします。<br><br>0 = 既定値。 インデックスでは、無効になっている最後のページの挿入の最適化があります。|
+
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- テーブルのすべての iindexes を返す例を次`Production.Product`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベースです。  
+ 次の例は、テーブルのすべてのインデックスを返します`Production.Product`で、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]データベース。  
   
 ```  
   
@@ -84,7 +86,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   

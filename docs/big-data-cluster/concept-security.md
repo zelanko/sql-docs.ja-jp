@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783071"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387940"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターのセキュリティの概念
 
@@ -34,7 +34,7 @@ ms.locfileid: "66783071"
 
 * HDFS/Spark (Knox) ゲートウェイ - これは、HTTPS ベースのエンドポイント。 その他のエンドポイントは、この経由でプロキシ処理です。 HDFS/Spark ゲートウェイは、webHDFS Livy などのサービスにアクセスするために使用されます。 Knox への参照を表示すると、任意の場所は、エンドポイントです。
 
-* コント ローラー エンドポイント - クラスターを管理するための REST Api を公開するビッグ データ クラスターの管理サービスです。 管理ポータルなどのいくつかのツールは、このエンドポイントからもアクセスされます。
+* コント ローラー エンドポイント - クラスターを管理するための REST Api を公開するビッグ データ クラスターの管理サービスです。 いくつかのツールは、このエンドポイントからもアクセスされます。
 
 * マスター インスタンスのデータベース ツールと、クラスター内の SQL Server マスター インスタンスに接続するアプリケーションの TDS エンドポイント。
 

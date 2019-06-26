@@ -5,16 +5,16 @@ description: ビッグ データの SQL Server クラスターをオフライン
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd6a1e1e6f2ad661c8a2316c434854095c7f6da5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797888"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388813"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>ビッグ データの SQL Server クラスターのデプロイのオフライン実行します。
 
@@ -42,7 +42,7 @@ ms.locfileid: "66797888"
    > [!TIP]
    > これらのコマンドは、例として、PowerShell を使用しますが、cmd、bash、または docker を実行できる任意のコマンド シェルから実行することができます。 Linux では、次のように追加します。`sudo`各コマンドにします。
 
-1. 次のコマンドを繰り返すことにより、ビッグ データ クラスターにコンテナー イメージをプルします。 置換`<SOURCE_IMAGE_NAME>`各[イメージ名](#images)します。 置換`<SOURCE_DOCKER_TAG>`などクラスター リリースでは、ビッグ データのタグを持つ**ctp3.0**します。  
+1. 次のコマンドを繰り返すことにより、ビッグ データ クラスターにコンテナー イメージをプルします。 置換`<SOURCE_IMAGE_NAME>`各[イメージ名](#images)します。 置換`<SOURCE_DOCKER_TAG>`などクラスター リリースでは、ビッグ データのタグを持つ**ctp3.1**します。  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -84,7 +84,6 @@ ms.locfileid: "66797888"
  - **mssql-mlserver-r-runtime**
  - **mssql-mlserver-py-runtime**
  - **mssql-controller**
- - **mssql-portal**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
  - **mssql-monitor-kibana**
@@ -92,6 +91,8 @@ ms.locfileid: "66797888"
  - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
+ - **mssql-mleap-serving-runtime**
+  
 
 ## <a id="automated"></a> 自動化されたスクリプト
 
@@ -179,9 +180,9 @@ ms.locfileid: "66797888"
 プライベート リポジトリからを展開するには、記載された手順を使用、[展開ガイド](deployment-guidance.md)が、プライベート Docker リポジトリ情報を指定するカスタムの展開構成ファイルを使用します。 次**mssqlctl**コマンドは、という名前のカスタム展開構成ファイルで Docker の設定を変更する方法を示します**custom.json**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 展開が、docker のユーザー名とパスワードを求めまたはで指定することができます、 **DOCKER_USERNAME**と**DOCKER_PASSWORD**環境変数。

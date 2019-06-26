@@ -5,17 +5,17 @@ description: Kubernetes で実行して、リレーショナルの両方でス�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801890"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388729"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターとは
 
@@ -57,9 +57,7 @@ SQL Server のビッグ データ クラスターには、AI と機械学習タ�
 
 ### <a name="management-and-monitoring"></a>管理と監視
 
-管理と監視は、コマンド ライン ツール、Api、管理者ポータルでは、動的管理ビューの組み合わせを通じて提供されます。
-
-[クラスター管理者ポータル](cluster-admin-portal.md)は、クラスター内のポッドの正常性と状態を表示する web インターフェイスです。 Log analytics と監視ダッシュ ボードの他のダッシュ ボードへのリンクも提供します。
+管理と監視は、コマンド ライン ツール、Api、ポータル、および動的管理ビューの組み合わせを通じて提供されます。
 
 Azure Data Studio を使用して、ビッグ データ クラスター上のさまざまなタスクを実行することができます。 これは、オプションが有効で、新しい**SQL Server 2019 拡張機能 (プレビュー)** します。 この拡張機能を提供します。
 
@@ -80,7 +78,7 @@ Kubernetes は、ニーズに合わせてコンテナーのデプロイでスケ
 |:--|:--|
 | **Cluster** | Kubernetes クラスターは、一連のノードと呼ばれるマシンです。 1 つのノードがクラスターを制御し、マスター ノードが指定されます。残りのノードは、ワーカー ノードです。 Kubernetes マスターは、ワーカー間の作業を配布して、クラスターの正常性を監視します。 |
 | **[Node]** | ノードには、コンテナー化されたアプリケーションが実行されます。 物理マシンまたは仮想マシンのいずれかを指定できます。 Kubernetes クラスターには、物理マシンと仮想マシン ノードの組み合わせを含めることができます。 |
-| **pod 型** | ポッドは、Kubernetes のデプロイのアトミック単位です。 ポッドは、1 つまたは複数のコンテナーの論理グループ-リソース必要なアプリケーションの実行に関連付けられているとします。 それぞれのポッドが; ノードで実行します。ノードには、1 つまたは複数のポッドを実行できます。 Kubernetes マスターは、クラスター内のノードにポッドを自動的に割り当てます。 |
+| **Pod 型** | ポッドは、Kubernetes のデプロイのアトミック単位です。 ポッドは、1 つまたは複数のコンテナーの論理グループ-リソース必要なアプリケーションの実行に関連付けられているとします。 それぞれのポッドが; ノードで実行します。ノードには、1 つまたは複数のポッドを実行できます。 Kubernetes マスターは、クラスター内のノードにポッドを自動的に割り当てます。 |
 | &nbsp; ||
 
 ビッグ データの SQL Server クラスター、Kubernetes は SQL Server のビッグ データ クラスター; の状態を担当Kubernetes で、ビルド、クラスター ノードを構成およびノードにポッドを割り当てます、および、クラスターの正常性を監視します。

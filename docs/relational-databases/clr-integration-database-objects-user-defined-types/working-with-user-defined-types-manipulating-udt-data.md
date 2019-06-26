@@ -29,12 +29,12 @@ ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c216b41fe7f7c4d9a8b1c5e290b07bc0fec2c3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b83088e64314c21d8a71deb1da395d40eecfdec
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635520"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351649"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>ユーザー定義型の使用 - UDT データの操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ FROM dbo.Points;
  これには、次の結果が生成されます。  
   
 ```  
-IDPointValue  
-----------  
-13,4  
-21,5  
-31,99  
+ID PointValue  
+-- ----------  
+ 1 3,4  
+ 2 1,5  
+ 3 1,99  
 ```  
   
  また、[!INCLUDE[tsql](../../includes/tsql-md.md)] の CAST 関数や CONVERT 関数を使用して、同じ結果を得ることもできます。  
@@ -93,11 +93,11 @@ FROM dbo.Points;
  X プロパティと Y プロパティから整数値が返され、結果セットに表示されます。  
   
 ```  
-IDxValyVal  
-----------  
-134  
-215  
-3199  
+ID xVal yVal  
+-- ---- ----  
+ 1    3    4  
+ 2    1    5  
+ 3    1   99  
 ```  
   
 ## <a name="working-with-variables"></a>変数を使用した作業  
@@ -130,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  変数の代入に SELECT ステートメントを使用した場合と SET ステートメントを使用した場合には異なる点が 1 つあります。SELECT ステートメントでは 1 つのステートメントで複数の変数に代入できますが、SET 構文では、1 つ変数に代入するごとに 1 つの SET ステートメントが必要になります。  
   
 ## <a name="comparing-data"></a>データを比較します。  
- 設定した場合、UDT の値を比較する比較演算子を使用することができます、 **IsByteOrdered**プロパティを**true**クラスを定義するときにします。 詳細については、[ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)を参照してください。  
+ 設定した場合、UDT の値を比較する比較演算子を使用することができます、 **IsByteOrdered**プロパティを**true**クラスを定義するときにします。 詳細については、次を参照してください。[ユーザー定義型を作成する](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)します。  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -171,11 +171,11 @@ FROM dbo.Points;
  結果が表示されます、**距離**列。  
   
 ```  
-IDXYDistance  
-------------------------  
-1345  
-2155.09901951359278  
-319999.0050503762308  
+ID X  Y  Distance  
+-- -- -- ----------------  
+ 1  3  4                5  
+ 2  1  5 5.09901951359278  
+ 3  1 99 99.0050503762308  
 ```  
   
  **DistanceFrom**メソッドの引数を受け取る**ポイント**データ型、および指定した点から PointValue までの距離が表示されます。  
@@ -189,11 +189,11 @@ FROM dbo.Points;
  結果の結果を表示する、 **DistanceFrom**テーブルの各行のメソッド。  
   
 ```  
-ID PntDistanceFromPoint  
----------------------  
-13,495.0210502993942  
-21,594  
-31,990  
+ID Pnt DistanceFromPoint  
+-- --- -----------------  
+ 1 3,4  95.0210502993942  
+ 2 1,5                94  
+ 3 1,9                90  
 ```  
   
  **DistanceFromXY**メソッドは引数として個別にポイントを取得します。  

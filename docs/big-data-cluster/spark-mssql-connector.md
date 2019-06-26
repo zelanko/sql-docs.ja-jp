@@ -5,26 +5,37 @@ description: Spark で MSSQL Spark コネクタを使用して、SQL Server へ�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: faa9d90cf78df5d73f125c7660b79d39e2bd5622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770935"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388629"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>読み取りし、MSSQL Spark コネクタを使用して Spark から SQL Server への書き込み方法
 
 キーのビッグ データの使用パターンでは、基幹業務アプリケーションにアクセスするために SQL Server データの書き込み後に、Spark での大量データ処理です。 これらの使用状況パターン SQL の主要な最適化を利用し、書き込みを効率的なメカニズムを提供するコネクタを享受できます。
 
-ビッグ データ クラスターは、一括の Spark SQL の書き込みにパフォーマンスの高い Api を記述する SQL Server を使用する新しい MSSQL Spark コネクタを提供します。 この記事では、読み取り、MSSQL の Spark コネクタを使用して Spark から SQL Server に書き込む方法の例を示します。 この例では、Spark、によって処理され、新しい MSSQL Spark コネクタを使用して、クラスター内の SQL Server のマスター インスタンスに書き込まれ、ビッグ データ クラスターでの HDFS からデータは読み取られます。
+この記事では、MSSQL の Spark コネクタを使用してビッグ データ クラスター内で、次の場所を読み書きする方法の例を示します。
+
+1. SQL Server のマスター インスタンス
+1. SQL Server のデータ プール
+
+   ![MSSQL Spark コネクタのダイアグラム](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+
+サンプルでは、次のタスクを実行します。
+
+- ファイルを HDFS から読み取るし、いくつかの基本的な処理を実行します。
+- SQL テーブルと SQL Server のマスター インスタンスにデータ フレームを作成し、データ フレームにテーブルを読みます。
+- SQL の外部テーブルとして SQL Server のデータ プールに、データ フレームを作成し、データ フレームに外部テーブルを読みます。
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark コネクタ インターフェイス
 
-MSSQL Spark コネクタでは、Spark データ ソースの Api に基づいており、馴染みのある Spark の JDBC コネクタ インターフェイスを提供します。 インターフェイスのパラメーターを参照してください[Apache Spark ドキュメント](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)します。 MSSQL Spark コネクタは、名前によって参照される**com.microsoft.sqlserver.jdbc.spark**します。
+SQL Server 2019 プレビューの提供、 **MSSQL Spark コネクタ**ビッグ データの SQL Server 一括を使用するクラスターへの書き込み Api for Spark SQL の書き込み。 MSSQL Spark コネクタでは、Spark データ ソースの Api に基づいており、馴染みのある Spark の JDBC コネクタ インターフェイスを提供します。 インターフェイスのパラメーターを参照してください[Apache Spark ドキュメント](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)します。 MSSQL Spark コネクタは、名前によって参照される**com.microsoft.sqlserver.jdbc.spark**します。
 
 次の表では、インターフェイスのパラメーターが変更されたかを初めて使用するについて説明します。
 
@@ -55,7 +66,9 @@ SQL Server の一括のコネクタで使用では、Api を記述します。 �
 
 1. ダウンロード[AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv)ローカル コンピューターにします。
 
-1. Azure データ Studio で、ビッグ データ クラスターで HDFS のフォルダーを右クリックし、選択**新しいディレクトリ**します。 ディレクトリの名前を付けます**spark_data**します。
+1. Azure データの Studio を起動し、 [、ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)します。
+
+1. お使いのビッグ データ クラスターで HDFS のフォルダーを右クリックし、選択**新しいディレクトリ**します。 ディレクトリの名前を付けます**spark_data**します。
 
 1. 右クリックして、 **spark_data**ディレクトリ、および select**ファイルをアップロード**します。 アップロード、 **AdultCensusIncome.csv**ファイル。
 

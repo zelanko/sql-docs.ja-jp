@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783171"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387947"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server のビッグ データ クラスター上のコント ローラーとは何ですか。
 
@@ -44,17 +44,13 @@ ms.locfileid: "66783171"
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>コント ローラー サービスを使用してクラスターを管理します。
 
-いずれかを使用してコント ローラー サービスを使用するだけで、クラスターを管理する`mssqlctl`Api や、クラスター内でホストされているクラスターの管理ポータル。 同じ名前空間にポッドのような追加の Kubernetes オブジェクトを展開する場合管理またはコント ローラー サービスの監視対象ができません。
+いずれかを使用して、コント ローラー サービスを使用してクラスターを管理する**mssqlctl**コマンド。 同じ名前空間にポッドのような追加の Kubernetes オブジェクトを展開する場合管理またはコント ローラー サービスの監視対象ができません。 使用することも**kubectl** Kubernetes レベルでクラスターを管理するコマンド。 詳細については、次を参照してください。[監視とビッグ データの SQL Server クラスターのトラブルシューティングを行う](cluster-troubleshooting-commands.md)します。
 
-コント ローラーとビッグ データ クラスター用に作成された、Kubernetes のオブジェクト (ステートフルのセット、ポッド、シークレットなど) は、専用の Kubernetes 名前空間に存在します。 コント ローラー サービスをその名前空間内のすべてのリソースを管理する Kubernetes クラスターの管理者によってアクセス権付与されます。  このシナリオでは、RBAC ポリシーが展開を使用して初期クラスターの一部として自動的に構成されている`mssqlctl`します。 
+コント ローラーとビッグ データ クラスター用に作成された、Kubernetes のオブジェクト (ステートフルのセット、ポッド、シークレットなど) は、専用の Kubernetes 名前空間に存在します。 コント ローラー サービスをその名前空間内のすべてのリソースを管理する Kubernetes クラスターの管理者によってアクセス権付与されます。  このシナリオでは、RBAC ポリシーが展開を使用して初期クラスターの一部として自動的に構成されている**mssqlctl**します。
 
 ### <a name="mssqlctl"></a>mssqlctl
 
-`mssqlctl` コマンド ライン ユーティリティは、クラスター管理者は、ブートス トラップし、コント ローラー サービスによって公開される REST Api を使用してビッグ データ クラスターを管理できるようにする Python で記述されます。
-
-### <a name="cluster-administration-portal"></a>クラスターの管理ポータル
-
-コント ローラー サービスが稼働するいると、クラスター アドミニストレーターを使用できます、[クラスター管理ポータル](cluster-admin-portal.md)デプロイの進行状況を監視するには、検出、およびクラスター内のサービスに関する問題のトラブルシューティングします。
+**mssqlctl**は Python で記述された、により、クラスター管理者のブートス トラップし、コント ローラー サービスによって公開される REST Api を使用してビッグ データ クラスターを管理するコマンド ライン ユーティリティです。
 
 ## <a name="controller-service-security"></a>コント ローラー サービスのセキュリティ
 

@@ -5,16 +5,16 @@ description: SQL Server 2019 ビッグ データ クラスター (プレビュ�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3af688d607e8ec2d9dad7efe0d2275840c48cba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bde0037933f420147d0467f83f1bcb6428cf526
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782237"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388740"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターをアップグレードする方法
 
@@ -31,7 +31,7 @@ ms.locfileid: "66782237"
 1. 以前のクラスターを削除、`mssqlctl delete cluster`コマンド。
 
    ```bash
-    mssqlctl cluster delete --name <old-cluster-name>
+    mssqlctl bdc delete --name <old-cluster-name>
    ```
 
    > [!Important]
@@ -39,30 +39,24 @@ ms.locfileid: "66782237"
 
 1. 以前のリリースがあれば**mssqlctl**をインストールすることが重要アンインストール**mssqlctl**最初、最新バージョンをインストールする前にします。
 
-   アンインストールする場合は**mssqlctl** CTP 2.2] または [下の実行に対応します。
+   CTP 2.3 以降、次のコマンドを実行します。 置換`ctp3.0`のバージョンでのコマンドで**mssqlctl**アンインストールします。 CTP 3.0 より前のバージョンの場合は、追加のバージョン番号の前にダッシュ (たとえば、 `ctp-2.5`)。
 
    ```powershell
-   pip3 uninstall mssqlctl
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
-   CTP 2.3 以降、次のコマンドを実行します。 置換`ctp-2.5`のバージョンでのコマンドで**mssqlctl**アンインストールします。
-
-   ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
-   ```
-
-1. 最新バージョンのインストール**mssqlctl**します。 次のコマンド インストール**mssqlctl** CTP 3.0。
+1. 最新バージョンのインストール**mssqlctl**します。 次のコマンド インストール**mssqlctl** CTP 3.1 用。
 
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
    **Linux の場合:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]
