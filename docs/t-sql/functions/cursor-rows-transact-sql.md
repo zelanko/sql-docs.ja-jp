@@ -93,6 +93,6 @@ Sanchez
   
 ## <a name="see-also"></a>参照
 [カーソル関数 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
-[開く (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)
+[OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   
