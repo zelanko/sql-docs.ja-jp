@@ -1,7 +1,7 @@
 ---
 title: dbo.sysjobhistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,19 +20,22 @@ ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 809e8c80ec1734c24f6930b4042b5e1a84356597
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470850"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400109"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行予定のジョブに関する情報を格納します。 このテーブルに格納されます、 **msdb**データベース。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行予定のジョブに関する情報を格納します。
   
-> **注:** ジョブ ステップの完了後にのみ、データが更新されます。  
+> [!NOTE]
+> 基になるプロセスのケースがいくつかのジョブ ステップが完了するし、表に、通常が含まれていないレコードが現在進行中のジョブ ステップの専用ほとんどの場合、データが更新された*は*で情報を提供実行中のジョブ ステップ。
+
+このテーブルに格納されます、 **msdb**データベース。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +46,7 @@ ms.locfileid: "62470850"
 |**sql_message_id**|**int**|任意の ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ジョブが失敗したかどうかにエラー メッセージが返されます。|  
 |**sql_severity**|**int**|いずれかの重要度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー。|  
 |**message**|**nvarchar (4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーのテキスト (存在する場合)。|  
-|**run_status**|**int**|ジョブ実行のステータス。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br /> **4** = 実行中|  
+|**run_status**|**int**|ジョブ実行のステータス。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br />**4** = 実行中|  
 |**run_date**|**int**|日付と、ジョブまたはステップ実行を開始しました。 進行中の場合は、履歴に書き込まれた日付/時刻です。|  
 |**run_time**|**int**|ジョブまたはステップが実行を開始した時刻。|  
 |**run_duration**|**int**|ジョブまたはステップの実行の経過時間**HHMMSS**形式。|  

@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388770"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400027"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>HDFS のビッグ データ クラスター内の階層制御の S3 をマウントする方法
 
@@ -32,12 +32,12 @@ ms.locfileid: "67388770"
 
 ## <a name="access-keys"></a>アクセス キー
 
-1. ビッグ データ クラスターにアクセスできるクライアント コンピューターでコマンド プロンプトを開きます。
+### <a name="set-environment-variable-for-access-key-credentials"></a>アクセス キーの資格情報の環境変数を設定します。
 
-1. という名前のローカル ファイルを作成する**filename.creds**次の形式を使用して、S3 アカウントの資格情報を格納します。
+ビッグ データ クラスターにアクセスできるクライアント コンピューターでコマンド プロンプトを開きます。 次の形式を使用して、環境変数を設定します。 区切りのリストをコンマである必要があります、資格情報に注意してください。 'Set' コマンドは、Windows で使用されます。 Linux を使用している場合は、代わりに 'export' を使用しています。
 
    ```text
-    fs.s3a.access.key=<Access Key ID of the key>
+    set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
     fs.s3a.secret.key=<Secret Access Key of the key>
    ```
 
@@ -59,11 +59,13 @@ ms.locfileid: "67388770"
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+   
+1. 上記の手順に従ってください MOUNT_CREDENTIALS 環境変数な設定
 
 1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl bdc 記憶域プールのマウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

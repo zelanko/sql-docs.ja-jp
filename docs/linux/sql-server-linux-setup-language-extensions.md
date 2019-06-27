@@ -4,17 +4,17 @@ description: Red Hat、Ubuntu、SUSE には、SQL Server の言語拡張機能 (
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c796d8f445f4cc1b02a0f49d12cde55e0a7ab4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719381"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399937"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Linux 上の SQL Server 2019 言語拡張機能 (Java) のインストールします。
 
@@ -28,7 +28,7 @@ Java 拡張機能のパッケージの場所は、SQL Server Linux ソースの�
 
 ## <a name="uninstall-previous-ctp"></a>以前の CTP をアンインストールします。
 
-パッケージ一覧は、最近 CTP のリリース、結果としてパッケージ数が少ない経由で変更されました。 CTP をアンインストールすることをお勧めします。 2.x CTP 3.0 をインストールする前に、前のすべてのパッケージを削除します。 複数のバージョンのサイド バイ サイドでインストールがサポートされていません。
+パッケージ一覧は、最近 CTP のリリース、結果としてパッケージ数が少ない経由で変更されました。 CTP をアンインストールすることをお勧めします。 2.x CTP 3.1 をインストールする前に、前のすべてのパッケージを削除します。 複数のバージョンのサイド バイ サイドでインストールがサポートされていません。
 
 ### <a name="1-confirm-package-installation"></a>1.パッケージのインストールを確認します。
 
@@ -52,7 +52,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-30-install"></a>3.CTP 3.0 のインストールを続行します。
+### <a name="3-proceed-with-ctp-31-install"></a>3.CTP 3.1 のインストールを続行します。
 
 この記事の手順を使用して、オペレーティング システムの最上位のパッケージ レベルでインストールします。
 
@@ -185,6 +185,20 @@ sudo zypper install mssql-server-extensibility-java
 6. 再起動、`mssql-launchpadd`もう一度サービスを提供します。
 
 7. 言語拡張機能を使用する各データベースに対して、外部の言語でを登録する必要が[外部言語の作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)です。
+
+## <a name="register-external-language"></a>外部の言語を登録します。
+
+言語拡張機能を使用する各データベースに対して、外部の言語でを登録する必要が[外部言語の作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)です。
+
+次の例では、SQL Server on Linux 上のデータベースに Java と呼ばれる外部の言語を追加します。
+
+```SQL
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
+GO
+```
+
+詳細については、次を参照してください。[外部言語の作成](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)です。
 
 ## <a name="verify-installation"></a>インストールの確認
 

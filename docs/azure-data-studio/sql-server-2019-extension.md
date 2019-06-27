@@ -3,7 +3,7 @@ title: SQL Server 2019 拡張機能 (プレビュー)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用 SQL Server 2019 Preview の拡張機能
 ms.custom: seodec18
-ms.date: 05/15/2019
+ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798058"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399992"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 拡張機能 (プレビュー)
 
@@ -30,9 +30,9 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 
    |プラットフォーム|ダウンロード|リリース日|バージョン
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092817)|2019 年 5 月 15日 |0.13.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092816)|2019 年 5 月 15日 |0.13.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092815)|2019 年 5 月 15日 |0.13.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 年 6 月 25日 |0.14.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 年 6 月 25日 |0.14.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 年 6 月 25日 |0.14.1
 
 1. Azure Data Studio で次のように選択します。 **VSIX パッケージからの拡張機能のインストール**から、**ファイル**メニューとダウンロードした .vsix ファイルを選択します。
 
@@ -43,6 +43,9 @@ SQL Server 2019 拡張機能 (プレビュー) をインストールするには
 1. 再読み込みした後、拡張機能の依存関係がインストールされます。 [出力] ウィンドウで進行状況を表示して、まで時間がかかる可能性があります。
 
 1. インストールが完了したら、依存関係、Azure Data Studio を閉じて。 **SQL Server のビッグ データ クラスター**接続の種類は、Azure Data Studio を再起動するまでは使用できません。
+
+## <a name="changes-in-release-0141"></a>0\.14.1 のリリースでの変更
+* CTP 3.1 データ ソースのサポートのサポート
 
 ## <a name="changes-in-release-0121"></a>0\.12.1 のリリースでの変更
 

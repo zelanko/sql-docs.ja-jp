@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388790"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400014"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>マウント ADLS Gen2 の HDFS のビッグ データ クラスター内の階層化する方法
 
@@ -64,17 +64,15 @@ ms.locfileid: "67388790"
 
 マウントの資格情報を使用する前に 5 ~ 10 分間待機します。
 
-### <a name="create-credential-file"></a>資格情報ファイルを作成します。
+### <a name="set-environment-variable-for-oauth-credentials"></a>OAuth の資格情報の環境変数を設定します。
 
-ビッグ データ クラスターにアクセスできるクライアント コンピューターでコマンド プロンプトを開きます。
-
-という名前のローカル ファイルを作成する**filename.creds**次の形式を使用して、Azure Data Lake ストレージ Gen2 アカウントの資格情報を格納します。
+ビッグ データ クラスターにアクセスできるクライアント コンピューターでコマンド プロンプトを開きます。 次の形式を使用して環境変数を設定します。区切りのリストをコンマである必要があります、資格情報に注意してください。 'Set' コマンドは、Windows で使用されます。 Linux を使用している場合は、代わりに 'export' を使用しています。
 
    ```text
-    fs.azure.account.auth.type=OAuth
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -85,20 +83,20 @@ Azure portal で ADLS アカウントを取得できるアクセス キーの使
  > [!TIP]
    > アクセス キーを検索する方法の詳細についての (`<storage-account-access-key>`)、ストレージ アカウントを参照してください。[アクセス キーの表示とコピー](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)します。
 
-### <a name="create-credential-file"></a>資格情報ファイルを作成します。
+### <a name="set-environment-variable-for-access-key-credentials"></a>アクセス キーの資格情報の環境変数を設定します。
 
 1. ビッグ データ クラスターにアクセスできるクライアント コンピューターでコマンド プロンプトを開きます。
 
-1. という名前のローカル ファイルを作成する**filename.creds**次の形式を使用して、Azure Data Lake ストレージ Gen2 アカウントの資格情報を格納します。
+1. ビッグ データ クラスターにアクセスできるクライアント コンピューターでコマンド プロンプトを開きます。 次の形式を使用して、環境変数を設定します。 区切りのリストをコンマである必要があります、資格情報に注意してください。 'Set' コマンドは、Windows で使用されます。 Linux を使用している場合は、代わりに 'export' を使用しています。
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> リモートの HDFS の記憶域をマウントします。
 
-アクセス キーまたは OAuth を使用して資格情報ファイルが準備できたら、マウントを開始します。 次の手順では、ビッグ データ クラスターのローカルの HDFS ストレージに Azure Data Lake でリモートの HDFS ストレージをマウントします。
+アクセス キーまたは OAuth を使用して MOUNT_CREDENTIALS 環境変数を設定すると、マウントを開始します。 次の手順では、ビッグ データ クラスターのローカルの HDFS ストレージに Azure Data Lake でリモートの HDFS ストレージをマウントします。
 
 1. 使用**kubectl**エンドポイントの IP アドレスを検索する**svc 外部のコント ローラー**ビッグ データ クラスター サービス。 探して、 **EXTERNAL-IP**します。
 
@@ -111,11 +109,12 @@ Azure portal で ADLS アカウントを取得できるアクセス キーの使
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. 環境変数な設定 MOUNT_CREDENTIALS (スクロール手順用に)
 
 1. 使用して Azure でリモートの HDFS の記憶域をマウント**mssqlctl bdc 記憶域プールのマウント作成**です。 次のコマンドを実行する前に、プレース ホルダーの値に置き換えます。
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
