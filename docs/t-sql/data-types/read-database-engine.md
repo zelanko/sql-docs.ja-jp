@@ -61,8 +61,8 @@ hid.Read(br);
 ```  
   
 ## <a name="see-also"></a>参照  
-[書き込み (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/write-database-engine.md)  
-[ToString (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/tostring-database-engine.md)  
+[Write &#40;データベース エンジン&#41;](../../t-sql/data-types/write-database-engine.md)  
+[ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
