@@ -51,7 +51,7 @@ ms.locfileid: "34025789"
   
 -   [データ & #40; をディメンションにカスタムのアクセスを許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [セルのデータ & #40; へのカスタム アクセスを許可します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+-   [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## <a name="see-also"></a>参照  
  [ロールの作成および管理](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
