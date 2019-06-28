@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: d4fde2e13efdebd0cdaad4a4f1c7e528c46ea136
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388629"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412877"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>読み取りし、MSSQL Spark コネクタを使用して Spark から SQL Server への書き込み方法
 
@@ -49,7 +49,7 @@ SQL Server の一括のコネクタで使用では、Api を記述します。 �
 
 - A [SQL Server のビッグ データ クラスター](deploy-get-started.md)します。
 
-- [Azure Data Studio](../azure-data-studio/download.md)します。
+- [Azure Data Studio](https://aka.ms/azdata-insiders)します。
 
 ## <a name="create-the-target-database"></a>ターゲット データベースを作成します。
 

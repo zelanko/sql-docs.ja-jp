@@ -1,7 +1,7 @@
 ---
 title: 式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.prod: reporting-services
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 11441e0866904742985c55d535e8398802b206fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775044"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413000"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 
@@ -524,7 +524,7 @@ End Function
 
 実行時例外の発生はこのようにして防ぐことができます。 テキスト ボックスの `Color` プロパティで `=IIF(Me.Value < 0, "red", "black")` のような式を使用し、その値が 0 より大きいか小さいかの条件に基づいて、テキストを表示できるようになりました。  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)
 - [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)

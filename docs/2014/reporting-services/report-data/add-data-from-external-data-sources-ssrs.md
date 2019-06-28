@@ -1,7 +1,7 @@
 ---
 title: 外部データ ソースのデータを追加する (SSRS)
-ms.prod: reporting-services
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/27/2017
-ms.openlocfilehash: c82d8295ec4a8293abc822900e25e654447a492c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54358529577061ad99c634fa6cc4ce9d98792e0c
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775802"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412689"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>外部データ ソースのデータを追加する (SSRS)
 
@@ -105,7 +105,7 @@ ms.locfileid: "64775802"
 |[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ドキュメント)。|各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。|  
 |[データ処理拡張機能の概要](../extensions/data-processing/data-processing-extensions-overview.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ドキュメント)|データ拡張機能に関する上級ユーザー向けの詳細な情報です。|  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 - [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)
 - [クエリ デザイナー &#40;レポート ビルダー&#41;](../query-designers-report-builder.md)

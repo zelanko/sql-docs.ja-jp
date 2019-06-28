@@ -1,7 +1,7 @@
 ---
 title: SQL Server と Azure SQL Database でのグラフ処理 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502499"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413074"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 ノードとエッジ テーブルとして格納されます。  
 
 ### <a name="query-language-extensions"></a>クエリ言語の拡張機能  
-新しい`MATCH`パターン マッチングと graph を通じて、マルチホップ ナビゲーションをサポートするために句が導入されました。 `MATCH`関数はパターン マッチングの ASCII アート形式の構文を使用します。 例 :  
+新しい`MATCH`パターン マッチングと graph を通じて、マルチホップ ナビゲーションをサポートするために句が導入されました。 `MATCH`関数はパターン マッチングの ASCII アート形式の構文を使用します。 以下に例を示します。  
 
 ```   
 -- Find friends of John
@@ -84,6 +84,9 @@ AND Person1.Name = 'John';
 [マージ](../../t-sql/statements/merge-transact-sql.md)ステートメントで挿入を実行、更新、またはソース テーブルと結合の結果に基づいてターゲット テーブルに対する操作を削除します。 たとえば、挿入、更新、または、対象のテーブルとソース テーブルの間の違いに基づいて、ターゲット テーブル内の行を削除して、2 つのテーブルを同期できます。 Azure SQL Database と SQL Server vNext には、一致する述語を使用して、MERGE ステートメントではサポートされています。 つまり、新しいデータが一致する述語を使用して、挿入/更新/削除の個別のステートメントではなく、単一のステートメントでグラフのリレーションシップを指定すると、現在のグラフ データ (ノードまたはエッジ テーブル) をマージすることはようになりました。
 
 マージ DML での一致の使用方法の詳細を参照して[MERGE ステートメント](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>最短のパス
+[SHORTEST_PATH](./sql-graph-shortest-path.md)関数は、グラフまたはグラフ内の他のすべてのノードに、特定のノードから始まる任意の 2 つのノード間の最短パスを検索します。 最短のパスは、推移的閉包を見つけるには使用もまたはグラフのトラバーサルを任意の長さ。 
 
  ## <a name="next-steps"></a>次のステップ  
 読み取り、 [SQL グラフ データベース - アーキテクチャ](./sql-graph-architecture.md)

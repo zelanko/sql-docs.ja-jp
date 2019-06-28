@@ -1,7 +1,7 @@
 ---
 title: レポート履歴へのスナップショットの追加 (レポート マネージャー) | Microsoft Docs
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], adding
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 633ac335067f579459809264fb055ff43481f4e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135086"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413114"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>レポート履歴へのスナップショットの追加 (レポート マネージャー)
 
@@ -71,9 +71,9 @@ ms.locfileid: "63135086"
   
 5. **[適用]** をクリックします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [レポートの実行プロパティを構成する&#40;レポート マネージャー&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [レポートの実行プロパティを構成する &#40;レポート マネージャー&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
 - [レポートを開閉する &#40;レポート マネージャー&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [レポート履歴を制限する &#40;レポート マネージャー&#41;](../reports/limit-report-history-report-manager.md)
 - [スケジュール](../subscriptions/schedules.md)   

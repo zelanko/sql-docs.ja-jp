@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400014"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419043"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>マウント ADLS Gen2 の HDFS のビッグ データ クラスター内の階層化する方法
 
@@ -81,7 +81,7 @@ ms.locfileid: "67400014"
 Azure portal で ADLS アカウントを取得できるアクセス キーの使用をマウントできます。
 
  > [!TIP]
-   > アクセス キーを検索する方法の詳細についての (`<storage-account-access-key>`)、ストレージ アカウントを参照してください。[アクセス キーの表示とコピー](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)します。
+   > アクセス キーを検索する方法の詳細についての (`<storage-account-access-key>`)、ストレージ アカウントを参照してください。[アカウント キーと接続文字列を表示](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string)します。
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>アクセス キーの資格情報の環境変数を設定します。
 
