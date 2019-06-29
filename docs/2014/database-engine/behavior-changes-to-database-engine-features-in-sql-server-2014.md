@@ -14,20 +14,20 @@ ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e7b629b93e0c79a003019a2e024388d54b12b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be2957778e30af73abfafa210dee4746ffd869c9
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065212"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463454"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 におけるデータベース エンジン機能の動作の変更
   このトピックでは、[!INCLUDE[ssDE](../includes/ssde-md.md)]の動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の機能や操作方法が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のバージョンと異なっています。  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での動作変更  
+## <a name="SQL14"></a> 動作の変更 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、特定の長さ (4020 文字) を超える文字列を含む XML ドキュメントに対してクエリを実行すると、返される結果が正しくない場合があります。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、このようなクエリから正しい結果が返されます。  
   
-## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] での動作変更  
+## <a name="Denali"></a> 動作の変更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>メタデータの検出  
  機能強化、[!INCLUDE[ssDE](../includes/ssde-md.md)]以降[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]以前のバージョンの SQLDescribeCol によって返されるよりも、期待される結果のより正確な記述を取得する SQLDescribeCol を許可する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../relational-databases/native-client/features/metadata-discovery.md)します。  
