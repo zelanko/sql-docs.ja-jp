@@ -36,7 +36,7 @@ ms.locfileid: "56801576"
 24 時間形式の時刻 (1 秒未満の秒を含む) と組み合わせた日付を定義します。
   
 > [!NOTE]  
->  使用して、 **時間**, 、**日付**, 、**datetime2** と **datetimeoffset** 新しい作業のデータ型。 これらの型は、SQL 標準に準拠しています。 これらの型は、移植性がより高いです。 **time**、**datetime2**、**datetimeoffset** は秒の有効桁数が増えています。 **datetimeoffset** グローバルに配置されるアプリケーション向けにタイム ゾーンのサポートを提供します。  
+>  使用して、 **time**, 、**date**, 、**datetime2** と **datetimeoffset** 新しい作業のデータ型。 これらの型は、SQL 標準に準拠しています。 これらの型は、移植性がより高いです。 **time**、**datetime2**、**datetimeoffset** は秒の有効桁数が増えています。 **datetimeoffset** グローバルに配置されるアプリケーション向けにタイム ゾーンのサポートを提供します。  
   
 ## <a name="datetime-description"></a>datetime の説明  
   
