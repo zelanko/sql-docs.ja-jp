@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d4fde2e13efdebd0cdaad4a4f1c7e528c46ea136
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412877"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469121"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>読み取りし、MSSQL Spark コネクタを使用して Spark から SQL Server への書き込み方法
 
@@ -81,7 +81,7 @@ MSSQL Spark コネクタは、このデータとの使用を示すためには�
 1. PowerShell または bash のコマンド ラインからダウンロードするには、次のコマンドを実行、 **mssql_spark_connector.ipynb**サンプルの notebook:
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark_to_sql/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
    ```
 
 1. Azure データ Studio では、サンプルのノートブック ファイルを開きます。 ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続していることを確認します。

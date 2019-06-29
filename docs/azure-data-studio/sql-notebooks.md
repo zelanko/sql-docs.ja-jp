@@ -3,7 +3,7 @@ title: Azure Data Studio で SQL のノートブックを使用する方法
 titleSuffix: Azure Data Studio
 description: Azure Data Studio で SQL のノートブックを使用する方法について説明します
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798035"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469078"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio で notebook を使用する方法
 
@@ -163,14 +163,13 @@ import <package-name>
 
 このコマンドを実行するときに`Module not found`が返されます。 パッケージが存在する場合エラーいない取得されます。
 
-返された場合、 `Module not Found`  をクリックして、エラー**パッケージの管理**ターミナルを起動します。 パッケージをローカルでインストールできます。 パッケージをインストールするのにには、次のコマンドを使用します。
+返された場合、 `Module not Found`  をクリックして、エラー**パッケージの管理**ウィザード のエクスペリエンスを起動します。 
 
-```bash
-./pip install <package-name>
-```
+![Image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > Mac では、パッケージをインストールするためのターミナル ウィンドウの指示に従ってください。 
+このウィザードですることが参照してください、**インストール済み**パッケージ。 一覧と、関連するこれらの各パッケージのバージョンを検索することができます。 必要がある場合**アンインストール**で、パッケージの 1 つをクリックしてをクリックし、これらのパッケージ化、**選択したパッケージをアンインストール**オプション。
+
+クリックすることはできますが**新規追加**パッケージを**検索**特定のパッケージの関連のバージョンを選択し、をクリックして**インストール**します。 既定では、検索結果のパッケージの最新バージョンを選択します。 
 
 パッケージがインストールされた後 Notebook セルに移動し、次のコマンドを入力できる必要があります。
 
@@ -178,11 +177,7 @@ import <package-name>
 import <package-name>
 ```
 
-パッケージをアンインストールするには、ターミナルから次のコマンドを使用します。
-
-```bash
-./pip uninstall <package-name>
-```
+必要がある場合**アンインストール**する 1 つまたは複数のパッケージをクリックし、をクリックし、これらのパッケージ化、**選択したパッケージをアンインストール**オプション。
 
 ## <a name="next-steps"></a>次のステップ
 

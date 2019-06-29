@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388635"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469130"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -36,7 +36,7 @@ ms.locfileid: "67388635"
 | `mssqlctl` コマンドの変更 | `mssqlctl cluster` コマンドが次の名前に変更されました`mssqlctl bdc`します。 詳細については、次を参照してください。、 [ `mssqlctl`参照](reference-mssqlctl.md)します。 |
 | 新しい`mssqlctl`状態コマンドと、クラスターの管理ポータルを削除します。 | このリリースでは、クラスターの管理ポータルが削除されます。 追加された新しい状態コマンド`mssqlctl`その補数既存のコマンドを監視します。 |
 | Spark のコンピューティング プール | ストレージのスケール アップすることがなく、Spark のコンピューティング能力を増やすに別のノードを作成します。 さらに、Spark を使用していない記憶域プールのノードを開始することができます。 Spark とストレージが切り離されます。 詳細については、次を参照してください。 [spark なしの記憶域構成](deployment-custom-configuration.md#sparkstorage)します。 |
-| MSSQL Spark コネクタ | プールの外部テーブルのデータを読み取り/書き込みをサポートします。 以前リリースがサポートされている読み取り/書き込みをマスター インスタンスのテーブルのみです。 |
+| MSSQL Spark コネクタ | プールの外部テーブルのデータを読み取り/書き込みをサポートします。 以前リリースがサポートされている読み取り/書き込みをマスター インスタンスのテーブルのみです。 詳細については、次を参照してください。[を読み取って、MSSQL の Spark コネクタを使用して Spark から SQL Server への書き込み方法](spark-mssql-connector.md)します。 |
 | MLeap を使用して機械学習 | [Spark で MLeap 機械学習モデルをトレーニングし、Java 言語の拡張機能を使用して SQL Server でスコアを付けて](spark-create-machine-learning-model.md)します。 |
 
 ### <a name="known-issues"></a>既知の問題

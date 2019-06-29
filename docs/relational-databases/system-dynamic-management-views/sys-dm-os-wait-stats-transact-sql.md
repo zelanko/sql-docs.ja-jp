@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f4d66846be52a1f42a87f6dd11a584ace4e3ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499680"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469138"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,6 +346,7 @@ GO
 |HADR_TDS_LISTENER_SYNC |内部の Alwayson システムまたは WSFC クラスターは、リスナーを開始または停止されたことを要求します。 この要求の処理は常に非同期で行われ、冗長な要求を削除するメカニズムがあります。 また、構成の変更が原因でこのプロセスが中断される場合があります。 このリスナー同期メカニズムに関連したすべての待機は、この待機の種類を使用します。 内部でのみ使用します、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |開始や、可用性グループ リスナーを停止する必要がありますを常に TRANSACT-SQL ステートメントの最後に使用されます。 開始/停止操作が非同期的に完了するため、リスナーの状況を認識するまで、この待機の種類を使用してユーザー スレッドをブロックします、。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Geo レプリケーションのセカンダリが下に構成されているときに発生しますプライマリよりもサイズ (低い SLO) を計算します。 プライマリ データベースは、遅延のログの使用量のため、セカンダリで調整されます。 これは、セカンダリ データベースの変更率が、プライマリ データベースの遅れが不足しているコンピューティング容量を持つことが原因です。 <br /> **適用対象**:Azure SQL データベース| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 

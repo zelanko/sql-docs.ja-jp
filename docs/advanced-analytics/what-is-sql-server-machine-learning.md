@@ -1,6 +1,6 @@
 ---
-title: R 言語と Python 機能の統合 - SQL Server Machine Learning サービス
-description: R 言語とデータ サイエンスと統計モデリング、機械学習モデル、予測分析、データの視覚化などのリレーショナル データとの統合、SQL Server での Python 機能。
+title: SQL Server Machine Learning サービスの SQL Server Machine Learning サービス (R、Python) - 概要
+description: データ サイエンスと統計のリレーショナル データと Python および R を統合できる、SQL server Machine Learning Services 機能の概要についてモデリング、機械学習モデル、予測分析やデータの視覚化。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
@@ -8,19 +8,19 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 921ffc0188623335ac7e7206a02095cc11469327
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: ea6db43d999c2c0102cde0c0b30867f255bce569
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140328"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469220"
 ---
-# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 での machine Learning サービス (R、Python)
+# <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning サービス (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning サービスは、データベース内の R と Python スクリプトを実行するために使用される、SQL Server の機能です。 この機能が含まれています[Microsoft R と Python のパッケージ](#components)高パフォーマンスの予測分析と機械学習します。 含む T-SQL の R と Python コードまたはストアド プロシージャ、T-SQL スクリプトが R と Python のステートメントを含む R と Python スクリプトで、リレーショナル データを使用できます。
 
-使用していた場合[SQL Server 2016 R Services](r/sql-server-r-services.md)、SQL Server 2017 での Machine Learning サービスは、基本の R で RevoScaleR の MicrosoftML の更新バージョンでの R のサポートの次世代および他のライブラリは、2016年で導入されました。 
+使用していた場合[SQL Server 2016 R Services](r/sql-server-r-services.md)以降では、SQL Server 2017 の Machine Learning サービスは、基本の R、RevoScaleR、MicrosoftML の更新バージョンでの次世代の R のサポート、およびで導入されたその他のライブラリ2016。
 
 Azure SQL Database で[(R) を使用した Machine Learning サービス](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)は現在パブリック プレビュー段階です。
 

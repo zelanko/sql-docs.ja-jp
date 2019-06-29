@@ -8,12 +8,13 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bc506d245878d459a3c4639ff4e5a6c2f2a9f8f6
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642323"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469113"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +26,7 @@ R Services には、R、読み込みと複数コアで大量のデータを処�
 R ライブラリを含める[ **RevoScaleR**](ref-r-revoscaler.md)、 [ **MicrosoftML (R)** ](ref-r-microsoftml.md)、およびその他。 R Services がデータベース エンジンと統合されているため、データの近くで分析し、コストとデータの移動に関連付けられているセキュリティ上のリスクを排除できます。
 
 > [!Note]
-> R Services を SQL Server 2017 で名前が変更されました[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)Python の加算を反映します。
+> R Services が SQL Server 2017 で名前が変更された以降に[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)Python の加算を反映します。
 
 ## <a name="components"></a>コンポーネント
 
