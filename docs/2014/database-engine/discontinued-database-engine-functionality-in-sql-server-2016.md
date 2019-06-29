@@ -33,24 +33,24 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779876"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463465"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 で廃止されたデータベース エンジンの機能
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> 廃止された機能 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で削除された機能を次の表に示します。  
   
 |カテゴリ|提供が中止された機能|代替|  
 |--------------|--------------------------|-----------------|  
 |互換性レベル|互換性レベル 90|データベースを互換性レベル 100 以上に設定する必要があります。 互換性レベル 100 未満のデータベースを [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] にアップグレードすると、データベースの互換性レベルはアップグレード操作中に 100 に設定されます。|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> 廃止された機能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で削除された機能を次の表に示します。  
   
 |カテゴリ|提供が中止された機能|代替|  
@@ -93,6 +93,6 @@ ms.locfileid: "62779876"
 -   追加したフィールド: target_kb、pages_kb  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [SQL Server 2014 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

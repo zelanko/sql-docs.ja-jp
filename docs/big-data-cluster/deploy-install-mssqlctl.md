@@ -5,16 +5,16 @@ description: インストールして、SQL Server 2019 ビッグ データ ク�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 399f82778f54c96112875c9af389a8b427ad759a
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 31167ae419c98fcd0166b1bd8056ea0d7976b674
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388817"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463449"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>SQL Server のビッグ データ クラスターを管理する mssqlctl をインストールします。
 
@@ -91,7 +91,7 @@ Linux は、Python 3.5 をインストールしてから pip をアップグレ�
 1. インストール**mssqlctl**次のコマンドを使用します。
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-3.1/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]
