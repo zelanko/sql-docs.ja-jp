@@ -170,7 +170,7 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 ```  
   
 ## <a name="see-also"></a>参照  
- [潜在顧客と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/lead-transact-sql.md)  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 
