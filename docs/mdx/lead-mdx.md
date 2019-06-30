@@ -1,5 +1,5 @@
 ---
-title: リードの (MDX) |Microsoft Docs
+title: Lead (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205436"
 ---
-# <a name="lead-mdx"></a>潜在顧客 (MDX)
+# <a name="lead-mdx"></a>Lead (MDX)
 
 
   次のメンバーのレベルにある指定されたメンバーの位置の指定した数であるメンバーを返します。  
