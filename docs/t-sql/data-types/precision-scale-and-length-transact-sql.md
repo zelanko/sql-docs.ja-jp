@@ -1,5 +1,5 @@
 ---
-title: 有効桁数、小数点以下桁数、長さ (Transact-SQL) | Microsoft Docs
+title: 有効桁数、小数点以下桁数、および長さ (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -29,7 +29,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 03/05/2019
 ms.locfileid: "57401794"
 ---
-# <a name="precision-scale-and-length-transact-sql"></a>有効桁数、小数点以下桁数、長さ (Transact-SQL)
+# <a name="precision-scale-and-length-transact-sql"></a>有効桁数、小数点以下桁数、および長さ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 precision は、数値全体の桁数です。 scale は、数値の中で小数点より右側の桁数です。 たとえば、123.45 という値の場合、precision は 5 で、scale は 2 になります。
