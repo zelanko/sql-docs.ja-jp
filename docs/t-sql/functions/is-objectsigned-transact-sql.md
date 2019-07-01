@@ -102,6 +102,6 @@ IS_OBJECTSIGNED(
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.fn_check_object_signatures (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+ [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   
