@@ -1,5 +1,5 @@
 ---
-title: 除算 (MDX) |Microsoft Docs
+title: Divide (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471313"
 ---
-# <a name="divide-mdx"></a>除算 (MDX)
+# <a name="divide-mdx"></a>Divide (MDX)
 
 
   除算を実行し、0 による除算の別の結果または BLANK() を返します。  
