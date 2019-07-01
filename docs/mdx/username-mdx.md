@@ -1,5 +1,5 @@
 ---
-title: ユーザー名 (MDX) |Microsoft Docs
+title: UserName (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298031"
 ---
-# <a name="username-mdx"></a>ユーザー名 (MDX)
+# <a name="username-mdx"></a>UserName (MDX)
 
 
   現在の接続のユーザー名とドメインの名前を返します。  
@@ -34,7 +34,7 @@ UserName [ ( ) ]
  *domain-name\user-name*  
   
 ## <a name="example"></a>例  
- 次の例では、クエリを実行しているユーザーのユーザー名を返します。  
+ 次の例では、クエリを実行しているユーザーのUserNameを返します。  
   
 ```  
 WITH MEMBER Measures.x AS UserName  
