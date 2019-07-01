@@ -168,7 +168,7 @@ Year Quarter  SalesQuota  NextQuota  Diff
 ```  
   
 ## <a name="see-also"></a>参照  
- [間隔 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/lag-transact-sql.md)  
+ [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   
 
