@@ -1,7 +1,7 @@
 ---
 title: レポート履歴へのスナップショットの追加 (レポート マネージャー) | Microsoft Docs
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: reporting-services
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: ba994e3fe63bfabeb9949f6dc96dc4b4536f0f0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1b211684bc267671ea86571f4214c32c013f674
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568545"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463425"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>レポート履歴へのスナップショットの追加 (レポート マネージャー)
 
@@ -24,7 +24,7 @@ ms.locfileid: "64568545"
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>レポート履歴にスナップショットを手動で追加するには
   
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 1. レポート マネージャーで、 **[コンテンツ]** ページに移動し、履歴を表示するアイテムの上にマウス ポインターを移動して、下矢印をクリックします。
   

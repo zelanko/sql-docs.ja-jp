@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad92bfee285b8a64b704e0636ce2421a80da4fed
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002378"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351550"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 リリース ノートします。
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -464,10 +464,12 @@ Data Quality Client のマップ ステージ中にいずれかの DQS アクテ
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 スクリプト生成ウィザードでの移動時にエラーが発生することがある  
 **問題点:** **[スクリプトの保存またはパブリッシュ]** をクリックしてスクリプトの生成ウィザードでスクリプトを生成してから、 **[オプションの選択]** または **[スクリプト作成オプションの設定]** をクリックして移動するか、 **[スクリプトの保存またはパブリッシュ]** を再度クリックすると、次のエラーが発生することがあります。  
   
-<a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+<pre>
+An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
-追加情報:  
-オブジェクト名 'sys.federations' が無効です。 (Microsoft SQL Server、エラー:208)</pre>  
+ADDITIONAL INFORMATION:  
+Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
+</pre>  
   
 **回避策:** スクリプトの生成ウィザードを閉じて再度開きます。  
   
@@ -541,7 +543,7 @@ MultiSubnetFailover は、SQL Server 2012 の AlwaysOn 可用性グループお�
   
 -   クラスター リソースを操作する権限がある場合は、可用性グループ リスナーのネットワーク名を **RegisterAllProvidersIP**=0 に設定する手法をお勧めします。 詳細については、後の「RegisterAllProvidersIP を無効にし、TTL を短縮する PowerShell サンプル スクリプト」をご覧ください。  
   
-    **長所:** クライアント接続のタイムアウト値を大きくする必要はありません。  
+    **長所:** クライアント接続のタイムアウト値を大きくする必要がありません。  
   
     **短所:** クロスサブネット フェールオーバーが発生した場合、HostRecordTTL 設定およびクロスサイト DNS/AD レプリケーション スケジュールの設定によっては、クライアントの復旧時間が 15 分以上になる可能性があります。  
   
