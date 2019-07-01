@@ -1,5 +1,5 @@
 ---
-title: 親 (MDX) |Microsoft Docs
+title: Parent (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63278425"
 ---
-# <a name="parent-mdx"></a>親 (MDX)
+# <a name="parent-mdx"></a>Parent (MDX)
 
 
   メンバーの親メンバーを返します。  
@@ -33,7 +33,7 @@ Member_Expression.Parent
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- **親**関数は、指定されたメンバーの親メンバーを返します。  
+ **Parent**関数は、指定されたメンバーの親メンバーを返します。  
   
 ## <a name="examples"></a>使用例  
  次の 2 つの例では、July 1, 2001 メンバーの親メンバーを返しています。 この例では、Date 属性階層のコンテキストでこのメンバーを指定して、All Periods メンバーを返します。  

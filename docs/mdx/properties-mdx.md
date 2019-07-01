@@ -1,5 +1,5 @@
 ---
-title: プロパティ (MDX) |Microsoft Docs
+title: Properties (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63278452"
 ---
-# <a name="properties-mdx"></a>プロパティ (MDX)
+# <a name="properties-mdx"></a>Properties (MDX)
 
 
   メンバー プロパティ値を含む文字列または厳密に型指定された値を返します。  
@@ -36,7 +36,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  メンバーのプロパティ名の有効な文字列式です。  
   
 ## <a name="remarks"></a>コメント  
- **プロパティ**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバー プロパティがする固有メンバー プロパティのいずれかなど、**名前**、 **ID**、**キー**、または**キャプション**、することもできます、ユーザー定義メンバー プロパティです。 詳細については、次を参照してください。[固有メンバー プロパティ&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)します。  
+ **Properties**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバー プロパティがする固有メンバー プロパティのいずれかなど、**名前**、 **ID**、**キー**、または**キャプション**、することもできます、ユーザー定義メンバー プロパティです。 詳細については、次を参照してください。[固有メンバー プロパティ&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)します。  
   
  既定では、値は、文字列に強制的に変換されます。 場合**型指定された**を指定すると、戻り値が厳密に型指定します。  
   

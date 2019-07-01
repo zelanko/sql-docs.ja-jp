@@ -1,5 +1,5 @@
 ---
-title: 名前 (MDX) |Microsoft Docs
+title: Name (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63277552"
 ---
-# <a name="name-mdx"></a>名前 (MDX)
+# <a name="name-mdx"></a>Name (MDX)
 
 
   ディメンション、階層、レベル、またはメンバーの名前を返します。  
@@ -52,7 +52,7 @@ Member_Expression.Name
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- **名前**関数は、一意の名前ではなく、オブジェクトの名前を返します。  
+ **Name**関数は、一意の名前ではなく、オブジェクトの名前を返します。  
   
 ## <a name="examples"></a>使用例  
   

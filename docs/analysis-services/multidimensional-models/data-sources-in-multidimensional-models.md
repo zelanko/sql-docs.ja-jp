@@ -47,15 +47,15 @@ ms.locfileid: "34022829"
 |トピック|Description|  
 |-----------|-----------------|  
 |[サポートされるデータ ソース &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)|多次元モデルで使用できるデータ ソースの種類について説明します。|  
-|[データ ソース & #40; を作成します。SSAS 多次元 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|多次元モデルにデータ ソース オブジェクトを追加する方法について説明します。|  
-|[ソリューション エクスプ ローラー & #40; でデータ ソースを削除します。SSAS 多次元 & #41;](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|この手順で、多次元モデルからデータ ソース オブジェクトを削除します。|  
-|[データ ソース プロパティの設定 & #40 です。SSAS 多次元 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|各プロパティとその設定方法について説明します。|  
-|[権限借用オプションを設定する & #40 です。SSAS - 多次元 & #41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|[権限借用情報] ダイアログ ボックスのオプションを構成する方法について説明します。|  
+|[データ ソースの作成 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)|多次元モデルにデータ ソース オブジェクトを追加する方法について説明します。|  
+|[ソリューション エクスプローラーでのデータ ソースの削除 &#40;SSAS 多次元&#41;]](../../analysis-services/multidimensional-models/delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|この手順で、多次元モデルからデータ ソース オブジェクトを削除します。|  
+|[データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|各プロパティとその設定方法について説明します。|  
+|[権限借用オプションの設定 &#40;SSAS - 多次元&#41;]](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|[権限借用情報] ダイアログ ボックスのオプションを構成する方法について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [データベース オブジェクト & #40 です。Analysis Services - 多次元データ & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [論理アーキテクチャと #40 です。Analysis Services - 多次元データ & #41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [データベース オブジェクト &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [論理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [データ ソースとのバインド & #40 です。SSAS 多次元 & #41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [データ ソースとバインド &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

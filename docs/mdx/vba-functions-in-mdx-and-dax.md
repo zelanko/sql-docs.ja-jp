@@ -43,7 +43,7 @@ ms.locfileid: "63251546"
 |CLng|MDX のみ||  
 |CLngLng|サポートされていません||  
 |CLngPtr|サポートされていません||  
-|コマンド|サポートされていません||  
+|Command|サポートされていません||  
 |Cos|MDX のみ||  
 |CreateObject|サポートされていません||  
 |CSng|MDX のみ||  
@@ -57,13 +57,13 @@ ms.locfileid: "63251546"
 |DatePart|MDX のみ||  
 |DateSerial|MDX のみ||  
 |DateValue]|DAX、MDX||  
-|日|DAX、MDX||  
+|Day|DAX、MDX||  
 |DDB|MDX のみ||  
 |Dir|サポートされていません||  
 |DoEvents|サポートされていません||  
 |Environ|サポートされていません||  
 |EOF|サポートされていません||  
-|[エラー]|サポートされていません||  
+|Error|サポートされていません||  
 |Exp|DAX、MDX||  
 |FileAttr|サポートされていません||  
 |FileDateTime|サポートされていません||  
@@ -100,7 +100,7 @@ ms.locfileid: "63251546"
 |IsNull|MDX のみ||  
 |IsNumeric|MDX のみ||  
 |IsObject|サポートされていません||  
-|結合|サポートされていません||  
+|Join|サポートされていません||  
 |LBound|サポートされていません||  
 |LCase|MDX のみ||  
 |Left|DAX、MDX||  
@@ -117,23 +117,23 @@ ms.locfileid: "63251546"
 |Month|DAX、MDX||  
 |MonthName|サポートされていません||  
 |MsgBox|サポートされていません||  
-|[今]|DAX、MDX||  
-|[期間]|MDX のみ||  
+|Now|DAX、MDX||  
+|NPer|MDX のみ||  
 |NPV|MDX のみ||  
 |Oct|MDX のみ||  
-|パーティション|MDX のみ||  
+|Partition|MDX のみ||  
 |Pmt|MDX のみ||  
 |PPmt|MDX のみ||  
 |PV|MDX のみ||  
 |QBColor|MDX のみ||  
 |Rate|MDX のみ||  
-|[置換]|サポートされていません||  
+|Replace|サポートされていません||  
 |RGB|MDX のみ||  
 |Right|DAX、MDX||  
 |Rnd|MDX のみ||  
-|四捨五入|DAX、MDX||  
+|Round|DAX、MDX||  
 |RTrim|MDX のみ||  
-|第 2 週|DAX、MDX||  
+|Second|DAX、MDX||  
 |Seek|サポートされていません||  
 |Sgn|DAX、MDX||  
 |Shell|サポートされていません||  
@@ -141,22 +141,22 @@ ms.locfileid: "63251546"
 |SLN|MDX のみ||  
 |Space|MDX のみ||  
 |Spc|サポートされていません||  
-|分割|サポートされていません||  
+|Split|サポートされていません||  
 |Sqr|MDX のみ||  
 |Str|MDX のみ||  
 |StrComp|MDX のみ||  
 |StrConv|MDX のみ||  
 |String]|MDX のみ||  
 |StrReverse|サポートされていません||  
-|スイッチ|MDX のみ||  
+|Switch|MDX のみ||  
 |SYD|MDX のみ||  
-|タブ|サポートされていません||  
+|Tab|サポートされていません||  
 |Tan|MDX のみ||  
 |Time|サポートされていません||  
 |Timer|MDX のみ||  
 |TimeSerial|MDX のみ||  
 |TimeValue|DAX、MDX||  
-|トリム]|DAX、MDX||  
+|Trim|DAX、MDX||  
 |TypeName|MDX のみ||  
 |UBound|サポートされていません||  
 |UCase|MDX のみ||  
@@ -164,6 +164,6 @@ ms.locfileid: "63251546"
 |VarType|サポートされていません||  
 |Weekday|DAX、MDX||  
 |WeekdayName|サポートされていません||  
-|年|DAX、MDX||  
+|Year|DAX、MDX||  
   
   

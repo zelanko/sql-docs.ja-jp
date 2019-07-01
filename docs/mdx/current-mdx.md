@@ -1,5 +1,5 @@
 ---
-title: 現在 (MDX) |Microsoft Docs
+title: Current (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63249666"
 ---
-# <a name="current-mdx"></a>現在 (MDX)
+# <a name="current-mdx"></a>Current (MDX)
 
 
   イテレーション中に、セットから現在の組を返します。  
@@ -33,7 +33,7 @@ Set_Expression.Current
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- 反復処理中に各ステップでは、操作対象の組は、現在の組が。 **現在**関数は、その組を返します。 この関数はのみ有効な反復処理中に、セットに対して。  
+ 反復処理中に各ステップでは、操作対象の組は、Currentの組が。 **Current**関数は、その組を返します。 この関数はのみ有効な反復処理中に、セットに対して。  
   
  セットを反復処理する MDX 関数を含める、[生成](../mdx/generate-mdx.md)関数。  
   
@@ -41,7 +41,7 @@ Set_Expression.Current
 >  この関数は、セットの別名を使用するか名前付きセットを定義することによって名前が付けられたセットに対してのみ使用できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、使用する方法を示します、**現在**関数**生成**:  
+ 次の例は、使用する方法を示します、**Current**関数**生成**:  
   
  `WITH`  
   
