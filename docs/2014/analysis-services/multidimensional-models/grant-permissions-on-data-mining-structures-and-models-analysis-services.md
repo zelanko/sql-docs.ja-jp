@@ -61,7 +61,7 @@ ms.locfileid: "66074938"
   
 4.  **[OK]** をクリックして、ロールの作成を終了します。  
   
- データ マイニング拡張機能 (DMX) の OPENQUERY 句を使用するドリルスルー クエリでデータ ソースを使用するには、適切なデータ ソース オブジェクトに対する読み取り/書き込み権限もデータベース ロールに与える必要があります。 詳細については、「[データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)」および[OPENQUERY & #40;DMX& #41;](/sql/dmx/source-data-query-openquery)」を参照してください。  
+ データ マイニング拡張機能 (DMX) の OPENQUERY 句を使用するドリルスルー クエリでデータ ソースを使用するには、適切なデータ ソース オブジェクトに対する読み取り/書き込み権限もデータベース ロールに与える必要があります。 詳細については、「[データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)」および[OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)」を参照してください。  
   
 > [!NOTE]  
 >  既定では、OPENROWSET を使った DMX クエリの送信が無効になっています。  
