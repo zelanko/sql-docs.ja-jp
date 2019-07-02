@@ -547,6 +547,6 @@ ORDER BY SalesOrderNumber,ProductKey;
 ## <a name="see-also"></a>参照  
  [集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [分析関数 &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [sqlmag.com に Itzik Ben-Gan が投稿した、ウィンドウ関数と OVER に関する優れたブログ記事](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+ [Itzik Ben-Gan によるsqlmag.com上のウィンドウ関数と OVERに関する優れたブログ投稿](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   
