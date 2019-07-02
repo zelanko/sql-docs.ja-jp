@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836320"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469144"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose ユーティリティ (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  アプリケーション内のメッセージ交換エンドポイントを識別する一意識別子です。 メッセージ交換ハンドルは、メッセージ交換の一方のエンドポイントに対して一意であり、発信側と発信先のエンドポイントのメッセージ交換ハンドルは異なります。  
   
- メッセージ交換ハンドルは、 *@dialog_handle* ステートメントの **@dialog_handle** パラメーターと、 **conversation_handle** ステートメントの結果セットに含まれる **conversation_handle** 列によって、アプリケーションに返されます。  
+ メッセージ交換ハンドルは、**BEGIN DIALOG** ステートメントの *\@dialog_handle* パラメーターと、**RECEIVE** ステートメントの結果セットに含まれる **conversation_handle** 列によって、アプリケーションに返されます。  
   
  メッセージ交換ハンドルは、 **sys.transmission_queue** カタログ ビューと **sys.conversation_endpoints** カタログ ビューの **conversation_handle** 列に表示されます。  
   
  *conversation_group_id*  
  メッセージ交換グループを識別する一意識別子です。  
   
- メッセージ交換グループ ID は、 *@conversation_group_id* ステートメントの **@conversation_group_id** パラメーターと、 **conversation_group_id** ステートメントの結果セットに含まれる **conversation_handle** 列によって、アプリケーションに返されます。  
+ メッセージ交換グループ ID は、**GET CONVERSATION GROUP** ステートメントの *\@conversation_group_id* パラメーターと、**RECEIVE** ステートメントの結果セットに含まれる **conversation_group_id** 列によって、アプリケーションに返されます。  
   
  メッセージ交換グループ ID は、 **sys.conversation_groups** カタログ ビューと **sys.conversation_endpoints** カタログ ビューの **conversation_group_id** 列に表示されます。  
   
