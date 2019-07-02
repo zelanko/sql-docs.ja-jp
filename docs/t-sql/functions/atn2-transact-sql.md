@@ -66,7 +66,7 @@ The ATN2 of the angle is: 1.30545
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
 [数学関数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

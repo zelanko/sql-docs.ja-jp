@@ -86,7 +86,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>参照
-[datetime (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/datetime-transact-sql.md)
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)
   
   
 

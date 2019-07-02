@@ -78,7 +78,7 @@ Default Filegroup
 ```  
   
 ## <a name="see-also"></a>参照  
- [FILEGROUP_ID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
  [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

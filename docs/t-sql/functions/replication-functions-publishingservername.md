@@ -52,6 +52,6 @@ PUBLISHINGSERVERNAME()
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [レプリケーションの動作 (&) #40 です。TRANSACT-SQL と #41 です。](https://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
+ [レプリケーションの動作 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   
   

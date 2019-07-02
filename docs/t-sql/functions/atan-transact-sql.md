@@ -110,7 +110,7 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 ```
   
 ## <a name="see-also"></a>参照
-[CEILING (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ceiling-transact-sql.md)  
+[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
 [数学関数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

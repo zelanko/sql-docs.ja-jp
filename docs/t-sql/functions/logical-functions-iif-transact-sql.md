@@ -105,6 +105,6 @@ NULL
   
 ## <a name="see-also"></a>参照  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [選択 (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
+ [CHOOSE &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-choose-transact-sql.md)  
   
   

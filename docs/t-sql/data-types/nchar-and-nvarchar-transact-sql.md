@@ -44,7 +44,7 @@ ms.locfileid: "51696731"
 - 列データ エントリのサイズが大幅に変化する場合は、**nvarchar** を使用します。  
 - 列データ エントリのサイズが大幅に変化し、かつ文字列の長さが 4,000 バイト ペアを超える可能性がある場合は、**nvarchar(max)** を使用します。  
   
-**sysname** と機能的に等価であるシステム提供のユーザー定義データ型は、 **nvarchar (128)**, が許容されない点が異なります。 **sysname** データベース オブジェクト名を参照するために使用します。
+**sysname** と機能的に等価であるシステム提供のユーザー定義データ型は、 **nvarchar (128)** , が許容されない点が異なります。 **sysname** データベース オブジェクト名を参照するために使用します。
   
 使用するオブジェクト **nchar** または **nvarchar** COLLATE 句を使用して、特定の照合順序が割り当てられていない限り、データベースの既定の照合順序は割り当てられます。
   
@@ -59,7 +59,7 @@ Unicode 文字の文字列定数には、プレフィックスとして文字 N 
 > Null 以外の **varchar(max)** または **nvarchar(max)** の各列には、24 バイトの追加の固定割り当てが必要です。これは並べ替え操作中の 8,060 バイトの行制限におけるカウント対象となります。 これらの追加バイトにより、テーブル内の Null 以外の **varchar(max)** または **nvarchar(max)** の列数について、暗黙的な制限が生じます。 テーブルの作成時やデータ挿入時に、最大行サイズが許容最大値の 8,060 バイトを超えるという通常の警告以外の、特別なエラーは提供されません。 この大きな行サイズにより、一部の通常操作の間に、ユーザーが予期しないエラー (エラー 512 など) が発生することがあります。  このような操作の 2 つの例は、クラスター化インデックス キーの更新と、列セット全体の並べ替えです。
   
 ## <a name="converting-character-data"></a>文字データの変換  
-文字データを変換する方法の詳細については、を参照してください。 [char と varchar (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+文字データを変換する方法の詳細については、 [char と varchar (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/data-types/char-and-varchar-transact-sql.md) を参照してください。
   
 ## <a name="see-also"></a>参照
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
@@ -68,7 +68,7 @@ Unicode 文字の文字列定数には、プレフィックスとして文字 N 
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[ように (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/like-transact-sql.md)  
+[LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)    
 [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)     
