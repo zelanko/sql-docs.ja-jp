@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ed0376a9facde37d5c843e10885efaefaf225577
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033962"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  EKM デバイスから拡張キー管理 (EKM) を削除します。 拡張キー管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
- データベース内の対称キーが非対称キーで暗号化されている場合、またはユーザーやログインが非対称キーにマップされる場合、非対称キーは削除できません。 このようなキーを削除するには、事前にそのキーにマップされるユーザーまたはログインを削除する必要があります。 また、その非対称キーで暗号化されているすべての対称キーを削除または変更する必要があります。 非対称キーによる暗号化を削除するには、[ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) の DROP ENCRYPTION オプションを使います。  
+ データベース内の対称キーが非対称キーで暗号化されている場合、またはユーザーやログインが非対称キーにマップされる場合、非対称キーは削除できません。 このようなキーを削除するには、そのキーにマップされるユーザーまたはログインを削除する必要があります。 また、その非対称キーで暗号化されているすべての対称キーを削除または変更する必要があります。 非対称キーによる暗号化を削除するには、[ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) の DROP ENCRYPTION オプションを使います。  
   
  非対称キーのメタデータには、[sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) カタログ ビューを使うことによってアクセスできます。 非対称キー自体を、データベース内部から直接表示することはできません。  
   

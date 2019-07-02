@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0a4a2850af0bcd954db1c257adef209d5876c8
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946229"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67219005"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "64946229"
  **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
->  XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
+> XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
   
  XML 以外のフォーマット ファイルの構造およびフィールドについては、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
@@ -172,7 +172,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
  **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
->  XML フォーマット ファイルであることを区別するには、MyTable.xml のように、ファイル名拡張子として .xml を使用することをお勧めします。  
+> XML フォーマット ファイルであることを区別するには、MyTable.xml のように、ファイル名拡張子として .xml を使用することをお勧めします。  
   
  XML フォーマット ファイルの構造およびフィールドについては、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
@@ -180,7 +180,6 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
  ここでは、 **bcp** コマンドを使用して XML フォーマット ファイルを作成する方法を示す次の例について説明します。  
   
 -   A. 文字データ用の XML フォーマット ファイルの作成  
-  
 -   B. ネイティブ データ用の XML フォーマット ファイルの作成  
   
  この例では、 `HumanResources.Department` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを使用しています。 `HumanResources.Department` テーブルには、 `DepartmentID`、 `Name`、 `GroupName`、および `ModifiedDate`の 4 つの列があります。  
@@ -203,7 +202,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T  
 ```  
   
  生成されるフォーマット ファイル `Department-c.xml`には、次の XML 要素が含まれます。  
@@ -242,7 +241,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T  
 ```  
   
  生成されるフォーマット ファイル `Department-n.xml`には、次の XML 要素が含まれます。  

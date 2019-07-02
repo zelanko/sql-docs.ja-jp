@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d7344df7b16bdef8bb6d49ac5ee313916a1c0a49
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131922"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232504"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "54131922"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  
@@ -52,40 +51,40 @@ CREATE SERVICE service_name
  作成するサービスの名前を指定します。 新しいサービスは現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *service_name* は、有効な **sysname** でなければなりません。  
   
 > [!NOTE]  
->  *service_name* にキーワード ANY を使用するサービスは作成しないでください。 CREATE BROKER PRIORITY でサービス名に ANY を指定した場合、優先度はすべてのサービスに適用されます。 名前が ANY であるサービスに限定されません。  
+> *service_name* にキーワード ANY を使用するサービスは作成しないでください。 `CREATE BROKER PRIORITY` でサービス名に `ANY` を指定した場合、優先度はすべてのサービスに適用されます。 これは、名前が ANY であるサービスに限定されません。  
   
  AUTHORIZATION *owner_name*  
  サービスの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが **dbo** または **sa** の場合、*owner_name* には、任意の有効なユーザーまたはロールの名前を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが IMPERSONATE 権限を持つユーザーの名前、または現在のユーザーが属するロールの名前を指定する必要があります。  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  サービス用のメッセージを受信するキューを指定します。 キューはサービスと同じデータベース内に存在する必要があります。 *schema_name* を指定しない場合は、ステートメントを実行するユーザーに既定のスキーマが使用されます。  
   
  *contract_name*  
  このサービスのコントラクトを指定します。 サービス プログラムでは、指定したコントラクトを使用して、サービスに対するメッセージ交換が開始されます。 コントラクトを指定しない場合、サービスではメッセージ交換が開始されるだけです。  
   
  **[** DEFAULT **]**  
- サービスは、DEFAULT コントラクトに従ったメッセージ交換の発信先となります。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 DEFAULT コントラクトでは、メッセージ交換の両側で DEFAULT メッセージ型のメッセージを送信できます。 DEFAULT メッセージ型では、検証は NONE となります。  
+ サービスは、DEFAULT コントラクトに従ったメッセージ交換の発信先となります。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 DEFAULT コントラクトでは、メッセージ交換をする双方で DEFAULT メッセージ型のメッセージを送信できます。 DEFAULT メッセージ型では、検証は NONE となります。  
   
 ## <a name="remarks"></a>Remarks  
- 各サービスでは、関連付けられているコントラクトで提供される機能が、他のサービスでも使用できるよう公開されます。 CREATE SERVICE ステートメントでは、サービスに対するコントラクトを指定できます。 サービスは、指定されたコントラクトを使用するメッセージ交換の発信先となります。 コントラクトを指定しないサービスの機能は、他のサービスに公開されません。  
+ 各サービスでは、関連付けられているコントラクトで提供される機能が、他のサービスでも使用できるよう公開されます。 `CREATE SERVICE` ステートメントでは、サービスに対するコントラクトを指定できます。 サービスは、指定されたコントラクトを使用するメッセージ交換の発信先となります。 コントラクトを指定しないサービスの機能は、他のサービスに公開されません。  
   
  サービスで開始されるメッセージ交換では、任意のコントラクトを使用できます。 サービスでメッセージ交換を開始するだけの場合は、コントラクトを指定しないでサービスを作成できます。  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] でリモート サービスからの新しいメッセージ交換を受け入れるときには、発信先サービスの名前を基に、メッセージ交換のメッセージを格納するキューが決まります。  
   
 ## <a name="permissions"></a>アクセス許可  
- サービスを作成する権限は、既定では **db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。 CREATE SERVICE ステートメントを実行するには、指定したキューとすべてのコントラクトに対して REFERENCES 権限が必要です。  
+ サービスを作成する権限は、既定では `db_ddladmin` 固定データベース ロールまたは `db_owner` 固定データベース ロールのメンバー、および `sysadmin` 固定サーバー ロールのメンバーに与えられています。 `CREATE SERVICE` ステートメントを実行するユーザーは、指定したキューとすべてのコントラクトに対する `REFERENCES` 権限が必要です。  
   
- サービスに対する REFERENCES 権限は、既定ではサービスの所有者、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。 サービスに対する SEND 権限は、既定ではサービスの所有者、**db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
+ サービスに対する `REFERENCES` 権限は、既定ではサービスの所有者、`db_ddladmin` または `db_owner` の固定データベース ロールのメンバー、または `sysadmin` 固定サーバー ロールのメンバーに与えられています。 サービスに対する `SEND` 権限は、既定ではサービスの所有者、`db_owner` 固定データベース ロールのメンバー、または `sysadmin` 固定サーバー ロールのメンバーに与えられています。  
   
- サービスは一時オブジェクトとして指定できません。 **#** で始まるサービス名は許可されますが、パーマネント オブジェクトになります。  
+ サービスには一時オブジェクトは指定できません。 **#** で始まるサービス名は許可されますが、パーマネント オブジェクトになります。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-service-with-one-contract"></a>A. 1 つのコントラクトでサービスを作成する  
  次の例では、`dbo` スキーマの `ExpenseQueue` キューにサービス `//Adventure-Works.com/Expenses` を作成します。 このサービスを対象とするダイアログは、コントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` に従う必要があります。  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE [dbo].[ExpenseQueue]  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
@@ -94,7 +93,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses]
 ### <a name="b-creating-a-service-with-multiple-contracts"></a>B. 複数のコントラクトでサービスを作成する  
  次の例では、`//Adventure-Works.com/Expenses` キューにサービス `ExpenseQueue` を作成します。 このサービスを対象とするダイアログは、コントラクト `//Adventure-Works.com/Expenses/ExpenseSubmission` またはコントラクト `//Adventure-Works.com/Expenses/ExpenseProcessing` に従う必要があります。  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission],  
      [//Adventure-Works.com/Expenses/ExpenseProcessing]) ;  
@@ -103,7 +102,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 ### <a name="c-creating-a-service-with-no-contracts"></a>C. コントラクトなしでサービスを作成する  
  次の例では、サービス `//Adventure-Works.com/Expenses on the ExpenseQueue` キューを作成します。 このサービスにはコントラクト情報はありません。 したがって、このサービスはダイアログの開始だけを行えます。  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   

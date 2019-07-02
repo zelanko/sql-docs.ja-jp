@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 015d1259430d2da67bb91ae4dd6ed26e0a421766
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326483"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666188"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY (アセンブリの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 ## <a name="arguments"></a>引数  
  *permission*  
- アセンブリで拒否できる権限を指定します。 下の表をご覧ください。  
+ アセンブリで拒否できる権限を指定します。 以下に一覧を示します。  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  権限を拒否するアセンブリを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

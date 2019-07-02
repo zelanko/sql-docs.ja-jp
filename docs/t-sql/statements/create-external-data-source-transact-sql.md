@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e2bf0ddde51d69567393a77b18a1f72478101b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145491"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419056"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -109,7 +109,7 @@ WITH
 - `sqlserver` 場所プレフィックスを使用して、SQL Server 2019 を SQL Server、SQL Database、または SQL Data Warehouse に接続できます。
 - `Driver={<Name of Driver>}` 経由で接続する際に `ODBC` を指定します。
 - `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された SSL 接続を使用してデータが送信されるため、推奨されます。
-- Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 そうしない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して、新しい場所を指します。
+- Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 使用しない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して新しい場所を示します。
 
 ### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
@@ -148,7 +148,7 @@ WITH
 構成されている外部データ ソースの種類を指定します。 このパラメーターは常に必要ではありません。
 
 - 外部データ ソースが Cloudera、Hortonworks、Azure Blob Storage の場合は、HADOOP を使用します。
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] で [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用して、一括操作を実行する場合は、BLOB_STORAGE を使用します。
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] で [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] を使用して一括操作を実行する場合は、BLOB_STORAGE を使用します。
 
 > [!IMPORTANT]
 > 他の外部データ ソースを使用する場合は、`TYPE` を設定しないでください。
@@ -318,7 +318,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する
 
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。
-[BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) の使用][sas_token]」を参照してください。
+[BULK INSERT][bulk_insert] or [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用][sas_token]」を参照してください。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -356,7 +356,7 @@ WITH
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
 [create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
 [create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
 
@@ -453,12 +453,10 @@ WITH
 
 - SQL Database からのエラスティック クエリを使用したクロスデータベース クエリには、RDBMS を使用します。  
 - シャード化された SQL Database への接続時に外部データ ソースを作成する場合は、SHARD_MAP_MANAGER を使用します。
-- [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用して、一括操作を実行する場合は、BLOB_STORAGE を使用します。
+- [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] を使用して一括操作を実行する場合は、BLOB_STORAGE を使用します。
 
 > [!IMPORTANT]
 > 他の外部データ ソースを使用する場合は、`TYPE` を設定しないでください。
-
-`TYPE` = `HADOOP` を使用して、Azure Blob Storage からデータを読み込む例については、「[Azure Blob Storage を参照する外部データ ソースを作成する](#e-create-external-data-source-to-reference-azure-blob-storage)」を参照してください。
 
 ### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
@@ -512,7 +510,7 @@ WITH
 ;
 ```
 
-チュートリアルについては、[シャーディングのためのエラスティック クエリの概要 (行方向のパーティション分割)][sharded_eq_tutorial]に関するページを参照してください。
+チュートリアルについては、[シャーディングのエラスティック クエリの概要 (行方向のパーティション分割)][sharded_eq_tutorial] のトピックを参照してください。
 
 ### <a name="b-create-an-rdbms-external-data-source"></a>B. RDBMS の外部データ ソースを作成する
 
@@ -538,7 +536,7 @@ WITH
 ;
 ```
 
-RDBMS のチュートリアルについては、「[クロスデータベース クエリの概要 (列方向のパーティション分割)][remote_eq_tutorial]」を参照してください。
+RDBMS のチュートリアルについては、[クロスデータベース クエリの概要 (列方向のパーティション分割)][remote_eq_tutorial] のトピックを参照してください。
 
 ## <a name="examples-bulk-operations"></a>例 :一括操作
 
@@ -547,7 +545,7 @@ RDBMS のチュートリアルについては、「[クロスデータベース 
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Azure Blob Storage からデータを取得する一括操作用の外部データ ソースを作成する
 
-[BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) の使用][sas_token]」を参照してください。
+[BULK INSERT][bulk_insert] or [OPENROWSET][openrowset] を使用する一括操作に対し、次のデータ ソースを使用します。 資格情報は、`SHARED ACCESS SIGNATURE` を ID として設定する必要があり、SAS トークンの先頭に `?` があってはなりません。また、読み込む必要のあるファイル (たとえば `srt=o&sp=r`) に対して少なくとも読み取りアクセス許可が必要で、有効期限が有効である必要があります (すべての日付は UTC 時間です)。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用][sas_token]」を参照してください。
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -678,7 +676,7 @@ WITH
 > [!IMPORTANT]
 > 他の外部データ ソースを使用する場合は、`TYPE` を設定しないでください。
 
-`TYPE` = `HADOOP` を使用して、Azure Blob Storage からデータを読み込む例については、「[Azure Blob Storage を参照する外部データ ソースを作成する](#e-create-external-data-source-to-reference-azure-blob-storage)」を参照してください。
+`TYPE` = `HADOOP` を使用して、Azure Blob Storage からデータを読み込む例については、「[Azure Blob Storage を参照する外部データ ソースを作成する](#a-create-external-data-source-to-reference-azure-blob-storage)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -877,7 +875,7 @@ WITH
 - PDW エンジンでは、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
 - `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された SSL 接続を使用してデータが送信されるため、推奨されます。
-- Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 そうしない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して、新しい場所を指します。
+- Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 使用しない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して新しい場所を示します。
 
 ### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
 
@@ -897,7 +895,7 @@ WITH
 > [!IMPORTANT]
 > 他の外部データ ソースを使用する場合は、`TYPE` を設定しないでください。
 
-`TYPE` = `HADOOP` を使用して、Azure Blob Storage からデータを読み込む例については、「[Azure Blob Storage を参照する外部データ ソースを作成する](#e-create-external-data-source-to-reference-azure-blob-storage)」を参照してください。
+`TYPE` = `HADOOP` を使用して、Azure Blob Storage からデータを読み込む例については、「[Azure Blob Storage を参照する外部データ ソースを作成する](#d-create-external-data-source-to-reference-azure-blob-storage)」を参照してください。
 
 ### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -924,7 +922,7 @@ Resource Manager を指定しない場合、Hadoop への計算のプッシュ�
 > [!IMPORTANT]  
 > RESOURCE_MANAGER_LOCATION 値は、外部データ ソースを作成するときに検証されません。 正しくない値を入力すると、指定された値で解決できないため、プッシュ ダウンが試行されるたびに実行時にクエリ エラーが発生する可能性があります。
 
-「[プッシュダウンが有効になっている Hadoop を参照する外部データ ソースを作成する](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled)」では、具体的な例と追加のガイダンスを提供しています。
+「[プッシュダウンが有効になっている Hadoop を参照する外部データ ソースを作成する](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled)」では、具体的な例と追加のガイダンスを提供しています。
 
 ## <a name="permissions"></a>アクセス許可
 

@@ -21,11 +21,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f58fa15ba67cfcf84a35f130fa70eff0d981c0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327363"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017735"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY (データベース スコープの資格情報の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ DENY permission  [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  *permission*  
- データベース スコープの資格情報で拒否できる権限を指定します。 下の表をご覧ください。  
+ データベース スコープの資格情報で拒否できる権限を指定します。 以下に一覧を示します。  
   
- ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
+ ON DATABASE SCOPED CREDENTIAL **::** _credential_name_  
  権限を拒否するデータベース スコープの資格情報を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

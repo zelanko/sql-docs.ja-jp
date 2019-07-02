@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503242"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232552"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|メッセージの一意識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
- キューを作成する権限では、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーを使用します。  
+ キューを作成する権限では、`db_ddladmin` 固定データベース ロールまたは `db_owner` 固定データベース ロールのメンバー、または `sysadmin` 固定サーバー ロールのメンバーを使用します。  
   
- キューに対する REFERENCES 権限は、既定ではキューの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
+ キューに対する `REFERENCES` 権限は、既定ではキューの所有者、`db_ddladmin` 固定データベース ロールまたは `db_owner` 固定データベース ロールのメンバー、または `sysadmin` 固定サーバー ロールのメンバーに与えられています。  
   
- キューに対する RECEIVE 権限は、既定ではキューの所有者、db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
+ キューに対する `RECEIVE` 権限は、既定ではキューの所有者、`db_owner` 固定データベース ロールのメンバー、または `sysadmin` 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. パラメーターなしでキューを作成する  
  次の例では、メッセージの受信に使用できるキューを作成します。 キューにアクティブ化ストアド プロシージャは指定しません。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>B. 使用できないキューを作成する  
  次の例では、メッセージの受信に使用できないキューを作成します。 キューにアクティブ化ストアド プロシージャは指定しません。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. キューを作成し、内部アクティブ化情報を指定する  
  次の例では、メッセージの受信に使用できるキューを作成します。 メッセージがキューに格納されると、キューによってストアド プロシージャ `expense_procedure` が起動されます。 ストアド プロシージャは、ユーザー `ExpenseUser` として実行されます。 キューによって、ストアド プロシージャのインスタンスが `5` 個まで起動されます。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. 特定のファイル グループにキューを作成する  
  次の例では、ファイル グループ `ExpenseWorkFileGroup` にキューを作成します。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. 複数のパラメーターでキューを作成する  
  次の例では、`DEFAULT` ファイル グループにキューを作成します。 このキューは使用不可能な状態になります。 メッセージは、それらが属するメッセージ交換が終わるまでキューに保持されます。 ALTER QUEUE を使用してキューを使用できるようにすると、キューによってストアド プロシージャ `2008R2.dbo.expense_procedure` が開始され、メッセージが処理されます。 このストアド プロシージャは、`CREATE QUEUE` ステートメントを実行したユーザーとして実行されます。 キューによって、ストアド プロシージャのインスタンスが `10` 個まで起動されます。  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

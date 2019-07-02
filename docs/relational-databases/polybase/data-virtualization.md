@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a64e02ecdb3f8a8321e0a625a3788228df0890fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775192"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>リレーショナル データ ソースで外部テーブル ウィザードを使用する
 
@@ -23,7 +23,7 @@ SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想�
 
 ## <a name="start-the-external-table-wizard"></a>外部テーブル ウィザードを起動する
 
-配置スクリプトの最後で取得される IP アドレス/ポート番号 (31433) を使用して、マスター インスタンスに接続します。 オブジェクト エクスプローラーで **[データベース]** ノードを展開します。 次に、既存の SQL Server インスタンスからデータを仮想化するデータベースのいずれかを選択します。 データベースを右クリックして **[外部テーブルを作成する]** を選択し、データ仮想化ウィザードを起動します。 データ仮想化ウィザードは、コマンド パレットから起動することもできます。 Windows では Ctrl + Shift + P キー、Mac では Cmd + Shift + P キーを使用します。
+[**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) コマンドを使用して取得した **sql-server-master** エンドポイントの IP アドレスまたはポート番号を使用して、マスター インスタンスに接続できます。 オブジェクト エクスプローラーで **[データベース]** ノードを展開します。 次に、既存の SQL Server インスタンスからデータを仮想化するデータベースのいずれかを選択します。 データベースを右クリックして **[外部テーブルを作成する]** を選択し、データ仮想化ウィザードを起動します。 データ仮想化ウィザードは、コマンド パレットから起動することもできます。 Windows では Ctrl + Shift + P キー、Mac では Cmd + Shift + P キーを使用します。
 
 ![データ仮想化ウィザード](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>データ ソースを選択する

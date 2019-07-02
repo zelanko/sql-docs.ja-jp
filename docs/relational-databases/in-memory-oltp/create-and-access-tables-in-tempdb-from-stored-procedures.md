@@ -13,18 +13,18 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fbb29e8e8f694c76ac7fab7340a3f90d7e5c7ea3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624751"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047816"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>ストアド プロシージャから TempDB 内のテーブルを作成およびアクセスする
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセスはサポートされていません。 代わりに、DURABILITY=SCHEMA_ONLY のメモリ最適化テーブルまたはテーブルの種類とテーブル変数を使用します。 
 
-一時テーブルのメモリ最適化およびテーブルのシナリオの詳細については、「 [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)」 (メモリ最適化を使用した一時テーブルとテーブル変数の高速化) をご覧ください。
+一時テーブルおよびテーブル変数のメモリの最適化のシナリオの詳細については、「[メモリ最適化を使用した一時テーブルとテーブル変数の高速化](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)」を参照してください。
   
   次の例では、3 つの列 (id、ProductID、Quantity) を含む temp テーブルの使用を、 **@OrderQuantityByProduct** 型のテーブル変数 **@OrderQuantityByProduct**を使用して置き換える方法を示します。  
   

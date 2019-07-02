@@ -15,12 +15,12 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c80985d6c69cc1f62e82ae26cbf4bc841501e9d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4aa32fb8859df9fdc7c6d85cb43e93425dfa895b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145471"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,15 +78,15 @@ T (ProductModelID int, Instructions xml)
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 この行セットには、**xml** データ型のメソッドを使用してクエリを実行できます。 次のクエリを実行すると、生成された行ごとにコンテキスト アイテムのサブツリーが抽出されます。  
@@ -107,7 +107,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-返された行セットでは型情報が保持されます。 **nodes()** メソッドの結果には、**query()**、**value()**、**exist()**、**nodes()** など、**xml** データ型のメソッドを適用できます。 ただし、**modify()** メソッドを適用して XML インスタンスを変更することはできません。  
+返された行セットでは型情報が保持されます。 **nodes()** メソッドの結果には、**query()** 、**value()** 、**exist()** 、**nodes()** など、**xml** データ型のメソッドを適用できます。 ただし、**modify()** メソッドを適用して XML インスタンスを変更することはできません。  
   
 また、行セットのコンテキスト ノードは具体化できません。 つまり、このコンテキスト ノードは SELECT ステートメントでは使用できません。 ただし、IS NULL と COUNT(*) では使用できます。  
   
