@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251546"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500042"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
 
@@ -43,7 +43,7 @@ ms.locfileid: "63251546"
 |CLng|MDX のみ||  
 |CLngLng|サポートされていません||  
 |CLngPtr|サポートされていません||  
-|コマンド|サポートされていません||  
+|Command|サポートされていません||  
 |Cos|MDX のみ||  
 |CreateObject|サポートされていません||  
 |CSng|MDX のみ||  
@@ -53,17 +53,17 @@ ms.locfileid: "63251546"
 |CVErr|サポートされていません||  
 |date|MDX のみ|**警告**DAX が同じで別の関数を実装する名前は、DATE (Year, Month, Day) 関数は、指定された引数から日付型の値を生成するために使用|  
 |DateAdd|MDX のみ|**警告**DAX が同じで別の関数を実装する名前の dateadd (\<日付 >、< number_of_intervals >\<間隔 >) の数で指定された日付をシフトするために使用されている関数の間隔を指定|  
-|DateDiff]|MDX のみ||  
+|DateDiff|MDX のみ||  
 |DatePart|MDX のみ||  
 |DateSerial|MDX のみ||  
-|DateValue]|DAX、MDX||  
-|日|DAX、MDX||  
+|DateValue|DAX、MDX||  
+|Day|DAX、MDX||  
 |DDB|MDX のみ||  
 |Dir|サポートされていません||  
 |DoEvents|サポートされていません||  
 |Environ|サポートされていません||  
 |EOF|サポートされていません||  
-|[エラー]|サポートされていません||  
+|Error|サポートされていません||  
 |Exp|DAX、MDX||  
 |FileAttr|サポートされていません||  
 |FileDateTime|サポートされていません||  
@@ -100,7 +100,7 @@ ms.locfileid: "63251546"
 |IsNull|MDX のみ||  
 |IsNumeric|MDX のみ||  
 |IsObject|サポートされていません||  
-|結合|サポートされていません||  
+|Join|サポートされていません||  
 |LBound|サポートされていません||  
 |LCase|MDX のみ||  
 |Left|DAX、MDX||  
@@ -117,23 +117,23 @@ ms.locfileid: "63251546"
 |Month|DAX、MDX||  
 |MonthName|サポートされていません||  
 |MsgBox|サポートされていません||  
-|[今]|DAX、MDX||  
-|[期間]|MDX のみ||  
+|Now|DAX、MDX||  
+|NPer|MDX のみ||  
 |NPV|MDX のみ||  
 |Oct|MDX のみ||  
-|パーティション|MDX のみ||  
+|Partition|MDX のみ||  
 |Pmt|MDX のみ||  
 |PPmt|MDX のみ||  
 |PV|MDX のみ||  
 |QBColor|MDX のみ||  
 |Rate|MDX のみ||  
-|[置換]|サポートされていません||  
+|Replace|サポートされていません||  
 |RGB|MDX のみ||  
 |Right|DAX、MDX||  
 |Rnd|MDX のみ||  
-|四捨五入|DAX、MDX||  
+|Round|DAX、MDX||  
 |RTrim|MDX のみ||  
-|第 2 週|DAX、MDX||  
+|Second|DAX、MDX||  
 |Seek|サポートされていません||  
 |Sgn|DAX、MDX||  
 |Shell|サポートされていません||  
@@ -141,22 +141,22 @@ ms.locfileid: "63251546"
 |SLN|MDX のみ||  
 |Space|MDX のみ||  
 |Spc|サポートされていません||  
-|分割|サポートされていません||  
+|Split|サポートされていません||  
 |Sqr|MDX のみ||  
 |Str|MDX のみ||  
 |StrComp|MDX のみ||  
 |StrConv|MDX のみ||  
-|String]|MDX のみ||  
+|String|MDX のみ||  
 |StrReverse|サポートされていません||  
-|スイッチ|MDX のみ||  
+|Switch|MDX のみ||  
 |SYD|MDX のみ||  
-|タブ|サポートされていません||  
+|Tab|サポートされていません||  
 |Tan|MDX のみ||  
 |Time|サポートされていません||  
 |Timer|MDX のみ||  
 |TimeSerial|MDX のみ||  
 |TimeValue|DAX、MDX||  
-|トリム]|DAX、MDX||  
+|Trim|DAX、MDX||  
 |TypeName|MDX のみ||  
 |UBound|サポートされていません||  
 |UCase|MDX のみ||  
@@ -164,6 +164,6 @@ ms.locfileid: "63251546"
 |VarType|サポートされていません||  
 |Weekday|DAX、MDX||  
 |WeekdayName|サポートされていません||  
-|年|DAX、MDX||  
+|Year|DAX、MDX||  
   
   

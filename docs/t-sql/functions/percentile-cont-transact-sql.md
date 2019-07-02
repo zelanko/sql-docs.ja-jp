@@ -124,6 +124,6 @@ Shipping and Receiving 9.250000      9.0000
 ```  
   
 ## <a name="see-also"></a>参照  
- [PERCENTILE_DISC (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percentile-disc-transact-sql.md)  
+ [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
  

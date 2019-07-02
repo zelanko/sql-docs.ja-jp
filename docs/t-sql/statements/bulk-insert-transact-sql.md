@@ -101,15 +101,15 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1 以降では、data_file は Azure Blob Storage に格納することができます。 その場合は、**data_source_name** オプションを指定する必要があります。
 
 > [!IMPORTANT]
 > Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
 
 
-**'** _data_source_name_ **'**   
-**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**'** _data_source_name_ **'**    
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 インポートされるファイルの Azure Blob Storage の場所を指している名前付きの外部データ ソースです。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。    
  
 ```sql
@@ -118,7 +118,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=**_batch_size_  
+ BATCHSIZE **=** _batch_size_  
  1 つのバッチに含まれている行の数を指定します。 それぞれのバッチは、1 回のトランザクションでサーバーにコピーされます。 コピーに失敗した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各バッチのトランザクションがコミットまたはロールバックされます。 既定では、指定のデータ ファイル内にあるすべてのデータが 1 つのバッチになります。 パフォーマンスに関する考慮事項については、このトピックで後述する「解説」を参照してください。  
   
  CHECK_CONSTRAINTS  
@@ -134,7 +134,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  MAXERRORS オプションは制約チェックには適用されません。  
   
- CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }  
+ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** }  
  データ ファイル内のデータのコード ページを指定します。 CODEPAGE は、データに **char**、**varchar**、**text** 列 (文字値が **127** より大きいか、**32** 未満) が含まれている場合にのみ当てはまります。  
 
 ```sql
@@ -157,7 +157,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |*code_page*|850 など、特定のコード ページ番号を指定します。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンはコード ページ 65001 (UTF-8 エンコード) をサポートしません。|  
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** }  
 BULK INSERT で、指定したデータ ファイルの型の値に基づいてインポート操作を実行します。  
 
 &nbsp;
@@ -170,15 +170,15 @@ BULK INSERT で、指定したデータ ファイルの型の値に基づいて�
 |**widenative**|ネイティブ (データベース) データ型。ただし、データが Unicode として格納される **char**、**varchar**、**text** 列は除きます。 **bcp** ユーティリティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを一括インポートし、**widenative** データ ファイルを作成します。<br /><br /> **widenative** 値を使用すると、**widechar** 値を使用するよりもパフォーマンスが向上します。 データ ファイルに [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 拡張文字が含まれている場合は、**widenative** を指定します。<br /><br /> 詳細については、「 [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)」をご覧ください。|  
 | &nbsp; | &nbsp; |
 
-ERRORFILE **='**_file_name_**'**  
+ERRORFILE **='** _file_name_ **'**  
 形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。
 
 このエラー ファイルは、コマンドが実行されたときに作成されます。 ファイルが既に存在する場合はエラーが発生し、 さらに、拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行の参照と、エラーの診断が含まれています。 エラーが修正されるとすぐ、データは読み込み可能になります。  
-**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。
 
 'errorfile_data_source_name'   
-**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 名前付きの外部データ ソースで、インポート中に見つかったエラーを格納するエラー ファイルの Azure Blob Storage の場所を指しています。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
  
  FIRSTROW **=** _first_row_  
@@ -193,7 +193,7 @@ ERRORFILE **='**_file_name_**'**
  FIRE_TRIGGERS が指定されていない場合、挿入トリガーは実行されません。  
 
 FORMATFILE_DATASOURCE **=** 'data_source_name'   
-**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.   
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.   
 インポートされるデータのスキーマを定義するフォーマット ファイルの Azure Blob Storage の場所を指している名前付きの外部データ ソースです。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
   
  KEEPIDENTITY  
@@ -215,7 +215,7 @@ LASTROW **=** _last_row_ 読み込み終了行の行番号を指定します。 
 > [!NOTE]  
 >  MAX_ERRORS オプションは、制約チェックや **money** および **bigint** のデータ型の変換には適用されません。  
   
- ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] )  
+ ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] )  
  データ ファイル内のデータの並べ替え方法を指定します。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序 (つまりクラスター化インデックス キーの順序以外の順) で並んでいる場合またはテーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、一括挿入操作はデータ ファイルが並べ替えられていないことを前提に実行されます。 最適な一括インポートのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
   
  *n*  
@@ -235,7 +235,7 @@ LASTROW **=** _last_row_ 読み込み終了行の行番号を指定します。 
 ### <a name="input-file-format-options"></a>入力ファイル フォーマットのオプション
   
 FORMAT **=** 'CSV'   
-**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準に準拠しているコンマ区切り値ファイルを指定します。
 
 ```sql
@@ -245,7 +245,7 @@ WITH ( FORMAT='CSV');
 ```
 
 FIELDQUOTE **=** 'field_quote'   
-**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 CSV ファイルで引用符文字として使用される文字を指定します。 指定されていない場合は、[RFC 4180](https://tools.ietf.org/html/rfc4180) 標準の定義に従って引用符文字 (") が引用符文字として使用されます。
   
  FORMATFILE **=** '_format_file_path_'  
@@ -259,13 +259,13 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
   
 -   データ形式に他に変更点がある。 フォーマット ファイルは通常、**bcp** ユーティリティを使用して作成し、必要に応じてテキスト エディターで修正します。 詳細については、「 [bcp Utility](../../tools/bcp-utility.md)」を参照してください。  
 
-**適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blob Storage に格納することができます。
 
- FIELDTERMINATOR **='**_field_terminator_**'**  
+ FIELDTERMINATOR **='** _field_terminator_ **'**  
  **char** および **widechar** 型のデータ ファイルに使用するフィールド ターミネータを指定します。 既定のフィールド ターミネータは \t (タブ文字) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
 
- ROWTERMINATOR **='**_row_terminator_**'**  
+ ROWTERMINATOR **='** _row_terminator_ **'**  
  **char** および **widechar** 型のデータ ファイルに使用する行ターミネータを指定します。 既定の行ターミネータは **\r\n** (改行文字) です。  詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
 
   
@@ -283,7 +283,7 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
 
  BULK INSERT で使用される文字列から 10 進数へのデータ型変換には、[!INCLUDE[tsql](../../includes/tsql-md.md)] の [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数と同じ規則が適用されるので、科学的表記法を使用した数値を表す文字列は拒否されます。 したがって、BULK INSERT では、そのような文字列は無効な値として処理され、変換エラーが報告されます。  
   
- この問題を回避するには、科学的表記法の **float** 型のデータを 10 進数の列に一括インポートするフォーマット ファイルを使用します。 フォーマット ファイルには、列のデータを明示的に **real** または **float** 型として記述します。 これらのデータ型の詳細については、 [float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)を参照してください。 
+ この問題を回避するには、科学的表記法の **float** 型のデータを 10 進数の列に一括インポートするフォーマット ファイルを使用します。 フォーマット ファイルには、列のデータを明示的に **real** または **float** 型として記述します。 これらのデータ型の詳細については、[float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)を参照してください。  
   
 > [!NOTE]  
 >  フォーマット ファイル **real** データとして、 **SQLFLT4** データ型と **float** データとして、 **SQLFLT8** データ型。 XML 以外のフォーマット ファイルについては、「[bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)」をご覧ください。  
@@ -446,7 +446,7 @@ EXEC(@bulk_cmd);
 ```  
   
 > [!NOTE]  
->  Microsoft Windows によるテキスト ファイルの処理方法によって、**(\n** は自動的に **\r\n)** に置き換えられます。  
+>  Microsoft Windows によるテキスト ファイルの処理方法によって、 **(\n** は自動的に **\r\n)** に置き換えられます。  
 
 > [!IMPORTANT]
 > Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。

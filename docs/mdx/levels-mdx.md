@@ -1,5 +1,5 @@
 ---
-title: レベル (MDX) |Microsoft Docs
+title: Levels (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269955"
 ---
-# <a name="levels-mdx"></a>レベル (MDX)
+# <a name="levels-mdx"></a>Levels (MDX)
 
 
   ディメンションまたは階層内の位置が数値式で指定された、または文字列式で名前が指定されたレベルを返します。  
@@ -43,15 +43,15 @@ Hierarchy_Expression.Levels( Level_Name )
  レベル名を指定する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
- レベル番号が指定されている場合、**レベル**関数は、指定した 0 から始まる位置に関連付けられているレベルを返します。  
+ レベル番号が指定されている場合、**Levels**関数は、指定した 0 から始まる位置に関連付けられているレベルを返します。  
   
- レベル名が指定されている場合、**レベル**関数は、指定されたレベルを返します。  
+ レベル名が指定されている場合、**Levels**関数は、指定されたレベルを返します。  
   
 > [!NOTE]  
 >  ユーザー定義関数については、文字列式の構文を使用してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例を示しますの各、**レベル**関数の構文。  
+ 次の例を示しますの各、**Levels**関数の構文。  
   
 ### <a name="numeric"></a>数値  
  次の例では、レベル、国を返します。  

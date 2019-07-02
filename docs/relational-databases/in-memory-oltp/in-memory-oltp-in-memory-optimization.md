@@ -1,7 +1,7 @@
 ---
 title: インメモリ OLTP (インメモリ最適化) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/22/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047576"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351663"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>インメモリ OLTP (インメモリ最適化)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、トランザクション処理、データの取り込み、データの読み込みのパフォーマンス、および一時的なデータのシナリオを大幅に向上させることができます。  独自のメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャをすばやくテストするために必要な基本的なコードと知識については、
@@ -42,7 +43,7 @@ ms.locfileid: "63047576"
  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、トランザクション処理のパフォーマンスを向上させる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジであることに注意してください。 報告と分析クエリのパフォーマンスを向上させる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジについては、「 [列ストア インデックスの説明](../../relational-databases/indexes/columnstore-indexes-overview.md)」を参照してください。
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、インメモリ OLTP はいくつかの機能強化が行われています。 データベース アプリケーションの移行を容易にできるように、Transact-SQL の表層が拡大されています。 アプリケーションのメンテナンスを容易にできるように、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの ALTER 操作を実行するためのサポートが追加されています。 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] の新機能については、「[Columnstore indexes - what's new](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)」(Columnstore インデックス - 新機能) を参照してください。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]、および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、インメモリ OLTP はいくつかの機能強化が行われています。 データベース アプリケーションの移行を容易にできるように、Transact-SQL の表層が拡大されています。 アプリケーションのメンテナンスを容易にできるように、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの ALTER 操作を実行するためのサポートが追加されています。
   
 > [!NOTE]  
 >  **お試しください**  

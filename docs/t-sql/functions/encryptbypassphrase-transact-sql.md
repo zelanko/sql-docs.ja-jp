@@ -102,7 +102,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DECRYPTBYPASSPHRASE (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

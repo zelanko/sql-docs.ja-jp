@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269916"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400047"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -602,4 +602,10 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|UnmodifiableObjectWarnings (ブール値は ' True') を =|修正できない相違がオブジェクトで見つかった場合 (たとえば、同じファイルのファイル サイズまたはファイル パスが異なる場合) に警告を生成するかどうかを指定します。|
 |**/p:**|VerifyCollationCompatibility (ブール値は ' True') を =|照合順序の互換性を検証するかどうかを指定します。
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|公開前にチェックを実行して、正常な公開をブロックする可能性のある問題が存在する場合は公開操作を停止するかどうかを指定します。 たとえば、ターゲット データベースの外部キーがデータベース プロジェクトに存在せず、公開時にエラーが発生する場合は、公開操作が停止することがあります。|
-  
+
+## <a name="exit-codes"></a>終了コード
+
+次の終了コードを返すコマンド:
+
+- 0 = 成功
+- 0 以外の障害を =

@@ -5,17 +5,17 @@ author: Abiola
 ms.author: aboke
 ms.reviewer: jroth
 manager: craigg
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dab04f5c544e84c5763b8101cb166741463d460a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a0a609d2581230418df2a7c1ae1e990a04e41ae
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993939"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388863"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>CSV ファイルで外部テーブル ウィザードを使用する
 
@@ -26,14 +26,14 @@ SQL Server 2019 では、CSV ファイルからのデータを HDFS に仮想化
 CTP 2.4 より、データ プールと記憶域プールの外部データ ソースは、ビッグ データ クラスターに既定で作成されなくなりました。 ウィザードを使用する前に、次の Transact-SQL クエリを使用してターゲット データベースに既定の **SqlStoragePool** 外部データ ソースを作成してください。 最初に、クエリのコンテキストをターゲット データベースに変更します。
 
 ```sql
-  -- Create default data sources for SQL Big Data Cluster
-  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-      CREATE EXTERNAL DATA SOURCE SqlDataPool
-      WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+-- Create default data sources for SQL Big Data Cluster
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+    CREATE EXTERNAL DATA SOURCE SqlDataPool
+    WITH (LOCATION = 'sqldatapool://controller-svc/default');
 
-  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://controller-svc/default');
 ```
 
 ## <a name="launch-the-external-table-wizard"></a>外部テーブル ウィザードを起動する

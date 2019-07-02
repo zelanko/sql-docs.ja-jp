@@ -2,7 +2,7 @@
 title: Azure Data Lake Analytics タスク | Microsoft Docs
 description: Data Lake Analytics タスクを使用して、U-SQL ジョブを Azure Data Lake Analytics サービスに送信できます。
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: maghan
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014915"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419166"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics タスク
 
@@ -37,7 +37,7 @@ Data Lake Analytics タスクを使用して、U-SQL ジョブを Azure Data Lak
 
 ## <a name="general-page-configuration"></a>全般ページの構成
 
-**[全般]** ページを使ってタスクを構成し、タスクが送信する U-SQL スクリプトを指定します。 U-SQL 言語について詳しくは、[U-SQL 言語のリファレンス](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference)をご覧ください。
+**[全般]** ページを使ってタスクを構成し、タスクが送信する U-SQL スクリプトを指定します。 U-SQL 言語について詳しくは、[U-SQL 言語のリファレンス](/u-sql/)をご覧ください。
 
 ### <a name="basic-configuration"></a>[基本構成]
 

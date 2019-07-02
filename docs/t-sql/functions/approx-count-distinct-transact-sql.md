@@ -100,5 +100,5 @@ P                                                                388036
 ```
     
 ## <a name="see-also"></a>参照
-[集計関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 

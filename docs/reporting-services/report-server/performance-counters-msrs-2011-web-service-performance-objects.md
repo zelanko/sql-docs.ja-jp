@@ -1,6 +1,6 @@
 ---
 title: パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,12 +15,13 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: deda73905311011341bbf98898d46ea8a9e6f64c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: d5d9c379aaa2b8b0b92e064ed6dc21a4eb968b95
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577689"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412594"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト
   このトピックでは、 **MSRS 2011 Web Service** および **MSRS 2011 Windows Service** パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。 これらのオブジェクトは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] のネイティブ モードの配置の一部です。  

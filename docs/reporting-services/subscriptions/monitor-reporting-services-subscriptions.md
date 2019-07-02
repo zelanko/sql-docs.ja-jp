@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140536"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285041"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services のサブスクリプションを監視する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの監視は、ユーザー インターフェイス、Windows PowerShell、またはログ ファイルから行うことができます。 監視のために使用できるオプションは、実行しているレポート サーバーのモードによって異なります。  
@@ -76,7 +76,7 @@ ms.locfileid: "67140536"
   
  サブスクリプションに関連するトレース ログ ファイルのサンプル エラー メッセージを次に示します。  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36:: i 情報: サーバー システムで指定されているとおり、EnableExecutionLogging を 'True' に初期化中です properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e エラー: **メールを送信中にエラーが発生しました**。 例外: System.Net.Mail.SmtpException: SMTP サーバーにセキュリティで保護された接続が必要であるか、またはクライアントが認証されていません。 サーバーの応答内容: 5.7.1 クライアントは System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) で認証されませんでした  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i 情報: サーバー システムで指定されているとおり、EnableExecutionLogging を 'True' に初期化中です properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 エラー: **メールを送信中にエラーが発生しました**。 例外: System.Net.Mail.SmtpException: SMTP サーバーにセキュリティで保護された接続が必要であるか、またはクライアントが認証されていません。 サーバーの応答内容: 5.7.1 クライアントは System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response) で認証されませんでした  
   
  ログ ファイルには、レポートが開かれているかどうか、または実際に配信が成功したかどうかに関する情報は含まれません。 配信が成功するということは、スケジュールおよび配信のプロセッサでエラーが生成されず、レポート サーバーがメール サーバーに接続したことを意味します。 電子メールがユーザーのメールボックスで配信不能なメッセージ エラーとなった場合、その情報はログ ファイルに含まれません。 ログ ファイルの詳細については、「 [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   

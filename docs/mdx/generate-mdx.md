@@ -1,5 +1,5 @@
 ---
-title: (MDX) の生成 |Microsoft Docs
+title: Generate (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224882"
 ---
-# <a name="generate-mdx"></a>(MDX) を生成します。
+# <a name="generate-mdx"></a>Generate (MDX)
 
 
   あるセットを別のセットの各メンバーに適用し、その結果セットを和集合で結合します。 また、この関数は、セットに対して文字列式を評価することによって作成される連結文字列を返します。  
@@ -73,7 +73,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 実際の最も一般的な使用**生成**はセット評価する、複雑なメンバーのセットに対して TopCount などの式。 次のクエリの例では、行の Calendar Year ごとの上位 10 製品が表示されます。  
+ 実際の最も一般的な使用**Generate**はセット評価する、複雑なメンバーのセットに対して TopCount などの式。 次のクエリの例では、行の Calendar Year ごとの上位 10 製品が表示されます。  
   
 ```  
 SELECT   
@@ -125,7 +125,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  この形式の**生成**関数場合に利用でき、計算のデバッグ、セット内のすべてのメンバーの名前を表示する文字列を返すことができるためです。 一連の厳密な MDX 表記よりも読みやすいことが考えられますが、 [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)関数が返される。  
+>  この形式の**Generate**関数場合に利用でき、計算のデバッグ、セット内のすべてのメンバーの名前を表示する文字列を返すことができるためです。 一連の厳密な MDX 表記よりも読みやすいことが考えられますが、 [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)関数が返される。  
   
 ## <a name="see-also"></a>参照  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

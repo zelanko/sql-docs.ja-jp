@@ -1,5 +1,5 @@
 ---
-title: リードの (MDX) |Microsoft Docs
+title: Lead (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205436"
 ---
-# <a name="lead-mdx"></a>潜在顧客 (MDX)
+# <a name="lead-mdx"></a>Lead (MDX)
 
 
   次のメンバーのレベルにある指定されたメンバーの位置の指定した数であるメンバーを返します。  
@@ -38,13 +38,13 @@ Member_Expression.Lead( Index )
 ## <a name="remarks"></a>コメント  
  レベル内でメンバーの位置は、属性階層の自然な順序によって決まります。 メンバーの位置の基点は 0 です。  
   
- 指定したの潜在顧客がゼロ (0) の場合、**リード**関数は、指定されたメンバーを返します。  
+ 指定したの潜在顧客がゼロ (0) の場合、**Lead**関数は、指定されたメンバーを返します。  
   
- 指定したの潜在顧客が負の場合、**リード**関数は後方のメンバーを返します。  
+ 指定したの潜在顧客が負の場合、**Lead**関数は後方のメンバーを返します。  
   
  `Lead(1)` 同じですが、 [NextMember](../mdx/nextmember-mdx.md)関数。 `Lead(-1)` 同じですが、 [PrevMember](../mdx/prevmember-mdx.md)関数。  
   
- **リード**機能に似ています、 [Lag](../mdx/lag-mdx.md)関数点を除いて、 **Lag**関数は方向が逆になります、**リード**関数。 つまり、`Lead(n)`と等価`Lag(-n)`します。  
+ **Lead**機能に似ています、 [Lag](../mdx/lag-mdx.md)関数点を除いて、 **Lag**関数は方向が逆になります、**Lead**関数。 つまり、`Lead(n)`と等価`Lag(-n)`します。  
   
 ## <a name="example"></a>例  
  次の例では、2001 年 12 月の値を返します。  

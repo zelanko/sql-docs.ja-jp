@@ -6,13 +6,13 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/01/2018
-ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 06/20/2019
+ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936547"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343879"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
 
@@ -53,7 +53,7 @@ Evaluation Edition および Developer Edition でサポートされている機
 |共有コンポーネント ライブラリ|はい|はい|||はい|  
 |電子メールおよびファイル共有のサブスクリプションとスケジュール設定|はい|はい|||はい|  
 |レポート履歴、実行スナップショット、およびキャッシュ|はい|はい|||はい|  
-|SharePoint 統合|はい|はい|||はい|  
+|SharePoint 統合<sup>2</sup>|はい|はい|||はい|  
 |リモートおよび非 SQL データ ソースのサポート<sup>1</sup>|はい|はい|||はい|  
 |データ ソース、配信およびレンダリング、RDCE の拡張性|はい|はい|||はい|  
 |カスタム ブランド化|はい||||はい|  

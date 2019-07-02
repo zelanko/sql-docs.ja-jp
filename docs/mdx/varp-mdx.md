@@ -1,5 +1,5 @@
 ---
-title: Varp 関数 (MDX) |Microsoft Docs
+title: VarP (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251477"
 ---
-# <a name="varp-mdx"></a>Varp 関数 (MDX)
+# <a name="varp-mdx"></a>VarP (MDX)
 
 
   バイアスをかけた母集団の公式を使用し、セットに対して評価される数値式の母分散を返します (除算*n*-1)。  

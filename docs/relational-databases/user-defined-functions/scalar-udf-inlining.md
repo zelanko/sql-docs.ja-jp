@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775143"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
@@ -54,8 +54,9 @@ Transact-SQL で実装されていて単一のデータ値を返すユーザー�
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
 ```
 
@@ -74,8 +75,9 @@ END
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 ```
 
@@ -180,7 +182,7 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 
 ## <a name="enabling-scalar-udf-inlining"></a>スカラー UDF のインライン化を有効にする
 
-データベースに対して互換性レベル 150 を有効にすることで、自動的にワークロードをスカラー UDF インライン化の対象にすることができます。  これは Transact-SQL を使って設定できます。 例 :  
+データベースに対して互換性レベル 150 を有効にすることで、自動的にワークロードをスカラー UDF インライン化の対象にすることができます。  これは Transact-SQL を使って設定できます。 例:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -202,12 +204,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-ON のとき、この設定は [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。 `USE HINT` クエリ ヒントとして `DISABLE_TSQL_SCALAR_UDF_INLINING` を指定することで、特定のクエリについてスカラー UDF のインライン化を無効にすることもできます。 例 :
+ON のとき、この設定は [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。 `USE HINT` クエリ ヒントとして `DISABLE_TSQL_SCALAR_UDF_INLINING` を指定することで、特定のクエリについてスカラー UDF のインライン化を無効にすることもできます。 例:
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
@@ -215,7 +218,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 `USE HINT` クエリ ヒントは、データベース スコープの構成または互換性レベルの設定より優先されます。
 
 `CREATE FUNCTION` または `ALTER FUNCTION` ステートメントで INLINE 句を使用して、特定の UDF についてスカラー UDF のインライン化を無効にすることもできます。
-例 :
+例:
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))

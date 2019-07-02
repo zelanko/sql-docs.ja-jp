@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571348"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463587"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
 
@@ -93,8 +93,9 @@ Web ポータルのページ タイトルに表示されるレポート サー�
 
 **AccessControlMaxAge** プリフライト要求の結果をキャッシュできる秒数を指定します。 既定値は 600 (10 分) です。
 
-**AllowedResourceExtensionsForUpload** ***(Power BI Report Server のみ)*** レポート サーバーにアップロードできるリソースの拡張子を設定します。 &ast;.rdl や &ast;.pbix のような組み込みのファイルの種類用の拡張子は含める必要はありません。 既定値は "&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx" です。 
+**AllowedResourceExtensionsForUpload**のレポート サーバーにアップロードできるリソース拡張機能のセット。 &ast;.rdl や &ast;.pbix のような組み込みのファイルの種類用の拡張子は含める必要はありません。 既定値は "&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx" です。
 
+**RestrictedResourceMimeTypeForUpload** mime の種類のユーザーのセットが許可されないとコンテンツをアップロードします。 制限付きの mime の種類に既に保存されているすべてのリソースは、ブラウザーによって、アプリケーションまたはオクテット ストリームを開く/実行されているのではなくとしてのみダウンロードできます。  既定では、この一覧で、制限付きの項目はありませんが、最も安全なエクスペリエンスを提供するこの組織を設定することをお勧めします。 します。
 
 **EditSessionCacheLimit**  
 レポート編集セッションでアクティブにできるデータ キャッシュ エントリの数を指定します。 既定の数は 5 です。  

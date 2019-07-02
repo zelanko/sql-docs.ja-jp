@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8303b8639ff72ad8bf6f9e3ebfc0b2232aae147b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840084"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412663"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,12 +104,12 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |----------------|----------------|  
 |ALTER|オブジェクトのすべてのクラス (TYPE を除く)。|  
 |CONTROL|オブジェクトのすべてのクラス: <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
-|Del|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION および SERVER を除く)。|  
+|DELETE|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION および SERVER を除く)。|  
 |EXECUTE|CLR 型、外部スクリプト、プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、およびシノニム|  
 |IMPERSONATE|ログイン、ユーザー|  
 |INSERT|シノニム、テーブルと列、ビューと列。 データベース、スキーマ、またはオブジェクト レベルで権限を付与できます。|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー|  
-|REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
+|REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />TABLE、<br />TYPE、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
 |SELECT|シノニム、テーブルと列、ビューと列。 データベース、スキーマ、またはオブジェクト レベルで権限を付与できます。|  
 |TAKE OWNERSHIP|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION、LOGIN、SERVER、および USER を除く)。|  
 |UPDATE|シノニム、テーブルと列、ビューと列。 データベース、スキーマ、またはオブジェクト レベルで権限を付与できます。|  
@@ -212,7 +212,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|Del|DL|SERVER|CONTROL SERVER|  
+|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)。|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
@@ -251,7 +251,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
 |Login|CONTROL|CL|SERVER|CONTROL SERVER|  
 |Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -259,7 +259,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|Del|DL|SCHEMA|Del|  
+|OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -289,7 +289,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|Del|DL|DATABASE|Del|  
+|SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -418,7 +418,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>列レベルのアクセス許可に関する特別な考慮事項
 
-列レベルの権限は構文 *<table_name>(\<column _name>)* を使用して許可されます。 例 :
+列レベルの権限は構文 *<table_name>(\<column _name>)* を使用して許可されます。 例:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

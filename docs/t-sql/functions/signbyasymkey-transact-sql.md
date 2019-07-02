@@ -81,8 +81,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASYMKEY_ID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [VERIFYSIGNEDBYASYMKEY (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

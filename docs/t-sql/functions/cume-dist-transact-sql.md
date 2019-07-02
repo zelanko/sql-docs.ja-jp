@@ -96,6 +96,6 @@ Information Services   Bueno                  27.4038               0.4         
 ```  
   
 ## <a name="see-also"></a>参照
-[PERCENT_RANK (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percent-rank-transact-sql.md)
+[PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   

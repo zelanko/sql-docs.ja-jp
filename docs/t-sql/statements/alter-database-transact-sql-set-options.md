@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826927"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313992"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -2897,49 +2897,45 @@ SET QUERY_STORE = ON
 
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse
 
-> [!NOTE]
-> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
-
 ## <a name="syntax"></a>構文
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## <a name="arguments"></a>引数
 
-*database_name*: 変更するデータベースの名前です。
+*database_name*
 
-**\<auto_option> ::=**
+変更するデータベースの名前です。
 
-自動オプションを制御します。
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+適用対象: Azure SQL Data Warehouse (プレビュー)
 
-**Permissions**: 次の権限が必要です。
+このコマンドは、`master` データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という新しい列が `sys.databases` に導入され、データベースの結果キャッシュ設定を示します。  
 
-- サーバー レベル プリンシパル ログイン (プロビジョニング処理で作成されたもの) または
-- `dbmanager` データベース ロールのメンバー。
+ON   
+このデータベースから返されたクエリの結果セットが Azure SQL Data Warehouse ストレージにキャッシュされることを指定します。
 
-所有者が dbmanager ロールのメンバーである場合を除き、データベースの所有者はデータベースを変更することはできません。
-
-> [!Note]
-> この機能をすべてのリージョンにロールアウトしながら、ご利用にインスタンスにデプロイされたバージョンと、機能の可用性に関する最新の[ Azure SQL DW リリースノート](/azure/sql-data-warehouse/release-notes-10-0-10106-0)を確認してください。
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } Azure SQL Data Warehouse Gen2 のみに適用 (プレビュー) このコマンドは、マスター データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という名前の新しい列が sys.databases に導入され、データベースの結果キャッシュ設定を示します。  
-
-ON: このデータベースから返されたクエリの結果セットは Azure SQL Data Warehouse ストレージにキャッシュされます。
-
-OFF: このデータベースから返されたクエリの結果セットは Azure SQL Data Warehouse ストレージにキャッシュされません。
-特定の request_id で sys.pdw_request_steps を問い合わせることで、クエリを実行した結果、結果キャッシュにデータが見つかるかどうかを確認できます。   キャッシュに該当するデータが見つかる場合、クエリ結果には、次の詳細を含むステップが 1 つ与えられます。
+OFF   
+このデータベースから返されたクエリの結果セットが Azure SQL Data Warehouse ストレージにキャッシュされないことを指定します。 特定の request_id で sys.pdw_request_steps を問い合わせることで、クエリを実行した結果、結果キャッシュにデータが見つかるかどうかを確認できます。   キャッシュに該当するデータが見つかる場合、クエリ結果には、次の詳細を含むステップが 1 つ与えられます。
 
 |**列名** |**[オペレーター]** |**Value** |
 |----|----|----|
@@ -2948,6 +2944,25 @@ OFF: このデータベースから返されたクエリの結果セットは Az
 |location_type|=|Control|
 command|Like|%DWResultCacheDb%|
 | | |
+
+## <a name="remarks"></a>Remarks
+
+次の要件がすべて満たされる場合、キャッシュされた結果セットはクエリに再利用されます。
+
+1. クエリを実行しているユーザーが、クエリで参照されているすべてのテーブルに対してアクセス権がある。
+1. 新しいクエリと、結果セットのキャッシュを生成した以前のクエリとの間に、完全一致がある。
+1. キャッシュされた結果セットの生成元のテーブルに対してデータやスキーマの変更が行われていない。  
+
+データベースに対して結果セットのキャッシュが ON にされると、DateTime.Now() などの非決定関数を使用したクエリを除き、すべてのクエリについて結果が、キャッシュがいっぱいになるまでキャッシュされます。   大きな結果セットを伴うクエリ (100 万行を超えるなど) の場合、結果のキャッシュが作成される最初の実行時にパフォーマンスが低下することがあります。
+
+## <a name="permissions"></a>アクセス許可
+
+以下のアクセス許可が必要です。
+
+- サーバー レベル プリンシパル ログイン (プロビジョニング処理で作成されたもの) または
+- `dbmanager` データベース ロールのメンバー。
+
+所有者が dbmanager ロールのメンバーである場合を除き、データベースの所有者はデータベースを変更することはできません。
 
 ## <a name="examples"></a>使用例
 

@@ -12,11 +12,11 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 3fa971160eb4a8d2caa4773c4a9c4ccef1b31027
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62934998"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>SQL Server Management Studio (SSMS) のサポート ポリシー
 
@@ -36,7 +36,7 @@ Microsoft では、1 年に数回 SQL Server Management Studio (SSMS) の更新�
 
 快適に使用するために、最新バージョンを https://aka.ms/ssms からインストールすることをお客様にお勧めします。  
 
-**フル サポート** サービス提供フェーズ: SQL Server Management Studio の最新のブランチ バージョンを実行すると、セキュリティ更新プログラム、重要な更新プログラム、新機能などのすべての更新プログラムを受信します。
+**フル サポート** サービス提供フェーズ:SQL Server Management Studio の最新のブランチ バージョンを実行すると、セキュリティ更新プログラム、重要な更新プログラム、新機能などのすべての更新プログラムを受信します。
 
 
 

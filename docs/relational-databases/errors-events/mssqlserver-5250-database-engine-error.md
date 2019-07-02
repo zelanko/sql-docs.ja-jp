@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fd64c8324c4ceff60c85864a74deb9c804f53a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62628301"
 ---
 # <a name="mssqlserver5250"></a>MSSQLSERVER_5250
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47755160"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|メッセージ テキスト|データベース エラー : データベース 'NAME' (データベース ID DB_ID) の PAGE_TYPE ページ P_ID が無効です。 このエラーを修正することはできません。 バックアップから復元してください。|  
+|メッセージ テキスト|データベース エラー:データベース 'NAME' (データベース ID DB_ID) の PAGE_TYPE ページ P_ID が無効です。 このエラーを修正することはできません。 バックアップから復元してください。|  
   
 ## <a name="explanation"></a>説明  
 示されているデータベースのファイル ヘッダー ページまたはブート ページが破損しています。  

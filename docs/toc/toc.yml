@@ -1,4 +1,4 @@
-- name: '[ようこそ]'
+- name: SQL Server へようこそ
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: 以前のバージョン 2014-2005
   href: ../toc/previous-versions-sql-server.md
@@ -147,22 +147,18 @@
           items:
             - name: PROSE コード アクセラレータを使用したデータ ラングリング
               href: ../big-data-cluster/use-prose-for-big-data-automation.md
-            - name: Spark による機械学習モデルのトレーニングと作成
-              href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
-            - name: Spark/Mleap による ML モデルのエクスポート
-              href: ../big-data-cluster/export-model-with-spark-mleap.md
+            - name: MLeap での Spark の機械学習モデル
+              href: ../big-data-cluster/spark-create-machine-learning-model.md
             - name: RStudio から Sparklyr を使用する
               href: ../big-data-cluster/sparklyr-from-RStudio.md
-            - name: GPU のサポートと TensorFlow
-              href: ../big-data-cluster/spark-gpu-tensorflow.md
             - name: SQL Server での Spark を統合する
               href: ../big-data-cluster/spark-mssql-connector.md
         - name: SQL Server ビッグ データ クラスターを管理する
           items:
             - name: ビッグ データ クラスターに接続する
               href: ../big-data-cluster/connect-to-big-data-cluster.md
-            - name: クラスターの管理ポータル
-              href: ../big-data-cluster/cluster-admin-portal.md
+            - name: クラスターの状態を表示する
+              href: ../big-data-cluster/view-cluster-status.md
             - name: Kubernetes のトラブルシューティング
               href: ../big-data-cluster/cluster-troubleshooting-commands.md
         - name: ノートブック
@@ -193,30 +189,44 @@
               href: ../big-data-cluster/reference-mssqlctl.md
             - name: アプリ配置
               items:
-                - name: mssqlctl アプリ
+                - name: アプリ
                   href: ../big-data-cluster/reference-mssqlctl-app.md
-                - name: mssqlctl アプリ テンプレート
+                - name: アプリ テンプレート
                   href: ../big-data-cluster/reference-mssqlctl-app-template.md
             - name: クラスター
               items:
-                - name: mssqlctl クラスター
-                  href: ../big-data-cluster/reference-mssqlctl-cluster.md
-                - name: mssqlctl クラスターの構成
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
-                - name: mssqlctl クラスターの構成セクション
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
-                - name: mssqlctl クラスターのデバッグ
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
-                - name: mssqlctl クラスターのエンドポイント
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
-                - name: mssqlctl クラスターの状態
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
+                - name: bdc
+                  href: ../big-data-cluster/reference-mssqlctl-bdc.md
+                - name: bdc の構成
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+                - name: bdc の構成セクション
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+                - name: bdc コントロール
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+                - name: bdc コントロールの状態
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
+                - name: bdc のデバッグ
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+                - name: bdc エンドポイント
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+                - name: bdc プール
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+                - name: bdc プールの状態
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+                - name: bdc の状態
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
             - name: ストレージ
               items:
-                - name: mssqlctl クラスターの記憶域プール
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
-                - name: mssqlctl クラスターの記憶域プールのマウント
-                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
+                - name: bdc ストレージ
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
+                - name: bdc ストレージのマウント
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
+                - name: hdfs
+                  href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+            - name: SQL
+              items:
+                - name: sql
+                  href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: ビジネス継続性
   items:
     - name: 概要
@@ -1405,6 +1415,8 @@
           href: ../relational-databases/graphs/sql-graph-architecture.md
         - name: サンプル
           href: ../relational-databases/graphs/sql-graph-sample.md
+        - name: SHORTEST_PATH
+          href: ../relational-databases/graphs/sql-graph-shortest-path.md
     - name: シーケンス番号
       href: ../relational-databases/sequence-numbers/sequence-numbers.md
       items:
@@ -1601,6 +1613,8 @@
                   href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
                 - name: クエリ データ
                   href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+                - name: Security
+                  href: ../relational-databases/tables/temporal-table-security.md
                 - name: スキーマの変更
                   href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
                 - name: システム バージョン管理の停止
@@ -8116,8 +8130,10 @@
               href: ../relational-databases/security/auditing/sql-server-audit-records.md
     - name: チュートリアル
       items:
-        - name: SSMS を使用したセキュリティで保護されたエンクレーブが設定された Always Encrypted
+        - name: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
           href: ../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md
+        - name: セキュリティで保護されたエンクレーブ列が設定された Always Encrypted でのインデックスの作成と使用
+          href: ../relational-databases/security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md
     - name: リファレンス
       items:
         - name: '[権限] ページまたは [セキュリティ保護可能なリソース] ページ'
@@ -8747,16 +8763,10 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ../ssms/sql-server-management-studio-ssms.md
-        - name: クイック スタート
+        - name: チュートリアル
           items:
             - name: SQL Server に対する接続およびクエリ
               href: ../ssms/tutorials/connect-query-sql-server.md
-        - name: チュートリアル
-          items:
-            - name: オブジェクトをスクリプト化する
-              href: ../ssms/tutorials/scripting-ssms.md
-            - name: SSMS を構成する
-              href: ../ssms/tutorials/ssms-configuration.md
         - name: 概念
           items:
             - name: SSMS でのツール ウィンドウ
@@ -9033,6 +9043,10 @@
               href: ../ssms/install-other-languages.md
             - name: SSMS でテンプレートを使用する
               href: ../ssms/tutorials/templates-ssms.md
+            - name: オブジェクトをスクリプト化する
+              href: ../ssms/tutorials/scripting-ssms.md
+            - name: SSMS を構成する
+              href: ../ssms/tutorials/ssms-configuration.md
             - name: メニューとショートカット キーのカスタマイズ
               href: ../ssms/customize-menus-and-shortcut-keys.md
             - name: SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成
@@ -12827,6 +12841,8 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md
             - name: sys.dm_os_server_diagnostics_log_configurations
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md
+            - name: sys.dm_os_spinlock_stats
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-os-spinlock-stats-transact-sql.md
             - name: sys.dm_os_stacks
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-stacks-transact-sql.md
             - name: sys.dm_os_sys_info
@@ -14324,6 +14340,8 @@
               href: ../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md
             - name: sp_dropuser
               href: ../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md
+            - name: sp_enclave_send_keys
+              href: ../relational-databases/system-stored-procedures/sp-enclave-send-keys-sql.md
             - name: sp_grantdbaccess
               href: ../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md
             - name: sp_grantlogin

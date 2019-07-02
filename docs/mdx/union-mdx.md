@@ -1,5 +1,5 @@
 ---
-title: 共用体 (MDX) |Microsoft Docs
+title: Union (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653462"
 ---
-# <a name="union--mdx"></a>共用体 (MDX)
+# <a name="union--mdx"></a>Union (MDX)
 
 
   重複するメンバーを残すこともできます 2 つのセットの和集合によって生成されるセットを返します。  

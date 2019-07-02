@@ -129,7 +129,7 @@ Shipping and Receiving  9.250000     9.0000
 ```  
   
 ## <a name="see-also"></a>参照  
- [PERCENTILE_CONT と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/percentile-cont-transact-sql.md)  
+ [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   
 

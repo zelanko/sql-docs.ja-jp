@@ -67,6 +67,6 @@ SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;
 ```  
   
 ## <a name="see-also"></a>参照
-[RAND (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rand-transact-sql.md)
+[RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   
