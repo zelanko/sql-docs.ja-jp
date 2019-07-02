@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469138"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492764"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,11 +114,11 @@ GO
 |BACKUPTHREAD |タスクがバックアップ タスクの終了を待機しているときに発生します。 待機時間の長さは、数分から数時間に及ぶ場合があります。 待機中のタスクが I/O 処理中である場合は、この待機が発生しても問題はありません。| 
 |BAD_PAGE_PROCESS |問題があると考えられるバックグラウンドのページ ロガーが、5 秒間隔より頻繁な実行を回避しようとする場合に発生します。 問題があると考えられるページが多くある場合、ロガーは頻繁に実行されます。| 
 |BLOB_METADATA |内部使用のみです。 <br />**適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|BMPALLOCATION |内部使用のみです。 <br />**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|BMPBUILD |内部使用のみです。 <br />**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|BMPREPARTITION |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|BMPREPLICATION |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|BPSORT |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|BMPALLOCATION |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br />**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|BMPBUILD |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br />**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|BMPREPARTITION |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|BMPREPLICATION |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|BPSORT |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |BROKER_CONNECTION_RECEIVE_TASK |接続エンドポイントでメッセージを受信するためアクセスを待機しているときに発生します。 エンドポイントへの受信アクセスはシリアル化されます。| 
 |BROKER_DISPATCHER |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |BROKER_ENDPOINT_STATE_MUTEX |Service Broker の接続エンドポイントの状態へのアクセスの競合があるときに発生します。 変更の状態へのアクセスはシリアル化されます。| 
@@ -361,11 +361,11 @@ GO
 |HK_RESTORE_FILEMAP |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HKCS_PARALLEL_MIGRATION |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HKCS_PARALLEL_RECOVERY |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|HTBUILD |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|HTDELETE |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|HTMEMO |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|HTREINIT |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
-|HTREPARTITION |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HTBUILD |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HTDELETE |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HTMEMO |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HTREINIT |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
+|HTREPARTITION |スレッドが、バッチ モード演算子内の別の処理ステージの入力の同期中に発生します。 <br /> **適用対象**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 
 |HTTP_ENUMERATION |起動時に発生し、HTTP を開始するため HTTP エンドポイントを列挙します。| 
 |HTTP_START |接続が HTTP の初期化完了を待機しているときに発生します。| 
 |HTTP_STORAGE_CONNECTION |内部使用のみです。 <br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]| 

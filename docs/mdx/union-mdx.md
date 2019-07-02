@@ -96,7 +96,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [+&#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
+ [+&#40;共用体&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

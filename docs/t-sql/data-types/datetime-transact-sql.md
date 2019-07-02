@@ -95,7 +95,7 @@ ms.locfileid: "56801576"
 **datetime** は ANSI または ISO 8601 に準拠していません。
   
 ##  <a name="_datetime"></a> 日付型データと時刻型データの変換  
-日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 日付と時刻のデータでの CAST および CONVERT 関数の使用方法の詳細については、を参照してください。 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 日付と時刻のデータでの CAST および CONVERT 関数の使用方法の詳細については、を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>他の日付/時刻型から datetime データ型からへの変換 
 ここでは、他の日付/時刻データ型が **datetime** データ型に変換される場合の処理について説明します。  
