@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 リリース ノート | Microsoft Docs
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 82fc1e58ffd329a74849986b858aa25cf733dc84
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: e8f54884f7f4338ce7cea4556fc59b4778b4c978
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166369"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400094"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 プレビュー リリース ノート
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "67166369"
 この記事では、[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) リリースに関する制限事項と既知の問題について説明します。 関連情報については、次を参照してください。
 - [SQL Server 2019 の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## <a name="ctp-30"></a>CTP 3.0
+## <a name="ctp-31"></a>CTP 3.1
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 は [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 は [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 は評価版としてのみ使用可能です。 他のエディションは提供されません。 
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 は評価版としてのみ使用可能です。 他のエディションは提供されません。
 
 CTP リリースのサポートとライセンスに関するすべての詳細情報については、インストール メディアの `license_Eval.rtf` に記載されています。
 
@@ -68,11 +68,11 @@ CTP リリースのサポートとライセンスに関するすべての詳細�
 
 ## <a name="updated-compiler"></a>更新されたコンパイラ
 
-- **問題およびユーザーへの影響**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] は更新されたコンパイラで構築されています。 コンパイラの更新の結果、CTP 2.1 には浮動小数点数の結果と他の変換シナリオで、前のバージョンとは異なる値が返される場合があるという既知の問題がありました。 CTP 2.2 には、影響のあるシナリオで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の前のバージョンと同じ結果が返されるようにする作業が含まれています。 CTP 3.0 リリースでは、もう問題は解決されたと考えています。 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] と比較した結果に異常がある場合、[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] チーム](http://aka.ms/sqlfeedback)にすぐに報告してください。
+- **問題およびユーザーへの影響**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] は更新されたコンパイラで構築されています。 コンパイラの更新の結果、CTP 2.1 には浮動小数点数の結果と他の変換シナリオで、前のバージョンとは異なる値が返される場合があるという既知の問題がありました。 CTP 2.2 には、影響のあるシナリオで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の前のバージョンと同じ結果が返されるようにする作業が含まれています。 CTP 3.1 リリースでは、もう問題は解決されたと考えています。 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] と比較した結果に異常がある場合、[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] チーム](http://aka.ms/sqlfeedback)にすぐに報告してください。
 
 - **回避策**:なし
 
-- **適用対象**:SQL Server 2019 CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1
+- **適用対象**:SQL Server 2019 CTP 3.1、CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>インストール ウィザードが使用許諾契約ページの間で待機状態になることがある
 
@@ -95,25 +95,30 @@ CTP リリースのサポートとライセンスに関するすべての詳細�
  
 - **回避策**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP には回避策はありません。
 
-- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
+- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 
-### <a name="loading-enclave-fails"></a>エンクレーブの読み込みが失敗する
-
-- **問題およびユーザーへの影響**:エラー ログに「`Internal enclave error: Cannot initialize the 1 enclave`」のメッセージがキャプチャされ、Always Encrypted のエンクレーブの読み込みが常に失敗します。
-
-- **回避策**:[なし] : CTP 3.1 で解決される予定です。
-
-- **適用対象**:CTP 3.0
-
-### <a name="rich-computations-performance"></a>高度な計算のパフォーマンス
-
-- **問題およびユーザーへの影響**:高度な計算では、いくつかのパフォーマンスの最適化が保留になっており、機能が制限 (インデックス作成がないなど) されていて、現在は既定で無効になっています。
+- **問題およびユーザーへの影響**:高度な計算がパフォーマンス最適化とエラー処理拡張の妨げとなっており、現在は既定で無効になっています。
 
 - **回避策**:高度な計算を有効にするには、`DBCC traceon(127,-1)` を実行します。 詳細については、[高度な計算の有効化](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave)に関する記事をご覧ください。
 
-- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0、CTP 2.5、CTP 2.4、CTP 2.3、CTP 2.2、CTP 2.1、CTP 2.0。
+- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1
+
+## <a name="sql-server-configuration-manager-may-not-start"></a>SQL Server 構成マネージャーが起動しない場合がある
+
+- **問題およびユーザーへの影響**:SQL Server 構成マネージャー (SSCM) は、VCRuntime 140 がないマシンでは起動しません。 SSCM を開始するときに、次のダイアログ ボックスが表示される場合があります。 
+
+  `
+  MMC could not create the snap-in. The snap-in might not have been installed correctly.
+  `
+
+- **回避策**:最新の VC ランタイム 2013 (x86) をインストールします。
+
+  - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+  - [直接](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+
+- **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

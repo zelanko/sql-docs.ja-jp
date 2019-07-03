@@ -11,12 +11,12 @@ ms.author: maghan
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 74ec0cd11e1c13363905c71a64096f6c4eb8b053
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: 0be9bae60c46aa43c6f0acb5de5204d33a318450
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263539"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399670"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -56,7 +56,7 @@ SSMS 18.1 は SSMS の最新の一般公開 (GA) リリースです。 SSMS の�
 
 | 新しい項目| 詳細|
 | :-------| :------|
-| データベース ダイアグラム | データベース ダイアグラムが SSMS に戻りました。 詳細については、「[Database Diagrams](https://feedback.azure.com/forums/908035/suggestions/37507828)」 (データベース ダイアグラム) を参照してください。 |
+| データベース ダイアグラム | [データベース ダイアグラムが SSMS に戻りました](https://feedback.azure.com/forums/908035/suggestions/37507828)。
 | SSBDIAGNOSE.EXE |SQL Server Diagnose (コマンド ライン ツール) が SSMS パッケージに戻りました。|
 | Integration Services (SSIS) | Azure で、Azure またはファイル システムの SSIS カタログにある SSIS パッケージのスケジュールがサポートされます。 [新しいスケジュール] ダイアログを起動するためのエントリが 3 つあります。Azure の SSIS カタログにある SSIS パッケージを右クリックしたときに表示される *[新しいスケジュール]* メニュー項目、 *[ツール]* メニュー項目の *[Azure への移行]* メニュー項目にある *[Schedule SSIS Package in Azure]\(Azure で SSIS パッケージをスケジュールする\)* メニュー項目、Azure SQL Database Managed Instance の SQL Server エージェントの下で [ジョブ] フォルダーを右クリックしたときに表示される [Schedule SSIS in Azure]\(Azure で SSIS をスケジュールする\) です。|
 
@@ -101,6 +101,12 @@ SSMS 18.1 は SSMS の最新の一般公開 (GA) リリースです。 SSMS の�
 | SQL エージェント | *[ジョブ ステップのプロパティ]* 上の [表示] ボタンが常に有効ではないため、指定のジョブ ステップの出力を表示できなかった問題を修正しました。 |
 | XEvent の UI | 同じ名前のイベントと明確に区別するために、[パッケージ] 列を XEvent のリストに追加しました。 |
 | XEvent の UI | これまでなかった "EXTERNAL LIBRARY" クラス型マッピングを XEvent の UI に追加しました。 |
+
+### <a name="known-issues-181"></a>既知の問題 (18.1)
+
+- オブジェクト エクスプローラーからクエリ エディターにテーブル オブジェクトをドラッグすると、エラーが表示される場合があります。 この問題を認識しており、次のリリースで修正される予定です。
+
+- [オプション]、[テキスト エディター]、[エディターのタブとステータス バー]、[ステータス バーのレイアウトと色] にある、 *[グループ接続]* と *[単一のサーバー接続]* の色オプションが、SSMS 18.1 を閉じた後に保持されません。 SSMS を再度開くと、[ステータス バーのレイアウトと色] のオプションは既定 (白) に戻ります。
 
 ## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
 
@@ -368,9 +374,9 @@ SSMS 18.1 は SSMS の最新の一般公開 (GA) リリースです。 SSMS の�
 - オブジェクト エクスプローラーでノード [メンテナンス] > [レガシ] が削除されました。
   - 本当に古い "データベース メンテナンス プラン" と "SQL メール" ノードにはアクセスできなくなりました。 新しい [データベース メール] と [メンテナンス プラン] ノードは、引き続き通常どおり動作します。
 
-### <a name="known-issues"></a>既知の問題
+### <a name="known-issues-180"></a>既知の問題 (18.0)
 
-バージョン 18.0 のインストールでは、SQL Server Management Studio を実行できないため、問題が発生する可能性があります。 この問題が発生した場合は、「[SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run)」 (SSMS2018 - インストールされたが起動しない) の記事の手順に従ってください。
+- バージョン 18.0 のインストールでは、SQL Server Management Studio を実行できないため、問題が発生する可能性があります。 この問題が発生した場合は、「[SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run)」 (SSMS2018 - インストールされたが起動しない) の記事の手順に従ってください。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>[SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) ![のダウンロード](../ssdt/media/download.png)
 
@@ -454,7 +460,7 @@ Microsoft Azure との統合:
 - SSMS によって最初の 50 個のサブスクリプション (Always Encrypted のダイアログ、BACKUP TO URL または RESTORE FROM URL のダイアログ、その他のダイアログ) しか表示されない問題を修正しました。
 - (BACKUP TO URL または RESTORE FROM URL のダイアログで) ストレージ アカウントを持っていない Microsoft Azure アカウントにサインインしようとしているときに、SSMS によって例外 ("インデックスが範囲外") がスローされた問題を修正しました。 
 
-オブジェクト スクリプト作成: 
+オブジェクト スクリプト作成:
 
 - DROP および CREATE のスクリプトを作成するときに、SSMS によって動的 T-SQL が生成されなくなりました。
 - データベース オブジェクトのスクリプトを作成するときに、SSMS によってデータベース スコープ構成を設定するスクリプトが (それらが既定値に設定されていれば) 生成されなくなりました。

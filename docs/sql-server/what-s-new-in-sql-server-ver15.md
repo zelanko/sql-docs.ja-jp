@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
-ms.date: 05/28/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
-ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
+ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298224"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469099"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -28,15 +28,46 @@ ms.locfileid: "67298224"
 
 **[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] で最良のエクスペリエンスを得るには、[最新のツール](#tools)を使用してください。**
 
-## <a name="ctp-30-may-2019"></a>CTP 3.0 2019 年 5 月
+## <a name="ctp-31-june-2019"></a>CTP 3.1 2019 年 6 月
 
-Community Technology Preview (CTP) 3.0 は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。 このリリースには、以前の CTP リリースのバグを修正し、セキュリティを強化し、パフォーマンスを最適化する機能強化が含まれています。
+Community Technology Preview (CTP) 3.1 は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の最新のパブリック リリースです。 このリリースには、以前の CTP リリースのバグを修正し、セキュリティを強化し、パフォーマンスを最適化する機能強化が含まれています。
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
 サポートから除外される特定の機能については、[リリース ノート](sql-server-ver15-release-notes.md)を参照してください。
 
-また、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0 では、以下の機能が追加または強化されています。
+また、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1 では、以下の機能が追加または強化されています。
+
+### <a name="big-data-clusters"></a>ビッグ データ クラスター
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+| `mssqlctl` コマンドの変更 | `mssqlctl cluster` コマンドの名前が、`mssqlctl bdc` に変更されました。 詳しくは、[`mssqlctl` のリファレンス](../big-data-cluster/reference-mssqlctl.md)に関する記事をご覧ください。 |
+|`mssqlsctl` の新しい状態コマンド|`mssqlctl` に、既存の監視コマンドを補完する新しいコマンドが追加されます。 これらは、クラスター管理ポータルに代わるものです。クラスター管理ポータルはこのリリースで削除されます。|
+| Spark コンピューティング プール | ストレージをスケールアップする必要なしに、追加ノードを作成して Spark のコンピューティング能力を増強します。 さらに、Spark に使われない記憶域プールのノードを開始することができます。 Spark と記憶域は切り離されています。 詳しくは、「[Configure storage without spark (Spark なしで記憶域を構成する)](../big-data-cluster/deployment-custom-configuration.md#sparkstorage)」をご覧ください。 |
+| MSSQL Spark コネクタ | データ プール外部テーブルの読み取り/書き込みのサポート。 以前のリリースでは、MASTER インスタンス テーブルの読み取り/書き込みだけがサポートされていました。 詳しくは、「[How to read and write to SQL Server from Spark using the MSSQL Spark Connector (MSSQL Spark コネクタを使用して Spark から SQL Server の読み取りと書き込みを行う方法)](../big-data-cluster/spark-mssql-connector.md)」をご覧ください。 |
+| MLeap を使用する機械学習 | [Spark で MLeap 機械学習モデルをトレーニングし、Java 言語拡張機能を使用して SQL Server でスコアリングします](../big-data-cluster/spark-create-machine-learning-model.md)。 |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>データベース エンジン
+
+| 新機能または更新 | 詳細 |
+|:---|:---|
+|暗号化された列のインデックス付け|ランダム化された暗号化およびエンクレーブ対応のキーを使用して暗号化された列のインデックスを作成し、リッチなクエリのパフォーマンスを向上させます (`LIKE` と比較演算子を使用)。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)」をご覧ください。
+|セットアップ時に `MIN` と `MAX` のサーバー メモリ値を設定する |セットアップの間に、サーバー メモリの値を設定できます。 **推奨される**オプションである[サーバー メモリのサーバー構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)を選択した後、既定値、計算された推奨値、または独自の値の手動指定を使用します。
+|新しいグラフ関数 - `SHORTEST_PATH` | `MATCH` 内で `SHORTEST_PATH` を使用し、グラフ内の任意の 2 ノード間の最短パスを検索するか、任意の長さのトラバーサルを実行します。|
+|グラフ データベースのパーティション テーブルとインデックス|パーティション テーブルとパーティション インデックスのデータは、グラフ データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 |
+|-インデックスの新しいオプション - `OPTIMIZE_FOR_SEQUENTIAL_KEY`|インデックスへの高コンカレンシーの挿入のスループット向上に役立つ、データベース エンジン内での最適化を有効にします。 このオプションは、最終ページ挿入の競合が起きやすいインデックスを対象としています。これは、一般に、ID 列、シーケンス、または日付/時刻列などの連続したキーを持つインデックスでよく見られます。 詳しくは、「[CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)」をご覧ください。|
+| &nbsp; | &nbsp; |
+
+### <a name="sql-server-on-linux"></a>Linux 上の SQL Server
+
+| 新機能または更新 | 詳細 |
+|:-----|:-----|
+| tempdb の強化機能 | 既定では、Linux 上に SQL Server を新しくインストールすると、論理コアの数に基づいて複数の tempdb データ ファイルが作成されます(最大で 8 個のデータ ファイル)。 これは、マイナー バージョンまたはメジャー バージョンのインプレース アップグレードには適用されません。 各 tempdb ファイルは 8 MB で、64 MB まで自動拡張します。 この動作は、Windows への SQL Server の既定のインストールに似ています。 |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-30-may-2019"></a>CTP 3.0 2019 年 5 月
 
 ### <a name="big-data-clusters"></a>ビッグ データ クラスター
 
@@ -82,6 +113,7 @@ Community Technology Preview (CTP) 3.0 は、[!INCLUDE[sql-server-2019](../inclu
 |:---|:---|
 |計算グループを使用した表形式モデルに対する MDX クエリのサポート |このリリースで以前の[計算グループ](#calc-ctp24)での制限が削除されました。 |
 |計算グループを使用したメジャーの動的な書式設定 |この機能を使用すると、[計算グループ](#calc-ctp24)を使用してメジャーの書式設定文字列を条件付きで変更できます。 たとえば、通貨換算を使用すると、さまざまな外貨形式を使ってメジャーを表示することができます。|
+| &nbsp; | &nbsp; |
 
 ## <a name="ctp-25-april-2019"></a>CTP 2.5 2019 年 4 月
 
