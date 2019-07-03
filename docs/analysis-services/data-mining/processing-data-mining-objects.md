@@ -46,12 +46,12 @@ ms.locfileid: "34016839"
   
  リレーショナル データソースの処理には、トレーニング データを作成し、そのデータでマイニング アルゴリズムを実行することだけが必要です。 ただし、マイニング モデルがディメンション、メジャーなどの OLAP オブジェクトに基づいている場合は、基になるデータが処理済みの状態であることが必要です。 これには、多次元オブジェクトを処理して、マイニング モデルを作成する必要があります。  
   
- 詳細については、「[処理の要件および注意事項 (データ マイニング)](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
+ 詳細については、「[処理の要件および注意事項 &#40;データ マイニング&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [マイニング構造と #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [マイニング モデルと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [論理アーキテクチャと #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [ドリルスルー クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング モデル &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [論理アーキテクチャ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   
