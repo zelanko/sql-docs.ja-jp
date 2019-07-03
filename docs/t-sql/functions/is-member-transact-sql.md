@@ -72,14 +72,14 @@ IS_MEMBER ( { 'group' | 'role' } )
   
  IS_MEMBER は、Windows によって作成されたアクセス トークンを調べることによって Windows グループ メンバーシップを決定します。 アクセス トークンは、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続した後に行われたグループ メンバーシップ内の変更を反映しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインや [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーション ロールで Windows グループのメンバーシップをクエリすることはできません。  
   
- 追加し、データベース ロールからメンバーを削除するには、を使用 [ALTER ROLE (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/statements/alter-role-transact-sql.md). 追加し、サーバー ロールからメンバーを削除するには、を使用 [ALTER SERVER ROLE (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ 追加し、データベース ロールからメンバーを削除するには、を使用 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). 追加し、サーバー ロールからメンバーを削除するには、を使用 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
  この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、 **db_owner** 固定データベース ロールには、 **CONTROL DATABASE** 権限です。 ユーザーがいる場合、 **CONTROL DATABASE** 権限はない、ロールのメンバーと、この関数は、ユーザーがのメンバーではないことを報告して正しく、 **db_owner** ロールでは、ユーザーは、同じアクセス許可を持っている場合でもです。  
   
  メンバー、 **sysadmin** を入力として、すべてのデータベースの固定サーバー ロール、 **dbo** ユーザーです。 メンバーに対するアクセス許可のチェック、 **sysadmin** 固定サーバー ロールのアクセス許可を確認する **dbo**, 、元のログインではありません。 **dbo** データベース ロールに追加することはできずに、Windows グループが存在しない **dbo** は常に 0 (または、ロールが存在しない場合は NULL) を返します。  
   
 ## <a name="related-functions"></a>関連する関数  
- 別のかを判断する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがデータベース ロールのメンバーを [ IS_ROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-rolemember-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを [IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ 別のかを判断する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがデータベース ロールのメンバーを [ IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  次の例は、現在のユーザーがデータベース ロールまたは Windows ドメイン グループのメンバーであるかどうかを確認します。  

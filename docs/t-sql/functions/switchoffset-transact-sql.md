@@ -37,7 +37,7 @@ ms.locfileid: "65948187"
 
   返します、 **datetimeoffset** 、保存されているタイム ゾーン オフセットから、指定された新しいタイム ゾーン オフセットへ変更された値。  
   
- すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
  SWITCHOFFSET を使用して、更新、 **datetimeoffset** 列です。  
   
- GETDATE() 関数と一緒に SWITCHOFFSET を使用すると、クエリの実行速度が遅くなる場合があります。 これは、クエリ オプティマイザーが datetime 値のカーディナリティを正確に推定できないためです。 この問題を解決するには、OPTION (RECOMPILE) クエリ ヒントを使用し、次に同じクエリが実行されるときにクエリ オプティマイザーによってクエリ プランが強制的に再コンパイルされるようにします。 そうすると、オプティマイザーによって、正確なカーディナリティの推定値が取得され、より効率的なクエリ プランが生成されます。 詳細については、RECOMPILE クエリ ヒント、を参照してください。 [クエリ ヒント (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/hints-transact-sql-query.md).  
+ GETDATE() 関数と一緒に SWITCHOFFSET を使用すると、クエリの実行速度が遅くなる場合があります。 これは、クエリ オプティマイザーが datetime 値のカーディナリティを正確に推定できないためです。 この問題を解決するには、OPTION (RECOMPILE) クエリ ヒントを使用し、次に同じクエリが実行されるときにクエリ オプティマイザーによってクエリ プランが強制的に再コンパイルされるようにします。 そうすると、オプティマイザーによって、正確なカーディナリティの推定値が取得され、より効率的なクエリ プランが生成されます。 詳細については、RECOMPILE クエリ ヒント、を参照してください。 [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   

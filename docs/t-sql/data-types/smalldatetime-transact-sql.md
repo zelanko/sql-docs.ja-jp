@@ -61,7 +61,7 @@ ms.locfileid: "56802259"
 **smalldatetime** は ANSI または ISO 8601 に準拠していません。
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータ型の変換
-日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 日付と時刻のデータでの CAST および CONVERT 関数の使用方法の詳細については、を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>smalldatetime から他の日付/時刻データ型への変換
 ここでは、**smalldatetime** データ型が他の日付/時刻データ型に変換される場合の処理について説明します。

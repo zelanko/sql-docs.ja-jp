@@ -35,7 +35,7 @@ ms.locfileid: "65944497"
   インデックス キーについての情報を返します。 XML インデックスに対して NULL を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [sys.index_columns (&) #40 です。TRANSACT-SQL と #41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [sys.index_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

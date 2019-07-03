@@ -45,7 +45,7 @@ CUME_DIST( )
 ## <a name="arguments"></a>引数  
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-_partition\_by\_clause_ は、FROM 句の結果セットをパーティションに分割します。このパーティションに関数が適用されます。 _partition\_by\_clause_ 引数を指定しない場合、`CUME_DIST` ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、操作が実行される論理的順序を決定します。 `CUME_DIST` には _order\_by\_clause_が必要です。 `CUME_DIST` は、OVER 構文の \<行または範囲句> を受け取りません。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+_partition\_by\_clause_ は、FROM 句の結果セットをパーティションに分割します。このパーティションに関数が適用されます。 _partition\_by\_clause_ 引数を指定しない場合、`CUME_DIST` ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、操作が実行される論理的順序を決定します。 `CUME_DIST` には _order\_by\_clause_が必要です。 `CUME_DIST` は、OVER 構文の \<行または範囲句> を受け取りません。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
 **float(53)**

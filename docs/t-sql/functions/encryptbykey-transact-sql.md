@@ -93,7 +93,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  対称キーの暗号化と暗号化解除は比較的高速なので、データが大きい場合に適しています。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の暗号化関数を ANSI_PADDING OFF 設定で使用すると、暗黙的な変換によってデータが失われる可能性があります。 詳細については、ANSI_PADDING、を参照してください。 [ANSI_PADDING の設定 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の暗号化関数を ANSI_PADDING OFF 設定で使用すると、暗黙的な変換によってデータが失われる可能性があります。 詳細については、ANSI_PADDING、を参照してください。 [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  次の例に示されている機能を実行するには、「[データの列の暗号化](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)」で作成するキーと証明書が必要です。  

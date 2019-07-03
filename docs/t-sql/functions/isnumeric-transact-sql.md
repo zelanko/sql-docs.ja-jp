@@ -63,7 +63,7 @@ ISNUMERIC ( expression )
 
   
 > [!NOTE]  
->  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください[ money および smallmoney & #40 です。TRANSACT-SQL と #41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
+>  ISNUMERIC は、数字以外の一部の文字に対して 1 を返します。たとえばプラス (+)、マイナス (-)、ドル記号 ($) などの通貨記号がこれに該当します。 通貨記号の完全な一覧を参照してください[ money および smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md).  
   
 ## <a name="examples"></a>使用例  
  この例では、`ISNUMERIC` を使用して数値型でないすべての郵便番号を返しています。  
