@@ -74,6 +74,6 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
   
 ## <a name="see-also"></a>参照  
  [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
- [比較演算子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
+ [比較演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   
   
