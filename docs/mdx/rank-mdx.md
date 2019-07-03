@@ -82,7 +82,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [順序&#40;MDX&#41;](../mdx/order-mdx.md)   
+ [Order &#40;MDX&#41;](../mdx/order-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
