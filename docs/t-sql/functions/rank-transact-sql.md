@@ -49,7 +49,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="arguments"></a>引数  
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、関数を適用する前にデータの順序を決定します。 *order_by_clause* が必要です。 OVER 句の \<rows or range clause/> は、RANK 関数では指定できません。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、関数を適用する前にデータの順序を決定します。 *order_by_clause* が必要です。 OVER 句の \<rows or range clause/> は、RANK 関数では指定できません。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
@@ -169,10 +169,10 @@ Pak               10514000.0000  United Kingdom       1
 ```  
   
 ## <a name="see-also"></a>参照  
- D[ENSE_RANK (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
  [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
  [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [順位付け関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   
