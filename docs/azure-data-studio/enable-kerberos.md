@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: jroth
-ms.openlocfilehash: 4836b22d9903b05d70170aad53fde7ac7101f537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06af565a581ea8ed9dbbdd6330271ef9f6c7218
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778379"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556894"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>接続[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows 認証に Kerberos を使用して、SQL server 
 
@@ -160,7 +160,7 @@ Krb5.conf ファイルと終了を保存し、
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Kinit を使用して、使用可能なチケットを表示します。 Kinit に成功した場合は、チケットが表示されます。 
+Klist を使用して、使用可能なチケットを表示します。 Kinit に成功した場合は、チケットが表示されます。 
 
 ```bash
 klist

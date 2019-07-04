@@ -78,7 +78,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、 **db_owner** 固定データベース ロールには、 **CONTROL DATABASE** 権限です。 ユーザーがいる場合、 **CONTROL DATABASE** 権限はない、ロールのメンバーと、この関数は、ユーザーがのメンバーではないことを報告して正しく、 **db_owner** ロールでは、ユーザーは、同じアクセス許可を持っている場合でもです。  
   
 ## <a name="related-functions"></a>関連する関数  
- 現在のユーザーが指定された Windows グループのメンバーであるかどうかを判断するまたは  を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールを [IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-member-transact-sql.md). 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを [IS_SRVROLEMEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
+ 現在のユーザーが指定された Windows グループまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールのメンバーであるかどうかを判断するには、[IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md) を使用します。 確認するかどうか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してログインがサーバー ロールのメンバーを [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
 ## <a name="permissions"></a>アクセス許可  
  データベース ロールに対する VIEW DEFINITION 権限が必要です。  
