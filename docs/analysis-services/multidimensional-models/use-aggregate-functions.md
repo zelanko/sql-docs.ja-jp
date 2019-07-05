@@ -1,5 +1,5 @@
 ---
-title: 集計関数を使用して、|Microsoft Docs
+title: 集計関数の使用|Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
