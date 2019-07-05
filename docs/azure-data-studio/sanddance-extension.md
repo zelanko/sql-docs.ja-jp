@@ -3,7 +3,7 @@ title: Azure Data Studio の sandDance
 titleSuffix: Azure Data Studio
 description: Azure Data Studio で SandDance を使用する方法
 ms.custom: seodec18
-ms.date: 04/18/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798076"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563987"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance for Azure Data Studio (プレビュー)
 Azure Data Studio には、.csv、.tsv ファイルで作業しているの簡単な視覚エフェクトを作成する方法を今すぐは提供します。 SQL Server 2019 ビッグ データ クラスター内のローカル ファイルまたは HDFS 上のファイルが含まれます。 迅速なデータを確認し、何が起こってを理解している場合、この拡張機能の使用をお勧めします。 データの場所で視覚化を生成できるは、Microsoft research SandDance と呼ばれるテクノロジを使用します。
@@ -36,9 +36,9 @@ SQL Server 2019 ビッグ データ クラスターに接続し、選択した�
 
 ## <a name="known-issues"></a>既知の問題
 
-現在、データは、一意の識別子として最初の列が必要です。
+現時点では、データは、一意の識別子として最初の列が必要です。
 
-現在視覚化される行の数はキャップしません。 ただし、メモリ消費量は比例して、行の数をデータ セットまたはビューが約 100 k 行に制限されることをお勧めします。
+現時点では、視覚化される行の数キャップしません。 ただし、メモリ消費量は比例して、行の数をデータ セットまたはビューが約 100 k 行に制限されることをお勧めします。
 
 参照してください[既知の問題](https://microsoft.github.io/SandDance/#known-issues)
 

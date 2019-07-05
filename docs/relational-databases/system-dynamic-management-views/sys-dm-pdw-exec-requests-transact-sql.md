@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -9,16 +9,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-author: ronortloff
-ms.author: rortloff
+author: XiaoyuL-Preview
+ms.author: xiaoyul
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836184"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564181"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (TRANSACT-SQL)
 
@@ -44,6 +44,8 @@ ms.locfileid: "65836184"
 |importance|**nvarchar(32)**|要求を設定する重要度が送信されました。 重要度が低い要求は重要度の高い要求が送信された場合に、一時停止状態でキューに置かれます。  重要度の高い要求は、先に送信された下の重要度要求する前に実行されます。  重要度の詳細については、次を参照してください。[ワークロードの重要度](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)します。  |NULL</br>low</br>below_normal</br>標準 (既定値)</br>しなく</br>high|
 |group_name| |内部使用のために予約済みです。</br>適用対象Azure SQL Data Warehouse|
 |resource_allocation_percentage| |内部使用のために予約済みです。</br>適用対象Azure SQL Data Warehouse|
+|result_set_cache|**bit**|完了したクエリが結果のキャッシュ ヒット (1) かどうかどうかの詳細を (0)。|0,1|
+||||
   
  このビューで保持される最大行数は、詳細については、メタデータ」セクションを参照してください、[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)トピック。   
   

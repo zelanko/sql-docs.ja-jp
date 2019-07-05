@@ -12,12 +12,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jroth
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a0e2138938d8b982521110bd74a2e5cf1706b4a9
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 1b8cb01e4f2c892bf9c59e47e35d4ce1e7175496
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463491"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564151"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー
 
@@ -68,8 +68,17 @@ ms.locfileid: "67463491"
 
 > [!Note]
 > SQL Data Warehouse Gen2 上でワークロードの分類のプレビュー版が使用可能です。 ワークロード管理の分類および重要性のプレビューは、リリース日が 2019 年 4 月 9 日以降のビルドに対応しています。  ワークロード管理テストでは、この日付より前のビルドは使用しないでください。  ビルドがワークロード管理に対応しているかどうかを確認するには、SQL Data Warehouse インスタンスに接続しているときに select @@version を実行してください。
- 
-## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログ ビュー  
+
+## <a name="includesssdwincludessssdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] カタログ ビュー
+
+ 次のカタログ ビューに適用[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]のみ。
+
+[sys.pdw_materialized_view_column_distribution_properties &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)
+[sys.pdw_materialized_view_distribution_properties](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
+ [sys.pdw_materialized_view_mappings](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)
+
+## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] カタログ ビュー
+
  次のカタログ ビューに適用[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]のみ。
 
  [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
@@ -92,7 +101,7 @@ ms.locfileid: "67463491"
   
  [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   
