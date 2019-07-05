@@ -49,7 +49,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  並べ替える値のリストを指定し、百分位数を計算します。 *order_by_expression* は 1 つだけ許可されます。 既定の並べ替え順は昇順です。 値のリストは、並べ替え操作に対して有効な任意のデータ型を指定できます。  
   
  OVER **(** \<partition_by_clause>)**  
- FROM 句の結果セットをパーティションに分割します。 百分位関数がこれらのパーティションに適用されます。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md). \<ORDER BY clause> と \<rows or range clause> は PERCENTILE_DISC 関数では指定できません。  
+ FROM 句の結果セットをパーティションに分割します。 百分位関数がこれらのパーティションに適用されます。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。 \<ORDER BY clause> と \<rows or range clause> は PERCENTILE_DISC 関数では指定できません。  
   
 ## <a name="return-types"></a>戻り値の型  
  戻り値の型は *order_by_expression* の型によって決まります。  
