@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c80ec6b02af9e639c04eb1e30b730bcd22b6f78
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a5c20129498eb439a80d4768feb9bf00da41e05c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028873"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582834"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO を使用した、SQLXML 4.0 クエリの実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,9 @@ ms.locfileid: "56028873"
 4.  ローカル コンピューターに作成するサンプル ファイルの一部として、XML テンプレートやスキーマなどの必要な追加ファイルが作成されたことを確認します。 これらのファイルは、テスト スクリプト ファイル (Sqlxml4test.vbs) を保存したディレクトリに置く必要があります。  
   
 5.  次に、SQLXML 4.0 テスト スクリプトの使用方法について説明します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-the-sqlxml-40-test-script"></a>SQLXML 4.0 テスト スクリプトの使用  
  Sqlxml4test.vbs ファイルを使用して、このドキュメントで提供されるサンプル クエリをテストするには、次の手順に従います。  
   
@@ -115,7 +117,7 @@ ms.locfileid: "56028873"
   
 1.  次の方法で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client がインストールされていること確認します。  
   
-    1.  **開始** メニューの 作成 をポイント**設定**、 をクリックし、**コントロール パネルの **。  
+    1.  **開始** メニューの 作成 をポイント**設定**、 をクリックし、**コントロール パネルの** 。  
   
     2.  [コントロール パネル] を開くには**の追加とプログラムの削除**  
   

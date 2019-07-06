@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe80d94be42a9ea953a5829de43bcab3cb30955f
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653462"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597381"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -43,7 +43,7 @@ Alternate syntax 2
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- この関数は、2 つの和集合を返しますまたは、複数の指定されたセット*します。* 標準の構文および代替構文 1、重複が既定で除外されます。 標準の構文を使用して、**すべて**フラグは、結合されたセットに重複部分を保持します。 重複部分は、セットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
+ この関数は、2 つの和集合を返します。 または、複数の指定されたセット。 標準の構文および代替構文 1、重複が既定で除外されます。 標準の構文を使用して、**すべて**フラグは、結合されたセットに重複部分を保持します。 重複部分は、セットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、動作、**共用体**各構文を使用して機能します。  

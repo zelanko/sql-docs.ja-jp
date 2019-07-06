@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d58edcfae92c94cfc635d3539f81faf834e382c7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704136"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597571"
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
 カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます ( **[]** ) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**connect**、 **sql**、 **userlist**、または**logs**です。 パラメーターは、リテラル文字列、既定値、ユーザー指定の識別子では、または何もです。  
@@ -55,7 +55,7 @@ identifier
   
  特定のセクションは、次の状況で使用されます。  
   
--   A**接続**セクションを使用して、クライアントの値の部分文字列のキーワードを接続する場合は"**データ ソース =** _値_"と一致する、**接続**セクションの識別子*します。*  
+-   A**接続**セクションを使用して、クライアントの値の部分文字列のキーワードを接続する場合は"**データ ソース =** _値_"と一致する、**接続**セクションの識別子です。 
   
 -   **Sql** セクションには、クライアントのコマンド文字列に一致する文字列が含まれている場合、使用、 **sql** セクションの識別子。  
   

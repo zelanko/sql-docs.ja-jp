@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4c377bbfbe4170b5631ba1ac9c017af1176b279
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0f26d2484c7626a689dd83955d1bfb498365449
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013980"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584089"
 ---
 # <a name="using-data-files-and-format-files"></a>データ ファイルとフォーマット ファイルの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "63013980"
 2.  呼び出す[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)で*eOption*に BCPHINTS を設定し、 *iValue* TRANSACT-SQL ステートメントを含む SQLTCHAR 文字列へのポインターに設定します。  
   
 3.  呼び出す**bcp_exec**一括コピー操作を実行します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  結果セットを生成するステートメントであればどのような [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントも使用できます。 作成されるデータ ファイルには [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の結果セットが格納されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで複数の結果セットが生成される場合、一括コピーでは、最初の結果セットよりも後にある結果セットは無視されます。  
   
  も、テーブル内の別の形式でデータを格納する列のデータ ファイルを作成するには[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)列数は変更を指定する、呼び出す[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)各列の形式変更するには。 これは、呼び出した後**bcp_init**呼び出す前に**bcp_exec**します。 **bcp_colfmt**列のデータがデータ ファイルに格納されている形式を指定します。 これは、一括コピー入力または出力するときに使用できます。使用することも**bcp_colfmt**行と列のターミネータを設定します。 たとえば、データにタブ文字が含まれていない場合を作成、タブ区切りファイルを使用して**bcp_colfmt**として各列のターミネータがタブ文字を設定します。  

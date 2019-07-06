@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33bdeff7f34993681fbdede0200e9bcab8ab96e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa5370e91aa5a8f5012a9c8f35f3fb98b3b3e726
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040073"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581922"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>注釈の解釈 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 一括読み込みの処理、 **sql: マップ**予想こととして、XSD スキーマで注釈は、マッピング スキーマが指定されている場合**sql: マップ ="false"** の任意の要素または属性を使用して、XML 一括読み込みしません。対応する列に関連付けられているデータを格納しようとしてください。  
   
- XML 一括読み込みは、要素とマップされていない属性は無視されます (スキーマに記述されていないか、または、XSD スキーマで注釈が付いて ため**sql: マップ ="false"**)。 使用してこのような列が指定されている場合に、オーバーフロー列にマップされていないすべてのデータが**sql:overflow-フィールド**します。  
+ XML 一括読み込みは、要素とマップされていない属性は無視されます (スキーマに記述されていないか、または、XSD スキーマで注釈が付いて ため**sql: マップ ="false"** )。 使用してこのような列が指定されている場合に、オーバーフロー列にマップされていないすべてのデータが**sql:overflow-フィールド**します。  
   
  たとえば、次の XSD スキーマを考えてみます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "56040073"
 </xsd:schema>  
 ```  
   
- **HomePhone**属性を指定します**sql: マップ ="false"**、XML 一括読み込みでは、この属性の対応する列にマップされません。 XSD スキーマ、オーバーフロー列を識別する (**OverflowColumn**) この未使用のデータを格納する XML 一括ロードします。  
+ **HomePhone**属性を指定します**sql: マップ ="false"** 、XML 一括読み込みでは、この属性の対応する列にマップされません。 XSD スキーマ、オーバーフロー列を識別する (**OverflowColumn**) この未使用のデータを格納する XML 一括ロードします。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
@@ -86,7 +86,9 @@ ms.locfileid: "56040073"
     ```  
   
 4.  XML 一括読み込みを実行するには、この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) の例を Sample.vbs として保存し実行します。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  

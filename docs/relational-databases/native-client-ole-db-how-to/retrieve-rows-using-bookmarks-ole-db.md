@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34be43cc8274f165a85d2ac51ccc2f1ca7939d3d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 863ceaa522e11269f1b2b7fa8ca4549cf0f32295
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673267"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583806"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>ブックマークを使用した行の取得 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "51673267"
 4.  バインド構造体の **dwFlag** フィールドに、ブックマークとして使用される列の DBCOLUMNSINFO_ISBOOKMARK フラグを設定します。  
   
 5.  使用**irowsetlocate::getrowsat**ブックマークからのオフセットによって指定された行で始まる行をフェッチします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>例  
  このサンプルでは、ブックマークを使用して行をフェッチする方法を示します。 このサンプルは IA64 ではサポートされていません。  
   

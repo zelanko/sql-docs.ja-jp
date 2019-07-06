@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702657"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597495"
 ---
 # <a name="absolute-and-relative-urls"></a>絶対 URL と相対 URL
-URL には、ローカルまたはネットワーク コンピューターに格納されているターゲットの場所を指定します。 ファイル、ディレクトリ、HTML ページ、画像、プログラム、およびにターゲットを指定できます*します。*  
+URL には、ローカルまたはネットワーク コンピューターに格納されているターゲットの場所を指定します。 ターゲットは、ファイル、ディレクトリ、HTML ページ、画像、プログラム、およびなどを使用できます。  
   
  *絶対 URL*リソースを特定するために必要なすべての情報が含まれています。  
   
@@ -53,7 +53,7 @@ URL には、ローカルまたはネットワーク コンピューターに格
   
  Ado 2.7 以降では、絶対 URL をコンテキストを定義できます。 たとえばときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、絶対 URL でオブジェクトを開く、**接続**オブジェクトは、URL で指定されたリソースを表すために暗黙的に作成します。  
   
- コンテキストを定義する絶対 URL を指定することができます、 *ActiveConnection*のパラメーター、**レコード**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。 値として絶対 URL を指定することも、"URL **=** "キーワード、**接続**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッド*ConnectionString*パラメーター、および[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド*ActiveConnection*パラメーター。  
+ コンテキストを定義する絶対 URL を指定することができます、 *ActiveConnection*のパラメーター、**レコード**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。 値として絶対 URL を指定することも、"URL ="キーワード、**接続**オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッド*ConnectionString*パラメーター、および、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド*ActiveConnection*パラメーター。  
   
  開くことでコンテキストを定義することも、**レコード**または**Recordset**これらのオブジェクトが既にある、暗黙的または明示的に宣言されたため、ディレクトリを表すオブジェクトを**接続**コンテキストを指定するオブジェクト。  
   

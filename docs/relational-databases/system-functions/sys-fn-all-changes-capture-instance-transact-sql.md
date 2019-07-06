@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 40bf73a1cdca0bc582ac3e6ed6a977980d2aa24f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409069"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585108"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,16 +100,18 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 1.  ラッパーの作成スクリプトを生成するストアド プロシージャを実行します。  
   
 2.  スクリプトを実行して、実際にラッパー関数を作成します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  ラッパー関数は、体系的にクエリで範囲指定された期間内に発生する変更点についてユーザーを有効にする**datetime** LSN 値での値の代わりにします。 ラッパー関数が提供されている間、すべての必要な変換を実行**datetime**値およびクエリ関数の引数として内部的に必要な LSN 値です。 ラッパー関数は、変更データのストリームを処理する順番に使用して、ときにデータがありませんが欠落や重複の次の規則が後に用意されていることが支えます。 @end_time として 1 回の呼び出しに関連付けられている期間の値が指定された、 @start_time 後続の呼び出しに関連付けられている間隔の値です。  
   
  スクリプトの作成時に @closed_high_end_point パラメーターを使用すると、閉じた上限または開いた上限をサポートするラッパーを、指定のクエリ ウィンドウに生成できます。 つまり、抽出期間の上限とコミット時間が等しいエントリを、その期間に含めるかどうかを決定できます。 既定では、上限が含まれます。  
   
- によって返される結果セットは、**すべての変更**ラッパーを返します、_ _ $start_lsn と\_ \_$seqval 列を変更テーブルの列として\__CDC_STARTLSN と\__CDC_SEQVAL、それぞれします。 これらに含まれる追跡対象列のみを次に、 *@column_list*ラッパー生成時のパラメーター。 場合*@column_list*が null の場合、すべての追跡対象ソース列が返されます。 ソース列の後、操作列では\__CDC_OPERATION で、操作を識別する 1 つまたは 2 文字列です。  
+ によって返される結果セットは、**すべての変更**ラッパーを返します、_ _ $start_lsn と\_ \_$seqval 列を変更テーブルの列として\__CDC_STARTLSN と\__CDC_SEQVAL、それぞれします。 これらに含まれる追跡対象列のみを次に、 *@column_list* ラッパー生成時のパラメーター。 場合 *@column_list* が null の場合、すべての追跡対象ソース列が返されます。 ソース列の後、操作列では\__CDC_OPERATION で、操作を識別する 1 つまたは 2 文字列です。  
   
  次に、@update_flag_list パラメーターで指定された各列の結果セットに対し、ビット フラグが追加されます。 **すべての変更**ラッパー、ビット フラグは常に NULL に _ _cdc_operation がある場合がありました '、'I'、または 'UO' です。 場合\__CDC_OPERATION が ' UN '、1 または 0 の場合、更新操作が列に変更を発生させたかどうかに応じて、フラグが設定されます。  
   
- 変更データ キャプチャの構成テンプレート 'Instantiate CDC Wrapper TVFs スキーマの' は、sp_cdc_generate_wrapper_function ストアド プロシージャを使用して、すべてのスキーマの定義済みクエリ関数のラッパー関数の CREATE スクリプトを取得する方法を示します。 このテンプレートで、それらのスクリプトが作成されます。 テンプレートの詳細については、[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)を参照してください。  
+ 変更データ キャプチャの構成テンプレート 'Instantiate CDC Wrapper TVFs スキーマの' は、sp_cdc_generate_wrapper_function ストアド プロシージャを使用して、すべてのスキーマの定義済みクエリ関数のラッパー関数の CREATE スクリプトを取得する方法を示します。 このテンプレートで、それらのスクリプトが作成されます。 テンプレートの詳細については、次を参照してください。[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)します。  
   
 ## <a name="see-also"></a>参照  
  [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

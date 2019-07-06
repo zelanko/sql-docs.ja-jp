@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701866"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597462"
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大規模な子を使用する場合**レコード セット**、特に、親のサイズと比較**レコード セット**、いくつかの子章のみにアクセスする必要がある場合がありますを使用する方が効率的、パラメーター化されたコマンド。  
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 親と子テーブルに、一般的な cust_id で列名がある*します。* *子コマンド*が、"でしょうか"プレース ホルダー、RELATE 句で参照する (つまり、"…。パラメーター 0")。  
+ 親と子テーブルが共通の列名を含ま*cust_id*します。 *子コマンド*が、"でしょうか"プレース ホルダー、RELATE 句で参照する (つまり、"…。パラメーター 0")。  
   
 > [!NOTE]
 >  パラメーターの句は、shape コマンドの構文にのみ関連します。 ADO のいずれかに関連付けられてない[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトまたは[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。  
@@ -75,7 +75,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  パラメーター化されていない階層を使用して、方法はありません、このような方法でチームやゲームのテーブルを関連付けるを子**Recordset**に各チームには、完全なスケジュールが含まれています。 ホーム スケジュールまたは道路のスケジュールが、両方が含まれている章を作成することができます。 RELATE 句に、フォームの親子関係を制限します。 これは (pc1 = cc1) AND (pc2 = pc2)。 そのため、コマンドに"関連付け team_id TO home_team、team_id TO visiting_team"が含まれている場合得ゲームのみで、チームが再生されて自体。 必要なの"(team_id=home_team) または (team_id = visiting_team)"、Shape プロバイダーで OR 句がサポートされていません。  
   
- 目的の結果を取得するには、パラメーター化されたコマンドを使用することができます。 例 :  
+ 目的の結果を取得するには、パラメーター化されたコマンドを使用することができます。 以下に例を示します。  
   
 ```  
 SHAPE {SELECT * FROM teams}   

@@ -17,19 +17,19 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656761"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584046"
 ---
 # <a name="creating-an-assembly"></a>アセンブリの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   ストアド プロシージャやトリガーなどのマネージド データベース オブジェクトは、コンパイルされた後、アセンブリと呼ばれる単位で配置されます。 マネージ DLL アセンブリを登録する必要があります[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]アセンブリが提供する機能を使用する前にします。 アセンブリを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに登録するには、CREATE ASSEMBLY ステートメントを使用します。 ここでは、CREATE ASSEMBLY ステートメントを使用してアセンブリをデータベースに登録する方法と、アセンブリのセキュリティ設定を指定する方法について説明します。  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY ステートメント  
- データベースにアセンブリを作成するには、CREATE ASSEMBLY ステートメントを使用します。 次に例を示します。  
+ データベースにアセンブリを作成するには、CREATE ASSEMBLY ステートメントを使用します。 以下に例を示します。  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   呼び出し先または参照先のアセンブリが同じデータベースに作成されている。  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>アセンブリ作成時のセキュリティの指定  
- アセンブリを作成するときに、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、データベースを指定できます、コードが実行できるセキュリティの 3 つの異なるレベルのいずれか:**セーフ**、 **EXTERNAL_ACCESS**、または**UNSAFE**. ときに、 **CREATE ASSEMBLY**ステートメントを実行すると、サーバーの登録に失敗するアセンブリを引き起こす可能性のあるコード アセンブリで特定のチェックを実行します。 詳細については、の Impersonation サンプルを参照してください。 [CodePlex](https://msftengprodsamples.codeplex.com/)します。  
+ アセンブリを作成するときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データベースを指定できます、コードが実行できるセキュリティの 3 つの異なるレベルのいずれか。**安全な**、 **EXTERNAL_ACCESS**、または**UNSAFE**します。 ときに、 **CREATE ASSEMBLY**ステートメントを実行すると、サーバーの登録に失敗するアセンブリを引き起こす可能性のあるコード アセンブリで特定のチェックを実行します。 詳細については、の Impersonation サンプルを参照してください。 [CodePlex](https://msftengprodsamples.codeplex.com/)します。  
   
  **安全な**は、既定の権限セットと、ほとんどのシナリオで機能します。 特定のセキュリティ レベルを指定するには、CREATE ASSEMBLY ステートメントの構文を次のように変更します。  
   
@@ -80,7 +80,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  アセンブリが、厳密な名前で署名されているか、または証明書を使用して Authenticode で署名されている。 この厳密な名前 (または証明書) 内に作成[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]非対称キー (または証明書) として、対応するログインを使用して**EXTERNAL ACCESS ASSEMBLY** (外部アクセス アセンブリ) のアクセス許可または**UNSAFE ASSEMBLY** (unsafe アセンブリ) のアクセスを許可します。  
   
 2.  データベース所有者 (DBO) が**EXTERNAL ACCESS ASSEMBLY** (の**外部アクセス**アセンブリ) または**UNSAFE ASSEMBLY** (の**UNSAFE**アセンブリの場合) のアクセス許可、およびデータベースが、 [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md)設定**ON**します。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  上に示した 2 つの条件は、アセンブリの読み込み時 (実行も含む) にもチェックされます。 アセンブリを読み込むには、これらの条件の少なくとも 1 つが満たされている必要があります。  
   
  お勧め、 [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md)データベースでないに設定する**ON**ランタイム (CLR) がサーバー プロセス内のコードに共通の言語を実行するだけです。 代わりに、master データベースのアセンブリ ファイルから非対称キーを作成してください。 この非対称キーにマップされるログインを作成し、必要があります、およびログインを許可する必要があります**EXTERNAL ACCESS ASSEMBLY**または**UNSAFE ASSEMBLY**権限。  
@@ -128,7 +130,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = UNSAFE;  
 ```  
   
- 各設定のアクセス許可の詳細については、[CLR 統合セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)を参照してください。  
+ 各設定のアクセス許可の詳細については、次を参照してください。 [CLR 統合セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)します。  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   

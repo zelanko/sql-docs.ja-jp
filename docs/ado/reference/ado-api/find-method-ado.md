@@ -17,12 +17,12 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697958"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597558"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 検索、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を指定した条件を満たす行のできます。 必要に応じて、検索、開始行、および開始行からのオフセットの方向を指定することがあります。 現在の行位置が; 検出されたレコードの設定、条件が満たされた場合(先頭または末尾) に、位置を設定する場合は、 **Recordset**します。  
@@ -39,10 +39,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**文字列**検索に使用するには、列名、比較演算子、および値を指定するステートメントを含む値。  
   
  *SkipRows*  
- 省略可能な*します。* A**長い**既定値が 0 で、現在の行から行オフセットを指定する値または*開始*検索を開始するブックマーク。 既定では、現在の行に、検索を開始します。  
+ 任意。 A**長い**既定値が 0 で、現在の行から行オフセットを指定する値または*開始*検索を開始するブックマーク。 既定では、現在の行に、検索を開始します。  
   
  *SearchDirection*  
- 省略可能な*します。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)検索の方向で使用可能な次の行または現在の行に検索を開始するかどうかを指定する値。 最後に停止する検索が失敗した、**レコード セット**値が場合**adSearchForward**します。 検索が失敗したの停止の開始時、**レコード セット**値が場合**adSearchBackward**します。  
+ 任意。 A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)検索の方向で使用可能な次の行または現在の行に検索を開始するかどうかを指定する値。 最後に停止する検索が失敗した、**レコード セット**値が場合**adSearchForward**します。 検索が失敗したの停止の開始時、**レコード セット**値が場合**adSearchBackward**します。  
   
  *[開始]*  
  任意。 A**バリアント**検索の開始位置として機能するブックマーク。  

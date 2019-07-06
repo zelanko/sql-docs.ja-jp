@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: dfb90f9e0d1e3910f45a5b283161e9c36da49a71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661562"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579793"
 ---
 # <a name="creating-user-defined-types---coding"></a>ユーザー定義型の作成 - コーディング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ public struct Point : INullable
   
  という名前のプロパティを作成する必要があります**IsNull**値が CLR コード内から null かどうかを判断するのに必要な。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では UDT が NULL インスタンスであることを検出すると、通常の NULL 値処理メソッドを使用して UDT を保存します。 そのため、サーバーが NULL の UDT の不要なシリアル化やシリアル化解除に時間を費やしたり、NULL の UDT を格納して領域を無駄にすることはありません。 この NULL に関するチェックは CLR から UDT が渡されるたびに実行されます。つまり、[!INCLUDE[tsql](../../includes/tsql-md.md)] の IS NULL コンストラクトを使用して NULL UDT のチェックを実行すると、必ず成功することを意味します。 **IsNull**プロパティは、インスタンスが null かどうかをテストするサーバーでも使用されます。 UDT が NULL であることを判断できれば、サーバーはネイティブの NULL 処理を使用できます。  
   
- **Get()** メソッドの**IsNull**何らかの方法で特殊なケースではありません。 場合、**ポイント**変数**@p**は**Null**、し**@p.IsNull**既定では、"NULL"を評価「1」です。 これは、ため、 **SqlMethod(OnNullCall)** の属性、 **IsNull get()** メソッド既定値は false。 オブジェクトは**Null**プロパティが要求されると、オブジェクトが逆シリアル化できません、メソッドが呼び出されないと既定値は"NULL"が返されます。  
+ **Get()** メソッドの**IsNull**何らかの方法で特殊なケースではありません。 場合、**ポイント**変数 **@p** は**Null**、し **@p.IsNull** 既定では、"NULL"を評価「1」です。 これは、ため、 **SqlMethod(OnNullCall)** の属性、 **IsNull get()** メソッド既定値は false。 オブジェクトは**Null**プロパティが要求されると、オブジェクトが逆シリアル化できません、メソッドが呼び出されないと既定値は"NULL"が返されます。  
   
 ### <a name="example"></a>例  
  次の例では、プライベート変数の `is_Null` に、UDT のインスタンスが NULL かどうかに関する状態が格納されます。 コードを作成する際は、`is_Null` の値を適切な状態に保つように注意する必要があります。 UDT はという名前の静的プロパティにも必要**Null** UDT の null 値のインスタンスを返します。 これにより、データベース内の UDT のインスタンスが実際に NULL の場合に、UDT から NULL 値を返すことができます。  
@@ -139,7 +139,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>IS NULL と IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL とします。IsNull  
  スキーマ ポイント (id int, location Point) を格納するテーブルについて考えてみます**ポイント**は CLR UDT の場合は、次のクエリ。  
   
 ```  
@@ -494,7 +494,7 @@ public Int32 Y
  UDT メソッドをコーディングする際は、使用するアルゴリズムが時間の経過と共に変化する可能性があるかどうかを考慮します。 変化する可能性がある場合は、UDT で使用するメソッド用に独立したクラスを作成することを検討します。 アルゴリズムが変化したら、新しいコードになったクラスを再コンパイルし、UDT に影響を与えることなくそのアセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 多くの場合、UDT は [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントを使用して再読み込みできますが、既存のデータとの間に問題が発生する可能性があります。 たとえば、**通貨**UDT に含まれる、 **AdventureWorks**サンプル データベースの使用、 **ConvertCurrency**は実装されている通貨値を変換する関数別のクラス。 変換アルゴリズムが今後どう変化するかは予測できず、新しい機能が必要になる可能性もあります。 分離、 **ConvertCurrency**関数を**通貨**将来の変更を計画するときに、UDT の実装によって柔軟性が向上します。  
   
 ### <a name="example"></a>例  
- **ポイント**クラスには、距離を計算するための 3 つの単純なメソッドが含まれています:**距離**、 **DistanceFrom**と**DistanceFromXY**します。 返します、**二重**からの距離を計算する**ポイント**を 0 に指定したポイントからの距離に**ポイント**からの距離は、X および Y 座標を指定**ポイント**します。 **距離**と**DistanceFrom**の各呼び出し**DistanceFromXY**、メソッドごとに異なる引数を使用する方法を示します。  
+ **ポイント**クラスには、距離を計算するための 3 つの単純なメソッドが含まれています。**距離**、 **DistanceFrom**と**DistanceFromXY**します。 返します、**二重**からの距離を計算する**ポイント**を 0 に指定したポイントからの距離に**ポイント**からの距離は、X および Y 座標を指定**ポイント**します。 **距離**と**DistanceFrom**の各呼び出し**DistanceFromXY**、メソッドごとに異なる引数を使用する方法を示します。  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  **Microsoft.SqlServer.Server.SqlMethodAttribute**クラスにメソッドがミューテーターであるかどうかを指定して、null 呼び出しの動作、決定性を指定するには、メソッドの定義のマークに使用できるカスタム属性が用意されています。 これらのプロパティは既定値に設定されるので、既定値以外の値を設定する場合のみカスタム属性を使用します。  
   
 > [!NOTE]  
->  **SqlMethodAttribute**クラスから継承、 **SqlFunctionAttribute**ためクラス**SqlMethodAttribute**継承、 **FillRowMethodName**と**TableDefinition**からフィールド**SqlFunctionAttribute**します。 これは、一見テーブル値メソッドを記述できることを示していますが、この場合には該当しません。 メソッドをコンパイルし、アセンブリ展開すると、エラーについて、 **IEnumerable**返す型は、次のメッセージの実行時に発生します:"メソッド、プロパティ、またはフィールド '\<名 >' クラスで\<クラス>' のアセンブリで '\<アセンブリ >' が無効な戻り値の型"。  
+>  **SqlMethodAttribute**クラスから継承、 **SqlFunctionAttribute**ためクラス**SqlMethodAttribute**継承、 **FillRowMethodName**と**TableDefinition**からフィールド**SqlFunctionAttribute**します。 これは、一見テーブル値メソッドを記述できることを示していますが、この場合には該当しません。 メソッドをコンパイルし、アセンブリ展開すると、エラーについて、 **IEnumerable**返す型は、次のメッセージの実行時に発生します。"メソッド、プロパティ、またはフィールド '\<名 >' クラスで\<クラス >' アセンブリで'\<アセンブリ >' が無効な戻り値の型"。  
   
  次の表では、いくつかの関連について説明します**Microsoft.SqlServer.Server.SqlMethodAttribute** UDT のメソッドで使用でき、その既定値を一覧表示するプロパティ。  
   
@@ -614,7 +614,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  使用して、**書き込み**のメソッド、**通貨**UDT を永続化する方法を決定する UDT ディスクとそのため UDT 値を比較し、順序付ける方法[!INCLUDE[tsql](../../includes/tsql-md.md)]操作。  
   
 3.  保存、**通貨**次のバイナリ形式を使用して UDT:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  0 バイト目から 19 バイト目までは UTF-16 エンコードされた文字列としてカルチャを保存します。右側の不足バイトには NULL 文字が埋め込まれます。  
   
     2.  20 バイト目以降を使用して、通貨の 10 進値を保存します。  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224882"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597444"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -46,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  文字列式として表された有効な区切り記号です。  
   
 ## <a name="remarks"></a>コメント  
- 2 番目のセットが指定されている場合、**Generate**関数は、2 番目のセット内の組を 1 番目のセット内の各組に適用することで生成されるセットを返します *、* セットを和集合、その結果を結合するとします。 場合**すべて**を指定すると、結果セット内の重複部分を保持します。  
+ 2 番目のセットが指定されている場合、**生成**関数は、2 番目のセット内の組を最初のセット内の各組に適用することによって生成されるセットを返し、その結果を結合するセットを和集合。 場合**すべて**を指定すると、結果セット内の重複部分を保持します。  
   
- 文字列式が指定されている場合、**Generate**関数は、最初のセット内の各組に対して指定された文字列式を評価することによって生成される文字列を返します *、* し連結すること、結果。 必要に応じて、文字列は連結結果の文字列では、各結果を分離すること、区切られてすることができます。  
+ 文字列式が指定されている場合、**生成**関数は、最初のセット内の各組に対して指定された文字列式を評価し、結果を連結して生成される文字列を返します。 必要に応じて、文字列は連結結果の文字列では、各結果を分離すること、区切られてすることができます。  
   
 ## <a name="examples"></a>使用例  
   

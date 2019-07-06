@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12e2dde3916392e2e106499bdfb9dd0d4fad5b0c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017848"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582168"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  すべてのレベルで関係するすべてのマージ パブリケーションに対して、スナップショット ファイルを再生成します。 最初にスナップショットを再生成せずにマージしようとすると、スナップショットを再生成するように要求されます。  
   
 6.  パブリケーション データベースをバックアップします。 そのためにはエラーには、パブリケーション データベースの復元後のマージが失敗する可能性があります。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **連続モードのマージに関する注意事項**  
   
  連続モードのマージを実行している場合は、いずれかが必要です。  

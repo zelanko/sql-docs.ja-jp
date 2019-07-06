@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232291"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597540"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL コマンド
 指定したフィールドを持つテーブルを作成します。  
@@ -121,7 +121,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  テーブルには、複数の候補となるインデックスを持つことができます。  
   
  外部キー *eExpression4*タグ*TagName4*[NODUP]  
- 外部 (プライマリ) のインデックスを作成し、親テーブルとのリレーションシップを確立します。 *eExpression4*外部インデックスのキー式を指定し、 *TagName4*作成される外部インデックス キーのタグの名前を指定します*します。* タグのインデックス名は、最大 10 個の文字を含めることができます。 候補の外部インデックスを作成する NODUP が含まれます。  
+ 外部 (プライマリ) のインデックスを作成し、親テーブルとのリレーションシップを確立します。 *eExpression4*外部インデックスのキー式を指定し、 *TagName4*作成される外部インデックス キーのタグの名前を指定します。 タグのインデックス名は、最大 10 個の文字を含めることができます。 候補の外部インデックスを作成する NODUP が含まれます。  
   
  複数の外部テーブル、インデックスを作成できますが、外部インデックス式は、テーブル内のさまざまなフィールドを指定する必要があります。  
   

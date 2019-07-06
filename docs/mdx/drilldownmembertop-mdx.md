@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3dd1128bfafb052936e742f7ce56529b1222333a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dde2a96b34485fd6d460699a20055e289f2f1ad
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690844"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597472"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
@@ -55,7 +55,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  並べ替えの後、 **DrilldownMemberTop**関数が、親メンバーと指定された子メンバーの数を含むセットを返します*数、* 両方のセットに含まれている最も高い値とは.  
   
- 場合**再帰**関数は、前述のように最初のセットを並べ替え、再帰的に 2 番目のセットに対して、階層に編成されている最初のセットのメンバーを比較し、指定*します。* 関数が 2 番目のセットに存在することも、最初のセット内の各メンバーの子の最上位の数を取得します。  
+ 場合**再帰**が指定されて、関数は、前述のように最初のセットを並べ替え、再帰的に 2 番目のセットに対して、階層に編成されている最初のセットのメンバーを比較します。 関数が 2 番目のセットに存在することも、最初のセット内の各メンバーの子の最上位の数を取得します。  
   
  最初のセットは、メンバーではなく組を含めることができます。 組のドリル ダウンでは、OLE DB の拡張機能し、メンバーではなく組のセットを返します。  
   

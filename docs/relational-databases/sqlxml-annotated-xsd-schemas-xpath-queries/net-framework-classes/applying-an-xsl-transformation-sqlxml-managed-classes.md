@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff7b05cf91351973fc7c7f0efbc9af0dfa901dea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cefa1cfe2bd7ea792035bdc16de93ccc35591aee
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720699"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580888"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 変換の適用 (SQLXML マネージド クラス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,9 @@ class Test
      これにより、実行可能ファイル (DocSample.exe) が作成されます。  
   
 4.  コマンド プロンプトで、DocSample.exe を実行します。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>.NET Framework での XSL 変換の適用  
  前で示したように中間層で XSL 変換を適用する代わりに、クライアント側 (.NET Framework) で XSL 変換を適用することもできます。 次の C# コードは、.NET Framework で XSL 変換を適用するよう変更したものです。  
   

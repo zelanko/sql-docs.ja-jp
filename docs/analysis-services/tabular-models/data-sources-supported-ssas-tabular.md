@@ -1,6 +1,6 @@
 ---
 title: SQL Server Analysis Services 表形式 1200 モデルでサポートされるデータ ソース |Microsoft Docs
-ms.date: 11/07/2018
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: a1ef7ae48e3d1500d08c9adba5e39db6214125c5
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269685"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597364"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>SQL Server Analysis Services 表形式モデル 1200 にサポートされるデータ ソース
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   
 この記事では、SQL Server Analysis Services 表形式モデル 1200 とより低い互換性レベルで使用できるデータ ソースの種類について説明します。 
 
-1400 互換性レベル モデルでは、[SQL Server Analysis Services 表形式 1400 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)を参照してください。
+1400 互換性レベル モデルでは、次を参照してください。 [SQL Server Analysis Services 表形式 1400 モデルでサポートされるデータ ソース](data-sources-supported-ssas-tabular-1400.md)します。
 
-Azure Analysis Services では、[Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)を参照してください。
+Azure Analysis Services では、次を参照してください。 [Azure Analysis Services でサポートされるデータ ソース](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)します。
   
 ##  <a name="bkmk_supported_ds"></a> メモリ内表形式モデルのサポートされるデータ ソース  
 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]をインストールする際のセットアップで、各データ ソースに対して挙げられているプロバイダーはインストールされません。 コンピューターに他のアプリケーションでは、一部のプロバイダーをインストールする可能性があります。 それ以外の場合は、ダウンロードして、プロバイダーをインストールする必要があります。  
@@ -58,9 +58,20 @@ Microsoft SQL Server    |  2008 以降      |       OLE DB Provider for SQL Serv
 Azure SQL Database    |   All      |  OLE DB Provider for SQL Server、SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client            
 Microsoft Azure SQL Data Warehouse     |   All     |  SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client       
 Microsoft SQL Analytics Platform System (APS)     |   All      |  OLE DB Provider for SQL Server、SQL Server Native Client OLE DB Provider、.NET Framework Data Provider for SQL Client       
+|Microsoft SQL Server の Always Encrypted <sup> [2](#ae)</sup> | 2016 以降。 2014 およびそれ以前 Enterprise エディションのみです。 | .NET Framework Data Provider for SQL Client
+|Azure SQL Database の Always Encrypted <sup> [2](#ae)</sup>| All | .NET Framework Data Provider for SQL Client
 Oracle リレーショナル データベース     |  Oracle 9i 以降       |  Oracle OLE DB プロバイダー       
 Teradata リレーショナル データベース    |  Teradata V2R6 以降     | .Net Data Provider for Teradata    
 
+
+### <a name="using-sql-server-analysis-services-with-always-encrypted"></a>SQL Server Analysis Services と Always Encrypted を使用してください。
+
+<a name="ae">[2]</a> SQL Server Analysis Services は、クライアントを使用してデータベースを果たすことができる[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) SQL Server または次の条件下で Azure SQL Database に。 
+
+*  列マスター_キーの暗号化された列を保護する証明書、Windows 証明書ストアに格納されている必要があります。 Azure Key Vault に格納されている列マスター _ キーがサポートされていません。   
+*  Analysis Services がインストールされている Windows コンピューターには、インストールされているために必要な列のマスター _ キーの証明書があります。 詳細についてを参照してください。 [Windows 証明書ストアに列マスター _ キーを作成する](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store)します。
+*  Analysis Services は SQL に接続を使用してデータ ソースは、.Net に基づいて Framework プロバイダー、および列の暗号化の設定、データ ソースのプロパティを有効にする必要があります。 .NET framework 4.6.1 または後で、Analysis Services サーバー上に存在する必要があります。
+*  SQL Server または SQL Database のデータ ソースである必要があります、*プロバイダー*互換性レベル 1200 でサポートされているデータ ソースの種類。 Power Query では機能しません*構造化された*データ ソース、1400 互換性レベルで導入されました。
   
 ##  <a name="bkmk_tips"></a> データ ソースの選択に関するヒント  
   
