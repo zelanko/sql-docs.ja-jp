@@ -92,7 +92,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**parentid**|**bigint**|ノードの親の識別子。 この ID によって識別される親は、必ずしも親要素ではなく、ノードの NodeType に依存します。その親は、この ID によって識別されます。 たとえば、ノードがテキスト ノードである場合、その親は属性ノードである場合もあります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  
 |**nodetype**|**int**|ノードの型を識別します。 XML DOM ノードの型番号に対応する整数です。<br /><br /> ノードの型は次のとおりです。<br /><br /> 1 = 要素ノード<br /><br /> 2 = 属性ノード<br /><br /> 3 = テキスト ノード|  
 |**localname**|**nvarchar**|要素または属性のローカル名。 DOM オブジェクトに名前がない場合は NULL になります。|  
-|**プレフィックス**|**nvarchar**|ノード名の名前空間のプレフィックス。|  
+|**prefix**|**nvarchar**|ノード名の名前空間のプレフィックス。|  
 |**namespaceuri**|**nvarchar**|ノードの名前空間 URI。 値が NULL の場合、名前空間はありません。|  
 |**datatype**|**nvarchar**|要素または属性行の実際のデータ型。それ以外の行は NULL になります。 データ型は、インライン DTD またはインライン スキーマから推定されます。|  
 |**prev**|**bigint**|前の兄弟要素の XML ID。 前に直接の兄弟がない場合は NULL になります。|  
