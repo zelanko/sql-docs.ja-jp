@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1498a7d78e88055052499027a8255743ca3da6dc
+ms.sourcegitcommit: fb9114df7224446696e7772024f64735c3e46c8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772631"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345146"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,6 +89,15 @@ ALTER AVAILABILITY GROUP MyaAG
 
 >[!NOTE]
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2 以降では、分散トランザクションの可用性グループを変更できます。 Service Pack 2 より前の [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] バージョンの場合、可用性グループを削除し、`DTC_SUPPORT = PER_DB` 設定で作り直す必要があります。 
+
+分散トランザクションを無効にするには、次の Transact-SQL コマンドを使います。
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散トランザクション - 技術的概念
 

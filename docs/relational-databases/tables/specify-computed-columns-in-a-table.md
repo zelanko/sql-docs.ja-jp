@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a50efc25142a78a3363959c238d87efd84de90
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 0b8cef2656c1d06e7f03f122ab96600cc5b8fea0
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072156"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351705"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して計算列に式を指定できます。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "49072156"
   
      [制限事項と制約事項](#Limitations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **計算列を指定する方法:**  
   
@@ -90,14 +90,14 @@ ms.locfileid: "49072156"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `QtyAvailable` 列の値と `UnitPrice` 列の値を乗算する計算列を含むテーブルを作成します。  
   
-    ```  
+    ```sql
     CREATE TABLE dbo.Products   
     (  
         ProductID int IDENTITY (1,1) NOT NULL  
       , QtyAvailable smallint  
       , UnitPrice money  
       , InventoryValue AS QtyAvailable * UnitPrice  
-    );  
+    );
   
     -- Insert values into the table.  
     INSERT INTO dbo.Products (QtyAvailable, UnitPrice)  
@@ -117,11 +117,17 @@ ms.locfileid: "49072156"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、前の例で作成したテーブルに新しい列を追加します。  
   
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
     ```  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
+
+    必要に応じて、PERSISTED 引数を追加し、計算値をテーブルに物理的に格納します。
   
-    ```  
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5) PERSISTED;
+    ```
   
+
 #### <a name="to-change-an-existing-column-to-a-computed-column"></a>既存の列を計算列に変更するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
@@ -130,13 +136,12 @@ ms.locfileid: "49072156"
   
 3.  既存の列を計算列に変更するには、計算列を削除してから再作成する必要があります。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、前の例で追加した列を変更します。  
   
-    ```  
+    ```sql
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
     GO  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);  
-  
-    ```  
-  
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
+    ```
+
      詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  

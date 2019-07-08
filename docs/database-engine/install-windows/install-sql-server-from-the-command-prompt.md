@@ -1,7 +1,7 @@
 ---
 title: コマンド プロンプトからの SQL Server のインストール | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
-ms.openlocfilehash: 8c8dd90ae08cae3f62be07443af5bdae68cfee2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6ff0a849823978eff36e84889c8d582afafa53
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794962"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388301"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -251,7 +251,7 @@ ms.locfileid: "66794962"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モードを指定します。 サポートされる値:<br /><br /> **自動**<br /><br /> **無効**<br /><br /> **手動**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外の [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの場合、/SQLSYSADMINACCOUNTS は必須です。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの場合、/SQLSYSADMINACCOUNTS の使用はオプションですが、/SQLSYSADMINACCOUNTS または /ADDCURRENTUSERASSQLADMIN のどちらかを指定する必要があります。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|tempdb データ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> 注:このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可**|tempdb データ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> **注:** このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可**|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> 注:このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **省略可**|セットアップで追加する tempdb データ ファイルの数を指定します。 この値はコアの数まで増やすことができます。 既定値:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]: 1<br /><br /> 他のすべてのエディション: 8 またはコアの数のうち、小さい方の値<br /><br /> **重要** tempdb のプライマリ データベース ファイルは引き続き tempdb.mdf になります。 その他の tempdb ファイルには、tempdb_mssql_#.ndf という名前が付けられます。# は、セットアップ中に作成されたその他の各 tempdb データベース ファイルの一意の番号を表します。 この名前付け規則は、各データベース ファイルを一意にすることを目的としています。 SQL Server のインスタンスをアンインストールすると、tempdb_mssql_#.ndf 名前付け規則を使用するファイルが削除されます。 ユーザー データベース ファイルには tempdb_mssql_\*.ndf 名前付け規則を使用しないでください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **省略可**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で導入されました。 各 tempdb データ ファイルの初期サイズを指定します。<br/><br/>既定値 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] の場合は 4 MB、その他のエディションの場合は 8 MB。<br/><br/>最小値 = (4 または 8 MB)。<br/><br/>最大値 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の場合は 262,144 MB)。|  
@@ -262,6 +262,9 @@ ms.locfileid: "66794962"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **省略可**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのファイルの瞬時初期化を有効にします。 セキュリティとパフォーマンスに関する考慮事項については、「 [データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)」をご覧ください。<br /><br /> 既定値:"False"<br /><br /> 省略可能な値:"True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **省略可** 無人 (サイレント) インストール時に省略した場合、MAXDOP は、[並列処理の最大限度のガイドライン](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)に従います。 |並列処理の最大限度を指定します。これにより、1 つのステートメントで実行中に使用できるプロセッサ数が決定します。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降でのみ使用できます。 <br /><br /> 既定値は、[max degree of parallelism のガイドライン](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)に従います。|
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/USESQLRECOMMENDEDMEMORYLIMITS<br /><br /> **省略可** 無人 (サイレント) インストールで /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY、/SQLMAXMEMORY を省略した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ構成が使用されます。|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で[サーバー メモリ構成ガイドライン](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)に従って計算されたメモリ設定を使用することを指定します。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降でのみ使用できます。<br /><br /> **注:** このパラメーターを /SQLMINMEMORY および /SQLMAXMEMORY と共に使用することはできません。 |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMINMEMORY<br /><br /> **省略可** 無人 (サイレント) インストールで /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY、/SQLMAXMEMORY を省略した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ構成が使用されます。|Min Server Memory 構成を指定します。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降でのみ使用できます。<br /><br /> 既定値:0。<br /><br /> **注:** このパラメーターを /USESQLRECOMMENDEDMEMORYLIMITS と共に使用することはできません。 |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXMEMORY<br /><br /> **省略可** 無人 (サイレント) インストールで /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY、/SQLMAXMEMORY を省略した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]では既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ構成が使用されます。|Max Server Memory 構成を指定します。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降でのみ使用できます。<br /><br /> 既定値: [サーバー メモリ構成ガイドライン](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)に従って計算された値。<br /><br /> **注:** このパラメーターを /USESQLRECOMMENDEDMEMORYLIMITS と共に使用することはできません。 |  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
 |SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  

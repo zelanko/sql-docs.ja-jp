@@ -25,18 +25,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626687"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469200"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-データベースの特定の動作に、指定したバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性を設定します。 ALTER DATABASE の他のオプションについては、「[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。
+指定したバージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] と互換性があるように、[!INCLUDE[tsql](../../includes/tsql-md.md)] およびクエリ処理の動作を設定します。 ALTER DATABASE の他のオプションについては、「[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。  
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
@@ -49,16 +49,18 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>引数
 
-*database_name* 変更するデータベースの名前です。
+*database_name*      
+変更するデータベースの名前です。
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } データベースの互換性の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンです。 次の互換性レベルの値を構成することができます (上で示したすべての互換性レベルをすべてのバージョンがサポートしているわけではありません)。
+COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
+データベースの互換性の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンを指定します。 次の互換性レベルの値を構成することができます (上で示したすべての互換性レベルをすべてのバージョンがサポートしているわけではありません)。
 
-|Product|データベース エンジンのバージョン|互換性レベルの指定|サポートされている互換性レベル値|
+|Product|データベース エンジンのバージョン|既定の互換性レベルの指定|サポートされている互換性レベル値|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベース/エラスティック プール|12|130|150, 140, 130, 120, 110, 100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス|12|130|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベース/エラスティック プール|12|140|150, 140, 130, 120, 110, 100|
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス|12|140|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -66,28 +68,6 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } データベ
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|10|100|100, 90, 80|
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |SQL Server 2000|8|80|80|
-
-> [!NOTE]
-> **2018 年 1 月**の時点で、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しく作成されたデータベースの既定の互換性レベルは 140 です。 既存のデータベースに対してデータベースの互換性レベルは更新されません。 これは、お客様の独自の裁量にまかされます。 このため、お客様が最新の改善点を活用するために、最新の互換性レベルに移行することを強くお勧めします。
->
-> お使いのデータベース全体でデータベース互換性レベル 140 を活用するとき、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の**カーディナリティ推定**モデル、データベース互換性レベル 110 へのマッピングを選択するのであれば、[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) に関するページを参照してください。特にそのキーワード `LEGACY_CARDINALITY_ESTIMATION = ON` をご覧ください。
->
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における 2 つの互換性レベル間での、最も重要なクエリのパフォーマンスの違いを評価する方法の詳細については、「[Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)」 (Azure SQL Database での互換性レベル 130 によるクエリ パフォーマンスの改善) を参照してください。 この記事では互換性レベル 130 と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取り上げていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で 140 に移行する場合も同じ手法が適用されます。
-
-次のクエリを実行して、接続先である [!INCLUDE[ssDE](../../includes/ssde-md.md)] のバージョンを特定します。
-
-```sql
-SELECT SERVERPROPERTY('ProductVersion');
-```
-
-> [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、互換性レベルに依存する機能がすべてサポートされているわけではありません。
-
-現在の互換性レベルを特定するには、**sys.databases** の [compatibility_level](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列に対してクエリを実行します。
-
-```sql
-SELECT name, compatibility_level FROM sys.databases;
-```
 
 ## <a name="remarks"></a>Remarks
 
@@ -106,6 +86,26 @@ SELECT name, compatibility_level FROM sys.databases;
 > [!NOTE]
 > 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成され、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM または Service Pack 1 にアップグレードされる[ディストリビューション データベース](../../relational-databases/replication/distribution-database.md)は、互換性レベルが 90 であり、その他のデータベースではサポートされません。 これはレプリケーションの機能には影響がありません。 新しいバージョンのサービス パックと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、分散データベースの互換性レベルが増加し、**マスター** データベースの互換性レベルと一致します。
 
+**2018 年 1 月**の時点で、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しく作成されたデータベースの既定の互換性レベルは 140 です。 既存のデータベースに対してデータベースの互換性レベルは更新されません。 それは、お客様の独自の裁量にまかされます。 お客様には、最新のクエリ最適化の改善点を活用するため、最新の互換性レベルにアップグレードすることを強くお勧めします。
+データベース全体ではデータベース互換性レベル 140 を利用する一方で、データベース互換性レベル 110 にマップされる [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の[**カーディナリティ推定**](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルにオプトインする場合は、「[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。特にそのキーワード `LEGACY_CARDINALITY_ESTIMATION = ON` をご覧ください。
+
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における 2 つの互換性レベル間での、最も重要なクエリのパフォーマンスの違いを評価する方法の詳細については、「[Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)」 (Azure SQL Database での互換性レベル 130 によるクエリ パフォーマンスの改善) を参照してください。 この記事では互換性レベル 130 と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取り上げていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で 140 に移行する場合も同じ手法が適用されます。
+
+接続先の [!INCLUDE[ssDE](../../includes/ssde-md.md)] のバージョンを確認するには、次のクエリを実行します。
+
+```sql
+SELECT SERVERPROPERTY('ProductVersion');
+```
+
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、互換性レベルに依存する機能がすべてサポートされているわけではありません。
+
+現在の互換性レベルを特定するには、**sys.databases** の [compatibility_level](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列に対してクエリを実行します。
+
+```sql
+SELECT name, compatibility_level FROM sys.databases;
+```
+
 ## <a name="compatibility-levels-and-sql-server-upgrades"></a>互換性レベルと SQL Server アップグレード
 
 データベース互換レベルは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のアップグレードを可能にし、それと同時に、アップグレード前と同じデータベース互換性レベルを維持することでデータベースに接続するアプリケーションの機能的な状態を維持するという点で、データベースの現代化支援に不可欠なツールです。
@@ -120,12 +120,14 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 互換性レベルの違いについては、この記事の後半に出てくるセクションを参照してください。
 
-アップグレード前に存在したデータベース互換性レベルとそのサポート可能なステータスを維持しながら、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を最新バージョンにアップグレードするには、[Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) ツール (DMA) を使用し、データベースのアプリケーション コードの攻撃可能な領域に静的な機能検証を実行することをお勧めします。 DMA ツールの出力でエラーが見つからなければ、あるいは機能性に不足や非互換性がなければ、新しいターゲット バージョンでアプリケーションの機能が退化することはありません。 DMA ツールの詳細については、[こちら](https://blogs.msdn.microsoft.com/datamigration/dma)を参照してください。
+アップグレード前に存在したデータベース互換性レベルとそのサポート可能なステータスを維持しながら、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を最新バージョンにアップグレードするには、[Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) ツール (DMA) を使用し、データベース (ストアド プロシージャ、関数、トリガーなどのプログラミング オブジェクト) およびアプリケーション (アプリケーションによって送信される動的コードをキャプチャするワークロード トレースを使用) において、アプリケーション コードの攻撃可能な領域に静的な機能検証を実行することをお勧めします。 DMA ツールの出力でエラーが見つからなければ、あるいは機能性に不足や非互換性がなければ、新しいターゲット バージョンでアプリケーションの機能が退化することはありません。 DMA ツールの詳細については、[こちら](https://blogs.msdn.microsoft.com/datamigration/dma)を参照してください。
 
 > [!NOTE]
-> DMA は、レベル 100 以降のデータベース互換性レベルに対応しています。 ソース バージョンとしての [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] は除外されます。
+> DMA は、レベル 100 以降のデータベース互換性レベルに対応しています。 ソース バージョンとしての [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] は除外されます。   
+
 > [!IMPORTANT]
-> Microsoft では、最小限のテストをいくつか行い、アップグレードが成功し、さらに前のデータベース互換性レベルが維持されていることを確認することをお勧めしています。 自分のアプリケーションとシナリオでは何が「最小限のテスト」に相当するのかは、ご自身で判断してください。
+> Microsoft では、最小限のテストをいくつか行い、アップグレードが成功し、さらに前のデータベース互換性レベルが維持されていることを確認することをお勧めしています。 自分のアプリケーションとシナリオでは何が「最小限のテスト」に相当するのかは、ご自身で判断してください。   
+
 > [!NOTE]
 > Microsoft は、次の場合にクエリ プラン シェイプ保護を提供します。
 >
@@ -136,20 +138,23 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>旧バージョンとの互換性を維持するための互換性レベルの使用
 
-*データベース互換性レベル*設定は、サーバー全体ではなく、指定したデータベースの動作にのみ影響します。 データベース互換性レベルでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との部分的な下位互換性だけが保たれます。
+*データベース互換性レベル*設定は、サーバー全体ではなく、指定したデータベースの動作にのみ影響します。 データベース互換性レベルでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] およびクエリ最適化動作に関連するものにおいて、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との下位互換性が提供されます。 
 
 > [!TIP]
 > "*データベース互換性レベル*" はデータベース レベルの設定なので、新しい [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で実行しているアプリケーションが古いデータベース互換性レベルを使用している場合でも、アプリケーションを変更する必要なく、サーバー レベルの拡張機能を利用できます。
 >
 > これには、新しい[システム動的管理ビュー](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)や[拡張イベント](../../relational-databases/extended-events/extended-events.md)など、豊富な監視とトラブルシューティングに関する改善が含まれます。 また、[自動ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa) などのスケーラビリティの向上も含まれます。
 
-互換モード 130 以降、機能に影響を与える新しいクエリ プランは、新しい互換性レベルにのみ意図的に追加されています。 これは、クエリ プランの変更によるパフォーマンスの低下から発生するアップグレード中に、リスクを最小限に抑えるために追加されました。 アプリケーションの観点からは、新しい機能のいくつかを継承し、クエリ オプティマイザー スペースで行われたパフォーマンス改善を継承するために、ある時点で最新の互換性レベルにアップグレードすることは目的であり続けますが、それをコントロールされた方法で行います。 関連する互換性レベル設定によって制御される動作では、安全な移行補助として下位の互換性レベルを使用し、バージョンの違いに対処してください。
+互換モード 130 以降、機能に影響を与える新しいクエリ プランは、新しい互換性レベルにのみ意図的に追加されています。 これは、新しいクエリ最適化動作によって導入される可能性のあるクエリ プランの変更によるパフォーマンスの低下から発生する、アップグレード中のリスクを最小限に抑えるために追加されました。      
+アプリケーションの観点からは、新しい機能 ([インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)など) のいくつかを継承するために、ある時点で最新の互換性レベルにアップグレードすることは目的であり続けますが、それをコントロールされた方法で行います。 関連する互換性レベル設定によって制御される動作では、安全な移行補助として下位の互換性レベルを使用し、バージョンの違いに対処してください。
 データベース互換性レベルのアップグレードで推奨されるワークフローなど、詳細については、この記事の後半に出てくる「[データベース互換性レベルのアップグレードのベスト プラクティス](#best-practices-for-upgrading-database-compatibility-level)」を参照してください。
 
 > [!IMPORTANT]
 > 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで導入された機能が廃止されている場合、その機能は互換性レベルによって保護されません。 これは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] から削除された機能に当てはまります。
-> たとえば、`FASTFIRSTROW` ヒントは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で廃止され、`OPTION (FAST n )` ヒントに置き換えられました。 データベースの互換性レベルを 110 に設定すると、廃止されたヒントは復元されません。
-> 廃止された機能の詳細については、「[SQL Server 2016 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」、「[SQL Server 2014 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」、「[SQL Server 2012 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」、および「[SQL Server 2008 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。
+> たとえば、`FASTFIRSTROW` ヒントは [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で廃止され、`OPTION (FAST n )` ヒントに置き換えられました。 データベースの互換性レベルを 110 に設定すると、廃止されたヒントは復元されません。  
+>  
+> 廃止された機能の詳細については、「[SQL Server 2016 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」、「[SQL Server 2014 で廃止されたデータベース エンジンの機能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)」、および「[SQL Server 2012 で廃止されたデータベース エンジンの機能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)」を参照してください。    
+
 > [!IMPORTANT]
 > 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンで導入された重大な変更が、互換性レベルによって保護されない**可能性があります**。 これは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のバージョン間の動作変更に当てはまります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の動作は、通常、互換性レベルで保護されます。 ただし、変更または削除されたシステム オブジェクトは、互換性レベルで保護**されません**。
 >
@@ -158,13 +163,13 @@ SELECT name, compatibility_level FROM sys.databases;
 > 互換性レベルで**保護されない**重大な変更の例としては、次のような内容が挙げられます。
 >
 > - システム オブジェクトで変更された列名。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、sys.dm_os_sys_info 内の列 *single_pages_kb* の名前が *pages_kb* に変更されました。 互換性レベルに関係なく、クエリ `SELECT single_pages_kb FROM sys.dm_os_sys_info` によってエラー 207 (無効な列名) が生成されます。
-> - 削除されたシステム オブジェクト。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、`sp_dboption` が削除されました。 互換性レベルに関係なく、ステートメント `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` はエラー 2812 (ストアド プロシージャ 'sp_dboption' が見つかりませんでした) を生成します。
+> - 削除されたシステム オブジェクト。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、`sp_dboption` が削除されました。 互換性レベルに関係なく、ステートメント `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` はエラー 2812 (ストアド プロシージャ 'sp_dboption' が見つかりませんでした) を生成します。
 >
-> 重大な変更の詳細については、「[SQL Server 2017 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)」、「[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」、「[ SQL Server 2014 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」、「[SQL Server 2012 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、および[SQL Server 2008 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」を参照してください。
+> 重大な変更の詳細については、「[SQL Server 2017 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)」、「[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」、「[ SQL Server 2014 におけるデータベース エンジン機能の重大な変更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)」、「[SQL Server 2012 におけるデータベース エンジン機能の重大な変更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)、および[SQL Server 2008 におけるデータベース エンジン機能の重大な変更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai)」を参照してください。
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>データベース互換性レベルのアップグレードのベスト プラクティス
 
-互換性レベルをアップグレードする場合にお勧めするワークフローについては、「[データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)」を参照してください。
+互換性レベルをアップグレードする場合にお勧めするワークフローについては、「[データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)」を参照してください。 さらに、データベース互換性レベルのアップグレードでのアシスト付きエクスペリエンスについては、「[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)」をご覧ください。
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>互換性レベルとストアド プロシージャ
 
@@ -178,13 +183,13 @@ SELECT name, compatibility_level FROM sys.databases;
 
 |互換性レベル設定 140 以下|互換性レベル設定 150|
 |--------------------------------------------------|-----------------------------------------|
-|OLTP のオーバーヘッドやベンダー サポートの欠如などの制限のため、リレーショナル データ ウェアハウスと分析ワークロードで列ストア インデックスを活用できない場合があります。  列ストア インデックスがないと、これらのワークロードでバッチ実行モードの利点が得られません。|列ストア インデックスがなくても、分析ワークロードでバッチ実行モードが使用できるようになりました。 詳細については、「[batch mode on rowstore (行ストアでのバッチ モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore)」を参照してください。|
-|ディスクへのスピルを引き起こす不十分なメモリ許可サイズを要求する行モード クエリでは、連続実行において引き続き問題が発生する可能性があります。|ディスクへのスピルを引き起こす不十分なメモリ許可サイズを要求する行モード クエリでは、連続実行でのパフォーマンスが改善されている可能性があります。 詳細については、「[row mode memory grant feedback (行モード メモリ許可フィードバック)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)」を参照してください。|
-|コンカレンシーの問題を引き起こす過度なメモリ許可サイズを要求する行モード クエリでは、連続実行において引き続き問題が発生する可能性があります。|コンカレンシーの問題を引き起こす過度なメモリ許可サイズを要求する行モード クエリでは、連続実行でのコンカレンシーが改善されている可能性があります。 詳細については、「[row mode memory grant feedback (行モード メモリ許可フィードバック)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)」を参照してください。|
-|T-SQL スカラー UDF を参照するクエリでは、反復呼び出しが使用され、コストが不足するため、シリアル実行が強制的に実施されます。 |T-SQL スカラー UDF は同等のリレーショナル式に変換され、この式は呼び出し側クエリに "インライン化" されます。これにより、多くの場合、パフォーマンスが大幅に向上します。 詳細については、「[T-SQL scalar UDF inlining (T-SQL スカラー UDF のインライン化)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining)」を参照してください。|
-|テーブル変数では、カーディナリティの推定で固定推定値が使用されます。  実際の行数が推定値よりはるかに大きい場合は、ダウン ストリーム操作のパフォーマンスが低下する場合があります。 |新しいプランでは、固定推定値ではなく、最初のコンパイルで発生したテーブル変数の実際のカーディナリティが使用されます。 詳細については、「[table variable deferred compilation (テーブル変数の遅延コンパイル)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation)」を参照してください。|
+|OLTP のオーバーヘッドやベンダー サポートの欠如などの制限のため、リレーショナル データ ウェアハウスと分析ワークロードで列ストア インデックスを活用できない場合があります。  列ストア インデックスがないと、これらのワークロードでバッチ実行モードの利点が得られません。|列ストア インデックスがなくても、分析ワークロードでバッチ実行モードが使用できるようになりました。 詳細については、「[batch mode on rowstore (行ストアでのバッチ モード)](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)」を参照してください。|
+|ディスクへのスピルを引き起こす不十分なメモリ許可サイズを要求する行モード クエリでは、連続実行において引き続き問題が発生する可能性があります。|ディスクへのスピルを引き起こす不十分なメモリ許可サイズを要求する行モード クエリでは、連続実行でのパフォーマンスが改善されている可能性があります。 詳細については、「[row mode memory grant feedback (行モード メモリ許可フィードバック)](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。|
+|コンカレンシーの問題を引き起こす過度なメモリ許可サイズを要求する行モード クエリでは、連続実行において引き続き問題が発生する可能性があります。|コンカレンシーの問題を引き起こす過度なメモリ許可サイズを要求する行モード クエリでは、連続実行でのコンカレンシーが改善されている可能性があります。 詳細については、「[row mode memory grant feedback (行モード メモリ許可フィードバック)](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。|
+|T-SQL スカラー UDF を参照するクエリでは、反復呼び出しが使用され、コストが不足するため、シリアル実行が強制的に実施されます。 |T-SQL スカラー UDF は同等のリレーショナル式に変換され、この式は呼び出し側クエリに "インライン化" されます。これにより、多くの場合、パフォーマンスが大幅に向上します。 詳細については、「[T-SQL scalar UDF inlining (T-SQL スカラー UDF のインライン化)](../../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)」を参照してください。|
+|テーブル変数では、カーディナリティの推定で固定推定値が使用されます。  実際の行数が推定値よりはるかに大きい場合は、ダウン ストリーム操作のパフォーマンスが低下する場合があります。 |新しいプランでは、固定推定値ではなく、最初のコンパイルで発生したテーブル変数の実際のカーディナリティが使用されます。 詳細については、「[table variable deferred compilation (テーブル変数の遅延コンパイル)](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)」を参照してください。|
 
-データベース互換レベル 150 で使用できるクエリ処理機能の詳細については、「[What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md)」 (SQL Server 2019 の新機能) と「[SQL データベースでのインテリジェントなクエリ処理](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)」を参照してください。
+データベース互換レベル 150 で使用できるクエリ処理機能の詳細については、「[What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md)」 (SQL Server 2019 の新機能) と「[SQL データベースでのインテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)」を参照してください。
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>互換性レベル 130 と互換性レベル 140 との相違点
 

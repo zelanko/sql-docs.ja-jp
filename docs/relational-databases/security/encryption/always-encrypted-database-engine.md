@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185028"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419168"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,10 +104,10 @@ Always Encrypted による暗号化アルゴリズムの詳細については、
 
 |タスク|SSMS|PowerShell|T-SQL|
 |:---|:---|:---|:---
-|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|可|[はい]|いいえ|
-|データベース内にキー メタデータを作成する。|可|[はい]|可|
-|暗号化された列がある新しいテーブルを作成する|可|[はい]|可|
-|選択されたデータベース列内にあるデータを暗号化する|可|[はい]|いいえ|
+|対応する列マスター キーを使用した列マスター キー、列暗号化キー、暗号化された列の暗号化キーをプロビジョニングする。|はい|はい|いいえ|
+|データベース内にキー メタデータを作成する。|はい|はい|はい|
+|暗号化された列がある新しいテーブルを作成する|はい|はい|はい|
+|選択されたデータベース列内にあるデータを暗号化する|はい|はい|いいえ|
 
 > [!NOTE]
 > 必ず、データベースをホストするコンピューターと異なるコンピューターで、キー プロビジョニングまたはデータ暗号化ツールを実行してください。 そうしないと、機密データやキーがサーバー環境に漏れ、Always Encrypted を使用する利点が少なくなる可能性があります。  
@@ -124,7 +124,7 @@ Always Encrypted の構成の詳細については、以下を参照してくだ
 >  ウィザードの利用方法については、「 [Getting Started with Always Encrypted with SSMS](https://channel9.msdn.com/Shows/Data-Exposed/Getting-Started-with-Always-Encrypted-with-SSMS)」(SSMS での Always Encrypted の作業の開始) の動画をご覧ください。
 
 1.  Management Studio の **オブジェクト エクスプローラー** を使用して暗号化する列があるテーブルを含む既存のデータベースに接続するか、新しいデータベースを作成し、暗号化する列がある 1 つ以上のテーブルを作成し、接続します。
-2.  データベースを右クリックして **[タスク]** をポイントし、**[列の暗号化]** をクリックして **Always Encrypted ウィザード**を開きます。
+2.  データベースを右クリックして **[タスク]** をポイントし、 **[列の暗号化]** をクリックして **Always Encrypted ウィザード**を開きます。
 3.  **[概要]** ページの内容を確認し、 **[次へ]** をクリックします。
 4.  **[列の選択]** ページで、テーブルを展開して暗号化する列を選択します。
 5.  暗号化する選択した各列で、 **[暗号化の種類]** を *[明確]* または *[ランダム化]* のいずれかに設定します。
@@ -181,11 +181,11 @@ Always Encrypted は、以下の特性を持つ列に対してはサポートさ
 次の機能は、暗号化された列では機能しません。
 
 - トランザクション レプリケーションまたはマージ レプリケーション
-- 分散クエリ (リンク サーバー)
+- 分散クエリ (リンク サーバー、OPENROWSET(T-SQL)、OPENDATASOURCE(T-SQL))
 
 ツールの要件
 
-- SQL Server Management Studio は、 *[サーバーへの接続]* ダイアログの **[追加のプロパティ]** タブで **column encryption setting=enabled** に接続している場合、暗号化された列から取得した結果を復号化できます。 暗号化された列の挿入、更新、フィルター処理には、SQL Server Management Studio バージョン 17 以降が必要です。
+- SQL Server Management Studio は、 *[サーバーへの接続]* ダイアログの **[追加のプロパティ]** タブで **column encryption setting=enabled** に接続している場合、暗号化された列から取得した結果を復号化できます。 暗号化された列の挿入、更新、フィルター処理には、SQL Server Management Studio バージョン 17 以降が必要です。 クライアント アプリケーションで使われる接続文字列については、「[Always Encrypted (クライアント開発)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」をご覧ください
 
 - `sqlcmd` からの暗号化された接続には、バージョン 13.1 以上が必要です。これは [ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=825643)から入手できます。
 

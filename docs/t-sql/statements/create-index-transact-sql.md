@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626700"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388357"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -134,6 +134,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -476,6 +477,11 @@ ON ページにアクセスするとき、行ロックが許可されます。 �
 
 OFF ページ ロックは使用されません。
 
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。
+
+最終ページ挿入競合に対して最適化するかどうかを指定します。 既定値は OFF です。 詳細については、「[シーケンシャル キー](#sequential-keys)」セクションを参照してください。
+
 MAXDOP = _max_degree_of_parallelism_
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
@@ -732,6 +738,13 @@ DROP_EXISTING を使用すると、非クラスター化インデックスが定
 ALLOW_ROW_LOCKS = ON かつ ALLOW_PAGE_LOCK = ON の場合は、インデックスにアクセスするときに、行、ページ、およびテーブル レベルのロックが許可されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は適切なロックを選択し、行ロックまたはページ ロックをテーブル ロックにエスカレートすることができます。
 
 ALLOW_ROW_LOCKS = OFF かつ ALLOW_PAGE_LOCK = OFF の場合は、インデックスにアクセスするときに、テーブル レベルのロックのみが許可されます。
+
+## <a name="sequential-keys"></a>シーケンシャル キー
+**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。
+
+最終ページ挿入競合は、多数の同時実行スレッドがシーケンシャル キーを使用するインデックスに行を挿入しようと発生する、一般的なパフォーマンスの問題です。 先頭のキー列に、ID 列や現在の日付/時刻が既定値である日付など、常に増加 (または減少) する値が含まれている場合、インデックスはシーケンシャルと見なされます。 挿入されるキーはシーケンシャルであるため、すべての新しい行がインデックス構造の最後、つまり同じページに挿入されます。 これにより、メモリ内のページで競合が発生し、対象のページに対する PAGELATCH_EX で待機している複数のスレッドとして観察できます。
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY インデックス オプションをオンにすると、インデックスへの高コンカレンシーの挿入のスループット向上に役立つ、データベース エンジン内での最適化が有効になります。 それは、シーケンシャル キーを使用していて最終ページ挿入競合が発生しやすいインデックスを対象とするものですが、B ツリー インデックス構造の他の領域でホット スポットが発生するインデックスでも役に立つ場合があります。
 
 ## <a name="viewing-index-information"></a>インデックス情報の表示
 

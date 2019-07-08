@@ -19,22 +19,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20e587aeb7c0ed34762bf1f90488a06cafc0ec93
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776112"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412999"
 ---
 # <a name="write-international-transact-sql-statements"></a>国際化に対応した Transact-SQL ステートメントの記述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   以下のガイドラインに従うと、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行することが容易になり、複数の言語をサポートできます。  
 
 -   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、次のいずれかを使用します。
-    -   [UTF-8 が有効になっている照合順序](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support)で **char**、**varchar**、**varchar(max)** データ型。
-    -   任意の照合順序で **nchar**、**nvarchar**、**nvarchar(max)** データ型。      
+    -   [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) が有効になっている照合順序で **char**、**varchar**、**varchar(max)** データ型。
+    -   [補助文字](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) が有効になっている照合順序で **nchar**、**nvarchar**、**nvarchar(max)** データ型。      
 
-    これによりコード ページ変換の問題を回避できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
+    これによりコード ページ変換の問題を回避できます。 他の考慮事項については、「[UTF-8 と UTF-16 でのストレージの相違点](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)」をご覧ください。  
 
 -   [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] までは、**char**、**varchar**、**varchar(max)** の各データ型を使用しているすべての個所をそれぞれ **nchar**、**nvarchar**、**nvarchar(max)** データ型に置き換えます。 これによりコード ページ変換の問題を回避できます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 
     > [!IMPORTANT]

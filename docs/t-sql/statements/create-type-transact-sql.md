@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 02a84386929f2e62200cc67946be3567c6e02a51
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266003"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463598"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,15 @@ ms.locfileid: "53266003"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -206,7 +208,7 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
- ユーザー定義型を実装するアセンブリ内のクラスを指定します。 *class_name* は有効な識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 *class_name* は、対応するアセンブリ内のクラス名に正確に一致している必要があります。大文字と小文字は、データベース照合順序に関係なく区別されます。 クラスの記述に使用されている C# などのプログラミング言語が、名前空間の概念を使用している場合、クラス名は、角かっこ (**[ ]**) で囲まれた名前空間で修飾された名前にすることができます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって *type_name* と同じであると見なされます。  
+ ユーザー定義型を実装するアセンブリ内のクラスを指定します。 *class_name* は有効な識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 *class_name* は、対応するアセンブリ内のクラス名に正確に一致している必要があります。大文字と小文字は、データベース照合順序に関係なく区別されます。 クラスの記述に使用されている C# などのプログラミング言語が、名前空間の概念を使用している場合、クラス名は、角かっこ ( **[ ]** ) で囲まれた名前空間で修飾された名前にすることができます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって *type_name* と同じであると見なされます。  
   
  \<column_definition>  
  ユーザー定義テーブル型の列を定義します。  
@@ -230,7 +232,7 @@ column_name <data_type>
      
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
-これを指定すると、テーブルにインデックスを作成します。 これには、クラスター化インデックスまたは非クラスター化インデックスを指定できます。 インデックスでは、この一覧を表示すると、列が含まれてし、昇順または降順で並べ替えます。
+テーブル上にインデックスを作成することを指定します。 これには、クラスター化インデックスまたは非クラスター化インデックスを指定できます。 インデックスには一覧表示される列が含まれ、昇順、降順のいずれかでデータが並べ替えられます。
   
  INDEX  
  CREATE TABLE ステートメントの一部として列インデックスとテーブル インデックスを指定する必要があります。 メモリ最適化テーブルでは、CREATE INDEX および DROP INDEX はサポートされません。  
@@ -317,6 +319,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. プライマリ キーとインデックスでユーザー定義テーブル型を作成する
+次の例では、3 つの列を持つユーザー定義テーブル型を作成します。そのうちの 1 つ (`Name`) はプライマリ キーで、もう 1 つ (`Price`) には非クラスター化インデックスが作成されています。  テーブル値パラメーターの作成方法および使用方法の詳細については、「[テーブル値パラメーターの使用 &#40;データベース エンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」をご覧ください。
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
 ## <a name="see-also"></a>参照  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   

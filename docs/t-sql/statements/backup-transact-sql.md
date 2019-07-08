@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175306"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419068"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ SQL Database をバックアップします。
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -931,7 +931,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL Database<br />マネージド インスタンス \*_ ** &nbsp;|[分析プラットフォーム <br />システム (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL Database<br />マネージド インスタンス \*_** &nbsp;|[分析プラットフォーム <br />システム (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -980,7 +980,7 @@ DATABASE: データベース全体のバックアップを指定します。 デ
 > [!IMPORTANT]
 > マネージド インスタンスで作成されたデータベース バックアップは、別の マネージド インスタンス上にのみ復元できます。 (SQL Server 2016 データベースのバックアップを SQL Server 2012 インスタンスに復元できないことと同様に) SQL Server のオンプレミス インスタンスに復元することはできません。
 
-BACKUP DATABASE (*データ バックアップ*) で作成されたバックアップを復元すると、バックアップ全体が復元されます。 Azure SQL Database マネージド インスタンスの自動バックアップから復元する方法については、「[SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore)」(SQL Database の復元) を参照してください
+BACKUP DATABASE (*データ バックアップ*) で作成されたバックアップを復元すると、バックアップ全体が復元されます。 Azure SQL Database マネージド インスタンスの自動バックアップから復元する方法については、「[データベースをマネージド インスタンスに復元する](/azure/sql-database/sql-database-managed-instance-get-started-restore)」を参照してください。
 
 { *database_name* |  **@** _database\_name\_var_ }: データベース全体のバックアップ元となるデータベースです。 変数 ( **@** _database\_name\_var_) として指定する場合、この名前は、文字列定数 ( **@** _database\_name\_var_ **=** _database name_) として指定するか、**ntext** または**text** データ型以外の文字列データ型の変数として指定します。
 
@@ -1116,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\*分析<br />プラットフォーム システム (PDW) \*_ ** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />マネージド インスタンス](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\*分析<br />プラットフォーム システム (PDW) \*_** &nbsp;|
 
 &nbsp;
 

@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428963"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351691"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "66428963"
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_** &nbsp;| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* SQL Database<br />単一データベース/エラスティック プール \*_ ** | [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* SQL Database<br />単一データベース/エラスティック プール \*_** | [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -949,8 +949,6 @@ EDITION
 データベースのサービス層を指定します。
 
 単一データベース/エラスティック プール上の単一のデータベースおよびプールされたデータベース。 使用可能な値: 'basic'、'standard'、'premium'、'GeneralPurpose'、'BusinessCritical'、'Hyperscale'。
-
-EDITION が指定されいても MAXSIZE が指定されていない場合、MAXSIZE は、そのエディションでサポートされる最も小さなサイズに設定されます。
 
 MAXSIZE     
 データベースの最大サイズを指定します。 MAXSIZE は、指定されている EDITION (サービス層) に対して有効である必要があります。各サービス層でサポートされる MAXSIZE 値と既定値 (D) は次のとおりです。
@@ -1038,12 +1036,12 @@ DTU に基づくモデルの MAXSIZE 値。指定すると、上記の表に示�
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |データの最大サイズ (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-vCore モデルを使用する場合に `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コアに基づくモデルのリソースの制限事項の詳細については、[仮想コアに基づくリソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
+仮想コア モデルを使用するときに `MAXSIZE` 値が設定されていない場合、既定値は 32 GB です。 仮想コアに基づくモデルのリソースの制限事項の詳細については、[仮想コアに基づくリソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関するページを参照してください。
 
 引数 MAXSIZE および EDITION には、以下の規則が適用されます。
 
-- EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定されていて、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 250 MB に設定されます。
-- MAXSIZE も EDITION も指定されていない場合、EDITION は Standard (S0) に設定され、MAXSIZE は 250 GB に設定されます。
+- EDITION が指定され、MAXSIZE が指定されていない場合は、エディションの既定値が使用されます。 たとえば、EDITION が Standard に設定され、MAXSIZE が指定されていない場合、MAXSIZE は自動的に 250 MB に設定されます。
+- MAXSIZE も EDITION も指定されていない場合、EDITION は General Purpose に設定され、MAXSIZE は 32 GB に設定されます。
 
 SERVICE_OBJECTIVE     
 - **単一のデータベースおよびプールされたデータベースの場合**
@@ -1122,7 +1120,7 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>エディションでの簡単な例
-標準的なデータベースを作成するための簡単な例です。
+汎用データベースを作成するための簡単な例です。
 
 ```sql
 CREATE DATABASE TestDB2
@@ -1194,7 +1192,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* SQL Database<br />マネージド インスタンス \*_ ** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* SQL Database<br />マネージド インスタンス \*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1259,7 @@ CREATE DATABASE TestDB1;
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_ **| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1371,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />単一データベース/エラスティック プール](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />マネージド インスタンス](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 

@@ -1,7 +1,7 @@
 ---
 title: MATCH (SQL グラフ) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -9,21 +9,23 @@ ms.topic: language-reference
 f1_keywords:
 - MATCH
 - MATCH_TSQL
+- SHORTEST_PATH
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
+- Shortest Path, shortest_path
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0296f915e0731bac9e7a714fa1e307bd2cda86b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d24d4f9e206fb6bd0b57cfcbbae6d1cf724ffa5e
+ms.sourcegitcommit: 60009734e0ce9d9ac655e83b3b04e340b73095f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62504642"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67409997"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +40,78 @@ ms.locfileid: "62504642"
 MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
-    {<node_alias> { 
-                     { <-( <edge_alias> )- } 
-                   | { -( <edge_alias> )-> }
-                 <node_alias> 
-                 } 
-     }
-     [ { AND } { ( <graph_search_pattern> ) } ]
-     [ ,...n ]
-  
+  {  
+      <simple_match_pattern> 
+    | <arbitrary_length_match_pattern>  
+    | <arbitrary_length_match_last_node_predicate> 
+  }
+
+<simple_match_pattern>::=
+  {
+      LAST_NODE(<node_alias>) | <node_alias>   { 
+          { <-( <edge_alias> )- } 
+        | { -( <edge_alias> )-> }
+        <node_alias> | LAST(<node_alias>)
+        } 
+  }
+  [ { AND } { ( <simple_match_pattern> ) } ]
+  [ ,...n ]
+
 <node_alias> ::=
-    node_table_name | node_alias 
+  node_table_name | node_table_alias 
 
 <edge_alias> ::=
-    edge_table_name | edge_alias
+  edge_table_name | edge_table_alias
+
+
+<arbitrary_length_match_pattern>  ::=
+  { 
+    SHORTEST_PATH( 
+      <arbitrary_length_pattern> 
+      [ { AND } { <arbitrary_length_pattern> } ] 
+      [ ,…n] 
+    )
+  } 
+
+<arbitrary_length_match_last_node_predicate> ::=
+  {  LAST_NODE( <node_alias> ) = LAST_NODE( <node_alias> ) }
+
+
+<arbitrary_length_pattern> ::=
+    {  LAST_NODE( <node_alias> )   | <node_alias>
+     ( <edge_first_al_pattern> [<edge_first_al_pattern>…,n] )
+     <al_pattern_quantifier> 
+  }
+    |  ( {<node_first_al_pattern> [<node_first_al_pattern> …,n] )
+        <al_pattern_quantifier> 
+        LAST_NODE( <node_alias> ) | <node_alias> 
+ }
+    
+<edge_first_al_pattern> ::=
+  { (  
+        { -( <edge_alias> )->   } 
+      | { <-( <edge_alias> )- } 
+      <node_alias>
+      ) 
+  } 
+
+<node_first_al_pattern> ::=
+  { ( 
+      <node_alias> 
+        { <-( <edge_alias> )- } 
+      | { -( <edge_alias> )-> }
+      ) 
+  } 
+
+
+<al_pattern_quantifier> ::=
+  {
+        +
+      | { 1 , n }
+  }
+
+n -  positive integer only.
+ 
 ```
 
 ## <a name="arguments"></a>引数  
@@ -64,6 +124,16 @@ FROM 句で指定されたノード テーブルの名前またはエイリア�
 *edge_alias*  
 FROM 句で指定されたエッジ テーブルの名前またはエイリアス。
 
+*SHORTEST_PATH*   
+最短パス関数は、グラフ内の特定の 2 つのノード間、またはグラフ内の特定のノードと他のすべてのノード間の、最短パスを探すために使用されます。 入力として任意の長さのパターンを受け取り、グラフ内でそれが繰り返し検索されます。 
+
+*arbitrary_length_match_pattern*  
+目的のノードに到達するまで、またはパターンで指定されている繰り返しの最大数が満たされるまで、繰り返しトラバースする必要があるノードとエッジを指定します。 
+
+*al_pattern_quantifier*   
+任意の長さのパターンでは、特定の検索パターンの繰り返し回数を指定するため、正規表現スタイルのパターン量指定子を受け取ります。 サポートされている検索パターン量指定子は次のとおりです。   
+* **+** :パターンを 1 回以上繰り返します。 最短パスが見つかったらすぐに終了します。    
+* **{1,n}** : パターンを 1 から "n" 回繰り返します。 最短パスが見つかったらすぐに終了します。     
 
 ## <a name="remarks"></a>Remarks  
 MATCH 内のノード名は繰り返すことができます。  つまり、ノードは、同じクエリ内でノードは任意の回数走査できます。  

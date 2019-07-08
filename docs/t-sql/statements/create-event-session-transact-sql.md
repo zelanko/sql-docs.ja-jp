@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49570a5dd2c5d0e45e75a51a4835df28b63aa783
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354515"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388121"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "66354515"
   
 ```    
 CREATE EVENT SESSION event_session_name  
-ON SERVER  
+ON { SERVER | DATABASE }
 {  
     <event_definition> [ ,...n]  
     [ <event_target_definition> [ ,...n] ]  
@@ -241,7 +241,7 @@ ON SERVER
 論理演算子の優先順位は、高い方から `NOT`、`AND`、`OR` です。  
   
 ## <a name="permissions"></a>アクセス許可  
-`ALTER ANY EVENT SESSION` アクセス許可が必要です。  
+SQL Server では、`ALTER ANY EVENT SESSION` アクセス許可が必要です。 SQL Database では、データベースにおける `ALTER ANY DATABASE EVENT SESSION` アクセス許可が必要です。
   
 ## <a name="examples"></a>使用例  
  `test_session` という名前のイベント セッションを作成する方法を次の例に示します。 この例では、2 つのイベントを追加し、Event Tracing for Windows ターゲットを使用しています。  
@@ -269,7 +269,6 @@ GO
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
- [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
-  
+ [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)   
   
 

@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765715"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388105"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 10. 再起動を求めるメッセージが表示されます。 すぐに再起動しない場合は、[後で再起動] をクリックします。それ以外の場合は、[今すぐ再起動する] をクリックします。
 11. サーバーが再起動されたら、もう一度システムを確認して、共通の DNS サフィックスが構成されていることを確認します。
 
-
 ![DNS サフィックスの正常に終了した構成][4]
+
+  > [!NOTE]
+  > 複数のサブネットを使用していて、静的 DNS がある場合は、フェールオーバーを実行する前にリスナーに関連付けられている DNS レコードを更新するためのプロセスを、用意する必要があります。そうしないと、ネットワーク名がオンラインになりません。
 
 ## <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
 

@@ -1,7 +1,7 @@
 ---
 title: グラフのエッジ制約 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774647"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343893"
 ---
 # <a name="edge-constraints"></a>エッジ制約
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  エッジ制約を使用して、データの整合性と特定のセマンティクスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] グラフ データベース内のエッジ テーブルに適用できます。 
-  
-この記事には、次のセクションがあります。  
-  
-[エッジ制約](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[エッジ制約](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[関連タスク](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+エッジ制約を使用して、データの整合性と特定のセマンティクスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] グラフ データベース内のエッジ テーブルに適用できます。
+
 ##  <a name="Connection"></a> エッジ制約
  グラフ機能の初回のリリースでは、エッジ テーブルでエッジのエンドポイントに対して強制できることは何もありませんでした。 つまり、グラフ データベース内のエッジは、その種類に関係なく、任意のノードを他の任意のノードに接続することができました。 
 
@@ -66,3 +57,5 @@ ms.locfileid: "64774647"
 |エッジ制約の削除方法について説明します。|[エッジ制約を削除する](../../relational-databases/tables/delete-edge-constraint.md)|  
 |エッジ制約の変更方法について説明します。|[エッジ制約を変更する](../../relational-databases/tables/modify-edge-constraint.md)|  
 |エッジ制約のプロパティの表示方法について説明します。|[エッジ制約のプロパティを表示する](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| SQL Server でのグラフ テクノロジの概要 | [SQL Server と Azure SQL Database でのグラフ処理](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

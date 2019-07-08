@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 4d7b86e88d576d44869dd3a54ddfd6af05770971
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 647630106046345dbe2b3008df020fa1d790d2aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369294"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582549"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,9 @@ ms.locfileid: "53369294"
 5.  **[推奨設定]** タブ ページの下部にある **[既存のオブジェクトを表示する]** をオフにします。 これによって、推奨設定で参照されるデータベース オブジェクトのみがグリッドに表示されます。 下部のスクロール バーを使用して推奨設定のグリッド内の右端の列を表示し、 **[定義]** 列の項目をクリックして、データベース内にそのオブジェクトを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの表示またはコピーを行います。  
   
 6.  この推奨設定内のすべてのデータベース オブジェクトの作成または削除を行う [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを 1 つのスクリプト ファイルにすべて保存するには、 **[アクション]** メニューの **[推奨設定の保存]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザーの GUI を使用してチューニング サマリーとレポートを表示するには  
   
 1.  データベース エンジン チューニング アドバイザーの GUI または **dta** コマンド ライン ユーティリティを使用してデータベースをチューニングします。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションを使用しない場合は、この手順を省略して手順 2. に進みます。  
@@ -80,7 +82,7 @@ ms.locfileid: "53369294"
   
 2.  データベース エンジン チューニング アドバイザー GUI を起動します。 詳細については、「 [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)」を参照してください。 既存のチューニング セッションのチューニング サマリーおよびレポートを表示するには、 **[セッション モニター]** ウィンドウでセッション名をダブルクリックしてセッションを開きます。  
   
-3.  新しいチューニング セッションの完了後またはツールによって既存のセッションが読み込まれた後に、 **[進行状況]** タブをクリックします。**[チューニング ログ]** ペインにログの内容が表示されます。 ログには、データベース エンジン チューニング アドバイザーが分析できなかったワークロード イベントに関する情報が含まれています。  
+3.  新しいチューニング セッションの完了後またはツールによって既存のセッションが読み込まれた後に、 **[進行状況]** タブをクリックします。 **[チューニング ログ]** ペインにログの内容が表示されます。 ログには、データベース エンジン チューニング アドバイザーが分析できなかったワークロード イベントに関する情報が含まれています。  
   
      チューニング セッションのすべてのイベントがデータベース エンジン チューニング アドバイザーによって分析された場合は、セッションのチューニング ログが空であるというメッセージが表示されます。 チューニング セッションを実行したときに、 **[全般]** タブの **[チューニング ログを保存する]** が最初からオフであった場合は、そのことを示すメッセージが表示されます。  
   
@@ -169,7 +171,7 @@ ms.locfileid: "53369294"
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
-5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするときに、次の場所にこのスキーマがインストールされます。  
+5.  データベース エンジン チューニング アドバイザーの XML スキーマに対して、手順 4. で保存した XML 入力ファイルを検証します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするときに、次の場所にこのスキーマがインストールされます。  
   
     ```  
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  

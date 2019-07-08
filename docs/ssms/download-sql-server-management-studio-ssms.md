@@ -24,12 +24,12 @@ ms.author: dinethi
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 7993cfbf21efcbb6f984a91347987e5805741904
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033409"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399659"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -68,7 +68,6 @@ SSMS の今回のリリースは、次の言語でインストールできます
 SQL Server Management Studio 18.1:<br>
 [中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-
 > [!NOTE]
 > SQL Server PowerShell モジュールは、PowerShell ギャラリーで入手できる独立したインストールです。 詳細については、「[SQL Server PowerShell モジュールのダウンロード](download-sql-server-ps-module.md)」を参照してください。
 
@@ -79,7 +78,6 @@ SQL Server Management Studio 18.1:<br>
 - **Integration Services (SSIS)** - Azure で、Azure またはファイル システムの SSIS カタログにある SSIS パッケージのスケジュールをサポート。 [新しいスケジュール] ダイアログを起動するためのエントリが 3 つあります。Azure の SSIS カタログにある SSIS パッケージを右クリックしたときに表示される *[新しいスケジュール]* メニュー項目、 *[ツール]* メニューの *[Azure への移行]* メニュー項目にある *[Schedule SSIS Package in Azure]\(\Azure で SSIS パッケージをスケジュールする)* メニュー項目、Azure SQL Database Managed Instance の下で [ジョブ] フォルダーを右クリックしたときに表示される [Schedule SSIS in Azure]\(Azure で SSIS をスケジュールする\) です。
 
 このリリースの新機能の詳細については、[SSMS のリリース ノート](release-notes-ssms.md)に関するページをご覧ください。
-
 
 ## <a name="supported-sql-offerings-ssms-181"></a>サポートされる SQL 製品 (SSMS 18.1)
 
@@ -93,7 +91,8 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 - Windows 10 (64 ビット) <sup>*</sup>
 - Windows 8.1 (64 ビット)
-- Windows Server 2016 <sup>*</sup>
+- Windows Server 2019 (64 ビット)
+- Windows Server 2016 (64 ビット) <sup>*</sup>
 - Windows Server 2012 R2 (64 ビット)
 - Windows Server 2012 (64 ビット)
 - Windows Server 2008 R2 (64 ビット)
@@ -105,7 +104,7 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 ## <a name="release-notes-ssms-181"></a>リリース ノート (SSMS 18.1)
 
-このリリースに既知の問題はありません。
+このリリースには、[既知の問題](release-notes-ssms.md#known-issues-181)がいくつかあります。
 
 このリリースの詳細については、[SSMS のリリース ノート](release-notes-ssms.md)に関するページをご覧ください。
 
