@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1be87a50ad6e8815a9446ca22c2734a6e82b4745
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872022"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583538"
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
 
@@ -41,7 +41,7 @@ ms.locfileid: "58872022"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **補足情報:**[データベースの名前を変更した後](#backup-after-renaming-a-database)  
+- **補足情報:** [データベースの名前を変更した後](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Azure SQL Data Warehouse または Parallel Data Warehouse でデータベースの名前を変更するには、[RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) ステートメントを使用します。
@@ -69,10 +69,12 @@ SQL Server Management Studio を使用して SQL Server または Azure SQL デ�
   
 2. データベースに対して開いている接続がないことを確認します。 SQL Server を使用している場合は、[データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)ことで、開いているすべての接続を閉じ、データベース名の変更中は他のユーザーが接続できないようにすることができます。  
   
-3. オブジェクト エクスプローラーで **[データベース]** を展開し、名前を変更するデータベースを右クリックし、**[名前の変更]** をクリックします。  
+3. オブジェクト エクスプローラーで **[データベース]** を展開し、名前を変更するデータベースを右クリックし、 **[名前の変更]** をクリックします。  
   
 4. 新しいデータベース名を入力し、 **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="rename-a-database-using-transact-sql"></a>Transact-SQL を使用してデータベースの名前を変更する  
   
 ### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>SQL Server データベースをシングル ユーザー モードにすることで名前を変更するには
@@ -81,7 +83,7 @@ SQL Server Management Studio で T-SQL を使用して SQL Server データベ�
   
 1. インスタンスの `master` データベースに接続します。  
 2. クエリ ウィンドウを開きます。  
-3. 次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 `MyTestDatabase` データベースの名前を `MyTestDatabaseCopy`に変更します。
+3. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `MyTestDatabase` データベースの名前を `MyTestDatabaseCopy`に変更します。
   
    ```sql
    USE master;  
@@ -101,7 +103,7 @@ SQL Server Management Studio で T-SQL を使用して Azure SQL データベー
 1. インスタンスの `master` データベースに接続します。  
 2. クエリ ウィンドウを開きます。
 3. データベースが使用されていないことを確認します。
-4. 次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 `MyTestDatabase` データベースの名前を `MyTestDatabaseCopy`に変更します。
+4. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `MyTestDatabase` データベースの名前を `MyTestDatabaseCopy`に変更します。
   
    ```sql
    ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;

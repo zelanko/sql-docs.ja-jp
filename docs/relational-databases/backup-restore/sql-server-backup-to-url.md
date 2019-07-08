@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046695"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582756"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "67046695"
 |RESTORE HEADERONLY|Y||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する必要があります。また、シークレットとしてストレージ アカウント キーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する場合は、WITH CREDENTIAL 引数を指定する必要があります。|  
 |RESTORE LABELONLY|Y||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する必要があります。また、シークレットとしてストレージ アカウント キーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する場合は、WITH CREDENTIAL 引数を指定する必要があります。|  
 |RESTORE VERIFYONLY|Y||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する必要があります。また、シークレットとしてストレージ アカウント キーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する場合は、WITH CREDENTIAL 引数を指定する必要があります。|  
-|RESTORE REWINDONLY|−|||  
+|RESTORE REWINDONLY|?|||  
   
  BACKUP ステートメントの構文と一般的な情報については、「[BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)」をご覧ください。  
   
@@ -151,9 +151,9 @@ ms.locfileid: "67046695"
 |COMPRESSION&#124;NO_COMPRESSION|Y|ファイル スナップショット バックアップではサポートされていません。||  
 |DESCRIPTION|Y|||  
 |NAME|Y|||  
-|EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||BLOB に追加することはできません。 バックアップを上書きするには、 **WITH FORMAT** 引数を使用します。 ただし、ファイル スナップショット バックアップを使用する場合 ( **WITH FILE_SNAPSHOT** 引数を使用)、元のバックアップで作成されたファイル スナップショットが孤立したまま残されるのを避けるために、 **WITH FORMAT** 引数は使用できません。|  
-|NOSKIP &#124; SKIP|−|||  
+|EXPIREDATE &#124; RETAINDAYS|?|||  
+|NOINIT &#124; INIT|?||BLOB に追加することはできません。 バックアップを上書きするには、 **WITH FORMAT** 引数を使用します。 ただし、ファイル スナップショット バックアップを使用する場合 ( **WITH FILE_SNAPSHOT** 引数を使用)、元のバックアップで作成されたファイル スナップショットが孤立したまま残されるのを避けるために、 **WITH FORMAT** 引数は使用できません。|  
+|NOSKIP &#124; SKIP|?|||  
 |NOFORMAT &#124; FORMAT|Y||**WITH FORMAT** を指定した場合を除き、既存の BLOB に対して実行されるバックアップは失敗します。 **WITH FORMAT** を指定すると、既存の BLOB が上書きされます。 ただし、ファイル スナップショット バックアップを使用する場合 ( **WITH FILE_SNAPSHOT** 引数を使用)、元のファイル スナップショット バックアップで作成されたファイル スナップショットが孤立したまま残されるのを避けるために、FORMAT 引数は使用できません。 ただし、ファイル スナップショット バックアップを使用する場合 ( **WITH FILE_SNAPSHOT** 引数を使用)、元のバックアップで作成されたファイル スナップショットが孤立したまま残されるのを避けるために、 **WITH FORMAT** 引数は使用できません。|  
 |MEDIADESCRIPTION|Y|||  
 |MEDIANAME|Y|||  
@@ -163,8 +163,8 @@ ms.locfileid: "67046695"
 |NO_CHECKSUM &#124; CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
 |STATS|Y|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|?|||  
+|UNLOAD &#124; NOUNLOAD|?|||  
 |NORECOVERY &#124; STANDBY|Y|||  
 |NO_TRUNCATE|Y|||  
   
@@ -186,19 +186,19 @@ ms.locfileid: "67046695"
 |[REPLACE]|Y|||  
 |RESTART|Y|||  
 |RESTRICTED_USER|Y|||  
-|FILE|−|||  
+|FILE|?|||  
 |PASSWORD|Y|||  
 |MEDIANAME|Y|||  
 |MEDIAPASSWORD|Y|||  
 |BLOCKSIZE|Y|||  
-|BUFFERCOUNT|−|||  
-|MAXTRANSFERSIZE|−|||  
+|BUFFERCOUNT|?|||  
+|MAXTRANSFERSIZE|?|||  
 |CHECKSUM &#124; NO_CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
 |FILESTREAM|Y|スナップショット バックアップではサポートされていません。||  
 |STATS|Y|||  
-|REWIND &#124; NOREWIND|−|||  
-|UNLOAD &#124; NOUNLOAD|−|||  
+|REWIND &#124; NOREWIND|?|||  
+|UNLOAD &#124; NOUNLOAD|?|||  
 |KEEP_REPLICATION|Y|||  
 |KEEP_CDC|Y|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|Y|||  
@@ -219,7 +219,9 @@ SQL Server 資格情報を使用して SQL Server Management Studio のバック
 2.  **[データベース]** を展開して目的のデータベースを右クリックし、 **[タスク]** をポイントして、 **[バックアップ...]** をクリックします。
   
 3.  **[全般]** ページの **[バックアップ先]** セクションで、 **[バックアップ先]** ドロップダウン リストの **[URL]** オプションが使用できるようになります。  **[URL]** オプションを使用して、Windows Azure Storage へのバックアップを作成します。 **[追加]** をクリックすると、 **[バックアップ先の選択]** ダイアログ ボックスが開きます。
-   
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  **Azure Storage コンテナー:** バックアップ ファイルを格納する Windows Azure Storage コンテナーの名前。  ドロップダウン リストから既存のコンテナーを選択するか、コンテナーを手動で入力します。 
   
     2.  **共有アクセス ポリシー:** 手動で入力されたコンテナーの Shared Access Signature を入力します。  このフィールドは、既存のコンテナーを選択した場合には使用できません。 

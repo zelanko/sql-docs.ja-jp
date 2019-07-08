@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0959480c6c9b90f1a212d77ce3b4684b2e72e05b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 2bc6e0c8a517ce78a36c776f692a16d406e7aae5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305500"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586127"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "58305500"
 ##  <a name="creating"></a> フルテキスト カタログを作成する  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Transact SQL を使用してフルテキスト カタログを作成する
-[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) を使用します。 例 :
+[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) を使用します。 例:
 
 ```sql 
 USE AdventureWorks;  
@@ -52,7 +52,9 @@ GO
     >  フルテキスト カタログ ID は、00005 から始まり、新しいカタログが作成されるたびに 1 ずつ増加します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="props"></a>フルテキスト カタログのプロパティの取得  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 **FULLTEXTCATALOGPROPERTY** を使用して、フルテキスト インデックスに関連するさまざまなプロパティの値を取得します。 詳細については、「[FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)」を参照してください。
 

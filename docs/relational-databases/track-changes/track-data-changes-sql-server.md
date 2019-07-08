@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5979aade2147d74c2ff34b5d6cc2e48771bab2
-ms.sourcegitcommit: 1968bf31c63210f7f62ea553e67aa792950c89bb
+ms.openlocfilehash: 0928eb2cd30ba16466c3c091ab2c810c2f3a17d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725463"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585356"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "57725463"
 |機能|変更データ キャプチャ|変更の追跡|  
 |-------------|-------------------------|---------------------|  
 |**追跡される変更**|||  
-|DML の変更|可|可|  
+|DML の変更|はい|はい|  
 |**追跡される情報**|||  
-|履歴データ|可|いいえ|  
-|列が変更されたかどうか|可|可|  
-|DML 型|可|可|  
+|履歴データ|はい|いいえ|  
+|列が変更されたかどうか|はい|はい|  
+|DML 型|はい|はい|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  変更データ キャプチャでは、DML の変更が行われたという事実と変更された実際のデータの両方がキャプチャされ、ユーザー テーブルの変更情報の履歴が提供されます。 変更は、非同期プロセスを使用してトランザクション ログを読み取ることによってキャプチャされます。これは、システムへの影響が少ない方法です。  
@@ -88,11 +88,11 @@ ms.locfileid: "57725463"
   
 |列の種類|変更テーブルで変更をキャプチャする|制限事項|  
 |--------------------|---------------------------------------|-----------------|  
-|スパース列|可|columnset を使用する場合は変更のキャプチャをサポートしません。|  
+|スパース列|はい|columnset を使用する場合は変更のキャプチャをサポートしません。|  
 |計算列|いいえ|計算列に対する変更は追跡されません。 列は適切な種類の変更テーブルに表示されますが、値は NULL になります。|  
-|XML|可|個々の XML 要素に対する変更は追跡されません。|  
-|timestamp|可|変更テーブル内のデータ型はバイナリに変換されます。|  
-|BLOB データ型|可|BLOB 列の前の画像は、列自体が変更された場合にのみ保存されます。|  
+|XML|はい|個々の XML 要素に対する変更は追跡されません。|  
+|timestamp|はい|変更テーブル内のデータ型はバイナリに変換されます。|  
+|BLOB データ型|はい|BLOB 列の前の画像は、列自体が変更された場合にのみ保存されます。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能  
  ここでは、次の機能と変更データ キャプチャとの連携について説明します。  
@@ -109,7 +109,9 @@ ms.locfileid: "57725463"
 1.  ミラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
   
 2.  プリンシパルがミラーにフェールオーバーした後、ミラーでキャプチャ ジョブとクリーンアップ ジョブを作成します。 ジョブを作成するには、ストアド プロシージャ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) を使用します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  データベース ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
 #### <a name="transactional-replication"></a>トランザクション レプリケーション  

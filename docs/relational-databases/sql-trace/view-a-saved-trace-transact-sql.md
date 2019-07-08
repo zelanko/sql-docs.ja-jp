@@ -15,12 +15,12 @@ ms.assetid: 3a95a816-aa89-4d5f-858c-968a9cb3ee87
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 706c100a68a2b077a000e88d6cf093efbddb0ede
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 4118a30ffe84210bd7829522d50dc0f163e88639
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570661"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582402"
 ---
 # <a name="view-a-saved-trace-transact-sql"></a>保存されているトレースの表示 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,10 @@ ms.locfileid: "51570661"
 ### <a name="to-view-a-specific-trace"></a>特定のトレースを表示するには  
   
 1.  情報が必要なトレースの ID を指定して **fn_trace_getinfo** を実行します。 この関数は、トレース、トレースのプロパティ、およびそのプロパティに関する情報を一覧にしたテーブルを返します。  
-  
-     この関数を呼び出すには、次のステートメントを実行します。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Invoke the function this way:  
   
     ```  
     SELECT *  

@@ -11,12 +11,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc749166f7c86575a84f41e12b452275ff3649c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4127d0dce2f693a89bec5ef79e83884f1181d0d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66402987"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586088"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>クイック スタート: Azure Blob Storage サービスへの SQL Server のバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,9 @@ ms.locfileid: "66402987"
 
 1. Azure portal を開きます。 
 1. ストレージ アカウントに移動します。 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    1. ストレージ アカウントを選択し、 **[Blob Services]\(Blob services\)** までスクロールします。
    1. **[BLOB]** を選択し、 **[+Container]\(+コンテナー\)** を選択して新しいコンテナーを追加します。 
    1. コンテナーの名前を入力し、指定したコンテナー名をメモしておきます。 この情報は、後でこのクイックスタートの T-SQL ステートメントの URL (バックアップ ファイルのパス) 内で使用されます。 

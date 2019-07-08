@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256027"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581418"
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,47 +70,49 @@ ms.locfileid: "54256027"
     -   集計関数  
   
 4.  プロパティを表示する関数を右クリックし、 **[プロパティ]** を選択します。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
-     **[関数のプロパティ - _function_name_]** ダイアログ ボックスに、次のプロパティが表示されます。  
+     **Database**  
+     The name of the database containing this function.  
   
-     **[データベース]**  
-     この関数を含むデータベースの名前です。  
+     **Server**  
+     The name of the current server instance.  
   
-     **[サーバー]**  
-     現在のサーバー インスタンスの名前です。  
+     **User**  
+     The name of the user of this connection.  
   
-     **ユーザー**  
-     この接続のユーザーの名前です。  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **[作成日]**  
-     関数が作成された日付を表示します。  
+     **Execute As**  
+     Execution context for the function.  
   
-     **[実行時の権限]**  
-     関数の実行コンテキストです。  
+     **Name**  
+     The name of the current function.  
   
-     **名前**  
-     現在の関数の名前です。  
+     **Schema**  
+     Displays the schema that owns the function.  
   
-     **[スキーマ]**  
-     関数を所有するスキーマを表示します。  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
-     **[システム オブジェクト]**  
-     関数がシステム オブジェクトかどうかを指定します。 値は True と False です。  
-  
-     **[ANSI NULL]**  
-     オブジェクトが ANSI NULL オプションで作成されたかどうかを指定します。  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
      **Encrypted**  
-     関数が暗号化されているかどうかを指定します。 値は True と False です。  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **[関数の種類]**  
-     ユーザー定義関数の種類です。  
+     **Function Type**  
+     The type of user defined function.  
   
-     **[引用符で囲まれた識別子]**  
-     オブジェクトが引用符で囲まれた識別子オプションで作成されたかどうかを指定します。  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **[スキーマ バインド]**  
-     関数がスキーマ バインドされているかどうかを指定します。 値は True と False です。 スキーマ バインド関数の詳細については、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」の SCHEMABINDING のセクションを参照してください。  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
