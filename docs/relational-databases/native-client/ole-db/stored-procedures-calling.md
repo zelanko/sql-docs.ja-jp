@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57a95705e24d2437a2a8f2695a68e97c129fd619
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 578aeaeaa73cab0aff58b66c031e108b92f8658c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131065"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586385"
 ---
 # <a name="stored-procedures---calling"></a>ストアド プロシージャ - 呼び出し
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,9 @@ ms.locfileid: "54131065"
     -   手順 3. で作成したアクセサー ハンドル  
   
 5.  **ICommand::Execute** を使用してコマンドを実行します。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="methods-of-calling-a-stored-procedure"></a>ストアド プロシージャを呼び出す方法  
  内のストアド プロシージャを実行するときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーをサポートします。  
   
@@ -96,9 +98,9 @@ ms.locfileid: "54131065"
   
  ODBC CALL エスケープ シーケンスを使用してプロシージャを呼び出す場合の一般的な構文は、次のとおりです。  
   
- {**[? =]****呼び出す**_procedure_name_[**(**[*パラメーター*] [**、**[*パラメーター*].**)**]}  
+ { **[?=]** **call**_procedure_name_[ **(** [*parameter*][ **,** [*parameter*]]... **)** ]}  
   
- 以下に例を示します。  
+ 例 :  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  

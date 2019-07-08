@@ -1,5 +1,5 @@
 ---
-title: レポート履歴へのスナップショットの追加 (レポート マネージャー) | Microsoft Docs
+title: Reporting Services のレポート履歴にスナップショットの追加 |Microsoft Docs
 ms.prod: reporting-services
 ms.technology: reporting-services
 ms.topic: conceptual
@@ -8,15 +8,15 @@ ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 04/26/2019
-ms.openlocfilehash: c1b211684bc267671ea86571f4214c32c013f674
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.date: 06/26/2019
+ms.openlocfilehash: e7244e66ec8f6aabd7684bbcd5c22e8d2604d1cb
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463425"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492833"
 ---
-# <a name="add-a-snapshot-to-report-history-report-manager"></a>レポート履歴へのスナップショットの追加 (レポート マネージャー)
+# <a name="add-a-snapshot-to-report-history"></a>レポート履歴にスナップショットを追加する
 
 レポート履歴とは、時間の経過と共に作成されるレポート スナップショットの集まりです。 レポート スナップショットは、特定の時点で取得されたレイアウト情報およびクエリ結果を含むレポートです。 レポートを選択したときに最新のクエリ結果を取得する要求時レポートとは異なり、レポート スナップショットはスケジュールに従って処理され、その後、レポート サーバーに保存されます。 表示するレポート スナップショットを選択すると、レポート サーバーによってレポート サーバー データベースに格納されたレポートが取得され、スナップショット作成時点のレポートで最新だったデータとレイアウトを表示します。  
   
@@ -31,30 +31,12 @@ ms.locfileid: "67463425"
 2. ドロップダウン メニューの **[レポート履歴の表示]** をクリックします。  
   
 3. **[新しいスナップショット]** をクリックします。 **[実行時]** 列に新しいスナップショットが作成されます。  
-  
     > [!NOTE]
-    > レポート履歴にスナップショットを追加するには、管理者がレポート履歴の構成で **[履歴の手動作成を許可する]** に設定しておく必要があります。 詳細については、 [レポート履歴を制限する (レポート マネージャー)](../reports/limit-report-history-report-manager.md)をクリックします。
+    > スナップショットを作成できるように、管理者がレポート履歴を構成する必要があります**履歴の手動で作成する許可する**します。 詳細については、 [レポート履歴を制限する (レポート マネージャー)](../reports/limit-report-history-report-manager.md)をクリックします。
 
 4. **[適用]** をクリックします。
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-
-1. レポート マネージャーで、 **[コンテンツ]** ページに移動し、履歴を表示するアイテムの上にマウス ポインターを移動して、省略記号 (...) をクリックします。
-
-2. ドロップダウン メニューの **[レポート履歴の表示]** をクリックします。  
-
-3. クリックして**新しい履歴スナップショット**します。 新しいスナップショットが作成され、一覧表示します。
-
-    > [!NOTE]  
-    > レポート履歴にスナップショットを追加するには、管理者がレポート履歴の構成で **[履歴の手動作成を許可する]** に設定しておく必要があります。 詳細については、 [レポート履歴を制限する (レポート マネージャー)](../../reporting-services/reports/limit-report-history-report-manager.md)をクリックします。
-
-4. **[適用]** をクリックします。
-
-::: moniker-end
   
-### <a name="to-automatically-add-all-snapshots-to-report-history"></a>レポート履歴にすべてのスナップショットを自動で追加するには  
+## <a name="to-automatically-add-all-snapshots-to-report-history"></a>レポート履歴にすべてのスナップショットを自動で追加するには  
   
 1. 既にレポート実行スナップショットとして実行するように構成されたレポートでは、追加のプロパティを設定することで、スナップショットが更新されるたびにスナップショットのコピーをレポート履歴に保存できます。  
   
@@ -68,7 +50,7 @@ ms.locfileid: "67463425"
   
 6. **[適用]** をクリックします。  
   
-### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>スケジュールを基にスナップショットを自動でレポート履歴に追加するには  
+## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>スケジュールを基にスナップショットを自動でレポート履歴に追加するには  
   
 1. レポート マネージャーで、 **[コンテンツ]** ページに移動し、履歴を表示するアイテムの上にマウス ポインターを移動して、下矢印をクリックします。  
   
@@ -87,6 +69,97 @@ ms.locfileid: "67463425"
 ## <a name="see-also"></a>参照
 
 - [レポートの実行プロパティを構成する &#40;レポート マネージャー&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
-- [レポートを開閉&#40;レポート マネージャー&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)- [レポート履歴を制限&#40;レポート マネージャー&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [レポート履歴を制限する &#40;レポート マネージャー&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [スケジュール](../../reporting-services/subscriptions/schedules.md)   
 - [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+## <a name="to-manually-add-snapshots-to-report-history"></a>レポート履歴にスナップショットを手動で追加するには
+  
+1. Web ポータルでは、右クリックし、履歴を表示する項目に移動します。  
+  
+2. ドロップダウン メニューで、 **[管理]** を選択します。  
+  
+3. 選択、**履歴スナップショット**タブ。  
+  
+4. **履歴スナップショット**] ページで、[、**新しい履歴スナップショット**します。 新しいスナップショットが作成され、現在の日付と時間単位で下に表示されます、 **Created**列。  
+  
+    > [!NOTE]
+    > スナップショットを作成できるように、管理者がレポート履歴を構成する必要があります**履歴の手動で作成する許可する**します。 詳細については、次を参照してください。[レポート履歴を制限する (web ポータル)](../../reporting-services/reports/limit-report-history-report-manager.md)します。
+
+## <a name="to-add-snapshots-via-a-schedule-to-report-history"></a>スケジュールを使用してスナップショットをレポート履歴に追加するには
+
+1. Web ポータルでは、右クリックし、履歴を表示する項目に移動します。  
+  
+2. ドロップダウン メニューで、 **[管理]** を選択します。  
+  
+3. 選択、**履歴スナップショット**タブ。  
+  
+4. **履歴スナップショット**] ページで、[、**スケジュールと設定**ボタンをクリックします。  
+  
+5. **スケジュール**セクションで、少なくとも 1 つの選択肢が既に選択されていない場合は、以下のオプションのいずれかを選択します。
+    - **スケジュールに従って履歴スナップショットを作成する**します。  
+    - **スナップショットを手動で作成できるように**します。  
+  
+6. **詳細**セクションで、**すべての履歴スナップショットを保持**します。  
+  
+7. 必要に応じてチェック ボックスをオン**キャッシュ スナップショットをレポート履歴も保存**します。  
+  
+8.  **[適用]** を選択し、設定を保存します。  
+
+    > [!NOTE]  
+    > スナップショットを作成できるように、管理者がレポート履歴を構成する必要があります**履歴の手動で作成する許可する**します。 詳細については、次を参照してください。[レポート履歴を制限する (web ポータル)](../../reporting-services/reports/limit-report-history-report-manager.md)します。
+
+9.  **[適用]** をクリックします。
+
+## <a name="to-automatically-add-all-snapshots-to-report-history"></a>レポート履歴にすべてのスナップショットを自動で追加するには  
+  
+1. 既にレポート実行スナップショットとして実行するように構成されたレポートでは、追加のプロパティを設定することで、スナップショットが更新されるたびにスナップショットのコピーをレポート履歴に保存できます。  
+  
+2. Web ポータルでは、右クリックし、履歴を表示する項目に移動します。  
+  
+3. ドロップダウン メニューで、 **[管理]** を選択します。  
+  
+4. 選択、**履歴スナップショット**タブ。  
+  
+5. **履歴スナップショット**] ページで、[、**スケジュールと設定**ボタンをクリックします。  
+  
+6. **スケジュール**セクションで、少なくとも 1 つの選択肢が既に選択されていない場合は、以下のオプションのいずれかを選択します。
+    - **スケジュールに従って履歴スナップショットを作成する**します。  
+    - **スナップショットを手動で作成できるように**します。  
+  
+7. **詳細**セクションで、**すべての履歴スナップショットを保持**します。  
+  
+8. 必要に応じてチェック ボックスをオン**キャッシュ スナップショットをレポート履歴も保存**します。  
+  
+9. **[適用]** を選択し、設定を保存します。  
+  
+## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>スケジュールを基にスナップショットを自動でレポート履歴に追加するには  
+  
+1. Web ポータルでは、右クリックし、履歴を表示する項目に移動します。  
+  
+2. ドロップダウン メニューで、 **[管理]** を選択します。  
+  
+3. 選択、**履歴スナップショット**タブ。  
+  
+4. **履歴スナップショット**] ページで、[、**スケジュールと設定**ボタンをクリックします。  
+  
+5. **[次のスケジュールを使用して、スナップショットをレポート履歴に追加する]** チェック ボックスをオンにします。 次のいずれかを実行します。  
+  
+    - **[レポート固有のスケジュール]** をクリックします。 スケジュールの詳細を入力し、スケジュールの開始日と終了日を選択して、 **[OK]** をクリックします。  
+
+    - **[共有スケジュール]** を選択します。 一覧から適切なスケジュールを選択します。  
+
+5. **[適用]** をクリックします。  
+  
+## <a name="see-also"></a>参照
+
+- [レポートの実行プロパティを構成する (Web ポータル)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
+- [レポート履歴 (web ポータル) の制限します。](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [スケジュール](../../reporting-services/subscriptions/schedules.md)   
+- [Web ポータル &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+
+::: moniker-end

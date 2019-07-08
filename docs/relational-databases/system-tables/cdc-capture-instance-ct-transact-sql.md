@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: c4d6202e3ac68a1c1d36e307b9073ce23f1efb6e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336251"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586377"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc です。&lt;capture_instance&gt;_CT (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,16 +37,16 @@ ms.locfileid: "49336251"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|変更のコミット トランザクションに関連付けられたログ シーケンス番号 (LSN)。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソース テーブルに対する削除操作は、2 つの行を削除した場合、変更テーブルが格納されます 2 つの行がすべて同じ **_ _ $start_lsn**値。|  
-|**_ _ $end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、この列は常に NULL です。|  
+|**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、この列は常に NULL です。|  
 |**__$seqval**|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値。|  
 |**__$operation**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作を識別します。 次のいずれかになります。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (古い値)<br /><br /> 列データには、更新ステートメントを実行する前の行の値が割り当てられます。<br /><br /> 4 = 更新 (新しい値)<br /><br /> 列データには、更新ステートメントを実行した後の行の値が割り当てられます。|  
 |**__$update_mask**|**varbinary (128)**|変更された列を識別する、変更テーブルの列序数に基づくビット マスク。|  
 |*\< キャプチャ対象のソース テーブルの列 >*|各種|変更テーブル内のその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が指定されなかった場合、ソース テーブルのすべての列がこのテーブルに格納されます。|  
-|**_ _ $ command_id** |**int** |トランザクション内の操作の順序を追跡します。 |  
+|**__$command_id** |**int** |トランザクション内の操作の順序を追跡します。 |  
   
 ## <a name="remarks"></a>コメント  
 
-`__$command_id`列が列は、バージョン 2012 2016年からの累積的な更新で導入されました。 バージョンとダウンロードについては、サポート技術情報記事 3030352 を参照して[修正: 変更テーブルは注文が間違って更新の変更データを有効にした後の行は、Microsoft SQL Server データベースのキャプチャ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)します。  詳細については、[for SQL Server 2012、2014、2016、最新の CU へのアップグレード後に CDC の機能が動作](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)を参照してください。
+`__$command_id`列が列は、バージョン 2012 2016年からの累積的な更新で導入されました。 バージョンとダウンロードについては、サポート技術情報記事 3030352 を参照して[修正します。変更テーブルは注文が間違って更新の変更データを有効にした後の行は、Microsoft SQL Server データベースのキャプチャ](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)します。  詳細については、次を参照してください。 [for SQL Server 2012、2014、2016、最新の CU へのアップグレード後に CDC の機能が動作](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)します。
 
 ## <a name="captured-column-data-types"></a>キャプチャ対象列のデータ型  
  このテーブルに含まれるキャプチャ対象列は、ソースの対応する列と同じデータ型および値を持ちます。ただし、次の例外があります。  
@@ -58,7 +58,7 @@ ms.locfileid: "49336251"
  ただし、これらの列の値は、ソース列の値と同じです。  
   
 ### <a name="large-object-data-types"></a>ラージ オブジェクト データ型  
- データ型の列**イメージ**、**テキスト**、および**ntext**常に割り当てられている、 **NULL**ときの値 _ _ $操作 = 1 または\_\_$operation = 3。 データ型の列**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** 割り当てられている、 **NULL**値と\_\_$operation 列は、更新中に変更しない限り、3 を = です。 ときに\_ \_$operation = 1、これらの列には、削除時にその値が割り当てられます。 キャプチャ インスタンスに常に含まれる計算列の値がある**NULL**します。  
+ データ型の列**イメージ**、**テキスト**、および**ntext**常に割り当てられている、 **NULL**ときの値 _ _ $操作 = 1 または\_\_$operation = 3。 データ型の列**varbinary (max)** 、 **varchar (max)** 、または**nvarchar (max)** 割り当てられている、 **NULL**値と\_\_$operation 列は、更新中に変更しない限り、3 を = です。 ときに\_ \_$operation = 1、これらの列には、削除時にその値が割り当てられます。 キャプチャ インスタンスに常に含まれる計算列の値がある**NULL**します。  
   
  既定では、INSERT、UPDATE、WRITETEXT、または UPDATETEXT の 1 回のステートメントでキャプチャ対象列に追加できる最大サイズは、65,536 バイト (64 KB) です。 大きな LOB データをサポートするためには、このサイズを増やすには使用、 [max text repl size サーバー構成オプションを構成する](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)より大きな最大サイズを指定します。 詳細については、「 [max text repl size サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)」を参照してください。  
   
@@ -74,7 +74,9 @@ ms.locfileid: "49336251"
 2.  変更テーブル側の対応する列にも、同じ更新操作を実行します。  
   
 3.  ソース テーブル側で新しいデータ型を指定します。 データ型の変更が正しく変更テーブルに反映されます。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="data-manipulation-language-modifications"></a>データ操作言語の変更  
  変更データ キャプチャが有効になっているソース テーブルに対して挿入、更新、削除の各操作を実行すると、それらの DML 操作のレコードがデータベース トランザクション ログに表示されます。 変更データ キャプチャのプロセスは、トランザクション ログからそれらの変更に関する情報を取得し、変更を記録する変更テーブルに 1 つまたは 2 つの行を追加します。 エントリは、ソース テーブルでコミットされたときと同じ順序で変更テーブルに追加されますが、変更テーブルのエントリのコミットは通常 1 つのエントリではなく変更のグループに対して実行される必要があります。  
   

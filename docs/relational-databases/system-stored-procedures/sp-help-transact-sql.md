@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017758"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586245"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**照合順序**|**sysname**|データ型の照合順序。 NULL 以外の文字データ型を表します。|  
   
 3.  場合*名前*以外のデータ型では、任意のデータベース オブジェクトは、 **sp_help**この結果に指定したオブジェクトの種類に基づいて、設定済みでも追加の結果セットを返します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     |列名|データ型|説明|  
     |-----------------|---------------|-----------------|  
     |**名前**|**nvarchar(** 128 **)**|テーブル名|  
@@ -82,9 +84,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**型**|**nvarchar(** 31 **)**|テーブルの種類です。|  
     |**Created_datetime**|**datetime**|テーブルの作成日|  
   
-     指定すると、データベース オブジェクトによって**sp_help**追加の結果セットが返されます。  
+     Depending on the database object specified, **sp_help** returns additional result sets.  
   
-     場合*名前*がシステム テーブル、ユーザー テーブルまたはビュー、 **sp_help**次の結果セットが返されます。 ただし、ビューに対しては、データ ファイルがファイル グループ内のどこに配置されているかを表す結果セットは返されません。  
+     If *name* is a system table, user table, or view, **sp_help** returns the following result sets. However, the result set that describes where the data file is located on a file group is not returned for a view.  
   
     -   列オブジェクトに関して次の結果セットが返されます。  
   

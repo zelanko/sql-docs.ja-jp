@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037856"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533830"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 以降のリリース ノート
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>14.0.600.1274、2019/07/01
+
+| 問題を修正しました | 詳細 |
+| :---------- | :------ |
+| セキュリティ更新プログラム | &nbsp; |
+| 平日を選択できません共有毎週のスケジュールを作成するときに。 | &nbsp; |
+| レポートが正しく表示されないキャリッジ リターン Word 形式で | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 長い連動 SSRS 2017 を最新のアップグレード | &nbsp; |
+| 共有データセットの承認拡張機能を呼び出すときにエラーが発生しました | &nbsp; |
+| ストアド プロシージャで SSRS 2017 と、これにより、Web サービス エンドポイントをリンク レポートのすべてのデータを取得できません ReportingService2010.GetProperties メソッド PBIRS GetAllProperties で変更されたロジック | &nbsp; |
+| モバイル レポートでの単純なグリッド行ヘッダーは、グリッド内の項目がクリックされたときに表示されなくなります。 | &nbsp; |
+| データ ドリブン サブスクリプションのパラメーターの日付フィールドを使用することができません。 | &nbsp; |
+| 入れ子になった tablix は、小さいフォントまたは SSRS 2016 以降の部分のフォントを示しています。 | &nbsp; |
+| Out DateTime パラメーター エラー後さまざまなロケールの編集、サブスクリプションを持つユーザーのサブスクリプション | &nbsp; |
+| Null 配信拡張機能でデータ ドリブン サブスクリプションの作成が「配信エラーが発生しました」で失敗します。 | &nbsp; |
+| URL エンコードが正しくない Excel\Word 形式で値を設定すると | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109、2019/02/12
 

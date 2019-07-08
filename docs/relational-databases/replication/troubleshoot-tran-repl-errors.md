@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7547ce03478e810eac4725b8b543afd9862f9ca2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057464"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581347"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール:トラブルシューティング ツール: SQL Server トランザクション レプリケーション エラーを検出する 
 トランザクション レプリケーションがどのように動作するのかを基本的に理解していないと、レプリケーション エラーのトラブルシューティングはフラストレーションを感じることがあります。 パブリケーション作成の最初のステップは、スナップショット エージェントでスナップショットを作成し、スナップショット フォルダーにそれを保存することです。 次に、ディストリビューション エージェントがサブスクライバーにスナップショットを適用します。 
@@ -25,6 +25,8 @@ ms.locfileid: "63057464"
 1. レプリケートされるオブジェクトでトランザクションが発生し、トランザクション ログで "レプリケーション用" とマークされます。 
 2. ログ リーダー エージェントがトランザクション ログをスキャンし、"レプリケーション用" とマークされたトランザクションを探します。 これらのトランザクションはディストリビューション データベースに保存されます。 
 3. ディストリビューション エージェントは、リーダー スレッドを使用してディストリビューション データベースをスキャンします。 次に、ライター スレッドを使用することにより、このエージェントはサブスクライバーに接続して、変更をサブスクライバーに適用します。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 このプロセスのどのステップにおいてもエラーが発生する可能性があります。 これらのエラーを見つけることは、同期に関する問題のトラブルシューティングの最も困難な側面です。 レプリケーション モニターを使うとこのプロセスが簡単になります。 
 
