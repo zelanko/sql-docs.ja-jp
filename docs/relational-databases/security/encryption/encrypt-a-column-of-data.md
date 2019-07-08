@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: eb7a66bd1c433843db58d64dc2ea7a5a4a217a19
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997544"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585373"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,9 @@ PASSWORD = '<some strong password>';
 2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     USE AdventureWorks2012;  
     GO  

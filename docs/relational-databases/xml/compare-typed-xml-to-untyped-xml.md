@@ -26,12 +26,12 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad284fdb121900e3c6eff89f38213c09cf0331b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760697"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582312"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  1 年 1 月 1 日より小さい **xs:date** 値や **xs:dateTime** 値があると、インデックスが再構築されるときや、その値を含む XML データ型に対して XQuery ステートメントや XML-DML ステートメントが実行されるときに、実行時エラーが発生します。  
   
 2.  **xs:date** ファセット、 **xs:dateTime** ファセット、または XML スキーマ コレクションの既定値に負の年がある場合は、 **xs:date** 基本型または **xs:dateTime** 基本型で許可されている最も小さな値 (たとえば、 **xs:dateTime**の場合は 0001-01-01T00:00:00.0000000Z) に自動的に更新されます。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  負の年が含まれていても、単純な SQL SELECT ステートメントを使用して XML データ型全体を取得することはできます。 負の年は、新たにサポートされた範囲内の年に置き換えるか、要素や属性の型を **xs:string**に変更することをお勧めします。  
   
 ## <a name="see-also"></a>参照  

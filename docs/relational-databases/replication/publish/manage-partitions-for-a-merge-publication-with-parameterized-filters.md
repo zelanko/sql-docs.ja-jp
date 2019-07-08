@@ -15,12 +15,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ec0db9af18be44617103b15c8c66c40ef695f3d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be78157b91a1eebfc207be5f5ec5c28cb7346891
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124512"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585804"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,9 @@ ms.locfileid: "54124512"
     2.  スナップショットの既定の更新スケジュールをそのまま使用するか、または **[変更]** をクリックして別のスケジュールを指定します。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-a-partition"></a>パーティションを削除するには  
   
 1.  **[データ パーティション]** ページのグリッドでパーティションを選択します。  
@@ -102,11 +104,11 @@ ms.locfileid: "54124512"
   
 #### <a name="to-view-information-on-existing-partitions"></a>既存のパーティションに関する情報を表示するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication**」をご覧ください。 (省略可) 1 つのフィルター条件に基づく情報のみが返されるように、 **@suser_sname** または **@host_name** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication** 」をご覧ください。 (省略可) 1 つのフィルター条件に基づく情報のみが返されるように、 **@suser_sname** または **@host_name** を指定します。  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>新しいパーティションを定義して、新しいパーティション スナップショットを生成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication**にパブリケーションの名前を指定し、次のいずれかのパラメーターに、パーティションを定義するパラメーター値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication** にパブリケーションの名前を指定し、次のいずれかのパラメーターに、パーティションを定義するパラメーター値を指定します。  
   
     -   **@suser_sname** - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   

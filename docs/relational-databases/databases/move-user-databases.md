@@ -25,12 +25,12 @@ ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d73ac7a360743e057b99e4b026a7464952cf9f89
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a096d3b60a8836b112639c6c95c393a889d0dbaf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559312"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584296"
 ---
 # <a name="move-user-databases"></a>ユーザー データベースの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,9 @@ ms.locfileid: "51559312"
     ```  
   
 5.  次のクエリを実行して、ファイルが変更されたことを確認します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     SELECT name, physical_name AS CurrentLocation, state_desc  
     FROM sys.master_files  

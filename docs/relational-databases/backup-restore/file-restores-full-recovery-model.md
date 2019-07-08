@@ -20,12 +20,12 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 0d063f60a959c047385b50b150359c063bfa668c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242123"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579417"
 ---
 # <a name="file-restores-full-recovery-model"></a>ファイル復元 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,9 @@ ms.locfileid: "54242123"
      データベースを一貫性のある状態にするには、ファイル バックアップより後に作成されたトランザクション ログ バックアップを復元する必要があります。 トランザクション ログ バックアップは、復元するファイルに関連のある変更のみが適用されるので、すばやくロールフォワードできます。 破損していないファイルに関しては、コピーされずにロールフォワードが行われるので、データベース全体の復元より個別のファイルの復元の方が適している場合があります。 ただし、ログ バックアップのチェーンは、全体を読み取る必要があります。  
   
 5.  データベースを復旧します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  ファイル バックアップを使用して、データベースを以前の時点の状態に復元することもできます。 この操作を行うには、ファイル バックアップの完全なセットを復元してから、一番最近に復元されたファイル バックアップの後の時点までのトランザクション ログ バックアップを順番に復元する必要があります。 特定の時点への復旧の詳細については、「[SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)」を参照してください。  
   

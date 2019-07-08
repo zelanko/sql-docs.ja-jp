@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27b81b026c2ab0683ef28fe9284e61d7096e49c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d39a59e69b238d36aa2c07cfd9dfe94f0c977b44
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773290"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583186"
 ---
 # <a name="configure-parallel-index-operations"></a>並列インデックス操作の構成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47773290"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **並列処理の最大限度を設定するために使用するもの:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47773290"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47773290"
   
 -   MAXDOP インデックス オプションは、このオプションを指定しているクエリに関してのみ、max degree of parallelism 構成オプションをオーバーライドします。 次の表に、max degree of parallelism 構成オプションと MAXDOP インデックス オプションで指定できる有効な整数値を示します。  
   
-    |ReplTest1|Description|  
+    |[値]|Description|  
     |-----------|-----------------|  
     |0|現在のシステム ワークロードに応じて、使用する CPU 数をサーバーが決定するように指定します。 この値は既定値であり、推奨の設定です。|  
     |1|並列プラン生成を抑制します。 操作は順番に実行されます。|  
@@ -101,7 +101,9 @@ ms.locfileid: "47773290"
 7.  **[並列処理の最大限度]** を選択し、1 ～ 64 の範囲の値を入力します。  
   
 8.  **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>既存のインデックスに並列処理の最大限度を設定するには  

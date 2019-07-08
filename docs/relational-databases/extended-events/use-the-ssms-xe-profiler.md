@@ -17,12 +17,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86060ab437019e19c5b6f47e41df96ddc206a582
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 29fa2889373d602839d921a9117ba21cdbe4ca4f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477967"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583356"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>SSMS XEvent Profiler の使用
 
@@ -46,11 +46,13 @@ XEvent Profiler にアクセスするには、次の手順を実行します。
 
    ![XEProfiler メニュー](media/xevents-xe-profiler-menu.png)
 
-4. このセッションのすべての拡張イベントを表示する場合は、**[標準]** をダブルクリックします。 ログに記録されている SQL ステートメントを表示する場合は、**[T-SQL]** をクリックします。 セッションがまだ作成されていない場合は、セッションが自動的に作成されます。
+4. このセッションのすべての拡張イベントを表示する場合は、 **[標準]** をダブルクリックします。 ログに記録されている SQL ステートメントを表示する場合は、 **[T-SQL]** をクリックします。 セッションがまだ作成されていない場合は、セッションが自動的に作成されます。
 
    ![XEProfiler セッション](media/xevents-xe-profiler-start-session.png)
 
 5. これで拡張イベントが表示されるようになります。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ![XEProfiler ビューアー](media/xevents-xe-profiler-start-viewer.png)
 

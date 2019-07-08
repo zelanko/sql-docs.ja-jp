@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8346c4f7a5b324c8fb05a46e74aae3bbdd5dab49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f794901dd73fd8a6d49a000ebdcccd2e92184
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715819"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581089"
 ---
 # <a name="application-roles"></a>アプリケーション ロール
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "62715819"
 4.  アプリケーション ロール名およびパスワードが有効であれば、アプリケーション ロールが有効になります。  
   
 5.  この時点で、接続はユーザーの権限を失い、アプリケーション ロールの権限を取得します。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  アプリケーション ロールを使用して取得した権限は、接続している間のみ有効です。  
   
  前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、アプリケーション ロールの開始後にユーザーが元のセキュリティ コンテキストを再取得するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を切断して再接続する以外にありませんでした。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降の **sp_setapprole** には、クッキーを作成するオプションがあります。 クッキーには、アプリケーション ロールが有効になる前のコンテキスト情報が格納されます。 **sp_unsetapprole** でクッキーを使用すると、元のコンテキストにセッションを戻すことができます。 この新しいオプションの詳細と例については、「 [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)に許可された権限を介してのみ可能になります。  

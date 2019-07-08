@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15be60fe093bfc28d29e5d9b8883f3928936883b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523488"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583197"
 ---
 # <a name="create-filtered-indexes"></a>フィルター選択されたインデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52523488"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してフィルター選択されたインデックスを作成するには:**  
   
@@ -113,20 +113,22 @@ ms.locfileid: "52523488"
   
 3.  プラス記号をクリックして、フィルター選択されたインデックスを作成するテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[非クラスター化インデックス]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[非クラスター化インデックス]** を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-6.  **[インデックス キー列]** で、**[追加]** をクリックします。  
+6.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
   
 7.  **[_table\_name_ から列を選択]** ダイアログ ボックスで、一意のインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
-9. **[フィルター]** ページで、**[フィルター式]** に、フィルター選択されたインデックスの作成に使用する SQL 式を入力します。  
+9. **[フィルター]** ページで、 **[フィルター式]** に、フィルター選択されたインデックスの作成に使用する SQL 式を入力します。  
   
 10. **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-filtered-index"></a>フィルター選択されたインデックスを作成するには  

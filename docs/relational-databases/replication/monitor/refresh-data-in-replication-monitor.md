@@ -13,12 +13,12 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 59271c303494cf4e1e3dbb52be204c76ce767271
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b4d29d3f616a9545aead55937012cffed74bee5d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129052"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582677"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>レプリケーション モニターのデータの更新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +33,12 @@ ms.locfileid: "54129052"
 2.  **[パブリッシャーの設定]** ダイアログ ボックスで、 **[自動更新]** または **[更新頻度]** オプションを設定します。 **[自動更新]** 設定は、レプリケーション モニターのメイン ウィンドウに影響します。 **[更新頻度]** 設定は、自動更新に設定されているすべての詳細ウィンドウにも影響します (この設定の変更に影響を受けるのは、変更後に開かれた詳細ウィンドウのみです)。  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>詳細ウィンドウを自動更新するように指定するには  
   
-1.  レプリケーション モニターで詳細ウィンドウを開きます。 例 :  
+1.  レプリケーション モニターで詳細ウィンドウを開きます。 例:  
   
     1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
@@ -44,7 +46,7 @@ ms.locfileid: "54129052"
   
     3.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
-2.  **[サブスクリプション \<SubscriptionName>]** 詳細ウィンドウで、**[アクション]** をクリックし、**[自動更新]** をクリックします。 更新頻度は、 **[パブリッシャーの設定]** ダイアログ ボックスの **[更新頻度]** 設定によって決まります。  
+2.  **[サブスクリプション \<SubscriptionName>]** 詳細ウィンドウで、 **[アクション]** をクリックし、 **[自動更新]** をクリックします。 更新頻度は、 **[パブリッシャーの設定]** ダイアログ ボックスの **[更新頻度]** 設定によって決まります。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../../../relational-databases/replication/monitor/monitoring-replication.md)  

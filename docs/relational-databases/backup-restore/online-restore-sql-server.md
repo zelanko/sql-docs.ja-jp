@@ -14,12 +14,12 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4c91fff761b25e1a8fa1efea65d08121d5cf03c
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 06fb23f63b65d06be6e05569ecd31387830522ae
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242205"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581070"
 ---
 # <a name="online-restore-sql-server"></a>オンライン復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "54242205"
 1.  データを復元します。  
   
 2.  最後のログの復元に WITH RECOVERY を使用します。 この操作により、復元したデータがオンラインになります。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  場合によっては、ロールバックに必要なデータが起動時にオフラインになっているために、コミットされていないトランザクションをロールバックできないことがあります。 このような場合は、トランザクションの処理が遅延されます。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)」を参照してください。  
   
 > [!NOTE]  

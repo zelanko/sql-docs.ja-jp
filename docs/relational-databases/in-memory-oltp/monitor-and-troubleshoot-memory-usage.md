@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 63fa87597bfb1f98fa25342d42cf5a32d0eef024
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712004"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581841"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,9 @@ ms.locfileid: "52712004"
 2.  **[新しいクエリ]** をクリックします。  
   
 3.  次のコードを新しいクエリ ウィンドウに貼り付け、各セクションを実行します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     -- create a database to be used  
     CREATE DATABASE IMOLTP_DB  
@@ -138,7 +140,7 @@ ms.locfileid: "52712004"
   
 2.  オブジェクト エクスプローラーで、レポートが必要なデータベースを右クリックします。  
   
-3.  コンテキスト メニューで、 **[レポート]** -> **Standard [レポート]** -> **[メモリ最適化オブジェクトによるメモリ使用量]** の順にクリックします。  
+3.  コンテキスト メニューで、 **[レポート]**  -> **Standard [レポート]**  ->  **[メモリ最適化オブジェクトによるメモリ使用量]** の順にクリックします。  
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   

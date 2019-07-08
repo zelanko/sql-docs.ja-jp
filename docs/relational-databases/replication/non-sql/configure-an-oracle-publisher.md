@@ -13,12 +13,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b91e4f912de3eff2d64e7cbbf35aad56cbccbcd
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 19043cd42f89c16dbbab88264bf5710c50d14067
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072226"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586446"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle パブリッシャーの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ ms.locfileid: "58072226"
 3.  Oracle クライアント ソフトウェアと OLE DB プロバイダーを [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにインストールしてから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを停止して再起動します。 ディストリビューターを 64 ビットのプラットフォームで実行している場合は、64 ビット バージョンの Oracle OLE DB プロバイダーを使用する必要があります。  
   
 4.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle データベースをパブリッシャーとして構成します。  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、トランザクション レプリケーションとスナップショット レプリケーションに対する次の異種シナリオをサポートします。  
   
@@ -57,7 +59,7 @@ ms.locfileid: "58072226"
 > [!NOTE]  
 >  **MSSQLSERVERDISTRIBUTOR** パブリック シノニムと、 **CASCADE** オプションで構成した Oracle レプリケーション ユーザーを削除すると、Oracle パブリッシャーからすべてのレプリケーション オブジェクトが削除されます。  
   
- Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後、*\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)」でも説明します。  
+ Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後、 *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)」でも説明します。  
   
  DBA 特権を持つアカウントを使用して Oracle データベースに接続し、スクリプトを実行します。 このスクリプトでは、レプリケーション管理ユーザー スキーマのユーザーとパスワード、およびオブジェクトを作成するときに使用する既定のテーブルスペースの入力が要求されます (このテーブルスペースは Oracle データベース内に存在していることが必要です)。 オブジェクトに他のテーブルスペースを指定する方法の詳細については、「[Manage Oracle Tablespaces (Oracle テーブルスペースの管理)](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」を参照してください。 ユーザー名と複雑なパスワードを選択しますが、後で Oracle データベースをパブリッシャーとして構成するときにこの情報を提供する必要があるため、どちらもメモしておいてください。 スキーマはレプリケーションに必要なオブジェクトでのみ使用し、このスキーマではパブリッシュするテーブルを作成しないでください。  
   

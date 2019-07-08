@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5343d744d5b8be25a51ad48ec5ad797208a2643c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590686"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580187"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53590686"
 1.  エクスポート ファイルに格納されている DAC 定義を使用して、新しい DAC および関連するデータベースを作成します。DAC の配置時には、DAC パッケージ ファイル内の定義から新しい DAC が作成されますが、その場合と同じ方法で作成されます。  
   
 2.  エクスポート ファイルからデータを一括コピーします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-utility"></a>SQL Server ユーティリティ (SQL Server Utility)  
  データベース エンジンのインスタンスに DAC をインポートした場合、そのインポートした DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
   
@@ -92,16 +94,16 @@ ms.locfileid: "53590686"
   
 -   **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
--   **[次へ]**: **[インポートの設定]** ページに進みます。  
+-   **[次へ]** : **[インポートの設定]** ページに進みます。  
   
--   **[キャンセル]**: 操作を取り消し、ウィザードを閉じます。  
+-   **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
 ###  <a name="Import_settings"></a> [インポートの設定] ページ  
  このページを使用して、インポートする .bacpac ファイルの場所を指定します。  
   
--   **[ローカル ディスクからインポート]**: **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
+-   **[ローカル ディスクからインポート]** : **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
   
--   **[Import from Azure]\(Azure からインポート\)**: BACPAC ファイルを Microsoft Azure コンテナーからインポートします。 このオプションを検証するには、Microsoft Azure コンテナーに接続する必要があります。 [Import from Azure]\(Azure からインポート\) オプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
+-   **[Import from Azure]\(Azure からインポート\)** : BACPAC ファイルを Microsoft Azure コンテナーからインポートします。 このオプションを検証するには、Microsoft Azure コンテナーに接続する必要があります。 [Import from Azure]\(Azure からインポート\) オプションでは、一時ファイル用のローカル ディレクトリを指定する必要もあります。 一時ファイルは、指定した場所に作成され、操作の完了後も残ります。  
   
      Azure を参照するときに、1 つのアカウント内のコンテナーを切り替えることができます。 インポート操作を続行するには、1 つの .bacpac ファイルを指定する必要があります。 列は、**名前**、**サイズ**、または**更新日時**で並べ替えることができます。  
   
@@ -112,18 +114,18 @@ ms.locfileid: "53590686"
   
  **SQLServer のローカル インスタンスの場合**  
   
--   **[新しいデータベース名]**: インポートするデータベースの名前を指定します。  
+-   **[新しいデータベース名]** : インポートするデータベースの名前を指定します。  
   
--   **[データ ファイルのパス]**: データ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
+-   **[データ ファイルのパス]** : データ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
   
--   **[ログ ファイルのパス]**: ログ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
+-   **[ログ ファイルのパス]** : ログ ファイル用のローカル ディレクトリを指定します。 **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。  
   
  続行するには、 **[次へ]** をクリックします。  
   
  **Azure SQL データベースの場合**  
   
- - 「**[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)**」を参照してください。Azure portal、PowerShell、SSMS、または SqlPackage を使用する場合の詳しい手順が記載されています。  
- - 「**[SQL Database のオプションとパフォーマンス:各サービス階層で使用できる内容について理解する](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)**」を参照してください。さまざまなサービス階層について、詳しく説明されています。  
+ - 「 **[BACPAC ファイルをインポートして新しい Azure SQL Database を作成する](https://azure.microsoft.com/documentation/articles/sql-database-import/)** 」を参照してください。Azure portal、PowerShell、SSMS、または SqlPackage を使用する場合の詳しい手順が記載されています。  
+ - 「 **[SQL Database のオプションとパフォーマンス:各サービス階層で使用できる内容について理解する](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** 」を参照してください。さまざまなサービス階層について、詳しく説明されています。  
 
 ### <a name="validation-page"></a>[検証] ページ  
  このページを使用して、操作の妨げとなる問題を確認します。 続行するには、妨げとなる問題を解決し、 **[検証の再実行]** をクリックして、検証が成功したことを確認します。  

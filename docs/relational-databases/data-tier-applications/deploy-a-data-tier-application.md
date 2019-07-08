@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f734365cbfd8ca0b2ac1114853b0b412cb0e6d7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999653"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580974"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,9 @@ ms.locfileid: "62999653"
 2.  **[データベース]** ノードを右クリックし、 **[データ層アプリケーションの配置]** をクリックします。  
   
 3.  ウィザードのダイアログを完了し、[完了] をクリックします。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 以下は、ウィザード ページの詳細の一部です。 
      
 ### <a name="select-dac-package-page"></a>[DAC パッケージの選択] ページ  

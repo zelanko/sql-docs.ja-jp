@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ed9959bf001855e869262c9f91f2821bf7c59744
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 95c7b2a185786c37687a28978fc4786c45a99958
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689905"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586193"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,7 +62,9 @@ ms.locfileid: "55689905"
 3.  このページのフィールドの詳細については、「 [リソース ガバナー プロパティ](#RGProp)」を参照してください。  
   
 4.  変更を保存するには、 **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGProp"></a> Resource Governor properties  
  **[分類子関数の名前]**  
  分類子関数を一覧から選択して指定します。  
@@ -71,9 +73,9 @@ ms.locfileid: "55689905"
  チェック ボックスをオンまたはオフにしてリソース ガバナーを有効または無効にします。  
   
  **[リソース プール]**  
- 提供されるグリッドを使用して、リソース プールおよび外部リソース プールの構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク (**&#42;**) が付いている行をクリックします。  
+ 提供されるグリッドを使用して、リソース プールおよび外部リソース プールの構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **名前**  
+ **[名前]**  
  リソース プールの名前を指定します。  
   
  **[最小 CPU %]**  
@@ -91,9 +93,9 @@ ms.locfileid: "55689905"
  詳細については、「[CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)」および「[CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)」を参照してください。  
   
  **[リソース プールのワークロード グループ]**  
- 提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク (**&#42;**) が付いている行をクリックします。  
+ 提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **名前**  
+ **[名前]**  
  ワークロード グループの名前を指定します。  
   
  **重要度**  

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894de6f944f8e47c90cdd1338c694ab251d23d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 557136026e518d54d81bda44b9694f9fe86e7c9d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848946"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580662"
 ---
 # <a name="disable-check-constraints-for-replication"></a>レプリケーションの CHECK 制約の無効化
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47848946"
 > [!NOTE]  
 >  レプリケーションを使用してテーブルをパブリッシュした場合、レプリケーション エージェントが実行する操作に対しては CHECK 制約が自動的に無効になります。 レプリケーション エージェントがサブスクライバー側で挿入、更新、または削除を実行した場合、制約のチェックは行われません。ユーザーが挿入、更新、または削除を実行した場合は、制約のチェックが行われます。 制約がレプリケーション エージェントに対して無効になるのは、データが最初に挿入、更新、または削除された際に、発行者側で既に制約がチェックされているためです。 詳細については、「 [スキーマ オプションの指定](../../relational-databases/replication/publish/specify-schema-options.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -50,7 +50,9 @@ ms.locfileid: "47848946"
 3.  **[CHECK 制約]** ダイアログ ボックスで、 **[テーブル デザイナー]** の **[レプリケーションに対して適用]** の値として **[いいえ]** を選択します。  
   
 4.  **[閉じる]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>レプリケーションに対して CHECK 制約を無効にするには  

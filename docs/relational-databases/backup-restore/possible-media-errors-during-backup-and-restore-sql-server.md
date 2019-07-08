@@ -24,12 +24,12 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9878aaa62eedf9a2468aa02031e3dcf20e6d7df6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6875a490a2ebb4228321cbf9d9076af892c9471
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025526"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580223"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,9 @@ ms.locfileid: "63025526"
 2.  ページ チェックサムが存在するかどうかに関係なく、BACKUP によってバックアップ ストリームに個別のバックアップ チェックサムが生成されます。 復元操作でバックアップ チェックサムを使用し、バックアップが破損していないかどうかを検証することもできます。 バックアップ チェックサムは、データベース ページにではなくバックアップ メディアに格納されます。 バックアップ チェックサムは、復元時に使用することもできます。  
   
 3.  バックアップ セットは ( **msdb..backupset** の **has_backup_checksums**列に) バックアップ チェックサムがあるものとしてフラグが付けられます。 詳細については、「 [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)」を参照してください。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  復元操作中、バックアップ メディアにバックアップ チェックサムがある場合、既定では RESTORE ステートメントと RESTORE VERIFYONLY ステートメントの両方でバックアップ チェックサムとページ チェックサムが検証されます。 バックアップ チェックサムがない場合、いずれの復元操作も検証が行われずに続行されます。これは、バックアップ チェックサムがないと、ページ チェックサムの検証を確実に実行できないためです。  
   
 ## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>バックアップまたは復元操作中のページ チェックサム エラーへの応答  

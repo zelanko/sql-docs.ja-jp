@@ -13,12 +13,12 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6697f631ec0ca4c0fb2ee26529b1f0f410e36912
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0579405abb9a8b84d56e94db88a1a2a77f1d99d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63052331"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586012"
 ---
 # <a name="enable-or-disable-data-collection"></a>データ コレクションを有効または無効にする方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "63052331"
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  
   
 2.  **[データ コレクション]** を右クリックし、 **[データ コレクションの有効化]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-disable-the-data-collector"></a>データ コレクターを無効にするには  
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  

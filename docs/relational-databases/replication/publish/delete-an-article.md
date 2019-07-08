@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40a543a8b95853cacfb00f284e916ca216cd57b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f45e0cd36dd858105f1eb6dd01ed57c0b8ae77d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759226"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580038"
 ---
 # <a name="delete-an-article"></a>アーティクルの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,12 @@ ms.locfileid: "47759226"
 1.  削除するアーティクルを **@article** に指定し、削除元のパブリケーションを **@publication** に指定して、[sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) を実行してアーティクルを削除します。 **@force_invalidate_snapshot** に **1** を指定します。  
   
 2.  (省略可) パブリッシュされたオブジェクトをデータベースから完全に削除するには、パブリッシャーのパブリケーション データベースに対して `DROP <objectname>` コマンドを実行します。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>アーティクルをマージ パブリケーションから削除するには  
   
-1.  削除するアーティクルを **@article** に指定し、削除元のパブリケーションを **@publication** に指定して、[sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) を実行してアーティクルを削除します。 必要に応じて、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を指定し、 **@force_invalidate_snapshot** に **@force_reinit_subscription**」を参照してください。  
+1.  削除するアーティクルを **@article** に指定し、削除元のパブリケーションを **@publication** に指定して、[sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) を実行してアーティクルを削除します。 必要に応じて、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を指定し、 **@force_invalidate_snapshot** に **@force_reinit_subscription** 」を参照してください。  
   
 2.  (省略可) パブリッシュされたオブジェクトをデータベースから完全に削除するには、パブリッシャーのパブリケーション データベースに対して `DROP <objectname>` コマンドを実行します。  
   

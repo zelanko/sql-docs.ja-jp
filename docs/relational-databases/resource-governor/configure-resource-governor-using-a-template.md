@@ -12,18 +12,18 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0053db2d88c63a4ea7d5a49dc88048b218a6c517
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23b539444f2de609053d530df85edafcc58ba1f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689745"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582418"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>テンプレートを使用してリソース ガバナーを構成する
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に用意されているテンプレートを使用してリソース ガバナーを構成できます。  
   
--   **作業を開始する準備:**[Permissions](#Permissions)  
+-   **作業を開始する準備:** [Permissions](#Permissions)  
   
 -   **ワークロード グループの作成に使用するもの:**  [テンプレート](#ConfRGTemplate)  
   
@@ -47,7 +47,9 @@ ms.locfileid: "55689745"
 5.  テンプレートに加えた変更を保存するには、 **[OK]** をクリックします。  
   
 6.  クエリを実行するには、 **[実行]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>参照  
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   

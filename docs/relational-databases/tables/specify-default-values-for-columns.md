@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f60cb38a7b57ebd56d603d6041535974ec7ac7e
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 4fb94a2ae07993b1f95ab9adf97e164843aa06e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464718"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583001"
 ---
 # <a name="specify-default-values-for-columns"></a>列の既定値の指定
 
@@ -66,6 +66,8 @@ ms.locfileid: "56464718"
    > 数値の既定値を入力するには、数値を入力します。 オブジェクトまたは関数の場合は、その名前を入力します。 英数字の場合は、その値を単一引用符で囲んで入力します。
 
 4. **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="TsqlProcedure"></a> Transact-SQL を使用して既定値を指定する
 

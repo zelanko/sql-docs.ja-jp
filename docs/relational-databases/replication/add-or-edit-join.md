@@ -13,12 +13,12 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c6e0a2429bfb78f2cee7ae5871cef98660ccce1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665504"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585698"
 ---
 # <a name="add-or-edit-join"></a>結合の追加と編集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,9 @@ ms.locfileid: "62665504"
     -   既存の結合を編集する場合、手動で編集する必要があります。  
   
 3.  **[結合オプションを指定します]**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   フィルター選択するテーブル内で結合する列が一意な場合、 **[一意キー : フィルター選択されたテーブルの 1 つの行に関連する結合テーブル内の行 (一対一または一対多の関係)]** を選択します。 列が一意の場合、特別なパフォーマンスの最適化機能をマージ処理で利用できます。  
   
         > [!CAUTION]  

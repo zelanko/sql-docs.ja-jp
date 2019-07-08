@@ -12,20 +12,20 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 86298faa86bf439c7efcaddcce35033eeb2e63cc
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 283c1c2022cad1926771620db508b0457a70351d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689755"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581800"
 ---
 # <a name="disable-resource-governor"></a>リソース ガバナーを無効にしたとき
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   リソース ガバナーを無効にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **リソース ガバナーの無効化に使用するもの:**[オブジェクト エクスプローラー](#RGOffObjEx)、[Resource Governor のプロパティ](#RGOffProp)、[Transact-SQL](#RGOffTSQL)  
+-   **リソース ガバナーの無効化に使用するもの:** [オブジェクト エクスプローラー](#RGOffObjEx)、[Resource Governor のプロパティ](#RGOffProp)、[Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  リソース ガバナーを無効にすると、結果は次のようになります。  
@@ -56,7 +56,9 @@ ms.locfileid: "55689755"
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
 2.  **[リソース ガバナー]** を右クリックし、 **[無効化]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGOffProp"></a> リソース ガバナーのプロパティを使用してリソース ガバナーを無効にする  
  **[リソース ガバナーのプロパティ] ページでリソース ガバナーを無効にするには**  
   

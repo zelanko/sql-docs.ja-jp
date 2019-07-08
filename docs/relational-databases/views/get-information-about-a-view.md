@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2f413d9f82d128dbff31a8aea02bc2e31022234
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505732"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585000"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52505732"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してビューに関する情報を取得するには:**  
   
@@ -63,41 +63,43 @@ ms.locfileid: "52505732"
 1.  **オブジェクト エクスプローラー**で、プロパティを表示するビューを含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[ビュー]** フォルダーを展開します。  
   
 2.  プロパティを表示するビューを右クリックし、 **[プロパティ]** を選択します。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties show in the **View Properties** dialog box.  
   
-     **[ビューのプロパティ]** ダイアログ ボックスに次のプロパティが表示されます。  
+     **Database**  
+     The name of the database containing this view.  
   
-     **[データベース]**  
-     このビューを含むデータベースの名前です。  
+     **Server**  
+     The name of the current server instance.  
   
-     **[サーバー]**  
-     現在のサーバー インスタンスの名前です。  
+     **User**  
+     The name of the user of this connection.  
   
-     **ユーザー**  
-     この接続のユーザーの名前です。  
+     **Created date**  
+     Displays the date the view was created.  
   
-     **[作成日]**  
-     ビューが作成された日付を表示します。  
+     **Name**  
+     The name of the current view.  
   
-     **名前**  
-     現在のビューの名前です。  
+     **Schema**  
+     Displays the schema that owns the view.  
   
-     **[スキーマ]**  
-     ビューを所有するスキーマを表示します。  
+     **System object**  
+     Indicates whether the view is a system object. Values are True and False.  
   
-     **[システム オブジェクト]**  
-     ビューがシステム オブジェクトかどうかを指定します。 値は True と False です。  
-  
-     **[ANSI NULL]**  
-     オブジェクトが ANSI NULL オプションで作成されたかどうかを指定します。  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
      **Encrypted**  
-     ビューが暗号化されているかどうかを指定します。 値は True と False です。  
+     Indicates whether the view is encrypted. Values are True and False.  
   
-     **[引用符で囲まれた識別子]**  
-     オブジェクトが引用符で囲まれた識別子オプションで作成されたかどうかを指定します。  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **[スキーマ バインド]**  
-     ビューがスキーマ バインドされているかどうかを指定します。 値は True と False です。 スキーマ バインド ビューの詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」の SCHEMABINDING のトピックを参照してください。  
+     **Schema bound**  
+     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>ビュー デザイナー ツールを使用したビューのプロパティの取得  
   
@@ -143,7 +145,7 @@ ms.locfileid: "52505732"
      SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 ビューの使用者やビューをいつ使用するかなどの情報をコメントに含めることもできます。  
   
      **[TOP の指定]**  
-     展開すると、 **[TOP]**、 **[式]**、 **[パーセント]**、および **[With Ties]** の各プロパティのプロパティが表示されます。  
+     展開すると、 **[TOP]** 、 **[式]** 、 **[パーセント]** 、および **[With Ties]** の各プロパティのプロパティが表示されます。  
   
      **[(Top)]**  
      ビューに TOP 句が含まれるように指定します。この場合、最初の n 行または最初の n% の行だけが結果セットに返されます。 既定では、ビューは最初の 10 行を結果セットに返します。 返される行数を変更するか、異なるパーセントを指定する場合に使用します。  

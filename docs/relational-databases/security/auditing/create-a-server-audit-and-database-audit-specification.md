@@ -16,12 +16,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 455a0f9b8d570adcaa4fadae6f81163e1648a6c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716119"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582021"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,9 @@ ms.locfileid: "62716119"
 2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** を選択します。詳しくは、「 [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
   
 3.  オプションの選択が完了したら、 **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-database-level-audit-specification"></a>データベース レベルの監査仕様を作成するには  
   
 1.  オブジェクト エクスプローラーで、監査仕様を作成するデータベースを展開します。  

@@ -14,12 +14,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afa7622b5d8b71949018091862a70bc638b48c80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2dbfac4980252d42f9a1a9dbf8f6467b2f21b1c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716579"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583832"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,6 +42,8 @@ ms.locfileid: "62716579"
 1.  省略可能な [パス モード](#PATHMODE) (値は **lax** または **strict**)。  
   
 2.  [パス](#PATH) 自体。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="PATHMODE"></a> Path mode  
  必要に応じて、パス式の先頭に **lax** または **strict**キーワードを指定してパス モードを宣言します。 既定値は **lax**です。  

@@ -24,12 +24,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd312800fd20ae3e2d57c09df20aa9a14181af8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716099"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582039"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "62716099"
 4. **[ワード ブレーカーの言語]。** ドロップダウン リストから言語を選択します。 この選択は、インデックスに適したワード ブレーカーを識別するために使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ワード ブレーカーを使用してフルテキスト インデックス付きデータ内の単語の境界を識別します。  
   
 5.  **[型列]。** フルテキスト インデックスの付いた列の文書型を保持する列の名前を選択します。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **注:** **[型列]** は、 **[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image** である場合のみ有効です。  
   
 6. **[統計的セマンティクス]。** 選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  

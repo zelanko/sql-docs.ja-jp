@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcb4c7385c509e132da589149c4da9f2db5c0d5f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047781"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582233"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,9 @@ ms.locfileid: "63047781"
 3.  **[次へ]** をクリックし、タスクの一覧が、 **[チェックリスト生成オプションの構成]** ページの設定と一致することを確認します。  
   
 4.  **[完了]** をクリックし、移行チェックリスト レポートが、選択したオブジェクトに対してのみ生成されたことを確認します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  このレポートを、メモリ最適化アドバイザー ツールおよびネイティブ コンパイル アドバイザー ツールによって生成されたレポートと比較して、レポートの精度を確認できます。 詳細については、「 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 」および「 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)」を参照してください。  
   
 **SQL Server PowerShell を使用して移行チェックリストを生成するには**  

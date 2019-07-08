@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddb53c690023a0d0abdb95a9ca054f611990a4ee
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025459"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584310"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,9 @@ AdventureWorks_snapshot_evening
 1.  ソース データベースの現在のサイズに基づいて、データベース スナップショットを格納するのに十分なディスク領域があることを確認します。 データベース スナップショットの最大サイズは、スナップショット作成時におけるソース データベースのサイズです。 詳細については、「[データベース スナップショットのスパース ファイルのサイズを表示する方法 &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)」を参照してください。  
   
 2.  AS SNAPSHOT OF 句を使用して、CREATE DATABASE ステートメントをファイルに対して実行します。 スナップショットを作成するには、ソース データベースの各データベース ファイルの論理名を指定する必要があります。 構文は次のとおりです。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -116,10 +118,10 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     *source_**database_name* はソース データベース、*logical_file_name* はファイルを参照するときに SQL Server で使用される論理名、*os_file_name* はファイルを作成する際にオペレーティング システムが使用するパスとファイル名、*database_snapshot_name* はデータベースを戻す対象になるスナップショットの名前です。 この構文の詳細については、「 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)を使用することです。  
+     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
-    >  データベース スナップショットを作成する場合、ログ ファイル、オフラインのファイル、復元中のファイル、および機能していないファイルを CREATE DATABASE ステートメントで使用することはできません。  
+    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
   

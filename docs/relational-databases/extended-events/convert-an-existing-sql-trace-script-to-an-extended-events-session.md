@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 206749c851423dd7a3b0ea06e1f443732d86b8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669295"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583848"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>既存の SQL トレース スクリプトから拡張イベント セッションへの変換
 
@@ -37,7 +37,9 @@ ms.locfileid: "62669295"
 3.  使用するフィルターおよび等価な拡張イベントのアクションを、fn_trace_getfilterinfo 関数を使用して特定します。  
   
 4.  拡張イベントにおける等価なイベント、アクション、および述語 (フィルター) を使用して、拡張イベント セッションを手動で作成します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="to-obtain-the-trace-id"></a>トレース ID を取得するには  
   
 1.  クエリ エディターで SQL トレース スクリプトを開き、スクリプトを実行してトレース セッションを作成します。 この手順を実行するために必ずしもトレース セッションが実行されている必要はありません。  

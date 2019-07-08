@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbadda2e3843fc4b15a5ebc2e5ec57a1c76cbf2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9c4bbcb901aca307d0dce9ed7d4a724778392c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946189"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579608"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,6 +59,8 @@ XML 以外のフォーマット ファイルまたは XML フォーマット フ
 1.   **bcp** コマンドライン ユーティリティを使用して、既定のフォーマット ファイルを作成します。
 
 2.   テキスト エディターで、既定のフォーマット ファイルを変更します。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 変更後のフォーマット ファイルで、存在するそれぞれのフィールドをインポート先のテーブルの対応する列にマップする必要があります。 どのテーブル列 (複数可) をスキップするかも指定する必要があります。 
 

@@ -13,12 +13,12 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5669af5105e8d46f346d279b3be8027b7c22088d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12e425f889826a5fc9464ee8c85c88ab05043f4b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62695000"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580285"
 ---
 # <a name="start-or-stop-a-collection-set"></a>コレクション セットの開始または停止
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +70,10 @@ ms.locfileid: "62695000"
 1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]** 、 **[システム データ コレクション セット]** の順に展開します。  
   
 2.  開始するコレクション セットを右クリックして **[データ コレクション セットの開始]** をクリックします。  
-  
-     メッセージ ボックスにはこのアクションの結果が表示され、コレクション セットのアイコンに緑色の矢印が付いている場合は、コレクション セットが開始されていることを示します。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     A message box displays the results of this action, and a green arrow on the icon for the collection set indicates that the collection set has started.  
   
 #### <a name="to-stop-a-collection-set"></a>コレクション セットを停止するには  
   

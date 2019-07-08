@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 597b0e7d39d178eb2ed6f8ede8db5a1852117dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e299541e48de590474b9f1e13996ab921b9246d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018657"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580499"
 ---
 # <a name="modify-a-stored-procedure"></a>ストアド プロシージャの変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "63018657"
 6.  変更をプロシージャの定義に保存するには、 **[クエリ]** メニューの **[実行]** をクリックします。  
   
 7.  更新されたプロシージャの定義を [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトとして保存するには、 **[ファイル]** メニューの **[名前を付けて保存]** をクリックします。 ファイル名をそのまま使用するか、または別の名前を入力し、 **[保存]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!IMPORTANT]  
 >  すべてのユーザー入力を検証します。 ユーザー入力は検証するまで連結しないでください。 検証していないユーザー入力から作成されたコマンドは、絶対に実行しないでください。  
   

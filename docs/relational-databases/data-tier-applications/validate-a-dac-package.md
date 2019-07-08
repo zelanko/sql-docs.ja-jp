@@ -16,21 +16,23 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e7e22f164ba8da071a93dff1535b777993e76e2
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 40db1a19c2c32db5b75e5715e7a0a051eca53b96
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590476"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580098"
 ---
 # <a name="validate-a-dac-package"></a>DAC パッケージの検証
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   DAC パッケージを運用環境に配置する前にパッケージの内容を確認し、既存の DAC をアップグレードする前にアップグレード処理を検証するようにしてください。 これは、特に、外部で開発されたパッケージを配置する場合に当てはまります。  
   
-1.  **作業を開始する準備:**[前提条件](#Prerequisites)  
+1.  **作業を開始する準備:** [前提条件](#Prerequisites)  
   
-2.  **DAC のアップグレード:**[DAC の内容の表示](#ViewDACContents)、[データベースの変更の表示](#ViewDBChanges)、[アップグレード処理の表示](#ViewUpgradeActions)、[Compare DACs](#CompareDACs)  
-  
+2.  **DAC のアップグレード:** [DAC の内容の表示](#ViewDACContents)、[データベースの変更の表示](#ViewDBChanges)、[アップグレード処理の表示](#ViewUpgradeActions)、[Compare DACs](#CompareDACs)  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="Prerequisites"></a> 前提条件  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、データベースに対して [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行してください。また、ストアド プロシージャやその他のユーザー定義コードなど、データベースのコードを確認してください。  
   
@@ -39,15 +41,15 @@ ms.locfileid: "53590476"
   
  **SQL Server 開発者ツールでの DAC の表示**  
   
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。  
+1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **[SQL Server]** プロジェクト テンプレートを選択し、 **[名前]**、 **[場所]**、および **[ソリューション名]** を指定します。  
+2.  **[SQL Server]** プロジェクト テンプレートを選択し、 **[名前]** 、 **[場所]** 、および **[ソリューション名]** を指定します。  
   
-3.  **ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[プロパティ]** をクリックします。  
+3.  **ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[プロジェクトの設定]** タブの **[出力の種類]** セクションで **[データ層アプリケーション (.dacpac File)]** チェック ボックスをオンにし、プロパティ ダイアログ ボックスを閉じます。  
   
-5.  **ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、**[データ層アプリケーションのインポート]** をクリックします。  
+5.  **ソリューション エクスプローラー**でプロジェクト ノードを右クリックし、 **[データ層アプリケーションのインポート]** をクリックします。  
   
 6.  **ソリューション エクスプローラー** を使用して、サーバーの選択ポリシーや配置前スクリプトと配置後スクリプトなど、DAC 内のすべてのファイルを開くことができます。  
   

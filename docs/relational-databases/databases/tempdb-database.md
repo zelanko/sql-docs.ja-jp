@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994236"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583437"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -244,6 +244,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     ```
 3. メモリ最適化テーブルに対するクエリではロックと分離のヒントがサポートされていないため、メモリ最適化 tempdb カタログ ビューに対するクエリでは、ロックと分離のヒントは適用されません。 SQL Server 内の他のシステム カタログ ビューと同じように、システム ビューに対するすべてのトランザクションは、READ COMMITTED (または、このケースでは READ COMMITTED SNAPSHOT) の分離になります。
 4. メモリ最適化 tempdb メタデータが有効になっていると、一時テーブルの列ストア インデックスで問題が発生する場合あります。 このプレビュー リリースでは、メモリ最適化 tempdb メタデータを使用するときは、一時テーブルで列ストア インデックスを使用しないことをお勧めします。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > これらの制限は、tempdb システム ビューを参照するときにのみ適用されます。ユーザー データベース内のメモリ最適化テーブルにアクセスするときは、必要であれば、同じトランザクションで一時テーブルを作成することができます。

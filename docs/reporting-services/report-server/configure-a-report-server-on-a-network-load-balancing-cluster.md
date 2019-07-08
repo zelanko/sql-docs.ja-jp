@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937241"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563995"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>ネットワーク負荷分散クラスターにおけるレポート サーバーの構成
 
@@ -62,16 +62,16 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
     次の例は、取得する必要がある値を示しています。 例を構成ファイルにコピーしないでください。このキーの値は有効ではありません。  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Report Server 用の Web.config ファイルを開き、生成した <`machineKey`> 要素を <`system.web`> セクションに貼り付けます。 既定では、レポート マネージャーの Web.config ファイルは、\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config にあります。  
+2. Report Server 用の Web.config ファイルを開き、生成した <`MachineKey`> 要素を <`system.web`> セクションに貼り付けます。 既定では、レポート マネージャーの Web.config ファイルは、\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config にあります。  
   
 3. ファイルを保存します。  
   
 4. スケールアウト配置内の各レポート サーバーに対し、前の手順を繰り返します。  
   
-5. \Reporting Services\Reportserver フォルダーにあるすべての Web.Config ファイルの <`system.web`> セクションに同一の <`machineKey`> 要素が含まれていることを確認します。  
+5. \Reporting Services\Reportserver フォルダーにあるすべての Web.Config ファイルの <`system.web`> セクションに同一の <`MachineKey`> 要素が含まれていることを確認します。  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ NLB クラスターでスケールアウト配置を運用するには、ユー�
     次の例は、取得する必要がある値を示しています。 例を構成ファイルにコピーしないでください。このキーの値は有効ではありません。 レポート サーバーには、大文字と小文字の正しい区別が必要です。
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. ファイルを保存します。

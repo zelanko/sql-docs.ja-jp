@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2e095dafe61a2745f6401f7596e7dffcdeb05a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 3f1c47068d35da60877f9523a905c539cfac9e17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974131"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579808"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>サーバー インスタンスでのフルテキスト検索の管理と監視
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "57974131"
 1.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[サーバーのプロパティ]** ダイアログ ボックスで、 **[詳細設定]** ページをクリックし、フルテキスト検索に関するサーバーの情報を表示します。 フルテキスト プロパティは次のとおりです。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **[既定のフルテキスト言語]**  
   
          フルテキスト インデックス列に、既定の言語を指定します。 フルテキスト インデックス データの言語の分析は、データの言語に依存します。 このオプションの既定値は、サーバーの言語です。 表示される設定に対応する言語については、「[sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)」をご覧ください。  

@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6169d09cd048c9883836c3d34ff8912e9101ba07
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542042"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586319"
 ---
 # <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "59542042"
   
  クエリ ストアを使って、次に示す操作を短時間で実行できます。  
   
--   特定の期間 (最後の 1 時間、1 日、1 週間など) にわたって実行メトリックが低下しているすべてのクエリを識別します。 分析をスピードアップさせるために、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、**[後退したクエリ]** を使用します。  
+-   特定の期間 (最後の 1 時間、1 日、1 週間など) にわたって実行メトリックが低下しているすべてのクエリを識別します。 分析をスピードアップさせるために、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[後退したクエリ]** を使用します。  
   
 -   後退したクエリの中から、複数のプランがあり、プランの選択が不適切だったためにパフォーマンスが低下しているクエリを簡単に見つけ出します。 **[Regressed Queries]** (後退したクエリ) の **[プランの概要]** ウィンドウを使用して、後退したクエリのすべてのプランと一定期間のクエリのパフォーマンスを視覚化します。  
   
@@ -67,7 +67,9 @@ ms.locfileid: "59542042"
 4.  クエリで使用されるインデックスがデフラグされていることを確認します。  
   
 5.  高コストのクエリの書き直しを検討します。 たとえば、クエリのパラメーター化を利用して、動的 SQL の使用率を下げます。 データを読み取るときに最適なロジックを実装します (アプリケーション側ではなく、データベース側でデータのフィルター処理を適用します)。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ab-testing"></a>A/B テストを実行する  
  クエリ ストアを使用して、予定しているアプリケーションの変更の導入前と導入後のワークロードのパフォーマンスを比較します。 次の一覧は、クエリ ストアを使用して、環境またはアプリケーションの変更がワークロードのパフォーマンスに与える影響を評価できるさまざまな例を示しています。  
   
@@ -142,7 +144,7 @@ ms.locfileid: "59542042"
   
 ![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
-**[実行回数]** メトリックを使用して、上位クエリがアドホックであるかどうかを分析します (クエリ ストアを `QUERY_CAPTURE_MODE = ALL`で実行する必要があります)。 上の図から、**[リソースを消費するクエリの上位]** の 90% が 1 回だけ実行されていることがわかります。  
+**[実行回数]** メトリックを使用して、上位クエリがアドホックであるかどうかを分析します (クエリ ストアを `QUERY_CAPTURE_MODE = ALL`で実行する必要があります)。 上の図から、 **[リソースを消費するクエリの上位]** の 90% が 1 回だけ実行されていることがわかります。  
   
 別の方法として、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを実行して、システム内のクエリ テキスト、クエリ、およびプランの合計数を取得し、query_hash と plan_hash を比較することで、それらの違いを判別できます。  
   

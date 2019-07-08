@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3b558913488a6e8ded7b4e7df38c97af377331b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0705e18841fe4d7e67199e9a7d7e885712a53077
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535578"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581449"
 ---
 # <a name="modify-user-defined-functions"></a>ユーザー定義関数の変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52535578"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ユーザー定義関数を変更する方法:**  
   
@@ -74,7 +74,9 @@ ms.locfileid: "52535578"
 5.  クエリ ウィンドウで、ALTER FUNCTION ステートメントに必要な変更を加えます。  
   
 6.  **ファイル** メニューの **function_name**_の保存_をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-modify-a-user-defined-function"></a>ユーザー定義関数を変更するには  

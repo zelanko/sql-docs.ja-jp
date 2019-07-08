@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78f09611e71c39902e81580d752d302fee604be9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514391"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584139"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>メンテナンス プランの作成 (メンテナンス プラン デザイン画面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "52514391"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   [メンテナンス プラン デザイン画面を使用したメンテナンス プランの作成](#SSMSProcedure)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "52514391"
      **サーバー**  
      **[サーバー]** ダイアログ ボックスが表示されます。このダイアログ ボックスで、サブプラン タスクを実行するサーバーを選択します。 このオプションは、マルチサーバー環境のマスター サーバーのみで有効になります。 詳細については、「[マルチサーバー環境の作成](../../ssms/agent/create-a-multiserver-environment.md)」と「[メンテナンス プラン &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)」を参照してください。  
   
-     **名前**  
+     **[名前]**  
      メンテナンス プランの名前が表示されます。 新しいメンテナンス プランの名前は、メンテナンス プラン デザイナーを開く前にダイアログ ボックスで指定します。 メンテナンス プランの名前を変更するには、オブジェクト エクスプローラーでプランを右クリックし、 **[名前の変更]** をクリックします。  
   
      **[説明]**  
@@ -94,13 +94,13 @@ ms.locfileid: "52514391"
      **デザイナー画面**  
      メンテナンスプランのデザインとメンテナンスを行います。 デザイナー画面を使用して、プランへのメンテナンス タスクの追加、プランからのタスクの削除、タスク間の優先順位制約の指定、タスクの分岐および並列処理の指定を行います。  
   
-     2 つのタスクの間にある優先順位制約により、タスク間の関係が確立されます。 1 番目のタスク ( *先行タスク*) の実行結果が指定の条件を満たした場合のみ、2 番目のタスク ( *依存タスク*) が実行されます。 一般的に指定される実行結果は、 **[成功]**、 **[失敗]**、 **[完了]** のいずれかです。 詳細については、下記の「手順 **8** 」を参照してください。  
+     2 つのタスクの間にある優先順位制約により、タスク間の関係が確立されます。 1 番目のタスク ( *先行タスク*) の実行結果が指定の条件を満たした場合のみ、2 番目のタスク ( *依存タスク*) が実行されます。 一般的に指定される実行結果は、 **[成功]** 、 **[失敗]** 、 **[完了]** のいずれかです。 詳細については、下記の「手順 **8** 」を参照してください。  
   
 5.  デザイン領域のヘッダーで、 **[Subplan_1]** をダブルクリックし、 **[サブプランのプロパティ]** ダイアログ ボックスにサブプランの名前と説明を入力します。  
   
      **[サブプランのプロパティ]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **名前**  
+     **[名前]**  
      サブプランの名前です。  
   
      **[説明]**  
@@ -162,16 +162,16 @@ ms.locfileid: "52514391"
          2 つのタスク間の制約の動作を定義します。  
   
          **[評価操作]**  一覧  
-         優先順位制約で使用する評価操作を指定します。 操作として、 **[制約]**、 **[式]**、 **[式と制約]**、および **[式または制約]** を指定できます。  
+         優先順位制約で使用する評価操作を指定します。 操作は次のとおりです: **[制約]** 、 **[式]** 、 **[式と制約]** 、 **[式または制約]** 。  
   
          **[値]** 一覧  
-         制約値として、 **[成功]**、 **[失敗]**、または **[完了]** を指定します。 デフォルト値は **[成功]** です。  
+         制約値として次の値を指定します: **[成功]** 、 **[失敗]** 、 **[完了]** 。 デフォルト値は **[成功]** です。  
   
         > [!NOTE]  
         >  優先順位制約を表す線は、 **[成功]** の場合は緑色、 **[失敗]** の場合は赤色、 **[完了]** の場合は青色です。  
   
          **[式]**  
-         操作として **[式]**、 **[式と制約]**、または **[式または制約]** を使用する場合は、式を入力します。 式はブール値に評価される必要があります。  
+         操作として **[式]** 、 **[式と制約]** 、または **[式または制約]** を使用する場合は、式を入力します。 式はブール値に評価される必要があります。  
   
          **テスト**  
          式を検証します。  
@@ -217,7 +217,7 @@ ms.locfileid: "52514391"
   
         1.  **[テキスト ファイルのレポートを生成する]** で、 **[新しいファイルの作成]** または **[ファイルに追加]** を選択します。  
   
-        2.  上記の選択内容に応じて、 **[フォルダー]** または **[ファイル名]** ボックスに情報を入力することにより、新しいファイルまたは追加されるファイルの名前および完全なパスを入力します。 または、参照ボタン (**[...]**) をクリックし、**[フォルダーの検索 -**_server\_name_] または **[データベース ファイルの検索 -**_server\_name_] ダイアログ ボックスで、フォルダーへのパスまたはファイル名を選択します。  
+        2.  上記の選択内容に応じて、 **[フォルダー]** または **[ファイル名]** ボックスに情報を入力することにより、新しいファイルまたは追加されるファイルの名前および完全なパスを入力します。 または、参照ボタン ( **[...]** ) をクリックし、 **[フォルダーの検索 -** _server\_name_] または **[データベース ファイルの検索 -** _server\_name_] ダイアログ ボックスで、フォルダーへのパスまたはファイル名を選択します。  
   
         3.  **[エージェント オペレーター]** 一覧で **[電子メール受信者にレポートを送信する]** を選択した場合は、電子メール レポートの受信者を選択します。  
   
@@ -231,49 +231,51 @@ ms.locfileid: "52514391"
     5.  **[レポートとログ記録]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 12. ログ ファイル ビューアーで結果を参照するには、 **オブジェクト エクスプローラー**で **[メンテナンス プラン]** フォルダーを右クリックするか、特定のメンテナンス プランを右クリックして **[履歴の表示]** を選択します。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   
-     **[ログ ファイルの表示 -**_server\_name_] ダイアログ ボックスでは、次のオプションを使用できます。  
+     **Load Log**  
+     Open a dialog box where you can specify a log file to load.  
   
-     **[ログの読み込み]**  
-     読み込むログ ファイルを指定できるダイアログ ボックスが開きます。  
+     **Export**  
+     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
   
-     **[エクスポート]**  
-     **[ログ ファイルの概要]** グリッドに表示されている情報をテキスト ファイルとしてエクスポートするためのダイアログ ボックスが開きます。  
+     **Refresh**  
+     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
   
-     **[更新]**  
-     選択されたログの表示を更新します。 **[更新]** ボタンをクリックすると、選択したログが対象サーバーから再度読み込まれ、それと同時にすべてのフィルター設定が適用されます。  
+     **Filter**  
+     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
   
-     **[フィルター]**  
-     **[接続]** や **[日付]** などの **[全般]** フィルター基準を含め、ログ ファイルのフィルター選択に使用する設定を指定できるダイアログ ボックスが開きます。  
+     **Search**  
+     Search the log file for specific text. Searching with wildcard characters is not supported.  
   
-     **検索**  
-     ログ ファイル内で特定のテキストを検索します。 ワイルドカード文字を使用した検索はサポートされません。  
+     **Stop**  
+     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
   
-     **[停止]**  
-     ログ ファイル エントリの読み込みを停止します。 たとえば、最新のエントリのみを表示したい場合に、リモートまたはオフラインのログ ファイルの読み込みに長い時間がかかるときは、このオプションを使用することをお勧めします。  
-  
-     **[ログ ファイルの概要]**  
-     この情報パネルには、ログ ファイルのフィルター選択の概要が表示されます。 ファイルがフィルター選択されない場合、 **"フィルターが適用されていません"** と表示されます。 ログにフィルターが適用されている場合、"**ログ エントリのフィルター条件:** \<filter criteria>" と表示されます。  
+     **Log file summary**  
+     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
   
      **Date**  
-     イベントの日付が表示されます。  
+     Displays the date of the event.  
   
-     **ソース**  
-     サービスの名前 (たとえば MSSQLSERVER) など、イベントの作成元のソース機能が表示されます。 ログの種類によっては表示されません。  
+     **Source**  
+     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
   
-     **メッセージ**  
-     イベントに関連付けられているメッセージがすべて表示されます。  
+     **Message**  
+     Displays any messages associated with the event.  
   
-     **[ログの種類]**  
-     イベントが属するログの種類が表示されます。 [ログ ファイルの概要] ウィンドウには、選択したログがすべて表示されます。  
+     **Log Type**  
+     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
   
-     **[ログ ソース]**  
-     イベントがキャプチャされているソース ログの説明が表示されます。  
+     **Log Source**  
+     Displays a description of the source log in which the event is captured.  
   
-     **[選択した行の詳細]**  
-     行を選択すると、選択されたイベント行の詳細情報がページの下部に表示されます。 列をグリッド内の別の場所にドラッグすることで、列を並べ替えることができます。 グリッドのヘッダーで列のセパレーター バーを左右にドラッグすると、列の幅を変更できます。 グリッドのヘッダーで列のセパレーター バーをダブルクリックすると、内容の長さに合わせて自動的に列の幅が調整されます。  
+     **Selected row details**  
+     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
   
-     **インスタンス**  
-     イベントが発生したインスタンスの名前です。 これは、 *computer name*\\*instance name*と表示されます。  
+     **Instance**  
+     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
   
   

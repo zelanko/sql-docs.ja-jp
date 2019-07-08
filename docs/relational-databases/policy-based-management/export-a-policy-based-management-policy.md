@@ -13,12 +13,12 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6aee718961b0e9afb12de09651346d1686821adc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7ac4da02b259779ef1027ad771f529ee918d12c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007603"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584922"
 ---
 # <a name="export-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのエクスポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,5 +58,6 @@ ms.locfileid: "63007603"
 6.  **[ポリシーのエクスポート]** ダイアログ ボックスで、アドレス バーにファイルのパスと名前を入力します。 または、ダイアログ ボックスのナビゲーション ウィンドウでファイルの適切な場所を見つけ、 **[ファイル名]** ボックスに XML ファイルの名前を入力します。  
   
 7.  完了したら、 **[保存]** をクリックします。  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

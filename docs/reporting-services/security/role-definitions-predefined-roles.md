@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: edb599f3ae735ddc07755f73499a3e71d0c20746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270240"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500200"
 ---
 # <a name="role-definitions---predefined-roles"></a>ロールの定義 - 定義済みロール
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、定義済みのロールと共にインストールされます。このロールを使用すると、レポート サーバーの操作へのアクセスを許可することができます。 定義済みの各ロールは、関連するタスクのコレクションを示しています。 定義済みのロールにグループやユーザー アカウントを割り当てることで、レポート サーバーの操作にすぐにアクセスできます。  
   
 ## <a name="how-to-use-predefined-roles"></a>定義済みロールを使用する方法  
   
-1. 定義済みロールを確認して、これらのロールをそのまま使用できるかどうかを判断します。 タスクを調整したり追加のロールを定義したりする必要がある場合は、この手順を実行してから、ユーザーを特定のロールに割り当てる必要があります。  
+1. 定義済みロールを確認して、これらのロールをそのまま使用できるかどうかを判断します。 タスクを調整したり追加のロールを定義したりする必要がある場合は、この手順を実行してから、ユーザーを特定のロールに割り当てる必要があります。 作成または編集するのには、カスタム ロールは、SQL Server Management Studio を使用します。 詳細については、「 [ロールを作成、削除、または変更する &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)」を参照してください。
   
 2. レポート サーバーへのアクセス権を必要とするユーザーやグループ、およびそのレベルを特定します。 **閲覧者** ロールまたは **レポート ビルダー** ロールには、大半のユーザーを割り当てる必要があります。 **パブリッシャー** ロールには、少数のユーザーしか割り当てる必要はありません。 また、 **コンテンツ マネージャー**に割り当てる必要があるのは、ごく限られたユーザーです。  
 

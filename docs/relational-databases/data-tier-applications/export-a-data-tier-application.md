@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ebee4a462cd865ef606d38ecf205bf41065a0d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513818"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580284"
 ---
 # <a name="export-a-data-tier-application"></a>データ層アプリケーションのエクスポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "52513818"
 1.  エクスポートではエクスポート ファイル (BACPAC ファイル) に DAC 定義が構築されます。DAC の抽出時には DAC パッケージ ファイルに DAC 定義が構築されますが、これと同様の処理が行われます。 エクスポートされた DAC 定義には、現在のデータベース内のすべてのオブジェクトが含まれます。 もともと DAC から配置され、その後直接変更が加えられたデータベースに対してエクスポート プロセスが実行された場合、エクスポートされる定義は、データベース内のオブジェクト セットと一致し、元の DAC に定義されている内容とは一致しません。  
   
 2.  データベース内のすべてのテーブルからデータが一括コピーされて、エクスポート ファイルに組み込まれます。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  エクスポート プロセスでは、DAC バージョンが 1.0.0.0 に設定され、エクスポート ファイル内の DAC の説明は空の文字列に設定されます。 データベースが DAC から配置された場合、エクスポート ファイル内の DAC 定義には、元の DAC に割り当てられた名前が格納されます。それ以外の場合、DAC 名はデータベース名に設定されます。  
   
 
@@ -65,7 +67,7 @@ Azure SQL DB で、**データベースごとに**、すべてのテーブルま
   
 3.  データベース名を右クリックします。  
   
-4.  **[タスク]** をクリックし、**[データ層アプリケーションのエクスポート]** を選択します。  
+4.  **[タスク]** をクリックし、 **[データ層アプリケーションのエクスポート]** を選択します。  
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -90,7 +92,7 @@ Azure SQL DB で、**データベースごとに**、すべてのテーブルま
   
  **[次へ]** : **[DAC パッケージの選択]** ページに進みます。  
   
- **[キャンセル]** - 操作を取り消し、ウィザードを閉じます。  
+ **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
 ##  <a name="Export_settings"></a> [エクスポートの設定] ページ  
  このページを使用して、BACPAC ファイルを作成する場所を指定します。  

@@ -15,12 +15,12 @@ ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bf9130dadbc0b7a851856d70d78403b6f0008e1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: caae503d57460d88d2396842f565125ff32c9378
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581847"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579441"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>例:データベースの部分復元 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,16 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
      この時点で、プライマリ ファイル グループ、ファイル グループ `A` 、およびファイル グループ `C` はオンラインです。 ファイル グループ `B` はオフラインで、このファイル グループのファイルは復旧待ち状態のままです。 遅延トランザクションは解決され、ログの切り捨てが行われます。  
   
 3.  ファイル グループ `B`をオンライン復元します。  
-  
-     3 番目の復元シーケンスでは、データベース管理者がファイル グループ `B`を復元します。 ファイル グループ `B` のバックアップは、ファイル グループ B が読み取り専用になってから行います。このため、復旧中にこのファイル グループをロールフォワードする必要はありません。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
     ```  
   
-     すべてのファイル グループがオンラインになります。  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>その他の例  
   

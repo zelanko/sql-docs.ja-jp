@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bba79c497f9999f263de90622b5c306d035ec823
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716086"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581995"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,7 +110,9 @@ ms.locfileid: "62716086"
 3.  監査を有効にします。  
   
 4.  Windows **イベント ビューアー**、 **[ログ ファイルの表示]** 、または fn_get_audit_file 関数を使用して、監査イベントを閲覧します。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  詳細については、「 [サーバー監査およびサーバー監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 」および「 [サーバー監査およびデータベース監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
   
 ## <a name="considerations"></a>考慮事項  

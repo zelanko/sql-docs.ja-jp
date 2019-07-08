@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b515cbf3da95ffdab82ad609937b7a1738684678
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539720"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492875"
 ---
 # <a name="create-indexes-with-included-columns"></a>付加列インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "52539720"
   このトピックでは、 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用し、付加列 (非キー列) を追加して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の非クラスター化インデックスの機能を拡張する方法について説明します。 非キー列を含めることにより、より多くのクエリをカバーする非クラスター化インデックスを作成できます。 これは、非キー列には次の利点があるためです。  
   
 -   非キー列には、インデックス キー列として許可されていないデータ型を設定できる。  
-  
 -   インデックス キー列の数やインデックス キーのサイズを計算するときに、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では非キー列が考慮されない。  
   
  クエリ内のすべての列が、キー列または非キー列としてインデックスに含まれるているとき、非キー列を含むインデックスにより、クエリ パフォーマンスが大幅に向上します。 クエリ オプティマイザーではインデックス内のすべての列値を参照できるので、テーブルやクラスター化インデックスのデータにアクセスすることがなく、ディスク I/O 操作が少なくて済むため、パフォーマンスが向上します。  
@@ -84,17 +83,17 @@ ms.locfileid: "52539720"
   
 3.  プラス記号をクリックして、非キー列を含むインデックスの作成先となるテーブルを展開します。  
   
-4.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントし、**[非クラスター化インデックス...]** を選択します。  
+4.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントし、 **[非クラスター化インデックス]** を選択します。  
   
 5.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-6.  **[インデックス キー列]** タブで、**[追加...]** をクリックします。  
+6.  **[インデックス キー列]** タブで、 **[追加...]** をクリックします。  
   
 7.  _[table\_name_ **から列を選択]** ダイアログ ボックスで、インデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   
 8.  **[OK]** をクリックします。  
   
-9. **[付加列]** タブで、**[追加...]** をクリックします。  
+9. **[付加列]** タブで、 **[追加...]** をクリックします。  
   
 10. _[table\_name_ **から列を選択]** ダイアログ ボックスで、非キー列としてインデックスに追加する 1 つまたは複数のテーブル列のチェック ボックスをオンにします。  
   

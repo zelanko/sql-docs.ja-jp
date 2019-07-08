@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a93f71f886484d38996a867bebbc6ef32c33c86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175628"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492866"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  
@@ -75,7 +75,7 @@ Web ポータルには通常、フォルダー、レポート、データ ソー
   
 レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートについて詳しくは、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」をご覧ください。
   
- レポートを選択して実行するには、Web ポータルを起動して、表示するレポートを検索または参照する方法が最も簡単です。 レポートを開く方法の順を追った説明については、[レポートの開閉](../../reporting-services/reports/open-and-close-a-report-report-manager.md)に関するページをご覧ください。  
+ レポートを選択して実行するには、Web ポータルを起動して、表示するレポートを検索または参照する方法が最も簡単です。  
   
  レポートを実行した後、そのレポートを更新すると新しいデータを表示できます。  
   

@@ -19,12 +19,12 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 053ea3fdc7ad56ef6b6c9c9992506cf07623cb5e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621550"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584020"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47621550"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **suspect_pages テーブルを管理する方法:**  
   
@@ -128,12 +128,14 @@ ms.locfileid: "47621550"
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
-2.  **[システム データベース]**、 **[msdb]**、 **[テーブル]**、 **[システム テーブル]** の順に展開します。  
+2.  **[システム データベース]** 、 **[msdb]** 、 **[テーブル]** 、 **[システム テーブル]** の順に展開します。  
   
 3.  **[dbo.suspect_pages]** を展開し、 **[上位 200 行の編集]** を右クリックします。  
   
 4.  クエリ ウィンドウで、目的の行を編集、更新、または削除します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-manage-the-suspectpages-table"></a>suspect_pages テーブルを管理するには  

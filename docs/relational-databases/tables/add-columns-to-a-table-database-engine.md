@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 485a31f0f7ff230ffdedcf7aa2d889191f8a637d
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 231590b5b1d15e85bc6fb3ca062253dfc3fba9b9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801355"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585078"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>テーブルへの列の追加 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "56801355"
     >  新しい列の作成時には、列プロパティの既定の値が追加されますが、 **[列のプロパティ]** タブで値を変更できます。  
   
 6.  列の追加が完了したら、 **ファイル** メニューで  **table name** _table name_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-insert-columns-into-a-table"></a>テーブルに列を挿入するには  

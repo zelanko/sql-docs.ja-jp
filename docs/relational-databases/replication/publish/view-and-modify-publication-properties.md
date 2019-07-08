@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25808ffd9a65a62d1f2849f54ca5fcb3ed5015b6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e11c0b6a3f7ef8ebeeb0c8059e26e37494ab345e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133582"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585506"
 ---
 # <a name="view-and-modify-publication-properties"></a>パブリケーション プロパティの表示および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,9 @@ ms.locfileid: "54133582"
 3.  パブリケーションを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  必要に応じてプロパティを変更し、 **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>レプリケーション モニターでパブリケーションのプロパティを表示および変更するには  
   
 1.  レプリケーション モニターの左ペインでパブリッシャー グループを展開し、パブリッシャーを展開します。  
@@ -111,7 +113,7 @@ ms.locfileid: "54133582"
 1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)を実行します。このとき、変更するパブリケーションのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** を実行します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot**を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription**」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription** 」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>マージ パブリケーションのプロパティを表示するには  
   
@@ -122,7 +124,7 @@ ms.locfileid: "54133582"
 1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。このとき、変更するパブリケーションのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** を実行します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、**@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、**@force_reinit_subscription** に **1** を指定します。変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[パブリケーションとアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」をご覧ください。  
+    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_reinit_subscription** に **1** を指定します。変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[パブリケーションとアーティクルのプロパティの変更](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」をご覧ください。  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>スナップショットのプロパティを表示するには  
   
@@ -160,7 +162,7 @@ ms.locfileid: "54133582"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
-4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティに特定の <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値が設定されているかどうかを判断するには、論理積演算子 (Microsoft Visual C# では **&**、Microsoft Visual Basic では **And**) を使用します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値を変更するには、包括的論理和演算子 (Visual C# では **|**、Visual Basic では **Or**) および排他的論理和演算子 (Visual C# では **^**、Visual Basic では **Xor**) を使用します。  
+4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティに特定の <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値が設定されているかどうかを判断するには、論理積演算子 (Microsoft Visual C# では **&** 、Microsoft Visual Basic では **And**) を使用します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値を変更するには、包括的論理和演算子 (Visual C# では **|** 、Visual Basic では **Or**) および排他的論理和演算子 (Visual C# では **^** 、Visual Basic では **Xor**) を使用します。  
   
 5.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に値 **false** (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   
@@ -172,7 +174,7 @@ ms.locfileid: "54133582"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出して、オブジェクトのプロパティを取得します。 このメソッドが **false**を返す場合、手順 2. でパブリケーション プロパティを不適切に設定したか、パブリケーションが存在していません。  
   
-4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティに特定の <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値が設定されているかどうかを判断するには、論理積演算子 (Visual C# では **&**、Visual Basic では **And**) を使用します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値を変更するには、包括的論理和演算子 (Visual C# では **|**、Visual Basic では **Or**) および排他的論理和演算子 (Visual C# では **^**、Visual Basic では **Xor**) を使用します。  
+4.  (省略可) プロパティを変更するには、設定可能なプロパティに新しい値を設定します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティに特定の <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値が設定されているかどうかを判断するには、論理積演算子 (Visual C# では **&** 、Visual Basic では **And**) を使用します。 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティの <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 値を変更するには、包括的論理和演算子 (Visual C# では **|** 、Visual Basic では **Or**) および排他的論理和演算子 (Visual C# では **^** 、Visual Basic では **Xor**) を使用します。  
   
 5.  (省略可) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** に <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>を指定した場合、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出してサーバーに変更をコミットします。 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> に値 **false** (既定値) を指定した場合、変更は直ちにサーバーに送られます。  
   

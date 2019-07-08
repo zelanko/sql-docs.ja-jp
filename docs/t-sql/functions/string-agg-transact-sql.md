@@ -16,16 +16,16 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e368b005eaa1f5729f177356f3e06ea5effbd417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a2da75020ff7e84bcbef2e20a0fa9a0e0ce83d08
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947537"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564168"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 文字列式の値を連結し、値の間に区切り記号を挿入します。 文字列の末尾に区切り記号は追加されません。
  
@@ -40,7 +40,8 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
     WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )   
 ```
 
-## <a name="arguments"></a>引数 
+## <a name="arguments"></a>引数
+
 *式 (expression)*  
 任意のデータ型の[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 連結時に式は `NVARCHAR` または `VARCHAR` 型に変換されます。 文字列以外の型は `NVARCHAR` 型に変換されます。
 
@@ -57,8 +58,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
  
   結果を並べ替えるために使用できる、定数ではない[式](../../t-sql/language-elements/expressions-transact-sql.md)のリスト。 クエリごとに 1 つの `order_by_expression` のみを使用できます。 既定の並べ替え順は昇順です。   
   
-
-## <a name="return-types"></a>戻り値の型 
+## <a name="return-types"></a>戻り値の型
 
 戻り値の型は、最初の引数 (式) に依存します。 入力の引数が文字列型 (`NVARCHAR`、`VARCHAR`) の場合、結果の型は入力の型と同じになります。 次の表は自動変換の一覧です。  
 
@@ -70,8 +70,8 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int、bigint、smallint、tinyint、numeric、float、real、bit、decimal、smallmoney、money、datetime、datetime2、 |NVARCHAR(4000) |
 
+## <a name="remarks"></a>Remarks
 
-## <a name="remarks"></a>Remarks  
 `STRING_AGG` は、すべての式を行から取り出し、それらを 1 つの文字列に連結する集計関数です。 式の値は、暗黙的に文字列型に変換され、連結されます。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型の変換の詳細については、「[CAST および CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。 
 
 入力式が `VARCHAR` 型の場合、区切り記号を `NVARCHAR` 型にすることはできません。 
@@ -80,9 +80,10 @@ null 値は無視され、対応する区切り記号は追加されません。
 
 `STRING_AGG` は任意の互換性レベルで使用できます。
 
-## <a name="examples"></a>使用例 
+## <a name="examples"></a>使用例
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 新しい行で区切られた名前のリストを生成する 
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>A. 新しい行で区切られた名前のリストを生成する
+
 次の例では、復帰文字で区切られた名前のリストを単一の結果セルに生成します。
 ```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
@@ -98,7 +99,8 @@ FROM Person.Person;
 > [!NOTE]  
 >  Management Studio のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、 **[結果をテキストで表示]** に切り替えてください。   
 
-### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. NULL 値を含まない、コンマ区切りの名前のリストを生成する   
+### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. NULL 値を含まない、コンマ区切りの名前のリストを生成する
+
 次の例では、null 値を 'N/A' に置き換え、コンマで区切った名前を 1 つの結果セルに返します。  
 ```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 
@@ -111,8 +113,9 @@ FROM Person.Person;
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-### <a name="c-generate-comma-separated-values"></a>C. コンマ区切り値を生成する 
-```sql   
+### <a name="c-generate-comma-separated-values"></a>C. コンマ区切り値を生成する
+
+```sql
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
   AS names 
@@ -120,7 +123,7 @@ FROM Person.Person;
 ```
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-|names | 
+|names |
 |--- |
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />[...] |
 
@@ -128,7 +131,8 @@ FROM Person.Person;
 >  Management Studio のクエリ エディターを使用している場合、 **[結果をグリッドに表示]** オプションで復帰文字を実装できません。 結果セットを正しく表示するには、 **[結果をテキストで表示]** に切り替えてください。   
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 関連するタグが付いたニュース記事を返す 
-記事とそのタグは別のテーブルに分かれています。 開発者は、すべての関連するタグが付いた記事ごとに 1 つの行を返したいと考えています。 この場合、次のクエリを使用します。 
+記事とそのタグは別のテーブルに分かれています。 開発者は、すべての関連するタグが付いた記事ごとに 1 つの行を返したいと考えています。 この場合、次のクエリを使用します。
+
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
 FROM dbo.Article AS a       
@@ -146,7 +150,9 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 町ごとの電子メール アドレスのリストを生成する
-次のクエリは、従業員の電子メール アドレスを検索し、町ごとにグループ化します。 
+
+次のクエリは、従業員の電子メール アドレスを検索し、町ごとにグループ化します。
+
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
 FROM dbo.Employee 
@@ -178,7 +184,8 @@ GROUP BY town;
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+ 
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

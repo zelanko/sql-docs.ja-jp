@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d0b215dbc61be9d7a710300301ec63f8796a915
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f2b2a7a957bd964b52f4dcda847de84cdef3cbc0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129512"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581268"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>メモリ最適化テーブル サブスクライバーへのレプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54129512"
   
 -   **メモリ最適化テーブルへのレプリケーションがサポートされるように、サブスクライバー データベースを構成する**  
   
-     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) または [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を使用して、**@memory_optimized** プロパティを **true** に設定します。  
+     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) または [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を使用して、 **@memory_optimized** プロパティを **true** に設定します。  
   
 -   **メモリ最適化テーブルへのレプリケーションがサポートされるように、アーティクルを構成する**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54129512"
   
 2.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **@schema_option** パラメーターを    
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **@schema_option** パラメーターを   
     **0x40000000000** に設定します。  
   
 3.  [アーティクルのプロパティ] ウィンドウで **[Enable Memory optimization]** (メモリ最適化を有効にする) を **true**に設定します。  
@@ -47,7 +47,9 @@ ms.locfileid: "54129512"
 4.  スナップショット エージェント ジョブを起動して、このパブリケーションの初期スナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
 5.  ここで、新しいサブスクリプションを作成します。 **サブスクリプションの新規作成ウィザード** で **[Memory Optimized Subscription]** (メモリ最適化サブスクリプション) を **true**に設定します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  これでメモリ最適化テーブルはパブリッシャーから更新を受け取り始めます。  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>既存のトランザクション レプリケーションを再構成する  
@@ -58,7 +60,7 @@ ms.locfileid: "54129512"
   
 2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でパブリケーションのアーティクルのプロパティに移動して、 **[Enable Memory optimization]** (メモリ最適化を有効にする) を true に設定します。  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **@schema_option** パラメーターを    
+     [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して構成している場合は、**sp_addarticle** ストアド プロシージャの **@schema_option** パラメーターを   
     **0x40000000000** に設定します。  
   
 3.  クラスター化インデックスは、メモリ最適化テーブルでサポートされていません。 レプリケーションにこれを処理させるには、変換先で非クラスター化インデックスに変換します。そのためには、 **[Convert clustered index to nonclustered for memory optimized article]** (クラスター化インデックスをメモリ最適化アーティクル向けに非クラスター化インデックスに変換する) を true に設定します。  

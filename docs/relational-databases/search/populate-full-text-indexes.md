@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 577de0bc80ce718c393cf8d3691e8f8051dfe56f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042274"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586118"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -191,24 +191,26 @@ ALTER FULLTEXT INDEX ON Production.Document
 
      次のオプションがあります。  
   
-    -   新しいスケジュールを**作成**するには、**[新規作成]** をクリックします。  
+    -   新しいスケジュールを**作成**するには、 **[新規作成]** をクリックします。  
   
         スケジュールを作成できる **[新しいフルテキスト インデックス テーブルのスケジュール]** ダイアログ ボックスが表示されます。 スケジュールを保存するには、 **[OK]** をクリックします。  
   
         > [!IMPORTANT]  
         >  *[フルテキスト インデックスのプロパティ]* ダイアログ ボックスを閉じると、新しいスケジュールが SQL Server エージェント ジョブ (*database_name*. **table_name** でテーブルの増分作成を開始) に関連付けられます。 同じフルテキスト インデックスのスケジュールを複数作成した場合、すべてのスケジュールで同じジョブが使用されます。  
   
-    -   既存のスケジュールを**変更**するには、それを選択し、**[編集]** をクリックします。  
+    -   既存のスケジュールを**変更**するには、それを選択し、 **[編集]** をクリックします。  
   
          スケジュールを変更できる **[新しいフルテキスト インデックス テーブルのスケジュール]** ダイアログ ボックスが表示されます。  
   
         > [!NOTE]  
         >  SQL Server エージェント ジョブの変更については、「[ジョブの変更](../../ssms/agent/modify-a-job.md)」を参照してください。  
   
-    -   既存のスケジュールを**削除**するには、それを選択し、**[削除]** をクリックします。  
+    -   既存のスケジュールを**削除**するには、それを選択し、 **[削除]** をクリックします。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="crawl"></a> フルテキスト作成 (クロール) で発生したエラーのトラブルシューティング  
 クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 既定では、所与のインスタンス (この例では、既定のインスタンス) のクロール ログは `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` フォルダーにあります。
  

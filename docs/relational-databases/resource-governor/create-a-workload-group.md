@@ -13,21 +13,21 @@ ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 665e88f2b86276beb16acb043dd270d0a8cf6da5
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: f09c3fecff6dd64934a456fafc0eabfcb134c30f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689835"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581832"
 ---
 # <a name="create-a-workload-group"></a>ワークロード グループの作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ワークロード グループを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **ワークロード グループの作成に使用するもの:**[SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **ワークロード グループの作成に使用するもの:** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -57,7 +57,9 @@ ms.locfileid: "55689835"
 6.  既定値から変更する場合は、その対象となる行の他のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
 7.  変更を保存するには、 **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="CreRPTSQL"></a> Transact-SQL を使用してワークロード グループを作成する  
  **ワークロード グループを作成するには [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

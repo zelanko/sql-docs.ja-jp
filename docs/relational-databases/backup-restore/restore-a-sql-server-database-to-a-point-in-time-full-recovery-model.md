@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b858639e60419d955a32981ceeac56d8acc42110
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e455c56de9231bfd9f750a45eb96eeb10945c8aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133182"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580317"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server データベースを特定の時点に復元する方法 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "54133182"
   
     -   **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
+         参照ボタン ( **[...]** ) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -120,12 +120,14 @@ ms.locfileid: "54133182"
   
      オプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」を参照してください。  
   
-12. 選択した時点まで復元するために必要であれば、**[復元の前にログ末尾のバックアップを実行する]** が選択されます。 この設定を変更する必要はありません。ログの末尾をバックアップする必要がない場合でも、そのように選択してかまいません。  
+12. 選択した時点まで復元するために必要であれば、 **[復元の前にログ末尾のバックアップを実行する]** が選択されます。 この設定を変更する必要はありません。ログの末尾をバックアップする必要がない場合でも、そのように選択してかまいません。  
   
 13. データベースへのアクティブな接続がある場合、復元操作は失敗する可能性があります。 **とデータベース間のすべてのアクティブな接続を閉じるには、** [既存の接続を閉じる] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] オプションをオンにします。 このチェック ボックスをオンにすると、データベースは復元操作の実行前にシングル ユーザー モードに設定され、復元操作の完了後にマルチユーザー モードに設定されます。  
   
 14. 復元操作と復元操作の間に、その都度、確認のメッセージを表示するには、 **[各バックアップを復元する前に確認する]** をオンにします。 通常は、その必要はありません。データベースが大きく、復元操作のステータスを監視する必要がある場合にのみ使用します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **Before you begin**  
   
@@ -135,7 +137,7 @@ ms.locfileid: "54133182"
   
  **[!INCLUDE[tsql](../../includes/tsql-md.md)] の基本構文**  
   
- RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=**_time_**,** RECOVERY...  
+ RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY...  
   
  復旧ポイントは、 **time** で指定する *datetime*の値以前に行われた最後のトランザクション コミットの時点です。  
   
@@ -155,7 +157,7 @@ ms.locfileid: "54133182"
   
 3.  差分バックアップが存在する場合、データベースを復旧せずに最新のデータベースの差分バックアップを復元します (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  各トランザクション ログ バックアップを作成順に適用して、ログの復元を停止する時点を指定します (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY)。  
+4.  各トランザクション ログ バックアップを作成順に適用して、ログの復元を停止する時点を指定します (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY)。  
   
     > [!NOTE]  
     >  RECOVERY オプションと STOPAT オプション。 トランザクション ログ バックアップに、要求した時点の情報が格納されていない場合、たとえば、指定した日時がトランザクション ログに記録されている時点より後の場合などに、警告が生成されます。この場合、データベースは復旧されません。  

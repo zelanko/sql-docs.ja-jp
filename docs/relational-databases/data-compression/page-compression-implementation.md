@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9256ecdba8aa898cc0eb927f90a2f4f6e6a6a6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b9983c4627be4b3d60b6fdb40e10932f380b970
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665651"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580989"
 ---
 # <a name="page-compression-implementation"></a>ページの圧縮の実装
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "62665651"
 2.  プレフィックスの圧縮  
   
 3.  ディクショナリの圧縮  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  ページの圧縮を使用する場合、行の圧縮のみを使用して、リーフ レベル以外のページのインデックスが圧縮されます。 行の圧縮の詳細については、 [「行の圧縮の実装」](../../relational-databases/data-compression/row-compression-implementation.md)を参照してください。  
   
 ## <a name="prefix-compression"></a>プレフィックスの圧縮  

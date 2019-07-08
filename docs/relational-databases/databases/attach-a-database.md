@@ -16,12 +16,12 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 292c180b70143826ebdb8ea75b015dcbe6a2011f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c7b7588801419f57d04996d6bd2cad335a9eede
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523922"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583227"
 ---
 # <a name="attach-a-database"></a>データベースのインポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,68 +58,70 @@ ms.locfileid: "52523922"
 2.  **[データベース]** を右クリックし、 **[アタッチ]** をクリックします。  
   
 3.  アタッチするデータベースを指定するには、 **[データベースのインポート]** ダイアログ ボックスで **[追加]** をクリックし、 **[データベース ファイルの検索]** ダイアログ ボックスで目的のデータベースが常駐するディスク ドライブを選択します。次に、そのディレクトリ ツリーを展開し、そのデータベースの .mdf ファイルを選択します。たとえば、次のように指定します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > 既にアタッチされているデータベースを選択しようとすると、エラーが発生します。  
+    > Trying to select a database that is already attached generates an error.  
   
-     **[アタッチするデータベース]**  
-     選択されたデータベースに関する情報を表示します。  
+     **Databases to attach**  
+     Displays information about the selected databases.  
   
-     \<空白の列ヘッダー>  
-     アタッチ操作の状態を示すアイコンが表示されます。 表示されるアイコンの種類は、下の **[状態]** の説明に示します。  
+     \<no column header>  
+     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
   
-     **[MDF ファイルの場所]**  
-     選択した MDF ファイルのパスとファイル名が表示されます。  
+     **MDF File Location**  
+     Displays the path and file name of the selected MDF file.  
   
      **Database Name**  
-     データベースの名前が表示されます。  
+     Displays the name of the database.  
   
-     **[次の名前でアタッチ]**  
-     データベースを別の名前でアタッチする場合に、その名前を指定します。  
+     **Attach As**  
+     Optionally, specifies a different name for the database to attach as.  
   
-     **[所有者]**  
-     データベースの所有者のドロップダウン リストです。これを使用して、必要に応じて別の所有者を選択できます。  
+     **Owner**  
+     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
   
-     **ステータス**  
-     次の表に示すように、データベースの状態を表示します。  
+     **Status**  
+     Displays the status of the database according to the following table.  
   
     |アイコン|状態テキスト|[説明]|  
     |----------|-----------------|-----------------|  
     |(アイコンなし)|(テキストなし)|このオブジェクトのアタッチ操作が開始されていないか、保留されています。 これは、ダイアログ ボックスを開いたときの既定の状態です。|  
     |緑の右向き三角形|[実行中]|アタッチ操作が開始されましたが、完了していません。|  
     |緑のチェック マーク|成功|オブジェクトは正常にアタッチされました。|  
-    |赤い丸の中に白い×印|[エラー]|アタッチ操作でエラーが発生し、正常に完了しませんでした。|  
+    |赤い丸の中に白い×印|Error|アタッチ操作でエラーが発生し、正常に完了しませんでした。|  
     |4 つに区切られた丸印 (左右の領域が黒、上下の領域が白)|停止|ユーザーがアタッチ操作を停止したため、正常に完了しませんでした。|  
     |丸の中に反時計回りの矢印|[ロールバックされました]|アタッチ操作は正常に完了しましたが、他のオブジェクトのアタッチ中にエラーが発生したため、ロールバックされました。|  
   
-     **メッセージ**  
-     空白のメッセージ、または "ファイルが見つかりません" のハイパーリンクが表示されます。  
+     **Message**  
+     Displays either a blank message or a "File not found" hyperlink.  
   
-     **[追加]**  
-     主な必須データベース ファイルを検索します。 ユーザーが .mdf ファイルを選択した場合、 **[アタッチするデータベース]** グリッドの対応するフィールドに、対応する情報が自動的に入力されます。  
+     **Add**  
+     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
   
-     **[削除]**  
-     選択したファイルを **[アタッチするデータベース]** グリッドから削除します。  
+     **Remove**  
+     Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **" データベースの詳細**  
-     デタッチするファイルの名前を表示します。 ファイルのパス名を確認または変更するには、**参照**ボタン ( **[...]** ) をクリックしてください。  
+     **"** *<database_name>* **" database details**  
+     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  
-    > ファイルが存在しなかった場合、 **[メッセージ]** 列に "見つかりませんでした" と表示されます。 ログ ファイルが見つからない場合は、ログ ファイルが別のディレクトリに置かれているか、削除されています。 **[データベースの詳細]** グリッドでファイル パスを更新し、正しい場所を指定するか、そのログ ファイルをグリッドから削除します。 .ndf データ ファイルが見つからない場合、グリッドのパスを更新して、正しい場所を指定する必要があります。  
+    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
   
-     **[元のファイル名]**  
-     データベースに属している、アタッチされたファイルの名前が表示されます。  
+     **Original File Name**  
+     Displays the name of the attached file belonging to the database.  
   
-     **[ファイルの種類]**  
-     ファイルの種類を表します。 **[データ]** または **[ログ]** になります。  
+     **File Type**  
+     Indicates the type of file, **Data** or **Log**.  
   
-     **[現在のファイル パス]**  
-     選択されているデータベース ファイルのパスを表示します。 このパスは手作業で編集できます。  
+     **Current File Path**  
+     Displays the path to the selected database file. The path can be edited manually.  
   
-     **メッセージ**  
-     空白のメッセージ、または **"ファイルが見つかりません"** ハイパーリンクが表示されます。  
+     **Message**  
+     Displays either a blank message or a "**File not found**" hyperlink.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -143,7 +145,7 @@ ms.locfileid: "52523922"
     > [!NOTE]  
     > また、 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) ストアド プロシージャまたは [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) ストアド プロシージャを使用することもできます。 ただし、これらのプロシージャは、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のバージョンでは削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに `CREATE DATABASE ... FOR ATTACH` を使用することをお勧めします。  
   
-##  <a name="FollowUp"></a> 補足情報: SQL Server データベースのアップグレード後  
+##  <a name="FollowUp"></a>補足情報: SQL Server データベースのアップグレード後  
 アタッチする方法によってデータベースをアップグレードした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。 データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **[フルテキストのアップグレード オプション]** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションが **[インポート]** または **[再構築]** に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 なお、アップグレード オプションが **[インポート]** に設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。  
   
 アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。 アップグレード前の互換性レベルが 90 の場合、アップグレードされたデータベースの互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でサポートされている下限の互換性レベルです。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  

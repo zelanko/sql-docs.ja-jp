@@ -14,12 +14,12 @@ ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e75565d69b2a5a1ac2cf5d6a9d512fffbcf768f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c75556e07d3dd5ae944e2652157f01456fdaee6d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653240"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580117"
 ---
 # <a name="unpack-a-dac-package"></a>DAC パッケージのアンパック
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,9 @@ ms.locfileid: "62653240"
 1.  **作業を開始する準備:** [セキュリティ](#Security)  
   
 2.  **DAC のアンパック:** [[データ層アプリケーションのアンパック] ダイアログの使用](#UnpackDACDial)、[DAC パッケージの内容の確認](#ExamDACPack)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="Security"></a> セキュリティ  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、DAC をアンパックして、ストアド プロシージャやその他のユーザー定義コードなどのコードを確認してください。  
   

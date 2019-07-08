@@ -21,12 +21,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d90c284494fe3f351d66932c019dbc3140aac433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c025b791559fb63ba82826f112e04b6da837be1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698040"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581767"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,9 @@ ms.locfileid: "47698040"
 4.  WITH NORECOVERY を指定してデータベース バックアップを復元します。  
   
 5.  WITH STOPATMARK を指定してログを復元します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="considerations-for-using-marked-transactions"></a>マークされたトランザクションの使用に関する考慮事項  
  名前付きマークをトランザクション ログに挿入する前に、次の点を考慮してください。  
   

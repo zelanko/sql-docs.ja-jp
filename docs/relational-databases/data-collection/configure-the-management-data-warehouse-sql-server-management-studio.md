@@ -23,12 +23,12 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 978588df2388f0731bccff024b46cc134e549688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 735df8e0e0aca995fd96e38da407f1acafc1f52d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027028"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586028"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>管理データ ウェアハウスの構成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "63027028"
     -   **[データ コレクション]** を右クリックし、 **[プロパティ]** をクリックします。 **[全般]** タブで、既存の管理データ ウェアハウス、およびそれがインストールされたサーバーを指定します。  
   
 6.  データ コレクターを使用するすべてのデータベース インスタンスが共有管理データ ウェアハウスにデータをアップロードするように構成されるまで、手順 5. を繰り返します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ####  <a name="Wizard"></a> 管理データ ウェアハウス構成ウィザード  
  **[ようこそ] ページ**  
   

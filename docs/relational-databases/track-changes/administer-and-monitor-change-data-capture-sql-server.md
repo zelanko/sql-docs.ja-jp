@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099970"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584362"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
 
@@ -175,7 +175,9 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 3. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]** 、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、 **[データ コレクション セットの開始]** をクリックします。  
   
 4. 手順 1. で構成したデータ ウェアハウスで、custom_snapshots.cdc_log_scan_data テーブルを検索します。 このテーブルには、ログ スキャン セッションのデータの履歴スナップショットが格納されています。 このデータを使用すると、待機時間やスループットなどのパフォーマンス指標を時系列で分析できます。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> スクリプト アップグレード モード
 
 累積更新プログラムまたはサービス パックをインスタンスに適用する場合、再起動時に、インスタンスがスクリプト アップグレード モードになることがあります。 このモードでは、SQL Server が内部 CDC テーブルを分析し、アップグレードする手順を行うため、キャプチャ テーブルのインデックスなどのオブジェクトが再作成されることがあります。 関連するデータの量によっては、この手順にいくらかの時間がかかったり、または有効にされている CDC データベースのトランザクション ログの使用率が高くなったりする可能性があります。

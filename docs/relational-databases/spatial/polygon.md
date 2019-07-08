@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761448"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581703"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -43,7 +43,9 @@ ms.locfileid: "66761448"
 2.  図 2 は、1 つの外部リングと 2 つの内部リングによって境界が定義されている **Polygon** インスタンスです。 内部リングの内側の領域は、 **Polygon** インスタンスの外部の一部です。  
   
 3.  図 3 の **Polygon** インスタンスは、内部リングが 1 つの接点で交差しているため有効です。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>許容されるインスタンス  
  許容される **Polygon** インスタンスとは、例外をスローすることなく **geometry** 変数または **geography** 変数に格納できるインスタンスです。 次に示す **Polygon** インスタンスは許容されます。  
   

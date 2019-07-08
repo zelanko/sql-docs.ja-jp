@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ebe7fa94a66482be35026b2049bdc57e357d9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac28860d9aabbf9a0d767737436345adeed00002
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515998"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580693"
 ---
 # <a name="delete-foreign-key-relationships"></a>外部キーのリレーションシップの削除
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,9 @@ ms.locfileid: "62515998"
 2.  制約を右クリックし、 **[削除]** をクリックします。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>外部キーの制約を削除するには  

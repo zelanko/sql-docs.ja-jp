@@ -14,15 +14,17 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b342fff66d5e3ec955566963a4a31d1540a2853e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1535618a2f5ed180d679bad982c0b77e05a66f95
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513029"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579797"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 列でのフルテキスト検索の使用
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
   XML 列にフルテキスト インデックスを作成して XML 値のコンテンツにインデックスを設定できますが、XML マークアップは無視されます。 要素タグはトークンの境界として使用されます。 インデックスは次の項目に設定されます。  
   
 -   XML 要素のコンテンツ。  
@@ -34,11 +36,13 @@ ms.locfileid: "58513029"
 1.  まず、SQL フルテキスト検索を使用して、対象の XML 値をフィルター処理します。  
   
 2.  次に、XML 列の XML インデックスを使用する XML 値にクエリを実行します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example-combining-full-text-search-with-xml-querying"></a>例: フルテキスト検索と XML クエリの組み合わせ  
  XML 列でフルテキスト インデックスを作成した後、XML 値が書名に語 "custom" を含んでいることを次のクエリで確認します。  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'custom')   
@@ -54,7 +58,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
 ## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例: ステミングを使用した XML 値のフルテキスト検索  
  上記の例で行った XQuery **contains()** による確認は、通常は省略できません。 次のクエリについて考えてみます。  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'run')   

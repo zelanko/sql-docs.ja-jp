@@ -20,12 +20,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d16a118ccdf5714e0f4b5493c1c0d3266a1d33
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506374"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583740"
 ---
 # <a name="restore-pages-sql-server"></a>ページ復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,9 @@ ms.locfileid: "62506374"
      **[ページ]**  
   
 7.  ページ グリッドに一覧表示されたページを復元するには、 **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  RESTORE DATABASE ステートメントでページを指定するには、ページを含むファイルのファイル ID とページのページ ID が必要です。 必須の構文は次のとおりです。  
   

@@ -18,12 +18,12 @@ ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6c44870c5c562f2dc28fa5e7b94c3547c425cee4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a94634b5a7c613d747d30176d93e7a2425150501
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025280"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580419"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>機能していないファイル グループの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,9 @@ ms.locfileid: "63025280"
 5.  **[ファイル グループ]** ページをクリックします。  
   
 6.  **[行]** グリッドで、削除するファイル グループを選択し、 **[削除]** をクリックした後 **[OK]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-remove-defunct-filegroups"></a>機能していないファイル グループを削除するには  

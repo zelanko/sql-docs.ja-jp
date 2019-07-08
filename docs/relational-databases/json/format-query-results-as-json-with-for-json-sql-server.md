@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ea42c8ca9025880f28f273248682e5b8fa88f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b30a29f7aa2cd0e64c645d2e62f60a10c74063ac
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66743901"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586260"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)
 
@@ -195,7 +195,9 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
     -   (FOR JSON 句が適用される前の) SELECT ステートメントの結果の各列は、JSON オブジェクトのプロパティになります。  
   
 3.  列の名前とその値は、JSON の構文に従ってエスケープされます。 詳細については、「 [FOR JSON での特殊文字のエスケープと制御文字 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)。
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="example"></a>例
 **FOR JSON** 句による JSON 出力の書式設定の例を次に示します。  
   
