@@ -88,7 +88,7 @@ ms.locfileid: "34023859"
   
 ## <a name="see-also"></a>参照  
  [処理するためのツールと方法 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [処理オプションと設定 & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [処理オプションと設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [パーティションのストレージ モードと処理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [ディメンションのストレージ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
