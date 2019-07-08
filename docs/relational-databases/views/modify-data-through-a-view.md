@@ -16,19 +16,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a9120013d1a654460553bcba7a378560cef9ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2677dbe1bc4a1cc45f609d98abcd0b42896231d3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749082"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582359"
 ---
 # <a name="modify-data-through-a-view"></a>ビューを使用したデータ変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、基になるデータベース テーブルのデータを変更できます。  
   
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -53,8 +53,10 @@ ms.locfileid: "47749082"
     > **重要!!** ビューが複数のベース テーブルを参照している場合は、行を削除できません。 1 つのベース テーブルに属している列のみを更新することができます。  
   
 5.  行を挿入するには、行の最後までスクロールし、新しい値を挿入します。  
-  
-    > **重要:** ビューが複数のベース テーブルを参照している場合は、行を挿入できません。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

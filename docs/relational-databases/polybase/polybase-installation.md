@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb0f511f5b8a470e4f7784d6dff9ce4e46650543
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775048"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581239"
 ---
 # <a name="install-polybase-on-windows"></a>Windows への PolyBase のインストール
 
@@ -91,6 +91,8 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
      このオプションにより、Microsoft 分散トランザクション コーディネーター (MSDTC) ファイアウォール接続も有効になり、MSDTC レジストリの設定が変更されます。  
    
 6. [PolyBase の構成] ページで、少なくとも 6 つのポートを含むポート範囲を指定します。 SQL Server セットアップにより、この範囲の最初の 6 つの利用可能なポートが割り当てられます。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > インストール後に、[PolyBase 機能を有効にする](#enable)必要があります。

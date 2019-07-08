@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478137"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583386"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 
@@ -147,7 +147,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 
 - ADD TARGET 句で *filename=* パラメーターを指定します。
-    - ファイルの拡張子は、**.xel** でなければなりません。
+    - ファイルの拡張子は、 **.xel** でなければなりません。
 
 
 - 指定したファイル名をプレフィックスとして使用し、その後に日時に基づく長い整数と、.xel 拡張子が付加されます。
@@ -521,6 +521,7 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. ターゲットを調べる終わるまで、意図的に COMMIT TRANSACTION を発行しない
 4. テストの後で、COMMIT TRANSACTION を発行する
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 簡単な **event_counter** ターゲットでは次のような出力行が得られました。 52-50=2 なので、この出力からは、pair-matching ターゲットからの出力を調べるときにペアになっていない 2 つの lock_acquired イベントを探す必要があることがわかります。
 

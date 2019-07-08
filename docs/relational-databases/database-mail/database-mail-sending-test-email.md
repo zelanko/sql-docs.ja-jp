@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cf3921cae772b278b66a39fa8241895d2e582c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95e4e365ed1ec89050ceb8c3765e6a217f819cd3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506930"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585271"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>データベース メールでテスト メールを送信する  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ ms.locfileid: "66506930"
     sent_status 列に、テスト電子メール メッセージが送信されたかどうかが示されます。
 
 1. エラーが発生した場合は、次のステートメントを実行してエラー メッセージを表示します。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

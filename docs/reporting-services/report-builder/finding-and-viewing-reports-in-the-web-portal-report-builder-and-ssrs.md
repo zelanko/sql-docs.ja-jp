@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92e16db5eb7ac6edf03a07c3091edac2c26d144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581198"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492849"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Web ポータルを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../../reporting-services/report-server/configure-report-manager-native-mode.md)」を参照してください。  
@@ -40,8 +40,8 @@ ms.locfileid: "65581198"
 ## <a name="opening-a-report"></a>レポートを開く  
  レポートが見つかったら、レポート名をクリックしてそのレポートを開きます。 レポートは、レポート マネージャーの [コンテンツ] ページに HTML 形式で表示されます。 レポートは、ブラウザー セッションで常にキャッシュされます。したがって、レポートを開いた場合は、通常、 **[戻る]** ボタンをクリックしてそのレポートに戻ることができます。 これは、レポートの実行にユーザー名とパスワードが必要な場合にも当てはまります。 表示されたレポートは、ブラウザーを閉じるまで完全には閉じられません。  
   
- フォルダー階層で表示されているすべてのレポートにすぐアクセスできるとは限りません。 レポートによっては、ユーザー名とパスワードがユーザーに要求され、そのレポートのデータ ソースへのアクセス権がユーザーにあるかどうか、検証が行われるものもあります。 レポート マネージャーでレポートを開く方法の詳細については、「[レポートを開閉する (レポート マネージャー)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)」を参照してください。  
-  
+ フォルダー階層で表示されているすべてのレポートにすぐアクセスできるとは限りません。 レポートによっては、ユーザー名とパスワードがユーザーに要求され、そのレポートのデータ ソースへのアクセス権がユーザーにあるかどうか、検証が行われるものもあります。 
+
  レポート ビルダーからレポート サーバーのレポートを直接参照したり開いたりすることもできます。 
   
 ## <a name="to-search-for-items"></a>項目を検索するには  

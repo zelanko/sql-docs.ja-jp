@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668924"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585799"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668924"
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーに適切な権限を設定します。  
   
 5.  診断モードで Web 同期を実行し、IIS を実行しているコンピューターへの接続をテストして、SSL 証明書が正しくインストールされることを確認します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>Secure Sockets Layer の構成  
  SSL を構成するには、IIS を実行しているコンピューターが使用する証明書を指定する必要があります。 マージ レプリケーション用の Web 同期では、サーバー証明書のみがサポートされており、クライアント証明書はサポートされていません。 配置用に IIS を構成するには、最初に証明機関 (CA) から証明書を取得する必要があります。 証明機関とは、ユーザー、コンピューター、およびその他の証明機関に属する公開暗号化キーの正当性の証明および保証を行う機関のことです。 証明書の詳細については、IIS のマニュアルを参照してください。 証明書をインストールしたら、その証明書を Web 同期で使用する Web サイトと関連付ける必要があります。  
   

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb65ec8874d6fc006f3c765ba91667233bb5571c
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+ms.openlocfilehash: 7709a7d43d99daae1eaec74472b1332c2bf5fa4d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742092"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585056"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>テーブル間での列のコピー (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -64,7 +64,9 @@ ms.locfileid: "55742092"
 4.  列をコピーする先のテーブルのタブをクリックします。  
   
 5.  コピーした列を挿入する列を選択し、 **[編集]** メニューの **[貼り付け]** をクリックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-copy-data-from-one-table-to-another"></a>テーブル間でデータをコピーするには  
   
 1.  前述の列定義のコピーの指示に従います。  
@@ -78,7 +80,7 @@ ms.locfileid: "55742092"
 
 4.  **[テーブルの追加]** ダイアログ ボックスで、コピー元テーブルとコピー先テーブルを選択し、 **[追加]** をクリックして **[テーブルの追加]** ダイアログ ボックスを閉じます。 
 
-5.  クエリ エディターの空いている領域を右クリックし、**[変更の種類]** をポイントして **[結果の挿入]** をクリックします。  
+5.  クエリ エディターの空いている領域を右クリックし、 **[変更の種類]** をポイントして **[結果の挿入]** をクリックします。  
 
 6.  **[結果の挿入先テーブルの選択]** ダイアログ ボックスで、コピー先テーブルを選択します。 
 
