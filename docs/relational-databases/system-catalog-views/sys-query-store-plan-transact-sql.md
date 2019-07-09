@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7987b0cfb8be268a8e48fd25d7512b4969aea6fb
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
-ms.translationtype: HT
+ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542182"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652864"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59542182"
 |**last_execution_time**|**datetimeoffset**|最後の実行時間とは、最後に、クエリ/プランの終了時刻です。|  
 |**avg_compile_duration**|**float**|コンパイルの統計情報を計画します。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
 |**last_compile_duration**|**bigint**|コンパイルの統計情報を計画します。 <br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**plan_forcing_type**|**int**|型の強制プランです。<br /><br />0:なし<br /><br />1:手動<br /><br />2:AUTO|  
+|**plan_forcing_type**|**int**|型の強制プランです。<br /><br />0:なし<br /><br />1:MANUAL<br /><br />2:AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type の説明テキスト。<br /><br />NONE:プランの適用なし<br /><br />手動：ユーザーが強制されたプラン<br /><br />自動：自動チューニングによる強制プランします。|  
 
 ## <a name="plan-forcing-limitations"></a>プラン強制の制限事項
@@ -68,7 +68,7 @@ ms.locfileid: "59542182"
 * 外部テーブルの参照
 * 分散クエリまたはフルテキスト操作
 * グローバル クエリの使用 
-* カーソル
+* (静的および高速順方向カーソルのサポートは、プランの強制) 動的カーソルまたはキーセット カーソル
 * 無効なスター結合の指定 
 
 第 2 に、プランが依存しているオブジェクトが使用できなくなった場合です。

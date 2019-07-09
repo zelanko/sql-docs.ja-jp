@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463543"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652845"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ SHORTEST_PATH 関数を使用して、検索できます。
 ## <a name="arbitrary-length-pattern"></a>任意の長さのパターン
 このパターンには、ノードが含まれていて、目的のノードに到達するまで、またはパターンで指定されているイテレーションの最大数まで繰り返しトラバースする必要がある端を満たします。 クエリが実行されるたびにこのパターンの実行結果のノードとエッジの終了ノードに、開始ノードからパスに沿って走査の順序付きコレクション値になります。 これは、正規表現の構文スタイル パターンと、次の 2 つのパターン量指定子がサポートされています。
 
-* **‘+’** :パターンの 1 つ以上の回を繰り返します。 最短の経路が見つかるとすぐに終了します。
-* **{1, n}** :パターン 1 'n' の繰り返し回数。 最短が見つかるとすぐに終了します。
+* **‘+’** :パターンを 1 回以上繰り返します。 最短パスが見つかったらすぐに終了します。
+* **{1,n}** : パターンを 1 から "n" 回繰り返します。 最短が見つかるとすぐに終了します。
 
 ## <a name="lastnode"></a>LAST_NODE
 LAST_NODE() 関数では、任意の長さの 2 つのトラバーサル パターンのチェーンを許可します。 シナリオのために使用できる場所。    
@@ -94,7 +94,7 @@ STRING_AGG 関数は、式と区切り記号の入力として受け取りし、
 この関数は、スキャン対象のパスで指定されたノード/エッジ属性値または表示される式の合計を返します。
 
 ### <a name="count"></a>COUNT
-この関数は、パスで目的のノード/エッジ属性の null 以外の値の数を返します。 COUNT 関数をサポートしています、' *' ノードまたはエッジ テーブルの別名を持つ演算子。 エイリアスがなければノードまたはエッジ テーブルでの使用状況 * があいまいであり、エラーが発生します。
+この関数は、パスで目的のノード/エッジ属性の null 以外の値の数を返します。 COUNT 関数をサポートしています、'\*' ノードまたはエッジ テーブルの別名を持つ演算子。 エイリアスがなければノードまたはエッジ テーブルでの使用状況\*があいまいであり、エラーが発生します。
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

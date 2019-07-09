@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064690"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624367"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation コマンドレット
   **Invoke-PolicyEvaluation** は、SQL Server オブジェクトの対象セットが 1 つまたは複数のポリシーベースの管理ポリシーに指定された条件に準拠しているかどうかを報告する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コマンドレットです。  
@@ -88,7 +88,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** は、1 つのオブジェクト、または対象セット内の SQL Server オブジェクトを表すオブジェクトの配列を受け取ります。 たとえば、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラス オブジェクトの配列を作成し、 **-TargetObjects**のパイプ出力からのオブジェクトが消費されます。  
   
--   **-TargetExpressions** は、対象セット内のオブジェクトを指定するクエリ式が含まれた文字列を受け取ります。 クエリ式には、ノードを '/' 文字で区切って指定します。 各ノードは、ObjectType[Filter] 形式で記述します。 ObjectType は、SQL Server 管理オブジェクト (SMO) オブジェクト階層のいずれかのオブジェクトです。 Filter は、そのノードのオブジェクトをフィルター処理する式です。 詳細については、「 [クエリ式と Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md)」を参照してください。  
+-   **-TargetExpressions** は、対象セット内のオブジェクトを指定するクエリ式が含まれた文字列を受け取ります。 クエリ式には、ノードを '/' 文字で区切って指定します。 各ノードは、ObjectType[Filter] 形式で記述します。 オブジェクトの種類では、SQL Server 管理オブジェクト (SMO) オブジェクトの階層内のオブジェクトの 1 つです。 Filter は、そのノードのオブジェクトをフィルター処理する式です。 詳細については、「 [クエリ式と Uniform Resource Name](../powershell/query-expressions-and-uniform-resource-names.md)」を参照してください。  
   
  **-TargetObjects** または **-TargetExpression**のどちらか一方だけを指定します。  
   

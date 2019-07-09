@@ -10,12 +10,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468355"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624406"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] では、さまざまな形で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]より多くのメモリが使用されます。 インストールして [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 用に割り当てたメモリ量が、ニーズの拡大に合わなくなる場合があります。 その場合は、メモリが不足する可能性があります。 このトピックでは、OOM 状態から回復する方法について説明します。 多数の OOM 状態を回避するのに役立つガイドについては、「 [メモリ使用量の監視とトラブルシューティング](monitor-and-troubleshoot-memory-usage.md) 」を参照してください。  
@@ -69,7 +69,7 @@ ms.locfileid: "62468355"
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>低メモリまたは OOM 状態によるワークロードへの影響を解決する  
  言うまでもなく、低メモリまたは OOM (メモリ不足) の状態にならないことがベストです。 適切なプラン作成と監視によって、OOM 状態を回避することができます。 ただし、最適なプランを作成しても、実際に起こることを予測できるとは限らず、結果として低メモリまたは OOM の状態になる場合もあります。 OOM からの復旧には、次の 2 段階があります。  
   
-1.  [DAC (専用管理者接続) を開く ](#open-a-dac-dedicated-administrator-connection) 
+1.  [DAC (専用管理者接続) を開く](#open-a-dac-dedicated-administrator-connection) 
   
 2.  [修正措置を行う](#take-corrective-action) 
   
