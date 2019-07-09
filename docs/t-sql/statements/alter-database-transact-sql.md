@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351718"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500159"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -566,10 +566,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS: コマンドを実行する geo レプリケー�
 
 ## <a name="permissions"></a>アクセス許可
 
-データベースを変更できるのは、(準備プロセスによって作成される) サーバーレベルのプリンシパルのログイン、または `dbmanager` データベース ロールのメンバーだけです。
-
-> [!IMPORTANT]
-> データベースの所有者であっても `dbmanager` ロールのメンバーでない場合は、データベースを変更できません。
+データベースを変更するには、ログインがサーバーレベル プリンシパル ログイン (プロビジョニング プロセスで作成)、マスターの `dbmanager` データベース ロールのメンバー、現在のデータベースの `db_owner` データベース ロールのメンバー、またはデータベースの `dbo` のいずれかである必要があります。
 
 ## <a name="examples"></a>使用例
 

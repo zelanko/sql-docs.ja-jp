@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419168"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580710"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,13 +84,15 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 1. SELECT を使用して SSN 列からデータを選択し、結果セットとしてアプリケーションに格納します。 こうすることで、アプリケーション (クライアント *ドライバー*) は列を復号化できます。
 2. INSERT を使用して結果セットのデータを SQL Server に挿入します。 
 
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  >[!IMPORTANT]
  > このシナリオで、対象の列は暗号化されたデータを受け入れない通常の varchar なので、データをサーバーに戻すと、暗号化は解除されます。 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>明確な暗号化またはランダム化された暗号化の選択  
  データベース エンジンは、暗号化された列に格納されているプレーンテキスト データに対して動作しませんが、列の暗号化の種類によっては、暗号化されたデータでも一部のクエリをサポートしています。 Always Encrypted は、ランダム化された暗号化と明確な暗号化の 2 種類の暗号化をサポートします。  
   
-- 明確な暗号化は、任意のプレーン テキストを指定した値の場合、常に同じ暗号化された値を生成します。 明確な暗号化を使用すると、暗号化された列で、ポイント参照、等価結合、グループ化、インデックス作成を行うことができます。 ただし、権限のないユーザーが、暗号化された列のパターンを調べることで、暗号化された値に関する情報を推測できる可能性もあります。特に、True/False や、North/South/East/West 地域など、暗号化される可能性のある少数のグループがある場合は注意が必要です。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。
+- 明確な暗号化は、任意のプレーン テキストを指定した値の場合、常に同じ暗号化された値を生成します。 明確な暗号化を使用すると、暗号化された列で、ポイント参照、等価結合、グループ化、インデックス作成を行うことができます。 ただし、権限のないユーザーが、暗号化された列のパターンを調べることで、暗号化された値に関する情報を推測できる可能性もあります。特に、True/False や、North/South/East/West 地域など、暗号化可能な値セットが小規模である場合は注意が必要です。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。
 
 - ランダム化された暗号化は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダム化された暗号化は安全性が上がりますが、暗号化された列に対して検索、グループ化、インデックス作成、結合ができなくなります。
 

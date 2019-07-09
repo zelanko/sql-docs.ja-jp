@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: dde30ce48bf559bc72b3cdf3a4544039328f53e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388128"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585099"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67388128"
    - Hyper-V 2016 以降では、VM プロセッサ上で[入れ子にされた仮想化拡張機能](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)を有効にします。
    - Azure で、Dv3 や Ev3 シリーズの VM など、入れ子にされた仮想化をサポートする VM サイズを実行していることを確認してください。 [入れ子対応の Azure VM の作成](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
    - VMWare vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
-   - 仮想化拡張機能 (入れ子になった仮想化とも呼ばれます) が VM に公開されている限り、その他のハイパーバイザーとパブリック クラウドは、VM でのセキュリティで保護されたエンクレーブとの Always Encrypted を使用してサポートする可能性があります。 互換性と構成手順については、仮想化ソリューションのドキュメントを確認します。
+   - 仮想化拡張機能 (入れ子になった仮想化とも呼ばれます) が VM に公開されている限り、その他のハイパーバイザーとパブリック クラウドは、VM でのセキュリティで保護されたエンクレーブとの Always Encrypted を使用してサポートする可能性があります。 互換性と構成手順については、仮想化ソリューションのドキュメントを確認してください。
 - [SQL Server Management Studio (SSMS) 18.0 以降](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 代わりに、別のコンピューター上に SSMS をインストールすることができます。
@@ -88,6 +88,8 @@ ms.locfileid: "67388128"
    ```
 
 4. 次のコマンドを実行して、HGS コンピューターの IP アドレスを検索します。 後の手順で使用するために、この IP アドレスを保存します。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```powershell
    Get-NetIPAddress  
