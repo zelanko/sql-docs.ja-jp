@@ -35,9 +35,9 @@ ms.locfileid: "34021649"
      CREATE CELL CALCULATION または ALTER CUBE ステートメントを使用してセッションでの計算されるセルを作成する方法の詳細については、「 [セッション スコープの計算されるセルの作成](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ALTER CUBE ステートメント & #40 です。MDX と #41 です。](../../../mdx/mdx-data-definition-alter-cube.md)   
- [CELL CALCULATION ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
- [クエリ スコープのセル計算 & #40; を作成します。MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [MDX クエリの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [ALTER CUBE ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)   
+ [CREATE CELL CALCULATION ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [クエリ スコープのセル計算 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
