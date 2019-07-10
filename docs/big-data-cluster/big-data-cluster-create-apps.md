@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388751"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681589"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server のビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
@@ -107,7 +107,7 @@ mssqlctl app create --spec <directory containing spec file>
 mssqlctl app create --spec ./addpy
 ```
 
-これに格納されているアプリケーションがあることを前提としています、`addpy`フォルダー。 このフォルダーは、呼び出されると呼ばれる、アプリケーションの仕様ファイルを含める必要があります`spec.yaml`します。 参照してください[アプリケーションの展開ページ](concept-application-deployment.md)の詳細については、`spec.yaml`ファイル。
+これに格納されているアプリケーションがあることを前提としています、`addpy`フォルダー。 このフォルダーと呼ばれる、アプリケーションの仕様ファイルを含める必要があります`spec.yaml`します。 参照してください[アプリケーションの展開ページ](concept-application-deployment.md)の詳細については、`spec.yaml`ファイル。
 
 このアプリのサンプル アプリをデプロイするには、という名前のディレクトリで次のファイルを作成`addpy`:
 

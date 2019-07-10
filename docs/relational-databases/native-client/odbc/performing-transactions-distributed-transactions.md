@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eb73528800d45daf0ea8b68ae94536f63c25df
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 179885276bdda206e4414bd22675e97449df9129
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585476"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687608"
 ---
 # <a name="create-a-distributed-transaction"></a>分散トランザクションを作成します。
 
@@ -53,7 +53,7 @@ MSDTC を呼び出して、SQL Server Native Client ドライバー Open Databas
 3. アプリケーションがコンピューター B 上で SQL サーバー Y 上のデータを更新します。
     - SQL サーバー Y の更新プログラムが失敗した場合、両方の SQL Server インスタンスでコミットされていないすべての更新プログラムはロールバックされます。
 
-4. 最後に、アプリケーションが呼び出すことによって、トランザクションを終了[SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)、した状態または SQL_ROLLBACK オプションを使用します。
+4. 最後に、アプリケーションが呼び出すことによってトランザクションを終了[SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)、した状態または SQL_ROLLBACK オプションを使用します。
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

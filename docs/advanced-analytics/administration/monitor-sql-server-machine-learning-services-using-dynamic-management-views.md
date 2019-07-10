@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645551"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681621"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>SQL Server Machine Learning Services の動的管理ビュー (Dmv) を使用した監視します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "53645551"
 + 外部リソース プールを含めて、リソース ガバナー リソース プール
 + R と Python のインストール済みパッケージ
 
-Dmv の概要については、[システム動的管理ビュー](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)を参照してください。
+Dmv の概要については、次を参照してください。[システム動的管理ビュー](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。
 
 > [!TIP]
-> SQL Server Machine Learning サービスを監視するのにカスタム レポートを使用することもできます。 詳細については、[Management Studio でカスタム レポートを使用して機械学習の監視](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)を参照してください。
+> SQL Server Machine Learning サービスを監視するのにカスタム レポートを使用することもできます。 詳細については、次を参照してください。 [Management Studio でカスタム レポートを使用して機械学習の監視](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
 
 ## <a name="dynamic-management-views"></a>動的管理ビュー
 
@@ -56,7 +56,7 @@ Machine Learning サービスのインストールの設定と構成オプショ
 
 ![設定および構成のクエリからの出力](media/dmv-settings-and-configuration.png "設定および構成のクエリからの出力")
 
-この出力を取得する次のクエリを実行します。 ビューおよび関数の使用の詳細については、[sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)、 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)、および[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)を参照してください。
+この出力を取得する次のクエリを実行します。 ビューおよび関数の使用の詳細については、次を参照してください。 [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)、 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)、および[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)します。
 
 ```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -83,7 +83,7 @@ WHERE name = 'external scripts enabled';
 | IsMLServicesInstalled | インスタンスの SQL Server Machine Learning サービスがインストールされている場合は、1 を返します。 それ以外の場合、0 を返します。 |
 | ExternalScriptsEnabled | インスタンスの外部のスクリプトが有効になっている場合は、1 を返します。 それ以外の場合、0 を返します。 |
 | ImpliedAuthenticationEnabled | 暗黙の認証の場合は 1 になっています。 それ以外の場合、0 を返します。 SQLRUserGroup のログインが存在するかどうかを確認し、暗黙の認証の構成がチェックされます。 |
-| IsTcpEnabled | インスタンスの TCP/IP プロトコルが有効になっている場合は、1 を返します。 それ以外の場合、0 を返します。 詳細については、[SQL サーバー ネットワーク プロトコルの構成を既定の](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)を参照してください。 |
+| IsTcpEnabled | インスタンスの TCP/IP プロトコルが有効になっている場合は、1 を返します。 それ以外の場合、0 を返します。 詳細については、次を参照してください。 [SQL サーバー ネットワーク プロトコルの構成を既定の](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)します。 |
 
 ## <a name="active-sessions"></a>Active sessions
 
@@ -91,7 +91,7 @@ WHERE name = 'external scripts enabled';
 
 ![アクティブな設定のクエリからの出力](media/dmv-active-sessions.png "アクティブな設定のクエリからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)、 [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)、および[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)を参照してください。
+この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)、 [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)、および[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)します。
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -114,7 +114,7 @@ ON s.session_id = r.session_id;
 | database_name | 各セッションの現在のデータベースの名前。 |
 | login_name | セッションが現在実行されている SQL Server ログインの名前。 |
 | wait_time | 要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。 |
-| wait_type | 要求が現在ブロックされている場合の待機の種類。 待機の種類については、[sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)を参照してください。 |
+| wait_type | 要求が現在ブロックされている場合の待機の種類。 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)します。 |
 | last_wait_type | 要求がブロックされていた場合の最後の待機の種類。 |
 | total_elapsed_time | 要求を受信してから経過した総時間 (ミリ秒単位)。 |
 | cpu_time | 要求で使用される CPU 時間 (ミリ秒単位)。 |
@@ -131,7 +131,7 @@ R と Python の外部のランタイム実行の統計を表示します。 Rev
 
 ![実行の統計情報のクエリからの出力](media/dmv-execution-statistics.png "実行の統計情報のクエリからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)を参照してください。 クエリは、複数回実行された関数のみを返します。
+この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)します。 クエリは、複数回実行された関数のみを返します。
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -154,7 +154,7 @@ ORDER BY language, counter_name;
 
 ![出力、パフォーマンスからカウンター クエリ](media/dmv-performance-counters.png "出力、パフォーマンスからカウンターのクエリ")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)を参照してください。
+この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)します。
 
 ```sql
 SELECT counter_name, cntr_value
@@ -167,7 +167,7 @@ WHERE object_name LIKE '%External Scripts%'
 | カウンター | 説明 |
 |---------|-------------|
 | Total Executions | ローカルまたはリモートの呼び出しによって開始された外部のプロセスの数。 |
-| Parallel Executions | スクリプトが含まれている回数、 _@parallel_仕様と[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]生成し、並列クエリ プランを使用することができました。 |
+| Parallel Executions | スクリプトが含まれている回数、 _@parallel_ 仕様と[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]生成し、並列クエリ プランを使用することができました。 |
 | Streaming Executions | ストリーミングの機能が呼び出された回数。 |
 | SQL CC Executions | 外部スクリプトの呼び出しがリモートでインスタンス化、および SQL Server の実行の数は、計算コンテキストとして使用されました。 |
 | Implied Auth.Login | 暗黙の認証を使用して ODBC ループバック呼び出しが行われた回数つまり、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]スクリプト要求を送信するユーザーの代理呼び出しを実行します。 |
@@ -180,7 +180,7 @@ OS、SQL Server、および外部プールによって使用されるメモリ�
 
 ![メモリの使用状況クエリからの出力](media/dmv-memory-usage.png "メモリの使用状況クエリからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)と[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)を参照してください。
+この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)と[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)します。
 
 ```sql
 SELECT physical_memory_kb, committed_kb
@@ -196,7 +196,7 @@ FROM sys.dm_os_sys_info;
 |--------|-------------|
 | physical_memory_kb | コンピューターの物理メモリの総量。 |
 | committed_kb | メモリ マネージャーでは、キロバイト (KB) でコミットされたメモリ。 メモリ マネージャー内の予約済みメモリは含まれません。 |
-| external_pool_peak_memory_kb | 合計、使用済みメモリ (キロバイト単位)、すべての外部リソース プールの最大量。 |
+| external_pool_peak_memory_kb | 最大メモリ量の合計使用、キロバイト単位ですべての外部リソース プール。 |
 
 ## <a name="memory-configuration"></a>メモリ構成
 
@@ -204,7 +204,7 @@ SQL Server と外部リソース プールの割合の最大メモリ構成に�
 
 ![メモリ構成のクエリからの出力](media/dmv-memory-configuration.png "メモリ構成のクエリからの出力")
 
-この出力を取得する次のクエリを実行します。 ビューの使用の詳細については、[sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)と[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)を参照してください。
+この出力を取得する次のクエリを実行します。 ビューの使用の詳細については、次を参照してください。 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)と[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)します。
 
 ```sql
 SELECT 'SQL Server' AS name
@@ -232,7 +232,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 ![クエリ プールのリソースからの出力](media/dmv-resource-pools.png "クエリ プールのリソースからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)と[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)を参照してください。
+この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)と[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)します。
 
 ```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name

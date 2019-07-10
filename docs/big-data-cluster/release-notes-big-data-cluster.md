@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469130"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681552"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -33,11 +33,11 @@ ms.locfileid: "67469130"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| `mssqlctl` コマンドの変更 | `mssqlctl cluster` コマンドが次の名前に変更されました`mssqlctl bdc`します。 詳細については、次を参照してください。、 [ `mssqlctl`参照](reference-mssqlctl.md)します。 |
+| `mssqlctl` コマンドの変更 | `mssqlctl cluster` コマンドの名前が、`mssqlctl bdc` に変更されました。 詳しくは、[`mssqlctl` のリファレンス](reference-mssqlctl.md)に関する記事をご覧ください。 |
 | 新しい`mssqlctl`状態コマンドと、クラスターの管理ポータルを削除します。 | このリリースでは、クラスターの管理ポータルが削除されます。 追加された新しい状態コマンド`mssqlctl`その補数既存のコマンドを監視します。 |
-| Spark のコンピューティング プール | ストレージのスケール アップすることがなく、Spark のコンピューティング能力を増やすに別のノードを作成します。 さらに、Spark を使用していない記憶域プールのノードを開始することができます。 Spark とストレージが切り離されます。 詳細については、次を参照してください。 [spark なしの記憶域構成](deployment-custom-configuration.md#sparkstorage)します。 |
-| MSSQL Spark コネクタ | プールの外部テーブルのデータを読み取り/書き込みをサポートします。 以前リリースがサポートされている読み取り/書き込みをマスター インスタンスのテーブルのみです。 詳細については、次を参照してください。[を読み取って、MSSQL の Spark コネクタを使用して Spark から SQL Server への書き込み方法](spark-mssql-connector.md)します。 |
-| MLeap を使用して機械学習 | [Spark で MLeap 機械学習モデルをトレーニングし、Java 言語の拡張機能を使用して SQL Server でスコアを付けて](spark-create-machine-learning-model.md)します。 |
+| Spark コンピューティング プール | ストレージをスケールアップする必要なしに、追加ノードを作成して Spark のコンピューティング能力を増強します。 さらに、Spark に使われない記憶域プールのノードを開始することができます。 Spark と記憶域は切り離されています。 詳しくは、「[Configure storage without spark (Spark なしで記憶域を構成する)](deployment-custom-configuration.md#sparkstorage)」をご覧ください。 |
+| MSSQL Spark コネクタ | データ プール外部テーブルの読み取り/書き込みのサポート。 以前のリリースでは、MASTER インスタンス テーブルの読み取り/書き込みだけがサポートされていました。 詳しくは、「[How to read and write to SQL Server from Spark using the MSSQL Spark Connector (MSSQL Spark コネクタを使用して Spark から SQL Server の読み取りと書き込みを行う方法)](spark-mssql-connector.md)」をご覧ください。 |
+| MLeap を使用する機械学習 | [Spark で MLeap 機械学習モデルをトレーニングし、Java 言語拡張機能を使用して SQL Server でスコアリングします](spark-create-machine-learning-model.md)。 |
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -125,7 +125,7 @@ ms.locfileid: "67469130"
 | **mssqlctl** の更新 | 複数の **mssqlctl** [コマンドとパラメーターが更新されました](../big-data-cluster/reference-mssqlctl.md)。 これには、コントローラーのユーザー名とエンドポイントをターゲットにするようになった **mssqlctl login** コマンドの更新も含まれています。 |
 | ストレージの機能強化 | ログとデータのさまざまなストレージ構成のサポート。 また、ビッグ データ クラスターへの永続ボリューム要求の数が削減されました。 |
 | 複数のコンピューティング プール インスタンス | 複数のコンピューティング プール インスタンスのサポート。 |
-| 新しいプールの動作と機能 | コンピューティング プールは、既定で **ROUND_ROBIN** 配布内​​のストレージ プールおよびデータ プールの操作にのみ使用されるようになりました。 データ プールで新しい **REPLICATED** 分布の種類が使用できるようになりました。これは、同じデータがすべてのデータ プール インスタンスに存在することを意味します。 |
+| 新しいプールの動作と機能 | コンピューティング プールは、既定で **ROUND_ROBIN** 配布内​​のストレージ プールおよびデータ プールの操作にのみ使用されるようになりました。 データのプールが新しい使えるようになりました**レプリケートされた**分布の種類は、同じデータがすべてのデータ プール インスタンスに存在することを意味します。 |
 | 外部テーブルの機能強化 | HADOOP データ ソースの種類の外部テーブルで、最大サイズ 1 MB の行の読み取りがサポートされるようになりました。 外部テーブル (ODBC、記憶域プール、データ プール) で、SQL Server テーブルと同じ幅の行がサポートされるようになりました。 |
 
 ### <a name="known-issues"></a>既知の問題

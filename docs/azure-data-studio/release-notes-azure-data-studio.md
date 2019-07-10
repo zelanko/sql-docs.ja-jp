@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798094"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681616"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
@@ -196,7 +196,7 @@ ms.locfileid: "66798094"
 - 修正[発行 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047):SQL Server に接続するためのコマンド ライン インターフェイスの追加します。
 - 修正[発行 #3031](https://github.com/Microsoft/azuredatastudio/pull/3031):クエリ プランのテーマのサポートを追加します。
 
-## <a name="october-2018"></a>2018 の年 10 月
+## <a name="october-2018"></a>2018 年 10 月
 
 2018 年 10 月 29 日、 &nbsp;  /  &nbsp;バージョン。1.1.4
 
@@ -255,7 +255,7 @@ Azure Data Studio (SQL Operations Studio 以前) の一般的な可用性リリ�
 
 詳細については、次を参照してください。、[変更ログ](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)、および[リリース](https://github.com/Microsoft/azuredatastudio/releases)します。
 
-## <a name="august-2018"></a>2018 の年 8 月
+## <a name="august-2018"></a>2018 年 8 月
 
 2018 年 8 月 30 日&nbsp;  /  &nbsp;バージョン。0.32.8 &nbsp;  /  &nbsp;パブリック プレビュー
 
@@ -367,7 +367,7 @@ _0.32.8 には 0.32.7 で見つかったいくつかの回帰の修正プログ�
 ### <a name="github-issues-fixes-june-2018"></a>GitHub の問題を修正、2018 年 6 月
 
 - 機能の要求 ([発行 1204](https://github.com/Microsoft/azuredatastudio/issues/1204))。結果グリッドの自動調整の列の幅、データをしてください、同じクエリを再実行している場合は、手動で変更を注意してください。
-- 修正[発行 1398](https://github.com/Microsoft/azuredatastudio/issues/1398):必要がありますショーはメッセージを追加し、リンクされているアカウントが空の場合は、アカウントのアカウント ボタンを追加します。
+- 修正[発行 1398](https://github.com/Microsoft/azuredatastudio/issues/1398):必要がありますショーはメッセージを追加し、リンクされているアカウントが空の場合は、[アカウント] ボタンを追加します。
 - 修正[発行 1399](https://github.com/Microsoft/azuredatastudio/issues/1399):ビューが折りたたまれているときに、リンクされたアカウント タブは解除されます。
 - 修正[発行 1374](https://github.com/Microsoft/azuredatastudio/issues/1374):ディスクから、.sql ファイルを開くときに、SQL ツール サービスがクラッシュします。
 - 修正[発行 1372](https://github.com/Microsoft/azuredatastudio/issues/1372):SQL キーワード"BETWEEN"がありません。
