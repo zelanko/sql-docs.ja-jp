@@ -9056,7 +9056,7 @@
               items:
                 - name: 完全メモリ ダンプの取得
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: クラッシュとハング
+                - name: 診断データの取得
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server エージェント
               items:
