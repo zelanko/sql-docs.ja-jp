@@ -55,7 +55,7 @@ ms.locfileid: "66074999"
   
 ## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース](data-sources-in-multidimensional-models.md)   
- [接続文字列プロパティ &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
+ [接続文字列のプロパティ &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   

@@ -23,7 +23,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4329b8fcbddb0050f529e401da8d6c7c14f065d9
 ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/16/2019
 ms.locfileid: "58080274"
