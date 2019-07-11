@@ -2,19 +2,20 @@
 title: 展開を構成します。
 titleSuffix: SQL Server big data clusters
 description: 構成ファイルでビッグ データ クラスターのデプロイをカスタマイズする方法について説明します。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 19654422bcc57f2ad00b9ab8170d163f848f188b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388798"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728882"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>ビッグ データ クラスターのデプロイ設定を構成します。
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388798"
 
 クラスター展開の構成ファイルをカスタマイズするには、VSCode など、任意の JSON 形式エディターを使用できます。 これらの編集自動化のため、スクリプトを使用して、 **mssqlctl bdc 構成セクション**コマンド。 この記事では、展開構成ファイルを変更することでビッグ データ クラスターのデプロイを構成する方法について説明します。 これは、さまざまなシナリオの構成を変更する方法の例を示します。 展開構成ファイルを使用する方法の詳細については、次を参照してください。、[デプロイ ガイダンス](deployment-guidance.md#configfile)します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [インストール mssqlctl](deploy-install-mssqlctl.md)します。
 
@@ -303,6 +304,6 @@ JSON の修正プログラム ファイルは、一度に複数の設定を構�
 mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ビッグ データ クラスター展開で構成ファイルの使用についての詳細については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md#configfile)します。

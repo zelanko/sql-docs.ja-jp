@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274383"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793925"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   ピア ツー ピア レプリケーションは、データのコピーを複数のサーバー インスタンス ( *ノード*) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。 ピア ツー ピア レプリケーションはトランザクション レプリケーションを基礎としており、トランザクション的に一貫性のある変更がほぼリアルタイムで反映されます。 これにより、読み取り操作のスケールアウトを必要とするアプリケーションで、クライアントからの読み取りを複数のノードに分散することができます。 また、データがほぼリアルタイムで複数のノードに保持されるため、データの冗長性が実現され、データの可用性が向上します。  
@@ -137,19 +137,19 @@ ms.locfileid: "63274383"
   
 -   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ **@destination_owner** 」および「 **@destination_table** ) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   アーティクルのプロパティ **\@destination_owner**と **\@destination_table**します。  
 
 -   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーションのプロパティを **@allow_initialize_from_backup** の値が必要です`true`します。  
+-   パブリケーションのプロパティを **\@allow_initialize_from_backup**の値が必要です`true`します。  
   
--   アーティクルのプロパティ **@replicate_ddl** の値が必要です`true`; **@identityrangemanagementoption** の値が必要です`manual`; と **@status** そのオプションが必要です**24**設定されます。  
+-   アーティクルのプロパティ **\@replicate_ddl**の値が必要です`true`; **\@identityrangemanagementoption**の値が必要です`manual`; と **\@状態**そのオプションが必要です**24**設定されています。  
   
--   アーティクルのプロパティの値 **@ins_cmd** 、 **@del_cmd** 、および **@upd_cmd** に設定することはできません`SQL`します。  
+-   アーティクルのプロパティの値 **\@ins_cmd**、  **\@del_cmd**、および **\@upd_cmd**に設定することはできません`SQL`します。  
   
--   サブスクリプション プロパティ **@sync_type** の値が必要です`none`または`automatic`します。  
+-   サブスクリプション プロパティ **\@sync_type**の値が必要です`none`または`automatic`します。  
   
 ### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  次のアクションを実行する場合は、システムを停止する必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  
@@ -168,7 +168,7 @@ ms.locfileid: "63274383"
   
 -   ピア ツー ピア トポロジでは、サブスクリプションの再初期化を実行できません。 ノードで新しいデータのコピーを確実に保持する必要がある場合は、そのノードでバックアップを復元してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [トランザクション レプリケーションで使用するパブリケーションの種類](transactional-replication.md)  

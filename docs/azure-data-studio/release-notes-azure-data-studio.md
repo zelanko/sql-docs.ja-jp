@@ -10,17 +10,37 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 06/06/2019
-ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.date: 07/10/2019
+ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681616"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794071"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
+
+## <a name="july-2019"></a>2019 年の 7 月
+
+2019 年 7 月 10日&nbsp;  /  &nbsp;バージョン。1.9.0 
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| SentryOne 計画エクスプ ローラー拡張機能のリリース | 次のように値を持つ Microsoft パートナー、SentryOne、発送、 [SentryOne 計画エクスプ ローラーの拡張機能の Azure Data Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio)します。 <br> これは、レイアウトの最適化アルゴリズムとクエリのパフォーマンスに影響を与える最も負荷の高い演算子をすばやく識別できるように、直感的な色分けを使用で Azure Data Studio、強化された設計図のクエリが実行を提供する無料の拡張機能です。 SentryOne のブログの投稿確認の拡張機能の詳細については、[ここ](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio)します。 |
+| スキーマ比較を導入される新機能 | &bull; &nbsp; スキーマ比較ファイルのサポート (します。SCMP) <br/>&bull; &nbsp; スキーマ比較のサポートをキャンセルします。 <br/>&bull; &nbsp; 完了した変更はあります[ここ](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
+| Notebook の機能強化 | &bull; &nbsp; Plotly Python のサポート <br/>&bull; &nbsp; ブラウザーからノートブックを開く <br/> &bull; &nbsp; Python パッケージの管理 ダイアログ <br/> &bull; &nbsp; パフォーマンスと Markdown の拡張機能 <br/> &bull; &nbsp; キーボード ショートカットの更新 <br/>  &bull; &nbsp; バグの修正と軽微な機能を確認できます[ここ](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
+| SQL Server 2019 のサポート |  このリリースを含む追加の SQL Server 2019 ビッグ データ クラスター機能のサポートが含まれています。 <br/> &bull; &nbsp; クラスター内のすべてのキー サービスを一覧表示、管理ダッシュ ボード内のテーブルをサービス エンドポイント。 <br/> &bull; &nbsp; クラスターの状態の Notebook は、クエリし、すべてのサービスとポッド間でクラスターの状態のトラブルシューティングを行う方法を示しています。| 
+| 使用可能な更新の言語パック| 拡張機能マネージャーの marketplace では 10 の言語パックはようになりました。 単に、拡張機能マーケットプ レースを使用して特定の言語を検索してインストールします。 選択した言語をインストールした後は Azure Data Studio から、新しい言語の再起動を求められます。 |
+| SQL Server Profiler の更新プログラム | などの新しい機能を含める、SQL Server プロファイルの拡張機能が更新されました。 <br/> &bull; &nbsp; データベース名でフィルター処理 <br/> &bull; &nbsp; コピーと貼り付けのサポート <br/> &bull; &nbsp; フィルターの保存/読み込み <br/>SQL Server Profiler の拡張機能の機能強化の完全な一覧が見つかります[ここ](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+)します。  |
+| Visual Studio Code でマージ 1.35 May リリースします。 | 最新の機能強化が見つかります[ここ](https://code.visualstudio.com/updates/v1_35)します。 |
+| 解決済みバグと問題 | Azure Data Studio の以前のリリースでは接続ダイアログ ボックスで、接続するときに、ユーザー データベースを選択した場合、結果のオブジェクト エクスプ ローラーのエントリがその 1 つのデータベースの完全にスコープ。 このリリースで、サーバー レベルのプロパティは、オブジェクト エクスプ ローラーにも表示されるように動作が変更されることを開始します。 <br/> 修正プログラムの完全な一覧については、次を参照してください。[バグと github の問題](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)します。 |
+| &nbsp; | &nbsp; |
+
+
 
 ## <a name="june-2019"></a>6 月 2019
 
@@ -34,7 +54,7 @@ ms.locfileid: "67681616"
 | Windows 用のデータベース管理ツールの拡張機能のリリース | この拡張機能では、2 つの Azure Data Studio から SQL Server Management Studio で最も使用されているエクスペリエンスが起動します。 ユーザーは、(データベース、テーブル、列、ビューなど) などの多数の異なるオブジェクトを右クリックし、そのオブジェクトの SSMS のプロパティ ダイアログ ボックスを表示するプロパティを選択します。 さらに、ユーザーは、データベースを右クリックして、よく知られた SSMS スクリプト生成ウィザードを起動するには、スクリプトの生成を選択することができます。 
 | スキーマ比較の機能強化 | &bull; &nbsp; オプションの追加の除外または含める <br/>&bull; &nbsp; 生成後のスクリプトが開きますスクリプトを生成します。 <br/>&bull; &nbsp; 二重のスクロール バーを削除  <br/>&bull; &nbsp; 書式設定とレイアウトの機能強化 <br/>&bull; &nbsp; 完了した変更はあります[ここ](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | 独自のタブに移動した Messages セクション | SQL クエリを実行したユーザー場合の結果とメッセージは積み上げパネルにいました。 ここでは SSMS のように 1 つのパネルで別々 のタブにあります。 |
-| SQL のノートブック機能強化 | &bull; &nbsp; ノートブックで独自の Python 3、Anaconda のインストールを使用するユーザーが選択できるようになりました <br/>&bull; &nbsp; 複数の安定性 +/終了サイズに合わせて修正&bull;&nbsp;の機能強化の完全な一覧を表示[ここ](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| SQL のノートブック機能強化 | &bull; &nbsp; ノートブックで独自の Python 3、Anaconda のインストールを使用するユーザーが選択できるようになりました <br/>&bull; &nbsp; 複数の安定性 +/終了サイズに合わせて修正 <br/> &bull; &nbsp; 機能強化の完全な一覧を表示[ここ](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
 | Visual Studio Code でマージ 1.34 May リリースします。 | 最新の機能強化が見つかります[ここ](https://code.visualstudio.com/updates/v1_34) |
 | 解決済みバグと問題。 | 参照してください[バグと github の問題](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)します。 |
 | &nbsp; | &nbsp; |
@@ -99,7 +119,7 @@ ms.locfileid: "67681616"
 
 | [変更] | 詳細 |
 | :----- | :------ |
-| 追加[Data Studio の Azure の PostgreSQL 拡張機能](postgres-extension.md) | サポートされている機能: <br/>&bull; &nbsp; 接続ダイアログ <br/>&bull; &nbsp; オブジェクト エクスプ ローラー <br/>&bull; &nbsp; クエリ エディター <br/>&bull; &nbsp; グラフ作成 <br/>&bull; &nbsp; ダッシュ ボード <br/>&bull; &nbsp; スニペット <br/>&bull; &nbsp; データを編集します。 <br/>&bull; &nbsp; Notebook |
+| 追加[Data Studio の Azure の PostgreSQL 拡張機能](postgres-extension.md) | サポートされている機能: <br/>&bull; &nbsp; 接続ダイアログ <br/>&bull; &nbsp; オブジェクト エクスプ ローラー <br/>&bull; &nbsp; クエリ エディター <br/>&bull; &nbsp; グラフ作成 <br/>&bull; &nbsp; ダッシュボード <br/>&bull; &nbsp; スニペット <br/>&bull; &nbsp; データを編集します。 <br/>&bull; &nbsp; Notebook |
 | 追加の SQL のノートブック | Notebook の組み込みビューアーを SQL のカーネル サポートが追加されました。 <br/>&bull; &nbsp; サポートする T-SQL <br/>&bull; &nbsp; PGSQL のサポート |
 | PowerShell の拡張機能を追加しました  | 経由では、 [PowerShell 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)VS コードから発生します。  |
 | SQL Server dacpac の拡張機能が追加  | 新しい拡張機能に SQL Server インポート拡張機能からのデータ層アプリケーションのウィザードを削除します。  |

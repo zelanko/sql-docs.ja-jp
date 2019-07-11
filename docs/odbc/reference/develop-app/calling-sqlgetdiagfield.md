@@ -17,12 +17,12 @@ ms.assetid: 3c4fb606-b81c-4f11-9820-f0a54e3bc401
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a27584a0892bc468b50286b79edbe92d7c968a0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42d24de7e5e94a3301653eb3082140e260a1e745
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199157"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793904"
 ---
 # <a name="calling-sqlgetdiagfield"></a>SQLGetDiagField の呼び出し
-ODBC 3 時にします。*x*アプリケーション呼び出し**SQLGetDiagField** ODBC 2 で *.x*ドライバー、ドライバーは SQL_SUCCESS と適切な情報を返すは *\*DiagInfoPtr*場合、 *DiagIdentifier*引数が SQL_DIAG_CLASS_ORIGIN、SQL_DIAG_CLASS_SUBCLASS_ORIGIN、SQL_DIAG_CONNECTION_NAME、SQL_DIAG_MESSAGE_TEXT、SQL_DIAG_NATIVE、SQL_DIAG_SQL_DIAG_RETURNCODE、SQL_DIAG_SERVER_NAME、または SQL_DIAG_SQLSTATE 数。 その他のすべての診断フィールドには、SQL_ERROR が返されます。
+ときに、ODBC *3.x*アプリケーション呼び出し**SQLGetDiagField** odbc *2.x*ドライバー、ドライバーは SQL_SUCCESS とで該当する情報を返すは *\*DiagInfoPtr*場合、 *DiagIdentifier*引数は、SQL_DIAG_CLASS_ORIGIN、SQL_DIAG_CLASS_SUBCLASS_ORIGIN、SQL_DIAG_CONNECTION_NAME、SQL_DIAG_MESSAGE_TEXT SQL_DIAG_ネイティブ、SQL_DIAG_NUMBER、SQL_DIAG_RETURNCODE、SQL_DIAG_SERVER_NAME、または SQL_DIAG_SQLSTATE します。 その他のすべての診断フィールドには、SQL_ERROR が返されます。

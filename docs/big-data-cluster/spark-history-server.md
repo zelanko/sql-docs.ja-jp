@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Spark History Server を使用して、デバッグおよび SQL Server 2019 ビッグ データ クラスター上で実行されている Spark アプリケーションを診断します。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 6bc310fc856a9f2fe4a100770a5af2eed6a189e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cba788fcb61dddce54d8b0c4ad4f2ca87ea0906d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782095"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728397"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>デバッグと Spark History Server の SQL Server のビッグ データ クラスター上で Spark アプリケーションの診断
 
@@ -203,7 +202,7 @@ Spark History Server では、次の既知の問題があります。
 
 + RDD を使用して入力/出力データは、[データ] タブでは表示されません。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [HDInsight の Spark クラスターのリソースを管理します。](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
 * [Spark の設定を構成します。](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

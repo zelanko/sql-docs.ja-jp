@@ -14,15 +14,15 @@ ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8504709cb2cedb36c62bb9be74ffc8d12a4c811d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccfebb99d6f98f1c6c2e5eea4650e1433e536d97
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188789"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792450"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption のマッピング
-アプリケーションを呼び出すと**SQLGetConnectOption**を通じて、ODBC 3 *.x*ドライバーへの呼び出し  
+アプリケーションを呼び出すと**SQLGetConnectOption** ODBC を通じて*3.x*ドライバーへの呼び出し  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -52,4 +52,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  ODBC で定義された文字列の接続オプションは、ドライバー マネージャーの設定、 *BufferLength*への呼び出しで引数**SQLGetConnectAttr**定義済みの最大長 (SQL_MAX_OPTION_STRING_LENGTH)。文字列以外の接続オプション、 *BufferLength*は 0 に設定します。  
   
- ODBC 3 の場合、 *.x*ドライバー、ドライバー マネージャーは不要になったかどうかを確認します*オプション*SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きい。 ドライバーは、オプションの値の有効性を確認する必要があります。
+ ODBC の*3.x*ドライバー、ドライバー マネージャーは不要になったかどうかを確認します*オプション*SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きい。 ドライバーは、オプションの値の有効性を確認する必要があります。

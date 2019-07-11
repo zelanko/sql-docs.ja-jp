@@ -20,18 +20,18 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536273"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793164"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 関数
 **準拠**  
  バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **まとめ**  
+ **概要**  
  **SQLSetDescRec**関数は、データ型に影響する複数の記述子フィールドを設定し、データの列またはパラメーターにバインドされたバッファー。  
   
 ## <a name="syntax"></a>構文  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY016|実装行記述子は変更できません。|*DescriptorHandle*引数は、IRD に関連付けられていました。|  
 |HY021|不整合な記述子情報|*型*フィールド、または、記述子の SQL_DESC_TYPE フィールドに関連付けられているその他の任意のフィールドが無効であるか、一貫性のあります。<br /><br /> 整合性チェック中にチェック記述子の情報は、一貫性のあるでした。 ("整合性チェックをこのセクションの後半を参照してください)。|  
-|HY090|文字列またはバッファーの長さが無効です。|(DM) ドライバーが、ODBC 2 *.x*ドライバー、記述子の ARD、 *ColumnNumber*引数が 0、および引数が指定された値に設定された*BufferLength*されました4 と等しくありません。|  
+|HY090|文字列またはバッファーの長さが無効です。|(DM)、ドライバーは ODBC *2.x*ドライバー、記述子が、ARD、 *ColumnNumber*引数が 0、および引数が指定された値に設定された*BufferLength*されました4 と等しくありません。|  
 |HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
 |HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
 |IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *DescriptorHandle*関数をサポートしていません。|  

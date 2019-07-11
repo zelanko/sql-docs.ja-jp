@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869690"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727741"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -30,7 +30,7 @@ ms.locfileid: "62869690"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DUP_KEY|  
-|メッセージ テキスト|オブジェクト名 '%.*ls' およびインデックス名 '%.\*ls' の重複キーが見つかったため、CREATE UNIQUE INDEX が終了しました。  重複キーの値は %ls です。|  
+|メッセージ テキスト|オブジェクト名 '%.\*ls' およびインデックス名 '%.\*ls' の重複キーが見つかったため、CREATE UNIQUE INDEX が終了しました。  重複キーの値は %ls です。|  
   
 ## <a name="explanation"></a>説明  
  このエラーは、一意インデックスを作成しようとしたときに、指定した値がテーブルの 1 つ以上の行に含まれている場合に発生します。 一意インデックスは、インデックスを作成して UNIQUE キーワードを指定した場合、または UNIQUE 制約を作成した場合に作成されます。 インデックスまたは制約で定義された列の値が重複する行をテーブルに含めることはできません。  
@@ -50,7 +50,7 @@ ms.locfileid: "62869690"
   
  エラー メッセージ 1505 では、一意性制約に違反する最初の行が返されます。 これ以外にも重複行がテーブルに含まれている可能性があります。 重複行をすべて検出するには、指定されたテーブルに対してクエリを実行し、GROUP BY 句と HAVING 句を使用して重複行を抽出します。 たとえば、次のクエリを実行すると、姓と名が重複する **Employee** テーブル内の行が返されます。  
   
- SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ SELECT LastName, FirstName, count(\*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
   
 ## <a name="user-action"></a>ユーザーの操作  
  次の解決策について検討してください。  

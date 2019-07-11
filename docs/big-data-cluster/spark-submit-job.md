@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Azure Data Studio で SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: db92ab03380bab1d6465fb53821ee6afbb345c54
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860453"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727369"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio での SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 
@@ -22,7 +22,7 @@ ms.locfileid: "58860453"
 
 ビッグ データ クラスターの主なシナリオの 1 つは、SQL Server 2019 プレビューの Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、SQL Server 2019 ビッグ データ クラスターへの参照を含むローカル Jar、Py ファイルを送信できます。 HDFS ファイル システムに既にあるは、Jar または Py のファイルを実行することもできます。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
    - **Azure Data Studio**
@@ -70,6 +70,6 @@ Spark ジョブを送信すると、左側のタスクの履歴で Spark ジョ�
 
 ![出力で Spark ジョブのリンク](./media/submit-spark-job/monitor-spark-job-submission-2.png)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 SQL Server のビッグ データ クラスターと関連するシナリオの詳細については、次を参照してください。[ビッグ データの SQL Server クラスターを新](big-data-cluster-overview.md)でしょうか。
 

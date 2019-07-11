@@ -2,19 +2,20 @@
 title: mssqlctl bdc プールのリファレンス
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc プール コマンドに関する参照記事です。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43d2e8e93020bd397a9416efefb9691cf23b7110
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 82d7f9ee32faf5ed9816846bce39380f6b0a3c3c
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394264"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727442"
 ---
 # <a name="mssqlctl-bdc-pool"></a>mssqlctl bdc pool
 
@@ -27,6 +28,6 @@ ms.locfileid: "67394264"
 | --- | --- |
 [mssqlctl bdc プールの状態](reference-mssqlctl-bdc-pool-status.md) | プールの状態コマンド。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 インストールする方法について、 **mssqlctl**ツールを参照してください[インストールの SQL Server 2019 ビッグ データ クラスターを管理する mssqlctl](deploy-install-mssqlctl.md)します。

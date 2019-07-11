@@ -13,12 +13,12 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e9e1018754977ee73ecdc21db30b3d8c2aae8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cd98b39421e95254fcb052db67cbc9f9205b668
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199683"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793535"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -30,8 +30,8 @@ ms.locfileid: "63199683"
   
  アプリケーションが呼び出すことができます**SQLBindCol**結果を再バインドするには列を呼び出した後設定**SQLExtendedFetch**、 **SQLFetch**、または**SQLFetchScroll**C データ型、列のサイズ、およびバインドされた列の 10 進数字の同じ残っている限り、します。 アプリケーションでは、異なるアドレスに列を再バインドする、カーソルは閉じられません必要があります。  
   
- カーソル ライブラリでは、バインドのオフセットを使用する SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 (**SQLBindCol**呼び出しが発生するこの再バインドする必要はありません)。かどうかカーソル ライブラリは、ODBC 3 で使用 *.x*ドライバー、バインドのオフセットがない場合に使用**SQLFetch**が呼び出されます。 場合、バインドのオフセットが使用される**SQLFetch** 、ODBC 2 カーソル ライブラリが使用されるときに呼び出されます *。x*ドライバーのため**SQLFetch**にマップされ**SQLExtendedFetch**します。  
+ カーソル ライブラリでは、バインドのオフセットを使用する SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 (**SQLBindCol**呼び出しが発生するこの再バインドする必要はありません)。Odbc カーソル ライブラリが使用されている場合*3.x*ドライバー、バインドのオフセットがない場合に使用**SQLFetch**が呼び出されます。 場合、バインドのオフセットが使用される**SQLFetch** odbc カーソル ライブラリが使用されるときに呼び出される*2.x*ドライバーのため**SQLFetch**にマップされ**SQLExtendedFetch**します。  
   
  カーソル ライブラリ呼び出しをサポートする**SQLBindCol**ブックマーク列をバインドします。  
   
- ODBC 2 代表です。*x*ドライバー、カーソル ライブラリは、SQLSTATE HY090 を返します (無効な文字列長またはバッファー長) と**SQLBindCol**ブックマーク列のバッファー長を 4 に等しくない値に設定すると呼びます。 ODBC 3 は、使用する場合 *.x*ドライバー、カーソル ライブラリにより、バッファー サイズを変更します。
+ ODBC を使用する場合*2.x*ドライバー、カーソル ライブラリは、SQLSTATE HY090 を返します (無効な文字列長またはバッファー長) と**SQLBindCol**が呼び出されない値にブックマーク列に対してバッファーの長さを設定するには4 に等しい。 ODBC を使用する場合*3.x*ドライバー、カーソル ライブラリにより、バッファーのサイズを変更します。

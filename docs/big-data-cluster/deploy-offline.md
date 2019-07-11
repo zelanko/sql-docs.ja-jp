@@ -2,25 +2,26 @@
 title: オフライン デプロイします。
 titleSuffix: SQL Server big data clusters
 description: ビッグ データの SQL Server クラスターをオフラインで展開を実行する方法について説明します。
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1300c375903eb8692b8da6dce4e74a41e91d80c0
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388813"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728924"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>ビッグ データの SQL Server クラスターのデプロイのオフライン実行します。
 
 この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のオフラインの展開を実行する方法について説明します。 ビッグ データ クラスターは、コンテナー イメージをプルする元にある Docker リポジトリにアクセスする必要があります。 オフライン インストールは 1 つのプライベート Docker リポジトリに必要なイメージを配置する場所です。 プライベート リポジトリは、新しいデプロイのイメージ ソースとして使用されます。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - サポートされている任意の Linux ディストリビューションの Docker エンジン 1.8 + または Docker for Mac/Windows。 詳細については「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker のインストール) を参照してください。
 
@@ -187,6 +188,6 @@ mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.
 
 展開が、docker のユーザー名とパスワードを求めまたはで指定することができます、 **DOCKER_USERNAME**と**DOCKER_PASSWORD**環境変数。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ビッグ データ クラスターのデプロイの詳細については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md)します。

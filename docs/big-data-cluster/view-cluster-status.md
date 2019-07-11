@@ -1,20 +1,21 @@
 ---
-title: クラスターの状態の表示
+title: クラスターの状態を表示する
 titleSuffix: SQL Server big data clusters
 description: この記事では、Azure Data Studio、ノートブック、および mssqlctl コマンドを使用してビッグ データ クラスターの状態を表示する方法について説明します。
 author: yualan
 ms.author: alayu
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2edd49c37655d420cf8022677c0d0287028a0b93
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: b3cc78e36fe427966c7730533104c63aa3ed9332
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727324"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>ビッグ データ クラスターの状態を表示する方法
 
@@ -135,7 +136,7 @@ ms.locfileid: "67413969"
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-### <a name="view-cluster-status"></a>クラスターの状態の表示
+### <a name="view-cluster-status"></a>クラスターの状態を表示する
 
 クラスターの状態を表示することができます、 [mssqlctl bdc ステータス表示](reference-mssqlctl-bdc-status.md)コマンド。
 
@@ -212,6 +213,6 @@ mssqlctl bdc pool status show --kind storage
 
 コント ローラーの状態を表示することができます、 [mssqlctl bdc コントロールの状態表示](reference-mssqlctl-bdc-control-status.md)コマンド。 ビッグ データ クラスターのコント ローラーのノードに関連する監視ダッシュ ボードへのようなリンクを提供します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server のビッグ データ クラスターは](big-data-cluster-overview.md)します。

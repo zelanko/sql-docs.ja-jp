@@ -18,21 +18,21 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181318"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793181"
 ---
 # <a name="mapping-deprecated-functions"></a>非推奨の関数のマッピング
-このセクションには、どのように非推奨の関数がについて説明します、ODBC 3 によってマップされます *.x* ODBC 3 の旧バージョンとの互換性を保証するために、ドライバー マネージャー *.x*ドライバーは ODBC 2 で使用される *。x*アプリケーション。 ドライバー マネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ため、各 ODBC 2。*x*関数は、次の一覧は、対応する ODBC 3 にマップされて *.x*関数、ODBC 3 で呼び出されると *.x*ドライバー、ODBC 3 *.x*ドライバーは、ODBC 2 を実装する必要はありません。*x*関数。  
+このセクションには、どのように非推奨の関数がについて説明します、ODBC によってマップされます*3.x* ODBC の旧バージョンとの互換性を保証するために、ドライバー マネージャー *3.x* ODBC で使用されるドライバー *2.x*アプリケーション。 ドライバー マネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ODBC の各*2.x*関数は、次の一覧は、対応する ODBC にマップされて*3.x*関数、ODBC で呼び出されると*3.x*ドライバー、ODBC *3.x*ドライバーは ODBC を実装する必要はありません*2.x*関数。  
   
- リスト内のマッピングは、ドライバーは、ODBC 3 ときにトリガーされる *.x*ドライバーとドライバーがマップされる関数をサポートしていません。  
+ リスト内のマッピングは、ドライバーは ODBC ときにトリガーされる*3.x*ドライバーとドライバーがマップされる関数をサポートしていません。  
   
- 次の表に、ODBC 3 で導入された機能がすべての重複 *.x*します。  
+ 次の表に、ODBC で導入された機能がすべての重複*3.x*します。  
   
-|ODBC 2。*x*関数|ODBC 3 *.x*関数|  
+|ODBC *2.x*関数|ODBC *3.x*関数|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -52,7 +52,7 @@ ms.locfileid: "63181318"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] この関数は、ODBC 2 には存在しなかった場合でも *.x*、Open Group と ISO 標準になっています。  
+ [1] この関数は、ODBC には存在しなかった場合でも*2.x*、Open Group と ISO 標準になっています。  
   
  [2] これは、ODBC 1.0 関数です。  
   

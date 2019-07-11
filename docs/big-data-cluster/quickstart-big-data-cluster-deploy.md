@@ -1,36 +1,36 @@
 ---
-title: デプロイ クイック スタート
+title: 配置スクリプト
 titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) Azure Kubernetes Service (AKS) でのデプロイのチュートリアルです。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728772"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このクイック スタートでは、サンプル デプロイ スクリプトを使用して Azure Kubernetes Service (AKS) を SQL Server 2019 ビッグ データ クラスター (プレビュー) をデプロイします。 
+このチュートリアルでは、配置スクリプトのサンプルを使用して Azure Kubernetes Service (AKS) を SQL Server 2019 ビッグ データ クラスター (プレビュー) をデプロイします。 
 
 > [!TIP]
 > AKS は、ビッグ データ クラスターの Kubernetes をホストするためのオプションを 1 つだけです。 オプションの展開をカスタマイズする方法についても、その他の展開オプションについては、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md)します。
 
-ここで使用する既定のビッグ データ クラスター展開は、SQL のマスター インスタンス、プールのインスタンスを 1 つのコンピューティング、2 つのデータ プール インスタンス、および記憶域プールの 2 つのインスタンスで構成されます。 AKS の既定のストレージ クラスを使用する Kubernetes 永続ボリュームを使用してデータが保持されます。 このクイック スタートで使用される既定の構成は、開発/テスト環境に適しています。
+ここで使用する既定のビッグ データ クラスター展開は、SQL のマスター インスタンス、プールのインスタンスを 1 つのコンピューティング、2 つのデータ プール インスタンス、および記憶域プールの 2 つのインスタンスで構成されます。 AKS の既定のストレージ クラスを使用する Kubernetes 永続ボリュームを使用してデータが保持されます。 このチュートリアルで使用される既定の構成は、開発/テスト環境に適しています。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - Azure サブスクリプション。
 - [ビッグ データ ツール](deploy-big-data-tools.md):
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>配置スクリプトをダウンロードします。
 
-このクイック スタートは、python スクリプトを使用して AKS でのビッグ データ クラスターの作成を自動化**展開-sql-ビッグ-データ-aks.py**します。 用の python が既にインストールされている場合**mssqlctl**、このクイック スタートでは、スクリプトが正常に実行できる必要があります。 
+このチュートリアルは、python スクリプトを使用して AKS でのビッグ データ クラスターの作成を自動化**展開-sql-ビッグ-データ-aks.py**します。 用の python が既にインストールされている場合**mssqlctl**、このチュートリアルでは、スクリプトが正常に実行できる必要があります。 
 
 Windows PowerShell または Linux の bash プロンプトには、GitHub からデプロイ スクリプトをダウンロードするには、次のコマンドを実行します。
 

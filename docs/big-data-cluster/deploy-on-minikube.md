@@ -2,20 +2,20 @@
 title: Minikube を構成します。
 titleSuffix: SQL Server big data clusters
 description: 1 台のコンピューターでのビッグ データ クラスター (プレビュー) のデプロイを SQL Server 2019 minikube を構成する方法について説明します。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 5b7698cd439461a9ee9280571f49649fb03387a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e4fe9439264b9b2dee3d95423bf1d3f420379d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803098"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728905"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>SQL Server のビッグ データ クラスター展開 minikube を構成します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "66803098"
 
 この記事では、構成する方法を説明**minikube**単一のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイにします。 Minikube は、ラップトップやデスクトップなどの単一のコンピューター上で Kubernetes を実行しやすくツールです。 Minikube は実行 Kubernetes を試すか、それを使用した開発を検討しているユーザーのラップトップ コンピューターで、VM 内で単一ノードの Kubernetes クラスターを日常的なされます。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - 32 GB のメモリ (64 GB を推奨)。
 
@@ -72,7 +72,7 @@ Windows 10 では、自動チェックポイントは、VM で有効にします
 Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $false
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 この記事の手順では、minikube クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データのクラスターにデプロイします。 手順については、次の記事を参照してください。
 

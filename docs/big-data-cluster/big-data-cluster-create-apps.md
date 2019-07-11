@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリケーションとしては、Python または R スクリプトを展開します。
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681589"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729288"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server のビッグ データ クラスター (プレビュー) でアプリをデプロイする方法
 
@@ -38,7 +37,7 @@ ms.locfileid: "67681589"
 - MLeap サービスを提供します。
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
 - [mssqlctl コマンド ライン ユーティリティ](deploy-install-mssqlctl.md)
@@ -91,7 +90,7 @@ kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
-## <a name="create-an-app"></a>アプリを作成します。
+## <a name="create-an-app"></a>アプリを作成する
 
 使用するアプリケーションを作成する`mssqlctl`で、`app create`コマンド。 これらのファイルからアプリを作成しているコンピューターでローカルに存在します。
 

@@ -2,20 +2,20 @@
 title: Kubernetes でのデータ永続化
 titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 のビッグ データ クラスター内のデータ永続化のしくみについて説明します。
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: cfba93aaca23ca3303b6d9bd9752c1d458a9a81a
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 701be4a352066ab0c80e0269b16114e8e279998a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729136"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
 
@@ -141,7 +141,7 @@ mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.
 mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Kubernetes でのボリュームに関する詳細なドキュメントを参照してください、[ボリューム上の Kubernetes のドキュメント](https://kubernetes.io/docs/concepts/storage/volumes/)します。
 

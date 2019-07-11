@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61425d2af597299e3f34186c4555d324278d8cbf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a6fb689832069ab8be4a260fecaa27b6b29f7ca5
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492555"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716740"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +56,15 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>引数  
 `[ @database = ] database'` 作成するディストリビューション データベースの名前です。 *データベース*は**sysname**、既定値はありません。 指定されたデータベースは既に存在し、ディストリビューション データベースとしてマークされていない、し配布を有効にするために必要なオブジェクトがインストールされているし、データベースがディストリビューション データベースとしてマークされています。 指定したデータベースが、既にディストリビューション データベースとして有効な場合は、エラーが返されます。  
   
-`[ @data_folder = ] 'data_folder'_` ディストリビューション データベース データ ファイルの格納に使用するディレクトリの名前です。 *data_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合、その [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
+`[ @data_folder = ] 'data_folder'_` ディストリビューション データベース データ ファイルの格納に使用するディレクトリの名前です。 *data_folder*は**nvarchar (255)** 、既定値は NULL です。 NULL の場合、その [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
   
-`[ @data_file = ] 'data_file'` データベース ファイルの名前です。 *data_file*は**nvarchar (255)**、既定値は**データベース**します。 NULL の場合、ストアド プロシージャは、データベース名を使用してファイル名を構築します。  
+`[ @data_file = ] 'data_file'` データベース ファイルの名前です。 *data_file*は**nvarchar (255)** 、既定値は**データベース**します。 NULL の場合、ストアド プロシージャは、データベース名を使用してファイル名を構築します。  
   
 `[ @data_file_size = ] data_file_size` メガバイト (MB) 単位で初期データ ファイルのサイズです。 *data_file_size は*s **int**、既定値は 5 MB です。  
   
-`[ @log_folder = ] 'log_folder'` データベースのログ ファイルのディレクトリの名前です。 *log_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合のインスタンスをデータ ディレクトリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されます (たとえば、 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)。  
+`[ @log_folder = ] 'log_folder'` データベースのログ ファイルのディレクトリの名前です。 *log_folder*は**nvarchar (255)** 、既定値は NULL です。 NULL の場合のインスタンスをデータ ディレクトリ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されます (たとえば、 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)。  
   
-`[ @log_file = ] 'log_file'` ログ ファイルの名前です。 *log_file*は**nvarchar (255)**、既定値は NULL です。 NULL の場合、ストアド プロシージャは、データベース名を使用してファイル名を構築します。  
+`[ @log_file = ] 'log_file'` ログ ファイルの名前です。 *log_file*は**nvarchar (255)** 、既定値は NULL です。 NULL の場合、ストアド プロシージャは、データベース名を使用してファイル名を構築します。  
   
 `[ @log_file_size = ] log_file_size` メガバイト (MB) 単位で最初のログ ファイルのサイズです。 *log_file_size*は**int**、ファイルで許容されるサイズ、既定値は 0 MB には、ファイル サイズが最小のログを使用して作成することを意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
@@ -164,7 +164,7 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_adddistributiondb**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

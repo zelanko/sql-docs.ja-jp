@@ -12,16 +12,16 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 889d8d618cf017d27e3b92ce845c8ebfee179048
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: 1bd16b4ac7fb0b27296fb2cc7e47ec683d761ed4
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342915"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716649"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -35,7 +35,7 @@ Azure SQL database または Azure SQL Data Warehouse に存在する場合は�
   
  Sys.database_service_objectives ビューには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データの種類|説明|  
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|Azure SQL Database サーバーのインスタンス内で一意で、データベースの ID。 結合可能な[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。|  
 |のエディション|sysname|データベースまたはデータ ウェアハウスのサービス レベル:**基本的な**、**標準**、 **Premium**または**Data Warehouse**します。|  

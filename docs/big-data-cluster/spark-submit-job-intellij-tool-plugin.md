@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: For IntelliJ には、Azure Toolkit で SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.openlocfilehash: 5d2bb4b55b578530a29490a0a1a284f338686c38
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932299"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728369"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>IntelliJ での SQL Server のビッグ データ クラスターで Spark ジョブを送信します。
 
@@ -86,7 +86,7 @@ ms.locfileid: "59932299"
 
    A. **ファイル**メニューの **プロジェクト構造**します。
 
-   B. **プロジェクト構造**ダイアログ ボックスで、**成果物**作成される既定の成果物を表示します。 プラス記号を選択して、独自のアーティファクトを作成することもできます (**+**)。
+   B. **プロジェクト構造**ダイアログ ボックスで、**成果物**作成される既定の成果物を表示します。 プラス記号を選択して、独自のアーティファクトを作成することもできます ( **+** )。
 
       ![アーティファクト情報 ダイアログ ボックス](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -104,7 +104,7 @@ ms.locfileid: "59932299"
 
     * IntelliJ プロジェクトからアーティファクトを選択するか、ハード ドライブから 1 つを選択します。
 
-    * **メイン クラス名**フィールド。既定値は、選択したファイルからメイン クラスです。 クラスを変更するには、省略記号ボタンを選択して (**.**) を別のクラスを選択します。   
+    * **メイン クラス名**フィールド。既定値は、選択したファイルからメイン クラスです。 クラスを変更するには、省略記号ボタンを選択して ( **.** ) を別のクラスを選択します。   
 
     * **ジョブ構成**フィールド。既定値は、前に示した図として設定されます。 値を変更したり、ジョブの送信の新しいキー/値を追加できます。 詳細:[Apache Livy REST API](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
@@ -131,9 +131,9 @@ Spark ローカル Console(Scala) を実行したり、Spark Livy 対話型セ�
 ### <a name="spark-local-consolescala"></a>Spark ローカル Console(Scala)
 WINUTILS が満たされていることを確認します。EXE の前提条件です。
 
-1. メニュー バーに移動します**実行** > **構成の編集。**.
+1. メニュー バーに移動します**実行** > **構成の編集。** .
 
-2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、**ビッグ データの SQL Server クラスターでの Apache Spark** > **[SQL での Spark] myApp**します。
+2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、**ビッグ データの SQL Server クラスターでの Apache Spark** >  **[SQL での Spark] myApp**します。
 
 3. メイン ウィンドウで、選択、**ローカルで実行**タブ。
 
@@ -141,7 +141,7 @@ WINUTILS が満たされていることを確認します。EXE の前提条件�
 
     |プロパティ |値 |
     |----|----|
-    |ジョブのメイン クラス|既定値は、選択したファイルからメイン クラスです。 クラスを変更するには、省略記号ボタンを選択して (**.**) を別のクラスを選択します。|
+    |ジョブのメイン クラス|既定値は、選択したファイルからメイン クラスです。 クラスを変更するには、省略記号ボタンを選択して ( **.** ) を別のクラスを選択します。|
     |環境変数|HADOOP_HOME の値が正しいことを確認します。|
     |WINUTILS.exe の場所|パスが正しいことを確認します。|
 
@@ -165,9 +165,9 @@ WINUTILS が満たされていることを確認します。EXE の前提条件�
 ### <a name="spark-livy-interactive-session-consolescala"></a>Livy 対話型セッション Console(Scala) を spark します。
 Spark Livy 対話型セッション Console(Scala) は IntelliJ 2018.2 と 2018.3 でのみサポートされます。
 
-1. メニュー バーに移動します**実行** > **構成の編集。**.
+1. メニュー バーに移動します**実行** > **構成の編集。** .
 
-2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、**ビッグ データの SQL Server クラスターでの Apache Spark** > **[SQL での Spark] myApp**します。
+2. **実行/デバッグ構成**に移動します ウィンドウの左側のウィンドウで、**ビッグ データの SQL Server クラスターでの Apache Spark** >  **[SQL での Spark] myApp**します。
 
 3. メイン ウィンドウで、選択、**クラスターにリモートで実行**タブ。
 
@@ -176,7 +176,7 @@ Spark Livy 対話型セッション Console(Scala) は IntelliJ 2018.2 と 2018.
     |プロパティ |値 |
     |----|----|
     |Spark クラスター (Linux のみ)|アプリケーションを実行する SQL Server のビッグ データ クラスターを選択します。|
-    |メイン クラス名|既定値は、選択したファイルからメイン クラスです。 クラスを変更するには、省略記号ボタンを選択して (**.**) を別のクラスを選択します。|
+    |メイン クラス名|既定値は、選択したファイルからメイン クラスです。 クラスを変更するには、省略記号ボタンを選択して ( **.** ) を別のクラスを選択します。|
 
     ![対話型コンソール セットの構成](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
 

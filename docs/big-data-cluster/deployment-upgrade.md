@@ -2,19 +2,20 @@
 title: 新しいリリースにアップグレードする
 titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 ビッグ データ クラスター (プレビュー) を新しいリリースにアップグレードする方法について説明します。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bde0037933f420147d0467f83f1bcb6428cf526
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 8c8b8df4dc5643febdf3ddc808f215a9c34d24fe
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728765"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターをアップグレードする方法
 
@@ -74,6 +75,6 @@ mssqlctl --version
 
 前のビッグ データ クラスターを削除して、最新版のインストール後に**mssqlctl**、現在のデプロイの手順を使用して新しいビッグ データ クラスターをデプロイします。 詳細については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md)します。 次に、任意の必要なデータベースまたはファイルを復元します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server のビッグ データ クラスターは](big-data-cluster-overview.md)します。

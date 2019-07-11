@@ -15,15 +15,15 @@ ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c644f7ad008efb10d0397cccb00432da684295fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc89fd8d43df4b906f47ab1ef6b6932a5a814a86
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201574"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794106"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>旧バージョンとの互換性と標準準拠
-旧バージョンとの互換性は、以前の ODBC コンポーネントを使用する新しい ODBC コンポーネントの機能です。 次のセクションでは、これらのコンポーネントが ODBC 3 の変更によって影響を受ける方法について説明します *.x*します。 主に、それらに含まれる情報は、ODBC 3 の書き込み *.x*アプリケーションとの ODBC ドライバーで互換性の問題を処理する方法は、後方します。 どの旧バージョンとの互換性に関する特定のガイドラインについての問題に影響を与える、ODBC 3 の書き込み *.x*ドライバーを参照してください[付録 g:旧バージョンとの互換性のためのドライバーのガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)します。  
+旧バージョンとの互換性は、以前の ODBC コンポーネントを使用する新しい ODBC コンポーネントの機能です。 次のセクションでは、これらのコンポーネントが ODBC での変更によって影響を受ける方法について説明します*3.x*します。 主に、それらに含まれる情報は、ODBC の書き込み*3.x*アプリケーションとの ODBC ドライバーで互換性の問題を処理する方法は、後方します。 どの旧バージョンとの互換性に関する特定のガイドラインについては問題に影響を与える、ODBC の書き込み*3.x*ドライバーを参照してください[付録 g:旧バージョンとの互換性のためのドライバーのガイドライン](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   

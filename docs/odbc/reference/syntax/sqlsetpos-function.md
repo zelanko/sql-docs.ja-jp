@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63bca42adcdfc83d1bdb96361680d0c70c9a031c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536317"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793127"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 関数
 **準拠**  
@@ -60,7 +60,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  値は、SQL_ADD、*操作*ODBC 3 の引数が非推奨とされました *.x*します。 ODBC 3。*x*ドライバーは下位互換性のため SQL_ADD をサポートする必要があります。 この機能はへの呼び出しによって置き換えられました**SQLBulkOperations**で、*操作*SQL_ADD の。 ODBC 3 時にします。*x*アプリケーションは、ODBC 2 で動作します *。x*ドライバー、ドライバー マネージャーは、マップへの呼び出し**SQLBulkOperations**で、*操作*に SQL_ADD の**SQLSetPos**で、 *操作*SQL_ADD の。  
+>  値は、SQL_ADD、*操作*ODBC の引数が非推奨とされました*3.x*します。 ODBC *3.x*ドライバーは下位互換性のため SQL_ADD をサポートする必要があります。 この機能はへの呼び出しによって置き換えられました**SQLBulkOperations**で、*操作*SQL_ADD の。 ときに、ODBC *3.x* odbc アプリケーションの動作*2.x*ドライバー、ドライバー マネージャーは、マップへの呼び出し**SQLBulkOperations**で、*操作*に SQL_ADD の**SQLSetPos**で、*操作*SQL_ADD の。  
   
  詳細については、「コメントです。」を参照してください。  
   
@@ -85,7 +85,7 @@ SQLRETURN SQLSetPos(
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01001|カーソル操作の競合|*操作*引数が SQL_DELETE または SQL_UPDATE、および行または複数の行が削除または更新します。 (1 つ以上の行に更新プログラムの詳細については、SQL_ATTR_SIMULATE_CURSOR の説明を参照してください*属性*で**SQLSetStmtAttr**。)。(関数は、SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> *操作*引数が SQL_DELETE または SQL_UPDATE、およびオプティミスティック同時実行制御のため、操作に失敗しました。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |01004|文字列データの右側が切り捨てられました|*操作*引数が SQL_REFRESH、および文字列またはバイナリ データの列またはの SQL_C_CHAR または SQL_C_BINARY データ型を持つ列に対して返される空白でない文字または NULL 以外のバイナリ データの切り捨てが発生しました。|  
-|01S01|行内のエラー|*RowNumber*引数が 0 の場合とで指定された操作の実行中に 1 つまたは複数の行でエラーが発生しました、*操作*引数。<br /><br /> (SQL_SUCCESS_WITH_INFO が返されます、複数行の操作の 1 つ以上のただしすべてではなく行でエラーが発生し、単一行の操作でエラーが発生した場合、SQL_ERROR が返されます。)<br /><br /> (この SQLSTATE の場合にのみが返されます**SQLSetPos**が呼び出された後**SQLExtendedFetch**場合、ドライバーは ODBC 2 *。x*ドライバーおよびカーソル ライブラリは使用されません)。|  
+|01S01|行内のエラー|*RowNumber*引数が 0 の場合とで指定された操作の実行中に 1 つまたは複数の行でエラーが発生しました、*操作*引数。<br /><br /> (SQL_SUCCESS_WITH_INFO が返されます、複数行の操作の 1 つ以上のただしすべてではなく行でエラーが発生し、単一行の操作でエラーが発生した場合、SQL_ERROR が返されます。)<br /><br /> (この SQLSTATE の場合にのみが返されます**SQLSetPos**が呼び出された後**SQLExtendedFetch**ドライバーが、ODBC の場合、 *2.x*ドライバーおよびカーソル ライブラリは使用されません)。|  
 |01S07|分数が切り捨てられました|*操作*引数が SQL_REFRESH、アプリケーションのバッファーのデータ型が SQL_C_CHAR または SQL_C_BINARY、および 1 つまたは複数の列のバッファーをアプリケーションに返されるデータが切り捨てられました。 数値データ型、数値の小数部が切り捨てられました。 時刻、タイムスタンプ、および時間コンポーネントを含む interval データ型の場合は、時間の小数部が切り捨てられました。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限付きのデータ型の属性違反|指定されたデータ型に結果セット内の列のデータ値を変換でした*TargetType*への呼び出しで**SQLBindCol**します。|  
 |07009|無効な記述子のインデックス|引数*操作*SQL_REFRESH または SQL_UPDATE、および列が結果セット内の列の数よりも大きい列番号でバインドされました。|  
@@ -105,8 +105,8 @@ SQLRETURN SQLSetPos(
 |HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
 |HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*関数が呼び出された後、もう一度、 *StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
-|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数は、SQLSetPos 関数が呼び出されたときにまだ実行中だった。<br /><br /> (DM)、指定した*StatementHandle*実行の状態ではありませんでした。 最初に呼び出さず、関数が呼び出された**SQLExecDirect**、 **SQLExecute**、またはカタログ関数。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) ドライバーは ODBC 2、でした。*x*ドライバー、および**SQLSetPos**に対して呼び出された、 *StatementHandle*後**SQLFetch**が呼び出されました。|  
-|HY011|属性を設定できません。|(DM) ドライバーは ODBC 2、でした。*x*ドライバー;、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性が設定された、 **SQLSetPos**する前に呼び出された**SQLFetch**、 **SQLFetchScroll**、または**SQLExtendedFetch**が呼び出されました。|  
+|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数は、SQLSetPos 関数が呼び出されたときにまだ実行中だった。<br /><br /> (DM)、指定した*StatementHandle*実行の状態ではありませんでした。 最初に呼び出さず、関数が呼び出された**SQLExecDirect**、 **SQLExecute**、またはカタログ関数。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM)、ドライバーは ODBC *2.x*ドライバー、および**SQLSetPos**に対して呼び出された、 *StatementHandle*後**SQLFetch**が呼び出されました。|  
+|HY011|属性を設定できません。|(DM)、ドライバーは ODBC *2.x*ドライバー;、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性が設定された、 **SQLSetPos**する前に呼び出された**SQLFetch**、 **SQLFetchScroll**、または**SQLExtendedFetch**が呼び出されました。|  
 |HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
 |HY090|文字列またはバッファーの長さが無効です。|*操作*引数が SQL_UPDATE、データ値が null ポインター、および列の長さの値が 0、SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE、SQL_NULL_DATA、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> *操作*SQL_DATA_AT_EXEC、SQL_COLUMN_IGNORE と等しくありませんが引数が SQL_UPDATE; データ値が null ポインターではありませんでした C データ型が SQL_C_BINARY または SQL_C_CHAR; と列の長さの値が 0 未満でした。、、SQL_NTS または SQL_NULL_DATA、SQL_LEN_DATA_AT_EXEC_OFFSET 未満。<br /><br /> 長さ/インジケーター バッファーの値が SQL_DATA_AT_EXEC です。SQL 型がいずれかの SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型。SQL_NEED_LONG_DATA_LEN 情報の種類と**SQLGetInfo** "Y"でした。|  
 |HY092|無効な属性の識別子|(DM) の指定された値、*操作*引数が無効です。<br /><br /> (DM) の指定された値、 *LockType*引数が無効です。<br /><br /> *操作*引数が SQL_UPDATE または SQL_DELETE、および SQL_ATTR_CONCURRENCY ステートメント属性されました SQL_ATTR_CONCUR_READ_ONLY します。|  
@@ -123,7 +123,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>コメント  
   
 > [!CAUTION]
->  ステートメントについては、ことを示すため**SQLSetPos**呼び出すことができます ODBC 2 と互換性のために必要なものと *.x*アプリケーションを参照してください[ブロック カーソル、スクロール可能なカーソル、および旧バージョンとの互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)します。  
+>  ステートメントについては、ことを示すため**SQLSetPos**で呼び出すことは ODBC と互換性のために必要なものと*2.x*アプリケーションを参照してください[ブロック カーソル、スクロール可能なカーソルと旧バージョンとの互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)します。  
   
 ## <a name="rownumber-argument"></a>RowNumber 引数  
  *RowNumber*引数で指定された操作を実行する対象の行セット内の行の数を指定します、*操作*引数。 場合*RowNumber*が 0 の場合、操作は、行セット内のすべての行に適用されます。 *RowNumber*行セットの行の数を 0 値を指定する必要があります。  

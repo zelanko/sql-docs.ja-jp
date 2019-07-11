@@ -17,15 +17,15 @@ ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f94b1191815f37728a2d8de8fc1175113644bc5a
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199447"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793889"
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos の呼び出し
-ODBC 2。*x*、行の状態配列へのポインターが引数**SQLExtendedFetch**します。 行の状態配列への呼び出しによって更新された後で**SQLSetPos**します。 一部のドライバーがこの配列の間で変更しないという事実に依存していました**SQLExtendedFetch**と**SQLSetPos**します。 ODBC 3。*x*状態配列へのポインターは、記述子フィールド、および、そのため、変えることができます簡単に別の配列を指すようにします。 これは、問題と、ODBC 3 です。*x* ODBC 2 を利用するアプリケーション *。x*ドライバーは呼び出すことが**SQLSetStmtAttr**配列状態のポインターを設定して呼び出しは**SQLFetchScroll**データをフェッチします。 ドライバー マネージャーがへの呼び出しのシーケンスとしてマップ**SQLExtendedFetch**します。 次のコードでは、エラーは通常するときに発生ドライバー マネージャーは、2 つ目のマップ**SQLSetStmtAttr** ODBC 2 を使用するときに呼び出す *.x*ドライバー。  
+ODBC で*2.x*、行の状態配列へのポインターが引数**SQLExtendedFetch**します。 行の状態配列への呼び出しによって更新された後で**SQLSetPos**します。 一部のドライバーがこの配列の間で変更しないという事実に依存していました**SQLExtendedFetch**と**SQLSetPos**します。 ODBC で*3.x*状態配列へのポインターは、記述子フィールド、および、そのため、変えることができます簡単に別の配列を指すようにします。 これは、とき、ODBC の問題となることができます*3.x* odbc アプリケーションが動作*2.x*ドライバーは呼び出すことが**SQLSetStmtAttr**配列状態のポインターを設定してを呼び出し、**SQLFetchScroll**データをフェッチします。 ドライバー マネージャーがへの呼び出しのシーケンスとしてマップ**SQLExtendedFetch**します。 次のコードでは、エラーは通常するときに発生ドライバー マネージャーは、2 つ目のマップ**SQLSetStmtAttr** ODBC を使用するときに呼び出す*2.x*ドライバー。  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -34,7 +34,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- ODBC 2 行の状態のポインターを変更する方法がない場合、エラーが生成されます。*x*呼び出しの間で**SQLExtendedFetch**します。 ODBC 2 を使用する場合に、ドライバー マネージャーが、次の手順を実行する代わりに、 *.x*ドライバー。  
+ ODBC での行の状態のポインターを変更する方法がない場合、エラーが生成されます*2.x*呼び出しの間で**SQLExtendedFetch**します。 ODBC を使用する場合に、ドライバー マネージャーが、次の手順を実行する代わりに、 *2.x*ドライバー。  
   
 1.  内部のドライバー マネージャーのフラグを初期化します*fSetPosError*を TRUE にします。  
   

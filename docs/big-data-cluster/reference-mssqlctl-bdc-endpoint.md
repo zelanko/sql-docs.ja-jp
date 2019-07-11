@@ -2,19 +2,20 @@
 title: mssqlctl bdc endpoint reference
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc のエンドポイントのコマンドに関する参照記事です。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bdca9bb137fdaccbfa5e24deca1b22492678c1c9
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 74065a075e4a2a80e3ab5455b7ac99e5a055f66a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394324"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727462"
 ---
 # <a name="mssqlctl-bdc-endpoint"></a>mssqlctl bdc endpoint
 
@@ -47,6 +48,6 @@ JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](
 #### `--verbose`
 ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 その他の詳細については**mssqlctl**コマンドを参照してください[mssqlctl 参照](reference-mssqlctl.md)します。 インストールする方法について、 **mssqlctl**ツールを参照してください[インストールの SQL Server 2019 ビッグ データ クラスターを管理する mssqlctl](deploy-install-mssqlctl.md)します。

@@ -2,19 +2,20 @@
 title: 作業開始
 titleSuffix: SQL Server big data clusters
 description: 手順と SQL Server 2019 ビッグ データ クラスター (プレビュー) を展開するためのリソースについて説明します。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: b090ec57ae62058a211e4e232f8bfa99e44f9675
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388830"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728958"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターを概要します。
 
@@ -63,6 +64,6 @@ ms.locfileid: "67388830"
 
 任意の配置スクリプトをカスタマイズするには、ビッグ データ クラスター環境変数が異なる方法で構成される、独自のバージョンを作成します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ビッグ データ クラスターを正常に展開した後[クラスターに接続する](connect-to-big-data-cluster.md)を検討してください[サンプル データの読み込み](tutorial-load-sample-data.md)いくつかのチュートリアルで使用するためです。

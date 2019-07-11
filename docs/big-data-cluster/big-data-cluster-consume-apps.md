@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: RESTful web サービス (プレビュー) を使用して SQL Server 2019 ビッグ データ クラスターでデプロイされたアプリケーションを使用します。
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: a3894ccbd8ffda7cfe00d61a7a47622f7f481c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801902"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729299"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful web サービスを使用して SQL Server のビッグ データ クラスターにデプロイされたアプリを使用します。
 
@@ -24,7 +23,7 @@ ms.locfileid: "66801902"
 
 この記事では、RESTful web サービス (プレビュー) を使用して SQL Server 2019 ビッグ データ クラスターにデプロイされたアプリを使用する方法について説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
 - [mssqlctl コマンド ライン ユーティリティ](deploy-install-mssqlctl.md)

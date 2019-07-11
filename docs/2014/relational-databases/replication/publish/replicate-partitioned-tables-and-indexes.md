@@ -16,12 +16,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266574"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793294"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
   大きなテーブルやインデックスをパーティション分割すると、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うと同時に、データ コレクションの整合性を維持することができるので、大きなテーブルやインデックスを管理しやすくなります。 詳細については、「 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)」を参照してください。 レプリケーションでは、パーティション テーブルとパーティション インデックスを扱う方法を指定するプロパティ セットによって、パーティション分割をサポートします。  
@@ -70,9 +70,9 @@ ms.locfileid: "63266574"
 ### <a name="enabling-partition-switching"></a>パーティション切り替えの有効化  
  トランザクション パブリケーションの次のプロパティを使用すると、レプリケーション環境でのパーティション切り替えの動作を制御できます。  
   
--   **@allow_partition_switch** 、に設定すると`true`、パブリケーション データベースに対して SWITCH PARTITION を実行することができます。  
+-   **\@allow_partition_switch**に設定すると`true`、パブリケーション データベースに対して SWITCH PARTITION を実行することができます。  
   
--   **@replicate_partition_switch** は、SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートするかどうかを決定します。 このオプションは、有効な場合にのみ **@allow_partition_switch** に設定されている`true`します。  
+-   **\@replicate_partition_switch** SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートできるかどうかを決定します。 このオプションは、有効な場合にのみ **\@allow_partition_switch**に設定されている`true`します。  
   
  これらのプロパティは、パブリケーションの作成時に [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を使用するか、パブリケーションの作成後に [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を使用することによって設定できます。 既に述べたとおり、マージ レプリケーションではパーティション切り替えがサポートされません。 マージ レプリケーションが有効になっているテーブルで SWITCH PARTITION を実行するには、パブリケーションからテーブルを削除します。  
   

@@ -14,12 +14,12 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057784"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794167"
 ---
 # <a name="odbc-glossary"></a>ODBC の用語集
 ## <a name="a"></a>A  
@@ -55,7 +55,7 @@ ms.locfileid: "63057784"
   
 ## <a name="b"></a>B  
  **動作の変更**  
- ODBC 3 から特定の機能変更 *.x* ODBC 2 に動作します *。x*動作、またはその逆です。 SQL_ATTR_ODBC_VERSION 環境属性を変更することで発生します。  
+ ODBC から特定の機能の変更*3.x* odbc 動作*2.x*動作、またはその逆です。 SQL_ATTR_ODBC_VERSION 環境属性を変更することで発生します。  
   
  **バイナリ ラージ オブジェクト (BLOB)**  
  255 などのバイト数を任意のバイナリ データ。 通常かなり長くなります。 このようなデータは一般に送信され、パーツ内のデータ ソースから取得します。 呼ばれます*長いデータ*します。  
@@ -270,7 +270,7 @@ ms.locfileid: "63057784"
  スクロール可能なカーソル キーセットを使用して、更新および削除された行を検出します。  
   
 ## <a name="l"></a>L  
- **literal**  
+ **name**  
  SQL ステートメントの実際のデータ値の文字の表現。  
   
  **locking**  
@@ -306,7 +306,7 @@ ms.locfileid: "63057784"
  **ODBC**  
  データベース接続を開きます。 API をアプリケーションがデータ ソース内のデータのアクセスに使用できるルーチンの標準セットを定義するための仕様。  
   
- **Odbc データ ソース アドミニストレーター**  
+ **ODBC データ ソース アドミニストレーター**  
  インストーラーのデータ ソースを構成する DLL を呼び出す実行可能プログラムです。  
   
  [グループを開く]  

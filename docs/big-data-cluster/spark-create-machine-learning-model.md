@@ -4,18 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: PySpark を使用して、SQL Server のビッグ データ クラスター (プレビュー) で Spark を使用した機械学習モデルを作成します。 MLeap、と共にエクスポートし、SQL Server で Java を使って、モデル、スコア付けします。
 author: lgongmsft
 ms.author: lgong
-ms.manager: craigg
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 709d74ef33ab6b54ac688763b006d66e4210006d
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412878"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727377"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>作成、エクスポート、および SQL Server のビッグ データ クラスターで Spark 機械学習モデルをスコア付け
 
@@ -25,7 +24,7 @@ ms.locfileid: "67412878"
 
 ![Spark を使用したトレーニング スコアのエクスポート](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このサンプルのすべてのファイルは、 [ https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml)します。
 
@@ -67,6 +66,6 @@ ms.locfileid: "67412878"
 
 サンプルをビルドした後は TRANSACT-SQL を使用して Java アプリケーションを呼び出すし、データベースのテーブル モデルのスコア付けすることができます。 これは、次で確認できます[mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py)ソース ファイル。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ビッグ データ クラスターに関する詳細については、次を参照してください[で Kubernetes クラスターのビッグ データの SQL Server をデプロイする方法。](deployment-guidance.md)

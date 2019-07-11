@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099958"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793606"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 `[ @acctname = ] 'account_name'` Windows ユーザーまたはグループへのアクセス許可の名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 *account_name*は**sysname**、既定値は NULL です。 場合*account_name*が指定されていない、すべての Windows グループと明示的に設定されている Windows ユーザー ログイン権限が与え報告されます。 *account_name*完全修飾である必要があります。 たとえば、advwks4、または「builtin \administrators'。  
   
  **'all'**  |  **'members'**  
- アカウントの場合、または Windows グループのメンバーに関する情報を報告するすべての権限のパスに関する情報を報告するかどうかを指定します。 **@option** **varchar (10)** 、既定値は NULL です。 しない限り、**すべて**を指定すると、最初の権限のパスのみが表示されます。  
+ アカウントの場合、または Windows グループのメンバーに関する情報を報告するすべての権限のパスに関する情報を報告するかどうかを指定します。 **\@オプション**は**varchar (10)** 、既定値は NULL です。 しない限り、**すべて**を指定すると、最初の権限のパスのみが表示されます。  
   
 `[ @privilege = ] variable_name` 指定された Windows アカウントの特権レベルが返す出力パラメーターです。 *variable_name*は**varchar (10)** 、既定値は 'Not wanted' です。 特権レベルが返される**ユーザー**、**管理者**、または**null**します。  
   

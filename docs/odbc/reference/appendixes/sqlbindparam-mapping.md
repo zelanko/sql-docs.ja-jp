@@ -14,15 +14,15 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15772c3bf74001084985d81d6560baf8accbaa3a
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199712"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793556"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam のマッピング
-**SQLBindParam**は本当に呼び出せません非推奨れていないため、あるで ODBC、ただし、まだを表す重複している機能 - ドライバー マネージャーは、ISO と開いているグループに準拠しているアプリケーションで使用されて、エクスポートする必要があります。 **SQLBindParameter**のすべての機能が含まれています**SQLBindParam**、 **SQLBindParam**の上にマップする**SQLBindParameter**(基になるドライバーがの場合、ODBC 3 *.x*ドライバー)。 ODBC 3 *.x*ドライバーが実装する必要はありません**SQLBindParam**します。  
+**SQLBindParam**は本当に呼び出せません非推奨れていないため、あるで ODBC、ただし、まだを表す重複している機能 - ドライバー マネージャーは、ISO と開いているグループに準拠しているアプリケーションで使用されて、エクスポートする必要があります。 **SQLBindParameter**のすべての機能が含まれています**SQLBindParam**、 **SQLBindParam**の上にマップする**SQLBindParameter**(基になるドライバーが、ODBC の場合*3.x*ドライバー)。 ODBC *3.x*ドライバーが実装する必要はありません**SQLBindParam**します。  
   
 ## <a name="remarks"></a>コメント  
  ときに、次の呼び出し**SQLBindParam**されます。  

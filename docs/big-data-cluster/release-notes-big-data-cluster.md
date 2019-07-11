@@ -2,20 +2,20 @@
 title: リリース ノート
 titleSuffix: SQL Server big data clusters
 description: この記事では、最新の更新プログラムと SQL Server 2019 ビッグ データ クラスター (プレビュー) の既知の問題について説明します。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681552"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794086"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -113,6 +113,11 @@ ms.locfileid: "67681552"
 - SA_PASSWORD は、(たとえば、コードのダンプ ファイル) 内の一部の環境で見つけやすいです。 デプロイ後に、マスター インスタンスで SA_PASSWORD をリセットする必要があります。 これはありませんが、バグ、セキュリティ手順です。 Linux コンテナーで SA_PASSWORD を変更する方法の詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
 
 - AKS のログは、ビッグ データ クラスターのデプロイの SA パスワードを含めることができます。
+
+#### <a name="kibana-logs-dashboards"></a>Kibana は、ダッシュ ボードをログします。
+
+- 間 Aris CTP 3.0、3.1、Kibana のバージョンは 7.0.1 に 6.3.1 からにアップグレードされました。  なりました Edge ブラウザー Kibana と互換性がありません。 Edge で Kibana ダッシュ ボードの現在のバージョンを読み込むときに、ユーザーは、空白のページに表示されます。 参照してください[ここ]( https://www.elastic.co/support/matrix#matrix_browse)の Kibana.rs のブラウザーをサポート 
+
 
 ## <a id="ctp30"></a> CTP 3.0 (月)
 

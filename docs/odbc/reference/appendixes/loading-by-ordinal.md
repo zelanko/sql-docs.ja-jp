@@ -15,12 +15,12 @@ ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 702e1fe58080cc370ab9a858c985a7744df85050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccecc541143e971d82a225e24e1c8caf6a03c32c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181333"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793187"
 ---
 # <a name="loading-by-ordinal"></a>序数での読み込み
-ODBC 2。*x*序数で読み込みを実行すると、接続処理のパフォーマンスを向上させる可能性があります。 ODBC 2。*x*ドライバー序数 199 でダミー関数をエクスポートする; 序数で、名前ではなく、ODBC 関数のアドレスは、ドライバー マネージャーが検出された場合、解決します。 この機能は、ODBC 2 for 引き続きサポートされます。*x*ドライバーは ODBC 3 のサポートされていませんが、 *.x*ドライバー。
+ODBC で*2.x*序数で読み込みを実行すると、接続処理のパフォーマンスを向上させる可能性があります。 ODBC *2.x*ドライバー序数 199 でダミー関数をエクスポートする; 序数で、名前ではなく、ODBC 関数のアドレスは、ドライバー マネージャーが検出された場合、解決します。 この機能は ODBC のサポートも*2.x*ドライバーは ODBC のサポートされていませんが、 *3.x*ドライバー。

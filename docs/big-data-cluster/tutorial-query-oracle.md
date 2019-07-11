@@ -2,20 +2,20 @@
 title: Oracle の外部のデータを照会します。
 titleSuffix: SQL Server big data clusters
 description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) から Oracle データを照会する方法を示します。 Oracle のデータに対して外部テーブルを作成してクエリを実行しています。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: jroth
 ms.date: 12/12/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 036118c3c5620b9685a9971b1aa8c22bdb2b6b9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8da0248eb4e31e25503efad9797f4c58243f3b5e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770784"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728325"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server のビッグ データ クラスターから Oracle クエリを実行します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "66770784"
 
 このチュートリアルでは、SQL Server 2019 のビッグ データ クラスターから Oracle データを照会する方法を示します。 このチュートリアルを実行するには、Oracle サーバーにアクセスする必要があります。 このチュートリアルがアクセスできない場合は、ビッグ データの SQL Server クラスター内の外部データ ソースのデータ仮想化のしくみを把握付与します。
 
-このチュートリアルで確認する方法。
+このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
 > * 外部の Oracle データベースでデータの外部テーブルを作成します。

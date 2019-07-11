@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_profile
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2afaf37cc82ccfee3c5a85c2945a7998457a979d
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493605"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716624"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|[マージ エージェント]|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
-`[ @profile_type = ] profile_type` プロファイルの種類です。*@profile_type*は**int**、既定値は**1**します。  
+`[ @profile_type = ] profile_type` プロファイルの種類です。 *@profile_type*は**int**、既定値は**1**します。  
   
  **0**システム プロファイルを示します。 **1**カスタム プロファイルを示します。 このストアド プロシージャを使用してカスタム プロファイルだけを作成することができます。したがって、唯一の有効な値は**1**します。 のみ[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム プロファイルを作成します。  
   
-`[ @description = ] 'description'` プロファイルの説明。 *説明*は**nvarchar (3000)**、既定値はありません。  
+`[ @description = ] 'description'` プロファイルの説明。 *説明*は**nvarchar (3000)** 、既定値はありません。  
   
 `[ @default = ] default` 既定のプロファイルかどうかを示します*agent_type * *。* *既定*は**ビット**、既定値は**0**します。 **1**追加されるプロファイルがで指定されたエージェントの新しい既定のプロファイルになることを示します*agent_type*します。  
   
@@ -78,7 +78,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_agent_profile**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション エージェント プロファイルの操作](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   

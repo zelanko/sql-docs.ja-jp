@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddynamicsnapshot_job
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fc4df3d84e2652c8ee328d0dbe79a71c068994a
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a86fd3d8abcee391852c8528d3fbe054b7bcc525
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493354"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716716"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パラメーター化された行フィルターを使用したパブリケーションのフィルター選択されたデータ スナップショットを生成するエージェント ジョブを作成します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。 このストアド プロシージャは、サブスクライバーのフィルター選択されたデータ スナップショット ジョブを手動で作成する、管理者が使用されます。  
+  パラメーター化された行フィルターを使用したパブリケーションのフィルター選択されたデータ スナップショットを生成するエージェント ジョブを作成します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 このストアド プロシージャは、サブスクライバーのフィルター選択されたデータ スナップショット ジョブを手動で作成する、管理者が使用されます。  
   
 > [!NOTE]  
 >  フィルター選択されたデータ スナップショット ジョブを作成するためには、パブリケーションの標準スナップショット ジョブが既に存在する必要があります。  
@@ -104,7 +104,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**1**|1 回。|  
-|**2**|第 2 週|  
+|**2**|Second|  
 |**4** (既定値)|Minute|  
 |**8**|Hour|  
   
@@ -116,7 +116,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1** (既定値)|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
   
@@ -150,7 +150,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_adddynamicsnapshot_job**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パラメーター化されたフィルターによるマージ パブリケーションのスナップショットを作成します。](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [sp_dropdynamicsnapshot_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   

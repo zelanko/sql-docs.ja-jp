@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のセキュリティの概念について説明します。 これには、クラスター エンドポイントとクラスターの認証の説明が含まれます。
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 49577ce5a29a0c014fea7c8c9a0c5c320a9b7174
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387940"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729104"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターのセキュリティの概念
 
@@ -82,7 +81,7 @@ HDFS/Spark エンドポイントへのアクセスのパスワード:
 
 証明書を使用して、Livy Spark には記憶域プールでは、Spark など、ビッグ データ クラスター内の非 SQL サービスとの通信が保護されます。 すべての SQL Server と SQL Server 間の通信は、SQL ログインを使用して保護されます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 SQL Server のビッグ データ クラスターに関する詳細については、次のリソースを参照してください。
 

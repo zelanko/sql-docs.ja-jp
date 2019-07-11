@@ -2,20 +2,20 @@
 title: 記憶域プールの HDFS のデータを照会します。
 titleSuffix: SQL Server big data clusters
 description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) での HDFS データを照会する方法を示します。 記憶域プール内のデータに対して外部テーブルを作成してクエリを実行しています。
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 83a039fcbc335ecbc6057b1c8d7d1a953ba2c364
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: bcb2b036610b1ef62575d9a03043158e1b8af653
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388653"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728334"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>チュートリアル:ビッグ データの SQL Server クラスターで HDFS のクエリ
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388653"
 
 このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) での HDFS データを照会する方法を示します。
 
-このチュートリアルで確認する方法。
+このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
 > * ビッグ データ クラスターで HDFS のデータを指す外部テーブルを作成します。
