@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280921"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794161"
 ---
 # <a name="sql-data-types"></a>SQL データ型
 各 DBMS は、独自の SQL 型を定義します。 各 ODBC ドライバーでは、関連付けられている DBMS 定義 SQL データ型のみを公開します。 SQL の ODBC で定義された型の識別子にドライバーをマップする方法については DBMS SQL 型し、独自ドライバー固有の SQL 型識別子に、ドライバーが DBMS SQL 型をマップする方法を呼び出すことによって返される**SQLGetTypeInfo**します。 ドライバーは、列との呼び出しを通じてパラメーターのデータ型を記述するときにも、SQL データ型を返します**SQLColAttribute**、 **SQLColumns**、 **SQLDescribeCol**、**SQLDescribeParam**、 **SQLProcedureColumns**、および**SQLSpecialColumns**します。  
@@ -86,7 +86,7 @@ ms.locfileid: "63280921"
   
  [24 または 53 5] の実装にに応じて使用できますの有効桁数ができます: SQL_REAL; と同じで使用できますのデータ型は、24 の場合、53 の場合は、使用できますのデータ型は SQL_DOUBLE と同じです。  
   
- [6] ODBC 3 *.x*、SQL の日付、時刻、および timestamp データ型は SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP、ODBC 2 にそれぞれ;.*x*データ型は、SQL_DATE、SQL_TIME、および SQL_TIMESTAMP です。  
+ [6] ODBC *3.x*、SQL の日付、時刻、タイムスタンプ データ型には、SQL_TYPE_DATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP、ODBC でそれぞれ; *2.x*データ型は、SQL_DATE、SQL_TIME、および sql _タイムスタンプ。  
   
  [7] の間隔の SQL データ型の詳細については、次を参照してください。、 [Interval データ型](../../../odbc/reference/appendixes/interval-data-types.md)セクションで、この付録の「します。  
   

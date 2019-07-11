@@ -43,8 +43,8 @@ ms.locfileid: "66074517"
      CREATE CELL CALCULATION または ALTER CUBE ステートメントを使用してセッションでの計算されるセルを作成する方法の詳細については、「 [セッション スコープの計算されるセルの作成](mdx-cell-calculations-session-scoped-calculated-cells.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [ALTER CUBE ステートメント (MDX)](/sql/mdx/mdx-data-definition-alter-cube)   
- [CREATE CELL CALCULATION ステートメント (MDX)](/sql/mdx/mdx-data-definition-create-cell-calculation)   
+ [ALTER CUBE ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
+ [CREATE CELL CALCULATION ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
  [クエリ スコープのセル計算の作成 (MDX)](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
