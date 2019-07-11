@@ -1336,7 +1336,7 @@
       items:
         - name: ヒープ (クラスター化インデックスなしのテーブル)
           href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-        - name: クラスター化インデックスと非クラスター化インデックスの概念
+        - name: クラスター化インデックスと非クラスター化インデックス
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
             - name: 作成
