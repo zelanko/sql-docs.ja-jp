@@ -1,20 +1,20 @@
 ---
-title: SSMS を使用して、SQL Server on Linux を管理する |Microsoft Docs
+title: SSMS を使用して、SQL Server on Linux を管理するには
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eba01fdd332e86327da627dd934806c1eedc9d5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713156"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834944"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の SQL Server Management Studio を使用して、Linux 上の SQL Server を管理するには
 
@@ -60,7 +60,7 @@ SQL Server を使用する場合は、最新バージョンの SQL Server Manage
    |-----|-----|
    | **サーバーの種類** | 既定値はデータベース エンジンです。この値は変更しないでください。 |
    | **サーバー名** | 対象の Linux SQL Server コンピューターまたは IP アドレスの名前を入力します。 |
-   | **[認証]** | SQL Server on Linux では、使用**SQL Server 認証**します。 |
+   | **\[認証]** | SQL Server on Linux では、使用**SQL Server 認証**します。 |
    | **Login** | サーバー上のデータベースにアクセス権を持つユーザーの名前を入力します (既定ではたとえば、 **SA**セットアップ中に作成したアカウント)。 |
    | **Password** | 指定したユーザーのパスワードを入力します (用、 **SA**アカウントを作成したこのセットアップ中に)。 |
 
@@ -92,7 +92,7 @@ SQL Server を使用する場合は、最新バージョンの SQL Server Manage
 
 1. をクリックして、 **Execute**クエリを実行し、結果を表示するボタンをクリックします。
 
-   ![正常終了しました。 SQL Database サーバーに接続します。SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![成功。 SQL Database サーバーに接続します。SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Transact SQL クエリと管理タスクほぼすべてを実行することはできますが、SSMS は、グラフィカルなツールが SQL Server を管理しやすいです。 次のセクションでは、グラフィカル ユーザー インターフェイスを使用していくつかの例を提供します。
 

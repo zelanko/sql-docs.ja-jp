@@ -2,20 +2,20 @@
 title: SUSE Linux Enterprise Server 上の SQL Server の概要します。
 titleSuffix: SQL Server
 description: このクイック スタートでは、SUSE Linux Enterprise Server 上の SQL Server 2017 または SQL Server 2019 のインストールしし、作成し、sqlcmd を使用したデータベースの照会する方法を示します。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: f5c0bb63ce7d188a2587d1a44d863a14308da273
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19f74067db365fd9bdc867b97cef6ee5aa5162d8
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713576"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833254"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>クイック スタート: SQL Server をインストールし、SUSE Linux Enterprise Server にデータベースを作成
 

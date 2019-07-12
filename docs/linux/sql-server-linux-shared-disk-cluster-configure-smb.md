@@ -1,19 +1,20 @@
 ---
-title: フェールオーバー クラスター インスタンス ストレージ SMB - SQL Server on Linux の構成 |Microsoft Docs
+title: フェールオーバー クラスター インスタンス ストレージ SMB - SQL Server on Linux の構成します。
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7a8df4121fa71580af9596c855e0f0d6199fca46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74b8779a4654f544f8085041adeafb14a59688bf
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712869"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833182"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>フェールオーバー クラスター インスタンス - SMB - SQL Server on Linux の構成します。
 
@@ -32,7 +33,7 @@ Windows 以外の世界で、SMB が多くの場合、として、共通イン�
 
 ![05 smbsource][1]
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>手順
 
 1. FCI の構成では、参加するサーバーのいずれかを選択します。 どれもかまいません。
    
@@ -252,7 +253,7 @@ Windows 以外の世界で、SMB が多くの場合、として、共通イン�
 
 FCI を構成する準備が整いました。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [Linux 上の SQL Server のフェールオーバー クラスター インスタンスを構成します。](sql-server-linux-shared-disk-cluster-configure.md)
 

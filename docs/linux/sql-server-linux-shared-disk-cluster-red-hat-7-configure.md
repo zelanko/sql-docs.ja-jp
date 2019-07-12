@@ -1,20 +1,21 @@
 ---
-title: SQL Server 用の Red Hat Enterprise Linux 共有クラスターの構成 |Microsoft Docs
+title: SQL Server 用の Red Hat Enterprise Linux 共有クラスターを構成します。
 description: SQL Server 用の Red Hat Enterprise Linux の共有ディスク クラスターを構成することによって、高可用性を実装します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2eb3a0a135fc43e3dadb855682cea9f6465d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712893"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833144"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server の Red Hat Enterprise Linux の共有ディスク クラスターを構成します。
 

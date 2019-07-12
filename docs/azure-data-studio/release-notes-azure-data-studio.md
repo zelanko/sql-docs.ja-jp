@@ -10,21 +10,21 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794071"
+ms.locfileid: "67826517"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新のリリースをインストールをダウンロードしてください。](download.md)**
 
-## <a name="july-2019"></a>2019 年の 7 月
+## <a name="july-2019"></a>2019 年 7 月
 
-2019 年 7 月 10日&nbsp;  /  &nbsp;バージョン。1.9.0 
+2019 年 7 月 11日&nbsp;  /  &nbsp;バージョン。1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ ms.locfileid: "67794071"
 | Visual Studio Code でマージ 1.35 May リリースします。 | 最新の機能強化が見つかります[ここ](https://code.visualstudio.com/updates/v1_35)します。 |
 | 解決済みバグと問題 | Azure Data Studio の以前のリリースでは接続ダイアログ ボックスで、接続するときに、ユーザー データベースを選択した場合、結果のオブジェクト エクスプ ローラーのエントリがその 1 つのデータベースの完全にスコープ。 このリリースで、サーバー レベルのプロパティは、オブジェクト エクスプ ローラーにも表示されるように動作が変更されることを開始します。 <br/> 修正プログラムの完全な一覧については、次を参照してください。[バグと github の問題](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)します。 |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>6 月 2019

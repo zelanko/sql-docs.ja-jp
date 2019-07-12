@@ -1,22 +1,22 @@
 ---
-title: SQL Server on Linux への接続の暗号化 |Microsoft Docs
+title: SQL Server on Linux への接続の暗号化
 description: この記事には、Linux 上の SQL Server への接続の暗号化がについて説明します。
-author: vin-yu
 ms.date: 01/30/2018
+author: vin-yu
 ms.author: vinsonyu
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca1a6b7a3530041def66ec74be9de547c6d98ea
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705670"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833770"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux への接続の暗号化
 

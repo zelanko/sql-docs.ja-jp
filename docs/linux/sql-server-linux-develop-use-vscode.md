@@ -2,20 +2,20 @@
 title: Visual Studio Code mssql 拡張機能を使用して、SQL Server 用
 titleSuffix: SQL Server
 description: Visual Studio Code 用 mssql 拡張機能を使用して、編集を Linux 上の SQL Server の TRANSACT-SQL スクリプトを実行します。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.openlocfilehash: b4d29739748b477adbef79bd1d6cf266aa16d2c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcda7a310e7a9dc77ea9464dd82dbed7260b0b39
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705539"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833790"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio Code を使用して作成し、TRANSACT-SQL スクリプトを実行するには
 

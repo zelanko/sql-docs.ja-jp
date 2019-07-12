@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,20 +18,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420854"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826609"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 種類別に整理するすべてのスピン ロック待機に関する情報を返します。  
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|内部使用のみです。|
 |LIVE_TARGET_TVF|内部使用のみです。|
 |LOCK_FREE_LIST|内部使用のみです。|
-|LOCK_HASH|データベースに保持されているロックに関する情報を格納するロック マネージャーのハッシュ テーブルへのアクセスを保護します。 参照してください[今回](https://support.microsoft.comkb/2926217)詳細についてはします。|
+|LOCK_HASH|データベースに保持されているロックに関する情報を格納するロック マネージャーのハッシュ テーブルへのアクセスを保護します。 参照してください[今回](https://support.microsoft.com/kb/2926217)詳細についてはします。|
 |LOCK_NOTIFICATION|内部使用のみです。|
 |LOCK_RESOURCE_ID|内部使用のみです。|
 |LOCK_RW_ABTX_HASH_SET|内部使用のみです。|
@@ -408,7 +404,7 @@ GO
  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  

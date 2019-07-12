@@ -1,20 +1,20 @@
 ---
-title: SQL Server on Linux 用アプリケーションの開発 |Microsoft Docs
+title: SQL Server on Linux 用アプリケーションを開発します。
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 4d3ef46dfbacb1c4cbfe67df555b79fb10ade86d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 737fd2776c3320e9f71b9dfa372aa6de646516e6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705816"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833823"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 向けのアプリケーションの開発を開始する方法
 
@@ -71,7 +71,7 @@ Linux のネイティブな新しいコマンド ライン ツールを使用す
 - [bcp](sql-server-linux-migrate-bcp.md)
 - [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 開始するには、次のクイック スタートのいずれかを使用して Linux に SQL Server をインストールします。
 

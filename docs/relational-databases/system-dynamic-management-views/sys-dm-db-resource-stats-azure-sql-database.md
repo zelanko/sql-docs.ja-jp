@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716676"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833043"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67716676"
 |end_time|**datetime**|UTC 時刻では、現在のレポート間隔の終了を示します。|  
 |avg_cpu_percent|**10 進数 (5,2)**|サービス層の上限に対するパーセンテージで示した、平均コンピューティング使用率。|  
 |avg_data_io_percent|**10 進数 (5,2)**|データ サービス層の制限の割合での I/O 使用率は平均です。|  
-|avg_log_write_percent|**10 進数 (5,2)**|平均は、I/O スループットの使用率のサービス層の上限に対するパーセンテージとしてを記述します。|  
+|avg_log_write_percent|**10 進数 (5,2)**|平均トランザクション ログは、サービス層の制限の割合として (MBps) に書き込みます。|  
 |avg_memory_usage_percent|**10 進数 (5,2)**|サービス層の制限の割合の平均メモリ使用率。<br /><br /> これには、バッファー プール ページと、インメモリ OLTP オブジェクトのストレージに使用されるメモリが含まれます。|  
 |xtp_storage_percent|**10 進数 (5,2)**|記憶域使用率、インメモリ OLTP のサービス層の制限の割合で (レポートの期間の最後)。 これには、次のインメモリ OLTP オブジェクトの記憶域として使用されるメモリが含まれます。 メモリ最適化テーブル、インデックス、およびテーブル変数。 ALTER TABLE 操作を処理するために使用されるメモリも含まれています。<br /><br /> データベースでインメモリ OLTP を使用しない場合は、0 を返します。|  
 |max_worker_percent|**10 進数 (5,2)**|データベースのサービス層の制限の割合で表した最大同時実行ワーカー (要求)。|  

@@ -1,19 +1,20 @@
 ---
-title: フェールオーバー クラスター インスタンス ストレージ iSCSI - SQL Server on Linux の構成 |Microsoft Docs
+title: フェールオーバー クラスター インスタンス ストレージ iSCSI - SQL Server on Linux を構成します。
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9a64460b2d04f1d6957a181657af7255d64cc829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89a72a7390b3b782781c4849d69f81065544e991
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705066"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833188"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの iSCSI - SQL Server on Linux を構成します。
 
@@ -32,7 +33,7 @@ Linux ベースの iSCSI ターゲットを使用する場合、FCI ノードの
 
 ![Initiator][1]
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>手順
 
 このセクションでは、FCI のノードとして機能するサーバーで iSCSI イニシエーターを構成する方法について説明します。 手順は、RHEL および Ubuntu 上に、機能する必要があります。
 
@@ -395,7 +396,7 @@ FCI を構成する準備が整いました。
 |**HA アドオンの Red Hat Enterprise Linux** |[構成](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server HA アドオン** |[構成](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [Linux 上の SQL Server のフェールオーバー クラスター インスタンスを構成します。](sql-server-linux-shared-disk-cluster-configure.md)
 

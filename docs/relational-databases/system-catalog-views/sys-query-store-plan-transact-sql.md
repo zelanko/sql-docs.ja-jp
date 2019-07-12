@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652864"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833576"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,8 +68,11 @@ ms.locfileid: "67652864"
 * 外部テーブルの参照
 * 分散クエリまたはフルテキスト操作
 * グローバル クエリの使用 
-* (静的および高速順方向カーソルのサポートは、プランの強制) 動的カーソルまたはキーセット カーソル
+* 動的カーソルまたはキーセット カーソル 
 * 無効なスター結合の指定 
+
+> [!NOTE]
+> Azure SQL Database と SQL Server 2019 (プレビュー) に対する高速順方向カーソルと静的カーソル プランの強制をサポートします。
 
 第 2 に、プランが依存しているオブジェクトが使用できなくなった場合です。
 * データベース (プランの基になっているデータベースが存在しなくなった場合)

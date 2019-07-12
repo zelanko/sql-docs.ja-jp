@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d39a5c97a4bcbf05c364e0a3d638c0232aab65e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fa981b7398998d28712583efe59072f776167a1a
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408479"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826553"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos の制約付き委任のための Analysis Services の構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "52408479"
 ##  <a name="bkmk_delegate"></a> 信頼された委任のための Analysis Services の構成  
  Kerberos の制約付き委任用に Analysis Services を構成すると、サービスは、下位レベル サービス (リレーショナル データベース エンジンなど) のクライアント ID の権限を借用して、クライアントが直接接続されているかのようにデータを照会できます。  
   
- Analysis Services の委任シナリオは、 **DirectQuery** 用に構成されたテーブル モデルに限られます。 これは、委任された資格情報を Analysis Services が別のサービスに渡すことができる唯一のシナリオです。 前のセクションで説明された SharePoint のシナリオなど、他のすべてのシナリオでは、Analysis Services は委任チェーンの受信側です。 DirectQuery の詳細については、[DirectQuery モード](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)を参照してください。  
+ Analysis Services の委任シナリオは、 **DirectQuery** 用に構成されたテーブル モデルに限られます。 これは、委任された資格情報を Analysis Services が別のサービスに渡すことができる唯一のシナリオです。 前のセクションで説明された SharePoint のシナリオなど、他のすべてのシナリオでは、Analysis Services は委任チェーンの受信側です。 DirectQuery の詳細については、次を参照してください。 [DirectQuery モード](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)します。  
   
 > [!NOTE]  
 >  共通する誤りは、ROLAP ストレージ、処理操作、またはリモート パーティションへのアクセスによって制約付き委任が要求されてしまうことです。 この場合は当てはまりません。 これらすべての操作は、代わりにサービス アカウント (処理アカウントとも呼ばれます) によって直接実行されます。 このような操作の権限が直接サービス アカウントに付与されているため (例えば、リレーショナル データベースに db_datareader 権限を付与することにより、サービスがデータを処理できるようにします)、Analysis Services におけるこれらの操作に委任は必要ありません。 サーバー操作と権限の詳細については、「[サービス アカウントの構成 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)」を参照してください。  
@@ -107,9 +107,9 @@ ms.locfileid: "52408479"
   
 3.  リモート クライアント コンピューターから、アプリケーション サービス (SharePoint、Reporting Services など) を介して Analysis Services に接続します。 Audit Login イベントに、Analysis Services に接続しているユーザーの ID が表示されます。  
   
- 徹底的なテストを行うには、ネットワーク上の Kerberos 要求と応答を取得できるネットワーク監視ツールを使用する必要があります。 このタスクには、Kerberos 用にフィルター処理されたネットワーク モニター ユーティリティ (netmon.exe) を使用できます。 Netmon 3.4 などのツールを使用して、Kerberos 認証をテストの詳細については、[Kerberos 認証を構成を参照してください。コア構成 (SharePoint Server 2010)](http://technet.microsoft.com/library/gg502602\(v=office.14\).aspx)します。  
+ 徹底的なテストを行うには、ネットワーク上の Kerberos 要求と応答を取得できるネットワーク監視ツールを使用する必要があります。 このタスクには、Kerberos 用にフィルター処理されたネットワーク モニター ユーティリティ (netmon.exe) を使用できます。 Netmon 3.4 などのツールを使用して、Kerberos 認証をテストの詳細については、次を参照してください。 [Kerberos 認証を構成します。コア構成 (SharePoint Server 2010)](http://technet.microsoft.com/library/gg502602\(v=office.14\).aspx)します。  
   
- また、Active Directory オブジェクトの [プロパティ] ダイアログ ボックスにある [委任] タブの各オプションの詳細な説明については、「 [Active Directory 内で最も紛らわしいダイアログ ボックス](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) 」をご覧ください。 この記事ではまた、LDP を使ってテストし、テスト結果を解釈する方法を説明します。  
+ また、Active Directory オブジェクトの [プロパティ] ダイアログ ボックスにある [委任] タブの各オプションの詳細な説明については、「 [Active Directory 内で最も紛らわしいダイアログ ボックス](https://www.itprotoday.com/active-directory/most-confusing-dialog-box-active-directory) 」をご覧ください。 この記事ではまた、LDP を使ってテストし、テスト結果を解釈する方法を説明します。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft BI 認証と ID 委任](http://go.microsoft.com/fwlink/?LinkID=286576)   

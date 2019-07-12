@@ -4,21 +4,21 @@ titleSuffix: SQL Server
 description: このチュートリアルでは、SQL Server on Linux 用の AD 認証の構成手順を提供します。
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
+manager: jroth
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: cf5a4c2f51d394a0322540a1651aa2549fedf8c5
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: b99d4a7f6b246db75caf1d394d9a4670a574d6af
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166388"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833020"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "67166388"
 > * TRANSACT-SQL で AD に基づくログインを作成する
 > * AD Authentication を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] へ接続する
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 AD 認証を構成する前にする必要があります。
 
@@ -348,7 +348,7 @@ CONTOSO.COM = {
 > [!NOTE]
 > などのユーティリティを使用することは、お勧めしません**realmd**、設定の構成中に、ドメインに Linux ホストに参加するときに SSSD **disablesssd**を SQL Server で使用するように true にopenldap 呼び出し代わりに Active Directory の SSSD の関連の呼び出し。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、SQL Server on Linux での Active Directory 認証を設定する方法を説明しました。 学習したします。
 > [!div class="checklist"]

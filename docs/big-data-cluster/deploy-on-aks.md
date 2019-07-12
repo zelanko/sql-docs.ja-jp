@@ -6,16 +6,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 manager: jroth
-ms.date: 02/28/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728919"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826529"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server のビッグ データ クラスター デプロイ用 Azure Kubernetes サービスを構成します。
 
@@ -76,9 +76,39 @@ Azure リソース グループは、azure リソースのデプロイし、管�
    az group create --name sqlbdcgroup --location westus2
    ```
 
+## <a name="verify-available-kubernetes-versions"></a>使用可能な Kubernetes バージョンを確認します。
+
+Kubernetes の最新バージョンを使用します。 最新のバージョンは、クラスターを展開している場所によって異なります。 次のコマンドは、特定の場所で利用可能な Kubernetes バージョンを返します。
+
+コマンドを実行する前に、スクリプトを更新します。 置換`<Azure data center>`クラスターの場所を使用します。
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+クラスターの最新バージョンを選択します。 バージョン番号を記録します。 次の手順で使用します。
+
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成します。
 
-1. 使用して AKS で Kubernetes クラスターを作成、 [az aks 作成](https://docs.microsoft.com/cli/azure/aks)コマンド。 次の例では、という名前の Kubernetes クラスターを作成する*kubcluster*サイズの Linux エージェント ノードが 1 つ**Standard_L8s**します。 前のセクションで使用したのと同じリソース グループで、AKS クラスターを作成することを確認します。
+1. 使用して AKS で Kubernetes クラスターを作成、 [az aks 作成](https://docs.microsoft.com/cli/azure/aks)コマンド。 次の例では、という名前の Kubernetes クラスターを作成する*kubcluster*サイズの Linux エージェント ノードが 1 つ**Standard_L8s**します。
+
+   スクリプトを実行する前に置き換える`<version number>`前の手順で特定したバージョン番号。
+
+   前のセクションで使用したのと同じリソース グループで、AKS クラスターを作成することを確認します。
 
    **挑戦:**
 
@@ -88,7 +118,7 @@ Azure リソース グループは、azure リソースのデプロイし、管�
    --generate-ssh-keys \
    --node-vm-size Standard_L8s \
    --node-count 1 \
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    **PowerShell:**
@@ -99,7 +129,7 @@ Azure リソース グループは、azure リソースのデプロイし、管�
    --generate-ssh-keys `
    --node-vm-size Standard_L8s `
    --node-count 1 `
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    大きくしたり、変更することで Kubernetes エージェント ノードの数を減らす、`--node-count <n>`場所`<n>`を使用するエージェント ノードの数です。 これは、AKS でバック グラウンドで管理されているマスターの Kubernetes ノードには含まれません。 前の例では、のみ、評価の目的で 1 つのノードを使用します。

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c4f72522c1803a364d9a309b5fa2d21fd9f2fe18
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402647"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826497"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot の認証および承認
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "52402647"
 |信頼できるデータ接続ライブラリ|任意。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックでは、Office データ接続 (.odc) ファイルを使用できます。 .odc ファイルを使用してローカル [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに接続情報を提供する場合、同じ .odc ファイルをこのライブラリに追加できます。|  
 |ユーザー定義関数アセンブリ|該当なし。|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint では、Excel Services 用にビルドし、配置するユーザー定義関数アセンブリは無視されます。 特定の動作でユーザー定義アセンブリに依存している場合、作成したユーザー定義関数は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] クエリ処理で使用されないことに留意してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Power Pivot 自動データ更新アカウントの構成 (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
  [Power Pivot サイト用の信頼できる場所の作成](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

@@ -3,18 +3,19 @@ title: SQL Server Always On 可用性グループを Kubernetes の管理しま�
 description: この記事では、SQL Server Always On 可用性グループで Kubernetes を管理する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 808f49ff5060ba6a6ffe9e864cfc2710fe6251e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6264666009e39706741369b5a4df87ef5564c974
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705527"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833228"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>SQL Server Always On 可用性グループの Kubernetes を管理します。
 
