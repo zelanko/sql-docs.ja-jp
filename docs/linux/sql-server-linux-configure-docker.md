@@ -1,21 +1,22 @@
 ---
-title: Docker で SQL Server の構成オプション |Microsoft Docs
+title: Docker で SQL Server の構成オプション
 description: さまざまな方法を使用して、SQL Server 2017 と Docker の 2019 プレビュー コンテナー イメージとの対話について説明します。 これには、データ永続化ファイルのコピー、およびトラブルシューティングにはが含まれます。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 822fdbe60a9fe7740d2b7cb13ed9b8784e88945d
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 34320ca5f0e969443ecd60eae64ca80a6aeaec63
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500021"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834073"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker で SQL Server のコンテナー イメージを構成します。
 

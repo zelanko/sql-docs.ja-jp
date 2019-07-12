@@ -1,20 +1,20 @@
 ---
-title: Linux 上の SQL Server の設定の構成 |Microsoft Docs
+title: Linux 上の SQL Server の設定を構成します。
 description: この記事では、mssql-conf ツールを使用して、Linux 上の SQL Server の設定を構成する方法について説明します。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719394"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834005"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Linux 上の SQL Server を mssql-conf ツールを構成します。
 

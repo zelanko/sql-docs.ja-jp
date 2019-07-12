@@ -4,18 +4,19 @@ titleSuffix: SQL Server
 description: SQL Server SUSE Linux Enterprise Server (SLES) 上の可用性グループのクラスターを作成する方法について説明します
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: f69a4c0d98807d11b0ef2b01fb2995a0eeaddf21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f6638d1d31be45f12f0b80b7fc63f918e90d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705594"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834390"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループの SLES クラスターを構成します。
 
@@ -143,7 +144,7 @@ Linux サーバーで、可用性グループを構成し、クラスター リ�
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>既存のクラスターにノードを追加します。
 
-1 つまたは複数のノードで実行されているクラスターがある場合は、ha クラスター-結合ブートス トラップ スクリプトを使用して複数のクラスター ノードを追加します。 だけが必要、スクリプトは、既存のクラスター ノードへのアクセスし、自動的に現在のコンピューターで基本的なセットアップを完了します。 次の手順に従います。
+1 つまたは複数のノードで実行されているクラスターがある場合は、ha クラスター-結合ブートス トラップ スクリプトを使用して複数のクラスター ノードを追加します。 だけが必要、スクリプトは、既存のクラスター ノードへのアクセスし、自動的に現在のコンピューターで基本的なセットアップを完了します。 次の手順を使用します。
 
 既存のクラスター ノードで構成した場合、`YaST`クラスター モジュールを実行する前に、次の前提条件が満たされたかどうかを確認`ha-cluster-join`:
 - 既存のノードの root ユーザーでは、パスワードなしのログイン用の SSH キーがあります。 

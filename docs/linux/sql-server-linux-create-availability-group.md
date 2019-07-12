@@ -1,19 +1,20 @@
 ---
-title: 作成し、SQL Server on Linux の可用性グループの構成 |Microsoft Docs
+title: 作成し、SQL Server on Linux の可用性グループの構成
 description: このチュートリアルでは、作成して、SQL Server on Linux の可用性グループを構成する方法を示します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1841b7e38e47ffa1192b19564e1c6596ea9804a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bd6f1259989c1cb0286fca546ea9e0410e0837f
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719388"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833898"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>作成し、SQL Server on Linux の可用性グループの構成
 

@@ -1,19 +1,20 @@
 ---
-title: SQL Server on Linux の Pacemaker クラスターのデプロイ |Microsoft Docs
+title: SQL Server on Linux の Pacemaker クラスターをデプロイします。
 description: このチュートリアルでは、SQL Server on Linux の Pacemaker クラスターをデプロイする方法を示します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: be1bae381cf9eb07180299130917cb6cbf3bfec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6fdd3fe9111a20811ecb748a42273deafd2c41e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705543"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833867"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux の Pacemaker クラスターをデプロイします。
 
@@ -223,7 +224,7 @@ sudo zypper install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、SQL Server on Linux の Pacemaker クラスターをデプロイする方法について説明しました。 学習したします。
 > [!div class="checklist"]
