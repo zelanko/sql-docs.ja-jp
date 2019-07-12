@@ -12,12 +12,12 @@ ms.assetid: 63d6d6d7-3850-4061-8e96-b1fa665e3180
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4ecb1732e3717a2145d8902077e638ec0affc11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e28f71fb3f9ec1168a7f89281b188c5fe44eb0f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746810"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585950"
 ---
 # <a name="mssqlserver8645"></a>MSSQLSERVER_8645
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47746810"
   
 1.  このサーバー上で、他のアプリケーションやサービスによってメモリが消費されていないか確認します。 重要度の低いアプリケーションやサービスのメモリ消費量が少なくなるように、構成を変更します。  
   
-2.  **SQL Server: Buffer Manager** および **SQL Server: Memory Manager** のパフォーマンス モニター カウンターを確認します。  
+2.  次のパフォーマンス モニター カウンターの収集を開始します。**SQL Server:Buffer Manager**、**SQL Server:Memory Manager**。  
   
 3.  次に示す SQL Server メモリ構成パラメーターを確認します。  
   
@@ -58,7 +58,9 @@ ms.locfileid: "47746810"
 4.  DBCC MEMORYSTATUS 出力を監視し、エラー メッセージが表示された場合にどのように変化するかを調べます。  
   
 5.  ワークロード (同時セッション数や現在実行中のクエリ数など) をチェックします。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 次のアクションを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるメモリを増やせる可能性があります。  
   
 -   SQL Server 以外のアプリケーションがリソースを消費している場合は、そのアプリケーションの実行を停止するか、別のサーバーで実行することを検討します。 これにより、外部的なメモリ負荷を軽減できます。  

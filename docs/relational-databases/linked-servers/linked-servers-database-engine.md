@@ -20,14 +20,15 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5418ea8fa92e8e62cf28d1bb740091feb88f32d2
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354372"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556921"
 ---
 # <a name="linked-servers-database-engine"></a>リンク サーバー (データベース エンジン)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   リンク サーバーを使用すると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) では、リモート データ ソースからデータを読み取ったり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの外部にあるリモート データベース サーバー (たとえば、OLE DB データ ソース) に対してコマンドを実行することができます。 通常、リンク サーバーを構成する目的は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスまたは別のデータベース製品 (Oracle など) のテーブルを含んだ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から実行できるようにすることです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access、Excel、Azure CosmosDB など、さまざまな種類の OLE DB データ ソースをリンク サーバーとして構成できます。
@@ -72,7 +73,7 @@ ms.locfileid: "66354372"
 > データ ソースがリンク サーバー経由でデータを返すには、そのデータ ソースの OLE DB プロバイダー (DLL) が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスと同じサーバー上に存在する必要があります。  
   
 > [!IMPORTANT] 
-> OLE DB プロバイダーを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行しているアカウントには、プロバイダーがインストールされているディレクトリとそのすべてのサブディレクトリに対する読み取り権限と実行権限が必要です。 これには、Microsoft がリリースしたプロバイダー、およびすべてのサードパーティのプロバイダーが含まれます。 
+> OLE DB プロバイダーを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行しているアカウントには、プロバイダーがインストールされているディレクトリとそのすべてのサブディレクトリに対する読み取り権限と実行権限が必要です。 これには、Microsoft によってリリースされたプロバイダー、およびすべてのサードパーティのプロバイダーが含まれます。 
   
 ## <a name="managing-providers"></a>プロバイダーの管理  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が OLE DB プロバイダーを読み込んで使用する方法を制御する一連のオプションは、レジストリで指定されます。  
