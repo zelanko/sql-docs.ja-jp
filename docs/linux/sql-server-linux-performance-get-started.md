@@ -1,20 +1,20 @@
 ---
-title: SQL Server on Linux のパフォーマンス機能の概要 |Microsoft Docs
+title: SQL Server on Linux のパフォーマンス機能の概要します。
 description: この記事では、Linux ユーザーが SQL Server に新しい SQL Server のパフォーマンス機能の概要を示します。 これらの例の多くは、すべてのプラットフォームで機能が、この記事のコンテキストは Linux です。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: a340b3b8ded0824947cc242538ad19159b4abb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713322"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834831"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>SQL Server on Linux のパフォーマンス機能のチュートリアル
 
@@ -158,7 +158,7 @@ SQL Server では、メモリ最適化テーブルにアクセスするネイテ
 ### <a name="learn-more-about-in-memory-oltp"></a>インメモリ OLTP の詳細
 インメモリ OLTP の詳細については、次のトピックを参照してください。
 
-- [クイック スタート 1。TRANSACT-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [クイック スタート 1:Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [インメモリ OLTP への移行](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [メモリ最適化を使用した一時テーブルとテーブル変数の高速化](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [メモリ使用量の監視とトラブルシューティング](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)

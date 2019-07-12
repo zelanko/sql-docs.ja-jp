@@ -1,20 +1,20 @@
 ---
-title: Docker で SQL Server データベースをリストア |Microsoft Docs
+title: Docker で SQL Server データベースを復元します。
 description: このチュートリアルでは、新しい Linux Docker コンテナーで SQL Server データベースのバックアップを復元する方法。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 79a480f2bd162e44a622413d091a2bebdaa82c00
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 826d62b3f1aeb75a89aa65be4755839f6601fcf2
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399912"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834563"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker コンテナーでの SQL Server データベースを復元します。
 
@@ -40,7 +40,7 @@ ms.locfileid: "67399912"
 > * データベースを表示したり、TRANSACT-SQL ステートメントを実行します。
 > * 変更されたデータベースをバックアップします。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 * サポートされている任意の Linux ディストリビューションの Docker エンジン 1.8 + または Docker for Mac/Windows。 詳細については「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker のインストール) を参照してください。
 * 2 GB 以上のディスク領域
@@ -521,7 +521,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"

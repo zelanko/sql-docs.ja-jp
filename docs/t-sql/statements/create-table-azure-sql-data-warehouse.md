@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 07/03/2019
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a137ff26240b23e99f2faeadb367b1379b8c0f8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413334"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564017"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -164,21 +164,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  「例」セクションの「[パーティション テーブルの作成](#PartitionedTable)」を参照してください。
 
-### <a name="ordered-clustered-columnstore-index-option-preview"></a>クラスター化列ストア インデックスの順序付けオプション (プレビュー)
+### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>クラスター化列ストア インデックスの順序付けオプション (Azure SQL Data Warehouse のプレビュー)
 
 クラスター化列ストア インデックスは、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  ORDER 指定の規定値は COMPOUND キーです。  並べ替えは常に昇順です。 ORDER 句を指定しなかった場合、列ストアは並べ替えられません。 順序付けのプロセスによっては、順序付けされていないクラスター化列ストア インデックスよりも、順序付けされたクラスター化列ストア インデックスを使用するテーブルの方がデータの読み込み時間が長い場合があります。 データの読み込み中に追加の tempdb 領域が必要な場合は、挿入ごとのデータ量を減らすことができます。
 
-プレビュー期間中、このクエリを実行して、ORDER を有効にした列を確認できます。  ORDER で複数の列を指定した場合、後でカタログ ビューが提供され、この情報と列序数が提供されます。
+プレビュー期間中、このクエリを実行して、ORDER を有効にした列を確認できます。
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
+SELECT i.name AS index_name  
+    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
+    ,ic.index_column_id  
+    ,ic.key_ordinal  
+,ic.is_included_column  
+FROM sys.indexes AS i  
+INNER JOIN sys.index_columns AS ic
+    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 ```
 
 ### <a name="DataTypes"></a> データ型
@@ -594,7 +594,8 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>参照
  
- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

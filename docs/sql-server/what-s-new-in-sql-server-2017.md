@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263496"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556936"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) の **modified_extent_page_count** 列は、各データベース ファイル内の差分変更を追跡します。これにより、データベース内の変更されたページの割合に基づいて差分バックアップまたは完全バックアップを実行するスマート バックアップ ソリューションが有効になります。 (CTP 2.0)
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) の T-SQL 構文で、**ON** キーワードを使用した、ユーザーの既定のファイル グループ以外のファイル グループへのテーブルの読み込みがサポートされました。 (CTP 2.0)
 - **Always On 可用性グループ**の一部であるすべてのデータベースで、同じインスタンスの一部であるデータベースも含め、データベース間トランザクションがサポートされました。 「[Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」 (トランザクション - Always On 可用性グループとデータベース ミラーリング) を参照してください。 (CTP 2.0)
-- 新しい**可用性グループ**機能として、クラスターを使用しない可用性グループのサポート、最小レプリカ コミット可用性グループの設定、Windows と Linux の OS 間の移行とテストが含まれます。 (1.3 CTP)
+- 新しい**可用性グループ**機能として、クラスターを使用しない読み取りスケールのサポート、最小レプリカ コミット可用性グループの設定、Windows と Linux の OS 間の移行とテストが含まれます。 (1.3 CTP)
 - 新しい動的管理ビュー:
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) は、トランザクション ログの正常性監視に役立つ、トランザクション ログ ファイルに関する概要レベルの属性と情報を公開します。 (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) は、データベースごとのバージョン ストア使用量を追跡します。これは、データベースごとのデータベース ストア使用量に基づくプロアクティブな tempdb サイズ計画に役立ちます。 (CTP 2.0)

@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 94531ed04a4265a5fa1a9293e191faeb37feab9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973941"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586176"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "57973941"
 
 -   分音文字の設定  
   
-     類義語辞典では、チルダ (**~**)、アキュート アクセント記号 (**´**)、ウムラウト (**¨**) などの分音記号をすべての検索パターンで区別するかしないか ( *アクセントを区別する* 、または *アクセントを区別しない*) が設定されます。 たとえば、フルテキスト クエリで "café" というパターンが他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "café" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "café" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
+     類義語辞典では、チルダ ( **~** )、アキュート アクセント記号 ( **?** )、ウムラウト ( **?** ) などの分音記号をすべての検索パターンで区別するかしないか (つまり、"*アクセントを区別する*" か"*アクセントを区別しない*") が設定されます。 たとえば、フルテキスト クエリで "caf?" というパターンが 他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "caf?" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "caf?" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
   
 ##  <a name="initial_thesaurus_files"></a> 既定の類義語辞典ファイル
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には XML 類義語辞典ファイルのセットが用意されており、サポートされている各言語に対して 1 つのファイルが存在します。 これらのファイルは基本的に空です。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類義語辞典およびコメント アウトされたサンプル類義語辞典に共通する最上位の XML 構造のみが格納されています。  
@@ -83,6 +83,8 @@ ms.locfileid: "57973941"
 類義語辞典クエリでは、言語固有の類義語辞典とグローバル類義語辞典の両方が使用されます。
 1.  まず、言語固有のファイルが参照されて処理のために読み込まれ (まだ読み込まれていない場合)、 類義語辞典ファイル内の拡張セットおよび置換セットのルールで指定された言語固有のシノニムを含むようにクエリが拡張されます。 
 2.  この手順がグローバル類義語辞典に対して繰り返されます。 ただし、言語固有の類義語辞典ファイルで既に一致するものが見つかった用語は、グローバル類義語辞典では照合されません。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> 類義語辞典ファイルの構造  
  各類義語辞典ファイルでは、ID が `Microsoft Search Thesaurus` の XML コンテナー、およびサンプル類義語辞典を含むコメント `<!--`...`-->` が定義されます。 類義語辞典は `<thesaurus>` 要素で定義されます。この要素には、分音記号の設定、拡張セット、置換セットを定義する子要素のサンプルが含まれます。

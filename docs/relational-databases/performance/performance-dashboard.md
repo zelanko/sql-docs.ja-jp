@@ -14,21 +14,21 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 99ff37b3c974f6ba63515b3b51e87719a1912521
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242399"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559479"
 ---
 # <a name="performance-dashboard"></a>パフォーマンス ダッシュボード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] バージョン 17.2 以降には、パフォーマンス ダッシュボードが含まれています。 このダッシュボードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 以降) のパフォーマンスの状態に対する分析情報を迅速かつ視覚的に提供できるように設計されています。 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] バージョン 17.2 以降には、パフォーマンス ダッシュボードが含まれています。 このダッシュボードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 以降) および [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] のパフォーマンスの状態に対する分析情報を迅速かつ視覚的に提供できるように設計されています。 
 
-パフォーマンス ダッシュボードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にパフォーマンスのボトルネックが存在するかどうかを迅速に特定するのに役立ちます。 ボトルネックが見つかった場合は、問題を解決するのに必要な追加の診断データを容易に取り込むことができます。 パフォーマンス ダッシュボードで容易に識別できる一般的なパフォーマンスの問題には次のようなものがあります。
+パフォーマンス ダッシュボードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] にパフォーマンスのボトルネックが存在するかどうかを迅速に特定するのに役立ちます。 ボトルネックが見つかった場合は、問題を解決するのに必要な追加の診断データを容易に取り込むことができます。 パフォーマンス ダッシュボードで容易に識別できる一般的なパフォーマンスの問題には次のようなものがあります。
 -  CPU のボトルネック (および、CPU を最も消費しているクエリ)
--  I/O ボトルネック (および、IO を最も実行しているクエリ)
+-  I/O ボトルネック (および、I/O を最も実行しているクエリ)
 -  クエリ オプティマイザーによって生成された推奨インデックス (不足しているインデックス)
 -  ブロッキング
 -  リソースの競合 (ラッチの競合を含む)
@@ -58,7 +58,7 @@ ms.locfileid: "54242399"
 
 ## <a name="to-view-the-performance-dashboard"></a>パフォーマンス ダッシュボードを表示するには 
   
-パフォーマンス ダッシュボードを表示するには、オブジェクト エクスプローラー内で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を右クリックし、**[レポート]**、**[標準レポート]** の順に選択し、**[パフォーマンス ダッシュボード]** をクリックします。  
+パフォーマンス ダッシュボードを表示するには、オブジェクト エクスプローラー内で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名を右クリックし、 **[レポート]** 、 **[標準レポート]** の順に選択し、 **[パフォーマンス ダッシュボード]** をクリックします。  
   
 ![メニュー内の [パフォーマンス ダッシュボード]](../../relational-databases/performance/media/perf_dashboard_ssms.png "メニュー内の [パフォーマンス ダッシュボード]")  
   
@@ -75,13 +75,13 @@ ms.locfileid: "54242399"
 
 **[待機]** レポートでは、アイドル待機とスリープ待機のすべてが除外されます。 待機の詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」および[待機とキューを使用した SQL Server 2005 のパフォーマンス チューニング](http://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc)に関する記事を参照してください。
 
-基になる DMV 内のデータがクリアされたために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動すると、**[コストの高いクエリ]** レポートはリセットされます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、コストの高いクエリに関する詳細情報はクエリ ストアで見つけることができます。 
+基になる DMV 内のデータがクリアされたために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動すると、 **[コストの高いクエリ]** レポートはリセットされます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、コストの高いクエリに関する詳細情報はクエリ ストアで見つけることができます。 
 
 > [!NOTE]
 > パフォーマンス ダッシュボードは最初に、[SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) 向けのスタンドアロン ダウンロードとしてリリースされ、その後、[SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063) 向けに更新されました。
 
 ## <a name="permissions"></a>アクセス許可  
-`VIEW SERVER STATE` および `ALTER TRACE` アクセス許可が必要です。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上では、`VIEW SERVER STATE` および `ALTER TRACE` アクセス許可が必要です。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。
 
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

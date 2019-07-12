@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: 名前付け基準ポリシーの作成と適用 | Microsoft Docs'
+title: レッスン 2:名前付け基準ポリシーの作成と適用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 688a61aeecfb729eeee877e0f8d3e463eaff06c8
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159040"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584901"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2: 名前付け基準ポリシーの作成と適用
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2:名前付け基準ポリシーの作成と適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 ポリシー ベースの管理の一部の種類のポリシーでは、ポリシーへの今後の準拠を適用するためのトリガーを作成することができます。 このレッスンでは、テーブルの名前付け基準を適用するポリシーを作成します。 その後に、ポリシーに違反するテーブルを作成してポリシーをテストします。  
 
@@ -40,16 +40,17 @@ ms.locfileid: "52159040"
   
 2.  オブジェクト エクスプローラーで、 **[データベース]** をクリックし、F5 キーを押してデータベースの一覧を更新します。  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>Finance テーブルの条件の作成 
 
-1.  オブジェクト エクスプローラーで、 **[管理]**、 **[ポリシー管理]** の順に展開し、 **[条件]** を右クリックして **[新しい条件]** をクリックします。 
+1.  オブジェクト エクスプローラーで、 **[管理]** 、 **[ポリシー管理]** の順に展開し、 **[条件]** を右クリックして **[新しい条件]** をクリックします。 
 
    ![新しい条件](Media/lesson-2-create-and-apply-a-naming-standards-policy/new-condition.png)
   
 2.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **Finance のテーブル**」と入力します。  
     1. **[ファセット]** ボックスの一覧で **[マルチパート名]** を選択します。 
-    1. すべてのテーブル名が文字列 **fintbl** で始まるように、**[式]** 領域の **[フィールド]** ボックスで **@Name** を選択し、**[演算子]** ボックスで **[次のパターンに一致]** を選択し、**[値]** ボックスに ```'fintbl%'``` と入力します。
+    1. すべてのテーブル名が文字列 **fintbl** で始まるように、 **[式]** 領域の **[フィールド]** ボックスで **@Name** を選択し、 **[演算子]** ボックスで **[次のパターンに一致]** を選択し、 **[値]** ボックスに ```'fintbl%'``` と入力します。
     1. **[説明]** ページで、「 **Finance のテーブル名は必ず fintbl で始める**」と入力し、 **[OK]** をクリックして条件を作成します。  
 
     ![Finance テーブルの条件](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
@@ -67,12 +68,12 @@ ms.locfileid: "52159040"
     1. **[評価モード]** の一覧で、 **[変更時: 回避]** を選択します。 これにより、Finance データベースでデータベース トリガーを作成することでポリシーが適用されるようになります。 
     1. **[サーバーの制限]** ボックスの一覧で **[なし]** を選択します。 
     1. **[説明]** ページで、'Table names in the Finance database must contain 'fintbl%' (Finance データベースのテーブル名には 'fintbl%' が含まれている必要があります。) の説明を追加します。 
-    1. **[全般]** ページに戻り、**[すべてのデータベース]** 領域で **[すべて]** を展開し、**[新しい条件]** をクリックします。
+    1. **[全般]** ページに戻り、 **[すべてのデータベース]** 領域で **[すべて]** を展開し、 **[新しい条件]** をクリックします。
 
     ![新しい Finance Name ポリシーの作成](Media/lesson-2-create-and-apply-a-naming-standards-policy/create-new-policy-finance-name.png)
   
 6.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **Finance データベース**」と入力します。
-    1. **[式]** ボックスで、@Name = 'Finance' を追加して式を完成させ、**[OK]** をクリックして条件ページを閉じます。 
+    1. **[式]** ボックスで、@Name = 'Finance' を追加して式を完成させ、 **[OK]** をクリックして条件ページを閉じます。 
   
     ![新しい 'finance database' 条件の作成](Media/lesson-2-create-and-apply-a-naming-standards-policy/create-new-condition.png)
 
@@ -156,7 +157,7 @@ ms.locfileid: "52159040"
 このチュートリアルでは、ポリシー ベースの管理の条件、ポリシー、およびポリシー グループを作成する方法と、フィルターを適用してポリシー ベースの管理対象がポリシーに準拠しているかどうかを調べる方法について学習しました。  
   
 ## <a name="next"></a>Next  
-このチュートリアルはこれで終了です。 最初に戻るには、「[チュートリアル: ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)」を参照してください。  
+このチュートリアルはこれで終了です。 先頭に戻る場合は、「[チュートリアル:ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)」に移動してください。  
   
 チュートリアルの一覧については、「 [SQL Server 2016 チュートリアル](../../sql-server/tutorials-for-sql-server-2016.md)」を参照してください。  
   

@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518608"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582750"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "52518608"
   
 |トピック|概要|  
 |-----------|--------------|  
-|[OOM によるデータベース復元の障害を解決する](#bkmk_resolveRecoveryFailures)|"リソース プール '*\<resourcePoolName>*' 内のメモリ不足が原因で、データベース '*\<databaseName>*' の復元操作に失敗しました" というエラー メッセージが表示された場合の対処方法。|  
+|[OOM によるデータベース復元の障害を解決する](#bkmk_resolveRecoveryFailures)|"リソース プール ' *\<resourcePoolName>* ' 内のメモリ不足が原因で、データベース ' *\<databaseName>* ' の復元操作に失敗しました" というエラー メッセージが表示された場合の対処方法。|  
 |[低メモリまたは OOM 状態によるワークロードへの影響を解決する](#bkmk_recoverFromOOM)|低メモリの問題によるパフォーマンス低下が見つかった場合の対処方法。|  
-|[十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#bkmk_PageAllocFailure)|"リソース プール '*\<resourcePoolName>*' のメモリが不足しているため、データベース '*\<databaseName>*' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|
+|[十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#bkmk_PageAllocFailure)|"リソース プール ' *\<resourcePoolName>* ' のメモリが不足しているため、データベース ' *\<databaseName>* ' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|
 |[VM 環境でのインメモリ OLTP の使用のベスト プラクティス](#bkmk_VMs)|仮想化環境でインメモリ OLTP を使用するときの留意事項。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> OOM によるデータベース復元の障害を解決する  
- データベースを復元しようとすると、"リソース プール '*\<resourcePoolName>*' 内のメモリ不足が原因で、データベース '*\<databaseName>*' の復元操作に失敗しました" というエラー メッセージが表示されることがあります。これは、データベースを復元するのに十分なメモリがサーバーにないことを示します。 
+ データベースを復元しようとすると次のエラー メッセージが表示されることがあります。"リソース プール ' *\<resourcePoolName>* ' 内のメモリが不足しているため、データベース ' *\<databaseName>* ' の復元操作に失敗しました。"これは、データベースを復元するのに十分なメモリがサーバーにないことを示します。 
    
 データベースの復元先であるサーバーでは、データベース バックアップのメモリ最適化テーブル用に十分なメモリが確保されている必要があります。メモリが十分でない場合、データベースはオンラインにならず、問題ありの印が付きます。  
   
@@ -77,7 +77,9 @@ ms.locfileid: "52518608"
 1.  [DAC (専用管理者接続) を開く](#bkmk_openDAC)  
   
 2.  [修正措置を行う](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> DAC (専用管理者接続) を開く  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には専用管理者接続 (DAC) があります。 DAC を使用すると、サーバーが他のクライアント接続に応答しない場合でも、SQL Server データベース エンジンの実行中のインスタンスにアクセスして、サーバーの問題をトラブルシューティングすることができます。 DAC は、`sqlcmd` ユーティリティと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で使用できます。  
   

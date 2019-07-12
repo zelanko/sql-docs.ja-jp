@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568275"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559468"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,6 +171,18 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+## <a name="query-profiling-infrastruture-usage-guidance"></a>クエリ プロファイリング インフラストラクチャの使用に関するガイダンス
+以下の表は、標準プロファイリングと軽量プロファイリングをグローバル (サーバー レベル) または単一セッションで有効にするためのアクションをまとめたものです。 そのアクションを使用できる最も古いバージョンも記載されています。 
+
+|スコープ|標準プロファイリング|軽量プロファイリング|
+|---------------|---------------|---------------|
+|グローバル|`query_post_execution_showplan` XE を使用する xEvent セッション。[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降|トレース フラグ 7412。[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降|
+|グローバル|`Showplan XML` トレース イベントを使用する SQL トレースおよび SQL Server Profiler。SQL Server 2000 以降|`query_thread_profile` XE を使用する xEvent セッション。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降|
+|グローバル|-|`query_post_execution_plan_profile` XE を使用する xEvent セッション。[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降|
+|Session|`SET STATISTICS XML ON` を使用。SQL Server 2000 以降|`query_plan_profile` XE を使用する xEvent イベント セッションと共に `QUERY_PLAN_PROFILE` クエリ ヒントを使用。[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降|
+|Session|`SET STATISTICS PROFILE ON` を使用。SQL Server 2000 以降|-|
+|Session|SSMS 内で[[ライブ クエリ統計]](../../relational-databases/performance/live-query-statistics.md) ボタンをクリック。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降|-|
 
 ## <a name="remarks"></a>Remarks
 

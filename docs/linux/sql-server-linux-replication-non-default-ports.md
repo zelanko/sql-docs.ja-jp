@@ -1,20 +1,21 @@
 ---
-title: Linux 上のスナップショット フォルダーの共有 SQL Server レプリケーションの構成 |Microsoft Docs
+title: Linux 上のスナップショット フォルダーの共有 SQL Server レプリケーションの構成します。
 description: この記事では、Linux でのスナップショット フォルダーの共有 SQL Server レプリケーションを構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fd7c819af4c700af17a4b85fad2a4cc75e3e820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456163bfec2324394455a5d098ef01c22d994696
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705135"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834804"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>既定以外のポートでレプリケーションを構成します。
 
@@ -29,31 +30,31 @@ Network.tcpport mssql conf の設定で構成した任意のポートでリッ�
 
 ## <a name="examples"></a>使用例
 
-'Server1' は、Linux 上のポート 1500 でリッスンします。 'Server1' は、配布用に構成するには、実行`sp_adddistributor`で`@distributor`します。 以下に例を示します。 
+'Server1' は、Linux 上のポート 1500 でリッスンします。 'Server1' は、配布用に構成するには、実行`sp_adddistributor`で`@distributor`します。 例: 
 
 ```sql
 exec sp_adddistributor @distributor = 'Server1,1500'
 ```
 
-'Server1' は、Linux 上のポート 1500 でリッスンします。 ディストリビューターのパブリッシャーを構成するには、次のように実行します。`sp_adddistpublisher`で`@publisher`します。 例 :
+'Server1' は、Linux 上のポート 1500 でリッスンします。 ディストリビューターのパブリッシャーを構成するには、次のように実行します。`sp_adddistpublisher`で`@publisher`します。 例:
 
 ```sql
 exec sp_adddistpublisher @publisher = 'Server1,1500' ,  ,  
 ```
 
-'Server2' は、Linux 上のポート 6549 でリッスンします。 サブスクライバーとして 'Server2' を構成するには実行`sp_addsubscription`で`@subscriber`します。 例 :
+'Server2' は、Linux 上のポート 6549 でリッスンします。 サブスクライバーとして 'Server2' を構成するには実行`sp_addsubscription`で`@subscriber`します。 例:
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server2,6549' ,  ,  
 ```
 
-'Server3' は、Server3 のサーバー名とインスタンス名 MSSQL2017 の Windows 上のポート 6549 でリッスンします。 'Server3' をサブスクライバーとして構成するには、実行、`sp_addsubscription`で`@subscriber`します。 以下に例を示します。
+'Server3' は、Server3 のサーバー名とインスタンス名 MSSQL2017 の Windows 上のポート 6549 でリッスンします。 'Server3' をサブスクライバーとして構成するには、実行、`sp_addsubscription`で`@subscriber`します。 例:
 
 ```sql
 exec sp_addsubscription @subscriber = 'Server3/MSSQL2017,6549',  ,  
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [概念:Linux 上の SQL Server レプリケーション](sql-server-linux-replication.md)
 

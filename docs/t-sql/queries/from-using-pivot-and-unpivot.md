@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928682"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559416"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT および UNPIVOT の使用
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-関係演算子 `PIVOT` および `UNPIVOT` を使用すると、テーブル値式を別のテーブルに変更できます。 `PIVOT` 関係演算子は、テーブル値式の中のある列から一意の値を取得して出力側の複数の列に変換することで式を行列変換し、最終的な出力として残った列値に対して必要な集計を行います。 `UNPIVOT` 関係演算子の機能は PIVOT 関係演算子の逆で、テーブル値式の複数の列を列値に行列変換します。  
+関係演算子 `PIVOT` および `UNPIVOT` を使用すると、テーブル値式を別のテーブルに変更できます。 `PIVOT` では、式内の 1 つの列にある複数の一意の値を出力内の複数の列に変えることにより、テーブル値式が行列変換されます。 また、`PIVOT` で集計が実行されるのは、最終出力で必要な残りの任意の列値に対して集計が必要な場合です。 `UNPIVOT` 関係演算子の機能は PIVOT 関係演算子の逆で、テーブル値式の複数の列を列値に行列変換します。  
   
 `PIVOT` の構文は、`SELECT...CASE` ステートメントを複雑に組み合わせて同じ操作を指定する場合よりも単純で読みやすくなります。 `PIVOT` の構文の詳細な説明については、「[FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
@@ -75,7 +75,6 @@ GO
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
 FROM Production.Product  
 GROUP BY DaysToManufacture;  
-  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

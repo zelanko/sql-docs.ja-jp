@@ -14,12 +14,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e12b5746d99635b773e3b61a6db10485f2e60765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667840"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582207"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle パブリッシャーのトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47667840"
   
 -   "Oracle サーバー インスタンス '\<*OraclePublisherName*>' は、'\<*SQLServerDistributorName*>' をディストリビューターとして使用するように構成されています。 '\<*NewSQLServerDistributorName*>' をディストリビューターとして使用するためには、Oracle サーバー インスタンスの現在のレプリケーション構成を削除する必要があります。その場合、サーバー インスタンス上のすべてのパブリケーションが削除されます。"  
   
--   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*' のパブリッシャー '\<*OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム '*\<SynonymName>*' を削除して、再作成してください。"  
+-   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* ' のパブリッシャー '\<*OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム ' *\<SynonymName>* ' を削除して、再作成してください。"  
   
  Oracle パブリッシャーが削除されると、Oracle データベース内のレプリケーション オブジェクトが自動的にクリーンアップされます。 ただし、Oracle レプリケーション オブジェクトを手動でクリーンアップすることが必要な場合もあります。 レプリケーションで作成した Oracle レプリケーション オブジェクトを手動でクリーン アップするには、次の手順を実行します。  
   
@@ -79,7 +79,9 @@ ms.locfileid: "47667840"
 2.  SQL コマンド `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`を実行します。  
   
 3.  SQL コマンド `DROP USER <replication_administrative_user_schema>``CASCADE;`を実行します。  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>主キーの欠如に関する SQL Server エラー 21663 が発生する  
  トランザクション パブリケーションのアーティクルには、有効な主キーが必要です。 有効な主キーがない場合は、アーティクルを追加しようとすると、次のエラー メッセージが表示されます。  
   
@@ -90,7 +92,7 @@ ms.locfileid: "47667840"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>リンク サーバー ログインの重複に関する SQL Server エラー 21642 が発生する  
  Oracle パブリッシャーを最初に構成するときに、パブリッシャーとディストリビューター間の接続用にリンク サーバー エントリが作成されます。 リンク サーバーには、Oracle TNS サービスと同じ名前が付けられます。 同じ名前でリンク サーバーを作成しようとすると、次のエラー メッセージが表示されます。  
   
- "異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー '*\<LinkedServerName>*' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。"  
+ "異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー ' *\<LinkedServerName>* ' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。"  
   
  このエラーは、リンク サーバーを直接作成しようとしたり、Oracle パブリッシャーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューター間のリレーションシップを以前に削除し、再構成しようとしている場合に発生する可能性があります。 パブリッシャーを再構成しようとしているときにこのエラーが表示される場合は、[sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md) を使用してリンク サーバーを削除してください。  
   
@@ -157,7 +159,7 @@ ms.locfileid: "47667840"
   
 2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、「 **regedit**」と入力し、 **[OK]** をクリックします。  
   
-3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers に移動します。  
+3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers に移動します。  
   
      [Providers] の下に、[OraOLEDB.Oracle] という名前のフォルダーがあります。 このフォルダーの中に、 **[AllowInProcess]** という名前の DWORD 値があり、値は **1**になっている必要があります。  
   
@@ -207,7 +209,7 @@ ms.locfileid: "47667840"
 ## <a name="oracle-error-ora-01555"></a>Oracle エラー ORA-01555  
  次の Oracle データベース エラーは、スナップショット レプリケーションに関連するものではありません。このエラーは、Oracle でのデータの読み取り一貫性ビューの構築方法に関連します。  
   
- "ORA-01555: Snapshot too old"  
+ "ORA-01555:Snapshot too old (ORA-01555: スナップショットが古すぎます)"  
   
  Oracle では、ロールバック セグメントと呼ばれるオブジェクトを使用して、SQL ステートメントの発行時点のデータの読み取り一貫性ビューを構築します。 "Snapshot too old" エラーは、ロールバック情報が他の同時接続セッションによって上書きされた場合に発生する可能性があります。 Oracle 9i よりも前のバージョンでは、このエラーの発生頻度を減らす方法として、ロールバック セグメントのサイズや数を増やしたり、大きいトランザクションを特定のロールバック セグメントに割り当てる方法が推奨されていました。  
   

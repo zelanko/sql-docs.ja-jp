@@ -1,20 +1,20 @@
 ---
-title: Cron で Linux 上の SSIS パッケージのスケジュール |Microsoft Docs
+title: Cron で Linux 上の SSIS パッケージをスケジュールします。
 description: この記事では、cron サービスで Linux 上の SQL Server Integration Services (SSIS) パッケージをスケジュールする方法について説明します。
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6d78190f5c6acf1f5dc8bfaccbf072a290faa908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b171f3e3ba24474afcea09498d69574d69b3c33
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705315"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834728"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>スケジュールの SQL Server Integration Services パッケージ cron を使用した Linux 上の実行
 
@@ -24,7 +24,7 @@ SQL Server Integration Services (SSIS) と SQL Server を Windows で実行す�
 
 この記事では、SSIS パッケージの実行を自動化する方法を示す例を示します。 Red Hat Enterprise 上で実行する例が書き込まれます。 コードは、Ubuntu など、他の Linux ディストリビューションと似ています。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 ジョブを実行する cron サービスを使用する前に、コンピューターで実行されているかどうかを確認します。
 

@@ -1,21 +1,22 @@
 ---
-title: Linux 上の SQL Server レプリケーションの構成 |Microsoft Docs
+title: Linux 上の SQL Server レプリケーションを構成します。
 description: この記事では、Linux での SQL Server レプリケーションを構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c8dd4ef4898796722e1c54eeaff94afef1c0c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe12afac12e34dfb6c66a44a1d1de6c2b5ce1876
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705339"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834792"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux 上の SQL Server レプリケーションを構成します。
 

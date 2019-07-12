@@ -1,5 +1,5 @@
 ---
-title: 'T-SQL のチュートリアル: データベース オブジェクトの削除 | Microsoft Docs'
+title: 'T-SQL のチュートリアル: データベース オブジェクトを削除する | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4bd0a0d3c70b31f398c791c4e75dbd7ab1403e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b155862bd9983bc8b93b6088bfa6d5df254ffe7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621150"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579377"
 ---
-# <a name="lesson-3-delete-database-objects"></a>レッスン 3: データベース オブジェクトの削除
+# <a name="lesson-3-delete-database-objects"></a>レッスン 3:データベース オブジェクトの削除
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 この短いレッスンでは、レッスン 1 とレッスン 2 で作成したオブジェクトを削除してから、データベースを削除します。  
   
@@ -44,33 +44,32 @@ ms.locfileid: "47621150"
 
 1. `DROP` データベースに対する `Mary` のアクセス権限を削除するには、 `TestData` ステートメントを使用します。
   
-  ```sql  
-  DROP USER Mary;  
-  GO  
-  ```  
+   ```sql  
+   DROP USER Mary;  
+   GO  
+   ```  
 
 
 2. `DROP` が `Mary` のこのインスタンスにアクセスする権限を削除するには、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]ステートメントを使用します。
   
-  ```sql  
-    DROP LOGIN [<computer_name>\Mary];  
-    GO   
-  ```  
+   ```sql  
+   DROP LOGIN [<computer_name>\Mary];  
+   GO   
+   ```  
   
-3.   ストアド プロシージャ `DROP` を削除するには、 `pr_Names`ステートメントを使用します。  
+3. ストアド プロシージャ `DROP` を削除するには、 `pr_Names`ステートメントを使用します。  
   
-    ```sql  
-    DROP PROC pr_Names;  
-    GO  
-    ```  
+   ```sql  
+   DROP PROC pr_Names;  
+   GO   
+   ```  
   
-6.  ビュー `DROP` を削除するには、 `vw_Names`ステートメントを使用します。  
+4. ビュー `DROP` を削除するには、 `vw_Names`ステートメントを使用します。  
   
-    ```sql  
-    DROP VIEW vw_Names;  
-    GO  
-  
-    ```  
+   ```sql  
+   DROP VIEW vw_Names;  
+   GO  
+   ```  
 
 ## <a name="delete-table"></a>テーブルの削除
   

@@ -1,20 +1,21 @@
 ---
-title: SQL Server Machine Learning サービス (R、Python) を Linux 上のインストール |Microsoft Docs
+title: Linux 上の SQL Server Machine Learning サービス (R、Python) のインストールします。
 description: Red Hat、Ubuntu、SUSE には、SQL Server Machine Learning サービス (R、Python) をインストールする方法をについて説明します。
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399946"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834681"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Learning サービス (R、Python) を Linux 上の SQL Server 2019 マシンをインストールします。
 
@@ -278,7 +279,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. オープン ソース R と Python のライセンス契約に同意します。 これを行ういくつかの方法はあります。 以前 SQL Server ライセンスを受け入れ、R または Python の拡張機能を追加するようになりましたすると、次のコマンドは、その条項に同意は。
+2. オープン ソース R と Python のライセンス契約に同意します。 これにはいくつかの方法があります。 以前 SQL Server ライセンスを受け入れ、R または Python の拡張機能を追加するようになりましたすると、次のコマンドは、その条項に同意は。
 
    ```bash
    # Run as SUDO or root

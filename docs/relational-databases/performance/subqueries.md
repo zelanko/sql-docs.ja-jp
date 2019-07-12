@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579392"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500222"
 ---
 # <a name="subqueries-sql-server"></a>サブクエリ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ GO
 -   `EXISTS` で導かれたサブクエリの選択リストには、通例、単一の列名ではなくアスタリスク (\*) が使用されます。 `EXISTS` で導かれるサブクエリの規則は、標準の選択リストの規則と同じです。これは、`EXISTS` で導かれるサブクエリは存在検査を行うもので、データではなく TRUE または FALSE を返すためです。   
 
 ## <a name="qualifying"></a> サブクエリで使用する列名の修飾
-次の例で、外側のクエリの `WHERE` 句内の *CustomerID* 列は、外側のクエリの `FROM` 句内のテーブル名 *Sales.Store* で暗黙的に修飾されています。 サブクエリの選択リスト内の *CustomerID* への参照は、サブクエリの `FROM` 句、つまり *Sales.Customer* テーブルで修飾されています。
+次の例で、外側のクエリの `WHERE` 句内の *BusinessEntityID* 列は、外側のクエリの `FROM` 句内のテーブル名 (*Sales.Store*) で暗黙的に修飾されています。 サブクエリの選択リスト内の *CustomerID* への参照は、サブクエリの `FROM` 句、つまり *Sales.Customer* テーブルで修飾されています。
 
 ```sql
 USE AdventureWorks2016;
@@ -520,7 +520,7 @@ GO
 ```
 
 ### <a name="comparison"></a> 比較演算子によるサブクエリ
-サブクエリは、次の比較演算子のいずれかで導くことができます (=、< >、>、> =、<、!  >、!  <、< =)。   
+サブクエリは、次の比較演算子のいずれかで導くことができます (=、< >、>、> =、<、! >、! <、< =)。   
 
 修飾されていない比較演算子 (後ろに `ANY` や `ALL` がない比較演算子) で導かれるサブクエリでは、`IN` によって導かれるサブクエリと同様に、値のリストでなく単一の値を返す必要があります。 このようなサブクエリから複数の値が返された場合は、SQL Server によりエラー メッセージが表示されます。    
 

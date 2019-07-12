@@ -1,20 +1,21 @@
 ---
-title: SQL Server on Linux の可用性グループの動作 |Microsoft Docs
+title: SQL Server on Linux の可用性グループを操作します。
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 98493c945f4f43e45b1f314f1500eb50a04c8e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1dfdeead4f8eb82dc95882d719ef42f16017bdc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713412"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834241"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Linux 上の可用性グループに対して常に
 
@@ -76,13 +77,13 @@ ms.locfileid: "66713412"
 
    可用性グループのクラスターの種類が場合`NONE`、手動でフェールオーバーします。 次の手順を実行します。
 
-      A. 次のコマンドは、プライマリ レプリカをセカンダリに設定します。 置換`AG1`可用性グループの名前に置き換えます。 プライマリ レプリカをホストする SQL Server のインスタンスでは、TRANSACT-SQL コマンドを実行します。
+      a. 次のコマンドは、プライマリ レプリカをセカンダリに設定します。 置換`AG1`可用性グループの名前に置き換えます。 プライマリ レプリカをホストする SQL Server のインスタンスでは、TRANSACT-SQL コマンドを実行します。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. 次のコマンドは、同期セカンダリ レプリカをプライマリに設定します。 同期セカンダリ レプリカをホストする SQL Server のインスタンスのターゲット インスタンスで、次の TRANSACT-SQL コマンドを実行します。
+      b. 次のコマンドは、同期セカンダリ レプリカをプライマリに設定します。 同期セカンダリ レプリカをホストする SQL Server のインスタンスのターゲット インスタンスで、次の TRANSACT-SQL コマンドを実行します。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
@@ -134,7 +135,7 @@ ms.locfileid: "66713412"
    ```
  
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [SQL Server 可用性グループのクラスター リソースの Red Hat Enterprise Linux クラスターを構成します。](sql-server-linux-availability-group-cluster-rhel.md)
 

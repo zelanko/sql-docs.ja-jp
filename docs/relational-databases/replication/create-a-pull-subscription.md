@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9395b0437c61bc0d680a701aae72e4df53c19cb4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a710dd9b9cb67d8b0f56407ea3c8d8838a51b35b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129582"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582508"
 ---
 # <a name="create-a-pull-subscription"></a>プル サブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,9 @@ ms.locfileid: "54129582"
 3.  1 つ以上のサブスクリプションを作成するパブリケーションを右クリックし、 **[新しいサブスクリプション]** をクリックします。  
   
 4.  サブスクリプションの新規作成ウィザードのページに従って操作を実行します。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-pull-subscription-from-the-subscriber"></a>サブスクライバーからプル サブスクリプションを作成するには  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でサブスクライバーに接続して、サーバー ノードを展開します。  
@@ -73,7 +75,7 @@ ms.locfileid: "54129582"
   
 3.  **[ローカル サブスクリプション]** フォルダーを右クリックし、 **[新しいサブスクリプション]** をクリックします。  
   
-4.  サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、**[パブリッシャー]** ボックスの一覧から **[\<SQL Server パブリッシャーの検索>]** または **[\<Oracle パブリッシャーの検索>]** を選択します。  
+4.  サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、 **[パブリッシャー]** ボックスの一覧から **[\<SQL Server パブリッシャーの検索>]** または **[\<Oracle パブリッシャーの検索>]** を選択します。  
   
 5.  **[サーバーへの接続]** ダイアログ ボックスでパブリッシャーに接続します。  
   
@@ -90,24 +92,24 @@ ms.locfileid: "54129582"
   
     -   結果セットの **allow_pull** の値が **1**である場合、パブリケーションはプル サブスクリプションをサポートします。  
   
-    -   **allow_pull** の値が **0** である場合は、**@property** に **allow_pull** を、**@value** に **true** を指定して、[sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。  
+    -   **allow_pull** の値が **0** である場合は、 **@property** に **allow_pull** を、 **@value** に **true** を指定して、[sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。  
   
 2.  サブスクライバーで、[sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) を実行します。 **@publisher** および **@publication** を指定します。 サブスクリプションの更新の詳細については、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。   
   
 3.  サブスクライバーで、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) を実行します。 次の指定を行います。  
   
-    -   手順 1. で作成した、サブスクライバーに対する **@publisher**、 **@publisher_db**、 **@publication** の各パラメーター。  
+    -   手順 1. で作成した、サブスクライバーに対する **@publisher** 、 **@publisher_db** 、 **@publication** の各パラメーター。  
   
-    -   手順 1. で作成した、サブスクライバーに対する [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** @value **@job_password**」を参照してください。  
+    -   手順 1. で作成した、サブスクライバーに対する [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** @value **@job_password** 」を参照してください。  
   
         > [!NOTE]  
-        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password**」を参照してください。 ディストリビューション エージェントは、常に Windows 統合認証を使用してサブスクライバーへのローカル接続を作成します。 既定では、エージェントは Windows 統合認証を使用してディストリビューターに接続します。  
+        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password** 」を参照してください。 ディストリビューション エージェントは、常に Windows 統合認証を使用してサブスクライバーへのローカル接続を作成します。 既定では、エージェントは Windows 統合認証を使用してディストリビューターに接続します。  
   
-    -   (省略可能) ディストリビューターに接続するときに SQL Server 認証を使用する必要がある場合、**@distributor_security_mode** には **0**、**@distributor_login** と **@distributor_password** には SQL Server ログイン情報の値。  
+    -   (省略可能) ディストリビューターに接続するときに SQL Server 認証を使用する必要がある場合、 **@distributor_security_mode** には **0**、 **@distributor_login** と **@distributor_password** には SQL Server ログイン情報の値。  
   
     -   このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。 詳細については、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
-4.  パブリッシャー側で [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) を実行し、プル サブスクリプションを登録します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **pull** を指定します。  
+4.  パブリッシャー側で [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) を実行し、プル サブスクリプションを登録します。 **@publication** 、 **@subscriber** 、および **@destination_db** を指定します。 **@subscription_type** に **pull** を指定します。  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを作成するには  
   
@@ -115,32 +117,32 @@ ms.locfileid: "54129582"
   
     -   結果セットの **allow_pull** の値が **1**である場合、パブリケーションはプル サブスクリプションをサポートします。  
   
-    -   **allow_pull** の値が **0** である場合は、**@property** に **allow_pull** を、**@value** に **true** を指定して、[sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。  
+    -   **allow_pull** の値が **0** である場合は、 **@property** に **allow_pull** を、 **@value** に **true** を指定して、[sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。  
   
-2.  サブスクライバーで、[sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) を実行します。 **@publisher**、**@publisher_db**、**@publication**、および以下のパラメーターを指定します。  
+2.  サブスクライバーで、[sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** 、および以下のパラメーターを指定します。  
   
-    -   **@subscriber_type** クライアント サブスクリプションには **local** を指定し、サーバー サブスクリプションには **global** を指定します。  
+    -   **@subscriber_type** ? クライアント サブスクリプションには **local** を指定し、サーバー サブスクリプションには **global** を指定します。  
   
-    -   **@subscription_priority** &#x2013; サブスクリプションの優先度 (**0.00** ～ **99.99**) を指定します。 これは、サーバー サブスクリプションにのみ必要です。  
+    -   **@subscription_priority** ? サブスクリプションの優先度 (**0.00** - **99.99**) を指定します。 これは、サーバー サブスクリプションにのみ必要です。  
   
          詳細については、「 [マージ レプリケーションの競合検出および解決の詳細](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
 3.  サブスクライバーで、 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) を実行します。 次のパラメーターを指定します。  
   
-    -   **@publisher**、 **@publisher_db**、 **@publication**」を参照してください。  
+    -   **@publisher** 、 **@publisher_db** 、 **@publication** 」を参照してください。  
   
-    -   **@job_login** および **@job_password**のサブスクライバーでマージ エージェントが実行されるときの Windows 資格情報。  
+    -   **@job_login** および **@job_password** のサブスクライバーでマージ エージェントが実行されるときの Windows 資格情報。  
   
         > [!NOTE]  
-        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** 」および「 **@job_password**を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 マージ エージェントは、常に Windows 統合認証を使用してサブスクライバーへのローカル接続を作成します。 既定では、エージェントは Windows 統合認証を使用してディストリビューターおよびパブリッシャーに接続します。  
+        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** 」および「 **@job_password** を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 マージ エージェントは、常に Windows 統合認証を使用してサブスクライバーへのローカル接続を作成します。 既定では、エージェントは Windows 統合認証を使用してディストリビューターおよびパブリッシャーに接続します。  
   
-    -   (省略可) ディストリビューターへの接続時に **0** allow_pull **@distributor_security_mode** 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @distributor_login **@distributor_login** @value **@distributor_password**に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報。  
+    -   (省略可) ディストリビューターへの接続時に **0** allow_pull **@distributor_security_mode** 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @distributor_login **@distributor_login** @value **@distributor_password** に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報。  
   
-    -   (省略可) ディストリビューターへの接続時に **0** allow_pull **@publisher_security_mode** 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @distributor_login **@publisher_login** @value **@publisher_password**に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報。  
+    -   (省略可) ディストリビューターへの接続時に **0** allow_pull **@publisher_security_mode** 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @distributor_login **@publisher_login** @value **@publisher_password** に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン情報。  
   
     -   このサブスクリプションでのマージ エージェント ジョブのスケジュール。 詳しくは、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)」をご覧ください。  
   
-4.  パブリッシャーで [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) を実行します。 **@publication**、**@subscriber**、**@subscriber_db**、および **@subscription_type** に **pull** 値を指定します。 これにより、プル サブスクリプションが登録されます。  
+4.  パブリッシャーで [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) を実行します。 **@publication** 、 **@subscriber** 、 **@subscriber_db** 、および **@subscription_type** に **pull** 値を指定します。 これにより、プル サブスクリプションが登録されます。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トランザクション パブリケーションに対するプル サブスクリプションを作成します。 最初のバッチはサブスクライバーで実行され、2 番目のバッチはパブリッシャーで実行されます。 ログインとパスワードの値は、実行時に sqlcmd スクリプト変数を使用して入力されます。  
@@ -273,7 +275,7 @@ GO
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> のビットごとの論理 AND 演算 (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と**|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>」を参照してください。 続けて、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出して、プル サブスクリプションを有効にします。  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> のビットごとの論理 AND 演算 (Visual C# では **&** 、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>」を参照してください。 続けて、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出して、プル サブスクリプションを有効にします。  
   
 5.  サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   
@@ -315,7 +317,7 @@ GO
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> のビットごとの論理 AND 演算 (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と**|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>」を参照してください。 続けて、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出して、プル サブスクリプションを有効にします。  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> のビットごとの論理 AND 演算 (Visual C# では **&** 、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull>」を参照してください。 続けて、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出して、プル サブスクリプションを有効にします。  
   
 5.  サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   

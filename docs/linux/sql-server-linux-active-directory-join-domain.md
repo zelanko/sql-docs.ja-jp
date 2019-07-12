@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50f2685b5b981cddfdba61f91b7ec04e9f6345d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822528"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834439"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server を Linux ホストを Active Directory ドメインに参加します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "66822528"
 
 この記事では、SQL Server Linux ホストのコンピューターを Active Directory (AD) ドメインに参加させる方法については、一般的なガイダンスを提供します。 2 つの方法: 組み込みの SSSD パッケージを使用して、またはサード パーティの Active Directory プロバイダーを使用します。 サード パーティのドメイン参加の製品の例は、 [PowerBroker Identity サービス (PBI)](https://www.beyondtrust.com/)、 [1 つの Id](https://www.oneidentity.com/products/authentication-services/)、および[Centrify](https://www.centrify.com/)します。 このガイドには、Active Directory の構成を確認する手順が含まれます。 ただし、サード パーティのユーティリティを使用する場合、マシンをドメインに参加させる方法について説明することはありません。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 Active Directory 認証を構成する前に、Active Directory ドメイン コント ローラーを Windows、ネットワーク上を設定する必要があります。 その後、SQL Server Linux ホストを Active Directory ドメインに参加します。
 
@@ -238,6 +238,6 @@ host **<IP address of SQL Server host>**
 
 このコマンドの出力はようになります`**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`します。 このコマンドでは、ホストの FQDN、返さない場合、または FQDN が正しい場合は、SQL Server を DNS サーバーの Linux ホスト上の逆引き DNS エントリを追加します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 この記事では、Active Directory 認証での Linux ホスト マシンで SQL Server を構成する方法の前提条件について説明します。 Active Directory アカウントをサポートする Linux 上の SQL Server の構成を完了する」の手順に従います[SQL Server on Linux での Active Directory を使用して認証](sql-server-linux-active-directory-authentication.md)します。

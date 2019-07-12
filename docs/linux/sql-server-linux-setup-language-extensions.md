@@ -1,20 +1,21 @@
 ---
-title: Linux 上の SQL Server の言語拡張機能 (Java) のインストール |Microsoft Docs
+title: Linux 上の SQL Server の言語拡張機能 (Java) のインストールします。
 description: Red Hat、Ubuntu、SUSE には、SQL Server の言語拡張機能 (Java) をインストールする方法をについて説明します。
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399937"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834699"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Linux 上の SQL Server 2019 言語拡張機能 (Java) のインストールします。
 
@@ -303,7 +304,7 @@ Linux および Windows の間の類似性がある[リソース ガバナンス
 |total_cpu_user_ms | リソース ガバナー統計がリセットされた後のミリ秒単位で累積的な CPU ユーザー時間。| Linux では、この統計は、システムの行の値に値が cpuacct.stat は、CGroups cpuacct サブシステムからソースします。 | 
 |active_processes_count | 要求の時点で実行されている外部プロセスの数。| Linux では、この統計は、値が pids.current GGroups pid サブシステムからソースします。 | 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Java 開発者は、簡単な例で作業を開始し、SQL Server での Java のしくみの基礎について説明します。 次の手順で、次のリンクを参照してください。
 

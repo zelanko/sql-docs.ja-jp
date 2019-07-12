@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b1bd2ab7d1ab17ef9d0bc4671054f02808ed230f
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439844"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584489"
 ---
 # <a name="compare-execution-plans"></a>実行プランの比較
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52439844"
 -   スキーマ設計に導入した特定のパフォーマンス強化が実行プランに効果を与えているかを観察する。  
  
 **[プランの比較]** メニュー オプションでは、2 つの異なる実行プランを横に並べて比較できます。上述のすべての理由に対してさまざまな動作を明らかにする類似性や変化を簡単に特定できます。 このオプションでは次を比較できます。
-- 以前に保存した 2 つの実行プラン ファイル (*.sqlplan* 拡張子)。
+- 以前に保存した 2 つの実行プラン ファイル ( *.sqlplan* 拡張子)。
 - アクティブな実行プラン 1 つと前に保存したクエリ実行プラン 1 つ。
 - [クエリ ストア](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)で選択した 2 つのクエリ プラン。
 
@@ -51,9 +51,9 @@ ms.locfileid: "52439844"
   
 ## <a name="to-compare-execution-plans"></a>実行プランを比較するには
   
-1.  **[ファイル]** メニューを使用し、**[ファイルを開く]** をクリックするか、プラン ファイルを [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] ウィンドウにドラッグすることで、前に保存したクエリ実行プラン ファイル (.sqlplan) を開きます。 あるいは、クエリを実行し、その実行プランの表示を選択したところであれば、結果ウィンドウの **[実行プラン]** タブに移動します。 
+1.  **[ファイル]** メニューを使用し、 **[ファイルを開く]** をクリックするか、プラン ファイルを [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] ウィンドウにドラッグすることで、前に保存したクエリ実行プラン ファイル (.sqlplan) を開きます。 あるいは、クエリを実行し、その実行プランの表示を選択したところであれば、結果ウィンドウの **[実行プラン]** タブに移動します。 
 
-2.  実行プランの何もない領域を右クリックし、**[プラン表示の比較]** をクリックします。 
+2.  実行プランの何もない領域を右クリックし、 **[プラン表示の比較]** をクリックします。 
 
     ![[プラン表示の比較] を右クリックする](../../relational-databases/performance/media/plancomparisonmenuoption.png "[プラン表示の比較] を右クリックする")   
 
@@ -64,16 +64,18 @@ ms.locfileid: "52439844"
     ![2 つの保存済みプラン ファイルのプランを比較](../../relational-databases/performance/media/plancomparison-plans.png "2 つの保存済みプラン ファイルのプランを比較")  
 
      > [!TIP]
-     > 実行プラン比較の表示を横並びに切り替えることができます。その場合、実行プランの何もない領域を右クリックし、**[分割の方向の切り替え]** を選択します。
+     > 実行プラン比較の表示を横並びに切り替えることができます。その場合、実行プランの何もない領域を右クリックし、 **[分割の方向の切り替え]** を選択します。
 
      > [!TIP]
      > 実行プランで利用できるズーム オプションとナビゲーション オプションはすべて、プラン比較モードで動作します。 詳細については、「[実際の実行プランの表示](../../relational-databases/performance/display-an-actual-execution-plan.md)」を参照してください。
 
-5.  また、既定の選択では、右側にプロパティ ウィンドウが 2 つ開きます。 両方の比較対象演算子に存在するが違いがあるプロパティには先頭に*不等号* (≠) が付くので簡単に見分けられます。
+5.  また、既定の選択では、右側にプロパティ ウィンドウが 2 つ開きます。 両方の比較対象演算子に存在するが違いがあるプロパティには、見分けやすいように先頭に "*不等号*" (?) が付けられます。
 
     ![2 つのプロパティ ウィンドウ](../../relational-databases/performance/media/plancomparison-properties.png "2 つのプロパティ ウィンドウ")  
 
-6.  下では、**[プラン表示の分析]** 比較ナビゲーション ウィンドウも開きます。 3 つのタブを使用できます。
+6.  下では、 **[プラン表示の分析]** 比較ナビゲーション ウィンドウも開きます。 3 つのタブを使用できます。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  **[ステートメント オプション]** タブでは、既定で *[類似演算子の強調表示]* が選択されます。比較対象プランでハイライトされている同じ演算子またはノードで同じ色と線パターンが使用されます。 線パターンをクリックし、比較対象プランの類似領域間を移動します。 *[類似セグメントに一致しない演算子の強調表示]* を選択することで、類似性ではなく、プランの相違点をハイライトすることもできます。 
     
@@ -90,7 +92,7 @@ ms.locfileid: "52439844"
 
         ![推定行数が異なる](../../relational-databases/performance/media/plancomparison-scenarios.png "推定行数が異なる")  
 
-    このウィンドウが閉じられている場合、比較対象プランの何もない領域を右クリックし、**[プラン表示の比較オプション]** を選択して再び開きます。
+    このウィンドウが閉じられている場合、比較対象プランの何もない領域を右クリックし、 **[プラン表示の比較オプション]** を選択して再び開きます。
 
     ![プランの比較オプション](../../relational-databases/performance/media/plancomparison-options.png "プランの比較オプション")  
 

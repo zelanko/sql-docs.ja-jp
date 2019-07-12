@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775143"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581431"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
@@ -136,6 +136,8 @@ SQL Server 2017 (互換性レベル 140 およびそれ以前) でのこのク�
 2. また、暗黙の `GROUP BY O_CUSTKEY on ORDERS` が推論され、IndexSpool と StreamAggregate を使用して実装されています。
 3. すべての演算子で並列処理が使用されるようになっています。
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 UDF 内のロジックの複雑さによっては、結果として得られるクエリ プランがさらに大きくて複雑になる可能性があります。 ご覧のように、UDF の内部の演算がブラック ボックス化されなくなっており、そのため、クエリ オプティマイザーでコストを計算でき、これらの演算を最適化できます。 また、UDF がプランに含まれなくなったため、反復的な UDF の呼び出しは、関数呼び出しのオーバーヘッドがまったくないプランに置き換えられています。
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>インライン化可能なスカラー UDF の要件
@@ -182,7 +184,7 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 
 ## <a name="enabling-scalar-udf-inlining"></a>スカラー UDF のインライン化を有効にする
 
-データベースに対して互換性レベル 150 を有効にすることで、自動的にワークロードをスカラー UDF インライン化の対象にすることができます。  これは Transact-SQL を使って設定できます。 例:  
+データベースに対して互換性レベル 150 を有効にすることで、自動的にワークロードをスカラー UDF インライン化の対象にすることができます。 これは Transact-SQL を使って設定できます。例を以下に示します。  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

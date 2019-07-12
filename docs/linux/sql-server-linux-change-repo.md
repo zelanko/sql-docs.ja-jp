@@ -1,20 +1,20 @@
 ---
-title: SQL Server 2017 と 2019 の Linux のリポジトリを構成する |Microsoft Docs
+title: SQL Server 2017 と 2019 の Linux のリポジトリを構成します。
 description: 確認し、SQL Server 2019 と SQL Server 2017 on Linux のソース リポジトリを構成します。 ソース リポジトリでは、インストールとアップグレード中に適用されている SQL Server のバージョンに影響します。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713335"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834084"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>インストールして、Linux 上の SQL Server のアップグレードのためのリポジトリを構成します。
 

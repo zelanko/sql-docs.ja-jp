@@ -12,12 +12,12 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776008"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581217"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -31,6 +31,8 @@ Kerberos によるセキュリティで保護された Hadoop クラスターに
 
 1. PolyBase がインストールされた SQL Server 2016 RTM CU6 / SQL Server 2016 SP1 CU3 / SQL Server 2017 またはそれ以降
 1. Kerberos (Active Directory または MIT) によるセキュリティで保護された Hadoop クラスター (Cloudera または Hortonworks)
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>概要
 
@@ -246,7 +248,7 @@ Kerberos へのアクセス時に引き続き問題が発生する場合は、�
 
      上記の例で、`admin_user` にはユーザー名のみが含まれ、ドメイン部分はありません。
 
-2. PolyBase の外部から Kerberos HDFS データにアクセスできない場合: 
+2. PolyBase の外部から Kerberos HDFS データにアクセスできない場合:
     - Kerberos 認証には、次の 2 種類があります。Active Directory Kerberos 認証と MIT Kerberos 認証。
     - ドメイン アカウントにユーザーが存在することを確認し、HDFS へのアクセス試行時に同じユーザー アカウントを使用します。
 

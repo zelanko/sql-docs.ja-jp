@@ -13,12 +13,12 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e95be3958bf3b5ab77e3da43e31b91b75c918d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83871be7e8de5976eee684788d7a1a852aaa7c8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661160"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582149"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>レッスン 1:テーブルの階層構造への変換
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47661160"
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 - [AdventureWorks2017 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
 
-SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページを参照してください。  
+SSMS でデータベースを復元する手順については、[データベースの復元](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)に関するページをご覧ください。  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Employee テーブルの現在の構造を確認する
 サンプル Adventureworks2017 (以降) データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 次に、 **HumanResources.EmployeeDemo** テーブルに対してクエリを実行し、 **hierarchyid** データ型が使用されていないテーブル内のデータ構造を確認します。  
@@ -42,7 +42,9 @@ SSMS でデータベースを復元する手順については、[データベ�
 ### <a name="copy-the-employee-table"></a>Employee テーブルをコピーする  
   
 1.  クエリ エディターのウィンドウで、次のコードを実行し、 **Employee** テーブルから新しいテーブルの **EmployeeDemo**にテーブル構造とデータをコピーします。 元のテーブルは既に hierarchyid を使用しているため、このクエリは従業員のマネージャーを取得するために必然的に階層をフラット化します。 この階層はこのレッスンの中で後ほど再構築します。
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql  
     USE AdventureWorks2017;  
     GO  
@@ -273,7 +275,7 @@ SSMS でデータベースを復元する手順については、[データベ�
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-    深さ優先のインデックス : 従業員のレコードは、それぞれのマネージャーのレコードに隣接して格納されます。  
+    深さ優先のインデックス:従業員のレコードは、それぞれのマネージャーのレコードに隣接して格納されます。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID
@@ -290,7 +292,7 @@ SSMS でデータベースを復元する手順については、[データベ�
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    **EmployeeID** 優先のインデックス: 行は **EmployeeID** の順に格納されます。  
+    **EmployeeID** 優先のインデックス:行は **EmployeeID** の順に格納されます。  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

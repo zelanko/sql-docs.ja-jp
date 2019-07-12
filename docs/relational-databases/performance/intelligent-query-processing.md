@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776026"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580748"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
@@ -75,6 +75,9 @@ WHERE [fo].[Quantity] = 360;
 1. 新しいアダプティブ結合演算子があります。 この演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 この例では、しきい値は 78 行です。 &gt;= 78 行になると、ハッシュ結合が使われます。 しきい値より小さい場合は、入れ子になったループ結合が使われます。
 1. この場合は 336 行を返すため、しきい値を超えており、2 番目の分岐は標準的なハッシュ結合操作のプローブ フェーズを表します。 ライブ クエリ統計は演算子を通過する行数を示すことに注意してください (この場合は "672 of 672")。
 1. 最後の分岐は入れ子になったループ結合で使うためのクラスター化インデックス シークで、しきい値は超えていません。 "0 of 336" 行と表示されます (分岐は使われません)。
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  次は、クエリは同じですがテーブルの *Quantity* 値が 1 行だけのプランと比較してみましょう。
  
 ```sql
@@ -127,7 +130,7 @@ WHERE [fo].[Quantity] = 361;
 アダプティブ結合は、入れ子になったループ操作に切り替えた場合、ハッシュ結合ビルドによって既に読み取られた行を使います。 演算子が外部参照行をもう一度読み込むことは "**ありません**"。
 
 ### <a name="adaptive-threshold-rows"></a>アダプティブしきい値行
-次のグラフは、ハッシュ結合のコストと入れ子になったループ結合のコストの交点の例を示します。  この交点で、しきい値が決定され、それによって結合操作に実際に使われるアルゴリズムが決まります。
+次のグラフは、ハッシュ結合のコストと入れ子になったループ結合のコストの交点の例を示します。 この交点で、しきい値が決定され、それによって結合操作に実際に使われるアルゴリズムが決まります。
 
 ![結合しきい値](./media/6_AQPJoinThreshold.png)
 

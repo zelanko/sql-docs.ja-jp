@@ -1,7 +1,7 @@
 ---
 title: クエリのストアを使用した、パフォーマンスの監視 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: e407b4ae2a9be3b4a2d3c2671c59548db94916de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356475"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581402"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,11 +44,13 @@ ms.locfileid: "58356475"
   
 2.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[クエリのストア]** ページをクリックします。  
   
-3.  **[操作モード (要求)]** ボックスで、**[読み取り、書き込み]** を選択します。  
-  
+3.  **[操作モード (要求)]** ボックスで、 **[読み取り、書き込み]** を選択します。  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する  
   
-**ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 例 :  
+**ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 例:  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
@@ -116,7 +118,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 以降では、クエリごとの時系列の待機統計情報をクエリ ストアで使用できます。 クエリ ストアでは、待機の種類が**待機カテゴリ**に組み合わされます。 待機カテゴリから待機の種類へのマッピングは、[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table) で使用できます。
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、**[クエリ待機統計]** を選択して **[クエリ待機統計]** ペインを開きます。 [クエリ待機統計] ペインには、クエリ ストアで上位の待機カテゴリを含む棒グラフが表示されます。 上部のドロップダウンを使用して、待機時間の集計条件を選択します (平均、最大、最小、標準偏差、**合計** (既定値))。
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、 **[クエリ待機統計]** を選択して **[クエリ待機統計]** ペインを開きます。 [クエリ待機統計] ペインには、クエリ ストアで上位の待機カテゴリを含む棒グラフが表示されます。 上部のドロップダウンを使用して、待機時間の集計条件を選択します (平均、最大、最小、標準偏差、**合計** (既定値))。
 
  ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ待機統計")
 
@@ -571,7 +573,7 @@ OPTION (MERGE JOIN);
   
 パラメーターを持つクエリ (自動的にパラメーター化されたもの、または手動でパラメーター化されたもののいずれか) に関して、クエリ パフォーマンスが一定ではないものを特定することもできます。 さまざまなプランの中で、ほとんどすべてのパラメーター値に対して高速で最適なプランを特定し、そのプランを強制的に適用できます。これにより、より一層多様なユーザー シナリオに対して、予測可能なパフォーマンスを維持できます。  
   
- ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>クエリに対してプランを強制する (強制ポリシーの適用)
+### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>クエリに対してプランを強制する (強制ポリシーの適用)
 
 特定のクエリに対してプランを強制すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のオプティマイザーでプランの強制が試みられます。 プランの適用に失敗した場合、XEvent が発生し、オプティマイザーは通常の方法で最適化するように指示します。
 
@@ -580,7 +582,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```  
   
 **sp_query_store_force_plan** を使用する場合は、クエリ ストアによってそのクエリのプランとして記録されたプランのみを強制できます。 つまり、クエリで使用できるプランは、クエリのストアがアクティブであったときにそのクエリを実行するために既に使用されているプランのみです。  
+
+#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> 高速順方向カーソルと静的カーソルのサポートを強制するプラン
   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 クエリ ストアでは、高速順方向カーソルおよび T-SQL と API の静的カーソルに対してクエリ実行プランを強制する機能がサポートされます。 強制は、`sp_query_store_force_plan` または SQL Server Management Studio のクエリ ストア レポートによってサポートされます。
+
 ### <a name="remove-plan-forcing-for-a-query"></a>クエリに対するプランの強制を解除する
 
 もう一度 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーを利用して最適なクエリ プランを計算するには、クエリに対して選択されていたプランの強制を **sp_query_store_unforce_plan** を使用して解除します。  
@@ -588,7 +594,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-  
+
+
+
 ## <a name="see-also"></a>参照  
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

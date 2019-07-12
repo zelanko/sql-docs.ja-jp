@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 29b980fffbc4c6f670f48694cd238c521337ef70
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671139"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517749"
 ---
 # <a name="set-or-change-the-server-collation"></a>サーバーの照合順序の設定または変更
 
@@ -61,7 +61,7 @@ ms.locfileid: "59671139"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Managed Instance でサーバー照合順序を設定する
 
-Azure SQL Managed Instance のサーバーレベルの照合順序 (プレビュー) は、インスタンスの作成時に指定できますが、後で変更することはできません。 インスタンスを作成しているときに、[Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) または [PowerShell と Resource Manager テンプレート](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)を使用してサーバーレベルの照合順序を設定できます。 サーバーレベルの既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** です。 Unicode 専用の照合順序と新しい UTF-8 の照合順序はサーバーレベルの照合順序として指定できません。
+Azure SQL Managed Instance のサーバーレベルの照合順序は、インスタンスの作成時に指定できますが、後で変更することはできません。 インスタンスを作成しているときに、[Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) または [PowerShell と Resource Manager テンプレート](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)を使用してサーバーレベルの照合順序を設定できます。 サーバーレベルの既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** です。 Unicode 専用の照合順序と新しい UTF-8 の照合順序はサーバーレベルの照合順序として指定できません。
 SQL Server から Managed Instance にデータベースを移行する場合、`SERVERPROPERTY(N'Collation')` 関数を使用してソース SQL Server でサーバー照合順序を確認し、ご利用の SQL Server の照合順序に一致する Managed Instance を作成します。 一致しないサーバーレベル照合順序で SQL Server から Managed Instance にデータベースを移行すると、クエリで予想外のエラーがいくつか発生することがあります。 既存の Managed Instance のサーバー レベル照合順序を変更することはできません。
 
 ## <a name="see-also"></a>参照
