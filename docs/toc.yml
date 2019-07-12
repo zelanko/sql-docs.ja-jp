@@ -9041,11 +9041,13 @@
             - name: 英語以外の SSMS のインストール
               href: ssms/install-other-languages.md
             - name: SSMS でテンプレートを使用する
-              href: ssms/tutorials/templates-ssms.md
+              href: ssms/template/templates-ssms.md
             - name: オブジェクトをスクリプト化する
               href: ssms/tutorials/scripting-ssms.md
             - name: SSMS を構成する
               href: ssms/tutorials/ssms-configuration.md
+            - name: その他のヒントとテクニックを使用する
+              href: ssms/tutorials/ssms-tricks.md
             - name: メニューとショートカット キーのカスタマイズ
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: SQL Server ツールでサーバーの状態を表示できるようにする WMI の構成
@@ -9959,8 +9961,6 @@
                   href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: リソース
           items:
-            - name: SQL Server Management Studio
-              href: ssms/tutorials/tutorial-sql-server-management-studio.md
             - name: SSMS のサポート ポリシー
               href: ssms/support-policy.md
             - name: 法人のお客様向けサポート オプション
@@ -10180,15 +10180,15 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: チュートリアル
       items:
-        - name: 1_Windows からの移行
+        - name: Windows からの移行
           href: linux/sql-server-linux-migrate-restore-database.md
-        - name: 2_Docker への移行
+        - name: Docker への移行
           href: linux/tutorial-restore-backup-in-sql-server-container.md
-        - name: 3_ジョブの作成
+        - name: ジョブの作成
           href: linux/sql-server-linux-run-sql-server-agent-job.md
-        - name: 4_AD 認証のセットアップ
+        - name: AD 認証のセットアップ
           href: linux/sql-server-linux-active-directory-authentication.md
-        - name: 5_フェールオーバー クラスター インスタンスの作成
+        - name: フェールオーバー クラスター インスタンスの作成
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
             - name: iSCSI
@@ -10197,16 +10197,18 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: 6_フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
+        - name: フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
-        - name: 7_ペースメーカー クラスターの配置
+        - name: ペースメーカー クラスターの配置
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-        - name: 8_可用性グループの作成と構成
+        - name: 可用性グループの作成と構成
           href: linux/sql-server-linux-create-availability-group.md
-        - name: 9_Kubernetes への配置
+        - name: Kubernetes への配置
           href: linux/tutorial-sql-server-containers-kubernetes.md
-        - name: 10_レプリケーションの構成
+        - name: レプリケーションの設定
           href: linux/sql-server-linux-replication-tutorial-tsql.md
+        - name: コンテナーでの機械学習
+          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: 概念
       items:
         - name: インストール

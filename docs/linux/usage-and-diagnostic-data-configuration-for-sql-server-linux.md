@@ -1,19 +1,19 @@
 ---
-title: Linux 上の使用量と SQL Server 用の診断データ コレクションの構成 |Microsoft Docs
+title: Linux 上の使用量と SQL Server 用の診断データ コレクションを構成します。
 description: SQL Server の顧客の使用状況データと診断データが収集および Linux 上の設定方法について説明します。
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bf15eb58412bda764b710f48bd90be849748000e
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: ab0b00013c09c5328ad711307558e67adc784d05
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399985"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834540"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Linux 上の使用量と SQL Server 用の診断データ コレクションを構成します。
 
