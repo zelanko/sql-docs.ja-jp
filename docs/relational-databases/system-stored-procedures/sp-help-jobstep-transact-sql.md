@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530581"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866270"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,15 +73,15 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**on_success_step_id**|**int**|場合**on_success_action** 4 は、これは、実行する次の手順を示します。|  
 |**on_fail_action**|**tinyint**|ステップが失敗した場合の対処方法。 値は同じ**on_success_action**します。|  
 |**on_fail_step_id**|**int**|場合**on_fail_action** 4 は、これは、実行する次の手順を示します。|  
-|**server**|**sysname**|予約されています。|  
+|**server**|**sysname**|予約済み。|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース。|  
 |**database_user_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
 |**retry_attempts**|**int**|正常に実行できない場合にコマンドを再試行する最大回数。|  
 |**retry_interval**|**int**|再試行の間隔 (分単位) のいずれかです。|  
-|**os_run_priority**|**int**|予約されています。|  
+|**os_run_priority**|**int**|予約済み。|  
 |**output_file_name**|**nvarchar(200)**|コマンド出力を書き込むファイル ([!INCLUDE[tsql](../../includes/tsql-md.md)]、 **CmdExec**、および**PowerShell**ステップのみ)。|  
 |**last_run_outcome**|**int**|最後に実行したときのステップの結果。<br /><br /> **0** = に失敗しました<br /><br /> **1** = に成功しました<br /><br /> **2** = 再試行<br /><br /> **3** = キャンセル<br /><br /> **5** = unknown|  
-|**last_run_duration**|**int**|最後に実行したときのステップの経過時間 (秒単位)。|  
+|**last_run_duration**|**int**|実行時間 (hhmmss) のステップの前回の実行時。|  
 |**last_run_retries**|**int**|最後にステップを実行したときのコマンドの再試行回数。|  
 |**last_run_date**|**int**|ステップの実行を最後に開始した日付。|  
 |**last_run_time**|**int**|ステップの実行を最後に開始した時刻。|  
@@ -130,7 +130,7 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
