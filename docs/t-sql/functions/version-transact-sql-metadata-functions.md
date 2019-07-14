@@ -48,7 +48,7 @@ SELECT VERSION();
 ```  
   
 ## <a name="see-also"></a>参照 
-[SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
-[DB_NAME (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-name-transact-sql.md)  
+[SESSION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/session-id-transact-sql.md)  
+[DB_NAME &#40;TRANSACT-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   
