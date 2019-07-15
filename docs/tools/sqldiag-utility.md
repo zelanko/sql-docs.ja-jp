@@ -27,15 +27,15 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100947"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728105"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ sqldiag
   
  1 = NTFS 圧縮を使用します。  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  診断データの収集を開始する日時は、  
   
  YYYYMMDD_HH:MM:SS の形式で指定します。  
@@ -140,7 +140,7 @@ sqldiag
   
  **SQLdiag** は、ユーティリティが実行されているコンピューター上のローカル時間を使用することに注意してください。  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  診断データの収集を停止する日時は、  
   
  YYYYMMDD_HH:MM:SS の形式で指定します。  
@@ -160,11 +160,11 @@ sqldiag
   
  *SQLdiag_application_name* を使用すると、 **SQLdiag** サービスの特定のインスタンスを開始または停止できます。  
   
- 例 :  
+ 例:  
   
  **SQLDIAG START /A**  _SQLdiag_application_name_  
   
- **/R** オプションと共に使用し、 **SQLdiag** の特定のインスタンスをサービスとして登録することもできます。 例 :  
+ **/R** オプションと共に使用し、 **SQLdiag** の特定のインスタンスをサービスとして登録することもできます。 例:  
   
  **SQLDIAG /R /A** _SQLdiag_application_name_  
   
@@ -223,11 +223,11 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** サービスを開始または停止します。 **STOP_ABORT** は、現在実行されている診断収集が終了していなくても、できるだけ早く強制的にサービスをシャットダウンします。  
   
- このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 例 :  
+ このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 例:  
   
  **SQLDIAG START**  
   
- **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例 :  
+ **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例:  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
@@ -296,7 +296,7 @@ SQLDIAG STOP /A Instance1
 >  **SQLdiag** サービスを停止するには、 **SQLDiag STOP** または **SQLDIAG STOP_ABORT** を使用します。 **SQLdiag** またはその他の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを停止する場合は、Windows サービス コンソールを使用しないでください。  
   
 ## <a name="automatically-starting-and-stopping-sqldiag"></a>SQLdiag の自動開始と停止  
- 指定された時間に診断データ収集を自動的に開始および停止するには、**/B**_start\_time_ 引数と **/E**_stop\_time_ 引数を使用します (24 時間形式を使用)。 たとえば、ほぼ 02:00:00 に定期的に発生する問題のトラブルシューティングを行う場合、01:00 に診断データの収集を自動的に開始して、03:00:00 に自動的に終了するように **SQLdiag** を構成することができます。 開始時間および終了時間を指定するには、 **/B** 引数と **/E** 引数を使用します。 24 時間表記を使用して、YYYYMMDD_HH:MM:SS 形式で開始日時と終了日時を正確に指定します。 開始時間や終了時間を相対的に指定するには、次の例のように、開始時間および終了時間の前に **+** を付け、日付部分 (YYYYMMDD_) を省略します。次の例では、 **SQLdiag** は情報の収集を開始する前に 1 時間待機し、それから情報の収集を 3 時間行い、停止して終了します。  
+ 指定された時間に診断データ収集を自動的に開始および停止するには、 **/B**_start\_time_ 引数と **/E**_stop\_time_ 引数を使用します (24 時間形式を使用)。 たとえば、ほぼ 02:00:00 に定期的に発生する問題のトラブルシューティングを行う場合、01:00 に診断データの収集を自動的に開始して、03:00:00 に自動的に終了するように **SQLdiag** を構成することができます。 開始時間および終了時間を指定するには、 **/B** 引数と **/E** 引数を使用します。 24 時間表記を使用して、YYYYMMDD_HH:MM:SS 形式で開始日時と終了日時を正確に指定します。 開始時間や終了時間を相対的に指定するには、次の例のように、開始時間および終了時間の前に **+** を付け、日付部分 (YYYYMMDD_) を省略します。次の例では、 **SQLdiag** は情報の収集を開始する前に 1 時間待機し、それから情報の収集を 3 時間行い、停止して終了します。  
   
 ```  
 sqldiag /B +01:00:00 /E +03:00:00  

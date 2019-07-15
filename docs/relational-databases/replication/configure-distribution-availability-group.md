@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a67d663f2f0970750b30686b443538cd66358fc5
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: df6e9aa77744039a6d0fbd00e26e8090b15e4284
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583059"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860628"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
 
@@ -240,7 +240,7 @@ PUB 上で、このパブリッシャー用のサブスクリプションとパ�
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>ディストリビューション データベース AG からパブリッシャーを削除する
 
-この例では、ディストリビューターの現在のディストリビューション データベース AG からパブリッシャーが削除されますが、このディストリビューション データベース AG によって提供されている残りのパブリッシャーには影響ありません。 この例では、既存の構成のディストリビューション データベースは AG に含まれています。 DIST1、DIST2、および DIST3 はディストリビューターです。`distribution` は AG に含まれているディストリビューション データベースです。PUB1 と PUB2 は `distribution` データベースによって提供されているパブリッシャーです。 例では、これらのディストリビューターから PUB1 を削除します。
+この例では、ディストリビューターの現在のディストリビューション データベース AG からパブリッシャーを削除しますが、このディストリビューション データベース AG によって提供されている残りのパブリッシャーには影響ありません。 この例では、既存の構成のディストリビューション データベースは AG に含まれています。 DIST1、DIST2、および DIST3 はディストリビューターです。`distribution` は AG に含まれているディストリビューション データベースです。PUB1 と PUB2 は `distribution` データベースによって提供されているパブリッシャーです。 例では、これらのディストリビューターから PUB1 を削除します。
 
 ### <a name="publisher-workflow"></a>パブリッシャーのワークフロー
 
@@ -397,9 +397,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC?master.dbo.sp_addlinkedserver?@server?=?N'SQLNODE5',?@srvproduct=N'SQL Server'
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
  /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC?master.dbo.sp_addlinkedsrvlogin?@rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>参照  

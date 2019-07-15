@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 605e7a5b532e03d55b9d15964697597b06793174
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7da71a2ba80325c768abc10435ff9816ce539b0b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502462"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730477"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell パスの操作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52502462"
   
  特定のオブジェクトまたはオブジェクト クラスで使用できるメソッドとプロパティを表示するには、 **Get-Member** コマンドレットを使用します。  
   
-### <a name="examples-listing-methods-and-properties"></a>例: メソッドとプロパティの一覧表示  
+### <a name="examples-listing-methods-and-properties"></a>例 :メソッドとプロパティの一覧表示  
  次の例では、Windows PowerShell 変数に SMO <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを設定し、メソッドとプロパティを一覧表示します。  
   
 ```  
@@ -71,7 +71,7 @@ Get-Item . | Get-Member -Type Properties
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダー パスからオブジェクトの操作を実行するには、SMO メソッドとプロパティを使用します。  
   
-### <a name="examples-using-methods-and-properties"></a>例: メソッドとプロパティの使用  
+### <a name="examples-using-methods-and-properties"></a>例 :メソッドとプロパティの使用  
  次の例では、SMO の **Schema** プロパティを使用して、AdventureWorks2012 の Sales スキーマからテーブルの一覧を取得します。  
   
 ```  

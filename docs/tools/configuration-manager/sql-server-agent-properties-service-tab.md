@@ -8,22 +8,22 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: dd5919844de2b880d3d707e19a1dd212d5da1803
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a567a35862c5b7fbfa39e3eda65ea89a24532b66
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538261"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733268"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **バイナリ パス**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52538261"
  **Host Name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **名前**  
+ **[名前]**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -55,6 +55,6 @@ ms.locfileid: "52538261"
 -   \[無効]: このサービスは開始できません。  
   
  **状態**  
- このサービスが実行中か、停止しているか、無効になっているかが表示されます。 "**...**" の場合は、状態の変更が保留になっています。  
+ このサービスが実行中か、停止しているか、無効になっているかが表示されます。 " **...** " の場合は、状態の変更が保留になっています。  
   
   
