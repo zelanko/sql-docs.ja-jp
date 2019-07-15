@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a18aaf9d8743e5f3d250d04156dd5bab5375625f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 48a3bfbca1b133be9c8be9b05fef3f4e2dd9ae14
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579467"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860743"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "67579467"
   
 ### <a name="modify-the-default-snapshot-location"></a>既定のスナップショットの場所の変更  
   
-1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、既定のスナップショットの場所を変更するパブリッシャーのプロパティ ボタン ( **?** ) をクリックします。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、既定のスナップショットの場所を変更するパブリッシャーのプロパティ ボタン ( **[...]** ) をクリックします。  
   
 2.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックスで、 **[既定のスナップショット フォルダー]** プロパティの値を入力します。  
   
