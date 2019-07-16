@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209603"
 ---
 # <a name="training-and-testing-data-sets"></a>トレーニング データ セットとテスト データ セット
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -102,7 +102,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |提示セットを作成するための DMX 構文について説明します。|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
 |トレーニング セットとテスト セットのケースに関する情報を取得します。|[データ マイニング スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)<br /><br /> [データ マイニング スキーマ行セット (SSAS)](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   
  [データ マイニングの概念](../../analysis-services/data-mining/data-mining-concepts.md)   
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)   

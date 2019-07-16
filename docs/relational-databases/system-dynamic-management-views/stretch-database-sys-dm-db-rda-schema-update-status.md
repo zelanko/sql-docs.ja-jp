@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 85c12ae224203def43c9f9953cada0c336e9ebbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937014"
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "65947382"
 |**error_severity**|**int**|リモート データ アーカイブのスキーマの更新が失敗した場合は、発生したエラーの重大度それ以外の場合は null です。|  
 |**error_state**|**int**|リモート データ アーカイブのスキーマの更新が失敗した場合は、発生したエラーの状態それ以外の場合は null です。 Error_state は、条件またはエラーが発生した場所を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

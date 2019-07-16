@@ -7,20 +7,19 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961819"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R モデルを構築し、SQL Server (チュートリアル) に保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この手順では、機械学習モデルを構築し、モデルを保存する方法を説明します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 モデルを保存してから直接呼び出すことができます[!INCLUDE[tsql](../../includes/tsql-md.md)]、システム ストアド プロシージャを使用して、コーディング[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)または[PREDICT (T-SQL) 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 この手順では、このチュートリアルで前の手順に基づいて継続的な R セッションを想定しています。 これらの手順で作成された接続文字列およびデータ ソース オブジェクトを使用します。 次のツールとパッケージは、スクリプトの実行に使用されます。
 
@@ -240,7 +239,7 @@ GO
 
 モデルをテーブルへの保存に必要なステートメントは、INSERT のみです。 ただしなどのストアド プロシージャでラップされたときに簡単には多くの場合、 *PersistModel*します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 では、最後のレッスンを使用して、保存済みのモデルに対してスコアリングを実行する方法を説明します。[!INCLUDE[tsql](../../includes/tsql-md.md)]します。
 

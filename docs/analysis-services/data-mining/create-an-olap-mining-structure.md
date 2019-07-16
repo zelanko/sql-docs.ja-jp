@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eeac51c5ba3926eb95c00bd0f3f372aae5c5f3f1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408603"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183880"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -124,7 +124,7 @@ ms.locfileid: "52408603"
   
 -   2 番目のフィルターには、現在の Customer ディメンションの選択し、Gender 属性を選択属性値の一覧から [Female] を選択します。  
   
- マイニング構造を作成した後は、キューブ データとフィルター条件の両方の定義を変更できます。 詳細については、[マイニング モデルのフィルター選択](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)を参照してください。  
+ マイニング構造を作成した後は、キューブ データとフィルター条件の両方の定義を変更できます。 詳細については、次を参照してください。[マイニング モデルのフィルター選択](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
  **[マイニング構造]** タブと **[マイニング モデル]** タブのどちらでも、 **[キューブ スライスの定義]** をクリックして既存のマイニング構造にフィルターを追加できます。 **[キューブのスライス]** ダイアログ ボックスでは、ドロップダウン リストから値を選択して有効な MDX フィルター式を作成できます。  
   

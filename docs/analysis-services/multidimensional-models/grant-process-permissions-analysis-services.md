@@ -1,5 +1,5 @@
 ---
-title: 権限の付与処理 (Analysis Services) |Microsoft ドキュメント
+title: プロセスの許可 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c855bf2ecc14490b2298cf1fa240509a07369cf1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024069"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177516"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>処理権限の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34024069"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
-2.  右クリック**ロール** | **新しいロール**です。 名前と説明を入力します。  
+2.  右クリックして**ロール** | **新しいロール**します。 名前と説明を入力します。  
   
 3.  **[全般]** ペインで、 **[データベースの処理]** チェック ボックスをオンにします。 また、 **などいずれかの SQL Server ツールで対話型の処理を有効にするには、** [定義の読み取り] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]もオンにします。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "34024069"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
-2.  右クリック**ロール** | **新しいロール**です。 名前と説明を入力します。  
+2.  右クリックして**ロール** | **新しいロール**します。 名前と説明を入力します。  
   
-3.  **[全般]** ペインで、 **[データベースの処理]** チェック ボックスをオフにします。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能が上書きされます。  
+3.  **[全般]** ペインで、 **[データベースの処理]** チェック ボックスをオフにします。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能がオーバーライドされます。  
   
      技術的には、専用の処理ロール用にデータベース権限は必要ありません。 ただし、データベース レベルで **[定義の読み取り]** がないと、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でデータベースを表示することができず、テストが難しくなります。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34024069"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、[データベース] フォルダーを開いてデータベースを選択します。  
   
-2.  右クリック**ロール** | **新しいロール**です。 名前と説明を入力します。 **[全般]** ペインで、データベース権限のチェック ボックスがオフであることを確認します。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能が上書きされます。  
+2.  右クリックして**ロール** | **新しいロール**します。 名前と説明を入力します。 **[全般]** ペインで、データベース権限のチェック ボックスがオフであることを確認します。 データベース権限によって、ロールのオプションがグレー表示されるか選択不可になることで、下位レベルのオブジェクトに対する権限の設定機能がオーバーライドされます。  
   
 3.  **[マイニング構造]** ペインで、各マイニング構造の **[処理]** チェック ボックスをオンにします。  
   
@@ -86,10 +86,10 @@ ms.locfileid: "34024069"
   
 5.  **[OK]** をクリックすると、ロール定義が完了します。  
   
-## <a name="see-also"></a>参照  
- [データベース、テーブル、またはパーティションの処理 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
- [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [データベースのアクセス許可を付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+## <a name="see-also"></a>関連項目  
+ [データベース、テーブル、またはパーティションの処理 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
+ [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [データベース権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: abd910573f512e32ee58c6c3afabac17664f4b24
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983873"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207760"
 ---
 # <a name="analyze-in-excel"></a>[Excel で分析]
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "52983873"
  現在ログオンしているユーザーではなく、指定した Windows ユーザー名を使用します。 別の Windows ユーザーを使用する場合、パスワードは必要ありません。 有効なユーザー名のコンテキスト内で Excel を使用して、オブジェクトおよびデータを表示することのみが可能になります。 Excel でモデル オブジェクトまたはデータに変更を行うことはできません。  
   
  **ロール**  
- ロールは、オブジェクト メタデータおよびデータに対するユーザーの権限の定義に使用されます。 ロールは通常、特定の Windows ユーザーまたは Windows ユーザー グループに対して定義されます。 一部の適切なロールには、DAX 式で定義した追加の行レベル フィルターを含めることができます。 "Excel で分析" 機能を使用する際には、必要に応じて使用するロールを選択することもできます。 オブジェクト メタデータおよびデータの表示は、ロールに対して定義された権限とフィルターによって制限されます。 詳細については、[管理ロールの作成と](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)を参照してください。  
+ ロールは、オブジェクト メタデータおよびデータに対するユーザーの権限の定義に使用されます。 ロールは通常、特定の Windows ユーザーまたは Windows ユーザー グループに対して定義されます。 一部の適切なロールには、DAX 式で定義した追加の行レベル フィルターを含めることができます。 "Excel で分析" 機能を使用する際には、必要に応じて使用するロールを選択することもできます。 オブジェクト メタデータおよびデータの表示は、ロールに対して定義された権限とフィルターによって制限されます。 詳細については、次を参照してください。[管理ロールの作成と](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)します。  
   
- 有効なユーザーまたはロールに加え、パースペクティブを指定することもできます。 モデル作成者はパースペクティブを使用して、ビジネス シナリオに基づいてモデル オブジェクトとデータの表示を定義できます。 既定では、パースペクティブは使用されません。 でパースペクティブを Excel で分析を使用するためにパースペクティブが既に SSDT の [パースペクティブ] ダイアログ ボックスを使用して定義する必要があります。 パースペクティブが指定されている場合、ピボットテーブルのフィールドの一覧には、パースペクティブで選択されたオブジェクトのみが表示されます。 詳細については、[の作成と管理のパースペクティブ](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)を参照してください。  
+ 有効なユーザーまたはロールに加え、パースペクティブを指定することもできます。 モデル作成者はパースペクティブを使用して、ビジネス シナリオに基づいてモデル オブジェクトとデータの表示を定義できます。 既定では、パースペクティブは使用されません。 でパースペクティブを Excel で分析を使用するためにパースペクティブが既に SSDT の [パースペクティブ] ダイアログ ボックスを使用して定義する必要があります。 パースペクティブが指定されている場合、ピボットテーブルのフィールドの一覧には、パースペクティブで選択されたオブジェクトのみが表示されます。 詳細については、次を参照してください。[の作成と管理のパースペクティブ](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md)します。  
   
 ##  <a name="bkmk_rt"></a> 関連タスク  
   

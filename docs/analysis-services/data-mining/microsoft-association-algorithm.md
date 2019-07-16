@@ -1,5 +1,5 @@
 ---
-title: Microsoft アソシエーション アルゴリズム |Microsoft ドキュメント
+title: Microsoft アソシエーション アルゴリズム |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c5a6f5046c93355b3b1359c59d2e935c9aa6288a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017189"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209922"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft アソシエーション アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34017189"
   
  アソシエーション モデルは、個々のケースの識別子とケース内のアイテムの識別子を含んでいるデータセットに基づいて作成されています。 ケース内のアイテムのグループは、 *アイテムセット*と呼ばれます。 アソシエーション モデルは、一連のアイテムセットと、ケース内でアイテムをグループ化する方法を示すルールで構成されています。 アルゴリズムによって識別されるルールは、顧客の買い物かごに既に存在する製品に基づいて、顧客の将来の購入を予測するために使用できます。 次の図は、アイテムセットの一連のルールを示しています。  
   
- ![アソシエーション モデルのルール セット](../../analysis-services/data-mining/media/association.gif "アソシエーション モデルのルール セット")  
+ ![アソシエーション モデルの規則のセット](../../analysis-services/data-mining/media/association.gif "一連のアソシエーション モデルのルール")  
   
  図のように、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムによって、データセット内で多数のルールが検出される可能性があります。 このアルゴリズムでは、アルゴリズムで生成されるアイテムセットおよびルールを示すためにサポートと確率という 2 つのパラメーターが使用されます。 たとえば、X と Y が、買い物かごにある 2 つの製品を表す場合、サポート パラメーターは X と Y というアイテムの組み合わせを含んでいるデータセット内のケースの数になります。サポート パラメーターをユーザー定義パラメーターの *MINIMUM_SUPPORT* および *MAXIMUM_SUPPORT* と組み合わせて使用することによって、アルゴリズムは生成されるアイテムセットの数を制御します。 確率パラメーターは、" *信頼度*" とも呼ばれ、X と Y を含んでいるデータセット内のケースの割合を表します。確率パラメーターを *MINIMUM_PROBABILITY* パラメーターと組み合わせて使用することによって、アルゴリズムは生成されるルールの数を制御します。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34017189"
 ## <a name="viewing-an-association-model"></a>アソシエーション モデルの表示  
  モデルを参照するには、 **Microsoft アソシエーション ビューアー**を使用します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、アソシエーション モデルを表示すると、さまざまな角度から相関関係が示されるため、データ内で見つかった関係とルールをより深く理解することができます。 ビューアーの **[アイテムセット]** ペインには、最も一般的な組み合わせ (アイテムセット) の詳細な内訳が表示されます。 **[ルール]** ペインには、データから導き出されたルールの一覧が表示され、確率の計算が追加されます。また、ルールが相対的な重要度で順位付けされます。 依存関係ネットワーク ビューアーを使用すると、個々のアイテムがどのように関連付けられているのかを視覚的に調べることができます。 詳細については、「 [Microsoft クラスター ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)」を参照してください。  
   
- 特定のアイテムセットやルールの詳細を調べるには、 [Microsoft 汎用コンテンツ ツリー ビューアー](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照してください。 モデルに保存される内容には、各アイテムセットのサポートや、各ルールのスコアなどの統計情報などが含まれます。 詳細については、「[アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)」を参照してください。  
+ 特定のアイテムセットやルールの詳細を調べるには、 [Microsoft 汎用コンテンツ ツリー ビューアー](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照してください。 モデルに保存される内容には、各アイテムセットのサポートや、各ルールのスコアなどの統計情報などが含まれます。 詳細については、「 [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)と呼ばれます。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルの処理が完了したら、ルールとアイテムセットを使用して予測を実行できます。 アソシエーション モデルでは、指定したアイテムが存在する場合に発生する可能性があるアイテムを予測できます。この予測には、確率、サポート、重要度などの情報を含めることができます。 アソシエーション モデルに対するクエリの作成方法の例については、「 [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)」を参照してください。  
@@ -66,7 +66,7 @@ ms.locfileid: "34017189"
   
  処理時間を最小限に抑え、アイテムセットの複雑さを軽減するには、データを分析する前に、関連するアイテムをカテゴリ別にグループ化してみてください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
@@ -76,11 +76,11 @@ ms.locfileid: "34017189"
   
 -   データ マイニング ディメンションの作成がサポートされています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft アソシエーション ルール ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
  [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
- [アソシエーション モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

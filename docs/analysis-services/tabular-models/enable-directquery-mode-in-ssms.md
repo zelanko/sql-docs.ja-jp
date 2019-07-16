@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072209"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207657"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>SSMS での DirectQuery モードの有効化
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072209"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の場合、表形式モデルのあるインスタンスに接続します。  
   
-2.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[互換性レベル]** の順にクリックします。  
+2.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**  >  **[互換性レベル]** の順にクリックします。  
   
      値は、**SQL Server 2016 (1200)** または **SQL Server 2012 SP1 or later (1103)** のどちらかになります。 次に、互換性レベルに対して有効な手順を行います。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "53072209"
   
 ## <a name="step-2a-switch-a-tabular-1200-database-to-directquery-mode"></a>手順 2 a:表形式 1200 データベースを DirectQuery モードに切り替える  
   
-1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[モデル]**  >  **[既定のモード]** の順にクリックします。  
+1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**  >  **[モデル]**  >  **[既定のモード]** の順にクリックします。  
   
 2.  モードを **[DirectQuery]** に設定します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "53072209"
   
 ## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>手順 2 b:表形式の 1100 から 1103 データベースを DirectQuery モードに切り替える  
   
-1.  オブジェクト エクスプローラーで、データベースを右クリックし、**[プロパティ]**  >  **[データベース]**  >  **[DirectQueryMode]** の順にクリックします。  
+1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]**  >  **[データベース]**  >  **[DirectQueryMode]** の順にクリックします。  
   
 2.  モードを **[DirectQuery]** に設定します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53072209"
   
 -   キャッシュとリレーショナル データ ソースの両方が使用可能な場合は、優先される接続方法を設定できますが、最終的には、クライアントが DirectQueryMode 接続文字列プロパティを使用して、使用されるソースを制御します。  
   
--   DirectQuery モードに使用されるプライマリ パーティションが処理されず、常にリレーショナル ソースを参照する方法で、キャッシュにパーティションを構成することができます。 モデル デザインとレポート環境を最適化するために、多くの方法でパーティションを使用できます。 詳細については、[DirectQuery モデルでパーティションを定義](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)を参照してください。  
+-   DirectQuery モードに使用されるプライマリ パーティションが処理されず、常にリレーショナル ソースを参照する方法で、キャッシュにパーティションを構成することができます。 モデル デザインとレポート環境を最適化するために、多くの方法でパーティションを使用できます。 詳細については、次を参照してください。 [DirectQuery モデルでパーティションを定義](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)します。  
   
 -   モデルが配置された後、優先される接続方法を変更できます。 たとえば、テストにはハイブリッド モードを使用し、モデルを使用するレポートまたはクエリを完全にテストした後でのみ **DirectQuery のみ** のモードに切り替えることができます。 詳しくは、「 [DirectQuery の優先接続方法の設定または変更](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751)」をご覧ください。  
   
