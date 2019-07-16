@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 39130be0e6be31700f70002726f3aaf674aa4c82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925955"
 ---
 # <a name="batch-mode"></a>バッチ モード
 バッチ モードが有効なときに、 **LockType**プロパティに設定されて**adLockBatchOptimistic**バッチ更新プロバイダーによってサポートされています。 カーソル位置に応じて特定のロックの種類の設定が利用できません。 たとえば、ペシミスティック ロックの種類場合は使用できません、 **CursorLocation**に設定されている**adUseClient**します。 逆に、プロバイダーは、サーバー カーソルの場所がある場合、バッチ オプティミスティック ロックをサポートできません。 バッチ更新を keyset または static カーソルのみを使用する必要があります。  

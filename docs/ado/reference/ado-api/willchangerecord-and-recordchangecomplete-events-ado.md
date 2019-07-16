@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef2e02ec156aeed69089a585d743e16e592eb95f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938672"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord および RecordChangeComplete イベント (ADO)
 **WillChangeRecord**イベントが 1 つまたは複数のレコード (行) の前に呼び出されます、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を変更します。 **RecordChangeComplete**イベントが呼び出された後に 1 つまたは多くのレコードを変更します。  
@@ -68,6 +67,6 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  設定する必要があります、 **adStatus**パラメーターを**adStatusUnwantedEvent**の可能性のある各**adReason**値が含まれるすべてのイベントのイベント通知を完全に停止するには**adReason**パラメーター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

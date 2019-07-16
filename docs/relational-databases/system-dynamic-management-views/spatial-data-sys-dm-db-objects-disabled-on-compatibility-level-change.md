@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 343acc1c284027dc6faf4eb08fc93e2cd528df05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937100"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間データの sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスのインデックスとヒープ|  
 |**major_id**|**int**|制約の OBJECT ID<br /><br /> インデックスとヒープを含んでいるテーブルのオブジェクト ID|  
 |**minor_id**|**int**|制約の場合は NULL<br /><br /> インデックスとヒープの場合は Index_id|  
-|**dependency**|**nvarchar(60)**|制約またはインデックスを無効にする原因となっている依存関係の説明です。 同じの値は、アップグレード中に発生した警告にも使用されます。 次の例に示します。<br /><br /> 組み込みの「領域」<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
+|**dependency**|**nvarchar(60)**|制約またはインデックスを無効にする原因となっている依存関係の説明です。 同じの値は、アップグレード中に発生した警告にも使用されます。 具体的には次のものがあります。<br /><br /> 組み込みの「領域」<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  互換性レベルを変更すると、一部の組み込み関数を使用している保存される計算列が無効になります。 データベースをアップグレードすると、Geometry メソッドまたは Geography メソッドを使用している保存される計算列も無効になります。  

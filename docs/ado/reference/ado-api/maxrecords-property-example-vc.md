@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 503651db5d71403802c82a4931e4bdf9b1a69fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932244"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords プロパティの例 (VC++)
 この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを開き、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で最も高価な 10 のタイトルを含む、***タイトル***テーブル。  
@@ -177,6 +176,6 @@ void PrintComError(_com_error &e) {
 **長期にわたるデータ Deprivation:次の 4 つのケース スタディ---19.99**  
 **寿司、すべてのユーザーですか?---14.99**  
 **バッキンガム Palace 台所---11.95 50 年**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MaxRecords プロパティ (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

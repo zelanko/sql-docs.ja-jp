@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939805"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>システム要件 (Visual FoxPro ODBC ドライバー)
 インストールのシステム要件は、最低限のオペレーティング システムとドライバーを正常にインストールするために必要なディスク領域を提供します。 ドライバーをインストールした後は、Visual FoxPro データへのアクセスに使用する特定のアプリケーション ソフトウェアを選択できます。  

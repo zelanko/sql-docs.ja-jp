@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd3469b826ac4f577ff0e883b1a92a3acec4a981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933270"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 使用するカーソルの種類を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|動的カーソルを使用します。 追加、変更、および他のユーザーによって削除が表示されて、すべての種類内の移動の**レコード セット**は許可されて、ブックマーク、を除き、プロバイダーをサポートしていない場合。|  
 |**adOpenForwardOnly**|0|既定値です。 順方向専用カーソルを使用します。 静的カーソルと同じですが、レコードを前方スクロールできますのみ。 これは、1 つだけを通過する必要があるときにパフォーマンスが向上する**Recordset**します。|  

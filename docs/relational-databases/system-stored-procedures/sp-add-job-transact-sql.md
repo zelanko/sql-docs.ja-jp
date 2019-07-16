@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941746"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_name = ] 'job_name'` ジョブの名前。 名前が一意であり、割合を含めることはできません (**%**) 文字。 *job_name*は**nvarchar (128)**、既定値はありません。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 名前が一意であり、割合を含めることはできません ( **%** ) 文字。 *job_name*は**nvarchar (128)** 、既定値はありません。  
   
 `[ @enabled = ] enabled` 追加されるジョブの状態を示します。 *有効になっている*は**tinyint**、既定値は 1 (有効)。 場合**0**、ただし、これは手動で実行するには、ジョブが有効でないと、スケジュールに従って実行されません。  
   
-`[ @description = ] 'description'` ジョブの説明。 *説明*は**nvarchar (512)**、既定値は NULL です。 場合*説明*は省略すると、「使用可能な説明はありません」が使用されます。  
+`[ @description = ] 'description'` ジョブの説明。 *説明*は**nvarchar (512)** 、既定値は NULL です。 場合*説明*は省略すると、「使用可能な説明はありません」が使用されます。  
   
 `[ @start_step_id = ] step_id` ジョブで実行する最初のステップの識別番号。 *step_id*は**int**、既定値は 1 です。  
   
@@ -67,16 +66,16 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id` ジョブ カテゴリを指定するための言語に依存しないメカニズムです。 *category_id*は**int**、既定値は NULL です。  
   
-`[ @owner_login_name = ] 'login'` ジョブを所有するログインの名前。 *ログイン*は**sysname**の既定値は NULL には、現在のログイン名として解釈されます。 メンバーのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できる **@owner_login_name**します。 場合以外のユーザーがメンバーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行が失敗し、エラーが返されます。  
+`[ @owner_login_name = ] 'login'` ジョブを所有するログインの名前。 *ログイン*は**sysname**の既定値は NULL には、現在のログイン名として解釈されます。 メンバーのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できる **@owner_login_name** します。 場合以外のユーザーがメンバーの**sysadmin**ロールを設定またはの値を変更 **@owner_login_name** 、このストアド プロシージャの実行が失敗し、エラーが返されます。  
   
 `[ @notify_level_eventlog = ] eventlog_level` このジョブの Microsoft Windows アプリケーション ログにエントリを配置するかを示す値。 *eventlog_level*は**int**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**0**|Never|  
+|**0**|しない|  
 |**1**|成功した場合|  
 |**2** (既定値)|エラー発生時|  
-|**3**|毎回|  
+|**3**|常に|  
   
 `[ @notify_level_email = ] email_level` このジョブの完了時に電子メールを送信するかを示す値。 *email_level*は**int**、既定値は**0**、しないことを示します。 *email_level*として同じ値を使用して*eventlog_level*します。  
   
@@ -123,7 +122,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  これらの各固定に関連付けられている特定のアクセス許可については、データベース ロールを参照してください[SQL Server エージェント固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)します。  
   
- メンバーのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できる **@owner_login_name**します。 場合以外のユーザーがメンバーの**sysadmin**ロールを設定またはの値を変更**@owner_login_name**、このストアド プロシージャの実行が失敗し、エラーが返されます。  
+ メンバーのみ、 **sysadmin**固定サーバー ロールの設定またはの値を変更できる **@owner_login_name** します。 場合以外のユーザーがメンバーの**sysadmin**ロールを設定またはの値を変更 **@owner_login_name** 、このストアド プロシージャの実行が失敗し、エラーが返されます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -165,7 +164,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_add_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

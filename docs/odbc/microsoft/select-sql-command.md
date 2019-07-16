@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943787"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL コマンド
 1 つまたは複数のテーブルからデータを取得します。  
@@ -48,7 +47,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A*サブクエリ*、次の引数で参照される、SELECT、SELECT 内では、およびかっこで囲む必要があります。 同じレベルで最大 2 つのサブクエリを持つことができます (入れ子になっていない) WHERE 句でします。 (引数の該当セクションを参照してください)。サブクエリは、複数の結合条件を含めることができます。  
   
- [ALL &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*]    [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
+ [すべて&#124;DISTINCT]  [*エイリアス*]。*Select_Item* [AS *Column_Name*] [、[*エイリアス*]。*Select_Item* [AS *Column_Name*]...]  
  SELECT 句では、フィールド、定数、およびクエリの結果に表示される式を指定します。  
   
  、既定では、クエリ結果内のすべての行すべて表示します。  
@@ -104,7 +103,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias*でという名前のテーブルの一時的な名前を指定します*テーブル*します。 ローカルのエイリアスを指定する場合は、SELECT ステートメントでテーブル名ではなくローカルのエイリアスを使用する必要があります。 ローカルのエイリアスでは、Visual FoxPro 環境は影響しません。  
   
- WHERE *JoinCondition* [AND *JoinCondition* ...]    [AND &#124; OR *FilterCondition* [AND &#124; OR *FilterCondition* ...]]  
+ 場所*JoinCondition* [AND *JoinCondition* ...]   [AND&#124;または*FilterCondition* [AND&#124;または*FilterCondition* ...]  
  Visual FoxPro、クエリの結果に特定のレコードだけを含めるように指示します。 複数のテーブルからデータを取得するために必要な場合。  
   
  *JoinCondition* FROM 句でテーブルをリンクするフィールドを指定します。 1 つ以上のテーブルをクエリに含める場合、最初より後すべてのテーブルの結合条件を指定する必要があります。  
@@ -122,12 +121,12 @@ FROM [DatabaseName!]Table [Local_Alias]
   
      *FieldName1* 1 つのテーブルからのフィールドの名前を指定*FieldName2*別のテーブルからのフィールドの名前を指定および*比較*は、次の表で説明されている演算子の 1 つです。  
   
-|演算子|比較|  
+|演算子|条件式|  
 |--------------|----------------|  
-|=|等号|  
+|=|等しい|  
 |==|正確に等しい|  
 |LIKE|ような SQL|  
-|<>, !=, #|等しくないです。|  
+|<>, !=, #|等しくない|  
 |>|複数の|  
 |>=|大きいか等しい|  
 |<|次の値未満|  
