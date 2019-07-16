@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 64368e9f68b62f61b84d0bcb45278870bfab8689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb8193dd3e345ab8290239e0f01cbea82221a64c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945090"
 ---
 # <a name="import-statuses-master-data-services"></a>インポート状態 (マスター データ サービス)
 
@@ -32,7 +31,7 @@ ms.locfileid: "65485871"
 |消去用のキューに登録済み|バッチ処理が完了しており、消去されます。|4|  
 |クリア|バッチ処理が消去されました。|5|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   
