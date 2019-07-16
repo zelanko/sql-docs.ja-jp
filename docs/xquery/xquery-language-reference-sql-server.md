@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c85930cf8296ac6589e0c7b768c28f298ee31296
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 87edbeaac26ca1c332efe981901cbf0bc57fed30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945967"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 言語リファレンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] クエリに使用される XQuery 言語のサブセットをサポート、 **xml**データ型。 この実装は、2004 年 7 月に公開された XQuery のワーキング ドラフトに従っています。 この言語は W3C (World Wide Web Consortium) によって開発が進められており、マイクロソフトをはじめとする主要なすべてのデータベース ベンダーが参加しています。 W3C 仕様は W3C 勧告になる前に改訂されることがあるので、この実装は最終的な勧告とは異なる可能性があります。 このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でサポートされる XQuery サブセットのセマンティクスと構文について概説します。  
   
- 詳細については、、 [W3C XQuery 1.0 Language Specification](https://go.microsoft.com/fwlink/?LinkId=48846)を参照してください。  
+ 詳細については、次を参照してください。、 [W3C XQuery 1.0 Language Specification](https://go.microsoft.com/fwlink/?LinkId=48846)します。  
   
  XQuery は構造化または半構造化された XML データに対するクエリ実行できる言語です。 **Xml**データ型のサポートされている、[!INCLUDE[ssDE](../includes/ssde-md.md)]ドキュメントをデータベースに格納されているし、XQuery を使用してクエリを実行します。  
   
