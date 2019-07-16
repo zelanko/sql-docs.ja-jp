@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ツール |Microsoft ドキュメント
+title: データ マイニング ツール |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70d08ebe145e64f21299f5e46d33bbc7ae41536f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210088"
 ---
 # <a name="data-mining-tools"></a>データ マイニング ツール
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34015149"
 ## <a name="data-mining-wizard"></a>では、  
  データ マイニング ウィザードを使用して、データ マイニング ソリューションの作成を開始します。 このウィザードはすぐに簡単に使用でき、データ マイニング構造および初期関連マイニング モデルを順を追って作成する方法が示されます。また、アルゴリズムの種類やデータ ソースの選択と、分析に使用されるケース データの定義も行うことができます。  
   
- **詳細:** [データ マイニング ウィザード (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **詳細情報。** [データ マイニング ウィザード (Analysis Services - データ マイニング)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>データ マイニング デザイナー  
+## <a name="data-mining-designer"></a>Data Mining Designer  
  データ マイニング ウィザードを使用してマイニング構造およびマイニング モデルを作成したら、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のデータ マイニング デザイナーを使用して、既存のモデルと構造に対する操作を行うことができます。  
   
  デザイナーには次のタスクのためのツールが含まれます。  
@@ -80,10 +80,10 @@ ms.locfileid: "34015149"
   
 -   新たな顧客をリスク別にセグメント化する、ロジスティック回帰の使用。  
   
- **詳細:** [データ マイニング ソリューションの関連プロジェクト](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ **詳細情報。** [データ マイニング ソリューションの関連プロジェクト](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
-## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 (&) #40";"DMX"&"#41;参照](../../dmx/data-mining-extensions-dmx-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [マイニング モデル ビューアーのタスクと操作方法](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)  

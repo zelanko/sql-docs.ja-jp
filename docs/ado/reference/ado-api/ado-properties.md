@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920892"
 ---
 # <a name="ado-properties"></a>ADO のプロパティ
 
@@ -66,7 +65,7 @@ ms.locfileid: "66696628"
 |[モード](../../../ado/reference/ado-api/mode-property-ado.md)|データを変更する使用可能なアクセス許可を示します、**接続**、**レコード**、または**Stream**オブジェクト。|  
 |[名前](../../../ado/reference/ado-api/name-property-ado.md)|オブジェクトの名前を示します。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|特定のプロバイダー固有のエラー コードを示します**エラー**オブジェクト。|  
-|[数](../../../ado/reference/ado-api/number-property-ado.md)|一意に識別する番号を示します、**エラー**オブジェクト。|  
+|[数値](../../../ado/reference/ado-api/number-property-ado.md)|一意に識別する番号を示します、**エラー**オブジェクト。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|内の数値の小数点以下桁数を示す、**パラメーター**または**フィールド**オブジェクト。|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|値を示す、**フィールド**変更が行われる前に、レコードに存在します。|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|データのページの数を示します、 **Recordset**オブジェクトが含まれています。|  

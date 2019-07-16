@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 360de0e85048a491f3cfc750ac5288de73c65c95
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072775"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207714"
 ---
-# <a name="delete-relationships"></a>リレーションシップを削除します。 
+# <a name="delete-relationships"></a>リレーションシップの削除 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップを使用する方法については、[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)を参照してください。  
+  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップを使用する方法については、次を参照してください。[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)します。  
   
 ## <a name="considerations-for-deleting-relationships"></a>リレーションシップの削除に関する考慮事項  
  リレーションシップを削除するかどうかを判断する際には、以下の点に注意してください。  

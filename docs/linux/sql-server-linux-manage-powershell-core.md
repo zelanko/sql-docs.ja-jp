@@ -8,13 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-manager: jroth
-ms.openlocfilehash: e96fe471f78e02e5667431f7065a169a5c136417
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952537"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core を使った Linux 上の SQL Server を管理します。
 
@@ -212,8 +211,8 @@ SELECT Name
 - ConvertFrom EncodedSqlName
 - ConvertTo EncodedSqlName
 - Get SqlAgent
-- Get-SqlAgentJob
-- Get-SqlAgentJobHistory
+- Get SqlAgentJob
+- Get SqlAgentJobHistory
 - Get SqlAgentJobSchedule
 - Get SqlAgentJobStep
 - Get SqlAgentSchedule
@@ -236,7 +235,7 @@ SELECT Name
 - New-SqlAvailabilityReplica
 - セット SqlAvailabilityReplicaRoleToSecondary
 - 新しい SqlBackupEncryptionOption
-- Get-SqlBackupHistory
+- Get SqlBackupHistory
 - Invoke-sqlcmd
 - New-SqlCngColumnMasterKeySettings
 - Remove-SqlColumnEncryptionKey
@@ -255,7 +254,7 @@ SELECT Name
 - Restore-SqlDatabase
 - Backup-SqlDatabase
 - セット SqlErrorLog
-- Get-SqlErrorLog
+- Get SqlErrorLog
 - 新しい SqlHADREndpoint
 - Set-sqlhadrendpoint
 - Get SqlInstance
@@ -263,10 +262,10 @@ SELECT Name
 - 削除 SqlLogin
 - Get SqlLogin
 - Set-sqlsmartadmin
-- Get-SqlSmartAdmin
+- Get-sqlsmartadmin
 - Read-sqltabledata
 - 書き込み SqlTableData
-- Read-SqlViewData
+- 行うための読み取り
 - Convert-urntopath
 
 ## <a name="see-also"></a>関連項目
