@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a8c571bf143d4aa68fc5785b91929635864e9ce8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae46773befb13105ed9dcd81b1116be48cf0675
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931458"
 ---
 # <a name="provider-property-ado"></a>Provider プロパティ (ADO)
 プロバイダーの名前を示します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
@@ -41,7 +40,7 @@ ms.locfileid: "66702877"
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Provider および DefaultDatabase プロパティの例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Provider および DefaultDatabase プロパティの例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   

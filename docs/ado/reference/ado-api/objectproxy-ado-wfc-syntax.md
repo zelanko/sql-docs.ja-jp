@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0b1a69ebbc96197a5bf8fc1cb617e7fde65c731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917957"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - WFC 構文)
 **ObjectProxy**オブジェクトは、サーバーを表しており、によって返される、 **createObject**のメソッド、 [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)オブジェクト。 ObjectProxy クラスが 1 つのメソッド、**呼び出す**サーバーでメソッドを呼び出すし、呼び出しから結果のオブジェクトを返すことができます。  

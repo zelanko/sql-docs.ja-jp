@@ -1,5 +1,5 @@
 ---
-title: データベース スキーマの理解 |Microsoft ドキュメント
+title: データベース スキーマの理解 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023479"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164971"
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  スキーマ生成ウィザードでは、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
+  スキーマ生成ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
   
-## <a name="validation"></a>検証  
+## <a name="validation"></a>［確認］  
  基になるリレーショナル スキーマの生成を開始する前に、スキーマ生成ウィザードによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションが検証されます。 ウィザードによってエラーが検出された場合には、ウィザードは停止し、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [タスク一覧] ウィンドウにエラー レポートが表示されます。 スキーマの生成を妨げるエラーには次のようなものがあります。  
   
 -   ディメンションに複数のキー属性がある。  
@@ -36,7 +36,7 @@ ms.locfileid: "34023479"
 ## <a name="dimension-tables"></a>ディメンション テーブル  
  各ディメンションに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるディメンション テーブルが生成されます。 ディメンション テーブルの構造は、基になるディメンションをデザイン中に行った選択によって異なります。  
   
- 列  
+ [列]  
  ウィザードを実行すると、ディメンション テーブルの基になるディメンションの各属性に関連付けられているバインディング (各属性の **KeyColumns**、 **NameColumn**、 **ValueColumn**、 **CustomRollupColumn**、 **CustomRollupPropertiesColumn**、 **UnaryOperatorColumn** プロパティのバインディングなど) ごとに 1 列が生成されます。  
   
  リレーションシップ  
@@ -56,7 +56,7 @@ ms.locfileid: "34023479"
 ## <a name="fact-tables"></a>ファクト テーブル  
  キューブ内の各メジャー グループに対して、スキーマ生成ウィザードによって、サブジェクト領域データベースに含まれるファクト テーブルが生成されます。 ファクト テーブルの構造は、基になるメジャー グループのデザイン中に行われた選択と、メジャー グループと含まれるディメンションの間のリレーションシップによって異なります。  
   
- 列  
+ [列]  
  このウィザードでは、 **Count** 集計関数を使用するメジャー以外の各メジャーに 1 つずつ列が生成されます。 これらのメジャーは、ファクト テーブルに対応する列を必要としません。  
   
  さらに、必要に応じて、メジャー グループ上の標準のディメンション リレーションシップごとの各粒度属性列に 1 つの列が生成され、このテーブルの基になるメジャー グループへのファクト ディメンション リレーションシップがあるディメンションの各属性に関連付けられたバインドに 1 つまたは複数の列が生成されます。  
@@ -87,8 +87,8 @@ ms.locfileid: "34023479"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [増分生成の理解](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [データ ソース ビューとデータ ソースへの変更を管理します。](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [データ ソース ビューおよびデータ ソースへの変更の管理](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   
