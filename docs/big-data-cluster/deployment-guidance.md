@@ -5,17 +5,16 @@ description: Kubernetes での SQL Server 2019 ビッグ データ クラスタ�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0f2993d15cecd87879cabc50918d784a16750b30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958414"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法
 
@@ -82,8 +81,8 @@ CTP 2.5 以降、ほとんどのビッグ データ クラスター設定は、J
 
 | デプロイ プロファイル | Kubernetes 環境 |
 |---|---|
-| **aks-dev-test** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test** | 複数のマシン (kubeadm) |
+| **aks-開発/テスト** | Azure Kubernetes Service (AKS) |
+| **kubeadm-開発/テスト** | 複数のマシン (kubeadm) |
 | **minikube-dev-test** | Minikube |
 
 実行して、ビッグ データ クラスターを展開する**mssqlctl bdc 作成**です。 これは、既定の構成のいずれかを選択するように求められますされ、展開支援いたします。

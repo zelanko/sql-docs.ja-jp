@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f653af8294002bf73b98bd4adc096fac8ba1658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911677"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>一意のテーブル、一意なスキーマに固有のカタログのプロパティ-動的 (ADO)
 特定のベース テーブルに密接に変更をコントロールに有効にする、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)の複数のベース テーブルに対して結合操作をして形式がありません。  
@@ -51,5 +50,5 @@ ms.locfileid: "66710487"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
