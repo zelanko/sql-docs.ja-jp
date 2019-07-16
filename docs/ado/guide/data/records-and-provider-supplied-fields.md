@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924514"
 ---
 # <a name="records-and-provider-supplied-fields"></a>レコードとプロバイダーが指定したフィールド
 ときに、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くと、そのソースは、オープンの現在の行を指定できます[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、絶対 URL または相対 URL を開くと組み合わせて[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト.  

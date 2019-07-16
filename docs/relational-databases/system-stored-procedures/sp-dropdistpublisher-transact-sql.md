@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fcb1487d4291116bfb6fc0ad266b147e0fd69981
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927835"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
   
  場合**0**レプリケーションでは、リモート パブリッシャーがディストリビューターとしてローカル サーバーをアンインストールしたことが確認されます。 パブリッシャーがローカルの場合は、レプリケーションでは、ローカル サーバーに残っているパブリケーションまたはディストリビューション オブジェクトがないことが確認されます。  
   
- 場合**1**、リモート パブリッシャーに到達できない場合でも、ディストリビューション パブリッシャーに関連付けられているすべてのレプリケーション オブジェクトが削除されます。 レプリケーションを使用してこれを行うリモート パブリッシャーをアンインストールする必要があります[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)で**@ignore_distributor**  =  **1**します。  
+ 場合**1**、リモート パブリッシャーに到達できない場合でも、ディストリビューション パブリッシャーに関連付けられているすべてのレプリケーション オブジェクトが削除されます。 レプリケーションを使用してこれを行うリモート パブリッシャーをアンインストールする必要があります[sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)で **@ignore_distributor**  =  **1**します。  
   
 `[ @ignore_distributor = ] ignore_distributor` パブリッシャーが削除されるときに、ディストリビューターでディストリビューション オブジェクトを残すかどうかを指定します。 *ignore_distributor*は**ビット**これらの値のいずれかを指定できます。  
   
@@ -68,7 +67,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dropdistpublisher**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
