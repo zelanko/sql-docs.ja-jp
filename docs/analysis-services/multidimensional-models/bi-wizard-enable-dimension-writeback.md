@@ -1,5 +1,5 @@
 ---
-title: ディメンションの書き戻しを有効にする |Microsoft ドキュメント
+title: ディメンションの書き戻しを有効にする |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 561dc878302afe7636a2660a9e194ac14a35c7f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179119"
 ---
-# <a name="bi-wizard---enable-dimension-writeback"></a>BI ウィザード - ディメンションの書き戻しを有効にします。
+# <a name="bi-wizard---enable-dimension-writeback"></a>BI ウィザード - ディメンションの書き戻しの有効化
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   キューブまたはディメンションにディメンション書き戻し拡張機能を追加すると、ユーザーはディメンション構造とメンバーを手動で変更できます。 書き込みが可能なディメンションに加えた更新は、ディメンション テーブルに直接記録されます。 この拡張機能により、ディメンションの **WriteEnabled** プロパティ設定が変更されます。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34020319"
 ## <a name="setting-dimension-writeback-capability"></a>ディメンションの書き戻し機能の設定  
  ウィザードの **[ディメンションの書き戻しの有効化]** の 2 ページ目で、実際に **[ディメンションへの書き戻しを有効にする]** オプションを設定します。 このオプションを選択すると、ディメンションの **WriteEnabled** プロパティが自動的に **True**に設定されます。 このオプションの選択を解除すると、このプロパティは自動的に **False**に設定されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  新しいメンバーを作成するときは、ディメンションにすべての属性を含める必要があります。 ディメンションのキー属性値を指定せずにメンバーを挿入することはできません。 このため、メンバーの作成は、ディメンション テーブルに定義されている制約 (NULL 以外のキー値など) に拘束されます。 必要に応じて、ディメンション プロパティで指定された列 ( **CustomRollupColumn**、 **CustomRollupPropertiesColumn** 、または **UnaryOperatorColumn** ディメンション プロパティで指定した列など) についても考慮する必要があります。  
   
 > [!WARNING]  
@@ -43,7 +43,7 @@ ms.locfileid: "34020319"
 >   
 >  詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [書き込み許可ディメンション](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

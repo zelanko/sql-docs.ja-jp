@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線形回帰アルゴリズム |Microsoft ドキュメント
+title: Microsoft 線形回帰アルゴリズム |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 20d052ad91a00a7b70b658ff9118dfb73736a410
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017929"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183021"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線形回帰アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34017929"
   
  この関係は、一連のデータを最もよく表す直線の式の形になります。 たとえば、次の図の直線は、データの最適な線形表現です。  
   
- ![一連のデータをモデル化するための行](../../analysis-services/data-mining/media/linear-regression.gif "一連のデータをモデル化するための行")  
+ ![一連のデータをモデル化した直線](../../analysis-services/data-mining/media/linear-regression.gif "一連のデータをモデル化した直線")  
   
  図の各データ ポイントには、回帰直線からの距離に関する誤差があります。 回帰式の係数 a および b により、回帰直線の角度と位置が調整されます。 すべてのデータ ポイントに関する誤差の合計が最小になるまで、a および b を調整して、回帰式を取得できます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34017929"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを選択して線形回帰モデルを作成することに加えて、予測可能属性が連続する数値データ型である場合は、回帰を含むデシジョン ツリー モデルを作成することができます。 この場合、アルゴリズムが適切な分離ポイントを見つけたときにデータは分割されますが、データの一部の領域では、代わりに回帰式が作成されます。 デシジョン ツリー モデル内の回帰ツリーの詳細については、「[デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "34017929"
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [線形回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

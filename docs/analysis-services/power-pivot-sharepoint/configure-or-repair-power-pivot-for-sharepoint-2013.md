@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2306f89ba724d6ba799f6bda6ec03f7f6377a97
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210861"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208334"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>構成または Power Pivot for SharePoint 2013 を修復します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,13 +70,13 @@ ms.locfileid: "53210861"
 ##  <a name="bkmk_steps"></a> 構成手順  
  構成ツールへのリンクは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 がローカル サーバーにインストールされている場合にのみ表示されます。  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 構成**の順にクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** をポイントして、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** 、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 構成**の順にクリックします。  
   
 2.  **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の構成または修復]** をクリックします。  
   
-3.  ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
+3.  ウィンドウを最大化します。 ウィンドウの下部に **[検証]** 、 **[実行]** 、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
-4.  **既定のアカウント:**[パラメーター] タブのドメイン ユーザー アカウントを入力、**アカウントのユーザー名の既定の**します。 このアカウントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プールなどの重要なサービスを準備する場合に使用されます。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
+4.  **既定のアカウント:** [パラメーター] タブのドメイン ユーザー アカウントを入力、**アカウントのユーザー名の既定の**します。 このアカウントは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション プールなどの重要なサービスを準備する場合に使用されます。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
   
      **パスフレーズ:** パスフレーズを入力します。 SharePoint ファームが新しい場合、SharePoint ファームに新しいサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 ファームが存在する場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力してください。  
   
@@ -111,18 +111,18 @@ ms.locfileid: "53210861"
 |----------|-----------------|------------|-----------------|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint の構成または修復**|既定のアカウント|現在のユーザー|既定のアカウントは、ファーム内の共有サービスの準備に使用されるドメイン Windows ユーザー アカウントです。 これは、次の準備に使用されます。|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション|  
-||||- Secure Store Service|  
-||||- Excel Services|  
-||||- Web アプリケーション プールの ID|  
-||||- サイト コレクション管理者|  
-||||- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント|  
+||||\- Secure Store Service|  
+||||\- Excel Services|  
+||||\- Web アプリケーション プールの ID|  
+||||\- サイト コレクション管理者|  
+||||\- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント|  
 ||||既定では、現在のユーザーのドメイン アカウントを使用します。<br /><br /> 注:また、評価や運用以外の目的でサーバーを構成する場合を除いて、既定値を置き換えることをお勧めします。<br /><br /> サービス ID は、サーバーの全体管理を使用して、構成または修復後に変更できます。<br /><br /> 必要に応じて、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールで次の専用のアカウントを指定します。|  
-||||- Web アプリケーション。 **[既定の Web アプリケーションの作成]** ページを使用 (このツールでファームの Web アプリケーションを作成する場合)。|  
+||||\- Web アプリケーション。 **[既定の Web アプリケーションの作成]** ページを使用 (このツールでファームの Web アプリケーションを作成する場合)。|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新アカウント。このツールの **[DataRefresh の自動アカウントの作成]** ページを使用。|  
 ||[データベース サーバー]|ローカルの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンス (存在する場合)|データベース エンジン インスタンスが [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとしてインストールされている場合は、データベース サーバー フィールドにこのインスタンス名が入力されます。 データベース エンジンをインストールしていない場合は、このフィールドは空です。<br /><br /> **[データベース サーバー]**  は必須パラメーターです。 SharePoint ファームでサポートされる SQL Server であれば、バージョンやエディションは問いません。|  
 ||パスフレーズ|ユーザー入力|新しいファームを作成する場合、ユーザーが入力するパスフレーズがファームのパスフレーズとして使用されます。 既存のファームに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を追加する場合は、既存のファームのパスフレーズを入力します。|  
 ||SharePoint サーバーの全体管理のポート|既定 (必要な場合)|ファームを構成していない場合は、サーバーの全体管理への HTTP エンドポイントの作成など、ファームを作成するためのオプションが提供されます。 使用されていない、ランダムに生成されたポート番号がツールによって選択されます。|  
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|ユーザー入力|Excel Services で主要な [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能を有効にするには [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーが必須です。 このページで入力するサーバー名も、  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの構成]** ページの一覧に追加されます。|  
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel Services ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|ユーザー入力|Excel Services で主要な [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 機能を有効にするには [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーが必須です。 このページで入力するサーバー名も、  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの構成** ページの一覧に追加されます。|  
 |**新しいファームの構成**|[データベース サーバー]<br /><br /> ファーム アカウント<br /><br /> パスフレーズ<br /><br /> SharePoint サーバーの全体管理のポート|既定 (必要な場合)|既定では、メイン ページで入力した設定になります。|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの作成**|サービス アプリケーション名|既定値|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション名。既定の名前は " **既定値 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**」を参照してください。 ツールで別の値に置き換えることができます。|  
 ||[データベース サーバー]|既定値|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション データベースをホストするデータベース サーバー。 既定のサーバー名は、ファームに使用するのと同じデータベース サーバーです。 既定のサーバー名以外の値に置き換えることもできます。|  
@@ -149,7 +149,7 @@ ms.locfileid: "53210861"
 ||パスフレーズ|ユーザー入力|データ暗号化に使用されるマスター キー。 既定では、キーの生成に使用されるパスフレーズは、ファーム内の新しいサーバーの準備に使用されるパスフレーズと同じです。 既定のパスフレーズを一意のパスフレーズに置き換えることができます。|  
 |**DataRefresh の自動アカウントの作成**|ターゲット アプリケーションの ID|既定 (必要な場合)|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 自動データ更新の資格情報を格納する対象アプリケーションを作成します。<br /><br /> アプリケーション ID は、説明的なテキストにすることができます。|  
 ||ターゲット アプリケーションのフレンドリ名|既定 (必要な場合)||  
-||自動アカウントのユーザー名とパスワード|既定 (必要な場合)|対象アプリケーションで自動データ更新の実行に使用される Windows ユーザー アカウントの資格情報を入力します。 詳細については、[SharePoint Server 2013 で無人サービス アカウントを使用して、Excel Services の構成データを更新](http://technet.microsoft.com/library/hh525344\(office.15\).aspx)(http://technet.microsoft.com/library/hh525344(office.15).aspx)を参照してください。|  
+||自動アカウントのユーザー名とパスワード|既定 (必要な場合)|対象アプリケーションで自動データ更新の実行に使用される Windows ユーザー アカウントの資格情報を入力します。 詳細については、次を参照してください。 [SharePoint Server 2013 で無人サービス アカウントを使用して、Excel Services の構成データを更新](http://technet.microsoft.com/library/hh525344\(office.15\).aspx)(http://technet.microsoft.com/library/hh525344(office.15).aspx) します。|  
 ||サイト URL|既定 (必要な場合)|ターゲット アプリケーションが関連付けられるサイト コレクションのサイト URL を入力します。 追加のサイト コレクションに関連付けるには、SharePoint サーバーの全体管理を使用します。|  
 |**Excel Services サービス アプリケーションの作成**|サービス アプリケーション名|既定 (必要な場合)|サービス アプリケーションの名前を入力します。 同じ名前のサービス アプリケーション データベースは、SharePoint ファームのデータベース サーバーに作成されます。|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの構成**|サービス アプリケーション名|既定 (必要な場合)|前のページで入力したサービス アプリケーションの名前。|  
@@ -201,9 +201,9 @@ ms.locfileid: "53210861"
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの作成  
  ファームにサーバー コンポーネントをインストールしたら、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データが埋め込まれた最初の Excel 2013 ブックを作成して、SharePoint ライブラリにパブリッシュすることができます。 または、サンプルの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをアップロードまたはパブリッシュすると、SharePoint での [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスを確認できます。 詳細については、以下を参照してください。  
   
--   [Power Pivot のヘルプ](https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f)(https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f)します。  
+-   [Power Pivot のヘルプ](https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f)(https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f) します。  
   
--   [Excel 2013 アドインでの Power Pivot の開始](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)(http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)します。  
+-   [Excel 2013 アドインでの Power Pivot の開始](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)(http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) します。  
   
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>SharePoint モードの Analysis Services サーバーの追加  
  後でデータ ストレージや処理能力を追加する必要が生じた場合は、SharePoint モードで Analysis Services が実行されているサーバーをファームに追加できます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 の場合、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを SharePoint モードでインストールして、Excel Services を構成します。 詳細については、の「シングル サーバー インストール"ではないセクションを参照してください。 [Power Pivot モードで Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)します。  

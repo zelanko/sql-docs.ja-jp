@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210002"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -109,13 +109,13 @@ ms.locfileid: "52410669"
   
 -   除外された値をマイニング構造定義の一部としてカテゴリに折りたたみます。  
   
-## <a name="related-resources"></a>関連リソース  
+## <a name="related-resources"></a>関連資料  
  フィルター構文の詳細およびフィルター式の例については、「 [モデル フィルターの構文と例 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)という構文を使用すると、特定の品目を購入した顧客を選択するフィルターを作成できます。  
   
  マイニング モデルのテスト時にモデル フィルターを使用する方法については、「 [精度チャートの種類の選択とグラフのオプションの設定](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル フィルターの構文と例 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

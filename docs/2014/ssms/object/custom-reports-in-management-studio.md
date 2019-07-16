@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188291"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行できるようになりました。  
@@ -34,7 +34,7 @@ ms.locfileid: "58618289"
   
 -   オブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、 **[カスタム レポート]** を左クリックします。 **[ファイルを開く]** ダイアログ ボックスで .rdl ファイルを含むフォルダーを見つけ、適切なレポート ファイルを開きます。  
   
--   オブジェクト エクスプローラーでノードを右クリックして、 **[レポート]**、 **[カスタム レポート]** の順にポイントし、最近使用したファイル一覧からカスタム レポートを選択します。  
+-   オブジェクト エクスプローラーでノードを右クリックして、 **[レポート]** 、 **[カスタム レポート]** の順にポイントし、最近使用したファイル一覧からカスタム レポートを選択します。  
   
 ## <a name="limitations"></a>制限事項  
  カスタム レポートを操作する場合は、次の制限事項に注意してください。  
@@ -72,7 +72,7 @@ ms.locfileid: "58618289"
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Management Studio へのカスタム レポートを追加します。](add-a-custom-report-to-management-studio.md)   
  [カスタム レポート実行の警告を抑制します。](unsuppress-run-custom-report-warnings.md)   
  [カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用](use-custom-reports-with-object-explorer-node-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースをオンライン モードで接続 |Microsoft ドキュメント
+title: Analysis Services データベースへのオンライン モードでの接続 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 612e538ef01040778497242606115a01c6ef6921
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021309"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179012"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Analysis Services データベースへのオンライン モードでの接続
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "34021309"
   
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のオブジェクトを直接編集できるようになりました。  
   
-## <a name="see-also"></a>参照  
- [Analysis Services 操作プロジェクトおよびデータベース開発フェーズ](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
- [SQL Server Data Tools & #40; を使用して多次元モデルを作成します。SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+## <a name="see-also"></a>関連項目  
+ [開発段階における Analysis Services プロジェクトおよびデータベースの操作](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
+ [SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

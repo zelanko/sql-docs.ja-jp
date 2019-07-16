@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae14c0e76564ebcaffecb7591d14c283fffd2906
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208563"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>多次元モデルのパースペクティブ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "53072589"
   
 -   KPI  
   
--   アクション  
+-   Actions  
   
 -   計算されるメンバー  
   
- オブジェクトを表示するには、**[キューブ オブジェクト]** の下にあるオブジェクトの種類のカテゴリ ( **[メジャー グループ]**、 **[ディメンション]**、 **[KPI]**、 **[計算]**、または **[アクション]**) を展開します。 ディメンション内の階層または属性を表示するには、まず、ディメンションを展開してから、 **[階層]** または **[属性]** 行を展開します。 メジャー グループ内のメジャーを表示するには、メジャー グループを展開します。  
+ オブジェクトを表示するには、 **[キューブ オブジェクト]** の下にあるオブジェクトの種類のカテゴリ ( **[メジャー グループ]** 、 **[ディメンション]** 、 **[KPI]** 、 **[計算]** 、または **[アクション]** ) を展開します。 ディメンション内の階層または属性を表示するには、まず、ディメンションを展開してから、 **[階層]** または **[属性]** 行を展開します。 メジャー グループ内のメジャーを表示するには、メジャー グループを展開します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

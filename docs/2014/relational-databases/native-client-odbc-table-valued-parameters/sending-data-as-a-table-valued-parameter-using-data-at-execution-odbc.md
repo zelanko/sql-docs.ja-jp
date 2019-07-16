@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205464"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>実行時データを使用したテーブル値パラメーターとしてのデータの送信 (ODBC)
   似ています、[すべてメモリ内](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)プロシージャ、テーブル値パラメーターの実行時のデータが使用しています。  
   
- テーブル値パラメーターを示す別のサンプルでは、[テーブル値パラメーターの&#40;ODBC&#41;](table-valued-parameters-odbc.md)を参照してください。  
+ テーブル値パラメーターを示す別のサンプルでは、次を参照してください。[テーブル値パラメーターの&#40;ODBC&#41;](table-valued-parameters-odbc.md)します。  
   
  この例では、SQLExecute または SQLExecDirect が呼び出されると、ドライバーは SQL_NEED_DATA を返します。 その後、アプリケーションは、ドライバーが SQL_NEED_DATA 以外の値を返すまで繰り返し SQLParamData を呼び出します。 ドライバーは返します*ParameterValuePtr*パラメーターのデータを要求しているアプリケーションに通知します。 アプリケーションでは、[次へ] SQLParamData 呼び出しの前にパラメーターのデータを提供する SQLPutData を呼び出します。 テーブル値パラメーターの場合は、SQLPutData への呼び出しは、(この例では、常に 1) でドライバーの準備ができた行の数を示します。 テーブル値のすべての行は、ドライバーに渡された、0 行が使用できることを示す SQLPutData が呼び出されます。  
   

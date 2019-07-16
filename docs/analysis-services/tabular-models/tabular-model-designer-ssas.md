@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207476"
 ---
 # <a name="tabular-model-designer"></a>テーブル モデル デザイナー
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53072569"
 ### <a name="tabular-model-explorer"></a>テーブル モデル エクスプローラー
   最初の 2016 年 8 月リリース (14.0.60812.0) で使用可能な[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)、表形式モデル エクスプ ローラーを使用して、表形式モデルのメタデータ オブジェクトを移動できます。
 
- テーブル モデル エクスプローラーを表示するには、 **[表示]** > **[その他のウィンドウ]** の順にクリックして、 **[Tabular Model Explorer (テーブル モデル エクスプローラー)]** をクリックします。
+ テーブル モデル エクスプローラーを表示するには、 **[表示]**  >  **[その他のウィンドウ]** の順にクリックして、 **[Tabular Model Explorer (テーブル モデル エクスプローラー)]** をクリックします。
    
   ![テーブル モデル エクスプローラー](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
@@ -116,7 +116,7 @@ ms.locfileid: "53072569"
   
  これらのメニュー項目に加えて、Analysis Services のオプションに別途設定が追加されます。追加された設定には、[ツール] のメニュー項目からアクセスすることができます。  
   
-### <a name="toolbar"></a>[ツール バー]  
+### <a name="toolbar"></a>ツール バー  
  Analysis Services ツール バーを使用すると、最もよく使用されるモデル作成コマンドにすばやく簡単にアクセスできます。  
   
 ##  <a name="bkmk_vsint"></a> Visual Studio の統合  
@@ -124,7 +124,7 @@ ms.locfileid: "53072569"
  Analysis Services プロジェクトは、選択したソース管理プラグインと統合されます。 ソース コントロールを使用するように Visual Studio を構成した場合は、ソリューション エクスプローラーからチェックインとチェックアウトを使用できます。 Team Foundation Server を使用するように構成するには、「 [Team Foundation バージョン管理を使用する Visual Studio の構成](http://msdn.microsoft.com/library/ms253064.aspx)」を参照してください。 多くのサード パーティ製ソース管理プラグインもサポートされます。  
   
  **フォント**  
- テーブル モデルでは [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境フォントを使用して表示フォントを制御します。 既定の [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] フォントに、対象の言語で必要なすべての Unicode 文字がない場合は、このフォントの変更が必要になることがあります。 フォントを変更するには、 **[ツール]** メニューをクリックし、 **[オプション]**、 **[フォントおよび色]** の順にクリックします。  
+ テーブル モデルでは [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境フォントを使用して表示フォントを制御します。 既定の [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] フォントに、対象の言語で必要なすべての Unicode 文字がない場合は、このフォントの変更が必要になることがあります。 フォントを変更するには、 **[ツール]** メニューをクリックし、 **[オプション]** 、 **[フォントおよび色]** の順にクリックします。  
   
  **キーボード ショートカット**  
  Analysis Services のキーボード ショートカットは、[ツール]  > [オプション] > [キーボード] ダイアログで構成/再マップできます。 テーブル モデル デザイナーのコンテキストでは、ビルド、保存、デバッグ、新しいプロジェクトなど、一部のグローバル [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ショートカットがサポートされています。 その他のテーブル モデル デザイナーに固有のショートカットは Analysis Services コンテキストです。  

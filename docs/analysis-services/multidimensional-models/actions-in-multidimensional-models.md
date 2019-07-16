@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145707"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209199"
 ---
 # <a name="actions-in-multidimensional-models"></a>多次元モデルのアクション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "50145707"
   
 -   [属性メンバー]  
   
--   [セル]  
+-   セル  
   
 -   Cube  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50145707"
  **[アクションの内容]**  
  アクションの種類を選択します。 次の表は、使用できる種類をまとめたものです。  
   
-|型|説明|  
+|種類|説明|  
 |----------|-----------------|  
 |[データ セット]|データセットを取得します。|  
 |[専用]|この一覧に表示されていないインターフェイスを使用して操作を実行します。|  
@@ -109,7 +109,7 @@ parametervalue1
 & ...  
 ```  
   
- 以下に例を示します。  
+ 例:  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
@@ -121,7 +121,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **[ドリルスルー列]**  
  1 つまたは複数のディメンションと、アクションによってクライアント アプリケーションに返されるドリルスルー列をディメンションごとに選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

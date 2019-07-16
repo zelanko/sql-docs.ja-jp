@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036853"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185754"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>レッスン 1:Analysis Services データベース (基本的なデータ マイニング チュートリアル) を準備します。
   新しい従業員の[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]命じられたを設計する際にビジネス インテリジェンス アプリケーション[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] を活かして、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データ マイニングの経験が自転車を購入した人に関する有用かつ実用的な情報を検出します。 また、将来自転車を購入する可能性が最も高い顧客を予測することも求められています。  
@@ -36,7 +36,7 @@ ms.locfileid: "56036853"
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 2:ターゲット メーリングの構造を構築&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース ビュー](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [サポートされるデータ ソース&#40;SSAS 多次元&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Analysis Services プロジェクトのビルド &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   

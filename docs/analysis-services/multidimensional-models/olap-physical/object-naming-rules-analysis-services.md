@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165464"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "52509473"
   
 -   PRN  
   
--   NULL は XML 内の文字列の文字として許容されません。   
+-   NULL は XML 内の文字列の文字として許容されません。  
   
  **予約文字**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "52509473"
   
  データベースは既定の ModelType を持つことができます。 既定値は多次元モデルと同等です。そのため、列名での予約文字の使用はサポートされません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX の予約語](../../../mdx/mdx-reserved-words.md)   
  [Analysis Services での翻訳のサポート](../../../analysis-services/translation-support-in-analysis-services.md)   
  [XML for Analysis への準拠&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
